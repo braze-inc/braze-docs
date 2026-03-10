@@ -23,7 +23,7 @@ La página **Facturación** incluye las siguientes pestañas:
 
 ## Suscripciones y uso
 
-La pestaña **Suscripciones y uso** incluye gráficos de uso y los detalles de tu contrato. Los datos de esta página se actualizan diariamente a las 22:00, hora del Este (ET). No refleja la actividad en tiempo real.
+La pestaña **Suscripciones y uso** incluye gráficos de uso y los detalles de tu contrato. Los datos de esta página se actualizan diariamente a las 10:00 p. m., hora del este (ET). No refleja la actividad en tiempo real.
 
 ### Gráficos de uso
 
@@ -39,36 +39,40 @@ Los detalles del contrato indican la fecha de inicio y fin de su contrato actual
 
 #### Consideraciones
 
-Si tu contrato utiliza Visitantes Únicos Mensuales (MUV) y cambias a un contrato que utiliza sólo Usuarios Activos Mensuales (MAU), tus datos históricos siguen apareciendo en el gráfico MUV y tus nuevos datos aparecen sólo en el gráfico MAU. Por ejemplo, si tu contrato finaliza en octubre, el gráfico MUV muestra datos hasta finales de septiembre.
+Si tu contrato utiliza visitantes únicos mensuales (MUV) y cambias a un contrato que solo utiliza usuarios activos al mes (MAU), tus datos históricos seguirán apareciendo en el gráfico MUV y tus nuevos datos solo aparecerán en el gráfico MAU. Por ejemplo, si tu contrato finaliza en octubre, el gráfico MUV muestra los datos hasta finales de septiembre.
 
 ## Eventos y atributos más utilizados por aplicación
 
-En **Eventos y atributos más utilizados por aplicación**, puedes comprobar los controladores del uso de punto de datos de tus atributos y eventos personalizados. 
+En **Eventos y atributos más utilizados por aplicación**, puedes consultar los factores que impulsan el uso de tus puntos de datos de atributos y eventos personalizados. 
 
 ![Eventos y atributos más utilizados por aplicación]({% image_buster /assets/img/most_used_events_attributes_time.png %})
 
 Para cada aplicación, puedes seleccionar **Ver desglose** para ver un recuento estimado de cada atributo personalizado específico, atributo de perfil y evento personalizado para el periodo de tiempo seleccionado, así como el porcentaje de las actualizaciones de atributos y eventos de esa aplicación que fueron impulsadas por ese atributo o evento. 
 
-![Pestaña Desglose de eventos y atributos más utilizados por aplicación]({% image_buster /assets/img/most_used_events_attributes_2.png %}){: style="max-width:60%"}
+![Eventos y atributos más utilizados por pestaña de desglose de aplicaciones]({% image_buster /assets/img/most_used_events_attributes_2.png %}){: style="max-width:60%"}
 
 Los desgloses de datos de este tipo pueden ayudarle a comprender qué puntos de datos específicos están ocupando grandes porcentajes de su asignación. Le recomendamos que controle esta información de vez en cuando para asegurarse de que no está gastando puntos de datos de forma accidental e innecesaria. Su gestor de éxito de clientes puede orientarle para sacar el máximo partido a su plan actual o proporcionarle opciones para una mayor flexibilidad. 
 
 ## Panel de puntos de datos totales
 
-La pestaña **Uso total de puntos de datos** proporciona una visión en profundidad de tu uso de punto de datos. Puede ver todos los datos de esta sección agregados por semanas o meses.
+La pestaña **Uso total de puntos de datos** ofrece una visión detallada del uso de tus puntos de datos. Puede ver todos los datos de esta sección agregados por semanas o meses.
+
+{% alert note %}
+La información de los puntos de datos se almacena en caché cada 24 horas.
+{% endalert %}
 
 ![Filtrar el uso de puntos de datos por semanas]({% image_buster /assets/img/subscription_and_billing2.png %})
 
 ### Detalles del contrato
 
-Aquí encontrarás información sobre cuándo empieza y termina tu contrato Braze actual, así como los puntos de datos asignados y una suma de todos los puntos de datos que se han utilizado hasta ahora en tu contrato actual.
+Aquí encontrarás información sobre cuándo comienza y termina tu contrato actual con Braze, así como los puntos de datos asignados y la suma de todos los puntos de datos que se han utilizado hasta ahora en tu contrato actual.
 
 Los campos de esta sección se definen del siguiente modo:
 
 - **Tipo de contrato:** Estructura de plazos de facturación, anual o plurianual.
 - **Fecha de inicio y fin del contrato:** Fecha de inicio y fin de todo el contrato.
 - **Puntos de datos asignados:** La cantidad de puntos de datos asignados en el contrato por periodo de facturación.
-- **Uso de punto de datos del contrato:** Es el total acumulado de todos los puntos de datos registrados durante la vigencia del contrato, y no se reinicia en el siguiente periodo de facturación.
+- **Uso de punto de datos del contrato:** Total acumulado de todos los puntos de datos registrados durante la vigencia del contrato, que no se restablece en el siguiente periodo de facturación.
 
 ![Sección Detalles del contrato de la pestaña Utilización total de puntos de datos]({% image_buster /assets/img/contract_details.png %})
 

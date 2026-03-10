@@ -1,12 +1,12 @@
 ---
 nav_title: Liquid Code
-article_title: Generieren Sie Liquid Code mit BrazeAI
+article_title: Erstellen Sie Liquid-Code mit BrazeAI
 description: "In diesem Artikel erfahren Sie, wie der AI Liquid Assistant funktioniert und wie Sie ihn nutzen können, um Liquid-Snippets für Ihre Nachrichten zu erstellen."
 page_type: reference
 page_order: 0.0
 ---
 
-# Generieren Sie Liquid Code mit <sup>BrazeAITM</sup>
+# Erstellen Sie Liquid-Code mit BrazeAI
 
 > Der <sup>BrazeAITM</sup> Liquid Assistant ist ein von <sup>BrazeAITM</sup> betriebener Chat-Assistent, der Ihnen hilft, das Liquid zu erzeugen, das Sie für die Personalisierung von Nachrichteninhalten benötigen.
 
@@ -14,7 +14,7 @@ page_order: 0.0
 
 Der BrazeAI<sup>TM</sup> Liquid Assistant wurde entwickelt, um Ihnen beim Schreiben von effektivem Liquid-Code zu helfen, der auf Ihre Marketingbedürfnisse zugeschnitten ist. Unsere KI ist sowohl auf die Syntax von Liquid als auch auf die Art und Weise, wie Vermarkter Liquid in ihren Nachrichten verwenden, geschult und versteht die Feinheiten der Erstellung personalisierter Inhalte.
 
-Indem Sie dem <sup>BrazeAITM</sup> Liquid Assistant Ihre angepassten Attribute (z.B. “favourite_color”) ) und Datentypen (z.B. Boolean und String) zur Verfügung stellen, stellt unser <sup>BrazeAITM</sup> Liquid Assistant außerdem sicher, dass Ihre Nachrichten genau auf Ihre Ziele ausgerichtet sind und Targeting betreiben. Wenn Sie außerdem Markenrichtlinien erstellen, kann der <sup>BrazeAITM</sup> Liquid Assistant die Markenrichtlinien verwenden, um die generierten Ausgaben besser zu personalisieren und den Inhalt an unsere eigene Markensprache anzupassen. Die von Ihnen erstellten Markenrichtlinien werden nur zur Personalisierung von Inhalten für Ihren eigenen Gebrauch verwendet.
+Darüber hinaus stellt unser BrazeAI<sup>TM</sup> Liquid Assistant durch die Bereitstellung Ihrer angepassten Attributnamen (z. B.“favourite_color”)  und Datentypen (z. B. boolesch und String)) sicher, dass Ihre Nachrichten präzise ausgerichtet sind und Ihren Zielen entsprechen. Wenn Sie außerdem Markenrichtlinien erstellen, kann der <sup>BrazeAITM</sup> Liquid Assistant die Markenrichtlinien verwenden, um die generierten Ausgaben besser zu personalisieren und den Inhalt an unsere eigene Markensprache anzupassen. Die von Ihnen erstellten Markenrichtlinien werden nur zur Personalisierung von Inhalten für Ihren eigenen Gebrauch verwendet.
 
 ## Unterstützte Kanäle
 
@@ -72,12 +72,12 @@ Sie können eine weitere Nachricht mit demselben Prompt erstellen, indem Sie auf
 
 Die folgenden Attribute befinden sich derzeit im Beta-Stadium für den <sup>BrazeAITM</sup> Liquid Assistant:
 
-| Kriterium | Wissenstyp | 
+| Kriterium | Art des Wissens | 
 | - | - | 
-| Liquid (einschließlich `for` Schleifen, `if` Anweisungen, Mathe und andere) | Kodierung |
-| Standard- und Standardattribute für Nutzer:innen | Attribute |
-| Angepasste Attribute, die einen dieser Datentypen aufweisen: {::nomarkdown}<ul><li>Boolesche Werte</li><li>Zahlen</li><li>Strings</li><li>Arrays</li><li>Uhrzeit</li></ul>{:/} | Attribute |
-| Connected-Content | Kodierung |
+| Liquid (einschließlich`for`Schleifen,`if`Anweisungen, Mathematik und andere) | Codierung |
+| Standard- und Standardbenutzerattribute | Attribute |
+| Benutzerdefinierte Attribute, die einen der folgenden Datentypen aufweisen: {::nomarkdown}<ul><li>Boolesche Werte</li><li>Zahlen</li><li>Strings</li><li>Arrays</li><li>Uhrzeit</li></ul>{:/} | Attribute |
+| Connected-Content | Codierung |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ## Bewährte Praktiken
@@ -128,7 +128,7 @@ Hier finden Sie einige Beispiele, die Ihnen den Einstieg erleichtern:
 - Helfen Sie mir, eine Nachricht zu verfassen, die Benutzer ermutigt, zur Kasse zu gehen, wenn sie noch Artikel in ihrem Warenkorb haben.
 - Schreiben Sie Liquid, um eine Nachricht auf der Grundlage des Landes einer Kundin oder eines Kunden zu personalisieren. Ich möchte die Nachricht mit dem Namen des Landes ausfüllen. Wenn wir keinen von beiden haben, schlagen Sie ihnen vor, auf einen Link zu klicken, um ihr Profil zu aktualisieren.
 - Wie kann ich eine Begrüßungsnachricht mit dem Vornamen eines Benutzers personalisieren und je nach Geschlecht des Benutzers unterschiedliche Texte verfassen?
-- Schreiben Sie Liquid, um verschiedene Nachrichten basierend auf einem angepassten Attribut, “CUSTOM_ATTRIBUTE_NAME“ und dessen Wert anzuzeigen. Es gibt sechs verschiedene Optionen, die ich senden könnte. Wenn es keinen Wert für das angepasste Attribut gibt, möchte ich eine Nachricht mit einem Platzhalter senden.
+- Bitte verwenden Sie Liquid, um verschiedene Nachrichten basierend auf einem angepassten Attribut und“CUSTOM_ATTRIBUTE_NAME“ dessen Wert anzuzeigen. Es gibt sechs verschiedene Optionen, die ich senden könnte. Wenn es keinen Wert für das angepasste Attribut gibt, möchte ich eine Nachricht mit einem Platzhalter senden.
 {% endtab %}
 
 {% tab handling outliers %}

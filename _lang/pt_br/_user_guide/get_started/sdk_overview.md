@@ -28,11 +28,11 @@ Para economizar seu tempo e garantir uma integração tranquila, recomendamos qu
 
 ## Agregação de dados
 
-O SDK do Braze captura automaticamente dados em nível de usuário, fornecendo métricas chave para seu app e base de usuários. Agrupe aplicativos semelhantes em um único espaço de trabalho (por exemplo, versões iOS e Android juntas) para visualizar os dados coletados em várias plataformas e construir uma imagem completa da atividade do usuário. Consulte o artigo na [página inicial]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) para obter mais informações.
+O SDK do Braze captura automaticamente dados em nível de usuário, fornecendo métricas chave para seu app e base de usuários. Agrupe apps semelhantes em um único espaço de trabalho (por exemplo, versões iOS e Android juntas) para visualizar os dados coletados em diferentes plataformas e construir um panorama completo da atividade do usuário. Consulte o artigo na [página inicial]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) para obter mais informações.
 
 ## Envio de mensagens no app
 
-Use o SDK para compor e enviar mensagens no app diretamente. Você pode escolher mensagens slideup, modais ou em tela cheia com base na sua estratégia de campanha. Para detalhes de composição, consulte [Criar uma mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
+Use o SDK para compor e enviar mensagens no app diretamente. Você pode escolher mensagens slideup, modal ou em tela cheia com base na sua estratégia de campanha. Para detalhes de composição, consulte [Criar uma mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
 
 ![Push exibido em um navegador da Web]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
@@ -46,7 +46,7 @@ Os usuários do seu site ou app precisam fazer a aceitação para receber notifi
 
 Por padrão, uma campanha contendo mensagens no app será enviada para todas as versões do app nesse espaço de trabalho. Por exemplo, a mensagem será enviada tanto para usuários da Internet quanto para usuários móveis. Para enviar uma mensagem no app exclusivamente para a Web ou para dispositivos móveis, você precisará segmentar sua campanha de acordo, o que é suportado por padrão por meio d o SDK da Braze. 
 
-Você pode criar um segmento de seus usuários da web definindo **Aplicativos e sites direcionados** para **Usuários de aplicativos específicos**, e então selecionar apenas seu site para os **Aplicativos Específicos**.
+Você pode criar um segmento de seus usuários da web definindo **Apps e sites direcionados** para **Usuários de apps específicos**, e então selecionar apenas seu site para os **Apps Específicos**.
 
 ![Página de Detalhes do Segmento com o app da web em foco]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
 

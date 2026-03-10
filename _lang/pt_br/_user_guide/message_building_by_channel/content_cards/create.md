@@ -18,7 +18,7 @@ search_rank: 3.9
 
 ## Etapa 1: Escolha onde construir sua mensagem
 
-Use campanhas para mensagens únicas e simples (como informar os usuários sobre um produto com uma mensagem). Use Canvases para jornadas de usuários em múltiplas etapas (como enviar sugestões de produtos personalizadas com base no comportamento do usuário ao longo do tempo).
+Use campanhas para envio de mensagens simples e únicas (como informar os usuários sobre um produto com uma mensagem). Use Canvases para jornadas de usuários em múltiplas etapas (como enviar sugestões de produtos personalizadas com base no comportamento do usuário ao longo do tempo).
 
 {% tabs %}
 {% tab Campaign %}
@@ -92,7 +92,7 @@ Adicione uma imagem ao seu cartão de conteúdo selecionando **Add Image** ou fo
 
 #### Fixar no topo
 
-O Braze exibe um cartão fixado no topo do feed de um usuário e o usuário não pode descartá-lo. Se o feed de um usuário tiver vários cartões fixados, o Braze os ordena cronologicamente. Depois de enviar um cartão, você não pode atualizar retroativamente sua opção fixada. Alterar esta opção após enviar uma campanha afeta apenas envios futuros.
+O Braze exibe um cartão fixado no topo do feed de um usuário e o usuário não pode descartá-lo. Se o feed de um usuário tiver vários cartões fixados, o Braze os ordena cronologicamente. Depois de enviar um cartão, você não pode atualizar retroativamente sua opção de fixação. Alterar esta opção após enviar uma campanha afeta apenas envios futuros.
 
 ![Lado a lado da prévia do cartão de conteúdo na Braze para Mobile e Web com a opção "Fixar este cartão no topo do feed" selecionada.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
@@ -180,29 +180,29 @@ A carga útil de dados total para um único Cartão de Conteúdo não pode exced
 
 * Título
 * Mensagem
-* URL da imagem (o comprimento da própria string da URL, não o tamanho do arquivo da imagem)
+* URL da imagem (o comprimento da string da URL em si, não o tamanho do arquivo da imagem)
 * Texto do link
 * URLs de link para todas as plataformas especificadas (URLs separadas para iOS, Android e Web contam para o total)
 * Pares chave-valor (tanto os nomes das chaves quanto seus valores)
 
 Usar Liquid para puxar longas strings de texto (como de atributos personalizados) pode fazer você exceder o limite. 
 
-O criador da campanha exibirá um aviso se seu conteúdo estático exceder o limite. (Não prevemos o tamanho para conteúdo dinâmico usando Liquid.) **Se o tamanho da mensagem exceder 2 KB, será abortada no momento do envio.** Você pode ver esses abortos no Registro de Atividade da Mensagem com o motivo `Content card maximum size exceeded`.
+O criador da campanha exibirá um aviso se seu conteúdo estático exceder o limite. (Não prevemos o tamanho para conteúdo dinâmico usando Liquid.) **Se o tamanho da mensagem exceder 2 KB, ela será abortada no momento do envio.** Você pode ver esses abortos no Registro de Atividade da Mensagem com o motivo `Content card maximum size exceeded`.
 
 {% alert important %}
 Durante envios de teste, Cartões de Conteúdo que excedem 2 KB ainda podem ser entregues e exibidos corretamente.
 {% endalert %}
 
-Aqui estão algumas melhores práticas para gerenciar o tamanho da carga útil do Cartão de Conteúdo:
+Aqui estão algumas melhores práticas para gerenciar o tamanho da carga útil dos Cartões de Conteúdo:
 
 * Use encurtadores de URL para links longos. URLs, especialmente aquelas com parâmetros de rastreamento extensos, podem enfrentar problemas de limite de tamanho. Usar um serviço de encurtamento de URL pode reduzir drasticamente a contagem de caracteres e liberar espaço na carga útil.
 * Truncar conteúdo dinâmico com Liquid. Ao personalizar cartões com texto dinâmico de atributos de usuário ou chamadas de API, o comprimento do conteúdo pode ser imprevisível. Use proativamente filtros Liquid como `truncate` para limitar o comprimento de qualquer texto dinâmico.
-* Seja eficiente com URLs de múltiplas plataformas. O limite de 2 KB inclui as URLs para todas as plataformas que você define. Usar URLs longas e únicas para cada plataforma pode multiplicar o tamanho da carga útil. Se possível, use um único link que funcione em todas as plataformas, ou use encurtadores de URL conforme necessário.
-* Considere Banners para um conteúdo mais rico. Para casos de uso que exigem consistentemente grandes quantidades de conteúdo, os Cartões de Conteúdo podem não ser o canal certo. Banners não têm a mesma limitação de carga útil de 2 KB e são mais adequados para embutir conteúdo mais rico diretamente em uma experiência de app ou site.
+* Seja eficiente com URLs de múltiplas plataformas. O limite de 2 KB inclui as URLs para todas as plataformas que você definir. Usar URLs longas e únicas para cada plataforma pode multiplicar o tamanho da carga útil. Se possível, use um único link que funcione em todas as plataformas, ou use encurtadores de URL conforme necessário.
+* Considere Banners para um conteúdo mais rico. Para casos de uso que exigem consistentemente grandes quantidades de conteúdo, os Content Cards podem não ser o canal certo. Banners não têm a mesma limitação de carga útil de 2 KB e são mais adequados para embutir conteúdo mais rico diretamente em uma experiência de app ou site.
 
 #### Número de cartões no feed
 
-Cada usuário pode ter até 250 cartões de conteúdo não expirados em seu feed a qualquer momento. Quando esse limite for excedido, o Braze deixará de devolver os cartões mais antigos, mesmo que não tenham sido lidos. Cartões descartados também contam para esse limite, o que significa que um alto número de cartões descartados pode reduzir o espaço disponível para os mais antigos.
+Cada usuário pode ter até 250 cartões de conteúdo não expirados em seu feed a qualquer momento. Quando esse limite for excedido, o Braze deixará de devolver os cartões mais antigos, mesmo que não tenham sido lidos. Cartões descartados também contam para esse limite, o que significa que um número alto de cartões descartados pode reduzir o espaço disponível para os mais antigos.
 
 Para evitar problemas com o limite de cartões, recomendamos as seguintes melhores práticas:
 
@@ -210,9 +210,9 @@ Para evitar problemas com o limite de cartões, recomendamos as seguintes melhor
 - **Aproveite a remoção baseada em ação:** Configure eventos de remoção para cartões transacionais ou baseados em metas. Por exemplo, um cartão que solicita a um usuário que complete seu perfil deve ser removido assim que um `profile_completed` evento for registrado.
 - **Audite campanhas de longa duração:** Revise campanhas recorrentes ou em andamento para garantir que não estejam criando uma experiência ruim para seus usuários, preenchendo o feed com muitos cartões ao longo do tempo.
 
-### Entendendo a re-eligibilidade para Cartões de Conteúdo
+### Entendendo a re-eligibilidade para Content Cards
 
-A re-eligibilidade determina se e quando um usuário pode receber uma mensagem da mesma campanha mais de uma vez. Para Cartões de Conteúdo, entender como isso funciona é crítico para gerenciar campanhas recorrentes e garantir que os usuários não recebam mensagens duplicadas ou desatualizadas.
+A re-eligibilidade determina se e quando um usuário pode receber uma mensagem da mesma campanha mais de uma vez. Para Content Cards, entender como isso funciona é crítico para gerenciar campanhas recorrentes e garantir que os usuários não recebam mensagens duplicadas ou desatualizadas.
 
 {% alert tip %}
 Você quer que seu conteúdo dure mais de 30 dias? Experimente [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
@@ -222,8 +222,8 @@ Você quer que seu conteúdo dure mais de 30 dias? Experimente [Banners]({{site.
 
 Se você ativar a re-elegibilidade, a contagem regressiva para quando um usuário pode "reentrar" em uma campanha começa após o envio da mensagem. O momento específico em que essa contagem regressiva começa depende das configurações de criação do seu cartão:
 
-* Os Cartões de Conteúdo usando [na primeira impressão]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) usam o tempo de impressão para calcular a re-elegibilidade.
-* Os Cartões de Conteúdo criados no lançamento da campanha ou na entrada da etapa do Canvas usam o tempo de envio ou o tempo de impressão mais recente.
+* Os Cartões de Conteúdo que usam [na primeira impressão]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) utilizam o tempo de impressão para calcular a re-elegibilidade.
+* Os Cartões de Conteúdo criados no lançamento da campanha ou na entrada da etapa do Canvas usam o horário de envio ou o horário de impressão mais recente.
 
 #### A expiração de 30 dias e a re-elegibilidade
 
@@ -244,7 +244,7 @@ Para alterar um cartão para usuários que já o receberam, você deve usar um d
 ##### Opção 1: Duplicar a campanha (recomendado para alterações imediatas)
 
 {% alert tip %}
-Recomendamos essa opção para mensagens em que você está mostrando o conteúdo mais recente no cartão, as alterações devem ser mostradas imediatamente ou quando a re-elegibilidade estiver desativada.
+Recomendamos essa opção para mensagens em que você está mostrando o conteúdo mais recente no cartão, as alterações devem ser mostradas imediatamente ou quando a re-elegibilidade está desativada.
 {% endalert %}
 
 A primeira abordagem é arquivar a campanha e lançar uma nova campanha duplicada:
@@ -266,7 +266,7 @@ Vamos supor que você tenha configurado uma campanha para ser acionada pelo iní
 ##### Opção 2: Pare e relance a mesma campanha
 
 {% alert tip %}
-Recomendamos usar esta opção para mensagens únicas em um centro de notificações ou caixa de mensagens (como promoções), quando é importante que a análise de dados esteja unificada, ou quando a pontualidade da mensagem não é uma preocupação (como os destinatários existentes podem esperar pela janela de elegibilidade antes de ver os cartões atualizados).
+Recomendamos usar esta opção para mensagens únicas em uma central de notificações ou caixa de mensagens (como promoções), quando é importante que a análise de dados esteja unificada, ou quando a pontualidade da mensagem não é uma preocupação (como os destinatários existentes podem esperar pela janela de elegibilidade antes de ver os cartões atualizados).
 {% endalert %}
 
 Essa abordagem mantém todas as suas análises unificadas em uma única campanha. Usuários recém-elegíveis receberão o novo cartão, mas isso atrasa a atualização para os destinatários existentes até que eles se tornem re-elegíveis:
@@ -305,11 +305,11 @@ Essa remoção não é instantânea. Há um atraso no processamento, então pode
 É possível especificar vários eventos personalizados e compras que devem remover um cartão do feed de um usuário. Quando **qualquer uma** dessas ações for executada pelo usuário, todos os cartões existentes enviados pelos cartões da campanha serão removidos. Todos os cartões elegíveis futuros continuarão a ser enviados de acordo com a programação da mensagem.
 {% endalert %}
 
-![Condições do painel de remoção de cartão de conteúdo com a opção de evento de remoção de cartão de conteúdo.]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
+![Condições do painel de Remoção de Cartão de Conteúdo com a opção de Evento de Remoção de Cartão de Conteúdo.]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
 ##### Expiração do cartão
 
-Os cartões de conteúdo permanecem disponíveis por até 30 dias a partir do momento em que são enviados; após 30 dias, a Braze os remove dos feeds dos usuários e os exclui dos sistemas da Braze.
+Os Cartões de Conteúdo permanecem disponíveis por até 30 dias a partir do momento em que são enviados; após 30 dias, a Braze os remove dos feeds dos usuários e os exclui dos sistemas da Braze.
 
 #### Fazendo os cartões durarem mais de 30 dias
 

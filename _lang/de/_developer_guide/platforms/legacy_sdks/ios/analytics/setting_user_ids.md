@@ -1,6 +1,6 @@
 ---
-nav_title: "Nutzer:innen IDs festlegen"
-article_title: "Nutzer:innen IDs für iOS festlegen"
+nav_title: Benutzer-IDs festlegen
+article_title: Benutzer-IDs für iOS festlegen
 platform: iOS
 page_order: 1
 description: "Dieser referenzierte Artikel zeigt Ihnen, wie Sie Nutzer:innen IDs in Ihrer iOS App einrichten, welche Namenskonventionen für Nutzer:innen vorgeschlagen werden und wie Sie am besten vorgehen."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Nutzer:innen IDs für iOS festlegen
+# Benutzer-IDs für iOS festlegen
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 

@@ -1,7 +1,7 @@
 ---
 page_order: 2.4
 nav_title: ライブ通知
-article_title: Braze SDKのライブ活動
+article_title: Braze SDKのライブアクティビティ
 layout: dev_guide
 guide_top_header: "ライブアクティビティ"
 guide_top_text: "> ユーザーのロック画面に直接、永続的でダイナミックな通知を送信する方法を学習し、ユーザーはアプリを開封することなくリアルタイムの更新を受け取ることができる。Swift では、これはネイティブにサポートされています。"

@@ -17,7 +17,7 @@ description: "Este artigo detalha o endpoint da Braze de rastreamento de usuári
 > Use esse endpoint para registrar eventos e compras personalizados e atualizar os atributos do perfil do usuário de forma síncrona. Esse endpoint funciona de forma semelhante ao [endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track), que atualiza perfis de usuário de forma assíncrona.
 
 {% alert important %}
-Este endpoint está atualmente em **beta limitada**. Embora não estejamos adicionando novos clientes ao beta neste momento, informe ao seu gerente de conta da Braze se você acha que esse recurso pode ser útil para sua integração com a Braze.
+Este endpoint está atualmente em **beta limitada**. Embora não estejamos adicionando novos clientes ao beta neste momento, informe ao seu gerente de conta da Braze se você acha que esse recurso pode ser útil para a sua integração com a Braze.
 {% endalert %}
 
 ## Chamadas síncronas e assíncronas à API

@@ -13,7 +13,7 @@ description: "Auf dieser Seite finden Sie Filter zur Neuformatierung statischer 
 Mit Filtern können Sie die Ausgabe von Zahlen, Strings, Variablen und Objekten in Liquid verändern. Sie können Filter verwenden, um statischen oder dynamischen Text umzuformatieren, also z.B. einen String von Kleinbuchstaben in Großbuchstaben umzuwandeln oder mathematische Berechnungen wie Addition oder Division durchzuführen.
 
 {% alert important %}
-Braze unterstützt nicht alle Liquid-Filter von Shopify. Auf dieser Seite werden die von Braze getesteten Liquid Filter aufgelistet. Die Liste ist allerdings nicht vollständig. Testen Sie Ihr Liquid immer, bevor Sie eine Nachricht verschicken. <br><br>Wenn Sie Fragen zu einem Filter haben, der hier nicht aufgeführt ist, wenden Sie sich an Ihren Customer-Success-Manager:in.
+Braze unterstützt nicht alle Liquid-Filter von Shopify. Auf dieser Seite werden die von Braze getesteten Liquid Filter aufgelistet. Die Liste ist allerdings nicht vollständig. Testen Sie Ihr Liquid immer, bevor Sie eine Nachricht verschicken. <br><br>Sollten Sie Fragen zu einem Filter haben, der hier nicht aufgeführt ist, wenden Sie sich bitte an Ihren Customer-Success-Manager.
 {% endalert %}
 
 ## Filtersyntax
@@ -42,6 +42,10 @@ BIG SALE
 {% endtabs %}
 
 In diesem Beispiel ist `Big Sale` eine Zeichenkette und `upcase` der Filter, der angewendet wird.
+
+{% alert note %}
+Filter können in`assign`Anweisungen und Tags {% raw %}(`{{ }}`) {% endraw %}verwendet werden, jedoch nicht in Bedingungen (`if`, `elsif`, `unless`), `case`/`when`,`for`Schleifen oder Array-Zugriffsklammern. Um einen gefilterten Wert in einem dieser Kontexte zu verwenden, weisen Sie das Ergebnis zunächst einer Variablen zu. Weitere Informationen finden Sie unter [Wo werden Operatoren und Filter verwendet]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters)?
+{% endalert %}
 
 ### Syntax für mehrere Filter
 
@@ -79,7 +83,7 @@ Array-Filter werden verwendet, um die Ausgabe von Arrays zu verändern.
 | [map](https://shopify.dev/api/liquid/filters/map)           | Akzeptiert das Attribut eines Array-Elements als Parameter und erstellt ein Array aus den Werten der einzelnen Array-Elemente.        | ✅ Ja   |
 | [reverse](https://shopify.dev/api/liquid/filters/reverse)       | Kehrt die Reihenfolge der Elemente in einem Array um.                                                                       | ✅ Ja   |
 | [size](https://shopify.dev/api/liquid/filters/size)          | Gibt die Größe einer Zeichenkette (die Anzahl der Zeichen) oder eines Arrays (die Anzahl der Elemente) zurück.                      | ✅ Ja   |
-| [slice](https://shopify.dev/api/liquid/filters/slice)        | Gibt eine Teilzeichenkette eines Strings oder eine Teilmenge eines Arrays zurück, beginnend mit dem angegebenen Index.                          | ✅ Ja   |
+| [slice](https://shopify.dev/api/liquid/filters/slice)        | Gibt eine Teilzeichenfolge eines Strings oder eine Teilmenge eines Arrays zurück, beginnend bei dem angegebenen Index.                          | ✅ Ja   |
 | [sort](https://shopify.dev/api/liquid/filters/sort)         | Sortiert die Elemente eines Arrays nach einem bestimmten Attribut eines Elements im Array.                                    | ✅ Ja   |
 | [sort_natural](https://shopify.dev/api/liquid/sort_natural) | Sortiert die Elemente in einem Array unabhängig von der Groß-/Kleinschreibung in alphabetischer Reihenfolge.                                                | ✅ Ja   |
 | [uniq](https://shopify.dev/api/liquid/filters/uniq)         | Entfernt alle doppelten Instanzen von Elementen in einem Array.                                                           | ✅ Ja   |
@@ -256,14 +260,14 @@ Gerade Anführungszeichen unterscheiden sich von geschweiften Anführungszeichen
 | Filter          | Beschreibung     | Unterstützt |
 | :--------------- | ------------- | --------- |
 | [append](https://shopify.dev/api/liquid/filters/append)     | Hängt Zeichen an eine Zeichenkette an.           | ✅ Ja   |
-| [camelize](https://shopify.dev/docs/api/liquid/filters/camelize)     | Konvertiert eine Zeichenkette in CamelCase.             | ⛔ Nein    |
+| [kamelisieren](https://shopify.dev/docs/api/liquid/filters/camelize)     | Konvertiert eine Zeichenkette in CamelCase.             | ⛔ Nein    |
 | [capitalize](https://shopify.dev/api/liquid/filters/capitalize)     | Schreibt das erste Wort in einer Zeichenkette groß und verkleinert die übrigen Zeichen.         | ✅ Ja   |
 | [downcase](https://shopify.dev/api/liquid/filters/downcase)      | Wandelt eine Zeichenkette in Kleinbuchstaben um.         | ✅ Ja   |
 | [escape](https://shopify.dev/api/liquid/filters/escape)    | Entfernt eine Zeichenkette.             | ✅ Ja   |
 | [handhaben](https://shopify.dev/api/liquid/filters/handleize)        | Formatiert eine Zeichenkette in ein Handle.        | ⛔ Nein    |
 | [md5](https://shopify.dev/api/liquid/filters/md5)    | Konvertiert eine Zeichenkette in einen MD5-Hash. Weitere Informationen finden Sie unter [Kodierungsfilter]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters).   | ✅ Ja   |
 | [sha1](https://shopify.dev/api/liquid/filters/sha1)    | Konvertiert eine Zeichenkette in einen SHA-1-Hash. Weitere Informationen finden Sie unter [Kodierungsfilter]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters).  | ✅ Ja   |
-| hmac_sha1_hex<br>(vorher [hmac_sha_1](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1)) | Konvertiert einen String in einen SHA-1 Hash unter Verwendung eines Hash Message Authentication Code (HMAC). Übergeben Sie den geheimen Schlüssel für die Nachricht als Parameter an den Filter. Weitere Informationen finden Sie unter [Kodierungsfilter]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters). | ✅ Ja   |
+| hmac_sha1_hex<br>(zuvor[hmac_sha_1](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1)) | Konvertiert einen String in einen SHA-1 Hash unter Verwendung eines Hash Message Authentication Code (HMAC). Übergeben Sie den geheimen Schlüssel für die Nachricht als Parameter an den Filter. Weitere Informationen finden Sie unter [Kodierungsfilter]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters). | ✅ Ja   |
 | [hmac_sha256](https://shopify.dev/api/liquid/filters/hmac_sha256)    | Konvertiert einen String per Hash Message Authentication Code (HMAC) in einen SHA-256-Hash Übergeben Sie den geheimen Schlüssel für die Nachricht als Parameter an den Filter.       | ✅ Ja   |
 | hmac_sha512 | Konvertiert einen String per Hash Message Authentication Code (HMAC) in einen SHA-512-Hash Übergeben Sie den geheimen Schlüssel für die Nachricht als Parameter an den Filter. | ✅ Ja  |
 | [newline_to_br](https://shopify.dev/api/liquid/filters/newline_to_br)     | Fügt ein `<br>` Zeilenumbruch-HTML-Tag vor jedem Zeilenumbruch in einer Zeichenkette ein.        | ✅ Ja   |

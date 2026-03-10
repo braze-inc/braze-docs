@@ -38,14 +38,14 @@ Para usar esse endpoint, você precisará de um token SCIM. Você usará a orige
 
 ## Corpo da solicitação
 
-```json
+```http
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ## Exemplo de solicitação
-```json
+```bash
 curl --location --request DELETE 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
@@ -56,13 +56,13 @@ curl --location --request DELETE 'https://rest.iad-01.braze.com/scim/v2/Users/df
 
 ### Exemplo de resposta de erro
 
-```json
+```http
 HTTP/1.1 204 Not Found
 Content-Type: text/html; charset=UTF-8
 ```
 
 Se um desenvolvedor com essa ID não existir na Braze, o endpoint responderá com:
-```json
+```http
 HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8
 

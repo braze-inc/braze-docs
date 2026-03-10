@@ -25,19 +25,19 @@ Cuando los usuarios abran tu aplicación, se les pedirá que acepten notificacio
 A partir de macOS 13, en determinados dispositivos, puedes probar las notificaciones push en un simulador de iOS 16 que se ejecute en Xcode 14. Para más detalles, consulta [las Notas de la versión de Xcode 14](https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes).
 {% endalert %}
 
-#### Consideraciones para la generación de token de notificaciones push
+#### Consideraciones para la generación de tokens de notificaciones push
 
-- Si los usuarios instalan tu aplicación en otro dispositivo, se creará otro token y se capturará del mismo modo. 
-- Si los usuarios reinstalan tu aplicación, se generará un nuevo token y se pasará a Braze. Sin embargo, APN y Braze pueden seguir registrando como válido el token original.
-- Si los usuarios desinstalan tu aplicación, Braze no recibe una notificación inmediata de ello y el token seguirá apareciendo como válido hasta que sea retirado por APN. 
-- En algún momento, los APN retirarán los tokens antiguos. Braze no tiene control ni visibilidad de esto. 
+- Si los usuarios instalan tu aplicación en otro dispositivo, se creará otro token y se capturará de la misma manera. 
+- Si los usuarios reinstalan tu aplicación, se generará un nuevo token y se enviará a Braze. Sin embargo, es posible que APN y Braze sigan registrando el token original como válido.
+- Si los usuarios desinstalan tu aplicación, Braze no recibe una notificación inmediata al respecto y el token seguirá apareciendo como válido hasta que APN lo retire. 
+- En algún momento, APN retirará los tokens antiguos. Braze no tiene control ni visibilidad sobre esto. 
 
 ### Paso 3: Lanzamiento de una campaña push Braze
 
-Cuando se lance una campaña push, Braze hará peticiones a los APN para que entreguen tu mensaje. En concreto, las solicitudes se pasan a APN para cada token de notificaciones push válido actual, a menos que se seleccione **Enviar al dispositivo más reciente del usuario**. Después de que Braze reciba una respuesta satisfactoria de los APN, registraremos una entrega satisfactoria en el perfil de usuario, aunque es posible que el usuario no haya recibido el mensaje real por motivos como:
-- Su dispositivo está apagado.
-- Su dispositivo no está conectado a Internet (Wi-Fi o móvil).
-- Hace poco desinstalaron la aplicación.
+Cuando se lance una campaña push, Braze hará peticiones a los APN para que entreguen tu mensaje. Concretamente, las solicitudes se envían a APN para cada token de notificaciones push válido actual, a menos que se seleccione **Enviar al dispositivo más reciente del usuario**. Una vez que Braze reciba una respuesta satisfactoria de APN, registraremos una entrega satisfactoria en el perfil de usuario, aunque es posible que tú no hayas recibido el mensaje real por motivos como:
+- Tu dispositivo está apagado.
+- Tu dispositivo no está conectado a Internet (Wi-Fi o red móvil).
+- Recientemente desinstalaron la aplicación.
 
 Braze utilizará el certificado SSL push cargado en el panel para autenticar y verificar que se nos permite enviar notificaciones push a los tokens de notificaciones push proporcionados. Si un dispositivo está en línea, la notificación debería recibirse poco después de que se haya enviado la campaña. Ten en cuenta que Braze establece la [fecha de caducidad](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns#2947607) predeterminada de los APN para las notificaciones en 30 días.
 
@@ -46,7 +46,7 @@ Braze utilizará el certificado SSL push cargado en el panel para autenticar y v
 Si [APN](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) nos informa de que alguno de los tokens de notificaciones push a los que intentábamos enviar un mensaje no es válido, eliminamos esos tokens de los perfiles de usuario a los que estaban asociados.
 
 {% alert note %}
-Es normal que APN devuelva inicialmente un estado correcto aunque un token deje de estar registrado, ya que APN no informa inmediatamente de los eventos de invalidación de token. Las APN retrasan intencionadamente la devolución del estado `410` para los tokens no válidos según un calendario aleatorio, diseñado para proteger la privacidad del usuario y evitar el seguimiento de las desinstalaciones de aplicaciones. Puedes seguir enviando notificaciones a un token no registrado hasta que APNs devuelva el estado `410`.
+Es normal que APN devuelva inicialmente un estado de éxito incluso si un token se da de baja, ya que APN no informa inmediatamente de los eventos de invalidación de tokens. APNs retrasa intencionadamente la devolución de`410`un estado para los tokens no válidos siguiendo un calendario aleatorio, diseñado para proteger la privacidad de los usuarios y evitar el seguimiento de las desinstalaciones de aplicaciones. Puedes seguir enviando notificaciones a un token no registrado de forma segura hasta que APN devuelva un`410`estado.
 {% endalert %}
 
 ## Utilizar los registros de errores push
@@ -148,13 +148,15 @@ Lo siguiente indicaría un problema con el registro push o que el token de notif
 
 ## Los deep links no funcionan
 
+Para obtener información detallada sobre la solución de problemas en todos los canales, incluidos los enlaces universales, los esquemas personalizados, el correo electrónico y los proveedores externos como Branch, consulta [Solución de problemas de vinculación en profundidad]({{site.baseurl}}/developer_guide/push_notifications/deep_linking_troubleshooting).
+
 ### Los enlaces Web de los clics push no se abren
 
-Los enlaces de las notificaciones push deben ser compatibles con ATS para poder abrirse en vistas web. Asegúrate de que tus enlaces Web utilizan HTTPS. Para más información, consulta el [cumplimiento de la ATS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#app-transport-security-ats).
+Los enlaces de las notificaciones push deben ser compatibles con ATS para poder abrirse en vistas web. Asegúrate de que tus enlaces Web utilizan HTTPS. Para obtener más información, consulta [el cumplimiento]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#app-transport-security-ats) de [ATS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#app-transport-security-ats).
 
 ### Los vínculos profundos de los clics push no se abren
 
-La mayor parte del código que gestiona los vínculos en profundidad también gestiona las aperturas push. Primero, asegúrate de que se registran las aperturas push. Si no es así, soluciona ese problema (ya que la solución suele arreglar la gestión de enlaces).
+La mayor parte del código que gestiona los vínculos en profundidad también gestiona las aperturas push. Primero, asegúrate de que se registran las aperturas push. Si no es así, soluciona ese problema (ya que la solución suele arreglar el manejo de los enlaces).
 
 Si se registran aperturas, comprueba si se trata de un problema con el vínculo en profundidad en general o con la gestión de los clics push de vinculación en profundidad. Para ello, prueba a ver si funciona un vínculo profundo desde un clic de mensaje dentro de la aplicación.
 

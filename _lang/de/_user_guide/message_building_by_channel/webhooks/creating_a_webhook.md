@@ -1,6 +1,6 @@
 ---
 nav_title: Einen Webhook erstellen
-article_title: Einen Webhook erstellen
+article_title: Erstellen Sie einen Webhook
 page_order: 1
 channel:
   - webhooks
@@ -20,7 +20,7 @@ Wenn Sie mehr darüber erfahren möchten, was Webhooks sind und wie Sie sie in B
 
 ## Schritt 1: Wählen Sie, wo Sie Ihre Botschaft aufbauen möchten
 
-Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich besser für einzelne, gezielte Messaging-Kampagnen, während Canvase besser für mehrstufige Nutzer:innen geeignet sind.
+Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich besser für einzelne, zielgerichtete Messaging-Kampagnen, während Canvases besser für mehrstufige User Journeys geeignet sind.
 
 {% tabs %}
 {% tab Campaign %}
@@ -65,7 +65,7 @@ Die Registerkarte **Verfassen** besteht aus den folgenden Feldern:
 - HTTP-Methode
 - Anfragetext
 
-![Der Tab "Verfassen" mit einem Beispiel für ein Webhook Template.]({% image_buster /assets/img_archive/webhook_compose.png %})
+![Der Tab „Erstellen“ mit einem Beispiel-Template für einen Webhook.]({% image_buster /assets/img_archive/webhook_compose.png %})
 
 #### Sprache {#internationalization}
 
@@ -99,7 +99,7 @@ Der Anfragetext ist die Information, die an die von Ihnen angegebene URL gesende
 
 Mit JSON-Schlüssel-Wert-Paaren können Sie ganz einfach eine Anfrage für einen Endpunkt schreiben, der ein JSON-Format erwartet. Sie können dies nur mit einem Endpunkt verwenden, der eine JSON-Anfrage erwartet. Wenn Ihr Schlüssel zum Beispiel `message_body` lautet, könnte der entsprechende Wert `Your order just arrived!` sein. Nachdem Sie Ihr Schlüssel-Wert-Paar eingegeben haben, konfiguriert der Editor Ihre Anfrage in JSON-Syntax, und eine Vorschau Ihrer JSON-Anfrage wird automatisch eingeblendet.
 
-![Körper der Anfrage auf JSON Schlüssel-Wert-Paare eingestellt.]({% image_buster /assets/img/webhook_json_1.png %})
+![Die Anfrage hat einen Request-Body, der auf JSON-Schlüssel-Wert-Paare festgelegt ist.]({% image_buster /assets/img/webhook_json_1.png %})
 
 Sie können Ihre Schlüssel-Wert-Paare mit Liquid personalisieren, z.B. indem Sie ein beliebiges Benutzerattribut, ein [benutzerdefiniertes Attribut]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices) oder eine [Ereigniseigenschaft]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) in Ihre Anfrage aufnehmen. Sie können zum Beispiel den Vornamen und die E-Mail-Adresse eines Kunden in Ihre Anfrage aufnehmen. Achten Sie darauf, dass Sie für jedes Attribut einen [Standardwert]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web) angeben.
 
@@ -109,7 +109,7 @@ Die Option „Rohtext“ bietet Ihnen die Flexibilität, eine Anfrage für einen
 
 Sowohl die [Personalisierung]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) als auch die [Internationalisierung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) mit Liquid wird im Rohtext unterstützt.
 
-![Ein Beispiel für eine Anfrage mit Rohtext in Liquid.]({% image_buster /assets/img_archive/webhook_rawtext.png %})
+![Ein Beispiel für eine Anfrage mit Rohtext unter Verwendung von Liquid.]({% image_buster /assets/img_archive/webhook_rawtext.png %})
 
 Wenn Sie den [Anfrage-Header](#request-headers-optional) `Content-Type` auf `application/x-www-form-url-encoded` setzen, muss der Anfragetext als URL-kodierter String formatiert werden. Zum Beispiel:
 
@@ -119,7 +119,7 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 ```
 {% endraw %}
 
-![Körper der Anfrage mit URL-kodiertem String.]({% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %})
+![Anfrage-Text mit URL-kodiertem String.]({% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %})
 
 ## Schritt 3: Konfigurieren Sie zusätzliche Einstellungen
 
@@ -127,7 +127,7 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 
 Bestimmte Endpunkte erfordern möglicherweise, dass Sie Header in Ihre Anfrage aufnehmen. Im Abschnitt **Verfassen** des Composers können Sie so viele Kopfzeilen wie nötig hinzufügen.
 
-![Beispiele für Anfrage-Header für die Schlüssel "Autorisierung" und "Content-Typ".]({% image_buster /assets/img_archive/webhook_request_headers_example.png %})
+![Beispiele für Anfrage-Header für den Schlüssel „Authorization“ und den Schlüssel „Content-Typ“.]({% image_buster /assets/img_archive/webhook_request_headers_example.png %})
 
 Gängige Anfrage-Header sind `Content-Type`-Spezifikationen (die beschreiben, welche Art von Daten im Text zu erwarten ist, z. B. XML oder JSON) und Autorisierungs-Header, die Ihre Zugangsdaten bei Ihrem Anbieter oder System enthalten. 
 
@@ -172,7 +172,7 @@ In diesem Schritt können Sie auch Zustellungskontrollen festlegen, z. B. dass N
 
 #### Zielgruppe auswählen
 
-Als Nächstes müssen Sie [Nutzer:innen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) durch die Auswahl von Segmenten oder Filtern [gezielt zusammenstellen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/), um Ihre Zielgruppe einzugrenzen. In diesem Schritt wählen Sie die größere Zielgruppe aus Ihren Segmenten aus und grenzen dieses Segment mit unseren Filtern weiter ein, wenn Sie möchten. Sie erhalten automatisch eine Vorschau darauf, wie diese ungefähre Segmentpopulation aussieht. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer berechnet wird, bevor die Nachricht gesendet wird.
+Anschließend sollten Sie Ihre Zielgruppe durch die Auswahl von Segmenten oder Filtern eingrenzen. In diesem Schritt wählen Sie die größere Zielgruppe aus Ihren Segmenten aus und grenzen dieses Segment bei Bedarf mit unseren Filtern weiter ein. Sie erhalten automatisch eine Vorschau, wie die ungefähre Segmentpopulation aussieht. Bitte beachten Sie, dass die genaue Segmentzugehörigkeit immer vor dem Versand der Nachricht berechnet wird.
 
 {% multi_lang_include target_audiences.md %}
 
@@ -204,7 +204,7 @@ Webhooks basieren auf Braze-Servern, die Anfragen an einen externen Endpunkt ste
 
 Wenn Ihr Webhook nicht gesendet werden kann, wird eine Fehlernachricht im [Nachrichten-Aktivitätsprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) protokolliert, die Details wie den Zeitstempel des Fehlers, den Namen der App und Details zum Fehler enthält.
 
-![Webhook-Fehler mit der Nachricht "Für die Abfrage von Informationen über den aktuellen Nutzer:in muss ein aktives Token verwendet werden".]({% image_buster /assets/img_archive/webhook-error.png %})
+![Webhook-Fehler mit der Nachricht „Es muss ein aktiver Zugriffstoken verwendet werden, um Informationen über den aktuellen Nutzer:n abzufragen“.]({% image_buster /assets/img_archive/webhook-error.png %})
 
 Wenn die Nachricht über die Fehlerquelle nicht eindeutig genug ist, sollten Sie die Dokumentation des von Ihnen verwendeten API Endpunkts überprüfen. Darin finden Sie in der Regel eine Erläuterung der Fehlercodes, die der Endpunkt verwendet, sowie die typischen Ursachen für diese Fehler.
 

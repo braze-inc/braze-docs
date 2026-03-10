@@ -46,12 +46,16 @@ Para etapas sobre como configurar eventos personalizados para uma plataforma esp
 - [Identificador do app]({{site.baseurl}}/api/identifier_types/)
 - [Código de tempo ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 
+{% alert note %}
+Alguns pares de identificadores não podem ser usados juntos em uma única solicitação. Quando tanto `email` quanto `phone` são fornecidos, `email` tem precedência sobre `phone`. Para detalhes completos, consulte [Resolução de identificadores]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution).
+{% endalert %}
+
 #### Atualizar apenas os perfis existentes
 
 Para atualizar apenas perfis de usuário existentes no Braze, você deve passar a chave `_update_existing_only` com um valor de `true` dentro do corpo da sua solicitação. Se esse valor for omitido, a Braze criará um novo perfil de usuário se o `external_id` ainda não existir.
 
 {% alert note %}
-Se você estiver criando um perfil de usuário apenas de alias através do endpoint `/users/track`, `_update_existing_only` deve ser definido como `false`. Se esse valor for omitido, o perfil somente de alias não será criado.
+Se você estiver criando um perfil de usuário apenas com alias através do endpoint `/users/track`, `_update_existing_only` deve ser definido como `false`. Se esse valor for omitido, o perfil somente de alias não será criado.
 {% endalert %}
 
 ## Objeto de propriedades do evento
@@ -89,7 +93,7 @@ As propriedades de eventos são projetadas para filtragem e personalização de 
 
 #### Exemplo de solicitação de evento
 
-```json
+```http
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY

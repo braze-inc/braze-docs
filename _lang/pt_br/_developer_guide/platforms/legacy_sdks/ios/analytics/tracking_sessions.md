@@ -1,6 +1,6 @@
 ---
-nav_title: Sessões de rastreamento
-article_title: Sessões de rastreamento para iOS
+nav_title: Rastrear sessões
+article_title: Rastrear Sessões para iOS
 platform: iOS
 page_order: 0
 description: "Este artigo de referência mostra como assinar atualizações de sessão para seu aplicativo iOS."
@@ -62,5 +62,5 @@ O valor mínimo para `sessionTimeoutInSeconds` é 1 segundo. O valor padrão é 
 
 Para detectar sessões por meio de seu usuário, localize-o no dashboard e navegue até **App Usage (Uso do aplicativo** ) no perfil do usuário. Você pode confirmar que o rastreamento de sessões está funcionando verificando se a métrica "Sessões" aumenta quando você espera que isso aconteça.
 
-![A seção de uso do app de um perfil de usuário que mostra o número de sessões, a data da última utilização e a data da primeira utilização.]({% image_buster /assets/img_archive/test_session.png %})
+![A seção de uso do app de um perfil de usuário mostrando o número de sessões, a data da última utilização e a data da primeira utilização.]({% image_buster /assets/img_archive/test_session.png %})
 

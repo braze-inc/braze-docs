@@ -1,8 +1,8 @@
-## Sobre o SDK Braze Flutter
+## Sobre o SDK Flutter Braze
 
-Depois de integrar o SDK Braze Flutter no Android e iOS, você poderá usar a API Braze dentro de seus [aplicativos Flutter](https://flutter.dev/) escritos em Dart. Esse plug-in fornece a funcionalidade básica de análise de dados e permite integrar mensagens no app e cartões de conteúdo para iOS e Android com uma única base de código.
+Depois de integrar o SDK Braze Flutter no Android e iOS, você poderá usar a API Braze em seus [aplicativos Flutter](https://flutter.dev/) escritos em Dart. Esse plug-in fornece a funcionalidade básica de análise de dados e permite integrar mensagens no app e cartões de conteúdo para iOS e Android com uma única base de código.
 
-## Integrando o SDK Flutter
+## Integrando o SDK do Flutter
 
 ### Pré-requisitos
 
@@ -10,9 +10,9 @@ Antes de integrar o SDK Braze Flutter, você precisará concluir o seguinte:
 
 | Pré-requisito | Descrição |
 | --- | --- |
-| Identificador do aplicativo Braze API | Para localizar o identificador do seu aplicativo, acesse **Configurações** > **APIs e Identificadores** > **Identificadores de Aplicativos**. Para mais informações, veja [Tipos de Identificadores de API]({{site.baseurl}}/api/identifier_types/#app-identifier).|
+| Identificador da app Braze API | Para localizar o identificador do seu app, acesse **Configurações** > **APIs e identificadores** > **Identificadores de apps**. Para saber mais, consulte [Tipos de identificadores de API]({{site.baseurl}}/api/identifier_types/#app-identifier).|
 | Endpoint REST  do Braze | Sua URL de endpoint REST. Seu endpoint dependerá da [URL do Braze para sua instância]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints).|
-| SDK para Flutter | Instale o [SDK Flutter](https://docs.flutter.dev/get-started/install) oficial e certifique-se de que atende à [versão mínima suportada](https://github.com/braze-inc/braze-flutter-sdk#requirements) do SDK Braze Flutter. |
+| SDK para Flutter | Instale o [SDK](https://docs.flutter.dev/get-started/install) oficial [do Flutter](https://docs.flutter.dev/get-started/install) e certifique-se de que ele atenda à [versão mínima suportada](https://github.com/braze-inc/braze-flutter-sdk#requirements) pelo SDK do Braze Flutter. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Etapa 1: Integrar a biblioteca do Braze
@@ -23,7 +23,7 @@ Adicione o pacote Braze Flutter SDK a partir da linha de comando. Isso adicionar
 flutter pub add braze_plugin
 ```
 
-### Etapa 2: Complete a configuração do SDK nativo
+### Etapa 2: Concluir a configuração do SDK nativo
 
 {% tabs %}
 {% tab Android %}
@@ -131,19 +131,19 @@ import 'package:braze_plugin/braze_plugin.dart';
 Em seguida, inicialize uma instância do plug-in da Braze chamando `new BrazePlugin()` como em [nosso app de amostra](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart).
 
 {% alert important %}
-Para evitar comportamentos indefinidos, aloque e use apenas uma única instância do `BrazePlugin` em seu código Dart.
+Para evitar comportamentos indefinidos, aloque e utilize apenas uma única instância do`BrazePlugin`  em seu código Dart.
 {% endalert %}
 
 ## Testando a integração
 
-Você pode verificar se o SDK está integrado verificando as estatísticas de sessão no dashboard. Se você executar seu aplicativo em qualquer uma das plataformas, deverá ver uma nova sessão no dashboard (na seção **Visão geral** ).
+Você pode verificar a integração de SDK verificando as estatísticas da sessão no dashboard. Se você executar seu aplicativo em qualquer uma das plataformas, deverá ver uma nova sessão no dashboard (na seção **Visão geral** ).
 
-Abra uma sessão para um usuário específico chamando o seguinte código em seu aplicativo.
+Abra uma sessão para um usuário específico chamando o seguinte código em seu app.
 
 ```dart
 BrazePlugin braze = BrazePlugin();
 braze.changeUser("{some-user-id}");
 ```
 
-Pesquise o usuário com `{some-user-id}` no dashboard em **Público** > **Pesquisar Usuários**. Lá, é possível verificar se os dados da sessão e do dispositivo foram registrados.
+Procure o usuário com`{some-user-id}`  no dashboard, em **Público** > **Pesquisar usuários**. Lá, é possível verificar se os dados da sessão e do dispositivo foram registrados.
 

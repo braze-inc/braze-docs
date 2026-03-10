@@ -29,7 +29,7 @@ Braze에서 Decisioning Studio 에이전트의 메트릭을 보려면 **AI Decis
 
 [보고서를 연](#view) 후 캘린더 드롭다운에서 새 시작 날짜와 종료 날짜를 선택하여 날짜 범위를 변경할 수 있습니다.
 
-![BrazeAI Decisioning Studio™ 날짜 범위 선택기가 열려 있고 캘린더 드롭다운이 있습니다. 캘린더에는 보고서 보기를 커스텀하기 위해 선택 가능한 시작 날짜와 종료 날짜가 표시됩니다.]({% image_buster /assets/img/decisioning_studio/reporting_change_date_range.png %}){: style="max-width:50%;"}
+![BrazeAI Decisioning Studio™ 날짜 범위 선택기가 열려 있고 캘린더 드롭다운이 표시됩니다. 캘린더에는 보고서 보기를 커스텀하기 위해 선택 가능한 시작 날짜와 종료 날짜가 표시됩니다.]({% image_buster /assets/img/decisioning_studio/reporting_change_date_range.png %}){: style="max-width:50%;"}
 
 기본 시작 날짜를 설정하거나 항상 제외할 날짜를 선택할 수도 있습니다. 제외된 날짜는 해당 에이전트에 대한 모든 보고서에서 필터링됩니다.
 

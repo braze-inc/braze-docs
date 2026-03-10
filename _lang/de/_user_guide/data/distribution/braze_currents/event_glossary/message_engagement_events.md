@@ -20,7 +20,7 @@ Wenden Sie sich an Ihren Account Manager:in oder öffnen Sie ein [Support-Ticket
 
 Diese Aufschlüsselung der Ereignisse zeigt, welche Art von Informationen im Allgemeinen in einem Ereignis zum Engagement für Nachrichten enthalten sind. Mit einem soliden Verständnis seiner Komponenten können Ihre Entwickler:in und Ihr Business-Intelligence Strategie Team die eingehenden Currents Ereignisdaten nutzen, um datengestützte Berichte und Charts zu erstellen und andere wertvolle Metriken zu nutzen.
 
-![Aufschlüsselung eines Ereignisses zum Engagement für Nachrichten, das ein E-Mail-Abmelde-Ereignis zeigt, mit den aufgeführten Eigenschaften, gruppiert nach benutzerspezifischen Eigenschaften, Kampagnen- oder Canvas-Tracking-Eigenschaften und ereignisspezifischen Eigenschaften]({% image_buster /assets/img/message_engagement_event.png %})
+![Aufschlüsselung eines Nachrichten-Engagement-Ereignisses, das ein E-Mail-Abmeldeereignis mit den aufgeführten Eigenschaften zeigt, gruppiert nach benutzerspezifischen Eigenschaften, Kampagnen- oder Canvas-Tracking-Eigenschaften und ereignisspezifischen Eigenschaften.]({% image_buster /assets/img/message_engagement_event.png %})
 
 Nachrichten-Engagement-Ereignisse setzen sich aus **benutzerspezifischen** Eigenschaften, **Kampagnen/Canvas Tracking-Eigenschaften** und **ereignisspezifischen** Eigenschaften zusammen.
 
@@ -101,6 +101,7 @@ Dies ist das Kafka-Datensatzschema für die Ausführung eines Agent Console-Agen
   "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
   "completion_tokens" : "(required, int) how many completion tokens this request used",
   "duration" : "(required, int) how long the invocation took in milliseconds",
+  "error" : "(optional, string) Description of error",
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "input" : "(optional, string) [PII] input to the LLM",
@@ -126,7 +127,7 @@ Dies ist das Kafka-Datensatzschema für die Ausführung eines Agent Console-Agen
 {% endapi %}
 
 {% api %}
-## Ereignisse beim Aufruf von Tools {#tool-invocation-events}
+## Toolaufrufereignisse {#tool-invocation-events}
 
 {% apitags %}
 Agent
@@ -146,6 +147,7 @@ Dies ist das Kafka-Datensatzschema für die Ausführung eines Tools.
   "id" : "(required, string) Globally unique ID for this event",
   "invocation_source" : "(optional, string) which ruby object invoked the LLM request",
   "is_error" : "(required, boolean) whether or not this request errored out",
+  "request_id" : "(optional, string) unique id for this overall LLM request and complete execution",
   "time" : "(required, long) unix timestamp at which this event is logged",
   "tool_arguments" : "(required, string) [PII] JSON of the tool arguments",
   "tool_call_id" : "(required, string) globally unique id for this tool call",
@@ -182,7 +184,7 @@ Dieses Ereignis wird nicht ausgelöst, wenn der Nutzer:innen die App tatsächlic
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -264,7 +266,7 @@ Dieses Ereignis wird nicht ausgelöst, wenn der Nutzer:innen die App tatsächlic
 // Application Uninstalled (users.behaviors.Uninstall)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -287,13 +289,13 @@ Dieses Ereignis wird nicht ausgelöst, wenn der Nutzer:innen die App tatsächlic
 {% endapi %}
 
 {% api %}
-## Globale Ereignisse zur Änderung des Abo-Status {#global-subscription-state-change-events}
+## Globale Ereignisse zur Änderung des Abos {#global-subscription-state-change-events}
 
 {% apitags %}
 Abo
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn Braze eine Anfrage zum Update des globalen Abo-Status des Nutzers:innen erhält.
+Dieses Ereignis tritt ein, wenn Braze eine Anfrage zum Update des globalen Abonnementstatus der Nutzer:innen erhält.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -322,7 +324,7 @@ Dieses Ereignis tritt ein, wenn Braze eine Anfrage zum Update des globalen Abo-S
   "subscription_status" : "(required, string) Subscription status: 'Subscribed', 'Unsubscribed' or 'Opted In'",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -450,7 +452,7 @@ Dieses Ereignis tritt ein, wenn Braze eine Anfrage zum Update des globalen Abo-S
 // Global Subscription State Changed (users.behaviors.subscription.GlobalStateChange)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -510,7 +512,7 @@ Dieses Ereignis tritt ein, wenn Braze eine Anfrage zum Update des globalen Abo-S
 {% endapi %}
 
 {% api %}
-## Abo Gruppe Statusänderung Ereignisse {#subscription-group-state-change-events}
+## Ereignisse zur Änderung des Status einer Abo-Gruppe {#subscription-group-state-change-events}
 
 {% apitags %}
 Abo
@@ -519,7 +521,7 @@ Abo
 Dieses Ereignis tritt ein, wenn sich der Abo-Status eines Nutzers:innen in einer Abo-Gruppe ändert.
 
 {% alert important %}
-Abo-Gruppen sind zur Zeit nur für die Kanäle E-Mail, SMS, RCS und WhatsApp verfügbar.
+Abo-Gruppen sind derzeit nur für E-Mail-, SMS-, RCS- und WhatsApp-Kanäle verfügbar.
 {% endalert %}
 
 {% tabs %}
@@ -553,7 +555,7 @@ Abo-Gruppen sind zur Zeit nur für die Kanäle E-Mail, SMS, RCS und WhatsApp ver
   "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -692,7 +694,7 @@ Abo-Gruppen sind zur Zeit nur für die Kanäle E-Mail, SMS, RCS und WhatsApp ver
 // Subscription Group State Changed (users.behaviors.subscriptiongroup.StateChange)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -731,13 +733,13 @@ Abo-Gruppen sind zur Zeit nur für die Kanäle E-Mail, SMS, RCS und WhatsApp ver
 {% endtab %}
 {% endtabs %}
 
-#### Merkmale der Eigenschaft {#property-details}
-{% include currents/property_details_dispatch_state_source.md %}
+#### Details zur Immobilie {#property-details}
+{% multi_lang_include currents/property_details_dispatch_state_source.md %}
 
 {% endapi %}
 
 {% api %}
-## Kampagne Konversions-Events {#campaign-conversion-events}
+## Kampagnen-Konversions-Events {#campaign-conversion-events}
 
 {% apitags %}
 Kampagne, Konversion
@@ -772,7 +774,7 @@ Beachten Sie, dass das Konversions-Ereignis im Feld `conversion_behavior` kodier
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -879,7 +881,7 @@ Beachten Sie, dass das Konversions-Ereignis im Feld `conversion_behavior` kodier
 // Campaign Converted (users.campaigns.Conversion)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -910,7 +912,7 @@ Beachten Sie, dass das Konversions-Ereignis im Feld `conversion_behavior` kodier
 {% endapi %}
 
 {% api %}
-## Kampagne Kontrollgruppe Einschreibeereignisse {#campaign-control-group-enrollment-events}
+## Kampagnen-Kontrollgruppe Anmeldeereignisse {#campaign-control-group-enrollment-events}
 
 {% apitags %}
 Kampagne, Eingang
@@ -939,7 +941,7 @@ Dieses Ereignis tritt ein, wenn sich ein Nutzer:innen in eine Kontrollvariante e
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1040,7 +1042,7 @@ Dieses Ereignis tritt ein, wenn sich ein Nutzer:innen in eine Kontrollvariante e
 // Campaign Control Group Entered (users.campaigns.EnrollInControl)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1069,7 +1071,7 @@ Dieses Ereignis tritt ein, wenn sich ein Nutzer:innen in eine Kontrollvariante e
 {% endapi %}
 
 {% api %}
-## Canvas Konversions-Ereignisse {#canvas-conversion-events}
+## Canvas-Konversions-Events {#canvas-conversion-events}
 
 {% apitags %}
 Canvas, Konversion
@@ -1101,7 +1103,7 @@ Beachten Sie, dass das Konversions-Ereignis im Feld `conversion_behavior` kodier
   "id" : "(required, string) Globally unique ID for this event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1208,7 +1210,7 @@ Beachten Sie, dass das Konversions-Ereignis im Feld `conversion_behavior` kodier
 // Canvas Converted (users.canvas.Conversion)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1239,7 +1241,7 @@ Beachten Sie, dass das Konversions-Ereignis im Feld `conversion_behavior` kodier
 {% endapi %}
 
 {% api %}
-## Canvas Eingang Ereignisse {#canvas-entry-events}
+## Canvas-Eingangsereignisse {#canvas-entry-events}
 
 {% apitags %}
 Canvas, Eingang
@@ -1265,7 +1267,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in den Canvas eintritt. Dieses Ereign
   "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1367,7 +1369,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in den Canvas eintritt. Dieses Ereign
 // Canvas Entered (users.canvas.Entry)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1396,7 +1398,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in den Canvas eintritt. Dieses Ereign
 {% endapi %}
 
 {% api %}
-## Exit Match Publikumsveranstaltungen {#exit-match-audience-events}
+## Veranstaltungen für die Zielgruppen beenden {#exit-match-audience-events}
 
 {% apitags %}
 Exit, Canvas
@@ -1424,7 +1426,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Canvas verlassen hat, ind
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1518,7 +1520,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Canvas verlassen hat, ind
 // Exit Matched Audience (users.canvas.exit.MatchedAudience)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1545,7 +1547,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Canvas verlassen hat, ind
 {% endapi %}
 
 {% api %}
-## Exit Perform Event-Ereignisse {#exit-perform-event-events}
+## Performance beenden {#exit-perform-event-events}
 
 {% apitags %}
 Exit, Canvas
@@ -1573,7 +1575,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen ein Canvas durch die Ausführun
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1667,7 +1669,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen ein Canvas durch die Ausführun
 // Exit Performed Event (users.canvas.exit.PerformedEvent)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1694,13 +1696,13 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen ein Canvas durch die Ausführun
 {% endapi %}
 
 {% api %}
-## Experiment Schritt Konversions-Ereignisse {#experiment-step-conversion-events}
+## Experiment Schritt Konversions-Events {#experiment-step-conversion-events}
 
 {% apitags %}
 Canvas
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn ein Nutzer:in für einen Canvas-Experiment-Schritt konvertiert.
+Dieses Ereignis tritt ein, wenn eine Nutzer:in einen Canvas-Experiment-Schritt konvertiert.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -1723,7 +1725,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in für einen Canvas-Experiment-Schri
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1831,7 +1833,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in für einen Canvas-Experiment-Schri
 // Experiment Step Converted (users.canvas.experimentstep.Conversion)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1863,7 +1865,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in für einen Canvas-Experiment-Schri
 {% endapi %}
 
 {% api %}
-## Experiment Split Eingang Ereignisse {#experiment-split-entry-events}
+## Experiment Split Entry-Veranstaltungen {#experiment-split-entry-events}
 
 {% apitags %}
 Canvas
@@ -1890,7 +1892,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Canvas-Experiment-Schritt
   "id" : "(required, string) Globally unique ID for this event",
   "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1993,7 +1995,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Canvas-Experiment-Schritt
 // Experiment Split Entered (users.canvas.experimentstep.SplitEntry)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -2023,10 +2025,10 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Canvas-Experiment-Schritt
 {% endapi %}
 
 {% api %}
-## Canvas-Schritt Progression Ereignisse {#canvas-step-progression-events}
+## Canvas-Schrittfortschrittsereignisse {#canvas-step-progression-events}
 
 {% apitags %}
-Canvas, Progression
+Canvas, Fortschritt
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Schritt in einem Canvas mit einem bestimmten Ergebnis durchläuft. Beachten Sie, dass dieses Ereignis nicht eintritt, wenn Schritte betreten oder verlassen werden. Gegenwärtig erzeugen nur geteilte Schritte (Zielgruppen-Pfade, Decision-Split, Aktions-Pfade, Experiment) und vorgebrachte Ergebnisse Schrittfortschrittsereignisse.
@@ -2053,7 +2055,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Schritt in einem Canvas m
   "next_step_id" : "(optional, string) API ID of the next step in the canvas",
   "progression_type" : "(required, string) What type of step progression event this is",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -2167,7 +2169,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Schritt in einem Canvas m
 // Canvas Step Progression (users.canvasstep.Progression)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -2200,7 +2202,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Schritt in einem Canvas m
 {% endapi %}
 
 {% api %}
-## Banner Abbruchereignisse {#banner-abort-events}
+## Banner-Abbruchereignisse {#banner-abort-events}
 
 {% apitags %}
 Banner, Abbrechen
@@ -2241,7 +2243,7 @@ Dieses Ereignis tritt ein, wenn eine ursprünglich geplante Bannernachricht aus 
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -2371,7 +2373,7 @@ Dieses Ereignis tritt ein, wenn eine ursprünglich geplante Bannernachricht aus 
 // Banner Aborted (users.messages.banner.Abort)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device"
@@ -2406,12 +2408,12 @@ Dieses Ereignis tritt ein, wenn eine ursprünglich geplante Bannernachricht aus 
 
 #### Merkmale der Eigenschaft
 
-- `abort_type` wird `frequency_capped` sein, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde. 
-- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch ausgelöst hat. Ein Beispiel ist: `Frequency cap rule: 5 Banner messages every 1 week`
+- `abort_type` wird angezeigt, `frequency_capped`wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
+- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 Banner messages every 1 week`
 {% endapi %}
 
 {% api %}
-## Banner Klick-Ereignisse {#banner-click-events}
+## Banner-Klick-Ereignisse {#banner-click-events}
 
 {% apitags %}
 Banner, Klicks
@@ -2451,7 +2453,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf ein Banner klickt.
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -2578,7 +2580,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf ein Banner klickt.
 // Banner Clicked (users.messages.banner.Click)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device"
@@ -2613,7 +2615,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf ein Banner klickt.
 {% endapi %}
 
 {% api %}
-## Banner Impressionen Ereignisse {#banner-impression-events}
+## Banner-Impressionen-Ereignisse {#banner-impression-events}
 
 {% apitags %}
 Banner, Impressionen
@@ -2652,7 +2654,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in ein Banner blickt.
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -2776,7 +2778,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in ein Banner blickt.
 // Banner Viewed (users.messages.banner.Impression)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device"
@@ -2810,7 +2812,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in ein Banner blickt.
 {% endapi %}
 
 {% api %}
-## Content-Card Abbruch-Ereignisse {#content-card-abort-events}
+## Content-Card Abbruchereignisse {#content-card-abort-events}
 
 {% apitags %}
 Abbruch, Content-Cards
@@ -2845,7 +2847,7 @@ Dieses Ereignis tritt ein, wenn eine Content-Card Nachricht aufgrund von Liquid-
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -2968,7 +2970,7 @@ Dieses Ereignis tritt ein, wenn eine Content-Card Nachricht aufgrund von Liquid-
 // Content Card Aborted (users.messages.contentcard.Abort)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -3003,13 +3005,13 @@ Dieses Ereignis tritt ein, wenn eine Content-Card Nachricht aufgrund von Liquid-
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
-- `abort_type` wird `frequency_capped` sein, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde. 
-- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch ausgelöst hat. Ein Beispiel ist: `Frequency cap rule: 5 Content Card messages every 1 week`
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
+- `abort_type` wird angezeigt, `frequency_capped`wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
+- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 Content Card messages every 1 week`
 {% endapi %}
 
 {% api %}
-## Content-Card Klick-Ereignisse {#content-card-click-events}
+## Content-Card Klickereignisse {#content-card-click-events}
 
 {% apitags %}
 Content-Cards, Klicks
@@ -3052,7 +3054,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine Content-Card klickt.
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -3196,7 +3198,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine Content-Card klickt.
 // Content Card Clicked (users.messages.contentcard.Click)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -3242,7 +3244,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine Content-Card klickt.
 {% endapi %}
 
 {% api %}
-## Content-Card Entlassungsereignisse {#content-card-dismiss-events}
+## Content-Card-Ausblendung {#content-card-dismiss-events}
 
 {% apitags %}
 Content-Cards, Entlassung
@@ -3285,7 +3287,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ablehnt.
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -3429,7 +3431,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ablehnt.
 // Content Card Dismissed (users.messages.contentcard.Dismiss)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -3475,7 +3477,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ablehnt.
 {% endapi %}
 
 {% api %}
-## Content-Card Impression Ereignisse {#content-card-impression-events}
+## Content-Card-Impressionen {#content-card-impression-events}
 
 {% apitags %}
 Content-Cards, Impressionen
@@ -3518,7 +3520,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ansieht.
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -3662,7 +3664,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ansieht.
 // Content Card Viewed (users.messages.contentcard.Impression)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -3708,7 +3710,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ansieht.
 {% endapi %}
 
 {% api %}
-## Content-Card Sendeereignisse {#content-card-send-events}
+## Content-Card Ereignisse senden {#content-card-send-events}
 
 {% apitags %}
 Content-Cards, Sendungen
@@ -3745,7 +3747,7 @@ Dieses Ereignis tritt ein, wenn eine Content-Card an einen Nutzer:innen gesendet
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -3868,7 +3870,7 @@ Dieses Ereignis tritt ein, wenn eine Content-Card an einen Nutzer:innen gesendet
 // Content Card Sent (users.messages.contentcard.Send)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -3907,7 +3909,7 @@ Dieses Ereignis tritt ein, wenn eine Content-Card an einen Nutzer:innen gesendet
 {% endapi %}
 
 {% api %}
-## E-Mail-Ereignisse abbrechen {#email-abort-events}
+## E-Mail-Abbruchereignisse {#email-abort-events}
 
 {% apitags %}
 Abbrechen, E-Mail
@@ -3944,7 +3946,7 @@ Dieses Ereignis tritt ein, wenn eine E-Mail Nachricht aufgrund von Liquid Abbrü
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -4073,7 +4075,7 @@ Dieses Ereignis tritt ein, wenn eine E-Mail Nachricht aufgrund von Liquid Abbrü
 // Email Aborted (users.messages.email.Abort)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -4111,13 +4113,13 @@ Dieses Ereignis tritt ein, wenn eine E-Mail Nachricht aufgrund von Liquid Abbrü
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
-- `abort_type` wird `frequency_capped` sein, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde. 
-- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch ausgelöst hat. Ein Beispiel ist: `Frequency cap rule: 5 email messages every 1 week`
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
+- `abort_type` wird angezeigt, `frequency_capped`wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
+- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 email messages every 1 week`
 {% endapi %}
 
 {% api %}
-## E-Mail Bounce-Ereignisse {#email-bounce-events}
+## E-Mail-Bounce-Ereignisse {#email-bounce-events}
 
 {% apitags %}
 E-Mail, Bounce
@@ -4155,7 +4157,7 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Hard Bounce zurücks
   "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -4290,7 +4292,7 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Hard Bounce zurücks
 // Email Bounced (users.messages.email.Bounce)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -4330,12 +4332,12 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Hard Bounce zurücks
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
   - Das Verhalten für `dispatch_id` unterscheidet sich zwischen Canvas und Kampagnen, da Braze Canvas-Schritte (mit Ausnahme von Eingangsschritten, die geplant werden können) als getriggerte Ereignisse behandelt, auch wenn sie geplant sind. Erfahren Sie mehr über das [Verhalten der ID im Versand]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
-## E-Mail Klick-Ereignisse {#email-click-events}
+## E-Mail-Klick-Ereignisse {#email-click-events}
 
 {% apitags %}
 E-Mail, Klicks
@@ -4382,7 +4384,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine E-Mail klickt. Es kön
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(optional, string) URL that the user clicked on",
   "user_agent" : "(optional, string) User agent on which the click occurred",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -4546,7 +4548,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine E-Mail klickt. Es kön
 // Email Link Clicked (users.messages.email.Click)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device"
@@ -4597,12 +4599,12 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine E-Mail klickt. Es kön
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
   - Das Verhalten für `dispatch_id` unterscheidet sich zwischen Canvas und Kampagnen, da Braze Canvas-Schritte (mit Ausnahme von Eingangsschritten, die geplant werden können) als getriggerte Ereignisse behandelt, auch wenn sie geplant sind. Erfahren Sie mehr über das [Verhalten der ID im Versand]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
-## E-Mail Aufschiebung von Ereignissen {#email-deferral-events}
+## E-Mail-Aufschubereignisse {#email-deferral-events}
 
 {% apitags %}
 E-Mail, Aufschub
@@ -4642,7 +4644,7 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider die E-Mail nicht sofort an
   "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -4776,7 +4778,7 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider die E-Mail nicht sofort an
 // Email Deferred (users.messages.email.Deferral)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -4816,12 +4818,12 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider die E-Mail nicht sofort an
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
   - Das Verhalten für `dispatch_id` unterscheidet sich zwischen Canvas und Kampagnen, da Braze Canvas-Schritte (mit Ausnahme von Eingangsschritten, die geplant werden können) als getriggerte Ereignisse behandelt, auch wenn sie geplant sind.
 {% endapi %}
 
 {% api %}
-## E-Mail-Zustellung Ereignisse {#email-delivery-events}
+## E-Mail-Zustellungsereignisse {#email-delivery-events}
 
 {% apitags %}
 E-Mail, Zustellung
@@ -4857,7 +4859,7 @@ Dieses Ereignis tritt ein, wenn eine gesendete E-Mail erfolgreich im Posteingang
   "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -4986,7 +4988,7 @@ Dieses Ereignis tritt ein, wenn eine gesendete E-Mail erfolgreich im Posteingang
 // Email Delivered (users.messages.email.Delivery)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -5024,12 +5026,12 @@ Dieses Ereignis tritt ein, wenn eine gesendete E-Mail erfolgreich im Posteingang
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
   - Das Verhalten für `dispatch_id` unterscheidet sich zwischen Canvas und Kampagnen, da Braze Canvas-Schritte (mit Ausnahme von Eingangsschritten, die geplant werden können) als getriggerte Ereignisse behandelt, auch wenn sie geplant sind.
 {% endapi %}
 
 {% api %}
-## E-Mail Als Spam markieren Ereignisse {#email-mark-as-spam-events}
+## E-Mail als Spam markieren {#email-mark-as-spam-events}
 
 {% apitags %}
 E-Mail, Spam
@@ -5065,7 +5067,7 @@ Dieses Ereignis tritt ein, wenn der Endnutzer:in auf den Button "Spam" in der E-
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "user_agent" : "(optional, string) User agent on which the spam report occurred",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -5197,7 +5199,7 @@ Dieses Ereignis tritt ein, wenn der Endnutzer:in auf den Button "Spam" in der E-
 // Email Marked as Spam (users.messages.email.MarkAsSpam)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -5236,12 +5238,12 @@ Dieses Ereignis tritt ein, wenn der Endnutzer:in auf den Button "Spam" in der E-
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
   - Das Verhalten für `dispatch_id` unterscheidet sich zwischen Canvas und Kampagnen, da Braze Canvas-Schritte (mit Ausnahme von Eingangsschritten, die geplant werden können) als getriggerte Ereignisse behandelt, auch wenn sie geplant sind.
 {% endapi %}
 
 {% api %}
-## E-Mail Öffentliche Veranstaltungen {#email-open-events}
+## E-Mail-Eröffnungsveranstaltungen {#email-open-events}
 
 {% apitags %}
 E-Mail, Öffnungen
@@ -5488,18 +5490,18 @@ Es ist ein bekanntes Verhalten, dass die Felder für die Öffnung von E-Mails `d
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
   - Das Verhalten für `dispatch_id` unterscheidet sich zwischen Canvas und Kampagnen, da Braze Canvas-Schritte (mit Ausnahme von Eingangsschritten, die geplant werden können) als getriggerte Ereignisse behandelt, auch wenn sie geplant sind.
 {% endapi %}
 
 {% api %}
-## E-Mail Wiederholungsversuche {#email-retry-events}
+## E-Mail-Wiederholungsereignisse {#email-retry-events}
 
 {% apitags %}
-E-Mail, Wiederholung
+E-Mail, erneut versuchen
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Frequency-Capping versehen wurde und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion ist nur für Kunden:in der Beta-Version der Nachrichtenpriorisierung verfügbar.
+Dieses Ereignis tritt ein, wenn eine Nachricht herabgestuft oder durch Frequency-Capping in ihrer Häufigkeit begrenzt wird und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion steht nur Kund:innen der Beta-Version von Message Prioritization zur Verfügung.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -5702,13 +5704,13 @@ Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Freq
 {% endapi %}
 
 {% api %}
-## E-Mail Ereignisse senden {#email-send-events}
+## E-Mail-Versand von Veranstaltungen {#email-send-events}
 
 {% apitags %}
 E-Mail, Sendet
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine Anfrage zum Senden von E-Mails erfolgreich zwischen Braze und SendGrid übermittelt wurde. Dies bedeutet jedoch nicht, dass die E-Mail im Posteingang des Nutzers:innen eingegangen ist. Braze protokolliert keine Ereignisse in Benutzerprofilen oder Currents-Zielen (z.B. Snowflake), wenn das Ereignis nicht sowohl mit der E-Mail als auch mit der ID des Nutzers, die dem E-Mail-Ereignis zugeordnet sind, in Verbindung gebracht werden kann.
+Dieses Ereignis tritt ein, wenn eine Anfrage zum Senden von E-Mails erfolgreich zwischen Braze und SendGrid übermittelt wurde. Dies bedeutet jedoch nicht, dass die E-Mail im Posteingang des Nutzers eingegangen ist. Braze protokolliert keine Ereignisse in Nutzerprofilen oder Currents-Zielen (wie Snowflake), wenn das Ereignis nicht sowohl mit der E-Mail-Adresse als auch mit der Benutzer-ID, die mit dem E-Mail-Ereignis verknüpft ist, abgeglichen werden kann.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -5736,7 +5738,7 @@ Dieses Ereignis tritt ein, wenn eine Anfrage zum Senden von E-Mails erfolgreich 
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -5864,7 +5866,7 @@ Dieses Ereignis tritt ein, wenn eine Anfrage zum Senden von E-Mails erfolgreich 
 // Email Sent (users.messages.email.Send)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -5903,13 +5905,13 @@ Dieses Ereignis tritt ein, wenn eine Anfrage zum Senden von E-Mails erfolgreich 
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
   - Das Verhalten für `dispatch_id` unterscheidet sich zwischen Canvas und Kampagnen, da Braze Canvas-Schritte (mit Ausnahme von Eingangsschritten, die geplant werden können) als getriggerte Ereignisse behandelt, auch wenn sie geplant sind. Erfahren Sie mehr über das [Verhalten der ID im Versand]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 - `message_extras` ermöglichen es Ihnen, Ihre Sende-Events mit dynamischen Daten aus Connected-Content, angepassten Attributen (z.B. Sprache, Land) und Canvas-Eingangs-Eigenschaften zu versehen. Weitere Informationen finden Sie unter [Extras für Nachrichten]({{site.baseurl}}/message_extras_tag/).
 {% endapi %}
 
 {% api %}
-## E-Mail Soft Bounce-Ereignisse {#email-soft-bounce-events}
+## E-Mail-Soft-Bounce-Ereignisse {#email-soft-bounce-events}
 
 {% apitags %}
 E-Mail, Bounce
@@ -5946,7 +5948,7 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Soft Bounce zurücks
   "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -6078,7 +6080,7 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Soft Bounce zurücks
 // Email Soft Bounced (users.messages.email.SoftBounce)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -6117,12 +6119,12 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Soft Bounce zurücks
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
   - Das Verhalten für `dispatch_id` unterscheidet sich zwischen Canvas und Kampagnen, da Braze Canvas-Schritte (mit Ausnahme von Eingangsschritten, die geplant werden können) als getriggerte Ereignisse behandelt, auch wenn sie geplant sind. Erfahren Sie mehr über das [Verhalten der ID im Versand]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
-## E-Mail Abmelden von Ereignissen {#email-unsubscribe-events}
+## E-Mail-Abmeldeereignisse {#email-unsubscribe-events}
 
 {% apitags %}
 E-Mail, Abo
@@ -6131,7 +6133,7 @@ E-Mail, Abo
 Dieses Ereignis tritt ein, wenn der Endnutzer:in auf "Abmelden" in der E-Mail geklickt hat.
 
 {% alert important %}
-Das Ereignis `Unsubscribe` ist ein spezielles Klick-Ereignis, das ausgelöst wird, wenn Ihr Nutzer:in auf den Abmeldelink in der E-Mail klickt (entweder ein normaler Abmeldelink im Textkörper oder in der Fußzeile der E-Mail oder über die [Kopfzeile list-unsubscribe]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)), und nicht, wenn der Nutzer:in den Status "abgemeldet" wechselt. Wenn die Änderung des Abo-Status über die API oder mit einem angepassten (nicht-Braze) Abmeldelink gesendet wird, löst dies kein E-Mail-Abmelde-Ereignis auf Currents aus.
+Das`Unsubscribe`Ereignis wird als spezielles Klickereignis betrachtet, das ausgelöst wird, wenn die Nutzer:in auf den Link zum Abmelden in der E-Mail klickt (entweder einen normalen Link zum Abmelden im E-Mail-Text oder in der Fußzeile oder über den [List-Unsubscribe-Header]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)), nicht jedoch, wenn die Nutzer:in ihren Status auf „abgemeldet” ändert. Wenn eine Änderung des Abonnementstatus über die API oder über einen benutzerdefinierten (nicht von Braze stammenden) Abmeldelink gesendet wird, triggert dies kein E-Mail-Abmeldeereignis in Currents.
 {% endalert %}
 
 {% tabs %}
@@ -6159,7 +6161,7 @@ Das Ereignis `Unsubscribe` ist ein spezielles Klick-Ereignis, das ausgelöst wir
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -6282,7 +6284,7 @@ Das Ereignis `Unsubscribe` ist ein spezielles Klick-Ereignis, das ausgelöst wir
 // Unsubscribed (users.messages.email.Unsubscribe)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -6318,18 +6320,18 @@ Das Ereignis `Unsubscribe` ist ein spezielles Klick-Ereignis, das ausgelöst wir
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
   - Das Verhalten für `dispatch_id` unterscheidet sich zwischen Canvas und Kampagnen, da Braze Canvas-Schritte (mit Ausnahme von Eingangsschritten, die geplant werden können) als getriggerte Ereignisse behandelt, auch wenn sie geplant sind. Erfahren Sie mehr über das [Verhalten der ID im Versand]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
-## Feature-Flag Experiment Impressionen Ereignisse {#feature-flag-experiment-impression-events}
+## Feature-Flag-Experiment Impressionen {#feature-flag-experiment-impression-events}
 
 {% apitags %}
 Feature-Flags, Impressionen
 {% endapitags %}
 
-Dieses Ereignis tritt immer dann ein, wenn ein Nutzer:innen die Opportunity hatte, mit Ihrem Feature zu interagieren, oder wenn er hätte interagieren können, wenn das Feature deaktiviert ist (im Falle einer Kontrollgruppe in einem A/B-Test).
+Dieses Ereignis tritt ein, wenn ein Nutzer:in die Möglichkeit hatte, mit Ihrem Feature zu interagieren, oder wenn er hätte interagieren können, wenn das Feature deaktiviert ist (im Falle einer Kontrollgruppe in einem A/B-Test).
 
 Feature-Flag Impressionen werden nur einmal pro Sitzung protokolliert.
 
@@ -6369,7 +6371,7 @@ Feature-Flag Impressionen werden nur einmal pro Sitzung protokolliert.
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -6498,7 +6500,7 @@ Feature-Flag Impressionen werden nur einmal pro Sitzung protokolliert.
 // Feature Flag Experiment Impressed (users.messages.featureflag.Impression)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -6536,7 +6538,7 @@ Feature-Flag Impressionen werden nur einmal pro Sitzung protokolliert.
 {% endapi %}
 
 {% api %}
-## In-App-Nachricht Abbruch-Ereignisse {#in-app-message-abort-events}
+## In-App-Nachrichtenabbruchereignisse {#in-app-message-abort-events}
 
 {% apitags %}
 In-App-Nachrichten, Abbruch
@@ -6582,7 +6584,7 @@ Dieses Ereignis tritt ein, wenn eine ursprünglich geplante In-App-Nachricht abg
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "version" : "(required, string) Which version of in-app message, legacy or triggered"
 }
 ```
@@ -6731,7 +6733,7 @@ Dieses Ereignis tritt ein, wenn eine ursprünglich geplante In-App-Nachricht abg
 // In-App Message Aborted (users.messages.inappmessage.Abort)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -6774,19 +6776,18 @@ Dieses Ereignis tritt ein, wenn eine ursprünglich geplante In-App-Nachricht abg
 
 #### Merkmale der Eigenschaft
 
-- `abort_type` wird `frequency_capped` sein, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde. 
-- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch ausgelöst hat. Ein Beispiel ist: `Frequency cap rule: 5 in-app messages every 1 week`
-
+- `abort_type` wird angezeigt, `frequency_capped`wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
+- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 in-app messages every 1 week`
 {% endapi %}
 
 {% api %}
-## In-App-Nachricht Klick-Ereignisse {#in-app-message-click-events}
+## In-App-Nachrichten-Klickereignisse {#in-app-message-click-events}
 
 {% apitags %}
 In-App-Nachrichten, Klicks
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn ein Nutzer:in auf eine In-App-Nachricht klickt.
+Dieses Ereignis tritt ein, wenn eine Nutzer:in auf eine In-App-Nachricht klickt.
 
 {% alert note %}
 `dispatch_id` ist veraltet und wird in der nächsten Currents Version entfernt.
@@ -6824,7 +6825,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in auf eine In-App-Nachricht klickt.
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -6971,7 +6972,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in auf eine In-App-Nachricht klickt.
 // In-App Message Clicked (users.messages.inappmessage.Click)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -7018,7 +7019,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in auf eine In-App-Nachricht klickt.
 {% endapi %}
 
 {% api %}
-## In-App-Nachricht Impressionen Ereignisse {#in-app-message-impression-events}
+## In-App-Nachrichten-Impressionen-Ereignisse {#in-app-message-impression-events}
 
 {% apitags %}
 In-App-Nachrichten, Impressionen
@@ -7063,7 +7064,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in eine In-App-Nachricht sieht.
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -7213,7 +7214,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in eine In-App-Nachricht sieht.
 // In-App Message Viewed (users.messages.inappmessage.Impression)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -7261,13 +7262,13 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in eine In-App-Nachricht sieht.
 {% endapi %}
 
 {% api %}
-## LINE Abbruchereignisse {#line-abort-events}
+## LINE-Abbruchereignisse {#line-abort-events}
 
 {% apitags %}
-LINE, Abbrechen
+LINE, Abbruch
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine geplante LINE Nachricht nicht zugestellt werden kann, bevor sie an LINE gesendet wird.
+Dieser Vorfall tritt ein, wenn eine geplante LINE-Nachricht nicht zugestellt werden kann, bevor sie an LINE gesendet wird.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -7297,7 +7298,7 @@ Dieses Ereignis tritt ein, wenn eine geplante LINE Nachricht nicht zugestellt we
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -7424,7 +7425,7 @@ Dieses Ereignis tritt ein, wenn eine geplante LINE Nachricht nicht zugestellt we
 // Aborted (users.messages.line.Abort)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -7460,20 +7461,19 @@ Dieses Ereignis tritt ein, wenn eine geplante LINE Nachricht nicht zugestellt we
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
-- `abort_type` wird `frequency_capped` sein, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde. 
-- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch ausgelöst hat. Ein Beispiel ist: `Frequency cap rule: 5 LINE messages every 1 week`
-
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
+- `abort_type` wird angezeigt, `frequency_capped`wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
+- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 LINE messages every 1 week`
 {% endapi %}
 
 {% api %}
-## LINE Klick-Ereignisse {#line-click-events}
+## LINE-Klickevents {#line-click-events}
 
 {% apitags %}
 LINE, Klicks
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn ein Nutzer:innen in einer LINE Nachricht auf einen Link klickt, dessen Domain mit der Click Tracking Domain übereinstimmt.
+Dieses Ereignis tritt ein, wenn ein Nutzer:in auf einen Link in einer LINE-Nachricht klickt, dessen Domain mit der Domain des Klick-Tracking-Services übereinstimmt.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -7505,7 +7505,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen in einer LINE Nachricht auf ein
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(required, string) URL that the user clicked on",
   "user_agent" : "(optional, string) User agent on which the click occurred",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -7638,7 +7638,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen in einer LINE Nachricht auf ein
 // Clicked (users.messages.line.Click)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -7675,17 +7675,17 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen in einer LINE Nachricht auf ein
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## LINE Eingehende Empfangsereignisse {#line-inbound-receive-events}
+## LINE-eingehende Empfangsereignisse {#line-inbound-receive-events}
 
 {% apitags %}
-LINE, Eingehend Empfangen
+LINE, eingehende Nachricht
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine LINE-Nachricht von einem Nutzer:innen empfangen wird.
+Dieses Ereignis tritt ein, wenn eine LINE-Nachricht von einer Nutzer:in empfangen wird.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -7715,7 +7715,7 @@ Dieses Ereignis tritt ein, wenn eine LINE-Nachricht von einem Nutzer:innen empfa
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -7842,7 +7842,7 @@ Dieses Ereignis tritt ein, wenn eine LINE-Nachricht von einem Nutzer:innen empfa
 // LINE Inbound Received (users.messages.line.InboundReceive)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -7878,17 +7878,17 @@ Dieses Ereignis tritt ein, wenn eine LINE-Nachricht von einem Nutzer:innen empfa
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## LINE Wiederholungsereignisse {#line-retry-events}
+## LINE-Wiederholungsereignisse {#line-retry-events}
 
 {% apitags %}
-LINE, Wiederholen
+LINE, Bitte versuchen Sie es erneut
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Frequency-Capping versehen wurde und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion ist nur für Kunden:in der Beta-Version der Nachrichtenpriorisierung verfügbar.
+Dieses Ereignis tritt ein, wenn eine Nachricht herabgestuft oder durch Frequency-Capping in ihrer Häufigkeit begrenzt wird und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion steht nur Kund:innen der Beta-Version von Message Prioritization zur Verfügung.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -8082,13 +8082,13 @@ Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Freq
 {% endapi %}
 
 {% api %}
-## LINE Ereignisse senden {#line-send-events}
+## LINE-Ereignisse senden {#line-send-events}
 
 {% apitags %}
-LINE, Sendet
+LINE, sendet
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine LINE Nachricht an LINE gesendet wird.
+Dieses Ereignis tritt ein, wenn eine LINE-Nachricht an LINE gesendet wird.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -8117,7 +8117,7 @@ Dieses Ereignis tritt ein, wenn eine LINE Nachricht an LINE gesendet wird.
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -8241,7 +8241,7 @@ Dieses Ereignis tritt ein, wenn eine LINE Nachricht an LINE gesendet wird.
 // Sent (users.messages.line.Send)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -8276,11 +8276,11 @@ Dieses Ereignis tritt ein, wenn eine LINE Nachricht an LINE gesendet wird.
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## Live-Aktivitäten Ergebnisse Ereignisse {#live-activity-outcome-events}
+## Live-Aktivitätsergebnisse {#live-activity-outcome-events}
 
 {% apitags %}
 Live-Aktivität, Ergebnis
@@ -8305,7 +8305,7 @@ Dieses Ereignis tritt ein, wenn Braze eine Antwort von einem Drittanbieter erhä
   "push_to_start_token" : "(optional, string) Live Activity push to start token",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "update_token" : "(optional, string) Live Activity update token",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -8402,7 +8402,7 @@ Dieses Ereignis tritt ein, wenn Braze eine Antwort von einem Drittanbieter erhä
 // Live Activity Outcome (users.messages.liveactivity.Outcome)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -8436,7 +8436,7 @@ Dieses Ereignis tritt ein, wenn Braze eine Antwort von einem Drittanbieter erhä
 Live-Aktivität, Sendungen
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn das Braze-System eine Anfrage an seinen Provider bezüglich der Live-Aktivität stellt.
+Dieses Ereignis tritt ein, wenn das Braze-System eine Anfrage bezüglich Live-Aktivitäten an seinen Anbieter stellt.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -8454,7 +8454,7 @@ Dieses Ereignis tritt ein, wenn das Braze-System eine Anfrage an seinen Provider
   "push_to_start_token" : "(optional, string) Live Activity push to start token",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "update_token" : "(optional, string) Live Activity update token",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -8548,7 +8548,7 @@ Dieses Ereignis tritt ein, wenn das Braze-System eine Anfrage an seinen Provider
 // Live Activity Sent (users.messages.liveactivity.Send)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -8575,7 +8575,7 @@ Dieses Ereignis tritt ein, wenn das Braze-System eine Anfrage an seinen Provider
 {% endapi %}
 
 {% api %}
-## Push-Benachrichtigung Abbruchereignisse {#push-notification-abort-events}
+## Push-Benachrichtigung: Abbruchereignisse {#push-notification-abort-events}
 
 {% apitags %}
 Abbrechen, Push
@@ -8612,7 +8612,7 @@ Dieses Ereignis tritt ein, wenn eine Push-Benachrichtigung aufgrund von Liquid-A
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -8741,7 +8741,7 @@ Dieses Ereignis tritt ein, wenn eine Push-Benachrichtigung aufgrund von Liquid-A
 // Push Notification Aborted (users.messages.pushnotification.Abort)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -8778,13 +8778,13 @@ Dieses Ereignis tritt ein, wenn eine Push-Benachrichtigung aufgrund von Liquid-A
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
-- `abort_type` wird `frequency_capped` sein, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde. 
-- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch ausgelöst hat. Ein Beispiel ist: `Frequency cap rule: 5 push messages every 1 week`
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
+- `abort_type` wird angezeigt, `frequency_capped`wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
+- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 push messages every 1 week`
 {% endapi %}
 
 {% api %}
-## Push-Benachrichtigung Bounce-Ereignisse {#push-notification-bounce-events}
+## Push-Benachrichtigung-Bounce-Ereignisse {#push-notification-bounce-events}
 
 {% apitags %}
 Push, Sendet, Prellen
@@ -8822,7 +8822,7 @@ Dieses Ereignis tritt ein, wenn ein Fehler entweder vom Apple Push Notification 
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -8961,7 +8961,7 @@ Dieses Ereignis tritt ein, wenn ein Fehler entweder vom Apple Push Notification 
 // Push Notification Bounced (users.messages.pushnotification.Bounce)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -9000,12 +9000,12 @@ Dieses Ereignis tritt ein, wenn ein Fehler entweder vom Apple Push Notification 
 
 #### Merkmale der Eigenschaft
 
-- Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager oder Account Manager:in, um das Feature Flipper für das Senden von `ad_id` zu aktivieren.
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- Wenn Sie Kafka zum Importieren von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)-Daten verwenden, wenden Sie sich bitte an Ihren Customer-Success-Manager oder Account Manager, um die Funktion zum Senden von Daten zu`ad_id` aktivieren.
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## Push-Benachrichtigung iOS Foreground Offene Ereignisse {#push-notification-ios-foreground-open-events}
+## Push-Benachrichtigung iOS Vordergrund Öffnung von Ereignissen {#push-notification-ios-foreground-open-events}
 
 {% apitags %}
 Push, iOS, Sendet
@@ -9042,7 +9042,7 @@ Dieses Ereignis wird von unserem [Swift SDK](https://github.com/braze-inc/braze-
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -9129,7 +9129,7 @@ Dieses Ereignis wird von unserem [Swift SDK](https://github.com/braze-inc/braze-
 // Ios Foreground Push Opened (users.messages.pushnotification.IosForeground)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -9171,22 +9171,22 @@ Dieses Ereignis wird von unserem [Swift SDK](https://github.com/braze-inc/braze-
 
 - Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## Push-Benachrichtigung Offene Ereignisse {#push-notification-open-events}
+## Push-Benachrichtigung: Öffnung von Veranstaltungen {#push-notification-open-events}
 
 {% apitags %}
 Push, Öffnet
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn ein Nutzer:innen direkt auf die Push-Benachrichtigung klickt, um die Anwendung zu öffnen. Derzeit referenzieren Push Open Events auf "Direkte Öffnungen" und nicht auf "Gesamte Öffnungen". Dazu gehören nicht die auf Kampagnenebene angezeigten Statistiken über "beeinflusste Öffnungen", da diese nicht auf der Ebene der Nutzer:innen attributiert werden.
+Dieses Ereignis tritt ein, wenn ein Nutzer:in direkt auf die Push-Benachrichtigung klickt, um die Anwendung zu öffnen. Derzeit referenzieren Push Open Events auf "Direkte Öffnungen" und nicht auf "Gesamte Öffnungen". Dazu gehören nicht die auf Kampagnenebene angezeigten Statistiken über "beeinflusste Öffnungen", da diese nicht auf der Ebene der Nutzer:innen attributiert werden.
 
 {% alert note %}
-In seltenen Fällen kann es vorkommen, dass eine Push-Öffnung vor dem entsprechenden Push-Sendeereignis in den Currents Daten erscheint, und zwar aus folgenden Gründen:
-- Ihr SDK hat eine falsche Uhr.
-- Hohe Latenzzeit beim Schreiben von Stapeln. Die aufgezeichnete Sendezeit kann hinter frühen Zustellungen zurückbleiben, so dass sehr schnelle Öffnungen protokolliert werden können, bevor der endgültige Sendezeitstempel des Stapels geschrieben wird. Große Sendungen werden in Stapeln versandt und erfasst.
+In seltenen Fällen kann es vorkommen, dass eine Push-Öffnung vor dem entsprechenden Push-Send-Ereignis in den Currents-Daten erscheint. Dies kann folgende Ursachen haben:
+- Ihr SDK verfügt über eine unkorrekte Uhrzeit.
+- Hohe Latenz beim Schreiben von Stapeln. Die aufgezeichnete Sendezeit kann hinter vorzeitigen Zustellungen zurückbleiben, sodass sehr schnelle Öffnungen möglicherweise protokolliert werden, bevor der endgültige Sendezeitstempel des Stapels geschrieben wird. Große Sendungen werden in Chargen versandt und erfasst.
 {% endalert %}
 
 {% tabs %}
@@ -9223,7 +9223,7 @@ In seltenen Fällen kann es vorkommen, dass eine Push-Öffnung vor dem entsprech
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -9364,7 +9364,7 @@ In seltenen Fällen kann es vorkommen, dass eine Push-Öffnung vor dem entsprech
 // Push Notification Tapped (users.messages.pushnotification.Open)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -9406,17 +9406,17 @@ In seltenen Fällen kann es vorkommen, dass eine Push-Öffnung vor dem entsprech
 
 - Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## Push-Benachrichtigung Wiederholungsereignisse {#push-notification-retry-events}
+## Wiederholungsversuche für Push-Benachrichtigungen {#push-notification-retry-events}
 
 {% apitags %}
-Push, Wiederholung
+Push, Retry
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Frequency-Capping versehen wurde und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion ist nur für Kunden:in der Beta-Version der Nachrichtenpriorisierung verfügbar.
+Dieses Ereignis tritt ein, wenn eine Nachricht herabgestuft oder durch Frequency-Capping in ihrer Häufigkeit begrenzt wird und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion steht nur Kund:innen der Beta-Version von Message Prioritization zur Verfügung.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -9657,7 +9657,7 @@ Dieses Ereignis tritt ein, wenn Braze eine Push-Nachricht für einen Nutzer:inne
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -9802,7 +9802,7 @@ Dieses Ereignis tritt ein, wenn Braze eine Push-Nachricht für einen Nutzer:inne
 // Push Notification Sent (users.messages.pushnotification.Send)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -9846,17 +9846,17 @@ Dieses Ereignis tritt ein, wenn Braze eine Push-Nachricht für einen Nutzer:inne
 - Für `ad_id`, `ad_id_type` und `ad_tracking_enabled` müssen Sie die iOS Identifier for Advertisers (IDFA) und Android Google Advertising ID explizit über die nativen SDKs erfassen. Erfahren Sie mehr über diese Einrichtung für [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) und [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
 - Wenn Sie Kafka zur Aufnahme von [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) Daten verwenden, wenden Sie sich an Ihren Customer-Success-Manager, um das Senden von `ad_id` zu aktivieren.
 - `message_extras` ermöglichen es Ihnen, Ihre Sende-Events mit dynamischen Daten aus Connected-Content, angepassten Attributen (z.B. Sprache, Land) und Canvas-Eingangs-Eigenschaften zu versehen. Weitere Informationen finden Sie unter [Extras für Nachrichten]({{site.baseurl}}/message_extras_tag/).
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## RCS Abbruch-Ereignisse {#rcs-abort-events}
+## RCS-Abbruchereignisse {#rcs-abort-events}
 
 {% apitags %}
 RCS, Abbruch
 {% endapitags %}
 
-Dieses Ereignis wird erzeugt, wenn ein RCS-Sendevorgang aufgrund eines in Braze erkannten Fehlers unterbrochen und die Nachricht verworfen wird.
+Dieses Ereignis wird ausgelöst, wenn eine RCS-Übertragung aufgrund eines in Braze festgestellten Fehlers unterbrochen wird und die Nachricht verworfen wird.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -9881,7 +9881,7 @@ Dieses Ereignis wird erzeugt, wenn ein RCS-Sendevorgang aufgrund eines in Braze 
   "message_variation_name" : "(optional, string) Name of the message variation",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -9993,7 +9993,7 @@ Dieses Ereignis wird erzeugt, wenn ein RCS-Sendevorgang aufgrund eines in Braze 
 // Aborted (users.messages.rcs.Abort)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -10025,18 +10025,18 @@ Dieses Ereignis wird erzeugt, wenn ein RCS-Sendevorgang aufgrund eines in Braze 
 
 #### Merkmale der Eigenschaft
 
-- `abort_type` wird `frequency_capped` sein, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde. 
-- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch ausgelöst hat. Ein Beispiel ist: `Frequency cap rule: 5 RCS messages every 1 week`
+- `abort_type` wird angezeigt, `frequency_capped`wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
+- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 RCS messages every 1 week`
 {% endapi %}
 
 {% api %}
-## RCS Klick-Ereignisse {#rcs-click-events}
+## RCS-Klickereignisse {#rcs-click-events}
 
 {% apitags %}
 RCS, Klicks
 {% endapitags %}
 
-Ein Ereignis, das erzeugt wird, wenn der Nutzer:in mit einer RCS Nachricht so interagiert, dass er auf ein UI-Element tippt oder klickt.
+Ein Ereignis, das ausgelöst wird, wenn der Nutzer:in mit einer RCS-Nachricht interagiert, indem er auf ein UI-Element tippt oder einen Klick darauf ausführt.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -10069,7 +10069,7 @@ Ein Ereignis, das erzeugt wird, wenn der Nutzer:in mit einer RCS Nachricht so in
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "url" : "(optional, string) The full URL that the user clicked on",
   "user_agent" : "(optional, string) User agent on which the click occurred",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
 }
 ```
@@ -10211,7 +10211,7 @@ Ein Ereignis, das erzeugt wird, wenn der Nutzer:in mit einer RCS Nachricht so in
 // Clicked (users.messages.rcs.Click)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -10253,13 +10253,13 @@ Ein Ereignis, das erzeugt wird, wenn der Nutzer:in mit einer RCS Nachricht so in
 {% endapi %}
 
 {% api %}
-## RCS Zustellung Ereignisse {#rcs-delivery-events}
+## RCS-Zustellereignisse {#rcs-delivery-events}
 
 {% apitags %}
 RCS, Zustellung
 {% endapitags %}
 
-Dieses Ereignis wird erstellt, wenn eine RCS Nachricht erfolgreich an das mobile Gerät eines Nutzers:innen zugestellt wurde.
+Dieses Ereignis wird ausgelöst, wenn eine RCS-Nachricht erfolgreich an das Gerät einer Nutzer:in zugestellt wurde.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -10287,7 +10287,7 @@ Dieses Ereignis wird erstellt, wenn eine RCS Nachricht erfolgreich an das mobile
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "to_phone_number" : "(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -10411,7 +10411,7 @@ Dieses Ereignis wird erstellt, wenn eine RCS Nachricht erfolgreich an das mobile
 // Delivered (users.messages.rcs.Delivery)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -10447,17 +10447,17 @@ Dieses Ereignis wird erstellt, wenn eine RCS Nachricht erfolgreich an das mobile
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## RCS Eingehende empfangene Ereignisse {#rcs-inbound-received-events}
+## RCS-eingehende Ereignisse {#rcs-inbound-received-events}
 
 {% apitags %}
-RCS, Eingehend empfangen
+RCS, eingehende Nachricht empfangen
 {% endapitags %}
 
-Dieses Ereignis wird erstellt, wenn Braze eine RCS Nachricht empfängt, die vom Nutzer:innen stammt.
+Dieses Ereignis wird erstellt, wenn Braze eine RCS-Nachricht von einem Nutzer:in erhält.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -10474,6 +10474,7 @@ Dieses Ereignis wird erstellt, wenn Braze eine RCS Nachricht empfängt, die vom 
   "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
   "canvas_step_name" : "(optional, string) Name of the Canvas step",
   "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "id" : "(required, string) Globally unique ID for this event",
   "media_urls" : "(optional, array of string) Media URLs from the user",
@@ -10484,7 +10485,7 @@ Dieses Ereignis wird erstellt, wenn Braze eine RCS Nachricht empfängt, die vom 
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "to_rcs_sender" : "(required, string) The inbound RCS sender that the message was sent to",
-  "user_id" : "(optional, string) Braze user ID of the user who performed this event",
+  "user_id" : "(optional, string) [PII] Braze user ID of the user who performed this event",
   "user_phone_number" : "(required, string) [PII] The user's phone number from which the message was received"
 }
 ```
@@ -10504,6 +10505,7 @@ Dieses Ereignis wird erstellt, wenn Braze eine RCS Nachricht empfängt, die vom 
     "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "media_urls" : "(optional, array of string) Media URLs from the user",
     "message_body" : "(optional, string) Typed response from the user",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -10538,6 +10540,7 @@ Dieses Ereignis wird erstellt, wenn Braze eine RCS Nachricht empfängt, die vom 
     "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "distinct_id" : "(required, string) [PII] External ID of the user",
     "$insert_id" : "(required, string) Globally unique ID for this event",
     "media_urls" : "(optional, array of string) Media URLs from the user",
@@ -10574,6 +10577,7 @@ Dieses Ereignis wird erstellt, wenn Braze eine RCS Nachricht empfängt, die vom 
           "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
           "canvas_step_name" : "(optional, string) Name of the Canvas step",
           "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+          "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
           "message_body" : "(optional, string) Typed response from the user",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
@@ -10606,7 +10610,7 @@ Dieses Ereignis wird erstellt, wenn Braze eine RCS Nachricht empfängt, die vom 
 // Inbound Received (users.messages.rcs.InboundReceive)
 
 {
-  "anonymousId" : "(optional, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(optional, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -10624,6 +10628,7 @@ Dieses Ereignis wird erstellt, wenn Braze eine RCS Nachricht empfängt, die vom 
     "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
     "canvas_step_name" : "(optional, string) Name of the Canvas step",
     "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+    "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
     "media_urls" : "(optional, array of string) Media URLs from the user",
     "message_body" : "(optional, string) Typed response from the user",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
@@ -10643,13 +10648,13 @@ Dieses Ereignis wird erstellt, wenn Braze eine RCS Nachricht empfängt, die vom 
 {% endapi %}
 
 {% api %}
-## RCS Ereignisse lesen {#rcs-read-events}
+## RCS-Leseereignisse {#rcs-read-events}
 
 {% apitags %}
 RCS, Lesen
 {% endapitags %}
 
-Dieses Ereignis wird erstellt, wenn ein Nutzer:innen eine RCS Nachricht auf seinem Gerät öffnet und damit anzeigt, dass er den Inhalt der Nachricht gesehen oder gelesen hat.
+Dieses Ereignis wird ausgelöst, bei einer Öffnung einer RCS-Nachricht durch einen Nutzer:in auf seinem Gerät, was bedeutet, dass er den Inhalt der Nachricht gesehen oder gelesen hat.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -10672,7 +10677,7 @@ Dieses Ereignis wird erstellt, wenn ein Nutzer:innen eine RCS Nachricht auf sein
   "message_variation_name" : "(optional, string) Name of the message variation",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "to_phone_number" : "(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -10779,7 +10784,7 @@ Dieses Ereignis wird erstellt, wenn ein Nutzer:innen eine RCS Nachricht auf sein
 // Read (users.messages.rcs.Read)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -10811,13 +10816,13 @@ Dieses Ereignis wird erstellt, wenn ein Nutzer:innen eine RCS Nachricht auf sein
 {% endapi %}
 
 {% api %}
-## RCS Ablehnungsereignisse {#rcs-rejection-events}
+## RCS-Ablehnungsereignisse {#rcs-rejection-events}
 
 {% apitags %}
 RCS, Ablehnung
 {% endapitags %}
 
-Ein Ereignis, das erzeugt wird, wenn eine RCS-Nachricht aufgrund eines Eingriffs des Netzbetreibers nicht an das mobile Gerät eines Nutzers:innen zugestellt werden kann.
+Ein Ereignis, das auftritt, wenn eine RCS-Nachricht aufgrund einer Intervention des Netzbetreibers nicht an das Gerät einer Nutzer:in zugestellt werden kann.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -10840,7 +10845,7 @@ Ein Ereignis, das erzeugt wird, wenn eine RCS-Nachricht aufgrund eines Eingriffs
   "external_user_id" : "(optional, string) [PII] External ID of the user",
   "from_rcs_sender" : "(optional, string) The RCS sender ID or agent name used to send the message",
   "id" : "(required, string) Globally unique ID for this event",
-  "is_sms_fallback" : "(optional, boolean) Indicates if SMS fallback was attempted for this rejected RCS message. It is linked/paired to the SMS Delivery event",
+  "is_sms_fallback" : "(optional, boolean) Indicates that a SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "provider_error_code" : "(optional, string) The error code from the provider",
@@ -10871,7 +10876,7 @@ Ein Ereignis, das erzeugt wird, wenn eine RCS-Nachricht aufgrund eines Eingriffs
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "error" : "(optional, string) Error name",
     "from_rcs_sender" : "(optional, string) The RCS sender ID or agent name used to send the message",
-    "is_sms_fallback" : "(optional, boolean) Indicates if SMS fallback was attempted for this rejected RCS message. It is linked/paired to the SMS Delivery event",
+    "is_sms_fallback" : "(optional, boolean) Indicates that a SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) The error code from the provider",
@@ -10910,7 +10915,7 @@ Ein Ereignis, das erzeugt wird, wenn eine RCS-Nachricht aufgrund eines Eingriffs
     "error" : "(optional, string) Error name",
     "from_rcs_sender" : "(optional, string) The RCS sender ID or agent name used to send the message",
     "$insert_id" : "(required, string) Globally unique ID for this event",
-    "is_sms_fallback" : "(optional, boolean) Indicates if SMS fallback was attempted for this rejected RCS message. It is linked/paired to the SMS Delivery event",
+    "is_sms_fallback" : "(optional, boolean) Indicates that a SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) The error code from the provider",
@@ -10949,7 +10954,7 @@ Ein Ereignis, das erzeugt wird, wenn eine RCS-Nachricht aufgrund eines Eingriffs
           "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
           "error" : "(optional, string) Error name",
           "from_rcs_sender" : "(optional, string) The RCS sender ID or agent name used to send the message",
-          "is_sms_fallback" : "(optional, boolean) Indicates if SMS fallback was attempted for this rejected RCS message. It is linked/paired to the SMS Delivery event",
+          "is_sms_fallback" : "(optional, boolean) Indicates that a SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
           "provider_error_code" : "(optional, string) The error code from the provider",
@@ -11003,7 +11008,7 @@ Ein Ereignis, das erzeugt wird, wenn eine RCS-Nachricht aufgrund eines Eingriffs
     "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
     "error" : "(optional, string) Error name",
     "from_rcs_sender" : "(optional, string) The RCS sender ID or agent name used to send the message",
-    "is_sms_fallback" : "(optional, boolean) Indicates if SMS fallback was attempted for this rejected RCS message. It is linked/paired to the SMS Delivery event",
+    "is_sms_fallback" : "(optional, boolean) Indicates that a SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "provider_error_code" : "(optional, string) The error code from the provider",
@@ -11021,13 +11026,13 @@ Ein Ereignis, das erzeugt wird, wenn eine RCS-Nachricht aufgrund eines Eingriffs
 {% endapi %}
 
 {% api %}
-## RCS-Ereignisse senden {#rcs-send-events}
+## RCS-Sendeereignisse {#rcs-send-events}
 
 {% apitags %}
-RCS, Sendungen
+RCS, sendet
 {% endapitags %}
 
-Dieses Ereignis wird erstellt, wenn eine RCS Nachricht von Braze aus an unsere Partner für die Zustellung auf der letzten Meile gesendet wird.
+Dieses Ereignis wird generiert, wenn eine RCS-Nachricht von Braze an unsere Last-Mile-Partner versendet wird.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -11057,7 +11062,7 @@ Dieses Ereignis wird erstellt, wenn eine RCS Nachricht von Braze aus an unsere P
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "to_phone_number" : "(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -11187,7 +11192,7 @@ Dieses Ereignis wird erstellt, wenn eine RCS Nachricht von Braze aus an unsere P
 // Sent (users.messages.rcs.Send)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -11225,11 +11230,11 @@ Dieses Ereignis wird erstellt, wenn eine RCS Nachricht von Braze aus an unsere P
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## SMS-Abbruch-Ereignisse {#sms-abort-events}
+## SMS-Abbruchereignisse {#sms-abort-events}
 
 {% apitags %}
 Abbrechen, SMS
@@ -11261,7 +11266,7 @@ Dieses Ereignis tritt ein, wenn eine SMS Nachricht aufgrund von Liquid Abbrüche
   "message_variation_name" : "(optional, string) Name of the message variation",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -11376,7 +11381,7 @@ Dieses Ereignis tritt ein, wenn eine SMS Nachricht aufgrund von Liquid Abbrüche
 // SMS Aborted (users.messages.sms.Abort)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -11409,12 +11414,12 @@ Dieses Ereignis tritt ein, wenn eine SMS Nachricht aufgrund von Liquid Abbrüche
 
 #### Merkmale der Eigenschaft
 
-- `abort_type` wird `frequency_capped` sein, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde. 
-- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch ausgelöst hat. Ein Beispiel ist: `Frequency cap rule: 5 SMS messages every 1 week`
+- `abort_type` wird angezeigt, `frequency_capped`wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
+- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 SMS messages every 1 week`
 {% endapi %}
 
 {% api %}
-## SMS-Träger senden Ereignisse {#sms-carrier-send-events}
+## SMS-Carrier-Send-Ereignisse {#sms-carrier-send-events}
 
 {% apitags %}
 SMS, Sendet
@@ -11452,7 +11457,7 @@ Dieses Ereignis tritt ein, wenn eine SMS an den Netzbetreiber gesendet wird.
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -11579,7 +11584,7 @@ Dieses Ereignis tritt ein, wenn eine SMS an den Netzbetreiber gesendet wird.
 // SMS Sent to Carrier (users.messages.sms.CarrierSend)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -11616,11 +11621,11 @@ Dieses Ereignis tritt ein, wenn eine SMS an den Netzbetreiber gesendet wird.
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## SMS-Zustellung Ereignisse {#sms-delivery-events}
+## SMS-Zustellung-Ereignisse {#sms-delivery-events}
 
 {% apitags %}
 SMS, Zustellung
@@ -11823,11 +11828,11 @@ Dieses Ereignis tritt ein, wenn eine SMS erfolgreich an das Mobiltelefon des Nut
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## SMS-Zustellungsfehlerereignisse {#sms-delivery-failure-events}
+## Fehler bei der SMS-Zustellung {#sms-delivery-failure-events}
 
 {% apitags %}
 SMS, Zustellung
@@ -12035,14 +12040,14 @@ Dieses Ereignis tritt ein, wenn eine SMS nicht zugestellt werden kann. Verwenden
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## Eingehende SMS Empfangene Ereignisse {#sms-inbound-received-events}
+## Eingehende SMS-Ereignisse {#sms-inbound-received-events}
 
 {% apitags %}
-SMS, Eingehend empfangen
+SMS, eingehend empfangen
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn einer Ihrer Nutzer:innen eine SMS an eine Rufnummer in einer Ihrer Abo-Gruppen von Braze sendet.
@@ -12077,7 +12082,7 @@ Wenn wir feststellen, dass diese eingehende Nachricht eine Antwort auf eine ausg
   "message_variation_name" : "(optional, string) Name of the message variation",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(optional, string) Braze user ID of the user who performed this event",
+  "user_id" : "(optional, string) [PII] Braze user ID of the user who performed this event",
   "user_phone_number" : "(required, string) [PII] The user's phone number from which the message was received"
 }
 ```
@@ -12202,7 +12207,7 @@ Wenn wir feststellen, dass diese eingehende Nachricht eine Antwort auf eine ausg
 // SMS Inbound Received (users.messages.sms.InboundReceive)
 
 {
-  "anonymousId" : "(optional, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(optional, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -12240,13 +12245,13 @@ Wenn wir feststellen, dass diese eingehende Nachricht eine Antwort auf eine ausg
 {% endapi %}
 
 {% api %}
-## SMS Ablehnungsereignisse {#sms-rejection-events}
+## SMS-Ablehnungsereignisse {#sms-rejection-events}
 
 {% apitags %}
 SMS, Ablehnung
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine SMS vom Netzbetreiber abgelehnt wird. Dafür kann es mehrere Gründe geben. Verwenden Sie dieses Ereignis und die bereitgestellten Fehlercodes, um Probleme mit der SMS-Zustellung zu beheben.
+Dieses Ereignis tritt ein, wenn eine SMS-Sendung vom Netzbetreiber abgelehnt wird. Dies kann aus verschiedenen Gründen geschehen. Verwenden Sie dieses Ereignis und die bereitgestellten Fehlercodes, um Probleme mit der SMS-Zustellung zu beheben.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -12453,17 +12458,17 @@ Dieses Ereignis tritt ein, wenn eine SMS vom Netzbetreiber abgelehnt wird. Dafü
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## SMS-Wiederholungsversuche {#sms-retry-events}
+## SMS-Wiederholungsereignisse {#sms-retry-events}
 
 {% apitags %}
-SMS, Wiederholung
+SMS, erneut versuchen
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Frequency-Capping versehen wurde und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion ist nur für Kunden:in der Beta-Version der Nachrichtenpriorisierung verfügbar.
+Dieses Ereignis tritt ein, wenn eine Nachricht herabgestuft oder durch Frequency-Capping in ihrer Häufigkeit begrenzt wird und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion steht nur Kund:innen der Beta-Version von Message Prioritization zur Verfügung.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -12638,7 +12643,7 @@ Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Freq
 {% endapi %}
 
 {% api %}
-## SMS-Sendeereignisse {#sms-send-events}
+## SMS-Versand von Ereignissen {#sms-send-events}
 
 {% apitags %}
 SMS, Sendet
@@ -12673,7 +12678,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine SMS sendet.
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -12803,7 +12808,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine SMS sendet.
 // SMS Sent (users.messages.sms.Send)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -12842,11 +12847,11 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine SMS sendet.
 #### Merkmale der Eigenschaft
 
 - `message_extras` ermöglichen es Ihnen, Ihre Sende-Events mit dynamischen Daten aus Connected-Content, angepassten Attributen (z.B. Sprache, Land) und Canvas-Eingangs-Eigenschaften zu versehen. Weitere Informationen finden Sie unter [Extras für Nachrichten]({{site.baseurl}}/message_extras_tag/).
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## SMS Short Link Klick-Ereignisse {#sms-short-link-click-events}
+## SMS-Kurzlink-Klick-Ereignisse {#sms-short-link-click-events}
 
 {% apitags %}
 SMS, Klicks
@@ -12880,7 +12885,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf einen SMS-Kurzlink klickt.
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(required, string) URL that the user clicked on",
   "user_agent" : "(optional, string) User agent on which the click occurred",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
 }
 ```
@@ -13010,7 +13015,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf einen SMS-Kurzlink klickt.
 // SMS Short Link Clicked (users.messages.sms.ShortLinkClick)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -13049,7 +13054,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf einen SMS-Kurzlink klickt.
 {% endapi %}
 
 {% api %}
-## Webhook Abbruch-Ereignisse {#webhook-abort-events}
+## Webhook-Abbruchereignisse {#webhook-abort-events}
 
 {% apitags %}
 Abbrechen, Webhooks
@@ -13084,7 +13089,7 @@ Dieses Ereignis tritt ein, wenn eine Webhook Nachricht aufgrund von Liquid Abbr�
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -13207,7 +13212,7 @@ Dieses Ereignis tritt ein, wenn eine Webhook Nachricht aufgrund von Liquid Abbr�
 // Webhook Aborted (users.messages.webhook.Abort)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -13242,13 +13247,13 @@ Dieses Ereignis tritt ein, wenn eine Webhook Nachricht aufgrund von Liquid Abbr�
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
-- `abort_type` wird `frequency_capped` sein, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde. 
-- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch ausgelöst hat. Ein Beispiel ist: `Frequency cap rule: 5 webhook messages every 1 week`
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
+- `abort_type` wird angezeigt, `frequency_capped`wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
+- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 webhook messages every 1 week`
 {% endapi %}
 
 {% api %}
-## Webhook-Ausfallereignisse {#webhook-failure-events}
+## Webhook-Fehlerereignisse {#webhook-failure-events}
 
 {% apitags %}
 Fehlschlag, Webhooks
@@ -13287,7 +13292,7 @@ Dieses Ereignis tritt ein, wenn eine Webhook Nachricht zugestellt wurde, aber mi
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "url_path" : "(optional, string) The path of the webhook URL that returned a failure response",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "webhook_duration" : "(optional, int) Total duration of this request in milliseconds",
   "webhook_failure_source" : "(optional, string) To tell whether an error was created by Braze or by the endpoint itself. The source field could be External Endpoint, Treat no status code to host unreachable"
 }
@@ -13431,7 +13436,7 @@ Dieses Ereignis tritt ein, wenn eine Webhook Nachricht zugestellt wurde, aber mi
 // Webhook Failed (users.messages.webhook.Failure)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -13473,17 +13478,17 @@ Dieses Ereignis tritt ein, wenn eine Webhook Nachricht zugestellt wurde, aber mi
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## Webhook Wiederholungsereignisse {#webhook-retry-events}
+## Webhook-Wiederholungsereignisse {#webhook-retry-events}
 
 {% apitags %}
-Webhooks, Wiederholung
+Webhooks, Wiederholen
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Frequency-Capping versehen wurde und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion ist nur für Kunden:in der Beta-Version der Nachrichtenpriorisierung verfügbar.
+Dieses Ereignis tritt ein, wenn eine Nachricht herabgestuft oder durch Frequency-Capping in ihrer Häufigkeit begrenzt wird und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion steht nur Kund:innen der Beta-Version von Message Prioritization zur Verfügung.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -13675,7 +13680,7 @@ Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Freq
 {% endapi %}
 
 {% api %}
-## Webhook Ereignisse senden {#webhook-send-events}
+## Webhook-Ereignisse senden {#webhook-send-events}
 
 {% apitags %}
 Webhooks, Sendungen
@@ -13707,7 +13712,7 @@ Dieses Ereignis tritt ein, wenn ein Webhook verarbeitet und an die in diesem Web
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -13827,7 +13832,7 @@ Dieses Ereignis tritt ein, wenn ein Webhook verarbeitet und an die in diesem Web
 // Webhook Sent (users.messages.webhook.Send)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -13862,11 +13867,11 @@ Dieses Ereignis tritt ein, wenn ein Webhook verarbeitet und an die in diesem Web
 #### Merkmale der Eigenschaft
 
 - `message_extras` ermöglichen es Ihnen, Ihre Sende-Events mit dynamischen Daten aus Connected-Content, angepassten Attributen (wie Sprache oder Land) und Canvas-Eingangs-Eigenschaften zu versehen. Weitere Informationen finden Sie unter [Extras für Nachrichten]({{site.baseurl}}/message_extras_tag/).
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## WhatsApp Abbruch-Ereignisse {#whatsapp-abort-events}
+## WhatsApp-Abbruchereignisse {#whatsapp-abort-events}
 
 {% apitags %}
 WhatsApp, Abbrechen
@@ -13902,7 +13907,7 @@ Dieses Ereignis tritt ein, wenn eine WhatsApp Nachricht aufgrund von Liquid Abbr
   "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -14029,7 +14034,7 @@ Dieses Ereignis tritt ein, wenn eine WhatsApp Nachricht aufgrund von Liquid Abbr
 // WhatsApp Aborted (users.messages.whatsapp.Abort)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -14066,13 +14071,13 @@ Dieses Ereignis tritt ein, wenn eine WhatsApp Nachricht aufgrund von Liquid Abbr
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
-- `abort_type` wird `frequency_capped` sein, wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde. 
-- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch ausgelöst hat. Ein Beispiel ist: `Frequency cap rule: 5 WhatsApp messages every 1 week`
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
+- `abort_type` wird angezeigt, `frequency_capped`wenn die Nachricht aufgrund einer globalen Frequenzbegrenzungsregel abgebrochen wurde.
+- `abort_log` enthält Informationen über die spezifische Regel, die den Abbruch getriggert hat. Ein Beispiel hierfür ist: `Frequency cap rule: 5 WhatsApp messages every 1 week`
 {% endapi %}
 
 {% api %}
-## WhatsApp Tracking Link Klick-Ereignisse {#whatsapp-tracked-link-click-events}
+## WhatsApp-Tracking-Link-Klick-Ereignisse {#whatsapp-tracked-link-click-events}
 
 {% apitags %}
 WhatsApp, Klicks
@@ -14106,7 +14111,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen in einer WhatsApp Nachricht auf
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(required, string) URL that the user clicked on",
   "user_agent" : "(optional, string) User agent on which the click occurred",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
 }
 ```
@@ -14232,7 +14237,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen in einer WhatsApp Nachricht auf
 // WhatsApp Tracked Link Clicked (users.messages.whatsapp.Click)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -14268,13 +14273,13 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen in einer WhatsApp Nachricht auf
 {% endapi %}
 
 {% api %}
-## WhatsApp Zustellung Ereignisse {#whatsapp-delivery-events}
+## WhatsApp-Ereignisse der Zustellung {#whatsapp-delivery-events}
 
 {% apitags %}
 WhatsApp, Zustellung
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine gesendete WhatsApp Nachricht erfolgreich auf dem Gerät des Nutzers:innen angekommen ist.
+Dieses Ereignis tritt ein, wenn eine gesendete WhatsApp-Nachricht erfolgreich auf dem Gerät der Nutzer:innen angekommen ist.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -14307,7 +14312,7 @@ Dieses Ereignis tritt ein, wenn eine gesendete WhatsApp Nachricht erfolgreich au
   "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -14443,7 +14448,7 @@ Dieses Ereignis tritt ein, wenn eine gesendete WhatsApp Nachricht erfolgreich au
 // WhatsApp Delivered (users.messages.whatsapp.Delivery)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -14483,11 +14488,11 @@ Dieses Ereignis tritt ein, wenn eine gesendete WhatsApp Nachricht erfolgreich au
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## WhatsApp-Ausfallereignisse {#whatsapp-failure-events}
+## WhatsApp-Ausfälle {#whatsapp-failure-events}
 
 {% apitags %}
 WhatsApp, Scheitern
@@ -14528,7 +14533,7 @@ Dieses Ereignis tritt ein, wenn WhatsApp die Nachricht dem Nutzer:innen nicht zu
   "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -14670,7 +14675,7 @@ Dieses Ereignis tritt ein, wenn WhatsApp die Nachricht dem Nutzer:innen nicht zu
 // WhatsApp Failed (users.messages.whatsapp.Failure)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -14712,14 +14717,14 @@ Dieses Ereignis tritt ein, wenn WhatsApp die Nachricht dem Nutzer:innen nicht zu
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## Eingehende WhatsApp-Ereignisse {#whatsapp-inbound-received-events}
+## WhatsApp-eingehende Ereignisse {#whatsapp-inbound-received-events}
 
 {% apitags %}
-WhatsApp, Eingehend Empfangen
+WhatsApp, eingehende Nachrichten
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn einer Ihrer Nutzer:innen eine WhatsApp Nachricht an eine Rufnummer in einer Ihrer Abo-Gruppen von Braze WhatsApp sendet.
@@ -14759,7 +14764,7 @@ Dieses Ereignis tritt ein, wenn einer Ihrer Nutzer:innen eine WhatsApp Nachricht
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(optional, string) Braze user ID of the user who performed this event",
+  "user_id" : "(optional, string) [PII] Braze user ID of the user who performed this event",
   "user_phone_number" : "(required, string) [PII] The user's phone number from which the message was received"
 }
 ```
@@ -14910,7 +14915,7 @@ Dieses Ereignis tritt ein, wenn einer Ihrer Nutzer:innen eine WhatsApp Nachricht
 // WhatsApp Inbound Received (users.messages.whatsapp.InboundReceive)
 
 {
-  "anonymousId" : "(optional, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(optional, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -14956,13 +14961,13 @@ Dieses Ereignis tritt ein, wenn einer Ihrer Nutzer:innen eine WhatsApp Nachricht
 {% endapi %}
 
 {% api %}
-## WhatsApp Ereignisse lesen {#whatsapp-read-events}
+## WhatsApp-Lesebestätigungen {#whatsapp-read-events}
 
 {% apitags %}
 WhatsApp, Lesen
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine WhatsApp Nachricht von einem Nutzer:innen gelesen wird.
+Dieses Ereignis tritt ein, wenn eine WhatsApp-Nachricht von einer Nutzer:in gelesen wird.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -14995,7 +15000,7 @@ Dieses Ereignis tritt ein, wenn eine WhatsApp Nachricht von einem Nutzer:innen g
   "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -15131,7 +15136,7 @@ Dieses Ereignis tritt ein, wenn eine WhatsApp Nachricht von einem Nutzer:innen g
 // WhatsApp Read (users.messages.whatsapp.Read)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -15171,17 +15176,17 @@ Dieses Ereignis tritt ein, wenn eine WhatsApp Nachricht von einem Nutzer:innen g
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}
 
 {% api %}
-## WhatsApp Wiederholungsereignisse {#whatsapp-retry-events}
+## WhatsApp-Wiederholungsereignisse {#whatsapp-retry-events}
 
 {% apitags %}
-WhatsApp, Erneut versuchen
+WhatsApp, erneut versuchen
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Frequency-Capping versehen wurde und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion ist nur für Kunden:in der Beta-Version der Nachrichtenpriorisierung verfügbar.
+Dieses Ereignis tritt ein, wenn eine Nachricht herabgestuft oder durch Frequency-Capping in ihrer Häufigkeit begrenzt wird und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion steht nur Kund:innen der Beta-Version von Message Prioritization zur Verfügung.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -15377,13 +15382,13 @@ Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Freq
 {% endapi %}
 
 {% api %}
-## WhatsApp Ereignisse senden {#whatsapp-send-events}
+## WhatsApp-Ereignisse senden {#whatsapp-send-events}
 
 {% apitags %}
 WhatsApp, Sendet
 {% endapitags %}
 
-Dieses Ereignis tritt ein, wenn eine Sendeanfrage erfolgreich zwischen Braze und WhatsApp übermittelt wurde. Dies bedeutet jedoch nicht, dass die Nachricht bei dem Nutzer:innen angekommen ist.
+Dieses Ereignis tritt ein, wenn eine Sendeanfrage erfolgreich zwischen Braze und WhatsApp übermittelt wurde. Dies bedeutet jedoch nicht, dass die Nachricht von den Nutzer:innen empfangen wurde.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -15416,7 +15421,7 @@ Dieses Ereignis tritt ein, wenn eine Sendeanfrage erfolgreich zwischen Braze und
   "time" : "(required, long) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -15555,7 +15560,7 @@ Dieses Ereignis tritt ein, wenn eine Sendeanfrage erfolgreich zwischen Braze und
 // WhatsApp Sent (users.messages.whatsapp.Send)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : {
@@ -15596,5 +15601,5 @@ Dieses Ereignis tritt ein, wenn eine Sendeanfrage erfolgreich zwischen Braze und
 
 #### Merkmale der Eigenschaft
 
-- `dispatch_id` ist eine ID für einen bestimmten Nachrichtenversand, z.B. für eine Kampagne. Alle Push-Ereignisse, die aus demselben Versand stammen, enthalten dieselbe `dispatch_id`. Verwenden Sie `dispatch_id`, um Ereignisse zu gruppieren, die zum selben Versand gehören. So können Sie den Lebenszyklus von Push-Nachrichten für diesen Versand gruppieren und korrelieren (z. B. Senden, Bounce und Öffnen).
+- `dispatch_id` ist eine ID für eine bestimmte Nachrichtenübermittlung, beispielsweise den Versand einer Kampagne. Alle Push-Ereignisse mit derselben Herkunft enthalten dasselbe`dispatch_id`. Verwenden Sie`dispatch_id`diese Funktion, um Ereignisse zu gruppieren, die zu derselben Versandaktion gehören. Auf diese Weise können Sie den Lebenszyklus der Push-Nachrichten für diese Versandaktion (z. B. Senden, Zurückweisen und Öffnung) gruppieren und miteinander in Beziehung setzen.
 {% endapi %}

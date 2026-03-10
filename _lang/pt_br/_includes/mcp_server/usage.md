@@ -1,6 +1,6 @@
 # Usando o servidor Braze MCP
 
-> Saiba como interagir com seus dados do Braze por meio de linguagem natural usando ferramentas como Claude e Cursor. Para saber mais sobre informações gerais, consulte [Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
+> Aprenda a interagir com seus dados Braze por meio de linguagem natural usando ferramentas como Claude e Cursor. Para obter informações mais gerais, consulte [Servidor Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
@@ -12,49 +12,49 @@ Antes de poder usar esse recurso, você precisará [configurar o servidor Braze 
 
 Ao usar o servidor Braze MCP por meio de ferramentas de linguagem natural, como Claude e Cursor, lembre-se destas dicas para obter os melhores resultados:
 
-- Os LLMs podem cometer erros, portanto, sempre verifique novamente suas respostas.
-- Para a análise de dados, seja claro quanto ao intervalo de tempo de que você precisa. Alcances mais curtos geralmente fornecem resultados mais precisos.
-- Use [a terminologia](https://www.braze.com/resources/articles/glossary) exata [do Braze](https://www.braze.com/resources/articles/glossary) para que seu LLM chame a função correta.
-- Se os resultados parecerem incompletos, peça ao seu LLM para continuar ou se aprofundar.
+- Os LLMs podem cometer erros, portanto, certifique-se sempre de verificar suas respostas.
+- Para a análise de dados, seja claro quanto ao intervalo de tempo necessário. Intervalos mais curtos geralmente fornecem resultados mais precisos.
+- Use [uma terminologia](https://www.braze.com/resources/articles/glossary) exata [do Braze](https://www.braze.com/resources/articles/glossary) para que seu LLM chame a função correta.
+- Se os resultados parecerem incompletos, solicite ao seu LLM que continue ou aprofunde a pesquisa.
 - Experimente sugestões criativas! Dependendo do seu cliente MCP, você poderá exportar um arquivo CSV ou outros arquivos úteis.
 
 ## Exemplos de uso
 
 Após [configurar o servidor Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}, você pode interagir com o Braze por meio de linguagem natural usando ferramentas como Claude ou Cursor. Aqui estão alguns exemplos para você começar:
 
-### Quais são minhas funções disponíveis no Braze?
+### Quais são as funções disponíveis do Braze?
 
 {% tabs %}
 {% tab Claude %}
-!["Quais são as minhas funções disponíveis no Braze?" sendo perguntado e respondido em Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
+![“Quais são as funções disponíveis do Braze?” sendo perguntado e respondido no Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}
-!["Quais são minhas funções Braze disponíveis" sendo perguntadas e respondidas no Cursor.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
+![“Quais são as funções disponíveis do Braze?” sendo perguntado e respondido no Cursor.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
 {% endtab %}
 {% endtabs %}
 
-### Obter detalhes sobre uma ID do Canva
+### Obtenha detalhes sobre um ID do Canvas
 
 {% tabs %}
 {% tab Claude %}
-!['Get details about a canva ID' sendo perguntado e respondido no Claude.]({% image_buster /assets/img/mcp_server/claude/get_details_about_a_canvas_id.png %}){: style="max-width:85%;"}
+!["Obter detalhes sobre um ID de canva" sendo perguntado e respondido no Claude.]({% image_buster /assets/img/mcp_server/claude/get_details_about_a_canvas_id.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}
-!['Obter detalhes sobre um ID de tela' sendo perguntado e respondido no Cursor.]({% image_buster /assets/img/mcp_server/cursor/get_details_about_a_canvas_id.png %})
+!["Obter detalhes sobre um ID de canva" sendo perguntado e respondido no Cursor.]({% image_buster /assets/img/mcp_server/cursor/get_details_about_a_canvas_id.png %})
 {% endtab %}
 {% endtabs %}
 
-### Mostre-me minhas telas recentes
+### Mostre-me meus canvases recentes
 
 {% tabs %}
 {% tab Claude %}
-!['Mostre minhas telas recentes' sendo perguntado e respondido em Claude.]({% image_buster /assets/img/mcp_server/claude/show_my_recent_canvases.png %}){: style="max-width:85%;"}
+![“Mostre meus canvases recentes” sendo perguntado e respondido em Claude.]({% image_buster /assets/img/mcp_server/claude/show_my_recent_canvases.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}
-!['Show my recent canvas' sendo perguntado e respondido no Cursor.]({% image_buster /assets/img/mcp_server/cursor/show_me_my_recent_canvases.png %})
+![“Mostrar meus canvases recentes” sendo perguntado e respondido no Cursor.]({% image_buster /assets/img/mcp_server/cursor/show_me_my_recent_canvases.png %})
 {% endtab %}
 {% endtabs %}
 

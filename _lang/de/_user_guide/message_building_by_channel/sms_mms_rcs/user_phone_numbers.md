@@ -22,7 +22,7 @@ Wir empfehlen den Import von Telefonnummern im [`E.164`](https://en.wikipedia.or
 - **U.S. Zahlen:** Alle U.S.-Nummern müssen gültige, 10-stellige Telefonnummern mit einer gültigen Vorwahl sein. Wenn bei einer 10-stelligen Telefonnummer der Code `+` und die Landesvorwahl fehlen, bildet Braze sie als U.S ab.
 - **Internationale Nummern:** Alle internationalen Nummern beginnen mit einem `+`, gefolgt von der Landesvorwahl und dann der Telefonnummer. Zum Beispiel: `+442071838750`.
 
-![Beispiel für eine gültige internationale e164-Telefonnummer.]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
+![Beispiel für eine gültige internationale E164-Telefonnummer.]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
 
 Hier ein paar Beispiele für die Unterschiede zwischen Lokalisierung und `E.164` Formatierung:
 
@@ -41,14 +41,14 @@ Wenn Sie Telefonnummern importieren, ist es wichtig, dass Sie das [empfohlene Fo
 - [Verwendung des Endpunkts `/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track)
 
 {% alert important %}
-Nutzer:innen-Telefonnummern erscheinen in Braze als String von Ziffern. Wenn Sie eine Zahl importieren, die außer der führenden {% raw %}`+`{% endraw %} auch andere Ziffern enthält (z.B. `,`, `-` oder `(`), werden diese Ziffern bei der Darstellung in Braze entfernt. Der Import von `+1 (724) 123-4567` erscheint zum Beispiel als `+17241234567`.
+Die Telefonnummern der Nutzer:innen werden in Braze als String von Ziffern angezeigt. Wenn Sie eine Zahl importieren, die andere Nicht-Ziffern (wie `,`, `-`, oder `(`) als die führende Ziffer {% raw %}`+`{% endraw %}enthält, werden die Nicht-Ziffern bei der Darstellung in Braze entfernt. Beispielsweise wird `+1 (724) 123-4567`„importieren“ als `+17241234567`„importieren“ angezeigt.
 {% endalert %}
 
 ## Umgang mit ungültigen Telefonnummern
 
 Wenn eine Telefonnummer als ungültig eingestuft wird, markiert Braze die Telefonnummer des Benutzers als ungültig und versucht nicht, weitere Mitteilungen an diese Telefonnummer zu senden. Eine ungültige Telefonnummer wird auf der **Registerkarte Engagement** eines Benutzerprofils markiert.
 
-![Beispiel einer Fehlermeldung für ungültige Telefonnummern in Braze.]({% image_buster /assets/img/sms/invalid_banner.png %}){: style="max-width:50%;border: 0;"}
+![Beispiel für eine Fehlernachricht bei ungültigen Telefonnummern in Braze.]({% image_buster /assets/img/sms/invalid_banner.png %}){: style="max-width:50%;border: 0;"}
 
 Eine Telefonnummer wird aus den folgenden Gründen als ungültig betrachtet:
 

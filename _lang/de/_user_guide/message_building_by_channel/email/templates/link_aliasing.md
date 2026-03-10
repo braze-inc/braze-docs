@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"} Link-Aliasing
+# [![]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"}[Braze-Lernangebote-Kurs](https://learning.braze.com/link-aliasing)Link-Aliasing
  
 > Verwenden Sie Link-Aliasing, um wiedererkennbare, benutzergenerierte Namen zur Identifizierung von Links zu erstellen, die in E-Mail-Nachrichten von Braze gesendet werden. Diese Links sind für Segmentierungs-Retargeting, aktionsbasiertes Triggering und Link-Analysen verfügbar.
 
@@ -27,7 +27,7 @@ Mit Link-Aliasing können Sie:
 
 Braze identifiziert Links in E-Mails eindeutig, indem es einen zusätzlichen Parameter namens `lid` (auch bekannt als Bezeichner des Links) an jede Link-URL anhängt. Dieser `lid`-Wert ermöglicht es Braze, die Interaktionen der Nutzer:innen mit dem Link zu tracken, zu überwachen und zu aggregieren, auch wenn die übrigen URL-Parameter unterschiedlich sein können. So erhalten Sie Einblicke in die Art und Weise, wie Nutzer mit den Inhalten Ihrer E-Mail-Kampagnen umgehen.
 
-Die Bezeichner der Links werden auch aktualisiert, wenn eine E-Mail-Kampagne, ein Canvas mit einer Nachricht oder ein Content-Block dupliziert wird.
+Bezeichner für Links werden ebenfalls aktualisiert, wenn eine E-Mail-Kampagne, Canvas mit einer E-Mail-Nachricht oder ein Content-Block dupliziert wird.
 
 ## Link-Alias erstellen
 
@@ -59,7 +59,7 @@ Wenn Sie die [ältere Navigation]({{site.baseurl}}/user_guide/administrative/acc
 
 Hier können Sie sortieren, suchen und das Tracking für Link-Aliase deaktivieren.
 
-![Die Seite Tracking Link-Aliases zeigt aktive und inaktive Link-Aliases an, die mit verschiedenen Kampagnen verbunden sind.]({% image_buster /assets/img/tracked_aliases.png %})
+![Seite „Verfolgte Link-Aliase“, auf der aktive und inaktive Link-Aliase angezeigt werden, die mit verschiedenen Kampagnen verknüpft sind.]({% image_buster /assets/img/tracked_aliases.png %})
 
 {% alert tip %}
 Verwenden Sie die Endpunkte [Listenlink-Alias für Kampagnen]({{site.baseurl}}/get_campaign_link_alias/) und [Listenlink-Alias für Canvas]({{site.baseurl}}/get_canvas_link_alias/), um den Satz `alias` in jeder Nachrichtenvariante in einer Kampagne oder einer E-Mail-spezifischen Canvas-Komponente zu extrahieren.
@@ -77,7 +77,7 @@ In den folgenden Tabellen finden Sie Beispiele für Links in einem E-Mail-Text, 
 
 **Logik:** Braze fügt ein Fragezeichen (?) ein und fügt den ersten Abfrageparameter in die URL ein.
 
-| Link im Text der E-Mail    | Link mit Aliasing                     |
+| Link in der E-Mail-Text    | Link-Aliasing                     |
 |-----------------------|----------------------------------------|
 | `https://www.braze.com` | `https://www.braze.com?lid=slfdldtqdhdk` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -86,7 +86,7 @@ In den folgenden Tabellen finden Sie Beispiele für Links in einem E-Mail-Text, 
 
 **Logik:** Braze erkennt andere Abfrageparameter und fügt `lid=` an das Ende der URL an.
 
-| Link im Text der E-Mail                                            | Link mit Aliasing                                                             |
+| Link in der E-Mail-Text                                            | Link-Aliasing                                                             |
 |---------------------------------------------------------------|--------------------------------------------------------------------------------|
 | `https://www.braze.com?utm_campaign=retention&utm_source=email` | `https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -95,7 +95,7 @@ In den folgenden Tabellen finden Sie Beispiele für Links in einem E-Mail-Text, 
 
 **Logik:** Braze erkennt, dass ein Link eine URL ist und bereits ein Fragezeichen (?) enthält. Daher wird der Abfrageparameter `lid` nach dem Fragezeichen angefügt.
 
-| Link im Text der E-Mail                                                | Link mit Aliasing                                                                |
+| Link in der E-Mail-Text                                                | Link-Aliasing                                                                |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | {%raw%}`<a href="{{custom_attribute.{product_url}}}?">`{%endraw%} | {%raw%}`<a href="{{custom_attribute.{product_url}}}?lid=ac7a548g5kl7">`{%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -104,16 +104,16 @@ In den folgenden Tabellen finden Sie Beispiele für Links in einem E-Mail-Text, 
 
 **Logik:** Braze erwartet, dass die URL eine Standardstruktur verwendet, bei der Anker (#) nach einem Fragezeichen (?) vorhanden sind. Da Braze von links nach rechts liest, werden das Fragezeichen und der Wert `lid` vor dem Anker angehängt.
 
-| Link im Text der E-Mail                               | Link mit Aliasing                                                |
+| Link in der E-Mail-Text                               | Link-Aliasing                                                |
 |--------------------------------------------------|-------------------------------------------------------------------|
 | `https://www.braze.com#bookmark1?utm_source=email` | `https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Link mit Anker- und Erfassungs-Tag
 
-**Logik:** Wenn Sie Link Aliasing mit URLs verwenden, die Anker (#) enthalten, erwartet Braze, dass der Anker nach den Abfrageparametern platziert wird. Das bedeutet, dass der Wert `lid` für ein korrektes Tracking **vor dem** Anker angehängt werden muss, und da Braze die URL von links nach rechts liest, sollten das Fragezeichen (?) und `lid` vor dem Anker stehen.
+**Logik:** Wenn Sie Link Aliasing mit URLs verwenden, die Anker (#) enthalten, erwartet Braze, dass der Anker nach den Abfrageparametern platziert wird. Dies bedeutet, dass der`lid`Wert für korrektes Tracking **vor** dem Anker angehängt werden muss. Da Braze die URL von links nach rechts liest, sollten das Fragezeichen`lid` (?) und der Wert vor dem Anker stehen.
 
-| Link im Text der E-Mail                                                                        | Link mit Aliasing                                                                                           |
+| Link in der E-Mail-Text                                                                        | Link-Aliasing                                                                                           |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions?lid={{link_alias}}#special-offer">Check out our special offer!</a>` {%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -128,7 +128,7 @@ Um Metriken für die Link-Interaktion zu verfolgen, stellen Sie sicher, dass Ihr
 
 Mit Braze können Sie eine unbegrenzte Anzahl von Links zum Nachverfolgen auswählen. Allerdings können Sie nur die zuletzt geöffneten Links nachverfolgen. Die Benutzerprofile enthalten die 100 zuletzt angeklickten Links. Wenn Sie beispielsweise 500 Links verfolgen und ein Nutzer auf alle 500 klickt, können Sie ein Retargeting durchführen oder Segmente erstellen, die auf den 100 zuletzt angeklickten Links basieren.
 
-![Der Tab Link Management mit zwei ausgewählten Links.]({% image_buster /assets/img/link_management_dnd.png %})
+![Das Tab „Link-Verwaltung“ mit zwei ausgewählten Links.]({% image_buster /assets/img/link_management_dnd.png %})
 
 {% alert note %}
 Braze verfolgt nur bis zu den letzten 100 angeklickten Link-Aliasen auf Profilebene.
@@ -156,9 +156,9 @@ Wenn Sie das Tracking eines Links aufheben, werden vorhandene Segmente mit dem F
 
 Das Tracking von Links in archivierten Nachrichten wird automatisch aufgehoben. Wenn archivierte Nachrichten jedoch nicht archiviert werden, müssen die Links erneut getrackt werden. Wenn Link-Aliase verfolgt werden, werden die Link-Berichte anhand des Alias indexiert und nicht anhand von Top-Level-Domänen oder vollständigen URLs.
 
-Um alle Links in Ihrer E-Mail-Kampagne und ihre jeweiligen Gesamtklicks anzuzeigen, gehen Sie zu **Message Analytics** > **E-Mail Performance** > **Vorschau & Heatmap** und wählen Sie den Schalter **Heatmap anzeigen** aus.
+Um alle Links in Ihrer E-Mail-Kampagne und die jeweiligen Gesamtklickzahlen anzuzeigen, navigieren Sie bitte zu **„Nachrichtenanalyse“** > **„E-Mail-Performance“** > **&„Vorschau-Heatmap“** und wählen Sie die Option **„Heatmap anzeigen“** aus.
 
-![Link-Tabelle nach Gesamtklicks Panel mit Link-Aliasen und deren Gesamtklicks.]({% image_buster /assets/img/link_alias_total_clicks.png %}){: style="max-width:60%;"}
+![Link-Panel nach Gesamtklicks mit Link-Aliasen und deren Gesamtklicks.]({% image_buster /assets/img/link_alias_total_clicks.png %}){: style="max-width:60%;"}
 
 ### Event „E-Mail Klicks“
 
