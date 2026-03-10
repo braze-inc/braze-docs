@@ -77,4 +77,13 @@ Alternatively, if you wish to use local delivery, use an experiment window of 24
 
 ### Variants based on clicks
 
-If you're setting up a Winning Path variant based on clicks, this behavior can vary between email and push notifications. For push, opens include direct opens (tapping the notification) plus push action buttons, while clicks include push action buttons. For more information, see [Push action buttons]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/).
+If you're setting up a Winning Path variant based on clicks, note that the definitions for opens and clicks differ by channel:
+
+- **Email**
+  - **Opens:** A user opens the email.
+  - **Clicks:** A user clicks a link in the email.
+- **Push**
+  - **Opens:** A user directly opens the app from the notification, either by tapping the notification itself or by tapping a push action button.
+  - **Clicks:** A user taps a push action button. A tap on a push action button is counted as both an open and a click, while tapping the notification body without using an action button is counted only as an open.
+
+For more information, see [Push action buttons]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/).
