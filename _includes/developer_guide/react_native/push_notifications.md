@@ -155,7 +155,7 @@ To handle deep links manually instead, refer to the native Android documentation
 
 {% endtab %}
 {% tab iOS Native %}
-#### Step 3.1: Store the push notification payload on app launch
+#### Step 3.1: Store the push notification payload on app launch {#step-3-1}
 {% alert note %}
 Skip step 3.1 if you're using the Braze Expo plugin, as this is functionality is handled automatically.
 {% endalert %}
