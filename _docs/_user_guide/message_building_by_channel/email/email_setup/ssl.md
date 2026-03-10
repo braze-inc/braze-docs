@@ -74,7 +74,7 @@ Refer to the following resources by ESP partners on how to configure certain CDN
 - [Fastly](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)
 - [KeyCDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn)
 
-**Sparkpost**
+**SparkPost**
 - [AWS Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-aws-cloudfront)
 - [CloudFlare](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)
 - [Fastly](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)
