@@ -143,7 +143,7 @@ To learn more about what deep links are, see our [FAQ article]({{site.baseurl}}/
 {% alert important %}
 If you're migrating an existing React Native push integration, re-test deep linking after you upgrade the Braze SDK, React Native, Expo, or related libraries. Confirm that:
 - [React Native Linking](https://reactnative.dev/docs/linking) is still configured and handling your deep link URLs.
-- Your iOS initial push payload handling (see **Step 3.1: Store the push notification payload on app launch**) is implemented and still called on app launch.
+- Your iOS initial push payload handling (see [Step 3.1: Store the push notification payload on app launch](#step-3-1)) is implemented and still called on app launch.
 - Any native delegate or listener methods you use to handle push click events are still registered and invoked as expected.
 {% endalert %}
 
