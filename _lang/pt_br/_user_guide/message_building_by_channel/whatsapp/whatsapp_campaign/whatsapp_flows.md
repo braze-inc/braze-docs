@@ -175,7 +175,7 @@ No editor da interface do usuário, selecione o seguinte:
 - **Ação:** Atualizar
 - **Valor-chave:** {% raw %} ```{% assign parsed_json = {{whats_app.${inbound_flow_response}}} | json_parse %}{{ parsed_json.FIELDS_THAT_APPLY }}```{% endraw %}
 
-![Criador de mensagens do WhatsApp com um componente "Adicionar personalização" para inserir uma personalização das propriedades do WhatsApp com o atributo `inbound_flow_response`.]({%image_buster/assets/img/whatsapp/flows/parsed_json.pngpersonalizado    %})
+![Criador de mensagens do WhatsApp com um componente "Adicionar personalização" para inserir uma personalização das propriedades do WhatsApp com o atributo `inbound_flow_response`.]({% image_buster /assets/img/whatsapp/flows/parsed_json.png %})
 
 Quando estiver pronto, envie uma mensagem de teste para testar o fluxo. Em seguida, inicie o Canva!
 
@@ -193,6 +193,6 @@ Para usar a resposta do Flow através do Liquid com [tags de personalização co
 1. Ao redigir sua mensagem no WhatsApp, selecione o ícone de mais para abrir a janela **Adicionar personalização.**
 2. Selecione **Propriedades do WhatsApp** para o tipo de personalização e**inbound_flow_response**  para o atributo personalizado. Isso pode ser usado para salvar informações em perfis de usuário, incluí-las no envio de mensagens ou encaminhá-las para outros serviços, como webhooks.
 
-![Criador de mensagens do WhatsApp com um componente "Adicionar personalização" para inserir uma personalização das propriedades do WhatsApp com o atributo inbound_flow_response.]({%image_buster/assets/img/whatsapp/flows/inbound_flow_response.pngpersonalizado    %}){: style="max-width:80%;"}
+![Criador de mensagens do WhatsApp com um componente "Adicionar personalização" para inserir uma personalização das propriedades do WhatsApp com o atributo inbound_flow_response.]({% image_buster /assets/img/whatsapp/flows/inbound_flow_response.png %}){: style="max-width:80%;"}
 
 Para quaisquer dúvidas ou assistência adicional, entre em contato com [o Suporte]({{site.baseurl}}/braze_support/).
