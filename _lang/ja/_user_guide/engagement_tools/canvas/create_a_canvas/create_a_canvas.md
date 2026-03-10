@@ -13,7 +13,7 @@ search_rank: 1
 > この記事では、キャンバスの作成、維持、およびテストに必要な手順について説明します。このガイドに従うか、[キャンバスの Braze ラーニングコース](https://learning.braze.com/quick-overview-canvas-setup)をご覧ください。
 
 {% details Original Canvas editor %}
-元のキャンバスエクスペリエンスを使用して、キャンバスを作成または複製することはできなくなりました。Brazeでは、[Currentsを]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)最新のエディターに[複製する]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)ことを推奨している。
+元のキャンバスエクスペリエンスを使用して、キャンバスを作成または複製することはできなくなりました。Brazeでは、[キャンバスを]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)最新のエディターに[複製する]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)ことを推奨している。
 {% enddetails %}
 
 ## キャンバスの作成
