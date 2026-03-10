@@ -135,9 +135,9 @@ import * as braze from "@braze/web-sdk";
 
 braze.subscribeToBannersUpdates((banners) => {
   // Get banner for specific placement
-  const globalBanner = braze.getBanner("sample_placement_id");
-  if (globalBanner) {
-    console.log("Banner received for placement:", globalBanner.placementId);
+  const banner = braze.getBanner("sample_placement_id");
+  if (banner) {
+    console.log("Banner received for placement:", banner.placementId);
   }
 });
 ```
@@ -146,9 +146,9 @@ braze.subscribeToBannersUpdates((banners) => {
 ```kotlin
 Braze.getInstance(context).subscribeToBannersUpdates { update ->
   // Get banner for specific placement
-  val globalBanner = Braze.getInstance(context).getBanner("sample_placement_id")
-  if (globalBanner != null) {
-    Log.d(TAG, "Banner received for placement: ${globalBanner.placementId}")
+  val banner = Braze.getInstance(context).getBanner("sample_placement_id")
+  if (banner != null) {
+    Log.d(TAG, "Banner received for placement: ${banner.placementId}")
   }
 }
 ```
@@ -289,15 +289,15 @@ for (final card in cards) {
 {% tab Web %}
 ```javascript
 braze.subscribeToBannersUpdates((banners) => {
-  const globalBanner = braze.getBanner("sample_placement_id");
-  if (!globalBanner) {
+  const banner = braze.getBanner("sample_placement_id");
+  if (!banner) {
     return;
   }
 
   const container = document.getElementById("global-banner-container");
-  braze.insertBanner(globalBanner, container);
+  braze.insertBanner(banner, container);
 
-  if (globalBanner.isControl) {
+  if (banner.isControl) {
     container.style.display = "none";
   }
 });
@@ -460,7 +460,7 @@ Analytics are automatically tracked when using `insertBanner()`. Manual logging 
 
 // For custom implementations, use manual logging methods:
 // Log impression
-braze.logBannerImpressions([globalBanner]);
+braze.logBannerImpressions([banner]);
 
 // Log click (with optional buttonId)
 braze.logBannerClick("sample_placement_id", buttonId);
@@ -539,6 +539,96 @@ Analytics are automatically tracked when using BrazeBannerView. No manual loggin
 {% endtab %}
 {% endtabs %}
 
+### Getting properties
+
+#### Content Cards approach
+
+{% tabs %}
+{% tab Web %}
+```javascript
+cards.forEach(card => {
+  console.log("Card id:", card.id, "Extras:", card.extras);
+});
+```
+{% endtab %}
+{% tab Android %}
+```kotlin
+cards.forEach { card ->
+  Log.d(TAG, "Card id: ${card.id} Extras: ${card.extras}")
+}
+```
+{% endtab %}
+{% tab Swift %}
+```swift
+for card in cards {
+  print("Card id: \(card.id) Extras: \(card.extras)")
+}
+```
+{% endtab %}
+{% tab React Native %}
+```javascript
+cards.forEach(card => {
+  console.log("Card id:", card.id, "Extras:", card.extras);
+});
+```
+{% endtab %}
+{% tab Flutter %}
+```dart
+for (final card in cards) {
+  print("Card id: ${card.id} Extras: ${card.extras}");
+}
+```
+{% endtab %}
+{% endtabs %}
+
+#### Banners approach
+
+{% tabs %}
+{% tab Web %}
+```javascript
+const banner = braze.getBanner("sample_placement_id");
+if (!banner) {
+  return;
+}
+
+console.log("Banner placement:", banner.placementId, "Properties:", banner.properties);
+```
+{% endtab %}
+{% tab Android %}
+```kotlin
+val banner = Braze.getInstance(context).getBanner("sample_placement_id")
+if (banner != null) {
+  Log.d(TAG, "Banner placement: ${banner.placementId} Properties: ${banner.properties}")
+}
+```
+{% endtab %}
+{% tab Swift %}
+```swift
+braze.banners.getBanner(for: "sample_placement_id") { banner in
+  guard let banner = banner else { return }
+
+  print("Banner placement: \(banner.placementId) Properties: \(banner.properties)")
+}
+```
+{% endtab %}
+{% tab React Native %}
+```javascript
+const banner = await Braze.getBanner("sample_placement_id");
+if (banner) {
+  console.log("Banner placement:", banner.placementId, "Properties:", banner.properties);
+}
+```
+{% endtab %}
+{% tab Flutter %}
+```dart
+final banner = await braze.getBanner("sample_placement_id");
+if (banner != null) {
+  print("Banner placement: ${banner.placementId} Properties: ${banner.properties}");
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ### Handling control groups
 
 #### Content Cards approach
@@ -607,18 +697,18 @@ for (final card in cards) {
 {% tab Web %}
 ```javascript
 braze.subscribeToBannersUpdates((banners) => {
-  const globalBanner = braze.getBanner("sample_placement_id");
-  if (!globalBanner) {
+  const banner = braze.getBanner("sample_placement_id");
+  if (!banner) {
     return;
   }
 
   const container = document.getElementById("global-banner-container");
-  
+
   // Always call insertBanner to track impression (including control)
-  braze.insertBanner(globalBanner, container);
-  
+  braze.insertBanner(banner, container);
+
   // Hide if control group
-  if (globalBanner.isControl) {
+  if (banner.isControl) {
     container.style.display = "none";
   }
 });
@@ -698,7 +788,7 @@ Banners only support scheduled delivery campaigns. To migrate a message that was
 | Pinned cards | ✅ Supported | N/A |
 | **Analytics** |
 | Automatic analytics (default UI) | ✅ Supported | ✅ Supported |
-| Priority Sorting | ❌ Not supported | ✅ Supported | 
+| Priority Sorting | ❌ Not supported | ✅ Supported |
 | **Content Updates** |
 | Liquid templating refresh | ❌ Once per card at send/launch | ✅ Refreshes on every refresh |
 | Eligibility refresh | ❌ Once per card at send/launch | ✅ Refreshes on every session |
