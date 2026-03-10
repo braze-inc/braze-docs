@@ -158,9 +158,9 @@ Braze.getInstance(context).subscribeToBannersUpdates { update ->
 braze.banners.subscribeToUpdates { banners in
   // Get banner for specific placement
   braze.banners.getBanner(for: "sample_placement_id") { banner in
-    if let banner = banner {
-      print("Banner received for placement: \(banner.placementId)")
-    }
+    guard let banner = banner else { return }
+
+    print("Banner received for placement: \(banner.placementId)")
   }
 }
 ```
