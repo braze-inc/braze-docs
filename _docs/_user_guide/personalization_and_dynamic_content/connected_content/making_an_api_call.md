@@ -13,7 +13,7 @@ search_rank: 2
 ## Understanding Connected Content call volume
 
 {% alert important %}
-**One send does not equal one Connected Content call.** Braze does not guarantee a 1:1 ratio between message sends and Connected Content requests. The system is designed to favor correct message rendering and delivery over minimizing the number of calls. Your endpoints must be built to handle more requests than the number of recipients or messages sent.
+One send does not equal one Connected Content call. Braze does not guarantee a 1:1 ratio between message sends and Connected Content requests. The system is designed to favor correct message rendering and delivery over minimizing the number of calls. Your endpoints must be built to handle more requests than the number of recipients or messages sent.
 {% endalert %}
 
 Braze may make the same Connected Content API call more than once per recipient. Common reasons include:
