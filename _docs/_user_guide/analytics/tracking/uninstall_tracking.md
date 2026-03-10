@@ -85,7 +85,13 @@ For privacy reasons, Braze’s push providers may revoke tokens at irregular int
 
 ### How do I determine if a specific campaign caused uninstalls?
 
-Check the analytics for the campaigns that sent messages around the same time the uninstall spike occurred. If a particular message correlates with a rise in uninstalls, it may be influencing users to uninstall. You can also view uninstalls by segment using the **Performance Over Time** graph on the **Home** page of the dashboard. If you have a segment tracking lapsing users with [analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) enabled, compare its uninstall trend to the overall app trend.
+Check the analytics for the campaigns that sent messages around the same time the uninstall spike occurred. If a particular message correlates with a rise in uninstalls, it may be influencing users to uninstall. 
+
+To view uninstalls by segment:
+1. Go to the **Home** page of the dashboard.
+2. In the **Performance Over Time** section, select **Uninstalls** for **Statistics For** and **By Segment** for **Breakdown**.
+
+If you have a segment tracking lapsing users with [analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) enabled, compare its uninstall trend to the overall app trend.
 
 ### How do I confirm uninstalls are genuine?
 
