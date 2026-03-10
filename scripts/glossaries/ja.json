@@ -756,5 +756,7 @@
   "Your message": "メッセージ",
   "Zapier": "Zapier",
   "Zeotap": "Zeotap",
-  "Feature Flags": "フィーチャーフラグ"
+  "Feature Flags": "フィーチャーフラグ",
+  "BrazeAI Operator": "BrazeAI Operator",
+  "BrazeAI Decisioning Studio": "BrazeAI Decisioning Studio"
 }

@@ -1131,5 +1131,8 @@
   "Zendesk": "Zendesk",
   "Zeotap": "Zeotap",
   "zero-party data": "zero-party data",
-  "Feature Flags": "Conmutador de características"
+  "Feature Flags": "Conmutador de características",
+  "BrazeAI": "BrazeAI",
+  "BrazeAI Operator": "BrazeAI Operator",
+  "BrazeAI Decisioning Studio": "BrazeAI Decisioning Studio"
 }

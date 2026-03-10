@@ -605,6 +605,22 @@ def check_untranslated(english_content, translated_content):
     return warnings
 
 
+def repair_brazeai_trademark(translated_content):
+    """Fix BrazeAI trademark formatting: only TM should be in <sup>, not the product name."""
+    repairs = []
+    patterns = [
+        (re.compile(r'<sup>BrazeAI\s*(?:TM|™)</sup>'), 'BrazeAI<sup>TM</sup>'),
+        (re.compile(r'<sup>BrazeAI</sup>\s*(?:TM|™)'), 'BrazeAI<sup>TM</sup>'),
+        (re.compile(r'BrazeAI(?:<sup>)?™(?:</sup>)?'), 'BrazeAI<sup>TM</sup>'),
+        (re.compile(r'BrazeIA'), 'BrazeAI'),
+    ]
+    for pattern, replacement in patterns:
+        if pattern.search(translated_content):
+            translated_content = pattern.sub(replacement, translated_content)
+            repairs.append(f"brazeai-tm — fixed BrazeAI trademark formatting")
+    return translated_content, repairs
+
+
 def qc_check_file(english_path, translated_path, lang_key):
     """Run all QC checks on one file pair. Auto-repairs are written back."""
     english_content = Path(english_path).read_text()
@@ -631,6 +647,11 @@ def qc_check_file(english_path, translated_path, lang_key):
         english_content, translated_content
     )
     findings["repairs"].extend(url_repairs)
+
+    translated_content, brazeai_repairs = repair_brazeai_trademark(
+        translated_content
+    )
+    findings["repairs"].extend(brazeai_repairs)
 
     if findings["repairs"]:
         Path(translated_path).write_text(translated_content)
