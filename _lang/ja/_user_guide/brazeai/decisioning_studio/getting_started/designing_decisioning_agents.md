@@ -134,7 +134,7 @@ description: "このリファレンス記事では、意思決定エージェン
 
 独自の意思決定エージェントを構築する準備はできているか？Decisioning Studio の階層については、次のステップに従う：
 
-- **デシジョン・スタジオ・ゴー**[決定版スタジオ囲碁を設定する]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/)
+- **デシジョン・スタジオ・ゴー** [Decisioning Studio Go を設定する]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/)
 - **デシジョン・スタジオ・プロ**[デシジョニング・スタジオ・プロを設定する]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/)
 
 これらのガイドでは、データソースの接続、オーケストレーションの設定、エージェントの設計、本番環境への投入について説明する。

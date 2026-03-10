@@ -95,6 +95,13 @@ jobs:
         run: python scripts/auto_translate.py translate --changed-files changed_files.txt
 
       # ------------------------------------------------------------------
+      # Quality checks
+      # ------------------------------------------------------------------
+      - name: Run translation QC checks
+        if: steps.changes.outputs.count != '0'
+        run: python scripts/auto_translate.py qc
+
+      # ------------------------------------------------------------------
       # Build verification + auto-fix loop
       # ------------------------------------------------------------------
       - name: Set up Ruby
@@ -104,9 +111,12 @@ jobs:
           ruby-version: '3.3'
           bundler-cache: true
 
-      - name: Clean up orphaned translations
-        if: steps.changes.outputs.count != '0'
-        run: python scripts/clean_orphaned_translations.py
+      # Orphaned translation cleanup is temporarily disabled while the
+      # clean_orphaned_translations.py script is validated to avoid
+      # accidental deletions. Re-enable once confirmed safe in production.
+      # - name: Clean up orphaned translations
+      #   if: steps.changes.outputs.count != '0'
+      #   run: python scripts/clean_orphaned_translations.py
 
       - name: Verify builds and fix errors
         if: steps.changes.outputs.count != '0'

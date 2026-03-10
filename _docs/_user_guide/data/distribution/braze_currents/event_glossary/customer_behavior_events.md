@@ -69,7 +69,7 @@ This Currents event is only available for customers that have purchased an "all 
   "prev_random_bucket_number" : "(optional, int) Previous random bucket number",
   "random_bucket_number" : "(required, int) New random bucket number",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -107,7 +107,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
   "properties" : "(required, string) Custom properties stored as a JSON encoded string",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -170,7 +170,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
 // users.behaviors.CustomEvent
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -224,7 +224,7 @@ This event occurs when an app installation is attributed to a source. Use this t
   "id" : "(required, string) Globally unique ID for this event",
   "source" : "(required, string) The source of the attribution",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -273,7 +273,7 @@ This event occurs when an app installation is attributed to a source. Use this t
 // Install Attribution (users.behaviors.InstallAttribution)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -327,7 +327,7 @@ This event is triggered when a user visits a specified location. Use this to tra
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -400,7 +400,7 @@ This event is triggered when a user visits a specified location. Use this to tra
 // Location (users.behaviors.Location)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -472,7 +472,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
   "product_id" : "(required, string) ID of the product purchased",
   "properties" : "(required, string) Custom properties stored as a JSON encoded string",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -541,7 +541,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
 // Purchased (users.behaviors.Purchase)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -611,7 +611,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -668,7 +668,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 // First Session (users.behaviors.app.FirstSession)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -720,7 +720,7 @@ This occurs when a user exits your application, therefore ending their current s
   "platform" : "(optional, string) Platform of the device",
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -779,7 +779,7 @@ This occurs when a user exits your application, therefore ending their current s
 // Session Ended (users.behaviors.app.SessionEnd)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -835,7 +835,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "platform" : "(optional, string) Platform of the device",
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -892,7 +892,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 // Session Started (users.behaviors.app.SessionStart)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -944,7 +944,7 @@ This event occurs when Braze syncs the Live Activity push to start token with th
   "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1001,7 +1001,7 @@ This event occurs when Braze syncs the Live Activity push to start token with th
 // Live Activity Push To Start Token Changed (users.behaviors.liveactivity.PushToStartTokenChange)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1053,7 +1053,7 @@ This event occurs when Braze syncs Live Activity update token with the user
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "update_token" : "(optional, string) Live Activity update token",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1110,7 +1110,7 @@ This event occurs when Braze syncs Live Activity update token with the user
 // Live Activity Update Token Changed (users.behaviors.liveactivity.UpdateTokenChange)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }

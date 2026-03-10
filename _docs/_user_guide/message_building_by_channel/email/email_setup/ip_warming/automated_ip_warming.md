@@ -11,7 +11,7 @@ channel: email
 
 > Use automated IP warming to gradually ramp email volume from a new IP address to build sender reputation with inbox providers.
 
-{% include early_access_beta_alert.md feature='Automated IP warming' %}
+{% multi_lang_include early_access_beta_alert.md feature='Automated IP warming' %}
 
 ## How it works
 

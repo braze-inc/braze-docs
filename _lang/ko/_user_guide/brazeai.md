@@ -13,45 +13,42 @@ guide_top_text: "BrazeAI<sup>TM</sup>은 창의성, 개인화 및 인게이지�
 
 guide_featured_title: "피처"
 guide_featured_list:
-  - name: 의사 결정 스튜디오
-    link: /docs/user_guide/brazeai/decisioning_studio/
-    image: /assets/img/braze_icons/stars-03.svg
   - name: 에이전트
     link: /docs/user_guide/brazeai/agents/
     image: /assets/img/braze_icons/star-06.svg
-  - name: BrazeAI 운영자
-    link: /docs/operator/
-    image: /assets/img/braze_icons/edit-05.svg
+  - name: Braze MCP 서버
+    link: /docs/user_guide/brazeai/mcp_server/
+    image: /assets/img/braze_icons/dataflow-01.svg
   - name: 콘텐츠 최적화 프로그램
-    link: /docs/user_guide/brazeai/content_optimizer
+    link: /docs/user_guide/brazeai/content_optimizer/
     image: /assets/img/braze_icons/image-user-check.svg
-  - name: Intelligence Suite
-    link: /docs/user_guide/brazeai/intelligence/
-    image: /assets/img/braze_icons/clock.svg
-  - name: 예측 이탈
-    link: /docs/user_guide/brazeai/predictive_churn/
-    image: /assets/img/braze_icons/stars-01.svg
-  - name: 예측 이벤트
-    link: /docs/user_guide/brazeai/predictive_events/
-    image: /assets/img/braze_icons/calendar-check-01.svg
-  - name: 추천
-    link: /docs/user_guide/brazeai/recommendations/
-    image: /assets/img/braze_icons/hearts.svg
+  - name: 의사 결정 스튜디오
+    link: /docs/user_guide/brazeai/decisioning_studio/
+    image: /assets/img/braze_icons/stars-03.svg
   - name: 생성형 AI
     link: /docs/user_guide/brazeai/generative_ai/
     image: /assets/img/braze_icons/lightbulb-02.svg
-  - name: Braze MCP 서버
-    link: /docs/mcp/
-    image: /assets/img/braze_icons/dataflow-01.svg
-  - name: 위닝 배리언트 및 개인화된 배리언트
-    link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
-    image: /assets/img/braze_icons/trophy-01.svg
-  - name: 위닝 경로
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/
-    image: /assets/img/braze_icons/dataflow-03.svg
+  - name: Intelligence Suite
+    link: /docs/user_guide/brazeai/intelligence_suite/
+    image: /assets/img/braze_icons/clock.svg
+  - name: 아이템 추천
+    link: /docs/user_guide/brazeai/item_recommendations/
+    image: /assets/img/braze_icons/hearts.svg
+  - name: BrazeAI 운영자
+    link: /docs/user_guide/brazeai/operator/
+    image: /assets/img/braze_icons/edit-05.svg
+  - name: 예측 스위트
+    link: /docs/user_guide/brazeai/predictive_suite/
+    image: /assets/img/braze_icons/stars-01.svg
   - name: 개인화된 경로
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/
     image: /assets/img/braze_icons/chevron-up-double.svg
+  - name: 위닝 경로
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/
+    image: /assets/img/braze_icons/dataflow-03.svg
+  - name: 위닝 배리언트 및 개인화된 배리언트
+    link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
+    image: /assets/img/braze_icons/trophy-01.svg
 ---
 
 <br>
