@@ -8,7 +8,7 @@ noindex: true
 
 # Push analytics and custom event logging
 
-> This page covers two distinct workflows: native push analytics (opens, influenced opens, and campaign reporting) and custom data logging (custom events and attributes) from push payloads. Use this guide to identify which workflow applies to your use case and follow the steps for your platform.
+> This page covers the following workflows: native push analytics (opens, influenced opens, and campaign reporting) and custom data logging (custom events and attributes) from push payloads. Use this guide to identify which workflow applies to your use case and follow the steps for your platform.
 
 ## Prerequisites
 
