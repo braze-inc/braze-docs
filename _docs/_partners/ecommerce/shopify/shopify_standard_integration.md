@@ -71,7 +71,7 @@ For more information on the data tracked through the integration, refer to [Shop
 Through the standard setup, you have the option to perform an initial load of your Shopify customers and orders from the last 90 days prior to your Shopify integration connection. To do so, select the checkbox to include the initial data load as part of your integration. 
 
 {% alert note %}
-Your historical backfilled data will not reflect in any revenue reporting yet. Backfilled order placed events are currently only available for segmentation.
+Historical backfilled data is not included in revenue reporting. Backfilled order placed events are available only for segmentation.
 {% endalert %}
 
 ![Historical data backfill toggle.]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
