@@ -34,6 +34,8 @@ Next, set the **Experiment Window**. The **Experiment Window** specifies how lon
 
 By default, if the results of the test aren't enough to determine a statistically significant winner, all future users are sent down the best-performing path. Alternatively, you can select **Continue sending all future users the mix of paths**. This option sends future users down the mix of paths according to the percentages specified in the experiment path distribution.
 
+In the event of a tie, the first path is selected.
+
 !["Continue sending all future users the mix of paths" selected as what happens to users if the test result isn't statistically significant.]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 {% alert note %}
@@ -75,4 +77,4 @@ Alternatively, if you wish to use local delivery, use an experiment window of 24
 
 ### Variants based on clicks
 
-If you're setting up a Winning Path variant based on clicks, every interaction counts as a click unless it is identified as an unsubscribe click by Braze.
+If you're setting up a Winning Path variant based on clicks, this behavior can vary between email and push notifications. For push, opens include direct opens (tapping the notification) plus push action buttons, while clicks include push action buttons. For more information, see [Push action buttons]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/).
