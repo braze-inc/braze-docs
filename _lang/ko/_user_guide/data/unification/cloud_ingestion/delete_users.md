@@ -1,9 +1,9 @@
 ---
-nav_title: CDI로 사용자 삭제
+nav_title: CDI를 가진 사용자 삭제
 article_title: 클라우드 데이터 수집으로 사용자 삭제
 page_order: 30
 page_type: reference
-description: "이 페이지에서는 클라우드 데이터 수집을 통해 사용자를 삭제하는 프로세스에 대한 개요를 제공합니다."
+description: "이 페이지는 Cloud Data Ingestion을 사용하여 사용자를 삭제하는 절차에 대한 개요를 제공합니다."
 
 ---
 
