@@ -4,6 +4,7 @@ article_title: Messaging diagnostics dashboard
 description: "This reference article covers the messaging diagnostics dashboard, which helps you understand why messages from your campaigns or Canvases may not have been sent as expected."
 alias: /ccdd/
 page_order: 4.5
+toc_headers: h2
 ---
 
 # Messaging diagnostics dashboard
@@ -106,7 +107,7 @@ The following definitions explain the abort outcomes shown on the dashboard. Out
 | ---- | ---- |
 | Delay step failure | The [Delay step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) failed, causing the user to exit the Canvas. This failure could happen when: {::nomarkdown}<ul><li> The variable provided to the personalized delay step was empty or an invalid type </li><li> The delay is past the maximum duration allowed within the Canvas</li></ul>{:/} |
 | Exception or exit event | The user was previously eligible to receive the message, but either {::nomarkdown}<ul><li> performed an <a href="/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#step-3-select-exception-events">exception event</a> for an action-based campaign so the message was aborted, or </li><li> met the Canvas <a href="/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#setting-up-exit-criteria">exit criteria</a> so they were dropped mid-journey.</li></ul>{:/} |
-| Inactive campaign | The campaign was stopped while the message was in-flight so it was aborted. |
+| Inactive campaign | The campaign was stopped while the message was in-flight, so it was aborted. |
 | Inactive Canvas | The Canvas was stopped before the user entered the journey. |
 | Inactive Canvas step | This can occur in the Canvas if: {::nomarkdown}<ul><li> The Canvas step was deleted </li> <li>The Canvas was stopped, which causes all the steps to become inactive </li></ul>{:/} |
 | Volume limited | The campaign met the set volume limit, so the send was canceled. |
@@ -117,7 +118,7 @@ The following definitions explain the abort outcomes shown on the dashboard. Out
 | Abort outcome | Explanation |
 | ---- | ---- |
 | Frequency capped | The user already received the maximum number of messages allowed per your workspace's [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#about-frequency-capping) rules, so the send was canceled. |
-| Quiet Hours abort | Quiet Hours was enabled for the campaign or Canvas step with the fallback set to **Abort message**. The user triggered the campaign or entered the Canvas message step during Quiet Hours so the message was aborted. However, this doesn't exit the user from the Canvas. |
+| Quiet Hours abort | Quiet Hours was enabled for the campaign or Canvas step with the fallback set to **Abort message**. The user triggered the campaign or entered the Canvas Message step during Quiet Hours, so the message was aborted. However, this doesn't exit the user from the Canvas. |
 | Rate limited over 72 hours | The message was throttled for longer than 72 hours due to [delivery speed rate limits]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting), so the send was aborted. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -129,9 +130,9 @@ The following definitions explain the abort outcomes shown on the dashboard. Out
 | User failed pre-check for Message step | This pre-check runs before delivery validations. When this occurs, the user did not meet the basic pre-check for this Message step (user not found or ineligible for the Message step's channel). **Note:** For a multi-channel Message step, this means the user was not found; channel eligibility is only checked here for single-channel Message steps. |
 | User failed pre-check for triggered message | For a triggered message, Braze runs a first-pass set of basic pre-checks for audience eligibility, re-eligibility, and channel eligibility before creating a message to send from this trigger. |
 | User no longer eligible | The user was initially in the target audience, but no longer matched the audience criteria before Braze sent the message or entered the user into the Canvas. The time between the user initially meeting the audience criteria and falling out of audience could be due to delays from: {::nomarkdown}<ul><li>Intelligent timing</li><li>Quiet Hours</li><li>Local time</li><li>Delivery speed rate limits (not applicable for Canvas entry)</li><li>Messaging pipeline delays</li></ul>{:/} |
-| User not eligible for step | The user exited the Canvas because they didn't meet the set [delivery validations]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#delivery-validations) for the message step or because they were part of a [suppression list]({{site.baseurl}}/user_guide/engagement_tools/segments/suppression_lists). |
-| User not re-eligible | The user was eligible to receive the message or enter the Canvas, but the send was canceled because of re-eligibility or re-entry settings. This can happen if the user already received the campaign or entered the Canvas too recently, if another send for the same campaign is already in progress for this user, or if re-eligibility or re-entry is turned off. |
-| User profile not found | The user either never existed or no longer exists in Braze. Some common cases include: {::nomarkdown}<ul><li> The user was targeted using API messaging but never existed in Braze. </li><li>The user was deleted before the message was sent or the Canvas step was executed. </li><li>The user was merged with another profile before the message was sent.</li></ul>{:/} |
+| User not eligible for step | The user exited the Canvas because they didn't meet the set [delivery validations]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#delivery-validations) for the Message step or because they were part of a [suppression list]({{site.baseurl}}/user_guide/engagement_tools/segments/suppression_lists). |
+| User not re-eligible | The user was eligible to receive the message or enter the Canvas, but the send was canceled because of re-eligibility or re-entry settings. This can happen if the user has already received the campaign or entered the Canvas too recently, if another send for the same campaign is already in progress for this user, or if re-eligibility or re-entry is turned off. |
+| User profile not found | The user either never existed or no longer exists in Braze. Some common cases include: {::nomarkdown}<ul><li> The user was targeted using API messaging, but never existed in Braze. </li><li>The user was deleted before the message was sent or the Canvas step was executed. </li><li>The user was merged with another profile before the message was sent.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Channel and delivery
@@ -140,23 +141,23 @@ The following definitions explain the abort outcomes shown on the dashboard. Out
 | ---- | ---- |
 | Partner delivery timeout | Braze attempted to send this message to your delivery partner for 24 hours, but the partner returned temporary errors for the entire window. |
 | Push credentials invalid | The [push credentials]({{site.baseurl}}/user_guide/message_building_by_channel/push/troubleshooting/#valid-push-token) for this app are missing or invalid, so the send was canceled. Update your credentials in **App Settings**. |
-| User not enabled for Android push, app, or device | Push cannot be sent to this user. Some common reasons: {::nomarkdown}<ul><li> The user doesn't have the app installed.</li> <li> The user doesn't have a valid push token. </li> <li>The user doesn't have the necessary device for this push notification. </li> <li> The user has disabled notifications for this app in their device settings. </li> <li> The user is not subscribed or opted-in to receive push notifications.</li></ul>{:/} |
-| User not enabled for iOS push, app, or device | Same as User not enabled for Android push, app, or device (see above). |
-| User not enabled for Kindle push, app, or device | Same as User not enabled for Android push, app, or device (see above). |
-| User not enabled for web push, app, or device | Same as User not enabled for Android push, app, or device (see above). |
+| User not enabled for Android push, app, or device | Push cannot be sent to this user. Some common reasons: {::nomarkdown}<ul><li> The user doesn't have the app installed.</li> <li> The user doesn't have a valid push token. </li> <li>The user doesn't have the necessary device for this push notification. </li> <li> The user has disabled notifications for this app in their device settings. </li> <li> The user is not subscribed to or opted-in to receive push notifications.</li></ul>{:/} |
+| User not enabled for iOS push, app, or device | Same as "User not enabled for Android push, app, or device" abort outcome. |
+| User not enabled for Kindle push, app, or device | Same as "User not enabled for Android push, app, or device" abort outcome. |
+| User not enabled for web push, app, or device | Same as "User not enabled for Android push, app, or device" abort outcome. |
 | User not enabled for Content Cards | The user has not used any apps that include this Content Card. |
 | User not enabled for email | Emails cannot be sent to this user. Some common reasons: {::nomarkdown}<ul><li> The user doesn't have an email address on their user profile. </li><li> The user's subscription state excludes them from receiving this email. </li><li> The user's email address has previously been marked invalid (hard bounce). </li><li> Messages sent to this email address are consistently marked as spam, so the send was canceled.</li></ul>{:/} |
 | User not enabled for LINE | LINE messages cannot be sent to this user. Some common reasons: {::nomarkdown}<ul><li> The user doesn't have a phone number on their user profile. </li><li> The user's phone number has been marked invalid due to delivery failures. </li><li> The user's subscription state excludes them from receiving this message. </li><li> The user doesn't have a LINE ID.</li></ul>{:/} |
-| User not enabled for SMS/MMS/RCS | SMS messages cannot be sent to this user. Some common reasons: {::nomarkdown}<ul><li> The user doesn't have a phone number on their user profile. </li><li> The user's phone number has been marked invalid due to delivery failures. </li><li> The user's phone number is not in valid E.164 format, and attempts to automatically format the number failed. </li><li> The user's subscription state excludes them from receiving the SMS message.</li><li>The user's phone number is in a blocked country.</li></ul>{:/} |
+| User not enabled for SMS/MMS/RCS | SMS messages cannot be sent to this user. Some common reasons: {::nomarkdown}<ul><li> The user doesn't have a phone number on their user profile. </li><li> The user's phone number has been marked invalid due to delivery failures. </li><li> The user's phone number is not in a valid E.164 format, and attempts to automatically format the number failed. </li><li> The user's subscription state excludes them from receiving the SMS message.</li><li>The user's phone number is in a blocked country.</li></ul>{:/} |
 | User not enabled for WhatsApp | WhatsApp messages cannot be sent to this user. Some common reasons: {::nomarkdown}<ul><li> The user doesn't have a phone number on their user profile. </li><li> The user's phone number has been marked invalid due to delivery failures. </li><li> The user's subscription state excludes them from receiving this message. </li><li> The user doesn't have a WhatsApp account.</li></ul>{:/} |
-| Webhook failed | The webhook received an unsuccessful response code (non `2xx`). See the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab#dev-console-troubleshooting) for more details. Logs that are more than 60 hours old are cleaned and no longer accessible; webhook errors are sampled up to 20 logs per hour. |
+| Webhook failed | The webhook received an unsuccessful response code (non-`2xx`). See the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab#dev-console-troubleshooting) for more details. Logs that are more than 60 hours old are cleaned and no longer accessible; webhook errors are sampled up to 20 logs per hour. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Frequently asked questions
 
 ### What does a "pre-check" failure mean?
 
-A "pre-check" refers to a high-speed, bundled validation check that runs at the very beginning of a pipeline stage (such as a message being triggered or a sending of a Canvas message step). Think of it as an early exit designed for maximum speed. Instead of running many separate, resource-intensive checks (like validating every detail of a user's profile), Braze bundles several basic validations into one "first pass".
+A "pre-check" refers to a high-speed, bundled validation check that runs at the very beginning of a pipeline stage (such as a message being triggered or the sending of a Canvas Message step). Think of it as an early exit designed for maximum speed. Instead of running many separate, resource-intensive checks (like validating every detail of a user's profile), Braze bundles several basic validations into one "first pass".
 
 If a user fails this single bundled check, they are dropped immediately. This bundled approach allows Braze to process massive volumes of messages at high speed and can contribute to faster, more stable performance for your campaigns and Canvases by reducing processing latency for each message.
 
@@ -175,5 +176,5 @@ This can occur for the following reasons:
 
 - **Multi-channel messages:** The campaign or Canvas step was configured to send on multiple channels (such as SMS and email). A single user can receive a "sent" outcome for one channel (such as email) and an "abort" outcome for another (such as "User not enabled for SMS/MMS/RCS"). In this case, that one user would be counted twice in the chart: once as a "sent" and once as an "abort."
   - **Example:** You send a push campaign to 100 users, targeting both iOS and Android. If a user has only an iOS device, they receive the iOS push ("sent") but also trigger an abort for the Android push ("User not enabled for Android push, app, or device").
-- **Multiple Message steps (Canvas only):** Your Canvas may have more than one message step in a given path. This dashboard aggregates all outcomes, so a single user could be counted multiple times if they pass through multiple message steps within the selected time range.
+- **Multiple Message steps (Canvas only):** Your Canvas may have more than one Message step in a given path. This dashboard aggregates all outcomes, so a single user could be counted multiple times if they pass through multiple Message steps within the selected time range.
 - **Test messages:** Test sending (which is counted in the dashboard) is making the total counts higher than the audience size. 
