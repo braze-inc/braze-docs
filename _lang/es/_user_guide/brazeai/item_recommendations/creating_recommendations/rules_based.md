@@ -175,7 +175,7 @@ Por ejemplo:
 
 Ve a la pestaña de **Prueba** y selecciona **Usuario personalizado** en **Vista previa del mensaje como usuario**. Introduce una fecha en el campo **Atributo personalizado** para obtener una vista previa de la tarjeta de contenido que se enviaría a un usuario que se hubiera registrado en esa fecha. <br><br>
 
-![Un ejemplo de atributo personalizado denominado/assets/img/recs/custom_attributes_test.pngimage_buster'start_date'.]({%    %})
+![Un ejemplo de atributo personalizado denominado « start_date ».]({% image_buster /assets/img/recs/custom_attributes_test.png %})
 {% endtab %}
 
 {% tab using Connected Content %}

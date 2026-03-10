@@ -367,7 +367,7 @@ Para configurar un mensaje completo personalizado dentro de la aplicación en el
 
 En los pares clave-valor, proporciona un `attribute_key`; esta clave, junto con los valores seleccionados por el usuario, se guardará en su perfil de usuario como un atributo personalizado. Tu lógica de vista personalizada debe gestionar los atributos de usuario enviados a Braze.
 
-![Tres pares clave-valor encontrados en el creador de mensajes. El primer par "attribute_key"clave-valor se establece como «Etiquetas push», el segundo"subtitle_text"se establece como «Habilitar las notificaciones también...» y el tercero"view_type"se establece como/assets/img/iam_implementation/dashboard3.pngimage_buster"table_list".]({%%}){: style="max-width:65%;"}
+![Tres pares clave-valor en el creador de mensajes: « attribute_key » (Etiquetas push), « subtitle_text » (Habilitar las notificaciones también...), « view_type » (table_list).]({% image_buster /assets/img/iam_implementation/dashboard3.png %}){: style="max-width:65%;"}
 
 #### Interceptar toques de mensajes dentro de la aplicación
 ![Un dispositivo Apple que muestra filas de configuraciones y alternancias. La vista personalizada maneja los botones, y cualquier toque fuera de los controles de los botones es manejado por el mensaje dentro de la aplicación y lo descartará.]({% image_buster /assets/img/iam_implementation_guide.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}

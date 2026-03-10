@@ -347,7 +347,7 @@ Debido a que se utiliza un mensaje push para registrar un evento personalizado r
 
 Crea una [campaña push silenciosa]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift) que se desencadene a través del evento enviado por el servidor. 
 
-![Campaña de mensajes dentro de la aplicación basada en acciones que se entregará a los usuarios cuyos perfiles de usuario tengan el evento "server_event".]({%image_buster/assets/img_archive/iosServerSentPush.pngpersonalizado    %})
+![Campaña de mensajes dentro de la aplicación basada en acciones que se entregará a los usuarios cuyos perfiles de usuario tengan el evento "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 
 La campaña push debe incluir extras de par clave-valor, que indiquen que esta campaña push se envía para registrar un evento personalizado del SDK. Este evento se utilizará para desencadenar el mensaje dentro de la aplicación.
 

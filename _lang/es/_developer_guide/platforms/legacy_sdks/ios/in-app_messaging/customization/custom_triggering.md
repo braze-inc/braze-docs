@@ -54,7 +54,7 @@ Cuando se reciba el push silencioso, se registrará un evento "desencadenado de 
 
 Crea una campaña push silenciosa que se desencadene a través del evento enviado por el servidor. Para más detalles sobre cómo crear una campaña push silenciosa, consulta las [notificaciones push silenciosas]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/silent_push_notifications/).
 
-![Una campaña de mensajes dentro de la aplicación basada en acciones que se entregará a los usuarios que realicen el evento "server_event".]({%image_buster/assets/img_archive/iosServerSentPush.pngpersonalizado    %})
+![Una campaña de mensajes dentro de la aplicación basada en acciones que se entregará a los usuarios que realicen el evento personalizado « server_event ».]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 
 La campaña push debe incluir extras de par clave-valor, que indiquen que esta campaña push se envía para registrar un evento personalizado del SDK. Este evento se utilizará para desencadenar el mensaje dentro de la aplicación:
 

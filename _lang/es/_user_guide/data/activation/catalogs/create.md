@@ -87,7 +87,7 @@ Introduce un nombre y una descripción opcional para tu catálogo. Ten en cuenta
 También puedes [utilizar plantillas en el nombre del catálogo](#template-catalog-names), lo que te permite generar dinámicamente nombres de catálogo basados en variables como el idioma o la campaña.
 {% endalert %}
 
-![Un catálogo llamado/assets/img_archive/in_browser_catalog.pngimage_buster"my_catalog".]({%    %}){: style="max-width:80%;"}
+![Un catálogo llamado « my_catalog ».]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"}
 
 Selecciona **Procesar Catálogo** para crear el catálogo.
 
@@ -135,11 +135,11 @@ Crearemos el catálogo cargando un archivo CSV. Los tipos de datos de `id`, `tit
 Este tipo de datos no se puede editar una vez configurado el catálogo.
 {% endalert %}
 
-![Cuatro nombres de columnas del catálogo: «ID», «title», «price»,/assets/img_archive/catalog_data_type.pngimage_buster"image_link".]({%    %}){: style="max-width:85%;"}
+![Cuatro nombres de columnas del catálogo: «ID», «title», «price», «image_link».]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:85%;"}
 
 A continuación, daremos un nombre a este catálogo"games_catalog"y seleccionaremos el botón **Procesar catálogo**. Braze comprobará si hay errores en tu catálogo antes de crearlo.
 
-![Un catálogo llamado/assets/img_archive/catalog_new_name.pngimage_buster"games_catalog".]({%    %}){: style="max-width:85%;"}
+![Un catálogo llamado « games_catalog ».]({% image_buster /assets/img_archive/catalog_new_name.png %}){: style="max-width:85%;"}
 
 Tenga en cuenta que no podrá editar este nombre una vez creado el catálogo. Puede eliminar un catálogo y volver a cargar una versión actualizada utilizando el mismo nombre de catálogo.
 
@@ -170,7 +170,7 @@ Introduce un nombre y una descripción opcional para tu catálogo. Ten en cuenta
 También puedes [utilizar plantillas en el nombre del catálogo](#template-catalog-names), lo que te permite generar dinámicamente nombres de catálogo basados en variables como el idioma o la campaña.
 {% endalert %}
 
-![Un catálogo llamado/assets/img_archive/in_browser_catalog.pngimage_buster"my_catalog".]({%    %}){: style="max-width:80%;"}
+![Un catálogo llamado « my_catalog ».]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"}
 
 ### Paso 2: Crea tu catálogo
 

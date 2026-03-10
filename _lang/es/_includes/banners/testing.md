@@ -1,4 +1,4 @@
-{% if include.page == "testing" %}Mientras [redactas tu mensaje de banner]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#compose-a-banner), selecciona{% endif %} {% elsif include.page == "campaigns" %}**Seleccionar vista previa** para obtener una vista previa de tu banner o enviar un mensaje de prueba.
+{% if include.page == "testing" %}Mientras [redactas tu mensaje de banner]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#compose-a-banner), selecciona{% elsif include.page == "campaigns" %}Selecciona{% endif %} **Vista previa** para obtener una vista previa de tu banner o enviar un mensaje de prueba.
 
 ![Pestaña Vista previa del compositor de banners.]({% image_buster /assets/img/banners/select_preview.png %}){: style="max-width:50%;"}
 

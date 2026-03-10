@@ -175,7 +175,7 @@ En el editor de interfaz de usuario, selecciona lo siguiente:
 - **Acción:** Actualizar
 - **Valor clave:** {% raw %} ```{% assign parsed_json = {{whats_app.${inbound_flow_response}}} | json_parse %}{{ parsed_json.FIELDS_THAT_APPLY }}```{% endraw %}
 
-![Creador de mensajes de WhatsApp con un componente «Añadir personalización» para insertar una personalización de las propiedades de WhatsApp con el atributo `inbound_flow_response`.]({%image_buster/assets/img/whatsapp/flows/parsed_json.pngpersonalizado    %})
+![Creador de mensajes de WhatsApp con un componente «Añadir personalización» para insertar una personalización de las propiedades de WhatsApp con el atributo `inbound_flow_response`.]({% image_buster /assets/img/whatsapp/flows/parsed_json.png %})
 
 Cuando estés listo, envía un mensaje de prueba para comprobar el flujo. A continuación, ¡inicia Canvas!
 
@@ -193,6 +193,6 @@ Para utilizar la respuesta Flow a través de Liquid con [etiquetas de personaliz
 1. Al redactar tu mensaje de WhatsApp, selecciona el icono más para abrir la ventana **Añadir personalización.**
 2. Selecciona **Propiedades de WhatsApp** para el tipo de personalización y**inbound_flow_response**  para el atributo personalizado. Esto se puede utilizar para guardar información en perfiles de usuario, incluirla en mensajes o reenviarla a otros servicios, como webhooks.
 
-![Creador de mensajes de WhatsApp con un componente «Añadir personalización» para insertar una personalización de las propiedades de WhatsApp con el atributo inbound_flow_response.]({%image_buster/assets/img/whatsapp/flows/inbound_flow_response.pngpersonalizado    %}){: style="max-width:80%;"}
+![Creador de mensajes de WhatsApp con un componente «Añadir personalización» para insertar una personalización de las propiedades de WhatsApp con el atributo inbound_flow_response.]({% image_buster /assets/img/whatsapp/flows/inbound_flow_response.png %}){: style="max-width:80%;"}
 
 Si tienes alguna pregunta o necesitas ayuda, ponte en contacto con [el servicio de asistencia]({{site.baseurl}}/braze_support/).

@@ -180,14 +180,14 @@ Supongamos que deseas enviar un recordatorio personalizado a los usuarios tras u
 
 Tienes una variable de contexto`re_engagement_date`  que se define como {% raw %}`{{now | minus: 3 | append: ' days'}}`{% endraw %}. Ten en cuenta que`3 days`  puede ser una cantidad variable que también se almacena como un atributo personalizado del usuario. Por lo tanto, si el`re_engagement_date`  está después del`last_login_date`  (almacenado como un atributo personalizado en el perfil de usuario), se les enviará un mensaje.
 
-![Una configuración de filtro con atributos personalizados como tipo de personalización para la variable de contexto"re_engagement_date" después del atributo "last_login_date".]({%image_buster/assets/img/context_variable_filter2.pngpersonalizado    %})
+![Una configuración de filtro con atributos personalizados como tipo de personalización para la variable de contexto « re_engagement_date » después del atributo « last_login_date ».]({% image_buster /assets/img/context_variable_filter2.png %})
 
 {% endtab %}
 {% tab Example 2 %}
 
 El siguiente filtro filtra la variable de contexto`reminder_date`  con la variable de contexto`appointment_deadline` . Esto puede ayudar a los usuarios del grupo en un paso de la ruta de audiencia a determinar si deben recibir recordatorios adicionales antes de la fecha límite de su cita.
 
-![Una configuración de filtro con variables de contexto como tipo de personalización para la variable de contexto"reminder_date"  en la variable de contexto"appointment_deadline".]({%image_buster/assets/img/context_variable_filter3.png    %})
+![Una configuración de filtro con variables de contexto como tipo de personalización para la variable de contexto « reminder_date » en la variable de contexto « appointment_deadline ».]({% image_buster /assets/img/context_variable_filter3.png %})
 
 {% endtab %}
 {% endtabs %}

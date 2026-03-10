@@ -260,7 +260,7 @@ El nombre de la extensión de datos de destino también se proporciona en tu por
 
 1. Ponle un nombre a la automatización y selecciona **Guardar**.
 
-![Un ejemplo de automatización/assets/img/decisioning_studio_go/query3.pngimage_buster"OFE_Experimenter_Test5_Automation".]({%    %})
+![Un ejemplo de automatización « OFE_Experimenter_Test5_Automation ».]({% image_buster /assets/img/decisioning_studio_go/query3.png %})
 
 {: start="2"}
 2\. A continuación, selecciona **Ejecutar una vez** para confirmar que todo funciona según lo previsto.
@@ -460,7 +460,7 @@ Antes de crear un flujo en Klaviyo, debes disponer de los siguientes datos de tu
 4\. Selecciona el disparador.
 5\. Empareja el nombre de la métrica con el nombre del evento que desencadena tu portal BrazeAI Decisioning Studio™ Go.
 
-![Un ejemplo de nombre de métrica que coincide con el nombre del evento "OFE_TEST_CASE_API_EVENT_TRIGGER".]({%image_buster/assets/img/decisioning_studio_go/flow2.pngdesencadenante    %})
+![Un ejemplo de nombre de métrica que coincide con el nombre del evento « OFE_TEST_CASE_API_EVENT_TRIGGER » (desencadenante).]({% image_buster /assets/img/decisioning_studio_go/flow2.png %})
 
 {: start="6"}
 6\. Seleccione **Guardar**.
