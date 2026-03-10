@@ -1,7 +1,7 @@
 ---
-nav_title: Einrichtung des Braze MCP Servers
-article_title: Einrichten des Braze MCP Servers
-description: "Erfahren Sie, wie Sie den Braze MCP Server einrichten, damit Sie mit natürlichsprachlichen Tools wie Claude und Cursor mit Ihren Braze Daten interagieren können."
+nav_title: Einrichtung des Braze MCP-Servers
+article_title: Richten Sie den Braze MCP-Server ein.
+description: "Erfahren Sie, wie Sie den Braze MCP-Server einrichten, um mit Ihren Braze-Daten mithilfe von Tools für natürliche Sprache wie Claude und Cursor zu interagieren."
 page_order: 1.1
 noindex: true
 ---
