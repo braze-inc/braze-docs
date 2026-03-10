@@ -82,9 +82,9 @@ Add [custom styling]({{site.baseurl}}/developer_guide/content_cards/customizing_
 
 ---
 
-## Solution 2: Multiple feeds separated by priority
+## Solution 2: Multiple feeds separated by priority (Walk)
 
-This approach is similar to Solution 1, but each priority level has its **own feed**. Use a KVP such as `priority_level` with values like `low_priority`, `medium_priority`, and `high_priority`.
+This approach is similar to Solution 1, but each priority level has its own feed. Use a KVP like `priority_level` with values such as `low_priority`, `medium_priority`, and `high_priority`.
 
 ### Step 1: Filter cards by priority
 
@@ -122,7 +122,7 @@ Set the `priority_level` KVP on each Content Card to `low_priority`, `medium_pri
 
 ### Step 4 (optional): Custom styling
 
-Apply custom styling per feed if desired.
+Apply [custom styling]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/style/) per feed if desired.
 
 ---
 
@@ -130,7 +130,7 @@ Apply custom styling per feed if desired.
 
 This solution uses a [custom Content Card view]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/) instead of the default feed. Your development team implements custom views and UI using Braze class properties and methods and the data models (for example, `ab.ClassicCard`, `ab.Banner`, and `ab.CaptionedImage`).
 
-**Example:** Display cards by **priority level** and **expiry date** (for example, limited-time offers, local offers, or standing offers, with a second sort by expiry).
+**Example:** Display cards by priority level and expiry date (for example, limited-time offers, local offers, or standing offers, with a second sort by expiry).
 
 ### Step 1: Add KVPs for priority and expiry
 
