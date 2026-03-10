@@ -94,6 +94,10 @@ Clearing cookies will log you out, so unsaved work will be lost.
 
 If clearing your browser cache and cookies doesn't resolve your issues, contact [Support]({{site.baseurl}}/support_contact/).
 
+### "Please Refresh Page" or "Unexpected Error" while navigating the dashboard
+
+This error commonly appears when a company user belongs to no workspaces. Check the user's workspace access by going to the [Company Users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) page and confirming whether the user has been added to a workspace. If they are not part of any workspace, add them and assign the appropriate permissions, then have them refresh their dashboard.
+
 ### Accessing the drag-and-drop editor
 
 For most company users, the drag-and-drop editor should load. However, if you're using a VPN or are behind a firewall, you may need to allowlist a domain. Contact your IT administrator to check that `*.bz-rndr.com` is allowlisted.
