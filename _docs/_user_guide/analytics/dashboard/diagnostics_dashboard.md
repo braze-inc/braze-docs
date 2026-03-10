@@ -10,6 +10,10 @@ page_order: 4.5
 
 > The **Messaging Diagnostics** dashboard provides a high-level breakdown of message sending outcomes, allowing you to spot trends and diagnose potential issues in your messaging setup. This dashboard can help you understand why messages from your campaigns or Canvases may not have been sent as expected.
 
+{% alert important %}
+The **Messaging Diagnostics** dashboard is currently in early access. Contact your customer success manager if you're interested in participating in the early access.
+{% endalert %}
+
 ## Key concepts
 
 ### Sent and delivered
@@ -34,7 +38,7 @@ When Braze "sends" a message, the final delivery may depend on external services
 
 ### Data freshness
 
-The data in this dashboard updates approximately every 15 minutes. The update frequency is not guaranteed and may fluctuate based on system load.
+The frequency at which data in this dashboard updates may fluctuate based on system load. While update frequency is not guaranteed, it is likely less than an hour in most cases.
 
 ## Configuring the dashboard
 
