@@ -2660,6 +2660,11 @@ Field | Type | Description
 `canvas_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas variation this event belongs to
 `canvas_step_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step this event belongs to
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
+`campaign_name` | `null,`&nbsp;`string` | Name of the campaign
+`message_variation_name` | `null,`&nbsp;`string` | Name of the message variation
+`canvas_name` | `null,`&nbsp;`string` | Name of the Canvas
+`canvas_variation_name` | `null,`&nbsp;`string` | Name of the Canvas variation this user received
+`canvas_step_name` | `null,`&nbsp;`string` | Name of the Canvas step
 `gender` | `null,`&nbsp;`string` | [PII] Gender of the user
 `country` | `null,`&nbsp;`string` | [PII] Country of the user
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
