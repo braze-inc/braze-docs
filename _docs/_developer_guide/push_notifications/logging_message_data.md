@@ -140,7 +140,7 @@ You can log analytics in real time by calling the [`/users/track`]({{site.baseur
 To identify the user profile, include `braze_id` in your push payload key-value pairs.
 
 {% alert note %}
-Passing `braze_id` only identifies the profile. You still need implementation logic that reads payload values and sends the `/users/track` request with the events or attributes you want to log.
+Passing `braze_id` identifies only the profile. You still need implementation logic that reads payload values and sends the `/users/track` request with the events or attributes you want to log.
 {% endalert %}
 
 ### Option B: Log with SDK methods after app launch
