@@ -174,7 +174,7 @@ By default, Braze sends messages to every device a user owns that has a valid pu
 
 If desired, you can set the push destination to **Most recently used device**. 
 
-#### Most recently used device
+##### Most recently used device
 
 "Most recently used" is a technical status, not a behavioral one. Because Braze defaults to all devices, switching to this setting significantly narrows your reach and relies entirely on the status of the single device with the newest token.
 
