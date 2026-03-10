@@ -62,7 +62,7 @@ Todo
 Correo electrónico, notificación push web, push de iOS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Bounces' %} Esto puede ocurrir porque no hay un token de notificaciones push válido, el usuario se dio de baja después de lanzar la campaña o la dirección de correo electrónico es inexacta o está desactivada.
+{% multi_lang_include analytics/metrics.md metric='Bounces' %} Esto puede ocurrir porque no hay un token de notificaciones push válido, el usuario canceló su suscripción después de lanzar la campaña o la dirección de correo electrónico es inexacta o está desactivada.
 
 |Canal|Información adicional|
 |-------|-----------------------|
@@ -74,8 +74,8 @@ Correo electrónico, notificación push web, push de iOS
 <span class="calculation-line">
     Cálculo:
     <ul>
-        <li><i>Rebota</i>: Recuento</li>
-        <li><i>% de rebote</i> o <i>tasa de rebote %</i>: (Rebota) / (Envía)</li>
+        <li><i>Rebotes</i>: Recuento</li>
+        <li><i>% de rebote</i> o <i>tasa de rebote %</i>: (Rebotes) / (Envíos)</li>
     </ul>
 </span>
 {:/}
@@ -98,13 +98,13 @@ Push iOS, Push Android
 
 {% api %}
 
-### Clics del cuerpo
+### Clics en el cuerpo
 
 {% apitags %}
 Mensaje dentro de la aplicación
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Body Clicks' %} Para más detalles, consulta los registros de cambios del SDK para [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) y [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
+{% multi_lang_include analytics/metrics.md metric='Body Clicks' %} Para más detalles, consulte los registros de cambios del SDK para [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) y [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
 
 <span class="calculation-line">Cálculo: (Clics en el cuerpo) / (Impresiones)</span>
 
@@ -118,7 +118,7 @@ Mensaje dentro de la aplicación
 Mensaje dentro de la aplicación
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %} La generación de informes para los _clics del botón 1_ sólo funciona cuando especificas el **identificador para la generación de** informes como "0" en el mensaje dentro de la aplicación.
+{% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %} La generación de informes para los _clics del botón 1_ solo funciona cuando se especifica el **identificador para la generación de informes** como "0" en el mensaje dentro de la aplicación.
 
 <span class="calculation-line">Cálculo: (Clics en el botón 1) / (Impresiones)</span>
 
@@ -132,7 +132,7 @@ Mensaje dentro de la aplicación
 Mensaje dentro de la aplicación
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %} La generación de informes para el _botón 2 clics_ sólo funciona cuando especificas el **identificador para la generación de** informes como "1" en el mensaje dentro de la aplicación.
+{% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %} La generación de informes para los _clics del botón 2_ solo funciona cuando se especifica el **identificador para la generación de informes** como "1" en el mensaje dentro de la aplicación.
 
 <span class="calculation-line">Cálculo: (Clics en el botón 2) / (Impresiones)</span>
 
@@ -146,7 +146,7 @@ Mensaje dentro de la aplicación
 Conmutador de características
 {% endapitags %}
 
-El rendimiento del mensaje a través de varios canales. Las métricas mostradas dependen del canal de mensajería seleccionado y de si el [experimento de la Bandera de características]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics) es una prueba multivariante.
+El rendimiento del mensaje a través de varios canales. Las métricas mostradas dependen del canal de mensajería seleccionado y de si el [experimento del conmutador de características]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics) es una prueba multivariante.
 
 {% endapi %}
 
@@ -164,7 +164,7 @@ Mensaje dentro de la aplicación
 
 {% api %}
 
-### Tasa de clics de apertura
+### Tasa de clics sobre aperturas
 
 {% apitags %}
 Correo electrónico
@@ -178,13 +178,13 @@ Correo electrónico
 
 {% api %}
 
-### Entregas Confirmadas RCS o Entregas Confirmadas SMS
+### Entregas confirmadas RCS o entregas confirmadas SMS
 
 {% apitags %}
 SMS/MMS, RCS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Confirmed Deliveries' %} Como cliente de Braze, las entregas se cargan a tu asignación de SMS. 
+{% multi_lang_include analytics/metrics.md metric='Confirmed Deliveries' %} Como cliente de Braze, las entregas se cargan a su asignación de SMS. 
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -242,11 +242,11 @@ Mensaje dentro de la aplicación
 Tarjetas de contenido, correo electrónico, mensajes dentro de la aplicación, push web, push de iOS, push de Android, webhook, SMS/MMS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Conversions (B, C, D)' %} Este evento definido lo determinas tú al crear la campaña. 
+{% multi_lang_include analytics/metrics.md metric='Conversions (B, C, D)' %} Este evento definido lo determina usted al crear la campaña. 
 
 |Canal|Información adicional|
 |-------|-----------------------|
-|Correo electrónico, push, webhooks|Las conversiones se siguen después del envío inicial.|
+|Correo electrónico, push, webhooks|Las conversiones se rastrean después del envío inicial.|
 |Tarjetas de contenido|Las conversiones se contabilizan cuando el usuario ve una tarjeta de contenido por primera vez.|
 |Mensajes dentro de la aplicación|Se cuenta una conversión si el usuario ha recibido y visto la campaña de mensajería dentro de la aplicación, y posteriormente realiza el evento de conversión específico dentro de la ventana de conversión definida, independientemente de si ha hecho clic en el mensaje o no.<br><br>Las conversiones se atribuyen al último mensaje recibido. Si se habilita la reelegibilidad, la conversión se asignará al último mensaje dentro de la aplicación recibido, siempre que se produzca dentro de la ventana de conversión definida. Sin embargo, si al mensaje dentro de la aplicación ya se le ha asignado una conversión, no se podrá registrar la nueva conversión para ese mensaje concreto. Esto significa que cada entrega de mensaje dentro de la aplicación está asociada a una sola conversión.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
@@ -263,9 +263,9 @@ Mensaje dentro de la aplicación
 
 {% multi_lang_include analytics/metrics.md metric='Total Conversions' %}
 
-Cuando un usuario ve una campaña de mensajería dentro de la aplicación una sola vez, sólo se cuenta una conversión, aunque realice el evento de conversión varias veces más tarde. Sin embargo, si la reelegibilidad está activada y el usuario ve la campaña de mensajería dentro de la aplicación varias veces, *el Total de conversiones* puede aumentar una vez por cada vez que el usuario registre una impresión para una nueva instancia de la campaña de mensajería dentro de la aplicación. 
+Cuando un usuario ve una campaña de mensajería dentro de la aplicación una sola vez, solo se cuenta una conversión, aunque realice el evento de conversión varias veces más tarde. Sin embargo, si la reelegibilidad está activada y el usuario ve la campaña de mensajería dentro de la aplicación varias veces, el *Total de conversiones* puede aumentar una vez por cada vez que el usuario registre una impresión para una nueva instancia de la campaña de mensajería dentro de la aplicación. 
 
-Por ejemplo, si un usuario desencadena un mensaje dentro de la aplicación dos veces y convierte después de cada impresión de mensaje dentro de la aplicación (lo que da lugar a dos conversiones), *el Total de conversiones* aumentará en dos. Sin embargo, si sólo hubo una impresión de mensaje dentro de la aplicación seguida de dos eventos de conversión, sólo se registrará una conversión, y *el Total de conversiones* aumentará en uno.
+Por ejemplo, si un usuario desencadena un mensaje dentro de la aplicación dos veces y convierte después de cada impresión de mensaje dentro de la aplicación (lo que da lugar a dos conversiones), el *Total de conversiones* aumentará en dos. Sin embargo, si solo hubo una impresión de mensaje dentro de la aplicación seguida de dos eventos de conversión, solo se registrará una conversión, y el *Total de conversiones* aumentará en uno.
 
 {% endapi %}
 
@@ -293,7 +293,7 @@ Tarjetas de contenido, correo electrónico, mensajes dentro de la aplicación, p
 
 |Canal|Información adicional|
 |-------|-----------------------|
-|Mensajes dentro de la aplicación|La métrica del total de <i>impresiones únicas</i> diarias se utiliza para calcular la <i>tasa de conversión</i> de los mensajes dentro de la aplicación.<br><br>Las impresiones de los mensajes dentro de la aplicación sólo pueden contarse una vez al día. Por otra parte, el número de veces que un usuario completa una acción deseada (una "conversión") puede aumentar en un periodo de 24 horas. Mientras que las conversiones pueden producirse más de una vez al día, las impresiones no. Por lo tanto, si un usuario completa una conversión varias veces en un día, la <i>tasa de conversión</i> puede aumentar en consecuencia, pero las impresiones sólo se contarán una vez.|
+|Mensajes dentro de la aplicación|La métrica del total de <i>impresiones únicas</i> diarias se utiliza para calcular la <i>tasa de conversión</i> de los mensajes dentro de la aplicación.<br><br>Las impresiones de los mensajes dentro de la aplicación solo pueden contarse una vez al día. Por otra parte, el número de veces que un usuario completa una acción deseada (una "conversión") puede aumentar en un periodo de 24 horas. Mientras que las conversiones pueden producirse más de una vez al día, las impresiones no. Por lo tanto, si un usuario completa una conversión varias veces en un día, la <i>tasa de conversión</i> puede aumentar en consecuencia, pero las impresiones solo se contarán una vez.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
@@ -332,7 +332,7 @@ Correo electrónico, notificación push web, push de iOS, push de Android, Whats
 
 |Canal|Información adicional|
 |-------|-----------------------|
-|Correo electrónico|Se refiere al número total de mensajes (Sends) enviados y recibidos con éxito por las partes que pueden enviar correos electrónicos.|
+|Correo electrónico|Se refiere al número total de mensajes (Envíos) enviados y recibidos con éxito por las partes que pueden recibir correos electrónicos.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
@@ -357,7 +357,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures' %}
 
-Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> para que te ayude a comprender los motivos de los fallos en la entrega.
+Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> para obtener ayuda sobre los motivos de los fallos en la entrega.
 
 <span class="calculation-line">Cálculo: (Envíos) - (Envíos al operador)</span>
 
@@ -373,7 +373,7 @@ RCS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures RCS' %}
 
-Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> para que te ayude a comprender los motivos de los fallos en la entrega.
+Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> para obtener ayuda sobre los motivos de los fallos en la entrega.
 
 <span class="calculation-line">Cálculo: (Envíos) - (Envíos al operador)</span>
 
@@ -389,7 +389,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Failed Delivery Rate' %}
 
-Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> para que te ayude a comprender los motivos de los fallos en la entrega.
+Ponte en contacto con <a href="/docs/braze_support/">el soporte de Braze</a> para obtener ayuda sobre los motivos de los fallos en la entrega.
 
 <span class="calculation-line">Cálculo: (Fallos de entrega) / (Envíos)</span>
 
@@ -437,7 +437,7 @@ Webhook
 
 {% api %}
 
-### Estimación de Aperturas Reales
+### Estimación de aperturas reales
 
 {% apitags %}
 Correo electrónico
@@ -449,7 +449,7 @@ Correo electrónico
 
 {% api %}
 
-### Errores
+### Fallos
 
 {% apitags %}
 WhatsApp
@@ -457,19 +457,19 @@ WhatsApp
 
 {% multi_lang_include analytics/metrics.md metric='Failures' %} Los fallos se incluyen en el recuento de <i>Envíos</i>, pero no en el de <i>Entregas</i>.</td>
 
-<span class="calculation-line">Cálculo<i>(tasa de fallos</i>): (Fallos) / (Envíos)</span>
+<span class="calculation-line">Cálculo (<i>tasa de fallos</i>): (Fallos) / (Envíos)</span>
 
 {% endapi %}
 
 {% api %}
 
-### Bandera de características rendimiento del experimento
+### Rendimiento del experimento del conmutador de características
 
 {% apitags %}
 Conmutador de características
 {% endapitags %}
 
-Métricas de rendimiento del mensaje en un experimento de Bandera de características. Las métricas específicas mostradas variarán en función del canal de mensajería y de si el experimento era o no una prueba multivariante.
+Métricas de rendimiento del mensaje en un experimento del conmutador de características. Las métricas específicas mostradas variarán en función del canal de mensajería y de si el experimento era o no una prueba multivariante.
 
 {% endapi %}
 
@@ -483,7 +483,7 @@ Correo electrónico
 
 {% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} 
 
-Cuando esto ocurre, Braze marca la dirección de correo electrónico como no válida, pero no actualiza el [estado de suscripción]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) del usuario. Si un correo electrónico recibe un rebote duro, detendremos cualquier solicitud futura a esta dirección de correo electrónico.
+Cuando esto ocurre, Braze marca la dirección de correo electrónico como no válida, pero no actualiza el [estado de suscripción]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) del usuario. Si un correo electrónico recibe un rebote duro, se detendrá cualquier solicitud futura a esta dirección de correo electrónico.
 
 {% endapi %}
 
@@ -495,7 +495,7 @@ Cuando esto ocurre, Braze marca la dirección de correo electrónico como no vá
 SMS/MMS, RCS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Help' %} Una respuesta de usuario se mide cada vez que un usuario envía un mensaje entrante en las cuatro horas siguientes a la recepción de tu mensaje.
+{% multi_lang_include analytics/metrics.md metric='Help' %} Una respuesta de usuario se mide cada vez que un usuario envía un mensaje de entrada en las cuatro horas siguientes a la recepción de su mensaje.
 
 {% endapi %}
 
@@ -581,7 +581,7 @@ Tarjetas de contenido, correo electrónico, mensajes dentro de la aplicación, p
 Correo electrónico
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Machine Opens' %} Esta métrica es objeto de seguimiento a partir del 11 de noviembre de 2021 para SendGrid y del 2 de diciembre de 2021 para SparkPost. Para Amazon SES, los análisis aparecerán como _Abiertos_. Sin embargo, se admitirá el filtrado de bots por clics.
+{% multi_lang_include analytics/metrics.md metric='Machine Opens' %} Esta métrica se rastrea a partir del 11 de noviembre de 2021 para SendGrid y del 2 de diciembre de 2021 para SparkPost. Para Amazon SES, los análisis aparecerán como _Abiertos_. Sin embargo, se admitirá el filtrado de bots por clics.
 
 {% endapi %}
 
@@ -605,7 +605,7 @@ Web Push, iOS Push, Android Push
 SMS/MMS, RCS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Opt-Out' %} Una respuesta de usuario se mide cada vez que un usuario envía un mensaje entrante en las cuatro horas siguientes a la recepción de tu mensaje.
+{% multi_lang_include analytics/metrics.md metric='Opt-Out' %} Una respuesta de usuario se mide cada vez que un usuario envía un mensaje de entrada en las cuatro horas siguientes a la recepción de su mensaje.
 
 {% endapi %}
 
@@ -617,7 +617,7 @@ SMS/MMS, RCS
 Correo electrónico
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Other Opens' %} Ten en cuenta que un usuario también puede abrir un correo electrónico (como el recuento de aperturas para Otras aperturas) antes de que se registre un recuento de Aperturas de máquina. Si un usuario abre un correo electrónico una vez (o más) después de un evento de apertura de máquina desde un buzón de entrada que no es de Apple Mail, entonces la cantidad de veces que el usuario abre el correo electrónico se calcula para Otras aperturas y sólo una vez para Aperturas únicas.
+{% multi_lang_include analytics/metrics.md metric='Other Opens' %} Tenga en cuenta que un usuario también puede abrir un correo electrónico (como el recuento de aperturas para Otras aperturas) antes de que se registre un recuento de Aperturas automáticas. Si un usuario abre un correo electrónico una vez (o más) después de un evento de apertura automática desde un buzón de entrada que no es de Apple Mail, entonces la cantidad de veces que el usuario abre el correo electrónico se calcula para Otras aperturas y solo una vez para Aperturas únicas.
 
 {% endapi %}
 
@@ -700,24 +700,24 @@ Correo electrónico, tarjetas de contenido, mensajes dentro de la aplicación, p
 |Canal|Información adicional|
 |-------|-------|
 |Tarjetas de contenido|Se recibe cuando los usuarios ven la tarjeta en la aplicación.|
-|Push|Se recibe cuando los mensajes se envían desde el servidor Braze al proveedor push.|
-|Correo electrónico|Se recibe cuando los mensajes se envían desde el servidor Braze al proveedor de servicios de correo electrónico.|
+|Push|Se recibe cuando los mensajes se envían desde el servidor de Braze al proveedor push.|
+|Correo electrónico|Se recibe cuando los mensajes se envían desde el servidor de Braze al proveedor de servicios de correo electrónico.|
 |SMS/MMS|"Entregado" después de que el proveedor de SMS reciba la confirmación del operador de origen y del dispositivo de destino.|
-|Mensaje dentro de la aplicación|Recibido en el momento de la visualización en función de la acción de activación definida.|
-|WhatsApp|Recibido en el momento de la visualización en función de la acción de activación definida.|
+|Mensaje dentro de la aplicación|Recibido en el momento de la visualización en función de la acción desencadenante definida.|
+|WhatsApp|Recibido en el momento de la visualización en función de la acción desencadenante definida.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
 
 {% api %}
 
-### Rechazos RCS o Rechazos SMS
+### Rechazos RCS o rechazos SMS
 
 {% apitags %}
 SMS/MMS, RCS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Rejections' %} Como cliente de Braze, los rechazos se cargan a tu asignación de SMS.
+{% multi_lang_include analytics/metrics.md metric='Rejections' %} Como cliente de Braze, los rechazos se cargan a su asignación de SMS.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -765,12 +765,12 @@ SMS/MMS
 Tarjetas de contenido, correo electrónico, mensajes dentro de la aplicación, Web push, iOS push, Android push, webhook, SMS/MMS, RCS, WhatsApp, LINE
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Sends' %} Esta métrica la proporciona Braze. Tenga en cuenta que al lanzar una campaña programada, esta métrica incluirá todos los mensajes enviados, independientemente de si se han enviado ya debido a la limitación de velocidad.
+{% multi_lang_include analytics/metrics.md metric='Sends' %} Esta métrica la proporciona Braze. Tenga en cuenta que, al lanzar una campaña planificada, esta métrica incluirá todos los mensajes enviados, independientemente de si se han enviado ya debido al límite de velocidad.
 
 {% alert tip %}
-Para las tarjetas de contenido, esta métrica se calcula de forma diferente dependiendo de lo que hayas seleccionado para la [creación de la tarjeta]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/):
+Para las tarjetas de contenido, esta métrica se calcula de forma diferente dependiendo de lo que haya seleccionado para la [creación de la tarjeta]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/):
 
-- **En el lanzamiento o en la entrada escalonada:** El número de tarjetas creadas y disponibles para ver. Esto no cuenta si los usuarios vieron la tarjeta.
+- **En el lanzamiento o en la entrada del paso:** El número de tarjetas creadas y disponibles para ver. Esto no cuenta si los usuarios vieron la tarjeta.
 - **En la primera impresión:** El número de tarjetas mostradas a los usuarios.
 {% endalert %}
 
@@ -786,12 +786,12 @@ Para las tarjetas de contenido, esta métrica se calcula de forma diferente depe
 Tarjetas de contenido, correo electrónico, mensaje dentro de la aplicación, push web, push de iOS, push de Android, webhook, SMS/MMS, WhatsApp, LINE
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Messages Sent' %}  Esta métrica la proporciona Braze. Tenga en cuenta que al lanzar una campaña programada, esta métrica incluirá todos los mensajes enviados, independientemente de si se han enviado ya debido a la limitación de velocidad.
+{% multi_lang_include analytics/metrics.md metric='Messages Sent' %}  Esta métrica la proporciona Braze. Tenga en cuenta que, al lanzar una campaña planificada, esta métrica incluirá todos los mensajes enviados, independientemente de si se han enviado ya debido al límite de velocidad.
 
 {% alert tip %}
-Para las tarjetas de contenido, esta métrica se calcula de forma diferente dependiendo de lo que hayas seleccionado para la [creación de la tarjeta]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/):
+Para las tarjetas de contenido, esta métrica se calcula de forma diferente dependiendo de lo que haya seleccionado para la [creación de la tarjeta]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/):
 
-- **En el lanzamiento o en la entrada escalonada:** El número de tarjetas creadas y disponibles para ver. Esto no cuenta si los usuarios vieron la tarjeta.
+- **En el lanzamiento o en la entrada del paso:** El número de tarjetas creadas y disponibles para ver. Esto no cuenta si los usuarios vieron la tarjeta.
 - **En la primera impresión:** El número de tarjetas mostradas a los usuarios.
 {% endalert %}
 
@@ -801,7 +801,7 @@ Para las tarjetas de contenido, esta métrica se calcula de forma diferente depe
 
 {% api %}
 
-### Envíos a operador
+### Envíos al operador
 
 {% apitags %}
 SMS/MMS
@@ -813,8 +813,8 @@ SMS/MMS
 <span class="calculation-line">
     Cálculo:
     <ul>
-        <li><i>Envía al operador</i>: Recuento</li>
-        <li><i>Envía a la tasa del operador</i>: (Envía al operador) / (Envía)</li>
+        <li><i>Envíos al operador</i>: Recuento</li>
+        <li><i>Tasa de envíos al operador</i>: (Envíos al operador) / (Envíos)</li>
     </ul>
 </span>
 {:/}
@@ -823,15 +823,15 @@ SMS/MMS
 
 {% api %}
 
-### Rebote suave
+### Rebote blando
 
 {% apitags %}
 Correo electrónico
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} Nota que _los Rebotes blandos_ difieren de _los Aplazamientos_. Si no se entregó correctamente ningún correo electrónico durante este periodo de reintento, Braze enviará un evento de rebote blando por cada intento de envío de campaña. Antes del 25 de febrero de 2025, estos reintentos se contabilizaban como múltiples rebotes blandos para 1 envío de campaña.
+{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} Tenga en cuenta que los _rebotes blandos_ difieren de los _aplazamientos_. Si no se entregó correctamente ningún correo electrónico durante este periodo de reintento, Braze enviará un evento de rebote blando por cada intento de envío de campaña. Antes del 25 de febrero de 2025, estos reintentos se contabilizaban como múltiples rebotes blandos para 1 envío de campaña.
 
-Aunque los rebotes blandos no son objeto de seguimiento en los análisis de tu campaña, puedes controlar los rebotes blandos en el [Registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). También puedes excluir a estos usuarios de tus envíos o consultar la cantidad de rebotes blandos de los últimos 30 días con el [filtro de segmento Rebote blando]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced). En el Registro de actividad de mensajes, también puedes ver el motivo de los rebotes blandos y comprender las posibles discrepancias entre los "envíos" y las "entregas" de tus campañas de correo electrónico.
+Aunque los rebotes blandos no se rastrean en los análisis de su campaña, puede supervisar los rebotes blandos en el [Registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). También puede excluir a estos usuarios de sus envíos o consultar la cantidad de rebotes blandos de los últimos 30 días con el [filtro de segmento Rebote blando]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced). En el Registro de actividad de mensajes, también puede ver el motivo de los rebotes blandos y comprender las posibles discrepancias entre los "envíos" y las "entregas" de sus campañas de correo electrónico.
 
 {% endapi %}
 
@@ -846,7 +846,7 @@ Correo electrónico
 {% multi_lang_include analytics/metrics.md metric='Spam' %}
 
 {% alert note %}
-Las reclamaciones por correo no deseado las gestionan directamente los proveedores de servicios de correo electrónico y luego se transmiten a Braze a través de un bucle de retroalimentación. La mayoría de los bucles de respuesta sólo informan de una parte de las quejas reales, por lo que la métrica _del correo no deseado_ suele representar una fracción del total real. Sólo los proveedores de servicios de correo electrónico pueden ver el volumen real de reclamaciones por correo no deseado, lo que significa que _el Spam_ debe considerarse una métrica indicativa, no exhaustiva.
+Las reclamaciones por correo no deseado las gestionan directamente los proveedores de servicios de correo electrónico y luego se transmiten a Braze a través de un bucle de retroalimentación. La mayoría de los bucles de retroalimentación solo informan de una parte de las quejas reales, por lo que la métrica de _correo no deseado_ suele representar una fracción del total real. Solo los proveedores de servicios de correo electrónico pueden ver el volumen real de reclamaciones por correo no deseado, lo que significa que _Correo no deseado_ debe considerarse una métrica indicativa, no exhaustiva.
 {% endalert %}
 
 {::nomarkdown}
@@ -854,7 +854,7 @@ Las reclamaciones por correo no deseado las gestionan directamente los proveedor
     Cálculo:
     <ul>
         <li><i>Correo no deseado</i>: Recuento</li>
-        <li><i>% de correo no deseado</i> o <i>% de tasa de correo no deseado</i>: (Marcado como correo no deseado) / (Envía)</li>
+        <li><i>% de correo no deseado</i> o <i>% de tasa de correo no deseado</i>: (Marcado como correo no deseado) / (Envíos)</li>
     </ul>
 </span>
 {:/}
@@ -922,14 +922,14 @@ Correo electrónico, tarjetas de contenido, SMS/MMS, LINE
 Tarjetas de contenido
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Total Dismissals' %} Si un usuario recibe dos tarjetas diferentes de la misma campaña y descarta ambas, este recuento aumentará en dos. La reelegibilidad te permite incrementar _el Total de Descartes_ una vez cada vez que un usuario recibe una tarjeta; cada tarjeta es un mensaje diferente.
+{% multi_lang_include analytics/metrics.md metric='Total Dismissals' %} Si un usuario recibe dos tarjetas diferentes de la misma campaña y descarta ambas, este recuento aumentará en dos. La reelegibilidad permite incrementar el _Total de descartes_ una vez cada vez que un usuario recibe una tarjeta; cada tarjeta es un mensaje diferente.
 
 {::nomarkdown}
 <span class="calculation-line">
     Cálculo:
     <ul>
-        <li><i>Total de despidos:</i> Recuento</li>
-        <li><i>Tasa total de despidos:</i> Despidos totales / Impresiones totales</li>
+        <li><i>Total de descartes:</i> Recuento</li>
+        <li><i>Tasa total de descartes:</i> Total de descartes / Impresiones totales</li>
     </ul>
 </span>
 {:/}
@@ -941,7 +941,7 @@ Tarjetas de contenido
 ### Impresiones totales
 
 {% apitags %}
-Mensaje en la aplicación, tarjetas de contenido
+Mensaje dentro de la aplicación, tarjetas de contenido
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Impressions' %} Este número es la suma del número de eventos de impresión que Braze recibe de los SDK.
@@ -949,7 +949,7 @@ Mensaje en la aplicación, tarjetas de contenido
 |Canal|Información adicional|
 |-------|-----------------------|
 |Tarjetas de contenido|El recuento total de impresiones registradas para una determinada tarjeta de contenido. Esto puede incrementarse varias veces para el mismo usuario.|
-|Mensajes dentro de la aplicación|Si hay varios dispositivos y la reelegibilidad está desactivada, el usuario sólo debería ver el mensaje dentro de la aplicación una vez. Aunque el usuario utilice varios dispositivos, sólo lo verá en el primer dispositivo al que se dirija. Esto supone que el perfil tiene dispositivos consolidados y que un usuario tiene un ID de usuario con el que ha iniciado sesión en todos los dispositivos. Si la reelegibilidad está activada, se registra una impresión cada vez que el usuario ve el mensaje dentro de la aplicación.|
+|Mensajes dentro de la aplicación|Si hay varios dispositivos y la reelegibilidad está desactivada, el usuario solo debería ver el mensaje dentro de la aplicación una vez. Aunque el usuario utilice varios dispositivos, solo lo verá en el primer dispositivo al que se dirija. Esto supone que el perfil tiene dispositivos consolidados y que un usuario tiene un ID de usuario con el que ha iniciado sesión en todos los dispositivos. Si la reelegibilidad está activada, se registra una impresión cada vez que el usuario ve el mensaje dentro de la aplicación.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 <span class="calculation-line">Cálculo: Recuento</span>
@@ -969,7 +969,7 @@ Correo electrónico, push de iOS, push de Android, notificación push web, LINE
 |Canal|Información adicional|
 |-------|-----------------------|
 |LINE|Seguimiento una vez alcanzado un umbral mínimo de 20 mensajes diarios.|
-|Correos electrónicos AMP|El total se abre para las versiones HTML y texto sin formato.|
+|Correos electrónicos AMP|El total de aperturas para las versiones HTML y texto sin formato.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
@@ -977,9 +977,9 @@ Correo electrónico, push de iOS, push de Android, notificación push web, LINE
     Cálculo:
     <ul>
         <li><b><i>Aperturas totales</i> del correo electrónico:</b> Recuento</li>
-        <li><b><i>Tasa de apertura total del</i> correo electrónico:</b> (Aperturas) / (Entregas)</li>
-        <li><b>Web push <i>Total Aperturas</i>:</b> Recuento de <i>Direct Opens</i> </li>
-        <li><b>Web push <i>Tarifa abierta total</i>:</b> (Aperturas totales) / (Entregas)</li>
+        <li><b><i>Tasa de apertura total</i> del correo electrónico:</b> (Aperturas) / (Entregas)</li>
+        <li><b>Web push <i>Total de aperturas</i>:</b> Recuento de <i>Direct Opens</i></li>
+        <li><b>Web push <i>Tasa de apertura total</i>:</b> (Aperturas totales) / (Entregas)</li>
         <li><b>iOS, Android y Kindle push <i>Aperturas totales</i>:</b> (Direct Opens) + (Influenced Opens)</li>
         <li><b>iOS, Android y Kindle push <i>Tasa total de apertura</i>:</b> (Aperturas totales) / (Entregas)</li>
     </ul>
@@ -996,7 +996,7 @@ Correo electrónico, push de iOS, push de Android, notificación push web, LINE
 Tarjetas de contenido, correo electrónico, mensajes dentro de la aplicación, push web, push de iOS, push de Android, webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Total Revenue' %} Esta métrica sólo está disponible en los Informes de Comparación de Campañas a través del <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Generador de informes</a>
+{% multi_lang_include analytics/metrics.md metric='Total Revenue' %} Esta métrica solo está disponible en los Informes de comparación de campañas a través del <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>generador de informes</a>.
 
 {% endapi %}
 
@@ -1005,7 +1005,7 @@ Tarjetas de contenido, correo electrónico, mensajes dentro de la aplicación, p
 ### Clics únicos
 
 {% apitags %}
-Correo electrónico, Tarjetas de contenido, LINE
+Correo electrónico, tarjetas de contenido, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Clicks' %}
@@ -1024,7 +1024,7 @@ Esto incluye los clics en los enlaces de cancelación de suscripción proporcion
     <ul>
         <li><i>Clics únicos</i>: Recuento</li>
         <li><b>Tarjetas de contenido</b> <i>% de clics únicos</i> o <i>tasa de clics únicos</i>: (Clics únicos) / (Impresiones únicas)</li>
-        <li><i>Porcentaje de clics únicos</i> <b>por correo electrónico</b> o <i>tasa de clics únicos</i>: (Clics únicos) / (Entregas)</li>
+        <li><b>Correo electrónico</b> <i>% de clics únicos</i> o <i>tasa de clics únicos</i>: (Clics únicos) / (Entregas)</li>
     </ul>
 </span>
 {:/}
@@ -1050,7 +1050,7 @@ Tarjetas de contenido
 ### Impresiones únicas
 
 {% apitags %}
-Mensaje en la aplicación, tarjetas de contenido
+Mensaje dentro de la aplicación, tarjetas de contenido
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Impressions' %} 
@@ -1085,8 +1085,8 @@ Correo electrónico, LINE
 <span class="calculation-line">
     Cálculo:
     <ul>
-        <li><i>Unique Opens</i>: Recuento</li>
-        <li><i>Unique Opens %</i> o <i>tarifa abierta única</i>: (Unique Opens) / (Entregas)</li>
+        <li><i>Aperturas únicas</i>: Recuento</li>
+        <li><i>% de aperturas únicas</i> o <i>tasa de aperturas únicas</i>: (Aperturas únicas) / (Entregas)</li>
     </ul>
 </span>
 {:/}
@@ -1103,7 +1103,7 @@ Todo
 
 {% multi_lang_include analytics/metrics.md metric='Unique Recipients' %}
 
-Dado que un espectador puede ser un destinatario único cada día, debes esperar que sea superior a <i>Impresiones únicas</i>. Para las tarjetas de contenido, cada tarjeta de contenido sólo puede recibirse una vez, por lo que ver la misma tarjeta de contenido una segunda vez, independientemente del día, no incrementará este recuento.<br><br>Este número se recibe de Braze y se basa en la dirección `user_id`. Los destinatarios únicos se cuentan a nivel de campaña o paso en Canvas, no a nivel de <a href='https://braze.com/docs/api/identifier_types/#send-identifier'>identificador de envío</a>.
+Dado que un espectador puede ser un destinatario único cada día, es de esperar que este valor sea superior a <i>Impresiones únicas</i>. Para las tarjetas de contenido, cada tarjeta de contenido solo puede recibirse una vez, por lo que ver la misma tarjeta de contenido una segunda vez, independientemente del día, no incrementará este recuento.<br><br>Este número se recibe de Braze y se basa en el `user_id`. Los destinatarios únicos se cuentan a nivel de campaña o paso en Canvas, no a nivel de <a href='https://braze.com/docs/api/identifier_types/#send-identifier'>identificador de envío</a>.
 
 <span class="calculation-line">Cálculo: Recuento</span>
 
@@ -1124,7 +1124,7 @@ Correo electrónico
     Cálculo:
     <ul>
         <li><i>Cancelar suscripción</i> o <i>darse de baja</i>: Recuento</li>
-        <li><i>Suscriptores %</i> o <i>tasa de cancelación de suscripciones</i>: (Cancelaciones de suscripción) / (Entregas)</li>
+        <li><i>% de cancelaciones de suscripción</i> o <i>tasa de cancelación de suscripciones</i>: (Cancelaciones de suscripción) / (Entregas)</li>
     </ul>
 </span>
 {:/}
@@ -1141,7 +1141,7 @@ Correo electrónico
 
 {% multi_lang_include analytics/metrics.md metric='Unsubscribes' %}
 
-<span class="calculation-line">Cálculo: (Cancelaciones) / (Entregas)</span>
+<span class="calculation-line">Cálculo: (Cancelaciones de suscripción) / (Entregas)</span>
 
 {% endapi %}
 
