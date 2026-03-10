@@ -21,7 +21,7 @@ description: "Este artigo de referência aborda o uso de atributos personalizado
 - Os objetos têm um tamanho máximo de 100 KB.
 - Os nomes das chaves e os valores das strings têm um limite de tamanho de 255 caracteres.
 - Os nomes das chaves não podem conter espaços.
-- Os pontos (`.`) e os cifrões (`$`) não são caracteres suportados em uma carga útil da API se você estiver tentando enviar um atributo personalizado aninhado a um perfil de usuário.
+- Períodos (`.`) e sinais de dólar (`$`) não são caracteres suportados em uma carga útil de API se você estiver tentando enviar um atributo personalizado aninhado para um perfil de usuário.
 - Nem todos os Braze Partners suportam atributos personalizados aninhados. Consulte a [documentação do parceiro]({{site.baseurl}}/partners/home) para confirmar se as integrações com parceiros específicos suportam esse recurso.
 - Os atributos personalizados aninhados não podem ser usados como um filtro ao fazer uma chamada à API do Connected Audience.
 
@@ -230,7 +230,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 Para capturar datas como propriedades do objeto, você deve usar a chave `$time`. No exemplo a seguir, um objeto "Important Dates" é usado para capturar o conjunto de propriedades do objeto, `birthday` e `wedding_anniversary`. O valor para essas datas é um objeto com uma chave `$time`, que não pode ser um valor nulo.
 
 {% alert note %}
-Caso não tenha capturado datas como propriedades do objeto inicialmente, recomendamos reenviar esses dados usando a chave `$time` para todos os usuários. Caso contrário, isso pode resultar em segmentos incompletos ao usar o atributo `$time`. No entanto, se o valor de `$time` em um atributo personalizado aninhado não estiver formatado corretamente, o atributo personalizado aninhado inteiro não será atualizado.
+Caso não tenha capturado datas como propriedades do objeto inicialmente, recomendamos reenviar esses dados usando a chave `$time` para todos os usuários. Caso contrário, isso pode resultar em segmentos incompletos ao usar o atributo `$time`. No entanto, se o valor para `$time` em um atributo personalizado aninhado não estiver formatado corretamente, o atributo personalizado aninhado inteiro não será atualizado.
 {% endalert %}
 
 ```json

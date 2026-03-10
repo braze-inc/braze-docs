@@ -15,7 +15,7 @@ Os eventos de compra são ações de compra realizadas por seus usuários e são
 
 ## Registrando eventos de compra
 
-É possível registrar as compras passando um [objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/) pelo [endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) ou usando uma de nossas bibliotecas SDK listadas abaixo.
+Você pode registrar compras passando um [objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/) pelo [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), ou usando uma de nossas bibliotecas SDK listadas abaixo.
 
 A seguir estão listados métodos em várias plataformas que são usados para registrar compras. Nessas páginas, você também encontrará documentação sobre como adicionar propriedades e quantidades ao seu evento de compra. Você pode segmentar ainda mais seus usuários com base nessas propriedades.
 
@@ -85,7 +85,7 @@ Suponha que você tenha uma propriedade de evento de compra chamada `last_purcha
 
 {% endraw %}
 
-Neste exemplo, a mensagem é personalizada com base na propriedade `last_purchased_product`. Se o último produto que o usuário comprou foi "Tênis de Corrida", ele recebe uma mensagem recomendando shorts de corrida e garrafas de água. Se o último produto tiver sido "Tapete de ioga", eles receberão uma mensagem recomendando blocos e tiras de ioga. Se o `last_purchased_product` for qualquer outra coisa, eles recebem uma mensagem genérica de agradecimento.
+Neste exemplo, a mensagem é personalizada com base na propriedade `last_purchased_product`. Se o último produto que o usuário comprou foi "Tênis de Corrida", ele recebe uma mensagem recomendando shorts de corrida e garrafas de água. Se o último produto foi "Tapete de Yoga", eles recebem uma mensagem recomendando blocos e faixas de yoga. Se o `last_purchased_product` for qualquer outra coisa, eles recebem uma mensagem genérica de agradecimento.
 
 ### Disparar mensagens
 
@@ -175,6 +175,10 @@ Embora Sam tenha dois eventos de compra em seu perfil, na realidade, ele fez ape
 
 Com as propriedades do evento de compra, você pode definir propriedades nas compras que podem ser usadas para qualificar ainda mais as condições de {disparar}, aumentar a personalização no {envio de mensagens} e gerar {análise de dados} mais sofisticadas por meio da exportação de dados brutos. Tipos de valor de propriedade (string, numérico, booleano, data) variam por plataforma e são frequentemente atribuídos como pares chave-valor.
 
+{% alert warning %}
+As seguintes chaves são reservadas e não podem ser usadas como nomes de propriedades de evento de compra: `time`, `product_id`, `quantity`, `event_name`, `price` e `currency`. Usar uma chave reservada no objeto `properties` retornará o erro "Campo 'properties' inválido".
+{% endalert %}
+
 Por exemplo, se você tiver um aplicativo de comércio eletrônico e quiser enviar mensagens a um usuário depois de fazer uma compra, poderá melhorar ainda mais seu público-alvo e permitir uma maior personalização da campanha adicionando uma propriedade de evento de compra de `brand_name`.
 
 **Exemplo de acionamento com base nas propriedades do evento de compra:**
@@ -185,14 +189,14 @@ Consulte o objeto de [propriedades de compra]({{site.baseurl}}/api/objects_filte
 
 ### Segmentação de propriedade de evento
 
-A segmentação de propriedades de eventos permite o direcionamento de usuários com base não apenas em eventos personalizados realizados, mas também nas propriedades associadas a esses eventos. Isso adiciona opções de filtragem adicionais ao segmentar compras e eventos personalizados.
+A segmentação de propriedades de evento permite que você direcione usuários com base não apenas em eventos personalizados realizados, mas também nas propriedades associadas a esses eventos. Isso adiciona opções de filtragem adicionais ao segmentar eventos de compra e eventos personalizados.
 
-![Filtros de segmentação para propriedades de eventos de compra, exibindo opções para filtrar usuários com base em valores específicos de propriedades de eventos de compra, como a filtragem de usuários que compraram um produto com uma determinada propriedade dentro de um período definido.]({% image_buster /assets/img/purchase_event_property.png %}){: style="max-width:80%;margin-left:15px;"}
+![Filtros de segmentação para propriedades de eventos de compra, exibindo opções para filtrar usuários com base em valores específicos de propriedades de eventos de compra, como filtrar usuários que compraram um produto com uma determinada propriedade dentro de um período definido.]({% image_buster /assets/img/purchase_event_property.png %}){: style="max-width:80%;margin-left:15px;"}
 
 Esses filtros de segmentação incluem:
 - Realizou o evento personalizado com a propriedade Y com o valor V X vezes nos últimos Y dias
 - Fez alguma compra com a propriedade Y com valor V X vezes nos últimos Y dias
-- Adiciona segmentação de 1 a 30 dias em todas as compras, eventos e propriedades de compras e eventos
+- Adiciona segmentação de 1 a 30 dias em todas as compras, eventos e propriedades dentro de compras e eventos
 
 Ao contrário das [extensões de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), os segmentos usados são atualizados em tempo real, suportam uma quantidade ilimitada de segmentos, oferecem um histórico de até 30 dias e geram pontos de dados. Devido à cobrança adicional de ponto de dados, você deve entrar em contato com seu gerente de sucesso do cliente da Braze para ativar as propriedades de eventos para seus eventos personalizados.
 
@@ -210,11 +214,11 @@ Para registrar compras no nível do pedido em vez de no nível do produto, use o
 
 Na Braze, oferecemos algumas convenções gerais de nomenclatura para o objeto de compra `product_id`. Ao escolher `product_id`, a Braze sugere o uso de nomes simplistas, como o nome do produto ou a categoria do produto (em vez de SKUs), com a intenção de agrupar todos os itens registrados por esse `product_id`.
 
-Isso torna os produtos fáceis de identificar para segmentação e disparo. 
+Isso torna os produtos fáceis de identificar para segmentação e acionamento. 
 
 ## Eventos de compra em lista de bloqueio
 
-Ocasionalmente, é possível identificar eventos de compra que registram muitos pontos de dados, não são mais úteis para sua estratégia de marketing ou foram registrados por engano. Para impedir que esses dados sejam enviados para a Braze, você pode colocar o objeto de dados personalizados na lista de bloqueio enquanto sua equipe de engenharia trabalha para removê-lo do backend do seu app ou site.
+Você pode ocasionalmente identificar eventos de compra que registram muitos pontos de dados, não são mais úteis para sua estratégia de marketing ou foram registrados por engano. Para impedir que esses dados sejam enviados para a Braze, você pode colocar o objeto de dados personalizados na lista de bloqueio enquanto sua equipe de engenharia trabalha para removê-lo do backend do seu app ou site.
 
 No dashboard da Braze, você pode gerenciar a lista de bloqueio em **Configurações de Dados** > **Produtos**. Confira [Gerenciamento de dados personalizados]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) para saber mais.
 

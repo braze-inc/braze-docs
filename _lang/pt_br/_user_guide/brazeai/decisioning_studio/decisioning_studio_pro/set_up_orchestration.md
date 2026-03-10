@@ -22,7 +22,7 @@ O Decisioning Studio Pro suporta as seguintes Plataformas de Engajamento com Cli
 | **Outros CEPs** | Personalizado (arquivo de recomendação) | Alta |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-Selecione seu CEP abaixo para começar com a configuração da integração.
+Selecione seu CEP abaixo para começar a configuração da integração.
 
 {% tabs %}
 {% tab Braze %}
@@ -33,7 +33,7 @@ Siga estas etapas para integrar um agente do Decisioning Studio do Braze com as 
 
 ### Etapa 1: Crie uma chave de API
 
-Acessar **Configurações** > **Chaves de API**, em seguida, crie uma nova chave com as seguintes permissões:
+Acessar **Configurações** > **Chaves de API**, então crie uma nova chave com as seguintes permissões:
 
 {% multi_lang_include decisioning_studio/api_key_permissions.md %}
 
@@ -53,9 +53,9 @@ Garantir que todas as campanhas acionadas por API permitam que os usuários se t
 Embora o agente do Estúdio de Decisão nunca envie a mesma campanha mais de uma vez por dia, você vai querer ter a capacidade de enviar as mesmas campanhas várias vezes em um dia para fins de teste.
 {% endalert %}
 
-### Etapa 4: Adicionar marcadores dinâmicos
+### Etapa 4: Adicionar espaços reservados dinâmicos
 
-Esses servem como marcadores dinâmicos para decisões que o agente do Estúdio de Decisão está otimizando.
+Esses servem como espaços reservados dinâmicos para decisões que o agente do Estúdio de Decisão está otimizando.
 
 #### Exemplo 1: Campanha de e-mail
 
@@ -94,11 +94,11 @@ Resultando na seguinte mensagem:
 {% endtab %}
 {% tab Salesforce Marketing Cloud %}
 
-## Configurando a integração do SFMC
+## Configurando a integração com SFMC
 
-O Decisioning Studio Pro suporta integração nativa com o Salesforce Marketing Cloud. O Decisioning Studio dispara eventos da API em uma jornada com os dados necessários para preencher elementos dinâmicos.
+O Estúdio de Decisão Pro suporta integração nativa com o Salesforce Marketing Cloud. O Estúdio de Decisão aciona eventos de API em uma jornada com os dados necessários para preencher elementos dinâmicos.
 
-A configuração da orquestração para o SFMC é semelhante tanto para o Decisioning Studio Pro quanto para o Decisioning Studio Go. Para etapas detalhadas para configurar a integração do SFMC, siga as [instruções do SFMC]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/) na documentação do Decisioning Studio Go.
+A configuração de orquestração para o SFMC é semelhante tanto para o Decisioning Studio Pro quanto para o Decisioning Studio Go. Para etapas detalhadas para configurar a integração do SFMC, siga as [instruções do SFMC]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/) na documentação do Decisioning Studio Go.
 
 {% endtab %}
 {% tab Klaviyo %}
@@ -107,7 +107,7 @@ A configuração da orquestração para o SFMC é semelhante tanto para o Decisi
 
 O Decisioning Studio Pro suporta integração nativa com o Klaviyo. O Decisioning Studio dispara eventos da API em um fluxo com os dados necessários para preencher elementos dinâmicos.
 
-A configuração da orquestração para o Klaviyo é semelhante tanto para o Decisioning Studio Pro quanto para o Decisioning Studio Go. Para etapas detalhadas para configurar a integração do Klaviyo, siga as [instruções do Klaviyo]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/) na documentação do Decisioning Studio Go.
+A configuração de orquestração para o Klaviyo é semelhante tanto para o Decisioning Studio Pro quanto para o Decisioning Studio Go. Para etapas detalhadas para configurar a integração do Klaviyo, siga as [instruções do Klaviyo]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/) na documentação do Decisioning Studio Go.
 
 {% endtab %}
 {% tab Other CEPs %}

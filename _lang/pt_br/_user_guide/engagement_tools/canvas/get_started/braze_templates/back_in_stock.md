@@ -34,7 +34,7 @@ Vamos ajustar os detalhes do Canva para refletir nosso objetivo.
 
 1. Selecione **Editar** ao lado do nome do modelo.
 
-![O título e a descrição atuais do Canva.]({% image_buster /assets/img/canvas_templates/back_in_stock_old_name_description.png %}){: style="max-width:45%;"}
+![O título e a descrição atuais do canva.]({% image_buster /assets/img/canvas_templates/back_in_stock_old_name_description.png %}){: style="max-width:45%;"}
 
 {:start="2"}
 2\. Atualize o nome do Canvas para especificar que o Canvas é para direcionamento de usuários quando nosso produto Classic Straight Leg estiver de volta ao estoque.
@@ -76,7 +76,7 @@ Definiremos nosso público-alvo como os usuários que, em nossa opinião, têm m
 {: start="3"}
 3\. Ajuste os controles de entrada para permitir que os usuários entrem novamente no Canvas após a duração máxima do Canvas, para evitar a probabilidade de os usuários dispararem a mesma etapa simultaneamente.
 
-![Seção "Controles de entrada" com uma caixa de seleção para permitir que os usuários entrem novamente nesse Canvas com uma duração máxima do Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_6.png %})
+![Seção "Controles de Entrada" com uma caixa de seleção para permitir que os usuários reentrem neste canva com uma duração máxima do canva.]({% image_buster /assets/img/canvas_templates/back_in_stock_6.png %})
 
 {: start="4"}
 4\. Ajuste os critérios de saída para remover os usuários que realizaram o evento personalizado de desfavorecer o jeans Classic Straight Leg.
@@ -100,9 +100,9 @@ Você pode usar as [propriedades de entrada do Canvas]({{site.baseurl}}/user_gui
 Começaremos nossa personalização percorrendo cada etapa do Message para atualizar o conteúdo.
 
 1. Substitua `!!YOURCATALOGHERE!!` pelo nome do nosso catálogo (“Straight_Leg_Pants”).
-2. Substitua `[0]` pelo número de índice do jeans Classic Straight Leg, que é "9", porque o jeans é o décimo item na matriz `items` do nosso catálogo. (As matrizes são indexadas a zero no Liquid, portanto, o primeiro item é `0` e não `1`).
+2. Substitua `[0]` pelo número do índice dos jeans Classic Straight Leg, que é "9" porque os jeans são o décimo item no array `items` do nosso catálogo. (As matrizes são indexadas a zero no Liquid, portanto, o primeiro item é `0` e não `1`).
 3. Repita as etapas 1 e 2 para todas as etapas restantes do Message, inclusive:
-    - A mensagem "In-Product Msg & E-mail" que é enviada após a postergação de um dia
+    - A mensagem "In-Product Msg & e-mail" que é enviada após a postergação de um dia.
     - As mensagens "Push+Email Alert" que são enviadas aos usuários que não fizeram uma compra
 4. Atualize a etapa Jornadas de ação selecionando o grupo de ação **Comprar**. Em seguida, selecione **Fazer uma compra específica** e escolha o jeans Classic Straight Leg como produto.
 

@@ -1,20 +1,20 @@
 ---
 nav_title: Código Liquid
-article_title: Gerar código Liquid com o BrazeAI
+article_title: Gerar código Liquid com BrazeAI
 description: "Este artigo abordará como o IA Liquid Assistant funciona e como você pode usá-lo para gerar snippets do Liquid para o envio de mensagens."
 page_type: reference
 page_order: 0.0
 ---
 
-# Gerar código Liquid com o <sup>BrazeAITM</sup>
+# Gerar código Liquid com BrazeAI
 
 > O Liquid Assistant do <sup>BrazeAITM</sup> é um assistente de bate-papo desenvolvido pelo <sup>BrazeAITM</sup> que ajuda a gerar o Liquid de que você precisa para personalizar o conteúdo das mensagens.
 
-## Sobre o assistente líquido <sup>BrazeAITM</sup> 
+## Sobre o assistente Liquid BrazeAI<sup>TM</sup>
 
 O Liquid Assistant da <sup>BrazeAI™</sup> foi projetado para ajudar na formulação de um código Liquid eficaz e adaptado às suas necessidades de marketing. Treinada na sintaxe do Liquid e em como os profissionais de marketing utilizam o Liquid em suas mensagens, nossa IA entende as nuances da elaboração de conteúdo personalizado.
 
-Além disso, ao fornecer ao Liquid Assistant do <sup>BrazeAITM</sup> seus nomes de atributos personalizados (como “favourite_color”) ) e tipos de dados (como booleano e string), o Liquid Assistant do <sup>BrazeAITM</sup> garante que suas mensagens sejam direcionadas com precisão e alinhadas às suas metas. Além disso, se você criar diretrizes da marca, o Liquid Assistant da <sup>BrazeAITM</sup> poderá usar as diretrizes da marca para personalizar melhor os resultados gerados e personalizar o conteúdo de acordo com a voz da nossa própria marca. As diretrizes da marca que você criar serão usadas apenas para personalizar o conteúdo para seu próprio uso.
+Além disso, ao fornecer ao Assistente Liquid BrazeAI<sup>TM</sup> os nomes dos seus atributos personalizados (como “favourite_color”)) e tipos de dados (como booleano e string), nosso Assistente Liquid BrazeAI<sup>TM</sup> garante que suas mensagens sejam precisamente direcionadas e alinhadas com seus objetivos. Além disso, se você criar diretrizes da marca, o Liquid Assistant da <sup>BrazeAITM</sup> poderá usar as diretrizes da marca para personalizar melhor os resultados gerados e personalizar o conteúdo de acordo com a voz da nossa própria marca. As diretrizes da marca que você criar serão usadas apenas para personalizar o conteúdo para seu próprio uso.
 
 ## Canais suportados
 
@@ -25,7 +25,7 @@ Você pode usar o Liquid Assistant do <sup>BrazeAITM</sup> ao criar:
 - Canvas
 
 {% alert note %}
-O assistente trabalha com mensagens de e-mail e não com modelos. Ele funciona melhor em mensagens de e-mail que já foram criadas.
+O assistente funciona em mensagens de e-mail e não em templates. Funciona melhor em mensagens de e-mail que já estão construídas.
 {% endalert %}
 
 ## Geração de código Liquid
@@ -34,7 +34,7 @@ Para iniciar o Liquid Assistant da <sup>BrazeAI™</sup>, selecione o ícone do 
 
 ![Criador de mensagens com o assistente de IA.]({% image_buster /assets/img/ai_liquid/ai_assistant_icon.png %}){: style="max-width:50%;"}
 
-Você pode escolher um dos prompts incluídos ou digitar o seu próprio na caixa de texto.
+Você pode escolher um dos prompts incluídos ou inserir o seu próprio na caixa de texto.
 
 {% tabs local %}
 {% tab use app activity %}
@@ -68,21 +68,21 @@ Para gerar seu código Liquid, selecione **Atualizar criador**.
  
 Você pode gerar outra mensagem usando o mesmo prompt, selecionando **Regenerate**. Para remover a mensagem e reverter para a anterior, selecione **Undo update (Desfazer atualização**).
 
-## Atribuições do Liquid {#supported-attributes}
+## Atributos Liquid {#supported-attributes}
 
-As seguintes atribuições estão atualmente em versão beta para o Liquid Assistant do <sup>BrazeAITM</sup>:
+Os seguintes atributos estão atualmente em beta para o Assistente Liquid BrazeAI<sup>TM</sup>:
 
 | Critério | Tipo de conhecimento | 
 | - | - | 
-| Liquid (incluindo `for` loops, `if` declarações, matemática e outros) | Codificação |
-| Atribuições de usuário padrão e predefinidas | Atributos |
-| Atributos personalizados que tenham qualquer um desses tipos de dados: {::nomarkdown}<ul><li>Booleanos</li><li>Números</li><li>Strings</li><li>Matrizes</li><li>Horário</li></ul>{:/} | Atributos |
+| Liquid (incluindo loops `for`, declarações `if`, matemática e outros) | Codificação |
+| Atributos de usuário padrão e padrão | Atributos |
+| Atributos personalizados que têm qualquer um desses tipos de dados: {::nomarkdown}<ul><li>Booleanos</li><li>Números</li><li>Strings</li><li>Matrizes</li><li>Horário</li></ul>{:/} | Atributos |
 | Conteúdo conectado | Codificação |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ## Melhores práticas
 
-Para obter ajuda para escrever prompts eficazes para o Liquid Assistant do <sup>BrazeAITM</sup>, confira nossas práticas recomendadas:
+Para ajuda na redação de prompts eficazes para o Assistente Liquid BrazeAI<sup>TM</sup>, confira nossas melhores práticas:
 
 ### Usar linguagem natural
 
@@ -128,7 +128,7 @@ Aqui estão alguns exemplos para ajudar você a começar:
 - Ajude-me a escrever uma mensagem para incentivar os usuários a voltarem e finalizarem a compra se tiverem itens restantes no carrinho.
 - Escreva Liquid para personalizar uma mensagem com base no país de um cliente. Quero preencher a mensagem com o nome do país. Se não tivermos nenhum deles, sugira que ele clique em um link para atualizar seu perfil.
 - Como posso personalizar uma mensagem de boas-vindas com o nome de um usuário e escrever um texto diferente com base no gênero do usuário?
-- Escreva o Liquid para exibir mensagens diferentes com base em um atributo personalizado, “CUSTOM_ATTRIBUTE_NAME“ e seu valor. Há seis opções diferentes que eu poderia enviar. Se não houver nenhum valor do atributo personalizado, quero enviar uma mensagem de espaço reservado.
+- Escreva Liquid para exibir mensagens diferentes com base em um atributo personalizado, “CUSTOM_ATTRIBUTE_NAME“ e seu valor. Há seis opções diferentes que eu poderia enviar. Se não houver nenhum valor do atributo personalizado, quero enviar uma mensagem de espaço reservado.
 {% endtab %}
 
 {% tab handling outliers %}
