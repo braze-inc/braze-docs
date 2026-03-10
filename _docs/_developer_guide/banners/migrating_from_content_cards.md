@@ -392,7 +392,7 @@ Both Content Cards and Banners automatically track analytics when using their de
 ```javascript
 // Manual impression logging required for custom implementations
 cards.forEach(card => {
-    braze.logContentCardImpressions([card]);
+  braze.logContentCardImpressions([card]);
 });
 
 // Manual click logging required for custom implementations
@@ -403,7 +403,7 @@ card.logClick();
 ```kotlin
 // Manual impression logging required for custom implementations
 cards.forEach { card ->
-    card.logImpression()
+  card.logImpression()
 }
 
 // Manual click logging required for custom implementations
@@ -414,7 +414,7 @@ card.logClick()
 ```swift
 // Manual impression logging required for custom implementations
 for card in cards {
-    card.context?.logImpression()
+  card.context?.logImpression()
 }
 
 // Manual click logging required for custom implementations
@@ -425,7 +425,7 @@ card.context?.logClick()
 ```javascript
 // Manual impression logging required for custom implementations
 cards.forEach(card => {
-    Braze.logContentCardImpression(card.id);
+  Braze.logContentCardImpression(card.id);
 });
 
 // Manual click logging required for custom implementations
@@ -436,7 +436,7 @@ Braze.logContentCardClicked(card.id);
 ```dart
 // Manual impression logging required for custom implementations
 for (final card in cards) {
-    braze.logContentCardImpression(card);
+  braze.logContentCardImpression(card);
 }
 
 // Manual click logging required for custom implementations
