@@ -9,7 +9,7 @@ Tool:
   - Dashboard
 
 guide_top_header: "BrazeAI<sup>TM</sup>"
-guide_top_text: "BrazeAI<sup>TM</sup> bietet eine Sammlung von leicht zugänglichen, benutzerfreundlichen Tools, die die Einstiegshürden für Kreativität, Personalisierung und Optimierung Ihrer Engagement-Strategie senken. Mit den Funktionen von <sup>BrazeAITM</sup> haben Sie einen vertrauenswürdigen Berater, der Ihnen hilft, Ihre Kreativität zu lenken, bessere Entscheidungen zu treffen und das Benutzererlebnis für Ihre Kund:innen zu optimieren."
+guide_top_text: "BrazeAI<sup>TM</sup> bietet eine Sammlung von leicht zugänglichen, benutzerfreundlichen Tools, die die Einstiegshürden für Kreativität, Personalisierung und Optimierung Ihrer Engagement-Strategie senken. Mit den Funktionen von BrazeAI<sup>TM</sup> haben Sie einen vertrauenswürdigen Berater, der Ihnen hilft, Ihre Kreativität zu lenken, bessere Entscheidungen zu treffen und das Benutzererlebnis für Ihre Kund:innen zu optimieren."
 
 guide_featured_title: "Features"
 guide_featured_list:

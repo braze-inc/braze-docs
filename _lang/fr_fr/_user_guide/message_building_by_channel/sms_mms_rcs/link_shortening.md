@@ -30,7 +30,7 @@ Les liens sont raccourcis à l'aide de notre domaine court partagé (`brz.ai`). 
 Toutes les URL statiques commençant par`http://`ou`https://`sont raccourcies. Les URL raccourcies statiques sont valables pendant un an à compter de leur date de création. Les URL raccourcies contenant une personnalisation Liquid sont valables pendant deux mois.
 
 {% alert note %}
-Si vous prévoyez d'utiliser le [filtre de canal intelligent]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) <sup>BrazeAITM</sup> et que vous souhaitez que les canaux SMS et RCS soient sélectionnables, activez le raccourcissement de lien avec suivi avancé.
+Si vous prévoyez d'utiliser le [filtre de canal intelligent]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) BrazeAI<sup>TM</sup> et que vous souhaitez que les canaux SMS et RCS soient sélectionnables, activez le raccourcissement de lien avec suivi avancé.
 {% endalert %}
 
 ## Utilisation du raccourcissement des liens

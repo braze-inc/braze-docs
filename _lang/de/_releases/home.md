@@ -360,7 +360,7 @@ Sie können Ihren [Braze Agent]({{site.baseurl}}/user_guide/brazeai/agents/creat
 - Strukturierung der Ausgabe eines Agenten durch Angabe des [Ausgabeformats]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#output-format).
 - Justieren Sie die [Temperatur]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#temperature) für den Grad der Abweichung für die Leistung Ihres Agenten.
 
-### ChatGPT Modelle mit <sup>BrazeAITM</sup> Operator
+### ChatGPT Modelle mit BrazeAI<sup>TM</sup> Operator
 
 {% multi_lang_include release_type.md release="Beta" %}
 

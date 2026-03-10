@@ -73,7 +73,7 @@ Pour des ressources supplémentaires, voir les [spécifications de l'image et du
 
 Les vidéos téléchargées dans la bibliothèque multimédia ne peuvent être utilisées que dans les messages WhatsApp. Pour plus d'informations, veuillez vous référer à [la section Création d'un message WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
 
-## Générer des images avec <sup>BrazeAITM</sup> {#generate-ai}
+## Générer des images avec BrazeAI<sup>TM</sup> {#generate-ai}
 
 {% multi_lang_include brazeai/generative_ai/about_images.md %}
 

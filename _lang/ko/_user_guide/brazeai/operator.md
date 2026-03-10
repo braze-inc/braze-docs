@@ -4,7 +4,7 @@ article_title: BrazeAI 오퍼레이터
 page_order: 7
 alias: /operator/
 toc_headers: h2
-description: "Braze 대시보드에 구축된 AI 기반 어시스턴트인 BrazeAI Operator<sup>™의</sup> 기능과 모범 사례를 포함한 접근 및 사용 방법을 알아보세요."
+description: "Braze 대시보드에 구축된 AI 기반 어시스턴트인 BrazeAI Operator<sup>TM</sup>의 기능과 모범 사례를 포함한 접근 및 사용 방법을 알아보세요."
 ---
 
 # BrazeAI 오퍼레이터
@@ -15,7 +15,7 @@ description: "Braze 대시보드에 구축된 AI 기반 어시스턴트인 Braze
 
 Braze 대시보드의 모든 페이지에서 운영자를 열 수 있습니다.  
 
-1. 고객 프로필 옆에 있는 **BrazeAI Operator<sup>™를</sup>** 선택하세요.
+1. 고객 프로필 옆에 있는 **BrazeAI Operator<sup>TM</sup>를** 선택하세요.
 
 ![고객 프로필 옆의 BrazeAI Operator 아이콘.]({% image_buster /assets/img/operator/operator_icon.png %})
 
@@ -99,7 +99,7 @@ AI 운영자는 현재 OpenAI의 제로 데이터 보존 정책에 부합하지 
 
 ### 모델 제공자를 하위 처리자 또는 제3자 제공자로 지정
 
-Braze 서비스("Braze 제공 LLM")를 통해 Braze가 제공하는 LLM 공급자와의 통합을 사용할 경우, 해당 Braze 제공 LLM의 공급자는 귀하와 Braze 간의 데이터 처리 부속서(DPA) 조건에 따라 Braze의 하위 처리자로서 역할을 수행합니다. BrazeAI Operator™<sup>는</sup> OpenAI와 통합됩니다.
+Braze 서비스("Braze 제공 LLM")를 통해 Braze가 제공하는 LLM 공급자와의 통합을 사용할 경우, 해당 Braze 제공 LLM의 공급자는 귀하와 Braze 간의 데이터 처리 부속서(DPA) 조건에 따라 Braze의 하위 처리자로서 역할을 수행합니다. BrazeAI Operator<sup>TM</sup>는 OpenAI와 통합됩니다.
 
 ### OpenAI에서 데이터가 어떻게 사용되는가
 

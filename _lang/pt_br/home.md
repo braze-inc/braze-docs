@@ -74,7 +74,7 @@ O Braze lançou um novo [centro de dados]({{site.baseurl}}/user_guide/data/data_
 
 O [Painel de Diagnósticos de Mensagens]({{site.baseurl}}/user_guide/analytics/dashboard/diagnostics_dashboard) fornece uma visão geral dos resultados do envio de mensagens, permitindo que você identifique tendências e diagnostique problemas potenciais na sua configuração de mensagens. Este painel pode ajudá-lo a entender por que mensagens de suas campanhas ou Canvases podem não ter sido enviadas como esperado.
 
-### <sup>BrazeAI™</sup>
+### BrazeAI<sup>TM</sup>
 
 #### Agentes Braze no Console de Agentes
 
@@ -202,7 +202,7 @@ As seguintes atualizações do SDK foram lançadas. As atualizações de última
 
 ## lançamento de 5 de fevereiro de 2026
 
-### <sup>BrazeAI™</sup>
+### BrazeAI<sup>TM</sup>
 
 #### Otimizador de conteúdo
 

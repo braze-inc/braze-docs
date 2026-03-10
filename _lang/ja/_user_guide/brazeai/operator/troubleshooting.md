@@ -2,12 +2,12 @@
 nav_title: トラブルシューティング
 article_title: BrazeAI オペレーターのトラブルシューティング
 page_order: 4
-description: "BrazeAI Operator<sup>™</sup>のよくある問題とソリューション。"
+description: "BrazeAI Operator<sup>TM</sup>のよくある問題とソリューション。"
 ---
 
 # BrazeAI オペレーターのトラブルシューティング
 
-> BrazeAI Operator<sup>™</sup>のよくある問題とソリューション。
+> BrazeAI Operator<sup>TM</sup>のよくある問題とソリューション。
 
 ## よくある問題
 
