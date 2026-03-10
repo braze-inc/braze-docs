@@ -22,7 +22,7 @@ description: "This landing page lists the Braze API objects and filters used in 
 - [User alias object]({{site.baseurl}}/api/objects_filters/user_alias_object)
 - [User attribute object]({{site.baseurl}}/api/objects_filters/user_attributes_object)
 - [Schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/)
-- [SCIM API objects and appendix]({{site.baseurl}}/scim_api_appendix/)
+- [Catalog selection object]({{site.baseurl}}/api/objects_filters/catalog_selection_object/)
 
 ### Messaging objects
   - [Android object]({{site.baseurl}}/api/objects_filters/messaging/android_object/)

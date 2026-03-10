@@ -37,7 +37,9 @@ To create a bucket for your app, do the following:
 1. Open the [Amazon S3 console](https://console.aws.amazon.com/s3/) and follow the instructions to **Sign in** or **Create an Account with AWS**. 
 2. After signing in, select **S3** from the **Storage & Content Delivery** category. 
 3. Select **Create Bucket** on the next screen. 
-4. You're prompted to create your bucket and select a region.
+4. When prompted, create your bucket and select an AWS Region.
+
+Braze does not let you choose or configure a region in the dashboard. The AWS Region is fixed by where you create the bucket in the AWS console. The integration sends data to the bucket name you provide, and AWS automatically routes requests to the bucket's region. If your connector tries to connect to a different region than you want (for example, `eu-west-1` instead of `eu-central-1`), create or use an S3 bucket in your desired region in AWS. There is nothing to change on the Braze side.
 
 {% alert note %}
 Currents does not support buckets with [Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html) configured.
@@ -140,9 +142,9 @@ If you're only setting up message archiving, follow the steps in the **Dashboard
 {% tabs %}
 {% tab Braze Currents %}
 
-In Braze, go to **Partner Integrations** > **Data Export**.
+In Braze, go to **Partner Integrations** > **Currents**.
 
-Next, select **Create Current** then **Amazon S3 Data Export**.
+Next, select **Create New Current** then **Amazon S3 Data Export**.
 
 Name your Current. In the **Credentials** section, make sure **AWS Secret Access Key** is selected, then input your S3 access ID, AWS secret access key, and AWS S3 bucket name in the designated fields.
 
@@ -257,8 +259,9 @@ Within the same IAM section of the console, select **Roles** > **Create Role**.
 ![]({{site.baseurl}}/assets/img/create_role_1_list.png)
 
 Retrieve your Braze account ID and external ID from your Braze account:
-- **Currents**: In Braze, go to **Partner Integrations** > **Data Export**. Next, select **Create Current** then **Amazon S3 Data Export**. Here you'll find the identifiers needed to create your role.
-- **Dashboard data export**: In Braze, go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you'll find the identifiers needed to create your role. (Create your roles here if you're only setting up message archiving.)
+
+- **Currents:** In Braze, go to **Partner Integrations** > **Currents**. Next, select **Create New Current** then **Amazon S3 Data Export**. Here you'll find the identifiers needed to create your role.
+- **Dashboard data export:** In Braze, go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you'll find the identifiers needed to create your role. (Create your roles here if you're only setting up message archiving.)
 
 Back on the AWS Console, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID, check the **Require external ID** box, and enter the Braze external ID. Select **Next** when complete.
 
@@ -295,7 +298,7 @@ If you're only setting up message archiving, follow the steps in the **Dashboard
 {% tabs %}
 {% tab Braze Currents %}
 
-In Braze, go to the **Currents** page under **Integrations**. Next, select **Create Current** and select **Amazon S3 Data Export**
+In Braze, go to **Partner Integrations** > **Currents**. Next, select **Create New Current** and select **Amazon S3 Data Export**
 
 ![]({{site.baseurl}}/assets/img/currents-role-arn.png)
 
@@ -338,7 +341,7 @@ Users who have integrated a cloud data storage solution and export APIs, dashboa
 - All dashboard reports and CSV reports are sent to the user's email for download (no storage permissions required) and backed up on Data Storage.
 
 {% alert important %}
-**JSON format requirement**: For JSON exports, Braze uses JSONL (newline-delimited JSON) format, where each line contains a separate JSON object. This format differs from standard JSON, which is a single JSON array or object. Each line in the exported file is a valid JSON object, but the file as a whole is not a single valid JSON document. When processing these files, parse each line individually as a separate JSON object rather than attempting to parse the entire file as a single JSON document.
+**JSON format requirement:** For JSON exports, Braze uses JSONL (newline-delimited JSON) format, where each line contains a separate JSON object. This format differs from standard JSON, which is a single JSON array or object. Each line in the exported file is a valid JSON object, but the file as a whole is not a single valid JSON document. When processing these files, parse each line individually as a separate JSON object rather than attempting to parse the entire file as a single JSON document.
 
 Currents exports use Apache Avro format (`.avro` files), not JSON. This JSON format requirement applies to dashboard data exports and API exports.
 {% endalert %}
