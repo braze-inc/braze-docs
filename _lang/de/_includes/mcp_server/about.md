@@ -13,7 +13,7 @@
 
 ## Informationen zum Braze MCP-Server
 
-Nach der Einrichtung des Braze MCP-Servers können Sie KI-Tools wie Agenten, Assistenten und{% if include.section == "user" %} Chatbots direkt mit Braze verbinden, sodass diese aggregierte Daten wie{{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %} Canvas- und {{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}KampagnenAnalytics, angepasste Attribute, Segmente und mehr lesen können. Der Braze MCP-Server eignet sich hervorragend für:
+Nach [der Einrichtung des Braze MCP-Servers]({% if include.section == "user" %}{{site.baseurl}}/user_guide/brazeai/mcp_server/setup/{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/mcp_server/setup/{% endif %}) können Sie KI-Tools wie Agenten, Assistenten und Chatbots direkt mit Braze verbinden, sodass diese aggregierte Daten wie Canvas- und Kampagnen-Analytics, angepasste Attribute, Segmente und mehr lesen können. Der Braze MCP-Server eignet sich hervorragend für:
 
 - Entwicklung von KI-gestützten Tools, die den Kontext von Braze erfordern.
 - CRM-Ingenieure erstellen mehrstufige Arbeitsabläufe für Agenten.

@@ -1,12 +1,12 @@
 # Funktionen des Braze MCP-Servers
 
-> Der Braze MCP-Server stellt eine Reihe von schreibgeschützten API-Funktionen bereit, die eine Abbildung auf bestimmte Braze REST API-Endpunkte darstellen. MCP-Clients wie Claude und Cursor können diese Funktionen aufrufen, um Daten abzurufen, ohne auf PII zuzugreifen oder Änderungen an Ihrem Workspace vorzunehmen. Weitere allgemeine Informationen finden Sie unter [Braze MCP-Server]{% if include.section == "user" %}.{{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/mcp_server/){% endif %}
+> Der Braze MCP-Server stellt eine Reihe von schreibgeschützten API-Funktionen bereit, die eine Abbildung auf bestimmte Braze REST API-Endpunkte darstellen. MCP-Clients wie Claude und Cursor können diese Funktionen aufrufen, um Daten abzurufen, ohne auf PII zuzugreifen oder Änderungen an Ihrem Workspace vorzunehmen. Weitere allgemeine Informationen finden Sie unter [Braze MCP-Server]({% if include.section == "user" %}{{site.baseurl}}/user_guide/brazeai/mcp_server/{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/mcp_server/{% endif %})
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
 ## Voraussetzungen
 
-Bevor Sie dieses Feature nutzen können, müssen Sie den Braze MCP-Server einrichten{% if include.section == "user" %}.{{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}
+Bevor Sie dieses Feature nutzen können, müssen Sie [den Braze MCP-Server einrichten]({% if include.section == "user" %}{{site.baseurl}}/user_guide/brazeai/mcp_server/setup/{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/mcp_server/setup/{% endif %}).
 
 ## Verfügbare Braze-API-Funktionen
 

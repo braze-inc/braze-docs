@@ -175,7 +175,7 @@ Zum Beispiel:
 
 Gehen Sie auf die Registerkarte **Test** und wählen Sie **Benutzerdefiniert** unter **Vorschau der Nachricht als Benutzer**. Geben Sie ein Datum in das Feld **Benutzerdefiniertes Attribut** ein, um eine Vorschau der Inhaltskarte zu erhalten, die an einen Benutzer gesendet wird, der sich an diesem Datum angemeldet hat. <br><br>
 
-![Ein Beispiel für ein angepasstes Attribut mit dem Namen/assets/img/recs/custom_attributes_test.pngimage_buster'start_date'.]({%%})
+![Ein Beispiel für ein angepasstes Attribut mit dem Namen 'start_date'.]({% image_buster /assets/img/recs/custom_attributes_test.png %})
 {% endtab %}
 
 {% tab using Connected Content %}

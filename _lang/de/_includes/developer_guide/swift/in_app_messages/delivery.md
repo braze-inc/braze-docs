@@ -135,7 +135,7 @@ Da eine Push-Nachricht verwendet wird, um ein vom SDK protokolliertes angepasste
 
 Erstellen Sie eine [Kampagne mit einer stillen Push-Benachrichtigung]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift), die über das vom Server gesendete Event ausgelöst wird. 
 
-![Eine aktionsbasierte Zustellung von In-App-Nachrichten, die an Benutzer zugestellt wird, deren Kundenprofile das angepasste Event/assets/img_archive/iosServerSentPush.pngimage_buster"server_event".]({%%}) enthalten.
+![Eine aktionsbasierte Zustellung von In-App-Nachrichten, die an Benutzer zugestellt wird, deren Kundenprofile das angepasste Event "server_event" enthalten.]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 
 Die Push-Kampagne muss zusätzliche Schlüssel-Wert-Paare (Extras) enthalten, die angeben, dass diese Push-Kampagne gesendet wird, um ein angepasstes SDK-Event zu protokollieren. Dieses Event wird verwendet, um die In-App-Nachricht zu triggern.
 

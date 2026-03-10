@@ -87,7 +87,7 @@ Bitte geben Sie einen Namen und optional eine Beschreibung für Ihren Katalog ei
 Sie können auch [Templates in einem Katalognamen verwenden](#template-catalog-names), um Katalognamen basierend auf Variablen wie Sprache oder Kampagne dynamisch zu generieren.
 {% endalert %}
 
-![Ein Katalog mit dem Namen/assets/img_archive/in_browser_catalog.pngimage_buster"my_catalog".]({%%}){: style="max-width:80%;"}
+![Ein Katalog mit dem Namen "my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"}
 
 Wählen Sie **Prozesskatalog**, um den Katalog zu erstellen.
 
@@ -135,11 +135,11 @@ Der Katalog wird erstellt, wenn man eine CSV-Datei hochlädt. Die Datentypen fü
 Dieser Datentyp kann nicht mehr bearbeitet werden, nachdem Sie Ihren Katalog eingerichtet haben.
 {% endalert %}
 
-![Vier Katalogspaltennamen: „ID“, „title“, „price“,/assets/img_archive/catalog_data_type.pngimage_buster"image_link".]({%    %}){: style="max-width:85%;"}
+![Vier Katalogspaltennamen: „id“, „title“, „price“, „image_link“.]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:85%;"}
 
 Als nächstes benennen wir diesen Katalog"games_catalog"und wählen den Button **„Katalog verarbeiten**“. Dann prüft Braze den Katalog vor der Katalogerstellung auf eventuelle Fehler.
 
-![Ein Katalog mit dem Namen/assets/img_archive/catalog_new_name.pngimage_buster"games_catalog".]({%%}){: style="max-width:85%;"}
+![Ein Katalog mit dem Namen "games_catalog".]({% image_buster /assets/img_archive/catalog_new_name.png %}){: style="max-width:85%;"}
 
 Beachten Sie, dass Sie diesen Namen nicht mehr ändern können, wenn der Katalog bereits erstellt worden ist. Sie können einen Katalog löschen und eine aktualisierte Version unter demselben Katalognamen erneut hochladen.
 
@@ -170,7 +170,7 @@ Bitte geben Sie einen Namen und optional eine Beschreibung für Ihren Katalog ei
 Sie können auch [Templates in einem Katalognamen verwenden](#template-catalog-names), um Katalognamen basierend auf Variablen wie Sprache oder Kampagne dynamisch zu generieren.
 {% endalert %}
 
-![Ein Katalog mit dem Namen/assets/img_archive/in_browser_catalog.pngimage_buster"my_catalog".]({%%}){: style="max-width:80%;"}
+![Ein Katalog mit dem Namen "my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"}
 
 ### Schritt 2: Erstellen Sie Ihren Katalog
 

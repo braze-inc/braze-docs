@@ -1,6 +1,6 @@
 # Banner: Häufig gestellte Fragen
 
-> Hier finden Sie Antworten auf häufig gestellte Fragen zu Bannern in Braze. Weitere allgemeine Informationen finden Sie unter [Über Banner]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners{% endif %})].
+> Hier finden Sie Antworten auf häufig gestellte Fragen zu Bannern in Braze. Weitere allgemeine Informationen finden Sie unter [Über Banner]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners{% endif %}).
 
 ## Wann erscheinen die Banner Updates für Nutzer:innen?
 
@@ -10,7 +10,7 @@ Banner werden bei jedem Aufruf der Aktualisierungsmethode mit den neuesten Daten
 
 In einer einzigen Aktualisierungsanfrage können Sie maximal 10 Platzierungen anfragen. Für jede Anfrage, die Sie stellen, gibt Braze das Banner mit der höchsten Priorität zurück, für das ein Nutzer:innen in Frage kommt. Weitere Anfragen führen zu einer Fehlermeldung.
 
-Weitere Informationen finden Sie unter [Platzierungsanfragen]]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %}).
+Weitere Informationen finden Sie unter [Platzierungsanfragen]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %}).
 
 ## Wie viele Banner Kampagnen können gleichzeitig aktiv sein?
 
@@ -18,7 +18,7 @@ Jeder Workspace kann bis zu 200 aktive Banner-Kampagnen unterstützen. Wenn dies
 
 ## Welcher Banner wird bei Kampagnen, die sich eine Platzierung teilen, zuerst angezeigt?
 
-Wenn sich ein Nutzer:innen für mehrere Kampagnen qualifiziert, die sich dieselbe Platzierung teilen, wird das Banner mit der höchsten Priorität angezeigt. Weitere Informationen finden Sie unter [Bannerpriorität]]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %}).
+Wenn sich ein Nutzer:innen für mehrere Kampagnen qualifiziert, die sich dieselbe Platzierung teilen, wird das Banner mit der höchsten Priorität angezeigt. Weitere Informationen finden Sie unter [Bannerpriorität]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %}).
 
 ## Kann ich Banner in meinem bestehenden Content-Card-Feed verwenden?
 

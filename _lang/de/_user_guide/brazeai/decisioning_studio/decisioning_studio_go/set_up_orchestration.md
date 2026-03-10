@@ -260,7 +260,7 @@ Der Name der Zieldaten-Erweiterung wird ebenfalls in Ihrem BrazeAI Decisioning S
 
 1. Bitte geben Sie der Automatisierung einen Namen und wählen Sie **„Speichern**“.
 
-![Ein Beispiel für Automatisierung/assets/img/decisioning_studio_go/query3.pngimage_buster"OFE_Experimenter_Test5_Automation".]({%    %})
+![Ein Beispiel für Automatisierung "OFE_Experimenter_Test5_Automation".]({% image_buster /assets/img/decisioning_studio_go/query3.png %})
 
 {: start="2"}
 2\. Wählen Sie anschließend **„Einmal ausführen“**, um zu bestätigen, dass alles wie erwartet funktioniert.
@@ -460,7 +460,7 @@ Bevor Sie einen Ablauf in Klaviyo erstellen, müssen Sie die folgenden Angaben a
 4\. Bitte wählen Sie den Auslöser aus.
 5\. Ordnen Sie den Namen einer Metrik dem Namen eines Trigger-Ereignisses aus Ihrem BrazeAI Decisioning Studio™ Go-Portal zu.
 
-![Ein Beispiel für einen Metriknamen, der mit dem Namen des Auslöseereignisses"OFE_TEST_CASE_API_EVENT_TRIGGER".]({%image_buster/assets/img/decisioning_studio_go/flow2.png übereinstimmt    %})
+![Ein Beispiel für einen Metriknamen, der mit dem Namen des Auslöseereignisses "OFE_TEST_CASE_API_EVENT_TRIGGER" übereinstimmt.]({% image_buster /assets/img/decisioning_studio_go/flow2.png %})
 
 {: start="6"}
 6\. Wählen Sie **Speichern**.

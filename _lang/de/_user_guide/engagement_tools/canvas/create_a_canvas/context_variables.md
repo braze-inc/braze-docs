@@ -180,14 +180,14 @@ Angenommen, Sie möchten eine personalisierte Erinnerung an Nutzer:innen senden,
 
 Sie verfügen über eine Kontextvariable, `re_engagement_date`die wie folgt definiert{% raw %}`{{now | minus: 3 | append: ' days'}}`{% endraw %} ist. Bitte beachten Sie, dass`3 days`es sich um einen variablen Betrag handeln kann, der ebenfalls als benutzerdefiniertes Attribut gespeichert wird. Wenn also das  nach dem`last_login_date`  (als benutzerdefiniertes `re_engagement_date`Attribut im Nutzerprofil gespeichert) steht, wird eine Nachricht an den Nutzer gesendet.
 
-![Eine Filtereinstellung mit angepassten Attributen als Personalisierungstyp für die Kontextvariable"re_engagement_date"nach dem angepassten Attribut/assets/img/context_variable_filter2.pngimage_buster"last_login_date".]({%%})
+![Eine Filtereinstellung mit angepassten Attributen als Personalisierungstyp für die Kontextvariable "re_engagement_date" nach dem angepassten Attribut "last_login_date".]({% image_buster /assets/img/context_variable_filter2.png %})
 
 {% endtab %}
 {% tab Example 2 %}
 
 Der folgende Filter vergleicht die Kontextvariable`reminder_date`  mit der Kontextvariable `appointment_deadline`. Dies kann Gruppennutzer:innen in einem Schritt „Zielgruppen-Pfade“ dabei helfen, zu entscheiden, ob sie vor Ablauf ihrer Terminfrist zusätzliche Erinnerungen erhalten sollten.
 
-![Eine Filtereinstellung mit Kontextvariablen als Typ der Personalisierung für die Kontextvariable"reminder_date"auf der Kontextvariable/assets/img/context_variable_filter3.pngimage_buster"appointment_deadline".]({%%})
+![Eine Filtereinstellung mit Kontextvariablen als Typ der Personalisierung für die Kontextvariable "reminder_date" auf der Kontextvariable "appointment_deadline".]({% image_buster /assets/img/context_variable_filter3.png %})
 
 {% endtab %}
 {% endtabs %}

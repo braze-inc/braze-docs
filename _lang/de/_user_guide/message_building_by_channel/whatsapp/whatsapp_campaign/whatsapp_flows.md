@@ -175,7 +175,7 @@ Bitte wählen Sie im UI-Editor Folgendes aus:
 - **Aktion:** Aktualisieren
 - **Schlüsselwert:** {% raw %} ```{% assign parsed_json = {{whats_app.${inbound_flow_response}}} | json_parse %}{{ parsed_json.FIELDS_THAT_APPLY }}```{% endraw %}
 
-![WhatsApp-Nachrichten-Editor mit einer Komponente „Personalisierung hinzufügen”, um eine WhatsApp-Eigenschaftspersonalisierung mit dem angepassten Attribut`inbound_flow_response`.]({%image_buster/assets/img/whatsapp/flows/parsed_json.png einzufügen.
+![WhatsApp-Nachrichten-Editor mit einer Komponente „Personalisierung hinzufügen”, um eine WhatsApp-Eigenschaftspersonalisierung mit dem angepassten Attribut`inbound_flow_response`.]({% image_buster /assets/img/whatsapp/flows/parsed_json.png %})
 
 Wenn Sie bereit sind, senden Sie bitte eine Testnachricht, um den Ablauf zu überprüfen. Starten Sie anschließend Canvas.
 
@@ -193,6 +193,6 @@ Um die Flow-Antwort über Liquid mit [unterstützten Tags für Personalisierung]
 1. Wählen Sie beim Verfassen Ihrer WhatsApp-Nachricht das Plus-Symbol, um das Fenster **„Personalisierung hinzufügen”** zu öffnen.
 2. Wählen Sie **„WhatsApp-Eigenschaften“** als Personalisierungstyp und**inbound_flow_response**  als benutzerdefiniertes Attribut. Dies kann verwendet werden, um Informationen in Nutzerprofilen zu speichern, sie in Nachrichten einzufügen oder an andere Dienste, wie beispielsweise Webhooks, weiterzuleiten.
 
-![WhatsApp-Nachrichten-Editor mit einer Komponente „Personalisierung hinzufügen”, um eine WhatsApp-Eigenschaftspersonalisierung mit dem angepassten Attributinbound_flow_response.]({%image_buster/assets/img/whatsapp/flows/inbound_flow_response.png einzufügen.{: style="max-width:80%;"}
+![WhatsApp-Nachrichten-Editor mit einer Komponente „Personalisierung hinzufügen”, um eine WhatsApp-Eigenschaftspersonalisierung mit dem angepassten Attribut `inbound_flow_response` einzufügen.]({% image_buster /assets/img/whatsapp/flows/inbound_flow_response.png %}){: style="max-width:80%;"}
 
 Bei Fragen oder für weitere Unterstützung wenden Sie sich bitte an [den Support]({{site.baseurl}}/braze_support/).

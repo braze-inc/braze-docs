@@ -54,7 +54,7 @@ Beim Empfang einer stillen Push-Benachrichtigung wird ein vom SDK aufgezeichnete
 
 Erstellen Sie eine Kampagne mit einem stillen Push, die über das vom Server gesendete Event ausgelöst wird. Einzelheiten zur Erstellung einer stillen Push-Kampagne finden Sie unter [Stille Push-Benachrichtigungen]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/silent_push_notifications/).
 
-![Eine aktionsbasierte Zustellung von In-App-Nachrichten, die an Benutzer zugestellt wird, die das angepasste Event ausführen"server_event".]({%image_buster/assets/img_archive/iosServerSentPush.png.
+![Eine aktionsbasierte Zustellung von In-App-Nachrichten, die an Benutzer zugestellt wird, die das angepasste Event "server_event" ausführen.]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 
 Die Push-Kampagne muss zusätzliche Schlüssel-Wert-Paare (Extras) enthalten, die angeben, dass diese Push-Kampagne gesendet wird, um ein angepasstes SDK-Event zu protokollieren. Dieses Event wird zum Triggern der In-App-Nachricht verwendet:
 

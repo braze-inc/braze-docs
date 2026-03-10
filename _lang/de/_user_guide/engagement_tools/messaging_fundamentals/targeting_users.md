@@ -52,7 +52,7 @@ Nehmen wir an, Sie möchten eine In-App-Nachricht nur an Android-Apps senden.
 
 1. Erstellen Sie ein Segment und legen Sie **Apps und Websites** fest, die auf **Nutzer:innen bestimmter Apps** abzielen, und wählen Sie dann Ihre Android-App aus.
 
-![Ein Segment, das Nutzer:innen einer bestimmten App anspricht,/assets/img_archive/app_test_android.pngimage_buster"Test_Android".]({%    %}){: style="max-width:60%;"}
+![Ein Segment, das Nutzer:innen einer bestimmten App "Test_Android" anspricht.]({% image_buster /assets/img_archive/app_test_android.png %}){: style="max-width:60%;"}
 
 {: start="2"}
 2\. Gehen Sie in Ihrer Kampagne oder in Canvas zum Schritt **Zielgruppen** und bestätigen Sie, dass Ihr Segment im Abschnitt **Nutzer:innen nach Segmenten** zusammengestellt ist. 

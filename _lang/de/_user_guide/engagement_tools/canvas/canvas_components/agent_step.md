@@ -57,7 +57,7 @@ Sie können eine Ausgabevariable im gesamten Canvas verwenden, indem Sie dieselb
 
 Um eine bestimmte Eigenschaft aus einer Objekt-Ausgabevariablen zu verwenden, nutzen Sie die Punktnotation, um mit Liquid auf diese Eigenschaft zuzugreifen: {% raw %}`{{context.${response_variable_name}.field_name}}`{% endraw %}
 
-![Agentenschritt für Body HTML Writer mit einer Datenausgabe für die Variable/assets/img/ai_agent/test_agent_step.pngimage_buster"agent_output".]({%%}){: style="max-width:80%;"}
+![Agentenschritt für Body HTML Writer mit einer Objekt-Datenausgabe für die Variable "agent_output".]({% image_buster /assets/img/ai_agent/test_agent_step.png %}){: style="max-width:80%;"}
 
 ### Schritt 4: Fügen Sie gegebenenfalls zusätzlichen Kontext hinzu (optional)
 

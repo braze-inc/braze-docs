@@ -367,7 +367,7 @@ Um eine angepasste In-App-Nachricht des Typs "Full" im Dashboard einzurichten, m
 
 Geben Sie in den Schlüssel-Wert-Paaren einen `attribute_key` an. Dieser Schlüssel wird zusammen mit den vom Benutzer ausgewählten Werten in seinem Benutzerprofil als benutzerdefiniertes Attribut gespeichert. Ihre benutzerdefinierte Ansichtslogik muss die an Braze gesendeten Benutzerattribute verarbeiten.
 
-![Drei Schlüssel-Wert-Paare im Nachrichten-Editor. Das erste Schlüssel-Wert-Paar"attribute_key"wird als „Push-Tags“ festgelegt, das zweite"subtitle_text"als „Durch das Aktivieren von Benachrichtigungen wird auch ...“ und das dritte"view_type"als/assets/img/iam_implementation/dashboard3.pngimage_buster"table_list".]({%%}){: style="max-width:65%;"}
+![Drei Schlüssel-Wert-Paare im Nachrichten-Editor. Das erste "attribute_key" wird als „Push-Tags“ festgelegt, das zweite "subtitle_text" als „Durch das Aktivieren von Benachrichtigungen wird auch ...“ und das dritte "view_type" als "table_list".]({% image_buster /assets/img/iam_implementation/dashboard3.png %}){: style="max-width:65%;"}
 
 #### Touch-Events in der In-App-Nachricht abfangen
 ![Ein Apple-Gerät, das Reihen von Einstellungen und Schaltern anzeigt. Die benutzerdefinierte Ansicht verwaltet die Buttons, und alle Berührungen außerhalb der Steuerungsbereiche der Buttons werden von den In-App-Nachrichten verarbeitet und schließen diese.]({% image_buster /assets/img/iam_implementation_guide.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}

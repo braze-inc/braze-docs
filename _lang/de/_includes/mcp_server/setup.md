@@ -1,6 +1,6 @@
 # Einrichtung des Braze MCP-Servers
 
-> Erfahren Sie, wie Sie den Braze MCP-Server einrichten, um mit Ihren Braze-Daten über natürliche Sprache mithilfe von Tools wie Claude und Cursor zu interagieren. Weitere allgemeine Informationen finden Sie unter [Braze MCP-Server]{% if include.section == "user" %}.{{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/mcp_server/){% endif %}
+> Erfahren Sie, wie Sie den Braze MCP-Server einrichten, um mit Ihren Braze-Daten über natürliche Sprache mithilfe von Tools wie Claude und Cursor zu interagieren. Weitere allgemeine Informationen finden Sie unter [Braze MCP-Server]({% if include.section == "user" %}{{site.baseurl}}/user_guide/brazeai/mcp_server/{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/mcp_server/{% endif %})
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
