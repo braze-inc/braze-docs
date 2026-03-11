@@ -52,7 +52,7 @@ Located at the top of the side navigation, the workspace switcher lets you move 
 
 [Workspaces]({{site.baseurl}}/user_guide/getting_started/workspaces) help organize content by brand, region, product line, or team. Each workspace includes its own data, campaigns, and settings. Your access can vary between workspaces. For example, you might have editing access in one workspace and view-only access in another.
 
-To switch workspaces, select the workspace dropdown at the top of the side navigation and choose the workspace you want to access. You can also [add favorite workspaces](#adding-favorite-workspaces) for faster access to the ones you use most often.
+To switch workspaces, select the workspace dropdown at the top of the side navigation and choose the workspace you want to access. You can also [add favorite workspaces](#favorite-workspaces) for faster access to the ones you use most often.
 
 #### Minimize the side navigation
 
