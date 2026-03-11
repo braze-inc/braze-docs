@@ -129,7 +129,7 @@ To control this, [listen for updates]({{site.baseurl}}/developer_guide/platform_
 
 ### Why aren't users in my Global Control Group receiving feature flags experiments?
 
-You can't enable feature flags for users in your [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/). This means users in your Global Control Group also can't be part of Feature Flag experiments.
+You can't enable feature flags for users in your [Global Control Group]({{site.baseurl}}/user_guide/messaging/ab_testing/global_control_group/). This means users in your Global Control Group also can't be part of Feature Flag experiments.
 
 ## Additional questions?
 

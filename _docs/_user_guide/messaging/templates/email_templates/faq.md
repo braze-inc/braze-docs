@@ -32,7 +32,7 @@ You could change the unsubscribe link in the custom footer from {% raw %} `{{${s
 > https://www.braze.com/unsubscribe?user_id={{${user_id}}}
 {% endraw %}
 
-Next, you could call the [`/email/status` endpoint]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/) to update the user's subscription status. For more details, see our documentation on [changing email subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
+Next, you could call the [`/email/status` endpoint]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/) to update the user's subscription status. For more details, see our documentation on [changing email subscription status]({{site.baseurl}}/user_guide/channels/email/managing_user_subscriptions/#changing-email-subscriptions).
 
 To save this new link, the default Braze unsubscribe tag {%raw%}(``${set_user_to_unsubscribed_url}``){%endraw%} must be in the footer. This means you'll need to include the default link by "hiding" it by either placing the tag in a comment or in a hidden `<div>` tag.
 
@@ -51,7 +51,7 @@ Yes, you can insert as many templates as you would like in your email messages. 
 
 ### How do I preview my links with all of the tags applied?
 
-There are several ways to preview your links. After you have applied the [link template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), you can send a [test email]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to yourself to view all the links. 
+There are several ways to preview your links. After you have applied the [link template]({{site.baseurl}}/user_guide/channels/email/templates/link_template/), you can send a [test email]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) to yourself to view all the links. 
 
 From the preview pane in a new tab, you can also open the links to view the links. You can also hover over the links in the preview pane and see them at the bottom of your browser.
 
@@ -67,7 +67,7 @@ Avoid adding the question mark (?) to your Liquid as this will cause link templa
 
 For all new Content Blocks that are created, link aliasing is applied across workspaces since this is a company-level feature. 
 
-Existing Content Blocks won't be modified when link aliasing is enabled. While existing link templates won't be modified, the existing link template section in a message will be removed. Check out [Link aliasing in Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/#link-aliasing-in-content-blocks) for more information.
+Existing Content Blocks won't be modified when link aliasing is enabled. While existing link templates won't be modified, the existing link template section in a message will be removed. Check out [Link aliasing in Content Blocks]({{site.baseurl}}/user_guide/channels/email/templates/link_aliasing/#link-aliasing-in-content-blocks) for more information.
 
 ### Can I use Liquid conditional logic entirely within an HTML anchor tag?
 

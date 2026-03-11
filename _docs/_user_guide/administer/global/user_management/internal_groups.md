@@ -1,13 +1,13 @@
 ---
 nav_title: Internal groups
-article_title: Internal Group
+article_title: Internal groups
 page_order: 4
 page_type: reference
 description: "This reference article describes internal groups, a great way to get insight into your test device's SDK or API logs when testing SDK integration."
 
 ---
 
-# Internal Groups
+# Internal groups
 
 > Internal groups are a great way to build and organize internal or third-party test groups. They provide insight into your SDK or API logs and are useful when testing your SDK integration. You can create an unlimited number of custom internal groups with up to 1,000 users.
 
@@ -51,7 +51,9 @@ To create an internal group:
 | **Seed Group**         | Automatically sends a copy of the email to everyone in the Seed Group upon send.               |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![An internal group named "Email test group".]({% image_buster /assets/img_archive/internal_group.png %})
+{:start="5"}
+
+5. Select **Create internal group** again.
 
 ### Adding test users
 

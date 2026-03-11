@@ -30,7 +30,7 @@ View your email performance dashboard by going to **Analytics** > **Email Perfor
 
 ![An example email campaign with 335,630 sends, with an average of 11,187.667 per day.]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
-The calculations for different metrics in the email performance dashboard are the same as those on an individual message level (such as campaign analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
+The calculations for different metrics in the email performance dashboard are the same as those on an individual message level (such as campaign analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/channels/email/reporting/analytics_glossary/#email-metrics).
 
 Each tile shows the rate metric first, followed by the count metric (with the exception of *Sends*, which displays the count metric followed by the average per day). For example, the unique clicks tile contains the *Unique click rate* from your selected time period and the count of the total number of unique clicks from that time period. Each tile also shows the [comparison to the last period](#comparing-time-periods).
 
@@ -92,7 +92,7 @@ The **Time of the day** engagement report breaks down opens or clicks by each ho
 
 ![An example Time of the day engagement report with the opens or clicks from 12 am to 11 pm.]({% image_buster /assets/img_archive/time_engagement_day.png %})
 
-For more information on analytics for your emails, check out [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
+For more information on analytics for your emails, check out [Email reporting]({{site.baseurl}}/user_guide/channels/email/reporting/).
 
 {% endtab %}
 {% tab SMS performance %}
@@ -175,7 +175,7 @@ This means that while Braze recorded positive counts for a particular metric for
 
 #### If a metric displays "--"
 
-This means Braze hasn't recorded any data for that metric during the time you selected. If you haven't set up or sent any emails yet, learn more about how to do so in our dedicated [Email]({{site.baseurl}}/user_guide/message_building_by_channel/email) section.
+This means Braze hasn't recorded any data for that metric during the time you selected. If you haven't set up or sent any emails yet, learn more about how to do so in our dedicated [Email]({{site.baseurl}}/user_guide/channels/email/) section.
 
 --->
 

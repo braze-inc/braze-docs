@@ -1,7 +1,7 @@
 ---
 nav_title: Troubleshooting
 article_title: Troubleshooting Push
-page_order: 6
+page_order: 5
 page_type: reference
 description: "This page contains troubleshooting steps for various issues relating to the Push messaging channel."
 channel: push

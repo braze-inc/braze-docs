@@ -12,10 +12,10 @@ search_rank: 10
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Location tracking
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/location_tracking
+    link: /docs/user_guide/audience/locations_and_geofences/location_tracking
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Create geofences
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
+    link: /docs/user_guide/audience/locations_and_geofences/creating_geofences/
     image: /assets/img/braze_icons/marker-pin-01.svg
 ---
 

@@ -53,7 +53,7 @@ The same applies because the Canvas paths following an experiment are also varia
 
 #### Can I take actions to redistribute users in campaigns and Canvases?
 
-The only way to redistribute users in Canvases is to use [Randomized Paths in Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#step-1-choose-the-number-of-paths-and-audience-distribution), which will always randomize path assignments when users re-enter the Canvas. However, this isn’t a standard experiment and could invalidate any experiment results because the control group can become contaminated with treatment users.
+The only way to redistribute users in Canvases is to use [Randomized Paths in Experiment Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/experiment_step/#step-1-choose-the-number-of-paths-and-audience-distribution), which will always randomize path assignments when users re-enter the Canvas. However, this isn’t a standard experiment and could invalidate any experiment results because the control group can become contaminated with treatment users.
 
 ## Confidence and bias
 

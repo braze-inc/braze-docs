@@ -16,30 +16,30 @@ guide_featured_list:
     link: /docs/post-launch_edits/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Saving drafts for Canvas
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/
+    link: /docs/user_guide/messaging/canvas/managing_canvases/canvas_drafts/
     image: /assets/img/braze_icons/save-03.svg
   - name: Canvas version history
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_version_history/
+    link: /docs/user_guide/messaging/canvas/managing_canvases/canvas_version_history/
     image: /assets/img/braze_icons/list.svg
   - name: Cloning Canvases
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/
+    link: /docs/user_guide/messaging/canvas/managing_canvases/cloning_canvases/
     image: /assets/img/braze_icons/copy-04.svg
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: Approval workflow
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
+    link: /docs/user_guide/messaging/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Messaging rules for approval
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules/
+    link: /docs/user_guide/messaging/messaging_fundamentals/approvals/messaging_rules/
     image: /assets/img/braze_icons/check-square.svg
   - name: Archiving messages
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
+    link: /docs/user_guide/messaging/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
   - name: Copying across workspaces
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    link: /docs/user_guide/messaging/messaging_fundamentals/copying_across_workspaces/
     image: /assets/img/braze_icons/copy-07.svg
   - name: Duplicating messages
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
+    link: /docs/user_guide/messaging/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
 ---

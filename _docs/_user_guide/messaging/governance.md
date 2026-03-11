@@ -22,4 +22,7 @@ guide_featured_list:
   - name: Duplicate
     link: /docs/user_guide/messaging/governance/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
+  - name: Tags
+    link: /docs/user_guide/messaging/governance/tags/
+    image: /assets/img/braze_icons/tag-01.svg
 ---

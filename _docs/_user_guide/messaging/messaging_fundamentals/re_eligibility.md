@@ -24,7 +24,7 @@ By default, Braze sends a message to a user only once, even if they re-qualify m
 {% tab campaign %}
 To turn on re-eligibility for a campaign, select the **Allow users to become re-eligible to receive campaign** checkbox in the **Delivery Controls** section. The maximum time for re-eligibility for a campaign is 720 days.
 
-For triggered campaigns with re-eligibility turned on, users who [did not actually receive the campaign message]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign) (despite completing the trigger event) will automatically qualify for the message the next time they complete the trigger event. This is because re-eligibility is based on message receipt and not campaign entry. By making users re-eligible for a triggered campaign, you are allowing them to actually receive (and not simply trigger) the message more than once.
+For triggered campaigns with re-eligibility turned on, users who [did not actually receive the campaign message]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign) (despite completing the trigger event) will automatically qualify for the message the next time they complete the trigger event. This is because re-eligibility is based on message receipt and not campaign entry. By making users re-eligible for a triggered campaign, you are allowing them to actually receive (and not simply trigger) the message more than once.
 
 Additionally, if you're trying to send a message immediately with a re-eligibility of zero minutes, we'll always attempt to schedule it right away, regardless of how a user has received previous versions of the campaign or Canvas.
 
@@ -45,7 +45,7 @@ Note that a user doesn't need to exit a Canvas first before re-entering if re-el
 
 You can add additional filters to prevent users from receiving the same step or message multiple times. However, when a user re-enters a Canvas for the second time, the steps previously received during their first time in the Canvas aren't visible to the user. This means the user may still receive the same message again. To prevent this, you can configure the Canvas to prevent re-entry or set the re-eligibility for the maximum duration of the Canvas.
 
-You can also use a [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) for the user receiving the step to log this as a custom attribute, which can be used to filter out users who have received the step during their Canvas journey.
+You can also use a [User Update step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/user_update/) for the user receiving the step to log this as a custom attribute, which can be used to filter out users who have received the step during their Canvas journey.
 
 ### Example
 

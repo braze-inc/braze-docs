@@ -18,10 +18,10 @@ guide_featured_list:
     link: /docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg
   - name: API-triggered and action-based campaigns
-    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/
+    link: /docs/user_guide/messaging/campaigns/testing_and_more/triggered_action_based/
     image: /assets/img/braze_icons/columns-01.svg
   - name: Multivariate and A/B testing
-    link: /docs/user_guide/engagement_tools/testing/multivariant_testing/
+    link: /docs/user_guide/messaging/multivariant_testing/
     image: /assets/img/braze_icons/beaker-02.svg
 
 guide_menu_title: "Additional articles"

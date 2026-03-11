@@ -51,7 +51,7 @@ On their profile page, select <i class="fa-solid fa-ellipsis-vertical"></i> **Sh
 
 ### Deleting a segment {#delete-segment}
 
-If you haven't already, [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) containing the user profiles you want to delete. Be sure to include all user profiles if you're deleting duplicate users.
+If you haven't already, [create a segment]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/) containing the user profiles you want to delete. Be sure to include all user profiles if you're deleting duplicate users.
 
 In Braze, go to **Audience** > **Manage Audience**, then select the **Delete Users** tab.
 
@@ -68,7 +68,7 @@ Type **DELETE** to confirm your request, then select **Delete users**.
 The users in this segment won't be deleted immediately. Instead, they'll be marked as pending deletion for the next 7 days. After this time, they'll be deleted and we'll email you to let you know.
 
 {% alert tip %}
-To ensure that these exact users are deleted regardless of segment changes, a segment filter called **Pending Deletion** is automatically created. You can [use this filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) to check the status of pending deletions.
+To ensure that these exact users are deleted regardless of segment changes, a segment filter called **Pending Deletion** is automatically created. You can [use this filter]({{site.baseurl}}/user_guide/audience/segments/managing_segments/#filters) to check the status of pending deletions.
 {% endalert %}
 
 ## Confirming segment deletions
@@ -103,7 +103,7 @@ You can check the status of a deletion using [segment filters](#segment-filters)
 
 ### Segment filters
 
-When you request a segment of users to be deleted, a [segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) called **Pending Deletion** is automatically created. You can use it to:
+When you request a segment of users to be deleted, a [segment filter]({{site.baseurl}}/user_guide/audience/segments/managing_segments/#filters) called **Pending Deletion** is automatically created. You can use it to:
 
 - See the exact set of users tied to a specific deletion run date.
 - Exclude those users from campaigns so they don’t receive messages before removal.
@@ -141,7 +141,7 @@ You can also check the status of previous deletions by downloading a security ev
 
 ### Can I delete segments with more than 100 million users?
 
-No. You cannot delete segments with more than 100 million users. If you need help deleting a segment of this size, contact [Braze Support]({{site.baseurl}}/user_guide/administrative/access_braze/support).
+No. You cannot delete segments with more than 100 million users. If you need help deleting a segment of this size, contact [Braze Support]({{site.baseurl}}/user_guide/administer/personal/braze_support/).
 
 ### It looks like I am not able to delete 100 million users and am limited to deleting only 10 million. Is this a bug?
 

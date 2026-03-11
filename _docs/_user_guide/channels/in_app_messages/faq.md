@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: In-App Message FAQ
-page_order: 8
+page_order: 30
 description: "This article provides answers to frequently asked questions about In-App Messages."
 tool: in-app messages
 

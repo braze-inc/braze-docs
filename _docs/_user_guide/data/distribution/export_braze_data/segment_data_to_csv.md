@@ -110,7 +110,7 @@ You can split a large segment into smaller segments and then export each of the 
 {% endtab %}
 {% tab Random bucket numbers %}
 
-You can also use [random bucket numbers]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) to break your user base into multiple segments, and then combine them after export. For example, if you need to break up your segment into two different segments, you can do so with the following filters:
+You can also use [random bucket numbers]({{site.baseurl}}/user_guide/messaging/ab_testing/random_bucket_numbers/) to break your user base into multiple segments, and then combine them after export. For example, if you need to break up your segment into two different segments, you can do so with the following filters:
 - Segment 1: Random bucket number is less than 5000 (includes 0-4999)
 - Segment 2: Random bucket number is more than 4999 (includes 5000-9999)
 

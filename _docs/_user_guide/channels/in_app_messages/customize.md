@@ -1,7 +1,7 @@
 ---
 nav_title: Customize
 article_title: Customize in-app messages
-page_order: 4
+page_order: 5
 layout: dev_guide
 guide_top_header: "Customize in-app messages"
 guide_top_text: "Customize the look and feel of your in-app messages. Some options are specific to the drag-and-drop editor or the traditional editor—check each article for details."

@@ -1,7 +1,7 @@
 ---
 nav_title: "Use case: Create a Braze-to-Braze webhook"
 article_title: "Use case: Create a Braze-to-Braze webhook"
-page_order: 4
+page_order: 2
 channel:
   - webhooks
 description: "This reference article covers when to use User Update versus Braze-to-Braze webhooks and how to create a Braze-to-Braze webhook."

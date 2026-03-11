@@ -26,5 +26,5 @@ Influenced opens are added to the direct opens of a campaign to give a number of
 
 ![Influenced opens statistics on the Campaign Details page for a campaign]({% image_buster /assets/img_archive/Influenced_Opens2.png %})
 
-For more information on tracking opens, check out the conversion tracking section of our [best practices for push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
+For more information on tracking opens, check out the conversion tracking section of our [best practices for push]({{site.baseurl}}/user_guide/channels/push/best_practices/).
 

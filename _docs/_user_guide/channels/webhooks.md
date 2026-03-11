@@ -48,6 +48,16 @@ These headers help Braze interpret rate limits and adjust sending speed accordin
 
 If the majority of webhook requests to a specific host are failing, Braze temporarily defers all send attempts to that host. Sending resumes after a defined cooldown period, allowing your system to recover.
 
+## Using webhooks with Braze partners {#utilizing-webhooks}
+
+There are many ways to use webhooks, and with our technology partners (Alloys), you can use webhooks to level up your communication directly with your customers and users.
+
+Check out:
+* [Messenger]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/instant_chat/messenger/)
+* [Remerge]({{site.baseurl}}/partners/remerge/)
+* [Lob.com]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/lob/)
+* And many more of our [technology partners]({{site.baseurl}}/partners/home/)!
+
 ## Next steps
 
 - [Create a webhook]({{site.baseurl}}/user_guide/channels/webhooks/create_a_webhook/)

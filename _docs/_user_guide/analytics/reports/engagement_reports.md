@@ -24,7 +24,7 @@ With engagement reports, you can manually select campaigns and Canvases to inclu
 
 Regardless of the number of campaigns or Canvases you select, up to two CSV files are generated—one for all campaign data and one for all Canvas data. You can access these CSV files from the link embedded inside your report email. Engagement reports are not saved in the Braze dashboard.
 
-Certain data is aggregated at the campaign or Canvas level versus at the individual campaign variant or Canvas step level. If you [delete a Canvas step after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-details), this will also remove the data from engagement reports.
+Certain data is aggregated at the campaign or Canvas level versus at the individual campaign variant or Canvas step level. If you [delete a Canvas step after launch]({{site.baseurl}}/user_guide/messaging/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-details), this will also remove the data from engagement reports.
 
 {% alert tip %}
 You can re-run the report to generate updated statistics.

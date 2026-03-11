@@ -19,7 +19,7 @@ To send a promotion code in a message, select **Copy Snippet** next to the promo
 
 ![An option to copy the snippet to paste into your message.]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:70%"}
 
-Paste the code snippets into one of your messages in Braze, then use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) to insert one of the unique promotion codes from your list. That code is marked as sent, ensuring no other message sends the same code.
+Paste the code snippets into one of your messages in Braze, then use [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/) to insert one of the unique promotion codes from your list. That code is marked as sent, ensuring no other message sends the same code.
 
 ![An example message "Treat yourself to something nice this spring with our exclusive offer" followed by the code snippet.]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:70%"}
 
@@ -40,7 +40,7 @@ If no promotion codes are available, test or live messages that rely on codes do
 
 ### In-app message campaigns {#promotion-codes-iam-campaigns}
 
-After creating an [in-app message campaign]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages), you can insert a [promotion code list snippet]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes/manage/#using-promotion-codes-1) into your in-app message message body. Promotion codes in in-app messages are deducted and used only when a user triggers the display of the in-app message.
+After creating an [in-app message campaign]({{site.baseurl}}/user_guide/channels/in_app_messages), you can insert a [promotion code list snippet]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes/manage/#using-promotion-codes-1) into your in-app message message body. Promotion codes in in-app messages are deducted and used only when a user triggers the display of the in-app message.
 
 ### Test messages
 
@@ -52,7 +52,7 @@ Test sends and seed group email sends use up promotion codes unless requested ot
 
 ## Saving promotion codes to user profiles {#save-to-profile}
 
-To reference the same promotion code in subsequent messages, the code must be saved to the user profile as a custom attribute. This can be done through a [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) that assigns the discount code to a custom attribute, like “Promo Code”, directly before a Message step.
+To reference the same promotion code in subsequent messages, the code must be saved to the user profile as a custom attribute. This can be done through a [User Update step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/user_update/) that assigns the discount code to a custom attribute, like “Promo Code”, directly before a Message step.
 
 First, select the following for each field in the User Update step:
 

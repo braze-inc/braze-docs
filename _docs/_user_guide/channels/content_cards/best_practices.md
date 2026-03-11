@@ -1,5 +1,5 @@
 ---
-page_order: 5
+page_order: 22
 nav_title: Best practices
 article_title: Content Card best practices
 layout: dev_guide

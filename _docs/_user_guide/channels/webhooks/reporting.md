@@ -1,7 +1,7 @@
 ---
 nav_title: Reporting
 article_title: Webhook Reporting
-page_order: 2
+page_order: 21
 description: "This reference article provides an overview of the different webhook reporting metrics and analytics options provided in the Braze dashboard."
 channel:
   - webhooks

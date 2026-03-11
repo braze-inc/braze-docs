@@ -2,7 +2,7 @@
 nav_title: Drag-and-drop editor
 article_title: Create an in-app message in the drag-and-drop editor
 alias: /iam_drag_and_drop/
-page_order: 1
+page_order: 2
 description: "This reference article covers creating an in-app message with the drag-and-drop editor, prerequisites, creative details, and more."
 local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in-app-message-components, #creative-details
   set-message-level-styles: '/docs/user_guide/channels/in_app_messages/customize/style_settings/#message-level-styles'

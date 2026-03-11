@@ -2,7 +2,7 @@
 nav_title: Drag-and-drop editor
 article_title: Create an Email with Drag-and-Drop
 alias: /dnd/
-page_order: 2
+page_order: 1
 description: "This article covers how to set up and properly use the drag-and-drop editor for email messages."
 channel: email
 tool:
@@ -246,7 +246,7 @@ Liquid personalization is not supported for image blocks and button link type fi
 
 #### Dynamic images
 
-You can choose to include dynamic images in your email messaging by including [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) or [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in your image source attribute. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
+You can choose to include dynamic images in your email messaging by including [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/about_connected_content/#about-connected-content) or [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/) in your image source attribute. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
 
 {% alert important %}
 Your image URL must begin with `https://`. Using `http://` crashes your app.
@@ -258,7 +258,7 @@ When composing your message, you can toggle the text direction between left-to-r
 
 ![Email drag-and-drop editor menu with button to toggle text alignment between right-to-left and left-to-right.]({% image_buster /assets/img/dnd/dnd_template1.png %}){: style="max-width:50%;"}
 
-The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages/).
 
 ### HTML
 

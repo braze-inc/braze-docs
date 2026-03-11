@@ -13,7 +13,7 @@ search_rank: 1
 > This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup).
 
 {% details Expand for original Canvas editor details %}
-You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends [cloning your Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/) to the most current editor.
+You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends [cloning your Canvases]({{site.baseurl}}/user_guide/messaging/canvas/managing_canvases/duplicating/) to the most current editor.
 {% enddetails %}
 
 ## Creating a Canvas
@@ -64,14 +64,14 @@ The Canvas builder will guide you step-by-step through setting up your Canvas—
     Learn how to [build your Canvas](#step-3-build-your-canvas) using the Canvas builder.
   {% endtab %}
   {% tab Summary %}
-    Here, you will find the summary of your Canvas details. If you have the [Canvas approval workflow]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) turned on, you can approve the listed Canvas details before launching.
+    Here, you will find the summary of your Canvas details. If you have the [Canvas approval workflow]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/approvals/) turned on, you can approve the listed Canvas details before launching.
 
   {% endtab %}
 {% endtabs %}
 
 #### Step 1.1: Start with your Canvas basics
 
-Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams), and create or add [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). You can also assign conversion events for the Canvas.
+Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/#teams), and create or add [Tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/#tags). You can also assign conversion events for the Canvas.
 
 {% alert tip %}
 Tag your Canvases so they're easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
@@ -81,7 +81,7 @@ Tag your Canvases so they're easy to find and build reports out of. For instance
 
 ##### Choose conversion events
 
-Choose your conversion event type, then select the conversions to record. These [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) will measure the efficiency of your Canvas. 
+Choose your conversion event type, then select the conversions to record. These [conversion events]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/conversion_events/) will measure the efficiency of your Canvas. 
 
 ![Primary Conversion Event A with the Makes Purchase conversion event type to record conversations for users who make any purchase within a three day conversion deadline.]({% image_buster /assets/img/add_canvas_conversions.png %})
 
@@ -140,7 +140,7 @@ In **Entry Controls**, you can limit the number of users every time the Canvas i
 
 ##### Testing your audience
 
-After adding segments and filters to your target audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm if they match the audience criteria.
+After adding segments and filters to your target audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/) to confirm if they match the audience criteria.
 
 ![The "User Lookup" field, which allows you to search by external user ID or Braze ID.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%;"}
 
@@ -162,11 +162,11 @@ Braze does not recommend selecting **Every time the Canvas is scheduled** for IP
 
 ##### Setting exit criteria
 
-Setting the [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) determines which users you want to exit a Canvas. If a user performs the exception event or matches the segments and filters, they won't receive any further messages.
+Setting the [exit criteria]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/#exit-criteria) determines which users you want to exit a Canvas. If a user performs the exception event or matches the segments and filters, they won't receive any further messages.
 
 ##### Calculating target population
 
-In the **Target Population** section, you can view a summary of your audience, such as your selected segments and additional filters, and a breakdown of how many users are reachable per messaging channel. To calculate the exact number of reachable users in your target audience instead of the default estimation, select [Calculate exact statistics]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment#calculating-exact-statistics).
+In the **Target Population** section, you can view a summary of your audience, such as your selected segments and additional filters, and a breakdown of how many users are reachable per messaging channel. To calculate the exact number of reachable users in your target audience instead of the default estimation, select [Calculate exact statistics]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/#calculating-exact-statistics).
 
 Note that:
 
@@ -183,7 +183,7 @@ To view additional statistics, such as the average lifetime revenue for targeted
 
 #### Step 1.4: Select your send settings
 
-Select **Send Settings** to edit your subscription settings, turn on rate limiting, and to turn on Quiet Hours. By turning on [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-canvas-components) or [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting#frequency-capping), you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
+Select **Send Settings** to edit your subscription settings, turn on rate limiting, and to turn on Quiet Hours. By turning on [rate limiting]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/frequency_capping/#rate-limiting-and-canvas-components) or [frequency capping]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/frequency_capping/#frequency-capping), you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
 
 For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
 
@@ -225,7 +225,7 @@ By default, the Canvas variant assignment is locked in when users enter the Canv
 {% details Expand for steps %}
 
 1. Create a custom attribute to store your random number. Name it something easy to locate, like "lottery_number" or "random_assignment". You can create the attribute either [in your dashboard]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/), or through API calls to our [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
-2. Create a webhook campaign at the beginning of your Canvas. This campaign will be the medium in which you create your random number and store it as a custom attribute. Refer to [Create a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) for more. Set the URL to our `/users/track` endpoint.<br><br>
+2. Create a webhook campaign at the beginning of your Canvas. This campaign will be the medium in which you create your random number and store it as a custom attribute. Refer to [Create a webhook]({{site.baseurl}}/user_guide/channels/webhooks/create_a_webhook/#step-1-set-up-a-webhook) for more. Set the URL to our `/users/track` endpoint.<br><br>
 3. Create the random number generator. You can do so with the code [ outlined here](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486), which takes advantage of each user's unique time of entry to create a random number. Set the resulting number as a Liquid variable within your webhook campaign.<br><br>
 4. Format the `/users/track` call on your webhook campaign so that it sets the custom attribute you created in step 1 to the random number you've generated on your current user's profile. When this step runs, you will have successfully made a random number that changes each time a user enters your campaign.<br><br>
 5. Adjust the branches of your Canvas so that, instead of being divided by randomly chosen variants, they are divided based on audience rules. In the audience rules of each branch, set the audience filter according to your custom attribute. <br><br>For example, one branch may have "lottery_number is less than 3" as an audience filter, while another branch may have "lottery_number is more than 3 and less than 6" as an audience filter.
@@ -255,11 +255,11 @@ As your Canvas journey increases in steps, the maximum duration is the longest p
 
 Looking to edit a step in your user journey? Check out how to do this depending on your Canvas workflow!
 
-You can edit any step in your Canvas workflow by selecting any of the components. For example, let's say you want to edit your first step, a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) component, in your workflow to a specific day. Select the step to view its settings and adjust your delay to March 1. This means on March 1, your users will move to the next step in your Canvas.
+You can edit any step in your Canvas workflow by selecting any of the components. For example, let's say you want to edit your first step, a [Delay]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/delay_step/) component, in your workflow to a specific day. Select the step to view its settings and adjust your delay to March 1. This means on March 1, your users will move to the next step in your Canvas.
 
 ![An example "Delay" step with the delay set to "Until a specific day."]({% image_buster /assets/img_archive/edit_delay_flow.png %})
 
-Or you can quickly edit and adjust the **Action Settings** of your [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) step to hold users for a window of time. This prioritizes their next path based on the actions during this evaluation period.
+Or you can quickly edit and adjust the **Action Settings** of your [Action Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/action_paths/) step to hold users for a window of time. This prioritizes their next path based on the actions during this evaluation period.
 
 ![The second step in the canvas, "Action Settings", with an evaluation window set to 1 day.]({% image_buster /assets/img_archive/action_paths_flow.png %})
 
@@ -267,14 +267,14 @@ The lightweight components in Canvas allow for a simple editing experience, so a
 
 ##### Messages in Canvas
 
-Edit the messages in a Canvas component to control messages that a particular step will send. Canvas can send email, mobile, and web push messages, and webhooks to integrate with other systems. Similar to campaigns, you can use certain [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) templating to personalize your messages.
+Edit the messages in a Canvas component to control messages that a particular step will send. Canvas can send email, mobile, and web push messages, and webhooks to integrate with other systems. Similar to campaigns, you can use certain [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid/) templating to personalize your messages.
 
 {% alert tip %}
 Did you know you can include Canvas component names in your messages and link templates?<br>
 Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas component name.
 {% endalert %}
 
-The Message component manages the messages sent to users. You can select your **Messaging Channels** and adjust **Delivery Settings** to optimize your Canvas messaging. For more details on this component, check out [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/).
+The Message component manages the messages sent to users. You can select your **Messaging Channels** and adjust **Delivery Settings** to optimize your Canvas messaging. For more details on this component, check out [Message]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/).
 
 ![The "Set up Messages" step, with "Messaging Channels" selected which displays the list of available messaging channels, such as android push, content cards, email, and more.]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
 

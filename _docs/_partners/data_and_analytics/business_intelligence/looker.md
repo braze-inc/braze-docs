@@ -39,7 +39,7 @@ To implement the Looker Blocks, follow the instructions in the README files of t
 - [Message engagement analytics block README](https://github.com/llooker/braze_message_engagement_block/blob/master/README.md)
 - [User behavior analytics block README](https://github.com/llooker/braze_retention_block/blob/master/README.md)
 
-Both integrations assume that your [initial Braze integration]({{site.baseurl}}/user_guide/onboarding_with_braze/integration/), as well as your Braze integration with a Looker-compatible [data warehouse](https://looker.com/solutions/other-databases?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), is appropriately configured to capture and send necessary data.
+Both integrations assume that your [initial Braze integration]({{site.baseurl}}/user_guide/get_started/installation/), as well as your Braze integration with a Looker-compatible [data warehouse](https://looker.com/solutions/other-databases?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), is appropriately configured to capture and send necessary data.
 
 
 {% alert important %}
@@ -150,7 +150,7 @@ In Braze, to create a segment of these flagged users, navigate to **Segments** u
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
 ## Troubleshooting
-If you're having issues with the Looker Action, add a test user to [internal groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/) and check that the following:
+If you're having issues with the Looker Action, add a test user to [internal groups]({{site.baseurl}}/user_guide/administer/global/user_management/internal_groups/) and check that the following:
 
 * The API key has the `users.track` permissions.
 * The correct REST endpoint is entered, such as `https://rest.iad-01.braze.com`.

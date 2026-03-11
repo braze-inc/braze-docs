@@ -167,7 +167,7 @@ If your event property contains the `[]` or `.` characters, escape them by wrapp
 
 ### Segmentation
 
-To segment users based on nested event properties, you must use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). After you've generated a schema, the nested objects explorer will display in the segmentation section. 
+To segment users based on nested event properties, you must use [Segment Extensions]({{site.baseurl}}/user_guide/audience/segments/segment_extension/). After you've generated a schema, the nested objects explorer will display in the segmentation section. 
 
 ![]({% image_buster /assets/img_archive/nested_event_properties_segmentation.png %})
 

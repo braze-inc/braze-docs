@@ -1,7 +1,7 @@
 ---
 nav_title: Message setup
 article_title: Message setup
-page_order: 1
+page_order: 2
 layout: dev_guide
 guide_top_header: "Message setup"
 guide_top_text: "Set up your SMS, MMS, and RCS messaging by configuring senders, subscription groups, and phone numbers. For compliance guidance, refer to Compliance and delivery."

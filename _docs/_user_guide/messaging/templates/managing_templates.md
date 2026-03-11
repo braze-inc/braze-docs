@@ -60,6 +60,6 @@ To archive multiple templates, select the checkbox next to each template that yo
 ![Saved Drop & Drop Email Templates section that shows two selected templates and toolbar with the option to archive.]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
 
 {% alert important %}
-Archiving is not currently available for [link templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
+Archiving is not currently available for [link templates]({{site.baseurl}}/user_guide/channels/email/templates/link_aliasing/#link-templates).
 {% endalert %}
 

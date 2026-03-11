@@ -4,7 +4,7 @@ article_title: "Quality rating and messaging limits"
 description: "This reference article covers how Meta influences your quality rating and messaging limits for the WhatsApp channel."
 page_type: partner
 search_tag: Partner
-page_order: 
+page_order: 1
 channel:
   - WhatsApp
 ---

@@ -1,7 +1,7 @@
 ---
 nav_title: Compliance and delivery
 article_title: Compliance and delivery
-page_order: 2
+page_order: 4
 layout: dev_guide
 guide_top_header: "Compliance and delivery"
 guide_top_text: "Ensure your SMS, MMS, and RCS messages comply with regulations and follow best practices for deliverability and user trust."

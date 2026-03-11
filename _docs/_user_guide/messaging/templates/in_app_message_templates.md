@@ -40,7 +40,7 @@ guide_featured_list:
 guide_menu_title: "Other template types"
 guide_menu_list:
   - name: Color profiles and CSS templates
-    link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/
+    link: /docs/user_guide/channels/in_app_messages/traditional/customize/color_profiles_and_css/
     image: /assets/img/braze_icons/brush-02.svg
 ---
 

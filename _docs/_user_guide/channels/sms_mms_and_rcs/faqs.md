@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: SMS, MMS, and RCS FAQ
-page_order: 20
+page_order: 30
 description: "This article addresses frequently asked questions about SMS, MMS, and RCS messaging."
 page_type: FAQ
 alias: /sms_mms_rcs_faq/

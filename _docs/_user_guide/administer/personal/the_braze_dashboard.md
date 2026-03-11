@@ -33,7 +33,7 @@ Braze navigation is designed to help you efficiently access features and content
 
 The global header is almost always visible at the top of the screen. It provides quick access to essential tools and settings, including:
 
-- Search
+- [Search](#search-your-dashboard)
 - Support and community links
 - [Dashboard language]({{site.baseurl}}/user_guide/administer/personal/language_settings/)
 - Notifications
@@ -128,9 +128,13 @@ table td {
 | Close the search menu       | <kbd>Esc</kbd>  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Tips
+## Productivity features
 
 The Braze dashboard includes several features to help you work more efficiently and quickly access the tools and content you use most.
+
+### BrazeAI Operator
+
+BrazeAI Operator™ is an AI-powered assistant built into the dashboard. Use it to get answers, walk through setup, troubleshoot issues, and brainstorm ideas. Open it from **BrazeAI Operator™** in the global header next to your profile. For more information, see [BrazeAI Operator]({{site.baseurl}}/user_guide/brazeai/operator/).
 
 ### Pick up where you left off
 
@@ -140,9 +144,15 @@ On the **Home** page, the dashboard displays your recently edited or created cam
 
 For more information, see [Home dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analytics/home_dashboard/#pick-up-where-you-left-off).
 
-### Add favorite workspaces
+### Favorite workspaces
 
-If you work across multiple workspaces, you can mark your most frequently used ones as favorites for faster access. To add favorite workspaces, [access your profile settings](#accessing-your-profile-settings), locate the **Favorite workspaces** field in the **Account Profile** section, and select the workspaces you want to favorite. Your favorite workspaces will appear at the top of the workspace switcher for quick access.
+If you work across multiple workspaces, you can mark your most frequently used ones as favorites. Favorite workspaces appear at the top of the workspace switcher for faster access.
+
+To add favorite workspaces:
+
+1. [Access your profile settings](#access-your-profile-settings).
+2. In the **Account Profile** section, locate the **Favorite workspaces** field.
+3. Select the workspaces you want to favorite.
 
 ### Access your profile settings
 

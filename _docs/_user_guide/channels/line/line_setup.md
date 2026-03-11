@@ -4,7 +4,7 @@ article_title: LINE Setup
 description: "This article covers how to set up the Braze LINE channel, including prerequisites and suggested next steps."
 page_type: partner
 search_tag: Partner
-page_order: 1
+page_order: 2
 channel:
  - LINE
 alias: /line/line_setup/
@@ -207,7 +207,7 @@ Here's an example payload to `/users/merge` that targets an unidentified user pr
 {% endraw %}
 
 {% alert tip %}
-To learn more about managing duplicate users in Braze, see [Duplicate Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users).
+To learn more about managing duplicate users in Braze, see [Duplicate Users]({{site.baseurl}}/user_guide/audience/user_profiles/merge_duplicate_users/).
 {% endalert %}
 
 ## User setup

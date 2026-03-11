@@ -1,7 +1,7 @@
 ---
 nav_title: Create a message
 article_title: Create an SMS, MMS, or RCS message
-page_order: 4
+page_order: 1
 description: "This article covers how to create and send an SMS, MMS, or RCS message in Braze."
 page_type: reference
 alias: /create_sms_mms_rcs_message/
@@ -28,9 +28,9 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
 2. Select **SMS/MMS/RCS**, or, for campaigns targeting multiple channels, select **Multichannel**.
 3. Name your campaign something clear and meaningful.
-4. Add [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
+4. Add [teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) and [tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) as needed.
    * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
-5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
+5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/messaging/testing/multivariant_testing/).
    * Braze allows you to include both SMS and RCS variants within a single campaign, so you can compare the performance of each.
 
 {% alert tip %}
@@ -40,12 +40,12 @@ If all of the messages in your campaign are going to be similar or have the same
 {% endtab %}
 {% tab Canvas %}
 
-1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas composer.
+1. [Create your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/) using the Canvas composer.
 2. After you've set up your Canvas, add an **SMS/MMS/RCS** Message step in the Canvas builder.
 3. Name your step something clear and meaningful.
-4. Choose a [step schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
+4. Choose a [step schedule]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
 5. Filter your audience for this step as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay at the time messages are sent.
-6. Choose your [advancement behavior]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
+6. Choose your [advancement behavior]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/advancement/).
 7. Choose any other messaging channels which you would like to pair with your message.
 
 {% endtab %}
@@ -96,7 +96,7 @@ You can add a contact card to your SMS message so customers can add your busines
 
 To send an MMS message, your subscription group must have at least one MMS-enabled phone number. This is indicated by an **MMS** tag next to the subscription group in the composer.
 
-Enter your message body, then upload a PNG, JPEG, or GIF image from the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) or specify an image URL. Only one image is supported per message.
+Enter your message body, then upload a PNG, JPEG, or GIF image from the [media library]({{site.baseurl}}/user_guide/messaging/design_and_edit/media_library/) or specify an image URL. Only one image is supported per message.
 
 {% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
@@ -153,7 +153,7 @@ RCS media messages allow you to use engaging media formats that aren't possible 
 **Features:**
 
 - Supports everything available in text message types, including text, suggested replies, and suggested actions.
-- Image files (JPEG, PNG) uploaded from the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/).
+- Image files (JPEG, PNG) uploaded from the [media library]({{site.baseurl}}/user_guide/messaging/design_and_edit/media_library/).
 - Video files (MP4, MPEG, MV4) added by URL in the message composer.
 - Document files (PDF) added by URL in the message composer.
 
@@ -176,7 +176,7 @@ The user experience of receiving RCS messages may vary based on carrier coverage
 {% endsubtab %}
 {% endsubtabs %}
 
-Write your message using languages and personalization ([Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), and emojis) as needed. Be sure to adhere to message copy limits to reduce your chances of overage charges.
+Write your message using languages and personalization ([Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/), [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/), and emojis) as needed. Be sure to adhere to message copy limits to reduce your chances of overage charges.
 
 {% alert important %}
 Before proceeding, read the [RCS message type guidelines](#step-3-compose-your-message) above. RCS messages are [charged per message]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/billing_calculator/), so it's a good idea to understand what can be included in each type.
@@ -201,11 +201,11 @@ Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/gen
 
 #### Creating right-to-left messages
 
-The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
+The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## Step 4: Preview and test your message
 
-Braze always recommends previewing and testing your message before sending. Switch to the **Test** tab to send a test SMS, MMS, or RCS message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
+Braze always recommends previewing and testing your message before sending. Switch to the **Test** tab to send a test SMS, MMS, or RCS message to [content test groups]({{site.baseurl}}/user_guide/administer/global/user_management/internal_groups/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
 
 ![Previewing SMS copy from the Test tab of the composer. In the profile section, the First Name field is set to "James". In the preview section, the SMS now reads "Hi James, we appreciate your support!"]({% image_buster /assets/img/sms_campaign_test.png %})
 
@@ -232,15 +232,15 @@ Next, build the remainder of your campaign. Refer to the following sections for 
 
 #### Choose delivery schedule or trigger
 
-Messages can be delivered based on a scheduled time, an action, or an API trigger. For more, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
+Messages can be delivered based on a scheduled time, an action, or an API trigger. For more, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/delivery_types/).
 
-For action-based delivery, you can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours).
+For action-based delivery, you can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/time_based_campaign/#quiet-hours).
 
-This step is also where you can specify delivery controls, such as allowing users to become [re-eligible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) to receive the campaign, or enabling [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) rules.
+This step is also where you can specify delivery controls, such as allowing users to become [re-eligible]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) to receive the campaign, or enabling [frequency capping]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/rate-limiting/#frequency-capping) rules.
 
 #### Choose users to target
 
-Next, [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the subscription group, which narrows users by the level or category of communication they wish to have with you.
+Next, [target users]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the subscription group, which narrows users by the level or category of communication they wish to have with you.
 
 {% multi_lang_include target_audiences.md %}
 
@@ -252,7 +252,7 @@ Interested in retargeting? Refer to [User retargeting]({{site.baseurl}}/user_gui
 
 #### Choose conversion events
 
-Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 Conversion events help you measure the success of your campaign. For example:
 
@@ -264,7 +264,7 @@ You can also set custom conversion events based on your specific use case.
 {% endtab %}
 {% tab Canvas %}
 
-If you haven't done so already, complete the remaining sections of your Canvas component. For further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
+If you haven't done so already, complete the remaining sections of your Canvas component. For further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
 
 {% endtab %}
 {% endtabs %}

@@ -1,5 +1,5 @@
 ---
-page_order: 7
+page_order: 22
 nav_title: Best practices
 article_title: In-app message best practices
 layout: dev_guide

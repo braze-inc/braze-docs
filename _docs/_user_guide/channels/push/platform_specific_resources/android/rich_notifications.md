@@ -49,10 +49,10 @@ Add the **Summary Text** that you'd like to display before the image in the noti
 
 Add your image in the **Android Notification Image** field in the composer of the message. Images can be uploaded directly through the dashboard or by specifying a content URL that is hosted elsewhere.
 
-For details about supported images, check out [Image specifications]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push).
+For details about supported images, check out [Image specifications]({{site.baseurl}}/user_guide/messaging/design_and_edit/media_library/#push).
 
 ![The Android notification image section where you can add an image or enter an image URL.]({% image_buster /assets/img_archive/android_rich_image.png %})
 
 ### Step 4: Continue creating your campaign
 
-After your rich notification content is uploaded to the dashboard, you can continue [scheduling your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
+After your rich notification content is uploaded to the dashboard, you can continue [scheduling your campaign]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/).

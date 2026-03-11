@@ -21,7 +21,7 @@ The integration workflow can be divided into two key flows:
 **Inbound flow:** A user's message arrives in Braze and is then forwarded to your external system for processing.
 **Outbound flow:** After processing the message, your external system sends a response to Braze, which then delivers the message to the end-user.
 
-To efficiently automate this communication, this integration uses two key Braze features: [webhook campaigns]({{site.baseurl}}/user_guide/channels/webhooks/create_a_webhook/) and [API-triggered campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/).
+To efficiently automate this communication, this integration uses two key Braze features: [webhook campaigns]({{site.baseurl}}/user_guide/channels/webhooks/create_a_webhook/) and [API-triggered campaigns]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery/).
 
 ![Architecture of the integration between the Braze WhatsApp channel and an external system.]({% image_buster /assets/img/whatsapp/external_system_architecture.png %})
 <sup>*Architecture of the integration between the Braze WhatsApp channel and an external system.*</sup>

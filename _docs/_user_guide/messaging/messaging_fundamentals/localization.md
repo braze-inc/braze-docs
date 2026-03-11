@@ -28,7 +28,7 @@ Consider the following approaches for managing your translations.
 {% tab campaign %}
 ### One template for all
 
-In this approach, localization is applied to a single template in Braze using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). After sending, the dashboard provides aggregated campaign analytics. User-level engagement can be measured using custom segment funnels, for example, by combining **Country** and **Received Campaign** filters.
+In this approach, localization is applied to a single template in Braze using [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid). After sending, the dashboard provides aggregated campaign analytics. User-level engagement can be measured using custom segment funnels, for example, by combining **Country** and **Received Campaign** filters.
 
 | Advantages | Considerations |
 | --- | --- |
@@ -40,7 +40,7 @@ In this approach, localization is applied to a single template in Braze using [L
 
 This approach separates templating into different sending locales. After sending, the dashboard reports sending analytics based on each country separately, and any downstream user-level [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) events will also be tied to a specific campaign.
 
-- Templates benefit from implementing [tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags#tags) for maintenance and tracking purposes.
+- Templates benefit from implementing [tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/#tags) for maintenance and tracking purposes.
 - Campaigns can inherit the configurations from the same [Braze template]({{site.baseurl}}/user_guide/messaging/templates/) and [Content Blocks]({{site.baseurl}}/user_guide/messaging/design_and_edit/content_blocks/) (such as [email templates]({{site.baseurl}}/user_guide/messaging/templates/email_templates/) that contain Liquid).
 - Pre-existing campaigns and templates can be [duplicated]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/duplicating/) to allow a faster time time-to-value.
 
@@ -94,7 +94,7 @@ For a full walkthrough, refer to the [guide on using translation tags]({{site.ba
 
 {% tabs local %}
 {% tab Custom Liquid %}
-You can manually paste your content into the body of your message and use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) to [conditionally]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) display the correct language to the recipient. To do this:
+You can manually paste your content into the body of your message and use [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/) to [conditionally]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/conditional_logic/#conditional-logic) display the correct language to the recipient. To do this:
 
 1. Compose your message, then select **Language** to generate Liquid conditional logic for each of your selected languages.
 2. You can use the following Liquid template to help build out your message. For each field with templating, you should enter the variations after the bracketed segment of templating. The variation should correspond to the language code referenced in the brackets before it.
@@ -242,7 +242,7 @@ These catalog items can them be referenced using [personalization]({{site.baseur
 {% endtab %}
 
 {% tab Braze partners %}
-Many Braze partners offer localization solutions, including [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#about-transifex) and [Crowdin](https://crowdin.com/). Typically users use the platform alongside an internal team and translation agency. These translations are then uploaded there and are then accessible via REST API. These services also often leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), allowing users to fetch the translations via API.
+Many Braze partners offer localization solutions, including [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#about-transifex) and [Crowdin](https://crowdin.com/). Typically users use the platform alongside an internal team and translation agency. These translations are then uploaded there and are then accessible via REST API. These services also often leverage [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/), allowing users to fetch the translations via API.
 
 For example, the following Connected Content calls call Transifex and Crowdin to fetch a translation, leveraging {% raw %}`{{${language}}}`{% endraw %} to identify the correct translation for a given user. This translation is then saved in the JSON block "strings" and referenced.
 
@@ -271,7 +271,7 @@ Host translations in a spreadsheet, then use one of the following methods to sen
 
 {% subtabs local %}
 {% subtab Connected Content %}
-You can with a translation agency to store translations in a Google spreadsheet, then query this content using [Braze Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). When you send a message, the relevant translation for each user will be pulled into your campaign body based on their selected language. 
+You can with a translation agency to store translations in a Google spreadsheet, then query this content using [Braze Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content). When you send a message, the relevant translation for each user will be pulled into your campaign body based on their selected language. 
 
 {% alert note %}
 The Google Sheets API has a limit of 500 requests per 100 seconds per project. Connected Content calls can be cached, but this solution is not scalable for a high-traffic campaign.

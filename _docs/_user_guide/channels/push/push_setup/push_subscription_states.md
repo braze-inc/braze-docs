@@ -70,7 +70,7 @@ There are two ways a [push token]({{site.baseurl}}/user_guide/channels/push/push
 When a user profile has a valid foreground push token associated with an app, Braze considers the user "push registered" for the given app. Braze, then, provides a specific segmentation filter, `Foreground Push Enabled for App,` to help identify these users.
 
 {% alert note %}
-The `Foreground Push Enabled for App` filter only considers the presence of a valid foreground and background push token for the given app. However, the more generic [`Foreground Push Enabled`](#foreground-push-enabled) filter segments users who have explicitly activated push notifications for any apps in your workspace. This count includes only foreground push and doesn't include users who have unsubscribed. You can learn more about these and other filters in [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+The `Foreground Push Enabled for App` filter only considers the presence of a valid foreground and background push token for the given app. However, the more generic [`Foreground Push Enabled`](#foreground-push-enabled) filter segments users who have explicitly activated push notifications for any apps in your workspace. This count includes only foreground push and doesn't include users who have unsubscribed. You can learn more about these and other filters in [Segmentation filters]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters/).
 {% endalert %}
 
 ### Multiple users on one device

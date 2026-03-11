@@ -19,9 +19,6 @@ guide_featured_list:
   - name: Catalogs
     link: /docs/user_guide/data/activation/catalogs/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Tags
-    link: /docs/user_guide/data/activation/tags/
-    image: /assets/img/braze_icons/list.svg
   - name: Manage custom data
     link: /docs/user_guide/data/activation/managing_custom_data/
     image: /assets/img/braze_icons/check-square-broken.svg

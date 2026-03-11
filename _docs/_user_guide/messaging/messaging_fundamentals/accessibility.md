@@ -122,7 +122,7 @@ Once your structure is in place, the next step is making sure your words are act
 
 - **Write short, clear sentences:** Short sentences are easy for everyone to understand, especially people using screen readers or who have trouble processing complex information. Write to a United States seventh-grade reading level. You can use resources such as [Hemingway App](https://hemingwayapp.com/) to check your text's reading level.
 - **Choose readable font sizes and spacing:** Text that's too small can be hard to read—especially on mobile. Use at least 14px for body text. Make headings larger so users can clearly see the difference. Extra spacing between lines (around 1.5 line-height) and paragraphs improves readability, especially for people with visual or cognitive needs.
-- **Avoid justified text:** Justified text creates uneven spacing between words, making reading difficult for people with dyslexia or cognitive disabilities. Consider making content that wraps to more than two lines aligned left for left-to-right languages or aligned right for [right-to-left languages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages).
+- **Avoid justified text:** Justified text creates uneven spacing between words, making reading difficult for people with dyslexia or cognitive disabilities. Consider making content that wraps to more than two lines aligned left for left-to-right languages or aligned right for [right-to-left languages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages/).
 - **Use bold, italic, and uppercase text sparingly:** Emphasizing too much text makes reading difficult—especially for people with dyslexia or visual impairments. Keep it simple.
 
 #### Clarity and usability
@@ -597,8 +597,8 @@ Emails created in the email drag-and-drop editor have presentational elements au
 
 To help you identify and fix accessibility issues early, Braze offers automated accessibility testing in the following areas:
 
-- [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#accessibility-testing) for emails
-- [Accessibility scanner]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/?tab=in-app%20message#accessibility-scanner) for messages created using our HTML editor (for example, HTML in-app messages, HTML Content Blocks, [custom email footers]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer), [email opt-in pages]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-opt-in-page), and [email unsubscribe pages]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-unsubscribe-page)).
+- [Inbox Vision]({{site.baseurl}}/user_guide/channels/email/inbox_vision/#accessibility-testing) for emails
+- [Accessibility scanner]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=in-app%20message#accessibility-scanner) for messages created using our HTML editor (for example, HTML in-app messages, HTML Content Blocks, [custom email footers]({{site.baseurl}}/user_guide/channels/email/drag_and_drop/custom_email_footer/), [email opt-in pages]({{site.baseurl}}/user_guide/channels/email/email_setup/consent_and_address_collection/#creating-a-custom-opt-in-page), and [email unsubscribe pages]({{site.baseurl}}/user_guide/channels/email/email_setup/consent_and_address_collection/#creating-a-custom-unsubscribe-page)).
 
 These tests check your message against the Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)) standard—a set of internationally recognized technical standards for accessible content. Any issues that can be detected automatically are flagged and categorized by severity to help you prioritize.
 
