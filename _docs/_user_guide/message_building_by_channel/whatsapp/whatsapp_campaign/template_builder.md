@@ -53,7 +53,7 @@ Under **Layout**, select the template type:
 Add a header to appear above the message body. You can choose:
 
 - **Text:** A short text header.  
-- **Media:** An image, video, or document (URL only). Braze will store the media reference and submit a sample to Meta for approval.  
+- **Media:** An image, video, or document (URL only). Braze stores the media reference and submits a sample to Meta for approval.  
 - **None:** No header 
 
 #### Body
@@ -94,7 +94,7 @@ Before submitting, preview how your message will appear to recipients:
 
 ### Step 6: Submit for review
 
-Select **Submit** to send your template to Meta for review, which typically takes around five minutes but can take up to 24 hours. The template appears on your **WhatsApp templates** page when it's submitted, and the status updates when you refresh the **WhatsApp templates** page.
+Select **Submit** to send your template to Meta for review, which typically takes a few minutes but can take up to 24 hours. The template appears on your **WhatsApp templates** page when it's submitted, and the status updates when you refresh the **WhatsApp templates** page.
 
 ## Supported template categories
 

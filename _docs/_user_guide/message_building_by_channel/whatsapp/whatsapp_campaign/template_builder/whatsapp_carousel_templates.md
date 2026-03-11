@@ -2,9 +2,10 @@
 nav_title: Carousel templates
 article_title: WhatsApp carousel templates
 description: "This reference article covers WhatsApp carousel templates."
-Tool:
+tool:
   - WhatsApp
 alias: /whatsapp_carousel_templates/
+toc_headers: h2
 ---
 
 # WhatsApp carousel templates
@@ -15,7 +16,7 @@ alias: /whatsapp_carousel_templates/
 WhatsApp carousel templates are in early access. Contact your customer success manager if you're interested in participating in this early access.
 {% endalert %}
 
-## Requirements
+## Prerequisites
 
 Before creating carousel templates, you need:
 - An active WhatsApp Business Account (WABA) connected to Braze
@@ -35,15 +36,17 @@ All phone numbers and subscription groups within the same WhatsApp Business Acco
 
 ## Create a carousel template
 
-You can create carousel templates within Braze with the WhatsApp template builder. When creating templates, Braze will validate your content to meet Meta's criteria. 
+You can create carousel templates within Braze with the WhatsApp template builder. When you create templates, Braze validates your content to meet Meta's criteria.
 
-When creating a template within Braze, you can either use the Liquid you expect to use when sending the message, and Braze will save it for future reference, or use generic variables like {% raw %}`{{1}}`{% endraw %}. 
+When creating a template in Braze, you can either use:
+- Liquid you expect to use when sending the message. Braze saves this for future reference.
+- Generic variables like {% raw %}`{{1}}`{% endraw %}.
 
 {% alert note %}
 {% raw %}`{% %}`{% endraw %} Liquid tags are not supported in the template builder because they don’t pass Meta’s content criteria. 
 {% endalert %}
 
-After the template is submitted, it will appear in the WABA’s template list and be reviewed within 24 hours. However, review often occurs within five minutes. 
+After the template is submitted, it appears in the WABA’s template list and is reviewed within 24 hours. However, a review often occurs within a few minutes.
 
 ### Step 1: Access the template builder
 
@@ -83,17 +86,17 @@ Before creating individual cards, define the overall carousel structure with car
 
 #### Media Type
 
-Choose the media type: **Image** or **Video**. This will be used for all cards.
+Choose the media type: **Image** or **Video**. This is used for all cards.
 
 ![Composer with options to select an Image or Video media type.]({% image_buster /assets/img/whatsapp/templates/media_types.png %})
 
 #### Button Configuration
 
-Choose the button type: **Quick Reply**, **Phone Number**, or **Visit Website**. This configuration will be used for all cards. Then, select up to two buttons per card.
+Choose the button type: **Quick Reply**, **Phone Number**, or **Visit Website**. This configuration is used for all cards. Then, select up to two buttons per card.
 
 ### Step 5: Create carousel cards
 
-Now you can create individual carousel cards. All cards will maintain the same shape and structure. You can add up to 10 cards, but you must add at least 2 cards.
+Now you can create individual carousel cards. All cards maintain the same shape and structure. You can add up to 10 cards, but you must add at least two cards.
 
 {% alert important %}
 You cannot change the number of cards after submitting the template to Meta for review.
@@ -102,7 +105,7 @@ You cannot change the number of cards after submitting the template to Meta for 
 1. Upload an image or video, depending on your selected media type.
 2. Add card text or a description.
 3. Configure button text and actions.
-4. Add Liquid variables where needed. You can add them wherever there is a plus icon.
+4. Add Liquid variables where needed. You can add them wherever there is a **+** plus button.
 
 {% alert tip %}
 Use Liquid variables strategically to personalize content like discount percentages, product names, or user-specific offers. Variables can be added to card text, button text, and URLs.
@@ -118,7 +121,7 @@ Use Liquid variables strategically to personalize content like discount percenta
 4. Check the template status in your **Templates** list on the WhatsApp template page or Canvas and campaign selector. 
 
 {% alert note %}
-Test sending is not available until after Meta approves the template. The template status will show as “Draft” during creation and change to “Approved” after Meta completes the review.
+Test sending is not available until after Meta approves the template. The template status shows as **Draft** during creation and changes to **Approved** after Meta completes the review.
 {% endalert %}
 
 ## Use carousel templates
@@ -137,7 +140,7 @@ If you have multiple WhatsApp Business Accounts, select a subscription group fro
 ### Step 2: Select your carousel template
 
 1. Search for your template by name (such as “carousel_example”).
-2. Verify the template status is “Approved”.
+2. Verify the template status is **Approved**.
 3. Select the template to load it into the message composer.
 
 ### Step 3: Customize dynamic content
@@ -147,7 +150,6 @@ When your template loads, it contains locked and editable content.
 {% tabs local %}
 {% tab Locked content %}
 
-### Locked content
 
 - Static text (any content submitted without variables) is locked and cannot be edited.
 - The number of carousel cards is fixed.
@@ -156,7 +158,6 @@ When your template loads, it contains locked and editable content.
 {% endtab %}
 {% tab Editable content %}
 
-### Editable content
 
 {% raw %}
 - Any field with a variable can be modified with different Liquid.
@@ -175,7 +176,7 @@ When your template loads, it contains locked and editable content.
 
 ### Step 4: Launch your campaign or Canvas
 
-After composition, proceed with your campaign or Canvas launch workflow, including testing. The carousel template will function like any other WhatsApp message template.
+After composition, proceed with your campaign or Canvas launch workflow, including testing. The carousel template functions like any other WhatsApp message template.
 
 ## Best practices
 
@@ -184,7 +185,7 @@ After composition, proceed with your campaign or Canvas launch workflow, includi
 - **Body content placement:** Variables cannot be placed at the end of body content. Add at least one word or punctuation mark after each variable.
 - **Consistent card structure:** All cards must have the same shape, media type, and button configuration. Plan your content accordingly.
 - **Optimal card count:** While you can create up to 10 cards, consider the user experience. Too many cards can be overwhelming; 3–5 cards work well for most use cases.
-- **Default values:** When using Liquid variables, always provide default values for an accurate preview. This helps confirm that the message will display appropriately if certain user profile data is missing.
+- **Default values:** When using Liquid variables, always provide default values for an accurate preview. This helps confirm that the message displays appropriately if certain user profile data is missing.
 
 ### WhatsApp Business Accounts and subscription groups
 
@@ -201,7 +202,7 @@ After composition, proceed with your campaign or Canvas launch workflow, includi
 
 | Issue | Solution |
 | --- | --- |
-| Template not appearing in campaign | Verify that the selected subscription group belongs to the same WABA as the template. Also check that the template status is "Approved" and not still in "Draft" or "Pending" status. |
+| Template not appearing in campaign | Verify that the selected subscription group belongs to the same WABA as the template. Also, check that the template status is **Approved** and not still in **Draft** or **Pending** status. |
 | Cannot place variable at end of body | Move the variable earlier in the text and add at least one character or punctuation mark after it. This is a Meta requirement for WhatsApp templates. |
 | Variables not populating in test | Ensure your Liquid syntax is correct and that the attributes exist in your user profiles. Check for typos in variable names and verify that default values are set where appropriate. |
 | Template name has spaces | Template names cannot contain spaces. Use underscores instead (`template_name`) or remove spaces entirely (`templatename`). |
