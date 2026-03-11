@@ -1,17 +1,12 @@
 {% if include.section == "Prerequisites" %}
 ## Prerequisites
 
-To edit and manage [multi-language support]({{site.baseurl}}/multi_language_support/), you need the following [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) for your workspace:
-
-- View Localization Settings
-- Edit Localization Settings
-- Delete Localization Settings
-
-To add the locale to a message, you need the "Edit Campaigns" permission.
-
-{% alert important %}
-Multi-language support is currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
-{% endalert %}
+| Feature | Required permissions |
+| --- | --- |
+| Multi-language locales | You need these user permissions to create and manage multi-language locales:<br><br> {::nomarkdown}Granular permissions: <ul><li>“Create Multi-Language Locale Settings”</li></ul><br><br> Legacy permissions:<ul><li> “Manage Multi Language Settings”</li></ul>{:/} |
+| Message types | You need these user permissions to add locales and translations to campaigns and Canvases:<br><br> {::nomarkdown}Granular permissions: <ul><li>“Edit Campaigns”</li><li>“Edit Canvases”</li></ul><br><br> Legacy permissions:<ul><li>“Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers”</li></ul>{:/} |
+| Templates | You need these user permissions associated with the template type you want to add locales and translations to:<br><br> {::nomarkdown}Granular permissions: <ul><li>“Edit Email Templates”</li><li>“Edit IAM Templates”</li><li>“Edit Content Block Templates”</li></ul><br><br> Legacy permissions:<ul><li>“Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers”</li></ul>{:/} |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endif %}
 

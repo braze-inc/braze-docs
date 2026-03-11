@@ -15,15 +15,13 @@ description: "This article provides steps on how to use locales in your messages
 
 ## Using locales
 
-### Step 1: Set up locales in your workspace {#workspace-setup}
+### Step 1: Set up locales
 
-Before you can use locales and translation tags, you must first [add locales to your workspace]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings).
+Before you can add translations to a message, you must first [create the locales you want to support]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings/). Locales define the language (and optionally region) variants available for messaging. 
 
-### Step 2: Add translation liquid tags to your message {#add-translation-tags}
+### Step 2: Mark content for translation
 
-Add translation tags {% raw %}`{% translation your_id_here %}` and `{% endtranslation %}`{% endraw %} to wrap all text, image, or link URLs that you will be translating.
-
-Each translation should have a unique `id`. For example, when translating a simple greeting, you may name the ID "greeting":
+Wrap text you want to translate with the Liquid translation tags {% raw %}`{% translation your_id_here %}` and `{% endtranslation %}`{% endraw %} and assign a tag ID. Translation tag IDs must be unique within a message. Consider using semantic ID names that plainly describe the text, such as {% raw %}`{% translation header %}`{% endraw %}.
 
 {% raw %}`{% translation greeting %}Hello!{% endtranslation %}`{% endraw %}
 
