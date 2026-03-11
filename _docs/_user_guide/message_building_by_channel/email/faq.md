@@ -47,7 +47,7 @@ Soft bounces are emails that bounce due to a temporary or transient issue such a
 
 ### How can I implement an email feedback loop for Gmail?
 
-An email feedback loop (FBL) allows senders to monitor their reputation by identifying campaigns that receive a high volume of complaints. Refer to [Google's feedback loop](https://support.google.com/a/answer/6254652) article for steps on how to implement this.
+An email feedback loop (FBL) allows senders to monitor their reputation by identifying campaigns that receive a high volume of complaints. For steps to implement a Gmail feedback loop, see [Google's Feedback Loop](https://support.google.com/a/answer/6254652) article.
 
 ### What are open tracking pixels?
 
