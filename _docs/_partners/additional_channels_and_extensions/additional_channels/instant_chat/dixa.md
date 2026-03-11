@@ -83,9 +83,9 @@ The following shows an example of the integration:
 
 Dixa uses webhooks to send data to Braze. You must be a Dixa administrator to configure webhooks.
 
-The first step is to create a data transformation in Braze. Go to **Data settings** > **Data transformation** > **Create transformation**.
+The first step is to create a data transformation in Braze. Go to **Data Settings** > **Data Transformations** > **Create transformation**.
 
-Select **Start from scratch**, select destination **POST: Track users**, and select **Create transformation**.
+Select **Start from scratch**, select destination **POST: Track Users**, and select **Create transformation**.
 
 In the transformation editor, copy the code example in the Example transformation tool section below and insert it in the **Transformation code** field. Click **Save**, copy the **Webhook URL**, and open Dixa.
 
