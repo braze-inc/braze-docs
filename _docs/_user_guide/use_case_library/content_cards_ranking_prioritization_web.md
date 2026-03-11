@@ -166,3 +166,4 @@ For more on Content Cards, KVPs, and feed behavior, see the following:
 - [Key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/)
 - [Content Card feed customization]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/)
 - [Creating Content Cards]({{site.baseurl}}/developer_guide/content_cards/creating_cards/)
+
