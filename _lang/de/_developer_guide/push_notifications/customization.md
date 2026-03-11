@@ -1,7 +1,7 @@
 ---
 page_order: 0.1
 nav_title: Nachrichten anpassen
-article_title: Anpassen von Push-Benachrichtigungen für das Braze SDK
+article_title: Push-Benachrichtigungen für das Braze SDK anpassen
 channel:
   - push notifications
 ---
@@ -21,5 +21,9 @@ channel:
 
 {% sdktab fireos %}
 {% multi_lang_include developer_guide/fireos/push_notifications/customization.md %}
+{% endsdktab %}
+
+{% sdktab React Native %}
+{% multi_lang_include developer_guide/react_native/push_notifications/customization.md %}
 {% endsdktab %}
 {% endsdktabs %}

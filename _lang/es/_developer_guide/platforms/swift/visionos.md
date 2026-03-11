@@ -1,5 +1,5 @@
 ---
-nav_title: Apoyo de Visionos
+nav_title: Soporte técnico de Visionos
 article_title: compatibilidad con visionOS
 page_order: 7.2
 platform: 

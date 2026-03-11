@@ -1,5 +1,5 @@
 ---
-nav_title: Anpassen des Stils von Nachrichten
+nav_title: Anpassen des Stils der Nachrichten
 article_title: "Anleitung: Anpassen des Stils mit Schlüssel-Wert-Paaren"
 description: ""
 page_order: 1
@@ -82,7 +82,7 @@ Um die Nachricht anzuzeigen, rufen Sie [`showInAppMessage(message)`](https://js.
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/prerequisites/android.md %} Außerdem müssen Sie [In-App-Nachrichten für Android aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/android.md %} Bitte beachten Sie, dass Sie [für Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages) auch [In-App-Nachrichten aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages) müssen.
 
 ## Anpassen des Stils von Nachrichten mit Schlüssel-Wert-Paaren für Android
 
@@ -222,7 +222,7 @@ Implementieren Sie [`IInAppMessageViewFactory`](https://braze-inc.github.io/braz
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab swift %}
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Sie müssen auch [In-App-Nachrichten für Swift aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Bitte beachten Sie, dass Sie auch [In-App-Nachrichten für SWIFT aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages) müssen.
 
 ## Anpassen des Stils von Nachrichten mit Schlüssel-Wert-Paaren für Swift
 

@@ -10,12 +10,12 @@
 ## アプリ内メッセージを有効にする
 
 {% alert note %}
-このステップはiOS専用である。アプリ内メッセージのデフォルト実装は、Androidではすでに設定されている。
+このステップはiOS専用だ。Androidでは、アプリ内メッセージのデフォルト実装は既に設定済みだ。
 {% endalert %}
 
-iOSのアプリ内メッセージのデフォルトプレゼンターを設定するには、`BrazeInAppMessagePresenter` プロトコルの実装を作成し、Brazeインスタンスのオプション`inAppMessagePresenter` に割り当てる。`BrazeInAppMessageUI` オブジェクトをインスタンス化することで、デフォルトの Braze UI プレゼンターを使用することもできます。
+iOSアプリ内メッセージのデフォルトプレゼンターを設定するには、プロトコ`BrazeInAppMessagePresenter`ルの実装を作成し、それをBrazeインスタンスの`inAppMessagePresenter`オプションに割り当てる。`BrazeInAppMessageUI` オブジェクトをインスタンス化することで、デフォルトの Braze UI プレゼンターを使用することもできます。
 
-`BrazeInAppMessageUI` クラスにアクセスするには、`BrazeUI` ライブラリーをインポートする必要がある。
+その`BrazeInAppMessageUI`クラスにアクセスするには、その`BrazeUI`ライブラリーをインポートしなければならない。
 
 {% tabs %}
 {% tab swift %}
@@ -62,4 +62,4 @@ override func application(
 {% endtab %}
 {% endtabs %}
 
-実装をさらにカスタマイズするには、[アプリ内メッセージデータのログを]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter)参照すること。
+実装をさらにカスタマイズするには、[アプリ内メッセージデータのログ記録]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter)を参照せよ。

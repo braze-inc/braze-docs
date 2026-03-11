@@ -1,5 +1,5 @@
 ---
-nav_title: SDK 통합 가이드(선택 사항)
+nav_title: SDK 통합 가이드 (선택 사항)
 article_title: iOS용 Braze SDK 통합 가이드(선택 사항)
 alias: "/ios_sdk/"
 description: "이 iOS 통합 SDK 가이드는 iOS SDK와 핵심 구성요소를 애플리케이션에 처음 통합할 때 설정 모범 사례에 대한 단계별 여정을 안내합니다. 이 가이드는 BrazeManager.swift 헬퍼 파일을 빌드하는 데 도움이 됩니다."
@@ -291,7 +291,7 @@ extension BrazeManager {
 {% endsubtabs %}
 
 ###### 2단계: 원격 알림 지원
-**서명 & 기능** 탭에서 **백그라운드 모드** 지원을 추가하고 **원격 알림을** 선택하여 Braze에서 발생하는 원격 푸시 알림에 대한 지원을 시작하세요.<br><br>![서명 & 기능]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
+**서명 & 기능** 탭에서 **백그라운드 모드** 지원을 추가하고 **원격 알림**을 선택하여 Braze에서 발생하는 원격 푸시 알림 지원을 시작합니다.<br><br>![서명 & 기능]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
 
 ###### 3단계: 원격 알림 처리
 Braze SDK는 Braze에서 발생하는 원격 푸시 알림을 처리할 수 있습니다. 원격 알림을 Braze로 전달합니다. 그러면 SDK는 Braze에서 발생하지 않은 푸시 알림을 자동으로 무시합니다. 푸시 알림 확장의 `BrazeManager.swift` 파일에 다음 메서드를 추가합니다.

@@ -5,7 +5,7 @@ page_order: 2.1
 description: "Dieser Referenzartikel befasst sich mit dem KI-Texterstellungsassistenten, einer Funktion, die einen kurzen Produktnamen oder eine kurze Beschreibung an das GPT-Texterstellungstool von OpenAI weitergibt, um menschenähnliche Marketingtexte zur Verwendung in Ihren Mitteilungen zu erstellen."
 ---
 
-# Kopie mit <sup>BrazeAITM</sup> generieren
+# Erstellen Sie Texte mit BrazeAI
 
 > Der KI-Copywriting-Assistent übergibt einen kurzen Produktnamen oder eine kurze Beschreibung an ein GPT-Texterstellungstool eines Drittanbieters, das OpenAI gehört, um menschenähnliche Marketingtexte zur Verwendung in Ihrem Messeging zu erstellen. Diese Funktion ist standardmäßig für die meisten Nachrichten-Editoren im Braze Dashboard verfügbar.
 
@@ -44,7 +44,7 @@ Wir filtern Antworten auf anstößige Inhalte heraus, die gegen die [Content-Ric
 
 ## Daten zu vergangenen Kampagnen {#past-campaign-data}
 
-Wenn Sie Push als Ausgabelänge verwenden und **Daten vergangener Kampagnen referenzieren**, werden zufällig ausgewählte frühere mobile Push-Kampagnen an OpenAI gesendet, so dass GPT sie als Grundlage für seine Kopiererstellung verwenden kann. Derzeit sendet der KI-Texter Push-Kampagnen an OpenAI, die keine Liquid-Syntax haben. Lassen Sie dieses Kästchen deaktiviert, wenn Sie diese Möglichkeit nicht nutzen möchten. In den folgenden Abschnitten finden Sie weitere Informationen darüber, wie Braze und OpenAI Ihre Daten verwenden. 
+Wenn Sie „Push“ als Ausgabelänge verwenden und **„Referenzdaten aus früheren Kampagnen**“ auswählen, werden zufällig ausgewählte frühere Mobile-Push-Kampagnen an OpenAI gesendet, damit GPT sie als Grundlage für die Texterstellung verwenden kann. Derzeit sendet der KI-Texter Push-Kampagnen an OpenAI, die keine Liquid-Syntax enthalten. Lassen Sie dieses Kästchen deaktiviert, wenn Sie diese Möglichkeit nicht nutzen möchten. In den folgenden Abschnitten finden Sie weitere Informationen darüber, wie Braze und OpenAI Ihre Daten verwenden. 
 
 Bei Verwendung in Verbindung mit einem [Markenleitfaden]({{site.baseurl}}/user_guide/brazeai/generative_ai//brand_guidelines/) werden sowohl der Markenleitfaden als auch die Daten der vergangenen Kampagne in die endgültige Ausgabe einbezogen.
 

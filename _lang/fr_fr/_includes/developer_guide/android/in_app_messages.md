@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} Vous devrez également activer les messages in-app.
+{% multi_lang_include developer_guide/prerequisites/android.md %} Il vous sera également nécessaire d'activer les messages in-app.
 
 ## Types de messages
 
@@ -8,21 +8,21 @@
 
 ## Activation des messages in-app
 
-### Étape 1 : Registre `BrazeInAppMessageManager`
+### Étape 1 : S'inscrire `BrazeInAppMessageManager`
 
 L’affichage des messages in-app est géré par la classe [`BrazeInAppMessageManager`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html). Chaque activité de votre application doit être enregistrée avec le `BrazeInAppMessageManager` pour lui permettre d’ajouter des vues de messages in-app à la hiérarchie de vues. Il existe deux manières de le faire :
 
 {% tabs local %}
 {% tab automatically %}
-L'[intégration du rappel du cycle de vie de l'activité]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking) gère automatiquement l'enregistrement des messages in-app ; aucune intégration supplémentaire n'est nécessaire. C'est la méthode recommandée pour l'envoi de messages in-app.
+L'[intégration du rappel du cycle de vie de l'activité]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking) gère automatiquement l'enregistrement des messages in-app ; aucune intégration supplémentaire n'est nécessaire. Il s'agit de la méthode recommandée pour gérer l'enregistrement des messages in-app.
 {% endtab %}
 
 {% tab manually %}
 {% alert warning %}
-Si vous utilisez le rappel du cycle de vie de l'activité pour l'enregistrement automatique, ne terminez pas cette étape.
+Si vous utilisez le rappel du cycle de vie de l'activité pour l'enregistrement automatique, veuillez ignorer cette étape.
 {% endalert %}
 
-Dans votre [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate())appel [`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html):
+Dans votre [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()), veuillez contacter [`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html):
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -41,7 +41,7 @@ BrazeInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(cont
 {% endsubtab %}
 {% endsubtabs %}
 
-Dans chaque activité où des messages in-app peuvent être affichés, appelez [`registerInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/register-in-app-message-manager.html) dans le site `onResume()` de cette activité :
+Dans chaque activité où des messages in-app peuvent être affichés, veuillez appeler[`registerInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/register-in-app-message-manager.html)dans cette activité `onResume()`:
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -71,7 +71,7 @@ public override fun onResume() {
 {% endsubtab %}
 {% endsubtabs %}
 
-Dans toutes les activités où [`registerInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/register-in-app-message-manager.html) a été appelé, appelez [`unregisterInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/unregister-in-app-message-manager.html) dans l'activité `onPause()`:
+Dans chaque activité où[`registerInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/register-in-app-message-manager.html)  a été appelé, veuillez appeler[`unregisterInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/unregister-in-app-message-manager.html)  dans le `onPause()`:
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -101,7 +101,7 @@ public override fun onPause() {
 {% endtab %}
 {% endtabs %}
 
-### Étape 2 : Mettre à jour la liste de blocage du gestionnaire (facultatif)
+### Étape 2 : Veuillez mettre à jour la liste de blocage du gestionnaire (facultatif)
 
 Dans votre intégration, vous pouvez exiger que certaines activités de votre application n’affichent pas de messages in-app. L'[intégration du rappel du cycle de vie de l'activité]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking) offre un moyen simple d'y parvenir.
 

@@ -157,7 +157,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 
 ### Atributo personalizado con un valor de matriz
 
-El número máximo de elementos de [las matrices de atributos personalizadas]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) está predeterminado en 25. Las matrices que superen la cantidad máxima de elementos se truncarán para contenerla. El máximo para matrices individuales puede aumentarse hasta 100. Si deseas aumentar este máximo, ponte en contacto con el administrador del servicio de atención al cliente. 
+El número máximo de elementos de [las matrices de atributos personalizadas]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) está predeterminado en 25. Las matrices que superan la cantidad máxima de elementos se truncan para contener la cantidad máxima de elementos. El máximo para matrices individuales se puede aumentar hasta 500. Para aumentar este límite por encima de 500, ponte en contacto con tu administrador del éxito del cliente de Braze.
 
 
 {% tabs %}

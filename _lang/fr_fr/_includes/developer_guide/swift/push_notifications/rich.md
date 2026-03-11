@@ -1,6 +1,6 @@
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Vous devrez également [configurer les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift).
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Il vous sera également nécessaire de [configurer les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift).
 
-## Mise en place de notifications push riches
+## Configuration des notifications push riches
 
 ### Étape 1 : Création d’une extension de service
 
@@ -16,7 +16,17 @@ Une extension de service de notification est un binaire propre qui est intégré
 
 L'ID du bundle de l'extension du service de notification doit être distinct de l'ID du bundle de votre application principale. Par exemple, si l’ID de lot de votre application est `com.company.appname`, vous pouvez utiliser `com.company.appname.AppNameServiceExtension` pour votre extension de service.
 
-### Étape 3 : Intégration de riches notifications push
+### Étape 3 : Ajouter un groupe d'applications
+
+Dans Xcode, veuillez ajouter la fonctionnalité Groupe d'applications à partir du volet **Signing&Capabilities** à votre cible d'application principale ainsi qu'à la cible Notification Service Extension. Ensuite, cliquez sur le bouton **+**. Utilisez l’ID de l’ensemble de votre application pour créer le groupe d'applications. Par exemple, si l’ID de l’ensemble de votre application est `com.company.appname`, vous pouvez nommer votre groupe d'applications `group.com.company.appname.xyz`.
+
+{% alert important %}
+Les groupes d'applications dans ce contexte font référence à l'[App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) d'Apple et non à votre identifiant de l'espace de travail Braze (anciennement groupe d'applications).
+{% endalert %}
+
+Il est nécessaire de disposer d'un groupe d'applications partagé afin que votre application principale et l'extension de service de notification puissent accéder aux données partagées. Si vous n'ajoutez pas votre application à un groupe d'applications, il est possible que certains champs de la charge utile push ne soient pas renseignés et que votre application ne fonctionne pas correctement.
+
+### Étape 4 : Intégration de riches notifications push
 
 Pour obtenir un guide étape par étape sur l'intégration des notifications push enrichies avec `BrazeNotificationService`, reportez-vous à notre [tutoriel](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications).
 
@@ -29,9 +39,9 @@ Pour voir un exemple, reportez-vous à l'utilisation dans [`NotificationService`
 
 Après avoir suivi le [Guide d'intégration du gestionnaire de paquets Swift]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager/), ajoutez `BrazeNotificationService` à votre `Notification Service Extension` en procédant comme suit :
 
-1. Dans Xcode, sous Infrastructures et bibliothèques, sélectionnez l'icône d’ajout <i class="fas fa-plus"></i> pour ajouter un framework. <br><br>![L'icône plus est située sous frameworks et emplacements dans Xcode.]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
+1. Dans Xcode, sous Infrastructures et bibliothèques, sélectionnez l'icône d’ajout <i class="fas fa-plus"></i> pour ajouter un framework. <br><br>![L'icône « + » se trouve sous « Frameworks » et « Libraries » dans Xcode.]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
 
-2. Sélectionnez le cadre "BrazeNotificationService". <br><br>![Le cadre "BrazeNotificationService" peut être sélectionné dans la fenêtre modale qui s'ouvre.]({% image_buster /assets/img_archive/rich_notification2.png %})
+2. Sélectionnez le cadre "BrazeNotificationService". <br><br>![Le cadre « BrazeNotificationService » peut être sélectionné dans la fenêtre modale/boîte de dialogue modale, etc.]({% image_buster /assets/img_archive/rich_notification2.png %})
 
 {% endtab %}
 {% tab CocoaPods %}
@@ -97,6 +107,17 @@ class NotificationService: UNNotificationServiceExtension {
 }
 ```
 
-### Étape 4 : Créer une notification enrichie dans votre tableau de bord
+### Étape 5 : Configuration du groupe d'applications dans Braze
 
-Votre équipe Marketing peut également créer des notifications enrichies à partir du tableau de bord. Créez une notification push via le compositeur de push et joignez simplement une image ou un GIF, ou fournissez une URL qui héberge une image, un GIF ou une vidéo. Notez que les ressources sont téléchargées à la réception des notifications push, vous devez donc prévoir des pics importants et synchrones de demandes si vous hébergez votre contenu.
+Avant d'initialiser Braze, assignez le nom de votre groupe d'applications à la propriété [`push.appGroup`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/appgroup) de votre configuration Braze.
+
+```swift
+let configuration = Braze.Configuration(apiKey: "<YOUR-BRAZE-API-KEY>",
+                                        endpoint: "<YOUR-BRAZE-ENDPOINT>")
+configuration.push.appGroup = "REPLACE_WITH_APPGROUP"
+let braze = Braze(configuration: configuration)
+```
+
+### Étape 6 : Créer une notification enrichie dans votre tableau de bord
+
+Votre équipe marketing peut également créer des notifications enrichies à partir du tableau de bord. Veuillez créer une notification push via le compositeur de notifications push et joindre une image ou un GIF, ou fournir une URL hébergeant une image, un GIF ou une vidéo. Notez que les ressources sont téléchargées à la réception des notifications push, vous devez donc prévoir des pics importants et synchrones de demandes si vous hébergez votre contenu.

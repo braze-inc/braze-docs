@@ -1,5 +1,5 @@
 ---
-nav_title: "Invitation personnalisée à l'examen de la boutique d'applications"
+nav_title: "Invitation à évaluer l'application personnalisée sur l'App Store"
 article_title: Invite de vérification personnalisée d’App Store
 platform: iOS
 page_order: 4

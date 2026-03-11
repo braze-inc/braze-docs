@@ -157,7 +157,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 
 ### Attribut personnalisé avec une valeur de tableau
 
-Le nombre maximum d'éléments dans les [tableaux d'attributs personnalisés]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) est par défaut de 25. Les tableaux dépassant le nombre maximum d’éléments seront tronqués pour contenir le nombre maximum d’éléments. Le maximum pour les tableaux individuels peut être augmenté jusqu’à 100. Si vous souhaitez que ce maximum soit augmenté, contactez votre gestionnaire de service à la clientèle. 
+Le nombre maximum d'éléments dans les [tableaux d'attributs personnalisés]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) est par défaut de 25. Les tableaux dépassant le nombre maximum d'éléments sont tronqués afin de contenir le nombre maximum d'éléments. Le nombre maximal de tableaux individuels peut être augmenté jusqu'à 500. Pour augmenter cette limite au-delà de 500, veuillez contacter votre gestionnaire de la satisfaction client Braze.
 
 
 {% tabs %}

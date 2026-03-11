@@ -28,7 +28,7 @@ Los mensajes modales dentro de la aplicación están diseñados para ajustarse a
 
 Aunque no hay límites en cuanto al número de caracteres de texto que puedes incluir en un mensaje dentro de la aplicación (así como en los botones, el titular, el cuerpo principal y otros), moderamos el número de caracteres de texto que utilizas. Demasiado texto obligará a los usuarios a ampliar y desplazar el mensaje.
 
-Todos los mensajes dentro de la aplicación tienen un tamaño de imagen recomendado de 500 KB, un tamaño de imagen máximo de 5 MB y admiten los tipos de archivo PNG, JPEG y GIF. Las imágenes WebP no son compatibles con todos los dispositivos o navegadores; te sugerimos que conviertas las imágenes WebP a PNG o JPEG antes de añadirlas a los mensajes dentro de la aplicación.
+Todos los mensajes dentro de la aplicación tienen un tamaño de imagen recomendado de 500 KB, un tamaño máximo de 5 MB y admiten los tipos de archivo PNG, JPEG y GIF. Las imágenes WebP no son compatibles con todos los dispositivos o navegadores; recomendamos convertir las imágenes WebP a PNG o JPEG antes de añadirlas a los mensajes dentro de la aplicación.
 
 {% tabs %}
 {% tab Portrait %}
@@ -61,7 +61,7 @@ Todos los mensajes dentro de la aplicación tienen un tamaño de imagen recomend
 
 | Tipo | Relación de aspecto | Calidad de imagen | Notas |
 | --- | --- | --- | --- |
-| Modal (sólo imagen) | 1:1 | Resolución máxima recomendada: 1200 x 2000 px <br> Resolución mínima: 600 x 600 px | El mensaje cambiará de tamaño para adaptarse a imágenes de la mayoría de las relaciones de aspecto. La resolución máxima recomendada tiene una relación de aspecto 3:5, que puede no proporcionar resultados óptimos. Aunque las imágenes más grandes son utilizables, pueden provocar tiempos de carga más largos. <br> La relación de aspecto ideal para las imágenes es 1:1, y el incumplimiento de esta relación puede desencadenar una advertencia durante la carga. Esta advertencia es una sugerencia para obtener mejores resultados y no impide subir imágenes más grandes. |
+| Modal (sólo imagen) | 1:1 | Resolución máxima recomendada: 1200 x 2000 píxeles <br> Resolución mínima: 600 x 600 píxeles | El mensaje cambiará de tamaño para adaptarse a imágenes de la mayoría de las relaciones de aspecto. La resolución máxima recomendada tiene una relación de aspecto de 3:5, lo que puede no proporcionar resultados óptimos. Aunque las imágenes más grandes son utilizables, pueden provocar tiempos de carga más largos. <br> La relación de aspecto ideal para las imágenes es 1:1, y si no se cumple esta relación, puede desencadenarse una advertencia durante la carga. Esta advertencia es una sugerencia para obtener mejores resultados y no impide la carga de imágenes más grandes. |
 | Modal con texto | 29:10 | Alta resolución 1450 x 500 px <br> Resolución mínima 600 x 205 px | Las imágenes altas se reducirán y se centrarán horizontalmente. Las imágenes anchas se recortarán por los bordes izquierdo y derecho. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
@@ -152,7 +152,7 @@ table td {
 | --- | --- | 
 | Tamaño | 5 MB |
 | Ancho | Cabecera: 600 px<br>Cuerpo: 480 px |
-| Tipos de archivo | PNG, JPEG, GIF<br><br> La compatibilidad con imágenes WebP varía según el cliente de correo electrónico. Para una reproducción fiable, convierte las imágenes WebP a PNG o JPEG antes de añadirlas a los mensajes de correo electrónico. |
+| Tipos de archivo | PNG, JPEG, GIF<br><br> La compatibilidad con imágenes WebP varía según el cliente de correo electrónico. Para garantizar una visualización fiable, convierte las imágenes WebP a PNG o JPEG antes de añadirlas a los mensajes de correo electrónico. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Especificaciones del texto | Propiedades máximas recomendadas |

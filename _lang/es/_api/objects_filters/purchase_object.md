@@ -15,7 +15,7 @@ description: "Este artículo de referencia explica los distintos componentes de 
 
 ## ¿Qué es un objeto de compra?
 
-Un objeto de compra es un objeto que se pasa a través de la API cuando se ha realizado una compra. Cada objeto de compra está ubicado dentro de una matriz de objetos de compra, siendo cada objeto una única compra realizada por un usuario concreto en un momento determinado. El objeto de compra tiene muchos campos diferentes que permiten al backend Braze almacenar y utilizar esta información para la personalización, la recopilación de datos y la personalización.
+Un objeto de compra es un objeto que se pasa a través de la API cuando se ha realizado una compra. Cada objeto de compra está ubicado dentro de una matriz de objetos de compra, siendo cada objeto una única compra realizada por un usuario concreto en un momento determinado. El objeto de compra tiene muchos campos diferentes que permiten al backend de Braze almacenar y utilizar esta información para la personalización, la recopilación de datos y la personalización.
 
 ### Cuerpo del objeto
 
@@ -48,7 +48,11 @@ Un objeto de compra es un objeto que se pasa a través de la API cuando se ha re
 - [Wiki de código de divisa ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)
 - [Wiki de código de hora ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 
-## ID del producto de compra
+{% alert note %}
+Algunos pares de identificadores no se pueden utilizar juntos, y`email`  tiene prioridad sobre`phone`  cuando se proporcionan ambos. Para obtener más información, consulta [Resolución]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution) de [identificadores]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution).
+{% endalert %}
+
+## Comprar ID del producto
 
 Dentro del objeto de compra, el `product_id` es un identificador de la compra (como `Product Name` o `Product Category`):
 
@@ -59,7 +63,7 @@ Dentro del objeto de compra, el `product_id` es un identificador de la compra (c
 
 En Braze, ofrecemos algunas convenciones generales de nomenclatura para el objeto de compra `product_id`. Al elegir `product_id`, Braze sugiere utilizar nombres simplistas como el nombre del producto o la categoría del producto (en lugar de SKU) con la intención de agrupar todos los artículos registrados por este `product_id`.
 
-Esto ayuda a que los productos sean más fáciles de identificar para su segmentación y desencadenamiento.
+Esto ayuda a que los productos sean más fáciles de identificar para la segmentación y la activación.
 
 ### Registrar las compras a nivel de pedido
 
@@ -114,12 +118,12 @@ Los objetos de propiedades del evento que contienen valores de matrices u objeto
 
 #### Convenciones de denominación
 
-Es importante tener en cuenta que esta característica se activa **por producto**, no por compra. Por ejemplo, si tienes un gran volumen de productos distintos, pero cada uno tiene las mismas propiedades, segmentar puede ser más innecesario.
+Es importante tener en cuenta que esta característica se activa **por producto**, no por compra. Por ejemplo, si tienes un gran volumen de productos distintos, pero todos tienen las mismas propiedades, la segmentación puede ser innecesaria.
 
-En esta instancia, recomendamos utilizar nombres de productos a "nivel de grupo" en lugar de identificadores a nivel de transacción al configurar las estructuras de datos. Por ejemplo, una empresa de billetes de tren debería tener productos para "viaje de ida", "viaje de vuelta", "multiciudad", y no transacciones específicas como "transacción 123" o "transacción 046". Como otro ejemplo, con el evento de compra "comida", lo mejor sería establecer las propiedades "tarta" y "bocadillo".
+En esta instancia, recomendamos utilizar nombres de productos a «nivel de grupo» en lugar de identificadores a nivel de transacción al configurar las estructuras de datos. Por ejemplo, una empresa de billetes de tren debería tener productos para "viaje de ida", "viaje de vuelta", "multiciudad", y no transacciones específicas como "transacción 123" o "transacción 046". Como otro ejemplo, con el evento de compra «comida», lo mejor sería establecer las propiedades como «pastel» y «sándwich».
 
 {% alert important %}
-Ten en cuenta que los productos se pueden añadir a través de la API REST de Braze. Por ejemplo, si envías una llamada al punto final `/users/track` e incluyes un nuevo ID de compra, Braze crea automáticamente un producto en la sección **Configuración de datos** > **Productos** del panel.
+Ten en cuenta que los productos se pueden añadir a través de la API REST de Braze. Por ejemplo, si envías una llamada al`/users/track`  punto final e incluyes un nuevo ID de compra, Braze crea automáticamente un producto en la sección **Configuración de datos** > **Productos** del panel de Braze.
 {% endalert %}
 
 ### Ejemplo de objeto de compra

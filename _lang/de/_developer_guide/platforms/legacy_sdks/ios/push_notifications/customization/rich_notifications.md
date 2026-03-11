@@ -1,5 +1,5 @@
 ---
-nav_title: Rich-Benachrichtigungen
+nav_title: Rich-Benachrichtigung
 article_title: Reichhaltige Push-Benachrichtigungen für iOS
 platform: iOS
 page_order: 3

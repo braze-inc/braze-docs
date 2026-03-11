@@ -1,12 +1,12 @@
 ---
-nav_title: Code liquide
-article_title: Générer du code liquide avec BrazeAI
+nav_title: Liquid code
+article_title: Générer du code liquid avec BrazeAI
 description: "Cet article aborde le fonctionnement de l'intelligence artificielle Liquid Assistant et la manière dont vous pouvez l'utiliser pour générer des extraits de code Liquid pour vos envois de messages."
 page_type: reference
 page_order: 0.0
 ---
 
-# Générer du code liquide avec <sup>BrazeAITM</sup>
+# Générer du code liquid avec BrazeAI
 
 > L'assistant <sup>BrazeAITM</sup> Liquid est un assistant de chat alimenté par <sup>BrazeAITM</sup> qui aide à générer le Liquid dont vous avez besoin pour personnaliser le contenu des messages.
 
@@ -14,7 +14,7 @@ page_order: 0.0
 
 L'assistant Liquid BrazeAI<sup>TM</sup> est conçu pour vous aider à écrire du code Liquid efficace et adapté à vos besoins marketing. Formée à la syntaxe Liquid et à la manière dont les marketeurs utilisent Liquid dans leurs messages, notre intelligence artificielle comprend les nuances de l'élaboration d'un contenu personnalisé.
 
-En outre, en fournissant à l'assistant liquide <sup>BrazeAITM</sup> vos noms d'attributs personnalisés (tels que “favourite_color”) et vos types de données (tels que booléen et chaîne de caractères), notre assistant liquide <sup>BrazeAITM</sup> s'assure que vos messages sont précisément ciblés et alignés sur vos objectifs. En outre, si vous créez des directives de marque, l'assistant Liquid BrazeAI<sup>TM</sup> peut les utiliser pour mieux personnaliser les textes et le contenu générés en fonction de la voix de votre marque. Les lignes directrices de la marque que vous créez ne seront utilisées que pour personnaliser le contenu pour votre propre usage.
+De plus, en fournissant à l'assistant BrazeAI<sup>TM</sup> Liquid Assistant vos noms d'attributs personnalisés (tels que“favourite_color”)  et vos types de données (tels que booléen et chaîne de caractères), notre assistant BrazeAI<sup>TM</sup> Liquid Assistant garantit que vos messages sont précisément ciblés et alignés sur vos objectifs. En outre, si vous créez des directives de marque, l'assistant Liquid BrazeAI<sup>TM</sup> peut les utiliser pour mieux personnaliser les textes et le contenu générés en fonction de la voix de votre marque. Les lignes directrices de la marque que vous créez ne seront utilisées que pour personnaliser le contenu pour votre propre usage.
 
 ## Canaux pris en charge
 
@@ -74,10 +74,10 @@ Les attributs suivants sont actuellement en version bêta pour l'assistant liqui
 
 | Critère | Type de connaissance | 
 | - | - | 
-| Liquid (y compris les boucles `for`, les instructions `if`, les mathématiques et autres) | Le code |
-| Attributs par défaut et standard de l'utilisateur | Attributs |
-| Les attributs personnalisés qui ont l'un de ces types de données : {::nomarkdown}<ul><li>Booléens</li><li>Chiffres</li><li>Chaînes de caractères</li><li>Tableaux</li><li>Date</li></ul>{:/} | Attributs |
-| Contenu connecté | Le code |
+| Liquide (y compris`for`les boucles,`if`les instructions, les calculs mathématiques et autres) | Codage |
+| Attributs utilisateur par défaut et standard | Attributs |
+| Attributs personnalisés qui possèdent l'un de ces types de données : {::nomarkdown}<ul><li>Booléens</li><li>Chiffres</li><li>Chaînes de caractères</li><li>Tableaux</li><li>Date</li></ul>{:/} | Attributs |
+| Contenu connecté | Codage |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ## Bonnes pratiques
@@ -128,7 +128,7 @@ Voici quelques exemples pour vous aider à démarrer :
 - Aide-moi à rédiger un message pour encourager les utilisateurs à revenir et à procéder au paiement s'il leur reste des articles dans leur panier.
 - Ecrivez Liquid pour personnaliser un message en fonction du pays d'un client. Je veux remplir le message avec le nom du pays. Si nous ne disposons d'aucune de ces informations, suggère-leur de cliquer sur un lien pour mettre à jour leur profil.
 - Comment puis-je personnaliser un message de bienvenue avec le prénom d'un utilisateur et rédiger un texte différent en fonction du sexe de l'utilisateur ?
-- Ecrivez Liquid pour afficher différents messages en fonction d'un attribut personnalisé, “CUSTOM_ATTRIBUTE_NAME“ et de sa valeur. Je peux envoyer six options différentes. S'il n'y a pas de valeur pour l'attribut personnalisé, je veux envoyer un message substitutif.
+- Écrivez Liquid pour afficher différents messages en fonction d'un attribut personnalisé et de sa “CUSTOM_ATTRIBUTE_NAME“valeur. Je peux envoyer six options différentes. S'il n'y a pas de valeur pour l'attribut personnalisé, je veux envoyer un message substitutif.
 {% endtab %}
 
 {% tab handling outliers %}

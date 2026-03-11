@@ -8,7 +8,7 @@ description: "Este artículo de referencia cubre los aspectos básicos del SDK d
 
 # Visión general del SDK 
 
-> El SDK de Braze recopila datos de sesión, identifica usuarios y registra compras y eventos personalizados a través de tu sitio web o aplicación. También puedes utilizar el SDK para interactuar con los usuarios enviando mensajes dentro de la aplicación y notificaciones push directamente desde el panel de Braze.
+> El SDK de Braze recopila datos de sesión, identifica a los usuarios y registra las compras y los eventos personalizados a través de tu sitio web o aplicación. También puedes utilizar el SDK para interactuar con los usuarios enviando mensajes dentro de la aplicación y notificaciones push directamente desde el panel de Braze.
 
 En resumen, el SDK de Braze:
 * Recoge y sincroniza los datos de los usuarios en un perfil de usuario consolidado.
@@ -28,11 +28,11 @@ Para ahorrarle tiempo y garantizar una integración sin problemas, le recomendam
 
 ## Agregación de datos
 
-El SDK de Braze captura automáticamente datos a nivel de usuario, proporcionándote métricas clave para tu aplicación y tu base de usuarios. Agrupa aplicaciones similares en un único espacio de trabajo (por ejemplo, las versiones de iOS y Android juntas) para ver los datos recopilados en todas las plataformas y construir una imagen completa de la actividad del usuario. Para más información, consulte el artículo de la [página de inicio]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/).
+El SDK de Braze captura automáticamente datos a nivel de usuario, lo que te proporciona métricas clave para tu aplicación y tu base de usuarios. Agrupa aplicaciones similares en un único espacio de trabajo (por ejemplo, las versiones para iOS y Android juntas) para ver los datos recopilados en todas las plataformas y obtener una visión completa de la actividad de los usuarios. Para más información, consulte el artículo de la [página de inicio]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/).
 
 ## Mensajería en la aplicación
 
-Utiliza el SDK para redactar y enviar mensajes dentro de la aplicación directamente. Puedes elegir mensajes deslizables, modales o a pantalla completa en función de tu estrategia de campaña. Para más detalles sobre la composición, consulta [Crear un mensaje dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
+Utiliza el SDK para redactar y enviar mensajes dentro de la aplicación directamente. Puedes elegir mensajes de deslizamiento hacia arriba, modales o a pantalla completa en función de la estrategia de tu campaña. Para obtener más información sobre la composición, consulta [Crear un mensaje dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
 
 ![Push visualizado en un navegador web]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
@@ -40,18 +40,18 @@ Utiliza el SDK para redactar y enviar mensajes dentro de la aplicación directam
 
 Las notificaciones push son otra gran opción para interactuar con sus usuarios y son especialmente útiles para gestionar llamadas a la acción sensibles al tiempo. Las notificaciones push móviles aparecen en los dispositivos de sus usuarios, y las notificaciones push web aparecen incluso cuando su sitio no está abierto. Para más información sobre el uso de las notificaciones push, consulta nuestro [artículo sobre notificaciones push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/).
 
-Los usuarios de su sitio web o aplicación deben registrarse para recibir notificaciones push. Consulta la [preparación push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) para más detalles. 
+Los usuarios de su sitio web o aplicación deben registrarse para recibir notificaciones push. Para más detalles, consulta [«preparación para las notificaciones push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)». 
 
 ## Reglas de segmentación y entrega
 
 Por defecto, una campaña que contenga mensajes in-app se enviará a todas las versiones de la aplicación en ese espacio de trabajo. Por ejemplo, el mensaje se enviará tanto a usuarios de web como de móvil. Para enviar un mensaje in-app exclusivamente a web o móvil, tendrás que segmentar tu campaña en consecuencia, lo que se admite por defecto a través del SDK de Braze. 
 
-Puedes crear un segmento de usuarios de tu Web configurando **Aplicaciones** **y sitios web dirigidos** a **Usuarios de aplicaciones específicas**, y luego seleccionar sólo tu sitio web para las **Aplicaciones específicas**.
+Puedes crear un segmento de tus usuarios web configurando **Aplicaciones y sitios web dirigidos** a **usuarios de aplicaciones específicas** y, a continuación, seleccionando solo tu sitio web para las **aplicaciones específicas**.
 
-![Página de detalles del segmento con la aplicación Web en primer plano]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
+![Página de detalles del segmento con la aplicación web en primer plano]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
 
 Esto le permitirá dirigirse a los usuarios en función de su comportamiento de forma inteligente. Si quisiera dirigirse a usuarios de Internet para animarles a descargar su aplicación móvil, crearía este segmento como público objetivo. Si desea enviar una campaña de mensajería que incluya un mensaje móvil dentro de la aplicación, pero no un mensaje web, deberá desmarcar el icono de su sitio web en su segmento.
 
 ## Plataformas compatibles
 
-Braze proporciona SDKs para múltiples plataformas, como Web, Android y Swift. Para ver la lista completa, consulta la [Guía del desarrollador de Braze]({{site.baseurl}}/developer_guide/home).
+Braze ofrece SDK para múltiples plataformas, como Web, Android y SWIFT. Para ver la lista completa, consulta la [Guía para desarrolladores de Braze]({{site.baseurl}}/developer_guide/home).

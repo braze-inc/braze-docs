@@ -13,7 +13,7 @@ noindex: true
 
 <br>
 {% alert important %}
-Está procurando o guia básico para desenvolvedores de integração de mensagens no app? Encontre-o [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/overview/).
+Está procurando o guia básico para desenvolvedores de integração de mensagens no app? Encontre [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/overview/).
 {% endalert %}
 
 # Guia de implementação de envio de mensagens no app
@@ -230,7 +230,7 @@ Nos pares de chave-valor, forneça um `attribute_key`; essa chave, juntamente co
 
 O dicionário `extras` no objeto `ABKInAppMessage` permite que você consulte uma chave `view_type` (se houver) que sinalize a exibição correta. É importante notar que as mensagens no app são configuradas por mensagem, de modo que as exibições modais personalizadas e padrão podem funcionar harmoniosamente.
 
-![Dois pares de chave/valor encontrados no criador de mensagens. O primeiro par de valores-chave tem "attribute_key" definido como "Favorite Team" (Equipe favorita) e o segundo tem "view_type" definido como "picker" (selecionador).]({% image_buster /assets/img/iam_implementation/dashboard2.png %}){: style="max-width:65%;"}
+![Dois pares de chave/valor encontrados no criador de mensagens. O primeiro par chave-valor tem "attribute_key" definido como "Time Favorito", e o segundo tem "view_type" definido como "seletor".]({% image_buster /assets/img/iam_implementation/dashboard2.png %}){: style="max-width:65%;"}
 
 {% tabs %}
 {% tab Swift %}
@@ -367,7 +367,7 @@ Para configurar uma mensagem completa e personalizada no app no dashboard, você
 
 Nos pares de chave-valor, forneça um `attribute_key`; essa chave, juntamente com os valores selecionados pelo usuário, será salva em seu perfil de usuário como um atributo personalizado. Sua lógica de visualização personalizada deve lidar com os atributos do usuário enviados ao Braze.
 
-![Três pares de chave/valor encontrados no criador de mensagens. O primeiro par de valores chave "attribute_key" é definido como "Push Tags", o segundo "subtitle_text" é definido como "Enabling notifications will also..." e o terceiro "view_type" é definido como "table_list".]({% image_buster /assets/img/iam_implementation/dashboard3.png %}){: style="max-width:65%;"}
+![Três pares de chave/valor encontrados no criador de mensagens. O primeiro par chave-valor "attribute_key" está definido como "Tags de Push", o segundo "subtitle_text" está definido como "Ativar notificações também...", e o terceiro "view_type" está definido como "table_list".]({% image_buster /assets/img/iam_implementation/dashboard3.png %}){: style="max-width:65%;"}
 
 #### Interceptação de toques em mensagens no app
 ![Um dispositivo Apple exibindo fileiras de configurações e botões. A exibição personalizada lida com os botões, e qualquer toque fora dos controles de botão é tratado pela mensagem no app e a descartará.]({% image_buster /assets/img/iam_implementation_guide.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}

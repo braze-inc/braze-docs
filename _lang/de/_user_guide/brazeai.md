@@ -22,7 +22,7 @@ guide_featured_list:
   - name: Content Optimizer
     link: /docs/user_guide/brazeai/content_optimizer/
     image: /assets/img/braze_icons/image-user-check.svg
-  - name: Studio für Entscheidungsfindung
+  - name: Entscheidungsstudio
     link: /docs/user_guide/brazeai/decisioning_studio/
     image: /assets/img/braze_icons/stars-03.svg
   - name: Generative KI
@@ -31,10 +31,10 @@ guide_featured_list:
   - name: Intelligence Suite
     link: /docs/user_guide/brazeai/intelligence_suite/
     image: /assets/img/braze_icons/clock.svg
-  - name: Item Recommendations
+  - name: Artikel-Empfehlungen
     link: /docs/user_guide/brazeai/item_recommendations/
     image: /assets/img/braze_icons/hearts.svg
-  - name: BrazeAI Operator
+  - name: Operator
     link: /docs/user_guide/brazeai/operator/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Predictive Suite
