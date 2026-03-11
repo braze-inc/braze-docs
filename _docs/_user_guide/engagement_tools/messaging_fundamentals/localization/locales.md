@@ -25,98 +25,105 @@ Wrap text you want to translate with the Liquid translation tags {% raw %}`{% tr
 
 {% raw %}`{% translation greeting %}Hello!{% endtranslation %}`{% endraw %}
 
-#### Localizing HTML blocks
+{% alert tip %}
+Highlight the text you want to translate and use the keyboard shortcut **Cmd + Alt + L** (MacOS) or **Ctl + Alt + L** (windows) to wrap in translation tags.<br><br> This shortcut works in all channels that support multi-language messaging except for the drag-and-drop editors for email and Content Blocks. For those, use the **Add personalization** button in the left sidebar to add translation tags.
+{% endalert %}
 
-A more complicated paragraph may have multiple translation tags ("offer_text" and "offer_amount"):
+#### Localizing URLs
+
+When translating content, URLs require special handling to prevent broken links. 
+
+##### Standard (static) URLs
+
+Static URLs are entered manually in the editor (for example, `https://example.com`). We also recommend the following:
+
+| Recommendation | Reasoning |
+| --- | --- |
+| Keep the protocol (`https://`) outside of translation tags. Wrap only the domain and path (for example, `example.com/en`) | Translators may accidentally alter or remove special characters, causing broken links. |
+| Do not include query parameters inside translation tags (for example, `?utm_source=promo`) | Translators may accidentally alter or remove special characters, resulting in broken links. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation }
+
+An standard URL that follows both recommendations is:
 
 {% raw %}
 ```
-{% translation offer_text %}Sign up now to save{% endtranslation %}
-<b>{% translation offer_amount %}50% Off{% endtranslation %}</b>
+<a href="{% translation id_1 %}{% landing_page_url xyz%}{% endtranslation %}">Click Here</a>
 ```
 {% endraw %}
 
 {% alert important %}
-Wrapping large HTML blocks in translation tags can cause stylesheet or styling issues. Wrap the smallest text sections as much as possible.
+If you are using [email link tracking]() (link aliasing or Link Templates), additional configuration is required when URLs are wrapped in translation tags.
 {% endalert %}
 
-#### Localizing Links
+#### HTML attributes and structure
 
-To localize anchor tag links, be sure to wrap **only the language-specific parts** and not the entire `href` URL attribute. If you wrap the entire URL, link templating may not function correctly.
+Only wrap human-readable text in translation tags. Avoid wrapping HTML attributes (such as `class`, `style`, or `id`) or other structural code. HTML attributes control layout, styling, and functionality. Wrapping them in translation tags can break formatting or styles in localized versions of your message.
 
-##### Correct usage
-
-{% raw %}
-```
-<a href="https://www.braze.com/{% translation link_href %}en{% endtranslation %}/page"></a>
-```
-{% endraw %}
-
-##### Incorrect usage
+This text is correctly wrapped:
 
 {% raw %}
 ```
-<a href="{% translation link_href %}https://www.braze.com/en/page{% endtranslation %}"></a>
+<p class="headline" style="color: red;">
+  {% translation id_1 %}Welcome to our sale{% endtranslation %}
+</p>
 ```
 {% endraw %}
 
-### Step 3: Choose message locales {#choose-locales}
+{% details Incorectlly wrapped text %}
 
-After your translation tags are in the message, go to the message's multi-language settings and select one or more locales to translate for this message.
+This text is **incorrectly** wrapped:
 
-![Multi-language settings with a dropdown field to select locales.]({% image_buster /assets/img/multi-language_support/manage_language_dropdown.png %}){: style="max-width:80%;"}
+{% raw %}
+```
+{% translation id_1 %}
+<p class="headline" style="color: red;">
+  Welcome to our sale
+</p>
+{% endtranslation %}
+```
+{% endraw %}
+
+{% enddetails %}
+
+### Step 3: Add locales to your message
+
+After adding translation tags to your message, select **Manage languages** in the editor (**Languages** in the drag-and-drop editors for email and Content Blocks) and select at least one locale you want to add translations for.
+
+!["Manage languages" section with a dropdown for selecting supported locales.]()
+
+#### Content Blocks containing translation
+
+If your message contains Content Blocks that already have translations saved, you do not need to re-upload those translations. Saved translations are automatically applied when the Content Block is added to your message.
+
+In the **Manage languages** modal, Content Blocks with saved translations will appear in the list, alongside the locales they support. This allows you to see which parts of your message are already localized before adding new translations.
+
+!["Manage languages" section with a list of Content Blocks that have saved translations.]()
+
+{% alert important %}
+Make sure each Content Block includes translations for every locale added to your message. If a Content Block is missing translations for one of the locales you've added, it will be shown in its original language for users in that locale.
+{% endalert %}
+
+### Step 4: Add translations
+
+After selecting locales, add translations to your message using one of the following methods:
+
+!["Add translations" tab with options to upload translations by CSV or by connecting to translation partners.]()
 
 {% tabs %}
-{% tab Email %}
-Select **Multi-Language** from the Content menu when editing your message.
-
-![Multi-language settings for email.]({% image_buster /assets/img/multi-language_support/email_multi_language.png %}){: style="max-width:45%;"}
+{% tab Upload CSV template %}
 
 {% endtab %}
-
-{% tab Push %}
-Select **Manage Languages** when editing your message.
-
-![Multi-language settings for push.]({% image_buster /assets/img/multi-language_support/push_manage_languages.png %})
-
-{% endtab %}
-
-{% tab In-app message %}
-{% subtabs %}
-{% subtab Drag-and-Drop Editor %}
-Select **Manage Languages** at the bottom of the **Build** section.
-
-![Multi-language settings for in-app drag-and-drop messages.]({% image_buster /assets/img/multi-language_support/iam_dnd_manage_languages.png %}){: style="max-width:45%;"}
-
-{% endsubtab %}
-{% subtab Traditional editor %}
-
-Select **Manage Languages** when editing your message.
-
-![Multi-language settings for in-app HTML messages.]({% image_buster /assets/img/multi-language_support/iam_html_manage_languages.png %})
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-
-{% tab Banner %}
-Select **Manage Languages** when editing your message.
-
-![Multi-language settings for banners.]({% image_buster /assets/img/multi-language_support/banner_manage_languages.png %})
-
-{% endtab %}
-
-{% tab Content Block %}
-Select **Manage Languages** when editing your Content Block.
-
-{% alert important %}
-Content Blocks that have associated translations uploaded cannot be overwritten by an individual campaign or Canvas message.
-{% endalert %}
-
-![Multi-language settings for Content Blocks.]({% image_buster /assets/img/multi-language_support/content_block_manage_languages.png %})
+{% tab Connect to translation API %}
 
 {% endtab %}
 {% endtabs %}
+
+
+
+
+
+
+
 
 ### Step 4: Download CSV template {#download-csv}
 
