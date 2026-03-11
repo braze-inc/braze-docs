@@ -27,7 +27,7 @@ Before you start, you'll need the following:
 
 ## Use cases
 
-Surface Braze data into the customer service agent view while communicating with your users on different communication channels, such as email, messenger, or chat.
+Surface Braze data into the customer service agent view while communicating with your users on different communication channels, such as email, messenger, or chat. Additionally, use the data transformation tool to send data from Dixa to Braze to pause marketing while solving a customers problem.
 
 ## Integration
 
@@ -78,4 +78,55 @@ Choose to show or hide a list of products the user purchased. Here, you can see 
 The following shows an example of the integration:
 
 ![The Braze and Dixa integration in Dixa that displays a user's email subscription state, custom attributes, custom events, and purchases.]({% image_buster /assets/img/dixa/dixa-braze-integration.png %}){: style="width:350px;"}
+
+## Data transformation tool
+
+Dixa uses webhooks to sent data to Braze and you must be a Dixa administrator to configure webhooks. First step is to create a data transformation in Braze navigate to **Data settings** > **Data transformation** > **Create transformation**
+
+Select **Start from scratch**, select destination **POST: Track users**, and select **Create transformation**.
+
+In the Braze window, copy the code example in the Exmaple tranformation tool section below and insert it to the **Transformation code*, click **Save**, copy the **Webhook URL** and open Dixa.
+
+Inside Dixa navigate to **Settings** > **Integrations** > **Webhooks** > **+ Outbound webhook**.
+
+In the Webhook setting page, paste in the URL from Braze, and toggle the events you would find interesting. **Conversation created** is a good starting point to track customers' conversations. Finalise the Dixa side by clicking **Save**.
+
+### Example transformation tool
+
+```js
+// Transforming the provided payload to match Braze /users/track endpoint specifications.
+
+// Extracting necessary details from the payload
+var requester = payload.data.conversation.requester;
+var event = payload.data.conversation;
+
+// Defining user attributes based on the provided payload, prioritizing email if available.
+var userAttributes = {
+  email: requester.email, // Prioritizing email over external_id and user_alias
+  _update_existing_only: false, // Setting this to true as we are including email
+  organization: payload.organization.name, // Including an additional attribute for demonstration
+};
+
+// Defining event attributes based on the provided payload.
+var eventAttributes = {
+  email: requester.email, // Prioritizing email over external_id and user_alias
+  name: payload.event_fqn, // The name of the event
+  time: event.created_at, // ISO 8601 datetime format
+  properties: { // Including additional event properties
+    event_version: payload.event_version,
+    conversation_status: event.status,
+    conversation_channel: event.channel
+  },
+  _update_existing_only: false // Setting this to true as we are including email
+};
+
+// Constructing the final object to match Braze /users/track endpoint schema
+var brazecall = {
+  attributes: [userAttributes], // Wrapping userAttributes in an array as per specifications
+  events: [eventAttributes] // Wrapping eventAttributes in an array as per specifications
+};
+
+// Returning the transformed data
+return brazecall;
+```
 
