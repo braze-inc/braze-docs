@@ -1,6 +1,6 @@
 ---
-nav_title: BrazeAI™
-article_title: BrazeAI™
+nav_title: BrazeAI
+article_title: BrazeAI
 description: "O BrazeAI<sup>TM</sup> oferece uma coleção de ferramentas acessíveis e fáceis de usar que reduzem as barreiras de entrada para a criatividade, a personalização e a otimização de sua estratégia de engajamento."
 page_order: 6.5
 layout: dev_guide
