@@ -66,7 +66,7 @@ This means you can still use Content Optimizer in single-send or short-term Canv
 | Optimization event       | Determines how Content Optimizer evaluates performance and allocates traffic to content combinations over time, such as clicks or opens for email. Applies to all content components in a step. Content Optimizer continuously learns from this event and automatically shifts delivery toward higher-performing content combinations. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Limitations
+## Considerations
 
 - Content Optimizer is currently in beta and only available for email messages.
 - The agent can generate up to 125 combinations per step:

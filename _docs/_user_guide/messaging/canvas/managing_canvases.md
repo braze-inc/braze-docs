@@ -1,7 +1,7 @@
 ---
 nav_title: Manage Canvases
 article_title: Manage Canvases
-page_order: 2
+page_order: 4
 layout: dev_guide
 guide_top_header: "Managing Canvases"
 guide_top_text: "Once you've launched your Canvas, it's time to sit back and watch the data roll in. If you need to make any changes or archive your Canvas, refer to the following articles for help."

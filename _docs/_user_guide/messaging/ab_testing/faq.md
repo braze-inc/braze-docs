@@ -1,13 +1,13 @@
 ---
 nav_title: FAQ
-article_title: Multivariate and A/B Test FAQs
+article_title: Multivariate and A/B Test FAQ
 page_order: 21
 page_type: reference
 toc_headers: h2
 description: "This article covers FAQs for multivariate and A/B tests with Braze."
 ---
 
-# Multivariate and A/B test FAQs
+# Multivariate and A/B test FAQ
 
 > This article covers frequently asked questions for multivariate and A/B tests with Braze.
 

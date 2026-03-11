@@ -1,7 +1,7 @@
 ---
 nav_title: Troubleshooting
 article_title: Troubleshoot Canvases
-page_order: 11
+page_order: 7
 page_type: reference
 description: "This page provides troubleshooting steps for Canvases."
 tool: Canvas

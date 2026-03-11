@@ -12,28 +12,28 @@ description: "This landing page is home to Canvas articles. Here, you'll find re
 
 guide_featured_title: "Sections"
 guide_featured_list:
-  - name: Getting started
-    link: /docs/user_guide/engagement_tools/canvas/get_started/
-    image: /assets/img/braze_icons/book-closed.svg
+  - name: Create a Canvas
+    link: /docs/user_guide/messaging/canvas/create_a_canvas/
+    image: /assets/img/braze_icons/palette.svg
+  - name: Canvas basics
+    link: /docs/user_guide/messaging/canvas/canvas_basics/
+    image: /assets/img/braze_icons/list.svg
   - name: Build Canvases
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/
+    link: /docs/user_guide/messaging/canvas/canvas_components/
     image: /assets/img/braze_icons/brush-02.svg
-  - name: Canvas components
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/about/
-    image: /assets/img/braze_icons/dataflow-03.svg 
   - name: Manage Canvases
-    link: /docs/user_guide/engagement_tools/canvas/managing_canvases/
+    link: /docs/user_guide/messaging/canvas/managing_canvases/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Test Canvases
-    link: /docs/user_guide/engagement_tools/canvas/testing_canvases/
+    link: /docs/user_guide/messaging/canvas/testing_canvases/
     image: /assets/img/braze_icons/beaker-02.svg
   - name: Ideas and strategies
-    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/
+    link: /docs/user_guide/messaging/canvas/ideas_and_strategies/
     image: /assets/img/braze_icons/target-04.svg
-  - name: Frequently asked questions
-    link: /docs/user_guide/engagement_tools/canvas/faqs/
+  - name: Troubleshooting
+    link: /docs/user_guide/messaging/canvas/troubleshooting/
     image: /assets/img/braze_icons/annotation-question.svg
-  - name: Troubleshooting Canvases
-    link: /docs/user_guide/engagement_tools/canvas/troubleshooting/
+  - name: FAQ
+    link: /docs/user_guide/messaging/canvas/faqs/
     image: /assets/img/braze_icons/annotation-question.svg
 ---

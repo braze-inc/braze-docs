@@ -15,7 +15,7 @@ description: "This reference article covers using nested custom attributes as a 
 
 {% multi_lang_include nested_attribute_objects/supported_data_types.md %}
 
-## Limitations
+## Considerations
 
 - Nested custom attributes are intended for custom attributes sent through the Braze SDK or API. 
 - Objects have a maximum size of 100&nbsp;KB.

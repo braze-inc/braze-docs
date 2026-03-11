@@ -1,5 +1,5 @@
 ---
-nav_title: Push setup
+nav_title: "Setup"
 article_title: Push setup
 page_order: 1
 layout: dev_guide

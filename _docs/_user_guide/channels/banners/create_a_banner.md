@@ -159,4 +159,4 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 
 ### Step 6: Review and deploy
 
-After you've finished building your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), then send it when you're ready.
+After you've finished building your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/sending_test_messages/), then send it when you're ready.

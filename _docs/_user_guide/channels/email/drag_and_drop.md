@@ -179,6 +179,8 @@ Inbox Vision allows you to view your email campaigns from the perspective of ema
 Background images in email messaging may sometimes cause white lines or disconnects to appear between images, so it's important to test and check the finer details of your email message.
 {% endalert %}
 
+For more information, see [Send test messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=email).
+
 After using the drag-and-drop editor to design and create your email message, continue to [build]({{site.baseurl}}/user_guide/channels/email/html_editor/#step-4-build-the-remainder-of-your-campaign-or-canvas) the remainder of your campaign or Canvas.
 
 {% details About the updated HTML engine %}

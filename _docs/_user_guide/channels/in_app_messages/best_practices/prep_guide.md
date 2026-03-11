@@ -25,7 +25,7 @@ channel: in-app messages
 - Where do you want your users to see your message? In your Web app? In your mobile app?
 - Which event should trigger this message?
 - Are any of your users using older versions of your app? If so, they might not be able to see some elements of your message.
-- What type of device or devices are you building this message for? Remember, you can preview your message using the **Preview** box or **Test** tab. Refer to [Testing]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) for more information.
+- What type of device or devices are you building this message for? Remember, you can preview your message using the **Preview** box or **Test** tab. Refer to [Send test messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=in-app%20message) for more information.
 
 ## Content considerations
 

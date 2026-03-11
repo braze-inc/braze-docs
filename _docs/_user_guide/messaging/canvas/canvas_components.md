@@ -1,7 +1,7 @@
 ---
-nav_title: Canvas components
+nav_title: Build Canvases
 article_title: Canvas components
-page_order: 2
+page_order: 3
 alias: "/user_guide/engagement_tools/canvas/canvas_components/about/"
 layout: dev_guide
 guide_top_header: "Canvas components"

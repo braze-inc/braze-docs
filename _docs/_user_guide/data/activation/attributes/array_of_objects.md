@@ -13,7 +13,7 @@ description: "This reference article covers using an array of objects as a data 
 
 {% multi_lang_include nested_attribute_objects/supported_data_types.md %}
 
-## Limitations
+## Considerations
 
 - Arrays of objects are intended for custom attributes sent through the API. CSV uploads are not supported. This is because commas in the CSV file will be interpreted as a column separator, and commas in values will cause parsing errors. 
 - Arrays of objects have no limit on the number of items but do have a maximum size of 100&nbsp;KB.

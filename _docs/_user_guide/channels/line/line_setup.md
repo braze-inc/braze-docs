@@ -1,5 +1,5 @@
 ---
-nav_title: LINE setup
+nav_title: "Setup"
 article_title: LINE Setup
 description: "This article covers how to set up the Braze LINE channel, including prerequisites and suggested next steps."
 page_type: partner

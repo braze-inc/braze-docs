@@ -16,12 +16,12 @@ tool: Media
 
 {% sdktabs %}
 
-{% sdktab in-app messages %}
-{% multi_lang_include drag_and_drop/iam_editor_blocks.md %}
-{% endsdktab %}
-
 {% sdktab email %}
 {% multi_lang_include drag_and_drop/email_editor_blocks.md %}
+{% endsdktab %}
+
+{% sdktab in-app messages %}
+{% multi_lang_include drag_and_drop/iam_editor_blocks.md %}
 {% endsdktab %}
 
 {% endsdktabs %}

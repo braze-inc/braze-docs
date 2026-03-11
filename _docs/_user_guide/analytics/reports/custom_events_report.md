@@ -3,17 +3,17 @@ nav_title: Custom events report
 article_title: Custom events report
 page_order: 6
 page_type: reference
-description: "This page describes how to use the Custom Events Report to view occurrences of custom events over time, broken down by segment."
+description: "This page describes how to use the custom events report to view occurrences of custom events over time, broken down by segment."
 tool: Reports
 ---
 
 # Custom events report
 
-> The Custom Events Report lets you view the occurrences of one or more custom events over time. You can break down results by segment, apply KPI formulas, and export the data for further analysis.
+> The custom events report lets you view the occurrences of one or more custom events over time. You can break down results by segment, apply KPI formulas, and export the data for further analysis.
 
 ## Viewing a report
 
-To view this report from the dashboard, go to **Analytics** > **Custom Events Report**. Select the custom events you want to analyze, then select **Apply** to generate the graph.
+To view this report from the dashboard, go to **Analytics** > **Custom events report**. Select the custom events you want to analyze, then select **Apply** to generate the graph.
 
 ![Custom events]({% image_buster /assets/img_archive/Export_events.png %})
 

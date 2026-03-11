@@ -1,5 +1,5 @@
 ---
-nav_title: Email setup
+nav_title: "Setup"
 article_title: Email setup
 layout: dev_guide
 page_order: 1

@@ -221,6 +221,8 @@ For MMS, the ordering of assets (image and message body) cannot be customized. T
 Because RCS rendering is controlled by the user's operating system, device manufacturer, carrier, and messaging app (for example, Google Messages vs. Apple Messages), message appearance can vary. The preview shown in Braze may not exactly match what an end user receives. Validate the final rendering on real devices whenever possible.
 {% endalert %}
 
+For more information, see [Send test messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=sms%2Fmms%20and%20rcs).
+
 ## Step 5: Build the remainder of your campaign or Canvas
 
 {% tabs %}

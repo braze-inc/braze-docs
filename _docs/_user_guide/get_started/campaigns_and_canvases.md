@@ -54,7 +54,7 @@ Check out these additional resources to learn more about Canvas:
 
 - Braze Learning: [Journey Orchestration with Canvas Flow](https://learning.braze.com/path/journey-orchestration-with-canvas-flow)
 - [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)
-- [Canvas outlines]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/canvas_outlines/)
+- [Canvas outlines]({{site.baseurl}}/user_guide/messaging/canvas/ideas_and_strategies/canvas_outlines/)
 
 ## Messaging channels
 

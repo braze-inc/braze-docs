@@ -43,7 +43,7 @@ Similarly, you can find data on [sessions over time for this particular segment]
 
 ## View custom events over time
 
-View data on [Custom events over time for segments]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#analytics) by going to **Analytics** > **Custom Events Report**.
+View data on [Custom events over time for segments]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#analytics) by going to **Analytics** > **Custom events report**.
 
 ## Using Query Builder templates
 

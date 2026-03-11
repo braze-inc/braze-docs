@@ -24,6 +24,9 @@ guide_featured_description: |
 
   ### Related articles
 guide_featured_list:
+  - name: Accessibility
+    link: /docs/user_guide/messaging/messaging_fundamentals/accessibility/
+    image: /assets/img/braze_icons/user-check-01.svg
   - name: Conversion events
     link: /docs/user_guide/messaging/messaging_fundamentals/conversion_events/
     image: /assets/img/braze_icons/edit-05.svg
@@ -36,6 +39,9 @@ guide_featured_list:
   - name: Localization
     link: /docs/user_guide/messaging/messaging_fundamentals/localization/
     image: /assets/img/braze_icons/globe-02.svg
+  - name: Rate limiting and frequency capping
+    link: /docs/user_guide/messaging/messaging_fundamentals/frequency_capping/
+    image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Re-eligibility
     link: /docs/user_guide/messaging/messaging_fundamentals/re_eligibility/
     image: /assets/img/braze_icons/users-01.svg
@@ -49,26 +55,20 @@ guide_menu_description: |
 
   * Set up an approval workflow to verify your message has the necessary settings and details to launch.
   * View your messages by their status to check which campaigns and Canvases are in the process of sending.
-  * Duplicate your messages to build on your team's successful strategies.
-  * Archive your messages to keep the most relevant messages available on your dashboard.
+
+  For archiving, duplicating, and copying campaigns and Canvases across workspaces, see [Governance]({{site.baseurl}}/user_guide/messaging/governance/).
 
   ### Related articles
 guide_menu_list:
   - name: Approval workflow
     link: /docs/user_guide/messaging/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
-  - name: Archiving messages
-    link: /docs/user_guide/messaging/messaging_fundamentals/archiving/
-    image: /assets/img/braze_icons/archive.svg
-  - name: Copying across workspaces
-    link: /docs/user_guide/messaging/messaging_fundamentals/copy_across_workspaces/
-    image: /assets/img/braze_icons/copy-07.svg
-  - name: Duplicating messages
-    link: /docs/user_guide/messaging/messaging_fundamentals/duplicating/
-    image: /assets/img/braze_icons/copy-04.svg
   - name: Messaging statuses
     link: /docs/user_guide/messaging/messaging_fundamentals/statuses/
     image: /assets/img/braze_icons/book-closed.svg
+  - name: Send test messages
+    link: /docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/
+    image: /assets/img/braze_icons/mail-01.svg
   - name: Know before sending
     link: /docs/know_before_send/
     image: /assets/img/braze_icons/book-closed.svg

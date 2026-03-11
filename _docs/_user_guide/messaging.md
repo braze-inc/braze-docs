@@ -14,6 +14,9 @@ guide_featured_list:
   - name: Fundamentals
     link: /docs/user_guide/messaging/messaging_fundamentals/
     image: /assets/img/braze_icons/book-closed.svg
+  - name: Governance
+    link: /docs/user_guide/messaging/governance/
+    image: /assets/img/braze_icons/archive.svg
   - name: Campaigns
     link: /docs/user_guide/messaging/campaigns/
     image: /assets/img/braze_icons/send-01.svg

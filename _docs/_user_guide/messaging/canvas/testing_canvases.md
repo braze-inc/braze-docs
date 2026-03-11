@@ -4,7 +4,7 @@ article_title: Test Canvases
 layout: dev_guide
 guide_top_header: "Test Canvases"
 guide_top_text: "After you send your Canvas, you should always look at the results to ensure your Canvas went well and will affect your future messaging positively.<br><br> Here, you'll find resources on Canvas analytics and other reports to help you measure the effectiveness of your messaging for your users."
-page_order: 4
+page_order: 5
 
 tool: 
   - Canvas

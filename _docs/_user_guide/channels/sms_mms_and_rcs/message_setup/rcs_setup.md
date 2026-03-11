@@ -1,7 +1,7 @@
 ---
 nav_title: "RCS setup"
 article_title: RCS Setup
-page_order: 6
+page_order: 1
 alias: /rcs_setup/
 description: "This reference article covers the requirements needed to get RCS up and running."
 page_type: reference

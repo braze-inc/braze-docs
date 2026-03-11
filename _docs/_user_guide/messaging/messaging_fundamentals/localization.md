@@ -53,7 +53,7 @@ This approach separates templating into different sending locales. After sending
 {% tab canvas %}
 ### One journey for all
 
-In this approach, localization is handled within [Canvas Journeys]({{site.baseurl}}/user_guide/messaging/canvas/get_started/the_basics/#building-the-customer-journey) and Liquid to define messaging for each user. 
+In this approach, localization is handled within [Canvas basics]({{site.baseurl}}/user_guide/messaging/canvas/canvas_basics/#building-the-customer-journey) and Liquid to define messaging for each user. 
 
 After a Canvas is sent, the dashboard provides aggregated [Canvas Analytics]({{site.baseurl}}/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), whereas the user level engagement can be measured via custom [segment funnels]({{site.baseurl}}/user_guide/audience/segments/measuring_segment_size/), such as combining [**Country**]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#country) and [**Received Canvas Step**]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#received-canvas-step) filters.
 

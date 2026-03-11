@@ -1,9 +1,9 @@
 ---
 nav_title: Unification
-article_title: Data Unification
+article_title: Data unification
 page_order: 1
 layout: dev_guide
-guide_top_header: "Data Unification"
+guide_top_header: "Data unification"
 guide_top_text: "Bring your user data together into one place in Braze. No matter the source of your data, you can unify it all to get a complete picture of who your users are, including their behaviors, preferences, and actions."
 page_type: landing
 description: "This section includes articles related to data unification in the Braze Data Platform."
@@ -31,7 +31,7 @@ guide_menu_list2:
   - name: Shopify
     link: /docs/partners/ecommerce/shopify/
     image: /assets/img/braze_icons/shopify.svg
-  - name: Integrating the SDK
+  - name: Integrate the SDK
     link: /docs/developer_guide/sdk_integration/
     image: /assets/img/braze_icons/code-square-01.svg
 ---

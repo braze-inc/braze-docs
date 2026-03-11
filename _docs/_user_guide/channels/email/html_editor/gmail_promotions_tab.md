@@ -1,6 +1,6 @@
 ---
-nav_title: Gmail promotions setup
-article_title: Gmail Promotions Setup
+nav_title: "Gmail Promotions tab"
+article_title: "Gmail Promotions tab"
 page_order: 8
 description: "This reference article covers how to use Braze to help you build the Gmail mobile promotions card from your email campaign."
 channel:
@@ -8,7 +8,7 @@ channel:
 toc_headers: h2
 ---
 
-# Gmail Promotion setup
+# Gmail Promotions tab
 
 > The [Gmail mobile Promotions tab](https://developers.google.com/gmail/promotab/) allows marketers to send more information via annotations in a "card" rather than just the subject line or preheader information. Braze has a built-in tool to help you build the card from your email campaign.
 

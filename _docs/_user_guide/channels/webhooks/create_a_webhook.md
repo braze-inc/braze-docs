@@ -15,7 +15,7 @@ search_rank: 2
 You can use webhooks to send information to systems, such as Salesforce or Marketo, or to your backend systems. For example, you might want to credit your customers' accounts with a promotion after they've performed a custom event a certain number of times.
 
 {% alert tip %}
-To learn more about what webhooks are and how you can use them in Braze, check out [About webhooks]({{site.baseurl}}/user_guide/channels/webhooks/understanding_webhooks/) before proceeding.
+To learn more about what webhooks are and how you can use them in Braze, check out [Webhooks]({{site.baseurl}}/user_guide/channels/webhooks/) before proceeding.
 {% endalert %}
 
 ## Step 1: Choose where to build your message
@@ -162,6 +162,8 @@ After sending the test webhook, a dialog will appear with the response message. 
 }
 
 ```
+
+For more information, see [Send test messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=webhook).
 
 ## Step 5: Build the remainder of your campaign or Canvas
 

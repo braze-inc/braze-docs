@@ -23,7 +23,7 @@ The Braze and Looker integration allows company users to leverage first-party [L
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/user_guide/data/braze_currents/how_braze_uses_currents/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-#### Limitations
+#### Considerations
 
 - This process only works with data that has not been pivoted.
 - The API processes a maximum of 100,000 rows at a time.

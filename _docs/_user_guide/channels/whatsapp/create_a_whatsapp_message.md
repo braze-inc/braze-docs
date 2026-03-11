@@ -140,6 +140,8 @@ A conversation window is required to send response messages, including test mess
 
 ![An alert that says, "To test, first open a conversation window by sending a WhatsApp message to +1 217-582-9414. Then, send your response message to the test user."]({% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}){: style="max-width:70%;"}
 
+For more information, see [Send test messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=whatsapp).
+
 ### Step 4: Build the remainder of your campaign or Canvas
 
 {% tabs %}

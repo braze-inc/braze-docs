@@ -206,7 +206,7 @@ If desired, specify Quiet Hours (the time during which your messages will not be
 ### Step 2: Build your Canvas
 
 {% alert tip %}
-Save time and streamline your Canvas creation by using [Braze Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates)! Browse our library of pre-built templates to find one that fits your use case and customize it to meet your specific needs.
+Save time and streamline your Canvas creation by using [Braze Canvas templates]({{site.baseurl}}/user_guide/messaging/templates/canvas_templates/braze_templates/)! Browse our library of pre-built templates to find one that fits your use case and customize it to meet your specific needs.
 {% endalert %}
 
 #### Step 2.1: Add a variant

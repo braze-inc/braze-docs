@@ -12,7 +12,7 @@ description: "This article describes how to send nested JSON data as properties 
 
 You can use nested objects—objects that are inside of another object—to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, triggering message sends, and segmenting users.
 
-## Limitations
+## Considerations
 
 - Nested data is supported for both [custom events]({{site.baseurl}}/user_guide/data/activation/events/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data/activation/events/purchase_events/), but not other event types.
 - Event property objects that contain array or object values can have an event property payload of up to 100 KB.

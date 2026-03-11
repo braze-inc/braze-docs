@@ -1,7 +1,7 @@
 ---
 nav_title: Canvas basics
 article_title: Canvas Basics
-page_order: 1
+page_order: 2
 page_type: reference
 description: "This reference article covers the basics of Canvas, covering various questions you should ask yourself as you set up your first Canvas."
 tool: Canvas
@@ -14,7 +14,7 @@ tool: Canvas
 
 ## Understanding Canvas structure
 
-Before getting started with the finer details of [Canvas setup]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), let's identify the key parts that make up a Canvas.
+Before getting started with the finer details of [Canvas setup]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/), let's identify the key parts that make up a Canvas.
 
 {% tabs %}
   {% tab Canvas %}
@@ -31,7 +31,7 @@ Before getting started with the finer details of [Canvas setup]({{site.baseurl}}
   {% endtab %}
 
   {% tab Canvas Builder %}
-  The Canvas builder maps out the steps to take when creating your Canvas. This includes basics such as naming your Canvas and adding teams. Essentially, the Canvas builder is the crucial setup required prior to beginning building your Canvas. Here, you can control the way your users begin and fulfill their customer journey with options to edit the [entry schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [target audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience), and [send settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![The Canvas builder on the Basics section for a Canvas named "New Canvas".]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
+  The Canvas builder maps out the steps to take when creating your Canvas. This includes basics such as naming your Canvas and adding teams. Essentially, the Canvas builder is the crucial setup required prior to beginning building your Canvas. Here, you can control the way your users begin and fulfill their customer journey with options to edit the [entry schedule]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [target audience]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience), and [send settings]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![The Canvas builder on the Basics section for a Canvas named "New Canvas".]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
@@ -41,7 +41,7 @@ Before getting started with the finer details of [Canvas setup]({{site.baseurl}}
   {% endtab %}
 
   {% tab Steps %}
-  A step in Canvas is a marketing decision point: "if this, then that." Leverage [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components) to build the steps of a user journey.<br><br> ![Example of adding a Delay step to a Canvas.]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %}) <br><br> When a user enters a Canvas, they start at the first step. Each step has conditions that determine whether a user can move to the next step. Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking exception events, and specify different channels like push notifications or webhook events. In Canvas, steps occur in a sequence, meaning the first step occurs before the second step can occur. Let's say we have a Canvas with the following steps: Delay step A with a 24-hour delay, Message step A with a push message, and Message step B with an in-app message. User A is held in a 24-hour delay, then, after 24-hours, they will receive a push message, then an in-app message.
+  A step in Canvas is a marketing decision point: "if this, then that." Leverage [Canvas components]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/#about-canvas-components) to build the steps of a user journey.<br><br> ![Example of adding a Delay step to a Canvas.]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %}) <br><br> When a user enters a Canvas, they start at the first step. Each step has conditions that determine whether a user can move to the next step. Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking exception events, and specify different channels like push notifications or webhook events. In Canvas, steps occur in a sequence, meaning the first step occurs before the second step can occur. Let's say we have a Canvas with the following steps: Delay step A with a 24-hour delay, Message step A with a push message, and Message step B with an in-app message. User A is held in a 24-hour delay, then, after 24-hours, they will receive a push message, then an in-app message.
 
   {% endtab %}
 {% endtabs %}
@@ -64,7 +64,7 @@ You can add tags and name the steps and variants in a Canvas. For more on custom
 
 It's always important to have a defined goal in mind and Canvas helps you understand how you are performing against KPIs like session engagement, purchases, and custom events.
 
-Selecting at least one [conversion event]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) will give you the ability to understand how to optimize performance within the Canvas. And if your Canvas has multiple variants or a control group, Braze will use the conversion event to determine the best variation for achieving this goal.
+Selecting at least one [conversion event]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/conversion_events/) will give you the ability to understand how to optimize performance within the Canvas. And if your Canvas has multiple variants or a control group, Braze will use the conversion event to determine the best variation for achieving this goal.
 
 * **Start Session**: I want my users coming back and engaging with the app.
 * **Make Purchase**: I want my users to buy.
@@ -78,7 +78,7 @@ Selecting at least one [conversion event]({{site.baseurl}}/user_guide/engagement
 Your answer will determine the details of when and how your Canvas is delivered to your customer. Users can enter your Canvas in one of two ways: scheduled or action-based triggers.
 
 {% alert tip %}
-Check out [Time-based functionalities]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/delivery_types/) for Canvas for more strategies and answers to common questions.
+Check out [Time-based functionalities]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/delivery_types/) for Canvas for more strategies and answers to common questions.
 {% endalert %}
 
 Scheduled delivery allows you to send a Canvas immediately to your target audience. You can also have it sent regularly, or schedule it for a specific time in the future. Action-based Canvases respond to specific customer behaviors as they happen. For example, an action-based trigger can include opening an app, making a purchase, interacting with another campaign, or triggering any custom event. At the point of the action occurring, you can have the Canvas send to your users.
@@ -103,12 +103,12 @@ To define your "who", you can use pre-defined segments available in Canvas. You 
 > Where can I best reach my audience? 
 
 This is where we determine which messaging channels make the most sense for your user journey. Ideally, you'd want to reach your users where they're most accessible. With that in mind, you can use any of the following channels with Canvas:
-* [Email]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/)
-* [Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)
-* [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)
-* [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
-* [SMS or MMS]({{site.baseurl}}/about_sms/)
-* [Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)
+* [Email]({{site.baseurl}}/user_guide/channels/email/)
+* [Push]({{site.baseurl}}/user_guide/channels/push/)
+* [In-app messages]({{site.baseurl}}/user_guide/channels/in_app_messages/)
+* [Content Cards]({{site.baseurl}}/user_guide/channels/content_cards/)
+* [SMS or MMS]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/)
+* [Webhook]({{site.baseurl}}/user_guide/channels/webhooks/)
 
 ### The "how": Build the complete experience
 

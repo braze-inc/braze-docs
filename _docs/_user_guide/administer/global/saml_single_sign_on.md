@@ -1,5 +1,5 @@
 ---
-nav_title: "SAML & single sign-on"
+nav_title: "SAML and single sign-on"
 article_title: SAML & Single Sign-On
 page_order: 2
 layout: dev_guide

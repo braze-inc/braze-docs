@@ -42,7 +42,7 @@ This section describes how to configure Intelligent Timing for your campaigns an
 1. Create a campaign and compose your message.
 2. Select the **Scheduled Delivery** as your delivery type.
 3. Under **Time-Based Scheduling Options**, select **Intelligent Timing**.
-4. Set the entry frequency. For one-time sends, select **Once** and select a send date. For recurring sends, select **Daily**, **Weekly**, or **Monthly** and configure the recurrence options. See [limitations](#limitations) for more guidance.
+4. Set the entry frequency. For one-time sends, select **Once** and select a send date. For recurring sends, select **Daily**, **Weekly**, or **Monthly** and configure the recurrence options. See [Considerations](#considerations) for more guidance.
 5. Optionally, configure [Quiet Hours](#quiet-hours).
 6. Specify a [fallback time](#campaign-fallback). This is when the message is sent if a user's profile doesn't have any relevant events to calculate an optimal time.
 
@@ -107,7 +107,7 @@ When using Intelligent Timing, we recommend scheduling the Winning Variant send 
 
 ### Step 3: Choose a delivery window (optional)
 
-Optionally, you can choose to limit the delivery window. This may be useful if your campaign pertains to a specific event, sale, or promotion, but is generally not recommended when using Intelligent Timing. For more information, refer to [limitations](#limitations).
+Optionally, you can choose to limit the delivery window. This may be useful if your campaign pertains to a specific event, sale, or promotion, but is generally not recommended when using Intelligent Timing. For more information, refer to [Considerations](#considerations).
 
 When specified, Braze only uses engagement data within that window to determine a user's optimal delivery time. If there aren't any relevant events within that window, the message sends at your set fallback time.
 
@@ -179,7 +179,7 @@ However, Intelligent Timing is set to deliver at 2 pm, which has already passed.
 {% endtab %}
 {% endtabs %}
 
-## Limitations
+## Considerations
 
 - In-app messages and webhooks are delivered immediately and not given optimal times.
 - Intelligent Timing is not available for action-based or API-triggered campaigns.

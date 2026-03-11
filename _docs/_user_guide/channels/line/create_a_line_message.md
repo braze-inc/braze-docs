@@ -84,6 +84,8 @@ Switch to the **Test** tab to send a test LINE message to content test groups or
 
 ![The "Tests" tab displaying a preview of a test message.]({% image_buster /assets/img/line/test_preview.png %})
 
+For more information, see [Send test messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=line).
+
 ## Step 4: Build the remainder of your campaign or Canvas
 
 {% tabs %}
