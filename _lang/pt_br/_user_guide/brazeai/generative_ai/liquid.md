@@ -8,17 +8,17 @@ page_order: 0.0
 
 # Gerar código Liquid com BrazeAI
 
-> O Liquid Assistant do <sup>BrazeAITM</sup> é um assistente de bate-papo desenvolvido pelo <sup>BrazeAITM</sup> que ajuda a gerar o Liquid de que você precisa para personalizar o conteúdo das mensagens.
+> O Liquid Assistant do BrazeAI<sup>TM</sup> é um assistente de bate-papo desenvolvido pelo BrazeAI<sup>TM</sup> que ajuda a gerar o Liquid de que você precisa para personalizar o conteúdo das mensagens.
 
 ## Sobre o assistente Liquid BrazeAI<sup>TM</sup>
 
-O Liquid Assistant da <sup>BrazeAI™</sup> foi projetado para ajudar na formulação de um código Liquid eficaz e adaptado às suas necessidades de marketing. Treinada na sintaxe do Liquid e em como os profissionais de marketing utilizam o Liquid em suas mensagens, nossa IA entende as nuances da elaboração de conteúdo personalizado.
+O Liquid Assistant da BrazeAI<sup>TM</sup> foi projetado para ajudar na formulação de um código Liquid eficaz e adaptado às suas necessidades de marketing. Treinada na sintaxe do Liquid e em como os profissionais de marketing utilizam o Liquid em suas mensagens, nossa IA entende as nuances da elaboração de conteúdo personalizado.
 
-Além disso, ao fornecer ao Assistente Liquid BrazeAI<sup>TM</sup> os nomes dos seus atributos personalizados (como “favourite_color”)) e tipos de dados (como booleano e string), nosso Assistente Liquid BrazeAI<sup>TM</sup> garante que suas mensagens sejam precisamente direcionadas e alinhadas com seus objetivos. Além disso, se você criar diretrizes da marca, o Liquid Assistant da <sup>BrazeAITM</sup> poderá usar as diretrizes da marca para personalizar melhor os resultados gerados e personalizar o conteúdo de acordo com a voz da nossa própria marca. As diretrizes da marca que você criar serão usadas apenas para personalizar o conteúdo para seu próprio uso.
+Além disso, ao fornecer ao Assistente Liquid BrazeAI<sup>TM</sup> os nomes dos seus atributos personalizados (como “favourite_color”) e tipos de dados (como booleano e string), nosso Assistente Liquid BrazeAI<sup>TM</sup> garante que suas mensagens sejam precisamente direcionadas e alinhadas com seus objetivos. Além disso, se você criar diretrizes da marca, o Liquid Assistant da BrazeAI<sup>TM</sup> poderá usar as diretrizes da marca para personalizar melhor os resultados gerados e personalizar o conteúdo de acordo com a voz da nossa própria marca. As diretrizes da marca que você criar serão usadas apenas para personalizar o conteúdo para seu próprio uso.
 
 ## Canais suportados
 
-Você pode usar o Liquid Assistant do <sup>BrazeAITM</sup> ao criar: 
+Você pode usar o Liquid Assistant do BrazeAI<sup>TM</sup> ao criar: 
 - Envio de mensagens SMS
 - Notificações por push
 - Envio de mensagens de e-mail em HTML
@@ -30,7 +30,7 @@ O assistente funciona em mensagens de e-mail e não em templates. Funciona melho
 
 ## Geração de código Liquid
 
-Para iniciar o Liquid Assistant da <sup>BrazeAI™</sup>, selecione o ícone do assistente de IA no criador de mensagens.
+Para iniciar o Liquid Assistant da BrazeAI<sup>TM</sup>, selecione o ícone do assistente de IA no criador de mensagens.
 
 ![Criador de mensagens com o assistente de IA.]({% image_buster /assets/img/ai_liquid/ai_assistant_icon.png %}){: style="max-width:50%;"}
 
@@ -86,11 +86,11 @@ Para ajuda na redação de prompts eficazes para o Assistente Liquid BrazeAI<sup
 
 ### Usar linguagem natural
 
-O Liquid Assistant da <sup>BrazeAI™</sup> é treinado para entender a linguagem natural. Converse com ele como faria com um colega de trabalho ao pedir ajuda. Isso torna mais fácil para o assistente compreender suas necessidades e fornecer assistência precisa.
+O Liquid Assistant da BrazeAI<sup>TM</sup> é treinado para entender a linguagem natural. Converse com ele como faria com um colega de trabalho ao pedir ajuda. Isso torna mais fácil para o assistente compreender suas necessidades e fornecer assistência precisa.
 
 ### Dar contexto
 
-O fornecimento de contexto ajuda o Liquid Assistant da <sup>BrazeAI™</sup> a entender o panorama geral do seu projeto. É útil incluir um contexto como, por exemplo:
+O fornecimento de contexto ajuda o Liquid Assistant da BrazeAI<sup>TM</sup> a entender o panorama geral do seu projeto. É útil incluir um contexto como, por exemplo:
 
 - Nome e setor de sua empresa
 - Uma campanha na qual você está trabalhando, como a Black Friday ou as vendas de fim de ano
@@ -101,7 +101,7 @@ A inclusão do contexto em seu prompt ajuda o assistente a adaptar as respostas 
 
 ### Seja específico
 
-O Liquid Assistant da <sup>BrazeAI™</sup> pode fazer perguntas de acompanhamento, mas fornecer detalhes antecipadamente pode agilizar a geração de resultados mais precisos. Considere incluir detalhes como:
+O Liquid Assistant da BrazeAI<sup>TM</sup> pode fazer perguntas de acompanhamento, mas fornecer detalhes antecipadamente pode agilizar a geração de resultados mais precisos. Considere incluir detalhes como:
 
 - Quaisquer preferências ou requisitos conhecidos para a mensagem
 - Instruções sobre como lidar com situações, como a falta de respostas do destinatário da mensagem ou opções de mensagem fallback
@@ -109,7 +109,7 @@ O Liquid Assistant da <sup>BrazeAI™</sup> pode fazer perguntas de acompanhamen
 
 ### Seja criativo
 
-Pense fora da caixa com seus prompts para ver como o Liquid Assistant da <sup>BrazeAI™</sup> pode aprimorar seu envio de mensagens. Faça experiências com diferentes prompts e ideias, pois a criatividade pode levar a resultados mais engajados.
+Pense fora da caixa com seus prompts para ver como o Liquid Assistant da BrazeAI<sup>TM</sup> pode aprimorar seu envio de mensagens. Faça experiências com diferentes prompts e ideias, pois a criatividade pode levar a resultados mais engajados.
 
 ## Exemplos de prompts
 

@@ -7,7 +7,7 @@ description: "Cet article de référence explique comment effectuer l'assurance 
 
 # Assurance qualité du contenu avec BrazeAI
 
-> Apprenez à contrôler votre contenu avec <sup>BrazeAITM</sup>, afin de détecter les fautes d'orthographe, les problèmes de grammaire, le ton inapproprié ou le langage offensant, avant d'appuyer sur le bouton d'envoi.
+> Apprenez à contrôler votre contenu avec BrazeAI<sup>TM</sup>, afin de détecter les fautes d'orthographe, les problèmes de grammaire, le ton inapproprié ou le langage offensant, avant d'appuyer sur le bouton d'envoi.
 
 ## Fonctionnalités prises en charge
 
@@ -22,7 +22,7 @@ Les fonctionnalités suivantes sont prises en charge pour améliorer la qualité
 | Prise en charge multilingue     | Bien qu'il ne soit pas officiellement pris en charge par l'OpenAI, le GPT peut comprendre [plusieurs langues](https://openai.com/research/gpt-4#:~:text=GPT%2D4%203%2Dshot%20accuracy%20on%20MMLU%20across%20languages). Gardez à l'esprit que Braze ne transmet aucune information sur la langue ou la locale de votre copie lorsqu'elle est envoyée à OpenAI, de sorte que vos résultats peuvent varier en fonction de la langue dans laquelle vous écrivez. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Utiliser <sup>BrazeAITM</sup> pour l'assurance qualité du contenu
+## Utiliser BrazeAI<sup>TM</sup> pour l'assurance qualité du contenu
 
 {% alert note %}
 Cette fonctionnalité n'est actuellement disponible que pour les SMS, les notifications push Android, les notifications push iOS et les messages in-app.

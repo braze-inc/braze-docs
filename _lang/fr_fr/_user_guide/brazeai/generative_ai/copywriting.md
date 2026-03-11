@@ -27,7 +27,7 @@ Vous pouvez choisir un canal spécifique pour une longueur de sortie basée sur 
 
 Pour personnaliser davantage votre copie, vous pouvez :
 
-- **Appliquer les lignes directrices de la marque :** Après avoir [créé des directives de marque avec <sup>BrazeAITM</sup>]({{site.baseurl}}/user_guide/brazeai/generative_ai/brand_guidelines), vous pouvez les utiliser pour générer votre texte.
+- **Appliquer les lignes directrices de la marque :** Après avoir [créé des directives de marque avec BrazeAI<sup>TM</sup>]({{site.baseurl}}/user_guide/brazeai/generative_ai/brand_guidelines), vous pouvez les utiliser pour générer votre texte.
 - **Choisissez un ton :** Chaque ton génère une copie dans un style différent. Choisissez le ton qui correspond le mieux à la voix de votre marque.
 - **Faites référence aux données des campagnes précédentes**: Lorsque cette option est activée, les notifications push mobiles précédentes envoyées dans le cadre de vos campagnes ou étapes du canvas sont utilisées comme référence stylistique pour générer votre nouvelle copie. Pour plus d'informations, reportez-vous à la section [Utilisation des données des campagnes précédentes](#past-campaign-data).
 - **Copie de la traduction automatique :** Vous pouvez choisir une langue de sortie différente pour votre copie. Le contenu généré sera produit dans cette langue.

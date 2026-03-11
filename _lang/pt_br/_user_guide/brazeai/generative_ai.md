@@ -4,8 +4,8 @@ article_title: IA generativa
 page_order: 5
 layout: dev_guide
 guide_top_header: "IA generativa"
-guide_top_text: "A <sup>BrazeAI™</sup> oferece vários recursos de IA geradores de automação que ajudam a aumentar sua eficiência e criatividade. Crie experiências envolventes para os clientes em vários canais, gastando menos tempo em tarefas rotineiras de redação, refinamento de conteúdo e criação de imagens."
-description: "A <sup>BrazeAI™</sup> oferece vários recursos de IA geradores de automação que ajudam a aumentar sua eficiência e criatividade."
+guide_top_text: "A BrazeAI<sup>TM</sup> oferece vários recursos de IA geradores de automação que ajudam a aumentar sua eficiência e criatividade. Crie experiências envolventes para os clientes em vários canais, gastando menos tempo em tarefas rotineiras de redação, refinamento de conteúdo e criação de imagens."
+description: "A BrazeAI<sup>TM</sup> oferece vários recursos de IA geradores de automação que ajudam a aumentar sua eficiência e criatividade."
 
 guide_featured_title: "Recursos"
 guide_featured_list:
