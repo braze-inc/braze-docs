@@ -39,4 +39,4 @@ Pour archiver un Canvas :
 
 Lorsque vous désarchivez une campagne ou un canvas, il n'est pas mis en ligne/en production/instantané, son statut passe seulement à **Actif**. Après le désarchivage, vous pouvez modifier et revoir la configuration du message sans qu'aucun message ne soit envoyé.
 
-Pour reprendre la campagne ou le canvas et commencer à envoyer des messages, sélectionnez le menu <i class="fas fa-ellipsis-vertical"></i> pour la ligne correspondante et sélectionnez **Reprendre**.
+Pour reprendre la campagne ou Canvas et commencer à envoyer des messages, veuillez sélectionner le<i class="fas fa-ellipsis-vertical"></i>menu correspondant à la ligne concernée, puis sélectionner **Reprendre**.

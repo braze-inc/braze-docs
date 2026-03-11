@@ -1,7 +1,7 @@
 ---
 page_order: 2.4
-nav_title: Notifications en ligne/instantanées
-article_title: Activités en ligne/en production/instantanée pour le SDK de Braze
+nav_title: Notifications en ligne/en production/instantanées
+article_title: Activités en ligne/en production/instantanées pour le SDK Braze
 layout: dev_guide
 guide_top_header: "Activités en direct"
 guide_top_text: "> Apprenez à envoyer des notifications persistantes et dynamiques directement sur l'écran de verrouillage de vos utilisateurs, afin qu'ils puissent obtenir des mises à jour en temps réel sans avoir besoin d'ouvrir votre application. Pour Swift, cette fonction est prise en charge en mode natif."

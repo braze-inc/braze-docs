@@ -24,10 +24,10 @@ Você pode criar ou fazer upload de um número ilimitado de geofences.
 
 - Os apps para Android só podem armazenar até 100 geofences locais de cada vez. A Braze está configurado para armazenar apenas até 20 geofences localmente por app.
 - Os dispositivos iOS podem monitorar até 20 geofences ao mesmo tempo por app. A Braze monitorará até 20 locais se houver espaço disponível. 
-- Se o usuário for elegível para receber mais de 20 geofences, a Braze fará o download da quantidade máxima de locais com base na proximidade do usuário no início da sessão.
+- Se o usuário for elegível para receber mais de 20 geofences, a Braze irá baixar a quantidade máxima de locais com base na proximidade do usuário no início da sessão.
 - Para que as geofences funcionem corretamente, você deve garantir que seu app não esteja usando todos os pontos de geofence disponíveis.
 
-Consulte a tabela a seguir para termos comuns de geofences e suas descrições.
+Consulte a tabela a seguir para termos comuns de geofence e suas descrições.
 
 | Prazo | Descrição |
 |---|---|
@@ -43,7 +43,7 @@ Consulte a tabela a seguir para termos comuns de geofences e suas descrições.
 Para criar um geofence, você precisará criar um conjunto de geofences primeiro.
 
 1. Acessar **público** > **Locais** no dashboard da Braze.
-2. Selecione **Criar Conjunto de Geofences**.
+2. Selecione **Criar Conjunto de Geofence**.
 3. Para **Nome do conjunto**, insira um nome para seu conjunto de geofences.
 4. (Opcional) Adicione tags para filtrar seu conjunto.
 
@@ -65,16 +65,16 @@ Recomendamos a criação de geofences com um raio de pelo menos 200 metros para 
 
 As geofences podem ser feitas upload em massa como um objeto GeoJSON do tipo `FeatureCollection`. Cada geofence é um `Point` tipo de geometria na coleção de recursos. As propriedades para cada recurso requerem uma `radius` chave e uma `name` chave opcional para cada geofence. 
 
-Para fazer upload do seu GeoJSON, selecione **Mais** > **Fazer upload do GeoJSON**.
+Para fazer upload do seu arquivo JSON, selecione **Mais** > **Fazer upload do JSON**.
 
 Ao criar seus geofences, considere os seguintes detalhes:
 
 - O `coordinates` valor no GeoJSON é formatado como `[Longitude, Latitude]`.
-- O raio máximo do geofence que pode ser enviado é de 10.000 metros (cerca de 10 quilômetros ou 6,2 milhas).
+- O raio máximo de geofence que pode ser enviado é de 10.000 metros (cerca de 10 quilômetros ou 6,2 milhas).
 
 ### Exemplo
 
-O seguinte exemplo representa o GeoJSON correto para especificar dois geofences: um para a sede da Braze em NYC e um para a Estátua da Liberdade ao sul de Manhattan.
+O seguinte exemplo mostra o formato GeoJSON correto para especificar dois geofences: um para a sede da Braze em NYC e um para a Estátua da Liberdade ao sul de Manhattan.
 
 ```
 {
@@ -84,7 +84,7 @@ O seguinte exemplo representa o GeoJSON correto para especificar dois geofences:
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-73.992473, 40.755669]
+        "coordinates": [-73.9853689, 40.7434683]
       },
       "properties": {
         "radius": 200,
@@ -147,7 +147,7 @@ As campanhas disparadas por geofence estão disponíveis no iOS e no Android. Pa
 A partir da versão 3.6.0 do SDK do Braze, a coleta de locais do Braze é desativada por padrão. Para verificar se a capacitação está ativada no Android, confirme se `com_braze_enable_location_collection` está definido como `true` em seu `braze.xml`.
 {% endalert %}
 
-Consulte a documentação [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing#choose-the-optimal-radius-for-your-geofence) ou [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW5) para mais orientações com base em sua plataforma.
+Consulte a documentação [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing#choose-the-optimal-radius-for-your-geofence) ou [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW5) para mais orientações com base na sua plataforma.
 
 {% alert tip %}
 Você também pode aproveitar os geofences com nossos Parceiros de Tecnologia, como [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/) e [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)

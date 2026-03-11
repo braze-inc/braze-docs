@@ -8,7 +8,7 @@ channel: push
 
 layout: glossary_page
 glossary_top_header: "Arten von Push-Benachrichtigungen"
-glossary_top_text: "Es gibt viele Arten von Push-Benachrichtigungen, die Sie verwenden können, um mit Ihren Kund:innen zu interagieren. Diese lassen sich nach Kanälen eingrenzen und für die Bedürfnisse vieler verschiedener Nutzer:innen verwenden. Die meisten dieser Einstellungen können Sie in Ihren Push Kampagnen konfigurieren. In den folgenden Beschreibungen finden Sie jedoch Hinweise darauf, ob Backend-Konfigurationen erforderlich sind und welche das sein könnten."
+glossary_top_text: "Es gibt verschiedene Arten von Push-Benachrichtigungen, die Sie zur Interaktion mit Ihren Kund:innen nutzen können. Diese können nach Kanälen gefiltert und für die Anforderungen vieler verschiedener Nutzer:innen eingesetzt werden. Die meisten dieser Einstellungen können Sie in Ihren Push-Kampagnen konfigurieren. In den folgenden Beschreibungen finden Sie jedoch Hinweise darauf, ob Backend-Konfigurationen erforderlich sind und um welche es sich dabei handeln könnte."
 
 glossary_tag_name: Channels
 glossary_filter_text: "Select any of the following channels to narrow Push Type options."
@@ -53,7 +53,7 @@ glossaries:
       - iOS
       - Android
   - name: "Vorläufige Push-Benachrichtigungen für iOS"
-    description: "Die von Apple in iOS 12 eingeführte provisorische Autorisierung erfolgt automatisch bei der Installation von iOS-Apps und ermöglicht es Marken, stille Benachrichtigungen zu senden, ohne den Nutzern eine Push-Anfrage zu zeigen. Wenn die stille Push-Benachrichtigung gesendet und in der Benachrichtigungsleiste des Geräts angezeigt wird, erhalten die Benutzer die Möglichkeit, Push-Benachrichtigungen zuzulassen oder abzubrechen."
+    description: "Die von Apple in iOS 12 eingeführte vorläufige Autorisierung erfolgt automatisch bei der Installation von iOS-Apps und macht es Marken möglich, Benachrichtigungen zu versenden, ohne dass den Nutzer:innen eine Push-Aufforderung angezeigt wird. Diese Benachrichtigungen werden unauffällig an das Benachrichtigungscenter zugestellt, wo die Nutzer:innen die Möglichkeit haben, Push-Benachrichtigungen zuzulassen oder zu unterbinden."
     tags:
       - iOS
   - name: "HTML-Push-Benachrichtigungen"
@@ -65,8 +65,8 @@ glossaries:
     tags:
       - iOS
       - Android
-  - name: "Push-Benachrichtigungen im Hintergrund oder lautlos"
-    description: "Push-Benachrichtigungen, die nicht auf dem Gerät wiedergegeben werden. Wird in der Regel verwendet, um Informationspakete für Hintergrundprozesse und Deinstallationsverfolgung an die App zu senden. Ein Push-Token mit Enablement für den Hintergrund ist erforderlich, damit ein Push im Hintergrund oder im Stillen gesendet werden kann."
+  - name: "Push-Benachrichtigungen im Hintergrund (stille Push-Benachrichtigungen)"
+    description: "Eine Push-Benachrichtigung, die für den Endnutzer:in nicht sichtbar ist und in der Regel intern verwendet wird, um Features wie Uninstall-Tracking, Geofences und die Datensynchronisierung zu verwalten. Hintergrund-Push und stiller Push referenzieren dasselbe Konzept. Ein Push-Token mit Enablement ist erforderlich. Weitere Informationen finden Sie unter <a href=\"/docs/developer_guide/push_notifications/silent\">Stille Push-Benachrichtigungen</a>."
     tags:
       - Web
       - Android

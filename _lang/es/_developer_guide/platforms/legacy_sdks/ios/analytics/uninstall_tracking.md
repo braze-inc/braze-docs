@@ -34,7 +34,7 @@ A continuación, envíate un push de prueba desde el panel. Este push de prueba 
 4. Comprueba que tu aplicación no realiza ninguna acción automática no deseada al recibir el push.
 
 {% alert important %}
-Estos pasos de prueba son un proxy para enviar un push de seguimiento de desinstalación desde Braze. Si tienes habilitados los recuentos de placas, se enviará un número de placa junto con el push de prueba, pero los push de seguimiento de desinstalación de Braze no establecerán un número de placa en tu aplicación.
+Estos pasos de prueba son un proxy para enviar un push de seguimiento de desinstalación desde Braze. Si tienes habilitado el recuento de insignias, se enviará un número de insignia junto con la prueba, pero las pushes de seguimiento de Uninstall Tracking de Braze no establecerán un número de insignia en tu aplicación.
 {% endalert %}
 
 ## Paso 4: Habilitar el seguimiento de Uninstall Tracking

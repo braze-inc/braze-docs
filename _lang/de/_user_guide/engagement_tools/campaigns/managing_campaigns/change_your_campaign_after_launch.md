@@ -40,6 +40,13 @@ Alle Änderungen am Inhalt der Nachrichten (einschließlich Titel, Textkörper u
 
 Wenn Sie die geplante Sendezeit oder die Zielgruppe Ihrer Kampagne ändern, werden diese Änderungen sofort in der aktuellen Kampagne übernommen.
 
+#### Überlegungen
+
+Wenn Ihre Kampagne intelligentes Timing oder die Zustellung zur Ortszeit verwendet, werden Änderungen an der geplanten Versandzeit nicht berücksichtigt, wenn die Änderung innerhalb von 24 Stunden vor der ursprünglichen Versandzeit vorgenommen wird. Dies ist der Grund:
+
+- **Intelligentes Timing:** Braze beginnt um Mitternacht Samoa-Zeit mit der Berechnung der optimalen Versandzeit. Sollte diese Zeit bereits verstrichen sein, wurde die Verarbeitung der Nachricht bereits begonnen. Weitere Informationen referenzieren Sie auf [intelligente Timing]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/).
+- **Zustellung zur Ortszeit:** Wenn Sie eine Kampagne in einer lokalen Zeitzone bearbeiten, die weniger als 24 Stunden im Voraus geplant wurde, wird der Zeitplan der Nachricht nicht geändert. Weitere Informationen finden Sie unter [Wie plane ich eine Kampagne für eine Ortszeit?]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign)
+
 ### Rate senden
 
 Wenn Sie eine Sendegeschwindigkeitsbeschränkung verwenden, "plant" Braze Ihre Nachrichten in minutengroßen Zeitfenstern. Wenn Sie also die Sendegeschwindigkeit der Nachrichten ändern möchten, halten Sie sich an das folgende Verfahren, um sofortige Änderungen vorzunehmen.
@@ -70,7 +77,7 @@ Um einen Entwurf zu erstellen, gehen Sie wie folgt vor:
 2. Nehmen Sie Ihre Änderungen vor.
 3. Wählen Sie **Als Entwurf speichern**. Beachten Sie, dass Sie nach dem Erstellen eines Entwurfs die aktive Kampagne erst bearbeiten können, wenn Sie die Kampagne entweder starten oder den Entwurf verwerfen.
 
-![Ein Entwurf einer aktiven Kampagne mit einer Option zum Anzeigen der aktiven Kampagne.]({% image_buster /assets/img/campaign_draft.png %})
+![Ein Entwurf einer aktiven Kampagne mit der Option, die aktive Kampagne anzuzeigen.]({% image_buster /assets/img/campaign_draft.png %})
 
 Wenn Sie den Entwurf bearbeiten, können Sie die aktive Kampagne auch in der Kopfzeile des Kampagnenentwurfs oder in der Fußzeile der Kampagnen Analytics referenzieren. 
 

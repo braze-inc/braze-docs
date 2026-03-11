@@ -5,7 +5,7 @@ article_title: 知っておくべき Braze 用語
 
 layout: glossary_page
 glossary_top_header: "知っておくべき用語"
-glossary_top_text: "これらの用語は、Brazeとのより良い顧客やユーザー結合への旅を始める際に役立つはずです。これを読んでからオンボーディングを始めてください。"
+glossary_top_text: "これらの条件は、Brazeを通じて顧客やユーザーとの絆を深める旅を始める際に役立つだろう。オンボーディングを始める前に、これを読んでおけ。"
 page_type: glossary
 description: "この用語集では、Braze オンボーディングプロセスを実行する際に知っておくべき重要な用語について説明します。"
 

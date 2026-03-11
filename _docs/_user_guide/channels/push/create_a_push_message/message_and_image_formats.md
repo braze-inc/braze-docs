@@ -93,7 +93,7 @@ Large image notifications display best when using an image of at least 600x300 p
 | --- | ---
 Chrome | 192 x 192 ≥
 Firefox | 192 x 192 ≥
-Safari | 192 x 192 ≥ (Icons are configurable on a per-campaign basis with Safari 16 on macOS 13+)
+Safari | 192 x 192 ≥ (Icons are configurable on a per-campaign basis with Safari 16+ on macOS 13+)
 Opera | 192x192 ≥
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

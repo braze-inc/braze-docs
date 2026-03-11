@@ -46,6 +46,10 @@ description: "この参考記事では、イベント・オブジェクトとは
 - [アプリ識別子]({{site.baseurl}}/api/identifier_types/)
 - [ISO 8601タイムコード](https://en.wikipedia.org/wiki/ISO_8601)
 
+{% alert note %}
+一部の識別子ペアは、単一のリクエスト内で同時に使用できない。と`phone`が`email`両方指定された場合、がより`email`優先される`phone`。詳細については、[識別子解決]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution)を参照せよ。
+{% endalert %}
+
 #### 既存のプロファイルのみを更新する
 
 Braze で既存のユーザープロファイルのみを更新するには、`_update_existing_only` キーをリクエストの本文内に `true` の値で渡す必要があります。この値を省略すると、`external_id` がまだ存在しない場合、Brazeは新しいユーザープロファイルを作成する。
@@ -80,7 +84,7 @@ Braze で既存のユーザープロファイルのみを更新するには、`_
 - `event_name`
 
 {% alert important %}
-カスタムイベントプロパティ名として予約キーを使用すると、`/users/track` エンドポイントにリクエストを送信する際に API エラーが発生する。
+予約済みキーをカスタムイベントのプロパティ名として使用すると、エンド`/users/track`ポイントへのリクエスト送信時にAPIエラーが発生する。
 {% endalert %}
 
 ### イベント・プロパティの永続性
@@ -89,7 +93,7 @@ Braze で既存のユーザープロファイルのみを更新するには、`_
 
 #### イベント依頼例
 
-```json
+```http
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY

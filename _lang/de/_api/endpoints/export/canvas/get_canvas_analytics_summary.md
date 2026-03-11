@@ -1,11 +1,11 @@
 ---
 nav_title: "GET: Exportieren von Canvas Daten Zusammenfassung Analytics"
 article_title: "GET: Export Canvas Daten Zusammenfassung Analytics"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt den Endpunkt Export Canvas data summary analytics Braze."
+description: "Dieser Artikel beschreibt den Braze-Endpunkt für die Zusammenfassung der Analytics-Daten von Export-Canvas."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "Dieser Artikel beschreibt den Endpunkt Export Canvas data summary 
 /canvas/data_summary
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um Rollups von Zeitreihendaten für ein Canvas zu exportieren, die eine übersichtliche Zusammenfassung der Canvas-Ergebnisse liefern.
+> Verwenden Sie diesen Endpunkt, um Rollups von Zeitreihendaten für ein Canvas zu exportieren und so eine prägnante Zusammenfassung der Canvas-Ergebnisse zu erhalten.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1eb1b760-6b00-4c03-bcfb-12646f2ba6da {% endapiref %}
 
@@ -31,16 +31,16 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Erforderlich | String | Siehe [Canvas API Bezeichner]({{site.baseurl}}/api/identifier_types/). |
-| `ending_at` | Erforderlich | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) String) | Enddatum für den Export der Daten. Standardmäßig wird die Uhrzeit der Anfrage verwendet. |
+| `ending_at` | Erforderlich | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) String) | Enddatum für den Export der Daten. Standardmäßig wird der Zeitpunkt der Anfrage verwendet. |
 | `starting_at` | Fakultativ* | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) String) | Startdatum für den Export der Daten. <br><br>\* Entweder `length` oder `starting_at` ist erforderlich. |
-| `length` | Fakultativ* | String | Maximale Anzahl von Tagen vor `ending_at`, die in der zurückgegebenen Serie enthalten sind. Muss zwischen 1 und 14 (einschließlich) liegen. <br><br>\* Entweder `length` oder `starting_at` ist erforderlich. |
-| `include_variant_breakdown` | Optional | Boolesch | Ob Variantenstatistiken einbezogen werden sollen (Standard ist `false`).  |
-| `include_step_breakdown` | Optional | Boolesch | Ob Schrittstatistiken einbezogen werden sollen (Standard: `false`). |
-| `include_deleted_step_data` | Optional | Boolesch | Ob Schrittstatistiken für gelöschte Schritte einbezogen werden sollen (Standard: `false`). |
+| `length` | Fakultativ* | String | Maximale Anzahl von Tagen, bevor sie in die zurückgegebene`ending_at` Reihe aufgenommen werden. Muss zwischen 1 und 14 (einschließlich) liegen. <br><br>\* Entweder `length` oder `starting_at` ist erforderlich. |
+| `include_variant_breakdown` | Optional | Boolesch | Ob Variantenstatistiken einbezogen werden sollen (Standardwert ist `false`).  |
+| `include_step_breakdown` | Optional | Boolesch | Ob Schrittstatistiken einbezogen werden sollen (Standardwert ist `false`). |
+| `include_deleted_step_data` | Optional | Boolesch | Ob Schrittstatistiken für gelöschte Schritte einbezogen werden sollen (Standardwert ist `false`). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
-**Zeitzonen-Anpassung:** Die Analytics von Braze-Dashboard werden täglich in der für Ihr Unternehmen konfigurierten Zeitzone im Dashboard aggregiert. Stellen Sie sicher, dass Ihre Zeitstempel mit der Zeitzone Ihres Unternehmens übereinstimmen, damit Ihre Statistiken mit dem Dashboard übereinstimmen. Wenn Ihre Firmenzeit zum Beispiel UTC+2 ist, sollte der Zeitstempel 12 Uhr UTC+2 lauten.
+**Zeitzonenanpassung:** Die Analytics-Daten des Braze-Dashboards werden täglich in der für Ihr Unternehmen konfigurierten Zeitzone im Dashboard zusammengefasst. Bitte stellen Sie sicher, dass Ihre Zeitstempel mit der Zeitzone Ihres Unternehmens übereinstimmen, damit Ihre Statistiken mit dem Dashboard übereinstimmen. Wenn die Zeit in Ihrem Unternehmen beispielsweise UTC+2 ist, sollte der Zeitstempel 12 Uhr UTC+2 lauten.
 {% endalert %}
 
 ## Beispiel Anfrage
@@ -99,7 +99,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 ```
 
 {% alert important %}
-**`influenced_opens` Feld:** In der API-Antwort gibt das Feld `influenced_opens` die Gesamtzahl der Öffnungen an (sowohl direkte als auch beeinflusste Öffnungen zusammen). Im Braze-Dashboard referenziert 'beeinflusste Öffnungen' nur auf beeinflusste Öffnungen, nicht auf direkte Öffnungen. Dies ist auf eine alte Namenskonvention in der API zurückzuführen.
+**`influenced_opens` Bereich:** In der API-Antwort gibt das`influenced_opens`Feld die Gesamtzahl der Öffnungen an (sowohl direkte als auch beeinflusste Öffnungen zusammen). Im Braze-Dashboard referenziert „beeinflusste Öffnungen“ ausschließlich auf beeinflusste Öffnungen, wobei direkte Öffnungen ausgeschlossen sind. Dies ist auf eine veraltete Namenskonvention in der API zurückzuführen.
 {% endalert %}
 
 {% alert tip %}

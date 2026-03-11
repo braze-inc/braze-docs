@@ -21,13 +21,13 @@ Oui. Accédez à la section **Aperçu et test** de l'éditeur par glisser-dépos
 
 ### Comment puis-je modifier la marge intérieure des e-mails sur l’affichage mobile sans mettre à jour la marge intérieure dans l’affichage Web ?
 
-Vous ne pouvez pas modifier le remplissage pour les vues mobile et web exclusivement, de sorte que toute modification est répercutée dans les deux vues. Toutefois, vous pouvez ajouter une logique CSS dans l'éditeur HTML qui définit le rembourrage en fonction des différentes tailles d'écran. L'éditeur par glisser-déposer ne le permet pas. Vous pouvez donc exporter le fichier HTML et utiliser l'éditeur HTML à la place.
+Il n'est pas possible de modifier le remplissage exclusivement pour les vues mobile et Web. Par conséquent, toute modification sera appliquée aux deux vues. Cependant, vous pouvez intégrer une logique CSS dans l'éditeur HTML qui définit le remplissage en fonction des différentes tailles d'écran. Cette fonctionnalité n'est pas prise en charge dans l'éditeur par glisser-déposer. Par conséquent, nous vous recommandons d'exporter le fichier HTML et d'utiliser l'éditeur HTML à la place.
 
-### Comment optimiser une rangée de boutons pour qu'elle reste horizontale sur desktop et mobile ?
+### Comment puis-je optimiser une rangée de boutons afin qu'elle reste horizontale sur ordinateur et sur mobile ?
 
-Lorsque vous créez un e-mail à l'aide de l'éditeur glisser-déposer, si vous créez une rangée horizontale de boutons d'appel à l'action, vous pouvez constater que les boutons passent à une orientation verticale sur mobile. 
+Lorsque vous créez un e-mail à l'aide de l'éditeur par glisser-déposer, si vous créez une rangée horizontale de boutons d'appel à l'action, vous constaterez peut-être que les boutons sont réorientés verticalement sur les appareils mobiles. 
 
-Pour conserver le même format sur toutes les tailles d'appareils, nous vous recommandons de créer une rangée distincte avec des boutons CTA dont le rembourrage a été optimisé pour les mobiles et qui sont configurés pour masquer la rangée sur un appareil de bureau. Le fait d'avoir deux lignes distinctes signifie que vous pouvez définir le rembourrage souhaité pour un meilleur rendu du texte sur les appareils de bureau et mobiles.
+Afin de conserver le même format sur toutes les tailles d'appareils, nous vous recommandons de créer une ligne distincte avec des boutons CTA dont le remplissage est optimisé pour les appareils mobiles et qui sont configurés pour masquer la ligne sur un appareil de bureau. Le fait d'avoir deux lignes distinctes vous permet de définir le remplissage souhaité pour un rendu optimal du texte sur les ordinateurs de bureau et les appareils mobiles.
 
 
 ### Puis-je ajuster la hauteur des lignes dans l'éditeur par glisser-déposer ?
@@ -43,7 +43,7 @@ L'éditeur par glisser-déposer prend actuellement en charge deux couches. Vous 
 
 ### Puis-je enregistrer mon e-mail glissé-déposé en tant que modèle après l'avoir créé dans ma campagne ou mon Canvas ?
 
-Non, vous devez recréer l'e-mail dans **Modèles d'e-mail** pour l'enregistrer.
+Non, il est nécessaire de recréer l'e-mail dans **les modèles d'e-mail** afin de l'enregistrer.
 
 ### Puis-je ajouter des pièces jointes aux e-mails dans l'éditeur par glisser-déposer ?
 

@@ -1,6 +1,6 @@
-## GIF 정보
+## GIF에 대하여
 
-Braze는 커스텀 이미지 라이브러리를 사용하여 애니메이션 GIF를 표시할 수 있는 기능을 제공합니다. 아래 예시에서는 [글라이드](https://bumptech.github.io/glide/)를 사용했지만, GIF를 지원하는 모든 이미지 라이브러리가 호환됩니다.
+Braze는 애니메이션 GIF를 표시하기 위해 커스텀 이미지 라이브러리를 사용할 수 있는 기능을 제공합니다. 아래 예시에서는 [글라이드](https://bumptech.github.io/glide/)를 사용했지만, GIF를 지원하는 모든 이미지 라이브러리가 호환됩니다.
 
 ## 사용자 지정 이미지 라이브러리 통합
 
@@ -163,7 +163,7 @@ class GlideIntegrationApplication : Application() {
 
 ## Jetpack Compose으로 커스텀 이미지 로딩
 
-젯팩 컴포지션으로 이미지 로드를 재정의하려면 값을 [`imageComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-808910455%2FProperties%2F-1725759721). 이 함수는 `Card`를 받아 이미지와 필요한 수정자를 렌더링합니다. 또는 `ContentCardsList` 의 `customCardComposer`를 사용하여 전체 카드를 렌더링할 수 있습니다.
+Jetpack Compose로 이미지 로딩을 오버라이드하려면 [`imageComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-808910455%2FProperties%2F-1725759721)에 값을 전달할 수 있습니다. 이 함수는 `Card`를 받아 이미지와 필요한 수정자를 렌더링합니다. 또는 `ContentCardsList` 의 `customCardComposer`를 사용하여 전체 카드를 렌더링할 수 있습니다.
 
 다음 예시에서는 `imageComposable` 함수에 나열된 카드에 글라이드의 작성 라이브러리를 사용했습니다.
 

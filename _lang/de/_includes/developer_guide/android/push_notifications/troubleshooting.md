@@ -1,4 +1,4 @@
-## Den Push-Workflow von Braze verstehen
+## Den Braze-Push-Workflow verstehen
 
 Der Firebase Cloud Messaging (FCM)-Dienst ist die Infrastruktur von Google für Push-Benachrichtigungen, die an Android-Anwendungen gesendet werden. Hier ist die vereinfachte Struktur, wie Push-Benachrichtigungen für die Geräte Ihrer Benutzer aktiviert werden und wie Braze Push-Benachrichtigungen an sie senden kann:
 
@@ -76,7 +76,7 @@ Ihre Push-Nachrichten werden möglicherweise aus folgenden Gründen nicht gesend
 - Ihre Anmeldedaten haben den falschen Berechtigungsumfang.
 - Sie haben falsche Anmeldedaten in den falschen Braze-Arbeitsbereich hochgeladen (falsche Absender-ID).
 
-Weitere Probleme, die das Versenden einer Push Nachricht verhindern können, finden Sie im [Benutzerhandbuch: Fehlerbehebung bei Push-Benachrichtigungen]({{site.baseurl}}/user_guide/message_building_by_channel/push/troubleshooting/).
+Weitere Probleme, die das Senden einer Push-Nachricht verhindern können, werden im [Benutzerhandbuch referenziert: Fehlerbehebung bei Push-Benachrichtigungen]({{site.baseurl}}/user_guide/message_building_by_channel/push/troubleshooting/).
 
 ### Keine Anzeige von "push-registrierten" Nutzern im Dashboard (vor dem Senden von Nachrichten)
 
@@ -172,7 +172,7 @@ Die Benutzer haben die Anwendung deinstalliert. Dadurch wird ihr FCM-Push-Token 
 
 Der im Braze Dashboard angegebene Firebase Cloud Messaging-Serverschlüssel ist ungültig. Die angegebene Absender-ID sollte mit derjenigen übereinstimmen, auf die in der Datei `braze.xml` Ihrer App verwiesen wird. Den Serverschlüssel und die Absender-ID finden Sie hier in Ihrer Firebase-Konsole:
 
-![Auf der Firebase-Plattform unter "Einstellungen" und dann "Cloud Messaging" werden Ihre Server ID und Ihr Server Schlüssel angezeigt.]({% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey")
+![Auf der Firebase-Plattform finden Sie unter „Einstellungen“ und anschließend „Cloud Messaging“ Ihre Server-ID und Ihren Server-Schlüssel.]({% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey")
 
 ### Push-Klicks nicht protokolliert
 

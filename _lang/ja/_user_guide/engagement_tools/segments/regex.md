@@ -10,7 +10,7 @@ tool:
   
 ---
 
-# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} 正規表現
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} 正規表現
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
@@ -22,7 +22,7 @@ tool:
 
 - [正規表現の基礎](https://learning.braze.com/regular-expression-basics-for-braze) Braze ラーニングコース 
 - [正規表現チートシート]({{site.baseurl}}/regex_cheat_sheet/)
-- [サンプルデータ RTF]({% image_buster /assets/download_file/regex-dummy-data.rtf %})
+- [サンプルデータ RTF]]({% image_buster /assets/download_file/regex-dummy-data.rtf %})
 
 ## 正規表現デバッガー
 
@@ -164,7 +164,7 @@ $( document ).ready(function() {
 
 例えば、"@braze.com" で終わるメールをフィルタリングしたいとする。メールアドレスフィルターを使用して `matches regex` に設定し、正規表現フィールドに「@braze.com」と入力します。他のメールドメインでも同様です。
 
-![braze.com" の正規表現にマッチするメールアドレスをフィルターする。]({% image_buster /assets/img/regex/regeximg1.png %})
+![メールアドレスのフィルターで「@braze.com」という正規表現に一致するものだけを選別する。]({% image_buster /assets/img/regex/regeximg1.png %})
 
 #### 値 ≥x または ≤x の場合、フィルターの番号文字列はどのように使用できますか？
 
@@ -190,7 +190,7 @@ $( document ).ready(function() {
 
 例えば、"San" で始まる都市に住むユーザーをターゲットにする場合、正規表現は `^San \w` とします。この正規表現を使えば、サンフランシスコ、サンディエゴ、サンノゼなどの都市のユーザーをターゲットにできます。
 
-![の正規表現にマッチする市区町村をフィルターする。]({% image_buster /assets/img/regex/regeximg2.png %})
+![正規表現「^San \\w」に一致する市区町村をフィルターでフィルタリングする。]({% image_buster /assets/img/regex/regeximg2.png %})
 
 #### 特定の電話番号をフィルタリングする方法を教えてください。
 
@@ -198,7 +198,7 @@ $( document ).ready(function() {
 
 米国の電話番号を検索すると仮定すると、正規表現フォーマット `1?\d\d\d\d\d\d\d\d\d\d` を使用します。`\d` の各繰り返しは、指定したい桁数です。最初の 3 桁は市外局番です。
 
-同様に、英国の電話番号の書式は `^\+4\d\d\d\d\d\d\d\d\d\d\d` です。その他の国は、それぞれの国番号の後に、残りの各桁について必要な数の `\d` を繰り返します。つまり、国番号が "3" のリトアニアの場合、正規表現は `^\+3\d\d\d\d\d\d\d\d\d\d` になります。
+同様に、英国の電話番号の書式は `^\+4\d\d\d\d\d\d\d\d\d\d\d` です。その他の国については、それぞれの国コードに続いて、残りの各桁に必要な数の`\d`繰り返しを付ける。つまり、国番号が "3" のリトアニアの場合、正規表現は `^\+3\d\d\d\d\d\d\d\d\d\d` になります。
 
 例えば、特定の市外局番 "718" の電話番号でユーザーをフィルタリングしたいとします。電話番号フィルターを使い、`matches regex` に設定し、以下の正規表現を入力します: 
 
@@ -206,6 +206,6 @@ $( document ).ready(function() {
 ^1?718\d\d\d\d\d\d\d
 ```
 
-![の正規表現にマッチする電話番号をフィルターする。]({% image_buster /assets/img/regex/regeximg3.png %})
+![「^1?718\\d\\d\\d\\d\\d\\d\\d」という正規表現に一致する電話番号をフィルターする。]({% image_buster /assets/img/regex/regeximg3.png %})
 
 

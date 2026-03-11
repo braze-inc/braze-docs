@@ -5,7 +5,7 @@ page_order: 2.1
 description: "Cet article de référence présente l’assistant de rédaction basé sur l’IA, une fonctionnalité qui transmet un nom de produit bref ou une description à l’outil de génération de texte GPT de OpenAI pour rédiger un texte marketing semblable à celui produit par un humain, que vous pourrez ensuite utiliser dans vos communications."
 ---
 
-# Générer une copie avec <sup>BrazeAITM</sup>
+# Générer du contenu avec BrazeAI
 
 > L'assistant de rédaction avec l'IA transmet un bref nom ou une brève description de produit à l’outil de génération de textes GPT du fournisseur OpenAI, afin de générer des textes marketing semblables à ceux rédigés par un humain, que vous pouvez ensuite utiliser dans vos communications. Cette fonctionnalité est disponible par défaut pour la plupart des composeurs de messages dans le tableau de bord de Braze.
 
@@ -44,7 +44,7 @@ Nous filtrons les réponses au contenu offensant qui viole la [politique de cont
 
 ## À propos des données relatives aux campagnes antérieures {#past-campaign-data}
 
-Lorsque vous utilisez push comme longueur de sortie, si vous sélectionnez **Reference past campaign data**, des campagnes push mobiles antérieures sélectionnées au hasard seront envoyées à OpenAI afin que GPT puisse les utiliser comme base pour sa génération de copie. Actuellement, le rédacteur de l'intelligence artificielle enverra à OpenAI des campagnes de push qui n'ont pas la syntaxe Liquid. Ne cochez pas cette case si vous ne souhaitez pas utiliser cette fonctionnalité. Consultez les sections suivantes pour en savoir plus sur la façon dont Braze et OpenAI utilisent vos données. 
+Lorsque vous utilisez push comme longueur de sortie, si vous sélectionnez **« Référence aux données des campagnes précédentes** », des campagnes push mobiles précédentes sélectionnées aléatoirement seront envoyées à OpenAI afin que GPT puisse les utiliser comme base pour la génération de son texte. Actuellement, le rédacteur intelligent enverra des campagnes push à OpenAI qui ne disposent pas de la syntaxe Liquid. Ne cochez pas cette case si vous ne souhaitez pas utiliser cette fonctionnalité. Consultez les sections suivantes pour en savoir plus sur la façon dont Braze et OpenAI utilisent vos données. 
 
 Si cette fonctionnalité est utilisée en conjonction avec une [directive de marque]({{site.baseurl}}/user_guide/brazeai/generative_ai//brand_guidelines/), la directive de marque et les données de la campagne antérieure seront incorporées dans le texte final généré.
 

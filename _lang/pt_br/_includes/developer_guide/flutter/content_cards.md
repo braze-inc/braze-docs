@@ -1,4 +1,4 @@
-## Sobre os cartões de conteúdo do Flutter
+## Sobre os Cartões de Conteúdo do Flutter
 
 O SDK da Braze inclui um feed de cartão padrão para você começar com os Cartões de Conteúdo. Para mostrar o feed do cartão, você pode usar o método `braze.launchContentCards()`. O feed de cartão padrão incluído com o SDK da Braze lidará com toda a análise de dados, rastreamento, dispensas e renderização para os cartões de conteúdo de um usuário.
 
@@ -46,7 +46,7 @@ Para obter um exemplo, consulte [main.dart](https://github.com/braze-inc/braze-f
 Esta etapa é apenas para iOS. Os dados do cartão de conteúdo são encaminhados automaticamente da camada do Android.
 {% endalert %}
 
-Para receber os dados na camada Dart da etapa 1, adicione o seguinte código para encaminhar os dados do cartão de conteúdo da camada nativa do iOS.
+Para receber os dados na camada Dart a partir da etapa 1, adicione o seguinte código para encaminhar os dados do Cartão de Conteúdo da camada nativa do iOS.
 
 1. Implemente `contentCards.subscribeToUpdates` para assinar atualizações de cartões de conteúdo, conforme descrito na documentação [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)).
 

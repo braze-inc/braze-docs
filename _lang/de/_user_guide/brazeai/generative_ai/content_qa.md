@@ -5,7 +5,7 @@ page_order: 4
 description: "In diesem Referenzartikel erfahren Sie, wie Sie mit KI direkt aus dem Nachrichten-Editor eine Qualitätssicherung für Ihre Nachrichteninhalte durchführen können."
 ---
 
-# Inhalts-Qualitätssicherung mit <sup>BrazeAITM</sup>
+# Qualitätssicherung von Inhalten mit BrazeAI
 
 > Lernen Sie, wie Sie Ihre Inhalte mit <sup>BrazeAITM</sup> überprüfen können, damit Sie Rechtschreib- und Grammatikfehler, einen unangemessenen Tonfall oder eine beleidigende Sprache erkennen können, bevor Sie auf Senden drücken.
 
@@ -25,14 +25,14 @@ Die folgenden Features werden unterstützt, um die Qualität Ihrer Inhalte zu ve
 ## Verwendung von <sup>BrazeAITM</sup> zur Qualitätssicherung von Inhalten
 
 {% alert note %}
-Dieses Feature ist zur Zeit nur für SMS, Android Push, iOS Push und traditionelle In-App-Nachrichten verfügbar.
+Dieses Feature ist derzeit nur für SMS, Android-Push-Benachrichtigungen, iOS-Push-Benachrichtigungen und herkömmliche In-App-Nachrichten verfügbar.
 {% endalert %}
 
-1. Nachdem Sie eine mobile Push-, SMS- oder herkömmliche In-App-Nachricht verfasst haben, navigieren Sie zum Tab **Test**.
+1. Nachdem Sie eine mobile Push-Benachrichtigung, eine SMS oder eine herkömmliche In-App-Nachricht verfasst haben, navigieren Sie zur Registerkarte **„Test**“.
 2. Suchen Sie den Abschnitt **Inhalts-Qualitätssicherung mit KI**.
 3. Klicken Sie auf **Inhalt testen**.
 
-![Inhalts-Qualitätssicherung mit KI auf dem Tab Test.]({% image_buster /assets/img/content_qa_ai.png %})
+![Qualitätssicherung von Inhalten mit KI im Tab „Test“.]({% image_buster /assets/img/content_qa_ai.png %})
 
 ## Bewährte Praktiken
 

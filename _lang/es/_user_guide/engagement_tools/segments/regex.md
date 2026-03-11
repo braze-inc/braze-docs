@@ -10,7 +10,7 @@ tool:
   
 ---
 
-# [![Curso de Braze](https://learning.braze.com/regular-expression-basics-for-braze) Learning []({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Expresiones regulares
+# [![Curso de Braze ]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}[Learning:](https://learning.braze.com/regular-expression-basics-for-braze) Expresiones regulares
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
@@ -164,7 +164,7 @@ Podemos dividir esta expresión regular en las tres partes siguientes:
 
 Digamos que desea filtrar los correos electrónicos que terminan en "@braze.com". Utilice el filtro de direcciones de correo electrónico, configúrelo en `matches regex` e introduzca "@braze.com" en el campo regex. Lo mismo se aplica a cualquier otro dominio de correo electrónico.
 
-![Filtrar una dirección de correo electrónico que coincida con la regex de "@braze.com".]({% image_buster /assets/img/regex/regeximg1.png %})
+![Filtra las direcciones de correo electrónico que coincidan con la regex «@braze.com».]({% image_buster /assets/img/regex/regeximg1.png %})
 
 #### Cómo puedo utilizar cadenas de números de filtro para valores ≥ x o ≤ x?
 
@@ -190,7 +190,7 @@ Utilice el símbolo de intercalación (`^`) para indicar el comienzo de la caden
 
 Por ejemplo, si intenta dirigirse a usuarios que viven en ciudades que empiezan por "San", su regex sería `^San \w`. Con esta expresión regular, podrá dirigirse a usuarios de ciudades como San Francisco, San Diego, San José, etc.
 
-![Filtrar una ciudad que coincida con el regex de "^San \\w".]({% image_buster /assets/img/regex/regeximg2.png %})
+![Filtra por una ciudad que coincida con la regex «^San \\w».]({% image_buster /assets/img/regex/regeximg2.png %})
 
 #### ¿Cómo puedo filtrar por números de teléfono específicos?
 
@@ -198,7 +198,7 @@ Antes de utilizar regex para filtrar números de teléfono, recuerde que los nú
 
 Suponiendo que busques números de teléfono de EE.UU., utiliza el formato regex `1?\d\d\d\d\d\d\d\d\d\d`, donde cada repetición de `\d` es un dígito que quieres especificar. Los tres primeros dígitos son el prefijo.
 
-Asimismo, el formato de los números de teléfono del Reino Unido es `^\+4\d\d\d\d\d\d\d\d\d\d\d`. Cualquier otro país sería el código de país respectivo, seguido del número necesario de repeticiones `\d` para cada dígito restante. Así, en el caso de Lituania, con un código de país "3", su regex sería `^\+3\d\d\d\d\d\d\d\d\d\d`.
+Asimismo, el formato de los números de teléfono del Reino Unido es `^\+4\d\d\d\d\d\d\d\d\d\d\d`. Cualquier otro país tendría el código del país correspondiente, seguido del número necesario de`\d`repeticiones para cada dígito restante. Así, en el caso de Lituania, con un código de país "3", su regex sería `^\+3\d\d\d\d\d\d\d\d\d\d`.
 
 Por ejemplo, supongamos que desea filtrar usuarios por número de teléfono para un código de área específico, "718". Utilice el filtro de número de teléfono, configúrelo en `matches regex` e introduzca la siguiente expresión regular:
 
@@ -206,6 +206,6 @@ Por ejemplo, supongamos que desea filtrar usuarios por número de teléfono para
 ^1?718\d\d\d\d\d\d\d
 ```
 
-![Filtrar un número de teléfono que coincida con la regex "^1?718d\\d\\d\\d\\d\\d".]({% image_buster /assets/img/regex/regeximg3.png %})
+![Filtra los números de teléfono que coincidan con la regex «^1?718\\d\\d\\d\\d\\d\\d\\d».]({% image_buster /assets/img/regex/regeximg3.png %})
 
 

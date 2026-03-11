@@ -5,7 +5,7 @@ page_order: 4
 description: "Cet article de référence explique comment effectuer l'assurance qualité du contenu de vos messages à l'aide de l'IA, directement à partir du composeur de messages."
 ---
 
-# Assurance qualité du contenu avec <sup>BrazeAITM</sup>
+# Assurance qualité du contenu avec BrazeAI
 
 > Apprenez à contrôler votre contenu avec <sup>BrazeAITM</sup>, afin de détecter les fautes d'orthographe, les problèmes de grammaire, le ton inapproprié ou le langage offensant, avant d'appuyer sur le bouton d'envoi.
 
@@ -25,14 +25,14 @@ Les fonctionnalités suivantes sont prises en charge pour améliorer la qualité
 ## Utiliser <sup>BrazeAITM</sup> pour l'assurance qualité du contenu
 
 {% alert note %}
-Pour l'instant, cette fonctionnalité n'est disponible que pour les SMS, Android push, iOS push et les messages in-app traditionnels.
+Cette fonctionnalité n'est actuellement disponible que pour les SMS, les notifications push Android, les notifications push iOS et les messages in-app.
 {% endalert %}
 
-1. Après avoir composé un message mobile push, un SMS ou un message in-app traditionnel, accédez à l'onglet **Test**.
+1. Après avoir rédigé une notification push mobile, un SMS ou un message in-app, veuillez vous rendre dans l'onglet **Test**.
 2. Recherchez la section **Assurance qualité du contenu avec l’IA**.
 3. Cliquez sur **Tester le contenu**.
 
-![Contenu de la section AQ avec intelligence artificielle de l'onglet Test.]({% image_buster /assets/img/content_qa_ai.png %})
+![Section « Contrôle qualité du contenu avec l'intelligence artificielle » de l'onglet « Test ».]({% image_buster /assets/img/content_qa_ai.png %})
 
 ## Bonnes pratiques
 

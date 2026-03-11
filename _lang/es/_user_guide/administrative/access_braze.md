@@ -4,14 +4,14 @@ article_title: Acceso a Braze
 page_order: 0
 layout: dev_guide
 guide_top_header: "Acceso a Braze"
-guide_top_text: "Aprende a acceder y navegar por tu cuenta o panel de Braze. Esta sección cubre el acceso a la cuenta, el inicio de sesión único, la navegación por el panel y la obtención de asistencia."
+guide_top_text: "Aprende a acceder y navegar por tu cuenta o panel de Braze. Esta sección trata sobre el acceso a la cuenta, el inicio de sesión único, la navegación por el panel y cómo obtener asistencia."
 
 page_type: reference
 description: "En esta página encontrará artículos sobre cómo acceder a su cuenta Braze o a su panel de control. Aquí encontrarás recursos sobre SSO, inicio de sesión, instancias de Braze, puntos finales SDK, restablecimiento de contraseñas y mucho más."
 
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
-- name: Acceder a tu cuenta
+- name: Accede a tu cuenta
   link: /docs/user_guide/administrative/access_braze/accessing_your_account/
   image: /assets/img/braze_icons/user-circle.svg
 - name: SAML e inicio de sesión único
@@ -41,9 +41,9 @@ guide_featured_list:
 
 ## Recursos relacionados
 
-Para tareas administrativas como la gestión de usuarios, espacios de trabajo y equipos, consulta:
-- [Administrar usuarios Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
-- [Crea y administra espacios de trabajo]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/)
+Para tareas administrativas como la administración de usuarios, espacios de trabajo y equipos, consulta:
+- [Administrar usuarios de Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
+- [Crear y administrar espacios de trabajo]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/)
 - [Equipos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)
 
 <br>
