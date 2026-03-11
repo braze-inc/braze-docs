@@ -7,7 +7,7 @@ description: "In diesem Referenzartikel erfahren Sie, wie Sie mit KI direkt aus 
 
 # Qualitätssicherung von Inhalten mit BrazeAI
 
-> Lernen Sie, wie Sie Ihre Inhalte mit <sup>BrazeAITM</sup> überprüfen können, damit Sie Rechtschreib- und Grammatikfehler, einen unangemessenen Tonfall oder eine beleidigende Sprache erkennen können, bevor Sie auf Senden drücken.
+> Lernen Sie, wie Sie Ihre Inhalte mit BrazeAI<sup>TM</sup> überprüfen können, damit Sie Rechtschreib- und Grammatikfehler, einen unangemessenen Tonfall oder eine beleidigende Sprache erkennen können, bevor Sie auf Senden drücken.
 
 ## Unterstützte Funktionen
 
@@ -22,7 +22,7 @@ Die folgenden Features werden unterstützt, um die Qualität Ihrer Inhalte zu ve
 | Unterstützung mehrerer Sprachen     | Obwohl nicht offiziell von OpenAI unterstützt, kann GPT [mehrere Sprachen](https://openai.com/research/gpt-4#:~:text=GPT%2D4%203%2Dshot%20accuracy%20on%20MMLU%20across%20languages) verstehen. Denken Sie daran, dass Braze keine Informationen über die Sprache oder das Gebietsschema Ihrer Kopie weitergibt, wenn diese an OpenAI gesendet wird. Daher können Ihre Ergebnisse je nach Sprache, in der Sie schreiben, variieren. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Verwendung von <sup>BrazeAITM</sup> zur Qualitätssicherung von Inhalten
+## Verwendung von BrazeAI<sup>TM</sup> zur Qualitätssicherung von Inhalten
 
 {% alert note %}
 Dieses Feature ist derzeit nur für SMS, Android-Push-Benachrichtigungen, iOS-Push-Benachrichtigungen und herkömmliche In-App-Nachrichten verfügbar.

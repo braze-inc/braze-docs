@@ -30,7 +30,7 @@ Links werden mithilfe unserer gemeinsamen Kurzdomain (`brz.ai`) gekürzt. Eine B
 Alle statischen URLs, die mit`http://`  oder  beginnen`https://`, werden gekürzt. Statische verkürzte URLs sind ab dem Datum ihrer Erstellung ein Jahr lang gültig. Verkürzte URLs, die Liquid-Personalisierung enthalten, sind zwei Monate lang gültig.
 
 {% alert note %}
-Wenn Sie den <sup>BrazeAITM</sup> [Intelligent Channel Filter]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) verwenden möchten und die SMS- und RCS-Kanäle auswählbar sein sollen, schalten Sie die Linkverkürzung mit fortschrittlichem Tracking ein.
+Wenn Sie den BrazeAI<sup>TM</sup> [Intelligent Channel Filter]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) verwenden möchten und die SMS- und RCS-Kanäle auswählbar sein sollen, schalten Sie die Linkverkürzung mit fortschrittlichem Tracking ein.
 {% endalert %}
 
 ## Linkverkürzung verwenden
