@@ -1,7 +1,7 @@
 ---
 nav_title: "PUBLICAR: Programar lienzos activados por la API"
 article_title: "PUBLICAR: Programar lienzos activados por la API"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
@@ -10,13 +10,15 @@ description: "En este artículo se describen los detalles del punto final Progra
 ---
 {% api %}
 # Programar lienzos activados por la API
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
 > Utilice este punto final para programar mensajes Canvas a través de la entrega activada por API, lo que le permite decidir qué acción debe activar el envío del mensaje.
 
-Puedes pasar `canvas_entry_properties` que será templado en los mensajes enviados por los primeros pasos del Canvas.
+Puedes pasar `context` que será templado en los mensajes enviados por los primeros pasos del Canvas.
+
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
 Tenga en cuenta que para enviar mensajes con este punto final, debe tener un [ID de lienzo]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier), creado cuando construye un lienzo.
 
@@ -49,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
   // the message will send to entire segment targeted by the Canvas
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
+  "context": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
   "schedule": {
     "time": (required, datetime as ISO 8601 string) time to send the message,
     "in_local_time": (optional, bool),
@@ -66,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `recipients` | Opcional | Matriz de objetos destinatarios | Ver [objeto de destinatarios]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `audience` | Opcional | Objeto de audiencia conectado | Ver [audiencia conectada]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`broadcast`| Opcional | Booleano | Debes establecer `broadcast` en verdadero cuando envíes un mensaje a un segmento completo al que se dirige una campaña o Canvas. Este parámetro está predeterminado como falso (a 31 de agosto de 2017). <br><br> Si `broadcast` tiene el valor true, no se puede incluir una lista `recipients`. Sin embargo, ten cuidado al configurar `broadcast: true`, ya que si lo haces involuntariamente puede que envíes tu mensaje a una audiencia mayor de la esperada. |
-| `canvas_entry_properties` | Opcional | Objeto | Pares clave-valor de personalización para todos los usuarios de este envío. Ver [objeto Propiedades de entrada de lienzo]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object). |
+| `context` | Opcional | Objeto | Pares clave-valor de personalización para todos los usuarios de este envío. Véase [el objeto de contexto Canvas]({{site.baseurl}}/api/objects_filters/context_object). |
 | `schedule` | Obligatoria | Objeto de programación | Ver [objeto de programación]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -81,7 +83,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
     {
       "user_alias": "example_alias",
       "external_user_id": "external_user_identifier",
-      "canvas_entry_properties": {}
+      "context": {}
     }
   ],
   "audience": {
@@ -132,7 +134,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
     ]
   },
   "broadcast": false,
-  "canvas_entry_properties": {},
+  "context": {},
   "schedule": {
     "time": "",
     "in_local_time": false,

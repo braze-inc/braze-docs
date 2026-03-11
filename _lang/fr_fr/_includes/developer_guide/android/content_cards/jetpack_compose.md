@@ -12,7 +12,7 @@ setContent {
 
 ## Traitement des clics de carte
 
-Pour gérer les clics de carte, transmettez une fonction qui prend une `Card` et renvoie un `Boolean` à `onCardClicked`. Si la valeur `true` est renvoyée, Braze ne traitera rien sur le clic à part sa consignation pour les analyses. Si la valeur `false` est renvoyée, Braze traitera le clic.
+Pour gérer les clics de carte, transmettez une fonction qui prend une `Card` et renvoie un `Boolean` à `onCardClicked`. Si la valeur `true` est renvoyée, Braze ne traitera rien sur le clic à part sa consignation pour les analyses. Si`false`  est renvoyé, Braze traitera le clic.
 
 ```kotlin
 ContentCardsList(

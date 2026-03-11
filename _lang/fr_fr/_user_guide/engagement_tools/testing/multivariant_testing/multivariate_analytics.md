@@ -39,11 +39,11 @@ Si une variante surpasse toutes les autres avec un [taux de confiance]({{site.ba
 
 Si aucune variante ne surpasse les autres avec un niveau de confiance de 95 % et que vous avez choisi tout de même d’envoyer la variante ayant obtenu les meilleurs résultats, la « meilleure » variante sera envoyée et marquée avec une étiquette indiquant « Gagnante ».
 
-![Résultats d'un premier test envoyé pour déterminer la variante gagnante où aucune variante n'a obtenu de meilleurs résultats que les autres avec suffisamment de confiance pour atteindre le seuil de confiance de 95 % pour la signification statistique.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
+![Résultats d'un test initial réalisé afin de déterminer la variante gagnante, où aucune variante n'a obtenu de résultats suffisamment supérieurs aux autres pour atteindre le seuil de confiance de 95 % requis pour une signification statistique.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
 
 #### Comment la variante gagnante est-elle sélectionnée ?
 
-Braze teste toutes les variantes les unes par rapport aux autres à l'aide de [tests du khi-carré de Pearson](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). Cela permet de déterminer si une variante est statistiquement plus performante que toutes les autres à un niveau de signification de p < 0,05, ou ce que nous appelons la signification à 95 %. Si c’est le cas, la variante gagnante est indiquée par ’étiquette « Winner (Gagnante) ».
+Braze teste toutes les variantes les unes par rapport aux autres à l'aide de [tests du khi-carré de Pearson](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). Cela permet de déterminer si une variante surpasse statistiquement toutes les autres à un niveau de signification de p <0,05, ou ce que nous appelons une signification de 95 %. Si c’est le cas, la variante gagnante est indiquée par ’étiquette « Winner (Gagnante) ».
 
 Ce test est différent du score de confiance, qui décrit uniquement la performance d’une variante par rapport au groupe de contrôle avec une valeur numérique comprise entre 0 et 100 %.
 
@@ -54,7 +54,7 @@ Une variante peut fournir de meilleurs résultats que le groupe de contrôle, ma
 
 L'onglet **Variante gagnante** montre les résultats du deuxième envoi, où chaque utilisateur restant a reçu la variante la plus performante du test initial. Votre **% d'audience** correspondra au pourcentage du segment cible que vous avez réservé au groupe de la variante gagnante.
 
-![Résultats de la variante gagnante envoyés au groupe de la variante gagnante.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
+![Les résultats de la variante gagnante ont été transmis au groupe de la variante gagnante.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -78,7 +78,7 @@ Les relations entre les événements personnalisés et les préférences de mess
 
 ![]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
 
-Si le test ne parvient pas à établir une relation significative entre les événements personnalisés et les préférences de chemin d'accès, il revient à une méthode d'analyse basée sur la session et aucun tableau de données d'événements personnalisés n'est affiché.
+Si le test ne parvient pas à établir une relation significative entre les événements personnalisés et les préférences de parcours, il revient à une méthode d'analyse basée sur les sessions, et aucun tableau de données d'événements personnalisés n'est affiché.
 
 {% details Fallback analysis method %}
 
@@ -91,7 +91,7 @@ Ces caractéristiques sont :
 - **Fréquence :** La fréquence de leurs sessions
 - **Ancienneté :** Depuis combien de temps ils sont utilisateurs
 
-Par exemple, le test peut révéler que la plupart des utilisateurs préfèrent la variante A, mais que les utilisateurs qui ont eu une session il y a environ 3 à 12 jours, qui ont un intervalle de 1 à 12 jours entre les sessions et qui ont été créés au cours des 67 à 577 derniers jours ont tendance à préférer la variante B. Par conséquent, les utilisateurs de cette sous-population ont reçu la variante B lors du deuxième envoi, tandis que les autres ont reçu la variante A.
+Par exemple, le test peut révéler que la plupart des utilisateurs préfèrent la variante A, mais que ceux qui ont eu une session il y a environ 3 à 12 jours, qui ont entre 1 et 12 jours entre les sessions et qui ont été créés au cours des 67 à 577 derniers jours ont tendance à préférer la variante B. Par conséquent, les utilisateurs de cette sous-population ont reçu la variante B lors du deuxième envoi, tandis que les autres ont reçu la variante A.
 
 ![Le tableau des caractéristiques utilisateur qui montre quels utilisateurs sont supposés préférer la Variante A ou la Variante B selon les trois compartiments qui leur sont affectés pour le caractère récent, la fréquente et la durée.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
 
@@ -149,19 +149,19 @@ Un test peut fournir des informations importantes même si son niveau de confian
 
 Que votre test aboutisse ou non à un résultat clair, il peut être utile d'effectuer un [test de suivi](#recommended-follow-ups) pour confirmer vos résultats ou appliquer vos conclusions à un scénario légèrement différent.
 
-## Divergences entre le groupe de contrôle et la variante
+## Différences entre le groupe de contrôle et la variante
 
-Dans les campagnes de messages in-app, la façon dont les utilisateurs sont suivis et dont les impressions sont enregistrées peut entraîner des écarts dans la répartition attendue entre le groupe de contrôle et la variante. En effet, les impressions réelles enregistrées peuvent ne pas refléter ce fractionnement, et Braze n'a en définitive aucun contrôle sur le comportement individuel de l'utilisateur qui effectuera le déclenchement.
+Dans les campagnes de messages in-app, la manière dont les utilisateurs sont suivis et dont les impressions sont enregistrées peut entraîner des divergences dans la répartition attendue entre le groupe de contrôle et la variante. En effet, les impressions réelles enregistrées peuvent ne pas refléter cette répartition, et Braze n'a finalement aucun contrôle sur le comportement individuel des utilisateurs qui seront les déclencheurs de l'action.
 
-Par exemple, disons qu'une campagne a une audience cible de 200 utilisateurs au moment du lancement, avec 100 utilisateurs dans le groupe de contrôle et 100 utilisateurs dans la variante.
+Par exemple, supposons qu'une campagne cible 200 utilisateurs lors de son lancement, avec 100 utilisateurs dans le groupe de contrôle et 100 utilisateurs dans la variante.
 
-Les 100 utilisateurs de la variante reçoivent l'envoi du message in-app, et 50 d'entre eux effectuent l'action déclenchante et voient le message in-app. Les 100 utilisateurs du groupe de contrôle ne sont suivis que s'ils effectuent l'action déclenchante de la campagne, et 75 d'entre eux effectuent l'action déclenchante et enregistrent une impression, mais ne voient pas le message in-app.
+Les 100 utilisateurs de la variante reçoivent le message in-app, et 50 d'entre eux effectuent l'action de déclenchement et voient le message in-app. Les 100 utilisateurs du groupe de contrôle ne sont suivis que s'ils effectuent l'action de déclenchement de la campagne. Parmi eux, 75 effectuent l'action de déclenchement et enregistrent une impression, mais ne voient pas le message in-app.
 
-Malgré la répartition initiale 50/50, les impressions uniques enregistrées ne sont pas équilibrées. Le groupe variante compte 50 impressions, tandis que le groupe contrôle en compte 75.
+Malgré la répartition initiale à parts égales, les impressions uniques enregistrées ne sont pas équilibrées. Le groupe variant a enregistré 50 impressions, tandis que le groupe de contrôle en a enregistré 75.
 
-### Retards dans l'envoi des messages in-app 
+### Retards dans les messages in-app 
 
-Pour les campagnes de messages in-app déclenchés qui comprennent des affichages différés, les impressions du groupe contrôle seront enregistrées au moment où l'utilisateur final aurait initialement reçu le message in-app. Par exemple, si une campagne est réglée pour retarder l'affichage d'une heure, les impressions du groupe de contrôle ne seront pas enregistrées tant que le délai d'une heure ne sera pas écoulé. Cela permet de suivre avec précision les impressions liées au moment prévu pour la réception/distribution du message.
+Pour les campagnes de messages in-app déclenchées qui incluent des affichages différés, les impressions du groupe de contrôle seront enregistrées au moment où l'utilisateur final aurait initialement reçu le message in-app. Par exemple, si une campagne est configurée pour retarder l'affichage d'une heure, les impressions du groupe de contrôle ne seront pas enregistrées avant que le délai d'une heure ne soit écoulé. Cela facilite le suivi précis des impressions liées au moment prévu pour la réception/distribution du message.
 
 ## Suivis recommandés {#recommended-follow-ups}
 

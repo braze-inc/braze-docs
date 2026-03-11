@@ -1,14 +1,14 @@
 ---
-nav_title: "Tutorial: Mostrar pancartas"
-article_title: "Tutorial: Mostrar un Banner por ID de Colocación"
-description: "¿Eres nuevo en el SDK de Braze? Empieza con este tutorial sobre la visualización de Banners por ID de colocación."
+nav_title: "Tutorial: Mostrar banners"
+article_title: "Tutorial: Mostrar un banner por ID de ubicación"
+description: "¿Eres nuevo en Banners en el SDK de Braze? Comienza con este tutorial sobre cómo mostrar banners por ID de ubicación."
 page_order: 10
 layout: scrolly
 ---
 
-# Tutorial: Mostrar un Banner por ID de Colocación
+# Tutorial: Mostrar un banner por ID de ubicación
 
-> Sigue el código de ejemplo de este tutorial para mostrar Banners utilizando su ID de colocación. Para más información general, consulta [Pancartas]({{site.baseurl}}/developer_guide/banners/).
+> Sigue el código de ejemplo de este tutorial para mostrar banners utilizando su ID de ubicación. Para obtener información más general, consulta [Banners]({{site.baseurl}}/developer_guide/banners/).
 
 {% sdktabs %}
 {% sdktab web %}

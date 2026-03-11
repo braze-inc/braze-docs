@@ -4,7 +4,7 @@ article_title: Notification push
 page_order: 4
 layout: dev_guide
 guide_top_header: "Notification push"
-guide_top_text: "Les notifications push sont un moyen éprouvé d'envoyer des appels à l'action sensibles au facteur temps via le mobile ou le web, ainsi que de réengager les utilisateurs qui ne sont pas venus dans l'application depuis un certain temps. Ils conduisent l'utilisateur directement au contenu et démontrent la valeur de votre application. Les notifications push sont utiles pour conduire les utilisateurs à un endroit précis, mais vous devez les utiliser à bon escient. <br><br> Lisez l'un des articles suivants ou consultez notre [cours d'apprentissage Braze sur les notifications Push](https://learning.braze.com/messaging-channels-push) pour savoir à qui vous pouvez envoyer une notification push, comment l'envoyer et quelles sont les fonctionnalités avancées offertes par Braze pour les notifications push. Pour des exemples de notifications push, consultez nos [témoignages de clients] (https://www.braze.com/customers)."
+guide_top_text: "Les notifications push constituent un moyen éprouvé d'envoyer des appels à l'action urgents via mobile ou Internet, ainsi que de favoriser le réengagement des utilisateurs qui n'ont pas utilisé l'application depuis un certain temps. Ils dirigent l'utilisateur directement vers le contenu et démontrent la valeur de votre application. Les notifications push sont utiles pour diriger les utilisateurs vers un endroit spécifique, mais il est important de les utiliser avec discernement. <br><br> Lisez l'un des articles suivants ou consultez notre [cours d'apprentissage Braze sur les notifications Push](https://learning.braze.com/messaging-channels-push) pour savoir à qui vous pouvez envoyer une notification push, comment l'envoyer et quelles sont les fonctionnalités avancées offertes par Braze pour les notifications push. Pour des exemples de notifications push, veuillez consulter nos [témoignages clients](https://www.braze.com/customers)."
 description: "Cette page d’accueil contient tous les messages push. Vous trouverez ici des articles sur les types de notification push, l’inscription aux notifications push, l’activation des notifications push, les amorces de notification push, le reporting des notifications push, etc."
 channel:
   - push
@@ -61,7 +61,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"} Cas d'utilisation
+## [![C](https://learning.braze.com/path/push-fundamentals)ours[]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"} [Braze Learning](https://learning.braze.com/path/push-fundamentals) Cas d'utilisation
 
 ![Exemple de message de notification push pour des produits Apple.]({% image_buster /assets/img/red-dress.gif %}){: height="400px"}  ![Exemple de message de notification push de Stopwatch sur un écran d’accueil iPhone qui affiche : « Bonjour ! Ceci est une notification push iOS ».]({% image_buster /assets/img/ios_push.png %}){: height="400px"}
 
@@ -72,7 +72,7 @@ Les notifications push constituent un outil formidable pour attirer de nouveaux 
 | Onboarding initial | Tant que les utilisateurs n'ont pas franchi les premières étapes de l'utilisation de votre application (comme l'enregistrement d'un compte), leur valeur est fortement limitée. Utilisez des notifications push pour inciter les utilisateurs à effectuer ces étapes afin qu’ils puissent commencer à utiliser votre application dans sa totalité. |
 | Premiers achats | Une fois que les utilisateurs sont à l’aise dans l’utilisation de votre application, vous pouvez utiliser des notifications push pour les convertir en acheteurs in-app. |
 | Nouvelles fonctionnalités | Les notifications push peuvent être efficaces pour informer les utilisateurs désengagés de nouvelles fonctionnalités susceptibles de les attirer à nouveau vers votre application. |
-| Offres limitées dans le temps | Si vous avez une offre qui va disparaître, une notification push peut parfois être un excellent moyen d’en parler à vos utilisateurs avant son expiration. Ces messages transmettent généralement une notion claire de l’urgence et sont optimaux pour rappeler votre application aux utilisateurs récemment inactifs.<br><br> Par exemple, supposons que votre application soit un jeu et que vous offrez à vos utilisateurs un bonus de monnaie du jeu s’ils maintiennent une habitude de jouer au jeu quotidiennement. Signaler à un utilisateur que cette série de connexions risque d’être brisée peut constituer une notification push raisonnable s’il a dépassé un certain nombre de jours. |
+| Offres limitées dans le temps | Si vous avez une offre qui va disparaître, une notification push peut parfois être un excellent moyen d’en parler à vos utilisateurs avant son expiration. Ces messages transmettent généralement une notion claire de l’urgence et sont optimaux pour rappeler votre application aux utilisateurs récemment inactifs.<br><br> Par exemple, supposons que votre application soit un jeu et que vous offrez à vos utilisateurs un bonus de monnaie du jeu s’ils maintiennent une habitude de jouer au jeu quotidiennement. Il pourrait être judicieux d'alerter un utilisateur que sa série risque d'être interrompue s'il a dépassé un certain nombre de jours. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Pour plus d'informations sur le réengagement des utilisateurs qui n'ont plus d'ancienneté, consultez notre page " [Quick Wins "]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) sur le sujet.
@@ -91,7 +91,7 @@ Gardez à l’esprit que les utilisateurs doivent s’abonner pour recevoir vos 
 
 ## Réglementations relatives aux messages de notification push
 
-Les messages in-app étant un type d'envoi intrusif qui s'adresse directement au téléphone ou au navigateur de votre client, il existe des directives concernant l'envoi de messages in-app par le biais d'applications et de sites.
+Les messages push étant un type d'envoi de messages intrusif qui s'affiche directement sur le téléphone ou le navigateur de vos clients, il existe des directives relatives à leur envoi via des applications et des sites.
 
 ### Réglementations des notifications push mobiles pour les applications
 

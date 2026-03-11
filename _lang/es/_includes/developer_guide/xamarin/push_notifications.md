@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
-## Configuración de las notificaciones push
+## Configuración de notificaciones push
 
 {% tabs %}
 {% tab android %}
@@ -8,7 +8,7 @@
 Para ver cómo cambian los espacios de nombres entre Java y C#, consulta nuestra [aplicación de ejemplo Xample en GitHub](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp).
 {% endalert %}
 
-Para integrar las notificaciones push para .NET MAUI (antes Xamarin), tendrás que completar los pasos para las notificaciones push nativas de Android. Los pasos siguientes son sólo un resumen. Para una guía completa, consulta la [guía de notificaciones push nativas]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/).
+Para la integración de las notificaciones push para .NET MAUI (antes Xamarin), deberás completar los pasos para las notificaciones push nativas de Android. Los pasos siguientes son sólo un resumen. Para una guía completa, consulta la [guía de notificaciones push nativas]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/).
 
 ### Paso 1: Actualiza tu proyecto
 
@@ -48,7 +48,7 @@ Consulta [las instrucciones de integración de Swift]({{site.baseurl}}/developer
 
 ### Paso 2: Solicitar permiso para notificaciones push
 
-Nuestro SDK .NET MAUI ahora admite la configuración push automática. Configura la automatización push y los permisos añadiendo el siguiente código a la configuración de tu instancia de Braze:
+Nuestro SDK .NET MAUI ahora admite la configuración automática de push. Configura la automatización push y los permisos añadiendo el siguiente código a la configuración de tu instancia de Braze:
 
 ```csharp
 configuration.Push.Automation = new BRZConfigurationPushAutomation(true);

@@ -1,16 +1,16 @@
-{% multi_lang_include developer_guide/prerequisites/web.md %} Vous devrez également [configurer les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web).
+{% multi_lang_include developer_guide/prerequisites/web.md %} Il vous sera également nécessaire de [configurer les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web).
 
-## À propos des invites à pression douce
+## À propos des invites de pression douce
 
 C’est souvent une bonne idée pour les sites d’implémenter une invite de notification push « douce » pour laquelle vous avez « préparé » l’utilisateur et présenté vos arguments pour justifier l’envoi des notifications push avant de demander l’autorisation de le faire. C’est utile parce que le navigateur limite la fréquence à laquelle vous pouvez inviter l’utilisateur directement, et si l’utilisateur refuse l’autorisation, vous ne pouvez plus la demander à nouveau.
 
-Par ailleurs, si vous souhaitez inclure un traitement personnalisé spécial, au lieu d'appeler directement `requestPushPermission()` comme décrit dans l'[intégration Web push]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration) standard, utilisez nos [messages in-app déclenchés]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web).
+Si vous souhaitez inclure un traitement personnalisé personnalisé, au lieu d'appeler`requestPushPermission()`directement comme décrit dans l'[intégration Web push]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration) standard, veuillez utiliser nos [messages in-app déclenchés]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web).
 
 {% alert tip %}
 Ceci peut être fait sans personnalisation du SDK en utilisant notre nouvelle [fonctionnalité d’amorçage de notifications push sans code]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 {% endalert %}
 
-## Configuration des invites à pression douce
+## Configuration des invites de pression douce
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -29,7 +29,7 @@ Dans votre intégration SDK Braze, trouvez et supprimez tout appel à `automatic
 
 ### Étape 3 : Mettre à jour l’intégration
 
-Enfin, remplacez l'appel supprimé par l'extrait de code suivant. Appelez `subscribeToInAppMessage()` avant d'appeler `openSession()`. Cela permet de s'assurer que votre récepteur de message in-app est enregistré à temps pour recevoir le message d'amorçage push.
+Enfin, veuillez remplacer l'appel supprimé par l'extrait de code suivant. Veuillez appeler`subscribeToInAppMessage()`avant de téléphoner`openSession()`. Cela garantit que votre écouteur de messages in-app est enregistré à temps pour recevoir le message push initial.
 
 ```javascript
 import * as braze from "@braze/web-sdk";

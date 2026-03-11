@@ -1,5 +1,5 @@
 ---
-nav_title: Componentes da tela
+nav_title: Componentes do canva
 article_title: Componentes do Canva
 page_order: 2
 alias: "/user_guide/engagement_tools/canvas/canvas_components/about/"
@@ -57,7 +57,7 @@ Com os componentes do Canva, é possível desbloquear novas jornadas de usuário
 
 ### Personalizar as jornadas do usuário
 
-![Exemplo de uma jornada do usuário do Canva com uma etapa de divisão de decisão seguida por etapas de postergação e etapas de mensagens.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
+![Exemplo de uma jornada do usuário no canva com uma etapa de divisão de decisão seguida por etapas de postergação e etapas de mensagem.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
 Use [jornadas de ação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) para dividir a jornada do usuário com base em ações e eventos de engajamento, como a realização de uma compra. Se quiser filtrar e direcionar seu público, [os Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) ajudam a simplificar o direcionamento de usuários, enviando-os por diferentes jornadas do público com base nos critérios do público.
 

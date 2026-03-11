@@ -27,8 +27,8 @@ A partir do macOS 13, em determinados dispositivos, você pode testar as notific
 
 #### Considerações para a geração de token por push
 
-- Se os usuários instalarem seu app em outro dispositivo, outro token será criado e capturado da mesma forma. 
-- Se os usuários reinstalarem seu app, um novo token será gerado e passado para a Braze. No entanto, o token original ainda pode ser registrado como válido pelo APNs e pela Braze.
+- Se os usuários instalarem seu app em outro dispositivo, um novo token será criado e capturado da mesma forma. 
+- Se os usuários reinstalarem seu app, um novo token será gerado e enviado para a Braze. No entanto, o token original pode ainda ser registrado como válido pelo APNs e pela Braze.
 - Se os usuários desinstalarem seu app, a Braze não é notificada imediatamente sobre isso e o token ainda aparecerá como válido até que seja retirado pelo APNs. 
 - Em algum momento, o APNs retirará tokens antigos. A Braze não tem controle ou visibilidade sobre isso. 
 
@@ -46,7 +46,7 @@ Braze usará o certificado push SSL carregado no dashboard para autenticar e ver
 Se os [APNs](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) nos informarem que qualquer um dos tokens por push para os quais estávamos tentando enviar uma mensagem é inválido, removeremos esses tokens dos perfis de usuário aos quais eles estavam associados.
 
 {% alert note %}
-É normal que o APNs retorne inicialmente um status de sucesso, mesmo que um token se torne não registrado, pois o APNs não relata imediatamente eventos de invalidação de token. O APNs intencionalmente atrasa o retorno de um status `410` para tokens inválidos em uma programação aleatória, projetada para proteger a privacidade do usuário e evitar o rastreamento de desinstalações de app. Você pode continuar enviando notificações para um token não registrado até que o APNs retorne um status `410`.
+É normal que o APNs retorne inicialmente um status de sucesso, mesmo que um token se torne não registrado, pois o APNs não relata imediatamente eventos de invalidação de token. O APNs intencionalmente atrasa o retorno de um status `410` para tokens inválidos em uma programação aleatória, projetada para proteger a privacidade do usuário e evitar o rastreamento de desinstalações de apps. Você pode continuar enviando notificações para um token não registrado até que o APNs retorne um status `410`.
 {% endalert %}
 
 ## Usando os registros de erros do push
@@ -148,13 +148,15 @@ O seguinte indicaria um problema com o registro de push ou que o token do usuár
 
 ## Os deep linkings não estão funcionando
 
-### Os links da Web provenientes de cliques push não abrem
+Para solução de problemas abrangente em todos os canais—incluindo links universais, esquemas personalizados, e-mail e provedores de terceiros como Branch—veja [Solução de problemas de deep linking]({{site.baseurl}}/developer_guide/push_notifications/deep_linking_troubleshooting).
 
-Os links nas notificações por push precisam ser compatíveis com ATS para serem abertos em visualizações na web. Certifique-se de que seus links da web usem HTTPS. Para saber mais, consulte [conformidade ATS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#app-transport-security-ats).
+### Links da web não abrem com cliques em push
+
+Os links nas notificações por push precisam ser compatíveis com ATS para serem abertos em visualizações na web. Certifique-se de que seus links da web usem HTTPS. Para mais informações, consulte [conformidade com ATS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#app-transport-security-ats).
 
 ### Links profundos de cliques push não abrem
 
-A maior parte do código que lida com deep links também lida com aberturas de push. Primeiro, confira se as aberturas do push estão sendo registradas. Se não, corrija esse problema (pois a correção geralmente resolve o manuseio de links).
+A maior parte do código que lida com deep links também lida com aberturas de push. Primeiro, confira se as aberturas do push estão sendo registradas. Se não, resolva esse problema (pois a correção geralmente corrige o manuseio de links).
 
 Se as aberturas estiverem sendo registradas, verifique se é um problema com o deep link em geral ou com o manuseio do clique do push de deep linking. Para fazer isso, teste para ver se um deep link de um clique de mensagem no app funciona.
 

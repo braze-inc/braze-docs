@@ -1,6 +1,6 @@
 ---
-nav_title: Tracking von Sitzungen
-article_title: Tracking-Sitzungen für iOS
+nav_title: Sitzungen verfolgen
+article_title: Track Sessions für iOS
 platform: iOS
 page_order: 0
 description: "Dieser Referenzartikel beschreibt, wie Sie Sitzungsupdates für Ihre iOS-Anwendung abonnieren können."

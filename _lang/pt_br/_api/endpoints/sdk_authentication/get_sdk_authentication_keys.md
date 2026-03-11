@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o endpoint Braze de Listar chaves de autenticação do SDK."
+description: "Este artigo descreve detalhes sobre o endpoint Braze de Listar Chaves de Autenticação do SDK."
 ---
 
 {% api %}
@@ -33,7 +33,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Exemplo de solicitação
 
-```json
+```bash
 curl --location --request GET 'https://rest.iad-01.braze.com/app_group/sdk_authentication/keys?app_id=01234567-89ab-cdef-0123-456789abcdef' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```

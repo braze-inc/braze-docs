@@ -1,7 +1,7 @@
 ---
 nav_title: "POST: Senden Sie Transaktions-E-Mails mit API-getriggerter Zustellung"
 article_title: "POST: Senden Sie Transaktions-E-Mails mit API-getriggerter Zustellung"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 layout: api_page
 page_type: reference
@@ -20,7 +20,7 @@ description: "Dieser Artikel beschreibt den Endpunkt Senden von Transaktions-E-M
 Dieser Endpunkt wird bei der Erstellung einer Braze [Transaktions-E-Mail-Kampagne]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) und der entsprechenden Kampagnen ID verwendet.
 
 {% alert important %}
-Transaktions-E-Mails sind derzeit als Teil ausgewählter Braze-Pakete verfügbar. Kontaktieren Sie Ihren Customer-Success-Manager:in von Braze für weitere Informationen.
+Transaktions-E-Mails sind derzeit als Teil ausgewählter Braze-Pakete verfügbar. Bitte wenden Sie sich für weitere Informationen an Ihren Braze-Customer-Success-Manager.
 {% endalert %}
 
 Ähnlich wie beim [Endpunkt für getriggerte Kampagnen]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) können Sie mit diesem Kampagnentyp den Inhalt von Nachrichten innerhalb des Braze-Dashboards unterbringen und gleichzeitig festlegen, wann und an wen eine Nachricht über Ihre API gesendet wird. Im Gegensatz zum Endpunkt Getriggerte Kampagne senden, der eine Zielgruppe oder ein Segment akzeptiert, an das Nachrichten gesendet werden sollen, muss eine Anfrage an diesen Endpunkt einen einzelnen Nutzer:innen entweder durch `external_user_id` oder `user_alias` spezifizieren, da dieser Kampagnentyp für 1:1-Nachrichten wie Bestellbestätigungen oder die Rücksetzung von Passwörtern gedacht ist.
@@ -67,9 +67,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-|`external_send_id`| Optional | String |  Ein Base64-kompatibler String. Überprüft anhand der folgenden Regex:<br><br> `/^[a-zA-Z0-9-_+\/=]+$/` <br><br>Mit diesem optionalen Feld können Sie einen internen Bezeichner für diese bestimmte Sendung übergeben, der in Ereignissen enthalten ist, die vom HTTP-Ereignis Postback der Transaktion gesendet werden. Bei der Übergabe wird dieser Bezeichner auch als Deduplizierungsschlüssel verwendet, den Braze für 24 Stunden speichert. <br><br>Die Übergabe desselben Bezeichners in einer anderen Anfrage führt 24 Stunden lang nicht zu einer neuen Instanz einer Sendung von Braze.|
-|`trigger_properties`|Optional|Objekt|Siehe [Eigenschaften des Auslösers]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Schlüssel-Wert-Paare der Personalisierung, die für den Nutzer:innen in dieser Anfrage gelten. |
-|`recipient`|Erforderlich|Objekt| Der Nutzer:in, dem Sie diese Nachricht zukommen lassen möchten. Kann `attributes` und ein einzelnes `external_user_id` oder `user_alias` enthalten.<br><br>Beachten Sie, dass, wenn Sie eine externe ID angeben, die noch nicht in Braze existiert, durch die Übergabe von Feldern an das Objekt `attributes` dieses Nutzerprofil in Braze erstellt wird und diese Nachricht an den neu erstellten Nutzer gesendet wird. <br><br>Wenn Sie mehrere Anfragen an denselben Nutzer mit unterschiedlichen Daten im Objekt `attributes` senden, werden die Attribute `first_name`, `last_name` und `email` synchron aktualisiert und als Template in Ihre Nachricht eingefügt. Angepasste Attribute verfügen nicht über diesen Schutz. Seien Sie also vorsichtig, wenn Sie einen Nutzer:innen über diese API aktualisieren und verschiedene Werte für angepasste Attribute in schneller Folge übergeben.|
+|`external_send_id`| Optional | String |  Ein Base64-kompatibler String. Überprüft anhand der folgenden Regex:<br><br> `/^[a-zA-Z0-9-_+\/=]+$/` <br><br>Dieses optionale Feld ist zulässig und ermöglicht es Ihnen, einen internen Bezeichner für diese bestimmte Sendung zu übergeben, der in Ereignissen enthalten ist, die vom Transactional HTTP Event Postback gesendet werden. Nach der Übermittlung wird dieser Bezeichner auch als Deduplizierungsschlüssel verwendet, den Braze für 24 Stunden speichert. <br><br>Die Übermittlung des gleichen Bezeichners in einer weiteren Anfrage führt 24 Stunden lang nicht zu einer neuen Instanz einer Sendung durch Braze.|
+|`trigger_properties`|Optional|Objekt|Siehe [Eigenschaften des Auslösers]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Personalisierungs-Schlüssel-Wert-Paare, die für die Nutzer:innen in dieser Anfrage gelten. |
+|`recipient`|Erforderlich|Objekt| Der Nutzer:in, dem Sie diese Nachricht zukommen lassen möchten. Kann `attributes` und ein einzelnes `external_user_id` oder `user_alias` enthalten.<br><br>Bitte beachten Sie, dass bei Angabe einer externen ID, die noch nicht in Braze vorhanden ist, durch die Übergabe beliebiger Felder an das`attributes`Objekt dieses Nutzerprofil in Braze erstellt und diese Nachricht an den neu erstellten Nutzer gesendet wird. <br><br>Wenn Sie mehrere Anfragen an denselben Benutzer mit unterschiedlichen Daten im`attributes`Objekt senden, werden die Attribute `email`synchron aktualisiert`first_name` und in Ihre `last_name`Nachricht eingefügt. Angepasste Attribute verfügen nicht über diesen Schutz. Seien Sie also vorsichtig, wenn Sie einen Nutzer:innen über diese API aktualisieren und verschiedene Werte für angepasste Attribute in schneller Folge übergeben.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -93,7 +93,7 @@ curl -X POST \
 
 ## Antwort
 
-Der Endpunkt Transaktions-E-Mails senden antwortet mit der `dispatch_id` der Nachricht, die die Instanz dieser Nachricht darstellt. Dieser Bezeichner kann zusammen mit den Ereignissen aus der Transaktion HTTP Event Postback verwendet werden, um den Status einer einzelnen E-Mail zu verfolgen, die an einen einzelnen Nutzer:innen gesendet wurde.
+Der Endpunkt „Transaktions-E-Mails senden“ antwortet mit der Nachricht, `dispatch_id`die die Instanz dieser gesendeten Nachricht darstellt. Dieser Bezeichner kann zusammen mit den Ereignissen aus der Transaktion HTTP Event Postback verwendet werden, um den Status einer einzelnen E-Mail zu verfolgen, die an einen einzelnen Nutzer:innen gesendet wurde.
 
 ### Beispielhafte Antworten
 
@@ -112,7 +112,7 @@ Der Endpunkt kann in einigen Fällen auch einen Fehlercode und eine von Menschen
 | Fehler | Fehlersuche |
 | ----- | --------------- |
 | `The campaign is not a transactional campaign. Only transactional campaigns may use this endpoint` | Die angegebene Kampagnen ID ist nicht für eine transaktionale Kampagne. |
-| `The external reference has been queued.  Please retry to obtain send_id.` | Die external_send_id wurde erst kürzlich erstellt. Versuchen Sie eine neue external_send_id, wenn Sie eine neue Nachricht senden möchten. |
+| `The external reference has been queued.  Please retry to obtain send_id.` | Dasexternal_send_idwurde kürzlich erstellt. Bitte versuchen Sie es erneut, external_send_idwenn Sie eine neue Nachricht senden möchten. |
 | `Campaign does not exist` | Die angegebene ID der Kampagne stimmt nicht mit einer bestehenden Kampagne überein. |
 | `The campaign is archived. Unarchive the campaign in order for trigger requests to take effect.` | Die angegebene ID der Kampagne entspricht einer archivierten Kampagne. |
 | `The campaign is paused. Resume the campaign in order for trigger requests to take effect.` | Die angegebene ID der Kampagne entspricht einer pausierten Kampagne. |
@@ -122,7 +122,7 @@ Der Endpunkt kann in einigen Fällen auch einen Fehlercode und eine von Menschen
 | `You do not have permission to access this resource` | Der verwendete API-Schlüssel hat keine Berechtigung, diese Aktion durchzuführen |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Die meisten Endpunkte bei Braze verfügen über eine Rate-Limits-Implementierung, die einen 429er Code als Antwort zurückgibt, wenn Sie zu viele Anfragen gestellt haben. Der Endpunkt für den Transaktionsversand funktioniert anders: Wenn Sie das Ihnen zugewiesene Rate-Limit überschreiten, nimmt unser System weiterhin die API-Aufrufe auf, gibt Erfolgscodes zurück und versendet die Nachrichten. Allerdings unterliegen diese Nachrichten möglicherweise nicht dem vertraglichen SLA für das Feature. Wenden Sie sich an den Braze-Support, wenn Sie weitere Informationen zu dieser Funktion benötigen.
+Die meisten Endpunkte bei Braze verfügen über eine Implementierung mit Rate-Limits, die einen 429-Code zurückgibt, wenn zu viele Anfragen gestellt werden. Der Endpunkt für Transaktionen verfügt über ein bezahltes Stundenkontingent, das in Einheiten gemessen wird (beispielsweise 50.000 Einheiten pro Stunde, abhängig von Ihrem Paket). Für diesen Endpunkt gibt es keine separate Rate-Limits pro Endpunkt: Sie können über Ihr zugewiesenes Volumen hinaus senden, jedoch wird nur das zugewiesene Volumen durch die SLA abgedeckt. Anfragen, die über diese Zuweisung hinausgehen, werden weiterhin gesendet, sind jedoch nicht durch die SLA abgedeckt. Anfragen an diesen Endpunkt werden auf Ihr [Gesamt-Rate-Limit für externe API-Anfragen]({{site.baseurl}}/api/api_limits/) angerechnet. Sollten Sie dieses Limit überschreiten (beispielsweise 250.000 Anfragen pro Stunde über alle Endpunkte hinweg), gibt Braze den Statuscode 429 zurück und drosselt die Anfragen, bis das Limit zurückgesetzt wird. Die Anzahl der Transaktionen wird stündlich zurückgesetzt. Bitte wenden Sie sich an den Braze-Support, wenn Sie weitere Informationen zu dieser Funktion benötigen.
 
 ## Transaktionelles HTTP-Ereignis Postback
 

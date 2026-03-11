@@ -15,7 +15,7 @@ guide_featured_list:
   - name: Bedingt anzeigen
     link: /docs/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages
     image: /assets/img/braze_icons/zap-off.svg
-  - name: Zurückstellen und Wiederherstellen getriggerter Nachrichten
+  - name: Getriggerte Nachrichten zurückstellen und wiederherstellen
     link: /docs/developer_guide/in_app_messages/tutorials/deferring_triggered_messages
     image: /assets/img/braze_icons/watch-circle.svg
 ---

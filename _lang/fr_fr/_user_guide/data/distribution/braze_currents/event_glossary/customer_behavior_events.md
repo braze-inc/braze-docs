@@ -44,7 +44,7 @@ Les schémas de stockage s'appliquent aux données d'événements sous forme de 
 {% endalert %}
 
 {% api %}
-## Événements de mise à jour du numéro compartiment aléatoire {#random-bucket-number-update-events}
+## Événements de mise à jour du numéro de compartiment aléatoire {#random-bucket-number-update-events}
 
 {% apitags %}
 Numéro de compartiment aléatoire
@@ -69,7 +69,7 @@ Cet événement Currents n'est disponible que pour les clients qui ont acheté u
   "prev_random_bucket_number" : "(optional, int) Previous random bucket number",
   "random_bucket_number" : "(required, int) New random bucket number",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -107,7 +107,7 @@ Cet événement se produit lorsqu’un événement personnalisé spécifique est
   "properties" : "(required, string) Custom properties stored as a JSON encoded string",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -170,7 +170,7 @@ Cet événement se produit lorsqu’un événement personnalisé spécifique est
 // users.behaviors.CustomEvent
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -201,11 +201,11 @@ Cet événement se produit lorsqu’un événement personnalisé spécifique est
 
 - Pour les événements personnalisés, la charge utile sera également remplie avec toutes les [propriétés personnalisées de]({{site.baseurl}}/user_guide/data/custom_data/custom_events#custom-event-properties) l'événement qui sont associées à l'événement.
 - Pour `ad_id`, `ad_id_type`, et `ad_tracking_enabled`, vous devez collecter explicitement l'IDFA pour iOS et l'ID de la publicité Google pour Android via les SDK natifs. Pour en savoir plus, cliquez ici : [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), contactez votre gestionnaire de satisfaction client ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour l'envoi de `ad_id`.
+- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), veuillez contacter votre gestionnaire de la satisfaction client ou votre gestionnaire de compte afin d'activer la fonctionnalité permettant l'envoi de données`ad_id`.
 {% endapi %}
 
 {% api %}
-## Installer les événements d'attribution d'installation {#install-attribution-events}
+## Attribution d'installation {#install-attribution-events}
 
 {% apitags %}
 Attribution
@@ -224,7 +224,7 @@ Cet événement se produit lorsqu’une installation d’application est attribu
   "id" : "(required, string) Globally unique ID for this event",
   "source" : "(required, string) The source of the attribution",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -273,7 +273,7 @@ Cet événement se produit lorsqu’une installation d’application est attribu
 // Install Attribution (users.behaviors.InstallAttribution)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -296,7 +296,7 @@ Cet événement se produit lorsqu’une installation d’application est attribu
 {% endapi %}
 
 {% api %}
-## Emplacements/localisations {#location-events}
+## Événements liés à la localisation des emplacements {#location-events}
 
 {% apitags %}
 Localisations
@@ -327,7 +327,7 @@ Cet événement est déclenché lorsqu’un utilisateur est à un endroit spéci
   "os_version" : "(optional, string) Version of the operating system of the device",
   "platform" : "(optional, string) Platform of the device",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -400,7 +400,7 @@ Cet événement est déclenché lorsqu’un utilisateur est à un endroit spéci
 // Location (users.behaviors.Location)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -434,7 +434,7 @@ Cet événement est déclenché lorsqu’un utilisateur est à un endroit spéci
 #### Détails de la propriété
 
 - Pour `ad_id`, `ad_id_type`, et `ad_tracking_enabled`, vous devez collecter explicitement l'IDFA pour iOS et l'ID de la publicité Google pour Android via les SDK natifs. Pour en savoir plus, cliquez ici : [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), contactez votre gestionnaire de satisfaction client ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour l'envoi de `ad_id`.
+- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), veuillez contacter votre gestionnaire de la satisfaction client ou votre gestionnaire de compte afin d'activer la fonctionnalité permettant l'envoi de données`ad_id`.
 {% endapi %}
 
 {% api %}
@@ -472,7 +472,7 @@ Les achats sont des événements personnalisés spéciaux et sont accompagnés d
   "product_id" : "(required, string) ID of the product purchased",
   "properties" : "(required, string) Custom properties stored as a JSON encoded string",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -541,7 +541,7 @@ Les achats sont des événements personnalisés spéciaux et sont accompagnés d
 // Purchased (users.behaviors.Purchase)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -574,7 +574,7 @@ Les achats sont des événements personnalisés spéciaux et sont accompagnés d
 
 - Pour les événements d'achat, la charge utile sera également remplie avec toutes les [propriétés d'achat]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#purchase-properties) associées à l'événement.
 - Pour `ad_id`, `ad_id_type`, et `ad_tracking_enabled`, vous devez collecter explicitement l'IDFA pour iOS et l'ID de la publicité Google pour Android via les SDK natifs. Pour en savoir plus, cliquez ici : [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), contactez votre gestionnaire de satisfaction client ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour l'envoi de `ad_id`.
+- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), veuillez contacter votre gestionnaire de la satisfaction client ou votre gestionnaire de compte afin d'activer la fonctionnalité permettant l'envoi de données`ad_id`.
 {% endapi %}
 
 {% api %}
@@ -611,7 +611,7 @@ Lorsqu’un utilisateur commence sa première session, un événement `FirstSess
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -668,7 +668,7 @@ Lorsqu’un utilisateur commence sa première session, un événement `FirstSess
 // First Session (users.behaviors.app.FirstSession)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -720,7 +720,7 @@ Cela se produit lorsqu’un utilisateur quitte votre application, ce qui termine
   "platform" : "(optional, string) Platform of the device",
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -779,7 +779,7 @@ Cela se produit lorsqu’un utilisateur quitte votre application, ce qui termine
 // Session Ended (users.behaviors.app.SessionEnd)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -835,7 +835,7 @@ Lorsqu’un utilisateur commence sa première session, un événement `FirstSess
   "platform" : "(optional, string) Platform of the device",
   "session_id" : "(required, string) UUID of the session",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -892,7 +892,7 @@ Lorsqu’un utilisateur commence sa première session, un événement `FirstSess
 // Session Started (users.behaviors.app.SessionStart)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : {
       "model" : "(optional, string) Model of the device",
@@ -919,13 +919,13 @@ Lorsqu’un utilisateur commence sa première session, un événement `FirstSess
 {% endapi %}
 
 {% api %}
-## En ligne/en production/instantanée Événements de changement de jeton {#live-activity-push-to-start-token-change-events}
+## Activité en ligne/en production/instantanée : appuyez pour démarrer les événements de changement de jeton {#live-activity-push-to-start-token-change-events}
 
 {% apitags %}
 En ligne/en production/instantanée, jeton Push To Start
 {% endapitags %}
 
-Cet événement se produit lorsque Braze synchronise le jeton Live Activity push to start avec l'utilisateur.
+Cet événement se produit lorsque Braze synchronise le push Live Activity pour démarrer le jeton avec l'utilisateur.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -944,7 +944,7 @@ Cet événement se produit lorsque Braze synchronise le jeton Live Activity push
   "push_token_state_change_type" : "(optional, string) A description of the push token state change type",
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1001,7 +1001,7 @@ Cet événement se produit lorsque Braze synchronise le jeton Live Activity push
 // Live Activity Push To Start Token Changed (users.behaviors.liveactivity.PushToStartTokenChange)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1028,7 +1028,7 @@ Cet événement se produit lorsque Braze synchronise le jeton Live Activity push
 {% endapi %}
 
 {% api %}
-## En ligne/en production/instantanée Événements de changement de jeton {#live-activity-update-token-change-events}
+## Mise à jour des activités en ligne/en production/instantanées Changement de jeton Événements {#live-activity-update-token-change-events}
 
 {% apitags %}
 Activité en ligne/instantanée, jeton de mise à jour
@@ -1053,7 +1053,7 @@ Cet événement se produit lorsque Braze synchronise le jeton de mise à jour de
   "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "update_token" : "(optional, string) Live Activity update token",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+  "user_id" : "(required, string) [PII] Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
@@ -1110,7 +1110,7 @@ Cet événement se produit lorsque Braze synchronise le jeton de mise à jour de
 // Live Activity Update Token Changed (users.behaviors.liveactivity.UpdateTokenChange)
 
 {
-  "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
+  "anonymousId" : "(required, string) [PII] Braze user ID of the user who performed this event",
   "context" : {
     "device" : { },
     "traits" : { }
@@ -1137,13 +1137,13 @@ Cet événement se produit lorsque Braze synchronise le jeton de mise à jour de
 {% endapi %}
 
 {% api %}
-## Événements de changement d'état du jeton de notification push {#push-notification-token-state-change-events}
+## Événements de modification de l'état du jeton de notification push {#push-notification-token-state-change-events}
 
 {% apitags %}
 Changement d'état de la poussée, du jeton
 {% endapitags %}
 
-Cet événement se produit lorsqu'un jeton est inséré, mis à jour ou supprimé. Utilisez-le pour suivre l'état des jetons de poussée.
+Cet événement se produit lorsqu'un jeton push est inséré, mis à jour ou supprimé. Utilisez-le pour suivre l'état des jetons de poussée.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -1276,19 +1276,79 @@ Cet événement se produit lorsqu'un jeton est inséré, mis à jour ou supprim�
 
 #### Détails de la propriété
 
-- Le champ `push_token_foreground_push_disabled` indique si le jeton de poussée peut recevoir une poussée d'avant-plan ou d'arrière-plan.
-  - Si l'utilisateur a explicitement autorisé la notification push sur son appareil, ce sera `false`, et le jeton est en mesure de recevoir des notifications push au premier plan.
-  - Si l'utilisateur a explicitement refusé l'autorisation de notification push sur son appareil, cela sera `true`, et le jeton n'est autorisé qu'avec les notifications push en arrière-plan.
-  - Si l'autorisation de pousser est inconnue, ce champ sera vide. Par défaut, Braze tentera d'envoyer des notifications push au premier plan au jeton.
-- Le champ `push_token_provisionally_opted_in` ne s'applique qu'aux jetons push iOS.
-  - Si vous avez mis en place une [autorisation provisoire]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push), les jetons provisoires auront ce champ réglé sur `true`. Tous les autres jetons de poussée seront `false`.
-- Le champ `sdk_version` ne sera renseigné que si le changement d'état du jeton est initié par le SDK.
-  - Si un événement du SDK `changeUser` déclenche le transfert du jeton d'un utilisateur à un autre, le champ `sdk_version` se remplit.
-  - S'il y a un push bounce (par exemple, en raison d'une désinstallation), le champ `sdk_version` sera vide.
-- Chaque fois qu'un jeton push entre dans Braze, les événements de son cycle de vie sont enregistrés. Trois types d'événements de changement de jeton ("ajout", "mise à jour" et "suppression") sont enregistrés dans le champ `push_token_state_change_type`. Notez les détails suivants :
-  - Pour un nouveau jeton qui n'a jamais existé auparavant, un événement "add" est enregistré.
-  - Pour la mise à jour du jeton avec la même chaîne de caractères pour le même utilisateur (gateway ou `foreground_push_disabled` ou d'autres champs "secondaires" modifiés), un événement de "mise à jour" sera enregistré pour le même jeton.
-  - Si un jeton est transféré d'un utilisateur à un autre, un événement "suppression" sera enregistré pour l'ancien utilisateur et un événement "ajout" pour le nouvel utilisateur.
-  - Si le même utilisateur ou appareil génère un nouveau jeton, un événement "supprimer" sera enregistré pour l'ancien jeton et un événement "ajouter" pour le nouveau jeton.
-  - Si Braze supprime un jeton (pour des raisons telles qu'une désinstallation ou un jeton invalide), un événement "remove" sera enregistré pour le jeton.
+- Ce`push_token_foreground_push_disabled`champ indique si le jeton push peut recevoir des notifications push en avant-plan ou en arrière-plan.
+  - Si l'utilisateur a explicitement autorisé les notifications push sur son appareil, cela sera indiqué`false`, et le jeton pourra recevoir des notifications push en avant-plan.
+  - Si l'utilisateur a explicitement refusé l'autorisation de notification push sur son appareil, cela sera indiqué`true`, et le jeton ne sera autorisé qu'avec les notifications push en arrière-plan.
+  - Si l'autorisation push est inconnue, ce champ sera vide. Par défaut, Braze tentera d'envoyer des notifications push en avant-plan au jeton.
+- Ce`push_token_provisionally_opted_in`champ s'applique uniquement aux jetons push iOS.
+  - Si vous avez configuré [l'autorisation provisoire]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push), ce champ sera défini sur pour les jetons`true` provisoires. Tous les autres jetons push seront `false`.
+- Le`sdk_version`champ ne sera rempli que si le changement d'état du jeton est initié par le SDK.
+  - Si un `changeUser`déclencheur SDK déclenche le transfert du jeton d'un utilisateur à un autre, le`sdk_version`champ sera rempli.
+  - En cas de rebond push (par exemple, suite à une désinstallation), le`sdk_version`champ restera vide.
+- Chaque fois qu'un jeton push entre dans Braze, les événements de son cycle de vie sont enregistrés. Trois types d'événements de modification de jeton (« ajouter », « mettre à jour » et « supprimer ») sont enregistrés dans le`push_token_state_change_type`champ.
+
+#### Types d'événements
+
+##### Ajouter
+
+Un événement « add » est ingéré lorsqu'un nouveau jeton est enregistré. Cela se produit lorsqu'un utilisateur ouvre l'application pour la première fois sur un nouvel appareil, ou lorsqu'un jeton est défini via [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)l'endpoint avec`push_tokens`pour un utilisateur qui n'en avait pas auparavant.
+
+##### Mettre à jour
+
+Un événement « mise à jour » est enregistré lorsqu'une propriété d'un jeton existant est modifiée sans que la chaîne de caractères du jeton elle-même ne soit modifiée. Le jeton comporte la même chaîne de caractères, le même utilisateur et la même application, mais un ou plusieurs des champs suivants ont été modifiés :`foreground_push_disabled` , passerelle APN, clés de notification push Web,`provisionally_opted_in` , ou `device_id`.
+
+{% alert note %}
+Dans la plupart des cas, la réinstallation d'une application ou la restauration d'une sauvegarde entraîne un nouvel événement « ajouter » avec un nouveau`push_token`  et un nouveau`device_id`  (car le SDK génère un nouveau`device_id`  et le système d'exploitation fournit une nouvelle chaîne de caractères de jetons push). Cela crée deux entrées distinctes pour le jeton et l'appareil dans le profil utilisateur, et l'entrée la plus ancienne est supprimée ultérieurement via le suivi des désinstallations ou l'envoi de campagnes.
+
+Il serait extrêmement rare que seul le`device_id`  change sans que le`push_token`  change (cela nécessiterait que le système d'exploitation renvoie la même chaîne de caractères après la réinstallation).
+{% endalert %}
+
+##### Supprimer
+
+Un événement « remove » autonome est ingéré lorsque Braze supprime un jeton. Cela peut se produire pour plusieurs raisons :
+
+- Rejet de notification push (APN, FCM ou HMS signale le jeton comme non valide ou expiré)
+- Détection de désinstallation via une mise à jour silencieuse
+- Jeton supprimé via l'API REST ou le service de commentaires APN
+
+##### Ajouter et supprimer des paires
+
+Les paires à ajouter et à supprimer se répartissent en deux catégories :
+
+**Actualisation de la chaîne de caractères de jetons (même utilisateur) :** Le système d'exploitation procède à la rotation de la chaîne de caractères des jetons sur le même appareil (par exemple, rotation des jetons APN ou FCM). Les événements « ajouter » (nouveau jeton) et « supprimer » (ancien jeton) ont les mêmes `user_id`, mêmes `device_id`, différents `push_token`et identiques `time_ms`.
+
+**Transfert de jetons entre utilisateurs :** Un jeton passe d'un utilisateur à un autre. Les événements « ajouter » (nouvel utilisateur) et « supprimer » (ancien utilisateur) ont des durées différentes`user_id`, identiques`device_id`, identiques `push_token`et différentes`time_ms`(généralement moins de 100 millisecondes d'écart). Ceci est un déclencheur pour l'un des éléments suivants :
+
+- Le SDK effectue des appels`changeUser`d'un profil anonyme vers un profil identifié. L'événement « remove » aura un . vide`external_user_id`.
+- Le SDK effectue des appels`changeUser`d'un profil identifié à un autre. Les deux événements auront un .`external_user_id`
+- Le nettoyage[`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/)des endpoints ou des utilisateurs en double transfère les jetons de l'utilisateur orphelin vers l'utilisateur survivant.
+
+{% alert note %}
+Si un profil anonyme est identifié via [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/)l'endpoint, le`user_id`  ne change pas et aucun événement de modification de l'état du jeton n'est émis.
+{% endalert %}
+
+#### Requête sur l'état actuel du jeton actif
+
+Pour déterminer l'état actuel du jeton push pour chaque utilisateur, veuillez classer les événements de changement d'état du jeton par `push_token`, `user_id`, et `app_id`, puis les ordonner par`time_ms`ordre décroissant et filtrer les événements « remove ». En interne, un jeton est identifié par sa chaîne de caractères et`app_id`par utilisateur. Il n'est pas recommandé d'utiliser`device_id`  comme clé de partition, car`device_id`  est un attribut modifiable et le partitionnement selon cette clé pourrait diviser le cycle de vie d'un jeton unique entre plusieurs partitions.
+
+La requête SQL suivante renvoie le dernier état actif du jeton par utilisateur dans Snowflake :
+
+```sql
+WITH latest_token_state AS (
+  SELECT *,
+    ROW_NUMBER() OVER (
+      PARTITION BY PUSH_TOKEN, USER_ID, APP_ID
+      ORDER BY COALESCE(TIME_MS, TIME * 1000) DESC
+    ) AS rn
+  FROM USERS_BEHAVIORS_PUSHNOTIFICATION_TOKENSTATECHANGE
+)
+SELECT
+  PUSH_TOKEN, USER_ID, EXTERNAL_USER_ID, PUSH_TOKEN_DEVICE_ID,
+  PUSH_TOKEN_STATE_CHANGE_TYPE, PUSH_TOKEN_FOREGROUND_PUSH_DISABLED,
+  TIME_MS, PLATFORM, APP_ID
+FROM latest_token_state
+WHERE rn = 1
+  AND PUSH_TOKEN_STATE_CHANGE_TYPE != 'remove';
+```
+
 {% endapi %}

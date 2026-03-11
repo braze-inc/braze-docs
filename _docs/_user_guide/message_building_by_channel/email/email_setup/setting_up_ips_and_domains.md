@@ -44,7 +44,7 @@ We'll check your setup and validate all information in our internal systems. The
 
 This method will set up one sending domain, one tracking domain, and one IP in total for a company. If you're planning to set up more, please consult with Braze Onboarding team (method 1).
 
-{% include early_access_beta_alert.md feature='This self-service email setup feature' type='beta' %}
+{% multi_lang_include early_access_beta_alert.md feature='This self-service email setup feature' type='beta' %}
 <br>If you're using the self-service email setup feature, be sure to also consult with the Braze Onboarding team.
 
 ### Prerequisites

@@ -283,7 +283,7 @@ Al programar una campaña, debe elegir enviarla a una hora determinada y, a cont
 
 Braze recomienda encarecidamente que todas las campañas en zonas horarias locales se programen con 24 horas de antelación. Dado que una campaña de este tipo debe enviarse a lo largo de todo un día, programarlas con 24 horas de antelación permite que su mensaje llegue a todo su segmento. Sin embargo, puedes programar estas campañas con menos de 24 horas de antelación si es necesario. Ten en cuenta que Braze no enviará mensajes a los usuarios que hayan incumplido la hora de envío en más de 1 hora.
 
-Por ejemplo, si es la 1 de la tarde y programas una campaña de zona horaria local para las 3 de la tarde, la campaña se enviará inmediatamente a todos los usuarios cuya hora local sea las 3-4 de la tarde, pero no a los usuarios cuya hora local sea las 5 de la tarde. Además, la hora de envío que elija para su campaña tiene que no haber ocurrido todavía en la zona horaria de su empresa.
+Por ejemplo, si son las 13:00 y programas una campaña en la zona horaria local para las 15:00, la campaña se enviará inmediatamente a todos los usuarios cuya hora local sea entre las 15:00 y las 16:00, pero no a los usuarios cuya hora local sea las 17:00. Además, la hora de envío que elija para su campaña tiene que no haber ocurrido todavía en la zona horaria de su empresa.
 
 La edición de una campaña de zona horaria local programada con menos de 24 horas de antelación no alterará la programación del mensaje. Si decide editar una campaña de zona horaria local para enviarla a una hora posterior (por ejemplo, a las 19:00 en lugar de a las 18:00), los usuarios que se encontraban en el segmento objetivo cuando se eligió la hora de envío original seguirán recibiendo el mensaje a la hora original (18:00). Si edita una zona horaria local para que se envíe a una hora más temprana (por ejemplo, a las 16:00 en lugar de a las 17:00), la campaña se seguirá enviando a todos los miembros del segmento a la hora original (17:00).
 
@@ -436,7 +436,7 @@ Al detener un Canvas no saldrán los usuarios que estén esperando en un paso. S
 Canvas
 {% endapitags %}
 
-Los eventos de excepción sólo se desencadenan mientras el usuario está esperando recibir el componente Canvas al que está asociado. Si un usuario realiza una acción por adelantado, el evento de excepción no se desencadenará.
+Los eventos de excepción solo se desencadonan mientras el usuario está esperando recibir el componente Canvas asociado a ellos. Si un usuario realiza una acción por adelantado, el evento de excepción no se desencadenará.
 
 Si desea exceptuar a los usuarios que han realizado un determinado evento con antelación, utilice [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) en su lugar.
 

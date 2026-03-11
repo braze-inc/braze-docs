@@ -14,10 +14,10 @@ tool:
 
 ## Fonctionnement
 
-Les informations relatives à la localisation sont stockées sur le profil d'un utilisateur en fonction des données que vous collectez à l'aide d'un [SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration/) (automatiquement), ou [REST API]({{ site.baseurl }}/api/endpoints/user_data/post_user_track). L’emplacement contient l’identifiant de langue et de région. Cette information est disponible dans l'outil de segmentation de Braze sous **Pays** et **langue**.
+Les informations locales sont stockées dans le profil utilisateur à partir des données que vous collectez à l'aide d'un [SDK Braze]({{site.baseurl}}/developer_guide/sdk_integration/) (automatiquement) ou de l'API REST]({{ site.baseurl }}/api/endpoints/user_data/post_user_track). L’emplacement contient l’identifiant de langue et de région. Cette information est disponible dans l'outil de segmentation de Braze sous **Pays** et **langue**.
 
 {% alert tip %}
-Pour plus de détails techniques sur la manière dont les paramètres régionaux sont collectés par nos SDK, reportez-vous à la documentation officielle pour [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html), [Android](http://developer.android.com/reference/java/util/Locale.html) et le [Web.](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) 
+Pour obtenir des informations techniques sur la manière dont nos SDK collectent les données locales, veuillez consulter la documentation officielle [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html), [Android](http://developer.android.com/reference/java/util/Locale.html) et [Web](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language).
 {% endalert %}
 
 ## Gestion de la traduction
@@ -82,13 +82,13 @@ Une fois envoyé, le tableau de bord fournit des analyses/analytiques dynamiques
 
 ## Envoi de messages traduits
 
-Pour envoyer des messages personnalisés en fonction de la langue, des paramètres régionaux ou des attributs personnalisés d'un utilisateur, utilisez l'une des méthodes suivantes.
+Pour envoyer des messages personnalisés en fonction de la langue, des paramètres régionaux ou des attributs personnalisés d'un utilisateur, veuillez utiliser l'une des méthodes suivantes.
 
-### Traduction Étiquettes Liquid (recommandé) {#translation-liquid-tag}
+### Étiquettes Liquid de traduction (recommandées) {#translation-liquid-tag}
 
-Braze prend en charge une étiquette Liquid {% raw %}`{% translation salutation %}Hello!{% endtranslation %}`{% endraw %} pour cibler les utilisateurs de différentes langues avec un seul message. 
+Braze prend en charge une étiquette{% raw %}`{% translation salutation %}Hello!{% endtranslation %}`{% endraw %} Liquid pour cibler les utilisateurs dans différentes langues avec un seul message. 
 
-Pour une description complète, consultez le [guide sur l'utilisation des tags de traduction]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales).
+Pour obtenir des instructions détaillées, veuillez consulter le [guide sur l'utilisation des tags de traduction]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales).
   
 ### Approches alternatives
 
@@ -283,7 +283,7 @@ Cette option offre une méthode alternative pour transformer Google Sheets en ob
 
 La structure de la feuille de calcul suit les étapes de l'option 4, mais SheetDB fournit également des [filtres supplémentaires](https://docs.sheetdb.io/#sheetdb-api) pour interroger les objets.
 
-Certains utilisateurs préféreront peut-être mettre en œuvre SheetDB avec moins de dépendances Liquid et Connected Block en implémentant la [méthode de recherche de](https://docs.sheetdb.io/#get-search-in-document) SheetDB dans les appels de requête GET pour filtrer les objets JSON sur la base de l'étiquette Liquid {% raw %}`{{${language}}}`{% endraw %} afin de renvoyer automatiquement les résultats pour une seule langue plutôt que de créer de grands blocs conditionnels.
+Certains utilisateurs pourraient préférer implémenter SheetDB avec moins de dépendances Liquid et Connected Block en implémentant [la méthode de recherche](https://docs.sheetdb.io/#get-search-in-document) de SheetDB dans les appels de requête GET afin de filtrer les objets JSON en fonction de l'étiquette{% raw %}`{{${language}}}`{% endraw %} Liquid pour renvoyer automatiquement les résultats pour une seule langue plutôt que de créer de grands blocs conditionnels.
 
 #### Étape 1 : Formater la Google Sheet
 

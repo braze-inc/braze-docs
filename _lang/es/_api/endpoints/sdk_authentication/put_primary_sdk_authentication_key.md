@@ -1,20 +1,20 @@
 ---
-nav_title: "COLOCAR: Establecer clave de autenticación SDK primaria"
-article_title: "COLOCAR: Establecer clave de autenticación SDK primaria"
-search_tag: Endpoint
+nav_title: "COLOCAR: Establecer la clave de autenticación SDK principal"
+article_title: "COLOCAR: Establecer clave de autenticación SDK principal"
+search_tag: Punto de conexión
 page_order: 2
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles sobre el punto final Braze de Establecer clave de autenticación SDK primaria."
+description: "Este artículo describe los detalles sobre el punto final SDK de Braze para establecer la clave de autenticación del SDK principal."
 ---
 
 {% api %}
-# Establecer clave de autenticación SDK primaria
+# Establecer la clave de autenticación del SDK principal
 {% apimethod put %}
 /app_group/sdk_authentication/primary
 {% endapimethod %}
 
-> Utiliza este punto final para establecer una clave de autenticación SDK como clave principal de tu aplicación.
+> Utiliza este punto final SDK para establecer una clave de autenticación SDK como clave principal para tu aplicación.
 
 ## Requisitos previos
 
@@ -40,12 +40,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | -------- | --------- | ----------- |
-| `app_id` | Obligatoria | Cadena | El identificador de la API de la aplicación. |
-| `key_id` | Obligatoria | Cadena | El ID de la clave de autenticación SDK que hay que marcar como primaria. |
+| `app_id` | Obligatoria | Cadena | El identificador API de la aplicación. |
+| `key_id` | Obligatoria | Cadena | El ID de la clave de autenticación del SDK que se va a marcar como principal. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
-```json
+```bash
 curl --location --request PUT 'https://rest.iad-01.braze.com/app_group/sdk_authentication/primary' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -79,19 +79,19 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/app_group/sdk_authe
 
 | Parámetro | Tipo de datos | Descripción |
 | --------- | --------- | ----------- |
-| `keys` | Matriz | Conjunto de todos los objetos clave de autenticación SDK. |
-| `keys[].id` | Cadena | El ID de la clave de autenticación SDK. |
+| `keys` | Matriz | Matriz de todos los objetos de clave de autenticación SDK. |
+| `keys[].id` | Cadena | El ID de la clave de autenticación del SDK. |
 | `keys[].rsa_public_key` | Cadena | La cadena de clave pública RSA. |
-| `keys[].description` | Cadena | Descripción de la clave de autenticación SDK. |
-| `keys[].is_primary` | Booleano | Si esta clave es la clave principal de autenticación SDK. |
+| `keys[].description` | Cadena | Descripción de la clave de autenticación del SDK. |
+| `keys[].is_primary` | Booleano | Si esta clave es la clave de autenticación SDK principal. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Reglas de validación
 
 Este punto final tiene las siguientes reglas de validación:
 
-- El `key_id` debe ser un ID de clave de autenticación SDK válido.
-- El `app_id` debe ser un identificador de API de aplicación válido.
+- Debe`key_id` ser un ID de clave de autenticación SDK válido.
+- Debe ser un identificador`app_id` API válido de la aplicación.
 - La clave de autenticación SDK debe existir para la aplicación especificada.
 
 {% endapi %}

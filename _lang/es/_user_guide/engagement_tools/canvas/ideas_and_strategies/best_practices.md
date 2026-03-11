@@ -26,7 +26,7 @@ Desbloquee nuevas combinaciones de recorridos de usuario con [componentes Canvas
 - Añade [mensajes independientes]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) donde quieras en tu flujo Canvas.
 
 {% alert note %}
-Los pasos en Canvas sólo pueden hacer avanzar a los usuarios en el flujo. No puedes configurar un Canvas para enlazar un paso con un paso anterior, ya que esto enviaría a los usuarios hacia atrás. Esta validación garantiza que los usuarios avancen en una única dirección a través de tu Canvas.
+Los pasos en Canvas solo pueden hacer avanzar a los usuarios en el flujo. No puedes configurar un Canvas para vincular un paso con uno anterior, ya que esto haría que los usuarios retrocedieran. Esta validación garantiza que los usuarios avancen en una única dirección a través de tu Canvas.
 {% endalert %}
 
 ## Crea mensajes más enriquecidos

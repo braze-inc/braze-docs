@@ -60,10 +60,10 @@ As a general rule of thumb, avoid using alerts for content that is essential to 
 <tr><th>Guideline</th><th>Example</th></tr>
 </thead>
 <tbody>
-<tr><td>Explain the information in the alert in a clear, concise statement.</td><td>{% include alerts/note_alerts.md alert='Segment profiles first app use' %}<br><br> <a href="{{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment">Note alert in Step 4: Add Filters to Your Segment Section</a></td></tr>
-<tr><td>For alerts that apply to different sections of the same article, consider creating a new section that captures these details to avoid repetitive content.</td><td>{% include currents/property_details_dispatch_state_source.md %}<br><br> <a href="{{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#subscription-group-state-change-events">Property details in Message Engagement Events</a></td></tr>
-<tr><td>Separate the information into short paragraphs or lists within the alert.</td><td>{% include alerts/important_alerts.md alert='Email via SMS' %}<br><br> <a href="{{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/import_your_email_list/">Important alert in Import your email list</a></td></tr>
-<tr><td>Consider any additional formatting that may impact how the alert displays (code snippets, steps, surrounding images, and more).</td><td>{% include alerts/tip_alerts.md alert='catalog data images' %}<br><br> <a href="{{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications/#considerations">Tip alert with code snippet in Price drop notifications</a></td></tr>
+<tr><td>Explain the information in the alert in a clear, concise statement.</td><td>{% multi_lang_include alerts/note_alerts.md alert='Segment profiles first app use' %}<br><br> <a href="{{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment">Note alert in Step 4: Add Filters to Your Segment Section</a></td></tr>
+<tr><td>For alerts that apply to different sections of the same article, consider creating a new section that captures these details to avoid repetitive content.</td><td>{% multi_lang_include currents/property_details_dispatch_state_source.md %}<br><br> <a href="{{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#subscription-group-state-change-events">Property details in Message Engagement Events</a></td></tr>
+<tr><td>Separate the information into short paragraphs or lists within the alert.</td><td>{% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}<br><br> <a href="{{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/import_your_email_list/">Important alert in Import your email list</a></td></tr>
+<tr><td>Consider any additional formatting that may impact how the alert displays (code snippets, steps, surrounding images, and more).</td><td>{% multi_lang_include alerts/tip_alerts.md alert='catalog data images' %}<br><br> <a href="{{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications/#considerations">Tip alert with code snippet in Price drop notifications</a></td></tr>
 <tr><td>Include a line break for alerts that begin an article.</td><td><img src="{% image_buster /assets/img/contributing/style_guide/alert_5.png %}" alt="Example of an alert beginning an article."><br><br> <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/">Content Card Implementation Guide</a></td></tr>
 <tr><td>When writing about beta features, include an Important alert that calls out the beta status and related Braze contact information. Place this beta alert after the overview text and before the first main heading.</td><td><img src="{% image_buster /assets/img/contributing/style_guide/alert_6.png %}" alt="Example of an important alert for a beta feature."></td></tr>
 <tr><td>Avoid using two or more alerts in a row if possible. Instead, reorganize or include the information as part of the text.</td><td><img src="{% image_buster /assets/img/contributing/style_guide/alert_7.png %}" alt="An example of two alerts next to each other, which you should avoid."></td></tr>
@@ -78,13 +78,13 @@ Refer to the following examples for how and why each alert type is used in our d
 
 ### Important alert {#important-alert}
 
-{% include alerts/important_alerts.md alert='Web push private browsing' %}
+{% multi_lang_include alerts/important_alerts.md alert='Web push private browsing' %}
 
 * **Article:** [Push for Web]({{site.baseurl}}/user_guide/message_building_by_channel/push/web/)
 * **Use case:** Includes essential feature caveat that the reader should know as they set up their web push.
 * **Alert reasoning:** Use an Important alert as opposed to a Note alert because the content's importance is greater for a reader to know as they set up their web push.
 
-{% include alerts/important_alerts.md alert='BCC address billable emails' %}
+{% multi_lang_include alerts/important_alerts.md alert='BCC address billable emails' %}
 
 * **Article:** [Email Settings]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/)
 * **Use case:**
@@ -100,19 +100,19 @@ Refer to the following examples for how and why each alert type is used in our d
 
 ### Note alert {#note-alert}
 
-{% include alerts/note_alerts.md alert='Content Cards frequency capping' %}
+{% multi_lang_include alerts/note_alerts.md alert='Content Cards frequency capping' %}
 
 * **Article:** [Create a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/)
 * **Use case:** Includes additional information that a reader should be aware of as they learn more about Content Cards.
 * **Alert reasoning:** This Note alert provides background information on how Braze cycles older Content Cards for users. This is helpful, supplemental information for the reader to be aware of and does not require the use of an Important or Tip alert.
 
-{% include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
+{% multi_lang_include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
 
 * **Article:** [Custom Attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/)
 * **Use case:** Includes general information that a reader should be aware of. Provides an article to learn more about related content (time attributes).
 * **Alert reasoning:** This information is best relayed using a Note alert as opposed to an Important alert because the content is directed to provide general information. Disregarding this information would not impact the ease of use for this feature.
 
-{% include alerts/note_alerts.md alert='Manage custom data storage' %}
+{% multi_lang_include alerts/note_alerts.md alert='Manage custom data storage' %}
 
 * **Article:** [Manage Custom Data]({{site.baseurl}}/user_guide/data/activation/custom_data/managing_custom_data/#managing-properties)
 * **Use case:** Includes general information that a reader should be aware of. Redirects to Braze contact for further information.
@@ -120,13 +120,13 @@ Refer to the following examples for how and why each alert type is used in our d
 
 ### Tip alert {#tip-alert}
 
-{% include alerts/tip_alerts.md alert='SMS segment calculator' %}
+{% multi_lang_include alerts/tip_alerts.md alert='SMS segment calculator' %}
 
 * **Article:** [SMS and RCS Billing Calculators]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/)
 * **Use case:** Includes tool for the reader to understand their message length and SMS segment count. Provides information that may be helpful for the reader in their understanding of copy limits.
 * **Alert reasoning:** This is a lengthy Tip alert because it provides a space for entering the copy to see how many segments a message dispatches. The Tip alert is the best option here because this is a helpful generator for the reader to use in the process of setting up their SMS messages.
 
-{% include alerts/tip_alerts.md alert='Export troubleshooting' %}
+{% multi_lang_include alerts/tip_alerts.md alert='Export troubleshooting' %}
 
 * **Article:** [Export KPIs for Daily App Uninstalls by Date]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_uninstalls_date/)
 * **Use case:** Provides troubleshooting advice when using this endpoint.
@@ -134,19 +134,19 @@ Refer to the following examples for how and why each alert type is used in our d
 
 ### Warning alert {#warning-alert}
 
-{% include alerts/warning_alerts.md alert='User profile external_id' %}
+{% multi_lang_include alerts/warning_alerts.md alert='User profile external_id' %}
 
 * **Article:** [User Profile Lifecycle]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/)
 * **Use case:** Indicates something that the reader should not do when creating their user profiles in Braze.
 * **Alert reasoning:** The Warning alert is used to caution the reader against assigning an external_id before uniquely identifying them. This information is best relayed using a Warning alert as opposed to an Important alert because it includes irreversible consequences for the user profile.
 
-{% include alerts/warning_alerts.md alert='Segment Currents multiple connectors' %}
+{% multi_lang_include alerts/warning_alerts.md alert='Segment Currents multiple connectors' %}
 
 * **Article:** [Segment for Currents]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment_for_currents/)
 * **Use case:** Cautions the reader when creating Currents connectors. Includes the consequence of incorrectly creating these connectors.
 * **Alert reasoning:** The Warning alert is best used here to describe the limitations of the Braze Segment Currents integration. Use a Warning alert as opposed to an Important alert because creating more than one of the same Currents connectors incorrectly may result in losing data.
 
-{% include alerts/warning_alerts.md alert='Canvas race condition audience trigger' %}
+{% multi_lang_include alerts/warning_alerts.md alert='Canvas race condition audience trigger' %}
 
 * **Article:** [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)
 * **Use case:** Lists the information that may cause the feature to not work. Details how the intended audience may not receive the campaign or enter the Canvas.

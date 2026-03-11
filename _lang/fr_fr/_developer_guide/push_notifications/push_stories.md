@@ -1,7 +1,7 @@
 ---
 page_order: 4
 nav_title: Contenu push
-article_title: Configurer les contenus push pour le SDK de Braze
+article_title: Configurer le contenu push pour le SDK Braze
 channel:
   - push notifications
 ---
