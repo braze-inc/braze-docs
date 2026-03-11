@@ -221,7 +221,10 @@ Customers onboarding in February 2026 or later may have early access to a new CD
 
 ## Required file formats
 
-Cloud Data Ingestion supports JSON, CSV, and Parquet files. The required columns depend on the data type: user data (attributes, custom events, purchase events) uses user identifiers and a payload; catalog data uses catalog identifiers.
+Cloud Data Ingestion supports JSON, CSV, and Parquet files. The required columns depend on the data type: 
+
+- User data (attributes, custom events, purchase events) uses user identifiers and a payload
+- Catalog data uses catalog identifiers
 
 Braze doesn’t enforce any additional filename requirements beyond what's enforced by AWS. Filenames should be unique. We recommend appending a timestamp for uniqueness.
 
