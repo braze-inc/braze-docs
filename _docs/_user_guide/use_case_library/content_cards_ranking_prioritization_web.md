@@ -12,7 +12,11 @@ tags:
 
 # Content Card ranking and prioritization on Web
 
-This use case describes best practices and options for ranking and prioritizing Content Cards on websites that use the Braze Web SDK. Braze does not offer default prioritization for Content Cards (unlike [In-App Message prioritization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/#step-7-build-the-remainder-of-your-campaign-or-canvas) with Low, Medium, and High). The approaches below use key-value pairs (KVPs) and custom logic to achieve a similar Low, Medium, and High priority system.
+{% alert tip %}
+**Use Banners when you need prioritization.** [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/) support [native prioritization]({{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority): you can set the order in which Banners are displayed when they share the same placement. We recommend using Banners for prioritization unless your use case specifically requires Content Cards.
+{% endalert %}
+
+The following solutions apply when you need to use Content Cards (for example, when your experience depends on the Content Cards feed or card-based UI). This use case describes best practices for ranking and prioritizing those cards on websites that use the Braze Web SDK. Braze does not offer default prioritization for Content Cards (unlike [In-App Message prioritization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/#step-7-build-the-remainder-of-your-campaign-or-canvas) with Low, Medium, and High). The approaches below use key-value pairs (KVPs) and custom logic to achieve a similar Low, Medium, and High priority system.
 
 Braze uses a Crawl, Walk, and Run model for [Content Card customizations]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/). The solutions here are "Walk" and "Run" approaches and cover ranking and prioritization through KVPs. Your team is responsible for the specific handling and display of the Content Cards. For display and customization details, see the [Braze Web SDK documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html).
 
