@@ -1,7 +1,7 @@
 ---
 nav_title: 利用可能なAPI関数
 article_title: Braze MCPサーバーで利用可能なAPI関数
-description: "MCPサーバーからアクセスできる読み取り専用のBraze API関数のリスト。"
+description: "MCPサーバー経由でアクセス可能な読み取り専用Braze API関数のリスト。"
 page_order: 1.5
 noindex: true
 ---

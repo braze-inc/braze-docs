@@ -1,6 +1,6 @@
 ---
 nav_title: Futtermittel
-article_title: Anpassen des Feeds für Content-Cards
+article_title: Passen Sie den Feed für Content-Cards an.
 page_order: 3
 description: "Dieser Artikel behandelt die Anpassungsmöglichkeiten von Content-Card-Feeds."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# Anpassen des Feeds für Content-Cards
+# Passen Sie den Feed für Content-Cards an.
 
 > Ein Content-Card-Feed ist eine Abfolge von Content-Cards in Ihren Mobil- oder Web-Apps. Dieser Artikel befasst sich mit der Konfiguration, wann der Feed aktualisiert wird, der Reihenfolge der Karten, der Verwaltung mehrerer Feeds und den Fehlermeldungen "leerer Feed". Eine vollständige Liste der Content-Card-Typen finden Sie unter [Über Content-Cards]({{site.baseurl}}/developer_guide/content_cards/). 
 
@@ -117,7 +117,7 @@ Braze verwendet einen Token Bucket-Algorithmus, um die folgenden Rate-Limits dur
 - `subscribeToContentCards()` gibt auch bei Rate-Limiting Karten aus dem Cache zurück
 
 {% alert important %}
-Das Braze SDK wendet auch Rate-Limits für Performance und Zuverlässigkeit an. Denken Sie daran, wenn Sie automatisierte Tests oder eine manuelle QA durchführen. Siehe [Braze SDK Rate-Limits]({{site.baseurl}}/developer_guide/sdk_integration/rate_limits/) für weitere Informationen.
+Das Braze SDK wendet außerdem Rate-Limits für Performance und Zuverlässigkeit an. Bitte beachten Sie dies, wenn Sie automatisierte Tests durchführen oder manuelle Qualitätssicherung betreiben. Weitere Informationen finden Sie unter [Braze SDK-Rate-Limits]({{site.baseurl}}/developer_guide/sdk_integration/rate_limits/).
 {% endalert %}
 
 ## Anpassen der angezeigten Kartenbestellung
@@ -344,7 +344,7 @@ Die Anpassung über `BrazeContentCardUI.ViewController.Attributes` ist in Object
 
 Wenn sich ein:e Nutzer:in für keine Content-Cards qualifiziert, zeigt das SDK die Fehlermeldung "Leerer Feed" an: "Wir haben keine Updates. Bitte schauen Sie später noch einmal nach." Sie können diese Fehlermeldung "Leerer Feed" in etwa wie folgt anpassen:
 
-![Eine leere Feed-Fehlermeldung, die lautet: "Dies ist eine angepasste leere Statusnachricht."]({% image_buster/assets/img/content_cards/content-card-customization-empty.png %})
+![Eine Fehlermeldung für einen leeren Feed mit dem Wortlaut „Dies ist eine angepasste Nachricht für einen leeren Status.“]({% image_buster/assets/img/content_cards/content-card-customization-empty.png %})
 
 {% tabs %}
 {% tab web %}

@@ -7,7 +7,7 @@ description: "Diese Seite beschreibt angepasste Attribute und erläutert die ver
 search_rank: 1
 ---
 
-# [![Braze-Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Angepasste Attribute
+# [![Braze Lernangebote-Kurs ]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Benutzerdefinierte Attribute
 
 > Auf dieser Seite finden Sie angepasste Attribute, die eine Sammlung eindeutiger Eigenschaften Ihrer Nutzer:innen darstellen. Angepasste Attribute eignen sich am besten zum Speichern von Attributen über Ihre Nutzer:innen oder von Informationen über geringwertige Aktionen innerhalb Ihrer Anwendung. 
 
@@ -17,12 +17,12 @@ In Braze gespeicherte angepasste Attribute können zum Aufbau von Zielgruppen-Se
 
 Um angepasste Attribute im Dashboard zu erstellen und zu verwalten, gehen Sie zu **Dateneinstellungen** > **Angepasste Attribute**. 
 
-![Vier angepasste Attribute, die Boolesche sind.]({% image_buster /assets/img/export_custom_attributes.png %})
+![Vier angepasste Attribute, die Boolesche Werte sind.]({% image_buster /assets/img/export_custom_attributes.png %})
 
 In der Spalte **Letztes Update** sehen Sie, wann das angepasste Attribut das letzte Mal bearbeitet wurde, z.B. wann es zuletzt auf Blockliste oder aktiv gesetzt wurde.
 
 {% alert important %}
-Für ein korrektes Targeting von Nachrichten sollten Sie darauf achten, dass der Datentyp Ihres angepassten Attributs mit dem tatsächlichen Attribut übereinstimmt.
+Für ein korrektes Targeting von Nachrichten sollten Sie darauf achten, dass der Datentyp Ihres angepassten Attributs mit dem tatsächlichen Attribut übereinstimmt. <br><br>Wenn beispielsweise  `newsletter_subscribed`als String definiert ist, sollte Ihre Liquid-Syntax wie folgt aussehen{% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == 'true' %}```{% endraw %}: . Wenn  als boolescher `newsletter_subscribed`Wert definiert ist, sollte die Liquid-Syntax keine einfachen Anführungszeichen enthalten: {% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == true %}```{% endraw %}.
 {% endalert %}
 
 Auf dieser Seite können Sie bereits angepasste Attribute anzeigen, verwalten, erstellen oder blockieren. Wählen Sie das Menü neben einem angepassten Attribut für die folgenden Aktionen aus:
@@ -60,11 +60,11 @@ Der Nutzungsbericht listet alle Canvase, Kampagnen und Segmente auf, die ein bes
 
 Sie können bis zu 100 Nutzungsberichte auf einmal anzeigen, indem Sie die Kontrollkästchen neben den jeweiligen angepassten Attributen auswählen und dann **Nutzungsbericht anzeigen** wählen.
 
-### Tab Werte
+### Tab „Werte“
 
-Wählen Sie beim Anzeigen eines Nutzungsberichts den Tab **Werte** aus, um die Spitzenwerte der angepassten Attribute auf der Grundlage einer Stichprobe von ca. 250.000 Nutzer:innen anzuzeigen. Beachten Sie, dass die Ergebnisse aus einer Teilmenge von Nutzer:innen gezogen werden und daher nicht alle vorhandenen Werte enthalten sind. Das bedeutet, dass der Tab **Werte** nicht für Fehlerbehebungen oder für Anwendungsfälle verwendet werden sollte, bei denen Daten von allen Nutzer:innen einbezogen werden müssen.
+Wenn Sie einen Nutzungsbericht anzeigen, wählen Sie die Registerkarte **„Werte“,** um die höchsten Werte der ausgewählten angepassten Attribute basierend auf einer Stichprobe von etwa 250.000 Nutzer:innen anzuzeigen. Bitte beachten Sie, dass die Ergebnisse aus einer Teilmenge von Nutzer:innen stammen und daher nicht alle vorhandenen Werte enthalten. Dies bedeutet, dass das Tab **„Werte“** nicht zur Fehlerbehebung oder für Anwendungsfälle verwendet werden sollte, die die Einbeziehung von Daten aller Nutzer:innen erfordern.
 
-![Nutzungsbericht für ausgewählte angepasste Attribute mit einem ausgewählten Tab "Werte", der ein Tortendiagramm mit den Werten von Länderattributen wie "US" und "PR" zeigt.]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
+![Nutzungsbericht für ausgewählte angepasste Attribute mit geöffneter Registerkarte „Werte“, die ein Kreisdiagramm mit den Attributwerten für Länder wie „US“ und „PR“ anzeigt.]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
 
 ## Anpassen der Attribute
 
@@ -158,7 +158,7 @@ Beachten Sie, dass Braze bei der Eingabe von Werten, die Leerzeichen zwischen, v
 | Prüfen Sie, ob das Attribut string **nicht teilweise mit einem** der eingegebenen Strings **übereinstimmt**. | **ENTHÄLT KEINE DER** | **STRING**<br>Groß-/Kleinschreibung beachten; mehrere Strings zulässig (maximal 256) | Wenn dieser Filter `gold` angibt und ein Nutzerprofil in keinem String `gold` enthält, wird der Nutzer:in diesem Filter berücksichtigt.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-{% include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
+{% multi_lang_include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
 
 {% alert important %}
 Wenn Sie mit dem Filter **DOES NOT MATCH REGEX** segmentieren, müssen Sie bereits ein angepasstes Attribut mit einem Wert in diesem Nutzerprofil zugewiesen haben. Braze schlägt vor, mit "OR"-Logik zu prüfen, ob ein angepasstes Attribut leer ist, um sicherzustellen, dass die Nutzer:innen richtig targetiert werden.

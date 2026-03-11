@@ -1,7 +1,7 @@
 ---
 nav_title: "PUBLICAR: Programar campañas desencadenadas por la API"
 article_title: "PUBLICAR: Programar campañas desencadenadas por API"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
@@ -10,7 +10,7 @@ description: "En este artículo se describen los detalles del punto final Progra
 ---
 {% api %}
 # Programar campañas desencadenadas por la API
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 
@@ -147,7 +147,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ### Ejemplo de respuesta satisfactoria
 
 ```json
-{
 {
     "dispatch_id": "dispatch_identifier",
     "schedule_id": "schedule_identifier",

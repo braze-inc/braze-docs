@@ -1,19 +1,19 @@
 ---
-nav_title: Actividades en vivo para Swift
-article_title: Actividades en vivo para el SDK Braze de Swift
+nav_title: Actividades en vivo para SWIFT
+article_title: Actividades en vivo para el SDK de Swift Braze
 page_order: 0.2
-description: "Aprende a configurar Actividades en vivo para el SDK de Swift Braze."
+description: "Aprende a configurar las actividades en vivo para el SDK de Swift Braze."
 platform: 
   - Swift
 ---
 
-# Actividades en vivo para Swift
+# Actividades en vivo para SWIFT
 
-> Aprende a implementar Actividades en vivo para el SDK Braze de Swift. Las Actividades en vivo son notificaciones persistentes e interactivas que se muestran directamente en la pantalla de bloqueo, permitiendo a los usuarios obtener actualizaciones dinámicas en tiempo real, sin desbloquear su dispositivo.
+> Aprende a implementar Live Activities para el SDK de Swift Braze. Las actividades en vivo son notificaciones persistentes e interactivas que se muestran directamente en la pantalla de bloqueo, lo que permite a los usuarios obtener actualizaciones dinámicas en tiempo real sin necesidad de desbloquear el dispositivo.
 
 ## Cómo funciona
 
-![Actividad en vivo de un rastreador de entregas en la pantalla de bloqueo de un iPhone. Una barra de estado con un coche está casi medio llena. El texto dice "2 min hasta la recogida"]({% image_buster /assets/img/swift/live_activities/example_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
+![Actividad en vivo de un rastreador de entregas en la pantalla de bloqueo de un iPhone. Una barra de estado con un coche está casi medio llena. El texto dice «2 minutos hasta la recogida».]({% image_buster /assets/img/swift/live_activities/example_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
 
 Las Actividades en vivo presentan una combinación de información estática e información dinámica que tú actualizas. Por ejemplo, puedes crear una Actividad en vivo que ofrezca un seguimiento del estado de una entrega. Esta Actividad en vivo tendría el nombre de tu empresa como información estática, así como un "Tiempo de entrega" dinámico que se actualizaría a medida que el conductor de la entrega se acercara a su destino.
 
@@ -68,11 +68,11 @@ sequenceDiagram
 
 ## Realización de una actividad en vivo
 
-#{% multi_lang_include developer_guide/prerequisites/swift.md %} También tendrás que completar lo siguiente:
+También {% multi_lang_include developer_guide/prerequisites/swift.md %}deberás completar lo siguiente:
 
-- Asegúrate de que tu proyecto está orientado a iOS 16.1 o posterior.
-- Añade el derecho `Push Notification` en **Capacidades de firma & ** en tu proyecto Xcode.
-- Asegúrate de que se utilizan las claves `.p8` para enviar notificaciones. Los archivos antiguos como `.p12` o `.pem` no son compatibles.
+- Asegúrate de que tu proyecto esté dirigido a iOS 16.1 o posterior.
+- Añade el`Push Notification`  derecho en **Capacidades& de firma** en tu proyecto Xcode.
+- Asegúrate de que`.p8`las claves se usen para enviar notificaciones. Los archivos antiguos como `.p12` o `.pem` no son compatibles.
 - A partir de la versión 8.2.0 del SDK Swift de Braze, puedes [registrar remotamente una Actividad en vivo](#swift_step-2-start-the-activity). Para utilizar esta característica, se necesita iOS 17.2 o posterior.
 
 {% alert note %}
@@ -81,7 +81,7 @@ Aunque las Actividades en vivo y las notificaciones push son similares, sus perm
 
 {% sdk_min_versions swift:5.11.0 %}
 
-### Paso 1: Crea una actividad {#create-an-activity}
+### Paso 1: Crear una actividad {#create-an-activity}
 
 En primer lugar, asegúrate de que has seguido [Mostrar datos en vivo con Actividades en vivo](https://developer.apple.com/documentation/activitykit/displaying-live-data-with-live-activities) en la documentación de Apple para configurar Actividades en vivo en tu aplicación iOS. Como parte de esta tarea, asegúrate de incluir `NSSupportsLiveActivities` configurado como `YES` en tu `Info.plist`.
 
@@ -118,11 +118,11 @@ struct SportsActivityAttributes: ActivityAttributes {
 }
 ```
 
-### Paso 2: Inicia la actividad {#start-the-activity}
+### Paso 2: Comienza la actividad. {#start-the-activity}
 
 Primero, elige cómo quieres registrar tu actividad:
 
-- **A distancia:** Utiliza el método [`registerPushToStart`](<http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)>) al principio del ciclo de vida del usuario y antes de que se necesite el token push-to-start, entonces inicia una actividad utilizando el método [`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start) punto final.
+- **Remoto:** Utiliza el[`registerPushToStart`](<http://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/registerpushtostart(fortype:name:)>)método al principio del ciclo de vida del usuario y antes de que sea necesario el token de notificaciones push, y luego inicia una actividad utilizando el[`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start)punto final.
 - **Localización:** Crea una instancia de tu Actividad en vivo y utiliza el método [`launchActivity`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)>) para crear tokens de notificaciones push para que los administre Braze.
 
 {% tabs local %}
@@ -135,14 +135,14 @@ Para registrar a distancia una Actividad en vivo, se necesita iOS 17.2 o posteri
 
 En tu proyecto de Xcode, selecciona el nombre de tu aplicación y luego **General**. En **Marcos y Bibliotecas**, confirma que `BrazeKit` está en la lista.
 
-![El marco BrazeKit en Frameworks y bibliotecas en un proyecto Xcode de ejemplo.]({% image_buster /assets/img/swift/live_activities/xcode_frameworks_and_libraries.png %})
+![El marco BrazeKit en Marcos y bibliotecas en un proyecto Xcode de ejemplo.]({% image_buster /assets/img/swift/live_activities/xcode_frameworks_and_libraries.png %})
 
-#### Paso 2.2: Añade el protocolo BrazeLiveActivityAttributes {#brazeActivityAttributes}
+#### Paso 2.2: Añadir el protocolo BrazeLiveActivityAttributes {#brazeActivityAttributes}
 
-En tu implementación de `ActivityAttributes`, añade la conformidad con el protocolo `BrazeLiveActivityAttributes`, y luego añade la propiedad `brazeActivityId` a tu modelo de atributos.
+En la`ActivityAttributes`implementación, añade la conformidad con el`BrazeLiveActivityAttributes`protocolo y, a continuación, añade la`brazeActivityId`propiedad al modelo de atributos.
 
 {% alert important %}
-iOS mapeará la propiedad `brazeActivityId` al campo correspondiente de tu carga útil push-to-start de la Actividad en vivo, por lo que no debe renombrarse ni asignársele ningún otro valor.
+iOS hará que la`brazeActivityId`propiedad esté mapeada con el campo correspondiente en la carga útil de Live Activity push-to-start, por lo que no se debe cambiar el nombre ni asignarle ningún otro valor.
 {% endalert %}
 
 ```swift
@@ -252,11 +252,11 @@ class LiveActivityManager {
 
 Tu widget de Actividad en vivo mostraría este contenido inicial a tus usuarios. 
 
-![Una actividad en vivo en la pantalla de bloqueo de un iPhone con los resultados de dos equipos. Tanto el equipo del Fondo para las Aves Silvestres como el de Rehabilitación de Lechuzas tienen una puntuación de 0.]({% image_buster /assets/img/swift/live_activities/example_1_1.png %}){: style="max-width:40%;"}
+![Una actividad en vivo en la pantalla de bloqueo de un iPhone con los resultados de dos equipos. Tanto el Wild Bird Fund como los equipos de Owl Rehab tienen puntuaciones de 0.]({% image_buster /assets/img/swift/live_activities/example_1_1.png %}){: style="max-width:40%;"}
 {% endtab %}
 {% endtabs %}
 
-### Paso 3: Seguimiento de la actividad del currículum {#resume-activity-tracking}
+### Paso 3: Reanudar seguimiento de actividad {#resume-activity-tracking}
 
 Para garantizar que Braze realiza un seguimiento de tu Actividad en vivo al iniciar la aplicación:
 
@@ -297,9 +297,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-### Paso 4: Actualiza la actividad {#update-the-activity}
+### Paso 4: Actualizar la actividad {#update-the-activity}
 
-![Una actividad en vivo en la pantalla de bloqueo de un iPhone con los resultados de dos equipos. El Fondo para las Aves Silvestres tiene 2 puntos y la Rehabilitación de la Lechuza 4 puntos.]({% image_buster /assets/img/swift/live_activities/example_1_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
+![Una actividad en vivo en la pantalla de bloqueo de un iPhone con los resultados de dos equipos. Tanto el Wild Bird Fund tiene 2 puntos como el Owl Rehab tiene 4 puntos.]({% image_buster /assets/img/swift/live_activities/example_1_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
 
 El punto final [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) te permite actualizar una Actividad en vivo mediante notificaciones push pasadas a través de la API REST de Braze. Utiliza este punto final para actualizar la `ContentState` de tu Actividad en vivo.
 
@@ -307,7 +307,7 @@ A medida que actualices tu `ContentState`, tu widget de Actividad en vivo mostra
 
 Consulta nuestro artículo [sobre el punto final en`/messages/live_activity/update` ]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) para conocer todos los detalles.
 
-### Paso 5: Finaliza la actividad {#end-the-activity}
+### Paso 5: Finalizar la actividad {#end-the-activity}
 
 Cuando una Actividad en vivo está activa, se muestra tanto en la pantalla de bloqueo del usuario como en la Isla Dinámica. Hay varias formas de que una Actividad en vivo termine y se elimine de la interfaz de usuario. 
 
@@ -320,12 +320,12 @@ Consulta nuestro artículo [sobre el punto final en`/messages/live_activity/upda
 
 ## Seguimiento de actividades en vivo
 
-Los eventos de Actividad en vivo están disponibles en Currents, Compartir datos de Snowflake y Generador de consultas. Los siguientes eventos pueden ayudarte a comprender y controlar el ciclo de vida de tus Actividades en vivo, hacer un seguimiento de la disponibilidad de tokens y diagnosticar problemas o verificar estados de entrega de forma independiente.
+Los eventos de actividad en vivo están disponibles en Currents, Snowflake Data Sharing y Query Builder. Los siguientes eventos pueden ayudarte a comprender y supervisar el ciclo de vida de tus actividades en vivo, realizar un seguimiento de la disponibilidad de tokens y diagnosticar problemas o verificar el estado de entrega de forma independiente.
 
-- [Cambio de token de notificaciones push en vivo]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-push-to-start-token-change-events): Captura cuándo se añade o actualiza un token push-to-start (PTS) en Braze, lo que te habilita para hacer un seguimiento de los registros de token y su disponibilidad por usuario.
-- [Cambio de token de actualización de actividad en vivo]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-update-token-change-events): Realiza el seguimiento de la adición, actualización o eliminación de tokens de actualización de actividad en vivo (LAU).
-- [Enviar actividad en vivo]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#live-activity-send-events): Registra cada vez que Braze inicia, actualiza o finaliza una Actividad en vivo.
-- [Resultado de la actividad en vivo]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#live-activity-outcome-events): Indica el estado final de entrega al servicio de notificaciones push de Apple (APN) de cada Actividad en vivo enviada desde Braze.
+- [Actividad en vivo Pulsar para iniciar Cambio de token]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-push-to-start-token-change-events): Captura cuándo se añade o actualiza un token push-to-start (PTS) en Braze, lo que te permite realizar el seguimiento de los registros y la disponibilidad de tokens por usuario.
+- [Cambio en el token de actualización de actividad en vivo]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-update-token-change-events): Realiza un seguimiento de la adición, actualización o eliminación de tokens de actualización de actividad en vivo (LAU).
+- [Envío de actividad en vivo]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#live-activity-send-events): Registra cada vez que Braze inicia, actualiza o finaliza una actividad en vivo.
+- [Resultado de la actividad en vivo]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#live-activity-outcome-events): Indica el estado final de entrega al servicio de notificaciones push de Apple (APN) para cada actividad en vivo enviada desde Braze.
 
 ## Preguntas más frecuentes (FAQ) {#faq}
 
@@ -333,9 +333,9 @@ Los eventos de Actividad en vivo están disponibles en Currents, Compartir datos
 
 #### ¿Qué plataformas admiten Actividades en vivo?
 
-Actualmente, las Actividades en vivo son una característica específica de iOS y iPadOS. Por defecto, las actividades iniciadas en un iPhone o iPad se mostrarán también en cualquier dispositivo watchOS 11+ o macOS 26+ emparejado.
+Actualmente, las actividades en vivo son una característica específica de iOS y iPadOS. De forma predeterminada, las actividades iniciadas en un iPhone o iPad se mostrarán adicionalmente en cualquier dispositivo watchOS 11+ o MacOS 26+ emparejado.
 
-![Captura de pantalla de una barra de menú de macOS mostrando una Actividad en vivo como alerta.]({% image_buster /assets/img/live-activity-macos.png %}){: style="max-width:60%;"}
+![Captura de pantalla de la barra de menú de MacOS mostrando una actividad en vivo como alerta.]({% image_buster /assets/img/live-activity-macos.png %}){: style="max-width:60%;"}
 
 El artículo Actividades en vivo cubre los [requisitos previos]({{site.baseurl}}/developer_guide/platforms/swift/live_activities/#prerequisites) para gestionar Actividades en vivo a través del SDK Swift de Braze.
 
@@ -379,13 +379,13 @@ En primer lugar, comprueba que tu carga útil incluye todos los campos obligator
 
 Para verificar que tu notificación push ha llegado correctamente al dispositivo pero no se ha mostrado debido a los límites de tasa, puedes depurar tu proyecto utilizando la aplicación Consola de tu Mac. Adjunta el proceso de grabación del dispositivo que desees y, a continuación, filtra los registros por `process:liveactivitiesd` en la barra de búsqueda.
 
-#### Después de iniciar mi Actividad en vivo con push-to-start, ¿por qué no recibe nuevas actualizaciones?
+#### Después de iniciar tu actividad en vivo con la función «pulsar para iniciar», ¿por qué no recibes nuevas actualizaciones?
 
-Comprueba que has aplicado correctamente las instrucciones descritas [anteriormente](#swift_brazeActivityAttributes). Tu `ActivityAttributes` debe contener tanto la conformidad con el protocolo `BrazeLiveActivityAttributes` como la propiedad `brazeActivityId`.
+Comprueba que has seguido correctamente las instrucciones descritas [anteriormente](#swift_brazeActivityAttributes). Tu`ActivityAttributes`  debe contener tanto la  `BrazeLiveActivityAttributes`conformidad con el protocolo como la`brazeActivityId`  propiedad.
 
-Tras recibir una notificación push de actividad en vivo, comprueba que puedes ver una solicitud de red saliente al punto final `/push_token_tag` de tu URL Braze y que contiene el ID de actividad correcto en el campo `"tag"`.
+Después de recibir una notificación push-to-start de Live Activity, comprueba que puedes ver una solicitud de red saliente al`/push_token_tag`  punto final de tu URL de Braze y que contiene el ID de actividad correcto en el`"tag"`campo .
 
-Por último, asegúrate de que el tipo de atributo Actividad en vivo de tu carga útil de actualización coincide con la cadena y la clase exactas utilizadas en tu llamada al método del SDK a `registerPushToStart`. Utiliza constantes para evitar errores tipográficos.  
+Por último, asegúrate de que el tipo de atributo Live Activity en tu carga útil de actualización coincida exactamente con la cadena y la clase utilizadas en tu llamada al método SDK a`registerPushToStart` . Utiliza constantes para evitar errores tipográficos.  
 
 #### Recibo una respuesta de acceso denegado cuando intento utilizar el punto final `live_activity/update`. ¿Por qué?
 

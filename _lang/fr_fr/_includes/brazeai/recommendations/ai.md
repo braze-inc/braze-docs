@@ -1,6 +1,6 @@
 {% if include.section == "Plan-specific features" %}
 
-## Fonctionnalités de l'intelligence artificielle propres au régime
+## Fonctionnalités d'intelligence artificielle spécifiques au plan
 
 Le tableau suivant décrit les différences entre la version gratuite et la version pro des types de recommandation Intelligence artificielle personnalisée, Populaire et Tendance :
 

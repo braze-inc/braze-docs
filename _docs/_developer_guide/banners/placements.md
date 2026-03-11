@@ -526,7 +526,7 @@ If your Banner uses the **Custom Code** editor block in the Braze dashboard, you
 </button>
 ```
 
-This is similar to the [JavaScript bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) used for HTML in-app messages. The `brazeBridge` provides a communication layer between the Banner's internal HTML and the parent Braze SDK.
+For the full reference, see [Custom code and JavaScript bridge for Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/custom_code/#javascript-bridge). The `brazeBridge` provides a communication layer between the Banner's internal HTML and the parent Braze SDK.
 
 ### Custom UI implementations (headless)
 

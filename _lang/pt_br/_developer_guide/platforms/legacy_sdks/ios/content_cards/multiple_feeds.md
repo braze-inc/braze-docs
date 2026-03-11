@@ -1,6 +1,6 @@
 ---
 nav_title: Vários feeds
-article_title: Use Múltiplos Cartões de Conteúdo para iOS
+article_title: Use Múltiplos Fluxos de Cartões de Conteúdo para iOS
 platform: iOS
 page_order: 6
 description: "Este artigo de referência aborda a implementação de vários feeds de cartão de conteúdo em seu aplicativo iOS."

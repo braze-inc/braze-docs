@@ -1,5 +1,5 @@
 ---
-nav_title: 고급 구현(선택 사항)
+nav_title: 고급 구현 (선택 사항)
 article_title: iOS용 콘텐츠 카드 구현 가이드(선택 사항) 
 platform: iOS
 page_order: 7
@@ -444,7 +444,7 @@ func contentCardable(with metaData: [ContentCardKey: Any], for classType: Conten
 
 이 콘텐츠 카드는 API 트리거 키-값 페어를 사용하여 API 트리거 캠페인에 의해 전달됩니다. 이것은 카드의 값이 사용자에게 표시할 콘텐츠를 결정하기 위해 외부 요인에 따라 달라지는 캠페인에 이상적입니다. 설정 시 `class_type`을 알아야 합니다.
 
-![추가 콘텐츠 카드 사용 사례에 대한 키-값 쌍입니다. 이 예제에서는 "tile_id", "tile_deeplink", 및 "tile_title" 등 카드의 다양한 측면이 Liquid를 사용하여 설정되었습니다.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
+![추가 콘텐츠 카드 사용 사례에 대한 키-값 쌍입니다. 이 예제에서는 카드의 다양한 측면이 Liquid를 사용하여 "tile_id", "tile_deeplink", 및 "tile_title"와 같이 설정됩니다.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 
 ##### 분석을 기록할 준비가 되셨습니까?
 데이터 흐름의 진행 방식을 더 잘 이해하려면 [다음 섹션](#logging-impressions-clicks-and-dismissals)을 참조하세요.

@@ -1,13 +1,13 @@
 ---
-nav_title: Centro de preferencias de correo electrónico API
-article_title: Centro de preferencias de correo electrónico API
+nav_title: Centro de preferencias de correo electrónico de la API
+article_title: Centro de preferencias de correo electrónico de la API
 page_order: 1
 description: "Este artículo describe el centro de preferencias de correo electrónico de la API y cómo personalizarlo."
 channel:
   - email
 ---
 
-# Centro de preferencias de correo electrónico API
+# Centro de preferencias de correo electrónico de la API
 
 > La creación de un centro de preferencias permite a los usuarios editar y gestionar sus preferencias de notificación de [mensajes de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/). Este artículo incluye los pasos para crear un centro de preferencias generado por la API, pero también puedes crear un centro de preferencias utilizando el [editor de arrastrar y soltar]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/).
 
@@ -118,13 +118,13 @@ Se utiliza para mostrar el centro de preferencias cuando se utiliza la versión 
 
 Si vuelves a hacer referencia a {%raw%}`${preference_center_url}`{%endraw%} en un mensaje nuevo, se creará de nuevo un centro de preferencias denominado "PreferenceCenterBrazeDefault".
 
-### ¿Los centros de preferencias admiten varias lenguas?
+### ¿Los centros de preferencias admiten varios idiomas?
 
-No. Sin embargo, puedes aprovechar Liquid para escribir el HTML de las páginas personalizadas de adhesión voluntaria y exclusión voluntaria. Si utilizas enlaces dinámicos para gestionar las bajas, éste es un enlace único. 
+No. Sin embargo, puedes aprovechar Liquid al escribir el código HTML para las páginas personalizadas de adhesión voluntaria y cancelación de adhesión voluntaria. Si utilizas enlaces dinámicos para administrar las cancelaciones de suscripción, se trata de un único enlace. 
 
-Por ejemplo, si estás haciendo un seguimiento de la tasa de cancelación de suscripciones de los usuarios hispanohablantes, tendrías que utilizar campañas separadas o aprovechar los análisis en torno a Currents (como ver cuándo se da de baja un usuario y comprobar el idioma preferido de ese usuario).
+Por ejemplo, si estás realizando un seguimiento de la tasa de cancelación de suscripciones de los usuarios hispanohablantes, tendrás que utilizar campañas independientes o aprovechar los análisis de Currents (por ejemplo, comprobando cuándo se cancela una suscripción y verificando su idioma preferido).
 
-Como otro ejemplo, para el seguimiento de las tasas de cancelar suscripción de los usuarios hispanohablantes, podrías añadir una cadena de parámetro de consulta como `?Spanish=true` a la URL de cancelar suscripción si el idioma de los usuarios es el alemán y utilizar un enlace de cancelar suscripción normal si no lo es:
+Como otro ejemplo, para realizar el seguimiento de las tasas de cancelación de suscripciones de los usuarios de habla hispana, se podría añadir una cadena de parámetros de consulta como`?Spanish=true`  a la URL de cancelación de suscripción si el idioma de los usuarios es el alemán y utilizar un enlace de cancelación de suscripción normal si no lo es:
 
 {% raw %}
 ```liquid
@@ -135,15 +135,15 @@ ${unsubscribe_url}
 ```
 {% endraw %}
 
-Luego, a través de Currents, podrías identificar qué usuarios hablan español y cuántos clics hubo para ese enlace de cancelar suscripción.
+A continuación, a través de Currents, se puede identificar qué usuarios hablan español y cuántos clics se han producido en ese enlace para cancelar la suscripción.
 
-### ¿Son necesarios para el envío tanto los enlaces para cancelar suscripción como los centros de preferencias de correo electrónico?
+### ¿Son necesarios tanto los enlaces para cancelar la suscripción como los centros de preferencias de correo electrónico para el envío por correo electrónico?
 
-No. Si ves el mensaje "El cuerpo de tu correo electrónico no incluye un enlace para cancelar suscripción" al redactar una campaña de correo electrónico, esta advertencia es de esperar si tu enlace para cancelar suscripción está en un bloque de contenido.
+No. Si ves el mensaje «El cuerpo de tu correo electrónico no incluye un enlace para cancelar suscripción» al redactar una campaña de correo electrónico, esta advertencia es normal si el enlace para cancelar suscripción se encuentra en un bloque de contenido.
 
 ### ¿Cómo actualizo el icono predeterminado del navegador?
 
-Por defecto, el icono situado junto al nombre de la pestaña del navegador (favicon) utiliza el logotipo de Braze. Para añadir un favicon personalizado, lo estableces a través del atributo `links-tags` en tu [llamada a la API]({{site.baseurl}}/api/endpoints/preference_center) Crear o Actualizar [centro de preferencias]({{site.baseurl}}/api/endpoints/preference_center). A continuación, Braze inyecta la etiqueta {% raw %}`<link rel="icon" ...>`{% endraw %} en la página alojada por ti.
+De forma predeterminada, el icono situado junto al nombre de la pestaña del navegador (favicon) utiliza el logotipo de Braze. Para añadir un favicon personalizado, configúralo mediante el`links-tags`atributo  en tu [llamada a la API]({{site.baseurl}}/api/endpoints/preference_center) Crear o actualizar [centro de preferencias]({{site.baseurl}}/api/endpoints/preference_center). A continuación, Braze inserta la{% raw %}`<link rel="icon" ...>`{% endraw %}etiqueta en la página alojada por ti.
 
 {% raw %}
 ```

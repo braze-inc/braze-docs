@@ -18,7 +18,7 @@ platform:
 
 {% sdktabs %}
 {% sdktab web %}
-Neste momento, deep links de Cartões de Conteúdo não são suportados para o SDK Web Braze.
+Neste momento, deep links de Cartão de Conteúdo não são suportados para o SDK Web Braze.
 {% endsdktab %}
 
 {% sdktab android %}

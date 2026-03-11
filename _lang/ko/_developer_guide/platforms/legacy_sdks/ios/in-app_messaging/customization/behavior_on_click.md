@@ -1,6 +1,6 @@
 ---
 nav_title: 사용자 지정 클릭 동작
-article_title: iOS용 클릭 시 인앱 메시지 동작 사용자 지정
+article_title: iOS용 앱 내 인앱 메시지 클릭 시 동작 사용자 지정
 platform: iOS
 page_order: 5
 description: "이 참조 문서에서는 iOS 애플리케이션의 사용자 지정 인앱 메시징 클릭 시 동작을 다룹니다."

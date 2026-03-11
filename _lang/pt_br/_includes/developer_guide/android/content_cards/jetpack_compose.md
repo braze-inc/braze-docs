@@ -12,7 +12,7 @@ setContent {
 
 ## Manuseio de cliques em cartões
 
-Para lidar com cliques em cartões, passe uma função que receba um `Card` e retorne um `Boolean` para `onCardClicked`. Se retornar `true`, a Braze não processará nada sobre o clique, além de registrá-lo para análise de dados. Se retornar `false`, a Braze tratará o clique.
+Para lidar com cliques em cartões, passe uma função que receba um `Card` e retorne um `Boolean` para `onCardClicked`. Se retornar `true`, a Braze não processará nada sobre o clique, além de registrá-lo para análise de dados. Se `false` for retornado, Braze irá lidar com o clique.
 
 ```kotlin
 ContentCardsList(

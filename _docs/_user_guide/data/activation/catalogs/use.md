@@ -66,7 +66,7 @@ We can further personalize our message by adding some text around our Liquid:
 
 {% raw %}
 ```liquid
-Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
+Get the ultimate trio {% catalog_items Games 1234 1235 1236 %}
 {{ items[0].title }}, {{ items[1].title }}, and {{ items[2].title }} today!
 ```
 {% endraw %}
@@ -90,15 +90,15 @@ To do this, you'll use a Liquid `if` statement, such as in this example:
 {% catalog_selection_items item-list selections %} 
 {% if items[0].venue_name.size > 10 %}
 Message if the venue name's size is more than 10 characters. 
-{% elsif items[0].venue_name.size < 10 %}
-Message if the venue name's size is less than 10 characters. 
+{% elsif items[0].venue_name.size <= 10 %}
+Message if the venue name's size is 10 characters or fewer. 
 {% else %} 
-{% abort_message(no venue_name) %} 
+{% abort_message('no venue_name') %} 
 {% endif %}
 ```
 {% endraw %}
 
-In this example, different messages will display if the custom attribute `venue_name` has more than 10 characters or less than 10 characters. If `venue_name` is `blank`, nothing will display. 
+In this example, different messages display depending on the number of characters in the catalog item field `venue_name`. If `venue_name` is blank, the message is aborted.
 
 Note that you must declare the catalog list and, if applicable, the selection before using `if` statements. In the example, `item-list` is the catalog list, and `selections` is the selection name.
 
@@ -185,7 +185,7 @@ To render the following Liquid content:
 
 {% raw %}
 ```liquid
-Hi ${first_name}
+Hi ${first_name},
 
 {% catalog_items Messages greet_msg :rerender %}
 {{ items[0].Welcome_Message }}

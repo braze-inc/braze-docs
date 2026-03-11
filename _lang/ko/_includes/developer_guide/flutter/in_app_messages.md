@@ -10,12 +10,12 @@
 ## 인앱 메시지 활성화
 
 {% alert note %}
-이 단계는 iOS 전용입니다. 인앱 메시징의 기본값은 이미 Android에 설정되어 있습니다.
+이 단계는 iOS 전용입니다. 인앱 메시지의 기본값 구현은 이미 Android에 설정되어 있습니다.
 {% endalert %}
 
-iOS에서 인앱 메시지의 기본값 발표자를 설정하려면 `BrazeInAppMessagePresenter` 프로토콜의 구현을 생성하고 이를 선택 사항인 Braze 인스턴스의 `inAppMessagePresenter` 에 할당하세요. `BrazeInAppMessageUI` 오브젝트를 인스턴스화하여 기본 Braze UI 프리젠터를 사용할 수도 있습니다.
+iOS에서 인앱 메시지의 기본값 프레젠터를 설정하려면 `BrazeInAppMessagePresenter`프로토콜의 구현체를 생성하고 Braze 인스턴스의 선택적`inAppMessagePresenter`속성에 할당하십시오. `BrazeInAppMessageUI` 오브젝트를 인스턴스화하여 기본 Braze UI 프리젠터를 사용할 수도 있습니다.
 
-`BrazeInAppMessageUI` 클래스에 액세스하려면 `BrazeUI` 라이브러리를 가져와야 합니다.
+해당`BrazeInAppMessageUI`클래스에 접근하려면 `BrazeUI`라이브러리를 반드시 임포트해야 합니다.
 
 {% tabs %}
 {% tab swift %}
@@ -62,4 +62,4 @@ override func application(
 {% endtab %}
 {% endtabs %}
 
-구현을 더 커스텀하려면 [인앱 메시지 데이터 로깅하기를]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter) 참조하세요.
+구현을 더욱 커스텀 설정하려면 [인앱 메시지 데이터 로깅]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter)을 참조하십시오.

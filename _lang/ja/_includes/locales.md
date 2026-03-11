@@ -1,7 +1,13 @@
 {% if include.section == "Prerequisites" %}
 ## 前提条件
 
-[多言語サポート]({{site.baseurl}}/multi_language_support/)の編集および管理を行うには、「多言語設定を管理」のユーザー権限が必要です。メッセージにロケールを追加するには、キャンペーンの編集権限が必要だ。
+[多言語サポートを]({{site.baseurl}}/multi_language_support/)編集および管理するには、ワークスペースに対して以下の[ユーザー権限]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)が必要だ：
+
+- 多言語設定を表示する
+- 多言語ローカライゼーション設定を作成する
+- 多言語ローカライゼーション設定を削除する
+
+メッセージにロケールを追加するには、「キャンペーン編集」の権限が必要だ。
 
 {% alert important %}
 現在、多言語サポートは早期アクセス段階です。早期アクセスに参加することに興味がある場合は、Brazeのアカウントマネージャーに連絡してください。

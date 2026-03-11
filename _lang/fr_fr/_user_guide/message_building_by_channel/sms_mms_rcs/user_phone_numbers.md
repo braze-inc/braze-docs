@@ -22,7 +22,7 @@ Nous vous recommandons d'importer les numéros de téléphone au format [`E.164`
 - **U.S. chiffres :** Tous les numéros U.S. doivent être des numéros de téléphone valides à 10 chiffres avec un code régional valide. S'il manque un `+` et un code pays à un numéro de téléphone à 10 chiffres, Braze le mappera en tant que numéro U.S.
 - **Numéros internationaux :** Tous les numéros internationaux doivent commencer par un `+`, suivi du code du pays et du numéro de téléphone. Par exemple, `+442071838750`.
 
-![Exemple de numéro de téléphone international e164 valide.]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
+![Exemple d'un numéro de téléphone international e164 valide.]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
 
 Voici quelques exemples illustrant les différences entre le formatage local et le formatage `E.164`:
 
@@ -41,7 +41,7 @@ Lorsque vous importez des numéros de téléphone, il est important de respecter
 - [Utilisation de l'endpoint `/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track)
 
 {% alert important %}
-Les numéros de téléphone des utilisateurs apparaissent dans Braze sous la forme d'une chaîne de caractères. Si vous importez un nombre qui contient des non chiffres (tels que `,`, `-`, ou `(`) autres que le premier {% raw %}`+`{% endraw %}, les non chiffres sont supprimés lors du rendu dans Braze. Par exemple, l'importation de `+1 (724) 123-4567` apparaît sous la forme `+17241234567`.
+Les numéros de téléphone des utilisateurs apparaissent dans Braze sous forme de chaîne de caractères de chiffres. Si vous importez un nombre contenant des caractères non numériques (tels que `,`, `-`, ou `(`) autres que le premier {% raw %}`+`{% endraw %}, ces caractères seront supprimés lors de l'affichage dans Braze. Par exemple, l'importation`+1 (724) 123-4567`est représentée par `+17241234567`.
 {% endalert %}
 
 ## Gestion des numéros de téléphone non valides

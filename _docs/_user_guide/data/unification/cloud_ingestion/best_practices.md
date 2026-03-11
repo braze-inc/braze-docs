@@ -178,7 +178,7 @@ During the next scheduled sync, Braze syncs all rows with a `UPDATED_AT` timesta
   </tbody>
 </table>
 
-A row was added, but the `UPDATED_AT` value is earlier than `2022-07-19 09:07:23` (stored from the first run). As a result, none of these rows will be synced in this run. The last `UPDATED_AT` for the sync is unchanged by this run, and remains as  `2022-07-19 09:07:23`.
+A new row was added for `customer_9012`, but its `UPDATED_AT` value (`2022-07-16 00:25:30`) is earlier than the stored timestamp (`2022-07-19 09:07:23`), so it won't be synced. However, the existing row for `customer_5678` has an `UPDATED_AT` value equal to the stored timestamp, so it is re-synced due to the inclusive boundary. For more details about this behavior, refer to [Make sure the UPDATED_AT time isn't the same time as your sync](#make-sure-the-updated_at-time-isnt-the-same-time-as-your-sync). The stored `UPDATED_AT` remains `2022-07-19 09:07:23`.
 
 **Recurring sync, third run on July 21, 2022 at 12 pm**
 
@@ -266,7 +266,7 @@ A row was added, but the `UPDATED_AT` value is earlier than `2022-07-19 09:07:23
   </tbody>
 </table>
 
-In this third run, another new row was added. Now, one row has an `UPDATED_AT` value later than `2022-07-19 09:07:23`, which means only one row will sync. The last `UPDATED_AT` is now set as `2022-07-21 08:30:00`.
+In this third run, another new row was added for `customer_1234` with an `UPDATED_AT` value (`2022-07-21 08:30:00`) later than the stored timestamp. This new row and the existing row for `customer_5678` (which has an `UPDATED_AT` equal to the stored timestamp) are both synced. The stored `UPDATED_AT` is now set as `2022-07-21 08:30:00`.
 
 {% alert note %}
 `UPDATED_AT` values are allowed to be even later than the run start time for a given sync. However, this is not recommended as it pushes the last `UPDATED_AT` timestamp "into the future" and subsequent syncs will not sync earlier values.

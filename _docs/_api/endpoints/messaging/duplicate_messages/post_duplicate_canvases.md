@@ -16,7 +16,7 @@ description: "This article outlines details about the Duplicate Canvases endpoin
 
 > Use this endpoint to duplicate Canvases. This API endpoint is similar to [duplicating Canvases in the Braze dashboard][1].
 
-{% include early_access_beta_alert.md feature='This endpoint' %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Prerequisites
 

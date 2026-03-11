@@ -291,7 +291,7 @@ extension BrazeManager {
 {% endsubtabs %}
 
 ###### Étape 2 : Support des notifications à distance
-Dans l'onglet **Signing & Capabilities**, ajoutez la prise en charge des **modes d'arrière-plan** et sélectionnez **Remote notifications** pour commencer à prendre en charge les notifications push à distance provenant de Braze.<br><br>![Signature & Capacités]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
+Dans l'onglet **Capacités& de** **signature**, veuillez ajouter la prise en charge **des modes d'arrière-plan** et sélectionner **Notifications à distance** pour commencer à prendre en charge les notifications push à distance provenant de Braze.<br><br>![Capacités& de signature]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
 
 ###### Étape 3 : Gestion des notifications à distance
 Le SDK Braze peut gérer les notifications push à distance provenant de Braze. Transférer les notifications à distance à Braze ; le SDK ignorera automatiquement les notifications push qui ne proviennent pas de Braze. Ajoutez la méthode suivante à votre fichier `BrazeManager.swift` dans l’extension de notification push.

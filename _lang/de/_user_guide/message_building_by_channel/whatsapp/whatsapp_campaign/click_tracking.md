@@ -64,9 +64,9 @@ Die Ziel-URL muss für jeden Link mit einer Basis-URL angegeben werden, die entw
 ![Abschnitt "Buttons" mit Feldern für den Namen des Buttons, die Website-URL und die Klick-Tracking-URL.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
 
 {% alert important %}
-**Versenden von Template Nachrichten über die API**: WhatsApp Click-Tracking (unter Verwendung von `brz.ai` oder einer angepassten Tracking Domain und dem **Click-Tracking URL-Feld** im Nachrichten-Editor) wird nicht unterstützt, wenn Sie WhatsApp Template Nachrichten über den [`/messages/send` Endpunkt]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) versenden.
+**Versenden von Template-Nachrichten über die API**: Die WhatsApp-Klickverfolgung (unter`brz.ai`Verwendung einer angepassten Tracking-Domain und des Feldes **„Klickverfolgungs-URL“** im Nachrichten-Editor) wird beim Versenden von WhatsApp-Templaten über den[`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)[Endpunkt]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) nicht unterstützt.
 
-Wenn Sie eine Template Nachricht über die API senden, können Sie CTA-URL-Variablen einfügen (mit `button_variables`), aber Braze generiert keine Click-through-URL oder einen Redirect-Link im Fluss der API-Anfrage. Um Click Tracking zu verwenden, senden Sie das Template über das Braze-Dashboard oder über einen Trigger für eine Braze-Kampagne.
+Wenn Sie eine Template-Nachricht über die API senden, können Sie CTA-URL-Variablen (mit `button_variables`) ausfüllen, jedoch generiert Braze keine Klick-Tracking-URL oder Weiterleitungslink im API-Anfragefluss. Um das Klick-Tracking zu verwenden, senden Sie das Template über das Braze-Dashboard oder über einen Braze-Trigger für Kampagnen.
 {% endalert %}
 
 {% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}

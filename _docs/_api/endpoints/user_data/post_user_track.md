@@ -60,6 +60,25 @@ For each request component listed in the following table, you must include one o
 | `purchases` | Optional | Array of purchase objects | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
+### Identifier resolution
+
+Each request object must include at least one identifier. The following table describes how Braze determines which identifier to use for user profile lookup.
+
+| Identifier type | Identifiers | Behavior |
+| --------------- | ----------- | -------- |
+| Primary | `external_id`, `user_alias`, `braze_id` | Used for user profile lookup. Only one primary identifier is allowed per request object—including more than one causes that object to be rejected. |
+| Secondary | `email`, `phone` | Used for user profile lookup **only** when no primary identifier is present. If both `email` and `phone` are included without a primary identifier, `email` takes precedence. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+When a primary identifier is present, any `email` or `phone` values in the same request object are treated as profile attributes—not as identifiers for user lookup. For example, if a request includes both an `external_id` and an `email`:
+
+- Braze looks up the user profile by `external_id`.
+- The `email` value is set (or updated) as an attribute on the resolved profile.
+
+{% alert important %}
+Including a primary identifier that doesn't match any existing profile can create a duplicate profile even when `email` or `phone` in the same request match an existing profile. For more information, see [How do I avoid creating duplicate user profiles?](#how-do-i-avoid-creating-duplicate-user-profiles).
+{% endalert %}
+
 ## Example requests
 
 ### Update a user profile by email address
@@ -289,6 +308,15 @@ Braze creates a profile and an email-only user and sets the email field to test@
 You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application, all information following their identification using the SDK is merged with the existing user profile you created using the API call. Any user behavior recorded anonymously by the SDK before identification is lost upon merging with the existing API-generated user profile.
 
 The segmentation tool includes these users regardless of whether they have engaged with the app. If you want to exclude users uploaded using the User API who have not yet engaged with the app, add the `Session Count > 0` filter.
+
+### How do I avoid creating duplicate user profiles?
+
+Duplicate profiles can occur when a request includes a primary identifier (such as `external_id`) that doesn't match any existing profile, alongside an `email` or `phone` value that does match an existing profile. Because primary identifiers are used for user lookup, Braze creates a new profile for the unrecognized `external_id` instead of updating the existing email-only or phone-only profile.
+
+To avoid duplicates:
+
+- When transitioning users from email-only or phone-only profiles to identified profiles, use the [`/users/identify` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) to assign an `external_id` to the existing profile, rather than sending both to `/users/track`.
+- If duplicates already exist, merge them using the [`/users/merge` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/).
 
 ### How does `/users/track` handle duplicate events?
 

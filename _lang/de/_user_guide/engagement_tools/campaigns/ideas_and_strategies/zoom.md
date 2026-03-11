@@ -33,7 +33,7 @@ Erstellen Sie eine E-Mail-Kampagne mit einer Call-to-Action-Schaltfläche im Nac
 
 Verwenden Sie die Parameter in der URL, um Nutzerdaten zu übergeben, und erstellen Sie einen API-Aufruf, der beim Laden der Seite ausgelöst wird, um die:den Nutzer:in zum Webinar hinzuzufügen.
 
-![Nachrichten per E-Mail mit Liquid-Templates, die den Vornamen, den Nachnamen, die E-Mail-Adresse und den Ort enthalten.]({% image_buster /assets/img/zoom/zoom1.png %})
+![E-Mail-Nachricht mit Liquid-Templates, die den Vornamen, Nachnamen, die E-Mail-Adresse und den Ort enthalten.]({% image_buster /assets/img/zoom/zoom1.png %})
 
 Nutzer:innen sind nun für das Webinar mit den Angaben registriert, die bereits in ihrem Braze-Profil vorhanden sind.
 
@@ -44,7 +44,7 @@ Nutzer:innen sind nun für das Webinar mit den Angaben registriert, die bereits 
 
 	Legen Sie das On-Click-Verhalten für den Button fest, um einen Link zur Webinar-Landing-Page zu erstellen.<br>
 
-	![Verlinkung zum Webinar, wenn ein Button angeklickt wird.]({% image_buster /assets/img/zoom/zoom2.png %})<br><br>
+	![Weiterleitung zum Webinar bei einem Klick auf einen Button.]({% image_buster /assets/img/zoom/zoom2.png %})<br><br>
 
 	Ein einfaches Beispiel für eine Landing Page für Benutzer, die sich per Klick auf eine Schaltfläche aus einem Push-Mailing anmelden. Teilen Sie dem Benutzer mit, wofür er sich angemeldet hat und bestätigen Sie seine Anmeldung:<br>
 
@@ -54,7 +54,7 @@ Nutzer:innen sind nun für das Webinar mit den Angaben registriert, die bereits 
 2. Erstellen Sie eine Webhook-Kampagne, die durch eine In-App-Nachricht oder einen Klick auf einen Button getriggert wird.<br><br>
  	Melden Sie die Nutzer:innen anhand der bestehenden Nutzerdaten in ihrem Braze Profil für das Webinar an.<br>
 
-	![Eine aktionsbasierte Kampagne, die an Nutzer:innen gesendet wird, die auf einen Button für eine bestimmte Kampagne geklickt haben.]({% image_buster /assets/img/zoom/zoom6.png %})<br><br>
+	![Eine aktionsbasierte Kampagne, die an Nutzer:innen gesendet wird, die für eine bestimmte Kampagne auf einen Button geklickt haben.]({% image_buster /assets/img/zoom/zoom6.png %})<br><br>
 
 	Beispiel für einen Webhook-Aufruf an den Zoom-Endpunkt.<br>
 	{% raw %}
@@ -81,7 +81,7 @@ Nutzer:innen sind nun für das Webinar mit den Angaben registriert, die bereits 
 
 	Legen Sie das On-Click-Verhalten für den Button fest, der auf die Webinar-Landing-Page verweist<br>
 
-	![Verlinkung zum Webinar, wenn ein Button angeklickt wird.]({% image_buster /assets/img/zoom/zoom3.png %})<br><br>
+	![Weiterleitung zum Webinar bei einem Klick auf einen Button.]({% image_buster /assets/img/zoom/zoom3.png %})<br><br>
 
 	Ein einfaches Beispiel für eine Landing Page für Benutzer, die sich per Klick auf eine Schaltfläche in einer In-App-Nachricht anmelden. Teilen Sie dem Benutzer mit, wofür er sich angemeldet hat und bestätigen Sie seine Anmeldung:<br>
 
@@ -90,7 +90,7 @@ Nutzer:innen sind nun für das Webinar mit den Angaben registriert, die bereits 
 2. Erstellen Sie eine Webhook-Kampagne, die durch eine In-App-Nachricht oder einen Klick auf einen Button getriggert wird.<br><br>
 	Melden Sie die Nutzer:innen anhand der bestehenden Nutzerdaten in ihrem Braze Profil für das Webinar an.<br>
 
-	![Eine aktionsbasierte Kampagne, die an Nutzer:innen gesendet wird, die auf einen Button für eine bestimmte Kampagne geklickt haben.]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
+	![Eine aktionsbasierte Kampagne, die an Nutzer:innen gesendet wird, die für eine bestimmte Kampagne auf einen Button geklickt haben.]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
 
 	Beispiel für einen Webhook-Aufruf an den Zoom-Endpunkt.<br>
 	{% raw %}

@@ -28,12 +28,12 @@ Depois de fazer upgrade do SDK, seus usuários móveis devem atualizar o app. É
 
 Você pode escolher quando o Braze cria um cartão na etapa **de entrega** ao criar uma nova [campanha de cartão de conteúdo]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/) com entrega programada.
 
-![Seção Controles do cartão de conteúdo ao editar a entrega de um cartão de conteúdo programado.]({% image_buster /assets/img_archive/card_creation.png %})
+![Seção de Controles do Cartão de Conteúdo ao editar a entrega de um Cartão de Conteúdo agendado.]({% image_buster /assets/img_archive/card_creation.png %})
 
 As seguintes opções estão disponíveis:
 
 - **No lançamento da campanha:** O comportamento padrão anterior para os cartões de conteúdo. O Braze calcula a elegibilidade do público e a personalização quando a campanha é lançada e, em seguida, cria o cartão e o armazena até que o usuário abra seu app. 
-- **Na primeira impressão (recomendado):** Quando o usuário abre seu app (inicia uma nova [sessão](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), o Braze determina para quais cartões de conteúdo o usuário é elegível, modela qualquer personalização como Liquid ou Connected Content e, em seguida, cria o cartão. Essa opção geralmente oferece melhor performance.
+- **Na primeira impressão (recomendado):** Quando o usuário abrir seu app novamente (iniciar uma nova [sessão](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), a Braze determina quais Cartões de Conteúdo o usuário é elegível, personaliza qualquer conteúdo como Liquid ou Conteúdo Conectado e, em seguida, cria o cartão. Esta opção geralmente oferece melhor performance.
 
 Independentemente da opção selecionada, a contagem regressiva da data de expiração do cartão de conteúdo começará quando a campanha for lançada.
 
@@ -42,12 +42,12 @@ Independentemente da opção selecionada, a contagem regressiva da data de expir
 
 Você pode escolher quando o Braze cria um cartão na guia **Canais de envio de mensagens de** uma [etapa de Mensagem]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) do cartão de conteúdo.
 
-![Seção Controles do cartão de conteúdo ao editar a entrega de um cartão de conteúdo programado.]({% image_buster /assets/img_archive/card_creation_canvas.png %})
+![Seção de Controles do Cartão de Conteúdo ao editar a entrega de um Cartão de Conteúdo agendado.]({% image_buster /assets/img_archive/card_creation_canvas.png %})
 
 As seguintes opções estão disponíveis:
 
 - **Na entrada da etapa:** O comportamento padrão anterior para os cartões de conteúdo. O Braze calcula a elegibilidade do público quando o usuário entra na etapa do canva e, em seguida, cria o cartão e o armazena até que o usuário abra seu app.
-- **Na primeira impressão (recomendado):** O Braze calcula a elegibilidade do público quando o usuário entra na etapa do canva. Quando o usuário abrir seu app da próxima vez (iniciar uma nova [sessão](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), o Braze modela qualquer personalização, como Liquid ou Connected Content, e cria o cartão. Essa opção oferece melhor performance nas entregas de cartões e personalização mais atualizada.
+- **Na primeira impressão (recomendado):** O Braze calcula a elegibilidade do público quando o usuário entra na etapa do canva. Quando o usuário abrir seu app novamente (iniciar uma nova [sessão](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), a Braze personaliza qualquer conteúdo como Liquid ou Conteúdo Conectado e, em seguida, cria o cartão. Esta opção oferece melhor performance na entrega de cartões e personalização mais atualizada.
 
 Independentemente da opção selecionada, a contagem regressiva da data de expiração do Content Card começará quando o usuário entrar na etapa do canva.
 
@@ -62,7 +62,7 @@ Se quiser que usuários anônimos vejam um cartão de conteúdo logo na primeira
 Em ambas as opções, depois que um cartão é criado, a Braze não recalcula a elegibilidade ou a personalização do público.
 {% endalert %}
 
-### Diferenças entre a criação de cartões no lançamento ou na entrada e na primeira impressão {#differences}
+### Diferenças entre criar cartões no lançamento ou entrada versus na primeira impressão {#differences}
 
 Esta seção descreve as principais diferenças entre a criação de cartões no lançamento da campanha ou na entrada da etapa e na primeira impressão.
 
@@ -89,7 +89,7 @@ Esta seção descreve as principais diferenças entre a criação de cartões no
   <tr>
     <td class="leftHeader">Público</td>
     <td class="tg-0pky">O Braze avalia o número de membros do público quando a campanha é enviada.<br><br>Usuários novos ou anônimos não serão avaliados quanto à elegibilidade se tentarem visualizar o cartão após o envio da campanha. Para campanhas recorrentes, isso ocorrerá no próximo intervalo de recorrência.</td>
-    <td class="tg-0pky">A Braze avalia a associação quando o usuário abre seu app da próxima vez (inicia uma sessão, <a href="#campaign_note">somente campanhas*</a>).<br><br> Essa configuração terá um alcance de público mais amplo, pois qualquer usuário novo ou anônimo sempre será avaliado quanto à elegibilidade quando tentar visualizar o cartão. <br><br>Além disso, o limite de frequência (limitar o número de pessoas que receberão o cartão) não é aplicável quando definido como na primeira impressão.</td>
+    <td class="tg-0pky">A Braze avalia a associação quando o usuário abre seu app da próxima vez (inicia uma sessão, <a href="#campaign_note">somente campanhas*</a>).<br><br> Essa configuração terá um alcance de público mais amplo, pois qualquer usuário novo ou anônimo sempre será avaliado quanto à elegibilidade quando tentar visualizar o cartão. <br><br>Além disso, a limitação de taxa (limitar o número de pessoas que receberão o cartão) não se aplica quando configurada para a primeira impressão.</td>
   </tr>
   <tr>
     <td class="leftHeader">Personalização</td>
@@ -98,13 +98,13 @@ Esta seção descreve as principais diferenças entre a criação de cartões no
   </tr>
   <tr>
     <td class="leftHeader">Análise de dados</td>
-  <td class="tg-0pky">O <em>envio de mensagens</em> refere-se ao número de cartões que o Braze criou e disponibilizou. Isso não conta se os usuários visualizaram o cartão.</td>
-  <td class="tg-0pky">O <em>envio de mensagens</em> refere-se ao número de cartões que o Braze envia a um usuário após o início de uma sessão. No Canva, se um usuário entrar na etapa sem iniciar uma sessão, o Braze não envia um cartão, portanto, essa métrica pode não estar alinhada com o número de usuários que entram em uma etapa.<br><br>Embora os usuários alcançáveis e as impressões não mudem, espere um volume de envio menor<em>(mensagens enviadas</em>) ao criar um cartão na primeira impressão em comparação com o lançamento da campanha ou a entrada na etapa do Canva.</td>
+  <td class="tg-0pky"><em>Mensagens Enviadas</em> refere-se ao número de cartões que a Braze criou e disponibilizou. Isso não conta se os usuários visualizaram o cartão.</td>
+  <td class="tg-0pky"><em>Mensagens Enviadas</em> refere-se ao número de cartões que a Braze envia a um usuário após o início de uma sessão. No Canvas, se um usuário entrar na etapa sem iniciar uma sessão, a Braze não envia um cartão, então essa métrica pode não alinhar com o número de usuários entrando em uma etapa.<br><br>Enquanto usuários alcançados e impressões não mudam, espere um volume de envio menor (<em>Mensagens Enviadas</em>) quando você criar um cartão na primeira impressão em comparação com o lançamento da campanha ou entrada na etapa do Canvas.</td>
   </tr>
   <tr>
     <td class="leftHeader">Tempo de processamento</td>
-  <td class="tg-0pky">O Braze cria cartões para todos os usuários elegíveis do segmento no momento do lançamento. Para públicos grandes, selecione <b>At First Impression (Na primeira impressão</b> ) para que os cartões fiquem disponíveis mais rapidamente após o lançamento.</td>
-  <td class="tg-0pky">O Braze cria um cartão na primeira vez que o usuário tenta visualizá-lo, portanto, ele pode levar de 1 a 2 segundos para ser exibido na primeira impressão.</td>
+  <td class="tg-0pky">A Braze cria cartões para cada usuário elegível no segmento no momento do lançamento. Para grandes audiências, selecione <b>Na Primeira Impressão</b> para que os cartões estejam disponíveis mais rapidamente após o lançamento.</td>
+  <td class="tg-0pky">A Braze cria um cartão na primeira vez que um usuário tenta visualizá-lo, então pode levar de 1 a 2 segundos para ser exibido na primeira impressão.</td>
   </tr>
 </tbody>
 </table>
@@ -119,11 +119,11 @@ A Braze recomenda não alterar a forma como os cartões são criados após o lan
 
 ### Tempo de processamento potencial
 
-Para públicos grandes, selecione a opção de criar cartões na primeira impressão para que os cartões estejam disponíveis rapidamente após o lançamento. As campanhas disparadas no início da sessão também podem se beneficiar da mudança para a criação na primeira impressão (disponível por meio da entrega programada) para melhorar a performance.
+Para grandes audiências, selecione a opção de criar cartões na primeira impressão para que os cartões estejam disponíveis rapidamente após o lançamento. Campanhas acionadas no início da sessão também podem se beneficiar de mudar para criar na primeira impressão (disponível através de entrega agendada) para melhorar a performance.
 
-Quando os cartões são criados na primeira impressão, pode levar de 1 a 2 segundos para que eles sejam processados. A duração desse tempo de processamento depende de vários fatores, como o tamanho do cartão e a complexidade das opções de modelo de mensagem. Por exemplo, o tempo de processamento dos cartões que usam o conteúdo conectado será pelo menos tão longo quanto o tempo de resposta do conteúdo conectado.
+Quando os cartões são criados na primeira impressão, pode levar de 1 a 2 segundos para os cartões serem processados. A duração desse tempo de processamento depende de vários fatores, como o tamanho do cartão e a complexidade das opções de modelo de mensagem. Por exemplo, o tempo de processamento dos cartões que usam o conteúdo conectado será pelo menos tão longo quanto o tempo de resposta do conteúdo conectado.
 
 ### Versões anteriores do SDK
 
-Se o app de um usuário executar uma versão anterior do SDK, ele ainda receberá os cartões de conteúdo que você enviar. No entanto, os cartões demoram mais para aparecer e podem não ser exibidos até a próxima sincronização do cartão de conteúdo.
+Se o app de um usuário estiver executando uma versão anterior do SDK, ele ainda receberá os Cartões de Conteúdo que você enviar. No entanto, os cartões demoram mais para aparecer e podem não ser exibidos até a próxima sincronização do Cartão de Conteúdo.
 

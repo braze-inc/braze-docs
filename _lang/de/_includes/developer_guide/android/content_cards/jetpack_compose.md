@@ -12,7 +12,7 @@ setContent {
 
 ## Umgang mit Card-Klicks
 
-Um Klicks auf die Card zu verarbeiten, übergeben Sie eine Funktion, die eine `Card` annimmt und eine `Boolean` an `onCardClicked` zurückgibt. Wenn `true` zurückgegeben wird, verarbeitet Braze den Klick nicht weiter, sondern protokolliert ihn nur für Analytics. Wenn `false` zurückgegeben wird, wird Braze den Klick ausführen.
+Um Klicks auf die Card zu verarbeiten, übergeben Sie eine Funktion, die eine `Card` annimmt und eine `Boolean` an `onCardClicked` zurückgibt. Wenn `true` zurückgegeben wird, verarbeitet Braze den Klick nicht weiter, sondern protokolliert ihn nur für Analytics. Wenn  zurückgegeben`false` wird, verarbeitet Braze den Klick.
 
 ```kotlin
 ContentCardsList(

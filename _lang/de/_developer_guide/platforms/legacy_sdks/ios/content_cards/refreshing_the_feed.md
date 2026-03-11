@@ -1,6 +1,6 @@
 ---
 nav_title: Aktualisieren des Feeds
-article_title: Aktualisieren des Content-Card Feeds für iOS
+article_title: Aktualisieren Sie den Feed für Content-Cards für iOS
 platform: iOS
 page_order: 4
 description: "Dieser Referenzartikel behandelt die Aktualisierung von Content-Cards in Ihrer iOS-Anwendung."
@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Aktualisieren Sie den Feed
+# Den Feed aktualisieren
 
 ## Aktualisieren von Inhaltskarten
 
