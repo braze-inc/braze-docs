@@ -91,7 +91,7 @@ Day | # of Emails to Send
 19 | 650,000
 20 | 825,000
 21 | 1,000,000
-22+ | Continue scaling until desired volume
+22+ | Double every 2 days until desired volume
 
 {% endtab %}
 {% tab Aggressive %}
