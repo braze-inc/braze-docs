@@ -45,7 +45,7 @@ Email delivery metrics (deliveries, bounces, and spam rate) may not add up to 10
 
 Soft bounces are emails that bounce due to a temporary or transient issue such as "mailbox full," "server temporarily not available," and more. If a soft bounced email is still not delivered after 72 hours, this email will not be accounted for in the campaign delivery metrics.
 
-### How can I implement an email feedback loop for Gmail?
+### What is an email feedback loop?
 
 An email feedback loop (FBL) allows senders to monitor their reputation by identifying campaigns that receive a high volume of complaints. For steps to implement a Gmail feedback loop, see [Google's Feedback Loop](https://support.google.com/a/answer/6254652) article.
 
