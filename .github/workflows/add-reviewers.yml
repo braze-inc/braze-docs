@@ -27,26 +27,33 @@ jobs:
             
             let reviewersToAdd = [];
             let teamsToAdd = [];
+            const labels = (pr.labels || []).map(l => l.name.toLowerCase());
             
-            // Rule 1: If Copilot is assigned, add docs-team
-            if (assignees.includes('github-copilot[bot]')) {
-              console.log('Copilot is assigned - adding docs-team');
+            // Rule 1: If PR has Deploy label (nightly deploy PRs), add docs-team only
+            if (labels.includes('deploy')) {
+              console.log('Deploy PR - adding docs-team');
               teamsToAdd.push('docs-team');
-            }
+            } else {
+              // Rule 2: If Copilot is assigned, add docs-team
+              if (assignees.includes('github-copilot[bot]')) {
+                console.log('Copilot is assigned - adding docs-team');
+                teamsToAdd.push('docs-team');
+              }
             
-            // Rule 2: If PR diff contains privacy/legal/GDPR keywords, add legal team
+            // Rule 3: If PR diff contains privacy/legal/GDPR keywords, add legal team
             // 'ats-91' is the GitHub team identifier for the legal team
+            // Use listFiles instead of get(diff) to avoid "diff exceeded 300 files" API limit
             const legalTeam = 'ats-91';
-            const diffData = await github.rest.pulls.get({
+            const files = await github.paginate(github.rest.pulls.listFiles, {
               owner: context.repo.owner,
               repo: context.repo.repo,
-              pull_number: prNumber,
-              mediaType: {
-                format: 'diff'
-              }
+              pull_number: prNumber
             });
-            
-            const diff = diffData.data.toLowerCase();
+            const diff = files
+              .map(f => f.patch || '')
+              .filter(Boolean)
+              .join('\n')
+              .toLowerCase();
             const keywords = [
               'law',
               'laws',
@@ -108,8 +115,8 @@ jobs:
             
             if (containsKeyword) {
               console.log('Found privacy/legal/GDPR keyword in diff - adding legal team');
-              console.log('Diff: ', diff);
               reviewersToAdd.push(legalTeam);
+            }
             }
             
             // Get current reviewers to avoid duplicates
@@ -149,11 +156,12 @@ jobs:
                 let commentBody = '🤖 **Automated Reviewer Assignment**: I have automatically added reviewers based on the following:\n\n';
                 
                 if (teamsToAdd.includes('docs-team')) {
-                  commentBody += '- 📝 **@braze-inc/docs-team** - Copilot is assigned to this PR\n';
+                  const reason = labels.includes('deploy') ? 'Deploy PR' : 'Copilot is assigned to this PR';
+                  commentBody += `- 📝 **@braze-inc/docs-team** - ${reason}\n`;
                 }
                 
-                if (reviewersToAdd.includes(legalTeam)) {
-                  commentBody += `- ⚖️ **@${legalTeam}** - PR diff contains privacy/legal/GDPR-related content\n`;
+                if (reviewersToAdd.includes('ats-91')) {
+                  commentBody += '- ⚖️ **@ats-91** - PR diff contains privacy/legal/GDPR-related content\n';
                 }
                 
                 await github.rest.issues.createComment({
