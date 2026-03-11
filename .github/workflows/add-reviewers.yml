@@ -2,7 +2,7 @@ name: Add Reviewers
 
 on:
   pull_request:
-    types: [opened, edited, ready_for_review]
+    types: [opened, edited, ready_for_review, labeled, unlabeled]
 
 jobs:
   add-reviewers:
@@ -28,6 +28,8 @@ jobs:
             let reviewersToAdd = [];
             let teamsToAdd = [];
             const labels = (pr.labels || []).map(l => l.name.toLowerCase());
+            const legalTeam = 'ats-91';
+            let scanIncomplete = false;
             
             // Rule 1: If PR has Deploy label (nightly deploy PRs), add docs-team only
             if (labels.includes('deploy')) {
@@ -41,19 +43,34 @@ jobs:
               }
             
             // Rule 3: If PR diff contains privacy/legal/GDPR keywords, add legal team
-            // 'ats-91' is the GitHub team identifier for the legal team
-            // Use listFiles instead of get(diff) to avoid "diff exceeded 300 files" API limit
-            const legalTeam = 'ats-91';
-            const files = await github.paginate(github.rest.pulls.listFiles, {
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: prNumber
-            });
-            const diff = files
-              .map(f => f.patch || '')
-              .filter(Boolean)
-              .join('\n')
-              .toLowerCase();
+            let diff = '';
+
+            try {
+              const diffData = await github.rest.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: prNumber,
+                mediaType: { format: 'diff' }
+              });
+              diff = (diffData.data || '').toLowerCase();
+            } catch (err) {
+              if (err.message?.includes('300') || err.message?.includes('too_large')) {
+                console.log('Diff exceeded 300 files, falling back to listFiles (scan may miss binary/truncated content)');
+                scanIncomplete = true;
+                const files = await github.paginate(github.rest.pulls.listFiles, {
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: prNumber
+                });
+                const filesWithoutPatch = files.filter(f => !f.patch).length;
+                if (filesWithoutPatch > 0) {
+                  console.log(`${filesWithoutPatch} file(s) have no patch (binary or omitted) - legal scan may be incomplete`);
+                }
+                diff = files.map(f => f.patch || '').filter(Boolean).join('\n').toLowerCase();
+              } else {
+                throw err;
+              }
+            }
             const keywords = [
               'law',
               'laws',
@@ -116,6 +133,9 @@ jobs:
             if (containsKeyword) {
               console.log('Found privacy/legal/GDPR keyword in diff - adding legal team');
               reviewersToAdd.push(legalTeam);
+            } else if (scanIncomplete) {
+              console.log('Scan incomplete (fallback used) - adding legal team as precaution');
+              reviewersToAdd.push(legalTeam);
             }
             }
             
@@ -160,8 +180,11 @@ jobs:
                   commentBody += `- 📝 **@braze-inc/docs-team** - ${reason}\n`;
                 }
                 
-                if (reviewersToAdd.includes('ats-91')) {
-                  commentBody += '- ⚖️ **@ats-91** - PR diff contains privacy/legal/GDPR-related content\n';
+                if (reviewersToAdd.includes(legalTeam)) {
+                  const legalReason = scanIncomplete
+                    ? 'PR is large; legal scan may be incomplete (binary/truncated content not scanned)'
+                    : 'PR diff contains privacy/legal/GDPR-related content';
+                  commentBody += `- ⚖️ **@${legalTeam}** - ${legalReason}\n`;
                 }
                 
                 await github.rest.issues.createComment({
