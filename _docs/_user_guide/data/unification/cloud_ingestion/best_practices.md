@@ -50,7 +50,7 @@ You can update user data by external ID, user alias, Braze ID, email, or phone n
 Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Braze selects and imports any rows where `UPDATED_AT` is later than the last synced `UPDATED_AT` value. Rows at the exact boundary timestamp may also be re-synced if new rows are added at that same timestamp between runs.
 
 {% alert important %}
-CDI tracks the number of rows at the last synced `UPDATED_AT` value. If new rows are added with that same timestamp between runs, CDI switches to an inclusive boundary (`>=`) and re-syncs all rows at that timestamp, including ones already processed. To avoid duplicate syncs and unnecessary data point consumption, use unique `UPDATED_AT` values across sync runs. For more information, refer to [Avoid resyncing rows with duplicate timestamps](#avoid-resyncing-rows-with-duplicate-timestamps).
+CDI tracks the number of rows at the last synced `UPDATED_AT` value. If new rows are added with that same timestamp between runs, CDI switches to an inclusive boundary (`>=`) and re-syncs all rows at that timestamp, including ones already processed. To avoid duplicate syncs and unnecessary data point consumption, use unique `UPDATED_AT` values across sync runs. For more information, see [Avoid resyncing rows with duplicate timestamps](#avoid-resyncing-rows-with-duplicate-timestamps).
 {% endalert %}
 
 In your data warehouse, add the following users and attributes to your table, setting the `UPDATED_AT` time to the time you add this data:
@@ -670,7 +670,7 @@ FROM [braze].[users] ;
 
 ### Use the `UPDATED_AT` timestamp
 
-Braze uses the `UPDATED_AT` timestamp to track what data has been synced successfully. CDI also tracks the number of rows at the last synced timestamp. If new rows are added with that same timestamp between runs, CDI re-syncs all rows at that timestamp, which can lead to duplicate data. For more details and tips, refer to [Avoid resyncing rows with duplicate timestamps](#avoid-resyncing-rows-with-duplicate-timestamps).
+Braze uses the `UPDATED_AT` timestamp to track what data has been synced successfully. CDI also tracks the number of rows at the last synced timestamp. If new rows are added with that same timestamp between runs, CDI re-syncs all rows at that timestamp, which can lead to duplicate data. For more details and tips, see [Avoid resyncing rows with duplicate timestamps](#avoid-resyncing-rows-with-duplicate-timestamps).
 
 ### Table configuration
 
