@@ -45,6 +45,10 @@ Email delivery metrics (deliveries, bounces, and spam rate) may not add up to 10
 
 Soft bounces are emails that bounce due to a temporary or transient issue such as "mailbox full," "server temporarily not available," and more. If a soft bounced email is still not delivered after 72 hours, this email will not be accounted for in the campaign delivery metrics.
 
+### How can I implement a Gmail Feedback Loop?
+
+An email Feedback Loop (FBL) allows senders to monitor their reputation by identifying campaigns that receive a high volume of complaints. Refer to [Google's Feedback Loop](https://support.google.com/a/answer/6254652?hl=en&visit_id=639088475644929305-2162041441&rd=1) article for steps on how to implement this.
+
 ### What are open tracking pixels?
 
 [Open tracking pixels]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#changing-location-of-tracking-pixel) leverage a sender's email click tracking domain to track email open events. The pixel is an image tag appended to the email's HTML. It is most commonly the last HTML element within the body tag. When a user loads their email, a request is made to populate the image from the branded tracking domain, which logs an open event.
@@ -107,7 +111,3 @@ Machine open percentages are not a reliable measure of actual engagement. For a 
 ### Does the *Unique Opens* metric include machine opens?
 
 No. *Unique Opens* count only [Other Opens]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#other-opens), which excludes emails identified as machine opens. *Machine Opens* are tracked separately. In the **Campaign Analytics** view and **Report Builder**, you can view both metrics independently.
-
-### How can I implement a Gmail Feedback Loop?
-
-An email Feedback Loop (FBL) allows senders to monitor their reputation by identifying campaigns that receive a high volume of complaints. Refer to [Google's Feedback Loop](https://support.google.com/a/answer/6254652?hl=en&visit_id=639088475644929305-2162041441&rd=1) article for steps on how to implement this.
