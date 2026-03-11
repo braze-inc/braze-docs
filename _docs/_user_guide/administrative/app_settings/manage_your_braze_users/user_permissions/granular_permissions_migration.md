@@ -70,10 +70,9 @@ This table shows how each legacy permission maps to the granular permissions. Re
 | Workspace | Edit Currents Integrations | Edit Currents Integrations |
 | Workspace | View Custom Attributes Marked as PII | View Custom Attributes Marked as PII |
 | Workspace | View PII | View PII |
-| Workspace | View User Profiles PII Compliant | View User Profiles PII Compliant |
+| Workspace | View User Profiles PII Compliant | View User Profiles (PII Redacted) |
 | Workspace | View Usage Data | View Usage Data |
 | Workspace | Merge Duplicate Users | Merge Duplicate Users |
-| Workspace | Preview Duplicate Users | Preview Duplicate Users |
 | Workspace | Create and Edit Canvas Templates | Edit Canvas Templates |
 | Workspace | View Canvas Templates | View Canvas Templates |
 | Workspace | Archive Canvas Templates | Archive Canvas Templates |
@@ -90,7 +89,7 @@ This table shows how each legacy permission maps to the granular permissions. Re
 | Workspace | Archive Placements | Archive Placements |
 | Workspace | New | View Merge Users |
 | Workspace | New | View User Deletion Records |
-| Workspace | New | Delete Users From Dashboard |
+| Workspace | New | Delete Users |
 | Workspace | New | View Banner Templates |
 | Workspace | New | Edit Banner Templates |
 | Workspace | New | Archive Banner Templates |
