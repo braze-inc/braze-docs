@@ -26,7 +26,7 @@ Lors de la mise en œuvre de Braze, n'oubliez pas de discuter des objectifs mark
 
 ## Données collectées automatiquement
 
-Certaines données utilisateur sont collectées automatiquement par notre SDK, par exemple, Première application utilisée, Dernière application utilisée, Nombre total de sessions, Système d’exploitation de l’appareil, etc. Si vous suivez nos guides d'intégration pour mettre en œuvre nos SDK, vous pourrez profiter de cette [collecte de données par défaut]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Vérifier cette liste pour éviter de stocker plusieurs fois les mêmes informations sur les utilisateurs. À l'exception du début et de la fin de la session, toutes les autres données suivies automatiquement ne sont pas prises en compte dans votre utilisation des points de données.
+Certaines données utilisateur sont collectées automatiquement par notre SDK, par exemple, Première application utilisée, Dernière application utilisée, Nombre total de sessions, Système d’exploitation de l’appareil, etc. Si vous suivez nos guides d'intégration pour mettre en œuvre nos SDK, vous pourrez profiter de cette [collecte de données par défaut]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Vérifier cette liste pour éviter de stocker plusieurs fois les mêmes informations sur les utilisateurs. À l'exception du début et de la fin de la session, toutes les autres données suivies automatiquement ne sont pas prises en compte dans votre utilisation des points de donnée.
 
 Consultez notre article sur [l’amorce SDK]({{site.baseurl}}/developer_guide/getting_started/sdk_overview/) pour établir une liste des processus qui bloquent la collecte par défaut de certains éléments de données.
 
@@ -82,7 +82,7 @@ Talk to villagers for essential tips on how to beat levels!
 ```
 {% endraw %}
 
-Les propriétés d’événement personnalisé sont conçues pour vous aider à personnaliser vos messages ou à élaborer des campagnes de diffusion granulaires à livraison par événement. Si vous souhaitez créer des segments en fonction de la récence et de la fréquence des propriétés d'événement, contactez votre gestionnaire de satisfaction client ou notre équipe d'assistance.
+Les propriétés d’événement personnalisé sont conçues pour vous aider à personnaliser vos messages ou à élaborer des campagnes de diffusion granulaires à livraison par événement. Si vous souhaitez créer des segments basés sur la récence et la fréquence des propriétés d'événement, veuillez contacter votre gestionnaire de la satisfaction client ou notre équipe d'assistance.
 
 ## Attributs personnalisés
 
@@ -98,7 +98,7 @@ Les types de données suivants peuvent être stockés en tant qu’attributs per
 
 #### Chaînes de caractères (caractères alphanumériques)
 
-Les attributs au format string sont utiles pour stocker les entrées utilisateur, comme une marque préférée, un numéro de téléphone ou la dernière recherche dans votre application. Les attributs au format string peuvent avoir jusqu’à 255 caractères.
+Les attributs au format string sont utiles pour stocker les entrées utilisateur, comme une marque préférée, un numéro de téléphone ou la dernière recherche dans votre application. Les attributs de chaîne de caractères sont soumis aux [contraintes](#length-constraints) [de longueur](#length-constraints) applicables aux données personnalisées (479 octets, soit environ 479 caractères à un octet ou environ 160 caractères pour les scripts multioctets tels que le japonais).
 
 Le tableau suivant décrit les options de segmentation disponibles pour les attributs de chaîne de caractères.
 
@@ -142,7 +142,7 @@ abUser.addToCustomAttributeArray('favorite_foods', 'pizza'); // => ['wings', 'pa
 abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta', 'fries', 'pizza', 'ice cream']
 ```
 
-Le nombre maximum d’éléments dans les tableaux d’attributs personnalisés est par défaut de 25. Le maximum pour les tableaux individuels peut être augmenté jusqu’à 100 dans le tableau de bord de Braze, sous **Paramètres des données** > **Attributs personnalisés**. Si vous souhaitez que ce maximum soit augmenté, contactez votre gestionnaire de service à la clientèle. Les tableaux dépassant le nombre maximum d’éléments seront tronqués pour contenir le nombre maximum d’éléments.
+Le nombre maximum d’éléments dans les tableaux d’attributs personnalisés est par défaut de 25. Le nombre maximal de tableaux individuels peut être augmenté jusqu'à 500 dans le tableau de bord de Braze, sous **Paramètres des données** > **Attributs personnalisés**. Pour augmenter cette limite au-delà de 500, veuillez contacter votre gestionnaire de la satisfaction client Braze. Les tableaux dépassant le nombre maximum d'éléments sont tronqués afin de contenir le nombre maximum d'éléments.
 
 Le tableau suivant décrit les options de segmentation disponibles pour les attributs de tableau.
 
@@ -328,7 +328,7 @@ Ne pas utiliser comme ID utilisateur :
 
 #### Donnez des noms et des noms lisibles des événements personnalisés
 
-Imaginez que vous soyez un marketeur qui commence à utiliser Braze un an ou deux après sa mise en œuvre, la lecture d'une liste déroulante remplie de noms tels que "usr_no_acct" sans autre contexte peut être intimidante. Donner des noms identifiables et lisibles à votre événement et à vos attributs facilitera les choses pour tous les utilisateurs de votre plateforme. Tenez compte des bonnes pratiques suivantes :
+Imaginez que vous soyez un marketeur qui commence à utiliser Braze un an ou deux après sa mise en œuvre. Consulter une liste déroulante remplie de noms tels que [noms de"usr_no_acct" clients] sans contexte supplémentaire peut être intimidant. Donner des noms identifiables et lisibles à votre événement et à vos attributs facilitera les choses pour tous les utilisateurs de votre plateforme. Tenez compte des bonnes pratiques suivantes :
 
 - Ne commencez pas un événement personnalisé avec un caractère numérique. La liste déroulante est triée par ordre alphabétique et le fait de commencer par un caractère numérique rend plus difficile la segmentation par le filtre de votre choix
 - Essayez, dans la mesure du possible, de ne pas utiliser les abréviations obscures ou du jargon technique
@@ -348,7 +348,7 @@ Soyez attentif aux limitations et contraintes suivantes lors de la mise en œuvr
 
 #### Contraintes de longueur
 
-Tous les événements personnalisés, les noms d’attributs personnalisés (clés) et les valeurs de chaîne d’événements personnalisées de 255 caractères ou plus seront tronqués. Idéalement, ils doivent être aussi courts que possible pour améliorer les performances réseau et de batterie de votre application. Si possible, limitez-les à 50 caractères.
+Braze impose une limite de longueur en octets (479 octets) pour les noms d'événements personnalisés, les noms d'attributs personnalisés (clés) et les valeurs de chaîne de caractères pour les événements personnalisés. Les valeurs qui dépassent cette limite sont tronquées. En termes de caractères, cela correspond à environ 479 caractères à un octet (par exemple, ASCII), ou environ 160 caractères pour les scripts multioctets tels que le japonais (en supposant environ 3 octets par caractère en UTF-8). Idéalement, veuillez garder les noms et les valeurs aussi courts que possible afin d'améliorer les performances réseau et batterie de votre application. Si possible, veuillez les limiter à 50 caractères.
 
 #### Contraintes de contenu
 Le contenu suivant sera découpé de manière programmatique à partir de vos attributs et événements. Veillez à ne pas utiliser ce qui suit :

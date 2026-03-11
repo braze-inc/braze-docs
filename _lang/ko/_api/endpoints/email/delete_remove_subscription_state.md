@@ -28,7 +28,7 @@ description: "이 기사는 이메일 주소 또는 전화번호 Braze 엔드포
 
 ## 예시 요청
 
-```json
+```http
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 {

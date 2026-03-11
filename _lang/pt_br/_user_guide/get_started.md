@@ -1,5 +1,5 @@
 ---
-nav_title: Visão geral do Braze
+nav_title: Começar
 article_title: "Primeiros passos: Visão geral do Braze"
 page_order: 1
 page_type: reference

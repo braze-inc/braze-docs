@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"} Primeros pasos: resumen de la plataforma
+# [![C](https://learning.braze.com/path/developer)urso []({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"}de [Braze Learning](https://learning.braze.com/path/developer): Primeros pasos: resumen de la plataforma
 
 > En este artículo se cubren las partes básicas y las capacidades de la plataforma Braze. Los enlaces de este artículo conectan con temas esenciales de Braze. 
 
@@ -25,7 +25,7 @@ Echa un vistazo a nuestro [curso de aprendizaje gratuito para desarrolladores](h
 
 ## ¿Qué es Braze?
 
-Braze es una plataforma de interacción con los clientes. Recoge los datos de los usuarios, muestra sus acciones y comportamientos, y te permite actuar en consecuencia. La plataforma tiene tres componentes principales: el SDK, el panel y la API REST.
+Braze es una plataforma de interacción con los clientes. Ingesta datos de usuario, muestra sus acciones y comportamientos, y te permite actuar en consecuencia. La plataforma tiene tres componentes principales: el SDK, el panel y la API REST.
 
 Si eres especialista en marketing y buscas un resumen más general de Braze, consulta la [sección Introducción para especialistas en marketing]({{site.baseurl}}/user_guide/getting_started/overview/).
 
@@ -68,7 +68,7 @@ Los datos almacenados en Braze se conservan y pueden utilizarse para segmentaci�
 
 ### Análisis de la aplicación
 
-El panel de Braze muestra gráficos actualizados en tiempo real basados en métricas de análisis y eventos personalizados que tú instrumentas. La medición y optimización coherentes mediante pruebas A/B, informes personalizados, análisis e inteligencia automatizada ayudan a respaldar tu interacción con los clientes y tu diferenciación.
+El panel de Braze muestra gráficos actualizados en tiempo real basados en métricas de análisis y eventos personalizados que tú implementas. La medición y optimización constantes mediante pruebas A/B, informes personalizados, análisis e inteligencia de automatización te ayudan a fomentar la interacción con los clientes y la diferenciación.
 
 ### Segmentación de usuarios
 
@@ -88,7 +88,7 @@ Después de definir un segmento, las herramientas de mensajería Braze te permit
 | [Correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/) | Envía mensajes HTML enriquecidos creando tu correo electrónico con el editor de texto enriquecido, nuestro editor de arrastrar y soltar, o cargando una de tus plantillas HTML existentes. |
 | [Mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) | Envía notificaciones discretas dentro de la aplicación utilizando la interfaz de usuario nativa personalizada de Braze. |
 | [Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) | Desencadena automáticamente notificaciones push de campañas de mensajería o noticias utilizando el servicio de notificaciones push de Apple (APN) para iOS o Firebase Cloud Messaging (FCM) para Android. |
-| [SMS, MMS y RCS*]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs). | Utiliza SMS, MMS o RCS para enviar notificaciones de transacciones, compartir promociones, enviar recordatorios y mucho más. |
+| [SMS, MMS y RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs)* | Utiliza SMS, MMS o RCS para enviar notificaciones relacionadas con transacciones, compartir promociones, enviar recordatorios y mucho más. |
 | [Notificación push web]({{site.baseurl}}/user_guide/message_building_by_channel/push/web) | Envía notificaciones al navegador web, aunque tus usuarios no estén activos en tu sitio. |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Utiliza webhooks para desencadenar acciones no relacionadas con la aplicación, proporcionando a otros sistemas y aplicaciones datos en tiempo real. |
 | [WhatsApp*]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/) | Conecta directamente con tus usuarios y clientes aprovechando la popular plataforma de mensajería entre iguales: WhatsApp. |
@@ -99,9 +99,9 @@ Después de definir un segmento, las herramientas de mensajería Braze te permit
 ### Componentes personalizables
 
 {% gallery %}
-{{site.baseurl}}/activos/img/puesta en marcha/crawl-example.png <br> Todos los componentes de Braze están diseñados para ser accesibles, adaptables y personalizables. Puedes empezar con Braze utilizando los componentes predeterminados de `BrazeUI` y personalizándolos para adaptarlos a las necesidades de tu marca y a tus casos de uso.
-{{site.baseurl}}/activos/img/puesta en marcha/caminarexample.png <br> Para ir más allá de las opciones predeterminadas, puedes escribir código personalizado para actualizar el aspecto de un canal de mensajería para que se ajuste más a tu marca. Esto incluye cambiar el tipo de letra, el tamaño de letra y los colores de un componente. Los especialistas en marketing mantienen el control de la audiencia, el contenido, el comportamiento al hacer clic y la caducidad directamente en el panel de Braze.
-{{site.baseurl}}/activos/img/inicio/ejecución-example.png <br> También puedes crear componentes completamente personalizados para controlar el aspecto de tu mensajería, cómo se comporta y cómo interactúan con otros canales de mensajería (por ejemplo, desencadenar una tarjeta de contenido basada en una notificación push). Braze proporciona métodos SDK que te permiten registrar métricas como impresiones, clics y descartes en el panel de Braze. Cada canal de mensajería dispone de un artículo de análisis para facilitar esta tarea.
+{{site.baseurl}}/assets/img/getting-started/crawl-example.png <br> Todos los componentes de Braze están diseñados para ser accesibles, adaptables y personalizables. Puedes empezar con Braze utilizando los componentes predeterminados de `BrazeUI` y personalizándolos para adaptarlos a las necesidades de tu marca y a tus casos de uso.
+{{site.baseurl}}/assets/img/getting-started/walk-example.png <br> Para ir más allá de las opciones predeterminadas, puedes escribir código personalizado para actualizar el aspecto de un canal de mensajería para que se ajuste más a tu marca. Esto incluye cambiar el tipo de letra, el tamaño de letra y los colores de un componente. Los especialistas en marketing mantienen el control de la audiencia, el contenido, el comportamiento al hacer clic y la caducidad directamente en el panel de Braze.
+{{site.baseurl}}/assets/img/getting-started/run-example.png <br> También puedes crear componentes completamente personalizados para controlar el aspecto de tu mensajería, cómo se comporta y cómo interactúan con otros canales de mensajería (por ejemplo, desencadenar una tarjeta de contenido basada en una notificación push). Braze proporciona métodos SDK que te permiten registrar métricas como impresiones, clics y descartes en el panel de Braze. Cada canal de mensajería dispone de un artículo de análisis para facilitar esta tarea.
 {% endgallery %}
 
 <br>
@@ -109,7 +109,7 @@ Después de definir un segmento, las herramientas de mensajería Braze te permit
 
 ## Integración de Braze
 
-Braze está diseñado para una integración rápida. El plazo medio de obtención de valor es de seis semanas en toda nuestra base de clientes. Para más información sobre el proceso de integración, consulta [Primeros pasos: Visión general de la integración]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
+Braze está diseñado para una integración rápida. El tiempo medio de amortización es de seis semanas en toda nuestra base de clientes. Para obtener más información sobre el proceso de integración, consulta [Introducción: Visión general de la integración]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
 ## Recursos para marcar
 
@@ -117,7 +117,7 @@ Como recurso técnico, participarás en muchos de los aspectos prácticos de Bra
 
 | Recursos | Lo que aprenderás|
 |---|---|
-| [Depurar el SDK]({{site.baseurl}}/developer_guide/sdk_integration/debugging) | Cuando resuelvas los problemas de tu integración, la herramienta de depuración del SDK te será de gran ayuda. ¡Asegúrate de tenerlo a mano! |
+| [Depuración del SDK]({{site.baseurl}}/developer_guide/sdk_integration/debugging) | A la hora de la solución de problemas de integración, la herramienta de depuración del SDK te resultará muy útil. ¡Asegúrate de tenerlo a mano! |
 | [GitHub público de Braze](https://github.com/braze-inc/) | Encontrarás información detallada sobre la integración y código de muestra en nuestro repositorio de GitHub. |
 | [Repositorio GitHub del SDK de Android](https://github.com/braze-inc/braze-android-sdk/) | El repositorio GitHub del SDK de Android. |
 | [Referencia del SDK de Android](https://appboy.github.io/appboy-android-sdk/kdoc/index.html) | Documentación de clases para el SDK de Android. |

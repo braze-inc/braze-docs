@@ -13,7 +13,7 @@ noindex: true
 
 # ユースケース:カルーセルビュー
 
-![記事中の目次カードのカルーセルを示すアプリの例。]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![記事内でコンテンツカードがカルーセル表示されるニュースアプリのサンプル。]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 このセクションでは、マルチカードカルーセルフィードの実装方法を説明します。マルチカードカルーセルフィードでは、水平方向にスワイプして追加の注目カードを表示できます。カルーセルビューを統合するには、完全にカスタマイズされたコンテンツカードの実装を使用する必要があります (「[ハイハイ - 歩く - 走る]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches)」アプローチの「走る」フェーズ)。
 

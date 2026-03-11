@@ -1,5 +1,5 @@
 ---
-nav_title: Aplicación avanzada (opcional)
+nav_title: Implementación avanzada (opcional)
 article_title: Guía de implementación de la tarjeta de contenido para iOS (Opcional) 
 platform: iOS
 page_order: 7
@@ -444,7 +444,7 @@ El ejemplo de la derecha muestra un `UICollectionView` con una lista híbrida de
 
 Esta tarjeta de contenido se entrega mediante una campaña desencadenada por API con pares clave-valor desencadenados por API. Esto es ideal para campañas en las que los valores de la tarjeta dependen de factores externos para determinar qué contenido mostrar al usuario. Ten en cuenta que `class_type` debe conocerse en el momento de la configuración.
 
-![Los pares clave-valor para el caso de uso de las tarjetas de contenido suplementario. En este ejemplo, diferentes aspectos de la tarjeta, como "tile_id", "tile_deeplink", y "tile_title", se configuran utilizando Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
+![Los pares clave-valor para el caso de uso de las tarjetas de contenido suplementario. En este ejemplo, diferentes aspectos de la tarjeta, como  "tile_id","tile_deeplink", y  ,"tile_title" se configuran utilizando Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 
 ##### ¿Listo para el análisis de registros?
 Visita la [sección siguiente](#logging-impressions-clicks-and-dismissals) para comprender mejor cómo debe ser el flujo de datos.

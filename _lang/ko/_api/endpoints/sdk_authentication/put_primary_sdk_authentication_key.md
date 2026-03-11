@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT: 기본 소프트웨어 개발 키트 인증 키 설정"
+nav_title: "PUT: 기본 SDK 인증 키 설정"
 article_title: "PUT: 기본 SDK 인증 키 설정"
 search_tag: Endpoint
 page_order: 2
@@ -45,7 +45,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 예시 요청
-```json
+```bash
 curl --location --request PUT 'https://rest.iad-01.braze.com/app_group/sdk_authentication/primary' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \

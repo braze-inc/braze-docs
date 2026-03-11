@@ -4,15 +4,15 @@
 
 ### Tipos de disparo
 
-As mensagens no app são acionadas automaticamente quando o SDK registra um dos seguintes tipos de eventos personalizados: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event` e `Push Click`. Observe que os gatilhos `Specific Purchase` e `Custom Event` também contêm filtros de propriedade robustos.
+As mensagens no app são disparadas automaticamente quando o SDK registra um dos seguintes tipos de evento personalizado: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event` e `Push Click`. Observe que os gatilhos `Specific Purchase` e `Custom Event` também contêm filtros de propriedade robustos.
 
 {% alert note %}
-As mensagens no app não podem ser acionadas através da API ou por eventos da API—apenas eventos personalizados registrados pelo SDK. Para saber mais sobre registro, veja [Registro de Eventos Personalizados]({{site.baseurl}}/developer_guide/analytics/logging_events/).
+As mensagens no app não podem ser disparadas através da API ou por eventos da API—apenas eventos personalizados registrados pelo SDK. Para saber mais sobre registro, veja [Registro de Eventos Personalizados]({{site.baseurl}}/developer_guide/analytics/logging_events/).
 {% endalert %}
 
 ### Semântica de entrega
 
-Todas as mensagens no app elegíveis são entregues ao dispositivo de um usuário no início de sua sessão. Quando entregues, o SDK irá pré-carregar os ativos, para que estejam disponíveis no momento do acionamento, minimizando a latência de exibição. Se o evento de gatilho tiver mais de uma mensagem no app elegível, apenas a mensagem com a maior prioridade será entregue.
+Todas as mensagens no app elegíveis são entregues ao dispositivo de um usuário no início de sua sessão. Quando entregues, o SDK irá pré-carregar os ativos, para que estejam disponíveis no momento do disparo, minimizando a latência de exibição. Se o evento de gatilho tiver mais de uma mensagem no app elegível, apenas a mensagem com a maior prioridade será entregue.
 
 Para mais informações sobre a semântica de início de sessão do SDK, veja [Ciclo de Vida da Sessão]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android).
 
@@ -28,7 +28,7 @@ Para substituir esse valor, defina `com_braze_trigger_action_minimum_time_interv
 
 ## Pares de valores chave
 
-Quando você cria uma campanha no Braze, pode definir pares chave-valor como `extras`, que o objeto de mensagens no app pode usar para enviar dados para seu app. Por exemplo:
+Quando você cria uma campanha no Braze, pode definir pares chave-valor como `extras`, que o objeto de envio de mensagens no app pode usar para enviar dados para seu app. Por exemplo:
 
 {% tabs %}
 {% tab JAVA %}
@@ -44,12 +44,12 @@ extras: Map<String, String>
 {% endtabs %}
 
 {% alert note %}
-Para mais informações, consulte o [Documentação K](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html#1498425856%2FProperties%2F-1725759721).
+Para mais informações, consulte o [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html#1498425856%2FProperties%2F-1725759721).
 {% endalert %}
 
 ## Desabilitando gatilhos automáticos
 
-Para evitar que mensagens no app sejam acionadas automaticamente:
+Para evitar que mensagens no app sejam disparadas automaticamente:
 
 1. Use sempre o inicializador de integração automática, que está habilitado por padrão a partir da versão `2.2.0`.
 2. Defina o padrão da operação de mensagem no app como `DISCARD` adicionando a seguinte linha ao seu arquivo `braze.xml`.
@@ -58,17 +58,17 @@ Para evitar que mensagens no app sejam acionadas automaticamente:
 <string name="com_braze_flutter_automatic_integration_iam_operation">DISCARD</string>
 ```
 
-## Acionando mensagens manualmente
+## Disparando mensagens manualmente
 
-Por padrão, mensagens no app são acionadas automaticamente quando o SDK registra um evento personalizado. No entanto, você pode acionar manualmente uma mensagem usando os seguintes métodos.
+Por padrão, mensagens no app são disparadas automaticamente quando o SDK registra um evento personalizado. No entanto, você pode disparar uma mensagem manualmente usando os seguintes métodos.
 
 ### Usando um evento do lado do servidor
 
-Para acionar uma mensagem no app usando um evento enviado pelo servidor, envie uma notificação push silenciosa para o dispositivo, que permite que um retorno de chamada de push personalizado registre um evento baseado no SDK. Esse evento então acionará a mensagem no app voltada para o usuário.
+Para disparar uma mensagem no app usando um evento enviado pelo servidor, envie uma notificação push silenciosa para o dispositivo, que permite que um retorno de chamada de push personalizado registre um evento baseado no SDK. Esse evento então disparará a mensagem no app voltada para o usuário.
 
 #### Etapa 1: Crie um retorno de chamada push para receber o push silencioso
 
-Registre [seu retorno de chamada de push personalizado]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#push-callback) para escutar uma notificação push silenciosa específica.
+Registre [seu retorno de chamada de evento push personalizado]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#push-callback) para escutar uma notificação push silenciosa específica.
 
 No exemplo a seguir, dois eventos serão registrados para a mensagem no app ser entregue, um pelo servidor e um de dentro do seu retorno de chamada push personalizado. Para garantir que o mesmo evento não seja duplicado, o evento registrado a partir do seu retorno de chamada push deve seguir uma convenção de nomenclatura genérica, por exemplo, "evento de gatilho de mensagem no app", e não o mesmo nome do evento enviado pelo servidor. Se isso não for feito, a segmentação e os dados de usuários podem ser afetados por eventos duplicados sendo registrados para uma única ação do usuário.
 

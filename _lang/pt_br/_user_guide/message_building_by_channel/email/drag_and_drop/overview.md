@@ -67,13 +67,13 @@ Embora o editor de arrastar e soltar simplifique seu fluxo de trabalho com esses
 
 **As linhas** são unidades estruturais que definem a composição horizontal de uma seção da mensagem por meio de colunas. Você pode esvaziar as linhas ou [os blocos de conteúdo]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/). O uso de mais de uma coluna permite que você coloque diferentes elementos de conteúdo lado a lado. Dessa forma, você pode adicionar todos os elementos estruturais necessários à sua mensagem, independentemente do modelo selecionado no início.
 
-#### Estilo de Cartões
+#### Estilo de cartões
 
 **Estilo de Cartões** é uma propriedade de linha que permite adicionar espaçamento entre colunas e arredondar seus cantos. Com a formatação em estilo de cartão, você pode criar layouts mais visualmente atraentes para ajudar a destacar seu conteúdo mais importante, como novos recursos de produtos, depoimentos, ofertas especiais, atualizações de notícias e muito mais.
 
 ## Usando o editor de arrastar e soltar
 
-Não tem certeza se sua mensagem de e-mail deve ser enviada usando uma campanha ou um Canva? Campanhas são melhores para campanhas de mensagens únicas e direcionadas, enquanto Canvases são melhores para jornadas de usuários em múltiplas etapas.
+Não tem certeza se sua mensagem de e-mail deve ser enviada usando uma campanha ou um Canva? Campanhas são melhores para campanhas de envio de mensagens únicas e direcionadas, enquanto Canvases são melhores para jornadas de usuários em várias etapas.
 
 Depois de selecionar onde construir sua mensagem, vamos nos aprofundar nas etapas para criar um e-mail do tipo arrastar e soltar.
 
@@ -115,7 +115,7 @@ Consulte [Outras personalizações](#other-customizations) para ver outras manei
 Ao criar seu e-mail, é possível alternar entre a visualização para desktop e para dispositivos móveis para fazer uma prévia de como será o envio de mensagens por e-mail para seus grupos de usuários. Isso verificará se o seu conteúdo é responsivo e você poderá fazer os ajustes necessários ao longo do processo.
 
 {% alert tip %}
-Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Insira um nome ou descrição do produto, e a IA gerará um texto de marketing semelhante ao humano para uso em suas mensagens.
+Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Insira um nome ou descrição do produto, e a IA gerará um texto de marketing semelhante ao humano para uso em seu envio de mensagens.
 
 ![Botão de redator, localizado no painel de Conteúdo ao lado das Configurações de Estilo no editor de arrastar e soltar.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}

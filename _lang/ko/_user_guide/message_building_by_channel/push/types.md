@@ -1,5 +1,5 @@
 ---
-nav_title: "푸시 알림 유형"
+nav_title: "푸시 알림의 유형"
 article_title: 푸시 알림의 유형
 page_order: 1
 page_type: glossary
@@ -7,8 +7,8 @@ description: "이 용어집에는 Braze를 사용하여 보낼 수 있는 다양
 channel: push
 
 layout: glossary_page
-glossary_top_header: "푸시 알림 유형"
-glossary_top_text: "고객과 소통하는 데 사용할 수 있는 푸시 알림에는 다양한 유형이 있습니다. 채널별로 범위를 좁혀 다양한 사용자의 요구를 충족하는 데 사용할 수 있습니다. 푸시 캠페인에서 이러한 설정의 대부분을 구성할 수 있지만 다음 설명에는 백엔드 구성이 필요한지 여부와 그 내용을 나타내는 참고 사항이 있습니다."
+glossary_top_header: "푸시 알림의 유형"
+glossary_top_text: "고객과 상호작용하기 위해 사용할 수 있는 다양한 유형의 푸시 알림이 있습니다. 이들은 채널에 따라 좁혀질 수 있으며, 다양한 사용자들의 요구를 충족시키기 위해 사용됩니다. 이 설정의 대부분은 푸시 캠페인에서 구성할 수 있지만, 다음 설명에는 백엔드 구성이 필요한지와 그 내용이 무엇인지에 대한 주석이 있습니다."
 
 glossary_tag_name: Channels
 glossary_filter_text: "Select any of the following channels to narrow Push Type options."
@@ -53,7 +53,7 @@ glossaries:
       - iOS
       - Android
   - name: "iOS용 임시 푸시 알림"
-    description: "iOS 12에서 Apple이 도입한 임시 승인은 iOS 앱 설치 시 자동으로 발생하므로 브랜드가 사용자에게 푸시 메시지를 표시하지 않고도 무음 알림을 보낼 수 있습니다. 무음 푸시가 전송되어 디바이스의 알림 트레이에서 확인되면 사용자에게 푸시 알림을 허용하거나 중단할 수 있는 옵션이 제공됩니다."
+    description: "Apple이 iOS 12에서 도입한 임시 권한 부여는 iOS 앱 설치 시 자동으로 발생하여 브랜드가 사용자에게 푸시 프롬프트를 표시하지 않고도 알림을 보낼 수 있게 합니다. 이 알림은 사용자에게 보이지 않게 알림 센터로 조용히 전달되며, 사용자는 푸시 알림을 허용하거나 중단할 수 있습니다."
     tags:
       - iOS
   - name: "HTML 푸시 알림"
@@ -65,8 +65,8 @@ glossaries:
     tags:
       - iOS
       - Android
-  - name: "백그라운드 또는 무음 푸시 알림"
-    description: "기기에서 렌더링되지 않는 푸시 알림. 일반적으로 백그라운드 프로세스 및 제거 추적을 위해 앱으로 정보 패킷을 전송하는 데 사용됩니다. 백그라운드 또는 무음 푸시를 보내려면 백그라운드 인에이블먼트 푸시 토큰이 필요합니다."
+  - name: "백그라운드 푸시 알림 (조용한 푸시)"
+    description: "최종 사용자에게 보이지 않는 푸시 알림으로, 일반적으로 제거 추적, 지오펜스 및 데이터 동기화와 같은 기능을 처리하기 위해 내부적으로 사용됩니다. 백그라운드 푸시와 조용한 푸시는 동일한 개념을 나타냅니다. 백그라운드 사용이 가능한 푸시 토큰이 필요합니다. 자세한 내용은 <a href=\"/docs/developer_guide/push_notifications/silent\">무음 푸시 알림을</a> 참조하세요."
     tags:
       - Web
       - Android

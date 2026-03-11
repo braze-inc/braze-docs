@@ -1,7 +1,7 @@
 ---
 nav_title: "取得:キャンバスデータのサマリー分析をエクスポート"
 article_title: "取得:エクスポートキャンバスデータサマリー分析"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 4
 layout: api_page
 page_type: reference
@@ -28,12 +28,12 @@ description: "ここでは、キャンバスデータサマリーのエクスポ
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | 必須 | 文字列 | [キャンバス API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `canvas_id` | 必須かどうか | 文字列 | [キャンバス API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
 | `ending_at` | 必須 | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データエクスポートの終了日。デフォルトは要求の時刻です。 |
 | `starting_at` | オプション* | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データエクスポートの開始日。<br><br>* `length` または `starting_at` のいずれかが必要です。 |
-| `length` | オプション* | 文字列 | 返される系列に含まれる`ending_at` の前の最大日数。1以上14以下でなければなりません。<br><br>* `length` または `starting_at` のいずれかが必要です。 |
+| `length` | オプション* | string | 返される系列に含まれる`ending_at` の前の最大日数。1以上14以下でなければなりません。<br><br>* `length` または `starting_at` のいずれかが必要です。 |
 | `include_variant_breakdown` | オプション | ブール値 | バリアント統計を含めるかどうか(デフォルトs to `false`)。  |
 | `include_step_breakdown` | オプション | ブール値 | ステップ統計を含めるかどうか(デフォルトs to `false`)。 |
 | `include_deleted_step_data` | オプション | ブール値 | 削除されたステップs (デフォルトs から`false`) のステップを含めるかどうか。 |

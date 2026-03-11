@@ -1,7 +1,7 @@
 ---
 nav_title: "POST: Nutzerprofile nach Segmenten exportieren"
 article_title: "POST: Nutzerprofile nach Segmenten exportieren"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 layout: api_page
 page_type: reference
@@ -20,10 +20,10 @@ description: "Dieser Artikel enthält Einzelheiten zu den Nutzer:innen von Expor
 Wenn Sie diesen Endpunkt verwenden, beachten Sie Folgendes:<br><br>1\. Das Feld `fields_to_export` in dieser API-Anfrage ist **erforderlich**.<br>2\. Die Felder für `custom_events`, `purchases`, `campaigns_received` und `canvases_received` enthalten nur Daten der letzten 90 Tage.
 {% endalert %}
 
-Nutzerdaten werden als mehrere Dateien mit Nutzer:innen JSON-Objekten exportiert, die durch neue Zeilen getrennt sind (z.B. ein JSON-Objekt pro Zeile). Die Daten werden in eine automatisch generierte URL oder in ein S3-Bucket exportiert, wenn diese Integration bereits eingerichtet ist.
+Nutzerdaten werden als mehrere Dateien mit Nutzer:innen JSON-Objekten exportiert, die durch neue Zeilen getrennt sind (z.B. ein JSON-Objekt pro Zeile). Die Daten werden an eine automatisch generierte URL oder an einen S3-Bucket exportiert, sofern diese Integration bereits eingerichtet ist.
 
 {% alert important %}
-**Ausgabeformat exportieren**: Bei einem erfolgreichen Export erhalten Sie **immer** eine `.txt` Datei, die ein komprimiertes Archiv (ZIP- oder GZIP-Datei) enthält, unabhängig von der Menge der exportierten Nutzerdaten. Wenn der Export fehlschlägt, erhalten Sie stattdessen eine E-Mail-Benachrichtigung. Die Einrichtung von Zugangsdaten für Cloud-Speicher (S3, Azure oder Google Cloud Storage) minimiert das Risiko von Fehlern, da die Größe der Daten bei der Verwendung von Cloud-Speicher keine Rolle spielt.
+**Export-Ausgabeformat**: Wenn ein Export erfolgreich war und Sie keine Zugangsdaten für den Cloud-Speicher konfiguriert haben, enthält die HTTP-Antwort eine URL zum Herunterladen eines komprimierten Archivs (ZIP- oder GZIP-Datei). Wenn Cloud-Speicher-Zugangsdaten (S3, Azure oder Google Cloud Storage) konfiguriert sind, speichert Braze den Export direkt in Ihrem Bucket, und die Antwort enthält keine Download-URL. Sollte der Export fehlschlagen, erhalten Sie stattdessen eine E-Mail-Benachrichtigung. Durch die Einrichtung von Zugangsdaten für den Cloud-Speicher wird die Wahrscheinlichkeit von Fehlern bei umfangreichen Exporten verringert.
 {% endalert %}
 
 Beachten Sie, dass ein Unternehmen zu einem bestimmten Zeitpunkt höchstens einen Export pro Segment über diesen Endpunkt durchführen kann. Warten Sie, bis Ihr Export abgeschlossen ist, bevor Sie es erneut versuchen.
@@ -40,7 +40,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 ## Auf Zugangsdaten basierende Antwortdetails
 
-Wenn Sie Ihre [S3-][1], [Azure-][2] oder [Google Cloud Storage-Zugangsdaten][3] zu Braze hinzugefügt haben, wird jede Datei als ZIP-Datei mit einem Schlüsselformat, das wie `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip` aussieht, in Ihren Bucket hochgeladen. Wenn Sie Azure verwenden, vergewissern Sie sich, dass Sie auf der Übersichtsseite für Azure Partner in Braze das Kontrollkästchen **Dies zum Standardziel für den Datenexport machen** aktiviert haben. Im Allgemeinen erstellt Braze 1 Datei pro 5.000 Nutzer:innen, um die Verarbeitung zu optimieren. Das Exportieren kleinerer Segmente innerhalb eines großen Workspace kann zu mehreren Dateien führen. Sie können dann die Dateien extrahieren und bei Bedarf alle `json` Dateien zu einer einzigen Datei zusammenfügen. Wenn Sie eine `output_format` von `gzip` angeben, dann lautet die Dateierweiterung `.gz` statt `.zip`.
+Wenn Sie Ihre [S3-Anmeldedaten][1], [Azure-Zugangsdaten][2] oder [Google Cloud Storage][3]-Zugangsdaten zu Braze hinzugefügt haben, wird jede Datei als ZIP-Datei mit dem Schlüsselformat . übertragen`segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Wenn Sie Azure verwenden, vergewissern Sie sich, dass Sie auf der Übersichtsseite für Azure Partner in Braze das Kontrollkästchen **Dies zum Standardziel für den Datenexport machen** aktiviert haben. Im Allgemeinen erstellt Braze eine Datei pro 5.000 Nutzer:innen, um die Verarbeitung zu optimieren. Das Exportieren kleinerer Segmente innerhalb eines großen Workspace kann zu mehreren Dateien führen. Sie können dann die Dateien extrahieren und bei Bedarf alle `json` Dateien zu einer einzigen Datei zusammenfügen. Wenn Sie eine Dateiendung`output_format`von angeben`gzip`, wird die Dateiendung anstelle`.gz` von verwendet`.zip`.
 
 {% details Export pathing breakdown for ZIP %}
 **ZIP-Format:**
@@ -62,13 +62,13 @@ Wenn Sie Ihre [S3-][1], [Azure-][2] oder [Google Cloud Storage-Zugangsdaten][3] 
 
 {% enddetails %}
 
-Wir empfehlen dringend, Ihre eigenen S3- oder Azure-Zugangsdaten einzurichten, wenn Sie diesen Endpunkt verwenden, um Ihre eigenen Bucket-Richtlinien für den Export durchzusetzen. Wenn Sie nicht über Ihre Zugangsdaten für den Cloud-Speicher verfügen, finden Sie in der Antwort auf die Anfrage die URL, unter der Sie eine ZIP-Datei mit allen Nutzer:innen herunterladen können. Die URL wird erst dann zu einem gültigen Standort, wenn der Export abgeschlossen ist.
+Wir empfehlen dringend, Ihre eigenen S3- oder Azure-Zugangsdaten einzurichten, wenn Sie diesen Endpunkt verwenden, um Ihre eigenen Bucket-Richtlinien für den Export durchzusetzen. Wenn Sie nicht über Ihre Zugangsdaten für den Cloud-Speicher verfügen, finden Sie in der Antwort auf die Anfrage die URL, unter der Sie eine ZIP-Datei mit allen Nutzer:innen herunterladen können. Die URL wird erst nach Abschluss des Exports zu einem gültigen Standort.
 
 Beachten Sie, dass die Menge der Daten, die Sie von diesem Endpunkt exportieren können, begrenzt ist, wenn Sie Ihre Zugangsdaten für den Cloud-Speicher nicht angeben. Je nach den Feldern, die Sie exportieren, und der Anzahl der Nutzer:innen kann die Dateiübertragung fehlschlagen, wenn sie zu groß ist. Am besten legen Sie fest, welche Felder Sie mit `fields_to_export` exportieren möchten und geben nur die Felder an, die Sie benötigen, um den Umfang der Übertragung gering zu halten. Wenn Sie bei der Generierung der Datei Fehler erhalten, sollten Sie Ihre Nutzer:innen auf der Grundlage einer zufälligen Bucket-Nummer in mehrere Segmente unterteilen (z.B. ein Segment erstellen, bei dem die zufällige Bucket-Nummer kleiner als 1.000 oder zwischen 1.000 und 2.000 ist).
 
-In beiden Szenarien können Sie optional eine `callback_endpoint` angeben, um benachrichtigt zu werden, wenn der Export fertig ist. Wenn die `callback_endpoint` angegeben ist, stellt Braze eine Anfrage an die angegebene Adresse, sobald der Download fertig ist. Der Text der Nachricht lautet "Erfolg":true. Wenn Sie keine S3-Anmeldedaten zu Braze hinzugefügt haben, enthält der Body des Posts zusätzlich das Attribut `url` mit der Download-URL als Wert.
+In beiden Szenarien können Sie optional eine `callback_endpoint` angeben, um benachrichtigt zu werden, wenn der Export fertig ist. Wenn die URL angegeben`callback_endpoint` ist, sendet Braze eine POST-Anfrage an die angegebene Adresse, sobald der Download bereitsteht. Der Text des Beitrags lautet „success“:true. Wenn Sie keine S3-Anmeldedaten zu Braze hinzugefügt haben, enthält der Text des Beitrags zusätzlich das Attribut`url`mit der Download-URL als Wert.
 
-Größere Nutzer:innen führen zu längeren Exportzeiten. Eine App mit 20 Millionen Nutzer:innen könnte zum Beispiel eine Stunde oder länger dauern.
+Eine größere Nutzerbasis führt zu längeren Exportzeiten. Eine App mit 20 Millionen Nutzer:innen könnte zum Beispiel eine Stunde oder länger dauern.
 
 ## Anfragetext
 
@@ -156,7 +156,7 @@ Im Folgenden finden Sie eine Liste der gültigen `fields_to_export`. Die Verwend
 | `language`            | String          | Nutzer:in in der ISO-639-1-Norm.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `last_coordinates`    | Array von Gleitkommazahlen | Der letzte Standort des Geräts des Nutzers, formatiert als `[longitude, latitude]`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `last_name`           | String          | Der Nachname des Nutzers:in.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `phone`               | String          | Die Telefonnummer der Nutzer:in im Format E.164.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `phone`               | String          | Die Telefonnummer der Nutzer:in in dem Format, in dem sie in Braze importiert wurde. Wenn beispielsweise eine Anfrage zum Hinzufügen einer Telefonnummer im Format eingeht, wird sie im gleichen`1234567890` Format exportiert.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `purchases`           | Array           | Einkäufe, die dieser Nutzer:innen in den letzten 90 Tagen getätigt hat.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | `push_tokens`         | Array           | Informationen zu den Push-Tokens des Nutzers:innen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `random_bucket`       | Integer         | [Zufällige Bucket-Nummer]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event) des Nutzers, mit der gleichmäßig verteilte Segmente aus zufälligen Nutzer:innen erstellt werden.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -168,10 +168,10 @@ Im Folgenden finden Sie eine Liste der gültigen `fields_to_export`. Die Verwend
 
 ## Wichtige Mahnungen
 
-- Die Felder für `custom_events`, `purchases`, `campaigns_received` und `canvases_received` enthalten nur Daten der letzten 90 Tage.
-- Sowohl `custom_events` als auch `purchases` enthalten Felder für `first` und `count`. Beide Felder enthalten Informationen aus der gesamten Zeit und sind nicht auf Daten der letzten 90 Tage beschränkt. Wenn ein bestimmter Nutzer:innen das Ereignis beispielsweise vor 90 Tagen zum ersten Mal durchgeführt hat, wird dies im Feld `first` genau widergespiegelt, und im Feld `count` werden auch Ereignisse berücksichtigt, die vor den letzten 90 Tagen stattgefunden haben.
-- Die Anzahl der gleichzeitigen Segmentexporte, die ein Unternehmen auf der Ebene des Endpunkts ausführen kann, ist auf 100 begrenzt. Versuche, die dieses Limit überschreiten, führen zu einem Fehler.
-- Der Versuch, ein Segment ein zweites Mal zu exportieren, während der erste Exportauftrag noch läuft, führt zu einem Fehler 429.
+- Die Felder für `custom_events`, `purchases`, `campaigns_received`, und`canvases_received`  enthalten nur Daten aus den letzten 90 Tagen.
+- Sowohl `custom_events` als auch `purchases` enthalten Felder für `first` und `count`. Beide Felder enthalten Informationen aus allen Zeiträumen und sind nicht auf Daten der letzten 90 Tage beschränkt. Wenn beispielsweise eine bestimmte Nutzer:in das Ereignis vor 90 Tagen zum ersten Mal durchgeführt hat, wird dies im`first`Feld genau wiedergegeben, und das`count`Feld berücksichtigt auch Ereignisse, die vor den letzten 90 Tagen stattgefunden haben.
+- Die Anzahl der gleichzeitigen Segmentexporte, die ein Unternehmen auf der Ebene des Endpunkts ausführen kann, ist auf 100 begrenzt. Versuche, die diese Grenze überschreiten, führen zu einem Fehler.
+- Der Versuch, ein Segment ein zweites Mal zu exportieren, während der erste Exportvorgang noch läuft, führt zu einem 429-Fehler.
 
 ## Antwort
 
@@ -183,13 +183,13 @@ Im Folgenden finden Sie eine Liste der gültigen `fields_to_export`. Die Verwend
 }
 ```
 
-Nachdem die URL zur Verfügung gestellt wurde, ist sie nur für ein paar Stunden gültig. Wir empfehlen Ihnen daher dringend, Ihre eigenen S3-Anmeldedaten zu Braze hinzuzufügen.
+Nachdem die URL bereitgestellt wurde, ist sie nur für einige Stunden gültig. Wir empfehlen Ihnen daher dringend, Ihre eigenen S3-Anmeldedaten zu Braze hinzuzufügen.
 
-Wenn Sie `object_prefix` in Ihrer API-Antwort sehen und keine URL zum Herunterladen der Daten, bedeutet dies, dass Sie bereits einen Amazon S3-Bucket für diesen Endpunkt eingerichtet haben. Alle Daten, die über diesen Endpunkt exportiert werden, gehen direkt in Ihr S3-Bucket.
+Wenn Sie in Ihrer `object_prefix`API-Antwort sehen und keine URL zum Herunterladen der Daten, bedeutet dies, dass Sie bereits einen Amazon S3-Bucket für diesen Endpunkt eingerichtet haben. Alle Daten, die über diesen Endpunkt exportiert werden, werden direkt in Ihren S3-Bucket übertragen.
 
 ## Beispiel für die Ausgabe der Nutzer:innen-Exportdatei
 
-Nutzer:in-Exportobjekt (Braze nimmt so wenig Daten wie möglich auf - wenn ein Feld im Objekt fehlt, sollte angenommen werden, dass es null oder leer ist):
+Benutzerexportobjekt (Braze enthält so wenig Daten wie möglich – wenn ein Feld im Objekt fehlt, sollte davon ausgegangen werden, dass es null oder leer ist):
 
 {% tabs %}
 {% tab All fields %}

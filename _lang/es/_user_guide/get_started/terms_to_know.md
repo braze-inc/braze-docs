@@ -5,7 +5,7 @@ article_title: Términos de soldadura fuerte
 
 layout: glossary_page
 glossary_top_header: "Términos que debe conocer"
-glossary_top_text: "Estos términos deberían ayudarte al comenzar tu viaje hacia unos mejores vínculos con el cliente y el usuario con Braze. Léelo antes de iniciar tu incorporación."
+glossary_top_text: "Estos términos te ayudarán a iniciar tu camino hacia una mejor relación con tus clientes y usuarios gracias a Braze. Lee esto antes de comenzar tu incorporación."
 page_type: glossary
 description: "Este glosario incluye términos importantes que debe conocer durante el proceso de incorporación a Braze."
 

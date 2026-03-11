@@ -1,5 +1,5 @@
 <ul>
-<li><code>dispatch_id</code> es un ID para un envío de mensajes específico, como el envío de una campaña. Todos los eventos push que se originan en el mismo envío incluyen el mismo <code>dispatch_id</code>. Uso <code>dispatch_id</code> para agrupar eventos que pertenecen al mismo envío, lo que te permite agrupar y correlacionar el ciclo de vida de los mensajes push para ese envío (como Enviar, Rebotar y Abrir).</li>
+<li><code>dispatch_id</code> es un ID para el envío de un mensaje específico, como el envío de una campaña. Todos los eventos push que se originan en el mismo envío incluyen lo mismo. <code>dispatch_id</code>. Uso <code>dispatch_id</code> agrupar eventos que pertenecen al mismo envío, lo que te permite agrupar y correlacionar el ciclo de vida de los mensajes push para ese envío (como Enviar, Rebotar y Abrir).</li>
 <li><code>state_change_source</code> devuelve una cadena con el nombre completo de la fuente. Por ejemplo, la importación del CSV de origen devolverá la cadena <code>CSV import</code>. A continuación se enumeran las fuentes disponibles:</li>
 </ul>
 <table class="reset-td-br-1 reset-td-br-2" role="presentation">

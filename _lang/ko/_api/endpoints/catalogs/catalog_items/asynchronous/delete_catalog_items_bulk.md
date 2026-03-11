@@ -86,7 +86,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
       "parameter_values": []
     }
   ],
-  "message": "Invalid Request",
+  "message": "Invalid Request"
 }
 ```
 

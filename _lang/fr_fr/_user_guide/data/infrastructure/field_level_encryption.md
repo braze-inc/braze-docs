@@ -9,7 +9,7 @@ page_type: reference
 
 # Cryptage au niveau du champ de l'identifiant
 
-{% include field_level_encryption_pii_description.md %}
+{% multi_lang_include field_level_encryption_pii_description.md %}
 
 {% alert important %}
 Le cryptage au niveau du champ d'identification est disponible en tant que fonctionnalité supplémentaire. Pour commencer à utiliser le cryptage au niveau du champ d'identification, contactez votre gestionnaire de compte Braze.
@@ -30,11 +30,11 @@ Procédez comme suit pour configurer votre méthode d'authentification par clé 
 3. Vous devez configurer KMS dans les régions AWS suivantes :
     - **Clusters Braze aux États-Unis :** `us-east-1`
     - **Clusters Braze dans l’UE :** `eu-central-1`
-    - **Braze AU cluster :** `ap-southeast-2`
-    - **Braze ID cluster :** `ap-southeast-3`
+    - **Cluster Braze AU :** `ap-southeast-2`
+    - **Cluster Braze ID :** `ap-southeast-3`
 4. Dans AWS Key Management Service, créez deux clés et assurez-vous que l'utilisateur IAM est ajouté dans les autorisations d'utilisation des clés :
     - **[Chiffrer/déchiffrer](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html#create-symmetric-cmk) :** Sélectionnez le type de clé **symétrique** et l'utilisation des clés de **chiffrement et de déchiffrement**.
-    - **[Hash](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):** Sélectionnez le type de clé **Symétrique** et choisissez **Générer et vérifier l'utilisation de la clé MAC**. La spécification clé devrait être **HMAC_256**. Après avoir créé la clé, prenez note de l'ID de la clé HMAC, car vous devrez le saisir dans Braze.
+    - **[Hash](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):** Sélectionnez le type de clé **Symétrique** et choisissez **Générer et vérifier l'utilisation de la clé MAC**. La spécification principale devrait être **HMAC_256**. Après avoir créé la clé, prenez note de l'ID de la clé HMAC, car vous devrez le saisir dans Braze.
 
 ![]({% image_buster /assets/img/field_level_encryption_aws_prereq.png %})
 

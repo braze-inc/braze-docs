@@ -2,7 +2,7 @@
 nav_title: Localización
 article_title: Localización
 page_order: 8
-description: "Este artículo de referencia cubre los aspectos básicos de la localización, enumera las ventajas de los distintos enfoques de orquestación entre campañas y Canvases, y enumera las distintas formas en que los usuarios pueden gestionar la personalización en sus mensajes."
+description: "Este artículo de referencia cubre los conceptos básicos de la localización, enumera las ventajas de los diferentes enfoques de orquestación entre campañas y lienzos, y detalla las diferentes formas en que los usuarios pueden gestionar la personalización en sus mensajes."
 tool:
     - Campaigns
     - Canvas
@@ -14,21 +14,21 @@ tool:
 
 ## Cómo funciona
 
-La información de localización se almacena en el perfil de un usuario basándose en los datos que recopilas utilizando un [SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration/) (automáticamente), o [API REST]({{ site.baseurl }}/api/endpoints/user_data/post_user_track). La configuración regional contiene el idioma y un identificador de región. Esta información está disponible en la herramienta de segmentación Braze en **País** e **Idioma**.
+La información local se almacena en el perfil de usuario basándose en los datos que recopilas mediante un [SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration/) (automáticamente) o [API REST]({{ site.baseurl }}/api/endpoints/user_data/post_user_track). La configuración regional contiene el idioma y un identificador de región. Esta información está disponible en la herramienta de segmentación Braze en **País** e **Idioma**.
 
 {% alert tip %}
-Para obtener detalles técnicos sobre cómo nuestros SDK recogen la localización, consulta la documentación oficial [de iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html), [Android](http://developer.android.com/reference/java/util/Locale.html) y [Web](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language).
+Para obtener detalles técnicos sobre cómo recopilan la configuración regional nuestros SDK, consulta la documentación oficial de [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html), [Android](http://developer.android.com/reference/java/util/Locale.html) y [Web](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language).
 {% endalert %}
 
 ## Gestión de traducciones
 
-Considera los siguientes enfoques para gestionar tus traducciones.
+Ten en cuenta los siguientes enfoques para administrar tus traducciones.
 
 {% tabs local %}
 {% tab campaign %}
 ### Una plantilla para todos
 
-En este enfoque, la localización se aplica a una sola plantilla en Braze utilizando [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). Tras el envío, el panel proporciona análisis agregados de la campaña. El compromiso a nivel de usuario puede medirse utilizando embudos de segmentos personalizados, por ejemplo, combinando los filtros **País** y **Campaña recibida**.
+En este enfoque, la localización se aplica a una única plantilla en Braze utilizando [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). Tras el envío, el panel proporciona análisis agregados de la campaña. El compromiso a nivel de usuario puede medirse utilizando embudos de segmentos personalizados, por ejemplo, combinando los filtros **País** y **Campaña recibida**.
 
 | Ventajas | Consideraciones |
 | --- | --- |
@@ -38,7 +38,7 @@ En este enfoque, la localización se aplica a una sola plantilla en Braze utiliz
 
 ### Una plantilla por país 
 
-Este enfoque separa la plantilla en distintas localizaciones de envío. Tras el envío, el panel de control informa de los análisis de envío en función de cada país por separado, y cualquier evento [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) posterior a nivel de usuario también estará vinculado a una campaña específica.
+Este enfoque separa las plantillas en diferentes configuraciones regionales de envío. Tras el envío, el panel de control informa de los análisis de envío en función de cada país por separado, y cualquier evento [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) posterior a nivel de usuario también estará vinculado a una campaña específica.
 
 - Las plantillas se benefician de la implantación de [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags#tags) con fines de mantenimiento y seguimiento.
 - Las campañas pueden heredar las configuraciones de la misma [plantilla Braze]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media#about-templates-and-media) y de [los Bloques de contenido]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks) (como las [plantillas de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template) que contienen Liquid).
@@ -64,9 +64,9 @@ Tras el envío de un Canvas, el panel de control proporciona [análisis agregado
 
 ### Un viaje por país
 
-En este enfoque, el constructor de recorridos [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) proporciona la flexibilidad de crear recorridos de usuario a través de múltiples [componentes Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). Estos componentes pueden [duplicarse]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/duplicating) a nivel de componente y de trayecto global.
+En este enfoque, el generador de recorridos [de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) ofrece la flexibilidad de crear recorridos de usuario a través de múltiples [componentes de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/). Estos componentes pueden [duplicarse]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/duplicating) a nivel de componente y de trayecto global.
 
-La localización se puede conseguir con los siguientes métodos:
+La localización se puede lograr con los siguientes métodos:
 
 - Lienzos separados por país, lo que garantiza que los recorridos complejos de los usuarios se definan en la parte superior del embudo mediante filtros de audiencia.
 - Viajes de usuario personalizados por país, la implementación de [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) para segmentar intuitivamente a los usuarios a gran escala para cada viaje mediante la creación de hilos de mensajes separados para cada país en un único Canvas.
@@ -82,22 +82,22 @@ Una vez enviado, el panel proporciona análisis dinámicos por país y dentro de
 
 ## Envío de mensajes traducidos
 
-Para enviar mensajes personalizados basados en el idioma, la localización o los atributos personalizados de un usuario, utiliza uno de los siguientes métodos.
+Para enviar mensajes personalizados basados en el idioma, la configuración regional o los atributos personalizados de un usuario, utiliza uno de los siguientes métodos.
 
-### Traducción Etiquetas de Liquid (recomendadas) {#translation-liquid-tag}
+### Etiquetas de Liquid de traducción (recomendadas) {#translation-liquid-tag}
 
-Braze admite una etiqueta de Liquid en {% raw %}`{% translation salutation %}Hello!{% endtranslation %}`{% endraw %} para dirigirse a usuarios en diferentes idiomas con un solo mensaje. 
+Braze admite una etiqueta{% raw %}`{% translation salutation %}Hello!{% endtranslation %}`{% endraw %} de Liquid para dirigirte a usuarios en diferentes idiomas con un solo mensaje. 
 
-Para una guía completa, consulta la [guía sobre el uso de etiquetas de traducción]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales).
+Para obtener una guía completa, consulta la [guía sobre el uso de etiquetas de traducción]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales).
   
 ### Enfoques alternativos
 
 {% tabs local %}
 {% tab Custom Liquid %}
-Puedes pegar manualmente tu contenido en el cuerpo del mensaje y utilizar [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) para mostrar [condicionalmente]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) el idioma correcto al destinatario. Para ello:
+Puedes pegar manualmente tu contenido en el cuerpo del mensaje y utilizar [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) para mostrar [de forma condicional]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) el idioma correcto al destinatario. Para ello:
 
-1. Redacta tu mensaje y, a continuación, selecciona **Idioma** para generar la lógica condicional Liquid para cada uno de los idiomas que hayas seleccionado.
-2. Puedes utilizar la siguiente plantilla Liquid para elaborar tu mensaje. Para cada campo con plantillas, debe introducir las variaciones después del segmento de plantillas entre corchetes. La variación debe corresponder al código de idioma al que se hace referencia en los corchetes que la preceden.
+1. Redacta tu mensaje y, a continuación, selecciona **Idioma** para generar lógica condicional Liquid para cada uno de los idiomas seleccionados.
+2. Puedes utilizar la siguiente plantilla Liquid para ayudarte a crear tu mensaje. Para cada campo con plantillas, debe introducir las variaciones después del segmento de plantillas entre corchetes. La variación debe corresponder al código de idioma al que se hace referencia en los corchetes que la preceden.
     {% raw %}
     ```liquid
     {% if ${language} == 'en' %}
@@ -267,11 +267,11 @@ Por ejemplo, las siguientes llamadas a Connected Content llaman a Transifex y Cr
 {% endtab %}
 
 {% tab Spreadsheets %}
-Aloja las traducciones en una hoja de cálculo y, a continuación, utiliza uno de los siguientes métodos para enviar tu mensaje en el idioma correspondiente.
+Almacena las traducciones en una hoja de cálculo y, a continuación, utiliza uno de los siguientes métodos para enviar tu mensaje en el idioma correspondiente.
 
 {% subtabs local %}
 {% subtab Connected Content %}
-Puedes contratar a una agencia de traducción para que almacene las traducciones en una hoja de cálculo de Google y, a continuación, consultar este contenido mediante [Braze Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). Cuando envíes un mensaje, la traducción correspondiente a cada usuario se incluirá en el cuerpo de tu campaña en función del idioma que haya seleccionado. 
+Puedes solicitar a una agencia de traducción que almacene las traducciones en una hoja de cálculo de Google y, a continuación, realizar una consulta sobre este contenido mediante [Braze Contenido Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). Cuando envíes un mensaje, la traducción correspondiente a cada usuario se incluirá en el cuerpo de tu campaña en función del idioma seleccionado. 
 
 {% alert note %}
 La API de Google Sheets tiene un límite de 500 solicitudes cada 100 segundos por proyecto. Las llamadas a Contenidos Conectados pueden almacenarse en caché, pero esta solución no es escalable para una campaña de alto tráfico.
@@ -283,7 +283,7 @@ Esta opción proporciona un método alternativo para transformar Google Sheets e
 
 La estructura de la hoja de cálculo sigue los pasos de la opción 4, pero SheetDB también proporciona [filtros adicionales](https://docs.sheetdb.io/#sheetdb-api) para consultar los objetos.
 
-Algunos usuarios pueden preferir implementar SheetDB con menos dependencias de Liquid y Bloques Conectados implementando el [método de búsqueda](https://docs.sheetdb.io/#get-search-in-document) de SheetDB en llamadas de solicitud GET para filtrar los objetos JSON basándose en la etiqueta de Liquid {% raw %}`{{${language}}}`{% endraw %} para devolver automáticamente los resultados de un solo idioma en lugar de construir grandes bloques condicionales.
+Algunos usuarios pueden preferir implementar SheetDB con menos dependencias de Liquid y Connected Block mediante la implementación [del método de búsqueda](https://docs.sheetdb.io/#get-search-in-document) de SheetDB en llamadas de solicitud GET para filtrar los objetos JSON basándose en la etiqueta{% raw %}`{{${language}}}`{% endraw %} de Liquid y devolver automáticamente los resultados para un solo idioma, en lugar de crear grandes bloques condicionales.
 
 #### Paso 1: Formatear la hoja de Google
 

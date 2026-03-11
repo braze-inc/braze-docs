@@ -3,7 +3,7 @@ nav_title: Supprimer des utilisateurs avec CDI
 article_title: "Supprimer des utilisateurs avec l'ingestion de données en nuage"
 page_order: 30
 page_type: reference
-description: "Cette page fournit un aperçu du processus de suppression des utilisateurs avec Cloud Data Ingestion."
+description: "Cette page présente un aperçu du processus de suppression d'utilisateurs avec l'ingestion de données."
 
 ---
 

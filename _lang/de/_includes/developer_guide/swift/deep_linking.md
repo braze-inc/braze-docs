@@ -1,5 +1,9 @@
 {% multi_lang_include developer_guide/prerequisites/swift.md %}
 
+{% alert tip %}
+Für Unterstützung bei der Auswahl zwischen benutzerdefinierten Deeplinks, Universal-Links und „Open Web URL Inside App“ konsultieren Sie bitte [den iOS-Deeplinking-Leitfaden]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide). Informationen zur Fehlerbehebung finden Sie unter [Fehlerbehebung bei Deeplinking]({{site.baseurl}}/developer_guide/push_notifications/deep_linking_troubleshooting).
+{% endalert %}
+
 ## Handhabung von Deeplinks
 
 ### Schritt 1: Ein System registrieren {#register-a-scheme}

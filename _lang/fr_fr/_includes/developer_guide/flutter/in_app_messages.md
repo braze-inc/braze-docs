@@ -10,12 +10,12 @@
 ## Activation des messages in-app
 
 {% alert note %}
-Cette étape est réservée à iOS. L'implémentation par défaut des messages in-app est déjà mise en place sur Android.
+Cette étape concerne uniquement iOS. La configuration par défaut pour les messages in-app est déjà établie sur Android.
 {% endalert %}
 
-Pour configurer le présentateur par défaut pour les messages in-app sur iOS, créez une implémentation du protocole `BrazeInAppMessagePresenter` et affectez-la à l'option `inAppMessagePresenter` sur votre instance Braze. Vous pouvez également utiliser le présentateur par défaut de Braze UI en instanciant un objet `BrazeInAppMessageUI`.
+Pour configurer le présentateur par défaut pour les messages in-app sur iOS, veuillez créer une implémentation du`BrazeInAppMessagePresenter`protocole et l'attribuer à l'option`inAppMessagePresenter`sur votre instance Braze. Vous pouvez également utiliser le présentateur par défaut de Braze UI en instanciant un objet `BrazeInAppMessageUI`.
 
-Vous devez importer la bibliothèque `BrazeUI` pour accéder à la classe `BrazeInAppMessageUI`.
+Il est nécessaire d'importer la`BrazeUI`bibliothèque pour accéder à la`BrazeInAppMessageUI`classe.
 
 {% tabs %}
 {% tab swift %}
@@ -62,4 +62,4 @@ override func application(
 {% endtab %}
 {% endtabs %}
 
-Pour personnaliser davantage votre mise en œuvre, reportez-vous à la section [Enregistrement des données des messages in-app]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter).
+Pour personnaliser davantage votre implémentation, veuillez vous référer à [la section Enregistrement des données des messages in-app]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter).

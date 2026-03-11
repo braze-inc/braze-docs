@@ -52,6 +52,7 @@ These are Braze product names and features. Keep them in English:
 - News Feed
 - Liquid (the templating language)
 - SDK, API, REST API
+- BrazeAI — always written as one word with exact capitalization. When followed by `<sup>TM</sup>`, preserve the exact HTML structure: `BrazeAI<sup>TM</sup>`. Never wrap "BrazeAI" itself inside `<sup>` tags. Product names like "BrazeAI Operator" and "BrazeAI Decisioning Studio" follow the same rule.
 - Segment, Segments (when referring to the Braze feature)
 - Campaign, Campaigns
 - Push Stories

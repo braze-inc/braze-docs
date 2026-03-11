@@ -32,7 +32,7 @@ Unter [Unterstützte Personalisierungs-Tags]({{site.baseurl}}/user_guide/persona
 
 Sie können Variablen mit dem Tag `assign` erstellen und zuweisen. Dadurch wird eine Variable im Nachrichten-Editor erstellt, auf die Sie auch in Ihrer Nachricht referenzieren können.
 
-### Werden mit Liquid Datenpunkte aufgezeichnet?
+### Werden bei der Verwendung von Liquid Log-Datenpunkten erfasst?
 
 Nein.
 
@@ -74,7 +74,7 @@ For-Schleifen werden auch als [Iterations-Tags](https://shopify.github.io/liquid
 
 In Braze könnte dies für die Überprüfung von Artikeln in einem angepassten Attribut oder einer Liste von Werten und Objekten verwendet werden, die von einer [Katalog-]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), [Auswahl-]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) oder [Connected-Content-Aufrufantwort]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) zurückgegeben werden. Insbesondere können Sie die For-Loop-Logik als Teil Ihres Messagings verwenden, um zu prüfen, ob ein Produkt auf Lager ist oder ob ein Produkt eine Mindestbewertung hat. 
 
-Nehmen wir an, Sie haben einen Katalog mit dem Namen "Spiele", der eine Auswahl mit dem Namen "cheap_games". enthält. Um die Titel der Spiele in "cheap_games", zu finden, können Sie dieses Liquid Snippet verwenden:
+Angenommen, Sie haben einen Katalog namens „Spiele”, der eine Auswahl namens enthält, die Spiele auswählt."cheap_games".Um die Titel der Spiele anzuzeigen,"cheap_games",können Sie dieses Liquid-Snippet verwenden:
 
 {% raw %}
 ```liquid
@@ -86,3 +86,35 @@ Nehmen wir an, Sie haben einen Katalog mit dem Namen "Spiele", der eine Auswahl 
 {% endraw %}
 
 Sobald die festgelegten Bedingungen erfüllt sind, kann Ihre Nachricht fortgesetzt werden. Die Verwendung dieser Logik ist eine hilfreiche Methode, um Zeit zu sparen, anstatt Liquid-Blöcke für verschiedene Bedingungen zu wiederholen.
+
+### Warum gibt es in Nachrichten, die Content-Blöcke verwenden, zusätzliche Leerzeichen?
+
+Wenn Sie in gesendeten Nachrichten, die Content-Blöcke mit Liquid verwenden, zusätzliche Abstände feststellen, befinden sich möglicherweise unnötige Absatz- oder Zeilenumbrüche in Ihren bedingten Anweisungen. Bitte schreiben Sie Ihre bedingten Anweisungen in einer einzigen Zeile und nicht über mehrere Zeilen verteilt.
+
+#### Beispiel
+
+{% raw %}
+```liquid
+{% if {{custom_attribute.${has_discount}}} == true %}Discounted Item{% elsif {{custom_attribute.${is_new_arrival}}} == true %}New Arrival{% else %}Regular Item{% endif %}
+{% endraw %}
+
+### When should I use `assign` versus `capture`?
+
+Both `assign` and `capture` create Liquid variables, but they serve different purposes:
+
+- `assign` is for simple variables that store a single value, such as a boolean, number, or simple string. You can also apply a single filter in the same line.
+- `capture` is for storing a block of text that may include multiple variables, strings, or complex expressions. Use `capture` when the value is too complex for a single `assign` statement, such as URLs that utilize other Liquid variables or custom attributes as parameters. `capture` is also preferred when implementing Liquid variables in the body of Connected Content calls.
+
+#### Examples
+
+{% raw %}
+```liquid
+{% comment %} Valid assign usage {% endcomment %}
+{% assign name = {{custom_attribute.${first_name}}} %}
+{% assign price = {{custom_attribute.${price}}} | plus: 0 %}
+
+{% comment %} Use capture for complex strings {% endcomment %}
+{% capture greeting %}Hello, {{custom_attribute.${first_name}}}! Your order #{{custom_attribute.${order_id}}} is ready.{% endcapture %}
+{{ greeting }}
+```
+{% endraw %}
