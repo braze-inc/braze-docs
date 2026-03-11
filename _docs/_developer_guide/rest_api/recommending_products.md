@@ -130,6 +130,10 @@ Hi {{${first_name}}}, we think you'll love:
 
 For more details on making API calls from your messages, see [Making an API call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/).
 
+{% alert warning %}
+Avoid using Connected Content to fetch a large list of products and then iterating through that list in Liquid at send time. Large response payloads increase send latency and can cause message timeouts or delivery failures at scale. Instead, store only the specific product IDs a user needs on their profile (see [Step 1](#step-1-store-recommendations-on-user-profiles)), and fetch metadata for those individual items — or use [Catalogs](#option-a-braze-catalogs), which are optimized for fast lookups.
+{% endalert %}
+
 ## Step 3: Verify your integration
 
 After completing the setup, verify your integration:
