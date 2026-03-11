@@ -131,6 +131,10 @@ Only one of the following options may exist in the prioritization array at a tim
 - `identified` refers to prioritizing a user with an `external_id`
 - `unidentified` refers to prioritizing a user without an `external_id`
 
+{% alert note %}
+A merge does not occur if the email address or phone number matches multiple users. This includes cases where one of those users has the same `external_id` as the one specified in the request. In these cases, the endpoint returns `"message": "success"`, but the user profiles are not combined. To avoid this, verify that the email address or phone number is associated only with unidentified users before calling this endpoint.
+{% endalert %}
+
 ## Request example
 
 ```
