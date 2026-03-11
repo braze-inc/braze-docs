@@ -1,12 +1,12 @@
 ---
 nav_title: Nube de ventas Salesforce
-article_title: Gestionar clientes potenciales con Salesforce Sales Cloud
+article_title: Administrador de clientes potenciales con Salesforce Sales Cloud.
 page_order: 3
 page_type: reference
 description: "Aprende a utilizar los webhooks Braze para crear y actualizar clientes potenciales en Salesforce Sales Cloud a través del punto final Salesforce sobjects/Lead."
 ---
 
-# Gestionar clientes potenciales con Salesforce Sales Cloud
+# Administrador de clientes potenciales con Salesforce Sales Cloud.
 
 > [Salesforce](https://www.salesforce.com/) es una de las principales plataformas de gestión de relaciones con los clientes (CRM) en la nube del mundo, diseñada para ayudar a las empresas a gestionar todo su proceso de ventas, incluida la generación de prospectos, el seguimiento de oportunidades y la administración de cuentas.<br><br>Esta página muestra cómo utilizar webhooks Braze para crear y actualizar clientes potenciales en Salesforce Sales Cloud mediante una integración enviada por la comunidad.
 

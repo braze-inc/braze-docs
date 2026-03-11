@@ -1,10 +1,10 @@
 ---
-nav_title: Configuración del administrador
+nav_title: Configuración de administrador
 article_title: Configuración de administrador
 page_order: 20
 layout: dev_guide
 guide_top_header: "Configuración de administrador"
-guide_top_text: "Esta página se encuentra en <b>Configuración</b> > <b>Configuración del administrador</b>. A continuación, puede seleccionar la pestaña correspondiente para navegar hasta los ajustes que desee gestionar. <br> <br> La mayoría de las funciones de <b>la configuración de administración</b> sólo están disponibles para los administradores de cuentas Braze. Si no tienes acceso pero crees que deberías, ponte en contacto con el administrador de la cuenta Braze de tu empresa."
+guide_top_text: "Esta página se encuentra en <b>Configuración</b> > <b>Configuración del administrador</b>. A continuación, puede seleccionar la pestaña correspondiente para navegar hasta los ajustes que desee gestionar. <br> <br> La mayoría de las funciones de <b>la configuración de administración</b> sólo están disponibles para los administradores de cuentas Braze. Si no tienes acceso pero crees que deberías tenerlo, ponte en contacto con el administrador de la cuenta Braze de tu empresa."
 
 page_type: landing
 description: "Esta página contiene artículos sobre la configuración de administración. Aquí encontrarás artículos sobre cómo configurar la información de contacto, las preferencias de notificación y los ajustes de seguridad."
@@ -20,6 +20,9 @@ guide_featured_list:
 - name: Configuración de seguridad
   link: /docs/user_guide/administrative/app_settings/company_settings/security_settings/
   image: /assets/img/braze_icons/shield-01.svg
+- name: Zonas horarias del espacio de trabajo
+  link: /docs/user_guide/administrative/app_settings/company_settings/workspace_time_zone/
+  image: /assets/img/braze_icons/user-circle.svg
 - name: Aprovisionamiento automático de usuarios
   link: /docs/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/
   image: /assets/img/braze_icons/user-plus-01.svg

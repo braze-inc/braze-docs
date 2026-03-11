@@ -6,9 +6,9 @@ Dieser Anwendungsfall zeigt, wie Sie die Features von Braze nutzen können, um e
 
 Weitere Vorteile der Erstellung dieses Dienstes sind:
 - Gesendete Nachrichten werden vollständig getrackt und gemeldet.
-- Nicht-technische Nutzer:innen von Braze können den Inhalt von Nachrichten aktualisieren.
+- Nicht-technische Nutzer:innen des Unternehmens können den Inhalt von Nachrichten aktualisieren.
 - Nachrichten befolgen den Opt-in und Opt-out Status von Nutzerprofilen per Kampagnen-Konfiguration.
-- Sie können sowohl Buchungsdaten als auch Daten zur Interaktion mit Nachrichten verwenden, um Nutzer:innen für zusätzliches Messaging zu segmentieren und zu targetieren. So können Sie z.B. diejenigen, die die erste Nachricht nicht geöffnet haben, mit einer zusätzlichen Erinnerung an ihren Termin retargeten.
+- Sie können sowohl Buchungsdaten als auch Daten zur Nachrichteninteraktion verwenden, um Nutzer:innen zu segmentieren und für zusätzliche Nachrichten anzusprechen. Beispielsweise können Sie diejenigen, die die erste Erinnerungsnachricht nicht öffnen, mit einer zusätzlichen Erinnerung vor ihrem Termin erneut ansprechen.
 
 Folgen Sie diesen Schritten, um diesen Anwendungsfall zu erreichen:
 1. [Schreiben Sie anstehende Buchungsdaten in ein Nutzerprofil von Braze](#step-1)
@@ -17,7 +17,7 @@ Folgen Sie diesen Schritten, um diesen Anwendungsfall zu erreichen:
 
 ## Schritt 1: Schreiben Sie anstehende Buchungsdaten in ein Nutzerprofil von Braze {#step-1}
 
-Verwenden Sie den Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) Endpunkt, um bei jeder Buchung ein [angepasstes Attribut]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/) in ein Nutzerprofil zu schreiben. Stellen Sie sicher, dass das angepasste Attribut alle Informationen enthält, die Sie zum Versenden und Personalisieren der Nachricht benötigen. In diesem Anwendungsfall nennen wir das angepasste Attribut "Reisen".
+Verwenden Sie den Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) Endpunkt, um bei jeder Buchung ein [angepasstes Attribut]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/) in ein Nutzerprofil zu schreiben. Bitte stellen Sie sicher, dass das verschachtelte angepasste Attribut alle erforderlichen Informationen enthält, um die Erinnerungsnachricht zu versenden und zu personalisieren. In diesem Anwendungsfall nennen wir das angepasste Attribut "Reisen".
 
 ### Buchung hinzufügen
 
@@ -155,7 +155,7 @@ You have the following booked in 2 days! Check the information below:
 
 ### Schritt 2c: Starten Sie Ihre Kampagne
 
-Starten Sie die Kampagne für die Nachricht zur Erinnerung per E-Mail. Jedes Mal, wenn Braze das angepasste Attribut "Reisen" empfängt, plant Braze nun eine Nachricht entsprechend den Daten, die im Objekt der jeweiligen Buchung enthalten sind.
+Starten Sie die Kampagne für die Nachricht zur Erinnerung per E-Mail. Jedes Mal, wenn Braze das benutzerdefinierte Attribut „trips“ erhält, plant Braze eine Nachricht entsprechend den Daten, die im jeweiligen Buchungsobjekt enthalten sind.
 
 ## Schritt 3: Bearbeiten Sie aktualisierte Updates und Stornierungen von Buchungen {#step-3}
 
@@ -256,7 +256,7 @@ Wenn der Nutzer:innen in diesem Anwendungsfall seine Reise nach Sydney aktualisi
 
 #### Stornierte Buchung
 
-Wenn der Nutzer:innen in diesem Anwendungsfall seine Reise nach Sydney stornieren würde, würden Sie den folgenden Aufruf an den Endpunkt `/users/track` senden:
+Wenn die Nutzer:in in diesem Anwendungsfall ihre Reise nach Sydney storniert, senden Sie den folgenden Aufruf an den`/users/track`Endpunkt:
 
 {% raw %}
 ```json

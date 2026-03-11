@@ -1,7 +1,7 @@
 ---
 nav_title: "取得:キャンバスの詳細をエクスポートする"
 article_title: "取得:キャンバスの詳細をエクスポートする"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 4
 layout: api_page
 page_type: reference
@@ -46,7 +46,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## 回答
 
 {% alert note %}
-すべてのキャンバスステップには、`{name, next_step_id}` データの配列である `next_paths` フィールドがあります。メッセージステップの場合、`next_step_ids` フィールドは存在するが、他のキャンバスステップのデータは含まれない。
+すべてのキャンバスステップには、`{name, next_step_id}` データの配列である `next_paths` フィールドがあります。メッセージステップでは、フィールド`next_step_ids`は存在するが、他のキャンバスステップのデータは含まれない。
 {% endalert %}
 
 ```json
@@ -213,7 +213,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
         }
       }
     }
-  ],
+  ]
 }
 ```
 

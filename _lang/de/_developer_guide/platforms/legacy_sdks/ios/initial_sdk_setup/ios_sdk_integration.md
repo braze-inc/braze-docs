@@ -1,5 +1,5 @@
 ---
-nav_title: SDK-Integration Anleitung (optional)
+nav_title: SDK-Integrationshandbuch (optional)
 article_title: Braze SDK-Integrationsanleitung für iOS (optional)
 alias: "/ios_sdk/"
 description: "Dieser Leitfaden zur iOS-Integration führt Sie Schritt für Schritt durch die bewährten Verfahren bei der ersten Integration des iOS SDK und seiner Kernkomponenten in Ihre Anwendung. Diese Anleitung hilft Ihnen, eine BrazeManager.swift-Hilfsdatei zu erstellen."
@@ -291,7 +291,7 @@ extension BrazeManager {
 {% endsubtabs %}
 
 ###### Schritt 2: Fernbenachrichtigungen unterstützen
-Fügen Sie auf dem Tab **Signing & Capabilities** die Unterstützung von **Background Modes** hinzu und wählen Sie **Remote Notifications** aus, um mit der Unterstützung von Push-Benachrichtigungen aus der Ferne zu beginnen, die von Braze stammen.<br><br>![Signieren & Funktionen]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
+Fügen Sie auf dem Tab **„Signing&Capabilities**“ die Unterstützung für** Hintergrundmodi** hinzu und wählen Sie **„Remote notifications“**, um die Unterstützung für Remote-Push-Benachrichtigungen von Braze auszuwählen.<br><br>![Signaturfunktionen&]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
 
 ###### Schritt 3: Handhabung von Fernbenachrichtigungen
 Das Braze SDK kann Push-Benachrichtigungen aus der Ferne verarbeiten, die von Braze stammen. Leiten Sie Fernbenachrichtigungen an Braze weiter. Push-Benachrichtigungen, die nicht von Braze stammen, werden vom SDK automatisch ignoriert. Fügen Sie in der Erweiterung für Push-Benachrichtigungen die folgende Methode zu `BrazeManager.swift` hinzu.

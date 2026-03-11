@@ -747,10 +747,6 @@ Campaign, Conversion
 
 This event occurs when a user does an action that has been set as a conversion event in a campaign.
 
-{% alert note %}
-`dispatch_id` is deprecated and will be removed in the next Currents release.
-{% endalert %}
-
 {% alert important %}
 Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_behavior_index` field represents which conversion event, such as 0 = A, 1 = B, 2 = C, 3 = D.
 {% endalert %}
@@ -919,10 +915,6 @@ Campaign, Entry
 {% endapitags %}
 
 This event occurs when a user is enrolled in a control variant set on a multi-variant campaign. This event is generated as there will be no channel send event for this user.
-
-{% alert note %}
-`dispatch_id` is deprecated and will be removed in the next Currents release.
-{% endalert %}
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -3019,10 +3011,6 @@ Content Cards, Clicks
 
 This event occurs when a user clicks a Content Card.
 
-{% alert note %}
-`dispatch_id` is deprecated and will be removed in the next Currents release.
-{% endalert %}
-
 {% tabs %}
 {% tab Cloud Storage %}
 ```json
@@ -3251,10 +3239,6 @@ Content Cards, Dismissal
 {% endapitags %}
 
 This event occurs when a user dismisses a Content Card.
-
-{% alert note %}
-`dispatch_id` is deprecated and will be removed in the next Currents release.
-{% endalert %}
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -3485,10 +3469,6 @@ Content Cards, Impressions
 
 This event occurs when a user views a Content Card.
 
-{% alert note %}
-`dispatch_id` is deprecated and will be removed in the next Currents release.
-{% endalert %}
-
 {% tabs %}
 {% tab Cloud Storage %}
 ```json
@@ -3717,10 +3697,6 @@ Content Cards, Sends
 {% endapitags %}
 
 This event occurs when a Content Card gets sent to a user.
-
-{% alert note %}
-`dispatch_id` is deprecated and will be removed in the next Currents release.
-{% endalert %}
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -6790,7 +6766,7 @@ In-App Messages, Clicks
 This event occurs when a user clicks an in-app message.
 
 {% alert note %}
-`dispatch_id` is deprecated and will be removed in the next Currents release.
+For in-app messages, `dispatch_id` returns `null`.
 {% endalert %}
 
 {% tabs %}
@@ -7028,7 +7004,7 @@ In-App Messages, Impressions
 This event occurs when a user views an in-app message.
 
 {% alert note %}
-`dispatch_id` is deprecated and will be removed in the next Currents release.
+For in-app messages, `dispatch_id` returns `null`.
 {% endalert %}
 
 {% tabs %}

@@ -1,12 +1,12 @@
 ---
 page_order: 10.9
 nav_title: 문제 해결
-article_title: Braze 소프트웨어 개발 키트에 대한 푸시 알림 문제 해결하기
+article_title: Braze SDK의 푸시 알림 문제 해결
 channel:
   - push notifications
 ---
 
-# 푸시 알림 문제 해결하기
+# 푸시 알림 문제 해결
 
 > Braze SDK의 푸시 알림 문제를 해결하는 방법을 알아보세요.
 

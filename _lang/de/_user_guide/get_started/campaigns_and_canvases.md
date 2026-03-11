@@ -12,7 +12,7 @@ description: "Dieser Artikel bietet einen Überblick über die verschiedenen Mö
 In Braze können Sie Nachrichten entweder über eine [Kampagne](#campaigns) oder ein [Canvas](#canvas) versenden.
 
 - Wählen Sie eine Kampagne aus, um eine bestimmte Nachricht an eine Nutzergruppe zu senden. Eine Kampagne ist ein einzelner Schritt, um mit Ihren Nutzern über verschiedene Nachrichtenkanäle in Kontakt zu treten.
-- Wenn Sie eine Reihe fortlaufender Nachrichten im Rahmen einer übergreifenden Customer Journey versenden möchten, wählen Sie Canvas, unser Tool zur Orchestrierung der Customer Journey. Während Kampagnen gut geeignet sind, um einfache, zielgerichtete Nachrichten zu versenden, können Sie mit Canvases Ihre Beziehungen zu Kunden auf die nächste Stufe heben.
+- Für das Versenden einer Reihe von fortlaufenden Nachrichten im Rahmen einer übergreifenden Customer Journey empfehlen wir Canvas, unser Tool für die Journey-Orchestrierung. Während Kampagnen gut geeignet sind, um einfache, zielgerichtete Nachrichten zu versenden, können Sie mit Canvases Ihre Beziehungen zu Kunden auf die nächste Stufe heben.
 
 ## Kampagnen
 
@@ -50,7 +50,7 @@ Wenn Sie ein Canvas erstellen, folgen Sie vielen der gleichen Schritte wie bei d
 
 Ihr Canvas kann eine beliebige Kombination von [Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), [Verzögerungen]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), [Experimenten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) und mehr enthalten. Sie können Nachrichten auf allen unterstützten Kommunikationskanälen versenden und sie sogar [in soziale Netzwerke und Werbeplattformen wie Facebook, Google oder TikTok einbinden]({{site.baseurl}}/partners/canvas_audience_sync/overview/).
 
-Schauen Sie sich diese zusätzlichen Ressourcen an, um mehr über Canvas zu erfahren:
+Bitte beachten Sie die folgenden zusätzlichen Ressourcen, um mehr über Canvas zu erfahren:
 
 - Braze Learning: [User Journeys mit Canvas Flow](https://learning.braze.com/path/journey-orchestration-with-canvas-flow)
 - [Canvase erstellen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)

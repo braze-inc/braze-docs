@@ -11,14 +11,14 @@ alias: /scim_api_appendix/
 > This article explains the different SCIM API objects and appendix.
 
 {% sdktabs %}
-{% sdktab Granular SCIM API %}
-
-{% multi_lang_include permissions_temp/granular_scim.md %}
-
-{% endsdktab %}
 {% sdktab Legacy SCIM API %}
 
 {% multi_lang_include permissions_temp/legacy_scim.md %}
+
+{% endsdktab %}
+{% sdktab Granular SCIM API %}
+
+{% multi_lang_include permissions_temp/granular_scim.md %}
 
 {% endsdktab %}
 {% endsdktabs %}

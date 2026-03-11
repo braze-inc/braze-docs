@@ -1,6 +1,6 @@
 ---
 nav_title: Enregistrer les brouillons pour Canvas
-article_title: Enregistrer les brouillons pour Canvas
+article_title: Enregistrer les brouillons pour canvas
 alias: "/save_as_draft/"
 page_order: 1
 description: "Cet article de référence explique comment enregistrer un brouillon pour une toile qui a déjà été lancée."
@@ -12,7 +12,7 @@ tool: Canvas
 
 > Au fur et à mesure que vous créez et lancez des Canvases, vous pouvez modifier un Canvas actif et l'enregistrer en tant que brouillon, ce qui vous permet de tester vos modifications avant un autre lancement. 
 
-Si vous avez un Canvas actif qui nécessite des modifications à grande échelle, vous pouvez utiliser cette fonctionnalité pour créer, enregistrer et effectuer un contrôle qualité **avant** de lancer ces modifications dans le Canvas actif. 
+Si vous disposez d'un canvas actif nécessitant des modifications importantes, vous pouvez utiliser cette fonctionnalité pour créer, enregistrer et vérifier la qualité **avant** de lancer ces modifications dans le canvas actif. 
 
 Comme pour tout canvas, un seul utilisateur peut modifier un brouillon à la fois, et un canvas ne peut avoir qu'un seul brouillon à la fois. Ces brouillons n'ont aucune analyse car les modifications du brouillon n'ont pas encore été lancées.
 

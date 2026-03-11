@@ -5,7 +5,7 @@ article_title: Guia do Usuário do Braze
 layout: user_guide
 
 user_top_header: "Guia do Usuário do Braze"
-user_top_text: "É aqui que os profissionais de marketing e administradores podem aprender tudo o que precisam saber para começar a usar o Braze e como projetar interações significativas e baseadas em dados de clientes."
+user_top_text: "É aqui que os profissionais de marketing e administradores podem aprender tudo o que precisam saber para começar a usar o Braze e como criar interações significativas e baseadas em dados com os clientes."
 description: "Esta é a landing page do Guia do Usuário. Aqui, os profissionais de marketing e administradores podem aprender tudo o que precisam saber para começar a usar o Braze e como projetar interações significativas e orientadas por dados com os clientes."
 
 user_menu_list:
@@ -23,7 +23,7 @@ user_menu_list:
     bg_color: '#FFD4BC'
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/users-01-braze-orange-dark.svg
-    description: Este guia orienta você sobre como começar a criar uma jornada do cliente.
+    description: Este guia orienta você sobre como começar a construir uma jornada do cliente.
 
 popular_topic_list:
   - name: Importação de usuários
