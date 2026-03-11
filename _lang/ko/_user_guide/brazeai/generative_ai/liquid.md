@@ -14,7 +14,7 @@ page_order: 0.0
 
 BrazeAI<sup>TM</sup> Liquid 어시스턴트는 마케팅 요구 사항에 맞는 효과적인 Liquid 코드를 작성할 수 있도록 설계되었습니다. Liquid 구문과 마케터가 메시지에서 Liquid를 활용하는 방법을 모두 학습한 AI는 개인화된 콘텐츠 제작의 뉘앙스를 잘 이해하고 있습니다.
 
-또한, BrazeAI<sup>TM</sup> Liquid Assistant에 커스텀 속성 이름(예:“favourite_color”)  )과 데이터 유형(예: 부울 및 문자열)을 제공함으로써, 당사의 BrazeAI<sup>TM</sup> Liquid Assistant는 메시지가 정확하게 타겟팅되고 목표와 일치하도록 보장합니다. 또한 브랜드 가이드라인을 생성하면 BrazeAI<sup>TM</sup> Liquid 어시스턴트는 브랜드 가이드라인을 사용하여 생성된 결과물을 더 잘 커스텀하고 자체 브랜드 목소리에 맞게 콘텐츠를 맞춤 설정할 수 있습니다. 회원님이 생성한 브랜드 가이드라인은 회원님이 직접 사용할 수 있도록 콘텐츠를 맞춤 설정하는 데만 사용됩니다.
+또한, BrazeAI<sup>TM</sup> Liquid Assistant에 커스텀 속성 이름(예: “favourite_color”)과 데이터 유형(예: 부울 및 문자열)을 제공함으로써, 당사의 BrazeAI<sup>TM</sup> Liquid Assistant는 메시지가 정확하게 타겟팅되고 목표와 일치하도록 보장합니다. 또한 브랜드 가이드라인을 생성하면 BrazeAI<sup>TM</sup> Liquid 어시스턴트는 브랜드 가이드라인을 사용하여 생성된 결과물을 더 잘 커스텀하고 자체 브랜드 목소리에 맞게 콘텐츠를 맞춤 설정할 수 있습니다. 회원님이 생성한 브랜드 가이드라인은 회원님이 직접 사용할 수 있도록 콘텐츠를 맞춤 설정하는 데만 사용됩니다.
 
 ## 지원 채널
 

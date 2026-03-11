@@ -14,7 +14,7 @@ page_order: 0.0
 
 O Liquid Assistant da BrazeAI<sup>TM</sup> foi projetado para ajudar na formulação de um código Liquid eficaz e adaptado às suas necessidades de marketing. Treinada na sintaxe do Liquid e em como os profissionais de marketing utilizam o Liquid em suas mensagens, nossa IA entende as nuances da elaboração de conteúdo personalizado.
 
-Além disso, ao fornecer ao Assistente Liquid BrazeAI<sup>TM</sup> os nomes dos seus atributos personalizados (como “favourite_color”)) e tipos de dados (como booleano e string), nosso Assistente Liquid BrazeAI<sup>TM</sup> garante que suas mensagens sejam precisamente direcionadas e alinhadas com seus objetivos. Além disso, se você criar diretrizes da marca, o Liquid Assistant da BrazeAI<sup>TM</sup> poderá usar as diretrizes da marca para personalizar melhor os resultados gerados e personalizar o conteúdo de acordo com a voz da nossa própria marca. As diretrizes da marca que você criar serão usadas apenas para personalizar o conteúdo para seu próprio uso.
+Além disso, ao fornecer ao Assistente Liquid BrazeAI<sup>TM</sup> os nomes dos seus atributos personalizados (como “favourite_color”) e tipos de dados (como booleano e string), nosso Assistente Liquid BrazeAI<sup>TM</sup> garante que suas mensagens sejam precisamente direcionadas e alinhadas com seus objetivos. Além disso, se você criar diretrizes da marca, o Liquid Assistant da BrazeAI<sup>TM</sup> poderá usar as diretrizes da marca para personalizar melhor os resultados gerados e personalizar o conteúdo de acordo com a voz da nossa própria marca. As diretrizes da marca que você criar serão usadas apenas para personalizar o conteúdo para seu próprio uso.
 
 ## Canais suportados
 
