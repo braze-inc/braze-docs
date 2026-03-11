@@ -87,7 +87,7 @@ The first step is to create a data transformation in Braze. Go to **Data Setting
 
 Select **Start from scratch**, select destination **POST: Track Users**, and select **Create transformation**.
 
-In the transformation editor, copy the code example in the Example transformation tool section below and insert it in the **Transformation code** field. Click **Save**, copy the **Webhook URL**, and open Dixa.
+In the transformation editor, copy the code example from **Example transformation tool** below and insert it in the **Transformation code** field. Click **Save**, copy the **Webhook URL**, and open Dixa.
 
 In Dixa, go to **Settings** > **Integrations** > **Webhooks** > **+ Outbound webhook**.
 
@@ -99,18 +99,18 @@ On the webhook settings page, paste the URL from Braze and toggle the events you
 // Transforming the provided payload to match Braze /users/track endpoint specifications.
 
 // Extracting necessary details from the payload
-var requester = payload.data.conversation.requester;
-var event = payload.data.conversation;
+const requester = payload.data.conversation.requester;
+const event = payload.data.conversation;
 
 // Defining user attributes based on the provided payload, prioritizing email if available.
-var userAttributes = {
+const userAttributes = {
   email: requester.email, // Prioritizing email over external_id and user_alias
   _update_existing_only: false, // Set to false to create or update user profiles when identified by email
   organization: payload.organization.name, // Including an additional attribute for demonstration
 };
 
 // Defining event attributes based on the provided payload.
-var eventAttributes = {
+const eventAttributes = {
   email: requester.email, // Prioritizing email over external_id and user_alias
   name: payload.event_fqn, // The name of the event
   time: event.created_at, // ISO 8601 datetime format
@@ -123,7 +123,7 @@ var eventAttributes = {
 };
 
 // Constructing the final object to match Braze /users/track endpoint schema
-var brazecall = {
+const brazecall = {
   attributes: [userAttributes], // Wrapping userAttributes in an array as per specifications
   events: [eventAttributes] // Wrapping eventAttributes in an array as per specifications
 };
