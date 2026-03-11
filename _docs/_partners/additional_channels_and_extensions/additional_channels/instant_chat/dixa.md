@@ -27,7 +27,7 @@ Before you start, you'll need the following:
 
 ## Use cases
 
-Surface Braze data into the customer service agent view while communicating with your users on different communication channels, such as email, messenger, or chat. Additionally, use the data transformation tool to send data from Dixa to Braze to pause marketing while solving a customer's problem.
+Surface Braze data into the customer service agent view while communicating with your users on different communication channels, such as email, messenger, or chat. Additionally, use Braze Data Transformation to send data from Dixa to Braze to pause marketing while solving a user's problem.
 
 ## Integration
 
