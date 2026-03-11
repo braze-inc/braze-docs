@@ -96,7 +96,7 @@ You can use catalog items to create conditional statements. For example, you can
 ```
 {% endraw %}
 
-In this example, the `catalog_items` tag fetches item `1234` from the `Games` catalog, then the `if` statement checks the `on_sale` field to display different messages.
+In this example, the `catalog_items` tag fetches item `1234` from the `Games` catalog, and then the `if` statement checks the `on_sale` field to display different messages.
 
 #### With catalog selections
 
