@@ -34,7 +34,7 @@ Next, set the **Experiment Window**. The **Experiment Window** specifies how lon
 
 By default, if the results of the test aren't enough to determine a statistically significant winner, all future users are sent down the best-performing path. Alternatively, you can select **Continue sending all future users the mix of paths**. This option sends future users down the mix of paths according to the percentages specified in the experiment path distribution.
 
-In the event of a tie, the first path is selected.
+In the event of a tie, Braze selects the path that appears first.
 
 !["Continue sending all future users the mix of paths" selected as what happens to users if the test result isn't statistically significant.]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
