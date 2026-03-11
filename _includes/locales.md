@@ -1,11 +1,8 @@
-{% if include.section == "Prerequisites" %}
-## Prerequisites
+{% if include.section == "multi-language prerequisites" %}
 
-| Feature | Required permissions |
+| Feature | Required user permissions |
 | --- | --- |
-| Multi-language locales | You need these user permissions to create and manage multi-language locales:<br><br> {::nomarkdown}Granular permissions: <ul><li>“Create Multi-Language Locale Settings”</li></ul><br><br> Legacy permissions:<ul><li> “Manage Multi Language Settings”</li></ul>{:/} |
-| Message types | You need these user permissions to add locales and translations to campaigns and Canvases:<br><br> {::nomarkdown}Granular permissions: <ul><li>“Edit Campaigns”</li><li>“Edit Canvases”</li></ul><br><br> Legacy permissions:<ul><li>“Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers”</li></ul>{:/} |
-| Templates | You need these user permissions associated with the template type you want to add locales and translations to:<br><br> {::nomarkdown}Granular permissions: <ul><li>“Edit Email Templates”</li><li>“Edit IAM Templates”</li><li>“Edit Content Block Templates”</li></ul><br><br> Legacy permissions:<ul><li>“Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers”</li></ul>{:/} |
+| Multi-language locales | You need these permissions to create and manage multi-language locales:<br><br> {::nomarkdown}Granular permissions: <ul><li>Create Multi-Language Locale Settings</li></ul> Legacy permissions<ul><li> Manage Multi Language Settings</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endif %}
