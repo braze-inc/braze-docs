@@ -108,3 +108,6 @@ Machine open percentages are not a reliable measure of actual engagement. For a 
 
 No. *Unique Opens* count only [Other Opens]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#other-opens), which excludes emails identified as machine opens. *Machine Opens* are tracked separately. In the **Campaign Analytics** view and **Report Builder**, you can view both metrics independently.
 
+### How can I implement a Gmail Feedback Loop?
+
+An email Feedback Loop (FBL) allows senders to monitor their reputation by identifying campaigns that receive a high volume of complaints. Refer to [Google's Feedback Loop](https://support.google.com/a/answer/6254652?hl=en&visit_id=639088475644929305-2162041441&rd=1) article for steps on how to implement this.
