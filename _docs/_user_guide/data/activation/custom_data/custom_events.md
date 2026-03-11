@@ -240,7 +240,7 @@ To learn more, refer to our dedicated page on [Nested objects]({{site.baseurl}}/
 
 Custom event properties are designed to help you increase targeting precision and make messages feel even more personalized. Custom event properties can be stored within Braze in both the short and long term.
 
-You can segment based on the values of event properties in three ways:
+You can segment based on the values of event properties in the following ways:
 
 a. **Within 30 days:** You can use event property segmentation based on the frequency and recency of specific event property values within Braze segments. This option impacts data usage.<br><br>
 b. **Within and beyond 30 days:** To cover both short-term and long-term event property segmentation, you can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). This feature segments users based on custom events and event properties tracked within the past two years. This option does not impact data usage.<br><br>
