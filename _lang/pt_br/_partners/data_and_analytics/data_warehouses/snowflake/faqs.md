@@ -31,10 +31,30 @@ Se seu compartilhamento de dados for inter-regional, talvez os dados não fiquem
 
 ### Por que estou recebendo um erro de conformidade com a HIPAA ao criar um compartilhamento de dados?
 
-A conta especificada não é compatível com HIPAA ou está em [edições do Snowflake](https://docs.snowflake.com/en/user-guide/intro-editions) inferiores à Business Critical. Sua conta Snowflake deve ser feita upgrade para a Business Critical Edition para estar em conformidade com a HIPAA para compartilhamento de dados. Entre em contato com o suporte da Snowflake para obter mais assistência para fazer upgrade da sua conta.
+A conta especificada não está em conformidade com a HIPAA ou está em [edições do Snowflake](https://docs.snowflake.com/en/user-guide/intro-editions) inferiores à Business Critical. Sua conta Snowflake deve ser feita upgrade para a Business Critical Edition para estar em conformidade com a HIPAA para compartilhamento de dados. Entre em contato com o suporte da Snowflake para obter mais assistência para fazer upgrade da sua conta.
 
 ### Por que não consigo recriar um compartilhamento de dados depois de excluí-lo?
 
 O sistema ainda pode estar processando a exclusão do seu compartilhamento de dados anterior. Aguarde alguns minutos para que o processo de desprovisionamento seja concluído e, em seguida, tente criar o novo compartilhamento de dados novamente.
+
+### Quantas vezes preciso executar o `CREATE DATABASE` quando tenho vários espaços de trabalho compartilhando dados na mesma conta do Snowflake?
+
+Você precisa executar o site `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` apenas uma vez. Quando vários compartilhamentos de dados de diferentes espaços de trabalho do Braze são compartilhados com a mesma conta do Snowflake, eles são automaticamente combinados no mesmo compartilhamento. Depois de criar o banco de dados inicial, os dados de espaços de trabalho adicionais são automaticamente adicionados ao banco de dados existente sem a necessidade de solicitações de compartilhamento adicionais ou etapas de criação de banco de dados.
+
+Por exemplo, se você criar um compartilhamento de dados para a conta 123 do Snowflake a partir do espaço de trabalho A, aceitará a solicitação de compartilhamento e criará um banco de dados. Quando você cria posteriormente um compartilhamento de dados para a mesma conta Snowflake 123 do espaço de trabalho B, nenhuma nova solicitação de compartilhamento é enviada - os dados são imediatamente adicionados ao compartilhamento existente e ficam disponíveis no banco de dados criado anteriormente.
+
+### Se eu tiver vários espaços de trabalho, um único banco de dados conterá dados de todos eles?
+
+Sim. Quando você compartilha dados de vários espaços de trabalho do Braze com a mesma conta do Snowflake, todos os dados são combinados em um único compartilhamento e ficam disponíveis no mesmo banco de dados. Você pode filtrar os dados por `app_group_id` para distinguir os espaços de trabalho.
+
+Como prática recomendada, sempre filtre por `app_group_id` em suas consultas para prepará-las para o futuro. Isso garante que seus dashboards e relatórios permaneçam precisos se você adicionar outros espaços de trabalho no futuro. Sem esse filtro, suas métricas podem incluir inesperadamente dados de espaços de trabalho recém-adicionados.
+
+### Qual é a abordagem recomendada para o gerenciamento de dados de vários espaços de trabalho no Snowflake?
+
+Envie todos os dados do Braze para o mesmo banco de dados e filtre por `app_group_id` para distinguir os espaços de trabalho. Essa abordagem simplifica o gerenciamento de dados e garante relatórios consistentes em toda a organização.
+
+### Quantos Snowflake Data Share Connectors são necessários para vários espaços de trabalho?
+
+O número de conectores necessários depende de sua configuração específica e de seus direitos. Entre em contato com a equipe da sua conta Braze para saber mais sobre quais direitos são adequados para o seu caso de uso.
 
 

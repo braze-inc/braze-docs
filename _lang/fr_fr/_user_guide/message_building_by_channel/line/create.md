@@ -1,5 +1,5 @@
 ---
-nav_title: Créer un message LINE
+nav_title: Veuillez créer un message LINE.
 article_title: Créer un message LINE
 page_order: 1
 description: "Cet article explique comment créer une campagne de messages LINE ou un Canvas."
@@ -11,7 +11,7 @@ channel:
 alias: /line/create/
 ---
 
-# Créer un message LINE
+# Veuillez créer un message LINE.
 
 > Les campagnes LINE peuvent atteindre directement et discuter de manière programmatique avec vos clients. Vous pouvez utiliser Liquid et d’autres contenus dynamiques pour non seulement proposer une expérience originale à vos utilisateurs, mais aussi générer un environnement qui favorise et optimise une expérience utilisateur discrète avec votre marque.
 
@@ -27,7 +27,7 @@ L'envoi de messages LINE à partir de Braze est prélevé sur les crédits de me
 
 ## Étape 1 : Choisissez où créer votre message
 
-Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont plus adaptées aux campagnes d'envoi de messages uniques et ciblés, tandis que les Canevas sont plus adaptés aux parcours utilisateurs en plusieurs étapes.
+Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont plus adaptées aux campagnes de communication uniques et avec ciblage, tandis que les canevas conviennent mieux aux parcours utilisateur en plusieurs étapes.
 
 {% tabs %}
 {% tab Campaign %}
@@ -62,15 +62,17 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 ## Étape 2 : Rédigez votre message LINE
 
-Rédigez votre message en utilisant la personnalisation (comme le contenu Liquid ou connecté) si nécessaire. LINE autorise jusqu'à cinq bulles de message dans chaque message, qui peuvent correspondre à l'une des mises en page de messages disponibles : texte, image, riche ou à base de cartes.
+Rédigez votre message en utilisant la personnalisation (comme le contenu Liquid ou connecté) si nécessaire. LINE autorise jusqu'à cinq bulles de message dans chaque message, qui peuvent être n'importe laquelle des mises en page disponibles : texte, image, enrichie ou sous forme de carte.
 
-![LINE avec un message affiché dans l'aperçu.]({% image_buster /assets/img/line/line_composer.png %})
+![Compositeur LINE avec un message affiché dans l'aperçu.]({% image_buster /assets/img/line/line_composer.png %})
 
 ### Conseils
 
 #### Utilisation de Liquid
 
 Si vous prévoyez d'utiliser Liquid, assurez-vous d'inclure une valeur par défaut pour votre personnalisation. Cela empêchera les destinataires ayant des profils utilisateur incomplets de recevoir un espace réservé vide. Par exemple, au lieu de recevoir le message « Salut ! », l’utilisateur pourrait recevoir le message « Salut, nouvel abonné ! ».
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 #### Création d'envois de messages de droite à gauche
 
@@ -99,7 +101,7 @@ Vous pouvez spécifier des contrôles de livraison, tels que permettre aux utili
 
 [Utilisez des segments ou des filtres pour cibler vos utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). Vous devriez déjà avoir choisi le groupe d'abonnement, ce qui restreint les utilisateurs par le niveau ou la catégorie de communication qu'ils souhaitent avoir avec vous. 
 
-Sélectionnez le plus grand public parmi vos segments, et réduisez éventuellement ce segment davantage avec nos [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). Vous recevez automatiquement un aperçu de ce à quoi ressemble la population de ce segment approximatif. N'oubliez pas que l'appartenance exacte à un segment est toujours calculée avant l'envoi du message.
+Sélectionnez le plus grand public parmi vos segments, et réduisez éventuellement ce segment davantage avec nos [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). Vous recevez automatiquement un aperçu de la population approximative de ce segment. Veuillez noter que l'appartenance exacte à un segment est toujours calculée avant l'envoi du message.
 
 ### Sélectionner des événements de conversion
 
@@ -115,7 +117,7 @@ Vous pouvez également définir des événements de conversion personnalisés pr
 {% endtab %}
 {% tab Canvas %}
 
-Si vous ne l'avez pas encore fait, complétez les sections restantes de votre Canvas. Pour plus de détails sur la manière de créer le reste de votre Canvas, d'utiliser les tests multivariés et la sélection intelligente, et plus encore, reportez-vous à la section [Créer un Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Si vous ne l'avez pas encore fait, veuillez compléter les sections restantes de votre canvas. Pour plus d'informations sur la manière de créer le reste de votre canevas, d'utiliser les tests multivariés et la sélection intelligente, etc., veuillez vous reporter à [la section Créer un canevas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 
 {% endtab %}
 {% endtabs %}

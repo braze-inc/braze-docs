@@ -41,7 +41,7 @@ O Test Connection está sendo executado em seu data warehouse, portanto, aumenta
 
 ### Erro ao conectar-se à instância do Snowflake: A solicitação de entrada com IP não tem permissão para acessar o Snowflake
 
-Tente adicionar os IPs oficiais do Braze à sua lista de permissões de IP. Para saber mais, consulte [Integrações de data warehouse]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/) ou permita os IPs relevantes:
+Tente adicionar os IPs oficiais do Braze à sua lista de permissões de IP. Para saber mais, consulte [Integrações de Data Warehouse]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/), ou permita os IPs relevantes:
 
 {% multi_lang_include data_centers.md datacenters='ips' %}
 
@@ -132,7 +132,7 @@ Se você receber esse erro, consulte [Databricks: Erro proibido ao acessar dados
 
 Cada integração tem sua própria preferência de notificação. Acesse a página do CDI e selecione o nome da integração que deseja atualizar. Na seção **Notification preferences (Preferências de notificação** ), é possível atualizar a forma como você recebe alertas referentes à integração selecionada.
 
-## O que acontecerá se um futuro UPDATED_AT for sincronizado com uma integração?
+## O que acontece se um futuro UPDATED_AT for sincronizado com uma integração?
 
 O CDI usa o site `UPDATED_AT` para decidir quais dados são novos. Depois que um `UPDATED_AT` futuro for sincronizado, todos os dados anteriores a essa data e hora futuras não serão processados. Para corrigir isso:
 
@@ -142,7 +142,7 @@ O CDI usa o site `UPDATED_AT` para decidir quais dados são novos. Depois que um
 
 ## Por que "Rows Synced" (Linhas sincronizadas) não corresponde ao número em meu depósito?
 
-O CDI usa o site `UPDATED_AT` para decidir quais registros devem ser coletados durante uma sincronização. Dê uma olhada [nesta ilustração]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) para ver como funciona. No início de uma execução de sincronização, o CDI consulta o seu armazém para obter todos os registros com `UPDATED_AT` igual ou posterior ao carimbo de data/hora `UPDATED_AT` processado anteriormente. Qualquer registro coletado no momento em que a consulta for executada será sincronizado na Braze. Aqui estão os casos comuns em que um registro pode não ser sincronizado:
+O CDI usa o site `UPDATED_AT` para decidir quais registros devem ser coletados durante uma sincronização. Dê uma olhada [nesta ilustração]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) para ver como funciona. No início de uma execução de sincronização, o CDI consulta seu data warehouse para obter todos os registros com `UPDATED_AT` iguais ou posteriores ao timestamp `UPDATED_AT` processado anteriormente. Qualquer registro coletado no momento em que a consulta for executada será sincronizado na Braze. Aqui estão os casos comuns em que um registro pode não ser sincronizado:
 
 - Você está adicionando registros à tabela com um valor `UPDATED_AT` que já foi processado.
 - Você está atualizando os valores de registro depois que eles foram processados por uma sincronização, mas deixando o site `UPDATED_AT` inalterado. 
@@ -154,7 +154,13 @@ Para evitar esses comportamentos no futuro, recomendamos usar valores `UPDATED_A
 
 ## Durante uma sincronização, a ordem é preservada se vários registros tiverem o mesmo ID?
 
-A ordem de processamento não é 100% previsível. Por exemplo, se houver várias linhas com o mesmo `EXTERNAL_ID` na tabela durante uma sincronização, não poderemos garantir qual valor será incluído no perfil final. Se estiver atualizando o mesmo `EXTERNAL_ID` com atribuições diferentes na coluna de carga útil, todas as alterações serão refletidas quando a sincronização for concluída.
+A ordem de processamento não é 100% previsível. Por exemplo, se houver várias linhas com o mesmo `EXTERNAL_ID` na tabela durante uma sincronização, não poderemos garantir qual valor será incluído no perfil final. Se você estiver atualizando o mesmo `EXTERNAL_ID` com atributos diferentes na coluna de carga útil, todas as alterações são refletidas quando a sincronização é concluída.
+
+## Por que novos usuários não estão sendo criados a partir da minha sincronização do CDI?
+
+Se sua integração do CDI tiver a opção **Atualizar apenas usuários existentes** ativada, apenas os usuários que já existem no Braze são atualizados, e novos usuários não são criados. Isso significa que se uma linha na sua tabela de sincronização referenciar um `EXTERNAL_ID` que não corresponda a nenhum usuário existente no Braze, essa linha será ignorada.
+
+Para criar novos usuários através do CDI, desative o toggle **Atualizar apenas usuários existentes** nas configurações da sua integração. Acessar **Configurações de Dados** > **Ingestão de Dados na Nuvem** e selecione uma integração.
 
 ## Quais são as medidas de segurança do CDI?
 

@@ -23,6 +23,8 @@ valid_partner_list:
   url: /docs/partners/branch_for_deeplinking/
 - name: Kochava
   url: /docs/partners/kochava/
+- name: Linkrunner
+  url: /docs/partners/linkrunner/
 - name: Singular
   url: /docs/partners/singular/
 - name: Contentful

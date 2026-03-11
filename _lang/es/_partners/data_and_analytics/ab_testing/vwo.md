@@ -35,7 +35,7 @@ Al integrar VWO con Braze, puedes aprovechar los datos de los experimentos de VW
 
    ![Habilitar la integración Braze]({% image_buster /assets/img/vwo/vwo2_enable_braze.png %})
 
-6. Cuando hayas habilitado la integración, VWO empezará a enviar datos de experimentos a Braze a nivel de campaña.
+6. Una vez habilitada la integración, VWO empezará a enviar datos de experimentos a Braze a nivel de campaña.
 
 ### Paso 2: Crear un segmento en Braze con propiedades del evento VWO
 
@@ -113,7 +113,7 @@ Si no ves los datos de VWO en Braze:
 3. Las llamadas a la red se rellenan a medida que se carga la página. Puedes recargar la página para ver las llamadas de red.
 4. Selecciona una llamada de red para ver más detalles.
 5. Ve a la sección **Carga útil de la solicitud** en la pestaña **Carga útil**, donde encontrarás los eventos: que tienen el nombre: **ce**, que indica Evento personalizado.
-6. Amplía 0: y datos: para ver n: "VWO" (nombre del evento personalizado) y p: {vwo_campaign_name: "<your vwo campaign name>", vwo_variation_name: "<variation name>"}. Indican que los valores están siendo pushados por VWO a Braze.
+6. Amplía 0: y datos: para ver n: "VWO" (nombre del evento personalizado) y p: {vwo_campaign_name: "<your vwo campaign name>", vwo_variation_name: "<variation name>"}. Indican que VWO está empujando los valores a Braze.
 
  ![Solución de problemas Braze]({% image_buster /assets/img/vwo/vwo5_troubleshooting.png %})
 

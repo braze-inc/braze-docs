@@ -42,7 +42,7 @@ Apppboy.getInstance(context).getDeviceId();
 #### iOS
 
 {% alert important %}
-Antes de fevereiro de 2023, nossa integração de atribuição da Kochava usava o Identificador de Fornecedor (IDFV) como o identificador principal para corresponder aos dados de atribuição do iOS. Não é necessário que os clientes do Braze que usam Objective C busquem o Braze `device_id` e o enviem para a Kochava durante a instalação, pois não há interrupção do serviço.
+Antes de fevereiro de 2023, nossa integração de atribuição do Kochava usava o Identificador de Fornecedor (IDFV) como o identificador principal para corresponder aos dados de atribuição do iOS. Não é necessário que os clientes do Braze que usam Objective C busquem o Braze `device_id` e o enviem para a Kochava durante a instalação, pois não há interrupção do serviço.
 {% endalert%}
 
 Para quem usa o SWIFT SDK v5.7.0+, se você deseja continuar usando o IDFV como o identificador mútuo, confirme se o campo `useUUIDAsDeviceId` está definido como `false` para que não haja interrupção da integração. Se estiver definido como `true`, implemente o mapeamento de ID do dispositivo iOS para SWIFT a fim de passar o `device_id` da Braze para a Kochava na instalação do app para que a Braze possa corresponder adequadamente as atribuições do iOS.

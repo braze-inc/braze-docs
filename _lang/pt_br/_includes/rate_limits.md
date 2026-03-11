@@ -102,17 +102,22 @@ Aplicamos um limite de taxa compartilhado de 1.000 solicitações por hora para 
 <!---/canvas/trigger/send-->
 
 {% elsif include.endpoint == "send endpoints" %}
-Ao especificar um segmento ou público conectado em sua solicitação, aplicamos um limite de frequência de 250 solicitações por minuto a esse endpoint. Caso contrário, se estiver especificando um `external_id`, esse endpoint terá um limite de frequência padrão de 250.000 solicitações por hora compartilhadas entre `/messages/send`, `/campaigns/trigger/send` e `/canvas/trigger/send`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Ao usar filtros de Público Conectado em sua solicitação, aplicamos um limite de taxa de 250 solicitações por minuto para este endpoint. Caso contrário, se estiver especificando um `external_id`, esse endpoint terá um limite de frequência padrão de 250.000 solicitações por hora compartilhadas entre `/messages/send`, `/campaigns/trigger/send` e `/canvas/trigger/send`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+
+Os endpoints da Braze suportam agrupamento de solicitações da API. Uma única solicitação para os endpoints de envio de mensagens pode alcançar qualquer um dos seguintes itens:
+
+- Até 50 sites específicos `external_ids`, cada um com parâmetros de mensagens individuais
+- Um segmento de público de qualquer tamanho, definido na solicitação como um objeto de Público Conectado.
 
 <!---/transactional/v1/campaigns/{campaign_id}/send -->
 
 {% elsif include.endpoint == "transactional email" %}
-Os e-mails de transação da Braze não estão sujeitos a um limite de frequência. Dependendo do pacote escolhido, um número definido de e-mails de transação é coberto por hora pelo SLA. As solicitações que excederem essa taxa ainda serão enviadas, mas não serão cobertas pelo SLA. 99,9% dos e-mails serão enviados em menos de um minuto.
+O endpoint `/transactional/v1/campaigns/{campaign_id}/send` é um endpoint pago em unidades por hora (por exemplo, 50.000 por hora, dependendo do seu pacote). Não há limite de taxa separado por endpoint: você pode enviar além do seu volume alocado, mas apenas o volume alocado é coberto pelo SLA. As solicitações para este endpoint contam para o seu [limite geral de taxa da API externa]({{site.baseurl}}/api/api_limits/). Se você exceder esse limite (por exemplo, 250.000 solicitações por hora em todos os endpoints), a Braze retorna 429 e as solicitações são limitadas. A contagem do volume transacional é redefinida a cada hora, então após uma hora, outra alocação está disponível. Dentro do volume coberto pelo SLA, 99,9% dos e-mails serão enviados em menos de um minuto.
 
 <!---/sends/id/create-->
 
 {% elsif include.endpoint == "sends id create" %}
-Você pode criar até 100 identificadores de envio personalizados por dia usando este endpoint para um determinado espaço de trabalho. Cada combinação de `send_id` e `campaign_id` que você criar contará para o seu limite diário. Os cabeçalhos de resposta para qualquer solicitação válida incluem o status atual do limite de taxa. Veja [limites de taxa da API]({{site.baseurl}}/api/api_limits/) para detalhes.
+Você pode criar até 100 identificadores de envio personalizados por dia usando este endpoint para um determinado espaço de trabalho. Cada combinação de `send_id` e `campaign_id` que você criar contará para o seu limite diário. Os cabeçalhos de resposta para qualquer solicitação válida incluem o status atual do limite de frequência. Veja [limites de frequência da API]({{site.baseurl}}/api/api_limits/) para mais detalhes.
 
 <!---/subscription/status/set-->
 {% elsif include.endpoint == "subscription status set" %}
@@ -159,7 +164,7 @@ Os endpoints da Braze aceitam [solicitações de API em lote]({{site.baseurl}}/a
 
 {% if include.endpoint == "translation endpoints" %}
 
-Este endpoint tem um limite de taxa de 250.000 solicitações por minuto.
+Este endpoint tem um limite de frequência de 250.000 solicitações por minuto.
 
 {% endif %}
 
@@ -204,4 +209,3 @@ Esse endpoint tem um limite de frequência compartilhado de 50 solicitações po
 Esse endpoint tem um limite de frequência de 50.000 solicitações por minuto.
 
 {% endif %}
-

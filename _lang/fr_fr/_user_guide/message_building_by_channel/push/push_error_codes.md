@@ -34,6 +34,25 @@ Les raisons peuvent inclure :
 {% endtab %}
 {% tab iOS %}
 
+### Une erreur s'est produite lors de l'envoi de la notification push en raison d'une charge utile non valide.
+
+Ce message peut apparaître dans l'onglet **Engagement** du profil utilisateur, sous **Paramètres de contact** > **Journal des modifications push,** lorsque le service Apple Notification push (APN) rejette la demande push en raison d'une charge utile non valide.
+
+Dans Braze, ce message du tableau de bord peut correspondre à l'une des raisons d'erreur APN suivantes :
+
+- `PayloadEmpty` : La charge utile ne contenait pas le contenu requis pour le type de notification envoyée.
+- `PayloadTooLarge` : La charge utile a dépassé la taille maximale autorisée par APN.
+
+Les causes courantes comprennent :
+
+- Les clés personnalisées (et leurs valeurs) peuvent rendre la charge utile trop volumineuse (cela peut inclure des valeurs rendues par Liquid qui sont plus importantes que prévu).
+- Une alerte ou un corps vide ou manquant lorsque cela est requis (ou une charge utile mal `aps`formée).
+
+Prochaines étapes :
+
+- Réduisez la taille de la charge utile en supprimant les clés personnalisées et en raccourcissant les valeurs dynamiques volumineuses.
+- Si vous effectuez l'envoi via l'API, veuillez vérifier la charge utile JSON finale (y compris la taille) avant l'envoi.
+
 ### Échec du push : BadToken
 
 L'erreur `BadToken` peut se produire pour plusieurs raisons :

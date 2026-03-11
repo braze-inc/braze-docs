@@ -29,7 +29,7 @@ Para más información sobre los componentes del panel de puntos de datos, consu
 
 {% alert tip %}
 **No desperdicies puntos de datos. ¡Actualiza solo los datos cambiantes!**<br><br>
-Para minimizar el uso de punto de datos, recomendamos configurar un programa que evite enviar los mismos datos invariables y que sólo pase datos nuevos y relevantes a Braze. Braze trabajará con usted para establecer esta práctica óptima durante la incorporación.
+Para minimizar el uso de punto de datos, recomendamos configurar un programa para evitar el envío de los mismos datos invariables y sólo pasar datos nuevos y relevantes a Braze. Braze trabajará con usted para establecer esta práctica óptima durante la incorporación.
 {% endalert %}
 
 ## Recuento de consumos

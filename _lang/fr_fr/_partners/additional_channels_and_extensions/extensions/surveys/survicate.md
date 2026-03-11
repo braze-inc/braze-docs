@@ -28,7 +28,7 @@ Braze et Survicate travaillent ensemble pour couvrir un éventail de cas d'utili
 - Automatisez les campagnes de suivi en fonction des commentaires des clients. 
 - Utilisez les informations sur les clients pour déclencher des flux de travail personnalisés. 
 - Touchez une audience plus large grâce à des enquêtes traduites automatiquement.
-- Envoyez des événements aux profils de contact de Braze lorsque quelqu'un répond à votre enquête.
+- Envoyer des événements aux profils de contact de Braze lorsque quelqu'un répond à votre enquête.
 
 ## Conditions préalables
 
@@ -187,7 +187,7 @@ Par défaut, Survicate envoie le contenu d'une réponse à une enquête en tant 
 Pour le Net Score, Survicate envoie des valeurs mappées en fonction du groupe de réponse à la question du Net Promoter Score®. Toutefois, si vous souhaitez recevoir des valeurs numériques, vous pouvez activer l'option Envoyer les réponses sous forme de valeurs 0-10.
 {% endalert %}
 
-![Survicate envoie des valeurs mappées sur la base du groupe de réponses]({% image_buster /assets/img/survicate/survicate_20.png %})
+![Survicate envoie des valeurs mappées sur la base du groupe de réponses.]({% image_buster /assets/img/survicate/survicate_20.png %})
 
 {: start="4"}
 4\. Connectez d'autres questions à votre intégration en cliquant sur **\+ Ajouter nouveau** et en appliquant les mêmes étapes.

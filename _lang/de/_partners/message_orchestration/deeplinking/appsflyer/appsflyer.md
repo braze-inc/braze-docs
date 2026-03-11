@@ -199,7 +199,7 @@ Wenn Sie fertig sind, klicken Sie auf **Weiter**.
 
 Ihr Administrator muss den Datenverkehr Ihrer E-Mail Kampagnen von den ESP Servern zu den AppsFlyer Servern umleiten, indem er Ihre DNS CNAME Einträge mit der neuen Domain aktualisiert, die AppsFlyer zur Verfügung gestellt hat.
 
-Daher wird bei jedem Klick auf einen Link der Klick an AppsFlyer weitergeleitet, der ihn wiederum an den ESP Endpunkt weiterleitet.
+Daher wird jeder Klick auf einen Link an AppsFlyer weitergeleitet, der ihn wiederum an den ESP Endpunkt weiterleitet.
 
 ![Diagramm zur Veranschaulichung, wie Klick-Daten von Ihrer Domain zu AppsFlyer und zu Ihrem ESP Endpunkt gelangen]({% image_buster /assets/img/attribution/appsflyer/6.png %})
 
@@ -235,7 +235,7 @@ Sie können Ihre OneLink Tracking-URL einfach in AppsFlyer erstellen und sie dir
 
 {% tabs local %}
 {% tab Android %}
-Für Android erlaubt Braze seinen Kund:in die [Sammlung der Google Advertising ID (GAID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id)) zu optieren. Die AppsFlyer SDK-Integration sammelt ebenfalls die GAID. Sie können die GAID in Ihre AppsFlyer Click-Tracking-Links integrieren, indem Sie die folgende Liquid-Logik verwenden:
+Für Android erlaubt Braze seinen Kund:in die [Sammlung der Google Advertising ID (GAID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id)) zu optieren. Die AppsFlyer SDK-Integration sammelt auch die GAID. Sie können die GAID in Ihre AppsFlyer Click-Tracking-Links integrieren, indem Sie die folgende Liquid-Logik verwenden:
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}

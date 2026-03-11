@@ -187,7 +187,7 @@ time > {{start_date.${custom_label}}} AND time < {{end_date.${custom_label}}}
 
 Liquid는 지정된 날짜 범위 내에서 달력을 표시하는 데 사용됩니다:
 
-![Braze에서 렌더링된 캘린더 예시입니다.]({% image_buster /assets/img_archive/query_builder_time_range.png %}){: style="max-width:50%;"}
+![Braze로 렌더링된 캘린더 예시입니다.]({% image_buster /assets/img_archive/query_builder_time_range.png %}){: style="max-width:50%;"}
 
 ### 캠페인
 

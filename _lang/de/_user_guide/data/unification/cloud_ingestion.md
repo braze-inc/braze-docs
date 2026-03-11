@@ -9,31 +9,31 @@ toc_headers: h2
 
 # Cloud-Datenaufnahme von Braze
 
-> Braze Cloud Data Ingestion (CDI) ermöglicht es Ihnen, eine direkte Verbindung von Ihrer Datenspeicherlösung einzurichten, um relevante Nutzerdaten und andere Nicht-Nutzerdaten mit Braze zu synchronisieren. Diese Daten können dann für die Personalisierung oder Segmentierung verwendet werden, um Ihre Marketing-Anwendungsfälle zu unterstützen. Die flexible Integration von Cloud Data Ingestion unterstützt komplexe Datenstrukturen, einschließlich verschachtelter JSON und Arrays von Objekten.
+> Mit Braze Cloud Datenaufnahme (CDI) können Sie eine direkte Verbindung von Ihrer Datenspeicherlösung einrichten, um relevante Nutzerdaten und andere Nicht-Nutzerdaten mit Braze zu synchronisieren. Diese Daten können anschließend für die Personalisierung oder Segmentierung verwendet werden, um Ihre Marketing-Anwendungsfälle zu optimieren. Die flexible Integration der Datenaufnahme unterstützt komplexe Datenstrukturen, einschließlich verschachtelter JSON-Dateien und Objekt-Arrays.
 
 ## Funktionsweise
 
 Mit Braze Cloud Data Ingestion (CDI) richten Sie eine Integration zwischen Ihrer Data Warehouse Instanz und dem Braze Workspace ein, um Daten auf einer wiederkehrenden Basis zu synchronisieren. Diese Synchronisierung läuft nach einem von Ihnen festgelegten Zeitplan, und jede Integration kann einen anderen Zeitplan haben. Die Synchronisierung kann so häufig wie alle 15 Minuten oder so selten wie einmal im Monat erfolgen. Wenn Sie Synchronisierungen häufiger als 15 Minuten benötigen, wenden Sie sich an Ihren Customer-Success-Manager oder ziehen Sie die Verwendung von REST API-Aufrufen für die Datenaufnahme in Echtzeit in Betracht.
 
-Bei einer Synchronisierung stellt Braze eine direkte Verbindung zu Ihrer Data Warehouse-Instanz her, ruft alle neuen Daten aus der angegebenen Tabelle ab und aktualisiert die entsprechenden Daten auf Ihrem Braze-Dashboard. Jedes Mal, wenn die Synchronisierung ausgeführt wird, werden alle aktualisierten Daten in Braze angezeigt.
+Bei einer Synchronisierung stellt Braze eine direkte Verbindung zu Ihrer Data Warehouse-Instanz her, ruft alle neuen Daten aus der angegebenen Tabelle ab und aktualisiert die entsprechenden Daten auf Ihrem Braze-Dashboard. Bei jeder Synchronisierung werden alle Updates der Daten in Braze übernommen.
 
-### Finden Sie Ihre Integration ID
+### Ihre ID für die Integration finden
 
-Sie finden Ihre Integration ID in der URL, wenn Sie eine Integration im Braze-Dashboard anzeigen. Navigieren Sie zu **Dateneinstellungen** > **Cloud-Datenaufnahme** und wählen Sie eine Integration aus. Die ID der Integration erscheint in der URL im Format `https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. Wenn Ihre URL zum Beispiel `https://dashboard-01.braze.com/integrations/cloud_data_ingestion/abc123xyz` lautet, ist Ihre Integration ID `abc123xyz`. Sie können diese ID verwenden, wenn Sie APIs aufrufen, um Synchronisierungen zu triggern oder den Synchronisierungsstatus zu überprüfen.
+Sie finden Ihre Integrations-ID in der URL, wenn Sie eine Integration im Braze-Dashboard anzeigen. Bitte navigieren Sie zu **„Dateneinstellungen“** > **„Cloud-Datenaufnahme“** und wählen Sie eine Integration aus. Die ID der Integration wird in der URL im Format angezeigt`https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. Wenn Ihre URL beispielsweise lautet`https://dashboard-01.braze.com/integrations/cloud_data_ingestion/abc123xyz`, lautet Ihre ID für die`abc123xyz` Integration . Sie können diese ID verwenden, wenn Sie API-Aufrufe durchführen, um Synchronisierungen zu triggern oder den Synchronisierungsstatus zu überprüfen.
 
 ## Anwendungsfälle
 
-Mit den Funktionen von Braze Cloud Data Ingestion können Sie:
+Mit den Funktionen zur Datenaufnahme von Braze Cloud können Sie:
 
 - Erstellen Sie in wenigen Minuten eine einfache Integration direkt von Ihrer Data-Warehouse- oder Dateispeicher-Lösung zu Braze.
-- Synchronisieren Sie Nutzerdaten, einschließlich Attribute, Ereignisse und Käufe aus Ihrem Data Warehouse sicher mit Braze.
-- Schließen Sie den Datenkreislauf mit Braze, indem Sie die Datenaufnahme in der Cloud mit Currents oder Snowflake Data Sharing kombinieren.
+- Synchronisieren Sie Nutzerdaten, einschließlich Attributen, Ereignissen und Käufen, sicher von Ihrem Data Warehouse mit Braze.
+- Schließen Sie die Datenschleife mit Braze, indem Sie die Datenaufnahme aus der Cloud mit Currents oder Snowflake Data Sharing kombinieren.
 
-Darüber hinaus sind [Connected Sources]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/connected_sources) eine Null-Kopie-Alternative. Sie können Ihre Data Warehouse- oder Dateispeicherlösung direkt von Braze abfragen lassen, um CDI-Segmente zu erstellen - und zwar ohne die zugrunde liegenden Daten nach Braze zu kopieren.
+Darüber hinaus stellen [Connected Sources]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/connected_sources) eine Zero-Copy-Alternative dar. Sie können Braze direkt Ihre Data Warehouse- oder Dateispeicher-Lösung abfragen lassen, um CDI-Segmente zu erstellen – ohne die zugrunde liegenden Daten nach Braze zu kopieren.
 
 ## Unterstützte Datenquellen
 
-Cloud Data Ingestion kann Daten von:
+Cloud Datenaufnahme kann Daten synchronisieren aus:
 
    - Amazon Redshift
    - Databricks 
@@ -53,32 +53,32 @@ Cloud Data Ingestion unterstützt die folgenden Datentypen:
    - Abo-Status
 - Angepasste Events
 - Kauf-Events
-- Anfragen zur Löschung von Nutzer:in
+- Anfragen zur Löschung von Benutzerkonten
 
-### Nicht-Nutzer:in-Objekte
+### Nicht verwendete Objekte
 - Artikel im Katalog
 
-### Null-Kopie Messaging
+### Zero-Copy-Messaging
 - Verbundene Quellen
 
-## Nutzer:innen-Bezeichner für die Datenaufnahme
+## Bezeichner für die Datenaufnahme
 
-Wenn Sie Nutzerdaten über die Datenaufnahme in der Cloud synchronisieren, können Sie Nutzer:innen mit einem oder mehreren der folgenden Bezeichner identifizieren. Jede Zeile in Ihrer Quelltabelle sollte jeweils nur einen Wert für einen Bezeichnertyp enthalten, aber Ihre Tabelle kann Spalten für einen, zwei, drei, vier oder alle fünf Bezeichnertypen enthalten.
+Bei der Synchronisierung von Nutzerdaten über die Datenaufnahme können Sie Nutzer:innen anhand eines oder mehrerer der folgenden Bezeichner identifizieren. Jede Zeile in Ihrer Quelltabelle sollte jeweils nur einen Wert für einen Bezeichner enthalten, jedoch kann Ihre Tabelle Spalten für einen, zwei, drei, vier oder alle fünf Bezeichner enthalten.
 
 | Bezeichner | Beschreibung |
 |------------|-------------|
 | `EXTERNAL_ID` | Die externe ID, die das zu erstellende oder zu aktualisierende Nutzerprofil identifiziert. Dies sollte dem in Braze verwendeten Wert `external_id` entsprechen. |
 | `ALIAS_NAME` und `ALIAS_LABEL` | Diese beiden Spalten erstellen ein Nutzer-Alias-Objekt. `alias_name` sollte ein eindeutiger Bezeichner sein, und `alias_label` gibt den Typ des Alias an. Nutzer:innen können mehrere Aliasnamen mit unterschiedlichen Labels haben, aber nur einen `alias_name` pro `alias_label`. |
-| `BRAZE_ID` | Der vom Braze SDK generierte Bezeichner für Braze Nutzer:innen. Neue Nutzer:innen können nicht mit einer Braze ID über die Cloud-Datenaufnahme erstellt werden. Um neue Nutzer:innen anzulegen, geben Sie eine externe Nutzer-ID oder einen Nutzer-Alias an. |
-| `EMAIL` | Die E-Mail Adresse des Nutzers:innen. Wenn mehrere Profile mit der gleichen E-Mail Adresse existieren, wird das zuletzt aktualisierte Profil bei Updates bevorzugt. Wenn Sie sowohl E-Mail als auch Telefon angeben, wird E-Mail als primärer Bezeichner verwendet. |
-| `PHONE` | Die Telefonnummer der Nutzer:in. Wenn mehrere Profile mit derselben Telefonnummer vorhanden sind, wird das zuletzt aktualisierte Profil bei Updates bevorzugt. |
+| `BRAZE_ID` | Der vom Braze SDK generierte Braze-Bezeichner für Nutzer:innen. Neue Nutzer:innen können nicht mithilfe einer Braze-ID über die Datenaufnahme erstellt werden. Um neue Nutzer:innen anzulegen, geben Sie eine externe Nutzer-ID oder einen Nutzer-Alias an. |
+| `EMAIL` | Die E-Mail Adresse des Nutzers:innen. Sollten mehrere Profile mit derselben E-Mail-Adresse vorhanden sein, wird das zuletzt aktualisierte Profil für Updates priorisiert. Wenn Sie sowohl E-Mail-Adresse als auch Telefonnummer angeben, wird die E-Mail-Adresse als primärer Bezeichner verwendet. |
+| `PHONE` | Die Telefonnummer der Nutzer:in. Sollten mehrere Profile mit derselben Telefonnummer vorhanden sein, wird das zuletzt aktualisierte Profil für Updates bevorzugt behandelt. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Ausführliche Informationen zum Einrichten von Tabellen mit diesen Bezeichnern finden Sie in der Dokumentation zu [Data Warehouse Integrationen]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/).
+Ausführliche Informationen zum Einrichten von Tabellen mit diesen Bezeichnern finden Sie in der Dokumentation [zu Data Warehouse-Integrationen]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/).
 
 ## Datenpunkt-Nutzung
 
-Für Kund:inen mit cloudbasierter Abrechnung entspricht die Abrechnung der Datenpunkte für die Datenaufnahme in der Cloud der Abrechnung von Updates über den [Endpunkt`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track). Weitere Informationen finden Sie unter [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points/). 
+Für Kunden mit datenpunktbasierter Abrechnung entspricht die Abrechnung von Datenpunkten für Cloud Data Ingestion der Abrechnung von Updates über den[`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track)[Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track). Weitere Informationen finden Sie unter [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points/). 
 
 {% alert important %}
 Braze Cloud Data Ingestion wird auf das verfügbare Rate-Limit angerechnet. Wenn Sie also Daten mit einer anderen Methode senden, wird das Rate-Limit zwischen der Braze API und Cloud Data Ingestion kombiniert.
@@ -88,11 +88,11 @@ Braze Cloud Data Ingestion wird auf das verfügbare Rate-Limit angerechnet. Wenn
 
 | Begrenzung            | Beschreibung                                                                                                                                                                        |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Anzahl der Integrationen | Es gibt keine Begrenzung für die Anzahl der Integrationen, die Sie einrichten können. Sie können jedoch nur eine Integration pro Tabelle oder Ansicht einrichten.                                             |
-| Anzahl der Zeilen         | Standardmäßig können pro Lauf bis zu 500 Millionen Zeilen synchronisiert werden. Alle Synchronisierungen mit mehr als 500 Millionen neuen Zeilen werden gestoppt. Wenn Sie ein höheres Limit benötigen, wenden Sie sich an Ihren Customer-Success-Manager von Braze oder an den Braze Support. |
+| Anzahl der Integrationen | Es gibt keine Begrenzung für die Anzahl der Integrationen, die Sie einrichten können. Es ist jedoch nur eine Integration pro Tabelle oder Ansicht möglich.                                             |
+| Anzahl der Zeilen         | Standardmäßig können pro Lauf bis zu 500 Millionen Zeilen synchronisiert werden. Synchronisierungen mit mehr als 500 Millionen neuen Zeilen werden unterbrochen. Wenn Sie ein höheres Limit benötigen, wenden Sie sich an Ihren Customer-Success-Manager von Braze oder an den Braze Support. |
 | Attribute pro Zeile     | Jede Zeile sollte eine einzelne Nutzer:innen ID und ein JSON-Objekt mit bis zu 250 Attributen enthalten. Jeder Schlüssel im JSON-Objekt zählt als ein Attribut (d.h. ein Array zählt als ein Attribut). |
-| Größe der Nutzlast           | Jede Zeile kann eine Nutzlast von bis zu 1 MB enthalten. Nutzdaten, die größer als 1 MB sind, werden zurückgewiesen, und der Fehler "Payload was greater than 1MB" wird zusammen mit der zugehörigen externen ID und der abgeschnittenen Nutzdaten im Synchronisierungsprotokoll protokolliert. |
+| Größe der Nutzlast           | Jede Zeile kann eine Nutzlast von bis zu 1 MB enthalten. Nutzdaten, die größer als 1 MB sind, werden abgelehnt, und der Fehler „Nutzdaten waren größer als 1 MB” wird zusammen mit der zugehörigen externen ID und den gekürzten Nutzdaten im Synchronisierungsprotokoll vermerkt. |
 | Datentyp              | Sie können Nutzer:innen-Attribute, Ereignisse und Käufe über die Datenaufnahme in der Cloud synchronisieren.                                                                                                  |
 | Braze Region           | Dieses Produkt ist in allen Braze Regionen erhältlich. Jede Braze-Region kann sich mit jeder Daten-Quellregion verbinden.                                                                              |
-| Quelle Region       | Braze stellt eine Verbindung zu Ihrem Data Warehouse oder Ihrer Cloud-Umgebung in jeder Region oder bei jedem Cloud-Anbieter her.                                                                                        |
+| Quelle Region       | Braze stellt eine Verbindung zu Ihrem Data Warehouse oder Ihrer Cloud-Umgebung in jeder Region und bei jedem Cloud-Anbieter her.                                                                                        |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

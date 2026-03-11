@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Oracle Crowdtwist
 
-> [Oracle Crowdtwist](https://www.oracle.com/uk/cx/marketing/customer-loyalty/) est une solution de fidélisation de la clientèle native dans le cloud qui permet aux marques d'offrir des expériences clients personnalisées. Leur solution propose plus de 100 parcours d'engagement prêts à l'emploi, ce qui permet aux marketeurs d'obtenir rapidement une vue plus complète du client.
+> [Oracle Crowdtwist](https://www.oracle.com/uk/cx/marketing/customer-loyalty/) est une solution de fidélisation des clients native dans le cloud qui permet aux marques d'offrir des expériences clients personnalisées. Leur solution propose plus de 100 parcours d'engagement prêts à l'emploi, ce qui permet aux marketeurs d'obtenir rapidement une vue plus complète du client.
 
 La fonctionnalité Data Push d'Oracle Crowdtwist permet de transmettre les métadonnées d'un utilisateur ou d'un événement à chaque fois qu'une mise à jour se produit dans la plateforme de Crowdtwist.
 
@@ -19,7 +19,7 @@ Ce guide explique comment intégrer les flux Live Push du profil utilisateur, de
 
 * [Activité de l'utilisateur en ligne/en production/instantanée](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/LivePushUserActivity.html): Comprend des données sur l'achèvement des activités des utilisateurs.
 
-* [En ligne/en production/instantanée](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/LivePushUserRedemption.html): Comprend des données sur l'utilisation des récompenses par les utilisateurs. 
+* En [ligne/en production/instantanée](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/LivePushUserRedemption.html): Comprend des données sur l'utilisation des récompenses par les utilisateurs. 
 
 En utilisant un modèle de transformation de données Braze, vous pouvez filtrer les éléments de la poussée de données qui ne sont pas pertinents pour Braze, et attribuer les valeurs nécessaires dans Braze afin qu'elles puissent être exploitées par les "destinations" disponibles.
 
@@ -31,7 +31,7 @@ Par exemple, utilisez un Data Push pour transmettre à Braze des événements et
 | Condition | Description |
 | --- | --- |
 | Compte Oracle Crowdtwist | Un [compte Oracle Crowdtwist](https://www.oracle.com/uk/cx/marketing/customer-loyalty/) est nécessaire pour profiter de ce partenariat. |
-| Braze Data Transformation Endpoint (Point final de transformation des données)| Cette intégration repose sur l' [outil de transformation des données de]({{site.baseurl}}/user_guide/data/data_transformation/overview) Braze. Lorsque vous créez une transformation de données, Braze génère un endpoint unique que vous pouvez ajouter comme destination pour le Data Push de Crowdtwist.|
+| Braze Data Transformation Endpoint (point final de transformation des données)| Cette intégration repose sur l' [outil de transformation des données de]({{site.baseurl}}/user_guide/data/data_transformation/overview) Braze. Lorsque vous créez une transformation de données, Braze génère un endpoint unique que vous pouvez ajouter comme destination pour le Data Push de Crowdtwist.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Intégration
@@ -42,7 +42,7 @@ Braze et Oracle Crowdtwist ont créé des [modèles de transformation de donnée
 
 Naviguez vers **Paramètres des données > Transformation des données > Créer des transformations > Utiliser un modèle** > et sélectionnez le modèle "BRAZE <> CROWDTWIST" de votre choix. 
 
-Vous trouverez quatre modèles, un pour transformer les événements Profil utilisateur, Activité utilisateur et Remboursement utilisateur, et un modèle principal qui utilise une logique conditionnelle pour s'appliquer à divers événements Data Push.
+Vous trouverez quatre modèles, l'un pour transformer les événements Profil utilisateur, Activité utilisateur et Remboursement utilisateur, et un modèle principal qui utilise une logique conditionnelle pour s'appliquer à divers événements Data Push.
 
 Comme le montre la [documentation d'Oracle Crowdtwist sur le Data Push](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/DataPush.html), les objets Data Push contiennent des métadonnées différentes, de sorte que chacun nécessite son propre code de transformation pour créer les objets Braze appropriés. Le modèle principal illustre comment configurer une seule transformation de données pour accepter chacun des trois types d'objets et créer une sortie appropriée avec les valeurs de chaque objet.
 

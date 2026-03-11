@@ -40,7 +40,7 @@ La mayoría de las leyes sobre privacidad definen tres partes interesadas princi
 
 En relación con los Servicios Braze:
 
-- Los sujetos de los datos son, por ejemplo, los usuarios finales de tu aplicación de cliente (e.g., tus clientes/clientes) o tus empleados que son usuarios del panel en tu instancia de los Servicios Braze.
+- Los sujetos de los datos son, por ejemplo, los usuarios finales de tu aplicación de cliente (e.g., tus clientes/clientes) o tus empleados que son usuarios de la empresa en tu instancia de los Servicios Braze.
 - Tú, el cliente de Braze, eres el controlador de datos que decide cómo y por qué se recopilarán y procesarán los Datos Personales de los interesados dentro de los Servicios de Braze.
 - Braze es un procesador de datos que procesa Datos Personales en los Servicios Braze en tu nombre y de acuerdo con las instrucciones que recibimos de ti.
 

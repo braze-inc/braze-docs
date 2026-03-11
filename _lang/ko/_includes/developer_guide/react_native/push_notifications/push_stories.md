@@ -1,8 +1,8 @@
-{% multi_lang_include developer_guide/prerequisites/react_native.md %} [푸시 알림도 설정해야]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native) 합니다.
+{% multi_lang_include developer_guide/prerequisites/react_native.md %} 푸시 알림을 [설정해야 합니다]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
 
-## 푸시 스토리 인에이블먼트
+## 푸시 스토리 활성화
 
-React Native 소프트웨어 개발 키트의 경우 **푸시 스토리는 기본값으로 Android에 사용할 수 있습니다**.
+React Native SDK의 경우, **푸시 스토리는 Android에서 기본값으로 제공됩니다**.
 
 Expo를 사용하여 iOS에서 푸시 스토리를 활성화하려면 애플리케이션에 대한 앱 그룹이 정의되어 있는지 확인합니다. 자세한 내용은 [앱 그룹 추가하기를]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/#adding-an-app-group) 참조하세요.
 

@@ -12,7 +12,7 @@ alias: /whatsapp_quick_replies/
 
 # Envio de mensagens do usuário
 
-> O WhatsApp é um canal de comunicação bidirecional. Sua marca não só pode enviar mensagens aos usuários, mas eles também podem se engajar em conversas usando campanhas de modelos e Canvas. Há várias maneiras de fazer isso, incluindo respostas rápidas do WhatsApp, mensagens em lista e palavras disparadoras. As chamadas para ação (CTAs) de resposta rápida e de lista de mensagens são uma ótima maneira de incentivar o engajamento do usuário com seu envio de mensagens do WhatsApp.
+> O WhatsApp é um canal de comunicação bidirecional. Sua marca não só pode enviar mensagens aos usuários, mas eles também podem se engajar em conversas usando campanhas de modelos e Canvas. Há várias maneiras de fazer isso, incluindo respostas rápidas do WhatsApp, mensagens em lista e palavras disparadoras. As chamadas para ação (CTAs) de resposta rápida e de lista de mensagens são uma ótima maneira de incentivar o engajamento do usuário com o envio de mensagens pelo WhatsApp.
 
 ## Gatilhos baseados em ações 
 
@@ -91,7 +91,7 @@ Provavelmente, você desejará uma mensagem de resposta para cada resposta. Reco
 
 Note que você pode usar quaisquer ações subsequentes que o Braze Canvas oferece, como mensagens em resposta, atualizações de perfil de usuário ou webhooks Braze-to-Braze. 
 
-## Envio de mensagens
+## Mensagem em lista
 
 As mensagens de lista aparecem como um corpo de mensagem com uma lista de opções clicáveis. Cada lista pode ter várias seções, e cada lista pode ter até 10 linhas.
 
@@ -113,7 +113,7 @@ Adicione um nome de **botão de lista** que os usuários selecionarão para exib
 
 - **Seção:** Adicione até 10 seções para agrupar e organizar os itens da lista. Por exemplo, um varejista de roupas pode usar seções para organizar por estilos sazonais (como primavera, verão, outono e inverno) ou itens de vestuário (como blusas, calças e sapatos).
 - **Fila:** Adicione até 10 linhas, ou itens de lista, em todas as seções.
-- **Descrição da linha (opcional):** Adicione uma descrição opcional a todas as linhas (itens de lista).
+- **Descrição da linha (opcional):** Adicionar uma descrição opcional a todas as linhas (itens de lista).
 
 ![A seção "List content" foi preenchida com duas seções e várias linhas e descrições de linhas.]({% image_buster /assets/img/whatsapp/list_content.png %}){: style="max-width:60%;"}
 
@@ -133,7 +133,7 @@ Continue a desenvolver seu Canva.
 
 ### Criação de jornadas de ação para descrições longas
 
-Se você tiver descrições de linhas, deverá usar o **regex Matches** para especificar uma linha. Por exemplo, se você quiser especificar uma linha com a descrição "Nosso novo estilo que se ajusta ao seu par favorito de botas de cano alto", poderá usar [regex]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/) com "ankle boots".
+Se você tiver descrições de linhas, deverá usar **Matches regex** para especificar uma linha. Por exemplo, se você quiser especificar uma linha com a descrição "Nosso novo estilo que se ajusta ao seu par favorito de botas de cano alto", poderá usar [regex]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/) com "ankle boots".
 
 ![Um disparo do WhatsApp usando o filtro para "Matches regex" para capturar mensagens de resposta com "ankle boots".]({% image_buster /assets/img/whatsapp/regex_list_message.png %})
 
@@ -148,7 +148,7 @@ Os seguintes eventos desbloqueiam as mensagens de resposta:
 
 ![Uma etapa de entrada baseada em ação com o disparo "Enviar uma mensagem de entrada do WhatsApp".]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message_trigger.png %})
 
-- [Entrada disparada por API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/)
+- [Entrada disparada pela API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/)
 - Envio de mensagens de entrada do produto 
   - [`ecommerce.cart_updated`]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/?tab=ecommerce.cart_updated#types-of-ecommerce-recommended-events) evento
 

@@ -121,7 +121,7 @@ Cuando conectes más de una tienda, los siguientes atributos se sincronizarán c
 
 #### Eventos recomendados en eCommerce 
 
-Cuando conectes varias tiendas, los eventos recomendados de comercio electrónico entrantes incluirán una propiedad de evento de origen. Esta propiedad identifica la URL de la tienda en la que se originó el evento, lo que te permite utilizar esta información para la segmentación o para desencadenar casos de uso específicos.
+Cuando conectas varias tiendas, los eventos recomendados de comercio electrónico entrantes incluirán una propiedad de evento de origen. Esta propiedad identifica la URL de la tienda en la que se originó el evento, lo que te permite utilizar esta información para la segmentación o para desencadenar casos de uso específicos.
 
 ![Un Canvas basado en acciones con un desencadenante para introducir a los usuarios que realizan el evento personalizado `ecommerce.order_placed`.]({% image_buster /assets/img/Shopify/ecommerce_order_placed.png %}){: style="max-width:80%;"}
 

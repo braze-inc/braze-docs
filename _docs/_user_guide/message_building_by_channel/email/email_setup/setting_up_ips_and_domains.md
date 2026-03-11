@@ -44,7 +44,7 @@ We'll check your setup and validate all information in our internal systems. The
 
 This method will set up one sending domain, one tracking domain, and one IP in total for a company. If you're planning to set up more, please consult with Braze Onboarding team (method 1).
 
-{% include early_access_beta_alert.md feature='This self-service email setup feature' type='beta' %}
+{% multi_lang_include early_access_beta_alert.md feature='This self-service email setup feature' type='beta' %}
 <br>If you're using the self-service email setup feature, be sure to also consult with the Braze Onboarding team.
 
 ### Prerequisites
@@ -52,12 +52,12 @@ This method will set up one sending domain, one tracking domain, and one IP in t
 To use self-service email setup, you must meet the following prerequisites:
 
 1. You are a new customer in onboarding.
-2. You have the "Can Manage Company Settings" company-level permission.
+2. You have the "Manage Company Settings" company-level permission.
 
 ### Step 1: Begin setup
 
 1. Go to **Settings** > **Admin Settings** under **Company Settings**. 
-2. Next, select the **Sender Verification** tab. To view this tab, you must have the "Can Manage Company Settings" company-level permission.
+2. Next, select the **Sender Verification** tab. To view this tab, you must have the "Manage Company Settings" company-level permission.
 3. Click the **Start setup** button.
 
 ### Step 2: Add and verify a sending domain

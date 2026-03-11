@@ -22,7 +22,7 @@
 자동 등록을 위한 활동 생명주기 콜백을 사용하는 경우, 이 단계를 완료하지 마십시오.
 {% endalert %}
 
-당신의 [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate())에서 [`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html)를 호출하십시오:
+당신의 [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate())에서 [`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html)을 호출하십시오:
 
 {% subtabs %}
 {% subtab JAVA %}

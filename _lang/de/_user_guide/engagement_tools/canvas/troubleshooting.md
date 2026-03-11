@@ -1,13 +1,13 @@
 ---
 nav_title: Fehlersuche
-article_title: Fehlerbehebung Canvase
+article_title: Fehlerbehebung bei Canvases
 page_order: 11
 page_type: reference
 description: "Diese Seite enthält Schritte zur Fehlerbehebung für Canvase."
 tool: Canvas
 ---
 
-# Fehlerbehebung Canvase
+# Fehlerbehebung bei Canvases
 
 > Diese Seite hilft Ihnen bei der Fehlerbehebung von Problemen mit Ihren Canvase.
 
@@ -26,9 +26,9 @@ Wenn das angepasste Event angezeigt wird, gehen Sie zur weiteren Fehlerbehebung 
 In-App-Nachrichten können nur durch Ereignisse ausgelöst werden, die über das SDK gesendet werden, nicht über die REST API.
 {% endalert %}
 
-## Warum wird mein Canvas nicht wie erwartet gesendet?
+## Warum wird meine Canvas-Nachricht nicht wie erwartet versendet?
 
-Canvase sind robust und komplex, und wir wissen, dass Sie viel Zeit und Sorgfalt aufwenden, um sie zu gestalten. Wenn Sie also feststellen, dass Ihr Canvas nicht so gesendet wird, wie Sie es wünschen, empfehlen wir Ihnen, Ihren Zeitplan, die Zielgruppen für den Eingang und die Einstellungen für den Eingang zu überprüfen und die Schritte zur [Erstellung eines Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) noch einmal zu lesen.
+Canvase sind robust und komplex, und wir wissen, dass Sie viel Zeit und Sorgfalt aufwenden, um sie zu gestalten. Sollten Sie feststellen, dass Ihr Canvas nicht wie gewünscht versendet wird, empfehlen wir Ihnen, Ihren Canvas-Zeitplan, die Zielgruppe und die Einstellungen zu überprüfen und die Schritte zum [Erstellen eines Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) zu überprüfen.
 
 ### Zeitplan
 
@@ -48,21 +48,29 @@ Beachten Sie die folgenden Fragen zu Ihrer Zielgruppe:
 
 - Haben Sie das richtige Segment ausgewählt?
 - Wie wird das Segment eingerichtet?
-- Haben Sie bestätigt, dass das Segment irgendwelche Nutzer:innen enthält?
+- Haben Sie überprüft, ob das Segment Nutzer:innen enthält?
 - Haben Sie zusätzliche Filter hinzugefügt, um die Anzahl der Nutzer:innen im Canvas zu begrenzen?
 - Sind die Nutzer:innen qualifiziert, die erste Stufe Ihrer Varianten zu erhalten? Wenn der erste Schritt Ihres Canvas beispielsweise eine Push-Benachrichtigung ist, die Zielgruppen für den Eingang aber alle Push-fähig sind, werden keine Nutzer:innen Nachrichten erhalten.
 
-## Warum hat sich meine Zielgruppe nicht gleichmäßig zwischen der Kontrollgruppe und der Variante aufgeteilt?
+## Warum haben am Tag der Zeitumstellung keine Nutzer:innen an meinem täglich im Zeitplan stehenden Canvas-Kurs teilgenommen?
 
-Bei der Erstellung Ihres Canvas haben Sie vielleicht erwartet, dass sich Ihre Zielgruppe gleichmäßig auf Ihre Kontrollgruppe und Ihre Variante aufteilt, wie in dem folgenden [Anwendungsfall](#use-case). Lassen Sie uns besprechen, warum das so ist und wie Sie das Problem lösen können!
+An Tagen, an denen die Sommerzeit beginnt oder endet, können täglich im Zeitplan aufgeführte Canvases bis zu einer Stunde früher oder später als üblich ausgeführt werden. Wenn Ihre Teilnahmekriterien auf benutzerdefinierten Attributen oder Ereignissen mit Zeitstempeln basieren, die innerhalb einer Stunde vor der geplanten Teilnahmezeit liegen, sind Nutzer:innen möglicherweise am Tag der Zeitumstellung noch nicht teilnahmeberechtigt, da das Attribut oder Ereignis noch nicht protokolliert wurde.
 
-Welcher Gruppe ein Nutzer:in beitritt, hängt von seinen Einstellungen ab. Dies kann entweder die Kontrollgruppe oder die Variante sein. Ein Nutzer:innen betritt ein Canvas, wenn er alle von Ihnen im [Eingangsschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/?tab=entry%20schedule#step-12-determine-your-canvas-entry-schedule) definierten Kriterien erfüllt. Bei der Einrichtung Ihres Canvas legen Sie fest, welcher Prozentsatz der Nutzer:innen jede Variante und die Kontrollgruppe betreten wird.
+Nehmen wir beispielsweise an, dass Nutzer:innen in der Regel um 3:00 p.mUhr in der Zeitzone Ihres Canvas ein Update für die angepassten Attribute erhalten und Ihr Canvas täglich um 3:30 p.mUhr in derselben Zeitzone ausgeführt wird. An einem Tag, an dem die Sommerzeit beginnt, kann Canvas Nutzer:innen bis zu einer Stunde früher als üblich in Bezug auf dieses Attribut-Update bewerten – bevor das Attribut protokolliert wurde. Wenn die Wiederteilnahme deaktiviert ist, können Nutzer:innen, die an vorherigen Tagen teilgenommen haben, nicht erneut teilnehmen, was zu null Eingängen für diesen Tag führt.
+
+Um dies zu vermeiden, stellen Sie bitte sicher, dass Ihre angepassten Attribut- oder Ereignisaktualisierungen mehr als eine Stunde vor der geplanten Eingabezeit von Canvas erfolgen.
+
+## Warum hat sich meine Zielgruppe nicht gleichmäßig auf die Kontrollgruppe und die Variantengruppe verteilt?
+
+Bei der Erstellung Ihres Canvas haben Sie möglicherweise erwartet, dass sich Ihre Zielgruppe gleichmäßig auf Ihre Kontrollgruppe und Ihre Variantengruppe aufteilt, wie im folgenden [Anwendungsfall](#use-case) dargestellt. Lassen Sie uns erörtern, warum dies der Fall ist und wie man das Problem beheben kann.
+
+Welcher Gruppe ein Nutzer:in beitritt, hängt von seinen Einstellungen ab. Dies kann entweder die Kontrollgruppe oder die Variante sein. Eine Nutzer:in gelangt in einen Canvas, wenn sie alle Ihre im [Eingang]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/?tab=entry%20schedule#step-12-determine-your-canvas-entry-schedule) definierten Kriterien erfüllt. Bei der Einrichtung Ihres Canvas legen Sie fest, welcher Prozentsatz der Nutzer:innen in jede Variante und in die Kontrollgruppe aufgenommen wird.
 
 Wenn Ihre Kontrollgruppe im Vergleich zu Ihrer Variante groß ist (was nicht Ihre Absicht ist), empfehlen wir Folgendes:
-1. Setzen Sie den Zielgruppen-Filter für Ihren Eingang auf **Foreground Push Enablement**.
-2. Setzen Sie den Zielgruppen-Filter für Ihren Eingang auf **Push-Abonnement-Status**, **E-Mail-Abonnement-Status** oder beides auf **Opt-in** oder **Abonnent**.
+1. Bitte stellen Sie Ihren Eingangs-Zielgruppen-Filter auf **„Foreground Push aktiviert“** ein.
+2. Stellen Sie Ihren Zielgruppen-Filter für **den Push-Abonnementstatus**, **den E-Mail-Abonnementstatus** oder beides auf **„Opt-in“** oder **„Subscribed“** ein.
 
-Bestätigen Sie bei der Erstellung eines Canvas mit einer Kontrollgruppe, dass alle Nutzer:innen des Eingangs in der Lage sind, Nachrichten innerhalb des Canvas zu empfangen (z.B. wenn das Canvas Push- und E-Mail-Nachrichten enthält).
+Bitte stellen Sie bei der Erstellung eines Canvas mit einer Kontrollgruppe sicher, dass alle Nutzer:innen in den Zielgruppen Nachrichten innerhalb des Canvas empfangen können (z. B. wenn der Canvas Push- und E-Mail-Nachrichten enthält).
 
 ### Anwendungsfall
 
@@ -71,12 +79,12 @@ Stellen wir uns das folgende Szenario vor:
 - Der erste Schritt bei dieser Variante ist eine Push-Benachrichtigung.
 - 90% der Nutzer:innen wurden für die Variante ausgewählt, 10% für die Kontrollgruppe.
 
-![Canvas-Beispiel mit 90% Variante und 10% Kontrollgruppe.]({% image_buster /assets/img_archive/trouble15.png %})
+![Canvas-Beispiel mit einer 90-prozentigen Variante und einer 10-prozentigen Kontrollgruppe.]({% image_buster /assets/img_archive/trouble15.png %})
 
 In diesem Szenario werden 90% der Nutzer:innen, die den Canvas betreten, die Variante eingeben. 
 
-Wenn wir uns die aktiven Nutzer:innen ansehen, stellen wir fest, dass zwar 29,8k Nutzer:innen enthalten sind, aber nur 64% von ihnen Push aktiviert haben:
+Betrachtet man die aktiven Nutzer:innen, so stellt man fest, dass von den insgesamt 29,8 Tausend Nutzer:innen nur 64 % Push-Benachrichtigungen aktiviert haben:
 
-![Segmente mit dem Filter "Push Enabled" auf "true" und geschätzten Nutzer:innen von 29,8k.]({% image_buster /assets/img_archive/trouble16.png %})
+![Segment mit dem Filter „Push aktiviert“ auf „true“ gesetzt und geschätzten 29,8 Tausend Nutzer:innen.]({% image_buster /assets/img_archive/trouble16.png %})
 
 Das bedeutet, dass nicht alle Nutzer:innen eine Push-Benachrichtigung erhalten können, auch wenn wir 90% der Nutzer:innen für die Variante angegeben haben. Diese Nutzer:innen, die keine Push-Benachrichtigung erhalten können, werden die Variante trotzdem eingeben.

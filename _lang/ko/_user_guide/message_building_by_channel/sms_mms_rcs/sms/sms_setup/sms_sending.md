@@ -1,5 +1,5 @@
 ---
-nav_title: SMS 메시지 보내기
+nav_title: SMS 메시지 전송
 article_title: SMS 메시지 전송 개요
 page_order: 4
 alias: /sms_message_sending/

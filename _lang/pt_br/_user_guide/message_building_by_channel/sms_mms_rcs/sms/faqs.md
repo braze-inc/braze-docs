@@ -88,7 +88,7 @@ Antes de enviar mensagens SMS contendo URLs para usuários em determinados país
 Quando vários perfis de usuários que compartilham um número de telefone (ativado para SMS) forem elegíveis para uma campanha baseada em ação ou um componente do Canvas ao mesmo tempo, disparado pelo evento de um SMS recebido, o Braze fará a deduplicação dos usuários no nível do componente do Canvas. Isso impedirá que os usuários recebam mais de um texto SMS para um componente do Canva, mesmo que vários usuários compartilhem o mesmo número de telefone. 
 
 {% alert note %}
-O Braze não faz a deduplicação por número de telefone para as telas agendadas.
+O Braze não faz a deduplicação por número de telefone para as telas programadas.
 {% endalert %}
 
 O Braze usará o seguinte fluxo para determinar o perfil do destinatário:

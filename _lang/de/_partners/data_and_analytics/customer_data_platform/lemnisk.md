@@ -16,14 +16,14 @@ _Diese Integration wird von Lemnisk gepflegt._
 
 ## Über die Integration
 
-Die Integration von Lemnisk und Braze ermöglicht es Marken und Unternehmen, das volle Potenzial von Braze auszuschöpfen, indem sie als CDP-geführte Intelligenzschicht fungiert, die Nutzerdaten plattformübergreifend in Realtime zusammenführt und die gesammelten Nutzer:innen-Informationen und Verhaltensdaten in Echtzeit an Braze sendet. Lemnisk liefert angereicherte Kundenprofile direkt in Braze, indem es Verhaltenssignale und persönliche Attribute zusammenführt, mit denen Sie Ihr Messaging mit tieferem Kontext anpassen können.
+Die Integration von Lemnisk und Braze erlaubt es Marken und Unternehmen, das volle Potenzial von Braze auszuschöpfen, indem sie als CDP-geführte Intelligenzschicht fungiert, die Nutzerdaten plattformübergreifend in Realtime zusammenführt und die gesammelten Nutzer:innen-Informationen und Verhaltensdaten in Echtzeit an Braze sendet. Lemnisk liefert angereicherte Kundenprofile direkt in Braze, indem es Verhaltenssignale und persönliche Attribute zusammenführt, mit denen Sie Ihr Messaging mit tieferem Kontext anpassen können.
 
 ## Voraussetzungen
 
 | Anforderung | Beschreibung |
 | --- | --- |
 | Lemnisker Konten | Um die Vorteile dieser Partnerschaft zu nutzen, benötigen Sie ein [Lemnisk-Konto](https://www.lemnisk.co/). |
-| Externe API in Lemnisk | Kontaktieren Sie Ihren Lemnisk CSM, um **externe APIs** für Ihr Konto zu aktivieren. |
+| Externe API in Lemnisk | Wenden Sie sich an Ihren Lemnisk CSM, um die **externe API** für Ihr Konto zu aktivieren. |
 | Braze REST API-Schlüssel | Ein REST API-Schlüssel von Braze mit der Berechtigung `users.track`. <br><br> Dieser kann im Braze-Dashboard unter **Einstellungen** > **API-Schlüssel** erstellt werden. |
 | Braze REST Endpunkt | Ihre URL für den REST-Endpunkt. Ihr Endpunkt hängt von der [Braze-URL für Ihr Konto]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints#api-and-sdk-endpoints) ab. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}

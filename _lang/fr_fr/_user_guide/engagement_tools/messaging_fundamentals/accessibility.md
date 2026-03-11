@@ -1,16 +1,16 @@
 ---
 nav_title: Accessibilité
-article_title: Créer des messages accessibles en Braze
+article_title: Créer des messages accessibles dans Braze
 page_order: 0.5
 page_type: reference
 description: "Cet article de référence explique pourquoi il est important de prendre en compte l’accessibilité dans votre contenu marketing et comment vous pouvez créer des messages accessibles dans Braze."
 ---
 
-# Créer des messages accessibles en Braze
+# Créer des messages accessibles dans Braze
 
 > Comprenez pourquoi l'accessibilité est importante à prendre en compte dans votre contenu marketing, et comment vous pouvez créer des messages accessibles dans Braze. Pour plus de conseils, consultez notre cours d'apprentissage sur [les fondements de l'envoi de messages accessibles](https://learning.braze.com/accessible-messaging-foundations) sur Braze.
 
-Le contenu marketing qui exclut les personnes présentant un handicap, même involontairement, peut empêcher des millions de personnes d’interagir avec votre marque. L'accessibilité en marketing consiste à permettre à chacun de faire l'expérience de votre marketing, de comprendre votre communication et d'avoir la possibilité d'investir dans votre produit, votre service ou votre marque ou d'en devenir fan. 
+Le contenu marketing qui exclut les personnes présentant un handicap, même involontairement, peut empêcher des millions de personnes d’interagir avec votre marque. L'accessibilité en marketing consiste à permettre à chacun de découvrir votre marketing, de comprendre votre communication et d'avoir la possibilité d'investir dans votre produit, service ou marque, ou d'en devenir un adepte. 
 
 Lorsque vous concevez vos envois de message, prenez le temps de réfléchir à la façon dont vous pouvez rendre vos conceptions accessibles à tous vos clients.
 
@@ -241,7 +241,7 @@ Les cibles tactiles sont toutes les parties de votre message sur lesquelles les 
 Lorsque les cibles tactiles sont trop petites ou trop proches les unes des autres, il peut être frustrant, voire impossible, pour les utilisateurs ayant des problèmes de mobilité ou de dextérité d'interagir avec votre message. L'amélioration de cet aspect peut contribuer à réduire les erreurs et à créer une expérience plus fluide pour tout le monde.
 
 Voici ce qu'il faut retenir :
-- **Utilisez une taille de ciblage adéquate.** Visez une taille minimale de 44 x 44 pixels pour les cibles tactiles. Ceci est conforme aux directives WCAG 2.2 pour les [ciblages tactiles](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) et aux normes courantes de convivialité mobile.
+- **Veuillez utiliser une taille de cible tactile adéquate.** Visez une taille minimale de 44 x 44 pixels pour les cibles tactiles. Ceci est conforme aux directives WCAG 2.2 pour les [ciblages tactiles](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) et aux normes courantes de convivialité mobile.
 - **Donnez à chaque cible une marge de manœuvre.** Si les cibles de tapotement sont trop proches les unes des autres, comme des liens empilés ou des boutons étroitement groupés, il peut être facile de les manquer ou de tapoter sur la mauvaise cible. Ajoutez de l'espacement ou du rembourrage entre les éléments pour éviter cela.
 - **Ne vous fiez pas uniquement aux images.** Même les petites icônes peuvent être rendues plus utilisables grâce à un rembourrage supplémentaire, ce qui leur permet de respecter les exigences minimales en matière de taille sans modifier la mise en page.
 - **Prévisualisation sur mobile.** Testez votre message sur différentes tailles d'écran et assurez-vous que les éléments interactifs sont faciles à utiliser.

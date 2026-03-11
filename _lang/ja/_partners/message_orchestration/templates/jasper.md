@@ -81,7 +81,7 @@ _この統合はJasperによって維持されています。_
 ### サンプルリクエスト
 
 {% raw %}
-```json
+```bash
 curl --location 'https://api.jasper.ai/v1/templates/skl_BC53D8AC5B4B47E8BE557EBB706E9B47/run?toneId=ton_811696974b3c4db4b3ac0041685c3b7c&knowledgeIds=kno_0a62fc17529e4fe69a71f30b6f0e88a7&audienceId=aud_0199117a690a7cc98481f8700916e2a6' \
 --header 'Content-Type: application/json' \
 --header 'x-api-key: ••••••' \
@@ -122,7 +122,7 @@ curl --location 'https://api.jasper.ai/v1/templates/skl_BC53D8AC5B4B47E8BE557EBB
 
 ### メール テンプレートを作成するためのBraze APIリクエストの例
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-03.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <YOUR_BRAZE_API_KEY>' \
@@ -176,7 +176,7 @@ Jasper Studio は、IT サポートを必要とせずにカスタマイズされ
 ## Braze API リクエストの例(カスタムアプリアウトプットを使用)
 
 {% raw %}
-```json
+```bash
 curl --location --request POST 'https://rest.iad-03.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <YOUR_BRAZE_API_KEY>' \

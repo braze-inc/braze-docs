@@ -58,7 +58,7 @@ Se as solicitações ao host de destino forem interrompidas pelo detector de hos
 Se achar que a detecção de host não saudável pode estar causando problemas, entre em contato com o [suporte da Braze]({{site.baseurl}}/support_contact/).
 
 {% alert note %}
-Você pode permitir que URLs específicos da lista sejam usados para o Connected Content. Para acessar esse recurso, entre em contato com o gerente de sucesso do cliente.
+Você pode permitir que URLs específicos da lista sejam usados para Connected Content. Para acessar esse recurso, entre em contato com o gerente de sucesso do cliente.
 {% endalert %}
 
 {% alert tip %}
@@ -199,7 +199,7 @@ Braze Sender 75e404755ae1270441f07eb238f0faf25e44dfdc
 ```
 
 {% alert tip %}
-Lembre-se de que o valor do hash muda regularmente. Se você estiver filtrando o tráfego por `User-Agent`, permita todos os valores que começam com `Braze Sender`.
+Lembre-se de que o valor do hash muda regularmente. Se estiver filtrando o tráfego por `User-Agent`, permita todos os valores que começam com `Braze Sender`.
 {% endalert %}
 
 ## Solução de problemas

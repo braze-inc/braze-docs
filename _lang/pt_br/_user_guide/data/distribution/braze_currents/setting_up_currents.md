@@ -8,7 +8,7 @@ tool: Currents
 search_rank: 8
 ---
 
-# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"} Set up Currents
+# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"}Configurar Currents
 
 > Esta página delineia e descreve o processo genérico de integração e configuração do Braze Currents.
 
@@ -26,10 +26,10 @@ Os requisitos a seguir são os requisitos básicos e mínimos para a integraçã
 
 | Requisito | Origin | Acesso | Descrição
 |---|---|---|---|
-| Conta com parceiro | Organize uma conta com esse parceiro ou entre em contato com seu gerente de conta Braze para obter sugestões. | Verifique o site do parceiro ou entre em contato com ele para inscrever-se. | O Braze não enviará dados a um Parceiro se você não tiver acesso a esses dados por meio da conta de sua empresa.
-| Chave ou token da API do parceiro | Normalmente, o dashboard do parceiro. | Copie e cole-o no campo Braze designado. | A Braze tem um campo designado para isso na página Integrações para esse parceiro. Precisamos disso para mapear para onde enviamos seus dados. **Mantenha suas chaves de parceiro ou tokens atualizados; credenciais inválidas podem desativar seu conector e derrubar eventos.**
+| Conta com parceiro | Arranjar conta com esse parceiro ou contatar seu gerente de conta da Braze para sugestões. | Verifique o site desse parceiro ou contate-o para se inscrever. | O Braze não enviará dados a um Parceiro se você não tiver acesso a esses dados por meio da conta de sua empresa.
+| Chave ou token da API do parceiro | Normalmente, o dashboard do parceiro. | Copie e cole no campo designado da Braze. | A Braze tem um campo designado para isso na página Integrações para esse parceiro. Precisamos disso para mapear onde enviamos seus dados. **Mantenha suas Chaves ou Tokens de Parceiro atualizados; credenciais inválidas podem desativar seu conector e descartar eventos.**
 | Código/chave de autenticação, chave secreta, arquivo de certificado | Entre em contato com um representante da sua conta com esse parceiro. Também pode existir no dashboard do parceiro. | Copie e cole as chaves no campo designado do Braze. Gerar e fazer upload do site `.json` ou de outros arquivos de certificado no local apropriado na Braze. | A Braze tem um campo designado para isso na página Integrações para esse parceiro. Isso fornece credenciais ao Braze e nos autoriza a gravar arquivos em sua conta de parceiro. **É importante manter suas informações de autenticação atualizadas; credenciais inválidas podem resultar na desativação do conector e no cancelamento de eventos.**
-| Bucket, jornada da pasta | Alguns parceiros organizam e classificam os dados por grupos. Isso pode ser encontrado no dashboard do parceiro. | Se isso for necessário, copie o nome do bucket ou a jornada do arquivo exatamente no espaço designado no Braze. | Embora isso seja necessário para alguns parceiros, é importante acertar quando você precisar. |
+| Bucket, jornada da pasta | Alguns parceiros organizam e classificam os dados por grupos. Isso pode ser encontrado no dashboard do parceiro. | Se isso for necessário, copie o nome do bucket ou o caminho do arquivo exatamente no espaço designado na Braze. | Embora isso seja necessário para alguns parceiros, é importante acertar quando você precisar. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
@@ -46,9 +46,9 @@ Antes de iniciar sua integração, é melhor decidir qual integração é a melh
 
 ### Etapa 2: Correntes abertas
 
-Para começar, acesse **Partner Integrations** > Currents. Você será levado à página de gerenciamento de integração do Currents.
+Para começar, acesse **Integrações de Parceiros** > **Currents**. Você será levado à página de gerenciamento de integração do Currents.
 
-![Página Currents no dashboard do Braze]({% image_buster /assets/img_archive/currents-main-page.png %})
+![Página de Currents no dashboard da Braze]({% image_buster /assets/img_archive/currents-main-page.png %})
 
 ### Etapa 3: Adicione seu parceiro
 
@@ -73,7 +73,7 @@ Você pode usar as transformações de campo do Currents para remover ou colocar
 
 A seleção de um campo para uma dessas transformações aplicará essa transformação a todos os eventos em que esse campo aparecer. Por exemplo, ao selecionar `email_address` para hashing, o campo `email_address` será submetido a hashing em Envio de e-mail, Abertura de e-mail, Bounce de e-mail e Alteração de estado do grupo de inscrições.
 
-![Adição de transformações de campo]({% image_buster /assets/img/current3.png %})
+![Adicionando transformações de campo]({% image_buster /assets/img/current3.png %})
 
 ### Etapa 6: Teste sua integração
 
@@ -81,24 +81,24 @@ A seleção de um campo para uma dessas transformações aplicará essa transfor
 O Currents descartará eventos com cargas úteis excessivamente grandes, superiores a 900 KB.
 {% endalert %}
 
-Antes de testar, considere dar uma olhada em nossos [dados de amostra do Currents no GitHub](https://github.com/Appboy/currents-examples). Quando estiver pronto para testar, escolha uma opção abaixo:
+Antes de testar, considere conferir nossos [dados de Currents de exemplo no GitHub](https://github.com/Appboy/currents-examples). Quando estiver pronto para testar, escolha uma opção abaixo:
 
-#### Envio de eventos de teste
+#### Enviando eventos de teste
 
-Para testar sua integração, você pode selecionar **Send Test Events (Enviar eventos de teste** ) para enviar um evento de cada um dos tipos de evento selecionados para essa corrente. Para obter informações detalhadas sobre cada tipo de evento, consulte nossas bibliotecas de [eventos de comportamento do cliente]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) e [de eventos de engajamento com mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
+Para testar sua integração, você pode selecionar **Enviar Eventos de Teste** para enviar um evento de cada um dos seus tipos de evento selecionados para este Current. Para informações detalhadas sobre cada tipo de evento, consulte nossas bibliotecas de [Eventos de Comportamento do Cliente]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) e [Eventos de Engajamento com Mensagem]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
 
-![A página "Currents Test" (Teste de correntes) no dashboard do Braze.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
+![A página "Teste de Currents" no dashboard da Braze.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
 
 #### Teste de conectores Currents
 
 Os conectores Test Currents são versões gratuitas de nossos conectores existentes que podem ser usados para testar e experimentar diferentes destinos. As correntes de teste têm:
 
-- Não há limite para o número de conectores Test Currents que você pode construir.
-- Um máximo agregado de 10.000 eventos por período contínuo de sete dias. Esse total de eventos é atualizado de hora em hora no dashboard.
+- Até 10 conectores de Test Currents por espaço de trabalho.
+- Um máximo agregado de 1.500 eventos por período fixo de 24 horas, reiniciando à meia-noite UTC. Esse total de eventos é atualizado de hora em hora no dashboard.
 
-Depois que seus conectores de teste do Currents atingirem o limite de envio, seu conector não enviará eventos até o próximo período de sete dias.
+Após seus conectores de Currents de teste atingirem o limite de envio, seu conector não enviará eventos até o dia seguinte (à meia-noite UTC).
 
-Para fazer upgrade de seu conector Test Currents, edite a integração no dashboard e selecione **Upgrade Test Integration**.
+Para fazer upgrade do seu conector de Currents de teste, edite a integração no dashboard e selecione **Fazer Upgrade da Integração de Teste**.
 
 ## Atualização de Currents
 

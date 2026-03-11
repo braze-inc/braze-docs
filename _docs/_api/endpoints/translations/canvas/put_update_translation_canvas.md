@@ -19,7 +19,7 @@ description: "This article outlines details about the Update translation in a Ca
 
 If you want to update translations after a Canvas has been launched, you'll need to [save your message as a draft]({{site.baseurl}}/post-launch_edits/) first.
 
-{% include early_access_beta_alert.md feature='This endpoint' %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Prerequisites
 

@@ -34,6 +34,25 @@ Häufige Fehler können sein:
 {% endtab %}
 {% tab iOS %}
 
+### Fehler beim Senden der Push-Benachrichtigung, da die Nutzlast ungültig war.
+
+Diese Nachricht kann im Nutzerprofil auf der Registerkarte **„Engagement“** unter **„Kontakteinstellungen“** > **„Push-Changelog“** angezeigt werden, wenn der Apple Push-Benachrichtigung-Dienst (APN) die Push-Anfrage aufgrund einer ungültigen Nutzlast ablehnt.
+
+In Braze kann diese Dashboard-Nachricht einem der folgenden APN-Fehlergründe zugeordnet werden:
+
+- `PayloadEmpty`: Die Nutzlast enthielt nicht die erforderlichen Inhalte für die Art der gesendeten Push-Nachricht.
+- `PayloadTooLarge`: Die Nutzlast hat die maximale Nutzlastgröße von APN überschritten.
+
+Häufige Ursachen sind:
+
+- Angepasste Schlüssel (und deren Werte) führen zu einer übermäßigen Größe der Nutzlast (dies kann unerwartet große Liquid-gerenderte Werte umfassen).
+- Ein leerer oder fehlender Alert oder Body, wo erforderlich (oder eine anderweitig fehlerhafte`aps`Nutzlast).
+
+Nächste Schritte:
+
+- Reduzieren Sie die Nutzlastgröße, indem Sie angepasste Schlüssel entfernen und große dynamische Werte verkürzen.
+- Wenn Sie über die API senden, überprüfen Sie bitte die endgültige JSON-Nutzlast (einschließlich Größe) vor dem Senden.
+
 ### Push prallte ab: BadToken
 
 Der Fehler `BadToken` kann aus verschiedenen Gründen auftreten:

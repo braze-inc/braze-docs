@@ -61,7 +61,7 @@ Utilisez l'intelligence artificielle de LILT pour des traductions immédiates et
 ![Braze workflow in LILT.]({% image_buster /assets/img/lilt/image_2_select_workflow.png %})	
 
 {: start="3"}
-3\. Entrez et vérifiez les détails de configuration nécessaires :
+3\. Saisissez et vérifiez les détails de configuration nécessaires :
 - Votre clé API Braze
 - Endpoint REST Braze
 

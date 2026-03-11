@@ -24,7 +24,7 @@ Braze und DOTS.ECO verbinden Customer-Engagement-Journeys mit realen Impact Rewa
 - Fügen Sie eine Content-Card "Ihr Zertifikat anzeigen" mit der Zertifikats-URL für den späteren Zugriff hinzu.
 - Speichern Sie Zertifikats-Metadaten (wie `certificate_url`, `certificate_image_url`, `certificate_header` und `greeting`) als angepasste Attribute zur Wiederverwendung in zukünftigen Nachrichten.
 - Weisen Sie Zertifikate unter Verwendung einer entfernten Nutzer:innen ID zu, so dass Nutzer:innen ihre Wirkung später beanspruchen und einsehen können.
-- Führen Sie A/B-Tests mit Impact Messaging durch (unterschiedliche Texte/Bilder), während Sie denselben Update-Fluss für Nutzer:innen beibehalten. DOTS.ECO 
+- Führen Sie A/B-Tests zu Impact Messaging durch (unterschiedliche Texte/Bilder), während Sie den gleichen Update-Fluss für Nutzer:innen beibehalten. DOTS.ECO 
 
 
 ## Voraussetzungen

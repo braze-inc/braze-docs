@@ -21,7 +21,7 @@ channel:
 
 ユーザーがアプリ内メッセージからSMSにオプトインできるようにするには、Brazeが提供する[電話番号キャプチャフォーム]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/)を使用して、電話番号を収集し、SMSリストを拡大するためのブランド化されたフォームを作成します。
 
-![アプリ内メッセージ作成画面、電話番号取得用テンプレート付き。]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%;"}
+![電話番号取得用のテンプレート付きアプリ内メッセージ作成画面。]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%;"}
 
 Brazeは、[SMSダブルオプトイン]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/)機能も使用することをお勧めします。この機能は、アプリ内メッセージの電話番号キャプチャフォームと自動的に連携し、ユーザーがフォームから電話番号を送信した後にその意志を確定するように促します。
 
@@ -33,7 +33,7 @@ Brazeは、[SMSダブルオプトイン]({{site.baseurl}}/user_guide/message_bui
 
 1. [`/subscription/status/set`エンドポイント]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/#update-users-subscription-group-status)を使用してユーザーを作成し、その属性を保存します。
 
-```json
+```http
 POST 'https://rest.iad-03.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -49,7 +49,7 @@ POST 'https://rest.iad-03.braze.com/subscription/status/set' \
 {: start="2"}
 2\.[`/users/track`エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)を使用して、ユーザーをSMSに登録します。
 
-```json
+```http
 POST `https://rest.aid-03.braze.com/users/track` \
 --header `Content-Type: application/json` \
 --header `Authorization: Bearer YOUR-REST-API-KEY` \

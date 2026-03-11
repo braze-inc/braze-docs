@@ -96,7 +96,7 @@ A continuación, seleccione la cuenta de anuncios de Criteo que desee. En el des
 **Crear una nueva audiencia**<br>
 Introduce un nombre para la nueva audiencia, selecciona **Añadir usuarios a la audiencia** y selecciona los campos que deseas sincronizar con Criteo. A continuación, guarda tu audiencia haciendo clic en el botón **Crear audiencia** situado en la parte inferior del editor de pasos.
 
-![Vista ampliada del paso en Canvas Audiencia personalizada. Aquí se selecciona la cuenta publicitaria deseada y se crea una nueva audiencia.]({% image_buster /assets/img/criteo/criteo3.png %})
+![Vista ampliada del paso en Canvas Audiencia personalizada. Aquí se selecciona la cuenta de anuncios deseada y se crea una nueva audiencia.]({% image_buster /assets/img/criteo/criteo3.png %})
 
 Braze muestra una notificación en la parte superior del editor de pasos si la audiencia se crea correctamente o si se producen errores. Los usuarios pueden hacer referencia a este público para la eliminación de usuarios más adelante en el recorrido Canvas, ya que el público se creó en modo borrador.
 

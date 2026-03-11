@@ -1,4 +1,4 @@
-# Créer des agents décisionnels d'intelligence artificielle
+# Création d'agents décisionnels basés sur l'intelligence artificielle
 
 > Découvrez comment créer un agent pour BrazeAI Decisioning Studio™, afin d'automatiser les expérimentations personnalisées et d'optimiser les résultats tels que les conversions, la fidélisation ou le chiffre d'affaires, sans tests A/B manuels.
 
@@ -16,7 +16,7 @@ Pour créer un agent efficace :
 - Définissez les dimensions à tester, telles que l'offre, la ligne d'objet, le contenu créatif, le canal ou l'heure d'envoi.
 - Sélectionnez les options pour chaque dimension, par exemple e-mail ou SMS, ou fréquence quotidienne ou hebdomadaire.
 
-![Exemple de diagramme d'un agent de studio décisionnel pour les e-mails de recommandation.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
+![Exemple de diagramme d'un agent Decisioning Studio pour les e-mails de recommandation.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
 
 ## Exemples d'agents
 
@@ -32,7 +32,7 @@ Avant de pouvoir créer un agent, vous devez [intégrer BrazeAI Decisioning Stud
 
 ### Étape 1 : contactez les services experts en IA
 
-L'équipe des services experts en intelligence artificielle travaillera en étroite collaboration avec vous pour définir le champ d'application, concevoir et créer votre agent décisionnel. Si vous ne l'avez pas encore fait, [contactez-nous](https://www.braze.com/get-started/) pour commencer.
+L'équipe des services experts en intelligence artificielle travaillera en étroite collaboration avec vous pour définir le champ d'application, concevoir et créer votre agent décisionnel. Si vous ne l'avez pas encore fait, [veuillez nous contacter](https://www.braze.com/get-started/) pour commencer.
 
 Vous effectuerez ensemble les étapes suivantes pour créer un agent personnalisé adapté à vos besoins.
 
@@ -49,7 +49,7 @@ Avec la conception en main, l'équipe travaillera avec vous pour identifier et c
 
 ### Étape 3 : configurez votre plateforme de distribution
 
-Ensuite, l'équipe des services experts en IA vous aidera à configurer votre plateforme d'automatisation du marketing. Bien que Decisioning Studio fonctionne mieux avec Braze, diverses autres plateformes sont déjà prises en charge. Contactez votre équipe de services experts en IA pour obtenir des ressources supplémentaires.
+Ensuite, l'équipe du service d'experts en intelligence artificielle vous assistera dans la configuration de votre plateforme d'engagement client. Bien que Decisioning Studio fonctionne de manière optimale avec Braze, diverses autres plateformes sont prises en charge. Veuillez contacter votre équipe de service pour l'intelligence artificielle pour obtenir des ressources supplémentaires.
 
 {% tabs local %}
 {% tab Braze %}

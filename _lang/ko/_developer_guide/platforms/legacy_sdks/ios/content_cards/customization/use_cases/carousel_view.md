@@ -13,7 +13,7 @@ noindex: true
 
 # Use case: 캐러셀 뷰
 
-![기사에서 콘텐츠 카드 캐러셀을 보여주는 샘플 뉴스 앱입니다.]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![샘플 뉴스 앱이 기사에서 콘텐츠 카드의 캐러셀을 보여줍니다.]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 이 섹션에서는 사용자가 수평으로 스와이프하여 추가 추천 카드를 볼 수 있는 다중 카드 캐러셀 피드를 구현하는 방법을 다룹니다. 캐러셀 뷰를 통합하려면 완전히 사용자 지정된 콘텐츠 카드 구현을 사용해야 합니다. [기기, 걷기, 달리기 접근 방식]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches)의 '달리기' 단계에 해당합니다.
 

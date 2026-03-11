@@ -13,7 +13,7 @@ hidden: true
 
 O Braze SDK fornecerá uma API para relatar informações a serem usadas em análise de dados, segmentação e engajamento, bem como a capacidade de registrar usuários para notificações por push e receber notificações.
 
->  O Windows Universal SDK também é compatível com os apps do Windows .NET MAUI.
+>  O SDK Universal do Windows também é compatível com os apps .NET MAUI do Windows.
 
 ## Etapa 1: Instale o SDK por meio do gerenciador de pacotes NuGet
 

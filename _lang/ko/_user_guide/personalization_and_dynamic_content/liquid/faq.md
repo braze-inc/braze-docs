@@ -32,7 +32,7 @@ Braze 연결된 콘텐츠는 Liquid 태그의 예시입니다. 이 데이터는 
 
 `assign` 태그를 사용하여 변수를 생성하고 할당할 수 있습니다. 이렇게 하면 메시지 작성기에 메시지 전체에서 참조할 수 있는 변수가 만들어집니다.
 
-### Liquid 데이터 포인트를 기록하는 데 사용하나요?
+### Liquid 데이터 포인트를 기록하는 데 Liquid를 사용하나요?
 
 아니요.
 
@@ -86,3 +86,35 @@ In Braze, this could be used for checking items in an array custom attribute, or
 {% endraw %}
 
 설정된 조건이 충족되면 메시지를 진행할 수 있습니다. 이 로직을 사용하면 다양한 조건에 대해 Liquid 블록을 반복하는 대신 시간을 절약할 수 있습니다.
+
+### Content Blocks를 사용하는 메시지에 여분의 공백이 있는 이유는 무엇인가요?
+
+Liquid와 함께 Content Blocks를 사용하는 전송된 메시지에서 여분의 공백이 있는 경우, 조건문 내에 불필요한 단락 또는 줄 바꿈이 있을 수 있습니다. 조건문을 여러 줄에 걸쳐 작성하는 대신 한 줄에 작성하세요.
+
+#### 예시
+
+{% raw %}
+```liquid
+{% if {{custom_attribute.${has_discount}}} == true %}Discounted Item{% elsif {{custom_attribute.${is_new_arrival}}} == true %}New Arrival{% else %}Regular Item{% endif %}
+{% endraw %}
+
+### When should I use `assign` versus `capture`?
+
+Both `assign` and `capture` create Liquid variables, but they serve different purposes:
+
+- `assign` is for simple variables that store a single value, such as a boolean, number, or simple string. You can also apply a single filter in the same line.
+- `capture` is for storing a block of text that may include multiple variables, strings, or complex expressions. Use `capture` when the value is too complex for a single `assign` statement, such as URLs that utilize other Liquid variables or custom attributes as parameters. `capture` is also preferred when implementing Liquid variables in the body of Connected Content calls.
+
+#### Examples
+
+{% raw %}
+```liquid
+{% comment %} Valid assign usage {% endcomment %}
+{% assign name = {{custom_attribute.${first_name}}} %}
+{% assign price = {{custom_attribute.${price}}} | plus: 0 %}
+
+{% comment %} Use capture for complex strings {% endcomment %}
+{% capture greeting %}Hello, {{custom_attribute.${first_name}}}! Your order #{{custom_attribute.${order_id}}} is ready.{% endcapture %}
+{{ greeting }}
+```
+{% endraw %}

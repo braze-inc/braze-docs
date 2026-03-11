@@ -86,7 +86,7 @@ Aqui você encontra o endpoint REST e gera sua chave de importação de dados da
 
 Depois que o Braze receber dados de atribuição da Adjust, o indicador de status da conexão na página de parceiros de tecnologia da Adjust no Braze mudará de "Não conectado" para "Conectado" e incluirá um registro de data e hora da última solicitação bem-sucedida.
 
-Esse status é alterado somente depois que o Braze recebe dados sobre uma atribuição de instalação. O Braze ignora as instalações orgânicas (exclui-as do postback de ajuste) e não as conta ao determinar se a conexão foi bem-sucedida.
+Esse status é alterado somente depois que o Braze recebe dados sobre uma atribuição de instalação. O Braze ignora as instalações orgânicas (as exclui do postback de ajuste) e não as conta ao determinar se a conexão foi bem-sucedida.
 
 ## Campos de dados disponíveis
 

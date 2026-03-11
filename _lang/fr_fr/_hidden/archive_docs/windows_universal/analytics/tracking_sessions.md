@@ -1,5 +1,5 @@
 ---
-nav_title: Sessions de suivi
+nav_title: "Séances d'information"
 article_title: Sessions de suivi pour Windows Universal
 platform: Windows Universal
 page_order: 0

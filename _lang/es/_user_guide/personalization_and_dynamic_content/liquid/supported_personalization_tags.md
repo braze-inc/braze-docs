@@ -12,7 +12,7 @@ search_rank: 1
 
 ## Resumen de las etiquetas admitidas
 
-Para mayor comodidad, se proporciona un resumen de las etiquetas de personalización admitidas. Para más detalles sobre cada tipo de etiqueta y las mejores prácticas, sigue leyendo.
+Para mayor comodidad, se proporciona un resumen de las etiquetas de personalización admitidas. Para obtener más información sobre cada tipo de etiqueta y las prácticas recomendadas, sigue leyendo.
 
 {% raw %}
 
@@ -29,10 +29,10 @@ Para mayor comodidad, se proporciona un resumen de las etiquetas de personalizac
 | Atributos de la tarjeta | `{{card.${api_id}}}` <br> `{{card.${name}}}` |
 | Eventos de geofencing | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
 | Propiedades del evento <br> (Estos son personalizados para su espacio de trabajo).| `{{event_properties.${your_custom_event_property}}}` |
-| Variables contextuales del Canvas | `{{context}}` |
+| Variables de contexto de Canvas | `{{context}}` |
 | Atributos personalizados <br> (Estos son personalizados para su espacio de trabajo). | `{{custom_attribute.${your_custom_attribute}}}` |
-| <a href='/docs/api/objects_filters/trigger_properties_object/'>Propiedades de la API desencadenante</a> |`{{api_trigger_properties}}` |
-| Propiedades de entrada de Canvas | `{{canvas_entry_properties.${property_name}}}` |
+| <a href='/docs/api/objects_filters/trigger_properties_object/'>Propiedades del desencadenante de la API</a> |`{{api_trigger_properties}}` |
+| Propiedades de entrada de Canvas | `{{context.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
@@ -47,13 +47,13 @@ Consulte este artículo de ayuda para obtener más información sobre [cómo dif
 
 El comportamiento de las siguientes etiquetas difiere entre Canvas y las campañas:
 {% raw %}
-- `dispatch_id` El comportamiento difiere porque Braze trata los pasos en Canvas como eventos desencadenados, incluso cuando están "programados" (excepto los pasos de entrada, que pueden programarse). Para saber más, consulta [Comportamiento del ID de Despacho]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+- `dispatch_id` El comportamiento difiere porque Braze trata los pasos en Canvas como eventos desencadenados, incluso cuando están «programados» (excepto los pasos de entrada, que sí se pueden programar). Para obtener más información, consulta [Comportamiento]({{site.baseurl}}/help/help_articles/data/dispatch_id/) del [ID de]({{site.baseurl}}/help/help_articles/data/dispatch_id/) [envío]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 - El uso de la etiqueta `{{campaign.${name}}}` con Canvas mostrará el nombre del componente Canvas. Al utilizar esta etiqueta con campañas, se mostrará el nombre de la campaña.
 {% endraw %}
 
 ## Información sobre el dispositivo utilizado más recientemente
 
-Puedes plantillas los siguientes atributos para el dispositivo más reciente del usuario en todas las plataformas. Si un usuario no ha utilizado tu aplicación (por ejemplo, has importado al usuario a través de la API REST), entonces todos estos valores serán `null`.
+Puedes crear plantillas con los siguientes atributos para el dispositivo más reciente del usuario en todas las plataformas. Si un usuario no ha utilizado tu aplicación (por ejemplo, has importado al usuario a través de la API REST), entonces todos estos valores serán `null`.
 
 {% raw %}
 
@@ -63,7 +63,7 @@ Puedes plantillas los siguientes atributos para el dispositivo más reciente del
 |`{{most_recently_used_device.${id}}}` | El identificador del dispositivo Braze. En iOS, puede ser el Identificador de Vendedor de Apple (IDFV) o un UUID. Para Android y otras plataformas, es un UUID generado aleatoriamente. |
 | `{{most_recently_used_device.${carrier}}}` | El operador del servicio telefónico del dispositivo utilizado más recientemente, si está disponible. Algunos ejemplos son "Verizon" y "Orange". |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | Si el dispositivo tiene activado el seguimiento de anuncios o no. Se trata de un valor booleano (`true` o `false`). |
-| `{{most_recently_used_device.${idfa}}}` | Para dispositivos iOS, este valor será el identificador para publicidad (IDFA) si tu aplicación está configurada con nuestra [colección opcional IDFA]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/). Para dispositivos que no sean iOS, este valor será nulo. |
+| `{{most_recently_used_device.${idfa}}}` | En los dispositivos iOS, este valor será el identificador para publicidad (IDFA) si tu aplicación está configurada con nuestra [recopilación opcional de IDFA]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/). Para dispositivos que no sean iOS, este valor será nulo. |
 | `{{most_recently_used_device.${google_ad_id}}}` | Para dispositivos Android, este valor será el identificador de publicidad de Google Play si tu aplicación está configurada con nuestra colección opcional de identificadores de publicidad de Google Play. Para dispositivos que no sean Android, este valor será nulo. |
 | `{{most_recently_used_device.${roku_ad_id}}}` | Para dispositivos Roku, este valor será el identificador de publicidad Roku que se recopila cuando tu aplicación se configura con Braze. Para dispositivos que no sean Roku, este valor será nulo. |
 | `{{most_recently_used_device.${model}}}` | El nombre del modelo del dispositivo, si está disponible. Algunos ejemplos son "iPhone 6S", "Nexus 6P" y "Firefox". |
@@ -71,7 +71,7 @@ Puedes plantillas los siguientes atributos para el dispositivo más reciente del
 | `{{most_recently_used_device.${platform}}}` | La plataforma del dispositivo, si está disponible. Si se establece, el valor será uno de los siguientes: `ios`, `android`, `kindle`, `android_china`, `web`, o `tvos`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Como existe una gama tan amplia de operadores de dispositivos, nombres de modelos y sistemas operativos, te aconsejamos que pruebes a fondo cualquier Liquid que dependa condicionalmente de cualquiera de esos valores. Estos valores serán `null` si no están disponibles en un dispositivo concreto.
+Debido a que existe una gran variedad de operadores, nombres de modelos y sistemas operativos, te recomendamos que pruebes exhaustivamente cualquier Liquid que dependa condicionalmente de cualquiera de esos valores. Estos valores serán `null` si no están disponibles en un dispositivo concreto.
 
 ## Información específica sobre la aplicación
 
@@ -96,14 +96,14 @@ User is in list of apps
 
 ## Información específica del dispositivo
 
-Para las notificaciones push, los mensajes dentro de la aplicación y los banners, puedes introducir en la plantilla los siguientes atributos para el dispositivo al que se envía un mensaje. Es decir, una notificación push, un mensaje dentro de la aplicación o un Banner pueden incluir atributos del dispositivo en el que se está leyendo el mensaje. Ten en cuenta que estos atributos no funcionarán para las tarjetas de contenido. 
+Para las notificaciones push, los mensajes dentro de la aplicación y los banners, puedes crear plantillas con los siguientes atributos para el dispositivo que recibe el mensaje. Una notificación push, un mensaje dentro de la aplicación o un banner pueden incluir atributos del dispositivo en el que el usuario lee el mensaje. Estos atributos no funcionan para tarjetas de contenido ni correos electrónicos. En el caso de los correos electrónicos, los mensajes se procesan antes de enviarse, por lo que en ese momento se desconoce el dispositivo en el que el usuario abrirá el correo electrónico.
 
 |Etiqueta | Descripción |
 |------------------|---|
-| `{{targeted_device.${id}}}` | Es el identificador del dispositivo Braze. En iOS, puede ser el Identificador de Vendedor de Apple (IDFV) o un UUID. Para Android y otras plataformas, es un UUID generado aleatoriamente. Por ejemplo, si un usuario tiene cinco dispositivos, se produce un intento de envío para los cinco dispositivos, cada uno utilizando el identificador de dispositivo correspondiente. Si un mensaje está configurado para enviarse al dispositivo utilizado más recientemente por un usuario, sólo se producirá un intento de envío al dispositivo utilizado más recientemente identificado a través de Braze. |
+| `{{targeted_device.${id}}}` | Es el identificador del dispositivo Braze. En iOS, puede ser el Identificador de Vendedor de Apple (IDFV) o un UUID. Para Android y otras plataformas, es un UUID generado aleatoriamente. Por ejemplo, si un usuario tiene cinco dispositivos, se realiza un intento de envío para los cinco dispositivos, cada uno utilizando el identificador de dispositivo correspondiente. Si un mensaje está configurado para enviarse al dispositivo utilizado más recientemente por el usuario, solo se realizará un intento de envío al dispositivo utilizado más recientemente identificado a través de Braze. |
 | `{{targeted_device.${carrier}}}` | El operador del servicio telefónico del dispositivo utilizado más recientemente, si está disponible. Algunos ejemplos son "Verizon" y "Orange". |
-| `{{targeted_device.${idfa}}}` | Para dispositivos iOS, este valor será el identificador para publicidad (IDFA) si tu aplicación está configurada con nuestra [colección opcional IDFA]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/). Para dispositivos que no sean iOS, este valor será nulo. |
-| `{{targeted_device.${google_ad_id}}}` | Para dispositivos Android, este valor será el identificador de publicidad de Google Play si tu aplicación está configurada con nuestra [recopilación opcional de ID de publicidad de Google Play]. Para dispositivos que no sean Android, este valor será nulo. |
+| `{{targeted_device.${idfa}}}` | En los dispositivos iOS, este valor será el identificador para publicidad (IDFA) si tu aplicación está configurada con nuestra [recopilación opcional de IDFA]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/). Para dispositivos que no sean iOS, este valor será nulo. |
+| `{{targeted_device.${google_ad_id}}}` | En los dispositivos Android, este valor será el identificador publicitario de Google Play si tu aplicación está configurada con nuestra [recopilación opcional del identificador publicitario de Google Play]. Para dispositivos que no sean Android, este valor será nulo. |
 | `{{targeted_device.${roku_ad_id}}}` | Para dispositivos Roku, este valor será el identificador de publicidad Roku que se recopila cuando tu aplicación se configura con Braze. Para dispositivos que no sean Roku, este valor será nulo. |
 | `{{targeted_device.${model}}}` | El nombre del modelo del dispositivo, si está disponible. Algunos ejemplos son "iPhone 6S", "Nexus 6P" y "Firefox". |
 | `{{targeted_device.${os}}}` | El sistema operativo del dispositivo, si está disponible. Algunos ejemplos son "iOS 9.2.1", "Android (Lollipop)" y "Windows". |
@@ -113,7 +113,7 @@ Para las notificaciones push, los mensajes dentro de la aplicación y los banner
 
 {% endraw %}
 
-Como hay una gama tan amplia de operadores de dispositivos, nombres de modelos y sistemas operativos, te aconsejamos que pruebes a fondo cualquier lógica que dependa condicionalmente de cualquiera de esos valores. Estos valores serán `null` si no están disponibles en un dispositivo concreto. 
+Debido a que existe una gran variedad de operadores de dispositivos, nombres de modelos y sistemas operativos, te recomendamos que compruebes minuciosamente cualquier lógica condicional que dependa de cualquiera de esos valores. Estos valores serán `null` si no están disponibles en un dispositivo concreto. 
 
 Además, para las notificaciones push, es posible que Braze no pueda discernir el dispositivo conectado a la notificación push en determinadas circunstancias, como si el token de notificaciones push se importó a través de la API, lo que hace que los valores de esos mensajes sean `null`.
 
@@ -121,7 +121,7 @@ Además, para las notificaciones push, es posible que Braze no pueda discernir e
 
 ### Utilizar la lógica condicional en lugar de un valor predeterminado
 
-En algunas circunstancias, puedes optar por utilizar [la lógica condicional]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/) en lugar de establecer un valor predeterminado. La lógica condicional permite enviar mensajes que difieren en función del valor de un atributo personalizado. Además, puedes utilizar la lógica condicional para [abortar los mensajes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/) a clientes con valores de atributos nulos o en blanco. 
+En algunas circunstancias, puedes optar por utilizar [lógica condicional]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/) en lugar de establecer un valor predeterminado. La lógica condicional permite enviar mensajes que difieren en función del valor de un atributo personalizado. Además, puedes utilizar la lógica condicional para [abortar mensajes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/) a clientes con valores de atributos nulos o en blanco. 
 
 #### Casos de uso
 
@@ -161,7 +161,7 @@ En este caso de uso, un usuario con un nombre en blanco o nulo recibirá el mens
 
 ## Etiquetas variables
 
-Puede utilizar la etiqueta `assign` para crear una variable en el compositor de mensajes. Te recomendamos que utilices un nombre único para tu variable. Si creas una variable con un nombre similar al de las etiquetas de personalización admitidas (como `language`), esto puede afectar a tu lógica de mensajería.
+Puede utilizar la etiqueta `assign` para crear una variable en el compositor de mensajes. Recomendamos utilizar un nombre único para tu variable. Si creas una variable con un nombre similar al de las etiquetas de personalización admitidas (como `language`), esto puede afectar a la lógica de tu mensajería.
 
 Después de crear una variable, puede hacer referencia a esa variable en su lógica de mensajería o mensaje. Esta etiqueta resulta útil cuando se desea reformatear el contenido devuelto por nuestra función [Contenido conectado]({% image_buster /assets/img_archive/personalized_firstname_.png %}) ]. Puedes leer más en la documentación de Shopify sobre [etiquetas variables](https://docs.shopify.com/themes/liquid/tags/variable-tags).
 
@@ -223,7 +223,7 @@ Este es un ejemplo sencillo de cómo pueden utilizarse las etiquetas de iteraci�
 
 Las etiquetas de sintaxis pueden utilizarse para controlar la presentación de Liquid. Puede utilizar la etiqueta `echo` para devolver una expresión. Esto es lo mismo que envolver una expresión utilizando llaves, excepto que puede utilizar esta etiqueta dentro de etiquetas Liquid. También puede utilizar la etiqueta `liquid` para tener un bloque de Liquid sin delimitadores en cada etiqueta. Cada etiqueta debe ir en su propia línea cuando utilices la etiqueta `liquid`. Consulta la documentación de Shopify sobre [etiquetas de sintaxis](https://shopify.dev/api/liquid/tags#syntax-tags) para obtener más información y ejemplos.
 
-Con [el control de espacios](https://shopify.github.io/liquid/basics/whitespace/) en blanco, puedes eliminar los espacios en blanco alrededor de tus etiquetas, lo que te ayudará a controlar aún más el aspecto de la salida de Liquid.
+Con [el control de espacios en blanco](https://shopify.github.io/liquid/basics/whitespace/), puedes eliminar los espacios en blanco alrededor de tus etiquetas, lo que te ayuda a controlar aún más el aspecto de la salida de Liquid.
 
 ## Códigos de estado HTTP {#http-personalization}
 
@@ -243,11 +243,11 @@ Esta clave sólo se añadirá automáticamente al objeto Contenido conectado si 
 
 ## Envío de mensajes en función del idioma, la configuración regional más reciente y la zona horaria
 
-En algunas situaciones, puede que desees enviar mensajes que sean específicos para determinadas localizaciones. Por ejemplo, el portugués brasileño suele ser diferente del portugués europeo.
+En algunas situaciones, es posible que desees enviar mensajes específicos para determinadas configuraciones regionales. Por ejemplo, el portugués brasileño suele ser diferente del portugués europeo.
 
 ### Casos de uso: Localización basada en la localización reciente
 
-Aquí tienes un caso de uso de cómo puedes utilizar la configuración regional más reciente para localizar mejor un mensaje internacionalizado.
+A continuación, se muestra un caso de uso sobre cómo puedes utilizar la configuración regional más reciente para realizar aún más la localización de un mensaje internacionalizado.
 
 {% raw %}
 

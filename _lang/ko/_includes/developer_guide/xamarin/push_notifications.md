@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
-## 푸시 알림 설정하기
+## 푸시 알림 설정
 
 {% tabs %}
 {% tab android %}
@@ -8,7 +8,7 @@
 Java와 C# 사이에서 네임스페이스의 변경 방식을 확인하려면 GitHub에서 [Xample 샘플 앱](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/android-net-maui/BrazeAndroidMauiSampleApp/BrazeAndroidMauiSampleApp)을 참조하세요.
 {% endalert %}
 
-.NET MAUI(이전의 Xamarin)에 대한 푸시 알림을 통합하려면 기본 Android 푸시 알림에 대한 단계를 완료해야 합니다. 다음 단계는 요약에 불과합니다. 전체 설명을 보려면 [네이티브 푸시 알림 가이드]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/)를 참조하세요.
+.NET MAUI(구 Xamarin)의 푸시 알림을 통합하려면, 네이티브 Android 푸시 알림을 위한 단계를 완료해야 합니다. 다음 단계는 요약에 불과합니다. 전체 설명을 보려면 [네이티브 푸시 알림 가이드]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/)를 참조하세요.
 
 ### 1단계: 프로젝트를 업데이트하세요
 
@@ -48,7 +48,7 @@ Java와 C# 사이에서 네임스페이스의 변경 방식을 확인하려면 G
 
 ### 2단계: 푸시 알림 권한 요청하기
 
-이제 .NET MAUI 소프트웨어 개발 키트에서 자동 푸시 설정을 지원합니다. 다음 코드를 Braze 인스턴스 구성에 추가하여 푸시 자동화 및 권한을 설정합니다.
+.NET MAUI SDK가 이제 자동 푸시 설정을 지원합니다. 다음 코드를 Braze 인스턴스 구성에 추가하여 푸시 자동화 및 권한을 설정합니다.
 
 ```csharp
 configuration.Push.Automation = new BRZConfigurationPushAutomation(true);

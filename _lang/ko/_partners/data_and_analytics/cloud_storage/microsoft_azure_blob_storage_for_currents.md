@@ -94,7 +94,7 @@ Users that have integrated a cloud data storage solution, and are trying to expo
 - All dashboard reports and CSV reports will be sent to the user's email for download (no storage permissions required) and backed up on data storage.
 
 {% alert important %}
-**JSON 형식 요구 사항**: JSON 내보내기의 경우 Braze는 각 줄에 별도의 JSON 개체가 포함되는 JSONL(줄 바꿈으로 구분된 JSON) 형식을 사용합니다. 이 형식은 단일 JSON 배열 또는 오브젝트인 표준 JSON과 다릅니다. 내보낸 파일의 각 줄은 유효한 JSON 객체이지만 파일 전체가 하나의 유효한 JSON 설명서가 아닙니다. 이러한 파일을 처리할 때는 전체 파일을 하나의 JSON 설명서로 구문 분석하지 말고 각 줄을 별도의 JSON 객체로 개별적으로 구문 분석하세요.
+**JSON 형식 요구 사항**: JSON 내보내기의 경우 Braze는 각 줄에 별도의 JSON 개체가 포함되는 JSONL(줄 바꿈으로 구분된 JSON) 형식을 사용합니다. 이 형식은 단일 JSON 배열 또는 오브젝트인 표준 JSON과는 다릅니다. 내보낸 파일의 각 줄은 유효한 JSON 객체이지만 파일 전체가 하나의 유효한 JSON 설명서가 아닙니다. 이러한 파일을 처리할 때는 전체 파일을 하나의 JSON 설명서로 구문 분석하지 말고 각 줄을 별도의 JSON 객체로 개별적으로 구문 분석하세요.
 
 커런츠 내보내기는 JSON이 아닌 Apache Avro 형식(`.avro` 파일)을 사용합니다. 이 JSON 형식 요구 사항은 JSON 형식을 사용하는 대시보드 데이터 내보내기 및 API 내보내기에 적용됩니다.
 {% endalert %}

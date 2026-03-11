@@ -162,6 +162,6 @@ return brazecall;
 ```
 
 {: start="6"}
-6. 指定されたエンドポイントにテストペイロードを送信する。Seen Platformにデータを送信してJourneyを実行するか、[Postmanや](https://www.postman.com/)同様のサービスを使用してBrazeにペイロードを直接送信する。
+6. 指定されたエンドポイントにテストペイロードを送信する。Seen Platformにデータを送信してJourneyを実行するか、[Postman](https://www.postman.com/)または同様のサービスを使用してペイロードをBrazeに直接送信する。
 7. **Validateを**選択して、すべてが意図したとおりに動くことを確認する。
 8. [**保存**] および [**アクティブ化する**] を選択します。

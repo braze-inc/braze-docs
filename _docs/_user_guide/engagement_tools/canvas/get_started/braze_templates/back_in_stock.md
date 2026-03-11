@@ -100,7 +100,7 @@ You can use [Canvas entry properties]({{site.baseurl}}/user_guide/engagement_too
 We’ll begin our customization by going through each Message step to update the content.
 
 1. Replace `!!YOURCATALOGHERE!!` with our catalog name (“Straight_Leg_Pants”).
-2. Replace `[0]` with the index number of the Classic Straight Leg jeans, which is “9” because the jeans are tenth item in the the `items` array of our catalog. (Arrays are zero-indexed in Liquid, so the first item is `0` and not `1`.)
+2. Replace `[0]` with the index number of the Classic Straight Leg jeans, which is “9” because the jeans are tenth item in the `items` array of our catalog. (Arrays are zero-indexed in Liquid, so the first item is `0` and not `1`.)
 3. Repeat steps 1 and 2 for all remaining Message steps, including:
     - The “In-Product Msg & Email” message that sends after the one-day delay
     - The “Push+Email Alert” messages that send to users who haven’t made a purchase

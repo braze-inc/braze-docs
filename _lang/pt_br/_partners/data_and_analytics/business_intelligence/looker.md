@@ -77,7 +77,7 @@ Configure uma ação do Looker da Braze com sua chave da API REST e o endpoint R
 No Looker Develop, selecione as visualizações apropriadas. Adicione `braze_id` à tag dimensions e confirme as alterações.
 A tag `braze_id` é usada para determinar qual campo é a chave exclusiva.
 
-```json
+```lookml
 dimension: external_id {
     type: string
     primary_key: yes

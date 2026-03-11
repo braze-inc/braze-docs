@@ -157,7 +157,7 @@ To avoid unexpected behavior, include an Audience Path step after the Context st
 
 ## Create an AI Agent that can analyze Fullstory’s payloads and produce appropriate copy for your use case
 
-[Braze's agents guidance]({{site.baseurl}}/docs/user_guide/brazeai/agents/creating_agents) outlines how Braze users can create AI Agents. By inserting an AI Agent step into a Canvas triggered by Fullstory, and including the Canvas Context step outlined above, users can feed their AI Agent Fullstory’s session summary data, for a wide range of purposes. 
+[Braze's agents guidance]({{site.baseurl}}/docs/user_guide/brazeai/agents/creating_agents) outlines how company users can create AI Agents. By inserting an AI Agent step into a Canvas triggered by Fullstory, and including the Canvas Context step outlined above, users can feed their AI Agent Fullstory’s session summary data, for a wide range of purposes. 
 
 In this example, we use this data to allow the AI Agent to generate appropriate message copy for use in a content card, which can encourage the user to return to their abandoned basket.
 

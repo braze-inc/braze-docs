@@ -184,7 +184,7 @@ E-mail
 SMS/MMS, RCS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Confirmed Deliveries' %} En tant que client de Braze, les réception/distributions sont imputées sur votre quota de SMS. 
+{% multi_lang_include analytics/metrics.md metric='Confirmed Deliveries' %} En tant que client de Braze, les réception/distributions sont imputées sur votre allocation SMS. 
 
 {::nomarkdown}
 <span class="calculation-line">

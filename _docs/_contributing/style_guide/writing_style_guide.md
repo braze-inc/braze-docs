@@ -190,10 +190,10 @@ If someone has difficulty with the steps or instructions, your casual descriptor
 
 ##### Customers versus clients
 
-When referring to Braze users and their consumers, use the following terms accordingly:
+When referring to company users and their consumers, use the following terms accordingly:
 
 * **Customers:** Brands we work with. Never refer to our customers as “clients”.  
- * **Braze users:** In the context of documentation, when it is important to distinguish between users of the platform and the end users who receive marketing messages, use "Braze users".  
+ * **Company users:** In the context of documentation, when it is important to distinguish between users of the platform and the end users who receive marketing messages, use "company users".  
 * **Consumers:** Customers of a brand we work with.   
 * **Users:** Generally reserved for a specific statistic that depends on “user” metrics (such as “user retention”). When referring to “users” in our content, first aim to be more specific. Think shoppers, consumers, patients, players.
 
@@ -1997,7 +1997,7 @@ Use numerals and a percent sign (%) without a space in between them. However, if
 </thead>
 <tbody>
 <tr><td style="width: 50%;">10%</td><td style="width: 50%;">10 %</td></tr>
-<tr><td style="width: 50%;">Twenty percent of Braze users are...</td><td style="width: 50%;">20% of Braze users are...</td></tr>
+<tr><td style="width: 50%;">Twenty percent of company users are...</td><td style="width: 50%;">20% of company users are...</td></tr>
 </tbody>
 </table>
 {:/}

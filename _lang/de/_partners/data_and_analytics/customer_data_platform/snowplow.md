@@ -86,4 +86,4 @@ Einzelheiten zu den unterstützten Datentypen, den Anforderungen an die Benennun
 
 ## Beschränkungen
 
-**Rate-Limits:** Braze setzt ein Rate-Limits von 3.000 API-Aufrufen alle drei Sekunden für die Track Nutzer:innen API durch. Da Snowplow keine Stapelverarbeitung für Ereignis-Forwarder unterstützt, fungiert dieses API Rate-Limit auch als Rate-Limit für Ereignisse. Wenn Ihr Eingabedurchsatz 3.000 Ereignisse pro drei Sekunden überschreitet, kann es zu erhöhten Latenzzeiten kommen.
+**Rate-Limits:** Braze erzwingt ein Rate-Limits von 3.000 API-Aufrufen alle drei Sekunden für die Track Nutzer:innen API. Da Snowplow keine Stapelverarbeitung für Ereignis-Forwarder unterstützt, fungiert dieses API Rate-Limit auch als Rate-Limit für Ereignisse. Wenn Ihr Eingabedurchsatz 3.000 Ereignisse pro drei Sekunden überschreitet, kann es zu erhöhten Latenzzeiten kommen.

@@ -1,5 +1,5 @@
 ---
-nav_title: Enlaces universales y enlaces de aplicaciones
+nav_title: Enlaces universales y enlaces a aplicaciones
 article_title: Enlaces universales y enlaces de aplicaciones
 page_order: 6.4
 page_type: reference
@@ -8,6 +8,10 @@ channel: email
 ---
 
 # Enlaces universales y enlaces de aplicaciones
+
+{% alert tip %}
+Para ver una comparación de los tipos de enlaces en todos los canales de mensajería y obtener orientación sobre cuándo necesitas un archivo AASA, consulta [la guía de vinculación en profundidad de iOS]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide).
+{% endalert %}
 
 Los enlaces universales de Apple y los enlaces de aplicaciones de Android son mecanismos concebidos para proporcionar una transición sin problemas entre el contenido Web y las aplicaciones móviles. Mientras que los enlaces universales son específicos de iOS, los enlaces de aplicaciones de Android sirven para el mismo propósito para las aplicaciones de Android.
 
@@ -55,7 +59,7 @@ Para que las aplicaciones admitan enlaces universales o App Links, tanto iOS com
 
 Además de este archivo de permisos, hay definiciones codificadas de los dominios de enlace que la aplicación puede abrir, que se configuran dentro de la aplicación:
 
-- **iOS:** Establecer como "Dominios asociados" en Xcode
+- **iOS:** Configura como «Dominios asociados» en Xcode.
 - **Android:** Definido en el archivo `AndroidManifest.xml` de la aplicación
 
 Esta asociación dominio-app de dos partes es necesaria para que funcione un enlace universal o App Link e impide que cualquier aplicación secuestre enlaces de un dominio concreto o que cualquier dominio abra una aplicación concreta.
@@ -75,7 +79,7 @@ Estos pasos están adaptados de la documentación para desarrolladores de Apple.
 #### Paso 1a: Registra tu aplicación {#step-1a}
 
 1. Ve a developer.apple.com y conéctate.
-2. Haz clic en **Certificados, Identificadores & Perfiles**.
+2. Haz clic en **Certificados, Identificadores, &Perfiles**.
 3. Haz clic en **Identificadores**.
 4. Si aún no tienes un identificador de aplicación registrado, haz clic en + para crearlo.
    a. Introduce un **Nombre**. Puede ser lo que tú quieras.
@@ -127,7 +131,7 @@ El archivo AASA contiene un objeto JSON con una lista de aplicaciones y las ruta
     "apps": [],
     "details": [
       {
-        "appID": “JHGFJHHYX.com.facebook.ios",
+        "appID": "JHGFJHHYX.com.facebook.ios",
         "paths": [
           "*"
         ]
@@ -138,7 +142,7 @@ El archivo AASA contiene un objeto JSON con una lista de aplicaciones y las ruta
 ```
 
 - `appID`: Se construye combinando el **ID de equipo** de tu aplicación (visita `https://developer.apple.com/account/#/membership/` para obtener el ID de equipo) y el **identificador de paquete**. En el ejemplo anterior, "JHGFJHHYX" es el ID del equipo, y "com.facebook.ios" es el ID del paquete.
-- `paths`: Matriz de cadenas que especifican qué rutas se incluyen o excluyen de la asociación. Puedes utilizar `NOT` antes de la ruta para desactivar las rutas. En este ejemplo, todos los enlaces de esta ruta irán a la Web en lugar de abrir la aplicación. Puedes utilizar `*` como comodín para habilitar todas las rutas de un directorio y `?` para que coincida con un único carácter (como /archivos/201?/ para que coincida con todos los números de 2010-2019).
+- `paths`: Matriz de cadenas que especifican qué rutas se incluyen o excluyen de la asociación. Puedes utilizar `NOT` antes de la ruta para desactivar las rutas. En este ejemplo, todos los enlaces de esta ruta irán a la Web en lugar de abrir la aplicación. Puedes utilizar`*`  como comodín para habilitar todas las rutas de un directorio y`?`  para hacer coincidir un solo carácter (por ejemplo, /archivos/201?/ para hacer coincidir todos los números de 2010 a 2019).
 
 {% alert note %}
 Estas cadenas distinguen entre mayúsculas y minúsculas y se ignoran las cadenas de consulta y los identificadores de fragmentos.
@@ -200,7 +204,7 @@ Tienes que asociar tu aplicación a tu sitio web. Esto puede hacerse creando un 
 
 ### Paso 3: Actualiza el archivo de manifiesto de tu aplicación
 
-En tu archivo `AndroidManifest.xml`, añade un elemento de metadatos dentro del elemento de aplicación. El elemento de metadatos debe tener un atributo `android:name` de "asset_statements" y un atributo `android:resource` que apunte a un archivo de recursos con una cadena que incluya la URL de tu sitio web.
+En tu archivo `AndroidManifest.xml`, añade un elemento de metadatos dentro del elemento de aplicación. El elemento de metadatos debe tener"asset_statements" un`android:name`atributo  y un`android:resource`atributo  que apunte a un archivo de recursos con una matriz de cadenas que incluya la URL de tu sitio web.
 
 ### Paso 4: Prepara tu aplicación para gestionar vínculos profundos
 
@@ -263,13 +267,13 @@ Por ejemplo:
 
 A continuación, asegúrate de que tu aplicación está configurada para gestionar correctamente la ruta personalizada. Consulta el artículo de SparkPost sobre [Cómo utilizar el seguimiento de clics de SparkPost en los vínculos profundos](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#preferred-solution-using-sparkpost-click-tracking-on-deep-links). Este artículo contiene código de ejemplo para [iOS](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#ios-swift-forwarding-clicks-to-sparkpost) y [Android](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#forwarding-clicks-from-android-to-sparkpost).
 
-### Desactivar el seguimiento de clics enlace a enlace
+### Desactivar el seguimiento de clics en cada enlace individualmente
 
 Puedes desactivar el seguimiento de clics para enlaces específicos añadiendo código HTML a tu mensaje de correo electrónico para el editor HTML o a un bloque HTML para el editor de arrastrar y soltar.
 
 #### SendGrid
 
-Si tu proveedor de servicios de correo electrónico es SendGrid, utiliza el código HTML `clicktracking=off` de esta forma:
+Si tu proveedor de servicios de correo electrónico es SendGrid, utiliza el código HTML`clicktracking=off`  como este:
 
 ```HTML
 <a clicktracking=off href="[INSERT https LINK HERE]">click here</a>
@@ -277,7 +281,7 @@ Si tu proveedor de servicios de correo electrónico es SendGrid, utiliza el cód
 
 #### SparkPost 
 
-Si tu proveedor de servicios de correo electrónico es SparkPost, utiliza el código HTML `data-msys-clicktrack="0"` así:
+Si tu proveedor de servicios de correo electrónico es SparkPost, utiliza el código HTML`data-msys-clicktrack="0"`  de esta manera:
 
 ```HTML
 <a data-msys-clicktrack="0" href="[INSERT https LINK HERE]">click here</a>
@@ -285,7 +289,7 @@ Si tu proveedor de servicios de correo electrónico es SparkPost, utiliza el có
 
 #### Amazon SES
 
-Si tu proveedor de servicios de correo electrónico es Amazon SES, utiliza el código HTML `ses:no-track` de la siguiente manera:
+Si tu proveedor de servicios de correo electrónico es Amazon SES, utiliza el código HTML`ses:no-track`  como se muestra a continuación:
 
 ```HTML
 <a ses:no-track href="[INSERT https LINK HERE]">click here</a>
@@ -293,7 +297,7 @@ Si tu proveedor de servicios de correo electrónico es Amazon SES, utiliza el c�
 
 #### Editor de arrastrar y soltar
 
-Cuando utilices el editor de arrastrar y soltar de correo electrónico, introduce tu código HTML como atributo personalizado si tu enlace está unido a un texto, un botón o una imagen.
+Cuando utilices el editor de correo electrónico de arrastrar y soltar, introduce tu código HTML como un atributo personalizado si tu enlace está adjunto a un texto, un botón o una imagen.
 
 ##### Atributo personalizado para un enlace de texto
 

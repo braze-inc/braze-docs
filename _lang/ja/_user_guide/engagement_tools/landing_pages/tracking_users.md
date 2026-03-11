@@ -1,5 +1,5 @@
 ---
-nav_title: 追跡ユーザー
+nav_title: ユーザーの追跡
 article_title: フォームを使ってユーザーを追跡する
 description: "メッセージにLiquidタグを追加して、ランディングページからフォームを送信するユーザーを識別する方法を学習します。"
 page_order: 2

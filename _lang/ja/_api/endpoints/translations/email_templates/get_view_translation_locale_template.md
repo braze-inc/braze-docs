@@ -1,7 +1,7 @@
 ---
 nav_title: "取得:メールテンプレートの特定の翻訳とロケールを表示する"
 article_title: "取得:メールテンプレートの特定の翻訳とロケールを表示"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 2
 
 layout: api_page
@@ -15,11 +15,9 @@ description: "この記事では、「メールテンプレートの特定の翻
 /テンプレート/翻訳/メール
 {% endapimethod %}
 
-> [メールテンプレートの]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates)特定の翻訳とローカライゼーションを表示するには、このエンドポイントを使用する。翻訳機能の詳細については、[メッセージのローカライゼーションを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照のこと。
+> このエンドポイントを使って、[メール]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates)テンプレートの特定の翻訳とローカライゼーションを表示する。ローカライゼーション機能の詳細については、[メッセージ内のロケールを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照せよ。
 
-{% alert important %}
-このエンドポイントは現在早期アクセス中である。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## 前提条件
 
@@ -31,14 +29,14 @@ description: "この記事では、「メールテンプレートの特定の翻
 
 ## クエリーパラメーター
 
-| パラメータ     | required | データ型 | 説明                     |
+| パラメータ     | 必須かどうか | データ型 | 説明                     |
 |---------------|----------|-----------|---------------------------------|
-| `template_id` | 必須 | string    | メールテンプレートの ID。 |
-| `locale_id`   | オプション | string    | ロケールのID（UUID）。           |
+| `template_id` | 必須かどうか | string    | メールテンプレートの ID。 |
+| `locale_id`   | オプション | string    | ロケールの識別子（UUID）。           |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、GETエンドポイントのレスポンスで見つけることができる。
+すべての翻訳識別子はユニバーサル一意識別子（UUID）と見なされ、GETエンドポイントの応答で確認できる。
 {% endalert %}
 
 ## 例のリクエスト

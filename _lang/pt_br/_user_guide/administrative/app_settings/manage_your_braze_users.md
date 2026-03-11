@@ -1,12 +1,12 @@
 ---
-nav_title: Usuários do Braze
-article_title: Gerenciar usuários do Braze
+nav_title: Usuários da empresa
+article_title: Gerenciar usuários da empresa
 page_order: 23
 page_type: reference
-description: "Esta página aborda o gerenciamento de seus usuários do Braze, como adicionar e excluir usuários, definir permissões de usuário, criar equipes e gerenciar configurações da empresa."
+description: "Esta página abrange o gerenciamento dos usuários da sua empresa, como adicionar e excluir usuários, definir permissões de usuário, criar equipes e gerenciar configurações da empresa."
 ---
 
-# Gerenciar usuários do Braze
+# Gerenciar usuários da empresa
 
 > Aprenda a gerenciar usuários na conta da sua empresa, incluindo adicionar, suspender e excluir usuários.
 
@@ -14,14 +14,14 @@ description: "Esta página aborda o gerenciamento de seus usuários do Braze, co
 Várias seções nesta página referem-se à página **Usuários da Empresa**. Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), **Usuários da Empresa** é chamado de **Gerenciar Usuários** e está localizado sob o ícone da sua conta.
 {% endalert %}
 
-## Adicionando usuários Braze
+## Adicionando usuários da empresa
 
 Você deve ter permissões de administrador para adicionar usuários à sua conta Braze. 
 
 Adicionar um novo usuário:
 
 1. Acessar **Configurações** > **Usuários da Empresa**.
-2. Clique em **\+ Adicionar Novo Usuário**.
+2. Selecione **\+ Adicionar Novo Usuário**.
 3. Insira as informações solicitadas, incluindo o e-mail, o departamento e a [função do usuário]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#creating-a-role).
 
 {% alert tip %}
@@ -34,7 +34,7 @@ O departamento listado no perfil de um usuário determina quais tipos de comunic
 
 4. Para usuários que não são administradores, selecione as permissões de nível de empresa e de nível de espaço de trabalho [permissões]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#editing-a-users-permissions) que você deseja que este usuário tenha.
 
-![Permissões no nível do espaço de trabalho com uma seção para campos de permissões personalizadas.]({% image_buster /assets/img/add_new_user_3.png %})
+![Permissões em nível de espaço de trabalho com uma seção para campos de permissões personalizadas.]({% image_buster /assets/img/add_new_user_3.png %})
 
 ### Requisitos de endereço de e-mail
 
@@ -50,23 +50,23 @@ Por motivos de segurança, os usuários não podem alterar o endereço de e-mail
 
 {% multi_lang_include permissions.md content="Differences" %}
 
-## Suspender usuários do Braze
+## Suspensão de usuários da empresa
 
-Suspender um usuário coloca a conta dele em um estado inativo, onde o usuário não pode mais fazer login, mas os dados associados à conta são preservados. Somente administradores podem suspender ou reativar usuários do Braze.
+Suspender um usuário coloca a conta dele em um estado inativo, onde o usuário não pode mais fazer login, mas os dados associados à conta são preservados. Apenas administradores podem suspender ou reativar usuários da empresa. Observe que usuários suspensos ainda podem receber notificações do Braze.
 
-Para suspender um usuário, acesse **Configurações** > **Usuários da empresa**, localize o nome de usuário e selecione <i class="fa-solid fa-user-lock"></i> **Suspender**.
+Para suspender um usuário, acesse **Configurações** > **Usuários da Empresa**, encontre o nome de usuário e selecione <i class="fa-solid fa-user-lock"></i> **Suspender**.
 
 ![Opção para suspender um usuário.]({% image_buster /assets/img_archive/suspend_user.png %})
 
-Os administradores também podem suspender um usuário selecionando seu nome na lista e clicando em **Suspender usuário** no rodapé.
+Administradores também podem suspender um usuário selecionando seu nome na lista e escolhendo **Suspender usuário** no rodapé.
 
 ![Suspender um usuário ao editar os detalhes do usuário.]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
 
-## Excluindo usuários do Braze
+## Excluindo usuários da empresa
 
-Para excluir um usuário, acessar **Configurações** > **Usuários da Empresa**, encontre o nome de usuário e selecione <i class="fa fa-trash-can"></i> **Excluir usuário**.
+Para excluir um usuário, acesse **Configurações** > **Usuários da Empresa**, encontre o nome de usuário e selecione <i class="fa fa-trash-can"></i> **Excluir usuário**.
 
-![Excluir um usuário]({% image_buster /assets/img_archive/delete_user_new.png %})
+![Excluir um usuário.]({% image_buster /assets/img_archive/delete_user_new.png %})
 
 Depois que um usuário é excluído, a Braze não mantém nenhum dos seguintes dados:
 
@@ -86,19 +86,19 @@ Braze manterá os seguintes dados da conta:
 
 ### Impacto da exclusão de um usuário do dashboard
 
-Quando um usuário do dashboard é excluído, não haverá impacto significativo sobre os ativos que ele criou no dashboard, como campanhas, segmentos e Canvas. No entanto, é importante notar que o campo **Criado por** para esses ativos exibirá um valor "nulo" em vez do endereço de e-mail do usuário excluído.
+Quando um usuário do dashboard é excluído, não há impacto significativo nos ativos que eles criaram dentro do dashboard, como campanhas, segmentos e canvas. No entanto, o campo **Criado Por** para esses ativos exibe um valor "nulo" em vez do endereço de e-mail do usuário excluído.
 
-Se um novo usuário do dashboard for criado posteriormente com o mesmo endereço de e-mail do usuário excluído, o Braze não associará novamente os ativos criados pelo usuário excluído ao novo usuário. O novo usuário do painel começará do zero e não será creditado como o criador de nenhum ativo existente no dashboard.
+Se um novo usuário do dashboard for criado posteriormente com o mesmo endereço de e-mail do usuário excluído, o Braze não re-associará os ativos criados pelo usuário excluído com o novo usuário. O novo usuário do dashboard começará do zero e não será creditado como o criador de nenhum ativo existente no dashboard.
 
 ## Solução de problemas
 
-### "O e-mail já está ocupado" ao tentar adicionar um usuário
+### "E-mail já está em uso" ao tentar adicionar um usuário
 
-Se tentar adicionar um novo usuário e receber um erro dizendo que o e-mail já está ocupado, mas não conseguir encontrá-lo em sua lista de usuários, esse usuário provavelmente existe em uma instância diferente do mesmo cluster do Braze dashboard.
+Se você tentar adicionar um novo usuário e receber um erro dizendo que o e-mail já está em uso, mas não conseguir encontrá-lo na sua lista de usuários, esse usuário provavelmente existe em uma instância diferente do mesmo cluster de dashboard do Braze.
 
-Para criar esse novo usuário, você pode fazer uma das seguintes opções:
+Para criar este novo usuário, você pode fazer uma das seguintes opções:
 
-1. Excluir o usuário da outra instância antes de poder criá-lo na nova instância, ou
-2. Crie o usuário com uma string de e-mail diferente (como `testing+01@braze.com`) ou outro alias de e-mail. 
+1. Excluir o usuário da outra instância antes de poder criá-lo na nova, ou
+2. Criar o usuário com uma string de e-mail diferente (como `testing+01@braze.com`) ou outro alias de e-mail. 
 
-Se não receber a ativação da mensagem em sua caixa de entrada ao usar `testing+01@braze.com`, confirme com sua equipe de TI se é possível aceitar mensagens desse tipo de endereço de e-mail. Alguns administradores filtram as mensagens enviadas para endereços de e-mail com `+`.
+Se você não receber a ativação da mensagem na sua caixa de entrada ao usar `testing+01@braze.com`, confirme com sua equipe de TI se você pode aceitar mensagens desse tipo de endereço de e-mail. Alguns administradores filtram mensagens enviadas para endereços de e-mail com um `+`.

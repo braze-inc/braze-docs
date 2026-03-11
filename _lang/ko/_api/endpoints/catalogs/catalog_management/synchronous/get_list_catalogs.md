@@ -106,12 +106,12 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \
         {
           "name": "time_field",
           "type": "time"
-        },
+        }
       ],
       "name": "my_catalog",
       "num_items": 3,
       "updated_at": "2022-11-02T09:03:19.967+00:00"
-    },
+    }
   ],
   "message": "success"
 }

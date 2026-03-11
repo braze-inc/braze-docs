@@ -39,11 +39,11 @@ Se uma variante superou todas as outras com mais de 95% de [confiança]({{site.b
 
 Se nenhuma variante superar todas as outras com 95% de confiança e você optar por enviar a variante de melhor performance mesmo assim, a variante de melhor performance ainda será enviada e indicada com o rótulo "Winner" (Vencedor).
 
-![Resultados de um teste inicial enviado para determinar a Variante Vencedora, onde nenhuma variante teve desempenho melhor do que as outras com confiança suficiente para atender ao limite de confiança de 95 por cento para significância estatística.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
+![Resultados de um teste inicial enviado para determinar a Variante Vencedora, onde nenhuma variante teve desempenho melhor do que as outras com confiança suficiente para atender ao limite de 95 por cento de confiança para significância estatística.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
 
 #### Como a variante vencedora é selecionada
 
-O Braze testa todas as variantes umas contra as outras com os [testes de qui-quadrado de Pearson](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). Isso mede se uma variante supera estatisticamente todas as outras em um nível de significância de p < 0,05, ou o que chamamos de significância de 95%. Em caso afirmativo, a variante vencedora é indicada com o rótulo "Winner" (Vencedor).
+O Braze testa todas as variantes umas contra as outras com os [testes de qui-quadrado de Pearson](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). Isso mede se uma variante supera estatisticamente todas as outras em um nível de significância de p < 0,05, ou o que chamamos de 95% de significância. Em caso afirmativo, a variante vencedora é indicada com o rótulo "Winner" (Vencedor).
 
 Esse é um teste separado da pontuação de confiança, que descreve apenas a performance de uma variante em comparação com o controle com um valor numérico entre 0 e 100%.
 
@@ -54,7 +54,7 @@ Uma variante pode se sair melhor do que o grupo de controle, mas o teste do qui-
 
 A guia **Winning Variant (Variante vencedora** ) mostra os resultados do segundo envio, em que cada usuário restante recebeu a variante de melhor desempenho do teste inicial. Sua **% de público** será adicionada à porcentagem do segmento de direcionamento que você reservou para o grupo da Variante vencedora.
 
-![Resultados da Variante Vencedora enviados ao grupo da Variante Vencedora.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
+![Resultados da Variante Vencedora enviados para o grupo da Variante Vencedora.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -93,7 +93,7 @@ Essas características são:
 
 Por exemplo, o teste pode descobrir que a maioria dos usuários prefere a Variante A, mas usuários que tiveram uma sessão há cerca de 3-12 dias, têm entre 1-12 dias entre sessões e foram criados nos últimos 67-577 dias tendem a preferir a Variante B. Portanto, usuários nessa subpopulação receberam a Variante B no segundo envio, enquanto o restante recebeu a Variante A.
 
-![A tabela de Características do Usuário, que mostra quais usuários são previstos para preferir a Variante A e a Variante B com base nos três grupos em que se enquadram para recência, frequência e tempo de permanência.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
+![A tabela de Características do Usuário, que mostra quais usuários são previstos para preferir a Variante A e a Variante B com base nos três grupos em que se enquadram para recência, frequência e tempo de uso.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
 
 **Como as variantes personalizadas são selecionadas**<br>
 Com esse método, a mensagem recomendada de um usuário individual é a soma dos efeitos de sua recenticidade, frequência e permanência específicas. A recência, a frequência e a permanência são divididas em grupos, conforme ilustrado na tabela **Características do usuário**. O intervalo de tempo de cada intervalo é determinado pelos dados de usuários em cada campanha individual e mudará de campanha para campanha. 
@@ -151,7 +151,7 @@ Independentemente de seu teste ter ou não um vencedor claro, pode ser útil exe
 
 ## Discrepâncias entre o grupo de controle e a variante
 
-Em campanhas de mensagem no app, a forma como os usuários são rastreados e como as impressões são registradas pode causar discrepâncias na divisão esperada entre o grupo de controle e a variante. Isso ocorre porque as impressões reais registradas podem não refletir essa divisão, e a Braze, em última análise, não tem controle sobre o comportamento individual do usuário de quem realizará o disparo.
+Em campanhas de mensagem no app, a forma como os usuários são rastreados e como as impressões são registradas pode causar discrepâncias na divisão esperada entre o grupo de controle e a variante. Isso ocorre porque as impressões reais registradas podem não refletir essa divisão, e a Braze, em última análise, não tem controle sobre o comportamento individual do usuário que realizará o gatilho.
 
 Por exemplo, digamos que uma campanha tenha um público-alvo de 200 usuários no lançamento, com 100 usuários no grupo de controle e 100 usuários na variante.
 

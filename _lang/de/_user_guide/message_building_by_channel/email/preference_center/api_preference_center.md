@@ -1,17 +1,17 @@
 ---
-nav_title: API-E-Mail-Einstellungszentrum
-article_title: API-E-Mail-Einstellungszentrum
+nav_title: API-E-Mail-Einstellungscenter
+article_title: API-E-Mail-Einstellungscenter
 page_order: 1
-description: "Dieser Artikel beschreibt das API-E-Mail-Einstellungszentrum und wie Sie es anpassen können."
+description: "Dieser Artikel beschreibt das API-E-Mail-Einstellungscenter und wie Sie es anpassen können."
 channel:
   - email
 ---
 
-# API-E-Mail-Einstellungszentrum
+# API-E-Mail-Einstellungscenter
 
 > Die Einrichtung eines Präferenzzentrums bietet Ihren Benutzern eine zentrale Anlaufstelle zur Bearbeitung und Verwaltung ihrer Benachrichtigungspräferenzen für Ihre [E-Mail-Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/email/). Dieser Artikel enthält Schritte zur Erstellung eines API-generierten Präferenzzentrums. Allerdings können Sie ein Präferenzzentrum auch mit dem [Drag-and-Drop-Editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/) erstellen.
 
-Gehen Sie im Braze-Dashboard zu **Zielgruppe** > **E-Mail-Präferenzzentren**.
+Bitte gehen Sie im Braze-Dashboard zu **„Zielgruppe“** > **„E-Mail-Einstellungscenter**“.
 
 Hier können Sie jede Abonnementgruppe verwalten und einsehen. Jede Abo-Gruppe, die Sie erstellen, wird zu dieser Liste der Präferenzzentren hinzugefügt. Sie können mehrere Präferenzzentren erstellen.
 
@@ -106,7 +106,7 @@ Bei diesem Ansatz sind keine in die URL eingebetteten Abfrage-String-Wert-Paare 
 {
     "user_id": "1234567890",
     "name": "John Doe",
-    "category": offers
+    "category": "offers"
 }
 ```
 
@@ -141,9 +141,9 @@ Dann könnten Sie über Currents herausfinden, welche Nutzer:innen Spanisch spre
 
 Nein. Wenn Sie beim Verfassen einer E-Mail-Kampagne die Nachricht "Ihr E-Mail-Text enthält keinen Abmeldelink" sehen, wird diese Warnung erwartet, wenn sich Ihr Abmeldelink in einem Content-Block befindet.
 
-### Wie kann ich das Standard-Browsersymbol aktualisieren?
+### Wie kann ich das Standard-Browser-Symbol updaten?
 
-Standardmäßig wird für das Symbol neben dem Namen des Browser Tabs (Favicon) das Braze Logo verwendet. Um ein angepasstes Favicon hinzuzufügen, legen Sie es über das Attribut `links-tags` in Ihrem Create oder Update [Preference Center API-Aufruf]({{site.baseurl}}/api/endpoints/preference_center) fest. Braze speist dann den Tag {% raw %}`<link rel="icon" ...>`{% endraw %} für Sie in die gehostete Seite ein.
+Standardmäßig wird für das Symbol neben dem Namen des Tabs (Favicon) das Braze-Logo verwendet. Um ein angepasstes Favicon hinzuzufügen, legen Sie es über das`links-tags`Attribut in Ihrem [API-Aufruf]({{site.baseurl}}/api/endpoints/preference_center) „Create or Update [Preference Center“]({{site.baseurl}}/api/endpoints/preference_center) fest. Braze fügt dann den{% raw %}`<link rel="icon" ...>`{% endraw %}Tag für Sie in die gehostete Seite ein.
 
 {% raw %}
 ```

@@ -68,7 +68,7 @@ BrazeとTypeformを統合することで、以下のことが可能になる：
 
 ## Typeformのウェブフックのペイロードの例
 
-```json
+```http
 Content-Type: application/json
 
 {

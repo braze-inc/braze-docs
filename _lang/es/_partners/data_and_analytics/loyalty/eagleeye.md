@@ -96,7 +96,7 @@ Las tablas siguientes describen los dos tipos de integraciones compatibles entre
       <td>
         <ul>
           <li>Se entregan recompensas (cupones o puntos) a un consumidor por unirse al programa de fidelización</li>
-          <li>Se emiten recompensas a un consumidor que haya tenido una entrega tardía</li>
+          <li>Se conceden recompensas a un consumidor que haya tenido una entrega tardía</li>
           <li>Recompensas por cumpleaños</li>
         </ul>
       </td>
@@ -146,7 +146,7 @@ En Braze, completarás lo siguiente:
 
 ### Paso 5: Pruebe su integración
 
-Realiza llamadas a la API en AIR y observa el flujo de datos de eventos en tu Braze workspace.Validate datos recibidos de AIR y confirma que los atributos se actualizan según lo esperado.  
+Haz llamadas a la API en AIR y observa el flujo de datos de eventos en tu Braze workspace.Validate datos recibidos de AIR y confirma que los atributos se actualizan como se espera.  
 
 Además, añade usuarios a las audiencias y confirma que las recompensas se emiten en AIR.
 

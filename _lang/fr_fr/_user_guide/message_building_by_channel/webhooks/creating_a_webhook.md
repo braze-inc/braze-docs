@@ -10,17 +10,17 @@ search_rank: 2
 
 # Créez une campagne webhook
 
-> La création d'une campagne webhook ou l'inclusion d'un webhook dans une campagne multicanal vous permet de déclencher des actions non liées à l'application en fournissant à d'autres systèmes et applications des informations en temps réel. 
+> La création d'une campagne webhook ou l'intégration d'un webhook dans une campagne multicanal vous permet de servir de déclencheur pour des actions hors application en fournissant des informations en temps réel à d'autres systèmes et applications. 
 
-Vous pouvez utiliser les webhooks pour envoyer des informations à des systèmes, tels que Salesforce ou Marketo, ou à vos systèmes dorsaux. Par exemple, vous pourriez vouloir créditer les comptes de vos clients d'une promotion après qu'ils aient effectué un événement personnalisé un certain nombre de fois.
+Vous pouvez utiliser des webhooks pour transmettre des informations à des systèmes tels que Salesforce ou Marketo, ou à vos systèmes backend. Par exemple, vous pourriez vouloir créditer les comptes de vos clients d'une promotion après qu'ils aient effectué un événement personnalisé un certain nombre de fois.
 
 {% alert tip %}
-Pour en savoir plus sur ce que sont les webhooks et sur la manière dont vous pouvez les utiliser dans Braze, consultez la rubrique [À propos des webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) avant de poursuivre.
+Pour en savoir plus sur les webhooks et leur utilisation dans Braze, veuillez consulter [la section À propos des webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) avant de continuer.
 {% endalert %}
 
 ## Étape 1 : Choisissez où créer votre message
 
-Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont plus adaptées aux campagnes d'envoi de messages uniques et ciblés, tandis que les Canevas sont plus adaptés aux parcours utilisateurs en plusieurs étapes.
+Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont plus adaptées aux campagnes de communication uniques et avec ciblage, tandis que les canevas conviennent mieux aux parcours utilisateur en plusieurs étapes.
 
 {% tabs %}
 {% tab Campaign %}
@@ -30,7 +30,7 @@ Vous ne savez pas si votre message doit être envoyé via une campagne ou un Can
 1. Allez dans **Messagerie** > **Campagnes** et sélectionnez **Créer une campagne**.
 2. Sélectionnez **Webhook** ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Multichannel**.
 3. Donnez un nom clair et significatif à votre campagne.
-4. (Facultatif) Ajoutez une description pour décrire comment cette campagne sera utilisée.
+4. (Facultatif) Veuillez ajouter une description expliquant comment cette campagne sera utilisée.
 4. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) et des [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) si nécessaire.
    * Les balises facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [générateur de rapports]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), vous pouvez filtrer les éléments en fonction de certaines étiquettes spécifiques.
 5. Ajoutez et nommez autant de variantes que nécessaire pour votre campagne. Vous pouvez utiliser différents modèles de webhook pour chacune des variantes que vous ajoutez. Pour plus d'informations sur ce sujet, consultez [Tests multivariés et A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
@@ -56,7 +56,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 ## Étape 2 : Créez votre webhook
 
-Vous pouvez choisir de créer un webhook à partir de zéro, d'utiliser un modèle existant ou d'utiliser l'un de nos modèles existants. Ensuite, créez votre webhook dans l'onglet **Compose** de l'éditeur.
+Vous avez la possibilité de créer un webhook à partir de zéro, d'utiliser un modèle existant ou d'utiliser l'un de nos modèles existants. Ensuite, créez votre webhook dans l'onglet **Compose** de l'éditeur.
 
 L'onglet **Composer** comprend les champs suivants :
 
@@ -65,11 +65,11 @@ L'onglet **Composer** comprend les champs suivants :
 - Méthode HTTP
 - Corps de la demande
 
-![L'onglet "Compose" avec un exemple de modèle de webhook.]({% image_buster /assets/img_archive/webhook_compose.png %})
+![L'onglet « Composer » avec un exemple de modèle de webhook.]({% image_buster /assets/img_archive/webhook_compose.png %})
 
 #### Langue {#internationalization}
 
-L'[internationalisation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) est prise en charge dans l'URL et le corps de la requête. Pour internationaliser votre message, sélectionnez **Ajouter des langues** et remplissez les champs requis. 
+L'[internationalisation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) est prise en charge dans l'URL et le corps de la requête. Pour internationaliser votre message, veuillez sélectionner **« Ajouter des langues** » et remplir les champs obligatoires. 
 
 Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans Liquid. Pour obtenir la liste complète des langues que vous pouvez utiliser, reportez-vous à la section [Langues prises en charge.]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported)
 
@@ -79,7 +79,7 @@ Si vous ajoutez du texte dans une langue qui s'écrit de droite à gauche, notez
 
 L’URL du webhook, ou l’URL HTTP, définit votre endpoint. L’endpoint est l’endroit où vous enverrez les informations que vous capturez dans le webhook. 
 
-Si vous désirez envoyer une information à un vendeur, le vendeur doit fournir cette URL dans la documentation de son API. Si vous envoyez des informations à vos propres systèmes, vérifiez auprès de votre équipe de développement ou d'ingénierie que vous utilisez l'URL correcte. 
+Si vous désirez envoyer une information à un vendeur, le vendeur doit fournir cette URL dans la documentation de son API. Si vous envoyez des informations vers vos propres systèmes, veuillez vérifier auprès de votre équipe de développement ou d'ingénierie que vous utilisez l'URL correcte. 
 
 Braze autorise uniquement les URL qui communiquent sur les ports `80` (HTTP) et `443` (HTTPS) standard.
 
@@ -93,23 +93,23 @@ La [méthode HTTP]({{site.baseurl}}/user_guide/message_building_by_channel/webho
 
 #### Corps de la demande
 
-Le corps de la requête est l’information qui sera envoyée à l’URL que vous avez définie. Vous pouvez créer le corps de votre demande de webhook avec des paires clé-valeur JSON ou du texte brut.
+Le corps de la requête est l’information qui sera envoyée à l’URL que vous avez définie. Vous pouvez créer le corps de votre requête webhook à l'aide de paires clé-valeur JSON ou de texte brut.
 
 ##### Paires clé-valeur JSON
 
-Les paires clé-valeur JSON vous permettent d’écrire facilement une requête pour un endpoint qui attend un format JSON. Vous ne pouvez l'utiliser qu'avec un endpoint qui attend une requête JSON. Par exemple, si votre clé est `message_body`, la valeur correspondante pourrait être `Your order just arrived!`. Après avoir entré la paire clé-valeur, le composeur configurera votre requête en syntaxe JSON et une prévisualisation de votre requête JSON se remplira automatiquement.
+Les paires clé-valeur JSON vous permettent d’écrire facilement une requête pour un endpoint qui attend un format JSON. Veuillez noter que cette fonctionnalité ne peut être utilisée qu'avec un endpoint qui attend une requête JSON. Par exemple, si votre clé est `message_body`, la valeur correspondante pourrait être `Your order just arrived!`. Après avoir entré la paire clé-valeur, le composeur configurera votre requête en syntaxe JSON et une prévisualisation de votre requête JSON se remplira automatiquement.
 
-![Le corps de la demande est constitué de paires clé-valeur JSON.]({% image_buster /assets/img/webhook_json_1.png %})
+![Corps de la requête défini sur des paires clé-valeur JSON.]({% image_buster /assets/img/webhook_json_1.png %})
 
 Vous pouvez personnaliser vos paires clé-valeur à l'aide de Liquid, par exemple en incluant tout attribut utilisateur, [attribut personnalisé]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices) ou [propriété d'événement]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) dans votre requête. Vous pouvez par exemple ajouter le prénom et l’e-mail d’un client dans votre requête. Veillez à inclure une [valeur par défaut]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web) pour chaque attribut.
 
 ##### Texte brut
 
-L’option de texte brut permet une flexibilité pour écrire une requête pour un endpoint qui attend un corps de n’importe quel format. Par exemple, vous pouvez l'utiliser pour écrire une requête pour un endpoint qui s'attend à ce que votre requête soit au format XML. 
+L’option de texte brut permet une flexibilité pour écrire une requête pour un endpoint qui attend un corps de n’importe quel format. Par exemple, vous pouvez utiliser ceci pour rédiger une requête pour un endpoint qui attend que votre requête soit au format XML. 
 
 La [personnalisation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) et l'[internationalisation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) à l'aide de Liquid sont prises en charge dans le texte brut.
 
-![Un exemple de corps de requête avec du texte brut utilisant Liquid.]({% image_buster /assets/img_archive/webhook_rawtext.png %})
+![Exemple de corps de requête avec du texte brut utilisant Liquid.]({% image_buster /assets/img_archive/webhook_rawtext.png %})
 
 Si vous attribuez la valeur `application/x-www-form-url-encoded` à l'[en-tête de requête](#request-headers-optional) `Content-Type`, le corps de la requête doit être formaté sous la forme d'une chaîne de caractères codée en URL. Par exemple :
 
@@ -125,9 +125,9 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 
 #### En-têtes de requête (optionnel)
 
-Certains endpoints peuvent nécessiter d’ajouter des en-têtes à vos requêtes. Dans la section **Composer** du compositeur, vous pouvez ajouter autant d'en-têtes que nécessaire.
+Certains endpoints peuvent nécessiter d’ajouter des en-têtes à vos requêtes. Dans la section **« Compose** » (Composer) du compositeur, vous pouvez ajouter autant d'en-têtes que nécessaire.
 
-![Exemples d'en-têtes de requête pour les clés "Authorization" et "Content-Type".]({% image_buster /assets/img_archive/webhook_request_headers_example.png %})
+![Exemples d'en-têtes de requête pour les clés « Authorization » et « Content-Type ».]({% image_buster /assets/img_archive/webhook_request_headers_example.png %})
 
 Les en-têtes de requête les plus courants sont les spécifications `Content-Type` (qui décrivent le type de données à attendre dans le corps, comme XML ou JSON) et les en-têtes d'autorisation qui contiennent vos informations d'identification auprès de votre fournisseur ou de votre système. 
 
@@ -143,7 +143,7 @@ Pour ce faire, passez à l'onglet **Test** et envoyez un webhook de test. Vous p
 
 Après avoir envoyé le test de webhook, un dialogue s’affichera avec le message en réponse. Si la requête webhook échoue, consultez le message d’erreur pour obtenir de l’aide pour la résolution des problèmes de votre webhook. L’exemple suivant détaille la réponse d’un webhook ayant une URL de webhook invalide.
 
-```json
+```http
 404 Not Found
 
 {
@@ -172,7 +172,7 @@ C'est également à cette étape que vous pouvez spécifier les contrôles de r�
 
 #### Choisir les utilisateurs à cibler
 
-Ensuite, vous devez [cibler les utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) en choisissant des segments ou des filtres pour réduire votre audience. Au cours de cette étape, vous sélectionnez l'audience la plus large à partir de vos segments et, si vous le souhaitez, vous réduisez encore ce segment à l'aide de nos filtres. Vous recevez automatiquement un aperçu de ce à quoi ressemble la population de ce segment approximatif. N'oubliez pas que l'appartenance exacte à un segment est toujours calculée avant l'envoi du message.
+Ensuite, il est nécessaire de [réaliser le ciblage des utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) en sélectionnant des segments ou des filtres afin de restreindre votre audience. Au cours de cette étape, vous sélectionnez l'audience la plus large parmi vos segments, puis vous affinez ce segment à l'aide de nos filtres, si vous le souhaitez. Vous recevez automatiquement un aperçu de ce à quoi ressemble approximativement la population de ce segment. Veuillez noter que l'appartenance exacte à un segment est toujours calculée avant l'envoi du message.
 
 {% multi_lang_include target_audiences.md %}
 
@@ -204,7 +204,7 @@ Les webhooks reposent sur les serveurs Braze qui effectuent des requêtes vers u
 
 Si votre webhook ne parvient pas à être envoyé, un message d'erreur est enregistré dans le [journal d'activité des messages]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) et contient des informations telles que l'horodatage de l'erreur, le nom de l'application et des détails sur l'erreur.
 
-![Erreur webhook avec l'envoi du message "Un jeton d'accès actif doit être utilisé pour demander des informations sur l'utilisateur actuel".]({% image_buster /assets/img_archive/webhook-error.png %})
+![Erreur webhook avec le message « Un jeton d'accès actif doit être utilisé pour interroger les informations sur l'utilisateur actuel ».]({% image_buster /assets/img_archive/webhook-error.png %})
 
 Si le message d'erreur n'est pas suffisamment clair quant à la source de l'erreur, vous devez consulter la documentation du point de terminaison de l'API que vous utilisez. Elle fournit généralement une explication des codes d’erreur utilisés par l’endpoint ainsi que ce qui les entraîne le plus souvent.
 
@@ -214,12 +214,12 @@ Lorsque la requête webhook est envoyée, le serveur qui la reçoit renverra un 
 
 | Code de réponse | Marqué comme reçu ? | Nouvel essai ? |
 |---------------|-----------|----------|
-| `20x` (succès)  | Oui |   S.O.  |
+| `20x` (réussite)  | Oui |   S.O.  |
 | `30x` (redirection)  | Non | Non |
-| `408` (délai d'attente de la demande)  | Non | Oui |
+| `408` (délai d'attente de la requête)  | Non | Oui |
 | `429` (limite de débit)  | Non | Oui |
-| `Other 4XX` (erreur du client)  | Non | Non |
-| `5XX` (erreur de serveur)   | Non | Oui |
+| `Other 4XX` (erreur client)  | Non | Non |
+| `5XX` (erreur du serveur)   | Non | Oui |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}

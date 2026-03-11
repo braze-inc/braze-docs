@@ -20,7 +20,7 @@ Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_s
 
 이 이벤트 분석은 일반적으로 메시지 인게이지먼트 이벤트에 어떤 유형의 정보가 포함되는지 보여줍니다. 구성 요소에 대한 확실한 이해를 바탕으로 개발자와 비즈니스 인텔리전스 전략 팀은 수신되는 Currents 이벤트 데이터를 사용하여 데이터 기반 보고서와 차트를 만들고 다른 유용한 데이터 메트릭을 활용할 수 있습니다.
 
-![사용자별 속성, 캠페인 또는 캔버스 추적 속성, 이벤트별 속성별로 그룹화된 나열된 속성과 함께 이메일 탈퇴 이벤트를 보여주는 메시지 참여 이벤트의 세부 정보]({% image_buster /assets/img/message_engagement_event.png %})
+![메시지 참여 이벤트의 분석으로, 사용자별 속성, 캠페인 또는 캔버스 추적 속성, 이벤트별 속성으로 그룹화된 이메일 탈퇴 이벤트가 표시됩니다]({% image_buster /assets/img/message_engagement_event.png %})
 
 메시지 참여 이벤트는 **사용자별** 속성, **캠페인/캔버스 추적** 속성, **이벤트별** 속성으로 구성됩니다.
 

@@ -12,7 +12,7 @@ tool: Media
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
-- name: Crie um e-mail com arrastar e soltar
+- name: Crie um e-mail arrastando e soltando
   link: /docs/dnd/overview/
   image: /assets/img/braze_icons/brush-02.svg
 - name: Crie um modelo de e-mail
@@ -30,7 +30,7 @@ guide_featured_list:
 
 guide_menu_title: "Other articles"
 guide_menu_list:
-- name: Blocos de produtos com arrastar e soltar
+- name: Blocos de produtos arrastáveis
   link: /docs/dnd_product_blocks/
   image: /assets/img/braze_icons/columns-01.svg
 

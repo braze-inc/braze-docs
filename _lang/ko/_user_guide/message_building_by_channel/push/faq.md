@@ -18,7 +18,13 @@ channel:
 
 푸시 토큰이 재할당되면 사용자 프로필의 **푸시 변경 로그에** 변경 사항이 반영됩니다. 사용자 프로필의 **참여** 탭으로 이동하면 이 정보를 확인할 수 있습니다.
 
-!['연락처 설정' 섹션의 '푸시 체인지로그'를 클릭합니다.]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
+!["푸시 체인지로그"는 "연락처 설정" 섹션에 있습니다.]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
+
+### “푸시 전송 오류: 페이로드가 유효하지 않습니다”는 무슨 뜻인가요?
+
+이 메시지는 APNs가 유효하지 않은 페이로드(예: 빈 페이로드 또는 너무 큰 페이로드)로 인해 푸시 요청을 거부했음을 나타냅니다.
+
+자세한 내용과 다음 단계는 [일반 푸시 오류 메시지]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/)를 참조하세요.
 
 ### 옵트인한 사용자에게 푸시 토큰이 없는 이유는 무엇인가요?
 

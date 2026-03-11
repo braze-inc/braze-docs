@@ -91,7 +91,7 @@ Brazeを実験のレポートツールとして設定した後、**Experiment co
 
 ![カスタムイベント ユーザーはBrazeにログインし、カメレオオンからBrazeが受け取ったイベントの報酬読み込むの例を示します。]({% image_buster /assets/img/kameleoon/img_9.png %})
 
-次に、このデータをカスタムイベントs で表示し、カスタムイベント レポートs を作成してカメレオオンのキャンペーン露出を識別し、イベントプロパティーに基づいてセグメンテーションを有効にします。カスタムイベント s は、[ アクション Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/#action-groups)、[ アクション ベースのトリガーs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery) または[ Segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) を使用して、後続またはリンクされたキャンペーンs およびキャンバスを作成するときに使用できます。
+次に、このデータをカスタムイベントs で表示し、カスタムイベント レポートs を作成してカメレオオンのキャンペーン露出を識別し、イベントプロパティーに基づいてセグメンテーションを有効にします。カスタムイベント s は、[ アクション Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/#action-groups)、[ アクション ベースのトリガー]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery) または[ Segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) を使用して、後続またはリンクされたキャンペーンs およびキャンバスを作成するときに使用できます。
 
 さらに、これらの事象は、[Currents カスタムイベントオブジェクト]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/)を介してアクセス可能であり、包括的なレポートおよび解析を可能にする。
 

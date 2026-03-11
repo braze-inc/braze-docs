@@ -35,7 +35,7 @@ MMS e SMS têm custos diferentes e são cobrados separadamente com base no volum
 Não! O MMS agora está incluído em nosso processo de integração de SMS. Os clientes existentes que já passaram pela integração podem começar a enviar campanhas MMS depois de concluir as etapas a seguir:
 
 1. Comprar MMS.
-2. Entre em contato com a equipe de integração do Braze para solicitar que o recurso MMS seja ativado. Isso ativará o MMS e um grupo de inscrições de SMS/MMS será criado ou atualizado para você.
+2. Entre em contato com a equipe de integração do Braze para solicitar a ativação do recurso MMS. Isso ativará o MMS e um grupo de inscrições de SMS/MMS será criado ou atualizado para você.
 
 Em seguida, a equipe de integração da Braze garantirá que seus códigos curtos e longos estejam ativados (nos EUA e no Canadá) para MMS. Eles também atualizarão seus grupos de inscrições para mostrar os números atuais que foram adicionados ou ativados para MMS. Depois que essas etapas forem concluídas, você poderá enviar mensagens MMS imediatamente a partir do nosso criador de mensagens SMS nativo.
 

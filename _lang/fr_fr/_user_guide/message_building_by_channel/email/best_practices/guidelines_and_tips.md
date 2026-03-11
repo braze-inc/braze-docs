@@ -16,8 +16,8 @@ Voici quelques conseils rapides à garder à l’esprit en construisant votre co
 
 - Lors du formatage de votre e-mail, utilisez les feuilles de style inline en tant que CSS.
 - Pour utiliser un modèle d’e-mail sur mobile et PC en même temps, spécifiez une largeur inférieure à 500 pixels.
-- Les images chargées dans le modèle d'e-mail doivent être inférieures à 5 Mo. Les formats pris en charge incluent PNG, JPEG et GIF.
-- Ne définissez pas de hauteurs et de largeurs pour les images, car cela générera un espace blanc inutile dans un e-mail dégradé.
+- Les images doivent être inférieures à 5 Mo. Nous recommandons l'utilisation des formats PNG, JPEG ou GIF pour une compatibilité optimale. Veuillez éviter les formats SVG et WebP, car de nombreux clients de e-mail importants ne les prennent pas encore en charge.
+- Veuillez ne pas définir la hauteur et la largeur des images, car cela pourrait entraîner l'apparition d'espaces blancs inutiles dans un e-mail dégradé.
 - Les balises `div` ne doivent pas être utilisées car la plupart des clients e-mail ne les prennent pas en charge. Utilisez plutôt des tables imbriquées.
 - Évitez d’utiliser Javascript parce qu’il ne fonctionne avec aucun ESP.
 - Braze améliore les temps de chargement en utilisant un CDN global pour héberger toutes les images des e-mails.
@@ -32,29 +32,11 @@ Comme les filtres anti-spam surveillent à la fois la version HTML et la version
 La validation est utilisée pour les adresses e-mail du tableau de bord, les adresses e-mail de l’utilisateur final (vos clients), ainsi que les adresses de réponse et de réponse effectuées par e-mail.
 {% endalert %}
 
-La validation de l'email est effectuée lorsqu'une adresse email utilisateur a été mise à jour ou est importée dans Braze via l'API, le téléchargement CSV, le SDK ou modifiée dans le tableau de bord. Prenez en compte le fait que les adresses e-mail ne peuvent pas comprendre d’espace et que, si elles sont envoyées à l’aide de l’API, les espaces entraîneront une erreur 400.
+La validation de l'adresse e-mail a lieu lorsque l'adresse e-mail d'un utilisateur est mise à jour ou importée dans Braze via l'API, le téléchargement CSV, le SDK, ou modifiée dans le tableau de bord de Braze. Veuillez noter que vos adresses e-mail ne doivent pas contenir d'espaces. Si elles sont envoyées via l'API, les espaces peuvent entraîner une`400`erreur.
 
 Les adresses e-mail ciblées via les serveurs Braze doivent être validées selon les normes [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822), Braze n'accepte pas certains caractères et les reconnaît comme invalides. Si un e-mail est renvoyé, Braze marque l’adresse e-mail comme non valide et le statut d’abonnement n’est pas modifié. 
 
-{% details Unaccepted characters outside of RFC standards %}
-- *
-- /
-- ?
-- !
-- $
-- #
-- %
-- ^
-- &
-- (
-- )
-- {
-- }
-- [
-- ]
-- ~
-- , 
-{% enddetails %}
+Pour plus d'informations sur les caractères non autorisés et les règles de validation des adresses e-mail, veuillez consulter [la section Validation des adresses e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/#how-it-works).
 
 ### Définir les adresses « De » et « Répondre à »
 

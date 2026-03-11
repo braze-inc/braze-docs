@@ -150,7 +150,7 @@ A seção **Preview & Test** permite a prévia de suas mensagens no app em difer
 Para enviar um teste para grupos de teste de conteúdo ou usuários individuais, o push deve ser ativado nos dispositivos de teste antes do envio.
 {% endalert %}
 
-É possível fazer uma prévia das mensagens na guia **Preview & Test**, como se você fosse um usuário. Você pode selecionar um usuário específico, um usuário aleatório ou criar um usuário personalizado:
+É possível fazer uma prévia das mensagens na guia **Preview & Test**, como se fosse um usuário. Você pode selecionar um usuário específico, um usuário aleatório ou criar um usuário personalizado:
 
 - **Usuário aleatório:** O Braze selecionará aleatoriamente um usuário do banco de dados e fará a prévia da mensagem no app com base em suas atribuições ou informações de eventos.
 - **Selecione usuário:** É possível selecionar um usuário específico com base em seu endereço de e-mail ou `external_id`. A mensagem no app será prévia com base nas atribuições do usuário e nas informações do evento.

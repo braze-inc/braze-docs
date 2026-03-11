@@ -18,7 +18,7 @@ channel: in-app messages
 
 Antes de poder utilizar mensajes dentro de la aplicación en tu Canvas, asegúrate de tener configurado un [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) con opciones de retraso y audiencia.
 
-En el constructor Canvas, añade un paso en [Mensaje]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) y selecciona **Mensaje dentro de la aplicación** como tu **canal de mensajería**. Puedes personalizar [cuándo caducará tu mensaje](#in-app-message-expiration) y qué [comportamiento de avance](#advancement-behavior) tendrá.
+En el generador de Canvas, añade un paso [de mensaje]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) y selecciona **Mensaje dentro de la aplicación** como **canal** **de mensajería**. Puedes personalizar [cuándo caducará tu mensaje](#in-app-message-expiration) y qué [comportamiento de avance](#advancement-behavior) tendrá.
 
 ## Añadir un mensaje dentro de la aplicación a tu viaje de usuario
 
@@ -30,32 +30,32 @@ Para añadir un mensaje dentro de la aplicación a tu Canvas, haz lo siguiente:
 
 ## Mensajes desencadenados dentro de la aplicación
 
-Puedes seleccionar un desencadenante para que tus mensajes dentro de la aplicación se desencadenen al iniciar la sesión, o por eventos personalizados y compras.
+Puedes seleccionar un desencadenante para que tus mensajes dentro de la aplicación se activen al inicio de la sesión, o mediante eventos personalizados y compras.
 
-Una vez transcurridos los retrasos y comprobadas las opciones de audiencia, los mensajes dentro de la aplicación se activan en vivo cuando un usuario llega al paso Mensaje. Si un usuario inicia una sesión y realiza el evento desencadenante del mensaje dentro de la aplicación, el usuario verá el mensaje dentro de la aplicación. 
+Una vez superados los retrasos y comprobadas las opciones de audiencia, los mensajes dentro de la aplicación se activan cuando el usuario llega al paso Mensaje. Si un usuario inicia una sesión y realiza el evento desencadenante del mensaje dentro de la aplicación, verás el mensaje dentro de la aplicación. 
 
-En el caso de los pasos del lienzo con entrada activada por acción, los usuarios pueden entrar en el lienzo en mitad de la sesión. Los mensajes dentro de la aplicación no están configurados para estar en vivo hasta que se inicia una sesión, por lo que si un usuario está en medio de una sesión cuando llega al paso Mensaje, no recibirá el mensaje dentro de la aplicación hasta que inicie otra sesión y realice el desencadenamiento correspondiente.
+En el caso de los pasos del lienzo con entrada activada por acción, los usuarios pueden entrar en el lienzo en mitad de la sesión. Los mensajes dentro de la aplicación no se activan hasta que comienza una sesión, por lo que si un usuario se encuentra en medio de una sesión cuando llega al paso Mensaje, no recibirá el mensaje dentro de la aplicación hasta que comience otra sesión y realice la acción desencadenante correspondiente.
 
 ## Caducidad de los mensajes en la aplicación
 
 Puedes elegir cuándo caducará el mensaje dentro de la aplicación. Durante este tiempo, el mensaje dentro de la aplicación esperará a ser visto hasta que haya alcanzado la fecha de caducidad. Después de enviar el mensaje dentro de la aplicación, puedes verlo una vez.
 
-![La sección Controles de mensaje de un paso Mensaje para un mensaje dentro de la aplicación. El mensaje dentro de la aplicación caducará tres días después de que el paso esté disponible.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
+![La sección Controles de mensajes de un paso Mensaje para un mensaje dentro de la aplicación. El mensaje dentro de la aplicación caducará tres días después de que el paso esté disponible.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
 
 | Opción | Descripción | Ejemplo |
 |---|---|---|
-| **Existe una duración tras el paso** | Establece que el mensaje dentro de la aplicación caduque en relación al momento en que el paso esté disponible para el usuario. | Un mensaje dentro de la aplicación con una caducidad de dos días estaría disponible cuando el usuario entrara en el paso Mensaje y se marcaran las opciones de audiencia. Cualquier retraso antes de llegar a este paso provendría de pasos de Retraso anteriores en tu Canvas. El mensaje dentro de la aplicación estaría entonces disponible durante 2 días (48 horas) desde que el usuario entra en el paso, y durante esos dos días, los usuarios pueden ver el mensaje dentro de la aplicación si la abren. |
-| **En una fecha y hora concretas** | Selecciona una fecha y hora concretas en las que el mensaje dentro de la aplicación dejará de estar disponible. | Si tienes una venta que finaliza el 30 de noviembre de 2024, selecciona esta opción para que los usuarios ya no vean el mensaje dentro de la aplicación asociado cuando finalice la venta. |
+| **Existe una duración tras el paso** | Establece la caducidad del mensaje dentro de la aplicación en función del momento en que el paso esté disponible para el usuario. | Un mensaje dentro de la aplicación con una caducidad de dos días estará disponible cuando el usuario acceda al paso Mensaje y se marquen las opciones de audiencia. Cualquier retraso antes de llegar a este paso provendría de los pasos de retraso anteriores en Canvas. El mensaje dentro de la aplicación estará disponible durante 2 días (48 horas) desde el momento en que el usuario ingrese al paso, y durante esos dos días, los usuarios podrán ver el mensaje dentro de la aplicación si abren la aplicación. |
+| **En una fecha y hora concretas** | Selecciona una fecha y hora específicas en las que el mensaje dentro de la aplicación ya no estará disponible. | Si tienes una oferta que finaliza el 30 de noviembre de 2024, selecciona esta opción para que los usuarios ya no vean el mensaje dentro de la aplicación cuando finalice la oferta. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Ejemplos
 
-Braze recomienda que consideres el uso de esta característica en tus Lienzos promocionales y de incorporación.
+Braze recomienda que consideres utilizar esta característica en tus lienzos promocionales y de incorporación.
 
 {% tabs %}
   {% tab Promotional %}
 
-Las promociones, los cupones y las rebajas suelen tener fechas de caducidad estrictas. El siguiente lienzo debería alertar a sus usuarios en los momentos más oportunos de que hay una promoción que pueden utilizar, y tal vez influir en una compra. Esta promoción caduca el 28 de febrero de 2019 a las 11:15 h en la zona horaria de tu empresa.
+Las promociones, los cupones y las rebajas suelen tener fechas de caducidad estrictas. El siguiente lienzo debería alertar a sus usuarios en los momentos más oportunos de que hay una promoción que pueden utilizar, y tal vez influir en una compra. Esta promoción expira el 28 de febrero de 2019 a las 11:15 a. m. en la zona horaria de tu empresa.
 
 <style type="text/css">
 .tg td{word-break:normal;}
@@ -105,7 +105,7 @@ Las promociones, los cupones y las rebajas suelen tener fechas de caducidad estr
 </tbody>
 </table>
 
-Los mensajes dentro de la aplicación caducan cuando expira la promoción para evitar cualquier discrepancia entre la mensajería y la experiencia del cliente.
+Los mensajes dentro de la aplicación caducan cuando finaliza la promoción para evitar cualquier discrepancia entre los mensajes y la experiencia del cliente.
 
   {% endtab %}
   {% tab User Onboarding %}
@@ -135,7 +135,7 @@ Su primera impresión con un usuario es, quizás, la más crítica. Puede hacer 
     <td>Correo electrónico inicial que da la bienvenida a sus usuarios a un proyecto, afiliación u otro programa de incorporación. <br><br>El objetivo es dirigir a los usuarios a su aplicación para que comiencen su integración.</td>
   </tr>
   <tr>
-    <td>Día 3-6 mensaje dentro de la aplicación</td>
+    <td>Día 3-6: mensaje dentro de la aplicación</td>
     <td>3 días después de que el usuario reciba el paso anterior</td>
     <td>Todos de entrada</td>
     <td>Mensaje dentro de la aplicación</td>
@@ -155,7 +155,7 @@ Su primera impresión con un usuario es, quizás, la más crítica. Puede hacer 
 </tbody>
 </table>
 
-Estos mensajes push se espacian alrededor de un mensaje dentro de la aplicación para asegurarse de que el usuario ha visitado la aplicación y ha comenzado su incorporación. Esto ayuda a evitar cualquier correo no deseado o mensajes fuera de lugar que podrían disuadir a los usuarios de visitar tu aplicación, y en su lugar crear un orden fluido y sensato en sus experiencias iniciales con tu aplicación.
+Estos mensajes push se espacian alrededor de un mensaje dentro de la aplicación para asegurarse de que el usuario ha visitado la aplicación y ha comenzado su incorporación. Esto ayuda a evitar cualquier mensaje de correo no deseado o fuera de lugar que pueda disuadir a los usuarios de visitar tu aplicación y, en su lugar, crea un orden fluido y sensato para sus primeras experiencias con tu aplicación.
 
   {% endtab %}
 {% endtabs %}
@@ -165,27 +165,27 @@ Estos mensajes push se espacian alrededor de un mensaje dentro de la aplicación
 
 Un usuario puede desencadenar dos mensajes dentro de la aplicación en tu Canvas al mismo tiempo. Cuando esto ocurra, Braze seguirá el siguiente orden de prioridad para determinar qué mensaje in-app se muestra. 
 
-Selecciona **Establecer prioridad exacta** y arrastra los diferentes pasos en Canvas para reordenar su prioridad en el Canvas. De manera predeterminada, los pasos anteriores en una variante en Canvas aparecerán antes que los pasos posteriores. Una vez que tus pasos estén en el orden de prioridad que prefieras, selecciona **Aplicar clasificación**.
+Selecciona **Establecer prioridad exacta** y arrastra los diferentes pasos en Canvas para reordenar su prioridad en Canvas. De manera predeterminada, los pasos anteriores en una variante en Canvas aparecerán antes que los pasos posteriores. Una vez que tus pasos estén en el orden de prioridad que prefieras, selecciona **Aplicar ordenación**.
 
-![El clasificador de prioridades con dos pasos "Bienvenida IAM" y "Seguimiento IAM".]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
+![El clasificador de prioridades con dos pasos: «Bienvenida IAM» y «Seguimiento IAM».]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
 
-### Hacer cambios en borradores de Lienzos activos
+### Realizar cambios en los borradores de lienzos activos
 
-Si realizas cambios en la prioridad de los mensajes dentro de la aplicación en **Configuración de envío** de un borrador de un Canvas activo, estos cambios se aplican directamente al Canvas activo cuando se cierra el clasificador de prioridades. Sin embargo, en un paso de Mensaje, el clasificador de prioridades se actualizará cuando se lance el borrador, ya que la configuración del paso en Canvas se aplica a nivel de paso. 
+Si realizas cambios en la prioridad de los mensajes dentro de la aplicación en **la configuración** **de envío** de un borrador de un Canvas activo, estos cambios se aplicarán directamente al Canvas activo cuando se cierre el clasificador de prioridades. Sin embargo, en un paso de mensaje, el clasificador de prioridades se actualizará cuando se lance el borrador, ya que la configuración del paso en Canvas se aplica a nivel de paso. 
 
 ## Comportamiento de avance
 
-Los pasos de mensajería hacen avanzar automáticamente a todos los usuarios que entran en el paso. Ten en cuenta que no espera a que el mensaje dentro de la aplicación se desencadene o se muestre. No es necesario especificar el comportamiento de avance de los mensajes, lo que simplifica la configuración del paso general.
+Los pasos del mensaje avanzan automáticamente a todos los usuarios que entran en el paso. Ten en cuenta que no espera a que se desencadene o se muestre el mensaje dentro de la aplicación. No es necesario especificar el comportamiento de avance de los mensajes, lo que simplifica la configuración del paso general.
 
-Cuando un usuario entra en un paso de mensajes dentro de la aplicación, avanza fuera de él inmediatamente en lugar de ser retenido durante la ventana de caducidad. En este caso, tener un paso de Retraso en el recorrido del usuario puede ser útil.
+Cuando un usuario entra en un paso de mensaje dentro de la aplicación, sale de él inmediatamente en lugar de quedarse retenido hasta que expire el plazo. En este caso, incluir un paso de retraso en tu recorrido de usuario puede resultar útil.
 
-Para utilizar la opción **Avanzar cuando se envíe el mensaje**, añade una [ruta de audiencia]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) independiente para filtrar a los usuarios que no hayan recibido el paso anterior.
+Para utilizar la opción **Avanzado cuando se envíe el mensaje**, añade una [ruta de audiencia]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) independiente para filtrar a los usuarios que no hayan recibido el paso anterior.
 
 {% details Original Canvas editor %}
 
 Ya no puedes crear o duplicar Lienzos utilizando el editor original. Esta sección está disponible como referencia para entender cómo funciona el comportamiento de avance para los pasos con mensajes in-app.
 
-Los lienzos creados en el editor original necesitan especificar un comportamiento de avance-el criterio para avanzar a través de su componente Lienzo. [Los pasos con sólo mensajes dentro de la aplicación](#steps-iam-only) tienen diferentes opciones de avance que [los pasos con múltiples tipos de mensajes](#steps-multiple-channels) (como push o correo electrónico). Para los mensajes dentro de la aplicación en el flujo de trabajo actual de Canvas, esta opción está configurada para que la audiencia siempre avance inmediatamente.
+Los lienzos creados en el editor original necesitan especificar un comportamiento de avance-el criterio para avanzar a través de su componente Lienzo. [Los pasos que solo incluyen mensajes dentro de la aplicación](#steps-iam-only) tienen opciones de avance diferentes a [los pasos con varios tipos de mensajes](#steps-multiple-channels) (como notificaciones push o correos electrónicos). Para los mensajes dentro de la aplicación en el flujo de trabajo actual de Canvas, esta opción está configurada para avanzar siempre inmediatamente a la audiencia.
 
 La entrega basada en acciones no está disponible para los pasos de Canvas con mensajes in-app. Los pasos del lienzo con mensajes in-app deben programarse. En su lugar, los mensajes Canvas in-app aparecerán la primera vez que el usuario abra la aplicación (activados por la sesión de inicio) después de que se le haya enviado el mensaje programado en el componente Canvas.
 
@@ -215,13 +215,13 @@ Cuando se selecciona **Todo el público**, el mensaje in-app estará disponible 
 
 Puedes elegir entre las siguientes acciones desencadenantes para dirigirte a tus usuarios:
 
-- **Haz la compra:** Dirigirse a usuarios que realizan cualquier compra o una compra específica
-- **Comienza la sesión:** Dirígete a usuarios que inician una sesión en cualquier aplicación o en una aplicación concreta
-- **Realizar un evento personalizado:** Dirígete a los usuarios que realizan el evento personalizado seleccionado (el evento personalizado debe enviarse utilizando el SDK).
+- **Realizar compra:** Dirígete a los usuarios que realicen cualquier compra o una compra específica.
+- **Iniciar sesión:** Dirígete a los usuarios que inician una sesión en cualquier aplicación o en una aplicación específica.
+- **Realizar un evento personalizado:** Dirígete a los usuarios que realicen el evento personalizado seleccionado (el evento personalizado debe enviarse utilizando el SDK).
 
-Un usuario tiene que entrar en el paso en Canvas, iniciar una sesión y, a continuación, realizar el desencadenamiento para recibir un mensaje dentro de la aplicación. Esto significa que no se admiten actualizaciones a mitad de sesión. Por ejemplo, si el desencadenante es iniciar una sesión, el usuario sólo tiene que entrar en el paso en Canvas e iniciar una sesión para recibir el mensaje dentro de la aplicación. Si el desencadenante no es iniciar una sesión, el usuario tiene que entrar en el paso en Canvas, iniciar una sesión y, a continuación, realizar el desencadenante para recibir el mensaje dentro de la aplicación.
+El usuario debe acceder al paso en Canvas, iniciar una sesión y, a continuación, activar el desencadenante para recibir un mensaje dentro de la aplicación. Esto significa que no se admiten actualizaciones a mitad de sesión. Por ejemplo, si el desencadenante es iniciar una sesión, el usuario solo tiene que entrar en el paso en Canvas e iniciar una sesión para recibir el mensaje dentro de la aplicación. Si el desencadenante no es iniciar una sesión, el usuario debe entrar en el paso en Canvas, iniciar una sesión y, a continuación, ejecutar el desencadenante para recibir el mensaje dentro de la aplicación.
 
-!["Hacer una compra específica" seleccionada como acción desencadenante.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:90%"}
+![«Realizar una compra específica» seleccionado como acción desencadenante.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:90%"}
 
 Las siguientes características de Canvas no están disponibles con los mensajes dentro de la aplicación, por lo que no se aplicarán a tus mensajes dentro de la aplicación aunque estén activadas.
 
@@ -233,12 +233,12 @@ Las siguientes características de Canvas no están disponibles con los mensajes
 
 ## Propiedades de eventos personalizados en un Canvas
 
-Se admiten propiedades del evento personalizadas en los mensajes dentro de la aplicación para Canvas. Sin embargo, estas propiedades son del evento personalizado o de la compra que desencadena el mensaje dentro de la aplicación, que se encuentra en el paso Mensaje, no en la ruta de acción anterior.
+Se admiten propiedades del evento personalizadas en los mensajes dentro de la aplicación para Canvas. Sin embargo, estas propiedades provienen del evento personalizado o de la compra que desencadena el mensaje dentro de la aplicación, que se encuentra en el paso Mensaje, y no en la ruta de acción anterior.
 
 ## Consideraciones
 
-Estas son algunas consideraciones a tener en cuenta al enviar mensajes dentro de la aplicación en un Canvas.
+A continuación, se incluyen algunas consideraciones a tener en cuenta al enviar mensajes dentro de la aplicación en Canvas.
 
-- Si el usuario nunca reinicia la aplicación o nunca inicia una sesión, la aplicación no podrá averiguar si el usuario es elegible para el mensaje dentro de la aplicación, lo que significa que no se enviará un mensaje dentro de la aplicación.
-- Cuando se produce el primer clic y hay una variable de contexto Canvas (propiedades de la entrada Canvas), y un usuario vuelve a entrar en un Canvas cinco veces, Braze tomará la quinta entrada y utilizará esa variable de contexto en el mensaje dentro de la aplicación.
-- Un usuario puede ser elegible para recibir hasta 10 mensajes dentro de la aplicación en el mismo paso en Canvas. Por ejemplo, si un Canvas permite la reentrada y un usuario entra en él 11 veces, sólo se le enviarán 10 mensajes dentro de la aplicación si no ha caducado ninguno.
+- Si el usuario nunca reinicia la aplicación o nunca inicia una sesión, la aplicación no podrá determinar si el usuario es elegible para recibir el mensaje dentro de la aplicación, lo que significa que no se enviará ningún mensaje dentro de la aplicación.
+- Cuando se produce el primer clic y hay una variable de contexto de Canvas (propiedades de entrada de Canvas), y un usuario vuelve a entrar en Canvas cinco veces, Braze tomará la quinta entrada y utilizará esa variable de contexto en el mensaje dentro de la aplicación.
+- Un usuario es elegible para recibir hasta 10 mensajes dentro de la aplicación en el mismo paso en Canvas. Por ejemplo, si un Canvas permite volver a entrar y un usuario entra en el Canvas 11 veces, solo se te enviarán 10 mensajes dentro de la aplicación si ninguno han caducado.

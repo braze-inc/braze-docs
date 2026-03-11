@@ -15,7 +15,7 @@ alias: /partners/okendo/
 
 ## 統合について
 
-BrazeとOkendoの統合は、レビュー、ロイヤルティ、紹介、アンケート、クイズなど、Okendoのプラットフォームの複数の製品にまたがって機能する。Okendoはカスタムイベントとユーザー属性をBrazeに送信し、パーソナライズされたメッセージやトリガーメッセージに利用できる。  
+BrazeとOkendoの統合は、レビュー、ロイヤルティ、紹介、アンケート、クイズなど、Okendoのプラットフォームの複数の製品にまたがって機能する。Okendoはカスタムイベントとユーザー属性をBrazeに送信し、パーソナライズされたメッセージやトリガーメッセージに使用できる。  
 
 ## 前提条件
 
@@ -92,7 +92,7 @@ Okendoの製品によっては、BrazeとOkendoを併用するために追加の
 - [Brazeとレビューを統合する](https://support.okendo.io/en/articles/10509722-integrating-reviews-with-braze#h_09c4575b39)
 - [ロイヤルティとBrazeの統合](https://support.okendo.io/en/articles/10509615-integrating-loyalty-with-braze#h_47129ea105)
 - [Brazeと紹介を統合する](https://support.okendo.io/en/articles/10509748-build-a-canvas-in-braze-to-trigger-referral-emails#h_32fb5ba542)
-- [アンケートをBrazeと統合する](https://support.okendo.io/en/articles/11546662-integrating-surveys-with-braze)
+- [Brazeとアンケートを統合する](https://support.okendo.io/en/articles/11546662-integrating-surveys-with-braze)
 - [Brazeとクイズを統合する](https://support.okendo.io/en/articles/10509739-build-a-canvas-in-braze-to-send-quiz-recommendations#h_53748cb121)
 
 {% alert note %}

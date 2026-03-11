@@ -79,7 +79,7 @@ Essa tabela contém os dados que serão carregados inicialmente por meio do back
 | {::nomarkdown}<ul><li>Pedido feito</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li>shopify_province</li></ul>{:/} | {::nomarkdown}<ul><li>E-mail</li><li>Nome</li><li>Sobrenome</li><li>Telefone</li><li>Cidade</li><li>País</li></ul>{:/} | {::nomarkdown}<ul><li>Inscrições de envio de e-mail marketing associadas a esta loja Shopify</li><li>Inscrições de marketing por SMS associadas a esta loja da Shopify</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
-À medida que seus registros de clientes do Shopify forem carregados no Braze, o ID do cliente do Shopify será usado como o ID externo do Braze. 
+À medida que seus registros de clientes do Shopify são carregados no Braze, o ID do cliente do Shopify será usado como o ID externo do Braze. 
 
 {% alert note %}
 Se você já é cliente do Braze com campanhas ativas ou Canvas, consulte [os recursos de dados do Shopify]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#historical-backfill) para obter mais detalhes.
@@ -127,7 +127,7 @@ O rastreamento de dados personalizados fornece insights mais profundos sobre o c
 
 Por exemplo, o snippet JavaScript a seguir rastreia se o usuário atual está inscrito em uma newsletter e registra essa informação como um evento personalizado no perfil de usuário na Braze:
 
-```json
+```javascript
 braze.logCustomEvent(
   “subscribed_to_newsletter”,
   {

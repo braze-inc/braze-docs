@@ -144,7 +144,7 @@ Les données d'attribution pour les campagnes Facebook et X (anciennement Twitte
 
 Les liens profonds—liens qui dirigent les utilisateurs vers une page ou un endroit spécifique au sein d'une application ou d'un site web—sont utilisés pour créer une expérience utilisateur sur mesure. 
 
-Bien qu'ils soient largement utilisés, des problèmes peuvent survenir lors de l'utilisation de liens profonds envoyés par e-mail avec le suivi des clics#8212une autre fonctionnalité importante utilisée dans la collecte de données sur les utilisateurs. Ces problèmes sont dus au fait que les fournisseurs de services d'e-mailing (ESP) enveloppent les liens profonds dans un domaine d'enregistrement de clics, ce qui rompt le lien original. À ce titre, la prise en charge des liens profonds nécessite une configuration supplémentaire.
+Bien qu'ils soient largement utilisés, des problèmes peuvent survenir lors de l'utilisation de liens profonds envoyés par e-mail avec le suivi des clics#8212une autre fonctionnalité importante utilisée pour la collecte de données sur les utilisateurs. Ces problèmes sont dus au fait que les fournisseurs de services d'e-mailing (ESP) enveloppent les liens profonds dans un domaine d'enregistrement de clics, ce qui rompt le lien original. À ce titre, la prise en charge des liens profonds nécessite une configuration supplémentaire.
 
 AppsFlyer propose un [service](https://support.appsflyer.com/hc/en-us/articles/26967438815377-Set-up-your-ESP-integration-with-AppsFlyer) qui évite ces problèmes, en permettant à AppsFlyer de servir d'intermédiaire entre le serveur ESP et votre nom de domaine.  Son rôle de proxy permet de fournir des fichiers d'association (liens AASA/asset), ce qui facilite la création de liens profonds. 
 

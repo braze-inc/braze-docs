@@ -67,13 +67,13 @@ Embora o editor de arrastar e soltar simplifique seu fluxo de trabalho com esses
 
 **As linhas** são unidades estruturais que definem a composição horizontal de uma seção da mensagem por meio de colunas. Você pode esvaziar as linhas ou [os blocos de conteúdo]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/). O uso de mais de uma coluna permite que você coloque diferentes elementos de conteúdo lado a lado. Dessa forma, você pode adicionar todos os elementos estruturais necessários à sua mensagem, independentemente do modelo selecionado no início.
 
-#### Estilo de Cartões
+#### Estilo de cartões
 
 **Estilo de Cartões** é uma propriedade de linha que permite adicionar espaçamento entre colunas e arredondar seus cantos. Com a formatação em estilo de cartão, você pode criar layouts mais visualmente atraentes para ajudar a destacar seu conteúdo mais importante, como novos recursos de produtos, depoimentos, ofertas especiais, atualizações de notícias e muito mais.
 
 ## Usando o editor de arrastar e soltar
 
-Não tem certeza se sua mensagem de e-mail deve ser enviada usando uma campanha ou um Canva? Campanhas são melhores para campanhas de mensagens únicas e direcionadas, enquanto Canvases são melhores para jornadas de usuários em múltiplas etapas.
+Não tem certeza se sua mensagem de e-mail deve ser enviada usando uma campanha ou um Canva? Campanhas são melhores para campanhas de envio de mensagens únicas e direcionadas, enquanto Canvases são melhores para jornadas de usuários em várias etapas.
 
 Depois de selecionar onde construir sua mensagem, vamos nos aprofundar nas etapas para criar um e-mail do tipo arrastar e soltar.
 
@@ -115,7 +115,7 @@ Consulte [Outras personalizações](#other-customizations) para ver outras manei
 Ao criar seu e-mail, é possível alternar entre a visualização para desktop e para dispositivos móveis para fazer uma prévia de como será o envio de mensagens por e-mail para seus grupos de usuários. Isso verificará se o seu conteúdo é responsivo e você poderá fazer os ajustes necessários ao longo do processo.
 
 {% alert tip %}
-Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Insira um nome ou descrição do produto, e a IA gerará um texto de marketing semelhante ao humano para uso em suas mensagens.
+Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Insira um nome ou descrição do produto, e a IA gerará um texto de marketing semelhante ao humano para uso em seu envio de mensagens.
 
 ![Botão de redator, localizado no painel de Conteúdo ao lado das Configurações de Estilo no editor de arrastar e soltar.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
@@ -188,7 +188,7 @@ Nosso tamanho médio de pegada de dados HTML exportados foi reduzido, levando a 
 
 A renderização de HTML foi aprimorada com base nas seguintes atualizações que minimizam o número de comentários condicionais e consultas de mídia CSS. Como resultado, os arquivos HTML são menores e codificados com mais eficiência.
 - Migração de um design baseado em elementos do site `<div>` para uma base de código formatada padrão do site `<table>` 
-- [Blocos do Editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) foram recodificados para concisão
+- [Blocos do editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) foram recodificados para concisão
 - O código HTML final é comprimido para remover espaços em branco entre as tags
 - Divisores transparentes são automaticamente convertidos em preenchimento de conteúdo
 {% enddetails %}
@@ -244,7 +244,11 @@ A personalização Liquid não é compatível com blocos de imagens e campos do 
 
 #### Imagens dinâmicas
 
-Você pode optar por incluir imagens dinâmicas em seu envio de mensagens por e-mail, incluindo Liquid no atributo de origem da imagem. Por exemplo, em vez de uma imagem estática, é possível inserir {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} como URL da imagem para incluir o nome de um usuário na imagem. Isso ajuda a personalizar seus e-mails para cada usuário.
+Você pode optar por incluir imagens dinâmicas em sua mensagem de e-mail incluindo [Conteúdo Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) ou [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) no atributo de origem da sua imagem. Por exemplo, em vez de uma imagem estática, é possível inserir {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} como URL da imagem para incluir o nome de um usuário na imagem. Isso ajuda a personalizar seus e-mails para cada usuário.
+
+{% alert important %}
+A URL da sua imagem deve começar com `https://`. Usar `http://` trava seu app.
+{% endalert %}
 
 ### Direção do texto
 
@@ -310,7 +314,7 @@ Qualquer coisa adicionada fora das tags `<head>` será adicionada após a tag `<
 | `meta` | `property` | Define o título do documento exibido nas abas do navegador. | ```<meta property="og:title" content="Website title">``` |
 | `style` | `type` | Tipo MIME do conteúdo de estilo. | {% raw %}```<style type="text/css">p { color: red; }</style>```{% endraw %} |
 | `style` | `media` | Especifica a mídia ou dispositivo para o qual os estilos se aplicam. | ```<style media="print">body { font-size: 12pt; }</style>``` |
-| `title` | Sem atributos | A tag `title` não aceita nenhum atributo. | ```<title>Kitchenerie</title>``` |
+| `title` | Sem atributos | A tag `title` não aceita atributos. | ```<title>Kitchenerie</title>``` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert note %}

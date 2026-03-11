@@ -72,7 +72,7 @@ Pour mettre à jour un objet existant, envoyez un message POST à `users/track` 
 Une fois cette demande reçue, l’objet Attribut personnalisé ressemblera à ça :
 
 ```json
-"most_played_song": {
+{"most_played_song": {
   "song_name": "Solea",
   "artist_name" : "Miles Davis",
   "album_name": "Sketches of Spain",
@@ -82,7 +82,7 @@ Une fois cette demande reçue, l’objet Attribut personnalisé ressemblera à �
      "count": 1000,
      "top_10_listeners": true
   }
-}
+}}
 ```
 
 {% alert warning %}
@@ -328,14 +328,14 @@ Vous pouvez générer un schéma pour vos objets afin de créer des filtres de s
 Dans cet exemple, supposons que nous avons `accounts` un tableau d’objets que nous venons de transmettre à Braze :
 
 ```json
-"accounts": [
+{"accounts": [
   {"type": "taxable",
   "balance": 22500,
   "active": true},
   {"type": "non-taxable",
   "balance": 0,
-  "active": true},
- ]
+  "active": true}
+]}
 ```
 
 Dans le tableau de bord de Braze, accédez à **Paramètres des données** > **Attributs personnalisés**.

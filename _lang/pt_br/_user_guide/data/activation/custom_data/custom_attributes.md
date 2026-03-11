@@ -7,7 +7,7 @@ description: "Esta página descreve os atributos personalizados e explica os vá
 search_rank: 1
 ---
 
-# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Atributos personalizados
+# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Atributos personalizados
 
 > Esta página aborda os atributos personalizados, que são uma coleção de características exclusivas de seus usuários. Atributos personalizados são melhores para armazenar atributos sobre seus usuários ou informações sobre ações de baixo valor dentro do seu aplicativo. 
 
@@ -22,7 +22,7 @@ Para criar e gerenciar atributos personalizados no dashboard, Acessar **Configur
 A coluna **Última atualização** lista a última vez que o atributo personalizado foi editado, por exemplo, quando foi definido pela última vez como lista de bloqueio ou ativo.
 
 {% alert important %}
-Para o direcionamento adequado de mensagens, certifique-se de que o tipo de dados de seu atributo personalizado corresponda ao atributo personalizado real.
+Para o direcionamento adequado de mensagens, certifique-se de que o tipo de dados de seu atributo personalizado corresponda ao atributo personalizado real. <br><br>Por exemplo, se `newsletter_subscribed` for definido como uma string, sua sintaxe Liquid deve ser parecida com {% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == 'true' %}```{% endraw %}. Se `newsletter_subscribed` for definido como um Booleano, a sintaxe Liquid não deve ter aspas simples: {% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == true %}```{% endraw %}.
 {% endalert %}
 
 A partir desta página, você pode visualizar, gerenciar, criar ou bloquear atributos personalizados existentes. Selecione o menu ao lado de um atributo personalizado para as seguintes ações:
@@ -60,11 +60,11 @@ O relatório de uso lista todas as canvas, campanhas e segmentos que utilizam um
 
 Você pode visualizar até 100 relatórios de utilização por vez, marcando as caixas de seleção ao lado dos respectivos atributos personalizados e, em seguida, selecionando **Visualizar relatório de utilização**.
 
-### Guia Valores
+### Guia de valores
 
-Ao visualizar um relatório de uso, selecione a guia **Valores** para visualizar os principais valores dos atributos personalizados selecionados com base em uma amostra de aproximadamente 250.000 usuários. Note que, como os resultados são amostrados a partir de um subconjunto de usuários, a amostra não incluirá todos os valores existentes. Isso significa que a guia **Valores** não deve ser usada para solução de problemas ou para casos de uso que exijam a incorporação de dados de todos os usuários.
+Ao visualizar um relatório de uso, selecione a guia **Valores** para ver os principais valores dos atributos personalizados selecionados com base em uma amostra de aproximadamente 250.000 usuários. Observe que, como os resultados são amostrados de um subconjunto de usuários, a amostra não incluirá todos os valores existentes. Isso significa que a guia **Valores** não deve ser usada para solução de problemas ou para casos de uso que exigem a incorporação de dados de todos os usuários.
 
-![Relatório de uso de atributos personalizados selecionados com uma guia "Valores" aberta mostrando um gráfico de pizza dos valores de atributos de país, como "US" e "PR".]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
+![Relatório de uso para atributos personalizados selecionados com a guia "Valores" aberta mostrando um gráfico de pizza dos valores do atributo de país, como "EUA" e "PR".]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
 
 ## Definindo atributos personalizados
 
@@ -158,9 +158,7 @@ Note que se você inserir quaisquer valores com espaços entre, antes ou depois 
 | Verifique se o atributo de string **não corresponde parcialmente a nenhum** dos strings inseridos | **NÃO CONTÉM NENHUM DE** | **STRING**<br>Diferenciação entre maiúsculas e minúsculas; várias strings permitidas (máximo de 256) | Se este filtro especificar `gold` e um perfil de usuário não contiver `gold` em nenhuma string, o usuário corresponderá a este filtro.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-Uma string de data como "12-1-2021" ou "12/1/2021" será convertida em um objeto datetime e tratada como um [atributo de tempo]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time).
-{% endalert %}
+{% multi_lang_include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
 
 {% alert important %}
 Ao segmentar usando o filtro **NÃO CORRESPONDE À REGEX**, você deve já ter um atributo personalizado com um valor atribuído nesse perfil de usuário. Braze sugere usar a lógica "OU" para verificar se um atributo personalizado está em branco para garantir que os usuários sejam direcionados corretamente.
@@ -170,9 +168,9 @@ Ao segmentar usando o filtro **NÃO CORRESPONDE À REGEX**, você deve já ter u
 
 Os atributos de array são bons para armazenar listas relacionadas de informações sobre seus usuários. Por exemplo, armazenar os últimos 100 conteúdos que um usuário assistiu em um array permitiria a segmentação de interesses específicos.
 
-As matrizes têm um tamanho máximo de 100 KB. O comprimento padrão de uma atribuição é de até 500 itens. Por exemplo, se você estiver enviando uma atribuição como "Movies Watched" (Filmes assistidos) e ela estiver definida como 500, quando um usuário assistir ao 501º filme, o primeiro filme será removido da matriz e o filme mais recente será adicionado. 
+Os arrays têm um tamanho máximo de 100 KB. O comprimento padrão para um atributo é de até 500 itens. Por exemplo, se você estiver enviando um atributo como "Filmes Assistidos" e ele estiver definido para 500, quando um usuário assistir a um 501º filme, o primeiro filme será removido do array, e o filme mais recente será adicionado. 
 
-Observe que, se você inserir valores com espaços entre, antes ou depois das palavras, o Braze também verificará se há os mesmos espaços.
+Observe que, se você inserir quaisquer valores com espaços entre, antes ou depois das palavras, o Braze também verificará os mesmos espaços.
 
 {% alert note %}
 A opção para aumentar o comprimento máximo não estará disponível se o atributo estiver configurado para detectar automaticamente o tipo de dado; o tipo de dado deve ser configurado como array.

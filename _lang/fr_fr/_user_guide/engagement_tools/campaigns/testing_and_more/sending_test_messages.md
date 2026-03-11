@@ -47,14 +47,14 @@ Vous pourrez consulter votre message de test sur l'appareil pendant 5 minutes ma
 ![Onglet Aperçu du compositeur de bannières.]({% image_buster /assets/img/banners/preview_banner.png %})
 
 {% alert note %}
-Gardez à l'esprit que votre aperçu peut ne pas être identique au rendu final sur l'appareil d'un utilisateur en raison des différences entre les matériels.
+Gardez à l'esprit que votre aperçu peut ne pas être identique au rendu final sur l'appareil d'un utilisateur en raison des différences entre les appareils.
 {% endalert %}
 
 ### Liste de contrôle des tests
 
 - Votre campagne Banner est-elle assignée à un placement ?
 - Les images et les médias s'affichent-ils et agissent-ils comme prévu sur les types d'appareils et les tailles d'écran que vous avez ciblés ?
-- Vos liens et boutons dirigent-ils l'utilisateur vers l'endroit où il doit se rendre ?
+- Vos liens et boutons dirigent-ils l'utilisateur vers l'endroit où il doit aller ?
 - Le Liquid fonctionne-t-il comme prévu ? Avez-vous pris en compte une valeur d’attribut par défaut si le Liquid ne renvoie aucune information ?
 - Votre texte est-il clair, concis et correct ?
 

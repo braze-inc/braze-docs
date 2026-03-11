@@ -18,7 +18,7 @@ Da guia **Análise da campanha**, você pode visualizar seus relatórios em uma 
 
 ### Período
 
-Por padrão, o intervalo de tempo para **Analytics de Campanha** exibirá os últimos 90 dias a partir do momento atual. Isso significa que, se a campanha foi lançada há mais de 90 dias, a análise será exibida como "0" para o intervalo de tempo dado. Para visualizar todas as análises de campanhas mais antigas, ajuste o intervalo de tempo do relatório.
+Por padrão, o intervalo de tempo para **Análise de Campanhas** exibirá os últimos 90 dias a partir do momento atual. Isso significa que se a campanha foi lançada há mais de 90 dias, a análise será exibida como "0" para o intervalo de tempo dado. Para visualizar todas as análises de campanhas mais antigas, ajuste o intervalo de tempo do relatório.
 
 ### Detalhes da campanha
 
@@ -134,14 +134,14 @@ O painel de **performance de push** descreve o desempenho da sua mensagem em vá
 {% elsif include.channel == "SMS" %}
 ### Performance de SMS/MMS/RCS
 
-O painel de **Desempenho de SMS/MMS/RCS** descreve como sua mensagem teve desempenho em várias dimensões. As métricas neste painel variam dependendo do canal de envio de mensagens escolhido e se você está ou não executando um teste multivariante. Você pode clicar no ícone de <i class="fa fa-eye preview-icon"></i> **prévia** para visualizar sua mensagem para cada variante ou canal.
+O painel de **Desempenho de SMS/MMS/RCS** descreve como sua mensagem se saiu em várias dimensões. As métricas neste painel variam dependendo do canal de envio de mensagens escolhido e se você está ou não executando um teste multivariante. Você pode clicar no ícone de <i class="fa fa-eye preview-icon"></i> **prévia** para visualizar sua mensagem para cada variante ou canal.
 
 ![Painel de Desempenho de SMS/MMS que inclui uma tabela de métricas para um grupo de controle, Variante 1 e Variante 2.]({% image_buster /assets/img_archive/sms_message_performance.png %})
 
 {% elsif include.channel == "banner" %}
 ### Desempenho do banner
 
-O painel de **Desempenho de Banner** descreve como sua mensagem teve desempenho em várias dimensões. Essas métricas variam dependendo do seu canal de envio de mensagens e se você está ou não realizando um teste multivariado.
+O painel de **Desempenho de Banner** descreve como sua mensagem se saiu em várias dimensões. Essas métricas variam dependendo do seu canal de envio de mensagens e se você está ou não realizando um teste multivariado.
 
 ![Painel de Desempenho de SMS/MMS que inclui uma tabela de métricas para um grupo de controle, Variante 1 e Variante 2.]({% image_buster /assets/img/banners/banner_performance.png %})
 
@@ -220,7 +220,7 @@ Aqui está uma análise de algumas métricas-chave que você pode ver ao revisar
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-recipients">Destinatários únicos</a></td>
-            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' %} <br><br> Para Cartões de Conteúdo, cada Cartão de Conteúdo pode ser recebido apenas uma vez, portanto, visualizar o mesmo Cartão de Conteúdo uma segunda vez, independentemente do dia, não incrementará essa contagem. Como um espectador pode ser um destinatário único todos os dias, você deve esperar que esse valor seja maior do que o de <i>impressões únicas</i>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' %} <br><br> Como um usuário pode ser um destinatário único a cada dia, você deve esperar que isso seja maior que <i>Impressões Únicas</i>.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-clicks">Cliques únicos projetados</a></td>
@@ -316,8 +316,8 @@ Vamos supor que você veja um Banner hoje, depois veja o mesmo Banner amanhã e 
 
 Como outro exemplo, suponha que você veja cinco _Impressões Únicas_ em uma campanha de Banner. Isso significa que apenas os dispositivos de cinco usuários realizaram todos os seguintes passos:
 
-1. Iniciou uma sessão ou o app solicitou explicitamente uma sincronização de Banner (ou ambos)
-2. Navegou para a visualização de Banners
+1. Iniciaram uma sessão ou o app solicitou explicitamente uma sincronização de Banner (ou ambos)
+2. Navegaram para a visualização de Banners
 3. O SDK registrou uma impressão e a registrou no servidor
 
 _Destinatários Únicos_ refere-se aos Banners que foram realmente vistos.
@@ -361,7 +361,7 @@ Aqui estão algumas métricas específicas de e-mail que você não verá em out
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#spam">Taxa de spam</a></td>
             <td class="no-split">
-                {% multi_lang_include analytics/metrics.md metric='Spam' %} Se essa métrica for maior que 0,08, isso pode ser um sinal de que sua mensagem é muito comercial ou que você deve reconsiderar seus métodos de coleta de endereços de e-mail (para confirmar que você está enviando mensagens para aqueles que estão interessados em sua correspondência).
+                {% multi_lang_include analytics/metrics.md metric='Spam' %} Se essa métrica for maior que 0,08, isso pode ser um sinal de que sua mensagem é muito comercial, ou você deve reconsiderar seus métodos de coleta de endereços de e-mail (para confirmar que você está enviando mensagens para aqueles que estão interessados em sua correspondência).
             </td>
         </tr>
         <tr>
@@ -374,7 +374,7 @@ Aqui estão algumas métricas específicas de e-mail que você não verá em out
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">Estimativa de aberturas reais</a></td>
-            <td class="no-split"> {% multi_lang_include analytics/metrics.md metric='Estimated Real Opens' %} Veja a seção seguinte para detalhes.</td>
+            <td class="no-split"> {% multi_lang_include analytics/metrics.md metric='Estimated Real Opens' %} Veja a seção a seguir para detalhes.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#machine-opens">Aberturas por máquina</a></td>
@@ -409,9 +409,11 @@ Observe que os _adiamentos_ estão atualmente disponíveis apenas usando os recu
 
 ##### Taxa de abertura real estimada {#estimated-real-open-rate}
 
-Esta estatística utiliza um modelo analítico proprietário criado pela Braze para reconstruir uma estimativa da taxa de abertura única da campanha como se as aberturas de máquina não existissem. Embora recebamos rótulos de *Aberturas de Máquina* em alguns eventos de abertura de remetentes de e-mail (veja acima), esses rótulos podem frequentemente rotular aberturas reais como aberturas de máquina. Em outras palavras, os *Outros Abertos* provavelmente são uma subestimação das aberturas reais (por usuários reais). Em vez disso, Braze usa dados de cliques de cada campanha para inferir a taxa na qual humanos reais abriram a mensagem. Isso compensa vários mecanismos de abertura de máquina, incluindo o MPP da Apple.
+Esta estatística utiliza um modelo analítico proprietário criado pela Braze para reconstruir uma estimativa da taxa de abertura única da campanha como se as aberturas de máquina não existissem. Enquanto recebemos rótulos de *Aberturas de Máquina* em alguns eventos de abertura de remetentes de e-mail (veja acima), esses rótulos podem frequentemente rotular aberturas reais como aberturas de máquina. Em outras palavras, os *Outros Abertos* provavelmente são uma subestimação das aberturas reais (por usuários reais). Em vez disso, Braze usa dados de cliques de cada campanha para inferir a taxa na qual humanos reais abriram a mensagem. Isso compensa vários mecanismos de abertura de máquina, incluindo o MPP da Apple.
 
 _Taxa de Abertura Real Estimada_ é calculada 36 horas após o início do envio do e-mail e é recalculada a cada 24 horas a partir de então. Se uma campanha se repetir, a estimativa é recalculada 36 horas após o envio de outra.
+
+Como essa métrica é recalculada em uma cadência contínua, o valor de _Taxa de Abertura Real Estimada_ pode mudar ao longo do tempo à medida que novos sinais de engajamento (como aberturas e cliques) são recebidos e incorporados ao modelo. Na prática, a _Taxa de Abertura Real Estimada_ pode continuar a ser atualizada diariamente enquanto uma campanha permanece ativa.
 
 Normalmente, são necessários cerca de 10.000 e-mails entregues para que a estatística seja calculada com sucesso, embora esse número possa variar dependendo da taxa de cliques. Se a estatística não puder ser calculada, então a coluna exibe "--".
 
@@ -428,11 +430,11 @@ Além disso, o uso de ferramentas de verificação de segurança pode inflar as 
 Em última análise, depois que um e-mail sai de nossos servidores, temos visibilidade limitada sobre o que acontece a seguir, mas aqui estão recomendações para gerenciar NHI que afetam seus resultados:
 
 1. Esteja ciente de que isso pode acontecer com qualquer remetente e quase qualquer destinatário. Os cliques, assim como as aberturas, não são indicadores totalmente confiáveis da interação humana com suas mensagens, o que significa que o NHI não pode ser evitado.
-2. Um maior engajamento positivo tende a correlacionar-se com um NHI mais baixo, por isso é importante seguir as [melhores práticas]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) de mensagens de e-mail. Isso inclui obter permissão explícita de seus usuários para o envio de e-mail e sunsetting de assinantes não engajados em uma cadência regular. 
+2. Um engajamento positivo mais alto tende a correlacionar-se com um NHI mais baixo, por isso é importante seguir as [melhores práticas]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) de envio de e-mails. Isso inclui obter permissão explícita de seus usuários para o envio de e-mail e sunsetting de assinantes não engajados em uma cadência regular. 
 3. Use links HTTPS em seus e-mails sempre que possível. O NHI é menos comum para remetentes que usam links seguros.
 4. Se você usar um processo de cancelamento de inscrição com um único clique, considere criar uma [central de preferências]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview) que leve os usuários a uma página para editar e gerenciar suas preferências de notificação. Isso pode ser útil porque o NHI pode cancelar inadvertidamente a inscrição de usuários.
 5. Considere o uso de [outras métricas]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/#email-performance) para medir o sucesso do envio de e-mail marketing, como conversões, sessões de app ou visitas ao site.
-6. Adicione um link oculto em suas campanhas de e-mail. Esse link seria algo que um ser humano não perceberia, como um texto branco sobre branco ou um sinal de pontuação. Bots tendem a clicar em todos os links, então você pode concluir que os usuários que geram eventos de clique no link invisível são, na verdade, o resultado de NHI, portanto, a abertura ou o clique não indicam necessariamente um engajamento positivo.
+6. Adicione um link oculto em suas campanhas de e-mail. Esse link seria algo que um ser humano não perceberia, como um texto branco sobre branco ou um sinal de pontuação. Bots tendem a clicar em todos os links, então você pode concluir que os usuários que geram eventos de clique no link invisível são, na verdade, resultado de NHI, portanto, a abertura ou o clique não indicam necessariamente um engajamento positivo.
 
 {% elsif include.channel == "in-app message" %}
 
@@ -441,7 +443,7 @@ Em última análise, depois que um e-mail sai de nossos servidores, temos visibi
 Aqui estão algumas métricas chave de mensagem no app que você pode ver na análise de dados. Para ver as definições completas de todas as métricas de mensagem no app usadas no Braze, consulte nosso [Glossário de Métricas de Relatório]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
 
 {% alert note %}
-A geração de relatórios para _Cliques no Botão 1_ e _Cliques no Botão 2_ só funciona quando você especifica o **Identificador para Relatório** como "0" e "1", respectivamente, na mensagem no app.
+Os relatórios para _Cliques no Botão 1_ e _Cliques no Botão 2_ funcionam apenas quando você especifica o **Identificador para Relatório** como "0" e "1", respectivamente, na mensagem no app.
 
 ![O campo "Identificador para Relatório" com um valor de "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
 {% endalert %}
@@ -538,19 +540,19 @@ Aqui está uma análise de algumas métricas-chave que você pode ver ao revisar
 
 ##### Rastreamento de descadastramentos
 
-As desinscrições de push não estão incluídas como uma métrica na análise de campanhas e dependem de atualizações no status de push de um usuário por provedores como Apple ou Google. Essas atualizações podem ser pouco frequentes e imprevisíveis. Como resultado, os cancelamentos de inscrição por push não são incluídos como uma métrica na análise de dados da campanha por push. 
+As cancelamentos de inscrição por push não estão incluídos como uma métrica na análise de campanhas e dependem de atualizações no status de push de um usuário por provedores como Apple ou Google. Essas atualizações podem ser pouco frequentes e imprevisíveis. Como resultado, os cancelamentos de inscrição por push não são incluídos como uma métrica na análise de dados da campanha por push. 
 
-No entanto, o rastreamento manual de cancelamentos de inscrição por push ainda pode fornecer insights valiosos sobre as respostas dos usuários à frequência das notificações e à relevância do conteúdo. Aqui estão duas opções para rastrear desinscrições de push: Usando filtros de segmento ou filtros personalizados.
+No entanto, o rastreamento manual de cancelamentos de inscrição por push ainda pode fornecer insights valiosos sobre as respostas dos usuários à frequência das notificações e à relevância do conteúdo. Aqui estão duas opções para rastrear cancelamentos de inscrição por push: Usando filtros de segmento ou filtros personalizados.
 
 {% tabs local %}
 {% tab Segment filters %}
 
-Você pode criar um segmento para identificar usuários que não estão habilitados para push, o que significa que eles não estão inscritos ou optados e não têm um [token por push em primeiro plano]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens). Por exemplo, para ver o número de desinscrições no seu app, você usaria uma combinação "OU" dos seguintes segmentos: 
+Você pode criar um segmento para identificar usuários que não estão habilitados para push, o que significa que eles não estão inscritos ou optados e não têm um [token por push em primeiro plano]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens). Por exemplo, para ver o número de cancelamentos de inscrição em seu app, você usaria uma combinação "OU" dos seguintes segmentos: 
 
 - `Background or Foreground Push Enabled is false`
 - `Has Uninstalled`
 
-![A seção Criador de Segmentos com o filtro "Push em Segundo Plano ou Primeiro Plano Habilitado para o App" para um app é falso, e o filtro "Foi Desinstalado" estão selecionados.]({% image_buster /assets/img/push_unsub_segment_example.png %})
+![A seção Criador de Segmentos com o filtro "Push Habilitado em Segundo Plano ou Primeiro Plano para o App" para um app é falso, e o filtro "Foi Desinstalado" estão selecionados.]({% image_buster /assets/img/push_unsub_segment_example.png %})
 
 Observe que os filtros de segmentação são aproximados e não podem ser especificamente vinculados a uma data e campanha.
 
@@ -558,7 +560,7 @@ Observe que os filtros de segmentação são aproximados e não podem ser especi
 {% tab Custom filters %}
 
 {% alert important %}
-Registrar um evento personalizado para mudança de inscrição registrará [pontos de dados]({{site.baseurl}}/user_guide/data_and_analytics/data_points#consumption-count). Como alternativa, use filtros de segmento para identificar e direcionar usuários que não estejam com a capacitação push ativada.
+Registrar um evento personalizado para alteração de inscrição registrará [pontos de dados]({{site.baseurl}}/user_guide/data_and_analytics/data_points#consumption-count). Como alternativa, use filtros de segmento para identificar e direcionar usuários que não estejam com a capacitação push ativada.
 {% endalert %}
 
 Para uma solução alternativa, também recomendamos a criação de um evento personalizado para cancelamentos de inscrição por push com base no fato de o status de capacitação por push de um usuário ser `true` ou `false` para rastrear essa métrica.
@@ -758,7 +760,7 @@ Se você optar por enviar apenas para usuários que podem ver a versão mais rec
 
 O painel **Respostas de Palavras-Chave** mostra uma linha do tempo das palavras-chave recebidas com as quais os usuários responderam após receber sua mensagem.  
 
-![Painel de Respostas de Palavras-Chave SMS/MMS/RCS em Nível de Campanha que inclui um gráfico de linha da distribuição de palavras-chave ao longo do tempo, e uma seção de Categorias de Palavras-Chave com caixas de seleção selecionadas para Aceitação, Recusa, Ajuda, Outros, Mais e Coaching.]({% image_buster /assets/img/sms/keyword_responses.png %})
+![Painel de Respostas de Palavras-Chave de SMS/MMS/RCS em Nível de Campanha que inclui um gráfico de linha da distribuição de palavras-chave ao longo do tempo, e uma seção de Categorias de Palavras-Chave com caixas de seleção selecionadas para Aceitação, Cancelamento, Ajuda, Outros, Mais e Coaching.]({% image_buster /assets/img/sms/keyword_responses.png %})
 
 Aqui, você também pode ver a distribuição de respostas de cada categoria de palavra-chave para determinar os próximos passos para [redirecionamento]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns) e para [criar um segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment).
 
@@ -802,7 +804,7 @@ As mensagens de entrada são truncadas após 1.600 caracteres.
 
 ## Relatório de retenção
 
-Os relatórios de retenção mostram as taxas nas quais seus usuários realizaram um evento de retenção selecionado ao longo do tempo em uma campanha específica{% if include.channel != "banner" %} ou canva{% endif %}. Para saber mais, consulte [Relatórios de retenção]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
+Os relatórios de retenção mostram as taxas em que seus usuários realizaram um evento de retenção selecionado ao longo de períodos de tempo em uma campanha específica{% if include.channel != "banner" %} ou canva{% endif %}. Para saber mais, consulte [Relatórios de retenção]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
 
 ## Relatório de funil
 

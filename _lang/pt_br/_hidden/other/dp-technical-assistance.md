@@ -40,8 +40,8 @@ A maioria das leis de privacidade define três partes interessadas principais qu
 
 Em relação aos Serviços Braze:
 
-- Os titulares dos dados são, por exemplo, os usuários finais do seu aplicativo de cliente (e.g., seus clientes) ou seus colaboradores que são usuários do dashboard na sua instância dos Serviços Braze.
-- Você, o cliente Braze, é o controlador de dados que decide como e por que os Dados Pessoais dos titulares dos dados serão coletados e processados dentro dos Serviços Braze.
+- Os titulares dos dados são, por exemplo, os usuários finais do seu aplicativo de cliente (e.g., seus clientes) ou seus colaboradores que são usuários da empresa na sua instância dos Serviços Braze.
+- Você, o cliente Braze, é o controlador de dados que decide como e por que os Dados Pessoais dos titulares dos dados serão coletados e processados nos Serviços Braze.
 - A Braze é uma processadora de dados que processa os Dados Pessoais nos Serviços Braze em seu nome e de acordo com as instruções que recebemos de você.
 
 Os termos acima são do GDPR, mas, por exemplo, os termos comparáveis da CCPA são:
@@ -50,7 +50,7 @@ Os termos acima são do GDPR, mas, por exemplo, os termos comparáveis da CCPA s
 - "empresas" para controladores de dados.
 - "prestadores de serviço" para processadores de dados.
 
-Você encontrará abaixo informações relevantes sobre as solicitações de direitos de privacidade mais comuns dos titulares dos dados, incluindo como você pode respondê-las por meio dos recursos técnicos do Serviço Braze.
+Você encontrará abaixo informações relevantes sobre as solicitações de direitos de privacidade mais comuns dos titulares dos dados, inclusive como você pode respondê-las por meio dos recursos técnicos do Serviço Braze.
 
 ## O direito de ser informado
 
@@ -180,7 +180,7 @@ Algumas leis de proteção de dados impedem ou permitem que os titulares dos dad
 
 ### Recomendação de Braze
 
-A Braze não realiza nenhuma ação automatizada de criação de perfil ou tomada de decisão com ramificações legais ou equivalentes para os titulares dos dados. Se o usuário acreditar que seu próprio uso dos Serviços Braze terá impactos legais ou equivalentes e tiver recebido uma objeção a isso, poderá optar por excluir o Perfil de Usuário da mesma forma que no "Direito de Exclusão".
+A Braze não realiza nenhuma ação automatizada de criação de perfil ou tomada de decisão com ramificações legais ou equivalentes para os titulares dos dados. Se o usuário acreditar que seu próprio uso dos Serviços Braze terá impactos legais ou equivalentes e tiver recebido uma objeção a isso, poderá optar por excluir o Perfil do Usuário da mesma forma que no "Direito de Exclusão".
 
 ## Direcionamento da publicidade
 
