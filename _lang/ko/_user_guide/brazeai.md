@@ -19,10 +19,10 @@ guide_featured_list:
   - name: Braze MCP 서버
     link: /docs/user_guide/brazeai/mcp_server/
     image: /assets/img/braze_icons/dataflow-01.svg
-  - name: 콘텐츠 최적화 프로그램
+  - name: 콘텐츠 최적화 도구
     link: /docs/user_guide/brazeai/content_optimizer/
     image: /assets/img/braze_icons/image-user-check.svg
-  - name: 의사 결정 스튜디오
+  - name: 결정 스튜디오
     link: /docs/user_guide/brazeai/decisioning_studio/
     image: /assets/img/braze_icons/stars-03.svg
   - name: 생성형 AI
@@ -34,10 +34,10 @@ guide_featured_list:
   - name: 아이템 추천
     link: /docs/user_guide/brazeai/item_recommendations/
     image: /assets/img/braze_icons/hearts.svg
-  - name: BrazeAI 운영자
+  - name: 연산자
     link: /docs/user_guide/brazeai/operator/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: 예측 스위트
+  - name: Predictive Suite
     link: /docs/user_guide/brazeai/predictive_suite/
     image: /assets/img/braze_icons/stars-01.svg
   - name: 개인화된 경로

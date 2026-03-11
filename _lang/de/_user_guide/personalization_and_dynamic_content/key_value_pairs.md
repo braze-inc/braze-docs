@@ -127,7 +127,7 @@ Wenn Sie die HTTP/2-Provider-API verwenden, darf jede einzelne Nutzlast, die Sie
 
 ###### Per API ausgelöste Kampagnen
 
-Mit Braze können Sie benutzerdefinierte Paare aus Strings und Schlüsselwerten senden, die als `extras` bekannt sind. Um auf Ihre Extras in API-getriggerten und Zeitplan-getriggerten Kampagnen zuzugreifen, stellen Sie im Dashboard einen Schlüssel als "example_key", und einen Wert als {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} ein. Dies führt zu einer Ausgabe in der Entwicklerkonsole von `"extras": { "test": { "foo": 1, "bar": 1 }`
+Mit Braze können Sie benutzerdefinierte Paare aus Strings und Schlüsselwerten senden, die als `extras` bekannt sind. Um auf Ihre Extras in API-gesteuerten und geplanten API-gesteuerten Kampagnen zuzugreifen, legen Sie im Dashboard einen Schlüssel als"example_key",  und einen Wert als  fest{% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Dies führt zu einer Ausgabe in der Entwicklerkonsole von `"extras": { "test": { "foo": 1, "bar": 1 }`
 
 ### Android
 
@@ -145,7 +145,7 @@ Das Backend Ihrer Anwendung muss in der Lage sein, benutzerdefinierte Schlüssel
 
 ###### Per API ausgelöste Kampagnen
 
-Mit Braze können Sie benutzerdefinierte Paare aus Strings und Schlüsselwerten senden, die als `extras` bekannt sind. Um auf Ihre Extras in API-getriggerten und Zeitplan-getriggerten Kampagnen zuzugreifen, stellen Sie im Dashboard einen Schlüssel als "example_key", und einen Wert als {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} ein. Dies führt zu einer Ausgabe in der Entwicklerkonsole von `"extras": { "test": { "foo": 1, "bar": 1 }`.
+Mit Braze können Sie benutzerdefinierte Paare aus Strings und Schlüsselwerten senden, die als `extras` bekannt sind. Um auf Ihre Extras in API-gesteuerten und geplanten API-gesteuerten Kampagnen zuzugreifen, legen Sie im Dashboard einen Schlüssel als"example_key",  und einen Wert als  fest{% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Dies führt zu einer Ausgabe in der Entwicklerkonsole von `"extras": { "test": { "foo": 1, "bar": 1 }`.
 
 ##### FCM-Nachrichtenoptionen
 
@@ -167,7 +167,7 @@ Das iOS-Betriebssystem kann [Push-Benachrichtigungen]({{site.baseurl}}/developer
 
 ## In-App-Nachrichten
 
-Sie können einer In-App-Nachricht im [herkömmlichen Editor]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/) ein Schlüssel-Wert-Paar hinzufügen, indem Sie den Tab **Einstellungen** auswählen, **Neues Paar hinzufügen** wählen und dann Ihre Schlüssel-Wert-Paare angeben.
+Sie können ein Schlüssel-Wert-Paar zu einer In-App-Nachricht im [herkömmlichen Editor]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/) hinzufügen, indem Sie die Registerkarte **„Einstellungen“** auswählen, **„Neues Paar hinzufügen**“ auswählen und dann Ihre Schlüssel-Wert-Paare angeben.
 
 {% alert note %}
 Schlüssel-Wert-Paare können nicht über den Drag-and-Drop-Editor für In-App-Nachrichten festgelegt werden.
@@ -176,7 +176,7 @@ Schlüssel-Wert-Paare können nicht über den Drag-and-Drop-Editor für In-App-N
 
 #### Per API getriggerte Kampagnen
 
-Mit Braze können Sie benutzerdefinierte Paare aus Strings und Schlüsselwerten senden, die als `extras` bekannt sind. Um auf Ihre Extras in API-getriggerten und Zeitplan-getriggerten Kampagnen zuzugreifen, stellen Sie im Dashboard einen Schlüssel als "example_key", und einen Wert als {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} ein. Dies führt zu einer Ausgabe in der Entwicklerkonsole von `"extras": { "test": { "foo": 1, "bar": 1 }`.
+Mit Braze können Sie benutzerdefinierte Paare aus Strings und Schlüsselwerten senden, die als `extras` bekannt sind. Um auf Ihre Extras in API-gesteuerten und geplanten API-gesteuerten Kampagnen zuzugreifen, legen Sie im Dashboard einen Schlüssel als"example_key",  und einen Wert als  fest{% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Dies führt zu einer Ausgabe in der Entwicklerkonsole von `"extras": { "test": { "foo": 1, "bar": 1 }`.
 
 ## E-Mails
 

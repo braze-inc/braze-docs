@@ -1,12 +1,12 @@
 {% multi_lang_include developer_guide/prerequisites/swift.md %}
 
-## Configurar el delegado de IU (obligatorio)
+## Configuración del delegado de la interfaz de usuario (obligatorio)
 
-Para personalizar la presentación de los mensajes dentro de la aplicación y reaccionar a varios eventos del ciclo de vida, tendrás que configurar [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate). Se trata de un protocolo delegado utilizado para recibir y procesar cargas útiles de mensajes dentro de la aplicación desencadenados, recibir eventos del ciclo de vida de la pantalla y controlar la temporización de la pantalla. Para utilizar `BrazeInAppMessageUIDelegate`, debes
-- Utiliza la implementación predeterminada [`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui) como tu `inAppMessagePresenter`. 
-- Incluye la biblioteca `BrazeUI` en tu proyecto.
+Para personalizar la presentación de los mensajes dentro de la aplicación y reaccionar ante diversos eventos del ciclo de vida, deberás configurar [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate). Este es un protocolo delegado que se utiliza para recibir y procesar cargas útiles de mensajes dentro de la aplicación, recibir eventos del ciclo de vida de la pantalla y controlar la sincronización de la pantalla. Para utilizarlo`BrazeInAppMessageUIDelegate`, debes:
+- Utiliza la implementación [`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui)predeterminada como tu `inAppMessagePresenter`. 
+- Incluye la`BrazeUI`biblioteca en tu proyecto.
 
-### Paso 1: Implementa el protocolo `BrazeInAppMessageUIDelegate`  
+### Paso 1: Implementar el`BrazeInAppMessageUIDelegate`protocolo. 
 
 Primero, implementa el protocolo `BrazeInAppMessageUIDelegate` y los métodos correspondientes que desees. En nuestro ejemplo siguiente, estamos implementando este protocolo en la clase `AppDelegate` de nuestra aplicación.
 
@@ -31,9 +31,9 @@ extension AppDelegate: BrazeInAppMessageUIDelegate {
 {% endtab %}
 {% endtabs %}
 
-### Paso 2: Asigna el objeto `delegate`  
+### Paso 2: Asignar el`delegate`objeto 
 
-Asigna el objeto `delegate` en la instancia `BrazeInAppMessageUI` antes de asignar esta interfaz de usuario de mensajes dentro de la aplicación como tu `inAppMessagePresenter`.
+Asigna el`delegate`objeto en la`BrazeInAppMessageUI`instancia antes de asignar esta interfaz de usuario de mensajes dentro de la aplicación como tu `inAppMessagePresenter`.
 
 {% tabs %}
 {% tab swift %}
@@ -78,7 +78,7 @@ La propiedad `clickAction` de tu `Braze.InAppMessage` está predeterminada a `.n
 Para los mensajes dentro de la aplicación que contengan botones, el mensaje `clickAction` también se incluirá en la carga útil final si la acción de clic se añade antes de añadir el texto del botón.
 {% endalert %}
 
-### Personalizar el comportamiento al hacer clic
+### Personalización del comportamiento al hacer clic
 
 Para personalizar este comportamiento, puedes modificar la propiedad `clickAction` consultando el siguiente ejemplo:
 
@@ -104,9 +104,9 @@ El método `inAppMessage(_:prepareWith:)` no está disponible en Objective-C.
 {% endtab %}
 {% endtabs %}
 
-### Manejar el comportamiento personalizado
+### Manejo del comportamiento personalizado
 
-Se llama el siguiente método delegado [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) cuando se hace clic en un mensaje dentro de la aplicación. Para los clics en los botones de mensajes dentro de la aplicación y en los botones de mensajes HTML dentro de la aplicación (enlaces), se proporciona un ID de botón como parámetro opcional.
+El siguiente método[`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) delegado se invoca cuando un usuario hace clic en un mensaje dentro de la aplicación. Esta devolución de llamada se activa cuando tú haces clic en los botones de mensajes dentro de la aplicación y en los botones de mensajes HTML dentro de la aplicación (enlaces), y se proporciona un ID de botón como parámetro opcional para estas interacciones. Esta devolución de llamada no se invoca para los clics programáticos desencadenados a través de `brazeBridge.logClick()`.
 
 {% tabs %}
 {% tab swift %}
@@ -200,7 +200,21 @@ func inAppMessage(
 {% endtab %}
 {% endtabs %}
 
-## Despidos modales personalizados
+## Deslizar para descartar mensajes de deslizamiento hacia arriba
+
+De forma predeterminada, los mensajes dentro de la aplicación se pueden descartar con un gesto de deslizamiento hacia arriba. La dirección del deslizamiento depende de la posición de deslizamiento hacia arriba:
+
+- **Desliza hacia la izquierda o hacia la derecha:** Cierra la ventana de deslizamiento hacia arriba independientemente de su posición.
+- **Deslizamiento hacia arriba desde la parte inferior:** Deslizando el dedo de arriba abajo se descarta el mensaje. Deslizar el dedo de abajo hacia arriba no lo cierra.
+- **Deslizamiento hacia arriba desde la parte superior:** Desliza el dedo de abajo hacia arriba para descartar el mensaje. Deslizar el dedo de arriba abajo no lo elimina.
+
+Este comportamiento de deslizamiento está integrado de forma predeterminada  `BrazeInAppMessageUI`[`SlideupView`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/slideupview) y solo se aplica a los mensajes de deslizamiento hacia arriba dentro de la aplicación. Los mensajes modales y completos dentro de la aplicación no admiten la función de deslizar para descartar. Para personalizar aún más la vista de deslizamiento hacia arriba, incluido el comportamiento al deslizar, puedes modificar el[`SlideupView.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/slideupview/attributes-swift.struct)  o proporcionar una vista personalizada mediante subclases.
+
+{% alert note %}
+Al pulsar fuera de un mensaje de deslizamiento hacia arriba, este no desaparece. Para los mensajes modales o completos dentro de la aplicación, puedes habilitar el cierre mediante pulsación externa utilizando el`dismissOnBackgroundTap`atributo que se describe a continuación.
+{% endalert %}
+
+## Personalización de cierres modales personalizados
 
 Para habilitar los descartes por toque externo, puedes modificar la propiedad `dismissOnBackgroundTap` en la estructura `Attributes` del tipo de mensaje dentro de la aplicación que desees personalizar. 
 
@@ -231,15 +245,15 @@ El valor predeterminado es `false`. Determina si el mensaje modal dentro de la a
 
 Para más detalles sobre la personalización de mensajes dentro de la aplicación, consulta este [artículo](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/in-app-message-customization).
 
-## Orientación personalizada de los mensajes
+## Personalización de la orientación de los mensajes
 
 Puedes personalizar la orientación de tus mensajes dentro de la aplicación. Puedes establecer una nueva orientación predeterminada para todos los mensajes o establecer una orientación personalizada para un solo mensaje.
 
 {% tabs local %}
 {% tab all messages %}
-Para elegir una orientación predeterminada para todos los mensajes dentro de la aplicación, utiliza el método [`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) para establecer la propiedad `preferredOrientation` en `PresentationContext`. 
+Para elegir una orientación predeterminada para todos los mensajes dentro de la aplicación, utiliza el[`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog)método para establecer la`preferredOrientation`propiedad en `PresentationContext`. 
 
-Por ejemplo, para establecer la orientación vertical como predeterminada:
+Por ejemplo, para establecer el modo vertical como orientación predeterminada:
 
 {% subtabs %}
 {% subtab swift %}
@@ -267,7 +281,7 @@ func inAppMessage(
 {% endtab %}
 
 {% tab single message %}
-Para establecer la orientación de un solo mensaje, modifica la propiedad `orientation` de `Braze.InAppMessage`:
+Para establecer la orientación de un solo mensaje, modifica la`orientation`propiedad de `Braze.InAppMessage`:
 
 {% subtabs %}
 {% subtab swift %}
@@ -302,11 +316,11 @@ inAppMessage.orientation = BRZInAppMessageRawOrientationLandscape;
 {% endtab %}
 {% endtabs %}
 
-Después de que se muestre el mensaje dentro de la aplicación, cualquier cambio de orientación del dispositivo mientras se sigue mostrando el mensaje hará que éste gire con el dispositivo (siempre que lo admita la configuración del mensaje en `orientation` ).
+Después de que se muestre el mensaje dentro de la aplicación, cualquier cambio en la orientación del dispositivo mientras el mensaje sigue mostrándose hará que el mensaje gire con el dispositivo (siempre que lo permita la configuración `orientation`del mensaje).
 
-La orientación del dispositivo también debe ser compatible con la propiedad `orientation` del mensaje dentro de la aplicación para que el mensaje se muestre. Además, la configuración de `preferredOrientation` sólo se respetará si está incluida en las orientaciones de interfaz admitidas de tu aplicación en la sección **Información de despliegue** de la configuración de tu objetivo en Xcode.
+La orientación del dispositivo también debe ser compatible con la propiedad `orientation`del mensaje dentro de la aplicación para que este se muestre. Además, la configuración de `preferredOrientation` sólo se respetará si está incluida en las orientaciones de interfaz admitidas de tu aplicación en la sección **Información de despliegue** de la configuración de tu objetivo en Xcode.
 
-![Orientaciones admitidas en Xcode.]({% image_buster /assets/img/supported_interface_orientations_xcode.png %})
+![Orientaciones compatibles en Xcode.]({% image_buster /assets/img/supported_interface_orientations_xcode.png %})
 
 {% alert note %}
 La orientación sólo se aplica a la presentación del mensaje. Cuando el dispositivo cambia de orientación, la vista de mensajes adopta una de las orientaciones que admite. En dispositivos más pequeños (iPhones, iPod Touch), establecer una orientación horizontal para un mensaje modal o completo dentro de la aplicación puede provocar que el contenido quede truncado.
@@ -347,7 +361,7 @@ Configura `BrazeInAppMessageUI.DisplayChoice` para que devuelva uno de los sigui
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Para ver una muestra de `InAppMessageUI`, consulta nuestro [repositorio SDK de Swift Braze](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift/Sources/InAppMessageUI) y [Objective-C](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/ObjC/Sources/InAppMessageUI).
+Para ver un ejemplo`InAppMessageUI`, consulta nuestro [repositorio Swift Braze SDK](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift/Sources/InAppMessageUI) y [Objective-C](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/ObjC/Sources/InAppMessageUI).
 {% endalert %}
 
 ## Ocultar la barra de estado
@@ -468,9 +482,9 @@ func inAppMessage(
 {% endtab %}
 {% endtabs %}
 
-## Personalizar la solicitud de revisión de la tienda de aplicaciones
+## Personalizar el mensaje de revisión de la tienda de aplicaciones
 
-Puedes utilizar mensajes dentro de la aplicación en una campaña para pedir a los usuarios una valoración del App Store.
+Puedes utilizar mensajes dentro de la aplicación en una campaña para pedir a los usuarios que dejen una reseña en la App Store.
 
 {% alert note %}
 Dado que este aviso de ejemplo anula el comportamiento predeterminado de Braze, no podemos realizar un seguimiento automático de las impresiones si se implementa. Debes [registrar tus propios análisis]({{site.baseurl}}/developer_guide/analytics/).

@@ -3,7 +3,7 @@
 {% alert warning %}
 사용자 프로필에 `external_id` 을 할당하지 말고 고유하게 식별할 수 있도록 하세요. 사용자를 식별한 후에는 익명으로 되돌릴 수 없습니다.
 <br><br>
-An `external_id`는 [`/users/external_ids/rename` 엔드포인트]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/)를 사용하여 업데이트할 수 있습니다. 그러나 사용자의 세션 중에 다른 `external_id`를 설정하려는 모든 시도는 새로운 `external_id`와 연결된 새로운 고객 프로필을 생성합니다. 두 프로필 간에 데이터가 전달되지 않습니다.
+`external_id`은 [`/users/external_ids/rename` 엔드포인트]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/)를 사용하여 업데이트할 수 있습니다. 그러나 사용자의 세션 중에 다른 `external_id`를 설정하려는 모든 시도는 새로운 `external_id`가 연결된 새로운 고객 프로필을 생성합니다. 두 프로필 간에 데이터가 전달되지 않습니다.
 {% endalert %}
 
 {% endif %}

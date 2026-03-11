@@ -1,12 +1,12 @@
 ---
-nav_title: Tracking von Deinstallationen
-article_title: Tracking von Deinstallationen über das Braze SDK
+nav_title: Uninstall-Tracking
+article_title: Verfolgen Sie Deinstallationen über das Braze SDK.
 page_order: 3.5
 description: "Lernen Sie, wie Sie Deinstallationen über das Braze SDK verfolgen können."
 
 ---
 
-# Tracking von Deinstallationen
+# Uninstall-Tracking
 
 > Erfahren Sie, wie Sie das Tracking von Deinstallationen über das Braze SDK einrichten. Allgemeine Informationen finden Sie unter [Benutzer:in: Tracking deinstallieren]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking).
 

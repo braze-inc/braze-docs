@@ -1,6 +1,6 @@
 ---
 page_order: 10.1
-nav_title: 진행 사례
+nav_title: 고급 예제
 article_title: Braze SDK의 고급 푸시 알림 예시
 channel:
   - push notifications

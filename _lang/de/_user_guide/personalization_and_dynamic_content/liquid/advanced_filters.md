@@ -30,7 +30,7 @@ description: "In diesem Referenzartikel finden Sie eine Liste mit erweiterten Fi
 | Filtername | Filterbeschreibung | Beispieleingabe | Beispiel-Ausgabe |
 |---|---|---|---|
 | `url_escape` | Erkennt alle Zeichen in einer Zeichenfolge, die in URLs nicht zulässig sind, und ersetzt die Zeichen durch ihre Escape-Varianten. | `{{'hey<>hi' | url_escape}}` | hey%3C%3Ehi |
-| `url_param_escape` | Ersetzt alle Zeichen in einem String, die in URLs nicht zulässig sind, durch ihre escapeten Varianten, einschließlich des kaufmännischen Und-Zeichens (&) | `{{'hey<&>hi' | url_param_escape}}` | hey%3C%26%3Ehi |
+| `url_param_escape` | Ersetzt alle Zeichen in einem String, die in URLs nicht zulässig sind, durch ihre Escape-Varianten, einschließlich des Und-Zeichens. (&) | `{{'hey<&>hi' | url_param_escape}}` | hey%3C%26%3Ehi |
 | `url_encode` | Kodiert eine URL-freundliche Zeichenkette | `{{ 'google search' | url_encode }}` | Google+Suche |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 

@@ -7,7 +7,7 @@ description: "Este artigo descreve eventos e propriedades personalizados, segmen
 search_rank: 2
 ---
 
-# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Eventos personalizados
+# [![curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Eventos personalizados
 
 > Este artigo descreve eventos e propriedades personalizados, filtros de segmentação relacionados, propriedades de entrada do Canva, análises de dados relevantes e muito mais. Para saber mais sobre os eventos do Braze em geral, consulte [Eventos]({{site.baseurl}}/user_guide/data/custom_data/events/).
 
@@ -23,7 +23,7 @@ Alguns casos de uso comuns de eventos personalizados incluem:
 - Encontrar análises de dados adicionais usando relatórios de [funil]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) e [retenção]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) 
 - Aproveitamento das [propriedades de entrada persistente]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) para usar metadados do evento do cliente para personalização nas etapas do Canva
 - Geração de análises de dados mais sofisticadas com o [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
-- Configuração de [critérios de saída]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) para definir quando os usuários devem sair do seu Canva
+- Configurando [critérios de saída]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) para definir quando os usuários devem sair do seu canva
 
 ## Gerenciamento de eventos personalizados
 
@@ -103,7 +103,7 @@ A tabela a seguir mostra os filtros disponíveis para segmentar usuários por ev
 
 O Braze nota o número de vezes que os eventos personalizados ocorreram e a última vez que foram realizados por cada usuário para segmentação. Visualize essas análises de dados acessando **Analytics** > **Relatório de eventos personalizados**.
 
-Na página **Custom Events Report (Relatório de eventos personalizados)** no dashboard, você pode visualizar de forma agregada a frequência com que cada evento personalizado ocorre. As linhas cinzas sobrepostas na série temporal indicam a última vez que uma campanha foi enviada, o que é útil para visualizar como suas campanhas afetaram a atividade do evento personalizado.
+Na página **Custom Events Report (Relatório de eventos personalizados)** no dashboard, você pode visualizar de forma agregada a frequência com que cada evento personalizado ocorre. As linhas cinzas sobrepostas na série temporal indicam a última vez que uma campanha foi enviada, o que é útil para visualizar como suas campanhas afetaram a atividade de eventos personalizados.
 
 ![Gráfico de contagens de eventos personalizados na página Eventos personalizados no dashboard, mostrando as tendências de um evento personalizado]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
@@ -123,7 +123,7 @@ Os segmentos criados com dados de eventos personalizados não podem mostrar dado
 
 As propriedades de eventos personalizados são metadados ou atributos personalizados de eventos que descrevem uma ocorrência específica de um evento. Essas propriedades podem ser usadas para qualificar ainda mais as condições de disparo, aumentar a personalização no envio de mensagens, rastrear conversões e gerar análises mais sofisticadas por meio da exportação de dados brutos.
 
-As propriedades de eventos personalizados não são armazenadas no perfil do Braze e, portanto, não registram pontos de dados (consulte [Pontos de dados](#data-points) para exceções).
+As propriedades de eventos personalizados não são armazenadas no perfil do Braze e, portanto, não registram pontos de dados (veja [Pontos de dados](#data-points) para exceções).
 
 {% alert important %}
 Cada evento personalizado ou compra pode ter até 256 propriedades distintas de evento personalizado. Se um evento personalizado ou uma compra for registrado com mais de 256 propriedades, apenas as primeiras 256 serão capturadas e estarão disponíveis para uso.
@@ -149,6 +149,16 @@ Os objetos de propriedade de evento que contêm valores de vetor ou objeto podem
 
 É possível alterar o tipo de dados da propriedade do evento personalizado, mas esteja ciente dos impactos da [alteração dos tipos de dados]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) após a coleta dos dados.
 
+#### Chaves reservadas
+
+Você não pode usar chaves reservadas como nomes de propriedades de eventos. Usar uma chave reservada no objeto `properties` retornará o erro "Campo 'properties' inválido".
+
+| Propriedade | Chave Reservada |
+| --- | --- |
+| Eventos personalizados | `time` e `event_name` | 
+| Eventos de compra |`time`, `product_id`, `quantity`, `event_name`, `price`, `currency` | 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 ### Uso de propriedades de eventos personalizados
 
 As propriedades de eventos personalizados podem ser usadas para qualificar os disparos de campanhas, rastrear conversões e personalizar o envio de mensagens.
@@ -157,15 +167,15 @@ As propriedades de eventos personalizados podem ser usadas para qualificar os di
 
 Use as propriedades de eventos personalizados para restringir ainda mais seu público para uma determinada campanha ou Canva. Por exemplo, se você tiver um aplicativo de comércio eletrônico e quiser enviar uma mensagem a um usuário quando ele abandonar o carrinho, poderá adicionar uma propriedade de evento personalizado de `item price` para melhorar o público-alvo e permitir maior personalização da campanha.
 
-![Filtros de propriedades de eventos personalizados para um cartão abandonado. Dois filtros são combinados com um operador AND para enviar essa campanha aos usuários que abandonaram o cartão com um preço de item entre 100 e 200 dólares]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
+![Filtros de propriedades de eventos personalizados para um cartão abandonado. Dois filtros são combinados com um operador AND para enviar esta campanha a usuários que abandonaram seu cartão com um preço de item entre 100 e 200 dólares]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
-As propriedades de eventos personalizados aninhados também são compatíveis com a [entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
+Propriedades de eventos personalizados aninhadas também são suportadas em [entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
 
 ![Filtros de propriedades de eventos personalizados para um cartão abandonado. Um filtro é selecionado se algum item do carrinho tiver um preço superior a 100 dólares.]({% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png")
 
 #### Personalização de mensagens
 
-Você também pode usar propriedades de eventos personalizados para personalização no modelo de envio de mensagens. Qualquer campanha que use [a entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) com um evento de gatilho pode usar propriedades de evento personalizado desse evento para personalização de envio de mensagens.
+Você também pode usar propriedades de eventos personalizados para personalização no modelo de envio de mensagens. Qualquer campanha que use [entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) com um evento de gatilho pode usar propriedades de eventos personalizados desse evento para personalização de envio de mensagens.
 
 Por exemplo, se você tiver um app de jogos e quiser enviar uma mensagem aos usuários que concluíram um nível, poderá personalizar ainda mais sua mensagem com uma propriedade para o tempo que os usuários levaram para concluir esse nível. Neste exemplo, a mensagem é personalizada para três segmentos diferentes usando [lógica condicional]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/). A propriedade do evento personalizado chamada `time_spent` pode ser incluída na mensagem chamando ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
@@ -200,9 +210,11 @@ As propriedades de eventos personalizados são atualizadas em tempo real para qu
 
 ##### Adição de propriedades de eventos para segmentação
 
-Você precisará da [permissão de usuário]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) "Gerenciar segmentação de propriedades personalizadas de eventos" para criar segmentos com base na recência e na frequência da propriedade do evento.
+Você precisa da permissão [de usuário]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) "Editar Segmentação de Propriedade de Evento Personalizado" para criar segmentos com base na recência e frequência de propriedades de eventos.
 
-Por padrão, você pode ter 20 propriedades de eventos segmentáveis por espaço de trabalho. Entre em contato com o gerente da sua conta Braze para aumentar esse limite.
+{% multi_lang_include deprecations/user_permissions.md %}
+
+Por padrão, você pode ter 20 propriedades de eventos segmentáveis por espaço de trabalho. Entre em contato com seu gerente de conta do Braze para aumentar esse limite.
 
 Para adicionar propriedades de eventos para segmentação, faça o seguinte:
 
@@ -215,9 +227,9 @@ Os filtros de segmentação de propriedades de eventos incluem:
 - Fez compras com a propriedade A no valor B, X vezes nos últimos Y dias.
 - Adiciona a capacidade de segmentar dentro de 1 a 30 dias.
 
-![Um grupo de filtros que tem "Abandono de carrinho" com a propriedade "número de itens" e o valor 2 mais de uma vez nos últimos 30 dias do calendário.]({% image_buster /assets/img/nested_object3.png %})
+![Um grupo de filtros que tem 'Carrinho Abandonado' com a propriedade 'número de itens' e valor 2 mais de 1 vez nos últimos 30 dias corridos.]({% image_buster /assets/img/nested_object3.png %})
 
-Os dados são registrados apenas para uma determinada propriedade de evento depois de ativada, e as propriedades de evento ficam disponíveis apenas a partir dessa data.
+Os dados são registrados apenas para uma determinada propriedade de evento após você ativá-la, e as propriedades de eventos estão disponíveis apenas a partir dessa data em diante.
 
 ##### Pontos de dados
 
@@ -242,8 +254,8 @@ As propriedades de eventos personalizados são projetadas para ajudá-lo a aumen
 
 Você pode segmentar com base nos valores das propriedades do evento de duas maneiras:
 
-1. **Dentro de 30 dias:** Você pode usar a segmentação de propriedades de eventos com base na frequência e na recência de valores específicos de propriedades de eventos em segmentos do Braze. Essa opção afeta o uso de dados.<br><br>
-2. **Dentro e além de 30 dias:** Para cobrir a segmentação de propriedades de eventos de curto e longo prazo, você pode usar [extensões de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Esse recurso segmenta os usuários com base em eventos personalizados e propriedades de eventos rastreados nos últimos dois anos. Essa opção não afeta o uso de dados.
+1. **Dentro de 30 dias:** Você pode usar segmentação de propriedades de eventos com base na frequência e recência de valores específicos de propriedades de eventos dentro dos segmentos do Braze. Esta opção impacta o uso de dados.<br><br>
+2. **Dentro e além de 30 dias:** Para cobrir a segmentação de propriedades de eventos de curto e longo prazo, você pode usar [extensões de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Esse recurso segmenta os usuários com base em eventos personalizados e propriedades de eventos rastreados nos últimos dois anos. Esta opção não impacta o uso de dados.
 
 Entre em contato com o gerente de sucesso do cliente Braze para obter recomendações sobre a melhor abordagem, dependendo de suas necessidades específicas.
 

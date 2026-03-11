@@ -124,7 +124,6 @@
   "Brandenburg": "Brandenburg",
   "Braze": "Braze",
   "Braze account": "Braze-Konto",
-  "Braze AI": "Braze AI",
   "Braze Alloys": "Braze-Technologie-Partner",
   "Braze Canvas": "Braze-Canvas",
   "Braze currents": "Braze-Currents",
@@ -1278,5 +1277,8 @@
   "Zendesk": "Zendesk",
   "zeotap": "Zeotap",
   "zero-party data": "Zero-Party-Daten",
-  "Feature Flags": "Feature-Flags"
+  "Feature Flags": "Feature-Flags",
+  "BrazeAI": "BrazeAI",
+  "BrazeAI Operator": "BrazeAI Operator",
+  "BrazeAI Decisioning Studio": "BrazeAI Decisioning Studio"
 }

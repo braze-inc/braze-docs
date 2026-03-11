@@ -74,13 +74,13 @@ Puedes elegir sobrescribir las propiedades predeterminadas que configuraste inic
 
 Para editar, añadir o eliminar propiedades predeterminadas adicionales, edita la propia bandera de característica desde **Mensajería** > **Banderas de característica**. Cuando una variante está desactivada, el SDK devolverá un objeto de propiedades vacío para la bandera de característica dada.
 
-![La sección "Variantes del experimento" con la clave variable "enlace" sobrescrita con "/ventas".]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
+![La sección «Variantes del experimento» con la clave variable «link» sobrescrita con «/sales».]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
 
 ### Paso 4: Elige los usuarios a los que dirigirte
 
 Utiliza uno de tus segmentos o filtros para elegir a tus [usuarios objetivo]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). Por ejemplo, puedes utilizar el filtro **Variante de indicador de característica recibida** para reorientar a los usuarios que ya han recibido una prueba A/B.
 
-![La página "Objetivo" en un experimento de bandera de características con la "Variante de bandera de características recibida" resaltada en la barra de búsqueda del grupo de filtrado.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
+![La página «Objetivo» en un experimento con indicadores de característica con «Variante de característica recibida» resaltada en la barra de búsqueda del grupo de filtros.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
 
 {% alert note %}
 La pertenencia a un segmento se calcula cuando se actualizan las banderas de características para un usuario determinado. Los cambios están disponibles cuando tu aplicación actualiza las banderas de características, o cuando se inicia una nueva sesión.

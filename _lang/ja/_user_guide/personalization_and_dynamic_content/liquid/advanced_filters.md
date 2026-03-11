@@ -30,7 +30,7 @@ description: "このリファレンス記事には、高度なフィルター、
 | フィルター名 | フィルター 説明 | 例の入力 | 例の出力 |
 |---|---|---|---|
 | `url_escape` | URLで許可されていない文字列内のすべての文字を識別し、エスケープされたバリアントに置き換えます | `{{'hey<>hi' | url_escape}}` | hey%3C%3Ehi |
-| `url_param_escape` | URLで許可されていない文字列のすべての文字を、アンパサンドを含むエスケープされたバリアントに置き換える。 (&) | `{{'hey<&>hi' | url_param_escape}}` | hey%3C%26%3Ehi |
+| `url_param_escape` | URLで使用できない文字列内の全文字を、アンパサンドを含むエスケープされたバリアントに置換する。 (&) | `{{'hey<&>hi' | url_param_escape}}` | hey%3C%26%3Ehi |
 | `url_encode` | URL フレンドリーな文字列をエンコードします | `{{ 'google search' | url_encode }}` | google+search |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 

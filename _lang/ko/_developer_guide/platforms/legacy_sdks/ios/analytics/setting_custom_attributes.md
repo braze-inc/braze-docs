@@ -1,6 +1,6 @@
 ---
 nav_title: Set custom attributes
-article_title: iOS용 커스텀 속성 설정하기
+article_title: iOS용 커스텀 속성 설정
 platform: iOS
 page_order: 3
 description: "이 참조 문서에서는 iOS 애플리케이션에서 커스텀 속성을 설정하는 방법을 보여줍니다."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# iOS용 커스텀 속성 설정하기
+# iOS용 커스텀 속성 설정
 
 Braze는 사용자에게 속성을 할당하는 방법을 제공합니다. 대시보드에서 이러한 속성에 따라 사용자를 필터링하고 세분화할 수 있습니다.
 
@@ -157,7 +157,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 
 ### 배열 값을 가진 사용자 정의 속성
 
-[커스텀 속성 배열]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)의 최대 요소 개수 기본값은 25개입니다. 최대 요소 수를 초과하는 배열은 최대 요소 수를 포함하도록 잘립니다. 개별 배열의 최댓값은 최대 100개까지 늘릴 수 있습니다. 이 최대 한도를 늘리려면 고객 서비스 매니저에게 문의하세요. 
+[커스텀 속성 배열]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)의 최대 요소 개수 기본값은 25개입니다. 최대 요소 개수를 초과하는 배열은 최대 요소 개수를 포함하도록 잘립니다. 개별 배열의 최대값은 500까지 늘릴 수 있습니다. 이 한도를 500 이상으로 늘리려면 Braze 고객 성공 매니저에게 문의하십시오.
 
 
 {% tabs %}

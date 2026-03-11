@@ -1,5 +1,5 @@
 ---
-nav_title: Über Tracking Daten
+nav_title: Über das Tracking von Daten
 article_title: Daten zum Tracking der Zielseite
 description: "Erfahren Sie mehr über Tracking und anonymisierte Daten für Landing Pages in Braze."
 page_order: 10
@@ -14,7 +14,9 @@ alias: /landing_pages/data_tracking/
 
 ### Web SDK
 
-Das Braze Web SDK wird nur initialisiert, wenn jemand ein Formular auf der Startseite abschickt. Vorher werden keine persönlichen Daten gesammelt und das SDK verfolgt die Benutzer nicht aktiv. Nach der Initialisierung speichert das SDK keine Daten im Browser (wie Cookies, lokale Speicherinhalte o. Ä.).
+Das Braze-Internet-SDK wird initialisiert, wenn eine Nutzer:in ein Formular auf einer Landing Page absendet. Vorher werden keine persönlichen Daten gesammelt und das SDK verfolgt die Benutzer nicht aktiv. Nach der Initialisierung speichert das SDK keine Daten im Browser (wie Cookies, lokale Speicherinhalte o. Ä.). 
+
+Das Braze-Web-SDK wird sofort initialisiert, wenn ein Nutzer:in über einen Link, der durch ein{% raw %}`{% landing_page_url %}`{% endraw %}Liquid-Tag in einer Braze-Nachricht generiert wurde, zur Landing Page navigiert.
 
 Wenn ein Formular abgeschickt wird, erfasst das SDK die folgenden Daten:
 
@@ -32,10 +34,10 @@ Da diese Daten nicht mit identifizierbaren Nutzern verknüpft sind, können sie 
 
 ## Zusammenführen von doppelten Nutzerprofilen
 
-Braze führt Nutzer:innen nicht automatisch auf der Grundlage von Attributen wie E-Mail oder Telefon zusammen, wenn ein Landing Page-Formular eingereicht wird. Wenn ein Formular mit einer E-Mail oder Telefonnummer eingereicht wird, die mit einem bestehenden Nutzerprofil übereinstimmt, erstellt Braze ein separates Nutzerprofil.
+Braze führt keine automatische Zusammenführung von Nutzer:innen anhand von Attributen wie E-Mail-Adresse oder Telefonnummer durch, wenn ein Formular auf einer Landing Page übermittelt wird. Wenn ein Formular mit einer E-Mail-Adresse oder Telefonnummer eingereicht wird, die mit einem bestehenden Nutzerprofil übereinstimmt, erstellt Braze ein separates Nutzerprofil.
 
-Um doppelte Nutzerprofile zusammenzuführen, können Sie:
+Um doppelte Nutzerprofile zusammenzuführen, haben Sie folgende Möglichkeiten:
 
-- Triggern Sie den [Endpunkt`/users/merge` ]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/), wenn ein Landing Page-Formular übermittelt wird, um das neue Profil mit einem bestehenden Profil zusammenzuführen.
-- Planen Sie einen Zeitplan für die [Zusammenführung von]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#bulk-merging) doppelten Profilen auf der Grundlage übereinstimmender Bezeichner.
+- Triggern Sie den[`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/)[Endpunkt,]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) wenn ein Formular auf der Landing Page übermittelt wird, um das neue Profil mit einem bestehenden Profil zusammenzuführen.
+- Erstellen Sie einen Zeitplan für[ eine Massenzusammenführung,]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#bulk-merging) um doppelte Profile regelmäßig anhand übereinstimmender Bezeichner zusammenzuführen.
 

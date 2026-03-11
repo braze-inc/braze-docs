@@ -8,7 +8,7 @@ description: "Cet article de référence traite des principes fondamentaux du SD
 
 # Aperçu du SDK 
 
-> Le SDK de Braze recueille des données de session, identifie les utilisateurs et enregistre les achats et les événements personnalisés par le biais de votre site web ou de votre appli. Vous pouvez également utiliser le SDK pour engager les utilisateurs en envoyant des messages in-app et des notifications push directement depuis le tableau de bord de Braze.
+> Le SDK Braze collecte des données de session, identifie les utilisateurs et enregistre les achats et les custom events via votre site Web ou votre application. Vous pouvez également utiliser le SDK pour interagir avec les utilisateurs en envoyant des messages in-app et des notifications push directement depuis le tableau de bord de Braze.
 
 Le SDK Braze en bref :
 * Collecte et synchronise les données de l'utilisateur dans un profil utilisateur consolidé.
@@ -28,11 +28,11 @@ Pour vous faire gagner du temps et assurer une intégration fluide, nous vous re
 
 ## Agrégation des données
 
-Le SDK de Braze capture automatiquement les données au niveau de l'utilisateur, vous donnant des indicateurs clés pour votre application et votre base d'utilisateurs. Regroupez les applications similaires dans un seul espace de travail (par exemple, les versions iOS et Android ensemble) pour consulter les données collectées sur toutes les plateformes et créer une image complète de l'activité des utilisateurs. Voir l'article sur la [page d'accueil]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) pour plus d'informations.
+Le SDK Braze recueille automatiquement les données au niveau utilisateur, vous fournissant ainsi des indicateurs clés pour votre application et votre base d'utilisateurs. Regroupez les applications similaires dans un seul espace de travail (par exemple, les versions iOS et Android ensemble) afin de visualiser les données collectées sur toutes les plateformes et de créer une vue d'ensemble complète de l'activité des utilisateurs. Voir l'article sur la [page d'accueil]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) pour plus d'informations.
 
 ## Envoi de messages in-app
 
-Utilisez le SDK pour composer et envoyer des messages in-app directement. Vous pouvez choisir des messages en mode contextuel, modal ou plein écran en fonction de votre stratégie de communication. Pour plus de détails sur la composition, reportez-vous à la section [Créer un message in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
+Veuillez utiliser le SDK pour rédiger et envoyer directement des messages in-app. Vous pouvez sélectionner des messages contextuels, modaux ou plein écran en fonction de votre stratégie de campagne. Pour plus de détails sur la composition, veuillez vous référer à [la section Créer un message in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
 
 ![Push affiché sur un navigateur web]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
@@ -48,10 +48,10 @@ Par défaut, une campagne contenant des messages in-app sera envoyée à toutes 
 
 Vous pouvez créer un segment de vos internautes en définissant des **Apps et des sites web ciblés** sur les **Utilisateurs d'apps spécifiques**, puis sélectionner uniquement votre site web pour les **Apps spécifiques.**
 
-![Page de détails du segment avec l'application web en point de mire]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
+![Page Détails du segment avec l'application Web au premier plan]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
 
 Cela vous permet de cibler de façon intelligente les utilisateurs en fonction de leur comportement. Si vous souhaitez cibler des utilisateurs Web pour les encourager à télécharger votre application mobile, vous pouvez créez ce segment comme votre audience cible. Si vous souhaitez envoyer une campagne de communication comprenant un message mobile in-app mais pas de message web, vous décochez l'icône de votre site Web dans votre segment.
 
-## Plates-formes prises en charge
+## Plateformes prises en charge
 
-Braze fournit des SDK pour plusieurs plateformes, comme le Web, Android et Swift. Pour obtenir la liste complète, consultez le [guide du développeur de Braze]({{site.baseurl}}/developer_guide/home).
+Braze propose des SDK pour plusieurs plateformes, telles que Web, Android et Swift. Pour obtenir la liste complète, veuillez consulter le [Guide du développeur Braze]({{site.baseurl}}/developer_guide/home).

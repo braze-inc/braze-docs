@@ -37,12 +37,12 @@ description: "Cet article de référence explique les différents composants de 
   "header_variables": (optional, header variables object) an object to specify header variable values for specified template_name, required if the header has variables; see object specification below,
   "body_variables": (optional, body variable object) an object to specify body variable values for specified template_name, required if the body has variables; see object specification below,
   "button_variables": (optional, button variables object) an object to specify button variable values for specified template_name, required if buttons have variables; see object specification below,
-  "header_image_uri": (optional, string) URI to the header image, if the header is of type IMAGE in specified template_name. Only IMAGE and TEXT header types are supported by the messages/send API.
+  "header_media_uri": (optional, string) URI to the header media, if the header is of type IMAGE in specified template_name. Only IMAGE and TEXT header types are supported by the messages/send API.
 }
 ```
 
 {% alert important %}
-**Limitations de l'envoi de médias :** Les envois de médias (documents, vidéos et autres types de médias) ne sont pas pris en charge par l'API `messages/send`. Seuls les types d'en-tête TEXT et IMAGE sont pris en charge pour les messages modèles envoyés par l'API. Si votre modèle WhatsApp utilise un en-tête de type DOCUMENT, VIDEO ou autre média, vous ne pouvez pas l'envoyer à l'aide de l'API `messages/send`. Utilisez l'[API déclenchée par les campagnes]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) ou le tableau de bord de Braze pour envoyer des modèles avec des en-têtes de médias.
+**Restrictions relatives à l'envoi de médias :** Les envois multimédias (documents, vidéos et autres types de médias) ne sont pas pris en charge par `messages/send`l'API. Seuls les types d'en-tête TEXTE et IMAGE sont pris en charge pour les messages modèles envoyés via l'API. Si votre modèle WhatsApp utilise un en-tête de type DOCUMENT, VIDÉO ou autre type de média, il n'est pas possible de l'envoyer via `messages/send`l'API. Veuillez utiliser l'[API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) [Campaigns Triggered]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) ou le tableau de bord de Braze pour envoyer des modèles avec des en-têtes multimédias.
 {% endalert %}
 
 ##### Objet Variables d'en-tête
@@ -50,7 +50,9 @@ description: "Cet article de référence explique les différents composants de 
 L’objet `header_variables` vous permet de spécifier des valeurs pour les variables d’en-tête dans le modèle WhatsApp. Chaque clé est l’index de variable du modèle WhatsApp (indexé à zéro) à remplacer par la valeur spécifiée.
 
 {% alert note %}
-**Exigence relative au type d'en-tête :** Vous ne pouvez utiliser `header_variables` qu'avec les modèles qui ont des en-têtes de type TEXT. Pour les en-têtes IMAGE, utilisez plutôt `header_image_uri`. DOCUMENT, VIDEO et les autres types d'en-tête de média ne sont pas pris en charge par l'API `messages/send`.
+Vous pouvez utiliser`header_variables`uniquement avec les modèles qui ont des en-têtes de type TEXTE. Pour les en-têtes IMAGE, veuillez utiliser`header_media_uri`à la place. Les types d'en-tête DOCUMENT, VIDEO et autres types multimédias ne sont pas pris en charge par l'API`messages/send`.<br><br>
+
+`header_image_uri` est utilisé uniquement pour les types de messages de réponse (tels que `quick_reply_response_message`), et non pour les messages modèles.
 {% endalert %}
 
 ```json
@@ -94,7 +96,7 @@ L’objet `button_variables` vous permet de spécifier des valeurs pour les vari
 
 ```json
 {
-  "$TEMPLATE_VARIABLE_INDEX_1": "$TEMPLATE_VARIABLE_VALUE_1",
+  "$TEMPLATE_VARIABLE_INDEX_1": "$TEMPLATE_VARIABLE_VALUE_1"
 }
 ```
 
@@ -262,7 +264,7 @@ Le type `list_response_message` vous permet d'envoyer un message basé sur une l
 
 #### flow_response_message
 
-Le type `flow_response_message` vous permet d'envoyer un message basé sur un flux dans WhatsApp. Ce type de message comprend un flux interactif que le destinataire peut compléter.
+Ce`flow_response_message`type vous permet d'envoyer un message basé sur un flux dans WhatsApp. Ce type de message comprend un flux interactif que le destinataire peut compléter.
 
 ```json
 {
@@ -276,7 +278,7 @@ Le type `flow_response_message` vous permet d'envoyer un message basé sur un fl
 }
 ```
 
-##### Objet bouton de débit
+##### Objet Bouton de flux
 
 ```json
 {
@@ -287,9 +289,9 @@ Le type `flow_response_message` vous permet d'envoyer un message basé sur un fl
 
 ##### Contraintes
 
-- **flow_button**: La légende et le site `flow_id` doivent être inclus.
-- **légende**: Maximum 20 caractères.
-- **flow_id**: Il doit s'agir d'un ID de flux publié en cours de validité.
+- **flow_button**: Il est nécessaire d'inclure à la fois la légende et `flow_id`le .
+- **légende** : Veuillez limiter votre réponse à 20 caractères.
+- **flow_id**: Il est nécessaire d'utiliser un ID de flux valide et publié.
 
 ##### Exemple
 

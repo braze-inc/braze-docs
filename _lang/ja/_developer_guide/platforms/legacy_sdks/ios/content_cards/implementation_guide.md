@@ -1,5 +1,5 @@
 ---
-nav_title: 高度な実装（オプション）
+nav_title: 高度な実装（任意）
 article_title: iOS 用コンテンツカード実装ガイド (オプション) 
 platform: iOS
 page_order: 7
@@ -14,7 +14,7 @@ noindex: true
 
 <br>
 {% alert important %}
-基本的なコンテンツカード開発者統合ガイドをお探しですか?見つける [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/content_cards/integration/).
+基本的なコンテンツカード開発者統合ガイドをお探しですか?それを見つけろ [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/content_cards/integration/).
 {% endalert %}
 
 # コンテンツカード実装ガイド
@@ -444,7 +444,7 @@ func contentCardable(with metaData: [ContentCardKey: Any], for classType: Conten
 
 このコンテンツカードは、API トリガーのキーと値のペアを持つ API トリガーキャンペーンによって提供されます。これは、カードの値が外部要因に依存して、ユーザに表示するコンテンツを決定するキャンペーンに最適です。なお、`class_type`はセットアップ時に知っておく必要があります。
 
-![補足コンテンツカードのユースケースのキーと値のペア。この例では、"tile_id", "tile_deeplink", や"tile_title" のようなカードのさまざまな側面が、Liquid を使って設定される。]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
+![補足コンテンツカードのユースケースのキーと値のペア。この例では、カードの各要素（"tile_deeplink","tile_id",例えば と ）"tile_title"は Liquid を使って設定されている。]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 
 ##### 分析をログに記録する準備ができましたか?
 [以下のセクション](#logging-impressions-clicks-and-dismissals)を参照して、データフローの外観について理解を深めてください。

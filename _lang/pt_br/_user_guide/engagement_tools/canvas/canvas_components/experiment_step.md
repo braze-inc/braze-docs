@@ -33,7 +33,7 @@ As jornadas experimentais são mais adequadas para testar a entrega, cadência, 
 
 Para usar os Caminhos de Experimento, seu canva deve incluir eventos de conversão. Embora você não possa adicionar eventos de conversão após um Canvas ter sido lançado, você pode clonar o Canvas lançado e adicionar eventos de conversão para adicionar Caminhos de Experimento.
 
-## Criação de uma jornada experimental
+## Criando uma jornada experimental
 
 Para criar um componente de jornada experimental, primeiro adicione uma etapa ao seu canva. Arraste e solte o componente da barra lateral ou clique no <i class="fas fa-plus-circle"></i> botão de mais na parte inferior de uma etapa e selecione **Experiment Paths**. 
 
@@ -64,14 +64,19 @@ Por fim, você deve montar suas jornadas dependentes. Selecione **Concluído** e
 Lembre-se de que os caminhos e seus passos subsequentes não podem ser removidos de uma canva depois de serem criados. No entanto, quando lançado, você pode modificar a distribuição do público entre as jornadas conforme achar adequado. Por exemplo, se um dia após lançar um canva, você concluir que uma jornada é superior às demais com base na análise de dados, você pode definir essa jornada para 100% e as outras para 0%. Ou, dependendo das suas necessidades, continue enviando os usuários por várias jornadas.
 
 {% alert important %}
-Para evitar a contaminação do experimento, se o seu Canva tiver um experimento de Caminho Vencedor ou Caminho Personalizado ativo ou em andamento e você atualizar o Canva ativo, independentemente de atualizar a etapa do Caminho do Experimento, o experimento em andamento será encerrado e a etapa do experimento não determinará um caminho vencedor ou caminhos personalizados. Para reiniciar o experimento, é possível desconectar a jornada experimental existente e iniciar uma nova, ou duplicar o Canvas e iniciar um novo Canvas. Caso contrário, os usuários percorrerão a jornada experimental como se nenhum método de otimização tivesse sido selecionado. Você também não pode ativar Jornadas Personalizadas ou Jornadas Vencedoras para um canva já ativo com uma etapa de jornada experimental.<br><br>Para saber mais, consulte [Editar canvas após o lançamento]({{site.baseurl}}/post-launch_edits/).
+Para evitar contaminação do experimento, se seu canva tiver um caminho vencedor ou um experimento de caminho personalizado ativo ou em andamento e você atualizar o canva ativo, independentemente de atualizar a etapa do caminho experimental em si, o experimento em andamento será encerrado e a etapa do experimento não determinará um caminho vencedor ou caminhos personalizados. Para reiniciar o experimento, você pode desconectar o caminho experimental existente e lançar um novo, ou duplicar o canva e lançar um novo canva. Caso contrário, os usuários seguirão pela jornada experimental como se nenhum método de otimização tivesse sido selecionado. Você também não pode ativar Jornadas Personalizadas ou Jornadas Vencedoras para um canva já ativo com uma etapa de jornada experimental.<br><br>Para saber mais, consulte [Editar canvas após o lançamento]({{site.baseurl}}/post-launch_edits/).
 {% endalert %}
 
 ## Rastreamento de performance
 
-Na página **Análise do canva**, selecione o Caminho do experimento para abrir uma [tabela detalhada]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) idêntica à guia **Analisar variantes** para comparar estatísticas detalhadas de performance e conversão entre as jornadas. Você também pode exportar a tabela via CSV e comparar as mudanças percentuais para métricas de interesse em relação à jornada ou controle que você selecionar.
+Na página de **Analytics do Canva**, selecione o Caminho Experimental para abrir uma [tabela detalhada]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) idêntica à aba **Analisar Variantes** para comparar estatísticas detalhadas de desempenho e conversão entre os caminhos. Você também pode exportar a tabela via CSV e comparar as mudanças percentuais para métricas de interesse em relação à jornada ou controle que você selecionar.
 
-Cada etapa em cada jornada exibirá estatísticas na visualização [análise de dados do canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), assim como qualquer etapa do canva. No entanto, tenha em mente que a análise de dados dos passos individuais **não** leva em conta a estrutura do experimento. A análise de dados na Etapa do Experimento deve ser usada para comparar entre jornadas.
+Cada etapa em cada caminho exibe estatísticas na visualização [Analytics do Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), assim como qualquer etapa do canva. No entanto, tenha em mente que as análises de etapas individuais e as análises do Caminho Experimental medem conversões de maneira diferente:
+
+- As **análises do Caminho Experimental** rastreiam conversões a partir do momento em que o usuário entra na etapa do Caminho Experimental. Esta é a visualização recomendada para comparar o desempenho entre os caminhos, pois todos os caminhos compartilham o mesmo ponto de partida.
+- As **análises de etapas individuais** (como as análises da etapa de Mensagem) rastreiam conversões a partir do momento em que o usuário recebe essa etapa específica (por exemplo, quando a mensagem é enviada).
+
+Como essas janelas de conversão têm pontos de partida diferentes, elas podem mostrar taxas de conversão diferentes para o mesmo caminho—especialmente quando há atrasos entre a etapa do experimento e uma mensagem subsequente. Para a comparação mais confiável entre os caminhos, use as análises do Caminho Experimental.
 
 ### Desempenho da Jornada Vencedora e Jornadas Personalizadas
 
@@ -82,5 +87,10 @@ Aproveite as Jornadas Vencedoras para acompanhar a performance ao longo de um pe
 
 ### Configurações adicionais
 
-Os Caminhos de Experimento registrarão os usuários que entrarem em cada etapa e se converterem enquanto estiverem no caminho atribuído. Isso rastreará todos os eventos de conversão especificados na configuração da canva. Na guia **Configurações adicionais**, insira quantos dias (entre 1 e 30) você gostaria que este experimento rastreasse conversões. A janela de tempo que você especificar aqui determinará por quanto tempo os eventos de conversão (escolhidos na configuração do canva) serão rastreados para o experimento. As janelas de conversão por evento especificadas na configuração do canva não se aplicarão ao rastreamento desta etapa e serão substituídas por esta janela de conversão.
+Os Caminhos Experimentais registram usuários que entram em cada etapa e convertem enquanto estão no caminho designado. Isso rastreia todos os eventos de conversão especificados na configuração do canva. Na aba **Configurações Adicionais**, insira quantos dias (entre 1 e 30) você deseja que este experimento rastreie conversões. A janela de tempo que você especificar aqui determina por quanto tempo os eventos de conversão (escolhidos na configuração do canva) são rastreados para o experimento. As janelas de conversão por evento especificadas na configuração do canva não se aplicam ao rastreamento desta etapa e são substituídas por esta janela de conversão.
 
+A janela de conversão começa quando o usuário entra na etapa do Caminho Experimental, não quando uma mensagem subsequente é enviada. Se um caminho incluir atrasos—como uma etapa de Atraso ou [Tempo Inteligente]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)—esses atrasos consomem parte da janela de conversão.
+
+{% alert important %}
+Se você estiver usando Tempo Inteligente em uma etapa de Mensagem dentro de um caminho experimental, o tempo entre a entrada no experimento e o envio real da mensagem reduz a janela de conversão efetiva para esse caminho. Por exemplo, se seu experimento tem uma janela de conversão de 5 dias e o Intelligent Timing posterga a mensagem em 2 dias, os usuários nessa jornada têm apenas 3 dias após receber a mensagem para converter dentro da janela do experimento—mesmo que a própria análise de dados da etapa de mensagem rastreie as conversões desde o momento do envio da mensagem.<br><br>Para uma análise de dados mais limpa do experimento, coloque quaisquer postergações (como etapas de postergação) **antes** da etapa da jornada experimental em vez de dentro de uma jornada experimental. Dessa forma, todas as jornadas começam do mesmo ponto e as postergações não consomem nenhuma parte da janela de conversão.
+{% endalert %}

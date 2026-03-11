@@ -1,10 +1,10 @@
 ---
-nav_title: Admin-Einstellungen
+nav_title: Administratoreinstellungen
 article_title: Admin-Einstellungen
 page_order: 20
 layout: dev_guide
 guide_top_header: "Admin-Einstellungen"
-guide_top_text: "Diese Seite finden Sie unter <b>Einstellungen</b> > <b>Admin-Einstellungen</b>. Sie können dann die entsprechende Registerkarte auswählen, um zu den Einstellungen zu navigieren, die Sie verwalten möchten. <br> <br> Die meisten Funktionen in den <b>Admin-Einstellungen</b> sind nur für Braze-Kontoadministratoren verfügbar. Wenn Sie keinen Zugang haben, aber der Meinung sind, dass Sie ihn haben sollten, wenden Sie sich an den Administrator des Braze-Kontos in Ihrem Unternehmen."
+guide_top_text: "Diese Seite finden Sie unter <b>Einstellungen</b> > <b>Admin-Einstellungen</b>. Sie können dann die entsprechende Registerkarte auswählen, um zu den Einstellungen zu navigieren, die Sie verwalten möchten. <br> <br> Die meisten Funktionen in den <b>Admin-Einstellungen</b> sind nur für Braze-Kontoadministratoren verfügbar. Sollten Sie keinen Zugang haben, aber der Meinung sein, dass Sie einen benötigen, wenden Sie sich bitte an den Administrator des Braze-Kontos Ihres Unternehmens."
 
 page_type: landing
 description: "Diese Landing Page enthält Artikel über Verwaltungseinstellungen. Hier finden Sie Artikel zur Konfiguration von Kontaktinformationen, Benachrichtigungseinstellungen und Sicherheitseinstellungen."
@@ -20,6 +20,9 @@ guide_featured_list:
 - name: Sicherheitseinstellungen
   link: /docs/user_guide/administrative/app_settings/company_settings/security_settings/
   image: /assets/img/braze_icons/shield-01.svg
+- name: Workspace-Zeitzonen
+  link: /docs/user_guide/administrative/app_settings/company_settings/workspace_time_zone/
+  image: /assets/img/braze_icons/user-circle.svg
 - name: Automatisierte Benutzerbereitstellung
   link: /docs/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/
   image: /assets/img/braze_icons/user-plus-01.svg

@@ -9,7 +9,7 @@ description: "Cette page d’accueil répertorie les endpoints de traduction de 
 page_type: landing
 
 guide_top_header: "Endpoints de traduction"
-guide_top_text: "Utilisez les endpoints de traduction de Braze pour gérer et mettre à jour les traductions de vos campagnes et canvas."
+guide_top_text: "Veuillez utiliser les endpoints de traduction Braze pour gérer et mettre à jour les traductions dans vos campagnes, vos canevas et vos blocs de contenu."
 
 guide_featured_title: "Les endpoints de la campagne"
 guide_featured_list:
@@ -19,7 +19,7 @@ guide_featured_list:
   - name: "PUT : Mettre à jour la traduction dans une campagne"
     link: /docs/api/endpoints/translations/campaigns/put_update_translation_campaign/
     image: /assets/img/braze_icons/target-04.svg
-  - name: "GET : Afficher les traductions des sources par défaut de la campagne"
+  - name: "GET : Afficher les traductions par défaut de la source de la campagne"
     link: /docs/api/endpoints/translations/campaigns/get_source_campaign/
     image: /assets/img/braze_icons/message-plus-square.svg
 
@@ -31,13 +31,13 @@ guide_menu_list:
   - name: "PUT : Mise à jour de la traduction dans un canvas"
     link: /docs/api/endpoints/translations/canvas/put_update_translation_canvas/
     image: /assets/img/braze_icons/target-04.svg
-  - name: "GET : Afficher les traductions par défaut des sources de Canvas"
+  - name: "GET : Afficher les traductions par défaut de canvas"
     link: /docs/api/endpoints/translations/canvas/get_source_canvas/
     image: /assets/img/braze_icons/message-plus-square.svg
 
 guide_menu_title2: "Email template endpoints"
 guide_menu_list2:
-  - name: "GET : Voir les traductions par défaut des modèles d'e-mail"
+  - name: "GET : Afficher les traductions par défaut de la source du modèle d'e-mail"
     link: /docs/api/endpoints/translations/email_templates/get_view_source_template/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: "GET : Voir la traduction et la langue spécifiques"
@@ -50,11 +50,18 @@ guide_menu_list2:
     link: /docs/api/endpoints/translations/email_templates/put_update_template/
     image: /assets/img/braze_icons/target-04.svg
 
+guide_menu_title3: "Content Block endpoints"
+guide_menu_list3:
+  - name: "GET : Afficher toutes les traductions pour un bloc de contenu"
+    link: /docs/api/endpoints/translations/content_blocks/get_translation_content_block/
+    image: /assets/img/braze_icons/message-plus-square.svg
+  - name: "PUT : Mettre à jour la traduction dans un bloc de contenu"
+    link: /docs/api/endpoints/translations/content_blocks/put_update_translation_content_block/
+    image: /assets/img/braze_icons/target-04.svg
+
 ---
 
-{% alert important %}
-Les endpoints de traduction de Braze sont actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='Access to the Braze translation endpoints' %}
 
 ## Fonctionnement de nos endpoints de traduction
 
@@ -66,7 +73,7 @@ Avant d'utiliser ces endpoints, vous devez [ajouter vos locales.]({{site.baseurl
 
 ### Comment tester vos traductions
 
-Vous pouvez valider la prise en charge de la traduction de deux manières différentes à l'aide de l'API et du tableau de bord de Braze sur les campagnes, les Canvas (y compris les étapes individuelles) et les modèles d'e-mail :
+Il existe deux méthodes pour valider la prise en charge de la traduction à l'aide de l'API et du tableau de bord de Braze dans les campagnes, les canevas (y compris les étapes individuelles), les blocs de contenu et les modèles d'e-mail :
 
 - Pendant la composition (avant le lancement)
 - Après le lancement (à l'aide de versions préliminaires postérieures au lancement)

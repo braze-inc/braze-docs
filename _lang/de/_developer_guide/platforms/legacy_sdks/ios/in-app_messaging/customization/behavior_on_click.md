@@ -1,6 +1,6 @@
 ---
 nav_title: Benutzerdefiniertes Verhalten beim Klicken
-article_title: Anpassen des On-Click-Verhaltens für In-App-Nachrichten für iOS
+article_title: Anpassen des Verhaltens bei Klick auf In-App-Nachrichten für iOS
 platform: iOS
 page_order: 5
 description: "Dieser Referenzartikel behandelt das benutzerdefinierte On-Click-Verhalten bei In-App-Nachrichten für Ihre iOS-Anwendung."
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Anpassen des Verhaltens von In-App-Nachrichten bei Klick
+# Anpassen des Verhaltens von In-App-Nachrichten bei einem Klick
 
 Die Eigenschaft `inAppMessageClickActionType` von `ABKInAppMessage` definiert das Aktionsverhalten nach dem Klicken auf die In-App-Nachricht. Diese Eigenschaft ist schreibgeschützt. Wenn Sie das Klickverhalten der In-App-Nachricht ändern möchten, können Sie die folgende Methode auf `ABKInAppMessage` aufrufen:
 
