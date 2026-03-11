@@ -1557,7 +1557,6 @@ Field | Type | Description
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `card_api_id` | `null,`&nbsp;`string` | API ID of the card
-`dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
 `campaign_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
@@ -1599,7 +1598,6 @@ Field | Type | Description
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `card_api_id` | `null,`&nbsp;`string` | API ID of the card
-`dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | Message send ID this message belongs to
 `campaign_id` | `null,`&nbsp;`string` | Internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
