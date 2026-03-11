@@ -30,7 +30,7 @@ Content Card properties such as `title`, `cardDescription`, `imageUrl`, etc., ar
 {% tabs %}
 {% tab web %}
 
-The default styles for Braze Content Cards are defined in CSS within the Braze SDK. By overriding selected styles in your application, you can customize the standard feed with your own background images, font families, styles, sizes, animations, and more. For instance, the following example override causes Content Cards to appear 800 px wide:
+Braze's default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, you can customize our standard feed with your own background images, font families, styles, sizes, animations, and more. For instance, the following is an example override that causes Content Cards to appear 800 px wide:
 
 ``` css
 body .ab-feed {
@@ -38,83 +38,7 @@ body .ab-feed {
 }
 ```
 
-The following additional Web styling examples are from the [Braze Content Cards demo](https://github.com/sornocure/braze-content-card-demo/blob/main/css/style.css):
-
-```css
-/* Card image treatment */
-.img-fluid {
-  width: 100%;
-  max-width: 275px;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Card/container layout */
-.island {
-  padding: 1rem;
-  margin: 12px;
-  background-color: #fff;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
-  -ms-flex-preferred-size: 400px;
-      flex-basis: 400px;
-  border-radius: 3px;
-  overflow: auto; 
-}
-
-/* Utility classes */
-.hidden {
-  opacity: 0;
-}
-
-.confirm {
-  color: green;
-}
-
-/* Form/input styling used by the demo */
-.inputfield {
-  font-family: "BerninaSans", "Open Sans", sans-serif;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  text-decoration: none;
-  height: 32px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 11px;
-  padding-right: 11px;
-  cursor: pointer;
-  font-size: 14px;
-  line-height: 32px;
-  line-height: -moz-block-height;
-  vertical-align: middle;
-  white-space: nowrap;
-  text-align: left;
-  overflow: hidden;
-  width: 100%;
-  color: #454646; }
-```
-
-Common selectors you can target include:
-
-- `.ab-feed` (feed container)
-- `.ab-unread-indicator` (unread state indicator)
-- `.ab-pinned-indicator` (pinned icon container)
-
-{% alert note %}
-The CSS examples on this page are not exhaustive. Additional styling options and [selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors) exist beyond the examples shown here.<br><br>
-You can apply common CSS patterns (for example, typography, spacing, borders, shadows, transitions, responsive media queries, and theme-based styling) to customize the default feed. For examples of reusable patterns, see the [MDN CSS layout cookbook](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook).
-{% endalert %}
-
-For a public styling example, see the [Braze Content Cards demo app CSS](https://github.com/sornocure/braze-content-card-demo/blob/main/css/style.css).
+For a full list of properties you can modify, see [Braze's SDK configuration options](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)
 
 {% endtab %}
 {% tab android %}
@@ -257,7 +181,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 
 **Modifying content cards programmatically**
 
-Content Cards can be changed programmatically by assigning the [`transform`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/transform) closure on your `Attributes` struct. The example below modifies the `title` and `description` of compatible cards:
+You can change Content Cards programmatically by assigning the [`transform`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/transform) closure on your `Attributes` struct. The example below modifies the `title` and `description` of compatible cards:
 
 ```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
@@ -373,7 +297,7 @@ Check out the [Examples sample app](https://github.com/braze-inc/braze-swift-sdk
 
 ### Custom pinned icons
 
-When creating a Content Card, marketers have the option of pinning the card. A pinned card will display at the top of a user's feed and can't be dismissed by the user. As you customize your card styles, you have the ability to change what the pinned icon looks like.
+When creating a Content Card, marketers have the option of pinning the card. A pinned card displays at the top of a user's feed, and the user can't dismiss it. As you customize your card styles, you can change how the pinned icon looks.
 
 ![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
@@ -388,9 +312,9 @@ The structure of the Content Card pinned icon is:
 </div>
 ```
 
-If you want to use a different FontAwesome icon, you can simply replace the class name of the `i` element with the class name of the desired icon. 
+If you want to use a different FontAwesome icon, you can replace the class name of the `i` element with the class name of the desired icon. 
 
-If you want to swap out the icon altogether, remove the `i` element and add the custom icon as a child of `ab-pinned-indicator`. There are a few different ways you can go about it, but one simple method would be to `replaceChildren()` on the `ab-pinned-indicator` element.
+If you want to switch the icon altogether, remove the `i` element and add the custom icon as a child of `ab-pinned-indicator`. There are several ways you can change the icon, but one simple method is to use `replaceChildren()` on the `ab-pinned-indicator` element.
 
 For example:
 
@@ -436,7 +360,7 @@ ContentCardStyling(
 )
 ```
 
-You can also specify a Composable in [`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721) of `ContentCardStyling`. If `pinnedComposable` is specified, it will override the `pinnedResourceId` value.
+You can also specify a Composable in [`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721) of `ContentCardStyling`. If `pinnedComposable` is specified, it overrides the `pinnedResourceId` value.
 
 ```kotlin
 ContentCardStyling(
@@ -538,7 +462,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze)
 viewController.view.tintColor = .systemGreen
 ```
 
-However, if you wish to modify only the unviewed indicator, you can access the `unviewedIndicatorColor` property of your `BrazeContentCardUI.ViewController.Attributes` struct. If you use Braze `UITableViewCell` implementations, you should access the property before the cell is drawn.
+However, if you want to modify only the unviewed indicator, you can access the `unviewedIndicatorColor` property of your `BrazeContentCardUI.ViewController.Attributes` struct. If you use Braze `UITableViewCell` implementations, access the property before the cell is drawn.
 
 For example, to set the color of the unviewed indicator to red:
 

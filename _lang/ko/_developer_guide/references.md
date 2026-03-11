@@ -26,7 +26,7 @@ toc_headers: h2
 | 리액트 네이티브 SDK  | [선언 파일](https://github.com/braze-inc/braze-react-native-sdk/blob/master/src/index.d.ts)                   | [GitHub 리포지토리](https://github.com/braze-inc/braze-react-native-sdk) | [샘플 앱](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject) |
 | Roku SDK          | N/A                                                                                                                                                         | [GitHub 리포지토리](https://github.com/braze-inc/braze-roku-sdk)            | [샘플 앱](https://github.com/braze-inc/braze-roku-sdk/tree/main/torchietv)            |
 | Unity SDK         | [선언 파일](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs)     | [GitHub 리포지토리](https://github.com/braze-inc/braze-unity-sdk)          | [샘플 앱](https://github.com/braze-inc/braze-unity-sdk/tree/master/unity-samples)          |
-| .NET MAUI 소프트웨어 개발 키트(이전 Xamarin)      | N/A                                                                                                                                                         | [GitHub 리포지토리](https://github.com/braze-inc/braze-xamarin-sdk)      | [샘플 앱](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples)      |
+| .NET MAUI SDK (이전 Xamarin)      | N/A                                                                                                                                                         | [GitHub 리포지토리](https://github.com/braze-inc/braze-xamarin-sdk)      | [샘플 앱](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples)      |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 샘플 앱 빌드

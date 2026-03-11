@@ -1,12 +1,12 @@
 ---
-nav_title: Définir les ID des utilisateurs
-article_title: Définir les ID des utilisateurs via le SDK de Braze
+nav_title: "Définir les ID d'utilisateur"
+article_title: Définissez les ID d’utilisateur via le SDK Braze.
 page_order: 1.1
 description: "Découvrez comment définir des ID d'utilisateur via le SDK de Braze."
 
 ---
 
-# Définir les ID des utilisateurs
+# Définir les ID d'utilisateur
 
 > Découvrez comment définir des ID d'utilisateur via le SDK de Braze. Il s'agit d'identifiants uniques qui vous permettent de suivre les utilisateurs à travers les appareils et les plateformes, d'importer leurs données via l'[API de données utilisateur]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) et d'envoyer des messages ciblés via l'[API de messages.]({{site.baseurl}}/api/endpoints/messaging/) Si vous n'attribuez pas d'ID unique à un utilisateur, Braze lui attribuera un ID anonyme à la place. Toutefois, vous ne pourrez pas utiliser ces fonctionnalités tant que vous ne l'aurez pas fait.
 
@@ -86,7 +86,17 @@ m.Braze.setUserId(YOUR_USER_ID_STRING)
 AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
 ```
 {% endtab %}
+
+{% tab REACT NATIVE %}
+```javascript
+Braze.changeUser("YOUR_USER_ID_STRING");
+```
+{% endtab %}
 {% endtabs %}
+
+{% alert note %}
+L'appel`changeUser()`est un déclencheur de purge des données dans le cadre de la fermeture de la session de l'utilisateur actuel. Le SDK efface automatiquement toutes les données en attente de l'utilisateur précédent avant de passer au nouvel utilisateur. Il n'est donc pas nécessaire de demander manuellement l'effacement des données avant d'appeler `changeUser()`.
+{% endalert %}
 
 {% alert warning %}
 **N'attribuez pas d'ID par défaut statique ou d'appel `changeUser()` lorsqu'un utilisateur se déconnecte.** En procédant ainsi, vous ne pourrez pas réengager les utilisateurs précédemment connectés sur les appareils partagés. Au lieu de cela, gardez une trace de tous les ID d'utilisateurs séparément et assurez-vous que le processus de déconnexion de votre application permet de revenir à un utilisateur précédemment connecté. Lorsqu'une nouvelle session commence, Braze actualise automatiquement les données pour le profil nouvellement actif.
@@ -149,24 +159,35 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 }
 ```
 {% endtab %}
+
+{% tab react native %}
+```javascript
+Braze.addAlias("ALIAS_NAME", "ALIAS_LABEL");
+```
+{% endtab %}
 {% endtabs %}
 
 ## Meilleures pratiques en matière d'ID Naming {#naming-best-practices}
 
 Nous vous recommandons de créer des ID d'utilisateur en utilisant la norme [UUID (Universally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier) ), ce qui signifie qu'il s'agit de chaînes de caractères de 128 bits qui sont aléatoires et bien réparties.
 
-Vous pouvez également hacher un identifiant unique existant (tel qu'un nom ou une adresse e-mail) pour générer vos ID d'utilisateur. Si vous le faites, veillez à mettre en œuvre l'[authentification SDK]({{site.baseurl}}/developer_guide/authentication/), afin d'empêcher l'usurpation d'identité de l'utilisateur.
+Vous pouvez également hacher un identifiant unique existant (tel qu'un nom ou une adresse e-mail) pour générer vos ID d'utilisateur. Si vous le faites, veillez à mettre en œuvre l'[authentification SDK]({{site.baseurl}}/developer_guide/sdk_integration/authentication/), afin d'empêcher l'usurpation d'identité de l'utilisateur.
+
+{% alert warning %}
+Veuillez éviter d'utiliser une valeur facile à deviner ou un numéro croissant pour votre ID. Cela pourrait exposer votre organisation à des attaques malveillantes ou à l'exfiltration de données.
+
+Pour une sécurité accrue, veuillez utiliser [l'authentification SDK]({{site.baseurl}}/developer_guide/sdk_integration/authentication/).
+{% endalert %}
 
 Bien qu'il soit essentiel de nommer correctement vos ID d'utilisateur dès le départ, vous pouvez toujours les renommer à l'avenir en utilisant le point de terminaison [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) endpoint.
 
-| Recommandé | Non recommandé |
+| Types d'ID déconseillés | Exemple non recommandé |
 | ------------ | ----------- |
-| 123e4567-e89b-12d3-a456-836199333115 | JonDoe829525552 |
-| 8c0b3728-7fa7-4c68-a32e-12de1d3ed2d5 | Anna@email.com |
-| f0a9b506-3c5b-4d86-b16a-94fc4fc3f7b0 | NomSociété-1-2-19 |
-| 2d9e96a1-8f15-4eaf-bf7b-eb8c34e25962 | jon-doe-1-2-19 |
+| ID de profil visible ou nom d'utilisateur de l'utilisateur | JonDoe829525552 |
+| Adresse e-mail | Anna@email.com |
+| ID utilisateur à incrémentation automatique | 123 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert warning %}
-Évitez de partager des détails sur la façon dont vous créez les ID utilisateurs, car cela pourrait exposer votre organisation à des attaques malveillantes ou à la suppression de données.
+Veuillez éviter de divulguer des informations détaillées sur la manière dont vous créez les ID utilisateurs, car cela pourrait exposer votre organisation à des attaques malveillantes ou à l'exfiltration de données.
 {% endalert %}

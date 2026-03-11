@@ -1,7 +1,13 @@
 {% if include.section == "Prerequisites" %}
 ## 필수 조건
 
-[다국어 지원]({{site.baseurl}}/multi_language_support/)을 편집하고 관리하려면 "다국어 설정 관리" 사용자 권한이 있어야 합니다. 메시지에 로캘을 추가하려면 캠페인을 편집할 수 있는 권한이 필요합니다.
+다국어 지원 [multi-language support]({{site.baseurl}}/multi_language_support/)을 편집하고 관리하려면 작업 공간에 대한 다음 [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)이 필요합니다:
+
+- 다국어 설정 보기
+- 다국어 로케일 설정 만들기
+- 다국어 로케일 설정 삭제
+
+메시지에 로케일을 추가하려면 "캠페인 편집" 권한이 필요합니다.
 
 {% alert important %}
 다국어 지원은 현재 초기 액세스 단계에 있습니다. Contact your Braze account manager if you’re interested in participating in this early access.

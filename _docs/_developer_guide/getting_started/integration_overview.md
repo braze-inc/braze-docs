@@ -239,12 +239,25 @@ For customers who have purchased Monthly Active Users CY 24-25, Universal MAU, W
     * Reviewing your SDK integration to reduce excessive data collection.
     * Blocklisting custom data that isn't essential for your marketing use cases.
 * Burst rate limits are short-lived rate limits that apply when a high volume of requests arrive in a very short period (that is, within seconds). You don't need to take action when burst limits occur, and the SDK will retry shortly after.
+* Steady rate limits control sustained request volume over a rolling window longer than the burst window (for example, several minutes) and help smooth ongoing traffic between burst limits and your hourly rate limit.
 
 ### Finding your rate limits
 
 To find current limits based on expected SDK throughput, go to **Settings** > **APIs and Identifiers** > **API and SDK limits**.
 
 For historical usage, go to **Settings** > **APIs and Identifiers** > **API and SDK dashboard**.
+
+### Requesting higher rate limits
+
+If you need a higher Braze rate limit, contact Braze Support or your customer success manager and include the following details:
+
+* Whether you need a temporary or permanent increase.
+* Why you need the increase.
+* Which endpoints and environments are affected.
+* Your approximate traffic volume and timeline, including start date, duration, and peak hours.
+* Whether you can batch calls or spread traffic over time.
+
+After you submit your request, Braze reviews it and updates you with the outcome.
 
 ### Changes and support
 

@@ -7,7 +7,7 @@ description: "Esta página describe los atributos personalizados y explica los d
 search_rank: 1
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Atributos personalizados
+# [![](https://learning.braze.com/custom-events-and-attributes)C[urso]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} [de Braze Learning](https://learning.braze.com/custom-events-and-attributes) Atributos personalizados
 
 > Esta página trata de los atributos personalizados, que son una colección de los rasgos únicos de tus usuarios. Los atributos personalizados son los mejores para almacenar atributos sobre sus usuarios, o información sobre acciones de poco valor dentro de su aplicación. 
 
@@ -22,7 +22,7 @@ Para crear y gestionar atributos personalizados en el panel de control, vaya a *
 La columna **Última actualización** muestra la última vez que se editó el atributo personalizado, como la última vez que se configuró como lista de bloqueo o activo.
 
 {% alert important %}
-Para una correcta orientación del mensaje, asegúrate de que el tipo de datos de tu atributo personalizado coincide con el atributo personalizado real.
+Para una correcta orientación del mensaje, asegúrate de que el tipo de datos de tu atributo personalizado coincide con el atributo personalizado real. <br><br>Por ejemplo, si`newsletter_subscribed`  se define como una cadena, la sintaxis Liquid debería tener el siguiente aspecto{% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == 'true' %}```{% endraw %}: . Si`newsletter_subscribed`se define como un booleano, la sintaxis Liquid no debe incluir comillas simples: {% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == true %}```{% endraw %}.
 {% endalert %}
 
 Desde esta página, puedes ver, gestionar, crear o bloquear atributos personalizados existentes. Seleccione el menú situado junto a un atributo personalizado para realizar las siguientes acciones:
@@ -62,9 +62,9 @@ Puedes ver hasta 100 informes de uso a la vez seleccionando las casillas de veri
 
 ### Pestaña Valores
 
-Cuando visualices un informe de uso, selecciona la pestaña **Valores** para ver los valores más altos de los atributos personalizados seleccionados, basados en una muestra de aproximadamente 250.000 usuarios. Ten en cuenta que, como los resultados se extraen de un subconjunto de usuarios, la muestra no incluirá todos los valores existentes. Esto significa que la pestaña **Valores** no debe utilizarse para la solución de problemas ni para casos de uso que requieran incorporar datos de todos los usuarios.
+Al ver un informe de uso, selecciona la pestaña **Valores** para ver los valores principales de los atributos personalizados seleccionados basados en una muestra de aproximadamente 250 000 usuarios. Ten en cuenta que, dado que los resultados se obtienen a partir de una muestra de usuarios, la muestra no incluirá todos los valores existentes. Esto significa que la pestaña **Valores** no debe utilizarse para la solución de problemas ni para casos de uso que requieran incorporar datos de todos los usuarios.
 
-![Informe de uso de atributos personalizados seleccionados con una pestaña abierta "Valores" que muestra un gráfico circular de valores de atributos de países, como "EE.UU." y "RP".]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
+![Informe de uso de atributos personalizados seleccionados con la pestaña «Valores» abierta, que muestra un gráfico circular con los valores de los atributos de país, como «EE. UU.» y «PR».]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
 
 ## Establecer atributos personalizados
 
@@ -158,7 +158,7 @@ Tenga en cuenta que si introduce valores con espacios entre, antes o después de
 | Comprueba si el atributo string **no coincide parcialmente con ninguna** de las cadenas introducidas | **NO CONTIENE** | **CADENA**<br>Distingue entre mayúsculas y minúsculas; admite varias cadenas (256 como máximo) | Si este filtro especifica `gold` y un perfil de usuario no contiene `gold` en ninguna cadena, el usuario coincidirá con este filtro.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-{% include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
+{% multi_lang_include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
 
 {% alert important %}
 Al segmentar utilizando el filtro **DOES NOT MATCH REGEX**, debe tener ya un atributo personalizado con un valor asignado en ese perfil de usuario. Braze sugiere utilizar la lógica "OR" para comprobar si un atributo personalizado está en blanco para asegurarse de que los usuarios están siendo dirigidos correctamente.
@@ -168,9 +168,9 @@ Al segmentar utilizando el filtro **DOES NOT MATCH REGEX**, debe tener ya un atr
 
 Los atributos de matriz son buenos para almacenar listas relacionadas de información sobre sus usuarios. Por ejemplo, almacenar en una matriz los últimos 100 contenidos vistos por un usuario permitiría segmentar por intereses específicos.
 
-Las matrices tienen un tamaño máximo de 100 KB. La longitud predeterminada de un atributo es de hasta 500 elementos. Por ejemplo, si envías un atributo como "Películas vistas" y está establecido en 500, cuando un usuario vea la película 501, se eliminará la primera película de la matriz y se añadirá la película más reciente. 
+Las matrices tienen un tamaño máximo de 100 KB. La longitud predeterminada de un atributo es de hasta 500 elementos. Por ejemplo, si envías un atributo como «Películas vistas» y está configurado en 500, cuando un usuario vea la película número 501, la primera película se eliminará de la matriz y se añadirá la película más reciente. 
 
-Ten en cuenta que si introduces algún valor con espacios entre, antes o después de las palabras, Braze también comprobará si existen los mismos espacios.
+Nota: si introduces valores con espacios entre, antes o después de las palabras, Braze también comprobará si hay los mismos espacios.
 
 {% alert note %}
 La opción de aumentar la longitud máxima no estará disponible si el atributo está configurado para detectar automáticamente el tipo de datos; el tipo de datos debe estar configurado como array.

@@ -26,7 +26,7 @@ There are two changes required when integrating with Smart TVs:
 
 ## Analytics
 
-All of the same Web SDK methods for analytics can be used on Smart TVs. For a a full-walkthrough for tracking custom events, custom attributes, and more, see [Analytics]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web).
+All of the same Web SDK methods for analytics can be used on Smart TVs. For a full walkthrough for tracking custom events, custom attributes, and more, see [Analytics]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web).
 
 ## In-app messages and Content Cards
 

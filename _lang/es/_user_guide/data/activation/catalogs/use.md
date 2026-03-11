@@ -1,11 +1,11 @@
 ---
-nav_title: Utilizar catálogos
-article_title: Utiliza los catálogos
+nav_title: Uso de catálogos
+article_title: Usar catálogos
 page_order: 1.5
 description: "En este artículo de referencia se explica cómo utilizar catálogos para hacer referencia a datos de no usuarios en sus campañas Braze a través de Liquid."
 ---
 
-# Utilizar catálogos
+# Uso de catálogos
 
 > Después de crear un catálogo, puede hacer referencia a datos de no usuarios en sus campañas Braze a través de [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). Puede utilizar catálogos en todos sus canales de mensajería, incluso en cualquier parte del editor de arrastrar y soltar donde se admita Liquid.
 
@@ -13,7 +13,7 @@ description: "En este artículo de referencia se explica cómo utilizar catálog
 
 ### Paso 1: Añadir tipo de personalización {#step-one-personalization}
 
-En el creador de mensajes de tu elección, selecciona el icono más <i class="fas fa-plus-circle"></i> para abrir el modal **Añadir personalización** y selecciona **Elementos del catálogo** para el **tipo de personalización**. A continuación, selecciona el nombre de tu catálogo. Utilizando nuestro ejemplo anterior, seleccionaremos el catálogo "Juegos".
+En el creador de mensajes que elijas, selecciona el icono<i class="fas fa-plus-circle"></i> más para abrir el modal **Añadir personalización** y selecciona **Elementos del catálogo** como **tipo** de **personalización**. A continuación, selecciona el nombre de tu catálogo. Utilizando nuestro ejemplo anterior, seleccionaremos el catálogo "Juegos".
 
 ![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
 
@@ -43,12 +43,12 @@ Esto se traduce en lo siguiente:
 
 > ¡Consigue Tales por solo 7,49!
 
-## Exportar catálogos
+## Exportación de catálogos
 
 Hay dos formas de exportar catálogos desde el panel: 
 
-- Pasa el ratón por encima de la fila del catálogo en la sección **Catálogos**. A continuación, selecciona el botón **Exportar catálogo**.
-- Selecciona tu catálogo. A continuación, selecciona el botón **Exportar catálogo** en la pestaña **Vista previa** del catálogo.
+- Coloca el cursor sobre la fila del catálogo en la sección **Catálogos**. A continuación, selecciona el botón **Exportar catálogo**.
+- Selecciona tu catálogo. A continuación, selecciona el botón **Exportar catálogo** en la pestaña **de vista previa** del catálogo.
 
 Recibirás un correo electrónico para descargar el archivo CSV después de iniciar la exportación. Tendrás hasta cuatro horas para recuperar este archivo.
 
@@ -56,7 +56,7 @@ Recibirás un correo electrónico para descargar el archivo CSV después de inic
 
 ### Varios artículos
 
-No estás limitado a un solo elemento en un mensaje. Utiliza el modal **Añadir personalización** para añadir hasta tres elementos del catálogo a la vez. Para añadir más, vuelve a seleccionar **Añadir personalización** en el compositor y selecciona los elementos adicionales del catálogo y la información que quieres mostrar.
+No estás limitado a un solo elemento por mensaje. Utiliza el modal **Añadir personalización** para añadir hasta tres artículos del catálogo a la vez. Para añadir más, selecciona de nuevo **Añadir personalización** en el compositor y selecciona los elementos adicionales del catálogo y la información que deseas mostrar.
 
 Eche un vistazo a este ejemplo en el que añadimos `id` de tres juegos, Tales, Teslagrad y Acaratus, para **Catalog Items** y seleccionamos `title` para **Information to Display**.
 
@@ -66,7 +66,7 @@ Podemos personalizar aún más nuestro mensaje añadiendo algún texto alrededor
 
 {% raw %}
 ```liquid
-Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
+Get the ultimate trio {% catalog_items Games 1234 1235 1236 %}
 {{ items[0].title }}, {{ items[1].title }}, and {{ items[2].title }} today!
 ```
 {% endraw %}
@@ -90,15 +90,15 @@ Para ello, utilizarás una declaración Liquid `if`, como en este ejemplo:
 {% catalog_selection_items item-list selections %} 
 {% if items[0].venue_name.size > 10 %}
 Message if the venue name's size is more than 10 characters. 
-{% elsif items[0].venue_name.size < 10 %}
-Message if the venue name's size is less than 10 characters. 
+{% elsif items[0].venue_name.size <= 10 %}
+Message if the venue name's size is 10 characters or fewer. 
 {% else %} 
-{% abort_message(no venue_name) %} 
+{% abort_message('no venue_name') %} 
 {% endif %}
 ```
 {% endraw %}
 
-En este ejemplo, se mostrarán mensajes diferentes si el atributo personalizado `venue_name` tiene más de 10 caracteres o menos de 10 caracteres. Si `venue_name` es `blank`, no se mostrará nada. 
+En este ejemplo, se muestran diferentes mensajes en función del número de caracteres del campo del artículo `venue_name`del catálogo. Si`venue_name`  está en blanco, el mensaje se cancela.
 
 Ten en cuenta que debes declarar la lista de catálogos y, si procede, la selección antes de utilizar las declaraciones `if`. En el ejemplo, `item-list` es la lista del catálogo, y `selections` es el nombre de la selección.
 
@@ -141,7 +141,7 @@ También puede utilizar plantillas para extraer dinámicamente elementos del cat
 Los objetos JSON de los catálogos sólo se ingieren a través de la API. No puedes subir un objeto JSON utilizando un archivo CSV.
 {% endalert %}
 
-Utilizando la plantilla Liquid, puede extraer dinámicamente los ID de la lista de deseos y utilizarlos en su mensaje. Para ello, [asigna una variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) a tu atributo personalizado y, a continuación, utiliza el modal **Añadir personalización** para extraer un elemento concreto de la matriz. Las variables a las que se hace referencia como ID del artículo del catálogo deben ir entre llaves para que se haga referencia a ellas correctamente, como `{{result}}`.
+Utilizando la plantilla Liquid, puede extraer dinámicamente los ID de la lista de deseos y utilizarlos en su mensaje. Para ello, [asigna una variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) a tu atributo personalizado y, a continuación, utiliza el modal **Añadir personalización** para extraer un elemento específico de la matriz. Las variables a las que se hace referencia como ID de artículo del catálogo deben escribirse entre llaves para que se puedan consultar correctamente, como por ejemplo `{{result}}`.
 
 {% alert tip %}
 Recuerda que las matrices empiezan en `0`, no en `1`.
@@ -159,7 +159,7 @@ Get {{ items[0].title }} now for {{ items[0].price }}!
 {% endraw %}
 
 Que se mostrará de la siguiente manera:
-> ¡Consigue ahora Tales por sólo 7,49!
+> ¡Consigue Tales ahora por solo 7,49!
 
 Con las plantillas, puede generar un elemento de catálogo diferente para cada usuario en función de sus atributos personalizados, propiedades de eventos o cualquier otro campo que se pueda planificar.
 
@@ -169,7 +169,7 @@ Puede cargar un CSV de nuevos elementos de catálogo para añadir o elementos de
 
 ### Utilizar Liquid
 
-También puedes crear catálogos manualmente con la lógica de Liquid. Sin embargo, tenga en cuenta que si escribe un ID que no existe, Braze seguirá devolviendo una matriz de elementos sin objetos. Le recomendamos que incluya la gestión de errores, como la comprobación del tamaño de la matriz y el uso de una sentencia `if` para tener en cuenta un caso de matriz vacía.
+También puedes crear catálogos manualmente con Liquid Logic. Sin embargo, tenga en cuenta que si escribe un ID que no existe, Braze seguirá devolviendo una matriz de elementos sin objetos. Le recomendamos que incluya la gestión de errores, como la comprobación del tamaño de la matriz y el uso de una sentencia `if` para tener en cuenta un caso de matriz vacía.
 
 #### Elementos del catálogo de plantillas, incluido Liquid
 
@@ -185,7 +185,7 @@ Para representar el siguiente contenido Liquid:
 
 {% raw %}
 ```liquid
-Hi ${first_name}
+Hi ${first_name},
 
 {% catalog_items Messages greet_msg :rerender %}
 {{ items[0].Welcome_Message }}

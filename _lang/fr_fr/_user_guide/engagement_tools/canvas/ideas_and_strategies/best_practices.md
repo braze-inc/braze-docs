@@ -26,7 +26,7 @@ Débloquez de nouvelles combinaisons de parcours utilisateurs grâce aux [compos
 - Ajoutez des [messages autonomes]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) où vous le souhaitez dans votre flux Canvas.
 
 {% alert note %}
-Les étapes du canvas ne peuvent faire avancer les utilisateurs que dans le flux. Vous ne pouvez pas configurer un canvas pour qu'il relie une étape à une étape précédente, car cela renverrait les utilisateurs en arrière. Cette validation garantit que les utilisateurs progressent dans une seule direction à travers votre Canvas.
+Les étapes du canvas permettent uniquement aux utilisateurs d'avancer dans le flux. Il n'est pas possible de configurer un canvas pour relier une étape à une étape précédente, car cela renverrait les utilisateurs en arrière. Cette validation garantit que les utilisateurs progressent dans une seule direction à travers votre canvas.
 {% endalert %}
 
 ## Créer des messages enrichis

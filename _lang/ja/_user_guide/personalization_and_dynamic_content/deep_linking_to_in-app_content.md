@@ -8,6 +8,10 @@ description: "この記事では、アプリ内メッセージのコンテンツ
 
 # アプリ内コンテンツへのディープリンク
 
+{% alert tip %}
+**開発者向け：**カスタムスキーム、ユニバーサルリンク、その他のオプションの選択方法に関するガイド（AASAファイルが必要な場合、実装すべきアプリデリゲートメソッド、問題のデバッグ方法を含む）については、[iOSディープリンクガイド]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide)と[ディープリンクのトラブルシューティングを]({{site.baseurl}}/developer_guide/push_notifications/deep_linking_troubleshooting)参照せよ。
+{% endalert %}
+
 ## ディープリンクとは何か？
 
 ディープリンクは、ネイティブアプリを起動し、特定のアクションを実行したり、特定のコンテンツを表示したりするように指示する追加情報を提供する方法です。
@@ -23,7 +27,7 @@ description: "この記事では、アプリ内メッセージのコンテンツ
 ディープリンク内のコロン以降はすべて自由形式のテキストである。構造と解釈を定義するのはユーザー次第です。ただし、一般的な規則として、`http:` URL の後に、先頭の`//` とクエリパラメータ(たとえば、`?foo=1&bar=2`) を含めてモデル化することがあります。先ほどの例では、`twitter://user?screen_name=[id]` 、アプリ内の特定のプロフィールを起動するために使われる。
 
 {% alert important %}
-Braze では、Flutter のようなラッパーを使ってディープリンクを送信することはサポートされません。この機能を使用するには、ネイティブレイヤでディープリンクを設定する必要があります。
+ラッパーフレームワーク（Flutter や Cordova など）で構築されたアプリについては、Braze はラッパー固有のディープリンクサポートを提供しない。ネイティブのiOSおよびAndroidレイヤーでディープリンクを設定しなければならない。Cordovaについては、[プッシュ通知のディープリンクを]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=cordova)参照のこと。
 {% endalert %}
 
 ## UTMタグとキャンペーンのアトリビューション

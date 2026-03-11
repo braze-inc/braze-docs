@@ -16,7 +16,7 @@ noindex: true
 
 Das Braze iOS SDK unterstützt die standardmäßigen Push-Kategorien, einschließlich URLs für jeden Push-Action-Button. Die Standard-Kategorien verfügen derzeit über vier Sets von Push-Action-Buttons: `Accept`/`Decline`, `Yes`/`No`, `Confirm`/`Cancel`, und `More`. 
 
-![Ein GIF einer Push Nachricht, die nach unten gezogen wird, um zwei anpassbare Aktions-Buttons anzuzeigen.]({% image_buster /assets/img_archive/iOS8Action.gif %})
+![Ein GIF, das eine Push-Nachricht zeigt, die nach unten gezogen wird, um zwei anpassbare Aktions-Buttons anzuzeigen.]({% image_buster /assets/img_archive/iOS8Action.gif %})
 
 Um unsere Standard-Push-Kategorien zu registrieren, folgen Sie den Anweisungen zur Integration:
 
@@ -122,6 +122,6 @@ Wenn Sie nicht das `UserNotifications`-Framework verwenden, lesen Sie die Dokume
 
 Diese Kategorien können dann über unser Dashboard Push-Benachrichtigungen zugewiesen werden, um die Aktion-Button-Konfigurationen Ihres Designs zu triggern. Hier ist ein Beispiel, das die `LIKE_CATEGORY` nutzt, die auf dem Gerät angezeigt wird:
 
-![Eine Push-Nachricht mit zwei Push-Action-Buttons "unlike" und "like".]({% image_buster /assets/img_archive/push_example_category.png %})
+![Eine Push-Nachricht, die zwei Push-Action-Buttons „Gefällt mir nicht“ und „Gefällt mir“ anzeigt.]({% image_buster /assets/img_archive/push_example_category.png %})
 
 

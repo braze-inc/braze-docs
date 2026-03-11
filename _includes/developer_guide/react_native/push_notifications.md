@@ -146,6 +146,39 @@ If you're using the [Braze Expo plugin]({{site.baseurl}}/developer_guide/platfor
 
 To handle deep links manually instead, refer to the native Android documentation: [Adding deep links]({{site.baseurl}}/developer_guide/push_notifications/deep_linking).
 
+#### Step 3.1: Store the push notification payload on app launch
+
+{% alert note %}
+This is supported as of React Native SDK 19.1.0.
+{% endalert %}
+
+Add `populateInitialPushPayloadFromIntent` to your main activity's `onCreate()` method. This must be called before React Native initializes to capture the initial Intent data. For example:
+
+```kotlin
+override fun onCreate(savedInstanceState: Bundle?) {
+  BrazeReactUtils.populateInitialPushPayloadFromIntent(intent)
+  super.onCreate(savedInstanceState)
+}
+```
+
+#### Step 3.2: Handle deep links from a closed state
+
+In addition to the base scenarios handled by [React Native Linking](https://reactnative.dev/docs/linking), implement the `Braze.getInitialPushPayload` method and retrieve the `url` value to account for deep links from push notifications that open your app when it isn't running. For example:
+
+```javascript
+// Handles deep links when an app is launched from a hard close via push click.
+Braze.getInitialPushPayload(pushPayload => {
+  if (pushPayload) {
+    console.log('Braze.getInitialPushPayload is ' + pushPayload);
+    showToast('Initial URL is ' + pushPayload.url);
+    handleOpenUrl({ pushPayload.url });
+  }
+});
+```
+{% alert note %}
+This method requires the native setup in Step 3.1 for your platform. If you're using the Braze Expo plugin, this may be handled automatically.
+{% endalert %}
+
 {% endtab %}
 {% tab iOS Native %}
 #### Step 3.1: Store the push notification payload on app launch
@@ -155,11 +188,12 @@ Skip step 3.1 if you're using the Braze Expo plugin, as this is functionality is
 
 For iOS, add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `didFinishLaunchingWithOptions` method. For example:
 
+{% subtabs local %}
+{% subtab Objective-C %}
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  self.moduleName = @"BrazeProject";
-  self.initialProps = @{};
+  // ... Perform regular React Native setup
 
   BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:apiKey endpoint:endpoint];
   configuration.triggerMinimumTimeInterval = 1;
@@ -173,14 +207,35 @@ For iOS, add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `di
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 ```
+{% endsubtab %}
+{% subtab Swift %}
+```swift
+func application(
+  _ application: UIApplication,
+  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+) -> Bool {
+  // ... Perform regular React Native setup
+
+  let configuration = Braze.Configuration(apiKey: apiKey, endpoint: endpoint)
+  configuration.triggerMinimumTimeInterval = 1
+  configuration.logger.level = .info
+  let braze = BrazeReactBridge.initBraze(configuration)
+  AppDelegate.braze = braze
+  registerForPushNotifications()
+  BrazeReactUtils.shared().populateInitialPayload(fromLaunchOptions: launchOptions)
+
+  return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 
 #### Step 3.2: Handle deep links from a closed state
 
 In addition to the base scenarios handled by [React Native Linking](https://reactnative.dev/docs/linking), implement the `Braze.getInitialPushPayload` method and retrieve the `url` value to account for deep links from push notifications that open your app when it isn't running. For example:
 
 ```javascript
-// Handles deep links when an iOS app is launched from a hard close via push click.
-// This edge case is not handled in the React Native Linking library and is provided as a workaround by Braze.
+// Handles deep links when an app is launched from a hard close via push click.
 Braze.getInitialPushPayload(pushPayload => {
   if (pushPayload) {
     console.log('Braze.getInitialPushPayload is ' + pushPayload);
@@ -190,12 +245,74 @@ Braze.getInitialPushPayload(pushPayload => {
 });
 ```
 {% alert note %}
-Braze provides this workaround since React Native's Linking API does not support this scenario due to a race condition on app startup.
+This method requires the native setup in Step 3.1 for your platform. If you're using the Braze Expo plugin, this may be handled automatically.
 {% endalert %}
 
-#### Step 3.3 Enable Universal Links (optional)
+#### Step 3.3: Enable Universal Links (optional)
 
-To enable [universal linking]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=swift#universal-links) support, create a `BrazeReactDelegate.h` file in your `iOS` directory and then add the following code snippet.
+To enable [universal linking]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=swift#universal-links) support, implement a Braze delegate that determines whether to open a given URL, then register it with your Braze instance.
+
+{% subtabs local %}
+{% subtab Swift %}
+Create a `BrazeReactDelegate.swift` file in your `iOS` directory and add the following. Replace `YOUR_DOMAIN_HOST` with your actual domain.
+
+```swift
+import Foundation
+import BrazeKit
+import UIKit
+
+class BrazeReactDelegate: NSObject, BrazeDelegate {
+
+  /// This delegate method determines whether to open a given URL.
+  /// Reference the context to get additional details about the URL payload.
+  func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
+    if let host = context.url.host,
+       host.caseInsensitiveCompare("YOUR_DOMAIN_HOST") == .orderedSame {
+      // Sample custom handling of universal links
+      let application = UIApplication.shared
+      let userActivity = NSUserActivity(activityType: NSUserActivityTypeBrowsingWeb)
+      userActivity.webpageURL = context.url
+      // Routes to the `continueUserActivity` method, which should be handled in your AppDelegate.
+      application.delegate?.application?(
+        application,
+        continue: userActivity,
+        restorationHandler: { _ in }
+      )
+      return false
+    }
+    // Let Braze handle links otherwise
+    return true
+  }
+}
+```
+
+Then, create and register your `BrazeReactDelegate` in `didFinishLaunchingWithOptions` of your project's `AppDelegate.swift` file.
+
+```swift
+import BrazeKit
+
+class AppDelegate: UIResponder, UIApplicationDelegate {
+  
+  static var braze: Braze?
+  
+  // Keep a strong reference to the BrazeDelegate so it is not deallocated.
+  private var brazeDelegate: BrazeReactDelegate?
+  
+  func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+  ) -> Bool {
+    // Other setup code (e.g., Braze initialization)
+    
+    brazeDelegate = BrazeReactDelegate()
+    AppDelegate.braze?.delegate = brazeDelegate
+    return true
+  }
+}
+```
+{% endsubtab %}
+{% subtab Objective-C %}
+Create a `BrazeReactDelegate.h` file in your `iOS` directory and then add the following code snippet.
 
 ```objc
 #import <Foundation/Foundation.h>
@@ -256,6 +373,8 @@ Then, create and register your `BrazeReactDelegate` in `didFinishLaunchingWithOp
   braze.delegate = self.brazeDelegate;
 }
 ```
+{% endsubtab %}
+{% endsubtabs %}
 
 For an example integration, reference our sample app [here](https://github.com/braze-inc/braze-react-native-sdk/blob/master/BrazeProject/ios/BrazeProject/AppDelegate.mm).
 {% endtab %}

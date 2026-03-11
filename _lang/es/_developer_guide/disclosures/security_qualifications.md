@@ -23,7 +23,7 @@ Para saber más sobre esto, ¡consulta [Braze Perspectives](https://www.braze.co
 
 ![Gráfico de certificación ISO]({% image_buster /assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png %}){: height="25%" width="25%" style="border:0px;"}
 
-_Braze tiene certificado de conformidad con la [norma ISO 27001](https://www.iso.org/standard/27001) desde el 18 de diciembre de 2018, y renovado desde el 29 de agosto de 2025. Expira el 15 de diciembre de 2027._
+_Braze cuenta con el certificado de cumplimiento de [la norma ISO 27001](https://www.iso.org/standard/27001) desde el 18 de diciembre de 2018, renovado hasta el 29 de agosto de 2025. Expira el 15 de diciembre de 2027._
 
 Cualquier tercero que desee verificar de forma independiente el estado del certificado de Braze puede consultar el [directorio de certificados de Schellman](https://www.schellman.com/certificate-directory?certificateNumber=1504855-9) o [ver nuestro certificado aquí]({{site.baseurl}}/assets/pdf/Braze_ISO_Cert.pdf).
 
@@ -33,18 +33,18 @@ Cualquier tercero que desee verificar de forma independiente el estado del certi
 
 _Última fecha/periodo de revisión: Del 1 de julio de 2024 al 30 de junio de 2025_
 
-Braze ha superado con éxito el examen SOC 2 de Tipo 2 de _Seguridad_ y _Disponibilidad_, realizado por la empresa independiente de auditoría [Schellman & Company, LLC](https://www.schellman.com/).
+Braze ha superado con éxito la auditoría SOC 2 de tipo 2 en materia de _seguridad_ y _disponibilidad_, realizada por la empresa independiente de contabilidad pública [Schellman&Company, LLC](https://www.schellman.com/).
 
 ## Evaluación TISAX
 
 ![Gráfico TISAX.]({% image_buster /assets/img/tisax.png %}){: height="25%" width="25%" style="border:0px;"}
 
-Braze se compromete a mantener los más altos niveles de seguridad de la información y protección de datos y ha completado con éxito una Evaluación TISAX de Nivel 3 (AL3). Estos resultados de evaluación y la emisión de las etiquetas correspondientes reflejan nuestra dedicación a mantener el máximo nivel de garantía de seguridad de la información y protección de datos. Los participantes actuales de TISAX pueden verificar nuestros resultados de evaluación para los siguientes objetivos de evaluación y ubicación a través del portal de la Asociación ENX utilizando las siguientes credenciales:
+Braze se compromete a mantener los más altos estándares de seguridad de la información y protección de datos, y ha completado con éxito una evaluación TISAX de nivel 3 (AL3). Los resultados de estas evaluaciones y la concesión de las correspondientes etiquetas reflejan vuestro compromiso con el mantenimiento del más alto nivel de seguridad de la información y garantía de protección de datos. Los participantes actuales en TISAX pueden verificar los resultados de nuestra evaluación para los siguientes objetivos y ubicación a través del portal de la Asociación ENX utilizando las siguientes credenciales:
 
 - **Nombre de la empresa:** Braze
-- **ID de alcance:** SNCM4K
-- **ID de evaluación:** AMH9TZ-1
-- **Objetivos de la evaluación:** \* Protección de datos según el RGPD Art. 28 ("Procesador")
+- **Identificador de ámbito:** SNCM4K
+- **Identificación de la evaluación: ID** AMH9TZ-1
+- **Objetivos de la evaluación:** \* Protección de datos según el artículo del RGPD de la UE. 28 («Procesador»)
     - Protección de datos con categorías especiales de datos personales
     - Alta disponibilidad
     - Muy alta disponibilidad

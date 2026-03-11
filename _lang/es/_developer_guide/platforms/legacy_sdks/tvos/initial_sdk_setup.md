@@ -34,7 +34,7 @@ $ sudo gem install cocoapods
 ```
 
 - Si se te pide que sobrescribas el ejecutable `rake`, consulta [Introducción](http://guides.cocoapods.org/using/getting-started.html) en CocoaPods.org para más detalles.
-- Si tienes problemas relacionados con [CocoaPods](http://guides.cocoapods.org/using/troubleshooting.html), consulta la [guía de solución de problemas de CocoaPods](http://guides.cocoapods.org/using/troubleshooting.html).
+- Si tienes problemas con CocoaPods, consulta la [guía de solución de problemas](http://guides.cocoapods.org/using/troubleshooting.html) de [CocoaPods](http://guides.cocoapods.org/using/troubleshooting.html).
 
 ### Paso 2: Construir el archivo de bibliotecas
 

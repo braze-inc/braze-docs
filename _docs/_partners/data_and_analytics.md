@@ -139,6 +139,8 @@ valid_partner_list:
   url: /docs/partners/wyng/
 - name: Antavo
   url: /docs/partners/antavo/
+- name: Talon.One
+  url: /docs/partners/talonone/
 - name: FriendBuy
   url: /docs/partners/friendbuy/
 - name: Kognitiv Inspire

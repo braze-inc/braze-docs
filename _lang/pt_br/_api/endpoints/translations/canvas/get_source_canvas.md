@@ -1,25 +1,23 @@
 ---
-nav_title: "OBTER: Veja os valores de origem padrão para as tags de tradução do Canvas"
-article_title: "OBTER: Veja os valores de origem padrão para as tags de tradução do Canvas"
+nav_title: "OBTER: Veja os valores de origem padrão para as tags de tradução do canva"
+article_title: "OBTER: Veja os valores de origem padrão para as tags de tradução do canva"
 search_tag: Endpoint
 page_order: 3
 
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o endpoint de origem de tradução do Canvas."
+description: "Este artigo descreve detalhes sobre o endpoint de origem de tradução do canva."
 ---
 
 {% api %}
-# Veja os valores de origem padrão para as tags de tradução de um canvas
+# Veja os valores de origem padrão para as tags de tradução de um canva
 {% apimethod get %}
-/canvas/translations/source
+/canva/traduções/origem
 {% endapimethod %}
 
-> Use este endpoint para ver todas as fontes de tradução padrão para as tags de tradução de um canvas. Estes são os valores com o {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}. Veja [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para mais informações sobre recursos de tradução.
+> Use este endpoint para ver todas as fontes de tradução padrão para as tags de tradução de um canva. Estes são os valores com o {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}. Veja [Locais em mensagens]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para saber mais sobre os recursos de tradução.
 
-{% alert important %}
-Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Pré-requisitos
 
@@ -33,11 +31,11 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 | Parâmetro              | Obrigatória | Tipo de dados | Descrição                        |
 |------------------------|----------|-----------|------------------------------------|
-| `workflow_id`          | Obrigatória | String    | O ID do Canvas.              |
+| `workflow_id`          | Obrigatória | String    | O ID do canva.              |
 | `step_id`              | Obrigatória | String    | O ID de sua etapa do canva.        |
 |`message_variation_id`| Obrigatória | String | O ID da sua variação de mensagem. |
 | `locale_id`            | Opcional | String    | O ID (UUID) do local.              |
-| `post_launch_draft_version`| Opcional | Booleano | Quando `true` retorna a versão mais recente do rascunho em vez da versão publicada mais recente. Padrão para `false` retornando a versão ao vivo mais recente.
+| `post_launch_draft_version`| Opcional | Booleano | Quando `true` retorna a versão mais recente do rascunho em vez da versão publicada mais recente. Padrão para `false` retornando a versão publicada mais recente.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}

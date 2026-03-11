@@ -10,20 +10,20 @@ platform:
   
 ---
 
-# Configurar la autenticación SDK
+# Configurar la autenticación del SDK
 
 > La Autenticación del SDK te permite proporcionar una prueba criptográfica (generada en el servidor) a las solicitudes del SDK realizadas en nombre de usuarios que han iniciado sesión.
 
 ## Cómo funciona
 
-Después de habilitar esta característica en tu aplicación, puedes configurar el panel de Braze para que rechace cualquier solicitud con un JSON Web Token (JWT) no válido o que falte, lo que incluye:
+Después de habilitar esta característica en tu aplicación, puedes configurar el panel de Braze para que rechace cualquier solicitud con un token web JSON (JWT) no válido o que falte, lo que incluye:
 
 - Envío de eventos personalizados, atributos, compras y datos de sesión
 - Crear nuevos usuarios en tu espacio de trabajo Braze
 - Actualización de los atributos estándar del perfil de usuario
 - Recibir o desencadenar mensajes
 
-Ahora puedes evitar que usuarios no autenticados que hayan iniciado sesión utilicen la clave de API de SDK de tu aplicación para realizar acciones maliciosas, como suplantar la identidad de otros usuarios.
+Ahora puedes evitar que los usuarios que hayan iniciado sesión sin autenticarse utilicen la clave de API de SDK de tu aplicación para realizar acciones maliciosas, como la suplantación de identidad.
 
 ## Configuración de la autenticación
 
@@ -71,7 +71,7 @@ Para saber más sobre los tokens Web JSON, o para echar un vistazo a las muchas 
 
 ### Paso 2: Configura el SDK {#sdk-integration}
 
-Esta característica está disponible a partir de las siguientes [versiones del SDK]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
+Esta característica está disponible en las siguientes versiones del ]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)SDK:
 
 {% sdk_min_versions swift:5.0.0 android:14.0.0 web:3.3.0 %}
 
@@ -99,7 +99,7 @@ braze.initialize("YOUR-API-KEY-HERE", {
 ```
 {% endtab %}
 {% tab React Native %}
-La Autenticación SDK debe habilitarse durante la inicialización del SDK nativo. Añade la siguiente configuración a tu código nativo de iOS y Android:
+La autenticación SDK debe estar habilitada durante la inicialización del SDK nativo. Añade la siguiente configuración a tu código nativo de iOS y Android:
 
 **iOS (AppDelegate.swift)**
 
@@ -124,10 +124,10 @@ let braze = BrazeReactBridge.perform(
 <bool name="com_braze_sdk_authentication_enabled">true</bool>
 ```
 
-Después de habilitar la Autenticación SDK en la capa nativa, puedes utilizar los métodos JavaScript de React Native que se muestran en los siguientes pasos.
+Después de habilitar la autenticación SDK en la capa nativa, puedes utilizar los métodos JavaScript de React Native que se muestran en los siguientes pasos.
 {% endtab %}
 {% tab Java %}
-Cuando configures la instancia de Braze, llama a `setIsSdkAuthenticationEnabled` a `true`.
+Al configurar la instancia de Braze, llama`setIsSdkAuthenticationEnabled`a  a `true`.
 ```java
 BrazeConfig.Builder brazeConfigBuilder = new BrazeConfig.Builder()
     .setIsSdkAuthenticationEnabled(true);
@@ -137,7 +137,7 @@ Braze.configure(this, brazeConfigBuilder.build());
 Alternativamente, puedes añadir `<bool name="com_braze_sdk_authentication_enabled">true</bool>` a tu braze.xml.
 {% endtab %}
 {% tab KOTLIN %}
-Cuando configures la instancia de Braze, llama a `setIsSdkAuthenticationEnabled` a `true`.
+Al configurar la instancia de Braze, llama`setIsSdkAuthenticationEnabled`a  a `true`.
 ```kotlin
 BrazeConfig.Builder brazeConfigBuilder = BrazeConfig.Builder()
     .setIsSdkAuthenticationEnabled(true)
@@ -173,11 +173,11 @@ AppDelegate.braze = braze
 Actualmente, la autenticación del SDK debe habilitarse como parte de la inicialización del SDK en el código nativo de iOS y Android. Para habilitar la Autenticación SDK en el SDK de Flutter, sigue las integraciones para iOS y Android desde las otras pestañas. Una vez habilitada la Autenticación SDK, el resto de la característica puede integrarse en Dart.
 {% endtab %}
 {% tab Flutter %}
-La autenticación del SDK debe habilitarse como parte de la inicialización del SDK en el código nativo de iOS y Android. Cuando se habilita en la capa nativa, puedes utilizar los métodos del SDK de Flutter para pasar la firma JWT.
+La autenticación del SDK debe estar habilitada como parte de la inicialización del SDK en el código nativo de iOS y Android. Cuando se habilita en la capa nativa, puedes utilizar los métodos del SDK de Flutter para pasar la firma JWT.
 
 **iOS**
 
-Para habilitar la Autenticación SDK, establece la propiedad `configuration.api.sdkAuthentication` en `true` en tu código nativo de iOS:
+Para habilitar la autenticación SDK, configura la`configuration.api.sdkAuthentication`propiedad en`true` tu código iOS nativo:
 
 ```swift
 let configuration = Braze.Configuration(apiKey: "{YOUR-BRAZE-API-KEY}", endpoint: "{YOUR-BRAZE-ENDPOINT}")
@@ -191,14 +191,14 @@ let braze = Braze(configuration: configuration)
 <bool name="com_braze_sdk_authentication_enabled">true</bool>
 ```
 
-Tras habilitar la Autenticación del SDK en la capa nativa, puedes utilizar los métodos del SDK de Flutter que se muestran en los siguientes pasos.
+Después de habilitar la autenticación SDK en la capa nativa, puedes utilizar los métodos SDK de Flutter que se muestran en los siguientes pasos.
 {% endtab %}
 {% tab Unity %}
-La Autenticación SDK debe habilitarse durante la inicialización del SDK nativo. Añade la siguiente configuración a tu código nativo de iOS y Android:
+La autenticación SDK debe estar habilitada durante la inicialización del SDK nativo. Añade la siguiente configuración a tu código nativo de iOS y Android:
 
 **iOS**
 
-Establece la propiedad `SDKAuthenticationEnabled` en `true` en tu archivo de configuración:
+Establece la`SDKAuthenticationEnabled`propiedad en`true` tu archivo de configuración:
 
 ```xml
 <key>SDKAuthenticationEnabled</key>
@@ -211,14 +211,14 @@ Establece la propiedad `SDKAuthenticationEnabled` en `true` en tu archivo de con
 <bool name="com_braze_sdk_authentication_enabled">true</bool>
 ```
 
-Después de habilitar la Autenticación SDK en la capa nativa, puedes utilizar los métodos de Unity C# que se muestran en los siguientes pasos.
+Después de habilitar la autenticación SDK en la capa nativa, puedes utilizar los métodos Unity C# que se muestran en los siguientes pasos.
 {% endtab %}
 {% tab Cordova %}
-La Autenticación SDK debe habilitarse durante la inicialización del SDK nativo. Añade la siguiente configuración a tu código nativo de iOS y Android:
+La autenticación SDK debe estar habilitada durante la inicialización del SDK nativo. Añade la siguiente configuración a tu código nativo de iOS y Android:
 
 **iOS**
 
-Para habilitar la autenticación SDK, establece la propiedad `enableSDKAuthentication` en `true` en tu página `config.xml`:
+Para habilitar la autenticación SDK, configura la`enableSDKAuthentication`propiedad en`true` tu `config.xml`:
 
 ```xml
 <preference name="com.braze.ios_enable_sdk_authentication" value="true" />
@@ -230,14 +230,14 @@ Para habilitar la autenticación SDK, establece la propiedad `enableSDKAuthentic
 <bool name="com_braze_sdk_authentication_enabled">true</bool>
 ```
 
-Tras habilitar la Autenticación SDK en la capa nativa, puedes utilizar los métodos JavaScript de Cordova que se muestran en los siguientes pasos.
+Después de la habilitación de la autenticación SDK en la capa nativa, puedes utilizar los métodos JavaScript de Cordova que se muestran en los siguientes pasos.
 {% endtab %}
 {% tab .NET MAUI (Xamarin) %}
-La Autenticación SDK debe habilitarse durante la inicialización del SDK nativo. Configura la Autenticación SDK por separado para iOS y Android:
+La autenticación SDK debe estar habilitada durante la inicialización del SDK nativo. Configura la autenticación del SDK por separado para iOS y Android:
 
 **iOS**
 
-Para habilitar la autenticación del SDK, establece la propiedad `configuration.Api.SdkAuthentication` en `true` al inicializar el SDK:
+Para habilitar la autenticación del SDK, configura la`configuration.Api.SdkAuthentication`propiedad en`true`al inicializar el SDK:
 
 ```csharp
 var configuration = new BRZConfiguration("YOUR-API-KEY", "YOUR-ENDPOINT");
@@ -251,10 +251,10 @@ var braze = new Braze(configuration);
 <bool name="com_braze_sdk_authentication_enabled">true</bool>
 ```
 
-Tras habilitar la Autenticación SDK, puedes utilizar los métodos MAUI .NET que se muestran en los siguientes pasos.
+Después de la habilitación de la autenticación SDK, puedes utilizar los métodos .NET MAUI que se muestran en los siguientes pasos.
 {% endtab %}
 {% tab Expo %}
-Cuando utilices el complemento Braze Expo, establece la propiedad `enableSdkAuthentication` en `true` en la configuración de tu aplicación. Esto configura automáticamente la Autenticación SDK en las capas nativas de iOS y Android sin requerir cambios manuales en el código nativo.
+Cuando utilices el complemento Braze Expo, configura la`enableSdkAuthentication`propiedad  en`true` la configuración de tu aplicación. Esto configura automáticamente la autenticación SDK en las capas nativas de iOS y Android sin necesidad de realizar cambios manuales en el código nativo.
 
 **app.json o app.config.js**
 
@@ -273,27 +273,27 @@ Cuando utilices el complemento Braze Expo, establece la propiedad `enableSdkAuth
 }
 ```
 
-Después de habilitar la Autenticación SDK en la configuración de tu aplicación, puedes utilizar los métodos JavaScript React Native que se muestran en la pestaña React Native para los siguientes pasos.
+Después de habilitar la autenticación SDK en la configuración de tu aplicación, puedes utilizar los métodos JavaScript de React Native que se muestran en la pestaña React Native para los siguientes pasos.
 
 {% alert note %}
-Para ver un ejemplo de implementación completo, consulta la [aplicación de muestra del complemento Braze Expo](https://github.com/braze-inc/braze-expo-plugin/blob/main/example/components/Braze.tsx) en GitHub.
+Para ver un ejemplo completo de implementación, consulta la [aplicación de ejemplo del complemento Braze Expo](https://github.com/braze-inc/braze-expo-plugin/blob/main/example/components/Braze.tsx) en GitHub.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
 
-#### Paso 2.2: Configura la JWT del usuario actual
+#### Paso 2.2: Establece el JWT del usuario actual.
 
-Siempre que tu aplicación llame al método Braze `changeUser`, proporciona también el JWT que se [generó en el servidor](#braze-dashboard).
+Cada vez que tu aplicación llame al método `changeUser`Braze, proporciona también el JWT que se [generó en el servidor](#braze-dashboard).
 
 También puedes configurar el token para que se actualice a mitad de sesión para el usuario actual.
 
 {% alert note %}
-Ten en cuenta que `changeUser` solo debe invocarse cuando el ID de usuario haya _cambiado realmente_. No debes utilizar este método para actualizar el token de autenticación (JWT) si el ID de usuario no ha cambiado.
+Ten en cuenta que `changeUser` solo debe invocarse cuando el ID de usuario haya _cambiado realmente_. No debes utilizar este método como forma de actualizar el token de autenticación (JWT) si el ID de usuario no ha cambiado.
 {% endalert %}
 
 {% tabs %}
 {% tab Web %}
-Proporciona el JWT cuando llames a [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser):
+Proporciona el JWT al llamar a[`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser):
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -309,7 +309,7 @@ braze.setSdkAuthenticationSignature("NEW-JWT-FROM-SERVER");
 {% endtab %}
 {% tab React Native %}
 
-Proporciona el JWT cuando llames a [`changeUser`](https://braze-inc.github.io/braze-react-native-sdk/classes/Braze.Braze-1.html#changeUser):
+Proporciona el JWT al llamar a[`changeUser`](https://braze-inc.github.io/braze-react-native-sdk/classes/Braze.Braze-1.html#changeUser):
 
 ```typescript
 import Braze from '@braze/react-native-sdk';
@@ -327,7 +327,7 @@ Braze.setSdkAuthenticationSignature("NEW-JWT-FROM-SERVER");
 {% endtab %}
 {% tab Java %}
 
-Proporciona el JWT cuando llames a [`changeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html):
+Proporciona el JWT al llamar a[`changeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html):
 
 ```java
 Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-FROM-SERVER");
@@ -341,7 +341,7 @@ Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-FROM-SERVER");
 {% endtab %}
 {% tab KOTLIN %}
 
-Proporciona el JWT cuando llames a [`changeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html):
+Proporciona el JWT al llamar a[`changeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html):
 
 ```kotlin
 Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-FROM-SERVER")
@@ -355,7 +355,7 @@ Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-FROM-SERVER")
 {% endtab %}
 {% tab Objective-C %}
 
-Proporciona el JWT cuando llames a [`changeUser`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)):
+Proporciona el JWT al llamar a[`changeUser`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)):
 
 ```objc
 [AppDelegate.braze changeUser:@"userId" sdkAuthSignature:@"JWT-FROM-SERVER"];
@@ -369,7 +369,7 @@ O, cuando hayas refrescado el token del usuario en mitad de la sesión:
 {% endtab %}
 {% tab Swift %}
 
-Proporciona el JWT cuando llames a [`changeUser`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)):
+Proporciona el JWT al llamar a[`changeUser`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)):
 
 ```swift
 AppDelegate.braze?.changeUser(userId: "userId", sdkAuthSignature: "JWT-FROM-SERVER")
@@ -382,7 +382,7 @@ AppDelegate.braze?.set(sdkAuthenticationSignature: "NEW-JWT-FROM-SERVER")
 {% endtab %}
 {% tab Dart %}
 
-Proporciona el JWT cuando llames a [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser):
+Proporciona el JWT al llamar a[`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser):
 
 ```dart
 braze.changeUser("userId", sdkAuthSignature: "JWT-FROM-SERVER")
@@ -396,7 +396,7 @@ braze.setSdkAuthenticationSignature("NEW-JWT-FROM-SERVER")
 {% endtab %}
 {% tab Flutter %}
 
-Proporciona el JWT cuando llames a `changeUser`:
+Proporciona el JWT al llamar a`changeUser`:
 
 ```dart
 import 'package:braze_plugin/braze_plugin.dart';
@@ -416,7 +416,7 @@ braze.setSdkAuthenticationSignature("NEW-JWT-FROM-SERVER");
 {% endtab %}
 {% tab Unity %}
 
-Proporciona el JWT cuando llames a `ChangeUser`:
+Proporciona el JWT al llamar a`ChangeUser`:
 
 ```csharp
 BrazeBinding.ChangeUser("NEW-USER-ID", "JWT-FROM-SERVER");
@@ -430,7 +430,7 @@ BrazeBinding.SetSdkAuthenticationSignature("NEW-JWT-FROM-SERVER");
 {% endtab %}
 {% tab Cordova %}
 
-Proporciona el JWT cuando llames a `changeUser`:
+Proporciona el JWT al llamar a`changeUser`:
 
 ```javascript
 BrazePlugin.changeUser("NEW-USER-ID", "JWT-FROM-SERVER");
@@ -444,7 +444,7 @@ BrazePlugin.setSdkAuthenticationSignature("NEW-JWT-FROM-SERVER");
 {% endtab %}
 {% tab .NET MAUI (Xamarin) %}
 
-Proporciona el JWT cuando llames a `ChangeUser`:
+Proporciona el JWT al llamar a`ChangeUser`:
 
 **iOS**
 
@@ -472,7 +472,7 @@ Braze.GetInstance(this).SetSdkAuthenticationSignature("NEW-JWT-FROM-SERVER");
 {% endtab %}
 {% tab Expo %}
 
-Cuando utilices el plugin Braze Expo, utiliza los mismos métodos del SDK de React Native. Proporciona el JWT cuando llames a `changeUser`:
+Cuando utilices el complemento Braze Expo, utiliza los mismos métodos del SDK de React Native. Proporciona el JWT al llamar a`changeUser`:
 
 ```typescript
 import Braze from '@braze/react-native-sdk';
@@ -497,11 +497,11 @@ Cuando esta característica se establece como [Requerido](#enforcement-options),
 - El JWT estaba vacío o faltaba
 - No se ha podido verificar JWT para las claves públicas que has cargado en el panel de Braze
 
-Puedes utilizar `subscribeToSdkAuthenticationFailures` para suscribirte y recibir una notificación cuando las solicitudes del SDK fallen por uno de estos motivos. Una función de devolución de llamada contiene un objeto con la información relevante [`errorCode`](#error-codes), `reason` para el error, el `userId` de la solicitud (el usuario no puede ser anónimo), y el token de autenticación (JWT) que causó el error. 
+Puedes utilizar `subscribeToSdkAuthenticationFailures` para suscribirte y recibir una notificación cuando las solicitudes del SDK fallen por uno de estos motivos. Una función de devolución de llamada contiene un objeto con la información relevante para el[`errorCode`](#error-codes) error`reason`, el`userId`de la solicitud (el usuario no puede ser anónimo) y el token de autenticación (JWT) que causó el error. 
 
 Las solicitudes fallidas se reintentarán periódicamente hasta que tu aplicación proporcione un nuevo JWT válido. Si ese usuario sigue conectado, puedes utilizar esta devolución de llamada como una oportunidad para solicitar un nuevo JWT a tu servidor y suministrar al SDK de Braze este nuevo token válido.
 
-Cuando recibas un error de autenticación, comprueba que el `userId` del error coincide con tu usuario conectado en ese momento, luego busca una nueva firma en tu servidor y proporciónala al SDK de Braze. También puedes registrar estos errores en tu servicio de supervisión o de notificación de errores.
+Cuando recibas un error de autenticación, comprueba que el`userId`  del error coincide con tu usuario actualmente conectado, luego obtén una nueva firma de tu servidor y proporciónala al SDK de Braze. También puedes registrar estos errores en tu servicio de supervisión o de notificación de errores.
 
 {% alert tip %}
 Estos métodos de devolución de llamada son un buen lugar para añadir tu propio servicio de seguimiento o registro de errores para controlar la frecuencia con la que se rechazan tus solicitudes Braze.
@@ -616,7 +616,7 @@ braze.setBrazeSdkAuthenticationErrorCallback((BrazeSdkAuthenticationError error)
 {% tab Unity %}
 **iOS**
 
-Establece el delegado de autenticación del SDK en tu implementación nativa de iOS:
+Configura el delegado de autenticación del SDK en tu implementación nativa de iOS:
 
 ```csharp
 public class SdkAuthDelegate : BRZSdkAuthDelegate
@@ -652,7 +652,7 @@ BrazePlugin.subscribeToSdkAuthenticationFailures((error) => {
 {% tab .NET MAUI (Xamarin) %}
 **iOS**
 
-Configura el delegado de autenticación SDK en tu instancia `Braze`:
+Configura el delegado de autenticación del SDK en tu`Braze`instancia:
 
 ```csharp
 public class SdkAuthDelegate : BRZSdkAuthDelegate
@@ -682,7 +682,7 @@ Braze.GetInstance(this).SubscribeToSdkAuthenticationFailures((error) => {
 ```
 {% endtab %}
 {% tab Expo %}
-Cuando utilices el plugin Braze Expo, utiliza los mismos métodos del SDK de React Native:
+Cuando utilices el complemento Braze Expo, utiliza los mismos métodos del SDK de React Native:
 
 ```typescript
 import Braze from '@braze/react-native-sdk';
@@ -703,9 +703,9 @@ const sdkAuthErrorSubscription = Braze.addListener(
 {% endtab %}
 {% endtabs %}
 
-### Paso 3: Habilitar la autenticación en el panel de control {#braze-dashboard}
+### Paso 3: Habilita la autenticación en el panel. {#braze-dashboard}
 
-A continuación, puedes habilitar la autenticación en el panel de Braze para las aplicaciones que configuraste anteriormente.
+A continuación, puedes habilitar la autenticación en el panel de Braze para las aplicaciones que hayas configurado anteriormente.
 
 Ten en cuenta que las solicitudes de SDK seguirán fluyendo como de costumbre sin autenticación, a menos que la configuración de Autenticación de SDK de la aplicación se establezca en **Obligatorio** en el panel de Braze.
 
@@ -726,7 +726,7 @@ En la página **Administrar configuración** del panel, cada aplicación tiene t
 
 La configuración **Opcional** es una forma útil de controlar el impacto potencial que esta característica tendrá en el tráfico SDK de tu aplicación.
 
-Un JWT inválido se notificará tanto en el estado **Opcional** como en el **Requerido**, sin embargo, sólo el estado **Requerido** rechazará las solicitudes SDK haciendo que las aplicaciones vuelvan a intentarlo y soliciten un nuevo JWT.
+Se notificará un JWT no válido tanto en estado **opcional** como **obligatorio**, sin embargo, solo el estado **obligatorio** rechazará las solicitudes del SDK, lo que provocará que las aplicaciones vuelvan a intentarlo y soliciten un nuevo JWT.
 
 ## Administrador de claves públicas {#key-management}
 
@@ -767,16 +767,16 @@ Los datos están disponibles en tiempo real, y puedes pasar el ratón por encima
 
 | Código de error| Motivo del error | Descripción | Pasos para resolver |
 | --------  | ------------ | ---------  | ---------  |
-| 10 | `EXPIRATION_REQUIRED` | La caducidad es un campo obligatorio para el uso de Braze.| Añade un campo `exp` o de caducidad a tu lógica de creación de JWT. |
-| 20 | `DECODING_ERROR` | Clave pública no coincidente o error general no detectado.| Copia tu JWT en una herramienta de comprobación de JWT para diagnosticar por qué tu JWT tiene un formato no válido. |
-| 21 | `SUBJECT_MISMATCH` | Los sujetos esperados y los reales no son los mismos.| El campo `sub` debe ser el mismo ID de usuario pasado al método SDK `changeUser`. |
-| 22 | `EXPIRED` | El token proporcionado ha caducado.| Amplía la caducidad o actualiza periódicamente los tokens antes de que caduquen. |
-| 23 | `INVALID_PAYLOAD` | La carga útil del token no es válida.| Copia tu JWT en una herramienta de comprobación de JWT para diagnosticar por qué tu JWT tiene un formato no válido. |
-| 24 | `INCORRECT_ALGORITHM` | No se admite el algoritmo del token.| Cambia tu JWT para que utilice el cifrado `RS256`. No se admiten otros tipos. |
-| 25 | `PUBLIC_KEY_ERROR` | No se ha podido convertir la clave pública al formato adecuado.| Copia tu JWT en una herramienta de comprobación de JWT para diagnosticar por qué tu JWT tiene un formato no válido. |
-| 26 | `MISSING_TOKEN` | No se ha proporcionado ningún token en la solicitud.| Asegúrate de que pasas un token al llamar a `changeUser(id, token)` y de que tu token no está vacío.|
-| 27 | `NO_MATCHING_PUBLIC_KEYS` | Ninguna clave pública coincide con el token proporcionado.| La clave privada utilizada en el JWT no coincide con ninguna clave pública configurada para tu aplicación. Confirma que has añadido las claves públicas a la aplicación correcta de tu espacio de trabajo que coincide con esta clave de API.|
-| 28 | `PAYLOAD_USER_ID_MISMATCH` | No todos los ID de usuario de la carga útil de la solicitud coinciden como es debido.| Esto es inesperado y puede dar lugar a una carga útil malformada. Abre un ticket de soporte para obtener ayuda. |
+| 10 | `EXPIRATION_REQUIRED` | La caducidad es un campo obligatorio para el uso de Braze.| Añade un `exp`campo  o de caducidad a tu lógica de creación de JWT. |
+| 20 | `DECODING_ERROR` | Clave pública no coincidente o error general no detectado.| Copia tu JWT en una herramienta de prueba de JWT para diagnosticar por qué tu JWT tiene un formato no válido. |
+| 21 | `SUBJECT_MISMATCH` | Los sujetos esperados y los reales no son los mismos.| El`sub`campo debe ser el mismo ID de usuario que se pasa al `changeUser`método SDK. |
+| 22 | `EXPIRED` | El token proporcionado ha caducado.| Amplía tu vencimiento o actualiza periódicamente los tokens antes de que caduquen. |
+| 23 | `INVALID_PAYLOAD` | La carga útil del token no es válida.| Copia tu JWT en una herramienta de prueba de JWT para diagnosticar por qué tu JWT tiene un formato no válido. |
+| 24 | `INCORRECT_ALGORITHM` | No se admite el algoritmo del token.| Cambia tu JWT para utilizar`RS256`  cifrado. No se admiten otros tipos. |
+| 25 | `PUBLIC_KEY_ERROR` | No se ha podido convertir la clave pública al formato adecuado.| Copia tu JWT en una herramienta de prueba de JWT para diagnosticar por qué tu JWT tiene un formato no válido. |
+| 26 | `MISSING_TOKEN` | No se ha proporcionado ningún token en la solicitud.| Asegúrate de que estás pasando un token al llamar a`changeUser(id, token)`  y de que tu token no está en blanco.|
+| 27 | `NO_MATCHING_PUBLIC_KEYS` | Ninguna clave pública coincide con el token proporcionado.| La clave privada utilizada en el JWT no coincide con ninguna de las claves públicas configuradas para tu aplicación. Confirma que has añadido las claves públicas a la aplicación correcta de tu espacio de trabajo que coincide con esta clave de API.|
+| 28 | `PAYLOAD_USER_ID_MISMATCH` | No todos los ID de usuario de la carga útil de la solicitud coinciden como se requiere.| Esto es inesperado y puede dar lugar a una carga útil malformada. Abre un ticket de soporte para obtener ayuda. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Preguntas más frecuentes (FAQ) {#faq}
@@ -791,13 +791,13 @@ Cuando empieces a aplicar esta característica, las solicitudes realizadas por v
 
 Si es posible, debes empujar a los usuarios a actualizarse como harías con cualquier otra actualización obligatoria. Alternativamente, puedes mantener la característica [Opcional](#enforcement-options) hasta que veas que un porcentaje aceptable de usuarios se ha actualizado.
 
-#### ¿Qué caducidad debo utilizar al generar un JWT? {#faq-expiration}
+#### ¿Qué caducidad debes usar al generar un JWT? {#faq-expiration}
 
 Te recomendamos que utilices el valor más alto de la duración media de la sesión, la caducidad de la cookie/token de sesión o la frecuencia con la que tu aplicación actualizaría el perfil del usuario actual.
 
 #### ¿Qué ocurre si un JWT caduca en mitad de la sesión de un usuario? {#faq-jwt-expiration}
 
-Si el token de un usuario caduca en mitad de la sesión, el SDK tiene una [función de devolución de llamada](#sdk-callback) que invocará para que tu aplicación sepa que se necesita un nuevo JWT para seguir enviando datos a Braze.
+Si el token de un usuario caduca durante la sesión, el SDK tiene una [función de devolución de llamada](#sdk-callback) que invocará para informar a tu aplicación de que se necesita un nuevo JWT para continuar enviando datos a Braze.
 
 #### ¿Qué ocurre si mi integración en servidor se rompe y ya no puedo crear un JWT? {#faq-server-downtime}
 
@@ -809,14 +809,14 @@ Una vez desactivado, el SDK reintentará cualquier solicitud fallida pendiente, 
 
 Al utilizar secretos compartidos, cualquiera con acceso a ese secreto compartido, como la página del panel de Braze, podría generar tokens y suplantar la identidad de tus usuarios finales.
 
-En su lugar, utilizamos claves públicas/privadas para que ni siquiera los Empleados de Braze (y mucho menos los usuarios de tu panel) tengan acceso a tus claves privadas.
+En su lugar, utilizamos claves públicas/privadas para que ni siquiera los empleados de Braze (y mucho menos los usuarios de tu empresa) tengan acceso a tus claves privadas.
 
 #### ¿Cómo se reintentarán las solicitudes rechazadas? {#faq-retry-logic}
 
-Cuando se rechaza una solicitud debido a un error de autenticación, el SDK invocará su devolución de llamada utilizada para actualizar la JWT del usuario. 
+Cuando una solicitud es rechazada debido a un error de autenticación, el SDK invocará tu devolución de llamada utilizada para actualizar el JWT del usuario. 
 
 Las solicitudes se reintentarán periódicamente utilizando un método de retirada exponencial. Después de 50 intentos fallidos consecutivos, los reintentos se pausarán hasta el siguiente inicio de sesión. Cada SDK también tiene un método para solicitar manualmente una descarga de datos.
 
-#### ¿Puedes utilizar la autenticación SDK para usuarios anónimos? {#faq-anonymous-users}
+#### ¿Se puede utilizar la autenticación SDK para usuarios anónimos? {#faq-anonymous-users}
 
-No. La autenticación SDK no funcionará para usuarios anónimos.
+No. La autenticación SDK no funcionará para los usuarios anónimos.

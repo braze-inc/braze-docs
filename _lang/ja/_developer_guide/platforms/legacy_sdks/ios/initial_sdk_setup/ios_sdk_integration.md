@@ -1,5 +1,5 @@
 ---
-nav_title: SDK統合ガイド（オプション）
+nav_title: SDK統合ガイド（任意）
 article_title: iOS 用 Braze SDK の統合ガイド (オプション)
 alias: "/ios_sdk/"
 description: "この iOS 統合ガイドでは、最初に iOS SDK とそのコアコンポーネントをアプリケーションに統合するときに、セットアップのベストプラクティスについて段階的に説明します。このガイドは、BrazeManager.swift ヘルパーファイルの作成に役立ちます。"
@@ -291,7 +291,7 @@ extension BrazeManager {
 {% endsubtabs %}
 
 ###### ステップ2:リモート通知のサポート
-**Signing& Capabilities**タブで、**Background Modes**supportを追加し、**Remote notificationsを**選択して、Brazeから発信されるリモートプッシュ通知のサポートを開始する。<br><br>![署名& 機能]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
+**署名&機能**タブで、**バックグラウンドモード**のサポートを追加し、**リモート通知**を選択する。これにより、Brazeから発信されるリモートプッシュ通知のサポートを開始できる。<br><br>![署名&機能]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
 
 ###### ステップ 3:リモート通知処理
 Braze SDK は、Braze から発信されるリモートプッシュ通知を処理できます。Braze にリモート通知を転送します。SDK は Braze から発信されたものではないプッシュ通知を自動的に無視します。プッシュ通知拡張子で、`BrazeManager.swift` ファイルに次のメソッドを追加します。

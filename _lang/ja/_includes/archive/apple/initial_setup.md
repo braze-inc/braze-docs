@@ -101,7 +101,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 なお、2019年12月現在、カスタムエンドポイントの配布は終了しているが、既存のカスタムエンドポイントを持っている場合は、引き続き使用することができる。詳細については、<a href="{{site.baseurl}}/api/basics/#endpoints">利用可能なエンドポイントのリスト</a>を参照してください。
 {% endalert %}
 
-Brazeの担当者は、すでに[正しいエンドポイント]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/) 。
+貴社のBraze担当者は既に[正しいエンドポイント]について通知]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/)しているはずだ。
 
 #### コンパイル時のエンドポイント構成 (推奨)
 既存のカスタムエンドポイントが指定されている場合...
@@ -117,7 +117,7 @@ Brazeの担当者は、すでに[正しいエンドポイント]({{ site.baseurl
 {% endalert %}
 
 {% alert important %}
-具体的なクラスタについては、カスタマーサクセスチームにお問い合わせいただくか、カスタマーサクセスマネージャーにお尋ねいただきたい。
+具体的なクラスターを確認するには、カスタマーサクセスマネージャーに問い合わせるか、サポートチームに連絡する。
 {% endalert %}
 
 ### SDK 統合の完了

@@ -1,12 +1,12 @@
 ## À propos des cartes de contenu .NET MAUI
 
-Le SDK .NET MAUI (anciennement Xamarin) de Braze inclut un flux de cartes par défaut pour vous permettre de démarrer avec les cartes de contenu. Le flux de cartes par défaut inclus avec le SDK Braze traitera tous les suivis d’analyse, les rejets et le rendu des cartes de contenu d’un utilisateur.
+Le SDK Braze .NET MAUI (anciennement Xamarin) comprend un flux de cartes par défaut pour vous aider à démarrer avec les cartes de contenu. Le flux de cartes par défaut inclus avec le SDK Braze traitera tous les suivis d’analyse, les rejets et le rendu des cartes de contenu d’un utilisateur.
 
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
-## Types de cartes et propriétés
+## Types et caractéristiques des cartes
 
-Le SDK MAUI .NET de Braze comporte trois types de cartes Content-Type uniques qui partagent un modèle de base : [Bannière](#xamarin_banner), [Image légendée](#xamarin_captioned-image) et [Classique](#xamarin_classic). Chaque type hérite des propriétés communes d’un modèle de base et possède les propriétés supplémentaires suivantes.
+Le SDK Braze .NET MAUI propose trois types de cartes de contenu uniques qui partagent un modèle de base : [Bannière](#xamarin_banner), [image légendée](#xamarin_captioned-image) et [classique](#xamarin_classic). Chaque type hérite des propriétés communes d’un modèle de base et possède les propriétés supplémentaires suivantes.
 
 ### Modèle de carte de base
 
@@ -20,8 +20,8 @@ Le SDK MAUI .NET de Braze comporte trois types de cartes Content-Type uniques qu
 |`pinned`           | Si la carte est épinglée.                                                                                            |
 |`dismissed`        | Indique si l'utilisateur a fermé la carte de contenu. Marquer comme rejetée une carte qui l'a déjà été n'est pas possible. |
 |`dismissible`      | Détermine si la carte peut être ou non rejetée par l’utilisateur.                                                                           |
-|`urlString`        | (Facultatif) Chaîne de caractères de l'URL associée à l'action de clic sur la carte.                                                       |
-|`openUrlInWebView` | Indique si les URL de cette carte doivent être ouvertes dans le WebView de Braze ou non.                                                 |
+|`urlString`        | (Facultatif) La chaîne de caractères associée à l'action de clic sur la carte.                                                       |
+|`openUrlInWebView` | Indiquez si les URL de cette carte doivent être ouvertes dans Braze WebView ou non.                                                 |
 |`isControlCard`    | Si cette carte est une carte de contrôle. Les cartes de contrôle ne doivent pas être montrées à l'utilisateur.                                |
 |`extras`           | Mappage des suppléments clé-valeur pour cette carte.                                                                             |
 |`isTest`           | Que cette carte soit une carte de test.                                                                                      |

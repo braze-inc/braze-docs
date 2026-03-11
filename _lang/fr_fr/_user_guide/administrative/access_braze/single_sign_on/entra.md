@@ -3,17 +3,17 @@ nav_title: Microsoft Entra SSO
 article_title: Microsoft Entra SSO
 page_order: 3
 page_type: tutorial
-description: "Cet article vous explique comment configurer les fonctionnalités d'authentification unique de Microsoft Entra avec Braze."
+description: "Cet article vous guidera dans la configuration des fonctionnalités d'authentification unique Microsoft Entra avec Braze."
 
 ---
 
 # Microsoft Entra SSO
 
-> [Microsoft Entra SSO](https://learn.microsoft.com/en-us/entra/identity/saas-apps/braze-tutorial) est le service de gestion des identités et des accès basé sur le cloud de Microsoft, qui aide vos employés à se connecter et à accéder aux ressources. Vous pouvez utiliser Entra SSO pour contrôler l'accès à vos applications et à vos ressources d'application, en fonction de vos exigences commerciales.
+> [Microsoft Entra SSO](https://learn.microsoft.com/en-us/entra/identity/saas-apps/braze-tutorial) est le service de gestion des identités et des accès basé sur le cloud de Microsoft, qui facilite la connexion et l'accès aux ressources pour vos employés. Vous pouvez utiliser Entra SSO pour contrôler l'accès à vos applications et à leurs ressources, en fonction des besoins de votre entreprise.
 
 ## Conditions
 
-Lors de la configuration, il vous sera demandé de fournir l'URL de l'Assertion Consumer Service (ACS).  
+Lors de la configuration, il vous sera demandé de fournir une URL ACS (Assertion Consumer Service).  
 
 | Condition | Détails |
 |---|---|
@@ -22,23 +22,23 @@ Lors de la configuration, il vous sera demandé de fournir l'URL de l'Assertion 
 | RelayState API key | Pour activer la connexion du fournisseur d'identité, sélectionnez **Paramètres** > **Clés API** et créez une clé API avec des autorisations `sso.saml.login`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Identifiant initié par le fournisseur de services (SP) dans le cadre de Microsoft Entra SSO
+## Identifiant initié par le fournisseur de services (SP) dans Microsoft Entra SSO
 
 ### Étape 1 : Ajouter un Braze à partir de la galerie
 
-1. Dans votre centre d'administration Microsoft Entra, allez dans **Identité** > **Applications** > **Applications d'entreprise**, puis sélectionnez **Nouvelle application**.
-2. Recherchez **Braze** dans la zone de recherche, sélectionnez-le dans le panneau de résultats, puis sélectionnez **Ajouter.**
+1. Dans votre centre d'administration Microsoft Entra, veuillez vous rendre dans **Identité** > **Applications** > **Applications d'entreprise**, puis sélectionner **Nouvelle application**.
+2. Veuillez rechercher **Braze** dans la zone de recherche, sélectionnez-le dans le panneau des résultats, puis sélectionnez **Ajouter**.
 
-### Étape 2 : Configurer Microsoft Entra SSO
+### Étape 2 : Configurer l'authentification unique Microsoft Entra
 
-1. Dans votre centre d'administration Microsoft Entra, allez sur la page d'intégration de votre application Braze et sélectionnez **Authentification unique**.
-2. Sur la page **Sélectionner une méthode d'authentification unique**, sélectionnez **SAML** comme méthode.
-3. Sur la page **Set up Single Sign-On with SAML**, sélectionnez l'icône modifier pour **Basic SAML Configuration.**
+1. Dans votre centre d'administration Microsoft Entra, veuillez accéder à la page d'intégration de l'application Braze et sélectionner **« Authentification unique** ».
+2. Sur la page **Sélectionner une méthode d'authentification unique**, veuillez sélectionner **SAML** comme méthode.
+3. Sur la page **Configurer l'authentification unique avec SAML**, veuillez sélectionner l'icône Modifier pour **la configuration SAML de base**.
 4. Configurez l'application en mode initié par IdP en entrant une **URL de réponse** qui combine votre [instance Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) avec le modèle suivant : `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
-5. Configurez éventuellement RelayState en entrant votre clé API générée par Relay State dans le champ **Relay State (Optional)**.
+5. Veuillez configurer RelayState en saisissant votre clé API générée par Relay State dans le champ **Relay State**.
 
 {% alert important %}
-**Ne** définissez **pas** le champ **Sign-On URL.**  Laissez ce champ vide pour éviter tout problème avec votre authentification SAML unique (SSO) initiée par l'IdP.
+**Veuillez ne pas** remplir le champ **URL de connexion**. Veuillez laisser ce champ vide afin d'éviter tout problème avec votre authentification unique (SSO) SAML initiée par votre fournisseur d'identité.
 {% endalert %}
 
 {: start="6"}
@@ -91,7 +91,7 @@ Vous pouvez gérer ces revendications et valeurs d'utilisateur à partir de la s
 
 ### Étape 3 : Configurer Microsoft Entra SSO dans Braze {#step-3}
 
-Après avoir configuré Braze dans le centre d'administration de Microsoft Entra, Microsoft Entra vous fournira une URL cible (URL d'identification) et un certificat que vous devrez introduire dans votre compte Braze. **x.509** que vous introduirez dans votre compte Braze.
+Une fois Braze configuré dans le centre d'administration Microsoft Entra, Microsoft Entra vous fournira une URL cible (URL d'identifiant) et**x.509**un certificat que vous devrez saisir dans votre compte Braze.
 
 Une fois que votre gestionnaire de compte a activé l’authentification unique (SSO) SAML pour votre compte, procédez comme suit :
 
@@ -100,8 +100,8 @@ Une fois que votre gestionnaire de compte a activé l’authentification unique 
 
 | Condition | Détails |
 |---|---|
-| `SAML Name` | Cela apparaîtra comme le texte du bouton sur l’écran de connexion. Il s'agit généralement du nom de votre fournisseur d'identité, comme "Microsoft Entra". |
-| `Target URL` | Il s'agit de l'URL identifiant fournie par Microsoft Entra.|
+| `SAML Name` | Cela apparaîtra comme le texte du bouton sur l’écran de connexion. Il s'agit généralement du nom de votre fournisseur d'identité, tel que « Microsoft Entra ». |
+| `Target URL` | Il s'agit de l'identifiant de connexion fourni par Microsoft Entra.|
 | `Certificate` | Le certificat encodé PEM `x.509` est fourni par votre fournisseur d'identité. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

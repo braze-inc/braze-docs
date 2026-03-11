@@ -17,7 +17,7 @@ description: "This article outlines details about the campaign translation sourc
 
 > Use this endpoint to view all the default translation sources for a campaign's translation tags. These are the values within the {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}. See [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) for more information about translation features.
 
-{% include early_access_beta_alert.md feature='This endpoint' %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Prerequisites
 

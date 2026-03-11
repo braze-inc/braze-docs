@@ -1,7 +1,7 @@
 ---
 nav_title: "POST:カタログセレクションを作成する"
 article_title: "POST:カタログセレクションを作成する"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 2
 
 layout: api_page
@@ -27,17 +27,35 @@ description: "この記事では、「カタログセレクションの作成」
 
 ## パスパラメーター
 
-| パラメータ      | required | データ型 | 説明          |
+| パラメータ      | 必須かどうか | データ型 | 説明          |
 | -------------- | -------- | --------- | -------------------- |
-| `catalog_name` | 必須 | 文字列    | カタログ名。 |
+| `catalog_name` | 必須かどうか | 文字列    | カタログ名。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエストパラメーター
 
-| パラメーター   | required | データ型 | 説明                                                                                                                                                        |
+| パラメーター   | 必須かどうか | データ型 | 説明                                                                                                                                                        |
 | ----------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `selection` | 必須 | オブジェクト    | 選択基準を含むオブジェクト。選択オブジェクトには、`name`、`description`、`filters`、`results_limit`、`sort_field`、`sort_order` が含まれる場合があります。 |
+| `selection` | 必須 | オブジェクト    | 選択基準を含むオブジェクト。オブジェクトとそのフィールドの詳細な内訳については、[カタログ選択オブジェクトを]({{site.baseurl}}/api/objects_filters/catalog_selection_object/)参照せよ。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+### 選択オブジェクトのパラメータ
+
+| パラメーター        | 必須かどうか | データ型 | 説明                                                                                                                                                        |
+| ---------------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `name`           | 必須かどうか | string    | カタログ選択の名前。 |
+| `description`    | オプション | string    | カタログ選択の説明。 |
+| `external_id`    | 必須かどうか | string    | 選択範囲の固有識別子。 |
+| `source`         | 必須かどうか | string    | カタログデータの出典。Shopifyカタログには、. を使用する`"Shopify"`。カスタムカタログには、. を使用する`"custom"`。 |
+| `filters`        | オプション | 配列    | カタログアイテムに適用するフィルターオブジェクトの配列。リクエストごとに最大4つのフィルターを指定できる。フィルターが指定されていない場合、カタログ内の全アイテムが含まれる。 |
+| `results_limit`  | オプション | 整数   | 返す結果の最大数。1から50までの数字でなければならない。 |
+| `sort_field`     | オプション | string    | 結果を並べ替えるためのフィールド。これはと組み合わせなければならない`sort_order`。と`sort_order``sort_field`の両方が存在しない場合、結果はランダム化される。 |
+| `sort_order`     | オプション | string    | 結果を並べ替える順序だ。有効な値は (昇順) `"asc"`または`"desc"`(降順) である。これはと組み合わせなければならない`sort_field`。と`sort_order``sort_field`の両方が存在しない場合、結果はランダム化される。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+{% alert note %}
+と`sort_order``sort_field`パラメータは必ず一緒に使わなければならない。一方のパラメータだけを提供した場合、あるいは両方のパラメータを省略した場合、選択結果はランダムな順序で返される。
+{% endalert %}
 
 ## リクエスト例
 
@@ -49,6 +67,8 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
   "selection": {
     "name": "favorite-restaurants",
     "description": "Favorite restaurants in NYC",
+    "external_id": "favorite-nyc-restaurants",
+    "source": "custom",
     "filters": [
       {
         "field": "City",
@@ -60,7 +80,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
         "operator": "greater than",
         "value": 7
       }
-    ]
+    ],
+    "results_limit": 10,
+    "sort_field": "Rating",
+    "sort_order": "desc"
   }
 }'
 ```
@@ -75,6 +98,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 | `time`     | `before`, `after`                                       |
 | `array`    | `includes value`, `does not include value`              |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% alert note %}
+APIは、1回の選択リクエストにつき最大4つのフィルターをサポートする。Brazeのダッシュボードでは、各選択項目につき最大10個のフィルターを追加できる。フィルターは配列に現れる順序で適用される。
+{% endalert %}
 
 ## 応答
 

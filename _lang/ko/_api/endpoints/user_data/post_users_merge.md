@@ -56,11 +56,11 @@ Authorization: Bearer YOUR_REST_API_KEY
 엔드포인트는 업데이트되는 `merge_updates` 객체의 순서를 보장하지 않습니다.
 {% endalert %}
 
-이 엔드포인트는 타겟팅한 사용자에게 다음 필드가 없는 경우 병합합니다.
+이 엔드포인트는 대상 사용자에게 없는 경우 다음 필드를 병합합니다.
 
 - First name
 - Last name
-- 이메일 주소( [암호화되지]({{site.baseurl}}/user_guide/data/field_level_encryption/) 않은 경우)
+- 이메일 주소(암호화되지 않은 경우 [encrypted]({{site.baseurl}}/user_guide/data/field_level_encryption/))
 - Gender
 - Date of birth
 - Phone number
@@ -70,25 +70,25 @@ Authorization: Bearer YOUR_REST_API_KEY
 - 언어
 - 장치 정보
 - 세션 수(두 프로필의 세션 합계)
-- 첫 세션 날짜(Braze는 두 날짜 중 빠른 날짜를 선택)
-- 마지막 세션 날짜(Braze는 두 날짜 중 나중에 날짜 선택)
-- 커스텀 속성(Braze는 타겟 프로필의 기존 커스텀 속성을 유지하며 타겟 프로필에 존재하지 않았던 커스텀 속성을 포함)
+- 첫 세션 날짜(브레이즈는 두 날짜 중 더 이른 날짜를 선택합니다)
+- 마지막 세션 날짜(브레이즈는 두 날짜 중 더 늦은 날짜를 선택합니다)
+- 커스텀 속성(브레이즈는 대상 프로필에 기존 커스텀 속성을 유지하고 대상 프로필에 존재하지 않는 커스텀 속성을 포함합니다)
 - 사용자 지정 이벤트 및 구매 이벤트 데이터
-- "Y일 동안 X회" 세그먼트에 대한 커스텀 이벤트 및 구매 이벤트 속성정보(여기서 X<=50 와 Y<=30)
+- "Y일 동안 X회" 세분화를 위한 커스텀 이벤트 및 구매 이벤트 속성(여기서 X<=50 및 Y<=30)
 - 세분화 가능한 사용자 지정 이벤트 요약
   - 이벤트 수(두 프로필의 합계)
-  - 이벤트가 처음 발생한 날짜(Braze는 두 날짜 중 빠른 날짜를 선택)
-  - 이벤트가 마지막으로 발생한 날짜(Braze는 두 날짜 중 나중에 발생한 날짜를 선택)
+  - 이벤트가 처음 발생한 날짜(브레이즈는 두 날짜 중 더 이른 날짜를 선택합니다)
+  - 이벤트가 마지막으로 발생한 날짜(브레이즈는 두 날짜 중 더 늦은 날짜를 선택합니다)
 - 인앱 구매 총액(센트 단위)(두 프로필의 합계)
 - 총 구매 횟수(두 프로필의 합산)
-- 첫 구매 날짜(Braze는 두 날짜 중 빠른 날짜를 선택)
-- 마지막 구매 날짜(Braze는 두 날짜 중 늦은 날짜를 선택)
+- 첫 구매 날짜(브레이즈는 두 날짜 중 더 이른 날짜를 선택합니다)
+- 마지막 구매 날짜(브레이즈는 두 날짜 중 더 늦은 날짜를 선택합니다)
 - 앱 요약
-- Last_X_at 필드(고아가 된 프로필 필드가 더 최신인 경우 Braze가 필드를 업데이트합니다)
-- 캠페인 상호작용 데이터(Braze는 가장 최근 날짜 필드를 선택)
-- 워크플로 요약(가장 최근 날짜 필드를 Braze가 선택)
+- Last_X_at 필드(브레이즈는 고아 프로필 필드가 더 최근인 경우 필드를 업데이트합니다)
+- 캠페인 상호작용 데이터(브레이즈는 가장 최근 날짜 필드를 선택합니다)
+- 워크플로우 요약(브레이즈는 가장 최근 날짜 필드를 선택합니다)
 - 메시지 및 메시지 참여 내역
-- Braze는 앱이 두 고객 프로필에 모두 존재하는 경우에만 세션 데이터를 병합합니다.
+- 브레이즈는 앱이 두 사용자 프로필 모두에 존재하는 경우에만 세션 데이터를 병합합니다.
 
 {% alert note %}
 사용자를 병합할 때 `/users/merge` 엔드포인트를 사용하는 것은 [`changeUser()` 방법을](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) 사용하는 것과 동일한 방식으로 작동합니다.
@@ -96,11 +96,11 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 #### 사용자 지정 이벤트 날짜 및 구매 이벤트 날짜 동작
 
-이렇게 병합된 필드는 'Y일 동안의 X 이벤트에 대해' 필터를 업데이트합니다. 구매 이벤트의 경우 이러한 필터에는 'Y일 내 구매 횟수' 및 '지난 Y일 동안 지출한 금액'이 포함됩니다.
+이 병합된 필드는 "Y일 동안 X회 이벤트" 필터를 업데이트합니다. 구매 이벤트의 경우 이러한 필터에는 'Y일 내 구매 횟수' 및 '지난 Y일 동안 지출한 금액'이 포함됩니다.
 
 ### 이메일 또는 전화번호로 사용자 병합하기
 
-`email` 또는 `phone` 을 식별자로 지정한 경우 식별자에 `prioritization` 값을 추가로 포함해야 합니다. `prioritization` 은 여러 사용자가 있는 경우 병합할 사용자를 지정하는 정렬된 배열이어야 합니다. 즉, 우선순위에서 일치하는 사용자가 두 명 이상이면 병합이 이루어지지 않습니다.
+식별자로 `email` 또는 `phone`가 지정된 경우, 식별자에 추가 `prioritization` 값을 포함해야 합니다. `prioritization`는 여러 사용자가 발견된 경우 병합할 사용자를 지정하는 정렬된 배열이어야 합니다. 이는 우선 순위에서 하나 이상의 사용자가 일치하는 경우 병합이 발생하지 않음을 의미합니다.
 
 배열에 허용되는 값은 다음과 같습니다:
 
@@ -120,7 +120,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 요청의 패턴을 보여주기 위한 기본 요청 본문입니다.
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -165,9 +165,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### 미확인 사용자 병합하기
 
-다음 요청은 이메일 주소 `john.smith@braze.com` 를 가진 가장 최근에 업데이트된 미확인 사용자를 외부 ID `john` 를 가진 사용자로 병합합니다. 이 예제에서 `most_recently_updated` 을 사용하면 확인되지 않은 사용자 한 명으로 쿼리가 필터링됩니다. 따라서 이 이메일 주소를 가진 미확인 사용자 두 명이 있는 경우 외부 ID `john` 를 가진 사용자로 한 명만 병합됩니다.
+다음 요청은 이메일 주소 `john.smith@braze.com`를 가진 가장 최근에 업데이트된 식별되지 않은 사용자를 외부 ID `john`를 가진 사용자와 병합합니다. 이 예에서는 `most_recently_updated`을 사용하여 쿼리를 하나의 식별되지 않은 사용자로 필터링합니다. 따라서, 이 이메일 주소를 가진 두 명의 식별되지 않은 사용자가 있다면, 외부 ID `john`를 가진 사용자와 병합되는 것은 단 한 명뿐입니다.
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -189,11 +189,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### 미확인 사용자를 식별된 사용자로 병합하기
 
-다음 예제는 이메일 주소가 `john.smith@braze.com` 인 가장 최근에 업데이트된 미확인 사용자를 이메일 주소가 `john.smith@braze.com` 인 가장 최근에 업데이트된 식별된 사용자로 병합합니다.
+다음 예시는 이메일 주소 `john.smith@braze.com`를 가진 가장 최근에 업데이트된 식별되지 않은 사용자를 이메일 주소 `john.smith@braze.com`를 가진 가장 최근에 업데이트된 식별된 사용자와 병합합니다.
 
-`most_recently_updated` 을 사용하면 쿼리가 한 명의 사용자( `identifier_to_merge` 의 경우 식별되지 않은 사용자 1명, `identifier_to_keep` 의 경우 식별된 사용자 1명)로 필터링됩니다.
+`most_recently_updated`을 사용하면 쿼리가 한 사용자(식별되지 않은 사용자 `identifier_to_merge`와 식별된 사용자 `identifier_to_keep` 각각 하나)로 필터링됩니다.
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -214,11 +214,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 }'
 ```
 
-### most_recently_updated 우선순위를 포함하지 않고 미확인 사용자 병합하기
+### 우선순위 most_recently_updated을 포함하지 않고 식별되지 않은 사용자를 병합하기
 
-이메일 주소가 `john.smith@braze.com` 인 미확인 사용자가 두 명 있는 경우 이 예제 요청은 해당 이메일 주소를 가진 미확인 사용자가 두 명 있기 때문에 사용자를 병합하지 않습니다. 이 요청은 이메일 주소가 `john.smith@braze.com` 인 미확인 사용자가 한 명만 있는 경우에만 작동합니다.
+이메일 주소 `john.smith@braze.com`을 가진 두 명의 식별되지 않은 사용자가 있다면, 이 예제 요청은 사용자를 병합하지 않습니다. 왜냐하면 그 이메일 주소를 가진 식별되지 않은 사용자가 두 명이기 때문입니다. 이 요청은 이메일 주소 `john.smith@braze.com`를 가진 식별되지 않은 사용자가 단 한 명일 때만 작동합니다.
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \

@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} Sie müssen auch [Push-Benachrichtigungen einrichten]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android).
+{% multi_lang_include developer_guide/prerequisites/android.md %} Bitte [richten]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android) Sie auch [Push-Benachrichtigungen ein]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android).
 
 ## Verwendung eines Callbacks für Push-Ereignisse {#push-callback}
 
@@ -79,7 +79,7 @@ Bei Aktions-Buttons für Benachrichtigungen werden die `BRAZE_PUSH_INTENT_NOTIFI
 Erstellen Sie Ihren Listener für Push-Benachrichtigungen in `Application.onCreate`, um sicherzustellen, dass er getriggert wird, wenn auf eine Benachrichtigung getippt wird, während sich Ihre App in einem beendeten Zustand befindet.
 {% endalert %}
 
-## Anzeige der Benachrichtigung anpassen {#customization-display}
+## Passen der Benachrichtigungsanzeige {#customization-display}
 
 ### Schritt 1: Angepasste Benachrichtigungs-Factory erstellen
 
@@ -87,7 +87,7 @@ In manchen Szenarien möchten Sie Push-Benachrichtigungen auf eine Weise anpasse
 
 Wenn eine angepasste `IBrazeNotificationFactory` eingestellt ist, ruft Braze beim Push-Empfang die Methode `createNotification()` Ihrer Factory auf, bevor die Benachrichtigung dem Nutzer angezeigt wird. Braze übergibt ein `Bundle` mit Push-Daten von Braze und ein weiteres `Bundle` mit angepassten Schlüssel-Wert-Paaren, die entweder über das Dashboard oder die Messaging APIs gesendet werden:
 
-Braze übergibt eine [`BrazeNotificationPayload`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/index.html) mit Daten aus der Push-Benachrichtigung von Braze.
+Braze übermittelt [`BrazeNotificationPayload`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/index.html)Daten aus der Braze-Push-Benachrichtigung.
 
 {% tabs %}
 {% tab JAVA %}
@@ -121,7 +121,7 @@ override fun createNotification(brazeNotificationPayload: BrazeNotificationPaylo
 {% endtab %}
 {% endtabs %}
 
-Sie können `null` von Ihrer angepassten `createNotification()` Methode zurückgeben, um die Benachrichtigung überhaupt nicht anzuzeigen, `BrazeNotificationFactory.getInstance().createNotification()` verwenden, um unser Standard `notification` Objekt für diese Daten zu erhalten und es vor der Anzeige zu ändern, oder ein völlig separates `notification` Objekt für die Anzeige erzeugen.
+Sie können von Ihrer angepassten`createNotification()``null`Methode zurückkehren, um die Benachrichtigung vollständig zu unterdrücken, unser `notification`Standardobjekt für diese Daten abrufen`BrazeNotificationFactory.getInstance().createNotification()`und es vor der Anzeige modifizieren oder ein vollständig separates`notification`Objekt für die Anzeige generieren.
 
 {% alert note %}
 Die Dokumentation zu den Push-Daten von Braze finden Sie im [Android SDK](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html).
@@ -149,10 +149,10 @@ setCustomBrazeNotificationFactory(brazeNotificationFactory: IBrazeNotificationFa
 {% endtab %}
 {% endtabs %}
 
-Der empfohlene Ort, um Ihre angepasste `IBrazeNotificationFactory` einzustellen, ist in der Methode `Application.onCreate()` application lifecycle (nicht activity). Dies ermöglicht die korrekte Einstellung der Benachrichtigungsfabrik, wenn Ihr App-Prozess aktiv ist.
+Der empfohlene Ort, um Ihre angepasste `IBrazeNotificationFactory` einzustellen, ist in der Methode `Application.onCreate()` application lifecycle (nicht activity). Dadurch kann die Benachrichtigungsfabrik korrekt eingerichtet werden, wenn Ihr App-Prozess aktiv ist.
 
 {% alert important %}
-Das Erstellen einer eigenen Push-Benachrichtigung von Grund auf ist ein fortgeschrittener Anwendungsfall und sollte nur nach gründlichen Tests und einem tiefen Verständnis der Push-Funktionen von Braze durchgeführt werden. Sie müssen zum Beispiel sicherstellen, dass Ihre Push-Benachrichtigungen korrekt geöffnet werden.
+Das Erstellen einer eigenen Push-Benachrichtigung von Grund auf ist ein fortgeschrittener Anwendungsfall und sollte nur nach gründlichen Tests und einem umfassenden Verständnis der Push-Funktionalität von Braze durchgeführt werden. Sie müssen zum Beispiel sicherstellen, dass Ihre Push-Benachrichtigungen korrekt geöffnet werden.
 {% endalert %}
 
 Um Ihre angepasste [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) zu deaktivieren und zur Standard-Braze-Behandlung für Push zurückzukehren, übergeben Sie `null` an unseren angepassten Notification Factory Setter:
@@ -175,11 +175,11 @@ setCustomBrazeNotificationFactory(null)
 {% endtab %}
 {% endtabs %}
 
-## Rendering von mehrfarbigem Text
+## Mehrfarbigen Text rendern
 
-In Braze SDK Version 3.1.1 kann HTML an ein Gerät gesendet werden, um mehrfarbigen Text in Push-Benachrichtigungen darzustellen.
+In der Braze SDK-Version 3.1.1 kann HTML an ein Gerät gesendet werden, um mehrfarbigen Text in Push-Benachrichtigungen darzustellen.
 
-![Eine Android Push Nachricht "Multicolor Push Test Nachricht", bei der die Buchstaben verschiedene Farben haben, kursiv sind und eine Hintergrundfarbe haben.]({% image_buster /assets/img/multicolor_android_push.png %}){: style="max-width:40%;"}
+![Eine Android-Push-Nachricht mit dem Titel „Multicolor Push Testnachricht“, in der die Buchstaben unterschiedliche Farben aufweisen, kursiv geschrieben sind und einen farbigen Hintergrund haben.]({% image_buster /assets/img/multicolor_android_push.png %}){: style="max-width:40%;"}
 
 Dieses Beispiel wird mit dem folgenden HTML-Code wiedergegeben:
 
@@ -189,13 +189,13 @@ Dieses Beispiel wird mit dem folgenden HTML-Code wiedergegeben:
 <p><em>test</em> <span style="text-decoration: underline; background-color: #ff6600;"><strong>message</strong></span></p>
 ```
 
-Denken Sie daran, dass Android einschränkt, welche HTML-Elemente und Tags in Ihren Push-Benachrichtigungen zulässig sind. Zum Beispiel ist `marquee` nicht zulässig.
+Bitte beachten Sie, dass Android die HTML-Elemente und -Tags einschränkt, die in Ihren Push-Benachrichtigungen zulässig sind. Zum Beispiel ist `marquee` nicht zulässig.
 
 {% alert important %}
-Die Darstellung von mehrfarbigem Text ist gerätespezifisch und wird je nach Android-Gerät oder -Version möglicherweise nicht angezeigt.
+Die Darstellung von mehrfarbigem Text ist auf Geräten gerätespezifisch und wird möglicherweise je nach Android-Gerät oder -Version nicht angezeigt.
 {% endalert %}
 
-Um mehrfarbigen Text in einer Push-Benachrichtigung darzustellen, können Sie Ihr `braze.xml` oder `BrazeConfig` aktualisieren:
+Um mehrfarbigen Text in einer Push-Benachrichtigung darzustellen, können Sie ein Update für Ihre`braze.xml`  oder `BrazeConfig`: durchführen
 
 {% tabs local %}
 {% tab braze.xml %}
@@ -233,27 +233,27 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-### Unterstützte HTML Tags
+### Unterstützte HTML-Tags
 
-Derzeit listet Google die unterstützten HTML Tags für Android nicht direkt in der Dokumentation auf. Diese Informationen finden Sie nur in der [ `Html.java` Datei des Git-Repositorys.](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/text/Html.java) Beachten Sie dies, wenn Sie sich auf die folgende Tabelle beziehen, da diese Informationen aus dieser Datei stammen und sich die unterstützten HTML-Tags noch ändern können.
+Derzeit listet Google die unterstützten HTML-Tags für Android nicht direkt in seiner Dokumentation auf – diese Informationen sind nur in [der Datei](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/text/Html.java) des [`Html.java`Git-Repositorys](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/text/Html.java) zu finden. Bitte beachten Sie dies, wenn Sie sich auf die folgende Tabelle beziehen, da diese Informationen aus dieser Datei stammen und sich die unterstützten HTML-Tags ändern können.
 
 <table>
   <thead>
     <tr>
       <th>Kategorie</th>
-      <th>HTML Tag</th>
+      <th>HTML-Tag</th>
       <th>Beschreibung</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td rowspan="7">Grundlegende Textgestaltung</td>
+      <td rowspan="7">Grundlegende Textformatierung</td>
       <td><code>&lt;b&gt;</code>, <code>&lt;strong&gt;</code></td>
       <td>Fettgedruckter Text</td>
     </tr>
     <tr>
       <td><code>&lt;i&gt;</code>, <code>&lt;em&gt;</code></td>
-      <td>Kursiver Text</td>
+      <td>Kursivschrift</td>
     </tr>
     <tr>
       <td><code>&lt;u&gt;</code></td>
@@ -269,16 +269,16 @@ Derzeit listet Google die unterstützten HTML Tags für Android nicht direkt in 
     </tr>
     <tr>
       <td><code>&lt;sub&gt;</code></td>
-      <td>Subskriptiver Text</td>
+      <td>Text im Index</td>
     </tr>
     <tr>
       <td><code>&lt;tt&gt;</code></td>
-      <td>Einfarbiger Text</td>
+      <td>Monospace-Text</td>
     </tr>
     <tr>
-      <td rowspan="3">Größe/Schrift</td>
+      <td rowspan="3">Größe/Schriftart</td>
       <td><code>&lt;big&gt;</code>, <code>&lt;small&gt;</code></td>
-      <td>Relative Textgröße ändert sich</td>
+      <td>Änderungen der relativen Textgröße</td>
     </tr>
     <tr>
       <td><code>&lt;font color="..."&gt;</code></td>
@@ -289,7 +289,7 @@ Derzeit listet Google die unterstützten HTML Tags für Android nicht direkt in 
       <td>Inline-Stile (e.g., Farbe, Hintergrund)</td>
     </tr>
     <tr>
-      <td rowspan="4">Absatz &amp; Block</td>
+      <td rowspan="4">Absatz und Block</td>
       <td><code>&lt;p&gt;</code>, <code>&lt;div&gt;</code></td>
       <td>Abschnitte auf Blockebene</td>
     </tr>
@@ -299,28 +299,28 @@ Derzeit listet Google die unterstützten HTML Tags für Android nicht direkt in 
     </tr>
     <tr>
       <td><code>&lt;blockquote&gt;</code></td>
-      <td>Zitierter Block</td>
+      <td>Zitierter Abschnitt</td>
     </tr>
     <tr>
       <td><code>&lt;ul&gt;</code> + <code>&lt;li&gt;</code></td>
       <td>Ungeordnete Liste mit Aufzählungszeichen</td>
     </tr>
     <tr>
-      <td>Rubriken</td>
+      <td>Überschriften</td>
       <td><code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code></td>
       <td>Überschriften (verschiedene Größen)</td>
     </tr>
     <tr>
-      <td rowspan="2">Links &amp; Bilder</td>
+      <td rowspan="2">Links und Bilder</td>
       <td><code>&lt;a href="..."&gt;</code></td>
-      <td>Anklickbarer Link</td>
+      <td>Klickbarer Link</td>
     </tr>
     <tr>
       <td><code>&lt;img src="..."&gt;</code></td>
       <td>Inline-Bild</td>
     </tr>
     <tr>
-      <td>Andere Inline</td>
+      <td>Sonstiges Inline</td>
       <td><code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;dfn&gt;</code>, <code>&lt;cite&gt;</code></td>
       <td>Synonyme für kursiv oder fett</td>
     </tr>
@@ -328,31 +328,31 @@ Derzeit listet Google die unterstützten HTML Tags für Android nicht direkt in 
 </table>
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-## Rendering von Inline-Bildern
+## Inline-Bilder rendern
 
 ### Funktionsweise
 
-Sie können ein größeres Bild in Ihrer Android Push-Benachrichtigung mit Hilfe von Inline-Image-Push präsentieren. Bei diesem Design müssen Nutzer die Push-Benachrichtigung nicht mehr manuell erweitern, um das Bild zu vergrößern. Im Gegensatz zu normalen Android-Push-Benachrichtigungen haben die Inline-Image-Push-Bilder ein Seitenverhältnis von 3:2.
+Mit Inline-Bild-Push können Sie ein größeres Bild in Ihrer Android-Push-Benachrichtigung präsentieren. Bei diesem Design müssen Nutzer die Push-Benachrichtigung nicht mehr manuell erweitern, um das Bild zu vergrößern. Im Gegensatz zu normalen Android-Push-Benachrichtigungen haben die Inline-Image-Push-Bilder ein Seitenverhältnis von 3:2.
 
 ![]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="max-width:50%;"}
 
 ### Kompatibilität
 
-Sie können zwar Inline-Bilder an jedes Gerät senden, aber Geräte und SDKs, die die Mindestversionen nicht erfüllen, zeigen stattdessen ein Standardbild an. Damit Inline-Bilder korrekt angezeigt werden, benötigen Sie sowohl das Android Braze SDK v10.0.0+ als auch ein Gerät mit Android M+. Das SDK muss ebenfalls aktiviert sein, damit das Bild gerendert werden kann.
+Sie können Inline-Bilder an jedes Gerät senden. Geräte und SDKs, die nicht die Mindestversionen erfüllen, zeigen stattdessen ein Standardbild an. Damit Inline-Bilder korrekt angezeigt werden, sind sowohl das Android Braze SDK v10.0.0+ als auch ein Gerät mit Android M+ erforderlich. Das SDK muss ebenfalls aktiviert sein, damit das Bild gerendert werden kann.
 
 {% alert note %}
 Geräte mit Android 12 werden aufgrund von Änderungen in den benutzerdefinierten Push-Benachrichtigungsstilen anders dargestellt.
 {% endalert %}
 
-### Push für ein Inline-Bild senden
+### Versenden eines Inline-Bild-Pushs
 
 Wenn Sie eine Android-Push-Nachricht erstellen, ist diese Funktion in der Dropdown-Liste **Benachrichtigungstyp** verfügbar.
 
-![Der Editor für Push-Kampagnen zeigt den Standort des Dropdown-Menüs "Benachrichtigungstyp" (oberhalb der Standard-Vorschau für Push).]({% image_buster /assets/img/android/push/android_inline_image_notification_type.png %})
+![Der Push-Kampagnen-Editor zeigt den Standort des Dropdown-Menüs „Benachrichtigungstyp“ (oberhalb der Standard-Push-Vorschau).]({% image_buster /assets/img/android/push/android_inline_image_notification_type.png %})
 
 ## Einstellungen
 
-Für die Push-Benachrichtigungen von Android, die über das Braze-Dashboard versendet werden, sind viele fortschrittliche Einstellungen verfügbar. Dieser Artikel beschreibt diese Funktionen und wie Sie sie erfolgreich nutzen können.
+Für Android-Push-Benachrichtigungen, die über das Braze-Dashboard versendet werden, stehen zahlreiche erweiterte Einstellungen zur Verfügung. Dieser Artikel beschreibt diese Funktionen und wie Sie sie erfolgreich nutzen können.
 
 ![]({% image_buster /assets/img_archive/android_advanced_settings.png %})
 
@@ -372,11 +372,11 @@ Im Feld **Time to Live** (TTL) können Sie eine benutzerdefinierte Zeitspanne f�
 
 Mit dem Zusammenfassungstext können Sie zusätzlichen Text in der erweiterten Benachrichtigungsansicht einstellen. Es dient auch als Beschriftung für Benachrichtigungen mit Bildern.
 
-![Eine Android Nachricht mit dem Titel "Dies ist der Titel der Benachrichtigung." und dem Zusammenfassungstext "Dies ist der Zusammenfassungstext der Benachrichtigung."]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
+![Eine Android-Nachricht mit dem Titel „Dies ist der Titel für die Benachrichtigung.“ und dem Zusammenfassungstext „Dies ist der Zusammenfassungstext für die Benachrichtigung.“]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
 Der Zusammenfassungstext wird in der erweiterten Ansicht unter dem Text der Nachricht angezeigt. 
 
-![Eine Android Nachricht mit dem Titel "Dies ist der Titel der Benachrichtigung." und dem Zusammenfassungstext "Dies ist der Zusammenfassungstext der Benachrichtigung."]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
+![Eine Android-Nachricht mit dem Titel „Dies ist der Titel für die Benachrichtigung.“ und dem Zusammenfassungstext „Dies ist der Zusammenfassungstext für die Benachrichtigung.“]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 Bei Push-Benachrichtigungen, die Bilder enthalten, wird der Nachrichtentext in der eingeklappten Ansicht angezeigt, während der Zusammenfassungstext als Bildunterschrift angezeigt wird, wenn die Benachrichtigung erweitert wird. 
 
@@ -384,7 +384,7 @@ Bei Push-Benachrichtigungen, die Bilder enthalten, wird der Nachrichtentext in d
 
 Mit der Funktion **Benutzerdefinierte URI** können Sie eine Web-URL oder eine Android-Ressource angeben, zu der navigiert werden soll, wenn die Benachrichtigung angeklickt wird. Wenn kein benutzerdefinierter URI angegeben ist, gelangen Benutzer durch Klicken auf die Benachrichtigung zu Ihrer App. Sie können die angepasste URI verwenden, um Deeplinks in Ihrer App zu setzen und Nutzer zu Ressourcen außerhalb Ihrer App zu leiten. Dies kann über die [Messaging-API]({{site.baseurl}}/api/endpoints/messaging/) oder unser Dashboard unter **Erweiterte Einstellungen** im Push Composer wie abgebildet festgelegt werden:
 
-![Die fortschrittliche Einstellung für Deeplinks im Braze Push Composer.]({% image_buster /assets/img_archive/deep_link.png %})
+![Die erweiterten Einstellungen für Deeplinking im Braze Push Composer.]({% image_buster /assets/img_archive/deep_link.png %})
 
 ### Benachrichtigungs-Anzeigepriorität {#notification-priority}
 
@@ -394,9 +394,9 @@ Die Einstellung für die Priorität der Benachrichtigungsanzeige wird auf Gerät
 
 Die Prioritätsstufe einer Push-Benachrichtigung wirkt sich darauf aus, wie Ihre Benachrichtigung im Vergleich zu anderen Benachrichtigungen in der Benachrichtigungsleiste angezeigt wird. Dies kann sich auch auf die Geschwindigkeit und die Art der Zustellung auswirken, da normale Nachrichten und Nachrichten mit geringerer Priorität mit etwas höherer Latenz oder in Stapeln gesendet werden, um den Akku zu schonen, während Nachrichten mit hoher Priorität immer sofort gesendet werden.
 
-In Android O wurde die Benachrichtigungspriorität eine Eigenschaft der Benachrichtigungskanäle. Sie müssen mit Ihrem Entwickler zusammenarbeiten, um die Priorität für einen Kanal während seiner Konfiguration festzulegen und dann das Dashboard verwenden, um den richtigen Kanal auszuwählen, wenn Sie Ihre Benachrichtigungstöne senden. Für Geräte, auf denen Android-Versionen vor O laufen, können Sie über das Braze-Dashboard und die Messaging API eine Prioritätsstufe für Android-Benachrichtigungen festlegen. 
+In Android O wurde die Benachrichtigungspriorität eine Eigenschaft der Benachrichtigungskanäle. Sie müssen mit Ihrem Entwickler zusammenarbeiten, um die Priorität für einen Kanal während seiner Konfiguration festzulegen und dann das Dashboard verwenden, um den richtigen Kanal auszuwählen, wenn Sie Ihre Benachrichtigungstöne senden. Bei Geräten, auf denen Android-Versionen vor O laufen, ist es möglich, über das Braze-Dashboard und die Messaging-API eine Prioritätsstufe für Android-Benachrichtigungen festzulegen. 
 
-Um Ihrer gesamten Nutzerbasis Nachrichten mit einer bestimmten Priorität zukommen zu lassen, empfehlen wir Ihnen, die Priorität indirekt über die [Konfiguration des Messaging-Kanals](https://developer.android.com/training/notify-user/channels#importance) festzulegen (um O+ Geräte zu targetieren) *und* die individuelle Priorität über das Dashboard zu senden (um <O Geräte zu targetieren).
+Um Ihre gesamte Nutzerbasis mit einer bestimmten Priorität zu benachrichtigen, empfehlen wir Ihnen, die Priorität indirekt über [die Konfiguration des Benachrichtigungskanals](https://developer.android.com/training/notify-user/channels#importance) festzulegen (für O+-Geräte) *und* die individuelle Priorität über das Dashboard zu senden (für <O-Geräte).
 
 Die Prioritätsstufen, die Sie bei Push-Benachrichtigungen für Android oder Fire OS einstellen können, sind:
 
@@ -409,7 +409,7 @@ Die Prioritätsstufen, die Sie bei Push-Benachrichtigungen für Android oder Fir
 | Min.      | Kontextuelle oder Hintergrundinformationen. | `-2` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Weitere Informationen finden Sie in der Dokumentation zu [den Android-Benachrichtigungen](http://developer.android.com/design/patterns/notifications.html) von Google.
+Weitere Informationen referenzieren Sie in der Dokumentation [zu Android-Benachrichtigungen](http://developer.android.com/design/patterns/notifications.html) von Google.
 
 ### Töne {#sounds}
 
@@ -417,8 +417,8 @@ In Android O wurden die Benachrichtigungstöne eine Eigenschaft der Benachrichti
 
 Für Geräte mit Android-Versionen vor O können Sie mit Braze den Ton einer einzelnen Push-Nachricht über den Dashboard Composer einstellen. Hierzu können Sie eine lokale Tonressource auf dem Gerät angeben (z. B. `android.resource://com.mycompany.myapp/raw/mysound`). Wenn Sie in diesem Feld "default" angeben, wird der standardmäßige Benachrichtigungston auf dem Gerät abgespielt. Dies kann über die [Messaging API]({{site.baseurl}}/api/endpoints/messaging/) oder das Dashboard unter **Erweiterte Einstellungen** im Push-Composer festgelegt werden.
 
-![Die Einstellung für den Fortschritt im Braze Push Composer.]({% image_buster /assets/img_archive/sound_android.png %})
+![Die erweiterten Soundeinstellungen im Braze Push Composer.]({% image_buster /assets/img_archive/sound_android.png %})
 
 Geben Sie die vollständige URI der Tonressource (z. B. `android.resource://com.mycompany.myapp/raw/mysound`) in die Eingabeaufforderung des Dashboards ein.
 
-Um Ihre gesamte Nutzerbasis mit einem bestimmten Ton zu benachrichtigen, empfehlen wir Ihnen, den Ton indirekt über die [Konfiguration des Benachrichtigungskanals](https://developer.android.com/training/notify-user/channels) festzulegen (um O+ Geräte zu targetieren) *und* den individuellen Ton über das Dashboard zu senden (um <O Geräte zu targetieren).
+Um Ihre gesamte Nutzerbasis mit einem bestimmten Ton zu benachrichtigen, empfehlen wir Ihnen, den Ton indirekt über [die Konfiguration des Messaging-Kanals](https://developer.android.com/training/notify-user/channels) festzulegen (für O+-Geräte) *und* den individuellen Ton über das Dashboard zu senden (für <O-Geräte).

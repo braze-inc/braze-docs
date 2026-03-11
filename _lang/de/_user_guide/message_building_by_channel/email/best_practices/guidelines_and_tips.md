@@ -16,8 +16,8 @@ Hier sind einige kurze Tipps, die Sie bei der Erstellung Ihrer Inhalte beachten 
 
 - Verwenden Sie bei der Formatierung Ihrer E-Mail Inline-Stylesheets als CSS.
 - Wenn Sie eine E-Mail-Template sowohl für die mobile als auch für die Desktop-Version verwenden möchten, sollten Sie die Breite unter 500 Pixel halten.
-- Die in das Template für die E-Mail hochgeladenen Bilder müssen kleiner als 5 MB sein. Unterstützte Formate sind PNG, JPEG und GIF.
-- Legen Sie keine Höhen und Breiten für Bilder fest, da dies zu unnötigem Leerraum in einer degradierten E-Mail führt.
+- Die Bilder dürfen maximal 5 MB groß sein. Wir empfehlen die Verwendung von PNG, JPEG oder GIF für maximale Kompatibilität. Bitte vermeiden Sie SVG und WebP, da viele gängige Clients für E-Mail diese Formate noch nicht unterstützen.
+- Bitte legen Sie keine Höhen und Breiten für Bilder fest, da dies zu unnötigen Leerzeichen in einer beeinträchtigten E-Mail führen kann.
 - `div`-Tags sollten nicht verwendet werden, da die meisten E-Mail-Clients ihre Verwendung nicht unterstützen. Verwenden Sie stattdessen verschachtelte Tabellen.
 - Vermeiden Sie die Verwendung von JavaScript, da es mit keinem ESP funktioniert.
 - Braze verbessert die Ladezeiten, indem es ein globales CDN verwendet, um alle E-Mail-Bilder zu hosten.
@@ -32,11 +32,11 @@ Da Spam-Filter sowohl auf eine HTML- als auch auf eine Nur-Text-Version einer Na
 Die Validierung wird für Dashboard-E-Mail-Adressen, Endnutzer-E-Mail-Adressen (Ihre Kund:innen) sowie Absender- und Antwort-E-Mail-Adressen einer Nachricht verwendet.
 {% endalert %}
 
-Die E-Mail-Überprüfung wird durchgeführt, wenn die E-Mail-Adresse einer Nutzerin oder eines Nutzers aktualisiert wurde oder über API, CSV-Upload, SDK in Braze importiert oder im Dashboard geändert wurde. Beachten Sie, dass Ihre E-Mail-Adressen keine Leerzeichen enthalten dürfen. Wenn Sie sie über die API senden, führen Leerzeichen zu einem 400-Fehler.
+Die E-Mail-Validierung erfolgt, wenn die E-Mail-Adresse einer Nutzer:in aktualisiert oder über die API, einen CSV-Upload oder das SDK in Braze importiert oder im Braze-Dashboard geändert wird. Bitte beachten Sie, dass Ihre E-Mail-Adressen keine Leerzeichen enthalten dürfen. Bei der Übermittlung über die API können Leerzeichen zu einem`400`Fehler führen.
 
 E-Mail-Adressen, die über die Braze-Server angesprochen werden, müssen gemäß [RFC 2822-Standards](https://datatracker.ietf.org/doc/html/rfc2822) validiert werden. Braze akzeptiert bestimmte Zeichen nicht und erkennt sie als ungültig an. Wenn eine E-Mail gebounced wird, markiert Braze die E-Mail als ungültig und der Status des Abos wird nicht geändert. 
 
-Informationen über nicht zulässige Zeichen und Regeln für die Überprüfung von E-Mails finden Sie unter [Überprüfung von E-Mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/#how-it-works).
+Informationen zu unzulässigen Zeichen und Regeln für die E-Mail-Validierung finden Sie unter [E-Mail-Validierung]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/#how-it-works).
 
 ### Absender- und Antwortadressen festlegen
 

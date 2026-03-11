@@ -106,7 +106,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endtab %}
 
 {% tab floating-points %}
-Braze는 데이터베이스 내에서 `float` 및 `double` 값을 동일하게 처리합니다. 더블 값으로 커스텀 속성을 설정하려면:
+Braze는 데이터베이스 내에서 `float` 및 `double` 값을 동일하게 처리합니다. 이중 값으로 커스텀 속성을 설정하려면:
 
 {% subtabs %}
 {% subtab swift %}
@@ -160,7 +160,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourD
 {% endtab %}
 
 {% tab array %}
-[커스텀 속성 배열]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)의 최대 요소 개수 기본값은 25개입니다. 최대 요소 수를 초과하는 배열은 최대 요소 수를 포함하도록 잘립니다. 개별 배열의 최댓값은 최대 100개까지 늘릴 수 있습니다. 이 최대값을 늘리고 싶다면 고객 서비스 매니저에게 문의하십시오.
+[커스텀 속성 배열]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)의 최대 요소 개수 기본값은 25개입니다. 최대 요소 수를 초과하는 배열은 최대 요소 수를 포함하도록 잘립니다. 개별 배열의 최대값은 500까지 증가할 수 있습니다. 이 한도를 500 이상으로 늘리려면 Braze 고객 성공 매니저에게 문의하십시오.
 
 `array` 값으로 커스텀 속성을 설정하려면:
 
@@ -194,7 +194,7 @@ AppDelegate.braze?.user.removeFromCustomAttributeArray(key: "array_name", value:
 
 ### 커스텀 속성 증가 또는 감소
 
-이 코드는 증분 사용자 지정 속성의 예시입니다. 커스텀 속성의 값을 `integer` 또는 `long` 값만큼 증가시킬 수 있습니다:
+이 코드는 증분 사용자 지정 속성의 예시입니다. 커스텀 속성의 값을 `integer` 또는 `long` 값으로 증가시킬 수 있습니다:
 
 {% tabs %}
 {% tab swift %}
@@ -236,7 +236,7 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 
 ### 커스텀 속성 중첩
 
-커스텀 속성 내에 속성을 중첩할 수도 있습니다. 다음 예제에서는 중첩된 속성을 가진 `favorite_book` 객체가 사용자 프로필의 커스텀 속성으로 설정됩니다. 자세한 내용은 [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)를 참조하십시오.
+커스텀 속성 내에 속성을 중첩할 수도 있습니다. 다음 예제에서는 `favorite_book` 객체에 중첩 속성이 설정되어 고객 프로필의 커스텀 속성으로 사용됩니다. 자세한 내용은 [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)을 참조하십시오.
 
 {% tabs %}
 {% tab swift %}
@@ -266,7 +266,7 @@ NSDictionary *favoriteBook = @{
 
 ### REST API 사용
 
-사용자 속성을 설정하거나 해제하려면 REST API를 사용할 수도 있습니다. 자세한 정보는 [사용자 데이터 엔드포인트]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)를 참조하십시오.
+REST API를 사용하여 사용자 속성을 설정하거나 해제할 수도 있습니다. 자세한 정보는 [사용자 데이터 엔드포인트]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)를 참조하십시오.
 
 ## 사용자 구독 설정
 

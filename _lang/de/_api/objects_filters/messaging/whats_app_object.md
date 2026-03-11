@@ -37,12 +37,12 @@ description: "Dieser Referenzartikel erklärt die verschiedenen Komponenten des 
   "header_variables": (optional, header variables object) an object to specify header variable values for specified template_name, required if the header has variables; see object specification below,
   "body_variables": (optional, body variable object) an object to specify body variable values for specified template_name, required if the body has variables; see object specification below,
   "button_variables": (optional, button variables object) an object to specify button variable values for specified template_name, required if buttons have variables; see object specification below,
-  "header_image_uri": (optional, string) URI to the header image, if the header is of type IMAGE in specified template_name. Only IMAGE and TEXT header types are supported by the messages/send API.
+  "header_media_uri": (optional, string) URI to the header media, if the header is of type IMAGE in specified template_name. Only IMAGE and TEXT header types are supported by the messages/send API.
 }
 ```
 
 {% alert important %}
-**Einschränkungen beim Senden von Medien:** Mediensendungen (Dokumente, Videos und andere Medientypen) werden von der `messages/send` API nicht unterstützt. Für Template Nachrichten, die über die API gesendet werden, werden nur die Header-Typen TEXT und IMAGE unterstützt. Wenn Ihre WhatsApp-Vorlage einen DOCUMENT-, VIDEO- oder einen anderen Medientyp-Header verwendet, können Sie sie nicht über die `messages/send` API senden. Verwenden Sie die [Kampagnen getriggerte API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) oder das Braze-Dashboard, um Templates mit Medienkopfzeilen zu versenden.
+**Einschränkungen beim Versand von Medien:** Medien-Sendungen (Dokumente, Videos und andere Medientypen) werden von der`messages/send`API nicht unterstützt. Für über die API gesendete Templates werden ausschließlich die Header-Typen TEXT und IMAGE unterstützt. Wenn Ihr WhatsApp-Template eine DOCUMENT-, Video- oder andere Medien-Header verwendet, können Sie diese nicht über die`messages/send`API versenden. Bitte verwenden Sie die [Campaigns Triggered API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) oder das Braze-Dashboard, um Templates mit Medien-Headern zu versenden.
 {% endalert %}
 
 ##### Kopfzeilen-Variablen Objekt
@@ -50,7 +50,9 @@ description: "Dieser Referenzartikel erklärt die verschiedenen Komponenten des 
 Mit dem Objekt `header_variables` können Sie Werte für Kopfvariablen in der WhatsApp-Vorlage angeben. Jeder Schlüssel ist der Index der WhatsApp-Vorlagevariable (null-indiziert), die durch den angegebenen Wert ersetzt werden soll.
 
 {% alert note %}
-**Anforderung an den Kopftyp:** Sie können `header_variables` nur mit Templates verwenden, die Überschriften vom Typ TEXT haben. Für IMAGE-Kopfzeilen verwenden Sie stattdessen `header_image_uri`. DOCUMENT, VIDEO und andere Medien-Header-Typen werden von der `messages/send` API nicht unterstützt.
+Sie können dies`header_variables`ausschließlich mit Templates verwenden, die Überschriften vom Typ TEXT enthalten. Für IMAGE-Header verwenden Sie bitte`header_media_uri` stattdessen. Die Header-Typen DOCUMENT, Video und andere Medien werden von der`messages/send`API nicht unterstützt.<br><br>
+
+`header_image_uri` wird ausschließlich für Antwortnachrichtentypen (wie z. B. `quick_reply_response_message`) verwendet, nicht für Templates.
 {% endalert %}
 
 ```json
@@ -94,7 +96,7 @@ Mit dem Objekt `button_variables` können Sie Werte für Schaltflächenvariablen
 
 ```json
 {
-  "$TEMPLATE_VARIABLE_INDEX_1": "$TEMPLATE_VARIABLE_VALUE_1",
+  "$TEMPLATE_VARIABLE_INDEX_1": "$TEMPLATE_VARIABLE_VALUE_1"
 }
 ```
 
@@ -262,7 +264,7 @@ Der Typ `list_response_message` ermöglicht es Ihnen, in WhatsApp eine listenbas
 
 #### flow_response_message
 
-Der Typ `flow_response_message` ermöglicht es Ihnen, in WhatsApp eine flussbasierte Nachricht zu versenden. Dieser Nachrichtentyp enthält einen interaktiven Ablauf, den der Empfänger:in abschließen kann.
+Mit diesem`flow_response_message`Typ ist es zulässig, eine flussbasierte Nachricht in WhatsApp zu senden. Dieser Nachrichtentyp umfasst einen interaktiven Ablauf, den die Empfänger:innen abschließen können.
 
 ```json
 {
@@ -276,7 +278,7 @@ Der Typ `flow_response_message` ermöglicht es Ihnen, in WhatsApp eine flussbasi
 }
 ```
 
-##### Flow Button Objekt
+##### Flow-Button-Objekt
 
 ```json
 {
@@ -287,9 +289,9 @@ Der Typ `flow_response_message` ermöglicht es Ihnen, in WhatsApp eine flussbasi
 
 ##### Einschränkungen
 
-- **flow_button**: Sie müssen sowohl die Bildunterschrift als auch `flow_id` enthalten.
+- **flow_button**: Es müssen sowohl die Bildunterschrift als auch die Datei`flow_id` . enthalten sein.
 - **Bildunterschrift**: Maximal 20 Zeichen.
-- **flow_id**: Muss eine gültige veröffentlichte Flow ID sein.
+- **flow_id**: Es muss sich um eine gültige, veröffentlichte Flow-ID handeln.
 
 ##### Beispiel
 

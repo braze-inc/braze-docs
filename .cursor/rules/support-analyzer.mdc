@@ -31,6 +31,8 @@ For each unique Case ID, determine if docs action is needed:
 | **Support-Only** | Account-specific, requires Braze internal access, or one-off config | Skip (no docs change) |
 | **Bug/Product** | Issue requiring code fix, not docs | Skip (escalate to eng) |
 
+> **Never document workarounds or bugs.** Documentation must describe how the product works — or is intended to work — not temporary workarounds for issues that will be (or should be) fixed. If a ticket's resolution relies on a workaround for a product defect, categorize it as **Bug/Product** and skip it. Workaround content creates maintenance burden and misleads customers once the underlying issue is resolved.
+
 ---
 
 ## Step 2: Per-Ticket Analysis
@@ -38,7 +40,12 @@ For each unique Case ID, determine if docs action is needed:
 For each **actionable** ticket:
 
 1. **Extract Q&A** - Distill the core question and resolution from message thread
-2. **Verify** - Cross-reference with source code of the Main Product at `../platform`. Do not rely solely on support cases or documentation to verify. Always cross-reference with source code. If you can verify the resolution against the source code, add a reference to the source file(s). If you cannot verify the resolution, say that you could not verify the resolution against the source code.
+2. **Verify**
+   - Cross-reference the behavior with the Main Product source at `../platform`.
+   - Do not rely solely on support cases or documentation. Always confirm against the source code.
+   - If you can verify the resolution, add references to the relevant source file(s) in your analysis output only.
+   - If you cannot verify the resolution against the source code, explicitly state that in your analysis output.
+   - **Never publish Braze source code paths in PR descriptions** (see Step 7).
 3. **Identify Target** - Which existing doc page should be updated? (or flag as new page)
 4. **Document source support case number** - Which case numbers were analyzed?
 
@@ -73,11 +80,10 @@ After processing all tickets:
 
 For each docs update:
 
-1. Read the target file to understand existing structure
-2. Draft changes following conventions in the codebase based on the style 
-guides in `_docs/_contributing/style_guide/*`
+1. **Prefer refining existing content over adding new elements** — After identifying the relevant file(s), read the surrounding content carefully. Look for opportunities to clarify, restructure, or expand language that's already there. Adjusting existing prose is almost always better than appending a new alert, callout, or FAQ entry.
+2. Draft changes following conventions in the codebase based on the style guides in `_docs/_contributing/style_guide/*`
 3. Keep additions concise and scannable (bullets, tables, code blocks)
-4. Add to FAQ sections when appropriate (see `_docs/_user_guide/**/faq.md` patterns)
+4. **Use alerts and FAQ entries as a last resort** — Only add a new alert, callout, or FAQ entry when the information genuinely cannot be worked into existing prose. These elements contribute to doc bloat and should be reserved for content that doesn't fit naturally elsewhere.
 
 ---
 
@@ -96,12 +102,16 @@ Stage and Commit all changes in `_docs` with a meaningful message derived from t
 Create each PR with the naming conventin: `[SA] update summary`
 Example: `[SA] Add FAQ entry about machine opens vs other opens`
 
+Always add the label `support analyzer` to the PR by including `--label "support analyzer"` in the `gh pr create` command.
+
+**Do not publish Braze source code paths in the PR description.** Even when reference repos (e.g. `../platform`) were used to verify content, never list or cite file paths from those repos. Instead, use a phrase such as "Verified against Braze source code."
+
 Cursor fills out the PR automatically:
 
 ```text
 # Changes
 * [If this was related to a Docs discrepancy, make sure to note to tag the Eng owner in the description]
-* [Cursor analyzes code changes and lists them]
+* [Cursor analyzes code changes and lists them — do not include paths to Braze source repos; say "Verified against Braze source code" if applicable]
 * List of changes to help the reviewer understand the scope
 * List the Salesforce case IDs that were addressed in the update in a bulleted list of URLs with the format `https://braze.lightning.force.com/lightning/r/Case/<case ID>/view`
 ```

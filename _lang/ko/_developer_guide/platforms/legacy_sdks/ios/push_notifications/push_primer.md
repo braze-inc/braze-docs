@@ -1,5 +1,5 @@
 ---
-nav_title: "푸시 프라이머"
+nav_title: "푸시 프라이머 밀어내기"
 article_title: iOS용 푸시 프라이머
 page_order: 6
 page_type: reference

@@ -34,6 +34,11 @@ collections:
     default_nav_url: basics/
   partners:
     title: 기술 파트너
+  releases:
+    title: 새 소식
+    output: true
+    default_nav_url: home/
+    page_order: 6
   help:
     title: 도움말
   hidden: # Hidden pages not directly linked via navigation

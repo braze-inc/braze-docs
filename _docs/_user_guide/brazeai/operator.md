@@ -1,149 +1,111 @@
 ---
 nav_title: Operator
 article_title: BrazeAI Operator
-page_order: 8
+page_order: 7
 alias: /operator/
-description: "This reference article covers BrazeAI Operator, an AI-powered assistant built into the Braze dashboard."
+toc_headers: h2
+description: "Learn how to access and use BrazeAI Operator<sup>TM</sup>, an AI-powered assistant built into the Braze dashboard, including its features and best practices."
 ---
 
 # BrazeAI Operator
 
-> BrazeAI<sup>TM</sup> Operator is an AI-powered assistant built into the Braze dashboard. Operator provides answers, troubleshooting guidance, and best practices within your workflow.
+> BrazeAI Operator<sup>TM</sup> is an AI-powered assistant built into the dashboard. Operator helps get things done—answering questions, walking through setup, troubleshooting issues, and brainstorming ideas.
 
-{% alert important %}
-BrazeAI<sup>TM</sup> Operator is in a private beta with limited functionality. For help getting started, contact your customer success manager.
-{% endalert %}
+## Access Operator
 
-## About Operator
+Open Operator from any page in the Braze dashboard.  
 
-Operator is a built-in AI assistant in the Braze dashboard. It answers questions, suggests next steps, and guides you through tasks—all within your workflow.
+1. Select **BrazeAI Operator<sup>TM</sup>** next to your user profile.
 
-During the beta, Operator supports **Ask** mode only. You can:
+![The BrazeAI Operator icon next to a user profile.]({% image_buster /assets/img/operator/operator_icon.png %})
 
-- Get answers from Braze documentation
-- Troubleshoot issues using [page-aware context](#page-aware-context)
-- Learn best practices and onboarding guidance
+{:start="2"}
+2. The Operator chat panel opens on the right-hand side of the screen.
+
+![The Operator chat panel.]({% image_buster /assets/img/operator/operator_chat_panel.png %})
+
+{% alert tip %}
+Maximize to expand the panel for easier reading, or minimize to keep Operator available while working.  
+{% endalert %} 
+
+## Use Operator
+
+Describe what you're trying to accomplish using natural language. Prompts can range from simple questions to complex requests:
+
+- **Simple:** Why isn't my Liquid rendering?
+- **Complex:** How can I make the `abort_message` tag of my message include the user attribute that caused the abort?
+
+Operator can provide step-by-step instructions, links to Braze documentation, and plain-language explanations. Clear and specific questions lead to more helpful responses. Operator uses [GPT-5.2](https://platform.openai.com/docs/models/gpt-5.2), which offers strong reasoning and is suited for complex, multi-step tasks. 
+
+## Best practices
+
+Treat Operator as a conversation, not a search engine. Short, natural prompts work best.
+
+- **Be specific:** Instead of "Tell me about Canvas", try "How do I use Action Paths in Canvas?".  
+- **Ask follow-up questions:** If the first response doesn't address your need, ask for clarification or additional details.
+- **Use page-aware context:** Operator understands your location in Braze. Open Operator while viewing the relevant page for the most accurate results.
+
+## Customize your experience
+
+### Apply brand guidelines
+
+Add brand guidelines as context to Operator queries so responses match your brand's voice, tone, and personality. Operator uses the brand guidelines configured in your workspace, which helps ensure consistent messaging when it suggests copy or explains features.
+
+To set up brand guidelines, go to **Settings** > **Brand Guidelines**. For more, see [Brand Guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/).
+
+![Selecting brand guidelines in the Operator chat panel.]({% image_buster /assets/img/operator/operator_brand_guidelines.png %})
+
+### Leverage page-aware context
+
+Operator automatically understands your location in Braze and tailors responses based on that context. For example, when you open Operator while building a Canvas, it can suggest relevant steps or provide guidance about Canvas features without you having to explain where you are in your workflow.
+
+This context-awareness means you can ask shorter, more natural questions like "How do I add a delay?" instead of "How do I add a delay step in a Canvas workflow?"
+
+## Work with Operator responses
+
+### Get started with suggested prompts
+
+When you open Operator, suggested prompts appear based on common tasks and your current page. Select one to get started quickly, or type your own custom question.
+
+### Understand how Operator thinks
+
+Operator shows its reasoning steps in collapsible sections labeled **Reasoned**. Select the dropdown to expand these sections and see how Operator determined an answer. This is helpful when you want to understand the logic behind a suggestion or verify the approach.
+
+![The collapsed "Reasoned" dropdown in an Operator response.]({% image_buster /assets/img/operator/operator_reasoning_collapsed.png %}){:style="max-width:40%"}
+
+### Take action with Operator
+
+Operator can propose and execute changes directly in the Braze dashboard, such as filling in form fields, updating settings, or generating content. Each proposed change is presented as an action card for you to review and approve before it takes effect. For more on how this works, see [Reviewing actions]({{site.baseurl}}/user_guide/brazeai/operator/reviewing_actions/).
+
+## Manage your session
+
+### Stop a response
+
+While Operator is generating a response, the **Send** button becomes a **Stop** button. Select **Stop** to end the response early if you need to rephrase your question or if the response is going in the wrong direction.
+
+### Clear your history
+
+To start fresh or remove sensitive information from the conversation, select **Clear chat history**. This removes all current content and resets the conversation context.
+
+### Provide feedback
+
+At the bottom of each response, use the thumbs up or thumbs down buttons to provide quick feedback. Your feedback helps improve Operator's answers over time.
+
+## Data privacy and security
+
+### HIPAA compliance
+
+AI Operator utilizes multi-turn conversation technology that is currently ineligible for OpenAI's Zero Data Retention policy. AI Operator uses OpenAI's Modified Abuse Monitoring data retention policy, but AI Operator is not covered by the Business Associate Agreement (BAA) between Braze and OpenAI. Users should not prompt AI Operator to access Protected Health Information (PHI) stored in Braze or otherwise submit PHI to this feature.
 
 ### Model providers as sub-processors or third-party providers
 
-Where Customer uses an integration with an LLM provider provided by Braze through the Braze Services (“Braze-provided LLM”), the providers of such Braze-provided LLM act as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between Customer and Braze. BrazeAI Operator integrates with OpenAI.
+When you use an integration with an LLM provider provided by Braze through the Braze Services ("Braze-provided LLM"), the providers of such Braze-provided LLM act as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. BrazeAI Operator<sup>TM</sup> integrates with OpenAI.
 
-If Customers chooses to bring their own API Key to integrate with Braze AI Operator, the provider of Customer’s own LLM subscription will be considered a Third Party Provider, as defined in the contract between Customer and Braze. 
+### How data is used with OpenAI
 
-### How is my data used and sent to OpenAI?
+To generate AI output through BrazeAI features that leverage OpenAI ("Output"), Braze will send certain information ("Input") to OpenAI. Input consists of your prompts, the content displayed in the dashboard, and workspace data relevant to your queries. Per [OpenAI's API platform commitments](https://openai.com/enterprise-privacy/), data sent to OpenAI's API via Braze is not used to train or improve OpenAI models. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content, including Output.
 
-In order to generate AI output through Braze AI features that Braze identifies as leveraging OpenAI (“Output”), Braze will send your prompts, the content displayed in the Dashboard and Workspace data relevant to your queries, as applicable (“Input”) to OpenAI. Per [OpenAI’s API platform commitments](https://openai.com/enterprise-privacy/), data sent to OpenAI’s API via Braze is not used to train or improve OpenAI models. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content generally, including Output.
+## Next steps
 
-## How to access Operator
-
-You can open Operator from any page in the Braze dashboard.  
-
-1. Select **BrazeAI<sup>TM</sup> Operator**, next to your user profile.
-
-![The BrazeAI Operator icon next to a user profile.]({% image_buster /assets/img/operator/operator_profile.png %}){:style="max-width:60%"}
-
-{: start="2"} 
-2. The Operator chat panel will open on the right-hand side of the screen.
-
-![The chat panel for Operator.]({% image_buster /assets/img/operator/operator_panel.png %})
-
-{% alert tip %}
-Try maximizing to expand the panel for easier reading, or minimizing it to keep Operator available while you continue working.  
-{% endalert %} 
-
-## How to talk to Operator
-
-Use prompts to communicate with Operator. The best approach is to speak naturally—like you would a coworker or a friend. Your prompts can range from simple questions to complex requests:
-
-- **Simple:** How can I ensure that users don't get cart abandonment emails while they are still on the site shopping?
-- **Complex:** How can I make the `abort_message` tag of my message include the user attribute that caused the abort?
-
-Operator can provide step-by-step instructions, links to Braze docs, and plain-language explanations. The clearer and more specific your question, the more useful the response will be. 
-
-### Best practices
-
-Think of Operator as a conversation, not a search engine. Short, natural prompts usually work best.
-
-- **Be specific:** Instead of "Tell me about Canvas", try "How do I use Action Paths in Canvas?".  
-- **Use follow-ups:** If the first response isn’t what you need, ask clarifying questions. Operator can refine answers.
-- **Rely on context:** Operator knows what page you're on in Braze. Open Operator while you’re on the page you’re working with for the most relevant results.
-
-## Features
-
-Operator includes the following features during beta:
-
-### GPT models
-
-You can select from these GPT models to use for different request types with Operator:
-
-- [GPT-5 nano](https://platform.openai.com/docs/models/gpt-5-nano)
-- [GPT-5 mini](https://platform.openai.com/docs/models/gpt-5-mini)
-- [GPT-5](https://platform.openai.com/docs/models/gpt-5)
-- [GPT-5.1](https://platform.openai.com/docs/models/gpt-5.1) (default)
-
-![Dropdown for different GPT models to choose.]({% image_buster /assets/img/operator/operator_model.png %}){:style="max-width:70%"}
-
-### Page-aware context
-
-Operator understands the page you're working on in Braze and can tailor responses based on that context. For example, if you open Operator while building a Canvas, it can suggest steps or provide guidance relevant to Canvas without you needing to explain where you are. 
-
-### Suggested prompts
-
-When you open Operator, you’ll see a few suggested prompts to help you get started. Select one to get started or type your own question.
-
-### Viewing reasoning
-
-Operator shows its reasoning steps in collapsible sections labeled **Reasoned**. Select the dropdown to expand these sections and see how Operator arrived at an answer.
-
-![Dropdown for "Reasoned" expanded with more details on how Operator answered.]({% image_buster /assets/img/operator/operator_reasoning.png %}){:style="max-width:50%"}
-
-### Suggested actions
-
-In some cases, Operator will recommend next steps and provide direct links to the relevant pages in your Braze dashboard. For example, if you ask about email bounce rates, Operator may link you to your **Deliverability Center** page. These shortcuts help you take action faster without needing to navigate manually.
-
-### Stopping generation
-
-While the Operator is generating a response, the **Send** button becomes a **Stop** button. If you'd like to end the response early, select **Stop**.
-
-### Clearing chat history
-
-To reset your conversation, select **Clear chat history**. This removes the current content so you can start fresh.
-
-### Maximizing and minimizing the panel
-
-You can use the **maximize** button to expand Operator for easier reading, or **minimize** to keep the panel tucked away while you continue working in Braze.
-
-### Sending feedback
-
-At the bottom of each response, use the thumbs up or thumbs down buttons to provide quick feedback. This helps improve Operator’s answers.
-
-## Troubleshooting
-
-| Issue | Troubleshooting |
-| --- | --- |
-| No response | Try refreshing the page and re-opening the Operator panel. |
-| Off-topic answers | Reframe your question more specifically. Mention the feature or workflow you’re asking about. |
-| Error messages | If Operator can’t stream content to you, you may see a “Try again” prompt. Operator may be temporarily unavailable or your connection was interrupted. Retry after a few minutes. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-## Limitations
-
-Operator is designed to help you navigate Braze and get work done more efficiently, but there are some current limits to keep in mind:
-
-### No access to your data
-
-While Operator has access to the context of the work you're doing in Braze, Operator can’t query or return answers about your company’s data stored in Braze. For example, it **can’t** respond to requests like:
-
-- “Give me a list of all my email campaigns from last year.”
-- “Show me which segments had the highest engagement last quarter.”
-- “Analyze my Canvas performance and suggest improvements.”
-
-### Beta stability
-
-As a private beta, Operator may have occasional errors, interruptions, or incomplete features.
-
-If you’re unsure whether a question is supported, try phrasing it in terms of how Operator can help you navigate or take actions inside the Braze dashboard, rather than pulling analytics or historical data.
-
-### Number of messages sent
-
-There is a limit of how many messages you can send to Operator. We recommend using the default GPT-5 mini or GPT-5 nano for your queries and using GPT-5 judiciously for more complex tasks.
+- [Reviewing actions]({{site.baseurl}}/user_guide/brazeai/operator/reviewing_actions/): Learn how to review and approve Operator's proposed changes
+- [Troubleshooting]({{site.baseurl}}/user_guide/brazeai/operator/troubleshooting/): Reference common issues and solutions
