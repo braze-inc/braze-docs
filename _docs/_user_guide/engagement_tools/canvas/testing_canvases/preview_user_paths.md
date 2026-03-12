@@ -99,9 +99,9 @@ When previewing user paths, consider removing the Connected Content that alters 
 
 Webhooks execute when test messages are sent, but not during the test run. Similar to Connected Content, consider removing webhooks that alter user profiles or data referenced in other Canvases or campaigns.
 
-## Context variables and seed groups
+## Context variables and Seed Groups
 
-Seed group sends bypass the Canvas flow and do not execute [Context steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context). If your email or message content references context variables, seed group recipients receive the message without that data populated. To test messages that rely on context variable data, use the **Test Canvas** preview with test sends instead of seed groups.
+Seed Groups send seed copies of email steps when a user reaches an email step in the Canvas. These seed copies are not sent as part of the Seed Group recipients' own Canvas journeys, so Braze does not execute [Context steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) or evaluate context variables for those recipients. If your email content references context variables, Seed Group recipients receive a seed copy without that data populated. To test messages that rely on context variable data, use the **Test Canvas** preview with test sends instead of Seed Groups.
 
 ## Use case
 
