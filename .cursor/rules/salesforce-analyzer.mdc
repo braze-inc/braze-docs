@@ -244,7 +244,7 @@ After drafting, verify the new or updated content against the appropriate Braze 
 
 1. **Choose the right repo(s)** — Use the reference-repos table to pick the source-of-truth for the content (e.g., `platform` for product/backend behavior, `braze-android-sdk` / `braze-swift-sdk` / `braze-web-sdk` for SDK behavior, `liquid` for Liquid templating, `grapesjs` for the drag-and-drop editor). Do not rely on the SF article or existing docs alone; confirm claims against source code.
 2. **Verify technical accuracy** — Cross-reference any new or changed claims (APIs, UI labels, behavior, configuration) with the relevant repo. If you can verify, correct the draft if it disagrees with the source. If you cannot verify against source code, leave the content as-is but do not claim verification in the PR.
-3. **Keep repos current** — If you rely on a reference repo for verification, ensure it is up to date (e.g., run `git pull` in that repo from the parent folder containing braze-docs and the reference repos) before vetting.
+3. **Keep repos current** — If you rely on a reference repo for verification, ensure it is up to date (e.g., run `git pull` in that repo from the parent folder containing `braze-docs` and the reference repos) before vetting.
 4. **PR descriptions** — When content was verified using these Braze source repos, never publish code paths or file paths from those repos in the PR description or other public output. Use a phrase such as **"Verified against Braze source code."** instead.
 
 ## Batch processing
