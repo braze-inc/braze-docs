@@ -864,10 +864,6 @@
   "Prediction Analytics": "Prognose-Analytics",
   "predictions": "Prognosen",
   "predictive analytics": "Predictive Analytics",
-  "predictive churn": "voraussichtliche Abwanderung",
-  "predictive purchase": "voraussichtlicher Kauf",
-  "Predictive Purchases": "voraussichtliche Käufe",
-  "predictive suite": "Predictive Suite",
   "predictive tool": "Prognose-Tool",
   "preheader": "Preheader",
   "Prerequisites": "Voraussetzungen",
@@ -1280,5 +1276,9 @@
   "Feature Flags": "Feature-Flags",
   "BrazeAI": "BrazeAI",
   "BrazeAI Operator": "BrazeAI Operator",
-  "BrazeAI Decisioning Studio": "BrazeAI Decisioning Studio"
+  "BrazeAI Decisioning Studio": "BrazeAI Decisioning Studio",
+  "Predictive Churn": "Predictive Churn",
+  "Predictive Events": "Predictive Events",
+  "Predictive Purchases": "Predictive Purchases",
+  "Predictive Suite": "Predictive Suite"
 }

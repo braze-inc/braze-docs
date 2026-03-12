@@ -762,8 +762,6 @@
   "prediction analytics": "análisis de predicciones",
   "predictive analytics": "análisis predictivo",
   "Predictive Churn": "Predictive Churn",
-  "predictive purchase": "compra predictiva",
-  "predictive suite": "Predictive Suite",
   "predictive tool": "herramienta predictiva",
   "preheader": "preencabezado",
   "Prerequisites": "Requisitos previos",
@@ -1135,5 +1133,8 @@
   "BrazeAI": "BrazeAI",
   "BrazeAI Operator": "BrazeAI Operator",
   "BrazeAI Decisioning Studio": "BrazeAI Decisioning Studio",
-  "AI Copywriting Assistant": "el asistente de redacción con inteligencia artificial"
+  "AI Copywriting Assistant": "el asistente de redacción con inteligencia artificial",
+  "Predictive Events": "Predictive Events",
+  "Predictive Purchases": "Predictive Purchases",
+  "Predictive Suite": "Predictive Suite"
 }

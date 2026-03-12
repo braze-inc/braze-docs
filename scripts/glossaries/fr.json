@@ -550,7 +550,6 @@
   "Prediction Analytics": "analyses prédictives",
   "predictions": "prédictions",
   "predictive analytics": "analyse prévisionnelle",
-  "predictive churn": "prédiction du taux d'attrition",
   "Predictive Suite": "Predictive Suite",
   "predictive tool": "outil prédictif",
   "preheader": "accroche",
@@ -818,5 +817,8 @@
   "zero-party data": "données zero-party",
   "Feature Flags": "Indicateurs de fonctionnalité",
   "BrazeAI Operator": "BrazeAI Operator",
-  "BrazeAI Decisioning Studio": "BrazeAI Decisioning Studio"
+  "BrazeAI Decisioning Studio": "BrazeAI Decisioning Studio",
+  "Predictive Churn": "Predictive Churn",
+  "Predictive Events": "Predictive Events",
+  "Predictive Purchases": "Predictive Purchases"
 }

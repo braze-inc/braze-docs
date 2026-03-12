@@ -510,9 +510,6 @@
   "prediction": "予測",
   "prediction audience": "予測対象ユーザー",
   "predictive analytics": "予測分析",
-  "predictive churn": "解約予測",
-  "predictive purchase": "購入予測",
-  "predictive suite": "Predictive Suite",
   "preference center": "ユーザー設定センター",
   "Prerequisites": "前提条件",
   "preview": "プレビュー",
@@ -758,5 +755,9 @@
   "Zeotap": "Zeotap",
   "Feature Flags": "フィーチャーフラグ",
   "BrazeAI Operator": "BrazeAI Operator",
-  "BrazeAI Decisioning Studio": "BrazeAI Decisioning Studio"
+  "BrazeAI Decisioning Studio": "BrazeAI Decisioning Studio",
+  "Predictive Churn": "Predictive Churn",
+  "Predictive Events": "Predictive Events",
+  "Predictive Purchases": "Predictive Purchases",
+  "Predictive Suite": "Predictive Suite"
 }

@@ -650,8 +650,6 @@
   "Prediction": "예측",
   "Prediction Analytics": "예측 분석",
   "predictive analytics": "예측 기반 분석",
-  "predictive churn": "예측 이탈",
-  "predictive purchase": "예측 구매",
   "Predictive Suite": "Predictive Suite",
   "predictive tool": "예측 기반 툴",
   "preheader": "프리헤더",
@@ -956,5 +954,8 @@
   "zero-party data": "제로파티 데이터",
   "Feature Flags": "기능 플래그",
   "BrazeAI Operator": "BrazeAI Operator",
-  "BrazeAI Decisioning Studio": "BrazeAI Decisioning Studio"
+  "BrazeAI Decisioning Studio": "BrazeAI Decisioning Studio",
+  "Predictive Churn": "Predictive Churn",
+  "Predictive Events": "Predictive Events",
+  "Predictive Purchases": "Predictive Purchases"
 }
