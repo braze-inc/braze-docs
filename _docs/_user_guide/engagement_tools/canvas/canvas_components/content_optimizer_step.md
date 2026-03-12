@@ -111,7 +111,7 @@ Your selected optimization event applies to all content components in this step.
 ## Best practices
 
 - If you’re optimizing to clicks, include subject lines in your tests as this can help lead to clicks by the opens.
-- If you’re optimizing to opens, keep your testing focused on the subject or email pre-header or both.
+- If you’re optimizing to opens, keep your testing focused on the subject line or email pre-header or both.
 
 ## Analytics
 
