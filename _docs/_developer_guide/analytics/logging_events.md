@@ -362,3 +362,29 @@ After [adding your user as a test user]({{site.baseurl}}/user_guide/administrati
 1. Perform the custom event within the app.
 2. Wait for roughly 10 seconds for the data to flush.
 3. Refresh the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) to view the custom event and the event property value that was passed with it.
+
+## Troubleshooting custom events
+
+Use these scenarios to troubleshoot custom event logging across SDKs.
+
+### Verifying custom event logging setup
+
+If custom events aren't appearing as expected, confirm that your developer team has implemented custom event logging for the right app action.
+
+- Ask your developer team to verify that the event is logged correctly and triggered from the expected user action.
+- When your team opens a ticket with Braze Support, include [verbose logs]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging/) and relevant code snippets.
+- If your developer team can't identify the issue, open a [Braze Support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/).
+
+### Verifying the custom event trigger
+
+If a custom event doesn't appear, the tracked action in your app may not match the action you're testing.
+
+- Confirm with your developer team which app action triggers the custom event.
+- Check for deprecated code paths after SDK upgrades, such as references to `appboy` instead of `braze`.
+
+### Custom events are logged to an anonymous profile
+
+If you don't identify a user before logging a custom event, Braze can associate that event with an anonymous profile.
+
+- Call `changeUser()` before performing the custom event so Braze logs it to an identified user profile.
+- Test with an identified test user, then review the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/).
