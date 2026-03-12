@@ -99,6 +99,10 @@ When previewing user paths, consider removing the Connected Content that alters 
 
 Webhooks execute when test messages are sent, but not during the test run. Similar to Connected Content, consider removing webhooks that alter user profiles or data referenced in other Canvases or campaigns.
 
+## Context variables and seed groups
+
+Seed group sends bypass the Canvas flow and do not execute [Context steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context). If your email or message content references context variables, seed group recipients receive the message without that data populated. To test messages that rely on context variable data, use the **Test Canvas** preview with test sends instead of seed groups.
+
 ## Use case
 
 In this scenario, the Canvas is set up to target users who haven't had a session in an app. This journey includes a Message step with a welcome email, a Delay step set for one day, and an Audience Paths step that splits into two paths: users with at least one session, and everyone else. Depending on which audience path a user falls into, the subsequent Message step is sent.
