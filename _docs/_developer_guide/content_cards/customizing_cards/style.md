@@ -512,8 +512,7 @@ if let card = card as? Braze.ContentCard.ClassicImage,
 
 ```kotlin
 val darkModeImage = card.extras["dark_mode_image"]
-val isDarkMode = resources.configuration.uiMode and
-    Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
+val isDarkMode = (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
 if (isDarkMode && darkModeImage != null) {
     // Use darkModeImage for the image
 }
