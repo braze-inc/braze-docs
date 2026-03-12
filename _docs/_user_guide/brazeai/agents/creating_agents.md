@@ -16,6 +16,7 @@ Before you start, you'll need the following:
 
 - [Permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) to access the **Agent Console** in your workspace. Check with your Braze admins if you don’t see this option.  
 - Permission to create and edit custom AI Agents.
+- An [AI model provider]({{site.baseurl}}/partners/ai_model_providers) integrated with Braze.
 - An idea of what you want the agent to accomplish. Braze Agents can support the following actions:  
    - **Messaging:** Generate subject lines, headlines, in-product copy, or other content.  
    - **Decisioning:** Route users in Canvas based on behavior, preferences, or custom attributes.  

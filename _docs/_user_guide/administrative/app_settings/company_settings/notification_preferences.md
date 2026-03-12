@@ -39,6 +39,7 @@ The following table describes available notifications and which channels are use
 | Scheduled Campaign Finished Sending | Notifies recipients when a scheduled campaign has finished sending. | Email, Webhook |
 | Weekly Analytics Report | Sends a summary of the past week's workspace activity to recipients every Monday. Recipients receive a summary for each workspace that they belong to. | Email |
 | Daily Canvas/Campaign Entry Volume Limits | Sends notifications each time a send limit is reached. | Email |
+| Agents Console Error | Notifies recipients when an [agent]({{site.baseurl}}/user_guide/brazeai/agents) encounters an error. | Email |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Weekly analytics reporting

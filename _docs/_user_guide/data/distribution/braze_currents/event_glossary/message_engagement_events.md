@@ -133,7 +133,7 @@ This is the Kafka record schema for when an Agent Console agent is executed.
 Agent
 {% endapitags %}
 
-This is the Kafka record schema for when a tool is executed.
+This is the Kafka record schema for when a tool is executed. A tool is a function given to an LLM to fulfill an objective.
 
 {% tabs %}
 {% tab Cloud Storage %}
