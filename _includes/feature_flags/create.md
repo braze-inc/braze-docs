@@ -834,7 +834,7 @@ featureFlagsStreamSubscription.cancel();
 {% subtabs %}
 {% subtab Flutter SDK 18.0.0+ %}
 
-Feature flag data is automatically forwarded from the native iOS layer. No additional setup is required.
+Feature flag data is automatically forwarded from both the Android and iOS native layers. No additional setup is required.
 
 {% endsubtab %}
 {% subtab Flutter SDK 17.1.0 and earlier %}
