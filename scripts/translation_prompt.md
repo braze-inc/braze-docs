@@ -43,6 +43,7 @@ Preserve all of the following exactly as they appear in the English source:
 - **Dotted identifiers** (e.g., `Braze.iOS.BrazeLocation`) — preserve exactly
 - **Tokens with underscores** (e.g., `user_id`, `campaign_name`) — preserve exactly
 - **Markdown link syntax structure** — translate the link text but preserve `[text](url)` structure and URLs
+- **Glossary filter identifiers** — on pages that use `glossary_tags` (e.g. `layout: glossary_page`), preserve the `glossary_tags` list and the `tags` under each glossary entry exactly as in the English source. These values drive filter/checkbox logic and must match exactly; do not translate them.
 
 ## Braze product terminology
 
@@ -52,6 +53,7 @@ These are Braze product names and features. Keep them in English:
 - News Feed
 - Liquid (the templating language)
 - SDK, API, REST API
+- BrazeAI — always written as one word with exact capitalization. When followed by `<sup>TM</sup>`, preserve the exact HTML structure: `BrazeAI<sup>TM</sup>`. Never wrap "BrazeAI" itself inside `<sup>` tags. Product names like "BrazeAI Operator" and "BrazeAI Decisioning Studio" follow the same rule.
 - Segment, Segments (when referring to the Braze feature)
 - Campaign, Campaigns
 - Push Stories
@@ -82,6 +84,10 @@ A style guide for the target language may be appended to the end of these instru
 ## Special file handling
 
 The file `_includes/rate_limits.md` uses Liquid conditionals with include parameters (e.g., `{% if include.category == "..." %}`, `{% elsif include.endpoint == "..." %}`). These Liquid conditionals and their parameters must be preserved exactly. Only translate the prose content between the conditional blocks.
+
+### Glossary and filterable pages (apitags)
+
+- **`{% apitags %}...{% endapitags %}`** — Keep **canonical English identifiers** (do not translate the tag tokens). Filter/checkbox logic depends on exact tag-key matches; translating tags (e.g. Subscription → サブスクリプション) fragments filters into separate categories and can break matching. Use **only the half-width comma (`,`)** to separate multiple tags; do not use the full-width comma (、). Localize display text in headings and body only.
 
 ## Quality guidelines
 

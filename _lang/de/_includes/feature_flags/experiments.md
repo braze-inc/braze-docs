@@ -74,13 +74,13 @@ Sie können die Standard-Eigenschaften, die Sie ursprünglich für Nutzer:innen 
 
 Um zusätzliche Standardeigenschaften zu bearbeiten, hinzuzufügen oder zu entfernen, bearbeiten Sie die Funktionsflagge selbst unter **Messaging** > **Funktionsflaggen**. Wenn eine Variante deaktiviert ist, gibt das SDK ein leeres Eigenschaften-Objekt für das angegebene Feature-Flag zurück.
 
-![Der Abschnitt 'Experiment-Varianten' mit dem variablen Schlüssel 'link' wurde mit '/sales' überschrieben.]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
+![Der Abschnitt „Experimentvarianten“ mit dem Variablenschlüssel „link“, der mit „/sales“ überschrieben wurde.]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
 
 ### Schritt 4: Zielgruppe auswählen
 
 Verwenden Sie eines Ihrer Segmente oder Filter, um Ihre [Nutzer:innen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) auszuwählen. Sie können zum Beispiel den Filter **Received Feature-Flag Variant** verwenden, um Nutzer:innen, die bereits einen A/B-Test erhalten haben, erneut zu retargeten.
 
-![Die Seite 'Target' in einem Feature-Flag Experiment mit 'Received Feature-Flag Variante' in der Suchleiste der Filtergruppe hervorgehoben.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
+![Die Seite „Ziel“ in einem Feature-Flag-Experiment, wobei „Empfangene Feature-Flag-Variante“ in der Suchleiste der Filtergruppe hervorgehoben ist.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
 
 {% alert note %}
 Die Segmentzugehörigkeit wird berechnet, wenn die Feature-Flags für einen bestimmten Nutzer aktualisiert werden. Die Änderungen werden bereitgestellt, wenn Ihre App die Feature-Flags aktualisiert oder wenn eine neue Sitzung gestartet wird.

@@ -1,6 +1,6 @@
 ---
-nav_title: iOS 소프트웨어 개발 키트 추적 비활성화하기
-article_title: iOS용 소프트웨어 개발 키트 추적 비활성화하기
+nav_title: iOS SDK 추적 비활성화
+article_title: iOS용 SDK 추적 비활성화
 platform: iOS
 page_order: 8
 description: "이 문서는 iOS 애플리케이션에 대한 데이터 수집을 비활성화하는 방법을 보여줍니다."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# iOS에 대한 데이터 수집 비활성화하기
+# iOS용 데이터 수집 비활성화
 
 데이터 프라이버시 규정을 준수하기 위해 [`disableSDK`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a8d3b78a98420713d8590ed63c9172733) 메서드를 사용하여 iOS SDK에서 데이터 추적 활동을 완전히 중지할 수 있습니다. 이 방법을 사용하면 모든 네트워크 연결이 취소되고 Braze SDK가 서버로 데이터를 전달하지 않습니다. 나중에 데이터 수집을 재개하려면 향후 [`requestEnableSDKOnNextAppRun`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a781078a40a3db0de64ac82dcae3b595b) 메서드를 사용하여 데이터 수집을 재개할 수 있습니다.
 

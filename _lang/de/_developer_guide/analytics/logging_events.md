@@ -1,6 +1,6 @@
 ---
 nav_title: Benutzerdefinierte Ereignisse protokollieren
-article_title: Protokollierung angepasster Events über das Braze SDK
+article_title: Protokollieren Sie angepasste Events über das Braze SDK.
 page_order: 3.1
 description: "Erfahren Sie, wie Sie angepasste Events über das Braze SDK protokollieren können."
 
@@ -31,7 +31,7 @@ Wenn Sie stattdessen den Google Tag Manager verwenden möchten, können Sie den 
 1. Geben Sie den **Event-Namen** an, indem Sie entweder eine Variable verwenden oder einen Namen eingeben.
 2. Verwenden Sie den Button **Zeile hinzufügen**, um Event-Eigenschaften hinzuzufügen.
 
-![Ein Dialogfeld mit den Konfigurationseinstellungen für Braze Action Tags. Enthaltene Einstellungen sind "Tag-Typ" (angepasstes Event), "Event-Name" (Button-Klick) und "Event-Eigenschaften".]({% image_buster /assets/img/web-gtm/gtm-custom-event.png %})
+![Ein Dialogfeld mit den Konfigurationseinstellungen für Braze Action Tags. Die Einstellungen umfassen „Tag-Typ“ (angepasstes Event), „Ereignisname“ (Klick auf Button) und „Event-Eigenschaften“.]({% image_buster /assets/img/web-gtm/gtm-custom-event.png %})
 {% endtab %}
 
 {% tab android %}
@@ -71,6 +71,27 @@ AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
 ```dart
 braze.logCustomEvent('YOUR_EVENT_NAME');
 ```
+{% endtab %}
+
+{% tab cordova %}
+Bitte verwenden Sie die Braze-cordova-Plugin-Methode:
+
+```javascript
+BrazePlugin.logCustomEvent("YOUR_EVENT_NAME");
+```
+
+Die`logCustomEvent`API akzeptiert:
+- `eventName` (erforderliche String): Bitte verwenden Sie bis zu 255 Zeichen. Bitte beginnen Sie den Namen nicht mit `$`. Bitte verwenden Sie alphanumerische Zeichen und Satzzeichen.
+- `eventProperties` (optionales Objekt): Fügen Sie Schlüssel-Wert-Paare für Ereignismetadaten hinzu. Verwenden Sie Schlüssel mit bis zu 255 Zeichen und beginnen Sie Schlüssel nicht mit einem `$`Punkt.
+
+Für Eigenschaftswerte verwenden Sie bitte`string`(maximal 255 Zeichen), `numeric`,`boolean` , Objekt-Arrays oder verschachtelte JSON-Objekte.
+
+Für Details zur Implementierung, sehen Sie bitte die Braze cordova SDK-Quelle:
+- [`www/BrazePlugin.js` `logCustomEvent` Methode (Zeilen 138–140)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/www/BrazePlugin.js#L138-L140)
+- [`www/BrazePlugin.js` JSDoc (Zeilen 128–140)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/www/BrazePlugin.js#L128-L140)
+- [Android-Handler in`src/android/BrazePlugin.kt`(Zeilen 108–115)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/src/android/BrazePlugin.kt#L108-L115)
+- [iOS-Handler in`src/ios/BrazePlugin.m`(Zeilen 308–313)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/src/ios/BrazePlugin.m#L308-L313)
+- [iOS-Methodendeklaration in`src/ios/BrazePlugin.h`(Zeile 24)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/src/ios/BrazePlugin.h#L24)
 {% endtab %}
 
 {% tab infillion %}
@@ -114,7 +135,7 @@ AppboyBinding.LogCustomEvent("YOUR_EVENT_NAME");
 
 ## Hinzufügen von Eigenschaften der Metadaten
 
-Wenn Sie ein angepasstes Event protokollieren, haben Sie die Möglichkeit, Metadaten über dieses angepasste Event hinzuzufügen, indem Sie ein Objekt mit Eigenschaften mit dem Event übergeben. Eigenschaften werden als Schlüssel-Werte-Paare definiert. Die Schlüssel sind Strings und die Werte können `string`, `numeric`, `boolean` sein, [`Date`](http://www.w3schools.com/jsref/jsref_obj_date.asp) Objekte, Arrays oder verschachtelte JSON-Objekte sein.
+Wenn Sie ein angepasstes Event protokollieren, haben Sie die Möglichkeit, Metadaten zu diesem angepassten Event hinzuzufügen, indem Sie ein Objekt mit den Eigenschaften des Events übergeben. Eigenschaften werden als Schlüssel-Werte-Paare definiert. Schlüssel sind Strings, und Werte können , `numeric`, `boolean`,[`Date`](http://www.w3schools.com/jsref/jsref_obj_date.asp)  Objekte, Arrays oder `string`verschachtelte JSON-Objekte sein.
 
 Um Eigenschaften von Metadaten hinzuzufügen, verwenden Sie die folgende Methode zur Ereignisprotokollierung.
 
@@ -226,6 +247,61 @@ braze.logCustomEvent('custom_event_with_properties', properties: {
 ```
 {% endtab %}
 
+{% tab cordova %}
+Protokollieren Sie angepasste Events mit einem Eigenschaftenobjekt:
+
+```javascript
+var properties = {};
+properties["key1"] = "value1";
+properties["key2"] = ["value2", "value3"];
+properties["key3"] = false;
+BrazePlugin.logCustomEvent("YOUR-EVENT-NAME", properties);
+```
+
+Sie können Eigenschaften auch inline übergeben:
+
+```javascript
+BrazePlugin.logCustomEvent("YOUR-EVENT-NAME", {
+  "key": "value",
+  "amount": 42,
+});
+```
+
+Die offizielle Cordova-BeispielApp umfasst Strings, numerische Werte, Boolesche Werte, Arrays und verschachtelte Objekteigenschaften:
+- [`sample-project/www/js/index.js` (Zeilen 230–251)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/sample-project/www/js/index.js#L230-L251)
+
+Beispielprojekt-Auszug:
+
+```javascript
+var properties = {};
+properties["One"] = "That's the Way of the World";
+properties["Two"] = "After the Love Has Gone";
+properties["Three"] = "Can't Hide Love";
+BrazePlugin.logCustomEvent("cordovaCustomEventWithProperties", properties);
+BrazePlugin.logCustomEvent("cordovaCustomEventWithoutProperties");
+BrazePlugin.logCustomEvent("cordovaCustomEventWithFloatProperties", {
+  "Cart Value": 4.95,
+  "Cart Item Name": "Spicy Chicken Bites 5 pack"
+});
+BrazePlugin.logCustomEvent("cordovaCustomEventWithNestedProperties", {
+  "array key": [1, "2", false],
+  "object key": {
+    "k1": "1",
+    "k2": 2,
+    "k3": false,
+  },
+  "deep key": {
+    "key": [1, "2", true]
+  }
+});
+```
+
+Für Details zu API und nativer Bridge, siehe:
+- [`www/BrazePlugin.js` JSDoc (Zeilen 128–140)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/www/BrazePlugin.js#L128-L140)
+- [Android-Handler in`src/android/BrazePlugin.kt`(Zeilen 108–115)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/src/android/BrazePlugin.kt#L108-L115)
+- [iOS-Handler in`src/ios/BrazePlugin.m`(Zeilen 308–313)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/src/ios/BrazePlugin.m#L308-L313)
+{% endtab %}
+
 {% tab react native %}
 ```javascript
 Braze.logCustomEvent("custom_event_with_properties", {
@@ -255,7 +331,7 @@ Die Schlüssel `time` und `event_name` sind reserviert und können nicht als ang
 
 ## Bewährte Praktiken
 
-Es gibt drei wichtige Prüfungen, die Sie durchführen müssen, damit Ihre angepassten Event-Eigenschaften wie erwartet protokolliert werden:
+Es sind drei wichtige Überprüfungen durchzuführen, damit Ihre angepassten Event-Eigenschaften wie erwartet protokolliert werden:
 
 * [Festlegen, welche Ereignisse protokolliert werden](#verify-events)
 * [Protokoll überprüfen](#verify-log)
@@ -277,11 +353,11 @@ Um zu bestätigen, dass die Event-Eigenschaften erfolgreich getrackt wurden, kö
 
 1. Gehen Sie zu **Dateneinstellungen** > **Benutzerdefinierte Ereignisse**.
 2. Suchen Sie Ihr angepasstes Event in der Liste.
-3. Wählen Sie für Ihr Ereignis **Eigenschaften verwalten** aus, um die Namen der mit einem Ereignis verbundenen Eigenschaften anzuzeigen.
+3. Wählen Sie für Ihre Veranstaltung **„Eigenschaften verwalten**”, um die Namen der mit einer Veranstaltung verbundenen Eigenschaften anzuzeigen.
 
 ### Werte überprüfen
 
-Nachdem [Sie Ihren Nutzer:in als Testnutzer]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/#adding-test-users): [in hinzugefügt haben]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/#adding-test-users), folgen Sie diesen Schritten, um Ihre Werte zu überprüfen: 
+Nachdem [Sie Ihren Nutzer als Testnutzer:in hinzugefügt haben]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/#adding-test-users), führen Sie bitte die folgenden Schritte aus, um Ihre Werte zu überprüfen: 
 
 1. Führen Sie das angepasste Event innerhalb der App aus.
 2. Warten Sie etwa 10 Sekunden, bis die Daten geleert sind.

@@ -66,7 +66,7 @@ Im Folgenden finden Sie alle wichtigen Elemente, die in einem Workspace konfigur
 
 - [App-Instanzen](#app-instances)
 - [Teams](#teams)
-- [Benutzerberechtigungen für Unternehmen](#company-user-permissions) (aber nicht für Nutzer:innen)
+- [Unternehmensnutzerberechtigungen](#company-user-permissions) (jedoch nicht Unternehmensnutzer:innen)
 - [Currents Konnektoren](#currents-connectors)
 - [Benutzerprofile](#user-profiles) und die zugehörigen Benutzerdaten
 - [Segmente, Kampagnen und Leinwände](#segments-campaigns-and-canvases)
@@ -79,7 +79,7 @@ Sie müssen für jede Version Ihrer App auf jeder Plattform separate App-Instanz
 
 [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) können nach Kundenstandort, Sprache und benutzerdefinierten Attributen eingerichtet werden, so dass Teammitglieder und Nicht-Teammitglieder unterschiedlichen Zugriff auf Messaging-Funktionen und Kundendaten haben.
 
-#### Nutzer:innen des Unternehmens
+#### Benutzerberechtigungen für Nutzer:innen
 
 Arbeitsbereiche haben unabhängige Zugriffs- und Benutzerberechtigungsdefinitionen. Mit [Benutzerrechten]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) können Sie genau festlegen, worauf ein einzelner Dashboard-Benutzer oder ein Team innerhalb eines einzelnen Arbeitsbereichs Zugriff hat.
 
@@ -178,7 +178,7 @@ Die folgende Tabelle beschreibt die Vor- und Nachteile dieser beiden Ansätze zu
         <td>Benutzerdefinierte Attribute und Ereignisse sind garantiert spezifisch für eine App-Instanz.</td>
         <td>Das Benutzerverhalten kann nicht über Arbeitsbereiche hinweg verfolgt werden.<br><br><b>Tipp:</b> Dazu können Sie mehrere Currents-Verbindungen nutzen.</td>
         <td>Kann das Benutzerverhalten über alle App-Instanzen im Arbeitsbereich verfolgen.</td>
-        <td>Benutzerdefinierte Attribute und Ereignisse würden für alle App-Instanzen gelten, wodurch es schwierig werden könnte, zu erkennen, welche Daten in einem Benutzerprofil für welche App-Instanz relevant sind. Ist "date_of_parking" zum Beispiel für App 1 oder App 2 relevant? Um dem entgegenzuwirken, sollten Sie gut strukturierte Namenskonventionen verwenden.</td>
+        <td>Benutzerdefinierte Attribute und Ereignisse würden für alle App-Instanzen gelten, wodurch es schwierig werden könnte, zu erkennen, welche Daten in einem Benutzerprofil für welche App-Instanz relevant sind. Ist dies beispielsweise für"date_of_parking" App 1 oder App 2 relevant? Um dem entgegenzuwirken, sollten Sie gut strukturierte Namenskonventionen verwenden.</td>
     </tr>
     <tr>
         <td>Frequency-Capping</td>
@@ -195,7 +195,7 @@ Die folgende Tabelle beschreibt die Vor- und Nachteile dieser beiden Ansätze zu
         <td>Die Abo-Status eines Nutzerprofils werden über App-Instanzen hinweg kombiniert.<br><br><b>Tipp:</b> Sie könnten stattdessen <a href='/docs/user_guide/data/custom_data/custom_attributes'>angepasste Attribute</a> verwenden, um die Abos Ihrer Nutzer:innen zu verwalten.</td>
     </tr>
     <tr>
-        <td>Nutzer:innen des Unternehmens</td>
+        <td>Benutzerberechtigungen für Nutzer:innen</td>
         <td>--</td>
         <td>Das Update der <a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>Benutzerberechtigungen</a> für einen Nutzer:innen des Dashboards muss für jeden Workspace, auf den der Nutzer:innen Zugriff benötigt, separat durchgeführt werden.</td>
         <td><a href='/docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/'>Nutzer</a>:innen können einmal für einen Nutzer des Dashboards festgelegt werden und haben dann dieselben Berechtigungen für alle App-Instanzen im Workspace.</td>
@@ -205,7 +205,7 @@ Die folgende Tabelle beschreibt die Vor- und Nachteile dieser beiden Ansätze zu
         <td>Duplizieren von Inhalten</td>
         <td>--</td>
         <td>Sie können keine Segmente, Push- oder Content-Card-Kampagnen oder Canvase in verschiedenen Workspaces duplizieren.</td>
-        <td>Sie können <a href='{{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'>Kampagnen in Workspaces</a> für die folgenden unterstützten Kanäle <a href='{{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'>duplizieren</a>: SMS, In-App-Nachrichten, E-Mail, E-Mail-Vorlagen und Inhaltsblöcke. <br><br>Sie können Segmente, Kampagnen und Canvases duplizieren, um Inhalte von einer App-Instanz zur anderen wiederzuverwenden.</td>
+        <td><a href='{{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'>Kampagnen</a> können für die folgenden unterstützten Kanäle <a href='{{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'>über Workspaces hinweg dupliziert werden</a>: SMS, In-App-Nachrichten, E-Mail, E-Mail-Vorlagen und Inhaltsblöcke. <br><br>Sie können Segmente, Kampagnen und Canvases duplizieren, um Inhalte von einer App-Instanz zur anderen wiederzuverwenden.</td>
         <td>--</td>
     </tr>
     <tr>
@@ -240,5 +240,5 @@ Sie sollten mehr als einen Braze-Benutzer mit Admin-Rechten für einen einzelnen
 
 ## Nächste Schritte
 
-Nachdem Sie Ihren Workspace-Plan festgelegt haben, ist es an der Zeit, Ihren Workspace zu erstellen und App-Instanzen hinzuzufügen. Weitere Schritte finden Sie unter [Workspaces erstellen und verwalten]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
+Nachdem Sie Ihren Workspace-Plan festgelegt haben, ist es an der Zeit, Ihren Workspace zu erstellen und App-Instanzen hinzuzufügen. Für weitere Schritte, sehen Sie sich [bitte „Workspaces erstellen und verwalten”]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/) an.
 

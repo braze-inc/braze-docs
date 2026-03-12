@@ -1,6 +1,6 @@
 ---
 nav_title: Configurar IPs e domínios
-article_title: Configurar IPs e domínios
+article_title: Configurar IPs e Domínios
 page_order: 0
 page_type: tutorial
 channel: email
@@ -34,7 +34,7 @@ Depois que seus IPs, domínios, subdomínios e pools de IPs estiverem configurad
 
 {% multi_lang_include dns_records.md %}
 
-Depois que o Braze fornecer seus registros DNS, adicione-os assim que sua equipe de DNS ou de TI puder. A verificação do domínio tem limite de tempo e, se os registros forem adicionados muito tarde, a verificação poderá falhar, mesmo que os registros DNS sejam resolvidos corretamente mais tarde. Se seus registros DNS parecerem corretos, mas a verificação falhar, entre em contato com a equipe de integração ou suporte da Braze para reiniciar a verificação.
+Depois que a Braze fornecer seus registros DNS, adicione-os assim que sua equipe de DNS ou TI puder. A verificação de domínio é limitada no tempo, e se os registros forem adicionados muito tarde, a verificação pode falhar mesmo que os registros DNS sejam resolvidos corretamente depois. Se seus registros DNS parecerem corretos, mas a verificação falhar, entre em contato com a equipe de Integração ou Suporte da Braze para reiniciar a verificação.
 
 ### Próximos passos
 
@@ -44,7 +44,7 @@ Verificaremos sua configuração e validaremos todas as informações em nossos 
 
 Esse método configurará um domínio de envio, um domínio de rastreamento e um IP no total para uma empresa. Se estiver planejando configurar mais, consulte a equipe de integração da Braze (método 1).
 
-{% include early_access_beta_alert.md feature='This self-service email setup feature' type='beta' %}
+{% multi_lang_include early_access_beta_alert.md feature='This self-service email setup feature' type='beta' %}
 <br>Se estiver usando o recurso de configuração de e-mail de autoatendimento, não deixe de consultar também a equipe de integração do Braze.
 
 ### Pré-requisitos
@@ -52,12 +52,12 @@ Esse método configurará um domínio de envio, um domínio de rastreamento e um
 Para usar a configuração de e-mail por autoatendimento, você deve atender aos seguintes pré-requisitos:
 
 1. Você é um novo cliente em processo de integração.
-2. Você tem a permissão em nível de empresa "Can Manage Company Settings" (Pode gerenciar configurações da empresa).
+2. Você tem a permissão de nível empresarial "Gerenciar Configurações da Empresa".
 
 ### Etapa 1: Iniciar a configuração
 
 1. Acesse **Configurações** > **Configurações administrativas** em **Configurações da empresa**. 
-2. Em seguida, selecione a guia **Verificação do remetente**. Para visualizar essa guia, você deve ter a permissão no nível da empresa "Pode gerenciar configurações da empresa".
+2. Em seguida, selecione a guia **Verificação do remetente**. Para visualizar esta guia, você deve ter a permissão de nível empresarial "Gerenciar Configurações da Empresa".
 3. Clique no botão **Iniciar configuração**.
 
 ### Etapa 2: Adicionar e verificar um domínio de envio
@@ -68,7 +68,7 @@ Em seguida, adicione os registros TXT e CNAME da parte inferior da página ao se
 
 ![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
 
-Se a verificação falhar e você acreditar que seus registros DNS estão corretos, entre em contato com o suporte da Braze para obter assistência.
+Se a verificação falhar e você acreditar que seus registros DNS estão corretos, entre em contato com o Suporte da Braze para assistência.
 
 {% alert important %}
 O domínio de envio deve ser subordinado a um domínio que você possui. Por exemplo, se você é proprietário de "example.com", um subdomínio poderia ser "mail.example.com", o que lhe permite usar o endereço de envio "@mail.example.com".

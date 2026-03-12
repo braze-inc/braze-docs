@@ -1,5 +1,5 @@
 ---
-nav_title: Opt-ins &amp; Opt-outs
+nav_title: Opt-ins und Opt-outs
 article_title: WhatsApp Opt-Ins und Opt-Outs
 description: "Dieser Referenzartikel behandelt die verschiedenen WhatsApp-Opt-in und Opt-out Methoden."
 page_type: partner
@@ -67,7 +67,7 @@ Dies kann als Canvas oder als Kampagne eingerichtet werden, je nachdem, ob Sie m
 2. Erstellen Sie eine Webhook-Kampagne. Ein Beispiel für einen Webhook finden Sie unter [Abonnementgruppen]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#update-subscription-status).
 
 {% alert tip %}
-Beachten Sie, dass Sie im [WhatsApp-Manager](https://business.facebook.com/wa/manage/phone-numbers/) unter **Telefonnummer** > **Nachrichtenlinks** eine URL oder einen QR-Code erstellen können, um einem WhatsApp-Kanal beizutreten.<br>![WhatsApp QR Code Komponist.]({% image_buster /assets/img/whatsapp/whatsapp115.png %}){: style="max-width:55%;"}
+Beachten Sie, dass Sie im [WhatsApp-Manager](https://business.facebook.com/wa/manage/phone-numbers/) unter **Telefonnummer** > **Nachrichtenlinks** eine URL oder einen QR-Code erstellen können, um einem WhatsApp-Kanal beizutreten.<br>![WhatsApp-QR-Code-Generator.]({% image_buster /assets/img/whatsapp/whatsapp115.png %}){: style="max-width:55%;"}
 {% endalert %}
 
 ### Braze-gestützte Opt-in-Methoden 
@@ -98,11 +98,11 @@ Sie können eine Kampagne oder ein Canvas einrichten, das es Nutzern, die eine N
 
 #### Schritt 1: Erstellen Sie ein Canvas mit dem Auslöser "Eingehende WhatsApp-Nachricht".
  
-![Aktionsbasierter Canvas-Schritt für den Eingang von Nutzern:innen, die eine eingehende WhatsApp Nachricht senden.]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
+![Aktionsbasierter Canvas-Schritt zum Eingang von Nutzern, die eine eingehende WhatsApp-Nachricht senden.]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
 
 Wenn Sie Schlüsselwörter als Trigger verwenden, sollten Sie auch Formulierungen wie "Stopp" oder "Keine Nachrichten" einbeziehen. Wenn Sie sich für diese Methode entscheiden, stellen Sie sicher, dass diese Begriffe auch wirklich bekannt sind. Fügen Sie z.B. nach dem ersten Opt-in eine Antwort wie "Um diese Nachrichten abzubestellen, können Sie einfach 'Stopp' senden." 
 
-![Nachrichtenschritt zum Senden einer eingehenden WhatsApp-Nachricht, bei der der Nachrichtentext "STOP" oder "KEINE NACHRICHT" lautet.]({% image_buster /assets/img/whatsapp/whatsapp117.png %}){: style="max-width:85%;"}
+![Nachrichtenschritt zum Senden einer eingehenden WhatsApp-Nachricht, deren Text „STOP“ oder „KEINE NACHRICHT“ lautet.]({% image_buster /assets/img/whatsapp/whatsapp117.png %}){: style="max-width:85%;"}
 
 #### Schritt 2: Nutzerprofile aktualisieren
 
@@ -181,7 +181,7 @@ Bei STOPP-Nachrichten ist dies nicht erforderlich. Die Nachricht zur Bestätigun
 {: start="2"}
 2\. Erstellen Sie in der Kampagne oder im Canvas einen Schritt Webhook-Nachricht und ändern Sie den **Anfragetext** in **Rohtext**.
 
-![Schritt der Nachricht für einen Webhook.]({% image_buster /assets/img/whatsapp/webhook_step.png %}){: style="max-width:85%;"}
+![Nachrichtenschritt für einen Webhook.]({% image_buster /assets/img/whatsapp/webhook_step.png %}){: style="max-width:85%;"}
 
 {: start="3"}
 3\. Geben Sie die kundenspezifische [Endpunkt-URL]({{site.baseurl}}/api/basics/) gefolgt vom Endpunkt-Link in die **Webhook-URL** `campaigns/trigger/send` ein. Zum Beispiel: `https://dashboard-02.braze.eu/campaigns/trigger/send`.
@@ -227,7 +227,7 @@ In dieser Tabelle wird mit dem Trigger `STOP` veranschaulicht, wie Modifikatoren
 | Modifikator | Trigger | Aktion |
 | --- | --- | --- |
 | `Is` | `STOP` | Erfasst jedes ganze Wort, das "stop" enthält, unabhängig von der Groß- und Kleinschreibung. Erfasst zum Beispiel "stopp", aber nicht "bitte stoppen". |
-| `Matches regex` | `STOP` | Fängt jede Verwendung von "STOP" in genau diesem Fall ab. So werden zum Beispiel "STOP" und "BITTE STOPP" erfasst, aber nicht "Stopp". |
+| `Matches regex` | `STOP` | Erfasst jede Verwendung von „STOP“ in genau diesem Fall. Dies erfasst beispielsweise „STOPPEN“ und „BITTE STOPPEN“, jedoch nicht „stoppen“. |
 | `Matches regex` | `(?i)STOP(?-i)` | Erfasst jede Verwendung von "STOPP". Erfasst zum Beispiel "Stopp", "Bitte stoppen" und "Immer Nachrichten zuschicken". |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 

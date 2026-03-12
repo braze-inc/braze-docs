@@ -1,5 +1,5 @@
 ---
-nav_title: "Google Tag Manager:in"
+nav_title: Google Tag Manager
 article_title: Google Tag Manager mit dem Braze SDK
 platform: 
   - Android
@@ -12,7 +12,7 @@ description: "Erfahren Sie, wie Sie das Braze SDK mit Methoden wie Laufzeitiniti
 
 # Google Tag Manager mit dem Braze SDK
 
-> Lernen Sie, wie Sie den [Google Tag Manager (GTM)](https://developers.google.com/tag-platform/tag-manager) mit dem Braze SDK verwenden, damit Sie das Tracking von Braze-Ereignissen und Updates von Nutzer:in-Attributen aus der Ferne steuern können, ohne dass Code-Änderungen oder neue App-Versionen erforderlich sind.
+> Erfahren Sie, wie Sie [Google Tag Manager (GTM)](https://developers.google.com/tag-platform/tag-manager) mit dem Braze SDK verwenden können, um die Ereignisverfolgung und Updates der Benutzerattribute in Braze aus der Ferne zu steuern, ohne dass Codeänderungen oder neue App-Versionen erforderlich sind.
 
 {% sdktabs %}
 {% sdktab web %}

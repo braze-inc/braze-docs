@@ -1,6 +1,6 @@
 ---
-nav_title: Orientación personalizada
-article_title: Personaliza la orientación de los mensajes dentro de la aplicación para iOS
+nav_title: Personalizar la orientación
+article_title: Personalizar la orientación de los mensajes dentro de la aplicación para iOS
 platform: iOS
 page_order: 3
 description: "Este artículo de referencia explica cómo configurar la orientación de los mensajes dentro de la aplicación para tu aplicación de iOS."
@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Orientación personalizada
+# Personalizar la orientación
 
 ## Configurar la orientación de todos los mensajes dentro de la aplicación
 

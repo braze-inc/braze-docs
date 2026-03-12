@@ -86,7 +86,7 @@ Sie können auch eine Kopie des [Unity Braze SDK Changelog auf GitHub](https://g
 
 {% sdktab .NET MAUI (Xamarin) %}
 {% alert tip %}
-Sie können auch eine Kopie des [ Changelogs des .NET MAUI Braze SDK auf GitHub](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md) finden.
+Eine Kopie des [Changelogs](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md) für das [.NET MAUI Braze SDK](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md) finden Sie auch [auf GitHub](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md).
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-xamarin-sdk/master/CHANGELOG.md %}

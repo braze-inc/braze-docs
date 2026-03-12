@@ -15,7 +15,7 @@ guide_featured_list:
   - name: Affichage conditionnel
     link: /docs/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages
     image: /assets/img/braze_icons/zap-off.svg
-  - name: Report et restauration des messages déclenchés
+  - name: Différer et restaurer les messages déclenchés
     link: /docs/developer_guide/in_app_messages/tutorials/deferring_triggered_messages
     image: /assets/img/braze_icons/watch-circle.svg
 ---

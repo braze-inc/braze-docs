@@ -30,7 +30,7 @@ Navegue até a página de análise de dados de sua campanha para começar a conf
 
 Para uma campanha recorrente programada, você pode definir limites superiores e inferiores para as mensagens enviadas cada vez que a campanha for enviada. Para uma campanha disparada, você pode definir limites superiores e inferiores para o número de mensagens enviadas por hora e por dia.
 
-Você pode configurar um alerta de e-mail, um alerta de webhook ou ambos. Os alertas de webhook podem ser muito úteis, pois permitem que você envie um alerta para um canal do Slack. Para saber mais sobre a integração de alertas de campanha com o Slack, consulte a documentação do Slack para [Envio de mensagens usando webhooks de entrada](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/).
+Você pode configurar um alerta de e-mail, um alerta de webhook ou ambos. Os alertas de webhook podem ser muito úteis, pois permitem que você envie um alerta para um canal do Slack. Para mais informações sobre como integrar alertas de campanha com Slack, consulte a documentação do Slack para [Enviando mensagens usando webhooks de entrada](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/).
 
 {% alert note %}
 Ao definir alertas de campanha para campanhas futuras, você poderá receber atualizações antes do início e depois do término da campanha. Isso ocorre porque os alertas de campanha continuarão a ser enviados até que a campanha seja interrompida manualmente.

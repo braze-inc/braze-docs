@@ -1,7 +1,7 @@
 ---
-nav_title: "GET: Ver información sobre los bloques de contenido"
+nav_title: "GET: Ver información sobre bloques de contenido"
 article_title: "GET: Ver información sobre los bloques de contenido"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
@@ -55,7 +55,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/content_blocks/i
   "last_edited": (string) The time the Content Block was last edited in ISO 8601,
   "inclusion_count" : (integer) the inclusion count,
   "inclusion_data": (array) the inclusion data,
-  "message": "success",
+  "message": "success"
 }
 ```
 
