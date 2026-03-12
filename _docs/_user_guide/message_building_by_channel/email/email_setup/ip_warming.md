@@ -122,7 +122,7 @@ Day | # of Emails to Send
 18 | 1,200,000
 19 | 1,750,000
 20 | 2,750,000
-21+ | Continue scaling until desired volume
+21+ | Double daily until desired volume
 
 {% endtab %}
 {% endtabs %}
