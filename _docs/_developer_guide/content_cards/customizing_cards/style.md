@@ -502,7 +502,7 @@ To display different images or styles based on the device's dark or light mode, 
 ```swift
 if let card = card as? Braze.ContentCard.ClassicImage,
    let darkImageUrl = card.extras["dark_mode_image"],
-   UITraitCollection.current.userInterfaceStyle == .dark {
+   view.traitCollection.userInterfaceStyle == .dark {
   // Use darkImageUrl for the image
 }
 ```
