@@ -661,7 +661,7 @@ event_documentation:
     api_tags:
       - Agent
   agentconsole.ToolInvocation:
-    description: This is the Kafka record schema for when a tool is executed.  A tool is a function given to an LLM to fulfill an objective.
+    description: This is the Kafka record schema for when a tool is executed. A tool is a function given to an LLM to fulfill an objective.
     api_tags:
       - Agent
 
