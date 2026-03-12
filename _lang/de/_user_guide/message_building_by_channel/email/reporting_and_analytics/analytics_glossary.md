@@ -22,7 +22,7 @@ channel:
 ### Variante
 
 {% apitags %}
-Anzahl
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Variation' %}
@@ -36,7 +36,7 @@ Anzahl
 ### Per E-Mail versendbar
 
 {% apitags %}
-Anzahl
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Emailable' %}
@@ -50,7 +50,7 @@ Anzahl
 ### Zielgruppe %
 
 {% apitags %}
-Prozentsatz
+Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Audience' %}
@@ -64,7 +64,7 @@ Prozentsatz
 ### Eindeutige Empfänger:innen
 
 {% apitags %}
-Anzahl
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Recipients' %} Diese Nummer wird von Braze empfangen.
@@ -78,7 +78,7 @@ Anzahl
 ### Sendungen
 
 {% apitags %}
-Anzahl
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Sends' %}  Diese Metrik wird von Braze bereitgestellt.
@@ -92,7 +92,7 @@ Anzahl
 ### Nachrichten gesendet
 
 {% apitags %}
-Anzahl
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Messages Sent' %}  Diese Metrik wird von Braze bereitgestellt.
@@ -106,7 +106,7 @@ Anzahl
 ### Zustellungen
 
 {% apitags %}
-Anzahl
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Deliveries' %} Bei E-Mails ist *Deliveries* die Gesamtzahl der Nachrichten (Sends), die erfolgreich an empfangbare Parteien gesendet und von diesen empfangen wurden.
@@ -120,7 +120,7 @@ Anzahl
 ### Zustellungen %
 
 {% apitags %}
-Prozentsatz
+Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Deliveries %' %}
@@ -134,7 +134,7 @@ Prozentsatz
 ### Absprünge
 
 {% apitags %}
-Anzahl, Prozentsatz
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Bounces' %} 
@@ -160,7 +160,7 @@ Ein E-Mail-Bounce für Kund:innen, die SendGrid verwenden, besteht aus Rückläu
 ### Hard Bounce
 
 {% apitags %}
-Anzahl
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} 
@@ -174,7 +174,7 @@ Anzahl
 ### Soft Bounce
 
 {% apitags %}
-Anzahl
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} Wenn eine E-Mail einen Soft Bounce erhält, versuchen wir es normalerweise innerhalb von 72 Stunden erneut, aber die Anzahl der Wiederholungsversuche variiert von Empfänger zu Empfänger. 
@@ -190,7 +190,7 @@ Soft Bounces werden zwar nicht in den Analytics Ihrer Kampagne getrackt, aber Si
 ### Spam
 
 {% apitags %}
-Anzahl, Prozentsatz
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Spam' %}
@@ -212,7 +212,7 @@ Anzahl, Prozentsatz
 ### Eindeutige Öffnungen
 
 {% apitags %}
-Anzahl, Prozentsatz
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Opens' %} Bei E-Mails wird dies über einen Zeitraum von 7 Tagen getrackt.
@@ -234,7 +234,7 @@ Anzahl, Prozentsatz
 ### Eindeutige Klicks
 
 {% apitags %}
-Anzahl, Prozentsatz
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Dies wird über einen Zeitraum von sieben Tagen für E-Mails getrackt und durch <a href='/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. Dazu gehören auch Klicks auf die von Braze zur Verfügung gestellten Abmeldelinks.
@@ -256,7 +256,7 @@ Anzahl, Prozentsatz
 ### Abgemeldete Personen oder Abmeldung
 
 {% apitags %}
-Anzahl, Prozentsatz
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unsubscribers or Unsub' %}
@@ -278,7 +278,7 @@ Anzahl, Prozentsatz
 ### Umsatz
 
 {% apitags %}
-Anzahl
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Revenue' %}
@@ -292,7 +292,7 @@ Anzahl
 ### Primäre Konversionen (A) oder primäres Konversions-Event
 
 {% apitags %}
-Anzahl, Prozentsatz
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} Bei E-Mail, Push und Webhooks beginnen wir mit dem Tracking von Konversionen nach dem ersten Versand.
@@ -314,7 +314,7 @@ Anzahl, Prozentsatz
 ### Vertrauen
 
 {% apitags %}
-Anzahl
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Confidence' %}
@@ -336,7 +336,7 @@ Anzahl
 ### Sonstige Öffnungen
 
 {% apitags %}
-Anzahl
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Other Opens' %} Beachten Sie, dass ein Nutzer:innen eine E-Mail auch öffnen kann (so wie die Öffnung zu den <i>anderen Öffnungen</i> zählt), bevor die Anzahl der <i>Maschinenöffnungen</i> protokolliert wird. Wenn ein Benutzer eine E-Mail einmal (oder öfter) nach einem maschinellen Öffnungsereignis aus einem Nicht-Apple Mail-Posteingang öffnet, wird die Anzahl der Öffnungen des Benutzers in die Kategorie <i>Andere Öffnungen</i> und nur einmal in die Kategorie <i>Einmalige Öffnungen</i> eingerechnet.
@@ -350,7 +350,7 @@ Anzahl
 ### Effektive Klickrate
 
 {% apitags %}
-Prozentsatz
+Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Click-to-Open Rate' %}

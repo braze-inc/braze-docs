@@ -98,7 +98,7 @@ Post,Email,Create,Template,REST,API
 /templates/email/list
 {% endapimethod %}
 {% apitags %}
-取得,メール,テンプレート,リスト,REST
+Get,Email,Template,List,REST
 {% endapitags %}
 
 次のエンドポイントを使用して、利用可能なテンプレートのリストを取得します。

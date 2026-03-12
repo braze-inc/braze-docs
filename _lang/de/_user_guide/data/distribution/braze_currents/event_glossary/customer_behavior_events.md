@@ -47,7 +47,7 @@ Speicherschemata gelten für die Flat File-Event-Daten, die wir an Data Warehous
 ## Zufällige Bucket-Nummer Update-Ereignisse {#random-bucket-number-update-events}
 
 {% apitags %}
-Zufällige Bucket-Nummer
+Random Bucket Number
 {% endapitags %}
 
 Dieses Nutzer-Event wird jedes Mal gestartet, wenn ein:e neue:r Nutzer:in in seinem oder ihrem Workspace erstellt wird. Dabei wird jedem neuen Nutzer:innen eine zufällige Bucket-Nummer zugewiesen, mit der Sie dann gleichmäßig verteilte Segmente aus zufälligen Nutzer:innen erstellen können. Verwenden Sie diese Funktion, um eine Reihe zufälliger Bucket-Nummern zu gruppieren und die Performance Ihrer Kampagnen und Kampagnenvarianten zu vergleichen.
@@ -81,7 +81,7 @@ Dieses Currents-Ereignis ist nur für Kund:innen verfügbar, die einen "All Even
 ## Angepasste Events {#custom-events}
 
 {% apitags %}
-Angepasste Events
+Custom Events
 {% endapitags %}
 
 Dieses Event tritt ein, wenn ein bestimmtes angepasstes Event getriggert wird. Verwenden Sie dies, um zu verfolgen, wann Nutzer:innen angepasste Events in Ihrer Anwendung ausführen.
@@ -299,7 +299,7 @@ Dieses Event wird gestartet, wenn eine App-Installation einer Quelle attributier
 ## Standort Ereignisse {#location-events}
 
 {% apitags %}
-Standorte
+Locations
 {% endapitags %}
 
 Dieses Event wird getriggert, wenn ein:e Nutzer:in einen bestimmten Standort besucht. Verwenden Sie dieses Event, um Nutzer:innen zu tracken, die Standort-Events in Ihrer App triggern.
@@ -441,7 +441,7 @@ Dieses Event wird getriggert, wenn ein:e Nutzer:in einen bestimmten Standort bes
 ## Kauf-Events {#purchase-events}
 
 {% apitags %}
-Käufe
+Purchases
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein:e Nutzer:in einen Kauf tätigt. Verwenden Sie diese Daten, um zu verfolgen, wenn Nutzer:innen etwas in der Anwendung kaufen.
@@ -581,7 +581,7 @@ Käufe sind spezielle benutzerdefinierte Ereignisse und werden mit einer JSON-ko
 ## Ereignisse der ersten Sitzung {#first-session-events}
 
 {% apitags %}
-Sitzungen
+Sessions
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein:e Nutzer:in seine oder ihre erste Sitzung in Ihrer Anwendung beginnt. Verwenden Sie diese Daten, um zu verfolgen, wann Nutzer:innen Sitzungen starten.
@@ -698,7 +698,7 @@ Wenn ein:e Nutzer:in seine oder ihre erste Sitzung startet, werden sowohl das Ev
 ## Sitzungsende-Ereignisse {#session-end-events}
 
 {% apitags %}
-Sitzungen
+Sessions
 {% endapitags %}
 
 Dies geschieht, wenn ein:e Nutzer:in Ihre Anwendung beendet und seine oder ihre aktuelle Sitzung beendet. Verwenden Sie diese Daten, um zu verfolgen, wann Sitzungen enden, und berechnen Sie zusammen mit dem entsprechenden Sitzungsbeginn die Dauer der Teilnahme an einer Sitzung.
@@ -810,7 +810,7 @@ Dies geschieht, wenn ein:e Nutzer:in Ihre Anwendung beendet und seine oder ihre 
 ## Session Start Ereignisse {#session-start-events}
 
 {% apitags %}
-Sitzungen
+Sessions
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein:e Nutzer:in eine Sitzung startet. Verwenden Sie diese Daten, um zu verfolgen, wann Nutzer:innen Sitzungen starten.
@@ -922,7 +922,7 @@ Wenn ein:e Nutzer:in seine oder ihre erste Sitzung startet, werden sowohl das Ev
 ## Live Activity Push To Start Token Change Ereignisse {#live-activity-push-to-start-token-change-events}
 
 {% apitags %}
-Live-Aktivität, Push To Start Token
+Live Activity, Push To Start Token
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn Braze das Live Activity Push to Start Token mit dem Nutzer:in synchronisiert.
@@ -1031,7 +1031,7 @@ Dieses Ereignis tritt ein, wenn Braze das Live Activity Push to Start Token mit 
 ## Live Activity Update Token Änderungsereignisse {#live-activity-update-token-change-events}
 
 {% apitags %}
-Live-Aktivität, Token aktualisieren
+Live Activity, Update Token
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn Braze das Token für das Update der Live-Aktivität mit dem Nutzer:innen synchronisiert.
@@ -1140,7 +1140,7 @@ Dieses Ereignis tritt ein, wenn Braze das Token für das Update der Live-Aktivit
 ## Push-Benachrichtigung Token Zustandsänderung Ereignisse {#push-notification-token-state-change-events}
 
 {% apitags %}
-Push, Token Statusänderung
+Push, Token State Change
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Push-Token eingefügt, aktualisiert oder entfernt wird. Verwenden Sie dies, um die Zustände von Push-Tokens zu tracken.

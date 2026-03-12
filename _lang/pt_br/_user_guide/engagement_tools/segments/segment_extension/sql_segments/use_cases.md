@@ -12,7 +12,7 @@ tool: Segments
 {% api %}
 ## Selecione os usuários pela quantidade de vezes que um evento ocorreu
 {% apitags %}
-Evento
+Event
 {% endapitags %}
 
 Selecione os usuários que abriram uma certa campanha de e-mail mais de uma vez no passado.
@@ -30,7 +30,7 @@ HAVING count(*) > 1
 {% api %}
 ## Selecione os usuários que realizaram uma ação e some um valor de propriedade
 {% apitags %}
-Propriedade
+Property
 {% endapitags %}
 
 Selecione usuários que fizeram uma aposta em esportes com a soma de todas as suas apostas sendo maior que um certo valor.
@@ -45,7 +45,7 @@ group by 1 having sum(get_path(parse_json(properties), 'amount')) > 150
 {% api %}
 ## Selecione usuários com base em quantas vezes um evento ocorreu em um intervalo de tempo
 {% apitags %}
-Evento, Intervalo de tempo
+Event, Time range
 {% endapitags %}
 
 Selecione usuários com mais de três aberturas de e-mail nos últimos 30 dias.
@@ -64,7 +64,7 @@ HAVING COUNT(DISTINCT id) > 3
 {% api %}
 ## Selecione usuários que registraram pelo menos um evento em vários intervalos de tempo
 {% apitags %}
-Evento, Intervalo de tempo
+Event, Time range
 {% endapitags %}
 
 Selecione os usuários que fizeram uma compra em cada um dos últimos quatro trimestres. Este segmento de usuário pode ser usado com [público sincronizado]({{site.baseurl}}/partners/canvas_audience_sync/) para identificar clientes semelhantes de alto valor para aquisição.
@@ -91,7 +91,7 @@ WHERE to_timestamp_ntz(time) >= DATEADD(day, -365, CURRENT_TIMESTAMP()) AND to_t
 {% api %}
 ## Selecione qualquer compra com certas propriedades
 {% apitags %}
-Compra, Propriedade
+Purchase, Property
 {% endapitags %}
 
 Selecione clientes que fizeram qualquer compra que contenha a propriedade `“type = shops”` em 14 dias. 
@@ -120,7 +120,7 @@ HAVING COUNT(id) > 0;
 {% api %}
 ## Selecione usuários que receberam uma mensagem que não foi entregue
 {% apitags %}
-Mensagem, Entrega
+Message, Delivery
 {% endapitags %}
 
 Selecione os usuários que receberam uma campanha de SMS ou canva, mas a mensagem não chegou à operadora. Por exemplo, a mensagem pode ter sido interrompida por um estouro de fila. 
@@ -141,7 +141,7 @@ HAVING COUNT(id) > 0;
 {% api %}
 ## Encontre todas as mensagens SMS que foram enviadas, mas não chegaram à operadora devido ao estouro da fila
 {% apitags %}
-Mensagem, operadora
+Message, Carrier
 {% endapitags %}
 
 Isso pode ser reutilizado para outros tipos de mensagens enviadas de uma canva específica que não foram entregues.
@@ -163,7 +163,7 @@ HAVING COUNT(id) > 0;
 {% api %}
 ## Selecione usuários que fizeram qualquer compra com uma matriz de propriedades contendo um valor específico
 {% apitags %}
-Compra, Propriedade
+Purchase, Property
 {% endapitags %}
 
 ```sql
@@ -177,7 +177,7 @@ WHERE f.VALUE::STRING = 'Bacon'
 {% api %}
 ## Encontre todos os usuários que tiveram vários erros 30003 e 0 entregas
 {% apitags %}
-Erro, Entrega
+Error, Delivery
 {% endapitags %}
 
 Isso é útil para resolver situações em que você deseja parar de enviar para usuários que não estão recebendo mensagens, mas não estão sendo marcados como inválidos porque não possuem o código de erro necessário. Você pode redirecionar esses usuários para atualizar o número de telefone deles ou cancelar inscrição. 
@@ -201,7 +201,7 @@ GROUP BY 1, 2;
 {% api %}
 ## Encontre usuários com propriedades de eventos específicas e contagens de eventos em um intervalo de tempo
 {% apitags %}
-Evento, Propriedade, Intervalo de tempo
+Event, Property, Time range
 {% endapitags %}
 
 Encontre usuários que atendam às seguintes condições simultaneamente:
@@ -230,7 +230,7 @@ AND COUNT(*) > 3
 {% api %}
 ## Selecione usuários cuja sessão mais recente foi em um modelo de dispositivo específico
 {% apitags %}
-Sessão, dispositivo
+Session, Device
 {% endapitags %}
 
 ```sql
@@ -246,7 +246,7 @@ group by user_id, external_user_id, device_id, platform, os_version, device_mode
 {% api %}
 ## Encontre usuários que selecionaram o segundo botão de uma mensagem no app em um intervalo de tempo específico
 {% apitags %}
-Período
+Time range
 {% endapitags %}
 
 ```sql
@@ -262,7 +262,7 @@ AND CAMPAIGN_ID = '64c8cd9c4d38d13091957b1c'
 {% api %}
 ## Encontre usuários que compraram em cada um dos últimos três meses do calendário
 {% apitags %}
-Compra, Intervalo de tempo
+Purchase, Time range
 {% endapitags %}
 
 ```sql
@@ -286,7 +286,7 @@ AND to_timestamp_ntz(time) <= '2023-11-30'::timestamp_ntz;
 {% api %}
 ## Selecione usuários que completaram um evento personalizado com uma propriedade específica quando a propriedade é um número inteiro
 {% apitags %}
-Evento, Propriedade
+Event, Property
 {% endapitags %}
 
 Enviando uma mensagem para usuários que assistiram a uma série nos últimos seis meses e estão prestes a deixar a plataforma. 
@@ -312,7 +312,7 @@ GROUP BY
 {% api %}
 ## Encontre o número médio de e-mails que um usuário recebe diariamente
 {% apitags %}
-Mensagem
+Message
 {% endapitags %}
 
 ```sql
@@ -352,7 +352,7 @@ Para mensagens SMS, substitua `USERS_MESSAGES_EMAIL_SEND_SHARED` por `USERS_MESS
 {% api %}
 ## Encontre o número médio de e-mails que um usuário recebe semanalmente
 {% apitags %}
-Mensagem
+Message
 {% endapitags %}
 
 ```sql

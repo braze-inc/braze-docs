@@ -15,7 +15,7 @@ description: "Essa landing page contém exemplos de casos de uso do Liquid organ
 ## Aniversários e feriados
 
 {% apitags %}
-Aniversários e feriados
+Anniversaries and holidays
 {% endapitags %}
 
 - [Personalize o envio de mensagens com base no ano de aniversário do usuário](#anniversary-year)
@@ -137,7 +137,7 @@ O exemplo fornecido usa a véspera de Natal, o dia de Natal e o Boxing Day (o di
 ## Uso do app
 
 {% apitags %}
-Uso do app
+App usage
 {% endapitags %}
 
 - [Envio de mensagens no idioma do usuário se ele tiver registrado uma sessão](#app-session-language)
@@ -221,7 +221,7 @@ Message for a less active user
 ## Contagem regressiva
 
 {% apitags %}
-Contagem regressiva
+Countdowns
 {% endapitags %}
 
 - [Adicionar X dias à data de hoje](#countdown-add-x-days)
@@ -539,7 +539,7 @@ Esse caso de uso exibirá a data de 30 dias a partir de agora para uso no envio 
 ## Atributo personalizado
 
 {% apitags %}
-Atributo personalizado
+Custom attribute
 {% endapitags %}
 
 - [Personalize uma mensagem com base em atributos personalizados correspondentes](#attribute-matching)
@@ -600,7 +600,7 @@ Hi {{name[0]}}, here's your message!
 ## Evento personalizado
 
 {% apitags %}
-Evento personalizado
+Custom event
 {% endapitags %}
 
 - [Abortar a notificação por push se um evento personalizado estiver dentro de duas horas](#event-abort-push)
@@ -726,7 +726,7 @@ Esse caso de uso calcula o número de vezes que um evento personalizado foi regi
 ## Idioma
 
 {% apitags %}
-Idioma
+Language
 {% endapitags %}
 
 - [Exibir os nomes dos meses em um idioma diferente](#language-display-month)
@@ -841,7 +841,7 @@ tuesday default
 ## Diversos
 
 {% apitags %}
-Diversos
+Miscellaneous
 {% endapitags %}
 
 - [Evite enviar e-mails para clientes que bloquearam e-mails de marketing](#misc-avoid-blocked-emails)
@@ -1202,7 +1202,7 @@ Este caso de uso mostra como indexar o campo de perfil de usuário `phone_number
 ## Direcionamento de plataforma
 
 {% apitags %}
-Direcionamento de plataforma
+Platform targeting
 {% endapitags %}
 
 - [Diferenciar a cópia por sistema operacional do dispositivo](#platform-device-os)
@@ -1359,7 +1359,7 @@ Thanks for joining our SMS program!
 ## Fusos horários
 
 {% apitags %}
-Fusos horários
+Time zones
 {% endapitags %}
 
 - [Personalize uma mensagem de acordo com o fuso horário do usuário](#personalize-timezone)
@@ -1495,7 +1495,7 @@ Check out this new bar after work today. HH specials!
 ## Semana/Dia/Mês
 
 {% apitags %}
-Semana/Dia/Mês
+Week/Day/Month
 {% endapitags %}
 
 - [Coloque o nome do mês anterior em uma mensagem](#month-name)

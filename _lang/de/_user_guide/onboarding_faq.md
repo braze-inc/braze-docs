@@ -19,7 +19,7 @@ description: "Diese Seite enthält eine Sammlung häufig gestellter Fragen, die 
 ### Wie gehe ich mit anonymen Nutzer:innen-Daten um?
 
 {% apitags %}
-Nutzer:innen
+Users
 {% endapitags %}
 
 Wenn ein Nutzerprofil über das SDK erkannt wird, erstellt Braze zunächst ein anonymes Nutzerprofil mit einer `braze_id`: einer eindeutigen Kennung, die von Braze festgelegt wird.
@@ -38,7 +38,7 @@ Eine vollständige Aufschlüsselung der verschiedenen Methoden zur Erfassung neu
 ### Wie kann ich Benutzer importieren, die ich bereits außerhalb von Braze erfasst und identifiziert habe?
 
 {% apitags %}
-Nutzer:innen
+Users
 {% endapitags %}
 
 Um zuvor identifizierte Nutzer:innen zu importieren, können Sie eine CSV-Datei auf Braze hochladen oder Daten über die API senden.
@@ -72,7 +72,7 @@ Das sollten Sie bei dem Endpunkt `/users/track` beachten:
 ### Was ist der Unterschied zwischen den Push-Abonnement-Status?
 
 {% apitags %}
-Nutzer:innen
+Users
 {% endapitags %}
 
 Es gibt drei Optionen für den Status des Push-Abos: abonniert, Opt-in und abgemeldet.
@@ -92,7 +92,7 @@ Standardmäßig ist für den Nachrichtenempfang per Push die Abonnentenrolle ode
 ### Was ist, wenn ich doppelte Benutzer identifiziert habe?
 
 {% apitags %}
-Nutzer:innen
+Users
 {% endapitags %}
 
 Wenn Sie doppelte Nutzer:innen identifiziert haben, müssen Sie diese Nutzerprofile bereinigen. Sie können dies mit den folgenden Schritten tun:
@@ -120,7 +120,7 @@ Einige zusätzliche Dinge sind zu beachten:
 ### Wie erstelle ich ein Segment, wenn ich eine Gruppe von Nutzer:innen über CSV importiere?
 
 {% apitags %}
-Segmente
+Segments
 {% endapitags %}
 
 Um Ihre CSV-Datei zu importieren, gehen Sie auf die Seite **Benutzerimport** unter dem Abschnitt Benutzer. In der Tabelle der **letzten Importe** sind bis zu zwanzig Ihrer letzten Importe, deren Dateinamen, die Anzahl der Zeilen in der Datei, die Anzahl der erfolgreich importierten Zeilen, die Gesamtzahl der Zeilen in jeder Datei und der Status jedes Imports aufgeführt.
@@ -137,7 +137,7 @@ Um eine CSV-Vorlage herunterzuladen, siehe [Benutzerimport]({{site.baseurl}}/use
 ### Welche Arten von Filtern kann ich bei der Erstellung eines Segments verwenden?
 
 {% apitags %}
-Segmente
+Segments
 {% endapitags %}
 
 Das Braze SDK bietet Ihnen ein leistungsstarkes Arsenal an Filtern, mit denen Sie Ihre Nutzer:innen auf der Grundlage bestimmter Features und Attribute segmentieren und targetieren können. Sie können das Glossar der [Segmentierungsfilter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) verwenden, um diese Filter nach Filterkategorien zu durchsuchen oder einzugrenzen (benutzerdefinierte Daten, Benutzeraktivität, Retargeting, Marketingaktivitäten, Benutzerattribute, Installationsattribution, soziale Aktivitäten, Tests, Sonstige).
@@ -148,7 +148,7 @@ Das Braze SDK bietet Ihnen ein leistungsstarkes Arsenal an Filtern, mit denen Si
 ### Wie richte ich die Standortbestimmung ein, damit ich Nutzer nach ihrem letzten Standort segmentieren und in meinen standortbezogenen Kampagnen und Strategien verwenden kann?
 
 {% apitags %}
-Segmente
+Segments
 {% endapitags %}
 
 Navigieren Sie zur Seite **Segmente** unter Engagement, um alle Ihre aktuellen Benutzersegmente anzuzeigen. Auf dieser Seite können Sie neue Segmente erstellen und benennen. Um zu beginnen, klicken Sie auf **Segment erstellen** und geben Sie Ihrem Segment einen Namen.
@@ -168,7 +168,7 @@ Sind Sie daran interessiert, die Vorteile des Location Targeting mit Hilfe eines
 ### Wie kann ich präzise Listen von Nutzern auf der Grundlage ihres benutzerdefinierten Ereignis- und Kaufverhaltens in den letzten 365 Tagen ansprechen?
 
 {% apitags %}
-Segmente
+Segments
 {% endapitags %}
 
 Sie können [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) verwenden! Segment-Erweiterungen ermöglichen es Ihnen, eine präzisere Liste von Nutzer:innen zu targetieren, als dies mit einem regulären Segment möglich wäre.
@@ -198,7 +198,7 @@ Die Verwendung von Ereigniseigenschaften innerhalb von Segment Extensions hat ke
 #### Segment Extensions auf dem neuesten Stand halten
 
 {% apitags %}
-Segmente
+Segments
 {% endapitags %}
 
 Sie können angeben, ob die Erweiterung eine Momentaufnahme anfertigen oder jeden Tag neu generiert werden soll. Ihre Erweiterung wird immer nach dem ersten Speichern mit der Verarbeitung beginnen. Wenn Sie möchten, dass die Erweiterung täglich regeneriert wird, wählen Sie die Option **Erweiterung täglich regenerieren**. Die Regeneration beginnt dann jeden Tag gegen Mitternacht in der Zeitzone Ihres Unternehmens.
@@ -215,7 +215,7 @@ Nachdem Sie eine Erweiterung erstellt haben, können Sie sie schließlich als Fi
 ### Wie erstellt man Multichannel-Kampagnen?
 
 {% apitags %}
-Kampagnen
+Campaigns
 {% endapitags %}
 
 Um eine Multichannel-Kampagne zu erstellen, gehen Sie auf die Seite **Kampagnen**, wählen Sie **Kampagne erstellen** und dann **Multichannel-Kampagne**. Wenn Sie sich in einer Multichannel-Kampagne befinden, wählen Sie auf der Registerkarte Verfassen die Option **Messaging-Kanal hinzufügen**, um die gewünschten Kanäle hinzuzufügen. Klicken Sie auf die eingeblendeten Kanalsymbole, um zwischen den verschiedenen Nachrichtenkomponisten umzuschalten, während Sie Ihre Kampagnentexte für die verschiedenen Kanäle erstellen.
@@ -226,7 +226,7 @@ Um eine Multichannel-Kampagne zu erstellen, gehen Sie auf die Seite **Kampagnen*
 ### Wie kann ich mit dem Testen und Optimieren von Kampagnen beginnen?
 
 {% apitags %}
-Kampagnen
+Campaigns
 {% endapitags %}
 
 Die Erstellung multivariater Kampagnen und die Durchführung von Canvasen mit mehreren Varianten sind ein guter Ansatzpunkt. Sie können zum Beispiel eine [multivariate Kampagne]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) durchführen, um eine Nachricht mit verschiedenen Kopien oder Betreffzeilen zu testen. Canvase mit mehreren Varianten sind hilfreich, um Workflows zu testen.
@@ -237,7 +237,7 @@ Die Erstellung multivariater Kampagnen und die Durchführung von Canvasen mit me
 ### Warum gibt es einen Unterschied zwischen der Anzahl der eindeutigen Empfänger und der Anzahl der Sendungen für eine bestimmte Kampagne oder ein bestimmtes Canvas?
 
 {% apitags %}
-Kampagnen
+Campaigns
 {% endapitags %}
 
 Eine mögliche Erklärung für diesen Unterschied könnte darin liegen, dass in der Kampagne oder in Canvas die Wiederwählbarkeit aktiviert ist. Wenn Sie diese Option aktivieren, können Benutzer, die sich für das Segment und die Zustellungseinstellungen qualifizieren, die Nachricht mehr als einmal erhalten. Wenn die Wiederzulassung nicht aktiviert ist, kann die wahrscheinliche Erklärung für den Unterschied zwischen gesendeten und eindeutigen Empfänger:innen darin liegen, dass Nutzer:innen mehrere Geräte über verschiedene Plattformen hinweg mit ihren Profilen verknüpft haben.
@@ -250,7 +250,7 @@ Wenn Sie z.B. ein Canvas haben, das sowohl iOS- als auch Web-Push-Benachrichtigu
 ### Was bietet die Zustellung in der lokalen Zeitzone?
 
 {% apitags %}
-Kampagnen
+Campaigns
 {% endapitags %}
 
 Die Zustellung nach Ortszeit ermöglicht es Ihnen, Messaging-Kampagnen an ein Segment zu senden, das auf der nutzerspezifischen Zeitzone basiert. Ohne die Zustellung in der lokalen Zeitzone werden die Kampagnen auf der Grundlage der Zeitzoneneinstellungen Ihres Unternehmens in Braze geplant.
@@ -263,7 +263,7 @@ Wenn beispielsweise ein in London ansässiges Unternehmen eine Kampagne um 12 Uh
 ### Wie erkennt Braze die Zeitzone eines Benutzers?
 
 {% apitags %}
-Kampagnen
+Campaigns
 {% endapitags %}
 
 Braze ermittelt automatisch die Zeitzone eines Benutzers anhand seines Geräts. Dies wurde entwickelt, um die Zeitzonengenauigkeit und die vollständige Abdeckung Ihrer Nutzer:innen zu unterstützen. Benutzer, die über die Benutzer-API oder anderweitig ohne Zeitzone erstellt werden, haben die Zeitzone Ihres Unternehmens als Standardzeitzone, bis sie in Ihrer App vom SDK erkannt werden.
@@ -276,7 +276,7 @@ Sie können die Zeitzone Ihres Unternehmens in Ihren [Unternehmenseinstellungen]
 ### Wie plane ich eine Kampagne für eine lokale Zeitzone?
 
 {% apitags %}
-Kampagnen
+Campaigns
 {% endapitags %}
 
 Wenn Sie eine Kampagne planen, müssen Sie auswählen, dass sie zu einer bestimmten Zeit gesendet werden soll, und dann die Option **Kampagne an Benutzer in ihrer lokalen Zeitzone senden** wählen.
@@ -299,7 +299,7 @@ Wenn Sie den Nutzern erlaubt haben, sich erneut für die Kampagne zu qualifizier
 ### Wann werden Änderungen an lokalen Zeitzonen-Kampagnen wirksam?
 
 {% apitags %}
-Kampagnen
+Campaigns
 {% endapitags %}
 
 Die zeitbasierten Filter der Zielsegmente sollten bei Zeitzonenkampagnen ein Zeitfenster von mindestens 48 Stunden enthalten, um die Zustellung an das gesamte Segment zu gewährleisten. Nehmen wir zum Beispiel ein Segment, das Nutzer:innen an ihrem zweiten Tag mit den folgenden Filtern zusammenstellt:
@@ -315,7 +315,7 @@ Bei der Zustellung in der lokalen Zeitzone können Benutzer in diesem Segment au
 ### Welche Änderungen kann ich an geplanten Kampagnen vor dem Start vornehmen?
 
 {% apitags %}
-Kampagnen
+Campaigns
 {% endapitags %}
 
 Wenn die Kampagne geplant ist, müssen außer der Zusammensetzung der Nachricht noch andere Änderungen vorgenommen werden, bevor wir die Nachrichten in die Warteschlange stellen. Wie bei allen Kampagnen können Sie Konversions-Events nicht mehr bearbeiten, sobald die Kampagne gestartet wurde.
@@ -326,7 +326,7 @@ Wenn die Kampagne geplant ist, müssen außer der Zusammensetzung der Nachricht 
 ### Nach welchem Zeitraum werden Nachrichten für eine geplante Kampagne in die Warteschlange gestellt?
 
 {% apitags %}
-Kampagnen
+Campaigns
 {% endapitags %}
 
 - Einmalig geplante Kampagnen können bis zur geplanten Sendezeit bearbeitet werden.
@@ -340,7 +340,7 @@ Kampagnen
 ### Was passiert, wenn ich eine Bearbeitung innerhalb der "sicheren Zone" vornehme?
 
 {% apitags %}
-Kampagnen
+Campaigns
 {% endapitags %}
 
 Eine Änderung des Sendezeitpunkts von Kampagnen innerhalb dieses Zeitraums kann zum Beispiel zu unerwünschtem Verhalten führen:
@@ -354,7 +354,7 @@ Eine Änderung des Sendezeitpunkts von Kampagnen innerhalb dieses Zeitraums kann
 ### Was soll ich tun, wenn die "sichere Zone" bereits überschritten ist?
 
 {% apitags %}
-Kampagnen
+Campaigns
 {% endapitags %}
 
 Um sicherzustellen, dass die Kampagnen wie gewünscht funktionieren, empfehlen wir, die aktuelle Kampagne zu stoppen (dadurch werden alle Nachrichten in der Warteschlange gestoppt). Sie können die Kampagne dann duplizieren, die erforderlichen Änderungen vornehmen und die neue Kampagne starten. Möglicherweise müssen Sie Nutzer von dieser Kampagne ausschließen, die bereits die erste Kampagne erhalten haben.
@@ -367,7 +367,7 @@ Stellen Sie sicher, dass Sie den Kampagnenzeitplan so anpassen, dass der Versand
 ### Wann bewertet Braze die Benutzer für die Bereitstellung in der lokalen Zeitzone?
 
 {% apitags %}
-Kampagnen
+Campaigns
 {% endapitags %}
 
 Für die Zustellung zur Ortszeit prüft Braze die Nutzer:innen während dieser beiden Instanzen auf ihre Zugangsberechtigung:
@@ -388,7 +388,7 @@ Die Verweildauer im Segment vor dem Start muss mindestens 24 Stunden betragen. W
 ### Warum stimmt die Anzahl der Nutzer, die eine Kampagne betreten, nicht mit der erwarteten Anzahl überein?
 
 {% apitags %}
-Kampagnen
+Campaigns
 {% endapitags %}
 
 Die Anzahl der Nutzer, die eine Kampagne betreten, kann von der von Ihnen erwarteten Anzahl abweichen, da die Zielgruppen und Auslöser ausgewertet werden. In Braze werden Zielgruppen vor dem Trigger ausgewertet (außer bei dem [Trigger Attributänderung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers#change-custom-attribute-value)). Dies führt dazu, dass Nutzer aus der Kampagne aussteigen, wenn sie zunächst nicht zu Ihrer ausgewählten Zielgruppe gehören, bevor irgendwelche Auslöseaktionen ausgewertet werden.
@@ -401,7 +401,7 @@ Die Anzahl der Nutzer, die eine Kampagne betreten, kann von der von Ihnen erwart
 ### Was passiert, wenn die Zielgruppe und die Sendezeit bei einem Canvas, der eine Variante, aber mehrere Verzweigungen hat, identisch sind?
 
 {% apitags %}
-Canvase
+Canvases
 {% endapitags %}
 
 Für jeden Schritt wird ein Auftrag in die Warteschlange aufgenommen. Diese werden etwa zur selben Zeit ausgeführt und einer von ihnen "gewinnt". In der Praxis kann dies etwas gleichmäßig sortiert sein, aber es ist wahrscheinlich, dass zumindest eine leichte Tendenz zu dem Schritt besteht, der zuerst erstellt wurde.
@@ -414,7 +414,7 @@ Außerdem können wir keine Garantien dafür geben, wie diese Verteilung genau a
 ### Was passiert, wenn Sie einen Canvas anhalten?
 
 {% apitags %}
-Canvase
+Canvases
 {% endapitags %}
 
 Wenn Sie einen Canvas anhalten, gilt Folgendes:
@@ -433,7 +433,7 @@ Wenn Sie einen Canvas anhalten, werden Nutzer:innen, die in einem Schritt warten
 ### Wann wird ein Ausnahmeereignis ausgelöst?
 
 {% apitags %}
-Canvase
+Canvases
 {% endapitags %}
 
 Ausnahme-Events triggern nur, während der Nutzer:in auf die Canvas-Komponente wartet, mit der sie verknüpft ist. Wenn ein:e Nutzer:in eine Aktion durchführt, wird das Ausnahme-Event nicht ausgelöst.
@@ -446,7 +446,7 @@ Wenn Sie Nutzer:innen ausschließen möchten, die ein bestimmtes Ereignis vorgeb
 ### Wie wirkt sich die Bearbeitung eines Canvas auf Benutzer aus, die sich bereits im Canvas befinden?
 
 {% apitags %}
-Canvase
+Canvases
 {% endapitags %}
 
 Wenn Sie einige der Schritte eines mehrstufigen Canvas bearbeiten, erhalten Benutzer, die bereits in der Zielgruppe waren, aber die Schritte noch nicht erhalten haben, die aktualisierte Version der Nachricht. Dies geschieht allerdings nur, wenn noch keine Bewertung für den jeweiligen Schritt erfolgt ist.
@@ -459,7 +459,7 @@ Weitere Informationen darüber, was Sie nach dem Start bearbeiten können und wa
 ### Wie werden Benutzerkonversionen in einem Canvas verfolgt?
 
 {% apitags %}
-Canvase
+Canvases
 {% endapitags %}
 
 Ein Benutzer kann nur einmal pro Canvas-Eintrag konvertieren.
@@ -501,7 +501,7 @@ Der Nutzer:in wird in der gesamten Canvas-Variante als konvertiert gezählt, abe
 ### Ist Canvas Analytics oder der Segmenter genauer, wenn es um die Anzahl der einzelnen Benutzer geht?
 
 {% apitags %}
-Canvase
+Canvases
 {% endapitags %}
 
 Der Segmenter ist eine genauere Statistik für eindeutige Benutzerdaten als Canvas- oder Kampagnenstatistiken. Das liegt daran, dass Canvas- und Kampagnenstatistiken Zahlen sind, die Braze erhöht, wenn etwas passiert. Das bedeutet, dass es Variablen gibt, die dazu führen können, dass diese Zahl von der des Segmenters abweicht. So können Nutzer:innen zum Beispiel mehr als einmal für ein Canvas oder eine Kampagne konvertieren.  
@@ -512,7 +512,7 @@ Der Segmenter ist eine genauere Statistik für eindeutige Benutzerdaten als Canv
 ### Warum stimmt die Anzahl der Benutzer, die ein Canvas betreten, nicht mit der erwarteten Anzahl überein?
 
 {% apitags %}
-Canvase
+Canvases
 {% endapitags %}
 
 Die Anzahl der Nutzer, die ein Canvas betreten, kann von der von Ihnen erwarteten Anzahl abweichen, da die Zielgruppen und Auslöser ausgewertet werden. In Braze wird eine Zielgruppe vor dem Trigger ausgewertet (es sei denn, Sie verwenden einen Trigger für [die Änderung eines Attributs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) ). Dies führt dazu, dass Nutzer, die nicht zu Ihrer ausgewählten Zielgruppe gehören, aus dem Canvas herausfallen, bevor irgendwelche Auslöseaktionen ausgewertet werden.

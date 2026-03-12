@@ -12,7 +12,7 @@ tool: Segments
 {% api %}
 ## 이벤트가 발생한 횟수별로 사용자를 선택합니다.
 {% apitags %}
-이벤트
+Event
 {% endapitags %}
 
 과거에 특정 이메일 캠페인을 한 번 이상 열어본 사용자를 선택합니다.
@@ -30,7 +30,7 @@ HAVING count(*) > 1
 {% api %}
 ## 작업을 수행한 사용자를 선택하고 속성 값을 합산합니다.
 {% apitags %}
-등록정보
+Property
 {% endapitags %}
 
 모든 베팅의 합계가 일정 금액 이상인 스포츠에 베팅한 사용자를 선택합니다.
@@ -45,7 +45,7 @@ group by 1 having sum(get_path(parse_json(properties), 'amount')) > 150
 {% api %}
 ## 시간 범위에서 이벤트가 발생한 횟수를 기준으로 사용자를 선택합니다.
 {% apitags %}
-이벤트, 시간 범위
+Event, Time range
 {% endapitags %}
 
 지난 30일 동안 이메일을 세 번 이상 열어본 사용자를 선택합니다.
@@ -64,7 +64,7 @@ HAVING COUNT(DISTINCT id) > 3
 {% api %}
 ## 여러 시간 범위에 걸쳐 하나 이상의 이벤트를 녹화한 사용자를 선택합니다.
 {% apitags %}
-이벤트, 시간 범위
+Event, Time range
 {% endapitags %}
 
 지난 4분기 각각에 구매를 한 사용자를 선택합니다. This user segment can be used with [audience sync]({{site.baseurl}}/partners/canvas_audience_sync/) to identify high-value lookalike customers for acquisition.
@@ -91,7 +91,7 @@ WHERE to_timestamp_ntz(time) >= DATEADD(day, -365, CURRENT_TIMESTAMP()) AND to_t
 {% api %}
 ## 특정 속성이 있는 구매를 선택하세요.
 {% apitags %}
-구매, 부동산
+Purchase, Property
 {% endapitags %}
 
 14일 이내에 `“type = shops”` 속성이 포함된 구매를 한 고객을 선택합니다. 
@@ -120,7 +120,7 @@ HAVING COUNT(id) > 0;
 {% api %}
 ## 전달되지 않은 메시지를 받은 사용자를 선택합니다.
 {% apitags %}
-메시지, 배달
+Message, Delivery
 {% endapitags %}
 
 SMS 캠페인 또는 캔버스를 전송했지만 메시지가 이동 통신사에 전달되지 않은 사용자를 선택합니다. 예를 들어 대기열 오버플로로 인해 메시지가 중지되었을 수 있습니다. 
@@ -141,7 +141,7 @@ HAVING COUNT(id) > 0;
 {% api %}
 ## 전송되었지만 대기열 초과로 인해 통신사에 도달하지 못한 모든 SMS 메시지 찾기
 {% apitags %}
-메시지, 이동 통신사
+Message, Carrier
 {% endapitags %}
 
 특정 캔버스에서 전송되었지만 전달되지 않은 다른 유형의 메시지에 대해 용도를 변경할 수 있습니다.
@@ -163,7 +163,7 @@ HAVING COUNT(id) > 0;
 {% api %}
 ## 특정 값이 포함된 속성 배열로 구매를 한 사용자를 선택합니다.
 {% apitags %}
-구매, 부동산
+Purchase, Property
 {% endapitags %}
 
 ```sql
@@ -177,7 +177,7 @@ WHERE f.VALUE::STRING = 'Bacon'
 {% api %}
 ## 30003 오류가 여러 번 발생하고 배달이 0건인 모든 사용자 찾기
 {% apitags %}
-오류, 배달
+Error, Delivery
 {% endapitags %}
 
 이는 메시지를 받지 못했지만 필요한 오류 코드가 없어 무효로 표시되지 않는 사용자에게 보내는 것을 중지하고 싶은 상황을 해결하는 데 유용합니다. 이러한 사용자를 리타겟팅하여 전화번호를 업데이트하거나 구독을 취소할 수 있습니다. 
@@ -201,7 +201,7 @@ GROUP BY 1, 2;
 {% api %}
 ## 특정 이벤트 속성 및 시간 범위의 이벤트 수를 가진 사용자 찾기
 {% apitags %}
-이벤트, 속성, 시간 범위
+Event, Property, Time range
 {% endapitags %}
 
 다음 조건을 동시에 충족하는 사용자를 찾습니다:
@@ -230,7 +230,7 @@ AND COUNT(*) > 3
 {% api %}
 ## 특정 디바이스 모델에서 가장 최근 세션이 있었던 사용자를 선택합니다.
 {% apitags %}
-세션, 디바이스
+Session, Device
 {% endapitags %}
 
 ```sql
@@ -246,7 +246,7 @@ group by user_id, external_user_id, device_id, platform, os_version, device_mode
 {% api %}
 ## 특정 시간 범위에서 인앱 메시지의 두 번째 버튼을 선택한 사용자 찾기
 {% apitags %}
-시간 범위
+Time range
 {% endapitags %}
 
 ```sql
@@ -262,7 +262,7 @@ AND CAMPAIGN_ID = '64c8cd9c4d38d13091957b1c'
 {% api %}
 ## 지난 3개월 동안 각각 구매한 사용자 찾기
 {% apitags %}
-구매, 시간 범위
+Purchase, Time range
 {% endapitags %}
 
 ```sql
@@ -286,7 +286,7 @@ AND to_timestamp_ntz(time) <= '2023-11-30'::timestamp_ntz;
 {% api %}
 ## 속성이 정수인 경우 특정 속성으로 커스텀 이벤트를 완료한 사용자를 선택합니다.
 {% apitags %}
-이벤트, 속성
+Event, Property
 {% endapitags %}
 
 지난 6개월 동안 시리즈를 시청하고 플랫폼을 떠나려고 하는 사용자에게 메시지를 보냅니다. 
@@ -312,7 +312,7 @@ GROUP BY
 {% api %}
 ## 사용자가 매일 받는 평균 이메일 수 찾기
 {% apitags %}
-메시지
+Message
 {% endapitags %}
 
 ```sql
@@ -352,7 +352,7 @@ SMS 메시지의 경우 쿼리에서 `USERS_MESSAGES_EMAIL_SEND_SHARED`를 `USER
 {% api %}
 ## 사용자가 매주 받는 평균 이메일 수 찾기
 {% apitags %}
-메시지
+Message
 {% endapitags %}
 
 ```sql

@@ -47,7 +47,7 @@ Les schémas de stockage s'appliquent aux données d'événements sous forme de 
 ## Événements de mise à jour du numéro compartiment aléatoire {#random-bucket-number-update-events}
 
 {% apitags %}
-Numéro de compartiment aléatoire
+Random Bucket Number
 {% endapitags %}
 
 Cet événement utilisateur se produit chaque fois qu'un nouvel utilisateur est créé dans son espace de travail. Au cours de cet événement, chaque nouvel utilisateur se voit attribuer un numéro de compartiment aléatoire que vous pouvez ensuite utiliser pour créer des segments d'utilisateurs aléatoires uniformément répartis. Utilisez cette fonction pour regrouper une série de numéros de compartiment aléatoires et comparer les performances de vos campagnes et de leurs variantes.
@@ -81,7 +81,7 @@ Cet événement Currents n'est disponible que pour les clients qui ont acheté u
 ## Événements personnalisés {#custom-events}
 
 {% apitags %}
-Événements personnalisés
+Custom Events
 {% endapitags %}
 
 Cet événement se produit lorsqu’un événement personnalisé spécifique est déclenché. Utilisez cette option pour suivre les événements personnalisés pour les utilisateurs dans votre application.
@@ -299,7 +299,7 @@ Cet événement se produit lorsqu’une installation d’application est attribu
 ## Emplacements/localisations {#location-events}
 
 {% apitags %}
-Localisations
+Locations
 {% endapitags %}
 
 Cet événement est déclenché lorsqu’un utilisateur est à un endroit spécifié. Utilisez cette option pour suivre les utilisateurs qui déclenchent des événements de localisation dans votre application.
@@ -441,7 +441,7 @@ Cet événement est déclenché lorsqu’un utilisateur est à un endroit spéci
 ## Événements d’achat {#purchase-events}
 
 {% apitags %}
-Achats
+Purchases
 {% endapitags %}
 
 Cet événement se produit lorsqu’un utilisateur effectue un achat. Utilisez ces données pour suivre les utilisateurs qui achètent quelque chose dans l’application.
@@ -922,7 +922,7 @@ Lorsqu’un utilisateur commence sa première session, un événement `FirstSess
 ## En ligne/en production/instantanée Événements de changement de jeton {#live-activity-push-to-start-token-change-events}
 
 {% apitags %}
-En ligne/en production/instantanée, jeton Push To Start
+Live Activity, Push To Start Token
 {% endapitags %}
 
 Cet événement se produit lorsque Braze synchronise le jeton Live Activity push to start avec l'utilisateur.
@@ -1031,7 +1031,7 @@ Cet événement se produit lorsque Braze synchronise le jeton Live Activity push
 ## En ligne/en production/instantanée Événements de changement de jeton {#live-activity-update-token-change-events}
 
 {% apitags %}
-Activité en ligne/instantanée, jeton de mise à jour
+Live Activity, Update Token
 {% endapitags %}
 
 Cet événement se produit lorsque Braze synchronise le jeton de mise à jour de l'activité en direct avec l'utilisateur.
@@ -1140,7 +1140,7 @@ Cet événement se produit lorsque Braze synchronise le jeton de mise à jour de
 ## Événements de changement d'état du jeton de notification push {#push-notification-token-state-change-events}
 
 {% apitags %}
-Changement d'état de la poussée, du jeton
+Push, Token State Change
 {% endapitags %}
 
 Cet événement se produit lorsqu'un jeton est inséré, mis à jour ou supprimé. Utilisez-le pour suivre l'état des jetons de poussée.

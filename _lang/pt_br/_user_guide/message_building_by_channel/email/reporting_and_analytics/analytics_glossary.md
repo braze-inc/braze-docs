@@ -22,7 +22,7 @@ channel:
 ### Variação
 
 {% apitags %}
-Contagem
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Variation' %}
@@ -36,7 +36,7 @@ Contagem
 ### Envio de e-mail
 
 {% apitags %}
-Contagem
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Emailable' %}
@@ -50,7 +50,7 @@ Contagem
 ### % de público
 
 {% apitags %}
-Porcentagem
+Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Audience' %}
@@ -64,7 +64,7 @@ Porcentagem
 ### Destinatários únicos
 
 {% apitags %}
-Contagem
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Recipients' %} Esse número é recebido do Braze.
@@ -78,7 +78,7 @@ Contagem
 ### Envios
 
 {% apitags %}
-Contagem
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Sends' %}  Essa métrica é fornecida pelo Braze.
@@ -92,7 +92,7 @@ Contagem
 ### Mensagens enviadas
 
 {% apitags %}
-Contagem
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Messages Sent' %}  Essa métrica é fornecida pelo Braze.
@@ -106,7 +106,7 @@ Contagem
 ### Entregas
 
 {% apitags %}
-Contagem
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Deliveries' %} Para e-mails, *Entregas* é o número total de mensagens (Envios) enviadas e recebidas com sucesso por partes que podem enviar e-mails.
@@ -120,7 +120,7 @@ Contagem
 ### Entregas %
 
 {% apitags %}
-Porcentagem
+Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Deliveries %' %}
@@ -134,7 +134,7 @@ Porcentagem
 ### Bounces
 
 {% apitags %}
-Contagem, porcentagem
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Bounces' %} 
@@ -160,7 +160,7 @@ Um envio de e-mail para clientes que usam o SendGrid consiste em hard bounce, sp
 ### Hard bounce
 
 {% apitags %}
-Contagem
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} 
@@ -174,7 +174,7 @@ Contagem
 ### Soft bounce
 
 {% apitags %}
-Contagem
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} Se um e-mail receber um soft bounce, geralmente tentaremos novamente dentro de 72 horas, mas o número de tentativas de nova tentativa varia de acordo com o destinatário. 
@@ -190,7 +190,7 @@ Embora os soft bounces não sejam rastreados na análise de dados da sua campanh
 ### Spam
 
 {% apitags %}
-Contagem, porcentagem
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Spam' %}
@@ -212,7 +212,7 @@ Contagem, porcentagem
 ### Aberturas únicas projetadas
 
 {% apitags %}
-Contagem, porcentagem
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Opens' %} Para o envio de e-mail, esse rastreamento é feito em um período de 7 dias.
@@ -234,7 +234,7 @@ Contagem, porcentagem
 ### Cliques únicos projetados
 
 {% apitags %}
-Contagem, porcentagem
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Isso é rastreado em um período de sete dias para e-mails e medido por <a href='/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. Isso inclui cliques em links de cancelamento de inscrição fornecidos pela Braze.
@@ -256,7 +256,7 @@ Contagem, porcentagem
 ### Cancelamento de inscrição
 
 {% apitags %}
-Contagem, porcentagem
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unsubscribers or Unsub' %}
@@ -278,7 +278,7 @@ Contagem, porcentagem
 ### Receita
 
 {% apitags %}
-Contagem
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Revenue' %}
@@ -292,7 +292,7 @@ Contagem
 ### Conversões primárias (A) ou evento de conversão primária
 
 {% apitags %}
-Contagem, porcentagem
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} Para envios de e-mail, push e webhooks, começamos a rastrear as conversões após o envio inicial.
@@ -314,7 +314,7 @@ Contagem, porcentagem
 ### Confiança
 
 {% apitags %}
-Contagem
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Confidence' %}
@@ -336,7 +336,7 @@ Contagem
 ### Outras aberturas
 
 {% apitags %}
-Contagem
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Other Opens' %} Note que um usuário também pode abrir um e-mail (como as contagens de abertura para <i>Outras aberturas</i>) antes que uma contagem de <i>Aberturas de máquina</i> seja registrada. Se um usuário abrir um e-mail uma vez (ou mais) após um evento de abertura de máquina de uma caixa de entrada que não seja do Apple Mail, a quantidade de vezes que o usuário abrir o e-mail será calculada para <i>Outras aberturas</i> e apenas uma vez para <i>Aberturas exclusivas</i>.
@@ -350,7 +350,7 @@ Contagem
 ### Taxa de cliques por abertura
 
 {% apitags %}
-Porcentagem
+Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Click-to-Open Rate' %}

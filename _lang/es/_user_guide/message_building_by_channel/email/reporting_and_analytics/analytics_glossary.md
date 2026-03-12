@@ -22,7 +22,7 @@ channel:
 ### Variación
 
 {% apitags %}
-Recuento
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Variation' %}
@@ -36,7 +36,7 @@ Recuento
 ### Envío por correo electrónico
 
 {% apitags %}
-Recuento
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Emailable' %}
@@ -50,7 +50,7 @@ Recuento
 ### % de audiencia
 
 {% apitags %}
-Porcentaje
+Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Audience' %}
@@ -64,7 +64,7 @@ Porcentaje
 ### Destinatarios únicos
 
 {% apitags %}
-Recuento
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Recipients' %} Este número se recibe de Braze.
@@ -78,7 +78,7 @@ Recuento
 ### Envíos
 
 {% apitags %}
-Recuento
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Sends' %}  Esta métrica la proporciona Braze.
@@ -92,7 +92,7 @@ Recuento
 ### Mensajes enviados
 
 {% apitags %}
-Recuento
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Messages Sent' %}  Esta métrica la proporciona Braze.
@@ -106,7 +106,7 @@ Recuento
 ### Entregas
 
 {% apitags %}
-Recuento
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Deliveries' %} En el caso de los correos electrónicos, las *entregas* son el número total de mensajes (envíos) enviados y recibidos correctamente por las partes que pueden enviar correos electrónicos.
@@ -120,7 +120,7 @@ Recuento
 ### % de entregas
 
 {% apitags %}
-Porcentaje
+Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Deliveries %' %}
@@ -134,7 +134,7 @@ Porcentaje
 ### Rebotes
 
 {% apitags %}
-Recuento, Porcentaje
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Bounces' %} 
@@ -160,7 +160,7 @@ Un rebote de correo electrónico para clientes que utilizan SendGrid consiste en
 ### Rebote duro
 
 {% apitags %}
-Recuento
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} 
@@ -174,7 +174,7 @@ Recuento
 ### Rebote suave
 
 {% apitags %}
-Recuento
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} Si un correo electrónico recibe un rebote blando, normalmente lo reintentaremos en un plazo de 72 horas, pero el número de intentos de reintento varía de un receptor a otro. 
@@ -190,7 +190,7 @@ Aunque los rebotes blandos no se siguen en los análisis de tu campaña, puedes 
 ### Correo no deseado
 
 {% apitags %}
-Recuento, Porcentaje
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Spam' %}
@@ -212,7 +212,7 @@ Recuento, Porcentaje
 ### Aperturas únicas
 
 {% apitags %}
-Recuento, Porcentaje
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Opens' %} En el caso del correo electrónico, el seguimiento se realiza durante un periodo de 7 días.
@@ -234,7 +234,7 @@ Recuento, Porcentaje
 ### Clics únicos
 
 {% apitags %}
-Recuento, Porcentaje
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Esto se sigue durante un periodo de siete días para el correo electrónico y se mide mediante <a href='/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. Esto incluye los clics en los enlaces de cancelación de suscripción proporcionados por Braze.
@@ -256,7 +256,7 @@ Recuento, Porcentaje
 ### Cancelar suscripción o darse de baja
 
 {% apitags %}
-Recuento, Porcentaje
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unsubscribers or Unsub' %}
@@ -278,7 +278,7 @@ Recuento, Porcentaje
 ### Ingresos
 
 {% apitags %}
-Recuento
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Revenue' %}
@@ -292,7 +292,7 @@ Recuento
 ### Conversiones primarias (A) o evento de conversión primaria
 
 {% apitags %}
-Recuento, Porcentaje
+Count, Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} Para el correo electrónico, push y webhooks, empezamos a hacer el seguimiento de las conversiones después del envío inicial.
@@ -314,7 +314,7 @@ Recuento, Porcentaje
 ### Confianza
 
 {% apitags %}
-Recuento
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Confidence' %}
@@ -336,7 +336,7 @@ Recuento
 ### Otras aperturas
 
 {% apitags %}
-Recuento
+Count
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Other Opens' %} Ten en cuenta que un usuario también puede abrir un correo electrónico (como el recuento de aperturas para <i>Otras aperturas</i>) antes de que se registre un recuento de <i>Aperturas de máquina</i>. Si un usuario abre un correo electrónico una vez (o más) después de un evento de apertura automática desde una bandeja de entrada que no sea de Apple Mail, entonces la cantidad de veces que el usuario abre el correo electrónico se calcula para <i>Otras aperturas</i> y sólo una vez para <i>Aperturas únicas</i>.
@@ -350,7 +350,7 @@ Recuento
 ### Tasa de clics de apertura
 
 {% apitags %}
-Porcentaje
+Percentage
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Click-to-Open Rate' %}

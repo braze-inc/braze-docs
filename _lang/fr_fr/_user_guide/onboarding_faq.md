@@ -19,7 +19,7 @@ description: "Cette page contient un ensemble de questions fréquemment posées,
 ### Comment puis-je traiter les données des utilisateurs anonymes ?
 
 {% apitags %}
-Utilisateurs
+Users
 {% endapitags %}
 
 Initialement, lorsqu’un profil utilisateur est reconnu via le SDK, Braze crée un profil utilisateur anonyme avec un `braze_id` associé : un identifiant utilisateur unique défini par Braze.
@@ -38,7 +38,7 @@ Pour une analyse complète des différentes méthodes de collecte des données d
 ### Comment puis-je importer des utilisateurs recueillis et identifiés en dehors de Braze ?
 
 {% apitags %}
-Utilisateurs
+Users
 {% endapitags %}
 
 Pour importer des utilisateurs que vous avez déjà identifiés, vous pouvez charger un CSV dans Braze ou envoyer des données par l’API.
@@ -72,7 +72,7 @@ Gardez les nuances suivantes à l’esprit lorsque vous utilisez l’endpoint `/
 ### Qu’elle est la différence entre les statuts d’abonnement aux notifications push ?
 
 {% apitags %}
-Utilisateurs
+Users
 {% endapitags %}
 
 Il existe trois options d’état d’abonnement aux notifications push : abonné, inscrit et désabonné.
@@ -92,7 +92,7 @@ Par défaut, pour que votre utilisateur reçoive vos messages par le biais de no
 ### Que faire si j’ai identifié des utilisateurs en double ?
 
 {% apitags %}
-Utilisateurs
+Users
 {% endapitags %}
 
 Si vous avez identifié des utilisateurs en double, vous devrez nettoyer ces profils utilisateurs. Vous pouvez suivre les étapes suivantes :
@@ -215,7 +215,7 @@ Enfin, après avoir créé une extension, vous pouvez l’utiliser comme filtre 
 ### Comment créer une campagne multicanale ?
 
 {% apitags %}
-Campagnes
+Campaigns
 {% endapitags %}
 
 Pour créer une campagne multicanal, accédez à la page **Campagnes**, sélectionnez **Créer une campagne**, puis sélectionnez **Campagne multicanal**. Dans le cadre d'une campagne multicanale, sélectionnez **Ajouter un canal de messages** dans l'onglet de composition pour ajouter les canaux souhaités. Cliquez sur les icônes de canal qui apparaissent pour basculer entre différents composeurs de messages lorsque vous créez le texte de votre campagne pour les différents canaux.
@@ -226,7 +226,7 @@ Pour créer une campagne multicanal, accédez à la page **Campagnes**, sélecti
 ### Comment puis-je commencer à tester et optimiser les campagnes ?
 
 {% apitags %}
-Campagnes
+Campaigns
 {% endapitags %}
 
 La création de campagnes multivariées et l’exécution de Canvas avec plusieurs variantes sont un excellent moyen de commencer ! Par exemple, vous pouvez lancer une [campagne multivariée]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) pour tester un message avec différentes copies ou lignes d'objet. Les Canvas avec plusieurs variantes sont utiles pour tester des flux de travail entiers.
@@ -237,7 +237,7 @@ La création de campagnes multivariées et l’exécution de Canvas avec plusieu
 ### Pourquoi y a-t-il une différence entre le nombre de destinataires uniques et le nombre d’envois pour une campagne ou un Canvas donné ?
 
 {% apitags %}
-Campagnes
+Campaigns
 {% endapitags %}
 
 Une explication potentielle de cette différence peut venir de l’activation de la rééligibilité pour la campagne ou le Canvas. Pour ce faire, les utilisateurs qui remplissent les conditions requises pour les paramètres de segment et de livraison pourront recevoir le message plusieurs fois. Si la rééligibilité n’est pas activée, l’explication probable de la différence entre les envois et les destinataires uniques peut venir des utilisateurs ayant plusieurs appareils, sur plusieurs plateformes, associés à leurs profils.
@@ -250,7 +250,7 @@ Par exemple, si vous avez un Canvas qui dispose à la fois d’une notification 
 ### Qu’est-ce que l’offre de livraison selon le fuseau horaire local ?
 
 {% apitags %}
-Campagnes
+Campaigns
 {% endapitags %}
 
 La livraison selon le fuseau horaire local vous permet de livrer des campagnes de communication à un segment en fonction du fuseau horaire individuel d’un utilisateur. Sans la livraison selon le fuseau horaire local, les campagnes seront planifiées en fonction des paramètres de fuseau horaire de votre société dans Braze.
@@ -263,7 +263,7 @@ Par exemple, une société basée à Londres qui envoie une campagne à midi att
 ### Comment Braze connaît-t-il le fuseau horaire d’un utilisateur ?
 
 {% apitags %}
-Campagnes
+Campaigns
 {% endapitags %}
 
 Braze détermine automatiquement le fuseau horaire d’un utilisateur à partir de son appareil. Il est conçu pour assurer la précision des fuseaux horaires et la couverture complète de vos utilisateurs. Les utilisateurs créés via l’API utilisateur ou n’ayant pas de fuseau horaire prendront celui de votre entreprise comme fuseau horaire par défaut jusqu’à ce qu’ils soient identifiés dans votre application par le SDK.
@@ -276,7 +276,7 @@ Vous pouvez vérifier le fuseau horaire de votre entreprise dans les [paramètre
 ### Comment planifier une campagne selon un fuseau horaire local ?
 
 {% apitags %}
-Campagnes
+Campaigns
 {% endapitags %}
 
 Lors de la planification d'une campagne, vous devez choisir de l'envoyer à une heure donnée, puis sélectionner **Envoyer la campagne aux utilisateurs dans leur fuseau horaire local**.
@@ -299,7 +299,7 @@ Si vous avez permis aux utilisateurs de devenir rééligibles pour la campagne, 
 ### Quand les changements apportés aux campagnes selon un fuseau horaire local prennent-ils effet ?
 
 {% apitags %}
-Campagnes
+Campaigns
 {% endapitags %}
 
 Les segments cibles pour les campagnes selon un fuseau horaire local doivent inclure une fenêtre de 48 heures au moins pour que les filtres temporels garantissent la livraison au segment tout entier. Par exemple, imaginez un segment ciblant les utilisateurs lors de leur deuxième jour avec les filtres suivants :
@@ -315,7 +315,7 @@ La livraison selon un fuseau horaire local peut manquer les utilisateurs de ce s
 ### Quels changements puis-je apporter aux campagnes planifiées avant le lancement ?
 
 {% apitags %}
-Campagnes
+Campaigns
 {% endapitags %}
 
 Lorsque la campagne est planifiée, les modifications touchant autre chose que la composition du message doivent être effectuées avant qu’il ne soit placé dans la file d’attente d’envoi. Comme pour toutes les campagnes, vous ne pouvez pas modifier les événements de conversion après le lancement de la campagne.
@@ -326,7 +326,7 @@ Lorsque la campagne est planifiée, les modifications touchant autre chose que l
 ### Quelle est la « zone sécurisée » avant que les messages d’une campagne programmée soient placés en file d’attente ?
 
 {% apitags %}
-Campagnes
+Campaigns
 {% endapitags %}
 
 - Les campagnes planifiées ponctuelles peuvent être modifiées jusqu’à l’heure d’envoi prévue.
@@ -340,7 +340,7 @@ Campagnes
 ### Que faire si je fais une modification dans la « zone sécurisée » ?
 
 {% apitags %}
-Campagnes
+Campaigns
 {% endapitags %}
 
 Changer l’heure d’envoi sur les campagnes à ce moment-là peut entraîner un comportement indésirable, par exemple :
@@ -354,7 +354,7 @@ Changer l’heure d’envoi sur les campagnes à ce moment-là peut entraîner u
 ### Que dois-je faire si la « zone sécurisée » est déjà passée ?
 
 {% apitags %}
-Campagnes
+Campaigns
 {% endapitags %}
 
 Afin de garantir que les campagnes fonctionnent comme souhaité, nous vous recommandons d’arrêter la campagne actuelle (ceci annulera tous les messages qui ont été placés en file d’attente). Vous pouvez ensuite dupliquer la campagne, apporter les modifications nécessaires et lancer la nouvelle campagne. Vous devrez peut-être exclure les utilisateurs de cette campagne qui ont déjà reçu la première.
@@ -367,7 +367,7 @@ Assurez-vous de réajuster les heures de planification de la campagne pour perme
 ### Quand Braze évalue-t-il les utilisateurs pour la livraison selon un fuseau horaire local ?
 
 {% apitags %}
-Campagnes
+Campaigns
 {% endapitags %}
 
 Pour la livraison selon un fuseau horaire local, Braze évalue les utilisateurs pour leur éligibilité à l’entrée à deux moments :
@@ -388,7 +388,7 @@ L’utilisateur doit être dans le segment pendant 24 heures avant le lancement
 ### Pourquoi le nombre d’utilisateurs qui accèdent à une campagne ne correspond pas au nombre prévu ?
 
 {% apitags %}
-Campagnes
+Campaigns
 {% endapitags %}
 
 Le nombre d’utilisateurs accédant à une campagne peut être différent du nombre prévu selon le mode d’évaluation des audiences et des déclencheurs. Dans Braze, une audience est évaluée avant le déclencheur (sauf si un [déclencheur modification d’attribut]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers#change-custom-attribute-value) est utilisé). Les utilisateurs seront alors exclus de la campagne s’ils ne font pas partie de l’audience que vous avez sélectionnée au départ, avant l’évaluation des actions de déclenchement.
@@ -401,7 +401,7 @@ Le nombre d’utilisateurs accédant à une campagne peut être différent du no
 ### Que se passe-t-il si l’audience et l’heure d’envoi sont identiques pour un Canvas qui a une variante, mais plusieurs branches ?
 
 {% apitags %}
-Canvas
+Canvases
 {% endapitags %}
 
 Nous mettons en file d’attente un travail pour chaque étape, ils sont exécutés à peu près simultanément et l’un d’entre eux « gagne ». En pratique ce processus peut être quelque peu uniforme, mais il y a parfois une légère distorsion par rapport à l’étape créée en premier.
@@ -414,7 +414,7 @@ De plus, nous ne pouvons pas garantir avec précision ce à quoi ressemblera cet
 ### Que se passe-t-il lorsque vous arrêtez un Canvas ?
 
 {% apitags %}
-Canvas
+Canvases
 {% endapitags %}
 
 Lorsque vous arrêtez un Canvas, les éléments suivants s’appliquent :
@@ -433,7 +433,7 @@ Arrêter un Canvas ne fera pas sortir les utilisateurs qui attendent dans une é
 ### À quel moment un événement d’exception est-il déclenché ?
 
 {% apitags %}
-Canvas
+Canvases
 {% endapitags %}
 
 Les événements d'exception ne se déclenchent que lorsque l'utilisateur attend de recevoir le composant Canvas auquel il est associé. Si un utilisateur effectue une action à l’avance, l’événement d’exception ne sera pas déclenché.
@@ -446,7 +446,7 @@ Si vous souhaitez exclure les utilisateurs qui ont effectué un certain événem
 ### En quoi la modification d’un Canvas affecte-t-elle des utilisateurs déjà présents dans les Canvas ?
 
 {% apitags %}
-Canvas
+Canvases
 {% endapitags %}
 
 Si vous modifiez certaines étapes d’un Canvas à plusieurs étapes, les utilisateurs qui étaient déjà dans l’audience, mais n’ayant pas encore reçu les étapes, recevront la version mise à jour du message. Notez que ce cas se produit uniquement s’ils n’ont pas encore été évalués pour l’étape.
@@ -459,7 +459,7 @@ Pour plus d'informations sur ce que vous pouvez ou ne pouvez pas modifier après
 ### Comment le suivi des conversions utilisateur est-il effectué dans Canvas ?
 
 {% apitags %}
-Canvas
+Canvases
 {% endapitags %}
 
 Un utilisateur peut uniquement effectuer une conversion par entrée Canvas.
@@ -501,7 +501,7 @@ La conversion de l’utilisateur sera prise en compte dans l’ensemble de Canva
 ### Lorsqu’on examine le nombre d’utilisateurs uniques, l’analyse Canvas est-elle plus précise que la segmentation ?
 
 {% apitags %}
-Canvas
+Canvases
 {% endapitags %}
 
 La segmentation est une statistique plus précise pour les données de l’utilisateur unique par rapport aux statistiques de Canvas ou de la campagne. Cela est dû au fait que les statistiques Canvas et des campagnes sont des nombres incrémentés par Braze en fonction des opérations effectuées. En d’autres termes, des variables peuvent entraîner cette différence de nombre par rapport à l’outil de segmentation. Par exemple, des utilisateurs peuvent effectuer plus de conversions pour un Canvas ou une campagne.  
@@ -512,7 +512,7 @@ La segmentation est une statistique plus précise pour les données de l’utili
 ### Pourquoi le nombre d’utilisateurs qui accèdent à un Canvas ne correspond pas au nombre prévu ?
 
 {% apitags %}
-Canvas
+Canvases
 {% endapitags %}
 
 Le nombre d’utilisateurs accédant à un Canvas peut être différent du nombre prévu selon le mode d’évaluation des audiences et des déclencheurs. Dans Braze, une audience est évaluée avant le déclencheur (à moins d'utiliser un déclencheur de [changement d'attribut]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) ). Les utilisateurs seront alors exclus du Canvas s’ils ne font pas partie de l’audience que vous avez sélectionnée, avant l’évaluation des actions de déclenchement.
@@ -525,7 +525,7 @@ Le nombre d’utilisateurs accédant à un Canvas peut être différent du nombr
 ### Quels sont les indicateurs mesurés par Braze ?
 
 {% apitags %}
-Analyse
+Analytics
 {% endapitags %}
 
 Selon le canal, Braze mesure plusieurs indicateurs pour vous permettre de déterminer la réussite d’une campagne et renseigner les campagnes futures. Vous trouverez une liste complète dans notre [glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/).
@@ -536,7 +536,7 @@ Selon le canal, Braze mesure plusieurs indicateurs pour vous permettre de déter
 ### Comment sont calculés les revenus dans Braze ?
 
 {% apitags %}
-Analyse
+Analytics
 {% endapitags %}
 
 Sur la page **Revenus**, vous pouvez consulter des données sur les revenus ou les achats sur des périodes spécifiques, pour un produit spécifique, ou le total des revenus ou des achats de votre appli. Ces valeurs de revenus sont générées à partir des achats réalisés par les destinataires des campagnes durant une période de conversion donnée.
@@ -549,7 +549,7 @@ Ceci dit, il est important de prendre en compte le fait que Braze est un outil d
 ### Quelles autres capacités de reporting permet Currents ?
 
 {% apitags %}
-Analyse
+Analytics
 {% endapitags %}
 
 Currents diffuse continuellement des données d’engagement de messagerie et de comportement des clients à l’un de nos nombreux partenaires de données, vous permettant d’utiliser les données uniques et précieuses que Braze crée pour alimenter vos efforts d’aide à la décision et d’analyse avec d’autres partenaires de premier ordre.
@@ -562,7 +562,7 @@ Ces données vont au-delà des simples indicateurs d’engagement des envois de 
 ### Comment puis-je planifier un rapport d’engagement récurrent ?
 
 {% apitags %}
-Analyse
+Analytics
 {% endapitags %}
 
 Pour planifier un rapport d’engagement récurrent, faites ce qui suit :
@@ -584,7 +584,7 @@ Pour planifier un rapport d’engagement récurrent, faites ce qui suit :
 ### Quelle est la différence entre les rapports d'engagement et le générateur de rapports ?
 
 {% apitags %}
-Analyse
+Analytics
 {% endapitags %}
 
 Les rapports d'engagement vous fournissent des CSV des statistiques d’engagement pour des messages donnés envoyés depuis des campagnes ou des Canvas à l’aide d’e-mails déclenchés. Certaines données sont agrégées au niveau de la campagne ou du Canvas et non pas au niveau de la variante ou de l’étape spécifique. Les rapports ne sont pas enregistrés dans le tableau de bord. Relancer le rapport peut fournir des statistiques actualisées.

@@ -21,7 +21,7 @@ tool: Reports
 ### AMP 클릭 수
 
 {% apitags %}
-이메일
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='AMP Clicks' %}
@@ -33,7 +33,7 @@ tool: Reports
 ### AMP 열람 수
 
 {% apitags %}
-이메일
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='AMP Opens' %}
@@ -45,7 +45,7 @@ tool: Reports
 ### 오디언스
 
 {% apitags %}
-전체
+All
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Audience' %}
@@ -59,7 +59,7 @@ tool: Reports
 ### 반송 수
 
 {% apitags %}
-이메일, 웹 푸시, iOS 푸시
+Email, Web Push, iOS Push
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Bounces' %} 이는 유효한 푸시 토큰이 없거나, 캠페인 시작 후 사용자가 구독을 취소했거나, 이메일 주소가 부정확하거나 비활성화된 경우 발생할 수 있습니다.
@@ -87,7 +87,7 @@ tool: Reports
 ### 본문 클릭
 
 {% apitags %}
-iOS 푸시, Android 푸시
+iOS Push, Android Push
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Body Click' %}
@@ -101,7 +101,7 @@ iOS 푸시, Android 푸시
 ### 본문 클릭 수
 
 {% apitags %}
-인앱 메시지
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Body Clicks' %} 자세한 내용은 [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) 및 [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100)의 SDK 체인지로그를 참조하십시오.
@@ -115,7 +115,7 @@ iOS 푸시, Android 푸시
 ### 버튼 1 클릭 수
 
 {% apitags %}
-인앱 메시지
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %} _버튼 1 클릭 수_에 대한 보고는 인앱 메시지에서 **보고용 식별자**를 "0"으로 지정할 때만 작동합니다.
@@ -129,7 +129,7 @@ iOS 푸시, Android 푸시
 ### 버튼 2 클릭 수
 
 {% apitags %}
-인앱 메시지
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %} _버튼 2 클릭 수_에 대한 보고는 인앱 메시지에서 **보고용 식별자**를 "1"로 지정할 때만 작동합니다.
@@ -143,7 +143,7 @@ iOS 푸시, Android 푸시
 ### 캠페인 분석
 
 {% apitags %}
-기능 플래그
+Feature Flags
 {% endapitags %}
 
 다양한 채널에 걸친 메시지의 성과입니다. 표시되는 측정기준은 선택한 메시징 채널과 [기능 플래그 실험]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics)이 다변량 테스트인지 여부에 따라 달라집니다.
@@ -155,7 +155,7 @@ iOS 푸시, Android 푸시
 ### 제출된 선택
 
 {% apitags %}
-인앱 메시지
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Choices Submitted' %}
@@ -167,7 +167,7 @@ iOS 푸시, Android 푸시
 ### 클릭 후 열람률
 
 {% apitags %}
-이메일
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Click-to-Open Rate' %}
@@ -215,7 +215,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### 확인 페이지 버튼
 
 {% apitags %}
-인앱 메시지
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Confirmation Page Button' %}
@@ -227,7 +227,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### 확인 페이지 해제
 
 {% apitags %}
-인앱 메시지
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Confirmation Page Dismissals' %}
@@ -258,7 +258,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### 총 전환 수
 
 {% apitags %}
-인앱 메시지
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Conversions' %}
@@ -274,7 +274,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### 메시지 닫기
 
 {% apitags %}
-인앱 메시지
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Close Message' %}
@@ -313,7 +313,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### 전환 기간
 
 {% apitags %}
-전체
+All
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Conversion Window' %}
@@ -325,7 +325,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### 전달 수
 
 {% apitags %}
-이메일, 웹 푸시, iOS 푸시, Android 푸시, WhatsApp
+Email, Web Push, iOS Push, Android Push, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Deliveries' %}
@@ -400,7 +400,7 @@ SMS/MMS
 ### 직접 열람 수
 
 {% apitags %}
-iOS 푸시
+iOS Push
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Direct Opens' %}
@@ -414,7 +414,7 @@ iOS 푸시
 ### 이메일 수신 가능
 
 {% apitags %}
-이메일
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Emailable' %}
@@ -428,7 +428,7 @@ iOS 푸시
 ### 오류 수
 
 {% apitags %}
-웹훅
+Webhook
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Errors' %} 오류는 <i>발송 수</i>에 포함되지만 <i>고유 수신자</i> 수에는 포함되지 않습니다.
@@ -440,7 +440,7 @@ iOS 푸시
 ### 추정 실제 열람 수
 
 {% apitags %}
-이메일
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Estimated Real Opens' %}
@@ -466,7 +466,7 @@ WhatsApp
 ### 기능 플래그 실험 성과
 
 {% apitags %}
-기능 플래그
+Feature Flags
 {% endapitags %}
 
 기능 플래그 실험에서 메시지의 성과 측정기준입니다. 표시되는 구체적인 측정기준은 메시징 채널과 실험이 다변량 테스트인지 여부에 따라 달라집니다.
@@ -478,7 +478,7 @@ WhatsApp
 ### 하드바운스
 
 {% apitags %}
-이메일
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} 
@@ -504,7 +504,7 @@ SMS/MMS, RCS
 ### 영향받은 열람 수
 
 {% apitags %}
-iOS 푸시, Android 푸시
+iOS Push, Android Push
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Influenced Opens' %}
@@ -578,7 +578,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### 기계 열람
 
 {% apitags %}
-이메일
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Machine Opens' %} 이 측정기준은 SendGrid의 경우 2021년 11월 11일부터, SparkPost의 경우 2021년 12월 2일부터 추적됩니다. Amazon SES의 경우 분석은 _열람 수_로 표시됩니다. 그러나 클릭에 대한 봇 필터링은 지원됩니다.
@@ -590,7 +590,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### 열람 수
 
 {% apitags %}
-웹 푸시, iOS 푸시, Android 푸시
+Web Push, iOS Push, Android Push
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Opens' %}
@@ -614,7 +614,7 @@ SMS/MMS, RCS
 ### 기타 열람 수
 
 {% apitags %}
-이메일
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Other Opens' %} 사용자가 기계 열람 수가 기록되기 전에 이메일을 열 수도 있습니다(예: 기타 열람 수에 포함되는 열람). 사용자가 Apple Mail이 아닌 받은편지함에서 기계 열람 이벤트가 발생한 후 이메일을 한 번 이상 여는 경우, 사용자가 이메일을 여는 횟수는 기타 열람 수로 계산되고 고유 열람 수에 대해서는 한 번만 계산됩니다.
@@ -626,7 +626,7 @@ SMS/MMS, RCS
 ### 보류 중 재시도
 
 {% apitags %}
-이메일
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Pending Retry' %}
@@ -736,7 +736,7 @@ SMS/MMS, RCS
 ### 매출
 
 {% apitags %}
-이메일
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Revenue' %}
@@ -826,7 +826,7 @@ SMS/MMS
 ### 소프트바운스
 
 {% apitags %}
-이메일
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} _소프트바운스_는 _연기_와 다릅니다. 이 재시도 기간 동안 성공적으로 전달된 이메일이 없으면, Braze는 시도된 캠페인 발송당 하나의 소프트바운스 이벤트를 전송합니다. 2025년 2월 25일 이전에는 이러한 재시도가 1개의 캠페인 발송에 대해 여러 번의 소프트바운스로 계산되었습니다.
@@ -840,7 +840,7 @@ SMS/MMS
 ### 스팸
 
 {% apitags %}
-이메일
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Spam' %}
@@ -866,7 +866,7 @@ SMS/MMS
 ### 설문조사 페이지 해제
 
 {% apitags %}
-인앱 메시지
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Survey Page Dismissals' %}
@@ -878,7 +878,7 @@ SMS/MMS
 ### 설문조사 제출
 
 {% apitags %}
-인앱 메시지
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Survey Submissions' %}
@@ -890,7 +890,7 @@ SMS/MMS
 ### 총 클릭 수
 
 {% apitags %}
-이메일, 콘텐츠 카드, SMS/MMS, LINE
+Email, Content Cards, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Clicks' %}
@@ -919,7 +919,7 @@ SMS/MMS
 ### 총 무시 수
 
 {% apitags %}
-콘텐츠 카드
+Content Cards
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Dismissals' %} 사용자가 동일한 캠페인에서 두 개의 다른 카드를 받고 둘 다 무시하면, 이 수치는 두 개 증가합니다. 재자격을 사용하면 사용자가 카드를 받을 때마다 _총 무시 수_를 한 번씩 증가시킬 수 있습니다. 각 카드는 별도의 메시지입니다.
@@ -941,7 +941,7 @@ SMS/MMS
 ### 총 노출 수
 
 {% apitags %}
-인앱 메시지, 콘텐츠 카드
+In-App Message, Content Cards
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Impressions' %} 이 숫자는 Braze가 SDK로부터 수신하는 노출 이벤트 수의 합계입니다.
@@ -961,7 +961,7 @@ SMS/MMS
 ### 총 열람 수
 
 {% apitags %}
-이메일, iOS 푸시, Android 푸시, 웹 푸시, LINE
+Email, iOS Push, Android Push, Web Push, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Opens' %}
@@ -1005,7 +1005,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### 고유 클릭 수
 
 {% apitags %}
-이메일, 콘텐츠 카드, LINE
+Email, Content Cards, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Clicks' %}
@@ -1036,7 +1036,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### 고유 무시 수
 
 {% apitags %}
-콘텐츠 카드
+Content Cards
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Dismissals' %}
@@ -1050,7 +1050,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### 고유 노출 수
 
 {% apitags %}
-인앱 메시지, 콘텐츠 카드
+In-App Message, Content Cards
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Impressions' %} 
@@ -1070,7 +1070,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### 고유 열람 수
 
 {% apitags %}
-이메일, LINE
+Email, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Opens' %}
@@ -1098,7 +1098,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### 고유 수신자
 
 {% apitags %}
-전체
+All
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Recipients' %}
@@ -1114,7 +1114,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### 구독 취소자 또는 구독 취소
 
 {% apitags %}
-이메일
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unsubscribers or Unsub' %}
@@ -1136,7 +1136,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 ### 구독 취소 수
 
 {% apitags %}
-이메일
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unsubscribes' %}

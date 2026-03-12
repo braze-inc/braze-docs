@@ -47,7 +47,7 @@ excerpt_separator: ""
 /templates/email/create
 {% endapimethod %}
 {% apitags %}
-Posten,E-Mail,Erstellen,Template,REST,API
+Post,Email,Create,Template,REST,API
 {% endapitags %}
 
 Verwenden Sie die E-Mail Template REST APIs, um die E-Mail Templates, die Sie auf den Braze Dashboards gespeichert haben, auf der Seite Templates & Medien programmatisch zu verwalten. Braze bietet zwei Endpunkte zum Erstellen und Aktualisieren Ihrer E-Mail Templates.
@@ -98,7 +98,7 @@ Die Antwort von diesem Endpunkt enthält ein Feld für `email_template_id`, das 
 /templates/email/list
 {% endapimethod %}
 {% apitags %}
-Holen,E-Mail,Template,Liste,REST
+Get,Email,Template,List,REST
 {% endapitags %}
 
 Verwenden Sie die folgenden Endpunkte, um eine Liste der verfügbaren Templates zu erhalten.

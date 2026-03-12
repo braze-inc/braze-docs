@@ -30,7 +30,7 @@ HAVING count(*) > 1
 {% api %}
 ## Wählen Sie Nutzer:innen aus, die eine Aktion durchgeführt haben, und summieren Sie den Wert einer Eigenschaft.
 {% apitags %}
-Eigenschaft
+Property
 {% endapitags %}
 
 Wählen Sie Benutzer aus, die eine Sportwette abgeschlossen haben, bei der die Summe aller ihrer Wetten einen bestimmten Betrag übersteigt.
@@ -45,7 +45,7 @@ group by 1 having sum(get_path(parse_json(properties), 'amount')) > 150
 {% api %}
 ## Wählen Sie Nutzer:innen danach aus, wie oft ein Event in einer bestimmten Zeitspanne aufgetreten ist
 {% apitags %}
-Event, Zeitbereich
+Event, Time range
 {% endapitags %}
 
 Wählen Sie Nutzer:innen mit mehr als drei geöffneten E-Mails in den letzten 30 Tagen aus.
@@ -64,7 +64,7 @@ HAVING COUNT(DISTINCT id) > 3
 {% api %}
 ## Wählen Sie Nutzer:innen aus, die mindestens ein Ereignis über mehrere Zeiträume hinweg aufgezeichnet haben
 {% apitags %}
-Event, Zeitbereich
+Event, Time range
 {% endapitags %}
 
 Wählen Sie Nutzer aus, die in jedem der letzten vier Quartale einen Kauf getätigt haben. Dieses Nutzersegment kann mit [Zielgruppen-Synchronisierung]({{site.baseurl}}/partners/canvas_audience_sync/) verwendet werden, um hochwertige ähnliche Kund:innen für die Akquisition zu identifizieren.
@@ -91,7 +91,7 @@ WHERE to_timestamp_ntz(time) >= DATEADD(day, -365, CURRENT_TIMESTAMP()) AND to_t
 {% api %}
 ## Wählen Sie einen Kauf mit bestimmten Eigenschaften
 {% apitags %}
-Kauf, Eigenschaft
+Purchase, Property
 {% endapitags %}
 
 Wählen Sie Kunden aus, die innerhalb von 14 Tagen einen Kauf getätigt haben, der die Eigenschaft `“type = shops”` enthält. 
@@ -120,7 +120,7 @@ HAVING COUNT(id) > 0;
 {% api %}
 ## Wählen Sie Nutzer:innen aus, die eine nicht zugestellte Nachricht erhalten haben
 {% apitags %}
-Nachricht, Lieferung
+Message, Delivery
 {% endapitags %}
 
 Wählen Sie Benutzer aus, denen eine SMS-Kampagne oder Canvas gesendet wurde, die Nachricht aber nicht an den Betreiber weitergeleitet wurde. Die Nachricht könnte zum Beispiel durch einen Überlauf der Warteschlange gestoppt worden sein. 
@@ -141,7 +141,7 @@ HAVING COUNT(id) > 0;
 {% api %}
 ## Finden Sie alle SMS-Nachrichten, die versendet wurden, aber aufgrund eines Überlaufs in der Warteschlange den Betreiber nicht erreicht haben
 {% apitags %}
-Nachricht, Netzbetreiber
+Message, Carrier
 {% endapitags %}
 
 Dies kann für andere Arten von Nachrichten, die von einem bestimmten Canvas gesendet wurden und nicht zugestellt wurden, wiederverwendet werden.
@@ -163,7 +163,7 @@ HAVING COUNT(id) > 0;
 {% api %}
 ## Wählen Sie Benutzer aus, die einen Kauf mit einem Eigenschaftsfeld getätigt haben, das einen bestimmten Wert enthält
 {% apitags %}
-Kauf, Eigenschaft
+Purchase, Property
 {% endapitags %}
 
 ```sql
@@ -177,7 +177,7 @@ WHERE f.VALUE::STRING = 'Bacon'
 {% api %}
 ## Finden Sie alle Benutzer, die mehrere 30003-Fehler und 0 Lieferungen hatten
 {% apitags %}
-Fehler, Lieferung
+Error, Delivery
 {% endapitags %}
 
 Das ist hilfreich, wenn Sie den Versand an Nutzer:innen einstellen möchten, die keine Nachrichten erhalten, aber nicht als ungültig markiert werden, weil sie nicht den erforderlichen Fehlercode haben. Sie können diese Nutzer entweder erneut ansprechen, um ihre Telefonnummer zu aktualisieren, oder sie abmelden. 
@@ -201,7 +201,7 @@ GROUP BY 1, 2;
 {% api %}
 ## Nutzer:innen mit bestimmten Event-Eigenschaften und einer bestimmten Anzahl von Events in einem bestimmten Zeitraum finden
 {% apitags %}
-Ereignis, Eigenschaft, Zeitbereich
+Event, Property, Time range
 {% endapitags %}
 
 Finden Sie Benutzer, die die folgenden Bedingungen gleichzeitig erfüllen:
@@ -230,7 +230,7 @@ AND COUNT(*) > 3
 {% api %}
 ## Benutzer auswählen, deren letzte Sitzung auf einem bestimmten Gerätemodell stattfand
 {% apitags %}
-Sitzung, Gerät
+Session, Device
 {% endapitags %}
 
 ```sql
@@ -246,7 +246,7 @@ group by user_id, external_user_id, device_id, platform, os_version, device_mode
 {% api %}
 ## Finden Sie Nutzer:innen, die in einem bestimmten Zeitraum den zweite Button einer In-App-Nachricht ausgewählt haben.
 {% apitags %}
-Zeitspanne
+Time range
 {% endapitags %}
 
 ```sql
@@ -262,7 +262,7 @@ AND CAMPAIGN_ID = '64c8cd9c4d38d13091957b1c'
 {% api %}
 ## Finden Sie Benutzer, die in jedem der letzten drei Kalendermonate gekauft haben
 {% apitags %}
-Kauf, Zeitspanne
+Purchase, Time range
 {% endapitags %}
 
 ```sql
@@ -286,7 +286,7 @@ AND to_timestamp_ntz(time) <= '2023-11-30'::timestamp_ntz;
 {% api %}
 ## Benutzer auswählen, die ein benutzerdefiniertes Ereignis mit einer bestimmten Eigenschaft abgeschlossen haben, wenn die Eigenschaft eine ganze Zahl ist
 {% apitags %}
-Event, Eigenschaft
+Event, Property
 {% endapitags %}
 
 Senden Sie eine Nachricht an Nutzer, die in den letzten sechs Monaten eine Serie gesehen haben und die Plattform verlassen wollen. 
@@ -312,7 +312,7 @@ GROUP BY
 {% api %}
 ## Ermitteln Sie die durchschnittliche Anzahl von E-Mails, die ein Benutzer täglich erhält
 {% apitags %}
-Nachricht
+Message
 {% endapitags %}
 
 ```sql
@@ -352,7 +352,7 @@ Für SMS-Nachrichten ersetzen Sie `USERS_MESSAGES_EMAIL_SEND_SHARED` durch `USER
 {% api %}
 ## Ermitteln Sie die durchschnittliche Anzahl von E-Mails, die ein Benutzer wöchentlich erhält
 {% apitags %}
-Nachricht
+Message
 {% endapitags %}
 
 ```sql

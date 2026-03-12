@@ -78,7 +78,7 @@ Se for necessária uma consistência completa, recomendamos aguardar uma hora a 
 ## Eventos executados pelo agente {#agent-executed-events}
 
 {% apitags %}
-Agente
+Agent
 {% endapitags %}
 
 Esse é o esquema de registro do Kafka para quando um agente do Console do agente é executado.
@@ -129,7 +129,7 @@ Esse é o esquema de registro do Kafka para quando um agente do Console do agent
 ## Eventos de invocação de ferramentas {#tool-invocation-events}
 
 {% apitags %}
-Agente
+Agent
 {% endapitags %}
 
 Esse é o esquema de registro do Kafka para quando uma ferramenta é executada.
@@ -161,7 +161,7 @@ Esse é o esquema de registro do Kafka para quando uma ferramenta é executada.
 ## Desinstalação de eventos {#uninstall-events}
 
 {% apitags %}
-Desinstalar
+Uninstall
 {% endapitags %}
 
 Esse evento ocorre quando um usuário desinstala um app. Use esses dados para rastrear quando os usuários desinstalam um app. Embora esse seja atualmente um evento de engajamento com mensagem, ele será alterado para um evento de comportamento do usuário no futuro.
@@ -290,7 +290,7 @@ Esse evento não é disparado quando o usuário realmente desinstala o app, pois
 ## Eventos de mudança de estado da inscrição global {#global-subscription-state-change-events}
 
 {% apitags %}
-Inscrição
+Subscription
 {% endapitags %}
 
 Esse evento ocorre quando o Braze recebe uma solicitação para atualizar o estado da inscrição global do usuário.
@@ -513,7 +513,7 @@ Esse evento ocorre quando o Braze recebe uma solicitação para atualizar o esta
 ## Eventos de mudança de estado do grupo de inscrições {#subscription-group-state-change-events}
 
 {% apitags %}
-Inscrição
+Subscription
 {% endapitags %}
 
 Esse evento ocorre quando o estado da inscrição de um usuário em um grupo de inscrições é alterado.
@@ -740,7 +740,7 @@ No momento, os grupos de inscrições estão disponíveis apenas para os canais 
 ## Eventos de conversão de campanha {#campaign-conversion-events}
 
 {% apitags %}
-Campanha, Conversão
+Campaign, Conversion
 {% endapitags %}
 
 Esse evento ocorre quando um usuário realiza uma ação que foi definida como um evento de conversão em uma campanha.
@@ -913,7 +913,7 @@ Note que o evento de conversão é codificado no campo `conversion_behavior`, qu
 ## Eventos de inscrição do grupo de controle da campanha {#campaign-control-group-enrollment-events}
 
 {% apitags %}
-Campanha, Entrada
+Campaign, Entry
 {% endapitags %}
 
 Esse evento ocorre quando um usuário é inscrito em um conjunto de variantes de controle em uma campanha com várias variantes. Esse evento é gerado porque não haverá nenhum evento de envio de canal para esse usuário.
@@ -1072,7 +1072,7 @@ Esse evento ocorre quando um usuário é inscrito em um conjunto de variantes de
 ## Eventos de conversão do Canva {#canvas-conversion-events}
 
 {% apitags %}
-Canvas, Conversão
+Canvas, Conversion
 {% endapitags %}
 
 Esse evento ocorre quando um usuário executa uma ação que foi definida como um evento de conversão no Canva.
@@ -1242,7 +1242,7 @@ Note que o evento de conversão é codificado no campo `conversion_behavior`, qu
 ## Eventos de entrada do Canva {#canvas-entry-events}
 
 {% apitags %}
-Canvas, entrada
+Canvas, Entry
 {% endapitags %}
 
 Esse evento ocorre quando um usuário entra no Canva. Esse evento informa em qual variante o usuário entrou.
@@ -1399,7 +1399,7 @@ Esse evento ocorre quando um usuário entra no Canva. Esse evento informa em qua
 ## Eventos do público do Exit Match {#exit-match-audience-events}
 
 {% apitags %}
-Saída, Canva
+Exit, Canvas
 {% endapitags %}
 
 Esse evento ocorre quando um usuário sai de um Canva ao corresponder a um público.
@@ -1548,7 +1548,7 @@ Esse evento ocorre quando um usuário sai de um Canva ao corresponder a um públ
 ## Eventos Exit Perform Event {#exit-perform-event-events}
 
 {% apitags %}
-Saída, Canva
+Exit, Canvas
 {% endapitags %}
 
 Esse evento ocorre quando um usuário sai de um Canva ao executar um evento.
@@ -1697,7 +1697,7 @@ Esse evento ocorre quando um usuário sai de um Canva ao executar um evento.
 ## Experimento Etapa Eventos de conversão {#experiment-step-conversion-events}
 
 {% apitags %}
-Canva
+Canvas
 {% endapitags %}
 
 Esse evento ocorre quando um usuário converte para uma etapa do experimento do Canva.
@@ -1866,7 +1866,7 @@ Esse evento ocorre quando um usuário converte para uma etapa do experimento do 
 ## Eventos de entrada dividida de experimentos {#experiment-split-entry-events}
 
 {% apitags %}
-Canva
+Canvas
 {% endapitags %}
 
 Esse evento ocorre quando um usuário entra em uma etapa do experimento do Canva.
@@ -2026,7 +2026,7 @@ Esse evento ocorre quando um usuário entra em uma etapa do experimento do Canva
 ## Eventos de progressão da etapa do canva {#canvas-step-progression-events}
 
 {% apitags %}
-Canvas, Progressão
+Canvas, Progression
 {% endapitags %}
 
 Esse evento ocorre quando um usuário avança em uma etapa do Canva com algum resultado. Note que esse evento não ocorre quando as etapas são inseridas ou encerradas. Atualmente, apenas as etapas divididas (jornadas do público, divisão de decisão, jornadas de ação, experimento) e os resultados avançados geram eventos de progressão de etapas.
@@ -2203,7 +2203,7 @@ Esse evento ocorre quando um usuário avança em uma etapa do Canva com algum re
 ## Eventos de abortamento de banner {#banner-abort-events}
 
 {% apitags %}
-Banner, Abortar
+Banner, Abort
 {% endapitags %}
 
 Esse evento ocorre quando uma mensagem de banner originalmente programada foi abortada por algum motivo.
@@ -2414,7 +2414,7 @@ Esse evento ocorre quando uma mensagem de banner originalmente programada foi ab
 ## Eventos de clique no banner {#banner-click-events}
 
 {% apitags %}
-Banner, cliques
+Banner, Clicks
 {% endapitags %}
 
 Esse evento ocorre quando um usuário clica em um banner.
@@ -2616,7 +2616,7 @@ Esse evento ocorre quando um usuário clica em um banner.
 ## Eventos de impressão de banner {#banner-impression-events}
 
 {% apitags %}
-Banner, Impressões
+Banner, Impressions
 {% endapitags %}
 
 Esse evento ocorre quando um usuário visualiza um banner.
@@ -2813,7 +2813,7 @@ Esse evento ocorre quando um usuário visualiza um banner.
 ## Eventos de interrupção do cartão de conteúdo {#content-card-abort-events}
 
 {% apitags %}
-Abortar, cartões de conteúdo
+Abort, Content Cards
 {% endapitags %}
 
 Esse evento ocorre se uma mensagem do cartão de conteúdo foi abortada com base em abortos do Liquid, etc.
@@ -3012,7 +3012,7 @@ Esse evento ocorre se uma mensagem do cartão de conteúdo foi abortada com base
 ## Eventos de clique do cartão de conteúdo {#content-card-click-events}
 
 {% apitags %}
-Cartões de conteúdo, cliques
+Content Cards, Clicks
 {% endapitags %}
 
 Esse evento ocorre quando um usuário clica em um cartão de conteúdo.
@@ -3245,7 +3245,7 @@ Esse evento ocorre quando um usuário clica em um cartão de conteúdo.
 ## Cartão de conteúdo Descartar eventos {#content-card-dismiss-events}
 
 {% apitags %}
-Cartões de conteúdo, descarte de cartão
+Content Cards, Dismissal
 {% endapitags %}
 
 Esse evento ocorre quando um usuário descarta um cartão de conteúdo.
@@ -3478,7 +3478,7 @@ Esse evento ocorre quando um usuário descarta um cartão de conteúdo.
 ## Eventos de impressão do cartão de conteúdo {#content-card-impression-events}
 
 {% apitags %}
-Cartões de conteúdo, impressões
+Content Cards, Impressions
 {% endapitags %}
 
 Esse evento ocorre quando um usuário visualiza um cartão de conteúdo.
@@ -3711,7 +3711,7 @@ Esse evento ocorre quando um usuário visualiza um cartão de conteúdo.
 ## Cartão de conteúdo Enviar eventos {#content-card-send-events}
 
 {% apitags %}
-Cartões de conteúdo, envios
+Content Cards, Sends
 {% endapitags %}
 
 Esse evento ocorre quando um cartão de conteúdo é enviado a um usuário.
@@ -3910,7 +3910,7 @@ Esse evento ocorre quando um cartão de conteúdo é enviado a um usuário.
 ## Envio de e-mail Abortar eventos {#email-abort-events}
 
 {% apitags %}
-Abortar, e-mail
+Abort, Email
 {% endapitags %}
 
 Esse evento ocorre se uma mensagem de e-mail foi abortada com base em abortos de Liquid, etc.
@@ -4120,7 +4120,7 @@ Esse evento ocorre se uma mensagem de e-mail foi abortada com base em abortos de
 ## Eventos de bounce de e-mail {#email-bounce-events}
 
 {% apitags %}
-Envio de e-mail, bounce
+Email, Bounce
 {% endapitags %}
 
 Esse evento ocorre quando um provedor de serviços de Internet retorna um hard bounce. Um hard bounce significa uma falha permanente de entregabilidade.
@@ -4338,7 +4338,7 @@ Esse evento ocorre quando um provedor de serviços de Internet retorna um hard b
 ## Envio de e-mail Eventos de clique {#email-click-events}
 
 {% apitags %}
-Envio de e-mail, cliques
+Email, Clicks
 {% endapitags %}
 
 Esse evento ocorre quando um usuário clica em um e-mail. Vários eventos podem ser gerados para a mesma campanha se um usuário clicar várias vezes ou clicar em diferentes links dentro do e-mail.
@@ -4605,7 +4605,7 @@ Esse evento ocorre quando um usuário clica em um e-mail. Vários eventos podem 
 ## Eventos de envio de e-mail {#email-deferral-events}
 
 {% apitags %}
-Envio de e-mail, diferimento
+Email, Deferral
 {% endapitags %}
 
 Esse evento ocorre quando um provedor de serviços de Internet não entrega imediatamente o e-mail para um endereço de e-mail não hard bounce e o Braze tenta novamente o e-mail por até 72 horas. Os motivos típicos para adiamentos incluem limite de volume de envios de e-mail com base na reputação do provedor de caixa de entrada, problemas temporários de conectividade, caixa de correio do destinatário cheia ou erros de DNS.
@@ -4824,7 +4824,7 @@ Esse evento ocorre quando um provedor de serviços de Internet não entrega imed
 ## Eventos de envio de e-mail {#email-delivery-events}
 
 {% apitags %}
-Envio de e-mail, entrega
+Email, Delivery
 {% endapitags %}
 
 Esse evento ocorre quando um e-mail enviado chega com êxito à caixa de entrada do usuário final.
@@ -5032,7 +5032,7 @@ Esse evento ocorre quando um e-mail enviado chega com êxito à caixa de entrada
 ## Eventos de envio de e-mail para marcar como spam {#email-mark-as-spam-events}
 
 {% apitags %}
-Envio de e-mail, Spam
+Email, Spam
 {% endapitags %}
 
 Esse evento ocorre quando o usuário final pressiona o botão "spam" no e-mail. Observe que isso não representa o fato de o e-mail ter ido para a pasta de spam, pois o Braze não faz esse rastreamento.
@@ -5244,7 +5244,7 @@ Esse evento ocorre quando o usuário final pressiona o botão "spam" no e-mail. 
 ## Envio de e-mail Eventos abertos {#email-open-events}
 
 {% apitags %}
-Envio de e-mail, aberturas
+Email, Opens
 {% endapitags %}
 
 Esse evento ocorre quando um usuário abre um e-mail. Vários eventos podem ser gerados para a mesma campanha se um usuário abrir o e-mail várias vezes.
@@ -5496,7 +5496,7 @@ Esse evento ocorre quando um usuário abre um e-mail. Vários eventos podem ser 
 ## Eventos de nova tentativa de envio de e-mail {#email-retry-events}
 
 {% apitags %}
-Envio de e-mail, nova tentativa
+Email, Retry
 {% endapitags %}
 
 Esse evento ocorre quando uma mensagem é despriorizada ou limitada pela frequência e será tentada novamente mais tarde dentro da janela de tentativas configurada. Isso só está disponível para clientes beta do Message Prioritization.
@@ -5705,7 +5705,7 @@ Esse evento ocorre quando uma mensagem é despriorizada ou limitada pela frequê
 ## Envio de e-mail Enviar eventos {#email-send-events}
 
 {% apitags %}
-Envio de e-mail
+Email, Sends
 {% endapitags %}
 
 Esse evento ocorre quando uma solicitação de envio de e-mail foi comunicada com êxito entre o Braze e o SendGrid. No entanto, isso não significa que o e-mail foi recebido na caixa de entrada do usuário. O Braze não registra de usuários de eventos em perfis de usuários ou em qualquer destino Currents (como Snowflake) se o evento não puder ser correspondido ao e-mail e à ID de usuário associados ao evento de e-mail.
@@ -5912,7 +5912,7 @@ Esse evento ocorre quando uma solicitação de envio de e-mail foi comunicada co
 ## Eventos de envio de e-mail Soft Bounce {#email-soft-bounce-events}
 
 {% apitags %}
-Envio de e-mail, bounce
+Email, Bounce
 {% endapitags %}
 
 Esse evento ocorre quando um prestador de serviço de Internet retorna um soft bounce. Um soft bounce significa que um e-mail não pôde ser entregue devido a uma falha temporária de entregabilidade.
@@ -6125,7 +6125,7 @@ Esse evento ocorre quando um prestador de serviço de Internet retorna um soft b
 ## Eventos de cancelamento de inscrição de e-mail {#email-unsubscribe-events}
 
 {% apitags %}
-Envio de e-mail, inscrição
+Email, Subscription
 {% endapitags %}
 
 Esse evento ocorre quando o usuário final clica em "cancelar inscrição" no e-mail.
@@ -6326,7 +6326,7 @@ O evento `Unsubscribe` é considerado um evento de clique especializado que é d
 ## Feature Flag Experimento Eventos de impressão {#feature-flag-experiment-impression-events}
 
 {% apitags %}
-Feature Flag, impressões
+Feature Flags, Impressions
 {% endapitags %}
 
 Esse evento ocorre sempre que um usuário tem a oportunidade de interagir com seu recurso ou quando ele poderia ter interagido se o recurso estivesse desativado (no caso de um grupo de controle em um Testes A/B).
@@ -6539,7 +6539,7 @@ As impressões do Feature Flag são registradas apenas uma vez por sessão.
 ## Eventos de interrupção de mensagens no app {#in-app-message-abort-events}
 
 {% apitags %}
-Mensagens no app, Abortar
+In-App Messages, Abort
 {% endapitags %}
 
 Esse evento ocorre quando uma mensagem no app originalmente programada foi abortada.
@@ -6783,7 +6783,7 @@ Esse evento ocorre quando uma mensagem no app originalmente programada foi abort
 ## Eventos de clique de mensagem no app {#in-app-message-click-events}
 
 {% apitags %}
-Mensagens no app, cliques
+In-App Messages, Clicks
 {% endapitags %}
 
 Esse evento ocorre quando um usuário clica em uma mensagem no app.
@@ -7021,7 +7021,7 @@ Esse evento ocorre quando um usuário clica em uma mensagem no app.
 ## Eventos de impressão de mensagens no app {#in-app-message-impression-events}
 
 {% apitags %}
-Mensagens no app, impressões
+In-App Messages, Impressions
 {% endapitags %}
 
 Esse evento ocorre quando um usuário visualiza uma mensagem no app.
@@ -7264,7 +7264,7 @@ Esse evento ocorre quando um usuário visualiza uma mensagem no app.
 ## LINE Abortar eventos {#line-abort-events}
 
 {% apitags %}
-LINE, Abortar
+LINE, Abort
 {% endapitags %}
 
 Esse evento ocorre quando uma mensagem LINE programada não pode ser entregue, antes de ser enviada ao LINE.
@@ -7470,7 +7470,7 @@ Esse evento ocorre quando uma mensagem LINE programada não pode ser entregue, a
 ## Eventos de clique LINE {#line-click-events}
 
 {% apitags %}
-LINE, cliques
+LINE, Clicks
 {% endapitags %}
 
 Esse evento ocorre quando um usuário clica em um link em uma mensagem LINE em que o domínio do link corresponde ao domínio de rastreamento de cliques.
@@ -7682,7 +7682,7 @@ Esse evento ocorre quando um usuário clica em um link em uma mensagem LINE em q
 ## Eventos de recebimento de entrada do LINE {#line-inbound-receive-events}
 
 {% apitags %}
-LINE, entrada recebida
+LINE, Inbound Received
 {% endapitags %}
 
 Esse evento ocorre quando uma mensagem LINE é recebida de um usuário.
@@ -8085,7 +8085,7 @@ Esse evento ocorre quando uma mensagem é despriorizada ou limitada pela frequê
 ## LINE Enviar eventos {#line-send-events}
 
 {% apitags %}
-LINE, envia
+LINE, Sends
 {% endapitags %}
 
 Esse evento ocorre quando uma mensagem LINE é enviada ao LINE.
@@ -8283,7 +8283,7 @@ Esse evento ocorre quando uma mensagem LINE é enviada ao LINE.
 ## Eventos de resultados de atividades ao vivo {#live-activity-outcome-events}
 
 {% apitags %}
-Atividade ao vivo, resultado
+Live Activity, Outcome
 {% endapitags %}
 
 Esse evento ocorre quando o Braze recebe uma resposta de um provedor terceirizado (e.g. APNs) após o envio da atividade ao vivo
@@ -8433,7 +8433,7 @@ Esse evento ocorre quando o Braze recebe uma resposta de um provedor terceirizad
 ## Atividade ao vivo Enviar eventos {#live-activity-send-events}
 
 {% apitags %}
-Atividade ao vivo, envios
+Live Activity, Sends
 {% endapitags %}
 
 Esse evento ocorre quando o sistema Braze faz uma solicitação ao seu provedor com relação ao Live Activity.
@@ -8578,7 +8578,7 @@ Esse evento ocorre quando o sistema Braze faz uma solicitação ao seu provedor 
 ## Eventos de interrupção de notificações por push {#push-notification-abort-events}
 
 {% apitags %}
-Abortar, push
+Abort, Push
 {% endapitags %}
 
 Esse evento ocorre se uma mensagem de notificação por push foi abortada com base em Liquid aborts, etc.
@@ -8787,7 +8787,7 @@ Esse evento ocorre se uma mensagem de notificação por push foi abortada com ba
 ## Eventos de bounce de notificações por push {#push-notification-bounce-events}
 
 {% apitags %}
-Push, Envios, Bounce
+Push, Sends, Bounce
 {% endapitags %}
 
 Esse evento ocorre quando um erro é recebido do serviço de Notificações por Push da Apple ou do Fire Cloud Messaging. Isso significa que a mensagem push sofreu bounce e, portanto, não foi entregue ao dispositivo do usuário.
@@ -9008,7 +9008,7 @@ Esse evento ocorre quando um erro é recebido do serviço de Notificações por 
 ## Notificações por push Eventos de abertura em primeiro plano do iOS {#push-notification-ios-foreground-open-events}
 
 {% apitags %}
-Push, iOS, Envios
+Push, iOS, Sends
 {% endapitags %}
 
 Esse evento não é compatível com nosso [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) e agora está obsoleto em nosso [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk).
@@ -9178,7 +9178,7 @@ Esse evento não é compatível com nosso [Swift SDK](https://github.com/braze-i
 ## Notificações por push Eventos abertos {#push-notification-open-events}
 
 {% apitags %}
-Push, Aberturas
+Push, Opens
 {% endapitags %}
 
 Esse evento ocorre quando um usuário clica diretamente na notificação por push para abrir o aplicativo. Atualmente, os eventos Push Open referem-se especificamente a "aberturas diretas" em vez de "aberturas totais". Isso não inclui estatísticas mostradas no nível da campanha de "aberturas por influência", pois elas não são atribuídas no nível do usuário.
@@ -9620,7 +9620,7 @@ Esse evento ocorre quando uma mensagem é despriorizada ou limitada pela frequê
 ## Eventos de envio de notificações por push {#push-notification-send-events}
 
 {% apitags %}
-Push, Envios
+Push, Sends
 {% endapitags %}
 
 Esse evento ocorre quando a Braze processa uma mensagem push para um usuário, comunicando-a ao Serviço de Notificações por Push da Apple ou ao Fire Cloud Messaging. Isso não significa que o push foi entregue ao dispositivo, apenas que uma mensagem foi enviada.
@@ -9853,7 +9853,7 @@ Esse evento ocorre quando a Braze processa uma mensagem push para um usuário, c
 ## Eventos de abortamento do RCS {#rcs-abort-events}
 
 {% apitags %}
-RCS, abortar
+RCS, Abort
 {% endapitags %}
 
 Esse evento é criado quando um envio de RCS é interrompido devido a um erro detectado no Braze, e a mensagem é descartada.
@@ -10033,7 +10033,7 @@ Esse evento é criado quando um envio de RCS é interrompido devido a um erro de
 ## Eventos de clique do RCS {#rcs-click-events}
 
 {% apitags %}
-RCS, cliques
+RCS, Clicks
 {% endapitags %}
 
 Um evento que é criado quando o usuário interage com uma mensagem RCS de uma forma que envolve tocar ou clicar em um elemento da interface do usuário.
@@ -10256,7 +10256,7 @@ Um evento que é criado quando o usuário interage com uma mensagem RCS de uma f
 ## Eventos de entrega do RCS {#rcs-delivery-events}
 
 {% apitags %}
-RCS, Entrega
+RCS, Delivery
 {% endapitags %}
 
 Esse evento é criado quando uma mensagem RCS é entregue com êxito ao dispositivo móvel de um usuário.
@@ -10454,7 +10454,7 @@ Esse evento é criado quando uma mensagem RCS é entregue com êxito ao disposit
 ## Eventos recebidos de RCS de entrada {#rcs-inbound-received-events}
 
 {% apitags %}
-RCS, entrada recebida
+RCS, Inbound Received
 {% endapitags %}
 
 Esse evento é criado quando o Braze recebe uma mensagem RCS originada pelo usuário.
@@ -10646,7 +10646,7 @@ Esse evento é criado quando o Braze recebe uma mensagem RCS originada pelo usu�
 ## Eventos de leitura RCS {#rcs-read-events}
 
 {% apitags %}
-RCS, Ler
+RCS, Read
 {% endapitags %}
 
 Esse evento é criado quando um usuário abre uma mensagem RCS em seu dispositivo, indicando que ele viu ou leu o conteúdo da mensagem.
@@ -10814,7 +10814,7 @@ Esse evento é criado quando um usuário abre uma mensagem RCS em seu dispositiv
 ## Eventos de rejeição de RCS {#rcs-rejection-events}
 
 {% apitags %}
-RCS, Rejeição
+RCS, Rejection
 {% endapitags %}
 
 Um evento que é criado quando uma mensagem RCS não é entregue ao dispositivo móvel de um usuário devido à intervenção da operadora.
@@ -11024,7 +11024,7 @@ Um evento que é criado quando uma mensagem RCS não é entregue ao dispositivo 
 ## Eventos de envio RCS {#rcs-send-events}
 
 {% apitags %}
-RCS, Envios
+RCS, Sends
 {% endapitags %}
 
 Esse evento é criado quando uma mensagem RCS é enviada do Braze para nossos parceiros de entrega de última milha.
@@ -11232,7 +11232,7 @@ Esse evento é criado quando uma mensagem RCS é enviada do Braze para nossos pa
 ## Eventos de abortamento de SMS {#sms-abort-events}
 
 {% apitags %}
-Abortar, SMS
+Abort, SMS
 {% endapitags %}
 
 Esse evento ocorre se uma mensagem SMS foi abortada com base em Liquid aborts, etc.
@@ -11417,7 +11417,7 @@ Esse evento ocorre se uma mensagem SMS foi abortada com base em Liquid aborts, e
 ## Eventos de envio da operadora de SMS {#sms-carrier-send-events}
 
 {% apitags %}
-SMS, Envios
+SMS, Sends
 {% endapitags %}
 
 Esse evento ocorre quando um SMS é enviado à operadora.
@@ -11623,7 +11623,7 @@ Esse evento ocorre quando um SMS é enviado à operadora.
 ## Eventos de entrega de SMS {#sms-delivery-events}
 
 {% apitags %}
-SMS, Entrega
+SMS, Delivery
 {% endapitags %}
 
 Esse evento ocorre quando um SMS é entregue com êxito ao telefone celular do usuário.
@@ -11830,7 +11830,7 @@ Esse evento ocorre quando um SMS é entregue com êxito ao telefone celular do u
 ## Eventos de falha na entrega de SMS {#sms-delivery-failure-events}
 
 {% apitags %}
-SMS, Entrega
+SMS, Delivery
 {% endapitags %}
 
 Esse evento ocorre quando um SMS apresenta falha na entrega. Use esse evento e os códigos de erro fornecidos para ajudar a solucionar problemas com a entrega de SMS.
@@ -12042,7 +12042,7 @@ Esse evento ocorre quando um SMS apresenta falha na entrega. Use esse evento e o
 ## Eventos de entrada de SMS recebidos {#sms-inbound-received-events}
 
 {% apitags %}
-SMS, entrada recebida
+SMS, Inbound Received
 {% endapitags %}
 
 Esse evento ocorre quando um dos seus usuários envia um SMS para um número de telefone em um dos seus grupos de inscrições do Braze SMS.
@@ -12243,7 +12243,7 @@ Se detectarmos que essa mensagem de entrada é uma resposta a uma campanha de sa
 ## Eventos de rejeição de SMS {#sms-rejection-events}
 
 {% apitags %}
-SMS, Rejeição
+SMS, Rejection
 {% endapitags %}
 
 Esse evento ocorre quando um envio de SMS é rejeitado pela operadora. Isso pode ocorrer por vários motivos. Use esse evento e os códigos de erro fornecidos para ajudar a solucionar problemas com a entrega de SMS.
@@ -12460,7 +12460,7 @@ Esse evento ocorre quando um envio de SMS é rejeitado pela operadora. Isso pode
 ## Eventos de repetição de SMS {#sms-retry-events}
 
 {% apitags %}
-SMS, Repetir
+SMS, Retry
 {% endapitags %}
 
 Esse evento ocorre quando uma mensagem é despriorizada ou limitada pela frequência e será tentada novamente mais tarde dentro da janela de tentativas configurada. Isso só está disponível para clientes beta do Message Prioritization.
@@ -12641,7 +12641,7 @@ Esse evento ocorre quando uma mensagem é despriorizada ou limitada pela frequê
 ## Eventos de envio de SMS {#sms-send-events}
 
 {% apitags %}
-SMS, Envios
+SMS, Sends
 {% endapitags %}
 
 Esse evento ocorre quando um usuário envia um SMS.
@@ -12849,7 +12849,7 @@ Esse evento ocorre quando um usuário envia um SMS.
 ## Eventos de clique em links curtos de SMS {#sms-short-link-click-events}
 
 {% apitags %}
-SMS, cliques
+SMS, Clicks
 {% endapitags %}
 
 Esse evento ocorre quando um usuário clica em um link curto de SMS.
@@ -13052,7 +13052,7 @@ Esse evento ocorre quando um usuário clica em um link curto de SMS.
 ## Eventos de abortamento de webhook {#webhook-abort-events}
 
 {% apitags %}
-Abortar, Webhooks
+Abort, Webhooks
 {% endapitags %}
 
 Esse evento ocorre se uma mensagem de webhook foi abortada com base em Liquid aborts, etc.
@@ -13251,7 +13251,7 @@ Esse evento ocorre se uma mensagem de webhook foi abortada com base em Liquid ab
 ## Eventos de falha do webhook {#webhook-failure-events}
 
 {% apitags %}
-Falha, Webhooks
+Failure, Webhooks
 {% endapitags %}
 
 Esse evento ocorre se uma mensagem de webhook foi entregue, mas falhou com uma resposta de erro do endpoint.
@@ -13678,7 +13678,7 @@ Esse evento ocorre quando uma mensagem é despriorizada ou limitada pela frequê
 ## Eventos de envio de webhook {#webhook-send-events}
 
 {% apitags %}
-Webhooks, envios
+Webhooks, Sends
 {% endapitags %}
 
 Esse evento ocorre quando um webhook foi processado e enviado para o terceiro especificado nesse webhook. Observe que isso não significa que a solicitação foi recebida ou não.
@@ -13869,7 +13869,7 @@ Esse evento ocorre quando um webhook foi processado e enviado para o terceiro es
 ## Eventos de interrupção do WhatsApp {#whatsapp-abort-events}
 
 {% apitags %}
-WhatsApp, Abortar
+WhatsApp, Abort
 {% endapitags %}
 
 Esse evento ocorre se uma mensagem do WhatsApp foi abortada com base em abortos de Liquid, etc.
@@ -14075,7 +14075,7 @@ Esse evento ocorre se uma mensagem do WhatsApp foi abortada com base em abortos 
 ## Eventos de clique em links rastreados pelo WhatsApp {#whatsapp-tracked-link-click-events}
 
 {% apitags %}
-WhatsApp, cliques
+WhatsApp, Clicks
 {% endapitags %}
 
 Esse evento ocorre quando um usuário clica em um link ou botão em uma mensagem do WhatsApp em que o domínio do link corresponde ao domínio de rastreamento de cliques.
@@ -14271,7 +14271,7 @@ Esse evento ocorre quando um usuário clica em um link ou botão em uma mensagem
 ## Eventos do WhatsApp Delivery {#whatsapp-delivery-events}
 
 {% apitags %}
-WhatsApp, Entrega
+WhatsApp, Delivery
 {% endapitags %}
 
 Esse evento ocorre quando uma mensagem do WhatsApp enviada chega com sucesso ao dispositivo do usuário.
@@ -14490,7 +14490,7 @@ Esse evento ocorre quando uma mensagem do WhatsApp enviada chega com sucesso ao 
 ## Eventos de falha do WhatsApp {#whatsapp-failure-events}
 
 {% apitags %}
-WhatsApp, Falha
+WhatsApp, Failure
 {% endapitags %}
 
 Esse evento ocorre quando o WhatsApp não consegue entregar a mensagem ao usuário. Um hard bounce significa uma falha permanente de entregabilidade.
@@ -14719,7 +14719,7 @@ Esse evento ocorre quando o WhatsApp não consegue entregar a mensagem ao usuár
 ## Eventos recebidos de entrada do WhatsApp {#whatsapp-inbound-received-events}
 
 {% apitags %}
-WhatsApp, Recebimento de entrada
+WhatsApp, Inbound Received
 {% endapitags %}
 
 Esse evento ocorre quando um dos seus usuários envia uma mensagem do WhatsApp para um número de telefone em um dos seus grupos de inscrições do Braze WhatsApp.
@@ -14959,7 +14959,7 @@ Esse evento ocorre quando um dos seus usuários envia uma mensagem do WhatsApp p
 ## WhatsApp Ler eventos {#whatsapp-read-events}
 
 {% apitags %}
-WhatsApp, Ler
+WhatsApp, Read
 {% endapitags %}
 
 Esse evento ocorre quando uma mensagem do WhatsApp é lida pelo usuário.
@@ -15178,7 +15178,7 @@ Esse evento ocorre quando uma mensagem do WhatsApp é lida pelo usuário.
 ## Eventos de repetição do WhatsApp {#whatsapp-retry-events}
 
 {% apitags %}
-WhatsApp, Repetir
+WhatsApp, Retry
 {% endapitags %}
 
 Esse evento ocorre quando uma mensagem é despriorizada ou limitada pela frequência e será tentada novamente mais tarde dentro da janela de tentativas configurada. Isso só está disponível para clientes beta do Message Prioritization.
@@ -15380,7 +15380,7 @@ Esse evento ocorre quando uma mensagem é despriorizada ou limitada pela frequê
 ## Eventos de envio do WhatsApp {#whatsapp-send-events}
 
 {% apitags %}
-WhatsApp, Envios
+WhatsApp, Sends
 {% endapitags %}
 
 Esse evento ocorre quando uma solicitação de envio foi comunicada com êxito entre o Braze e o WhatsApp. No entanto, isso não significa que a mensagem foi recebida pelo usuário.

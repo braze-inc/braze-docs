@@ -161,7 +161,7 @@ Dies ist das Kafka-Datensatzschema für die Ausführung eines Tools.
 ## Ereignisse deinstallieren {#uninstall-events}
 
 {% apitags %}
-Deinstallation
+Uninstall
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine App deinstalliert. Verwenden Sie diese Daten, um zu verfolgen, wenn Nutzer:innen eine App deinstallieren. Zur Zeit ist dies ein Ereignis für das Engagement in Nachrichten, wird aber in Zukunft in ein Ereignis für das Nutzer:innen-Verhalten geändert.
@@ -290,7 +290,7 @@ Dieses Ereignis wird nicht ausgelöst, wenn der Nutzer:innen die App tatsächlic
 ## Globale Ereignisse zur Änderung des Abo-Status {#global-subscription-state-change-events}
 
 {% apitags %}
-Abo
+Subscription
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn Braze eine Anfrage zum Update des globalen Abo-Status des Nutzers:innen erhält.
@@ -513,7 +513,7 @@ Dieses Ereignis tritt ein, wenn Braze eine Anfrage zum Update des globalen Abo-S
 ## Abo Gruppe Statusänderung Ereignisse {#subscription-group-state-change-events}
 
 {% apitags %}
-Abo
+Subscription
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn sich der Abo-Status eines Nutzers:innen in einer Abo-Gruppe ändert.
@@ -740,7 +740,7 @@ Abo-Gruppen sind zur Zeit nur für die Kanäle E-Mail, SMS, RCS und WhatsApp ver
 ## Kampagne Konversions-Events {#campaign-conversion-events}
 
 {% apitags %}
-Kampagne, Konversion
+Campaign, Conversion
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Aktion ausführt, die als Konversions-Event in einer Kampagne festgelegt wurde.
@@ -913,7 +913,7 @@ Beachten Sie, dass das Konversions-Ereignis im Feld `conversion_behavior` kodier
 ## Kampagne Kontrollgruppe Einschreibeereignisse {#campaign-control-group-enrollment-events}
 
 {% apitags %}
-Kampagne, Eingang
+Campaign, Entry
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn sich ein Nutzer:innen in eine Kontrollvariante einer multivariaten Kampagne einträgt. Dieses Ereignis wird erzeugt, da es für diesen Nutzer:innen kein Kanal-Sendeereignis geben wird.
@@ -1072,7 +1072,7 @@ Dieses Ereignis tritt ein, wenn sich ein Nutzer:innen in eine Kontrollvariante e
 ## Canvas Konversions-Ereignisse {#canvas-conversion-events}
 
 {% apitags %}
-Canvas, Konversion
+Canvas, Conversion
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Aktion ausführt, die als Konversions-Event in Canvas festgelegt wurde.
@@ -1242,7 +1242,7 @@ Beachten Sie, dass das Konversions-Ereignis im Feld `conversion_behavior` kodier
 ## Canvas Eingang Ereignisse {#canvas-entry-events}
 
 {% apitags %}
-Canvas, Eingang
+Canvas, Entry
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:in den Canvas eintritt. Dieses Ereignis teilt Ihnen mit, in welche Variante der Nutzer:in eingetreten ist.
@@ -2203,7 +2203,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen einen Schritt in einem Canvas m
 ## Banner Abbruchereignisse {#banner-abort-events}
 
 {% apitags %}
-Banner, Abbrechen
+Banner, Abort
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine ursprünglich geplante Bannernachricht aus irgendeinem Grund abgebrochen wurde.
@@ -2414,7 +2414,7 @@ Dieses Ereignis tritt ein, wenn eine ursprünglich geplante Bannernachricht aus 
 ## Banner Klick-Ereignisse {#banner-click-events}
 
 {% apitags %}
-Banner, Klicks
+Banner, Clicks
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf ein Banner klickt.
@@ -2616,7 +2616,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf ein Banner klickt.
 ## Banner Impressionen Ereignisse {#banner-impression-events}
 
 {% apitags %}
-Banner, Impressionen
+Banner, Impressions
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:in ein Banner blickt.
@@ -2813,7 +2813,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in ein Banner blickt.
 ## Content-Card Abbruch-Ereignisse {#content-card-abort-events}
 
 {% apitags %}
-Abbruch, Content-Cards
+Abort, Content Cards
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine Content-Card Nachricht aufgrund von Liquid-Abbrüchen etc. abgebrochen wurde.
@@ -3012,7 +3012,7 @@ Dieses Ereignis tritt ein, wenn eine Content-Card Nachricht aufgrund von Liquid-
 ## Content-Card Klick-Ereignisse {#content-card-click-events}
 
 {% apitags %}
-Content-Cards, Klicks
+Content Cards, Clicks
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine Content-Card klickt.
@@ -3245,7 +3245,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine Content-Card klickt.
 ## Content-Card Entlassungsereignisse {#content-card-dismiss-events}
 
 {% apitags %}
-Content-Cards, Entlassung
+Content Cards, Dismissal
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ablehnt.
@@ -3478,7 +3478,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ablehnt.
 ## Content-Card Impression Ereignisse {#content-card-impression-events}
 
 {% apitags %}
-Content-Cards, Impressionen
+Content Cards, Impressions
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ansieht.
@@ -3711,7 +3711,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine Content-Card ansieht.
 ## Content-Card Sendeereignisse {#content-card-send-events}
 
 {% apitags %}
-Content-Cards, Sendungen
+Content Cards, Sends
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine Content-Card an einen Nutzer:innen gesendet wird.
@@ -3910,7 +3910,7 @@ Dieses Ereignis tritt ein, wenn eine Content-Card an einen Nutzer:innen gesendet
 ## E-Mail-Ereignisse abbrechen {#email-abort-events}
 
 {% apitags %}
-Abbrechen, E-Mail
+Abort, Email
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine E-Mail Nachricht aufgrund von Liquid Abbrüchen etc. abgebrochen wurde.
@@ -4120,7 +4120,7 @@ Dieses Ereignis tritt ein, wenn eine E-Mail Nachricht aufgrund von Liquid Abbrü
 ## E-Mail Bounce-Ereignisse {#email-bounce-events}
 
 {% apitags %}
-E-Mail, Bounce
+Email, Bounce
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Hard Bounce zurückschickt. Ein Hard Bounce bedeutet einen dauerhaften Zustellbarkeitsfehler.
@@ -4338,7 +4338,7 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Hard Bounce zurücks
 ## E-Mail Klick-Ereignisse {#email-click-events}
 
 {% apitags %}
-E-Mail, Klicks
+Email, Clicks
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine E-Mail klickt. Es können mehrere Ereignisse für dieselbe Kampagne erzeugt werden, wenn ein Nutzer:innen mehrfach klickt oder verschiedene Links in der E-Mail anklickt.
@@ -4605,7 +4605,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf eine E-Mail klickt. Es kön
 ## E-Mail Aufschiebung von Ereignissen {#email-deferral-events}
 
 {% apitags %}
-E-Mail, Aufschub
+Email, Deferral
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Internet-Provider die E-Mail nicht sofort an eine nicht hart gebouncte E-Mail-Adresse zustellt und Braze die E-Mail bis zu 72 Stunden lang erneut versucht. Typische Gründe für Aufschübe sind reputationsbasierte Rate-Limiting des Posteingangs-Anbieters für das E-Mail-Volumen, vorübergehende Verbindungsprobleme, ein volles Postfach des Empfängers oder DNS-Fehler.
@@ -4824,7 +4824,7 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider die E-Mail nicht sofort an
 ## E-Mail-Zustellung Ereignisse {#email-delivery-events}
 
 {% apitags %}
-E-Mail, Zustellung
+Email, Delivery
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine gesendete E-Mail erfolgreich im Posteingang des Endnutzers:in angekommen ist.
@@ -5032,7 +5032,7 @@ Dieses Ereignis tritt ein, wenn eine gesendete E-Mail erfolgreich im Posteingang
 ## E-Mail Als Spam markieren Ereignisse {#email-mark-as-spam-events}
 
 {% apitags %}
-E-Mail, Spam
+Email, Spam
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn der Endnutzer:in auf den Button "Spam" in der E-Mail drückt. Beachten Sie, dass dies nicht bedeutet, dass die E-Mail im Spam-Ordner gelandet ist, da Braze dies nicht trackt.
@@ -5244,7 +5244,7 @@ Dieses Ereignis tritt ein, wenn der Endnutzer:in auf den Button "Spam" in der E-
 ## E-Mail Öffentliche Veranstaltungen {#email-open-events}
 
 {% apitags %}
-E-Mail, Öffnungen
+Email, Opens
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine E-Mail öffnet. Es können mehrere Ereignisse für dieselbe Kampagne erzeugt werden, wenn ein Nutzer:innen die E-Mail mehrfach öffnet.
@@ -5496,7 +5496,7 @@ Es ist ein bekanntes Verhalten, dass die Felder für die Öffnung von E-Mails `d
 ## E-Mail Wiederholungsversuche {#email-retry-events}
 
 {% apitags %}
-E-Mail, Wiederholung
+Email, Retry
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Frequency-Capping versehen wurde und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion ist nur für Kunden:in der Beta-Version der Nachrichtenpriorisierung verfügbar.
@@ -5705,7 +5705,7 @@ Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Freq
 ## E-Mail Ereignisse senden {#email-send-events}
 
 {% apitags %}
-E-Mail, Sendet
+Email, Sends
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine Anfrage zum Senden von E-Mails erfolgreich zwischen Braze und SendGrid übermittelt wurde. Dies bedeutet jedoch nicht, dass die E-Mail im Posteingang des Nutzers:innen eingegangen ist. Braze protokolliert keine Ereignisse in Benutzerprofilen oder Currents-Zielen (z.B. Snowflake), wenn das Ereignis nicht sowohl mit der E-Mail als auch mit der ID des Nutzers, die dem E-Mail-Ereignis zugeordnet sind, in Verbindung gebracht werden kann.
@@ -5912,7 +5912,7 @@ Dieses Ereignis tritt ein, wenn eine Anfrage zum Senden von E-Mails erfolgreich 
 ## E-Mail Soft Bounce-Ereignisse {#email-soft-bounce-events}
 
 {% apitags %}
-E-Mail, Bounce
+Email, Bounce
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Soft Bounce zurückschickt. Ein Soft Bounce bedeutet, dass eine E-Mail aufgrund einer vorübergehenden Störung der Zustellbarkeit nicht zugestellt werden konnte.
@@ -6125,7 +6125,7 @@ Dieses Ereignis tritt ein, wenn ein Internet-Provider einen Soft Bounce zurücks
 ## E-Mail Abmelden von Ereignissen {#email-unsubscribe-events}
 
 {% apitags %}
-E-Mail, Abo
+Email, Subscription
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn der Endnutzer:in auf "Abmelden" in der E-Mail geklickt hat.
@@ -6326,7 +6326,7 @@ Das Ereignis `Unsubscribe` ist ein spezielles Klick-Ereignis, das ausgelöst wir
 ## Feature-Flag Experiment Impressionen Ereignisse {#feature-flag-experiment-impression-events}
 
 {% apitags %}
-Feature-Flags, Impressionen
+Feature Flags, Impressions
 {% endapitags %}
 
 Dieses Ereignis tritt immer dann ein, wenn ein Nutzer:innen die Opportunity hatte, mit Ihrem Feature zu interagieren, oder wenn er hätte interagieren können, wenn das Feature deaktiviert ist (im Falle einer Kontrollgruppe in einem A/B-Test).
@@ -6539,7 +6539,7 @@ Feature-Flag Impressionen werden nur einmal pro Sitzung protokolliert.
 ## In-App-Nachricht Abbruch-Ereignisse {#in-app-message-abort-events}
 
 {% apitags %}
-In-App-Nachrichten, Abbruch
+In-App Messages, Abort
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine ursprünglich geplante In-App-Nachricht abgebrochen wurde.
@@ -6783,7 +6783,7 @@ Dieses Ereignis tritt ein, wenn eine ursprünglich geplante In-App-Nachricht abg
 ## In-App-Nachricht Klick-Ereignisse {#in-app-message-click-events}
 
 {% apitags %}
-In-App-Nachrichten, Klicks
+In-App Messages, Clicks
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:in auf eine In-App-Nachricht klickt.
@@ -7021,7 +7021,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in auf eine In-App-Nachricht klickt.
 ## In-App-Nachricht Impressionen Ereignisse {#in-app-message-impression-events}
 
 {% apitags %}
-In-App-Nachrichten, Impressionen
+In-App Messages, Impressions
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:in eine In-App-Nachricht sieht.
@@ -7264,7 +7264,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:in eine In-App-Nachricht sieht.
 ## LINE Abbruchereignisse {#line-abort-events}
 
 {% apitags %}
-LINE, Abbrechen
+LINE, Abort
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine geplante LINE Nachricht nicht zugestellt werden kann, bevor sie an LINE gesendet wird.
@@ -7470,7 +7470,7 @@ Dieses Ereignis tritt ein, wenn eine geplante LINE Nachricht nicht zugestellt we
 ## LINE Klick-Ereignisse {#line-click-events}
 
 {% apitags %}
-LINE, Klicks
+LINE, Clicks
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen in einer LINE Nachricht auf einen Link klickt, dessen Domain mit der Click Tracking Domain übereinstimmt.
@@ -7682,7 +7682,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen in einer LINE Nachricht auf ein
 ## LINE Eingehende Empfangsereignisse {#line-inbound-receive-events}
 
 {% apitags %}
-LINE, Eingehend Empfangen
+LINE, Inbound Received
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine LINE-Nachricht von einem Nutzer:innen empfangen wird.
@@ -7885,7 +7885,7 @@ Dieses Ereignis tritt ein, wenn eine LINE-Nachricht von einem Nutzer:innen empfa
 ## LINE Wiederholungsereignisse {#line-retry-events}
 
 {% apitags %}
-LINE, Wiederholen
+LINE, Retry
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Frequency-Capping versehen wurde und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion ist nur für Kunden:in der Beta-Version der Nachrichtenpriorisierung verfügbar.
@@ -8085,7 +8085,7 @@ Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Freq
 ## LINE Ereignisse senden {#line-send-events}
 
 {% apitags %}
-LINE, Sendet
+LINE, Sends
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine LINE Nachricht an LINE gesendet wird.
@@ -8283,7 +8283,7 @@ Dieses Ereignis tritt ein, wenn eine LINE Nachricht an LINE gesendet wird.
 ## Live-Aktivitäten Ergebnisse Ereignisse {#live-activity-outcome-events}
 
 {% apitags %}
-Live-Aktivität, Ergebnis
+Live Activity, Outcome
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn Braze eine Antwort von einem Drittanbieter erhält (e.g. APNs) nach dem Senden der Live-Aktivität
@@ -8433,7 +8433,7 @@ Dieses Ereignis tritt ein, wenn Braze eine Antwort von einem Drittanbieter erhä
 ## Live-Aktivität Ereignisse senden {#live-activity-send-events}
 
 {% apitags %}
-Live-Aktivität, Sendungen
+Live Activity, Sends
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn das Braze-System eine Anfrage an seinen Provider bezüglich der Live-Aktivität stellt.
@@ -8578,7 +8578,7 @@ Dieses Ereignis tritt ein, wenn das Braze-System eine Anfrage an seinen Provider
 ## Push-Benachrichtigung Abbruchereignisse {#push-notification-abort-events}
 
 {% apitags %}
-Abbrechen, Push
+Abort, Push
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine Push-Benachrichtigung aufgrund von Liquid-Abbrüchen usw. abgebrochen wurde.
@@ -8787,7 +8787,7 @@ Dieses Ereignis tritt ein, wenn eine Push-Benachrichtigung aufgrund von Liquid-A
 ## Push-Benachrichtigung Bounce-Ereignisse {#push-notification-bounce-events}
 
 {% apitags %}
-Push, Sendet, Prellen
+Push, Sends, Bounce
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Fehler entweder vom Apple Push Notification Service oder von Fire Cloud Messaging empfangen wird. Dies bedeutet, dass die Push Nachricht abgelehnt wurde und daher dem Gerät des Nutzers:innen nicht zugestellt werden konnte.
@@ -9008,7 +9008,7 @@ Dieses Ereignis tritt ein, wenn ein Fehler entweder vom Apple Push Notification 
 ## Push-Benachrichtigung iOS Foreground Offene Ereignisse {#push-notification-ios-foreground-open-events}
 
 {% apitags %}
-Push, iOS, Sendet
+Push, iOS, Sends
 {% endapitags %}
 
 Dieses Ereignis wird von unserem [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) nicht unterstützt und ist jetzt mit unserem [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk) veraltet.
@@ -9178,7 +9178,7 @@ Dieses Ereignis wird von unserem [Swift SDK](https://github.com/braze-inc/braze-
 ## Push-Benachrichtigung Offene Ereignisse {#push-notification-open-events}
 
 {% apitags %}
-Push, Öffnet
+Push, Opens
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen direkt auf die Push-Benachrichtigung klickt, um die Anwendung zu öffnen. Derzeit referenzieren Push Open Events auf "Direkte Öffnungen" und nicht auf "Gesamte Öffnungen". Dazu gehören nicht die auf Kampagnenebene angezeigten Statistiken über "beeinflusste Öffnungen", da diese nicht auf der Ebene der Nutzer:innen attributiert werden.
@@ -9413,7 +9413,7 @@ In seltenen Fällen kann es vorkommen, dass eine Push-Öffnung vor dem entsprech
 ## Push-Benachrichtigung Wiederholungsereignisse {#push-notification-retry-events}
 
 {% apitags %}
-Push, Wiederholung
+Push, Retry
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Frequency-Capping versehen wurde und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion ist nur für Kunden:in der Beta-Version der Nachrichtenpriorisierung verfügbar.
@@ -9620,7 +9620,7 @@ Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Freq
 ## Push-Benachrichtigung Ereignisse senden {#push-notification-send-events}
 
 {% apitags %}
-Push, sendet
+Push, Sends
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn Braze eine Push-Nachricht für einen Nutzer:innen verarbeitet und diese an den Apple Push Notification Service oder Fire Cloud Messaging weiterleitet. Das bedeutet nicht, dass der Push dem Gerät zugestellt wurde, sondern nur, dass eine Nachricht gesendet wurde.
@@ -9853,7 +9853,7 @@ Dieses Ereignis tritt ein, wenn Braze eine Push-Nachricht für einen Nutzer:inne
 ## RCS Abbruch-Ereignisse {#rcs-abort-events}
 
 {% apitags %}
-RCS, Abbruch
+RCS, Abort
 {% endapitags %}
 
 Dieses Ereignis wird erzeugt, wenn ein RCS-Sendevorgang aufgrund eines in Braze erkannten Fehlers unterbrochen und die Nachricht verworfen wird.
@@ -10033,7 +10033,7 @@ Dieses Ereignis wird erzeugt, wenn ein RCS-Sendevorgang aufgrund eines in Braze 
 ## RCS Klick-Ereignisse {#rcs-click-events}
 
 {% apitags %}
-RCS, Klicks
+RCS, Clicks
 {% endapitags %}
 
 Ein Ereignis, das erzeugt wird, wenn der Nutzer:in mit einer RCS Nachricht so interagiert, dass er auf ein UI-Element tippt oder klickt.
@@ -10256,7 +10256,7 @@ Ein Ereignis, das erzeugt wird, wenn der Nutzer:in mit einer RCS Nachricht so in
 ## RCS Zustellung Ereignisse {#rcs-delivery-events}
 
 {% apitags %}
-RCS, Zustellung
+RCS, Delivery
 {% endapitags %}
 
 Dieses Ereignis wird erstellt, wenn eine RCS Nachricht erfolgreich an das mobile Gerät eines Nutzers:innen zugestellt wurde.
@@ -10454,7 +10454,7 @@ Dieses Ereignis wird erstellt, wenn eine RCS Nachricht erfolgreich an das mobile
 ## RCS Eingehende empfangene Ereignisse {#rcs-inbound-received-events}
 
 {% apitags %}
-RCS, Eingehend empfangen
+RCS, Inbound Received
 {% endapitags %}
 
 Dieses Ereignis wird erstellt, wenn Braze eine RCS Nachricht empfängt, die vom Nutzer:innen stammt.
@@ -10646,7 +10646,7 @@ Dieses Ereignis wird erstellt, wenn Braze eine RCS Nachricht empfängt, die vom 
 ## RCS Ereignisse lesen {#rcs-read-events}
 
 {% apitags %}
-RCS, Lesen
+RCS, Read
 {% endapitags %}
 
 Dieses Ereignis wird erstellt, wenn ein Nutzer:innen eine RCS Nachricht auf seinem Gerät öffnet und damit anzeigt, dass er den Inhalt der Nachricht gesehen oder gelesen hat.
@@ -10814,7 +10814,7 @@ Dieses Ereignis wird erstellt, wenn ein Nutzer:innen eine RCS Nachricht auf sein
 ## RCS Ablehnungsereignisse {#rcs-rejection-events}
 
 {% apitags %}
-RCS, Ablehnung
+RCS, Rejection
 {% endapitags %}
 
 Ein Ereignis, das erzeugt wird, wenn eine RCS-Nachricht aufgrund eines Eingriffs des Netzbetreibers nicht an das mobile Gerät eines Nutzers:innen zugestellt werden kann.
@@ -11024,7 +11024,7 @@ Ein Ereignis, das erzeugt wird, wenn eine RCS-Nachricht aufgrund eines Eingriffs
 ## RCS-Ereignisse senden {#rcs-send-events}
 
 {% apitags %}
-RCS, Sendungen
+RCS, Sends
 {% endapitags %}
 
 Dieses Ereignis wird erstellt, wenn eine RCS Nachricht von Braze aus an unsere Partner für die Zustellung auf der letzten Meile gesendet wird.
@@ -11232,7 +11232,7 @@ Dieses Ereignis wird erstellt, wenn eine RCS Nachricht von Braze aus an unsere P
 ## SMS-Abbruch-Ereignisse {#sms-abort-events}
 
 {% apitags %}
-Abbrechen, SMS
+Abort, SMS
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine SMS Nachricht aufgrund von Liquid Abbrüchen etc. abgebrochen wurde.
@@ -11417,7 +11417,7 @@ Dieses Ereignis tritt ein, wenn eine SMS Nachricht aufgrund von Liquid Abbrüche
 ## SMS-Träger senden Ereignisse {#sms-carrier-send-events}
 
 {% apitags %}
-SMS, Sendet
+SMS, Sends
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine SMS an den Netzbetreiber gesendet wird.
@@ -11623,7 +11623,7 @@ Dieses Ereignis tritt ein, wenn eine SMS an den Netzbetreiber gesendet wird.
 ## SMS-Zustellung Ereignisse {#sms-delivery-events}
 
 {% apitags %}
-SMS, Zustellung
+SMS, Delivery
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine SMS erfolgreich an das Mobiltelefon des Nutzers:innen zugestellt wurde.
@@ -11830,7 +11830,7 @@ Dieses Ereignis tritt ein, wenn eine SMS erfolgreich an das Mobiltelefon des Nut
 ## SMS-Zustellungsfehlerereignisse {#sms-delivery-failure-events}
 
 {% apitags %}
-SMS, Zustellung
+SMS, Delivery
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine SMS nicht zugestellt werden kann. Verwenden Sie dieses Ereignis und die bereitgestellten Fehlercodes, um Probleme mit der SMS-Zustellung zu beheben.
@@ -12042,7 +12042,7 @@ Dieses Ereignis tritt ein, wenn eine SMS nicht zugestellt werden kann. Verwenden
 ## Eingehende SMS Empfangene Ereignisse {#sms-inbound-received-events}
 
 {% apitags %}
-SMS, Eingehend empfangen
+SMS, Inbound Received
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn einer Ihrer Nutzer:innen eine SMS an eine Rufnummer in einer Ihrer Abo-Gruppen von Braze sendet.
@@ -12243,7 +12243,7 @@ Wenn wir feststellen, dass diese eingehende Nachricht eine Antwort auf eine ausg
 ## SMS Ablehnungsereignisse {#sms-rejection-events}
 
 {% apitags %}
-SMS, Ablehnung
+SMS, Rejection
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine SMS vom Netzbetreiber abgelehnt wird. Dafür kann es mehrere Gründe geben. Verwenden Sie dieses Ereignis und die bereitgestellten Fehlercodes, um Probleme mit der SMS-Zustellung zu beheben.
@@ -12460,7 +12460,7 @@ Dieses Ereignis tritt ein, wenn eine SMS vom Netzbetreiber abgelehnt wird. Dafü
 ## SMS-Wiederholungsversuche {#sms-retry-events}
 
 {% apitags %}
-SMS, Wiederholung
+SMS, Retry
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Frequency-Capping versehen wurde und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion ist nur für Kunden:in der Beta-Version der Nachrichtenpriorisierung verfügbar.
@@ -12641,7 +12641,7 @@ Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Freq
 ## SMS-Sendeereignisse {#sms-send-events}
 
 {% apitags %}
-SMS, Sendet
+SMS, Sends
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine SMS sendet.
@@ -12849,7 +12849,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen eine SMS sendet.
 ## SMS Short Link Klick-Ereignisse {#sms-short-link-click-events}
 
 {% apitags %}
-SMS, Klicks
+SMS, Clicks
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf einen SMS-Kurzlink klickt.
@@ -13052,7 +13052,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen auf einen SMS-Kurzlink klickt.
 ## Webhook Abbruch-Ereignisse {#webhook-abort-events}
 
 {% apitags %}
-Abbrechen, Webhooks
+Abort, Webhooks
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine Webhook Nachricht aufgrund von Liquid Abbrüchen etc. abgebrochen wurde.
@@ -13251,7 +13251,7 @@ Dieses Ereignis tritt ein, wenn eine Webhook Nachricht aufgrund von Liquid Abbr�
 ## Webhook-Ausfallereignisse {#webhook-failure-events}
 
 {% apitags %}
-Fehlschlag, Webhooks
+Failure, Webhooks
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine Webhook Nachricht zugestellt wurde, aber mit einer Fehlerantwort des Endpunkts fehlgeschlagen ist.
@@ -13480,7 +13480,7 @@ Dieses Ereignis tritt ein, wenn eine Webhook Nachricht zugestellt wurde, aber mi
 ## Webhook Wiederholungsereignisse {#webhook-retry-events}
 
 {% apitags %}
-Webhooks, Wiederholung
+Webhooks, Retry
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Frequency-Capping versehen wurde und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion ist nur für Kunden:in der Beta-Version der Nachrichtenpriorisierung verfügbar.
@@ -13678,7 +13678,7 @@ Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Freq
 ## Webhook Ereignisse senden {#webhook-send-events}
 
 {% apitags %}
-Webhooks, Sendungen
+Webhooks, Sends
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Webhook verarbeitet und an die in diesem Webhook angegebene Drittpartei gesendet wurde. Beachten Sie, dass dies keine Aussage darüber macht, ob die Anfrage empfangen wurde oder nicht.
@@ -13869,7 +13869,7 @@ Dieses Ereignis tritt ein, wenn ein Webhook verarbeitet und an die in diesem Web
 ## WhatsApp Abbruch-Ereignisse {#whatsapp-abort-events}
 
 {% apitags %}
-WhatsApp, Abbrechen
+WhatsApp, Abort
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine WhatsApp Nachricht aufgrund von Liquid Abbrüchen etc. abgebrochen wurde.
@@ -14075,7 +14075,7 @@ Dieses Ereignis tritt ein, wenn eine WhatsApp Nachricht aufgrund von Liquid Abbr
 ## WhatsApp Tracking Link Klick-Ereignisse {#whatsapp-tracked-link-click-events}
 
 {% apitags %}
-WhatsApp, Klicks
+WhatsApp, Clicks
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn ein Nutzer:innen in einer WhatsApp Nachricht auf einen Link oder Button klickt, dessen Domain mit der Click Tracking Domain übereinstimmt.
@@ -14271,7 +14271,7 @@ Dieses Ereignis tritt ein, wenn ein Nutzer:innen in einer WhatsApp Nachricht auf
 ## WhatsApp Zustellung Ereignisse {#whatsapp-delivery-events}
 
 {% apitags %}
-WhatsApp, Zustellung
+WhatsApp, Delivery
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine gesendete WhatsApp Nachricht erfolgreich auf dem Gerät des Nutzers:innen angekommen ist.
@@ -14490,7 +14490,7 @@ Dieses Ereignis tritt ein, wenn eine gesendete WhatsApp Nachricht erfolgreich au
 ## WhatsApp-Ausfallereignisse {#whatsapp-failure-events}
 
 {% apitags %}
-WhatsApp, Scheitern
+WhatsApp, Failure
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn WhatsApp die Nachricht dem Nutzer:innen nicht zugestellt werden kann. Ein Hard Bounce bedeutet einen dauerhaften Zustellbarkeitsfehler.
@@ -14719,7 +14719,7 @@ Dieses Ereignis tritt ein, wenn WhatsApp die Nachricht dem Nutzer:innen nicht zu
 ## Eingehende WhatsApp-Ereignisse {#whatsapp-inbound-received-events}
 
 {% apitags %}
-WhatsApp, Eingehend Empfangen
+WhatsApp, Inbound Received
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn einer Ihrer Nutzer:innen eine WhatsApp Nachricht an eine Rufnummer in einer Ihrer Abo-Gruppen von Braze WhatsApp sendet.
@@ -14959,7 +14959,7 @@ Dieses Ereignis tritt ein, wenn einer Ihrer Nutzer:innen eine WhatsApp Nachricht
 ## WhatsApp Ereignisse lesen {#whatsapp-read-events}
 
 {% apitags %}
-WhatsApp, Lesen
+WhatsApp, Read
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine WhatsApp Nachricht von einem Nutzer:innen gelesen wird.
@@ -15178,7 +15178,7 @@ Dieses Ereignis tritt ein, wenn eine WhatsApp Nachricht von einem Nutzer:innen g
 ## WhatsApp Wiederholungsereignisse {#whatsapp-retry-events}
 
 {% apitags %}
-WhatsApp, Erneut versuchen
+WhatsApp, Retry
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Frequency-Capping versehen wurde und später innerhalb des konfigurierten Wiederholungsfensters erneut versucht wird. Diese Funktion ist nur für Kunden:in der Beta-Version der Nachrichtenpriorisierung verfügbar.
@@ -15380,7 +15380,7 @@ Dieses Ereignis tritt ein, wenn eine Nachricht depriorisiert oder mit einem Freq
 ## WhatsApp Ereignisse senden {#whatsapp-send-events}
 
 {% apitags %}
-WhatsApp, Sendet
+WhatsApp, Sends
 {% endapitags %}
 
 Dieses Ereignis tritt ein, wenn eine Sendeanfrage erfolgreich zwischen Braze und WhatsApp übermittelt wurde. Dies bedeutet jedoch nicht, dass die Nachricht bei dem Nutzer:innen angekommen ist.

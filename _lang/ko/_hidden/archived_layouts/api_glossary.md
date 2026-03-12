@@ -47,7 +47,7 @@ excerpt_separator: ""
 /templates/email/create
 {% endapimethod %}
 {% apitags %}
-포스트, 이메일, 생성, 템플릿, REST, API
+Post,Email,Create,Template,REST,API
 {% endapitags %}
 
 이메일 템플릿 REST API를 사용하여 Braze 대시보드에 저장된 이메일 템플릿을 프로그래밍 방식으로 관리하세요. 템플릿 & 미디어 페이지에서. Braze는 이메일 템플릿을 만들고 업데이트할 수 있는 두 가지 엔드포인트를 제공합니다.
@@ -98,7 +98,7 @@ excerpt_separator: ""
 /templates/email/list
 {% endapimethod %}
 {% apitags %}
-가져오기, 이메일, 템플릿, 목록, REST
+Get,Email,Template,List,REST
 {% endapitags %}
 
 다음 엔드포인트를 사용하여 사용 가능한 템플릿 목록을 가져옵니다.

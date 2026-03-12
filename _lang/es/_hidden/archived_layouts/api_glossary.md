@@ -47,7 +47,7 @@ excerpt_separator: ""
 /templates/email/create
 {% endapimethod %}
 {% apitags %}
-Publicar,Correo electrónico,Crear,Plantilla,REST,API
+Post,Email,Create,Template,REST,API
 {% endapitags %}
 
 Utiliza las API REST de plantillas de correo electrónico para administrar mediante programación las plantillas de correo electrónico que almacenaste en los paneles de Braze, en la página Plantillas & Medios. Braze proporciona dos puntos finales para crear y actualizar tus plantillas de correo electrónico.
@@ -98,7 +98,7 @@ La respuesta de este punto final incluye un campo para `email_template_id`, que 
 /templates/email/list
 {% endapimethod %}
 {% apitags %}
-Obtener,Correo electrónico,Plantilla,Lista,REST
+Get,Email,Template,List,REST
 {% endapitags %}
 
 Utiliza los siguientes puntos finales para obtener una lista de las plantillas disponibles.

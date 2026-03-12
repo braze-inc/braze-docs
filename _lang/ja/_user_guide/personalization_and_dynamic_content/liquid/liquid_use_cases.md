@@ -15,7 +15,7 @@ description: "このランディングページには、記念日、アプリの
 ## 記念日と祝日
 
 {% apitags %}
-記念日と祝日
+Anniversaries and holidays
 {% endapitags %}
 
 - [ユーザーの記念年に基づいてメッセージをパーソナライズする](#anniversary-year)
@@ -137,7 +137,7 @@ Message if today isn't one of the provided holidays.
 ## アプリの利用状況
 
 {% apitags %}
-アプリの利用状況
+App usage
 {% endapitags %}
 
 - [ユーザーがセッションを記録した場合、そのユーザーの言語でメッセージを送信する。](#app-session-language)
@@ -221,7 +221,7 @@ Message for a less active user
 ## カウントダウン
 
 {% apitags %}
-カウントダウン
+Countdowns
 {% endapitags %}
 
 - [今日の日付にX日を加える](#countdown-add-x-days)
@@ -539,7 +539,7 @@ Hi, the offer is only valid today.
 ## カスタム属性
 
 {% apitags %}
-カスタム属性
+Custom attribute
 {% endapitags %}
 
 - [一致するカスタム属性に基づいてメッセージをパーソナライズする](#attribute-matching)
@@ -600,7 +600,7 @@ Hi {{name[0]}}, here's your message!
 ## カスタムイベント
 
 {% apitags %}
-カスタムイベント
+Custom event
 {% endapitags %}
 
 - [カスタムイベントが現在から2時間以内の場合、プッシュ通知を中止する](#event-abort-push)
@@ -726,7 +726,7 @@ Did you forget something in your shopping cart?
 ## 言語
 
 {% apitags %}
-言語
+Language
 {% endapitags %}
 
 - [月名を別の言語で表示する](#language-display-month)
@@ -841,7 +841,7 @@ tuesday default
 ## その他
 
 {% apitags %}
-その他
+Miscellaneous
 {% endapitags %}
 
 - [マーケティングメールをブロックしている顧客にメールを送信しない](#misc-avoid-blocked-emails)
@@ -1202,7 +1202,7 @@ All episodes of {{new_shows_clean | join: ', ' }} expire on 9/8 - watch them now
 ## プラットフォーム・ターゲティング
 
 {% apitags %}
-プラットフォーム・ターゲティング
+Platform targeting
 {% endapitags %}
 
 - [デバイス OS別に異なる文章を使用する](#platform-device-os)
@@ -1359,7 +1359,7 @@ Thanks for joining our SMS program!
 ## タイムゾーン
 
 {% apitags %}
-タイムゾーン
+Time zones
 {% endapitags %}
 
 - [ユーザーのタイムゾーンに応じてメッセージをパーソナライズする。](#personalize-timezone)
@@ -1495,7 +1495,7 @@ Check out this new bar after work today. HH specials!
 ## 週/日/月
 
 {% apitags %}
-週/日/月
+Week/Day/Month
 {% endapitags %}
 
 - [前月の名前をメッセージに入れる](#month-name)

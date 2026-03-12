@@ -15,7 +15,7 @@ description: "Auf dieser Landing Page finden Sie Beispiele für Liquid-Anwendung
 ## Jahrestage und Feiertage
 
 {% apitags %}
-Jahrestage und Feiertage
+Anniversaries and holidays
 {% endapitags %}
 
 - [Nachrichten basierend auf dem Jubiläumsjahr eines Nutzers bzw. einer Nutzerin personalisieren](#anniversary-year)
@@ -137,7 +137,7 @@ Das angegebene Beispiel bezieht sich auf Heiligabend, den ersten Weihnachtsfeier
 ## App-Nutzung
 
 {% apitags %}
-App-Nutzung
+App usage
 {% endapitags %}
 
 - [Senden Sie Nachrichten in der Sprache eines Benutzers, wenn dieser eine Sitzung angemeldet hat](#app-session-language)
@@ -539,7 +539,7 @@ In diesem Anwendungsfall wird das Datum in 30 Tagen angezeigt, das Sie in Ihren 
 ## Angepasstes Attribut
 
 {% apitags %}
-Angepasstes Attribut
+Custom attribute
 {% endapitags %}
 
 - [Personalisieren Sie eine Nachricht auf der Grundlage passender benutzerdefinierter Attribute](#attribute-matching)
@@ -600,7 +600,7 @@ Hi {{name[0]}}, here's your message!
 ## Angepasstes Event
 
 {% apitags %}
-Angepasstes Event
+Custom event
 {% endapitags %}
 
 - [Push-Benachrichtigung abbrechen, wenn ein angepasstes Event innerhalb von zwei Stunden ab jetzt stattfindet](#event-abort-push)
@@ -726,7 +726,7 @@ In diesem Anwendungsfall wird berechnet, wie oft ein benutzerdefiniertes Ereigni
 ## Sprache
 
 {% apitags %}
-Sprache
+Language
 {% endapitags %}
 
 - [Monatsnamen in einer anderen Sprache anzeigen](#language-display-month)
@@ -841,7 +841,7 @@ tuesday default
 ## Verschiedenes
 
 {% apitags %}
-Verschiedenes
+Miscellaneous
 {% endapitags %}
 
 - [Vermeiden Sie den Versand von E-Mails an Kunden, die Marketing-E-Mails blockiert haben](#misc-avoid-blocked-emails)
@@ -1202,7 +1202,7 @@ Dieser Anwendungsfall zeigt Ihnen, wie Sie das Feld des Benutzerprofils `phone_n
 ## Plattform-Targeting
 
 {% apitags %}
-Plattform-Targeting
+Platform targeting
 {% endapitags %}
 
 - [Kopien je nach Betriebssystem des Geräts unterscheiden](#platform-device-os)
@@ -1359,7 +1359,7 @@ Thanks for joining our SMS program!
 ## Zeitzonen
 
 {% apitags %}
-Zeitzonen
+Time zones
 {% endapitags %}
 
 - [Eine Nachricht abhängig von der Zeitzone eines Nutzers oder einer Nutzerin personalisieren](#personalize-timezone)
@@ -1495,7 +1495,7 @@ Check out this new bar after work today. HH specials!
 ## Woche/Tag/Monat
 
 {% apitags %}
-Woche/Tag/Monat
+Week/Day/Month
 {% endapitags %}
 
 - [Den Namen des Vormonats in eine Nachricht ziehen](#month-name)

@@ -47,7 +47,7 @@ excerpt_separator: ""
 /templates/email/create
 {% endapimethod %}
 {% apitags %}
-Post,Envio de e-mail,Criar,Modelo,REST,API
+Post,Email,Create,Template,REST,API
 {% endapitags %}
 
 Use as APIs REST de e-mail para gerenciar programaticamente os modelos de e-mail que você armazenou nos dashboards do Braze, na página Modelos & Media. A Braze oferece dois endpoints para criar e atualizar seus modelos de e-mail.
@@ -98,7 +98,7 @@ A resposta desse endpoint inclui um campo para `email_template_id`, que pode ser
 /templates/email/list
 {% endapimethod %}
 {% apitags %}
-Obter,E-mail,Modelo,Lista,REST
+Get,Email,Template,List,REST
 {% endapitags %}
 
 Use os seguintes endpoints para obter uma lista de modelos disponíveis.

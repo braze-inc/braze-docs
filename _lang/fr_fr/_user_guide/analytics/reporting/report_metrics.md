@@ -21,7 +21,7 @@ tool: Reports
 ### Clics AMP
 
 {% apitags %}
-E-mail
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='AMP Clicks' %}
@@ -33,7 +33,7 @@ E-mail
 ### Ouvertures AMP
 
 {% apitags %}
-E-mail
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='AMP Opens' %}
@@ -45,7 +45,7 @@ E-mail
 ### Audience
 
 {% apitags %}
-Tous
+All
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Audience' %}
@@ -59,7 +59,7 @@ Tous
 ### Rebonds
 
 {% apitags %}
-E-mail, Web Push, iOS Push
+Email, Web Push, iOS Push
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Bounces' %} Cela peut se produire parce qu'il n'y a pas de jeton de poussée valide, que l'utilisateur s'est désabonné après le lancement de la campagne, ou que l'adresse e-mail est inexacte ou désactivée.
@@ -87,7 +87,7 @@ E-mail, Web Push, iOS Push
 ### Body Click
 
 {% apitags %}
-Push iOS, Push Android
+iOS Push, Android Push
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Body Click' %}
@@ -101,7 +101,7 @@ Push iOS, Push Android
 ### Clics sur le corps du message
 
 {% apitags %}
-in-app Message
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Body Clicks' %} Pour plus de détails, reportez-vous aux journaux des modifications du SDK pour [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) et [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
@@ -115,7 +115,7 @@ in-app Message
 ### Clics Boutons 1
 
 {% apitags %}
-in-app Message
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %} L'envoi de messages pour les _clics sur le bouton 1_ ne fonctionne que si vous indiquez que l'**identifiant pour l'envoi de messages** est "0" dans le message in-app.
@@ -129,7 +129,7 @@ in-app Message
 ### Clics Boutons 2
 
 {% apitags %}
-in-app Message
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %} L'envoi de messages pour les _clics sur le bouton 2_ ne fonctionne que si vous indiquez que l'**identifiant pour l'envoi de messages** est "1" dans le message in-app.
@@ -143,7 +143,7 @@ in-app Message
 ### Analyse de campagne
 
 {% apitags %}
-Indicateurs de fonctionnalité
+Feature Flags
 {% endapitags %}
 
 La performance du message sur les différents canaux. Les indicateurs affichés dépendent du canal de communication sélectionné et du fait que l'[expérience Feature Flag]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics) est un test multivarié.
@@ -155,7 +155,7 @@ La performance du message sur les différents canaux. Les indicateurs affichés 
 ### Choix soumis
 
 {% apitags %}
-in-app Message
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Choices Submitted' %}
@@ -167,7 +167,7 @@ in-app Message
 ### Taux de Click-to-Open
 
 {% apitags %}
-E-mail
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Click-to-Open Rate' %}
@@ -203,7 +203,7 @@ SMS/MMS, RCS
 ### Confiance
 
 {% apitags %}
-Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, MMS.
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Confidence' %}
@@ -215,7 +215,7 @@ Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webh
 ### Bouton de page de confirmation
 
 {% apitags %}
-in-app Message
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Confirmation Page Button' %}
@@ -227,7 +227,7 @@ in-app Message
 ### Rejets Page de Confirmation
 
 {% apitags %}
-in-app Message
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Confirmation Page Dismissals' %}
@@ -239,7 +239,7 @@ in-app Message
 ### Conversions (B, C, D)
 
 {% apitags %}
-Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Conversions (B, C, D)' %} Cet événement défini est déterminé par vous lorsque vous créez la campagne. 
@@ -258,7 +258,7 @@ Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Web
 ### Conversions totales
 
 {% apitags %}
-in-app Message
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Conversions' %}
@@ -274,7 +274,7 @@ Par exemple, si un utilisateur déclenche un message in-app deux fois et se conv
 ### Fermer le message
 
 {% apitags %}
-in-app Message
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Close Message' %}
@@ -286,7 +286,7 @@ in-app Message
 ### Taux de conversion
 
 {% apitags %}
-Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}
@@ -313,7 +313,7 @@ Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Web
 ### Période de conversion
 
 {% apitags %}
-Tous
+All
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Conversion Window' %}
@@ -325,7 +325,7 @@ Tous
 ### Réceptions
 
 {% apitags %}
-E-mail, notification push Web, notification push iOS, notification push Android, WhatsApp
+Email, Web Push, iOS Push, Android Push, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Deliveries' %}
@@ -400,7 +400,7 @@ Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> po
 ### Ouvertures directes
 
 {% apitags %}
-Notification push iOS
+iOS Push
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Direct Opens' %}
@@ -414,7 +414,7 @@ Notification push iOS
 ### Emailable
 
 {% apitags %}
-E-mail
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Emailable' %}
@@ -440,7 +440,7 @@ Webhook
 ### Estimation des ouvertures réelles
 
 {% apitags %}
-E-mail
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Estimated Real Opens' %}
@@ -466,7 +466,7 @@ WhatsApp
 ### Fonctionnalité de l'expérience du drapeau
 
 {% apitags %}
-Indicateurs de fonctionnalité
+Feature Flags
 {% endapitags %}
 
 Indicateurs de performance pour l'expérience de l'envoi de messages dans une fonctionnalité. Les indicateurs spécifiques affichés varient en fonction du canal de communication et du fait que l'expérience était ou non un test multivarié.
@@ -478,7 +478,7 @@ Indicateurs de performance pour l'expérience de l'envoi de messages dans une fo
 ### Échec d'envoi définitif
 
 {% apitags %}
-E-mail
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} 
@@ -504,7 +504,7 @@ SMS/MMS, RCS
 ### Ouvertures influencées
 
 {% apitags %}
-Push iOS, Push Android
+iOS Push, Android Push
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Influenced Opens' %}
@@ -518,7 +518,7 @@ Push iOS, Push Android
 ### Revenus à vie
 
 {% apitags %}
-Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Lifetime Revenue' %}
@@ -530,7 +530,7 @@ Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Web
 ### Valeur vie client par utilisateur
 
 {% apitags %}
-Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Lifetime Value Per User' %}
@@ -542,7 +542,7 @@ Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Web
 ### Chiffre d'affaires quotidien moyen
 
 {% apitags %}
-Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Average Daily Revenue' %}
@@ -554,7 +554,7 @@ Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Web
 ### Achats quotidiens
 
 {% apitags %}
-Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Daily Purchases' %}
@@ -566,7 +566,7 @@ Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Web
 ### Revenus quotidiens par utilisateur
 
 {% apitags %}
-Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Daily Revenue Per User' %}
@@ -578,7 +578,7 @@ Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Web
 ### Ouverture automatique
 
 {% apitags %}
-E-mail
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Machine Opens' %} Cette mesure est suivie à partir du 11 novembre 2021 pour SendGrid et du 2 décembre 2021 pour SparkPost. Pour Amazon SES, l'analyse/analytique s'affichera sous forme d'_adjectifs_. Toutefois, le filtrage des clics par les robots sera pris en charge.
@@ -614,7 +614,7 @@ SMS/MMS, RCS
 ### Autre ouverture
 
 {% apitags %}
-E-mail
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Other Opens' %} Notez qu'un utilisateur peut également ouvrir un e-mail (comme les comptes d'ouverture vers Autres ouvertures) avant qu'un compte d'ouvertures machine ne soit enregistré. Si un utilisateur ouvre un e-mail une fois (ou plus) après un événement d'ouverture automatique à partir d'une boîte de réception autre qu'Apple Mail, le nombre de fois où l'utilisateur ouvre l'e-mail est calculé pour les autres ouvertures et une seule fois pour les ouvertures uniques.
@@ -626,7 +626,7 @@ E-mail
 ### En attente d’une nouvelle tentative
 
 {% apitags %}
-E-mail
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Pending Retry' %}
@@ -638,7 +638,7 @@ E-mail
 ### Conversions principales (A) ou événement de conversion principal
 
 {% apitags %}
-Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, MMS.
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} 
@@ -692,7 +692,7 @@ WhatsApp
 ### Reçu
 
 {% apitags %}
-E-mail, cartes de contenu, message in-app, Web Push, iOS Push, Android Push, SMS/MMS, WhatsApp
+Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS/MMS, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Received' %} 
@@ -736,7 +736,7 @@ SMS/MMS, RCS
 ### Chiffre d'affaires
 
 {% apitags %}
-E-mail
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Revenue' %}
@@ -762,7 +762,7 @@ SMS/MMS
 ### Envois
 
 {% apitags %}
-Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, RCS, WhatsApp, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, RCS, WhatsApp, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Sends' %} Ces indicateurs sont fournis par Braze. Notez qu’au lancement d’une campagne planifiée, cet indicateur inclura tous les messages envoyés, qu’ils aient été envoyés ou non en raison d’une limitation du taux.
@@ -783,7 +783,7 @@ Pour les cartes de contenu, cette mesure est calculée différemment en fonction
 ### Envois de messages
 
 {% apitags %}
-Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Messages Sent' %}  Ces indicateurs sont fournis par Braze. Notez qu’au lancement d’une campagne planifiée, cet indicateur inclura tous les messages envoyés, qu’ils aient été envoyés ou non en raison d’une limitation du taux.
@@ -826,7 +826,7 @@ SMS/MMS
 ### Échec provisoire de livraison
 
 {% apitags %}
-E-mail
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} Si un e-mail reçoit un échec provisoire d'envoi, nous effectuons généralement une nouvelle tentative dans les 72 heures, mais le nombre de tentatives varie d'un destinataire à l'autre.
@@ -840,7 +840,7 @@ Bien que les échecs provisoires ne soient pas pris en compte dans l'analyse/ana
 ### Spam
 
 {% apitags %}
-E-mail
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Spam' %}
@@ -866,7 +866,7 @@ Les plaintes pour spam sont traitées directement par les fournisseurs de servic
 ### Rejets Page de Sondage
 
 {% apitags %}
-in-app Message
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Survey Page Dismissals' %}
@@ -878,7 +878,7 @@ in-app Message
 ### Soumissions de sondage
 
 {% apitags %}
-in-app Message
+In-App Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Survey Submissions' %}
@@ -890,7 +890,7 @@ in-app Message
 ### Nombre total de clics
 
 {% apitags %}
-E-mail, cartes de contenu, SMS/MMS, MMS
+Email, Content Cards, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Clicks' %}
@@ -919,7 +919,7 @@ E-mail, cartes de contenu, SMS/MMS, MMS
 ### Total des rejets
 
 {% apitags %}
-Cartes de contenu
+Content Cards
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Dismissals' %} Si un utilisateur reçoit deux cartes différentes de la même campagne et qu'il les ferme toutes les deux, ce nombre sera multiplié par deux. La réadmissibilité vous permet d'incrémenter le _nombre total de renvois_ une fois chaque fois qu'un utilisateur reçoit une carte ; chaque carte est un message différent.
@@ -941,7 +941,7 @@ Cartes de contenu
 ### Impressions totales
 
 {% apitags %}
-Message in-app, cartes de contenu
+In-App Message, Content Cards
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Impressions' %} Ce nombre correspond à la somme du nombre d'événements d'impression que Braze reçoit des SDK.
@@ -961,7 +961,7 @@ Message in-app, cartes de contenu
 ### Nombre total d’ouvertures
 
 {% apitags %}
-E-mail, iOS Push, Android Push, Web Push, LINE
+Email, iOS Push, Android Push, Web Push, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Opens' %}
@@ -993,7 +993,7 @@ E-mail, iOS Push, Android Push, Web Push, LINE
 ### Total des revenus
 
 {% apitags %}
-Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, MMS.
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Revenue' %} Ces indicateurs ne sont disponibles que dans les rapports de comparaison des campagnes, via le <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>générateur de rapports.</a>
@@ -1005,7 +1005,7 @@ Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webh
 ### Clics uniques
 
 {% apitags %}
-E-mail, cartes de contenu, LINE
+Email, Content Cards, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Clicks' %}
@@ -1036,7 +1036,7 @@ Cela inclut les clics sur les liens de désinscription fournis par Braze.
 ### Rejets uniques
 
 {% apitags %}
-Cartes de contenu
+Content Cards
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Dismissals' %}
@@ -1050,7 +1050,7 @@ Cartes de contenu
 ### Impressions uniques
 
 {% apitags %}
-Message in-app, cartes de contenu
+In-App Message, Content Cards
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Impressions' %} 
@@ -1070,7 +1070,7 @@ Message in-app, cartes de contenu
 ### Ouvertures uniques
 
 {% apitags %}
-E-mail, LINE
+Email, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Opens' %}
@@ -1098,7 +1098,7 @@ E-mail, LINE
 ### Destinataires uniques
 
 {% apitags %}
-Tous
+All
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Recipients' %}
@@ -1114,7 +1114,7 @@ Tous
 ### Désabonnés
 
 {% apitags %}
-E-mail
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unsubscribers or Unsub' %}
@@ -1136,7 +1136,7 @@ E-mail
 ### Se désabonne
 
 {% apitags %}
-E-mail
+Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unsubscribes' %}
@@ -1150,7 +1150,7 @@ E-mail
 ### Variation
 
 {% apitags %}
-Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, MMS.
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Variation' %}

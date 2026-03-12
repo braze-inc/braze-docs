@@ -47,7 +47,7 @@ Los esquemas de almacenamiento se aplican a los datos de eventos de archivos pla
 ## Eventos de actualización del número de contenedor aleatorio {#random-bucket-number-update-events}
 
 {% apitags %}
-Número de contenedor aleatorio
+Random Bucket Number
 {% endapitags %}
 
 Este evento de usuario se produce cada vez que se crea un nuevo usuario dentro de su área de trabajo. Durante este evento, a cada nuevo usuario se le asigna un número de contenedor aleatorio que puedes utilizar para crear segmentos de usuarios aleatorios distribuidos uniformemente. Utilízalo para agrupar una serie de valores de número de contenedor aleatorios y comparar el rendimiento de tus campañas y variantes de campaña.
@@ -81,7 +81,7 @@ Este evento de Currents sólo está disponible para clientes que hayan adquirido
 ## Eventos personalizados {#custom-events}
 
 {% apitags %}
-Eventos personalizados
+Custom Events
 {% endapitags %}
 
 Este evento se produce cuando se activa un evento personalizado específico. Utilícelo para rastrear cuando los usuarios realizan eventos personalizados en su aplicación.
@@ -208,7 +208,7 @@ Este evento se produce cuando se activa un evento personalizado específico. Uti
 ## Eventos de atribución de instalación {#install-attribution-events}
 
 {% apitags %}
-Atribución
+Attribution
 {% endapitags %}
 
 Este evento se produce cuando la instalación de una aplicación se atribuye a una fuente. Utilízalo para saber de dónde proceden las instalaciones de tu aplicación.
@@ -299,7 +299,7 @@ Este evento se produce cuando la instalación de una aplicación se atribuye a u
 ## Eventos de ubicación {#location-events}
 
 {% apitags %}
-Ubicaciones
+Locations
 {% endapitags %}
 
 Este evento se activa cuando un usuario visita un lugar determinado. Utilícelo para realizar un seguimiento de los usuarios que activan eventos de ubicación en su aplicación.
@@ -441,7 +441,7 @@ Este evento se activa cuando un usuario visita un lugar determinado. Utilícelo 
 ## Eventos de compra {#purchase-events}
 
 {% apitags %}
-Compras
+Purchases
 {% endapitags %}
 
 Este evento se produce cuando un usuario realiza una compra. Utilice estos datos para rastrear cuándo los usuarios compran algo en la aplicación.
@@ -581,7 +581,7 @@ Las compras son eventos personalizados especiales y vienen con una cadena codifi
 ## Actos de la Primera Sesión {#first-session-events}
 
 {% apitags %}
-Sesiones
+Sessions
 {% endapitags %}
 
 Este evento se produce cuando un usuario inicia su primera sesión en tu aplicación. Utilice estos datos para saber cuándo inician sesión los usuarios.
@@ -698,7 +698,7 @@ Cuando un usuario inicia su primera sesión, se disparan los eventos `FirstSessi
 ## Eventos de fin de sesión {#session-end-events}
 
 {% apitags %}
-Sesiones
+Sessions
 {% endapitags %}
 
 Esto ocurre cuando un usuario sale de su aplicación, terminando así su sesión actual. Utilice estos datos para realizar un seguimiento de cuándo finalizan las sesiones y, junto con el evento de inicio de sesión correspondiente, calcular la duración de su tiempo en una sesión.
@@ -810,7 +810,7 @@ Esto ocurre cuando un usuario sale de su aplicación, terminando así su sesión
 ## Eventos de inicio de sesión {#session-start-events}
 
 {% apitags %}
-Sesiones
+Sessions
 {% endapitags %}
 
 Este evento se produce cuando un usuario inicia una sesión. Utilice estos datos para saber cuándo inician sesión los usuarios.
@@ -922,7 +922,7 @@ Cuando un usuario inicia su primera sesión, se disparan los eventos `FirstSessi
 ## Eventos de cambio de token de notificaciones push de actividad en vivo {#live-activity-push-to-start-token-change-events}
 
 {% apitags %}
-Actividad en vivo, token de notificaciones push
+Live Activity, Push To Start Token
 {% endapitags %}
 
 Este evento se produce cuando Braze sincroniza el token de notificaciones push para iniciar la actividad en vivo con el usuario.
@@ -1031,7 +1031,7 @@ Este evento se produce cuando Braze sincroniza el token de notificaciones push p
 ## Eventos de cambio de token de actualización de actividad en vivo {#live-activity-update-token-change-events}
 
 {% apitags %}
-Actividad en vivo, actualizar token
+Live Activity, Update Token
 {% endapitags %}
 
 Este evento se produce cuando Braze sincroniza el token de actualización de Actividad en vivo con el usuario
@@ -1140,7 +1140,7 @@ Este evento se produce cuando Braze sincroniza el token de actualización de Act
 ## Eventos de cambio de estado del token de notificaciones push {#push-notification-token-state-change-events}
 
 {% apitags %}
-Push, cambio de estado del token
+Push, Token State Change
 {% endapitags %}
 
 Este evento se produce cuando se inserta, actualiza o elimina un token de notificaciones push. Utilízalo para hacer un seguimiento de los estados de los tokens de notificaciones push.
