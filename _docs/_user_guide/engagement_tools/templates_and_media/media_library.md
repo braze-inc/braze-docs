@@ -149,7 +149,7 @@ Large image notifications display best when using an image of at least 600 x 300
 
 ### Video
 
-Videos uploaded to the media library can only be used in WhatsApp messages. For more information, refer to [Creating a WhatsApp message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
+Videos uploaded to the media library can only be used in WhatsApp messages. For more information, see [Creating a WhatsApp message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
 
 ## Generating images with BrazeAI<sup>TM</sup> {#generate-ai}
 
