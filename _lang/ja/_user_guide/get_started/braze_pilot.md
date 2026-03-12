@@ -3,15 +3,15 @@ nav_title: Brazeパイロット
 page_order: 10.5
 layout: dev_guide
 guide_top_header: "Brazeパイロット"
-guide_top_text: "Braze Pilotは、Brazeダッシュボードとシームレスに接続できるように設計されたモバイルアプリである。これにより、アプリにキャンペーンやキャンバスを立ち上げることができるようになり、Brazeのメッセージに自分のスマホで命を吹き込むことができる。Braze Pilotには、さまざまな業界を代表する架空のブランドのアプリシミュレーションライブラリーがあり、カスタマーエクスペリエンスから見たメッセージングを体験することができる。"
-description: "Brazeのダッシュボードから携帯電話にメッセージを送るための、Brazeのさまざまな使い方をチェックしよう。"
+guide_top_text: "Braze Pilotは、Brazeのダッシュボードとシームレスに連携するように設計されたモバイルアプリだ。これにより、アプリにキャンペーンやキャンバスを配信できるようになる。つまり、自分のスマホ上でBrazeのメッセージを実際に体験できるのだ。Braze Pilotには、様々な業界を代表する架空のブランド向けアプリシミュレーションのライブラリーが含まれている。これにより、顧客の視点から見た自社のメッセージングがどのように見えるかを体験できる。"
+description: "Brazeのダッシュボードから自分の携帯電話にメッセージを送信する方法をいくつか確認してみろ。"
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: Braze Pilotを使い始める
+  - name: Braze Pilotの始め方
     link: /docs/user_guide/getting_started/braze_pilot/getting_started/
     image: /assets/img/braze_icons/brush-02.svg
-  - name: データ辞書
+  - name: データディクショナリ
     link: /docs/user_guide/getting_started/braze_pilot/data_dictionary/
     image: /assets/img/braze_icons/book-closed.svg
   - name: ディープリンク
@@ -20,78 +20,78 @@ guide_featured_list:
 
 ---
 
-## アプリの試験的シミュレーション
+## パイロットアプリのシミュレーション
 
-Braze Pilotの中核は、アプリシミュレーションのライブラリーだ。各アプリは、業界に特化した架空のブランドのリアルなシミュレーションであり、豊富なイベントやアトリビューションのログを記録するようインストルメント化されているため、一般的なBrazeのユースケースをパワーアップする機会が無限に生まれる。
+Braze Pilotの中核は、アプリシミュレーションのライブラリーである。各アプリは業界特化型の架空ブランドをリアルにシミュレートしたもので、豊富なイベントや属性を記録する仕組みを備えている。これにより、Brazeの一般的なユースケースを実現する無限の可能性が生まれる。
 
 {% tabs local %}
 {% tab Fitness %}
 
 ### ステッピントン
 
-Steppingtonは、ワークアウト、エクササイズゴール、Steppington+プレミアムサービスを備えたフィットネスアプリだ。[コンテンツカード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards)、[フィーチャーフラグで]({{site.baseurl}}/developer_guide/feature_flags)明らかにできるセクション、カスタムイベントログの強力なライブラリーなど、この業界向けのカスタマージャーニーを数多く示すことができる。
+ステッピントンは、ワークアウトや運動目標、そしてステッピントンプラスというプレミアムサービスを備えたフィットネスアプリだ。[コンテンツカード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards)を表示する複数の場所を提供し、[フィーチャーフラグ]({{site.baseurl}}/developer_guide/feature_flags)で表示可能なセクションを備え、さらに豊富なカスタムイベントロギングライブラリーにより、この業界における多様なカスタマージャーニーを可視化できる。
 
-![マラソントレーニング、ヨガ、サイクリング、ウェイトトレーニングのアイコンが並ぶステッピングトンのホームページ。]({% image_buster /assets/img/braze_pilot/steppington_app.png %}){:style="max-width:50%"}
+![ステッピントンのホームページには、マラソンのトレーニング、ヨガ、サイクリング、ウェイトトレーニングのアイコンがある。]({% image_buster /assets/img/braze_pilot/steppington_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% tab eCommerce %}
 
 ### PantsLabyrinth
 
-PantsLabyrinthはパンツを販売するeコマースアプリだ！PantsLabyrinthアプリには、完全なショッピングカートのチェックアウト体験、フィーチャーフラグでイネーブルメントにできるオプションのウィッシュリスト機能、英国の友人と下品なジョークを言い合う多くの機会が含まれている。
+パンツラビリンスは、パンツを売るe コマースアプリだ！パンツラビリンスアプリには、ショッピングカートの決済機能、フィーチャーフラグでイネーブルメントできるオプションのウィッシュリスト機能、そして英国の友達と小賢しい冗談を交わす機会が数多く含まれている。
 
-![PantsLabyrinthの商品ページで、ジーンズをカートに入れるオプションがある。]({% image_buster /assets/img/braze_pilot/pantslabyrinth_app.png %}){:style="max-width:50%"}
+![パンツラビリンスの商品ページで、ジーンズをカートに入れるオプションがある。]({% image_buster /assets/img/braze_pilot/pantslabyrinth_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% tab Streaming %}
 
-### ムービーキャノン 
+### 映画カノン 
 
-MovieCanonは、コンテンツ・エンゲージメントに関するBrazeの一般的なユースケースを説明するために完璧に設計されたストリーミング・サービスである。 
+MovieCanonは、コンテンツエンゲージメントに関するBrazeの一般的なユースケースを完璧に説明するために設計されたストリーミングサービスだ。 
 
-![MovieCanonアプリでは、さまざまなスリラー映画を見ることができる。]({% image_buster /assets/img/braze_pilot/moviecanon_app.png %}){:style="max-width:50%"}
+![様々なスリラー映画が観られるMovieCanonアプリだ。]({% image_buster /assets/img/braze_pilot/moviecanon_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% endtabs %}
 
-## PilotとBrazeダッシュボードとの接続方法
+## PilotがBrazeダッシュボードと連携する方法
 
-Braze SDKは、アプリやWebサイトに統合されるとユーザーからデータを収集するコードパッケージである。Pilotをダッシュボードに接続するときは、携帯電話のPilotアプリとBraze SDK間のこの接続を初期化し、ダッシュボードのAPIキー識別子をPilotに与えてBrazeインスタンスとの一意の接続を確立する。
+Braze SDKは、アプリやWeb サイトに統合されると、ユーザーからデータを収集するコードパッケージだ。Pilotをダッシュボードに接続する際、スマートフォン上のPilotアプリとBraze SDK間の接続を初期化する。さらに、ダッシュボードのAPI キー識別子をPilotに提供することで、Brazeインスタンスとの固有の接続を確立する。
 
-![パイロットを設定する最初のステップだ。]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
+![パイロットの設定の最初のステップだ。]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
 
-PilotがあなたのBrazeダッシュボードに接続した後、Braze SDKは、あなたがSDKをあなた自身のアプリやWebサイトと統合したときと同じようにアプリで機能する。つまり、Brazeはそうなるということだ：
+PilotがBrazeダッシュボードに接続した後、アプリ内のBraze SDKは、自社のアプリやWeb サイトにSDKを統合した場合と同様に機能する。これは、Brazeが以下のことを意味する。
 
-- アプリ内の架空のブランドに特化したカスタムデータを含む、ユーザーアクティビティのデータをPilotに保存する。
+- Pilotにユーザー活動データを保存する。これにはアプリ内の架空ブランド固有のカスタムデータも含まれる。
 - セッションデータ、デバイス情報、プッシュトークンを自動的に収集する。
-- SDKとの統合が必要なプッシュ通知、アプリ内メッセージ、コンテンツカードのメッセージングチャネルを機能させる。
+- SDKの統合が必要となる機能である、プッシュ通知、アプリ内メッセージ、コンテンツカードメッセージングチャネル。
 
-Braze SDKについては、[Integrationを]({{site.baseurl}}/user_guide/getting_started/integration)参照のこと。
+Braze SDKの詳細については、[統合]({{site.baseurl}}/user_guide/getting_started/integration)を参照せよ。
 
-![Brazeカスタマーエンゲージメントスタックには、データ取り込み、分類、オーケストレーション、パーソナライゼーション、および顧客とのインタラクティブなフィードバックループのためのメッセージングチャネルとのアクションのための統合、API、SDKが含まれる。]({% image_buster /assets/img/braze_pilot/braze_sdk_diagram.png %}){:style="max-width:70%"}
+![Brazeのカスタマーエンゲージメントスタックは、データ取り込み、分類、オーケストレーション、パーソナライゼーション、アクションのための統合、API、SDKを含み、顧客との双方向フィードバックループを実現するメッセージングチャネルを備えている。]({% image_buster /assets/img/braze_pilot/braze_sdk_diagram.png %}){:style="max-width:70%"}
 
 ## Brazeのユーザープロファイル
 
-Brazeに送信されたすべてのデータは、アプリやWebサイトの特定のユーザー専用のユーザープロファイルに保存される。Pilotをダッシュボードに接続すると、BrazeはPilotのユーザーとしてのあなたのデータを記録し始める。この接続によって作成されるユーザーには、匿名と識別子の2種類がある。
+アプリやWeb サイトにおける特定のユーザーに紐づくユーザープロファイルに、Brazeに送信されるデータは全て保存される。パイロットをBrazeのダッシュボードに接続すると、Brazeはパイロットのユーザーであるあなたに関するデータの記録を開始する。この接続を通じて作成されるユーザーには、匿名ユーザーと識別子を持つユーザーという二種類がある。
 
 ### 匿名 
 
-この接続ステータスは、まだログインしていないアプリやWebサイトのゲストの体験を表している。お客様が匿名ユーザーとしてPilotを初期化した場合、Brazeはお客様用の[匿名ユーザープロファイルを]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users)作成し、そこでのお客様の活動に関するデータを記録する。匿名ユーザーをキャンペーンのターゲットにすることは可能だが、ダッシュボードで直接ユーザープロファイルを調べることはできない。
+この接続ステータスは、まだログインしていないアプリやWeb サイトのゲストの体験を表している。パイロットを匿名ユーザーとして初期化すると、Brazeは自動的に[匿名ユーザープロファイル]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users)を作成し、そのプロファイルにユーザーの活動データを記録する。匿名ユーザーはキャンペーンの対象とすることはできるが、Brazeダッシュボードで直接そのユーザープロファイルを閲覧することはできない。
 
-### 識別子
+### 識別された
 
-この接続ステータスは、外部識別子と呼ばれるユーザーに割り当てられた一意の識別子を通じて、Brazeがユーザープロファイルを認識することを意味する。ダッシュボードの**ユーザー検索**ページでこの外部識別子を検索して、ユーザープロファイルを見つけることができる。このプロファイルには、アプリでのアクティビティに基づいて Pilot から記録されたすべてのユーザー属性とイベントが保存される。
+この接続ステータスは、Brazeがあなたに割り当てられた一意の識別子（外部識別子と呼ばれる）を通じて、あなたのユーザープロファイルを認識していることを意味する。ダッシュボードの**ユーザー検索**ページでこの外部識別子を検索すれば、ユーザープロファイルを見つけられる。そこにはアプリ内での活動に基づき、Pilotから記録された全てのユーザー属性とイベントが保存される。
 
-![ユーザー "torchie-208117 "のBrazeユーザープロファイルの例。]({% image_buster /assets/img/braze_pilot/user_profile.png %})
+![ユーザー「torchie-208117」のBrazeユーザープロファイルの例だ。]({% image_buster /assets/img/braze_pilot/user_profile.png %})
 
 ### 接続タイプ
 
-接続の種類を確認するには、画面右上の接続ステータスをチェックすればいい。
+接続の種類を確認するには、画面の右上に表示されている接続ステータスを確認すればよい。
 
 {% tabs local %}
 {% tab Anonymous user  %}
 
-**Anonymousは**、匿名ユーザーとしてデータを記録していることを示す。
+**匿名とは、**匿名ユーザーとしてデータを記録していることを示す。
 
 <style>
   .imgDiv {
@@ -107,7 +107,7 @@ Brazeに送信されたすべてのデータは、アプリやWebサイトの特
 {% endtab %}
 {% tab Identified user %}
 
-識別子ユーザーとしてデータを記録している場合、ユーザーアイコンが外部IDの横に表示される。
+識別されたユーザーとしてデータを記録している場合、external IDの横にユーザーアイコンが表示される。
 
 <div class="imgDiv">
 <img src="{% image_buster /assets/img/braze_pilot/status_identified_user.png %}" style="max-width:40%">
@@ -117,7 +117,7 @@ Brazeに送信されたすべてのデータは、アプリやWebサイトの特
 {% endtab %}
 {% tab Not connected %}
 
-**未接続は**、Braze SDKとPilotの接続をまだ初期化していないことを示す。
+**接続されていないとは、**まだBraze SDKとPilotの接続を初期化していないことを示す。
 
 <div class="imgDiv">
 <img src="{% image_buster /assets/img/braze_pilot/status_not_connected.png %}" style="max-width:40%">
@@ -132,10 +132,10 @@ Brazeに送信されたすべてのデータは、アプリやWebサイトの特
 キャンペーンとキャンバスは、ユーザーにメッセージを送信する手段です。 
 
 - キャンペーンは、さまざまなチャネルにわたって特定のオーディエンスセグメントに送信される単一のメッセージに最適です。 
-- キャンバスは、複数のチャネルにわたってパーソナライズされたカスタマージャーニーを自動化およびオーケストレーションできる高度なキャンペーンワークフローです。キャンバス内で、分岐ロジック、遅延、決定ポイント、コンバージョンイベントを設定して、一連のやり取りを通じて顧客を導くことができます。キャンバスは、さまざまなタッチポイントで一貫性のあるシームレスなコミュニケーションを実現し、カスタマーエンゲージメントとコンバージョンの可能性を高めるのに役立つ。
+- キャンバスは、複数のチャネルにわたってパーソナライズされたカスタマージャーニーを自動化およびオーケストレーションできる高度なキャンペーンワークフローです。キャンバス内で、分岐ロジック、遅延、決定ポイント、コンバージョンイベントを設定して、一連のやり取りを通じて顧客を導くことができます。キャンバスは、異なる接点間で一貫性のあるシームレスなコミュニケーションを確保するのに役立つ。これによりカスタマーエンゲージメントとコンバージョンの可能性が高まる。
 
-## 対応メッセージングチャネル
+## サポートされているメッセージングチャネル
 
-Braze Pilotは現在、[アプリ内メッセージに]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about)対応しており、アプリ内に表示され、ユーザーがアクティブにエンゲージしている間にタイムリーなメッセージングを配信する。
+Braze Pilotは現在、[アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about)をサポートしている。これはアプリ内に表示され、ユーザーが積極的にエンゲージメントを行っている最中にタイムリーなメッセージを届ける。
 
-![MovieCanonアプリ内メッセージ「MovieCanonを楽しんでいますか？お友達を紹介してください！」と表示され、メールアドレスを入力して紹介状を送ることができる。]({% image_buster /assets/img/braze_pilot/moviecanon_iam.png %}){:style="max-width:40%"}
+![MovieCanonアプリ内のメッセージ「MovieCanonを楽しんでいますか？」友達を紹介しよう！」と表示され、紹介メールを送るためのメールアドレスの入力欄がある。]({% image_buster /assets/img/braze_pilot/moviecanon_iam.png %}){:style="max-width:40%"}

@@ -91,7 +91,7 @@ Objective-C<br>
 
 대시보드에서 개인화된 푸시를 설정하려면 표시하려는 특정 카테고리를 등록한 다음, 표준 Liquid를 사용하여 키-값 페어 내에서 메시지에서 표시할 적절한 사용자 속성을 설정해야 합니다. 이러한 보기는 특정 고객 프로필의 특정 사용자 속성을 기반으로 개인화될 수 있습니다.
 
-![네 개의 키-값 페어 세트, "next_session_name" 및 "next_session_complete_date" 은 Liquid를 사용하여 API 트리거 속성으로 설정하고 "completed_session count" 및 "total_session_count" 은 Liquid를 사용하여 커스텀 사용자 속성으로 설정합니다.]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
+![키-값 쌍의 네 세트, 여기서 "next_session_name"와 "next_session_complete_date"은 Liquid를 사용하여 API 트리거 속성으로 설정되고, "completed_session 카운트"와 "total_session_count"는 Liquid를 사용하여 커스텀 사용자 속성으로 설정됩니다.]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
 
 #### 키-값 쌍 처리하기
 
@@ -154,7 +154,7 @@ func didReceive(_ notification: UNNotification) {
 
 대시보드에서 정보 캡처가 가능한 푸시를 설정하려면 커스텀 카테고리를 등록 및 설정하고 필요한 키-값 페어를 제공해야 합니다. 예시에서 볼 수 있듯이 푸시에 이미지를 포함할 수도 있습니다. 이렇게 하려면 [리치 알림]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/customization/rich_notifications/)을 통합하고 캠페인에서 알림 스타일을 리치 알림으로 설정한 다음, 리치 푸시 이미지를 포함해야 합니다.
 
-![세 세트의 키-값 쌍이 포함된 푸시 메시지입니다. 1. "Braze_id" 를 Liquid 호출로 설정하여 Braze ID를 검색합니다. 2. "cert_title" 을 "Braze 마케터 인증"으로 설정합니다. 3. "Cert_description" "인증된 Braze 마케터가 운전합니다..."로 설정.]({% image_buster /assets/img/push_implementation_guide/push9.png %})
+![세 세트의 키-값 쌍이 포함된 푸시 메시지입니다. 1. "Braze_id"는 Braze ID를 검색하기 위한 Liquid 호출로 설정됩니다. 2. "cert_title"은 "Braze 마케터 인증"으로 설정됩니다. 3. "Cert_description"는 "인증된 Braze 마케터가 주도합니다..."로 설정됩니다.]({% image_buster /assets/img/push_implementation_guide/push9.png %})
 
 #### 버튼 동작 처리하기
 
@@ -208,7 +208,7 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
 
 로깅 분석은 [`/users/track` 엔드포인트]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)에 접속한 고객 서버를 통해 실시간으로만 수행할 수 있습니다. 분석을 기록하려면 다음 스크린샷과 같이 키-값 페어 필드에 `braze_id` 값을 보내 업데이트할 고객 프로필을 식별합니다.
 
-![세 세트의 키-값 쌍이 포함된 푸시 메시지입니다. 1. "Braze_id" 를 Liquid 호출로 설정하여 Braze ID를 검색합니다. 2. "cert_title" 을 "Braze 마케터 인증"으로 설정합니다. 3. "Cert_description" "인증된 Braze 마케터가 운전합니다..."로 설정.]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
+![세 세트의 키-값 쌍이 포함된 푸시 메시지입니다. 1. "Braze_id"는 Braze ID를 검색하기 위한 Liquid 호출로 설정됩니다. 2. "cert_title"은 "Braze 마케터 인증"으로 설정됩니다. 3. "Cert_description"는 "인증된 Braze 마케터가 주도합니다..."로 설정됩니다.]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
 
 ### 수동으로 로깅하기
 

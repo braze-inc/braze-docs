@@ -21,17 +21,21 @@ To set a custom location attribute on a user profile, use the `setLocationCustom
 Braze.setLocationCustomAttribute("favorite_restaurant", 40.7128, -74.0060, optionalCallback);
 ```
 
-## Requesting location initialization on Android
+## Requesting location initialization (Android only)
 
-Call `requestLocationInitialization` after a user grants location permissions to initialize Braze location features. This is a no-op on iOS.
+Call `requestLocationInitialization` after a user grants location permissions to initialize Braze location features on Android. This method is not supported on iOS and is not required for iOS geofence or location features.
 
 ```javascript
 Braze.requestLocationInitialization();
 ```
 
-## Requesting geofences on Android
+## Geofences
 
-To manually request a geofence update for a specific GPS coordinate, use `requestGeofences`. Automatic geofence requests must be disabled for this to work. This is a no-op on iOS.
+Geofences are supported on both iOS and Android. By default, the Braze SDK can automatically request and monitor geofences when location is available. You can rely on this automatic configuration for most integrations.
+
+### Manually requesting geofences
+
+To manually request a geofence update for a specific GPS coordinate, use `requestGeofences`. This is available on both iOS and Android. If you use this method, disable automatic geofence requests in your native configuration so the SDK does not overwrite your manual requests.
 
 ```javascript
 Braze.requestGeofences(LATITUDE, LONGITUDE);

@@ -1,7 +1,7 @@
 ---
 nav_title: Gérer les placements
-article_title: Gérer les placements de bannières pour le SDK de Braze
-description: "Découvrez comment créer et gérer des placements de bannières dans le SDK de Braze, notamment en accédant à leurs propriétés uniques et en enregistrant les impressions."
+article_title: Gestion des emplacements des bannières pour le SDK Braze
+description: "Découvrez comment créer et gérer les emplacements de bannières dans le SDK Braze, notamment comment accéder à leurs propriétés uniques et enregistrer les impressions."
 page_order: 2
 platform:
   - iOS
@@ -11,11 +11,11 @@ platform:
   - React Native
 ---
 
-# Gérer les placements de bannières
+# Gestion des emplacements des bannières
 
-> Découvrez comment créer et gérer des placements de bannières dans le SDK de Braze, notamment en accédant à leurs propriétés uniques et en enregistrant les impressions. Pour plus d'informations générales, reportez-vous à la section [À propos des bannières]({{site.baseurl}}/developer_guide/banners).
+> Découvrez comment créer et gérer les emplacements de bannières dans le SDK Braze, notamment comment accéder à leurs propriétés uniques et enregistrer les impressions. Pour plus d'informations générales, reportez-vous à la section [À propos des bannières]({{site.baseurl}}/developer_guide/banners).
 
-## A propos des demandes de placement {#requests}
+## À propos des demandes de placement {#requests}
 
 {% multi_lang_include banners/placement_requests.md %}
 
@@ -23,7 +23,7 @@ platform:
 
 ### Conditions préalables
 
-Il s'agit des versions minimales du SDK nécessaires pour créer des placements de bannières :
+Voici les versions minimales du SDK requises pour créer des emplacements de bannières :
 
 {% multi_lang_include sdk_versions.md feature='banners' %}
 
@@ -31,7 +31,7 @@ Il s'agit des versions minimales du SDK nécessaires pour créer des placements 
 
 ### Étape 2 : Actualiser les placements dans votre application {#requestBannersRefresh}
 
-Les placements peuvent être actualisés en appelant les méthodes d'actualisation décrites ci-dessous. Ces placements seront automatiquement mis en cache à l'expiration de la session d'un utilisateur ou lorsque vous modifiez les utilisateurs identifiés à l'aide de la méthode `changeUser`.
+Les placements peuvent être actualisés en appelant les méthodes d'actualisation décrites ci-dessous. Ces emplacements seront automatiquement mis en cache lorsque la session d'un utilisateur expirera ou lorsque vous modifierez les utilisateurs identifiés à l'aide de la`changeUser`méthode.
 
 {% alert tip %}
 Actualisez les placements dès que possible afin d'éviter tout retard dans le téléchargement ou l'affichage des bannières.
@@ -115,14 +115,14 @@ This feature is not currently supported on Roku.
 ### Étape 3 : Écoutez les mises à jour {#subscribeToBannersUpdates}
 
 {% alert tip %}
-Si vous insérez des bannières à l'aide des méthodes du SDK décrites dans ce guide, tous les événements d'analyse/analytique (tels que les impressions et les clics) seront traités automatiquement, et les impressions ne seront enregistrées que lorsque la bannière est visible.
+Si vous insérez des bannières à l'aide des méthodes SDK décrites dans ce guide, tous les événements analytiques (tels que les impressions et les clics) seront gérés automatiquement, et les impressions ne seront enregistrées que lorsque la bannière sera visible.
 {% endalert %}
 
 {% tabs %}
 {% tab Web %}
 {% subtabs %}
-{% subtab Javascript %}
-Si vous utilisez du JavaScript vanille avec le SDK Web Braze, utilisez [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) pour écouter les mises à jour de placement, puis appelez [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) pour les récupérer.
+{% subtab JavaScript %}
+Si vous utilisez JavaScript vanilla avec le SDK Braze, veuillez utiliser[`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates)pour surveiller les mises à jour de placement, puis appeler[`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh)pour les récupérer.
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -136,7 +136,7 @@ braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
 {% endsubtab %}
 {% subtab React %}
-Si vous utilisez React avec le SDK de Braze, mettez en place [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) à l'intérieur d'un crochet `useEffect` et appelez [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) après avoir enregistré votre écouteur.
+Si vous utilisez React avec le SDK Braze, configurez l'événement[`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates)à l'intérieur d'un`useEffect`hook et appelez[`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh)après avoir enregistré votre écouteur.
 
 ```typescript
 import * as braze from "@braze/web-sdk";
@@ -248,7 +248,7 @@ This feature is not currently supported on Roku.
 ### Étape 4 : Insertion à l'aide de l'ID de placement {#insertBanner}
 
 {% alert tip %}
-Pour un tutoriel complet étape par étape, consultez la page [Afficher une bannière par ID de placement]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners).
+Pour un tutoriel complet étape par étape, veuillez consulter [Affichage d'une bannière par ID de placement]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners).
 {% endalert %}
 
 {% tabs %}
@@ -262,7 +262,7 @@ Créez un élément conteneur pour la bannière. Veillez à définir sa largeur 
 
 {% subtabs local %}
 {% subtab JavaScript %}
-Si vous utilisez du JavaScript vanille avec le SDK de Braze, appelez la méthode [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) pour remplacer le code HTML interne de l'élément conteneur.
+Si vous utilisez JavaScript vanilla avec le SDK Braze, veuillez appeler la[`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner)méthode pour remplacer le code HTML interne de l'élément conteneur.
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -297,7 +297,7 @@ braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 {% endsubtab %}
 
 {% subtab React %}
-Si vous utilisez React avec le SDK Braze, appelez la méthode [`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner) avec une adresse `ref` pour remplacer le code HTML interne de l'élément conteneur.
+Si vous utilisez React avec le SDK Braze, veuillez appeler la[`insertBanner`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#insertbanner)méthode avec un`ref`pour remplacer le code HTML interne de l'élément conteneur.
 
 ```tsx
 import { useRef } from 'react';
@@ -504,21 +504,21 @@ Avant de lancer une campagne de bannières, vous pouvez [envoyer une bannière d
 Les bannières de test sont comme toutes les autres bannières, sauf qu'elles sont retirées lors de la prochaine session de l'application.
 {% endalert %}
 
-## Impressions du journal
+## Enregistrer les impressions
 
-Braze enregistre automatiquement les impressions des bannières visibles lorsque vous utilisez les méthodes du SDK pour insérer une bannière - il n'est donc pas nécessaire de suivre les impressions manuellement.
+Braze enregistre automatiquement les impressions pour les bannières qui sont visibles lorsque vous utilisez les méthodes SDK pour insérer une bannière. Il n'est donc pas nécessaire de suivre les impressions manuellement.
 
 ## Enregistrement des clics
 
-La méthode utilisée pour enregistrer les clics de la bannière dépend de la manière dont votre bannière est affichée et de l'emplacement/localisation de votre gestionnaire de clics.
+La méthode utilisée pour enregistrer les clics sur les bannières dépend de la manière dont votre bannière est affichée et de l'emplacement/localisation de votre gestionnaire de clics.
 
-### Contenu de la bannière standard (automatique)
+### Contenu standard de la bannière (automatique)
 
-Si vous utilisez les méthodes par défaut et prêtes à l'emploi du SDK pour insérer des bannières, et que votre bannière utilise des composants standard de l'éditeur (images, boutons, texte), les clics sont suivis automatiquement. Le SDK associe des récepteurs de clics à ces éléments, et aucun code supplémentaire n'est nécessaire.
+Si vous utilisez les méthodes SDK par défaut pour insérer des bannières et que votre bannière utilise des composants d'éditeur standard (images, boutons, texte), les clics sont automatiquement suivis. Le SDK associe des écouteurs de clic à ces éléments, et aucun code supplémentaire n'est nécessaire.
 
 ### Blocs de code personnalisés
 
-Si votre bannière utilise le bloc éditeur de **code personnalisé** dans le tableau de bord de Braze, vous devez utiliser `brazeBridge.logClick()` pour enregistrer les clics à partir de ce HTML personnalisé. Cela s'applique même lorsque vous utilisez les méthodes du SDK pour rendre la bannière, car le SDK ne peut pas attacher automatiquement des écouteurs aux éléments dans votre code personnalisé.
+Si votre bannière utilise le bloc éditeur **de code personnalisé** dans le tableau de bord de Braze, il est nécessaire d'utiliser`brazeBridge.logClick()`pour enregistrer les clics à partir de ce code HTML personnalisé. Cela s'applique également lorsque vous utilisez les méthodes SDK pour afficher la bannière, car le SDK ne peut pas associer automatiquement des écouteurs aux éléments de votre code personnalisé.
 
 ```html
 <button onclick="brazeBridge.logClick()">
@@ -526,13 +526,13 @@ Si votre bannière utilise le bloc éditeur de **code personnalisé** dans le ta
 </button>
 ```
 
-Ceci est similaire au [pont JavaScript]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) utilisé pour les messages in-app en HTML. Le site `brazeBridge` fournit une couche de communication entre le code HTML interne de la bannière et le SDK parent de Braze.
+Pour obtenir la référence complète, veuillez consulter [le code personnalisé et le pont JavaScript pour les bannières]({{site.baseurl}}/user_guide/message_building_by_channel/banners/custom_code/#javascript-bridge). Il`brazeBridge`fournit une couche de communication entre le HTML interne de la bannière et le SDK Braze parent.
 
-### Implémentations d'interfaces utilisateur personnalisées (headless)
+### Implémentations d'interface utilisateur personnalisées (sans affichage)
 
-Si vous créez une interface utilisateur entièrement personnalisée en utilisant les [propriétés personnalisées de](#custom-properties) la bannière plutôt que de rendre le code HTML de la bannière, vous devez enregistrer manuellement les clics (et les impressions) à partir du code de votre application. Comme le SDK n'effectue pas le rendu de la bannière, il n'a aucun moyen de suivre automatiquement les interactions avec vos éléments d'interface utilisateur personnalisés.
+Si vous créez une interface utilisateur entièrement personnalisée à l'aide des [propriétés personnalisées](#custom-properties) de la bannière plutôt que d'afficher le code HTML de la bannière, il est nécessaire d'enregistrer manuellement les clics (et les impressions) à partir du code de votre application. Étant donné que le SDK ne rend pas la bannière, il n'est pas en mesure de suivre automatiquement les interactions avec vos éléments d'interface utilisateur personnalisés.
 
-Utilisez la méthode `logClick()` sur l'objet Banner.
+Veuillez utiliser la`logClick()`méthode sur l'objet Banner.
 
 ## Dimensions et taille
 
@@ -546,19 +546,19 @@ Voici ce que vous devez savoir sur les dimensions des bannières :
 
 Vous pouvez utiliser les propriétés personnalisées de votre campagne Banner pour récupérer des données clé-valeur via le SDK et modifier le comportement ou l'apparence de votre application. Par exemple, vous pourriez :
 
-- Envoyez des métadonnées pour vos analyses/analytiques tierces (si utilisées comme adjectifs).
-- Utilisez des métadonnées telles qu'un objet `timestamp` ou JSON pour déclencher une logique conditionnelle.
-- Contrôlez le comportement d'une bannière en fonction des métadonnées incluses comme `ratio` ou `format`.
+- Veuillez envoyer les métadonnées pour vos analyses/analytiques ou intégrations tierces.
+- Veuillez utiliser des métadonnées telles qu'un objet `timestamp`JSON comme déclencheur de logique conditionnelle.
+- Contrôlez le comportement d'une bannière en fonction des métadonnées incluses telles que`ratio`ou `format`.
 
 ### Conditions préalables
 
-Vous devrez [ajouter des propriétés personnalisées]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#custom-properties) à votre campagne Banner. En outre, il s'agit des versions minimales du SDK requises pour accéder aux propriétés personnalisées :
+Il vous sera nécessaire d'[ajouter des propriétés personnalisées]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#custom-properties) à votre campagne Banner. De plus, voici les versions minimales requises du SDK pour accéder aux propriétés personnalisées :
 
 {% sdk_min_versions swift:13.1.0 android:38.0.0 web:6.1.0 reactnative:17.0.0 flutter:15.1.0 %}
 
 ### Accéder aux propriétés personnalisées
 
-Pour accéder aux propriétés personnalisées d'une bannière, utilisez l'une des méthodes suivantes en fonction du type de propriété défini dans le tableau de bord. Si la clé ne correspond pas à une propriété de ce type ou n'existe pas, la méthode renvoie `null`.
+Pour accéder aux propriétés personnalisées d'une bannière, veuillez utiliser l'une des méthodes suivantes en fonction du type de propriété défini dans le tableau de bord. Si la clé ne correspond pas à une propriété de ce type ou n'existe pas, la méthode renvoie `null`.
 
 {% tabs local %}
 {% tab Web %}

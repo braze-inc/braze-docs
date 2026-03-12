@@ -1,16 +1,16 @@
 ## Requisitos previos
 
-Antes de poder utilizar las tarjetas de contenido Braze, tendrás que integrar el [SDK para Android de Braze]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android) en tu aplicación. Sin embargo, no es necesaria ninguna configuración adicional.
+Antes de poder utilizar las tarjetas de contenido de Braze, deberás realizar la integración del [SDK de Braze para Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android) en tu aplicación. Sin embargo, no es necesario realizar ninguna configuración adicional.
 
 ## Fragmentos de Google
 
 En Android, la fuente de tarjetas de contenido se implementa como un [fragmento](https://developer.android.com/guide/components/fragments.html) disponible en el proyecto Braze Android UI. La clase [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) actualizará y mostrará automáticamente el contenido de las tarjetas de contenido y registrará los análisis de uso. Las tarjetas que pueden aparecer en el `ContentCards` de un usuario se crean en el panel de Braze.
 
-Para saber cómo añadir un fragmento a una actividad, consulta [la documentación de Google sobre fragmentos](https://developer.android.com/guide/fragments#Adding).
+Para aprender a añadir un fragmento a una actividad, consulta [la documentación sobre fragmentos de Google](https://developer.android.com/guide/fragments#Adding).
 
-## Tipos de tarjeta y propiedades
+## Tipos y propiedades de las tarjetas
 
-El modelo de datos de las tarjetas de contenido está disponible en el SDK de Android y ofrece los siguientes tipos únicos de tarjetas de contenido. Cada tipo comparte un modelo base, lo que les permite heredar propiedades comunes del modelo base, además de tener sus propias propiedades únicas. Para ver la documentación de referencia completa, consulta [`com.braze.models.cards`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html).
+El modelo de datos de tarjetas de contenido está disponible en el SDK de Android y ofrece los siguientes tipos de tarjetas de contenido únicos. Cada tipo comparte un modelo base, lo que les permite heredar propiedades comunes del modelo base, además de tener sus propias propiedades únicas. Para obtener la documentación de referencia completa, consulta [`com.braze.models.cards`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html).
 
 ### Modelo de tarjeta base {#base-card-for-android}
 
@@ -26,13 +26,13 @@ El modelo de [tarjeta base](https://braze-inc.github.io/braze-android-sdk/kdoc/b
 |`getOpenUriInWebView()`  | Devuelve un booleano que refleja si se deben abrir las URI de esta tarjeta <br> en el Braze WebView o no.|
 |`getExpiredAt()` | Obtiene la fecha de caducidad de la tarjeta.|
 |`isRemoved()` | Devuelve un booleano que refleja si el usuario final ha descartado esta tarjeta.|
-|`isDismissibleByUser()`  | Devuelve un booleano que refleja si el usuario puede deshabilitar la tarjeta.|
-|`isClicked()` | Devuelve un booleano que refleja el estado de clic de esta tarjeta.|
-|`isDismissed` | Devuelve un booleano que refleja si se ha descartado la tarjeta. Configura `true` para marcar la tarjeta como descartada. Si una tarjeta ya está marcada como descartada, no se puede volver a marcar como descartada.|
-|`isControl()` | Devuelve un booleano si esta tarjeta es una tarjeta de control y no debe renderizarse.|
+|`isDismissibleByUser()`  | Devuelve un valor booleano que indica si el usuario puede descartar la tarjeta.|
+|`isClicked()` | Devuelve un valor booleano que refleja el estado de clic de esta tarjeta.|
+|`isDismissed` | Devuelve un valor booleano que indica si la tarjeta ha sido descartada. Establece  para`true`marcar la tarjeta como descartada. Si una tarjeta ya está marcada como descartada, no se puede volver a marcar como descartada.|
+|`isControl()` | Devuelve un valor booleano si esta tarjeta es una tarjeta de control y no debe representarse.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Sólo imagen {#banner-image-card-for-android}
+### Solo imagen {#banner-image-card-for-android}
 
 [Las tarjetas de sólo imagen](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-image-only-card/index.html) son imágenes a tamaño completo en las que se puede hacer clic.
 
@@ -43,7 +43,7 @@ El modelo de [tarjeta base](https://braze-inc.github.io/braze-android-sdk/kdoc/b
 |`getDomain()` | Devuelve el texto del enlace para la URL de la propiedad.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Imagen subtitulada {#captioned-image-card-for-android}
+### Imagen con pie de foto {#captioned-image-card-for-android}
 
 [Las tarjetas de imágenes con subtítulos](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html) son imágenes de tamaño completo en las que se puede hacer clic y que van acompañadas de un texto descriptivo.
 
@@ -67,7 +67,7 @@ Una tarjeta clásica sin imagen incluida dará como resultado una [tarjeta de an
 |`getUrl()` | Devuelve la URL que se abrirá al hacer clic en la tarjeta. Puede ser una URL HTTP(s) o una URL de protocolo. | 
 |`getDomain()` | Devuelve el texto del enlace de la URL de la propiedad. |
 |`getImageUrl()` | Devuelve la URL de la imagen de la tarjeta, sólo se aplica a la Tarjeta de Noticias Corta clásica. |
-|`isDismissed` | Devuelve un booleano que refleja si se ha descartado la tarjeta. Configura `true` para marcar la tarjeta como descartada. Si una tarjeta ya está marcada como descartada, no se puede volver a marcar como descartada. |
+|`isDismissed` | Devuelve un valor booleano que indica si la tarjeta ha sido descartada. Establece  para`true`marcar la tarjeta como descartada. Si una tarjeta ya está marcada como descartada, no se puede volver a marcar como descartada. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Métodos de tarjeta

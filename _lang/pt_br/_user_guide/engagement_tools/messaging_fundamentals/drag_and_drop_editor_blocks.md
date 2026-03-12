@@ -1,18 +1,18 @@
 ---
 nav_title: Blocos do editor
-article_title: Blocos do editor de arrastar e soltar
+article_title: blocos do editor de arrastar e soltar
 alias: "/dnd/editor_blocks/"
 channel: 
 - email
 - in-app messages
 page_order: 6
-description: "Este artigo de referência aborda os diferentes blocos do editor que são fornecidos no editor de arrastar e soltar para mensagens de e-mail e mensagens no app."
+description: "Este artigo de referência cobre os diferentes blocos de editor que são fornecidos no editor de arrastar e soltar para e-mails e mensagens no aplicativo."
 tool: Media
 ---
 
-# Blocos do editor de arrastar e soltar
+# blocos do editor de arrastar e soltar
 
-> Os blocos do editor são os vários blocos disponíveis no **editor de arrastar e soltar**. Este artigo de referência inclui uma série de blocos que representam os diferentes tipos de conteúdo que podem ser usados em suas mensagens.
+> Os blocos de editor são os vários blocos disponíveis no **editor de arrastar e soltar**. Este artigo de referência inclui uma série de blocos que representam os diferentes tipos de conteúdo que você pode usar em suas mensagens.
 
 {% sdktabs %}
 

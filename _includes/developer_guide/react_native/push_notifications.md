@@ -146,11 +146,50 @@ If you're using the [Braze Expo plugin]({{site.baseurl}}/developer_guide/platfor
 
 To handle deep links manually instead, refer to the native Android documentation: [Adding deep links]({{site.baseurl}}/developer_guide/push_notifications/deep_linking).
 
+#### Step 3.1: Store the push notification payload on app launch
+
+{% alert note %}
+This is supported as of React Native SDK 19.1.0.
+{% endalert %}
+
+Add `populateInitialPushPayloadFromIntent` to your main activity's `onCreate()` method. This must be called before React Native initializes to capture the initial Intent data. For example:
+
+```kotlin
+override fun onCreate(savedInstanceState: Bundle?) {
+  BrazeReactUtils.populateInitialPushPayloadFromIntent(intent)
+  super.onCreate(savedInstanceState)
+}
+```
+
+#### Step 3.2: Handle deep links from a closed state
+
+In addition to the base scenarios handled by [React Native Linking](https://reactnative.dev/docs/linking), implement the `Braze.getInitialPushPayload` method and retrieve the `url` value to account for deep links from push notifications that open your app when it isn't running. For example:
+
+```javascript
+// Handles deep links when an app is launched from a hard close via push click.
+Braze.getInitialPushPayload(pushPayload => {
+  if (pushPayload) {
+    console.log('Braze.getInitialPushPayload is ' + pushPayload);
+    showToast('Initial URL is ' + pushPayload.url);
+    handleOpenUrl({ pushPayload.url });
+  }
+});
+```
+{% alert note %}
+This method requires the native setup in Step 3.1 for your platform. If you're using the Braze Expo plugin, this may be handled automatically.
+{% endalert %}
+
 {% endtab %}
 {% tab iOS Native %}
+
+{% alert important %}
+To handle deep links from push notifications on iOS, you must also configure link handling in your native iOS layer.
+{% endalert %}
+
+This includes registering a custom URL scheme and implementing a URL handler in your `AppDelegate`. For full setup instructions, see [Handling deep links]({{site.baseurl}}/developer_guide/platforms/swift/in_app_messages/deep_linking/?tab=objective-c) in the native iOS documentation.
 #### Step 3.1: Store the push notification payload on app launch
 {% alert note %}
-Skip step 3.1 if you're using the Braze Expo plugin, as this is functionality is handled automatically.
+Skip step 3.1 if you're using the Braze Expo plugin, as this functionality is handled automatically.
 {% endalert %}
 
 For iOS, add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `didFinishLaunchingWithOptions` method. For example:
@@ -202,8 +241,7 @@ func application(
 In addition to the base scenarios handled by [React Native Linking](https://reactnative.dev/docs/linking), implement the `Braze.getInitialPushPayload` method and retrieve the `url` value to account for deep links from push notifications that open your app when it isn't running. For example:
 
 ```javascript
-// Handles deep links when an iOS app is launched from a hard close via push click.
-// This edge case is not handled in the React Native Linking library and is provided as a workaround by Braze.
+// Handles deep links when an app is launched from a hard close via push click.
 Braze.getInitialPushPayload(pushPayload => {
   if (pushPayload) {
     console.log('Braze.getInitialPushPayload is ' + pushPayload);
@@ -213,7 +251,7 @@ Braze.getInitialPushPayload(pushPayload => {
 });
 ```
 {% alert note %}
-Braze provides this workaround since React Native's Linking API does not support this scenario due to a race condition on app startup.
+This method requires the native setup in Step 3.1 for your platform. If you're using the Braze Expo plugin, this may be handled automatically.
 {% endalert %}
 
 #### Step 3.3: Enable Universal Links (optional)

@@ -1,6 +1,6 @@
 ---
-nav_title: Manejo personalizado de la pantalla
-article_title: Personaliza el manejo de la visualización de mensajes dentro de la aplicación para iOS
+nav_title: Gestión personalizada de pantallas
+article_title: Personalizar la gestión de la visualización de mensajes dentro de la aplicación para iOS
 platform: iOS
 page_order: 4
 description: "Este artículo de referencia trata sobre la gestión de la visualización personalizada de mensajes dentro de la aplicación para tu aplicación iOS."
@@ -61,7 +61,7 @@ Puedes personalizar la gestión de mensajes dentro de la aplicación implementan
 | Objective-C: `ABKDiscardInAppMessage`<br>Swift: `discardInAppMessage`| El mensaje se descartará y no se mostrará. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Puedes utilizar el método delegado `beforeInAppMessageDisplayed:` para añadir lógica de visualización de mensajes dentro de la aplicación, personalizar los mensajes dentro de la aplicación antes de que Braze los muestre, o excluirte totalmente de la lógica de visualización de mensajes dentro de la aplicación y de la interfaz de usuario de Braze.
+Puedes utilizar el método`beforeInAppMessageDisplayed:` delegate para añadir lógica de visualización de mensajes dentro de la aplicación, personalizar los mensajes dentro de la aplicación antes de que Braze los muestre u optar por no utilizar la lógica de visualización de mensajes dentro de la aplicación y la interfaz de usuario de Braze por completo.
 
 Consulta nuestra [aplicación de muestra](https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m) para ver un ejemplo de implementación.
 

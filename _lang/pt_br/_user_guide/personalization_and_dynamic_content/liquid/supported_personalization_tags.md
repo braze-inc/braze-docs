@@ -31,8 +31,8 @@ Por conveniência, é fornecido um resumo das tags de personalização compatív
 | Propriedades do evento <br> (Elas são personalizadas para seu espaço de trabalho).| `{{event_properties.${your_custom_event_property}}}` |
 | Variáveis de Contexto do Canva | `{{context}}` |
 | Atributos personalizados <br> (Elas são personalizadas para seu espaço de trabalho). | `{{custom_attribute.${your_custom_attribute}}}` |
-| <a href='/docs/api/objects_filters/trigger_properties_object/'>Propriedades do gatilho da API</a> |`{{api_trigger_properties}}` |
-| Propriedades de entrada do canva | `{{canvas_entry_properties.${property_name}}}` |
+| <a href='/docs/api/objects_filters/trigger_properties_object/'>Propriedades de gatilho de API</a> |`{{api_trigger_properties}}` |
+| Propriedades de entrada do canva | `{{context.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
@@ -47,7 +47,7 @@ Consulte este artigo de ajuda para saber mais sobre [como algumas dessas atribui
 
 O comportamento das seguintes tags difere entre o Canva e as campanhas:
 {% raw %}
-- `dispatch_id` o comportamento difere porque a Braze trata as etapas do Canva como eventos acionados, mesmo quando estão "agendadas" (exceto para etapas de entrada, que podem ser agendadas). Para saber mais, consulte [comportamento do ID de Dispatch]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+- O comportamento `dispatch_id` difere porque a Braze trata as etapas do Canva como eventos acionados, mesmo quando estão "agendadas" (exceto para etapas de entrada, que podem ser agendadas). Para saber mais, consulte [comportamento do ID de Dispatch]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 - O uso da tag `{{campaign.${name}}}` com o canvas exibirá o nome do componente do canvas. Ao usar essa tag com campanhas, ela exibirá o nome da campanha.
 {% endraw %}
 
@@ -71,7 +71,7 @@ Você pode modelar os seguintes atributos para o dispositivo mais recente do usu
 | `{{most_recently_used_device.${platform}}}` | A plataforma do dispositivo, se disponível. Se definido, o valor será um dos seguintes: `ios`, `android`, `kindle`, `android_china`, `web`, ou `tvos`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Como há uma ampla variedade de operadoras de dispositivos, nomes de modelos e sistemas operacionais, aconselhamos que você teste minuciosamente qualquer Liquid que dependa condicionalmente de qualquer um desses valores. Esses valores serão `null` se não estiverem disponíveis em um dispositivo específico.
+Como há uma ampla gama de operadoras de dispositivos, nomes de modelos e sistemas operacionais, aconselhamos que você teste minuciosamente qualquer Liquid que dependa condicionalmente de qualquer um desses valores. Esses valores serão `null` se não estiverem disponíveis em um dispositivo específico.
 
 ## Informações sobre aplicativos direcionados
 
@@ -96,7 +96,7 @@ User is in list of apps
 
 ## Informações sobre dispositivos direcionados
 
-Para notificações por push, mensagens no app e Banners, você pode modelar os seguintes atributos para o dispositivo ao qual uma mensagem está sendo enviada. Ou seja, uma notificação por push, mensagem no app ou Banner pode incluir atributos do dispositivo no qual a mensagem está sendo lida. Note que essas atribuições não funcionarão para cartões de conteúdo. 
+Para notificações por push, mensagens no app e Banners, você pode modelar os seguintes atributos para o dispositivo que recebe a mensagem. Uma notificação por push, mensagem no app ou Banner pode incluir atributos do dispositivo no qual o usuário lê a mensagem. Esses atributos não funcionam para Cartões de Conteúdo ou e-mails. Para e-mails, as mensagens são renderizadas antes do envio, então o dispositivo no qual o usuário abre o e-mail é desconhecido nesse momento.
 
 |Tag | Descrição |
 |------------------|---|
@@ -113,7 +113,7 @@ Para notificações por push, mensagens no app e Banners, você pode modelar os 
 
 {% endraw %}
 
-Como há uma ampla variedade de operadoras de dispositivos, nomes de modelos e sistemas operacionais, aconselhamos que você teste minuciosamente qualquer lógica que dependa condicionalmente de qualquer um desses valores. Esses valores serão `null` se não estiverem disponíveis em um dispositivo específico. 
+Como há uma ampla gama de operadoras de dispositivos, nomes de modelos e sistemas operacionais, aconselhamos que você teste minuciosamente qualquer lógica que dependa condicionalmente de qualquer um desses valores. Esses valores serão `null` se não estiverem disponíveis em um dispositivo específico. 
 
 Além disso, para notificações por push, é possível que o Braze não consiga discernir o dispositivo anexado à notificação por push em determinadas circunstâncias, como se o token por push tivesse sido importado por meio da API, resultando em valores `null` para essas mensagens.
 
@@ -161,7 +161,7 @@ Nesse caso de uso, um usuário com um nome em branco ou nulo receberá a mensage
 
 ## Tags de variáveis
 
-Você pode usar a tag `assign` para criar uma variável no criador de mensagens. Recomendamos usar um nome único para sua variável. Se você criar uma variável com um nome semelhante aos tags de personalização suportados (como `language`), isso pode afetar sua lógica de envio de mensagens.
+Você pode usar a tag `assign` para criar uma variável no criador de mensagens. Recomendamos usar um nome exclusivo para sua variável. Se você criar uma variável com um nome semelhante aos tags de personalização suportados (como `language`), isso pode afetar sua lógica de envio de mensagens.
 
 Depois de criar uma variável, você pode fazer referência a ela na lógica ou na mensagem de envio de mensagens. Essa tag é útil quando você deseja reformatar o conteúdo que é retornado pelo nosso recurso [conteúdo conectado]({% image_buster /assets/img_archive/personalized_firstname_.png %})]. Você pode ler mais na documentação da Shopify sobre [tags variáveis](https://docs.shopify.com/themes/liquid/tags/variable-tags).
 
@@ -223,7 +223,7 @@ Este é um exemplo simples de como as tags de iteração podem ser usadas no cri
 
 As tags de sintaxe podem ser usadas para controlar como o Liquid é renderizado. Você pode usar a tag `echo` para retornar uma expressão. É o mesmo que envolver uma expressão usando colchetes, exceto que você pode usar essa tag dentro de tags Liquid. Você também pode usar a tag `liquid` para ter um bloco de Liquid sem nenhum delimitador em cada tag. Cada tag deve estar em sua própria linha ao usar a tag `liquid`. Dê uma olhada na documentação da Shopify sobre [tags de sintaxe](https://shopify.dev/api/liquid/tags#syntax-tags) para saber mais informações e exemplos.
 
-Com [controle de espaços em branco](https://shopify.github.io/liquid/basics/whitespace/), você pode remover espaços em branco ao redor de suas tags, ajudando a controlar ainda mais como a saída do Liquid se parece.
+Com [controle de espaços em branco](https://shopify.github.io/liquid/basics/whitespace/), você pode remover espaços em branco ao redor de suas tags, ajudando a controlar melhor como a saída do Liquid se parece.
 
 ## Códigos de status HTTP {#http-personalization}
 

@@ -3,7 +3,7 @@ nav_title: Mensajes comunes de error push
 article_title: Mensajes de error push comunes
 page_order: 22
 page_type: reference
-description: "Este artículo cubre los mensajes de error comunes relacionados con push para iOS y Android, y te guía a través de posibles soluciones."
+description: "Este artículo trata sobre los mensajes de error más comunes relacionados con las notificaciones push para iOS y Android, y te guía a través de las posibles soluciones."
 channel: push
 platform:
 - iOS
@@ -12,7 +12,7 @@ platform:
 
 # Mensajes comunes de error push
 
-> Esta página cubre los mensajes de error más comunes de la mensajería push.
+> Esta página recoge los mensajes de error más comunes relacionados con la mensajería push.
 
 {% tabs %}
 {% tab Android %} 
@@ -34,30 +34,30 @@ Los fallos más comunes pueden ser:
 {% endtab %}
 {% tab iOS %}
 
-### Error al enviar push porque la carga útil no era válida
+### Error al enviar la notificación push porque la carga útil no era válida.
 
-Este mensaje puede aparecer en la pestaña de **interacción** del perfil de usuario, en **Configuración de contactos** > **Cambios push**, cuando el servicio de notificaciones push de Apple (APN) rechaza la solicitud push debido a una carga útil no válida.
+Este mensaje puede aparecer en la pestaña **Interacción** del perfil de usuario, en **Configuración de contacto** > **Registro de cambios push,** cuando el servicio de notificaciones push de Apple (APN) rechaza la solicitud push debido a una carga útil no válida.
 
-En Braze, este mensaje del panel puede mapearse con uno de los siguientes motivos de error de APN:
+En Braze, este mensaje del panel de control puede ser mapeado a uno de los siguientes motivos de error de APN:
 
-- `PayloadEmpty`: A la carga útil le faltaba contenido necesario para el tipo de push que se estaba enviando.
+- `PayloadEmpty`: La carga útil carecía del contenido necesario para el tipo de push que se estaba realizando.
 - `PayloadTooLarge`: La carga útil superó el tamaño máximo de carga útil de APN.
 
-Las causas más frecuentes son:
+Las causas más comunes incluyen:
 
-- Claves personalizadas (y sus valores) que hacen que la carga útil sea demasiado grande (esto puede incluir valores renderizados de Liquid inesperadamente grandes).
-- Una alerta o cuerpo vacío o ausente cuando sea necesario (o una carga útil `aps` malformada de otro modo).
+- Las claves personalizadas (y sus valores) hacen que la carga útil sea demasiado grande (esto puede incluir valores renderizados por Liquid inesperadamente grandes).
+- Una alerta o un cuerpo vacío o faltante donde sea necesario (o una carga útil mal`aps` formada).
 
 Próximos pasos:
 
 - Reduce el tamaño de la carga útil recortando las claves personalizadas y acortando los valores dinámicos grandes.
-- Si envías a través de la API, valida la carga útil JSON final (incluido el tamaño) antes de enviar.
+- Si envías a través de la API, valida la carga útil JSON final (incluido el tamaño) antes de enviarla.
 
 ### El push rebotó: BadToken
 
-El error `BadToken` puede producirse por varias razones:
+El`BadToken`error puede producirse por varias razones:
 - El token de notificaciones push no se nos envía correctamente en `[[Appboy sharedInstance] registerPushToken:]`
-	- Comprueba el token en el [Registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). Por lo general, debe parecerse a una larga cadena de letras y números (como `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). Si no es así, comprueba el código implicado en el envío de errores de token de notificaciones push Braze.<br><br>
+	- Comprueba el token en el [Registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). Por lo general, debería tener el aspecto de una larga cadena de letras y números (como `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). Si no es así, comprueba el código relacionado con el envío de errores de tokens de notificaciones push de Braze.<br><br>
 - Entorno de aprovisionamiento desajustado:
 	- Si te registras con un certificado de desarrollador e intentas enviar con uno de producción, puedes ver este error.  
 	- Braze sólo admite certificados universales para entornos de producción. Probar push en entornos de desarrollo con un certificado universal no funcionará. 

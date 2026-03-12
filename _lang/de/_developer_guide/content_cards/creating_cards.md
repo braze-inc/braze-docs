@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# Content-Cards erstellen
+# Erstellen Sie Content-Cards
 
 > Dieser Artikel beschreibt den grundlegenden Ansatz, den Sie bei der Implementierung angepasster Content-Cards verwenden, sowie drei häufige Anwendungsfälle. Es wird davon ausgegangen, dass Sie bereits die anderen Artikel der Anleitung zur Anpassung von Content-Cards gelesen haben, um zu verstehen, was standardmäßig möglich ist und was angepassten Code erfordert. Es ist besonders hilfreich zu verstehen, wie Sie [Analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) für Ihre angepassten Content-Cards [protokollieren]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) können. 
 
@@ -56,7 +56,7 @@ So testen Sie Ihre Content-Card:
 2. Gehen Sie in Braze zu **Kampagnen**, und [erstellen Sie eine neue Content-Card-Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create).
 3. Wählen Sie in Ihrer Kampagne " **Test"** aus und geben Sie dann die `user-id` des Testnutzers:in ein. Wenn Sie bereit sind, wählen Sie **Test senden**. Sie werden in Kürze eine Content-Card auf Ihrem Gerät starten können.
 
-![Eine Braze Content-Card-Kampagne, bei der Sie Ihre eigene Nutzer:in als Testempfänger hinzufügen können, um Ihre Content-Card zu testen.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
+![Eine Braze Content-Card-Kampagne, die Ihnen zeigt, wie Sie Ihre eigene Benutzer-ID als Testempfänger:in hinzufügen können, um Ihre Content-Card zu testen.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
 
 ## Platzierung von Inhaltskarten
 

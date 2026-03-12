@@ -1,6 +1,6 @@
 ---
 nav_title: Créer un message push
-article_title: Créer une campagne de push
+article_title: Créer une campagne push
 page_order: 4
 page_type: tutorial
 description: "Cette page de didacticiel couvre les différents composants impliqués dans la création d’un message de notification push, y compris la configuration, l’envoi, le ciblage, etc."
@@ -17,13 +17,13 @@ tool:
 ## Étape 1 : Choisir où créer votre message {#create-new-campaign-push}
 
 {% alert tip %}
-Vous ne savez pas s'il faut utiliser une campagne ou un canvas ? Les campagnes sont plus adaptées aux campagnes d'envoi de messages uniques et ciblés, tandis que les Canevas sont plus adaptés aux parcours utilisateurs en plusieurs étapes.
+Vous hésitez entre une campagne et un canvas ? Les campagnes sont plus adaptées aux campagnes de communication uniques et avec ciblage, tandis que les canevas conviennent mieux aux parcours utilisateur en plusieurs étapes.
 {% endalert %}
 
 {% tabs %}
 {% tab Campaign %}
 1. Allez dans **Messagerie** > **Campagnes**, puis sélectionnez **Créer une campagne.**
-2. Pour les campagnes ciblant plusieurs canaux, sélectionnez **Multicanal**. Sinon, sélectionnez **Notification push.** Si vous n'êtes toujours pas sûr, reportez-vous à la section **Décider entre une campagne push régulière ou multicanal** ci-dessous.
+2. Pour les campagnes avec un ciblage sur plusieurs canaux, veuillez sélectionner **Multicanal**. Sinon, sélectionnez **Notification push.** Si vous avez encore des doutes, veuillez vous référer à **la section « Choisir entre une campagne push classique ou multicanal** » ci-dessous.
 3. Donnez un nom clair et significatif à votre campagne.
 4. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) et des [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) si nécessaire. 
 
@@ -40,7 +40,7 @@ Si vous avez l'intention de cibler plusieurs appareils et plateformes, comme tou
 
 Reportez-vous au tableau de décision suivant avant de créer une campagne multicanal ou de notification push :
 
-!["Organigramme pour la sélection du type de campagne". Commencez par déterminer si vous ciblez plusieurs appareils et plateformes. Si ce n’est pas le cas, vous accédez à l'option « Sélectionner Notifications push ». Dans l'affirmative, la question suivante est posée : « Quel type de notifications push ? » et les options sont « Notification push standard », ce qui conduit à un point de décision « Devez-vous utiliser des paramètres spécifiques à l'appareil ? » Si ce n'est pas le cas, cela mène à « Sélectionner la notification push et utiliser la notification push rapide ». Si c'est le cas, vous passez à « Sélectionner Multicanale ». De retour à " Quel type de message push ? ", si la réponse est " Contenus push ou image Inline ", il oriente vers " Sélectionner multicanale ".]({% image_buster /assets/img_archive/flowchart_quickpush.png %})
+!["Organigramme pour la sélection du type de campagne". Commencez par déterminer si vous ciblez plusieurs appareils et plateformes. Si ce n’est pas le cas, vous accédez à l'option « Sélectionner Notifications push ». Dans l'affirmative, la question suivante est posée : « Quel type de notifications push ? » et les options sont « Notification push standard », ce qui conduit à un point de décision « Devez-vous utiliser des paramètres spécifiques à l'appareil ? » Si ce n'est pas le cas, cela mène à « Sélectionner la notification push et utiliser la notification push rapide ». Si c'est le cas, vous passez à « Sélectionner Multicanale ». Pour revenir à la question « Quel type de message push ? », si la réponse est « Contenu push ou Inline image », cela redirige vers « Sélectionner la communication multicanale ».]({% image_buster /assets/img_archive/flowchart_quickpush.png %})
 
 Si vous sélectionnez **Notification push** et choisissez de cibler plusieurs appareils et plateformes, vous créez automatiquement une campagne de push rapide. Avec l'appui rapide, certains réglages spécifiques à l'appareil ne sont pas disponibles :
 
@@ -79,8 +79,8 @@ Il existe plusieurs façons de procéder en fonction de vos sélections précéd
 | Sélection précédente | Options |
 | --- | --- | 
 | Campagne de notification push | Sélectionnez une ou plusieurs plateformes et appareils. Si vous choisissez de cibler plusieurs appareils et plateformes, vous créez automatiquement une campagne de notification push rapide. Vous bénéficiez ainsi d'une expérience de communication optimisée pour l'envoi d'un message pour toutes les plateformes sélectionnées dans un seul et même éditeur. Consultez les [campagnes de push rapide]({{site.baseurl}}/quick_push) pour comprendre ce qui est différent dans cette expérience de modification. |
-| Campagne multicanal | Sélectionnez **Ajouter un canal de communication** pour ajouter d'autres plates-formes d'envoi de messages. Les sélections de plateformes étant spécifiques à chaque variante, vous pouvez essayer de tester l'engagement des messages par plateforme.
-| Canvas | Dans votre étape Message, sélectionnez **\+ Ajouter plus** pour ajouter des plates-formes de poussée supplémentaires. À l'instar des campagnes multicanales, les sélections de plateformes sont spécifiques à chaque variante. |
+| Campagne multicanal | Veuillez sélectionner **Ajouter un canal de communication** pour ajouter des plateformes push supplémentaires. Les sélections de plateformes étant spécifiques à chaque variante, vous pouvez essayer de tester l'engagement des messages par plateforme.
+| Canvas | Dans l'étape Message, veuillez sélectionner **\+ Ajouter** pour ajouter des plateformes push supplémentaires. À l'instar des campagnes multicanales, les sélections de plateformes sont spécifiques à chaque variante. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Étape 3 : Sélectionner un type de notification (iOS et Android)
@@ -121,7 +121,7 @@ Si vous ajoutez du texte dans une langue qui s'écrit de droite à gauche, notez
 {% tab ios %}
 Commencez à taper dans la boîte de message et voyez un aperçu apparaître dans la fenêtre d’aperçu à gauche. Les messages de notification push doivent être formatés en texte brut. 
 
-Ajoutez un titre en utilisant le champ **Titre**. Pour que votre push soit personnalisé et ciblé, vous pouvez inclure [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/).
+Veuillez ajouter un titre en utilisant le champ **Titre**. Pour que votre push soit personnalisé et ciblé, vous pouvez inclure [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/).
 {% endtab %}
 
 {% tab android %}
@@ -130,7 +130,7 @@ Commencez à taper dans la boîte de message et voyez un aperçu apparaître dan
 Pour que votre push soit personnalisé et ciblé, vous pouvez inclure [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/).
 
 {% alert important %}
-Vous **ne pouvez pas** envoyer un message push Android sans titre. Vous pouvez toutefois saisir un simple espace à la place. Gardez à l'esprit que si votre message ne contient qu'un seul espace, il sera envoyé sous forme de notification push silencieuse. Pour plus d'informations, reportez-vous à la section [Notifications push silencieuses]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android).
+Il **n'est pas possible** d'envoyer un message push Android sans titre. Cependant, vous pouvez saisir un espace à la place. Veuillez noter que si votre message ne contient qu'un seul espace, il sera envoyé sous forme de notification push silencieuse. Pour plus d'informations, reportez-vous à la section [Notifications push silencieuses]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android).
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -138,7 +138,7 @@ Vous **ne pouvez pas** envoyer un message push Android sans titre. Vous pouvez t
 {% alert tip %}
 Besoin d’aide pour créer un texte d’exception ? Essayez d'utiliser l'[assistant de rédaction de l'intelligence artificielle]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre envoi de messages.
 
-![Lancez le bouton du Copywriter de l'intelligence artificielle, situé dans le champ Body du compositeur de push.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
+![Veuillez cliquer sur le bouton « AI Copywriter », dont l'emplacement se trouve dans le champ « Corps » de l'éditeur de push.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
 {% endalert %}
 
 #### Image
@@ -154,7 +154,7 @@ Pour plus d’informations sur l’utilisation des images dans vos notifications
 
 #### Comportement lors du clic
 
-Spécifiez ce qui se passe lorsqu'un utilisateur sélectionne le corps d'une notification push avec **On-Click Behavior**. Par exemple, vous pouvez inviter les clients à ouvrir votre application, les rediriger vers une URL Web spécifique ou même ouvrir une page spécifique de votre application à l'aide d'un [lien profond]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
+Veuillez préciser ce qui se produit lorsqu'un utilisateur sélectionne le corps d'une notification push à l'aide de **la fonction « Comportement au clic** ». Par exemple, vous pouvez inviter les clients à ouvrir votre application, les rediriger vers une URL Web spécifique ou même ouvrir une page spécifique de votre application à l'aide d'un [lien profond]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
 
 Ici, vous pouvez également configurer des boutons d’invites dans votre notification push, comme :
 
@@ -173,7 +173,7 @@ Il y a une certaine nuance à apporter à ce paramètre. Si cette option est sé
 
 Pour iOS, vous pouvez limiter encore plus les messages en envoyant uniquement des notifications push sur les appareils iPad ou uniquement vers des appareils iPhone et iPod.
 
-## Étape 5 : Prévisualisez et testez votre message (facultatif)
+## Étape 5 : Veuillez prévisualiser et tester votre message (facultatif)
 
 Le test est sans doute l’une des étapes les plus critiques. Après avoir fini de composer votre message de notification push parfait, testez-le avant de l’envoyer. Sélectionnez l'onglet **Test** pour choisir parmi les options permettant de tester votre message push. Dans **Destinataires du test**, vous pouvez sélectionner un groupe de test de contenu ou des utilisateurs individuels. Vous pouvez également utiliser l'option **Prévisualiser le message en tant qu'utilisateur** pour avoir une idée de l'affichage de votre message sur mobile pour un utilisateur aléatoire, un utilisateur existant, un utilisateur personnalisé ou un utilisateur multilingue.
 
@@ -194,7 +194,7 @@ C'est également à cette étape que vous pouvez spécifier les contrôles de r�
 
 #### Choisir les utilisateurs à cibler
 
-Ensuite, vous devez [cibler les utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) en choisissant des segments ou des filtres pour restreindre votre audience. Vous recevez automatiquement un aperçu de ce à quoi ressemble la population de ce segment approximatif. Des statistiques d’audience détaillées pour les canaux ciblés par votre campagne sont disponibles dans le pied de page. Pour connaître le pourcentage de votre base d'utilisateurs qui est ciblé et la valeur vie client de ce segment, sélectionnez **Afficher les statistiques supplémentaires.**
+Ensuite, il est nécessaire de [réaliser le ciblage des utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) en sélectionnant des segments ou des filtres afin de restreindre votre audience. Vous recevez automatiquement un aperçu de ce à quoi ressemble approximativement la population de ce segment. Des statistiques d’audience détaillées pour les canaux ciblés par votre campagne sont disponibles dans le pied de page. Pour connaître le pourcentage de votre base d'utilisateurs en matière de ciblage et la valeur vie client de ce segment, veuillez sélectionner **Afficher les statistiques supplémentaires**.
 
 {% multi_lang_include target_audiences.md %}
 
@@ -206,7 +206,7 @@ Lorsque vous affichez les Total des utilisateurs accessibles pour votre audience
 
 ![Tableau des statistiques d’audience détaillées pour les utilisateurs accessibles.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 
-N'oubliez pas que l'appartenance exacte à un segment est toujours calculée avant l'envoi du message.
+Veuillez noter que l'appartenance exacte à un segment est toujours calculée avant l'envoi du message.
 
 Vous pouvez également choisir de n'envoyer votre campagne qu'aux utilisateurs qui ont un [statut d'abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) spécifique, par exemple ceux qui sont abonnés et ont opté pour le push.
 
@@ -241,7 +241,7 @@ Si vous ne l’avez pas déjà fait, complétez les sections restantes de votre 
 
 ## Étape 7 : Revue et déploiement {#review-and-deploy-push}
 
-Après avoir terminé de créer la fin de votre campagne ou de votre Canvas, réexaminez ses détails. Pour les campagnes, la dernière page vous donne un résumé de la campagne que vous avez conçue. Confirmez tous les détails pertinents, assurez-vous d’avoir testé votre message, puis envoyez-le et regardez les données entrer !
+Après avoir terminé de créer la fin de votre campagne ou de votre Canvas, réexaminez ses détails. Pour les campagnes, la dernière page vous fournit un résumé de la campagne que vous avez conçue. Confirmez tous les détails pertinents, assurez-vous d’avoir testé votre message, puis envoyez-le et regardez les données entrer !
 
 Ensuite, consultez les [rapports de push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) pour savoir comment vous pouvez accéder aux résultats de votre campagne de push. Pour les notifications push, vous pourrez afficher les statistiques du nombre de messages envoyés, livrés, retournés, ouverts et ouverts directement.
 

@@ -86,7 +86,7 @@ O código de status `400` poderia retornar o seguinte corpo de resposta. Consult
       "parameter_values": []
     }
   ],
-  "message": "Invalid Request",
+  "message": "Invalid Request"
 }
 ```
 

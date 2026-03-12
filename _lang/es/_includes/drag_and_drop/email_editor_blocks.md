@@ -1,11 +1,11 @@
-## Utilizar bloques de editor de correo electrónico
+## Uso de bloques de editor de correo electrónico
 
-Los bloques de editor se encuentran en la sección **Contenido** para los mensajes de correo electrónico. Para utilizar un bloque de edición, arrastre un bloque de edición dentro de una columna en el editor de arrastrar y soltar. Se ajustará automáticamente al ancho de la columna. Cada bloque del editor tiene sus propios ajustes, como el control granular del relleno.
+Los bloques de editor se encuentran en la sección **Contenido** de los mensajes de correo electrónico. Para utilizar un bloque de edición, arrastre un bloque de edición dentro de una columna en el editor de arrastrar y soltar. Se ajustará automáticamente al ancho de la columna. Cada bloque del editor tiene sus propios ajustes, como el control granular del relleno.
 
-Para más información sobre cómo utilizar y personalizar estos bloques de editor en tu correo electrónico, consulta [Otras personalizaciones]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#other-customizations).
+Para obtener más información sobre cómo utilizar y personalizar estos bloques de editor en tu correo electrónico, consulta [Otras personalizaciones]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#other-customizations).
 
 {% alert tip %}
-También puedes añadir [atributos personalizados]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/) a cualquier URL dentro de los bloques de editor `Image`, `Button` o `Text`.
+También puedes añadir [atributos personalizados]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/) a cualquier URL dentro de los bloques de`Image` `Text`editor ,`Button` , o .
 {% endalert %}
 
 ## Tipos
@@ -14,7 +14,7 @@ La siguiente tabla describe cómo los usuarios pueden utilizar cada tipo de bloq
 
 | Apellidos | Descripción |
 |---|---|
-|Título| Añade texto para las cabeceras dentro del correo electrónico. | 
+|Título| Añade texto para los encabezados dentro del correo electrónico. | 
 |Párrafo| Introduce texto en su mensaje. Una barra de herramientas ayuda con las funciones de edición de fuentes y texto. | 
 |Lista| Añade una lista con viñetas. |
 |Botón| Añade un botón estándar. Las propiedades de este bloque permiten editar y establecer enlaces fácilmente. | 
@@ -23,8 +23,8 @@ La siguiente tabla describe cómo los usuarios pueden utilizar cada tipo de bloq
 |Imagen| Inserta una imagen de la [biblioteca multimedia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). | 
 |Video| Crea un enlace al contenido del vídeo. |
 |Social| Inserta el icono de la plataforma de medios sociales. Puedes subir imágenes personalizadas para iconos específicos de la marca. |
-|Iconos| Inserta un icono. Puedes subir imágenes personalizadas. Braze utiliza un icono de marcador de posición de gran tamaño hasta que subas una imagen. |
-|HTML| Inserta HTML sin formato. Recomendado para [Liquid]({{site.baseurl}}/liquid/), como Contenido conectado o declaraciones condicionales. | 
+|Iconos| Inserta un icono. Puedes subir imágenes personalizadas. Braze utiliza un icono de marcador de posición de gran tamaño hasta que subes una imagen. |
+|HTML| Inserta HTML sin formato. Recomendado para [Liquid]({{site.baseurl}}/liquid/), como contenido conectado o sentencias condicionales. | 
 |Menú| Crea un menú flexible para el mensaje que estás diseñando. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
@@ -43,10 +43,10 @@ Consulta la tabla siguiente para obtener información detallada sobre las propie
 |Tamaño de fuente| Determina el tamaño del texto. |
 |Color de texto| Modifica el color del título. |
 |Color del enlace| Modifica el color del enlace. |
-|Alinear| Mueve el título para que esté orientado a la izquierda, al centro o a la derecha. |
+|Alinear| Mueve el título hacia la izquierda, el centro o la derecha. |
 |Altura de la línea| Modifica la distancia entre líneas de texto. |
-|Espacio entre líneas| Modifica la distancia entre cada carácter. |
-|Dirección del texto| Predeterminado de izquierda a derecha, pero puede editarse para que sea [de derecha a izquierda]({{site.baseurl}}/right_to_left_messages/). |
+|Interlineado| Modifica la distancia entre cada carácter. |
+|Dirección del texto| Predeterminado: de izquierda a derecha, pero se puede editar para que sea [de derecha a izquierda]({{site.baseurl}}/right_to_left_messages/). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Párrafo
@@ -60,11 +60,11 @@ Consulta la tabla siguiente para obtener información detallada sobre las propie
 |Tamaño de fuente| Determina el tamaño del texto. |
 |Color de texto| Modifica el color del título. |
 |Color del enlace| Modifica el color del enlace. |
-|Alinear| Mueve el título para que esté orientado a la izquierda, al centro o a la derecha. |
+|Alinear| Mueve el título hacia la izquierda, el centro o la derecha. |
 |Espaciado entre párrafos| Modifica el espacio entre párrafos. |
 |Altura de la línea| Modifica la distancia entre líneas de texto. |
 |Espaciado de letras| Modifica la distancia entre cada carácter. |
-|Dirección del texto| Predeterminado de izquierda a derecha, pero puede editarse para que sea [de derecha a izquierda]({{site.baseurl}}/right_to_left_messages/). |
+|Dirección del texto| Predeterminado: de izquierda a derecha, pero se puede editar para que sea [de derecha a izquierda]({{site.baseurl}}/right_to_left_messages/). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Lista
@@ -75,18 +75,18 @@ Consulta la tabla siguiente para obtener información detallada sobre las propie
 |---|---|
 |Tipo de lista| Este es el tipo de lista. Pueden ser con viñetas o numeradas. |
 |Tipo de estilo de la lista| Determina el estilo de la lista. |
-|Lista de inicio de| Determina el número inicial de la lista. |
+|Lista de salida desde| Determina el número inicial de la lista. |
 |Familia de fuente| Este es el estilo de fuente para el texto de su párrafo. |
 |Peso de fuente| Es la audacia general de la fuente. |
 |Tamaño de fuente| Determina el tamaño del texto. |
 |Color de texto| Modifica el color del título. |
 |Color del enlace| Modifica el color del enlace. |
-|Alinear| Mueve el título para que esté orientado a la izquierda, al centro o a la derecha. |
+|Alinear| Mueve el título hacia la izquierda, el centro o la derecha. |
 |Espaciado de los elementos de la lista| Modifica el espacio entre los elementos de la lista. |
 |Sangría de los elementos de la lista| Modifica la sangría de los elementos de la lista. |
 |Altura de la línea| Modifica la distancia entre líneas de texto. |
 |Espaciado de letras| Modifica la distancia entre cada carácter. |
-|Dirección del texto| Predeterminado de izquierda a derecha, pero puede editarse para que sea [de derecha a izquierda]({{site.baseurl}}/right_to_left_messages/). |
+|Dirección del texto| Predeterminado: de izquierda a derecha, pero se puede editar para que sea [de derecha a izquierda]({{site.baseurl}}/right_to_left_messages/). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Divisor
@@ -96,7 +96,7 @@ Consulte la tabla siguiente para obtener información detallada sobre el bloque 
 | Propiedades | Descripción |
 |---|---|
 |Transparente| Si se activa, se eliminan las opciones 'línea' y 'anchura'. |
-|Línea| Los diferentes formatos de línea, ya sean punteados, punteados o sólidos. Además, puede modificar el grosor y el color de la línea divisoria. |
+|LINE| Los diferentes formatos de línea, ya sean punteados, punteados o sólidos. Además, puede modificar el grosor y el color de la línea divisoria. |
 |Ancho | Ajusta la dispersión del divisor en incrementos de 5.  |
 |Alinear| Mueve la línea para que esté orientada a la izquierda, al centro o a la derecha. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -112,20 +112,20 @@ Consulte la tabla siguiente para obtener información detallada sobre el bloque 
 
 ### Imagen
 
-Consulte la tabla siguiente para obtener información detallada sobre el bloque editor `Image`. Para las imágenes dinámicas (imágenes con contenido líquido o conectado), debes establecer una imagen alternativa para utilizar la configuración de ancho automático. Para las especificaciones de imagen, consulta nuestras [especificaciones de imagen para correo electrónico]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
+Consulte la tabla siguiente para obtener información detallada sobre el bloque editor `Image`. Para las imágenes dinámicas (imágenes con contenido Liquid o conectado), debes establecer una imagen alternativa para utilizar la configuración de ancho automático. Para conocer las especificaciones de las imágenes, consulta nuestras [especificaciones]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email) de [imágenes]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email) para [envío por correo electrónico]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
 
 {% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 | Propiedades | Descripción |
 |---|---|
-|Ancho automático| Modifica la anchura de la imagen en píxeles. |
+|Ancho automático| Modifica el ancho de la imagen en píxeles. |
 |Alinear| Orienta la imagen hacia la izquierda, el centro o la derecha del bloque. |
-|Imagen con Liquid| Utiliza la lógica [Liquid]({{site.baseurl}}/liquid/) para establecer dinámicamente diferentes imágenes dentro del mismo bloque de contenido. |
-|URL| Configura una imagen utilizando la dirección donde está alojada. |
+|Imagen con Liquid| Utiliza [Liquid]({{site.baseurl}}/liquid/) Logic para establecer de manera dinámica diferentes imágenes dentro del mismo bloque de contenido. |
+|URL| Establece una imagen utilizando la dirección donde está alojada. |
 |Texto alternativo| Una breve descripción de la imagen que proporciona a los usuarios la misma información que se muestra en la imagen. Esto es esencial para la accesibilidad de los lectores de pantalla o cuando la imagen no se carga. |
-|Imagen con esquinas redondeadas| Renderiza la imagen con las esquinas redondeadas. Por defecto, las imágenes se representan con esquinas cuadradas. |
-|Acción| Desencadena una acción cuando el usuario hace clic en la imagen.|
-|Opciones de bloque| Establece el relleno alrededor del bloque de imagen. |
+|Imagen con esquinas redondeadas| Renderiza la imagen con esquinas redondeadas. Predeterminadamente, las imágenes se representan con esquinas cuadradas. |
+|Acción| Desencadena una acción cuando el usuario realiza un clic en la imagen.|
+|Opciones de bloqueo| Establece el relleno alrededor del bloque de imagen. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
@@ -142,9 +142,9 @@ Consulte la tabla siguiente para obtener información detallada sobre el bloque 
 |---|---|
 |URL| La URL del vídeo. Ten en cuenta que solo son compatibles YouTube y Vimeo. |
 |Título| Se genera automáticamente a partir de los metadatos del vídeo o puede personalizarse. |
-|Jugar a Icon Style| Incluye distintas opciones para el botón de reproducción situado en la parte superior de una imagen de vídeo. |
+|Estilo del icono de reproducción| Incluye distintas opciones para el botón de reproducción situado en la parte superior de una imagen de vídeo. |
 |Color del icono de reproducción| Opción de seleccionar **claro** u **oscuro** para el botón de reproducción. |
-|Reproducir tamaño del icono| Elija el tamaño en píxeles del botón de reproducción. Rango prefijado de 50 px a 80 px (incrementado en 5 px). |
+|Tamaño del icono de reproducción| Elija el tamaño en píxeles del botón de reproducción. Rango prefijado de 50 px a 80 px (incrementado en 5 px). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
@@ -157,9 +157,9 @@ Consulte la tabla siguiente para obtener información detallada sobre el bloque 
 
 | Propiedades | Descripción |
 |---|---|
-|Selecciona la colección de iconos| Establece el estilo de tu colección de iconos. |
-|Configurar la colección de iconos| Establece la URL de cada icono social. Incluye la opción **Más opciones** para editar el título y el texto alternativo. |
-|Alinear| Mueve el icono social para que esté orientado a la izquierda, al centro o a la derecha. |
+|Seleccionar colección de iconos| Establece el estilo de tu colección de iconos. |
+|Configurar colección de iconos| Establece la URL de cada icono social. Incluye la opción **Más opciones** para editar el título y el texto alternativo. |
+|Alinear| Mueve el icono social hacia la izquierda, el centro o la derecha. |
 |Espaciado entre iconos| Determina el espaciado entre cada icono social. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -174,11 +174,11 @@ Consulte la tabla siguiente para obtener información detallada sobre el bloque 
 |Tamaño de fuente| Determina el tamaño del texto. |
 |Color de texto| Modifica el color del título. |
 |Color del enlace| Modifica el color del enlace. |
-|Alinear| Mueve el icono para que esté orientado a la izquierda, al centro o a la derecha. |
+|Alinear| Mueve el icono hacia la izquierda, el centro o la derecha. |
 |Espaciado de letras| Modifica la distancia entre cada carácter. |
 |Tamaño del icono| Determina el tamaño de tu icono. |
 |Espaciado entre iconos| Modifica el espacio del icono. |
-|Icono relleno| Modifica el relleno del icono. |
+|Relleno de iconos| Modifica el relleno del icono. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### HTML
@@ -196,23 +196,23 @@ Consulte la tabla siguiente para obtener información detallada sobre el bloque 
 
 | Propiedades | Descripción |
 |---|---|
-|Configurar los elementos del menú| Añade un elemento de menú. |
+|Configurar elementos del menú| Añade un elemento de menú. |
 |Familia de fuentes| El estilo que se utilizará para su menú. |
 |Tamaño de fuente| El tamaño de su menú. |
 |Color del texto| Modifica el color del menú. |
-|Enlace Color| Modifica el color del texto del menú. |
-|Alinear| Mueve el menú para que esté orientado a la izquierda, al centro o a la derecha. |
+|Color del enlace| Modifica el color del texto del menú. |
+|Alinear| Mueve el menú hacia la izquierda, el centro o la derecha. |
 |Espaciado de letras| Modifica la distancia entre cada carácter. |
 |Diseño| Determina que el diseño sea horizontal o vertical. |
 |Separador| Añadir carácter(es) entre las opciones del menú. |
 |Menú móvil| Incluye opciones para modificar el tamaño, el color y el tipo de icono cuando se muestra en un dispositivo móvil. |
-|Acolchado del artículo| Modifica el relleno utilizando los botones **+** o **-**, o introduciendo un número concreto. |
-|Todos los lados| Establece un número de relleno coherente si el Relleno de elementos está desactivado. |
+|Relleno de artículos| Modifica el relleno utilizando los botones **+** o **-**, o introduciendo un número concreto. |
+|Todos los lados| Establece un número de relleno constante si el relleno de elementos está desactivado. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Acciones
 
-Puedes asignar una acción que se produzca cuando un usuario pulse un botón, enlace o imagen del mensaje. También puedes utilizar [Liquid]({{site.baseurl}}/liquid/) para personalizar las acciones. En las tablas siguientes se detallan las acciones de cada bloque de editor.
+Puedes asignar una acción que se produzca cuando un usuario pulse un botón, un enlace o una imagen del mensaje. También puedes utilizar [Liquid]({{site.baseurl}}/liquid/) para realizar la personalización de las acciones. En las siguientes tablas se proporcionan detalles sobre las acciones de cada bloque de editor.
 
 ### Botón
 
@@ -220,11 +220,11 @@ Consulte la tabla siguiente para obtener información detallada sobre el bloque 
 
 | Propiedades | Descripción |
 |---|---|
-|Tipo de enlace| Determina la acción al hacer clic en el botón y establece el protocolo adecuado. |
-|URL| Dinámico basado en el tipo de enlace **Abrir página Web**.|
-|Correo a, Asunto y Cuerpo| Para el tipo de enlace **Enviar correo electrónico**, establece la dirección de correo electrónico del destinatario, el asunto y el contenido que aparecerán en un borrador de correo electrónico cuando el usuario seleccione el botón.|
-|Tel| Para el tipo de enlace **Hacer llamada** y **Enviar SMS**, establece el número de teléfono al que el usuario llamará o enviará un SMS al seleccionar el botón.|
-|Mensaje| Para el tipo de enlace **Enviar SMS**, establece el contenido que aparecerá en un borrador de mensaje SMS cuando el usuario seleccione el botón.|
-|Opciones de los botones| Establece varias opciones de botón, como fuente, anchura, color y otras.|
-|Botón Hover| El estilo del botón cuando un usuario pasa el ratón o el trackpad sobre él. Esto incluye el color de fondo del botón, el color de la fuente y los estilos de los bordes.|
+|Tipo de enlace| Determina la acción al hacer un clic en el botón y establece el protocolo adecuado. |
+|URL| Dinámico basado en el tipo de enlace **de página de la Web abierta**.|
+|Correo electrónico, asunto y cuerpo del mensaje| Para el tipo de enlace **Enviar correo electrónico**, esto establece la dirección de correo electrónico del destinatario, el asunto y el contenido que se completará en un borrador de correo electrónico cuando el usuario seleccione el botón.|
+|Tel.| Para el tipo de enlace **Realizar llamada** y **Enviar SMS**, esto establece el número de teléfono al que el usuario llamará o enviará un mensaje de texto al seleccionar el botón.|
+|Mensaje| Para el tipo de enlace **Enviar SMS**, esto establece el contenido que aparecerá en un borrador de mensaje SMS cuando el usuario seleccione el botón.|
+|Opciones de botones| Establece varias opciones de botones, como fuente, ancho, color y otras.|
+|Botón al pasar el cursor| El estilo del botón cuando el usuario pasa el cursor por encima con el ratón o el trackpad. Esto incluye el color de fondo del botón, el color de la fuente y los estilos de los bordes.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} Primeros pasos: Resumen de la integración
+# [![C](https://learning.braze.com/sdk-integration-basics)urso []({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}de [Braze Learning](https://learning.braze.com/sdk-integration-basics): Primeros pasos: Resumen de la integración
 
 > En este artículo se ofrece un resumen básico del proceso de incorporación.
 
@@ -77,7 +77,7 @@ Más información sobre [datos recopilados automáticamente y datos personalizad
 
 ### Planificación de personalizaciones
 
-Habla con tus especialistas en marketing sobre las personalizaciones que desean. Por ejemplo, ¿quieres implementar las tarjetas de contenido Braze predeterminadas? ¿Quieres modificar ligeramente su aspecto para que se ajuste a las directrices de tu marca? ¿Quieres desarrollar una interfaz de usuario completamente nueva para un componente y que Braze haga un seguimiento de sus análisis? Diferentes niveles de personalización requieren diferentes niveles de alcance.
+Habla con tus especialistas en marketing sobre las personalizaciones que desean. Por ejemplo, ¿quieres implementar las tarjetas de contenido Braze predeterminadas? ¿Quieres modificar ligeramente su aspecto para que se ajuste a las directrices de tu marca? ¿Quieres desarrollar una interfaz de usuario completamente nueva para un componente y que Braze haga un seguimiento de sus análisis? Los diferentes niveles de personalización requieren diferentes niveles de alcance.
 
 ### Acceder al panel de control
 
@@ -129,14 +129,14 @@ Cuando se integra completamente con tu aplicación o sitio web, el SDK de Braze 
 {% endalert %}
 
 {% alert note %}
-Para añadir una capa adicional de seguridad, puedes habilitar [la Autenticación del SDK]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) para evitar solicitudes no autorizadas del SDK. Esta característica está disponible en las principales plataformas, como Web, iOS, Android, React Native, Flutter, Unity, Cordova, .NET MAUI (Xamarin) y Expo.
+Para añadir una capa adicional de seguridad, puedes habilitar [la autenticación SDK]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) para evitar solicitudes SDK no autorizadas. Esta característica está disponible en todas las plataformas principales, incluyendo Web, iOS, Android, React Native, Flutter, Unity, Cordova, .NET MAUI (Xamarin) y Expo.
 {% endalert %}
 
 Durante la implementación del SDK, harás lo siguiente:
 
 * Escribe el código de integración de SDK para cada plataforma que quieras admitir.
 * Activa los canales de mensajería de cada plataforma, asegurándote de que el SDK de Braze hace un seguimiento de los datos de las interacciones con tus clientes a través de correo electrónico, SMS, notificaciones push y otros canales.
-* Crea cualquier personalización prevista de los componentes de la interfaz de usuario (por ejemplo, tarjetas de contenido personalizadas). Para un contenido completamente personalizado, tendrás que registrar los análisis, ya que la recopilación de datos automática del SDK no tendrá en cuenta tus nuevos componentes. Puedes seguir el patrón de esta implementación en nuestros componentes predeterminados.
+* Crea cualquier personalización planificada de los componentes de la interfaz de usuario (por ejemplo, tarjetas de contenido personalizadas). Para un contenido completamente personalizado, tendrás que registrar los análisis, ya que la recopilación de datos automática del SDK no tendrá en cuenta tus nuevos componentes. Puedes seguir el patrón de esta implementación en nuestros componentes predeterminados.
 
 ### Uso de la API Braze
 
@@ -202,7 +202,7 @@ Asegúrate de que tus entornos de producción y pruebas están configurados ante
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Mientras realizas el control de calidad de tu integración de SDK, utiliza [el depurador de SDK]({{site.baseurl}}/developer_guide/sdk_integration/debugging) para solucionar problemas sin activar el registro detallado de tu aplicación.
+Mientras realizas el control de calidad de la integración de SDK, utiliza el [depurador del SDK]({{site.baseurl}}/developer_guide/sdk_integration/debugging) para solucionar problemas sin activar el registro detallado de tu aplicación.
 {% endalert %}
 
 ### Pasar Braze a los especialistas en marketing
@@ -229,9 +229,9 @@ Realizarás un seguimiento de las actualizaciones de la plataforma Braze a trav�
 
 ## Límites de velocidad SDK 
 
-### Usuarios activos mensuales CY 24-25, MAU universal, MAU Web y MAU móvil  
+### Usuarios activos al mes CY 24-25, MAU universal, MAU Web y MAU móvil  
 
-Para los clientes que han comprado Usuarios Activos Mensuales CY 24-25, MAU Universal, MAU Web y MAU Móvil, Braze aplica límites de tasa en el servidor a las solicitudes de API utilizadas por nuestros SDK para actualizar sesiones, atributos de usuario, eventos y otros datos de perfil de usuario. Esto se hace para garantizar la estabilidad de la plataforma y mantener un servicio rápido y fiable. 
+Para los clientes que hayan adquirido usuarios activos al mes CY 24-25, MAU universal, MAU web y MAU móvil, Braze aplica límites de velocidad del lado del servidor en las solicitudes de API utilizadas por nuestros SDK para actualizar sesiones, atributos de usuario, eventos y otros datos del perfil de usuario. Esto se hace para garantizar la estabilidad de la plataforma y mantener un servicio rápido y fiable. 
 
 * Los límites de velocidad por hora se establecen en función del tráfico de SDK previsto en tu cuenta, que puede corresponder al número de usuarios activos al mes (MAU) que hayas adquirido, al sector, a la estacionalidad o a otros factores. Cuando se alcance el límite de velocidad por hora, Braze ralentizará las peticiones hasta la hora siguiente.
 * El SDK reintenta automáticamente todas las solicitudes con límite de tasa.
@@ -239,12 +239,25 @@ Para los clientes que han comprado Usuarios Activos Mensuales CY 24-25, MAU Univ
     * Revisa tu integración de SDK para reducir la recopilación excesiva de datos.
     * Bloquea los datos personalizados que no sean esenciales para tus casos de uso de marketing.
 * Los límites de velocidad de ráfaga son límites de velocidad de corta duración que se aplican cuando llega un gran volumen de solicitudes en un periodo muy corto (es decir, en cuestión de segundos). No es necesario que actúes cuando se produzcan límites de ráfagas, y el SDK volverá a intentarlo poco después.
+* Los límites de velocidad constantes controlan el volumen de solicitudes sostenido durante un intervalo de tiempo superior al intervalo de ráfaga (por ejemplo, varios minutos) y ayudan a suavizar el tráfico continuo entre los límites de ráfaga y tu límite de velocidad por hora.
 
 ### Encontrar tus límites de velocidad
 
 Para encontrar los límites actuales basados en el rendimiento esperado del SDK, ve a **Configuración** > **API e identificadores** > **Límites de API y SDK**.
 
 Para el uso histórico, ve a **Configuración** > **API e identificadores** > **Panel de API y SDK**.
+
+### Solicitud de límites de velocidad más altos
+
+Si necesitas un límite de velocidad más alto en Braze, ponte en contacto con el soporte de Braze o con tu administrador del éxito del cliente e incluye los siguientes datos:
+
+* Tanto si necesitas un aumento temporal como permanente.
+* Por qué necesitas el aumento.
+* ¿Qué terminales y entornos se ven afectados?
+* Tu volumen de tráfico aproximado y calendario, incluyendo la fecha de inicio, la duración y las horas punta.
+* Si puedes agrupar llamadas o distribuir el tráfico a lo largo del tiempo.
+
+Una vez enviada tu solicitud, Braze la revisará y te informará del resultado.
 
 ### Cambios y apoyo
 

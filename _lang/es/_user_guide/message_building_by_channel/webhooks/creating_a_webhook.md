@@ -20,7 +20,7 @@ Para saber más sobre qué son los webhooks y cómo puedes utilizarlos en Braze,
 
 ## Paso 1: Elige dónde construir tu mensaje
 
-¿No estás seguro de si tu mensaje debe enviarse mediante una campaña o un Canvas? Las campañas son mejores para campañas de mensajería únicas y específicas, mientras que los lienzos son mejores para recorridos de usuario de varios pasos.
+¿No estás seguro de si tu mensaje debe enviarse mediante una campaña o un Canvas? Las campañas son más adecuadas para campañas de mensajería única y específica, mientras que los lienzos son más adecuados para recorridos de usuarios de varios pasos.
 
 {% tabs %}
 {% tab Campaign %}
@@ -65,7 +65,7 @@ La pestaña **Componer** consta de los siguientes campos:
 - Método HTTP
 - Cuerpo de la solicitud
 
-![La pestaña "Componer" con una plantilla de webhook de ejemplo.]({% image_buster /assets/img_archive/webhook_compose.png %})
+![La pestaña «Componer» con una plantilla de webhook de ejemplo.]({% image_buster /assets/img_archive/webhook_compose.png %})
 
 #### Idioma {#internationalization}
 
@@ -99,7 +99,7 @@ El cuerpo de la solicitud es la información que se enviará a la URL especifica
 
 Los pares clave-valor JSON te permiten escribir fácilmente una solicitud para un punto final que espera un formato JSON. Sólo puedes utilizarlo con un punto final que espere una petición JSON. Por ejemplo, si tu clave es `message_body`, el valor correspondiente podría ser `Your order just arrived!`. Una vez introducido el par clave-valor, el compositor configurará la solicitud en sintaxis JSON y se mostrará automáticamente una vista previa de la solicitud JSON.
 
-![Cuerpo de la solicitud establecido en pares clave-valor JSON.]({% image_buster /assets/img/webhook_json_1.png %})
+![Cuerpo de la solicitud configurado como pares clave-valor JSON.]({% image_buster /assets/img/webhook_json_1.png %})
 
 Puedes personalizar tus pares clave-valor utilizando Liquid, por ejemplo, incluyendo en tu solicitud cualquier atributo del usuario, [atributo personalizado]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices) o [propiedad del evento]({{site.baseurl}}/user_guide/data/custom_data/custom_events/). Por ejemplo, puedes incluir el nombre y el correo electrónico de un cliente en tu solicitud. Asegúrate de incluir un [valor predeterminado]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web) para cada atributo.
 
@@ -109,7 +109,7 @@ La opción de texto sin formato le ofrece la flexibilidad de escribir una solici
 
 Tanto la [personalización]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) como la [internacionalización]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) mediante Liquid son compatibles con el texto sin formato.
 
-![Un ejemplo de cuerpo de solicitud con texto sin procesar utilizando Liquid.]({% image_buster /assets/img_archive/webhook_rawtext.png %})
+![Ejemplo de cuerpo de solicitud con texto sin formato utilizando Liquid.]({% image_buster /assets/img_archive/webhook_rawtext.png %})
 
 Si establece el [encabezado de solicitud](#request-headers-optional) `Content-Type` en `application/x-www-form-url-encoded`, el cuerpo de la solicitud debe tener formato de cadena codificada en URL. Por ejemplo:
 
@@ -127,7 +127,7 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 
 Algunos puntos finales pueden requerir que incluya cabeceras en su solicitud. En la sección **Componer** del compositor, puedes añadir tantas cabeceras como necesites.
 
-![Ejemplos de encabezados de solicitud para la clave "Autorización" y la clave "Tipo de contenido".]({% image_buster /assets/img_archive/webhook_request_headers_example.png %})
+![Ejemplos de encabezados de solicitud para la clave «Authorization» y la clave «tipo de contenido».]({% image_buster /assets/img_archive/webhook_request_headers_example.png %})
 
 Las cabeceras de solicitud comunes son `Content-Type` especificaciones (que describen qué tipo de datos esperar en el cuerpo, como XML o JSON) y cabeceras de autorización que contienen sus credenciales con su proveedor o sistema. 
 
@@ -172,7 +172,7 @@ En este paso también puede especificar controles de entrega, como permitir que 
 
 #### Elige los usuarios a los que dirigirte
 
-A continuación, debes [dirigirte a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) eligiendo segmentos o filtros para reducir tu audiencia. En este paso, seleccionas la audiencia más amplia de tus segmentos, y acotas aún más ese segmento con nuestros filtros, si así lo deseas. Automáticamente recibirás una vista previa del aspecto aproximado de la población de ese segmento. Ten en cuenta que la pertenencia exacta a un segmento siempre se calcula antes de enviar el mensaje.
+A continuación, debes [dirigirte a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) seleccionando segmentos o filtros para delimitar tu audiencia. En este paso, seleccionas la audiencia más amplia de tus segmentos y, si lo deseas, puedes reducir aún más ese segmento al filtrar con nuestros filtros. Automáticamente recibirás una vista previa de cómo es aproximadamente la población de ese segmento. Ten en cuenta que la pertenencia exacta al segmento siempre se calcula antes de enviar el mensaje.
 
 {% multi_lang_include target_audiences.md %}
 
@@ -197,14 +197,14 @@ Cuando hayas terminado de crear lo último de tu campaña o Canvas, revisa sus d
 
 ### Errores, lógica de reintentos y tiempos de espera
 
-Los webhooks dependen de que los servidores Braze realicen solicitudes a un punto final externo, y ocasionalmente pueden producirse errores. Los errores más comunes incluyen errores de sintaxis, claves de API caducadas, límites de tasa y problemas inesperados del lado del servidor. Antes de enviar una campaña webhook:
+Los webhooks dependen de que los servidores de Braze realicen solicitudes a un punto final externo, y en ocasiones pueden producirse errores. Los errores más comunes incluyen errores de sintaxis, claves de API caducadas, límites de velocidad y problemas inesperados del lado del servidor. Antes de enviar una campaña de webhook:
 
-- Comprueba si tu webhook tiene errores de sintaxis
-- Garantizar que las variables personalizadas tengan valores predeterminados
+- Comprueba si tu webhook tiene errores de sintaxis.
+- Asegúrate de que las variables de personalización tengan valores predeterminados.
 
-Si tu webhook no se envía, se registra un mensaje de error en el [Registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/), e incluye detalles como la marca de tiempo del error, el nombre de la aplicación y detalles sobre el error.
+Si tu webhook no se envía correctamente, se registra un mensaje de error en el [registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/), que incluye detalles como la marca de tiempo del error, el nombre de la aplicación y detalles sobre el error.
 
-![Error de webhook con el mensaje "Debe utilizarse un token de acceso activo para consultar información sobre el usuario actual".]({% image_buster /assets/img_archive/webhook-error.png %})
+![Error de webhook con el mensaje «Se debe utilizar un token de acceso activo para realizar una consulta sobre el usuario actual».]({% image_buster /assets/img_archive/webhook-error.png %})
 
 Si el mensaje de error no es lo suficientemente claro en cuanto al origen del error, debes consultar la documentación del punto final de la API que estás utilizando. Suelen ofrecer una explicación de los códigos de error que utiliza el punto final, así como su causa habitual.
 
@@ -223,12 +223,12 @@ Cuando se envía la solicitud de webhook, el servidor receptor devolverá un có
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-Braze reintenta los códigos de estado anteriores hasta cinco veces en 30 minutos utilizando la retirada exponencial. Si no podemos llegar a tu punto final, los reintentos pueden extenderse durante un periodo de 24 horas.<br><br>Cada webhook dispone de 90 segundos antes de que se agote su tiempo de espera.
+Braze reintenta los códigos de estado anteriores hasta cinco veces en un plazo de 30 minutos utilizando una retirada exponencial. Si no podemos comunicarnos con tu punto final, los reintentos pueden extenderse durante un período de 24 horas.<br><br>Cada webhook dispone de 90 segundos antes de que se agote su tiempo de espera.
 {% endalert %}
 
-#### Solución de problemas y detalles adicionales sobre errores
+#### Solución de problemas y detalles adicionales sobre los errores
 
-Para obtener explicaciones detalladas, pasos para la solución de problemas y orientación para resolver errores específicos de webhook, consulta [Solución de problemas de webhook y solicitudes de contenido conectado]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors/). También encontrarás más explicaciones sobre cómo funciona nuestro sistema de detección de host insalubre y cómo Braze proporciona notificaciones de errores mediante correos electrónicos automatizados y registro adicional en Braze Currents.
+Para obtener explicaciones detalladas, pasos para la solución de problemas y orientación sobre cómo resolver errores específicos de webhook, consulta [Solución de problemas ]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors/)de [webhook y solicitudes de contenido conectado]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors/). También encontrarás más explicaciones sobre cómo funciona nuestro sistema de detección de hosts no seguros y cómo Braze proporciona notificaciones de error a través de correos electrónicos automatizados y registros adicionales en Braze Currents.
 
 ### Lista de IP permitidas {#ip-allowlisting}
 

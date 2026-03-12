@@ -20,7 +20,7 @@ O campo "De" deve mostrar claramente quem é o remetente. Tente não usar o nome
 
 ### Endereços sem resposta
 
-Endereços de e-mail sem resposta geralmente não são recomendados por vários motivos, já que eles desmotivam seus leitores. Muitos destinatários respondem ao e-mail para cancelar a inscrição, portanto, se não tiverem permissão para fazer isso, o próximo curso de ação é, na maioria das vezes, marcar o e-mail como spam.
+Endereços de e-mail sem resposta geralmente não são recomendados por vários motivos, pois eles desengajam seus leitores. Muitos destinatários respondem ao e-mail para cancelar a inscrição, portanto, se não tiverem permissão para fazer isso, o próximo curso de ação é, na maioria das vezes, marcar o e-mail como spam.
 
 Obter respostas fora do escritório pode, na verdade, fornecer informações valiosas, aumentando as taxas de abertura e diminuindo os relatórios de spam (removendo aqueles que não querem receber e-mails). Em um nível pessoal, uma ausência de resposta pode parecer impessoal para os destinatários e pode fazer com que eles não recebam mais e-mails de sua empresa.
 
@@ -33,7 +33,7 @@ O texto do pré-cabeçalho em um e-mail comunica o ponto principal da mensagem d
 A quantidade de texto visível do pré-cabeçalho depende do cliente de e-mail do usuário e do tamanho da linha de assunto do e-mail. Em geral, sugerimos que os pré-cabeçalhos de e-mail tenham entre 50 e 100 caracteres.
 
 {% alert note %}
-O pré-cabeçalho pode fazer referência ao Liquid no corpo do e-mail, e o corpo do e-mail pode fazer referência ao Liquid no pré-cabeçalho. Isso ocorre porque o texto do pré-cabeçalho faz parte do corpo do e-mail quando você envia mensagens para os destinatários.
+O pré-cabeçalho pode fazer referência ao Liquid no corpo do e-mail, e o corpo do e-mail pode fazer referência ao Liquid no pré-cabeçalho. Isso ocorre porque o texto do pré-cabeçalho é parte do corpo do e-mail quando você envia mensagens para os destinatários.
 {% endalert %}
 
 Aqui estão algumas práticas recomendadas que você deve ter em mente ao escrever seus pré-cabeçalhos:
@@ -43,13 +43,13 @@ Aqui estão algumas práticas recomendadas que você deve ter em mente ao escrev
   - Use palavras fortes para que o leitor saiba exatamente o que você está pedindo, mas certifique-se de que isso reflita a voz da marca da sua empresa e que cada call to action apresente algum tipo de valor para o consumidor.
   - O pré-cabeçalho não deve ter mais de 85 caracteres e deve ter algum tipo de chamada para ação descritiva que apóie a linha de assunto.
 
-2. Os e-mails e os sites de destino para os quais você direciona seus usuários devem ser otimizados para dispositivos móveis:
+2. Os e-mails e sites de destino para os quais você direciona seus usuários devem ser otimizados para dispositivos móveis:
   - Sem caixas intersticiais
   - Campos de formulário grandes
   - Fácil navegação
   - Texto grande
   - Espaço em branco generoso
-  - Texto curto e conciso
+  - Texto do corpo curto e conciso
   - Chamadas à ação claras
 
 ### Limites de caracteres do pré-cabeçalho
@@ -83,7 +83,7 @@ Aqui estão algumas práticas recomendadas que você deve ter em mente ao escrev
 
 ## Tamanho do e-mail
 
-Certifique-se de limitar o tamanho de seu e-mail. Os corpos de e-mail com mais de 102 KB não só são extremamente pesados para os servidores do Braze, como também são cortados pelo Gmail e outros clientes de e-mail. Tente manter o tamanho de seu e-mail abaixo de 25 KB apenas para texto ou 60 KB com imagens. Recomendamos enfaticamente que você use nosso carregador de imagens para hospedar imagens e fazer referência a essas imagens pelo endereço `href`.
+Certifique-se de limitar o tamanho de seu e-mail. Corpos de e-mail maiores que 102 KB não apenas sobrecarregam os servidores da Braze, mas também são cortados pelo Gmail e outros clientes de e-mail. Tente manter o tamanho de seu e-mail abaixo de 25 KB apenas para texto ou 60 KB com imagens. Recomendamos enfaticamente que você use nosso carregador de imagens para hospedar imagens e fazer referência a essas imagens pelo endereço `href`.
 
 |   Apenas texto   | Texto com imagens |     Largura do e-mail    |
 |:-------------:|:----------------:|:------------------:|

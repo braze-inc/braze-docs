@@ -48,6 +48,10 @@ description: "この参考記事では、購入オブジェクトのさまざま
 - [ISO 4217 通貨コード Wiki](http://en.wikipedia.org/wiki/ISO_4217)
 - [ISO 8601 時間コード Wiki](https://en.wikipedia.org/wiki/ISO_8601)
 
+{% alert note %}
+一部の識別子ペアは一緒に使用できず、`email` は`phone` の両方が指定された場合に優先されます。詳しくは、[識別子再ソリューション]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution)を参照してください。
+{% endalert %}
+
 ## 購入製品 ID
 
 購入オブジェクト内では、`product_id` は購入の識別子です (`Product Name` や `Product Category` など)。

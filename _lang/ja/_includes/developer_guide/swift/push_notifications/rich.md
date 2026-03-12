@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/swift.md %} [プッシュ通知の設定も]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)必要だ。
+{% multi_lang_include developer_guide/prerequisites/swift.md %} [プッシュ通知の設定]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)も必要だ。
 
 ## リッチプッシュ通知の設定
 
@@ -16,7 +16,17 @@
 
 通知サービス拡張機能のバンドル ID は、メインアプリターゲットのバンドル ID とは異なる必要があります。たとえば、アプリのバンドル ID が `com.company.appname` の場合、サービス拡張に `com.company.appname.AppNameServiceExtension` を使用できます。
 
-### ステップ3:豊富なプッシュ通知の統合
+### ステップ 3:アプリグループの追加
+
+Xcodeで、**署名&機能**ペインからアプリグループ機能を追加する。メインのアプリターゲットと通知サービス拡張ターゲットの両方に追加する。次に、**＋**ボタンをクリックする。アプリのバンドル ID を使用してアプリグループを作成します。たとえば、アプリのバンドル ID が `com.company.appname` の場合、アプリグループに `group.com.company.appname.xyz` という名前を付けることができます。
+
+{% alert important %}
+ここでいうApp Groupsとは、Appleの[App Groups Entitlementの](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups)ことであり、Brazeのワークスペース（旧App Group）IDのことではない。
+{% endalert %}
+
+メインアプリと通知サービス拡張が共有データにアクセスできるようにするには、共有アプリグループが必要だ。アプリをアプリグループに追加しない場合、アプリはプッシュペイロードから特定のフィールドを読み込めず、期待通りに完全に動作しない可能性がある。
+
+### ステップ 4: 豊富なプッシュ通知の統合
 
 リッチプッシュ通知s と`BrazeNotificationService` の統合に関するステップガイドについては、[チュートリアル](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications) を参照してください。
 
@@ -31,7 +41,7 @@
 
 1. Xコードでは、フレームワークとライブラリの下で、<i class="fas fa-plus"></i>追加アイコンを選択してフレームワークを追加します。<br><br>![プラスアイコンはXcodeのフレームワークとライブラリーの下にある。]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
 
-2. "BrazeNotificationService"フレームワークを選択します。<br><br>![BrazeNotificationServiceフレームワークは、開封されたモーダルで選択できる。]({% image_buster /assets/img_archive/rich_notification2.png %})
+2. "BrazeNotificationService"フレームワークを選択します。<br><br>![開封したモーダルで「BrazeNotificationService」フレームワークを選択できる。]({% image_buster /assets/img_archive/rich_notification2.png %})
 
 {% endtab %}
 {% tab CocoaPods %}
@@ -97,6 +107,17 @@ class NotificationService: UNNotificationServiceExtension {
 }
 ```
 
-### ステップ4: ダッシュボードでリッチプッシュ通知を作成する
+### ステップ 5: Brazeでのアプリグループの設定
 
-マーケティングチームは、ダッシュボードからリッチプッシュ通知を作成することもできます。プッシュコンポーザーを介してプッシュ通知を作成し、単に画像または GIF を添付するか、画像、GIF、または動画をホストする URL を指定します。アセットはプッシュ通知の受信時にダウンロードされるため、コンテンツをホスティングしている場合は、要求が大規模に同期的に急増することを想定する必要があります。
+Brazeを初期化する前に、アプリグループの名前をBraze設定の [`push.appGroup`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/appgroup)プロパティに割り当てる。
+
+```swift
+let configuration = Braze.Configuration(apiKey: "<YOUR-BRAZE-API-KEY>",
+                                        endpoint: "<YOUR-BRAZE-ENDPOINT>")
+configuration.push.appGroup = "REPLACE_WITH_APPGROUP"
+let braze = Braze(configuration: configuration)
+```
+
+### ステップ 6: ダッシュボードでリッチプッシュ通知を作成する
+
+マーケティングチームはダッシュボードからリッチプッシュ通知を作成することもできる。プッシュコンポーザーでプッシュ通知を作成し、画像やGIFを添付するか、画像・GIF・動画をホストしているURLを提供する。アセットはプッシュ通知の受信時にダウンロードされるため、コンテンツをホスティングしている場合は、要求が大規模に同期的に急増することを想定する必要があります。

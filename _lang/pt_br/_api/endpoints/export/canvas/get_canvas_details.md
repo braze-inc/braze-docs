@@ -31,7 +31,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Obrigatória | String | Consulte [Identificador da API do Canvas]({{site.baseurl}}/api/identifier_types/) |
-| `post_launch_draft_version` | Opcional | Booleano | Para as telas que têm um rascunho pós-lançamento, definir isso como `true` mostrará todas as alterações de rascunho disponíveis. O padrão é `false` |
+| `post_launch_draft_version` | Opcional | Booleano | Para Canvases que têm um rascunho pós-lançamento, definir isso como `true` mostrará quaisquer alterações de rascunho disponíveis. Padrões para `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
@@ -46,7 +46,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## Respostas
 
 {% alert note %}
-Todas as etapas do canva têm um campo `next_paths`, que é uma matriz de dados `{name, next_step_id}`. Para as etapas de mensagens, o campo `next_step_ids` estará presente, mas não conterá dados para outras etapas do Canva.
+Todas as etapas do canva têm um campo `next_paths`, que é uma matriz de dados `{name, next_step_id}`. Para etapas de Mensagem, o campo `next_step_ids` estará presente, mas não conterá dados para outras etapas de Canvas.
 {% endalert %}
 
 ```json
@@ -213,7 +213,7 @@ A seguir, um exemplo de resposta que inclui mensagens do Canva enviadas por dife
         }
       }
     }
-  ],
+  ]
 }
 ```
 

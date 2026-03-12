@@ -6,9 +6,9 @@ description: "Dieser Referenzartikel bietet einen Überblick über häufige Anwe
 search_rank: 2
 ---
 
-# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Mit Liquid
+# [![Braze Lernangebote-Kurs: ]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Verwendung von Liquid
 
-> Dieser Artikel zeigt, wie Sie eine Vielzahl von Nutzer:innen-Attributen verwenden können, um persönliche Informationen dynamisch in Ihre Nachrichten einzufügen.
+> Dieser Artikel zeigt, wie Sie verschiedene Attribute von Nutzer:innen verwenden können, um persönliche Informationen dynamisch in Ihr Messaging einzufügen.
 
 Liquid ist eine quelloffene Template-Sprache, die von Shopify entwickelt und in Ruby geschrieben wurde. Sie können es in Braze verwenden, um Nutzerprofil-Daten in Ihre Nachrichten zu ziehen und diese Daten anzupassen. Sie können beispielsweise Liquid-Tags verwenden, um bedingte Nachrichten zu erstellen, wie z. B. das Versenden verschiedener Angebote basierend auf dem Jahrestag des Abos einer Nutzerin oder eines Nutzers . Darüber hinaus können Filter Daten bearbeiten, z. B. das Registrierungsdatum einer Nutzerin oder eines Nutzers  von einem Zeitstempel in ein besser lesbares Format umwandeln, wie z. B. "15\. Januar 2022". Weitere Einzelheiten zur Liquid-Syntax und ihren Möglichkeiten finden Sie unter [Unterstützte Personalisierungs-Tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
@@ -37,7 +37,7 @@ Hi Valued User, thanks for using the App!
 ```
 
 {% alert important %}
-HTML-Kommentare (`<!-- -->`) werden entfernt, bevor Liquid gelesen wird. Liquid-Tags in HTML-Kommentaren werden also **nicht** in Ihrer Nachricht angezeigt. Für eine korrekte Darstellung stellen Sie sicher, dass alle Liquid-Tags, die Sie verwenden möchten, außerhalb von HTML-Kommentaren stehen.
+HTML-Kommentare (`<!-- -->`) werden entfernt, bevor Liquid gelesen wird, sodass Liquid-Tags innerhalb von HTML-Kommentaren **nicht** in Ihrer Nachricht dargestellt **werden**. Für eine korrekte Darstellung stellen Sie bitte sicher, dass sich alle Liquid-Tags, die Sie verwenden möchten, außerhalb von HTML-Kommentaren befinden.
 {% endalert %}
 
 ## Unterstützte Werte zum Ersetzen
@@ -68,6 +68,103 @@ Liquid folgt einer bestimmten Struktur oder Syntax, die Sie bei der dynamischen 
 1. **Verwenden Sie gerade Anführungszeichen in Braze:** Es gibt einen Unterschied zwischen geschweiften Anführungszeichen ('**')** und geraden Anführungszeichen ('**')**. Verwenden Sie gerade Anführungszeichen (**' '**) in Ihrem Liquid in Braze. Beim Kopieren und Einfügen aus bestimmten Texteditoren werden möglicherweise geschweifte Anführungszeichen angezeigt, was zu Problemen in Ihrem Liquid führen kann. Wenn Sie Angebote direkt in das Braze Dashboard eingeben, ist alles in Ordnung!
 2. **Die Klammern werden paarweise geliefert:** Jede Klammer muss sowohl geöffnet als auch geschlossen werden **{ }**. Achten Sie darauf, geschweifte Klammern zu verwenden!
 3. **If-Aussagen gibt es paarweise:** Für jede `if` benötigen Sie eine `endif`, um anzuzeigen, dass die Anweisung `if` beendet ist.
+4. **Variablennamen müssen ASCII-Zeichen verwenden:** Variablennamen für Liquids (erstellt mit`assign`  oder `capture`) unterstützen nur ASCII-Buchstaben, Ziffern und Unterstriche. Die Namen der Attribute der Personalisierung von Braze (innerhalb von`custom_attribute.${...}`  oder `event_properties.${...}`) können Nicht-ASCII-Zeichen enthalten.
+
+#### Wo werden Operatoren und Filter verwendet?
+
+Operatoren (wie `==`, `!=`, `>`, `and`, `or`) und Filter (wie `| size`, `| plus`) können jeweils nur in bestimmten Liquid-Kontexten verwendet werden.
+
+| Kontext | Operatoren | Filter |
+|-----------|-----------|---------|
+| `assign` | Nicht unterstützt | Unterstützt |
+| `if`, `elsif`, `unless` | Unterstützt | Nicht unterstützt |
+| `case`, `when` | Nicht unterstützt | Nicht unterstützt |
+| `for` | Nicht unterstützt | Nicht unterstützt |
+| Array-Zugriff (`[ ]`) | Nicht unterstützt | Nicht unterstützt |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+Wenn Sie einen gefilterten Wert in einem Kontext benötigen, der keine Filter unterstützt, weisen Sie das Ergebnis zunächst einer Variablen zu.
+
+{% raw %}
+
+##### Verwenden Sie ein Filterergebnis in einer Bedingung.
+
+Es ist nicht möglich, einen Filter direkt in einer bedingten Anweisung zu verwenden. Dies ist unkorrekt:
+
+```liquid
+{% if my_array | size > 3 %}
+You have more than 3 items!
+{% endif %}
+```
+
+Weisen Sie stattdessen das Ergebnis des Filters einer Variablen zu:
+
+```liquid
+{% assign array_size = my_array | size %}
+{% if array_size > 3 %}
+You have more than 3 items!
+{% endif %}
+```
+
+##### Verwenden Sie ein Ergebnis des Filters in einer for-Schleife
+
+Es ist nicht möglich, einen Filter auf das Iterable in einer`for`Schleife anzuwenden. Dies ist unkorrekt:
+
+```liquid
+{% for item in my_array | reverse %}
+{{ item }}
+{% endfor %}
+```
+
+Weisen Sie stattdessen den gefilterten Wert einer Variablen zu:
+
+```liquid
+{% assign reversed = my_array | reverse %}
+{% for item in reversed %}
+{{ item }}
+{% endfor %}
+```
+
+##### Verwenden Sie ein Ergebnis des Filters für den Array-Zugriff.
+
+Es ist nicht möglich, einen Filter innerhalb von eckigen Klammern zu verwenden. Dies ist unkorrekt:
+
+```liquid
+{{ my_array[my_var | minus: 1] }}
+```
+
+Weisen Sie stattdessen zuerst den Wert, der durch den Filter gefiltert wurde, zu:
+
+```liquid
+{% assign adjusted_index = my_var | minus: 1 %}
+{{ my_array[adjusted_index] }}
+```
+
+##### Speichern Sie ein Vergleichsergebnis in einer Variablen.
+
+Es ist nicht möglich, einen Operator in einer`assign`Anweisung zu verwenden. Dies ist unkorrekt:
+
+```liquid
+{% assign is_vip = total_spend > 100 %}
+{% if is_vip %}
+Welcome to the VIP lounge!
+{% endif %}
+```
+
+Verwenden Sie stattdessen eine Bedingung, um die Variable festzulegen:
+
+```liquid
+{% assign is_vip = false %}
+{% if total_spend > 100 %}
+{% assign is_vip = true %}
+{% endif %}
+
+{% if is_vip %}
+Welcome to the VIP lounge!
+{% endif %}
+```
+
+{% endraw %}
 
 #### Standardattribute und benutzerdefinierte Attribute
 
@@ -75,7 +172,7 @@ Liquid folgt einer bestimmten Struktur oder Syntax, die Sie bei der dynamischen 
 
 Wenn Sie den folgenden Text in Ihre Nachricht einfügen: `{{${first_name}}}` einfügen, wird der Vorname der Nutzerin oder des Nutzers (aus dem Profil der Nutzerin oder des Nutzers) ersetzt, wenn die Nachricht gesendet wird. Sie können dasselbe Format auch für andere Standardbenutzerattribute verwenden.
 
-Wenn Sie den Wert eines angepassten Attributs verwenden möchten, müssen Sie den Namespace "custom_attribute" zur Variablen hinzufügen. Wenn Sie zum Beispiel ein angepasstes Attribut mit dem Namen "Postleitzahl" verwenden möchten, würden Sie `{{custom_attribute.${zip code}}}` in Ihre Nachricht aufnehmen.
+Wenn Sie den Wert eines angepassten Attributs verwenden möchten, müssen Sie den Namespace"custom_attribute"zur Variablen hinzufügen. Wenn Sie zum Beispiel ein angepasstes Attribut mit dem Namen "Postleitzahl" verwenden möchten, würden Sie `{{custom_attribute.${zip code}}}` in Ihre Nachricht aufnehmen.
 
 ### Einfügen von Tags
 
@@ -85,7 +182,7 @@ Wenn Sie einen benutzerdefinierten Tag verwenden, können Sie diesen kopieren un
 
 #### Ausnahmen für doppelte Klammern
 
-Wenn Sie einen Tag innerhalb eines anderen Liquid-Tags verwenden, wie z.B. `{% assign %}` oder `{% if %}`, können Sie entweder doppelte Klammern oder keine Klammern verwenden. Nur wenn der Tag allein steht, muss er in doppelte Klammern eingeschlossen werden. Der Einfachheit halber können Sie immer doppelte Klammern verwenden. 
+Wenn Sie ein Tag innerhalb eines anderen Liquid-Tags verwenden, wie beispielsweise`{% assign %}`  oder `{% if %}`, können Sie entweder doppelte Klammern oder keine Klammern verwenden. Nur wenn der Tag allein steht, muss er in doppelte Klammern gesetzt werden. Zur Vereinfachung können Sie jederzeit doppelte Klammern verwenden. 
 
 Die folgenden Tags sind alle korrekt:
 
@@ -112,7 +209,7 @@ Wenn Sie Liquid in Ihren E-Mail-Nachrichten verwenden, sollten Sie darauf achten
 
 You can insert pre-formatted variables with defaults through the **Add Personalization** modal located near any templated text field.
 
-![Das Modal "Personalisierung hinzufügen", das nach dem Auswählen von "Personalisierung einfügen" erscheint. Das Modal enthält Felder für den Personalisierungstyp, das Attribut, den optionalen Standardattribut-Wert und zeigt eine Vorschau der Liquid-Syntax an.]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
+![Das Modal "Personalisierung hinzufügen", das nach dem Auswählen von "Personalisierung einfügen" erscheint. Das Modal verfügt über Felder für den Typ der Personalisierung, das Attribut und den optionalen Standardwert und zeigt eine Vorschau der Liquid-Syntax an.]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
 
 The modal will insert Liquid with your specified default value at the point where your cursor was. Die Einfügemarke wird auch durch das Vorschau-Feld angegeben, das den Text vor und nach dem Einfügen enthält. Wenn ein Textblock hervorgehoben ist, wird der hervorgehobene Text ersetzt.
 
