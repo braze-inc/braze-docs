@@ -52,7 +52,7 @@ For each **actionable** ticket:
 3. **Identify Target** - Which existing doc page should be updated? (or flag as new page)
 4. **Document source support case number** - Which case numbers were analyzed?
 
-### Output Format Per Ticket to output.md and chat console
+### Output Format Per Ticket to output--<ddmmyyyy>.md and chat console
 
 ```markdown
 ### Case: [CASE_ID]
@@ -138,7 +138,7 @@ Cursor identifies team members based on the CODEOWNERS file. If no owner is foun
 ## Example Prompt
 
 ```
-@support-analyzer.mdc Analyze the CSV file in _data/ and draft docs updates.
+@support-analyzer.mdc Analyze the CSV file in <directory with csv files> and draft docs updates.
 Focus on [specific product area] if applicable.
 ```
 
