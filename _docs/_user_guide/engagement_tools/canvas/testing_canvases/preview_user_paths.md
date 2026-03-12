@@ -101,7 +101,7 @@ Webhooks execute when test messages are sent, but not during the test run. Simil
 
 ## Context variables and Seed Groups
 
-Seed Groups send seed copies of email steps when a user reaches an email step in the Canvas. These seed copies are not sent as part of the Seed Group recipients' own Canvas journeys, so Braze does not execute [Context steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) or evaluate context variables for those recipients. If your email content references context variables, Seed Group recipients receive a seed copy without that data populated. To test messages that rely on context variable data, use the **Test Canvas** preview with test sends instead of Seed Groups.
+For a Message step with email as the messaging channel, Seed Groups send seed copies of emails when a user reaches this step in the Canvas. These seed copies are not sent as part of the Seed Group recipients' own Canvas journeys, so Braze does not execute [Context steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) or evaluate context variables for those recipients. If your email content references context variables, Seed Group recipients receive a seed copy without that data populated. To test messages that rely on context variable data, use the **Test Canvas** preview with test sends instead of Seed Groups.
 
 ## Use case
 
