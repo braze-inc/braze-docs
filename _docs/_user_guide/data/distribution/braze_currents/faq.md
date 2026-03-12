@@ -82,6 +82,10 @@ When you create a new campaign or Canvas, the name may take some time to propaga
 
 If your storage bucket is unavailable at the time of data transfer, that data is lost. Braze is not able to backfill events that were not successfully delivered. To avoid data loss, ensure your storage bucket is available and properly configured at all times.
 
+### Why do I see "You do not have any remaining Customer Behavior Events entitlements" when editing my Currents integration?
+
+This message can appear when you update an existing Currents integration and your workspace has reached its entitlement limit for Customer Behavior Events. Resolution is handled by your Customer Success Manager (CSM)—contact them to request an entitlement or adjust your configuration.
+
 ### How often does the schema ID update?
 
 Schema IDs are global across all event types and increment sequentially. Updates can occur at any time, and Braze will notify customers by email about upcoming changes. Each time a schema update occurs for any event type, the next available global ID is assigned. We recommend reading files recursively from the root path to handle schema ID changes. For more details, refer to [Avro schema changes]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics/#avro-schema-changes).
