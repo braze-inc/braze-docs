@@ -155,7 +155,11 @@ The **Preview** pane is an instance of the agent that shows up as a side-by-side
 
 1. In the **Test your agent** field, enter example customer data or customer responses—anything that reflects real scenarios your agent will handle.
 2. Preview the agent's response for a random user, existing user, or custom user.
-3. Select **Simulate response**. The agent will execute based on your configuration and display its response. Test runs count toward your daily execution limit.
+3. Select **Simulate response**. The agent will execute based on your configuration and display its response. 
+
+{% alert note %}
+Test runs count toward your daily execution limit.
+{% endalert %}
 
 ![Agent Console showing the Preview pane for testing a custom agent. The interface displays a Sample inputs field with example customer data, a Run test button, and a response area where the agent output appears.]({% image_buster /assets/img/ai_agent/custom_agent_test.png %})
 
