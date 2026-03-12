@@ -1,10 +1,10 @@
 {% multi_lang_include developer_guide/prerequisites/web.md %}
 
-## Les messages déclenchés
+## Déclencheurs de messages
 
 ## Types de déclencheurs
 
-Les messages in-app sont automatiquement déclenchés lorsque le SDK enregistre l'un des types d'événements personnalisés suivants : `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, et `Push Click`. Notez que les déclencheurs `Specific Purchase` et `Custom Event` contiennent également des filtres de propriété robustes.
+Les messages in-app sont automatiquement déclenchés lorsque le SDK enregistre l'un des types d'événements personnalisés suivants : `Any Purchase`, `Specific Purchase`,`Session Start` , `Custom Event`, et `Push Click`. Veuillez noter que les `Specific Purchase`déclencheurs`Custom Event` et contiennent également des filtres de propriétés robustes.
 
 {% alert note %}
 Les messages in-app ne peuvent pas être déclenchés par l'API ou par des événements de l'API, mais uniquement par des événements personnalisés enregistrés par le SDK. Pour en savoir plus sur la journalisation, reportez-vous à la section [Journalisation des événements personnalisés]({{site.baseurl}}/developer_guide/analytics/logging_events/).
@@ -12,15 +12,15 @@ Les messages in-app ne peuvent pas être déclenchés par l'API ou par des évé
 
 ### Sémantiques de livraison
 
-Tous les messages in-app éligibles sont envoyés à l'appareil d'un utilisateur au début de sa session. Lorsqu'il est livré, le SDK prélève les ressources de manière à ce qu'elles soient disponibles au moment du déclenchement, ce qui minimise la latence d'affichage. Si l'événement déclencheur comporte plusieurs messages in-app éligibles, seul le message ayant la priorité la plus élevée sera délivré.
+Tous les messages in-app éligibles sont envoyés sur l'appareil de l'utilisateur au début de sa session. À la livraison, le SDK préchargera les ressources afin qu'elles soient disponibles au moment du déclencheur, ce qui minimisera la latence d'affichage. Si l'événement déclencheur comporte plusieurs messages in-app éligibles, seul le message ayant la priorité la plus élevée sera délivré.
 
-Pour plus d'informations sur la sémantique de démarrage de session du SDK, reportez-vous à la[sectionCycle de vie d']({{site.baseurl}}/developer_guide/platform_integration_guides/analytics/tracking_sessions/)une session.
+Pour plus d'informations sur la sémantique de démarrage de session du SDK, veuillez [consulter la section Cycle de vie de la session]({{site.baseurl}}/developer_guide/platform_integration_guides/analytics/tracking_sessions/).
 
 ### Limites de débit
 
 Par défaut, vous pouvez envoyer un message in-app une fois toutes les 30 secondes.
 
-Pour outrepasser cela, ajoutez la propriété suivante à votre configuration Braze - avant que l'instance Braze ne soit initialisée. Vous pouvez lui attribuer un nombre entier positif, qui représente l'intervalle de temps minimum en secondes. Par exemple :
+Pour contourner cela, veuillez ajouter la propriété suivante à votre configuration Braze, avant l'initialisation de l'instance Braze. Vous pouvez le définir sur n'importe quel nombre entier positif, qui représente l'intervalle de temps minimum en secondes. Par exemple :
 
 ```javascript
 // Sets the minimum time interval between triggered in-app messages to 5 seconds instead of the default 30
@@ -29,7 +29,7 @@ braze.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSeconds
 
 ## Paires clé-valeur
 
-Lorsque vous créez une campagne dans Braze, vous pouvez définir des paires clé-valeur en tant que `extras`, que l'objet de message in-app peut utiliser pour envoyer des données à votre application. Par exemple :
+Lorsque vous créez une campagne dans Braze, vous pouvez définir des paires clé-valeur que l'objet de message in-app peut utiliser pour`extras` envoyer des données à votre application. Par exemple :
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -56,9 +56,9 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 
 ## Désactivation des déclencheurs automatiques
 
-Pour empêcher les messages in-app de se déclencher automatiquement :
+Pour éviter que les messages in-app ne se déclenchent automatiquement :
 
-Supprimez l'appel à `braze.automaticallyShowInAppMessages()` dans votre extrait de code, puis créez une logique personnalisée pour gérer l'affichage ou non des messages in-app.
+Veuillez supprimer l'appel à`braze.automaticallyShowInAppMessages()`  dans votre extrait de code de chargement, puis créez une logique personnalisée pour gérer l'affichage ou non des messages in-app.
 
 ```javascript
 braze.subscribeToInAppMessage(function(inAppMessage) {
@@ -81,7 +81,7 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 ```
 
 {% alert important %}
-Si vous ne supprimez pas `braze.automaticallyShowInAppMessages()` de votre site web, puis appelez `braze.showInAppMessage`, le message peut s'afficher plusieurs fois.
+Si vous ne supprimez `braze.automaticallyShowInAppMessages()`pas  de votre site Web, veuillez contacter `braze.showInAppMessage`, le message pourrait s'afficher à plusieurs reprises.
 {% endalert %}
 
 Le paramètre `inAppMessage` sera une sous-classe [`braze.InAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html) ou un objet [`braze.ControlMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.controlmessage.html), chacun ayant des méthodes différentes d’abonnement aux événements de cycle de vie. Voir les [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html) pour une documentation complète.
@@ -101,11 +101,11 @@ Les messages in-app peuvent également être créés dans l’application et aff
   braze.showInAppMessage(message);
 ```
 
-## Déclenchement des messages d'intention de sortie
+## Déclenchement de messages d'intention de sortie
 
-Les messages d'intention de sortie sont des messages in-app non perturbateurs utilisés pour communiquer des informations importantes aux visiteurs avant qu'ils ne quittent votre site.
+Les messages d'intention de sortie sont des messages in-app qui ne perturbent pas l'expérience utilisateur et qui servent à communiquer des informations importantes aux visiteurs avant qu'ils ne quittent votre site.
 
-Pour mettre en place des déclencheurs pour ces types de messages, mettez en œuvre une bibliothèque d'intention de sortie sur votre site web (telle que la [bibliothèque open-source de ouibounce](https://github.com/carlsednaoui/ouibounce)), puis utilisez le code suivant pour enregistrer `'exit intent'` en tant qu'événement personnalisé dans Braze. Désormais, vos futures campagnes de messages in-app peuvent utiliser ce type de message comme déclencheur d'événement personnalisé.
+Pour configurer des déclencheurs pour ces types de messages, veuillez implémenter une bibliothèque d'intention de sortie sur votre site web (telle que [la bibliothèque open source ouibounce](https://github.com/carlsednaoui/ouibounce)), puis utilisez le code suivant pour enregistrer`'exit intent'`un événement personnalisé dans Braze. Désormais, vos futures campagnes de messages in-app peuvent utiliser ce type de message comme déclencheur d'événement personnalisé.
 
 ```javascript
   var _ouibounce = ouibounce(false, {

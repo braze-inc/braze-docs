@@ -153,6 +153,11 @@ defaults:
     values:
       nav_level: 1
   - scope:
+      path: "_docs/_partners/home.md"
+      type: "partners"
+    values:
+      layout: "partner_page"
+  - scope:
       path: ""
       type: "releases"
     values:

@@ -93,60 +93,60 @@ Nombre de caractères | Combien de segments ? |
 ### Calculateur de segments SMS {#segment-calculator}
 ---
 
-{% include alerts/tip_alerts.md alert='SMS segment calculator' %}
+{% multi_lang_include alerts/tip_alerts.md alert='SMS segment calculator' %}
 
-## Envoi de messages RCS
+## Facturation des messages RCS
 
-Les messages RCS sont facturés en fonction de leur contenu et du pays dans lequel le message est délivré. Pour estimer précisément les coûts, il est essentiel de comprendre les différents types de messages et la manière dont ils sont facturés.
+Les messages RCS sont facturés en fonction de leur contenu et du pays dans lequel ils sont envoyés. Pour estimer les coûts avec précision, il est essentiel de comprendre les différents types de messages et leur mode de facturation.
 
 ### Types de facturation RCS
 
-Notre plateforme prend en charge deux modèles de facturation principaux : un modèle mondial et un modèle américain.
+Notre plateforme prend en charge deux principaux modèles de facturation : un modèle global et un modèle américain.
 
-#### Modèle mondial (marchés non américains)
+#### Modèle mondial (marchés hors États-Unis)
 
-Les messages sont facturés à l'unité et sont classés en deux catégories : les messages de base et les messages uniques.
+Les messages sont facturés à l'unité et classés comme « basiques » ou « uniques ».
 
 {% tabs local %}
 {% tab Basic %}
 
-Les messages RCS de base sont des messages de texte uniquement, d'une longueur maximale de 160 caractères, et sont facturés comme un seul message.
+Les messages RCS de base sont des messages texte pouvant contenir jusqu'à 160 caractères et sont facturés comme un seul message.
 
 {% alert note %}
-L'ajout de boutons ou de tout autre élément riche modifiera le type de message en un message RCS unique.
+L'ajout de boutons ou de tout autre élément enrichi transformera le type de message en message RCS unique.
 {% endalert %}
 
 {% endtab %}
 {% tab Single %}
 
-Les messages RCS simples sont des messages de plus de 160 caractères OU comprenant des éléments riches tels que des boutons ou des médias. Ceux-ci sont facturés comme un seul message, quelle que soit la longueur du message.
+Les messages RCS simples sont des messages qui dépassent 160 caractères OU qui contiennent des éléments enrichis tels que des boutons ou des médias. Ces messages sont facturés comme un seul message, quelle que soit leur longueur.
 
 {% alert note %}
-L'envoi d'un message texte et d'un fichier multimédia séparé est toujours facturé comme deux messages distincts.
+L'envoi d'un SMS et d'un fichier multimédia séparé est toujours facturé comme deux messages distincts.
 {% endalert %}
 
 {% endtab %}
 {% endtabs %}
 
-#### Modèle des États-Unis
+#### Modèle américain
 
-Les messages sont classés dans les catégories Rich Media ou Rich Media.
+Les messages sont classés dans deux catégories : Rich ou Rich Media.
 
 {% tabs local %}
 {% tab Rich messages %}
 
-Les messages enrichis sont des messages en texte seul avec ou sans bouton. Ils sont facturés par segment, chaque segment étant limité à 160 octets UTF-8, ce qui signifie que **le nombre de caractères par segment n'est pas fixe**. Un message ne comportant que 160 caractères en anglais simple constitue un segment, tandis qu'un message comportant un texte plus long et des emojis peut constituer plusieurs segments.
+Les messages enrichis sont des messages contenant uniquement du texte, avec ou sans boutons. Ils sont facturés par segment, chaque segment étant limité à 160 octets UTF-8, ce qui signifie que **le nombre de caractères par segment n'est pas fixe**. Un message contenant seulement 160 caractères en anglais simple constitue un segment, mais un message avec un texte plus long et des emojis peut être divisé en plusieurs segments.
 
 {% endtab %}
 {% tab Rich media messages %}
 
-Les messages Rich Media comprennent un fichier média (image, vidéo) ou une Rich Card et sont facturés comme un message unique.
+Les messages multimédias enrichis comprennent un fichier multimédia (image, vidéo) ou une carte enrichie et sont facturés comme un seul message.
 
 {% endtab %}
 {% endtabs %}
 
-### Compositeur de messages et tableau de bord de l'utilisation des messages
+### Éditeur de messages et tableau de bord d'utilisation des messages
 
-Lorsque vous créez votre message, le compositeur de messages affiche le type de facturation en temps réel par le biais d'un libellé (RCS de base, RCS unique, Rich ou Rich Media), ce qui vous permet de suivre les coûts avant l'envoi.
+Lorsque vous rédigez votre message, l'éditeur de message affiche le type de facturation en temps réel à l'aide d'une étiquette (RCS basique, RCS unique, Rich ou Rich Media), ce qui vous permet de suivre les coûts avant l'envoi.
 
-Votre [tableau de bord de l'utilisation des messages]({{site.baseurl}}/message_usage_dashboard/) reflétera ces types de facturation et indiquera le nombre de segments utilisés pour les messages américains, offrant ainsi une vue transparente de votre consommation de crédits de messages.
+Votre [tableau de bord d'utilisation des messages]({{site.baseurl}}/message_usage_dashboard/) reflétera ces types de facturation et indiquera le nombre de segments utilisés pour les messages aux États-Unis, offrant ainsi une vue claire de votre consommation de crédits de messages.

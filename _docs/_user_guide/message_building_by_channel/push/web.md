@@ -59,7 +59,7 @@ The following browsers support web push notifications.
 {% multi_lang_include alerts/important_alerts.md alert='Web push private browsing' %}
 
 - Chrome (and Chrome for Android mobile)
-- Safari
+- Safari (version 16 or newer)
 - Firefox (and Firefox for Android mobile)
 - Opera
 - Edge

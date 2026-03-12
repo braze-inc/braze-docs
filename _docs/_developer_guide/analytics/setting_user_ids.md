@@ -18,9 +18,17 @@ For wrapper SDKs not listed, use the relevant native Android or Swift method ins
 
 {% multi_lang_include anonymous_users/about_anonymous_users.md %}
 
+### Preventing anonymous user tracking
+
+If your use case requires that no data is collected before a user is identified, you can delay initializing the Braze SDK until the user logs in and an `external_id` is available. Set a flag in your code that flips to `true` when the user signs in, and only initialize the SDK when that flag is set.
+
+{% alert warning %}
+Only delay initialization the **first time** a user downloads your app (before an `external_id` is set). If you prevent the SDK from initializing every time a user signs out or starts a new session, it will interfere with prefetching in-app message and Content Card assets, which can lead to deliverability errors for those campaigns.
+{% endalert %}
+
 ## Setting a user ID
 
-To set a user ID, call the `changeUser()` method after the user initially log ins. IDs should be unique and follow our [naming best practices](#naming-best-practices).
+To set a user ID, call the `changeUser()` method after the user initially logs in. IDs should be unique and follow our [naming best practices](#naming-best-practices).
 
 If you're hashing a unique identifier instead, be sure to normalize the input of your hashing function. For example, when hashing an email address, remove any leading or trailing spaces and account for localization.
 
@@ -84,6 +92,12 @@ m.Braze.setUserId(YOUR_USER_ID_STRING)
 {% tab UNITY %}
 ```csharp
 AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
+```
+{% endtab %}
+
+{% tab REACT NATIVE %}
+```javascript
+Braze.changeUser("YOUR_USER_ID_STRING");
 ```
 {% endtab %}
 {% endtabs %}
@@ -151,6 +165,12 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
   "alias_name" : (required, string),
   "alias_label" : (required, string)
 }
+```
+{% endtab %}
+
+{% tab react native %}
+```javascript
+Braze.addAlias("ALIAS_NAME", "ALIAS_LABEL");
 ```
 {% endtab %}
 {% endtabs %}

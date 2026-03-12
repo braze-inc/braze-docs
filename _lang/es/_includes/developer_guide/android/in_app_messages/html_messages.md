@@ -2,14 +2,14 @@
 
 ## Acerca de los mensajes HTML
 
-Con la interfaz JavaScript de Braze, puedes aprovechar Braze dentro de las WebViews personalizadas de tu aplicación. El [`InAppMessageJavascriptInterface`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.jsinterface/-in-app-message-javascript-interface/index.html) es responsable de:
+Con la interfaz JavaScript de Braze, puedes aprovechar Braze dentro de las vistas web personalizadas de tu aplicación. El/La[`InAppMessageJavascriptInterface`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.jsinterface/-in-app-message-javascript-interface/index.html)  es responsable de:
 
-1. Inyectando el puente JavaScript Braze en tu WebView, como se indica en la Guía del usuario [: Mensajes HTML dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages).
-2. Pasar los métodos puente recibidos de tu WebView al [SDK de Android Braze](https://github.com/braze-inc/braze-android-sdk).
+1. Inyecta el puente JavaScript Braze en tu WebView, tal y como se describe en la Guía[ del usuario: Mensajes HTML dentro de]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) la aplicación.
+2. Pasar los métodos bridge recibidos de tu WebView al [SDK](https://github.com/braze-inc/braze-android-sdk) de [Braze para Android](https://github.com/braze-inc/braze-android-sdk).
 
 ## Añadir la interfaz a una WebView
 
-Puedes utilizar la funcionalidad Braze desde una WebView en tu aplicación añadiendo la interfaz JavaScript Braze a tu WebView. Una vez añadida la interfaz, la misma API disponible para [Guía del usuario: Los mensajes HTML dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) estarán disponibles dentro de tu WebView personalizada.
+Puedes utilizar la funcionalidad Braze desde una WebView en tu aplicación añadiendo la interfaz JavaScript Braze a tu WebView. Una vez añadida la interfaz, la misma API disponible para la Guía[ del usuario: Los mensajes HTML dentro de ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages)la aplicación estarán disponibles en tu WebView personalizada.
 
 {% tabs %}
 {% tab JAVA %}
@@ -54,11 +54,11 @@ A continuación se muestra un ejemplo de un video de YouTube incrustado en un fr
 </body>
 ```
 
-## Utilizar vínculos en profundidad
+## Uso de vínculos profundos
 
-Cuando utilices vínculos profundos o vínculos externos en mensajes dentro de la aplicación HTML de Android, **no** llames a `brazeBridge.closeMessage()` en tu JavaScript. La lógica interna del SDK cierra automáticamente el mensaje dentro de la aplicación cuando redirige a un enlace. Llamar a `brazeBridge.closeMessage()` interfiere con este proceso y puede hacer que el mensaje no responda cuando los usuarios vuelvan a tu aplicación. 
+Cuando utilices vínculos profundos o enlaces externos en mensajes HTML dentro de aplicaciones Android, **no** llames a`brazeBridge.closeMessage()`  en tu JavaScript. La lógica interna del SDK cierra automáticamente el mensaje dentro de la aplicación cuando redirige a un enlace. Las llamadas`brazeBridge.closeMessage()`interfieren en este proceso y pueden provocar que el mensaje deje de responder cuando los usuarios vuelvan a la aplicación. 
 
-El siguiente es un ejemplo de vínculo profundo en un fragmento de código:
+A continuación se muestra un ejemplo de un vínculo profundo en un fragmento de código:
 
 {% raw %}
 ```javascript

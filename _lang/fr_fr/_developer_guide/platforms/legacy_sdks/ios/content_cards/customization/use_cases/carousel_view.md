@@ -13,7 +13,7 @@ noindex: true
 
 # Cas d’utilisation : Vue carrousel
 
-![Exemple d'application d'actualités montrant un carrousel de cartes de contenu dans un article.]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Exemple d'application d'actualités présentant un carrousel de cartes de contenu dans un article.]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 Cette section couvre l’implémentation d’un flux de carrousel multi-cartes dans lequel un utilisateur peut faire glisser horizontalement pour afficher des cartes en vedette supplémentaires. Pour intégrer une vue carrousel, vous devrez utiliser une carte de contenu entièrement personnalisée - la phase d'exécution de l ['approche "crawl, walk, run" (ramper, marcher, courir).]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches)
 

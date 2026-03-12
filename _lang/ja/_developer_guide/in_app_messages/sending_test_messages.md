@@ -1,6 +1,6 @@
 ---
-nav_title: メッセージをテストする
-article_title: Braze SDKのテストメッセージを送信する。
+nav_title: メッセージングのテスト
+article_title: Braze SDKのテストメッセージを送信する
 page_order: 10.0
 description: "Braze SDKのテストメッセージの送信方法を学習する。"
 ---

@@ -1,180 +1,251 @@
+# SMS e remetentes RCS
 
-# Enviando Números de Telefone
+> Este artigo fornece uma visão geral dos códigos e remetentes disponíveis para o envio de mensagens SMS e RCS.
 
-Códigos curtos e longos são o número de telefone de onde você envia mensagens para seus usuários ou clientes. Eles podem ser códigos curtos de 5 a 6 dígitos ou códigos longos de 10 dígitos. Cada tipo de código oferece benefícios específicos e todos os fatores devem ser considerados antes de escolher se você deseja um código curto, que tipo de código curto você pode querer, além do código longo que você já será atribuído.
-
-## Tipos de envio de números
+## Tipos de remetentes SMS e RCS
 
 {% tabs %}
-{% tab Códigos Curtos %}
+{% tab RCS-Verified Sender %}
 
-#### Códigos curtos
+#### Remetente verificado RCS
 
-Um código curto é uma sequência memorável de 5 a 6 dígitos que permite que os remetentes enviem mensagens a taxas mais altas do que os códigos longos. Isso torna os códigos curtos perfeitos para envios em grande volume e sensíveis ao tempo.
+RCS é um sistema de mensagens moderno que oferece mais recursos do que o SMS tradicional, introduzindo capacidades como IDs de remetente de marca, mídia rica e conteúdo interativo, como carrosséis roláveis, respostas rápidas, botões de CTA e mais. Ele é projetado para proporcionar uma experiência do usuário mais elegante e envolvente.  
 
 ##### Informações
 
-| Comprimento | Acesso | Throughput | MMS habilitado | 1-via vs. 2 vias |
+| Componentes visuais | Acesso | Throughput | MMS habilitado | 1-via vs. 2 vias |
 | --- | --- | --- | --- | --- |
-| 5-6 dígitos | aplicação de 8 a 12 semanas| 100 mensagens por segundo ou mais | Sim | 2 vias |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
+| \- Nome da marca<br>\- logotipo<br>\- legenda opcional<br> \- selo verificado | 4 a 6 semanas para aprovação da operadora | A taxa de transferência e a entrega dependem do destinatário ter uma conexão de dados ativa (dados móveis ou Wi-Fi). RCS não depende de limites impostos por redes fixas como o SMS; as mensagens RCS são enviadas por redes de dados em vez dos canais de sinalização celular tradicionais usados pelo SMS. | N/D | 2 vias |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
 ##### Prós e contras
 
 | Prós |
 | ---- |
-| **Velocidade e escalabilidade**<br> Códigos curtos oferecem velocidade e escalabilidade com taxas de envio de 100 segmentos por segundo, 6.000 segmentos por minuto, 360 mil segmentos por hora e 1 milhão de segmentos a cada 2 horas. Os códigos curtos podem atingir taxas tão altas devido à verificação que é necessária durante o processo de solicitação do código curto.<br><br>**MMS habilitado para alguns códigos curtos**<br>Alguns códigos curtos podem ser compatíveis com MMS, também conhecido como Serviço de Mensagens Multimídia, permitindo que você envie mensagens contendo ativos multimídia (JPEG, GIF, PNG) para telefones celulares. Para saber mais sobre MMS na Braze, consulte [Sobre MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/). |
-{: .reset-td-br-1}
+| **Confiança e branding verificados**<br> Diferente do SMS tradicional, onde sua marca aparece como um código curto aleatório de 5 dígitos ou um código longo, o RCS permite perfis de remetente verificados. Esses perfis incluem o logotipo, nome e um símbolo de "verificado" da sua marca. |
+| **Recursos de mensagens ricas**<br> O RCS suporta carrosséis, vídeos em alta resolução e botões de ação sugeridos (como "Reservar agora", "Rastrear pacote" ou "Pagar conta"). Os usuários podem completar tarefas complexas sem sair de seu aplicativo de mensagens, o que pode levar a taxas de conversão mais altas do que um link de texto simples. |
+{: .reset-td-br-1 role="presentation"}
 
 | Contras |
 | ---- |
-| **Os códigos curtos estão disponíveis em menos países**<br> Os códigos curtos estão atualmente disponíveis em certos países, incluindo os EUA, Reino Unido e Canadá.<br><br>**Processo de aplicação mais longo**<br> Um processo de aplicação envolvente onde os casos de uso devem ser delineados em grande detalhe é necessário. Isso é necessário para permitir a entregabilidade porque, após a concessão de um código curto, as operadoras auditarão códigos curtos, mas **não** filtrarão mensagens, permitindo taxas de envio mais altas. O comprimento deste processo varia dependendo do país.<br><br>**Maior custo**<br> Os códigos curtos custam mais do que os códigos longos e levam mais tempo para serem aprovados. No entanto, após obter um código curto, você é considerado "pré-aprovado" para enviar mensagens a taxas melhores e mais rápidas e está sujeito a menos requisitos durante o processo de envio, uma vez que você terá passado por todas as verificações durante sua solicitação do código curto. |
-{: .reset-td-br-1}
+| **Suporte fragmentado**<br> Embora o Google tenha promovido fortemente o RCS para Android, e a Apple tenha recentemente introduzido suporte ao RCS para iOS, a implementação ainda pode ser desigual entre diferentes operadoras e regiões. Se o telefone ou a operadora de um usuário não suportar RCS, a mensagem geralmente é enviada como um SMS simples, perdendo, consequentemente, todos os recursos "ricos" do RCS. |
+| **Inconsistências na plataforma**<br> A experiência do usuário do RCS varia dependendo da operadora do destinatário, do modelo do dispositivo e do aplicativo de mensagens que eles usam (por exemplo, Google Messages ou iMessage). |
+{: .reset-td-br-1 role="presentation"}
 
 {% endtab %}
-{% tab Códigos Longos %}
+{% tab SMS Short Codes %}
 
-#### Códigos longos
+#### Códigos curtos de SMS
 
-Um código longo é um número de telefone padrão usado para enviar e receber chamadas de voz e mensagens SMS. Os números de telefone são tipicamente chamados de "códigos longos" (números de 10 dígitos em muitos países) quando comparados com os códigos curtos de SMS (números de 5-6 dígitos).
+Um código curto é um número de 5-6 dígitos que pode enviar e receber SMS de e para telefones móveis a taxas mais rápidas do que códigos longos. Códigos curtos são recomendados para envios de alto volume e sensíveis ao tempo.
+
+Alguns países permitem que você escolha um número específico por uma taxa adicional. Esses códigos curtos são chamados de códigos curtos de vaidade. Se você estiver interessado em códigos curtos de vaidade, entre em contato com seu representante de conta da Braze para mais detalhes.
 
 ##### Informações
 
 | Comprimento | Acesso | Throughput | MMS habilitado | 1-via vs. 2 vias |
 | --- | --- | --- | --- | --- |
-| 10 dígitos | Aplicação de 4 a 6 semanas (pode ser mais curta ou mais longa para diferentes países) | Nos EUA, a capacidade depende do seu escore de confiança 10DLC; em mercados internacionais, a capacidade pode variar ou ser aumentada em algumas circunstâncias. | Sim | 2 vias (dependendo de onde você está enviando) |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
+| 5-6 dígitos | Aplicação de 4-12 semanas| 100 mensagens por segundo ou mais | Sim | 2 vias |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
 ##### Prós e contras
 
 | Prós |
 | ---- |
-| **Pode ser usado imediatamente para enviar mensagens (para certos países)**<br>Códigos longos proporcionam uma experiência de cliente localizada e pessoal ao enviar mensagens para casos de uso de pessoa para pessoa. Ao contrário dos códigos curtos de SMS, adquirir um código longo é um processo bastante rápido para alguns países. (Para outros países, leva tanto tempo quanto ou mais do que um código curto.) Códigos longos também podem ser definidos como um número de fallback se um código curto falhar.<br><br>**Maior disponibilidade mundial**<br>Códigos longos estão disponíveis em mais de 100 países importantes em todo o mundo. Por favor, entre em contato com seu gerente de sucesso do cliente ou [suporte]({{site.baseurl}}/braze_support/) da Braze para uma lista de países disponíveis.<br><br>**MMS habilitado para certos países**<br>Compatível com MMS, também conhecido como Serviço de Mensagens Multimídia, permitindo que você envie mensagens contendo ativos multimídia (JPEG, GIF, PNG) para telefones celulares. Para saber mais sobre MMS na Braze, confira nossa documentação [aqui]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/).|
+| **Velocidade e escalabilidade**<br> Códigos curtos são especificamente projetados para tráfego de alto volume. Eles podem enviar mensagens a taxas mais rápidas do que códigos longos e, como são pré-aprovados diretamente pelas operadoras, têm o menor risco de serem sinalizados por filtros de spam automatizados. |
+| **Memorabilidade fácil para "Chamada à Ação"**<br> Para campanhas de marketing, (por exemplo, "Envie WIN para 55555"), um código curto é muito mais fácil para os usuários lembrarem e digitarem do que um número de 10 dígitos. Isso torna os códigos curtos o padrão ouro para anúncios de rádio, TV e outdoors, onde o usuário tem apenas alguns segundos para ver ou ouvir o número. |
+{: .reset-td-br-1 role="presentation"}
+
+| Contras |
+| ---- |
+| **Os códigos curtos estão disponíveis em menos países**<br> Códigos curtos não estão disponíveis em todos os países. Entre em contato com sua equipe de conta da Braze para perguntar sobre os países nos quais você planeja enviar mensagens. |
+| **Processo de aplicação mais longo**<br> Ao contrário de códigos longos e IDs de remetente alfanuméricos, que podem ser provisionados em 1-2 semanas às vezes, um código curto pode levar de 4 a 12 semanas ou mais para ser provisionado. Todo grande operador deve aprovar manualmente sua aplicação específica antes que o código esteja ativo em sua rede. Se você tem um lançamento de marketing na próxima semana, um código curto não é uma opção. |
+| **Maior custo**<br> Códigos curtos tendem a ser o tipo de remetente mais caro devido às taxas de configuração e aluguel anual. |
+{: .reset-td-br-1 role="presentation"}
+
+{% endtab %}
+{% tab SMS Long Codes %}
+
+#### Códigos longos de SMS
+
+Um código longo é um número de telefone padrão usado para enviar e receber mensagens SMS. Esses números de telefone são tipicamente chamados de "códigos longos" (números longos de 10 dígitos em muitos países) quando comparados com códigos curtos de SMS (números de 5-6 dígitos).
+
+##### Informações
+
+| Comprimento | Acesso | Throughput | MMS habilitado | 1-via vs. 2 vias |
+| --- | --- | --- | --- | --- |
+| 10 dígitos | Aplicação de 4 a 6 semanas (pode ser mais curta ou mais longa para diferentes países) | Nos Estados Unidos, a capacidade de envio de códigos longos depende do seu score de confiança 10DLC; em mercados internacionais, a capacidade pode variar ou aumentar em algumas circunstâncias, mas normalmente começa em torno de 10 segmentos de mensagem por segundo (MPS). | Sim | 2 vias (dependendo de onde você está enviando) |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+##### Prós e contras
+
+| Prós |
+| ---- |
+| **Familiaridade e confiança**<br> Códigos longos parecem números de telefone pessoais, frequentemente incluindo um código de área local. Para as marcas, isso representa um equilíbrio entre presença profissional e uma sensação pessoal e acessível. |
+| **Maior disponibilidade mundial**<br>Códigos longos estão disponíveis em mais de 100 países importantes em todo o mundo. Entre em contato com seu gerente de sucesso do cliente ou [suporte da Braze]({{site.baseurl}}/braze_support/) para uma lista de países disponíveis.|
 {: .reset-td-br-1}
 
 | Contras |
 | --- |
-| **Velocidades de envio mais lentas**<br>Códigos longos não correspondem à velocidade e ao envio de códigos curtos. As taxas de envio de SMS dependem da sua pontuação de confiança 10DLC nos EUA. |
-{: .reset-td-br-1}
+| **Velocidades de envio mais lentas e limites diários de mensagens**<br> Códigos longos não são feitos para marketing de "explosão" da mesma forma que os códigos curtos são. Se você tentar enviar uma venda relâmpago sensível ao tempo para 100.000 pessoas de uma só vez a partir de um código longo, pode levar horas para todas as mensagens serem entregues. Nos EUA, operadoras como a T-Mobile também podem impor limites diários de envio para 10DLC com base no score de confiança da sua marca. |
+| **Risco de filtragem mais rigorosa**<br> Como os códigos longos parecem números de telefone pessoais, as operadoras os monitoram de perto para evitar que números "pessoa-a-pessoa" sejam usados para spam. Mesmo com uma campanha 10DLC registrada, se o conteúdo da sua mensagem for muito "spam" ou não seguir uma formatação rigorosa, você tem um risco muito maior de ser bloqueado pelas operadoras em comparação com um código curto pré-aprovado. |
+{: .reset-td-br-1 role="presentation"}
 
 {% endtab %}
-{% tab Código personalizados %}
+{% tab SMS Alphanumeric Sender ID %}
 
-#### Códigos curtos personalizados
+#### ID de remetente alfanumérico de SMS
 
-Um código curto personalizado é um número de telefone de 5 a 6 dígitos que é especificamente selecionado por uma marca. Os códigos personalizados são marcados e mais fáceis para os consumidores lembrarem, embora sejam geralmente mais caros. Por exemplo:
-- O departamento de saúde de NYC tem um código curto personalizados de `692-692` que soletra NYC-NYC em um teclado de telefone.
-- A Amazon usa um código curto de `262-966` que soletra AMA-ZON para atualizações de rastreamento de remessas.
-- O PayPal usa um código curto de `729-725` que soletra PAY-PAL para comandos de mensagem de texto.<br><br>
+Um ID de remetente alfanumérico (frequentemente chamado de "alpha") é uma string reconhecível composta por qualquer combinação de letras e números (geralmente o nome da sua empresa ou marca) exibida como o ID do remetente para mensagens de texto unidirecionais.
+
+Eles podem ter até 11 caracteres e conter letras maiúsculas (A-Z) e minúsculas (a-z), espaços e dígitos (0-9). Eles **não** podem conter apenas números.
 
 ##### Informações
 
 | Comprimento | Acesso | Throughput | MMS habilitado | 1-via vs. 2 vias |
 | --- | --- | --- | --- | --- |
-| 5-6 dígitos | aplicação de 8 a 12 semanas | 100 mensagens por segundo | Sim | 2 vias |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
+| Até 11 caracteres | Disponível imediatamente se o pré-cadastro não for necessário. Caso contrário, 1-4 semanas na maioria dos países onde o registro é necessário. | Varia dependendo do país | Não | 1-via |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+##### Prós e contras
+
+| Prós | Contras |
+| ---- | ---- | 
+| {::nomarkdown} <ul><li> Reconhecimento de marca aprimorado </li><li> Em muitos mercados internacionais, as operadoras locais pré-cadastram e verificam remetentes alfanuméricos, para que suas mensagens tenham menos chances de serem capturadas em filtros de spam agressivos das operadoras que poderiam bloquear códigos longos aleatórios. </li><li> Disponível em 1 semana se o pré-cadastro não for necessário. </li></ul> {:/} | {::nomarkdown} <ul><li> <a href='/docs/user_guide/message_building_by_channel/sms/keywords/#two-way-messaging-custom-keyword-responses/'>Comunicação bidirecional</a> não é suportada </li><li> Nem todos os países suportam esse recurso. Por exemplo, é suportado no Reino Unido, mas é bloqueado nos EUA. </li><li> Alguns países têm um extenso processo de pré-cadastro que requer a apresentação de documentação legal e prazos mais longos. </li></ul> {:/} |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+Para saber mais sobre IDs de remetentes alfanuméricos, entre em contato com seu gerente de sucesso do cliente.
+{% endtab %}
+{% tab SMS toll-free numbers %}
+
+#### Números gratuitos habilitados para SMS
+
+Números gratuitos têm códigos de área distintos de três dígitos (por exemplo, 800, 888, 877 e 866), permitindo que os usuários entrem em contato com empresas sem serem cobrados. Amplamente utilizados para atendimento ao cliente, eles também podem lidar com todos os tipos de envio de mensagens A2P (aplicação para pessoa), incluindo marketing.
+
+##### Informações
+
+| Comprimento | Acesso | Throughput | MMS habilitado | 1-via vs. 2 vias |
+| --- | --- | --- | --- | --- |
+| 10 dígitos	 | Aplicação de 2 a 4 semanas | Começa em 3 MPS (segmentos por segundo), podendo ser aumentado por taxas adicionais. | Sim | 2 vias |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
 ##### Prós e contras
 
 | Prós |
 | ---- |
-| **Velocidade e escalabilidade**<br> Códigos curtos oferecem velocidade e escalabilidade com taxas de envio de 100 segmentos por segundo, 6.000 segmentos por minuto, 360 mil segmentos por hora e 1 milhão de segmentos a cada 2 horas. Os códigos curtos podem atingir taxas tão altas devido à verificação que é necessária durante o processo de solicitação do código curto.<br><br>**MMS habilitado**<br>Compatível com MMS, também conhecido como Serviço de Mensagens Multimídia, permitindo que você envie mensagens contendo ativos multimídia (JPEG, GIF, PNG) para telefones celulares. Para saber mais sobre MMS na Braze, consulte [Sobre MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/). |
-{: .reset-td-br-1}
+| **Imagem profissional**<br> Números gratuitos são amplamente reconhecidos e confiáveis na América do Norte para comunicação empresarial, proporcionando um toque profissional e autoritário. |
+| **Taxa de transferência flexível; sem limites de envio da operadora**<br> Ao contrário dos códigos longos padrão, que podem estabelecer limites de taxa de transferência ou limites de envio da operadora dependendo do país, os números gratuitos podem ter a taxa de transferência aumentada para ajudar a suportar volumes mais altos e não têm limites diários de envio da operadora nos EUA.|
+{: .reset-td-br-1 role="presentation"}
 
 | Contras |
-| ---- |
-| **Os códigos curtos não estão disponíveis em todos os lugares**<br> Os códigos curtos estão atualmente disponíveis apenas no **Estados Unidos e Canadá (CA)**.<br><br>**Processo de aplicação mais longo**<br> Um processo de aplicação de 8 a 12 semanas, onde os casos de uso devem ser descritos em grande detalhe, é necessário. Este processo é necessário para permitir a entregabilidade porque, após a concessão de um código curto, as operadoras auditarão os códigos curtos, mas **não** filtrarão mensagens, permitindo taxas de envio mais altas.<br><br>**Maior custo nos EUA**<br> Não há custo adicional para códigos curtos no CA, mas nos EUA, os códigos curtos custam mais do que os códigos longos e levam mais tempo para serem aprovados. No entanto, após obter um código curto, você é considerado "pré-aprovado" para enviar mensagens a taxas melhores e mais rápidas e está sujeito a menos requisitos durante o processo de envio, uma vez que você terá passado por todas as verificações durante sua solicitação do código curto. |
-{: .reset-td-br-1}
-
-{% endtab %}
-{% tab Identificador de Remetente Alfanumérico %}
-
-#### ID do remetente alfanumérico
-
-Os IDs do remetente são os códigos curtos ou longos que aparecem no topo de uma mensagem SMS e indicam de quem a mensagem foi enviada. Se um usuário não estiver familiarizado com um ID de Remetente, ele pode optar por ignorar essas mensagens completamente. Através do uso de IDs de remetente alfanuméricos, os usuários conseguem identificar rapidamente de quem estão recebendo mensagens, aumentando as taxas de abertura. 
-
-Os IDs de remetente alfanuméricos permitem que você defina o nome da sua empresa ou marca (como "Kitchenerie" ou "CashBlastr") como o ID do remetente ao enviar mensagens unidirecionais para usuários móveis. Eles podem ter até 11 caracteres e aceitam letras maiúsculas (A-Z) e minúsculas (a-z), espaços e dígitos (0-9). **Pode não haver** apenas números. 
-
-##### Informações
-
-| Comprimento | Acesso | Throughput | MMS habilitado | 1-via vs. 2 vias |
-| --- | --- | --- | --- | --- |
-| Até 11 caracteres | Disponível imediatamente se a pré-inscrição não for necessária | Varia dependendo do país | Não | 1-via |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
-
-##### Prós e contras
-
-| Prós | Contras |
-| ---- | ---- | 
-| {::nomarkdown} <ul> <li> Sem custo adicional para implementar </li> <li> Melhora a conscientização da marca </li> <li> Aumenta as taxas de abertura de SMS </li> <li> A velocidade de envio de correspondências de números de telefone dentro do grupo de inscrições </li> <li> Disponível imediatamente se a pré-inscrição não for necessária </li> </ul> {:/} | {::nomarkdown} <ul> <li> <a href='/docs/user_guide/message_building_by_channel/sms/keywords/#two-way-messaging-custom-keyword-responses/'>Comunicação bidirecional</a> não é suportada </li> <li> Nem todos os países aceitam esse recurso </li> <li> Alguns países exigem processos de aprovação adicionais </li> <li> MMS não está habilitado </li> </ul> {:/} |
-{: .reset-td-br-1 .reset-td-br-2}
-
-Para saber mais sobre o ID do Remetente Alfanumérico, entre em contato com seu gerente de sucesso do cliente.
-{% endtab %}
-{% tab Número Gratuito %}
-
-#### Número gratuito habilitado para SMS
-
-Um número de telefone gratuito, ou um número de telefone livre, é um número de telefone que é cobrado por todas as chamadas recebidas em vez de incorrer em encargos para o assinante do telefone de origem. Números gratuitos nos EUA e no Canadá são habilitados para SMS, onde os assinantes são cobrados por mensagens de texto recebidas e enviadas.
-
-##### Informações
-
-| Comprimento | Acesso | Throughput | MMS habilitado | 1-via vs. 2 vias |
-| --- | --- | --- | --- | --- |
-| 10 dígitos	 | Aplicação de 2 a 4 semanas | Depende da sua aprovação e pode ser aumentado pagando mais | Não | 2 vias |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
-
-##### Prós e contras
-
-| Prós | Contras |
-| ---- | ---- | 
-| {::nomarkdown} <ul> <li> Deve ser registrado antes de enviar. </li> </ul> {:/} | {::nomarkdown} <ul> <li> Números gratuitos são apenas nos EUA e no Canadá </li><li> MMS não está habilitado </li> </ul> {:/} |
-{: .reset-td-br-1 .reset-td-br-2} 
+| --- |
+| **Imparcialidade e neutralidade geográfica**<br> Como os números gratuitos não têm um código de área local, podem parecer muito "corporativos" ou anônimos. Para um negócio de serviço local, um número gratuito pode ter um desempenho pior do que um código longo padrão, pois falta a conexão com a comunidade e às vezes pode ser confundido com uma linha de telemarketing aleatória. |
+| **Camada Extra de Filtragem de STOP**<br> Os números gratuitos têm uma camada de gerenciamento de opt-out fora do Braze que não pode ser removida ou personalizada. Quando um usuário envia "STOP" para o seu número gratuito, o usuário será removido de futuras mensagens do seu número e receberá uma resposta automática gerada pela rede. Eles não receberão mais mensagens do seu número gratuito até que enviem "START" para serem removidos da lista de bloqueio do número gratuito. |
+{: .reset-td-br-1 role="presentation"}
 
 {% endtab %}
 {% endtabs %}
 
+## Configuração
+
+Os requisitos e prazos de configuração variam de acordo com o tipo de remetente e o país em que o remetente está sendo provisionado.
+
+{% tabs local %}
+{% tab RCS-verified sender %}
+
+### Remetente verificado RCS
+
+Remetentes verificados pelo RCS são provisionados país a país. O processo de verificação e configuração foca no seu agente ou remetente— a persona digital que interage com os usuários. Você fornecerá ativos de marca e detalhes de verificação.
+
+#### Ativos de marca
+
+- **Nome verificado:** O nome que os usuários veem no topo da conversa. Deve ser um nome comercial reconhecível, não necessariamente o nome legal da sua empresa.
+- **Logotipo:** Uma imagem de alta resolução que tem 224x224px. Isso é exibido em uma moldura circular, então mantenha os elementos críticos centralizados.
+- **Banner (imagem principal):** Uma imagem de fundo para o seu cartão de perfil de negócios (semelhante a uma foto de capa do Facebook ou LinkedIn).
+- **Cor da marca:** Um valor hex para os botões e elementos da interface do usuário que combine com o estilo da sua empresa.
+
+#### Detalhes de verificação
+
+- **Ponto de contato (POC):** Isso é crítico. Você deve fornecer um e-mail de um colaborador direto da marca (não um e-mail de agência). O Google ou a operadora enviará um e-mail para essa pessoa para confirmar que ela autorizou a Braze a agir em seu nome.
+- **Website e política de privacidade:** Um site ativo e uma política de privacidade que explique como você lida com dados de usuários e envio de mensagens.
+- **Descrição do caso de uso:** Uma explicação clara do que você está enviando (por exemplo, "Atualizações de entrega de pedidos e suporte ao cliente para compras no varejo").
+
+Os prazos do RCS variam dependendo do país e à medida que mais operadoras adotam o canal. Atualmente, você pode esperar que um remetente RCS seja aprovado pelas operadoras dentro de 3 a 6 semanas após solicitar o lançamento.
+
+{% endtab %}
+{% tab SMS short codes %}
+
+### Códigos curtos de SMS
+
+Códigos curtos são provisionados país por país. Dependendo do país, o processo de aplicação para códigos curtos é notoriamente imprevisível. A Braze está aqui para ajudar você em cada etapa, então se você quiser um código curto, entre em contato com seu gerente de integração ou outro representante da Braze.
+
+A Braze ajudará a reunir todos os materiais e informações necessárias para enviar uma aplicação e configurar um novo código curto. Os requisitos variam de país para país, mas muitos exigem pelo menos o seguinte:
+
+| Material de aplicação    | Descrição    | Solicitações    |
+|----------------------|----------------|-----------------|
+| Chamada para Ação (Aceitação) | O principal objetivo das divulgações é confirmar que o usuário consente em receber mensagens de texto e entende a natureza do programa. | {::nomarkdown}<ul><li>Descrição do produto</li><li>Divulgação da frequência das mensagens</li><li>Termos e condições completos OU link para os termos e condições completos</li><li>Política de privacidade OU link para a política de privacidade</li><li>Palavra-chave STOP</li><li>"As tarifas de mensagem e dados podem ser aplicáveis" divulgação.</li></ul>{:/} |
+| Termos e condições | Os termos e condições abrangentes podem ser apresentados completamente abaixo da chamada para ação ou acessíveis através de um link próximo à chamada para ação. | {::nomarkdown}<ul><li>Nome do programa (marca)</li><li>Divulgação da frequência das mensagens</li><li>Descrição do produto</li><li>Informações de contato do atendimento ao cliente</li><li>Informações de opt-out</li><li>"As tarifas de mensagem e dados podem ser aplicáveis" divulgação.</li></ul>{:/} |
+| Fluxo de mensagens | Programas de mensagens recorrentes devem confirmar a aceitação com uma única mensagem de texto que declare explicitamente a qual programa o usuário se inscreveu e fornecer instruções claras de opt-out.<br><br> Braze processa aceitação, opt-out e mensagens de ajuda, atualizando automaticamente o estado do grupo de inscrições para o usuário e seu número de telefone associado em todas as solicitações recebidas.<br><br> Note que essas palavras-chave e respostas padrão também podem ser personalizadas. | {::nomarkdown}<ul><li>Confirmação de Aceitação:<ul><li>Nome do programa (marca) OU descrição do produto</li><li>Informações de opt-out</li><li>Informações de contato do atendimento ao cliente</li><li>Divulgação da frequência das mensagens</li><li>"As tarifas de mensagem e dados podem ser aplicáveis" divulgação.</li></ul></li><li>Resposta de AJUDA:<ul><li>Nome do programa (marca) OU descrição do produto</li><li>Informações de contato do atendimento ao cliente (e-mail ou número de telefone de suporte).</li></ul></li><li>Resposta de opt-out (STOP):<ul><li>Nome do programa (marca) OU descrição do produto</li><li>Confirmação de que nenhuma mensagem adicional será entregue.</li></ul></li></ul>{:/} |
+| Mensagens do programa | As mensagens do programa são enviadas no curso normal do programa de Código Curto, após o usuário ter recebido uma confirmação de aceitação. | {::nomarkdown}<ul><li>Instruções de cancelamento devem ser fornecidas em intervalos regulares e pelo menos uma vez por mês.</li></ul>{:/} |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+
+Quando todos os seus materiais de aplicação estiverem prontos, a Braze envia a aplicação em seu nome para nossos provedores. A aplicação é então revisada e aprovada por operadores locais que podem fornecer feedback adicional ou solicitar informações adicionais. Após todos os operadores darem aprovação, você pode imediatamente configurar o código curto para uso na Braze.
+
+O prazo de revisão e aprovação do código curto varia, mas normalmente leva de 4 a 12 semanas, dependendo do país e da natureza do programa.
+
 {% alert important %}
-Se a taxa de transferência for excedida, algumas mensagens podem falhar.
+Se você já tem seu próprio código curto, entre em contato com seu gerente de sucesso do cliente durante o processo de integração para discutir a migração ou transferência do seu código curto.
 {% endalert %}
 
-Além dessas diferenças, saiba que uma marca geralmente terá um código curto, mas vários códigos longos de backup, dependendo de quantos destinatários eles planejam enviar SMS.
+{% endtab %}
+{% tab SMS long codes and toll-free numbers %}
+
+### Códigos longos de SMS (10DLC) e números gratuitos
+
+Em muitos países, a configuração de códigos longos (também chamados de "10DLCs" ou "códigos longos de 10 dígitos") e números gratuitos para envio de SMS passou de um processo de "plug and play" para um sistema de verificação regulamentado. As operadoras querem saber exatamente quem você é e o que você planeja dizer antes de enviar.
+
+Durante o processo de configuração do código longo, você pode esperar compartilhar detalhes sobre a identidade da sua marca e a intenção da campanha.
+
+#### Identidade da marca
+
+- **Nome da entidade legal:** Deve corresponder exatamente aos seus documentos fiscais (por exemplo, "Acme Corp LLC" não "Acme").
+- **ID Fiscal:** Nos EUA, este é o seu Número de Identificação do Empregador (EIN). Internacionalmente, você precisará de um número de Imposto sobre Valor Agregado (IVA) ou um Número de Registro de Empresa local (BRN).
+- **Presença digital:** Um site ativo e funcional. As operadoras podem verificar isso para confirmar que você não é uma empresa "fantasma".
+- **Contato autorizado:** Nome, e-mail e número de telefone de uma pessoa responsável pela conta.
+
+#### Intenção da campanha
+
+- **Caso de uso:** Declare se você está enviando códigos 2FA, lembretes de compromissos, promoções de marketing ou outros.
+- **Mensagens de exemplo:** Forneça de 2 a 5 exemplos do que você enviará.
+- **Prova de aceitação:** Descreva (e muitas vezes mostre uma captura de tela) como um usuário se inscreve. Exemplos incluem um formulário na web com uma caixa de seleção ou uma palavra-chave "Texto INICIAR" em um cartaz.
+
+A Braze trabalhará com você para coletar todos os detalhes necessários para provisionar seu código longo ou número gratuito, e então enviar os detalhes para nosso provedor para revisão e aprovação. Após a aprovação do programa pelo nosso provedor, configuramos imediatamente o código longo ou número gratuito na Braze.
+
+O cronograma de configuração depende do país de provisionamento. Normalmente, códigos longos e números gratuitos levam entre 1 a 4 semanas para serem aprovados.
 
 {% alert important %}
-Quer saber o que são os códigos curtos compartilhados? Para saber mais sobre por que recomendamos evitar códigos curtos compartilhados, visite o tópico em nosso [FAQ de SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/).
+Todos os clientes que atualmente possuem e/ou usam códigos longos dos EUA para enviar para clientes dos EUA são obrigados a registrar seus códigos longos. Para ler mais sobre os detalhes do registro A2P 10DLC dos EUA e por que é necessário, visite nosso artigo dedicado [artigo 10DLC]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/).
 {% endalert %}
 
-## Como eu consigo um código curto?
+{% endtab %}
+{% tab SMS alphanumeric sender ID %}
 
-Passar pelo processo de aplicação de código curto pode ser um processo longo. No entanto, pode ser uma experiência que vale a pena! Se você gostaria de um código curto, entre em contato com seu gerente de integração ou outro representante da Braze. Depois que você fizer isso, eles vão se inscrever para você - eles vão pedir algumas informações básicas que ajudarão você a se qualificar. Agora é só esperar.
+### ID de remetente alfanumérico de SMS
 
-### Aplicação de código curto
+IDs de remetente alfanuméricos são altamente regulamentados porque podem ser facilmente falsificados para phishing. Enquanto alguns países permitem que qualquer um configure e envie de um nome, em muitos países você deve primeiro provar que possui a marca.
 
-Enquanto Braze é responsável por realmente solicitar o código curto, há algumas informações que precisamos de você. Recomendamos revisar estas perguntas antes de entrar em contato com a Braze. 
+Você pode ser solicitado a fornecer os seguintes detalhes para configurar um ID de remetente alfanumérico.
 
-As regulamentações exigem que haja respostas para todas as respostas de palavras-chave de aceitação, exclusão e ajuda/informação. Você precisará nos informar os fluxos de mensagens específicos (as respostas que você deseja enviar aos usuários após eles enviarem um [palavra-chave]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout/)) que você deseja para as seguintes situações.
+- **ID preferido:** Uma string de até 11 caracteres. Ela contém pelo menos uma letra e não pode ser uma palavra genérica como "BANCO" ou "INFORMAÇÃO".
+- **Comprovante de propriedade da marca:** Seu Certificado de Marca ou um Documento de Registro de Empresa (por exemplo, um Certificado de Constituição emitido nos últimos 12 meses).
+- **Carta de autorização:** Uma carta assinada em papel timbrado da sua empresa autorizando a Braze e nosso provedor a enviar mensagens em seu nome usando aquele ID específico.
+- **Modelos de mensagens:** Em várias regiões, você deve registrar os "modelos" exatos das mensagens que pretende enviar. Desvios nas mensagens reais podem causar falhas de entrega nesses países.
 
-| Fluxo Necessário | Tipo | Exemplo |
-| ----------- | ---- | ------- |
-| Aceitação <br><br>Aceitação dupla| SMS | `Welcome to our SMS system! Reply "YES" to receive updates from our company. Respond "STOP" to opt-out and "HELP" for more info.` |
-| Aceitação | Website | `Hi there, would you like to sign up for SMS? Text "START" to "23456". Or, enter your number below.` |
-| Cancelamentos de inscrição | SMS | `Sorry to see you go! If this was a mistake, text back "UNSTOP". Text "HELP" for more information.` |
-| Ajuda | N/D | `Our company is a company that does this and that. For more info on the company, let us know here. Or, you can contact support at 1-800-111-1111.` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+O prazo para configurar um ID de remetente alfanumérico depende muito se o país permite a configuração "Dinâmica" (imediata, sem registro necessário) ou exige "Pré-registro". Em países que exigem pré-registro, o prazo de configuração varia, mas geralmente leva entre 1 a 4 semanas.
 
-Dependendo da sua situação, você pode precisar fornecer mais ou menos fluxos como os listados na tabela anterior. Você também terá que nos informar **três exemplos gerais** de mensagens que você planeja enviar via SMS. Sinta-se à vontade para pedir orientação ao seu representante da Braze.
+{% endtab %}
+{% endtabs %}
 
-Você também deve nos informar, independentemente de qual número você usar, quantas mensagens por mês você planeja enviar.
+## Perguntas frequentes
 
-{% alert important %}
-Se você tiver seu próprio código curto, entre em contato com seu gerente de sucesso do cliente durante o processo de integração para discutir a migração ou transferência do seu código curto. Os códigos curtos devem ser configurados pelo gerente de sucesso do cliente.
-{% endalert %}
-
-## Códigos Longos de 10 Dígitos de Aplicação para Pessoa (A2P 10DLC)
-
-A2P 10DLC refere-se a um sistema nos Estados Unidos que permite que as empresas enviem mensagens do tipo aplicativo para pessoa (A2P) por meio de um número de telefone padrão de código longo de 10 dígitos (10DLC). Os códigos longos de 10 dígitos foram tradicionalmente projetados para o tráfego de pessoa para pessoa (P2P), fazendo com que as empresas sejam restringidas por uma taxa de transferência limitada e por uma filtragem maior. Este serviço ajuda a aliviar esses problemas, melhorando a entregabilidade geral das mensagens, permitindo que as marcas enviem mensagens em grande escala, incluindo links e chamadas para ação, e ajudando a proteger ainda mais os consumidores de mensagens indesejadas. 
-
-Todos os clientes que atualmente possuem e/ou usam códigos longos dos EUA para enviar para clientes dos EUA são obrigados a registrar seus códigos longos para 10DLC. Este processo leva de 4 a 6 semanas. Para saber mais sobre os detalhes do 10DLC e por que ele é necessário, acesse nosso [artigo dedicado ao 10DLC]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/).
-
-
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
+Para respostas a perguntas frequentes sobre remetentes de SMS e RCS, consulte nossa página de [Perguntas frequentes sobre SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/faqs#frequently-asked-questions).

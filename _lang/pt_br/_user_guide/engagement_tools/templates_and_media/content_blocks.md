@@ -45,12 +45,12 @@ Há dois tipos de editores usados para criar um bloco de conteúdo: o clássico 
 | Nome | Campo obrigatório com um máximo de 100 caracteres. Ele não pode ser renomeado depois que o bloco de conteúdo tiver sido salvo. Além disso, você não pode nomear um novo bloco de conteúdo com o mesmo nome de um bloco de conteúdo anterior, mesmo que o anterior tenha sido arquivado. |
 | Descrição | (opcional) Máximo de 250 caracteres. Descreva o bloco de conteúdo para que outros usuários do Braze saibam para que serve e onde é usado. |
 | Tamanho do conteúdo | Máximo de 50 KB. |
-| Posicionamento | Os blocos de conteúdo não podem ser usados em um rodapé de e-mail, mas é possível [criar um bloco de conteúdo que inclua um rodapé](#email-footers) para uso em seus e-mails. |
+| Posicionamento | Os blocos de conteúdo não podem ser usados dentro de um rodapé de e-mail, mas você pode [criar um bloco de conteúdo que inclua um rodapé](#email-footers) para uso em seus e-mails. |
 | Criação | Editor de HTML ou editor de arrastar e soltar. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Ao criar blocos de conteúdo, pode ser útil visualizar o HTML e o Liquid adicionando quebras de linha. Se essas quebras de linha forem deixadas durante o envio, você corre o risco de ter espaços estranhos que podem afetar a forma como o bloco será renderizado. Para evitar isso, use a tag **Capture** em seu bloco junto com o filtro **| strip**.
+Ao criar blocos de conteúdo, pode ser benéfico visualizar HTML e Liquid adicionando quebras de linha. Se essas quebras de linha forem deixadas durante o envio, você corre o risco de ter espaços estranhos que podem afetar a forma como o bloco será renderizado. Para evitar isso, use a tag **Capture** em seu bloco junto com o filtro **| strip**.
 {% raw %}
 ```
 {% capture your_variable %}
@@ -69,7 +69,7 @@ Depois de criar seu bloco de conteúdo, você pode inseri-lo em suas mensagens s
 
 ### Coisas para saber
 
-- O uso de blocos de conteúdo HTML em e-mails de arrastar e soltar **ou** de blocos de conteúdo de arrastar e soltar em e-mails HTML pode resultar em problemas inesperados de renderização. Isso ocorre porque o editor de arrastar e soltar gera HTML e CSS que renderizam dinamicamente o conteúdo, enquanto o editor de HTML é mais estático.
+- Usar blocos de conteúdo HTML em e-mails de arrastar e soltar **ou** blocos de conteúdo de arrastar e soltar em e-mails HTML pode resultar em problemas de renderização inesperados. Isso ocorre porque o editor de arrastar e soltar gera HTML e CSS que renderiza dinamicamente o conteúdo, enquanto o editor de HTML é mais estático.
 - As propriedades do evento Canvas só são compatíveis com um Canvas. Se você fizer referência a um bloco de conteúdo com propriedades de entrada de tela em uma campanha, ele não será preenchido.
 
 ### Atualização e cópia de blocos de conteúdo
@@ -88,9 +88,9 @@ Você também pode [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templ
 
 Depois de adicionar um bloco de conteúdo em uma campanha ou canvas ativo, é possível fazer uma prévia desse bloco de conteúdo na biblioteca de blocos de conteúdo passando o mouse sobre o bloco de conteúdo e selecionando o ícone <i class="fa fa-eye preview-icon"></i> **Preview**. 
 
-Essa prévia inclui informações sobre o bloco de conteúdo, como quem o criou, tags, data de criação, data da última edição, descrição, tipo de editor, contagem de inclusão com detalhes e uma prévia real do bloco de conteúdo.
+Esta prévia inclui informações sobre o bloco de conteúdo, como quem o criou, tags, data de criação, data da última edição, descrição, tipo de editor, contagem de inclusões com detalhes (uma lista clicável de mensagens ou blocos de conteúdo que usam o bloco de conteúdo) e uma prévia real do bloco de conteúdo.
 
-![Uma prévia de um bloco de conteúdo "Workout_Promo" para ciclismo e dança que tem seis inclusões.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
+![Uma prévia de um bloco de conteúdo "Workout_Promo" para ciclismo e dança que tem uma inclusão.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
 
 ### Aninhamento de blocos de conteúdo
 
@@ -100,13 +100,13 @@ Os blocos de conteúdo podem ser aninhados, mas apenas uma vez. Você pode aninh
 Nada impedirá você de aninhar um terceiro nível de bloco de conteúdo, mas você não verá a expansão do conteúdo em aninhamentos além do segundo. O conteúdo e o snippet Liquid são removidos da mensagem.
 {% endalert %}
 
-### Uso de rodapés de e-mail em blocos de conteúdo {#email-footers}
+### Usando rodapés de e-mail em blocos de conteúdo {#email-footers}
 
-Os blocos de conteúdo não podem ser usados em um rodapé de e-mail, mas é possível criar um bloco de conteúdo que inclua conteúdo de rodapé para uso em seus e-mails. Para fazer isso, siga estas etapas:
+Os blocos de conteúdo não podem ser usados dentro de um rodapé de e-mail, mas você pode criar um bloco de conteúdo que inclua conteúdo de rodapé para uso em seus e-mails. Para fazer isso, siga estas etapas:
 
-1. Acesse **Configurações** > **Preferências de e-mail** > **Rodapé personalizado** e crie o rodapé.
-2. Adicione o rodapé a um bloco de conteúdo na **biblioteca de blocos de conteúdo**.
-3. Adicione esse bloco de conteúdo a seus modelos ou mensagens de e-mail.
+1. Acesse **Configurações** > **Preferências de E-mail** > **Rodapé Personalizado** e crie o rodapé.
+2. Adicione o rodapé a um bloco de conteúdo na **Biblioteca de Blocos de Conteúdo**.
+3. Adicione esse bloco de conteúdo aos seus modelos de e-mail ou mensagens.
 
 Agora você pode usar o mesmo rodapé em várias mensagens!
 
@@ -114,14 +114,14 @@ Agora você pode usar o mesmo rodapé em várias mensagens!
 
 ![Menu suspenso Configurações expandido que mostra três opções: Arquivar, Duplicar e Copiar para o espaço de trabalho.]({% image_buster /assets/img/template_archive_cog.png %}){: style="max-width:20%;float:right;margin-left:15px;" }
 
-Quando terminar de usar um bloco de conteúdo, você poderá arquivá-lo na página [Modelos & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Os blocos de conteúdo arquivados são somente leitura, portanto, desarquive o bloco de conteúdo antes de editá-lo. Os blocos de conteúdo não podem ser arquivados se forem usados em alguma mensagem.
+Uma vez que você tenha terminado de usar um bloco de conteúdo, você pode arquivá-lo na página [Modelos & Mídia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Os blocos de conteúdo arquivados são somente leitura, portanto, desarquive o bloco de conteúdo antes de editá-lo. Os blocos de conteúdo não podem ser arquivados se forem usados em alguma mensagem.
 
 #### Melhores práticas
 
 - Quando seu bloco for usado apenas em alguns e-mails, recomendamos arquivar o bloco desatualizado e atualizar suas mensagens ao vivo com um bloco mais recente que não tenha sido arquivado.
 - Quando seu bloco tiver apenas um erro de digitação ou precisar de uma pequena alteração, não recomendamos arquivar o bloco. Em vez disso, atualize o bloco e comece a enviar!
-- Quando seu bloco for usado em mais mensagens do que você pode gerenciar razoavelmente com a primeira sugestão desta lista, recomendamos remover todo o conteúdo do bloco. Isso evita a inclusão de informações desatualizadas em quaisquer mensagens.
+- Quando seu bloco é usado em mais mensagens do que você pode gerenciar razoavelmente com a primeira sugestão desta lista, recomendamos remover todo o conteúdo do bloco. Isso evita a inclusão de informações desatualizadas em qualquer mensagem.
 - Se você arquivar acidentalmente um bloco de conteúdo, poderá desarquivá-lo.
 
-![Painel Blocos de conteúdo salvos, onde o menu suspenso de configurações para "Test_32" é expandido para mostrar três opções: Desarquivar, duplicar e copiar para o espaço de trabalho]({% image_buster /assets/img/unarchive-content-block.png %})
+![Painel de Blocos de Conteúdo Salvos onde o menu suspenso de configurações para "Test_32" está expandido para mostrar três opções: Desarquivar, duplicar e copiar para o espaço de trabalho]({% image_buster /assets/img/unarchive-content-block.png %})
 

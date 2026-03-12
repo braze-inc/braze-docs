@@ -291,7 +291,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% tab Array %}
 
-커스텀 속성 배열의 최대 요소 개수 기본값은 25개입니다. 개별 배열의 최대치는 Braze 대시보드의 **데이터 설정** > **커스텀 속성**에서 최대 100개로 늘릴 수 있습니다. 최대 요소 수를 초과하는 배열은 최대 요소 수를 포함하도록 잘립니다. 커스텀 속성 배열과 해당 동작에 대한 자세한 내용은 [배열]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)에 대한 설명서를 참조하세요.
+커스텀 속성 배열의 최대 요소 개수 기본값은 25개입니다. 개별 배열의 최대값은 Braze 대시보드의 **데이터 설정** > **커스텀 속성**에서 최대 500으로 증가할 수 있습니다. 최대 요소 개수를 초과하는 배열은 최대 요소 개수를 포함하도록 잘립니다. 커스텀 속성 배열 및 그 동작에 대한 자세한 내용은 [배열]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)을 참조하십시오.
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -358,7 +358,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ### 커스텀 속성 중첩
 
-커스텀 속성 내에 속성을 중첩할 수도 있습니다. 다음 예제에서는 중첩 속성을 가진 `favorite_book` 객체가 고객 프로필에 커스텀 속성으로 설정됩니다. 자세한 내용은 [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)을 참조하십시오.
+커스텀 속성 내에서 속성을 중첩할 수도 있습니다. 다음 예제에서는 중첩 속성이 있는 `favorite_book` 객체가 사용자 프로필의 커스텀 속성으로 설정됩니다. 자세한 내용은 [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)을 참조하십시오.
 
 {% tabs %}
 {% tab JAVA %}

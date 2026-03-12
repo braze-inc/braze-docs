@@ -377,9 +377,7 @@ To manually display a pre-defined in-app message, use the following method:
 
 {% tabs %}
 {% tab web %}
-```javascript
-braze.requestInAppMessageDisplay();
-```
+For the Web SDK, use `braze.showInAppMessage(inAppMessage)` to display any in-app message. For details and an example, see [Displaying a message in real-time](#displaying-a-message-in-real-time).
 {% endtab %}
 
 {% tab android %}

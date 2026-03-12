@@ -10,17 +10,17 @@ channel: email
 
 # Envio de e-mails duplicados
 
-> Se vários perfis compartilharem um endereço de e-mail e um perfil cancelar a inscrição, o Braze atualizará outros perfis (até 100) com esse endereço para o mesmo estado de inscrição. Isso se aplica a cancelamentos de inscrição e outras alterações, como o estado da inscrição global e os status de grupos de inscrições individuais.
+> Se vários perfis compartilham um endereço de e-mail e um perfil se descadastrar, o Braze atualiza os outros perfis (até 100) com esse endereço para o mesmo estado de inscrição. Isso se aplica a descadastramentos e outras mudanças, como estado de inscrição global e status de grupos de inscrição individuais.
 
 ## Atualizações de inscrição por e-mail
 
-O Braze verifica automaticamente e remove endereços de e-mail duplicados quando envia uma campanha de e-mail. Isso evita que o Braze envie o e-mail mais de uma vez, mesmo que vários perfis de usuário compartilhem um endereço.
+O Braze verifica automaticamente e remove endereços de e-mail duplicados quando envia uma campanha de e-mail. Isso impede que o Braze envie o e-mail mais de uma vez, mesmo que vários perfis de usuário compartilhem um endereço.
 
 {% alert tip %}
 Certifique-se de estar familiarizado com as ferramentas que o Braze fornece para [gerenciar as inscrições de e-mail dos usuários]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) e direcionar campanhas para usuários com estados de inscrição específicos. Essas ferramentas são essenciais para a conformidade com as [leis anti-spam]({{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations).
 {% endalert %}
 
-Se os usuários compartilharem um endereço de e-mail e você atualizar um perfil, o Braze propagará as alterações de inscrição entre esses usuários (até 100).
+Se os usuários compartilham um endereço de e-mail e você atualiza um perfil, o Braze propaga as mudanças de inscrição entre esses usuários (até 100).
 
 ## Comportamento de envio de mensagens
 

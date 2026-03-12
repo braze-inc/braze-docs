@@ -18,7 +18,7 @@ Vous recherchez des définitions pour les termes et les indicateurs répertorié
 
 ### Intervalle de temps
 
-Par défaut, l'intervalle de temps pour l'**analyse/analytique de campagne** affichera les 90 derniers jours à partir de l'heure actuelle. Cela signifie que si la campagne a été lancée il y a plus de 90 jours, l'analyse/analytique affichera "0" pour la période donnée. Pour afficher toutes les analyses/analytiques des campagnes plus anciennes, ajustez l'intervalle de temps des rapports.
+Par défaut, la période prise en compte par **Campaign Analytics** correspond aux 90 derniers jours à compter de la date actuelle. Cela signifie que si la campagne a été lancée il y a plus de 90 jours, les analyses afficheront « 0 » pour la période donnée. Pour consulter toutes les analyses des campagnes antérieures, veuillez ajuster la période de référence du rapport.
 
 ### Détails de la campagne
 
@@ -42,29 +42,29 @@ Le canal WhatsApp comprend le taux de lecture. Cette mesure n'est fournie que po
 {% endif %}
 
 {% if include.channel == "Content Card" %}
-![Le panneau Détails de la campagne donne un aperçu des indicateurs utilisés pour déterminer les performances de la campagne.]({% image_buster /assets/img/cc-campaign-details.png %})
+![Panneau Détails de la campagne présentant un aperçu des indicateurs utilisés pour évaluer la performance de la campagne.]({% image_buster /assets/img/cc-campaign-details.png %})
 
 {% elsif include.channel == "banner" %}
-![Le panneau Détails de la campagne donne un aperçu des indicateurs utilisés pour déterminer les performances de la campagne.]({% image_buster /assets/img/banners/campaign_details.png %})
+![Panneau Détails de la campagne présentant un aperçu des indicateurs utilisés pour évaluer la performance de la campagne.]({% image_buster /assets/img/banners/campaign_details.png %})
 
 {% elsif include.channel == "email" %}
-![Le panneau Détails de la campagne donne un aperçu des indicateurs utilisés pour déterminer les performances de la campagne.]({% image_buster /assets/img/campaign_details_email.png %})
+![Panneau Détails de la campagne présentant un aperçu des indicateurs utilisés pour évaluer la performance de la campagne.]({% image_buster /assets/img/campaign_details_email.png %})
 
 {% elsif include.channel == "push" %}
-![Le panneau Détails de la campagne donne un aperçu des indicateurs utilisés pour déterminer les performances de la campagne.]({% image_buster /assets/img/campaign_details_push.png %})
+![Panneau Détails de la campagne présentant un aperçu des indicateurs utilisés pour évaluer la performance de la campagne.]({% image_buster /assets/img/campaign_details_push.png %})
 
 {% elsif include.channel == "SMS" %}
-![Le panneau Détails de la campagne donne un aperçu des indicateurs utilisés pour déterminer les performances de la campagne.]({% image_buster /assets/img/campaign_details_sms.png %})
+![Panneau Détails de la campagne présentant un aperçu des indicateurs utilisés pour évaluer la performance de la campagne.]({% image_buster /assets/img/campaign_details_sms.png %})
 
 {% elsif include.channel == "in-app message" %}
-![Le panneau Détails de la campagne donne un aperçu des indicateurs utilisés pour déterminer les performances de la campagne.]({% image_buster /assets/img/campaign_details_iam.png %})
+![Panneau Détails de la campagne présentant un aperçu des indicateurs utilisés pour évaluer la performance de la campagne.]({% image_buster /assets/img/campaign_details_iam.png %})
 
 Dans Canvas, vous verrez les performances des messages in-app cartographiés sur le Canvas que vous avez créé. Vous pouvez utiliser le panneau de commande en haut de la page pour effacer les autres types de messages (canaux) et afficher uniquement les messages in-app dans votre Canvas.
 
 ![]({% image_buster /assets/img/in-app_message_canvas_reporting.png %})
 
 {% elsif include.channel == "webhook" %}
-![Le panneau Détails de la campagne donne un aperçu des indicateurs utilisés pour déterminer les performances de la campagne.]({% image_buster /assets/img/campaign_details_webhook.png %})
+![Panneau Détails de la campagne présentant un aperçu des indicateurs utilisés pour évaluer la performance de la campagne.]({% image_buster /assets/img/campaign_details_webhook.png %})
 
 {% endif %}
 
@@ -108,56 +108,56 @@ The **Message Performance** panel outlines how well your message has performed a
 
 Le panneau " **Performance de la carte de contenu"** indique le niveau de performance de votre message en fonction de différents critères. Les indicateurs de ce volet varient en fonction de votre canal de communication choisi, et selon que vous exécutez ou non un test multivarié. Vous pouvez cliquer sur l'icône <i class="fa fa-eye preview-icon"></i> **Preview** pour visualiser votre message pour chaque variante ou canal de communication.
 
-![Carte de contenu analyse/analytique des messages (si utilisé anjectives cartes)]({% image_buster /assets/img/cc-message-performance.png %})
+![Analyse des performances des messages des cartes de contenu]({% image_buster /assets/img/cc-message-performance.png %})
 
 {% elsif include.channel == "email" %}
 ### Performances des e-mails
 
 Le tableau de bord des performances de **l'e-mail** indique le niveau de performance de votre message en fonction de différents critères. Les indicateurs de ce volet varient en fonction de votre canal de communication choisi, et selon que vous exécutez ou non un test multivarié. Vous pouvez cliquer sur l'icône <i class="fa fa-eye preview-icon"></i> **Preview** pour visualiser votre message pour chaque variante ou canal de communication.
 
-![Analyse/analytique des performances des messages e-mail (si utilisés)]({% image_buster /assets/img_archive/email_message_performance.png %})
+![Analyse des performances des messages d'e-mail]({% image_buster /assets/img_archive/email_message_performance.png %})
 
 {% elsif include.channel == "in-app message" %}
 ### Performance des messages in-app
 
 Le panneau de **performance des messages in-app** présente l'efficacité de votre message en fonction de différentes dimensions. Les indicateurs de ce volet varient en fonction de votre canal de communication choisi, et selon que vous exécutez ou non un test multivarié. Vous pouvez cliquer sur l'icône <i class="fa fa-eye preview-icon"></i> **Preview** pour visualiser votre message pour chaque variante ou canal de communication.
 
-![Analyse/analytique des messages in-app (si utilisés an-app)]({% image_buster /assets/img_archive/iam_message_performance.png %})
+![Analyse des performances des messages in-app]({% image_buster /assets/img_archive/iam_message_performance.png %})
 
 {% elsif include.channel == "push" %}
 ### Performances des notifications push
 
 Le panneau " **Push Performance"** donne un aperçu de la performance de votre message en fonction de différents critères. Les indicateurs de ce volet varient en fonction de votre canal de communication choisi, et selon que vous exécutez ou non un test multivarié. Vous pouvez cliquer sur l'icône <i class="fa fa-eye preview-icon"></i> **Preview** pour visualiser votre message pour chaque variante ou canal de communication.
 
-![Analyse/analytique de l'envoi des messages (si utilisés)]({% image_buster /assets/img_archive/push_message_performance.png %})
+![Analyse des performances des messages push]({% image_buster /assets/img_archive/push_message_performance.png %})
 
 {% elsif include.channel == "SMS" %}
 ### Performances des SMS/MMS/RCS
 
-Le tableau de bord des **performances SMS/MMS/RCS** donne un aperçu des performances de votre message en fonction de différents critères. Les indicateurs de ce volet varient en fonction de votre canal de communication choisi, et selon que vous exécutez ou non un test multivarié. Vous pouvez cliquer sur l'icône <i class="fa fa-eye preview-icon"></i> **Preview** pour visualiser votre message pour chaque variante ou canal de communication.
+Le panneau **Performances SMS/MMS/RCS** présente les performances de votre message selon différents critères. Les indicateurs de ce volet varient en fonction de votre canal de communication choisi, et selon que vous exécutez ou non un test multivarié. Vous pouvez cliquer sur l'icône <i class="fa fa-eye preview-icon"></i> **Preview** pour visualiser votre message pour chaque variante ou canal de communication.
 
-![Panneau de performance SMS/MMS/RCS qui comprend un tableau d'indicateurs pour un groupe de contrôle, la variante 1 et la variante 2.]({% image_buster /assets/img_archive/sms_message_performance.png %})
+![Panneau de performances SMS/MMS/RCS comprenant un tableau d'indicateurs pour le groupe de contrôle, la variante 1 et la variante 2.]({% image_buster /assets/img_archive/sms_message_performance.png %})
 
 {% elsif include.channel == "banner" %}
 ### Performance des bannières
 
 Le panneau **Performance de la bannière** indique le niveau de performance de votre message en fonction de différents critères. Ces indicateurs varient en fonction de votre canal de communication et de l'exécution ou non d'un test multivarié.
 
-![Panneau de performance SMS/MMS qui comprend un tableau d'indicateurs pour un groupe de contrôle, la variante 1 et la variante 2.]({% image_buster /assets/img/banners/banner_performance.png %})
+![Panneau de performances SMS/MMS comprenant un tableau d'indicateurs pour un groupe de contrôle, la variante 1 et la variante 2.]({% image_buster /assets/img/banners/banner_performance.png %})
 
 {% elsif include.channel == "webhook" %}
 ### Performances des webhooks
 
 Le tableau de bord des **performances des webhooks** donne un aperçu de l'efficacité de votre message en fonction de différents critères. Les indicateurs de ce volet varient en fonction de votre canal de communication choisi, et selon que vous exécutez ou non un test multivarié. Vous pouvez cliquer sur l'icône <i class="fa fa-eye preview-icon"></i> **Preview** pour visualiser votre message pour chaque variante ou canal de communication.
 
-![Panneau de performance webhook qui comprend un tableau d'indicateurs pour un groupe de contrôle et la variante 1.]({% image_buster /assets/img/webhook_message_performance.png %})
+![Panneau de performances webhook comprenant un tableau d'indicateurs pour un groupe de contrôle et la variante 1.]({% image_buster /assets/img/webhook_message_performance.png %})
 
 {% elsif include.channel == "whatsapp" %}
 ### Performances WhatsApp
 
 Le panneau **WhatsApp Performance** présente les performances de votre message en fonction de différents critères. Les indicateurs de ce volet varient en fonction de votre canal de communication choisi, et selon que vous exécutez ou non un test multivarié. Vous pouvez cliquer sur l'icône <i class="fa fa-eye preview-icon"></i> **Preview** pour visualiser votre message pour chaque variante ou canal de communication.
 
-![Panneau de performance WhatsApp qui comprend un tableau d'indicateurs pour la variante 1.]({% image_buster /assets/img/whatsapp_message_performance.png %})
+![Panneau de performances WhatsApp comprenant un tableau d'indicateurs pour la variante 1.]({% image_buster /assets/img/whatsapp_message_performance.png %})
 
 {% endif %}
 
@@ -167,11 +167,11 @@ Si vous souhaitez simplifier votre vue, cliquez sur <i class="fas fa-plus"></i> 
 
 #### Cartes thermiques
 
-Grâce aux cartes thermiques, vous pouvez connaître le succès des différents liens d'une même campagne d'e-mailing. Dans la section **Analyse/analytique des messages**, accédez au panneau **Performance des e-mails.**  Sélectionnez **Aperçu & Heatmap** pour afficher un aperçu de votre campagne e-mail et de la carte thermique. Vous pouvez également sélectionner le lien hypertexte dans le nom de la variante pour afficher la carte thermique.
+Grâce aux cartes thermiques, vous pouvez connaître le succès des différents liens d'une même campagne d'e-mailing. Dans la section **Analyse/analytique des messages**, accédez au panneau **Performance des e-mails.**  Veuillez sélectionner **Aperçu&de la carte thermique** pour visualiser un aperçu de votre campagne d'e-mails et de la carte thermique. Vous pouvez également sélectionner le lien hypertexte dans le nom de la variante pour afficher la carte thermique.
 
 Dans cette vue, vous pouvez utiliser la bascule **Afficher la carte thermique** pour afficher une vue visuelle de votre e-mail qui montre la fréquence globale et l'emplacement/localisation des clics au cours de la durée de vie de la campagne. Dans le panneau **Tableau des liens par nombre total de clics**, vous pouvez afficher tous les liens de votre campagne e-mail et les trier par nombre total de clics. Cela peut fournir des informations supplémentaires sur les endroits où vos utilisateurs naviguent. Pour enregistrer une copie de la carte thermique à des fins de référence, sélectionnez le bouton de téléchargement.
 
-![Exemple de page de prévisualisation et de carte thermique comprenant une campagne d'e-mail et un panneau avec des exemples d'alias de liens et leur nombre total de clics.]({% image_buster /assets/img_archive/email_heatmap_example.png %})
+![Exemple de la page Aperçu et carte thermique qui inclut une campagne par e-mail et un panneau avec des exemples d'alias de liens et leur nombre total de clics.]({% image_buster /assets/img_archive/email_heatmap_example.png %})
 
 #### Images
 
@@ -212,19 +212,19 @@ Voici une description de certaines indicateurs clés que vous pouvez voir lors d
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#total-impressions">Impressions totales</a></td>
-            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} Cela peut s'incrémenter plusieurs fois pour le même utilisateur.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} Ceci peut être multiplié plusieurs fois pour un même utilisateur.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-impressions">Impressions uniques</a></td>
-            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Ce décompte</span> ne s'incrémente pas la deuxième fois qu'un utilisateur consulte une carte de contenu.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Ce compteur</span> n'augmente pas la deuxième fois qu'un utilisateur consulte une carte de contenu.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-recipients">Destinataires uniques</a></td>
-            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' %} <br><br> Pour les cartes de contenu, chaque carte de contenu ne peut être reçue qu'une seule fois, de sorte que la consultation de la même carte de contenu une deuxième fois, quel que soit le jour, n'augmentera pas ce décompte. Étant donné qu'un spectateur peut être un destinataire unique chaque jour, vous devriez vous attendre à ce que ce chiffre soit plus élevé que celui des <i>impressions uniques.</i></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' %} <br><br> Étant donné qu'un utilisateur peut être un destinataire unique chaque jour, il est probable que ce chiffre soit supérieur au nombre <i>d'impressions uniques</i>.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-clicks">Clics uniques</a></td>
-            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Cela inclut les clics sur les liens de désinscription fournis par Braze.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Cela inclut les clics sur les liens de désabonnement fournis par Braze.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-dismissals">Licenciements uniques</a></td>
@@ -239,7 +239,7 @@ En matière de méthode d’enregistrement des impressions, il existe quelques d
 
 #### Destinataires uniques et impressions uniques
 
-Plusieurs indicateurs sont disponibles pour couvrir la visibilité de votre message. Cela comprend les _destinataires uniques_ et les _impressions uniques._ Prenons quelques exemples de scénarios pour mieux comprendre ces indicateurs.
+Plusieurs indicateurs sont disponibles pour couvrir la visibilité de votre message. Cela inclut _les destinataires uniques_ et _les impressions uniques_. Prenons quelques exemples de scénarios pour mieux comprendre ces indicateurs.
 
 Supposons que vous visualisiez une carte de contenu aujourd'hui, puis que vous receviez une nouvelle carte de la même campagne demain, et encore après-demain - vous serez compté comme _destinataire unique_ trois fois. Cependant, vous ne serez comptabilisé que pour une seule _impression unique_. Vous serez également inclus dans le nombre d'_envois de messages_, car la carte était disponible sur votre appareil.
 
@@ -275,7 +275,7 @@ Pour obtenir les définitions complètes de tous les indicateurs relatifs aux ba
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">Impressions totales</a></td>
-            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} Pour les bannières, les impressions sont enregistrées une fois par session d'utilisateur. Si la même bannière est visualisée plusieurs fois au cours de la même session, une seule impression est enregistrée.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} Pour les bannières, les impressions sont enregistrées une fois par session utilisateur. Si la même bannière est affichée plusieurs fois au cours d'une même session, une seule impression est enregistrée.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Impressions uniques</a></td>
@@ -308,19 +308,19 @@ Pour obtenir les définitions complètes de tous les indicateurs relatifs aux ba
     </tbody>
 </table>
 
-#### Exemples de calcul des indicateurs pour les bannières
+#### Exemples de calcul des indicateurs de performance des bannières
 
-Plusieurs indicateurs sont disponibles pour couvrir la visibilité de votre message. Cela comprend les _destinataires uniques_ et les _impressions uniques._ Prenons quelques exemples de scénarios pour mieux comprendre ces indicateurs.
+Plusieurs indicateurs sont disponibles pour couvrir la visibilité de votre message. Cela inclut _les destinataires uniques_ et _les impressions uniques_. Prenons quelques exemples de scénarios pour mieux comprendre ces indicateurs.
 
-Supposons que vous regardiez une bannière aujourd'hui, puis la même bannière demain, et encore après-demain - vous serez compté comme un _destinataire unique_ trois fois. Cependant, vous ne serez comptabilisé que pour une seule _impression unique_.
+Supposons que vous consultiez une bannière aujourd'hui, puis la même bannière demain, et encore après-demain. Vous serez alors comptabilisé trois fois comme _destinataire_ _unique_. Cependant, vous ne serez comptabilisé que pour une seule _impression unique_.
 
-Autre exemple, supposons que vous obteniez cinq _impressions uniques_ pour une campagne de bannières. Cela signifie que seuls les appareils de cinq utilisateurs ont effectué toutes les étapes suivantes :
+À titre d'exemple supplémentaire, supposons que vous observiez cinq _impressions uniques_ sur une campagne de bannières. Cela signifie que seuls les appareils de cinq utilisateurs ont effectué toutes les étapes suivantes :
 
 1. Vous avez démarré une session ou l'application a explicitement demandé une synchronisation Banner (ou les deux).
 2. Navigué vers la vue Bannières
 3. Le SDK a enregistré une impression et l’a consignée sur le serveur
 
-Les _destinataires uniques_ correspondent aux bannières qui ont été vues.
+_Les destinataires uniques_ désignent les bannières qui ont été effectivement vues.
 
 {% elsif include.channel == "email" %}
 
@@ -345,13 +345,13 @@ Voici quelques indicateurs clés spécifiques aux e-mails que vous ne verrez pas
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Clics uniques</a></td>
             <td class="no-split">
-                {% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Ce suivi est effectué sur une période de sept jours pour les e-mails et mesuré par <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. Cela inclut les clics sur les liens de désinscription fournis par Braze. Ce nombre doit être compris entre 5 et 10 %. Tout ce qui est supérieur à 10 % est exceptionnel !
+                {% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Ceci est suivi sur une période de sept jours pour les e-mails et mesuré par <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. Cela inclut les clics sur les liens de désinscription fournis par Braze. Ce nombre doit être compris entre 5 et 10 %. Tout ce qui est supérieur à 10 % est exceptionnel !
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">Ouvertures uniques</a></td>
             <td class="no-split">
-                {% multi_lang_include analytics/metrics.md metric='Unique Opens' %} Pour les e-mails, le suivi se fait sur une période de 7 jours. Ce chiffre devrait se situer entre 30 et 40 %. Tout ce qui est supérieur à 40 % est exceptionnel !
+                {% multi_lang_include analytics/metrics.md metric='Unique Opens' %} Pour les e-mails, le suivi s'effectue sur une période de 7 jours. Ce chiffre devrait se situer entre 30 et 40 %. Tout ce qui est supérieur à 40 % est exceptionnel !
             </td>
         </tr>
         <tr>
@@ -361,7 +361,7 @@ Voici quelques indicateurs clés spécifiques aux e-mails que vous ne verrez pas
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#spam">Taux de courriers indésirables</a></td>
             <td class="no-split">
-                {% multi_lang_include analytics/metrics.md metric='Spam' %} Si cette mesure est supérieure à 0,08, cela peut être le signe que votre message est trop vendeur ou que vous devriez revoir vos indicateurs de collecte d'adresses e-mail (pour confirmer que vous envoyez des messages à ceux qui sont intéressés par votre correspondance).
+                {% multi_lang_include analytics/metrics.md metric='Spam' %} Si cet indicateur est supérieur à 0,08, cela pourrait indiquer que le contenu de votre message est trop commercial ou que vous devriez reconsidérer vos méthodes de collecte d'adresses e-mail (afin de vous assurer que vous effectuez l'envoi de messages à des personnes intéressées par votre correspondance).
             </td>
         </tr>
         <tr>
@@ -374,7 +374,7 @@ Voici quelques indicateurs clés spécifiques aux e-mails que vous ne verrez pas
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">Estimation des ouvertures réelles</a></td>
-            <td class="no-split"> {% multi_lang_include analytics/metrics.md metric='Estimated Real Opens' %} Voir la section suivante pour plus de détails.</td>
+            <td class="no-split"> {% multi_lang_include analytics/metrics.md metric='Estimated Real Opens' %} Veuillez consulter la section suivante pour plus de détails.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#machine-opens">Ouverture automatique</a></td>
@@ -409,11 +409,11 @@ Notez que les _requêtes SQL_ ne sont actuellement disponibles qu'en utilisant l
 
 ##### Taux d'ouverture réel estimé {#estimated-real-open-rate}
 
-Cette statistique utilise un modèle analytique propriétaire créé par Braze pour reconstruire une estimation du taux d'ouverture unique de la campagne comme si les ouvertures automatiques n'existaient pas. Bien que les expéditeurs d'e-mails nous attribuent la mention " *ouverture machine"* pour certains événements d'ouverture (voir ci-dessus), ces mentions peuvent souvent étiqueter les ouvertures réelles comme étant des ouvertures machine. En d'autres termes, les *autres ouvertures* sont probablement une sous-estimation des ouvertures réelles (par des utilisateurs réels). Au lieu de cela, Braze utilise les données de clics de chaque campagne pour déduire le taux d'ouverture du message par des humains réels. Cela permet de compenser les divers mécanismes d'ouverture des machines, y compris la protection de confidentialité dans Mail d'Apple.
+Cette statistique utilise un modèle analytique propriétaire créé par Braze pour reconstruire une estimation du taux d'ouverture unique de la campagne comme si les ouvertures automatiques n'existaient pas. Bien que nous recevions des étiquettes « *Ouvertures automatiques* » pour certains événements d'ouverture provenant d'expéditeurs d'e-mails (voir ci-dessus), ces étiquettes peuvent souvent classer les ouvertures réelles comme des ouvertures automatiques. En d'autres termes, les *autres ouvertures* sont probablement une sous-estimation des ouvertures réelles (par des utilisateurs réels). Au lieu de cela, Braze utilise les données de clics de chaque campagne pour déduire le taux d'ouverture du message par des humains réels. Cela permet de compenser les divers mécanismes d'ouverture des machines, y compris la protection de confidentialité dans Mail d'Apple.
 
 Le _taux d'ouverture réel estimé_ est calculé 36 heures après le début de l'envoi de l'e-mail et est ensuite recalculé toutes les 24 heures. Si une campagne se répète, l'estimation est recalculée 36 heures après un nouvel envoi.
 
-Comme cet indicateur est recalculé en permanence, la valeur du _taux d'ouverture réel estimé_ peut changer au fil du temps, à mesure que de nouveaux indicateurs d'engagement (tels que les ouvertures et les clics) sont reçus et incorporés dans le modèle. Dans la pratique, le _taux d'ouverture réel estimé_ peut continuer à être mis à jour quotidiennement tant qu'une campagne reste active.
+Étant donné que cet indicateur est recalculé de manière continue, la valeur _du taux d’ouverture réel estimé_ peut évoluer au fil du temps à mesure que de nouveaux signaux d'engagement (tels que les ouvertures et les clics) sont reçus et intégrés au modèle. En pratique, le _taux d’ouverture réel estimé_ peut continuer à être mis à jour quotidiennement tant qu’une campagne reste active.
 
 En règle générale, il faut environ 10 000 e-mails délivrés pour que la statistique soit calculée avec succès, bien que ce nombre puisse varier en fonction du taux de clics. Si la statistique ne peut pas être calculée, la colonne affiche "--".
 
@@ -427,14 +427,14 @@ Les taux d'ouverture peuvent être une métrique perspicace à suivre pour vos c
 
 De plus, l'utilisation d'outils de balayage de sécurité peut augmenter les taux d'ouverture. Certains de ces outils protègent leurs utilisateurs en scannant les e-mails entrants à la recherche de contenu malveillant en cliquant sur les liens pour vérifier leur légitimité. Ces clics sont souvent appelés « clics de bot » ou « interaction non humaine » (NHI). 
 
-En fin de compte, une fois qu'un e-mail a quitté nos serveurs, nous n'avons qu'une visibilité limitée sur ce qui se passe ensuite, mais voici des recommandations pour la gestion de l'INSA affectant vos résultats :
+En fin de compte, une fois qu'un e-mail quitte nos serveurs, nous avons une visibilité limitée sur ce qui se passe ensuite, mais voici quelques recommandations pour gérer les NHI qui affectent vos résultats :
 
 1. Soyez conscient que cela peut arriver à n'importe quel expéditeur et à presque n'importe quel destinataire. Les clics, comme les ouvertures, ne sont pas des indicateurs entièrement fiables de l'interaction humaine avec vos messages, ce qui signifie que le NHI n'est pas évitable.
-2. Un engagement positif plus élevé tend à être corrélé à une baisse de l'INH, il est donc important de suivre les [meilleures pratiques en matière]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) d'envoi de messages par e-mail. Cela inclut l'obtention de la permission explicite de vos utilisateurs pour envoyer des e-mails et la suppression régulière des abonnés non engagés. 
+2. Un engagement positif plus élevé tend à être corrélé à un NHI plus faible, il est donc important de respecter [les meilleures pratiques]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) en matière d'envoi de messages par e-mail. Cela inclut l'obtention de la permission explicite de vos utilisateurs pour envoyer des e-mails et la suppression régulière des abonnés non engagés. 
 3. Utilisez des liens HTTPS dans vos e-mails lorsque cela est possible. NHI est moins courant pour les expéditeurs utilisant des liens sécurisés.
-4. Si vous utilisez un processus de désabonnement en un seul clic, envisagez de créer un [centre de préférences]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview) qui renvoie les utilisateurs à une page leur permettant de modifier et de gérer leurs préférences en matière de notification. Cela peut être utile car le NHI peut désabonner des utilisateurs par inadvertance.
+4. Si vous utilisez un processus de désabonnement en un seul clic, envisagez de créer un [centre de préférences]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview) qui redirige les utilisateurs vers une page leur permettant de modifier et de gérer leurs préférences en matière de notifications. Cela peut être utile car le NHI peut désabonner des utilisateurs par inadvertance.
 5. Envisagez d'utiliser [d'autres mesures]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/#email-performance) pour évaluer le succès de votre marketing par e-mail, telles que les conversions, les sessions d'application ou les visites de site.
-6. Ajoutez un lien caché dans vos campagnes par e-mail. Ce lien serait quelque chose qu'un humain ne remarquerait pas, comme un texte blanc sur blanc ou un signe de ponctuation. Les robots ont tendance à cliquer sur tous les liens, vous pouvez donc en conclure que les événements de clics générés par les utilisateurs sur le lien invisible sont en fait le résultat de l'INSA, de sorte que l'ouverture ou le clic n'indique pas nécessairement un engagement positif.
+6. Ajoutez un lien caché dans vos campagnes par e-mail. Ce lien serait quelque chose qu'un humain ne remarquerait pas, comme un texte blanc sur blanc ou un signe de ponctuation. Les robots ont tendance à cliquer sur tous les liens. Vous pouvez donc en conclure que les utilisateurs qui génèrent des événements de clic sur le lien invisible sont en réalité le résultat du NHI. L'ouverture ou le clic n'indique donc pas nécessairement un engagement positif.
 
 {% elsif include.channel == "in-app message" %}
 
@@ -445,7 +445,7 @@ Voici quelques indicateurs clés de messages in-app que vous pouvez voir dans vo
 {% alert note %}
 Les rapports pour les _clics sur le bouton 1_ et les _clics sur le bouton 2_ ne fonctionnent que si vous spécifiez l'**identifiant pour les rapports** comme étant respectivement "0" et "1" dans le message in-app.
 
-![Le champ "Identifiant pour le rapport" avec une valeur de "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+![Le champ « Identifiant pour la déclaration » avec la valeur « 0 ».]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
 {% endalert %}
 
 <style>
@@ -523,7 +523,7 @@ Voici une description de certaines indicateurs clés que vous pouvez voir lors d
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">Rebonds</a></td>
-            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Bounces' %} Voir <a href="#bounced-push">Notifications push rebondissantes</a>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Bounces' %} Veuillez consulter <a href="#bounced-push">la section Notifications push rejetées</a>.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#direct-opens">Ouvertures directes</a></td>
@@ -540,27 +540,27 @@ Voici une description de certaines indicateurs clés que vous pouvez voir lors d
 
 ##### Suivi des désabonnements
 
-Les désabonnements par push ne sont pas pris en compte dans les indicateurs d'analyse/analyse de la campagne et dépendent des mises à jour du statut push d'un utilisateur par des fournisseurs tels qu'Apple ou Google. Ces mises à jour peuvent être peu fréquentes et imprévisibles. Par conséquent, les désabonnements aux campagnes push ne sont pas pris en compte en tant qu'indicateurs dans l'analyse/analytique des campagnes push. 
+Les désabonnements push ne sont pas inclus dans les indicateurs analytiques des campagnes et dépendent des mises à jour du statut push d'un utilisateur par des fournisseurs tels qu'Apple ou Google. Ces mises à jour peuvent être peu fréquentes et imprévisibles. Par conséquent, les désabonnements aux campagnes push ne sont pas pris en compte en tant qu'indicateurs dans l'analyse/analytique des campagnes push. 
 
-Cependant, le suivi manuel des désabonnements push peut encore fournir des informations précieuses sur les réponses des utilisateurs à votre fréquence de notification et à la pertinence du contenu. Voici deux options pour le suivi des désabonnements par push : Utilisation de filtres de segmentation ou de filtres personnalisés.
+Cependant, le suivi manuel des désabonnements push peut encore fournir des informations précieuses sur les réponses des utilisateurs à votre fréquence de notification et à la pertinence du contenu. Voici deux options pour suivre les désabonnements aux notifications push : Utilisation de filtres de segment ou de filtres personnalisés.
 
 {% tabs local %}
 {% tab Segment filters %}
 
-Vous pouvez créer une segmentation pour identifier les utilisateurs qui ne sont pas compatibles avec le push, c'est-à-dire qui ne sont pas abonnés ou opt-in et qui n'ont pas de [jeton de push en avant-plan]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens). Par exemple, pour connaître le nombre de désabonnements dans votre application, vous utiliserez une combinaison "OU" des segments suivants : 
+Vous pouvez créer un segment pour identifier les utilisateurs qui ne sont pas activés pour les notifications push, c'est-à-dire qui ne sont pas abonnés ou en situation d'abonnement et qui ne disposent pas d'un [jeton push au premier plan]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens). Par exemple, pour visualiser le nombre de désabonnements dans votre application, vous pouvez utiliser une combinaison « OU » des segments suivants : 
 
 - `Background or Foreground Push Enabled is false`
 - `Has Uninstalled`
 
-![La section Segment Builder avec le filtre "Background or Foreground Push Enabled for App" pour une application est fausse, et le filtre "Has Uninstalled" sont sélectionnés.]({% image_buster /assets/img/push_unsub_segment_example.png %})
+![Dans le générateur de segments, le filtre « Background or Foreground Push Enabled for App » (Push en arrière-plan ou au premier plan activé pour l'application) pour une application est désactivé et le filtre « Has Uninstalled » (A désinstallé) est sélectionné.]({% image_buster /assets/img/push_unsub_segment_example.png %})
 
-Notez que les filtres de segmentation sont approximatifs et ne peuvent pas être spécifiquement liés à une date et à une campagne.
+Veuillez noter que les filtres de segmentation sont approximatifs et ne peuvent être spécifiquement liés à une date et à une campagne.
 
 {% endtab %}
 {% tab Custom filters %}
 
 {% alert important %}
-L'enregistrement d'un événement personnalisé pour la modification d'un abonnement permet d'enregistrer des [points de données]({{site.baseurl}}/user_guide/data_and_analytics/data_points#consumption-count). Vous pouvez également utiliser des filtres de segmentation pour identifier et cibler les utilisateurs qui ne sont pas équipés de la fonction "push".
+L'enregistrement d'un événement personnalisé pour un changement d'abonnement permettra de consigner [les points de donnée]({{site.baseurl}}/user_guide/data_and_analytics/data_points#consumption-count). Vous pouvez également utiliser des filtres de segmentation pour identifier et cibler les utilisateurs qui ne sont pas équipés de la fonction "push".
 {% endalert %}
 
 Pour une solution de contournement différente, nous vous recommandons également de créer un événement personnalisé pour les désabonnements push en fonction du statut de l'utilisateur activé par push ( `true` ou `false` ) afin d'assurer le suivi de ces indicateurs.
@@ -744,7 +744,7 @@ Le panneau **Performances historiques** vous permet de visualiser les indicateur
 
 Pour obtenir une ventilation jour par jour, cliquez sur le menu hamburger <i class="fas fa-bars"></i> et sélectionnez **Télécharger CSV** pour recevoir une exportation CSV du rapport.
 
-![Un graphique du panneau Performances historiques avec des exemples de statistiques pour un e-mail de février 2021 à mai 2022.]({% image_buster /assets/img/cc-historical-performance.png %})
+![Graphique du panneau « Performances historiques » avec des exemples de statistiques pour un e-mail envoyé entre février 2021 et mai 2022.]({% image_buster /assets/img/cc-historical-performance.png %})
 
 {% if include.channel == "in-app message" %}
 
@@ -760,11 +760,11 @@ Si vous choisissez d'envoyer uniquement aux utilisateurs qui peuvent voir la der
 
 Le panneau **Réponses par mot-clé** vous montre une chronologie des mots-clés entrants avec lesquels les utilisateurs ont répondu après avoir reçu votre message.  
 
-![Le panneau des réponses par mot-clé au niveau de la campagne SMS/MMS/RCS comprend un graphique linéaire de la distribution des mots-clés dans le temps et une section Catégories de mots-clés avec des cases à cocher pour l'abonnement, l'exclusion, l'aide, l'autre, plus et le coaching.]({% image_buster /assets/img/sms/keyword_responses.png %})
+![Panneau « Réponses aux mots-clés SMS/MMS/RCS au niveau de la campagne » comprenant un graphique linéaire représentant la répartition des mots-clés dans le temps, ainsi qu'une section « Catégories de mots-clés » avec des cases à cocher pour « Abonnement », « Opt-out », « Aide », « Autre », « Plus » et « Coaching ».]({% image_buster /assets/img/sms/keyword_responses.png %})
 
 Ici, vous pouvez également consulter la répartition des réponses pour chaque catégorie de mots clés afin de déterminer les prochaines étapes du [reciblage]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns) et de [création d’un segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment).
 
-![Le tableau situé sous le graphique linéaire qui comporte des colonnes pour la catégorie de mots-clés, la distribution des réponses et le reciblage, où vous avez la possibilité de créer un segment avec la catégorie de mots-clés.]({% image_buster /assets/img/sms/keyword_segments.png %})
+![Le tableau situé sous le graphique linéaire comporte des colonnes pour la catégorie de mots clés, la répartition des réponses et le reciblage, où vous avez la possibilité de créer un segment avec la catégorie de mots clés.]({% image_buster /assets/img/sms/keyword_segments.png %})
 
 {% endif %}
 
@@ -778,7 +778,7 @@ Le panneau **Détails de l'événement de conversion** vous indique les performa
 
 Le panneau **Corrélation de conversion** vous donne des informations sur les attributs et les comportements des utilisateurs qui favorisent ou entravent les résultats que vous avez définis pour les campagnes. Pour plus d'informations, consultez la section [Corrélation de conversion]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/).
 
-![Le panneau Corrélation de conversion avec une analyse des attributs et du comportement de l'utilisateur à partir de l'événement de conversion principal - A.]({% image_buster /assets/img/convcorr.png %})
+![Le panneau « Corrélation des conversions » avec une analyse des attributs et du comportement des utilisateurs à partir de l'événement de conversion principal - A.]({% image_buster /assets/img/convcorr.png %})
 
 {% if include.channel == "whatsapp" %}
 

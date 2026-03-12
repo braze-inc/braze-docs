@@ -32,7 +32,7 @@ Un résumé des balises de personnalisation prises en charge est fourni. Pour pl
 | Variables de contexte Canvas | `{{context}}` |
 | Attributs personnalisés <br> (Ceux-ci sont personnalisés en fonction de votre espace de travail). | `{{custom_attribute.${your_custom_attribute}}}` |
 | <a href='/docs/api/objects_filters/trigger_properties_object/'>Propriétés du déclencheur API</a> |`{{api_trigger_properties}}` |
-| Propriétés d’entrées de canvas | `{{canvas_entry_properties.${property_name}}}` |
+| Propriétés d’entrées de canvas | `{{context.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
@@ -60,7 +60,7 @@ Vous pouvez modéliser les attributs suivants pour l'appareil le plus récent de
 |Balise | Description |
 |---|---|
 |`{{most_recently_used_device.${browser}}}` | Le navigateur le plus récemment utilisé sur l’appareil de l’utilisateur. Par exemple, « Chrome » et « Safari ». |
-|`{{most_recently_used_device.${id}}}` | L'identifiant de l'appareil de Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV) ou un UUID. Pour Android et d'autres plateformes, il s'agit d'un UUID généré de manière aléatoire. |
+|`{{most_recently_used_device.${id}}}` | Identifiant de l'appareil Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV) ou un UUID. Pour Android et d'autres plateformes, il s'agit d'un UUID généré de manière aléatoire. |
 | `{{most_recently_used_device.${carrier}}}` | Le fournisseur de téléphonie le plus récemment utilisé, le cas échéant. Par exemple, « Verizon » et « Orange ». |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | Si le traçage de publicité est activé ou non sur l’appareil. Il s’agit d’une valeur booléenne (`true` ou `false`). |
 | `{{most_recently_used_device.${idfa}}}` | Pour les appareils iOS, cette valeur sera l'identifiant pour la publicité (IDFA) si votre application est configurée avec notre [collection IDFA optionnelle]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/). Pour les appareils non iOS, cette valeur sera nulle. |
@@ -96,14 +96,14 @@ User is in list of apps
 
 ## Informations sur les dispositifs ciblés
 
-Pour les notifications push, les messages in-app et les Bannières, vous pouvez insérer un modèle dans les attributs suivants pour l'appareil auquel un message est envoyé. Autrement dit, une notification push, un message in-app ou une Bannière peuvent inclure les attributs de l'appareil sur lequel le message est lu. Notez que ces attributs ne fonctionnent pas pour les cartes de contenu. 
+Pour les notifications push, les messages in-app et les bannières, vous pouvez créer un modèle avec les attributs suivants pour l'appareil qui reçoit le message. Une notification push, un message in-app ou une bannière peuvent inclure des attributs de l'appareil sur lequel l'utilisateur lit le message. Ces attributs ne sont pas compatibles avec les cartes de contenu ou les e-mails. Pour les e-mails, les messages sont générés avant leur envoi, de sorte que l'appareil sur lequel l'utilisateur ouvrira l'e-mail est inconnu à ce moment-là.
 
 |Balise | Description |
 |------------------|---|
 | `{{targeted_device.${id}}}` | Ceci est l'identifiant de l'appareil Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV) ou un UUID. Pour Android et d'autres plateformes, il s'agit d'un UUID généré de manière aléatoire. Par exemple, si un utilisateur possède cinq appareils, une tentative d'envoi a lieu pour les cinq appareils, chacun utilisant l'identifiant de l'appareil correspondant. Si un message est configuré pour être envoyé à l'appareil le plus récemment utilisé par l'utilisateur, une seule tentative d'envoi sera effectuée vers l'appareil le plus récemment utilisé, identifié par Braze. |
 | `{{targeted_device.${carrier}}}` | Le fournisseur de téléphonie le plus récemment utilisé, le cas échéant. Par exemple, « Verizon » et « Orange ». |
 | `{{targeted_device.${idfa}}}` | Pour les appareils iOS, cette valeur sera l'identifiant pour la publicité (IDFA) si votre application est configurée avec notre [collection IDFA optionnelle]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/). Pour les appareils non iOS, cette valeur sera nulle. |
-| `{{targeted_device.${google_ad_id}}}` | Pour les appareils Android, cette valeur sera l'identifiant publicitaire Google Play si votre application est configurée avec notre [collecte facultative de l'identifiant publicitaire Google Play]. Pour les appareils non Android, cette valeur sera nulle. |
+| `{{targeted_device.${google_ad_id}}}` | Pour les appareils Android, cette valeur correspondra à l'ID publicitaire Google Play si votre application est configurée avec notre [collecte facultative de l'ID publicitaire Google Play]. Pour les appareils non Android, cette valeur sera nulle. |
 | `{{targeted_device.${roku_ad_id}}}` | Pour les appareils Roku, cette valeur sera l’identifiant Roku Advertising collectée configurée lorsque votre application est configurée avec Braze Pour les appareils non Roku, cette valeur sera nulle. |
 | `{{targeted_device.${model}}}` | Le nom du modèle du dispositif, si disponible. Par exemple, « Iphone 6S » et « Nexus 6P » et « Firefox ». |
 | `{{targeted_device.${os}}}` | Le système d’exploitation du dispositif, si disponible. Par exemple, « iOS 9.2.1 » et « Android (Lollipop) » et « Windows ». |
@@ -115,17 +115,17 @@ Pour les notifications push, les messages in-app et les Bannières, vous pouvez 
 
 En raison de la diversité des supports d'appareils, des noms de modèles et des systèmes d'exploitation, nous vous conseillons de tester minutieusement toute logique conditionnelle à l'une ou l'autre de ces valeurs. Ces valeurs seront `null` si elles ne sont pas disponibles sur un appareil particulier. 
 
-En outre, pour les notifications push, il est possible que Braze ne soit pas en mesure de discerner l'appareil lié à la notification push dans certaines circonstances, par exemple si le jeton push a été importé via l'API, ce qui entraîne l'envoi de valeurs à `null` pour ces messages.
+De plus, pour les notifications push, il est possible que Braze ne soit pas en mesure de déterminer l'appareil associé à la notification push dans certaines circonstances, par exemple si le jeton push a été importé via l'API, ce qui entraîne des valeurs`null` pour ces messages.
 
 ![Exemple d’utilisation d’une valeur par défaut de « là » lors de l’utilisation d’une variable de prénom dans un message de notification push.]({% image_buster /assets/img_archive/personalized_firstname_.png %})
 
-### Utiliser une logique conditionnelle au lieu d'une valeur par défaut
+### Utilisation de la logique conditionnelle au lieu d'une valeur par défaut
 
 Dans certaines circonstances, vous pouvez opter pour une [logique conditionnelle]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/) au lieu de définir une valeur par défaut. La logique conditionnelle vous permet d’envoyer des messages qui diffèrent selon la valeur d’un attribut personnalisé. En outre, vous pouvez utiliser une logique conditionnelle pour [interrompre les messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/) destinés aux clients dont les valeurs d'attribut sont nulles ou vides. 
 
 #### Cas d’utilisation
 
-Par exemple, supposons que vous envoyiez une notification de solde de récompenses à vos clients. Il n'y a pas de bonne façon de prendre en compte les clients dont le solde est faible ou nul en utilisant les valeurs par défaut.
+Par exemple, supposons que vous envoyiez une notification de solde de récompenses à vos clients. Il n'existe pas de méthode appropriée pour comptabiliser les clients dont le solde est faible ou nul à l'aide de valeurs par défaut.
 
 Dans ce cas, il existe deux options qui peuvent mieux fonctionner que la définition d’une valeur par défaut :
 
@@ -143,7 +143,7 @@ Dans ce cas, il existe deux options qui peuvent mieux fonctionner que la défini
 
 {% endraw %}
 
-2. Envoyez un message complètement différent à ces clients, comme par exemple :
+2. Veuillez envoyer un message personnalisé à ces clients, par exemple :
 
 {% raw %}
 
@@ -155,7 +155,7 @@ Dans ce cas, il existe deux options qui peuvent mieux fonctionner que la défini
    {% endif %}
    ```
 
-Dans ce cas d'utilisation, un utilisateur dont le prénom est vide ou nul recevra le message "Merci d'avoir téléchargé". Vous devriez inclure une [valeur par défaut]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/) pour le prénom afin de vous assurer que votre client ne voit pas Liquid en cas d'erreur.
+Dans ce cas d'utilisation, un utilisateur dont le prénom est vide ou nul recevra le message « Merci d'avoir téléchargé ». Vous devriez inclure une [valeur par défaut]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/) pour le prénom afin de vous assurer que votre client ne voit pas Liquid en cas d'erreur.
 
 {% endraw %}
 
@@ -194,7 +194,7 @@ Make a purchase to bring your rewards points to {{new_points_balance}} and cash 
 ## Balises d’itération
 
 {% raw %}
-Les balises d’itération peuvent être utilisées pour exécuter un bloc de code à plusieurs reprises. Le cas d'utilisation ci-dessous fait appel à l'étiquette `for`.
+Les balises d’itération peuvent être utilisées pour exécuter un bloc de code à plusieurs reprises. La fonctionnalité ci-dessous met en avant l'étiquette`for`.
 
 ### Cas d’utilisation
 
@@ -213,7 +213,7 @@ Sale on Converse!
 {% endif %}
 ```
 
-Dans ce cas d'utilisation, nous vérifions les cinq premiers éléments du tableau des marques de baskets consultées. Si l’un de ces articles est Converse, nous créons la variable `converse_viewer` et la définissons sur « true ».
+Dans ce cas d'utilisation, nous examinons les cinq premiers éléments du tableau des marques de baskets consultées. Si l’un de ces articles est Converse, nous créons la variable `converse_viewer` et la définissons sur « true ».
 
 Ensuite, nous envoyons le message de vente lorsque `converse_viewer` est vrai. Sinon, nous abandonnons le message.
 
@@ -245,7 +245,7 @@ Cette clé ne sera ajoutée automatiquement à l’objet Contenu connecté que s
 
 Dans certaines situations, vous pouvez souhaiter envoyer des messages spécifiques à certaines localités. Par exemple, le portugais brésilien est généralement différent du portugais européen.
 
-### Cas d’utilisation : Localiser en fonction des paramètres locaux récents
+### Cas d’utilisation : Localiser en fonction des paramètres régionaux récents
 
 Voici un exemple de la façon dont vous pouvez utiliser les paramètres régionaux les plus récents pour localiser davantage un message internationalisé.
 
@@ -273,13 +273,13 @@ Message in default language
 {% endif %}
 ```
 
-Dans ce cas d'utilisation, les clients dont le lieu de résidence le plus récent est `pt_BR` recevront un message en portugais brésilien, et les clients dont le lieu de résidence le plus récent est `pt_PT` recevront un message en portugais européen. Les clients qui ne remplissent pas les deux premières conditions mais dont la langue est le portugais recevront un message dans le type de langue portugaise que vous aurez choisi par défaut.
+Dans ce cas d'utilisation, les clients dont la locale la plus récente est`pt_BR`  recevront un message en portugais brésilien, et les clients dont la locale la plus récente est`pt_PT`  recevront un message en portugais européen. Les clients qui ne remplissent pas les deux premières conditions mais dont la langue est le portugais recevront un message dans le type de langue portugaise que vous aurez choisi par défaut.
 
-### Cas d’utilisation : Cibler les utilisateurs en fonction du fuseau horaire
+### Cas d’utilisation : Cibler les utilisateurs par fuseau horaire
 
-Vous pouvez également cibler les utilisateurs en fonction de leur fuseau horaire. Par exemple, envoyer un message s’ils sont situés dans EST et un autre s’ils sont situés dans PST. Pour ce faire, enregistrez l'heure actuelle en UTC et comparez une instruction if/else avec l'heure actuelle de l'utilisateur afin d'envoyer le bon message pour le bon fuseau horaire. Vous devez paramétrer la campagne pour qu'elle soit envoyée dans le fuseau horaire local de l'utilisateur, afin qu'il reçoive la campagne au bon moment. 
+Vous pouvez également cibler les utilisateurs en fonction de leur fuseau horaire. Par exemple, envoyer un message s’ils sont situés dans EST et un autre s’ils sont situés dans PST. Pour ce faire, veuillez enregistrer l'heure actuelle en UTC et comparer une instruction if/else avec l'heure actuelle de l'utilisateur afin d'envoyer le message approprié pour le fuseau horaire correspondant. Il est recommandé de configurer la campagne pour qu'elle soit envoyée dans le fuseau horaire local de l'utilisateur, afin de lui présenter la campagne au moment opportun. 
 
-Consultez le cas d'utilisation suivant pour savoir comment rédiger un message qui sera envoyé entre 14 et 15 heures et qui contiendra un message spécifique pour chaque fuseau horaire.
+Veuillez consulter le cas d'utilisation suivant pour savoir comment rédiger un message qui sera envoyé entre 14 h et 15 h et qui comportera un message spécifique pour chaque fuseau horaire.
 
 ```liquid
 {% assign hour_in_utc = 'now' | date: '%H' | plus:0 %}

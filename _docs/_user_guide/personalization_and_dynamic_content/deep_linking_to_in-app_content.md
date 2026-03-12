@@ -27,7 +27,7 @@ Deep links are custom URIs that link to a specific part of the app and contain a
 Everything after the colon within a deep link is free-form text. It's up to you to define its structure and interpretation; however, a common convention is to model it after `http:` URLs, including a leading `//` and query parameters (for example, `?foo=1&bar=2`). For the previous example, `twitter://user?screen_name=[id]` would be used to launch a specific profile in the app.
 
 {% alert important %}
-Braze doesn't support using a wrapper like Flutter to send deep links. To use this feature, you must configure deep links at the native layer.
+For apps built with wrapper frameworks (for example, Flutter or Cordova), Braze does not provide wrapper-specific deep linking support. You must configure deep links at the native iOS and Android layers. For Cordova, see [Deep linking in push notifications]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=cordova).
 {% endalert %}
 
 ## UTM tags and campaign attribution

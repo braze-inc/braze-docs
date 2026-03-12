@@ -8,9 +8,9 @@ description: "En esta página de referencia se anotan los operadores que admite 
 
 # Operadores
 
-> Liquid admite muchos [operadores](https://docs.shopify.com/themes/liquid/basics/operators) que puedes utilizar en tus sentencias condicionales. Esta página cubre los operadores que admite Liquid y proporciona casos de uso de cómo puedes utilizarlos en tus mensajes.
+> Liquid admite muchos [operadores](https://docs.shopify.com/themes/liquid/basics/operators) que se pueden utilizar en tus sentencias condicionales. Esta página cubre los operadores que admite Liquid y proporciona casos de uso de cómo puedes utilizarlos en tus mensajes.
 
-Esta tabla enumera los operadores compatibles. Ten en cuenta que los paréntesis son caracteres no válidos en Liquid e impiden que funcionen tus etiquetas.
+Esta tabla enumera los operadores compatibles. Ten en cuenta que los paréntesis son caracteres no válidos en Liquid e impiden que tus etiquetas funcionen.
 
 |   Sintaxis| Descripción del operador|
 |---------|-----------|
@@ -25,11 +25,36 @@ Esta tabla enumera los operadores compatibles. Ten en cuenta que los paréntesis
 | contiene | comprueba si una cadena o matriz de cadenas contiene una cadena|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+{% alert note %}
+Los operadores se pueden utilizar en sentencias condicionales (`if`, `elsif`, `unless`), pero no en`assign`sentencias ,`for`bucles, sentencias`case``when` / ni corchetes de acceso a matrices. Para obtener información detallada, consulta [Dónde utilizar operadores y filtros para filtrar]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+{% endalert %}
+
+### Agrupación de condiciones sin paréntesis
+
+Liquid no admite paréntesis para agrupar expresiones. Para evaluar lógicas booleanas complejas como `(a and b) or c`, utiliza sentencias `if`anidadas  o variables intermedias.
+
+Por ejemplo, para comprobar si un valor cumple una condición compuesta, asigna una variable intermedia:
+
+{% raw %}
+```liquid
+{% assign qualifies = false %}
+{% if points > 100 %}
+{% assign qualifies = true %}
+{% elsif points == 100 and member_level == 'gold' %}
+{% assign qualifies = true %}
+{% endif %}
+
+{% if qualifies %}
+You qualify for a reward!
+{% endif %}
+```
+{% endraw %}
+
 ## Tutoriales
 
 Veamos algunos tutoriales para aprender a utilizar estos operadores en tus campañas de marketing:
 
-### Elige un mensaje con un atributo personalizado entero
+### Elige un mensaje con un atributo personalizado entero.
 
 Enviemos notificaciones push con descuentos promocionales personalizados a los usuarios que hayan o no realizado compras. La notificación push utilizará un atributo personalizado entero llamado `total_spend` para comprobar el gasto total de un usuario.
 
@@ -75,7 +100,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 {% endraw %}
 {% enddetails %}
 
-Ahora, si el atributo personalizado "Gasto total" de un usuario es superior a `0`, recibirá el mensaje:
+Ahora, si el atributo personalizado «Gasto total» de un usuario es superior a `0`, recibirás el mensaje:
 
 ```
 Surprise! We added a 15% discount code to your account that automatically applies to your next order.
@@ -86,7 +111,7 @@ Si el atributo personalizado "Gasto total" de un usuario no existe o es igual a 
 Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
 ```
 
-### Elige un mensaje con un atributo personalizado de cadena
+### Elige un mensaje con un atributo personalizado de cadena.
 
 Enviemos notificaciones push a los usuarios y personalicemos el mensaje en función del juego más reciente de cada usuario. Esto utilizará un atributo personalizado de cadena llamado `recent_game` para comprobar a qué juego ha jugado por última vez un usuario.
 
@@ -110,7 +135,7 @@ Your fleet awaits your next orders. Log on when you're ready to rejoin the war f
 {% endraw %}
 
 {: start="3"}
-3\. Utiliza la etiqueta `elsif` con los operadores "no es igual" (`!=`) y "y" (`and`) para comprobar si el usuario tiene un juego reciente (es decir, que el valor no está en blanco), y que el juego no es *Awkward Dinner Party* o *Proxy War 3: Guerra de sed*. A continuación, crea un mensaje para enviarlo a esos usuarios.
+3\. Utiliza la`elsif`etiqueta  con los operadores «no es igual a» (`!=`) y «y» (`and`) para comprobar si el usuario tiene un juego reciente (es decir, si el valor no está en blanco) y si el juego no es *Awkward Dinner Party* o *Proxy War 3: Guerra de sed*. A continuación, crea un mensaje para enviarlo a esos usuarios.
 
 {% raw %}
 ```liquid
@@ -220,4 +245,28 @@ Stream now!
 
 También puede [abortar mensajes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) basados en Contenido conectado.
 
+## Solución de problemas
 
+### La vista previa puede forzar incorrectamente los tipos de propiedades. 
+
+Al realizar la vista previa de un mensaje en el panel, la mayoría de las variables (como los atributos personalizados) se convierten al tipo correcto. Sin embargo, algunas variables no tienen un tipo definido que la vista previa pueda buscar:
+
+- `api_trigger_properties`
+- `canvas_entry_properties`
+- `context`
+
+Para estas propiedades, la vista previa intenta deducir el tipo a partir del valor. Esto significa que un valor que pretendes que sea una **cadena** podría interpretarse erróneamente como un **número**. Por ejemplo, si el valor de una propiedad es una cadena `"3"`, la vista previa puede convertirlo en un entero `3`, lo que puede provocar un comportamiento inesperado en operaciones con cadenas como`contains`  o `split`.
+
+Si observas resultados de vista previa inesperados al utilizar estos tipos de propiedades, ten en cuenta que la inferencia de tipos de la vista previa puede no coincidir con lo que ocurre en el momento del envío. En el momento del envío, se conservan los tipos de datos reales del evento que desencadena o de la llamada a la API.
+
+Para forzar un tipo específico en la vista previa, puedes convertir explícitamente el valor:
+
+{% raw %}
+```liquid
+{% comment %} Force a value to be treated as a number {% endcomment %}
+{% assign orders = {{canvas_entry_properties.${number_of_orders}}} | plus: 0 %}
+
+{% comment %} Force a value to be treated as a string {% endcomment %}
+{% assign code = {{api_trigger_properties.${promo_code}}} | append: "" %}
+```
+{% endraw %}

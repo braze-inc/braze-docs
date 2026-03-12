@@ -21,7 +21,7 @@ The real value of Predictive Events lies in using prediction results to create a
 
 ## Accessing Predictive Events
 
-{% include brazeai/predictions_page_access.md %}
+{% multi_lang_include brazeai/predictions_page_access.md %}
 
 Prior to purchasing this feature, it is available in preview mode. This will allow you to see a demo prediction with synthetic data as well as create one preview prediction model at a time. This prediction will be created based on your actual user data, but it will not allow you to target users for messaging according to their likelihood score. It will also not update regularly after creation.
 

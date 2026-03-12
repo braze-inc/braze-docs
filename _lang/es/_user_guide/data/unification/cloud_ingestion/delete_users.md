@@ -1,9 +1,9 @@
 ---
-nav_title: Borrar usuarios con CDI
+nav_title: Eliminar usuarios con CDI
 article_title: Eliminar usuarios con la ingestión de datos en la nube
 page_order: 30
 page_type: reference
-description: "Esta página proporciona un resumen del proceso de eliminación de usuarios con la Ingesta de Datos en la Nube."
+description: "Esta página ofrece un resumen del proceso para eliminar usuarios con la ingesta de datos."
 
 ---
 
@@ -15,7 +15,7 @@ Las sincronizaciones de eliminación de usuarios son compatibles con todas las f
 
 ## Configurar la integración 
 
-Siga el proceso estándar para [crear una nueva integración en el cuadro de mandos de Braze]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) para el almacén de datos al que desea conectarse. Asegúrese de incluir un rol que pueda acceder a la tabla de borrado. En la página **Crear sincronización de importación**, establece el **Tipo de datos** en **Eliminar usuarios** para que se realicen las acciones adecuadas durante la ejecución de la integración para eliminar usuarios.
+Siga el proceso estándar para [crear una nueva integración en el cuadro de mandos de Braze]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) para el almacén de datos al que desea conectarse. Asegúrese de incluir un rol que pueda acceder a la tabla de borrado. En la página **Crear sincronización de importación**, configura el **Tipo de datos** en **Eliminar usuarios** para que se realicen las acciones adecuadas durante la ejecución de la integración para eliminar usuarios.
 
 ![]({% image_buster /assets/img/cloud_ingestion/deletion_1.png %})
 

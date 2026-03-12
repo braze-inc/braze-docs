@@ -25,10 +25,10 @@ Für die Integration von LINE mit Braze benötigen Sie Folgendes:
 - [LINE Entwickler-Konto](https://developers.line.biz/en/docs/line-developers-console/login-account/)
 - [LINE-Messaging-API-Kanal](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
 
-Das Versenden von LINE-Nachrichten von Braze aus verbraucht das Nachrichtenguthaben Ihres Kontos.
+Das Versenden von LINE-Nachrichten über Braze wird von den Nachrichtenguthaben Ihres Kontos abgezogen.
 
 {% alert note %}
-**Einstellung `native_line_id`**: Sie können `native_line_id` einstellen, indem Sie Nutzer:innen Updates an Braze senden (zum Beispiel mit dem [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) Endpunkt, [CSV-Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) oder [Cloud-Datenaufnahme]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). Wenn Ihr Client-seitiges SDK kein spezielles Feld für `native_line_id` hat, senden Sie es in Server-seitigen Nutzer:innen Updates mit einer dieser Methoden.
+**Einstellung`native_line_id`**: Sie können dies einrichten`native_line_id`, indem Sie Updates für Nutzer:innen an Braze senden (beispielsweise über den[`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)Endpunkt, [CSV-Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) oder [Cloud Datenaufnahme]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). Falls Ihr clientseitiges SDK kein spezielles Feld für enthält`native_line_id`, übermitteln Sie es bitte mithilfe einer der folgenden Methoden in serverseitigen Updates für Nutzer:innen.
 {% endalert %}
 
 ## Arten von LINE-Konten
@@ -66,7 +66,7 @@ Um konsistente Benutzeraktualisierungen einzurichten, übernehmen Sie die LINE-I
 5. [(Optional) Nutzerprofile zusammenführen](#step-5-merge-profiles-optional)
 
 {% alert note %}
-Sie können nur ein LINE-Konto in einem einzigen Workspace haben. Wenn Sie mehrere LINE-Konten haben, empfehlen wir Ihnen, jedes Konto in einem anderen Workspace zu verwenden.
+Es ist nur ein LINE-Konto pro Workspace zulässig. Wenn Sie über mehrere LINE-Konten verfügen, empfehlen wir, jedes Konto in einem separaten Workspace zu verwenden.
 {% endalert %}
 
 ## Schritt 1: Importieren oder aktualisieren Sie bestehende LINE-Benutzer
@@ -328,7 +328,7 @@ Um die richtige LINE-ID für jeden Benutzer zu erhalten, richten Sie LINE Login 
 
 Mit dieser Methode können Benutzer ihr LINE-Konto mit dem Benutzerkonto Ihrer App verknüpfen. Sie können dann Liquid in Braze verwenden, z. B. {% raw %}`{{line_id}}`{% endraw %}, um eine personalisierte URL für den Benutzer zu erstellen, die die LINE-ID des Benutzers an Ihre Website oder App weiterleitet, die dann mit einem bekannten Benutzer verknüpft werden kann.
 
-1. Erstellen Sie ein aktionsbasiertes Canvas, das auf einer Änderung des Abo-Status basiert und ausgelöst wird, wenn ein:e Nutzer:in Ihren LINE-Kanal abonniert.<br>![Canvas, das triggert, wenn ein Nutzer:in den LINE-Kanal abonniert wird.]({% image_buster /assets/img/line/account_link_1.png %})
+1. Erstellen Sie ein aktionsbasiertes Canvas, das auf einer Änderung des Abo-Status basiert und ausgelöst wird, wenn ein:e Nutzer:in Ihren LINE-Kanal abonniert.<br>![Canvas, das triggert, wenn eine Nutzer:in den LINE-Kanal abonniert.]({% image_buster /assets/img/line/account_link_1.png %})
 2. Erstellen Sie eine Nachricht, die Benutzer dazu anregt, sich bei Ihrer Website oder App anzumelden, indem Sie die LINE ID des Benutzers als Abfrageparameter (über Liquid) übergeben, z.B. so:
 
 ```
@@ -337,7 +337,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 {: start="3"}
 3\. Erstellen Sie eine Nachricht, in der Ihnen der Code für den Gutschein zugestellt wird.
-4\. (Optional) Erstellen Sie eine aktionsbasierte Kampagne oder ein Canvas, das ausgelöst wird, wenn der LINE-Benutzer identifiziert wird, um dem Benutzer seinen Gutscheincode zu senden. <br>![Aktionsbasierte Kampagne, die ausgelöst wird, wenn der LINE-Nutzer:in identifiziert wird.]({% image_buster /assets/img/line/account_link_2.png %})
+4\. (Optional) Erstellen Sie eine aktionsbasierte Kampagne oder ein Canvas, das ausgelöst wird, wenn der LINE-Benutzer identifiziert wird, um dem Benutzer seinen Gutscheincode zu senden. <br>![Eine aktionsbasierte Kampagne, die ausgelöst wird, wenn der LINE-Nutzer identifiziert wird.]({% image_buster /assets/img/line/account_link_2.png %})
 
 #### Funktionsweise
 

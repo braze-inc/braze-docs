@@ -1,23 +1,23 @@
 ---
-nav_title: "DELETE: Eliminar la clave de autenticación SDK"
-article_title: "DELETE: Eliminar la clave de autenticación SDK"
-search_tag: Endpoint
+nav_title: "DELETE: Eliminar la clave de autenticación del SDK"
+article_title: "DELETE: Eliminar la clave de autenticación del SDK"
+search_tag: Punto de conexión
 page_order: 3
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles sobre el punto final Braze de la clave de autenticación del SDK."
+description: "Este artículo describe los detalles sobre el punto final SDK de Braze para eliminar la clave de autenticación del SDK."
 ---
 
 {% api %}
-# Borrar clave de autenticación SDK
+# Eliminar la clave de autenticación del SDK
 {% apimethod delete %}
 /app_group/sdk_authentication/delete
 {% endapimethod %}
 
-> Utiliza este punto final para eliminar una clave de autenticación SDK para tu aplicación.
+> Utiliza este punto final SDK para eliminar una clave de autenticación SDK para tu aplicación.
 
 {% alert important %}
-La clave primaria no se puede borrar. Si intentas borrar la clave primaria, este punto final devolverá un error.
+La clave principal no se puede eliminar. Si intentas eliminar la clave principal, este punto final devolverá un error.
 {% endalert %}
 
 ## Requisitos previos
@@ -44,13 +44,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | -------- | --------- | ----------- |
-| `app_id` | Obligatoria | Cadena | El identificador de la API de la aplicación. |
-| `key_id` | Obligatoria | Cadena | El ID de la clave de autenticación SDK que hay que borrar. |
+| `app_id` | Obligatoria | Cadena | El identificador API de la aplicación. |
+| `key_id` | Obligatoria | Cadena | El ID de la clave de autenticación del SDK que deseas eliminar. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
 
-```json
+```bash
 curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_authentication/delete' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -79,20 +79,20 @@ curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_au
 
 | Parámetro | Tipo de datos | Descripción |
 | --------- | --------- | ----------- |
-| `keys` | Matriz | Conjunto de objetos clave de autenticación SDK restantes. |
-| `keys[].id` | Cadena | El ID de la clave de autenticación SDK. |
+| `keys` | Matriz | Matriz de objetos de clave de autenticación SDK restantes. |
+| `keys[].id` | Cadena | El ID de la clave de autenticación del SDK. |
 | `keys[].rsa_public_key` | Cadena | La cadena de clave pública RSA. |
-| `keys[].description` | Cadena | Descripción de la clave de autenticación SDK. |
-| `keys[].is_primary` | Booleano | Si esta clave es la clave principal de autenticación SDK. |
+| `keys[].description` | Cadena | Descripción de la clave de autenticación del SDK. |
+| `keys[].is_primary` | Booleano | Si esta clave es la clave de autenticación SDK principal. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Reglas de validación
 
 Este punto final tiene las siguientes reglas de validación:
 
-- El `key_id` debe ser un ID de clave de autenticación SDK válido.
-- El `app_id` debe ser un identificador de API de aplicación válido.
+- Debe`key_id` ser un ID de clave de autenticación SDK válido.
+- Debe ser un identificador`app_id` API válido de la aplicación.
 - La clave de autenticación SDK debe existir para la aplicación especificada.
-- La clave de autenticación SDK primaria no se puede borrar.
+- La clave de autenticación SDK principal no se puede eliminar.
 
 {% endapi %}

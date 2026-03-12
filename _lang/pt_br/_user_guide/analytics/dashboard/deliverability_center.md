@@ -1,6 +1,7 @@
 ---
 nav_title: Centro de entregabilidade
 article_title: Centro de entregabilidade
+alias: "/deliverability_center/"
 page_order: 4
 description: "Este artigo de referência cobre como configurar o Centro de Entregabilidade, um recurso que permite aos profissionais de marketing visualizar seus domínios de envio de e-mail e reputações de IP e entender sua entregabilidade de e-mail."
 channel:
@@ -14,7 +15,55 @@ channel:
 
 A entregabilidade de e-mail é o cerne do sucesso da campanha. Usando o Centro de Entregabilidade no dashboard do Braze, você pode visualizar seus domínios por **Reputação de IP** ou **Erros de Entrega** para descobrir e solucionar quaisquer problemas potenciais com a entregabilidade de e-mail. 
 
-Para acessar o Centro de Entregabilidade, você deve ter "Acessar Campanhas, Canvases, Cartões, Segmentos, Biblioteca de Mídia" e "Ver Dados de Uso" [permissões do usuário]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/).
+Para acessar o Centro de Entregabilidade, você precisa das permissões de usuário legadas "Acessar Campanhas, Canvases, Cartões, Segmentos, Biblioteca de Mídia" e "Ver Dados de Uso" [permissões de usuário legadas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?sdktab=legacy%20permissions) ou as [permissões granulares]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?sdktab=granular%20permissions) no seguinte menu suspenso para o seu espaço de trabalho.
+
+{% details User permissions for the Deliverability Center %}
+
+{% multi_lang_include deprecations/user_permissions.md %}
+
+- Ver campanhas
+- Editar campanhas
+- Arquivar campanha
+- Ver canvas
+- Editar canvas
+- Arquivar canvas
+- Ver regras de limite de frequência
+- Editar regras de limite de frequência
+- Ver priorização de mensagens
+- Editar priorização de mensagens
+- Ver blocos de conteúdo
+- Visualizar Feature Flags
+- Editar Feature Flag
+- Arquivar Feature Flags
+- Exibir segmentos
+- Editar segmentos
+- Exibir modelos de IAM
+- Editar modelos de IAM
+- Arquivar modelos de IAM
+- Exibir modelos de e-mail
+- Editar modelo de e-mail
+- Arquivar modelos de e-mail
+- Exibir modelos de webhook
+- Editar modelos de webhook
+- Arquivar modelos de webhooks
+- Exibir modelos de links
+- Editar modelos de links
+- Exibir ativos da biblioteca de mídia
+- Editar ativos da biblioteca de mídia
+- Excluir ativos da biblioteca de mídia
+- Ver locais
+- Editar locais
+- Arquivar locais
+- Ver Códigos de Promoção
+- Editar Códigos de Promoção
+- Exportar Códigos de Promoção
+- Ver Centrais de Preferências
+- Editar Centrais de Preferências
+- Ver Relatórios
+- Editar Relatórios
+- Ver dados de uso
+
+{% enddetails %}
 
 ## Configuração de sua conta do Google Postmaster
 
@@ -22,7 +71,7 @@ Antes de se conectar ao Centro de Entregabilidade, você precisará configurar u
 
 1. Acessar o [dashboard do Google Postmaster Tools](https://postmaster.google.com/managedomains?pli=1).
 2. No canto inferior direito, selecione o ícone de <i class="fas fa-plus-circle"></i> mais.
-3. Digite seu domínio raiz ou subdomínio para autenticar seu e-mail. Se você estiver adicionando e verificando o domínio raiz, isso permite que a verificação seja aplicada a subdomínios. Por exemplo, ao verificar `braze.com`, você pode adicionar mais tarde `demo.braze.com` e outros subdomínios sem verificá-los individualmente.
+3. Digite seu domínio raiz ou subdomínio para autenticar seu e-mail. Se você estiver adicionando e verificando o domínio raiz, isso permite que a verificação seja aplicada a subdomínios. Por exemplo, ao verificar `braze.com`, você pode adicionar `demo.braze.com` e outros subdomínios posteriormente sem verificá-los individualmente.
 
 {% alert important %}
 Certifique-se de que o registro TXT esteja vinculado ao domínio pai, não ao subdomínio que você está usando através do Braze.
@@ -31,7 +80,7 @@ Certifique-se de que o registro TXT esteja vinculado ao domínio pai, não ao su
 {: start="4"}
 4\. O Google gera um registro TXT que pode ser adicionado diretamente ao DNS do seu domínio. Isso é geralmente de propriedade de quem gerencia seu DNS. Para obter informações e orientações sobre como atualizar seu DNS específico, confira [Verificar seu domínio (etapas específicas do host)](https://support.google.com/a/topic/1409901).
 5\. Selecione **Próximo**. <br>![Um domínio de exemplo "demo.braze.com" para autenticar um e-mail.]({% image_buster /assets/img_archive/domain_authentication.png %})
-6\. Depois que o registro TXT for adicionado ao DNS, volte para o dashboard do Google Postmaster Tools e selecione **Verificar**. Esta etapa confirma que você possui o domínio, para que você possa acessar as métricas de entregabilidade do Gmail em sua conta do Postmaster. <br> ![Um aviso para verificar a propriedade do domínio "demo.braze.com".]({% image_buster /assets/img_archive/domain_verification.png %})
+6\. Depois que o registro TXT for adicionado ao DNS, volte para o dashboard do Google Postmaster Tools e selecione **Verificar**. Esta etapa confirma que você possui o domínio, para que você possa acessar as métricas de entregabilidade do Gmail na sua conta do Postmaster. <br> ![Um aviso para verificar a propriedade do domínio "demo.braze.com".]({% image_buster /assets/img_archive/domain_verification.png %})
 
 {% alert note %}
 Se seus subdomínios não estiverem incluídos no Centro de Entregabilidade do Google Postmaster, isso pode ser resultado de adicionar apenas o domínio pai ao Google Postmaster. Depois que os domínios pais forem verificados no Google Postmaster, você pode adicionar seus subdomínios, que são verificados automaticamente. Esse processo permite que o Google reporte métricas no nível do subdomínio, que podem então ser puxadas para o Centro de Entregabilidade da Braze.
@@ -103,7 +152,7 @@ Consulte esta tabela para entender qual porcentagem do seu tráfego de entrada e
 | TLS Saída | Mostra a porcentagem de e-mails enviados (do Gmail) aceitos via TLS em comparação com todos os e-mails enviados para esse domínio. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para mais ideias sobre como melhorar a entregabilidade, leia [Armadilhas e problemas de entregabilidade]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/#deliverability-pitfalls-and-spam-traps). Certifique-se de consultar nossas [Melhores práticas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/) para coisas que você deve verificar antes de enviar uma campanha de e-mail.
+Para mais ideias sobre como melhorar a entregabilidade, leia [Armadilhas de entregabilidade e armadilhas de spam]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/#deliverability-pitfalls-and-spam-traps). Certifique-se de consultar nossas [Melhores práticas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/) para coisas que você deve verificar antes de enviar uma campanha de e-mail.
 
 ## Configuração do Microsoft Smart Network Data Services (SNDS)
 
@@ -113,7 +162,7 @@ Se a Microsoft for seu principal provedor de caixa de e-mail, você pode usar es
 Se você não vir seus dados no Centro de Entregabilidade, entre em contato com [Suporte]({{site.baseurl}}/user_guide/administrative/access_braze/support/) com uma lista de seus endereços IP.
 {% endalert %}
 
-![Um exemplo de resultados do Microsoft SNDS, incluindo IPs de amostra, destinatários, comandos RCPT, comandos de dados, resultado do filtro, taxa de reclamação, período de início e fim da mensagem de armadilha e hits de armadilha de spam.]({% image_buster /assets/img_archive/deliverability_center_msnds.png %})
+![Um exemplo de resultados do Microsoft SNDS, incluindo IPs de amostra, destinatários, comandos RCPT, comandos de dados, resultado do filtro, taxa de reclamação, período de início e fim da mensagem de armadilha e acertos de armadilha de spam.]({% image_buster /assets/img_archive/deliverability_center_msnds.png %})
 
 ### Métricas e definições
 
@@ -153,10 +202,10 @@ Para calcular a taxa de reclamações, divida o número de reclamações pelo n�
 
 #### Hits de spam trap
 
-Os acertos de armadilhas de spam são o número de mensagens enviadas para "contas de armadilha", que são contas mantidas por Outlook.com que não solicitam nenhum e-mail. É provável que quaisquer mensagens enviadas para essas contas de armadilha sejam consideradas spam, portanto, é importante monitorar essa métrica para garantir que esteja baixa. Baixos hits de armadilha de spam significam que as mensagens não estão sendo enviadas para essas contas e estão sendo enviadas para contas reais em vez disso.
+Os acertos de armadilhas de spam são o número de mensagens enviadas para "contas de armadilha", que são contas mantidas por Outlook.com que não solicitam nenhum e-mail. É provável que quaisquer mensagens enviadas para essas contas de armadilha sejam consideradas spam, então é importante monitorar essa métrica para garantir que esteja baixa. Baixos acertos de armadilha de spam significam que as mensagens não estão sendo enviadas para essas contas e estão sendo enviadas para contas reais em vez disso.
 
 {% alert tip %}
-Se você está procurando registros relacionados a um de seus domínios verificados no Braze, note que o Centro de Entregabilidade lista seus dados do Google Postmaster ou Microsoft SNDS, o que significa que é provável que nenhuma das plataformas tenha dados para compartilhar com o Braze. Alternativamente, sugerimos manter a entrega consistente de e-mails, pois isso pode levar a uma reputação mais alta.
+Se você está procurando registros relacionados a um dos seus domínios verificados no Braze, note que o Centro de Entregabilidade lista seus dados do Google Postmaster ou Microsoft SNDS, o que significa que é provável que nenhuma das plataformas tenha dados para compartilhar com o Braze. Alternativamente, sugerimos manter a entrega consistente de e-mails, pois isso pode levar a uma reputação mais alta.
 {% endalert %}
 
 

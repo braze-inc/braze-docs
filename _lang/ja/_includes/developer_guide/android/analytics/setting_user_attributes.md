@@ -2,9 +2,9 @@
 
 ## デフォルトのユーザー属性
 
-### 定義済みのメソッド
+### 事前定義されたメソッド
 
-Brazeには、以下のユーザー属性を設定するための定義済みメソッドがある。 [`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)クラス内でメソッドの仕様については、[KDocを](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)参照のこと。
+Brazeは、クラス[`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)内で以下のユーザー属性を設定するための事前定義されたメソッドを提供する。メソッド仕様については、[当社のKDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)を参照のこと。
 
 - 名
 - 姓
@@ -22,7 +22,7 @@ Brazeには、以下のユーザー属性を設定するための定義済みメ
 
 ### デフォルト属性の設定
 
-ユーザーにデフォルト属性を設定するには、Brazeインスタンスで`getCurrentUser()` メソッドを呼び出し、アプリの現在のユーザーへの参照を取得する。そして、ユーザー属性を設定するメソッドを呼び出すことができる。
+ユーザーにデフォルト属性を設定するには、Brazeインスタンスの`getCurrentUser()`メソッドを呼び出して、アプリ現在のユーザーへの参照を取得する。そうすれば、メソッドを呼び出してユーザー属性を設定できる。
 
 {% tabs %}
 {% tab JAVA %}
@@ -48,9 +48,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### デフォルト属性の設定を解除する
+### デフォルト属性の解除
 
-ユーザー属性を解除するには、関連するメソッドに`null` 。
+ユーザー属性を解除するには、該当するメソッド`null`に渡す。
 
 {% tabs %}
 {% tab JAVA %}
@@ -78,13 +78,13 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ## カスタムユーザー属性
 
-デフォルトのユーザー属性に加え、Brazeではいくつかのデータタイプを使用してカスタム属性を定義することができる。各属性のセグメンテーションオプションの詳細については、[ユーザーデータ収集を]({{site.baseurl}}/developer_guide/analytics)参照のこと。
+デフォルトのユーザー属性に加えて、Brazeでは複数の異なるデータ型を使用してカスタム属性を定義することもできる。各属性のセグメンテーションオプションの詳細については、[ユーザーデータ収集を]({{site.baseurl}}/developer_guide/analytics)参照せよ。
 
 ### カスタム属性の設定
 
 {% tabs local %}
 {% tab String %}
-`string` 、カスタム属性を設定する：
+カスタム属性を`string`値と共に設定するには：
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -111,7 +111,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 {% tab Integers %}
-`int` 、カスタム属性を設定する：
+カスタム属性を設定する際に値を`int`指定するには：
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -143,7 +143,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 
-`long` 、整数値でカスタム属性を設定する：
+整`long`数値を持つカスタム属性を設定するには：
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -170,7 +170,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 {% tab Floating-points %}
-`float` 、カスタム属性を設定する：
+カスタム属性を`float`値と共に設定するには：
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -196,7 +196,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 
-`double` 、カスタム属性を設定する：
+カスタム属性を`double`値と共に設定するには：
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -224,7 +224,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 
 {% tab Boolean %}
-`boolean` 、カスタム属性を設定する：
+カスタム属性を`boolean`値と共に設定するには：
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -291,7 +291,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% tab Array %}
 
-カスタム属性配列内の要素の最大数は、25にデフォルト設定されています。個々の配列の最大値は、Braze ダッシュボードの [**データ設定**] > [**カスタム属性**] で100まで増やすことができます。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。カスタム属性配列とその動作の詳細については、[配列に関する]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)ドキュメントを参照してください。
+カスタム属性配列内の要素の最大数は、25にデフォルト設定されています。個々の配列の最大値は、Brazeダッシュボードの「**データ設定**」＞「**カスタム属性**」で最大500まで増やせる。要素数が最大値を超える配列は、最大要素数を含むように切り詰められる。カスタム属性配列とその動作に関する詳細は、[配列を]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)参照せよ。
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -328,9 +328,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### カスタム属性の設定を解除する
+### カスタム属性の設定解除
 
-カスタム属性を解除するには、`unsetCustomUserAttribute` メソッドに関連する属性キーを渡す。
+カスタム属性を解除するには、該当する属性キーをメソッド`unsetCustomUserAttribute`に渡す。
 
 {% tabs %}
 {% tab JAVA %}
@@ -358,7 +358,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ### 階層化カスタム属性
 
-また、カスタム属性の中にプロパティを入れ子にすることもできる。以下の例では、階層化プロパティを持つ`favorite_book` オブジェクトが、ユーザープロファイルのカスタム属性として設定されている。詳しくは、[階層化カスタム]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)属性を参照のこと。
+カスタム属性内にプロパティをネストすることもできる。次の例では、ネストされたプロパティを持つオブジェクト`favorite_book`が、ユーザープロファイルのカスタム属性として設定される。詳細については、[階層化カスタム属性]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)参照のこと。
 
 {% tabs %}
 {% tab JAVA %}
@@ -395,7 +395,7 @@ braze.getCurrentUser { user ->
 
 ### REST API の使用
 
-また、REST APIを使用して、ユーザー属性を設定または解除することもできる。詳細については、[ユーザーデータエンドポイント]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)を参照してください。
+ユーザー属性を設定または解除するには、当社のREST APIも利用できる。詳細については、[ユーザーデータエンドポイント]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)を参照してください。
 
 ## ユーザーサブスクリプションの設定
 
