@@ -108,6 +108,11 @@ For email, you can optimize for one of the following events. The agent uses open
 
 Your selected optimization event applies to all content components in this step. 
 
+## Best practices
+
+- If you’re optimizing to clicks, include subject lines in your tests as this can help lead to clicks by the opens.
+- If you’re optimizing to opens, keep your testing focused on the subject or email pre-header or both.
+
 ## Analytics
 
 To review performance, open the step-level analytics panel to see metrics by content variant and overall combination performance. The Content Optimizer step uses the [same analytics as the Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#analytics).
