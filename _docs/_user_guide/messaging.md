@@ -29,7 +29,7 @@ guide_featured_list:
   - name: Templates
     link: /docs/user_guide/messaging/templates/
     image: /assets/img/braze_icons/table.svg
-  - name: "A/B testing"
+  - name: "A/B tests"
     link: /docs/user_guide/messaging/ab_testing/
     image: /assets/img/braze_icons/beaker-02.svg
   - name: Feature flags
