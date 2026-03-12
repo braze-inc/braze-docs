@@ -41,6 +41,8 @@ To set this up:
 
 Then, you can return to your agent and select your model.
 
+When Braze makes outbound calls to an LLM provider using your API key, the calls come from the same IP addresses listed in the [Connected Content IP allowlist]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/#connected-content-ip-allowlisting). If your provider supports IP allowlisting, you can restrict the key to those IPs so only Braze can use it.
+
 {% alert important %}
 When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.  
 {% endalert %}
