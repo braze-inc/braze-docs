@@ -58,13 +58,14 @@ jobs:
           EXISTING=$(gh pr list --base main --head develop --state open --json number --jq '.[0].number // empty')
 
           if [ -n "$EXISTING" ]; then
-            echo "Reusing existing PR #$EXISTING — updating title, body, and label."
-            gh pr edit "$EXISTING" --title "$TITLE" --body "$BODY" --add-label "Deploy"
+            echo "Reusing existing PR #$EXISTING — updating title, body, label, and assignee."
+            gh pr edit "$EXISTING" --title "$TITLE" --body "$BODY" --add-label "Deploy" --add-assignee "@me"
           else
             gh pr create \
               --base main \
               --head develop \
               --title "$TITLE" \
               --body "$BODY" \
-              --label "Deploy"
+              --label "Deploy" \
+              --assignee "@me"
           fi
