@@ -9,5 +9,5 @@ Omit articles before "Braze" unless grammar requires one. When an article is nee
 ## Register and tone
 
 - Use formal German (Sie) — this is the standard for friendly technical content in German
-- The tone should be informal, friendly, and informative — approachable rather than stiff or academic
-- Content should sound conversational, as if explaining something to an acquaintance
+- The tone should be friendly, conversational, and informative — approachable rather than stiff or academic
+- Content should sound conversational, as if explaining something to an acquaintance, while consistently using the formal address (Sie)
