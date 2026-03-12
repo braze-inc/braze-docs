@@ -1826,7 +1826,7 @@ Capitalize all states and provinces.
 
 For article headings and titles, use sentence case capitalization. Be descriptive when writing headings and titles, and focus on the main purpose of the content based on the article type. Do not use ampersands in place of the word "and".
 
-For article titles, when possible, avoid gerunds (verbs ending in *-ing*) in favor of clear, concise noun phrases. Keep the article titles concise and make sure it is appropriate for the content. For example, a reference article about SMS messages could be titled “About SMS”.
+For article titles, when possible, avoid gerunds (verbs ending in *-ing*) in favor of imperative verbs. Keep the article titles concise and make sure it is appropriate for the content. For example, a reference article about SMS messages could be titled “About SMS”.
 
 For article headings, be concise and consistent across heading titles. For example, if the article’s Heading 1 style defines each step (ex. **Step 1: Create a new push campaign**), then keep this format across the article headings for consistency.
 
