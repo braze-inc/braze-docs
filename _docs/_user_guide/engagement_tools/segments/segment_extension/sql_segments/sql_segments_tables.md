@@ -581,6 +581,7 @@ Field | Type | Description
 ------|------|------------
 `id` | `string` | Globally unique ID for this event
 `time` | `int` | UNIX timestamp at which the event happened
+`time_ms` | `int` | Time in milliseconds when the event happened
 `user_id` | `string` | Braze user ID of the user who performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] External ID of the user
 `sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
