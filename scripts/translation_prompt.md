@@ -119,4 +119,4 @@ The file `_includes/rate_limits.md` uses Liquid conditionals with include parame
 ### Formatting preservation
 
 - Translate text that is in bold but keep the bold formatting — these often refer to UI elements
-- Never change underscores to dashes in any identifier or token
+- For rules about preserving identifiers and tokens (including underscores), follow the “What to NEVER translate or modify” section above
