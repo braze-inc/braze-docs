@@ -3,7 +3,7 @@
 ## Register and tone
 
 - Use polite Japanese (です/ます form) — this is the standard for friendly technical content in Japanese
-- The tone should be informal, friendly, and informative — approachable rather than stiff or academic
+- The tone should be friendly, conversational, and informative — approachable rather than stiff or academic
 - Content should sound conversational, as if explaining something to an acquaintance
 
 ## Inclusivity
