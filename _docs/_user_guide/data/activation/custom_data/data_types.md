@@ -1,47 +1,113 @@
 ---
 nav_title: Data types
-article_title: Custom Attribute Data Types
-page_order: 4
+article_title: Data types
+page_order: 1
 page_type: reference
-description: "This article describes the data types you can use for custom attributes, including booleans, numbers, strings, arrays, time, objects, and arrays of objects."
+description: "Reference for supported data types for custom attributes, event properties, and catalogs in Braze."
+toc_headers: h2
 ---
 
-# Custom attribute data types
+# Data types
 
-Custom attributes are extraordinarily flexible tools that allow for great targeting.
+> This page consolidates the supported data types for custom attributes, event properties, and catalogs. Each custom data type has slightly different data type support and constraints.
 
-The following data types may be stored as custom attributes:
+## Definitions {#definitions}
 
-- [Booleans](#booleans)
-- [Numbers](#numbers)
-- [Strings](#strings)
-- [Arrays](#arrays)
-- [Time](#time)
-- [Objects]({{site.baseurl}}/user_guide/data/activation/attributes/nested_custom_attribute_support/)
-- [Arrays of objects]({{site.baseurl}}/user_guide/data/activation/attributes/array_of_objects/)
+Use this table to see which data types you can use for user profile attributes, event data, or catalog items. Refer to the sections that follow for usage and constraints for each type.
 
-## Booleans (true/false) {#booleans}
+<table role="presentation" class="definitions-table reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4 reset-td-br-5">
+  <thead>
+    <tr>
+      <th>Data type</th>
+      <th>Definition</th>
+      <th>Custom attributes</th>
+      <th>Event properties</th>
+      <th>Catalogs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Boolean</td>
+      <td>Value <code>true</code> or <code>false</code></td>
+      <td>✅ Supported</td>
+      <td>✅ Supported</td>
+      <td>✅ Supported</td>
+    </tr>
+    <tr>
+      <td>Number</td>
+      <td>Whole number or decimal</td>
+      <td>✅ Supported</td>
+      <td>✅ Supported</td>
+      <td>✅ Supported</td>
+    </tr>
+    <tr>
+      <td>String</td>
+      <td>Text; 255 characters or fewer</td>
+      <td>✅ Supported</td>
+      <td>✅ Supported</td>
+      <td>✅ Supported</td>
+    </tr>
+    <tr>
+      <td>Time</td>
+      <td>Date and time in a standard format (<a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>)</td>
+      <td>✅ Supported</td>
+      <td>✅ Supported</td>
+      <td>✅ Supported</td>
+    </tr>
+    <tr>
+      <td>Array</td>
+      <td>Ordered list of values</td>
+      <td>✅ Supported</td>
+      <td>✅ Supported</td>
+      <td>✅ Supported</td>
+    </tr>
+    <tr>
+      <td>Object</td>
+      <td>Structured data with named fields (nested key-value)</td>
+      <td>✅ Supported</td>
+      <td>✅ Supported</td>
+      <td>✅ Supported</td>
+    </tr>
+    <tr>
+      <td>Array of objects</td>
+      <td>List of objects</td>
+      <td>✅ Supported</td>
+      <td>❌ Not supported</td>
+      <td>❌ Not supported</td>
+    </tr>
+  </tbody>
+</table>
 
-Boolean attributes are useful for storing simple binary data about your users, like subscription statuses. You can find users that explicitly have a variable set to a true or false value, in addition to those that don't have any record of that attribute recorded yet.
+### Important considerations 
+
+- **Array:** Custom attributes and event properties have size limits. Datetimes are not supported inside arrays in event properties. Catalogs support only string arrays, with a maximum of 100 elements.
+- **Object:** In Braze, this appears as "nested custom attributes" for custom attributes, "nested objects" for event properties, and "JSON object" for catalogs.
+- **Time:** In event properties, this type is labeled "Datetime."
+
+## Custom attribute data types {#custom-attribute-data-types}
+
+Custom attributes support the data types listed in the [Definitions](#definitions) table. The following describes usage and segmentation for each supported data type.
+
+{% tabs %}
+{% tab Boolean %}
+
+For **Boolean** attributes, the following segmentation options are available.
 
 | Segmentation options | Dropdown filter | Input options | Examples |
 | ---------------------| --------------- | ------------- | -------- |
 | Check if the boolean value **is** either true, false, true or not set, or false or not set | **IS**  | **TRUE**, **FALSE**, **TRUE OR NOT SET**, or **FALSE OR NOT SET** | If this filter specifies `coffee_drinker`, a user will match this filter in the following circumstances: <br> {::nomarkdown}<ul><li>If this filter is <code>true</code> and the user has the value <code>coffee_drinker</code></li><li>If this filter is <code>false</code> and the user doesn't have the value <code>coffee_drinker</code></li><li>If this filter is <code>true or not set</code> and the user has the value <code>coffee_drinker</code> or no value</li><li>If this filter is <code>false or not set</code> and the user doesn't have <code>coffee_drinker</code> or any value</li></ul>{:/} |
-| Check if the boolean value **exists** on a user's profile and is not null | **IS NOT BLANK**  | **N/A** | If this filter specifies `coffee_drinker` and a user has a value for the attribute `coffee_drinker`, the user will match this filter. | 
-| Check if the boolean value **does not exist** on a user's profile or is null | **IS BLANK**  | **N/A** | If this filter specifies `coffee_drinker`and a user either doesn't have the attribute `coffee_drinker` or the value for `coffee_drinker` is null, the user will match this filter.|
+| Check if the boolean value **exists** on a user's profile and is not null | **IS NOT BLANK**  | **N/A** | If this filter specifies `coffee_drinker` and a user has a value for the attribute `coffee_drinker`, the user will match this filter. |
+| Check if the boolean value **does not exist** on a user's profile or is null | **IS BLANK**  | **N/A** | If this filter specifies `coffee_drinker` and a user either doesn't have the attribute `coffee_drinker` or the value for `coffee_drinker` is null, the user will match this filter.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## Numbers {#numbers}
-
-Numeric attributes include [integers](https://en.wikipedia.org/wiki/Integer) and [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic), and have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred without counting against your data cap. Standard numbers have all sorts of usages, such as recording:
-
-- Shoe size
-- Waist size
-- Number of times a user has viewed a certain product feature, or category
+{% endtab %}
+{% tab Numbers %}
 
 {% alert tip %}
-Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods](#purchase-revenue-tracking).
+Money spent should not be recorded by this method. Rather it should be recorded via [purchase events]({{site.baseurl}}/user_guide/data/activation/events/purchase_events/).
 {% endalert %}
+
+For **Number** attributes, the following segmentation options are available.
 
 | Segmentation options | Dropdown filter | Input options | Examples |
 | ---------------------| --------------- | ------------- | -------- |
@@ -53,21 +119,22 @@ Money spent should not be recorded by this method. Rather it should be recorded 
 | Check if the numeric attribute **does not exist** on a user's profile or is null | **IS BLANK** | **N/A** | If a user profile doesn't contain the specified numeric attribute or the attribute's value is null, the user will match this filter.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-### Number attribute details
+#### Number attribute details
 
 - "Exactly 0" and "Less Than" filters include users with NULL fields
   - To exclude users without a value for custom attributes, you need to include the **is not blank** filter.
 
-## Strings (alphanumeric characters) {#strings}
+{% endtab %}
+{% tab Strings %}
 
-String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 255 characters long.
+String attributes can be up to 255 characters long. Note that if you input any values with spaces in between, before, or after words, Braze will also check for the same spaces.
 
-Note that if you input any values with spaces in between, before, or after words, then Braze will also check for the same spaces.
+For **String** attributes, the following segmentation options are available.
 
 | Segmentation options | Dropdown filter | Input options | Examples |
 | ---------------------| --------------- | ------------- | -------- |
 | Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING**<br>Case sensitive | If this filter specifies `book` and a user profile has a string attribute for `last_item_purchased` that contains `book`, the user will match this filter. |
-| Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** <br>Not case sensitive; maximum of 32,764 characters | 
+| Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** <br>Not case sensitive; maximum of 32,764 characters |
 | Check if the string attribute **does not partially match** an inputted string **OR** Regular Expression | **DOES NOT MATCH REGEX** * | **STRING** **OR** **REGULAR EXPRESSION**<br>Not case sensitive; maximum of 32,764 characters |
 | Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING**<br>Not case sensitive  | If this filter specifies `book` and a user profile has a string attribute for `last_item_purchased` that doesn't contain `book`, the user will match this filter.|
 | Check if the string attribute **exists** on a user's profile and is not an empty string | **IS NOT BLANK** | **N/A** | If this filter specifies `favorite_genre` and a user profile has the attribute `favorite_genre`, the user will match this filter regardless of their attribute value. For example, the user can have `sci-fi`, `romance`, or another value.|
@@ -84,17 +151,16 @@ Note that if you input any values with spaces in between, before, or after words
 When segmenting using the **DOES NOT MATCH REGEX** filter, you must already have a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank to ensure users are being targeted properly.
 {% endalert %}
 
-## Arrays {#arrays}
+{% endtab %}
+{% tab Arrays %}
 
-Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
-
-Arrays have a maximum size of 100&nbsp;KB. The default length for an attribute is up to 500 items. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 500, when a user watches a 501st movie, the first movie will be removed from the array, and the most recent movie will be added. 
-
-Note that if you input any values with spaces in between, before, or after words, Braze will also check for the same spaces.
+Arrays have a maximum size of 100&nbsp;KB. The default length for an attribute is up to 500 items (for example, if you're sending an attribute such as "Movies Watched" set to 500, when a user watches a 501st movie, the first movie is removed and the most recent is added). Note that if you input any values with spaces in between, before, or after words, Braze will also check for the same spaces.
 
 {% alert note %}
 The option to increase the maximum length will not be available if the attribute is set to automatically detect the data type; the data type must be set to array.
 {% endalert %}
+
+For **Array** attributes, the following segmentation options are available.
 
 | Segmentation options | Dropdown filter | Input options | Examples |
 | ---------------------| --------------- | ------------- | -------- |
@@ -119,17 +185,16 @@ For more on how to use regular expressions (regex), check out these resources:
 - [Regex tutorial](https://www.medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
-## Time {#time}
+{% endtab %}
+{% tab Time %}
 
-Time attributes are useful for storing the last time a specific action was taken, so you can offer content specific re-engagement messaging to your users.
-
-Time filters using relative dates (for example, more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24-hour increments. For example, `last used app more than 1 day ago` will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges—so five days from activation will mean the prior 120 hours.
-
-For example, to build a segment that targets users with a time attribute between 24 and 48 hours in the future, apply the filters `in more than 1 day in the future` and `in less than 2 days in the future`.
+Time filters using relative dates (for example, more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. For example, to build a segment that targets users with a time attribute between 24 and 48 hours in the future, apply the filters `in more than 1 day in the future` and `in less than 2 days in the future`.
 
 {% alert warning %}
 The last date a custom event or purchase event occurred is automatically recorded and shouldn't be recorded again via a custom time attribute.
 {% endalert %}
+
+For **Time** attributes, the following segmentation options are available.
 
 | Segmentation options | Dropdown filter | Input options | Examples |
 | ---------------------| --------------- | ------------- | -------- |
@@ -143,23 +208,30 @@ The last date a custom event or purchase event occurred is automatically recorde
 | Check if the time attribute **does not exist** on a user's profile or is null | **IS BLANK** | **N/A** | If this filter specifies a time attribute that isn't on a user profile, the user will match this filter. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-### Time attribute details
+#### Time attribute details
 
 - Day of Recurring Event
   - When using the "Day of Recurring Event" filter, and are then prompted to select the "Calendar Day of Recurring Event", if you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.
-  - For example, if on March 10, 2020, you selected the date of the attribute to be `LESS THAN ... March 10, 2020`, attributes will be considered for the days up to, and including March 10, 2020. 
+  - For example, if on March 10, 2020, you selected the date of the attribute to be `LESS THAN ... March 10, 2020`, attributes will be considered for the days up to, and including March 10, 2020.
 - Less than X Days Ago: The "Less than X Days Ago" filter includes dates between X days ago and the current date/time.
 - Less than X Days in the Future: Includes dates between the current date/time and X days in the future.
 
-## Objects
+{% endtab %}
+{% tab Objects %}
 
 You can use nested custom attributes to send objects as a data type for custom attributes. For more information, refer to [Nested custom attributes]({{site.baseurl}}/user_guide/data/activation/attributes/nested_custom_attribute_support/).
 
-## Arrays of objects
+{% endtab %}
+{% tab Arrays of objects %}
 
-Use an array of objects to group related attributes. For more details, refer to our article on [Array of objects]({{site.baseurl}}/user_guide/data/activation/attributes/array_of_objects/).
+Use an array of objects to group related attributes. For more details, refer to [Array of objects]({{site.baseurl}}/user_guide/data/activation/attributes/array_of_objects/).
 
-## Consolidated operators
+{% endtab %}
+{% endtabs %}
+
+You can change the data type of your custom attribute, but you should be aware of the impacts. Refer to [Changing custom attribute or event data type](#changing-custom-attribute-or-event-data-type) for more.
+
+### Consolidated operators {#consolidated-operators}
 
 We've consolidated the list of operators available to use in attribute filters, custom attribute filters, and nested custom attribute filters. If you have existing filters using these operators, they will be automatically updated to use the new operators.
 
@@ -171,26 +243,86 @@ We've consolidated the list of operators available to use in attribute filters, 
 | Array | doesn't include value | includes none of | At least 1 value |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## Purchase and revenue tracking {#purchase-revenue-tracking}
+## Event property data types {#event-property-data-types}
 
-Using our purchase methods to record in-app purchases establishes the Lifetime Value (LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
+When you log an event, you can attach extra information (for example, product name or price) as event properties. Each property has a name and a value. Event property values support the data types in the [Definitions](#definitions) table (Time is labeled "Datetime" in event properties).
 
-| Segmentation options | Dropdown filter | Input options | Examples |
-| ---------------------| --------------- | ------------- | -------- |
-| Check if the total number of dollars spent **is greater than** a **number**| **GREATER THAN** | **NUMBER** | If this filter specifies `500` and a user profile has a value greater than `500`, the user will match this filter. |
-| Check if the total number of dollars spent **is less than** a **number**| **LESS THAN** | **NUMBER** | If this filter specifies `500` and a user profile has a value less than `500`, the user will match this filter.|
-| Check if total number of dollars spent **is exactly** a **number**| **EXACTLY** | **NUMBER** | If this filter specifies `500` and a user profile has the value `500`, the user will match this filter. |
-| Check if the purchase last occurred **after X date** | **AFTER** | **TIME** | If this filter specifies `2024/31/1` and a user's last purchase was after `2024/31/1`, the user will match this filter.|
-| Check if the purchase last occurred **before X date** | **BEFORE** | **TIME** | If this filter specifies `2024/31/1` and a user's last purchase was before `2024/31/1`, the user will match this filter.|
-| Check if the purchase last occurred **more than X days ago** | **MORE THAN** | **TIME** | If this filter specifies `7` and a user's last purchase was more than seven days ago from today, the user will match this filter.|
-| Check if the purchase last occurred **less than X days ago** | **LESS THAN** | **TIME** |  If this filter specifies `7` and a user's last purchase was less than seven days ago from today, the user will match this filter.|
-| Check if the purchase occurred **more than X (Max = 50) number of times** | **MORE THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** |  If this filter specifies `7` times and `21` days, and a user made more than seven purchases in the past 21 days, the user will match this filter.|
-| Check if the purchase occurred **less than X (Max = 50) number of times** | **LESS THAN** | in the past **Y Days (Y = 1,3,7,14,21,30)** | If this filter specifies `7` times and `21` days, and a user made less than seven purchases in the past 21 days, the user will match this filter.|
-| Check if the purchase occurred **exactly X (Max = 50) number of times** | **EXACTLY** | in the past **Y Days (Y = 1,3,7,14,21,30)** | If this filter specifies `7` times and `21` days, and a user made seven purchases in the past 21 days, the user will match this filter.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+### Expected format {#expected-format}
 
-{% alert tip %}
-If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/#incrementingdecrementing-custom-attributes).
+Property values are sent as an object: keys are the property names, and values are the property values. Property names must be non-empty strings, 255 characters or fewer, with no leading dollar signs (`$`).
+
+Event-property-specific rules:
+
+- **Time (Datetime):** Use [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) or `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. Not supported within arrays.
+- **Array:** Datetimes are not supported within arrays.
+- **Nested object:** See [Nested objects]({{site.baseurl}}/user_guide/data/activation/events/custom_events/nested_objects/).
+- **Payload:** Event property objects that contain array or object values can be up to 100&nbsp;KB.
+
+You can change the data type of your custom event property, but be aware of the impacts of [changing data types](#changing-custom-attribute-or-event-data-type) after data has been collected.
+
+For full event property behavior, reserved keys, and usage in triggers and personalization, see [Custom event properties]({{site.baseurl}}/user_guide/data/activation/events/custom_events/custom_event_properties/).
+
+## Purchase events and revenue {#purchase-events-and-revenue}
+
+Purchase and revenue data is recorded through [purchase events]({{site.baseurl}}/user_guide/data/activation/events/purchase_events/) or recommended eCommerce events.
+
+{% alert note %}
+Recommended events have pre-defined schemas with set data types. For details, refer to [eCommerce recommended events]({{site.baseurl}}/user_guide/data/activation/events/recommended_events/ecommerce_events/).
 {% endalert %}
 
-You can change the data type of your custom attribute, but you should be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/).
+Logging purchase events establishes the Lifetime Value (LTV) for each user profile, and this data is viewable on the revenue page in time-series. You can segment on money spent, last purchase date, number of purchases in a time window, and more.
+
+### Purchase event property data types {#purchase-event-property-data-types}
+
+Purchase event property values (the `properties` object on a purchase) support the data types in the [Definitions](#definitions) table, with the same structure and naming rules as [event properties](#expected-format).
+
+{% include data_activation/purchase_event_property_data_types.md %}
+
+For the full purchase object schema and examples, see [Purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/). For logging purchase events, segmentation filters, and full details, refer to [Purchase events]({{site.baseurl}}/user_guide/data/activation/events/purchase_events/).
+
+## Changing custom attribute or event data type {#changing-custom-attribute-or-event-data-type}
+
+To change the data type of a custom attribute or event:
+
+1. Go to **Data Settings** and select either **Custom Attributes** or **Custom Events**.
+3. Find your attribute or event from the list, and select <i class="fa fa-ellipsis-v" aria-hidden="true"></i> **More actions**.
+4. Select a new **Data type** from the dropdown.
+5. Select **Save**.
+
+If you change the data type of a custom attribute or event (for example, changing `time` to `string`), consider the following:
+
+- **Filters are not automatically updated.** Segments, campaigns, Canvases, or other locations that use the changed attribute or event are not updated. Before you change the data type, stop any campaigns or Canvases that use the attribute in segments or filters, and remove the attribute from filters that reference it.
+- **Existing user data is not retroactively updated.** If the changed attribute was on a user profile before the change, that value remains the old data type. Users can fall out of segments that contain the changed attribute because the filter looks for the new data type. Update those user profiles (for example, with the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)) so they match the new type and re-enter the segment if needed.
+- **New data must match the new type.** API calls that send the previous data type for the changed attribute are not accepted. Send the new data type.
+
+{% alert important %}
+The ability to prevent automatic detection from updating the custom attribute data type is currently in early access. Contact your customer success manager if you're interested in participating.
+{% endalert %}
+
+## Catalog data types {#catalog-data-types}
+
+Catalogs support the types listed in the [Definitions](#definitions) table. The following table lists each type, how it can be created or updated, and format and examples.
+
+| Data type | Description | Available via CSV upload | Available via API and CDI |
+| --- | --- | --- | --- |
+| String | A sequence of characters (for example, names, descriptions, IDs). | ✅ Yes | ✅ Yes |
+| Number | A numeric value, either integer or float (for example, prices, quantities, ratings). | ✅ Yes | ✅ Yes |
+| Boolean | A `true` or `false` value. | ✅ Yes | ✅ Yes |
+| Time | Date and time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format or Unix timestamp in seconds. | ✅ Yes | ✅ Yes |
+| JSON object (Object) | Nested object with key-value pairs. Displayed in the platform but can only be created or updated through the API or CDI. | ❌ No | ✅ Yes |
+| String array (Array) | A list of strings. Displayed in the platform but can only be created or updated through the API or CDI. Maximum of 100 elements. | ❌ No | ✅ Yes |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+### Format and examples
+
+| Data type | Format | Example |
+| --- | --- | --- |
+| String | Text | <code>"Hello World"</code> |
+| Time | ISO 8601 or Unix timestamp (seconds) | <code>"2024-03-15T14:30:00Z"</code> |
+| Boolean | <code>true</code> or <code>false</code> | <code>true</code> |
+| Number | Integer or decimal | <code>42</code> or <code>19.99</code> |
+| Object | JSON object | <code>{"key": "value", "price": 10}</code> |
+| Array | Array of strings | <code>["red", "blue", "green"]</code> |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+For creating and updating catalogs, see [Create a catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/create/).

@@ -43,7 +43,7 @@ When you block a custom event:
 
 Additionally, if a blocked custom event is currently referenced by filters or triggers in other areas of Braze, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
 
-For more details on blocklisting and deleting custom data, see [Blocklist custom data]({{site.baseurl}}/user_guide/data/activation/blocklist_custom_data/).
+For more details on blocklisting and deleting custom data, see [Blocklist custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/blocklist_custom_data/).
 
 ### Marking as personally identifiable information (PII)
 

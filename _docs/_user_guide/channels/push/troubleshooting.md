@@ -26,7 +26,7 @@ Experiencing delivery challenges with push notifications? There are a number of 
 
 #### Push subscription status
 
-Pushes can only be sent to subscribed or opted-in users. Check your user profile in the [Engagement]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) tab in the **User Profile** section to confirm if you are actively registered for push for the workspace that you are testing. If you are registered for multiple apps, you will find them listed in the **Push Registered For** field:
+Pushes can only be sent to subscribed or opted-in users. Check your user profile in the [Engagement]({{site.baseurl}}/user_guide/audience/user_profiles/#engagement-tab) tab in the **User Profile** section to confirm if you are actively registered for push for the workspace that you are testing. If you are registered for multiple apps, you will find them listed in the **Push Registered For** field:
 
 ![Push Registered For]({% image_buster /assets/img_archive/trouble1.png %})
 

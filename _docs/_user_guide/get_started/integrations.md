@@ -66,7 +66,7 @@ So, what do you need to do to get them this information?
 3. From there, discuss how that data should be tracked (triggered through the SDK, etc.).
 4. Define how many [workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/) you need. Your engineers will need to know how to [test and configure]({{site.baseurl}}/user_guide/getting_started/workspaces/) these workspaces.
 
-Once you discover all of this information, share it with your engineer. They'll take that information and implement your [custom data]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/). You might even need to [import some users]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/). You should also be aware of [event naming conventions]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/).
+Once you discover all of this information, share it with your engineer. They'll take that information and implement your [custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/managing_custom_data/). You might even need to [import some users]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/). You should also be aware of [event naming conventions]({{site.baseurl}}/user_guide/data/activation/events/event_naming_conventions/).
 
 ### Step 4: They customize based on what you want
 

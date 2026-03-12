@@ -1,14 +1,14 @@
 ---
 nav_title: Blocklist custom data
 article_title: Blocklist custom data
-page_order: 6
+page_order: 3
 page_type: reference
 description: "This reference article covers how to blocklist and delete custom events and attributes in Braze."
 ---
 
 # Blocklist custom data
 
-> Use blocklisting to stop tracking custom data that is no longer useful. Use deletion to permanently remove custom events and attributes from user profiles after blocklisting. For pre-populating, managing properties, and configuring data types, see [Manage custom data]({{site.baseurl}}/user_guide/data/activation/managing_custom_data/).
+> Use blocklisting to stop tracking custom data that is no longer useful. Use deletion to permanently remove custom events and attributes from user profiles after blocklisting. For pre-populating, managing properties, and configuring data types, see [Manage custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/managing_custom_data/).
 
 ## Blocklisting custom data
 
@@ -46,7 +46,6 @@ To blocklist custom data, you need the [user permissions]({{site.baseurl}}/user_
 - Archive Email Templates
 - View Webhook Templates
 - Edit Webhook Templates
-- Archive Webhook Templates
 - View Link Templates
 - Edit Link Templates
 - View Media Library Assets

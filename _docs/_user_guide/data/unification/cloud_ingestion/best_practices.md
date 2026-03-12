@@ -43,6 +43,16 @@ Cloud Data Ingestion supports the following data types:
 - Catalog items
 - User delete requests
 
+### Avoiding data type issues
+
+When using CDI to sync data from external sources (such as Databricks or Snowflake), ensure your source columns use the correct data types before syncing. Common issues include:
+
+- **Timestamps stored as strings:** Make sure your date columns use a timestamp or datetime type in your source database, not a varchar or string.
+- **Numbers stored as strings:** Cast numeric columns to integer or float types in your source query before syncing.
+- **Inconsistent types across syncs:** If a column type changes between syncs, Braze may reject the new data. Verify your source schema remains consistent.
+
+For forcing or changing data types for custom attributes in the Braze dashboard, see [Manage custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/managing_custom_data/#forcing-data-type-comparisons).
+
 You can update user data by external ID, user alias, Braze ID, email, or phone number. You can delete users by external ID, user alias, or Braze ID. 
 
 ## What gets synced

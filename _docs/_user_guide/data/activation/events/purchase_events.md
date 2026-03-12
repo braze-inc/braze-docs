@@ -29,7 +29,7 @@ The following lists methods across various platforms that are used to log purcha
 
 ## Viewing purchase data
 
-After you have set up and begun logging purchase events, you can view this purchase data on a user's profile in the [Overview tab]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#overview-tab).
+After you have set up and begun logging purchase events, you can view this purchase data on a user's profile in the [Overview tab]({{site.baseurl}}/user_guide/audience/user_profiles/#overview-tab).
 
 ## Using purchase data
 
@@ -220,5 +220,5 @@ This makes products straightforward to identify for segmentation and triggering.
 
 You may occasionally identify purchase events that either log too many data points, are no longer useful to your marketing strategy, or were recorded in error. To stop this data from being sent to Braze, you can blocklist the custom data object while your engineering team works to remove it from the backend of your app or website.
 
-In the Braze dashboard, you can manage blocklisting from **Data Settings** > **Products**. Check out [Managing custom data]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) to learn more.
+In the Braze dashboard, you can manage blocklisting from **Data Settings** > **Products**. Check out [Managing custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/managing_custom_data/) to learn more.
 
