@@ -38,7 +38,7 @@ If you're interested in having a dedicated deliverability resource as part of yo
 
 The conservative schedule is a slower, more cautious approach that helps establish a strong sending reputation from scratch. This is recommended if you're new to email sending, migrating from a shared IP, or have experienced deliverability issues such as throttling or blocklisting by an inbox provider.
 
-Day | # of Emails to Send
+Day | Number of emails to send
 ----|---------------------
 1 | 50
 2 | 50
@@ -68,7 +68,7 @@ Day | # of Emails to Send
 
 The moderate schedule is a balanced approach that ramps up sending volume at a steady pace. This is recommended for most senders, including those with some email sending history who are transitioning to a new IP.
 
-Day | # of Emails to Send
+Day | Number of emails to send
 ----|---------------------
 1 | 50
 2 | 100
@@ -100,7 +100,7 @@ Day | # of Emails to Send
 The aggressive schedule is the fastest approach and is only recommended for senders with an established, positive sending history and deliverability metrics that align with best practices, including high open rates, high click rates, and low bounce rates. Using this schedule without a proven track record can harm your sender reputation.
 {% endalert %}
 
-Day | # of Emails to Send
+Day | Number of emails to send
 ----|---------------------
 1 | 50
 2 | 100
