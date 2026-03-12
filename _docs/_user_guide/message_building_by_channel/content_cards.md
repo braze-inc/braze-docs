@@ -171,6 +171,10 @@ When a user is eligible for a card, it will appear in a carousel on whichever pa
 
 Because this is a custom implementation, you’ll need to work with your developers to build your own views to display the Content Cards. The default classic, image only, and captioned image cards aren't supported with this implementation.
 
+## Content Card expiration longer than 30 days
+
+By default, Content Cards can have a custom expiration time of up to 30 days. If you need Content Cards to persist longer than 30 days, a workaround is available. For the current workaround and steps, contact your Braze account manager or Braze Support, or refer to the Braze Knowledge Base.
+
 ## Integrating Content Cards
 
 Your developers will integrate Content Cards when they integrate the Braze SDK. For more details on how to integrate with Content Cards, refer to the developer guide articles for your platform:

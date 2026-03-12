@@ -51,6 +51,17 @@ If all of the messages in your campaign are going to be similar or have the same
 5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
 6. Choose any other messaging channels which you would like to pair with your message.
 
+##### Using a "dummy" webhook step with spacer.gif (Canvas)
+
+To advance users through a Canvas step without sending a real webhook (for example, to split the audience or add a no-op step), you can use Braze's hosted spacer image as the webhook URL:
+
+1. Select **Webhook** as your message channel for the step.
+2. Select **Blank Template**.
+3. In the **Webhook URL** field, enter `https://braze-images.com/spacer.gif`.
+4. Open **Settings** (gear icon) and set **HTTP Method** to **POST**.
+
+The spacer.gif resource is hosted by Braze; the webhook call succeeds but no content is sent or displayed to users. This acts as a dummy step so everyone in the step is technically processed but no one receives a visible message. Use this when you want to move users through the journey and separate the audience at a later step.
+
 {% endtab %}
 {% endtabs %}
 
