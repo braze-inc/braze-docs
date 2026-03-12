@@ -13,6 +13,6 @@ Avoid gendered articles directly before "Braze" when possible (prefer "de Braze"
 
 ## Register and tone
 
-- Use formal French (vous) — this is the standard for friendly technical content in French
-- The tone should be informal, friendly, and informative — approachable rather than stiff or academic
-- Content should sound conversational, as if explaining something to an acquaintance
+- Use formal address in French (pronoun "vous"), not "tu" — this is the standard for friendly technical content in French
+- Use a friendly, conversational, and informative tone — approachable rather than stiff or academic
+- Content should sound conversational, as if explaining something to a professional acquaintance
