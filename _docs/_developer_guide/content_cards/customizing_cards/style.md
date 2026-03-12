@@ -533,7 +533,7 @@ if (isDarkMode && darkModeImage) {
 {% endtab %}
 {% endtabs %}
 
-This pattern works for any appearance-dependent content, including text, colors, or layouts. Upload your dark mode image assets to the Braze media library, then reference them in the KVP.
+This pattern works for any appearance-dependent content, including text, colors, or layouts. Upload your dark mode image assets to the Braze Media Library, then reference them in a key-value pair.
 
 ### Disabling unread indicator
 
