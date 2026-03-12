@@ -163,7 +163,9 @@ An email bounce for customers using SendGrid consists of hard bounces, spam (`sp
 Count
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} 
+{% multi_lang_include analytics/metrics.md metric='Hard Bounce' %}
+
+A _Hard Bounce_ occurs when an email fails to deliver to the recipient due to a permanent delivery error (for example, the domain doesn't exist or the recipient is unknown). As a general rule, hard bounces and spam complaints aren't usually false positives, and suppressing them is a critical component of healthy deliverability. When an email hard bounces or is marked as spam, Braze marks the email address as invalid but does not update the user's subscription status. Braze will stop any future sends to that email address. To remove an email address from your hard bounce list, use the [Remove Hard Bounces API]({{site.baseurl}}/api/endpoints/email/post_remove_hard_bounces/).
 
 <span class="calculation-line">Calculation: Count </span>
 
