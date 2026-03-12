@@ -34,7 +34,7 @@ search_tag: Partner
 ### ステップ2:Braze コネクテッドコンテンツを構成する
 
 1. 認証情報を使って[Brazeにログインする](https://dashboard.braze.com/sign_in)。
-2. Braze ダッシュボードで、 [**テンプレート**] > [**コンテンツブロック**] > [**コンテンツブロックを作成**] > [**HTML コードエディタ**] の順に移動します。
+2. Braze ダッシュボードで、 [**テンプレート**] > [**コンテンツブロック**] > [**コンテンツブロックを作成**] > **[HTML コンテンツブロック**] の順に移動します。
 3. Contentful の[Contentful Content Delivery API URL](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/links) に対してコネクテッドコンテンツリクエストを作成します。Contentful Content Delivery API URL の例は```https://cdn.contentful.com/spaces/{space_id}/environments/{environment_id}/entries``` です。<br><br> 異なるアセットを取得するには、特定の変数を含める必要があります。コネクテッドコンテンツ URL リクエストの例は、Contentful の[エントリ](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/entries/entry/get-a-single-entry/console)エンドポイントをターゲットにしています。このエンドポイントは `{space_id}` および `{environment_id}`、あるいは `{entry_id}` および `{access_token}` のような変数を必要とします。これらは Contentful インスタンスから取得できます。このコンテンツブロックの例では、変数を Contentful Space ID と Environment ID に置き換える必要があります。<br><br>Content Delivery API URL の例では、Contentful の利用可能なエンドポイントの1つだけを使用しています。異なるユースケースは、異なるURLを活用することで達成できるかもしれない。例えば、[画像 API](https://www.contentful.com/developers/docs/references/images-api/) を使えば、Contentful に保存されている画像を取り込むことができます。詳しくは、[Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/) を参照してください。
 
 {% alert note %}
