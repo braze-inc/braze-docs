@@ -494,7 +494,7 @@ Customization of only the unviewed indicator via `Attributes` is not supported i
 
 ### Dark mode
 
-To display different images or styles based on the device's dark or light mode, use [key-value pairs]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details#key-value-pairs) (KVPs) in your Content Card message. For example, add a KVP such as `dark_mode_image` with the URL of your dark mode image asset. Then, in your app, add custom logic to check the device's current appearance mode and display the appropriate image.
+To display different images or styles based on the device's dark or light mode, use [key-value pairs]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details#key-value-pairs) in your Content Card message. For example, add a key-value pair like `dark_mode_image` with the URL of your dark mode image asset. Then, in your app, add custom logic to check the device's current appearance mode and display the appropriate image.
 
 {% tabs %}
 {% tab swift %}
