@@ -51,6 +51,8 @@ After you select the standard setup onboarding path, you’ll need to choose whe
 
 ### Standard data setup
 
+{% multi_lang_include alerts/important_alerts.md alert='Shopify cart token alias' %}
+
 Now you’ll select the Shopify data you want to track.
 
 ![“Tracking Shopify data” section with a checkbox to track behavioral events and user attributes.]({% image_buster /assets/img/Shopify/tracking_shopify_data.png %})
