@@ -13,7 +13,7 @@ module Jekyll
                 'warning' => '경고', 'update' => '업데이트', 'checkpoint' => '체크포인트' },
       'pt-br' => { 'note' => 'Nota', 'important' => 'Importante', 'tip' => 'Dica',
                    'warning' => 'Aviso', 'update' => 'Atualização', 'checkpoint' => 'Ponto de verificação' },
-    }.freeze
+    }.each_value { |v| v.freeze }.freeze
 
     class AlertTag < Liquid::Block
 
