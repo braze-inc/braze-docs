@@ -17,7 +17,23 @@ We also recommend checking out our [Testing and Troubleshooting](https://learnin
 
 ## Prerequisites
 
-To create and manage internal groups, you need the [Access Dev Console permission]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) for your workspace.
+To create and manage internal groups, you need the [Access Dev Console legacy permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?sdktab=legacy%20permissions) or these [granular permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?sdktab=granular%20permissions):
+
+- View API Keys
+- Edit API Keys
+- View Internal Groups
+- Edit Internal Groups
+- View Message Activity Log
+- View Event User Log
+- View API identifiers
+- View API Usage Dashboard
+- View API Limits
+- View API Usage Alerts
+- Edit API Usage Alerts
+- Edit SDK Debugger
+- View SDK Debugger
+
+{% multi_lang_include deprecations/user_permissions.md %}
 
 ## Creating an internal group
 

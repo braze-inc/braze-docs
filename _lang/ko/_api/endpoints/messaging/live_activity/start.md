@@ -19,7 +19,7 @@ description: "이 문서에서는 라이브 활동 시작 엔드포인트에 대
 
 라이브 활동을 만든 후에는 특정 세그먼트에 대해 원격으로 활동을 시작하도록 POST 요청을 할 수 있습니다. Apple의 실시간 활동에 대한 자세한 내용은 [ActivityKit 푸시 알림으로 실시간 활동 시작 및 업데이트](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications)를 참조하세요.
 
-`content-available` 을 설정하지 않은 경우 기본값인 Apple 푸시 알림 서비스(APN) 우선 순위는 10입니다. `content-available` 으로 설정하면 이 우선 순위는 5입니다. 자세한 내용은 [Apple 푸시 개체를]({{site.baseurl}}/api/objects_filters/messaging/apple_object) 참조하세요.
+`content-available`이 설정되지 않은 경우 기본 Apple 푸시 알림 서비스(APNs) 우선 순위는 10입니다. `content-available`가 설정된 경우 이 우선 순위는 5입니다. 자세한 내용은 [Apple push object]({{site.baseurl}}/api/objects_filters/messaging/apple_object)를 참조하십시오.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
@@ -66,7 +66,7 @@ description: "이 문서에서는 라이브 활동 시작 엔드포인트에 대
 | `content_state` | 필수 | 객체  | 라이브 활동을 만들 때 `ContentState` 매개변수를 정의합니다. 이 개체를 사용하여 `ContentState`에 대해 업데이트된 값을 전달합니다.<br><br>이 요청의 형식은 처음에 정의한 모양과 일치해야 합니다. |
 | `dismissal_date` | 선택 사항 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 이 매개변수는 사용자 UI에서 라이브 활동을 제거할 시간을 정의합니다. |
 | `stale_date` | 선택 사항 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 이 매개변수는 라이브 활동 콘텐츠가 사용자 UI에서 오래된 것으로 표시되는 시점을 시스템에 알려줍니다. |
-| `notification` | 필수 | 객체 | 객체를 포함하여 [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) 객체를 포함하여 푸시 알림을 정의합니다. 이 푸시 알림의 동작은 사용자가 활성 상태인지 또는 프록시 기기를 사용 중인지에 따라 달라집니다. {::nomarkdown}<ul><li>다음과 같은 경우 <code>notification</code> 가 포함되어 있고 업데이트가 전달될 때 사용자가 iPhone에서 활성화되어 있으면 업데이트된 실시간 활동 UI가 아래로 슬라이드되어 푸시 알림처럼 표시됩니다.</li><li>다음과 같은 경우 <code>notification</code> 가 포함되어 있고 사용자가 iPhone에서 활성화되어 있지 않으면 잠금 화면에 업데이트된 라이브 활동 UI가 표시되도록 화면이 켜집니다.</li><li>그리고 <code>notification alert</code> 는 표준 푸시 알림으로 표시되지 않습니다. 또한 사용자에게 Apple Watch와 같은 프록시 디바이스가 있는 경우에는 <code>alert</code> 가 표시됩니다.</li></ul>{:/} |
+| `notification` | 필수 | 객체 | 객체를 포함하여 [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) 객체를 포함하여 푸시 알림을 정의합니다. 이 푸시 알림의 동작은 사용자가 활성 상태인지 또는 사용자가 프록시 기기를 사용 중인지에 따라 다릅니다. {::nomarkdown}<ul><li>다음과 같은 경우 <code>notification</code> 가 포함되어 있고 업데이트가 전달될 때 사용자가 iPhone에서 활성화되어 있으면 업데이트된 실시간 활동 UI가 아래로 슬라이드되어 푸시 알림처럼 표시됩니다.</li><li>다음과 같은 경우 <code>notification</code> 가 포함되어 있고 사용자가 iPhone에서 활성화되어 있지 않으면 잠금 화면에 업데이트된 라이브 활동 UI가 표시되도록 화면이 켜집니다.</li><li>그리고 <code>notification alert</code> 는 표준 푸시 알림으로 표시되지 않습니다. 또한 사용자에게 Apple Watch와 같은 프록시 디바이스가 있는 경우에는 <code>alert</code> 가 표시됩니다.</li></ul>{:/} |
 | `external_user_ids` | `segment_id` 또는 `audience` 제공 시 선택 사항 | 문자열 배열 | [외부 사용자 ID를]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields) 참조하세요. 최대 50개의 외부 사용자 ID.  |
 | `segment_id `  | `external_user_ids` 또는 `audience` 제공 시 선택 사항 | 문자열    | [세그먼트 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
 | `custom_audience` | `external_user_ids` 또는 `segment_id` 제공 시 선택 사항 | 연결된 대상 개체  | [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/)을 참조하십시오. |
@@ -74,7 +74,7 @@ description: "이 문서에서는 라이브 활동 시작 엔드포인트에 대
 
 ## 예시 요청
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/start' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {YOUR-REST-API-KEY}' \
@@ -123,7 +123,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 `4XX` 상태 코드 클래스는 클라이언트 오류를 나타냅니다. 발생할 수 있는 오류에 대한 자세한 내용은 [API 오류 및 응답 문서를]({{site.baseurl}}/api/errors/) 참조하세요.
 
-`400` 상태 코드는 다음 응답 본문을 반환할 수 있습니다.
+`400` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다.
 
 ```json
 {

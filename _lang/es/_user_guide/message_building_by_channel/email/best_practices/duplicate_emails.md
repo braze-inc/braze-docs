@@ -10,17 +10,17 @@ channel: email
 
 # Correos electrónicos duplicados
 
-> Si varios perfiles comparten una dirección de correo electrónico y uno de ellos se da de baja, Braze actualiza otros perfiles (hasta 100) con esa dirección al mismo estado de suscripción. Esto se aplica a las cancelaciones de suscripción y a otros cambios, como el estado de suscripción global y los estados del grupo de suscripción individual.
+> Si varios perfiles comparten una dirección de correo electrónico y uno de ellos cancela la suscripción, Braze actualiza los demás perfiles (hasta 100) con esa dirección al mismo estado de suscripción. Esto se aplica a la cancelación de la suscripción y otros cambios, como el estado global de la suscripción y el estado del grupo de suscripción individual.
 
 ## Actualizaciones de suscripción por correo electrónico
 
-Braze comprueba y elimina automáticamente las direcciones de correo electrónico duplicadas cuando envía una campaña de correo electrónico. Esto evita que Braze envíe el correo electrónico más de una vez aunque varios perfiles de usuario compartan una dirección.
+Braze comprueba y elimina automáticamente las direcciones de correo electrónico duplicadas cuando envía una campaña por correo electrónico. Esto evita que Braze envíe el correo electrónico más de una vez, incluso si varios perfiles de usuario comparten una dirección.
 
 {% alert tip %}
 Asegúrese de estar familiarizado con las herramientas que Braze proporciona para [gestionar las suscripciones de correo electrónico de los usuarios]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) y dirigir las campañas a usuarios con determinados estados de suscripción. Estas herramientas son fundamentales para cumplir la [legislación antispam]({{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations).
 {% endalert %}
 
-Si los usuarios comparten una dirección de correo electrónico y actualizas un perfil, Braze propaga los cambios de suscripción entre esos usuarios (hasta 100).
+Si los usuarios comparten una dirección de correo electrónico y tú actualizas un perfil, Braze propaga los cambios de suscripción a todos esos usuarios (hasta 100).
 
 ## Comportamiento en el envío de mensajes
 

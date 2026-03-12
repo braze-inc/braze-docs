@@ -503,6 +503,20 @@ As with other custom styles, the entire style must be copied over to your local 
 
 ## Message dismissals
 
+### Swiping to dismiss slideup messages
+
+By default, slideup in-app messages can be dismissed with a swipe gesture. The direction of the swipe depends on the slideup position:
+
+- **Left or right swipe:** Dismisses the slideup regardless of its position.
+- **Slideup from the bottom:** Swiping from top to bottom dismisses the message. Swiping from bottom to top does not dismiss it.
+- **Slideup from the top:** Swiping from bottom to top dismisses the message. Swiping from top to bottom does not dismiss it.
+
+This swipe behavior is built into the default [`DefaultInAppMessageViewWrapper`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-default-in-app-message-view-wrapper/index.html) and applies only to slideup in-app messages. Modal and full in-app messages don't support swipe-to-dismiss. To customize this behavior, you can implement a [custom view wrapper factory](#android_setting-custom-factories).
+
+{% alert note %}
+Tapping outside of a slideup message does not dismiss it by default. This behavior differs from modal messages, which can be configured for outside tap dismissal. For slideups, use the swipe gesture or the close button to dismiss the message.
+{% endalert %}
+
 ### Disabling back button dismissals
 
 By default, the hardware back button dismisses Braze in-app messages. This behavior can be disabled on a per-message basis via [`BrazeInAppMessageManager.setBackButtonDismissesInAppMessageView()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-back-button-dismisses-in-app-message-view.html). 

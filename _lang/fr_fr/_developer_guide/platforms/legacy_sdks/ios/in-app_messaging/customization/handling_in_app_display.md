@@ -1,6 +1,6 @@
 ---
 nav_title: "Gestion personnalisée de l'affichage"
-article_title: "Personnaliser l'envoi des messages in-app pour iOS"
+article_title: "Personnaliser la gestion de l'affichage des messages in-app pour iOS"
 platform: iOS
 page_order: 4
 description: "Cet article de référence couvre la gestion de l’affichage personnalisé de la messagerie dans l’application pour votre application iOS."

@@ -1,8 +1,8 @@
 ---
 nav_title: Criar cartões
-article_title: Criar cartões de conteúdo
+article_title: Criar Cartões de Conteúdo
 page_order: 0
-description: "Este artigo aborda os componentes da criação de uma interface de usuário de cartão de conteúdo personalizado."
+description: "Este artigo aborda os componentes para criar uma interface de usuário personalizada de Cartão de Conteúdo."
 channel:
   - content cards
 platform:
@@ -14,11 +14,11 @@ platform:
 
 # Criar cartões de conteúdo
 
-> Este artigo discute a abordagem básica que você usará ao implementar cartões de conteúdo personalizados, bem como três casos de uso comuns. Ele pressupõe que você já tenha lido os outros artigos do guia de personalização do Content Card para entender o que pode ser feito por padrão e o que requer código personalizado. É especialmente útil entender como [registrar a análise]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) de dados dos seus cartões de conteúdo personalizados. 
+> Este artigo discute a abordagem básica que você usará ao implementar Cartões de Conteúdo personalizados, bem como três casos de uso comuns. Ele pressupõe que você já tenha lido os outros artigos do guia de personalização do Content Card para entender o que pode ser feito por padrão e o que requer código personalizado. É especialmente útil entender como [registrar análises]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) para seus Cartões de Conteúdo personalizados. 
 
 {% multi_lang_include banners/content_card_alert.md %}
 
-## Criação de um cartão
+## Criando um cartão
 
 ### Etapa 1: Criar uma interface de usuário personalizada 
 
@@ -50,17 +50,17 @@ As impressões, os cliques e os descartes de cartão de conteúdo não são regi
 
 ### Etapa 4: Teste seu cartão (opcional)
 
-Para testar seu cartão de conteúdo:
+Para testar seu Cartão de Conteúdo:
 
-1. Defina um usuário ativo em seu aplicativo chamando o método [`changeUser()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) método.
-2. No Braze, acesse **Campaigns (Campanhas**) e [crie uma nova campanha de cartão de conteúdo]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create).
-3. Em sua campanha, selecione **Test (Teste**) e insira o usuário teste `user-id`. Quando estiver pronto, selecione **Send Test (Enviar teste**). Em breve, será possível iniciar um cartão de conteúdo em seu dispositivo.
+1. Defina um usuário ativo em seu aplicativo chamando o método [`changeUser()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser).
+2. No Braze, acesse **Campanhas**, depois [crie uma nova campanha de Cartão de Conteúdo]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create).
+3. Na sua campanha, selecione **Teste**, depois insira o `user-id` do usuário teste. Quando estiver pronto, selecione **Enviar Teste**. Você poderá lançar um Cartão de Conteúdo em seu dispositivo em breve.
 
 ![Uma campanha do Braze Content Card mostrando que você pode adicionar seu próprio ID de usuário como um destinatário de teste para testar seu Content Card.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
 
 ## posicionamentos de cartão de conteúdo
 
-Os cartões de conteúdo podem ser usados de muitas maneiras diferentes. Três implementações comuns são usá-las como um centro de mensagens, um anúncio de imagem dinâmico ou um carrossel de imagens. Para cada um desses posicionamentos, você atribuirá [pares de valores-chave]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) (a propriedade `extras` no modelo de dados) aos seus cartões de conteúdo e, com base nos valores, ajustará dinamicamente o comportamento, a aparência ou a funcionalidade do cartão durante o tempo de execução. 
+Os cartões de conteúdo podem ser usados de muitas maneiras diferentes. Três implementações comuns são usá-los como um centro de mensagens, um anúncio de imagem dinâmico ou um carrossel de imagens. Para cada um desses posicionamentos, você atribuirá [pares de valores-chave]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) (a propriedade `extras` no modelo de dados) aos seus cartões de conteúdo e, com base nos valores, ajustará dinamicamente o comportamento, a aparência ou a funcionalidade do cartão durante o tempo de execução. 
 
 ![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
@@ -70,9 +70,9 @@ Os cartões de conteúdo podem ser usados para simular um centro de mensagens. N
 
 #### Exemplo
 
-Por exemplo, talvez queira criar dois cartões de mensagens: uma chamada para ação para que os usuários ativem as recomendações de leitura e um código de cupom dado ao seu novo segmento de assinantes.
+Por exemplo, você pode querer criar dois cartões de mensagem: um chamado à ação para os usuários ativarem recomendações de leitura e um código de cupom dado ao seu novo segmento de assinantes.
 
-Chaves como `body`, `title` e `buttonText` podem ter valores simples de string que seus profissionais de marketing podem definir. Chaves como `terms` podem ter valores que fornecem uma pequena coleção de frases aprovadas por seu departamento jurídico. Chaves como `style` e `class_type` têm valores de string que podem ser definidos para determinar como o cartão será renderizado no app ou site.
+Chaves como `body`, `title` e `buttonText` podem ter valores simples de string que seus profissionais de marketing podem definir. Chaves como `terms` podem ter valores que fornecem uma pequena coleção de frases aprovadas por seu departamento jurídico. Chaves como `style` e `class_type` têm valores de string que você pode definir para determinar como seu cartão é exibido em seu aplicativo ou site.
 
 {% tabs local %}
 {% tab Reading recommendations %}
@@ -239,8 +239,8 @@ Para implementar um carrossel de cartões de conteúdo:
 Se estiver implementando um carrossel como um feed secundário de cartões de conteúdo, certifique-se de [classificar os cartões no feed correto usando pares de valores-chave]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds).
 {% endalert %}
 
-### Somente imagem
+### Apenas imagem
 
-Os cartões de conteúdo não precisam se parecer com "cartões". Por exemplo, os cartões de conteúdo podem aparecer como uma imagem dinâmica que é exibida persistentemente em sua página inicial ou na parte superior de páginas designadas.
+Os cartões de conteúdo não precisam se parecer com "cartões". Por exemplo, os Cartões de Conteúdo podem aparecer como uma imagem dinâmica que é exibida persistentemente em sua página inicial ou no topo de páginas designadas.
 
-Para conseguir isso, seus profissionais de marketing criarão uma campanha ou etapa do Canva com um cartão de conteúdo do tipo **Somente imagem**. Em seguida, defina os pares de valores-chave apropriados para usar [os cartões de conteúdo como conteúdo suplementar]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#content-cards-as-supplemental-content).
+Para alcançar isso, seus profissionais de marketing criarão uma campanha ou etapa do Canvas com um tipo de Cartão de Conteúdo **Imagem Apenas**. Em seguida, defina os pares de valores-chave apropriados para usar [os cartões de conteúdo como conteúdo suplementar]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#content-cards-as-supplemental-content).

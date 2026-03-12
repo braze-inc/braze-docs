@@ -1,6 +1,6 @@
 ---
 page_order: 10
-nav_title: バージョン・マネージャー
+nav_title: バージョン管理
 article_title: Braze SDKのバージョン管理について
 description: "Braze SDK のバージョン管理について説明します。"
 ---

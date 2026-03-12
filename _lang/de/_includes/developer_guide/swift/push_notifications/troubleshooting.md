@@ -25,18 +25,18 @@ Wenn Nutzer Ihre App öffnen, werden sie aufgefordert, Push-Benachrichtigungen z
 Ab macOS 13 können Sie auf bestimmten Geräten Push-Benachrichtigungen mithilfe eines Simulators für iOS 16 testen, der unter Xcode 14 läuft. Weitere Einzelheiten finden Sie in den [Release Notes zu Xcode 14](https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes).
 {% endalert %}
 
-#### Überlegungen zur Erzeugung von Push-Token
+#### Überlegungen zur Push-Token-Generierung
 
-- Wenn Nutzer:innen Ihre App auf einem anderen Gerät installieren, wird ein weiteres Token erstellt und auf dieselbe Weise erfasst. 
-- Wenn Nutzer:innen Ihre App neu installieren, wird ein neues Token generiert und an Braze übergeben. Das ursprüngliche Token kann jedoch weiterhin von APNs und Braze als gültig protokolliert werden.
-- Wenn Nutzer:innen Ihre App deinstallieren, wird Braze nicht sofort darüber benachrichtigt und das Token erscheint weiterhin als gültig, bis es von APNs zurückgezogen wird. 
-- Irgendwann werden die APNs alte Token aus dem Verkehr ziehen. Braze hat hierüber keine Kontrolle oder Sicht. 
+- Wenn Nutzer:innen Ihre App auf einem anderen Gerät installieren, wird ein weiteres Token erstellt und auf die gleiche Weise erfasst. 
+- Wenn Nutzer:innen Ihre App neu installieren, wird ein neues Token generiert und an Braze übermittelt. Das ursprüngliche Token kann jedoch weiterhin von APN und Braze als gültig protokolliert werden.
+- Wenn Nutzer:innen Ihre App deinstallieren, wird Braze nicht sofort darüber informiert, und der Token wird weiterhin als gültig angezeigt, bis er von APN zurückgezogen wird. 
+- Zu einem bestimmten Zeitpunkt werden APNs alte Token aus dem Verkehr ziehen. Braze hat diesbezüglich keine Kontrolle oder Einblick. 
 
 ### Schritt 3: Starten Sie eine Braze-Push-Kampagne
 
-Beim Starten einer Push-Kampagne stellt Braze Anfragen an APNs, um Ihre Nachricht zuzustellen. Genauer gesagt werden die Anfragen an APNs für jedes aktuell gültige Push-Token weitergeleitet, es sei denn, **Senden an das letzte Gerät eines Nutzers**: **innen** ist ausgewählt. Nachdem Braze eine erfolgreiche Antwort von APNs erhalten hat, protokollieren wir eine erfolgreiche Zustellung im Nutzerprofil, auch wenn der Nutzer:innen die Nachricht möglicherweise nicht erhalten hat, z.B. aus folgenden Gründen:
+Beim Starten einer Push-Kampagne stellt Braze Anfragen an APNs, um Ihre Nachricht zuzustellen. Insbesondere werden die Anfragen für jedes derzeit gültige Push-Token an APN weitergeleitet, es sei denn, **die Option „An das neueste Gerät einer Nutzer:in senden“** ist ausgewählt. Nachdem Braze eine erfolgreiche Antwort von APN erhalten hat, protokollieren wir eine erfolgreiche Zustellung im Nutzerprofil, auch wenn der Nutzer die eigentliche Nachricht aus folgenden Gründen möglicherweise nicht erhalten hat:
 - Ihr Gerät ist ausgeschaltet.
-- Ihr Gerät ist nicht mit dem Internet verbunden (Wi-Fi oder Mobiltelefon).
+- Das Gerät ist nicht mit dem Internet verbunden (WLAN oder Mobilfunk).
 - Sie haben die App kürzlich deinstalliert.
 
 Braze verwendet das im Dashboard hochgeladene SSL-Push-Zertifikat, um sich zu authentifizieren und zu überprüfen, ob wir Push-Benachrichtigungen an die angegebenen Push-Tokens senden dürfen. Wenn ein Gerät online ist, sollte die Benachrichtigung kurz nach dem Senden der Kampagne empfangen werden. Beachten Sie, dass Braze das [Ablaufdatum](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns#2947607) der APNs für Benachrichtigungen standardmäßig auf 30 Tage festlegt.
@@ -46,14 +46,14 @@ Braze verwendet das im Dashboard hochgeladene SSL-Push-Zertifikat, um sich zu au
 Wenn [APNs](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) uns informiert, dass eines der Push-Token, an das wir eine Nachricht senden wollten, ungültig ist, entfernen wir diese Token aus den Benutzerprofilen, mit denen sie verknüpft waren.
 
 {% alert note %}
-Es ist normal, dass APNs anfangs einen Erfolgsstatus zurückgeben, auch wenn ein Token nicht mehr registriert ist, da APNs nicht sofort über Token-Ungültigkeitsereignisse berichtet. APNs verzögert absichtlich die Rückgabe des Status `410` für ungültige Token nach einem zufälligen Zeitplan, um die Privatsphäre der Nutzer:innen zu schützen und Tracking von App-Deinstallationen zu verhindern. Sie können ohne Bedenken weiterhin Benachrichtigungen an ein nicht registriertes Token senden, bis APNs den Status `410` zurückgibt.
+Es ist üblich, dass APN zunächst einen erfolgreichen Status zurückgeben, selbst wenn ein Token deregistriert wird, da APN Ereignisse zur Ungültigkeitserklärung von Tokens nicht sofort melden. APNs verzögert absichtlich die Rückgabe eines`410`Status für ungültige Tokens nach einem zufälligen Zeitplan, um die Privatsphäre der Nutzer:innen zu schützen und das Tracking von App-Deinstallationen zu verhindern. Sie können weiterhin sicher Benachrichtigungen an einen nicht registrierten Token senden, bis APN einen`410`Status zurückgibt.
 {% endalert %}
 
 ## Verwendung der Push-Fehlerprotokolle
 
 Das [Nachrichten-Aktivitätsprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) bietet Ihnen die Möglichkeit, alle Nachrichten (insbesondere Fehlermeldungen) im Zusammenhang mit Ihren Kampagnen und Sendungen zu sehen, einschließlich Push-Benachrichtigungsfehler. Dieses Fehlerprotokoll enthält eine Reihe von Warnungen, die sehr hilfreich sein können, um festzustellen, warum Ihre Kampagnen nicht wie erwartet funktionieren. Wenn Sie auf eine Fehlermeldung klicken, werden Sie zur entsprechenden Dokumentation weitergeleitet, die Sie bei der Fehlerbehebung unterstützt.
 
-![Push-Fehlerprotokolle, die den Zeitpunkt des Auftretens des Fehlers, den Namen der App, den Kanal, den Fehlertyp und die Fehlermeldung anzeigen.]({% image_buster /assets/img_archive/message_activity_log.png %})
+![Bitte senden Sie Fehlerprotokolle, die den Zeitpunkt des Fehlers, den Namen der App, den Kanal, den Fehlertyp und die Fehlermeldung enthalten.]({% image_buster /assets/img_archive/message_activity_log.png %})
 
 Zu den häufigen Fehlern, die Ihnen hier angezeigt werden, gehören nutzerspezifische Benachrichtigungen wie ["Nicht registrierte Sendung an Push-Token empfangen".](#swift_received-unregistered-sending)
 
@@ -139,7 +139,7 @@ Bei iOS-Versionen, die Push nicht über das Framework `UserNotifications` integr
 
 Das Folgende deutet auf ein Problem mit der Push-Registrierung hin oder darauf, dass das Token des Benutzers von den APNs nach dem Push-Vorgang als ungültig an Braze zurückgegeben wurde:
 
-![Ein Benutzerprofil, das die Kontakteinstellungen eines Benutzers anzeigt. Unter Push wird "Keine Apps" angezeigt.]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
+![Ein Benutzerprofil, das die Kontakteinstellungen eines Benutzers anzeigt. Unter „Push“ wird „Keine Apps“ angezeigt.]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
 
 ## Nicht protokollierte Push-Klicks {#push-clicks-not-logged}
 
@@ -148,13 +148,15 @@ Das Folgende deutet auf ein Problem mit der Push-Registrierung hin oder darauf, 
 
 ## Nicht funktionierende Deeplinks
 
+Umfassende Informationen zur Fehlerbehebung für alle Kanäle – einschließlich Universal Links, angepasster Schemata, E-Mail und Drittanbieter wie Branch – finden Sie unter [Fehlerbehebung bei Deeplinking]({{site.baseurl}}/developer_guide/push_notifications/deep_linking_troubleshooting).
+
 ### Weblinks von Push-Klicks werden nicht geöffnet
 
-Links in Push-Benachrichtigungen müssen ATS-konform sein, damit sie in Webansichten geöffnet werden können. Stellen Sie sicher, dass Ihre Web-Links HTTPS verwenden. Weitere Informationen finden Sie unter [ATS-Konformität]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#app-transport-security-ats).
+Links in Push-Benachrichtigungen müssen ATS-konform sein, damit sie in Webansichten geöffnet werden können. Stellen Sie sicher, dass Ihre Web-Links HTTPS verwenden. Weitere Informationen referenzieren Sie unter [ATS-Konformität]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#app-transport-security-ats).
 
 ### Deeplinks von Push-Klicks werden nicht geöffnet
 
-Der Großteil des Codes, der Deeplinks setzt, verarbeitet auch Push-Öffnungen. Stellen Sie zunächst sicher, dass Push-Öffnungen protokolliert werden. Wenn nicht, beheben Sie das Problem (da die Behebung oft die Handhabung von Links verbessert).
+Der Großteil des Codes, der Deeplinks setzt, verarbeitet auch Push-Öffnungen. Stellen Sie zunächst sicher, dass Push-Öffnungen protokolliert werden. Falls nicht, beheben Sie dieses Problem (da die Behebung häufig auch die Link-Verarbeitung verbessert).
 
 Wenn Öffnungen protokolliert werden, prüfen Sie, ob es sich um ein Problem mit Deeplinks im Allgemeinen oder nur mit Deeplinks bei der Verarbeitung von Push-Klicks handelt. Um dies herauszufinden, testen Sie per Klick auf eine In-App-Nachricht, ob ein Deeplink funktioniert.
 

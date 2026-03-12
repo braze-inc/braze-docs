@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Liste des statuts du groupe d'abonnement des utilisateurs"
+nav_title: "GET : Afficher le statut du groupe d'abonnement des utilisateurs"
 article_title: "GET : Répertorier le statut du groupe d’abonnement de l’utilisateur"
 search_tag: Endpoint
 page_order: 4
@@ -96,8 +96,8 @@ Toutes les réponses réussies renverront `Subscribed`, `Unsubscribed`, ou `Unkn
 }
 ```
 
-{% alert note %}
-Lorsqu'un utilisateur se désabonne globalement, il est désabonné de chaque groupe d'abonnement. Cet endpoint renvoie le dernier statut du groupe d'abonnement pour chaque groupe d'abonnement. Ce comportement est attendu car si l'utilisateur décide de se réabonner globalement, Braze rétablit chaque état d'abonnement.
+{% alert important %}
+Ce endpoint renvoie le statut du groupe d'abonnement indépendamment de l'état d'abonnement global de l'utilisateur. Si un utilisateur est désabonné de manière globale, le tableau de bord de Braze l'affiche comme désabonné de chaque groupe d'abonnement. Cependant, cet endpoint renvoie toujours le dernier statut enregistré du groupe d'abonnement (par exemple, `Subscribed`) car l'état global de l'abonnement remplace les groupes d'abonnement individuels sans les écraser.<br><br>Braze conserve les statuts individuels des groupes d'abonnement afin que, si l'utilisateur se réabonne globalement, chaque groupe d'abonnement revienne à son statut précédemment enregistré. Pour déterminer l'état d'abonnement effectif d'un utilisateur, veuillez vérifier à la fois son statut d'abonnement global et le statut du groupe d'abonnement renvoyé par cet endpoint.
 {% endalert %}
 
 {% endapi %}

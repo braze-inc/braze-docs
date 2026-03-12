@@ -11,13 +11,13 @@ tool: Canvas
 
 # Mensagem 
 
-> As etapas de mensagens permitem que você adicione uma mensagem independente onde quiser no seu Canva.
+> As etapas de mensagem permitem que você adicione uma mensagem autônoma onde quiser em seu canva.
 
-![Uma etapa de mensagem chamada "Promoção de almoço" usando o canal de envio de mensagens.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+![Uma etapa de mensagem chamada "Promoção de Almoço" usando o canal push.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
-## Criar uma mensagem
+## Criando uma mensagem
 
-Para criar um componente Message, primeiro adicione uma etapa do canva. Arraste e solte o componente da barra lateral ou selecione o botão de adição <i class="fas fa-plus-circle"></i> na parte inferior de uma etapa e selecione **Mensagem**. 
+Para criar um componente Message, primeiro adicione uma etapa do canva. Arraste e solte o componente da barra lateral, ou selecione o botão <i class="fas fa-plus-circle"></i> de mais na parte inferior de uma etapa e selecione **Mensagem**. 
 
 ### Etapa 1: Selecione seu canal de envio de mensagens
 
@@ -32,11 +32,11 @@ Você pode selecionar entre os seguintes canais de envio de mensagens:
 - Webhook
 - WhatsApp
 
-![Uma lista dos canais de envio de mensagens disponíveis a serem selecionados para a etapa Mensagem.]({% image_buster /assets/img/canvas_components/message_step2.png %})
+![Uma lista de canais de envio de mensagens disponíveis para selecionar para a etapa de Mensagem.]({% image_buster /assets/img/canvas_components/message_step2.png %})
 
 ### Etapa 2: Editar configurações de entrega
 
-Em seguida, você pode editar as configurações de Entrega Inteligente, substituições de Horário de Silêncio e validação de entrega.
+Em seguida, você pode editar as configurações para Entrega Inteligente, substituições de Horário de Silêncio e validação de entrega.
 
 #### Intelligent Timing
 
@@ -63,47 +63,49 @@ Todos os usuários que entrarem na etapa Mensagem avançarão para a próxima et
 Se um Canva baseado em ação for disparado por uma mensagem SMS recebida, você poderá fazer referência às propriedades de SMS na primeira etapa (etapa de Mensagem) ou em uma etapa de Mensagem que esteja aninhada em uma etapa de Caminho de ação. Por exemplo, na etapa de envio de mensagens, você poderia usar `{{sms.${inbound_message_body}}}` ou `{{sms.${inbound_media_urls}}}`.
 {% endraw %}
 
-## Referência a propriedades de entrada do Canva
+## Referenciando propriedades de contexto
 
-As propriedades de entrada do Canvas são configuradas na etapa **Entry Schedule (Programação de entrada)** da criação de um Canvas e indicarão o disparo que insere um usuário em um Canvas. Essas propriedades também podem acessar as propriedades de cargas úteis de entrada em canvas disparados por API. Note que o objeto `canvas_entry_properties` tem um limite máximo de tamanho de 50 KB. 
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
-As propriedades de entrada podem ser usadas no Liquid em qualquer etapa da mensagem. Use o seguinte Liquid ao fazer referência a essas propriedades de entrada: {% raw %}``canvas_entry_properties${property_name}``{% endraw %}. Os eventos devem ser eventos personalizados ou eventos de compra para serem usados dessa forma.
+As propriedades de entrada são configuradas na etapa **Agenda de Entrada** de criação de um canva e indicarão o disparador que insere um usuário em um canva. Essas propriedades também podem acessar as propriedades de cargas úteis de entrada em canvas disparados por API. Note que o objeto `context` tem um limite máximo de tamanho de 50 KB.
+
+As propriedades de entrada podem ser usadas em Liquid em qualquer etapa de Mensagem. Use o seguinte Liquid ao referenciar essas propriedades de entrada: {% raw %}``{context.${property_name}}``{% endraw %}. Os eventos devem ser eventos personalizados ou eventos de compra para serem usados dessa forma.
 
 {% alert note %}
-Especificamente para os canais de envio de mensagens no app, o `canvas_entry_properties` só pode ser referenciado no Canvas.
+Para canais de mensagem no app especificamente, `context` só pode ser referenciado no canva.
 {% endalert %}
 
-Use o seguinte Liquid ao fazer referência a essas propriedades de entrada: {% raw %}``canvas_entry_properties${property_name}``{% endraw %}. Note que os eventos devem ser eventos personalizados ou eventos de compra para serem usados dessa forma.
+Use o seguinte Liquid ao referenciar essas propriedades de entrada: {% raw %}``context.${property_name}``{% endraw %}. Note que os eventos devem ser eventos personalizados ou eventos de compra para serem usados dessa forma.
 
 {% raw %}
-Por exemplo, considere a seguinte solicitação: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Você poderia adicionar a palavra "sapatos" a uma mensagem com o Liquid `{{canvas_entry_properties.${product_name}}}`.
+Por exemplo, considere a seguinte solicitação: `\"context\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Você poderia adicionar a palavra "sapatos" a uma mensagem com o Liquid `{{context.${product_name}}}`.
 {% endraw %}
 
 Também é possível aproveitar [as propriedades de entrada persistente]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) em qualquer etapa do Message para orientar os usuários por meio de etapas personalizadas em todo o fluxo de trabalho do Canva.
 
 ### Propriedades do evento
 
-As propriedades do evento referem-se às propriedades que você define para eventos personalizados e eventos de compra. Essas propriedades de evento podem ser usadas em campanhas com entrega baseada em ação, bem como em Canvas. 
+As propriedades de evento referem-se às propriedades que você define para eventos personalizados e eventos de compra. Essas propriedades de evento podem ser usadas em campanhas com entrega baseada em ação, bem como em canva. 
 
-No Canva, as propriedades de eventos personalizados e de compra podem ser usadas no Liquid em qualquer etapa de mensagens que siga uma etapa [de jornadas de ação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/). Por exemplo, ao fazer referência a `event_properties`, use este snippet do Liquid: {% raw %}``{{event_properties.${property_name}}}``{% endraw %} 
+No canva, propriedades de evento personalizado e de evento de compra podem ser usadas em Liquid em qualquer etapa de Mensagem que siga uma etapa [Caminhos de Ação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/). Por exemplo, ao referenciar `event_properties`, use este trecho de Liquid: {% raw %}``{{event_properties.${property_name}}}``{% endraw %} 
 
 {% alert important %}
-`event_properties` não pode ser usado independentemente das etapas das jornadas de ação.
+`event_properties` não pode ser usado independentemente das etapas de Caminhos de Ação.
 {% endalert %}
 
 Na primeira etapa de mensagem após uma jornada de ação, você pode usar `event_properties` relacionado ao evento referenciado nessa jornada de ação. Você pode ter outras etapas (que não sejam outras jornadas de ação ou etapa de mensagem) entre essa etapa de jornadas de ação e a etapa de mensagem. Observe que você só terá acesso a `event_properties` se a etapa de mensagem puder ser rastreada até uma jornada que não seja "Restante do público" em uma etapa de jornada de ação.
 
 {% alert important %}
-Não é possível usar `event_properties` na etapa de envio de mensagens. Em vez disso, você deve usar `canvas_entry_properties` ou adicionar uma etapa de jornadas de ação com o evento correspondente antes da etapa de mensagem que inclui `event_properties`.
+Não é possível usar `event_properties` na etapa de envio de mensagens. Em vez disso, você deve usar `context` ou adicionar uma etapa de jornadas de ação com o evento correspondente antes da etapa de mensagem que inclui `event_properties`.
 {% endalert %}
 
 {% details Expand for original Canvas editor %}
 
 Não é mais possível criar ou duplicar Canvas usando o editor original. Esta seção está disponível apenas para referência.
 
-- `event_properties` não pode ser usado em etapas completas programadas. No entanto, você pode usar `event_properties` na primeira etapa completa de um Canva baseado em ação, mesmo que a etapa completa esteja programada.
-- `canvas_entry_properties` pode ser referenciado somente na primeira etapa completa de um Canvas.
-- Especificamente para canais de envio de mensagens no app, o `canvas_entry_properties` pode ser referenciado no editor do Canvas original se as propriedades de entrada persistente estiverem ativadas como parte do acesso antecipado anterior.
+- `event_properties` não pode ser usado em etapas completas agendadas. No entanto, você pode usar `event_properties` na primeira etapa completa de um Canva baseado em ação, mesmo que a etapa completa esteja programada.
+- `context` pode ser referenciado apenas na primeira etapa completa de um canva.
+- Para canais de mensagem no app especificamente, `context` pode ser referenciado no editor original do canva se você tiver propriedades de entrada persistentes habilitadas como parte do acesso antecipado anterior.
 
 {% enddetails %}
 

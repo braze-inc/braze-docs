@@ -12,7 +12,7 @@ tool: Canvas
 
 > As you create and launch Canvases, you can edit an active Canvas and save it as a draft, allowing you to pilot your changes before another launch. 
 
-If you have an active Canvas that requires large-scale changes, you can use this feature to to build, save, and quality-check **prior** to launching these changes in the active Canvas. 
+If you have an active Canvas that requires large-scale changes, you can use this feature to build, save, and quality-check **prior** to launching these changes in the active Canvas. 
 
 As with any Canvas, only one user can edit a draft at a time, and a Canvas can only have one draft at a time. These drafts don't have any analytics because the draft changes haven't been launched yet.
 

@@ -9,6 +9,10 @@ channel: email
 
 # Universal links and App Links
 
+{% alert tip %}
+For a comparison of link types across all messaging channels and guidance on when you need an AASA file, see [iOS deep linking guide]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide).
+{% endalert %}
+
 Apple universal links and Android App Links are mechanisms devised to provide a seamless transition between web content and mobile apps. While universal links are specific to iOS, Android App Links serve the same purpose for Android applications.
 
 ## How universal links and App Links work

@@ -1,7 +1,7 @@
 ---
-nav_title: "PUBLICAR: Sincronización del desencadenador"
+nav_title: "PUBLICAR: Sincronización de disparador"
 article_title: "PUBLICAR: Sincronización de desencadenante"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 2
 alias: /api/cdi/post_trigger_sync/
 layout: api_page
@@ -18,7 +18,7 @@ description: "En este artículo se describen los detalles del punto final Desenc
 > Utiliza este punto final para desencadenar una sincronización para una integración determinada.
 
 {% alert note %}
-Para utilizar este punto final, debes generar una clave de API con el permiso `cdi.integration_sync`.
+Para utilizar este punto final, debes generar una clave de API con el`cdi.integration_sync`permiso.
 {% endalert %}
 
 ## Límite de velocidad
@@ -29,7 +29,7 @@ Para utilizar este punto final, debes generar una clave de API con el permiso `c
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 |---|---|---|---|
-| `integration_id` | Obligatoria | Cadena | ID de integración. Esto se encuentra en la URL al ver una integración en el panel de Braze. El formato de la URL es `https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. |
+| `integration_id` | Obligatoria | Cadena | ID de integración. Esto se encuentra en la URL cuando se visualiza una integración en el panel de Braze. El formato de la URL es `https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
@@ -63,6 +63,6 @@ La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados 
 | `429 Another job is in progress` | Actualmente se está ejecutando una sincronización para esta integración. Inténtalo de nuevo cuando se haya completado la sincronización. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para obtener más códigos de estado y mensajes de error asociados, consulta [Errores fatales & respuestas]({{site.baseurl}}/api/errors/#fatal-errors).
+Para obtener más códigos de estado y mensajes de error asociados, consulta [Respuestas&]({{site.baseurl}}/api/errors/#fatal-errors) de [errores fatales]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}

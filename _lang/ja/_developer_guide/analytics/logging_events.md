@@ -1,6 +1,6 @@
 ---
 nav_title: カスタムイベントをログに記録する
-article_title: Braze SDKを介したカスタムイベントの記録
+article_title: Braze SDKを通じてカスタムイベントをログに記録する
 page_order: 3.1
 description: "Braze SDKを通してカスタムイベントを記録する方法を学習する。"
 
@@ -31,7 +31,7 @@ braze.logCustomEvent("YOUR_EVENT_NAME");
 1. 変数を使用するか、イベント名を入力して、**Event Name**を入力します。
 2. イベントプロパティを追加するには、**Add Row** ボタンを使用します。
 
-![Braze アクションタグ構成設定を示すダイアログボックス。設定には、"タグ type"(カスタムイベント)、"event name"(ボタンクリック)、"event properties"が含まれます。]({% image_buster /assets/img/web-gtm/gtm-custom-event.png %})
+![Braze アクションタグ構成設定を示すダイアログボックス。設定項目には「タグタイプ」（カスタムイベント）、「イベント名」（ボタンクリック）、「イベントプロパティ」が含まれる。]({% image_buster /assets/img/web-gtm/gtm-custom-event.png %})
 {% endtab %}
 
 {% tab android %}
@@ -71,6 +71,27 @@ AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
 ```dart
 braze.logCustomEvent('YOUR_EVENT_NAME');
 ```
+{% endtab %}
+
+{% tab cordova %}
+Braze Cordovaプラグインメソッドを使う：
+
+```javascript
+BrazePlugin.logCustomEvent("YOUR_EVENT_NAME");
+```
+
+この`logCustomEvent`APIは以下を受け付ける：
+- `eventName` (必須の文字列):最大255文字まで使用できる。名前を . `$`で始めてはいけない。英数字と句読点を使え。
+- `eventProperties` (オプションのオブジェクト):イベントメタデータ用のキーと値のペアを追加する。キーは最大255文字まで使用し、キーを . `$`で始めてはいけない。
+
+プロパティ値には、文字列（最大255文字）、`numeric`数値`boolean`、配列、または`string`ネストされたJSONオブジェクトを使用する。
+
+実装の詳細については、Braze Cordova SDK のソースを参照すること。
+- [`www/BrazePlugin.js` `logCustomEvent` メソッド（138行目から140行目）](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/www/BrazePlugin.js#L138-L140)
+- [`www/BrazePlugin.js` JSDoc（128行目から140行目）](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/www/BrazePlugin.js#L128-L140)
+- [Androidハンドラー`src/android/BrazePlugin.kt`（108行目から115行目）](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/src/android/BrazePlugin.kt#L108-L115)
+- [iOSハンドラー（`src/ios/BrazePlugin.m`308行目から313行目）](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/src/ios/BrazePlugin.m#L308-L313)
+- [iOSメソッド宣言`src/ios/BrazePlugin.h`（24行目）](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/src/ios/BrazePlugin.h#L24)
 {% endtab %}
 
 {% tab infillion %}
@@ -114,7 +135,7 @@ AppboyBinding.LogCustomEvent("YOUR_EVENT_NAME");
 
 ## メタデータプロパティを追加する
 
-カスタムイベントをログに記録する場合は、イベントとともにプロパティオブジェクトを渡すことで、そのカスタムイベントに関するメタデータを追加できます。プロパティはキーと値のペアとして定義されています。キーは文字列で、値は`string`、`numeric`、`boolean`、[`Date`](http://www.w3schools.com/jsref/jsref_obj_date.asp) オブジェクト、配列、またはネストされたJSON オブジェクトです。
+カスタムイベントを記録する際、そのイベントにプロパティオブジェクトを渡すことで、そのカスタムイベントに関するメタデータを追加する選択肢がある。プロパティはキーと値のペアとして定義されています。キーは文字列であり、値はオブジェクト[`Date`](http://www.w3schools.com/jsref/jsref_obj_date.asp)、配列`numeric`、またはネストされたJSON`boolean`オブジェクトである`string`。
 
 メタデータプロパティを追加するには、以下のイベントロギングメソッドを使用します。
 
@@ -226,6 +247,61 @@ braze.logCustomEvent('custom_event_with_properties', properties: {
 ```
 {% endtab %}
 
+{% tab cordova %}
+プロパティオブジェクトを使ってカスタムイベントをログに記録する：
+
+```javascript
+var properties = {};
+properties["key1"] = "value1";
+properties["key2"] = ["value2", "value3"];
+properties["key3"] = false;
+BrazePlugin.logCustomEvent("YOUR-EVENT-NAME", properties);
+```
+
+プロパティをインラインで渡すこともできる：
+
+```javascript
+BrazePlugin.logCustomEvent("YOUR-EVENT-NAME", {
+  "key": "value",
+  "amount": 42,
+});
+```
+
+公式のCordovaサンプルアプリには、文字列、数値、ブール値、配列、およびネストされたオブジェクトのプロパティが含まれている。
+- [`sample-project/www/js/index.js` (230行目から251行目)](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/sample-project/www/js/index.js#L230-L251)
+
+サンプルプロジェクトの抜粋：
+
+```javascript
+var properties = {};
+properties["One"] = "That's the Way of the World";
+properties["Two"] = "After the Love Has Gone";
+properties["Three"] = "Can't Hide Love";
+BrazePlugin.logCustomEvent("cordovaCustomEventWithProperties", properties);
+BrazePlugin.logCustomEvent("cordovaCustomEventWithoutProperties");
+BrazePlugin.logCustomEvent("cordovaCustomEventWithFloatProperties", {
+  "Cart Value": 4.95,
+  "Cart Item Name": "Spicy Chicken Bites 5 pack"
+});
+BrazePlugin.logCustomEvent("cordovaCustomEventWithNestedProperties", {
+  "array key": [1, "2", false],
+  "object key": {
+    "k1": "1",
+    "k2": 2,
+    "k3": false,
+  },
+  "deep key": {
+    "key": [1, "2", true]
+  }
+});
+```
+
+APIとネイティブブリッジの詳細については、以下を参照のこと：
+- [`www/BrazePlugin.js` JSDoc（128行目から140行目）](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/www/BrazePlugin.js#L128-L140)
+- [Androidハンドラー`src/android/BrazePlugin.kt`（108行目から115行目）](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/src/android/BrazePlugin.kt#L108-L115)
+- [iOSハンドラー（`src/ios/BrazePlugin.m`308行目から313行目）](https://github.com/braze-inc/braze-cordova-sdk/blob/86132bc7f0b6ddf1b598b0e612db70f11744801c/src/ios/BrazePlugin.m#L308-L313)
+{% endtab %}
+
 {% tab react native %}
 ```javascript
 Braze.logCustomEvent("custom_event_with_properties", {
@@ -255,7 +331,7 @@ AppboyBinding.LogCustomEvent("event name", properties(Dictionary<string, object>
 
 ## ベストプラクティス
 
-カスタムイベントのプロパティーが予期されたとおりに記録されるように実行するには、次の3 つの重要な検査があります。
+カスタムイベントのプロパティが期待通りに記録されるようにするには、次の3つの重要な確認事項を実施する必要がある：
 
 * [ロギングされるイベントを設定する](#verify-events)
 * [ログを確認する](#verify-log)
@@ -277,11 +353,11 @@ AppboyBinding.LogCustomEvent("event name", properties(Dictionary<string, object>
 
 1. [**データ設定**] > [**カスタムイベント**] に移動します。
 2. リストからカスタムイベントを探す。
-3. イベントの場合、**Manage Properties**を選択して、イベントに関連付けられているプロパティの名前を表示します。
+3. イベントについては、**[プロパティの管理]**を選択すると、そのイベントに関連付けられたプロパティの名前が表示される。
 
 ### 値を確認する
 
-[ ユーザーをテストユーザー]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/#adding-test-users) として追加した後、次のステップに従い、値を確認します。 
+[テストユーザーとしてユーザーを追加]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/#adding-test-users)した後、以下のステップで値を確認する： 
 
 1. アプリ内でカスタムイベントを実行する。
 2. データがフラッシュされるまで約10秒待ちます。

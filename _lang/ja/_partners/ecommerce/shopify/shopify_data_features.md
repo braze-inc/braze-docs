@@ -743,7 +743,7 @@ Shopify のチェックアウト完了 Webhook には、商品 URL や画像 URL
 {% endraw %}
 
 {% alert note %}
-現在、Shopify 統合では、Braze [購入イベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events)への入力はサポートされていません。このため、フィルターs、リキッドタグs、アクション ベースのトリガーs、および分析 は、`ecommerce.order_placed` を使用する必要があります。
+現在、Shopify 統合では、Braze [購入イベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events)への入力はサポートされていません。このため、フィルター、リキッドタグs、アクション ベースのトリガー、および分析 は、`ecommerce.order_placed` を使用する必要があります。
 {% endalert %}
 
 {% endsubtab %}
@@ -787,10 +787,10 @@ Shopify のチェックアウト完了 Webhook には、商品 URL や画像 URL
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert important %}
-現行のShopify API バージョンに既知の問題があると、`shopify_last_order_name` ユーザー 属性が正しく入力されません。ユーザーs への影響は以下のとおりです。<br><br>
+現行のShopify API バージョンに既知の問題があると、`shopify_last_order_name` ユーザー 属性が正しく入力されません。ユーザー への影響は以下のとおりです。<br><br>
 
-- **既設ユーザーs:**すでに`shopify_last_order_name` の値を持っているユーザーの場合、その値は保持されますが、後続の順序では更新d になりません。
-- **新しいユーザー:**新しいユーザーs の場合、フィールドは入力せず、空またはNULL のままになります。
+- **既設ユーザー:**すでに`shopify_last_order_name` の値を持っているユーザーの場合、その値は保持されますが、後続の順序では更新d になりません。
+- **新しいユーザー:**新しいユーザー の場合、フィールドは入力せず、空またはNULL のままになります。
 
 このページは、Shopify がこの問題を解決した後に更新されます。
 {% endalert %}

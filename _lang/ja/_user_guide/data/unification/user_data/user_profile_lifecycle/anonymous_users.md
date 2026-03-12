@@ -44,7 +44,7 @@ description: "この記事では、匿名ユーザーとユーザーエイリア
 - **外部ユーザー ID が空白である**
 - "is_lead_profile" **真である**
 
-![空白の外部ユーザー ID と真の"is_lead_profile" カスタム属性のセグメントフィルターs。]({% image_buster /assets/img/getting_started/anonymous_users.png %})
+![空白の外部ユーザー ID と真の"is_lead_profile" カスタム属性のセグメントフィルター。]({% image_buster /assets/img/getting_started/anonymous_users.png %})
 
 ### 匿名ユーザーからのチェックアウトデータのキャプチャ
 

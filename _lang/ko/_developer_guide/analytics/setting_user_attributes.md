@@ -1,6 +1,6 @@
 ---
 nav_title: Set user attributes
-article_title: Braze 소프트웨어 개발 키트를 통해 사용자 속성 설정하기
+article_title: Braze 소프트웨어 개발 키트를 통해 사용자 속성 설정
 page_order: 1.2
 description: "Braze SDK를 통해 사용자 속성을 설정하는 방법을 알아보세요."
 ---
@@ -36,6 +36,10 @@ description: "Braze SDK를 통해 사용자 속성을 설정하는 방법을 알
 
 {% sdktab unity %}
 {% multi_lang_include developer_guide/unity/analytics/setting_user_attributes.md %}
+{% endsdktab %}
+
+{% sdktab react native %}
+{% multi_lang_include developer_guide/react_native/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
 {% endsdktabs %}

@@ -1,56 +1,56 @@
 ---
-nav_title: Lancez votre agent
-article_title: Lancez votre agent
+nav_title: Veuillez lancer votre agent.
+article_title: Veuillez lancer votre agent.
 page_order: 4
-description: "Apprenez à lancer votre agent Decisioning Studio Pro et à fermer la boucle de décision de l'intelligence artificielle pour une optimisation par auto-apprentissage."
+description: "Découvrez comment lancer votre agent Decisioning Studio Pro et boucler la boucle de décision en intelligence artificielle pour une optimisation par auto-apprentissage."
 ---
 
-# Lancez votre agent
+# Veuillez lancer votre agent.
 
-> Une fois que vous avez connecté les sources de données, configuré l'orchestration et conçu votre agent, vous êtes prêt à vous lancer. Cet article traite de l'activation de votre agent et de la fermeture de la boucle de décision de l'intelligence artificielle afin que l'agent puisse apprendre et s'améliorer en permanence.
+> Une fois que vous avez connecté les sources de données, configuré l'orchestration et conçu votre agent, vous êtes prêt à démarrer. Cet article traite de l'activation de votre agent et de la fermeture de la boucle de décision en intelligence artificielle afin que l'agent puisse continuellement apprendre et s'améliorer.
 
 ## Lancement de votre agent
 
-Après avoir effectué toutes les étapes de configuration avec votre équipe de services décisionnels de l'intelligence artificielle :
+Une fois toutes les étapes de configuration effectuées avec votre équipe de service d'intelligence artificielle Decisioning :
 
-1. Vérifiez la configuration de votre agent pour vous assurer que tous les paramètres sont corrects.
-2. Vérifiez que vos connexions de données et vos intégrations d'orchestration sont actives.
-3. Travaillez avec votre équipe de services décisionnels de l'intelligence artificielle pour activer l'agent.
+1. Veuillez vérifier la configuration de votre agent afin de vous assurer que tous les paramètres sont corrects.
+2. Veuillez vérifier que vos connexions de données et vos intégrations d'orchestration sont actives.
+3. Veuillez collaborer avec votre équipe des services de prise de décision par intelligence artificielle pour activer l'agent.
 
-Une fois lancé, votre agent sera :
-- Commencer à recevoir des données sur l'audience et les clients.
-- Commencez à faire des recommandations personnalisées pour chaque client.
-- Orchestrer des actions par le biais de votre CEP configuré
-- Recueillir des données de retour d'information pour apprendre et s'améliorer au fil du temps.
+Une fois lancé, votre agent procédera comme suit :
+- Commencez à recevoir des données sur votre audience et vos clients
+- Commencez à formuler des recommandations personnalisées pour chaque client.
+- Effectuer l'orchestration des actions via votre CEP configuré
+- Recueillir des données de rétroaction afin d'apprendre et de s'améliorer au fil du temps.
 
-## Boucler la boucle de la prise de décision en matière d'intelligence artificielle
+## Clôture du cycle décisionnel de l'intelligence artificielle
 
-Une fois lancé, votre agent a besoin de données de retour pour apprendre et s'améliorer. Il s'agit notamment des données de conversion, des données d'engagement et des données d'activation qui indiquent à l'agent ce qui s'est passé après l'envoi des décisions d'engagement client.
+Une fois lancé, votre agent a besoin de données de rétroaction pour apprendre et s'améliorer. Cela comprend les données de conversion, les données d'engagement et les données d'activation qui indiquent à l'agent ce qui s'est produit après l'envoi des décisions d'engagement client.
 
-Pour obtenir des informations détaillées sur la préparation de ces ressources de données de retour d'information essentielles, voir [Préparer vos sources de données]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources/).
+Pour connaître les exigences détaillées relatives à la préparation de ces ressources de données critiques issues des commentaires, veuillez consulter [la section Préparation de vos sources de données]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources/).
 
 {% alert note %}
-Si l'agent est nativement intégré à la plateforme d'engagement client (comme Braze, SFMC ou Klaviyo), il se peut qu'aucune étape de configuration supplémentaire ne soit nécessaire pour les données de retour d'expérience, car celles-ci peuvent être envoyées automatiquement avec les données client.
+Si l'agent est intégré de manière native à la plateforme d'engagement client (telle que Braze, SFMC ou Klaviyo), aucune étape de configuration supplémentaire n'est nécessaire pour les données de feedback, car celles-ci peuvent être envoyées automatiquement avec les données client.
 {% endalert %}
 
-## Suivi de votre agent
+## Surveillance de votre agent
 
-Après le lancement, collaborez avec votre équipe de services décisionnels d'intelligence artificielle pour surveiller les performances :
+Après le lancement, veuillez collaborer avec votre équipe des services de prise de décision par intelligence artificielle afin de surveiller les performances :
 
-- **Indicateurs de performance**: Suivez vos indicateurs de réussite à travers les groupes d'expérimentation.
-- **Progression de l'apprentissage**: Observer l'évolution des recommandations de l'agent dans le temps
-- **Informations**: Comprendre quelles sont les dimensions et les options qui génèrent des résultats pour les différents segments de clientèle.
+- **Indicateurs de performance** : Suivez vos indicateurs de réussite parmi les groupes expérimentaux.
+- **Progrès dans l'apprentissage** : Veuillez observer comment les recommandations de l'agent évoluent au fil du temps.
+- **Informations** : Comprenez quelles dimensions et options génèrent des résultats pour différents segments de clientèle.
 
 ## Optimisation continue
 
-Votre équipe de services d'intelligence artificielle continuera à travailler avec vous pour :
+Votre équipe de service d'intelligence artificielle Decisioning continuera à collaborer avec vous afin de :
 
 - Analyser les performances des agents et identifier les possibilités d'optimisation
-- Augmenter les dimensions ou les options selon les besoins
-- Adjust constraints based on business rule changes (Ajustez les contraintes en fonction des modifications des règles de gestion)
-- Appliquer à d'autres cas d'utilisation les agents qui ont fait leurs preuves
+- Veuillez développer les dimensions ou les options selon vos besoins.
+- Adjust les contraintes en fonction des modifications apportées aux règles métier
+- Étendre les agents performants à d'autres cas d'utilisation
 
 {% alert tip %}
-L'agent apprend et s'améliore continuellement au fil du temps. Laissez suffisamment de temps à l'agent pour recueillir des données et optimiser avant d'apporter des modifications importantes à la configuration.
+L'agent apprend et s'améliore continuellement au fil du temps. Veuillez accorder suffisamment de temps à l'agent pour qu'il puisse recueillir des données et optimiser le système avant d'apporter des modifications importantes à la configuration.
 {% endalert %}
 

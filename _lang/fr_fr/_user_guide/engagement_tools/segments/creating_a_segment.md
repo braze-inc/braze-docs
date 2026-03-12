@@ -8,7 +8,7 @@ tool: Segments
 search_rank: 3
 ---
 
-# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Créer une segmentation
+# [![](https://learning.braze.com/segmentation-course)C[ours]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} [Braze Learning ](https://learning.braze.com/segmentation-course)Créer un segment
 
 > La segmentation vous permet de cibler les utilisateurs en fonction de leurs actions et de leurs caractéristiques démographiques, comportementales, ou techniques. La segmentation et l’envoi de messages automatiques peuvent être utilisés de manière intelligente et créative pour transformer vos prospects en clients à long terme de manière harmonieuse. Les segments sont mis à jour en temps réel en fonction des modifications de données, et vous pouvez créer autant de segments que nécessaire pour remplir vos objectifs de ciblage et de communication.
 
@@ -29,9 +29,9 @@ Si vous le souhaitez, vous pouvez effectuer les opérations suivantes :
 
 ## Étape 3 : Choisissez votre application ou plateforme
 
-Choisissez les applications ou plateformes que vous souhaitez cibler en sélectionnant **Utilisateurs de toutes les applications** (par défaut) ou **Utilisateurs d'applications spécifiques.** **Utilisateurs d'apps spécifiques** cible les utilisateurs ayant au moins une session dans les apps spécifiées.
+Choisissez les applications ou plateformes que vous souhaitez cibler en sélectionnant **Utilisateurs de toutes les applications** (par défaut) ou **Utilisateurs d'applications spécifiques.** Le ciblage **des utilisateurs d'applications spécifiques** porte sur les utilisateurs ayant au moins une session dans les applications spécifiées.
 
-Par exemple, si vous souhaitez envoyer un message in-app uniquement aux appareils iOS, sélectionnez votre application iOS. Cela permettra aux utilisateurs qui peuvent utiliser à la fois un appareil iOS et Android de recevoir uniquement le message sur leur appareil iOS. Dans la liste des apps spécifiques, l'option **Utilisateurs ne provenant d'aucune app** vous permet d'inclure des utilisateurs sans sessions ni données d'apps (généralement créés via l'importation d'utilisateurs ou l'API REST).
+Par exemple, si vous souhaitez envoyer un message in-app uniquement aux appareils iOS, sélectionnez votre application iOS. Cela permettra aux utilisateurs qui peuvent utiliser à la fois un appareil iOS et Android de recevoir uniquement le message sur leur appareil iOS. Dans la liste des applications spécifiques, l'option **Utilisateurs sans application** vous permet d'inclure les utilisateurs sans session et sans données d'application (généralement créés via l'importation d'utilisateurs ou l'API REST).
 
 ![Panneau Détails du segment avec l'option "Utilisateurs de toutes les applications" sélectionnée dans la section Apps utilisées.]({% image_buster /assets/img_archive/Segment2.png %}){: style="max-width:80%;"}
 
@@ -39,13 +39,13 @@ Par exemple, si vous souhaitez envoyer un message in-app uniquement aux appareil
 
 Ajoutez au moins un filtre à votre segmentation. Vous pouvez combiner autant de filtres que vous le souhaitez pour rendre votre segmentation plus spécifique. 
 
-{% include alerts/note_alerts.md alert='Segment profiles first app use' %}
+{% multi_lang_include alerts/note_alerts.md alert='Segment profiles first app use' %}
 
 #### Groupes de filtres
 
 Les filtres sont organisés en groupes de filtres. Chaque filtre doit faire partie d'un groupe de filtres comprenant au minimum un filtre. Un segment peut avoir plusieurs groupes de filtres. Pour en ajouter un, sélectionnez **Ajouter un groupe de filtres**. Modifiez le nom du groupe de filtres en sélectionnant l'icône qui apparaît lorsque vous passez la souris à côté.
 
-![Groupe de filtres avec une icône de modification à côté de son nom.]({% image_buster /assets/img_archive/edit_filter_group_name.png %})
+![Groupe de filtres avec une icône pour modifier à côté de son nom.]({% image_buster /assets/img_archive/edit_filter_group_name.png %})
 
 Sélectionnez les icônes situées à côté de chaque filtre pour réduire l'éditeur de filtres ou dupliquer des filtres individuels. Après avoir dupliqué un filtre, vous pouvez ajuster ses valeurs dans chaque liste déroulante.
 
@@ -63,11 +63,11 @@ Lorsque vous sélectionnez "OU" pour les filtres qui incluent un filtre négatif
 
 {% details When to avoid the OR operator %}
 
-Il peut y avoir des situations de ciblage de l’utilisateur où l’utilisation de l’opérateur `OR` doit être évitée. L’opérateur `OR` crée une instruction qui évalue si un utilisateur répond aux critères d’un ou plusieurs filtres d’une instruction. Par exemple, si vous souhaitez créer un segment d'utilisateurs qui appartiennent à la catégorie "Foodies" mais qui n'appartiennent ni à la catégorie "Non-foodies" ni à la catégorie "Candy-lovers", vous pouvez utiliser l'opérateur `OR`.
+Il peut y avoir des situations de ciblage de l’utilisateur où l’utilisation de l’opérateur `OR` doit être évitée. L’opérateur `OR` crée une instruction qui évalue si un utilisateur répond aux critères d’un ou plusieurs filtres d’une instruction. Par exemple, si vous souhaitez créer un segment d'utilisateurs appartenant à la catégorie « Gourmets » mais n'appartenant ni à la catégorie « Non-gourmets » ni à la catégorie « Amateurs de sucreries », l'opérateur`OR`« non » serait approprié dans ce cas.
 
-![Groupe de filtrage pour les utilisateurs appartenant au segment "foodies" et non aux segments "non-foodies" ou "candy-lovers".]({% image_buster /assets/img_archive/or_operator_segment.png %})
+![Groupe de filtres pour les utilisateurs appartenant au segment « gourmets » et n'appartenant ni au segment « non-gourmets » ni au segment « amateurs de sucreries ».]({% image_buster /assets/img_archive/or_operator_segment.png %})
 
-Cependant, si votre objectif est de segmenter les utilisateurs qui appartiennent au segment "Foodies" et ne font partie d'aucun des segments "Non-foodies" et "Candy-lovers", utilisez l'opérateur `AND`. De cette manière, les utilisateurs qui reçoivent la campagne ou le canvas font partie du segment visé ("foodies") et non des autres segments ("Non-foodies" et "Candy-lovers") en même temps. 
+Cependant, si votre objectif est de réaliser la segmentation des utilisateurs qui appartiennent au segment « Gourmets » et qui ne font partie ni du segment « Non-gourmets » ni du segment « Amateurs de sucreries », veuillez utiliser l'opérateur`AND`. De cette manière, les utilisateurs qui reçoivent la campagne ou le canvas appartiennent au segment visé (« gourmets ») et non aux autres segments (« non-gourmets » et « amateurs de sucreries ») simultanément. 
 
 Les critères de ciblage négatifs suivants ne doivent pas être utilisés avec l’opérateur `OR` lorsque deux filtres ou plus font référence au même attribut :
 
@@ -76,7 +76,7 @@ Les critères de ciblage négatifs suivants ne doivent pas être utilisés avec 
 - `does not equal`
 - `does not match regex`
 
-Si `not included`, `is not`, `does not equal`, ou `does not match regex` sont utilisés avec l'opérateur `OR` deux fois ou plus dans une déclaration, les utilisateurs ayant toutes les valeurs de l'attribut concerné seront ciblés.
+Si `not included`, `is not`, `does not equal`, ou`does not match regex`  sont utilisés avec `OR`l'opérateur  deux fois ou plus dans une instruction, les utilisateurs ayant toutes les valeurs pour l'attribut concerné seront soumis au ciblage.
 
 {% enddetails %}
 
@@ -88,7 +88,7 @@ Selon le filtre spécifique que vous sélectionnez, vous disposerez de différen
 Braze ne crée pas de profils pour les utilisateurs tant qu’ils n’ont pas utilisé l’application une première fois, ce qui signifie que vous ne pouvez pas cibler des utilisateurs qui n’ont pas encore ouvert votre application.
 {% endalert %}
 
-![Les groupes de filtres du segmenteur avec l'opérateur AND.]({% image_buster /assets/img_archive/segmenter_filter_groups.png %})
+![Segmentez les groupes de filtres à l'aide de l'opérateur AND.]({% image_buster /assets/img_archive/segmenter_filter_groups.png %})
 
 {% alert important %}
 Les segments utilisant déjà le filtre d'**appartenance à un segment** ne peuvent pas être inclus ou imbriqués dans d'autres segments. Cela permet d'éviter un cycle dans lequel le segment A inclut le segment B, qui essaie ensuite d'inclure à nouveau le segment A. Dans ce cas, la segmentation ne cesserait de se référer à elle-même, ce qui rendrait impossible le calcul de la personne qui en fait partie.
@@ -108,19 +108,19 @@ Les utilisateurs exclus ne seront pas comptabilisés dans les statistiques du _n
 
 ![Un groupe d'exclusion avec deux filtres.]({% image_buster /assets/img_archive/segmenter_exclusion_groups.png %})
 
-#### Visualisation des statistiques de l'entonnoir
+#### Affichage des statistiques de l'entonnoir
 
-Sélectionnez **Afficher les statistiques de l'entonnoir** pour afficher les statistiques de ce groupe de filtres et voir l'impact de chaque filtre ajouté sur les statistiques de votre segmentation. Vous obtiendrez une estimation du nombre et du pourcentage d'utilisateurs ciblés par tous les filtres jusqu'à ce point. Une fois que les statistiques sont affichées pour un groupe de filtres, elles sont mises à jour automatiquement chaque fois que vous modifiez les filtres. Ces statistiques sont estimées et peuvent prendre un certain temps pour être générées.
+Veuillez sélectionner **Afficher les statistiques de l'entonnoir** pour afficher les statistiques de ce groupe de filtres et observer l'impact de chaque filtre ajouté sur les statistiques de votre segment. Vous verrez un nombre estimé et un pourcentage d'utilisateurs soumis au ciblage par tous les filtres jusqu'à ce point. Une fois les statistiques affichées pour un groupe de filtres, elles se mettront à jour automatiquement chaque fois que vous modifierez les filtres. Ces statistiques sont estimées et leur génération peut prendre un certain temps.
 
-Gardez à l'esprit que si vous utilisez AND entre vos filtres, les statistiques de l'entonnoir diminueront ; si vous utilisez OR entre vos filtres, les statistiques de l'entonnoir augmenteront.
+Veuillez noter que si vous utilisez AND entre vos filtres, les statistiques de l'entonnoir diminueront ; si vous utilisez OR entre vos filtres, les statistiques de l'entonnoir augmenteront.
 
-![Deux filtres avec des statistiques sur les entonnoirs des segments.]({% image_buster /assets/img_archive/segment_funnel_statistics.png %})
+![Deux filtres avec statistiques segmentées en entonnoir.]({% image_buster /assets/img_archive/segment_funnel_statistics.png %})
 
-Ajouter des filtres qui documentent votre flux utilisateur vous permet de voir à quel endroit vous perdez des utilisateurs. Par exemple, si vous êtes une application de réseau social et que vous souhaitez voir où vous pourriez perdre des utilisateurs au cours de votre processus d'onboarding, vous pouvez ajouter des filtres de données personnalisés pour l'inscription, l'ajout d'amis et l'envoi du premier message. Si vous découvrez que 85 % des utilisateurs s’inscrivent et ajoutent des amis, mais que seulement 45 % ont envoyé un premier message, alors vous saurez qu’il vous faut encourager les utilisateurs à envoyer plus de messages pendant vos campagnes d’onboarding et de marketing.
+Ajouter des filtres qui documentent votre flux utilisateur vous permet de voir à quel endroit vous perdez des utilisateurs. Par exemple, si vous êtes une application de réseau social et que vous souhaitez identifier les étapes du processus d'onboarding où vous pourriez perdre des utilisateurs, il peut être utile d'ajouter des filtres de données personnalisés pour l'inscription, l'ajout d'amis et l'envoi du premier message. Si vous découvrez que 85 % des utilisateurs s’inscrivent et ajoutent des amis, mais que seulement 45 % ont envoyé un premier message, alors vous saurez qu’il vous faut encourager les utilisateurs à envoyer plus de messages pendant vos campagnes d’onboarding et de marketing.
 
 #### Tester des segments
 
-Après avoir ajouté des applications et des filtres à votre segment, vous pouvez tester si votre segment est configuré comme prévu en recherchant un utilisateur pour confirmer s'il correspond aux critères de segmentation. Pour ce faire, recherchez le `external_id` ou le `braze_id` d'un utilisateur dans la section **Recherche d'utilisateurs**. Notez que vous ne pouvez pas effectuer de recherche d'**utilisateurs** par adresse e-mail dans la **recherche d'utilisateurs**.
+Après avoir ajouté des applications et des filtres à votre segment, vous pouvez tester si votre segment est configuré comme prévu en recherchant un utilisateur pour confirmer s'il correspond aux critères de segmentation. Pour ce faire, recherchez le `external_id` ou le `braze_id` d'un utilisateur dans la section **Recherche d'utilisateurs**. Veuillez noter qu'il n'est pas possible d'effectuer une recherche par adresse e-mail dans **la fonction Recherche d'utilisateurs**.
 
 ![Section de recherche d'utilisateurs avec un champ de recherche.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%;"}
 
@@ -131,11 +131,11 @@ La recherche d’utilisateur est disponible lors de :
 
 Lorsqu'un utilisateur correspond aux critères de segment, de filtre et d'application, une alerte l'indique.
 
-![La consultation de l'utilisateur "testuser" déclenche une alerte indiquant que "testuser correspond à tous les segments, filtres et applications".]({% image_buster /assets/img_archive/user_lookup_match.png %})
+![Une recherche d'utilisateur sur « testuser » déclenche un déclencheur indiquant : « testuser correspond à tous les segments, filtres et applications. »]({% image_buster /assets/img_archive/user_lookup_match.png %})
 
 Lorsqu'un utilisateur ne correspond pas à tout ou partie des critères de segmentation, de filtrage ou d'application, les critères manquants sont répertoriés à des fins de résolution des problèmes.
 
-![Une recherche utilisateur avec une alerte indiquant "test1 ne correspond pas aux critères de ciblage suivants :" et affichant les critères manquants.]({% image_buster /assets/img_archive/user_lookup_nomatch.png %})
+![Une recherche d'utilisateur avec une alerte indiquant « test1 ne correspond pas aux critères de ciblage suivants : » et affichant les critères manquants.]({% image_buster /assets/img_archive/user_lookup_nomatch.png %})
 
 #### Segments mono-utilisateur
 
@@ -175,7 +175,7 @@ Lorsque vous effectuez une segmentation avec des filtres dépendant de l'apparei
 
 Vous pouvez spécifier qu'une seule notification push est envoyée à chaque utilisateur. Lorsque vous [rédigez votre message]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), sélectionnez l'option **N'envoyer qu'au dernier appareil utilisé par l'utilisateur** sous **Paramètres supplémentaires.**
 
-!["Paramètres supplémentaires" avec une case à cocher permettant de n'envoyer que vers le dernier appareil utilisé par l'utilisateur.]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
+![« Paramètres supplémentaires » avec une case à cocher pour envoyer uniquement au dernier appareil utilisé par l'utilisateur.]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
 
 ### Considérations
 

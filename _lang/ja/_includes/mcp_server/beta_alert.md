@@ -1,3 +1,3 @@
 {% alert important %}
-Braze MCPサーバーはベータ版である。より良い製品作りにご協力いただける場合は、[mcp-product@braze.com](mailto:mcp-product@braze.com) までフィードバックをお寄せいただきたい。
+Braze MCPサーバーはベータ版である。改善に協力したいなら、[mcp-product@](mailto:mcp-product@braze.com) までフィードバック[braze.com](mailto:mcp-product@braze.com)を送ってくれ。
 {% endalert %}

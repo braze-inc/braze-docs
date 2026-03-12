@@ -34,5 +34,5 @@ The title of the pull request should always match the corresponding issue title.
 The pull request body should always use the [PULL_REQUEST_TEMPLATE](./PULL_REQUEST_TEMPLATE) as a base and add/edit the relevant sections in the template as needed. Specifically the Jira ticket number should always be linked using the following syntax:
 
 ```
-- [BD-NUMBER](https://jira.braze.com/browse/BD-NUMBER)
+- [BD-NUMBER](https://jira.atl.braze.com/browse/BD-NUMBER)
 ```

@@ -9,7 +9,7 @@ description: "This landing page lists the Braze translation endpoints."
 page_type: landing
 
 guide_top_header: "Translation Endpoints"
-guide_top_text: "Use the Braze translation endpoints to manage and update translations in your campaigns and Canvases."
+guide_top_text: "Use the Braze translation endpoints to manage and update translations in your campaigns, Canvases, and Content Blocks."
 
 guide_featured_title: "Campaign endpoints"
 guide_featured_list:
@@ -50,9 +50,18 @@ guide_menu_list2:
     link: /docs/api/endpoints/translations/email_templates/put_update_template/
     image: /assets/img/braze_icons/target-04.svg
 
+guide_menu_title3: "Content Block endpoints"
+guide_menu_list3:
+  - name: "GET: View All Translations for a Content Block"
+    link: /docs/api/endpoints/translations/content_blocks/get_translation_content_block/
+    image: /assets/img/braze_icons/message-plus-square.svg
+  - name: "PUT: Update Translation in a Content Block"
+    link: /docs/api/endpoints/translations/content_blocks/put_update_translation_content_block/
+    image: /assets/img/braze_icons/target-04.svg
+
 ---
 
-{% include early_access_beta_alert.md feature='Access to the Braze translation endpoints' %}
+{% multi_lang_include early_access_beta_alert.md feature='Access to the Braze translation endpoints' %}
 
 ## How our translation endpoints work
 
@@ -64,7 +73,7 @@ Before using these endpoints, you must [add your locales]({{site.baseurl}}/user_
 
 ### How to test your translations
 
-There are two ways you can validate translation support using the API and the Braze dashboard across campaigns, Canvases (including individual steps), and email templates:
+There are two ways you can validate translation support using the API and the Braze dashboard across campaigns, Canvases (including individual steps), Content Blocks, and email templates:
 
 - During composition (before launch)
 - After launch (using post-launch drafts)

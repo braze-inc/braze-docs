@@ -27,12 +27,23 @@ guide_featured_list:
 
 ## Data privacy and security
 
+### HIPAA compliance
+
+AI Operator utilizes multi-turn conversation technology that is currently ineligible for OpenAI's Zero Data Retention policy. AI Operator uses OpenAI's Modified Abuse Monitoring data retention policy, but AI Operator is not covered by the Business Associate Agreement (BAA) between Braze and OpenAI. Users should not prompt AI Operator to access Protected Health Information (PHI) stored in Braze or otherwise submit PHI to this feature.
+
 ### Model providers as sub-processors or third-party providers
 
 When you use an integration with an LLM provider provided by Braze through the Braze Services ("Braze-provided LLM"), the providers of such Braze-provided LLM act as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. BrazeAI Operator<sup>TM</sup> integrates with OpenAI.
 
-If you choose to bring your own API Key to integrate with BrazeAI Operator<sup>TM</sup>, the provider of your own LLM subscription will be considered a Third Party Provider, as defined in the contract between you and Braze. 
+If you choose to bring your own API Key to integrate with BrazeAI Operator<sup>TM</sup>, the provider of your own LLM subscription will be considered a Third Party Provider, as defined in the contract between you and Braze.
 
 ### How data is used with OpenAI
 
 To generate AI output through BrazeAI features that leverage OpenAI ("Output"), Braze will send certain information ("Input") to OpenAI. Input consists of your prompts, the content displayed in the dashboard, and workspace data relevant to your queries. Per [OpenAI's API platform commitments](https://openai.com/enterprise-privacy/), data sent to OpenAI's API via Braze is not used to train or improve OpenAI models. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content, including Output.
+
+## Next steps
+
+- [Getting started]({{site.baseurl}}/user_guide/brazeai/operator/getting_started/): Learn how to access and use Operator
+- [Reviewing actions]({{site.baseurl}}/user_guide/brazeai/operator/reviewing_actions/): Learn how to review and approve Operator's proposed changes
+- [Support tickets]({{site.baseurl}}/user_guide/brazeai/operator/support_tickets/): File support tickets directly from Operator
+- [Troubleshooting]({{site.baseurl}}/user_guide/brazeai/operator/troubleshooting/): Reference common issues and solutions

@@ -1,5 +1,5 @@
 ---
-nav_title: カスタムビューコントロール
+nav_title: カスタムビューコントローラ
 article_title: iOS 用カスタムビューコントローラーのアプリ内メッセージ
 platform: iOS
 page_order: 7

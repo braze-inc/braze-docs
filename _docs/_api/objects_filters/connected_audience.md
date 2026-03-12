@@ -1,5 +1,5 @@
 ---
-nav_title: "Connected audience filter & object"
+nav_title: "Connected audience filter and object"
 article_title: API Connected Audience Object
 page_order: 3
 page_type: reference

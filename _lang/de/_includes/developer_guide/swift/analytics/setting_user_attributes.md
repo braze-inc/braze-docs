@@ -16,9 +16,9 @@ Die folgenden Attribute sollten für das Objekt `Braze.User` festgelegt werden:
 - `phone`
 - `gender`
 
-### Einstellung von Standardattributen
+### Standardattribut festlegen
 
-Um ein Standardattribut für Nutzer:innen festzulegen, stellen Sie das entsprechende Feld auf dem gemeinsamen Objekt `Braze.User` ein. Im Folgenden sehen Sie ein Beispiel für die Einstellung des Attributs Vorname:
+Um ein Standard-Attribut für Nutzer:innen festzulegen, konfigurieren Sie bitte das entsprechende Feld im gemeinsam genutzten`Braze.User`Objekt. Im Folgenden sehen Sie ein Beispiel für die Einstellung des Attributs Vorname:
 
 {% tabs %}
 {% tab swift %}
@@ -37,9 +37,9 @@ AppDelegate.braze?.user.set(firstName: "Alex")
 {% endtab %}
 {% endtabs %}
 
-### Standardattribute zurücksetzen
+### Standardattribut zurücksetzen
 
-Um ein Standardattribut für Nutzer:innen zu deaktivieren, übergeben Sie `nil` an die entsprechende Methode.
+Um ein Standard-Attribut zurückzusetzen, übergeben Sie`nil`  an die entsprechende Methode.
 
 {% tabs %}
 {% tab swift %}
@@ -160,7 +160,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourD
 {% endtab %}
 
 {% tab array %}
-Die maximale Anzahl von Elementen in [benutzerdefinierten Attribut-Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) ist standardmäßig auf 25 festgelegt. Arrays, die die maximale Anzahl von Elementen überschreiten, werden so abgeschnitten, dass sie die maximale Anzahl von Elementen enthalten. Das Maximum für einzelne Arrays kann auf bis zu 100 erhöht werden. Wenn Sie diese Höchstgrenze erhöhen möchten, wenden Sie sich an Ihren Manager:in für den Kundendienst.
+Die maximale Anzahl von Elementen in [benutzerdefinierten Attribut-Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) ist standardmäßig auf 25 festgelegt. Arrays, die die maximale Anzahl von Elementen überschreiten, werden so abgeschnitten, dass sie die maximale Anzahl von Elementen enthalten. Die maximale Anzahl einzelner Arrays kann auf bis zu 500 erhöht werden. Um dieses Limit auf über 500 zu erhöhen, wenden Sie sich bitte an Ihren Braze-Customer-Success-Manager.
 
 So passen Sie ein angepasstes Attribut mit einem `array` Wert an:
 
@@ -217,7 +217,7 @@ AppDelegate.braze?.user.incrementCustomUserAttribute(key: "your_attribute_key", 
 
 {% tabs %}
 {% tab swift %}
-Um ein angepasstes Attribut wieder freizugeben, übergeben Sie den entsprechenden Attributschlüssel an die Methode `unsetCustomAttribute`.
+Um ein angepasstes Attribut zu löschen, übergeben Sie den entsprechenden Attributschlüssel an die`unsetCustomAttribute`Methode.
 
 ```swift
 AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
@@ -225,7 +225,7 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 
 {% endtab %}
 {% tab objective-c %}
-Um ein angepasstes Attribut wieder freizugeben, übergeben Sie den entsprechenden Attributschlüssel an die Methode `unsetCustomAttributeWithKey`.
+Um ein angepasstes Attribut zu löschen, übergeben Sie den entsprechenden Attributschlüssel an die`unsetCustomAttributeWithKey`Methode.
 
 ```objc
 [AppDelegate.braze.user unsetCustomAttributeWithKey:@"your_attribute_key"];
@@ -236,7 +236,7 @@ Um ein angepasstes Attribut wieder freizugeben, übergeben Sie den entsprechende
 
 ### Verschachtelte angepasste Attribute
 
-Sie können auch Eigenschaften innerhalb angepasster Attribute verschachteln. Im folgenden Beispiel wird ein `favorite_book` Objekt mit verschachtelten Eigenschaften als angepasstes Attribut auf das Nutzerprofil gesetzt. Weitere Einzelheiten finden Sie unter [Verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+Sie können Eigenschaften auch in angepassten Attributen verschachteln. Im folgenden Beispiel wird ein`favorite_book`Objekt mit verschachtelten Eigenschaften als benutzerdefiniertes Attribut im Nutzerprofil festgelegt. Weitere Informationen finden Sie unter [verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
 
 {% tabs %}
 {% tab swift %}

@@ -1,25 +1,23 @@
 ---
-nav_title: "GET: Standard-Quellwerte für Tags zur Übersetzung von Kampagnen anzeigen"
-article_title: "GET: Standard-Quellwerte für Tags zur Übersetzung von Kampagnen anzeigen"
-search_tag: Endpoint
+nav_title: "GET: Standardquellwerte für Kampagnen-Tags anzeigen"
+article_title: "GET: Standardquellwerte für Kampagnen-Tags anzeigen"
+search_tag: Endpunkt
 page_order: 3
 
 layout: api_page
 page_type: reference
-description: "Dieser Artikel enthält Einzelheiten zum Endpunkt der Kampagnen-Übersetzungsquelle."
+description: "Dieser Artikel enthält detaillierte Informationen zum Endpunkt für die Übersetzung von Kampagnen."
 ---
 
 {% api %}
-# Standard-Quellwerte für die Übersetzungstags einer Kampagne anzeigen
+# Anzeigen der Standard-Quellwerte für die Übersetzungstags einer Kampagne
 {% apimethod get %}
-/kampagnen/uebersetzungen/quelle
+/Kampagnen/Übersetzungen/Quelle
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um alle Standard-Übersetzungsquellen für die Übersetzungstags einer Kampagne anzuzeigen. Dies sind die Werte innerhalb der {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}. Weitere Informationen zu den Features für die Übersetzung finden Sie unter [Lokalisierung in Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/).
+> Verwenden Sie diesen Endpunkt, um alle Standardübersetzungsquellen für die Übersetzungstags einer Kampagne anzuzeigen. Dies sind die Werte innerhalb der {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}. Weitere Informationen zu den Übersetzungsfeatures finden Sie unter [„Locales in Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)“.
 
-{% alert important %}
-Dieser Endpunkt befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Voraussetzungen
 
@@ -35,12 +33,12 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`| Erforderlich | String | Die ID Ihrer Kampagne. |
 |`message_variation_id`| Erforderlich | String | Die ID Ihrer Nachrichtenvariation. |
-|`locale_id`| Optional | String | Eine Lokalisierungs-UUID zum Filtern der Antworten. |
-|`post_launch_draft_version`| Optional | Boolesch | Wenn `true` die letzte Entwurfsversion anstelle der letzten live veröffentlichten Version zurückgibt. Der Standardwert ist `false`, der die letzte Live-Version zurückgibt.|
+|`locale_id`| Optional | String | Eine lokale UUID als Filter für die Antworten. |
+|`post_launch_draft_version`| Optional | Boolesch | Wenn die neueste Entwurfsversion anstelle der `true`zuletzt veröffentlichten Live-Version zurückgegeben wird. Standardmäßig`false`wird die aktuellste Live-Version zurückgegeben.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Alle Übersetzungs-IDs werden als universelle eindeutige Bezeichner (UUIDs) betrachtet, die in der Antwort des GET-Endpunkts zu finden sind.
+Alle Übersetzungs-IDs gelten als universelle eindeutige Bezeichner (UUIDs), die in der Antwort des GET-Endpunkts zu finden sind.
 {% endalert %}
 
 ## Beispiel Anfrage

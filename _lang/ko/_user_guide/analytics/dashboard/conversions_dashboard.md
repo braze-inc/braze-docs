@@ -52,16 +52,16 @@ tool:
 ### 고려 사항
 
 사용자가 보고서에 포함되려면 선택한 날짜 범위 내에서 다음 기준을 충족해야 합니다:
-1. 캔버스 또는 캠페인을 입력합니다.
-2. [기여도 메소드를]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#attribution-methods) 기록합니다.
+1. 캔버스 또는 캠페인을 입력하세요.
+2. [기여도 방법]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#attribution-methods)을 기록합니다.
 3. 전환 이벤트를 수행합니다.
 
-예를 들어 사용자가 다음과 같은 작업을 한다고 가정해 보겠습니다:
-1. 9월 30일에 캔버스에 진입합니다.
-2. 10월 1일에 기여도 메소드를 기록합니다.
-3. 10월 2일에 전환 이벤트를 실시합니다.
+예를 들어, 사용자가 다음과 같은 작업을 수행한다고 가정해 보겠습니다:
+1. 9월 30일에 캔버스에 들어갑니다.
+2. 10월 1일에 기여도 방법을 기록합니다.
+3. 10월 2일에 전환 이벤트를 수행합니다.
 
-이 사용자는 날짜 범위가 10월 1일부터 10월 7일까지인 보고서에 **표시되지 않습니다**. 이는 사용자가 정의된 날짜 범위 내에서 전환 이벤트가 발생했음에도 불구하고 보고 기간 이전에 캔버스를 입력했기 때문입니다. 사용자가 보고서에 표시되려면 날짜 범위에 9월 30일이 포함되어야 합니다.
+이 사용자는 10월 1일부터 10월 7일까지의 날짜 범위가 있는 보고서에 **나타나지** 않습니다. 이는 사용자가 보고 기간 이전에 캔버스에 들어갔기 때문이며, 전환 이벤트는 정의된 날짜 범위 내에서 발생했습니다. 사용자가 보고서에 나타나려면 날짜 범위에 9월 30일이 포함되어야 합니다.
 
 ## 보고서 이해하기
 
@@ -75,7 +75,7 @@ tool:
 
 전환 세부 정보 테이블에는 항상 *수신자* 열과 *전환* (비율 및 합계)에 대한 열이 표시됩니다. 표시되는 나머지 두 개의 테이블 열은 보고서를 설정할 때 선택한 옵션에 따라 달라집니다. 
 
-![3열과 4열의 기여도 속성 방법으로 터치가 표시된 전환 세부 정보 표입니다.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
+![기여도 방법으로 터치를 보여주는 전환 세부정보 테이블, 세 번째 및 네 번째 열.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
 
 다음 표에서는 가능한 메트릭에 대해 설명합니다.
 
@@ -101,7 +101,7 @@ tool:
 이 그래프는 한 번에 하나의 채널에 대한 데이터만 표시합니다. 차트의 **채널** 드롭다운을 사용하여 단일 채널을 선택합니다.
 {% endalert %}
 
-![이메일 전달, 이메일 열람, 이메일 클릭 및 전환에 대해 유사한 결과를 보여주는 두 이메일 캠페인의 전환 퍼널 막대 그래프입니다.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
+![두 개의 이메일 캠페인에 대한 전환 퍼널 막대 그래프, 이메일 배달, 이메일 열기, 이메일 클릭 및 전환에 대한 유사한 결과를 보여줍니다.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
 
 ### 시간 경과에 따른 전환 수
 
@@ -109,7 +109,7 @@ tool:
 
 시계열 데이터를 다운로드하려면 <i class="fas fa-bars"></i> 을 선택한 다음 다운로드 옵션을 선택합니다. 사용 가능한 옵션은 PNG, JPEG, PDF, SVG 또는 CSV입니다.
 
-![두 이메일 캠페인에 대한 시간 경과에 따른 전환율 시계열 그래프로, 일별 전환율을 보여줍니다.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
+![두 개의 이메일 캠페인에 대한 시간 경과에 따른 전환 시계열 그래프, 날짜별 전환을 보여줍니다.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
 
 ### 기여도 방법
 
@@ -132,18 +132,18 @@ tool:
 
 ## 문제 해결
 
-### 캠페인 또는 캔버스 전환이 낮은 이유는 무엇인가요?
+### 왜 캠페인 또는 캔버스 전환이 낮은가요?
 
 이전 캠페인이나 기대치와 비교했을 때 전환율이 기대만큼 높지 않을 수 있습니다. 전환은 까다로운 비즈니스이지만, 이벤트 추적과 전환 마감일이라는 플랫폼의 몇 가지 간단한 기능에 따라 달라집니다.
 
-그 이유를 해결하려면 이벤트 추적 및 전환 기한을 확인하는 것이 좋습니다.
+그 이유를 해결하기 위해 이벤트 추적 및 전환 마감일을 확인하는 것이 좋습니다.
 
 #### 이벤트 추적
 
-캠페인이 세션 시작 또는 커스텀 이벤트를 트리거하는 경우, 이 이벤트 또는 세션이 메시지를 트리거할 만큼 충분히 자주 발생하고 있는지 확인해야 합니다. [홈 대시보드에서]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) 세션 데이터 또는 [커스텀 이벤트]({{site.baseurl}}/user_guide/analytics/reporting/configuring_reporting/) 보고서를 확인하세요.
+캠페인이 세션 시작 또는 커스텀 이벤트를 트리거하는 경우, 이 이벤트 또는 세션이 메시지를 트리거할 만큼 충분히 자주 발생하고 있는지 확인해야 합니다. 세션 데이터에 대한 [홈 대시보드]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/)를 확인하거나 [커스텀 이벤트]({{site.baseurl}}/user_guide/analytics/reporting/configuring_reporting/) 보고서를 확인하세요.
 
 #### 전환 마감일
 
 캠페인별로 선택한 각 전환 이벤트에 대해 [기한을]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#creating-a-campaign-with-conversion-tracking) 설정합니다. 즉, 전환이 각 캠페인에 포함되기 위해 전환이 발생해야 하는 시간 제한을 설정할 수 있습니다.
 
-캠페인 측정기준을 이해하기 위해 [전환 추적 규칙에]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#conversion-tracking-rules) 대한 정보를 검토했는지 확인하세요. 캔버스에서 사용자 전환에 대해서는 [캔버스 FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas)를 참조하세요. 
+캠페인 메트릭을 이해하기 위해 [전환 추적 규칙]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#conversion-tracking-rules)에 대한 정보를 검토했는지 확인하세요. 캔버스에서 사용자 전환에 대해서는 [캔버스 FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas)를 참조하세요. 

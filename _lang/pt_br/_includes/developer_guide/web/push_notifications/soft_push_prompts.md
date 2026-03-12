@@ -1,16 +1,16 @@
 {% multi_lang_include developer_guide/prerequisites/web.md %} Você também precisará [configurar notificações por push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web).
 
-## Sobre os prompts de soft push
+## Sobre prompts de soft push
 
 Muitas vezes, é uma boa ideia que os sites implementem um prompt de push "suave", no qual você "prepara" o usuário e defende o envio de notificações por push antes de solicitar a permissão de push. Isso é útil porque o navegador limita a frequência com que você pode solicitar diretamente ao usuário e, se o usuário negar a permissão, você nunca mais poderá solicitá-la novamente.
 
-Como alternativa, se quiser incluir um envio especial de [mensagens]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web) personalizadas, em vez de chamar `requestPushPermission()` diretamente, conforme descrito na [integração]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration) padrão do [Web push]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration), use nossas [mensagens disparadas no app]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web).
+Alternativamente, se você quiser incluir um tratamento personalizado especial, em vez de chamar `requestPushPermission()` diretamente como descrito na integração padrão [Web push]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration), use nossas [mensagens no app acionadas]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web).
 
 {% alert tip %}
 Isso pode ser feito sem a personalização do SDK usando nosso novo [push primer sem código]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 {% endalert %}
 
-## Configuração de prompts de soft push
+## Configurando prompts de soft push
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -29,7 +29,7 @@ Em sua integração do SDK do Braze, localize e remova todas as chamadas para `a
 
 ### Etapa 3: Integração de atualizações
 
-Por fim, substitua a chamada removida pelo trecho a seguir. Entre em contato com `subscribeToInAppMessage()` antes de ligar para `openSession()`. Isso garante que o seu ouvinte de mensagens no app seja registrado a tempo de receber a mensagem push primer.
+Por fim, substitua a chamada removida pelo seguinte trecho. Chame `subscribeToInAppMessage()` antes de chamar `openSession()`. Isso garante que seu ouvinte de mensagem no app esteja registrado a tempo de receber a mensagem de introdução do push.
 
 ```javascript
 import * as braze from "@braze/web-sdk";
