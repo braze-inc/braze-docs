@@ -15,9 +15,9 @@ Instead of pre-building a segment for every possible audience combination, you p
 
 ## How it works
 
-1. **Define your message.** You can either create an API-triggered campaign or Canvas in the Braze dashboard, or define message content entirely inline using the [messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects) in your API request. Use [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) or [Canvas context]({{site.baseurl}}/api/objects_filters/context_object/) for dynamic personalization.
-2. **Call a supported endpoint** and include the `audience` parameter with your filter criteria. You can filter on custom attributes, push subscription status, email subscription status, and last-used-app time.
-3. **Braze evaluates the filters at send time**, delivering the message only to users who match your criteria.
+1. Define your message by either creating an API-triggered campaign or Canvas in the Braze dashboard, or define message content entirely inline using the [messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects) in your API request. Use [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) or [Canvas context]({{site.baseurl}}/api/objects_filters/context_object/) for dynamic personalization.
+2. Call a supported endpoint and include the `audience` parameter with your filter criteria. You can filter on custom attributes, push subscription status, email subscription status, and last-used-app time.
+3. Braze evaluates the filters at send time, delivering the message only to users who match your criteria.
 
 {% alert tip %}
 A `campaign_id` isn't required when using the `audience` parameter. The [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) and [`/messages/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages/) endpoints let you define message content inline without a pre-created campaign. However, if you want to track campaign-level metrics (such as sends, clicks, or bounces) on the dashboard, include a `campaign_id`.
