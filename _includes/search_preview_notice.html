@@ -1,0 +1,23 @@
+<style>
+  #search-preview-notice.alert {
+    border-width: 2px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    font-weight: 600;
+  }
+  #search-preview-notice .alert-msg {
+    font-weight: 600;
+  }
+</style>
+<div id="search-preview-notice" class="alert alert-warning" role="alert" style="display: none;">
+  <div class="alert-msg">
+    <strong>On this preview deployment, search results open on the live documentation site.</strong> To stay on this preview, use the browser back button or navigate from the sidebar.
+  </div>
+</div>
+<script>
+(function() {
+  if (window.location.hostname.indexOf('vercel.app') !== -1) {
+    var el = document.getElementById('search-preview-notice');
+    if (el) el.style.display = '';
+  }
+})();
+</script>
