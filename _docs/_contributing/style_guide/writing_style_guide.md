@@ -1236,7 +1236,7 @@ This section covers some guidelines to keep in mind when writing instructions fo
 General guidelines:
 
 * **Use the right tone.** For instructions, keep your writing short, to the point, and task-oriented. Your writing doesn’t need to be terse or dry, but it should be direct. When introducing tasks or subtasks, you can use a more informal tone to add variety. Avoid using “please” to keep the tone informal. Make liberal use contractions to keep your tone approachable.   
-* **Follow parallel heading format.** Pick one format for your headings and stick to it. Keep your content scannable and predictable. In general, avoid gerunds (ing-words) for page titles, and use imperative verbs for task-based headings. 
+* **Follow parallel heading format.** Pick one format for your headings and stick to it. Keep your content scannable and predictable. For task-based headings and page titles, prefer imperative verbs (for example, “Create an email campaign”).
 
 Before instructions:
 
