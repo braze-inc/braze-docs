@@ -54,6 +54,9 @@ To set up the default presenter for in-app messages on iOS, create an implementa
 
 You must import the `BrazeUI` library to access the `BrazeInAppMessageUI` class.
 
+{% subtabs %}
+{% subtab swift %}
+
 ```swift
 import BrazeUI
 
@@ -71,6 +74,29 @@ override func application(
   return true
 }
 ```
+
+{% endsubtab %}
+{% subtab OBJECTIVE-C %}
+
+```objc
+@import BrazeUI;
+
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  ...
+
+  Braze *braze = [BrazePlugin initBraze:configuration];
+
+  braze.inAppMessagePresenter = [[BrazeInAppMessageUI alloc] init];
+  AppDelegate.braze = braze;
+
+  [self.window makeKeyAndVisible];
+  return YES;
+}
+```
+
+{% endsubtab %}
+{% endsubtabs %}
 
 {% endtab %}
 {% endtabs %}
