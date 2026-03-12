@@ -13,7 +13,7 @@ local_redirect:
 
 > IP warming is the practice of getting email inbox providers used to receiving messaging from your dedicated IP addresses. It's an extremely important part of email sending with any email service provider (ESP) and standard practice at Braze to confirm your messages reach their destination inboxes at a consistently high rate.
 
-IP warming is designed to help you establish a positive reputation with internet service providers (ISPs). Every time a new IP address is used to send an email, ISPs programmatically monitor those emails to verify that it isn't being used to send spam to users.
+IP warming is designed to help you establish a positive reputation with internet service providers (ISPs). Every time a new IP address is used to send an email, ISPs programmatically monitor those emails to verify that it isn't being used to send spam to users. Think of your IP and domain reputation like a credit score—ISPs use this reputation to determine whether your mail lands in the inbox or the spam folder. Much like a credit score, it takes time to build a positive reputation and even longer to rebuild a poor one.
 
 ## What if I don't have time to warm IPs?
 
@@ -106,25 +106,28 @@ Day | # of Emails to Send
 2 | 100
 3 | 500
 4 | 1,000
-5 | 5,000
-6 | 10,000
-7 | 20,000
-8 | 40,000
-9 | 70,000
-10 | 100,000
-11 | 150,000
-12 | 250,000
-13 | 400,000
-14 | 600,000
-15 | 1,000,000
-16 | 2,000,000
-17 | 4,000,000
-18+ | Double daily until desired volume
+5 | 2,500
+6 | 5,000
+7 | 9,000
+8 | 16,000
+9 | 29,000
+10 | 52,000
+11 | 98,000
+12 | 160,000
+13 | 225,000
+14 | 315,000
+15 | 450,000
+16 | 615,000
+17 | 875,000
+18 | 1,200,000
+19 | 1,750,000
+20 | 2,750,000
+21+ | Continue scaling until desired volume
 
 {% endtab %}
 {% endtabs %}
 
-We suggest warming up to your peak sending. That is to say, if you normally send 2 million emails a day but plan to send 7 million for a seasonal period, that "peak" sending is what you should warm up to.
+In most cases, warm up to your average daily send volume rather than your peak. ISPs primarily look at the previous few weeks of sending behavior to evaluate your reputation, so if you hit peak volume only every few months (for example, 7 million during a seasonal period), you can ramp up toward that peak closer to the send date. However, if you reach peak volume every one to two weeks, warm up to that peak from the start.
 
 After IP warming is complete and you've reached your desired daily volume, you should aim to maintain that volume daily. Some fluctuation is expected, but reaching the desired volume, then only doing a mass blast once a week, may negatively affect your delivery metrics and sender reputation. 
 
@@ -154,7 +157,7 @@ You can avoid all the consequences of not IP warming by following these best pra
 
 ### Start with small sending volumes of email
 
-Increase the amount you send each day as gradually as possible. Abrupt, high-volume email campaigns are regarded with the most skepticism by ISPs. Therefore, you should begin by sending small amounts of email and scale gradually toward the volume of email you ultimately intend to send. Regardless of volume, we suggest warming up your IP to be safe. See [IP warming schedules](#ip-warming-schedules).
+Increase the amount you send each day as gradually as possible. Abrupt, high-volume email campaigns are regarded with the most skepticism by ISPs. Therefore, you should begin by sending small amounts of email and scale gradually toward the volume of email you ultimately intend to send. Keep in mind that you're warming your IP at each ISP individually—ISPs don't share reputation data with each other. When building out your warming volumes, make sure you aren't increasing volume too quickly at any single ISP. Regardless of volume, we suggest warming up your IP to be safe. See [IP warming schedules](#ip-warming-schedules).
 
 ### Have engaging introductory content
 
@@ -184,4 +187,3 @@ Braze recommends against using [Intelligent Timing]({{site.baseurl}}/user_guide/
 {% alert tip %}
 It is normal for mail to be sent to the spam folder during IP warming because your domain and IP have not yet established a positive reputation. If mail lands in your spam folder, your mail administrator may need to add your Braze sending domain and IP to your company's allowlist.
 {% endalert %}
-
