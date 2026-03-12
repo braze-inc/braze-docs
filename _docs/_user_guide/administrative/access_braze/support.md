@@ -91,4 +91,14 @@ Marking an issue as "Critical" means your production instance is down, and all w
 
 ## Troubleshooting access
 
-If you receive an error when logging into the Braze Support Portal, such as `Check your entry`, make sure you followed the link in your welcome email to set a password for the portal. If you've done that or were previously able to log into the portal, create a Support ticket.
+### "Check your entry" login error
+
+If you see the following error when logging into the Braze Support Portal: **"Check your entry. If you still can't log in, contact your Braze Support Administrator."**
+
+**Possible causes:** This can happen for several reasons. Before contacting Support, check the following:
+
+- Have you previously logged into the portal?
+- If not, how long has it been since you were assigned as a user of the portal?
+- Did you follow the link in your welcome email to set a password for the portal?
+
+**Resolution:** Open a [Technical Support case]({{site.baseurl}}/user_guide/administrative/access_braze/support/#access-the-support-portal) and answer the questions above so we can investigate.

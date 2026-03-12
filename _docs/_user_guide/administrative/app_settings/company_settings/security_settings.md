@@ -119,7 +119,7 @@ If you encounter issues during the setup process and are redirected to the Braze
 To manually activate two-factor authentication (2FA) on your Braze account when it isn't enforced, follow these steps:
 
 1. Download a 2FA app like Authy, Google Authenticator, Okta Verify, or similar from the App Store (iOS), Google Play Store (Android), or the web. Or, if you prefer to set up 2FA with email or SMS, skip to step 2.
-2. In Braze, go to Manage Account, scroll to the **Two-Factor Authentication** section, then select **Start Setup**.
+2. In Braze, click your name in the top right of the dashboard to open the dropdown, then select **Account Settings**. Scroll to the **Two-Factor Authentication** section and select **Start Setup**.
 3. Enter your password into the login modal, then select **Check Password**.
 4. In the **Two-Factor Authentication Setup** modal, enter your phone number, then select **Enable**.
 5. Copy the generated seven-digit code from your 2FA app, email, or SMS message, then go back to Braze and paste it into the **Two-Factor Authentication Setup** modal. Select **Verify**.
