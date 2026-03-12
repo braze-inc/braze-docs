@@ -91,8 +91,32 @@ The file `_includes/rate_limits.md` uses Liquid conditionals with include parame
 
 ## Quality guidelines
 
-- Use a formal, professional register appropriate for technical documentation
-- Maintain consistent terminology throughout the file
-- If an existing translation is provided, maintain consistency with its terminology and style choices
+### Voice and tone
+
+- Use active voice and present tense
+- Keep the tone positive, encouraging, and approachable — similar to speaking with a knowledgeable colleague
+- Use a professional but conversational register appropriate for technical documentation (see language-specific style guides for formal/informal pronoun choices)
+- Aim to empower and educate the reader
+
+### Translation quality
+
 - Adapt sentence structure naturally for the target language — do not translate word-for-word
+- The content should read as if it was originally written in the target language, not translated
+- Maintain consistent terminology throughout the file; follow the approved glossary
+- If an existing translation is provided, maintain consistency with its terminology and style choices
 - Keep translations concise; do not expand significantly beyond the English source length
+
+### Inclusivity
+
+- Use gender-neutral language and avoid gendered terms where possible
+- Be considerate of diverse audiences and avoid biased or ableist language
+
+### Cultural sensitivity
+
+- Be mindful of cultural references and avoid idioms that may not translate well into the target language
+- Follow standard grammar and punctuation rules for the target language
+
+### Formatting preservation
+
+- Translate text that is in bold but keep the bold formatting — these often refer to UI elements
+- Never change underscores to dashes in any identifier or token
