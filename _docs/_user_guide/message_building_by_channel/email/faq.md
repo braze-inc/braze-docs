@@ -15,6 +15,12 @@ channel: email
 
 If multiple users with matching emails are all in a segment to receive a campaign, a random user profile with that email address is chosen at the time of send. This way the email is only sent once and is deduplicated, ensuring that the email doesn't hit the same email address multiple times.
 
+There are three scenarios that can make it seem like a user received an email twice:
+
+- **An error occurred during campaign or Canvas creation:** The user may not receive the literal same send twice, but may receive two separate emails with the same subject line. When a campaign or Canvas is duplicated, check email configuration details such as images or subject lines. You can also refer to changelogs to see if the campaign or Canvas was modified after launch—a duplicate may share the same subject line as the original when the user received it.
+- **Multiple user profiles have email forwarding:** If a user has multiple accounts in a given app but one account forwards mail, the user receives the campaign once per inbox; mail can appear twice in the inbox where messages are forwarded. Only some providers indicate when an email was forwarded from another account.
+- **Email configuration at the recipient:** Some clients merge inboxes ("universal inbox"). If the same campaign targets multiple accounts that share one inbox, it can look like one person got the campaign twice when two distinct profiles were actually messaged. The recipient can confirm whether multiple accounts are combined in one inbox.
+
 Note that this deduplication occurs if the users targeted are included in the same dispatch. Triggered campaigns may result in multiple sends to the same email address (even within a time period where users could be excluded due to re-eligibility) if differing users with matching email addresses log the trigger event at different times. Users are not deduped by email on Canvas entry, so it's possible that users are not deduped beyond the first step of a Canvas if they are progressing at slightly different times due to rate limited entry. When a user tied to a given email address opens or clicks an email, all user profiles that share the email address are marked as opening and clicking the campaign.
 
 #### Exception: API-triggered campaigns
@@ -51,7 +57,9 @@ Soft bounces are emails that bounce due to a temporary or transient issue such a
 
 ### What happens when an email campaign or Canvas is stopped?
 
-Users will be prevented from entering the Canvas and no further messages will be sent out. For email campaigns and Canvases, the stop button does not mean that send will immediately stop. This is because when the send requests are sent out, they cannot be stopped from being delivered to the user.
+Users will be prevented from entering the Canvas and no further messages will be sent out. For email campaigns and Canvases, the stop button does not mean that send will immediately stop. After a request is sent to the ESP (SparkPost or SendGrid), it will be processed and delivered even if the campaign or Canvas has been stopped.
+
+While Braze won't send further requests once the campaign or Canvas is stopped, analytics may still increase while the ESP finishes processing requests already in flight.
 
 ### Why am I seeing more email clicks than opens?
 
@@ -75,6 +83,12 @@ For best practices on how to handle these responses, refer to [Handling increase
 ### Can Braze track unsubscribe links counted toward the "Unsubscribe" metric?
 
 Braze tracks unsubscribe links if the following Liquid is used within emails: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}
+
+### Why am I seeing a different number of unsubscribes than clicks on my unsubscribe link?
+
+If there are more _Unsubscribes_ than users who clicked the unsubscribe link in the email body, list-unsubscribe header actions often explain the gap—a click on the list-unsubscribe header counts as an _Unsubscribe_ but not as a _Click_ on the body link.
+
+If more users clicked the body unsubscribe link than the number of _Unsubscribes_, users may have clicked the link more than once.
 
 ### Can I add a "view this email in a browser" link to my emails?
 
@@ -107,4 +121,50 @@ Machine open percentages are not a reliable measure of actual engagement. For a 
 ### Does the *Unique Opens* metric include machine opens?
 
 No. *Unique Opens* count only [Other Opens]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#other-opens), which excludes emails identified as machine opens. *Machine Opens* are tracked separately. In the **Campaign Analytics** view and **Report Builder**, you can view both metrics independently.
+
+### Why does my email delivery volume not match my send volume?
+
+After an email is sent, the recipient's inbox decides when it is delivered. Messages can be deferred for hours or days because of a full mailbox, ESP throttling from a given IP, and similar reasons.
+
+When deferred messages are delivered on a different calendar day than the send day, _Deliveries_ can exceed _Sends_ for the same date range. When many deferrals land on one day, _Sends_ can exceed _Deliveries_ for that range.
+
+### Why am I seeing a warning to include an unsubscribe link when my email already has one?
+
+This warning can persist for campaigns duplicated from a campaign that did not have an unsubscribe link. To clear it:
+
+- For HTML emails, open **Plaintext editor**, then **Regenerate from HTML**.
+- After duplicating, duplicate the variant, then remove the original variant. **Do not** select the original variant, or the warning can carry over.
+
+### What are reasons why my user hasn't received an email campaign?
+
+- The message may be in Spam—ask the user to check.
+- They weren't eligible to receive email.
+- The address is invalid or doesn't exist.
+- They may have missed or deleted the message.
+
+### How can I optimize images in Outlook?
+
+Outlook often uses Microsoft Word–style rendering, which can add a border around images. You can wrap content so it hides in Office clients using standard conditional comments, for example:
+
+```html
+<!--[if !mso]><!-- -->
+<span>Content hidden in Outlook desktop</span>
+<!--<![endif]-->
+```
+
+### Can I use SVG or WEBP images in my email messages?
+
+SVG images won't render in Gmail web or Gmail iOS. WEBP is not consistently supported across clients.
+
+Use widely supported formats such as PNG or JPEG so images render reliably.
+
+### Can Liquid variables assigned in one part of the message composer be used in another?
+
+No. Each part of the email (subject, body, headers, buttons, and so on) is generated separately, so Liquid assigned in one field is not available in another. Assign variables in each field that needs them.
+
+### My email template is missing. Where is it?
+
+Go to **Templates** > **Email Templates**. You can filter by type (HTML or drag-and-drop).
+
+Confirm you have permission to view templates—see [User permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/).
 
