@@ -25,9 +25,9 @@ module Jekyll
       def render(context)
         site = context.registers[:site]
         converter = site.find_converter_instance(::Jekyll::Converters::Markdown)
-        type = converter.convert(@caption).gsub(/<\/?p[^>]*>/, '').chomp
-        lang = site.config['language'] || 'en'
-        label = (ALERT_LABELS.dig(lang, type) || type).gsub('-', ' ')
+        type = converter.convert(@caption).gsub(/<\/?p[^>]*>/, '').chomp.strip
+        lang = (site.config['language'] || 'en').downcase
+        label = (ALERT_LABELS.dig(lang, type.downcase) || type).gsub('-', ' ')
         body = converter.convert(super(context))
         "<div class='alert alert-#{type}' role='alert'><div class='alert-msg'> <b>#{label}: </b><br />#{body}</div></div>"
       end
