@@ -20,7 +20,7 @@ For a guided walkthrough, refer to the Braze Learning course [Create a Geofence]
 
 ## How it works
 
-Geofences are organized into geofence sets — a group of geofences that you can use to segment or engage users throughout the platform. Each geofence set can hold a maximum of 10,000 geofences. You can create or upload an unlimited number of geofences.
+Geofences are organized into geofence sets—a group of geofences that you can use to segment or engage users throughout the platform. Each geofence set can hold a maximum of 10,000 geofences. You can create or upload an unlimited number of geofences.
 
 Users who enter or exit your geofences add a new layer of user data that you can use for segmentation and re-targeting.
 
@@ -44,17 +44,17 @@ The following table describes common geofence terms:
 
 ### SDK and platform requirements
 
-Geofence-triggered campaigns are available on iOS and Android. To support geofences, the following must be in place:
+Geofence-triggered campaigns are available on iOS and Android. To support geofences, the following is required:
 
 * Your integration must support background push notifications.
 * Braze geofences or location collection must be enabled.
-* The user must grant "Always Allow" location access for geofencing to work.
+* The user must grant "Always Allow" location access.
 
 {% alert important %}
 Braze location collection is disabled by default. To verify that it's enabled on Android, confirm that `com_braze_enable_location_collection` is set to `true` in your `braze.xml`.
 {% endalert %}
 
-For platform-specific setup instructions, refer to [Geofences]({{site.baseurl}}/developer_guide/geofences/) in the developer guide.
+For platform-specific setup instructions, see [Geofences]({{site.baseurl}}/developer_guide/geofences/) in the developer guide.
 
 ### Location permissions
 
@@ -92,7 +92,7 @@ Both iOS and Android offer multiple levels of location access. The permission le
 
 ### Precise versus approximate location
 
-On iOS 14+ and Android 12+, users can choose between **precise** and **approximate** location.
+On iOS 14+ and Android 12+, users can choose between precise and approximate location.
 
 | Setting | Accuracy | Impact on geofencing |
 |---|---|---|
@@ -115,7 +115,7 @@ Because Braze in-app messages don't include a built-in button action to invoke t
 - A deep link that triggers the native location permission prompt from within your app.
 - A deep link that opens the app's location settings page in the device's OS settings, which is useful for re-prompting users who previously denied or limited their permissions.
 
-For more information about deep links, refer to [Deep linking to in-app content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/). For platform-specific guidance on location and geofence integration, refer to [Geofences]({{site.baseurl}}/developer_guide/geofences/) in the developer guide.
+For more information about deep links, see [Deep linking to in-app content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/). For platform-specific guidance on location and geofence integration, see [Geofences]({{site.baseurl}}/developer_guide/geofences/) in the developer guide.
 
 ### Step 2: Build the location primer in-app message
 
@@ -169,8 +169,8 @@ A retail app displays a modal in-app message after a user saves a store as a fav
 
 - **Heading:** "Get notified about in-store deals"
 - **Body:** "Turn on location so we can send you exclusive offers when you're near your favorite stores. Your location is only accessed when using the app."
-- **CTA:** **Turn On Location** → deep links to the native location permission prompt
-- **Dismiss:** **Maybe Later** → closes the message
+- **CTA:** **Turn On Location** deep links to the native location permission prompt
+- **Dismiss:** **Maybe Later** closes the message
 
 This approach is effective because the user has already expressed interest in a specific store, creating a natural context for the location permission request.
 
@@ -180,8 +180,8 @@ After a user grants "While Using the App" permission, show a follow-up in-app me
 
 - **Heading:** "Never miss a nearby deal"
 - **Body:** "Update your location settings to 'Always' so we can notify you about offers even when you're not browsing the app. We'll only send relevant alerts when you're near participating locations."
-- **CTA:** **Update Settings** → deep links to the app's location settings page in the OS
-- **Dismiss:** **Keep Current Settings** → closes the message
+- **CTA:** **Update Settings** deep links to the app's location settings page in the OS
+- **Dismiss:** **Keep Current Settings** closes the message
 
 This follow-up gives the user context for why upgrading to "Always Allow" provides additional value beyond the initial permission level.
 
@@ -292,7 +292,7 @@ If the geofences aren't loaded onto the device locally, the user can't trigger t
 - Avoid setting up geofences that overlap or are nested inside each other, as this can cause problems with triggering.
 - A geofence can trigger an enter event only once every six hours. This cooldown period is enforced locally. If a user uninstalls the app or clears app data, all cooldowns reset.
 - No more than 20 geofences in total can be stored on a device. If the user is eligible for more than 20, Braze downloads the closest locations based on proximity at session start or silent push refresh.
-- Braze sends only geofences within a 2,000 km radius of the user to the device.
+- Braze sends only geofences within a 2,000 kilometer radius of the user to the device.
 
 ### Device requirements
 
@@ -300,7 +300,7 @@ If the geofences aren't loaded onto the device locally, the user can't trigger t
 - A valid foreground push token is required.
 
 {% alert note %}
-Basic SDK integration enables location tracking only. Geofencing requires additional setup steps for both iOS and Android. For details, refer to [Geofences]({{site.baseurl}}/developer_guide/geofences/) in the developer guide.
+Basic SDK integration enables location tracking only. Geofencing requires additional setup steps for both iOS and Android. For details, see [Geofences]({{site.baseurl}}/developer_guide/geofences/) in the developer guide.
 {% endalert %}
 
 You can also use geofences with Braze Technology Partners, such as [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/) and [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/).
@@ -313,7 +313,7 @@ In Braze, a geofence is a different concept from location tracking. Geofences ar
 
 Location tracking collects and stores a user's most recent location data. This data can be used to segment users based on the `Most Recent Location` filter. For example, you could use the `Most Recent Location` filter to target users located in New York.
 
-For more information, refer to [Location tracking]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/location_tracking/).
+For more information, see [Location tracking]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/location_tracking/).
 
 ### How accurate are Braze geofences?
 
@@ -331,7 +331,7 @@ Braze geofencing uses the native geofence system service on iOS and Android. It'
 
 Braze geofences work at all hours of the day, even when your app is closed. They become active as soon as they are defined and uploaded to the Braze dashboard. However, geofences can't function if a user has disabled location tracking.
 
-For geofences to work, users must have location services enabled on their device and must have granted your app the required location permission level. For more information, refer to [Understanding location permissions](#understanding-location-permissions).
+For geofences to work, users must have location services enabled on their device and must have granted your app the required location permission level. For more information, see [Understanding location permissions](#understanding-location-permissions).
 
 ### Is geofence data stored in user profiles?
 
@@ -343,5 +343,5 @@ As a best practice, avoid setting up geofences that overlap with each other, as 
 
 ### What if a user denies location access?
 
-Your development team can set up a deep link that opens the app's location settings page in the OS, where users can update their permissions. You can use this deep link inside a custom in-app message at any point in the user journey. Be selective about when you show this message—target users who are engaged or who have performed a high-value action to increase the chance of an opt-in. For more information, refer to [Redirecting users to OS settings](#redirecting-users-to-os-settings).
+Your development team can set up a deep link that opens the app's location settings page in the OS, where users can update their permissions. You can use this deep link inside a custom in-app message at any point in the user journey. Be selective about when you show this message—target users who are engaged or who have performed a high-value action to increase the chance of an opt-in. For more information, see [Redirecting users to OS settings](#redirecting-users-to-os-settings).
 
