@@ -112,7 +112,7 @@ Your selected optimization event applies to all content components in this step.
 
 - In general, we recommend testing more than one component for the Content Optimizer step.
 - If you’re optimizing for clicks, include subject lines in your tests, as stronger subject lines can contribute to increased opens and create more opportunities for clicks.
-- If you’re optimizing for opens, keep your testing focused on the subject line and email preheader.
+- If you’re optimizing for opens, keep your testing focused on the subject line and body header.
 
 ## Analytics
 
