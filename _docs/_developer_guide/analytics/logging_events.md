@@ -367,14 +367,6 @@ After [adding your user as a test user]({{site.baseurl}}/user_guide/administrati
 
 Use these scenarios to troubleshoot custom event logging across SDKs.
 
-### Verifying custom event logging setup
-
-If custom events aren't appearing as expected, confirm that your developer team has implemented custom event logging for the right app action.
-
-- Ask your developer team to verify that the event is logged correctly and triggered from the expected user action.
-- When your team opens a ticket with Braze Support, include [verbose logs]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging/) and relevant code snippets.
-- If your developer team can't identify the issue, open a [Braze Support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/).
-
 ### Verifying the custom event trigger
 
 If a custom event doesn't appear, the tracked action in your app may not match the action you're testing.
@@ -388,3 +380,12 @@ If you don't identify a user before logging a custom event, Braze can associate 
 
 - Call `changeUser()` before performing the custom event so Braze logs it to an identified user profile.
 - Test with an identified test user, then review the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/).
+
+### Verifying custom event logging setup
+
+If custom events aren't appearing as expected, confirm that your developer team has implemented custom event logging for the right app action.
+
+- Ask your developer team to verify that the event is logged correctly and triggered from the expected user action.
+- When your team opens a ticket with Braze Support, include [verbose logs]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging/) and relevant code snippets.
+- If your app uses Swift or Android, your developer team can use the [SDK debugger prerequisites](https://www.braze.com/docs/developer_guide/sdk_integration/debugging/#prerequisites) to help generate verbose logs.
+- If your developer team can't identify the issue, open a [Braze Support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/).
