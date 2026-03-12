@@ -106,7 +106,9 @@ A preview in the right-hand panel will populate with the sending information you
 
 #### Advanced
 
-Under **Sending Settings** > **Advanced**, turn on inline CSS and add personalization for email headers and email extras to send additional data back to other email service providers.
+Under **Sending Settings** > **Advanced**, turn on **inline CSS** for widest client support. If messages clip or images stretch to row height, try turning inline CSS **off** temporarily—some templates behave better without inlining.
+
+You can also add personalization for email headers and email extras to send additional data back to other email service providers.
 
 ##### Email headers
 
@@ -191,6 +193,22 @@ When you're ready for a final check, select **Test Send** and send a test messag
 ![Test Send option and example email preview when composing your email.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
 If you see any issues with your email, or want to make any changes, select **Edit Email** to return to the editor.
+
+### Step 3c: Check for email errors
+
+Before send, the editor flags common issues:
+
+- From display name and header not set together  
+- Invalid From or Reply-To  
+- Duplicate header keys  
+- Liquid syntax errors  
+- Content Blocks that include a full `<!DOCTYPE html>`  
+- Body over 400&nbsp;KB (aim under ~102&nbsp;KB to avoid clipping)  
+- Blank body or subject  
+- Missing unsubscribe link  
+- From domain not allowlisted (sends heavily throttled)  
+
+#### Adding whitespace after the preheader text
 
 {% alert tip %}
 Email clients that support preview text always pull in enough characters to fill all available preview text space. However, this can leave you in situations where the preview text is incomplete or unoptimized.

@@ -14,6 +14,12 @@ description: "This reference article covers aborting Liquid messages and some ex
 If a message step is aborted in a Canvas, the user **will not** exit the Canvas and **will** proceed to the next step.
 {% endalert %}
 
+## Test sends with `abort_message()`
+
+`abort_message()` stops the send for users who don't meet your condition—the message won't appear on their profile and won't count toward deliveries or frequency capping.
+
+If test sends never arrive, preview as a user who satisfies the abort condition, then on **Test Send** enable **Override recipients' attributes with current preview user's attributes** (or add a Content Test Group member who qualifies).
+
 ## Abort message if "Number Games Attended" = 0
 
 For example, let's say that you did not want to send a message to customers who have not attended a game:

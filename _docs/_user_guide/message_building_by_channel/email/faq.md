@@ -66,6 +66,10 @@ You may be seeing zero email opens and clicks if there's a misconfiguration with
 - There is an SSL issue where tracking URLs are `http` instead of `https`.
 - There is an issue with your CDN where the user agent string on the open events, click events, or both aren't populating.
 
+### Why do bot clicks (or false clicks) occur?
+
+Sudden click spikes within seconds often come from automated link scanning (anti-phishing, security gateways), sometimes including unsubscribe links. See [Bot or Not: Understanding Email Bot Clicks](https://www.braze.com/resources/articles/bot-or-not-understanding-email-bot-clicks).
+
 ### What are the potential risks of triggering server clicks?
 
 Certain elements of an email message, such as overly long messages or too many exclamation marks, have the potential to trigger email security responses. These responses can impact reporting, IP reputation, and can result in users unsubscribing. 

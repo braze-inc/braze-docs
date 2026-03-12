@@ -24,7 +24,15 @@ If users share an email address and you update one profile, Braze propagates the
 
 ## Message sending behavior
 
-Because deduplication occurs when targeted users are included in the same dispatch, triggered campaigns (excluding API-triggered campaigns) and Canvases may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times.
+Because deduplication occurs when targeted users are included in the same dispatch, triggered campaigns (excluding API-triggered campaigns) and Canvases may result in multiple sends to the same email address (even within a time period where users could be excluded due to re-eligibility) if different profiles that share an address log the trigger at different times.
+
+Users are not deduped by email on Canvas entry, so deduplication may not continue past the first step if users progress at different speeds (for example rate-limited entry). Opens and clicks on one profile still update all profiles that share that email.
+
+If a campaign targets an address shared by several users, the send may go to a profile that isn't in your Seed Group but shares the address.
+
+{% alert important %}
+Profiles and email addresses are not required to be 1:1 in Braze.
+{% endalert %}
 
 ## Examples
 

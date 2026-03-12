@@ -237,7 +237,7 @@ Count, Percentage
 Count, Percentage
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} This is tracked over a seven-day period for email and measured by <a href='/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. This includes clicks on Braze-provided unsubscribe links.
+{% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} This is tracked over a seven-day period for email and measured by <a href='/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. This includes clicks on Braze-provided unsubscribe links. After those seven days, another unique click can count for the same user if they click again; Braze then relies on its own event stream rather than aggregate ESP stats for that window.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -258,6 +258,8 @@ Count, Percentage
 {% apitags %}
 Count, Percentage
 {% endapitags %}
+
+_Unsubscribes_ reflect Braze's standard unsubscribe link. Custom unsubscribe pages won't increment this metric unless you update users via API—**Subscription Group Timeseries** still reflects API-driven changes.
 
 {% multi_lang_include analytics/metrics.md metric='Unsubscribers or Unsub' %}
 
