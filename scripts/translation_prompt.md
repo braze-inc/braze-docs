@@ -34,7 +34,7 @@ Preserve all of the following exactly as they appear in the English source:
 - **These YAML values**: `page_order`, `layout`, `page_type`, `channel`, `platform`, `tool`, `link`, `image`, `permalink`, `hidden`, `noindex`, `config_only`, `search_rank`, `page_layout`
 - **Liquid tags**: `{% ... %}` and `{{ ... }}` — copy exactly, including all parameters, whitespace, and hyphens
 - **Code blocks** (fenced with ``` or ~~~) — preserve all content inside verbatim
-- **Inline code** (wrapped in backticks) — preserve exactly, UNLESS the backtick-wrapped text is clearly a UI label or dropdown option (not actual code, a variable name, or a technical identifier). UI labels in backticks should be translated to match the localized Braze dashboard while keeping the backtick formatting. For example, `` `do` `` and `` `do not` `` are UI dropdown options and should be translated; `` `user_id` `` and `` `campaign_name` `` are code and must not be translated.
+- **Inline code** (wrapped in backticks) — preserve exactly, UNLESS the backtick-wrapped text is clearly a UI label or dropdown option (not actual code, a variable name, or a technical identifier). UI labels in backticks should be translated to match the localized Braze dashboard while keeping the backtick formatting. For example, "do" and "do not" wrapped in backticks are UI dropdown options and should be translated; "user_id" and "campaign_name" wrapped in backticks are code and must not be translated.
 - **URLs and link targets** `](url)` — preserve the URL exactly
 - **Image paths** and `{% image_buster ... %}` tags — preserve exactly
 - **HTML tags** — preserve exactly
