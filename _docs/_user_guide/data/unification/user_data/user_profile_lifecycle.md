@@ -70,6 +70,10 @@ Not all data is merged from the anonymous profile. Push tokens and messaging his
 
 For information on how to set an `external_id` against a user profile, see our documentation ([iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift), [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web)).
 
+### Orphaned users and message eligibility
+
+In Braze, users who are "orphaned" or not part of a relevant segment or subscription group are generally not eligible to receive messages. This includes scenarios where users have already received a message and are not re-eligible for that message, or when they fall into a control group for a campaign or Canvas. For a user to receive a given message, they must qualify for the segment or audience targeting that message and meet any other eligibility rules (for example, subscription group or re-eligibility settings).
+
 ## User aliases
 
 To refer to users by identifiers other than the Braze `external_id`, set user aliases against a user profile. Any alias set against a user profile will act in addition to the user's `braze_id` or `external_id` as opposed to replacing it. There's no limit to the number of aliases that you can set against a user profile.
