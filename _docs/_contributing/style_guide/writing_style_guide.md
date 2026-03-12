@@ -2412,7 +2412,7 @@ Lowercase.
 
 #### D
 
-**Dark Mode theme**, **Dark Mode Preview**, **dark mode concept**
+**Dark Mode theme / Dark Mode Preview / dark mode concept**
 
 **dashboard / Braze dashboard**  
 Use to refer to Braze as a platform. Use lowercase (dashboard not Dashboard).
