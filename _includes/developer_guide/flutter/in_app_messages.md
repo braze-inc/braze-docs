@@ -9,57 +9,35 @@
 
 ## Enabling in-app messages
 
-{% alert note %}
-This step is for iOS only. The default implementation for in-app messages is already set up on Android.
-{% endalert %}
+The Braze Flutter SDK automatically sets up the default in-app message presenter on both Android and iOS. In-app messages are displayed and forwarded to the Dart layer without additional setup.
 
-To set up the default presenter for in-app messages on iOS, create an implementation of the `BrazeInAppMessagePresenter` protocol and assign it to the optional `inAppMessagePresenter` on your Braze instance. You can also use the default Braze UI presenter by instantiating a `BrazeInAppMessageUI` object.
+### Customizing the in-app message presenter on iOS
 
-You must import the `BrazeUI` library to access the `BrazeInAppMessageUI` class.
-
-{% tabs %}
-{% tab swift %}
+To override the default in-app message presenter on iOS, use the `postInitialization` closure in `BrazePlugin.configure(_:postInitialization:)`. Your custom presenter must call `BrazePlugin.processInAppMessage(message)` to forward in-app message data to the Dart layer.
 
 ```swift
 import BrazeUI
 
-override func application(
-  _ application: UIApplication,
-  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
-) -> Bool {
-  ...
+BrazePlugin.configure(
+  { configuration in
+    // Set non-API-key configurations here.
+  },
+  postInitialization: { braze in
+    let customPresenter = CustomInAppMessagePresenter()
+    braze.inAppMessagePresenter = customPresenter
+  }
+)
+```
 
-  let braze = BrazePlugin.initBraze(configuration)
+In the custom presenter class, call `BrazePlugin.processInAppMessage(message)` and `super.present(message: message)` to forward data to Dart and display the default UI.
 
-  // Initialize and assign the default `BrazeInAppMessageUI` class to the in-app message presenter.
-  braze.inAppMessagePresenter = BrazeInAppMessageUI()
-  AppDelegate.braze = braze
-
-  return true
+```swift
+class CustomInAppMessagePresenter: BrazeInAppMessageUI {
+  override func present(message: Braze.InAppMessage) {
+    BrazePlugin.processInAppMessage(message)
+    super.present(message: message)
+  }
 }
 ```
 
-{% endtab %}
-{% tab OBJECTIVE-C %}
-
-```objc
-@import BrazeUI;
-
-- (BOOL)application:(UIApplication *)application
-    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  ...
-
-  Braze *braze = [BrazePlugin initBraze:configuration];
-
-  // Initialize and assign the default `BrazeInAppMessageUI` class to the in-app message presenter.
-  braze.inAppMessagePresenter = [[BrazeInAppMessageUI alloc] init];
-  AppDelegate.braze = braze;
-
-  [self.window makeKeyAndVisible];
-  return YES;
-}
-```
-{% endtab %}
-{% endtabs %}
-
-To customize your implementation further, refer to [Logging in-app message data]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter).
+For more information about accessing in-app message data, refer to [Logging in-app message data]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter).
