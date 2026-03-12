@@ -53,8 +53,9 @@ Next, set up the details for your agent:
 2. (optional) Add tags to filter your agent.
 3. Choose the [model]({{site.baseurl}}/user_guide/brazeai/agents/reference/#models) for your agent to use.
 4. Select the model's [thinking level]({{site.baseurl}}/user_guide/brazeai/agents/reference/#thinking-levels). You can choose from minimal, low, medium, or high. We recommend starting with **Minimal** and testing your agent's responses and adjusting this as needed.
+5. Set a daily execution limit. By default, this value is set to 250,000, but can be raised to 1,000,000. If you're interested in increasing the limit above 1,000,000, contact your customer success manager to learn more.
 
-![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:75%;"}
+![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model, and setting a daily execution limit.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:75%;"}
 
 ### Step 3: Write the instructions {#agent-instructions}
 
@@ -78,8 +79,6 @@ Select **Add resources** to choose what your agent can reference. This includes:
 #### Step 3.2: Add optional settings
 
 In the **Optional settings**, you can adjust the [temperature]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature) of the agent-generated copy. A higher temperature allows the agent to use the information provided to be more creative.
-
-You can also set the daily execution limit for your agent. By default, this value is set to 250,000, but can be raised to 1,000,000. If you're interested in increasing the limit above 1,000,000, contact your customer success manager to learn more.
 
 ### Step 4: Select the output {#select-output}
 
