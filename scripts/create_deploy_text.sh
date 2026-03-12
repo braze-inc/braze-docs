@@ -9,8 +9,8 @@ main() {
     rm -f "$TEMP_FILE" # Clear contents from any previous runs
 
     # Commits to deploy: on develop but not yet on main.
-    # Use origin/main explicitly (not LATEST_COMMIT_HASH) so this works when the
-    # workflow checks out develop—otherwise "..origin/develop" would compare to HEAD.
+    # Use origin/$PRIMARY_BRANCH explicitly (not LATEST_COMMIT_HASH) so this works when
+    # the workflow checks out develop—otherwise "..origin/develop" would compare to HEAD.
     if [ -z "$1" ] || [ -z "$2" ]; then
         COMMIT_LOGS=$(git log --first-parent origin/$PRIMARY_BRANCH..origin/develop --pretty=%s»¦«%b)
     else
@@ -42,7 +42,7 @@ main() {
         echo "- [#$PR_NUMBER](https://github.com/braze-inc/braze-docs/pull/$PR_NUMBER) - $PR_TITLE" >> "$TEMP_FILE"
     done
 
-    # Returns the results in reverse order and clean up files.
+    # Returns the results in reverse order.
     if [ -f "$TEMP_FILE" ]; then
         if command -v tac &> /dev/null; then
             tac "$TEMP_FILE"
