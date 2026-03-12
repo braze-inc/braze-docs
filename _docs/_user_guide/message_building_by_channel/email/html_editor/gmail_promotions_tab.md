@@ -107,10 +107,17 @@ The Promotions script only appears if your email lands in the Gmail Promotions t
 
 ## Best practices
 
-In general, adhere to these [best practices recommended by Gmail](https://developers.google.com/gmail/promotab/best-practices). 
+Follow [Gmail's Promotions tab best practices](https://developers.google.com/gmail/promotab/best-practices). Google decides when and to whom the card is shown—there's no guarantee every recipient sees it.
+
+As you build your card, ask:
+
+- Is the annotation script valid? [Preview with Google](https://developers.google.com/workspace/gmail/promotab/preview).
+- Does **Show original** in Gmail web show the script in the raw message?
+- Is mail landing in **Promotions**? Cards only apply there.
+- Have you tested desktop and mobile?
 
 {% alert tip %}
-While you can use Liquid within this script, we strongly suggest that you test your messaging as much as possible to avoid an error.
+Liquid in the script is supported—test thoroughly to avoid errors.
 {% endalert %}
 
 ## Measuring Gmail Cards
@@ -126,6 +133,10 @@ Gmail has seen better results with strong imagery related to the email message. 
 Gmail does not suggest using sentences or phrases, such as "You Can Buy 1 Get 1 Free or Discounts on All Shorts and Shirts", as it may clip, no longer draw the eye, and compete with the subject line. This space should only be used to engage your customers with your messaging, so avoid any language similar to "Open this email now" or "Click here for deals". It's best to avoid repeating your subject line.
 
 ## Frequently asked questions
+
+### How do I add a sender logo?
+
+Use [Google Annotations](https://developers.google.com/workspace/gmail/promotab/overview) to add your logo and promo card in the Gmail app. Rendering is controlled by Gmail, not Braze.
 
 ### Why is my promotional message not displaying the promotion card or product carousel in the end user's inbox?
 
@@ -150,3 +161,7 @@ Gmail determines when and who to display the card to, so there isn't a guarantee
 Annotations aren't supported for Google Workspace. To preview annotations, you can create a personal email address with Gmail.
 
 Note that annotations don't render in the **Primary** tab or in any other tab in the Gmail mobile app. Annotations won't display after a user opens an email or if you're using the `DiscountOffer` annotation type and the time and date have already expired.
+
+{% alert tip %}
+For more troubleshooting, see [Google's troubleshooting guide for email promotions](https://developers.google.com/workspace/gmail/promotab/troubleshooting).
+{% endalert %}

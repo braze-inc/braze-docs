@@ -143,7 +143,11 @@ Advanced functionality will appear in the campaign or Canvas composer. In advanc
 
 ### Step 4: Test your email
 
-After adding your sending information, it's time to finally test your email. 
+After adding your sending information, it's time to finally test your email.
+
+{% alert tip %}
+If the email looks different in the editor than in preview or test send, check that tags are closed, image attributes have values, and background images aren't blurred at edges.
+{% endalert %}
 
 Go to the **Preview and Test** section. Here, you have the option of previewing your email as a user or sending a test message. This section also includes [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/), which allows you to check that your email has rendered correctly across different mobile and web clients.
 

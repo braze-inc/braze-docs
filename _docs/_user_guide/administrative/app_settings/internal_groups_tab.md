@@ -91,9 +91,13 @@ Seed Groups are only supported for the email channel. Add users to a Seed Group 
 
 Seed Groups aren't available for API campaigns, but you can include Seed Groups using an API-triggered entry in the campaign. Use this to measure deliverability metrics and to keep a record of your email content for historical and archival purposes. 
 
-After creating an internal group and tagging it to be used as a Seed Group, select it from the **Target Audiences** step of the campaign editor, or on the **Send Settings** step in a Canvas. 
+After creating an internal group and tagging it to be used as a Seed Group, select it from the **Target Audiences** step of the campaign editor, or on the **Send Settings** step in a Canvas.
 
-Seed emails will have `[SEED]` appended to the start of the email subject line. Note that seed emails **do not**:
+{% alert note %}
+Seed emails have `[SEED]` prepended to the subject line.
+{% endalert %}
+
+Note that seed emails **do not**:
 
 - Increment sends in the dashboard analytics.
 - Impact email analytics or retargeting. 
@@ -106,7 +110,9 @@ Seed emails will have `[SEED]` appended to the start of the email subject line. 
 Seed sends are designed for internal QA and review, so they intentionally bypass subscription checks for the seeded company users. This means users with valid email addresses who are part of a Seed Group receive the message even if they are not subscribed. However, the message must be configured to send seed copies to that group.
 
 {% alert tip %}
-If your Seed Group members report not seeing the message in their inbox, check that they're listed in the internal group, verify that your subject lines are different and that Gmail has not bundled the emails together, or have them check their spam folders.
+If Seed Group members don't see the message, confirm they're in the internal group, use distinct subject lines so Gmail doesn't thread messages together, and ask them to check spam.
+
+If the email uses [`abort_message()` Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/), Seed Group members must still satisfy the abort condition to receive the send.
 {% endalert %}
 
 #### For campaigns

@@ -83,16 +83,30 @@ Here are some best practices to keep in mind when writing your preheaders:
 
 ## Email size
 
-Make sure to limit your email size. Email bodies larger than 102&nbsp;KB are not only extremely taxing on Braze servers, but they're also clipped by Gmail and other email clients. Try to keep the size of your email under 25&nbsp;KB for just text or 60&nbsp;KB with images. We highly encourage you to use our image uploader to host images and to reference these images by the `href`.
+Keep payloads small: roughly under **25&nbsp;KB** for text-only or **60&nbsp;KB** with images when possible, and host images with Braze's uploader. Keep the **full HTML body under ~102&nbsp;KB** so clients like Gmail don't clip the message (clipping can hide the open pixel and skew analytics).
 
 |   Text Only   | Text With Images |     Email Width    |
 |:-------------:|:----------------:|:------------------:|
 | 25&nbsp;KB maximum |   60&nbsp;KB maximum   | 600 pixels maximum |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
+To reduce clipping risk:
+
+- Shorten copy, images, and links.
+- Inline critical CSS where needed; remove extra whitespace in HTML.
+- Compress images and HTML assets.
+
 {% alert note %}
 To save your email campaign or template, make sure your email body does not exceed 400&nbsp;KB.
 {% endalert %}
+
+## Dark Mode
+
+Many clients invert colors in Dark Mode. Transparent images, outlined text on images, and off-white / gray-black backgrounds often survive inversion better than pure white (`#FFFFFF`) or pure black (`#000000`) with layered images—otherwise you can get low-contrast or invisible text.
+
+For HTML editor messages you can set a solid background with a single-stop gradient (for example `background-image: linear-gradient(#FFFFFF, #FFFFFF)` on `<td>` / `<th>`) to limit unwanted inversion, and use the `prefers-color-scheme` media query when appropriate.
+
+See [Building accessible messages in Braze]({{site.baseurl}}/help/accessibility/) for contrast guidance.
 
 ## Text length
 
