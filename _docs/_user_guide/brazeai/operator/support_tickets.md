@@ -13,7 +13,7 @@ description: "Learn how to file support tickets directly from BrazeAI Operator w
 
 1. Open Operator and select **File a Support Ticket** (or ask Operator to file one).
 2. Fill in the title and description of the issue.
-3. Operator suggests relevant attachments and context to include.
+3. Review the suggested attachments and context to include.
 4. Review and select **Submit**.
 
 ## Auto-included context
