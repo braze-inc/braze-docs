@@ -257,7 +257,7 @@ If you set a session timeout, all session semantics will automatically extend to
 
 ### Some users are not logging sessions
 
-Because sessions are tracked only after the SDK is initialized, users who don't trigger SDK initialization don't log any sessions. This typically happens when your app uses conditional logic before initializing the SDK—for example, gating initialization behind a login flow, consent prompt, or feature flag. In these cases, any user who doesn't satisfy the condition never starts a session.
+Because sessions are tracked only after the SDK is initialized, users who don't trigger SDK initialization don't log any sessions. This typically happens when your app uses conditional logic before initializing the SDK. For example, delaying initialization behind a login flow, consent prompt, or feature flag. For an example of how to set this up correctly, see [Delayed initialization]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=swift). In these cases, any user who doesn't satisfy the condition never starts a session.
 
 If some users are logging sessions and others aren't, verify the following:
 
@@ -267,6 +267,7 @@ If some users are logging sessions and others aren't, verify the following:
 
 If the issue persists after verifying your implementation, reproduce the problem and collect the following information before contacting support:
 
+- Steps to reproduce the problem
 - The affected app version
 - Verbose SDK logs ([Verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging) or by platform: [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_enabling-logs), [Swift]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift#swift_setting-the-log-level), [Web]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web#web_logging)) captured while the issue occurs
 - The code snippet for SDK initialization
