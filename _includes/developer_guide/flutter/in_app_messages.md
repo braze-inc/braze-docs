@@ -9,6 +9,9 @@
 
 ## Enabling in-app messages
 
+{% tabs %}
+{% tab Flutter SDK 18.0.0+ %}
+
 The Braze Flutter SDK automatically sets up the default in-app message presenter on both Android and iOS. In-app messages are displayed and forwarded to the Dart layer without additional setup.
 
 ### Customizing the in-app message presenter on iOS
@@ -39,5 +42,37 @@ class CustomInAppMessagePresenter: BrazeInAppMessageUI {
   }
 }
 ```
+
+{% endtab %}
+{% tab Flutter SDK 17.1.0 and earlier %}
+
+{% alert note %}
+This step is for iOS only. The default implementation for in-app messages is already set up on Android.
+{% endalert %}
+
+To set up the default presenter for in-app messages on iOS, create an implementation of the `BrazeInAppMessagePresenter` protocol and assign it to the optional `inAppMessagePresenter` on your Braze instance. You can also use the default Braze UI presenter by instantiating a `BrazeInAppMessageUI` object.
+
+You must import the `BrazeUI` library to access the `BrazeInAppMessageUI` class.
+
+```swift
+import BrazeUI
+
+override func application(
+  _ application: UIApplication,
+  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
+) -> Bool {
+  ...
+
+  let braze = BrazePlugin.initBraze(configuration)
+
+  braze.inAppMessagePresenter = BrazeInAppMessageUI()
+  AppDelegate.braze = braze
+
+  return true
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 For more information about accessing in-app message data, refer to [Logging in-app message data]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter).

@@ -40,6 +40,27 @@ contentCardsStreamSubscription.cancel();
 
 For an example, see [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart) in our sample app.
 
+### Forward Content Card data from the native iOS layer
+
+{% tabs %}
+{% tab Flutter SDK 18.0.0+ %}
+
+Content Card data is automatically forwarded from both the Android and iOS native layers. No additional setup is required.
+
+{% endtab %}
+{% tab Flutter SDK 17.1.0 and earlier %}
+
+To receive the data in the Dart layer, add the following code to forward the Content Card data from the native iOS layer. No additional steps are needed on the Android layer.
+
+1. Implement `contentCards.subscribeToUpdates` to subscribe to content cards updates as described in the [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)) documentation.
+
+2. Your `contentCards.subscribeToUpdates` callback implementation must call `BrazePlugin.processContentCards(contentCards)`.
+
+For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
+
+{% endtab %}
+{% endtabs %}
+
 #### Replaying the callback for Content Cards
 
 To store any Content Cards triggered before the callback is available and replay them after it is set, add the following entry to the `customConfigs` map when initializing the `BrazePlugin`:
