@@ -492,6 +492,49 @@ Customization of only the unviewed indicator via `Attributes` is not supported i
 {% endtab %}
 {% endtabs %}
 
+### Dark mode
+
+To display different images or styles based on the device's dark or light mode, use [key-value pairs]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details#key-value-pairs) (KVPs) in your Content Card campaign. For example, add a KVP such as `dark_mode_image` with the URL of your dark mode image asset. Then, in your app, add custom logic to check the device's current appearance mode and display the appropriate image.
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+if let card = card as? Braze.ContentCard.ClassicImage,
+   let darkImageUrl = card.extras["dark_mode_image"],
+   UITraitCollection.current.userInterfaceStyle == .dark {
+  // Use darkImageUrl for the image
+}
+```
+
+{% endtab %}
+{% tab android %}
+
+```kotlin
+val darkModeImage = card.extras["dark_mode_image"]
+val isDarkMode = resources.configuration.uiMode and
+    Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
+if (isDarkMode && darkModeImage != null) {
+    // Use darkModeImage for the image
+}
+```
+
+{% endtab %}
+{% tab web %}
+
+```javascript
+const darkModeImage = card.extras?.dark_mode_image;
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (isDarkMode && darkModeImage) {
+  // Use darkModeImage for the image
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+This pattern works for any appearance-dependent content, including text, colors, or layouts. Upload your dark mode image assets to the Braze media library, then reference them in the KVP.
+
 ### Disabling unread indicator
 
 {% tabs %}
