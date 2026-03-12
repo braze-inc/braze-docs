@@ -17,7 +17,7 @@ Before you can view Decisioning Studio reports in the Braze, you must:
 - Contact your CSM to enable BrazeAI Decisioning Studio™ for you on your behalf.
 - Have a live BrazeAI Decisioning Studio™ agent.
 
-## Viewing reports {#view}
+## View reports {#view}
 
 To view metrics for a Decisioning Studio agent in Braze, go to **AI Decisioning** > **BrazeAI Decisioning Studio™**, then select an agent.
 
@@ -25,7 +25,7 @@ To view metrics for a Decisioning Studio agent in Braze, go to **AI Decisioning*
 
 Here, you can view reports like performance, insights, diagnostics, and timelines. For more details, see [Available reports](#available-reports).
 
-## Changing report dates
+## Change report dates
 
 After [opening a report](#view), you can change the date range by selecting a new start and end date from the calendar dropdown.
 

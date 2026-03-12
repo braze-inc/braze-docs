@@ -23,8 +23,6 @@ Nothing in the dashboard creates new data. It visualizes stored daily results ba
 
 ## Date range and comparison groups
 
-![Performance report showing the comparison groups, aggregation, segments, and timeline events filters at the top, along with the date range selector in the upper right.]({% image_buster /assets/img/decisioning_studio/reporting_performance_date_range.png %})
-
 At the top of the dashboard, you choose:
 
 - **Date range**: The time period for the report.
@@ -32,6 +30,8 @@ At the top of the dashboard, you choose:
 - **Aggregation**: The chart aggregation setting (Daily, 7-day rolling, or 30-day rolling).
 - **Segments**: Any applied segments. These are custom-configured with your AI Expert Services team.
 - **Timeline events**: Whether to overlay configured timeline events on the chart to help you understand changes or events that could impact performance.
+
+![Performance report showing the comparison groups, aggregation, segments, and timeline events filters at the top, along with the date range selector in the upper right.]({% image_buster /assets/img/decisioning_studio/reporting_performance_date_range.png %})
 
 These selections determine which days are included, which groups are compared, how the trend line is smoothed, and which population you're viewing.
 
@@ -42,7 +42,6 @@ Changing the aggregation setting (such as 7-day rolling) only affects the chart 
 If you can't select a recent date from the date picker, that date is likely disabled to reflect a temporary data delay. It typically takes a few days to get data from your CDP into Decisioning Studio reliably.
 
 ## KPI cards
-![Performance report showing the left-side KPI summary cards, including metrics like Incremental LTV / Customer, Conversions / Customer, and Unsubscribes / Customer.]({% image_buster /assets/img/decisioning_studio/reporting_performance_kpi_cards.png %})
 
 The KPI cards on the left side of the report show the key performance indicators configured for your use case, such as:
 
@@ -50,17 +49,15 @@ The KPI cards on the left side of the report show the key performance indicators
 - Conversions / Customer
 - Unsubscribes / Customer
 
-Each card represents the KPI calculated across the entire selected date range. This is a full-period value, not a daily average.
+Each card represents the KPI calculated across the entire selected date range. This is a full-period value, not a daily average. For example, if you see "Incremental LTV / Customer = 3.192", that reflects performance across the whole selected window.
 
-For example, if you see "Incremental LTV / Customer = 3.192", that reflects performance across the whole selected window.
+![Performance report showing the left-side KPI summary cards, including metrics like Incremental LTV / Customer, Conversions / Customer, and Unsubscribes / Customer.]({% image_buster /assets/img/decisioning_studio/reporting_performance_kpi_cards.png %})
 
 ## KPI trend chart
 
+Use the chart to understand trends over time, performance shifts, and seasonality or timing effects. Use the KPI card to understand the overall impact across the full window. The center chart shows the same KPI as the top card, but calculated per day. Each point represents that day's KPI value. If you have 7-day rolling selected, each point reflects a rolling average, which smooths daily volatility.
+
 ![Performance report showing the center trend chart titled Incremental LTV / Customer, with lines for Decisioning Studio and Business as Usual BAU Group plotted over time.]({% image_buster /assets/img/decisioning_studio/reporting_performance_trend_chart.png %})
-
-The center chart shows the same KPI as the top card, but calculated per day. Each point represents that day's KPI value. If you have 7-day rolling selected, each point reflects a rolling average, which smooths daily volatility.
-
-Use the chart to understand trends over time, performance shifts, and seasonality or timing effects. Use the KPI card to understand the overall impact across the full window.
 
 The chart and KPI card are designed to show different things. The chart shows daily performance ("How did you perform each day?"). The KPI card shows full-period performance ("How did you perform across the entire period?"). For rate metrics, they answer different questions. 
 
@@ -73,19 +70,15 @@ The chart shows both. The KPI card recalculates across both days combined (12 co
 
 ## Uplift chart
 
+The uplift chart shows the percentage difference between your comparison groups. It is calculated as: **(Primary Group - Comparison Group) / Comparison Group**. This is calculated dynamically based on the KPI chart values.
+
 ![Performance report showing the Uplift percentage chart on the right side, displaying the percentage difference between Decisioning Studio and the BAU group over time.]({% image_buster /assets/img/decisioning_studio/reporting_performance_uplift.png %})
-
-The uplift chart shows the percentage difference between your comparison groups. It is calculated as: **(Primary Group - Comparison Group) / Comparison Group**
-
-This is calculated dynamically based on the KPI chart values.
 
 {% alert important %}
 Uplift is not stored. It is computed from the KPI results. If uplift changes, it's because the underlying KPI changed.
 {% endalert %}
 
 ## Aggregate table
-
-![Performance report showing the aggregate table at the bottom, with columns for Group, Incremental LTV, Customer, and Incremental LTV / Customer for each comparison group.]({% image_buster /assets/img/decisioning_studio/reporting_performance_aggregate_table.png %})
 
 The table at the bottom of the report shows raw totals across the selected date range, such as:
 
@@ -99,14 +92,16 @@ This section reinforces the relationship between the different views:
 - The chart is a daily calculation.
 - The*table shows the underlying totals driving the KPI.
 
-## Driver tree
+![Performance report showing the aggregate table at the bottom, with columns for Group, Incremental LTV, Customer, and Incremental LTV / Customer for each comparison group.]({% image_buster /assets/img/decisioning_studio/reporting_performance_aggregate_table.png %})
 
-![Performance report in Driver Tree view, showing a hierarchical diagram that breaks down KPIs like Incremental LTV / Customer into component drivers such as Conversions / Customer and Clicks / Customer.]({% image_buster /assets/img/decisioning_studio/reporting_performance_driver_tree.png %})
+## Driver tree
 
 The driver tree breaks a KPI into its component drivers. For example, Incremental LTV / Customer may break into:
 
 - Conversions / Customer
 - Revenue per Conversion
+
+![Performance report in Driver Tree view, showing a hierarchical diagram that breaks down KPIs like Incremental LTV / Customer into component drivers such as Conversions / Customer and Clicks / Customer.]({% image_buster /assets/img/decisioning_studio/reporting_performance_driver_tree.png %})
 
 Driver trees use the same KPI definitions as the rest of the dashboard and introduce no new math. They help explain what is driving performance. If a KPI definition changes, charts, cards, uplift, and driver trees all update together.
 
