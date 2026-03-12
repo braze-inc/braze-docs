@@ -742,7 +742,7 @@ Subscription
 ## キャンペーンコンバージョンイベント {#campaign-conversion-events}
 
 {% apitags %}
-キャンペーン、コンバージョン
+キャンペーン, コンバージョン
 {% endapitags %}
 
 このイベントは、キャンペーンにコンバージョンイベントとして設定されたアクションをユーザーが実行したときに発生します。
@@ -915,7 +915,7 @@ Subscription
 ## キャンペーンコントロールグループの登録イベント {#campaign-control-group-enrollment-events}
 
 {% apitags %}
-キャンペーン、エントリー
+キャンペーン, エントリー
 {% endapitags %}
 
 このイベントは、複数のバリアントを持つキャンペーンに設定されたコントロールバリアントに、ユーザーが登録したときに発生します。このイベントは、このユーザーのチャネル送信イベントがないために生成されます。
@@ -1074,7 +1074,7 @@ Subscription
 ## キャンバスコンバージョンイベント {#canvas-conversion-events}
 
 {% apitags %}
-キャンバス、変換
+キャンバス, コンバージョン
 {% endapitags %}
 
 このイベントは、キャンバスにコンバージョンイベントとして設定されたアクションをユーザーが実行したときに発生します。
@@ -1244,7 +1244,7 @@ Subscription
 ## キャンバスエントリイベント {#canvas-entry-events}
 
 {% apitags %}
-キャンバス、エントリ
+キャンバス, エントリー
 {% endapitags %}
 
 このイベントは、ユーザーがキャンバスに入ったときに発生します。このイベントは、ユーザーがどのバリアントに入ったかを示します。
@@ -1401,7 +1401,7 @@ Subscription
 ## 退出マッチのオーディエンスイベント {#exit-match-audience-events}
 
 {% apitags %}
-出口、キャンバス
+出口, キャンバス
 {% endapitags %}
 
 このイベントは、ユーザーがオーディエンスを照合してキャンバスを離脱したときに発生します。
@@ -1550,7 +1550,7 @@ Subscription
 ## パフォーマンスを終了する {#exit-perform-event-events}
 
 {% apitags %}
-出口、キャンバス
+出口, キャンバス
 {% endapitags %}
 
 このイベントは、ユーザーがイベントを実行してキャンバスを離脱したときに発生します。
@@ -2028,7 +2028,7 @@ Subscription
 ## キャンバスステップ進行イベント {#canvas-step-progression-events}
 
 {% apitags %}
-キャンバス、進行
+キャンバス, 進行
 {% endapitags %}
 
 このイベントは、ユーザーがキャンバスのステップを進み、何らかの結果を得たときに発生する。このイベントは、ステップの開始または終了時には発生しないことに注意してください。現在、分岐ステップ (オーディエンスパス、条件分岐、アクションパス、実験) と（オーディエンスパス、条件分岐、アクションパス、エクスペリメント）と Advance の結果のみがステップの進行イベントを生成します。
@@ -2205,7 +2205,7 @@ Subscription
 ## バナー中止イベント {#banner-abort-events}
 
 {% apitags %}
-Banner, Abort
+バナー, 中止
 {% endapitags %}
 
 このイベントは、予定されていたバナーメッセージが何らかの理由で中断された場合に発生します。
@@ -2416,7 +2416,7 @@ Banner, Abort
 ## バナークリックイベント {#banner-click-events}
 
 {% apitags %}
-バナー、クリック
+バナー, クリック
 {% endapitags %}
 
 このイベントは、ユーザーがバナーをクリックしたときに発生します。
@@ -2618,7 +2618,7 @@ Banner, Abort
 ## バナーインプレッションイベント {#banner-impression-events}
 
 {% apitags %}
-Banner, Impressions
+バナー, インプレッション
 {% endapitags %}
 
 このイベントは、ユーザーがバナーを表示したときに発生します。
@@ -2815,7 +2815,7 @@ Banner, Impressions
 ## コンテンツカードの中止イベント {#content-card-abort-events}
 
 {% apitags %}
-Abort, Content Cards
+中止, コンテンツカード
 {% endapitags %}
 
 このイベントは、コンテンツカードのメッセージが Liquid の中止などに基づいて中止された場合に発生します。
@@ -3014,7 +3014,7 @@ Abort, Content Cards
 ## コンテンツカードのクリックイベント {#content-card-click-events}
 
 {% apitags %}
-コンテンツカード、クリック
+コンテンツカード, クリック
 {% endapitags %}
 
 このイベントは、ユーザーがコンテンツカードをクリックしたときに発生します。
@@ -3247,7 +3247,7 @@ Abort, Content Cards
 ## コンテンツカードの閉じるイベント {#content-card-dismiss-events}
 
 {% apitags %}
-コンテンツカード、解雇
+コンテンツカード, 非表示
 {% endapitags %}
 
 このイベントは、ユーザーがコンテンツカードを却下したときに発生します。
@@ -3480,7 +3480,7 @@ Abort, Content Cards
 ## コンテンツカードのインプレッションイベント {#content-card-impression-events}
 
 {% apitags %}
-コンテンツカード、インプレッション
+コンテンツカード, インプレッション
 {% endapitags %}
 
 このイベントは、ユーザーがコンテンツカードを表示したときに発生します。
@@ -3713,7 +3713,7 @@ Abort, Content Cards
 ## コンテンツカード送信イベント {#content-card-send-events}
 
 {% apitags %}
-コンテンツカード、送信
+コンテンツカード, 送信
 {% endapitags %}
 
 このイベントは、コンテンツカードがユーザーに送信されたときに発生します。
@@ -3912,7 +3912,7 @@ Abort, Content Cards
 ## メール送信中止イベント {#email-abort-events}
 
 {% apitags %}
-Abort, Email
+中止, メール
 {% endapitags %}
 
 このイベントは、メールメッセージが Liquid の中止などに基づいて中止された場合に発生します。
@@ -4122,7 +4122,7 @@ Abort, Email
 ## メールバウンスイベント {#email-bounce-events}
 
 {% apitags %}
-メール、バウンス
+メール, バウンス
 {% endapitags %}
 
 このイベントは、インターネットサービスプロバイダーがハードバウンスを返したときに発生します。ハードバウンスは、配信到達性の永続的なエラーを意味します。
@@ -4340,7 +4340,7 @@ Abort, Email
 ## メールのクリックイベント {#email-click-events}
 
 {% apitags %}
-電子メール、クリック
+メール, クリック
 {% endapitags %}
 
 このイベントは、ユーザーがメールをクリックしたときに発生します。ユーザーがメールを複数回クリックしたり、メール内の異なるリンクをクリックしたりすると、同じキャンペーンについて複数のイベントが生成される場合があります。
@@ -4607,7 +4607,7 @@ Abort, Email
 ## メール遅延イベント {#email-deferral-events}
 
 {% apitags %}
-電子メール、延期
+メール, 延期
 {% endapitags %}
 
 このイベントは、インターネットサービスプロバイダがEメールをハードバウンスされていないEメールアドレスにすぐに配信せず、BrazeがEメールを最大72時間再試行した場合に発生します。遅延の典型的な理由には、受信トレイプロバイダーからのレピュテーションベースのメールボリュームレート制限、一時的な接続の問題、受信者のメールボックスがいっぱいになった、またはDNS エラーなどがあります。
@@ -4826,7 +4826,7 @@ Abort, Email
 ## メール配信イベント {#email-delivery-events}
 
 {% apitags %}
-電子メール、配信
+メール, 配信
 {% endapitags %}
 
 このイベントは、送信されたメールがエンドユーザーの受信トレイで正常に受信された場合に発生します。
@@ -5034,7 +5034,7 @@ Abort, Email
 ## メールをスパムとしてマークする {#email-mark-as-spam-events}
 
 {% apitags %}
-電子メール、スパム
+メール, スパム
 {% endapitags %}
 
 このイベントは、エンドユーザーがメールの [スパム] ボタンを押したときに発生します。Braze はこれを追跡しないため、このイベントはメールがスパムフォルダーに入れられた事実を表すものではないことに注意してください。
@@ -5246,7 +5246,7 @@ Abort, Email
 ## メール開封イベント {#email-open-events}
 
 {% apitags %}
-メール、オープン
+メール, オープン
 {% endapitags %}
 
 このイベントは、ユーザーがメールを開封したときに発生します。ユーザーが複数回メールを開封すると、同じキャンペーンについて複数のイベントが生成される場合があります。
@@ -5498,7 +5498,7 @@ Abort, Email
 ## メール再送信イベント {#email-retry-events}
 
 {% apitags %}
-メール、再送信
+メール, 再試行
 {% endapitags %}
 
 このイベントは、メッセージの優先度が下げられたりフリークエンシーキャップが適用されたりした際に発生する。設定された再試行期間内に後で再試行される。これはメッセージ優先順位付けのベータ版顧客のみ利用可能だ。
@@ -5707,7 +5707,7 @@ Abort, Email
 ## メール送信イベント {#email-send-events}
 
 {% apitags %}
-メール、送信
+メール, 送信
 {% endapitags %}
 
 このイベントは、Braze と SendGrid の間でメール送信リクエストが正常に通信されたときに発生します。ただし、これはメールがユーザーの受信トレイに届いたことを意味しない。Brazeは、イベントがメールイベントに関連付けられたメールアドレスとユーザー IDの両方に一致しない場合、ユーザープロファイルやCurrentsの送信先（Snowflakeなど）にイベントを記録しない。
@@ -5914,7 +5914,7 @@ Abort, Email
 ## メールソフトバウンスイベント {#email-soft-bounce-events}
 
 {% apitags %}
-メール、バウンス
+メール, バウンス
 {% endapitags %}
 
 このイベントは、インターネットサービスプロバイダーがソフトバウンスを返したときに発生します。ソフトバウンスは、一時的な配信到達性のエラーによりメールを配信できなかったことを意味します。
@@ -6127,7 +6127,7 @@ Abort, Email
 ## メール配信停止イベント {#email-unsubscribe-events}
 
 {% apitags %}
-メール、サブスクリプション
+Email, Subscription
 {% endapitags %}
 
 このイベントは、エンドユーザーがメールの [配信停止] をクリックしたときに発生します。
@@ -6328,7 +6328,7 @@ Abort, Email
 ## フィーチャーフラグ実験のインプレッションイベント {#feature-flag-experiment-impression-events}
 
 {% apitags %}
-フィーチャーフラグ、インプレッション
+フィーチャーフラッグ, インプレッション
 {% endapitags %}
 
 このイベントは、ユーザーが機能とやり取りする機会があった時、または機能が無効化されている場合（AB テストのコントロールグループの場合）にやり取りできた可能性がある時に発生する。
@@ -6541,7 +6541,7 @@ Abort, Email
 ## アプリ内メッセージの中止イベント {#in-app-message-abort-events}
 
 {% apitags %}
-In-App Messages, Abort
+アプリ内メッセージ, 中止
 {% endapitags %}
 
 このイベントは、最初にスケジュールされたアプリ内メッセージが中止されたときに発生します。
@@ -6784,7 +6784,7 @@ In-App Messages, Abort
 ## アプリ内メッセージのクリックイベント {#in-app-message-click-events}
 
 {% apitags %}
-アプリ内メッセージ、クリック
+アプリ内メッセージ, クリック
 {% endapitags %}
 
 このイベントは、ユーザーがアプリ内メッセージをクリックしたときに発生する。
@@ -7022,7 +7022,7 @@ In-App Messages, Abort
 ## アプリ内メッセージインプレッションイベント {#in-app-message-impression-events}
 
 {% apitags %}
-アプリ内メッセージ、印象
+アプリ内メッセージ, インプレッション
 {% endapitags %}
 
 このイベントは、ユーザーがアプリ内メッセージを表示したときに発生します。
@@ -7265,7 +7265,7 @@ In-App Messages, Abort
 ## LINEの中止イベント {#line-abort-events}
 
 {% apitags %}
-中止せよ
+LINE, 中止
 {% endapitags %}
 
 この現象は、スケジュールされたLINEメッセージが送信前に配信できない場合に発生する。
@@ -7470,7 +7470,7 @@ In-App Messages, Abort
 ## LINEのクリックイベント {#line-click-events}
 
 {% apitags %}
-LINE、クリック
+LINE, クリック
 {% endapitags %}
 
 このイベントは、ユーザーがLINEメッセージ内のリンクをクリックした際に発生する。そのリンクのドメインがトラッキングドメインと一致する場合に限る。
@@ -7682,7 +7682,7 @@ LINE、クリック
 ## LINEインバウンド受信イベント {#line-inbound-receive-events}
 
 {% apitags %}
-LINE、受信した着信
+LINE, インバウンド受信
 {% endapitags %}
 
 このイベントは、ユーザーからLINEメッセージを受信した時に発生する。
@@ -7885,7 +7885,7 @@ LINE、受信した着信
 ## LINE リトライイベント {#line-retry-events}
 
 {% apitags %}
-LINE、再試行
+LINE, 再試行
 {% endapitags %}
 
 このイベントは、メッセージの優先度が下げられたりフリークエンシーキャップが適用されたりした際に発生する。設定された再試行期間内に後で再試行される。これはメッセージ優先順位付けのベータ版顧客のみ利用可能だ。
@@ -8085,7 +8085,7 @@ LINE、再試行
 ## LINEイベント送信 {#line-send-events}
 
 {% apitags %}
-LINE、送信する
+LINE, 送信
 {% endapitags %}
 
 このイベントは、LINEメッセージがLINEに送信されたときに発生する。
@@ -8283,7 +8283,7 @@ LINE、送信する
 ## ライブアクティビティの結果イベント {#live-activity-outcome-events}
 
 {% apitags %}
-ライブアクティビティ、結果
+ライブアクティビティ, 結果
 {% endapitags %}
 
 このイベントは、Braze がサードパーティプロバイダから応答を受信したときに発生します(e.g)。APN) ライブアクティビティ送信後
@@ -8433,7 +8433,7 @@ LINE、送信する
 ## ライブアクティビティ送信イベント {#live-activity-send-events}
 
 {% apitags %}
-ライブアクティビティ、センド
+ライブアクティビティ, 送信
 {% endapitags %}
 
 このイベントは、Brazeシステムがライブアクティビティに関してプロバイダーにリクエストを送信した際に発生する。
@@ -8578,7 +8578,7 @@ LINE、送信する
 ## プッシュ通知の中止イベント {#push-notification-abort-events}
 
 {% apitags %}
-Abort, Push
+中止, プッシュ
 {% endapitags %}
 
 このイベントは、プッシュ通知メッセージが Liquid の中止などに基づいて中止された場合に発生します。
@@ -8787,7 +8787,7 @@ Abort, Push
 ## プッシュ通知バウンスイベント {#push-notification-bounce-events}
 
 {% apitags %}
-プッシュ、送信、バウンス
+プッシュ, 送信, バウンス
 {% endapitags %}
 
 このイベントは、Apple Push Notification Service または Fire Cloud Messaging からエラーを受信した場合に発生します。これは、プッシュメッセージがバウンスされたため、ユーザーのデバイスに配信されなかったことを意味します。
@@ -9008,7 +9008,7 @@ Abort, Push
 ## プッシュ通知 iOS フォアグラウンドオープンイベント {#push-notification-ios-foreground-open-events}
 
 {% apitags %}
-プッシュ、iOS、送信
+プッシュ, iOS, 送信
 {% endapitags %}
 
 このイベントは [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) ではサポートされておらず、 [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk) では非推奨になりました。
@@ -9178,7 +9178,7 @@ Abort, Push
 ## プッシュ通知の開封イベント {#push-notification-open-events}
 
 {% apitags %}
-プッシュ、オープン
+プッシュ, オープン
 {% endapitags %}
 
 このイベントは、ユーザーがプッシュ通知を直接クリックしてアプリケーションを開封したときに発生する。現在、プッシュオープンイベントは、厳密に言うと「オープン数の合計」ではなく「直接オープン数」を指します。キャンペーンレベルの「誘発された開封数」に表示される統計情報は、ユーザーレベルで寄与していないため、これに含まれません。
@@ -9413,7 +9413,7 @@ Abort, Push
 ## プッシュ通知再試行イベント {#push-notification-retry-events}
 
 {% apitags %}
-押せ、再試行しろ
+プッシュ, 再試行
 {% endapitags %}
 
 このイベントは、メッセージの優先度が下げられたりフリークエンシーキャップが適用されたりした際に発生する。設定された再試行期間内に後で再試行される。これはメッセージ優先順位付けのベータ版顧客のみ利用可能だ。
@@ -9620,7 +9620,7 @@ Abort, Push
 ## プッシュ通知送信イベント {#push-notification-send-events}
 
 {% apitags %}
-プッシュ、送信
+プッシュ, 送信
 {% endapitags %}
 
 このイベントは、Braze がユーザー宛てのプッシュメッセージを処理し、Apple Push Notification Service または Fire Cloud Messaging に伝達したときに発生します。これは、プッシュがデバイスに配信されたという意味ではなく、単にメッセージが送信されたことを意味します。
@@ -9853,7 +9853,7 @@ Abort, Push
 ## RCS中止イベント {#rcs-abort-events}
 
 {% apitags %}
-RCS、中止
+RCS, 中止
 {% endapitags %}
 
 このイベントは、Braze内でエラーが検出されたためにRCS送信が中断され、メッセージが破棄された際に生成される。
@@ -10033,7 +10033,7 @@ RCS、中止
 ## RCSクリックイベント {#rcs-click-events}
 
 {% apitags %}
-RCS、クリック
+RCS, クリック
 {% endapitags %}
 
 ユーザーがRCSメッセージと対話する際に、UI要素をタップまたはクリックする操作を伴う場合に生成されるイベントである。
@@ -10256,7 +10256,7 @@ RCS、クリック
 ## RCS配信イベント {#rcs-delivery-events}
 
 {% apitags %}
-RCS、配信
+RCS, 配信
 {% endapitags %}
 
 このイベントは、RCSメッセージがユーザーのモバイル端末に正常に配信されたときに生成される。
@@ -10454,7 +10454,7 @@ RCS、配信
 ## RCS受信イベント {#rcs-inbound-received-events}
 
 {% apitags %}
-RCS、受信済み
+RCS, インバウンド受信
 {% endapitags %}
 
 このイベントは、Brazeがユーザーから発信されたRCSメッセージを受信した際に生成される。
@@ -10651,7 +10651,7 @@ RCS、受信済み
 ## RCS 読み取りイベント {#rcs-read-events}
 
 {% apitags %}
-RCS、読む
+RCS, 既読
 {% endapitags %}
 
 このイベントは、ユーザーが自身の端末でRCSメッセージを開封した際に生成される。これはユーザーがメッセージの内容を確認または閲覧したことを示す。
@@ -10819,7 +10819,7 @@ RCS、読む
 ## RCS拒否イベント {#rcs-rejection-events}
 
 {% apitags %}
-RCS、拒否
+RCS, 拒否
 {% endapitags %}
 
 通信事業者の介入により、RCSメッセージがユーザーのモバイル端末に配信されなかった場合に発生するイベントである。
@@ -11029,7 +11029,7 @@ RCS、拒否
 ## RCS送信イベント {#rcs-send-events}
 
 {% apitags %}
-RCS、送信する
+RCS, 送信
 {% endapitags %}
 
 このイベントは、Brazeからラストマイル配送パートナーへRCSメッセージが送信された際に生成される。
@@ -11237,7 +11237,7 @@ RCS、送信する
 ## SMS中止イベント {#sms-abort-events}
 
 {% apitags %}
-中止、SMS
+中止, SMS
 {% endapitags %}
 
 このイベントは、SMS メッセージが Liquid の中止などに基づいて中止された場合に発生します。
@@ -11422,7 +11422,7 @@ RCS、送信する
 ## SMSキャリア送信イベント {#sms-carrier-send-events}
 
 {% apitags %}
-SMS、送信
+SMS, 送信
 {% endapitags %}
 
 このイベントは、SMS が通信事業者に送信されたときに発生します。
@@ -11628,7 +11628,7 @@ SMS、送信
 ## SMS配信イベント {#sms-delivery-events}
 
 {% apitags %}
-SMS、配信
+SMS, 配信
 {% endapitags %}
 
 このイベントは、SMSがユーザーの携帯電話に正常に配信されたときに発生する。
@@ -11835,7 +11835,7 @@ SMS、配信
 ## SMS配信失敗イベント {#sms-delivery-failure-events}
 
 {% apitags %}
-SMS、配信
+SMS, 配信
 {% endapitags %}
 
 このイベントは、SMS で配信エラーが発生したときに発生します。このイベントと提供されたエラーコードを使用すると、SMS 配信に関する問題のトラブルシューティングに役立ちます。
@@ -12047,7 +12047,7 @@ SMS、配信
 ## SMS受信イベント {#sms-inbound-received-events}
 
 {% apitags %}
-SMS、受信済み
+SMS, インバウンド受信
 {% endapitags %}
 
 このイベントは、ユーザーの 1 人が Braze SMS サブスクリプショングループの 1 つの電話番号に SMS を送信したときに発生します。
@@ -12248,7 +12248,7 @@ Braze がインバウンド SMS を受信すると、そのインバウンドメ
 ## SMS拒否イベント {#sms-rejection-events}
 
 {% apitags %}
-SMS、拒否
+SMS, 拒否
 {% endapitags %}
 
 このイベントは、SMS送信が通信事業者によって拒否されたときに発生する。これはいくつかの理由で起こりうる。このイベントと提供されたエラーコードを使用すると、SMS 配信に関する問題のトラブルシューティングに役立ちます。
@@ -12465,7 +12465,7 @@ SMS、拒否
 ## SMS再試行イベント {#sms-retry-events}
 
 {% apitags %}
-SMS、再試行
+SMS, 再試行
 {% endapitags %}
 
 このイベントは、メッセージの優先度が下げられたりフリークエンシーキャップが適用されたりした際に発生する。設定された再試行期間内に後で再試行される。これはメッセージ優先順位付けのベータ版顧客のみ利用可能だ。
@@ -12646,7 +12646,7 @@ SMS、再試行
 ## SMS送信イベント {#sms-send-events}
 
 {% apitags %}
-SMS、送信
+SMS, 送信
 {% endapitags %}
 
 このイベントは、ユーザーが SMS を送信したときに発生します。
@@ -12854,7 +12854,7 @@ SMS、送信
 ## SMSショートリンクのクリックイベント {#sms-short-link-click-events}
 
 {% apitags %}
-SMS、クリック
+SMS, クリック
 {% endapitags %}
 
 このイベントは、ユーザーが SMS の短縮リンクをクリックしたときに発生します。
@@ -13057,7 +13057,7 @@ SMS、クリック
 ## Webhookの中止イベント {#webhook-abort-events}
 
 {% apitags %}
-中止、Webhook
+中止, ウェブフック
 {% endapitags %}
 
 このイベントは、Webhook メッセージが Liquid の中止などに基づいて中止された場合に発生します。
@@ -13256,7 +13256,7 @@ SMS、クリック
 ## Webhook失敗イベント {#webhook-failure-events}
 
 {% apitags %}
-Failure, Webhooks
+失敗, ウェブフック
 {% endapitags %}
 
 このイベントは、Webhook メッセージが配信されたが、エンドポイントからのエラー応答で失敗した場合に発生します。
@@ -13485,7 +13485,7 @@ Failure, Webhooks
 ## Webhook再試行イベント {#webhook-retry-events}
 
 {% apitags %}
-Webhook、再試行
+ウェブフック, 再試行
 {% endapitags %}
 
 このイベントは、メッセージの優先度が下げられたりフリークエンシーキャップが適用されたりした際に発生する。設定された再試行期間内に後で再試行される。これはメッセージ優先順位付けのベータ版顧客のみ利用可能だ。
@@ -13683,7 +13683,7 @@ Webhook、再試行
 ## Webhook イベントを送信する {#webhook-send-events}
 
 {% apitags %}
-Webhook、送信
+ウェブフック, 送信
 {% endapitags %}
 
 このイベントは、Webhook が処理され、その Webhook に指定されたサードパーティに送信されたときに発生します。これは、リクエストが受信されたかどうかを示していないことに注意してください。
@@ -13874,7 +13874,7 @@ Webhook、送信
 ## WhatsAppの中止イベント {#whatsapp-abort-events}
 
 {% apitags %}
-WhatsApp、中止
+WhatsApp, 中止
 {% endapitags %}
 
 このイベントは、WhatsApp メッセージが Liquid の中止などに基づいて中止された場合に発生します。
@@ -14080,7 +14080,7 @@ WhatsApp、中止
 ## WhatsAppトラッキングリンクのクリックイベント {#whatsapp-tracked-link-click-events}
 
 {% apitags %}
-WhatsApp、クリック
+WhatsApp, クリック
 {% endapitags %}
 
 このイベントは、ユーザがリンクのドメインがクリック追跡ドメインに一致するWhatsAppメッセージのリンクまたはボタンをクリックしたときに発生します。
@@ -14276,7 +14276,7 @@ WhatsApp、クリック
 ## WhatsAppの配信イベント {#whatsapp-delivery-events}
 
 {% apitags %}
-WhatsApp、配信
+WhatsApp, 配信
 {% endapitags %}
 
 このイベントは、送信されたWhatsAppメッセージがユーザーの端末に正常に届いたときに発生する。
@@ -14495,7 +14495,7 @@ WhatsApp、配信
 ## WhatsAppの障害発生 {#whatsapp-failure-events}
 
 {% apitags %}
-WhatsApp、失敗
+WhatsApp, 失敗
 {% endapitags %}
 
 このイベントは、WhatsApp がユーザーにメッセージを配信できないときに発生します。ハードバウンスとは、永続的な配信の失敗です。
@@ -14724,7 +14724,7 @@ WhatsApp、失敗
 ## WhatsApp受信イベント {#whatsapp-inbound-received-events}
 
 {% apitags %}
-WhatsApp、受信した着信
+WhatsApp, インバウンド受信
 {% endapitags %}
 
 このイベントは、ユーザーの 1 人が Braze WhatsApp サブスクリプショングループのいずれかの電話番号に WhatsApp メッセージを送信したときに発生します。
@@ -14964,7 +14964,7 @@ WhatsApp、受信した着信
 ## WhatsAppの既読通知 {#whatsapp-read-events}
 
 {% apitags %}
-WhatsApp、既読
+WhatsApp, 既読
 {% endapitags %}
 
 このイベントは、ユーザーがWhatsAppメッセージを読んだときに発生する。
@@ -15183,7 +15183,7 @@ WhatsApp、既読
 ## WhatsApp リトライイベント {#whatsapp-retry-events}
 
 {% apitags %}
-WhatsApp、再試行
+WhatsApp, 再試行
 {% endapitags %}
 
 このイベントは、メッセージの優先度が下げられたりフリークエンシーキャップが適用されたりした際に発生する。設定された再試行期間内に後で再試行される。これはメッセージ優先順位付けのベータ版顧客のみ利用可能だ。
@@ -15385,7 +15385,7 @@ WhatsApp、再試行
 ## WhatsAppでイベントを送信する {#whatsapp-send-events}
 
 {% apitags %}
-WhatsApp、送信
+WhatsApp, 送信
 {% endapitags %}
 
 このイベントは、Braze と WhatsApp の間で送信リクエストが正常に通信されたときに発生します。ただし、これはユーザーがメッセージを受け取ったことを意味しない。
