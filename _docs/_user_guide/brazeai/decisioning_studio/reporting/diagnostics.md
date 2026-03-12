@@ -7,7 +7,7 @@ description: "Learn how to use the Diagnostics report to monitor outbound and in
 
 # Diagnostics report
 
-The diagnostics report contains two different report types: **Outbound** and **Inbound**.
+> The diagnostics report contains two different report types: **Outbound** and **Inbound**.
 
 {% tabs local %}
 {% tab outbound %}

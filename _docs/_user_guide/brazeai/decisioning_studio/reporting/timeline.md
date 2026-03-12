@@ -7,7 +7,9 @@ description: "Learn how to use the Timeline report to view key events alongside 
 
 # Timeline report
 
-The timeline report provides a visual record of key events alongside your performance metrics. These events include agent runs, configuration changes, guardrail updates, and more. Annotations appear directly on uplift charts and in a dedicated timeline tab, giving you instant context for shifts in results without needing to track down historical changes.
+> The timeline report provides a visual record of key events alongside your performance metrics. These events include agent runs, configuration changes, guardrail updates, and more. 
+
+Annotations appear directly on uplift charts and in a dedicated timeline tab, giving you instant context for shifts in results without needing to track down historical changes.
 
 ![Timeline report showing a chart with performance metrics over time. Key events such as agent runs, configuration changes, and guardrail updates are marked as icons along the timeline. Below the chart, a table lists events with columns for date, type, label, details, and visibility in charts.]({% image_buster /assets/img/decisioning_studio/reporting_timeline.png %})
 

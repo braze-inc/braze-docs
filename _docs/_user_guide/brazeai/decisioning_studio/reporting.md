@@ -11,7 +11,7 @@ page_order: 3
 
 ## Prerequisites
 
-Before you can view Decisioning Studio reports in the Braze, you'll need to:
+Before you can view Decisioning Studio reports in the Braze, you must:
 
 - Have an active contract for Braze and BrazeAI Decisioning Studio™. 
 - Contact your CSM to enable BrazeAI Decisioning Studio™ for you on your behalf.
@@ -39,7 +39,7 @@ To set or exclude dates, select <i class="fa-solid fa-gear"></i> **Settings**, t
 
 ## Available reports {#available-reports}
 
-- **[Performance]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/performance/)**: High-level agent metrics that compare treatment groups to control groups, with **Trending** and **Driver Tree** views.
-- **[Insights]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/insights/)**: How recommendation options in your action bank are generated, including **Agent preferences** and **SHAPs** reports.
-- **[Diagnostics]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/diagnostics/)**: Outbound and inbound data health, including recommendation volume and data feed monitoring.
-- **[Timeline]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/timeline/)**: A visual record of key events (agent runs, configuration changes, guardrail updates) alongside performance metrics.
+- [Performance]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/performance/): High-level agent metrics that compare treatment groups to control groups, with **Trending** and **Driver Tree** views.
+- [Insights]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/insights/): How recommendation options in your action bank are generated, including agent preferences and SHAPs reports.
+- [Diagnostics]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/diagnostics/): Outbound and inbound data health, including recommendation volume and data feed monitoring.
+- [Timeline]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/timeline/): A visual record of key events (agent runs, configuration changes, guardrail updates) alongside performance metrics.

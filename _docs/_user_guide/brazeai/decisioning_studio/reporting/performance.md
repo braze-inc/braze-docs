@@ -7,11 +7,11 @@ description: "Learn how to use the Performance report to compare treatment group
 
 # Performance report
 
-> The Performance report shows how your decisioning agent performs compared to control groups. This guide explains what each section of the report represents, how metrics are calculated, and how to interpret the results.
+> The performance report shows how your decisioning agent performs compared to control groups. This guide explains what each section of the report represents, how metrics are calculated, and how to interpret the results.
 
 ## How the report is built
 
-Your Performance report is built in layers, entirely customized to your use case. Working in collaboration with your team: 
+Your performance report is built in layers, entirely customized to your use case. Working in collaboration with your team: 
 
 1. Braze defines what counts as an action (such as a send, click, purchase, or conversion).
 2. Braze defines how to measure that action daily (volume, revenue, unique people, and similar).
@@ -60,29 +60,22 @@ For example, if you see "Incremental LTV / Customer = 3.192", that reflects perf
 
 The center chart shows the same KPI as the top card, but calculated per day. Each point represents that day's KPI value. If you have 7-day rolling selected, each point reflects a rolling average, which smooths daily volatility.
 
-Use the chart to understand:
+Use the chart to understand trends over time, performance shifts, and seasonality or timing effects. Use the KPI card to understand the overall impact across the full window.
 
-- Trends over time
-- Performance shifts
-- Seasonality or timing effects
+The chart and KPI card are designed to show different things. The chart shows daily performance ("How did you perform each day?"). The KPI card shows full-period performance ("How did you perform across the entire period?"). For rate metrics, they answer different questions. 
 
-Use the KPI card to understand:
+Consider the following example with these conversion rate:
 
-- Overall impact across the full window
+- Day 1: 10 conversions out of 100 customers = 10%
+- Day 2: 2 conversions out of 10 customers = 20%
 
-They are designed to show different things.
-
-{% alert note %}
-**Why the chart and KPI card can differ:** The chart shows daily performance ("How did you perform each day?"). The KPI card shows full-period performance ("How did you perform across the entire period?"). For rate metrics, they answer different questions. Example: Day 1 = 10%, Day 2 = 20%. The chart shows both. The card recalculates across both days combined (12 conversions / 110 customers = 10.9%), not an average of 10% and 20%.
-{% endalert %}
+The chart shows both. The KPI card recalculates across both days combined (12 conversions / 110 customers = 10.9%), not an average of 10% and 20%.
 
 ## Uplift chart
 
 ![Performance report showing the Uplift percentage chart on the right side, displaying the percentage difference between Decisioning Studio and the BAU group over time.]({% image_buster /assets/img/decisioning_studio/reporting_performance_uplift.png %})
 
-The uplift chart shows the percentage difference between your comparison groups. It is calculated as:
-
-**(Primary Group - Comparison Group) / Comparison Group**
+The uplift chart shows the percentage difference between your comparison groups. It is calculated as: **(Primary Group - Comparison Group) / Comparison Group**
 
 This is calculated dynamically based on the KPI chart values.
 
@@ -102,22 +95,20 @@ The table at the bottom of the report shows raw totals across the selected date 
 
 This section reinforces the relationship between the different views:
 
-- The **KPI card** is a window-level calculation.
-- The **chart** is a daily calculation.
-- The **table** shows the underlying totals driving the KPI.
+- The KPI card is a window-level calculation.
+- The chart is a daily calculation.
+- The*table shows the underlying totals driving the KPI.
 
 ## Driver tree
 
 ![Performance report in Driver Tree view, showing a hierarchical diagram that breaks down KPIs like Incremental LTV / Customer into component drivers such as Conversions / Customer and Clicks / Customer.]({% image_buster /assets/img/decisioning_studio/reporting_performance_driver_tree.png %})
 
-The Driver Tree breaks a KPI into its component drivers. For example, Incremental LTV / Customer may break into:
+The driver tree breaks a KPI into its component drivers. For example, Incremental LTV / Customer may break into:
 
 - Conversions / Customer
 - Revenue per Conversion
 
-Driver Trees use the same KPI definitions as the rest of the dashboard and introduce no new math. They help explain what is driving performance.
-
-If a KPI definition changes, charts, cards, uplift, and driver trees all update together.
+Driver trees use the same KPI definitions as the rest of the dashboard and introduce no new math. They help explain what is driving performance. If a KPI definition changes, charts, cards, uplift, and driver trees all update together.
 
 ## Frequently asked questions
 
@@ -141,9 +132,8 @@ If you need clarity on your reporting window or data availability rules, contact
 
 KPIs typically fall into two categories:
 
-**Volume metrics** (such as total conversions, total revenue, or total clicks) answer: "How much happened?"
-
-**Rate metrics** (such as conversion rate, revenue per user, or click-through rate) answer: "How efficiently did it happen?"
+- **Volume metrics** (such as total conversions, total revenue, or total clicks) answer: "How much happened?"
+- **Rate metrics** (such as conversion rate, revenue per user, or click-through rate) answer: "How efficiently did it happen?"
 
 Volume and rate tell different stories. A campaign can drive higher volume but lower efficiency, or vice versa. When interpreting results, always confirm which type of KPI you're looking at.
 
@@ -159,22 +149,22 @@ If you need to understand how uniqueness was defined in your setup, contact your
 
 If your Performance report doesn't match another dashboard (such as an ESP, analytics tool, or internal BI report), it doesn't necessarily mean something is wrong. Different systems often apply different definitions and rules. Common reasons include:
 
-- **Attribution rules**: Some metrics apply attribution logic, meaning only activity that meets defined criteria is counted. If another system counts all activity without attribution logic, totals may differ.
-- **Machine and bot engagement filtering**: Known machine or bot-driven engagement (such as automated security scans or non-human clicks) is filtered out to ensure performance reflects real human behavior. Some platforms include these interactions in their totals.
-- **Different definitions of "unique"**: In this report, uniqueness is typically applied per day. Another system may calculate uniqueness across an entire campaign window. Those are different business questions and produce different numbers.
-- **Date range and data availability rules**: Reports may apply activation delays, data availability delays, or excluded dates. Another system may include very recent or incomplete data, creating temporary mismatches.
-- **Volume versus rate differences**: One system may show total volume (such as total conversions), while another shows a rate (such as conversions per customer). Always confirm that you're comparing the same type of metric.
+- **Attribution rules:** Some metrics apply attribution logic, meaning only activity that meets defined criteria is counted. If another system counts all activity without attribution logic, totals may differ.
+- **Machine and bot engagement filtering:** Known machine or bot-driven engagement (such as automated security scans or non-human clicks) is filtered out to ensure performance reflects real human behavior. Some platforms include these interactions in their totals.
+- **Different definitions of "unique":** In this report, uniqueness is typically applied per day. Another system may calculate uniqueness across an entire campaign window. Those are different business questions and produce different numbers.
+- **Date range and data availability rules:** Reports may apply activation delays, data availability delays, or excluded dates. Another system may include very recent or incomplete data, creating temporary mismatches.
+- **Volume versus rate differences:** One system may show total volume (such as total conversions), while another shows a rate (such as conversions per customer). Always confirm that you're comparing the same type of metric.
 
 ### Why doesn't the number in the chart match the summary card?
 
 The chart and summary card answer different questions:
 
-- The **chart** shows daily performance. Each point reflects the KPI calculated for that individual day.
-- The **summary card** shows full-period performance. It recalculates the KPI across the entire selected date range.
+- **Chart:** Shows daily performance. Each point reflects the KPI calculated for that individual day.
+- **Summary card:** Shows full-period performance. It recalculates the KPI across the entire selected date range.
 
 Use the chart to understand day-to-day volatility, timing effects, and performance shifts over time. Use the summary card to understand overall impact across the period.
 
-For example, with conversion rate:
+Consider this example with the following conversion rate:
 
 - Day 1: 10 conversions out of 100 customers = 10%
 - Day 2: 2 conversions out of 10 customers = 20%
@@ -188,7 +178,7 @@ When measuring unique behavior (like unique clickers or converters), uniqueness 
 - Day 1: Customers who clicked: A, B, C = 3 unique
 - Day 2: Customers who clicked: B, C, D = 3 unique
 
-The chart shows 3 on Day 1 and 3 on Day 2. Across both days, you see 3 + 3 = 6. Customers B and C are counted once per day, which is intentional.
+The chart shows 3 on Day 1 and 3 on Day 2. Across both days, you can see 3 + 3 = 6. Customers B and C are counted once per day, which is intentional.
 
 This configuration answers: "How many unique customer engagements happened across days?" It does not answer: "How many individual customers engaged at least once across the entire period?"
 

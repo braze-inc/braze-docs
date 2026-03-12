@@ -7,7 +7,7 @@ description: "Learn how to use the Insights report to understand how recommendat
 
 # Insights report
 
-Insights show you how the various recommendation options in your action bank are generated, like block selection. There are two different insights reports: **Agent preferences** and **SHAPs**.
+> Insights show you how the various recommendation options in your action bank are generated, like block selection. There are two different insights reports: **Agent preferences** and **SHAPs**.
 
 {% tabs local %}
 {% tab agent preferences %}
@@ -30,7 +30,7 @@ Refer to the following table for more details about this report:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 
-{% tab shaps %}
+{% tab SHAPs %}
 The **SHAPs** report uses the Shapley Additive exPlanations (SHAP) model to help you quantify how each feature or variable contributes to your recommendation agent. Each point on the chart represents one SHAP and the distribution of the points represents a general sense of a feature's directional impact.
 
 ![SHAPs report chart displaying a horizontal bar graph with multiple colored bars representing different features or variables. Each bar shows the impact of a feature on the recommendation agent, with the x-axis labeled SHAP value and the y-axis listing feature names such as Recency, Frequency, and Channel. The chart visualizes how each feature contributes positively or negatively to the agent's predictions.]({% image_buster /assets/img/decisioning_studio/reporting_insights_shaps.png %})
