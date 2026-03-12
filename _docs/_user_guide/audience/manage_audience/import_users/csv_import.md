@@ -381,7 +381,7 @@ Additionally, beginning a number attribute with zero will cause issues because n
 
 #### Default attribute types
 
-Some default attributes may only accept certain values as valid for user updates. For guidance, refer to [Constructing your CSV]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/#constructing-your-csv).
+Some default attributes may only accept certain values as valid for user updates. For guidance, refer to [Constructing your CSV]({{site.baseurl}}/user_guide/audience/manage_audience/import_users/).
 
 Trailing spaces and differences in capitalization can cause a value to be interpreted as invalid. For example, in the following CSV file, only the user in the first row (`brazetest1`) has their email and push statuses updated successfully because the accepted values are `unsubscribed`, `subscribed`, and `opted_in`. 
 

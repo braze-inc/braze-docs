@@ -1,10 +1,10 @@
 ---
 nav_title: Subscription preferences
 article_title: Subscription preferences
-page_order: 4
+page_order: 5
 layout: dev_guide
 guide_top_header: "Subscription preferences"
-guide_top_text: "Manage how users opt in and out of your messaging channels. Use preference centers to give users control over their communication preferences."
+guide_top_text: "Manage how users opt in and out of your messaging channels. Use preference centers to give users control over their email communication preferences."
 
 page_type: landing
 description: "This section covers subscription preferences in Braze, including preference centers and subscription management."

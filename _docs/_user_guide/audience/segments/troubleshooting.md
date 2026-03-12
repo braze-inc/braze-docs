@@ -26,7 +26,7 @@ Your dashboard will display an error when a campaign, Canvas, or segment exceeds
 
 - If your audience references multiple segments, make sure the segments don't have redundancies, such as the same filters appearing in multiple segments.
 - Make sure you aren't referencing outdated data in segment filters. For example, an outdated filter might look for users who haven't received a certain Canvas step in the past week, even though the Canvas has been stopped for months.
-- Segments that are just lists of user IDs or emails (which often use a regex filter) can be converted to a [CSV import]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/) and be simplified into a single CSV filter.
+- Segments that are just lists of user IDs or emails (which often use a regex filter) can be converted to a [CSV import]({{site.baseurl}}/user_guide/audience/manage_audience/import_users/csv_import/) and be simplified into a single CSV filter.
 - If you have CDI, you may be able to create a CDI segment that pulls the group directly from your data warehouse.
 
 You can also [contact Support]({{site.baseurl}}/braze_support/) for further assistance with filter optimization.
@@ -54,7 +54,7 @@ This error occurs very rarely, but when it does occur, it’s typically with reg
 
 1. Export the users from the affected segment or the specific regex filter. 
 2. Clean the CSV as needed. You need either Braze ID or Appboy ID, but you can remove all other columns if they aren't needed. We also recommend reviewing your data to confirm it’s recent (for example, remove users who you're no longer trying to target).
-3. [Import]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/) the CSV file again, which automatically groups the users into a single, highly efficient CSV-based filter.
+3. [Import]({{site.baseurl}}/user_guide/audience/manage_audience/import_users/csv_import/) the CSV file again, which automatically groups the users into a single, highly efficient CSV-based filter.
 
 ## User behavior
 

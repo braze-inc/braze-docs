@@ -1,7 +1,7 @@
 ---
 nav_title: Statuses
 article_title: Statuses
-page_order: 11
+page_order: 5
 description: "Learn about statuses for campaigns and Canvases and how to use them in the dashboard."
 tool:
     - Campaigns
@@ -55,7 +55,7 @@ To resume the Canvas, go to the **Summary** step of the Canvas builder and selec
 You can monitor your messages by status to review the performance details. For example, if you have a series of active campaigns, you can evaluate the performance of each campaign with their engagement metrics and make adjustments as needed. If instead you have a few stopped Canvases, you can consider whether they should be resumed for messaging or archived entirely.
 
 {% alert tip %}
-Looking for more ways to stay organized? Add [teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams) and [tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags) to provide more context at-a-glance.
+Looking for more ways to stay organized? Add [teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams) and [tags]({{site.baseurl}}/user_guide/messaging/governance/tags/) to provide more context at-a-glance.
 {% endalert %}
 
 ### Audit your active messages

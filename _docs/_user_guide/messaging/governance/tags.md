@@ -1,7 +1,7 @@
 ---
 nav_title: Tags
 article_title: Tags
-page_order: 4
+page_order: 6
 page_type: reference
 description: "This reference article covers tags for campaigns, Canvases, segments, and custom data in the Braze dashboard."
 tool:

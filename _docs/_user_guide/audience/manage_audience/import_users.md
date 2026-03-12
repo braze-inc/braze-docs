@@ -38,7 +38,7 @@ Have you read Ulysses?
 
 ### Braze CSV import
 
-You can use CSV import to record and update the following user attributes and custom events. To get started, see [CSV Import]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/).
+You can use CSV import to record and update the following user attributes and custom events. To get started, see [CSV Import]({{site.baseurl}}/user_guide/audience/manage_audience/import_users/csv_import/).
 
 |Type|Definition|Example|Maximum file size|
 |---|---|---|---|

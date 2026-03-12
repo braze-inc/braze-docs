@@ -1,7 +1,7 @@
 ---
 nav_title: Copy across workspaces
 article_title: Copy across workspaces
-page_order: 2
+page_order: 3
 alias: "/copying_to_workspaces/"
 page_type: reference
 description: "This reference article provides an overview of how to copy campaigns and Canvases to different workspaces."
@@ -65,7 +65,7 @@ Note that the following is not a comprehensive list of what is copied across wor
 | Description | Territories | 
 | Type | Tags | 
 | Actions (nested) | Segments | 
-| Conversion behaviors (nested) | Approvals | 
+| Conversion behaviors (nested) | [Approvals]({{site.baseurl}}/user_guide/messaging/governance/approvals/) | 
 | Quiet time configurations | Trigger schedule | 
 | Frequency capping configurations | Campaign summaries | 
 | Recipient subscription state | Filters | 
@@ -81,7 +81,7 @@ Note that the following is not a comprehensive list of what is copied across wor
 | Description | Territories | 
 | Type | Tags | 
 | Actions (nested) | Segments | 
-| Conversion behaviors (nested) | Approvals | 
+| Conversion behaviors (nested) | [Approvals]({{site.baseurl}}/user_guide/messaging/governance/approvals/) | 
 | Quiet time configurations | Trigger schedule | 
 | Frequency capping configurations | Canvas summaries | 
 | Recipient subscription state | Filters | 

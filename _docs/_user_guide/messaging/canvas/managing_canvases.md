@@ -28,10 +28,10 @@ guide_featured_list:
 guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: Approval workflow
-    link: /docs/user_guide/messaging/messaging_fundamentals/approvals/
+    link: /docs/user_guide/messaging/governance/approvals/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Messaging rules for approval
-    link: /docs/user_guide/messaging/messaging_fundamentals/approvals/messaging_rules/
+    link: /docs/user_guide/messaging/governance/approvals/messaging_rules/
     image: /assets/img/braze_icons/check-square.svg
   - name: Archiving messages
     link: /docs/user_guide/messaging/messaging_fundamentals/archiving/

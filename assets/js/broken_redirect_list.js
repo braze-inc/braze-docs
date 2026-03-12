@@ -2354,8 +2354,8 @@ validurls['/docs/user_guide/engagement_tools/canvas/ideas_and_strategies/localiz
 validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages'] = '/docs/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages';
 validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign'] = '/docs/user_guide/messaging/messaging_fundamentals/localization/';
 
-validurls['/docs/user_guide/engagement_tools/canvas/get_started/canvas_status/'] = '/docs/user_guide/messaging/messaging_fundamentals/statuses/';
-validurls['/docs/user_guide/engagement_tools/campaigns/getting_started/understanding_campaign_status/'] = '/docs/user_guide/messaging/messaging_fundamentals/statuses/';
+validurls['/docs/user_guide/engagement_tools/canvas/get_started/canvas_status/'] = '/docs/user_guide/messaging/governance/statuses/';
+validurls['/docs/user_guide/engagement_tools/campaigns/getting_started/understanding_campaign_status/'] = '/docs/user_guide/messaging/governance/statuses/';
 
 validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/archiving_campaigns/'] = '/docs/user_guide/messaging/messaging_fundamentals/archiving/';
 validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/archiving_canvases/'] = '/docs/user_guide/messaging/messaging_fundamentals/archiving/';
@@ -2363,10 +2363,10 @@ validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/archiving_
 validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_duplication/'] = '/docs/user_guide/messaging/messaging_fundamentals/duplicating/';
 validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/'] = '/docs/user_guide/messaging/messaging_fundamentals/duplicating/';
 
-validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/'] = '/docs/user_guide/messaging/messaging_fundamentals/approvals/';
-validurls['/docs/campaign_approval/'] = '/docs/user_guide/messaging/messaging_fundamentals/approvals/';
-validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_approval/'] = '/docs/user_guide/messaging/messaging_fundamentals/approvals/';
-validurls['/docs/canvas_approval/'] = '/docs/user_guide/messaging/messaging_fundamentals/approvals/';
+validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/'] = '/docs/user_guide/messaging/governance/approvals/';
+validurls['/docs/campaign_approval/'] = '/docs/user_guide/messaging/governance/approvals/';
+validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_approval/'] = '/docs/user_guide/messaging/governance/approvals/';
+validurls['/docs/canvas_approval/'] = '/docs/user_guide/messaging/governance/approvals/';
 
 validurls['/docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/'] = '/docs/user_guide/messaging/messaging_fundamentals/conversion_events/';
 
@@ -3545,7 +3545,12 @@ validurls['/docs/user_guide/engagement_tools/segments/troubleshooting/'] = '/doc
 // Audience > Suppression lists, User profiles, Manage users (extracted from segments)
 validurls['/docs/user_guide/engagement_tools/segments/suppression_lists/'] = '/docs/user_guide/audience/suppression_lists/';
 validurls['/docs/user_guide/engagement_tools/segments/user_profiles/'] = '/docs/user_guide/audience/user_profiles/';
-validurls['/docs/user_guide/engagement_tools/segments/user_profiles/duplicate_users/'] = '/docs/user_guide/audience/user_profiles/merge_duplicate_users/';
+validurls['/docs/user_guide/engagement_tools/segments/user_profiles/duplicate_users/'] = '/docs/user_guide/audience/manage_audience/merge_duplicate_users/';
+
+// Audience > Manage audience (import/merge moved from user_profiles)
+validurls['/docs/user_guide/audience/user_profiles/import_users/'] = '/docs/user_guide/audience/manage_audience/import_users/';
+validurls['/docs/user_guide/audience/user_profiles/import_users/csv_import/'] = '/docs/user_guide/audience/manage_audience/import_users/csv_import/';
+validurls['/docs/user_guide/audience/user_profiles/merge_duplicate_users/'] = '/docs/user_guide/audience/manage_audience/merge_duplicate_users/';
 
 // Audience > Segment data (moved to Data in Day 2)
 validurls['/docs/user_guide/engagement_tools/segments/viewing_and_understanding_segment_data/'] = '/docs/user_guide/audience/segments/segment_data/';
@@ -3554,16 +3559,16 @@ validurls['/docs/user_guide/data/distribution/export_braze_data/segment_data/'] 
 // Audience > Global control group (from analytics/reporting)
 validurls['/docs/user_guide/analytics/reporting/global_control_group_reporting/'] = '/docs/user_guide/audience/global_control_group/';
 
-// Audience > Manage users (from data/unification)
-validurls['/docs/user_guide/data/unification/user_data/import_users/'] = '/docs/user_guide/audience/user_profiles/import_users/';
-validurls['/docs/user_guide/data/unification/user_data/import_users/csv/'] = '/docs/user_guide/audience/user_profiles/import_users/csv_import/';
+// Audience > Manage audience (from data/unification)
+validurls['/docs/user_guide/data/unification/user_data/import_users/'] = '/docs/user_guide/audience/manage_audience/import_users/';
+validurls['/docs/user_guide/data/unification/user_data/import_users/csv/'] = '/docs/user_guide/audience/manage_audience/import_users/csv_import/';
 validurls['/docs/user_guide/data/unification/user_data/delete_users/'] = '/docs/user_guide/audience/user_profiles/delete_users/';
 
-// Audience > User profiles (from manage_users)
-validurls['/docs/user_guide/audience/manage_users/'] = '/docs/user_guide/audience/user_profiles/';
-validurls['/docs/user_guide/audience/manage_users/import_users/'] = '/docs/user_guide/audience/user_profiles/import_users/';
-validurls['/docs/user_guide/audience/manage_users/import_users/csv_import/'] = '/docs/user_guide/audience/user_profiles/import_users/csv_import/';
-validurls['/docs/user_guide/audience/manage_users/merge_duplicate_users/'] = '/docs/user_guide/audience/user_profiles/merge_duplicate_users/';
+// Audience > Manage audience, User profiles (from manage_users)
+validurls['/docs/user_guide/audience/manage_users/'] = '/docs/user_guide/audience/manage_audience/';
+validurls['/docs/user_guide/audience/manage_users/import_users/'] = '/docs/user_guide/audience/manage_audience/import_users/';
+validurls['/docs/user_guide/audience/manage_users/import_users/csv_import/'] = '/docs/user_guide/audience/manage_audience/import_users/csv_import/';
+validurls['/docs/user_guide/audience/manage_users/merge_duplicate_users/'] = '/docs/user_guide/audience/manage_audience/merge_duplicate_users/';
 validurls['/docs/user_guide/audience/manage_users/delete_users/'] = '/docs/user_guide/audience/user_profiles/delete_users/';
 
 // Audience > Subscription preferences > Preference center (from email)
@@ -3723,8 +3728,10 @@ validurls['/docs/user_guide/engagement_tools/landing_pages/retargeting/'] = '/do
 validurls['/docs/user_guide/engagement_tools/landing_pages/tracking_users/'] = '/docs/user_guide/messaging/landing_pages/tracking_users/';
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/'] = '/docs/user_guide/messaging/messaging_fundamentals/';
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/accessibility/'] = '/docs/user_guide/messaging/messaging_fundamentals/accessibility/';
-validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/approvals/'] = '/docs/user_guide/messaging/messaging_fundamentals/approvals/';
-validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules/'] = '/docs/user_guide/messaging/messaging_fundamentals/approvals/messaging_rules/';
+validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/approvals/'] = '/docs/user_guide/messaging/governance/approvals/';
+validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules/'] = '/docs/user_guide/messaging/governance/approvals/messaging_rules/';
+validurls['/docs/user_guide/messaging/messaging_fundamentals/approvals/'] = '/docs/user_guide/messaging/governance/approvals/';
+validurls['/docs/user_guide/messaging/messaging_fundamentals/approvals/messaging_rules/'] = '/docs/user_guide/messaging/governance/approvals/messaging_rules/';
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/archiving/'] = '/docs/user_guide/messaging/messaging_fundamentals/archiving/';
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/conversion_events/'] = '/docs/user_guide/messaging/messaging_fundamentals/conversion_events/';
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'] = '/docs/user_guide/messaging/messaging_fundamentals/copy_across_workspaces/';
@@ -3739,7 +3746,8 @@ validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/localization
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/product_blocks/'] = '/docs/user_guide/messaging/design_and_edit/product_blocks/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/rate_limiting/'] = '/docs/user_guide/messaging/messaging_fundamentals/rate_limiting/';
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/reeligibility/'] = '/docs/user_guide/messaging/messaging_fundamentals/re_eligibility/';
-validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/'] = '/docs/user_guide/messaging/messaging_fundamentals/statuses/';
+validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/'] = '/docs/user_guide/messaging/governance/statuses/';
+validurls['/docs/user_guide/messaging/messaging_fundamentals/statuses/'] = '/docs/user_guide/messaging/governance/statuses/';
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/targeting_users/'] = '/docs/user_guide/messaging/messaging_fundamentals/target_users/';
 validurls['/docs/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/'] = '/docs/user_guide/messaging/design_and_edit/content_blocks/';
 validurls['/docs/user_guide/data/activation/catalogs/product_blocks/'] = '/docs/user_guide/messaging/design_and_edit/product_blocks/';

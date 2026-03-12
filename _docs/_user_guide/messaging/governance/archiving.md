@@ -1,7 +1,7 @@
 ---
 nav_title: Archive
 article_title: Archive
-page_order: 1
+page_order: 2
 page_type: reference
 description: "This reference article covers how to archive your campaigns and Canvases."
 tool:

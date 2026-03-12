@@ -3,13 +3,13 @@ nav_title: Fundamentals
 article_title: Messaging Fundamentals
 layout: dev_guide
 page_order: 1
-guide_top_header: "Messaging Fundamentals"
-guide_top_text: "> In Braze, you can compose, send, and manage your messages by using <a href='/docs/user_guide/getting_started/campaigns_canvases'>a campaign or a Canvas</a>. For both these messaging methods, there are some shared messaging fundamentals for composition (setting up your message) and management (administratively handling your message)."
+guide_top_header: "Fundamentals"
+guide_top_text: "Learn the shared concepts for who receives your message, when it sends, and how you measure success—whether you use a <a href='/docs/user_guide/get_started/campaigns_and_canvases/'>campaign or a Canvas</a>. These fundamentals apply to both."
 page_type: landing
 tool: 
     - Campaigns
     - Canvas
-description: "This landing page is home to articles about the fundamentals of messaging with campaigns and Canvases. Here, you'll find resources on strategically using conversion events and determining your delivery type when composing your messages, and using the approval workflow and understanding statuses when managing your messages."
+description: "Concepts shared by campaigns and Canvases: targeting, delivery, conversion events, and pre-launch workflow."
 
 guide_featured_title: "Composition"
 guide_featured_description: |
@@ -21,8 +21,6 @@ guide_featured_description: |
   * Build the content of your message.
 
   By understanding these shared terms and how they're applicable, you can strategically build your messages regardless of which messaging method you choose.
-
-  ### Related articles
 guide_featured_list:
   - name: Accessibility
     link: /docs/user_guide/messaging/messaging_fundamentals/accessibility/
@@ -49,27 +47,14 @@ guide_featured_list:
     link: /docs/user_guide/messaging/messaging_fundamentals/target_users/
     image: /assets/img/braze_icons/target-04.svg
 
-guide_menu_title: "Management"
+guide_menu_title: "Testing"
 guide_menu_description: |
-  After creating your message, there are several basic and effective ways you can manage and organize your dashboard to prepare for launch and to handle after launch. This can include how you:
-
-  * Set up an approval workflow to verify your message has the necessary settings and details to launch.
-  * View your messages by their status to check which campaigns and Canvases are in the process of sending.
-
-  For archiving, duplicating, and copying campaigns and Canvases across workspaces, see [Governance]({{site.baseurl}}/user_guide/messaging/governance/).
-
-  ### Related articles
+  Before sending messages, take steps to review, test, and manage your campaigns and Canvases. For additional options and controls, see [Governance](/docs/user_guide/messaging/governance/).
 guide_menu_list:
-  - name: Approval workflow
-    link: /docs/user_guide/messaging/messaging_fundamentals/approvals/
-    image: /assets/img/braze_icons/brush-02.svg
-  - name: Messaging statuses
-    link: /docs/user_guide/messaging/messaging_fundamentals/statuses/
+  - name: Know before sending
+    link: /docs/know_before_send/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Send test messages
     link: /docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: Know before sending
-    link: /docs/know_before_send/
-    image: /assets/img/braze_icons/book-closed.svg
 ---

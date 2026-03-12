@@ -207,7 +207,7 @@ Here's an example payload to `/users/merge` that targets an unidentified user pr
 {% endraw %}
 
 {% alert tip %}
-To learn more about managing duplicate users in Braze, see [Duplicate Users]({{site.baseurl}}/user_guide/audience/user_profiles/merge_duplicate_users/).
+To learn more about managing duplicate users in Braze, see [Duplicate Users]({{site.baseurl}}/user_guide/audience/manage_audience/merge_duplicate_users/).
 {% endalert %}
 
 ## User setup
