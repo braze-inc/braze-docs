@@ -1,6 +1,6 @@
 ---
-nav_title: Braze Docs Style Guide
-article_title: Braze Docs Style Guide
+nav_title: Braze Docs style guide
+article_title: Braze Docs style guide
 description: "Writing style guide for Braze Docs."
 page_order: 0
 noindex: true
@@ -1236,7 +1236,7 @@ This section covers some guidelines to keep in mind when writing instructions fo
 General guidelines:
 
 * **Use the right tone.** For instructions, keep your writing short, to the point, and task-oriented. Your writing doesn’t need to be terse or dry, but it should be direct. When introducing tasks or subtasks, you can use a more informal tone to add variety. Avoid using “please” to keep the tone informal. Make liberal use contractions to keep your tone approachable.   
-* **Follow parallel heading format.** Pick one format for your headings and stick to it. Keep your content scannable and predictable. In general, use gerunds (ing-words) for page titles, and imperative verbs for task-based headings. 
+* **Follow parallel heading format.** Pick one format for your headings and stick to it. Keep your content scannable and predictable. In general, avoid gerunds (ing-words) for page titles, and use imperative verbs for task-based headings. 
 
 Before instructions:
 
@@ -1824,9 +1824,9 @@ Capitalize all states and provinces.
 
 #### Headings and titles {#headings-and-titles}
 
-For article headings and titles, use sentence case capitalization. Be descriptive when writing headings and titles, and focus on the main purpose of the content based on the article type. 
+For article headings and titles, use sentence case capitalization. Be descriptive when writing headings and titles, and focus on the main purpose of the content based on the article type. Do not use ampersands in place of the word "and".
 
-For article titles, use gerunds (verbs ending in *-ing*) to begin the title when applicable. Keep the article titles concise and make sure it is appropriate for the content. For example, a reference article about SMS messages could be titled “About SMS”.
+For article titles, avoid gerunds (verbs ending in *-ing*). Keep the article titles concise and make sure it is appropriate for the content. For example, a reference article about SMS messages could be titled “About SMS”.
 
 For article headings, be concise and consistent across heading titles. For example, if the article’s Heading 1 style defines each step (ex. **Step 1: Create a new push campaign**), then keep this format across the article headings for consistency.
 
@@ -2412,7 +2412,7 @@ Lowercase.
 
 #### D
 
-**Dark Mode**
+**Dark Mode theme**, **Dark Mode Preview**, **dark mode concept**
 
 **dashboard / Braze dashboard**  
 Use to refer to Braze as a platform. Use lowercase (dashboard not Dashboard).

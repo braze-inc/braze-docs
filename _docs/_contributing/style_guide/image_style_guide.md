@@ -1,6 +1,6 @@
 ---
 nav_title: Image copy style guide
-article_title: Image Copy Style Guide
+article_title: Image copy style guide
 description: "Guidelines for creating and styling images in Braze Docs."
 page_order: 1
 noindex: true
