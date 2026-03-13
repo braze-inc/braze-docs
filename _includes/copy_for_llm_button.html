@@ -23,7 +23,6 @@ Copy for LLM Button - Only show on developer guide pages that have processed mar
     <span class="copy-for-llm-text">View as Markdown</span>
   </button>
 
-  {%- unless page.name == 'build_with_llm.md' -%}
   <button
     id="build-with-llm-btn"
     type="button"
@@ -33,7 +32,6 @@ Copy for LLM Button - Only show on developer guide pages that have processed mar
     <i class="fas fa-robot" aria-hidden="true"></i>
     <span class="copy-for-llm-text">Build with an LLM</span>
   </button>
-  {%- endunless -%}
   
   <!-- Success/Error feedback -->
   <div id="copy-for-llm-feedback" class="copy-for-llm-feedback" style="display: none;">

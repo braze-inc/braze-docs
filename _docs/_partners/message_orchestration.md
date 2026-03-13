@@ -55,8 +55,6 @@ valid_partner_list:
   url: /docs/partners/blayer/
 - name: Dyspatch
   url: /docs/partners/dyspatch/
-- name: Denada
-  url: /docs/partners/denada/
 - name: Email Love
   url: /docs/partners/email_love/
 - name: IAM Studio

@@ -13,7 +13,7 @@ hidden: true
 
 > Braze SDK で Android Live 更新 ([Progress Centric Notifications とも言います](https://developer.android.com/about/versions/16/features/progress-centric-notifications)) を使用する方法について説明します。これらの通知は、[Swift Braze SDK のライブアクティビティ]({{site.baseurl}}/developer_guide/live_notifications/live_activities)に似ており、インタラクティブなロック画面通知を表示できます。Android 16 では、進行状況を中心とした通知が導入され、ユーザーが開始した最初から最後までのジャーニーをシームレスに追跡できます。
 
-## 仕組み
+## CDI の仕組み
 
 [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) インターフェイスを使用して、Braze プッシュ通知の表示方法をカスタマイズできます。`BrazeNotificationFactory` を拡張することで、通知がユーザーに表示される前に Braze はファクトリーの`createNotification()` メソッドを呼び出します。その後、Braze ダッシュボードまたは REST API を通じて送信されたカスタムのキーと値のペアを含むペイロードを渡します。
 

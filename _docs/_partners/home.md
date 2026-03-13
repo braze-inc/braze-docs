@@ -44,8 +44,6 @@ valid_partner_list:
   url: /docs/partners/airbridge/
 - name: Dyspatch.io
   url: /docs/partners/dyspatch/
-- name: Denada
-  url: /docs/partners/denada/
 - name: Stensul
   url: /docs/partners/stensul/
 - name: Stripo

@@ -128,13 +128,3 @@ Granular permissions are in early access. When migration is planned for your com
 {% endalert %}
 
 {% endif %}
-
-{% if include.alert == 'Shopify cart token alias' %}
-
-{% alert important %}
-For this integration, the user alias must use the following format so that Braze can match webhooks to the correct user profile:<br><br>
-- `alias_label`: `shopify_cart_${cartToken}`
-- `alias_name`: `shopify_cart_token`
-{% endalert %}
-
-{% endif %}

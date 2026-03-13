@@ -14,7 +14,7 @@ channel: in-app messages
 
 > アプリ内メッセージをキャンバスジャーニーの一部として追加して、顧客がアプリを利用したときにリッチメッセージングを表示できます。
 
-## 仕組み
+## CDI の仕組み
 
 キャンバスでアプリ内メッセージを使用する前に、[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)に遅延とオーディエンスのオプションを設定してください。
 

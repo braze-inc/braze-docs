@@ -70,10 +70,6 @@ Not all data is merged from the anonymous profile. Push tokens and messaging his
 
 For information on how to set an `external_id` against a user profile, see our documentation ([iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift), [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web)).
 
-{% alert note %}
-Orphaned users are not eligible to receive messages.
-{% endalert %}
-
 ## User aliases
 
 To refer to users by identifiers other than the Braze `external_id`, set user aliases against a user profile. Any alias set against a user profile will act in addition to the user's `braze_id` or `external_id` as opposed to replacing it. There's no limit to the number of aliases that you can set against a user profile.
