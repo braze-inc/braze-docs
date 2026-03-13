@@ -1,6 +1,6 @@
 ---
-nav_title: "Message users"
-article_title: "Message users"
+nav_title: "User messages"
+article_title: "Whatsapp user messages"
 description: "This reference article covers how Braze will go about handling user messages."
 page_type: reference
 channel:
