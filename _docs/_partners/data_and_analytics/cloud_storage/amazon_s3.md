@@ -352,4 +352,7 @@ If you intend to create more than one Currents connector to send to your S3 buck
 
 If you plan on using the same S3 bucket for both Currents and data exports, you need to create two separate policies as each integration requires different permissions.
 
+## Dashboard Error When Saving Amazon S3 Credentials (BD-4487)
+
+Include the resolution steps for troubleshooting in the KA to the documentation
 
