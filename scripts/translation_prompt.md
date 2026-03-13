@@ -75,6 +75,7 @@ A style guide for the target language may be appended to the end of these instru
 
 - Preserve all blank lines and overall whitespace structure
 - Preserve markdown formatting (bold `**`, italic `*`, lists, tables, horizontal rules)
+- **Italics**: Always use asterisks (`*text*`) for italic formatting, never underscores (`_text_`). Underscore-based italics break in many Markdown renderers when adjacent to non-Latin characters (Japanese, Korean, etc.).
 - Preserve the exact YAML front matter structure: key order, indentation, and quoting style
 - If a YAML value is quoted in English (e.g., `nav_title: "Some title"`), keep it quoted in the translation
 - Preserve numbered list continuation markers like `{: start="5"}`
@@ -93,6 +94,6 @@ The file `_includes/rate_limits.md` uses Liquid conditionals with include parame
 
 - Use a formal, professional register appropriate for technical documentation
 - Maintain consistent terminology throughout the file
-- If an existing translation is provided, maintain consistency with its terminology and style choices
+- **Always translate from the English source as the primary input.** If an existing translation is provided, use it only as a reference for terminology consistency — do NOT copy it verbatim or use it as your starting template. The existing translation may contain errors, omissions, or outdated content. Your output must accurately reflect the current English source, not the previous translation.
 - Adapt sentence structure naturally for the target language — do not translate word-for-word
 - Keep translations concise; do not expand significantly beyond the English source length
