@@ -38,7 +38,7 @@ Under **Feature flag details**, enter a name, ID, and description for your featu
 | Field        | Description                                                                |
 |--------------|----------------------------------------------------------------------------|
 | Name         | A human-readable title for your marketers and administrators.              |
-| ID           | The unique ID you'll use in your code to check if this feature is [enabled for a user](#enabled). This ID cannot be changed later, so review our [ID naming best practices](#naming-conventions) before continuing. |
+| ID           | The unique ID you'll use in your code to check if this feature is [enabled for a user](#enabled). This ID cannot be changed later, so review the [ID naming best practices](#naming-conventions) before continuing. |
 | Description  | An optional description that gives some context about your feature flag.   |
 | Properties   | Optional properties that remotely configure your feature flag. They can be overwritten in Canvas steps or feature flag experiments. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -845,7 +845,7 @@ Then, make these changes in the iOS native layer as well. Note that there are no
 
 2. Your `featureFlags.subscribeToUpdates` callback implementation must call `BrazePlugin.processFeatureFlags(featureFlags)`.
 
-For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
+For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in the Braze Flutter SDK sample application.
 
 {% endsubtab %}
 {% endsubtabs %}
