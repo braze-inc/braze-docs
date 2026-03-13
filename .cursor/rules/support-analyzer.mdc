@@ -71,7 +71,7 @@ After processing all tickets:
 
 1. **Merge Duplicates** - Group tickets with identical or overlapping issues
 2. **Prioritize** by:
-   - Validated (Only if the resolution could be verified by source code)
+   - Verification (whether the resolution was confirmed against source code)
    - Frequency (same question from multiple customers)
    - Impact (blocks core functionality vs. edge case)
    - Effort (quick clarification vs. new guide)
@@ -141,5 +141,3 @@ Cursor identifies team members based on the CODEOWNERS file. If no owner is foun
 @support-analyzer.mdc Analyze the CSV file in <directory with csv files> and draft docs updates.
 Focus on [specific product area] if applicable.
 ```
-
-<!-- export from Looker https://braze.looker.com/x/4git0QPwJ9xjVtdBphbkPE -->
