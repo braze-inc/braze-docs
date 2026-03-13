@@ -25,6 +25,10 @@ If engagement is moderate, they may continue to throttle your email to collect m
 
 If your domain or IP is blocked by an ISP, the message logs in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) will contain information about what websites to visit to appeal to these ISPs and to get off those lists.
 
+## What is a good deliverability rate?
+
+**Delivery** refers to whether a message was accepted by the receiving server (for example, not bounced). **Deliverability** refers to whether the message reached the recipient's inbox (as opposed to the spam or junk folder). A "good" deliverability rate is context-dependent and varies by industry, list quality, and sending practices. In general, the goal is to maintain high inbox placement (most messages landing in the inbox rather than spam) and to improve over time through consistent sending, engagement, and list hygiene. Use the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) and your ESP's reporting to monitor bounces, spam reports, and engagement; address issues (such as blocklisting or throttling) as they arise.
+
 ## IP warming schedules
 
 We strongly recommend adhering strictly to an IP warming schedule to support deliverability. It's also important that you don't skip days, as consistent scaling improves delivery metrics. Choose a schedule based on your existing email sending history and deliverability metrics.
