@@ -14,7 +14,6 @@ function OptanonWrapper() { }
 <!-- OneTrust Cookies Consent Notice end for braze.com --> {% Kommentar %} Ende OneTrust {% endcomment %}
 
 <header id="header_nav" >
-  {% include search_preview_notice.html %}
   <nav class="navbar navbar-expand-md  flex-column-md flex-md-row navbar-dark" aria-label="Kopfzeilen-Navigation" title="Kopfzeilen-Navigation">
     <div id="header_wrapper">
       <div id="nav_logo">
@@ -88,4 +87,5 @@ function OptanonWrapper() { }
 
       {%- unless hide_nav %} {%- if active_title != "Startseite" -%} <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav_bar" aria-controls="nav_bar" aria-expanded="false" aria-label="Navigation umschalten" id="header_toggle"> <span class="burger burger-1"></span><span class="burger burger-2"></span><span class="burger burger-3"></span><span class="burger burger-4"></span> </button> {% endif %} {% endunless %}
   </nav>
+  {% include search_preview_notice.html %}
 </header>
