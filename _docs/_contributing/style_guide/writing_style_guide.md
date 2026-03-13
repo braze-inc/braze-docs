@@ -576,7 +576,7 @@ To add additional clarity to your writing and to aid in localization, use pronou
 
 #### Capitalization {#capitalization}
 
-Avoid unnecessary capitalization. In most instances, use sentence case. Title case should only be used for proper nouns or feature names (unless otherwise specified, see [Glossary](https://confluence.braze.com/pages/viewpage.action?spaceKey=MAR&title=Braze+Glossary)).
+Avoid unnecessary capitalization. In most instances, use sentence case. Title case should only be used for proper nouns or feature names.
 
 {::nomarkdown}
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
