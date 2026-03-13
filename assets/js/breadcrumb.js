@@ -4,10 +4,10 @@ $(document).ready(function() {
   if (breadcrumb.length){
     var topparent = 'parent_nav_top';
     var curpage = $('#left_navmenu .nav-item.active');
-    var bc_list =  curpage.text();
+    var bc_list =  curpage.length ? curpage.text() : '';
     var bc_link = '';
     var curtext = '';
-    dataparent =  curpage.attr('data-parent');
+    var dataparent = curpage.length ? curpage.attr('data-parent') : null;
     while (dataparent ) {
       curpage = $('#' + dataparent);
       curtext = curpage.text();
@@ -28,14 +28,22 @@ $(document).ready(function() {
     // }
     // bc_list = curtext + ' ' + bc_list;
     if (bc_list.length) {
-      if (page_collection_title) {
+      if (typeof page_collection_title !== 'undefined' && page_collection_title && typeof base_url !== 'undefined' && typeof page_collection !== 'undefined' && typeof page_collection_default_path !== 'undefined') {
         bc_list = '<a href="' + base_url + '/' + page_collection + '/' + page_collection_default_path + '">' + page_collection_title + '</a> &nbsp; > &nbsp;' + bc_list;
       }
       breadcrumb.html(bc_list);
       breadcrumb.parent().addClass('has_breadcrumb')
     }
     else {
-      breadcrumb.hide();
+      // No active nav item: still show collection link when available
+      if (typeof page_collection_title !== 'undefined' && page_collection_title && typeof base_url !== 'undefined' && typeof page_collection !== 'undefined' && typeof page_collection_default_path !== 'undefined') {
+        bc_list = '<a href="' + base_url + '/' + page_collection + '/' + page_collection_default_path + '">' + page_collection_title + '</a>';
+        breadcrumb.html(bc_list);
+        breadcrumb.parent().addClass('has_breadcrumb');
+      }
+      else {
+        breadcrumb.hide();
+      }
     }
   }
 });
