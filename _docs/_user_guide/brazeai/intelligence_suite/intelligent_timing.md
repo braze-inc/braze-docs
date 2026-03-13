@@ -105,16 +105,16 @@ When using Intelligent Timing, we recommend scheduling the Winning Variant send 
 
 ![A/B testing sections showing A/B test with Winning Variant selected, with winning criteria, send date, and local send time selected]({% image_buster /assets/img/intelligent_timing/ab_testing_intelligent_timing.png %})
 
-### Step 3: Choose a delivery window (optional)
+### Step 3: Configure Quiet Hours (optional)
 
-Optionally, you can choose to limit the delivery window. This may be useful if your campaign pertains to a specific event, sale, or promotion, but is generally not recommended when using Intelligent Timing. For more information, refer to [limitations](#limitations).
+Optionally, you can configure Quiet Hours to prevent messages from being sent during a specific time range. This may be useful if you don't want to contact users overnight or during certain hours, but is generally not recommended when using Intelligent Timing. For more information, refer to [limitations](#limitations).
 
-When specified, Braze only uses engagement data within that window to determine a user's optimal delivery time. If there aren't any relevant events within that window, the message sends at your set fallback time.
+Quiet Hours act as a no-send window. Intelligent Timing still determines each user's optimal send time, but if that time falls within Quiet Hours, Braze delays the message until the next available time outside the Quiet Hours period.
 
-To set a delivery window:
+To configure Quiet Hours:
 
 1. When configuring Intelligent Timing, select **Enable Quiet Hours**.
-2. Enter the start and end time of the delivery window.
+2. Enter the start and end time of the Quiet Hours (no-send) window.
 
 ### Step 4: Choose a fallback time {#campaign-fallback}
 
