@@ -839,11 +839,7 @@ Feature flag data is automatically forwarded from both the Android and iOS nativ
 {% endsubtab %}
 {% subtab Flutter SDK 17.1.0 and earlier %}
 
-Then, make these changes in the iOS native layer as well. Note that there are no additional steps needed on the Android layer.
-
-1. Implement `featureFlags.subscribeToUpdates` to subscribe to feature flag updates as described in the [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/featureflags-swift.class/subscribetoupdates(_:)) documentation.
-
-2. Your `featureFlags.subscribeToUpdates` callback implementation must call `BrazePlugin.processFeatureFlags(featureFlags)`.
+If you're using Flutter SDK 17.1.0 or earlier, feature flag data forwarding from the iOS native layer requires manual setup. Your application likely contains a `featureFlags.subscribeToUpdates` callback that calls `BrazePlugin.processFeatureFlags(featureFlags)`. To migrate to Flutter SDK 18.0.0, remove the `BrazePlugin.processFeatureFlags(_:)` call—data forwarding is now handled automatically.
 
 For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in the Braze Flutter SDK sample application.
 
