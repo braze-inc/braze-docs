@@ -51,13 +51,13 @@ This is a one-time setup. When your credentials are validated, your configuratio
 
 In Denada, open an email template in the editor and select **Export** > **Braze**.
 
-Enter a **template name** and **subject line** for the email. Choose your image handling preference:
+Enter a template name and subject line for the email. Choose your image handling preference:
 - **Upload new:** Upload all images to the Braze media library.
 - **Use existing:** Reuse previously uploaded images when available.
 
-If a template with the same name already exists in Braze, Denada detects the conflict and prompts you to confirm whether to overwrite or create a new template.
+If a template with the same name already exists in Braze, Denada detects the conflict and prompts you to confirm whether to overwrite the existing template or create a new one.
 
-Click **Export**. Denada renders the template to HTML, uploads images to Braze, and creates or updates the email template in your Braze account.
+Select **Export**. Denada renders the template to HTML, uploads images to Braze, and creates or updates the email template in your Braze account.
 
 ## Using the integration
 
