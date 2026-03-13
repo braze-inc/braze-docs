@@ -113,10 +113,8 @@ When specified, Braze only uses engagement data within that window to determine 
 
 To set a delivery window:
 
-1. When configuring Intelligent Timing, select **Only send messages within specific hours**.
+1. When configuring Intelligent Timing, select **Enable Quiet Hours**.
 2. Enter the start and end time of the delivery window.
-
-![Checkbox for "Only send messages within specific hours" selected, where the time window is set to between 8 am and 12 am in the user's local time.]({% image_buster /assets/img/intelligent_timing_hours.png %})
 
 ### Step 4: Choose a fallback time {#campaign-fallback}
 
