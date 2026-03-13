@@ -8,6 +8,9 @@ en:
   edit_github: Edit this page on GitHub
   page_nav_title: On this page
   helpful: "HOW HELPFUL WAS THIS PAGE?"
+  search_preview_notice_heading: "Search results open on the live site."
+  search_preview_notice_body: "To stay here: copy the `path` (everything after the domain) from the result link, paste it in the address bar after this preview's URL, or replace the domain with this preview's hostname. Or use the main navigation or sidebar."
+  search_preview_notice_dismiss: "Dismiss"
 fr:
   next: SUIVANTE
   previous: PRÉCÉDENTE
@@ -20,6 +23,9 @@ fr:
   helpful: "CETTE PAGE A-T-ELLE ÉTÉ UTILE?"
   translation_banner: "Cette page a été traduite automatiquement et peut contenir des inexactitudes. Pour signaler une erreur de traduction,"
   translation_banner_link: "ouvrez un ticket sur GitHub"
+  search_preview_notice_heading: "Les résultats de recherche s'ouvrent sur le site en direct."
+  search_preview_notice_body: "Pour rester ici : copiez le `path` (tout ce qui suit le domaine) du lien du résultat, collez-le dans la barre d'adresse après l'URL de cette prévisualisation, ou remplacez le domaine par l'hostname de cette prévisualisation. Ou utilisez la navigation principale ou la barre latérale."
+  search_preview_notice_dismiss: "Fermer"
 ja:
   next: 次へ
   previous: 前へ
@@ -32,6 +38,9 @@ ja:
   helpful: 「このページはどの程度役に立ちましたか?」
   translation_banner: "このページはAIにより自動翻訳されており、不正確な内容が含まれている可能性があります。翻訳の誤りを報告するには、"
   translation_banner_link: "GitHubでイシューを作成してください"
+  search_preview_notice_heading: "検索結果は本番サイトで開きます。"
+  search_preview_notice_body: "このプレビューに留まるには：結果リンクから`path`（ドメイン以降の部分）をコピーし、このプレビューのURLの後にアドレスバーに貼り付けるか、ドメインをこのプレビューのホスト名に置き換えてください。またはメインナビゲーションまたはサイドバーをご利用ください。"
+  search_preview_notice_dismiss: "閉じる"
 ko:
   next: 다음
   previous: 이전
@@ -44,6 +53,9 @@ ko:
   helpful: "이 페이지가 얼마나 도움이 되었나요?"
   translation_banner: "이 페이지는 AI로 자동 번역되었으며 부정확한 내용이 포함될 수 있습니다. 번역 오류를 신고하려면"
   translation_banner_link: "GitHub에서 이슈를 생성해 주세요"
+  search_preview_notice_heading: "검색 결과는 라이브 사이트에서 열립니다."
+  search_preview_notice_body: "여기에 머물려면: 결과 링크에서 `path`(도메인 뒤의 모든 부분)를 복사하여 이 미리보기의 URL 뒤의 주소 표시줄에 붙여 넣거나, 도메인을 이 미리보기의 호스트 이름으로 바꾸세요. 또는 메인 탐색 또는 사이드바를 사용하세요."
+  search_preview_notice_dismiss: "닫기"
 pt-br:
   next: PRÓXIMO
   previous: ANTERIOR
@@ -56,6 +68,9 @@ pt-br:
   helpful: "QUÃO ÚTIL FOI ESTA PÁGINA?"
   translation_banner: "Esta página foi traduzida automaticamente e pode conter imprecisões. Para relatar um erro de tradução,"
   translation_banner_link: "abra um issue no GitHub"
+  search_preview_notice_heading: "Os resultados da pesquisa abrem no site em produção."
+  search_preview_notice_body: "Para permanecer aqui: copie o `path` (tudo após o domínio) do link do resultado, cole na barra de endereços após a URL desta visualização ou substitua o domínio pelo hostname desta visualização. Ou use a navegação principal ou a barra lateral."
+  search_preview_notice_dismiss: "Fechar"
 es:
   next: SIGUIENTE
   previous: ANTERIOR
@@ -68,6 +83,9 @@ es:
   helpful: "¿QUÉ TAN ÚTIL FUE ESTA PÁGINA?"
   translation_banner: "Esta página fue traducida automáticamente y puede contener errores. Para reportar un error de traducción,"
   translation_banner_link: "abre un issue en GitHub"
+  search_preview_notice_heading: "Los resultados de búsqueda se abren en el sitio en vivo."
+  search_preview_notice_body: "Para permanecer aquí: copia el `path` (todo lo que sigue al dominio) del enlace del resultado, pégalo en la barra de direcciones después de la URL de esta vista previa o reemplaza el dominio por el hostname de esta vista previa. O usa la navegación principal o la barra lateral."
+  search_preview_notice_dismiss: "Cerrar"
 de:
   next: NÄCHSTES
   previous: VORHERIGES
@@ -80,3 +98,6 @@ de:
   useful: "WIE HILFREICH WAR DIESE SEITE?"
   translation_banner: "Diese Seite wurde automatisch übersetzt und kann Ungenauigkeiten enthalten. Um einen Übersetzungsfehler zu melden,"
   translation_banner_link: "erstellen Sie ein Issue auf GitHub"
+  search_preview_notice_heading: "Suchergebnisse öffnen sich auf der Live-Seite."
+  search_preview_notice_body: "Um hier zu bleiben: Kopieren Sie den `Pfad` (alles nach der Domain) aus dem Ergebnislink, fügen Sie ihn in die Adresszeile nach der URL dieser Vorschau ein, oder ersetzen Sie die Domain durch den Hostnamen dieser Vorschau. Oder nutzen Sie die Hauptnavigation oder die Seitenleiste."
+  search_preview_notice_dismiss: "Schließen"
