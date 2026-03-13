@@ -1,6 +1,6 @@
 ---
 nav_title: Drag-and-drop editor
-article_title: Create an Email with Drag-and-Drop
+article_title: Create an email with drag-and-drop
 alias: /dnd/
 page_order: 1
 description: "This article covers how to set up and properly use the drag-and-drop editor for email messages."

@@ -1,5 +1,5 @@
 ---
-nav_title: "Tracking"
+nav_title: "Set up tracking"
 article_title: "Tracking"
 page_order: 2
 description: "This reference article covers how to set up real-time tracking for transactional email campaigns."

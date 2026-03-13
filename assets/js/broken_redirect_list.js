@@ -3955,8 +3955,8 @@ validurls['/docs/user_guide/messaging/templates/in_app_message_templates'] = '/d
 validurls['/docs/user_guide/messaging/templates/in_app_message_templates/'] = '/docs/user_guide/messaging/templates/in_app_message_templates/';
 validurls['/docs/user_guide/messaging/templates/canvas_templates/templates'] = '/docs/user_guide/messaging/templates/canvas_templates/templates';
 validurls['/docs/user_guide/messaging/templates/canvas_templates/templates/'] = '/docs/user_guide/messaging/templates/canvas_templates/templates/';
-validurls['/docs/user_guide/messaging/templates/canvas_templates/create_a_canvas_template'] = '/docs/user_guide/messaging/templates/canvas_templates/create_a_canvas_template';
-validurls['/docs/user_guide/messaging/templates/canvas_templates/create_a_canvas_template/'] = '/docs/user_guide/messaging/templates/canvas_templates/create_a_canvas_template/';
+validurls['/docs/user_guide/messaging/templates/canvas_templates/create_a_canvas_template'] = '/docs/user_guide/messaging/templates/canvas_templates/';
+validurls['/docs/user_guide/messaging/templates/canvas_templates/create_a_canvas_template/'] = '/docs/user_guide/messaging/templates/canvas_templates/';
 validurls['/docs/user_guide/messaging/templates/email_templates/email_template'] = '/docs/user_guide/messaging/templates/email_templates/email_template';
 validurls['/docs/user_guide/messaging/templates/email_templates/email_template/'] = '/docs/user_guide/messaging/templates/email_templates/email_template/';
 validurls['/docs/user_guide/messaging/templates/email_templates/faq'] = '/docs/user_guide/messaging/templates/email_templates/faq';
@@ -4089,8 +4089,8 @@ validurls['/docs/user_guide/messaging/content/templates/managing_templates'] = '
 validurls['/docs/user_guide/messaging/content/templates/managing_templates/'] = '/docs/user_guide/messaging/templates/managing_templates/';
 validurls['/docs/user_guide/messaging/content/templates/canvas_templates'] = '/docs/user_guide/messaging/templates/canvas_templates';
 validurls['/docs/user_guide/messaging/content/templates/canvas_templates/'] = '/docs/user_guide/messaging/templates/canvas_templates/';
-validurls['/docs/user_guide/messaging/content/templates/canvas_templates/create_a_canvas_template'] = '/docs/user_guide/messaging/templates/canvas_templates/create_a_canvas_template';
-validurls['/docs/user_guide/messaging/content/templates/canvas_templates/create_a_canvas_template/'] = '/docs/user_guide/messaging/templates/canvas_templates/create_a_canvas_template/';
+validurls['/docs/user_guide/messaging/content/templates/canvas_templates/create_a_canvas_template'] = '/docs/user_guide/messaging/templates/canvas_templates/';
+validurls['/docs/user_guide/messaging/content/templates/canvas_templates/create_a_canvas_template/'] = '/docs/user_guide/messaging/templates/canvas_templates/';
 validurls['/docs/user_guide/messaging/content/templates/canvas_templates/templates'] = '/docs/user_guide/messaging/templates/canvas_templates/templates';
 validurls['/docs/user_guide/messaging/content/templates/canvas_templates/templates/'] = '/docs/user_guide/messaging/templates/canvas_templates/templates/';
 validurls['/docs/user_guide/messaging/content/templates/email_templates'] = '/docs/user_guide/messaging/templates/email_templates';
@@ -4173,8 +4173,10 @@ validurls['/docs/user_guide/message_building_by_channel/webhooks/testing'] = '/d
 validurls['/docs/user_guide/message_building_by_channel/webhooks/testing/'] = '/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=webhook';
 validurls['/docs/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks'] = '/docs/user_guide/channels/webhooks/use_case_create_a_braze_to_braze_webhook';
 validurls['/docs/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/'] = '/docs/user_guide/channels/webhooks/use_case_create_a_braze_to_braze_webhook/';
-validurls['/docs/user_guide/message_building_by_channel/webhooks/lead_scoring'] = '/docs/user_guide/channels/webhooks/use_case_create_a_lead_scoring_workflow';
-validurls['/docs/user_guide/message_building_by_channel/webhooks/lead_scoring/'] = '/docs/user_guide/channels/webhooks/use_case_create_a_lead_scoring_workflow/';
+validurls['/docs/user_guide/message_building_by_channel/webhooks/lead_scoring'] = '/docs/user_guide/get_started/b2b_use_cases/lead_scoring/';
+validurls['/docs/user_guide/message_building_by_channel/webhooks/lead_scoring/'] = '/docs/user_guide/get_started/b2b_use_cases/lead_scoring/';
+validurls['/docs/user_guide/channels/webhooks/use_case_create_a_lead_scoring_workflow'] = '/docs/user_guide/get_started/b2b_use_cases/lead_scoring/';
+validurls['/docs/user_guide/channels/webhooks/use_case_create_a_lead_scoring_workflow/'] = '/docs/user_guide/get_started/b2b_use_cases/lead_scoring/';
 
 // --- LINE ---
 validurls['/docs/user_guide/message_building_by_channel/line'] = '/docs/user_guide/channels/line';
