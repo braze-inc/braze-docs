@@ -89,96 +89,7 @@ Push notifications and deep links received before `initialize()` is called are n
 {% endtab %}
 {% tab Flutter SDK 17.1.0 and earlier %}
 
-#### Android
-
-To connect to Braze servers, create a `braze.xml` file in your project's `android/res/values` folder. Paste the following code and replace the API identifier key and endpoint with your values:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-  <string translatable="false" name="com_braze_api_key">YOUR_APP_IDENTIFIER_API_KEY</string>
-  <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
-</resources>
-```
-
-Add the required permissions to your `AndroidManifest.xml` file:
-
-```xml
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-```
-
-#### iOS
-
-{% subtabs %}
-{% subtab SWIFT %}
-Add Braze SDK import at the top of the `AppDelegate.swift` file:
-```swift
-import BrazeKit
-import braze_plugin
-```
-
-In the same file, create the Braze configuration object in the `application(_:didFinishLaunchingWithOptions:)` method and replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
-
-```swift
-static var braze: Braze? = nil
-
-override func application(
-  _ application: UIApplication,
-  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
-) -> Bool {
-  // Setup Braze
-  let configuration = Braze.Configuration(
-    apiKey: "<BRAZE_API_KEY>",
-    endpoint: "<BRAZE_ENDPOINT>"
-  )
-  // - Enable logging or customize configuration here
-  configuration.logger.level = .info
-  let braze = BrazePlugin.initBraze(configuration)
-  AppDelegate.braze = braze
-
-  return true
-}
-```
-{% endsubtab %}
-{% subtab OBJECTIVE-C %}
-Import `BrazeKit` at the top of the `AppDelegate.m` file:
-```objc
-@import BrazeKit;
-```
-
-In the same file, create the Braze configuration object in the `application:didFinishLaunchingWithOptions:` method and replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
-
-```objc
-- (BOOL)application:(UIApplication *)application
-    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Setup Braze
-  BRZConfiguration *configuration =
-      [[BRZConfiguration alloc] initWithApiKey:@"<BRAZE_API_KEY>"
-                                      endpoint:@"<BRAZE_ENDPOINT>"];
-  // - Enable logging or customize configuration here
-  configuration.logger.level = BRZLoggerLevelInfo;
-  Braze *braze = [BrazePlugin initBraze:configuration];
-  AppDelegate.braze = braze;
-
-  [self.window makeKeyAndVisible];
-  return YES;
-}
-
-#pragma mark - AppDelegate.braze
-
-static Braze *_braze = nil;
-
-+ (Braze *)braze {
-  return _braze;
-}
-
-+ (void)setBraze:(Braze *)braze {
-  _braze = braze;
-}
-```
-{% endsubtab %}
-{% endsubtabs %}
+If you're using Flutter SDK 17.1.0 or earlier, your native setup likely includes a `braze.xml` with `com_braze_api_key` and `com_braze_custom_endpoint` entries on Android, and an `AppDelegate` that calls `BrazePlugin.initBraze(configuration)` on iOS. To migrate to Flutter SDK 18.0.0, see [Migrating from `initBraze` to `initialize`](#migrating-from-initbraze-to-initialize).
 
 {% endtab %}
 {% endtabs %}
@@ -218,17 +129,7 @@ To avoid undefined behaviors, only allocate and use a single instance of the `Br
 {% endtab %}
 {% tab Flutter SDK 17.1.0 and earlier %}
 
-To import the plugin into your Dart code, use the following:
-
-```dart
-import 'package:braze_plugin/braze_plugin.dart';
-```
-
-Then, initialize an instance of the Braze plugin by calling `new BrazePlugin()` like in [our sample app](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart).
-
-{% alert important %}
-To avoid undefined behaviors, only allocate and use a single instance of the `BrazePlugin` in your Dart code.
-{% endalert %}
+If you're using Flutter SDK 17.1.0 or earlier, your Dart code likely initializes the plugin with `new BrazePlugin()` without calling `initialize()`. To migrate to Flutter SDK 18.0.0, add `braze.initialize("<BRAZE_API_KEY>", "<BRAZE_ENDPOINT>")` after creating your `BrazePlugin` instance.
 
 {% endtab %}
 {% endtabs %}
