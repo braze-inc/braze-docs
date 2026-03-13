@@ -2758,7 +2758,7 @@ Use title case.
 Do not use the acronym as a verb. Instead, rewrite as “perform quality assurance”.
 
 **quiet hours**
-Use "Quiet hours" at sentence start, "quiet hours" mid-sentence. Do not use title case "Quiet Hours" because it is not a branded feature.
+Use "Quiet hours" at sentence start and "quiet hours" mid-sentence. Do not use title case "Quiet Hours" because it is not a branded feature.
 
 ⚠️ **quick / quickly**  
 Avoid using. What is quick for you may not be quick for others. For related guidelines, refer to [Condescending Language](#condescending-language).
