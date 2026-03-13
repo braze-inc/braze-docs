@@ -1240,13 +1240,13 @@ General guidelines:
 
 Before instructions:
 
-* **Use introductions and prerequisites.** Don’t jump straight into the steps. Instead, give context on what your article or section covers, and provide any information the reader needs to know before they scan the instructions. Make sure any prerequisites are listed at the top of the document.  
+* **Use introductions and prerequisites.** Don’t jump straight into the steps. Instead, give context on what your article or section covers, and provide any information the reader needs to know before they scan the instructions. Make sure any prerequisites are listed at the top of the article with the heading "Prerequisites". Table headers in this section should read "Requirements". "Requirements" is an acceptable term to use for stating a requirement from Braze, a third-party provider, or partner.
 * **Start at the beginning of the procedure.** Don’t assume the reader has reached this page after completing a previous step. If the instructions for a task pick up where another left off, give an overview of where the reader is in the procedure, and what they must complete before this step. Include links to any previous steps.
 
 Writing instructions:
 
 * **Use actionable language.** Structure documentation around what the user can do, not what the product can do. Avoid language like “This feature [does xyz]”. Instead, think in terms of “Use this feature to [do xyz]”.  
-* **Provide location steps when needed.** Make sure the reader is looking in the right place with brief phrases such as “On the **Settings** page, click **Edit**.” If that may not be clear enough, provide an introductory step. For example, “Go to **Manage Settings** and select the **Settings** tab.”   
+* **Provide location steps when needed.** Make sure the reader is looking in the right place with brief phrases such as “On the **Settings** page, select **Edit**.” If that may not be clear enough, provide an introductory step. For example, “Go to **Manage Settings** and select the **Settings** tab.”   
 * **Preface conditional statements**. Put [conditional clauses](#clause-order) first. For conditional instructions, preface the step with “if” so the reader knows they can skip the step if the condition doesn’t apply to them. For example, “If you need X, then do A > B > C.”  
 * **Reinforce task order.** For progress within a series of steps, use the phrase “When you’ve” or “After you’ve”. For progress between tasks, begin a section with “Now that you’ve” or “After you’ve”. Avoid the phrase “Once you’ve”, as that specific use of “once” doesn’t translate well. 
 
