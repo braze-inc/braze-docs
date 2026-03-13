@@ -174,9 +174,10 @@ override func application(
 ```
 {% endsubtab %}
 {% subtab OBJECTIVE-C %}
-Import `BrazeKit` at the top of the `AppDelegate.m` file:
+Import the Braze SDK at the top of the `AppDelegate.m` file:
 ```objc
 @import BrazeKit;
+@import braze_plugin;
 ```
 
 In the same file, create the Braze configuration object in the `application:didFinishLaunchingWithOptions:` method and replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
@@ -228,7 +229,7 @@ import 'package:braze_plugin/braze_plugin.dart';
 BrazePlugin braze = BrazePlugin();
 ```
 
-Then call `initialize()` with your API key and endpoint to create the Braze instance. When you call `initialize()` determines how the SDK behaves at startup.
+Then call `initialize()` with your Braze API app identifier (API key) and REST endpoint to create the Braze instance. When you call `initialize()` determines how the SDK behaves at startup.
 
 #### Standard initialization
 
