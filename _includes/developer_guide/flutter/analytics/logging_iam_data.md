@@ -53,23 +53,19 @@ In-app message data is automatically forwarded from both the Android and iOS nat
 {% endtab %}
 {% tab Flutter SDK 17.1.0 and earlier %}
 
-The in-app message data is automatically forwarded from the Android layer. To forward in-app message data from the iOS layer, choose one of the following approaches:
+If you're using Flutter SDK 17.1.0 or earlier, in-app message data forwarding from the iOS native layer requires manual setup. Your application likely contains one of the following. To migrate to Flutter SDK 18.0.0, remove the `BrazePlugin.processInAppMessage(_:)` call—data forwarding is now handled automatically.
 
 {% subtabs %}
 {% subtab UI Delegate %}
 
-1. Implement the `BrazeInAppMessageUIDelegate` delegate as described in the iOS article on [core in-app message delegate](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
+Remove the `BrazePlugin.processInAppMessage(_:)` call from your [`willPresent` delegate implementation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:willpresent:view:)-4pzvv).
 
-2. Update your [`willPresent` delegate implementation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:willpresent:view:)-4pzvv) to call `BrazePlugin.process(inAppMessage)`.
 {% endsubtab %}
 
-{% subtab custom presenter %}
-1. Ensure you have enabled the in-app message UI and set the `inAppMessagePresenter` to your custom presenter.
-```swift
-    let inAppMessageUI = CustomInAppMessagePresenter()
-    braze.inAppMessagePresenter = inAppMessageUI
-```
-2. Create your custom presenter class and call `BrazePlugin.process(inAppMessage)` within [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/present(message:)-f2ra).
+{% subtab Custom presenter %}
+
+Remove the `BrazePlugin.processInAppMessage(message)` call from your custom presenter's [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/present(message:)-f2ra) implementation:
+
 ```swift
 class CustomInAppMessagePresenter: BrazeInAppMessageUI {
   override func present(message: Braze.InAppMessage) {
@@ -81,6 +77,7 @@ class CustomInAppMessagePresenter: BrazeInAppMessageUI {
   }
 }
 ```
+
 {% endsubtab %}
 {% endsubtabs %}
 
