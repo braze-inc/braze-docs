@@ -1,16 +1,25 @@
 <style>
   #search-preview-notice.alert {
-    border-width: 2px !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    border-width: 1px !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     font-weight: 600;
+    min-height: 0 !important;
+    font-size: 12px;
+    background-size: 40px 40px !important;
+    background-position: 6px 50% !important;
   }
   #search-preview-notice .alert-msg {
     font-weight: 600;
+    min-height: 0 !important;
+    padding: 5px 10px 5px 46px !important;
+    margin-left: 40px !important;
+    font-size: 12px;
+    line-height: 1.35;
   }
 </style>
 <div id="search-preview-notice" class="alert alert-warning" role="alert" style="display: none;">
   <div class="alert-msg">
-    <strong>On this preview deployment, search results open on the live documentation site.</strong> To stay on this preview, use the browser back button or navigate from the sidebar.
+    <strong>On this preview deployment, search results open on the live documentation site.</strong> To stay on this preview, copy the link from the search result, paste it into the URL bar, and remove the leading <code>https://braze.com/</code> or <code>https://braze.com/docs/</code>.
   </div>
 </div>
 <script>
