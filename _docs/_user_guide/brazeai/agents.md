@@ -40,7 +40,7 @@ Features for Braze Agents include:
 
 ## About Braze Agents
 
-Agents are configured with instructions (system prompts) that define how they behave. When an agent runs, it uses your instructions along with any data you pass in to generate a response.
+Agents are configured with instructions (system prompts) that define how they behave. When an agent runs, it uses your instructions along with any data you pass in to generate a response. It can't access user data beyond what is explicitly defined in the instructions and by the selected agent context.
 
 ### Key concepts
 
