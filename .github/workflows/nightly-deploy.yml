@@ -13,6 +13,9 @@ on:
 jobs:
   create-pr:
     runs-on: ubuntu-latest
+    # Opt into Node.js 24 for JS actions; avoids Node 20 deprecation failures
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     permissions:
       contents: write
       pull-requests: write
