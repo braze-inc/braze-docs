@@ -285,7 +285,7 @@ You can also choose from the following targeting preferences. If you don't need 
 
 ### Step 7: Start your CSV import
 
-When you're ready, click **Start import**. You can track the current progress on the **Import Users** page, which automatically refreshes every 5 seconds.
+When you're ready, select **Start import**. You can track the current progress on the **Import Users** page, which automatically refreshes every 5 seconds.
 
 {% alert note %}
 You can import more than one CSV at the same time. CSV imports run concurrently, so the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, wait until a CSV import has finished before uploading a second one.
@@ -305,6 +305,10 @@ After starting your import, you can check its status on the **Import Users** pag
 ![The Import Users page showing a Partial success status with the context menu open, displaying Download error report and Download uploaded CSV options.]({% image_buster /assets/img/csv_import/partial_success_menu.png %})
 
 The post-import error report includes rows that failed for reasons validation doesn't cover, such as when a user doesn't exist in Braze.
+
+{% alert important %}
+Previously uploaded CSV files are available to download from the **Import Users** page for 14 days after the upload date. After 14 days, the file is permanently deleted and can no longer be accessed.
+{% endalert %}
 
 ## Data point considerations
 
