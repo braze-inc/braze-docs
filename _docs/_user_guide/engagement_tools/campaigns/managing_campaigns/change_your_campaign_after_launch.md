@@ -86,3 +86,8 @@ To return to an active campaign, select **Edit Draft** from the analytics view o
 ### In-app message prioritization
 
 In-app message priority will update immediately (before the draft launches) when you select **Set Exact Priority** and specify the priority in relation to other campaigns or Canvases.
+
+## What happens when I stop a campaign whilst it is sending? (BD-4407)
+
+Include all information and a clear example of when a campaign might resend the same message to part of the audience.
+

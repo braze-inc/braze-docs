@@ -202,3 +202,8 @@ For segments and filters, the Message step has delivery validations that allows 
 Exception events are created using Action Paths. Action Paths only support "after an X time window" and not "in X time" or "on the next X time".
 
 {% enddetails %}
+
+## Why the Canvas Steps Conversion Rate does not equal the Canvas Variant Total Con (BD-4590)
+
+Include additional information found in the article in our Braze docs
+

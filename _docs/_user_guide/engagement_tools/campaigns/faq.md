@@ -204,3 +204,7 @@ If you add or change a maximum recipient limit on an active campaign, the limit 
 
 To avoid misalignment, set the maximum recipient limit before launching the campaign and avoid modifying it while sends are in progress.
 
+## How to check to see if users successfully received an API-triggered canvas/campa (BD-4342)
+
+color: Color value is invalid Add additional information on how to check if a user received an API-triggered canvas or campaign via API. For example, if a customer wants to check if a user received a campaign. They can create a segment and add a filter such as: color: Color value is invalid Received Message from Campaign color: Color value is invalid Received Message from Canvas Step
+

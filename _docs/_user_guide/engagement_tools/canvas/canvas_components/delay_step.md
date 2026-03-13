@@ -152,3 +152,7 @@ Time series for these analytics are available in the expanded component view.
 
 If users aren't triggering a personalized delay, it could be because the Context step you set to qualify them for the Delay step is not working as you expected. When a [context variable is invalid]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#troubleshooting), a user will continue through your Canvas without having their context set by the Context step. This can cause them to not qualify for steps later in your Canvas, such as personalized delays.
 
+## Canvas Delay Step: More Users Entered but Lesser Users Proceeded to Next Step (BD-4327)
+
+The example chart in the KA could be helpful for customer's to understand how the delay would work. Also, adding the additional causes that are in the KA would help customer's better understand possible issues.
+

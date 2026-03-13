@@ -105,3 +105,8 @@ For example, in an Audience Paths step, you can create three audiences: Email, M
 {% alert tip %}
 Check out our [Braze Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) for examples on how you can customize these pre-built templates to your advantage.
 {% endalert %}
+
+## Expected Audience Path Behavior When A User Matches More Than One Path's Filters (BD-4525)
+
+Include this in a section of the audience path documentation
+

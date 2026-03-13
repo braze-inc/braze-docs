@@ -86,4 +86,7 @@ For accurate test results:
 
 Including a [control group]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#including-a-control-group) lets you know whether your messages have a greater impact on user conversion than sending no message at all.
 
+## Is it expected to have more users in one canvas variant even with a 50/50 split? (BD-4220)
+
+Add this possible solution " Add a decision split step and separate users based on their Random Bucket numbers." I saw in the KA in the internal section pointing to another KA that explains the solution - https://braze.lightning.force.com/lightning/r/Knowledge__kav/ka03o000001dSMRAA2/view?ws=%2Flightning%2Fr%2FCase%2F5003o00001cSE8DAAW%2Fview%3Fchannel%3DOMNI
 
