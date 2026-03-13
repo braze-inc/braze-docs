@@ -114,7 +114,7 @@ Quiet Hours act as a no-send window. Intelligent Timing still determines each us
 To configure Quiet Hours:
 
 1. When configuring Intelligent Timing, select **Enable Quiet Hours**.
-2. Enter the start and end time of the Quiet Hours (no-send) window.
+2. Enter the start and end time of the Quiet Hours window.
 
 ### Step 4: Choose a fallback time {#campaign-fallback}
 
