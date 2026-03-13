@@ -54,3 +54,8 @@ description: "This landing page is home to all things push notifications."
 {% multi_lang_include developer_guide/xamarin/push_notifications.md %}
 {% endsdktab %}
 {% endsdktabs %}
+
+## Redirect to Web URL with Open Web URL Inside App Unchecked still Opens App (BD-4142)
+
+There could be an example of a common issue or within an FAQ where this issue is mentioned and it's resolution
+

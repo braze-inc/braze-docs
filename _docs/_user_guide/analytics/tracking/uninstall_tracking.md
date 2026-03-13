@@ -89,3 +89,7 @@ The difference is expected.
 
 Apple uses a randomized schedule to delay reporting when a push token becomes invalid, meaning that even after a user uninstalls an app, APNs may continue to return successful responses to push notifications for a period of time. This delay is intentional and designed to protect user privacy. No bounce or failure will be reported until APNs returns a `410` status for an invalid token.
 
+## What FCM Responses are treated as uninstall push? (BD-4621)
+
+Add some examples of FCM responses that Braze considers an uninstall. We treat the following responses from FCM as token removal responses: DEVICE_UNREGISTERED BAD_REGISTRATION SENDER_ID_MISMATCH We should add the same for APNS, though this knowledge article only discusses Android.
+

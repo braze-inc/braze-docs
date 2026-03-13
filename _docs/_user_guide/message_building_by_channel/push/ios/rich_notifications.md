@@ -141,3 +141,7 @@ When a user receives the push notification, they can hard press on the push mess
 
 ![A user receives a push notification and hard presses the message to show an expanded image that says "Hello!".]({% image_buster /assets/img_archive/rich_notification_ios.gif %}){: style="max-width:50%;" }
 
+## Image Not Showing Up on iOS Push Notification (BD-4534)
+
+Update the documentation to include: Rich Push Notifications : For images to show in a push notification on iOS, rich push notifications must be configured. If the image is not showing, check if the rich push is configured. Reference Documentation : For more information, please refer to the following link: Braze Rich Notifications Documentation . Other Reasons for Missing Images : Some other reasons push notification images may not be showing include: The file size for the image is too big. The aspect ratio is incorrect. The text exceeds the maximum message length. The title text exceeds the m
+

@@ -130,3 +130,8 @@ Didn't find what you were looking for? Check out these additional best practices
 - [Push primer in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)
 - [Deliverability for Chinese Android devices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/)
 - [Know before you send: channels]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/know_before_send/)
+
+## Push Notification Delays (BD-4471)
+
+A section noting how to address delays should users encounter them for Push notifications.
+

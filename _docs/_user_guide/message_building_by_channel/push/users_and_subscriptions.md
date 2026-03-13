@@ -165,3 +165,17 @@ iOS doesn't allow apps to intercept a push notification prior to the push notifi
 
 Refer to our dedicated article on [Push best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices) for detailed guidance on how to optimize your usage of push at Braze.
 
+## Template for Push Enablement Vs. Push Subscription Status (BD-4260)
+
+It would be helpful to add sections in the doc: Push Opt-outs How is Push Subscription Status different from Push Enabled state? Important side-note on Push Enablement - Clarification on Push Subscription Status changes { }
+
+
+## Understanding User Profile Push Registration and Push Changelogs (BD-4261)
+
+Adding a section in our docs that go over where client can find info on push registration/changelogs -User profile (Engagement Tab) - Push Registered / Push Change logs Segmentation Campaign Analytics
+
+
+## What are '410' Web Push Token Errors? (BD-4310)
+
+This should be a brief summary
+

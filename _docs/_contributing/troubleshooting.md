@@ -235,3 +235,8 @@ Go back to the official [Braze Docs GitHub repository](https://github.com/braze-
 Keep the default settings, then select **Create fork**. Now you'll be able to choose `braze-inc/braze-docs` as the base repository when [making changes in GitHub]({{site.baseurl}}/contributing/your_first_contribution/#step-2-make-a-change).
 
 ![The Braze Docs GitHub repository showing "Create fork".]({% image_buster /assets/img/contributing/github/create_a_new_fork.png %}){: style="max-width:75%;"}
+
+## Firebase SenderID Mismatch (BD-4081)
+
+We get a lot of cases where clients are reporting this issue and need help resolving it. We should just provide the client this info off the bat to help them be more self-sufficient.
+
