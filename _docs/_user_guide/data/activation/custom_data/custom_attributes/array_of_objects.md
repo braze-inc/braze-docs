@@ -545,7 +545,7 @@ Create a new segment and select **Nested Custom Attribute** as your filter. Then
 
 Use dot notation to specify which field in the array of objects you want to use. Start the text field with an empty set of square brackets `[]` to tell Braze that you're looking inside an array of objects. After that, add a period `.`, followed by the name of the field you want to use.
 
-For example, if you want to filter the `top_3_movies` array of objects based on the `type` field, enter `[].type` and choose the movies to filter for, such as `Fantasy Movie`.
+For example, if you want to filter a `top_3_movies` array of objects based on the `type` field, enter `[].type` and choose the movies to filter for, such as `Fantasy Movie`.
 
 
 ### Levels of nesting
