@@ -93,10 +93,11 @@ In the **Logs** section of the **Agent Console**, you can review the details for
 
 ### Canvas agent examples
 
-Let's say you're part of a travel brand, UponVoyage, and your goals are to analyze customer feedback, write personalized messages, and determine the conversion rate for your free subscribers. Here are examples of different instructions based on defined goals:
+Let's say you're part of a travel brand, UponVoyage, and your goals are to analyze customer feedback, write personalized messages, and determine the conversion rate for your free subscribers. Here are examples of different instructions based on defined goals.
 
-{% tabs local %}
+{% tabs %}
 {% tab Message copywriter %}
+
 {% raw %}
 ```
 Role: 
@@ -144,8 +145,10 @@ The user IS in the segment: “Logged multiple searches in the past 30D”.
 </output_example>
 ```
 {% endraw %}
+
 {% endtab %}
 {% tab Feedback analysis %}
+
 {% raw %}
 ```
 Role:
@@ -187,6 +190,7 @@ Input & Output Example:
 {% endraw %}
 {% endtab %}
 {% tab Trial conversion %}
+
 {% raw %}
 ```
 Role:
@@ -239,13 +243,15 @@ The user IS in the segment: "Has Valid Payment Method on File".
 (Rationale: The user is very active [15 searches], so they like the app. But they haven't touched a single Premium feature [0 uses], meaning they don't yet understand why they should pay for the subscription. They are "Medium" risk and need education, not just a generic nudge.)
 ```
 {% endraw %}
+
 {% endtab %}
 {% endtabs %}
 
 ### Catalog agent examples
 
-{% tabs local %}
+{% tabs %}
 {% tab Destination description %}
+
 {% raw %}
 ```
 Role:
@@ -282,8 +288,10 @@ Price Tier: $$$
 <output_example>Discover the historic and serene beauty of Kyoto, Japan. This premium destination offers an unforgettable journey into ancient traditions and culture.</output_example>
 ```
 {% endraw %}
+
 {% endtab %}
 {% tab Localization %}
+
 {% raw %}
 ```
 Role:
@@ -330,6 +338,7 @@ Buscar Vuelos
 </output_example>
 ```
 {% endraw %}
+
 {% endtab %}
 {% endtabs %}
 
