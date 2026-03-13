@@ -2,9 +2,10 @@
 
 ## Register and tone
 
-- Use polite Japanese (です/ます form) — this is the standard for friendly technical content in Japanese
-- The tone should be friendly, conversational, and informative — approachable rather than stiff or academic
-- Content should sound conversational, as if explaining something to an acquaintance
+- Always use です/ます form (polite style) for all sentences — never use plain/dictionary form (だ/である endings)
+- This applies consistently throughout the entire document — do not mix polite and plain styles
+- For example, use 「記録します」(kiroku-shimasu) instead of 「記録する」(kiroku-suru)
+- The tone should be friendly and informative while maintaining です/ます form throughout
 
 ## Inclusivity
 
