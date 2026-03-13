@@ -129,7 +129,7 @@ Choose a fallback time to use if a user's profile doesn't have any relevant even
 To see an estimate of how many users will receive the message in each hour of the day, use the preview chart.
 
 1. Add segments or filters in the Target Audiences step.
-2. In the section **Preview Delivery Times for** (which appears in both the Target Audiences and Schedule Delivery steps), select your channel.
+2. In the section **Preview Delivery Times for** (which appears in both the **Target Audiences** and **Schedule Delivery** steps), select your channel.
 3. Select **Refresh Data**.
 
 ![Example preview of delivery times for Android Push.]({% image_buster /assets/img/intel-timing-preview.png %})
