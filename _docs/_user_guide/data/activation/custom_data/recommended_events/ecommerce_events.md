@@ -174,7 +174,7 @@ The `ecommerce.cart_updated` event has a carts mapping object. This object is cr
 ```
 {%endraw%}
 
-If a cart hasn’t been updated and progressed to an order placed event in 30 days, we'll delete the cart and associated products.
+If a cart hasn’t been updated and progressed to an order placed event in 30 days, Braze deletes the cart and associated products.
 
 {% alert note %}
 Products per cart aren't limited on Braze. However, Shopify’s limit is 500.
