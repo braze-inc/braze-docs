@@ -759,5 +759,12 @@
   "Predictive Churn": "Predictive Churn",
   "Predictive Events": "Predictive Events",
   "Predictive Purchases": "Predictive Purchases",
-  "Predictive Suite": "Predictive Suite"
+  "Predictive Suite": "Predictive Suite",
+  "Basics": "基本情報",
+  "Forward": "進む",
+  "Build Now": "今すぐ作成",
+  "Churn Definition": "チャーン定義",
+  "Create Prediction": "予測を作成",
+  "Save As Draft": "下書きとして保存",
+  "Build Prediction": "予測を作成"
 }
