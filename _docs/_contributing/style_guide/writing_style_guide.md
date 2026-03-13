@@ -756,7 +756,7 @@ If you’re telling the reader to do something, then you can omit the “you” 
 </thead>
 <tbody>
 <tr><td style="width: 50%;">Upload the CSV file.</td><td style="width: 50%;">You can upload the CSV file.</td></tr>
-<tr><td style="width: 50%;">Click Submit.</td><td style="width: 50%;">You’ll need to click Submit.</td></tr>
+<tr><td style="width: 50%;">Select Submit.</td><td style="width: 50%;">You’ll need to select Submit.</td></tr>
 </tbody>
 </table>
 {:/}
@@ -1137,7 +1137,7 @@ For guidance on what verbs to use when describing interactions with the UI, refe
 <tr><td>Choose</td><td>Making a decision that is subjective, strategic, open-ended, or complex.</td><td>Choose a campaign strategy.</td></tr>
 <tr><td>Select</td><td><ul><li>Selecting a checkbox</li><li>Selecting items from a dropdown</li><li>Selecting a tab</li><li>Making a simple decision</li></ul></td><td><ul><li>Select <strong>Show Password</strong>.</li><li>Select a data type from the dropdown.</li><li>On the <strong>Manage Settings</strong> page, select the <strong>Custom Events</strong> tab.</li><li>Select an image.</li></ul></td></tr>
 <tr><td>Clear</td><td>Clearing the selection from a checkbox.</td><td>Clear the <strong>Show Password</strong> checkbox.</td></tr>
-<tr><td>Click</td><td>Clicking an element in the UI.</td><td>Add a custom attribute and click <strong>Save</strong>.</td></tr>
+<tr><td>Select</td><td>Selecting an element in the UI.</td><td>Add a custom attribute and select <strong>Save</strong>.</td></tr>
 <tr><td>Turn on</td><td>Enabling a toggle option</td><td>Turn on the <strong>List-Unsubscribe header</strong>.</td></tr>
 <tr><td>Turn off</td><td>Disabling a toggle option</td><td>Turn off <strong>Inline CSS on New Emails by Default</strong>.</td></tr>
 <tr><td>Enter</td><td>Typing a value.</td><td><ul><li>In the text field, enter the name of your custom attribute.</li><li>Enter "Braze" as the source name.</li></ul></td></tr>
@@ -1276,7 +1276,7 @@ To display a full address, use the numeral, followed by the street name, followe
 
 #### Button labels {#buttons-labels}
 
-Button labels should be clear and predictable—the user should know what action occurs upon clicking the button. Use sentence case for button labels, and lead with a strong verb. If it may be unclear what the verb is referring to, use the format [verb] + [noun]. 
+Button labels should be clear and predictable—the user should know what action occurs upon selecting the button. Use sentence case for button labels, and lead with a strong verb. If it may be unclear what the verb is referring to, use the format [verb] + [noun]. 
 
 {::nomarkdown}
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
@@ -1549,7 +1549,7 @@ To refer to a button, use only the button’s label. Do not refer to a button as
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">Click <strong>Add Languages</strong>.</td><td style="width: 50%;">Click the <strong>Add Language</strong>s button. <br><br> Click “Add Languages”.</td></tr>
+<tr><td style="width: 50%;">Select <strong>Add Languages</strong>.</td><td style="width: 50%;">Select the <strong>Add Language</strong>s button. <br><br> Select “Add Languages”.</td></tr>
 </tbody>
 </table>
 {:/}
@@ -1562,7 +1562,7 @@ If the label ends with a colon or ellipsis, omit the ending punctuation.
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">Click <strong>Save as</strong></td><td style="width: 50%;">Click <strong>Save as…</strong></td></tr>
+<tr><td style="width: 50%;">Select <strong>Save as</strong></td><td style="width: 50%;">Select <strong>Save as…</strong></td></tr>
 </tbody>
 </table>
 {:/}
@@ -1575,7 +1575,7 @@ If a button is an icon, include the name of the button as shown in the tooltip. 
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">Click ➕ <strong>Add</strong>.</td><td style="width: 50%;">Click the ➕ icon.</td></tr>
+<tr><td style="width: 50%;">Select ➕ <strong>Add</strong>.</td><td style="width: 50%;">Select the ➕ icon.</td></tr>
 </tbody>
 </table>
 {:/}
@@ -1610,7 +1610,7 @@ Avoid referring to dialog boxes by name unless clarity is needed. Instead, descr
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">Click <strong>Upload</strong> then select a file to upload.</td><td style="width: 50%;">Click <strong>Upload</strong> and use the <strong>File Upload</strong> dialog box to select a file to upload.</td></tr>
+<tr><td style="width: 50%;">Select <strong>Upload</strong> then select a file to upload.</td><td style="width: 50%;">Select <strong>Upload</strong> and use the <strong>File Upload</strong> dialog box to select a file to upload.</td></tr>
 </tbody>
 </table>
 {:/}
@@ -2152,9 +2152,9 @@ Apply the following guidelines when writing link text:
 * Write unique, descriptive link text that makes sense without the surrounding text. Research by the [Nielsen Norman Group](https://www.nngroup.com/articles/link-promise/#links-should-stand-alone) (NN/g) shows that readers scan for salient information on a page, so make sure links can stand alone.  
 * Don’t use the following words or phrases for link text. They’re bad for accessibility and scannability.  
  * Learn more (on its own)  
- * Click here  
- * here  
- * this document  
+ * Click here
+ * here
+ * this document
  * this article
 
 {::nomarkdown}
@@ -2195,7 +2195,7 @@ If a link downloads a file, then make that clear in the link text, and mention t
 {::nomarkdown}
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
-<tr><th style="width: 50%;">Do: <em>Make sure the link text communicates that clicking it downloads a file</em></th><th style="width: 50%;">Don't</th></tr>
+<tr><th style="width: 50%;">Do: <em>Make sure the link text communicates that selecting it downloads a file</em></th><th style="width: 50%;">Don't</th></tr>
 </thead>
 <tbody>
 <tr><td style="width: 50%;">For tips, download the <a href="{{site.baseurl}}">Regex Cheat Sheet PDF</a>.</td><td style="width: 50%;">Check out our <a href="{{site.baseurl}}">RegEx Cheat Sheet</a>.</td></tr>
@@ -2308,8 +2308,8 @@ Use “Braze Bonfire community” on the first mention, then it’s fine to use 
 ⛔️ **blacklist**  
 Don’t use. Instead, use “blocklist” or “denylist”. For the verb form of these words, consider rewording the sentence to remove the problematic term. For example:
 
->✅ **Recommended:** To block an existing property from being used in new messages, click **Manage Properties**. <br>
->⛔️ **Not recommended:** To blocklist an existing property, click **Manage Properties**. 
+>✅ **Recommended:** To block an existing property from being used in new messages, select **Manage Properties**. <br>
+>⛔️ **Not recommended:** To blocklist an existing property, select **Manage Properties**. 
 
 **Braze-to-Braze webhook**
 
