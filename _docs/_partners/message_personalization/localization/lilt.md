@@ -39,7 +39,7 @@ Use LILT's AI for immediate, on-brand translations for time-sensitive communicat
 
 ## Prerequisites
 
-| Prerequisite       | Description |                        
+| Requirements       | Description |                        
 |-----------------------|-----------------|
 | A LILT account   | A LILT account is required to take advantage of this partnership.  |
 | A Braze REST API key  | A Braze REST API key with the following permissions:<br>- `templates.email.create`<br>- `templates.email.update`<br>- `templates.email.info`<br>- `templates.email.list`<br>- `templates.translations.source.get`<br>- `templates.translations.update`<br>- `templates.translations.get`<br>- `templates.translations.all.get`. <br><br> Create this key in the Braze dashboard from **Settings** > **API Keys**. |

@@ -10,6 +10,10 @@ description: "This page covers how to use messaging rules in the approval workfl
 
 > Use messaging rules in your approval workflow to limit the number of reachable users before an additional approval is required&#8212;this way, you can review your campaigns and Canvases before you target a larger audience.
 
+## Prerequisites
+
+Only Braze administrators can set messaging rules, but any Braze user can be a messaging rule approver (including users without general approval permissions).
+
 ## How it works
 
 Messaging rules apply to a workspace and are made up of a message type and a maximum number of reachable users.
@@ -32,10 +36,6 @@ To avoid confusion, you cannot set identical rules with an overlapping number of
 - Rule D for Canvas with a maximum of 1,000,000 users
 
 ## Creating a messaging rule
-
-### Prerequisites
-
-Only Braze administrators can set messaging rules, but any Braze user can be a messaging rule approver (including users without general approval permissions).
 
 ### Step 1: Add a rule
 

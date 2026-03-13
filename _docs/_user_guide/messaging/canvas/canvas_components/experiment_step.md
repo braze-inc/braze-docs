@@ -16,6 +16,10 @@ When you include an Experiment Paths step in your user journey, it will randomly
 
 ![An Experiment Path step that splits into Path 1, Path 2, and Control.]({% image_buster /assets/img/experiment_step/experiment_step.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
+## Prerequisites
+
+To use Experiment Paths, your Canvas must include conversion events. While you can't add conversion events after a Canvas has been launched, you can clone the launched Canvas and add conversion events to add Experiment Paths.
+
 ## Use cases
 
 Experiment Paths are best suited for testing delivery, cadence, message copy, and channel combinations.
@@ -28,10 +32,6 @@ Experiment Paths are best suited for testing delivery, cadence, message copy, an
     When targeting lapsing users, you can test the effectiveness of sending two win-back messages in a week versus sending just one.
 - **Message copy:** Similar to a standard [A/B test]({{site.baseurl}}/user_guide/messaging/ab_testing/), you can test different message copy to see which wording results in a higher conversion rate.<br><br>
 - **Channel combinations:** Test the effectiveness of different message channel combinations. For example, you can compare the impact of using just an email versus an email combined with a push.
-
-## Prerequisite
-
-To use Experiment Paths, your Canvas must include conversion events. While you can't add conversion events after a Canvas has been launched, you can clone the launched Canvas and add conversion events to add Experiment Paths.
 
 ## Creating an experiment path
 

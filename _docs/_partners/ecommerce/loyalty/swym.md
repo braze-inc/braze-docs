@@ -21,7 +21,7 @@ The Swym and Braze integration lets you deliver personalized, event-driven marke
 
 Before you start, you'll need the following:
 
-| Prerequisite          | Description                                                                                                                                |
+| Requirements          | Description                                                                                                                                |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | Swym  | Swym Wishlist Plus, Back in Stock apps, or both must be installed on your eCommerce platform (Shopify or BigCommerce), and you must be on the Enterprise plan.       |
 | A Braze REST API key  | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |

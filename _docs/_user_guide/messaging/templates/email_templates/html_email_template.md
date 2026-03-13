@@ -14,7 +14,7 @@ channel:
 
 > The Braze dashboard allows you to upload your very own HTML email templates and save them for later use in campaigns. You can also [create an email template]({{site.baseurl}}/user_guide/channels/email/templates/email_template/) using our editor.
 
-## Prerequisites {#upload-requirements}
+## Requirements {#upload-requirements}
 
 First, you'll need to create your HTML email template. This must be a ZIP file that contains the following:
 
@@ -35,7 +35,7 @@ Under the **Template Type** section, select **HTML Editor** and scroll down to t
 
 ### Step 3: Upload your template
 
-Select **Upload From File** and select your template from your computer. Refer to the [Prerequisites](#upload-requirements) section to ensure your template meets the upload requirements.
+Select **Upload From File** and select your template from your computer. Refer to the [Requirements](#upload-requirements) section to ensure your template meets the upload requirements.
 
 #### Troubleshoot uploading template errors
 

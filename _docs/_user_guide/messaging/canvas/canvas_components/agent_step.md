@@ -15,6 +15,10 @@ toc_headers: h2
 
 ![An Agent step in a Canvas user journey.]({% image_buster /assets/img/ai_agent/agent_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
+## Prerequisites
+
+Agent steps use [Canvas context variables]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/context_variables) to ingest relevant context and output a variable that can be leveraged in the Canvas.
+
 ## How it works
 
 When a user reaches an Agent step in a Canvas, Braze sends the input data you’ve configured (full context or selected fields) to your chosen agent. The agent then processes the input using its model and instructions, and returns an output. That output is stored in the output variable you defined in the step.
@@ -24,10 +28,6 @@ You can then use this variable in three main ways:
 - **Decisioning:** Route users down different Canvas paths based on the agent’s response. For example, a lead scoring agent might return a number between 1 and 10. You can use this score to decide whether to continue messaging a user or drop them from the journey.
 - **Personalization:** Insert the agent’s response directly into a message. For example, an agent could analyze customer feedback and generate an empathetic follow-up email that references the customer’s comment and suggests a resolution.
 - **Processing user data:** Analyze and standardize your user data, then store it on the user profile or send it using a webhook. For example, an agent could return a sentiment score or product affinity assignment. You can store that data in a user profile for future usage.
-
-## Prerequisite
-
-Agent steps use [Canvas context variables]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/context_variables) to ingest relevant context and output a variable that can be leveraged in the Canvas.
 
 ## Creating an Agent step
 

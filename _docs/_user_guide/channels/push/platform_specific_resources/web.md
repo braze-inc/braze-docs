@@ -16,6 +16,18 @@ channel:
 
 Web push is another great way to engage with users of your web application. Customers visiting your website from [supported browsers](#supported-browsers) can opt-in to receive web push from your web application whether or not the web page is loaded.
 
+## Prerequisites
+
+Before you can create and send any push messages using Braze, you need to work with your developers to integrate push into your website. For detailed steps, refer to our [Web push integration guide]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web).
+
+### Push permission
+
+Any brand can integrate and use web push notifications on their website. The notifications can reach both current and previous web visitors as long as they have a web browser open, but visitors must [opt in to receive notifications]({{site.baseurl}}/user_guide/channels/push/push_setup/push_subscription_states/#push-permission)—just like with traditional mobile app push.
+
+{% alert tip %}
+Consider using an in-browser message to prime users to opt in for web push, also known as a [push primer]({{site.baseurl}}/user_guide/channels/push/best_practices/push_primer_messages/).
+{% endalert %}
+
 ## Overview
 
 Web push notifications deliver urgent, actionable updates that drive quick conversions. With web push, you can:
@@ -39,18 +51,6 @@ Here are some examples of common web push message use cases.
 | Discounts and sales | Increase customer awareness of time-sensitive events and promotions. Message across multiple channels, including web push, to increase awareness of your brand's promotions. |
 | Cart abandonment | Send automated reminders to users who haven't finished their transactions to bring them back to the checkout flow. <br><br>Research conducted by Braze found that web push is 53% more effective than email and 23% more impactful than mobile push at getting recipients to come back and complete a purchase. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-## Prerequisites to use web push
-
-Before you can create and send any push messages using Braze, you need to work with your developers to integrate push into your website. For detailed steps, refer to our [Web push integration guide]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web).
-
-### Push permission
-
-Any brand can integrate and use web push notifications on their website. The notifications can reach both current and previous web visitors as long as they have a web browser open, but visitors must [opt in to receive notifications]({{site.baseurl}}/user_guide/channels/push/push_setup/push_subscription_states/#push-permission)—just like with traditional mobile app push.
-
-{% alert tip %}
-Consider using an in-browser message to prime users to opt in for web push, also known as a [push primer]({{site.baseurl}}/user_guide/channels/push/best_practices/push_primer_messages/).
-{% endalert %}
 
 ## Supported browsers
 

@@ -1240,7 +1240,7 @@ General guidelines:
 
 Before instructions:
 
-* **Use introductions and prerequisites.** Don’t jump straight into the steps. Instead, give context on what your article or section covers, and provide any information the reader needs to know before they scan the instructions. Make sure any prerequisites are listed at the top of the document.  
+* **Use introductions and prerequisites.** Don’t jump straight into the steps. Instead, give context on what your article or section covers, and provide any information the reader needs to know before they scan the instructions. Make sure any prerequisites are listed at the top of the document. Use the section header **Prerequisites** for task prerequisites (as the first ## on the page). Use **Requirements** for Braze or third-party constraints (e.g., file format, API permissions). In a table under Prerequisites, use **Requirements** as the first column header.  
 * **Start at the beginning of the procedure.** Don’t assume the reader has reached this page after completing a previous step. If the instructions for a task pick up where another left off, give an overview of where the reader is in the procedure, and what they must complete before this step. Include links to any previous steps.
 
 Writing instructions:
