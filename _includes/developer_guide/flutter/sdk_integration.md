@@ -112,7 +112,7 @@ Add the required permissions to your `AndroidManifest.xml` file:
 
 {% subtabs %}
 {% subtab SWIFT %}
-Add Braze SDK import at the top of the `AppDelegate.swift` file:
+Add the Braze SDK imports at the top of the `AppDelegate.swift` file:
 ```swift
 import BrazeKit
 import braze_plugin
@@ -269,7 +269,7 @@ To avoid undefined behaviors, only allocate and use a single instance of the `Br
 Starting in Flutter SDK 18.0.0, `BrazePlugin.initBraze()` is deprecated. To migrate to the new `configure` + `initialize` pattern:
 
 1. **iOS:** In your `AppDelegate.swift`, replace `BrazePlugin.initBraze(configuration)` with `BrazePlugin.configure(_:postInitialization:)`. Remove the `static var braze` property and the `AppDelegate.braze = braze` assignment, as the plugin manages the Braze instance internally.
-2. **iOS:** Remove any manual channel subscription code (e.g., `braze.contentCards.subscribeToUpdates`, `braze.featureFlags.subscribeToUpdates`, custom `inAppMessagePresenter` setup). These are now handled automatically.
+2. **iOS:** Remove any manual channel subscription or in-app message data-forwarding code (for example, `braze.contentCards.subscribeToUpdates`, `braze.featureFlags.subscribeToUpdates`, or custom `inAppMessagePresenter` subscription hooks). The plugin now sets up these subscriptions automatically. Optional customization of the in-app message presenter using `postInitialization` is still supported; see [Customize in-app message presentation]({{site.baseurl}}/developer_guide/platform_integration_guides/flutter/in-app_messaging/customization/).
 3. **Android:** Remove `com_braze_api_key` and `com_braze_custom_endpoint` from your `braze.xml`. Keep other configuration entries such as FCM sender ID and push settings.
 4. **Dart:** Add `braze.initialize("<BRAZE_API_KEY>", "<BRAZE_ENDPOINT>")` after creating your `BrazePlugin` instance.
 
@@ -279,7 +279,7 @@ Starting in Flutter SDK 18.0.0, `BrazePlugin.initBraze()` is deprecated. To migr
 
 ## Testing the integration
 
-You can verify that the SDK is integrated by checking session statistics in the dashboard. If you run your application on either platform, you should see a new session in dashboard (in the **Overview** section).
+You can verify that the SDK is integrated by checking session statistics in the dashboard. If you run your application on either platform, you should see a new session in the dashboard (in the **Overview** section).
 
 Open a session for a particular user by calling the following code in your app.
 
