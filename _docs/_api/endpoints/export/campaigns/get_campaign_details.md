@@ -67,7 +67,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
     "messages": {
         "message_variation_id": (string) { // <=This is the actual id
             "channel": (string) the channel type of the message, must be either email, ios_push, webhook, content_card, in-app_message, or sms,
-            "name": (string) the name of the message in the dashboard (eg., "Variation 1"),
+            "name": (string) the name of the message in the dashboard (for example, "Variation 1"),
             "has_translatable_content": (boolean) whether the message has translatable content (only present if `include_has_translatable_content` is true); `true` if locales are configured and the message contains at least one translation tag; `false` if no locales are configured or no translation tags detected; `null` if detection could not be completed,
             ... channel-specific fields for this message, see the following messages section ...
         }
