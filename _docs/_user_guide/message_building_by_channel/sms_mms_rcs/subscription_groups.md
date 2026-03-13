@@ -151,7 +151,7 @@ Consider the following example with four subscription groups across two workspac
 - **Production workspace**
   - Marketing - PROD for SMS
   - Transactional - PROD for SMS
-- **Development App Group (for testing)**
+- **Development Workspace (for testing)**
   - Marketing - DEV for SMS
   - Transactional - DEV for SMS
 
@@ -163,4 +163,4 @@ Choose descriptive and clear subscription group names so that the correct group 
 
 SMS regulations vary by country. We suggest separating SMS subscription groups by country. This helps you meet compliance standards in all regions where you send messages.
 
-For example, in Brazil, sending marketing messages outside the hours of 09:00 and 21:00 local time is prohibited, and the country spans three time zones. To comply with these regulations, you might set up separate groups for sending messages to Brazil and the United States. This prevents users in Brazil from receiving marketing messages during prohibited hours.
+For example, in Brazil, sending marketing messages outside the hours of 9 am and 9 pm local time is prohibited, and the country spans three time zones. To comply with these regulations, you might set up separate groups for sending messages to Brazil and the United States. This prevents users in Brazil from receiving marketing messages during prohibited hours.

@@ -48,7 +48,7 @@ AND action = 'Unsubscribed'
 AND (campaign_id IS NOT NULL OR canvas_id IS NOT NULL);
 ```
 
-This returns users who opted out of SMS communications for the given app group and subscription group, filtered to those associated with campaigns or Canvases.
+This returns users who opted out of SMS communications for the given workspace and subscription group, filtered to those associated with campaigns or Canvases.
 
 ## Charges applied to SMS sending outcomes
 
