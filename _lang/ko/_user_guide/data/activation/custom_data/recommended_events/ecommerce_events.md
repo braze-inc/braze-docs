@@ -174,7 +174,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
 ```
 {%endraw%}
 
-장바구니가 업데이트되지 않고 10일 이내에 주문이 진행되지 않으면 장바구니와 관련된 제품을 삭제합니다.
+장바구니가 업데이트되지 않고 30일 이내에 주문이 진행되지 않으면 장바구니와 관련된 제품을 삭제합니다.
 
 {% alert note %}
 장바구니당 제품 수는 Braze에서 제한되지 않습니다. 그러나 Shopify의 제한은 500입니다.

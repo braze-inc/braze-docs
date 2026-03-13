@@ -174,7 +174,7 @@ L'événement `ecommerce.cart_updated` possède un objet de mappage des paniers.
 ```
 {%endraw%}
 
-Si un panier n'a pas été mis à jour et n'est pas passé à l'étape de la commande dans les 10 jours, nous supprimerons le panier et les produits associés.
+Si un panier n'a pas été mis à jour et n'est pas passé à l'étape de la commande dans les 30 jours, nous supprimerons le panier et les produits associés.
 
 {% alert note %}
 Les produits par panier ne sont pas limités sur Braze. Cependant, la limite de Shopify est de 500.

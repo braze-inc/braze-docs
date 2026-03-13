@@ -174,7 +174,7 @@ El`ecommerce.cart_updated`evento tiene un objeto que ha sido mapeado para los ca
 ```
 {%endraw%}
 
-Si un carrito no se ha actualizado y no ha pasado a la fase de pedido en un plazo de 10 días, eliminaremos el carrito y los productos asociados.
+Si un carrito no se ha actualizado y no ha pasado a la fase de pedido en un plazo de 30 días, eliminaremos el carrito y los productos asociados.
 
 {% alert note %}
 Los productos por carrito no están limitados en Braze. Sin embargo, el límite de Shopify es de 500.

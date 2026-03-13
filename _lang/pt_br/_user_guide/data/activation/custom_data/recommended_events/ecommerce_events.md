@@ -174,7 +174,7 @@ O evento `ecommerce.cart_updated` tem um objeto de mapeamento de carrinhos. Este
 ```
 {%endraw%}
 
-Se um carrinho não foi atualizado e progrediu para um evento de pedido realizado em 10 dias, nós deletaremos o carrinho e os produtos associados.
+Se um carrinho não foi atualizado e progrediu para um evento de pedido realizado em 30 dias, nós deletaremos o carrinho e os produtos associados.
 
 {% alert note %}
 Produtos por carrinho não têm limite no Braze. No entanto, o limite do Shopify é 500.
