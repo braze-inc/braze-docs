@@ -126,3 +126,8 @@ If there is a race condition during the Canvas entry evaluation, users may enter
 If a user triggers the Canvas entry event multiple times within the same second, Braze allows only one entry for that second (even if re-entry is enabled). This prevents duplicate entries, so the total number of Canvas entries may be lower than the total trigger events.
 
 We recommend confirming how user data is managed and updated, specifically when and how specific attributes are updated, such as by SDK, API, batch API, and other methods. This can help identify and clarify why a user has entered a campaign or Canvas versus when a user's profile was updated.
+
+## Campaigns Targeting New Users Surfaced Race Conditions (BD-4164)
+
+With In-App messages, the race condition situation can be a little more complicated. The IAM has to be loaded on the device before being triggered. If the trigger event is part of the onboarding process, or the user falls out of the segmentation for the custom event as part of their first session, it's likely the user will not see the IAM.
+
