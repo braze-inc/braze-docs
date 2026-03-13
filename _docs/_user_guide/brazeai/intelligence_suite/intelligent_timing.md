@@ -43,27 +43,27 @@ This section describes how to configure Intelligent Timing for your campaigns an
 2. Select the **Scheduled Delivery** as your delivery type.
 3. Under **Time-Based Scheduling Options**, select **Intelligent Timing**.
 4. Set the entry frequency. For one-time sends, select **Once** and select a send date. For recurring sends, select **Daily**, **Weekly**, or **Monthly** and configure the recurrence options. See [limitations](#limitations) for more guidance.
-5. Optionally, configure [Quiet Hours](#quiet-hours).
+5. Optionally, configure [quiet hours](#quiet-hours).
 6. Specify a [fallback time](#campaign-fallback). This is when the message is sent if a user's profile doesn't have any relevant events to calculate an optimal time.
 
-![Campaign scheduling screen showing Intelligent Timing with fallback time and Quiet Hours settings]({% image_buster /assets/img/intelligent_timing/campaign_scheduling.png %})
+![Campaign scheduling screen showing Intelligent Timing with fallback time and quiet hours settings]({% image_buster /assets/img/intelligent_timing/campaign_scheduling.png %})
 
-#### Quiet Hours {#quiet-hours}
+#### Quiet hours {#quiet-hours}
 
-Use Quiet Hours to prevent messages from being sent during specific hours. This is helpful when you want to avoid sending messages during early morning hours or overnight, while still allowing Intelligent Timing to determine the best delivery window.
+Use quiet hours to prevent messages from being sent during specific hours. This is helpful when you want to avoid sending messages during early morning hours or overnight, while still allowing Intelligent Timing to determine the best delivery window.
 
 {% alert note %}
-Quiet Hours has replaced the **Only send within specific hours** setting. Instead of choosing when messages can be sent, you now choose when they shouldn’t be sent. For example, to send messages between 4 pm and 6 pm, set Quiet Hours from 6 pm to 4 pm the next day.
+Quiet hours has replaced the **Only send within specific hours** setting. Instead of choosing when messages can be sent, you now choose when they shouldn’t be sent. For example, to send messages between 4 pm and 6 pm, set quiet hours from 6 pm to 4 pm the next day.
 {% endalert %}
 
 1. Select **Enable Quiet Hours**.
 2. Select the start and end time when **not** to send messages.
 
-![Quiet Hours toggle turned on with start and end time set to block message delivery overnight]({% image_buster /assets/img/intelligent_timing/quiet_hours.png %})
+![Quiet hours toggle turned on with start and end time set to block message delivery overnight]({% image_buster /assets/img/intelligent_timing/quiet_hours.png %})
 
-When Quiet Hours are turned on, Braze won't send messages during the quiet period—even if that time matches a user's optimal send time. If a user's optimal time falls within the quiet window, the message will be sent instead at the nearest edge of the window.
+When quiet hours are turned on, Braze won't send messages during the quiet period—even if that time matches a user's optimal send time. If a user's optimal time falls within the quiet window, the message will be sent instead at the nearest edge of the window.
 
-For example, if Quiet Hours are set from 10:00 PM to 6:00 AM, and a user's optimal time is 5:30 AM, Braze will hold the message and deliver it at 6:00 AM—the closest time outside the quiet window.
+For example, if quiet hours are set from 10:00 PM to 6:00 AM, and a user's optimal time is 5:30 AM, Braze will hold the message and deliver it at 6:00 AM—the closest time outside the quiet window.
 
 #### Preview delivery times
 
@@ -105,16 +105,16 @@ When using Intelligent Timing, we recommend scheduling the Winning Variant send 
 
 ![A/B testing sections showing A/B test with Winning Variant selected, with winning criteria, send date, and local send time selected]({% image_buster /assets/img/intelligent_timing/ab_testing_intelligent_timing.png %})
 
-### Step 3: Configure Quiet Hours (optional)
+### Step 3: Configure quiet hours (optional)
 
-Optionally, you can configure Quiet Hours to prevent messages from being sent during a specific time range. This may be useful if you don't want to contact users overnight or during certain hours, but is generally not recommended when using Intelligent Timing. For more information, refer to [limitations](#limitations).
+Optionally, you can configure quiet hours to prevent messages from being sent during a specific time range. This may be useful if you don't want to contact users overnight or during certain hours, but is generally not recommended when using Intelligent Timing. For more information, refer to [limitations](#limitations).
 
-Quiet Hours act as a no-send window. Intelligent Timing still determines each user's optimal send time, but if that time falls within Quiet Hours, Braze delays the message until the next available time outside the Quiet Hours period.
+Quiet hours act as a no-send window. Intelligent Timing still determines each user's optimal send time, but if that time falls within quiet hours, Braze delays the message until the next available time outside the quiet hours period.
 
-To configure Quiet Hours:
+To configure quiet hours:
 
 1. When configuring Intelligent Timing, select **Enable Quiet Hours**.
-2. Enter the start and end time of the Quiet Hours window.
+2. Enter the start and end time of the quiet hours window.
 
 ### Step 4: Choose a fallback time {#campaign-fallback}
 
@@ -268,13 +268,13 @@ Braze performs two checks when a campaign is launched:
 
 Be careful when filtering based on other campaign sends to avoid targeting ineligible segments. For example, if you were to send out two campaigns on the same day for different times, and add a filter that only allows users to receive the second campaign if they’ve received the first, users won’t receive the second campaign. This is because no one was eligible when the campaign was first created, and segments were formed.
 
-#### Can I use Quiet Hours in my Intelligent Timing campaign?
+#### Can I use quiet hours in my Intelligent Timing campaign?
 
-Quiet Hours can be used on a campaign that uses Intelligent Timing. The Intelligent Timing algorithm will avoid Quiet Hours so that it still sends the message to all eligible users. That said, we recommend turning Quiet Hours off unless there are policy, compliance, or other legal implications to when messages can and can't be sent.
+Quiet hours can be used on a campaign that uses Intelligent Timing. The Intelligent Timing algorithm will avoid quiet hours so that it still sends the message to all eligible users. That said, we recommend turning quiet hours off unless there are policy, compliance, or other legal implications to when messages can and can't be sent.
 
-#### What happens if the optimal time for a user is within the Quiet Hours? 
+#### What happens if the optimal time for a user is within the quiet hours? 
 
-If the determined optimal time falls within Quiet Hours, Braze finds the nearest edge of the Quiet Hours and schedules the message for the next allowable hour before or after Quiet Hours. The message is enqueued to send at the closest boundary of Quiet Hours relative to the optimal time.
+If the determined optimal time falls within quiet hours, Braze finds the nearest edge of the quiet hours and schedules the message for the next allowable hour before or after quiet hours. The message is enqueued to send at the closest boundary of quiet hours relative to the optimal time.
 
 #### Can I use Intelligent Timing and rate-limiting?
 
