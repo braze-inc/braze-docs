@@ -44,3 +44,8 @@ If auto-play is required and your tests show it doesn’t work by default, you c
 ## Web considerations
 
 Most modern browsers allow auto-play only under certain conditions (commonly when the video is muted). If you use `autoplay` in a web in-app message, include `muted` and test across your supported browsers and devices, as browser policies vary and may still require a user gesture in some cases.
+
+## How to embed YouTube videos In IAMs (BD-4479)
+
+The docs could include information given for the usage of Youtube as some customers may opt to do so.
+

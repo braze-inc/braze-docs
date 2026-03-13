@@ -16,3 +16,12 @@ tool:
 
 {% multi_lang_include analytics/campaign_analytics.md channel="in-app message" %}
 
+## Why Are There More Impressions for The Control Group Compared to The Variant in  (BD-4420)
+
+Add this into the docs for clarification on IAM impressions in a 50-50 variant split
+
+
+## When Does Braze Log a "Campaign Received" or "Impression" for an In-App Message  (BD-4452)
+
+Include that information in the in-app message reporting documentation
+

@@ -46,4 +46,7 @@ channel: in-app messages
     <a href="appboy://close">X</a>
     ```
 
+## Limitations for IAM DnD Editor (BD-4584)
+
+Update the documentation to include: Limitations for IAM DnD Editor : Summary : A list of limitations for the IAM DnD Editor. Resolution : Adding Deep Links : Currently, there is no way to add different deep links for different devices in the DnD IAM editor (unlike the traditional editor). Adjusting Opacity for Background Images : The Opacity feature on the Drag and Drop IAM builder does not allow for complete transparency of background images (as the traditional IAM editor does). However, the message background color with opacity controls is available. DnD IAM Max Width : The minimum max widt
 

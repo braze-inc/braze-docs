@@ -242,3 +242,8 @@ Here are some considerations when sending in-app messages in a Canvas.
 - If the user never restarts the app or never starts a session, the app won't be able to find out if the user is eligible for the in-app message, meaning an in-app message won't be sent.
 - When the first click occurs and there is a Canvas context variable (Canvas entry properties), and a user re-enters a Canvas five times, Braze will take the fifth entry and use that context variable in the in-app message.
 - A user can be eligible for up to 10 in-app messages within the same Canvas step. For example, if a Canvas allows re-entry and a user enters the Canvas 11 times, they will only be sent 10 in-app messages if none have expired.
+
+## Zero Sends for In-App Message Canvas (BD-4537)
+
+Update the documentation to include: Understanding In-App Message Sends and Impressions : Validation Status : Validated Issue : Messages sent are always zero in the Analytics dashboard for a Canvas containing an in-app message step. Cause : The delivery of in-app messages is different compared to other channels such as email or push notifications. Resolution : In-app messages are 'pulled' by the SDK, rather than 'pushed' from the Braze platform. An in-app message for an eligible user is delivered automatically on session start, ready for the trigger event. Since all eligible users will 'receiv
+

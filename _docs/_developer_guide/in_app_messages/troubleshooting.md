@@ -25,3 +25,8 @@ channel:
 {% multi_lang_include developer_guide/swift/in_app_messages/troubleshooting.md %}
 {% endsdktab %}
 {% endsdktabs %}
+
+## Troubleshoot received In-App Message that does Not Display on Device (BD-4405)
+
+Using the content from the Knowledge Article, add a bullet point to the doc for the customer to check if they have any customization
+

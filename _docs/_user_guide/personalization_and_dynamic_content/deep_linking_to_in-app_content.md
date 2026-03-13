@@ -72,3 +72,7 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spri
 
 ![]({% image_buster /assets/img_archive/iam_utm_tags.png %})
 
+## Adding Click Attribution in GA vs Braze (BD-4577)
+
+Adding Click Attribution in GA vs Braze
+
