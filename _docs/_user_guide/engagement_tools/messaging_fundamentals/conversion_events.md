@@ -89,3 +89,8 @@ If you don't select any conversion events during campaign creation, the time def
 Additionally, for multivariate messages, you can see the number of conversions and conversion percentages for your control group and each variant.
 
 ![Four conversion events that track conversions based on when a purchase was made within three hours, made a purchase within two hours, started a session within 30 minutes, and started a session within 25 minutes.]({% image_buster /assets/img_archive/conversion_event_details.png %})
+
+## When Does Conversion Tracking Begin? (BD-4077)
+
+For Campaigns: Conversion tracking begins when a user receives the campaign, or they enter the campaign's control group. Receiving a campaign and entering a campaign variant typically happen at the same time for campaigns. For in-app messages, tracking begins when a user logs an impression. For Canvases: ** For canvases, conversions are tracked when the user enters the canvas. For Canvas steps, conversions are tracked for the duration they are in the Canvas step. If the user moves onto another step, the conversion tracking stops for the first step and starts for the second step.
+

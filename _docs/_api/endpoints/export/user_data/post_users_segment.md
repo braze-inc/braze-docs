@@ -485,3 +485,13 @@ For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl
 [3]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/
 
 {% endapi %}
+
+## URL is "null" in Segment Export Response (BD-4347)
+
+I would suggest adding that the URL is "null" since"A URL is generated for the segment export only if there is no Data Warehouse integration such as Amazon S3 or Azure"
+
+
+## Unable to Download Exported Segment - 403 Error (BD-4506)
+
+A small section under 'Important Reminders' which explains that a 403 a can arise for some requests due to the causes noted in the article.
+

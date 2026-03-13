@@ -198,3 +198,8 @@ GROUP BY email_address;
 ```
 {% endtab %}
 {% endtabs %}
+
+## Snowflake Query - Obtaining Unique Email Opens (BD-4103)
+
+Move the info in the KA to our docs.
+

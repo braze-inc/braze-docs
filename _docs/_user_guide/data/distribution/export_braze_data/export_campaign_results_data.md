@@ -95,3 +95,7 @@ The exported file includes the same user data fields that are included when you 
 For help with CSV and API exports, check out [Export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
+## Why Doesn't 'Messages Sent' Number Match Campaign CSV Export? (BD-4501)
+
+You may be concerned that the number of Messages Sent on a campaign's analytics page does not match with the CSV exported of user data from the campaign. What could be causing this mismatch? There are two main reasons why the unique recipients/messages sent figure will not match the user data export CSV: 1. If re-eligibility is (or was at one point) turned on 2. Users have been deleted (or merged) since the campaign / canvas was sent 1. If users are (or were at one point) able to receive the campaign more than 1 time, this is likely the reason that the Campaign Analytics numbers and the number
+

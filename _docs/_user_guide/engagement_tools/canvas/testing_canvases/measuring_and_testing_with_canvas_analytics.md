@@ -103,3 +103,12 @@ Funnel reporting offers a visual report that allows you to analyze the journeys 
 
 User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy. Braze now allows you to measure user retention right on the **Canvas Analytics** page. For more information on how to read and interpret your retention report, check out [Retention reports]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
 
+## How is Revenue Tracked in a Canvas? (BD-4301)
+
+Add: The Total Revenue metric in the Canvas analytics represents the sum of purchases made by users who received the particular variant within the primary conversion window. This means that even if a user did not perform the specified primary conversion event A but made a purchase , that purchase is still counted towards the total revenue. As per our documentation, which you can review here , the Total Revenue is calculated based on all purchases made by Canvas recipients within the set primary conversion window, regardless of whether they performed the primary conversion event.
+
+
+## Add How to Open Canvas Step Analytics (BD-4495)
+
+Add How to Open Canvas Step Analytics
+

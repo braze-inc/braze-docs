@@ -68,3 +68,8 @@ When you export data through the APIs with a storage partner connected, the expo
 
 {% endsdktab %}
 {% endsdktabs %}
+
+## Email For Segment Export Of User Data Not Arriving In Inbox (BD-4565)
+
+Update the documentation to include: Issue: Problems Receiving Segment Exports from the Dashboard : Cause : This can be due to a number of issues. Resolution : When troubleshooting these issues, consider the following: Ensure you can export the segment data and that the email arrives in your inbox. If you don't receive the export, this may indicate an issue on Braze's end. Depending on the export size, the timing for delivery may vary. If the email hasn't arrived after an hour or so, reach out to Braze's Support team. Check if the issue is widespread on your end. Is there anyone on your team w
+

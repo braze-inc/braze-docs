@@ -115,4 +115,7 @@ You will receive an email with links to your reports at your chosen time or sche
 
 The report contains all statistics selected in the [Add Stats](#add-statistics-to-your-reports) section of the setup process.
 
+## Engagement Report Not Sending (BD-4629)
+
+In the Engagement Reports page under the "Step 2 Add Messages" -&gt; "Automatically select campaigns or Canvases" section, ** add a green "Note" box that says: The filters will need to match at least one campaign or canvas in order to run the report. If you've selected "Send Immediately" and are seeing an error, double check the tags selected. Make sure that at least one campaign or canvas matches your chosen criteria.
 

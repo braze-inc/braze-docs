@@ -106,3 +106,7 @@ This graph gives you the ability to quickly see your total data point usage vers
 
 ![Data Point Usage over time contrasting current billing cycle allotted data points with running total]({% image_buster /assets/img/company_data_point_usage_time.png %}){: style="max-width:90%;"}
 
+## Cannot Access Total Access Points Page within Subscriptions and Usage in Dashboa (BD-4596)
+
+Using the content from the Knowledge Article, I believe it will be to the customer's benefit to add e section where they can check the reason why they can not access the Total Access Points Page within Subscriptions and Usage in Dashboard.
+
