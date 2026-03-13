@@ -16,7 +16,7 @@ _This integration is maintained by Jampp._
 
 ## About the integration
 
-The Braze and Jampp integration allows Braze users to sync events into Jampp via Braze webhook events. As a result, customers can add richer data sets to their retargeting initiatives within their mobile advertising ecosystems.
+The Braze and Jampp integration allows company users to sync events into Jampp via Braze webhook events. As a result, customers can add richer data sets to their retargeting initiatives within their mobile advertising ecosystems.
 
 Some examples of when you would want to retarget customers with an ad:
 - When a customer's email or push subscription state changes.

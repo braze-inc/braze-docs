@@ -16,11 +16,11 @@ channel:
 
 最適化された配信を行うWhatsAppメッセージは、ダイナミックなエンゲージメントベースの配信を提供するMetaの[Marketing Messages API for WhatsApp（MM](https://developers.facebook.com/docs/whatsapp/marketing-messages-api-for-whatsapp)API for WhatsApp）を使用して送信される。つまり、エンゲージメントの高いメッセージ（例えば、読まれやすく、クリックされやすいメッセージ）は、エンゲージメントの高いユーザーにより多く届くことになる。WhatsAppでは、期待され、関連性があり、タイムリーなメッセージはエンゲージメントが高いと判断され、読まれたりクリックされたりする可能性が高くなる。 
 
-ブランドはMM API for WhatsAppを利用することで、Cloud APIと同等以上の配信性を期待できる。Metaによると、インドでは、エンゲージメントの高いマーケティングメッセージは、クラウドAPIと比較して、配信されたメッセージが最大9％増加した。なお、WhatsAppのMM APIは100％の配信性を保証するものではない。
+ブランドはMM API for WhatsAppを利用することで、Cloud APIと同等以上の配信性を期待できる。Metaによると、インドでは、エンゲージメントの高いマーケティングメッセージは、クラウドAPIと比較して最大9％多く配信された。なお、WhatsAppのMM APIは100％の配信性を保証するものではない。
 
 ### 地域の空室状況
 
-最適化された配信の可用性と最適化機能は、ビジネス電話番号の地域とユーザーに依存する。詳しくは、「[地理的な機能の利用可能性](https://developers.facebook.com/docs/whatsapp/marketing-messages-lite-api/get-started#geographic-availability-of-features)」を参照のこと。 
+最適化された配信の可用性と最適化能力は、ビジネス電話番号の地域とユーザーに依存する。詳しくは、「[地理的な機能の利用可能性](https://developers.facebook.com/docs/whatsapp/marketing-messages-lite-api/get-started#geographic-availability-of-features)」を参照のこと。 
 
 ## 最適化された配信の設定
 

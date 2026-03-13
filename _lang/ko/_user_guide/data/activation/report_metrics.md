@@ -184,7 +184,7 @@ The performance of the message across various channels. The metrics shown depend
 SMS/MMS, RCS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Confirmed Deliveries' %} Braze 고객으로서, 전달은 귀하의 SMS 할당량에 청구됩니다. 
+{% multi_lang_include analytics/metrics.md metric='Confirmed Deliveries' %} Braze 고객으로서, 전달은 귀하의 SMS 할당량에 포함됩니다. 
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -495,7 +495,7 @@ Performance metrics for the message in a Feature Flag experiment. The specific m
 SMS/MMS, RCS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Help' %} 사용자가 귀하의 메시지를 받은 후 4시간 이내에 인바운드 메시지를 보낼 때마다 사용자 응답이 측정됩니다.
+{% multi_lang_include analytics/metrics.md metric='Help' %} 사용자의 답장은 사용자가 귀하의 메시지를 받은 후 4시간 이내에 인바운드 메시지를 보낼 때 측정됩니다.
 
 {% endapi %}
 
@@ -605,7 +605,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 SMS/MMS, RCS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Opt-Out' %} 사용자가 귀하의 메시지를 받은 후 4시간 이내에 인바운드 메시지를 보낼 때마다 사용자 응답이 측정됩니다.
+{% multi_lang_include analytics/metrics.md metric='Opt-Out' %} 사용자의 답장은 사용자가 귀하의 메시지를 받은 후 4시간 이내에 인바운드 메시지를 보낼 때 측정됩니다.
 
 {% endapi %}
 
@@ -617,7 +617,7 @@ SMS/MMS, RCS
 이메일
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Other Opens' %} 사용자가 기계 열기 수가 기록되기 전에 이메일을 열 수도 있다는 점에 유의하십시오(예: 기타 열기 수에 대한 열기 수). 사용자가 Apple Mail이 아닌 받은 편지함에서 컴퓨터 열기 이벤트가 발생한 후 이메일을 한 번 이상 여는 경우, 사용자가 이메일을 여는 횟수는 기타 열기 횟수에 대해 계산되고 고유 열기 횟수에 대해서는 한 번만 계산됩니다.
+{% multi_lang_include analytics/metrics.md metric='Other Opens' %} 사용자가 이메일을 열 수 있으며(예: 다른 열기 수에 대한 열기 수) 기계 열기 수가 기록되기 전에 발생할 수 있습니다. 사용자가 Apple Mail이 아닌 받은 편지함에서 컴퓨터 열기 이벤트가 발생한 후 이메일을 한 번 이상 여는 경우, 사용자가 이메일을 여는 횟수는 기타 열기 횟수에 대해 계산되고 고유 열기 횟수에 대해서는 한 번만 계산됩니다.
 
 {% endapi %}
 
@@ -717,7 +717,7 @@ Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS/MMS,
 SMS/MMS, RCS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Rejections' %} Braze 고객으로서, 거부는 귀하의 SMS 할당량에 청구됩니다.
+{% multi_lang_include analytics/metrics.md metric='Rejections' %} Braze 고객으로서, 거부는 귀하의 SMS 할당량에 포함됩니다.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -922,7 +922,7 @@ Email, Content Cards, SMS/MMS, LINE
 콘텐츠 카드
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Total Dismissals' %} 사용자가 동일한 캠페인에서 두 개의 다른 카드를 받고 둘 다 거부하면 이 수치는 두 개 증가합니다. Re-eligibility allows you to increment _Total Dismissals_ once every time a user receives a card; each card is a different message.
+{% multi_lang_include analytics/metrics.md metric='Total Dismissals' %} 사용자가 동일한 캠페인에서 두 개의 다른 카드를 받고 둘 다 거부하면, 이 수치는 두 개 증가합니다. Re-eligibility allows you to increment _Total Dismissals_ once every time a user receives a card; each card is a different message.
 
 {::nomarkdown}
 <span class="calculation-line">
@@ -944,7 +944,7 @@ Email, Content Cards, SMS/MMS, LINE
 인앱 메시지, 콘텐츠 카드
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} 이 숫자는 Braze가 SDK에서 수신하는 노출 이벤트 수의 합계입니다.
+{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} 이 숫자는 Braze가 SDK로부터 받는 노출 이벤트 수의 합계입니다.
 
 |Channel|Additional information|
 |-------|-----------------------|

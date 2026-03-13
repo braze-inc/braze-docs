@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} Mise en route : Présentation de l’intégration
+# [![Cours]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} [Braze Learning](https://learning.braze.com/sdk-integration-basics) \- Premiers pas : Présentation de l’intégration
 
 > Cet article donne un aperçu du processus d'onboarding.
 
@@ -128,6 +128,10 @@ Le SDK de Braze fournit deux fonctionnalités essentielles : il collecte et sync
 Lorsqu'il est entièrement intégré à votre application ou à votre site, le SDK de Braze offre un niveau de sophistication marketing entièrement réalisé. Si vous différez l'intégration du SDK de Braze, certaines des fonctionnalités décrites dans la documentation ne seront pas disponibles.
 {% endalert %}
 
+{% alert note %}
+Pour renforcer la sécurité, il est possible d'activer [l'authentification SDK]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) afin d'empêcher les requêtes SDK non autorisées. Cette fonctionnalité est disponible sur toutes les principales plateformes, notamment Web, iOS, Android, React native, Flutter, Unity, cordova, .NET MAUI (Xamarin) et Expo.
+{% endalert %}
+
 Au cours de l’implémentation du SDK :
 
 * Rédigez un code d'intégration SDK pour chaque plateforme que vous souhaitez prendre en charge.
@@ -225,9 +229,9 @@ Vous assurerez le suivi des mises à jour de la plateforme Braze via le [référ
 
 ## Limites de débit du SDK 
 
-### Utilisateurs actifs mensuels CY 24-25, MAU universel, MAU web et MAU mobile  
+### Utilisateurs actifs par mois CY 24-25, MAU universel, MAU Web et MAU mobile  
 
-Pour les clients qui ont acheté des utilisateurs actifs mensuels CY 24-25, Universal MAU, Web MAU et Mobile MAU , Braze applique des limites de débit côté serveur sur les demandes API utilisées par nos SDK pour mettre à jour les sessions, les attributs utilisateurs, les événements et d'autres données de profil utilisateur. Ceci afin d'assurer la stabilité de la plateforme et de maintenir un service rapide et fiable. 
+Pour les clients ayant souscrit aux offres Utilisateurs actifs mensuels CY 24-25, MAU universels, MAU Web et MAU mobiles, Braze applique des limites de débit côté serveur sur les requêtes API utilisées par nos SDK pour mettre à jour les sessions, les attributs utilisateur, les événements et autres données de profil utilisateur. Ceci afin d'assurer la stabilité de la plateforme et de maintenir un service rapide et fiable. 
 
 * Les limites de débit horaire sont fixées en fonction du trafic SDK prévu sur votre compte, qui peut correspondre au nombre d'utilisateurs actifs mensuels (MAU) que vous avez acheté, au secteur d'activité, à la saisonnalité ou à d'autres facteurs. Lorsque la limite de débit horaire est atteinte, Braze étrangle les demandes jusqu'à l'heure suivante.
 * Toutes les demandes à débit limité sont automatiquement relancées par le SDK.
@@ -235,12 +239,25 @@ Pour les clients qui ont acheté des utilisateurs actifs mensuels CY 24-25, Univ
     * Révision de l'intégration SDK afin de réduire la collecte excessive de données.
     * Bloquer les données personnalisées qui ne sont pas essentielles pour vos cas d'utilisation marketing.
 * Les limites de débit en rafale sont des limites de débit de courte durée qui s'appliquent lorsqu'un volume important de demandes arrive dans un laps de temps très court (c'est-à-dire en l'espace de quelques secondes). Vous n'avez pas besoin d'agir lorsque des limites de rafales se produisent, et le SDK réessayera peu de temps après.
+* Les limites de débit constant contrôlent le volume de requêtes soutenu sur une fenêtre glissante plus longue que la fenêtre de pointe (par exemple, plusieurs minutes) et contribuent à lisser le trafic continu entre les limites de pointe et votre limite de débit horaire.
 
 ### Trouver vos limites de débit
 
 Pour connaître les limites actuelles basées sur le débit attendu du SDK, allez dans **Paramètres** > **API et identifiants** > **Limites API et SDK**.
 
 Pour connaître l'historique de l'utilisation, allez dans **Paramètres** > **API et identifiants** > **Tableau de bord API et SDK**.
+
+### Demande d'augmentation des limites de débit
+
+Si vous avez besoin d'une limite de débit Braze plus élevée, veuillez contacter le service d'assistance Braze ou votre gestionnaire de la satisfaction client et inclure les informations suivantes :
+
+* Que vous ayez besoin d'une augmentation temporaire ou permanente.
+* Pourquoi avez-vous besoin de cette augmentation ?
+* Quels endpoints et environnements sont concernés ?
+* Veuillez indiquer le volume approximatif de trafic et le calendrier, y compris la date de début, la durée et les heures de pointe.
+* Si vous pouvez regrouper les appels ou répartir le trafic dans le temps.
+
+Une fois votre demande soumise, Braze l'examine et vous informe du résultat.
 
 ### Changements et soutien
 

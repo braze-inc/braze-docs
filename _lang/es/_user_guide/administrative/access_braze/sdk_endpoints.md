@@ -1,7 +1,7 @@
 ---
 nav_title: API y puntos finales SDK
 article_title: API y puntos finales SDK
-page_order: 2.4
+page_order: 4
 page_type: reference
 description: "Este artículo de referencia enumera las URL del panel, los puntos finales API y los puntos finales SDK para las instancias de Braze disponibles."
 
@@ -21,4 +21,4 @@ Si inicia sesión en [dashboard.braze.com](https://dashboard.braze.com) le envia
 Cuando integres tu SDK, utiliza el punto final SDK. Cuando realices llamadas a nuestra API REST, utiliza el punto final REST.
 {% endalert %}
 
-Para más detalles sobre cómo acceder a la API, consulta nuestro [artículo sobre el resumen de la API]({{site.baseurl}}/api/basics/). 
+Para obtener más información sobre cómo acceder a la API, consulta nuestro [artículo de resumen de la API.]({{site.baseurl}}/api/basics/) 

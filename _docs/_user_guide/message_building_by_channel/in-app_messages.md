@@ -132,3 +132,5 @@ This table compares the in-app message flows that Sam experienced:
 ## More resources
 
 Before you get started with creating your own in-app message campaigns—or using in-app messages in a multi-channel campaign—we highly recommend that you check out our [In-app message prep guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/). This guide covers targeting, content, and conversion questions you should consider when building in-app messages.
+
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}

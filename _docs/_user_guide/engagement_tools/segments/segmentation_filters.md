@@ -244,7 +244,7 @@ glossaries:
     tags:
       - Retargeting
   - name: In Canvas Control Group
-    description: Segments your users by whether or not they were in the control group for a specific Canvas. This filter only evaluates users who have entered the Canvas.<br><br>For example, if you filter for users who are not in the control group for a Canvas, you receive all users who entered the Canvas but are not in the control group.
+    description: Segments your users by whether or not they were in the control group for a specific Canvas. This filter only evaluates users who have entered the Canvas, so users who never entered are excluded from results entirely.<br><br>For example, if you filter for users who are not in the control group for a Canvas, you receive only users who entered the Canvas and were assigned to a non-control variant—users who never entered the Canvas are not included. To include all users regardless of Canvas entry, use the <code>Entered Canvas Variation</code> filter instead.
     tags:
       - Retargeting
   - name: Last Enrolled in Any Control Group
@@ -588,7 +588,7 @@ glossaries:
     tags:
       - Intelligence and predictive
   - name: Message Open Likelihood
-    description: Filters your users based on their likelihood to open a message on a specified channel on a scale of 0-100%. Users without sufficient data to measure a likelihood for a channel can be selected using "is blank."<br><br>For email, machine opens are excluded from the likelihood calculation.
+    description: Filters your users based on their <a href="/docs/user_guide/brazeai/intelligence/intelligent_channel/#individual-channels">likelihood to open a message on a specified channel</a> on a scale of 0-100%. Users without sufficient data to measure a likelihood for a channel can be selected using "is blank."<br><br>For email, machine opens are excluded from the likelihood calculation.
     tags:
       - Intelligence and predictive
   - name: Number of Facebook Friends Using App

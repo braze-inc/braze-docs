@@ -1,5 +1,5 @@
 ---
-nav_title: Referenzen &amp; Beispiel-Apps
+nav_title: Referenzen und Beispiel-Apps
 article_title: "Braze SDK Referenzen, Repositories und Beispiel-Apps"
 page_order: 5.5
 description: "Dies ist eine Liste der referenzierten Dokumentationen, GitHub-Repositories und Beispiel-Apps, die zu jedem Braze SDK gehören."
@@ -26,7 +26,7 @@ Derzeit haben einige SDKs keine spezielle referenzierte Dokumentation - aber wir
 | React Native SDK  | [Deklarationsdatei](https://github.com/braze-inc/braze-react-native-sdk/blob/master/src/index.d.ts)                   | [GitHub-Repository](https://github.com/braze-inc/braze-react-native-sdk) | [Beispiel-App](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject) |
 | Roku SDK          | --                                                                                                                                                         | [GitHub-Repository](https://github.com/braze-inc/braze-roku-sdk)            | [Beispiel-App](https://github.com/braze-inc/braze-roku-sdk/tree/main/torchietv)            |
 | Unity SDK         | [Deklarationsdatei](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs)     | [GitHub-Repository](https://github.com/braze-inc/braze-unity-sdk)          | [Beispiel-App](https://github.com/braze-inc/braze-unity-sdk/tree/master/unity-samples)          |
-| .NET MAUI SDK (früher Xamarin)      | --                                                                                                                                                         | [GitHub-Repository](https://github.com/braze-inc/braze-xamarin-sdk)      | [Beispiel-App](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples)      |
+| .NET MAUI SDK (ehemals Xamarin)      | --                                                                                                                                                         | [GitHub-Repository](https://github.com/braze-inc/braze-xamarin-sdk)      | [Beispiel-App](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples)      |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Eine App als Beispiel erstellen

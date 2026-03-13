@@ -10,12 +10,12 @@
 ## Aktivieren von In-App-Nachrichten
 
 {% alert note %}
-Dieser Schritt gilt nur für iOS. Die Standard-Implementierung für In-App-Nachrichten ist auf Android bereits eingerichtet.
+Dieser Schritt gilt ausschließlich für iOS. Die Standardimplementierung für In-App-Nachrichten ist auf Android bereits eingerichtet.
 {% endalert %}
 
-Um den Standard-Moderator für In-App-Nachrichten auf iOS einzurichten, erstellen Sie eine Implementierung des `BrazeInAppMessagePresenter` Protokolls und weisen Sie es der optionalen `inAppMessagePresenter` auf Ihrer Braze-Instanz zu. Sie können auch den standardmäßigen UI-Presenter von Braze verwenden, indem Sie ein `BrazeInAppMessageUI`-Objekt instanziieren.
+Um den Standard-Präsentator für In-App-Nachrichten unter iOS einzurichten, erstellen Sie bitte eine Implementierung des`BrazeInAppMessagePresenter`Protokolls und weisen Sie es der optionalen Funktion`inAppMessagePresenter` in Ihrer Braze-Instanz zu. Sie können auch den standardmäßigen UI-Presenter von Braze verwenden, indem Sie ein `BrazeInAppMessageUI`-Objekt instanziieren.
 
-Sie müssen die Bibliothek `BrazeUI` importieren, um auf die Klasse `BrazeInAppMessageUI` zugreifen zu können.
+Sie müssen die`BrazeUI`Bibliothek importieren, um auf die`BrazeInAppMessageUI`Klasse zugreifen zu können.
 
 {% tabs %}
 {% tab swift %}
@@ -62,4 +62,4 @@ override func application(
 {% endtab %}
 {% endtabs %}
 
-Wenn Sie Ihre Implementierung weiter anpassen möchten, lesen Sie den Abschnitt [Protokollierung von In-App-Nachricht-Daten]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter).
+Um Ihre Implementierung weiter anzupassen, lesen Sie bitte den Abschnitt [Protokollierung von In-App-Nachrichten-Daten]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter).

@@ -11,7 +11,7 @@ search_tag: Partner
 
 > La plateforme [Simon AI][1] Agentic Marketing Platform aide les équipes marketing à réaliser une véritable personnalisation one-to-one. Elle associe une CDP composable à des agents d'intelligence artificielle qui opèrent directement dans le Cloud de données d'intelligence artificielle de Snowflake pour jouer le rôle d'équipe de données et d'exécution d'un marketeur.
 
-Utilisez l'intégration Braze et Simon Intelligence Artificielle pour créer et synchroniser des audiences avancées sur Braze pour une orchestration en temps réel et sans code. Grâce à cette intégration, vous pouvez exploiter la résolution d'identité de Simon AI, l'unification des données clients et la segmentation basée sur l'intelligence artificielle pour alimenter en aval des campagnes Braze plus personnalisées et plus percutantes.
+Utilisez l'intégration Braze et Simon Intelligence artificielle pour créer et synchroniser des audiences avancées sur Braze pour une orchestration en temps réel et sans code. Grâce à cette intégration, vous pouvez exploiter la résolution d'identité de Simon AI, l'unification des données clients et la segmentation basée sur l'intelligence artificielle pour alimenter en aval des campagnes Braze plus personnalisées et plus percutantes.
 
 ## Conditions préalables
 
@@ -48,9 +48,9 @@ Une connexion réussie affiche **Connecté** dans la fenêtre.
 
 ![Écran d'intégration dans l'intelligence artificielle][8]{: style="max-width:70%"}
 
-### Ajouter des actions Braze aux flux ou aux voyages dans Simon Intelligence Artificielle
+### Ajouter des actions de Braze aux flux ou aux trajets dans Simon Intelligence Artificielle
 
-Après avoir authentifié votre compte Braze dans Simon Intelligence artificielle, vous pouvez ajouter des actions Braze aux [flux][4] et aux [parcours][5].
+Après avoir authentifié votre compte Braze dans l'intelligence artificielle, vous pouvez ajouter des actions Braze aux [flux][4] et aux [parcours][5].
 
 Trois actions sont disponibles :
 

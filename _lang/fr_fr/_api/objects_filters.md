@@ -12,8 +12,8 @@ description: "Cette page d’accueil répertorie les objets et filtres d’API B
 
 ## Objets et filtres
 
-- [Objet Propriétés d’entrées de Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object)
-- [Le filtre d'audience connecté & objet]({{site.baseurl}}/api/objects_filters/connected_audience/)
+- [Objet de contexte Canvas]({{site.baseurl}}/api/objects_filters/context_object)
+- [Filtre&d'audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [Objet Événement]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Objet Achat]({{site.baseurl}}/api/objects_filters/purchase_object/)
 - [Objet Destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/)
@@ -22,6 +22,7 @@ description: "Cette page d’accueil répertorie les objets et filtres d’API B
 - [Objet Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object)
 - [Objet Attribut utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object)
 - [Objet Planification]({{site.baseurl}}/api/objects_filters/schedule_object/)
+- [Objet de sélection du catalogue]({{site.baseurl}}/api/objects_filters/catalog_selection_object/)
 
 ### Objets Messagerie
   - [Objet Android]({{site.baseurl}}/api/objects_filters/messaging/android_object/)

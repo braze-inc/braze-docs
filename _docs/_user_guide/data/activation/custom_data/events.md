@@ -20,22 +20,24 @@ By tracking these different types of events, you can gain a deeper understanding
 
 ## Standard events
 
-In Braze, standard events are predefined actions that users can take within your app that Braze automatically tracks after you integrate the Braze SDK. Here are a few examples of standard events:
+In Braze, standard events are predefined actions that Braze recognizes across its platform. Unlike [custom events](#custom-events), you don't need to create or name standard events—they're built in. However, not all standard events are tracked the same way.
 
-- App launch
-- [Purchase](#purchase-events)
+The following events are automatically tracked after SDK integration:
+
 - Session start
 - Session end
-- Clicked push notification
-- Opened email
 
-As a marketer, you can use these standard events to understand user behavior and engagement with your app. For example, you can see how often users are launching your app or how many purchases are being made. This information can be invaluable when it comes to creating targeted marketing campaigns.
+The following events are tracked after additional setup:
 
-It's important to note that while standard events are automatically tracked by Braze, purchase events, custom events, and custom attributes need to be set up by your development team based on your specific needs and goals.
+- [Purchase events](#purchase-events): Your development team logs these using the SDK's purchase methods. For more information, see the Purchase events section.
+- Email engagement events (such as email opens and link clicks): Tracked by Braze when you configure Braze email and enable email tracking.
+- Push engagement events (such as push notification opens and clicks): Tracked after you configure push in Braze and integrate push handling with the Braze SDK in your app.
+
+As a marketer, you can use standard events to understand user behavior and engagement. For example, session data shows how often users open your app or site, while purchase events help you track revenue over time.
 
 ## Purchase events
 
-Purchase events are a way to record and track purchases made by your users. They are a type of standard event that is available by default after you integrate the Braze SDK. Because of this, when you use purchase events to track purchases, you can monitor your revenue over time and across different revenue sources directly from Braze.
+Purchase events record and track purchases made by your users. After integrating the Braze SDK, your development team can log purchases using the SDK's purchase methods. When you use purchase events to track purchases, you can monitor your revenue over time and across different revenue sources directly from Braze.
 
 Purchase events record the following key information about a purchase:
 

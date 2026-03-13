@@ -8,7 +8,7 @@ description: "Aprenda como registrar compras através do SDK Braze."
 
 # Registrar compras
 
-> Aprenda como registrar compras dentro do aplicativo através do SDK Braze, para que você possa determinar sua receita ao longo do tempo e entre fontes. Isso permitirá que você segmente usuários [com base em seu valor do tempo de vida]({{site.baseurl}}/developer_guide/analytics/#purchase-events--revenue-tracking) usando eventos personalizados, atributos personalizados e eventos de compra.
+> Aprenda como registrar compras dentro do app através do SDK Braze, para que você possa determinar sua receita ao longo do tempo e em diferentes fontes. Isso permitirá que você segmente usuários [com base em seu valor do tempo de vida]({{site.baseurl}}/developer_guide/analytics/#purchase-events--revenue-tracking) usando eventos personalizados, atributos personalizados e eventos de compra.
 
 {% alert note %}
 Para SDKs wrapper não listados, use o método nativo relevante do Android ou Swift.
@@ -18,7 +18,7 @@ Qualquer moeda que não seja USD reportada será exibida no Braze em USD com bas
 
 ## Registrando compras e receita
 
-Para registrar compras e receita, chame `logPurchase()` após uma compra bem-sucedida em seu aplicativo. Se o identificador do produto estiver vazio, a compra não será registrada no Braze.
+Para registrar compras e receita, chame `logPurchase()` após uma compra bem-sucedida em seu app. Se o identificador do produto estiver vazio, a compra não será registrada no Braze.
 
 {% tabs %}
 {% tab web %}
@@ -264,9 +264,9 @@ Por padrão, `quantity` é definido como `1`. No entanto, você pode adicionar u
 
 ### Usando a API REST
 
-Também é possível usar nossa API REST para registrar compras. Para saber mais, consulte [Dados de Usuários Endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
+Também é possível usar nossa API REST para registrar compras. Para mais informações, consulte [User Data Endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
 
-## Registrando pedidos
+## Registro de pedidos
 
 Se quiser registrar as compras no nível do pedido em vez de no nível do produto, poderá usar o nome do pedido ou a categoria do pedido como `product_id`. Consulte nossa [especificação de objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) para saber mais. 
 
@@ -283,28 +283,32 @@ As seguintes chaves são reservadas e não podem ser usadas como propriedades de
 
 ## Moedas suportadas
 
-Estes são os símbolos de moeda suportados. Qualquer outro símbolo de moeda que você fornecer registrará um aviso e a compra não será registrada no Braze.
+A Braze suporta os seguintes símbolos de moeda. Qualquer outro símbolo de moeda que você fornecer registra um aviso e a compra não é registrada na Braze.
 
-- `USD`
-- `CAD`
-- `EUR`
-- `GBP`
-- `JPY`
-- `AUD`
-- `CHF`
-- `NOK`
-- `MXN`
-- `NZD`
-- `CNY`
-- `RUB`
-- `TRY`
-- `INR`
-- `IDR`
-- `ILS`
-- `SAR`
-- `ZAR`
-- `AED`
-- `SEK`
-- `HKD`
-- `SPD`
-- `DKK`
+- `AED`, `AFN`, `ALL`, `AMD`, `ANG`, `AOA`, `ARS`, `AUD`, `AWG`, `AZN`
+- `BAM`, `BBD`, `BDT`, `BGN`, `BHD`, `BIF`, `BMD`, `BND`, `BOB`, `BRL`
+- `BSD`, `BTC`, `BTN`, `BWP`, `BYR`, `BZD`
+- `CAD`, `CDF`, `CHF`, `CLF`, `CLP`, `CNY`, `COP`, `CRC`, `CUC`, `CUP`, `CVE`, `CZK`
+- `DJF`, `DKK`, `DOP`, `DZD`
+- `EEK`, `EGP`, `ERN`, `ETB`, `EUR`
+- `FJD`, `FKP`
+- `GBP`, `GEL`, `GGP`, `GHS`, `GIP`, `GMD`, `GNF`, `GTQ`, `GYD`
+- `HKD`, `HNL`, `HRK`, `HTG`, `HUF`
+- `IDR`, `ILS`, `IMP`, `INR`, `IQD`, `IRR`, `ISK`
+- `JEP`, `JMD`, `JOD`, `JPY`
+- `KES`, `KGS`, `KHR`, `KMF`, `KPW`, `KRW`, `KWD`, `KYD`, `KZT`
+- `LAK`, `LBP`, `LKR`, `LRD`, `LSL`, `LTL`, `LVL`, `LYD`
+- `MAD`, `MDL`, `MGA`, `MKD`, `MMK`, `MNT`, `MOP`, `MRO`, `MTL`, `MUR`, `MVR`, `MWK`, `MXN`, `MYR`, `MZN`
+- `NAD`, `NGN`, `NIO`, `NOK`, `NPR`, `NZD`
+- `OMR`
+- `PAB`, `PEN`, `PGK`, `PHP`, `PKR`, `PLN`, `PYG`
+- `QAR`
+- `RON`, `RSD`, `RUB`, `RWF`
+- `SAR`, `SBD`, `SCR`, `SDG`, `SEK`, `SGD`, `SHP`, `SLL`, `SOS`, `SRD`, `STD`, `SVC`, `SYP`, `SZL`
+- `THB`, `TJS`, `TMT`, `TND`, `TOP`, `TRY`, `TTD`, `TWD`, `TZS`
+- `UAH`, `UGX`, `USD`, `UYU`, `UZS`
+- `VEF`, `VND`, `VUV`
+- `WST`
+- `XAF`, `XAG`, `XAU`, `XCD`, `XDR`, `XOF`, `XPD`, `XPF`, `XPT`
+- `YER`
+- `ZAR`, `ZMK`, `ZMW`, `ZWL`

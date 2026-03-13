@@ -1,8 +1,8 @@
 
 {% tab android %}
-Braze는 각기 다른 기본 인앱 메시지 유형을 제공하며, 메시지, 이미지, [Font Awesome](https://fontawesome.com/icons?d=gallery&p=2) 아이콘, 클릭 액션, 분석, 색 구성표 등을 사용하여 사용자 정의할 수 있습니다.
+Braze는 각기 다른 기본 인앱 메시지 유형을 제공하며, 메시지, 이미지, [Font Awesome](https://fontawesome.com/icons?d=gallery&p=2) 아이콘, 클릭 액션, 분석, 색상 구성표 등을 사용하여 사용자 정의할 수 있습니다.
 
-그들의 기본 동작 및 특성은 [`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html) 인터페이스에 의해 정의되며, [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html)라는 하위 클래스에 있습니다. `IInAppMessage`는 또한 닫기, 클릭 액션 및 분석 [버튼](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html)을 앱에 추가할 수 있는 하위 인터페이스 [`IInAppMessageImmersive`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-immersive/index.html)를 포함합니다.
+그들의 기본 동작과 특성은 [`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html) 인터페이스에 의해 정의되며, [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html)라는 하위 클래스에 있습니다. `IInAppMessage`는 또한 닫기, 클릭 액션 및 분석 [버튼](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html)을 앱에 추가할 수 있는 하위 인터페이스 [`IInAppMessageImmersive`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-immersive/index.html)를 포함합니다.
 
 {% alert important %}
 버튼이 포함된 인앱 메시지는 클릭 액션이 버튼 텍스트를 추가하기 전에 추가된 경우 최종 페이로드에 `clickAction` 메시지를 포함합니다.

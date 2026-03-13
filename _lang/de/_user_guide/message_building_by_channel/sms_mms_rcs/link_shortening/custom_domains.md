@@ -1,6 +1,6 @@
 ---
-nav_title: Angepasste Domains zur Selbstbedienung
-article_title: Angepasste Domains zur Selbstbedienung
+nav_title: Selbstverwaltete benutzerdefinierte Domains
+article_title: Selbstverwaltete benutzerdefinierte Domains
 page_order: 0
 description: "Auf dieser Seite erfahren Sie, wie Sie angepasste Domains mit Linkverkürzung verwenden, um das Aussehen Ihrer verkürzten URLs zu personalisieren."
 page_type: reference
@@ -11,72 +11,72 @@ channel:
   - SMS
 ---
 
-# Angepasste Domains zur Selbstbedienung
+# Selbstverwaltete benutzerdefinierte Domains
 
-> Auf dieser Seite erfahren Sie, wie Sie Ihre eigenen angepassten Domains im Braze-Dashboard einrichten können. Mit angepassten Domains können Sie anstelle eines generischen verkürzten Links oder der Braze-Domain (`brz.ai`) einen markenspezifischen verkürzten Link verwenden, der die Identität Ihrer Marke widerspiegelt - und damit das Vertrauen der Nutzer:innen und das Engagement der Kampagnen mit SMS-Links verbessert.
+> Auf dieser Seite wird erläutert, wie Sie Ihre eigenen angepassten Domains im Braze-Dashboard einrichten können. Mit benutzerdefinierten Domains können Sie einen markenspezifischen Kurzlink verwenden, der die Identität Ihrer Marke widerspiegelt, anstatt einen generischen Kurzlink oder die Braze-Domain (`brz.ai`) zu verwenden. Dies erhöht das Vertrauen der Nutzer:innen und verbessert das Engagement mit SMS-Links.
 
-Mit angepassten Domains zur Selbstbedienung können Sie Ihre eigenen angepassten Domains für SMS, RCS und WhatsApp konfigurieren und verwalten - direkt von Ihrem Braze-Dashboard aus. Sie können ganz einfach bis zu 10 angepasste Domains an einem Ort hinzufügen, überwachen und verwalten.
+Mit Self-Service-Benutzerdefinierten Domänen können Sie Ihre eigenen benutzerdefinierten Domains für SMS, RCS und WhatsApp direkt über Ihr Braze-Dashboard konfigurieren und verwalten. Sie können problemlos bis zu 10 benutzerdefinierte Domains an einem Ort hinzufügen, überwachen und verwalten.
 
-## Vorteile von angepassten Domains im Selbstbedienungsbereich
+## Vorteile von angepassten Domains im Selbstbedienungsmodus
 
-- **Rationalisierte Einrichtung:** Konfigurieren Sie Ihre Domains auf der Seite **Unternehmenseinstellungen**, um die Einrichtungszeit zu verkürzen.
-- **Verbesserte Transparenz:** Erhalten Sie über Banner im Dashboard Realtime-Updates zum Status der Einrichtung Ihrer Domain.
-- **Proaktive Benachrichtigungen:** Lassen Sie sich sofort benachrichtigen, wenn Ihre angepasste Domain verbunden ist oder wenn Konfigurationsfehler auftreten.
+- **Optimierte Einrichtung:** Konfigurieren Sie Ihre Domains auf der Seite **„Unternehmenseinstellungen“**, um die Einrichtungszeit zu verkürzen.
+- **Verbesserte Transparenz:** Erhalten Sie über Banner im Dashboard Realtime-Updates zum Einrichtungsstatus Ihrer Domain.
+- **Proaktive Benachrichtigungen:** Erhalten Sie umgehend Benachrichtigungen, wenn Ihre benutzerdefinierte Domain verbunden ist oder wenn Konfigurationsfehler auftreten.
 
 ## Domain-Anforderungen
 
 - Die Domains müssen Ihnen gehören und von Ihnen verwaltet werden. Dies kann über einen Domain-Registrar wie GoDaddy, Amazon Route 53 oder Google Domains erfolgen.
-- Die Domain, die für dieses Feature verwendet wird, muss sein:
-  - Eindeutig (anders als die Domain Ihrer Website)
-  - Kann nicht zum Hosten von Webinhalten verwendet werden
-    - Sie können auch eindeutige Subdomains verwenden. Die Domain `braze.com` könnte zum Beispiel die Subdomains `sms.braze.com` oder `whatsapp.braze.com` haben.
+- Die für dieses Feature verwendete Domain muss lauten:
+  - Eindeutig (unterscheidet sich von Ihrer Website-Domain)
+  - Kann nicht zum Hosten von Internet-Inhalten verwendet werden.
+    - Sie können auch eindeutige Subdomains verwenden. Beispielsweise könnten die `braze.com`Domains Subdomains von`sms.braze.com`oder haben`whatsapp.braze.com`.
 
 ## Angepasste Domains delegieren
 
-Wir verlangen von Ihnen, dass Sie Ihre angepasste Domain an Braze delegieren, damit wir das richtige Routing und die Kompatibilität der Infrastruktur mit unseren Diensten für Linkverkürzung und Click Tracking gewährleisten können. Wenn Sie Ihre Domain an Braze delegieren, kümmern wir uns automatisch um die Erneuerung des Zertifikats, um eine Unterbrechung des Dienstes zu verhindern. 
+Wir bitten Sie, Ihre angepasste Domain an Braze zu delegieren, damit wir eine ordnungsgemäße Weiterleitung und Infrastrukturkompatibilität mit unseren Linkverkürzungs- und Tracking-Diensten gewährleisten können. Wenn Sie Ihre Domain an Braze delegieren, kümmern wir uns automatisch um die Erneuerung des Zertifikats, um eine Unterbrechung des Dienstes zu verhindern. 
 
-## Hinzufügen einer angepassten Domain
+## Hinzufügen einer benutzerdefinierten Domain
 
-1. Gehen Sie in Braze zu **Unternehmenseinstellungen** > **SMS/RCS und Messaging Apps Domains**.
-!["SMS/RCS und Messaging Apps Domains" Seite mit mehreren Domains aufgelistet.]({% image_buster /assets/img/main_page.png %})
+1. Bitte navigieren Sie in Braze zu **„Unternehmenseinstellungen“** > **„SMS/RCS und Messaging-Apps-Domains**“.
+![Seite „SMS/RCS und Messaging-Apps-Domains“ mit einer Auflistung mehrerer Domains.]({% image_buster /assets/img/main_page.png %})
 
 {: start="2"}
-2\. Wählen Sie **Domain hinzufügen**, um eine neue angepasste Domain einzurichten.
-3\. Geben Sie die angepasste Domain, die Sie erworben haben, in unsere In-App-Eingabe ein, die unsere bestehende Validierungslogik für die korrekte Formatierung verwendet, und wählen Sie dann **Weiter** und **Absenden**.
+2\. Bitte wählen Sie **„Domain hinzufügen“,** um mit der Einrichtung einer neuen benutzerdefinierten Domain zu beginnen.
+3\. Bitte geben Sie die von Ihnen erworbene benutzerdefinierte Domain in unser In-App-Eingabefeld ein, das unsere bestehende Validierungslogik für die korrekte Formatierung verwendet, und wählen Sie anschließend **„Weiter“** und **„Senden**“.
 
-!["Domain hinzufügen" Button auf der Seite "SMS/RCS und Messaging Apps Domains".]({% image_buster /assets/img/custom_domain_button.png %}){: style="max-width:70%;"}
+![Button „Domain hinzufügen“ auf der Seite „SMS/RCS- und Messaging-Apps-Domains“.]({% image_buster /assets/img/custom_domain_button.png %}){: style="max-width:70%;"}
 
 {: start="4"}
-4\. Lassen Sie Ihr technisches Team (z.B. das Entwicklerteam oder die IT-Abteilung) Ihre DNS-Konfiguration mit den angezeigten Details des Cloudflare DNS-Eintrags aktualisieren. Ihr technisches Team muss Ihre DNS-Einträge innerhalb von 45 Tagen mit diesen Angaben aktualisieren.
-  - Wenn Sie mehr Zeit für das Update Ihrer DNS-Einträge benötigen, können Sie den Prozess neu starten und einen neuen Satz DNS-Einträge für Ihre Domain erstellen.
+4\. Bitte beauftragen Sie Ihr technisches Team (z. B. Entwicklerteam oder IT-Mitarbeiter) damit, Ihre DNS-Konfiguration mit den angezeigten Cloudflare-DNS-Eintragsdaten zu aktualisieren. Ihr technisches Team muss Ihre DNS-Einträge innerhalb von 45 Tagen mit diesen Angaben aktualisieren.
+  - Sollten Sie zusätzliche Zeit für das Update Ihrer DNS-Einträge benötigen, können Sie den Vorgang erneut starten und einen neuen Satz DNS-Einträge für Ihre Domain generieren.
 
-Braze fragt Ihre DNS-Konfiguration etwa alle 30 Minuten ab, um nach Updates zu suchen.
+Braze überprüft Ihre DNS-Konfiguration etwa alle 30 Minuten auf Updates.
 
-![Abschnitt "DNS-Eintrag" mit 3 Schritten, die Sie ausführen müssen, um die Einrichtung Ihrer Domain abzuschließen.]({% image_buster /assets/img/dns_record.png %})
+![Abschnitt „DNS-Eintrag“ mit drei Schritten, die Sie ausführen müssen, um die Einrichtung Ihrer Domain abzuschließen.]({% image_buster /assets/img/dns_record.png %})
 
 {% alert note %}
-Der Fortschritt Ihrer Domains wird automatisch gespeichert. Wenn Sie den Vorgang abbrechen müssen, können Sie ihn später wieder aufnehmen, indem Sie auf der Seite **Domains für SMS/RCS- und Messaging-Apps** den Eintrag für die ausstehende Domain auswählen.
+Ihre Domain-Fortschritte werden automatisch gespeichert. Sollten Sie den Vorgang vorzeitig beenden müssen, können Sie später fortfahren, indem Sie den ausstehenden Domain-Eintrag auf der Seite **„SMS/RCS- und Messaging-Apps-Domains“** auswählen.
 {% endalert %}
 
 ### Laufende Verwaltung und Nutzung
 
-Nachdem Ihre Domain überprüft wurde, erscheinen Ihre angepassten Domains in der Tabelle auf der Seite **SMS/RCS und Messaging Apps Domains** mit Statusanzeigen. Sie können verbundene Domains sofort über mehrere Abo-Gruppen, Workspaces und über SMS-, RCS- und WhatsApp-Kanäle hinweg nutzen.
+Sobald Ihre Domain überprüft wurde, werden Ihre benutzerdefinierten Domains in der Tabelle auf der Seite **„SMS/RCS- und Messaging-Apps-Domains“** mit Statusindikatoren angezeigt. Sie können verbundene Domains sofort über mehrere Abo-Gruppen, Workspaces sowie über SMS-, RCS- und WhatsApp-Kanäle hinweg verwenden.
 
-![Liste der angepassten Domains und Status.]({% image_buster /assets/img/custom_domain_statuses.png %}){: style="max-width:60%;"}
+![Liste der benutzerdefinierten Domains und Status.]({% image_buster /assets/img/custom_domain_statuses.png %}){: style="max-width:60%;"}
 
-Die Live-Überwachung alarmiert Sie im Braze-Dashboard, wenn auf einer Ihrer aktiven Domains ein Problem auftritt, so dass Ihre angepassten Links nutzbar bleiben. Wenn Sie Probleme haben, sehen Sie sich die Fehlerdetails in der App an oder wenden Sie sich an den Braze [Support]({{site.baseurl}}/braze_support/), um Hilfe zu erhalten.
+Die Live-Überwachung benachrichtigt Sie im Braze-Dashboard, wenn bei einer Ihrer aktiven Domains ein Problem auftritt, sodass Ihre benutzerdefinierten Links weiterhin nutzbar bleiben. Sollten Sie auf Probleme stoßen, referenzieren Sie bitte die Fehlerdetails in der App oder wenden Sie sich an [den]({{site.baseurl}}/braze_support/) Braze[-Support,]({{site.baseurl}}/braze_support/) um Unterstützung zu erhalten.
 
-## Zuweisung angepasster Domains zu Abo-Gruppen
+## Zuweisung benutzerdefinierter Domänen zu Abo-Gruppen
 
-Nach ihrer Konfiguration können angepasste Domains einer oder mehreren SMS-, RCS- und WhatsApp-Abo-Gruppen zugewiesen werden.
+Nach der Konfiguration können angepasste Domains einer oder mehreren SMS-, RCS- und WhatsApp-Abo-Gruppen zugewiesen werden.
 
-1. Gehen Sie zu **Zielgruppe**:in > Abo-Gruppen-Management **.**
-2. Suchen Sie Ihre Abo-Gruppe in der Liste und wählen Sie sie aus.
-3. Wählen Sie unter **Abo-Gruppe Details** Ihre angepasste Domain als **Linkverkürzungs-Domain** aus.
+1. Bitte gehen Sie zu **„Zielgruppe“** > **„Verwaltung der Abo-Gruppen**“.
+2. Bitte suchen Sie Ihre Abo-Gruppe in der Liste und wählen Sie sie aus.
+3. Wählen Sie unter **„Abo-Gruppe“** Ihre angepasste Domain als „Linkverkürzungsdomain“ aus.
 
 ![Abogruppeneinstellungen ermöglichen die Auswahl einer Link-Shorting-Domain.]({% image_buster /assets/img/custom_domain.png %})
 
-Kampagnen, die mit aktivierter Linkverkürzung versendet werden, verwenden die zugewiesene Domain, die mit Ihrer SMS-, RCS- oder WhatsApp Abo-Gruppe verbunden ist.
+Kampagnen, die mit aktivierter Linkverkürzung versendet werden, verwenden die zugewiesene Domain, die mit Ihrer SMS-, RCS- oder WhatsApp-Abo-Gruppe verknüpft ist.
 
 ![Vorschau des SMS-Editors mit einer verkürzten Link-Domain, die sich von der Domain im Feld "Nachricht" unterscheidet.]({% image_buster /assets/img/custom_domain2.png %})
 
@@ -94,18 +94,18 @@ Ja Domains können mit Abo-Gruppen in mehreren Workspaces verknüpft werden, sof
 
 Sie können bis zu 10 angepasste Domains pro Dashboard hinzufügen.
 
-### Was passiert, wenn ich meine DNS-Einträge nicht innerhalb von 45 Tagen aktualisiere?
+### Was geschieht, wenn ich meine DNS-Einträge nicht innerhalb von 45 Tagen aktualisiere?
 
-Obwohl Ihre Cloudflare DNS-Datensätze nach 45 Tagen ablaufen, können Sie den Einrichtungsprozess mit derselben Domain neu starten und Braze wird eine Reihe neuer DNS-Datensätze generieren, um Ihr Einrichtungsfenster zu verlängern.
+Obwohl Ihre Cloudflare-DNS-Eintragsdaten nach 45 Tagen ablaufen, können Sie den Einrichtungsprozess mit derselben Domain erneut starten. Braze generiert dann eine Reihe neuer DNS-Einträge, um Ihr Einrichtungsfenster zu verlängern.
 
 ### Werde ich benachrichtigt, wenn während des DNS-Updates ein Fehler auftritt?
 
-Ja Wenn ein Fehler auftritt, erhalten Sie im Braze-Dashboard einen Hinweis auf das Problem und die Schritte zu seiner Behebung. 
+Ja Sollte ein Fehler auftreten, wird im Braze-Dashboard ein Banner angezeigt, das das Problem detailliert beschreibt und Schritte zu dessen Behebung enthält. 
 
-### Kann ich eine angepasste Domain für mehrere Kanäle verwenden?
+### Ist es möglich, eine angepasste Domain über mehrere Kanäle hinweg zu verwenden?
 
 Ja Nachdem eine angepasste Domain überprüft wurde, kann sie in allen SMS-, RCS- und WhatsApp-Abo-Gruppen in allen Workspaces innerhalb eines Dashboards verwendet werden. 
 
-### Was ist, wenn ich Fragen habe oder weitere Unterstützung benötige?
+### Was kann ich tun, wenn ich Fragen habe oder weitere Unterstützung benötige?
 
-Ausführlichere Anleitungen zur Einrichtung und Verwaltung angepasster Domains, einschließlich Fehlerbehebung und technischer Anforderungen, erhalten [Sie vom Support]({{site.baseurl}}/braze_support/).
+Für detailliertere Anleitungen zum Einrichten und Verwalten benutzerdefinierter Domains, einschließlich Schritten zur Fehlerbehebung und technischen Anforderungen, [wenden Sie sich bitte an den Support]({{site.baseurl}}/braze_support/).

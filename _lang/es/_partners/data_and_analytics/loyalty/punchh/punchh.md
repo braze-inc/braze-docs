@@ -79,7 +79,7 @@ Actualice `external_source_id` para los usuarios existentes de Punchh. Punchh pe
 {% tab User sign-up API example %}
 Este ejemplo permite enviar identificadores externos con un perfil de usuario en el momento de la inscripción. Esto se hace enviando `external_source` como "customer_id" y `external_source_id` como "111111111111111111" como tipo de datos de cadena.
 
-```json
+```bash
 curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
 --header 'Content-Type: application/json' \
 --header 'x-pch-digest: SIGNATURE' \
@@ -106,7 +106,7 @@ curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mo
 {% tab User update API example %}
 Este ejemplo permite actualizar identificadores externos con un perfil de usuario. Esto se hace enviando `external_source` como "customer_id" y `external_source_id` como "111111111111111111" como tipo de datos de cadena.
 
-```json
+```bash
 curl --location --request PUT 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
@@ -220,7 +220,7 @@ Cuando un nuevo usuario se registra, Punchh envía a Braze un evento Invitado qu
 
 Para configurar la campaña de bienvenida Braze, sigue estos pasos:
 
-1. En Braze, crea una campaña basada en la acción.
+1. En Braze, crea una campaña basada en acciones.
 2. Para desencadenar, selecciona **Cambiar valor de atributo personalizado** con el atributo personalizado `signup_channel` establecido en **Cualquier valor nuevo**.
 3. Sigue creando tu campaña, ¡y envíala cuando esté lista!
 

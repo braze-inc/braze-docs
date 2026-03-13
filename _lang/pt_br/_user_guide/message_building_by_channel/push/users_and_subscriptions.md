@@ -13,80 +13,13 @@ channel:
 
 > Este artigo de referência aborda os conceitos de capacitação push e estados de inscrição push na Braze, incluindo as diferenças fundamentais de comportamento entre iOS, Android e Web.
 
-## Estados da inscrição push {#push-sub-states}
-
-Um "estado de inscrição por push" no Braze identifica **a** preferência global **de** um **usuário** quanto ao seu desejo de receber notificações por push. Como o estado da inscrição é baseado no usuário, ele não é específico de nenhum aplicativo individual. Os estados de inscrição tornam-se sinalizadores úteis ao decidir quais usuários devem ser direcionados para notificações por push.
-
-{% alert note %}
-O estado da inscrição push de um usuário se aplica a todo o seu perfil de usuário, que inclui todos os dispositivos do usuário.
-{% endalert %}
-
-Há três opções de estado da inscrição push: `Subscribed`, `Opted-In`, e `Unsubscribed`.
-
-Por padrão, para que o usuário receba suas mensagens por push, o estado da inscrição no push deve ser `Subscribed` ou `Opted-In`, e ele deve estar [ativado para a capacitação](#foreground-push-enabled). Você pode substituir essa configuração, se necessário, ao criar uma mensagem.
-
-|Estado de aceitação|Descrição|
-|---|---|
-|`Subscribed`| Estado padrão da inscrição push quando um perfil de usuário é criado no Braze. |
-|`Opted-In`| Um usuário expressou explicitamente uma preferência para receber notificações por push. A Braze moverá automaticamente o estado de aceitação de um usuário para `Opted-In` se ele aceitar um pedido de aceitação no nível do sistema operacional.<br><br>Isso não se aplica a usuários do Android 12 ou inferior.|
-|`Unsubscribed`| Um usuário cancelou explicitamente a inscrição no push por meio do seu aplicativo ou de outros métodos fornecidos pela sua marca. Por padrão, as campanhas de push da Braze têm como alvo apenas os usuários que são `Subscribed` ou `Opted-in` para push.|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert important %}
-O Braze não altera automaticamente o estado da inscrição push de um usuário para `Unsubscribed`. Lembre-se de que, se o estado da inscrição push de um usuário for `Unsubscribed`, o filtro `Foreground Push Enabled` do usuário na segmentação será `false`.
-{% endalert %}
-
-### Atualização dos estados da inscrição push {#update-push-subscription-state}
-
-Há três maneiras de atualizar o estado da inscrição push de um usuário:
-
-#### Aceitação automática (padrão)
-
-Por padrão, o Braze define o estado da inscrição push de um usuário como `Opted-In` quando ele autoriza pela primeira vez as notificações por push para o seu app. A Braze também faz isso quando um usuário reativa as permissões push nas configurações do sistema após tê-las desativado anteriormente.
-
-{% tabs local %}
-{% tab android %}
-Para desativar esse comportamento padrão, adicione a seguinte propriedade ao arquivo `braze.xml` do seu projeto do Android Studio:
-
-```xml
-<bool name="com_braze_optin_when_push_authorized">false</bool>
-```
-{% endtab %}
-
-{% tab swift %}
-A partir da [versão 7.5.0 do Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk/releases/tag/7.5.0), você pode desativar ou personalizar ainda mais esse comportamento adicionando a configuração `optInWhenPushAuthorized` ao arquivo `AppDelegate.swift` do seu projeto Xcode:
-
-```swift
-configuration.optInWhenPushAuthorized = false // disables the default behavior
-
-let braze = Braze(configuration: configuration)
-AppDelegate.braze = braze
-```
-{% endtab %}
-{% endtabs %}
-
-#### integração de SDK
-
-Você pode atualizar o estado da inscrição de um usuário com o Braze SDK usando o método `setPushNotificationSubscriptionType` na [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype), [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-push-notification-subscription-type.html) ou [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/set(pushnotificationsubscriptionstate:)). Por exemplo, você pode usar esse método para criar uma página de configurações no seu app em que os usuários possam ativar ou desativar manualmente as notificações por push.
-
-#### API REST
-
-Você pode atualizar o estado de inscrição de um usuário com a API REST do Braze usando o endpoint [`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para atualizar seu atributo [`push_subscribe`]({{site.baseurl}}/api/objects_filters/user_attributes_object).
-
-### Verificação do estado da inscrição push
-
-![Perfil de usuário para John Doe com seu estado de inscrição push definido como Subscribed (Inscrito).]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
-
-Há duas maneiras de verificar o estado da inscrição push de um usuário na Braze:
-
-1. **Perfil do Usuário** Você pode acessar perfis de usuários individuais através do painel do Braze na página **[Pesquisa de Usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)**. Depois de encontrar o perfil de um usuário (por meio de endereço de e-mail, número de telefone ou ID de usuário externo), é possível selecionar a guia **Engajamento** para visualizar e ajustar manualmente o estado da inscrição de um usuário.
-2. **Exportação da API REST:** Você pode exportar perfis de usuários individuais em formato JSON usando os endpoints de exportação [Usuários por segmento]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) ou [Usuários por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/). A Braze retornará um objeto de tokens por push que contém informações de capacitação por push por dispositivo.
+{% multi_lang_include push/subscription_states.md %}
 
 ## Permissão de push
 
 Todas as plataformas com capacitação push – iOS, Web e Android – exigem aceitação explícita por meio de um pedido de aceitação do sistema em nível de sistema operacional, com algumas pequenas diferenças descritas abaixo.
 
-Como a decisão de um usuário é final e você não pode perguntar novamente após a recusa, usar [mensagens in-app de push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) é uma estratégia importante para aumentar suas taxas de aceitação.
+Como a decisão de um usuário é final e você não pode perguntar novamente após a recusa, usar [push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) em mensagens no aplicativo é uma estratégia importante para aumentar suas taxas de aceitação.
 
 **Solicitações de permissão push do sistema operacional nativo**
 
@@ -115,7 +48,7 @@ Push autorizado requer permissão explícita de um usuário antes de enviar qual
 
 Antes do iOS 12 (lançado em 2018), todos os usuários devem fazer a aceitação explícita para receber notificações por push.
 
-No iOS 12, a Apple introduziu [autorização provisória](https://www.braze.com/resources/articles/mastering-provisional-push), permitindo que marcas enviem notificações push silenciosas para o centro de notificações de seus usuários antes que eles optem explicitamente, dando a você a chance de demonstrar o valor de suas mensagens cedo. Consulte a [autorização provisória]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications) para saber mais.
+No iOS 12, a Apple introduziu [autorização provisória](https://www.braze.com/resources/articles/mastering-provisional-push), permitindo que marcas enviem notificações push silenciosas para o centro de notificações de seus usuários antes que eles aceitem explicitamente, dando a você a chance de demonstrar o valor de suas mensagens cedo. Consulte a [autorização provisória]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications) para saber mais.
 
 ### Web
 
@@ -127,7 +60,7 @@ Como resultado, você deve pedir permissão somente quando um usuário clicar em
 
 ## Tokens por push
 
-[Tokens de push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) são um identificador anônimo único gerado pelo dispositivo de um usuário e enviado para o Braze para identificar onde enviar a notificação de cada destinatário.
+[Tokens de push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) são um identificador anônimo único gerado pelo dispositivo de um usuário e enviado para a Braze para identificar onde enviar a notificação de cada destinatário.
 
 Existem duas maneiras de classificar um [token de push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) que são essenciais para entender como uma notificação push pode ser enviada para seus usuários.
 
@@ -154,7 +87,7 @@ Como não há uma maneira de os provedores de push (APNs/FCM) distinguirem entre
 
 ### Vários dispositivos e um usuário
 
-O estado da inscrição push é baseado no usuário e não é específico de nenhum app individual. O estado da inscrição push é o valor que foi definido pela última vez. Portanto, se um usuário tiver aceitado notificações por push, seu estado de inscrição será `Opted-in` em todos os dispositivos elegíveis. Se, posteriormente, um usuário cancelar explicitamente a inscrição nas notificações por push por meio do seu aplicativo ou de outros métodos fornecidos pela sua marca, o estado da inscrição por push dele será atualizado para `Unsubscribed` e nenhum dispositivo registrado poderá receber notificações por push.
+O estado da inscrição push é baseado no usuário e não é específico de nenhum app individual. O estado da inscrição push é o valor que foi definido pela última vez. Portanto, se um usuário tiver aceitado notificações por push, seu estado de inscrição será `Opted-In` em todos os dispositivos elegíveis. Se, posteriormente, um usuário cancelar explicitamente a inscrição nas notificações por push por meio do seu aplicativo ou de outros métodos fornecidos pela sua marca, o estado da inscrição por push dele será atualizado para `Unsubscribed` e nenhum dispositivo registrado poderá receber notificações por push.
 
 ## Filtro de Push em Primeiro Plano Habilitado {#foreground-push-enabled}
 
@@ -222,7 +155,7 @@ No cenário em que um usuário, que inicialmente fez a aceitação no nível do 
 Nesse cenário, como ainda existirá um token por push em segundo plano, você poderá continuar a enviar notificações por push em segundo plano (silenciosas) com o filtro de segmentação `Background or Foreground Push Enabled = true`.
 
 {% alert note %}
-O iOS não permite que apps interceptem uma notificação push antes que a notificação push seja exibida. Isso significa que os apps (e o Braze) não têm controle sobre se você pode exibir ou ocultar a notificação. Um usuário pode optar por não receber notificações por push de um app nas configurações do dispositivo, mas isso é controlado pelo sistema operacional.
+O iOS não permite que apps interceptem uma notificação push antes que a notificação push seja exibida. Isso significa que os apps (e a Braze) não têm controle sobre se você pode exibir ou ocultar a notificação. Um usuário pode optar por não receber notificações push para um app nas configurações do dispositivo, mas isso é controlado pelo sistema operacional.
 {% endalert %}
 
 {% endtab %}

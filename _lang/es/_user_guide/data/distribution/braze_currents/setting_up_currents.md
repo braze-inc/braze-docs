@@ -8,7 +8,7 @@ tool: Currents
 search_rank: 8
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"} Configurar Currents
+# [![C](https://learning.braze.com/currents-the-basics-2/)urso []({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"}de [Braze Learning:](https://learning.braze.com/currents-the-basics-2/) Configuración de Currents
 
 > Esta página resume y describe el proceso genérico de integración y configuración de Braze Currents.
 
@@ -26,14 +26,14 @@ Los siguientes requisitos son los básicos y mínimos para integrarse con la may
 
 | Requisito | Origin | Acceso | Descripción
 |---|---|---|---|
-| Cuenta con socio | Acuerda una cuenta con ese socio o ponte en contacto con tu director de cuentas Braze para que te haga sugerencias. | Consulta el sitio web de ese socio o ponte en contacto con él para registrarte. | Braze no enviará datos a un socio si no tienes acceso a esos datos a través de la cuenta de tu empresa.
-| Clave de API o token del socio | Normalmente el panel del socio. | Cópialo y pégalo en el campo Braze designado. | Braze tiene un campo designado para ello en la página de integraciones de ese socio. Lo necesitamos para mapear dónde enviamos tus datos. **Mantén tus claves o tokens de socio actualizados; las credenciales no válidas pueden inhabilitar tu conector y dejar caer eventos.**
+| Cuenta con socio | Configura una cuenta con ese socio o ponte en contacto con tu director de cuentas de Braze para obtener sugerencias. | Consulta el sitio web de ese socio o ponte en contacto con él para registrarte. | Braze no enviará datos a un socio si no tienes acceso a esos datos a través de la cuenta de tu empresa.
+| Clave de API o token del socio | Normalmente el panel del socio. | Cópialo y pégalo en el campo designado de Braze. | Braze tiene un campo designado para ello en la página de integraciones de ese socio. Necesitamos esto para saber dónde mapeamos tus datos. **Mantén tus claves o tokens de socio actualizados; las credenciales no válidas pueden desactivar tu conector y eliminar eventos.**
 | Código/clave de autenticación, clave secreta, archivo de certificación | Ponte en contacto con un representante de tu cuenta con ese socio. También puede existir en el panel del socio. | Copie y pegue las claves en el campo Braze designado. Genere y cargue `.json` u otros archivos de certificación en el lugar adecuado de Braze. | Braze tiene un campo designado para ello en la página de integraciones de ese socio. Esto proporciona credenciales a Braze y nos autoriza a escribir archivos en tu cuenta de socio. **Es importante que mantengas tus datos de autenticación actualizados; unas credenciales no válidas pueden hacer que se desactive tu conector y que se pierdan eventos.**
 | Cubo, Ruta de carpeta | Algunos socios organizan y clasifican los datos por contenedores. Debe encontrarse en el panel del socio. | Si es necesario, copia el nombre de contenedor o la ruta del archivo exactamente en el espacio designado en Braze. | Aunque esto es necesario para algunos socios, es importante acertar cuando lo necesites. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
-Es importante que mantengas actualizadas tus claves de socio, tokens de socio y detalles de autenticación; si las credenciales de tu conector caducan, el conector dejará de enviar eventos. Si esto persiste durante más de **5 días**, los eventos del conector se eliminarán y los datos se perderán permanentemente.
+Es importante que mantengas actualizadas tus claves de socio, tokens de socio y detalles de autenticación; si las credenciales de tu conector caducan, el conector dejará de enviar eventos. Si esto persiste durante más de **5 días**, los eventos del conector se descartarán y los datos se perderán de forma permanente.
 {% endalert %}
 
 ## Configuración de Currents
@@ -46,9 +46,9 @@ Antes de empezar la integración, es mejor decidir qué integración es la mejor
 
 ### Paso 2: Corrientes Abiertas
 
-Para empezar, ve a **Integraciones de socios** > Currents. Accederá a la página de gestión de la integración de Currents.
+Para empezar, ve a **Integraciones del socio** > **Currents**. Accederá a la página de gestión de la integración de Currents.
 
-![Página Currents en el panel de Braze]({% image_buster /assets/img_archive/currents-main-page.png %})
+![Página «Currents» en el panel de Braze]({% image_buster /assets/img_archive/currents-main-page.png %})
 
 ### Paso 3: Añade tu socio
 
@@ -69,7 +69,7 @@ Si lo necesita, puede obtener más información sobre nuestros eventos en nuestr
 Puedes utilizar las transformaciones de campo de Currents para eliminar o convertir en hash un campo de cadena.
 
 - **Elimina:** Sustituye el campo cadena por `[REDACTED]`. Esto es útil si tu socio rechaza eventos en los que faltan campos o están vacíos.
-- **Hash:** Aplica un algoritmo hash SHA-256 al campo cadena.
+- **Hash:** Aplica un algoritmo hash SHA-256 al campo de cadena.
 
 Al seleccionar un campo para una de estas transformaciones, dicha transformación se aplicará a todos los eventos en los que aparezca ese campo. Por ejemplo, si seleccionas `email_address` para el hash, el campo `email_address` se convertirá en hash en los eventos Envío por correo electrónico, Apertura de correo electrónico, Rebote de correo electrónico y Cambio de estado del grupo de suscripción.
 
@@ -81,24 +81,24 @@ Al seleccionar un campo para una de estas transformaciones, dicha transformació
 Currents eliminará los eventos con cargas útiles excesivamente grandes, superiores a 900 KB.
 {% endalert %}
 
-Antes de probar, considera la posibilidad de consultar nuestros [datos Currents de muestra en GitHub](https://github.com/Appboy/currents-examples). Cuando estés listo para hacer la prueba, elige una opción a continuación:
+Antes de realizar la prueba, te recomendamos que consultes nuestros [datos de muestra de Currents en GitHub](https://github.com/Appboy/currents-examples). Cuando estés listo para realizar la prueba, elige una de las siguientes opciones:
 
 #### Envío de eventos de prueba
 
-Para probar tu integración, puedes seleccionar **Enviar Eventos de Prueba** para enviar un evento de cada uno de los tipos de evento seleccionados a esta Corriente. Para obtener información detallada sobre cada tipo de evento, consulta nuestras bibliotecas [Eventos de comportamiento del cliente]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) y [Eventos de interacción con los]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) [clientes]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/).
+Para probar tu integración, puedes seleccionar **Enviar eventos de prueba** para enviar un evento de cada uno de los tipos de eventos seleccionados a este Current. Para obtener información detallada sobre cada tipo de evento, consulta nuestras bibliotecas [Eventos de comportamiento del cliente]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) y [Eventos de interacción con mensajes]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
 
-![La página "Prueba de Currents" en el panel de Braze.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
+![La página «Currents Test» (Prueba de corrientes) en el panel de Braze.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
 
 #### Comprobación de los conectores Currents
 
 Los conectores Test Currents son versiones gratuitas de nuestros conectores existentes que pueden utilizarse para probar y ensayar diferentes destinos. Las corrientes de prueba tienen:
 
-- No hay límite en el número de conectores Test Currents que puedes construir.
-- Un máximo agregado de 10 000 eventos por período móvil de siete días. Este total de eventos se actualiza cada hora en el panel.
+- Hasta 10 conectores de corrientes de prueba por espacio de trabajo.
+- Un máximo acumulado de 1500 eventos por cada periodo fijo de 24 horas, que se restablece a medianoche UTC. Este total de eventos se actualiza cada hora en el panel.
 
-Después de que sus conectores Test Currents alcancen el límite de envío, su conector no enviará eventos hasta el siguiente periodo de siete días.
+Una vez que tus conectores de Test Currents alcancen el límite de envío, tu conector no enviará eventos hasta el día siguiente (a medianoche UTC).
 
-Para actualizar tu conector de Test Currents, edita la integración en el panel y selecciona **Actualizar integración de Test**.
+Para actualizar tu conector Test Currents, edita la integración en el panel y selecciona **Actualizar integración de prueba**.
 
 ## Actualizar corrientes
 

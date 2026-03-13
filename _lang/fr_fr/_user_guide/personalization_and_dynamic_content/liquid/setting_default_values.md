@@ -42,7 +42,7 @@ Hi Valued User, thanks for using the App!
 {% endraw %}
 
 {% alert important %}
-La valeur par défaut s'affiche pour les valeurs vides, mais pas pour les valeurs en blanc. Une valeur vide ne contient rien, tandis qu'une valeur vierge contient des caractères d'espacement (tels que des espaces) et aucun autre caractère. Par exemple, une chaîne vide peut ressembler à `""` et une chaîne vierge à `" "`.
+La valeur par défaut sera affichée pour les valeurs vides, mais pas pour les valeurs vides. Une valeur vide ne contient rien, tandis qu'une valeur vierge contient des caractères d'espacement (tels que des espaces) et aucun autre caractère. Par exemple, une chaîne vide peut ressembler à `""` et une chaîne vierge à `" "`.
 {% endalert %}
 
 ## Définition de valeurs par défaut pour différents types de données
@@ -172,7 +172,7 @@ Supposons que vous disposiez d'un attribut personnalisé de type tableau appelé
 {% endraw %}
 
 {: start="2"}
-2\. Indiquez le message à envoyer si `upcoming_trips` a un contenu :<br><br>**2a.** Adressez-vous à l'utilisateur et incluez une valeur par défaut, au cas où vous n'auriez pas son nom. <br>**2b.** Utilisez une étiquette `for` pour spécifier que vous allez extraire des propriétés (ou des informations) pour chaque voyage contenu dans `upcoming_trips`. <br>**2c.** Listez les propriétés dans le message et incluez une valeur par défaut si l'adresse `departure_date` n'est pas définie. (Disons qu'une adresse `destination` est requise pour la création d'un voyage, vous n'avez donc pas besoin de définir une valeur par défaut pour cela).<br>**2d.** Fermez l'étiquette `for`, puis la logique conditionnelle.
+2\. Indiquez le message à envoyer si `upcoming_trips` a un contenu :<br><br>**2a.** Adressez-vous à l'utilisateur et incluez une valeur par défaut, au cas où vous n'auriez pas son nom. <br>**2b.** Utilisez une étiquette `for` pour spécifier que vous allez extraire des propriétés (ou des informations) pour chaque voyage contenu dans `upcoming_trips`. <br>**2c.** Listez les propriétés dans le message et incluez une valeur par défaut si l'adresse `departure_date` n'est pas définie. (Disons qu'une adresse `destination` est requise pour la création d'un voyage, il n'est donc pas nécessaire de définir une valeur par défaut pour cela).<br>**2d.** Fermez l'étiquette `for`, puis la logique conditionnelle.
 
 {% raw %}
 ```liquid

@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Lemnisk
 
-> [Lemnisk](https://www.lemnisk.co/) es una solución de automatización del marketing y una plataforma de datos de clientes (CDP) impulsada por IA que habilita la captura, unificación y activación en tiempo real de datos de clientes procedentes de fuentes diversas y aisladas. Entrega sin problemas estos datos unificados a través de varias plataformas MarTech y empresariales, al tiempo que ofrece un sólido análisis en tiempo real para hacer un seguimiento de cada etapa del ciclo de vida de los datos de los clientes. 
+> [Lemnisk](https://www.lemnisk.co/) es una solución de automatización del marketing y una plataforma de datos de clientes (CDP) impulsada por IA que habilita la captura, unificación y activación en tiempo real de datos de clientes procedentes de fuentes diversas y aisladas. Entrega sin problemas estos datos unificados a través de varias plataformas MarTech y empresariales, al tiempo que ofrece análisis sólidos y en tiempo real para hacer un seguimiento de cada etapa del ciclo de vida de los datos de los clientes. 
 
 _Esta integración está mantenida por Lemnisk._
 
@@ -40,7 +40,7 @@ En **Detalles básicos**, introduce un nombre, una descripción, un canal y un i
 
 ![Introducir detalles básicos de configuración para una nueva API Externa en Lemnisk]({% image_buster /assets/img/lemnisk/ext_api_basic_details.png %})
 
-En **Detalles de la API externa**, introduce los detalles relevantes de tu punto final `users.track`. Puedes definir varios campos a nivel de interacción utilizando {% raw %}`{{}}`{% endraw %}, lo que te permite establecer valores distintos para campañas diferentes.
+En **Detalles de la API externa**, introduce los detalles relevantes de tu punto final `users.track`. Puedes definir varios campos a nivel de interacción utilizando {% raw %}`{{}}`{% endraw %}, lo que te permite establecer valores diferentes para campañas distintas.
 
 ![Rellenar el punto final de la API externa y los detalles de la carga útil]({% image_buster /assets/img/lemnisk/ext_api_ext_api_details.png %})
 
@@ -54,7 +54,7 @@ Si tus credenciales y las definiciones de la API son correctas, Braze te devolve
 
 ![Probar la configuración de una API externa con una carga útil de muestra y una respuesta satisfactoria]({% image_buster /assets/img/lemnisk/test_ext_api.png %})
 
-A continuación, comprobarás que tus eventos se envían a Braze correctamente. En el panel de Braze, ve a **Audiencia** > **Buscar usuarios** y, a continuación, introduce uno de los identificadores de tu configuración de API externa (como una dirección de correo electrónico de usuario). Si todo funciona correctamente, aparecerá en la lista el perfil que recibió tu desencadenador de API de prueba.
+A continuación, comprueba que tus eventos se envían a Braze correctamente. En el panel de Braze, ve a **Audiencia** > **Buscar usuarios** y, a continuación, introduce uno de los identificadores de tu configuración de API externa (como una dirección de correo electrónico de usuario). Si todo funciona correctamente, aparecerá en la lista el perfil que recibió tu desencadenador de API de prueba.
 
 ![Ver el perfil de un usuario y un resumen de su actividad en Braze]({% image_buster /assets/img/lemnisk/braze_cov.png %})
 

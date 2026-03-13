@@ -8,7 +8,7 @@ tool: Segments
 search_rank: 3
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Crear un segmento
+# [![](https://learning.braze.com/segmentation-course)C[urso]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} [de Braze Learning:](https://learning.braze.com/segmentation-course) Crear un segmento
 
 > La segmentación le permite dirigirse a los usuarios en función de sus características y acciones demográficas, de comportamiento o técnicas. El uso creativo e inteligente de la segmentación y la automatización de la mensajería le permite hacer que sus usuarios pasen sin problemas del primer contacto al cliente a largo plazo. Los segmentos se actualizan en tiempo real a medida que cambian los datos, y usted puede crear tantos segmentos como necesite para sus fines de segmentación y mensajería.
 
@@ -29,9 +29,9 @@ Opcionalmente, puedes hacer lo siguiente:
 
 ## Paso 3: Elija su aplicación o plataforma
 
-Elige a qué aplicaciones o plataformas deseas dirigirte seleccionando **Usuarios de todas las aplicaciones** (por defecto) o **Usuarios de aplicaciones específicas**. **Los usuarios de aplicaciones específicas** se dirigen a usuarios con al menos una sesión en las aplicaciones especificadas.
+Elige a qué aplicaciones o plataformas deseas dirigirte seleccionando **Usuarios de todas las aplicaciones** (por defecto) o **Usuarios de aplicaciones específicas**. **Los usuarios de aplicaciones específicas** se dirigen a los usuarios que han tenido al menos una sesión en las aplicaciones especificadas.
 
-Por ejemplo, si quieres enviar un mensaje dentro de la aplicación solo a dispositivos iOS, selecciona tu aplicación iOS. De este modo, los usuarios que utilicen tanto un dispositivo iOS como Android sólo recibirán el mensaje en su dispositivo iOS. En la lista de aplicaciones específicas, la opción **Usuarios de ninguna aplicación** te permite incluir usuarios sin sesiones ni datos de aplicación (normalmente creados mediante importación de usuarios o API REST).
+Por ejemplo, si quieres enviar un mensaje dentro de la aplicación solo a dispositivos iOS, selecciona tu aplicación iOS. De este modo, los usuarios que utilicen tanto un dispositivo iOS como Android sólo recibirán el mensaje en su dispositivo iOS. En la lista de aplicaciones específicas, la opción **Usuarios sin aplicaciones** te permite incluir usuarios sin sesiones ni datos de aplicaciones (normalmente creados mediante la importación de usuarios o la API REST).
 
 ![Panel de detalles del segmento con la opción "Usuarios de todas las aplicaciones" seleccionada en la sección Aplicaciones utilizadas.]({% image_buster /assets/img_archive/Segment2.png %}){: style="max-width:80%;"}
 
@@ -39,9 +39,7 @@ Por ejemplo, si quieres enviar un mensaje dentro de la aplicación solo a dispos
 
 Añade al menos un filtro a tu segmento. Puede combinar tantos filtros como desee para que su segmentación sea más específica. 
 
-{% alert note %}
-Braze no genera perfiles para los usuarios hasta que han utilizado la aplicación por primera vez, por lo que no puedes dirigirte a usuarios que aún no han abierto tu aplicación.
-{% endalert %}
+{% multi_lang_include alerts/note_alerts.md alert='Segment profiles first app use' %}
 
 #### Filtrar grupos
 
@@ -65,11 +63,11 @@ Cuando seleccione "O" para filtros que incluyan un filtro negativo (como "no est
 
 {% details When to avoid the OR operator %}
 
-Puede haber situaciones de selección de usuarios en las que deba evitarse utilizar el operador `OR`. El operador `OR` crea una sentencia que se evalúa como verdadera si un usuario cumple los criterios de uno o varios de los filtros de una sentencia. Por ejemplo, si quieres crear un segmento de usuarios que pertenezcan a "Foodies" pero que no pertenezcan ni a "Non-foodies" ni a "Candy-lovers", en este caso funcionaría el operador `OR`.
+Puede haber situaciones de selección de usuarios en las que deba evitarse utilizar el operador `OR`. El operador `OR` crea una sentencia que se evalúa como verdadera si un usuario cumple los criterios de uno o varios de los filtros de una sentencia. Por ejemplo, si deseas crear un segmento de usuarios que pertenezcan a «Foodies» pero que no pertenezcan ni a «Non-foodies» ni a «Candy-lovers», entonces el`OR`operador  sería adecuado en este caso.
 
-![Filtrar el grupo de usuarios en el segmento "amantes de la comida" y no en los segmentos "no amantes de la comida" o "amantes de los dulces".]({% image_buster /assets/img_archive/or_operator_segment.png %})
+![Grupo de filtro para usuarios del segmento «foodies» y que no pertenezcan a los segmentos «non-foodies» o «candy-lovers».]({% image_buster /assets/img_archive/or_operator_segment.png %})
 
-Sin embargo, si tu objetivo es segmentar a usuarios que pertenezcan al segmento "Foodies" y no estén en ninguno de los segmentos "Non-foodies" y "Candy-lovers", entonces utiliza el operador `AND`. De esta forma, los usuarios que reciben la campaña o el Canvas están en el segmento previsto ("foodies") y no en los otros segmentos ("Non-foodies" y "Candy-lovers") al mismo tiempo. 
+Sin embargo, si tu objetivo es segmentar a los usuarios que pertenecen al segmento «Foodies» y no están en ninguno de los segmentos «Non-foodies» y «Candy-lovers», utiliza el`AND`operador . De esta manera, los usuarios que reciben la campaña o Canvas se encuentran en el segmento deseado («foodies») y no en los otros segmentos («Non-foodies» y «Candy-lovers») al mismo tiempo. 
 
 Los siguientes criterios negativos de selección no deben utilizarse con el operador `OR` cuando dos o más filtros hagan referencia al mismo atributo:
 
@@ -78,7 +76,7 @@ Los siguientes criterios negativos de selección no deben utilizarse con el oper
 - `does not equal`
 - `does not match regex`
 
-Si `not included`, `is not`, `does not equal`, o `does not match regex` se utilizan con el operador `OR` dos o más veces en una frase, se seleccionarán los usuarios con todos los valores del atributo correspondiente.
+Si `not included`, `is not`, `does not equal`, o`does not match regex`  se utilizan con el`OR`operador dos o más veces en una instrucción, se seleccionarán los usuarios con todos los valores del atributo correspondiente.
 
 {% enddetails %}
 
@@ -90,7 +88,7 @@ Dependiendo del filtro específico que seleccione, dispondrá de distintos opera
 Braze no genera perfiles para los usuarios hasta que han utilizado la aplicación por primera vez, por lo que no puedes dirigirte a usuarios que aún no han abierto tu aplicación.
 {% endalert %}
 
-![El segmentador filtra los grupos con el operador AND.]({% image_buster /assets/img_archive/segmenter_filter_groups.png %})
+![Segmenta grupos de filtros con el operador AND.]({% image_buster /assets/img_archive/segmenter_filter_groups.png %})
 
 {% alert important %}
 Los segmentos que ya utilizan el filtro **Pertenencia a segmento** no pueden incluirse ni anidarse en otros segmentos. Esto evita un ciclo en el que el segmento A incluye al segmento B, que a su vez intenta incluir de nuevo al segmento A. Si eso ocurriera, el segmento seguiría haciendo referencia a sí mismo, haciendo imposible calcular quién pertenece realmente a él.
@@ -108,21 +106,21 @@ Cree un grupo de exclusión añadiendo filtros como lo haría para los grupos de
 
 Los usuarios excluidos no se contabilizarán en la estadística _Total de usuarios accesibles_ de su segmento.
 
-![Un grupo de exclusión con dos filtros.]({% image_buster /assets/img_archive/segmenter_exclusion_groups.png %})
+![Un grupo de exclusión con dos filtros para filtrar.]({% image_buster /assets/img_archive/segmenter_exclusion_groups.png %})
 
-#### Visualización de las estadísticas del embudo
+#### Ver estadísticas del embudo
 
-Selecciona **Ver estadísticas del embudo** para mostrar las estadísticas de ese grupo de filtros y ver cómo afecta cada filtro añadido a tus estadísticas de segmento. Verás un recuento estimado y el porcentaje de usuarios a los que se dirigen todos los filtros hasta ese momento. Una vez mostradas las estadísticas de un grupo de filtros, se actualizarán automáticamente siempre que cambies los filtros. Estas estadísticas son estimadas y pueden tardar un momento en generarse.
+Selecciona **Ver estadísticas del embudo** para mostrar las estadísticas de ese grupo de filtros y ver cómo cada filtro añadido afecta a las estadísticas de tu segmento. Verás un recuento estimado y un porcentaje de los usuarios a los que se aplican todos los filtros hasta ese momento. Una vez que se muestran las estadísticas de un grupo de filtros, se actualizarán automáticamente cada vez que cambies los filtros. Estas estadísticas son estimadas y pueden tardar un momento en generarse.
 
 Ten en cuenta que si utilizas AND entre tus filtros, las estadísticas del embudo disminuirán; si utilizas OR entre tus filtros, las estadísticas del embudo aumentarán.
 
-![Dos filtros con estadísticas de embudo de segmento.]({% image_buster /assets/img_archive/segment_funnel_statistics.png %})
+![Dos filtros con estadísticas de embudo por segmento.]({% image_buster /assets/img_archive/segment_funnel_statistics.png %})
 
-Si añade filtros que documenten su flujo de usuarios, podrá ver los puntos en los que los usuarios se caen. Por ejemplo, si tienes una aplicación de redes sociales y quieres ver dónde puedes estar perdiendo usuarios durante tu proceso de incorporación, quizá quieras añadir filtros de datos personalizados para registrarte, añadir amigos y enviar el primer mensaje. Si descubres que el 85% de los usuarios se registran y añaden amigos, pero sólo el 45% envía el primer mensaje, sabrás que debes centrarte en fomentar más envíos de mensajes durante tus campañas de incorporación y marketing.
+Si añade filtros que documenten su flujo de usuarios, podrá ver los puntos en los que los usuarios se caen. Por ejemplo, si tienes una aplicación de redes sociales y deseas ver dónde puedes estar perdiendo usuarios durante el proceso de incorporación, es posible que desees añadir filtros de datos personalizados para registrarse, añadir amigos y enviar el primer mensaje. Si descubres que el 85% de los usuarios se registran y añaden amigos, pero sólo el 45% envía el primer mensaje, sabrás que debes centrarte en fomentar más envíos de mensajes durante tus campañas de incorporación y marketing.
 
 #### Segmentos de prueba
 
-Después de añadir aplicaciones y filtros a su segmento, puede probar si su segmento está configurado como se esperaba buscando un usuario para confirmar si coincide con los criterios del segmento. Para ello, busque la dirección `external_id` o `braze_id` de un usuario en la sección **Búsqueda de usuarios**. Ten en cuenta que no puedes buscar por dirección de correo electrónico en **la Búsqueda de usuarios**.
+Después de añadir aplicaciones y filtros a su segmento, puede probar si su segmento está configurado como se esperaba buscando un usuario para confirmar si coincide con los criterios del segmento. Para ello, busque la dirección `external_id` o `braze_id` de un usuario en la sección **Búsqueda de usuarios**. Ten en cuenta que no puedes buscar por dirección de correo electrónico en **la búsqueda de usuarios**.
 
 ![Sección de búsqueda de usuarios con un campo de búsqueda.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%;"}
 
@@ -133,11 +131,11 @@ La búsqueda de usuarios está disponible cuando:
 
 Cuando un usuario coincida con los criterios de segmento, filtro y aplicación, se emitirá una alerta.
 
-![Una búsqueda de usuario de "usuario de prueba" desencadena una alerta que dice: "el usuario de prueba coincide con todos los segmentos, filtros y aplicaciones".]({% image_buster /assets/img_archive/user_lookup_match.png %})
+![Una búsqueda de usuario de «testuser» desencadena una alerta que indica: «testuser coincide con todos los segmentos, filtros y aplicaciones».]({% image_buster /assets/img_archive/user_lookup_match.png %})
 
 Cuando un usuario no coincide con parte o la totalidad de los criterios de segmento, filtro o aplicación, los criterios que faltan se enumeran a efectos de resolución de problemas.
 
-![Una búsqueda de usuario con una alerta que dice: "prueba1 no coincide con los siguientes criterios de selección:" y muestra los criterios que faltan.]({% image_buster /assets/img_archive/user_lookup_nomatch.png %})
+![Una búsqueda de usuario con una alerta que indica: «test1 no coincide con los siguientes criterios de segmentación:» y muestra los criterios que faltan.]({% image_buster /assets/img_archive/user_lookup_nomatch.png %})
 
 #### Segmentos de usuario único
 
@@ -153,7 +151,7 @@ Seleccione **Guardar**. Ya puedes empezar a enviar mensajes a tus usuarios.
 
 ## Medición del tamaño del segmento
 
-Para saber cómo controlar la composición y el tamaño de tu segmento, consulta [Medir el tamaño del segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
+Para obtener información sobre cómo supervisar la pertenencia y el tamaño de tu segmento, consulta [Medición del tamaño del segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
 
 ## Archivar segmentos
 
@@ -177,7 +175,7 @@ Al segmentar con filtros dependientes del dispositivo (modelo de dispositivo, si
 
 Puede especificar que sólo se envíe una notificación push a cada usuario. Al [redactar el mensaje]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), seleccione **Sólo enviar al último dispositivo utilizado por el usuario** en **Configuración adicional**.
 
-!["Configuraciones adicionales" con una casilla de verificación para que sólo se envíe al último dispositivo utilizado por el usuario.]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
+![«Configuración adicional» con una casilla de verificación para enviar solo al último dispositivo utilizado por el usuario.]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
 
 ### Consideraciones
 

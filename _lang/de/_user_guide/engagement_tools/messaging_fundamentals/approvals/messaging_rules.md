@@ -58,7 +58,7 @@ Wählen Sie **Starten mit Genehmigung zulassen**. Als nächstes wählen Sie für
 
 Beachten Sie die folgenden Details zum Starten von Nachrichten mit Genehmigung:
 
-- Wenn das Maximum erreicht ist und ein Genehmigender ausgewählt wurde, kann der Braze Nutzer:innen mit der Genehmigungsberechtigung aus dem Dropdown-Menü **Target Audience** approval die Option **Approved** auswählen.
+- Wenn das Maximum erreicht ist und ein Genehmigender ausgewählt wurde, kann der Braze Nutzer:innen mit der Genehmigungsberechtigung aus dem Dropdown-Menü **Target Audience** approval **(Zielgruppengenehmigung** ) die Option **Approved** auswählen.
 - Wenn das Maximum erreicht ist und kein Genehmigender ausgewählt ist, kann das Canvas oder die Kampagne nicht gestartet werden.
 
 ![Der Schritt "Zusammenfassung" des Canvas-Workflows, der anzeigt, dass Sie eine Genehmigung zum Starten benötigen.]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}

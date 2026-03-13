@@ -86,7 +86,7 @@ Enter a name for the new audience, select **Add Users to Audience**, and select 
 
 ![]({% image_buster /assets/img/audience_sync/tiktok3.png %})
 
-Braze는 오디언스가 성공적으로 생성되거나 오류가 발생할 경우 단계 편집기 상단에 알림을 표시합니다. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
+Braze는 오디언스가 성공적으로 생성되었거나 오류가 발생할 경우 단계 편집기 상단에 알림을 표시합니다. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
 ![]({% image_buster /assets/img/audience_sync/tiktok2.png %})
 
@@ -165,4 +165,4 @@ Additionally, TikTok also counts Pangle users as matched users, which in some ca
 
 ### "캔버스에 대한 오디언스가 존재하지 않습니다"라는 제목의 이메일을 받는 이유는 무엇인가요?
 
-동기화하려는 오디언스가 스트리밍 오디언스가 아닌 경우(예: 유사 오디언스 또는 사용자 파일 오디언스인 경우) 발생할 수 있습니다. Braze 오디언스 동기화 캔버스 단계를 통해 새 오디언스를 생성해 보십시오.
+동기화하려는 오디언스가 스트리밍 오디언스가 아닌 경우(예: 유사 오디언스 또는 사용자 파일 오디언스인 경우) 이 문제가 발생할 수 있습니다. Braze 오디언스 동기화 캔버스 단계를 통해 새 오디언스를 생성해 보십시오.

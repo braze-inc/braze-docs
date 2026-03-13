@@ -1,5 +1,5 @@
 ---
-nav_title: Personalizar fuente
+nav_title: Personalizar la fuente
 article_title: Personalizar la fuente de tarjetas de contenido para iOS
 platform: iOS
 page_order: 2
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Personaliza la fuente de tarjetas de contenido
+# Personalizar la fuente de tarjetas de contenido
 
 Puedes crear tu propia interfaz de tarjetas de contenido ampliando `ABKContentCardsTableViewController` para personalizar todos los elementos de la interfaz de usuario y el comportamiento de las tarjetas de contenido. Las celdas de la tarjeta de contenido también pueden subclasificarse y luego utilizarse mediante programación o introduciendo un guión gráfico personalizado que registre las nuevas clases. Consulta la [aplicación de muestra](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) Tarjetas de contenido para ver un ejemplo completo. 
 
@@ -102,9 +102,9 @@ override func setUpUI() {
 
 Se pueden proporcionar interfaces personalizadas registrando clases personalizadas para cada tipo de tarjeta deseado. 
 
-![Una tarjeta de contenido de banner. Una tarjeta de contenido de banner muestra una imagen a la derecha del banner con el texto "¡Gracias por descargar la Demo de Braze!".]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
-![Una imagen subtitulada Tarjeta de contenido. Una tarjeta de contenido subtitulada muestra una imagen de Braze con la leyenda superpuesta en la parte inferior "¡Gracias por descargar la Demo de Braze!". ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
-![Una tarjeta de contenido clásica. Una tarjeta de contenido clásica muestra una imagen en el centro de la tarjeta con las palabras "Gracias por descargar la Demo de Braze" debajo.]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
+![Una tarjeta de contenido de banner. Una tarjeta de contenido de banner muestra una imagen a la derecha del banner con el texto «¡Gracias por descargar la demo de Braze!».]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
+![Una imagen subtitulada Tarjeta de contenido. Una tarjeta de contenido subtitulada muestra una imagen de Braze con el pie de foto superpuesto en la parte inferior: «¡Gracias por descargar la demo de Braze!». ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
+![Una tarjeta de contenido clásica. Una tarjeta de contenido clásica muestra una imagen en el centro de la tarjeta con las palabras «Gracias por descargar la demo de Braze» debajo.]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
 
 Braze proporciona tres plantillas de tarjetas de contenido (banner, imagen subtitulada y clásica). Alternativamente, si quieres proporcionar tus propias interfaces personalizadas, haz referencia a los siguientes fragmentos de código:
 

@@ -23,7 +23,7 @@ Bevor Sie Ihre Messaging-Kampagne testen, ist es wichtig, Ihre Testnutzer:innen 
 
 ### Optional: Erstellen Sie eine Inhaltstestgruppe
 
-Eine bequeme Möglichkeit, Ihre Testnutzer zu organisieren, ist die Erstellung einer [Content-Test-Gruppe]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), die eine Gruppe von Nutzern umfasst, die Testnachrichten von Kampagnen erhalten werden. Sie können diese Testgruppe im Feld **Inhaltstestgruppen hinzufügen** unter **Test Empfänger:innen** in Ihrer Kampagne hinzufügen und Ihre Tests einführen, ohne einzelne Nutzer:innen zu erstellen oder hinzuzufügen.
+Eine bequeme Möglichkeit, Ihre Testnutzer zu organisieren, ist die Erstellung einer [Content-Test-Gruppe]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), die eine Gruppe von Nutzern umfasst, die Testnachrichten von Kampagnen erhalten werden. Sie können diese Testgruppe in das Feld **Inhaltstestgruppen hinzufügen** unter **Test Empfänger:innen** in Ihrer Kampagne hinzufügen und Ihre Tests einführen, ohne einzelne Nutzer:innen zu erstellen oder hinzuzufügen.
 
 ## Schritt 2: Kanalspezifische Testnachrichten senden
 
@@ -33,7 +33,7 @@ Die Schritte zum Senden von Testnachrichten finden Sie im folgenden Abschnitt f�
 {% tab Banners %}
 
 {% alert important %}
-Bevor Sie Banner-Nachrichten in Braze testen können, müssen Sie eine Banner-Kampagne in Braze erstellen. Überprüfen Sie außerdem, ob die Platzierung, die Sie testen möchten, bereits [in Ihrer App oder Website vorhanden]({{site.baseurl}}/developer_guide/banners/placements) ist.
+Bevor Sie Messaging-Nachrichten in Braze testen können, müssen Sie eine Messaging-Kampagne in Braze erstellen. Überprüfen Sie außerdem, ob die Platzierung, die Sie testen möchten, bereits [in Ihrer App oder Website vorhanden]({{site.baseurl}}/developer_guide/banners/placements) ist.
 {% endalert %}
 
 Nachdem Sie Ihre Banner Nachricht erstellt haben, können Sie eine Vorschau Ihres Banners anzeigen oder eine Testnachricht senden.
@@ -258,7 +258,7 @@ Nachdem Sie Ihren Webhook erstellt haben, können Sie einen Testversand durchfü
 
 1. Erstellen Sie Ihre WhatsApp Nachricht.
 2. Wählen Sie die Registerkarte **Test** und wählen Sie mindestens eine Inhaltstestgruppe oder einen einzelnen Benutzer, der diese Testnachricht erhalten soll.
-3. Initiieren Sie ein Konversationsfenster, indem Sie eine WhatsApp-Nachricht an die Telefonnummer senden, die mit der Abo-Gruppe verbunden ist, die Sie für diese Nachricht verwenden. Die zugehörige Telefonnummer wird in der Benachrichtigung auf der Registerkarte **Test** aufgeführt.
+3. Initiieren Sie ein Gesprächsfenster, indem Sie eine WhatsApp-Nachricht an die Telefonnummer senden, die mit der Abo-Gruppe verbunden ist, die Sie für diese Nachricht verwenden. Die zugehörige Telefonnummer wird in der Benachrichtigung auf der Registerkarte **Test** aufgeführt.
 4. Wählen Sie **Test senden**, um Ihre Nachricht zu versenden.
 
 ![WhatsApp Nachricht testen.]({% image_buster /assets/img/whatsapp/whatsapp_test.png %})

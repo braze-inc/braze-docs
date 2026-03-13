@@ -1,14 +1,14 @@
 ---
 page_order: 6
-nav_title: Prompts de push suave
-article_title: Configurar prompts de soft push para o SDK do Braze
+nav_title: Prompt de soft push
+article_title: Configure prompts de soft push para o SDK do Braze
 channel:
   - push notifications
 ---
 
-# Prompts de soft push para a Web
+# Prompts de soft push para Web
 
-> Saiba como configurar prompts de soft push para o SDK do Braze.
+> Aprenda como configurar prompts de soft push para o SDK do Braze.
 
 {% sdktabs %}
 {% sdktab web %}

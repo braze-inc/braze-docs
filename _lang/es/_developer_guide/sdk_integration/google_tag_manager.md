@@ -1,5 +1,5 @@
 ---
-nav_title: Administrador de etiquetas de Google
+nav_title: Administrador de etiquetas de Google Tag Manager
 article_title: Google Tag Manager con el SDK de Braze
 platform: 
   - Android
@@ -12,7 +12,7 @@ description: "Aprende a inicializar el SDK de Braze utilizando métodos como la 
 
 # Google Tag Manager con el SDK de Braze
 
-> Aprende a utilizar [Google Tag Manager (GTM](https://developers.google.com/tag-platform/tag-manager) ) con el SDK de Braze, para que puedas controlar de forma remota el seguimiento de eventos de Braze y las actualizaciones de atributos de usuario sin necesidad de cambios de código ni nuevas versiones de la aplicación.
+> Aprende a utilizar [Google Tag Manager (GTM)](https://developers.google.com/tag-platform/tag-manager) con el SDK de Braze, para que puedas controlar de forma remota el seguimiento de eventos y las actualizaciones de atributos de usuario de Braze sin necesidad de realizar cambios en el código ni lanzar nuevas versiones de la aplicación.
 
 {% sdktabs %}
 {% sdktab web %}

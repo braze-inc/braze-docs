@@ -21,7 +21,7 @@ Peça aos usuários para enviar uma mensagem de texto com "START", "UNSTOP", "YE
 
 Para permitir que os usuários optem por SMS a partir de uma mensagem no app, use o [formulário de captura de número de telefone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) fornecido pela Braze para criar um formulário com a marca que permite coletar números de telefone e aumentar sua lista de SMS.
 
-![Criador de mensagens no app com um modelo para captura de número de telefone.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%;"}
+![Compositor de mensagem no app com um modelo para captura de número de telefone.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%;"}
 
 Braze recomenda que você também use o recurso de [aceitação dupla por SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/). Este recurso funciona automaticamente com o formulário de captura de número de telefone {mensagem no app}, solicitando que os usuários confirmem sua intenção após enviar seu número de telefone através do formulário.
 
@@ -33,7 +33,7 @@ Depois que o usuário se inscrever, faça o seguinte:
 
 1. Use o [`/subscription/status/set` endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/#update-users-subscription-group-status) para criar o usuário e salvar seus atributos.
 
-```json
+```http
 POST 'https://rest.iad-03.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -49,7 +49,7 @@ POST 'https://rest.iad-03.braze.com/subscription/status/set' \
 {: start="2"}
 2\. Use o [endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para inscrever o usuário em SMS.
 
-```json
+```http
 POST `https://rest.aid-03.braze.com/users/track` \
 --header `Content-Type: application/json` \
 --header `Authorization: Bearer YOUR-REST-API-KEY` \

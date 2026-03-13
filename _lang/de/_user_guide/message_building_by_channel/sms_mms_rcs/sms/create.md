@@ -88,7 +88,7 @@ Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend d
 
 Braze empfiehlt immer, Ihre Nachricht vor dem Versand in der Vorschau zu prüfen. Wechseln Sie auf die Registerkarte **Test**, um eine Test-SMS an [Inhaltstestgruppen]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) oder einzelne Benutzer zu senden, oder um eine Vorschau der Nachricht als Benutzer direkt in Braze anzuzeigen.
 
-![Vorschau der SMS-Kopie auf dem Tab „Testen“ des Editors. Im Profilbereich ist das Feld „Vorname“ auf „James“ eingestellt. In der Vorschau lautet die SMS jetzt "Hallo James, wir wissen Ihre Unterstützung zu schätzen!"]({% image_buster /assets/img/sms_campaign_test.png %})
+![Vorschau der SMS-Kopie auf dem Tab „Testen“ des Editors. Im Profilbereich ist das Feld „Vorname“ auf „James“ eingestellt. In der Vorschau lautet die SMS nun "Hallo James, wir wissen Ihre Unterstützung zu schätzen!"]({% image_buster /assets/img/sms_campaign_test.png %})
 
 {% alert tip %}
 Wenn Sie testen möchten, in wie viele Segmente Ihre SMS aufgeteilt werden kann, testen Sie die Länge Ihres Textes mit unserem [SMS-Segment-Rechner]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).

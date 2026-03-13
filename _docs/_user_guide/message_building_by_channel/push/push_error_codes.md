@@ -34,6 +34,25 @@ Common failures may include:
 {% endtab %}
 {% tab iOS %}
 
+### Error sending push because the payload was invalid
+
+This message can appear in the user profile **Engagement** tab under **Contact Settings** > **Push Changelog** when Apple Push Notification service (APNs) rejects the push request because of an invalid payload.
+
+In Braze, this dashboard message can map to one of the following APNs error reasons:
+
+- `PayloadEmpty`: The payload was missing required content for the type of push being sent.
+- `PayloadTooLarge`: The payload exceeded APNs' maximum payload size.
+
+Common causes include:
+
+- Custom keys (and their values) making the payload too large (this can include unexpectedly large Liquid-rendered values).
+- An empty or missing alert or body where required (or an otherwise malformed `aps` payload).
+
+Next steps:
+
+- Reduce payload size by trimming custom keys and shortening large dynamic values.
+- If you send through the API, validate the final JSON payload (including size) before sending.
+
 ### Push bounced: BadToken
 
 The `BadToken` error may occur for several reasons:
@@ -47,6 +66,15 @@ The `BadToken` error may occur for several reasons:
 	- This can happen if your certificate doesn't match the one that was used to get the token. If this is suspected, the next steps include:
 		- Ensuring that the push certificate being used to send push from the Braze dashboard and the provisioning profile are configured correctly.
 		- Recreating the APNS certification and then recreate the provisioning profile after the APNS certificate is configured to the `app_id`. This can sometimes solve some more visible problems.
+
+### InvalidProviderToken
+
+The `InvalidProviderToken` error means APNs rejected the request because the authentication token (from a `.p8` key) or the push certificate (`.p12`) doesn't match the app's bundle ID or Team ID. To resolve this:
+
+1. **Verify your Team ID and Key ID:** If you're using a `.p8` authentication key, confirm that the **Team ID** and **Key ID** configured in the Braze dashboard (**Settings** > **App Settings** > select your iOS app) match the values in your Apple Developer account.
+2. **Check the bundle ID:** Make sure the bundle ID registered in Braze matches the bundle ID of your app. A mismatch, such as a different capitalization or a `.debug` suffix, causes this error.
+3. **Re-upload the key or certificate:* If the `.p8` key or `.p12` certificate was recently regenerated or revoked, upload the new key to Braze and remove the old one.
+4. **Confirm the APNs environment:** If you're using a `.p12` certificate, verify you selected the correct environment (development versus production) when uploading it. For `.p8` keys, this is handled automatically.
 
 ### Push bounced: APNS feedback service removed
 

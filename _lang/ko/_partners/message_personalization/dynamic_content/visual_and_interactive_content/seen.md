@@ -31,7 +31,7 @@ Seen은 다음을 포함하여 고객 생애주기 전반에 걸쳐 자동화된
 | Prerequisite | 설명 |
 |--------------|-------------|
 | 플랫폼 액세스 보기 | Seen 플랫폼 구독 또는 활성화된 Seen 캠페인이 필요합니다. 워크스페이스 ID를 검색하고 API 토큰을 생성하려면 워크스페이스 설정에 액세스해야 합니다. |
-| Braze Data Transformation Webhook URL | Braze 데이터 트랜스포메이션은 Seen에서 들어오는 데이터를 Braze의 /사용자/추적 엔드포인트에서 받아들일 수 있도록 포맷을 다시 지정합니다. |
+| Braze Data Transformation Webhook URL | Braze 데이터 트랜스포메이션은 Seen에서 들어오는 데이터를 Braze의 /사용자/트랙 엔드포인트에서 받아들일 수 있도록 포맷을 다시 지정합니다. |
 | Braze 사용자 데이터 | 비디오 개인화를 위해서는 사용자 수준의 데이터가 필요합니다. 관련 속성을 Braze에서 사용할 수 있는지 확인하고 고유 식별자로 **braze_id** 를 고유 식별자로 전달해야 합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 

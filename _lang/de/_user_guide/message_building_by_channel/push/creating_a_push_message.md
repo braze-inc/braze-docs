@@ -1,5 +1,5 @@
 ---
-nav_title: Erstellen Sie eine Push Nachricht
+nav_title: Erstellen Sie eine Push-Nachricht
 article_title: Erstellen Sie eine Push-Kampagne
 page_order: 4
 page_type: tutorial
@@ -10,14 +10,14 @@ tool:
   
 ---
 
-# Erstellen Sie eine Push Nachricht
+# Erstellen Sie eine Push-Nachricht
 
 > Push-Benachrichtigungen eignen sich hervorragend für zeitkritische Handlungsaufforderungen und um Nutzer, die die App schon länger nicht mehr besucht haben, wieder zu aktivieren. Erfolgreiche Push-Kampagnen führen den Nutzer direkt zum Inhalt und demonstrieren den Wert Ihrer App. Um Beispiele für Push-Benachrichtigungen zu sehen, sehen Sie sich unsere [Anwendungsbeispiele](https://www.braze.com/customers) an.
 
 ## Schritt 1: Entscheiden Sie, wo Sie Ihre Nachrichten erstellen möchten {#create-new-campaign-push}
 
 {% alert tip %}
-Sie sind sich nicht sicher, ob Sie eine Kampagne oder ein Canvas verwenden sollen? Kampagnen eignen sich besser für einzelne, gezielte Messaging-Kampagnen, während Canvase besser für mehrstufige Nutzer:innen geeignet sind.
+Sie sind sich nicht sicher, ob Sie eine Kampagne oder ein Canvas verwenden sollen? Kampagnen eignen sich besser für einzelne, zielgerichtete Messaging-Kampagnen, während Canvases besser für mehrstufige User Journeys geeignet sind.
 {% endalert %}
 
 {% tabs %}
@@ -40,7 +40,7 @@ Wenn Sie beabsichtigen, mehrere Geräte und Plattformen anzusprechen, z. B. eine
 
 Bevor Sie eine Multichannel- oder Push-Kampagne erstellen, beachten Sie auf diesen Chart:
 
-!["Flussdiagramm für die Auswahl der Kampagnenart. Entscheiden Sie zunächst, ob Sie mehrere Geräte und Plattformen ansprechen wollen. Falls nicht, gehen Sie auf "Push-Benachrichtigung auswählen". Falls ja, wird die Frage "Welche Art von Push-Benachrichtigung?" gestellt. Die Optionen sind "Standard-Push" und die Frage "Gerätespezifische Einstellungen verwenden?". Falls nicht, erscheint die Meldung "Push-Benachrichtigung auswählen und Quick-Push verwenden". Falls ja, gehen Sie zu "Multichannel auswählen". Zurück zu 'Welche Art von Push-Nachricht?', wenn die Antwort 'Push-Storys oder Inline-Bild' lautet, wird auf 'Multichannel auswählen' verwiesen.]({% image_buster /assets/img_archive/flowchart_quickpush.png %})
+!["Flussdiagramm für die Auswahl der Kampagnenart. Entscheiden Sie zunächst, ob Sie mehrere Geräte und Plattformen ansprechen wollen. Falls nicht, gehen Sie auf "Push-Benachrichtigung auswählen". Falls ja, wird die Frage "Welche Art von Push-Benachrichtigung?" gestellt. Die Optionen sind "Standard-Push" und die Frage "Gerätespezifische Einstellungen verwenden?". Falls nicht, erscheint die Meldung "Push-Benachrichtigung auswählen und Quick-Push verwenden". Falls ja, gehen Sie zu "Multichannel auswählen". Zurück zu „Welche Art von Push-Nachricht?“. Wenn die Antwort „Push-Storys oder Inline-Bild“ lautet, werden Sie zu „Multichannel auswählen“ weitergeleitet.]({% image_buster /assets/img_archive/flowchart_quickpush.png %})
 
 Wenn Sie **Push-Benachrichtigung** auswählen und mehrere Geräte und Plattformen als Ziel wählen, erstellen Sie automatisch eine schnelle Push-Kampagne. Bei Quick Push sind bestimmte gerätespezifische Einstellungen nicht verfügbar:
 
@@ -101,7 +101,7 @@ Wenn Sie Bilder in Ihre Push-Kampagne einbinden möchten, lesen Sie die folgende
 
 Jetzt ist es an der Zeit, Ihre Push-Nachricht zu schreiben! Auf der Registerkarte **Verfassen** können Sie alle Aspekte des Inhalts und Verhaltens Ihrer Nachricht bearbeiten.
 
-![Tab zum Verfassen einer Push-Benachrichtigung.]({% image_buster /assets/img_archive/push_compose.png %})
+![Tab „Verfassen“ zum Erstellen einer Push-Benachrichtigung.]({% image_buster /assets/img_archive/push_compose.png %})
 
 Der Inhalt der Registerkarte **Verfassen** hängt von der Art der Benachrichtigung ab, die Sie im vorherigen Schritt ausgewählt haben, kann aber eine der folgenden Optionen enthalten:
 
@@ -138,7 +138,7 @@ Sie **können** eine Android-Push-Nachricht **nicht** ohne Titel versenden. Sie 
 {% alert tip %}
 Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
 
-![Starten Sie den KI Copywriter Button, der sich im Body Feld des Push Composers befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
+![Bitte klicken Sie auf den Button „AI Copywriter“, der am Standort „Body“ des Push-Composers liegt.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
 {% endalert %}
 
 #### Bild
@@ -149,6 +149,8 @@ Weitere Hinweise zur Verwendung von Bildern in Ihren Push-Benachrichtigungen fin
 
 - [Rich-Benachrichtigungen für iOS erstellen]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/)
 - [Rich-Benachrichtigungen für Android erstellen]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/)
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 #### On-Click-Verhalten
 
@@ -192,7 +194,7 @@ In diesem Schritt können Sie auch Zustellungskontrollen festlegen, z. B. dass N
 
 #### Zielgruppe auswählen
 
-Als nächstes müssen Sie [Nutzer:innen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) durch die Auswahl von Segmenten oder Filtern [zielgerichtet zusammen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) stellen, um Ihre Zielgruppe einzugrenzen. Sie erhalten automatisch eine Vorschau darauf, wie diese ungefähre Segmentpopulation aussieht. Detaillierte Zielgruppenstatistiken für die angesprochenen Kanäle finden Sie in der Fußzeile. Um zu sehen, welcher Prozentsatz Ihrer Nutzerbasis angesprochen wird und wie hoch der Lifetime Value für dieses Segment ist, wählen Sie **Zusätzliche Statistiken anzeigen**.
+Anschließend müssen Sie Ihre Zielgruppen durch die Auswahl von Segmenten oder Filtern eingrenzen. Sie erhalten automatisch eine Vorschau, wie die ungefähre Segmentpopulation aussieht. Detaillierte Zielgruppenstatistiken für die angesprochenen Kanäle finden Sie in der Fußzeile. Um zu sehen, welcher Prozentsatz Ihrer Nutzerbasis angesprochen wird und wie hoch der Lifetime Value für dieses Segment ist, wählen Sie **Zusätzliche Statistiken anzeigen**.
 
 {% multi_lang_include target_audiences.md %}
 
@@ -202,9 +204,9 @@ Wenn Sie die Gesamtzahl der erreichbaren Nutzer für Ihre gefilterte Zielgruppe 
 
 {% enddetails %}
 
-![Tabelle mit detaillierten Zielgruppen-Statistiken für Nutzer:innen, die erreichbar sind.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
+![Tabelle mit detaillierten Statistiken für erreichbare Zielgruppen für Nutzer:innen.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 
-Denken Sie daran, dass die genaue Segmentzugehörigkeit immer berechnet wird, bevor die Nachricht gesendet wird.
+Bitte beachten Sie, dass die genaue Segmentzugehörigkeit immer vor dem Versand der Nachricht berechnet wird.
 
 Sie können Ihre Kampagne auch nur an Benutzer mit einem bestimmten [Abonnementstatus]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) senden, z. B. an diejenigen, die ein Abonnement abgeschlossen und sich für Push-Nachrichten angemeldet haben.
 
@@ -239,7 +241,7 @@ Falls noch nicht geschehen, füllen Sie die restlichen Abschnitte der Canvas-Kom
 
 ## Schritt 7: Überprüfen und loslegen {#review-and-deploy-push}
 
-Nachdem Sie den letzten Teil Ihrer Kampagne oder Ihres Canvas erstellt haben, überprüfen Sie die Details. Bei Kampagnen erhalten Sie auf der letzten Seite eine Zusammenfassung der von Ihnen entworfenen Kampagne. Überprüfen Sie alle wichtigen Details und vergewissern Sie sich, dass Sie die Nachricht getestet haben. Nun können Sie sie absenden und beobachten, wie die Daten bei Ihnen eintrudeln!
+Nachdem Sie den letzten Teil Ihrer Kampagne oder Ihres Canvas erstellt haben, überprüfen Sie die Details. Bei Kampagnen erhalten Sie auf der letzten Seite eine Zusammenfassung der von Ihnen gestalteten Kampagne. Überprüfen Sie alle wichtigen Details und vergewissern Sie sich, dass Sie die Nachricht getestet haben. Nun können Sie sie absenden und beobachten, wie die Daten bei Ihnen eintrudeln!
 
 Sehen Sie sich als nächstes die [Push-Berichterstattung]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) an, um zu erfahren, wie Sie auf die Ergebnisse Ihrer Push-Kampagne zugreifen können. Für Push-Benachrichtigungen können Sie Statistiken über die Anzahl der gesendeten, zugestellten, abgeprallten, geöffneten und direkt geöffneten Nachrichten einsehen.
 

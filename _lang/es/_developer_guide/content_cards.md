@@ -13,7 +13,7 @@ platform:
 
 # Tarjetas de contenido
 
-> Obtén información sobre las tarjetas de contenido para el SDK de Braze, incluidos los distintos modelos de datos y las propiedades específicas de las tarjetas disponibles para tu aplicación.
+> Obtén información sobre las tarjetas de contenido para el SDK de Braze, incluidos los diferentes modelos de datos y las propiedades específicas de las tarjetas disponibles para tu aplicación.
 
 {% multi_lang_include banners/content_card_alert.md %}
 

@@ -1,11 +1,11 @@
 ---
 nav_title: Bilder
-article_title: Bilder generieren mit BrazeAI
+article_title: Bilder mit BrazeAI generieren
 page_order: 10
 description: "Erfahren Sie, wie Sie mit DALL-E 3, einem KI-System von OpenAI und einem Braze Drittanbieter, Bilder für Ihre Bibliothek generieren."
 ---
 
-# Erzeugen Sie Bilder mit <sup>BrazeAITM</sup>
+# Bilder mit BrazeAI generieren
 
 > {% multi_lang_include brazeai/generative_ai/about_images.md %}
 

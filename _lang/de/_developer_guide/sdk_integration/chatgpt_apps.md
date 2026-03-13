@@ -1,31 +1,31 @@
 ---
 page_order: 2.1
-nav_title: ChatGPT Apps
-article_title: Integration von Braze mit ChatGPT Apps
-description: "Erfahren Sie, wie Sie Braze in ChatGPT Apps integrieren, um Analytics und Ereignisprotokollierung in KI-gesteuerten Anwendungen zu ermöglichen."
+nav_title: ChatGPT-Apps
+article_title: Integrieren Sie Braze in ChatGPT-Apps
+description: "Erfahren Sie, wie Sie Braze in ChatGPT-Apps integrieren können, um Analysen und Ereignisprotokollierung in KI-gestützten Anwendungen zu ermöglichen."
 platform:
   - ChatGPT Apps
 ---
 
-# Integration von Braze in ChatGPT-Apps
+# Integrieren Sie Braze in ChatGPT-Apps.
 
-> In diesem Leitfaden erfahren Sie, wie Sie Braze in ChatGPT-Apps integrieren, um Analytics und Ereignisprotokollierung in KI-gesteuerten Anwendungen zu ermöglichen.
+> Dieser Leitfaden beschreibt, wie Sie die Integration von Braze in ChatGPT-Apps realisieren können, um Analytics und Ereignisprotokollierung in KI-gestützten Anwendungen zu ermöglichen.
 
-![Eine in die ChatGPT App integrierte Content-Card.]({% image_buster /assets/img/chatgpt_app_integration.png %}){: style="float:right;max-width:30%;border:none;" }
+![Eine in die ChatGPT-App integrierte Content-Card.]({% image_buster /assets/img/chatgpt_app_integration.png %}){: style="float:right;max-width:30%;border:none;" }
 
 ## Übersicht
 
-ChatGPT Apps bieten eine leistungsstarke Plattform für den Aufbau von KI-Konversationsanwendungen. Durch die Integration von Braze in Ihre ChatGPT App können Sie auch im Zeitalter der KI die Kontrolle über First-Party-Daten behalten, einschließlich der Frage, wie Sie diese kontrollieren können:
+ChatGPT-Apps bieten eine leistungsstarke Plattform für die Entwicklung von KI-basierten Konversationsanwendungen. Durch die Integration von Braze in Ihre ChatGPT-App können Sie auch im Zeitalter der KI weiterhin die Kontrolle über Ihre First-Party-Daten behalten, einschließlich der folgenden Aspekte:
 
-- Tracking des Engagements und des Verhaltens von Nutzern:innen in Ihrer ChatGPT App (z.B. um festzustellen, welche Fragen oder Features Ihre Nutzer:innen nutzen)
-- Segmentierung und Retargeting von Braze Kampagnen auf der Grundlage von KI-Interaktionsmustern (z. B. Mailen von Nutzer:innen, die den Chat mehr als dreimal pro Woche genutzt haben)
+- Verfolgen Sie das Engagement und das Verhalten der Nutzer:innen innerhalb Ihrer ChatGPT-App (z. B. indem Sie ermitteln, welche Fragen oder Chat-Features Ihre Nutzer:innen nutzen).
+- Segmentieren und Retargeten Sie Braze-Kampagnen auf der Grundlage von KI-Interaktionsmustern (z. B. indem Sie E-Mails an Nutzer:innen senden, die den Chat mehr als dreimal pro Woche genutzt haben).
 
-### Wichtigste Vorteile
+### Wesentliche Vorteile
 
-- **Machen Sie sich Ihre Customer Journey zu eigen:** Während die Nutzer:innen über ChatGPT mit Ihrer Marke interagieren, behalten Sie den Überblick über ihr Verhalten, ihre Vorlieben und ihr Engagement. Diese Daten fließen direkt in die Nutzerprofile von Braze ein, nicht nur in die Analytics-Plattform der KI.
-- **Plattformübergreifendes Retargeting:** Verfolgen Sie die Interaktionen von Nutzern in Ihrer ChatGPT App und richten Sie sie über Ihre Owned Kanäle (E-Mail, SMS, Push-Benachrichtigungen, In-App-Nachrichten) mit personalisierten Kampagnen auf der Grundlage ihres KI-Nutzungsverhaltens erneut an.
-- **Geben Sie 1:1 Werbeinhalte an ChatGPT-Konversationen zurück:** Stellen Sie [In-App-Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages), [Content-Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards) und mehr von Braze direkt in Ihrem ChatGPT-Erlebnis bereit, indem Sie die speziell entwickelten UI-Komponenten für die Konversation nutzen, die Ihr Team für Ihre App entwickelt hat.
-- **Attribution von Erträgen:** Verfolgen Sie Käufe und Konversionen, die durch Interaktionen mit der ChatGPT App zustande kommen.
+- **Übernehmen Sie die Verantwortung für die Customer Journey:** Während die Nutzer:innen über ChatGPT mit Ihrer Marke interagieren, behalten Sie Einblick in ihr Verhalten, ihre Präferenzen und ihr Engagement. Diese Daten werden direkt in die Braze-Nutzerprofile übertragen und nicht nur in die Analytics der KI-Plattform.
+- **Plattformübergreifendes Retargeting:** Verfolgen Sie die Interaktionen der Nutzer in Ihrer ChatGPT-App und sprechen Sie sie über Ihre Owned Channels (E-Mail, SMS, Push-Benachrichtigungen, In-App-Nachrichten) mit personalisierten Kampagnen an, die auf ihren KI-Nutzungsmustern basieren.
+- **Geben Sie 1:1-Aktionen an ChatGPT-Konversationen zurück:** Versenden Sie Braze[-In-App-Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages), [Content-Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards) und mehr direkt innerhalb Ihrer ChatGPT-Erfahrung, indem Sie die benutzerdefinierten Konversations-UI-Komponenten verwenden, die Ihr Team für Ihre App entwickelt hat.
+- **Umsatz-Attribution:** Verfolgen Sie Käufe und Konversionen, die aus Interaktionen mit der ChatGPT-App stammen.
 
 <!-- ### Practical Use Cases
 
@@ -39,10 +39,10 @@ By integrating Braze with your ChatGPT App, you ensure that every AI interaction
 
 ## Voraussetzungen
 
-Bevor Sie Braze in Ihre ChatGPT App integrieren können, müssen Sie über Folgendes verfügen:
+Bevor Sie die Integration von Braze in Ihre ChatGPT-App durchführen, müssen Sie über Folgendes verfügen:
 
-- Eine neue Internet App und ein API-Schlüssel in Ihrem Braze Workspace
-- Eine [ChatGPT App](https://openai.com/index/introducing-apps-in-chatgpt/), die auf der OpenAI Plattform erstellt wurde[(OpenAI Beispiel-App](https://github.com/openai/openai-apps-sdk-examples))
+- Eine neue Web-App und ein API-Schlüssel in Ihrem Braze-Workspace
+- Eine [ChatGPT-App,](https://openai.com/index/introducing-apps-in-chatgpt/) die auf der OpenAI-Plattform erstellt wurde ([OpenAI-Beispielapp](https://github.com/openai/openai-apps-sdk-examples))
 
 {% multi_lang_include developer_guide/chatgpt_apps/sdk_integration.md %}
 

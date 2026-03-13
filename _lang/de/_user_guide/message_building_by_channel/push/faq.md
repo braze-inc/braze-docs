@@ -20,6 +20,12 @@ Wenn ein Push-Token neu zugewiesen wird, wird die Änderung im **Push-Changelog*
 
 ![Das "Push Changelog" im Abschnitt "Kontakteinstellungen".]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
+### Was bedeutet „Fehler beim Senden der Push-Benachrichtigung, da die Nutzlast ungültig war“?
+
+Diese Nachricht weist darauf hin, dass APN die Push-Anfrage aufgrund einer ungültigen Nutzlast abgelehnt hat (z. B. eine leere Nutzlast oder eine zu große Nutzlast).
+
+Weitere Informationen und die nächsten Schritte finden Sie unter [Häufige Push-Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/).
+
 ### Warum hat ein Opt-in Nutzer:innen kein Push-Token?
 
 Dies kann passieren, wenn der Push-Token des Nutzers:innen an eine andere Person weitergegeben wurde, die dasselbe Gerät verwendet.

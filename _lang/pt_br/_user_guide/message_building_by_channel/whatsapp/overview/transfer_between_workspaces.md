@@ -34,7 +34,7 @@ Para arquivar um grupo de inscrições do WhatsApp, siga estas etapas:
 1. Acesse o espaço de trabalho para o qual você deseja mover o número de telefone do WhatsApp.
 2. Acesse **Partner Integrations** > **Technology Partners** > **WhatsApp** e, em seguida, role até a seção **WhatsApp Messaging Integration**. 
 3. Selecione a opção **Criar novo grupo de inscrições e número de telefone**
-4. Inicie o processo de integração, durante o qual você pode selecionar o número de telefone do grupo de inscrições arquivado.
+4. Inicie o processo de integração, durante o qual você poderá selecionar o número de telefone do grupo de inscrições arquivado.
 
 ### Etapa 3: Verificar a integração
 

@@ -104,7 +104,7 @@ Assurez-vous que votre message ne contient aucun élément pouvant déclencher d
 
 ### E-mail {#spam-email}
 
-La qualité de votre liste de courriels est particulièrement importante.  Une poignée de courriels erronés dans votre liste peut gâcher votre livraison pour un million de bons utilisateurs. La collecte d'une liste de mauvais e-mails génère des rebonds, une mise en liste bloquée, des visites dans les pièges à spam et réduit vos taux de réponse. Supprimer les e-mails qui n’ont pas d’activité régulière et les rebonds évidents constitue une première étape. Que vous mettiez en œuvre un abonnement (cocher la case), un désabonnement (décocher la case), confirmiez l’adhésion (un e-mail qui vous remercie d’être inscrit, et fournit un lien de désinscription), ou un double abonnement (un e-mail qui nécessite un clic pour confirmer), vous devez chercher à améliorer la qualité de la liste.
+La qualité de votre liste de courriels est particulièrement importante. Une poignée de courriels erronés dans votre liste peut gâcher votre livraison pour un million de bons utilisateurs. La collecte d'une liste de mauvais e-mails génère des rebonds, une mise en liste bloquée, des visites dans les pièges à spam et réduit vos taux de réponse. Supprimer les e-mails qui n’ont pas d’activité régulière et les rebonds évidents constitue une première étape. Que vous mettiez en place un système d'abonnement (cocher la case), de désabonnement (décocher la case), de confirmation d'abonnement (un e-mail remerciant l'utilisateur de s'être inscrit et contenant un lien de désabonnement) ou de double abonnement (un e-mail nécessitant un clic pour confirmer), vous devez réfléchir à la qualité de votre liste.
 
 ### iOS {#spam-ios-windows}
 

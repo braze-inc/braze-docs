@@ -146,7 +146,7 @@ Los enlaces profundos -enlaces que dirigen a los usuarios a una página o lugar 
 
 Aunque su uso está muy extendido, pueden surgir problemas al utilizar enlaces profundos por correo electrónico con seguimiento de clics#8212otra característica importante utilizada en la recopilación de datos de usuario. Estos problemas se deben a que los proveedores de servicios de correo electrónico (ESP) envuelven los vínculos profundos en un dominio de registro de clics, rompiendo el vínculo original. Por lo tanto, la compatibilidad con los vínculos profundos requiere una configuración adicional.
 
-AppsFlyer proporciona un [servicio](https://support.appsflyer.com/hc/en-us/articles/26967438815377-Set-up-your-ESP-integration-with-AppsFlyer) que evita estos problemas, habilitando a AppsFlyer para que actúe como intermediario entre el servidor ESP y tu dominio.  Su función como proxy habilita el suministro de archivos de asociación (AASA/vínculos activos), lo que facilita la vinculación en profundidad. 
+AppsFlyer proporciona un [servicio](https://support.appsflyer.com/hc/en-us/articles/26967438815377-Set-up-your-ESP-integration-with-AppsFlyer) que evita estos problemas, habilitando a AppsFlyer para que actúe como intermediario entre el servidor ESP y tu dominio.  Su papel como proxy habilita la provisión de archivos de asociación (AASA/vínculos activos), lo que facilita la vinculación en profundidad. 
 
 ## Paso 1 - Crear un dominio de seguimiento de clics 
 
@@ -161,9 +161,9 @@ AppsFlyers crea el certificado SSL. En esta fase, es probable que los enlaces de
 {%endalert%}
 
 ## Paso 2 - Crear una plantilla OneLink en AppsFlyer
-Crea una [plantilla OneLink](https://support.appsflyer.com/hc/en-us/articles/207032246-Create-a-OneLink-template#procedures) y configura Enlaces universales/Enlaces de aplicación en "Cuando se instale la aplicación". Esta plantilla se utiliza posteriormente para crear enlaces OneLink para tus campañas de correo electrónico.
+Crea una [plantilla OneLink](https://support.appsflyer.com/hc/en-us/articles/207032246-Create-a-OneLink-template#procedures) y configura Enlaces universales/Enlaces de aplicación en "Cuando se instala la aplicación". Esta plantilla se utiliza posteriormente para crear enlaces OneLink para tus campañas de correo electrónico.
 
-{% alert note%} Si ya tienes configurada una plantilla OneLink que habilita los Enlaces Universales/Enlaces de Aplicaciones, puedes utilizarla.
+{% alert note%} Si ya tienes configurada una plantilla OneLink que habilita Enlaces Universales/Enlaces de Aplicaciones, puedes utilizarla.
 {%endalert%}
 
 ## Paso 3 - Configura tu integración Braze en Appsflyer
@@ -193,7 +193,7 @@ Con "Braze Endpoint", AppsFlyer está pidiendo los detalles proporcionados por B
 A continuación, haz clic en **Validar conexión**, que valida que el dominio de seguimiento de clics apunta al punto final que has introducido.
 Cuando hayas terminado, haz clic en **Siguiente**.
 
-### 5\. Dirige el tráfico de enlace a Appsflyer:
+### 5\. Enruta el tráfico de enlace a Appsflyer:
 
 #### a. Copia y envía las instrucciones personalizadas prefabricadas en AppsFlyer a tu administrador de TI o de dominio. 
 

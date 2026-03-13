@@ -20,7 +20,7 @@ Quando você copia uma campanha ou Canvas para um espaço de trabalho diferente,
 {% tab campaigns %}
 
 {% alert important %}
-Copiar campanhas entre espaços de trabalho está geralmente disponível. O suporte a canais para Cartões de Conteúdo não está atualmente disponível.
+Copiar campanhas entre espaços de trabalho está geralmente disponível. O suporte a canais para Cartões de Conteúdo não está disponível atualmente.
 {% endalert %}
 
 Você pode copiar campanhas entre espaços de trabalho para estes canais suportados: SMS, mensagens no aplicativo, notificações por push, e-mail e webhooks. Você também pode copiar modelos de e-mail, flags de recursos e Blocos de Conteúdo. Observe que campanhas multicanal com canais não suportados não podem ser copiadas para um espaço de trabalho diferente.
@@ -68,8 +68,8 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 | Comportamentos de conversão (aninhados) | Aprovações | 
 | Configurações de tempo de silêncio | Cronograma de disparo | 
 | Configurações de limitação de frequência | Resumos de campanhas | 
-| Estado de inscrição do destinatário |  | 
-| Agenda recorrente |  | 
+| Estado de inscrição do destinatário | Filtros | 
+| Cronograma recorrente |  | 
 | É Transacional |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -84,8 +84,8 @@ Observe que a seguinte não é uma lista abrangente do que é copiado entre espa
 | Comportamentos de conversão (aninhados) | Aprovações | 
 | Configurações de tempo de silêncio | Cronograma de disparo | 
 | Configurações de limitação de frequência | Resumos de Canva | 
-| Estado de inscrição do destinatário |  | 
-| Agenda recorrente |  | 
+| Estado de inscrição do destinatário | Filtros | 
+| Cronograma recorrente |  | 
 | É Transacional |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

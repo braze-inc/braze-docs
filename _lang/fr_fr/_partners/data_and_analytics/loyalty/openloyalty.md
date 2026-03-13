@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Loyauté ouverte
 
-> [Open Loyalty](https://www.openloyalty.io/) est une plateforme de programmes de fidélisation basée sur le cloud qui vous permet de créer et de gérer des programmes de fidélisation et de récompenses pour vos clients. L'intégration de Braze et d'Open Loyalty synchronise les données de fidélité, telles que le solde de points, les changements de niveau et les avertissements d'expiration, directement dans Braze en temps réel. Cela vous permet de déclencher des messages personnalisés (e-mail, Push, SMS) lorsque le statut de fidélité d'un utilisateur change.
+> [Open Loyalty](https://www.openloyalty.io/) est une plateforme de programmes de fidélisation basée sur le cloud qui vous permet de créer et de gérer des programmes de fidélisation et de récompenses pour vos clients. L'intégration de Braze et d'Open Loyalty synchronise les données de fidélisation, telles que le solde de points, les changements de niveau et les avertissements d'expiration, directement dans Braze en temps réel. Cela vous permet de déclencher des messages personnalisés (e-mail, Push, SMS) lorsque le statut de fidélité d'un utilisateur change.
 
 _Cette intégration est maintenue par Open Loyalty._
 
@@ -36,7 +36,7 @@ Avant de commencer, vous devez disposer des éléments suivants :
 | :--- | :--- |
 | Ouvrir un compte de fidélité | Vous devez disposer d'un compte administrateur sur un locataire Open Loyalty pour profiter de ce partenariat. |
 | Clé de l'API REST d'Open Loyalty | Une clé API REST d'Open Loyalty (pour les intégrations qui envoient des données de Braze à Open Loyalty). <br><br> Créez-la dans **Paramètres > Admins > Clés API.** |
-| Clé API REST de Braze | Une clé API Braze REST avec des autorisations `users.track`. <br><br> Créez cette clé dans le tableau de bord de Braze à partir de **Paramètres** > **Clés API.** |
+| Clé de l'API REST de Braze | Une clé API Braze REST avec des autorisations `users.track`. <br><br> Créez cette clé dans le tableau de bord de Braze à partir de **Paramètres** > **Clés API.** |
 | Transformation des données de Braze | Vous devez avoir accès à l'onglet "Paramètres des données" dans Braze pour configurer les auditeurs de webhook. |
 | Correspondance des ID | Le site `external_id` de l'utilisateur dans Braze doit correspondre à son site `loyaltyCardNumber` (ou à un autre identifiant par défaut) dans Open Loyalty. |
 | ID de locataire | Votre ID de locataire Open Loyalty (requis pour les mises à jour sortantes). |
@@ -155,7 +155,7 @@ Ce processus utilise les webhooks Braze pour envoyer une demande `PATCH` à l'AP
 }
 ```
 
-### Étape 2 : Configurer le déclencheur
+### Étape 2 : Configurez le déclencheur
 
 1.  Accédez à l'onglet **Planification de la réception/distribution**.
 2.  Complétez les champs suivants :
@@ -169,6 +169,6 @@ Ce processus utilise les webhooks Braze pour envoyer une demande `PATCH` à l'AP
 Lorsque la transformation des données est active, les données apparaissent dans Braze sous la forme d'un événement personnalisé. Vérifiez-le en créant une campagne avec un déclencheur **Perform Custom Event** et en vérifiant si l'événement que vous avez défini (par exemple, `Loyalty Event Triggered`) est disponible.
 
 ### Vérifier les webhooks sortants
-Vérifiez le journal d'activité des messages dans Braze pour vous assurer que le webhook a renvoyé un état `200 OK`.
+Vérifiez le journal d'activité des messages dans Braze pour vous assurer que le webhook a renvoyé un statut `200 OK`.
 * **401 Erreur**: Vérifiez votre jeton API Open Loyalty.
 * **Erreur 404**: L'ID de l'utilisateur dans Braze n'existe pas dans Open Loyalty.

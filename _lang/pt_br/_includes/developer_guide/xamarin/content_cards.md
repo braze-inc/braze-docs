@@ -1,14 +1,14 @@
-## Sobre os cartões de conteúdo .NET MAUI
+## Sobre os Cartões de Conteúdo do .NET MAUI
 
-O SDK do Braze .NET MAUI (antigo Xamarin) inclui um feed de cartão padrão para que você comece a usar os cartões de conteúdo. O feed de cartão padrão incluído com o SDK da Braze lidará com toda a análise de dados, rastreamento, dispensas e renderização para os Cartões de Conteúdo de um usuário.
+O SDK Braze .NET MAUI (anteriormente Xamarin) inclui um feed de cartões padrão para você começar com os Cartões de Conteúdo. O feed de cartão padrão incluído com o SDK da Braze lidará com toda a análise de dados, rastreamento, dispensas e renderização para os Cartões de Conteúdo de um usuário.
 
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
-## Tipos e propriedades do cartão
+## Tipos e propriedades de cartões
 
-O SDK Braze .NET MAUI tem três tipos exclusivos de cartões de conteúdo que compartilham um modelo básico: [Banner](#xamarin_banner), [Imagem com legenda](#xamarin_captioned-image) e [Clássico](#xamarin_classic). Cada tipo herda propriedades comuns de um modelo base e possui as seguintes propriedades adicionais.
+O SDK Braze .NET MAUI possui três tipos únicos de Cartões de Conteúdo que compartilham um modelo base: [Banner](#xamarin_banner), [Imagem com Legenda](#xamarin_captioned-image) e [Clássico](#xamarin_classic). Cada tipo herda propriedades comuns de um modelo base e possui as seguintes propriedades adicionais.
 
-### Modelo de cartão básico
+### Modelo base de cartão
 
 |Propriedade           | Descrição                                                                                                            |
 |-------------------|------------------------------------------------------------------------------------------------------------------------|
@@ -21,7 +21,7 @@ O SDK Braze .NET MAUI tem três tipos exclusivos de cartões de conteúdo que co
 |`dismissed`        | Se o usuário dispensou este cartão. Marcar um cartão como dispensado que já foi dispensado será uma operação nula. |
 |`dismissible`      | Se o cartão pode ser descartado pelo usuário.                                                                           |
 |`urlString`        | (Opcional) A string de URL associada à ação de clique do cartão.                                                       |
-|`openUrlInWebView` | Se os URLs para esse cartão devem ser abertos no Braze WebView ou não.                                                 |
+|`openUrlInWebView` | Se os URLs para este cartão devem ser abertos no Braze WebView ou não.                                                 |
 |`isControlCard`    | Se este cartão é um cartão de controle. Os cartões de controle não devem ser exibidos ao usuário.                                |
 |`extras`           | O mapa de extras de chave-valor para este cartão.                                                                             |
 |`isTest`           | Se este cartão é um cartão de teste.                                                                                      |

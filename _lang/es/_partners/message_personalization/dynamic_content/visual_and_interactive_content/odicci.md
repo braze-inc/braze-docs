@@ -56,7 +56,7 @@ Antes de empezar, necesitarás lo siguiente:
 
 ### Paso 2: Obtén tu clave de API REST Braze
 
-1. Accede a tu cuenta Braze.
+1. Conéctate a tu cuenta Braze.
 2. Ve a **Consola para desarrolladores > Claves de API REST.**
 3. Crea una nueva clave de API o copia una existente con el permiso `users.track`.
 

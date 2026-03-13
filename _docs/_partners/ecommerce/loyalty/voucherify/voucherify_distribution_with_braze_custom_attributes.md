@@ -15,7 +15,7 @@ search_tag: Partner
 _This integration is maintained by Voucherify._
 
 {% alert tip %}
-Before you use Braze custom attributes in Voucherify distributions, you need to add your Braze users to the Voucherify dashboard. You can use Braze Connected Content to synchronize users or import your customers through CSV or API. Visit [Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) to learn more.
+Before you use Braze custom attributes in Voucherify distributions, you need to add your company users to the Voucherify dashboard. You can use Braze Connected Content to synchronize users or import your customers through CSV or API. Visit [Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) to learn more.
 {% endalert %}
 
 Braze custom attributes enable you to assign Voucherify codes to custom attributes in user profiles in Braze. You can use unique coupons, gift cards, loyalty cards, and referral codes. First, connect Voucherify with Braze, create a distribution in Voucherify, and finally create a campaign in Braze with the custom attribute snippet in your message template.
@@ -38,7 +38,7 @@ First, connect your Voucherify account with Braze.
 
 When connected, you can start a new Voucherify [distribution](https://support.voucherify.io/article/19-how-does-the-distribution-manager-work) that assigns a code to the custom attribute in the user profile in Braze. Later on, you can use received attributes with codes in your Braze campaigns.
 
-Before setting up distribution, you need to add your Braze users to the Voucherify dashboard. Visit [Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) to learn more.
+Before setting up distribution, you need to add your company users to the Voucherify dashboard. Visit [Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) to learn more.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_distribution.png %})
 

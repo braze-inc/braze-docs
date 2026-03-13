@@ -1,13 +1,13 @@
 ---
-nav_title: Zugang zu Ihrem Konto
-article_title: Zugang zu Ihrem Konto
+nav_title: Bitte melden Sie sich bei Ihrem Konto an.
+article_title: Zugriff auf Ihr Konto
 page_order: 0
 page_type: reference
 description: "In diesem Artikel erfahren Sie, wie Sie Ihr Braze-Konto erhalten, wie Sie sich nach der Freischaltung anmelden und wie Sie Ihr Braze-Passwort zurücksetzen können."
 
 ---
 
-# Zugang zu Ihrem Konto
+# Bitte melden Sie sich bei Ihrem Konto an.
 
 > In diesem Artikel erfahren Sie, wie Sie Ihr Braze-Konto erhalten, wie Sie sich anmelden, nachdem Sie Zugang erhalten haben, und wie Sie Fehlerbehebungen für Ihren Dashboard-Zugang und die Performance des Dashboards vornehmen können.
 
@@ -45,31 +45,31 @@ Wenn Ihr Braze-Dashboard einen unerwarteten Fehler meldet und Ihr Browser-Konsol
 
 ## Zugriff auf mehrere Braze-Dashboards
 
-In Braze ist es nicht zulässig, dieselbe E-Mail für mehrere Nutzer:innen des Dashboards im selben Cluster zu registrieren (z.B. wenn Sie zwei Dashboards auf US-01 haben). Sie können dieselbe E-Mail verwenden, um Konten auf verschiedenen Clustern einzurichten (z.B. wenn Sie ein Dashboard auf US-01 und eines auf US-05 haben). Wenn Sie auf mehrere Braze-Dashboards im selben Cluster zugreifen müssen, können Sie wie folgt vorgehen:
+Braze erlaubt es nicht, dieselbe E-Mail-Adresse für mehrere Dashboard-Nutzer:innen im selben Cluster zu registrieren (zum Beispiel, wenn Sie zwei Dashboards auf US-01 haben). Sie können dieselbe E-Mail-Adresse verwenden, um Konten auf verschiedenen Clustern zu erstellen (beispielsweise, wenn Sie ein Dashboard auf US-01 und eines auf US-05 haben). Wenn Sie auf mehrere Braze-Dashboards im selben Cluster zugreifen müssen, können Sie wie folgt vorgehen:
 
-### E-Mail-Alias verwenden
+### Verwenden Sie E-Mail-Aliase
 
-Wenn Ihr E-Mail-Anbieter Gmail ist, können Sie Aliase erstellen, indem Sie ein `+` -Zeichen gefolgt von einem beliebigen Text an Ihre E-Mail-Adresse anhängen. Zum Beispiel:
-- **Ursprüngliche E-Mail:** `rocky@gmail.com`
-- **Alias E-Mail:** `rocky+1@gmail.com`
+Wenn Sie Gmail als E-Mail-Anbieter verwenden, können Sie Aliase erstellen, indem Sie ein`+`@-Zeichen gefolgt von einem beliebigen Text an Ihre E-Mail-Adresse anhängen. Zum Beispiel:
+- **Original-E-Mail:** `rocky@gmail.com`
+- **Alias-E-Mail:** `rocky+1@gmail.com`
 
-Beide E-Mail-Adressen leiten E-Mails an denselben Posteingang, aber Braze erkennt sie als separate Konten, wenn Sie sich anmelden.
+Beide E-Mail-Adressen leiten E-Mails an denselben Posteingang weiter, jedoch erkennt Braze sie beim Einloggen als separate Konten.
 
-### Erstellen Sie separate Aliase bei anderen Anbietern
+### Erstellen Sie separate Aliase bei anderen Anbietern.
 
-Wenn Ihr E-Mail-Provider `+` nicht unterstützt, können Sie trotzdem separate Aliase erstellen, z. B. `rocky@braze.com` als Weiterleitung an `rocky.lotito@braze.com` einrichten. So ist es zulässig, dass mehrere Adressen in denselben Posteingang geleitet werden, während sie von Braze als unterschiedliche E-Mails erkannt werden.
+Sollte Ihr E-Mail-Anbieter keine Aliase`+` unterstützen, können Sie dennoch separate Aliase erstellen, beispielsweise indem Sie eine Weiterleitung`rocky@braze.com`von zu einrichten`rocky.lotito@braze.com`. Dadurch ist es zulässig, dass mehrere Adressen in denselben Posteingang weitergeleitet werden, während sie von Braze als unterschiedliche E-Mails erkannt werden.
 
-### Verwenden Sie Entwickler:in mehreren Unternehmen
+### Entwickler:innen aus mehreren Unternehmen einsetzen
 
-Das Feature für Entwickler:innen mehrerer Unternehmen erlaubt die gemeinsame Nutzung eines einzigen Nutzer:in-Kontos durch mehrere Unternehmen. Nutzer:innen können über das Menü ihres Nutzerprofils zwischen den verschiedenen Dashboards des Unternehmens umschalten.
+Die Features für Entwickler:innen ermöglichen die gemeinsame Nutzung eines einzigen Benutzerkontos durch mehrere Unternehmen. Nutzer:innen können über das Menü ihres Nutzerprofils zwischen verschiedenen Unternehmens-Dashboards umschalten.
 
-Wenn Sie SSO haben und Entwickler:in für mehrere Unternehmen einrichten möchten, müssen Sie eine SAML Custom Entity ID aktivieren, indem Sie eine angepasste SAML SSO Integration einrichten. Befolgen Sie die Schritte unter [Anmeldung durch den Service Provider (SP)]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/), übernehmen Sie jedoch diese Änderungen:
-- Ändern Sie für jede Dashboard Integration die **Entity ID** in `braze_dashboard_<companyID>`.
-- Wenden Sie sich an Ihren Customer-Success-Manager oder Account Manager:in, um das `saml_sso_custom_entity_id` Feature Flipper für jedes Dashboard zu aktivieren.
+Wenn Sie SSO verwenden und Entwickler:innen für mehrere Unternehmen einrichten möchten, müssen Sie eine angepasste SAML-Entitäts-ID aktivieren, indem Sie eine angepasste SAML-SSO-Integration einrichten. Befolgen Sie die Schritte für [die vom Dienstanbieter (SP) initiierte Anmeldung]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/), jedoch mit folgenden Änderungen:
+- Ändern Sie **die Entitäts-ID** für jede `braze_dashboard_<companyID>`Dashboard-Integration in .
+- Bitte wenden Sie sich an Ihren Customer-Success-Manager oder Account Manager, um die`saml_sso_custom_entity_id`Feature-Flipper-Funktion für jedes Dashboard zu aktivieren.
 
-### Überlegungen für Single Sign-on (SSO)
+### Überlegungen zum Single Sign-on (SSO)
 
-Wenn Sie Single Sign-on (SSO) verwenden, sollten Sie sich darüber im Klaren sein, dass die Verwendung mehrerer verschiedener E-Mail-Adressen zu Komplikationen führen kann. Vergewissern Sie sich, dass Ihre SSO-Einstellungen korrekt konfiguriert sind, um Zugriffsprobleme zu vermeiden.
+Bitte beachten Sie, dass bei Verwendung von Single Sign-on (SSO) die Verwendung mehrerer unterschiedlicher E-Mail-Adressen zu Komplikationen führen kann. Bitte überprüfen Sie, ob Ihre SSO-Einstellungen korrekt konfiguriert sind, um Zugriffsprobleme zu vermeiden.
 
 ## Fehlersuche
 
@@ -77,7 +77,7 @@ Wenn Sie Single Sign-on (SSO) verwenden, sollten Sie sich darüber im Klaren sei
 
 Um Ihr Passwort zurückzusetzen, wählen Sie den Link **Passwort vergessen?** auf der Dashboard-Anmeldeseite. Sie werden aufgefordert, Ihre E-Mail einzugeben, um einen Link zum Zurücksetzen Ihres Passworts zu erhalten.
 
-![Dashboard-Anmeldung mit der Aufforderung "Passwort vergessen?".]({% image_buster /assets/img_archive/enable_reset.png %}){: style="max-width:60%"}
+![Anmeldung beim Dashboard mit der Aufforderung „Passwort vergessen?“.]({% image_buster /assets/img_archive/enable_reset.png %}){: style="max-width:60%"}
 
 ### Löschen des Cache und der Cookies Ihres Browsers
 
@@ -87,7 +87,7 @@ Wenn Sie Probleme mit der Performance des Dashboards haben, z.B. wenn Ihre Perfo
 Wenn Sie Cookies löschen, werden Sie abgemeldet, so dass ungespeicherte Arbeit verloren geht.
 {% endalert %}
 
-- [Cache löschen & Cookies in Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
+- [Bitte löschen Sie die &Cookies im Cache von Chrome.](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
 - [Cookies in Safari auf dem Mac löschen](https://support.apple.com/en-gb/guide/safari/sfri11471/16.1/mac/13.0)
 - [Cookies und Daten der Website in Firefox löschen](https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox)
 - [Alle Cookies in Microsoft Edge löschen](https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d#bkmk_deleteallcookies)
@@ -96,7 +96,7 @@ Wenn das Löschen Ihres Browser-Caches und Ihrer Cookies Ihre Probleme nicht lö
 
 ### Zugriff auf den Drag-and-Drop-Editor
 
-Bei den meisten Nutzer:innen von Braze sollte der Drag-and-Drop-Editor geladen werden. Wenn Sie jedoch ein VPN verwenden oder sich hinter einer Firewall befinden, müssen Sie möglicherweise eine Domain in der Liste zulassen. Wenden Sie sich an Ihren IT-Administrator, um zu überprüfen, ob `*.bz-rndr.com` in der Liste der zulässigen Anwendungen aufgeführt ist.
+Für die meisten Unternehmensnutzer:innen sollte der Drag-and-Drop-Editor geladen werden. Wenn Sie jedoch ein VPN verwenden oder sich hinter einer Firewall befinden, müssen Sie möglicherweise eine Domain in der Liste zulassen. Wenden Sie sich an Ihren IT-Administrator, um zu überprüfen, ob `*.bz-rndr.com` in der Liste der zulässigen Anwendungen aufgeführt ist.
 
 Beim Laden des Editors kann es aus folgenden Gründen zu Problemen kommen:
 
@@ -107,36 +107,36 @@ Beim Laden des Editors kann es aus folgenden Gründen zu Problemen kommen:
 Wenn Sie immer noch Probleme haben, [öffnen Sie ein Support-Ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). Vergewissern Sie sich zuvor, dass Ihr IT-Administrator bestätigt hat, dass `*.bz-rndr.com` auf Ihrer Seite zugelassen ist.
 {% endalert %}
 
-### Zugriff auf Braze Lernangebote
+### Zugriff auf die Lernangebote von Braze
 
-Wenn Sie Probleme haben, sich bei Braze Lernangebote anzumelden und in einer Schleife stecken bleiben, die Sie zum Dashboard weiterleitet, führen Sie die folgenden Schritte aus:
+Sollten Sie Probleme beim Einloggen in Braze Learning haben und sich in einer Schleife befinden, die Sie immer wieder zum Dashboard weiterleitet, führen Sie bitte die folgenden Schritte aus:
 
-1. Wenn Sie mehrere Braze-Konten haben, werden Sie beim zweimaligen Einloggen mit dem falschen Konto auf das Braze-Dashboard weitergeleitet. Vergewissern Sie sich, dass Sie sich bei dem richtigen Konto anmelden. 
-2. Wenn Sie einen Werbeblocker verwenden, vergewissern Sie sich, dass er ausgeschaltet ist. Es kann Cookies blockieren, die für die Single Sign-on-Funktionalität erforderlich sind.
-3. Gehen Sie zu Unternehmenseinstellungen > Sicherheitseinstellungen und überprüfen Sie, ob Single Sign-on (SSO) aktiviert ist.
-4. Stellen Sie sicher, dass Ihr Nutzerprofil auf dem Dashboard sowohl einen Vor- als auch einen Nachnamen enthält. Das Fehlen eines Nachnamens kann zu Störungen bei der Anmeldung führen.
-5. Greifen Sie über Ihr Dashboard auf Braze Lernangebote zu, indem Sie zu **Support** > Braze Lernangebote gehen. 
-6. Wenn Sie weiterhin Probleme haben, sollten Sie Ihr Konto neu erstellen. Nutzer:innen, die während der kostenlosen Testphase auf Braze Lernangebote zugegriffen haben, haben jetzt möglicherweise Schwierigkeiten, darauf zuzugreifen.
+1. Sollten Sie mehrere Braze-Konten besitzen, werden Sie nach zweimaliger Anmeldung mit dem falschen Konto zum Braze-Dashboard weitergeleitet. Bitte stellen Sie sicher, dass Sie sich bei dem richtigen Konto anmelden. 
+2. Falls Sie einen Werbeblocker verwenden, überprüfen Sie bitte, ob dieser deaktiviert ist. Es kann vorkommen, dass Cookies blockiert werden, die für die Single Sign-on-Funktionalität erforderlich sind.
+3. Bitte gehen Sie zu „Unternehmenseinstellungen“ > „Sicherheitseinstellungen“ und überprüfen Sie, ob Single Sign-on (SSO) aktiviert ist.
+4. Bitte stellen Sie sicher, dass Ihr Dashboard-Nutzerprofil sowohl Ihren Vornamen als auch Ihren Nachnamen enthält. Das Fehlen eines Nachnamens kann die Anmeldung beeinträchtigen.
+5. Bitte greifen Sie über Ihr Dashboard auf die Lernangebote von Braze zu, indem Sie zu **„Support“** > **„Braze Learning“** navigieren. 
+6. Sollten weiterhin Probleme auftreten, empfehlen wir Ihnen, Ihr Konto neu zu erstellen. Nutzer:innen, die während der kostenlosen Demo auf Braze Learning zugegriffen haben, könnten derzeit Schwierigkeiten beim Zugriff haben.
 
 ### Probleme mit der Zwei-Faktor-Authentifizierung (2FA)
 
-Wenn ein Nutzer:innen Probleme mit der Zwei-Faktor-Authentifizierung (2FA) hat und nicht auf das Braze-Dashboard zugreifen kann, kann dies mehrere Gründe haben. In den meisten Fällen haben sie keinen Zugriff mehr auf die registrierte Telefonnummer oder das Gerät, auf dem die Authy App installiert ist.
+Sollte eine Nutzer:in Probleme mit der Zwei-Faktor-Authentifizierung (2FA) haben und keinen Zugriff auf das Braze-Dashboard erhalten, kann dies verschiedene Ursachen haben. In den meisten Fällen haben sie möglicherweise keinen Zugriff mehr auf die registrierte Telefonnummer oder das Gerät, auf dem die Authy-App installiert ist.
 
-Ein Administrator sollte die 2FA für die betroffenen Nutzer:innen wie folgt zurücksetzen: 
+Ein Administrator sollte die 2FA für die betroffene Nutzer:in wie folgt zurücksetzen: 
 
-1. Gehen Sie zu **Nutzer:innen verwalten**.
-2. Wählen Sie **Benutzer bearbeiten** für den Nutzer:in, bei dem 2FA-Probleme auftreten.
-3. Wählen Sie die Option zum Zurücksetzen von 2FA.
-4. Bestätigen Sie das Zurücksetzen der 2FA, wenn Sie dazu aufgefordert werden.
-5. Wenn das Zurücksetzen das Problem nicht sofort behebt, löschen Sie Ihre Cookies und Ihren Cache.
+1. Bitte gehen Sie zu **„Nutzer:innen verwalten**”.
+2. Bitte wählen Sie **„Benutzer bearbeiten“** für den Nutzer:in, bei dem Probleme mit der 2FA auftreten.
+3. Bitte wählen Sie die Option zum Zurücksetzen der 2FA.
+4. Bitte bestätigen Sie die 2FA-Zurücksetzung, wenn Sie dazu aufgefordert werden.
+5. Sollte das Zurücksetzen das Problem nicht umgehend beheben, löschen Sie bitte Ihre Cookies und Ihren Cache.
 
-Braze kann 2FA aus Sicherheitsgründen nicht im Namen von Nutzer:innen zurücksetzen. Wenn der Administrator also nicht in der Lage ist, 2FA zurückzusetzen, erstellen Sie ein Support-Ticket.
+Aus Sicherheitsgründen kann Braze die 2FA nicht im Namen der Nutzer:innen zurücksetzen. Sollte der Administrator die 2FA nicht zurücksetzen können, erstellen Sie bitte ein Support-Ticket.
 
 #### Überlegungen
 
-- Wenn 2FA auf Unternehmensebene durchgesetzt wird: Nach dem Zurücksetzen fordert Braze den Nutzer:innen auf, seine 2FA bei der nächsten Anmeldung erneut einzurichten.
-- Wenn 2FA auf Unternehmensebene nicht durchgesetzt wird: Der Nutzer:in meldet sich beim Dashboard an, ohne dass er erneut 2FA einrichten muss. Wenn sie 2FA aktivieren möchten, können sie dies in den Kontoeinstellungen tun.
+- Wenn 2FA auf Unternehmensebene vorgeschrieben ist: Nach dem Zurücksetzen fordert Braze die Nutzer:innen auf, bei der nächsten Anmeldung die 2FA erneut einzurichten.
+- Wenn 2FA auf Unternehmensebene nicht durchgesetzt wird: Der Nutzer:in wird sich im Dashboard anmelden, ohne die 2FA erneut einrichten zu müssen. Sollten sie die 2FA aktivieren wollen, können sie dies in den Kontoeinstellungen vornehmen.
 
 {% alert note %}
-Dieser Rücksetzungsprozess gilt auch für Nutzer:innen, die aufgrund einer Anfrage nach zu vielen Token innerhalb der letzten Stunde aus ihrem Konto ausgesperrt wurden.
+Dieser Rücksetzungsprozess gilt auch für Nutzer:innen, die aufgrund zu vieler Token-Anfragen innerhalb der letzten Stunde aus ihrem Konto ausgesperrt wurden.
 {% endalert %}

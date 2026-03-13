@@ -1,7 +1,7 @@
 ---
 nav_title: Aceitação dupla
 article_title: Aceitação dupla
-description: "Este artigo de referência cobre o recurso de dupla aceitação e explica como ativar o recurso, selecionar palavras-chave de aceitação e mensagens de resposta, e inserir usuários no fluxo de trabalho de dupla aceitação por meio de atualizações de inscrição que ocorrem nas atualizações da API REST, SDK e do centro de preferências."
+description: "Este artigo de referência cobre o recurso de dupla aceitação e explica como ativar o recurso, selecionar palavras-chave de aceitação e mensagens de resposta, e inserir usuários no fluxo de trabalho de dupla aceitação por meio de atualizações de inscrição que ocorrem nas atualizações da API REST, SDK e central de preferências."
 page_type: reference
 page_order: 2
 channel:
@@ -16,7 +16,7 @@ channel:
 
 Quando a dupla aceitação está ativada, os usuários recebem uma mensagem que solicita seu consentimento explícito antes que possam ser contatados por suas campanhas ou canvases. 
 
-Embora não seja um requisito explícito da Lei de Proteção ao Consumidor de Telefone de 1991 (TCPA), a Braze recomenda que você configure a dupla aceitação para confirmar que os usuários estão cientes e consentindo em fazer parte do seu programa de SMS, MMS ou RCS. Para mais informações sobre conformidade, veja [Leyes, regulamentos e prevenção de abusos para SMS, MMS e RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/).
+Embora não seja um requisito explícito da Lei de Proteção ao Consumidor por Telefone de 1991 (TCPA), a Braze recomenda que você configure a dupla aceitação para confirmar que os usuários estão cientes e consentindo em fazer parte do seu programa de SMS, MMS ou RCS. Para mais informações sobre conformidade, veja [Leyes, regulamentos e prevenção de abusos para SMS, MMS e RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/).
 
 ## Fluxos de trabalho de dupla aceitação
 
@@ -56,7 +56,7 @@ Quando um usuário recebe um pedido de aceitação, ele tem 30 dias para confirm
 
 ## Status do grupo de inscrições
 
-Somente após o usuário concluir o fluxo de trabalho de dupla aceitação é que seu [status do grupo de inscrições]({{site.baseurl}}/sms_rcs_subscription_groups/) é atualizado para `Subscribed`. Se o usuário iniciar o fluxo de trabalho, mas não o concluir, ele permanece `Unsubscribed` e não pode receber mensagens desse grupo de inscrições.
+Somente após o usuário completar o fluxo de trabalho de dupla aceitação é que seu [status do grupo de inscrições]({{site.baseurl}}/sms_rcs_subscription_groups/) é atualizado para `Subscribed`. Se o usuário iniciar o fluxo de trabalho, mas não o completar, ele permanece `Unsubscribed` e não pode receber mensagens desse grupo de inscrições.
 
 Os usuários também podem ser inseridos no fluxo de trabalho de dupla aceitação se forem [inscritos de outras fontes]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group#how-users-sms-subscription-groups-get-set) (por exemplo, API REST, SDK).
 

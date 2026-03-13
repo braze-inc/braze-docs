@@ -72,7 +72,7 @@ Um ein bestehendes Objekt zu aktualisieren, senden Sie einen POST an `users/trac
 Nachdem diese Anfrage eingegangen ist, sieht das angepasste Attribut-Objekt wie folgt aus:
 
 ```json
-"most_played_song": {
+{"most_played_song": {
   "song_name": "Solea",
   "artist_name" : "Miles Davis",
   "album_name": "Sketches of Spain",
@@ -82,7 +82,7 @@ Nachdem diese Anfrage eingegangen ist, sieht das angepasste Attribut-Objekt wie 
      "count": 1000,
      "top_10_listeners": true
   }
-}
+}}
 ```
 
 {% alert warning %}
@@ -328,14 +328,14 @@ Sie können ein Schema für Ihre Objekte erstellen, um Segmente zu filtern, ohne
 Nehmen wir für dieses Beispiel an, dass wir ein Objekt-Array `accounts` haben, das wir gerade an Braze gesendet haben:
 
 ```json
-"accounts": [
+{"accounts": [
   {"type": "taxable",
   "balance": 22500,
   "active": true},
   {"type": "non-taxable",
   "balance": 0,
-  "active": true},
- ]
+  "active": true}
+]}
 ```
 
 Gehen Sie im Braze-Dashboard zu **Dateneinstellungen** > Angepasste Attribute.

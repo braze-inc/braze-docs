@@ -246,7 +246,7 @@ Después de modificar la plantilla a tu gusto, debes validar que funciona correc
 
 Cuando estés satisfecho con el objeto que ves en el campo "salida", haz clic en **Activar** para que el punto final de Transformación de Datos esté listo para aceptar datos. 
 
-Encontrarás la URL del webhook de tu Transformación de Datos en el panel lateral izquierdo. Cópialo y utilízalo para la configuración dentro del Hub de integración de Oracle Crowdtwist.
+Encontrarás la URL del webhook de tu Transformación de Datos en el panel lateral izquierdo. Cópialo y utilízalo para la configuración dentro del Hub de Integración de Oracle Crowdtwist.
 
 {% alert important %}
 Los puntos finales de Transformación de Datos Braze tienen un límite de velocidad de 1000 peticiones por minuto. Considera la velocidad a la que quieres que estos datos estén disponibles en Braze, y habla con tu administrador de cuentas Braze si necesitas un límite de velocidad de Transformación de Datos más alto.

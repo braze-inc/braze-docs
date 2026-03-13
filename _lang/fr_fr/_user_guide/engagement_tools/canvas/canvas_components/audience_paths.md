@@ -2,7 +2,7 @@
 nav_title: "Parcours d'audience"
 article_title: Parcours d’audience 
 alias: /audience_paths/
-page_order: 1
+page_order: 3
 page_type: reference
 description: "Cet article de référence décrit la façon d’utiliser des parcours d’audience dans votre Canvas afin de filtrer et de segmenter les utilisateurs de manière intuitive à une grande échelle avec des regroupements d’utilisateurs en fonction de la priorité stratégique."
 tool: Canvas
@@ -29,17 +29,23 @@ Le parcours d’audience vous permet d’effectuer les actions suivantes :
 - Ciblez les utilisateurs précisément à grande échelle.
   - Créez jusqu'à huit groupes d'audience (deux groupes par défaut et six groupes supplémentaires) par composant, mais il est recommandé de connecter plusieurs étapes de parcours d'audience pour trier davantage vos utilisateurs. 
 
+### Comment les utilisateurs sont-ils évalués ?
+
+![Canvas présentant un délai de 24 heures après une étape Message, suivi d'un parcours d'audience.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+
+Les utilisateurs sont évalués en fonction des filtres et de leur appartenance à un segment **au moment où ils atteignent l'étape « Parcours d'audience** » (**Audience Path**), et non lorsqu'ils entrent dans le Canvas. Après évaluation, ils passent immédiatement à la voie correspondante. Lorsqu'un utilisateur est placé dans un groupe d'audience, il reste dans ce groupe même si son profil utilisateur change par la suite.
+
+{% alert important %}
+Les parcours d'audience sont évalués en fonction des attributs actuels de l'utilisateur, des filtres et de l'appartenance à un segment au moment de l'évaluation. Ils n'évaluent pas en fonction de l'événement spécifique qui a été le déclencheur de l'entrée dans Canvas. Pour diriger les utilisateurs en fonction d'une action qu'ils effectuent (telle qu'un événement personnalisé), veuillez utiliser [les parcours d’action]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/).
+{% endalert %}
+
 ### Prévoir du temps pour l'évaluation des utilisateurs
 
-![Canvas montrant un délai de 24 heures après une étape du message, suivi d'un parcours audience.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
-
-Les utilisateurs sont évalués dès qu'ils atteignent l'étape du parcours d'audience. Après avoir été évalués, ils passeront immédiatement à l'étape suivante. Il est donc important de prévoir un délai approprié si le parcours d'audience est déterminé par une action de l'utilisateur.
+Étant donné que l'évaluation est immédiate, il est important d'ajouter un délai avant le parcours d'audience si les critères du parcours dépendent d'une interaction de l'utilisateur avec une étape précédente.
 
 Par exemple, si les utilisateurs reçoivent le message A et que l'étape suivante est un parcours d'audience qui évalue s'ils ont interagi avec ce message, tous les utilisateurs passeront à l'étape pour ceux qui n'ont pas interagi avec ce message. En effet, les utilisateurs sont passés immédiatement à l'étape du parcours d'audience sans avoir eu le temps d'interagir avec le message. En d'autres termes, l'interaction des utilisateurs avec le message est évaluée presque immédiatement après l'envoi du message.
 
-Pour donner aux utilisateurs le temps d'interagir avec un message envoyé, un délai doit s'écouler entre l'étape du message et le parcours d'audience. Par exemple, un délai de 24 heures donnerait aux utilisateurs 24 heures après l'envoi du message pour interagir avec le message A avant d'être évalués.
-
-Notez que les utilisateurs passent à l'étape suivante en fonction de la première action qu'ils ont effectuée après avoir accédé à l'étape du parcours audience dans la fenêtre d'évaluation. Cela signifie que si un utilisateur réalise un deuxième événement personnalisé, il ne changera pas de groupe d'audience.
+Afin de permettre aux utilisateurs d'interagir avec un message envoyé, veuillez ajouter un délai entre l'étape Message et le parcours d'audience. Par exemple, un délai de 24 heures permet aux utilisateurs de disposer de 24 heures après l'envoi du message pour interagir avec le message A avant son évaluation.
 
 ## Créer un parcours d'audience
 
@@ -56,17 +62,17 @@ La capture d'écran suivante montre la disposition d'une étape Parcours d'audie
 
 Par exemple, si vous souhaitez cibler l'envoi de messages d'onboarding à un groupe d'applications, vous pouvez sélectionner des filtres de reciblage, tels que "A cliqué sur l'e-mail" et "A cliqué sur le message in-app".
 
-![Un parcours d'audience élargi avec des groupes pour les "amateurs de cuisine asiatique", les "amateurs de cuisine latine", les "amateurs de cuisine européenne" et les "autres".]({% image_buster /assets/img/audience_path/audience_path3.png %})
+![Un parcours d'audience élargi avec des groupes pour « Apprécie la cuisine asiatique », « Apprécie la cuisine latine », « Apprécie la cuisine européenne » et « Tous les autres ».]({% image_buster /assets/img/audience_path/audience_path3.png %})
 
 Une fois l'étape Parcours d'audience terminée, chaque groupe d'audience disposera d'une branche distincte. Vous pouvez continuer à utiliser Parcours d'audience pour filtrer davantage votre audience, ou poursuivre votre parcours Canvas avec les étapes de canvas standard. 
 
-![Deux parcours d'audience avec des groupes différents en fonction de l'engagement.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
+![Deux parcours d'audience avec des groupes distincts en fonction de l'engagement.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
 
 ### Tester les groupes d’audience
 
 Après avoir ajouté des segments et des filtres à votre audience, vous pouvez tester si vos groupes d'audience sont configurés comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) pour confirmer qu'il correspond aux critères d'audience.
 
-![La section "Recherche d'utilisateurs".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
+![La section « Recherche d'utilisateur ».]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 ## Utilisation de parcours d’audience
 
@@ -74,7 +80,7 @@ Le véritable pouvoir des parcours d’audience réside dans la capacité à aff
 
 En attribuant une grande priorité à ces groupes, vous pouvez cibler les utilisateurs relevant de filtres et segments spécifiques tout en ciblant des utilisateurs pouvant ne pas répondre à ces critères spécifiques, le tout dans une étape de Canvas.
 
-![Un parcours d'audience avec des groupes pour " Aime les chaussures de grande marque ", " Aime la grande marque " et " Tous les autres ".]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![Un parcours d'audience avec des groupes pour « Aime les chaussures de grandes marques », « Aime les grandes marques » et « Tous les autres ».]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 Par exemple, supposons que vous souhaitiez envoyer des annonces à un groupe d’utilisateurs pour de nouveaux produits. Vous commenceriez par le classement de filtres pour lesquels ces produits sont pertinents sur le parcours d’audience. Si vous créez une campagne de marketing pour l'entreprise "Big Brand" et qu'une nouvelle marque de détail vient d'être lancée, vous pouvez sélectionner des filtres tels que "Aime les chaussures Big Brand" ou "Aime les sacs Big Brand", et envoyer des messages e-mail différents en fonction du groupe filtré auquel ils appartiennent. 
 

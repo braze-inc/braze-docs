@@ -21,7 +21,7 @@ description: "Este artículo de referencia cubre el uso de atributos personaliza
 - Los objetos tienen un tamaño máximo de 100 KB.
 - Los nombres de las claves y los valores de las cadenas tienen un límite de tamaño de 255 caracteres.
 - Los nombres de las claves no pueden contener espacios.
-- Los puntos (`.`) y los signos de dólar (`$`) no son caracteres admitidos en una carga útil de la API si intentas enviar un atributo personalizado anidado a un perfil de usuario.
+- Los puntos (`.`.) y los signos de dólar (`$`$) no son caracteres compatibles en una carga útil de API si intentas enviar un atributo personalizado anidado a un perfil de usuario.
 - No todos los socios Braze admiten atributos personalizados anidados. Consulta la [documentación del socio]({{site.baseurl}}/partners/home) para confirmar si determinadas integraciones del socio admiten esta característica.
 - Los atributos personalizados anidados no se pueden utilizar como filtro al realizar una llamada a la API de Connected Audience.
 
@@ -72,7 +72,7 @@ Para actualizar un objeto existente, envíe un POST a `users/track` con el pará
 Una vez recibida esta solicitud, el objeto de atributo personalizado tendrá el siguiente aspecto:
 
 ```json
-"most_played_song": {
+{"most_played_song": {
   "song_name": "Solea",
   "artist_name" : "Miles Davis",
   "album_name": "Sketches of Spain",
@@ -82,7 +82,7 @@ Una vez recibida esta solicitud, el objeto de atributo personalizado tendrá el 
      "count": 1000,
      "top_10_listeners": true
   }
-}
+}}
 ```
 
 {% alert warning %}
@@ -230,7 +230,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 Para capturar fechas como propiedades de objetos, debes utilizar la clave `$time`. En el siguiente ejemplo, se utiliza un objeto "Fechas importantes" para capturar el conjunto de propiedades del objeto, `birthday` y `wedding_anniversary`. El valor de estas fechas es un objeto con una clave `$time`, que no puede ser un valor nulo.
 
 {% alert note %}
-Si inicialmente no ha capturado las fechas como propiedades del objeto, le recomendamos que reenvíe estos datos utilizando la clave `$time` para todos los usuarios. De lo contrario, podrían aparecer segmentos incompletos al utilizar el atributo `$time`. Sin embargo, si el valor de `$time` en un atributo personalizado anidado no tiene el formato correcto, no se actualizará todo el atributo personalizado anidado.
+Si inicialmente no ha capturado las fechas como propiedades del objeto, le recomendamos que reenvíe estos datos utilizando la clave `$time` para todos los usuarios. De lo contrario, podrían aparecer segmentos incompletos al utilizar el atributo `$time`. Sin embargo, si el valor de`$time`  en un atributo personalizado anidado no está formateado correctamente, no se actualizará todo el atributo personalizado anidado.
 {% endalert %}
 
 ```json
@@ -328,14 +328,14 @@ Puede generar un esquema para sus objetos para construir filtros de segmentos si
 Para este ejemplo, supongamos que tenemos una matriz de objetos `accounts` que acabamos de enviar a Braze:
 
 ```json
-"accounts": [
+{"accounts": [
   {"type": "taxable",
   "balance": 22500,
   "active": true},
   {"type": "non-taxable",
   "balance": 0,
-  "active": true},
- ]
+  "active": true}
+]}
 ```
 
 En el panel de Braze, ve a **Configuración de datos** > **Atributos personalizados**.

@@ -35,11 +35,11 @@ In Braze, navigate to **Partner Integrations** > **Technology Partners** and sel
 
 Before you create your data connection within Treasure Data, you'll need to authenticate. First, select **Integrations Hub**, then **Catalog**.
 
-![Treasure Data 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort1.png %}) 
+![트레저데이터 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort1.png %}) 
 
 Search for the Braze Integration in the **Catalog**, then hover over the icon and select **Create Authentication**. Enter your credentials, name your authentication, then select **Done**.
 
-![Treasure Data 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort2.png %}) 
+![트레저데이터 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort2.png %}) 
 
 ### 3단계: Define your cohort Audience
 
@@ -61,7 +61,7 @@ Query columns must be specified with the exact column names and data type. The q
 2. Select **New Query**.
 3. Run the query to validate the result set.
 
-![Treasure Data 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %})
+![트레저데이터 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %})
 
 ##### Use case: Syncing cohorts by identifier
 
@@ -160,7 +160,7 @@ After running the query, these device IDs will be added to the cohort in Braze:
 
 Once the query has been built, select **Export Results**. You can select an existing authentication, such as the one created in the last steps, or create a new authentication to be used for output. 
 
-![Treasure Data 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort5.png %}) 
+![트레저데이터 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort5.png %}) 
 
 
 | Export Result Mapping |	Description	| 
@@ -227,7 +227,7 @@ Define your desired sync schedule and save your activation.
 
 In Braze, navigate to **Segments**, create a new segment, and select **Treasure Data Cohorts** as your filter. From here, you can choose which Treasure Data cohort you wish to include. After your Treasure Data cohort segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
-![Treasure Data 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
+![트레저데이터 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
 
 ## User Matching
 

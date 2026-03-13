@@ -67,7 +67,7 @@ Si no añades tu aplicación a un grupo de aplicaciones, es posible que tu aplic
 
 Después de seguir [la guía de integración de Swift Package Manager]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/swift_package_manager/), añade `AppboyPushStory` a tu `Notification Content Extension`:
 
-![En Xcode, en marcos y bibliotecas, selecciona el icono "+" para añadir un marco.]({% image_buster /assets/img/ios/push_story/spm1.png %})
+![En Xcode, en marcos y bibliotecas, selecciona el icono «+» para añadir un marco.]({% image_buster /assets/img/ios/push_story/spm1.png %})
 
 ![]({% image_buster /assets/img/ios/push_story/spm2.png %})
 

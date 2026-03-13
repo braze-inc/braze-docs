@@ -15,7 +15,7 @@ tool:
 
 The **Home** page has two main sections:
 - [Pick up where you left off](#pick-up-where-you-left-off)
-- [Performance overview](#peformance-overview)
+- [Performance overview](#performance-overview)
 
 ![Home dashboard in Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
 
@@ -48,6 +48,38 @@ For example, if you set your date range to **Last 7 Days** and your *Daily Activ
 Select **Show Breakdown** for each row of the performance overview statistics to view each statistic's value per day for the date range specified.
 
 ![Expand]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
+
+### Performance over time
+
+The **Performance Over Time** graph shows the value of each statistic over the specified date range for the specified apps.
+
+![The Performance Over Time graph showing statistics for new users over 30 days.]({% image_buster /assets/img/dashboards/performance_over_time.png %})
+
+You can chart statistics for:
+- Banners
+- Content Cards
+- Daily Active Users
+  - (Optional) Breakdown by segment
+- Email
+- In-app messages
+- KPI Formulas
+  - Select **Manage KPI Formulas** to create a formula or edit an existing formula.
+- LINE
+- Monthly Active Users (MAU)
+- New Users
+- Push
+  - (Optional) Breakdown by segment
+- Sessions
+  - (Optional) Breakdown by segment or app version
+- Sessions per Hour
+- Sessions per MAU
+- SMS
+- Stickiness
+- Uninstalls
+  - (Optional) Breakdown by segment
+- Users
+- Webhooks
+- WhatsApp
 
 ## Available statistics
 

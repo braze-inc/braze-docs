@@ -51,6 +51,8 @@ After you select the standard setup onboarding path, you’ll need to choose whe
 
 ### Standard data setup
 
+{% multi_lang_include alerts/important_alerts.md alert='Shopify cart token alias' %}
+
 Now you’ll select the Shopify data you want to track.
 
 ![“Tracking Shopify data” section with a checkbox to track behavioral events and user attributes.]({% image_buster /assets/img/Shopify/tracking_shopify_data.png %})
@@ -69,6 +71,10 @@ For more information on the data tracked through the integration, refer to [Shop
 ### Historical backfill setup
 
 Through the standard setup, you have the option to perform an initial load of your Shopify customers and orders from the last 90 days prior to your Shopify integration connection. To do so, select the checkbox to include the initial data load as part of your integration. 
+
+{% alert note %}
+Historical backfilled data is not included in revenue reporting. Backfilled order placed events are available only for segmentation.
+{% endalert %}
 
 ![Historical data backfill toggle.]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
 
@@ -127,7 +133,7 @@ Tracking custom data provides deeper insights into user behavior and supports ad
 
 For example, the following JavaScript snippet tracks if the current user subscribes to a newsletter, and logs that as a custom event on their profile in Braze:
 
-```json
+```javascript
 braze.logCustomEvent(
   “subscribed_to_newsletter”,
   {

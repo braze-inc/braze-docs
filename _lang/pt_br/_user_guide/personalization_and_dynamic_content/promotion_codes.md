@@ -22,11 +22,11 @@ Quando a Braze envia uma mensagem com um código promocional, o código é deduz
 - Com Liquid condicional, todas as listas referenciadas têm códigos deduzidos, mesmo que apenas um ramo seja mostrado.
 - Entrar ou reentrar em uma etapa do Canvas consome um novo código.
 
-Se você colocar vários trechos da mesma lista em uma mensagem, a Braze aplicará o mesmo código em todos os trechos. Para evitar ficar sem, recomendamos fazer o upload de mais códigos do que você espera usar.
+Se você colocar vários trechos da mesma lista em uma mensagem, a Braze aplicará o mesmo código em todos os trechos. Para evitar ficar sem códigos, recomendamos fazer o upload de mais códigos do que você espera usar.
 
 {% tabs local %}
 {% tab Example %}
-Pense em códigos promocionais como cupons em um correio. Uma vez que o funcionário retira um cupom da pilha para sua carta, ele se foi—mesmo que a carta nunca chegue.  
+Pense em códigos promocionais como cupons em um correio. Uma vez que o funcionário retira um cupom da pilha para sua carta, ele desaparece—mesmo que a carta nunca chegue.  
 
 Por exemplo, no seguinte Liquid condicional, os códigos de ambas as listas (`vip-deal` e `regular-deal`) são deduzidos, mesmo que cada usuário veja apenas um ramo:
 

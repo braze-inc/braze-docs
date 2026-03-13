@@ -1,47 +1,51 @@
-## .NET MAUI SDKを統合する
+## .NET MAUI SDKの統合
 
-Braze .NET MAUI（旧Xamarin）SDKを統合することで、基本的な分析機能だけでなく、ユーザーをエンゲージメントできるアプリ内メッセージも利用できるようになる。 
+Braze .NET MAUI（旧称Xamarin）SDKを統合すると、基本的な分析機能に加え、ユーザーとのエンゲージメントに活用できる機能的なアプリ内メッセージが利用可能になる。 
 
 ### 前提条件
 
-.NET MAUI Braze SDKを統合する前に、以下の要件を満たしていることを確認すること：
+.NET MAUI Braze SDKを統合する前に、以下の要件を満たしていることを確認せよ：
 
 - `version 3.0.0` 以降、この SDK では、NET 6以降を使用する必要があり、Xamarin フレームワークを使用するプロジェクトのサポートが削除されます。
-- `version 4.0.0` 以降、このSDKはXamarin& Xamarin.Forms のサポートを停止し、.NET MAUIのサポートを追加した。Xamarinのサポート終了前後の[Microsoftのポリシー](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin)を参照してください。
+- このSDKは`version 4.0.0`、Xamarinのサポートを終了し、.NET &Xamarin.FormsMAUIのサポートを追加した。Xamarinのサポート終了前後の[Microsoftのポリシー](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin)を参照してください。
 
-### ステップ 1: .NET MAUIバインディングを取得する
+### ステップ 1: .NET MAUI バインディングを入手する
 
 {% tabs %}
 {% tab android %}
-.NET MAUIバインディングは、.NET MAUIアプリでネイティブ・ライブラリを使用する方法である。バインディングの実装は、ライブラリに対して C# インターフェイスを構築し、アプリケーションでそのインターフェイスを使用することから構成されます。 [.NET MAUIドキュメントを](http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/)参照のこと。Braze SDK バインディングを含めるには、NuGet を使用する方法と、ソースからコンパイルする方法の2つがあります。
+.NET MAUIバインディングとは、.NET MAUIアプリでネイティブライブラリーを利用する方法である。バインディングの実装は、ライブラリに対して C# インターフェイスを構築し、アプリケーションでそのインターフェイスを使用することから構成されます。 [.NET MAUI のドキュメント](http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/)を参照せよ。Braze SDK バインディングを含めるには、NuGet を使用する方法と、ソースからコンパイルする方法の2つがあります。
 
 {% subtabs local %}
 {% subtab NuGet %}
 最も単純な統合方式では、[NuGet.org](https://www.nuget.org/)中央リポジトリーからBraze SDKを取得します。Visual Studio サイドバーで、`Packages` フォルダを右クリックし、`Add Packages...` をクリックします。 'Braze' を検索し、[`BrazePlatform.BrazeAndroidBinding`](https://www.nuget.org/packages/BrazePlatform.BrazeAndroidBinding/) パッケージをプロジェクトにインストールします。
+
+Brazeの位置情報サービスとジオフェンスを使用するには、パッケージ[`BrazePlatform.BrazeAndroidLocationBinding`](https://www.nuget.org/packages/BrazePlatform.BrazeAndroidLocationBinding/)もインストールする必要がある。
 {% endsubtab %}
 
 {% subtab Source %}
-2 番目の統合方法は、[バインディングソース](https://github.com/braze-inc/braze-xamarin-sdk) を含めることです。その下に [`appboy-component/src/androidnet6`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/androidnet6/BrazeAndroidNet6Binding)あなたの.NET MAUIアプリケーションの```BrazeAndroidBinding.csproj``` にプロジェクト参照を追加すると、バインディングがあなたのプロジェクトと一緒にビルドされ、Braze Android SDKにアクセスできるようになる。
+2 番目の統合方法は、[バインディングソース](https://github.com/braze-inc/braze-xamarin-sdk) を含めることです。以下にバインディング[`appboy-component/src/androidnet6`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/androidnet6/BrazeAndroidNet6Binding)のコードがある。.NET MAUIアプリケーションで```BrazeAndroidBinding.csproj```プロジェクト参照をこれに追加すると、バインディングがプロジェクトと共にビルドされ、Braze Android SDKを利用できるようになる。
+
+Brazeの位置情報サービスとジオフェンスを使用するには、プロジェクトに```BrazeAndroidLocationBinding.csproj```以下の参照を追加する必要がある[`appboy-component/src/androidnet6/BrazeAndroidLocationBinding`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/androidnet6/BrazeAndroidLocationBinding)。
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 
 {% tab ios %}
 {% alert important %}
-.NET MAUI SDKバージョン4.0.0以降のiOSバインディングは[Braze Swift SDKを](https://github.com/braze-inc/braze-swift-sdk/)使用し、以前のバージョンは[従来のAppboyKit SDKを](https://github.com/Appboy/Appboy-ios-sdk)使用する。
+.NET MAUI SDKバージョン4.0.0以降のiOSバインディングは[Braze SWIFT SDK](https://github.com/braze-inc/braze-swift-sdk/)を使用する。一方、それ以前のバージョンでは[従来のAppboyKit SDK](https://github.com/Appboy/Appboy-ios-sdk)を使用する。
 {% endalert %}
 
-.NET MAUIバインディングは、.NET MAUIアプリでネイティブ・ライブラリを使用する方法である。バインディングの実装は、ライブラリに対して C# インターフェイスを構築し、アプリケーションでそのインターフェイスを使用することから構成されます。Braze SDK バインディングを含めるには、NuGet を使用する方法と、ソースからコンパイルする方法の2つがあります。
+.NET MAUIバインディングとは、.NET MAUIアプリでネイティブライブラリーを利用する方法である。バインディングの実装は、ライブラリに対して C# インターフェイスを構築し、アプリケーションでそのインターフェイスを使用することから構成されます。Braze SDK バインディングを含めるには、NuGet を使用する方法と、ソースからコンパイルする方法の2つがあります。
 
 {% subtabs local %}
 {% subtab NuGet %}
-最も単純な統合方式では、[NuGet.org](https://www.nuget.org/)中央リポジトリーからBraze SDKを取得します。Visual Studio サイドバーで、`Packages` フォルダを右クリックし、`Add Packages...` をクリックします。 Braze」を検索し、最新の.NET MAUI iOS NuGetパッケージをインストールする： [Braze.iOS.BrazeKit](https://www.nuget.org/packages/Braze.iOS.BrazeKit), [Braze.iOS.BrazeUI](https://www.nuget.org/packages/Braze.iOS.BrazeUI)そして [Braze.iOS.BrazeLocation](https://www.nuget.org/packages/Braze.iOS.BrazeLocation)をプロジェクトにインストールする。
+最も単純な統合方式では、[NuGet.org](https://www.nuget.org/)中央リポジトリーからBraze SDKを取得します。Visual Studio サイドバーで、`Packages` フォルダを右クリックし、`Add Packages...` をクリックします。 「Braze」を検索し、最新の.NET MAUI iOS NuGetパッケージである[Braze.iOS.BrazeKit](https://www.nuget.org/packages/Braze.iOS.BrazeKit)、[Braze.iOS.BrazeUI](https://www.nuget.org/packages/Braze.iOS.BrazeUI)、および[Braze.iOS.BrazeLocation](https://www.nuget.org/packages/Braze.iOS.BrazeLocation)をプロジェクトにインストールする。
 
 .NET MAUI への移行を容易にするために、互換性ライブラリパッケージ [Braze.iOS.BrazeKitCompat](https://www.nuget.org/packages/Braze.iOS.BrazeKitCompat) および [Braze.iOS.BrazeUICompat](https://www.nuget.org/packages/Braze.iOS.BrazeUICompat) も提供しています。
 {% endsubtab %}
 
 {% subtab Source %}
-2 番目の統合方法は、[バインディングソース](https://github.com/braze-inc/braze-xamarin-sdk) を含めることです。その下に [`appboy-component/src/iosnet6`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/iosnet6/BrazeiOSNet6Binding)あなたの.NET MAUIアプリケーションの```BrazeiOSBinding.csproj``` にプロジェクト参照を追加すると、バインディングがあなたのプロジェクトと一緒にビルドされ、Braze iOS SDKにアクセスできるようになる。プロジェクトの「リファレンス」フォルダに `BrazeiOSBinding.csproj` が表示されていることを確認します。
+2 番目の統合方法は、[バインディングソース](https://github.com/braze-inc/braze-xamarin-sdk) を含めることです。以下にバインディング[`appboy-component/src/iosnet6`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/iosnet6/BrazeiOSNet6Binding)のコードがある。.NET MAUIアプリケーション```BrazeiOSBinding.csproj```でプロジェクト参照として追加すると、バインディングがプロジェクトと共にビルドされ、Braze iOS SDKを利用できるようになる。プロジェクトの「リファレンス」フォルダに `BrazeiOSBinding.csproj` が表示されていることを確認します。
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -126,7 +130,7 @@ braze = new Braze(configuration);
 これで、アプリケーションを起動して、セッションが Braze ダッシュボードに記録されているのを確認できます。基本的なSDKインテグレーションのベストプラクティスの詳細については、[iOSインテグレーションの手順]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift)を参照してください。
 
 {% alert important %}
-私たちが現在公開しているiOS SDK用の.NET MAUIバインディングは、iOS Facebook SDK（ソーシャルデータのリンク）には接続できず、IDFAをBrazeに送信することも含まれていない。
+現在公開中のiOS SDK向け.NET MAUIバインディングは、iOS Facebook SDK（ソーシャルデータの連携）には接続せず、またBrazeへのIDFA送信機能も含まれていない。
 {% endalert %}
 {% endtab %}
 {% endtabs %}

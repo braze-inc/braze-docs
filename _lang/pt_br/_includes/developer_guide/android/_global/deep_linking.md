@@ -189,7 +189,7 @@ Braze.configure(this, brazeConfig)
 
 Para tratar links profundos ao usar Jetpack Compose com NavHost:
 
-1. Certifique-se de que a atividade que trata seu link profundo está registrada no Manifesto do Android.
+1. Certifique-se de que a atividade que trata seu link profundo está registrada no Android Manifest.
     ```xml
     <activity
       ...

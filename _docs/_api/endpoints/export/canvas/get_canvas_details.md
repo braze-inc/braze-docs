@@ -215,7 +215,7 @@ The following is an example response that includes Canvas messages sent through 
         }
       }
     }
-  ],
+  ]
 }
 ```
 

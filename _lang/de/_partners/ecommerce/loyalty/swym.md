@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Swym
 
-> [Swym](https://getswym.com/) unterstützt E-Commerce-Marken bei der Erfassung von Kaufabsichten mit Wunschlisten, Speichern für später, Geschenkelisten und Back-in-Stock-Warnungen. Mithilfe umfangreicher Daten, die auf Berechtigungen basieren, können Sie zielgerichtete Kampagnen erstellen und personalisierte Einkaufserlebnisse bieten, die das Engagement fördern, die Konversion steigern und die Loyalität erhöhen.
+> [Swym](https://getswym.com/) unterstützt E-Commerce-Marken bei der Erfassung von Kaufabsichten mit Wunschlisten, Speichern für später, Geschenkelisten und Back-in-Stock-Warnungen. Mit reichhaltigen Daten auf der Basis von Berechtigungen können Sie zielgerichtete Kampagnen erstellen und personalisierte Einkaufserlebnisse bieten, die das Engagement fördern, die Konversion steigern und die Loyalität erhöhen.
 
 *Diese Integration wird von Swym gepflegt.*
 
@@ -36,7 +36,7 @@ Indem Sie die Apps Wishlist Plus und Back in Stock Alerts von Swym mit Braze ver
 
 ### Schritt 1: Verbinden Sie Ihre Swym App mit Braze
 
-Derzeit ist die Braze-Integration mit Swym eine verwaltete Integration und nicht zur Selbstbedienung geeignet. Wenden Sie sich an das Swym Support Team unter [support@getswym.com](mailto:support@getswym.com) und geben Sie die folgenden Informationen an, damit Swym die Integration in Ihrem Namen einrichten kann:
+Derzeit ist die Braze-Integration mit Swym eine verwaltete Integration und kann nicht selbst bedient werden. Wenden Sie sich an das Swym Support Team unter [support@getswym.com](mailto:support@getswym.com) und geben Sie die folgenden Informationen an, damit Swym die Integration in Ihrem Namen einrichten kann:
 
 1. Erzeugen Sie einen [REST API-Schlüssel]({{site.baseurl}}/api/basics/#about-rest-api-keys) in Ihrem Braze-Dashboard mit der Berechtigung `users.track`.
 
@@ -91,4 +91,4 @@ Um die Zustellung personalisierter Nachrichten für Ihre Kunden zu automatisiere
 
 ![Ein handlungsorientiertes Ereignis.]({% image_buster /assets/img/swym/braze-canvas-setup.png %})
 
-Weitere Einzelheiten finden Sie im [Swym-Hilfecenter](https://help.getswym.com/en/articles/12344153-braze-integration) oder kontaktieren Sie das Swym-Supportteam unter [support@getswym.com](mailto:support@getswym.com). 
+Weitere Informationen finden Sie im [Swym-Hilfecenter](https://help.getswym.com/en/articles/12344153-braze-integration) oder kontaktieren Sie das Swym-Supportteam unter [support@getswym.com](mailto:support@getswym.com). 

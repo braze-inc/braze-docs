@@ -37,7 +37,7 @@ Si eres administrador de Braze, puedes eliminar un dominio previamente configura
 1. Ve a **Configuración** > **Configuración de la página de destino**.
 2. Selecciona **Eliminar dominio personalizado**
 3. Confirma la eliminación del dominio.
-4. Elimina los registros de DNS enumerados de la configuración de tu dominio.
+4. Elimina los registros de DNS listados de la configuración de tu dominio.
 
 {% alert important %}
 Cuando elimines un dominio personalizado, esa URL dejará de ser válida. Todas las páginas de destino que estaban utilizando este dominio volverán automáticamente al dominio predeterminado establecido por Braze.

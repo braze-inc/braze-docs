@@ -77,7 +77,7 @@ Braze REST API キーと REST エンドポイントを使用して、Braze Looke
 Looker Develop 内で、適切なビューを選択する。ディメンションタグに `braze_id` を追加し、変更をコミットします。
 この`braze_id` タグは、どのフィールドがユニークキーであるかを決定するために使用される。
 
-```json
+```lookml
 dimension: external_id {
     type: string
     primary_key: yes

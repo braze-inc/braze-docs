@@ -48,6 +48,69 @@ Wenn es möglich ist, werden Änderungen mit einer Ankündigung und einem Zeitra
 - Entfernen einer Spalte aus einer bestehenden Tabelle oder Ansicht
 - Ändern des Typs oder der Nullbarkeit einer vorhandenen Spalte
 
+## Wenn die Tabellen SNAPSHOTS und CHANGELOGS aktualisiert werden
+
+Die Tabellen SNAPSHOTS und CHANGELOGS verfolgen Änderungen an Kampagnen und Canvase. Zu wissen, wann diese Tabellen aktualisiert werden, ist wichtig für die Abfrage der neuesten Nachrichtenvariationen und Canvas-Konfigurationen.
+
+### CHANGELOGS_CAMPAIGN_SHARED
+
+Eine Zeile wird zu `CHANGELOGS_CAMPAIGN_SHARED` hinzugefügt, wenn:
+- Die Kampagne wird gestartet, ODER
+- Eines der folgenden snapshottable Felder wird geändert:
+  - Name
+  - Aktionen (einschließlich Änderungen des Inhalts von Nachrichten)
+  - Verhalten bei Konversion
+
+{% alert important %}
+Das Speichern oder Aktualisieren des Entwurfs nach dem Start löst nicht automatisch ein Update aus. Das Update wird nur dann getriggert, wenn Sie die Kampagne starten oder die Änderungen des Entwurfs nach dem Start auf die aktive Kampagne anwenden.
+{% endalert %}
+
+### SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED
+
+`SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED` wird von `CHANGELOGS_CAMPAIGN_SHARED` abgeleitet. Diese Tabelle extrahiert die Spalte "Aktionen" aus `CHANGELOGS_CAMPAIGN_SHARED` und fasst sie zu einzelnen Datensätzen für Nachrichtenvariationen zusammen. Sie wird entsprechend aktualisiert, wenn `CHANGELOGS_CAMPAIGN_SHARED` aktualisiert wird.
+
+### CHANGELOGS_CANVAS_SHARED
+
+Eine Zeile wird zu `CHANGELOGS_CANVAS_SHARED` hinzugefügt, wenn:
+- Der Canvas wird gestartet, ODER
+- Eines der folgenden snapshottable Felder wird geändert:
+  - Name
+  - Verhalten bei Konversion
+  - Variationen (Prozentsatz, Zuordnungen der ersten Stufe, Variationsnamen)
+
+{% alert important %}
+Das Speichern oder Aktualisieren des Entwurfs nach dem Start löst nicht automatisch ein Update aus. Das Update wird nur dann getriggert, wenn Sie das Canvas starten oder die nach dem Start vorgenommenen Änderungen am Entwurf auf das aktive Canvas anwenden.
+{% endalert %}
+
+### SNAPSHOTS_CANVAS_VARIATION_SHARED
+
+`SNAPSHOTS_CANVAS_VARIATION_SHARED` wird von `CHANGELOGS_CANVAS_SHARED` abgeleitet. Diese Tabelle verwendet das gleiche Extraktionsmuster wie `SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED` und wird entsprechend aktualisiert, wenn `CHANGELOGS_CANVAS_SHARED` aktualisiert wird.
+
+### SNAPSHOTS_CANVAS_STEP_SHARED
+
+Eine Zeile wird zu `SNAPSHOTS_CANVAS_STEP_SHARED` hinzugefügt, wenn:
+- Der Canvas wird gestartet, ODER
+- Der aktive Canvas wird aktualisiert (Entwurf nach dem Start angewendet) ODER
+- Eines der folgenden snapshottable Felder wird geändert:
+  - Name
+  - Aktionen (einschließlich Änderungen des Inhalts von Nachrichten innerhalb von Nachrichtenvariationen)
+
+{% alert important %}
+Das Speichern des Entwurfs nach dem Start löst nicht automatisch ein Update aus. Das Update wird nur dann getriggert, wenn Sie das Canvas starten oder die nach dem Start vorgenommenen Änderungen am Entwurf auf das aktive Canvas anwenden.
+{% endalert %}
+
+### SNAPSHOTS_CANVAS_FLOW_STEP_SHARED
+
+Eine Zeile wird zu `SNAPSHOTS_CANVAS_FLOW_STEP_SHARED` hinzugefügt, wenn:
+- Der Canvas wird gestartet, ODER
+- Der aktive Canvas wird aktualisiert (Entwurf nach dem Start angewendet) ODER
+- Eines der folgenden snapshottable Felder wird geändert:
+  - Name
+
+{% alert important %}
+Das Speichern des Entwurfs nach dem Start löst nicht automatisch ein Update aus. Das Update wird nur dann getriggert, wenn Sie das Canvas starten oder die nach dem Start vorgenommenen Änderungen am Entwurf auf das aktive Canvas anwenden.
+{% endalert %}
+
 ## Einhaltung der allgemeinen Datenschutzverordnung (DSGVO)
 
-Nahezu jeder Ereignisdatensatz, den Braze speichert, enthält einige Felder, die Nutzer:innen persönlich identifizierbare Informationen (PII) liefern. Einige Ereignisse können E-Mail Adresse, Telefonnummer, ID des Geräts, Sprache, Geschlecht und Standortinformationen enthalten. Wenn die Anfrage eines Nutzers auf Vergessenwerden an Braze übermittelt wird, löschen wir diese PII-Felder für alle Ereignisse, die diesen Nutzer:innen gehören. Auf diese Weise wird die historische Aufzeichnung des Ereignisses nicht gelöscht, aber das Ereignis kann nun nicht mehr mit einer bestimmten Person in Verbindung gebracht werden.
+{% include partners/snowflake_pii_gdpr.md %}

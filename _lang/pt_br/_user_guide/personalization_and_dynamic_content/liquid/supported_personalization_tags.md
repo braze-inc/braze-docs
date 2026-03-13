@@ -20,7 +20,7 @@ Por conveniência, é fornecido um resumo das tags de personalização compatív
 | -------------  | ---- |
 | Atribuições padrão (predefinidas) | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` <br> `{{subscribed_state.${email_global}}}` <br> `{{subscribed_state.${subscription_group_id}}}` |
 | Atributos do dispositivo | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
-| <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions'>Atributos da Lista de E-mail</a> | `{{${set_user_to_unsubscribed_url}}}` <br>Essa tag substitui a tag anterior `{{${unsubscribe_url}}}`. Embora a tag antiga ainda funcione em e-mails criados anteriormente, recomendamos que você use a tag mais recente. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
+| <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions'>Atributos da Lista de E-mails</a> | `{{${set_user_to_unsubscribed_url}}}` <br>Essa tag substitui a tag anterior `{{${unsubscribe_url}}}`. Embora a tag antiga ainda funcione em e-mails criados anteriormente, recomendamos que você use a tag mais recente. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
 | <a href='/docs/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/#trigger-messages'>Atributos de SMS</a> | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
 | <a href='/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/'>Atributos do WhatsApp</a> | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` <br> `{{whats_app.${inbound_flow_response}}}` <br> `{{whats_app.${inbound_product_id}}}` <br> `{{whats_app.${inbound_catalog_id}}}` |
 | Atributos da campanha | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
@@ -31,8 +31,8 @@ Por conveniência, é fornecido um resumo das tags de personalização compatív
 | Propriedades do evento <br> (Elas são personalizadas para seu espaço de trabalho).| `{{event_properties.${your_custom_event_property}}}` |
 | Variáveis de Contexto do Canva | `{{context}}` |
 | Atributos personalizados <br> (Elas são personalizadas para seu espaço de trabalho). | `{{custom_attribute.${your_custom_attribute}}}` |
-| <a href='/docs/api/objects_filters/trigger_properties_object/'>Propriedades do gatilho da API</a> |`{{api_trigger_properties}}` |
-| Propriedades de entrada do canva | `{{canvas_entry_properties.${property_name}}}` |
+| <a href='/docs/api/objects_filters/trigger_properties_object/'>Propriedades de gatilho de API</a> |`{{api_trigger_properties}}` |
+| Propriedades de entrada do canva | `{{context.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
@@ -47,7 +47,7 @@ Consulte este artigo de ajuda para saber mais sobre [como algumas dessas atribui
 
 O comportamento das seguintes tags difere entre o Canva e as campanhas:
 {% raw %}
-- `dispatch_id` o comportamento difere porque a Braze trata as etapas do Canva como eventos acionados, mesmo quando estão "agendadas" (exceto para etapas de entrada, que podem ser agendadas). Para saber mais, consulte [comportamento do ID de Dispatch]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+- O comportamento `dispatch_id` difere porque a Braze trata as etapas do Canva como eventos acionados, mesmo quando estão "agendadas" (exceto para etapas de entrada, que podem ser agendadas). Para saber mais, consulte [comportamento do ID de Dispatch]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 - O uso da tag `{{campaign.${name}}}` com o canvas exibirá o nome do componente do canvas. Ao usar essa tag com campanhas, ela exibirá o nome da campanha.
 {% endraw %}
 
@@ -96,7 +96,7 @@ User is in list of apps
 
 ## Informações sobre dispositivos direcionados
 
-Para notificações por push, mensagens no app e Banners, você pode modelar os seguintes atributos para o dispositivo ao qual uma mensagem está sendo enviada. Ou seja, uma notificação por push, mensagem no app ou Banner pode incluir atributos do dispositivo no qual a mensagem está sendo lida. Note que essas atribuições não funcionarão para cartões de conteúdo. 
+Para notificações por push, mensagens no app e Banners, você pode modelar os seguintes atributos para o dispositivo que recebe a mensagem. Uma notificação por push, mensagem no app ou Banner pode incluir atributos do dispositivo no qual o usuário lê a mensagem. Esses atributos não funcionam para Cartões de Conteúdo ou e-mails. Para e-mails, as mensagens são renderizadas antes do envio, então o dispositivo no qual o usuário abre o e-mail é desconhecido nesse momento.
 
 |Tag | Descrição |
 |------------------|---|
@@ -223,7 +223,7 @@ Este é um exemplo simples de como as tags de iteração podem ser usadas no cri
 
 As tags de sintaxe podem ser usadas para controlar como o Liquid é renderizado. Você pode usar a tag `echo` para retornar uma expressão. É o mesmo que envolver uma expressão usando colchetes, exceto que você pode usar essa tag dentro de tags Liquid. Você também pode usar a tag `liquid` para ter um bloco de Liquid sem nenhum delimitador em cada tag. Cada tag deve estar em sua própria linha ao usar a tag `liquid`. Dê uma olhada na documentação da Shopify sobre [tags de sintaxe](https://shopify.dev/api/liquid/tags#syntax-tags) para saber mais informações e exemplos.
 
-Com [controle de espaços em branco](https://shopify.github.io/liquid/basics/whitespace/), você pode remover espaços em branco ao redor de suas tags, ajudando a controlar ainda mais como a saída do Liquid se parece.
+Com [controle de espaços em branco](https://shopify.github.io/liquid/basics/whitespace/), você pode remover espaços em branco ao redor de suas tags, ajudando a controlar melhor como a saída do Liquid se parece.
 
 ## Códigos de status HTTP {#http-personalization}
 

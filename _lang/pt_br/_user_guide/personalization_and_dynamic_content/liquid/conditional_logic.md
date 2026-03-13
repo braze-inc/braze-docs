@@ -8,7 +8,7 @@ description: "Este artigo de referência aborda como as tags podem e devem ser u
 
 # Lógica de envio de mensagens condicionais
 
-> [As tags](https://docs.shopify.com/themes/liquid-documentation/tags) permitem incluir lógica de programação em suas campanhas de mensagens. As tags podem ser usadas para executar instruções condicionais, bem como para casos de uso avançados, como atribuir variáveis ou iterar em um bloco de código. <br><br>Esta página aborda como as tags podem e devem ser usadas, por exemplo, como considerar valores de atributos nulos, nulos e em branco e como fazer referência a atributos personalizados.
+> [Tags](https://docs.shopify.com/themes/liquid-documentation/tags) permitem que você inclua lógica de programação em suas campanhas de envio de mensagens. As tags podem ser usadas para executar instruções condicionais, bem como para casos de uso avançados, como atribuir variáveis ou iterar em um bloco de código. <br><br>Esta página aborda como as tags podem e devem ser usadas, por exemplo, como considerar valores de atributos nulos, nulos e em branco e como fazer referência a atributos personalizados.
 
 ## Tags de formatação
 
@@ -42,7 +42,7 @@ Buy now! Would 5% off convince you?
 
 ## Lógica condicional
 
-Você pode incluir muitos tipos de [lógica inteligente nas mensagens](http://docs.shopify.com/themes/liquid-documentation/basics), como uma instrução condicional. O exemplo a seguir usa [condicionais](http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags) para internacionalizar uma campanha:
+Você pode incluir muitos tipos de [lógica inteligente dentro das mensagens](http://docs.shopify.com/themes/liquid-documentation/basics), como uma declaração condicional. O seguinte exemplo usa [condicionais](http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags) para internacionalizar uma campanha:
 {% raw %}
 
 ```liquid
@@ -70,6 +70,10 @@ Você tem a opção de incluir uma declaração `{% else %}` em sua lógica cond
 #### `endif`
 
 A tag `{% endif %}` indica que você terminou sua lógica condicional. Você deve incluir a tag `{% endif %}` em qualquer mensagem com lógica condicional. Se você não incluir uma tag `{% endif %}` em sua lógica condicional, receberá um erro, pois o Braze não conseguirá analisar sua mensagem.
+
+{% alert note %}
+Tags condicionais (`if`, `elsif`, `unless`) suportam operadores, mas não filtros. Para avaliar um valor filtrado em uma condicional, atribua o resultado do filtro a uma variável primeiro, depois faça referência a essa variável. Para mais detalhes, veja [Onde usar operadores e filtros]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+{% endalert %}
 
 ### Tutorial: Entregar conteúdo baseado em localização
 
@@ -196,11 +200,11 @@ A tag a seguir permite especificar uma mensagem para usuários que tenham a atri
 
 ## Referência a atributos personalizados
 
-Depois de [criar atributos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) personalizados, você pode fazer referência a esses atributos personalizados em seu envio de mensagens Liquid.
+Depois de [criar atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes), você pode referenciar esses atributos personalizados em seu envio de mensagens Liquid.
 
 Ao usar a lógica condicional, será necessário conhecer o tipo de dados do atributo personalizado para garantir que esteja usando a sintaxe correta. Na página **Atributos personalizados** no dashboard, procure o tipo de dados associado ao seu atributo personalizado e consulte os seguintes exemplos listados para cada tipo de dados.
 
-![Seleção de um tipo de dados para um atributo personalizado. O exemplo fornecido mostra uma atribuição de Favorite_Category com um tipo de dados de string.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
+![Seleção de um tipo de dados para um atributo personalizado. O exemplo fornecido mostra um atributo de Favorite_Category com um tipo de dado string.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
 
 {% alert tip %}
 Strings e matrizes exigem apóstrofos retos ao redor delas, enquanto booleanos e inteiros nunca terão apóstrofos.
@@ -208,7 +212,7 @@ Strings e matrizes exigem apóstrofos retos ao redor delas, enquanto booleanos e
 
 #### Booleano
 
-[Os booleanos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans) são valores binários e podem ser definidos como `true` ou `false`, como `registration_complete: true`. Os valores booleanos não têm apóstrofos ao redor deles.
+[Booleanos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans) são valores binários e podem ser definidos como `true` ou `false`, como `registration_complete: true`. Os valores booleanos não têm apóstrofos ao redor deles.
 
 {% raw %}
 
@@ -230,7 +234,7 @@ Strings e matrizes exigem apóstrofos retos ao redor delas, enquanto booleanos e
 
 {% endraw %}
 
-Você também pode usar outros [operadores básicos](https://shopify.dev/docs/themes/liquid/reference/basics/operators), como menor que (<) ou maior que (>) para números inteiros:
+Você também pode usar outros [operadores básicos](https://shopify.dev/docs/themes/liquid/reference/basics/operators) como menor que (<) ou maior que (>) para inteiros:
 
 {% raw %}
 
@@ -242,7 +246,7 @@ Você também pode usar outros [operadores básicos](https://shopify.dev/docs/th
 
 #### String
 
-Uma [string]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings) é composta de caracteres alfanuméricos e armazena dados de usuários. Por exemplo, você pode ter `favorite_color: red` ou `phone_number: 3025981329`. Os valores de string devem ter apóstrofos ao redor.
+Uma [string]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings) é composta por caracteres alfanuméricos e armazena uma peça de dados sobre seu usuário. Por exemplo, você pode ter `favorite_color: red` ou `phone_number: 3025981329`. Os valores de string devem ter apóstrofos ao redor.
 
 {% raw %}
 
@@ -256,7 +260,7 @@ Para strings, você pode usar tanto "==" quanto "contains" em seu Liquid.
 
 #### Vetor
 
-Uma [matriz]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays) é uma lista de informações sobre seu usuário. Por exemplo, um usuário pode ter `last_viewed_shows: stranger things, planet earth, westworld`. Os valores da matriz devem ter apóstrofos ao redor.
+Um [array]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays) é uma lista de informações sobre seu usuário. Por exemplo, um usuário pode ter `last_viewed_shows: stranger things, planet earth, westworld`. Os valores da matriz devem ter apóstrofos ao redor.
 
 {% raw %}
 
@@ -270,7 +274,7 @@ Para matrizes, você deve usar "contains" e não pode usar "==".
 
 #### Horário
 
-Um registro de data e hora de quando um evento ocorreu. Os valores [de tempo]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) devem ter um [filtro matemático]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters) para serem usados na lógica condicional.
+Um carimbo de data/hora de quando um evento ocorreu. Valores de [Tempo]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) devem ter um [filtro matemático]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters) aplicado a eles para serem usados na lógica condicional.
 
 {% raw %}
 

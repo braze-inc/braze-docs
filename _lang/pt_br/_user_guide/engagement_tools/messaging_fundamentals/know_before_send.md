@@ -46,7 +46,7 @@ Para obter mais assistência com a solução de problemas do Canva e da campanha
 - **Envio de fatores de volume**: Alguns fatores que determinam os volumes de envio capazes para um IP incluem:
   - Caixas de correio: Os grandes provedores de e-mail provavelmente podem lidar com milhões por dia a partir de um único IP, enquanto um provedor de caixa de e-mail regional menor ou com uma infraestrutura menor talvez não consiga lidar com essa quantidade.
   - Reputação do remetente: Talvez seja possível enviar um volume maior por dia a partir de um único IP se o remetente estiver preparado para esse volume e se a reputação do remetente for forte o suficiente em cada caixa de correio ou domínio para o qual está enviando.
-- **Práticas recomendadas**: Revise as [práticas recomendadas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) da Braze e entre em contato com sua equipe de contas da Braze se você gostaria de saber mais sobre os serviços de entregabilidade.
+- **Práticas recomendadas**: Revise as [melhores práticas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) da Braze e entre em contato com sua equipe de contas da Braze se você quiser saber mais sobre os serviços de entregabilidade.
 
 ## Push
 
@@ -79,15 +79,15 @@ Para obter mais assistência com a solução de problemas do Canva e da campanha
 ## Banners
 
 #### Coisas a verificar
-- **Dimensões do banner:** Crie seus banners usando um elemento de dimensão fixa e teste-os no editor.
-- **Prioridade:** Se você estiver lançando vários banners, pode definir manualmente a prioridade de como cada banner é exibido.
+- **Dimensões do Banner:** Crie seus Banners usando um elemento de dimensão fixa e teste-os no editor.
+- **Prioridade:** Se você estiver lançando vários Banners, pode definir manualmente a prioridade de como cada banner é exibido.
 
 #### Coisas para saber
 - **Personalização Liquid:** A personalização Liquid é atualizada a cada solicitação de atualização.
-- **Colocação e proporção do banner:** Cada colocação de banner pode ser usada em até 10 campanhas em um espaço de trabalho.  
-- **Cliques e impressões:** Cliques e impressões para banners são rastreados automaticamente com o SDK.
+- **Colocação e proporção de Banner:** Cada colocação de Banner pode ser usada em até 25 mensagens em um espaço de trabalho.  
+- **Cliques e impressões:** Cliques e impressões para Banners são rastreados automaticamente com o SDK.
 - **Limitações:**  Atualmente, os seguintes recursos não são suportados: Integração de Canvas, campanhas acionadas por API e baseadas em ações, Conteúdo Conectado, códigos de promoção, dispensas controladas pelo usuário e `catalog_items` usando a [tag]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid).
-- **Teste:** Para exibir o banner de teste, o dispositivo que você está usando deve ser capaz de receber notificações push em primeiro plano.
+- **Teste:** Para exibir o Banner de teste, o dispositivo que você está usando deve ser capaz de receber notificações por push em primeiro plano.
 - **HTML personalizado:** Aproveite o [JS bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) para registrar cliques ao usar HTML personalizado para definir ações de clique, como links e botões. As ações de clique são registradas automaticamente apenas ao usar os componentes pré-construídos no editor de arrastar e soltar.
 - **Solicitando Colocações:** Até 10 colocações podem ser retornadas ao SDK em uma única solicitação de atualização. Cada colocação incluirá o Banner de maior prioridade para o qual um usuário é elegível.
 
@@ -104,7 +104,7 @@ Para obter mais assistência com a solução de problemas do Canva e da campanha
 - **Armazenamento em cache de cartões de conteúdo**: As opções de cache do cartão de conteúdo podem ser encontradas em nossos documentos para [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android) e [Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards). 
 - **Limite de frequência**: O limite de frequência não se aplica aos cartões de conteúdo.
 - **Impressões**: As impressões são geralmente registradas quando um cartão é visto. Por exemplo, se você tiver uma caixa de entrada cheia de cartões de conteúdo, uma impressão não será registrada até que o usuário role até o cartão de conteúdo específico. Há algumas nuances entre as plataformas Web, Android e iOS.
-- **Sessões do SDK e criação de cartão**: Os Cartões de Conteúdo não são criados para usuários sem sessões do SDK, mesmo que esses usuários atendam aos critérios do segmento. No entanto, se um usuário já tiver uma sessão Android, os Cartões de Conteúdo com ações de clique específicas do iOS ainda serão criados, e o usuário poderá visualizar esses Cartões de Conteúdo no iOS assim que tiver uma sessão lá. Consulte [Criação de Cartão]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) para saber mais sobre quando os cartões são criados.  
+- **Sessões do SDK e criação de cartões**: Os Cartões de Conteúdo não são criados para usuários sem sessões do SDK, mesmo que esses usuários atendam aos critérios do segmento. No entanto, se um usuário já tiver uma sessão Android, os Cartões de Conteúdo com ações de clique específicas para iOS ainda serão criados, e o usuário poderá visualizar esses Cartões de Conteúdo no iOS assim que tiver uma sessão lá. Consulte [Criação de cartões]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) para saber mais sobre quando os cartões são criados.  
 
 ## Mensagem no app
 
@@ -112,5 +112,5 @@ Para obter mais assistência com a solução de problemas do Canva e da campanha
 - **Envio de mensagens no app**: No início da sessão, o SDK solicita que todas as mensagens no app elegíveis sejam enviadas ao dispositivo junto com seus disparadores, de modo que, se o evento for realizado durante a sessão, ele poderá receber a mensagem no app de forma rápida e confiável.
 - **Enviadas versus impressões**: Para mensagens no app, o conceito de "enviado" é diferente dos outros canais disponíveis. Para ver uma mensagem no app, o usuário precisa iniciar uma sessão, estar no público elegível e disparar a mensagem. Por isso, rastreamos as "impressões", pois elas são mais claras.
 - **Disparando**: Por padrão, as mensagens no app são disparadas por eventos registrados pelo SDK. Se quiser disparar mensagens no app por meio de eventos enviados pelo servidor, você também pode fazer isso por meio destes guias para [iOS]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=swift) e [Android]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android).
-- [Mensagens in-app do canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/#advancement-behavior-options): Essas mensagens aparecem na primeira vez em que o usuário abre o app (disparado pela sessão inicial) depois que a mensagem programada no componente Canva foi enviada a ele.
-- **Chamadas de Conteúdo Conectado**: Usar Conteúdo Conectado permite que você envie conteúdo dinâmico em mensagens. Quando você envia mensagens através de um canal como mensagens in-app, isso pode criar mais conexões simultâneas com os dispositivos dos seus usuários (as mensagens são enviadas uma a uma, em vez de em lotes). Para gerenciar isso, recomendamos [limitação de taxa]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting) para suas mensagens.
+- [Mensagens in-app do Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/#advancement-behavior-options): Essas mensagens aparecem na primeira vez em que o usuário abre o app (disparado pela sessão inicial) depois que a mensagem programada no componente Canva foi enviada a ele.
+- **Chamadas de Conteúdo Conectado**: Usar Conteúdo Conectado permite enviar conteúdo dinâmico em mensagens. Quando você envia mensagens através de um canal como mensagens in-app, isso pode criar mais conexões simultâneas com os dispositivos dos seus usuários (as mensagens são enviadas uma a uma, em vez de em lotes). Para gerenciar isso, recomendamos [limitação de taxa]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting) para suas mensagens.

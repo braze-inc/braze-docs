@@ -2,7 +2,7 @@
 nav_title: Stripo
 article_title: Stripo
 alias: /partners/stripo
-description: "이 참고 문서는 Braze와 Stripo 간의 파트너십을 설명합니다. Stripo는 인터랙티브 요소가 포함된 정교한 이메일을 만들기 위한 드래그 앤 드롭 이메일 템플릿 빌더입니다."
+description: "이 참고 기사는 Braze와 Stripo 간의 파트너십을 설명하며, 상호작용 요소가 포함된 정교한 이메일을 만들기 위한 드래그 앤 드롭 이메일 템플릿 빌더입니다."
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Stripo
 
-> [Stripo](https://stripo.email/)는 인터랙티브 요소가 포함된 반응형 이메일을 디자인하기 위한 드래그 앤 드롭 이메일 템플릿 빌더입니다. Stripo users can also edit in HTML and decide which elements to display or hide on various devices through the Stripo editor.
+> [Stripo](https://stripo.email/)는 상호작용 요소가 포함된 반응형 이메일을 디자인하기 위한 드래그 앤 드롭 이메일 템플릿 빌더입니다. Stripo users can also edit in HTML and decide which elements to display or hide on various devices through the Stripo editor.
 
 _This integration is maintained by Stripo._
 

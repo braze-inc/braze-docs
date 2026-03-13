@@ -6,7 +6,7 @@ This use case shows how you can use Braze features to build a booking reminder e
 
 Other benefits of creating this service include:
 - Sent messages will have full tracking and reporting.
-- Non-technical Braze users can update message content.
+- Non-technical company users can update message content.
 - Messages obey opt-in and opt-out statuses on user profiles per campaign configuration.
 - You can use both booking data and message interaction data to segment and target users for additional messaging. For example, you can retarget those who don't open the initial reminder message with an additional reminder before their appointment.
 

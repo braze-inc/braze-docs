@@ -99,10 +99,10 @@ Sie können die [Canvas-Eingabeeigenschaften]({{site.baseurl}}/user_guide/engage
 
 Wir beginnen unsere Anpassung, indem wir jeden Schritt der Nachrichten durchgehen, um den Content zu aktualisieren.
 
-1. Ersetzen Sie `!!YOURCATALOGHERE!!` durch unseren Katalognamen (“Straight_Leg_Pants”).
-2. Ersetzen Sie `[0]` durch die Indexnummer der Classic Straight Leg Jeans, die „9“ lautet, da die Jeans der zehnte Artikel im `items`-Array unseres Katalogs ist. (Arrays sind in Liquid nullindiziert, daher ist der erste Artikel `0` und nicht `1`.)
+1. Bitte ersetzen Sie dies`!!YOURCATALOGHERE!!` durch unseren Katalognamen. (“Straight_Leg_Pants”).
+2. Ersetzen Sie dies`[0]`durch die Indexnummer der Classic Straight Leg Jeans, die „9“ lautet, da die Jeans der zehnte Artikel im`items`Array unseres Katalogs ist. (Arrays sind in Liquid nullindiziert, daher ist der erste Artikel `0` und nicht `1`.)
 3. Wiederholen Sie die Schritte 1 und 2 für alle verbleibenden Nachrichtenschritte, einschließlich:
-    - Die Nachricht "In-Product Msg & E-Mail", die nach der eintägigen Verzögerung gesendet wird
+    - Die „In-Product Msg&E-Mail“-Nachricht, die nach einer Verzögerung von einem Tag versendet wird.
     - Die "Push+Email Alert"-Nachrichten, die an Benutzer gesendet werden, die keinen Kauf getätigt haben
 4. Aktualisieren Sie den Schritt Aktionspfade, indem Sie die Aktionsgruppe **Einkauf** auswählen. Wählen Sie dann **Gezielt einkaufen** und wählen Sie Classic Straight Leg Jeans als Produkt.
 

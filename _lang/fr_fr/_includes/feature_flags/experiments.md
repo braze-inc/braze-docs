@@ -74,13 +74,13 @@ Vous pouvez choisir d'écraser les propriétés par défaut que vous avez initia
 
 Pour modifier, ajouter ou supprimer des propriétés par défaut supplémentaires, modifiez l'indicateur de fonctionnalité lui-même à partir de **Messagerie** > **Indicateurs de fonctionnalité**. Lorsqu'une variante est désactivée, le SDK renvoie un objet de propriétés vide pour l'indicateur de fonctionnalité donné.
 
-![La section 'Variantes d'expériences' avec la clé variable 'link' remplacée par '/sales'.]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
+![La section « Variantes d'expérience » avec la clé variable « lien » remplacée par « /ventes ».]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
 
 ### Étape 4 : Choisir les utilisateurs à cibler
 
 Utilisez l'un de vos segments ou filtres pour choisir vos [utilisateurs cibles]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). Par exemple, vous pouvez utiliser le filtre **Variante d'indicateur de fonctionnalité reçue** pour recibler les utilisateurs qui ont déjà reçu un test A/B.
 
-![La page "Cible" d'une expérience de drapeau de fonctionnalité avec "Variante de drapeau de fonctionnalité reçue" en surbrillance dans la barre de recherche du groupe de filtres.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
+![La page « Cible » dans une expérience de drapeau de fonctionnalité avec « Variante de drapeau de fonctionnalité reçue » mise en évidence dans la barre de recherche du groupe de filtres.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
 
 {% alert note %}
 L'appartenance à un segment est calculée lorsque les indicateurs de fonctionnalité sont actualisés pour un utilisateur donné. Les modifications sont mises à disposition après que votre application actualise les indicateurs de fonctionnalités, ou lorsqu'une nouvelle session est lancée.

@@ -64,9 +64,9 @@ Les segments de l'appel d'offres sont évalués dans un ordre spécifique. Les u
 | Groupe RFM          | Description du segment                                                                 | Rang de récence (R) | Rang de fréquence (F) | Rang monétaire (M) |
 |--------------------|-------------------------------------------------------------------------------------|------------------|--------------------|-------------------|
 | Champions          | Le segment d'utilisateurs le plus précieux avec les meilleurs scores dans toutes les catégories.                   | 3                | 2-3                | 2-3               |
-| Utilisateurs fidèles        | Utilisateurs dont la récence et la fréquence sont élevées. Leur valeur monétaire peut être inférieure à celle des champions. | 2-3              | 2-3                | 1-3               |
+| Utilisateurs fidèles        | Utilisateurs ayant une récurrence et une fréquence élevées. Leur valeur monétaire peut être inférieure à celle des champions. | 2-3              | 2-3                | 1-3               |
 | Loyalistes potentiels| Utilisateurs ayant acheté récemment avec une fréquence modérée et une valeur monétaire modérée.   | 3                | 1-3                | 1-3               |
-| Prometteur          | Les utilisateurs qui ont effectué un premier achat récent et de grande valeur, mais qui n'ont pas encore établi une fréquence d'achat élevée. | 3                | 0-3                | 1-3               |
+| Prometteur          | Utilisateurs ayant effectué un premier achat récent et de grande valeur, mais n'ayant pas encore établi une fréquence d'achat élevée. | 3                | 0-3                | 1-3               |
 | Nouveau client       | Utilisateurs ayant effectué leur premier achat très récemment.                             | 3                | 0-3                | 0-3               |
 | Besoin d'attention  | Utilisateurs dont la récence est supérieure à la moyenne, mais dont la fréquence d'achat ou la valeur monétaire sont inférieures à la moyenne. | 2-3              | 0-3                | 0-3               |
 | Ne pas les perdre   | Utilisateurs qui avaient auparavant une valeur élevée avec de bons scores de fréquence et monétaires, mais qui n'ont pas acheté depuis longtemps. | 0-1              | 2-3                | 2-3               |

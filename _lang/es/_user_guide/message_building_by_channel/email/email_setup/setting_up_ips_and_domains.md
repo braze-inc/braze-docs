@@ -1,6 +1,6 @@
 ---
-nav_title: Configurar IP y dominios
-article_title: Configurar IP y dominios
+nav_title: Configurar direcciones IP y dominios
+article_title: Configurar direcciones IP y dominios
 page_order: 0
 page_type: tutorial
 channel: email
@@ -8,7 +8,7 @@ description: "Este artículo le mostrará cómo configurar sus IPs y Dominios pa
 
 ---
 
-# Configurar IP y dominios
+# Configurar direcciones IP y dominios
 
 {% multi_lang_include video.html id="iTm3yQkJ0UU" align="right"  %}
 
@@ -34,7 +34,7 @@ Una vez configurados sus IP, dominios, subdominios y grupos de IP, le enviaremos
 
 {% multi_lang_include dns_records.md %}
 
-Después de que Braze te proporcione tus registros de DNS, añádelos en cuanto tu equipo de TI o de DNS pueda hacerlo. La verificación del dominio está limitada en el tiempo, y si los registros se añaden demasiado tarde, la verificación puede fallar aunque los registros de DNS se resuelvan correctamente más adelante. Si tus registros de DNS parecen correctos pero falla la verificación, ponte en contacto con el equipo de incorporación o soporte de Braze para reiniciar la verificación.
+Una vez que Braze te haya proporcionado tus registros de DNS, añádelos tan pronto como tu equipo de DNS o de TI pueda hacerlo. La verificación del dominio tiene un plazo límite y, si los registros se añaden demasiado tarde, la verificación puede fallar incluso si los registros de DNS se resuelven correctamente más adelante. Si tus registros de DNS parecen correctos pero la verificación falla, ponte en contacto con el equipo de incorporación o el equipo de soporte de Braze para reiniciar la verificación.
 
 ### Próximos pasos
 
@@ -44,21 +44,20 @@ Comprobaremos su configuración y validaremos toda la información en nuestros s
 
 Este método establecerá un dominio de envío, un dominio de seguimiento y una IP en total para una empresa. Si tienes pensado configurar más, consulta con el equipo de incorporación de Braze (método 1).
 
-{% alert important %}
-Esta función de autoservicio para configurar el correo electrónico está actualmente en fase beta. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en la versión beta.<br>Si utiliza la función de configuración de correo electrónico de autoservicio, asegúrese de consultar también con el equipo Braze Onboarding.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This self-service email setup feature' type='beta' %}
+<br>Si utiliza la función de configuración de correo electrónico de autoservicio, asegúrese de consultar también con el equipo Braze Onboarding.
 
 ### Requisitos previos
 
 Para utilizar el autoservicio de configuración de correo electrónico, debe cumplir los siguientes requisitos previos:
 
 1. Usted es un nuevo cliente en proceso de incorporación.
-2. Tiene el permiso a nivel de empresa "Puede gestionar la configuración de la empresa".
+2. Tienes el permiso a nivel de empresa «Gestionar la configuración de la empresa».
 
 ### Paso 1: Comenzar la configuración
 
 1. Vaya a **Configuración** > **Configuración de administración** en **Configuración de la empresa**. 
-2. A continuación, seleccione la pestaña **Verificación del remitente**. Para ver esta pestaña, debes tener el permiso de nivel de empresa "Puede administrar configuración de empresa".
+2. A continuación, seleccione la pestaña **Verificación del remitente**. Para ver esta pestaña, debes tener el permiso de nivel de empresa «Administrar la configuración de la empresa».
 3. Haga clic en el botón **Iniciar configuración**.
 
 ### Paso 2: Añadir y verificar un dominio de envío

@@ -55,7 +55,7 @@ As tabelas a seguir descrevem os dois tipos de integrações suportadas entre o 
       <td>Olho de águia</td>
       <td>Para Braze API</td>
       <td>
-        Envie dados de fidelidade para os perfis de usuário do Braze como atributos personalizados por meio de eventos personalizados. No Braze, os dados ingeridos podem ser usados para:
+        Envie dados de fidelidade para os perfis de usuários do Braze como atributos personalizados por meio de eventos personalizados. No Braze, os dados ingeridos podem ser usados para:
         <ul>
           <li>segmentar usuários, disparar campanhas</li>
           <li>personalizar envios de mensagens</li>
@@ -115,7 +115,7 @@ Para saber mais sobre os dados personalizados que podem ser enviados ao Braze co
 
 Atualmente, os conectores de entrada e saída só podem ser configurados via API com suporte direto da equipe do Eagle Eye - no entanto, uma opção de autoatendimento dentro do dashboard do AIR está a caminho!
 
-Ao trabalhar com a equipe do Eagle Eye, você concluirá o seguinte:
+Ao trabalhar com a sua equipe Eagle Eye, você concluirá o seguinte:
 
 ### Etapa 1: Fornecer detalhes de configuração
 
@@ -123,7 +123,7 @@ Primeiro, você fornecerá os seguintes detalhes à sua equipe Eagle Eye:
 
 | O usuário fornece            | Descrição |
 |------------------------|-------------|
-| Credenciais da API do Braze  | Compartilhe o endpoint Braze REST, o identificador do app e a chave de API com segurança com o seu contato Eagle Eye. |
+| Credenciais da API do Braze  | Compartilhe seu endpoint Braze REST, identificador de aplicativo e chave de API com segurança com seu contato Eagle Eye. |
 | Correspondência de identificadores    | Determine e compartilhe o identificador de usuário principal para atualizações de perfil que é comum no AIR e no Braze, como ID externo ou e-mail. |
 | Chave de autenticação               | Determine e compartilhe uma chave de autenticação secreta para cada conector de entrada e saída. |
 | Código da moeda          | Compartilhe o código de moeda de 3 dígitos para exibir valores monetários de compra (e.g., USD). |
@@ -131,7 +131,7 @@ Primeiro, você fornecerá os seguintes detalhes à sua equipe Eagle Eye:
 
 ### Etapa 2: Configurar o Eagle Eye Connect 
 
-Sua equipe da Eagle Eye configurará o Eagle Eye Connect usando os detalhes fornecidos, juntamente com as credenciais exclusivas do AIR API e os eventos de saída para os conectores.
+Sua equipe Eagle Eye configurará o Eagle Eye Connect usando os detalhes fornecidos, juntamente com as credenciais exclusivas do AIR API e os eventos de saída para os conectores.
 
 ### Etapa 3: Configurar ações de comportamento social no AIR
 
@@ -146,7 +146,7 @@ No Braze, você concluirá o seguinte:
 
 ### Etapa 5: Teste sua integração
 
-Faça chamadas API no AIR e observe o fluxo de dados do evento em seu Braze workspace.Validate dados recebidos do AIR e confirme se as atribuições estão sendo atualizadas conforme o esperado.  
+Faça chamadas de API no AIR e observe o fluxo de dados do evento em seu Braze workspace.Validate dados recebidos do AIR e confirme se as atribuições estão sendo atualizadas conforme o esperado.  
 
 Além disso, adicione usuários aos públicos e confirme se as recompensas são emitidas no AIR.
 

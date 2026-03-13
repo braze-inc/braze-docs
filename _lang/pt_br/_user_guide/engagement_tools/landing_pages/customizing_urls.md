@@ -66,11 +66,11 @@ Não, você não pode usar subdomínios que já estejam em uso. Embora esses sub
 
 ### Por que meu domínio personalizado está preso em "Conectando" apesar dos registros DNS válidos?
 
-Se o seu domínio personalizado mostrar todos os registros DNS como "Conectado", mas o status do domínio permanecer em "Conectando" por mais de quatro horas, sua organização poderá estar usando registros CAA (Autorização de Autoridade de Certificação) ou retenções de zona do Cloudflare que impedem o Braze de proteger sua página.
+Se o seu domínio personalizado mostrar todos os registros DNS como "Conectado", mas o status do domínio permanecer em "Conectado" por mais de quatro horas, sua organização poderá estar usando registros CAA (Autorização de Autoridade de Certificação) ou retenções de zona do Cloudflare que impedem o Braze de proteger sua página.
 
 #### Registros da CAA
 
-Os registros CAA restringem quais autoridades de certificação podem emitir certificados SSL para o seu domínio. Se os seus registros CAA não incluírem a LetsEncrypt, o Braze (por meio da Cloudflare) não poderá emitir o certificado SSL necessário.
+Os registros CAA restringem quais autoridades de certificação podem emitir certificados SSL para o seu domínio. Se seus registros CAA não incluírem a LetsEncrypt, o Braze (por meio da Cloudflare) não poderá emitir o certificado SSL necessário.
 
 Para resolver isso, peça à sua equipe de TI para adicionar um registro CAA ao seu subdomínio com os seguintes valores:
 - **Tipo de registro:** CAA
@@ -86,5 +86,5 @@ Para resolver isso, peça à equipe de TI para liberar temporariamente a retenç
 
 #### Reiniciar o processo de validação
 
-Depois de resolver qualquer um dos problemas, exclua e recrie seu domínio personalizado no dashboard do Braze para reiniciar o processo de validação.
+Depois de resolver um dos problemas, exclua e recrie seu domínio personalizado no dashboard do Braze para reiniciar o processo de validação.
 

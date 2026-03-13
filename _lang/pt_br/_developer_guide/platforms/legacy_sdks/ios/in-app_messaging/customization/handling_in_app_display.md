@@ -1,6 +1,6 @@
 ---
-nav_title: Manuseio de telas personalizadas
-article_title: Personalize o envio de mensagens no app para iOS
+nav_title: Manipulação de exibição personalizada
+article_title: Personalize a manipulação de exibição de mensagens no app para iOS
 platform: iOS
 page_order: 4
 description: "Este artigo de referência aborda o tratamento de exibição personalizada de mensagens no app para o seu aplicativo iOS."
@@ -61,7 +61,7 @@ Você pode personalizar o envio de mensagens no app implementando esse método d
 | Objective C: `ABKDiscardInAppMessage`<br>Swift: `discardInAppMessage`| A mensagem será descartada e não será exibida. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Você pode usar o método delegado `beforeInAppMessageDisplayed:` para adicionar a lógica de exibição de mensagens no app, personalizar as mensagens no app antes que o Braze as exiba ou aceitar a lógica de exibição de mensagens no app e a interface do usuário completamente.
+Você pode usar o método de delegado `beforeInAppMessageDisplayed:` para adicionar lógica de exibição de mensagens no app, personalizar mensagens no app antes que a Braze as exiba ou optar por não usar a lógica e a interface de exibição de mensagens no app da Braze.
 
 Confira nosso [aplicativo de amostra](https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/AppDelegate.m) para obter um exemplo de implementação.
 

@@ -16,7 +16,7 @@ channel:
 
 MMS는 현재 미국 짧은 코드(5-6자리 숫자), 미국 및 캐나다 긴 코드(10자리 숫자), 그리고 미국 및 캐나다 고객 번호를 지원합니다. MMS는 특정 서비스 제공업체에 의해 무료 전화번호에 대해 지원됩니다. 
 
-미국 및 캐나다 외부의 번호로 MMS를 보내는 것은 가능하지만, MMS 메시지는 미디어 자산에 대한 링크가 포함된 SMS 메시지로 변환됩니다. To read more, refer to [Short and long codes]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes/).
+미국과 캐나다 외부의 번호로 MMS를 보내는 것은 가능하지만, MMS 메시지는 미디어 자산에 대한 링크가 포함된 SMS 메시지로 변환됩니다. To read more, refer to [Short and long codes]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes/).
 
 ## MMS 단축 코드
 

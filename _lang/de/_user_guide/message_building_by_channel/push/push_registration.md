@@ -51,6 +51,10 @@ Eine App oder Website kann nur ein Push-Abonnement pro Gerät haben. Wenn sich a
 
 Da es für Push-Anbieter (APNs/FCMs) keine Möglichkeit gibt, zwischen mehreren Benutzern auf einem Gerät zu unterscheiden, übergeben wir das Push-Token an den zuletzt eingeloggten Benutzer, um zu bestimmen, welcher Benutzer auf dem Gerät für Push angesprochen werden soll.
 
+{% alert tip %}
+Sollten Sie eine Fehlermeldung unter **„Kontakteinstellungen** > **Push-Changelog“** sehen, referenzieren Sie Erläuterungen und weitere Schritte unter [„Häufige Push-Fehlermeldungen]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/)“.
+{% endalert %}
+
 ## Push-Token-Registrierung
 
 Jede Geräteplattform handhabt die Push-Token-Registrierung anders. Im Folgenden finden Sie plattformspezifische Details:
@@ -76,7 +80,7 @@ iOS erzeugt nicht automatisch Push-Tokens für eine App, wenn diese installiert 
 | Version                         | Vorläufige Autorisierung? | Details                                                                                                                                                     |
 |------------------------------------|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **iOS 12**      | Ja                         | Wenn ein Nutzer:in für Push-Benachrichtigungen optiert, erhalten Sie eine Standardberechtigung, die es Ihnen erlaubt, [Push-Benachrichtigungen im Vordergrund](#foreground-vs-background) zu senden. Sie können jedoch auch eine [vorläufige Autorisierung]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push) anfragen, mit der Sie [Push-Benachrichtigungen](#foreground-vs-background) im Hintergrund direkt an das Notification Center senden können. |
-| **iOS 11 und höher** | Kein:e                          | Alle Nutzer:innen müssen sich ausdrücklich für den Empfang von Push-Benachrichtigungen entscheiden. Ein Push-Token wird erst generiert, nachdem die Erlaubnis erteilt wurde.                                     |
+| **iOS 11 oder früher** | Kein:e                          | Alle Nutzer:innen müssen sich ausdrücklich für den Empfang von Push-Benachrichtigungen entscheiden. Ein Push-Token wird erst generiert, nachdem die Erlaubnis erteilt wurde.                                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
@@ -119,7 +123,7 @@ Wenn ein:e Nutzer:in eine neue Anwendung öffnet und den Push-Zugriff über eine
 
 Wenn wir eine Kampagne starten möchten, erstellen wir in Braze eine Kampagne, die eine Push-Nutzlast erzeugt, die an den Push-Anbieter gesendet wird. Von dort aus stellt der Anbieter die Push-Nutzdaten dem Gerät des Nutzers oder der Nutzerin zu und das SDK übergibt den Messaging-Status an Braze.
 
-![Ein Flussdiagramm, das den oben erwähnten Push-Prozess zwischen Braze, dem Kunden und dem Apple Push-Benachrichtigungsdienst oder Firebase Cloud Messaging abbildet.]({% image_buster /assets/img/push_process.png %})
+![Ein Flussdiagramm, das die oben genannte Push-Prozesse zwischen Braze, der Kund:in und dem Apple Push Notification Service oder Firebase Cloud Messaging abbildet.]({% image_buster /assets/img/push_process.png %})
 
 | Registrierungsschritte | Messaging-Schritte |
 | ------------------ | --------------- |

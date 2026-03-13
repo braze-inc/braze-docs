@@ -105,7 +105,7 @@ Für das Analytics Tracking protokolliert jedes `<a>` oder `<button>` Element in
 
 {% details HTML In App-Message Templates %}
 
-Wir haben eine Reihe von HTML5-Templates für In-App-Nachrichten entworfen, die Ihnen den Einstieg erleichtern. In unserem [GitHub-Repository](https://github.com/braze-inc/in-app-message-templates) finden Sie eine ausführliche Anleitung, wie Sie diese Templates verwenden und an Ihre Bedürfnisse anpassen können.
+Wir haben eine Reihe von HTML5-Templates für In-App-Nachrichten entworfen, die Ihnen den Einstieg erleichtern. Sehen Sie sich unser [GitHub-Repository](https://github.com/braze-inc/in-app-message-templates) an, das detaillierte Anweisungen zur Verwendung und Anpassung dieser Templates an Ihre Bedürfnisse enthält.
 
 **Anpassbare Features**
 
@@ -147,7 +147,7 @@ Für alle in der folgenden Tabelle aufgeführten Arten von In-App-Nachrichten ge
 Braze empfiehlt Ihnen, Ihre Bilder und HTML-Assets aus mehreren Gründen so klein wie möglich zu zippen:
 
 - Kleinere HTML- und Bildnachrichten werden schneller heruntergeladen und für Ihre Kund:innen schneller und zuverlässiger angezeigt.
-- Kleinere HTML- und Bildnachrichten halten die Kosten für die Daten Ihrer Kund:innen ebenfalls niedrig. In-App-Nachrichten von Braze werden bei Sitzungsbeginn im Hintergrund heruntergeladen, so dass sie in Realtime auf der Grundlage der von Ihnen ausgewählten Kriterien getriggert werden können. Wenn Sie also 10 In-App-Nachrichten im HTML-Format mit einer Größe von je 1 MB haben, fallen für alle Ihre Kunden 10 MB an Daten an, selbst wenn sie diese Nachrichten nie getriggert haben. Dies kann sich im Laufe der Zeit schnell summieren, auch wenn die In-App-Nachrichten zwischengespeichert und nicht von Sitzung zu Sitzung erneut heruntergeladen werden.
+- Kleinere HTML- und Bildnachrichten halten die Kosten für die Daten Ihrer Kund:innen ebenfalls niedrig. In-App-Nachrichten von Braze werden bei Sitzungsbeginn im Hintergrund heruntergeladen, so dass sie in Realtime auf der Grundlage der von Ihnen ausgewählten Kriterien getriggert werden können. Wenn Sie also 10 In-App-Nachrichten im HTML-Format mit einer Größe von je 1 MB haben, fallen für alle Ihre Kunden 10 MB an Daten an, selbst wenn sie diese Nachrichten nie getriggert haben. Das kann sich im Laufe der Zeit schnell summieren, auch wenn die In-App-Nachrichten zwischengespeichert und nicht von Sitzung zu Sitzung erneut heruntergeladen werden.
 
 Die folgenden Strategien sind hilfreich, um die Dateigrößen gering zu halten:
 

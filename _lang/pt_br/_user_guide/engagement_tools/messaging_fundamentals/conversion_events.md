@@ -3,7 +3,7 @@ nav_title: Eventos de conversão
 article_title: Eventos de conversão
 page_order: 3
 page_type: reference
-description: "Este artigo de referência define eventos de conversão, como usá-los para definir suas métricas de sucesso no Braze e como usar esses eventos para ver quão engajados seus usuários estão."
+description: "Este artigo de referência define eventos de conversão, como usá-los para definir suas métricas de sucesso no Braze e como usar esses eventos para ver quão engajados estão seus usuários."
 tool:
     - Campaigns
     - Canvas
@@ -11,11 +11,11 @@ tool:
 
 # Eventos de conversão
 
-> Um evento de conversão é um tipo de métrica de sucesso que rastreia se um destinatário do seu envio de mensagens realiza uma ação de alto valor em um determinado período de tempo após receber seu engajamento. Use esses eventos para garantir que você está coletando informações relevantes e úteis que pode usar posteriormente para obter insights para sua campanha ou Canvas.
+> Um evento de conversão é um tipo de métrica de sucesso que rastreia se um destinatário do seu envio de mensagens realiza uma ação de alto valor em um determinado período de tempo após receber seu engajamento. Use esses eventos para garantir que você está coletando informações relevantes e úteis que poderá usar posteriormente para obter insights sobre sua campanha ou Canvas.
 
 ## Como funciona?
 
-Para uma campanha de férias personalizada direcionada a usuários ativos, um evento de conversão de **Iniciar uma Sessão** dentro de dois ou três dias pode ser apropriado, pois permite que você tenha uma noção do engajamento do usuário ao receber sua mensagem. Você também pode selecionar eventos adicionais como **Faz Pedido**, **Fazer Upgrade do App**, ou qualquer um dos seus eventos personalizados como eventos de conversão.
+Para uma campanha de férias personalizada direcionada a usuários ativos, um evento de conversão de **Iniciar uma Sessão** dentro de dois ou três dias pode ser apropriado, pois permite que você tenha uma noção do engajamento do usuário ao receber sua mensagem. Você também pode selecionar eventos adicionais como **Faz Pedido**, **Fazer Upgrade do App** ou qualquer um dos seus eventos personalizados como eventos de conversão.
 
 {% alert tip %}
 Para mais informações sobre conversões, confira nosso [curso do Braze Learning](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) sobre configuração de campanhas.
@@ -27,8 +27,8 @@ Eventos de conversão atribuem ações do usuário a um ponto de engajamento. Ob
 
 - **Campanhas de canal único**: As conversões ocorrem por usuário, não por dispositivo. Dentro de um único canal, um usuário converte apenas uma vez por evento de conversão, mesmo que uma mensagem seja enviada para vários dispositivos. Por exemplo, se uma campanha tem apenas um evento de conversão definido como "Faz qualquer compra" e um usuário faz duas compras separadas dentro do prazo de conversão, o Braze conta apenas uma conversão.
 - **Campanhas multicanal**: Para campanhas multicanal, cada canal tem sua própria oportunidade de conversão. Um usuário pode converter uma vez por canal após receber uma mensagem nesse canal. Isso significa que se um usuário recebe mensagens em vários canais (por exemplo, tanto e-mail quanto push) e realiza a ação de conversão, o Braze conta uma conversão para cada canal, o que pode resultar em taxas de conversão superiores a 100%.
-- Se um usuário realizar um evento de conversão dentro dos prazos de conversão de duas campanhas ou Canvases separadas que recebeu, a conversão é registrada em ambas.
-- Um usuário conta como convertido se realizou o evento de conversão específico na janela, mesmo que não tenha aberto ou clicado na mensagem.
+- Se um usuário realizar um evento de conversão dentro dos prazos de conversão de duas campanhas ou Canvases separadas que recebeu, a conversão será registrada em ambas.
+- Um usuário conta como convertido se realizar o evento de conversão específico na janela, mesmo que não tenha aberto ou clicado na mensagem.
 - Para Canvases, o rastreamento de conversão funciona com base no prazo final de conversão que começa quando um usuário entra no Canvas, não no tempo de mensagens individuais. O Braze conta conversões mesmo durante períodos de atraso entre mensagens no Canvas.
 
 ### Evento de conversão primária
@@ -51,7 +51,7 @@ Se você abortar mensagens usando a tag Liquid `abort`, o Braze aborta mensagens
 
 [Crie uma campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign) para seu canal de envio de mensagens desejado. Após configurar as mensagens e o cronograma da sua campanha, você pode adicionar até quatro eventos de conversão para rastreamento.
 
-Use quantos eventos de conversão forem necessários. Adicionar um segundo ou terceiro evento de conversão enriquece significativamente seu relatório. Por exemplo, para uma campanha direcionada a usuários que estão se afastando, adicionar um evento de conversão secundário junto com o evento de conversão primária **Inicia Sessão** ajuda você a entender quão eficaz sua campanha é em trazer os usuários de volta ao seu aplicativo. 
+Use quantos eventos de conversão forem necessários. Adicionar um segundo ou terceiro evento de conversão enriquece significativamente seu relatório. Por exemplo, para uma campanha direcionada a usuários que estão se afastando, adicionar um evento de conversão secundário junto com o evento de conversão primária **Inicia Sessão** ajuda você a entender quão eficaz sua campanha é em trazer usuários de volta ao seu aplicativo. 
 
 ### Etapa 2: Adicione os eventos de conversão
 
@@ -60,8 +60,8 @@ Primeiro, selecione o tipo geral de evento que você gostaria de usar:
 | Tipo de Evento de Conversão   | Descrição                |
 |-------------------------|----------------------------|
 | **Inicia sessão**      | Um usuário é contado como convertido quando abre qualquer um dos apps que você especificar (o padrão é todos os apps no espaço de trabalho).|
-| **Faz compra**      | Um usuário é contado como tendo convertido quando registra um [A evento de Compra]({{site.baseurl}}/api/objects_filters/purchase_object/). Isso rastreia qualquer compra por padrão, ou você pode especificar um produto específico.|
-| **Ordem dos locais**        | Um usuário é contado como tendo convertido quando dispara o [A evento recomendado de Pedido Realizado de eCommerce]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events?tab=ecommerce.order_placed#ecommerce-recommended-events). Isso rastreia qualquer pedido por padrão, ou você pode filtrar por um produto específico.|
+| **Faz compra**      | Um usuário é contado como tendo convertido quando registra um [evento de Compra]({{site.baseurl}}/api/objects_filters/purchase_object/). Isso rastreia qualquer compra por padrão, ou você pode especificar um produto específico.|
+| **Ordem dos locais**        | Um usuário é contado como tendo convertido quando dispara o [evento recomendado de Pedido Realizado]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events?tab=ecommerce.order_placed#ecommerce-recommended-events). Isso rastreia qualquer pedido por padrão, ou você pode filtrar por um produto específico.<br><br>O evento "Faz Pedido" está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar desse acesso antecipado. |
 | **Realiza evento personalizado**| Um usuário é contado como convertido quando realiza um de seus eventos personalizados existentes (não há padrão, é necessário especificar o evento).|
 | **Faz upgrade de app**         | Um usuário é contado como convertido quando faz upgrade da versão do aplicativo em qualquer um dos aplicativos que você especificar (o padrão é todos os aplicativos no espaço de trabalho). A Braze realiza uma comparação numérica de melhores esforços para determinar se a mudança foi um upgrade. Versões não numéricas são contadas como conversões se a versão mudar.|
 | **Abre e-mail**         | Um usuário é contado como convertido quando abre o e-mail (somente para campanhas de e-mail).|

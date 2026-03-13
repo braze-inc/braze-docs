@@ -21,6 +21,10 @@ description: "このリファレンス記事では、オブジェクト配列を
 
 配列内の項目の更新または削除を行うには、キーと値を使用して項目を特定する必要があります。したがって、配列内の各項目に一意の識別子を含めることを検討してください。一意性の範囲は配列のみに限定されるため、配列から特定のオブジェクトの更新および削除を行う場合に役立ちます。これは Braze での強制事項ではありません。
 
+{% alert important %}
+リクエスト内の階層化カスタム属性に無効な値（無効な時刻形式`null`や値など）が含まれている場合、Brazeはそのリクエスト内のすべての階層化カスタム属性の更新を処理から除外する。これは、その特定の属性内のすべての階層化構造に適用されます。送信前に、階層化カスタム属性内のすべての値が有効であることを確認せよ。詳細については、[「ユーザーの作成と更新」]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#how-does-userstrack-handle-invalid-nested-custom-attributes)を参照せよ。
+{% endalert %}
+
 {% alert tip %}
 ユーザー属性オブジェクトにオブジェクトの配列を使用する方法については、「[ユーザー属性オブジェクトを]({{site.baseurl}}/api/objects_filters/user_attributes_object)」を参照してください。
 {% endalert %}
@@ -170,9 +174,19 @@ description: "このリファレンス記事では、オブジェクト配列を
 {% endtab %}
 {% endtabs %}
 
+### 処理順序
+
+単一`/users/track`のリクエストが同一の配列属性に対して、`$remove`\``$add``、``、```$update`操作を含む場合、Brazeは次の順序で処理する：
+
+1. `$add`
+2. `$remove`
+3. `$update`
+
+がより先に実行`$add`される`$remove`ため、単一のリクエスト内でを実行`$remove`した後で`$add`を実行するアップサート機構として使用することはできない。まず処理`$add`が行われ、その後でアイテムが`$remove`削除される。アップサートするには、の前に別のリクエスト`$add`で`$remove`を送信する。
+
 ### タイムスタンプ
 
-タイムスタンプのようなフィールドをオブジェクトの配列に含める場合は、プレーンな文字列やUnixのエポック整数ではなく、`$time` フォーマットを使用する。
+オブジェクトの配列にタイムスタンプのようなフィールドを含める場合、単純な文字列やUnixエポック整数ではなく、\``$time``形式を使用する。
 
 ```json
 {
@@ -194,7 +208,7 @@ description: "このリファレンス記事では、オブジェクト配列を
 ```
 
 {% alert tip %}
-詳しくは、[階層化カスタム属性を]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support)参照のこと。
+詳細については、[階層化カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support)を見よ。
 {% endalert %}
 
 ## SDK の例
@@ -579,7 +593,7 @@ I have a {{pet.type}} named {{pet.name}}! They are a {{pet.breed}}.
 
 ## データポイント
 
-データポイントは、プロパティを作成するか、更新するか、削除するかによって、異なる形で記録される。
+プロパティの作成、更新、削除によって、データポイントの記録方法は異なる。
 
 {% tabs local %}
 {% tab Create %}
@@ -645,7 +659,7 @@ I have a {{pet.type}} named {{pet.name}}! They are a {{pet.breed}}.
 {% endtab %}
 {% tab Remove %}
 
-配列からオブジェクトを削除すると、送信した削除基準ごとに1つのデータポイントが記録される。次の例では、このステートメントで複数の犬を削除できるにもかかわらず、データポイントが 3 消費されます。
+配列からオブジェクトを削除すると、送信した削除条件ごとに1つのデータポイントが記録される。次の例では、このステートメントで複数の犬を削除できるにもかかわらず、データポイントが 3 消費されます。
 
 ```json
 {

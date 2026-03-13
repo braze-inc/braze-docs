@@ -10,7 +10,7 @@ tool:
 - Canvas
 ---
 
-# Erstellen Sie eine E-Mail per Drag-and-Drop
+# Erstellen Sie eine E-Mail per Drag-and-Drop.
 
 > Mit dem Drag-and-Drop-Editor können Sie vollständig benutzerdefinierte und personalisierte E-Mail-Nachrichten für Kampagnen oder Canvases erstellen, ohne HTML für den Aufbau Ihres E-Mail-Textes zu verwenden.
 
@@ -73,7 +73,7 @@ Obwohl der Drag-and-Drop-Editor Ihren Arbeitsablauf mit diesen Blöcken vereinfa
 
 ## Verwenden des Drag-and-Drop-Editors
 
-Sie sind sich nicht sicher, ob Ihre E-Mail-Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich besser für einzelne, gezielte Messaging-Kampagnen, während Canvase besser für mehrstufige Nutzer:innen geeignet sind.
+Sie sind sich nicht sicher, ob Ihre E-Mail-Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich besser für einzelne, zielgerichtete Messaging-Kampagnen, während Canvases besser für mehrstufige User Journeys geeignet sind.
 
 Wenn Sie entschieden haben, wo Sie die Nachricht verfassen möchten, können Sie Ihre E-Mail per Drag-and-Drop erstellen.
 
@@ -99,7 +99,7 @@ Wählen Sie dann **E-Mail-Text bearbeiten**, um mit der Gestaltung der E-Mail-St
 
 ### Schritt 2: E-Mail erstellen
 
-Die Drag-and-Drop-Bearbeitung ist in drei Bereiche unterteilt: **Senden von Einstellungen**, **Inhalten** und **Vorschau & Test**. Die eigentliche Arbeit an Ihrem E-Mail-Text geschieht im Bereich **Inhalt**. Bevor Sie Ihre E-Mail erstellen, sollten Sie sich über die wichtigsten Komponenten im Klaren sein, die bei der Erstellung Ihrer E-Mail eine Rolle spielen. Näheres finden Sie unter [Der Editor](#about-the-editor).
+Die Drag-and-Drop-Bearbeitung ist in drei Bereiche unterteilt: **Einstellungen**, **Inhalt** und **Vorschau** **senden****&**. Die eigentliche Arbeit an Ihrem E-Mail-Text geschieht im Bereich **Inhalt**. Bevor Sie Ihre E-Mail erstellen, sollten Sie sich über die wichtigsten Komponenten im Klaren sein, die bei der Erstellung Ihrer E-Mail eine Rolle spielen. Näheres finden Sie unter [Der Editor](#about-the-editor).
 
 Wenn Sie fertig sind, können Sie mit den Content-Blöcken per Drag-and-Drop Ihre E-Mail erstellen.
 
@@ -117,7 +117,7 @@ Während Sie Ihre E-Mail erstellen, können Sie zwischen einer Desktop- und eine
 {% alert tip %}
 Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein, und die KI generiert menschenähnliche Marketingtexte für Ihr Messaging.
 
-![Copywriter Button, der sich im Content Panel neben den Style Settings im Drag-and-Drop-Editor befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
+![Button „Copywriter“, der im Inhaltspanel neben den Stileinstellungen im Drag-and-Drop-Editor steht.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
 
 ### Schritt 3: Sendeinformationen hinzufügen
@@ -169,11 +169,11 @@ Sie können auch **Vorschau-Link** auswählen, um einen Vorschau-Link zu erstell
 
 Beachten Sie, dass Änderungen an einer E-Mail-Vorlage sich nicht in einem zuvor erstellten Link widerspiegeln. Sie müssen eine neue Vorschau des Links erstellen, um die Änderungen zu sehen.
 
-![E-Mail Vorschau mit einem Button "Vorschau-Link kopieren" und kopieren Sie den generierten Link.]({% image_buster /assets/img/dnd_email_link_preview.png %})
+![E-Mail-Vorschau mit einem Button zum „Kopieren des Vorschau-Links“ und Kopieren des generierten Links.]({% image_buster /assets/img/dnd_email_link_preview.png %})
 
 #### Verwenden Sie Inbox Vision
 
-Mit Inbox Vision können Sie E-Mail Kampagnen aus der Perspektive von E-Mail Clients und Mobilgeräten betrachten. Um Ihre E-Mail Nachrichten mit Inbox Vision zu testen, wählen Sie **Inbox Vision** im Bereich **Vorschau & Test** und wählen Sie **Inbox Vision ausführen**.
+Mit Inbox Vision können Sie E-Mail Kampagnen aus der Perspektive von E-Mail Clients und Mobilgeräten betrachten. Um Ihre E-Mail-Nachricht mit Inbox Vision zu testen, wählen Sie im Abschnitt **„Vorschau&testen“** **die Option „Inbox Vision“** aus und klicken Sie auf **„Inbox Vision ausführen**“.
 
 {% alert tip %}
 Hintergrundbilder in E-Mail-Nachrichten können manchmal dazu führen, dass weiße Linien oder Unterbrechungen zwischen den Bildern erscheinen. Daher ist es wichtig, die Feinheiten Ihrer E-Mail-Nachricht zu testen und zu überprüfen.
@@ -223,11 +223,11 @@ Um die Auffüllung anzupassen, blättern Sie nach unten zu **Blockoptionen** und
 
 Sie können ein Hintergrundbild zu Ihrer Zeilenkonfiguration hinzufügen, um mehr Design und visuelle Inhalte in Ihre Kampagnen einzubinden.
 
-### Attribut "Sprache
+### Sprachattribut
 
 Sie können das Attribut Sprache festlegen, indem Sie auf den Tab **Einstellungen** gehen und die gewünschte Sprache auswählen. Sie können auch das Attribut {%raw%} `{{${language}}}` {%endraw%} targeting, wenn die Nachricht für Nutzer:innen mit dynamischen Sprachwerten bestimmt ist.
 
-![Einstellung des Werts "Sprache" für eine E-Mail.]({% image_buster /assets/img/dnd/language_setting_dnd.png %}){: style="max-width:70%;"}
+![Festlegen des Werts „Sprache“ für eine E-Mail.]({% image_buster /assets/img/dnd/language_setting_dnd.png %}){: style="max-width:70%;"}
 
 ### Personalisierung
 
@@ -244,7 +244,11 @@ Die Flüssigpersonalisierung wird für Bildblöcke und Felder vom Typ Schaltflä
 
 #### Dynamische Bilder
 
-Sie können dynamische Bilder in Ihr E-Mail-Messaging aufnehmen, indem Sie Liquid in das Bildquellattribut aufnehmen. Anstelle eines statischen Bildes können Sie zum Beispiel {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} als Bild-URL einfügen, um den Vornamen eines Nutzers:innen in das Bild einzubinden. So können Sie Ihre E-Mails für jeden Benutzer personalisieren.
+Sie können dynamische Bilder in Ihre E-Mail-Nachrichten einfügen, indem Sie [„Connected-Content“]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) oder [„Liquid“]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in Ihr Bildquellen-Attribut aufnehmen. Anstelle eines statischen Bildes können Sie zum Beispiel {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} als Bild-URL einfügen, um den Vornamen eines Nutzers:innen in das Bild einzubinden. So können Sie Ihre E-Mails für jeden Benutzer personalisieren.
+
+{% alert important %}
+Die URL Ihres Bildes muss mit beginnen`https://`. Die Verwendung von`http://`  führt zum Absturz Ihrer App.
+{% endalert %}
 
 ### Textrichtung
 
@@ -278,41 +282,41 @@ Alternativ können Sie auch einen unserer Attributionspartner wie [Branch]({{sit
 
 Und schließlich stehen Ihnen vordefinierte Attribute zur Verfügung, um Ihre Nachrichten zugänglich zu machen. Erfahren Sie mehr in unserem Artikel [Barrierefreie Nachrichten in Braze erstellen]({{site.baseurl}}/help/accessibility).
 
-#### Angepasste Kopf-Tags
+#### Angepasste Kopfzeilen
 
-Verwenden Sie `<head>` Tags, um CSS und Metadaten in Ihrer E-Mail Nachricht hinzuzufügen. Sie können diese Tags beispielsweise verwenden, um ein Stylesheet oder ein Favicon hinzuzufügen. Liquid wird in `<head>` Tags unterstützt.
+Verwenden Sie`<head>`Tags, um CSS und Metadaten in Ihre E-Mail-Nachricht einzufügen. Beispielsweise können Sie diese Tags verwenden, um ein Stylesheet oder ein Favicon hinzuzufügen. Liquid wird in`<head>`Tags unterstützt.
 
-Alles, was außerhalb der Tags von `<head>` hinzugefügt wird, wird in Ihrer E-Mail nach dem Tag `<body>` eingefügt. Das bedeutet, dass der hinzugefügte Inhalt in der E-Mail angezeigt wird.
+Alle Elemente, die außerhalb der`<head>`Tags hinzugefügt werden, werden in Ihrer E-Mail nach dem`<body>`Tag eingefügt. Dies bedeutet, dass der hinzugefügte Inhalt in der E-Mail angezeigt wird.
 
-##### Erlaubte Tags und Attribute nach Tag
+##### Zulässige Tags und Attribute nach Tag
 
 | Tag-Name | Beschreibung | Beispiel |
 | --- | --- | --- |
 | `base` | Gibt die Basis-URL für alle relativen URLs in der Nachricht an. | `<base href="https://example.com" target="_blank">` |
 | `link`| Definiert die Beziehungen zwischen der Nachricht und externen Ressourcen. | `<link href="styles.css" rel="stylesheet" type="text/css">` |
-| `meta` | Liefert Metadaten wie Seitenbeschreibung oder Schlüsselwörter. | `<meta name="description" content="Free Web tutorials">` |
+| `meta` | Stellt Metadaten wie Seitenbeschreibungen oder Schlüsselwörter zur Verfügung. | `<meta name="description" content="Free Web tutorials">` |
 | `style` | Bettet interne CSS-Stile ein. | `<style type="text/css" media="screen">body { font-size: 16px; }</style>` |
-| `title` | Legt den Titel des Dokuments fest, der in den Tabs des Browsers angezeigt wird. | `<title>StyleRyde</title>` |
+| `title` | Legt den Titel des Dokuments fest, der in den Browser-Tabs angezeigt wird. | `<title>StyleRyde</title>` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 | Taggen | Attribut | Beschreibung | Beispiel |
 | --- | --- | --- | --- |
-| `base` | `href` | Basis-URL, die für relative URLs verwendet wird. | ```<base href="https://braze.com">``` |
-| `base` | `target`| Standard Targeting für alle Hyperlinks und Formulare. | ```<base target="_blank">``` |
+| `base` | `href` | Basis-URL, die für relative URLs verwendet werden soll. | ```<base href="https://braze.com">``` |
+| `base` | `target`| Standardziel für alle Hyperlinks und Formulare. | ```<base target="_blank">``` |
 | `link` | `href` | URL zur externen Ressource. | ```<link href="style.css">``` |
 | `link` | `rel` | Definiert die Beziehungen zwischen der aktuellen und der verknüpften Nachricht. | ```<link rel="stylesheet">``` |
-| `link` | `type` | Typ der verknüpften Ressource. | ```<link type="text/css">``` |
+| `link` | `type` | Art der verknüpften Ressource. | ```<link type="text/css">``` |
 | `link` | `sizes` | Legt die Größe der Symbole fest. | ```<link rel="icon" sizes="32x32" href="favicon-32.png">``` |
-| `link` | `media` | Gibt das Medium oder Gerät an, für das die Stile gelten. | ```<link rel="stylesheet" media="screen" href="style.css">``` |
-| `meta` | `name` | Legt den Titel des Dokuments fest, der in den Tabs des Browsers angezeigt wird. | ```<meta name="viewport" content="width=device-width, initial-scale=1">``` |
-| `meta` | `content` | Legt den Titel des Dokuments fest, der in den Tabs des Browsers angezeigt wird. | ```<meta name="description" content="Page about our newest products">``` |
+| `link` | `media` | Gibt die Medien oder Geräte an, für die Stile gelten. | ```<link rel="stylesheet" media="screen" href="style.css">``` |
+| `meta` | `name` | Legt den Titel des Dokuments fest, der in den Browser-Tabs angezeigt wird. | ```<meta name="viewport" content="width=device-width, initial-scale=1">``` |
+| `meta` | `content` | Legt den Titel des Dokuments fest, der in den Browser-Tabs angezeigt wird. | ```<meta name="description" content="Page about our newest products">``` |
 | `meta` | `charset` | Deklariert die Zeichenkodierung. | ```<meta charset="UTF-8">``` |
-| `meta` | `property` | Legt den Titel des Dokuments fest, der in den Tabs des Browsers angezeigt wird. | ```<meta property="og:title" content="Website title">``` |
-| `style` | `type` | MIME-Typ des Inhalts des Stils. | {% raw %}```<style type="text/css">p { color: red; }</style>```{% endraw %} |
-| `style` | `media` | Gibt das Medium oder Gerät an, für das die Stile gelten. | ```<style media="print">body { font-size: 12pt; }</style>``` |
-| `title` | Keine Attribute | Der Tag `title` akzeptiert keine Attribute. | ```<title>Kitchenerie</title>``` |
+| `meta` | `property` | Legt den Titel des Dokuments fest, der in den Browser-Tabs angezeigt wird. | ```<meta property="og:title" content="Website title">``` |
+| `style` | `type` | MIME-Typ des Stilinhalts. | {% raw %}```<style type="text/css">p { color: red; }</style>```{% endraw %} |
+| `style` | `media` | Gibt die Medien oder Geräte an, für die Stile gelten. | ```<style media="print">body { font-size: 12pt; }</style>``` |
+| `title` | Keine Attribute | Das`title`Tag akzeptiert keine Attribute. | ```<title>Kitchenerie</title>``` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Link-Namen können bis zu 63 Bytes lang sein und werden automatisch abgeschnitten, wenn sie diese Grenze überschreiten.
+Linknamen können bis zu 63 Byte lang sein und werden automatisch gekürzt, wenn sie diese Grenze überschreiten.
 {% endalert %}

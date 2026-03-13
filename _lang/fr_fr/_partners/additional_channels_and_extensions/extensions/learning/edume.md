@@ -54,7 +54,7 @@ Access your onboarding course at:
   - Cours : `getCourseLink?moduleId=12087`
   - Leçon : `getLessonLink?lessonId=25805`
   - Enquête eNPS : `getSurveyLink?surveyId=654`<br><br>
-3. Les utilisateurs qui arrivent sur Edume par ce lien sont ajoutés à une équipe ou un groupe eduMe de votre choix. Remplacez `groupId` par l'ID de l'équipe ou du groupe Edume concerné. Vous utilisez généralement l'ID de l'équipe, sauf pour les cours qui requièrent une inscription, auquel cas vous devez utiliser l'ID du groupe<br><br>
+3. Les utilisateurs qui arrivent sur Edume par ce lien sont ajoutés à une équipe ou un groupe eduMe de votre choix. Remplacez `groupId` par l'ID de l'équipe ou du groupe Edume concerné. Vous utilisez généralement l'ID de l'équipe, sauf pour les cours qui requièrent une inscription, auquel cas vous devez utiliser l'ID du groupe.<br><br>
 4. Inclure un champ approprié pour mapper le champ `externalUserId`. L'exemple d'appel de contenu connecté utilise l’ID `driver_id`, mais votre champ sera probablement différent. Cet ID est disponible dans les rapports Edume, ce qui vous permet de les mettre en corrélation avec vos systèmes.<br><br>
 5. Enfin, personnalisez et testez votre message si nécessaire. Nous vous recommandons d'envoyer au moins un message de test, d'accéder au contenu eduMe, de terminer la leçon ou le cours et de vérifier que les analyses eduMe sont bien enregistrées. 
 

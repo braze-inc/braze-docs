@@ -11,7 +11,7 @@ search_tag: Partner
 <!--
 {% multi_lang_include video.html id="xFZ3HMleYYE" align="right" %}
 -->
-> [Amazon Personalize](https://aws.amazon.com/personalize/) é como ter seu próprio sistema de recomendação de machine learning da Amazon durante todo o dia. Com base em mais de 20 anos de experiência em recomendações, o Amazon Personalize o capacita a melhorar o engajamento dos clientes, fornecendo recomendações personalizadas de produtos e conteúdo em tempo real e promoções de marketing direcionadas.
+> [Amazon Personalize](https://aws.amazon.com/personalize/) é como ter seu próprio sistema de recomendação da Amazon com aprendizado de máquina durante todo o dia. Com base em mais de 20 anos de experiência em recomendações, o Amazon Personalize o capacita a melhorar o engajamento dos clientes, fornecendo recomendações personalizadas de produtos e conteúdo em tempo real e promoções de marketing direcionadas.
 
 _Esta integração é mantida pelo Amazon Personalize._
 
