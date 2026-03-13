@@ -99,7 +99,7 @@ For more information, refer to [FAQ: Intelligent Timing](#when-does-braze-check-
 
 #### Schedule winning variants 2 days after A/B test
 
-If you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/messaging/testing/multivariant_testing/optimizations/), such as automatically sending the **Winning Variant** or using a **Personalized Variant**, Intelligent Timing may affect the duration and timing of your campaign.
+If you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/messaging/ab_testing/optimizations/), such as automatically sending the **Winning Variant** or using a **Personalized Variant**, Intelligent Timing may affect the duration and timing of your campaign.
 
 When using Intelligent Timing, we recommend scheduling the Winning Variant send time at least **2 days after** the A/B test begins. For example, if your A/B test starts on April 16 at 4:00 PM, schedule the Winning Variant to send no sooner than April 18 at 4:00 PM. This gives Braze enough time to evaluate user behavior and send messages at the optimal time.
 
@@ -201,7 +201,7 @@ If users don't receive messages as expected, check that the time zone field in t
 
 ### Sending past the scheduled date
 
-Your Intelligent Timing campaign might be sending past the scheduled date if you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/messaging/testing/multivariant_testing/optimizations/). Campaigns using A/B testing optimizations can automatically send the Winning Variant after the initial test is over, increasing the duration of the campaign. By default, campaigns with an optimization will send the Winning Variant to the remaining users the day after the initial test, but you can change this send date.
+Your Intelligent Timing campaign might be sending past the scheduled date if you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/messaging/ab_testing/optimizations/). Campaigns using A/B testing optimizations can automatically send the Winning Variant after the initial test is over, increasing the duration of the campaign. By default, campaigns with an optimization will send the Winning Variant to the remaining users the day after the initial test, but you can change this send date.
 
 If you use Intelligent Timing, we recommend leaving more time for the A/B test to finish and scheduling the Winning Variant to send for 2 days after the initial test instead of 1 day.
 

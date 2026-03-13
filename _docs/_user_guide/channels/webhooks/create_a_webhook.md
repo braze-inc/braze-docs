@@ -69,7 +69,7 @@ The **Compose** tab consists of the following fields:
 
 #### Language {#internationalization}
 
-[Internationalization]({{site.baseurl}}/user_guide/messaging/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) is supported in the URL and the request body. To internationalize your message, select **Add languages** and fill out the required fields. 
+[Internationalization]({{site.baseurl}}/user_guide/messaging/campaigns/ideas_and_strategies/#campaigns-in-multiple-languages) is supported in the URL and the request body. To internationalize your message, select **Add languages** and fill out the required fields. 
 
 We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
@@ -115,7 +115,7 @@ You can personalize your key-value pairs using Liquid, such as including any use
 
 The raw text option gives you the flexibility to write a request for an endpoint that expects a body of any format. For example, you might use this to write a request for an endpoint that expects your request to be in XML format. 
 
-Both [personalization]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/) and [internationalization]({{site.baseurl}}/user_guide/messaging/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) using Liquid is supported in raw text.
+Both [personalization]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/) and [internationalization]({{site.baseurl}}/user_guide/messaging/campaigns/ideas_and_strategies/#campaigns-in-multiple-languages) using Liquid is supported in raw text.
 
 ![An example of a request body with raw text using Liquid.]({% image_buster /assets/img_archive/webhook_rawtext.png %})
 

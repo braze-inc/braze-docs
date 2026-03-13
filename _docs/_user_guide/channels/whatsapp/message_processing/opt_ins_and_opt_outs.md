@@ -30,17 +30,17 @@ Opt-ins can come from external sources or from Braze methods, such as SMS or in-
 ## Set up opt-ins for your Braze WhatsApp channel
 
 For WhatsApp opt-ins, you must comply with [WhatsApp's requirements](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/). You will also need to provide Braze with the following information:
-- An `external_id`, a [phone number]({{site.baseurl}}/user_guide/channels/whatsapp/user_phone_numbers/), and an updated subscription status for every user. This can be done by using the [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/) or through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to update the phone number and subscription status.
+- An `external_id`, a [phone number]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/user_phone_numbers/), and an updated subscription status for every user. This can be done by using the [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/) or through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to update the phone number and subscription status.
 
 {% alert note %}
-Braze released an improvement to the `/users/track` endpoint that allows updates to the subscription status that you can learn about in [Subscription groups]({{site.baseurl}}/user_guide/channels/whatsapp/user_subscription/#update-subscription-status). However, if you have already created opt-in protocols using the [`/v2/subscription/status/set` endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/), you may continue to do so there.
+Braze released an improvement to the `/users/track` endpoint that allows updates to the subscription status that you can learn about in [Subscription groups]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/subscription_groups/#update-subscription-status). However, if you have already created opt-in protocols using the [`/v2/subscription/status/set` endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/), you may continue to do so there.
 {% endalert %}
 
 ### External to Braze opt-in methods
 
 Your app or website (account registration, checkout page, account settings, credit card terminal) to Braze.
 
-Wherever you already have marketing consent for email or texting, include an additional section for WhatsApp. After a user opts-in, they need an `external_id`, a [phone number]({{site.baseurl}}/user_guide/channels/whatsapp/user_phone_numbers/), and updated subscription status. To do this, depending on how your install of Braze is set up, either leverage the [`/subscription/status/set` endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) or use the [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/).
+Wherever you already have marketing consent for email or texting, include an additional section for WhatsApp. After a user opts-in, they need an `external_id`, a [phone number]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/user_phone_numbers/), and updated subscription status. To do this, depending on how your install of Braze is set up, either leverage the [`/subscription/status/set` endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) or use the [SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)/).
 
 #### Externally built opt-in list
 
@@ -51,7 +51,7 @@ If you have used WhatsApp previously, you may have already built a user list wit
 In your customer support channel, follow up on resolved issues with an automatic message asking if they want to opt-in to marketing messaging. The functionality here depends on the feature availability in your customer support tool of choice and where you keep user information.
 
 1. Provide a [message link](https://business.facebook.com/business/help/890732351439459?ref=search_new_0) from your WhatsApp Business phone number.
-2. Provide [quick reply actions]({{site.baseurl}}/user_guide/channels/whatsapp/message_processing/user_messages/#quick-replies) where the customer replies "Yes" to indicate opt-in
+2. Provide [quick reply actions]({{site.baseurl}}/user_guide/channels/whatsapp/message_processing/messaging_users/#quick-replies) where the customer replies "Yes" to indicate opt-in
 3. Set up custom keyword trigger.
 4. For either of those ideas, you will probably need to finish the path with the following:
 	- Call the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to either update or create a user
@@ -78,7 +78,7 @@ In Canvas, set up a campaign that asks customers if they want to opt-in to recei
 - Customer segment: subscribed marketing group outside of the US
 - Custom keyword trigger setup
 
-Learn about updating the subscription status of user profiles by viewing [Subscription groups]({{site.baseurl}}/user_guide/channels/whatsapp/user_subscription/#update-subscription-status).
+Learn about updating the subscription status of user profiles by viewing [Subscription groups]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/subscription_groups/#update-subscription-status).
 
 #### In-app or in-browser message
 
@@ -106,7 +106,7 @@ When selecting keyword triggers, include words like "Stop" or "No Message". If y
 
 #### Step 2: Update the user's profile
 
-Update the user's profile by using one of the methods described in [Subscription groups]({{site.baseurl}}/user_guide/channels/whatsapp/user_subscription/#update-subscription-status).
+Update the user's profile by using one of the methods described in [Subscription groups]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/subscription_groups/#update-subscription-status).
 
 ### Marketing opt-out selection
 
@@ -115,7 +115,7 @@ Within the WhatsApp message template creator, you can include the "marketing opt
 1. Create a message template with the "marketing opt-out" quick reply.<br>![Message template with a footer option of "Marketing opt-out"]({% image_buster /assets/img/whatsapp/whatsapp121.png %})<br><br>![Section to configure a marketing oopt-out button.]({% image_buster /assets/img/whatsapp/whatsapp122.png %})<br><br>
 2. Create a Canvas that uses this message template.<br><br>
 3. Follow the steps in the preceding example but with the trigger text "STOP PROMOTIONS".<br><br>
-4. Update the user's subscription status by using one of the methods described in [Subscription groups]({{site.baseurl}}/user_guide/channels/whatsapp/user_subscription/#update-subscription-status).
+4. Update the user's subscription status by using one of the methods described in [Subscription groups]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/subscription_groups/#update-subscription-status).
 
 ## Set up opt-in and opt-out workflows
 

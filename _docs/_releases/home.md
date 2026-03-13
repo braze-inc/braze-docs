@@ -368,7 +368,7 @@ In the [Cloud Data Ingestion **Sync Log** dashboard]({{site.baseurl}}/user_guide
 
 #### Bring Your Own (BYO) WhatsApp connector
 
-The [Bring Your Own (BYO) WhatsApp connector]({{site.baseurl}}/user_guide/channels/whatsapp/overview/byo_connector/) offers a partnership between Braze and Infobip, in which you give Braze access to your Infobip WhatsApp Business Manager (WABA). This allows you to manage and pay for messaging costs directly with Infobip while using Braze for segmentation, personalization, and campaign orchestration. 
+The [Bring Your Own (BYO) WhatsApp connector]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/byo_connector/) offers a partnership between Braze and Infobip, in which you give Braze access to your Infobip WhatsApp Business Manager (WABA). This allows you to manage and pay for messaging costs directly with Infobip while using Braze for segmentation, personalization, and campaign orchestration. 
 
 #### Banners in Canvas
 
@@ -384,7 +384,7 @@ With [dynamic BCC]({{site.baseurl}}/user_guide/administer/global/workspace_setti
 
 #### Channel-based rate limits
 
-As an alternative to a rate limit that gets shared across an entire multi-channel campaign or Canvas, select a specific rate limit per channel. In this case, the rate limit will apply to each of your selected channels. For example, set your campaign or Canvas to send a maximum of 5,000 webhooks and 2,500 SMS messages per minute across the campaign or Canvas. For more details, see [Rate limiting and frequency capping]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/rate-limiting).
+As an alternative to a rate limit that gets shared across an entire multi-channel campaign or Canvas, select a specific rate limit per channel. In this case, the rate limit will apply to each of your selected channels. For example, set your campaign or Canvas to send a maximum of 5,000 webhooks and 2,500 SMS messages per minute across the campaign or Canvas. For more details, see [Rate limiting and frequency capping]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/frequency_capping).
 
 ### Partnerships
 
@@ -437,7 +437,7 @@ Our [SMS segment calculator]({{site.baseurl}}/user_guide/channels/sms_mms_rcs/se
 
 Because MM API for WhatsApp doesn’t offer 100% deliverability, it's important to understand how to retarget users who may not have received your message on other channels. 
 
-To retarget users, we recommend building a segment of users who didn’t receive a specific message. To do this, filter by the error code `131049`, which indicates that a marketing template message was not sent due to WhatsApp’s per-user marketing template limit enforcement. You can do this by [using Braze Currents or SQL Segment Extensions]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_campaign/optimized_delivery/#retargeting-users-on-other-braze-channels).
+To retarget users, we recommend building a segment of users who didn’t receive a specific message. To do this, filter by the error code `131049`, which indicates that a marketing template message was not sent due to WhatsApp’s per-user marketing template limit enforcement. You can do this by [using Braze Currents or SQL Segment Extensions]({{site.baseurl}}/user_guide/channels/whatsapp/message_features_and_optimization/optimized_delivery/#retargeting-users-on-other-braze-channels).
 
 ### Partnerships
 
@@ -511,13 +511,13 @@ Use **Copy preview link** in your [Banners]({{site.baseurl}}/user_guide/channels
 
 Use Meta’s advanced AI systems to deliver your marketing messages to more users who are most likely to engage with them, significantly boosting deliverability and message engagement.
 
-[WhatsApp messages with optimized delivery]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_campaign/optimized_delivery/) are sent using Meta's new [Marketing Messages Lite API](https://developers.facebook.com/docs/whatsapp/marketing-messages-lite-api/), which provides superior performance compared to the traditional Cloud API. This new sending pipeline helps you better reach users who value and want to receive your messages.
+[WhatsApp messages with optimized delivery]({{site.baseurl}}/user_guide/channels/whatsapp/message_features_and_optimization/optimized_delivery/) are sent using Meta's new [Marketing Messages Lite API](https://developers.facebook.com/docs/whatsapp/marketing-messages-lite-api/), which provides superior performance compared to the traditional Cloud API. This new sending pipeline helps you better reach users who value and want to receive your messages.
 
 #### WhatsApp Flows
 
 When incorporating a WhatsApp Flow message into a Braze Canvas or campaign, you may want to capture and utilize specific information that users submit through the Flow. Braze needs to receive additional information regarding the structure of the user response, specifically the expected shape of the JSON response, to generate the required nested custom attribute (NCA) schema.
 
-Now you can give Braze the information about the response structure by [saving the Flow response as a custom attribute]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_campaign/whatsapp_flows/?tab=recommended%20method#step-1-generate-the-flow-custom-attribute) and completing a test send.
+Now you can give Braze the information about the response structure by [saving the Flow response as a custom attribute]({{site.baseurl}}/user_guide/channels/whatsapp/message_features_and_optimization/whatsapp_flows/?tab=recommended%20method#step-1-generate-the-flow-custom-attribute) and completing a test send.
 
 #### Editable user preview
 
@@ -696,19 +696,19 @@ When [LINE click tracking]({{site.baseurl}}/line/click_tracking/) is turned on, 
 
 #### Transfer WhatsApp phone numbers
 
-Transfer a WhatsApp Business Account (WABA) phone number and its associated subscription group [from one workspace to another]({{site.baseurl}}/user_guide/channels/whatsapp/overview/transfer_between_workspaces/) within Braze.
+Transfer a WhatsApp Business Account (WABA) phone number and its associated subscription group [from one workspace to another]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/transfer_between_workspaces/) within Braze.
 
 #### WhatsApp Flows response messages and preview
 
-In a Canvas, you can create a WhatsApp message step that uses a [response message]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_campaign/whatsapp_flows/?tab=response%20message#configuring-whatsapp-flow-messages-and-responses) and flow message. You can also select **Preview Flow** to preview the Flow directly in Braze to confirm it behaves as expected.
+In a Canvas, you can create a WhatsApp message step that uses a [response message]({{site.baseurl}}/user_guide/channels/whatsapp/message_features_and_optimization/whatsapp_flows/?tab=response%20message#configuring-whatsapp-flow-messages-and-responses) and flow message. You can also select **Preview Flow** to preview the Flow directly in Braze to confirm it behaves as expected.
 
 #### WhatsApp product messages
 
-[Product messages]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_campaign/product_messages/) empower you to send interactive WhatsApp messages that showcase products directly from your Meta catalog.
+[Product messages]({{site.baseurl}}/user_guide/channels/whatsapp/message_features_and_optimization/product_messages/) empower you to send interactive WhatsApp messages that showcase products directly from your Meta catalog.
 
 #### Integrating Braze and WhatsApp with an external system
 
-[Leverage the power of AI chatbots and live agent hand-offs]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_use_cases/external_system/) on the WhatsApp channel to streamline your customer support operations. By automating routine inquiries and seamlessly transitioning to human agents when needed, you can significantly improve response times and enhance the overall customer experience.
+[Leverage the power of AI chatbots and live agent hand-offs]({{site.baseurl}}/user_guide/channels/whatsapp/use_cases/whatsapp_and_external_systems/) on the WhatsApp channel to streamline your customer support operations. By automating routine inquiries and seamlessly transitioning to human agents when needed, you can significantly improve response times and enhance the overall customer experience.
 
 ### AI and ML automation
 
@@ -880,7 +880,7 @@ We've added a [best practices section]({{site.baseurl}}) to help you thoughtfull
 
 #### WhatsApp inbound product questions
 
-Users can respond to your product or catalog message with [product questions]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_campaign/product_messages/#receiving-inbound-product-questions). These arrive as inbound messages, which can then be sorted with an Action Path.
+Users can respond to your product or catalog message with [product questions]({{site.baseurl}}/user_guide/channels/whatsapp/message_features_and_optimization/product_messages/#receiving-inbound-product-questions). These arrive as inbound messages, which can then be sorted with an Action Path.
 
 Additionally, Braze extracts the product ID and catalog ID from these questions, so if you wish to automate responses or send questions to another team (such as customer support), you can include those details.
 

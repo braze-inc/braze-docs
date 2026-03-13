@@ -78,7 +78,7 @@ Selecting at least one [conversion event]({{site.baseurl}}/user_guide/messaging/
 Your answer will determine the details of when and how your Canvas is delivered to your customer. Users can enter your Canvas in one of two ways: scheduled or action-based triggers.
 
 {% alert tip %}
-Check out [Time-based functionalities]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/delivery_types/) for Canvas for more strategies and answers to common questions.
+Check out [Time-based functionalities]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/) for Canvas for more strategies and answers to common questions.
 {% endalert %}
 
 Scheduled delivery allows you to send a Canvas immediately to your target audience. You can also have it sent regularly, or schedule it for a specific time in the future. Action-based Canvases respond to specific customer behaviors as they happen. For example, an action-based trigger can include opening an app, making a purchase, interacting with another campaign, or triggering any custom event. At the point of the action occurring, you can have the Canvas send to your users.

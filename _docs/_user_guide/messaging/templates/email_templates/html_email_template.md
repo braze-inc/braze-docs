@@ -12,7 +12,7 @@ channel:
 
 # Upload an HTML email template
 
-> The Braze dashboard allows you to upload your very own HTML email templates and save them for later use in campaigns. You can also [create an email template]({{site.baseurl}}/user_guide/channels/email/templates/email_template/) using our editor.
+> The Braze dashboard allows you to upload your very own HTML email templates and save them for later use in campaigns. You can also [create an email template]({{site.baseurl}}/user_guide/messaging/templates/email_templates/email_template/) using our editor.
 
 ## Requirements {#upload-requirements}
 
@@ -72,6 +72,6 @@ You can [duplicate]({{site.baseurl}}/user_guide/messaging/templates/managing_tem
 
 ## Frequently asked questions
 
-For answers to frequently asked questions about email templates, check out our [email and link templates FAQ]({{site.baseurl}}/user_guide/channels/email/templates/faq/) page.
+For answers to frequently asked questions about email templates, check out our [email and link templates FAQ]({{site.baseurl}}/user_guide/messaging/templates/email_templates/faq/) page.
 
 

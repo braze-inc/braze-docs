@@ -37,7 +37,7 @@ Your phone number must follow all the requirements of any WhatsApp phone number,
 
 ## Multiple subscription groups and phone numbers
 
-Message templates are shared among all phone numbers in the same WhatsApp Business account. For details about WhatsApp subscription groups, view [Subscription groups]({{site.baseurl}}/user_guide/channels/whatsapp/user_subscription/).
+Message templates are shared among all phone numbers in the same WhatsApp Business account. For details about WhatsApp subscription groups, view [Subscription groups]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/subscription_groups/).
 
 Each WhatsApp phone number will appear as a separate WhatsApp chat to users. Each phone number within a WhatsApp Business account operates independently from each other, so they can have the same or different values for the following: 
 - Display name 

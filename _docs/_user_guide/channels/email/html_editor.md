@@ -44,9 +44,9 @@ If all of the messages in your campaign are going to be similar or have the same
 
 1. [Create your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
-3. Choose a [step schedule]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
+3. Choose a [step schedule]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/#schedule-delay) and specify a delay as needed.
 4. Filter your Audience for this step, as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
-5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/advancement/).
+5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/messaging/canvas/managing_canvases/cloning_canvases/).
 6. Choose any other messaging channels that you would like to pair with your message.
 {% endtab %}
 {% endtabs %}
@@ -59,7 +59,7 @@ Braze offers two editing experiences when creating an email campaign: our [drag-
 
 ![Choosing between the drag-and-drop editor, HTML editor, or templates for your email editing experience.]({% image_buster /assets/img_archive/choose_email_creation.png %}){: style="max-width:75%" }
 
-Then, you can either select an existing [email template]({{site.baseurl}}/user_guide/channels/email/creating_an_email_template/#creating-an-email-template), [upload a template]({{site.baseurl}}/user_guide/channels/email/templates/html_email_template/) from a file (HTML editor only), or use a blank template. 
+Then, you can either select an existing [email template]({{site.baseurl}}/user_guide/channels/email/creating_an_email_template/#creating-an-email-template), [upload a template]({{site.baseurl}}/user_guide/messaging/templates/email_templates/html_email_template/) from a file (HTML editor only), or use a blank template. 
 
 {% alert tip %}
 We recommend selecting one editing experience per email campaign. For example, choose either the **HTML Classic** or **Block editor** in a single email campaign rather than switching between editors.
@@ -236,7 +236,7 @@ You can also set the campaign's duration, specify [Quiet Hours]({{site.baseurl}}
 
 #### Choose users to target
 
-Next, [target users]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/targeting_users/) by choosing segments or filters. Braze shows a live preview of the segment population, including how many users are reachable through email. Exact segment membership is calculated just before send.
+Next, [target users]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/target_users/) by choosing segments or filters. Braze shows a live preview of the segment population, including how many users are reachable through email. Exact segment membership is calculated just before send.
 
 {% multi_lang_include target_audiences.md %}
 

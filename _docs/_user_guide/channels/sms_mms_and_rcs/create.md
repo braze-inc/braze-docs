@@ -30,7 +30,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 3. Name your campaign something clear and meaningful.
 4. Add [teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) and [tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) as needed.
    * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
-5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/messaging/testing/multivariant_testing/).
+5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/messaging/ab_testing/).
    * Braze allows you to include both SMS and RCS variants within a single campaign, so you can compare the performance of each.
 
 {% alert tip %}
@@ -43,9 +43,9 @@ If all of the messages in your campaign are going to be similar or have the same
 1. [Create your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/) using the Canvas composer.
 2. After you've set up your Canvas, add an **SMS/MMS/RCS** Message step in the Canvas builder.
 3. Name your step something clear and meaningful.
-4. Choose a [step schedule]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
+4. Choose a [step schedule]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/#schedule-delay) and specify a delay as needed.
 5. Filter your audience for this step as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay at the time messages are sent.
-6. Choose your [advancement behavior]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/advancement/).
+6. Choose your [advancement behavior]({{site.baseurl}}/user_guide/messaging/canvas/managing_canvases/cloning_canvases/).
 7. Choose any other messaging channels which you would like to pair with your message.
 
 {% endtab %}
@@ -53,7 +53,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 ## Step 2: Select a subscription group
 
-Select a [subscription group]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/subscription_groups/) to ensure you're sending your message to the proper users. When selecting a subscription group, Braze will automatically add a segmenting filter, ensuring that only subscribed users will receive the campaign.
+Select a [subscription group]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/subscription_groups/) to ensure you're sending your message to the proper users. When selecting a subscription group, Braze will automatically add a segmenting filter, ensuring that only subscribed users will receive the campaign.
 
 The subscription group you select determines which message types are available in the composer:
 
@@ -179,7 +179,7 @@ The user experience of receiving RCS messages may vary based on carrier coverage
 Write your message using languages and personalization ([Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/), [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/), and emojis) as needed. Be sure to adhere to message copy limits to reduce your chances of overage charges.
 
 {% alert important %}
-Before proceeding, read the [RCS message type guidelines](#step-3-compose-your-message) above. RCS messages are [charged per message]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/billing_calculator/), so it's a good idea to understand what can be included in each type.
+Before proceeding, read the [RCS message type guidelines](#step-3-compose-your-message) above. RCS messages are [charged per message]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/billing_calculator/), so it's a good idea to understand what can be included in each type.
 {% endalert %}
 
 {% endtab %}
@@ -232,15 +232,15 @@ Next, build the remainder of your campaign. Refer to the following sections for 
 
 #### Choose delivery schedule or trigger
 
-Messages can be delivered based on a scheduled time, an action, or an API trigger. For more, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/delivery_types/).
+Messages can be delivered based on a scheduled time, an action, or an API trigger. For more, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/).
 
-For action-based delivery, you can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/time_based_campaign/#quiet-hours).
+For action-based delivery, you can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/#quiet-hours).
 
-This step is also where you can specify delivery controls, such as allowing users to become [re-eligible]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) to receive the campaign, or enabling [frequency capping]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/rate-limiting/#frequency-capping) rules.
+This step is also where you can specify delivery controls, such as allowing users to become [re-eligible]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/re_eligibility/#campaigns) to receive the campaign, or enabling [frequency capping]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/frequency_capping/#frequency-capping) rules.
 
 #### Choose users to target
 
-Next, [target users]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the subscription group, which narrows users by the level or category of communication they wish to have with you.
+Next, [target users]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/target_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the subscription group, which narrows users by the level or category of communication they wish to have with you.
 
 {% multi_lang_include target_audiences.md %}
 

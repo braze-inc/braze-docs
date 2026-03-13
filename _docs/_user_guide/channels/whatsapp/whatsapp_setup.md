@@ -60,7 +60,7 @@ After the setup is complete, a dedicated WhatsApp subscription group will be cre
 
 ### Step 3: Create WhatsApp templates
 
-Only approved WhatsApp message templates can be used to initiate conversations with customers. WhatsApp templates can be built in the [Meta Business Manager](https://www.facebook.com/business/help/2055875911147364?id=2129163877102343). For a list of the WhatsApp messaging features supported by Braze, check out [Supported WhatsApp features]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_campaign/create#supported-whatsapp-features).
+Only approved WhatsApp message templates can be used to initiate conversations with customers. WhatsApp templates can be built in the [Meta Business Manager](https://www.facebook.com/business/help/2055875911147364?id=2129163877102343). For a list of the WhatsApp messaging features supported by Braze, check out [Supported WhatsApp features]({{site.baseurl}}/user_guide/channels/whatsapp/create_a_whatsapp_message/#supported-whatsapp-features).
 
 1. **Navigate to the [template manager](https://business.facebook.com/wa/manage/message-templates)**<br>
 In the Meta Business Manager, under **Account Tools**, select **Message Templates**.
@@ -87,7 +87,7 @@ Approved templates can be used in as many campaigns and Canvases as you like. Th
 
 ### Step 4: Create a WhatsApp campaign
 
-Once WhatsApp templates have been approved, you can move over to the dashboard to build out a [WhatsApp Canvas or campaign]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_campaign/create/). 
+Once WhatsApp templates have been approved, you can move over to the dashboard to build out a [WhatsApp Canvas or campaign]({{site.baseurl}}/user_guide/channels/whatsapp/create_a_whatsapp_message/). 
 
 {% alert note %}
 After your WhatsApp Business Account is created, Meta will determine your starting messaging limit. To learn more, check out [throughput]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc/#throughput).
@@ -100,7 +100,7 @@ After completing the integration, we recommend completing the two following Meta
 	- You may already have business verification if you’ve used an existing Meta Business Manager. 
 - [Official Business Account](https://www.facebook.com/business/help/604726921052590?ref=search_new_0)
 
-We also recommend reading about [user phone numbers]({{site.baseurl}}/user_guide/channels/whatsapp/user_phone_numbers/) and adding any users who will need access to create message [templates at your organization](https://www.facebook.com/business/help/2169003770027706?id=2190812977867143).
+We also recommend reading about [user phone numbers]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/user_phone_numbers/) and adding any users who will need access to create message [templates at your organization](https://www.facebook.com/business/help/2169003770027706?id=2190812977867143).
 
 ### WhatsApp Cloud API Local Storage
 

@@ -76,7 +76,7 @@ After your link templates are set up, you can select the template to use in your
 To access the **Link Management** tab in the updated HTML email editor, you must have link aliasing turned on. To turn on link aliasing, contact your account manager.
 {% endalert %}
 
-- **Drag-and-drop editor:** Select **Content** > **Link Management** tab. Then, select **Add a Link Template**. To access link templates in the drag-and-drop editor, you must have [link aliasing]({{site.baseurl}}/user_guide/channels/email/templates/link_aliasing/) turned on.
+- **Drag-and-drop editor:** Select **Content** > **Link Management** tab. Then, select **Add a Link Template**. To access link templates in the drag-and-drop editor, you must have [link aliasing]({{site.baseurl}}/user_guide/messaging/templates/email_templates/link_aliasing/) turned on.
 
 ![Link Management tab in the drag-and-drop editor with an example list of link templates.]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
 
@@ -96,5 +96,5 @@ Archiving templates is not currently available for link templates.
 
 ## Frequently asked questions
 
-For answers to frequently asked questions about link templates, check out our [Templates FAQ]({{site.baseurl}}/user_guide/channels/email/templates/faq/) page.
+For answers to frequently asked questions about link templates, check out our [Templates FAQ]({{site.baseurl}}/user_guide/messaging/templates/email_templates/faq/) page.
 

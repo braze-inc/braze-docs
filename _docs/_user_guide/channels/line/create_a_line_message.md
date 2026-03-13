@@ -39,7 +39,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 3. Name your campaign something clear and meaningful.
 4. Add [Teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) and [Tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) as needed.
    * Tags make your campaigns easier to find and build reports out of.
-5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/messaging/testing/multivariant_testing/).
+5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/messaging/ab_testing/).
 
 {% alert tip %}
 If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional variants. You can then choose **Copy from Variant** from the **Add Variant** dropdown.
@@ -52,9 +52,9 @@ If all of the messages in your campaign are going to be similar or have the same
 
 1. [Create your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
-3. Choose a [step schedule]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
+3. Choose a [step schedule]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/#schedule-delay) and specify a delay as needed.
 4. Filter your audience for this step as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay at the time messages are sent.
-5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/advancement/).
+5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/messaging/canvas/managing_canvases/cloning_canvases/).
 6. Choose any other messaging channels which you would like to pair with your message.
 
 {% endtab %}
@@ -95,13 +95,13 @@ Build the remainder of your campaign. See the following sections for further det
 
 ### Choose delivery schedule or trigger
 
-LINE messages can be delivered based on a scheduled time, an action, or an API trigger. For more about scheduling and trigger options, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/delivery_types/).
+LINE messages can be delivered based on a scheduled time, an action, or an API trigger. For more about scheduling and trigger options, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/).
 
-You can specify delivery controls, such as allowing users to become [re-eligible]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) to receive the campaign, or turning on [frequency capping]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/rate-limiting/#frequency-capping) rules. For action-based delivery, you can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/time_based_campaign/#quiet-hours).
+You can specify delivery controls, such as allowing users to become [re-eligible]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/re_eligibility/#campaigns) to receive the campaign, or turning on [frequency capping]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/frequency_capping/#frequency-capping) rules. For action-based delivery, you can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/#quiet-hours).
 
 ### Choose users to target
 
-[Target users]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the subscription group, which narrows users by the level or category of communication they wish to have with you. 
+[Target users]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/target_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the subscription group, which narrows users by the level or category of communication they wish to have with you. 
 
 Select the larger audience from your segments, and optionally narrow that segment further with our [filters]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters/). You automatically receive a snapshot of what that approximate segment population looks like. Keep in mind that exact segment membership is always calculated before the message is sent.
 

@@ -41,7 +41,7 @@ Videos uploaded to the media library can only be used in WhatsApp messages. For 
 
 {% alert tip %} Create assets with confidence! Our in-app message image templates and safe-zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}). {% endalert %}
 
-For more information, refer to [In-app message creative details]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/customize/).
+For more information, refer to [In-app message creative details]({{site.baseurl}}/user_guide/channels/in_app_messages/customize/).
 
 #### Font Awesome
 

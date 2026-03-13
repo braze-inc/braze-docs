@@ -46,7 +46,7 @@ For further assistance with Canvas and campaign troubleshooting, be sure to cont
 - **Clicks and impressions:** Clicks and impressions for Banners are tracked automatically with the SDK.
 - **Limitations:**  Currently, the following features aren't supported: Canvas integration, API-triggered and action-based campaigns, Connected Content, promotion codes, user-controlled dismissals, and `catalog_items` using the [`:rerender` tag]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid).
 - **Testing:** To display the test Banner, the device you're using must be able to receive foreground push notifications.
-- **Custom HTML:** Leverage [JS bridge]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/customize/#javascript-bridge) to log clicks when using custom HTML to define click actions, like links and buttons. Click actions are only logged automatically when using the pre-built components in the drag-and-drop editor.
+- **Custom HTML:** Leverage [JS bridge]({{site.baseurl}}/user_guide/channels/in_app_messages/customize/#javascript-bridge) to log clicks when using custom HTML to define click actions, like links and buttons. Click actions are only logged automatically when using the pre-built components in the drag-and-drop editor.
 - **Requesting Placements:** Up to 10 placements can be returned to the SDK in a single refresh request. Each placement will include the highest priority Banner a user is eligible for.
 
 ## Content Cards
@@ -93,7 +93,7 @@ For further assistance with Canvas and campaign troubleshooting, be sure to cont
 - [**Opted-in/subscribed and push enabled**]({{site.baseurl}}/user_guide/channels/push/push_setup/push_subscription_states/): For users to receive a push message from Braze, they need their subscription statuses to be either opted-in (iOS) or subscribed (Android) and `Push Enabled = True`. Note that Android 13 introduces a major change in how users manage apps that send push notifications. The Braze [Android 13 SDK upgrade guide]({{site.baseurl}}/developer_guide/platforms/android/android_13/) will continue to update as new Android 13 beta versions are released.
 
 #### Things to know
-- **Web push**: If you have Braze [Web SDK setup]({{site.baseurl}}/user_guide/channels/push/push_setup/web/), consider utilizing Web push to engage users. Web push works the same way app push notifications operate on your phone. For more information on composing a web push, check out [Creating a push notification]({{site.baseurl}}/user_guide/channels/push/create_a_push_message/#creating-a-push-message).
+- **Web push**: If you have Braze [Web SDK setup]({{site.baseurl}}/user_guide/channels/push/platform_specific_resources/web/), consider utilizing Web push to engage users. Web push works the same way app push notifications operate on your phone. For more information on composing a web push, check out [Creating a push notification]({{site.baseurl}}/user_guide/channels/push/create_a_push_message/#creating-a-push-message).
 - **Targeting a singular app**: Review the [differences in segmentation]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#targeting-a-singular-app) to target a singular app and its users.
 
 ## SMS

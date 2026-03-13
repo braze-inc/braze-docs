@@ -15,7 +15,7 @@ In this article, we'll walk you through a use case for the **Onboarding** templa
 
 ## Prerequisites
 
-Before using this template, you need to create the following [email templates]({{site.baseurl}}/user_guide/channels/email/templates/email_template) to reference in the Canvas:
+Before using this template, you need to create the following [email templates]({{site.baseurl}}/user_guide/messaging/templates/email_templates/email_template/) to reference in the Canvas:
 
 - A welcome email to all users of your app
 - An email with tips on how to use your app

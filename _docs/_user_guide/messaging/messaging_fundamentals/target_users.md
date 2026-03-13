@@ -78,7 +78,7 @@ After adding segments and filters to your audience, you can test if your audienc
 
 #### Audience summary
 
-The **Audience Summary** will show an overview of who is in your target audience. Here, you can further limit your audience by setting a maximum user cap or [rate-limiting]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/rate_limiting/) delivery speed.
+The **Audience Summary** will show an overview of who is in your target audience. Here, you can further limit your audience by setting a maximum user cap or [rate-limiting]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/frequency_capping/) delivery speed.
 
 ![The "Audience Summary" section with options to set a maximum user cap or rate limit delivery speed.]({% image_buster /assets/img_archive/audience_summary.png %})
 

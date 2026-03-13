@@ -101,7 +101,7 @@ Now, we’ll build our Canvas by customizing the templated steps:
 7. Make sure our Audience Sync step is set up to sync to Facebook. This will further help with ad retargeting.
 
 {% alert tip %}
-You can use [Canvas entry properties]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/canvas_entry_properties_event_properties/) to customize the messages in your Canvas based on which product you're referring to.
+You can use [Canvas entry properties]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/) to customize the messages in your Canvas based on which product you're referring to.
 {% endalert %}
 
 ### Step 7: Test and launch the Canvas

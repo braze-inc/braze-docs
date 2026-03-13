@@ -27,7 +27,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 3. Name your campaign something clear and meaningful.
 4. Add [Teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) and [Tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) as needed.
    * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
-5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/messaging/testing/multivariant_testing/).
+5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/messaging/ab_testing/).
 
 {% alert tip %}
 If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional variants. You can then choose **Copy from Variant** from the **Add Variant** dropdown.
@@ -38,9 +38,9 @@ If all of the messages in your campaign are going to be similar or have the same
 
 1. [Create your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
-3. Choose a [step schedule]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed. Note that steps containing in-app messages cannot be action-based.
+3. Choose a [step schedule]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/#schedule-delay) and specify a delay as needed. Note that steps containing in-app messages cannot be action-based.
 4. Filter your Audience for this step, as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
-5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/advancement/).
+5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/messaging/canvas/managing_canvases/cloning_canvases/).
 6. Choose any other messaging channels which you would like to pair with your message.
 
 {% alert important %}
@@ -358,7 +358,7 @@ To set priorities within these buckets, click **Set Exact Priority**, and you ca
 
 #### Choose users to target
 
-Next, you must [target users]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow your audience. You automatically receive a snapshot of what that approximate segment population looks like. Keep in mind that exact segment membership is always calculated before the message is sent.
+Next, you must [target users]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/target_users/) by choosing segments or filters to narrow your audience. You automatically receive a snapshot of what that approximate segment population looks like. Keep in mind that exact segment membership is always calculated before the message is sent.
 
 {% alert note %} 
 If there's a delay on the in-app message step, segment membership will be evaluated after the delay. If the user is eligible, the in-app message will sync on the next available session.

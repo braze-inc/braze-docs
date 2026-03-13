@@ -32,7 +32,7 @@ Check that your messages are connected in sequential order so that users move th
 
 ### Step 4: Style your message
 
-Customize the look and feel of your onboarding flow using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/channels/in_app_messages/drag_and_drop/style_settings/#message-components).
+Customize the look and feel of your onboarding flow using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/channels/in_app_messages/customize/style_settings/#message-components).
 
 ## Analyzing the results
 

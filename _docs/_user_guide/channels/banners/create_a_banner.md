@@ -148,7 +148,7 @@ Braze allows you to track [conversion events]({{site.baseurl}}/user_guide/messag
 
 {% tab Canvas %}
 
-If you haven't done so already, complete the remaining sections of your Canvas component. For further details on how build out the rest of your Canvas, implement [multivariate testing]({{site.baseurl}}/user_guide/messaging/testing/multivariant_testing/) and [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/), and more, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
+If you haven't done so already, complete the remaining sections of your Canvas component. For further details on how build out the rest of your Canvas, implement [multivariate testing]({{site.baseurl}}/user_guide/messaging/ab_testing/) and [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/), and more, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
 
 {% endtab %}
 {% endtabs %}

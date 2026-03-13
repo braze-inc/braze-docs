@@ -20,14 +20,14 @@ While campaigns can be built uniquely depending on the channel, there are four m
 
 | Campaign type        | Description                                                                                                                                                                                                                                                                                              |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Regular              | This is the most common type of campaign. You can target one or more channels depending on your messaging goals, and design, customize, and test your content directly in Braze with our visual editors. Learn how to [create a campaign]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/creating_campaign). |
-| A/B testing          | For campaigns targeting a single channel, you can send more than one version of the same campaign and see which one comes out on top. You can test copy, personalization, and more for up to eight different versions with a [multivariate campaign]({{site.baseurl}}/user_guide/messaging/testing/multivariant_testing/). |
+| Regular              | This is the most common type of campaign. You can target one or more channels depending on your messaging goals, and design, customize, and test your content directly in Braze with our visual editors. Learn how to [create a campaign]({{site.baseurl}}/user_guide/messaging/campaigns/creating_campaign/). |
+| A/B testing          | For campaigns targeting a single channel, you can send more than one version of the same campaign and see which one comes out on top. You can test copy, personalization, and more for up to eight different versions with a [multivariate campaign]({{site.baseurl}}/user_guide/messaging/ab_testing/). |
 | API                  | [API campaigns]({{site.baseurl}}/api/api_campaigns/) let you send timely messages as quickly as possible. Unlike other campaign types, you don't specify the message, recipients, or schedule in the Braze dashboard. Instead, you pass these identifiers into your API calls. These are typically used for real-time transactional messaging or breaking news.  |
-| Transactional Emails | Braze [Transactional Emails]({{site.baseurl}}/user_guide/channels/email/transactional_message_api_campaign/) are purpose-built for sending automated, non-promotional email messages to facilitate an agreed-upon transaction between you and your customers. They send business-critical notifications to a single user where speed is of the utmost importance. *Available for select packages.* |
+| Transactional Emails | Braze [Transactional Emails]({{site.baseurl}}/user_guide/channels/email/) are purpose-built for sending automated, non-promotional email messages to facilitate an agreed-upon transaction between you and your customers. They send business-critical notifications to a single user where speed is of the utmost importance. *Available for select packages.* |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Regular and A/B test campaigns can be scheduled (such as informing a list of users about an upcoming event) or automated to send in response to a user's action (such as sending an email when someone subscribes to your newsletter). Learn more about [scheduling campaigns]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/delivery_types).
+Regular and A/B test campaigns can be scheduled (such as informing a list of users about an upcoming event) or automated to send in response to a user's action (such as sending an email when someone subscribes to your newsletter). Learn more about [scheduling campaigns]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/).
 {% endalert %}
 
 Regardless of the type of campaign you create, your campaigns can listen to your user's needs and deliver a thoughtful, personalized response. After you've sent your campaign, use our [built-in analytics tools]({{site.baseurl}}/user_guide/analytics/reporting/) to see how it performed and how many users converted based on your [conversion events]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/conversion_events/).
@@ -35,7 +35,7 @@ Regardless of the type of campaign you create, your campaigns can listen to your
 Check out these additional resources to learn more about campaigns at Braze:
 
 - Braze Learning: [Campaign Setup](https://learning.braze.com/campaign-setup-delivery-targeting-conversions)
-- [Create a campaign]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/creating_campaign)
+- [Create a campaign]({{site.baseurl}}/user_guide/messaging/campaigns/creating_campaign/)
 - [Ideas and strategies]({{site.baseurl}}/user_guide/messaging/campaigns/ideas_and_strategies)
 
 ## Canvas
@@ -66,16 +66,16 @@ The following table outlines our supported channels.
 
 | Channel                                                                                              | Description                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Email]({{site.baseurl}}/user_guide/channels/email/about/)                        | Send personalized emails to your users' inboxes.                                                                                                       |
+| [Email]({{site.baseurl}}/user_guide/channels/email/)                        | Send personalized emails to your users' inboxes.                                                                                                       |
 | [Mobile push]({{site.baseurl}}/user_guide/channels/push/about/)                   | Deliver messages directly to users' mobile devices as notifications.                                                                                   |
-| [Web push]({{site.baseurl}}/user_guide/channels/push/web)                         | Deliver notifications to users' web browsers, even when they are not actively on your website.                                                         |
-| [In-app messages]({{site.baseurl}}/user_guide/channels/in-app_messages/about/)    | Display messages within your mobile app while users are actively using it.                                                                             |
+| [Web push]({{site.baseurl}}/user_guide/channels/push/platform_specific_resources/web/)                         | Deliver notifications to users' web browsers, even when they are not actively on your website.                                                         |
+| [In-app messages]({{site.baseurl}}/user_guide/channels/in_app_messages/)    | Display messages within your mobile app while users are actively using it.                                                                             |
 | [SMS, MMS, and RCS]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/)*                   | Send text messages to users' mobile phones.                                                                                                            |
-| [WhatsApp]({{site.baseurl}}/user_guide/channels/whatsapp/overview/)*              | Send messages through the popular messaging platform, WhatsApp, to reach and engage with your users.                                                   |
+| [WhatsApp]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/)*              | Send messages through the popular messaging platform, WhatsApp, to reach and engage with your users.                                                   |
 | [Banners]({{site.baseurl}}/user_guide/channels/banners/)*       | Embed messages directly in your app or website. |
-| [Content Cards]({{site.baseurl}}/user_guide/channels/content_cards/about/)*       | Provide an inbox within your app or website where users can receive and interact with messages, or display messages in a carousel, as a banner, and more. |
+| [Content Cards]({{site.baseurl}}/user_guide/channels/content_cards/)*       | Provide an inbox within your app or website where users can receive and interact with messages, or display messages in a carousel, as a banner, and more. |
 | [Connected TV]({{site.baseurl}}/developer_guide/platforms/tv_and_ott/)                           | Engage with users on connected television platforms.                                                                                                   |
-| [Webhooks]({{site.baseurl}}/user_guide/channels/webhooks/understanding_webhooks/) | Enable real-time communication and integration with external systems through custom HTTP callbacks.                                                    |
+| [Webhooks]({{site.baseurl}}/user_guide/channels/webhooks/) | Enable real-time communication and integration with external systems through custom HTTP callbacks.                                                    |
 | [LINE]({{site.baseurl}}/user_guide/channels/line/) | Engage with users on LINE, the most popular messaging app in Japan.                                                    |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

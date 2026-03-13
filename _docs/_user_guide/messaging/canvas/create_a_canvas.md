@@ -12,7 +12,7 @@ search_rank: 1
 > This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup). You can also start from a [Braze Canvas template]({{site.baseurl}}/user_guide/messaging/templates/canvas_templates/braze_templates/) to speed up your setup. For more information, see [Canvas templates]({{site.baseurl}}/user_guide/messaging/templates/canvas_templates/).
 
 {% details Expand for original Canvas editor details %}
-You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends [cloning your Canvases]({{site.baseurl}}/user_guide/messaging/canvas/managing_canvases/duplicating/) to the most current editor.
+You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends [cloning your Canvases]({{site.baseurl}}/user_guide/messaging/canvas/managing_canvases/cloning_canvases/) to the most current editor.
 {% enddetails %}
 
 ## Step 1: Set up a new Canvas 

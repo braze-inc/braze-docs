@@ -34,7 +34,7 @@ You can also add additional messages to your product announcement in the **Pages
 
 ### Step 4: Style your message
 
-Customize the look and feel of your product announcement using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/channels/in_app_messages/drag_and_drop/style_settings/#message-components).
+Customize the look and feel of your product announcement using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/channels/in_app_messages/customize/style_settings/#message-components).
 
 ## Analyzing the results
 

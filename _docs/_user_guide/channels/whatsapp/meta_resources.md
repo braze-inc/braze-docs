@@ -44,7 +44,7 @@ The specific limit varies by user, depending on their engagement level. Learn mo
 ### January 2025: WhatsApp pausing marketing message sending to US users starting April 1
 *Last Updated January 2025*
 
-WhatsApp will pause marketing message sending to US users (people with US phone numbers) starting April 1, 2025. [Utility, service, authentication](https://developers.facebook.com/docs/whatsapp/pricing/), and [response messages]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_campaign/create#response-messages) will still be allowed in the US. 
+WhatsApp will pause marketing message sending to US users (people with US phone numbers) starting April 1, 2025. [Utility, service, authentication](https://developers.facebook.com/docs/whatsapp/pricing/), and [response messages]({{site.baseurl}}/user_guide/channels/whatsapp/create_a_whatsapp_message/#response-messages) will still be allowed in the US. 
 
 Marketing message sending (plus all other message types) to all other countries or regions is still allowed and will not be affected.
 

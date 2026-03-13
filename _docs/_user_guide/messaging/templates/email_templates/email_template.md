@@ -13,7 +13,7 @@ search_rank: 1
 
 # Create an email template
 
-> The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also upload your own [HTML email template]({{site.baseurl}}/user_guide/channels/email/templates/html_email_template/).
+> The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also upload your own [HTML email template]({{site.baseurl}}/user_guide/messaging/templates/email_templates/html_email_template/).
 
 ## Step 1: Navigate to the email template editor
 
@@ -37,7 +37,7 @@ After selecting your editor experience, this is your opportunity to get creative
 
 ### Including an unsubscribe link
 
-As you design your email template, if you do not include an unsubscribe link, Braze will prompt you to add this in your email as it’s required by law on all marketing emails. You can add this unsubscribe link as a footer at the bottom of your emails by using the Liquid tag {% raw %}``${email_footer}``{% endraw %}, or by [customizing the footer]({{site.baseurl}}/user_guide/channels/email/managing_user_subscriptions/#custom-footer) in your template.
+As you design your email template, if you do not include an unsubscribe link, Braze will prompt you to add this in your email as it’s required by law on all marketing emails. You can add this unsubscribe link as a footer at the bottom of your emails by using the Liquid tag {% raw %}``${email_footer}``{% endraw %}, or by [customizing the footer]({{site.baseurl}}/user_guide/channels/email/subscriptions/#custom-footer) in your template.
 
 ## Step 4: Check for email errors
 
@@ -105,5 +105,5 @@ After your template is saved, users can see icons over unaddressed comments. Sel
 
 ![An email template comment that reads "Looks good to me".]({% image_buster /assets/img/email_templates/template_comment.png %})
 
-For answers to frequently asked questions about email templates, check out our [Templates FAQ]({{site.baseurl}}/user_guide/channels/email/templates/faq/).
+For answers to frequently asked questions about email templates, check out our [Templates FAQ]({{site.baseurl}}/user_guide/messaging/templates/email_templates/faq/).
 

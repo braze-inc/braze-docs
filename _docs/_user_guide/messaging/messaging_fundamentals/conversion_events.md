@@ -49,7 +49,7 @@ If you abort messages using the Liquid `abort` tag, Braze aborts messages only f
 
 ### Step 1: Set up your campaign
 
-[Create a campaign]({{site.baseurl}}/user_guide/messaging/campaigns/create_a_campaign/) for your desired messaging channel. After setting up your campaign's messages and schedule, you can add up to four conversion events for tracking.
+[Create a campaign]({{site.baseurl}}/user_guide/messaging/campaigns/creating_campaign/) for your desired messaging channel. After setting up your campaign's messages and schedule, you can add up to four conversion events for tracking.
 
 Use as many conversion events as necessary. Adding a second or third conversion event significantly enriches your reporting. For example, for a campaign targeting lapsing users, adding a secondary conversion event along with the primary **Starts Session** conversion event helps you understand how effective your campaign is at bringing users back into your application. 
 

@@ -32,7 +32,7 @@ Tags make your campaigns easier to find and build reports out of. For example, w
 {% endalert %}
 
 {: start="5"}
-5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/messaging/testing/multivariant_testing/).
+5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/messaging/ab_testing/).
 
 {% details Deciding between regular or multichannel push campaign %}
 
@@ -62,9 +62,9 @@ If all of the messages in your campaign are going to be similar or have the same
 {% tab Canvas %}
 1. [Create your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
-3. Choose a [step schedule]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
+3. Choose a [step schedule]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/#schedule-delay) and specify a delay as needed.
 4. Filter your Audience for this step as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay at the time messages are sent.
-5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/advancement/).
+5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/messaging/canvas/managing_canvases/cloning_canvases/).
 6. Choose any other messaging channels which you would like to pair with your message.
 
 {% endtab %}
@@ -188,15 +188,15 @@ Build the remainder of your campaign; see the following sections for further det
 
 #### Choose delivery schedule or trigger
 
-Push messages can be delivered based on a scheduled time, an action, or based on an API trigger. For more, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/delivery_types/).
+Push messages can be delivered based on a scheduled time, an action, or based on an API trigger. For more, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/).
 
-For action-based delivery, you can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/time_based_campaign/#quiet-hours).
+For action-based delivery, you can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/#quiet-hours).
 
-This step is also where you can specify delivery controls, such as allowing users to become [re-eligible]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) to receive the campaign, or enabling [frequency capping]({{site.baseurl}}/user_guide/messaging/campaigns/building_campaigns/rate-limiting/#frequency-capping) rules.
+This step is also where you can specify delivery controls, such as allowing users to become [re-eligible]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/re_eligibility/#campaigns) to receive the campaign, or enabling [frequency capping]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/frequency_capping/#frequency-capping) rules.
 
 #### Choose users to target
 
-Next, you must [target users]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow your audience. You automatically receive a preview of what that approximate segment population looks like. Detailed audience statistics for the channels targeted by your campaign are available in the footer. To see what percentage of your user base is being targeted and the Lifetime Value for this segment, select **Show Additional Stats**.
+Next, you must [target users]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/target_users/) by choosing segments or filters to narrow your audience. You automatically receive a preview of what that approximate segment population looks like. Detailed audience statistics for the channels targeted by your campaign are available in the footer. To see what percentage of your user base is being targeted and the Lifetime Value for this segment, select **Show Additional Stats**.
 
 {% multi_lang_include target_audiences.md %}
 

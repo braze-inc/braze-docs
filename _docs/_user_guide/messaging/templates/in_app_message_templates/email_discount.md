@@ -26,7 +26,7 @@ When creating a drag-and-drop in-app message, select **Email sign-up with welcom
 
 ### Step 3: Customize your email sign-up component
 
-To get started building your email sign-up form, select the email capture element in the editor. By default, collected email addresses will have the global subscription group **Subscribed**. To opt in users to specific subscription groups, refer to [Updating email subscription states]({{site.baseurl}}/user_guide/channels/email/managing_user_subscriptions#updating-email-subscription-states).
+To get started building your email sign-up form, select the email capture element in the editor. By default, collected email addresses will have the global subscription group **Subscribed**. To opt in users to specific subscription groups, refer to [Updating email subscription states]({{site.baseurl}}/user_guide/channels/email/subscriptions/#updating-email-subscription-states).
 
 You can customize the placeholder text and label text of the email capture element.
 
@@ -42,7 +42,7 @@ You can customize the placeholder text and label text of the email capture eleme
 
 ### Step 5: Style your message
 
-Customize the look and feel of your sign-up form and discount using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/channels/in_app_messages/drag_and_drop/style_settings/#message-components).
+Customize the look and feel of your sign-up form and discount using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/channels/in_app_messages/customize/style_settings/#message-components).
 
 ## Analyzing the results
 

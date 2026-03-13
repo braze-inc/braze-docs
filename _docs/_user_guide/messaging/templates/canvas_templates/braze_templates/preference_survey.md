@@ -20,7 +20,7 @@ To successfully use this template, you'll need the following:
 - A welcome email that prompts users to begin onboarding.
 - A followup email that includes tips to get started with the app for users who onboarded.
 - A followup email to prompt users to complete their onboarding.
-- A [survey]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/templates/simple_survey) containing multiple questions to determine user preferences.
+- A [survey]({{site.baseurl}}/user_guide/channels/in_app_messages/message_types/simple_survey/) containing multiple questions to determine user preferences.
 
 ## Tailoring the template to your needs
 
