@@ -48,14 +48,17 @@ Add the required permissions to your `AndroidManifest.xml` file:
 
 #### iOS
 
+In the `application(_:didFinishLaunchingWithOptions:)` method, call `BrazePlugin.configure(_:postInitialization:)` to store your configuration. The Braze instance is created later when `initialize()` is called from Dart. The API key and endpoint are not set here.
+
+{% subtabs %}
+{% subtab SWIFT %}
+
 Add the Braze SDK imports at the top of the `AppDelegate.swift` file:
 
 ```swift
 import BrazeKit
 import braze_plugin
 ```
-
-In the `application(_:didFinishLaunchingWithOptions:)` method, call `BrazePlugin.configure(_:postInitialization:)` to store your configuration. The Braze instance is created later when `initialize()` is called from Dart. The API key and endpoint are not set here.
 
 ```swift
 override func application(
@@ -77,6 +80,35 @@ override func application(
   return true
 }
 ```
+
+{% endsubtab %}
+{% subtab OBJECTIVE-C %}
+
+Import the Braze SDK at the top of the `AppDelegate.m` file:
+
+```objc
+@import BrazeKit;
+@import braze_plugin;
+```
+
+```objc
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [BrazePlugin configure:^(BRZConfiguration *configuration) {
+    configuration.logger.level = BRZLoggerLevelInfo;
+    // Set other non-API-key configurations here, such as:
+    // configuration.push.automation = ...
+    // configuration.sessionTimeout = 60;
+  } postInitialization:^(Braze *braze) {
+    // Optional: customize the Braze instance after creation.
+  }];
+
+  return YES;
+}
+```
+
+{% endsubtab %}
+{% endsubtabs %}
 
 {% alert important %}
 `BrazePlugin.configure()` only stores your configuration. No Braze instance exists until `initialize()` is called from Dart, so do not call any Braze SDK methods in the AppDelegate after `configure()`.
@@ -283,11 +315,25 @@ You can verify that the SDK is integrated by checking session statistics in the 
 
 Open a session for a particular user by calling the following code in your app.
 
+{% tabs %}
+{% tab Flutter SDK 18.0.0+ %}
+
 ```dart
 BrazePlugin braze = BrazePlugin();
 braze.initialize("<BRAZE_API_KEY>", "<BRAZE_ENDPOINT>");
 braze.changeUser("{some-user-id}");
 ```
+
+{% endtab %}
+{% tab Flutter SDK 17.1.0 and earlier %}
+
+```dart
+BrazePlugin braze = new BrazePlugin();
+braze.changeUser("{some-user-id}");
+```
+
+{% endtab %}
+{% endtabs %}
 
 Search for the user with `{some-user-id}` in the dashboard under **Audience** > **Search Users**. There, you can verify that session and device data have been logged.
 
