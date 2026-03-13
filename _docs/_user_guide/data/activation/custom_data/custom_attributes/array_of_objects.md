@@ -547,6 +547,7 @@ Use dot notation to specify which field in the array of objects you want to use.
 
 For example, if you want to filter the `top_3_movies` array of objects based on the `type` field, enter `[].type` and choose the movies to filter for, such as `Fantasy Movie`.
 
+
 ### Levels of nesting
 
 You can create a segment with up to one level of array nesting (array within another array). For example, given the following attributes, you can make a segment for `pets[].name` contains `Gus`, but you can't make a segment for `pets[].nicknames[]` contains `Gugu`.
