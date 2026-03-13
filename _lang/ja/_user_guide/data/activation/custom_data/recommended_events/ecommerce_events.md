@@ -174,7 +174,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
 ```
 {%endraw%}
 
-30日以内にカートが更新されず、注文イベントに進まなかった場合、カートと関連製品は削除されます。
+10日以内にカートが更新されず、注文イベントに進まなかった場合、カートと関連製品は削除されます。
 
 {% alert note %}
 Braze ではカートあたりの製品の数に制限はありません。ただし Shopify での上限は500です。

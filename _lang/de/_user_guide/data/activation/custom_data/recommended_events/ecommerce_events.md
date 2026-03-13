@@ -174,7 +174,7 @@ Das Ereignis `ecommerce.cart_updated` verfügt über ein Objekt zur Abbildung vo
 ```
 {%endraw%}
 
-Wenn ein Warenkorb innerhalb von 30 Tagen nicht aktualisiert und zu einem Bestellvorgang weitergeleitet wurde, löschen wir den Warenkorb und die zugehörigen Produkte.
+Wenn ein Warenkorb innerhalb von 10 Tagen nicht aktualisiert und zu einem Bestellvorgang weitergeleitet wurde, löschen wir den Warenkorb und die zugehörigen Produkte.
 
 {% alert note %}
 Produkte pro Warenkorb sind auf Braze nicht begrenzt. Das Limit von Shopify liegt jedoch bei 500.
