@@ -29,7 +29,7 @@ The following lists methods across various platforms that are used to log purcha
 
 ## Viewing purchase data
 
-After you have set up and begun logging purchase events, you can view this purchase data on a user's profile in the [Overview tab]({{site.baseurl}}/user_guide/audience/user_profiles/#overview-tab).
+After you have set up and begun logging purchase events, you can view this purchase data on a user's profile in the [Overview tab]({{site.baseurl}}/user_guide/audience/manage_audience/user_profiles/#overview-tab).
 
 ## Using purchase data
 

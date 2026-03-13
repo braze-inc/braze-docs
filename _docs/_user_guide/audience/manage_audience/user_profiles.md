@@ -158,4 +158,3 @@ Some fields may be absent in a user's **Message History** tab in the following s
 - [POST: Export user profile by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)
 - [POST: Delete users]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)
 
-

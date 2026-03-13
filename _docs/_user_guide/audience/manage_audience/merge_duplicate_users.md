@@ -2,7 +2,7 @@
 nav_title: Merge duplicate users
 article_title: Merge Duplicate Users
 description: "Learn how to find and merge duplicate users in your Braze dashboard."
-page_order: 2
+page_order: 4
 ---
 
 # Merge duplicate users

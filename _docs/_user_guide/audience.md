@@ -14,9 +14,6 @@ guide_featured_list:
   - name: Manage audience
     link: /docs/user_guide/audience/manage_audience/
     image: /assets/img/braze_icons/users-01.svg
-  - name: User profiles
-    link: /docs/user_guide/audience/user_profiles/
-    image: /assets/img/braze_icons/users-01.svg
   - name: Segments
     link: /docs/user_guide/audience/segments/
     image: /assets/img/braze_icons/pie-chart-01.svg

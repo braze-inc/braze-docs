@@ -649,8 +649,8 @@ validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#under
 validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#recommended-follow-ups'] = '/docs/user_guide/messaging/ab_testing/analytics/#recommended-follow-ups';
 validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations'] = '/docs/user_guide/messaging/ab_testing/optimizations/';
 
-validurls['/docs/email_history/'] = '/docs/user_guide/audience/user_profiles/#messaging-history-tab';
-validurls['/docs/user_guide/audience/segments/using_user_search/'] = '/docs/user_guide/audience/user_profiles/';
+validurls['/docs/email_history/'] = '/docs/user_guide/audience/manage_audience/user_profiles/#messaging-history-tab';
+validurls['/docs/user_guide/audience/segments/using_user_search/'] = '/docs/user_guide/audience/manage_audience/user_profiles/';
 
 validurls['/docs/user_guide/engagement_tools/canvas/best_practices/'] = '/docs/user_guide/messaging/canvas/ideas_and_strategies/best_practices/';
 
@@ -3544,7 +3544,7 @@ validurls['/docs/user_guide/engagement_tools/segments/troubleshooting/'] = '/doc
 
 // Audience > Suppression lists, User profiles, Manage users (extracted from segments)
 validurls['/docs/user_guide/engagement_tools/segments/suppression_lists/'] = '/docs/user_guide/audience/suppression_lists/';
-validurls['/docs/user_guide/engagement_tools/segments/user_profiles/'] = '/docs/user_guide/audience/user_profiles/';
+validurls['/docs/user_guide/engagement_tools/segments/user_profiles/'] = '/docs/user_guide/audience/manage_audience/user_profiles/';
 validurls['/docs/user_guide/engagement_tools/segments/user_profiles/duplicate_users/'] = '/docs/user_guide/audience/manage_audience/merge_duplicate_users/';
 
 // Audience > Manage audience (import/merge moved from user_profiles)
@@ -3562,14 +3562,18 @@ validurls['/docs/user_guide/analytics/reporting/global_control_group_reporting/'
 // Audience > Manage audience (from data/unification)
 validurls['/docs/user_guide/data/unification/user_data/import_users/'] = '/docs/user_guide/audience/manage_audience/import_users/';
 validurls['/docs/user_guide/data/unification/user_data/import_users/csv/'] = '/docs/user_guide/audience/manage_audience/import_users/csv_import/';
-validurls['/docs/user_guide/data/unification/user_data/delete_users/'] = '/docs/user_guide/audience/user_profiles/delete_users/';
+validurls['/docs/user_guide/data/unification/user_data/delete_users/'] = '/docs/user_guide/audience/manage_audience/user_profiles/delete_users/';
 
 // Audience > Manage audience, User profiles (from manage_users)
+// audience/user_profiles moved under manage_audience
+validurls['/docs/user_guide/audience/user_profiles/'] = '/docs/user_guide/audience/manage_audience/user_profiles/';
+validurls['/docs/user_guide/audience/user_profiles/delete_users/'] = '/docs/user_guide/audience/manage_audience/user_profiles/delete_users/';
+
 validurls['/docs/user_guide/audience/manage_users/'] = '/docs/user_guide/audience/manage_audience/';
 validurls['/docs/user_guide/audience/manage_users/import_users/'] = '/docs/user_guide/audience/manage_audience/import_users/';
 validurls['/docs/user_guide/audience/manage_users/import_users/csv_import/'] = '/docs/user_guide/audience/manage_audience/import_users/csv_import/';
 validurls['/docs/user_guide/audience/manage_users/merge_duplicate_users/'] = '/docs/user_guide/audience/manage_audience/merge_duplicate_users/';
-validurls['/docs/user_guide/audience/manage_users/delete_users/'] = '/docs/user_guide/audience/user_profiles/delete_users/';
+validurls['/docs/user_guide/audience/manage_users/delete_users/'] = '/docs/user_guide/audience/manage_audience/user_profiles/delete_users/';
 
 // Audience > Subscription preferences > Preference center (from email)
 validurls['/docs/user_guide/message_building_by_channel/email/preference_center/'] = '/docs/user_guide/audience/subscription_preferences/preference_center/';
