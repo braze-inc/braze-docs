@@ -33,8 +33,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
 | `campaign_id` | Required | String | See [campaign API identifier]({{site.baseurl}}/api/identifier_types/).<br><br> The `campaign_id` for API campaigns can be found on the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page and the **Campaign Details** page within your dashboard; or you can use the [Export campaigns list endpoint](#campaign-list-endpoint). |
-| `post_launch_draft_version` | Optional | Boolean | For messages that have a post-launch draft, setting this to `true` shows any draft changes available. Defaults to `false`. |
-| `include_has_translatable_content` | Optional | Boolean | When set to `true`, the API response includes a `has_translatable_content` field for each message. Defaults to `false`. |
+| `post_launch_draft_version` | Optional | Boolean | For messages that have a post-launch draft, setting this to `true` will show any draft changes available. Defaults to `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
@@ -66,9 +65,8 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
     "teams" : (array) the names of the Teams associated with the campaign,
     "messages": {
         "message_variation_id": (string) { // <=This is the actual id
-            "channel": (string) the channel type of the message, must be either email, ios_push, webhook, content_card, in-app_message, or sms,
-            "name": (string) the name of the message in the dashboard (for example, "Variation 1"),
-            "has_translatable_content": (boolean) whether the message has translatable content (only present if `include_has_translatable_content` is true); `true` if locales are configured and the message contains at least one translation tag; `false` if no locales are configured or no translation tags detected; `null` if detection could not be completed,
+            "channel": (string) the channel type of the message, must be either email, ios_push, webhook, content_cards, trigger_in_app_message, or sms,
+            "name": (string) the name of the message in the dashboard (eg., "Variation 1")
             ... channel-specific fields for this message, see the following messages section ...
         }
     },

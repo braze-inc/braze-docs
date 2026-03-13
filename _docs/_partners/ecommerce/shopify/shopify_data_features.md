@@ -472,10 +472,6 @@ For more information on how to build out a Liquid `for` loop to dynamically add 
 **Triggered**: When a user navigates to the checkout page<br>
 **Use Case**: Checkout abandonment
 
-{% alert important %}
-If a customer uses Shop Pay as an accelerated checkout option, Shopify may bypass certain standard checkout events (such as the Shopify checkout started webhook). This means Braze may not receive the data needed to add the checkout token alias, which can impact checkout abandonment tracking and user profile reconciliation.
-{% endalert %}
-
 For Abandoned Checkout Canvases, you first need to use the following Liquid tag:
 
 {% raw %}

@@ -34,7 +34,7 @@ Before you start, you'll need the following:
 ### Step 2: Configure Braze Connected Content
 
 1. [Log into Braze](https://dashboard.braze.com/sign_in) with your credentials.
-2. In the Braze dashboard, go to **Templates** > **Content Blocks** > **Create Content Block** > **HTML code editor**.
+2. In the Braze dashboard, go to **Templates** > **Content Blocks** > **Create Content Block** > **HTML Content Block**.
 3. Create a Connected Content request to Contentful's [Contentful Content Delivery API URL](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/links). An example Contentful Content Delivery API URL is ```https://cdn.contentful.com/spaces/{space_id}/environments/{environment_id}/entries```.<br><br> Retrieving different assets requires including specific variables. The example Connected Content URL request targets Contentful's [Entry](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/entries/entry/get-a-single-entry/console) endpoint. This endpoint needs variables like `{space_id}` and `{environment_id}`, or `{entry_id}` and `{access_token}`. These can be taken from your Contentful instance. In this example Content Block, the variables must be replaced with your Contentful Space ID and Environment ID.<br><br>The example Content Delivery API URL uses only one of Contentful's available endpoints. Different use cases may be achieved by leveraging different URLs. For example, the [Image API](https://www.contentful.com/developers/docs/references/images-api/) can be used to capture images stored in Contentful. For more information, review [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/).
 
 {% alert note %}

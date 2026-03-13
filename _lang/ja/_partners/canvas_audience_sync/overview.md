@@ -44,7 +44,7 @@ table td {
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation" }
 <sup>レート制限に達すると、Braze は 13 時間同期を再試行します。</sup>
 
-## 仕組み
+## CDI の仕組み
 
 Audience Sync to Google または Audience Sync to Facebook を使用するには、[**テクノロジー パートナー**] ページでパートナーを探して、広告アカウントを接続します。
 
