@@ -199,6 +199,14 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | Archive Email Templates                         | Move email templates to archive |
 | View Email Link Templates   	                  | View link templates without making changes |
 | Edit Email Link Templates	                      | Create and update link templates |
+| View IAM Templates                           | View in-app message templates without making changes |
+| Edit IAM Templates                           | Create and update in-app message templates |
+| Archive IAM Templates                   	  | Move IAM templates to archive |
+| View Webhook Templates                           | View webhook templates without making changes |
+| Edit Webhook Templates                           | Create and update webhook templates |
+| Archive Webhook Templates                   	  | Move webhook templates to archive |
+
+
 | Publish Landing Pages                           | Make a draft landing page active |
 | Edit Landing Page Drafts                        | Create and save landing page drafts |
 | View Landing Pages			                  | View landing pages |
@@ -219,9 +227,9 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | Launch Preference Centers	                      | Make a draft Preference Center active or update an existing one |
 | View API Keys                                   | View API keys |
 | Edit API Keys                                   | Create and update API keys |
-| View Internal Groups                            | View internal groups |
-| Edit Internal Groups                            | Create and update internal groups |
-| Delete Internal Groups                          | Delete internal groups |
+| View Internal User Groups                       | View internal groups |
+| Edit Internal User Groups                       | Create and update internal groups |
+| Delete Internal User Groups                     | Delete internal groups |
 | View Message Activity Log                       | View message activity logs |
 | View Event User Log                             | View event user logs |
 | View API identifiers                            | View API identifiers and other identifiers |
@@ -271,21 +279,24 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | View Data Transformation                        | View data transformations |
 | Edit Data Transformation                        | Create and update data transformations |
 | Edit Canvas Templates                           | Create and update Canvas templates |
-| Approve Campaigns                               | Approve or deny campaigns. The [approval workflow for campaigns]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you’re interested in participating in the early access. |
-| Approve Canvases                                | Approve or deny Canvases. The [approval workflow for Canvases]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you’re interested in participating in the early access. |
+| Approve and Deny Campaigns                               | Approve or deny campaigns. The [approval workflow for campaigns]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you’re interested in participating in the early access. |
+| Approve and Deny Canvases                                | Approve or deny Canvases. The [approval workflow for Canvases]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply. This setting is currently in early access. Contact your account manager if you’re interested in participating in the early access. |
 | View Placements                                 | View Banner placement |
 | Edit Placements                                 | View Banner placements without making changes |
 | Archive Placements                              | Move Banner placements to archive |
 | View Push Settings                              | View Push settings |
 | Edit Push Settings                              | Create and update Push settings |
+| View Dashboard Reports                          | View reports without making changes |
 | Edit Dashboard Reports                          | Create and update reports |
+| Delete Dashboard Reports                          | Permanently delete reports |
 | View Import Users                               | View CSV user imports without making changes |
 | Import Users                                    | Upload users to the dashboard |
 | Export User Data                                | Download users from the dashboard |
 | Edit User Data                                  | Create and update user data |
-| View Merge Users                                | View a list of user merge records |
+| View User Merge Records                                | View a list of user merge records |
 | View User Deletion Records	            	  | View user deletion records |
-| Delete Users From Dashboard	                  | Permanently delete users from the dashboard individually or in bulk. |      
+| Delete Users From Dashboard	                  | Permanently delete users from the dashboard individually or in bulk. |
+| Use Operator                                    |  |
 | View Custom AI Agents                           | Allows users to view custom AI agents. |
 | Edit Custom AI Agents                           | Allows users to create and update custom AI agents. |
 | Archive Custom AI Agents                        | Allows users to archive custom AI agents. |
