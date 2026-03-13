@@ -30,13 +30,27 @@ flutter pub add braze_plugin
 
 #### Android
 
-Create a `braze.xml` file in your project's `android/res/values` folder. The API key and endpoint are provided at runtime from Dart, so they are not required in this file. Add any other native configurations you need:
+Create a `braze.xml` file in your project's `android/res/values` folder. The API key and endpoint are provided at runtime from Dart, so they are not required in this file. To enable delayed initialization, add `com_braze_enable_delayed_initialization` to the file:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <bool name="com_braze_enable_delayed_initialization">true</bool>
   <!-- API key and endpoint are not required here. They are set at runtime via Dart. -->
 </resources>
+```
+
+Alternatively, you can enable delayed initialization programmatically in your `MainActivity.kt`:
+
+```kotlin
+import com.braze.Braze
+
+class MainActivity : FlutterActivity() {
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    Braze.enableDelayedInitialization(context = this)
+  }
+}
 ```
 
 Add the required permissions to your `AndroidManifest.xml` file:
