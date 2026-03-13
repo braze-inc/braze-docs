@@ -19,7 +19,7 @@ description: "この記事では、「ユーザーの特定」Braze エンドポ
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
-## CDI の仕組み
+## 仕組み
 
 `/users/identify` を呼び出すと、エイリアス (エイリアスのみのプロファイル)、メールアドレス (メールのみのプロファイル)、または電話番号 (電話番号のみのプロファイル) によって識別されるユーザープロファイルと、`external_id` (識別されたプロファイル) を持つユーザープロファイルが結合され、エイリアスのみのプロファイルが削除されます。
 
