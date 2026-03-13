@@ -16,7 +16,7 @@ channel:
 
 Review the following Meta documentation for guidance with display names, phone numbers, and more.
 
-- [Display name guidance](https://www.facebook.com/business/help/757569725593362) 
+- [Display name guidance](https://www.facebook.com/business/help/757569725593362)
 - [Enabling Meta Insights](https://www.facebook.com/business/help/218116047387456)
 - [Phone Number Requirements](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers)
 - [Messaging Limits](https://developers.facebook.com/docs/whatsapp/messaging-limits)
@@ -24,25 +24,25 @@ Review the following Meta documentation for guidance with display names, phone n
 
 ## WhatsApp product updates
 
-### June 2026: Business scoped user IDs
+### June 2026: Business-scoped user IDs
 *Last Updated March 2026*
 
-- Meta introducing User IDs to replace phone number sharing for privacy
+- Meta is introducing user IDs to replace phone number sharing for privacy
 - Braze is working on a solution ahead of the rollout
-- Expected June 2026 rollout from Meta 
+- Expected June 2026 rollout from Meta
 
-### November 2025: Marketing messages API for WhatsApp [Marketing Messages API](https://developers.facebook.com/documentation/business-messaging/whatsapp/marketing-messages/overview/) (formerly Marketing Messages Lite API)
+### November 2025: [Marketing messages API for WhatsApp](https://developers.facebook.com/documentation/business-messaging/whatsapp/marketing-messages/overview/) (formerly Marketing Messages Lite API)
 *Last Updated March 2026*
 
 - Replaces static Cloud API limits with dynamic, engagement-based limits
 - Not available in EMEA, Japan, or South Korea for optimized delivery
-- Utility/authentication continue through Cloud API automatically 
+- Utility/authentication continue through Cloud API automatically
 
 ### October 2025: Official Business Account (OBA) approval process changed
 *Last Updated March 2026*
 
 - Previously open to all customers through WhatsApp Manager
-- Now restricted to: government/large Meta advertisers, direct advertisers, or via a BSP like Braze (up to 5/week)
+- Now restricted to: government/large Meta advertisers, direct advertisers, or via a BSP like Braze (up to 5 per week)
 - New prerequisites: business verification, 2-step verification, approved display name, notability
 - Reach out to your customer success manager for assistance 
 
@@ -50,7 +50,7 @@ Review the following Meta documentation for guidance with display names, phone n
 *Last Updated March 2026*
 
 - Lower utility/authentication rates in Argentina, Egypt, Mexico, North America
-- Lower marketing rates in Mexico (effective Oct 1, 2025)
+- Lower marketing rates in Mexico (effective October 1, 2025)
 
 ### October 2025: Messaging limits change from per-phone to per-business portfolio
 *Last Updated March 2026*
