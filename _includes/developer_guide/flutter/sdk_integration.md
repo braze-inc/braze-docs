@@ -48,7 +48,7 @@ Add the required permissions to your `AndroidManifest.xml` file:
 
 #### iOS
 
-In the `application(_:didFinishLaunchingWithOptions:)` method, call `BrazePlugin.configure(_:postInitialization:)` to store your configuration. The Braze instance is created later when `initialize()` is called from Dart. The API key and endpoint are not set here.
+Within your existing `application(_:didFinishLaunchingWithOptions:)` method, add a call to `BrazePlugin.configure(_:postInitialization:)` to store your configuration. The Braze instance is created later when `initialize()` is called from Dart. The API key and endpoint are not set here.
 
 {% subtabs %}
 {% subtab SWIFT %}
@@ -65,6 +65,8 @@ override func application(
   _ application: UIApplication,
   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 ) -> Bool {
+  // ... your existing didFinishLaunchingWithOptions setup ...
+
   BrazePlugin.configure(
     { configuration in
       configuration.logger.level = .info
@@ -73,7 +75,10 @@ override func application(
       // configuration.sessionTimeout = 60
     },
     postInitialization: { braze in
-      // Optional: customize the Braze instance after creation.
+      // Optional: Customize the Braze instance after creation.
+      // For example, set a custom in-app message presenter:
+      // let customPresenter = CustomInAppMessagePresenter()
+      // braze.inAppMessagePresenter = customPresenter
     }
   )
 
@@ -229,7 +234,7 @@ import 'package:braze_plugin/braze_plugin.dart';
 final BrazePlugin braze = BrazePlugin();
 ```
 
-Then call `initialize()` with your Braze API app identifier (API key) and SDK endpoint to create the Braze instance. When you call `initialize()` determines how the SDK behaves at startup.
+Then call `initialize()` with your app identifier API key and SDK endpoint to create the Braze instance. When you call `initialize()` determines how the SDK behaves at startup.
 
 #### Standard initialization
 
@@ -239,7 +244,7 @@ To initialize the SDK when your app starts, call `initialize()` in `initState()`
 @override
 void initState() {
   super.initState();
-  braze.initialize("<BRAZE_API_KEY>", "<BRAZE_SDK_ENDPOINT>");
+  braze.initialize("<BRAZE_API_KEY>", "<BRAZE_ENDPOINT>");
 }
 ```
 
@@ -248,6 +253,7 @@ void initState() {
 To defer SDK initialization until a later point in the session—for example, after the user grants consent or completes login—call `initialize()` when you're ready:
 
 ```dart
+// ...
 void onUserConsent() {
   braze.initialize("<BRAZE_API_KEY>", "<BRAZE_ENDPOINT>");
 }
