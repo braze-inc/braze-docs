@@ -236,7 +236,16 @@ For each ticket where article content is available (from CSV or user):
 6. **Use alerts and FAQ entries as a last resort** — Only add a new alert, callout, or FAQ entry when the information genuinely cannot be worked into existing prose. These elements contribute to doc bloat and should be reserved for content that doesn't fit naturally elsewhere.
 7. Do NOT include any content flagged as sensitive in the ticket or marked as internal in the SF article
 8. **Do not edit files under `_docs/_help/help_articles/`** — if the ticket pointed there, apply the update to the alternative location you identified (related user guide, FAQ, or topic) instead
-9. **Cross-reference source code** — Verify technical accuracy against the main product at `../platform` when possible
+9. **Cross-reference source code** — Verify technical accuracy against the main product (folder `platform`, typically at `../platform` in the workspace) when possible
+
+### Vet new content against reference repos
+
+After drafting, verify the new or updated content against the appropriate Braze source repos as described in `.cursor/rules/reference-repos.mdc`. That rule uses **folder names** (e.g. `platform`, `braze-android-sdk`); in the workspace those folders are typically sibling directories to braze-docs (e.g. `../platform`).
+
+1. **Choose the right repo(s)** — Use the reference-repos table to pick the source-of-truth folder for the content (e.g., folder `platform` for product/backend behavior, `braze-android-sdk` / `braze-swift-sdk` / `braze-web-sdk` for SDK behavior, `liquid` for Liquid templating, `grapesjs` for the drag-and-drop editor). Do not rely on the SF article or existing docs alone; confirm claims against source code.
+2. **Verify technical accuracy** — Cross-reference any new or changed claims (APIs, UI labels, behavior, configuration) with the relevant repo folder. If you can verify, correct the draft if it disagrees with the source. If you cannot verify against source code, leave the content as-is but do not claim verification in the PR.
+3. **Keep repos current** — If you rely on a reference repo for verification, ensure it is up to date (e.g., run `git pull` in that folder from the parent directory that contains braze-docs and the reference repo folders) before vetting.
+4. **PR descriptions** — When content was verified using these Braze source repos, never publish code paths or file paths from those repos in the PR description or other public output. Use a phrase such as **"Verified against Braze source code."** instead.
 
 ## Batch processing
 
@@ -280,7 +289,7 @@ Cursor fills out the PR automatically:
 
 ```text
 # Changes
-* [Cursor analyzes code changes and lists them]
+* [Cursor analyzes code changes and lists them — do not include paths to Braze source repos; say "Verified against Braze source code" if applicable]
 * List of changes to help the reviewer understand the scope
 * List the Jira ticket IDs that were addressed in the update in a bullet list of URLs with the format `https://jira.atl.braze.com/browse/<ticket key>`
 * If the ticket has a linked SF Knowledge article URL, include it for reference

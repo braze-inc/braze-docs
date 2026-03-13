@@ -11,7 +11,7 @@ platform:
 
 > Swift Braze SDK 用にライブアクティビティを実装する方法について説明します。ライブ・アクティビティは、ロック画面に直接表示される永続的でインタラクティブな通知で、ユーザーはデバイスのロックを解除することなく、ダイナミックなリアルタイム更新を得ることができる。
 
-## CDI の仕組み
+## 仕組み
 
 ![iPhone ロック画面の配信トラッカーのライブアクティビティ。車のついたステータス棒がほぼ半分に満ちている。「ピックアップまであと2分」と表示されている]({% image_buster /assets/img/swift/live_activities/example_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
 
