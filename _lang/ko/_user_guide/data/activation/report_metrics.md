@@ -118,7 +118,7 @@ iOS 푸시, Android 푸시
 인앱 메시지
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %} _버튼 1 클릭_에 대한 보고는 인앱 메시지에서 **보고용 식별자**를 "0"으로 지정할 때만 작동합니다.
+{% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %} *버튼 1 클릭*에 대한 보고는 인앱 메시지에서 **보고용 식별자**를 "0"으로 지정할 때만 작동합니다.
 
 <span class="calculation-line">계산: (버튼 1 클릭) / (노출 횟수)</span>
 
@@ -132,7 +132,7 @@ iOS 푸시, Android 푸시
 인앱 메시지
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %} _버튼 2 클릭_에 대한 보고는 인앱 메시지에서 **보고용 식별자**를 "1"로 지정할 때만 작동합니다.
+{% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %} *버튼 2 클릭*에 대한 보고는 인앱 메시지에서 **보고용 식별자**를 "1"로 지정할 때만 작동합니다.
 
 <span class="calculation-line">계산: (버튼 2 클릭) / (노출 횟수)</span>
 
@@ -829,7 +829,7 @@ SMS/MMS
 이메일
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} _소프트 반송_는 _연기_와 다릅니다. 이 재시도 기간 동안 성공적으로 전달된 이메일이 없으면, Braze는 시도된 캠페인당 하나의 소프트 바운스 이벤트를 보낼 것입니다. 2025년 2월 25일 이전에, 이러한 재시도는 1개의 캠페인 발송에 대해 여러 번의 소프트 반송으로 계산되었습니다.
+{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} *소프트 반송*는 *연기*와 다릅니다. 이 재시도 기간 동안 성공적으로 전달된 이메일이 없으면, Braze는 시도된 캠페인당 하나의 소프트 바운스 이벤트를 보낼 것입니다. 2025년 2월 25일 이전에, 이러한 재시도는 1개의 캠페인 발송에 대해 여러 번의 소프트 반송으로 계산되었습니다.
 
 소프트 바운스는 캠페인 분석에서 추적되지 않지만, [메시지 활동 로그에서]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) 소프트 바운스를 모니터링할 수 있습니다. 또한 [소프트 반송 세그먼트 필터를]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced) 사용하여 이러한 사용자를 전송에서 제외하거나 지난 30일 동안의 소프트 반송 양을 다시 살펴볼 수도 있습니다. 메시지 활동 로그에서 소프트 반송의 이유를 확인하고 이메일 캠페인의 '전송'과 '배달' 간에 발생할 수 있는 불일치를 파악할 수도 있습니다.
 
