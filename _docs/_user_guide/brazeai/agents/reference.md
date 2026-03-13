@@ -95,8 +95,8 @@ In the **Logs** section of the **Agent Console**, you can review the details for
 
 Let's say you're part of a travel brand, UponVoyage, and your goals are to analyze customer feedback, write personalized messages, and determine the conversion rate for your free subscribers. Here are examples of different instructions based on defined goals:
 
-{% tabs %}
-{% tab Personalized message copywriter agent %}
+{% tabs local %}
+{% tab Message copywriter %}
 {% raw %}
 ```
 Role: 
@@ -145,7 +145,7 @@ The user IS in the segment: “Logged multiple searches in the past 30D”.
 ```
 {% endraw %}
 {% endtab %}
-{% tab Customer feedback analysis agent %}
+{% tab Feedback analysis %}
 {% raw %}
 ```
 Role:
@@ -186,7 +186,7 @@ Input & Output Example:
 ```
 {% endraw %}
 {% endtab %}
-{% tab Trial conversion and strategy agent %}
+{% tab Trial conversion %}
 {% raw %}
 ```
 Role:
@@ -244,8 +244,8 @@ The user IS in the segment: "Has Valid Payment Method on File".
 
 ### Catalog agent examples
 
-{% tabs %}
-{% tab Catalog destination description agent %}
+{% tabs local %}
+{% tab Destination description %}
 {% raw %}
 ```
 Role:
@@ -283,7 +283,7 @@ Price Tier: $$$
 ```
 {% endraw %}
 {% endtab %}
-{% tab Catalog localization agent %}
+{% tab Localization %}
 {% raw %}
 ```
 Role:
