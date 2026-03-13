@@ -343,3 +343,7 @@ You can also save your Canvas as a draft if you need to come back to it.
 Need to make edits to your Canvas after launch? Well, you can! Check out [Editing Canvases after launch]({{site.baseurl}}/post-launch_edits/) for more information.
 {% endalert %}
 
+## Canvas Step, Quiet Hours "next available time" (BD-4095)
+
+Add a section below the Quiet Hours screenshot on the docs page, that explains what happens when the "Send at next available time" option is selected: "When Send at next available time is selected , Quiet Hours will suppress the message and send it at the next 'open' time outside of the Quiet hours. Example: Quiet Hours prevent messages from being sent between 11.30 am and 2.30 pm in the user's local time. # User enters a message step at 11.35 am. This is inside of Quiet Hours, and the message will not be sent yet. User will be sent the message step at 2:30 pm, after Quiet Hours" (Note: the SF
+

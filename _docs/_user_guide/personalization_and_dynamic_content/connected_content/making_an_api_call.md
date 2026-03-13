@@ -268,3 +268,8 @@ Caching can help reduce duplicate Connected Content calls but isn't guaranteed t
 {% multi_lang_include connected_content.md section='default behavior' %}
 
 {% multi_lang_include connected_content.md section='http post' %}
+
+## Why are Multiple Connected Content Calls Occurring for a single user? (BD-4438)
+
+Add the following text to the first FAQ on the linked page: "It may be called multiple times under various circumstances, however in all cases, only one such call would actually render in the template. Under no circumstances would multiple connected content calls be rendered in the message. What typically happens is that a connected content call might be made, discarded for one reason or another, and then called again before rendering."
+

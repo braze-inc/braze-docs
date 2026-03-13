@@ -338,3 +338,17 @@ No. If a Canvas user is frequency-capped because of global frequency capping set
 
 Users who are frequency capped don't generate a send event for that step. To identify these users, you can use [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) to track message frequency capped events. Alternatively, you can create a [Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to analyze users who entered the Canvas but didn't receive the expected message.
 
+## Does Braze Support a Per Second Rate Limit? (BD-4129)
+
+Add the explanation such as "We do not support a per second rate limit. The way that our "X messages per minute" rate limit code works is that we randomly schedule up to X messages to go out in the course of a minute. However, the code is not adaptive, meaning that it does not adjust itself based on how long it takes the endpoint to respond. So let's say that you're sending 600 per minute and are sending 1,200 messages in total. It will take roughly 2 minutes. For minute 2, our code will have scheduled 600 messages to go out. However, it is possible that if the connected content API calls are
+
+
+## Global Frequency Capping FAQ (BD-4185)
+
+Specific examples in the KA (question and answer) of what to add to our docs - If a user hits a step in a Canvas, what happens if they are rate-limited out of receiving the step? (For example, the global rate limit is 3 emails per week but this would be a user's fourth) Do silent push notifications count towards the Global Frequency cap? Do failed webhooks count towards the Global Frequency cap?
+
+
+## Who is Sent "Canvas Messages Delayed 24+ Hours" Email Notifications? (BD-4417)
+
+Ensure we specify that if a user made an edit to the campaign or canvas, they will also receive this email (along with the Creator)
+

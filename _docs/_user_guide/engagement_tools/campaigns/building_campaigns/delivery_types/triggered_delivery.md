@@ -182,3 +182,12 @@ If the custom event displays, further troubleshoot by doing the following:
 In-app messages can only be triggered by events sent through the SDK, not the REST API.
 {% endalert %}
 
+## When do Action Based Delivery Campaigns Evaluate the Segment - Before or After t (BD-4083)
+
+Add a question and an answer: When do Action Based Delivery Campaigns Evaluate the Segment - Before or After the Trigger Event Occurs? Segment membership is evaluated before the trigger event has occurred. You may also configure campaigns to re-evaluate just before send time. This can be useful for instances where there is a delay between the trigger event and the actual send where the user could log the trigger event, then fall out of the audience before the send time.
+
+
+## Triggering Action-Based Campaign/Canvas Custom Event Dated in the Past (BD-4332)
+
+Added a section on our doc that does explain that it is possible trigger a campaign/canvas with a custom event dated in the past as long as it's not dated before the start time for the campaign/canvas in question.
+

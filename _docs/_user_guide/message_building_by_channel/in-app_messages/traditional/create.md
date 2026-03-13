@@ -428,3 +428,8 @@ In-app message campaigns are typically pushed to a user's device when the app se
 
 - If a user triggers an event (such as a button tap) shortly after the in-app message is delivered, the message may not appear until the next session refresh—assuming all eligibility criteria are still met.
 - Similar to other channel types, in-app message campaigns should ideally be launched 24–48 hours in advance. This buffer gives users sufficient time to meet eligibility and initiate a session for the message to be evaluated and displayed.
+
+## AM display order if trigger action and priority level are equal (BD-4337)
+
+AM display order if trigger action and priority level are equal
+

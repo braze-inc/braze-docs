@@ -224,3 +224,8 @@ For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl
 {% endalert %}
 
 {% endapi %}
+
+## How Do I Retrieve the Users Who Have Entered and re-entered a Canvas/Canvas Step (BD-4653)
+
+Add a notes banner with following If re-eligibility is enabled and you would like to have the first and last time the user entered, they can use the API endpoint [ /canvas/details|https://www.braze.com/docs/api/endpoints/export/canvas/get_canvas_details/#prerequisites] If you would like to know all the times the user entered the canvas, you should use Currents. There is an event called Entry - Canvas entry events . If you do not have Currents integrated, please, reach out to your CSM Team.
+

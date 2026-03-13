@@ -252,4 +252,7 @@ Check out:
 * [Lob.com]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/lob/)
 * And many more of our [technology partners]({{site.baseurl}}/partners/home/)!
 
+## Connected Content and Webhook IP Whitelisting (BD-4414)
+
+Add: Webhook Note: If you notice that all of your webhooks are failing due to 403 errors (not-authorised) then Whitelisting the IPs that Braze uses to send webhook requests can resolve this.
 

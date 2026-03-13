@@ -275,3 +275,7 @@ If you would like to segment on the number of times a specific purchase has occu
 
 You can change the data type of your custom attribute, but you should be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/).
 
+## Action Based Campaigns/Canvases Using Custom Event Properties as Trigger Not Sen (BD-4029)
+
+N/A
+
