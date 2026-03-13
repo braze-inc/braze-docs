@@ -98,6 +98,7 @@ All of the following error codes indicate that no messages are sent.
 | `403 Forbidden` | The rate plan doesn't support, or the account is otherwise inactivated.|
 | `403 Access Denied` | The REST API key you are using does not have sufficient permissions. Common causes include: {::nomarkdown}<ul><li><strong>API key predates the feature.</strong> If the API key was created before a feature was launched (such as subscription groups or catalogs), the key doesn't automatically inherit those permissions. Create a new API key with the required permissions under <strong>Settings</strong> &gt; <strong>API Keys</strong>.</li><li><strong>Missing endpoint-specific permission.</strong> Each API endpoint requires a specific permission scope (for example, <code>users.track</code> or <code>email.status</code>). Verify the key's permissions match the endpoint you're calling.</li><li><strong>Trailing slash or typo in the URL.</strong> For example, <code>/users/track/</code> (with a trailing slash) instead of <code>/users/track</code> can produce unexpected errors.</li></ul>{:/}|
 | `404 Not Found` | Invalid URL. |
+| `415 Unsupported Media Type` | The `Content-Type` request header is missing or incorrect. In the **Settings** page, add `Content-Type` with a value of `application/json`. |
 | `429 Rate Limited` | Over rate limit. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
