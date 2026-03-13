@@ -126,7 +126,7 @@ In addition, by using the conversion event "opens app," you are tracking app ope
 
 Didn't find what you were looking for? Check out these additional best practices articles:
 
-- [Push message and image formats]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/)
+- [Push image and text specifications]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push)
 - [Push primer in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)
 - [Deliverability for Chinese Android devices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/)
 - [Know before you send: channels]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/know_before_send/)

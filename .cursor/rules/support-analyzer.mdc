@@ -10,14 +10,17 @@ alwaysApply: false
 
 Analyze Braze support case CSVs to identify documentation gaps and propose docs updates.
 
+<!-- This can be exported as a CSV from Looker https://braze.looker.com/x/4git0QPwJ9xjVtdBphbkPE or downloaded from the Snowflake Growth instance and stored in a local directory of your choice (for example, /path/to/support-analyzer-files/latest/ or a path configured via an environment variable). The query logic pulls resolved cases from the last two days and all related conversations. -->
+
+
 ## CSV Schema
 
 | Column | Description |
 |--------|-------------|
 | `Support Cases Email Message Case ID` | Primary case identifier (e.g., `500VP00000nQrMKYA0`) |
+| `Support Cases Closed or Resolved Date` | Timestamp of resolution |
 | `Support Cases Email Message Sent Date` | Timestamp of message |
 | `Support Cases Description` | Original support question |
-| `Support Cases Email Message Text Body` | Raw message content |
 | `Support Cases Email Message Text Body Cleaned` | Cleaned message for analysis |
 
 ---
@@ -46,14 +49,14 @@ For each **actionable** ticket:
 1. **Extract Q&A** - Distill the core question and resolution from message thread
 2. **Verify**
    - Cross-reference the behavior with the Main Product source at `../platform`.
-   - Do not rely solely on support cases or documentation. Always confirm against the source code.
+   - Do not rely on support cases or documentation. Always confirm against the source code.
    - If you can verify the resolution, add references to the relevant source file(s) in your analysis output only.
    - If you cannot verify the resolution against the source code, explicitly state that in your analysis output.
    - **Never publish Braze source code paths in PR descriptions** (see Step 7).
 3. **Identify Target** - Which existing doc page should be updated? (or flag as new page)
 4. **Document source support case number** - Which case numbers were analyzed?
 
-### Output Format Per Ticket to output.md and chat console
+### Output Format Per Ticket to output--<ddmmyyyy>.md and chat console
 
 ```markdown
 ### Case: [CASE_ID]
@@ -72,15 +75,19 @@ After processing all tickets:
 
 1. **Merge Duplicates** - Group tickets with identical or overlapping issues
 2. **Prioritize** by:
+   - Verification (whether the resolution was confirmed against source code)
    - Frequency (same question from multiple customers)
    - Impact (blocks core functionality vs. edge case)
    - Effort (quick clarification vs. new guide)
 3. **Batch by Doc** - Group changes targeting the same file
 4. **Maintain sources** - Maintain list of which Case IDs were referenced for the update
+5. **Confirm review** - Ask the user to review the consolidated list and explicitly confirm that they want to proceed to Step 4 (drafting updates).
 
 ---
 
 ## Step 4: Draft Updates
+
+Before moving to Step 5, prompt the user to review and acknowledge that they want to create a branch.
 
 For each docs update:
 
@@ -135,8 +142,6 @@ Cursor identifies team members based on the CODEOWNERS file. If no owner is foun
 ## Example Prompt
 
 ```
-@support-analyzer.mdc Analyze the CSV file in _data/ and draft docs updates.
+@support-analyzer.mdc Analyze the CSV file in <directory with csv files> and draft docs updates.
 Focus on [specific product area] if applicable.
 ```
-
-<!-- export from Looker https://braze.looker.com/x/qB0GXtyFV4YjUdsMKFgf85 -->
