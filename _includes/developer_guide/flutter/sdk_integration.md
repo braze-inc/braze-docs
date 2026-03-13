@@ -11,7 +11,7 @@ Before you integrate the Braze Flutter SDK, you'll need to complete the followin
 | Prerequisite | Description |
 | --- | --- |
 | Braze API app identifier | To locate your app's identifier, go to **Settings** > **APIs and Identifiers** > **App Identifiers**. For more information see, [API Identifier Types]({{site.baseurl}}/api/identifier_types/#app-identifier).|
-| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints).|
+| Braze SDK endpoint | Your SDK endpoint URL (for example, `sdk.<cluster>.braze.com`). Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints).|
 | Flutter SDK | Install the official [Flutter SDK](https://docs.flutter.dev/get-started/install) and ensure it meets the Braze Flutter SDK's [minimum supported version](https://github.com/braze-inc/braze-flutter-sdk#requirements). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -226,10 +226,10 @@ Import the plugin and create a single instance of `BrazePlugin`:
 ```dart
 import 'package:braze_plugin/braze_plugin.dart';
 
-BrazePlugin braze = BrazePlugin();
+final BrazePlugin braze = BrazePlugin();
 ```
 
-Then call `initialize()` with your Braze API app identifier (API key) and REST endpoint to create the Braze instance. When you call `initialize()` determines how the SDK behaves at startup.
+Then call `initialize()` with your Braze API app identifier (API key) and SDK endpoint to create the Braze instance. When you call `initialize()` determines how the SDK behaves at startup.
 
 #### Standard initialization
 
@@ -239,7 +239,7 @@ To initialize the SDK when your app starts, call `initialize()` in `initState()`
 @override
 void initState() {
   super.initState();
-  braze.initialize("<BRAZE_API_KEY>", "<BRAZE_ENDPOINT>");
+  braze.initialize("<BRAZE_API_KEY>", "<BRAZE_SDK_ENDPOINT>");
 }
 ```
 
@@ -299,7 +299,7 @@ To avoid undefined behaviors, only allocate and use a single instance of the `Br
 
 ## Migrating from `initBraze` to `initialize`
 
-Starting in Flutter SDK 18.0.0, `BrazePlugin.initBraze()` is deprecated. To migrate to the new `configure` + `initialize` pattern:
+Starting with Flutter SDK 18.0.0, `BrazePlugin.initBraze()` is deprecated. To migrate to the new `configure` + `initialize` pattern:
 
 1. **iOS:** In your `AppDelegate.swift`, replace `BrazePlugin.initBraze(configuration)` with `BrazePlugin.configure(_:postInitialization:)`. Remove the `static var braze` property and the `AppDelegate.braze = braze` assignment, as the plugin manages the Braze instance internally.
 2. **iOS:** Remove any manual channel subscription or in-app message data-forwarding code (for example, `braze.contentCards.subscribeToUpdates`, `braze.featureFlags.subscribeToUpdates`, or custom `inAppMessagePresenter` subscription hooks). The plugin now sets up these subscriptions automatically. Optional customization of the in-app message presenter using `postInitialization` is still supported; see [Customize in-app message presentation]({{site.baseurl}}/developer_guide/in-app_messages/customization/#flutter).
@@ -329,7 +329,7 @@ braze.changeUser("{some-user-id}");
 {% tab Flutter SDK 17.1.0 and earlier %}
 
 ```dart
-BrazePlugin braze = new BrazePlugin();
+BrazePlugin braze = BrazePlugin();
 braze.changeUser("{some-user-id}");
 ```
 
