@@ -4,12 +4,12 @@ article_title: Governance
 layout: dev_guide
 page_order: 2
 guide_top_header: "Governance"
-guide_top_text: "Archive, duplicate, and copy your campaigns and Canvases to keep your workspace organized and reuse successful messaging strategies."
+guide_top_text: "Manage the lifecycle and organization of your campaigns and Canvases. Refer to the articles below to set up approval workflows, archive or duplicate items, copy them across workspaces, and use statuses and tags to keep your workspace organized."
 page_type: landing
 tool:
   - Campaigns
   - Canvas
-description: "This landing page covers how to archive, duplicate, and copy campaigns and Canvases across workspaces."
+description: "Approvals, archive, duplicate, copy across workspaces, statuses, and tags for campaigns and Canvases."
 
 guide_featured_title: "Section articles"
 guide_featured_list:

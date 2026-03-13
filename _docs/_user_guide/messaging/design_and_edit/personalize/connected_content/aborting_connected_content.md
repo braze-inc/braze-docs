@@ -1,5 +1,5 @@
 ---
-nav_title: Aborting Connected Content
+nav_title: Abort Connected Content
 article_title: Abort Connected Content
 page_order: 2
 description: "This reference article covers some message aborting best practices for Connected Content."

@@ -22,7 +22,7 @@ tool:
 
 ![Dropdown menu with duplicate option.]({% image_buster /assets/img/template_duplicate_cog.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
 
-To duplicate an individual template, select the <i class="fas fa-cog"></i> cog icon for the individual template and select **Duplicate** from the dropdown menu.
+To duplicate an individual template, select <i class="fas fa-ellipsis-v"></i> **More options** for the template, then select **Duplicate** from the dropdown menu.
 <br><br>
 
 {% alert note %}
@@ -49,7 +49,7 @@ Duplicated templates can be found by sorting the **Last Edited** column. By defa
 
 ![Expanded settings dropdown menu that shows three options: "Archive", "Duplicate", and "Copy to workspace" with the "Archive" option highlighted.]({% image_buster /assets/img/template_archive_cog.png %}){: style="float:right;max-width:20%;margin-left:15px;"}
 
-To archive an individual template, select the settings icon on the template grid screen and select **Archive**. When a template is archived, note the following different scenarios:
+To archive an individual template, select <i class="fas fa-ellipsis-v"></i> **More options** on the template grid screen and select **Archive**. When a template is archived, note the following different scenarios:
 
 - Active campaigns continue to use the archived template without any interruption.
 - Draft campaigns retain the archived template's content and can be edited and launched.

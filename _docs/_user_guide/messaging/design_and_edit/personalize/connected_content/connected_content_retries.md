@@ -1,12 +1,12 @@
 ---
 nav_title: Connected Content retries
-article_title: Connected Content Retries
+article_title: Connected Content retries
 page_order: 5
 description: "This reference article covers how to go about dealing with Connected Content retries."
 
 ---
 
-# Using retry logic for Connected Content
+# Use retry logic for Connected Content
 
 > This page covers how to add retries to your Connected Content calls.
 
