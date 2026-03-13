@@ -82,10 +82,6 @@ override func application(
 `BrazePlugin.configure()` only stores your configuration. No Braze instance exists until `initialize()` is called from Dart, so do not call any Braze SDK methods in the AppDelegate after `configure()`.
 {% endalert %}
 
-{% alert warning %}
-Push notifications and deep links received before `initialize()` is called are not processed on iOS. On Android, deep links from push notifications do not resolve while the SDK is waiting to be initialized. Call `initialize()` as early as possible in your app lifecycle to avoid missing events.
-{% endalert %}
-
 {% endtab %}
 {% tab Flutter SDK 17.1.0 and earlier %}
 
@@ -192,16 +188,45 @@ static Braze *_braze = nil;
 {% tabs %}
 {% tab Flutter SDK 18.0.0+ %}
 
-Import the plugin and create a single instance of `BrazePlugin`. Then call `initialize()` with your API key and endpoint to create the Braze instance at runtime.
+Import the plugin and create a single instance of `BrazePlugin`:
 
 ```dart
 import 'package:braze_plugin/braze_plugin.dart';
 
 BrazePlugin braze = BrazePlugin();
-braze.initialize("<BRAZE_API_KEY>", "<BRAZE_ENDPOINT>");
 ```
 
-Call `initialize()` early in your app lifecycle, such as in `initState()`. If your Android and iOS apps use different API keys, use platform detection:
+Then call `initialize()` with your API key and endpoint to create the Braze instance. When you call `initialize()` determines how the SDK behaves at startup.
+
+#### Standard initialization
+
+To initialize the SDK when your app starts, call `initialize()` in `initState()`:
+
+```dart
+@override
+void initState() {
+  super.initState();
+  braze.initialize("<BRAZE_API_KEY>", "<BRAZE_ENDPOINT>");
+}
+```
+
+#### Delayed initialization
+
+To defer SDK initialization until a later point in the session—for example, after the user grants consent or completes login—call `initialize()` when you're ready:
+
+```dart
+void onUserConsent() {
+  braze.initialize("<BRAZE_API_KEY>", "<BRAZE_ENDPOINT>");
+}
+```
+
+{% alert warning %}
+Push notifications and deep links received before `initialize()` is called are not processed on iOS. On Android, deep links from push notifications do not resolve while the SDK is waiting to be initialized. If your app relies on push or deep links at launch, use [standard initialization](#standard-initialization) instead.
+{% endalert %}
+
+#### Platform-specific API keys
+
+If your Android and iOS apps use different API keys, use platform detection:
 
 ```dart
 import 'dart:io' show Platform;
@@ -212,6 +237,8 @@ if (Platform.isAndroid) {
   braze.initialize("<IOS_API_KEY>", "<BRAZE_ENDPOINT>");
 }
 ```
+
+#### Re-initialization
 
 You can call `initialize()` multiple times to re-initialize the SDK with a different API key and endpoint mid-session. Each call tears down the previous Braze instance and creates a new one.
 
