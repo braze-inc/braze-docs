@@ -36,3 +36,14 @@ While Braze automatically stops sending emails to users who have marked you as s
 
 Sunset policies can be especially helpful in email campaigns that target lapsing users. While these campaigns focus on segments that have not interacted with your app for a period of time, they can put the deliverability of your emails at risk if they repeatedly include unengaged recipients. Sunset policies allow you to target lapsing users without landing in the spam folder.
 
+## Why do emails land in the spam folder?
+
+Common reasons marketing emails land in the spam or junk folder include:
+
+- **Low sender reputation** — New IPs, inconsistent sending, or a history of spam reports and bounces can cause mailbox providers to filter your messages. [IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) and consistent sending help build reputation.
+- **Content and engagement** — Poor engagement (low opens, high spam reports) or content that triggers filters (certain words, too many links, or broken HTML) can lead to spam placement.
+- **List quality and consent** — Sending to invalid addresses, purchased lists, or users who did not opt in can hurt reputation and increase the likelihood of spam filtering.
+- **Authentication and configuration** — Ensure [SPF, DKIM, and DMARC]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) are correctly set up and that your [sending configuration]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/) and [list-unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#list-unsubscribe-header) follow provider requirements.
+
+For more guidance, see [IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) and [Email Preferences]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/). If you continue to see deliverability issues, contact your Braze account team or [Support]({{site.baseurl}}/support_contact/).
+
