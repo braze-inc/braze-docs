@@ -1,4 +1,8 @@
 ---
+description: "Use when analyzing Braze support case CSVs to find documentation gaps, triage tickets (Docs Gap, Docs Discrepancy, New Feature, etc.), verify behavior against source, and draft or propose docs updates in _docs. Apply when the user asks to analyze support tickets, run the support analyzer, or draft docs from a CSV in _data."
+globs:
+  - "_data/**/*.csv"
+  - "_docs/**/*.md"
 alwaysApply: false
 ---
 
