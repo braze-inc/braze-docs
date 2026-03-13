@@ -1,4 +1,5 @@
 <div id="search-preview-notice" class="alert alert-warning search-preview-notice" role="alert" style="display: none;">
+  <button type="button" class="search-preview-notice-dismiss" aria-label="Dismiss">×</button>
   <div class="alert-msg">
     <strong>Search results open on the live site.</strong> To stay here: copy the result link, paste it in the address bar, and remove the "braze.com" or "braze.com/docs" prefix. Or use the main navigation or sidebar.
   </div>
@@ -6,9 +7,17 @@
 <script>
 (function() {
   var hostname = window.location.hostname;
-  if (hostname === 'vercel.app' || hostname.endsWith('.vercel.app')) {
-    var el = document.getElementById('search-preview-notice');
-    if (el) el.style.display = '';
+  if (hostname !== 'vercel.app' && !hostname.endsWith('.vercel.app')) return;
+  var el = document.getElementById('search-preview-notice');
+  if (!el) return;
+  if (sessionStorage.getItem('search-preview-notice-dismissed')) return;
+  el.style.display = '';
+  var dismiss = el.querySelector('.search-preview-notice-dismiss');
+  if (dismiss) {
+    dismiss.addEventListener('click', function() {
+      sessionStorage.setItem('search-preview-notice-dismissed', '1');
+      el.style.display = 'none';
+    });
   }
 })();
 </script>
