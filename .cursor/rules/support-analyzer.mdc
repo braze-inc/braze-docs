@@ -83,7 +83,7 @@ After processing all tickets:
 
 ## Step 4: Draft Updates
 
-Before moving to Step 5, prompt user to review and acknowledge they want to create branch
+Before moving to Step 5, prompt the user to review and acknowledge that they want to create a branch.
 
 For each docs update:
 
