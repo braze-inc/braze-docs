@@ -104,4 +104,48 @@ div.alert {
     }
   }
 
+  &.search-preview-notice {
+    position: relative;
+    min-height: 0;
+    font-size: 14px;
+    font-weight: 600;
+    border-width: 1px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    background-size: 40px 40px;
+    background-position: 6px 50%;
+
+    .search-preview-notice-dismiss {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      padding: 4px 8px;
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 400;
+      color: inherit;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+
+      &:focus {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+      }
+    }
+
+    div.alert-msg {
+      min-height: 0;
+      padding: 12px 36px 12px 14px;
+      margin-left: 48px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+  }
 }
