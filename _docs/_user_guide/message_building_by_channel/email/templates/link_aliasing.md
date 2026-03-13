@@ -237,4 +237,7 @@ If the link has parameters within it that contain a question mark (`?`), you can
 ```
 {% endraw %}
 
+## After enabling link aliasing some URLs from the HTML editor are changed automati (BD-4650)
+
+Add a section that outlines the following if Braze turns off link aliasing All new messages or content blocks that are created won’t have markup anymore All existing messages that were created since the feature will still have their markup, though you’ll have to manually remove these If you have link templates, you’ll have to re-add them if you update an existing message/campaign Click reporting may look wonky/inaccurate for messages that were launched while the feature was on Segments that use link aliasing filters may break
 

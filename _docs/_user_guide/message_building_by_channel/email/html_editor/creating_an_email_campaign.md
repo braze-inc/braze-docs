@@ -283,3 +283,7 @@ The final section summarizes the campaign you designed. Confirm all relevant det
 
 To learn how you can access the results of your email campaigns, check out [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
+## Keeping the Gmail mobile app from forcibly inverting background colors in Dark M (BD-4656)
+
+I think it would be good to include the entirety of the article as well as the w3schools link that's incLuded in the KA
+

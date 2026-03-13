@@ -48,3 +48,13 @@ No, you must recreate the email in **Email Templates** to save it.
 ### Can I add email attachments to the drag-and-drop editor?
 
 No, the drag-and-drop editor does not support adding attachments to your emails.
+
+## Best practices on handling how emails show in dark mode vs light mode (BD-4015)
+
+Workarounds and Best Practices are provided in the KA and we can include these.
+
+
+## Customizing Emails for Dark Mode and Light Mode (BD-4300)
+
+Add: Generally, emails do not need to be sent in both Light and Dark Mode styles. However, we have seen instances where emails lack explicit background colors or look broken or not as intended when the end user receiving the email is using Dark Mode themes on their device. The prefers-color-scheme CSS media query may be a place that can help with the design emails specifically for both dark and light themes. Here is a Braze Perspectives article on Dark Mode. Add: Gmail does not support the prefers-color-scheme media query. You can read the support for this query here . In addition, Litmus has
+

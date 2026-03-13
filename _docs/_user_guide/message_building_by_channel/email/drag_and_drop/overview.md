@@ -320,3 +320,8 @@ Anything added outside of `<head>` tags will be added after the `<body>` tag in 
 {% alert note %}
 Link names can be up to 63 bytes and are automatically truncated if they exceed the limit.
 {% endalert %}
+
+## Does the Drag and Drop email editor support Dark Mode? (BD-4089)
+
+I do suggest that this info be included in our docs for a more complete view on Dark Mode in emails.
+
