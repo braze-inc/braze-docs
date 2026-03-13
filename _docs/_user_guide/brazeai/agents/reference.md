@@ -52,10 +52,8 @@ Some LLM providers may allow you to adjust a selected model's thinking level. Th
 | **Medium** | Multi-step or nuanced tasks (such as analyzing several inputs to recommend an action). |
 | **High** | Complex reasoning, edge cases, or when you need the model to work through steps before answering. |
 
-We recommend starting with **Minimal** and testing your agent’s responses. Then, you can adjust the thinking level to **Low** or **Medium** depending on the agent's responses. 
+We recommend starting with **Minimal** and testing your agent’s responses. Then, you can adjust the thinking level to **Low** or **Medium** depending on the agent's responses. Selecting **High** as the thinking level can result in the highest response time and token costs.
 
-{% alert note %}
-Selecting **High** as the thinking level can result in the highest response time and token costs.
 Braze uses the same IP ranges for outbound LLM calls as for Connected Content. The ranges are listed in the [Connected Content IP allowlist]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/#connected-content-ip-allowlisting). If your provider supports IP allowlisting, you can restrict the key to those ranges so only Braze can use it.
 
 {% alert important %}
