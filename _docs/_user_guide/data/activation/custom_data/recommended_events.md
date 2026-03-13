@@ -49,4 +49,4 @@ No. Recommended events have standardized event names and properties. These stand
 
 ### Can I still use purchase events to log purchases?
 
-The legacy purchase event will enter a deprecated state (maintenance mode). Purchase events will continue to work as expected, but no net new functionality will be built on top of purchase events moving forward, in favor of eCommerce recommended events. If you're currently using the purchase event, you will receive advance notice regarding the phase-out plans. In the meantime, you can continue to use the purchase events until the official deprecation date.
+With the launch of eCommerce recommended events, Braze will phase out the legacy purchase event in the future. If you're currently using the purchase event, you will receive advance notice regarding the deprecation plans. In the meantime, you can continue to use the purchase events until the official deprecation date.

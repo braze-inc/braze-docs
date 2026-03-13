@@ -1191,7 +1191,7 @@ The segmenter allows you to filter by the number of times a user performed an eC
 
 Legacy purchase events use the Braze [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/) and record individual product purchases with a `product_id` and `price`. eCommerce recommended events (such as `ecommerce.order_placed`) use custom event properties and capture the full order context, including multiple products, discounts, and metadata in a single event.
 
-The legacy purchase event will enter a deprecated state (maintenance mode). Purchase events will continue to work as expected, but no net new functionality will be built on top of purchase events moving forward, in favor of eCommerce recommended events. If you're currently using purchase events, you will receive advance notice regarding the phase-out plans. In the meantime, you can continue using purchase events until the official deprecation date. Refer to the [recommended events overview]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/) for more details.
+With the launch of eCommerce recommended events, Braze will phase out the legacy purchase event in the future. If you're currently using purchase events, you will receive advance notice. In the meantime, you can continue using purchase events until the official deprecation date. Refer to the [recommended events overview]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/) for more details.
 
 ### Can I add custom properties to eCommerce recommended events?
 
