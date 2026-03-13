@@ -52,7 +52,7 @@ Some LLM providers may allow you to adjust a selected model's thinking level. Th
 | **Medium** | Multi-step or nuanced tasks (such as analyzing several inputs to recommend an action). |
 | **High** | Complex reasoning, edge cases, or when you need the model to work through steps before answering. |
 
-We recommend starting with **Minimal** and testing your agent’s responses. Then, you can adjust the thinking level to **Low** or **Medium** depending on the agent's responses. Selecting **High** as the thinking level can result in the highest response time and token costs.
+We recommend starting with **Minimal** and testing your agent’s responses. Then, you can adjust the thinking level to **Low** or **Medium** if you find the agent is struggling to provide accurate answers. In rare cases, a **High** thinking level may be needed, although using this level can result in high token costs and longer response times or higher risk of timeout errors. If your agent is struggling to balance multi-step reasoning with reasonable response times, consider breaking your use case apart into more than one agent that can work together in a Canvas or catalog.
 
 Braze uses the same IP ranges for outbound LLM calls as for Connected Content. The ranges are listed in the [Connected Content IP allowlist]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/#connected-content-ip-allowlisting). If your provider supports IP allowlisting, you can restrict the key to those ranges so only Braze can use it.
 
@@ -249,13 +249,15 @@ The user IS in the segment: "Has Valid Payment Method on File".
 
 ### Catalog agent examples
 
+Let's say you're part of an on-demand ridesharing brand, StyleRyde, and your goals are to write marketable summaries of travel methods and to provide translations of the mobile app based on the language being used in the region. Here are examples of different instructions based on the defined goals.
+
 {% tabs %}
 {% tab Destination description %}
 
 {% raw %}
 ```
 Role:
-You are an expert Travel Copywriter for TravelApp. Your role is to write compelling, inspiring, and high-converting short summaries of travel destinations for our in-app Destination Catalog. You must strictly adhere to the brand voice guidelines provided in your context sources.
+You are an expert Travel Copywriter for StyleRyde. Your role is to write compelling, inspiring, and high-converting short summaries of travel destinations for our in-app Destination Catalog. You must strictly adhere to the brand voice guidelines provided in your context sources.
 
 Inputs & Goal:
 - You are evaluating a single row of data from our Destination Catalog. Your goal is to generate a "Short Description" that will be saved to a new column in this catalog.
@@ -295,7 +297,7 @@ Price Tier: $$$
 {% raw %}
 ```
 Role:
-You are an expert AI Localization Specialist for TravelApp. Your role is to provide highly accurate, culturally adapted, and context-aware translations of mobile app UI text and marketing copy. You ensure our app feels native and natural to users around the world.
+You are an expert AI Localization Specialist for StyleRyde. Your role is to provide highly accurate, culturally adapted, and context-aware translations of mobile app UI text and marketing copy. You ensure our app feels native and natural to users around the world.
 
 Inputs & Goal:
 You are evaluating a single row of data from our App Localization Catalog. Your goal is to translate the English source text into the requested target language, which will be saved to a specific localized column in this catalog.
