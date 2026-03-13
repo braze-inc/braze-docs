@@ -155,7 +155,7 @@ The following table summarizes mailbox provider support for “mailto:” header
 
 _*Yahoo and Gmail are eventually deprecating the "mailto:" header and will support only one-click._
 
-Displaying the header is ultimately determined by the mailbox provider. To check if the list-unsubscribe header is included in the raw (text) email for the recipient in Gmail, do the following:
+Displaying the header is ultimately determined by the mailbox provider. In some cases the list-unsubscribe header may not appear in the recipient's inbox at all (for example, due to provider behavior or configuration). To verify that the header was included in the sent message and to check if it is present in the raw (text) email for the recipient in Gmail, do the following:
 
 1. Select **Show Original** in the email. This opens a new tab with the raw version of the email and its headers.
 2. Search for "List-Unsubscribe".
