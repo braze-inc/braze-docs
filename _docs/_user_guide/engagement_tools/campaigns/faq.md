@@ -213,7 +213,4 @@ Several factors can cause the number of sends to be lower than the estimated aud
 - **Delivery timing and windows:** For local time zone or scheduled campaigns, users must qualify at both entry and send time; users in certain time zones may fall outside the delivery window.
 - **Rate limiting:** If rate limiting is applied, messages are distributed over time and some sends may be deferred or not yet reflected in the count.
 
-## What is the Difference Between Estimated Audience and Current Audience? (BD-4248)
-
-Add a section that explains the criteria for displaying Estimated Audience versus Current Audience metrics, emphasizing the role of App Group size. Include examples or scenarios illustrating when users would see Estimated Audience versus Current Audience metrics based on different App Group sizes. Clarify that Estimated Audience is used when the App Group is too large for an exact count, while Current Audience is displayed for smaller App Groups.
 
