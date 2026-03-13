@@ -205,8 +205,6 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | View Webhook Templates                           | View webhook templates without making changes |
 | Edit Webhook Templates                           | Create and update webhook templates |
 | Archive Webhook Templates                   	  | Move webhook templates to archive |
-
-
 | Publish Landing Pages                           | Make a draft landing page active |
 | Edit Landing Page Drafts                        | Create and save landing page drafts |
 | View Landing Pages			                  | View landing pages |
