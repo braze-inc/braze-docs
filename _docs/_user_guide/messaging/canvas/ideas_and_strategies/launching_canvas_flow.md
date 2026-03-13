@@ -27,7 +27,7 @@ To enter a Canvas, users must be in the entry audience before the entry schedule
 Note that users who qualify for your entry audience after the Canvas launches will not enter the Canvas.
 
 {% alert tip %}
-Check out [Entry schedule types]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule) for guidance and details for when to use scheduled, action-based, or API-triggered delivery for your Canvas!
+Check out [Entry schedule types]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/#step-12-determine-your-canvas-entry-schedule) for guidance and details for when to use scheduled, action-based, or API-triggered delivery for your Canvas!
 {% endalert %}
 
 ### Review entry audience filters

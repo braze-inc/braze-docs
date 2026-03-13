@@ -64,7 +64,7 @@ After a Canvas is sent, the dashboard provides aggregated [Canvas Analytics]({{s
 
 ### One journey per country
 
-In this approach, the [Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/) journey builder provides the flexibility of creating user journeys via multiple [Canvas components]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/). These components can be [duplicated]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/duplicating/) at the component and overall journey level.
+In this approach, the [Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/) journey builder provides the flexibility of creating user journeys via multiple [Canvas components]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/). These components can be [duplicated]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/duplicating/) at the component and overall journey level.
 
 Localization can be achieved with the following methods:
 

@@ -13,7 +13,7 @@ tool: Canvas
 You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow, the current Canvas experience.
 {% endalert %}
 
-> If you have an existing Canvas from the original editor, you can clone this Canvas to create a copy in Canvas Flow. By switching to the current Canvas workflow, you gain access to lightweight [Canvas components]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/), [persistent entry properties]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/#canvas-persistent-entry-properties), and [post-launch editing]({{site.baseurl}}/post-launch_edits). Your original Canvas will not be altered or deleted.
+> If you have an existing Canvas from the original editor, you can clone this Canvas to create a copy in Canvas Flow. By switching to the current Canvas workflow, you gain access to lightweight [Canvas components]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/), [persistent entry properties]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/#canvas-entry-properties), and [post-launch editing]({{site.baseurl}}/post-launch_edits). Your original Canvas will not be altered or deleted.
 
 To clone your Canvas, do the following:
 

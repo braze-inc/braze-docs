@@ -44,11 +44,11 @@ If all of the messages in your campaign are going to be similar or have the same
 
 **Steps:**
 
-1. [Create your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/) using the Canvas composer.
+1. [Create your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
-3. Choose a [step schedule]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/#schedule-your-canvas-step) and specify a delay as needed.
+3. Choose a [step schedule]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/#schedule-your-canvas-step) and specify a delay as needed.
 4. Filter your audience for this step as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay at the time messages are sent.
-5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/#advancement-behavior).
+5. Choose your [advancement behavior]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/#advancement-behavior).
 6. Choose any other messaging channels which you would like to pair with your message.
 
 {% endtab %}
@@ -194,7 +194,7 @@ Braze allows you to track how often users perform specific actions, [conversion 
 
 {% tab Canvas %}
 
-If you haven't done so already, complete the remaining sections of your Canvas step. For further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
+If you haven't done so already, complete the remaining sections of your Canvas step. For further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent Selection, and more, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
 
 {% endtab %}
 {% endtabs %}

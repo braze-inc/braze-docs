@@ -50,7 +50,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 **Steps:**
 
-1. [Create your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/) using the Canvas composer.
+1. [Create your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/) using the Canvas composer.
 2. After you've set up your Canvas, add a step in the Canvas builder. Name your step something clear and meaningful.
 3. Choose a [step schedule]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/time_based_canvas/#schedule-delay) and specify a delay as needed.
 4. Filter your audience for this step as necessary. You can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay at the time messages are sent.
@@ -119,7 +119,7 @@ You can also set custom conversion events based on your specific use case. Get c
 {% endtab %}
 {% tab Canvas %}
 
-If you haven't already, complete the remaining sections of your Canvas. For further details on how to build the rest of your Canvas, use multivariate testing and Intelligent Selection, and more, refer to [Create a Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/).
+If you haven't already, complete the remaining sections of your Canvas. For further details on how to build the rest of your Canvas, use multivariate testing and Intelligent Selection, and more, refer to [Create a Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/).
 
 {% endtab %}
 {% endtabs %}

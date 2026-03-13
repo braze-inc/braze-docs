@@ -1,7 +1,7 @@
 ---
 nav_title: Message types
 article_title: In-app message types
-page_order: 1
+page_order: 3
 layout: dev_guide
 guide_top_header: "In-app message types"
 guide_top_text: "Braze offers several in-app message types, each designed for different use cases. Before you get creative, review the guidelines for each type to make sure your message displays well across phones, tablets, and computers. Always <a href='/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=in-app%20message'>test your messages</a> before launching."

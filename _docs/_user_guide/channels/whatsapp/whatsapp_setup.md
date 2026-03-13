@@ -5,7 +5,7 @@ alias: /partners/whatsapp/
 description: "This article covers how to set up the Braze WhatsApp channel, including prerequisites and suggested next steps."
 page_type: partner
 search_tag: Partner
-page_order: 2
+page_order: 0
 channel:
   - WhatsApp
 search_rank: 2

@@ -4,7 +4,7 @@ article_title: LINE Setup
 description: "This article covers how to set up the Braze LINE channel, including prerequisites and suggested next steps."
 page_type: partner
 search_tag: Partner
-page_order: 2
+page_order: 0
 channel:
  - LINE
 alias: /line/line_setup/

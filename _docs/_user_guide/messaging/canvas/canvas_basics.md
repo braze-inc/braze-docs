@@ -1,7 +1,7 @@
 ---
 nav_title: Canvas basics
 article_title: Canvas Basics
-page_order: 2
+page_order: 0
 page_type: reference
 description: "This reference article covers the basics of Canvas, covering various questions you should ask yourself as you set up your first Canvas."
 tool: Canvas
@@ -14,7 +14,7 @@ tool: Canvas
 
 ## Understanding Canvas structure
 
-Before getting started with the finer details of [Canvas setup]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/), let's identify the key parts that make up a Canvas.
+Before getting started with the finer details of [Canvas setup]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/), let's identify the key parts that make up a Canvas.
 
 {% tabs %}
   {% tab Canvas %}
@@ -31,7 +31,7 @@ Before getting started with the finer details of [Canvas setup]({{site.baseurl}}
   {% endtab %}
 
   {% tab Canvas Builder %}
-  The Canvas builder maps out the steps to take when creating your Canvas. This includes basics such as naming your Canvas and adding teams. Essentially, the Canvas builder is the crucial setup required prior to beginning building your Canvas. Here, you can control the way your users begin and fulfill their customer journey with options to edit the [entry schedule]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [target audience]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience), and [send settings]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![The Canvas builder on the Basics section for a Canvas named "New Canvas".]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
+  The Canvas builder maps out the steps to take when creating your Canvas. This includes basics such as naming your Canvas and adding teams. Essentially, the Canvas builder is the crucial setup required prior to beginning building your Canvas. Here, you can control the way your users begin and fulfill their customer journey with options to edit the [entry schedule]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), [target audience]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/#step-2c-set-your-target-entry-audience), and [send settings]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/#step-2d-select-your-send-settings).<br><br> ![The Canvas builder on the Basics section for a Canvas named "New Canvas".]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 

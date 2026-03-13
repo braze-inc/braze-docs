@@ -183,7 +183,7 @@ Want to tell us what you think? You can share feedback about navigation, accessi
 ### Key tasks and next steps
 
 - **Build campaigns**: [Create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/)
-- **Create journeys**: [Build a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)
+- **Create journeys**: [Build a Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/)
 - **Define audiences**: [Create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)
 - **Review performance**: [Analytics overview]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/)
 - **Configure settings**: [App settings]({{site.baseurl}}/user_guide/administer/global/workspace_settings/)

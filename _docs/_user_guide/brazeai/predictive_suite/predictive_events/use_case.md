@@ -50,7 +50,7 @@ Now that Jordan has clear upgrade intent signals—and refined subgroups based o
 
 He chooses email as the primary channel for this campaign. Why? Because Jordan wants to explain the value of Pro for high-intent users and make a compelling case to more hesitant users—both of which require space, visuals, and a strong CTA. Email gives him the flexibility to do that well without pressuring users, and lets him track performance through click behavior.
 
-Jordan [creates a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) that splits the experience based on the segments he just built. He adds an Audience Paths step to target:
+Jordan [creates a Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/) that splits the experience based on the segments he just built. He adds an Audience Paths step to target:
 
 - High intent, fitness-focused users
 - High intent, other users

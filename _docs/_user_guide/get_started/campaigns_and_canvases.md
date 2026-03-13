@@ -53,7 +53,7 @@ Your Canvas can have any combination of [messages]({{site.baseurl}}/user_guide/m
 Check out these additional resources to learn more about Canvas:
 
 - Braze Learning: [Journey Orchestration with Canvas Flow](https://learning.braze.com/path/journey-orchestration-with-canvas-flow)
-- [Create a Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/)
+- [Create a Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/)
 - [Canvas outlines]({{site.baseurl}}/user_guide/messaging/canvas/ideas_and_strategies/canvas_outlines/)
 
 ## Messaging channels

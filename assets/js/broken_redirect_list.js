@@ -140,7 +140,7 @@ validurls['/docs/app_settings/'] = '/docs/user_guide/administrative/app_settings
 validurls['/docs/campaigns/ideas_and_strategies/'] = '/docs/user_guide/messaging/campaigns/ideas_and_strategies/active_user_campaigns/';
 validurls['/docs/campaigns/scheduling_and_organizing/'] = '/docs/user_guide/messaging/campaigns/scheduling_and_organizing/scheduling_your_campaign/';
 validurls['/docs/campaigns/testing_and_more/'] = '/docs/user_guide/messaging/campaigns/testing_and_more/conversion_events/';
-validurls['/docs/canvas/create_a_canvas/'] = '/docs/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/';
+validurls['/docs/canvas/create_a_canvas/'] = '/docs/user_guide/messaging/canvas/create_a_canvas/';
 validurls['/docs/canvas/get_started/'] = '/docs/user_guide/messaging/canvas/';
 validurls['/docs/data_and_analytics/'] = '/docs/user_guide/data_and_analytics/configuring_reporting/';
 validurls['/docs/gdpr_compliance/'] = '/docs/help/gdpr_compliance/';
@@ -823,7 +823,7 @@ validurls['/docs/partners/channel_extensions/deep_linking/vizbee_for_tv_deep_lin
 
 validurls['/docs/user_guide/onboarding_with_braze/email_setup/ssl/ssl_clicktracking/'] = '/docs/user_guide/channels/email/email_setup/ssl/';
 validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/'] = '/docs/user_guide/messaging/campaigns/ideas_and_strategies/localizing_a_campaign/';
-validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/branching/'] = '/docs/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/branching/'] = '/docs/user_guide/messaging/canvas/create_a_canvas/';
 validurls['/docs/developer_guide/platform_integration_guides/swift/live_activities'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift';
 validurls['/docs/developer_guide/platform_integration_guides/swift/live_activities/live_activities/'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift';
 validurls['/docs/developer_guide/platforms/swift/live_activities/'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=swift';
@@ -3330,7 +3330,7 @@ validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/capt
 validurls['/docs/user_guide/audience/segments/managing_segments/#managing-segments'] = '/docs/user_guide/audience/segments/managing_segments/#manage-segments';
 validurls['/docs/user_guide/audience/segments/measuring_segment_size/#measuring-segment-size'] = '/docs/user_guide/audience/segments/measuring_segment_size/#measure-segment-size';
 validurls['/docs/user_guide/audience/segments/troubleshooting/#troubleshooting-segments'] = '/docs/user_guide/audience/segments/troubleshooting/#troubleshoot-segments';
-validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#creating-a-canvas'] = '/docs/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/#create-a-canvas';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#creating-a-canvas'] = '/docs/user_guide/messaging/canvas/create_a_canvas/#creating-a-canvas';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#creating-a-canvas-template'] = '/docs/user_guide/messaging/templates/canvas_templates/#create-a-canvas-template';
 validurls['/docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/#sending-test-canvases'] = '/docs/user_guide/messaging/canvas/testing_canvases/sending_test_canvases/#send-test-canvases';
 validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/#saving-drafts-for-canvas'] = '/docs/user_guide/messaging/canvas/managing_canvases/canvas_drafts/#save-drafts-for-canvas';
@@ -3681,7 +3681,8 @@ validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templ
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/context_and_event_properties/'] = '/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties/'] = '/docs/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/'] = '/docs/user_guide/messaging/design_and_edit/personalize/sources/context_variables/';
-validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/'] = '/docs/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/'] = '/docs/user_guide/messaging/canvas/create_a_canvas/';
+validurls['/docs/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/'] = '/docs/user_guide/messaging/canvas/create_a_canvas/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/'] = '/docs/user_guide/messaging/canvas/create_a_canvas/exit_criteria/';
 validurls['/docs/user_guide/engagement_tools/canvas/faqs/'] = '/docs/user_guide/messaging/canvas/faqs/';
 validurls['/docs/user_guide/engagement_tools/canvas/get_started/'] = '/docs/user_guide/messaging/canvas/get_started/';
