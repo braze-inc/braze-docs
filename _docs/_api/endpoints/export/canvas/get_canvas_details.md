@@ -31,8 +31,8 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Required | String | See [Canvas API Identifier]({{site.baseurl}}/api/identifier_types/) |
-| `post_launch_draft_version` | Optional | Boolean | For Canvases that have a post-launch draft, setting this to `true` will show any draft changes available. Defaults to `false`. |
-| `include_has_translatable_content` | Optional | Boolean | When set to `true`, the API response will include a `has_translatable_content` field for each message. Defaults to `false`. |
+| `post_launch_draft_version` | Optional | Boolean | For Canvases that have a post-launch draft, setting this to `true` shows any draft changes available. Defaults to `false`. |
+| `include_has_translatable_content` | Optional | Boolean | When set to `true`, the API response includes a `has_translatable_content` field for each message. Defaults to `false`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
