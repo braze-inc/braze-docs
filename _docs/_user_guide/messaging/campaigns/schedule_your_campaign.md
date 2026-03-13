@@ -25,7 +25,7 @@ guide_featured_list:
 guide_menu_title: "More articles"
 guide_menu_list:
   - name: Re-eligibility for campaigns
-    link: /docs/user_guide/messaging/messaging_fundamentals/reeligibility/
+    link: /docs/user_guide/messaging/messaging_fundamentals/re_eligibility/
     image: /assets/img/braze_icons/clock.svg
   - name: Campaign calendar
     link: /docs/user_guide/messaging/campaigns/building_campaigns/delivery_types/campaign_calendar/

@@ -21,18 +21,18 @@ guide_featured_list:
     link: /docs/user_guide/messaging/campaigns/testing_and_more/triggered_action_based/
     image: /assets/img/braze_icons/columns-01.svg
   - name: Multivariate and A/B testing
-    link: /docs/user_guide/messaging/multivariant_testing/
+    link: /docs/user_guide/messaging/ab_testing/
     image: /assets/img/braze_icons/beaker-02.svg
 
 guide_menu_title: "Additional articles"
 guide_menu_list:
   - name: Campaign analytics
-    link: /docs/user_guide/analytics/reporting/campaign_analytics/
+    link: /docs/user_guide/analytics/reports/campaign_analytics/
     image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Retention reports
-    link: /docs/user_guide/analytics/reporting/retention_reports/
+    link: /docs/user_guide/analytics/reports/retention_reports/
     image: /assets/img/braze_icons/line-chart-down-01.svg
   - name: Funnel reports
-    link: /docs/user_guide/analytics/reporting/funnel_reports/
+    link: /docs/user_guide/analytics/reports/funnel_reports/
     image: /assets/img/braze_icons/flag-02.svg
 ---

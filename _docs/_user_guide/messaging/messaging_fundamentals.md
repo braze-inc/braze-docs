@@ -4,7 +4,7 @@ article_title: Messaging Fundamentals
 layout: dev_guide
 page_order: 1
 guide_top_header: "Fundamentals"
-guide_top_text: "Learn the shared concepts for who receives your message, when it sends, and how you measure success—whether you use a <a href='/docs/user_guide/get_started/campaigns_and_canvases/'>campaign or a Canvas</a>. These fundamentals apply to both."
+guide_top_text: "Learn the shared concepts for who receives your message, when it sends, and how you measure success. Whether you use a <a href='/docs/user_guide/get_started/campaigns_and_canvases/'>campaign or a Canvas</a>, these fundamentals apply to both."
 page_type: landing
 tool: 
     - Campaigns
@@ -15,10 +15,10 @@ guide_featured_title: "Composition"
 guide_featured_description: |
   Campaigns and Canvases share similar concepts and terms for message composition, but can vary in how the workflow is set up in the respective builder in the dashboard. These shared fundamentals can be understood in how you:
 
-  * Determine when users should enter your message.
-  * Target specific users by segment.
-  * Assign conversion events.
-  * Build the content of your message.
+  * Determine when users should enter your message
+  * Target specific users by segment
+  * Assign conversion events
+  * Build the content of your message
 
   By understanding these shared terms and how they're applicable, you can strategically build your messages regardless of which messaging method you choose.
 guide_featured_list:
@@ -31,9 +31,6 @@ guide_featured_list:
   - name: Delivery types
     link: /docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/
     image: /assets/img/braze_icons/beaker-02.svg
-  - name: Editor blocks
-    link: /docs/user_guide/messaging/design_and_edit/editor_blocks/
-    image: /assets/img/braze_icons/align-left.svg
   - name: Localization
     link: /docs/user_guide/messaging/messaging_fundamentals/localization/
     image: /assets/img/braze_icons/globe-02.svg
