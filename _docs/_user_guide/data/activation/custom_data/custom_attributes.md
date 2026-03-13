@@ -275,3 +275,14 @@ If you would like to segment on the number of times a specific purchase has occu
 
 You can change the data type of your custom attribute, but you should be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/).
 
+## Troubleshooting: Action-based campaigns or Canvases using custom event properties as trigger
+
+If an action-based campaign or Canvas that uses a custom event (with or without custom event properties) as the trigger is not sending to users who perform the event, check the following:
+
+- **Segment membership** — The user must be in the campaign's or Canvas's target segment when the trigger event is evaluated. If the segment is re-evaluated at send time, they must still be in the segment at that moment. Use [user profile export]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) or the **Message Activity Log** to confirm the user is in the segment and that the event was received.
+- **Event and property format** — The custom event name and any property keys or values must match exactly what the campaign or Canvas trigger expects (including data type: string, number, or boolean). Verify the event is being sent with the correct structure via the [Custom Events Report]({{site.baseurl}}/user_guide/analytics/reporting/custom_events_report/) or SDK verbose logging.
+- **Trigger and filters** — If you use custom event property filters on the trigger, the user must satisfy those filters when the event fires. Ensure the event payload includes the properties and values that match your trigger configuration.
+- **Re-eligibility and delay** — If the message has a delay or re-eligibility settings, the user may not receive the message if they no longer qualify at send time or if they have already received the message and are not yet re-eligible.
+
+For more on triggered delivery and re-evaluation, see [Action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) and [Why did a user not receive my triggered campaign?]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign).
+
