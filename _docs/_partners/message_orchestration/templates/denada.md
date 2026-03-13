@@ -61,6 +61,6 @@ Click **Export**. Denada renders the template to HTML, uploads images to Braze, 
 
 ## Using the integration
 
-You can find your uploaded Denada emails in Braze under **Templates & Media > Email Templates**. In older navigation, go to **Engagement** > **Templates & Media**. They're ready to use in any Braze campaign or Canvas.
+You can find your uploaded Denada emails in Braze under **Templates & Media** > **Email Templates**. They're ready to use in any Braze campaign or Canvas.
 
 Denada tracks previous exports, so subsequent exports of the same template can update the existing Braze template rather than creating duplicates.
