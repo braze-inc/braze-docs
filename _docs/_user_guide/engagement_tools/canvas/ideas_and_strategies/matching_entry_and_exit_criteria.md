@@ -11,7 +11,7 @@ tool: Canvas
 
 > This article covers how to set up exit criteria and action paths that directly correlate to the Canvas entry event, so that users only exit or branch when they perform a specific action related to why they entered the Canvas.
 
-By comparing event properties against [Canvas entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/), you can create highly targeted flows. For example, in an abandoned checkout Canvas, you can configure a user to exit only when they purchase the exact item they abandoned, while continuing to receive reminder messages if they purchase a different item.
+By comparing event properties against [Canvas entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties/), you can create highly targeted flows. For example, in an abandoned checkout Canvas, you can configure a user to exit only when they purchase the exact item they abandoned, while continuing to receive reminder messages if they purchase a different item.
 
 This approach uses [context variables]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/) to compare properties across events. The pattern applies to many scenarios beyond eCommerce, including policy renewals, booking reminders, and subscription management.
 
