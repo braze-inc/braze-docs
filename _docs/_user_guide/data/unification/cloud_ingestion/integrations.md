@@ -51,10 +51,11 @@ There may be two to five minutes of warm-up time when Braze connects to Classic 
 
 {% endtab %}
 {% tab Microsoft Fabric %}
-1. Create a service principal and allow access to the Fabric workspace that will be used for your integration.   
-2. In your Fabric workspace, set up the tables or views you want to sync to Braze.   
-3. Create a new integration in the Braze dashboard.  
-4. Test the integration and start the sync.
+1. Create a service principal and grant access to Fabric APIs.
+2. Set up a shared workspace and grant the service principal access to it.
+3. In the shared Fabric workspace you created in step 2, set up the tables or views you want to sync to Braze.   
+4. Create a new integration in the Braze dashboard.  
+5. Test the integration and start the sync.
 {% endtab %}
 {% endtabs %}
 
@@ -86,7 +87,7 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
 
 You can name the database, schema, and table as you'd like, but the column names should match the preceding definition.
 
-- `UPDATED_AT` - The time this row was updated in or added to the table. Only rows that have been added or updated since the last sync are synced.
+- `UPDATED_AT` - The time this row was updated in or added to the table. Braze syncs rows where `UPDATED_AT` is later than the last synced value. Rows at the exact boundary timestamp may be re-synced if new rows share that same timestamp.
 - **User identifier columns** - Your table may contain one or more user identifier columns. Each row should only contain one identifier (either `external_id`, the combination of `alias_name` and `alias_label`, `braze_id`, `email` or `phone`). A source table may have columns for one, two, three, four, or all five identifier types.
     - `EXTERNAL_ID` - This identifies the user you want to update. This should match the `external_id` value used in Braze. 
     - `ALIAS_NAME` and `ALIAS_LABEL` - These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias. Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`.
@@ -169,7 +170,7 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
 
 You can name the database, schema, and table as you'd like, but the column names should match the preceding definition.
 
-- `UPDATED_AT` - The time this row was updated in or added to the table. Only rows that have been added or updated since the last sync are synced.
+- `UPDATED_AT` - The time this row was updated in or added to the table. Braze syncs rows where `UPDATED_AT` is later than the last synced value. Rows at the exact boundary timestamp may be re-synced if new rows share that same timestamp.
 - **User identifier columns** - Your table may contain one or more user identifier columns. Each row should only contain one identifier (either `external_id`, the combination of `alias_name` and `alias_label`, `braze_id`, `email` or `phone`). A source table may have columns for one, two, three, four, or all five identifier types.
     - `EXTERNAL_ID` - This identifies the user you want to update. This should match the `external_id` value used in Braze. 
     - `ALIAS_NAME` and `ALIAS_LABEL` - These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias. Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`.
@@ -246,7 +247,7 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 
 You can name the project, dataset, and table as you'd like, but the column names should match the preceding definition.
 
-- `UPDATED_AT` - The time this row was updated in or added to the table. Only rows that have been added or updated since the last sync are synced.
+- `UPDATED_AT` - The time this row was updated in or added to the table. Braze syncs rows where `UPDATED_AT` is later than the last synced value. Rows at the exact boundary timestamp may be re-synced if new rows share that same timestamp.
 - **User identifier columns** - Your table may contain one or more user identifier columns. Each row should only contain one identifier (either `external_id`, the combination of `alias_name` and `alias_label`, `braze_id`, `email` or `phone`). A source table may have columns for one, two, three, four, or all five identifier types.
     - `EXTERNAL_ID` - This identifies the user you want to update. This should match the `external_id` value used in Braze. 
     - `ALIAS_NAME` and `ALIAS_LABEL` - These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias. Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`.
@@ -330,7 +331,7 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 
 You can name the schema and table as you'd like, but the column names should match the preceding definition.
 
-- `UPDATED_AT` - The time this row was updated in or added to the table. Only rows that have been added or updated since the last sync are synced.
+- `UPDATED_AT` - The time this row was updated in or added to the table. Braze syncs rows where `UPDATED_AT` is later than the last synced value. Rows at the exact boundary timestamp may be re-synced if new rows share that same timestamp.
 - **User identifier columns** - Your table may contain one or more user identifier columns. Each row should only contain one identifier (either `external_id`, the combination of `alias_name` and `alias_label`, `braze_id`, `email` or `phone`). A source table may have columns for one, two, three, four, or all five identifier types.
     - `EXTERNAL_ID` - This identifies the user you want to update. This should match the `external_id` value used in Braze. 
     - `ALIAS_NAME` and `ALIAS_LABEL` - These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias. Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`.
@@ -381,12 +382,27 @@ Azure doesn't allow unlimited expiry on service principal secrets. Remember to r
 #### Step 1.2: Grant access to Fabric resources 
 You will provide access for Braze to connect to your Fabric instance. In your Fabric admin portal, navigate to **Settings** > **Governance and insights** > **Admin portal** > **Tenant settings**.    
 
-* In **Developer settings** enable "Service principals can use Fabric APIs" so Braze can connect using Microsoft Entra ID.
-* In **OneLake settings** enable "Users can access data stored in OneLake with apps external to Fabric" so that the service principal can access data from an external app.
+* In **Developer settings** enable **Service principals can use Fabric APIs** so Braze can connect using Microsoft Entra ID.
+* In **OneLake settings** enable **Users can access data stored in OneLake with apps external to Fabric** so that the service principal can access data from an external app.
 
+#### Step 1.3: Set up a shared workspace and grant access
 
-#### Step 1.3: Set up the table
-Braze supports both tables and views in Fabric Warehouses. If you need to create a new warehouse, go to **Create > Data Warehouse > Warehouse** in the Fabric console. 
+Any Fabric resources you want to connect to Braze must be placed in a shared workspace. If you've only been using the default **My Workspace**, create a new shared workspace:
+
+1. On the navigation menu, select **Workspaces**, then select **+ New workspace**.
+2. Enter a **Name** for the workspace, then select **Apply**.
+
+After you have a shared workspace, grant the service principal access:
+
+1. Select the workspace, then select **Manage Access**.
+2. Select **+ Add people or groups**.
+3. Search for and select the name of the service principal you created in Step 1.1. If it doesn't appear, confirm you've enabled the **Service principals can use Fabric APIs** setting in Step 1.2.
+4. In the role dropdown, select **Contributor**.
+
+The service principal can now access Fabric warehouse resources in this workspace through their SQL endpoints, including the warehouse you will use for Braze.
+
+#### Step 1.4: Set up the table
+Braze supports both tables and views in Fabric Warehouses. If you need to create a new warehouse, create it within the shared workspace from Step 1.3. Go to **Create > Data Warehouse > Warehouse** in the Fabric console.
 
 ```sql
 CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
@@ -409,7 +425,7 @@ GO
 
 You can name the warehouse, schema, and table or view as you'd like, but the column names should match the preceding definition.
 
-- `UPDATED_AT` - The time this row was updated in or added to the table. Only rows that have been added or updated since the last sync are synced.
+- `UPDATED_AT` - The time this row was updated in or added to the table. Braze syncs rows where `UPDATED_AT` is later than the last synced value. Rows at the exact boundary timestamp may be re-synced if new rows share that same timestamp.
 - **User identifier columns** - Your table may contain one or more user identifier columns. Each row should only contain one identifier (either `external_id`, the combination of `alias_name` and `alias_label`, `braze_id`, `email` or `phone`). A source table may have columns for one, two, three, four, or all five identifier types.
     - `EXTERNAL_ID` - This identifies the user you want to update. This should match the `external_id` value used in Braze. 
     - `ALIAS_NAME` and `ALIAS_LABEL` - These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias. Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`.
@@ -419,13 +435,13 @@ You can name the warehouse, schema, and table or view as you'd like, but the col
 - `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
 
 
-#### Step 1.4: Get warehouse connection string
+#### Step 1.5: Get warehouse connection string
 You will need the SQL endpoint for your warehouse in order for Braze to connect. In order to retrieve this, go to the **workspace** in Fabric, and in the list of items, hover over the warehouse name and select **Copy SQL connection string**.
 
 ![The "Fabric Console" page in Microsoft Azure, where users should retrieve the SQL Connection String.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
 
 
-#### Step 1.5: Allow Braze IPs in Firewall (Optional)
+#### Step 1.6: Allow Braze IPs in Firewall (Optional)
 
 Depending on the configuration of your Microsoft Fabric account, you may need to allow the following IP addresses in your firewall to allow traffic from Braze. For more information on enabling this, see the relevant documentation on [Entra Conditional Access](https://learn.microsoft.com/en-us/fabric/security/protect-inbound-traffic#entra-conditional-access).
 

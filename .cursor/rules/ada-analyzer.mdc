@@ -1,4 +1,8 @@
 ---
+description: "Use when analyzing Level Access (ADA) scan exports for Braze Docs, triaging WCAG accessibility findings, or applying critical-severity fixes from the Web ADA Compliance Committee report. Covers filtering to critical only, mapping URLs to repo paths, fixing _docs/ and templates (not _lang/), and generating the Issues report CSV."
+globs:
+  - "_docs/**/*.md"
+  - "**/*.xlsx"
 alwaysApply: false
 ---
 

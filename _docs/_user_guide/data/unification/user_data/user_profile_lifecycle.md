@@ -59,12 +59,20 @@ One of two scenarios can occur when you identify anonymous users:
 
 In other words, you already have a user profile for this user. In this instance, Braze will do the following:
 1. Orphan the anonymous user
-2. Merge [specific user profile fields]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior) that don't already exist on the identified user profile from the anonymous profile
+2. Merge [specific user profile fields]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior) that don't already exist on the identified user profile from the anonymous profile
 3. Remove the anonymous profile from your user base so the user counts aren't inflated
 
 If both the anonymous user and known user have a first name, the first name of the known user is maintained. If the known user has a null value and the anonymous user has a value, the anonymous user's value is merged into the known user's profile if the value falls under these [specific user profile fields]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior).
 
+{% alert important %}
+Not all data is merged from the anonymous profile. Push tokens and messaging history are carried over, and custom attributes, custom events, and purchase history from the anonymous profile are merged into the identified user only when those fields don't already exist on the identified user profile. When there is conflicting data, the identified user's values are kept. See [merge behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior) for the full list of fields that are and aren't transferred.
+{% endalert %}
+
 For information on how to set an `external_id` against a user profile, see our documentation ([iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift), [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web)).
+
+{% alert note %}
+Orphaned users are not eligible to receive messages.
+{% endalert %}
 
 ## User aliases
 
@@ -85,6 +93,12 @@ User aliases also allow you to tag anonymous users with an identifier. For examp
 ### Behavior of aliases on anonymous user profiles
 
 If an anonymous user profile with an alias is later recognized with an `external_id`, they will be treated as a normal identified user profile, but will retain their existing alias and can still be referenced by that alias.
+
+### Searching for a user alias
+
+If you know a user's alias name and label, you can find the user in **Search Users** with the format `alias_label:alias_name`. For example, if you have an alias-only profile with the name `alias_name: bobby_alias` and label `alias_label: m4pzOndtA-CnO0u`, you can find this user by entering `m4pzOndtA-CnO0u:bobby_alias`.
+
+If you don't know this information, you can call the [`Export user profile by identifier` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) and find the user alias in the API response.
 
 ### Setting aliases on known user profiles
 

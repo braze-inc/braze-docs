@@ -406,6 +406,7 @@ The Shopify integration uses [eCommerce recommended events]({{site.baseurl}}/use
 **Event**: `ecommerce.product_viewed`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a customer views a product page<br>
+**Data source**: Braze SDKs<br>
 **Use Case**: Browse abandonment
 
 {% raw %}
@@ -430,6 +431,7 @@ The Shopify integration uses [eCommerce recommended events]({{site.baseurl}}/use
 **Event**: `ecommerce.cart_updated`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a customer adds, removes, or updates their shopping cart<br>
+**Data source**: Braze SDKs<br>
 **Use Case**: Cart abandonment
 
 For Abandoned Cart Canvases, you first need to add the initial shopping cart Liquid tag to gain context of the shopping cart in your message. 
@@ -470,7 +472,12 @@ For more information on how to build out a Liquid `for` loop to dynamically add 
 **Event**: `ecommerce.checkout_started`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a user navigates to the checkout page<br>
+**Data source**: Braze REST API<br>
 **Use Case**: Checkout abandonment
+
+{% alert important %}
+If a customer uses Shop Pay as an accelerated checkout option, Shopify may bypass certain standard checkout events (such as the Shopify checkout started webhook). This means Braze may not receive the data needed to add the checkout token alias, which can impact checkout abandonment tracking and user profile reconciliation.
+{% endalert %}
 
 For Abandoned Checkout Canvases, you first need to use the following Liquid tag:
 
@@ -507,6 +514,7 @@ Then you can add the following Liquid tags into your message to reference the pr
 **Event**: `ecommerce.order_placed`<br>
 **Type**: Recommended event<br>
 **Triggered**: When a user successfully completes the checkout process and places an order<br>
+**Data source**: Braze REST API<br>
 **Use Case**: Order confirmation, post-purchase retargeting, upsells or cross-sells 
 
 {% raw %}
@@ -539,6 +547,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 **Event**: `shopify_fulfilled_order`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
 **Triggered**: When a user’s order is fulfilled and ready for shipping<br>
+**Data source**: Braze REST API<br>
 **Use Case**: (Transactional) Fulfillment update 
 
 {% raw %}
@@ -589,6 +598,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 **Event**: `shopify_partially_fulfilled_order`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
 **Triggered**: When part of a user’s order is fulfilled and ready for shipping<br> 
+**Data source**: Braze REST API<br>
 **Use Case**: (Transactional) Fulfillment update 
 
 {% raw %}
@@ -638,7 +648,8 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 {% subtab Paid order %}
 **Event**: `shopify_paid_order`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
-**Triggered**: When a user’s order is marked as paid within Shopify<br>  
+**Triggered**: When a user’s order is marked as paid within Shopify<br>
+**Data source**: Braze REST API<br>
 **Use Case**: (Transactional) Payment confirmation
 
 {% raw %}
@@ -672,6 +683,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 **Event**: `shopify_cancelled_order`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
 **Triggered**: When a user’s order is cancelled<br> 
+**Data source**: Braze REST API<br>
 **Use Case**: (Transactional) Order cancellation confirmation
 
 {% raw %}
@@ -707,6 +719,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 **Event**: `shopify_order_refunded`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
 **Triggered**: When a user’s order is refunded<br>
+**Data source**: Braze REST API<br>
 **Use Case**: (Transactional) Refund confirmation
 
 {% raw %}
@@ -733,6 +746,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 **Event**: `shopify_account_login`<br>
 **Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
 **Triggered**: When a user logs into their account<br>
+**Data source**: Braze REST API<br>
 **Use Case**: Welcome series
 
 {% raw %}
@@ -752,6 +766,8 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 {% endtabs %}
 
 ## Supported Shopify custom attributes
+
+{% multi_lang_include alerts/note_alerts.md alert='Shopify attributes REST API' %}
 
 {% tabs local %}
 {% tab Example Payload %}
@@ -808,6 +824,8 @@ After selecting your custom attribute, input a default value and copy the Liquid
 {% endtabs %}
 
 ## Supported Shopify standard attributes
+
+{% multi_lang_include alerts/note_alerts.md alert='Shopify attributes REST API' %}
 
 - Email
 - First Name

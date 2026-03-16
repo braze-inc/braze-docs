@@ -43,6 +43,7 @@ Preserve all of the following exactly as they appear in the English source:
 - **Dotted identifiers** (e.g., `Braze.iOS.BrazeLocation`) — preserve exactly
 - **Tokens with underscores** (e.g., `user_id`, `campaign_name`) — preserve exactly
 - **Markdown link syntax structure** — translate the link text but preserve `[text](url)` structure and URLs
+- **Glossary filter identifiers** — on pages that use `glossary_tags` (e.g. `layout: glossary_page`), preserve the `glossary_tags` list and the `tags` under each glossary entry exactly as in the English source. These values drive filter/checkbox logic and must match exactly; do not translate them.
 
 ## Braze product terminology
 
@@ -84,10 +85,38 @@ A style guide for the target language may be appended to the end of these instru
 
 The file `_includes/rate_limits.md` uses Liquid conditionals with include parameters (e.g., `{% if include.category == "..." %}`, `{% elsif include.endpoint == "..." %}`). These Liquid conditionals and their parameters must be preserved exactly. Only translate the prose content between the conditional blocks.
 
+### Glossary and filterable pages (apitags)
+
+- **`{% apitags %}...{% endapitags %}`** — Keep **canonical English identifiers** (do not translate the tag tokens). Filter/checkbox logic depends on exact tag-key matches; translating tags (e.g. Subscription → サブスクリプション) fragments filters into separate categories and can break matching. Use **only the half-width comma (`,`)** to separate multiple tags; do not use the full-width comma (、). Localize display text in headings and body only.
+
 ## Quality guidelines
 
-- Use a formal, professional register appropriate for technical documentation
-- Maintain consistent terminology throughout the file
-- If an existing translation is provided, maintain consistency with its terminology and style choices
+### Voice and tone
+
+- Use active voice and present tense
+- Keep the tone positive, encouraging, and approachable — similar to speaking with a knowledgeable colleague
+- Use a professional but conversational register appropriate for technical documentation (see language-specific style guides for formal/informal pronoun choices)
+- Aim to empower and educate the reader
+
+### Translation quality
+
 - Adapt sentence structure naturally for the target language — do not translate word-for-word
+- The content should read as if it was originally written in the target language, not translated
+- Maintain consistent terminology throughout the file; follow the approved glossary
+- If an existing translation is provided, maintain consistency with its terminology and style choices
 - Keep translations concise; do not expand significantly beyond the English source length
+
+### Inclusivity
+
+- Use gender-neutral language and avoid gendered terms where possible
+- Be considerate of diverse audiences and avoid biased or ableist language
+
+### Cultural sensitivity
+
+- Be mindful of cultural references and avoid idioms that may not translate well into the target language
+- Follow standard grammar and punctuation rules for the target language
+
+### Formatting preservation
+
+- Translate text that is in bold but keep the bold formatting — these often refer to UI elements
+- For rules about preserving identifiers and tokens (including underscores), follow the “What to NEVER translate or modify” section above

@@ -45,7 +45,7 @@ Supported components to optimize include:
 
 ### Step 3: Specify delivery settings
 
-In the **Delivery Settings** tab, you can specify if the step should use Intelligent Timing or delivery validations. For more details, refer to [Edit delivery settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#step-2-edit-delivery-settings) in Message step.
+In the **Delivery Settings** tab, you can specify if the step should use Intelligent Timing or delivery validations. For more details, refer to [Edit delivery settings]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/#step-2-edit-delivery-settings) in Message step.
 
 ### Step 4: Add content components and variants {#step-4}
 
@@ -108,9 +108,15 @@ For email, you can optimize for one of the following events. The agent uses open
 
 Your selected optimization event applies to all content components in this step. 
 
+## Best practices
+
+- In general, we recommend testing more than one component for the Content Optimizer step.
+- If you're optimizing for clicks, include subject lines in your tests, as stronger subject lines can contribute to increased opens and create more opportunities for clicks.
+- If you're optimizing for opens, keep your testing focused on the subject line.
+
 ## Analytics
 
-To review performance, open the step-level analytics panel to see metrics by content variant and overall combination performance. The Content Optimizer step uses the [same analytics as the Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#analytics).
+To review performance, open the step-level analytics panel to see metrics by content variant and overall combination performance. The Content Optimizer step uses the [same analytics as the Message step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/#analytics).
 
 ![Content Optimizer analytics for three buttons and the percentage of allocation of sends, which trend upwards.]({% image_buster /assets/img/content_optimizer/content_optimizer_analytics.png %})
 

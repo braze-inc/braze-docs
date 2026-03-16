@@ -460,6 +460,7 @@ validurls['/docs/user_guide/message_building_by_channel/push/best_practices/conv
 validurls['/docs/help/best_practices/push/push_reporting/'] = '/docs/user_guide/channels/push/reporting/';
 validurls['/docs/help/best_practices/push/creating_custom_opt-in_prompts/'] = '/docs/user_guide/channels/push/best_practices/';
 validurls['/docs/help/best_practices/push/message_format/'] = '/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats/';
+validurls['/docs/user_guide/message_building_by_channel/push/best_practices/message_format/'] = '/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats/';
 validurls['/docs/help/best_practices/spam_regulations/'] = '/docs/user_guide/administrative/privacy/spam_regulations/';
 validurls['/docs/user_guide/onboarding_with_braze/spam_regulations/'] = '/docs/user_guide/administrative/privacy/spam_regulations/';
 validurls['/docs/help/best_practices/utilizing_badge_count/'] = '/docs/user_guide/channels/push/platform_specific_resources/ios/utilizing_badge_count/';
@@ -2970,6 +2971,8 @@ validurls['/docs/user_guide/message_building_by_channel/content_cards/about/'] =
 validurls['/docs/user_guide/message_building_by_channel/email/about/'] = '/docs/user_guide/channels/email/';
 validurls['/docs/user_guide/message_building_by_channel/email/preference_center/overview/'] = '/docs/user_guide/channels/email/subscriptions/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/about/'] = '/docs/in-app_messages/';
+validurls['/docs/user_guide/message_building_by_channel/push/about/#image-and-text-specifications'] = '/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats/';
+validurls['/docs/user_guide/message_building_by_channel/push/about/#native-mobile-push-notifications'] = '/docs/user_guide/channels/push/create_a_push_message/message_and_image_formats/';
 validurls['/docs/user_guide/message_building_by_channel/push/about/'] = '/docs/user_guide/channels/push';
 validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/about_sms/'] = '/docs/user_guide/channels/sms_mms_and_rcs/';
 validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/about_mms/'] = '/docs/user_guide/channels/sms_mms_and_rcs/';

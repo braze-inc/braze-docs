@@ -3,6 +3,7 @@ nav_title: Meta resources
 article_title: Meta Resources
 page_order: 6
 description: "This article provides helpful Meta documentation, information, and resources to improve your understanding of the WhatsApp integration."
+alias: /meta_resources/
 page_type: reference
 channel:
   - WhatsApp
@@ -17,7 +18,7 @@ channel:
 
 Review the following Meta documentation for guidance with display names, phone numbers, and more.
 
-- [Display name guidance](https://www.facebook.com/business/help/757569725593362) 
+- [Display name guidance](https://www.facebook.com/business/help/757569725593362)
 - [Enabling Meta Insights](https://www.facebook.com/business/help/218116047387456)
 - [Phone Number Requirements](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers)
 - [Messaging Limits](https://developers.facebook.com/docs/whatsapp/messaging-limits)
@@ -25,12 +26,62 @@ Review the following Meta documentation for guidance with display names, phone n
 
 ## WhatsApp product updates
 
+### June 2026: Business-scoped user IDs
+*Last Updated March 2026*
+
+- Meta is introducing user IDs to replace phone number sharing for privacy
+- Braze is working on a solution ahead of the rollout
+- Expected June 2026 rollout from Meta
+
+### November 2025: [Marketing messages API for WhatsApp](https://developers.facebook.com/documentation/business-messaging/whatsapp/marketing-messages/overview/) (formerly Marketing Messages Lite API)
+*Last Updated March 2026*
+
+- Replaces static Cloud API limits with dynamic, engagement-based limits
+- Not available in EMEA, Japan, or South Korea for optimized delivery
+- Utility/authentication continue through Cloud API automatically
+
+### October 2025: Official Business Account (OBA) approval process changed
+*Last Updated March 2026*
+
+- Previously open to all customers through WhatsApp Manager
+- Now restricted to: government/large Meta advertisers, direct advertisers, or via a BSP like Braze (up to 5 per week)
+- New prerequisites: business verification, 2-step verification, approved display name, notability
+- Reach out to your customer success manager for assistance 
+
+### October 2025: Regional pricing rate cuts
+*Last Updated March 2026*
+
+- Lower utility/authentication rates in Argentina, Egypt, Mexico, North America
+- Lower marketing rates in Mexico (effective October 1, 2025)
+
+### October 2025: Messaging limits change from per-phone to per-business portfolio
+*Last Updated March 2026*
+
+- Limits now shared across all phone numbers in a portfolio
+- Portfolios inherit the highest existing limit
+- Faster access to higher limits (within 6 hours)
+- Risk: Businesses without an "unlimited" number may see aggregate limits decrease
+
+### July 1, 2025: Pricing overhaul
+*Last Updated March 2026*
+
+- Per-message billing replaced per-conversation billing
+- Utility messages sent in a 24-hour service window became free
+- Updated utility/authentication rates in multiple markets, with new volume tiers
+- New rules on utility template miscategorization—businesses can face template rejection and submission restrictions
+
 ### April 2025: Pause of marketing messages to US phone numbers
 *Last Updated August 2025*
 
 Meta will pause the delivery of all marketing template messages to WhatsApp users who have a United States phone number (a number composed of a `+1` dialing code and a US area code). There is no current scheduled date when this pause will be lifted. 
 
 Any attempts to send a template to a WhatsApp user with a US phone number will result in the error `131049`.
+
+### March 2025: Template category misuse restrictions
+*Last Updated March 2026*
+
+- Meta introduced enforcement for businesses misusing utility/marketing categorization
+- Can result in 7—30 day restrictions on template creation and category reviews
 
 ### March 2025: Per-user marketing template message limits
 *Last Updated August 2025*

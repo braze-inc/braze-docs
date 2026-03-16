@@ -58,7 +58,7 @@ If you are pulling in images with [Connected Content]({{site.baseurl}}/user_guid
 
 ### Image and text specifications
 
-The following image and text specifications apply to the photo carousel portion of Push Stories. For information on the basic push that users interact with to activate the Push Story, refer to the [text guidelines for push]({{site.baseurl}}/user_guide/channels/push/about/#native-mobile-push-notifications).
+The following image and text specifications apply to the photo carousel portion of Push Stories. For information on the basic push that users interact with to activate the Push Story, refer to [Push message and image formats]({{site.baseurl}}/user_guide/channels/push/create_a_push_message/message_and_image_formats/).
 
 {% tabs %}
 {% tab Images %}

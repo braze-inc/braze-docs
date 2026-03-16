@@ -45,7 +45,7 @@ The preview pane shows an approximation of what your message will look like for 
 
 ![Single editing view with one title, message, and on-click behavior field for three push types: iOS, Android, and Web.]({% image_buster /assets/img_archive/quick_push_2.png %})
 
-In the **Assets** section, select or upload the images you want to appear for each platform. Keep in mind that different devices have different specifications for images and character counts. Refer to [Push message and image formats]({{site.baseurl}}/user_guide/channels/push/best_practices/message_format/) for help.
+In the **Assets** section, select or upload the images you want to appear for each platform. Keep in mind that different devices have different specifications for images and character counts. Refer to [Push message and image formats]({{site.baseurl}}/user_guide/channels/push/create_a_push_message/message_and_image_formats/) for help.
 
 ![Assets section of the single editing view with fields for Push Icon Image, iOS notification image, Android notification image, and Web notification image.]({% image_buster /assets/img_archive/quick_push_3.png %}){:style="max-width:50%"}
 

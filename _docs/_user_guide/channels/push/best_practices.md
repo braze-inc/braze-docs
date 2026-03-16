@@ -146,7 +146,7 @@ Because push messages are an intrusive type of messaging that goes directly to y
 
 Didn't find what you were looking for? Check out these additional best practices articles:
 
-- [Push message and image formats]({{site.baseurl}}/user_guide/channels/push/best_practices/message_format/)
+- [Push message and image formats]({{site.baseurl}}/user_guide/channels/push/create_a_push_message/message_and_image_formats/)
 - [Push primer in-app messages]({{site.baseurl}}/user_guide/channels/push/best_practices/push_primer_messages/)
 - [Deliverability for Chinese Android devices]({{site.baseurl}}/user_guide/channels/push/best_practices/chinese_push_deliverability/)
-- [Know before you send: channels]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/know_before_send/)
+- [Know before you send: channels]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/know_before_you_send/)

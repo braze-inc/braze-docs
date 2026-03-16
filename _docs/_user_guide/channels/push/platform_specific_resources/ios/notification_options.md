@@ -174,6 +174,6 @@ This feature does not have minimum SDK version requirements, but is only applied
 
 For more information on maximum message lengths for different message types, refer to the following resources:
 
-- [Image and text specifications]({{site.baseurl}}/user_guide/channels/push/#image-and-text-specifications)
+- [Image and text specifications]({{site.baseurl}}/user_guide/channels/push/create_a_push_message/message_and_image_formats/)
 - [iOS character count guidelines]({{site.baseurl}}/user_guide/channels/push/platform_specific_resources/ios/rich_notifications/#character-count)
 

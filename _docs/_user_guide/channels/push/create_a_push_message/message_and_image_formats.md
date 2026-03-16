@@ -130,5 +130,3 @@ Opera | macOS | 38 | 42
 
 {% endtab %}
 {% endtabs %}
-
-

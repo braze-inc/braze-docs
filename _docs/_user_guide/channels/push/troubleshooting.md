@@ -236,7 +236,7 @@ Next steps:
 
 The `BadToken` error may occur for several reasons:
 - The push token isn't being sent to us correctly in `[[Appboy sharedInstance] registerPushToken:]`
-	- Check the token in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). It should generally look like a long string of letters and numbers (such as `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). If it doesn't, check the code involved in sending Braze push token errors.<br><br>
+	- Check the token in the [Message Activity Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/). It should generally look like a long string of letters and numbers (such as `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). If it doesn't, check the code involved in sending Braze push token errors.<br><br>
 - Mismatched provisioning environment:
 	- If you register with a development certificate and try to send with a production one, you can see this error.  
 	- Braze only supports universal certificates for production environments. Testing push on development environments with a universal certificate will not work. 
@@ -245,6 +245,15 @@ The `BadToken` error may occur for several reasons:
 	- This can happen if your certificate doesn't match the one that was used to get the token. If this is suspected, the next steps include:
 		- Ensuring that the push certificate being used to send push from the Braze dashboard and the provisioning profile are configured correctly.
 		- Recreating the APNS certification and then recreate the provisioning profile after the APNS certificate is configured to the `app_id`. This can sometimes solve some more visible problems.
+
+### InvalidProviderToken
+
+The `InvalidProviderToken` error means APNs rejected the request because the authentication token (from a `.p8` key) or the push certificate (`.p12`) doesn't match the app's bundle ID or Team ID. To resolve this:
+
+1. **Verify your Team ID and Key ID:** If you're using a `.p8` authentication key, confirm that the **Team ID** and **Key ID** configured in the Braze dashboard (**Settings** > **App Settings** > select your iOS app) match the values in your Apple Developer account.
+2. **Check the bundle ID:** Make sure the bundle ID registered in Braze matches the bundle ID of your app. A mismatch, such as a different capitalization or a `.debug` suffix, causes this error.
+3. **Re-upload the key or certificate:** If the `.p8` key or `.p12` certificate was recently regenerated or revoked, upload the new key to Braze and remove the old one.
+4. **Confirm the APNs environment:** If you're using a `.p12` certificate, verify you selected the correct environment (development versus production) when uploading it. For `.p8` keys, this is handled automatically.
 
 ### Push bounced: APNS feedback service removed
 
