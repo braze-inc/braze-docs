@@ -1,5 +1,5 @@
 ---
-nav_title: Registrar compras
+nav_title: Compras de troncos
 article_title: Registrar compras para iOS
 platform: iOS
 page_order: 4
@@ -55,7 +55,7 @@ Consulta [la documentación de la clase iOS](http://appboy.github.io/appboy-ios-
 ### Añadir cantidad
 Puedes añadir una cantidad a tus compras si los clientes realizan la misma compra varias veces en un mismo proceso de pago. Puedes conseguirlo introduciendo una `NSUInteger` para la cantidad.
 
-* Una cantidad introducida debe estar en el rango de [0, 100] para que el SDK registre una compra.
+* La cantidad introducida debe estar comprendida entre [0 y 100] para que el SDK registre una compra.
 * Los métodos sin entrada de cantidad tendrán un valor de cantidad predeterminado de 1.
 * Los métodos con una entrada de cantidad no tienen un valor predeterminado, y **deben** recibir una entrada de cantidad para que el SDK registre una compra.
 

@@ -10,15 +10,15 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.radar.com/) é a principal plataforma de geofencing e monitoramento de localização. A plataforma Radar possui três produtos principais: [Geofences](https://radar.com/product/geofencing), [Trip Tracking](https://radar.com/product/trip-tracking) e [Geo APIs](https://radar.com/product/api). Combinar a plataforma de engajamento líder da indústria Braze com as capacidades de geofencing líderes da indústria da Radar permite que você impulsione a receita e a fidelidade por meio de uma ampla gama de experiências de produtos e serviços baseados em localização. Isso inclui rastreamento de coleta e entrega, notificações acionadas por local, personalização contextual, verificação de local, localizadores de lojas, preenchimento automático de endereço e mais.
+> [Radar](https://www.radar.com/) é a principal plataforma de geofencing e monitoramento de localização. A plataforma Radar possui três produtos principais: [Geofences](https://radar.com/product/geofencing), [Trip Tracking](https://radar.com/product/trip-tracking) e [Geo APIs](https://radar.com/product/api). Combinar a plataforma de engajamento líder da indústria Braze com as capacidades de geofencing líderes da indústria do Radar permite que você impulsione a receita e a fidelidade por meio de uma ampla gama de experiências de produtos e serviços baseados em localização. Isso inclui rastreamento de coleta e entrega, notificações acionadas por local, personalização contextual, verificação de local, localizadores de lojas, preenchimento automático de endereço e mais.
 
-_Esta integração é mantida pela Radar._
+_Esta integração é mantida pelo Radar._
 
 ## Sobre a integração
 
 A integração entre a Braze e a Radar permite acessar gatilhos sofisticados de campanhas baseadas em local e enriquecimento de perfil de usuário com dados primários de local. Quando eventos de geofence ou rastreamento de viagem da Radar são gerados, eventos personalizados e atributos de usuário são enviados para a Braze em tempo real. Esses eventos e atributos podem então ser usados para disparar campanhas baseadas em local, impulsionar operações de coleta e entrega na última milha, monitorar a logística de frotas e remessas, ou construir segmentos de usuários com base em padrões de local. 
 
-Além disso, as APIs Geo da Radar podem ser usadas para enriquecer ou personalizar suas campanhas de marketing através do [Conteúdo Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/). 
+Além disso, as APIs Geo do Radar podem ser usadas para enriquecer ou personalizar suas campanhas de marketing através de [Conteúdo Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/). 
 
 ## Pré-requisitos
 
@@ -180,7 +180,7 @@ near you!
 {% endraw %}
 
 {% alert tip %}
-Visite [documentação da Radar](https://radar.com/documentation/api) para todas as APIs da Radar que podem ser usadas no Conteúdo Conectado.
+Visite [documentação do Radar](https://radar.com/documentation/api) para todas as APIs do Radar que podem ser usadas no Conteúdo Conectado.
 {% endalert %}
 
 

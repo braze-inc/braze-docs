@@ -21,9 +21,7 @@ Mediante la Sincronización de la audiencia Braze con LinkedIn, las marcas puede
 
 Esta característica permite a las marcas controlar qué datos propios específicos se comparten con LinkedIn. En Braze, se presta la máxima atención a las integraciones con las que puedes y no puedes compartir tus datos propios. Para más información, consulte nuestra [política de privacidad](https://www.braze.com/privacy).
 
-{% alert important %}
-La Sincronización de audiencias con LinkedIn está actualmente en fase beta. Ponte en contacto con tu director de cuentas de Braze si quieres participar en la beta.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Audience Sync to LinkedIn' type='beta' %}
 
 ## Requisitos previos
 

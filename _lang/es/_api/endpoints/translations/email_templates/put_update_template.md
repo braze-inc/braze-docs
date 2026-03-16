@@ -1,12 +1,12 @@
 ---
 nav_title: "COLOCAR: Actualizar las traducciones de una plantilla de correo electrónico"
-article_title: "COLOCAR: Actualizar las traducciones de una plantilla de correo electrónico"
-search_tag: Endpoint
+article_title: "COLOCAR: Actualizar traducciones para una plantilla de correo electrónico"
+search_tag: Punto de conexión
 page_order: 4
 
 layout: api_page
 page_type: reference
-description: "Este artículo describe los detalles sobre las traducciones de actualización para un punto final de plantilla de correo electrónico."
+description: "Este artículo describe los detalles sobre el punto final Actualizar traducciones para una plantilla de correo electrónico."
 ---
 
 {% api %}
@@ -17,9 +17,7 @@ description: "Este artículo describe los detalles sobre las traducciones de act
 
 > Utiliza este punto final para actualizar las traducciones de una [plantilla de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). Consulta [Locales en los mensajes]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obtener más información sobre las características de traducción.
 
-{% alert important %}
-Este punto final se encuentra actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Requisitos previos
 
@@ -39,11 +37,11 @@ No hay parámetros de ruta para este punto final.
 | --------- | ---------| --------- | ----------- |
 | `template_id` | Obligatoria | Cadena | El ID de tu plantilla de correo electrónico. |
 | `locale_id` | Obligatoria | Cadena | El ID de la configuración regional. |
-| `translations_map` | Obligatoria | Cadena | El mapeado de las traducciones para tu plantilla de correo electrónico. |
+| `translations_map` | Obligatoria | Cadena | El mapa de las traducciones para tu plantilla de correo electrónico. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Todos los ID de traducción se consideran identificadores únicos universales (UUID), que pueden encontrarse en la respuesta del punto final GET.
+Todos los ID de traducción se consideran identificadores únicos universales (UUID), que se pueden encontrar en la respuesta del punto final GET.
 {% endalert %}
 
 ## Ejemplo de solicitud

@@ -14,7 +14,7 @@ search_tag: Partner
 > [Microsoft Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) は、Microsoft が Azure 製品群の一部として提供する、非構造化データのための大規模拡張可能オブジェクトストレージです。
 
 {% alert important %}
-クラウドストレージプロバイダーを切り替える場合は、Brazeカスタマーサクセスマネージャーに連絡して、新しい統合の設定と検証についてさらにサポートを受けてください。
+クラウドストレージプロバイダーを切り替える場合は、Brazeカスタマーサクセスマネージャーに連絡し、新しい統合の設定と検証についてさらにサポートを受けてください。
 {% endalert %}
 
 Braze と Microsoft Azure Blob Storage の統合により、データを Azure にエクスポートし、Currents データをストリーミングすることができます。その後、ETL プロセス (抽出、変換、読み込み) を使用してデータを他の場所に転送できます。

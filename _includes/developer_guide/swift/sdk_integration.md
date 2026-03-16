@@ -206,9 +206,14 @@ empty_swift_file.swift
 
 ### Step 2: Set up delayed initialization (optional)
 
-You can choose to delay when the Braze Swift SDK is initialized, which is useful if your app needs to load config or wait for user consent before starting the SDK. Delayed initialization ensures Braze push notifications are queued until the SDK is ready.
+You can choose to delay when the Braze Swift SDK is initialized, which is useful if your app needs to load a configuration or wait for user consent before starting the SDK. Delayed initialization makes sure Braze push notifications and push tokens received before SDK initialization are enqueued and processed once the SDK is initialized.
 
-To enable this, call `Braze.prepareForDelayedInitialization()` as early as possible—ideally inside or before your `application(_:didFinishLaunchingWithOptions:)`.
+To use delayed initialization, the minimum Braze SDK version is required:
+{% sdk_min_versions swift:11.2.0 %}
+
+#### Step 2.1: Prepare for delayed initialization
+
+Call `Braze.prepareForDelayedInitialization()` as early as possible in your app's lifecycle, ideally in or before `application(_:didFinishLaunchingWithOptions:)`. This makes sure that push notifications received before the SDK is initialized are properly captured and processed later.
 
 {% alert note %}
 This only applies to push notifications from Braze. Other push notifications are handled normally by system delegates.
@@ -272,14 +277,121 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 {% endtab %}
 {% endtabs %}
 
+When using delayed initialization, push notification automation is implicitly enabled. You can [customize the push automation](#swift_step-23-customize-push-automation-optional) configuration by passing a `pushAutomation` parameter.
+
+#### Step 2.2: Configure push analytics behavior (optional)
+
+When delayed initialization is enabled, push analytics are queued by default. However, you can choose to explicitly queue or drop push analytics instead.
+
+##### Explicitly queue
+
+To explicitly queue push analytics (default behavior), pass `.queue` to the `analyticsBehavior` parameter. Push analytics events that are queued prior to initialization will be processed and flushed to the server upon initialization.
+
+{% tabs local %}
+{% tab Swift %}
+```swift
+Braze.prepareForDelayedInitialization(analyticsBehavior: .queue)
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+[Braze prepareForDelayedInitializationWithAnalyticsBehavior:BRZPushEnqueueBehaviorQueue];
+```
+{% endtab %}
+{% endtabs %}
+
+##### Drop
+
+To drop push analytics received before SDK initialization, pass `.drop` to the `analyticsBehavior` parameter. With this option, any push analytics event that occurs while the SDK is not initialized will be ignored.
+
+{% tabs local %}
+{% tab Swift %}
+```swift
+Braze.prepareForDelayedInitialization(analyticsBehavior: .drop)
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+[Braze prepareForDelayedInitializationWithAnalyticsBehavior:BRZPushEnqueueBehaviorDrop];
+```
+{% endtab %}
+{% endtabs %}
+
+#### Step 2.3: Customize push automation (optional)
+
+You can customize the push automation configuration by passing a `pushAutomation` parameter. By default, all automation features are enabled except `requestAuthorizationAtLaunch`.
+
+{% tabs local %}
+{% tab SWIFT %}
+```swift
+// Enable all push automation
+featuresBraze.prepareForDelayedInitialization(pushAutomation: true)
+
+// Or customize specific automation options
+let automation = Braze.Configuration.Push.Automation()
+automation.automaticSetup = true
+automation.requestAuthorizationAtLaunch = false
+Braze.prepareForDelayedInitialization(pushAutomation: automation)
+```
+{% endtab %}
+
+{% tab OBJECTIVE-C %}
+```objc
+// Enable all push automation features
+[Braze prepareForDelayedInitializationWithPushAutomation:[[BRZConfigurationPushAutomation alloc] initWithAutomationEnabled:YES]];
+
+// Or customize specific automation options
+BRZConfigurationPushAutomation *automation = [[BRZConfigurationPushAutomation alloc] init];
+automation.automaticSetup = YES;
+automation.requestAuthorizationAtLaunch = NO;
+[Braze prepareForDelayedInitializationWithPushAutomation:automation analyticsBehavior:BRZPushEnqueueBehaviorQueue];
+```
+{% endtab %}
+{% endtabs %}
+
+#### Step 2.4: Initialize the SDK
+
+After your chosen delay period (for example, after fetching configuration from a server or after user consent), initialize the SDK as normal:
+
+{% tabs local %}
+{% tab SWIFT %}
+```swift
+func initializeBraze() {  
+  let configuration = Braze.Configuration(apiKey: "YOUR-API-KEY", endpoint: "YOUR-ENDPOINT")    
+  
+  // Enable push automation to match the delayed initialization configuration  
+  configuration.push.automation = true    
+  let braze = Braze(configuration: configuration)    
+  
+  // Store the Braze instance for later use 
+  AppDelegate.braze = braze
+}
+```
+{% endtab %}
+{% tab OBJECTIVE-C %}
+```objc
+- (void)initializeBraze {
+  BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:@"YOUR-API-KEY" endpoint:@"YOUR-ENDPOINT"];
+  
+  // Enable push automation to match the delayed initialization configuration
+  configuration.push.automation = [[BRZConfigurationPushAutomation alloc] initWithAutomationEnabled:YES];
+  Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
+  
+  // Store the Braze instance for later use
+  AppDelegate.braze = braze;
+}
+```
+{% endtab %}
+{% endtabs %}
+
 {% alert note %}
-[`Braze.prepareForDelayedInitialization(pushAutomation:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/preparefordelayedinitialization(pushautomation:)) accepts an optional `pushAutomation` parameter. If set to `nil`, all push automation features are enabled, except requesting push authorization at launch.
+When the SDK is initialized, all queued push notifications, push tokens, and deep links are automatically processed.
 {% endalert %}
 
 ### Step 3: Update your app delegate
 
 {% alert important %}
-The following assumes you've already added an `AppDelegate` to your project (which are not generated by default). If you don't plan on using one, be sure to initialize the Braze SDK as early as possible, like during the app's launch.
+The following assumes you've already added an `AppDelegate` to your project (which are not generated by default) and you are not using the delayed initialization feature. If you don't plan on using an `AppDelegate`, be sure to initialize the Braze SDK as early as possible, like during the app's launch. If you are using the delayed initialization feature, refer to [Step 2.4](#swift_step-24-initialize-the-sdk) for initializing the SDK and ignore this step.
 {% endalert %}
 
 {% subtabs local %}
@@ -353,6 +465,8 @@ Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct 
 ## Optional configurations
 
 ### Logging
+
+For a centralized overview across all platforms, see [Verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging). To learn how to interpret log output, see [Reading verbose logs]({{site.baseurl}}/developer_guide/sdk_integration/reading_verbose_logs).
 
 #### Log levels
 

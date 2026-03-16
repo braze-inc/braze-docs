@@ -35,7 +35,7 @@ Diese Integration erfordert den Aufruf der OtherLevels Experience Platform API a
 
 ## Anwendungsfälle
 
-Verwenden Sie GenAI Videos, die mit der OtherLevels Experience Platform erstellt wurden, um:
+Nutzen Sie GenAI Videos, die mit der OtherLevels Experience Platform erstellt wurden, um:
 - Schaffen Sie bessere Erfahrungen für Sporteigentümer und -ligen, Fan-Engagement, Sportwetten, iGaming und Lotterien.
 - Verstärken Sie Ihr Kundenmarketing, indem Sie textbasierte Inhalte in Rich Media und Video transformieren und so menschliche und engagierte Erlebnisse schaffen.
 - Verbessern Sie die Ergebnisse von der Akquise bis zur Bindung, indem Sie Ihre bestehende Integration in Braze erweitern und nicht umrüsten.

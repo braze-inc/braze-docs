@@ -10,7 +10,7 @@ description: "Esta sección incluye artículos relacionados con la Plataforma de
 
 > La plataforma de datos Braze es un conjunto completo y componible de capacidades de datos e integraciones de socios que te permite crear experiencias personalizadas e impactantes a lo largo del ciclo de vida del cliente, basadas en tres tareas a realizar relacionadas con los datos: [Unificación]({{site.baseurl}}/user_guide/data/unification) de [Datos]({{site.baseurl}}/user_guide/data/unification), [Activación de Datos]({{site.baseurl}}/user_guide/data/activation) y [Distribución de Datos]({{site.baseurl}}/user_guide/data/distribution).
 
-Utilizando una combinación de características de la Plataforma de Datos Braze, puedes aprovechar tus datos para crear mensajes significativos y específicos que respondan a lo que hacen tus clientes en tiempo real.
+Utilizando una combinación de características de la plataforma de datos Braze, puedes aprovechar tus datos para crear mensajes significativos y específicos que respondan a lo que hacen tus clientes en tiempo real.
 
 ## Unifica tus datos 
 

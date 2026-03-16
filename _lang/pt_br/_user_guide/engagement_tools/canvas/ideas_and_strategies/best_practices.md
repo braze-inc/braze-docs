@@ -23,7 +23,11 @@ Mergulhe no que, quem e por quê!
 Desbloqueie novas combinações de jornadas de usuários com os [componentes do Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/).
 - Divida seus usuários com a [divisão de decisão]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) e crie fluxos de trabalho diferentes.
 - Espace suas jornadas de usuário com uma etapa [de postergação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/).
-- Adicione [mensagens autônomas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) em qualquer lugar que desejar em seu fluxo do Canvas. 
+- Adicione [mensagens autônomas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) em qualquer lugar que desejar em seu fluxo do Canvas.
+
+{% alert note %}
+Os passos do canva podem mover os usuários apenas para frente no fluxo. Você não pode configurar um canva para vincular um passo a um passo anterior, pois isso enviaria os usuários para trás. Essa validação garante que os usuários avancem em uma única direção através do seu canva.
+{% endalert %}
 
 ## Crie envios de mensagens mais ricos
 

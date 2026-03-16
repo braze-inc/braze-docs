@@ -36,8 +36,26 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 | Parameter   | Required | Data Type | Description                                                                                                                                                        |
 | ----------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `selection` | Required | Object    | An object that contains selection criteria. The selection objects could contain `name`, `description`, `filters`, `results_limit`, `sort_field`, and `sort_order`. |
+| `selection` | Required | Object    | An object that contains selection criteria. See [catalog selection object]({{site.baseurl}}/api/objects_filters/catalog_selection_object/) for a full breakdown of the object and its fields. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+### Selection object parameters
+
+| Parameter        | Required | Data Type | Description                                                                                                                                                        |
+| ---------------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `name`           | Required | String    | The name of the catalog selection. |
+| `description`    | Optional | String    | A description of the catalog selection. |
+| `external_id`    | Required | String    | A unique identifier for the selection. |
+| `source`         | Required | String    | The source of the catalog data. For Shopify catalogs, use `"Shopify"`. For custom catalogs, use `"custom"`. |
+| `filters`        | Optional | Array    | An array of filter objects to apply to the catalog items. You can specify up to four filters per request. If no filters are provided, all items from the catalog are included. |
+| `results_limit`  | Optional | Integer   | The maximum number of results to return. Must be a number between 1 and 50. |
+| `sort_field`     | Optional | String    | The field to sort results by. This must be paired with `sort_order`. If both `sort_field` and `sort_order` are not present, the results are randomized. |
+| `sort_order`     | Optional | String    | The order to sort results. Accepted values are `"asc"` (ascending) or `"desc"` (descending). This must be paired with `sort_field`. If both `sort_field` and `sort_order` are not present, the results are randomized. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+{% alert note %}
+The `sort_field` and `sort_order` parameters must be used together. If you provide one without the other, or if you omit both parameters, the selection results are returned in a randomized order.
+{% endalert %}
 
 ## Example Request
 
@@ -49,6 +67,8 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
   "selection": {
     "name": "favorite-restaurants",
     "description": "Favorite restaurants in NYC",
+    "external_id": "favorite-nyc-restaurants",
+    "source": "custom",
     "filters": [
       {
         "field": "City",
@@ -60,7 +80,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
         "operator": "greater than",
         "value": 7
       }
-    ]
+    ],
+    "results_limit": 10,
+    "sort_field": "Rating",
+    "sort_order": "desc"
   }
 }'
 ```
@@ -75,6 +98,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 | `time`     | `before`, `after`                                       |
 | `array`    | `includes value`, `does not include value`              |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% alert note %}
+The API supports a maximum of four filters per selection request. In the Braze dashboard, you can add up to 10 filters per selection. Filters are applied in the order they appear in the array.
+{% endalert %}
 
 ## Response
 

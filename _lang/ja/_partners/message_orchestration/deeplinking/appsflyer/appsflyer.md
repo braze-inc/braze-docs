@@ -50,7 +50,7 @@ Braze.getInstance(context).getDeviceIdAsync { deviceId ->
 
 {% tab ios %}
 {% alert important %}
-2023年2月以前のAppsFlyerアトリビューション統合では、iOSアトリビューションデータを照合するための主要識別子としてIDFV（Identifier for Vendor）を使用していた。Objective-Cを使用しているBraze顧客は、サービスの中断がないため、インストール時にBraze`device_id` を取得し、AppsFlyerに送信する必要はない。
+2023年2月以前のAppsFlyerアトリビューション統合では、iOSアトリビューションデータを照合するための主要識別子としてIDFV（Identifier for Vendor）を使用していた。Objective-Cを使用しているBraze顧客は、サービスを中断することがないため、インストール時にBraze`device_id` を取得し、AppsFlyerに送信する必要はない。
 {% endalert%}
 
 Swift SDK v5.7.0+を使用している場合、相互識別子としてIDFVを引き続き使用したい場合は、統合の中断を避けるため、`useUUIDAsDeviceId` フィールドが`false` に設定されていることを確認する必要がある。 
@@ -99,7 +99,7 @@ AppsFlyer.setAdditionalData(customData);
 
 Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**AppsFlyer** を選択します。 
 
-ここでRESTエンドポイントを見つけ、Brazeデータインポートキーを生成する。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとRESTエンドポイントは、AppsFlyerのダッシュボードでポストバックを設定する際に、次のステップで使用される。<br><br>![AppsFlyer テクノロジーページで利用可能な「インストールアトリビューションのデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されている。]({% image_buster /assets/img/attribution/appsflyer.png %}){: style="max-width:70%;"}
+ここで、RESTエンドポイントを見つけ、Brazeデータインポートキーを生成する。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとRESTエンドポイントは、AppsFlyerのダッシュボードでポストバックを設定する際に、次のステップで使用される。<br><br>![AppsFlyer テクノロジーページで利用可能な「インストールアトリビューションのデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されている。]({% image_buster /assets/img/attribution/appsflyer.png %}){: style="max-width:70%;"}
 
 ### ステップ 3:AppsFlyerのダッシュボードでBrazeを設定する
 
@@ -179,7 +179,7 @@ AppsFlyerでBrazeインテグレーションを設定する：
 
  
 ### 3\.メールキャンペーンに使用するOneLinkテンプレートを選択し、[次へ]をクリックする。
-![AppsFlyerのUIに、ユーザーがテンプレートを選択できるドロップダウンが表示される。]({% image_buster /assets/img/attribution/appsflyer/4.png %})
+![AppsFlyerのUIに、ユーザーがテンプレートを選択できるドロップダウンが表示されている。]({% image_buster /assets/img/attribution/appsflyer/4.png %})
 
  
 ### 4. ステップ1で作成した新しいCTDで提供されたクリックトラッキングドメインと "エンドポイント "の値を入力し、"Validate connection "をクリックする。

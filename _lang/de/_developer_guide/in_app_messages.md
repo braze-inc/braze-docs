@@ -62,8 +62,8 @@ description: "Erfahren Sie mehr über In-App-Nachrichten und wie Sie sie für da
 
 ## Nächste Schritte
 
-Möchten Sie tiefer eintauchen? Sehen Sie sich diese Schritt-für-Schritt-Anleitungen an:
+Sind Sie bereit, tiefer einzutauchen? Bitte beachten Sie diese Schritt-für-Schritt-Anleitungen:
 
-- Feinabstimmung der Zustellung von Nachrichten durch [Aufschieben und Wiederherstellen getriggerter Nachrichten]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).  
-- Verfeinern Sie das Targeting von Nachrichten, indem [Sie Regeln für die bedingte Anzeige festlegen]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages).  
-- Passen Sie das Aussehen Ihrer Marke an, indem [Sie das Nachrichten-Styling mit Schlüssel-Wert-Paaren anpassen]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).
+- Optimieren Sie den Zeitpunkt der Zustellung von Nachrichten, indem Sie [getriggerte Nachrichten zurückstellen und wiederherstellen]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).  
+- Verfeinern Sie das Targeting Ihrer Nachrichten, indem [Sie bedingte Anzeigeregeln festlegen]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages).  
+- Passen Sie das Erscheinungsbild Ihrer Marke an, indem [Sie das Design der Nachrichten mit Schlüssel-Wert-Paaren individuell anpassen]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).

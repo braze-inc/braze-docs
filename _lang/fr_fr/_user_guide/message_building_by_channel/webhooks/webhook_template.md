@@ -26,7 +26,7 @@ Dans le tableau de bord de Braze, allez dans **Modèles** > **Modèles de webhoo
 
 Par exemple, si vous utilisez [LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line) comme canal de communication, vous pouvez configurer plusieurs webhooks à l'aide des modèles prédéfinis pour **LINE Carousel** ou **LINE Image.**
 
-## Étape 3 : Remplir les détails du modèle
+## Étape 3 : Remplissez les détails du modèle
 
 1. Donnez un nom unique à votre modèle de webhook.
 2. (Facultatif) Ajoutez une description du modèle pour expliquer comment ce modèle est destiné à être utilisé.
@@ -39,7 +39,7 @@ Par exemple, si vous utilisez [LINE]({{site.baseurl}}/user_guide/message_buildin
 3. Ajoutez un corps de requête. Il peut s'agir de **paires clé-valeur JSON** ou de **texte brut**.
 4. (Facultatif) Ajoutez un en-tête de requête. Cela peut être exigé par la destination de votre webhook.
 
-![L'onglet "Compose" lors de la création d'un modèle de webhook. Les champs disponibles sont l'URL du webhook, la méthode HTTP, le corps de la requête et les en-têtes de la requête. Vous pouvez également ajouter des langues.]({% image_buster /assets/img_archive/Webhook_template_test.png %}){: style="max-width:90%"}
+![L'onglet "Composer" lors de la création d'un modèle de webhook. Les champs disponibles sont l'URL du webhook, la méthode HTTP, le corps de la requête et les en-têtes de la requête. Vous pouvez également ajouter des langues.]({% image_buster /assets/img_archive/Webhook_template_test.png %}){: style="max-width:90%"}
 
 ## Étape 5 : Testez votre modèle
 

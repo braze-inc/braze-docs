@@ -129,7 +129,7 @@ Replace the following:
 | `OTHERLEVELS_PROJECT_KEY`   | 기타 레벨 계정이 프로비저닝되면 기타 레벨 프로젝트 키가 제공됩니다.                                                                     |
 | `BACKGROUND_IMAGE_URL`  | 동영상의 배경에 대한 HTTPS URL입니다. |
 | `INSERT_TITLE` | 동영상 제목은 내부 참조용이며 동영상에 표시되지 않습니다.                                                 |
-| `TALENT_TEMPLATE` | 재능 템플릿 ID. 기타 레벨은 계정 프로비저닝 중에 재능(아바타)을 생성하기 위해 사용자와 협력합니다. 사용할 수 있는 Talent ID가 하나 또는 여러 개 제공됩니다.                                                 |
+| `TALENT_TEMPLATE` | 탤런트 템플릿 ID. 기타 레벨은 계정 프로비저닝 중에 재능(아바타)을 생성하기 위해 사용자와 협력합니다. 사용할 수 있는 Talent ID가 하나 또는 여러 개 제공됩니다.                                                 |
 | `TALENT_MODEL` | 인재 모델 ID. 기타 레벨은 계정 프로비저닝 중에 재능(아바타)을 생성하기 위해 사용자와 협력합니다. 사용할 수 있는 재능 모델을 하나 또는 여러 개 제공받게 됩니다.                                                 |
 | `INSERT_SCRIPT` | 동영상에서 출연자가 말하길 원하는 정확한 대본입니다.                                                 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
@@ -184,7 +184,7 @@ Replace the following:
 
 GenAI 동영상을 iOS 푸시 메시지로 사용자에게 전송하려면 다음 단계를 따르세요:
 
-1. Braze iOS 푸시 알림 캠페인을 만듭니다.
+1. Braze iOS 푸시 알림 캠페인을 생성합니다.
 2. 캠페인을 작성하는 동안 **자산** 섹션으로 이동하여 **URL에서 추가** 필드에 다음 연결된 콘텐츠 구문을 붙여넣습니다.
 
 {% raw %}

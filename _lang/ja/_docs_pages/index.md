@@ -34,7 +34,7 @@ doc_menu_list:
     bg_color: '#ff9349'
     image: /assets/img/braze_icons/code-browser.svg
     link: /docs/api/home/
-    description: "Braze には、ユーザーs の追跡、メッセージの送信、データのエクスポートなどを可能にする高パフォーマンス RESTなAPI が用意されています。"
+    description: "Braze には、ユーザー の追跡、メッセージの送信、データのエクスポートなどを可能にする高パフォーマンス RESTなAPI が用意されています。"
   - name: ヘルプ
     bg_color: '#ff9349'
     image: /assets/img/braze_icons/info-circle.svg

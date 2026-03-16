@@ -7,6 +7,6 @@ Die folgende Tabelle enthält Ressourcen zum Erstellen und Verwalten von DNS-Ein
 | GoDaddy | [CNAME-Eintrag hinzufügen](https://www.godaddy.com/help/add-a-cname-record-19236?) |
 | Cloudflare | [DNS-Einträge verwalten](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/) |
 | Squarespace | [Hinzufügen benutzerdefinierter DNS-Einstellungen](https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain) |
-| Amazonas Route 53 | [Erstellen von Datensätzen mit der Amazon Route 53-Konsole](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-creating.html) |
-| Google Cloud DNS | [Schnellstart: Einrichten von DNS-Einträgen für einen Domain-Namen mit Cloud DNS](https://docs.cloud.google.com/dns/docs/set-up-dns-records-domain-name) |
+| Amazon Route 53 | [Erstellen von Einträgen mithilfe der Amazon Route 53-Konsole](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-creating.html) |
+| Google Cloud DNS | [Schnellstart: Richten Sie DNS-Einträge für eine Domain mit Cloud DNS ein.](https://docs.cloud.google.com/dns/docs/set-up-dns-records-domain-name) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

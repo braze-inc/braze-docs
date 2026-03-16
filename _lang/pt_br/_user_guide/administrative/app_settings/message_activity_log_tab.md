@@ -36,6 +36,7 @@ Além deste artigo, também recomendamos conferir nosso curso do Braze Learning 
 - Erros do WhatsApp
 - Erros de atividade ao vivo
 - Erros de disparo de usuário ruim
+- Erros de invocação diária do Braze Agents [limite]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/#monitor-your-agent)
 
 Essas mensagens podem vir de nosso próprio sistema, de seus apps ou plataformas, ou de nossos parceiros terceirizados. Isso pode resultar em um número infinito de mensagens que podem aparecer nesse registro.
 
@@ -43,7 +44,7 @@ Essas mensagens podem vir de nosso próprio sistema, de seus apps ou plataformas
 
 Para determinar o significado de suas mensagens, preste atenção ao texto de cada mensagem e às colunas que correspondem a ela, pois isso pode ajudá-lo a solucionar problemas usando dicas de contexto. 
 
-Por exemplo, se você tiver uma entrada de registro cuja mensagem afirma "empty-cart_app" e não tiver certeza do que isso significa, olhe para a esquerda na coluna **Tipo**. Se você vir "Erro de mensagem abortada", poderá presumir com segurança que a mensagem era o que foi escrito como [mensagem de abortamento]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) usando o Liquid e que a mensagem foi abortada porque o destinatário pretendido da mensagem tinha um carrinho vazio em seu app.
+Por exemplo, se você tiver uma entrada de log cuja mensagem diz "empty-cart_app" e não tiver certeza do que isso significa, olhe para a esquerda na coluna **Tipo**. Se você vir "Erro de mensagem abortada", poderá presumir com segurança que a mensagem era o que foi escrito como [mensagem de abortamento]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) usando o Liquid e que a mensagem foi abortada porque o destinatário pretendido da mensagem tinha um carrinho vazio em seu app.
 
 ### Envio de mensagens comuns
 
@@ -53,9 +54,9 @@ As mensagens listadas a seguir são para fins de exemplo e podem não correspond
 
 | Tipo de mensagem | Mensagens em potencial | Descrição |
 |---|---|---|
-| Soft bounce | O endereço de e-mail same@example.com é um soft bounce. | O endereço de e-mail era válido e a mensagem de e-mail chegou ao servidor de e-mail do destinatário, mas foi rejeitada por um problema "temporário". <br><br>Os motivos comuns do soft bounce incluem: {::nomarkdown} <ul> <li> A caixa de correio estava cheia (o usuário ultrapassou sua cota) </li> <li> O servidor estava fora do ar </li> <li> A mensagem era muito grande para a caixa de entrada do destinatário </li>  </ul> {:/} Se um e-mail tiver recebido um soft bounce, geralmente tentaremos novamente em um período de 72 horas, mas o número de tentativas de nova tentativa varia de acordo com o destinatário. |
-| Hard bounce | A conta de e-mail que você tentou acessar não existe. Tente verificar novamente o endereço de e-mail do destinatário quanto a erros de digitação ou espaços desnecessários. | Sua mensagem nunca chegou à caixa de entrada dessa pessoa porque não havia uma caixa de entrada para ser acessada. Se quiser se aprofundar mais, mensagens como essa podem, às vezes, ter links na coluna **Exibir detalhes** que lhe permitirão visualizar o perfil do destinatário pretendido.|
-| Bloquear | A mensagem de spam é rejeitada devido à política anti-spam. | Sua mensagem foi categorizada como spam. Esse erro de e-mail é registrado para um usuário se tivermos recebido um evento do ESP indicando que o e-mail foi descartado. Pode ser que seja apenas para o destinatário pretendido, mas se estiver vendo essa mensagem com frequência, talvez queira reavaliar seus hábitos de envio ou o conteúdo da sua mensagem. Além disso, pense de volta—você [warm up your IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)? Se não, entre em contato com a Braze para obter conselhos sobre como fazer isso funcionar.|
+| Soft bounce | O endereço de e-mail same@example.com é um soft bounce. | O endereço de e-mail era válido e a mensagem de e-mail chegou ao servidor de e-mail do destinatário, mas foi rejeitada por um problema "temporário". <br><br>Os motivos comuns do soft bounce incluem: {::nomarkdown} <ul> <li> A caixa de correio estava cheia (o usuário ultrapassou sua cota) </li> <li> O servidor estava fora do ar </li> <li> A mensagem era muito grande para a caixa de entrada do destinatário </li>  </ul> {:/} Se um e-mail recebeu um soft bounce, geralmente tentamos novamente dentro de um período de 72 horas, mas o número de tentativas de reenvio varia de receptor para receptor. |
+| Hard bounce | A conta de e-mail que você tentou acessar não existe. Tente verificar novamente o endereço de e-mail do destinatário quanto a erros de digitação ou espaços desnecessários. | Sua mensagem nunca chegou à caixa de entrada dessa pessoa porque não havia uma caixa de entrada para ser acessada. Se você quiser se aprofundar, mensagens como esta podem às vezes ter links na coluna **Ver Detalhes** que permitem visualizar o perfil do destinatário pretendido.|
+| Bloquear | A mensagem de spam é rejeitada devido à política anti-spam. | Sua mensagem foi categorizada como spam. Esse erro de e-mail é registrado para um usuário se tivermos recebido um evento do ESP indicando que o e-mail foi descartado. Pode ser apenas para aquele destinatário pretendido, mas se você estiver vendo essa mensagem com frequência, pode querer reavaliar seus hábitos de envio ou o conteúdo da sua mensagem. Além disso, pense de volta—você [aquecendo seu IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)? Se não, entre em contato com o Braze para obter conselhos sobre como fazer isso.|
 | Erro de mensagem abortado | empty-cart_web | Se você tiver um app com um carrinho ou criar um envio com uma mensagem de abortar no app, poderá personalizar a mensagem que será retornada se o envio for abortado. Neste caso, a mensagem retornada é empty-cart_web.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -76,8 +77,8 @@ Os erros das últimas 60 horas estão disponíveis nos registros de atividades d
 
 ### Número de registros de erros armazenados
 
-O número de registros salvos é influenciado por várias condições. Por exemplo, se uma campanha programada for enviada a milhares de usuários, é possível que vejamos uma amostra dos erros no registro de atividades de mensagens em vez de todos os erros. A seguir, uma visão geral das condições que afetam quantos registros serão salvos:
-- Até 20 registros de erro do mesmo tipo de erro serão salvos para a mesma campanha ou etapa do canva dentro de uma hora fixa do relógio para os seguintes tipos de erro:
+O número de registros salvos é influenciado por várias condições. Por exemplo, se uma campanha programada for enviada a milhares de usuários, é possível que vejamos uma amostra dos erros no registro de atividades de mensagens em vez de todos os erros. A seguir, uma visão geral das condições que afetam quantos logs são salvos:
+- Até 20 logs de erro do mesmo tipo de erro são salvos para a mesma campanha ou etapa do Canvas dentro de uma hora fixa para os seguintes tipos de erro:
     - Erros de conteúdo conectado
     - Erros de Mensagem Abortada
     - Erros de webhook
@@ -85,23 +86,35 @@ O número de registros salvos é influenciado por várias condições. Por exemp
     - Erros de Falha na Entrega de SMS
     - Erros de Falha no WhatsApp
     - Erros de Testes A/B
-- Até 20 registros de erro de notificação por push do mesmo tipo de erro serão salvos para a mesma campanha ou combinação de etapa do canva e app para os seguintes tipos de erro:
+- Até 20 logs de erro de notificação por push do mesmo tipo de erro são salvos para a mesma campanha ou combinação de etapa do Canvas e app para os seguintes tipos de erro:
     - Credencial de Push Inválida
     - Token de Push Inválido
     - Sem Credencial de Push
     - Erros de Token
     - Cota Excedida
-    - Tentativas Esgotadas
-    - Carga útil inválida
+    - Tentativas Expiradas
+    - Carga Útil Inválida
     - Erro inesperado
-- Até 100 logs de erro do mesmo tipo de erro serão salvos para o mesmo app dentro de uma hora fixa para os seguintes tipos de erro:
+- Até 100 registros de erro do mesmo tipo são salvos para o mesmo app dentro de uma hora fixa para os seguintes tipos de erro:
     - Erro de Atividade ao Vivo (Sem credencial de push)
     - Erro de Atividade ao Vivo (Credencial de push inválida)
     - Outros erros de Atividade ao Vivo
-    - Erros de Token removido do Feedback APNS
-- Até 100 logs de erro do mesmo tipo de erro serão salvos para a mesma campanha ou etapa do canva dentro de uma hora fixa para os seguintes tipos de erro:
-    - Erros de Soft Bounce de e-mail
-    - Erros de Hard Bounce de e-mail
-    - Erros de bloqueio de e-mail
-- Até 100 logs de erro de aliasing de usuário serão salvos para o mesmo espaço de trabalho dentro de uma hora fixa.
+    - Erros de Token removidos do Feedback APNS
+- Até 100 registros de erro do mesmo tipo são salvos para a mesma campanha ou etapa do canva dentro de uma hora fixa para os seguintes tipos de erro:
+    - Erros de Soft Bounce de E-mail
+    - Erros de Hard Bounce de E-mail
+    - Erros de Bloqueio de E-mail
+- Até 100 registros de erro de aliasing de usuário são salvos para o mesmo espaço de trabalho dentro de uma hora fixa.
 
+## Envios de teste
+
+O **Registro de Atividade de Mensagem** mostra registros de teste para esses canais de envio de mensagens:
+
+- SMS
+- WhatsApp
+- LINE
+- Webhook
+
+Registros de envio de teste não estão disponíveis para os seguintes canais: e-mail, Cartões de Conteúdo, mensagens no app e push.
+
+Registros de envio de teste são prefixados com "[ENVIO DE TESTE]", mas não é garantido que todos os registros de envio de teste tenham o prefixo (por exemplo, erros de Conteúdo Conectado não têm o prefixo).

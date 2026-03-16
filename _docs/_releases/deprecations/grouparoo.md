@@ -44,8 +44,8 @@ This integration requires that you have an existing model and data source set up
 In Grouparoo, select your model from the navigation bar. Next, scroll to the **Destinations** section and click **Add new Destination**.
 
 Next, select the **Braze** app you made, name the destination, and select your desired sync mode from the following:
-- **Sync**: Add, update, and remove Braze users as needed. This option looks for new records, changes to existing records, and deletions.
-- **Additive**: Add and update Braze users as needed, but do not remove anybody. This option looks for new users to add to Braze and changes to existing Braze users but does not keep track of deletions.
+- **Sync**: Add, update, and remove company users as needed. This option looks for new records, changes to existing records, and deletions.
+- **Additive**: Add and update company users as needed, but do not remove anybody. This option looks for new users to add to Braze and changes to existing company users but does not keep track of deletions.
 - **Enrich**: Only update those users that already exist in Braze. Do not add or remove Users. This option will only update existing users in Braze.
 
 #### Property field mapping

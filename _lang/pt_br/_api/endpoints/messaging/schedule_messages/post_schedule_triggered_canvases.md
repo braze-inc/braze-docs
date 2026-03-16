@@ -16,7 +16,9 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Agendar
 
 > Use este endpoint para agendar mensagens do canva via entrega disparada por API, permitindo que você decida qual ação deve disparar o envio da mensagem.
 
-Você pode passar em `canvas_entry_properties` que será modelado nas mensagens enviadas pelos primeiros passos da canva.
+Você pode passar em `context` que será modelado nas mensagens enviadas pelos primeiros passos da canva.
+
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
 Nota que para enviar mensagens com este endpoint, você precisa ter um [ID do canva]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier), criado quando você constrói um canva.
 
@@ -49,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
   // the message will send to entire segment targeted by the Canvas
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
+  "context": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
   "schedule": {
     "time": (required, datetime as ISO 8601 string) time to send the message,
     "in_local_time": (optional, bool),
@@ -66,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `recipients` | Opcional | Matriz de objetos de destinatários | Veja [objetos de destinatários]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `audience` | Opcional | Objeto de público conectado | Veja [público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`broadcast`| Opcional | Booleano | Você deve definir `broadcast` como verdadeiro ao enviar uma mensagem para um segmento inteiro que uma campanha ou canva segmenta. O padrão desse parâmetro é false (a partir de 31 de agosto de 2017). <br><br> Se `broadcast` estiver definido como true, uma lista `recipients` não poderá ser incluída. No entanto, tenha cuidado ao definir `broadcast: true`, pois definir esta flag de forma não intencional pode fazer com que você envie sua mensagem para um público maior do que o esperado. |
-| `canvas_entry_properties` | Opcional | Objeto | Pares de chave-valor de personalização para todos os usuários neste envio. Veja [objeto de propriedades de entrada  no canva]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object). |
+| `context` | Opcional | Objeto | Pares de chave-valor de personalização para todos os usuários neste envio. Veja [canva contexto objeto]({{site.baseurl}}/api/objects_filters/context_object). |
 | `schedule` | Obrigatória | Objeto de agendamento | Veja [objeto de agendamento]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -81,7 +83,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
     {
       "user_alias": "example_alias",
       "external_user_id": "external_user_identifier",
-      "canvas_entry_properties": {}
+      "context": {}
     }
   ],
   "audience": {
@@ -132,7 +134,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
     ]
   },
   "broadcast": false,
-  "canvas_entry_properties": {},
+  "context": {},
   "schedule": {
     "time": "",
     "in_local_time": false,

@@ -317,7 +317,7 @@ The Shopify integration uses [eCommerce recommended events]({{site.baseurl}}/use
        "price": "80.00",
        "fulfillment_status": null
      }
-   ],
+   ]
  }
 }
 ```
@@ -391,9 +391,9 @@ The Shopify integration uses [eCommerce recommended events]({{site.baseurl}}/use
 {% subtab Account login %}
 ```json
 {
-	name: "shopify_account_login",
-	properties: {
-	source: "braze-mock-storefront.myshopify.com"
+	"name": "shopify_account_login",
+	"properties": {
+	"source": "braze-mock-storefront.myshopify.com"
   }
 }
 ```
@@ -471,6 +471,10 @@ For more information on how to build out a Liquid `for` loop to dynamically add 
 **Type**: Recommended event<br>
 **Triggered**: When a user navigates to the checkout page<br>
 **Use Case**: Checkout abandonment
+
+{% alert important %}
+If a customer uses Shop Pay as an accelerated checkout option, Shopify may bypass certain standard checkout events (such as the Shopify checkout started webhook). This means Braze may not receive the data needed to add the checkout token alias, which can impact checkout abandonment tracking and user profile reconciliation.
+{% endalert %}
 
 For Abandoned Checkout Canvases, you first need to use the following Liquid tag:
 
@@ -578,7 +582,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 | Fulfillment Shipping | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | Fulfillment SKU | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
 | Fulfillment Title | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
-| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor}}` |
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
@@ -628,7 +632,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 | Fulfillment Shipping | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | Fulfillment SKU | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
 | Fulfillment Title | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
-| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor}}` |
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }

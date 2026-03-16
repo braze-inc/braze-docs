@@ -65,7 +65,7 @@ En la respuesta a esta solicitud, Fullstory proporciona un "ID de perfil" de ses
 
 Utilizando [los Flujos de Activación](https://help.fullstory.com/hc/en-us/articles/360045134554-Streams) de Fullstory, puedes desencadenar Lienzos Braze inmediatamente después de las interacciones clave de los usuarios. El poder de esta integración reside en el `client_session_id` único (accesible a través de {% raw %}`{{canvas_entry_properties.${client_session_id}}}`{% endraw %}), que el sistema pasa automáticamente de Fullstory a Braze. Este ID actúa como clave, permitiendo a Braze obtener el Resumen de Sesión completo de lo que experimentó exactamente el usuario. 
 
-Aprovechando los pasos en Contexto Canvas y el Contenido conectado, puedes utilizar este ID para hacer una solicitud de API a Fullstory, recuperar los datos de la sesión y almacenarlos como una variable para utilizarlos más adelante en el viaje. 
+Aprovechando los pasos en Contexto Canvas y el Contenido conectado, puedes utilizar este ID para realizar una solicitud de API a Fullstory, recuperar los datos de la sesión y almacenarlos como una variable para utilizarlos más adelante en el viaje. 
 
 ![Captura de pantalla del paso en Canvas de Braze que muestra la variable de contexto `summary_result` creada y rellenada con una llamada de contenido conectado a Fullstory, para recuperar un resumen de sesión]({% image_buster /assets/img/fullstory/3.png %})
 

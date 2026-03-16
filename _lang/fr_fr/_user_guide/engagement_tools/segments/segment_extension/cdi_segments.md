@@ -1,6 +1,6 @@
 ---
 nav_title: Extensions de segments CDI
-article_title: CDI Extensions de segments
+article_title: Extensions de segments CDI
 page_order: 0
 page_type: reference
 alias: /cdi_segment_extensions/
@@ -10,23 +10,23 @@ description: "Cet article pratique vous explique comment configurer le ciblage d
 
 ---
 
-# CDI Extensions de segments
+# Extensions de segments CDI
 
 > Avec Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/) (CDI), vous pouvez configurer une connexion directe depuis votre entrepôt de données ou votre système de stockage de fichiers vers Braze pour synchroniser les données utilisateur ou de catalogue pertinentes de manière récurrente.
 
 {% alert warning %}
-Les CDI Segment Extensions interrogent directement votre entrepôt de données. Vous devrez donc supporter tous les coûts liés à l'exécution de ces requêtes dans votre entrepôt de données. Les extensions de segments CDI ne consomment pas de [crédits de segments SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage), ne comptent pas dans votre limite d'extensions de segments et n'enregistrent pas de points de données.
+Les extensions de segments CDI interrogent directement votre entrepôt de données. Par conséquent, vous devrez assumer tous les coûts associés à l'exécution de ces requêtes dans votre entrepôt de données. Les extensions de segments CDI n'utilisent pas [de crédits de segment SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage), ne sont pas prises en compte dans votre limite d'extension de segments et n'enregistrent pas de points de données.
 {% endalert %}
 
 ## Conditions préalables
 
-Pour utiliser les données de votre entrepôt de données pour la segmentation dans votre espace de travail Braze, vous devrez créer une [source connectée]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/), puis créer un segment CDI dans vos [Extensions de segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Les CDI Segment Extensions vous permettent d'écrire un langage SQL qui interroge directement votre propre entrepôt de données en utilisant les données mises à disposition par vos connexions CDI, et de créer un groupe d'utilisateurs qui peut être ciblé dans Braze.
+Pour utiliser les données de votre entrepôt de données pour la segmentation dans votre espace de travail Braze, vous devrez créer une [source connectée]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/), puis créer un segment CDI dans vos [Extensions de segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Les extensions de segments CDI vous permettent d'écrire du code SQL qui interroge directement votre propre entrepôt de données à l'aide des données mises à disposition via vos connexions CDI, et de créer un groupe d'utilisateurs pouvant être ciblés dans Braze.
 
 ## Création d'un segment CDI
 
 ### Étape 1 : Configurez votre source
 
-Avant de créer votre première extension de segments CDI, configurez une nouvelle source connectée avec votre entrepôt de données en suivant les étapes indiquées dans [Sources connectées]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/).
+Avant de créer votre première extension de segment CDI, veuillez configurer une nouvelle source connectée à votre entrepôt de données en suivant les étapes décrites dans la section [Sources connectées.]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/)
 
 ### Étape 2 : Créer un segment
 
@@ -38,18 +38,24 @@ Pour votre source de données, choisissez **Tables de données CDI**.
 
 ![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:60%;"}
 
-Dans le cadre de votre configuration CDI, vous pouvez sélectionner différentes connexions à utiliser dans les extensions de segments CDI. Chaque connexion dispose d'un ensemble spécifique de tables de données. Votre équipe de développement peut configurer vos connexions et vos tables de données lors de la configuration de CDI.
+Dans le cadre de votre configuration CDI, vous avez la possibilité de choisir parmi différentes connexions à utiliser dans les extensions de segments CDI. Chaque connexion dispose d'un ensemble spécifique de tables de données. Votre équipe de développement peut configurer vos connexions et vos tables de données lors de la configuration de CDI.
 
-Pour afficher les tables de données disponibles, y compris leur schéma et toute description disponible, sélectionnez **Référence.** Lorsque vous êtes prêt, sélectionnez une connexion.
+Pour consulter les tableaux de données disponibles, y compris leur schéma et les descriptions disponibles, veuillez sélectionner **Référence**. Lorsque vous êtes prêt, sélectionnez une connexion.
 
 ![]({% image_buster /assets/img/segment/connection_schema_with_descriptions.png %}){: style="max-width:100%;"}
 
 Ensuite, écrivez le SQL pour votre segment en utilisant [la syntaxe SQL de Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#writing-sql).
 
-N'oubliez pas que toutes les extensions de segments CDI doivent utiliser `external_user_id` comme colonne sélectionnée et que votre `external_user_id` doit correspondre à celui défini dans Braze pour les utilisateurs. Si les résultats de votre requête incluent des utilisateurs qui n'existent pas dans Braze, ces utilisateurs seront ignorés. Braze ne créera pas de nouveaux utilisateurs sur la base des résultats de votre extension de segmentation CDI.
+Veuillez noter que toutes les extensions de segments CDI doivent utiliser`external_user_id`  comme colonne sélectionnée, et votre`external_user_id`  doit correspondre à celui défini dans Braze pour les utilisateurs.
+
+{% alert important %}
+`external_user_id` doit être une valeur **de chaîne de caractères**. Si votre ID source est stocké sous forme de nombre (par exemple,`client_id`un entier), [veuillez le convertir en chaîne de caractères dans votre SQL](https://www.w3schools.com/sql/func_sqlserver_cast.asp) afin qu'il corresponde au`external_id`type utilisé dans Braze.
+{% endalert %}
+
+Si les résultats de votre requête incluent des utilisateurs qui n'existent pas dans Braze, ces utilisateurs seront ignorés. Braze ne crée pas de nouveaux utilisateurs sur la base des résultats de vos extensions de segments CDI.
 
 {% alert tip %}
-Pour savoir comment vous pouvez prévisualiser vos extensions de segments, gérer vos extensions de segments et actualiser automatiquement les adhésions, voir [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/).
+Pour découvrir comment prévisualiser vos extensions de segments, les gérer et actualiser automatiquement l'adhésion, veuillez consulter [Extensions de segments SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/).
 {% endalert %}
 
 Enfin, vous pouvez [utiliser cette extension de segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#step-5-use-your-extension-in-a-segment) dans un segment Braze pour envoyer une campagne ou un Canvas à ce public.

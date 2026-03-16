@@ -2,7 +2,7 @@
 nav_title: Delay 
 article_title: Delay 
 alias: "/delay_step/"
-page_order: 3
+page_order: 8
 page_type: reference
 description: "In diesem Referenzartikel erfahren Sie, wie Sie eine Verzögerung zu Ihrem Canvas hinzufügen können, ohne eine zugehörige Nachricht hinzufügen zu müssen."
 tool: Canvas
@@ -13,7 +13,7 @@ tool: Canvas
 
 > Mit Delay-Komponenten können Sie einem Canvas eine eigenständige Verzögerung hinzufügen. Sie können eine Verzögerung zu Ihrem Canvas hinzufügen, ohne dass Sie eine zugehörige Nachricht hinzufügen müssen. 
 
-Verzögerungen können Ihr Canvas sauberer aussehen lassen. Sie können diese Komponente auch verwenden, um einen anderen Schritt bis zu einem genauen Datum, bis zu einem bestimmten Tag oder bis zu einem bestimmten Wochentag zu verschieben. <br> ![Ein Delay-Schritt mit einer Verzögerung von 1 Tag als erster Schritt eines Canvas.]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+Verzögerungen können Ihr Canvas sauberer aussehen lassen. Sie können diese Komponente auch verwenden, um einen anderen Schritt bis zu einem genauen Datum, bis zu einem bestimmten Tag oder bis zu einem bestimmten Wochentag zu verschieben. <br> ![Ein Verzögerungsschritt mit einer Verzögerung von einem Tag als erster Schritt eines Canvas.]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 ## Erstellen einer Verzögerung
 
@@ -28,47 +28,47 @@ Es gibt einige Details zu beachten, wenn Sie einen Delay in Ihrer Canvas-Journey
 
 Sie können jetzt Verzögerungsstufen bis zu zwei Jahre verlängern. Wenn Sie z.B. neue Nutzer:innen für Ihre App onboarding, können Sie eine längere Verzögerung von zwei Monaten einfügen, bevor Sie eine Nachricht senden, um die Nutzer:innen, die noch keine Sitzung begonnen haben, anzustupsen.
 
-## Zeitverzögerungsarten
+## Zeitverzögerungstypen
 
 Sie können die Art der Verzögerung vor der nächsten Nachricht in Ihrem Canvas auswählen. Sie können entweder eine Verzögerung für Ihre Benutzer festlegen, die bis nach einer bestimmten Zeitspanne andauert, oder Ihre Benutzer bis zu einem bestimmten Datum und einer bestimmten Uhrzeit warten lassen.
 
 {% tabs %}
 {% tab Duration %}
 
-Wenn Sie **Dauer** auswählen, können Sie Nutzer:innen für eine bestimmte Anzahl von Sekunden, Minuten, Stunden, Tagen oder Wochen und zu einem bestimmten Zeitpunkt aufhalten. Sie können Nutzer:innen zum Beispiel vier Stunden oder einen Tag lang aufhalten.
+Durch Auswahl von **„Dauer“** können Sie Nutzer:innen für eine bestimmte Anzahl von Sekunden, Minuten, Stunden, Tagen oder Wochen und zu einer bestimmten Uhrzeit zurückhalten. Sie können Nutzer:innen zum Beispiel vier Stunden oder einen Tag lang aufhalten.
   
 Beachten Sie den Unterschied zwischen der Berechnung von „Tagen“ und „Kalendertagen“.
   
-- Ein "Tag" ist 24 Stunden und wird ab dem Zeitpunkt berechnet, an dem der Nutzer:innen den Schritt Verzögerung eingibt. 
-- Ein "Kalendertag" definiert die Wartezeit bis zur nächsten angegebenen Zeit, die weniger als 24 Stunden betragen kann. Sie können wählen, ob die Verzögerung zur Firmenzeit oder zur Ortszeit des Nutzers:innen erfolgen soll. Wenn keine Zeit angegeben wird, wird der Nutzer:in bis Mitternacht des nächsten Tages in Firmenzeit verschoben.
+- Ein „Tag“ entspricht 24 Stunden und wird ab dem Zeitpunkt berechnet, zu dem die Nutzer:in den Schritt „Verzögerung“ aufruft. 
+- Ein „Kalendertag“ bezeichnet die Zeit, die bis zum nächsten festgelegten Zeitpunkt zu warten ist, wobei dieser Zeitraum weniger als 24 Stunden betragen kann. Sie können wählen, ob Sie die Verzögerung nach Unternehmenszeit oder nach der Ortszeit der Nutzer:innen einstellen möchten. Wenn keine Zeit angegeben wird, wird der Nutzer:in bis Mitternacht des nächsten Tages in Firmenzeit verschoben.
 
 Sie können auch **Zu einem bestimmten Zeitpunkt** auswählen, um festzulegen, wann die Nutzer:innen im Canvas zum nächsten Schritt übergehen. Diese Option berücksichtigt den Zeitpunkt, zu dem der oder die Nutzer:in zum Schritt „Delay“ übergegangen ist. Wenn diese Zeit über die in den Einstellungen konfigurierte Zeit hinausgeht, fügen wir dem Delay weitere Stunden hinzu. 
 
-Nehmen wir zum Beispiel an, heute ist der 11\. Dezember und unser Verzögerungsschritt ist auf **Dauer** einer Woche um 8 Uhr UTC eingestellt. Wenn ein:e Nutzer:in am 4\. Dezember in den Delay-Schritt übergeht, verlässt er oder den Delay-Schritt, um seine oder ihre Journey heute fortzusetzen, wenn er oder sie ursprünglich zu einer Zeit vor 8 Uhr UTC in den Delay-Schritt übergegangen ist. Wenn der oder die Nutzer:in nach diesem Zeitpunkt in den Delay-Schritt übergegangen ist, wird er oder sie bis zum nächsten Tag (dem nächsten Vorkommen dieses Zeitpunkts) verzögert. 
+Nehmen wir beispielsweise an, heute ist der 11\. Dezember und unser Verzögerungsschritt ist auf **eine Dauer** von einer Woche um 8 Uhr UTC eingestellt. Wenn ein:e Nutzer:in am 4\. Dezember in den Delay-Schritt übergeht, verlässt er oder den Delay-Schritt, um seine oder ihre Journey heute fortzusetzen, wenn er oder sie ursprünglich zu einer Zeit vor 8 Uhr UTC in den Delay-Schritt übergegangen ist. Wenn der oder die Nutzer:in nach diesem Zeitpunkt in den Delay-Schritt übergegangen ist, wird er oder sie bis zum nächsten Tag (dem nächsten Vorkommen dieses Zeitpunkts) verzögert. 
 
 {% endtab %}
 {% tab Calendar date %}
 
-Wenn Sie **das Kalenderdatum** auswählen, können Sie Nutzer:innen bis zu einem bestimmten Datum und einer bestimmten Uhrzeit im Schritt halten.
+Durch Auswahl von **„Kalenderdatum“** können Sie Nutzer:innen bis zu einem bestimmten Datum und einer bestimmten Uhrzeit in diesem Schritt halten.
 
 #### Überlegungen
 
 ##### Nutzer:innen erhalten keine veralteten Schritte oder Nachrichten mehr
 
-Wenn das ausgewählte Datum und die Uhrzeit bereits verstrichen sind, wenn die Nutzer:innen zum Schritt Verzögerung übergehen, verlassen sie den Canvas. Es können bis zu 31 Tage zwischen dem Start des Canvas und den Daten liegen, die für die Schritte "Warten bis zu einem bestimmten Tag" gewählt wurden.
+Wenn das ausgewählte Datum und die Uhrzeit bereits verstrichen sind, wenn die Nutzer:innen zum Schritt Verzögerung übergehen, verlassen sie den Canvas. Zwischen dem Beginn des Canvas und den für die Schritte „Warten bis zu einem bestimmten Tag“ ausgewählten Daten können bis zu 31 Tage liegen.
 
 {% alert important %}
-Wenn Sie am [Canvas Context Frühzugang]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) teilnehmen, können Sie Verzögerungen von bis zu 2 Jahren festlegen.
+Wenn Sie am [frühen Zugang]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) zu [Canvas Context]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) teilnehmen, können Sie Verzögerungen von bis zu zwei Jahren festlegen.
 {% endalert %}
 
 In diesen Szenarien erhalten Nutzer:innen zum Beispiel keine Schritte oder Nachrichten:
 
-- Eine Nachricht soll am 3\. Mai um 21 Uhr gesendet werden, aber der Schritt Verzögerung läuft am 3\. Mai um 9 Uhr ab. 
+- Eine Nachricht soll am 3\. Mai um 21 Uhr versendet werden, jedoch läuft der Schritt „Verzögerung“ am 3\. Mai um 9 Uhr ab. 
 - Ein Canvas-Schritt verzögert sich bis zu einer bestimmten Zeit in der Ortszeit des Nutzers, aber die Nutzer:innen haben keine Zeitzone in ihrem Nutzerprofil eingestellt. Die Verzögerung wird dann standardmäßig auf die Zeitzone des Unternehmens für diese Nutzer:innen eingestellt, die die angegebene Zeit bereits überschritten hat. 
   
 ##### Nutzer:innen verlassen das Programm, wenn ein nachfolgender Verzögerungsschritt innerhalb der Zeitlinie eines vorherigen Verzögerungsschritts liegt.
 
-Wenn der Canvas zwei Verzögerungsschritte hat, aber der erste Verzögerungsschritt länger ist als der zweite, werden Nutzer:innen den Canvas ebenfalls verlassen. 
+Wenn die Canvas zwei Verzögerungsschritte aufweist, der erste Verzögerungsschritt jedoch länger ist als der zweite, werden die Nutzer:innen die Canvas ebenfalls verlassen. 
 
 Nehmen wir an, ein Canvas hat diese Schritte:
 - Schritt 1: Nachrichtenschritt
@@ -82,7 +82,7 @@ Die Nutzer:innen von Schritt 4 werden den Canvas verlassen, bevor sie Schritt 5 
 {% endtab %}
 {% tab Day of the week %}
 
-Wenn Sie den **Wochentag** auswählen, können Sie Nutzer:innen bis zu einem bestimmten Wochentag und zu einer bestimmten Uhrzeit im Schritt halten. Sie können Nutzer:innen zum Beispiel bis zum nächsten Donnerstag um 16 Uhr in der Zeitzone des Unternehmens warten lassen. 
+Durch die Auswahl von** „Wochentag“** sind die Nutzer:innen bis zu einem bestimmten Wochentag und einer bestimmten Uhrzeit in diesem Schritt zulässig. Sie können Nutzer:innen zum Beispiel bis zum nächsten Donnerstag um 16 Uhr in der Zeitzone des Unternehmens warten lassen. 
 
 Um dies erfolgreich zu konfigurieren, müssen Sie auch festlegen, was passieren soll, wenn der Benutzer das Canvas am ausgewählten Wochentag (z. B. Donnerstag), aber nach der angegebenen Uhrzeit betritt. Sie können wählen, ob Sie die Nutzer:innen noch am selben Tag voranbringen oder bis zur nächsten Woche zurückhalten.
 {% endtab %}
@@ -104,33 +104,31 @@ Wenn Sie Ihrem Canvas eine Verzögerungskomponente hinzufügen und es keine weit
 
 ### Personalisierte Verzögerungen
 
-{% alert important %}
-Personalisierte Verzögerungen und erweiterte Verzögerungen sind bereits verfügbar. Wenden Sie sich an Ihren Braze-Konto Manager:in, wenn Sie an der Teilnahme an diesem frühen Zugang interessiert sind.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='The personalized delays and extended delays feature' %}
 
-Wählen Sie die Option **Verzögerung personalisieren** aus, um eine personalisierte Verzögerung für Ihre Nutzer:innen einzurichten. Sie können dies mit einem [Kontextschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) verwenden, um die Kontextvariable auszuwählen, um die Sie verzögern möchten. Dadurch wird die in dem ausgewählten Attribut oder der Eigenschaft eingestellte Tageszeit außer Kraft gesetzt. Dies ist nützlich, wenn Sie einen Versatz in Tagen oder Wochen anwenden und die Nutzer:innen zu einem bestimmten Zeitpunkt nach vorne gehen sollen. Die Zeitzone stammt aus dem Attribut oder der Eigenschaft oder verwendet den Fallback, wenn keiner verfügbar ist. 
+Wählen Sie die Option **Verzögerung personalisieren** aus, um eine personalisierte Verzögerung für Ihre Nutzer:innen einzurichten. Sie können dies mit einem [Kontextschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) verwenden, um die Kontextvariable auszuwählen, um die Sie verzögern möchten. Dadurch wird die im ausgewählten Attribut oder in der ausgewählten Eigenschaft festgelegte Tageszeit überschrieben. Dies ist nützlich, wenn Sie einen Versatz in Tagen oder Wochen anwenden und möchten, dass Nutzer:innen zu einem bestimmten Zeitpunkt fortfahren. Die Zeitzone wird aus dem Attribut oder der Eigenschaft abgeleitet oder, falls keine verfügbar ist, wird der Fallback verwendet. 
 
-#### Zeitzonenverhalten für "zu einer bestimmten Zeit"
+#### Zeitzonenverhalten für „zu einer bestimmten Zeit“
 
-Wenn Sie personalisierte Verzögerungen mit der Option **zu einer bestimmten Zeit** konfigurieren, hängt das Zeitzonenverhalten vom Datentyp Ihres Attributs oder Ihrer Kontextvariablen ab:
+Bei der Konfiguration personalisierter Verzögerungen mit der Option **„Zu einer bestimmten Zeit**“ hängt das Verhalten der Zeitzone vom Datentyp Ihres Attributs oder Ihrer Kontextvariablen ab:
 
-- **String-Datentyp mit Zeitzone:** Wenn es sich bei dem Attribut oder der Kontextvariablen um einen String-Datentyp handelt, der Zeitzoneninformationen enthält, entspricht sie der im String angegebenen Zeitzone. Zum Beispiel verwendet `2025-06-10T10:00:00-08:00` UTC-8.
-- **String-Datentyp ohne Zeitzone:** Wenn es sich bei dem Attribut oder der Kontextvariablen um einen String-Datentyp ohne Zeitzoneninformationen handelt, entspricht er der Fallback-Zeitzone. Zum Beispiel verwendet `2025-06-10` die Fallback-Zeitzone.
-- **Typ der Zeitdaten:** Wenn es sich bei dem Attribut oder der Kontextvariablen um einen Zeitdatentyp handelt, entspricht er der UTC. Das liegt daran, dass der Datentyp "Zeit" immer in UTC konvertiert wird, wenn er in der Datenbank gespeichert wird. Daher referenziert "zu einer bestimmten Zeit" immer UTC, wenn die Variable auf den Datentyp "Zeit" gesetzt ist. Zum Beispiel verwendet `2025-06-10T10:00:00-08:00` UTC+0.
+- **String-Datentyp mit Zeitzone:** Wenn das Attribut oder die Kontextvariable ein String-Datentyp ist, der Zeitzoneninformationen enthält, entspricht es der im String angegebenen Zeitzone. Beispielsweise wird UTC-8 verwendet`2025-06-10T10:00:00-08:00`.
+- **String-Datentyp ohne Zeitzone:** Wenn das Attribut oder die Kontextvariable ein String-Datentyp ohne Zeitzoneninformationen ist, entspricht es der Fallback-Zeitzone. Beispielsweise wird die Fallback-Zeitzone verwendet`2025-06-10`.
+- **Datentyp „Zeit“:** Wenn das Attribut oder die Kontextvariable ein Zeitdatentyp ist, entspricht es UTC. Dies liegt daran, dass der Datentyp „Zeit“ beim Speichern in der Datenbank immer in UTC konvertiert wird, sodass „zu einer bestimmten Zeit“ immer UTC referenziert, wenn die Variable auf den Datentyp „Zeit“ gesetzt ist. Beispielsweise wird UTC+0 verwendet`2025-06-10T10:00:00-08:00`.
 
 {% alert note %}
-Es ist möglich, dass ein angepasstes Attribut oder eine Kontextvariable weder eine bestimmte Zeit noch eine Zeitzone hat, wenn es sich um einen String-Datentyp handelt. Wenn es sich um einen Datentyp mit Zeitangaben handelt, müssen Sie die Uhrzeit und die Zeitzone angeben. Handelt es sich bei dem angepassten Attribut oder der Kontextvariablen jedoch um einen "irrelevanten" String (wie "product_name"), ), verlässt der Nutzer:innen den Canvas.
+Es ist möglich, dass ein benutzerdefiniertes Attribut oder eine Kontextvariable weder eine bestimmte Zeit noch eine Zeitzone hat, wenn es sich um einen String-Datentyp handelt. Wenn es sich um einen Zeitdatentyp handelt, müssen Sie die Uhrzeit und die Zeitzone angeben. Wenn das angepasste Attribut oder die Kontextvariable jedoch eine „irrelevante“ Zeichenfolge ist (z. B. wird"product_name"), der Nutzer:in Canvas verlassen.
 {% endalert %}
 
 #### Anwendungsfall
 
 Nehmen wir an, Sie möchten Ihre Kund:innen daran erinnern, in 30 Tagen Zahnpasta zu kaufen. Mit einer Kombination aus einem Kontextschritt und einem Verzögerungsschritt können Sie diese Kontextvariable auswählen, um die verzögert werden soll. In diesem Fall würde Ihr Schritt Kontext die folgenden Felder enthalten:
 
-- **Name der Kontextvariable:** product_reminder_interval
+- **Kontextvariablenname:** product_reminder_interval
 - **Daten-Typ:** Uhrzeit
 - **Wert:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
 
-![Die "product_reminder_interval" und ihr Wert.]({% image_buster /assets/img/context_step1.png %})
+![Das"product_reminder_interval"und sein Wert.]({% image_buster /assets/img/context_step1.png %})
 
 Da Sie Ihre Kund:in in 30 Tagen erinnern möchten, wählen Sie als nächstes **Bis zu einem bestimmten Tag** als Verzögerungsoption aus und wählen **Verzögerung personalisieren**, um die Informationen aus Ihrem Schritt Kontext zu verwenden. Das bedeutet, dass Ihre Nutzer:in so lange verzögert werden, bis die ausgewählte Kontextvariable ausgewählt ist.
 

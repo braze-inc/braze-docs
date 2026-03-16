@@ -70,7 +70,7 @@ Feel free to respond directly to this number!
 
 #### Etapa 2.2: Agendar a entrega
 
-Para o tipo de entrega, selecione **Entrega Acionada por API**, em seguida, copie o ID da campanha, que é usado nas próximas etapas.
+Para o tipo de entrega, selecione **Entrega Acionada por API**, em seguida, copie o ID da campanha, que é usado nos próximos passos.
 
 ![Entrega disparada por API]({% image_buster /assets/img/zendesk/instant_chat/chat4.png %}){: style="max-width:70%;"}
 

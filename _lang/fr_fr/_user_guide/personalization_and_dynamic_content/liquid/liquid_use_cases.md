@@ -73,7 +73,7 @@ Ce scénario d’utilisation présente comment trouver l’anniversaire d’un u
 {% raw %}
 ```liquid
 {% assign this_week = 'now' | date: '%W' %}
-{% assign birthday_week = ${date_of_birth}  | date: '%W' %}
+{% assign birthday_week = {{${date_of_birth}}} | date: '%W' %}
 {% assign last_week = {{this_week}} | minus: 1 %}
 {% assign next_week = {{this_week}} | plus: 1 %}
 {% assign birthday_week_conversion = {{birthday_week}} | plus: 0 %}
@@ -186,7 +186,7 @@ Ce scénario d’utilisation calcule la dernière ouverture de l’application p
 
 {% raw %}
 ```liquid
-{% assign last_used_date = {{${last_used_app_date}} | date: "%s" %}
+{% assign last_used_date = {{${last_used_app_date}}} | date: "%s" %}
 {% assign now = 'now' | date: "%s" %}
 {% assign difference_in_days = {{now}} | minus: {{last_used_date}} | divided_by: 86400 %}
 {% if {{difference_in_days}} < 3 %}
@@ -203,7 +203,7 @@ Ce cas d'utilisation calcule depuis combien de temps un utilisateur a utilisé v
 
 {% raw %}
 ```liquid
-{% assign last_used_date = {{${last_used_app_date}} | date: "%s" %}
+{% assign last_used_date = {{${last_used_app_date}}} | date: "%s" %}
 {% assign now = 'now' | date: "%s" %}
 {% assign difference_in_days = {{now}} | minus: {{last_used_date}} | divided_by: 86400 %}
 {% if {{difference_in_days}} < 3 %}
@@ -283,7 +283,7 @@ Ce scénario d’utilisation capture différentes options d’expédition, calcu
 {% assign difference_e = express_shipping_end | minus: today %}
 {% assign difference_e_days = difference_e | divided_by: 86400.00 | round %}
 {% assign difference_o = overnight_shipping_end | minus: today %}
-{% assign difference_o_days = difference | divided_by: 86400.00 | round %}
+{% assign difference_o_days = difference_o | divided_by: 86400.00 | round %}
 
 {% if today >= standard_shipping_start and today <= standard_shipping_end %}
 {% if difference_s_days == 0 %}
@@ -544,7 +544,7 @@ Attribut personnalisé
 
 - [Personnaliser un message en fonction d'attributs personnalisés](#attribute-matching)
 - [Soustraire deux attributs personnalisés pour afficher la différence sous la forme d'une valeur monétaire](#attribute-monetary-difference)
-- [Référence le prénom d'un utilisateur si son nom complet est stocké dans le champ first_name ](#attribute-first-name)
+- [Veuillez mentionner le prénom d'un utilisateur si son nom complet est enregistré dans lefirst_namechamp.](#attribute-first-name)
 
 ### Personnaliser un message en fonction des attributs personnalisés correspondants {#attribute-matching}
 
@@ -657,7 +657,7 @@ Ce scénario d’utilisation capture une liste des catégories achetées par un 
 ```liquid
 {% assign category = {{custom_attribute.${categories_purchased}}} %}
 {% assign uniq_cat = {{category | uniq }} %}
-{% if {{uniq_cat | size}} == 1%}
+{% if {{uniq_cat | size}} == 1 %}
 {{uniq_cat}}
 {% else %}
 {% abort_message("Purchase category doesn't exist") %}
@@ -745,27 +745,27 @@ Ce scénario d’utilisation affiche la date, le mois et l’année en cours, av
 
 {% if {{month}} == 'January' %}
 {{day}} Januari {{year}}
-{% elsif {{month)) == 'February' %}
+{% elsif {{month}} == 'February' %}
 {{day}} Februari {{year}}
-{% elsif {{month)) == 'March' %}
+{% elsif {{month}} == 'March' %}
 {{day}} Mars {{year}}
-{% elsif {{month)) == 'April' %}
+{% elsif {{month}} == 'April' %}
 {{day}} April {{year}}
-{% elsif {{month)) == 'May' %}
+{% elsif {{month}} == 'May' %}
 {{day}} Maj {{year}}
-{% elsif {{month)) == 'June' %}
+{% elsif {{month}} == 'June' %}
 {{day}} Juni {{year}}
-{% elsif {{month)) == 'July' %}
+{% elsif {{month}} == 'July' %}
 {{day}} Juli {{year}}
-{% elsif {{month)) == 'August' %}
+{% elsif {{month}} == 'August' %}
 {{day}} Augusti {{year}}
-{% elsif {{month)) == 'September' %}
+{% elsif {{month}} == 'September' %}
 {{day}} September {{year}}
-{% elsif {{month)) == 'October' %}
+{% elsif {{month}} == 'October' %}
 {{day}} Oktober {{year}}
-{% elsif {{month)) == 'November' %}
+{% elsif {{month}} == 'November' %}
 {{day}} November {{year}}
-{% elsif {{month)) == 'December' %}
+{% elsif {{month}} == 'December' %}
 {{day}} December {{year}}
 {% endif %}
 ```
@@ -1049,7 +1049,7 @@ The following step checks if the time_to_reminder is less than seven days away b
 Users are scheduled to enter the journey on day 2.
 {% endcomment %}
 
-{% else {{time_to_reminder}} < 604799 and {{time_to_reminder}} > 172860 %}
+{% elsif {{time_to_reminder}} < 604799 and {{time_to_reminder}} > 172860 %}
 {% assign time_to_first_message = reminder_start_date | plus: 172800 %}
 
 {
@@ -1146,8 +1146,8 @@ Ce scénario d’utilisation interroge la fin d’une chaîne de caractères à 
 
 {% raw %}
 ```liquid
-{% assign interest = {{custom_attribute.${Buyer Interest}} | first } %}
-{% assign marketplace = {{{{interest}} | split: "" | reverse | join: "" |  truncate: 4, ""}} %}
+{% assign interest = {{custom_attribute.${Buyer Interest}}} | first %}
+{% assign marketplace = interest | split: "" | reverse | join: "" | truncate: 4, "" %}
 {% if {{marketplace}} == '3243' %}
 
 Your last marketplace search was on {{custom_attribute.${Last marketplace buyer interest} | date: '%d.%m.%Y'}}. Check out all of our new offers.
@@ -1310,7 +1310,7 @@ Pour  les canaux de notifications push et de message in-app, vous pouvez spécif
 
 {% raw %}
 ```liquid
-{% if {targeted_device.${carrier}} contains "verizon" or {targeted_device.${carrier}} contains "Verizon" %}
+{% if {{targeted_device.${carrier}}} contains "verizon" or {{targeted_device.${carrier}}} contains "Verizon" %}
 
 This is a message for Verizon users!
 
@@ -1330,11 +1330,11 @@ This is a message for Verizon users!
 SMS
 {% endapitags %}
 
-- [Répondre par différents messages en fonction du mot-clé du SMS entrant.](#sms-keyword-response)
+- [Répondez avec différents messages en fonction du mot-clé du SMS entrant.](#sms-keyword-response)
 
-### Répondre par différents messages en fonction du mot-clé du SMS entrant. {#sms-keyword-response}
+### Répondez avec différents messages en fonction du mot-clé du SMS entrant. {#sms-keyword-response}
 
-Ce cas d'utilisation intègre le traitement dynamique des mots-clés SMS pour répondre à des messages entrants spécifiques avec des envois de messages différents. Par exemple, vous pouvez envoyer des réponses différentes lorsque quelqu'un envoie un message "START" ou "JOIN".
+Ce cas d'utilisation intègre le traitement dynamique des mots-clés SMS afin de répondre à des messages entrants spécifiques avec différents messages. Par exemple, vous pouvez envoyer des réponses différentes lorsque quelqu'un envoie « START » ou « JOIN » par SMS.
 
 {% raw %}
 ```liquid
@@ -1362,6 +1362,7 @@ Thanks for joining our SMS program!
 Fuseau horaire
 {% endapitags %}
 
+- [Modèle dans le fuseau horaire de l'utilisateur](#users-time-zone)
 - [Personnaliser un message en fonction du fuseau horaire de l'utilisateur](#personalize-timezone)
 - [Ajouter le fuseau horaire CST à un attribut personnalisé](#time-append-cst)
 - [Insérer un horodatage](#time-insert-timestamp)
@@ -1369,6 +1370,37 @@ Fuseau horaire
 - [Envoyer une campagne de messages in-app récurrente dans une fenêtre de temps dans le fuseau horaire local d’un utilisateur](#time-reocurring-iam-window)
 - [Envoyez des messages différents en semaine et le week-end dans le fuseau horaire local de l'utilisateur.](#time-weekdays-vs-weekends)
 - [Envoyer des messages différents en fonction de l'heure de la journée dans le fuseau horaire local de l'utilisateur.](#time-of-day)
+
+### Modèle dans le fuseau horaire de l'utilisateur {#users-time-zone}
+
+Par défaut, les dates et heures dans Liquid sont affichées en temps universel coordonné (UTC). Pour afficher les dates et heures dans le fuseau horaire local de l'utilisateur, veuillez utiliser le`time_zone`filtre avec le`date`filtre.
+
+#### Définir la date et l'heure locales
+
+Pour attribuer une variable qui reflète la date et l'heure actuelles dans le fuseau horaire local de l'utilisateur, veuillez utiliser le format suivant :
+
+{% raw %}
+```liquid
+{% assign local_date_time = 'now' | time_zone:{{${time_zone}}} | date: '%B %e, %Y' %}
+{{local_date_time}}
+```
+{% endraw %}
+
+- `now` : Cette fonction récupère la date et l'heure actuelles en UTC.
+- `time_zone` : Cela permet de récupérer le fuseau horaire local de l'utilisateur à partir de l'attribut par défaut à l'aide de l'étiquette{% raw %}`{{${time_zone}}}`{% endraw %}de personnalisation.
+- `date` : Ceci permet de formater la date et l'heure locales de l'utilisateur conformément à vos spécifications. Dans l'exemple précédent, le système affiche une chaîne de caractères formatée comme suit : « 26 février 2026 ». Pour plus d'options de mise en forme, veuillez consulter [strftime.net](strftime.net).
+
+#### Appliquez le fuseau horaire de l'utilisateur avec des attributs personnalisés.
+
+Vous pouvez appliquer le`time_zone`filtre aux attributs personnalisés, comme suit :
+
+{% raw %}
+```liquid
+{{custom_attribute.${date_time_attribute} | time_zone: {{${time_zone}}} | date: '%a, %b %e, %Y'}}
+```
+{% endraw %}
+
+Cela affiche le`date_time_attribute`format sous la forme du jour de la semaine abrégé, suivi du mois abrégé, du jour et de l'année à quatre chiffres.
 
 ### Personnaliser un message selon le fuseau horaire d’un utilisateur {#personalize-timezone}
 
@@ -1378,7 +1410,7 @@ Ce cas d’utilisation affiche des messages différents selon le fuseau horaire 
 ```liquid
 {% if {{${time_zone}}} == 'xx' %}
 Message for time zone xx.
-{% elsif {{$time_zone}}} == 'yy' %}
+{% elsif {{${time_zone}}} == 'yy' %}
 Message for time zone yy.
 {% else %}
 {% abort_message("Invalid time zone") %}
@@ -1548,7 +1580,7 @@ Vous pouvez également utiliser la méthode suivante pour obtenir le même résu
 ```liquid
 {% assign last_month_name = 'now' | date: "%Y-%m-01" | date: '%s' | minus: 1 | date: "%B" %}
 
-Here's an overview of what your spending looked like in {{month}}.
+Here's an overview of what your spending looked like in {{last_month_name}}.
 ```
 {% endraw %}
 
@@ -1614,10 +1646,10 @@ Par exemple, vous pouvez envoyer une enquête à vos utilisateurs le dernier mer
 
 {% comment %}Assign the correct number of days if the current month is February, taking into account leap years.{% endcomment %}
 
-{% assign leap_year_remainder = {{current_year | modulo: 4 }} != "0" %}
+{% assign leap_year_remainder = current_year | modulo: 4 %}
 {% if leap_year_remainder == 0 and current_month == "Feb" %}
 {% assign last_day_of_month = 29 %}
-{% elsif leap_year_remainder != "0" and current_month == "Feb" %}
+{% elsif current_month == "Feb" %}
 {% assign last_day_of_month = 28 %}
 {% endif %}
 

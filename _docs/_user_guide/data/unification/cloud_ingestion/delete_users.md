@@ -25,7 +25,7 @@ Source tables for user deletes should include one or more user identifier types 
 
 ### `UPDATED_AT`
 
-Add an `UPDATED_AT` timestamp to your source table. This timestamp indicates the time that this row was updated or added to the table. Braze will only sync rows that have been added or updated since the last sync.
+Add an `UPDATED_AT` timestamp to your source table. This timestamp indicates the time that this row was updated or added to the table. Braze syncs rows where `UPDATED_AT` is later than the last synced value. Rows at the exact boundary timestamp may be re-synced if new rows share that same timestamp.
 
 ### User identifier columns
 
@@ -40,7 +40,7 @@ Do not include a `PAYLOAD` column in your table for user removal. To prevent acc
 
 {% tabs %}
 {% tab Snowflake %}
-```json
+```sql
 CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
      UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT SYSDATE(),
      --at least one of external_id, alias_name and alias_label, or braze_id is required  
@@ -54,7 +54,7 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 ```
 {% endtab %}
 {% tab Redshift %}
-```json
+```sql
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
    updated_at timestamptz default sysdate,
    --at least one of external_id, alias_name and alias_label, or braze_id is required
@@ -92,7 +92,7 @@ Create a table with the following fields:
 | `BRAZE_ID`| STRING | NULLABLE |
 {% endtab %}
 {% tab Microsoft Fabric %}
-```json
+```sql
 CREATE OR ALTER TABLE [warehouse].[schema].[users_deletes] 
 (
   UPDATED_AT DATETIME2(6) NOT NULL,

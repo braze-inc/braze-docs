@@ -21,10 +21,10 @@ Web push es otra forma estupenda de interacción con los usuarios de tu aplicaci
 Las notificaciones web push ofrecen actualizaciones urgentes y prácticas que impulsan conversiones rápidas. Con web push, puedes:
 
 - Activar mensajes justo cuando cambien datos importantes, como una bajada de precios
-- Haz que la gente vuelva a tu sitio web con botones de acción claros
+- Atrae a los usuarios a tu sitio web con botones de acción claros.
 - Personalice su push con información sobre productos y clientes para que su mensaje sea relevante
 
-Web push funciona de la misma manera que las notificaciones push de las aplicaciones en tu teléfono. Para más información sobre cómo componer una notificación push web, consulta [Crear una notificación push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
+Web push funciona de la misma manera que las notificaciones push de las aplicaciones en tu teléfono. Para obtener más información sobre cómo redactar una notificación push web, consulta [Crear una notificación push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
 
 ![Ejemplo de push web con el mismo mensaje push mostrado en un portátil y en un teléfono.]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
 
@@ -54,7 +54,9 @@ Considere la posibilidad de utilizar un mensaje en el navegador para incitar a l
 
 ## Navegadores compatibles
 
-Los siguientes navegadores admiten notificaciones web push. Sin embargo, las ventanas de navegación privada no admiten actualmente la notificación push web.
+Los siguientes navegadores admiten notificaciones web push.
+
+{% multi_lang_include alerts/important_alerts.md alert='Web push private browsing' %}
 
 - Chrome (y Chrome para móviles Android)
 - Safari

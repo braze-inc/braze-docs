@@ -46,6 +46,8 @@ If you delete the default **Recipients** value of **All Dashboard Users** and wa
 | Scheduled Campaign Finished Sending | Notifies recipients when a scheduled campaign has finished sending. | Email, Webhook |
 | Webhook Errors | Notifies recipients when a webhook endpoint has errors. | Email |
 | Weekly Analytics Report | Sends a summary of the past week's workspace activity to recipients every Monday. Recipients receive a summary for each workspace that they belong to. | Email |
+| Daily Canvas/Campaign Entry Volume Limits | Sends notifications each time a send limit is reached. | Email |
+| Agents Console Error | Notifies recipients when an [Agent Console agent]({{site.baseurl}}/user_guide/brazeai/agents) has met its execution limit with the current functionality. | Email |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Weekly analytics reporting

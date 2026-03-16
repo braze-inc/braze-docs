@@ -14,7 +14,7 @@ page_order: 4
 
 ## Seguimiento de eventos de Shopify
 
-La integración de Shopify utiliza [eventos recomendados de comercio electrónico]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) para captar comportamientos clave de compra. Para ver ejemplos de aplicación y estrategias de marketing utilizando estos eventos, consulta los [casos de uso del comercio electrónico]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/).
+La integración con Shopify utiliza [eventos recomendados de comercio electrónico]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) para captar comportamientos clave de compra. Para ver ejemplos de aplicación y estrategias de marketing utilizando estos eventos, consulta los [casos de uso del comercio electrónico]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/).
 
 {% multi_lang_include alerts/important_alerts.md alert='Shopify customer create' %}
 
@@ -317,7 +317,7 @@ La integración de Shopify utiliza [eventos recomendados de comercio electrónic
        "price": "80.00",
        "fulfillment_status": null
      }
-   ],
+   ]
  }
 }
 ```
@@ -391,9 +391,9 @@ La integración de Shopify utiliza [eventos recomendados de comercio electrónic
 {% subtab Account login %}
 ```json
 {
-	name: "shopify_account_login",
-	properties: {
-	source: "braze-mock-storefront.myshopify.com"
+	"name": "shopify_account_login",
+	"properties": {
+	"source": "braze-mock-storefront.myshopify.com"
   }
 }
 ```
@@ -510,7 +510,7 @@ A continuación, puedes añadir las siguientes etiquetas de Liquid en tu mensaje
 **Casos de uso**: Confirmación de pedidos, reorientación posterior a la compra, upsells o ventas cruzadas 
 
 {% raw %}
-| Variable | Liquid plantilla |
+| Variable Plantilla Liquid
 \|-------------------------|-----------------------------------------------------|
 | cart_id | `{{event_properties.${cart_id}}}` |
 | moneda | `{{event_properties.${currency}}}` |
@@ -578,7 +578,7 @@ El webhook de pago completado de Shopify no contiene URL de productos ni URL de 
 | Envíos de cumplimiento | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | Cumplimiento SKU | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
 | Título de Cumplimiento | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
-| Proveedor de cumplimiento | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Proveedor de cumplimiento | `{{event_properties.${fulfillments}[0].line_items[0].vendor}}` |
 | ID de variante | `{{event_properties.${line_items}[0].variant_id}}` |
 | Título de la variante | `{{event_properties.${line_items}[0].variant_title}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
@@ -628,7 +628,7 @@ El webhook de pago completado de Shopify no contiene URL de productos ni URL de 
 | Envíos de cumplimiento | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | Cumplimiento SKU | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
 | Título de Cumplimiento | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
-| Proveedor de cumplimiento | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Proveedor de cumplimiento | `{{event_properties.${fulfillments}[0].line_items[0].vendor}}` |
 | ID de variante | `{{event_properties.${line_items}[0].variant_id}}` |
 | Título de la variante | `{{event_properties.${line_items}[0].variant_title}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
@@ -842,7 +842,7 @@ Si planeas realizar la integración con un ID externo personalizado (ya sea para
 
 2. Después de completar la configuración de tu integración, Braze comenzará la sincronización inicial de datos. Puedes controlar el progreso en la pestaña **Datos de Shopify** de tu configuración de integración. 
 
-![La página de configuración de la integración de Shopify con una rueda giratoria que muestra que los eventos se están sincronizando activamente.]({% image_buster /assets/img/Shopify/historical_data_backfill_syncing.png %})
+![La página de configuración de la integración de Shopify con un indicador que muestra que los eventos se están sincronizando activamente.]({% image_buster /assets/img/Shopify/historical_data_backfill_syncing.png %})
 
 ### Datos sincronizados 
 

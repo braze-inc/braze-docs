@@ -42,7 +42,7 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 
 1. In the **Webhook URL** field, enter the Movable Ink endpoint URL.
 
-![Braze에서 웹훅 작성기의 작성 탭에서 Movable Ink 엔드포인트 URL과 요청 본문을 JSON 키-값 쌍으로 설정합니다.]({% image_buster /assets/img/movable_ink/cd_api_webhook_url.png %}){: style="max-width:75%" }
+![Braze 간 웹훅 작성기의 작성 탭에서 Movable Ink 엔드포인트 URL과 요청 본문을 JSON 키-값 쌍으로 설정합니다.]({% image_buster /assets/img/movable_ink/cd_api_webhook_url.png %}){: style="max-width:75%" }
 
 {:start="2"}
 2\. Select the **Settings** tab.

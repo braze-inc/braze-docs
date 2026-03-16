@@ -40,7 +40,7 @@ La plupart des lois sur la confidentialité définissent trois principales parti
 
 En ce qui concerne les services de Braze :
 
-- Les personnes concernées sont, par exemple, les utilisateurs finaux de votre application client (e.g., vos clients) ou vos employés qui sont des utilisateurs de tableau de bord dans votre instance des services Braze.
+- Les personnes concernées sont, par exemple, les utilisateurs finaux de votre application client (e.g., vos clients) ou vos employés qui sont des utilisateurs de l'entreprise dans votre instance des services Braze.
 - Vous, le client de Braze, êtes le responsable du traitement des données qui décide comment et pourquoi les Données à caractère personnel des personnes concernées seront collectées et traitées dans le cadre des Services de Braze.
 - Braze est un sous-traitant de données qui traite les données à caractère personnel dans les services de Braze en votre nom et conformément aux instructions que nous recevons de votre part.
 

@@ -3,25 +3,16 @@ nav_title: Deploy agents
 article_title: Deploy custom agents
 description: "Learn how to put custom agents to use in Braze after you create them."
 alias: /deploying-agents/
+page_order: 2
 ---
 
 # Deploy custom agents
 
-> Learn how to put custom agents to use in Canvas steps or catalog fields after you create them. For an introduction, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents/). 
-
-{% alert important %}
-Braze Agents are currently in beta. For help getting started, contact your customer success manager.
-{% endalert %}
-
-## Agent usage
-
-In the **Agent Usage** section of your agent, you can reference and navigate to where the agent is being actively used in catalogs and Canvases.
-
-![Agent Usage section that shows two active agents and one inactive agent for Canvases.]( {% image_buster /assets/img/ai_agent/agent_usage.png %} )
+> Learn how to put custom agents to use in Canvas steps or catalog fields after you create them. For an introduction, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents/).
 
 ## Agents in Canvas  
 
-You can use agents as steps in a journey to personalize messages or guide decisioning in real time. For detailed setup steps, refer to [Agent Step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/).
+You can use agents as steps in a journey to personalize messages or guide decisioning in real time. For detailed setup steps, refer to [Agent step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/).
 
 ### Use cases
 
@@ -43,7 +34,7 @@ You can apply an agent to catalog fields so it automatically generates or calcul
 
 | Use case | Description |
 | --- | --- |
-| Generate product descriptions | Automatically create short marketing copy for new catalog entries, for example by generating a catchy description from structured product data like name, category, and features. |
+| Generate product descriptions | Automatically create short marketing copy for new catalog entries, for example, by generating a catchy description from structured product data like name, category, and features. |
 | Enrich product attributes | Fill in missing values such as color family, style, or season based on a product name and details. For example, if a product name is “Laguna Polarized Sunglasses,” the agent could assign the style as “sport” and the color family as “blue.” |
 | Calculate derived fields | Use existing fields to generate new data, such as a “fit score” based on attributes or a “popularity tag” from sales and review counts. |
 | Categorize or tag items | Assign tags for recommendation logic so personalization models can segment products more effectively. For example, tag products as “outdoor,” “festival-ready,” or “premium.” |
@@ -78,12 +69,12 @@ Circular references in catalogs aren't supported, meaning the following scenario
 ![The option to select "Apply AI agent" for a catalog field.]({% image_buster /assets/img/ai_agent/edit_agent_column.png %}){: style="max-width:80%;"}
 
 {% alert note %}
-During the beta period, catalog agents are limited to processing input values up to 25 KB per row.
+Catalog agents are limited to processing input values up to 25 KB per row.
 {% endalert %}
 
 #### Define response fields
 
-If your agent uses [fields]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#fields) as the output format, you can select the corresponding field from the agent for **Response Field** to use in the catalog field. 
+If your agent uses [fields]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/?tab=fields#advanced-schemas) as the output format, you can select the corresponding field from the agent for **Response Field** to use in the catalog field. 
 
 Let's say you have an agent that adds product descriptions to a catalog with the following fields to structure the output format:
 
@@ -97,10 +88,41 @@ You can add a field named **product_description** to a catalog and select **desc
 
 ![A field "product_description" with the "Descriptor" agent applied. The "description" output is selected as the response field.]({% image_buster /assets/img/ai_agent/response_field.png %}){: style="max-width:80%;"}
 
-You can also manually override the agent-generated cell by selecting **Edit Item** and updating the agent-generated description with your edits. To revert your edits back to the agent-generated description, select the refresh symbol in the cell.
+You can also manually override the agent-generated cell by selecting **Edit Item** and updating the agent-generated description with your edits. To revert to the agent-generated description, select the refresh symbol in the cell.
 
 ### Error handling in catalogs  
 
 - Failed catalog invocations do not retry.
 - If the API call to the foundational model provider returns any error, such as an invalid API key error or a rate limit error, the field value does not update.
 - You can review the agent's logs for details on failed runs.
+
+## Monitor your agent
+
+In the **Usage** section of your agent, you can reference and navigate to where the agent is being actively used in catalogs and Canvases.
+
+![Agent Usage section that shows two active agents and one inactive agent for Canvases.]({% image_buster /assets/img/ai_agent/agent_usage.png %})
+
+In the **Logs** section of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. You can filter by information such as the date range, outcome (success or failure), or calling location. You can also select **Export CSV** to export the logs shown on the current page only.
+
+{% alert tip %}
+You can also monitor daily invocation limit errors at the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
+{% endalert %}
+
+![Logs for an agent AI Sentiment Score.]({% image_buster /assets/img/ai_agent/agent_logs.png %})
+
+Select **View** for a specific agent call to see the input, output, and user ID.
+
+![The details panel for an agent Random Sports Assignment that shows the input prompt, output response, and an associated user ID.]({% image_buster /assets/img/ai_agent/agent_logs_view.png %})
+
+### Use Currents
+
+You can also use these Currents events to access the Kafka record schemas:
+
+- Agent executed events
+- Tool invocation events
+
+Refer to the [Message engagement events glossary]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) for more details.
+
+## Related articles  
+
+- [Reference for agents]({{site.baseurl}}/user_guide/brazeai/agents/reference/)

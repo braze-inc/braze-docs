@@ -1,6 +1,7 @@
 ---
 nav_title: Braze 지원
 article_title: Support
+page_order: 7
 description: "이 페이지에서는 Braze 제품 피드백을 제출할 수 있는 Braze 지원 포털을 찾을 수 있습니다. 이 페이지는 Braze 고객만 액세스할 수 있습니다."
 alias: /braze_support/
 page_type: reference
@@ -15,7 +16,7 @@ Braze 지원팀에 문의하려면 Braze 대시보드로 이동하세요. 대시
 
 !["지원" 드롭다운에서 도움을 받을 수 있는 옵션.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
-Braze 권한 및 지정된 지원 연락처 여부에 따라, 케이스를 제출하고 추적할 수 있는 Braze 지원 포털 또는 표준 지원 양식으로 안내됩니다. Braze 지원 연락처인지 확실하지 않은 경우, 회사의 Braze 관리자, Braze 성공 관리자 또는 계정 소유자에게 문의하십시오.
+Braze 권한 및 지정된 지원 연락처 여부에 따라, 케이스를 제출하고 추적할 수 있는 Braze 지원 포털 또는 표준 지원 양식으로 안내됩니다. Braze 지원 연락처인지 확실하지 않은 경우, 회사의 Braze 관리자, Braze 성공 매니저 또는 계정 소유자에게 문의하십시오.
 
 ## 지정된 지원 연락처 추가하기
 

@@ -1,6 +1,10 @@
 {% multi_lang_include developer_guide/prerequisites/swift.md %}
 
-## Manuseio de deep linking
+{% alert tip %}
+Para ajuda na escolha entre links profundos de esquema personalizado, links universais e "Abrir URL da Web Dentro do App", veja [guia de links profundos para iOS]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide). Para solução de problemas, veja [solução de problemas de links profundos]({{site.baseurl}}/developer_guide/push_notifications/deep_linking_troubleshooting).
+{% endalert %}
+
+## Tratamento de links profundos
 
 ### Etapa 1: Registrar um esquema {#register-a-scheme}
 
@@ -29,7 +33,7 @@ Alternativamente, se você deseja editar seu arquivo`Info.plist` diretamente, si
 </array>
 ```
 
-### Etapa 2: Adicionar uma lista de permissões de esquema
+### Etapa 2: Adicionar uma lista de permissão de esquema
 
 Você deve declarar os esquemas de URL que deseja passar para `canOpenURL(_:)` adicionando a chave `LSApplicationQueriesSchemes` ao arquivo Info.plist do seu app. Tentar chamar esquemas fora desta lista de permissão fará com que o sistema registre um erro nos logs do dispositivo, e o deep link não abrirá. Um exemplo desse erro é o seguinte:
 
@@ -83,22 +87,22 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 {% endtab %}
 {% endtabs %}
 
-## App Transport Security (ATS)
+## Segurança de Transporte de Aplicativos (ATS)
 
-Conforme definido pela [Apple](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14), "o App Transport Security é um recurso que melhora a segurança das conexões entre um aplicativo e os serviços da Web. O recurso consiste em requisitos de conexão padrão que estão em conformidade com as melhores práticas para conexões seguras. Os apps podem substituir esse comportamento padrão e desativar a segurança de transporte."
+Conforme definido por [Apple](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14), "A Segurança de Transporte de Aplicativos é um recurso que melhora a segurança das conexões entre um app e serviços web." O recurso consiste em requisitos de conexão padrão que estão em conformidade com as melhores práticas para conexões seguras. Os apps podem substituir esse comportamento padrão e desativar a segurança de transporte."
 
 O ATS é aplicado por padrão. Requer que todas as conexões usem HTTPS e sejam criptografadas usando TLS 1.2 com sigilo direto. Consulte [Requisitos para Conexão Usando ATS](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW35) para saber mais. Todas as imagens servidas pela Braze para dispositivos finais são gerenciadas por uma rede de entrega de conteúdo ("CDN") que suporta TLS 1.2 e é compatível com ATS.
 
-A menos que sejam especificadas como exceções no site `Info.plist` do seu aplicativo, as conexões que não seguirem esses requisitos falharão com erros semelhantes aos seguintes.
+A menos que sejam especificados como exceções na `Info.plist` do seu aplicativo, conexões que não seguem esses requisitos falharão com erros semelhantes aos seguintes.
 
-**Exemplo de erro 1:**
+**Exemplo de Erro 1:**
 
 ```bash
 CFNetwork SSLHandshake failed (-9801)
 Error Domain=NSURLErrorDomain Code=-1200 "An SSL error has occurred, and a secure connection to the server cannot be made."
 ```
 
-**Exemplo de erro 2:**
+**Exemplo de Erro 2:**
 
 ```bash
 NSURLSession/NSURLConnection HTTP load failed (kCFStreamErrorDomainSSL, -9802)
@@ -108,7 +112,7 @@ A conformidade com ATS é aplicada para links abertos dentro do app móvel (noss
 
 ### Trabalhando com ATS
 
-Você pode lidar com o ATS de uma das seguintes maneiras, mas recomendamos que você **cumpra os requisitos do ATS**.
+Você pode lidar com ATS de uma das seguintes maneiras, mas recomendamos **cumprir os requisitos do ATS**.
 
 {% tabs local %}
 {% tab Comply %}
@@ -154,7 +158,7 @@ Você pode desativar o ATS completamente. Nota que isso não é uma prática rec
 {% endtab %}
 {% endtabs %}
 
-## Decodificação de URLs
+## Decodificando URLs
 
 O SDK codifica os links em porcentagem para criar `URL`s válidos. Todos os caracteres de link que não são permitidos em um URL devidamente formado, como caracteres Unicode, serão escapados por porcentagem.
 
@@ -187,7 +191,7 @@ Para decodificar um link codificado, use a propriedade `String` [`removingPercen
 
 ## Deep linking para as configurações do app
 
-Você pode aproveitar o `UIApplicationOpenSettingsURLString` para fazer um deep link dos usuários para as configurações do seu app a partir das notificações por push e mensagens no app do Braze.
+Você pode aproveitar `UIApplicationOpenSettingsURLString` para direcionar usuários para as configurações do seu app a partir de notificações push do Braze e mensagens dentro do app.
 
 Para levar os usuários do seu app para as configurações do iOS:
 1. Primeiro, confira se o seu aplicativo está configurado para [[links profundos baseados em esquema](#swift_register-a-scheme) ou [[links universais](#swift_universal-links).
@@ -259,7 +263,7 @@ O SDK não consulta o arquivo `apple-app-site-association` de seus domínios. El
 
 ### BrazeDelegate
 
-Veja um exemplo usando `BrazeDelegate`. Para saber mais, consulte a [referência do Braze Swift SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate).
+Aqui está um exemplo usando `BrazeDelegate`. Para mais informações, veja [referência do SDK Braze Swift](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate).
 
 {% tabs %}
 {% tab swift %}

@@ -13,7 +13,7 @@ channel:
 
 # Gestionar números de teléfono desconocidos - nuevos usuarios
 
-> Puede que, después de poner en marcha los SMS, MMS y RCS con Braze, recibas mensajes de usuarios desconocidos. Los siguientes pasos describen cómo se procesan un usuario y un número no identificados.
+> Puede que después de poner en marcha los SMS, MMS y RCS con Braze, recibas mensajes de usuarios desconocidos. Los siguientes pasos describen cómo se procesan un usuario y un número no identificados.
 
 ## Flujo de trabajo Opt-in/out y palabras clave personalizadas para números desconocidos
 

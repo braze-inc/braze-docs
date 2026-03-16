@@ -21,7 +21,7 @@ Se um usuário decidir desativar o envio de e-mail para o e-mail de retransmiss�
 
 Se você usar o SendGrid como provedor de e-mail, poderá enviar e-mails para a Apple sem fazer alterações no DNS. 
 
-1. Registre no [Portal do desenvolvedor da Apple](https://developer.apple.com/)
+1. Faça o registro no [Portal do desenvolvedor da Apple](https://developer.apple.com/)
 2. Acesse a página **Certificados, Identificadores & Perfis**.
 3. Selecione **Serviços** > **Fazer login com a Apple para comunicação por e-mail**.
 4. Na seção **Fontes de e-mail**, adicione os domínios e subdomínios.

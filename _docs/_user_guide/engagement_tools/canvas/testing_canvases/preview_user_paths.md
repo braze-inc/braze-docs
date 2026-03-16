@@ -61,7 +61,7 @@ For Canvases with an action trigger like "change in custom attribute value," Bra
 
 Test users enter the preview even if they aren't eligible in real life. If they aren't eligible, you can see why they haven't met the criteria. When a test user enters the preview, we assume the test user has met the target audience criteria and performed the action trigger criteria. For example, for a Canvas that uses custom events in the entry criteria, the test user is assumed to have performed the custom event as expected in the entry criteria. However, if the same custom event is used elsewhere in the Canvas (like in the exit criteria), consider how this might impact your user path.
 
-Events, API triggers, custom attributes, and Canvas entry properties are applied based on the Canvas entry. The test run simulates the user journey without applying these elements to change the actual user profile or the flow of the Canvas. For example, during testing, when a custom attribute is used as a Canvas trigger, the trigger criteria is applied to the user's preview **as if** they had triggered the custom attribute change.
+Events, API triggers, custom attributes, and Canvas entry properties that are assumed to let a test user enter the Canvas are not updated in the actual user profile and do not persist beyond the test run. For example, during testing, when a custom attribute is used as a Canvas trigger, the trigger criteria is applied to the user's preview **as if** they had triggered the custom attribute change.
 
 ### Consideration
 
@@ -98,6 +98,10 @@ When previewing user paths, consider removing the Connected Content that alters 
 ## Webhooks
 
 Webhooks execute when test messages are sent, but not during the test run. Similar to Connected Content, consider removing webhooks that alter user profiles or data referenced in other Canvases or campaigns.
+
+## Context variables and Seed Groups
+
+For a Message step with email as the messaging channel, Seed Groups send seed copies of emails when a user reaches this step in the Canvas. These seed copies are not sent as part of the Seed Group recipients' own Canvas journeys, so Braze does not execute [Context steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) or evaluate context variables for those recipients. If your email content references context variables, Seed Group recipients receive a seed copy without that data populated. To test messages that rely on context variable data, use the **Test Canvas** preview with test sends instead of Seed Groups.
 
 ## Use case
 

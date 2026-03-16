@@ -56,9 +56,9 @@ LIMIT 10
 
 ### Feststellen, ob Sie SQL invertieren müssen
 
-Es ist zwar nicht möglich, direkt nach Nutzer:innen mit Null-Ereignissen zu suchen, aber Sie können **Invert SQL** verwenden, um diese Nutzer:innen gezielt zusammenzustellen.
+Es ist zwar nicht möglich, direkt nach Nutzer:innen mit null Ereignissen zu suchen, aber mit **Invert SQL** können Sie diese Nutzer:innen gezielt zusammenstellen.
 
-Um beispielsweise Nutzer:innen mit weniger als drei Käufen als Zielgruppe zusammenzustellen, schreiben Sie zunächst eine Abfrage, um Nutzer:innen mit drei oder mehr Käufen auszuwählen. Wählen Sie dann **SQL invertieren** aus, um Nutzer:innen mit weniger als drei Käufen (einschließlich derer mit null Käufen) als Targeting zusammenzustellen.
+Um beispielsweise Nutzer:innen mit weniger als drei Einkäufen als Zielgruppe zusammenzustellen, schreiben Sie zunächst eine Abfrage, um Nutzer:innen mit drei oder mehr Einkäufen auszuwählen. Wählen Sie dann **SQL invertieren** aus, um Nutzer:innen mit weniger als drei Käufen (einschließlich derer mit null Käufen) als Targeting zusammenzustellen.
 
 ![Segment-Erweiterung mit dem Namen "In den letzten 30 Tagen auf 1-4 E-Mails geklickt" mit der Option, SQL zu invertieren, ausgewählt.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:70%;"}
 

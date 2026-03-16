@@ -36,7 +36,7 @@ Ils sont les plus attrayants, mais aussi les plus intrusifs, car ils occupent to
 {% details  Modal %}
 Ces messages ne sont pas aussi intrusifs que ceux en plein écran, car ils permettent toujours aux utilisateurs de voir une partie de l’interface de votre application. Comme ils contiennent toujours des boutons et des images, les messages modaux peuvent constituer une option preferable aux slideups pour une campagne visuelle plus interactive. Ils sont parfaits pour le contenu de priorité moyenne, comme les mises à jour d’applications et les offres et événements non urgents.
 
-![Message modale/boîte de dialogue modale etc.]({% image_buster /assets/img_archive/braze_modal.png %}){: style="max-width:80%;"}
+![Message modale/boîte de dialogue, etc.]({% image_buster /assets/img_archive/braze_modal.png %}){: style="max-width:80%;"}
 
 **Fonctionnalités personnalisables**
 

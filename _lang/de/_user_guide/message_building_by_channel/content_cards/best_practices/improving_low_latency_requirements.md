@@ -31,7 +31,7 @@ Das bedeutet, dass die Karten zusammen mit dem geplanten Eingang sofort verfügb
 
 ## Denken Sie daran, dass der Eingang in Canvas eine Voraussetzung für den Erhalt von Karten ist.
 
-Denken Sie bei der Verwendung von Canvas daran, dass ein Nutzer:innen zunächst auf der Grundlage der von Ihnen konfigurierten Eingangskriterien in das Canvas eintreten muss und *dann* den Nachrichten-Schritt Ihrer Content-Card durchlaufen muss. Erst dann wird die Karte für Ihre App oder Website verfügbar sein. Denken Sie daran, dass die Karte erst erstellt wird, wenn der Nutzer:innen den Schritt durchläuft, und dass es zu einer Verzögerung kommen kann, wenn die Karte verfügbar ist.
+Denken Sie bei der Verwendung von Canvas daran, dass ein Nutzer:innen zunächst auf der Grundlage der von Ihnen konfigurierten Eingangskriterien in das Canvas eintreten und *dann* Ihren Nachrichten-Schritt für Content-Cards durchlaufen muss. Erst dann wird die Karte für Ihre App oder Website verfügbar sein. Denken Sie daran, dass die Karte erst erstellt wird, wenn der Nutzer:innen den Schritt durchläuft, und dass es zu einer Verzögerung kommen kann, wenn die Karte verfügbar ist.
 
 ## Aktualisieren Sie die Karten nicht übermäßig
 

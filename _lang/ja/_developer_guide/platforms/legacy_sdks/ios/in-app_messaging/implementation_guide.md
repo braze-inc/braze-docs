@@ -1,5 +1,5 @@
 ---
-nav_title: 高度な実装（オプション）
+nav_title: 高度な実装（任意）
 article_title: iOS 用アプリ内メッセージ実装ガイド (オプション)
 platform: iOS
 page_order: 6
@@ -13,7 +13,7 @@ noindex: true
 
 <br>
 {% alert important %}
-基本的なアプリ内メッセージ開発者統合ガイドをお探しですか?見つける [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/overview/).
+基本的なアプリ内メッセージ開発者統合ガイドをお探しですか?それを見つけろ [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/overview/).
 {% endalert %}
 
 # アプリ内メッセージング実装ガイド
@@ -230,7 +230,7 @@ override func beforeMoveInAppMessageViewOnScreen() {
 
 `ABKInAppMessage` オブジェクト内の `extras` ディクショナリを使用して、表示すべき正しいビューを示す `view_type` キー (存在する場合) をクエリできます。アプリ内メッセージはメッセージごとに設定されるため、カスタムとデフォルトのモーダルビューが調和して機能することに注意してください。
 
-![メッセージ作成画面で検出された2 つのキーと値のペア。最初のキーと値のペアには、"attribute_key" "Favorite Team "が設定され、2番目には"view_type" "picker "が設定されている。]({% image_buster /assets/img/iam_implementation/dashboard2.png %}){: style="max-width:65%;"}
+![メッセージ作成画面で検出された2 つのキーと値のペア。最初のキーと値のペアは「お気に入りのチーム」に設定"attribute_key"され、2番目のペアは「選択者」に設定"view_type"されている。]({% image_buster /assets/img/iam_implementation/dashboard2.png %}){: style="max-width:65%;"}
 
 {% tabs %}
 {% tab Swift %}
@@ -367,7 +367,7 @@ override func viewDidLoad() {
 
 キーと値のペアに、`attribute_key` を入力します。このキーは、ユーザーが選択した値とともに、カスタム属性としてユーザープロファイルに保存されます。カスタムビューロジックは、Braze に送信されたユーザー属性を処理する必要があります。
 
-![メッセージ作成画面で見つかった3 つのキーと値のペア。最初のキーと値のペア"attribute_key" は "プッシュタグ "として設定され、2番目の"subtitle_text" は "イネーブルメント通知も... "として設定され、3番目の"view_type" は"table_list".]({% image_buster /assets/img/iam_implementation/dashboard3.png %}として設定される){: style="max-width:65%;"}
+![メッセージ作成画面で見つかった3 つのキーと値のペア。最初のキーと値のペアは「プッシュタグ」に"attribute_key"設定される。二つ目は「通知を有効にすると…」に"subtitle_text"設定される。三つ目は"view_type"が"table_list"に設定される。]({% image_buster /assets/img/iam_implementation/dashboard3.png %}){: style="max-width:65%;"}
 
 #### アプリ内メッセージタッチのインターセプト
 ![設定とトグルの行を表示する Apple デバイス。カスタムビューはボタンを処理し、ボタンコントロールの外側でのタッチはアプリ内メッセージによって処理され、閉じられます。]({% image_buster /assets/img/iam_implementation_guide.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}

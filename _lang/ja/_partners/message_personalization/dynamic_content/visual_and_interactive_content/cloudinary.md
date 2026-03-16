@@ -9,7 +9,7 @@ search_tag: Partner
 
 # クラウディナリ
 
-> [Cloudinary](https://www.cloudinary.com?utm_source=braze_partner_page) は、"画像の管理、編集、最適化、および配信に使用される動画 プラットフォームで、s および動画をチャネルs およびカスタマージャーニーs のすべてのキャンペーンにスケールで提供します。統合され有効になっている場合、Cloudinaryのメディアマネジメントは、Braze キャンペーンおよびキャンバスのダイナミックな、文脈に応じた or 状況に即した、およびパーソナライズされたのアセット配信に役立ちます。 
+> [Cloudinary](https://www.cloudinary.com?utm_source=braze_partner_page) は、"画像の管理、編集、最適化、および配信に使用される動画 プラットフォームで、s および動画をチャネルs およびカスタマージャーニー のすべてのキャンペーンにスケールで提供します。統合され有効になっている場合、Cloudinaryのメディアマネジメントは、Braze キャンペーンおよびキャンバスのダイナミックな、文脈に応じた or 状況に即した、およびパーソナライズされたのアセット配信に役立ちます。 
 
 ## この統合について
 
@@ -147,11 +147,11 @@ Liquid タグ s をBraze キャンペーン メッセージ内のクラウディ
 
 ##### 出力URL
 
-- オーディエンス`internal`およびロケール`en`を持つユーザーsのアウトプットURL: 
+- オーディエンス`internal`およびロケール`en`を持つユーザーのアウトプットURL: 
 ```
 https://papish.cloudinary.us/image/list/f_auto,q_auto/$locale_!en!/$audience_!Internal!/fn_select:js:v1700000000:segmentedBanner.js/v1690000000/samples.json
 ```
-- オーディエンス`external`およびロケール`es`を持つユーザーsのアウトプットURL: 
+- オーディエンス`external`およびロケール`es`を持つユーザーのアウトプットURL: 
 ```
 https://papish.cloudinary.us/image/list/$locale_!es!/$audience_!External!/fn_select:js:v1700000000:segmentedBanner.js/v1690000000/samples.json
 ```

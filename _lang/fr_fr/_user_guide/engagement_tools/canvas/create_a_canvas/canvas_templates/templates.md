@@ -28,7 +28,7 @@ Tenez compte des éléments suivants lorsque vous utilisez ce modèle :
 
 - Ajouter une audience spécifique. Actuellement, les parcours d'audience sont déclenchés sur la base de "Tout achat", mais vous pouvez les adapter aux produits spécifiques que vous souhaitez cibler.
 - Ce modèle suppose que vous avez un parcours post-achat distinct, de sorte que la réalisation d'un achat amènera les utilisateurs à quitter le Canvas.
-- Complétez les détails dans l'étape de synchronisation de l'audience.
+- Complétez les détails de l'étape de synchronisation de l'audience.
 
 {% endtab %}
 {% tab Back In Stock %}
@@ -58,7 +58,7 @@ Envoyez des messages personnalisés au moment opportun pour souligner les avanta
 
 ### Utilisateur déchu
 
-Faites revenir les utilisateurs sur votre application en leur proposant des incitations basées sur leurs engagements passés. Tenez compte des éléments suivants lorsque vous utilisez ce modèle :
+Faites revenir les utilisateurs sur votre application grâce à des incitations basées sur leurs engagements antérieurs. Tenez compte des éléments suivants lorsque vous utilisez ce modèle :
 
 - Dans **Basics**, sélectionnez une app spécifique pour laquelle vous souhaitez suivre les conversions.
 - Dans l'éditeur de canvas, ajoutez des applications spécifiques pour les étapes des parcours d'action.

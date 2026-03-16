@@ -93,7 +93,7 @@ Agora, digamos que temos uma tela com Horário de silêncio e os seguintes event
 
 O usuário A será contado como convertido na variante geral do Canva, mas não na etapa, pois não recebeu a etapa.
 
-Em nosso último exemplo, digamos que temos um Canva com a reelegibilidade ativada. Se um usuário elegível realizar o evento de conversão na primeira entrada e na segunda entrada, serão contadas duas conversões.
+Em nosso último exemplo, digamos que temos um Canva com a reelegibilidade ativada. Se um usuário elegível realizar o evento de conversão na primeira e na segunda entrada, serão contadas duas conversões.
 
 ### Relatório de funil
 

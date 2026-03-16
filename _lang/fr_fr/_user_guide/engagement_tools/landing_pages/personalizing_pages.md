@@ -38,7 +38,7 @@ Si votre page dépasse ces limites de taille, vous recevrez un e-mail vous infor
 
 Pour éviter que votre page ne dépasse les limites de taille ou ne connaisse des temps de chargement lents, veillez à utiliser la personnalisation Liquid qui :
 
-- Ne passe pas en boucle ou ne fait pas référence à de grands ensembles de données.
+- Ne passe pas continuellement en boucle ou ne fait pas référence à de grands ensembles de données.
 - ne repose pas sur une logique mathématique ou conditionnelle poussée au sein du bloc Liquid.
 
 ### Utilisation du liquide pour les utilisateurs identifiés et anonymes 

@@ -1,7 +1,7 @@
 ---
 nav_title: "SAMLとシングルサインオン"
 article_title: SAML とシングルサインオン
-page_order: 5
+page_order: 2
 layout: dev_guide
 guide_top_header: "SAML とシングルサインオン"
 guide_top_text: "シングルサインオン (SSO) は、Braze ダッシュボードへのアクセスを制御する安全かつ一元化された方法を企業に提供します。つまり、1 組の認証情報を使用して、Braze を含むさまざまなアプリケーションにアクセスできます。<br> <br> Brazeは、最新の業界標準であるSAML 2.0（Security Assertion Markup Language）をサポートするSAML SSOをサポートしており、Microsoft Entra ID（旧Azure Active Directory）、Okta、OneLoginもサポートしている。"

@@ -156,7 +156,7 @@ No mParticle, navegue até **Setup > Outputs > Add Outputs** e selecione **Braze
 
 ### Integração de kits incorporados
 
-Os SDKs do mParticle e do Braze estarão presentes em seu aplicativo por meio da integração do kit incorporado. No entanto, ao contrário de uma integração direta da Braze, a mParticle se encarrega de chamar a maioria dos métodos do SDK da Braze para você. Os métodos do mParticle usados para rastrear dados de usuários serão automaticamente mapeados para os métodos do Braze SDK. 
+Os SDKs do mParticle e do Braze estarão presentes em seu aplicativo por meio da integração do kit incorporado. No entanto, ao contrário de uma integração direta da Braze, a mParticle se encarrega de chamar a maioria dos métodos do SDK da Braze para você. Os métodos do mParticle usados para rastrear dados de usuários serão automaticamente mapeados para os métodos do SDK do Braze. 
 
 Esses mapeamentos do SDK da mParticle para [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) e [Web](https://github.com/mparticle-integrations/mparticle-javascript-integration-braze) são de código aberto e podem ser encontrados na [página do GitHub da mParticle](https://github.com/mparticle-integrations). 
 
@@ -249,7 +249,7 @@ Encaminhe solicitações de exclusão à Braze configurando uma saída de solici
 
 #### Como ativar atributos e identidades enriquecidos de usuários (somente de servidor para servidor) {#enriched}
 
-Nas configurações de conexão do mParticle, a Braze recomenda desativar a opção **Include Enriched User Attributes (Incluir atribuições enriquecidas do usuário**). Se ativada, a mParticle encaminhará todos os atributos de usuário disponíveis (como atributos padrão, atributos personalizados e atributos calculados) do perfil existente para o Braze em cada evento registrado. Isso resulta em um alto consumo de pontos de dados porque a mParticle envia ao Braze as mesmas atribuições inalteradas em cada chamada.
+Nas configurações de conexão do mParticle, a Braze recomenda desativar a opção **Include Enriched User Attributes (Incluir atribuições enriquecidas do usuário**). Se ativada, a mParticle encaminhará todos os atributos de usuário disponíveis (como atributos padrão, atributos personalizados e atributos calculados) do perfil existente para o Braze em cada evento registrado. Isso resulta em um alto consumo de pontos de dados porque o mParticle envia ao Braze as mesmas atribuições inalteradas em cada chamada.
 
 Por exemplo, se um usuário adicionar seu nome, sobrenome e número de telefone durante a primeira sessão e, posteriormente, inscrever-se para receber um boletim informativo e adicionar as mesmas informações e um e-mail, disparando um evento de envio de boletim informativo:
 - Se ativado (padrão), serão incorridos cinco pontos de dados. (evento de inscrição, endereço de e-mail, nome, sobrenome e número de telefone)

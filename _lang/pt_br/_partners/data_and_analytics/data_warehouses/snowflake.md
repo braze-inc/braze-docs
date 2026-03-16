@@ -66,11 +66,12 @@ Para o Snowflake, o compartilhamento de dados acontece entre um [fornecedor de d
 
 {% alert warning %}
 Se você excluir e recriar um compartilhamento no dashboard do Braze, deve descartar o banco de dados criado anteriormente e recriá-lo usando `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` para consultar o compartilhamento de entrada.
+Se você tiver vários espaços de trabalho compartilhando dados para a mesma conta Snowflake, consulte as [FAQs sobre Compartilhamento de Dados do Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/faqs/) para orientações sobre como gerenciar configurações de múltiplos espaços de trabalho.
 {% endalert %}
 
 ## Uso e visualização
 
-Após o compartilhamento de dados ser provisionado, você precisará criar um banco de dados a partir do compartilhamento de dados de entrada, fazendo com que todas as tabelas compartilhadas apareçam na sua instância Snowflake e sejam consultáveis como qualquer outro dado que você está armazenando na sua instância. No entanto, lembre-se de que os dados compartilhados são somente de leitura e só podem ser consultados, mas não modificados ou excluídos de forma alguma.
+Após o compartilhamento de dados ser provisionado, você precisará criar um banco de dados a partir do compartilhamento de dados de entrada, fazendo com que todas as tabelas compartilhadas apareçam em sua instância Snowflake e sejam consultáveis como qualquer outro dado que você está armazenando em sua instância. No entanto, lembre-se de que os dados compartilhados são somente de leitura e só podem ser consultados, mas não modificados ou excluídos de forma alguma.
 
 Semelhante ao Currents, você pode usar o compartilhamento seguro de dados do Snowflake para:
 
@@ -80,7 +81,7 @@ Semelhante ao Currents, você pode usar o compartilhamento seguro de dados do Sn
 - Mapear dados brutos de eventos ou de usuários para um CRM (como o Salesforce)
 - E mais
 
-[Baixe os esquemas de tabela bruta aqui.]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
+[Baixe os esquemas de tabela brutos aqui.]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
 
 ### Esquema de ID de usuário
 
@@ -115,7 +116,7 @@ Quando possível, as mudanças interruptivas serão precedidas de um anúncio e 
 
 ### Regiões do Snowflake
 
-O Braze atualmente hospeda todos os dados de nível de usuário na AWS Snowflake US East-1, EU-Central (Frankfurt), AP-Southeast-2 (Sydney) e AP-Southeast-3 (Jacarta). Para usuários fora dessas regiões, a Braze pode fornecer compartilhamento de dados para clientes conjuntos que hospedem sua infraestrutura do Snowflake em qualquer região do AWS, Azure ou GCP.
+O Braze atualmente hospeda todos os dados em nível de usuário nas regiões Snowflake AWS US East-1, EU-Central (Frankfurt), AP-Southeast-2 (Sydney) e AP-Southeast-3 (Jacarta). Para usuários fora dessas regiões, a Braze pode fornecer compartilhamento de dados para clientes conjuntos que hospedem sua infraestrutura do Snowflake em qualquer região do AWS, Azure ou GCP.
 
 ### Retenção de dados
 
@@ -131,7 +132,7 @@ O arquivo de dados históricos de eventos no Snowflake remonta a abril de 2019. 
 
 ### Conformidade com o Regulamento Geral sobre a Proteção de Dados (GDPR)
 
-Quase todos os registros de eventos armazenados pelo Braze incluem alguns campos que representam informações de identificação pessoal (IPI) dos usuários. Alguns eventos podem incluir endereço de e-mail, número de telefone, ID do dispositivo, idioma, gênero e local. Se a solicitação de esquecimento de um usuário for enviada ao Braze, anularemos esses campos de IPI para qualquer evento pertencente a esses usuários. Dessa forma, não removemos o registro histórico do evento, mas agora o evento jamais poderá ser vinculado a um indivíduo específico.
+{% include partners/snowflake_pii_gdpr.md %}
 
 ### Velocidade, performance e custo das consultas
 

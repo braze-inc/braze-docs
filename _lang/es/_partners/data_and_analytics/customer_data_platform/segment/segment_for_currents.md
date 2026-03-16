@@ -49,17 +49,13 @@ A continuación, seleccione los eventos de compromiso de mensajes que desea expo
 
 Ten en cuenta que Braze sólo envía datos de eventos de usuarios sin `external_user_id` si está marcada la opción **Incluir eventos de usuarios anónimos**.
 
-{% alert important %}
-La exportación de usuarios anónimos está actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en este acceso anticipado.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Anonymous user export' %}
 
 ![Lista de todos los eventos de compromiso de mensajes disponibles en la página Segment Currents de Braze.]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
 
 Por último, seleccione **Lanzar corriente**.
 
-{% alert warning %}
-Si tiene intención de crear más de uno de los mismos conectores Currents (por ejemplo, dos conectores de eventos de compromiso de mensajes), deben estar en espacios de trabajo diferentes. Dado que la integración Braze Segment Currents no puede aislar los eventos de diferentes aplicaciones en un único espacio de trabajo, si no se hace esto, se producirá una desduplicación de datos innecesaria y se perderán datos.
-{% endalert %}
+{% include alerts/warning_alerts.md alert='Segment Currents multiple connectors' %}
 
 Para saber más, visita la [documentación](https://segment.com/docs/connections/sources/catalog/cloud-apps/braze/) de Segment.
 

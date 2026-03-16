@@ -17,7 +17,7 @@ Vous souhaitez en savoir plus sur les indicateurs de fonctionnalités et leur ut
 
 ## Création d'un drapeau de fonctionnalité
 
-![Exemple d'une étape de l'indicateur de fonctionnalité pour la fonctionnalité du bouton de discussion en ligne/instantané.]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Exemple d'étape Feature Flag pour la fonctionnalité « Bouton de chat en ligne ».]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Pour créer un composant Indicateur de fonctionnalité, ajoutez d'abord une étape à votre canvas. Glissez-déposez le composant depuis la barre latérale ou cliquez sur le bouton plus <i class="fas fa-plus-circle"></i> au bas d'une étape et sélectionnez **Drapeau de fonctionnalité**. Ensuite, sélectionnez l’indicateur de fonctionnalité dans la liste déroulante, qui contient tous les indicateurs de fonctionnalités qui ne sont pas archivés.
 
@@ -27,11 +27,13 @@ Lorsqu'un Canvas est arrêté, archivé ou qu'une étape est supprimée, tout ut
 
 Les propriétés d'une étape de canvas peuvent être modifiées après le lancement, et même après qu'un utilisateur a franchi l'étape. Les utilisateurs recevront toujours une version dynamique et en temps réel de l'indicateur de fonctionnalité, au lieu de l'ancienne version enregistrée.
 
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
+
 ## Écrasement des propriétés
 
 Lors de la création d'un indicateur de fonctionnalité, vous spécifiez des propriétés par défaut. Lors de la configuration d'une étape Canvas avec indicateur de fonctionnalité, vous pouvez soit conserver les valeurs par défaut, soit écraser les valeurs pour les utilisateurs qui entrent dans cette étape.
 
-![Une fonctionnalité "Preference Center" avec "Chaîne de caractères" comme propriété, "url" comme clé de propriété et une valeur.]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
+![Un indicateur de fonctionnalité « Centre de préférences » avec « Chaîne de caractères » comme propriété, « url » comme clé de propriété et une valeur.]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
 
 Allez dans **Messagerie** > **Indicateurs de fonctionnalité** pour modifier, ajouter ou supprimer des propriétés supplémentaires.
 
@@ -40,4 +42,3 @@ Allez dans **Messagerie** > **Indicateurs de fonctionnalité** pour modifier, aj
 Le canvas et le déploiement d'un drapeau de fonctionnalité (en faisant glisser le curseur) peuvent fonctionner indépendamment l'un de l'autre. Attention : l'entrée dans une étape du canvas écrase toute configuration de déploiement par défaut. Cela signifie que si un utilisateur ne remplit pas les conditions requises pour bénéficier d'un indicateur de fonctionnalité, une étape du canvas peut activer la fonctionnalité pour cet utilisateur.
 
 De même, si un utilisateur se qualifie pour le déploiement d'un indicateur de fonctionnalité avec certaines propriétés, s'il entre également dans l'étape du canvas, il recevra toutes les valeurs écrasées de cette étape du canvas.
-

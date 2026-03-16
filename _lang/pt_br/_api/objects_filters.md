@@ -6,14 +6,14 @@ description: "Essa landing page lista os objetos e filtros da Braze API usados e
 
 ---
 
-# Objeto e filtros
+# Objetos e filtros
 
 > Esta página lista os objetos e filtros da Braze API usados em suas chamadas à Braze API.
 
 ## Objetos e filtros
 
-- [Objeto de propriedades de entrada da tela]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object)
-- [Filtro de público conectado & objeto]({{site.baseurl}}/api/objects_filters/connected_audience/)
+- [Objeto de contexto do canva]({{site.baseurl}}/api/objects_filters/context_object)
+- [Objeto de filtro de público conectado &]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [Objeto de evento]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/)
 - [Objeto destinatários]({{site.baseurl}}/api/objects_filters/recipient_object/)
@@ -22,6 +22,7 @@ description: "Essa landing page lista os objetos e filtros da Braze API usados e
 - [Objeto de alias de usuário]({{site.baseurl}}/api/objects_filters/user_alias_object)
 - [Objeto de atribuição de usuário]({{site.baseurl}}/api/objects_filters/user_attributes_object)
 - [Objeto de agendamento]({{site.baseurl}}/api/objects_filters/schedule_object/)
+- [Objeto de seleção de catálogo]({{site.baseurl}}/api/objects_filters/catalog_selection_object/)
 
 ### Objetos de envio de mensagens
   - [Objeto Android]({{site.baseurl}}/api/objects_filters/messaging/android_object/)

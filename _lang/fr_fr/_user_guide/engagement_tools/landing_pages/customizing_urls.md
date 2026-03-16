@@ -80,7 +80,7 @@ Pour plus d'informations, consultez la [documentation CAA de LetsEncrypt](https:
 
 #### La zone Cloudflare est maintenue
 
-Si votre organisation utilise Cloudflare, il se peut qu'une fonctionnalité de sécurité de mise en attente de la zone empêche Braze de créer votre domaine personnalisé.
+Si votre organisation utilise Cloudflare, il se peut qu'une fonctionnalité de sécurité de maintien de zone empêche Braze de créer votre domaine personnalisé.
 
 Pour résoudre ce problème, demandez à votre équipe informatique de libérer temporairement la mise en attente de la zone. Pour plus d'informations, consultez la [documentation de Cloudflare sur le maintien de la zone.](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/#release-zone-holds)
 

@@ -10,15 +10,13 @@ description: "Cet article présente les détails de l'endpoint Duplicate Canvase
 
 {% api %}
 # Dupliquer des toiles à l'aide de l'API
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /canvas/duplicate
 {% endapimethod %}
 
 > Utilisez cet endpoint pour dupliquer les toiles. Cet endpoint de l'API est similaire à la [duplication des toiles dans le tableau de bord de Braze][1].
 
-{% alert important %}
-Cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Conditions préalables
 

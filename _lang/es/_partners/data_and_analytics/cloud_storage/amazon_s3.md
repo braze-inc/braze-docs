@@ -127,7 +127,7 @@ Si sólo vas a configurar el archivo de mensajes, utiliza el fragmento de códig
 
 ### Paso 4: Adjuntar política {#secret-key-4}
 
-Después de crear una nueva política, ve a **Usuarios** y selecciona en tu usuario específico. En la pestaña **Permisos**, selecciona **Adjuntar política** y selecciona la nueva política que has creado. Ahora estás listo para vincular tus credenciales de AWS a tu cuenta Braze.
+Después de crear una nueva política, ve a **Usuarios** y selecciona en tu usuario específico. En la pestaña **Permisos**, selecciona **Adjuntar política** y selecciona la nueva política que has creado. Ahora, estás listo para vincular tus credenciales de AWS a tu cuenta Braze.
 
 ![]({% image_buster /assets/img_archive/S3_AttachPolicy.png %})
 
@@ -345,7 +345,7 @@ Las exportaciones de Currents utilizan el formato Apache Avro (archivos`.avro` )
 
 ## Conectores múltiples
 
-Si pretendes crear más de un conector Currents para enviarlo a tu contenedor de S3, puedes utilizar las mismas credenciales, pero deberás especificar una ruta de carpeta diferente para cada uno. Puedes crearlos en el mismo espacio de trabajo, o dividirlos y crearlos dentro de varios espacios de trabajo. También tienes la opción de crear una única política para cada integración, o crear una política que cubra ambas integraciones. 
+Si pretendes crear más de un conector Currents para enviarlo a tu contenedor de S3, puedes utilizar las mismas credenciales, pero debes especificar una ruta de carpeta diferente para cada uno. Puedes crearlos en el mismo espacio de trabajo, o dividirlos y crearlos dentro de varios espacios de trabajo. También tienes la opción de crear una única política para cada integración, o crear una política que cubra ambas integraciones. 
 
 Si piensas utilizar el mismo contenedor de S3 tanto para Currents como para la exportación de datos, deberás crear dos políticas distintas, ya que cada integración requiere permisos diferentes.
 

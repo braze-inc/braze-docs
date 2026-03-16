@@ -68,7 +68,7 @@ Cette valeur de retour doit respecter le format du corps de la requête `/users/
 
 ## Exemple de charge utile de webhook de Typeform
 
-```json
+```http
 Content-Type: application/json
 
 {

@@ -40,7 +40,7 @@ Most privacy laws define three primary stakeholders who are involved in the proc
 
 In relation to the Braze Services:
 
-- The data subjects are, for example, the end users of your customer application (e.g., your customers/clients) or your employees who are dashboard users in your instance of the Braze Services.
+- The data subjects are, for example, the end users of your customer application (e.g., your customers/clients) or your employees who are company users in your instance of the Braze Services.
 - You, the Braze customer, are the data controller who decides how and why the Personal Data of the data subjects will be collected and processed within the Braze Services.
 - Braze is a data processor who processes Personal Data in the Braze Services on your behalf and in accordance with the instructions that we receive from you.
 

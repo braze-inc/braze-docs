@@ -55,7 +55,7 @@ La entrega optimizada debe utilizarse para los **mensajes de marketing**. Braze 
 
 ### Reorientar a los usuarios en otros canales Braze 
 
-Como la API de MM para WhatsApp no ofrece una capacidad de entrega del 100%, es importante saber cómo reorientar a los usuarios que no hayan recibido tu mensaje en otros canales. 
+Dado que la API de MM para WhatsApp no ofrece una capacidad de entrega del 100%, es importante entender cómo reorientar a los usuarios que no hayan recibido tu mensaje en otros canales. 
 
 Para reorientar a los usuarios, recomendamos crear un segmento de usuarios que no recibieron un mensaje específico. Para ello, filtra por el código de error `131049`, que indica que no se ha enviado un mensaje de plantilla de marketing debido a la aplicación del límite de plantillas de marketing por usuario de WhatsApp. Puedes hacerlo utilizando Braze Currents o Extensiones de segmento SQL:
 

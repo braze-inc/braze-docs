@@ -4,7 +4,7 @@ article_title: RFM SQL Segmente
 page_order: 1
 page_type: reference
 alias: "/rfm_segments/"
-description: "Dieser Artikel beschreibt, wie Sie RFM Segment-Erweiterungen erstellen, die Ihre besten Nutzer:innen durch Messung ihrer Kaufgewohnheiten identifizieren."
+description: "Dieser Artikel beschreibt, wie Sie RFM Segment-Erweiterungen erstellen, die Ihre besten Nutzer:innen anhand ihrer Kaufgewohnheiten identifizieren."
 tool: Segments
 ---
 
@@ -67,9 +67,9 @@ RFM Segmente werden in einer bestimmten Reihenfolge ausgewertet. Nutzer:innen we
 | Loyale Nutzer:innen        | Nutzer:innen, die eine hohe Häufigkeit und Frequenz aufweisen. Kann einen geringeren Geldwert haben als Champions. | 2-3              | 2-3                | 1-3               |
 | Potenzielle Loyalisten| Nutzer:innen, die in letzter Zeit mit mäßiger Häufigkeit und mäßigem Geldwert gekauft haben.   | 3                | 1-3                | 1-3               |
 | Vielversprechend          | Nutzer:innen, die kürzlich einen hochwertigen Erstkauf getätigt haben, aber noch keine hohe Kauffrequenz aufweisen. | 3                | 0-3                | 1-3               |
-| Neue Kund:in       | Nutzer:innen, die erst vor kurzem ihren ersten Kauf getätigt haben.                             | 3                | 0-3                | 0-3               |
+| Neue Kund:in       | Nutzer:innen, die erst kürzlich ihren ersten Kauf getätigt haben.                             | 3                | 0-3                | 0-3               |
 | Benötigt Aufmerksamkeit  | Nutzer:innen mit überdurchschnittlicher Häufigkeit, aber unterdurchschnittlicher Kaufhäufigkeit oder unterdurchschnittlichem Geldwert. | 2-3              | 0-3                | 0-3               |
-| Kann sie nicht verlieren   | Nutzer:innen, die früher einen hohen Wert mit guten Frequenz- und Geldwerten hatten, aber seit langem nicht mehr gekauft haben. | 0-1              | 2-3                | 2-3               |
+| Kann sie nicht verlieren   | Nutzer:innen, die früher einen hohen Wert mit guten Frequenz- und Geldwerten hatten, aber seit langer Zeit nicht mehr gekauft haben. | 0-1              | 2-3                | 2-3               |
 | Gefährdet            | Nutzer:innen, die in der Vergangenheit mäßige Häufigkeit und Geldwerte aufwiesen, aber schon lange nicht mehr gekauft haben. | 0-1              | 1-3                | 1-3               |
 | Über den Schlaf     | Nutzer:innen, die in allen Metriken niedrige Punktzahlen haben.                                       | (1 %)                | 0-3                | 0-3               |
 | Winterschlaf        | Nutzer:innen, die mäßig häufig, aber über einen längeren Zeitraum inaktiv sind.    | 0                | 0-2                | 0-3               |

@@ -1,38 +1,110 @@
 ## Integration des Android SDK
 
-### Schritt 1: Aktualisieren Sie Ihr `build.gradle`
+### Schritt 1: Bitte aktualisieren Sie Ihre Gradle-Build-Konfiguration.
 
-Fügen Sie in Ihrem `build.gradle` [`mavenCentral()`](https://docs.gradle.org/current/kotlin-dsl/gradle/org.gradle.api.artifacts.dsl/-repository-handler/maven-central.html) zu Ihrer Liste der Repositories hinzu.
+Fügen Sie in der Repository-Konfiguration Ihres [`mavenCentral()`](https://docs.gradle.org/current/kotlin-dsl/gradle/org.gradle.api.artifacts.dsl/-repository-handler/maven-central.html)Projekts (z. B. `settings.gradle`, `settings.gradle.kts`, oder oberste Ebene `build.gradle`)  zu Ihrer Liste der Repositorys hinzu. Diese Syntax ist sowohl für Groovy als auch für Kotlin DSL identisch.
 
-```kotlin
+```groovy
 repositories {
   mavenCentral()
 }
 ```
 
-Als nächstes fügen Sie Braze zu Ihren Abhängigkeiten hinzu.
+Als nächstes fügen Sie Braze zu Ihren Abhängigkeiten hinzu. Bitte ersetzen Sie in den `SDK_VERSION`folgenden Beispielen  durch die aktuelle Version Ihres Android Braze SDK. Die vollständige Liste der Versionen finden Sie unter [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
+
+{% alert note %}
+- Für Kotlin DSL (`build.gradle.kts`) verwenden Sie bitte die`implementation("...")`Syntax.
+- Für Groovy (`build.gradle`) verwenden Sie bitte die`implementation '...'`Syntax.
+- Für [Versionskataloge](https://developer.android.com/build/migrate-to-catalogs) fügen Sie bitte Einträge zu Ihrer`gradle/libs.versions.toml`Datei hinzu und referenzieren Sie diese mithilfe der generierten Zugriffsmethoden.
+{% endalert %}
 
 {% tabs local %}
 {% tab base only %}
-Wenn Sie nicht vorhaben, Braze UI-Komponenten zu verwenden, fügen Sie den folgenden Code zu Ihrem `build.gradle` hinzu. Ersetzen Sie `SDK_VERSION` durch die aktuelle Version Ihres Android Braze SDK. Die vollständige Liste der Versionen finden Sie unter [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
+Falls Sie nicht vorhaben, Braze-UI-Komponenten zu verwenden, fügen Sie bitte Folgendes zu Ihren Abhängigkeiten hinzu.
 
-```kotlin
+{% subtabs local %}
+{% subtab Groovy %}
+```groovy
 dependencies {
     implementation 'com.braze:android-sdk-base:SDK_VERSION' // (Required) Adds dependencies for the base Braze SDK.
     implementation 'com.braze:android-sdk-location:SDK_VERSION' // (Optional) Adds dependencies for Braze location services.
 }
 ```
+{% endsubtab %}
+{% subtab Kotlin DSL %}
+```kotlin
+dependencies {
+    implementation("com.braze:android-sdk-base:SDK_VERSION") // (Required) Adds dependencies for the base Braze SDK.
+    implementation("com.braze:android-sdk-location:SDK_VERSION") // (Optional) Adds dependencies for Braze location services.
+}
+```
+{% endsubtab %}
+{% subtab Version catalog %}
+In Ihrer`gradle/libs.versions.toml`Datei:
+
+```toml
+[versions]
+braze = "SDK_VERSION"
+
+[libraries]
+braze-android-sdk-base = { group = "com.braze", name = "android-sdk-base", version.ref = "braze" }
+braze-android-sdk-location = { group = "com.braze", name = "android-sdk-location", version.ref = "braze" }
+```
+
+Fügen Sie anschließend in Ihrer `build.gradle``build.gradle.kts`Datei die folgenden Abhängigkeiten hinzu. Diese Syntax ist sowohl für Groovy als auch für Kotlin DSL identisch.
+
+```groovy
+dependencies {
+    implementation(libs.braze.android.sdk.base) // (Required) Adds dependencies for the base Braze SDK.
+    implementation(libs.braze.android.sdk.location) // (Optional) Adds dependencies for Braze location services.
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 
 {% tab with ui components %}
-Wenn Sie später Braze UI-Komponenten verwenden möchten, fügen Sie den folgenden Code zu Ihrem `build.gradle` hinzu.  Ersetzen Sie `SDK_VERSION` durch die aktuelle Version Ihres Android Braze SDK. Die vollständige Liste der Versionen finden Sie unter [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
+Wenn Sie die Verwendung von Braze-UI-Komponenten planen, fügen Sie bitte Folgendes zu Ihren Abhängigkeiten hinzu.
 
-```kotlin
+{% subtabs local %}
+{% subtab Groovy %}
+```groovy
 dependencies {
-    implementation 'com.braze:android-sdk-ui:SDK_VERSION' // (Required) Adds dependencies for the Braze SDK and Braze UI components. 
+    implementation 'com.braze:android-sdk-ui:SDK_VERSION' // (Required) Adds dependencies for the Braze SDK and Braze UI components.
     implementation 'com.braze:android-sdk-location:SDK_VERSION' // (Optional) Adds dependencies for Braze location services.
 }
 ```
+{% endsubtab %}
+{% subtab Kotlin DSL %}
+```kotlin
+dependencies {
+    implementation("com.braze:android-sdk-ui:SDK_VERSION") // (Required) Adds dependencies for the Braze SDK and Braze UI components.
+    implementation("com.braze:android-sdk-location:SDK_VERSION") // (Optional) Adds dependencies for Braze location services.
+}
+```
+{% endsubtab %}
+{% subtab Version catalog %}
+In Ihrer`gradle/libs.versions.toml`Datei:
+
+```toml
+[versions]
+braze = "SDK_VERSION"
+
+[libraries]
+braze-android-sdk-ui = { group = "com.braze", name = "android-sdk-ui", version.ref = "braze" }
+braze-android-sdk-location = { group = "com.braze", name = "android-sdk-location", version.ref = "braze" }
+```
+
+Fügen Sie anschließend in Ihrer `build.gradle``build.gradle.kts`Datei die folgenden Abhängigkeiten hinzu. Diese Syntax ist sowohl für Groovy als auch für Kotlin DSL identisch.
+
+```groovy
+dependencies {
+    implementation(libs.braze.android.sdk.ui) // (Required) Adds dependencies for the Braze SDK and Braze UI components.
+    implementation(libs.braze.android.sdk.location) // (Optional) Adds dependencies for Braze location services.
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
@@ -67,23 +139,23 @@ Fügen Sie als Nächstes die folgenden Berechtigungen zu Ihrem `AndroidManifest.
 Mit der Veröffentlichung von Android M wechselte Android von einem Installationszeit- zu einem Laufzeit-Berechtigungsmodell. Diese beiden Berechtigungen sind jedoch normale Berechtigungen. Sie werden automatisch gewährt, wenn sie im App-Manifest aufgeführt sind. Weitere Informationen finden Sie in der [Dokumentation zu den Berechtigungen](https://developer.android.com/training/permissions/index.html) von Android.
 {% endalert %}
 
-### Schritt 4: Verzögerte Initialisierung einschalten (optional)
+### Schritt 4: Verzögerte Initialisierung Enablement (optional)
 
 Um die verzögerte Initialisierung zu verwenden, ist die Mindestversion des Braze SDK erforderlich:
 
 {% sdk_min_versions android:38.0.0 %}
 
 {% alert note %}
-Während die verzögerte Initialisierung aktiviert ist, werden alle Netzwerkverbindungen abgebrochen, so dass das SDK keine Daten an die Braze Server senden kann.
+Solange die verzögerte Initialisierung aktiviert ist, werden alle Netzwerkverbindungen unterbrochen, wodurch verhindert wird, dass das SDK Daten an die Braze-Server sendet.
 {% endalert %}
 
 #### Schritt 4.1: Aktualisieren Sie Ihr `braze.xml`
 
-Die verzögerte Initialisierung ist standardmäßig deaktiviert. Verwenden Sie zum Enablement eine der folgenden Optionen:
+Die verzögerte Initialisierung ist im Standard deaktiviert. Um Enablement zu aktivieren, nutzen Sie bitte eine der folgenden Optionen:
 
 {% tabs %}
 {% tab Braze XML file %}
-In der Datei `braze.xml` Ihres Projekts setzen Sie `com_braze_enable_delayed_initialization` auf `true`.
+Bitte stellen Sie in der Datei `braze.xml`Ihres Projekts`com_braze_enable_delayed_initialization` die Einstellung auf ein`true`.
 
 ```xml
 <bool name="com_braze_enable_delayed_initialization">true</bool>
@@ -91,7 +163,7 @@ In der Datei `braze.xml` Ihres Projekts setzen Sie `com_braze_enable_delayed_ini
 {% endtab %}
 
 {% tab At runtime %}
-Um die verzögerte Initialisierung zur Laufzeit zu aktivieren, verwenden Sie die folgende Methode.
+Um eine verzögerte Initialisierung zur Laufzeit zu ermöglichen, verwenden Sie bitte die folgende Methode.
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -112,17 +184,21 @@ Braze.enableDelayedInitialization(context)
 {% endtab %}
 {% endtabs %}
 
-#### Schritt 4.2: Konfigurieren Sie Push Analytics (optional)
+{% alert note %}
+Wenn die verzögerte Initialisierung aktiviert ist und eine Push-Benachrichtigung eine Deeplink-Aktion enthält, wird der Deeplink nicht aufgelöst.
+{% endalert %}
 
-Wenn die verzögerte Initialisierung aktiviert ist, werden Push Analytics standardmäßig in eine Warteschlange gestellt. Sie können Push Analytics jedoch auch [explizit in die Warteschlange stellen](#explicitly-queue-push-analytics) oder [ganz weglassen](#drop-push-analytics).
+#### Schritt 4.2: Push-Analytics konfigurieren (optional)
 
-##### Ausdrücklich Warteschlange {#explicitly-queue-push-analytics}
+Wenn die verzögerte Initialisierung aktiviert ist, werden Push-Analytics standardmäßig in eine Warteschlange gestellt. Sie können jedoch auch [explizit](#explicitly-queue-push-analytics) festlegen, dass Push-Analytics [in die Warteschlange gestellt](#explicitly-queue-push-analytics) oder [verworfen](#drop-push-analytics) werden sollen.
 
-Um Push Analytics explizit in die Warteschlange zu stellen, wählen Sie eine der folgenden Optionen:
+##### Explizit in die Warteschlange stellen {#explicitly-queue-push-analytics}
+
+Um Push-Analytics explizit in die Warteschlange zu stellen, wählen Sie eine der folgenden Optionen:
 
 {% tabs %}
 {% tab Braze XML file %}
-Setzen Sie in Ihrer Datei `braze.xml` `com_braze_delayed_initialization_analytics_behavior` auf `QUEUE`:
+Bitte setzen Sie in Ihrer`braze.xml``com_braze_delayed_initialization_analytics_behavior`Datei auf`QUEUE`:
 
 ```xml
 <string name="com_braze_delayed_initialization_analytics_behavior">QUEUE</string>
@@ -130,7 +206,7 @@ Setzen Sie in Ihrer Datei `braze.xml` `com_braze_delayed_initialization_analytic
 {% endtab %}
 
 {% tab At runtime %}
-Fügen Sie `QUEUE` zu Ihrer [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) Methode hinzu:
+Fügen Sie Ihrer[`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html)Methode`QUEUE` Folgendes hinzu:
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -151,13 +227,13 @@ Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavio
 {% endtab %}
 {% endtabs %}
 
-##### Ablegen {#drop-push-analytics}
+##### Tropfen {#drop-push-analytics}
 
-Um Push Analytics zu löschen, wählen Sie eine der folgenden Optionen:
+Um Push-Analytics zu deaktivieren, wählen Sie bitte eine der folgenden Optionen:
 
 {% tabs %}
 {% tab Braze XML file %}
-Setzen Sie in Ihrer Datei `braze.xml` `com_braze_delayed_initialization_analytics_behavior` auf `DROP`: 
+Bitte setzen Sie in Ihrer`braze.xml``com_braze_delayed_initialization_analytics_behavior`Datei auf`DROP`: 
 
 ```xml
 <string name="com_braze_delayed_initialization_analytics_behavior">DROP</string>
@@ -165,7 +241,7 @@ Setzen Sie in Ihrer Datei `braze.xml` `com_braze_delayed_initialization_analytic
 {% endtab %}
 
 {% tab At runtime %}
-Fügen Sie `DROP` zu der [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) Methode hinzu:
+Fügen Sie der[`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html)`DROP`Methode Folgendes hinzu:
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -186,9 +262,9 @@ Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavio
 {% endtab %}
 {% endtabs %}
 
-#### Schritt 4.3: Manuelles Initialisieren des SDK
+#### Schritt 4.3: Initialisieren Sie das SDK manuell.
 
-Nach der von Ihnen gewählten Verzögerungszeit verwenden Sie die [`Braze.disableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/disable-delayed-initialization.html) Methode, um das SDK manuell zu initialisieren.
+Nach Ablauf der von Ihnen gewählten Verzögerungszeit verwenden Sie bitte die[`Braze.disableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/disable-delayed-initialization.html)Methode, um das SDK manuell zu initialisieren.
 
 {% tabs local %}
 {% tab JAVA %}
@@ -252,7 +328,7 @@ Sie können auch den [SDK Debugger]({{site.baseurl}}/developer_guide/debugging) 
 Wenn Sie beim Testen auf Probleme stoßen, aktivieren Sie die [ausführliche Protokollierung](#android_enabling-logs) und verwenden Sie dann logcat, um fehlende `openSession` und `closeSession` Aufrufe in Ihren Aktivitäten zu entdecken.
 
 1. Gehen Sie in Braze zu **Übersicht**, wählen Sie Ihre App aus und wählen Sie dann in der Dropdown-Liste **Daten anzeigen für die** Option **Heute**.
-    ![Die Seite "Übersicht" in Braze, wobei das Feld "Daten anzeigen für" auf "Heute" eingestellt ist.]({% image_buster /assets/img_archive/android_sessions.png %})
+    ![Die Seite „Übersicht“ in Braze, wobei das Feld „Daten anzeigen für“ auf „Heute“ eingestellt ist.]({% image_buster /assets/img_archive/android_sessions.png %})
 2. Öffnen Sie Ihre App und aktualisieren Sie dann das Braze-Dashboard. Überprüfen Sie, ob sich Ihre Metriken um 1 erhöht haben.
 3. Navigieren Sie durch Ihre App und überprüfen Sie, ob nur eine Sitzung bei Braze angemeldet wurde.
 4. Versetzen Sie die App für mindestens 10 Sekunden in den Hintergrund und holen Sie sie dann in den Vordergrund. Überprüfen Sie, ob eine neue Sitzung protokolliert wurde.
@@ -261,9 +337,9 @@ Wenn Sie beim Testen auf Probleme stoßen, aktivieren Sie die [ausführliche Pro
 
 ### Laufzeitkonfiguration
 
-Um Ihre Braze-Optionen im Code und nicht in der Datei `braze.xml` festzulegen, verwenden Sie die [Laufzeitkonfiguration](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html). Wenn ein Wert an beiden Stellen existiert, wird stattdessen der Laufzeitwert verwendet. Nachdem alle erforderlichen Einstellungen zur Laufzeit vorgenommen wurden, können Sie Ihre `braze.xml` Datei löschen.
+Um Ihre Braze-Optionen im Code statt in Ihrer`braze.xml`Datei festzulegen, verwenden Sie [bitte die Laufzeitkonfiguration](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html). Wenn ein Wert an beiden Stellen vorhanden ist, wird stattdessen der Laufzeitwert verwendet. Nachdem alle erforderlichen Einstellungen zur Laufzeit vorgenommen wurden, können Sie Ihre`braze.xml`Datei löschen.
 
-Im folgenden Beispiel wird ein [Builder-Objekt](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html) erstellt und dann an [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html). Beachten Sie, dass nur einige der verfügbaren Laufzeitoptionen angezeigt werden - die vollständige Liste finden Sie in unserer [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html).
+Im folgenden Beispiel wird ein [Builder-Objekt](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html) erstellt und anschließend an übergeben[`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html). Bitte beachten Sie, dass nur einige der verfügbaren Laufzeitoptionen angezeigt werden. Die vollständige Liste wird in unserer [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html) referenziert.
 
 {% tabs %}
 {% tab JAVA %}
@@ -297,7 +373,7 @@ Braze.configure(this, brazeConfig)
 {% endtabs %}
 
 {% alert tip %}
-Sie suchen ein weiteres Beispiel? Sehen Sie sich unsere [Hello Braze Beispiel App](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java) an.
+Suchen Sie ein weiteres Beispiel? Bitte sehen Sie sich unsere [Hello Braze-BeispielApp](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java) an.
 {% endalert %}
 
 ### Google Advertising ID
@@ -371,7 +447,7 @@ Standardmäßig ist der Braze Android SDK Loglevel auf `INFO` eingestellt. Sie k
 
 #### Enablement von Protokollen
 
-Um die Fehlerbehebung in Ihrer App zu erleichtern oder die Bearbeitungszeit beim Braze Support zu verkürzen, sollten Sie ausführliche Protokolle für das SDK aktivieren. Wenn Sie ausführliche Protokolle an den Braze-Support senden, stellen Sie sicher, dass diese beginnen, sobald Sie Ihre Anwendung starten und weit nach dem Auftreten des Problems enden.
+Um Fehler in Ihrer App zu beheben oder die Bearbeitungszeiten mit dem Braze-Support zu verkürzen, können Sie ausführliche Protokolle für das SDK aktivieren. Wenn Sie ausführliche Protokolle an den Braze-Support senden, stellen Sie sicher, dass diese beginnen, sobald Sie Ihre Anwendung starten und weit nach dem Auftreten des Problems enden. Eine zentralisierte Übersicht finden Sie unter [Ausführliche Protokollierung]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging). Informationen zum Interpretieren der Protokollausgabe finden Sie unter [Ausführliche Protokolle lesen]({{site.baseurl}}/developer_guide/sdk_integration/reading_verbose_logs).
 
 Denken Sie daran, dass ausführliche Protokolle nur für Ihre Entwicklungsumgebung gedacht sind. Sie sollten sie also deaktivieren, bevor Sie Ihre App veröffentlichen.
 

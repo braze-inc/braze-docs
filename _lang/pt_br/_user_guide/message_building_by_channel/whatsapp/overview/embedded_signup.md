@@ -1,5 +1,5 @@
 ---
-nav_title: Cadastro embutido
+nav_title: Inscrição incorporada
 article_title: Registro incorporado no WhatsApp
 page_order: 1
 description: "Este artigo de referência fornece uma explicação passo a passo do fluxo de trabalho de registro incorporado do WhatsApp na Braze."

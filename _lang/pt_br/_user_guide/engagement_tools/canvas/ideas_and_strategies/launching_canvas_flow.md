@@ -90,7 +90,7 @@ Depois de revisar os detalhes mais finos da sua canva, confira [Enviando canvas 
 - Certifique-se de que seus usuários atendam aos critérios de segmentação.
 - Confirme se o estado da inscrição é "inscrito" ou "aceitação" e se o token por push existe. Se você adicionou essas regras como regras de entrada no Canvas, é possível que os usuários tenham cancelado a inscrição entre a entrada no Canvas e o recebimento da etapa de mensagens.
 - Confirme se elas correspondem às configurações de envio do Canva. (Se os usuários estiverem "inscritos", mas as configurações forem "Aceitação", os usuários não serão ativados para o canal).
-- Se o limite global de frequência estiver ativado para o seu Canva, verifique se as regras estão limitando o número de vezes que cada usuário pode receber uma mensagem de um canal específico.
+- Se o limite global de frequência estiver ativado para o Canva, verifique se as regras estão limitando o número de vezes que cada usuário pode receber uma mensagem de um canal específico.
 - Se o horário de silêncio estiver ativado, o tempo de envio de mensagens poderá ser afetado, o que significa que a mensagem poderá ser enviada no próximo horário disponível (quando o horário de silêncio terminar) ou cancelada completamente.
 - Verifique a disponibilidade do usuário para filtros adicionais na etapa do canva.
 
@@ -111,9 +111,9 @@ Se o seu Canvas não estiver carregando e não progredir, isso pode ser causado 
 {% details Why are my users not receiving my Canvas messages? %}
 **Verifique a disponibilidade do usuário**
 - Certifique-se de que eles atendam a seus critérios de segmentação.
-- Confirme se o estado da inscrição push é "inscrito" ou "aceitação" **e** se o status de **capacitação push** está definido como "verdadeiro". Se você adicionou isso como regras de entrada da canva, é possível que os usuários tenham sido desinscritos entre a entrada na sua canva e o recebimento da etapa de mensagem.
+- Confirme se o estado da inscrição push está "inscrito" ou "aceitação" **e** se o status de **capacitação push** está definido como "verdadeiro". Se você adicionou isso como regras de entrada da canva, é possível que os usuários tenham sido desinscritos entre a entrada na sua canva e o recebimento da etapa de mensagem.
 - Confirme se elas correspondem às configurações de envio do Canva. (Se os usuários estiverem "inscritos", mas as configurações forem "Aceitação", os usuários não serão ativados para o canal).
-- Se o limite global de frequência estiver ativado para o seu Canva, verifique se as regras estão limitando o número de vezes que cada usuário pode receber uma mensagem de um canal específico. 
+- Se o limite global de frequência estiver ativado para o Canva, verifique se as regras estão limitando o número de vezes que cada usuário pode receber uma mensagem de um canal específico. 
 - Se o horário de silêncio estiver ativado, o tempo de envio de mensagens poderá ser afetado, o que significa que a mensagem poderá ser enviada no próximo horário disponível (quando o horário de silêncio terminar) ou cancelada completamente.
 
 **Verifique a disponibilidade do usuário para filtros adicionais na etapa do canva**

@@ -187,7 +187,7 @@ Nachdem eine Anfrage an den Endpunkt gestellt wurde, gibt SessionM die vollstän
 ```
 {% endraw %}
 
-Mit der Liquid-Dot-Notation kann dies in die Nachricht eingefügt werden. Um die Nachricht mit dem Ergebnis `offer_id` zu personalisieren, könnten Sie beispielsweise die Rückgabe-Nutzlast nutzen, indem Sie {% raw %}`{{wallet.payload.available_points}`{% endraw %} verwenden, die `100` zurückgibt.
+Mit der Liquid-Dot-Notation kann dies in die Nachricht eingefügt werden. Um die Nachricht mit dem Ergebnis `offer_id` zu personalisieren, könnten Sie beispielsweise die Rückgabe-Nutzlast nutzen, indem Sie {% raw %}`{{wallet.payload.available_points}}`{% endraw %} verwenden, die `100` zurückgibt.
 
 {% alert note %}
 Dies ist eine individuelle API. Wenn Sie beabsichtigen, einen Stapel von mehr als 500 Nutzer:innen zu versenden, erkundigen Sie sich bei Ihrem SessionM Team, wie Sie Massendaten in die Integration einbeziehen können.

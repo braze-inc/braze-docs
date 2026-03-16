@@ -112,7 +112,7 @@ Nachdem Sie Ihr Google Ads-Konto erfolgreich verbunden haben, werden Sie zu Ihre
 Wenn Sie iOS IDFA oder Google Advertising IDs in Ihre Zielgruppen-Synchronisierung exportieren möchten, benötigt Google Ihre iOS App ID und Android App ID in den Anfragen. Wählen Sie unter Google Audience Sync die Option **Mobile Werbe-IDs hinzufügen**, geben Sie die ID Ihrer iOS-App und Android-App (Name des App-Pakets) ein und speichern Sie beide.
 
 <br><br>
-![Die aktualisierte Google Ads Technologieseite zeigt die verbundenen Anzeigenkonten an, was eine erneute Synchronisierung der Konten und das Hinzufügen von IDs für mobile Werbung zulässig macht.]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
+![Die aktualisierte Seite zur Google Ads-Technologie zeigt die verbundenen Anzeigenkonten an, was eine erneute Synchronisierung der Konten und das Hinzufügen von IDs für mobile Werbung zulässig macht.]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
 <br><br>
 
 Wenn Sie mehrere Apps in einem Workspace haben, können Sie bei der Einrichtung jede Ihrer App IDs eingeben, da die mobilen Anzeigen-IDs für Ihre Nutzer:innen in allen Apps gleich sind. Das liegt daran, dass sowohl der Android GAID als auch der iOS IDFA universelle Bezeichner für Anzeigen auf dem Gerät sind und nicht App-spezifisch. Um mobile Werbe-IDs für Nutzer:innen einer bestimmten App zu synchronisieren, können Sie Segmentierungsfilter ("Zuletzt verwendete bestimmte App" oder "Neueste App-Version") verwenden, um diese Nutzer:innen gezielt anzusprechen.
@@ -143,6 +143,10 @@ Fügen Sie eine Komponente in Ihrem Canvas hinzu und wählen Sie dann **Audience
 
 - **Kontaktinformationen für Kund**:in: Enthält die E-Mail- oder Telefonnummern Ihrer Nutzer:innen, oder beides, wenn sie in Braze vorhanden sind. Google verlangt, dass es sich dabei um ein einziges Feld handelt, das zu synchronisieren ist, und nicht um separate Bezeichner. Sie können dieses einzelne Feld auch verwenden, wenn Sie nur einen der Bezeichner haben.
 - **Mobile Advertiser ID**: Wählen Sie entweder iOS IDFA oder Android GAID. Aufgrund der Google-Anforderungen für den Kundenabgleich können Sie nicht beide IDs für mobile Werbetreibende in denselben Kund:inenlisten haben.
+
+{% alert note %}
+**Über die "Fehlende Mobile Ad IDs? Bringen wir das in Ordnung." Banner:** Wenn Sie mit einer Zielgruppe synchronisieren, die iOS IDFA oder Android GAID als abzugleichendes Feld verwendet, kann diese Nachricht im Schritteditor erscheinen. Es handelt sich um eine **Information, nicht um einen Fehler**. Es erinnert Sie daran, zu bestätigen, dass das Feld für die ID der mobilen Anzeige, die Sie abgleichen möchten, in Ihren Zielgruppen-Daten vorhanden ist (zum Beispiel, dass Nutzer:innen im Canvas-Pfad den entsprechenden Bezeichner erfasst haben). Sie können es abwählen, nachdem Sie Ihre Daten überprüft haben.
+{% endalert %}
 
 {: start="4"}
 4\. Als nächstes speichern Sie Ihre Zielgruppe, indem Sie den Button **Zielgruppe erstellen** unten im Schritteditor auswählen.

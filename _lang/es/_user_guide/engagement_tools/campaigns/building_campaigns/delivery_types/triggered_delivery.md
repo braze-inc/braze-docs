@@ -179,6 +179,6 @@ Si aparece el evento personalizado, soluciona el problema haciendo lo siguiente:
 - Si hay un retraso programado, comprueba si el evento personalizado del usuario se desencadenó antes del retraso. Si el evento se hubiera desencadenado antes del retraso, no habrían recibido la campaña.
 
 {% alert note %}
-Los mensajes dentro de la aplicación sólo pueden ser desencadenados por eventos enviados a través del SDK, no de la API REST.
+Los mensajes dentro de la aplicación sólo pueden desencadenarse por eventos enviados a través del SDK, no de la API REST.
 {% endalert %}
 

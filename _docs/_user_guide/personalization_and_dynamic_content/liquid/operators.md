@@ -25,6 +25,31 @@ This table lists the operators that are supported. Note that parentheses are inv
 | contains | checks to see if a string or string array contains a string|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+{% alert note %}
+Operators can be used in conditional statements (`if`, `elsif`, `unless`) but not in `assign` statements, `for` loops, `case`/`when` statements, or array access brackets. For a full breakdown, see [Where to use operators and filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+{% endalert %}
+
+### Grouping conditions without parentheses
+
+Liquid doesn't support parentheses for grouping expressions. To evaluate complex boolean logic such as `(a and b) or c`, use nested `if` statements or intermediate variables.
+
+For example, to check whether a value satisfies a compound condition, assign an intermediate variable:
+
+{% raw %}
+```liquid
+{% assign qualifies = false %}
+{% if points > 100 %}
+{% assign qualifies = true %}
+{% elsif points == 100 and member_level == 'gold' %}
+{% assign qualifies = true %}
+{% endif %}
+
+{% if qualifies %}
+You qualify for a reward!
+{% endif %}
+```
+{% endraw %}
+
 ## Tutorials
 
 Let's go through a few tutorials to learn how to use these operators for your marketing campaigns:
@@ -220,4 +245,28 @@ Stream now!
 
 You can also [abort messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) based on Connected Content.
 
+## Troubleshooting
 
+### Preview may incorrectly coerce property types 
+
+When previewing a message in the dashboard, most variables (such as custom attributes) are coerced to the correct type. However, some variables don't have a defined type that the preview can look up:
+
+- `api_trigger_properties`
+- `canvas_entry_properties`
+- `context`
+
+For these properties, the preview attempts to infer the type from the value. This means that a value you intend to be a **string** could be wrongly interpreted as a **number**. For example, if a property value is a string `"3"`, the preview may coerce it to the integer `3`, which can cause unexpected behavior in string operations like `contains` or `split`.
+
+If you see unexpected preview results when using these property types, keep in mind that the preview's type inference may not match what happens at send time. At send time, the actual data types from the triggering event or API call are preserved.
+
+To force a specific type in the preview, you can explicitly cast the value:
+
+{% raw %}
+```liquid
+{% comment %} Force a value to be treated as a number {% endcomment %}
+{% assign orders = {{canvas_entry_properties.${number_of_orders}}} | plus: 0 %}
+
+{% comment %} Force a value to be treated as a string {% endcomment %}
+{% assign code = {{api_trigger_properties.${promo_code}}} | append: "" %}
+```
+{% endraw %}

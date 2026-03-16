@@ -4,7 +4,7 @@ article_title: Cartes de contenu
 page_order: 1
 layout: dev_guide
 guide_top_header: "Cartes de contenu"
-guide_top_text: "Avec les cartes de contenu, vous pouvez envoyer à vos clients un flux dynamique et hautement ciblé de contenu riche, dans les applications qu’ils aiment et sans interrompre leur expérience. <br><br>Les cartes de contenu sont intégrées directement dans votre application ou votre site web, ce qui vous permet de créer des boîtes réception de messages et des interfaces personnalisées qui étendent la portée d'autres canaux tels que l'e-mail ou les notifications push. En outre, les cartes de contenu prennent en charge des fonctionnalités plus personnalisées, notamment l'épinglage des cartes, la fermeture des cartes, la réception/distribution basée sur l'API, le contenu connecté, les délais d'expiration personnalisés des cartes, l'analyse des cartes et la coordination aisée avec les notifications push. <br><br>**La disponibilité des cartes de contenu dépend de votre forfait Braze. Contactez votre gestionnaire de compte ou votre responsable satisfaction client pour commencer.**."
+guide_top_text: "Avec les cartes de contenu, vous pouvez envoyer à vos clients un flux dynamique et hautement ciblé de contenu riche, dans les applications qu’ils aiment et sans interrompre leur expérience. <br><br>Les cartes de contenu sont directement intégrées à votre application ou à votre site Web, ce qui vous permet de créer des boîtes de réception de messages et des interfaces personnalisées qui élargissent la portée d'autres canaux tels que les e-mails ou les notifications push. De plus, les cartes de contenu prennent en charge des fonctionnalités de personnalisation plus avancées, notamment l'épinglage et la fermeture de la carte de contenu, la distribution basée sur une API, le contenu connecté, les durées d'expiration personnalisées des cartes, l'analyse des cartes et la coordination simplifiée avec les notifications push. <br><br>La disponibilité des cartes de contenu dépend de votre forfait Braze. Veuillez contacter votre gestionnaire de compte ou votre gestionnaire de la satisfaction client pour commencer."
 description: "Cette page d’accueil contient les cartes de contenu Braze. Vous trouverez ici des articles sur la création d’une carte de contenu, la personnalisation de vos cartes de contenu, les tests, le reporting, etc."
 channel:
   - content cards
@@ -31,28 +31,28 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 ---
 
-## [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} Avantages de l'utilisation des cartes de contenu
+## [![Cours d'apprentissage]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} [Braze](https://learning.braze.com/content-cards) Avantages de l'utilisation des cartes de contenu
 
-Voici quelques avantages de l'utilisation des cartes de contenu par rapport au fait de demander à vos développeurs de créer du contenu dans votre application :
+Voici quelques avantages liés à l'utilisation des cartes de contenu par rapport à la création de contenu dans votre application par vos développeurs :
 
 - **Une segmentation et une personnalisation plus faciles :** Vos données utilisateur résident dans Braze, ce qui facilite la définition de votre audience et la personnalisation de vos messages avec les cartes de contenu.
-- **Rapports centralisés :** Les analyses/analytiques des cartes de contenu sont suivies dans Braze, ce qui vous permet d'avoir des informations sur toutes vos campagnes en un seul emplacement/localisation.
-- **Des parcours clients cohérents :** Vous pouvez combiner des cartes de contenu avec d’autres canaux dans Braze pour créer des expériences client cohérentes. Un cas d’utilisation populaire consiste à envoyer une notification push, puis à enregistrer cette notification en tant que carte de contenu dans votre application pour tous ceux qui n’ont pas interagi avec la notification push. Si le contenu est créé directement dans votre application par vos développeurs, il est alors isolé du reste de votre envoi de messages.
-- **Aucun abonnement n'est requis :** Comme pour les messages in-app, les cartes de contenu ne nécessitent pas d’abonnement ou d’autorisations de la part de vos utilisateurs. Mais alors que les messages in-app sont sans permission et éphémères, les cartes de contenu sont sans permission et permanentes. Cela signifie que les stratégies d'envoi de messages qui associent les messages in-app et les cartes de contenu trouvent un excellent équilibre.
-- **Plus de contrôle sur l'expérience de l'envoi de messages :** Bien que vous ayez toujours besoin de l'aide de vos développeurs pour la configuration initiale des cartes de contenu, vous pouvez ensuite contrôler le message, les destinataires, le calendrier et bien plus encore, directement depuis votre tableau de bord de Braze.
+- **Rapports centralisés :** Les analyses des cartes de contenu sont suivies dans Braze, ce qui vous permet d'avoir une vue d'ensemble de toutes vos campagnes en un seul endroit.
+- **Des parcours clients cohérents :** Vous pouvez combiner des cartes de contenu avec d’autres canaux dans Braze pour créer des expériences client cohérentes. Un cas d’utilisation populaire consiste à envoyer une notification push, puis à enregistrer cette notification en tant que carte de contenu dans votre application pour tous ceux qui n’ont pas interagi avec la notification push. Si le contenu est créé directement dans votre application par vos développeurs, il est alors isolé du reste de l’envoi de messages.
+- **Aucun abonnement requis :** Comme pour les messages in-app, les cartes de contenu ne nécessitent pas d’abonnement ou d’autorisations de la part de vos utilisateurs. Cependant, alors que les messages in-app sont sans autorisation et éphémères, les cartes de contenu sont sans autorisation et permanentes. Cela signifie que les stratégies d'envoi de messages qui associent les messages in-app et les cartes de contenu offrent un excellent équilibre.
+- **Plus de contrôle sur l'expérience de l'envoi de messages :** Bien que vous ayez toujours besoin de l'aide de vos développeurs pour la configuration initiale des cartes de contenu, vous pourrez ensuite contrôler le message, les destinataires, le timing et bien plus encore directement depuis votre tableau de bord de Braze.
 
 ### Les cartes de contenu en chiffres
 
-Parce que vous, le marketeur, créez vous-même les cartes de contenu dans Braze, vous pouvez faire des mises à jour de messages et bénéficier d'un retour sur investissement sans avoir à refondre complètement votre application ou votre site web. Voici quelques statistiques utiles sur le RSI des cartes de contenu :
+En tant que marketeur, vous créez vous-même des cartes de contenu dans Braze. Vous pouvez donc mettre à jour vos messages et obtenir un retour sur investissement sans avoir à remanier entièrement votre application ou votre site web. Voici quelques statistiques utiles sur le RSI des cartes de contenu :
 
-- Les cartes de contenu sont **38 fois** plus efficaces que les e-mails pour stimuler les ventes sur une fenêtre de 72 heures[^1].
-- L'utilisation de cartes de contenu dans les campagnes de fidélisation augmente les conversions de **5 fois**[^1].
-- L'envoi aux utilisateurs d'actions de sensibilisation par le biais de notifications push, de messages in-app et de cartes de contenu se traduit par **6,9X** plus de sessions, par rapport aux utilisateurs engagés par le seul biais du push[^2].
-- L'envoi aux utilisateurs d'actions de sensibilisation par e-mail, de messages in-app et de cartes de contenu se traduit par une durée de vie moyenne des utilisateurs **3,6X** plus longue, par rapport aux utilisateurs engagés uniquement par e-mail[^2].
+- Les cartes de contenu sont **38 fois** plus efficaces que les e-mails pour stimuler les ventes sur une période de 72 heures.
+- L'utilisation de cartes de contenu dans les campagnes de fidélisation augmente les conversions de **5 fois**.
+- L'envoi de messages aux utilisateurs via des notifications push, des messages in-app et des cartes de contenu entraîne une augmentation de **6,9 fois** du nombre de sessions, par rapport aux utilisateurs engagés uniquement via des notifications push.
+- L'envoi de communications aux utilisateurs par e-mail, messages in-app et cartes de contenu permet de multiplier par **3,6** la durée de vie moyenne des utilisateurs, par rapport aux utilisateurs engagés uniquement par e-mail.
 
 ## Fonctionnement
 
-Braze propose différents types de cartes de contenu pour afficher la carte de contenu : Classique, Image légendée ou Image. Les cartes de contenu sont en fait une charge utile de données, et non pas ce à quoi ressemblent les données. 
+Braze propose différents types de cartes de contenu pour afficher la carte de contenu : Image classique, image légendée ou image. Les cartes de contenu sont en fait une charge utile de données, et non pas ce à quoi ressemblent les données. 
 
 Maintenant, passons à la technique. En coulisses, une carte de contenu comporte trois parties principales :
 
@@ -60,20 +60,22 @@ Maintenant, passons à la technique. En coulisses, une carte de contenu comporte
 - **Voir :** À quoi ressemble la carte
 - **Contrôleur :** Comment l’utilisateur interagit avec la carte
 
-Dans le cas d'une implémentation par défaut, vous ajoutez le contenu de la carte - le modèle - à partir du tableau de bord ou par l'intermédiaire d'API, et la vue et le contrôleur sont gérés par ce que l'on appelle un contrôleur de vue. Un contrôleur de vue est la « colle » entre l’application dans son ensemble et l’écran.
+Pour une implémentation par défaut, vous ajoutez le contenu de la carte (le modèle) soit à partir du tableau de bord, soit via des API, et la vue et le contrôleur sont gérés par ce qu'on appelle un contrôleur de vue. Un contrôleur de vue est la « colle » entre l’application dans son ensemble et l’écran.
+
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
 
 ## Cas d’utilisation
 
-Consultez cette section pour connaître quelques cas d'utilisation courants des cartes de contenu.
+Veuillez vous référer à cette section pour découvrir quelques cas d'utilisation courants des cartes de contenu.
 
 {% alert tip %}
-Pour plus d'inspiration, nous vous recommandons vivement de consulter notre [Guide d'inspiration des cartes de contenu](https://www.braze.com/resources/reports-and-guides/content-cards-inspiration-guide), qui comprend plus de 20 campagnes personnalisables, notamment des programmes de recommandation, des lancements de nouveaux produits et des renouvellements d'abonnement.
+Pour plus d'inspiration, nous vous recommandons vivement de consulter notre [Guide d'inspiration](https://www.braze.com/resources/reports-and-guides/content-cards-inspiration-guide) pour [les cartes de contenu](https://www.braze.com/resources/reports-and-guides/content-cards-inspiration-guide), qui comprend plus de 20 campagnes personnalisables, notamment des programmes de recommandation, des lancements de nouveaux produits et des renouvellements d'abonnement.
 {% endalert %}
 
 {% tabs %}
 {% tab Onboarding and next steps %}
 
-Lorsque de nouveaux utilisateurs explorent votre application et votre site web, faites-leur découvrir les valeurs et les avantages de ce que vous proposez grâce à des cartes de contenu placées à des endroits stratégiques. Encouragez les utilisateurs à s'abonner à d'autres canaux de communication avec une carte de contenu sur votre page d'accueil, et enregistrez les tâches d'onboarding en suspens dans un onglet dédié à l'onboarding alimenté par des cartes de contenu. N'oubliez pas de retirer une carte lorsque l'utilisateur a accompli la tâche souhaitée !
+Lorsque de nouveaux utilisateurs explorent votre application et votre site Web, présentez-leur les valeurs et les avantages de votre offre à l'aide de cartes de contenu stratégiquement placées. Encouragez les utilisateurs à souscrire à d'autres canaux de communication à l'aide d'une carte de contenu sur votre page d'accueil, et enregistrez les tâches d'onboarding en cours dans un onglet dédié à l'onboarding, alimenté par des cartes de contenu. Veuillez ne pas oublier de retirer une carte une fois qu'un utilisateur a accompli la tâche souhaitée.
 
 <style>
   .imgDiv {
@@ -88,7 +90,7 @@ Lorsque de nouveaux utilisateurs explorent votre application et votre site web, 
 {% endtab %}
 {% tab Event attendance %}
 
-Présentez les cartes de contenu en haut de la page d'accueil d'un utilisateur pour encourager la participation à un événement, en utilisant le ciblage par emplacement/localisation pour atteindre les utilisateurs potentiels là où ils se trouvent. Inviter les utilisateurs à des événements physiques pertinents est valorisant pour eux, surtout si vous leur envoyez des communications personnalisées qui tirent parti de leur activité précédente avec votre marque.
+Présentez des cartes de contenu en haut de la page d'accueil d'un utilisateur afin d'encourager la participation à des événements, en utilisant le ciblage par localisation pour atteindre les utilisateurs potentiels là où ils se trouvent. Inviter les utilisateurs à des événements physiques pertinents est valorisant pour eux, surtout si vous leur envoyez des communications personnalisées qui tirent parti de leur activité précédente avec votre marque.
 
 <div class="imgDiv">
 <img src="{% image_buster /assets/img_archive/cc_usecase_event.png %}" style="border:0px">
@@ -117,36 +119,36 @@ Tirez parti des cartes de contenu pour mettre en avant les messages promotionnel
 
 ### Autres cas d’utilisation
 
-En dehors de ces principaux cas d’utilisation, nos clients utilisent les cartes de contenu de nombreuses façons différentes. La puissance des cartes de contenu réside dans leur flexibilité. Si le cas d'utilisation que vous souhaitez n'est pas indiqué ici, vous pouvez configurer des [paires clé-valeur]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) et envoyer les charges utiles à votre app ou site web.
+En dehors de ces principaux cas d’utilisation, nos clients utilisent les cartes de contenu de nombreuses façons différentes. La puissance des cartes de contenu réside dans leur flexibilité. Si le cas d'utilisation que vous recherchez n'est pas présenté ici, vous pouvez configurer [des paires clé-valeur]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) et envoyer les charges utiles à votre application ou à votre site web.
 
 ## Cartes de contenu dans votre application
 
-Cette section couvre les façons les plus courantes de placer les cartes de contenu dans votre application ou votre site web :
+Cette section traite des méthodes les plus courantes pour intégrer des cartes de contenu dans votre application ou votre site web :
 
 - [Boîte de réception de messages](#message-inbox)
 - [Carrousel](#carousel)
 
-La logique et la mise en œuvre de ces placements ne sont pas une option par défaut dans Braze, de sorte que votre équipe d'ingénieurs doit fournir et prendre en charge le travail pour réaliser ces cas d'utilisation. Pour un aperçu de la manière de mettre en œuvre ces placements, reportez-vous à la section [Création d'une carte de contenu personnalisée]({{site.baseurl}}/developer_guide/content_cards/creating_cards/).
+La logique et la mise en œuvre de ces placements ne sont pas prédéfinies dans Braze. Par conséquent, votre équipe d'ingénieurs doit fournir et prendre en charge le travail nécessaire à la réalisation de ces cas d'utilisation. Pour un aperçu de la manière de mettre en œuvre ces placements, reportez-vous à la section [Création d'une carte de contenu personnalisée]({{site.baseurl}}/developer_guide/content_cards/creating_cards/).
 
-![3 exemples de cartes de contenu, montrant les différentes options de placement : boîte de réception des messages, carrousel et bannière.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
+![3 exemples de cartes de contenu illustrant les différentes options d'emplacement : boîte de réception des messages, carrousel et bannière.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
 ### Boîte de réception de messages
 
-![Exemple de carte de contenu utilisant l'envoi de la boîte de réception des messages.]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![Exemple de carte de contenu utilisant l'emplacement « boîte de réception des messages ».]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Une boîte de réception de messages (également appelée centre de notification ou flux) est un emplacement persistant dans votre application ou votre site Web où vous pouvez afficher les cartes de contenu dans le format que vous préférez. Chaque message dans la boîte de réception constitue sa propre carte de contenu. 
 
-La boîte de réception des messages est une implémentation par défaut qui ne nécessite qu'un minimum de développement. Braze fournit un [contrôleur de vue](#how-it-works) pour une boîte de réception de messages sur iOS, Android et web afin de faciliter le processus de création.
+La boîte de réception des messages est une implémentation par défaut qui nécessite un développement minimal. Braze fournit un [contrôleur de vue](#how-it-works) pour une boîte de réception de messages sur iOS, Android et le Web afin de faciliter le processus de création.
 
 #### Avantages
 
 - Les utilisateurs peuvent recevoir de nombreuses cartes en un seul endroit
-- Moyen efficace de faire resurgir des informations manquées ou écartées sur d'autres canaux (notamment les notifications push).
+- Méthode efficace pour faire ressortir les informations manquées ou ignorées sur d'autres canaux (en particulier les notifications push)
 - Aucun abonnement n’est requis
 
 #### Comportement
 
-Lorsqu’un utilisateur est éligible à une carte, elle apparaîtra automatiquement dans sa boîte de réception. Les cartes de contenu sont créées pour être consultées en bloc, de sorte que les utilisateurs peuvent visualiser en une seule fois toutes les cartes auxquelles ils peuvent prétendre.
+Lorsqu’un utilisateur est éligible à une carte, elle apparaîtra automatiquement dans sa boîte de réception. Les cartes de contenu sont créées pour être consultées en masse, de sorte que les utilisateurs peuvent visualiser toutes les cartes auxquelles ils ont droit en une seule fois.
 
 Avec la mise en œuvre par défaut, les cartes de contenu dans la boîte de réception peuvent apparaître comme des cartes classiques (contenant un titre, du texte et une image facultative), des cartes contenant uniquement une image ou des cartes contenant une image légendée. Vous choisissez l’emplacement de la boîte de réception des messages dans votre application.
 
@@ -154,7 +156,7 @@ Les cartes de contenu sont fournies avec un style par défaut, mais vous pouvez 
 
 ### Carrousel
 
-![Un exemple de carte de contenu utilisant le placement "carrousel".]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![Exemple de carte de contenu utilisant l'emplacement « carrousel ».]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Les carrousels affichent plusieurs éléments de contenu dans un seul emplacement que vos clients peuvent balayer pour l’afficher. Il peut s'agir d'un diaporama d'images, de texte, de vidéo ou d'une combinaison de ces éléments. Il s’agit d’une implémentation personnalisée qui nécessite un peu de travail de la part de vos développeurs.
 
@@ -167,7 +169,7 @@ Les carrousels affichent plusieurs éléments de contenu dans un seul emplacemen
 
 Lorsqu’un utilisateur est éligible à une carte, elle apparaîtra dans un carrousel sur la page de votre application à laquelle le carrousel est ajouté. Les utilisateurs peuvent faire le faire glisser horizontalement pour afficher des cartes mises en vedette supplémentaires.
 
-Étant donné qu’il s’agit d’une implémentation personnalisée, vous devrez travailler avec vos développeurs pour créer vos propres vues afin d’afficher les cartes de contenu. Les cartes classiques par défaut, les cartes avec image seulement et les cartes avec image légendée ne sont pas prises en charge par cette implémentation.
+Étant donné qu’il s’agit d’une implémentation personnalisée, vous devrez travailler avec vos développeurs pour créer vos propres vues afin d’afficher les cartes de contenu. Les cartes classiques, images seules et images légendées par défaut ne sont pas prises en charge dans cette implémentation.
 
 ## Intégrer des cartes de contenu
 

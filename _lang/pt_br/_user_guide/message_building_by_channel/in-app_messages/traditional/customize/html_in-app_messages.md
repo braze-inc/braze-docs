@@ -24,68 +24,12 @@ As mensagens no app em HTML permitem maior controle sobre a aparência de uma me
 As mensagens HTML personalizadas podem usar os métodos [do JavaScript Bridge](#javascript-bridge) para registrar eventos, definir atributos personalizados, fechar a mensagem e muito mais! Confira nosso [repositório no GitHub](https://github.com/braze-inc/in-app-message-templates), que contém instruções detalhadas sobre como usar e personalizar mensagens no app em HTML para suas necessidades, e um conjunto de modelos de mensagens no app em HTML5 para ajudá-lo a começar.
 
 {% alert note %}
-Para ativar mensagens no app HTML através do Web SDK, você deve fornecer a opção de inicialização `allowUserSuppliedJavascript` para a Braze, por exemplo, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Isso ocorre por motivos de segurança, pois as mensagens HTML no app podem executar JavaScript, portanto, exigimos que um mantenedor de site as ative.
+Para ativar mensagens no app HTML através do Web SDK, você deve fornecer a opção de inicialização `allowUserSuppliedJavascript` para o Braze: por exemplo, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Isso ocorre por motivos de segurança, pois as mensagens HTML no app podem executar JavaScript, portanto, exigimos que um mantenedor de site as ative.
 {% endalert %}
 
 ## Ponte JavaScript {#javascript-bridge}
 
-As mensagens HTML no app para SDKs da Web, Android, iOS e Swift suportam uma "ponte" JavaScript para fazer a interface com o SDK da Braze, permitindo que você dispare ações personalizadas da Braze quando os usuários clicarem em elementos com links ou se engajarem com o seu conteúdo. Esses métodos existem com a variável global `brazeBridge` ou `appboyBridge`.
-
-{% alert important %}
-A Braze recomenda que você use a variável global `brazeBridge`. A variável global `appboyBridge` está obsoleta, mas continuará a funcionar para os usuários existentes. Se estiver usando `appboyBridge`, sugerimos que migre para `brazeBridge`. <br><br> `appboyBridge` foi preterido nas seguintes versões do SDK:
-- Web: [3.3.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#330)
-- Android: [14.0.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog/#1400)
-- iOS: [4.2.0+]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/#420)
-{% endalert %}
-
-Por exemplo, para registrar um atributo personalizado e um evento personalizado e, em seguida, fechar a mensagem, é possível usar o seguinte JavaScript na mensagem no app em HTML:
-
-```html
-<button id="button">Set Favorite Color</button>
-<script>
-// Wait for the `brazeBridge` ready event, "ab.BridgeReady"
-window.addEventListener("ab.BridgeReady", function(){
-  // Event handler when the button is clicked
-  document.querySelector("#button").onclick = function(){
-    // Track Button 1 clicks for analytics
-    // Note: This requires Android SDK v8.0.0, Web SDK v2.5.0, Swift SDK v5.4.0, and iOS SDK v3.23.0
-    brazeBridge.logClick("0");
-    // Set the user's custom attribute
-    brazeBridge.getUser().setCustomUserAttribute("favorite color", "blue");
-    // Track a custom event
-    brazeBridge.logCustomEvent("completed survey");
-    // Send the enqueued data to Braze
-    brazeBridge.requestImmediateDataFlush();
-    // Close this in-app message
-    brazeBridge.closeMessage();
-  };
-}, false);
-</script>
-```
-
-### Métodos do JavaScript Bridge {#bridge}
-
-Os seguintes métodos JavaScript são suportados nas mensagens no app Braze HTML:
-
-<style>
-/* Makes first column wider */
-#article-main > table:first-of-type > tbody > tr td:first-child {
-    min-width: 470px !important;
-}
-/* Makes code column smaller font */
-#article-main > table:first-of-type > tbody > tr td:first-child code {
-    font-size:12px !important;
-}
-#article-main > table:first-of-type td {
-  word-break: break-word;
-}
-</style>
-
-{% alert note %}
-Não é possível fazer referência ao Liquid para inserir <code>customAttributes</code> em métodos do JavaScript Bridge.
-{% endalert %}
-
-{% multi_lang_include archive/appboyBridge.md %}
+{% include javascript_bridge/reference.md %}
 
 ## Ações baseadas em links
 
@@ -137,7 +81,7 @@ Ao criar mensagens no app em HTML personalizado, você pode fazer uma prévia do
 
 O painel de visualização de mensagens do editor mostra uma prévia realista que renderiza o JavaScript incluído em sua mensagem. Você pode fazer uma prévia e interagir com suas mensagens personalizadas no painel de visualização clicando na paginação, enviando formulários ou pesquisas, assistindo a animações em JavaScript e muito mais!
 
-![Interagir com a prévia do HTML passando o dedo pelas páginas.]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
+![Interagindo com a prévia HTML ao deslizar pelas páginas.]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
 {% alert tip %}
 Todos os métodos JavaScript do `brazeBridge` que você usar no HTML não atualizarão os perfis de usuário durante a prévia no dashboard.
@@ -150,12 +94,12 @@ Para usar a prévia em HTML para mensagens no app, você deve fazer upgrade para
 {% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
 
 {% alert warning %}
-Como esse tipo de mensagem só pode ser recebido por determinadas versões posteriores do SDK, os usuários que estiverem em versões não suportadas do SDK não receberão a mensagem. Considere adotar esse tipo de mensagem depois que uma parte significativa da sua base de usuários estiver acessível ou direcione apenas os usuários cuja versão do app seja posterior aos requisitos. Saiba mais sobre a [filtragem pela versão mais recente do app]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions).
+Como esse tipo de mensagem só pode ser recebido por certas versões mais recentes do SDK, usuários que estão em versões de SDK não suportadas não receberão a mensagem. Considere adotar esse tipo de mensagem depois que uma parte significativa da sua base de usuários estiver acessível ou direcione apenas os usuários cuja versão do app seja posterior aos requisitos. Saiba mais sobre a [filtragem pela versão mais recente do app]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions).
 {% endalert %}
 
 ### Criação de uma campanha {#instructions}
 
-Os usuários do seu aplicativo móvel precisam fazer upgrade para as versões do SDK compatíveis para receber uma mensagem no app com **código personalizado**. Recomendamos que você [incentive os usuários a fazer upgrade de]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) seus apps móveis antes de lançar campanhas que dependam de versões mais recentes do SDK da Braze.
+Seus usuários do app móvel precisam fazer upgrade para as versões de SDK suportadas para receber uma mensagem no app **Custom Code**. Recomendamos que você [incentive os usuários a fazer upgrade de]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) seus apps móveis antes de lançar campanhas que dependam de versões mais recentes do SDK da Braze.
 
 #### Arquivos de ativos
 
@@ -173,7 +117,7 @@ Os seguintes tipos de arquivos são suportados para fazer upload:
 
 A Braze recomenda fazer upload de ativos para a biblioteca de mídia por dois motivos:
 
-1. Os ativos adicionados a uma campanha por meio da biblioteca de mídia permitem que suas mensagens sejam exibidas mesmo quando o usuário estiver off-line ou com uma conexão de Internet ruim.
+1. Ativos adicionados a uma campanha via a biblioteca de mídia permitem que suas mensagens sejam exibidas mesmo enquanto o usuário está offline ou tem uma conexão de internet ruim.
 2. Os ativos feitos upload na Braze podem ser reutilizados em todas as campanhas.
 
 ##### Adição de arquivos de ativos
@@ -184,66 +128,36 @@ Para adicionar novos ativos à sua campanha, use a seção de arrastar e soltar 
 
 Depois que seus ativos forem adicionados, eles aparecerão na seção **Assets for this campaign (Ativos para esta campanha** ). 
 
-Se o nome de arquivo de um ativo corresponder ao de um ativo HTML local, ele será substituído automaticamente (por exemplo, `cat.png` é feito upload e `<img src="cat.png" />` existe). 
+Se o nome do arquivo de um ativo corresponder ao de um ativo HTML local, ele é substituído automaticamente (por exemplo, `cat.png` é enviado e `<img src="cat.png" />` existe). 
 
 Caso contrário, passe o mouse sobre um ativo da lista e selecione <i class="fas fa-copy"></i> **Copy** para copiar o URL do arquivo para a área de transferência. Em seguida, cole o URL do ativo copiado em seu HTML como faria normalmente ao fazer referência a um ativo remoto.
-
 
 ### editor de HTML
 
 As alterações feitas no HTML são renderizadas automaticamente no painel de prévia à medida que você digita. Todos os métodos [JavaScript do`brazeBridge` ](#bridge) que você usar no HTML não atualizarão os perfis de usuário durante a prévia no dashboard.
 
 {% alert tip %}
-Você pode selecionar <i class="fa-solid fa-magnifying-glass"></i> **Search** no editor de HTML para pesquisar em seu código!
+Você pode selecionar <i class="fa-solid fa-magnifying-glass"></i> **Pesquisar** dentro do editor de HTML para buscar dentro do seu código!
 {% endalert %}
 
 ### Rastreamento de botões {#button-tracking-improvements}
 
-Você pode rastrear a performance em sua mensagem no app com código personalizado usando o método [`brazeBridge.logClick(button_id)`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) JavaScript. Isso permite rastrear programaticamente o "Botão 1", o "Botão 2" e os "Cliques no corpo" usando `brazeBridge.logClick('0')`, `brazeBridge.logClick('1')` ou `brazeBridge.logClick()`, respectivamente.
-
-| Cliques     | Método                       |
-| ---------- | ---------------------------- |
-| Botão 1   | `brazeBridge.logClick('0')` |
-| Botão 2   | `brazeBridge.logClick('1')` |
-| Clique no corpo | `brazeBridge.logClick()`    |
-| Rastreamento de botões personalizados |`brazeBridge.logClick('your custom name here')`|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+Você pode rastrear a performance em sua mensagem no app com código personalizado usando o método [`brazeBridge.logClick(button_id)`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) JavaScript. Para a referência completa, veja [Métodos da Ponte JavaScript](#bridge) acima.
 
 {% alert note %}
 Esse método de rastreamento de botões substitui os métodos anteriores de rastreamento automático de cliques (como o `?abButtonId=0`), que foram removidos.
 {% endalert %}
 
-É possível rastrear vários eventos de cliques em botões por impressão. Por exemplo, para fechar uma mensagem e registrar um clique no Botão 2, use o seguinte:
-
-```html
-<a href="#" onclick="brazeBridge.logClick('1');brazeBridge.closeMessage()">✖</a>
-``` 
-
-Você também pode rastrear novos nomes de botões personalizados - até 100 nomes exclusivos por campanha. Por exemplo, `brazeBridge.logClick('blue button')` ou `brazeBridge.logClick('viewed carousel page 3')`.
-
-{% alert tip %}
-Ao usar métodos JavaScript em um atributo `onclick`, coloque os valores da string entre aspas simples para evitar conflitos com o atributo HTML com aspas duplas.
-{% endalert %}
-
-#### Limitações
-
-- Você pode ter até 100 IDs de botão exclusivos por campanha.
-- Os IDs de botão podem ter até 255 caracteres cada.
-- Os IDs de botão só podem incluir letras, números, espaços, traços e sublinhados.
-
 ### Alterações incompatíveis com versões anteriores {#backward-incompatible-changes}
 
 1. A mudança incompatível mais notável com esse novo tipo de mensagem são os requisitos do SDK. Os usuários cujo app SDK não atende aos [requisitos mínimos de versão do SDK](#supported-sdk-versions) não receberão a mensagem.
-<br>
-
 2. O deeplink `braze://close`, que era suportado anteriormente em apps móveis, foi removido em favor do JavaScript `brazeBridge.closeMessage()`. Isso permite o envio de mensagens HTML para várias plataformas, já que a Web não oferece suporte a links profundos.
-
 3. O rastreamento automático de cliques, que usava `?abButtonId=0` para IDs de botões, e o rastreamento de "cliques no corpo" em botões de fechamento foram removidos. Os exemplos de código a seguir mostram como alterar seu HTML para usar nossos novos métodos JavaScript de rastreamento de cliques:
 
    | Antes | Após |
    |:-------- |:------------|
-   |<code>&lt;a href="<mem_97fe6226-0c13-45a0-b5d7-a7948f9dc8af/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_fab573ad-177f-4a2c-bd02-ceef0c59cc6c/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_3ce844b6-6a42-4233-b15f-e0be3798a696/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_d2f3e0e2-bab4-43f3-ac17-45283cd05d03/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
-   |<code>&lt;script&gt;<br>location.href = "<mem_f92d0e17-fbdd-4f32-9c68-9e4974fe35e9/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
+   |<code>&lt;a href="<mem_1b109db0-e2b8-4f4b-9913-5faac46ae9ef/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_29093175-51a6-4ec2-9b04-a4624ae70fc8/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_08480904-4ef5-4e48-9d9e-ec805c3f3025/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_9e17ee79-d068-47b5-8db4-de7539127172/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+   |<code>&lt;script&gt;<br>location.href = "<mem_d97d9a73-1539-46a0-84fe-722e6ffeccdf/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 

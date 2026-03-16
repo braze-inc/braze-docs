@@ -55,7 +55,7 @@ Push-Story-Benachrichtigungen zeichnen einen <i>Body Click</i> auf, wenn die Ben
 {% endif %}
 
 {% if include.metric == "Click-to-Open Rate" %}
-Die <i>Öffnungsrate</i> ist der Prozentsatz der geöffneten E-Mails, die von einem einzelnen Nutzer:innen oder Rechner mindestens einmal angeklickt wurden, und ist nur im <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Berichts-Builder</a> verfügbar.
+<i>Die Klick-Öffnungsrate</i> ist der Prozentsatz der geöffneten E-Mails, die mindestens einmal von einem einzelnen Nutzer oder einem Gerät angeklickt wurden, und ist nur im <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>Berichts-Builder</a> verfügbar.
 {% endif %}
 
 {% if include.metric == "Close Message" %}
@@ -239,7 +239,7 @@ Der <i>Umsatz</i> ist der Gesamtumsatz in Dollar von Kampagnenempfängern innerh
 {% endif %}
 
 {% if include.metric == "Total Impressions" %}
-<i>Die Impressionen insgesamt</i> geben an, wie oft eine Nachricht angesehen wurde. Braze protokolliert eine Impression erst, wenn die Nachricht für die Nutzer:innen auf ihrem Bildschirm sichtbar wird. Wenn beispielsweise eine Nachricht am unteren Ende einer Seite platziert ist, wird die Impression erst protokolliert, wenn der Nutzer:innen nach unten scrollt und die Nachricht zu sehen ist. Wenn einem Nutzer:innen dieselbe Nachricht zweimal angezeigt wird, zählt dies als zwei Impressionen.
+<i>Die Gesamtanzahl der Impressionen</i> entspricht der Häufigkeit, mit der eine Nachricht angezeigt wird. Braze protokolliert eine Impression nur dann, wenn die Nachricht für den Nutzer:in auf seinem Bildschirm sichtbar wird. Wenn beispielsweise eine Nachricht am Ende einer Seite platziert wird, wird die Impression erst protokolliert, wenn der Nutzer:in nach unten scrollt und die Nachricht sichtbar wird. Wenn einer Nutzer:in dieselbe Nachricht zweimal angezeigt wird, wird dies als zwei Impressionen gezählt.
 {% endif %}
 
 {% if include.metric == "Total Opens" %}
@@ -251,7 +251,7 @@ Der <i>Umsatz</i> ist der Gesamtumsatz in Dollar von Kampagnenempfängern innerh
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>Eindeutige Klicks</i> ist die eindeutige Anzahl von Empfängern, die mindestens einmal auf einen Link in einer Nachricht geklickt haben, und wird gemessen durch <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+<i>Einzigartige Klicks</i>  bezeichnen die eindeutige Anzahl von Empfängern:innen, die mindestens einmal auf einen Link innerhalb einer Nachricht geklickt haben, und werden gemessen durch <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}
@@ -261,7 +261,7 @@ Der <i>Umsatz</i> ist der Gesamtumsatz in Dollar von Kampagnenempfängern innerh
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 {% if include.metric == "Unique Impressions" %}
-<i>Eindeutige Impressionen</i> ist die Gesamtzahl der Nutzer:innen, die eine Nachricht aus einer bestimmten Kampagne angesehen haben. Eine Impression wird erst protokolliert, wenn die Nachricht auf dem Bildschirm eines Nutzers:innen sichtbar wird.
+<i>Einzigartige Impressionen</i> sind die Gesamtzahl der Nutzer:innen, die eine Nachricht aus einer bestimmten Kampagne angesehen haben. Eine Impression wird nur dann protokolliert, wenn die Nachricht auf dem Bildschirm einer Nutzer:in sichtbar wird.
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}

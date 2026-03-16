@@ -3,7 +3,7 @@ nav_title: Configuration de la ligne
 article_title: Configuration de la LIGNE
 description: "Cet article explique comment configurer le canal LINE de Braze, y compris les conditions préalables et les prochaines étapes suggérées."
 page_type: partner
-search_tag: Partner
+search_tag: Partenaire
 page_order: 0
 channel:
  - LINE
@@ -25,10 +25,10 @@ Vous aurez besoin des éléments suivants pour intégrer LINE avec Braze :
 - [Compte développeurs LINE](https://developers.line.biz/en/docs/line-developers-console/login-account/)
 - [Canal de l’API d’envoi de messages LINE](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
 
-L'envoi de messages LINE à partir de Braze puise dans les crédits de messages de votre compte.
+L'envoi de messages LINE depuis Braze est déduit des crédits de messagerie de votre compte.
 
 {% alert note %}
-**Réglage de `native_line_id`**: Vous pouvez définir `native_line_id` en envoyant des mises à jour d'utilisateurs à Braze (par exemple, avec le [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) l'endpoint, l'[importation CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou l'[ingestion de données dans le nuage]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). Si votre SDK côté client ne dispose pas d'un champ dédié à `native_line_id`, envoyez-le dans les mises à jour utilisateur côté serveur à l'aide de l'une des méthodes suivantes.
+**Cadre `native_line_id`**: Vous pouvez définir`native_line_id`cela en envoyant les mises à jour des utilisateurs à Braze (par exemple, avec [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)l'endpoint, [l'importation CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou [l'ingestion de données dans le cloud]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). Si votre SDK côté client ne dispose pas d'un champ dédié pour `native_line_id`, veuillez l'envoyer dans les mises à jour utilisateur côté serveur en utilisant l'une de ces méthodes.
 {% endalert %}
 
 ## Types de comptes LINE
@@ -66,7 +66,7 @@ Pour mettre en place des mises à jour cohérentes pour les utilisateurs, repren
 5. [(Facultatif) Fusionner les profils utilisateurs](#step-5-merge-profiles-optional)
 
 {% alert note %}
-Vous ne pouvez avoir qu'un seul compte LINE dans un même espace de travail. Si vous possédez plusieurs comptes LINE, nous vous recommandons d'utiliser chacun d'entre eux dans un espace de travail différent.
+Il est possible de disposer d'un seul compte LINE par espace de travail. Si vous disposez de plusieurs comptes LINE, nous vous recommandons d'utiliser chacun d'entre eux dans un espace de travail distinct.
 {% endalert %}
 
 ## Étape 1 : Importation ou mise à jour des utilisateurs LINE existants
@@ -328,7 +328,7 @@ Pour obtenir l'ID LINE correct pour chaque utilisateur, configurez l'identifiant
 
 Cette méthode permet aux utilisateurs de lier leur compte LINE au compte utilisateur de votre application. Vous pouvez ensuite utiliser Liquid dans Braze, comme {% raw %}`{{line_id}}`{% endraw %}, pour créer une URL personnalisée pour l'utilisateur qui transmet son LINE ID à votre site Web ou à votre application, qui peut alors être associée à un utilisateur connu.
 
-1. Créez un Canvas basé sur une action qui repose sur un changement d'état de l'abonnement et qui se déclenche lorsqu'un utilisateur s'abonne à votre canal LINE.<br>![Canvas qui se déclenche lorsqu'un utilisateur s'abonne au canal LINE.]({% image_buster /assets/img/line/account_link_1.png %})
+1. Créez un Canvas basé sur une action qui repose sur un changement d'état de l'abonnement et qui se déclenche lorsqu'un utilisateur s'abonne à votre canal LINE.<br>![Canvas qui sert de déclencheur lorsqu'un utilisateur s'abonne à la chaîne LINE.]({% image_buster /assets/img/line/account_link_1.png %})
 2. Créez un message incitant les utilisateurs à se connecter à votre site web ou à votre app, en transmettant l'ID LINE de l'utilisateur en tant que paramètre de requête (via Liquid), comme par exemple :
 
 ```
@@ -337,13 +337,13 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 {: start="3"}
 3\. Créez un message de suivi qui transmet le code du coupon.
-4\. (Facultatif) Créez une campagne basée sur une action ou un canvas qui se déclenche lorsque l'utilisateur LINE est identifié pour lui envoyer son code de coupon. <br>![Campagne basée sur des actions qui se déclenche lorsque l'utilisateur de LINE est identifié.]({% image_buster /assets/img/line/account_link_2.png %})
+4\. (Facultatif) Créez une campagne basée sur une action ou un canvas qui se déclenche lorsque l'utilisateur LINE est identifié pour lui envoyer son code de coupon. <br>![Campagne basée sur l'action qui se déclenche lorsque l'utilisateur LINE est identifié.]({% image_buster /assets/img/line/account_link_2.png %})
 
 #### Fonctionnement
 
 Une fois que l'utilisateur s'est connecté, une modification est apportée sur votre site web ou votre app afin que l'ID de l'utilisateur soit renvoyé à Braze pour l'associer à l'ID LINE qui a été transmis dans le cadre de l'URL, avec un exemple de code tel que :
 
-```json
+```javascript
 const currentUrl = new URL(window.location.href)
 const queryParams = new URLSearchParams(currentUrl.search);
 const lineUserId = queryParams.get("line_user_id")

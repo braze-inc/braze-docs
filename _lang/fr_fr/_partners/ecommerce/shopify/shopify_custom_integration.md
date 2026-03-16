@@ -719,7 +719,7 @@ Il est essentiel de valider que les adresses `shopify_customer_id` et `email_add
 ##### Comportement en cas d'échec et fusion
 Tout code d'état autre que `200` est considéré comme un échec.
 
-- **Fusionner les implications :** Si l'endpoint échoue (retour non`200` ou dépassement de délai), Braze ne peut pas récupérer l'ID externe. Par conséquent, la fusion entre le profil utilisateur Shopify et le profil utilisateur Braze ne se fera pas à ce moment-là.
+- **Fusionner les implications :** Si l'endpoint échoue (il renvoie une adresse non`200` ou est interrompu), Braze ne peut pas récupérer l'ID externe. Par conséquent, la fusion entre le profil utilisateur Shopify et le profil utilisateur Braze ne se fera pas à ce moment-là.
 - **Logique de réessai :** Braze peut effectuer des tentatives immédiates standard sur le réseau, mais si l'échec persiste, la fusion sera reportée jusqu'au prochain événement admissible (par exemple, la prochaine fois que l'utilisateur mettra à jour son profil ou effectuera un paiement).
 - **Possibilité de prise en charge :** Pour permettre la fusion des utilisateurs en temps voulu, assurez-vous que votre endpoint est hautement disponible et qu'il gère le champ facultatif `email_address` de manière gracieuse.
 
@@ -729,7 +729,7 @@ Répétez l'[étape 6](#step-6) et saisissez l'URL de votre endpoint après avoi
 
 ##### Considérations
 
-- Si votre ID externe n'est pas généré lorsque Braze envoie une requête à votre endpoint, l'intégration utilisera par défaut l'ID du client Shopify lorsque la fonction `changeUser` sera appelée. Cette étape est cruciale pour fusionner le profil de l'utilisateur anonyme avec le profil de l'utilisateur identifié. Par conséquent, il peut y avoir une période temporaire pendant laquelle différents types d'ID externes existent dans votre espace de travail.
+- Si votre ID externe n'est pas généré lorsque Braze envoie une requête à votre endpoint, l'intégration utilisera par défaut l'ID du client Shopify lorsque la fonction `changeUser` est appelée. Cette étape est cruciale pour fusionner le profil de l'utilisateur anonyme avec le profil de l'utilisateur identifié. Par conséquent, il peut y avoir une période temporaire pendant laquelle différents types d'ID externes existent dans votre espace de travail.
 - Lorsque l'ID externe est disponible dans le métafichier `braze.external_id`, l'intégration donnera la priorité à cet ID externe et l'attribuera. 
     - Si l'ID personnalisé de Shopify était précédemment défini comme l'ID externe de Braze, il sera remplacé par la valeur du métafield `braze.external_id`. 
 

@@ -29,7 +29,7 @@ Cuando los usuarios añaden artículos a su cesta a través de mensajes de catá
 
 | Requisito | Descripción |
 | --- | --- |
-| Cuenta de WhatsApp Business | Para utilizar los mensajes de productos de WhatsApp, debes tener una cuenta de WhatsApp Business conectada con Braze. |
+| Cuenta de WhatsApp Business | Para utilizar los mensajes de producto de WhatsApp, debes tener una cuenta de WhatsApp Business conectada con Braze. |
 | Metacatálogo | Tienes que configurar un Metacatálogo en tu administrador de comercio. |
 | Cumplimiento del plazo | Cumplir las [Condiciones y Políticas de Meta Commerce](https://www.facebook.com/policies_center/commerce). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

@@ -1,17 +1,17 @@
 ---
-nav_title: API 이메일 기본 설정 센터
-article_title: API 이메일 기본 설정 센터
+nav_title: API 이메일 선호 센터
+article_title: API 이메일 선호 센터
 page_order: 1
-description: "이 문서에서는 API 이메일 환경설정 센터와 이를 커스텀하는 방법에 대해 설명합니다."
+description: "이 문서에서는 API 이메일 선호 센터와 이를 사용자 정의하는 방법에 대해 설명합니다."
 channel:
   - email
 ---
 
-# API 이메일 기본 설정 센터
+# API 이메일 선호 센터
 
-> 환경 설정 센터를 설정하면 사용자가 [이메일 메시징]({{site.baseurl}}/user_guide/message_building_by_channel/email/)에 대한 알림 환경 설정을 편집하고 관리할 수 있는 원스톱 상점을 제공합니다. 이 문서에는 API로 생성된 환경설정 센터를 구축하는 단계가 포함되어 있지만 [드래그 앤 드롭 편집기를]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/) 사용하여 환경설정 센터를 구축할 수도 있습니다.
+> 환경 설정 센터를 설정하면 사용자가 [이메일 메시징]({{site.baseurl}}/user_guide/message_building_by_channel/email/)에 대한 알림 환경 설정을 편집하고 관리할 수 있는 원스톱 상점을 제공합니다. 이 문서에는 API 생성 선호 센터를 구축하는 단계가 포함되어 있지만, [드래그 앤 드롭 편집기]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/)를 사용하여 선호 센터를 구축할 수도 있습니다.
 
-Braze 대시보드에서 **오디언스** > **이메일 기본 설정 센터로** 이동합니다.
+Braze 대시보드에서 **오디언스** > **이메일 선호 센터**로 이동합니다.
 
 여기에서 각 구독 그룹을 관리하고 볼 수 있습니다. 생성하는 각 구독 그룹은 환경설정 센터 목록에 추가됩니다. 여러 개의 선호 센터를 만들 수 있습니다.
 
@@ -19,7 +19,7 @@ Braze 대시보드에서 **오디언스** > **이메일 기본 설정 센터로*
 환경설정 센터는 Braze 이메일 채널 내에서 사용하도록 설계되었습니다. 환경설정 센터 링크는 각 사용자에 따라 동적으로 변경되며 외부에 호스팅될 수 없습니다.
 {% endalert %}
 
-## API를 사용하여 환경 설정 센터 만들기
+## API로 선호 센터 만들기
 
 Braze의 [Preference Center Braze 엔드포인트]({{site.baseurl}}/api/endpoints/preference_center)를 사용하여 사용자의 구독 상태 및 구독 그룹 상태를 표시할 수 있는 Braze에서 호스팅하는 웹사이트인 환경 설정 센터를 만들 수 있습니다. HTML 및 CSS를 사용하여 개발자 팀이 HTML 및 CSS를 사용하여 선호도 센터를 구축하여 페이지의 스타일이 브랜드 지침과 일치하도록 할 수 있습니다.
 
@@ -35,13 +35,13 @@ Liquid을 사용하면 구독 그룹의 이름과 각 사용자의 상태를 검
 | 환경설정 권한으로 생성된 API 키 | Braze 대시보드에서 **설정** > **API 키**로 이동하여 환경 설정 센터 권한이 있는 API 키에 액세스할 수 있는지 확인합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### 1단계: 환경 설정 센터 만들기 엔드포인트 사용
+### 1단계: 선호 센터 생성 엔드포인트 사용
 
 [환경설정 센터 엔드포인트 만들기]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/)를 사용하여 환경설정 센터 구축을 시작합시다. 선호 센터를 커스텀하려면 `preference_center_page_html` 필드 및 `confirmation_page_html` 필드에 브랜딩과 일치하는 HTML을 포함할 수 있습니다.
 
 [생성 환경설정 센터 URL 엔드포인트]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/)는 Braze를 통해 발송된 이메일 외부에서 특정 사용자의 환경설정 센터 URL을 가져올 수 있게 합니다.
 
-### 2단계: 이메일 캠페인에 포함하기
+### 2단계: 이메일 캠페인에 포함
 
 {% multi_lang_include alerts/important_alerts.md alert='Preference Center warning' %}
 
@@ -106,17 +106,17 @@ My encoded string is: {{my_string}}
 {
     "user_id": "1234567890",
     "name": "John Doe",
-    "category": offers
+    "category": "offers"
 }
 ```
 
 ## Frequently asked questions
 
-### 환경설정 센터를 만들지 않았습니다. 대시보드에 "PreferenceCenterBrazeDefault"가 표시되는 이유는 무엇인가요?
+### 저는 선호 센터를 만들지 않았습니다. 왜 대시보드에서 "PreferenceCenterBrazeDefault"가 보이나요?
 
-이는 레거시 Liquid {%raw%}`${preference_center_url}`{%endraw%} 를 사용할 때 환경 설정 센터를 렌더링하는 데 사용되므로 {%raw%}`${preference_center_url}` 또는 `preference_center.${PreferenceCenterBrazeDefault}`{%endraw%} 를 참조하는 캔버스 단계나 템플릿은 작동하지 않습니다. 이는 메시징의 일부로 레거시 Liquid 또는 "PreferenceCenterBrazeDefault"가 포함된 이전에 전송된 메시징에도 적용됩니다. 
+이는 레거시 Liquid {%raw%}`${preference_center_url}`{%endraw%}가 사용될 때 선호 센터를 렌더링하는 데 사용되며, 이는 Canvas 단계나 {%raw%}`${preference_center_url}` 또는 `preference_center.${PreferenceCenterBrazeDefault}`{%endraw%}를 참조하는 템플릿이 작동하지 않음을 의미합니다. 이는 레거시 Liquid 또는 메시지의 일부로 "PreferenceCenterBrazeDefault"를 포함한 이전에 전송된 메시지에도 적용됩니다. 
 
-새 메시지에서 {%raw%}`${preference_center_url}`{%endraw%} 을 다시 참조하면 "PreferenceCenterBrazeDefault"라는 이름의 환경 설정 센터가 다시 만들어집니다.
+새 메시지에서 {%raw%}`${preference_center_url}`{%endraw%}를 다시 참조하면 "PreferenceCenterBrazeDefault"라는 이름의 선호 센터가 다시 생성됩니다.
 
 ### 기본 설정 센터는 여러 언어를 지원하나요?
 
@@ -141,9 +141,9 @@ ${unsubscribe_url}
 
 이메일 캠페인을 작성할 때 '이메일 본문에 수신 거부 링크가 포함되어 있지 않습니다'라는 메시지가 표시되는 경우 수신 거부 링크가 콘텐츠 블록에 있는 경우 이 경고가 표시될 수 있습니다.
 
-### 기본값 브라우저 아이콘은 어떻게 업데이트하나요?
+### 기본 브라우저 아이콘을 어떻게 업데이트하나요?
 
-기본값으로 브라우저 탭 이름 옆의 아이콘(파비콘)은 Braze 로고를 사용합니다. 커스텀 파비콘을 추가하려면 [환경설정 센터]({{site.baseurl}}/api/endpoints/preference_center) 만들기 또는 업데이트 [API 호출에서]({{site.baseurl}}/api/endpoints/preference_center) `links-tags` 속성을 통해 설정합니다. 그러면 Braze가 호스팅된 페이지에 {% raw %}`<link rel="icon" ...>`{% endraw %} 태그를 삽입합니다.
+기본적으로 브라우저 탭 이름 옆의 아이콘(파비콘)은 Braze 로고를 사용합니다. 커스텀 파비콘을 추가하려면 Create 또는 Update [선호 센터 API 호출]({{site.baseurl}}/api/endpoints/preference_center)에서 `links-tags` 속성을 통해 설정합니다. 그런 다음 Braze는 호스팅된 페이지에 {% raw %}`<link rel="icon" ...>`{% endraw %} 태그를 주입합니다.
 
 {% raw %}
 ```

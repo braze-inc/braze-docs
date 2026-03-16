@@ -53,8 +53,9 @@ The default settings are:
 - Block all public access
 - Disable bucket versioning
 - SSE-S3 encryption
+  - SSE-S3 is the only supported server-side encryption type. Amazon KMS encryption is not supported.
 
-Take note of the region you’ve created the bucket in, as you will create an SQS queue in the same region in the next step.
+Take note of the region you've created the bucket in, as you will create an SQS queue in the same region in the next step.
 
 ### Step 2: Create SQS queue
 
@@ -158,28 +159,38 @@ To complete the setup on AWS, you will create an IAM role and attach the IAM pol
 
 1. Within the same IAM section of the console where you created the IAM policy, go to **Roles** > **Create Role**. 
 
-<br><br>![The "Create role" button.]({% image_buster /assets/img/create_role_1_list.png %})<br><br>
+![The "Create role" button.]({% image_buster /assets/img/create_role_1_list.png %})
 
 {: start="2"}
 2. Copy the Braze AWS account ID from your Braze dashboard. Go to **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import**.
+3. In AWS, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID. Select the **Require external ID** checkbox.
+4. In Braze, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import** from the file sources section.
+5. Copy the automatically generated **Braze Account ID**. 
 
-3. In AWS, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID. Select the **Require external ID** checkbox, and enter an external ID for Braze to use. This is the generated external ID from creating an S3 Currents connection in the **Credentials** section of your Currents connection in the Braze dashboard. Select **Next** when complete. 
+![Credentials section with the Braze Account ID field.]({% image_buster /assets/img/braze_account_id.png %})
 
-<br><br> ![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
+{: start="6"}
+6. In AWS, paste the account ID and then select **Next**.
 
-{: start="4"}
-4. Attach the policy created in step 4 to the role. Search for the policy in the search bar, and select a checkmark next to the policy to attach it. Select **Next** when complete.
+![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
-<br><br>![Role ARN with the new-policy-name selected.]({% image_buster /assets/img/create_role_3_attach.png %})<br><br>
+{: start="7"}
+7. Attach the policy created in step 4 to the role. Search for the policy in the search bar, and select a checkmark next to the policy to attach it. Select **Next** when complete.
+
+![Role ARN with the new-policy-name selected.]({% image_buster /assets/img/create_role_3_attach.png %})
 
 Give the role a name and a description, and select **Create Role**.
 
-<br><br>![An example role named "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
+![An example role named "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})
 
-{: start="5"}
-5. Take note of the ARN of the role you created and the external ID you generated, because you need them to create the Cloud Data Ingestion integration.
+{: start="8"}
+8. Take note of the ARN of the role you created and the external ID you generated, because you need them to create the Cloud Data Ingestion integration.
 
 ## Setting up Cloud Data Ingestion in Braze
+
+{% alert important %}
+Customers onboarding in February 2026 or later may have early access to a new CDI UI, where sources and syncs are configured separately. In this new UI, create an S3 source first with your credentials, bucket, and region. Then, create a sync with your SQS URL and folder path (optional).
+{% endalert %}
 
 1. To create a new integration, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import** from the file sources section. 
 2. Input the information from the AWS setup process to create a new sync. Specify the following:
@@ -196,27 +207,32 @@ Give the role a name and a description, and select **Create Role**.
 {: start="3"}
 3. Name your integration, and select the data type for this integration. 
 
-<br><br>![Setting up sync details for "cdi-s3-as-source-integration" with user attributes as the data type.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
+![Setting up sync details for "cdi-s3-as-source-integration" with user attributes as the data type.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})
 
 {: start="4"}
 4. Add a contact email for notifications if the sync breaks because of access or permissions issues. Optionally, turn on notifications for user-level errors and sync successes. 
 
-<br><br> ![Setting up notification preferences for sync error notifications.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
+![Setting up notification preferences for sync error notifications.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})
 
 {: start="5"}
 5. Finally, select **Test connection** to confirm Braze can access your bucket and list the files available to ingest (not the data inside those files). Then, save the sync. 
 
-<br><br>![An option to test the connection and list available files.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
+![An option to test the connection with a data preview.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
 
 ## Required file formats
 
-Cloud Data Ingestion supports JSON, CSV, and Parquet files. Each file must contain one or more of the supported identifier columns and a payload column as a JSON string.
+Cloud Data Ingestion supports JSON, CSV, and Parquet files. The required columns depend on the data type: 
+
+- User data (attributes, custom events, purchase events) uses user identifiers and a payload
+- Catalog data uses catalog identifiers
 
 Braze doesn’t enforce any additional filename requirements beyond what's enforced by AWS. Filenames should be unique. We recommend appending a timestamp for uniqueness.
 
-### User identifiers
+For examples of all supported file types (attributes, custom events, purchases, catalogs, and user deletes), see the sample files in [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).
 
-Your source file may contain one or more user identifier columns or keys. Each row should only contain one identifier, but a source file may have multiple identifier types.
+### User identifiers {#user-identifiers}
+
+For user data syncs (attributes, custom events, purchase events), each row in your source file requires exactly one user identifier and a `PAYLOAD` column. A source file may contain rows with different identifier types, but each individual row should only use one.
 
 | Identifier | Description |
 | --- | --- |
@@ -225,12 +241,26 @@ Your source file may contain one or more user identifier columns or keys. Each r
 | `BRAZE_ID` | The Braze user identifier. This is generated by the Braze SDK, and new users cannot be created using a Braze ID through Cloud Data Ingestion. To create new users, specify an external user ID or user alias. |
 | `EMAIL` | The user's email address. If multiple profiles with the same email address exist, the most recently updated profile will be prioritized for updates. If you include both email and phone, we will use the email as the primary identifier. |
 | `PHONE` | The user's phone number. If multiple profiles with the same phone number exist, the most recently updated profile will be prioritized for updates. |
-|`PAYLOAD` | This is a JSON string of the fields you want to sync to the user in Braze. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+In addition to an identifier, each row must include a `PAYLOAD` column containing a JSON string of the fields you want to sync to the user in Braze.
+
 {% alert note %}
-Unlike with data warehouse sources, the `UPDATED_AT` column is neither required nor supported. 
+Unlike with data warehouse sources, the `UPDATED_AT` column is neither required nor supported for file storage syncs.
 {% endalert %}
+
+### Catalog identifiers {#catalog-identifiers}
+
+For catalog syncs, your source file must contain the following columns. Catalog files use different identifiers than user data files.
+
+| Column | Required | Description |
+| --- | --- | --- |
+| `ID` | Yes | The unique identifier for the catalog item. Used to create, update, or delete the item in Braze. |
+| `PAYLOAD` | Yes | A JSON string of the catalog fields and values to sync. Must match the schema of your catalog in Braze. |
+| `DELETED` | No | When `true`, the catalog item with the matching `ID` is removed from the catalog in Braze. Omit this column or set to `false` for create or update operations. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+### Examples
 
 {% tabs %}
 {% tab JSON Attributes %}
@@ -280,12 +310,10 @@ ID,PAYLOAD,DELETED
 85,"{""product_name"": ""Product 85"", ""price"": 85.85}",false
 1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
 ```
-Include an optional **DELETED** column. When `DELETED` is `true`, that catalog item is removed from the catalog in Braze. See [Deleting catalog items](#deleting-catalog-items).
+Include an optional `DELETED` column. When `DELETED` is `true`, that catalog item is removed from the catalog in Braze. For the full list of required columns, see [Catalog identifiers](#catalog-identifiers). For delete behavior, see [Deleting catalog items](#deleting-catalog-items).
 {% endtab %}
 
 {% endtabs %}  
-
-For examples of all supported file types, refer to the sample files in [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).  
 
 ## Deleting data
 
@@ -315,7 +343,7 @@ Deleting users is permanent and cannot be undone. Include only users you intend 
 {% endalert %}
 
 **Example – JSON (user deletes):**
-```json
+```jsonl
 {"external_id":"user-to-delete-001"}
 {"external_id":"user-to-delete-002"}
 {"braze_id":"braze-id-from-profile"}
@@ -341,7 +369,7 @@ To remove items from a catalog using file storage:
 Each row still needs `ID` and `PAYLOAD`. For rows marked for deletion, the payload can be minimal; Braze removes the item by `ID`.
 
 **Example – JSON (catalog item delete):**
-```json
+```jsonl
 {"id":"85","payload":"{\"product_name\": \"Product 85\", \"price\": 85.85}"}
 {"id":"1","payload":"{\"product_name\": \"Product 1\", \"price\": 1.01}","deleted":true}
 ```
