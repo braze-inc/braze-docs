@@ -32,7 +32,7 @@ When a phone number is updated on a user profile, the new phone number inherits 
 
 For example, if User A has a phone number that is subscribed to several subscription groups and that phone number then gets added to User B, User B will be subscribed to the same subscription groups. To prevent a user from inheriting the existing subscriptions, you can reset the subscription groups of the old number through the Braze REST API whenever a user changes their number. If multiple users share this phone number, they will all be unsubscribed.
 
-Additionally, the subscription state of a former user's phone number can be inherited—even if the phone number currently does not exist. For example, if a user has phone number `12345`, subscribes to a subscription group, and then has their phone number deleted, the subscription state of `12345` will be inherited by the next user assigned this phone number.
+Additionally, the subscription state of a former user's phone number can be inherited—even if a user with that phone number currently does not exist. For example, if a user has phone number `12345`, subscribes to a subscription group, and then has their phone number deleted, the subscription state of `12345` will be inherited by the next user assigned this phone number.
 
 To set a user's subscription group state, use one of the following methods:
 
