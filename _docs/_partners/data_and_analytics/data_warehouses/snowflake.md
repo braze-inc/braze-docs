@@ -134,9 +134,20 @@ The archive of historical event data in Snowflake goes back to April 2019. In th
 
 {% multi_lang_include partners/snowflake_pii_gdpr.md %}
 
+### Querying shared data and incremental loads
+
+Event data in the data sharing views (for example, `USERS_BEHAVIORS_CUSTOMEVENT_SHARED`) is clustered on the `TIME` field. When you filter events based on when they occurred, use `TIME` as the preferred field. `TIME` is the Unix timestamp at which the event happened and is stable for the lifetime of the event.
+
+| Field | Meaning | Use for incremental loads? |
+| ----- | ------- | --------------------------- |
+| `TIME` | Unix timestamp when the event occurred. Stable and aligned with how data is clustered. | **Preferred.** Filter on `TIME` (for example, `WHERE TIME > {last_max_time}`) for deterministic, efficient incremental reads. |
+| `SF_CREATED_AT` | Timestamp when the row was written into the shared view by Braze's pipeline. | Use with care. This value can change or not advance monotonically when Braze refreshes or backfills data, which can cause incremental logic that relies only on `MAX(SF_CREATED_AT)` to read more rows than intended (including full-table scans) on some runs. |
+
+If your pipeline uses Snowflake Tasks or similar orchestration to pull only new events, design your incremental logic around `TIME` (event occurrence) rather than `SF_CREATED_AT` (ingestion time). That way, you avoid unexpected full loads when the shared view is refreshed or backfilled. For more context on view refresh behavior and `SF_CREATED_AT`, see the [Snowflake Data Sharing FAQs]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/faqs/#data-sharing-view-refresh-and-incremental-loads).
+
 ### Speed, performance, cost of queries
 
 The speed, performance, and cost of any query run on top of the data are determined by the warehouse size you use to query the data. In some cases, depending on how much data you're accessing for analytics, you may find that you need to use a larger warehouse size for the query to be successful. Snowflake has excellent resources available about how to best determine which size to use including [Overview of warehouses](https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html) and [Warehouse considerations](https://docs.snowflake.net/manuals/user-guide/warehouses-considerations.html)
 
-> For a set of example queries to reference when setting up snowflake, check out our [sample queries]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/) and [ETL event pipeline setup]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/) examples.
+> For a set of example queries to reference when setting up snowflake, check out our [sample queries]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/sample_queries/) and [ETL event pipeline setup]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/etl_pipline_setup/) examples.
 

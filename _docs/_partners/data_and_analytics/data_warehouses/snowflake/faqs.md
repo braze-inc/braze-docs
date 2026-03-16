@@ -9,6 +9,22 @@ description: "This article answers frequently asked questions about Snowflake da
 
 # Frequently asked questions
 
+### Data sharing view refresh and incremental loads {#data-sharing-view-refresh-and-incremental-loads}
+
+**Why does the shared view sometimes appear to "refresh" or return more data than expected?**
+
+The data sharing views are backed by Braze's data pipeline. Braze can refresh or update the underlying data for reasons such as pipeline updates, backfills, maintenance, or reprocessing. When that happens, the set of rows visible in the view (and the values of `SF_CREATED_AT`, which reflect when rows were written into the share) can change. There is no fixed schedule for these refreshes; they occur as needed for data quality and operations.
+
+If your incremental logic relies only on `MAX(SF_CREATED_AT)` from the previous run (for example, "read rows where `SF_CREATED_AT` > last max"), a refresh can make it appear that many or all rows are "new" because ingestion timestamps may have changed or the view may expose a full snapshot. That can cause your downstream pipeline (for example, a Snowflake Task that loads into Mixpanel) to process a full load instead of a small delta and lead to timeouts or failures.
+
+**How should I design my incremental pipeline?**
+
+Use the `TIME` field (event occurrence time) as the basis for incremental reads, not `SF_CREATED_AT`. Event data is clustered on `TIME`, and `TIME` is stable for each event. Filter with something like `WHERE TIME > {last_max_time}` (storing the last seen `TIME` in your own state table or variable). That way, your pipeline consistently reads only new events by occurrence time and is resilient to view refreshes. For more detail, see [Querying shared data and incremental loads]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/#querying-shared-data-and-incremental-loads) on the main Snowflake page.
+
+**Can `SF_CREATED_AT` change over time?**
+
+Yes. `SF_CREATED_AT` represents when the row was written into the shared view by Braze's pipeline. It can change if data is reprocessed, backfilled, or if the view is refreshed. Do not assume it is immutable or strictly increasing across runs. For stable, event-time-based filtering, use the `TIME` field instead.
+
 ### Is it possible to obfuscate PII data via Snowflake data sharing?
 No, as of now that is not supported.
 
