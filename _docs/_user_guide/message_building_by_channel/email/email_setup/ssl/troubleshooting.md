@@ -6,13 +6,10 @@ page_type: reference
 description: "This reference article covers troubleshooting tips for SSL."
 channel: email
 ---
-## Troubleshooting
 
-> While you should handle CDN configuration, certificates, and proxy issues with your CDN, use these tips to identify common SSL click tracking issues.
+# Troubleshooting
 
-{% alert note %}
-The troubleshooting guidance is generic because every CDN is unique. If you encounter persistent issues, we recommend contacting your CDN’s support team, as these configurations take place outside of the Braze ecosystem.
-{% endalert %}
+> Use these tips to identify common SSL click tracking issues. The troubleshooting guidance is generic because every CDN is unique. For CDN configuration, certificates, or proxy issues with your CDN, we recommend contacting your CDN’s support team, as these configurations take place outside of the Braze ecosystem.
 
 ## Key concepts
 
