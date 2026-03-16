@@ -47,7 +47,10 @@ try {
 	process.exit(0);
 } catch (e) {
 	console.log('Git diff failed, falling back to branch check:', e.message);
-	if (isTranslationBranch(branch)) {
+	if (branch.startsWith('auto-translate/')) {
+		process.exit(1);
+	}
+	if (branch.startsWith('i18n_') && branch.includes(vercel_lang)) {
 		process.exit(1);
 	}
 	process.exit(0);
