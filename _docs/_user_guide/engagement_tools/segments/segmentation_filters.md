@@ -561,15 +561,15 @@ glossaries:
   - name: Install Attribution Adgroup
     description: Segments your users by the ad group that their install was attributed to.
     tags:
-      - Install Attribution
+      - Install attribution
   - name: Install Attribution Campaign
     description: Segments your users by the ad campaign that their install was attributed to.
     tags:
-      - Install Attribution
+      - Install attribution
   - name: Install Attribution Source
     description: Segments your users by the source that their install was attributed to.
     tags:
-      - Install Attribution
+      - Install attribution
   - name: Churn Risk Category
     description:  Segments your users by churn risk category according to a specific prediction.
     tags:
