@@ -9,7 +9,7 @@ channel: email
 
 # Troubleshooting
 
-> Use these tips to identify common SSL click tracking issues. The troubleshooting guidance is generic because every CDN is unique. For CDN configuration, certificates, or proxy issues with your CDN, we recommend contacting your CDN’s support team, as these configurations take place outside of the Braze ecosystem.
+> Use these tips to identify common SSL click tracking issues. The troubleshooting guidance is generic because every CDN is unique. For CDN configuration, certificates, or proxy issues, contact your CDN's support team, as these configurations take place outside of the Braze ecosystem.
 
 ## Key concepts
 
@@ -185,7 +185,7 @@ Use the following template to test the CDN configuration of your tracking domain
                         Common redirection issues typically result from an improper configuration between the CDN hosting the tracking domain and the <strong>associated SSL certificate or DNS CNAME records.</strong>
                     </p>
                     <p>
-                        <i style="font-size: 13px;">This template uses "example.com" as the destination URL. To test your own domain, simply replace the URL in the <strong>capture</strong> tag located on line 125.</i>
+                        <i style="font-size: 13px;">This template uses "example.com" as the destination URL. To test your own domain, replace the URL in the <strong>capture</strong> tag located on line 125.</i>
                     </p>
                 </td>
             </tr>
@@ -226,16 +226,18 @@ Use the following template to test the CDN configuration of your tracking domain
 {% enddetails %}
 
 {: start="2"} 
-2. Configure your URL. Note that this template uses `example.com` as the default destination. To test your own links and tracking domain, replace the URL in the `capture` tag on line 117. For example, replace `https://example.com` with `https://braze.com/blog`.
+2. Configure your URL. Replace the URL in the `capture` tag near the top of the template body (where `https://example.com` is set). For example, replace `https://example.com` with `https://braze.com/docs`.
 3. Send a test email to yourself and select both buttons.
 4. Verify that the expected behavior and success criteria are as described in the template.
 
 If your untracked URL works but your tracked URL fails, you may have a configuration gap. To troubleshoot, refer to the documentation for your specific ESP and CDN provider. You can also review the [SSL at Braze]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl) for detailed requirements on certificate provisioning.
+
+Use the following table to diagnose common errors when testing click tracking.
 
 | Error code | Troubleshooting | 
 | --- | --- | 
 | `"Your connection is not private" (NET::ERR_CERT_COMMON_NAME_INVALID)` | Verify that your tracking domain has a valid SSL certificate. |
 | `"This site can’t be reached" (DNS_PROBE_FINISHED_NXDOMAIN)` | Check your DNS settings. Ensure your tracking subdomain is configured per your CDN and ESP recommended configuration. |
 | `525 / 526 SSL Error` | Check that the SSL setting in your CDN (like Cloudflare) matches your Origin's capability. |
-| `404 Not Found` | Check that your CDN is configured to forward the entire URL path to the ESP, rather than just hitting a blank root directory. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+| `404 Not Found` | Check that your CDN is configured to forward the entire URL path to the ESP, rather than pointing to a blank root directory. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

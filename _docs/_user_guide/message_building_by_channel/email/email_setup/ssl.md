@@ -3,7 +3,7 @@ nav_title: SSL at Braze
 article_title: SSL Overview
 page_order: 5
 page_type: reference
-description: "This reference article covers SSL, what's it is used for, and how it's used at Braze."
+description: "This reference article covers SSL, what it is used for, and how it is used at Braze."
 channel: email
 
 ---
@@ -41,11 +41,12 @@ Acquire an SSL certificate through a third party, usually a Content Delivery Net
 To start SSL setup, contact your Braze customer success manager to initiate a full Braze email setup.
 
 After Braze initiates setup, follow these steps:
+
 1. Braze will provide DNS records to add to your domain registry.
 2. Braze will verify if records have been added to your registry correctly.
-3. After this, you'll select a CDN and obtain SSL certificates from a third-party provider. 
-4. At this point, you'll set up your CDN. Note that Braze will not be able to help troubleshoot CDN configuration. Contact your CDN provider for any further assistance.
-5. Contact your customer success manager to get SSL turned on.
+3. Select a CDN and obtain SSL certificates from a third-party provider. 
+4. Next, set up your CDN. Braze cannot troubleshoot CDN configuration. Contact your CDN provider for assistance.
+5. Contact your Braze customer success manager to get SSL turned on.
 
 ## What is a CDN, and why do I need it?
 
@@ -80,5 +81,5 @@ For Amazon SES, refer to [Option 2: Configuring an HTTPS domain](https://docs.aw
 - **Braze EU clusters:** `r.eu-central-1.awstrack.me`
 
 {% alert important %}
-When you configure your CDN's click-tracking domain, enable the `X-Forwarded-Host` header to prevent potential security issues such as host header attacks. Refer to CDN documentation or your support team for steps.
+When you configure your CDN's click-tracking domain, enable the `X-Forwarded-Host` header to prevent potential security issues such as host header attacks. Refer to your CDN provider for steps.
 {% endalert %}
