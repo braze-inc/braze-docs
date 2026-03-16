@@ -1,6 +1,6 @@
 ---
 nav_title: API endpoint documentation guidelines
-article_title: API Endpoint Documentation Guidelines
+article_title: API endpoint documentation guidelines
 description: "Guidelines for documenting Braze API endpoints."
 page_order: 3
 noindex: true

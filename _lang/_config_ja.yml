@@ -27,6 +27,7 @@ collections:
     title: ドキュメンテーション
   user_guide:
     title: ユーザーガイド
+    default_nav_url: home/
   developer_guide:
     title: 開発者ガイド
   api:
