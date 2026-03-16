@@ -6,7 +6,7 @@ page_order: 4
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Track user Braze endpoint."
-
+toc_headers: h2
 ---
 {% api %}
 # Create and update users
