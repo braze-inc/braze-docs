@@ -177,7 +177,7 @@ The Firebase Cloud Messaging server key provided in the Braze dashboard is inval
 
 If push clicks are not being logged, it is possible that push click data has not been flushed to our servers yet. Braze throttles the frequency of its flushes based on the strength of the network connection. 
 
-If you implemented a custom `BroadcastReceiver`, check that you called the appropriate method (for example, `Braze.getInstance().logPushNotiifcationOpened()`) when the push intent is broadcasted. If the incorrect method is called, the push click analytic event is not logged.
+If you implemented a custom `BroadcastReceiver`, check that you called the appropriate method (for example, `Braze.getInstance().logPushNotifcationOpened()`) when the push intent is broadcasted. If the incorrect method is called, the push click analytic event is not logged.
 
 Braze logs push clicks automatically, so this scenario should be comparatively rare. With a good network connection, push click-data should arrive at the server within a minute in most circumstances.
 
