@@ -26,7 +26,7 @@ If you plan on editing the campaign and re-sending it after viewing the test, be
 
 Scheduling a campaign for a designated time allows you to specify the days and times your campaign sends. You can send a message once, daily, weekly, or monthly at a certain time of day, as well as specify when your campaign should begin and end. This end date is inclusive, which means the last send is on the end date.
 
-If you select a monthly recurring schedule, note that some months may not have the selected day. For example, let's say you set a campaign to send monthly on the 31st day. In this scenario, Braze sends on the last day of that month, such as April 30, since April 31 doesn't exist.
+If you select a monthly recurring schedule, note that some months may not have the selected day. For example, let's say you set a campaign to send monthly on the 31st day. In this scenario, Braze sends on the last day of that month, such as April 30, because April 31 doesn't exist.
 
 If you select **Scheduled Delivery** and don't choose to send at user local time, your campaign will send according to the time zone specified on your **Company Settings** page.
 
