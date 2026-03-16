@@ -84,6 +84,6 @@ All terms and strings entered in this field will be searched for. For example, s
 
 ### Segments in Canvases
 
-To search for all segment references, including those in other segments, campaigns, or Canvases, go to a segment's [Messaging Use](#messaging-use) section. The **Target segment** filter on the **Canvas** page only searches Canvas Audience segments. 
+To search for all segment references, including those in other segments, campaigns, or Canvases, go to a segment's [Messaging Use](#messaging-use) section. The **Target segment** filter on the **Canvas** page searches only Canvas Audience segments. 
 
 ![Target segment filter on the Canvas page.]({% image_buster /assets/img/segment/target_segment.png %}){: style="max-width:45%;"}
