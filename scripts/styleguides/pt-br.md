@@ -9,8 +9,9 @@
 
 ## Register and tone
 
-- Use formal Portuguese (você) appropriate for technical documentation
-- The tone should be friendly, conversational, and informative — approachable rather than stiff or academic
+- Use informal Portuguese (você) — this is the standard for friendly technical content in Brazilian Portuguese
+- The tone should be informal, friendly, and informative — approachable rather than stiff or academic
+- Content should sound conversational, as if explaining something to an acquaintance
 
 ## Clarity over literal accuracy
 

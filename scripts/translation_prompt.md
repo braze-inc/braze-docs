@@ -92,8 +92,32 @@ The file `_includes/rate_limits.md` uses Liquid conditionals with include parame
 
 ## Quality guidelines
 
-- Use a formal, professional register appropriate for technical documentation
-- Maintain consistent terminology throughout the file
+### Voice and tone
+
+- Use active voice and present tense
+- Keep the tone positive, encouraging, and approachable — similar to speaking with a knowledgeable colleague
+- Use a professional but conversational register appropriate for technical documentation (see language-specific style guides for formal/informal pronoun choices)
+- Aim to empower and educate the reader
+
+### Translation quality
+
 - **Always translate from the English source as the primary input.** If an existing translation is provided, use it only as a reference for terminology consistency — do NOT copy it verbatim or use it as your starting template. The existing translation may contain errors, omissions, or outdated content. Your output must accurately reflect the current English source, not the previous translation.
 - Adapt sentence structure naturally for the target language — do not translate word-for-word
+- The content should read as if it was originally written in the target language, not translated
+- Maintain consistent terminology throughout the file; follow the approved glossary
 - Keep translations concise; do not expand significantly beyond the English source length
+
+### Inclusivity
+
+- Use gender-neutral language and avoid gendered terms where possible
+- Be considerate of diverse audiences and avoid biased or ableist language
+
+### Cultural sensitivity
+
+- Be mindful of cultural references and avoid idioms that may not translate well into the target language
+- Follow standard grammar and punctuation rules for the target language
+
+### Formatting preservation
+
+- Translate text that is in bold but keep the bold formatting — these often refer to UI elements
+- For rules about preserving identifiers and tokens (including underscores), follow the “What to NEVER translate or modify” section above
