@@ -850,7 +850,7 @@ During your Shopify store onboarding, you can initiate an initial data sync thro
 If you plan to integrate with a custom external ID (for either the [standard integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_standard_integration/#step-4-configure-how-you-manage-users) or the [custom integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_custom_integration/#step-6-configure-how-you-manage-users-optional)), you will be required to add your custom external ID as a Shopify customer metafield to all existing Shopify customer profiles and then perform the historical backfill. 
 {% endalert %}
 
-The synced order event data is available for segmentation, but the revenue data itself will not populate in the user profile or the [Revenue – Last Touch Attribution dashboard]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/#revenue---last-touch-attribution).
+The synced order event data is available for segmentation, but the revenue data itself does not populate in the user profile or the [Revenue – Last Touch Attribution dashboard]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/#revenue---last-touch-attribution).
 
 ### Setting up Shopify historical backfill
 
