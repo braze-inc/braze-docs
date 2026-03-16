@@ -13,7 +13,7 @@ description: "This reference article walks through how to use Braze landing page
 With this approach, you can:
 
 - Let users self-select the date of their reminder message relative to an upcoming event.
-- Capture preferences directly from users using a Braze landing page and write them to user profiles — no extra backend needed.
+- Capture preferences directly from users using a Braze landing page and write them to user profiles—no extra backend needed.
 - Send messages on the dates users choose, so messaging stays relevant and permission-based.
 - Extend the use case with additional Braze features, such as message delays, follow-up retargeting, and A/B testing.
 
@@ -46,9 +46,9 @@ When a user clicks this link, Braze automatically identifies them, so any prefer
 
 How you capture user preferences depends on whether you're collecting shared dates or personal dates. Choose the option that fits your use case.
 
-### Option A: Shared dates (DnD form blocks)
+### Option A: Shared dates (drag-and-drop form blocks)
 
-For events where many users share the same date (such as holidays or sporting events), use the drag-and-drop editor's built-in [**Checkbox** form blocks]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/#form-blocks) to capture preferences. Each checkbox natively sets a boolean custom attribute (`true` or `false`) on the user's profile when the form is submitted — no custom code needed.
+For events where many users share the same date (such as holidays or sporting events), use the drag-and-drop editor's built-in [**Checkbox** form blocks]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/#form-blocks) to capture preferences. Each checkbox natively sets a boolean custom attribute (`true` or `false`) on the user's profile when the form is submitted—no custom code needed.
 
 For example, add a checkbox labeled "Super Bowl 2026 reminder" that maps to the custom attribute `super_bowl_2026_reminder`. When a user checks the box and submits the form, Braze sets:
 
@@ -124,7 +124,7 @@ If you used boolean custom attributes (Option A in [Step 2](#option-a-shared-dat
 
 ### Option B: Personal dates {#step-3-option-b-personal-dates}
 
-If you used nested custom attributes (Option B in [Step 2](#option-b-personal-dates-custom-code-block)), use the **Nested Custom Attribute** audience filter to select all users who have a reminder date within a specific window — for example, two days from now.
+If you used nested custom attributes (Option B in [Step 2](#option-b-personal-dates-custom-code-block)), use the **Nested Custom Attribute** audience filter to select all users who have a reminder date within a specific window—for example, two days from now.
 
 To send reminders on an ongoing basis, set up a daily recurring campaign so that each day, users with upcoming reminders that fall within your window receive their messages.
 
@@ -141,5 +141,5 @@ After completing the setup, verify your integration:
 
 - For a detailed example of how to send messages based on date-based custom attributes, see the email use case in the [REST API messaging guide]({{site.baseurl}}/developer_guide/rest_api/messaging/).
 - If you duplicate a landing page or replace any fields, the component IDs change. Update your custom code block to reflect the new IDs.
-- Nested custom attributes consume [data points]({{site.baseurl}}/user_guide/data/data_points/) for each key in the array of objects. Updating a custom attribute object to null also consumes a data point.
+- Nested custom attributes consume [data points]({{site.baseurl}}/user_guide/data/infrastructure/data_points/) for each key in the array of objects. Updating a custom attribute object to null also consumes a data point.
 - The code presented in this guide is intended as an illustrative example. Thoroughly test all code and components within your environment before deploying to production.
