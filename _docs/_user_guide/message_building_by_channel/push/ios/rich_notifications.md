@@ -31,6 +31,10 @@ Before you create a rich push notification for iOS, note the following details:
 As of January 2020, iOS rich push notifications can handle images 1038x1038 that are under 10&nbsp;MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.
 {% endalert %}
 
+{% alert important %}
+Push notification images may not show as expected if the file size for the image is too big, the aspect ratio is incorrect, the text exceeds the maximum message length, or the title text exceeds the maximum title length.
+{% endalert %}
+
 ### Character count
 
 While we can't provide a hard and fast rule for the precise number of characters to include in a push, we [provide some guidelines]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push) to consider while designing iOS messages. There may be some variance depending on the presence of an image, the notification state and display setting of the user's device, and the size of the device. When in doubt, keep it short and sweet.

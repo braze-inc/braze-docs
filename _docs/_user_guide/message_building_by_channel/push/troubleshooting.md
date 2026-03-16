@@ -78,6 +78,50 @@ Check that you're using the correct type of push notification. For example, if y
 
 When testing push sends with internal users, make sure that the user who you want to receive the push notification is currently logged into the relevant app. This can lead to the user either not receiving a push or receiving a push you believe they aren't segmented for.
 
+{% alert note %}
+If you're sending push messages with images on Android, FCM can sometimes discard the image and only display the text in the push message. This issue is usually caused by server connectivity issues.
+{% endalert %}
+
+## Error: MismatchSenderID
+
+MismatchSenderID indicates an authentication failure with Firebase Cloud Messaging (FCM). Confirm your Firebase sender ID and FCM API key are correct.
+
+To find the proper Firebase Server Key and replace it:
+
+1. Go to the Firebase console for your app.
+2. Under **Project Overview**, select **Project Settings**.
+3. In the **Cloud Messaging** tab, check that the Sender ID below the API keys matches the one in Braze (in **Settings** > **App Settings** > **Cloud Messaging API Key**).
+
+{% alert warning %}
+Do not change your Sender ID in your Braze dashboard. Doing so will cause existing push registrations to be invalidated. If the Sender ID does not match, you need to find your Firebase project with the matching Sender ID.
+{% endalert %}
+
+4. Copy the **Server Key** under **Project credentials**.
+5. In Braze, go to **Settings** > **App Settings**, select your app, and paste the server key into the **Cloud Messaging API Key** field (replacing the outdated key).
+6. Select **Save**.
+7. To verify, send a test push to a device before and after changing the API key without opening the application. This helps confirm that users continue to receive push notifications without requiring a new push registration ID (push token) to be generated.
+
+## Troubleshooting scenarios
+
+### Delayed push notifications
+
+Your push notifications can be delayed for these reasons:
+
+- A weak data connection on the device
+- Custom code in the app that can suppress Braze push notifications
+- User preferences for push notifications in the device's settings
+- Message priority of the push when created in the campaign or Canvas
+- Traffic delays or issues with the push service providers (FCM and APNs)
+
+### Push notifications are sending slower than expected
+
+Make sure your push notification setup follows these best practices:
+
+- If you're sending to **all** of your users, this may lead to a slower sending speed. Instead, consider sending to push-enabled users only to reduce the size of your audience.
+- Consider sending your push notifications on the hour (such as 1 pm or 3 pm).
+- If possible, try to schedule your campaigns ahead of time rather than immediately.
+- If you're targeting a larger number of users with push notifications in a Canvas, you can anticipate that subsequent message steps in the Canvas will require different processing times than a campaign that sends to users immediately. In this case, campaigns would typically finish sending before a Canvas, as the first "step" of a Canvas is to check whether users qualify for the specific user journey.
+
 ## Push clicks unexpectedly open in app
 
 If you're experiencing issues with links in push notifications unexpectedly opening in your app instead of your web browser, there may be an issue with your campaign configuration or SDK implementation. Refer to these steps for help.
@@ -100,6 +144,10 @@ If links in your push notifications are opening in the app unexpectedly, it migh
 2. **Inspect custom link handling:** Check if the app includes custom handling for all `https://` links. Custom configurations might override default behaviors. Collaborate with your development team to review and adjust these settings if necessary.
 3. **Verify iOS push registration:** For iOS, revisit step 1 of the push integration guide on [registering push notifications with APNs]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns). Ensure your delegate object is assigned synchronously before the app finishes launching. This step should be completed in the `application:didFinishLaunchingWithOptions:` method.
 4. **Test your integration:** After making adjustments, test the push notification behavior on both iOS and Android devices to confirm the issue is resolved.
+
+### Deep links with app still running in the background (iOS)
+
+If deep links work when the app is not running or when the link is used directly, but not when the application is already running in the background, the issue may be related to how the app handles the link. Check whether you're using any third-party libraries that use method swizzling. We recommend turning swizzling off, as it can cause issues with deep link implementations.
 
 ## Web push notifications aren't behaving as expected
 

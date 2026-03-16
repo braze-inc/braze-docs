@@ -93,6 +93,14 @@ You only get one chance to ask a user for push permission, and after they declin
 
 To avoid users turning off notifications at the device level, which completely removes their foreground push token, let users control their push subscription directly within your app. See [Updating push subscription states]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions#update-push-subscription-state) for more details.
 
+### Use advanced scheduling or add delays
+
+Depending on your audience size and how far in advance your push message is scheduled, there can be delays in push delivery. How long it takes to send pushes depends on allocated processing power. For example, if your push message uses several Connected Content calls, this can increase the complexity of templating the push message and can result in speeds limited by how fast your third-party APIs return data.
+
+A smaller push payload and higher notification priority can help reduce delays and scale your messages. You can add `Push Enabled = true` in your audience filter to reduce the audience size so that only push-enabled users are processed for the campaign send.
+
+We also recommend minimizing the number of API calls by optimizing the data you need. If possible, try to get all the data you need in one API call rather than making multiple calls.
+
 ### Understand push subscription states
 
 Push subscription state does not guarantee that a push will be delivered—users must also be push enabled to receive notifications. This is because a user profile may have multiple devices with different foreground push permissions but only a single push subscription state.

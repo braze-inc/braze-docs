@@ -71,6 +71,8 @@ Braze tracks uninstalls by observing when push messages sent to users' devices r
 
 FCM and APNs place restrictions on uninstall tracking. Braze increments only the uninstall count when FCM or APNs tell us that a user has uninstalled, but these third-party systems can notify us of uninstalls at any point. Use uninstall tracking to detect directional trends rather than precise statistics.
 
+Braze treats the following FCM responses as token removal (uninstall) responses: `DEVICE_UNREGISTERED`, `BAD_REGISTRATION`, and `SENDER_ID_MISMATCH`.
+
 For more on using uninstall tracking, see our blog post [Uninstall Tracking: An Industry Look at its Strengths and Limitations](https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/).
 
 ## Troubleshooting
