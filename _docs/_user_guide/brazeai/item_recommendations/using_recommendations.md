@@ -96,7 +96,7 @@ In the email drag-and-drop editor, add an image block to your email, then select
 
 ![Image properties panel in the drag-and-drop editor]({% image_buster /assets/img/image_with_liquid.png %}){: style="max-width:45%"}
 
-Toggle **Image with Liquid**, then add the following to the **Dynamic URL** field:
+Toggle **Image with Liquid**, then add the following to the **Dynamic URL** field (the URL field does not support newlines, so make sure the code appears on one line):
 
 {% raw %}
 ```liquid
