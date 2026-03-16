@@ -1,33 +1,59 @@
-let build_app = 1;
-let branch_commit = process.env.VERCEL_GIT_COMMIT_REF || '';
-let branch_check = process.env.BRANCH_CHECK || branch_commit;
-let vercel_env = process.env.VERCEL_ENV || 'preview';
-let vercel_lang = process.env.LANGUAGE || 'en';
+const { execSync } = require('child_process');
+
+const branch = process.env.VERCEL_GIT_COMMIT_REF || '';
+const vercel_env = process.env.VERCEL_ENV || 'preview';
+const vercel_lang = process.env.LANGUAGE || 'en';
+
+const LANG_DIR_MAP = {
+	'de': '_lang/de/',
+	'es': '_lang/es/',
+	'fr': '_lang/fr_fr/',
+	'ja': '_lang/ja/',
+	'ko': '_lang/ko/',
+	'pt-br': '_lang/pt_br/',
+};
+
+const SHARED_DIRS = ['_layouts/', '_plugins/', '_includes/'];
 
 function isTranslationBranch(name) {
 	return name.startsWith('i18n_') || name.startsWith('auto-translate/');
 }
 
-if (vercel_env == 'preview') {
-	if (vercel_lang == 'en') {
-		// English project: build develop and feature branches, skip translation branches
-		if (isTranslationBranch(branch_check) || isTranslationBranch(branch_commit)) {
-			build_app = 0;
-		}
-	}
-	else {
-		// Language projects: only build on translation branches; skip all other preview builds
-		build_app = 0;
-
-		// auto-translate/ branches contain all languages — build every language project
-		if (branch_commit.startsWith('auto-translate/')) {
-			build_app = 1;
-		}
-		// i18n_ branches: only build if the branch targets this language
-		else if (branch_check.startsWith('i18n_') && branch_commit.startsWith('i18n_') && branch_commit.includes(vercel_lang)) {
-			build_app = 1;
-		}
-	}
+function getChangedFiles() {
+	execSync('git fetch origin develop --depth=1', { stdio: 'ignore' });
+	return execSync('git diff --name-only origin/develop...HEAD', { encoding: 'utf-8' })
+		.trim().split('\n').filter(Boolean);
 }
 
-process.exit(build_app);
+if (vercel_env === 'production') {
+	process.exit(1);
+}
+
+if (vercel_lang === 'en') {
+	if (isTranslationBranch(branch)) {
+		process.exit(0);
+	}
+	process.exit(1);
+}
+
+try {
+	const files = getChangedFiles();
+	const langDir = LANG_DIR_MAP[vercel_lang];
+	const hasLangChanges = langDir && files.some(f => f.startsWith(langDir));
+	const hasSharedChanges = files.some(f =>
+		SHARED_DIRS.some(d => f.startsWith(d))
+	);
+
+	if (hasLangChanges || hasSharedChanges) {
+		console.log(`Changes detected for ${vercel_lang} — building`);
+		process.exit(1);
+	}
+	console.log(`No changes for ${vercel_lang} — skipping`);
+	process.exit(0);
+} catch (e) {
+	console.log('Git diff failed, falling back to branch check:', e.message);
+	if (isTranslationBranch(branch)) {
+		process.exit(1);
+	}
+	process.exit(0);
+}
