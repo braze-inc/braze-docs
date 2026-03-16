@@ -13,8 +13,6 @@ const LANG_DIR_MAP = {
 	'pt-br': '_lang/pt_br/',
 };
 
-const SHARED_DIRS = ['_layouts/', '_plugins/', '_includes/'];
-
 function isTranslationBranch(name) {
 	return name.startsWith('i18n_') || name.startsWith('auto-translate/');
 }
@@ -40,11 +38,8 @@ try {
 	const files = getChangedFiles();
 	const langDir = LANG_DIR_MAP[vercel_lang];
 	const hasLangChanges = langDir && files.some(f => f.startsWith(langDir));
-	const hasSharedChanges = files.some(f =>
-		SHARED_DIRS.some(d => f.startsWith(d))
-	);
 
-	if (hasLangChanges || hasSharedChanges) {
+	if (hasLangChanges) {
 		console.log(`Changes detected for ${vercel_lang} — building`);
 		process.exit(1);
 	}
