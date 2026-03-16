@@ -25,7 +25,7 @@ Only make updates to your account schema when the sync is paused or not schedule
 
 ## How syncing works
 
-- Each sync imports rows where `UPDATED_AT` is later than the last synced timestamp. Rows at the exact boundary timestamp may be re-synced if new rows share that same timestamp. For more information, see [Avoid resyncing rows with duplicate timestamps]({{site.baseurl}}/user_guide/data/cloud_ingestion/best_practices/#avoid-resyncing-rows-with-duplicate-timestamps).
+- Each sync imports rows where `UPDATED_AT` is later than the last synced timestamp. Rows at the exact boundary timestamp may be re-synced if new rows share that same timestamp. For more information, see [Avoid resyncing rows with duplicate timestamps]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/best_practices/#avoid-resyncing-rows-with-duplicate-timestamps).
 - Data from the integration creates or updates accounts based on the provided `id`.
 - If `DELETED` is `true`, the account is deleted.
 - Syncing doesn’t log data points, but all synced data counts toward your total accounts usage, measured by total stored data—there’s no need to limit to only changed data.
@@ -239,7 +239,7 @@ To sync account data from file storage, create a source file with the following 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {% alert note %}
-Filenames must follow AWS rules and be unique. Append timestamps to help ensure uniqueness. For more on Amazon S3 syncing, see [File Storage Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/file_storage_integrations).
+Filenames must follow AWS rules and be unique. Append timestamps to help ensure uniqueness. For more on Amazon S3 syncing, see [File Storage Integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations).
 {% endalert %}
 
 The following examples show valid JSON and CSV formats for syncing account data from file storage.
