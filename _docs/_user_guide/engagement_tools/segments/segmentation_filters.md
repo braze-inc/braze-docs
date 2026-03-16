@@ -14,6 +14,7 @@ glossary_tag_name: Filter Category
 glossary_filter_text: "Select a category to narrow the glossary:"
 
 # channel to icon/fa or image mapping
+# NOTE: glossary_tags names must match the "tags" under each glossary entry exactly (filter/checkbox logic). Do not translate.
 glossary_tags:
   - name: Segment or CSV membership
   - name: Custom attribute
@@ -33,6 +34,8 @@ glossary_tags:
   - name: Intelligence and predictive
   - name: Social activity
   - name: Other Filters
+  - name: Advertising use cases
+  - name: User Attributes
 
 glossaries:
   - name: Segment Membership
@@ -610,5 +613,5 @@ glossaries:
   - name: Phone Number
     description: Segments your users by the E.164 formatted phone number field.<br><br> When a phone number is sent to Braze, Braze tries to coerce it into the <a href="/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers">e.164 format</a> that is used to send across SMS and WhatsApp channels. The coercion process can fail if the number isn't formatted properly, which results in the user profile having an unformatted phone number but not a sending phone number. This segment filter returns users by their e.164 formatted phone number (when available).<br><br>Use cases:<br> - Use this filter to understand the most accurate target audience size when sending SMS or WhatsApp messages.  <br>- Use regular expressions (regex) with this filter to segment by phone numbers with a specific country code. <br>- Use this filter to segment users by phone numbers that failed the e.164 coercion process.
     tags:
-      - Other filters
+      - Other Filters
 ---
