@@ -203,6 +203,29 @@ Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/gen
 
 The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages/).
 
+#### Create conversational message workflows (RCS)
+
+Conversational message workflows let you respond dynamically to users, creating a back-and-forth messaging experience. To build a workflow, create a Canvas and then combine suggested replies with [Action Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/action_paths/) to direct your workflow based on which reply a user selects.
+
+1. In the Canvas builder, create an RCS message step with multiple suggested replies.
+
+![RCS message composer with suggested replies.]({% image_buster /assets/img/rcs/suggested_replies.png %})
+
+{: start="2"}
+2. Connect that message to an Action Path with an action group for each suggested reply.
+3. For each action group:
+   - Select the trigger **Send an SMS inbound message**.
+   - Set the message body to be the same as the corresponding suggested reply.
+
+![Action Path step configured with three action groups, one for each suggested reply.]({% image_buster /assets/img/rcs/quick_reply.png %})
+
+{: start="4"}
+4. Connect each action group to an RCS message step, and then add content based on the associated suggested reply.
+5. Continue the conversational workflow by adding suggested replies to any follow-up messages.
+6. Repeat steps 2–4 until the workflow is complete.
+
+![Canvas showing a conversational workflow with two Action Paths.]({% image_buster /assets/img/rcs/full_conversational_workflow.png %})
+
 ## Step 4: Preview and test your message
 
 Braze always recommends previewing and testing your message before sending. Switch to the **Test** tab to send a test SMS, MMS, or RCS message to [content test groups]({{site.baseurl}}/user_guide/administer/global/user_management/internal_groups/#content-test-groups) or individual users, or preview the message as a user directly in Braze.
@@ -274,3 +297,9 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 After you've finished building the last of your campaign or Canvas, review its details, test it, then send it!
 
 Next, check out [SMS, MMS, and RCS reporting]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/reporting/) to learn how you can access the results of your campaigns.
+
+## Frequently asked questions
+
+### Can I send pre-recorded voicemails with RCS?
+
+Yes, you can use media messages to support audio files.
