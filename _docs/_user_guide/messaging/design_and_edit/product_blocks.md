@@ -84,7 +84,7 @@ Use layout options to customize how your products display within your product bl
 
 ### Global email style settings 
 
-[Global email style settings]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings) allow you to apply consistent styling to your emails within Braze. This means you can define specific styles—such as fonts, colors, and button designs—that will automatically apply to all your emails.
+[Global email style settings]({{site.baseurl}}/user_guide/channels/email/drag_and_drop/dnd_email_style_settings) allow you to apply consistent styling to your emails within Braze. This means you can define specific styles—such as fonts, colors, and button designs—that will automatically apply to all your emails.
 
 #### How global email style settings work with product blocks
 

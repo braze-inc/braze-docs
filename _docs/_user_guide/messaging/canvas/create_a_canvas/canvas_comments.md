@@ -1,6 +1,6 @@
 ---
-nav_title: Commenting in Canvas
-article_title: Commenting in Canvas
+nav_title: Comments in Canvas
+article_title: Comments in Canvas
 alias: "/canvas_comments/"
 page_order: 0.5
 page_type: reference
@@ -8,7 +8,7 @@ description: "This reference article covers how to create and manage comments in
 tool: Canvas
 ---
 
-# Commenting in Canvas
+# Comments in Canvas
 
 > Comments in Canvases can be a great collaborative space for your marketing team to identify, discuss, and review the finer details for your Canvases. As you build out a Canvas, you can make and manage comments to identify these areas that may require additional feedback from your colleagues.
 

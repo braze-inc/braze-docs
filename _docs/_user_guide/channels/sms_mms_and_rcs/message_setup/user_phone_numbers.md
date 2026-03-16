@@ -1,7 +1,7 @@
 ---
 nav_title: "User phone numbers"
 article_title: SMS User Phone Numbers
-page_order: 5
+page_order: 3
 description: "This reference article covers SMS phone number formatting, how to importing phone numbers, as well as how to add users to SMS subscription groups."
 page_type: reference
 alias: /user_phone_numbers/
@@ -61,7 +61,7 @@ These invalid phone numbers can be managed using [SMS and RCS endpoints]({{site.
 If multiple user profiles have the same phone number and that phone number is marked invalid, then all existing User Profiles with that number will display as invalid. Newly created user profiles will never initially be marked as invalid.
 {% endalert %}
 
-You can also include or exclude any users with invalid phone numbers when [creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment).
+You can also include or exclude any users with invalid phone numbers when [creating a segment]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/#step-4-add-filters-to-your-segment).
 
 ## Adding users to SMS and RCS subscription groups
 

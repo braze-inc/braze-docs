@@ -58,7 +58,7 @@ Braze uses different data storage systems for various features. Understanding wh
 - Most segmentation and targeting features
 
 #### Snowflake-powered features
-- [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)
+- [SQL Segment Extensions]({{site.baseurl}}/user_guide/audience/segments/segment_extension/sql_segments/)
 - [Prediction Suite]({{site.baseurl}}/user_guide/brazeai/predictive_suite/)
 - [Personalized Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/) and [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant)
 - [AI Personalized Item Recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/)

@@ -10,12 +10,12 @@ page_order: 4
 > Use Liquid personalization in landing pages to dynamically tailor the content with user profile data. For example, you can personalize headlines based on different user attributes without managing multiple static landing pages.
 
 {% alert important %}
-Liquid personalization for landing pages is only available on the Pro tier of landing pages. Currently, [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), [multi-language]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings), and [promotion codes]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes) are not supported with Liquid personalization in landing pages.
+Liquid personalization for landing pages is only available on the Pro tier of landing pages. Currently, [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/), [multi-language]({{site.baseurl}}/user_guide/administer/global/workspace_settings/multi_language_settings/), and [promotion codes]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes) are not supported with Liquid personalization in landing pages.
 {% endalert %}
 
 ## Inserting Liquid
 
-In the drag-and-drop editor, you can insert Liquid personalization both in the editor and in the page or block settings in the right-hand panel. For instructions on implementing Liquid, check out our dedicated [Liquid documentation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1).
+In the drag-and-drop editor, you can insert Liquid personalization both in the editor and in the page or block settings in the right-hand panel. For instructions on implementing Liquid, check out our dedicated [Liquid documentation]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/conditional_logic/#using-liquid).
 
 ![Landing page editor with Liquid personalization added.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
 

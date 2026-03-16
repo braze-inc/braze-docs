@@ -60,7 +60,7 @@ Then, determine if you will [collect custom attributes](#custom-attributes) or [
 
 Select **Log attributes upon submission** to collect attributes based on the user's submission. You can use this option to create new segments and retargeting campaigns. For example, in a [satisfaction survey](#user-satisfaction), you could send a follow-up email to all users who were not happy.
 
-To add a custom attribute to each choice, select a custom attribute name from the dropdown menu (or create a new one), and then enter the value to set when this choice is submitted. You can also create a new custom attribute in your [Settings Page]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/).
+To add a custom attribute to each choice, select a custom attribute name from the dropdown menu (or create a new one), and then enter the value to set when this choice is submitted. You can also create a new custom attribute in your [Settings Page]({{site.baseurl}}/user_guide/data/activation/custom_data/managing_custom_data/).
 
 The data type of your custom attributes matters depending on how you've set up your survey.
 

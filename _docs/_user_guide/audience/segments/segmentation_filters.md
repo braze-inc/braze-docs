@@ -84,7 +84,7 @@ glossaries:
     tags:
       - Custom events
   - name: Email Address 
-    description: Allows you to designate your campaign recipients by individual email addresses for testing. This can also be used to send transactional emails to all your users (including unsubscribed) using the "Email Address is not Blank" specifier within the filter, so that you can maximize delivery of emails regardless of opt-in status. <br><br>This filter only checks if user profiles have an email address, whereas the <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters#email-available">Email Available</a> filter checks for additional criteria.
+    description: Allows you to designate your campaign recipients by individual email addresses for testing. This can also be used to send transactional emails to all your users (including unsubscribed) using the "Email Address is not Blank" specifier within the filter, so that you can maximize delivery of emails regardless of opt-in status. <br><br>This filter only checks if user profiles have an email address, whereas the <a href="/docs/user_guide/audience/segments/segmentation_filters#email-available">Email Available</a> filter checks for additional criteria.
     tags:
       - Other Filters
   - name: External User ID
@@ -128,23 +128,23 @@ glossaries:
     tags:
       - Sessions
   - name: Received Message from Campaign
-    description: Segments your users by whether or not they have received a specific campaign. This filter only captures users who were explicitly sent the message, and not other users with the same email or phone number who received duplicate messages. To capture duplicate users, use <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag">Received Message from Campaign or Canvas with Tag</a>.<br><br> For Content Cards, Banners, and in-app messages, this is when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is when the message is sent to the user.<br><br> For WhatsApp, this is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered).<br><br>For SMS, this is when the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device.
+    description: Segments your users by whether or not they have received a specific campaign. This filter only captures users who were explicitly sent the message, and not other users with the same email or phone number who received duplicate messages. To capture duplicate users, use <a href="/docs/user_guide/audience/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag">Received Message from Campaign or Canvas with Tag</a>.<br><br> For Content Cards, Banners, and in-app messages, this is when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is when the message is sent to the user.<br><br> For WhatsApp, this is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered).<br><br>For SMS, this is when the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device.
     tags:
       - Retargeting
   - name: Received Campaign Variant
-    description: Segments your users by which variant of a multivariate campaign they have received. This filter only captures users who were explicitly sent the message, and not other users with the same email or phone number who received duplicate messages. To capture duplicate users, use <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag">Received Message from Campaign or Canvas with Tag</a>.<br><br> For Content Cards, Banners, and in-app messages, this is when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is when the message is sent to the user.<br><br> For WhatsApp, this is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered).<br><br>For SMS, this is when the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device.
+    description: Segments your users by which variant of a multivariate campaign they have received. This filter only captures users who were explicitly sent the message, and not other users with the same email or phone number who received duplicate messages. To capture duplicate users, use <a href="/docs/user_guide/audience/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag">Received Message from Campaign or Canvas with Tag</a>.<br><br> For Content Cards, Banners, and in-app messages, this is when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is when the message is sent to the user.<br><br> For WhatsApp, this is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered).<br><br>For SMS, this is when the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device.
     tags:
       - Retargeting
   - name: Received Message from Canvas Step
-    description: Segments your users by whether or not they have received a specific Canvas component. This filter only captures users who were explicitly sent the message, and not other users with the same email or phone number who received duplicate messages. To capture duplicate users, use <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag">Received Message from Campaign or Canvas with Tag</a>.<br><br> For Content Cards and in-app messages, this is when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is when the message is sent to the user.<br><br> For WhatsApp, this is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered).<br><br>For SMS, this is when the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device.
+    description: Segments your users by whether or not they have received a specific Canvas component. This filter only captures users who were explicitly sent the message, and not other users with the same email or phone number who received duplicate messages. To capture duplicate users, use <a href="/docs/user_guide/audience/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag">Received Message from Campaign or Canvas with Tag</a>.<br><br> For Content Cards and in-app messages, this is when a user logs an impression, not when the card or in-app message is sent.<br><br>For push and webhooks, this is when the message is sent to the user.<br><br> For WhatsApp, this is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. <br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered).<br><br>For SMS, this is when the last message was delivered to the SMS provider. This doesn't guarantee that the message was delivered to the user's device.
     tags:
       - Retargeting
   - name: Last Received Message from Specific Canvas Step
-    description: Segments your users by when they received a specific Canvas component. This filter only captures users who were explicitly sent the message, and not other users with the same email or phone number who received duplicate messages; to capture duplicate users, use <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag">Received Message from Campaign or Canvas with Tag</a>. This filter doesn't consider when users received other Canvas components.
+    description: Segments your users by when they received a specific Canvas component. This filter only captures users who were explicitly sent the message, and not other users with the same email or phone number who received duplicate messages; to capture duplicate users, use <a href="/docs/user_guide/audience/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag">Received Message from Campaign or Canvas with Tag</a>. This filter doesn't consider when users received other Canvas components.
     tags:
       - Retargeting
   - name: Last Received Message from Specific Campaign
-    description: Segments your users by whether or not they have received a specific campaign. This filter only captures users who were explicitly sent the message, and not other users with the same email or phone number who received duplicate messages; to capture duplicate users, use <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag">Received Message from Campaign or Canvas with Tag</a>. This filter doesn't consider when users received other campaigns.
+    description: Segments your users by whether or not they have received a specific campaign. This filter only captures users who were explicitly sent the message, and not other users with the same email or phone number who received duplicate messages; to capture duplicate users, use <a href="/docs/user_guide/audience/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag">Received Message from Campaign or Canvas with Tag</a>. This filter doesn't consider when users received other campaigns.
     tags:
       - Retargeting
   - name: Received Message from Campaign or Canvas with Tag
@@ -276,7 +276,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Email Available
-    description: Segments your users by whether they have a valid email address and whether they are subscribed or opted in to email. This filter checks for three criteria&#58; if the user is unsubscribed from emails, if Braze has received a hard bounce, and if the email was marked as spam. If any of these criteria are met, or if an email doesn't exist for a user, the user is not included.<br><br>Users whose Email Available is <code>false</code> are excluded from the campaign audience and do not receive the email—even if your send settings are configured to send to all users (including unsubscribed users).<br><br>For emails where opt-in status matters, use Email Available instead of <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address">Email Address</a>. The additional criteria help you target users who are eligible to receive email.
+    description: Segments your users by whether they have a valid email address and whether they are subscribed or opted in to email. This filter checks for three criteria&#58; if the user is unsubscribed from emails, if Braze has received a hard bounce, and if the email was marked as spam. If any of these criteria are met, or if an email doesn't exist for a user, the user is not included.<br><br>Users whose Email Available is <code>false</code> are excluded from the campaign audience and do not receive the email—even if your send settings are configured to send to all users (including unsubscribed users).<br><br>For emails where opt-in status matters, use Email Available instead of <a href="/docs/user_guide/audience/segments/segmentation_filters#email-address">Email Address</a>. The additional criteria help you target users who are eligible to receive email.
     tags:
       - Channel subscription behavior
   - name: Email Opt In Date
@@ -308,7 +308,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Push Subscription Status
-    description: Segments your users by their <a href="/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-state">subscription status</a> for push.
+    description: Segments your users by their <a href="/docs/user_guide/channels/push/push_setup/push_subscription_states/#push-subscription-state">subscription status</a> for push.
     tags:
       - Channel subscription behavior
   - name: Push Unsubscribed Date
@@ -464,7 +464,7 @@ glossaries:
     tags:
       - Devices
   - name: Device OS
-    description: Segments your users that have one or more devices with the specified operating system. To segment users by a range of operating systems, use the <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters#device-os-version-number">Device OS Version Number</a> filter.
+    description: Segments your users that have one or more devices with the specified operating system. To segment users by a range of operating systems, use the <a href="/docs/user_guide/audience/segments/segmentation_filters#device-os-version-number">Device OS Version Number</a> filter.
     tags:
       - Devices
   - name: Device OS Version Number
@@ -472,7 +472,7 @@ glossaries:
     tags:
       - Devices
   - name: Most Recent Device Locale
-    description: Segments your users by the <a href="/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/">locale information</a> from the most recently used device.
+    description: Segments your users by the <a href="/docs/user_guide/messaging/messaging_fundamentals/localization/">locale information</a> from the most recently used device.
     tags:
       - Devices      
   - name: Most Recent Watch Model
@@ -608,7 +608,7 @@ glossaries:
     tags:
       - Social activity
   - name: Phone Number
-    description: Segments your users by the E.164 formatted phone number field.<br><br> When a phone number is sent to Braze, Braze tries to coerce it into the <a href="/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers">e.164 format</a> that is used to send across SMS and WhatsApp channels. The coercion process can fail if the number isn't formatted properly, which results in the user profile having an unformatted phone number but not a sending phone number. This segment filter returns users by their e.164 formatted phone number (when available).<br><br>Use cases:<br> - Use this filter to understand the most accurate target audience size when sending SMS or WhatsApp messages.  <br>- Use regular expressions (regex) with this filter to segment by phone numbers with a specific country code. <br>- Use this filter to segment users by phone numbers that failed the e.164 coercion process.
+    description: Segments your users by the E.164 formatted phone number field.<br><br> When a phone number is sent to Braze, Braze tries to coerce it into the <a href="/docs/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/#importing-phone-numbers">e.164 format</a> that is used to send across SMS and WhatsApp channels. The coercion process can fail if the number isn't formatted properly, which results in the user profile having an unformatted phone number but not a sending phone number. This segment filter returns users by their e.164 formatted phone number (when available).<br><br>Use cases:<br> - Use this filter to understand the most accurate target audience size when sending SMS or WhatsApp messages.  <br>- Use regular expressions (regex) with this filter to segment by phone numbers with a specific country code. <br>- Use this filter to segment users by phone numbers that failed the e.164 coercion process.
     tags:
       - Other filters
 ---

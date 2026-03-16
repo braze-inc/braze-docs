@@ -90,7 +90,7 @@ Make sure to use the Braze Business Manager ID, `332231937299182`, as the partne
 ![WhatsApp Manager settings page for the "Catalog_products" catalog.]({% image_buster /assets/img/whatsapp/meta_catalog_settings.png %}){: style="max-width:90%;"}
 
 {: start="4"}
-4. In Braze, go through the [embedded signup]({{site.baseurl}}/user_guide/channels/whatsapp/overview/embedded_signup/) process to provide permissions. Be sure to select **all** the catalogs you want to provide permissions for. This will unlock the Braze integrated product selector.
+4. In Braze, go through the [embedded signup]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/embedded_signup/) process to provide permissions. Be sure to select **all** the catalogs you want to provide permissions for. This will unlock the Braze integrated product selector.
 
 ![Window with five catalogs selected provide permissions.]({% image_buster /assets/img/whatsapp/select_catalogs.png %}){: style="max-width:50%;"}
 

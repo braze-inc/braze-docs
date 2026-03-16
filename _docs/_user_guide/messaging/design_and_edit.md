@@ -11,15 +11,15 @@ description: "Design and edit message content in Braze, including editor blocks,
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Editor blocks
-    link: /docs/user_guide/messaging/design_and_edit/editor_blocks/
-    image: /assets/img/braze_icons/align-left.svg
-  - name: Media library
-    link: /docs/user_guide/messaging/design_and_edit/media_library/
-    image: /assets/img/braze_icons/image-01.svg
   - name: Personalize
     link: /docs/user_guide/messaging/design_and_edit/personalize/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: Media library
+    link: /docs/user_guide/messaging/design_and_edit/media_library/
+    image: /assets/img/braze_icons/image-01.svg
+  - name: Editor blocks
+    link: /docs/user_guide/messaging/design_and_edit/editor_blocks/
+    image: /assets/img/braze_icons/align-left.svg
   - name: Content Blocks
     link: /docs/user_guide/messaging/design_and_edit/content_blocks/
     image: /assets/img/braze_icons/columns-01.svg

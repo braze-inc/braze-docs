@@ -1,6 +1,6 @@
 ---
-nav_title: FAQs
-article_title: Cloud Data Ingestion FAQs
+nav_title: FAQ
+article_title: Cloud Data Ingestion FAQ
 page_order: 10
 page_type: FAQ
 description: "This page answers frequently asked questions about Cloud Data Ingestion."

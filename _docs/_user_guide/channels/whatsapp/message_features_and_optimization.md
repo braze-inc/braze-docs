@@ -1,10 +1,10 @@
 ---
-nav_title: Message features and optimization
-article_title: Message features and optimization
-page_order: 3
+nav_title: Features and optimization
+article_title: WhatsApp features and optimization
+page_order: 4
 layout: dev_guide
-guide_top_header: "Message features and optimization"
-guide_top_text: "Optimize your WhatsApp messages with delivery optimization, click tracking, WhatsApp Flows, product messages, user retargeting, and custom domains."
+guide_top_header: "Features and optimization"
+guide_top_text: "Optimize WhatsApp message delivery. Learn how to set up click tracking, WhatsApp Flows, and more."
 
 page_type: landing
 description: "Optimize WhatsApp messages with delivery, click tracking, Flows, and more in Braze."

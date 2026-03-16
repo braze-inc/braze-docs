@@ -17,13 +17,13 @@ This article will walk you through a use case for the **Email sign-up with doubl
 
 To successfully use this template, you need the following:
 
-- A [multi-page in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page) with one page to capture your users' emails and another to communicate a success message. 
+- A [multi-page in-app message]({{site.baseurl}}/user_guide/channels/in_app_messages/drag_and_drop/create#multi-page) with one page to capture your users' emails and another to communicate a success message. 
 - A confirmation email for users to verify their email address.
 - A welcome email with an exclusive promotion code for users who double opt-in.
 
 ## Tailoring the template to your needs
 
-Let’s say you're working for Steppington, a health app known for its features such as calorie tracking, digital exercise classes, and flash-mob marathons. Before creating the Canvas, you [set up multi-page in-app and in-browser messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page) that includes a series of engaging questions to determine the experience and impression of a user's first ride with the app.
+Let’s say you're working for Steppington, a health app known for its features such as calorie tracking, digital exercise classes, and flash-mob marathons. Before creating the Canvas, you [set up multi-page in-app and in-browser messages]({{site.baseurl}}/user_guide/channels/in_app_messages/drag_and_drop/create#multi-page) that includes a series of engaging questions to determine the experience and impression of a user's first ride with the app.
 
 To access the template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates**. Then, next to **Email sign-up with double opt-in**, select **Apply Template**. Now, we can go through the template to fit it for our needs.
 
@@ -64,7 +64,7 @@ For the **Entry Window**, update the **Started Time (Required)** to our desired 
 
 ### Step 4: Select the target audience
 
-Define your target audience as Steppington users who don't have an email address in their user profile by keeping the template's default [segmentation filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) `Email Available is false`.
+Define your target audience as Steppington users who don't have an email address in their user profile by keeping the template's default [segmentation filter]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters/) `Email Available is false`.
 
 ![Entry Audience with the "Email Available is false" filter.]({% image_buster /assets/img/canvas_templates/email_signup6.png %}){: style="max-width:90%;"}
 
@@ -105,5 +105,5 @@ The **Verify Email** Message step is triggered on the user's second session. Thi
 After testing and reviewing your Canvas to make sure it works as expected, launch it by selecting **Launch Canvas**.
 
 {% alert tip %}
-Check out our [Pre and post-launch checklist]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
+Check out our [Pre and post-launch checklist]({{site.baseurl}}/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
 {% endalert %}

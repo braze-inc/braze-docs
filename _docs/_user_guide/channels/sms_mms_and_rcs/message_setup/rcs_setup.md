@@ -1,7 +1,7 @@
 ---
 nav_title: "RCS setup"
 article_title: RCS Setup
-page_order: 6
+page_order: 1
 alias: /rcs_setup/
 description: "This reference article covers the requirements needed to get RCS up and running."
 page_type: reference
@@ -107,7 +107,7 @@ Add a User Update Step to your Canvas. In the step, open the **Advanced JSON Edi
 
 ### Step 4: Test the Canvas
 
-We highly recommend [testing your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) to confirm it works as expected before sending it to your broader audience.
+We highly recommend [testing your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/testing_canvases/sending_test_canvases/) to confirm it works as expected before sending it to your broader audience.
 
 ### Step 5: Launch your Canvas
 

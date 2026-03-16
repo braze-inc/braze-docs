@@ -1,5 +1,5 @@
 ---
-nav_title: "Laws & regulations"
+nav_title: "Laws and regulations"
 article_title: Laws & Regulations for SMS, MMS, and RCS
 page_order: 1
 description: "This reference article covers laws and regulations surrounding SMS, MMS, and RCS."
@@ -77,7 +77,7 @@ The Telephone Consumer Protection Act ([TCPA](https://en.wikipedia.org/wiki/Tele
 
 Remember to comply with the [National Do Not Call Registry](https://www.donotcall.gov/).
 
-Braze uses [Subscription Groups]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/keywords/) to manage groups of users based on their level of consent.
+Braze uses [Subscription Groups]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/) to manage groups of users based on their level of consent.
 
 ### Spam and cadence
 

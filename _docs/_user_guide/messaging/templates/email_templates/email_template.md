@@ -13,7 +13,7 @@ search_rank: 1
 
 # Create an email template
 
-> The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also upload your own [HTML email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/).
+> The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also upload your own [HTML email template]({{site.baseurl}}/user_guide/messaging/templates/email_templates/html_email_template/).
 
 ## Step 1: Navigate to the email template editor
 
@@ -33,11 +33,11 @@ Any existing custom HTML templates will need to be re-created using the drag-and
 
 ## Step 3: Customize your template
 
-After selecting your editor experience, this is your opportunity to get creative with customizing your email template. You can use HTML to create and emulate your branding in the HTML editor, or include a variety of [creative details]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/#creative-details) in the drag-and-drop editor.
+After selecting your editor experience, this is your opportunity to get creative with customizing your email template. You can use HTML to create and emulate your branding in the HTML editor, or include a variety of [creative details]({{site.baseurl}}/user_guide/channels/email/drag_and_drop/#creative-details) in the drag-and-drop editor.
 
 ### Including an unsubscribe link
 
-As you design your email template, if you do not include an unsubscribe link, Braze will prompt you to add this in your email as it’s required by law on all marketing emails. You can add this unsubscribe link as a footer at the bottom of your emails by using the Liquid tag {% raw %}``${email_footer}``{% endraw %}, or by [customizing the footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) in your template.
+As you design your email template, if you do not include an unsubscribe link, Braze will prompt you to add this in your email as it’s required by law on all marketing emails. You can add this unsubscribe link as a footer at the bottom of your emails by using the Liquid tag {% raw %}``${email_footer}``{% endraw %}, or by [customizing the footer]({{site.baseurl}}/user_guide/channels/email/subscriptions/#custom-footer) in your template.
 
 ## Step 4: Check for email errors
 
@@ -48,7 +48,7 @@ Email errors are presented on the **Compose** tab of the message workflow. Error
 Here's a list of errors that are accounted for in our editor:
 
 - Incorrect Liquid syntax
-- [Email bodies larger than 400kb; bodies are highly recommended to be less than 102kb]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/)
+- [Email bodies larger than 400kb; bodies are highly recommended to be less than 102kb]({{site.baseurl}}/user_guide/channels/email/best_practices/)
 - Templates without an unsubscribe link
 - Emails with a blank **Body** or **Subject**
 - Emails with no unsubscribe link
@@ -83,7 +83,7 @@ If you make any edits to an existing template, those changes will not be reflect
 
 ### Managing your templates
 
-As you create more email templates, you can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/#duplicate-templates) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/#archive-templates) email templates. Learn more about creating and managing your library of templates and creative content in [Templates and Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+As you create more email templates, you can [duplicate]({{site.baseurl}}/user_guide/messaging/templates/managing_templates/#duplicate-templates) and [archive]({{site.baseurl}}/user_guide/messaging/templates/managing_templates/#archive-templates) email templates. Learn more about creating and managing your library of templates and creative content in [Templates and Media]({{site.baseurl}}/user_guide/messaging/templates/).
 
 ### Using your templates in API campaigns
 
@@ -105,5 +105,5 @@ After your template is saved, users can see icons over unaddressed comments. Sel
 
 ![An email template comment that reads "Looks good to me".]({% image_buster /assets/img/email_templates/template_comment.png %})
 
-For answers to frequently asked questions about email templates, check out our [Templates FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/).
+For answers to frequently asked questions about email templates, check out our [Templates FAQ]({{site.baseurl}}/user_guide/messaging/templates/email_templates/faq/).
 

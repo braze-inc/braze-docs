@@ -1,5 +1,5 @@
 ---
-page_order: 1
+page_order: 5
 nav_title: Terms to know
 article_title: SMS, MMS, and RCS Terms to Know
 alias: /sms_terms_to_know/

@@ -1,5 +1,5 @@
 ---
-page_order: 10
+page_order: 22
 nav_title: Best practices
 article_title: Email best practices
 layout: dev_guide
@@ -25,7 +25,7 @@ guide_featured_list:
     link: /docs/user_guide/channels/email/best_practices/sunset_policies/
     image: /assets/img/braze_icons/sun-setting-03.svg
   - name: "Sending test messages"
-    link: /docs/developer_guide/in_app_messages/sending_test_messages/
+    link: /docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=email
     image: /assets/img/braze_icons/mail-01.svg
   - name: "Know before you send"
     link: /docs/know_before_send/

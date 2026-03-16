@@ -1,5 +1,5 @@
 ---
-nav_title: Deliverability pitfalls & spam traps
+nav_title: Deliverability pitfalls and spam traps
 article_title: Deliverability Pitfalls & Spam Traps
 page_order: 7
 page_type: reference

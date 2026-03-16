@@ -15,7 +15,7 @@ In this article, we'll walk you through a use case for the **Onboarding** templa
 
 ## Prerequisites
 
-Before using this template, you need to create the following [email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template) to reference in the Canvas:
+Before using this template, you need to create the following [email templates]({{site.baseurl}}/user_guide/messaging/templates/email_templates/email_template/) to reference in the Canvas:
 
 - A welcome email to all users of your app
 - An email with tips on how to use your app
@@ -98,6 +98,6 @@ From the set of users who haven't interacted with our app, we can further target
 After testing and reviewing our Canvas to make sure it works as expected, select **Launch Canvas** to launch the Canvas. Now, we can provide our new users with a personalized onboarding experience to encourage a lasting relationship!
 
 {% alert tip %}
-Check out our [Pre and post-launch checklist]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
+Check out our [Pre and post-launch checklist]({{site.baseurl}}/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
 {% endalert %}
 

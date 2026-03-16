@@ -21,7 +21,7 @@ user_menu_list:
     description: Log into the platform.
   - name: Create a Canvas
     bg_color: '#FFD4BC'
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
+    link: /docs/user_guide/messaging/canvas/create_a_canvas/
     image: /assets/img/braze_icons/users-01-braze-orange-dark.svg
     description: This guide walks you through how to start building a customer journey.
 

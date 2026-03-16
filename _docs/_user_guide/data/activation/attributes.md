@@ -20,7 +20,7 @@ guide_featured_list:
     link: /docs/user_guide/data/activation/attributes/nested_custom_attribute_support/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Data types
-    link: /docs/user_guide/data/activation/attributes/data_types/
+    link: /docs/user_guide/data/activation/custom_data/data_types/
     image: /assets/img/braze_icons/list.svg
 ---
 <br><br>

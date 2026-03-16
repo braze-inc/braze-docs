@@ -1,7 +1,7 @@
 ---
-nav_title: Push setup
+nav_title: "Setup"
 article_title: Push setup
-page_order: 1
+page_order: 0
 layout: dev_guide
 guide_top_header: "Push setup"
 guide_top_text: "Understand push token lifecycle and subscription states to ensure your push notifications reach the right users."

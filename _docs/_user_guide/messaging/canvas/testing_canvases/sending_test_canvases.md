@@ -9,7 +9,7 @@ tool: Canvas
 
 # Send test Canvases
 
-> After [creating your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/create_a_canvas/), there are several checks you may want to perform before launching, depending on details such as your audience size or number of segmentation filters.
+> After [creating your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/), there are several checks you may want to perform before launching, depending on details such as your audience size or number of segmentation filters.
 
 When possible, Braze recommends testing a Canvas before launching. This test will typically take place in your Braze environment. Testing your Canvas can involve duplicating it, taking test users through the user journey, and checking if the user behavior aligns with what you have outlined in your Canvas.
 
@@ -61,7 +61,7 @@ In some cases, a user can potentially receive multiple messages when going throu
 
 ### Create an Internal Group
 
-Instead of creating individual test users, you can create a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), which is an Internal Group whose purpose is to review the content of your message. This includes a group of users that will receive test messages from campaigns and Canvases. Then, you can add this test group into the **Add Content Test Groups** field under **Test Recipients**.
+Instead of creating individual test users, you can create a [Content Test Group]({{site.baseurl}}/user_guide/administer/global/user_management/internal_groups/), which is an Internal Group whose purpose is to review the content of your message. This includes a group of users that will receive test messages from campaigns and Canvases. Then, you can add this test group into the **Add Content Test Groups** field under **Test Recipients**.
 
 ### Reduce time delays
 

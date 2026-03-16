@@ -77,14 +77,14 @@ Apple allows brands the option to send quiet push notifications to their users' 
 Unlike a traditional iOS push token, a provisional push token acts as a "trial pass" that allows brands to reach new users before they've seen and clicked Apple's native push opt-in prompt. With this feature, your push notification will be delivered directly to your new user's notification tray with the option to "Keep" or "Turn Off" future notifications. Instead of experiencing an "opt-in" journey, users will experience something more akin to an "opt-out" journey.
 
 {% alert tip %}
-Provisional Authorization has the potential dramatically increase your opt-in rate, but only if users see value in your messages. Be sure to use our [user segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), [location targeting]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/), and [personalization]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) features to ensure that the appropriate users are getting these "trial" notifications at the right time. Then, you can encourage users to fully opt-in to your push notifications, knowing that they add value to your users' experience with your app.
+Provisional Authorization has the potential dramatically increase your opt-in rate, but only if users see value in your messages. Be sure to use our [user segmentation]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/), [location targeting]({{site.baseurl}}/user_guide/audience/locations_and_geofences/), and [personalization]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/) features to ensure that the appropriate users are getting these "trial" notifications at the right time. Then, you can encourage users to fully opt-in to your push notifications, knowing that they add value to your users' experience with your app.
 {% endalert %}
 
-Whichever option the user chooses will add the appropriate token or [subscription status]({{site.baseurl}}/user_guide/channels/push/push_setup/push_subscription_states/) to their [Contact Settings]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) under the **Engagement** tab in their user profile.
+Whichever option the user chooses will add the appropriate token or [subscription status]({{site.baseurl}}/user_guide/channels/push/push_setup/push_subscription_states/) to their [Contact Settings]({{site.baseurl}}/user_guide/audience/segments/using_user_search/#engagement-tab) under the **Engagement** tab in their user profile.
 
 ![Contact settings with a push subscribed status.]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 
-You will be able to target your users based on whether they are provisionally authorized or not using our [segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+You will be able to target your users based on whether they are provisionally authorized or not using our [segmentation filters]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters/).
 
 ![Segment Details panel with the sample segment filter "Provisionally Authorized on iOS Stopwatch (iOS) is true" to target users.]({% image_buster /assets/img/segment-push-prov-auth.png %})
 

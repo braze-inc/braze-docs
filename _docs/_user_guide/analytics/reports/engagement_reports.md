@@ -1,11 +1,11 @@
 ---
 nav_title: Engagement reports
-article_title: Engagement Reports
+article_title: Engagement reports
 page_order: 5
 local_redirect:
   report-glossary: '/docs/user_guide/data_and_analytics/report_metrics/'
 page_type: tutorial
-description: "This how-to article walks you through creating, personalizing, and scheduling Engagement Reports for campaigns and Canvases."
+description: "This how-to article walks you through creating, personalizing, and scheduling engagement reports for campaigns and Canvases."
 tool:
   - Campaigns
   - Canvas
@@ -14,17 +14,17 @@ tool:
 
 # Engagement reports
 
-> Engagement Reports let you pull engagement statistics for specific messages from campaigns and Canvases to receive as an email at your preferred time.
+> Engagement reports let you pull engagement statistics for specific messages from campaigns and Canvases to receive as an email at your preferred time.
 
 {% alert note %}
-You need "Export User Data" permissions to run Engagement Reports.
+You need "Export User Data" permissions to run engagement reports.
 {% endalert %}
 
-With Engagement Reports, you can manually select campaigns and Canvases to include in your email report, or specify rules to automatically select relevant campaigns and Canvases.
+With engagement reports, you can manually select campaigns and Canvases to include in your email report, or specify rules to automatically select relevant campaigns and Canvases.
 
-Regardless of the number of campaigns or Canvases you select, up to two CSV files are generated—one for all campaign data and one for all Canvas data. You can access these CSV files from the link embedded inside your report email. Engagement Reports are not saved in the Braze dashboard.
+Regardless of the number of campaigns or Canvases you select, up to two CSV files are generated—one for all campaign data and one for all Canvas data. You can access these CSV files from the link embedded inside your report email. Engagement reports are not saved in the Braze dashboard.
 
-Certain data is aggregated at the campaign or Canvas level versus at the individual campaign variant or Canvas step level. If you [delete a Canvas step after launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-details), this will also remove the data from Engagement Reports.
+Certain data is aggregated at the campaign or Canvas level versus at the individual campaign variant or Canvas step level. If you [delete a Canvas step after launch]({{site.baseurl}}/user_guide/messaging/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-details), this will also remove the data from engagement reports.
 
 {% alert tip %}
 You can re-run the report to generate updated statistics.
@@ -34,7 +34,7 @@ You can re-run the report to generate updated statistics.
 
 ### Step 1: Create a report
 
-In your dashboard account, go to **Analytics** > **Engagement Reports**. Select **+ Create New Report**.
+In your dashboard account, go to **Analytics** > **Engagement reports**. Select **+ Create New Report**.
 
 ### Step 2: Add messages
 
@@ -75,7 +75,7 @@ The **Add Stats** step shows you statistics for the types of campaigns or Canvas
 
 ### Step 4: Complete report setup
 
-Give your report a name, choose how your report will be formatted, and select your recipients. By default, Engagement Reports are sent as a ZIP file where data is comma-delimited (where each piece of data is separated by a comma).
+Give your report a name, choose how your report will be formatted, and select your recipients. By default, engagement reports are sent as a ZIP file where data is comma-delimited (where each piece of data is separated by a comma).
 
 You can select from the following compression and delimiter options:
 

@@ -12,9 +12,9 @@ channel:
 
 # Upload an HTML email template
 
-> The Braze dashboard allows you to upload your very own HTML email templates and save them for later use in campaigns. You can also [create an email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) using our editor.
+> The Braze dashboard allows you to upload your very own HTML email templates and save them for later use in campaigns. You can also [create an email template]({{site.baseurl}}/user_guide/messaging/templates/email_templates/email_template/) using our editor.
 
-## Prerequisites {#upload-requirements}
+## Requirements {#upload-requirements}
 
 First, you'll need to create your HTML email template. This must be a ZIP file that contains the following:
 
@@ -35,7 +35,7 @@ Under the **Template Type** section, select **HTML Editor** and scroll down to t
 
 ### Step 3: Upload your template
 
-Select **Upload From File** and select your template from your computer. Refer to the [Prerequisites](#upload-requirements) section to ensure your template meets the upload requirements.
+Select **Upload From File** and select your template from your computer. Refer to the [Requirements](#upload-requirements) section to ensure your template meets the upload requirements.
 
 #### Troubleshoot uploading template errors
 
@@ -68,10 +68,10 @@ To use your email for an API campaign, you need the `email_template_id`, which c
 
 ## Managing email templates
 
-You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) email templates! Learn more about creating and managing templates and creative content in [Templates]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+You can [duplicate]({{site.baseurl}}/user_guide/messaging/templates/managing_templates/) and [archive]({{site.baseurl}}/user_guide/messaging/templates/managing_templates/) email templates! Learn more about creating and managing templates and creative content in [Templates]({{site.baseurl}}/user_guide/messaging/templates/).
 
 ## Frequently asked questions
 
-For answers to frequently asked questions about email templates, check out our [email and link templates FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/) page.
+For answers to frequently asked questions about email templates, check out our [email and link templates FAQ]({{site.baseurl}}/user_guide/messaging/templates/email_templates/faq/) page.
 
 

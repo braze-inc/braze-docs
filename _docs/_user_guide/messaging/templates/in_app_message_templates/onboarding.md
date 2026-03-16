@@ -28,11 +28,11 @@ When creating a drag-and-drop in-app message, select **Onboarding flow** for you
 
 To get started building your onboarding flow, use the **Pages** section to add or delete messages to your flow. After you have your desired number of messages, select the buttons on each page. Then, use the side menu to select where users go when they select the button—whether they exit the flow or go to the next message.
 
-Check that your messages are connected in sequential order so that users move through the flow correctly. For steps on how to do so, check out [Connect pages together]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/?tab=adding%20pages#step-3a-connect-pages-together).
+Check that your messages are connected in sequential order so that users move through the flow correctly. For steps on how to do so, check out [Connect pages together]({{site.baseurl}}/user_guide/channels/in_app_messages/drag_and_drop/create/?tab=adding%20pages#step-3a-connect-pages-together).
 
 ### Step 4: Style your message
 
-Customize the look and feel of your onboarding flow using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components).
+Customize the look and feel of your onboarding flow using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/channels/in_app_messages/customize/style_settings/#message-components).
 
 ## Analyzing the results
 

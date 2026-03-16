@@ -1,7 +1,7 @@
 ---
 nav_title: "Use case: Create a Braze-to-Braze webhook"
 article_title: "Use case: Create a Braze-to-Braze webhook"
-page_order: 4
+page_order: 2
 channel:
   - webhooks
 description: "This reference article covers when to use User Update versus Braze-to-Braze webhooks and how to create a Braze-to-Braze webhook."
@@ -12,7 +12,7 @@ description: "This reference article covers when to use User Update versus Braze
 
 > Braze-to-Braze webhooks let you call the [Braze REST API]({{site.baseurl}}/api/basics/) from within Braze using a [Webhook]({{site.baseurl}}/user_guide/channels/webhooks/create_a_webhook/) in a [Campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) or [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/). Use this for orchestration tasks like triggering an [API-triggered Canvas]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/). For updating [User attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/), [Custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/), or [Purchases]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) from Canvas, use [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) instead. It's designed for user profile changes and processes updates more efficiently.
 
-To get the most out of this article, you should be familiar with [how webhooks work]({{site.baseurl}}/user_guide/channels/webhooks/understanding_webhooks/) and how to [create a webhook]({{site.baseurl}}/user_guide/channels/webhooks/create_a_webhook/) in Braze.
+To get the most out of this article, you should be familiar with [how webhooks work]({{site.baseurl}}/user_guide/channels/webhooks/) and how to [create a webhook]({{site.baseurl}}/user_guide/channels/webhooks/create_a_webhook/) in Braze.
 
 ## Use User Update for user data changes
 

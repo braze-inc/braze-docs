@@ -1,5 +1,5 @@
 ---
-nav_title: Aborting messages
+nav_title: Abort messages
 article_title: Abort Liquid Messages
 page_order: 7
 description: "This reference article covers aborting Liquid messages and some example use cases."

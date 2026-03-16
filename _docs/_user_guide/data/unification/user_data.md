@@ -24,7 +24,7 @@ guide_featured_list:
     link: /docs/user_guide/data/unification/user_data/best_practices/
     image: /assets/img/braze_icons/thumbs-up.svg
   - name: Import users
-    link: /docs/user_guide/data/unification/user_data/import_users/
+    link: /docs/user_guide/audience/manage_audience/import_users/
     image: /assets/img/braze_icons/users-01.svg
   - name: Delete users
     link: /docs/user_guide/data/unification/user_data/delete_users/

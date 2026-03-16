@@ -1,5 +1,5 @@
 ---
-nav_title: Caching responses
+nav_title: Cache responses
 article_title: Cache Connected Content Responses
 page_order: 2.5
 description: "This article covers how to cache Connected Content responses across different campaigns or messages in the same workspace to optimize sending speeds."

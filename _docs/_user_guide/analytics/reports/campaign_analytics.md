@@ -13,28 +13,28 @@ tool: Reports
 guide_featured_title: "Messaging channels"
 guide_featured_list:
   - name: Content Cards
-    link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
+    link: /docs/user_guide/channels/content_cards/reporting/
     image: /assets/img/braze_icons/user-square.svg
   - name: Email
-    link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
+    link: /docs/user_guide/channels/email/reporting/
     image: /assets/img/braze_icons/mail-01.svg
   - name: Feature flags
     link: /docs/developer_guide/feature_flags/experiments/
     image: /assets/img/braze_icons/flag-06.svg
   - name: In-app messages
-    link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
+    link: /docs/user_guide/channels/in_app_messages/reporting/
     image: /assets/img/braze_icons/message-text-circle-01.svg
   - name: Push
-    link: /docs/user_guide/message_building_by_channel/push/push_reporting/
+    link: /docs/user_guide/channels/push/reporting/
     image: /assets/img/braze_icons/phone-01.svg
   - name: SMS
     link: /docs/sms_mms_rcs_reporting/
     image: /assets/img/braze_icons/phone-02.svg
   - name: Webhooks
-    link: /docs/user_guide/message_building_by_channel/webhooks/reporting/
+    link: /docs/user_guide/channels/webhooks/reporting/
     image: /assets/img/braze_icons/share-07.svg
   - name: WhatsApp
-    link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
+    link: /docs/user_guide/channels/whatsapp/reporting/
     image: /assets/img/braze_icons/whatsapp.svg
 
 guide_menu_title: "More articles"

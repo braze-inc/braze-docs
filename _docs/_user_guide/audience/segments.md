@@ -1,7 +1,7 @@
 ---
 nav_title: Segments
 article_title: Segments
-page_order: 2
+page_order: 3
 layout: dev_guide
 guide_top_header: "Segments"
 guide_top_text: "Audience segmentation is key to strategic marketing—it can keep you from over-targeting, bothering, or missing a potential connection with a customer. View the following articles to learn how to segment and filter your audience to your (and their) greatest benefit."

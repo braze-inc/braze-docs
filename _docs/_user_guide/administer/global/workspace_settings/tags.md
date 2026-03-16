@@ -10,7 +10,7 @@ description: "This reference article covers how to manage tags in the Braze dash
 
 > You can manage the tags you use across campaigns, Canvases, and segments from a central location. To rename, remove, or add tags, go to **Settings** > **Tag Management**.
 
-To learn how to add tags to campaigns, Canvases, segments, and custom data, see [Tags]({{site.baseurl}}/user_guide/data/activation/tags/).
+To learn how to add tags to campaigns, Canvases, segments, and custom data, see [Tags]({{site.baseurl}}/user_guide/messaging/governance/tags/).
 
 ## Nesting tags
 

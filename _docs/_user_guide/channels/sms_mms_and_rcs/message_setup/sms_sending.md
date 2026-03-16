@@ -30,7 +30,7 @@ SMS message segments are how the SMS industry counts messages. A message segment
 
 ### Keyword customization (optional)
 
-Regulations require that there are responses to all Opt-In, Opt-Out, and Help/Info SMS keyword responses. With Braze, you are able to define your own keywords to trigger Opt-In, Opt-Out, and Help responses, manage your own responses that get sent to users, and define keyword sets for different languages. For more, refer to our collection on [Keyword processing]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/keywords/).
+Regulations require that there are responses to all Opt-In, Opt-Out, and Help/Info SMS keyword responses. With Braze, you are able to define your own keywords to trigger Opt-In, Opt-Out, and Help responses, manage your own responses that get sent to users, and define keyword sets for different languages. For more, refer to our collection on [Keyword processing]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/).
 
 {% alert tip %}
 Want to learn how to create an SMS campaign? Check out our step-by-step guide on [Creating an SMS, MMS, or RCS message]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/create/).

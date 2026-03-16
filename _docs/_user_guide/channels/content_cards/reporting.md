@@ -1,7 +1,7 @@
 ---
 nav_title: Reporting
 article_title: Content Card Reporting
-page_order: 3
+page_order: 21
 description: "This reference article provides an overview of the different Content Card reporting metrics and analytics options provided in the Braze dashboard."
 channel:
   - content cards

@@ -28,6 +28,7 @@ Webhooks are an excellent way to connect your systems together—after all, webh
 
 Some more specific use cases include the following:
 
+- Create a [lead-scoring workflow]({{site.baseurl}}/user_guide/get_started/b2b_use_cases/lead_scoring/) using webhooks and Canvas to qualify and route leads.
 - If a user unsubscribes from email, you could have a webhook update your analytics database or CRM with that same information, ensuring a holistic view of that user's behavior.
 - Send [transactional messages]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign/) to users within Facebook Messenger or Line.
 - Send direct mail to customers in response to their in-app and web activity by using webhooks to communicate with third-party services like [Lob.com]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/lob/).
@@ -48,7 +49,17 @@ These headers help Braze interpret rate limits and adjust sending speed accordin
 
 If the majority of webhook requests to a specific host are failing, Braze temporarily defers all send attempts to that host. Sending resumes after a defined cooldown period, allowing your system to recover.
 
+## Using webhooks with Braze partners {#utilizing-webhooks}
+
+There are many ways to use webhooks, and with our technology partners (Alloys), you can use webhooks to level up your communication directly with your customers and users.
+
+Check out:
+* [Messenger]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/instant_chat/messenger/)
+* [Remerge]({{site.baseurl}}/partners/remerge/)
+* [Lob.com]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/lob/)
+* And many more of our [technology partners]({{site.baseurl}}/partners/home/)!
+
 ## Next steps
 
 - [Create a webhook]({{site.baseurl}}/user_guide/channels/webhooks/create_a_webhook/)
-- [Braze-to-Braze webhooks]({{site.baseurl}}/user_guide/channels/webhooks/use_case_create_a_braze_to_braze_webhook/)
+- [Create a Braze-to-Braze webhook]({{site.baseurl}}/user_guide/channels/webhooks/use_case_create_a_braze_to_braze_webhook/)

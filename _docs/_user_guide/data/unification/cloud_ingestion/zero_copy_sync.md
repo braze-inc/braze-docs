@@ -296,7 +296,7 @@ Filenames must follow AWS rules and be unique. Append timestamps to help ensure 
 
 #### Step 2: Configure your destination Canvas
 
-1. Set up your destination Canvas for Canvas triggers. Create a new or select an existing API-triggered Canvas. Refer to [Entry schedule types]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#entry-schedule-types) for instructions on how to create a canvas with an API-triggered delivery schedule type.
+1. Set up your destination Canvas for Canvas triggers. Create a new or select an existing API-triggered Canvas. Refer to [Entry schedule types]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas#entry-schedule-types) for instructions on how to create a canvas with an API-triggered delivery schedule type.
 2. After selecting the API-triggered delivery schedule type, continue with Canvas setup and build your Canvas. Canvases can range from simple single-message sends to complex customer workflows with multiple steps.
 3. Within your Canvas steps, use [Canvas entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) to personalize messages with properties fields that you plan to sync from your source table.
   * For example, if in Step 1 you instrumented a properties field for `account_balance`, you would use the following Liquid templating to personalize your message: `\{\{canvas_entry_properties.\$\{account_balance\}\}\}`.

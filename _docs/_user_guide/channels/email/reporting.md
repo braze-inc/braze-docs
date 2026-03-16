@@ -1,7 +1,7 @@
 ---
 nav_title: Reporting
 article_title: Email Reporting
-page_order: 8
+page_order: 21
 description: "This reference article covers the different components of email reporting and where it can be found in the dashboard."
 tool:
   - Reports

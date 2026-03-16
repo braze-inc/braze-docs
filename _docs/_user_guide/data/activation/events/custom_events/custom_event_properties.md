@@ -18,25 +18,11 @@ Custom event properties aren't stored on the Braze profile and therefore don't l
 Each custom event or purchase can have up to 256 distinct custom event properties. If a custom event or purchase is logged with more than 256 properties, only the first 256 will be captured and available for use.
 {% endalert %}
 
-## Expected format
+## Expected format {#expected-format}
 
-The property values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs (`$`).
+Property values must be an object: keys are the property names (non-empty strings, 255 characters or fewer, no leading `$`), and values are the property values. For supported data types, format requirements, and payload limits, see [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#event-property-data-types).
 
-Property values can be any of the following data types:
-
-| Data Type | Description |
-| --- | --- |
-| Numbers | As either [integers](https://en.wikipedia.org/wiki/Integer) or [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
-| Booleans | Value of `true` or `false`. |
-| Datetimes | Formatted as strings in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) or `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. Not supported within arrays. |
-| Strings | 255 characters or fewer. |
-| Arrays | Arrays cannot include datetimes. |
-| Nested objects | Objects that are inside of other objects. For more, see the section in this article on [Nested objects](#nested-objects).
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-Event property objects that contain array or object values can have an event property payload up to 100&nbsp;KB.
-
-You can change the data type of your custom event property, but be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
+You can change the data type of your custom event property, but be aware of the impacts of [changing data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#changing-custom-attribute-or-event-data-type) after data has been collected.
 
 ### Reserved keys
 

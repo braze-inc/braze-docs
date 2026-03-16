@@ -44,7 +44,7 @@ You can see the differences between local number formatting as well as universal
 
 ### Adding users to WhatsApp a subscription group
 
-For a customer to receive an WhatsApp message, they must have a valid phone number and be opted-in to a subscription group. For more information, refer to [WhatsApp subscription groups]({{site.baseurl}}/user_guide/channels/whatsapp/user_subscription/).
+For a customer to receive an WhatsApp message, they must have a valid phone number and be opted-in to a subscription group. For more information, refer to [WhatsApp subscription groups]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/subscription_groups/).
 
 
 ### Multiple users with the same phone number

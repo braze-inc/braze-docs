@@ -15,7 +15,7 @@ description: "This how-to article will walk you through how to set up Location t
 > With Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/) (CDI), you can set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data on a recurring basis.
 
 {% alert warning %}
-CDI Segment Extensions query your data warehouse directly, so you will incur all costs associated with running these queries in your data warehouse. CDI Segment Extensions won't consume [SQL segment credits]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#monitoring-your-sql-segments-usage), don't count towards your Segment Extension limit, and do not log data points.
+CDI Segment Extensions query your data warehouse directly, so you will incur all costs associated with running these queries in your data warehouse. CDI Segment Extensions won't consume [SQL segment credits]({{site.baseurl}}/user_guide/audience/segments/segment_extension/sql_segments/#monitoring-your-sql-segments-usage), don't count towards your Segment Extension limit, and do not log data points.
 {% endalert %}
 
 ## Prerequisites
@@ -44,7 +44,7 @@ To view the available data tables, including their schema and any available desc
 
 ![]({% image_buster /assets/img/segment/connection_schema_with_descriptions.png %}){: style="max-width:100%;"}
 
-Next, write the SQL for your segment using [the Braze SQL syntax]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#writing-sql).
+Next, write the SQL for your segment using [the Braze SQL syntax]({{site.baseurl}}/user_guide/audience/segments/segment_extension/sql_segments/#writing-sql).
 
 Keep in mind, all CDI Segment Extensions must use `external_user_id` as the selected column, and your `external_user_id` should match the one set in Braze for users.
 
@@ -55,7 +55,7 @@ Keep in mind, all CDI Segment Extensions must use `external_user_id` as the sele
 If your query results include users that don't exist in Braze, those users are ignored. Braze does not create new users based on the output of your CDI Segment Extension.
 
 {% alert tip %}
-To learn how you can preview your Segment Extensions, manage your Segment Extensions, and run automated membership refreshes, see [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/).
+To learn how you can preview your Segment Extensions, manage your Segment Extensions, and run automated membership refreshes, see [SQL Segment Extensions]({{site.baseurl}}/user_guide/audience/segments/segment_extension/sql_segments/).
 {% endalert %}
 
 Finally, you can [use this Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#step-5-use-your-extension-in-a-segment) within a Braze segment to send a campaign or Canvas to this audience.

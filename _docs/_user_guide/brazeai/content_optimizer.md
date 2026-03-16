@@ -24,7 +24,7 @@ Content Optimizer is an agent that runs in a Canvas step. It helps you define me
 - Test high volumes of content variants quickly, leveraging AI for ideation.
 - Automatically phase out underperforming content and scale up winners.
 
-Learn how to create a [Content Optimizer step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/content_optimizer_step/).
+Learn how to create a [Content Optimizer step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/content_optimizer_step/).
 
 ## Use cases
 
@@ -66,7 +66,7 @@ This means you can still use Content Optimizer in single-send or short-term Canv
 | Optimization event       | Determines how Content Optimizer evaluates performance and allocates traffic to content combinations over time, such as clicks or opens for email. Applies to all content components in a step. Content Optimizer continuously learns from this event and automatically shifts delivery toward higher-performing content combinations. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Limitations
+## Considerations
 
 - Content Optimizer is currently in beta and only available for email messages.
 - The agent can generate up to 125 combinations per step:
@@ -80,4 +80,4 @@ This means you can still use Content Optimizer in single-send or short-term Canv
 ## Next steps
 
 - Contact your customer success manager to join the beta or for onboarding support.
-- Learn how to create a [Content Optimizer step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/content_optimizer_step/).
+- Learn how to create a [Content Optimizer step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/content_optimizer_step/).

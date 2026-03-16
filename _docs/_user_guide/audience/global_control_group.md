@@ -2,7 +2,7 @@
 nav_title: Global Control Group
 article_title: Global Control Group
 alias: /global_control_group/
-page_order: 5
+page_order: 6
 page_type: reference
 description: "Learn how to set up and use the Global Control Group to measure the overall impact of your messaging efforts over time."
 tool: 

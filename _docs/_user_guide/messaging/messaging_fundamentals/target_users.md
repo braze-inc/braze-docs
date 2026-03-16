@@ -67,7 +67,7 @@ This won't work if you add your segment in the **Additional Filters** section th
 {% endtabs %}
 
 {% alert tip %}
-For email campaigns, you can target Seed Groups under the **Seed Groups** section. Note that Seed Groups aren't available for API campaigns, although you can include Seed Groups via an API-triggered entry in a campaign. For more information, see [Seed Groups]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/#seed-groups).
+For email campaigns, you can target Seed Groups under the **Seed Groups** section. Note that Seed Groups aren't available for API campaigns, although you can include Seed Groups via an API-triggered entry in a campaign. For more information, see [Seed Groups]({{site.baseurl}}/user_guide/administer/global/user_management/internal_groups/#seed-groups).
 {% endalert %}
 
 ### Step 2: Test your audience
@@ -78,7 +78,7 @@ After adding segments and filters to your audience, you can test if your audienc
 
 #### Audience summary
 
-The **Audience Summary** will show an overview of who is in your target audience. Here, you can further limit your audience by setting a maximum user cap or [rate-limiting]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/rate_limiting/) delivery speed.
+The **Audience Summary** will show an overview of who is in your target audience. Here, you can further limit your audience by setting a maximum user cap or [rate-limiting]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/frequency_capping/) delivery speed.
 
 ![The "Audience Summary" section with options to set a maximum user cap or rate limit delivery speed.]({% image_buster /assets/img_archive/audience_summary.png %})
 

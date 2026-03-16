@@ -1,9 +1,9 @@
 ---
-nav_title: Message features and optimization
-article_title: Message features and optimization
-page_order: 5
+nav_title: Features and optimization
+article_title: SMS, MMS, and RCS features and optimization
+page_order: 3
 layout: dev_guide
-guide_top_header: "Message features and optimization"
+guide_top_header: "Features and optimization"
 guide_top_text: "Optimize your SMS, MMS, and RCS messages with link shortening, custom domains, keyword processing, user retargeting, and bot click filtering."
 
 page_type: landing

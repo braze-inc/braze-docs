@@ -137,17 +137,17 @@ Some notes to keep in mind when configuring rate limits and what behavior you sh
 - The following messages will not be throttled by or counted towards the rate limit:
     - Test sends
     - Seed groups
-    - Content Cards configured to create "at first impression" (This will be controlled by the rate of app impressions. Refer to [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences) for more information on the differences between Card Creation options.)
+    - Content Cards configured to create "at first impression" (This will be controlled by the rate of app impressions. Refer to [Card creation]({{site.baseurl}}/user_guide/channels/content_cards/create_a_content_card/card_creation/#differences) for more information on the differences between Card Creation options.)
 - Delivery rate speed limits aren't supported for the following:
     - SMS autoresponses
-    - SLA-backed messages (such as [Transactional Email]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign))
+    - SLA-backed messages (such as [Transactional Email]({{site.baseurl}}/user_guide/channels/transactional_email/create_a_transactional_email/))
     - In-app messages
     - Feature flags
     - Banners
 
 #### Rate limiting and Connected Content retries
 
-When the [Connected Content retry]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/) is turned on, Braze will retry call failures while respecting the rate limit you set for each resend. Let’s consider the scenario of sending 75,000 messages with a 10,000 per minute rate limit. Imagine that in the first minute, the call fails or is slow and only sends 4,000 messages.
+When the [Connected Content retry]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/connected_content_retries/) is turned on, Braze will retry call failures while respecting the rate limit you set for each resend. Let’s consider the scenario of sending 75,000 messages with a 10,000 per minute rate limit. Imagine that in the first minute, the call fails or is slow and only sends 4,000 messages.
 
 Instead of trying to make up for the delay and send the remaining 6,000 messages in the second minute or add them to the 10,000 that are already set to send, Braze will move those 6,000 messages to the “back of the queue” and add a minute, if necessary, to the total minutes it would take to send your message.
 

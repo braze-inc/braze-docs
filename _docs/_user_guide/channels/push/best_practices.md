@@ -1,5 +1,5 @@
 ---
-page_order: 5
+page_order: 22
 nav_title: Best practices
 article_title: Push Best Practices
 description: "This page contains push best practices and use cases to make sure your push messages inspire engagement rather than annoyance."

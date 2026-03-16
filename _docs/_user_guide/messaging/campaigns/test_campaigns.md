@@ -15,24 +15,24 @@ description: "This landing page is home to campaign testing and tips. Here, you 
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Send test messages
-    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
+    link: /docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg
   - name: API-triggered and action-based campaigns
-    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/
+    link: /docs/user_guide/messaging/campaigns/testing_and_more/triggered_action_based/
     image: /assets/img/braze_icons/columns-01.svg
   - name: Multivariate and A/B testing
-    link: /docs/user_guide/engagement_tools/testing/multivariant_testing/
+    link: /docs/user_guide/messaging/ab_testing/
     image: /assets/img/braze_icons/beaker-02.svg
 
 guide_menu_title: "Additional articles"
 guide_menu_list:
   - name: Campaign analytics
-    link: /docs/user_guide/analytics/reporting/campaign_analytics/
+    link: /docs/user_guide/analytics/reports/campaign_analytics/
     image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Retention reports
-    link: /docs/user_guide/analytics/reporting/retention_reports/
+    link: /docs/user_guide/analytics/reports/retention_reports/
     image: /assets/img/braze_icons/line-chart-down-01.svg
   - name: Funnel reports
-    link: /docs/user_guide/analytics/reporting/funnel_reports/
+    link: /docs/user_guide/analytics/reports/funnel_reports/
     image: /assets/img/braze_icons/flag-02.svg
 ---

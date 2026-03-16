@@ -11,8 +11,8 @@ description: "This section covers audience management in Braze—segments, user 
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: User profiles
-    link: /docs/user_guide/audience/user_profiles/
+  - name: Manage audience
+    link: /docs/user_guide/audience/manage_audience/
     image: /assets/img/braze_icons/users-01.svg
   - name: Segments
     link: /docs/user_guide/audience/segments/

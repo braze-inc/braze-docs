@@ -1,7 +1,7 @@
 ---
 nav_title: Locations and geofences
 article_title: Locations and geofences
-page_order: 3
+page_order: 4
 layout: dev_guide
 guide_top_header: "Locations and geofences"
 guide_top_text: "The ubiquity and flexibility of mobile technology allows marketers, product managers, and growth teams to reach their users everywhere, blurring the lines between digital and real-world experiences. Refer to the articles in this section to learn more about location tracking, creating geofences, and more."
@@ -12,10 +12,10 @@ search_rank: 10
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Location tracking
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/location_tracking
+    link: /docs/user_guide/audience/locations_and_geofences/location_tracking
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Create geofences
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
+    link: /docs/user_guide/audience/locations_and_geofences/creating_geofences/
     image: /assets/img/braze_icons/marker-pin-01.svg
 ---
 

@@ -1,34 +1,36 @@
 ---
 nav_title: Channel performance
-article_title: Channel Performance Dashboard
+article_title: Channel performance dashboards
 page_order: 2
 page_type: reference
 description: "This reference article covers the channel performance dashboard, which allows you to view performance metrics for entire channels across both campaigns and Canvases."
 tool: 
   - Reports
-
+toc_headers: h2
 ---
 
-# Channel performance dashboard
+# Channel performance dashboards
 
 > Channel performance dashboards show aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email and SMS.
 
-![Email performance dashboard displaying email channel engagement from the last thirty days.]({% image_buster /assets/img_archive/email_performance_dashboard_1.png %})
+## Dashboards
 
-You can view the following dashboards:
-- [Email performance dashboard](#email-performance-dashboard)
-- [Email insights dashboard](#email-insights-dashboard)
-- [SMS performance dashboard](#sms-performance-dashboard)
+Select a tab to view details for available channel performance dashboards.
 
-## Email performance dashboard
+{% tabs %}
+{% tab Email performance %}
+
+### Email performance dashboard
 
 View your email performance dashboard by going to **Analytics** > **Email Performance**, and selecting the date range for the period you want to view data. Your date range can be up to one year in the past.
 
-### How metrics are calculated
+![Email performance dashboard displaying email channel engagement from the last thirty days.]({% image_buster /assets/img_archive/email_performance_dashboard_1.png %})
+
+#### How metrics are calculated
 
 ![An example email campaign with 335,630 sends, with an average of 11,187.667 per day.]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
-The calculations for different metrics in the email performance dashboard are the same as those on an individual message level (such as campaign analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
+The calculations for different metrics in the email performance dashboard are the same as those on an individual message level (such as campaign analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/channels/email/reporting/analytics_glossary/#email-metrics).
 
 Each tile shows the rate metric first, followed by the count metric (with the exception of *Sends*, which displays the count metric followed by the average per day). For example, the unique clicks tile contains the *Unique click rate* from your selected time period and the count of the total number of unique clicks from that time period. Each tile also shows the [comparison to the last period](#comparing-time-periods).
 
@@ -37,18 +39,21 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 | Sends | Count | Total number of sends across each day in the date range |
 | Delivery rate | Rate | (Total number of deliveries across each day in the date range) / (Total number of sends across each day in the date range) |
 | Bounce rate | Rate | (Total number of bounces across each day in the date range) / (Total number of sends across each day in the date range) |
-| Unsubscribe rate | Rate | (Total number of unique unsubscribes across each day in the date range) / (Total number of deliveries for a date range)<br><br>This uses unique unsubscribes, which is also used in Campaign Analytics, Overview, and Report Builder. These unsubscribes are logged across all sources (such as the SDK, REST API, CSV imports, emails, and list unsubscribes). The unsubscribe rates in Campaign and Canvas analytics are unsubscribes that occur as a result of an unsubscribe click on a Braze-delivered email.  |
+| Unsubscribe rate | Rate | (Total number of unique unsubscribes across each day in the date range) / (Total number of deliveries for a date range)<br><br>This uses unique unsubscribes, which is also used in Campaign Analytics, Overview, and Report Builder. These unsubscribes are logged across all sources (such as the , REST API, CSV imports, emails, and list unsubscribes). The unsubscribe rates in Campaign and Canvas analytics are unsubscribes that occur as a result of an unsubscribe click on a Braze-delivered email.  |
 | Unique open rate | Rate | (Total number of unique opens across each day in the date range) / (Total number of deliveries for a date range) |
 | Other opens rate | Rate | (Total number of total other opens across each day in the date range) / (Total number of deliveries for date range)<br><br>Other opens includes emails that haven't been identified as machine opens, such as when a user opens an email. This metric is non-unique and is a sub-metric of total opens.  |
 | Unique click rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of deliveries for a date range) |
 | Unique click to open rate | Rate | (Total number of unique clicks across each day in the date range) / (Total number of unique opens across each day in the date range) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-## Email insights dashboard 
+{% endtab %}
+{% tab Email insights %}
+
+### Email insights dashboard 
 
 The email insights dashboard tracks where and when your customers are interacting with your emails. These reports can provide rich and granular data on how to optimize your emails to drive greater engagement. The email insights dashboard includes up to the last six months of data. To access the dashboard, go to **Analytics** > **Email Performance** > **Email Insights**.
 
-### Engagement by Device
+#### Engagement by Device
 
 The **Engagement by Device** report provides a breakdown of what devices your users are using to engage with your email. This data tracks email engagement across mobile, desktop, tablet, and other device types. This data is based on the user agent string passed from your users' devices.
 
@@ -69,13 +74,13 @@ For email opens, Braze will separate Google Image Proxy, Apple Image Proxy, and 
 
 ![Engagement by Device report that shows the number of clicks for Mobile, Desktop, Tablet, Apple Privacy Proxy, Google Image Proxy, Yahoo Mail Proxy, and Other. The most number of opens occurs on mobile devices.]({% image_buster /assets/img/engagement_by_device_type_proxy.png %}){: style="max-width:70%;"}
 
-### Engagement by Mailbox Provider
+#### Engagement by Mailbox Provider
 
 The **Engagement by Mailbox Provider** report displays the top mailbox providers contributing to your clicks or opens. You can click into specific premier mailbox providers to drill down into specific receiving domains. For example, if Microsoft is listed on this report as one of your top mailbox provider metrics, you can further view details for their receiving domains, such as “outlook.com”, “hotmail.com”, “live.com”, and more.
 
 ![An example Engagement by Mailbox Provider report with Google, Apple iCloud, Yahoo, Microsoft, and Mail.Ru Group and their corresponding number of clicks.]({% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}){: style="max-width:70%;"}
 
-### Time of Engagement
+#### Time of Engagement
 
 The **Time of Engagement** report displays data on when users are engaging with your emails. This can help answer questions such as which weekday or what time sees the highest engagement from your customers. With these insights, you can experiment with the best day or time to send your messages to drive higher engagement. Note that these times are based on your company’s time zone.
 
@@ -87,13 +92,16 @@ The **Time of the day** engagement report breaks down opens or clicks by each ho
 
 ![An example Time of the day engagement report with the opens or clicks from 12 am to 11 pm.]({% image_buster /assets/img_archive/time_engagement_day.png %})
 
-For more information on analytics for your emails, check out [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
+For more information on analytics for your emails, check out [Email reporting]({{site.baseurl}}/user_guide/channels/email/reporting/).
 
-## SMS performance dashboard
+{% endtab %}
+{% tab SMS performance %}
+
+### SMS performance dashboard
 
 To use your SMS performance dashboard, go to **Analytics** > **SMS Performance**, and select the date range for the period you want to view data. Your date range can be up to one year in the past.
 
-### How metrics are calculated
+#### How metrics are calculated
 
 ![An example SMS campaign with 335,630 sends, with an average of 11,187.667 per day.]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
@@ -111,6 +119,9 @@ Each tile shows the rate metric first, followed by the count metric (with the ex
 | Total opt-ins | Rate | Total number of inbound message opt-ins across each day in the date range |
 | Total opt-outs | Rate | Total number of inbound message opt-outs across each day in the date range |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endtab %}
+{% endtabs %}
 
 ## Dashboard filters
 
@@ -164,7 +175,7 @@ This means that while Braze recorded positive counts for a particular metric for
 
 #### If a metric displays "--"
 
-This means Braze hasn't recorded any data for that metric during the time you selected. If you haven't set up or sent any emails yet, learn more about how to do so in our dedicated [Email]({{site.baseurl}}/user_guide/message_building_by_channel/email) section.
+This means Braze hasn't recorded any data for that metric during the time you selected. If you haven't set up or sent any emails yet, learn more about how to do so in our dedicated [Email]({{site.baseurl}}/user_guide/channels/email/) section.
 
 --->
 

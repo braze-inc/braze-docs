@@ -11,7 +11,7 @@ noindex: true
 guide_menu_title: ""
 guide_menu_list:
   - name: Changing Custom Attribute or Event Data Type
-    link: /docs/help/help_articles/data/change_custom_data_type/
+    link: /docs/user_guide/data/activation/custom_data/data_types/#changing-custom-attribute-or-event-data-type
     image: /assets/img/braze_icons/table.svg
   - name: Dispatch ID Behavior
     link: /docs/help/help_articles/data/dispatch_id/

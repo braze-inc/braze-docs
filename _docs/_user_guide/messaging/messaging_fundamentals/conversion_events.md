@@ -35,21 +35,21 @@ Conversion events attribute user actions back to a point of engagement. Note the
 
 The primary conversion event is the first event you add during campaign or Canvas creation. This event has the most bearing on your engagement and reporting. Braze uses your primary conversion event to:
 
-- Compute the winning message variation in [multivariate]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#multivariate-and-ab-testing) campaigns or Canvases.
+- Compute the winning message variation in [multivariate]({{site.baseurl}}/user_guide/messaging/ab_testing/#multivariate-and-ab-testing) campaigns or Canvases.
 - Determine the window when revenue is calculated for the campaign or Canvas.
 - Adjust message distributions for campaigns and Canvases using [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/).
 
 The primary conversion event count is the number of conversion events that occurred. For multichannel campaigns, Braze counts conversions per channel (as described in [Conversion tracking rules](#conversion-tracking-rules)), which means the conversion count can exceed the number of unique users and result in conversion rates greater than 100%. Braze calculates the primary conversion event rate by dividing this count by the number of unique recipients. Braze considers a user a recipient when the message is sent or shown, depending on the channel. For example, in push or email, a user becomes a recipient after Braze sends the message. For in-app messages or Content Cards, the user must view the message to be considered a recipient.
 
 {% alert note %}
-If you abort messages using the Liquid `abort` tag, Braze aborts messages only for users who go through variants. Messages to users in the control group are not aborted, which can lead to skewed conversion percentages across variants and control groups. As a workaround, use [segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) to target your users at campaign and Canvas entry.
+If you abort messages using the Liquid `abort` tag, Braze aborts messages only for users who go through variants. Messages to users in the control group are not aborted, which can lead to skewed conversion percentages across variants and control groups. As a workaround, use [segmentation]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/) to target your users at campaign and Canvas entry.
 {% endalert %}
 
 ## Creating a campaign with conversion tracking
 
 ### Step 1: Set up your campaign
 
-[Create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign) for your desired messaging channel. After setting up your campaign's messages and schedule, you can add up to four conversion events for tracking.
+[Create a campaign]({{site.baseurl}}/user_guide/messaging/campaigns/creating_campaign/) for your desired messaging channel. After setting up your campaign's messages and schedule, you can add up to four conversion events for tracking.
 
 Use as many conversion events as necessary. Adding a second or third conversion event significantly enriches your reporting. For example, for a campaign targeting lapsing users, adding a secondary conversion event along with the primary **Starts Session** conversion event helps you understand how effective your campaign is at bringing users back into your application. 
 

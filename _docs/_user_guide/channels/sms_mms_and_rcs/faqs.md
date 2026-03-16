@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: SMS, MMS, and RCS FAQ
-page_order: 20
+page_order: 30
 description: "This article addresses frequently asked questions about SMS, MMS, and RCS messaging."
 page_type: FAQ
 alias: /sms_mms_rcs_faq/
@@ -112,7 +112,7 @@ Before sending SMS messages containing URLs to users in certain countries (for e
 2. Ensure you (the brand) have a relationship with the customer.
 3. Make sure the content is relevant to the relationship and what the user has opted-in to receive.
 
-For more guidelines on avoiding spam detection, visit [SMS laws and regulations guidelines]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/laws_and_regulations/).
+For more guidelines on avoiding spam detection, visit [SMS laws and regulations guidelines]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations/).
 
 ### How many characters does an emoji use?
 
@@ -130,7 +130,7 @@ What does that look like on the user profile? The subscription group will revert
 
 ### If a user is opted out and sends a keyword to our short and long code, do they receive the response we configured for that keyword in Braze?
 
-If a user is opted out and sends a keyword from one of the [default keyword categories]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/keywords/optin_optout/), they will receive the response for that keyword. If a user is opted out and sends a [custom keyword]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/keywords/keyword_handling/), they will not receive the response for that keyword.
+If a user is opted out and sends a keyword from one of the [default keyword categories]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/optin_optout/), they will receive the response for that keyword. If a user is opted out and sends a [custom keyword]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/keyword_handling/), they will not receive the response for that keyword.
 
 ### Will SMS event properties capture keywords in a sentence?
 

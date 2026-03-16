@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: "FAQ"
-page_order: 9
+page_order: 30
 description: "This article addresses some of the most frequently asked questions that arise when setting up WhatsApp campaigns."
 page_type: FAQ
 channel:
@@ -69,7 +69,7 @@ You need to have the end-users phone number on the Braze profile to message them
 - If you do not have the end-users number, your opt-in method should include phone number capture. 
 
 #### How do I update the subscription status of end-users who opt-in? 
-Subscription management of the WhatsApp Channel functions similarly to how it functions in other Braze channels. Refer to [Managing user subscriptions]({{site.baseurl}}/user_guide/channels/whatsapp/user_subscription/) for more information.  
+Subscription management of the WhatsApp Channel functions similarly to how it functions in other Braze channels. Refer to [Managing user subscriptions]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/subscription_groups/) for more information.  
 
 #### If I already have a list of users who have opted-in to receive marketing messages on WhatsApp, how do I update their subscription status in Braze? 
 You can update their subscription status via [user import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import#importing-custom-data). 
@@ -128,7 +128,7 @@ The approval process can take up to 24 hours, but often templates get processed 
 Your message template limit depends on your business verification status. You can check your limit on the **WhatsApp Manager > Message Templates** page. 
 
 #### How do I personalize template copy and rich media in Braze? 
-WhatsApp allows for variable parameters to be inserted into message templates. Messages cannot start or end with a variable parameter. Variable parameters can be populated with Liquid logic in the Braze platform. Refer to [composing a WhatsApp message in Braze]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_campaign/create#step-2-compose-your-whatsapp-message) to learn more about variable parameters. 
+WhatsApp allows for variable parameters to be inserted into message templates. Messages cannot start or end with a variable parameter. Variable parameters can be populated with Liquid logic in the Braze platform. Refer to [composing a WhatsApp message in Braze]({{site.baseurl}}/user_guide/channels/whatsapp/create_a_whatsapp_message/#step-2-compose-your-whatsapp-message) to learn more about variable parameters. 
 
 #### My template got rejected. Can Braze help me get it approved? 
 The Braze team does not have visibility into template rejections. You should work directly with your WhatsApp Business manager to edit and resubmit the template. Make sure to provide a sample template where necessary. Double-check that your template follows Meta's [business](https://www.whatsapp.com/legal/business-policy/?fbclid=IwAR2qWg6yFKdyjDMxJkbNSM38FLGsxXxffC1qStY2gaHOyp-gl_8g72rZNIw) or [commerce](https://www.whatsapp.com/legal/commerce-policy/?fbclid=IwAR3bzN3LTZ-7kO-wnO7X3smtPKGy0asxaFod-U1Ub8B9JUpnrfy1_y7LpAQ) policies.
@@ -169,13 +169,13 @@ To send information into Braze, for example, to indicate that a user is in an ac
 Messages are only stored long enough to process them. To access user messages, use Currents. 
 
 #### How do user phone numbers need to be stored in Braze? 
-User phone numbers need to be stored in [E.164 format]({{site.baseurl}}/user_guide/channels/whatsapp/user_phone_numbers/#formatting).
+User phone numbers need to be stored in [E.164 format]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/user_phone_numbers/#formatting).
 
 #### What kind of rich media is supported in WhatsApp templates? 
 You can add images, calls to action (URL or phone number), and quick reply buttons to WhatsApp templates. You can add these elements when you build templates directly in WhatsApp. 
 
 #### Can I import user phone numbers? 
-Yes. You can [import user phone numbers]({{site.baseurl}}/user_guide/channels/whatsapp/user_phone_numbers/). 
+Yes. You can [import user phone numbers]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/user_phone_numbers/). 
 
 #### What is business verification? 
 Business verification is a WhatsApp concept used to ensure that the brand is a legitimate business. It can be completed in the WhatsApp Manager. Business verification is also required to scale messaging. Without business verification, customers can only send up to 250 unique end-users in a rolling 24-hour period. 

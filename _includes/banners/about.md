@@ -76,7 +76,7 @@ Here's what you need to know about Banner dimensions and sizing:
 
 ## Limitations
 
-Each workspace can support up to 200 active Banner campaigns. If this limit is reached, you'll need to [archive or deactivate]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/statuses/#changing-the-status) an existing campaign before creating a new one.
+Each workspace can support up to 200 active Banner campaigns. If this limit is reached, you'll need to [archive or deactivate]({{site.baseurl}}/user_guide/messaging/governance/statuses/#changing-the-status) an existing campaign before creating a new one.
 
 Additionally, Banner messages do not support the following features:
 

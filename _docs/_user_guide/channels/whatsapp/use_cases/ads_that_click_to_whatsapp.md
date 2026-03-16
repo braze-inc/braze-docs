@@ -52,7 +52,7 @@ Don’t forget to also provide any discount code, offer, or other information pr
 {: start="4"}
 4. Opt-in users by updating the subscription status of user profiles with one of the following update methods:
     - Create a Braze-to-Braze webhook that updates the subscription status through the REST API.  
-    - Use the advanced JSON editor to update the user profile with the template to [update a user's subscription status to a WhatsApp Canvas]({{site.baseurl}}/user_guide/channels/whatsapp/user_subscription/#whatsapp-opt-in-and-opt-out-process).
+    - Use the advanced JSON editor to update the user profile with the template to [update a user's subscription status to a WhatsApp Canvas]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/subscription_groups/#whatsapp-opt-in-and-opt-out-process).
 
 ![User Update Canvas step that uses the advanced JSON editor to update the user profile.]({% image_buster /assets/img/whatsapp/user_update_step_json.png %})
 

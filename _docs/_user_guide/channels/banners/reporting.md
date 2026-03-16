@@ -1,7 +1,7 @@
 ---
 nav_title: "Reporting"
 article_title: "Reporting"
-page_order: 2
+page_order: 21
 description: "Learn how to review analytics for your Banners, which includes campaign details, message performance, and historical performance."
 channel:
   - banners

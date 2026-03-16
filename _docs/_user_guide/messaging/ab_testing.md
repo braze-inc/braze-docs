@@ -1,9 +1,9 @@
 ---
-nav_title: "A/B testing"
-article_title: "A/B testing"
+nav_title: "A/B tests"
+article_title: "A/B tests"
 page_order: 6
 layout: dev_guide
-guide_top_header: "A/B testing"
+guide_top_header: "A/B tests"
 guide_top_text: "Run experiments to optimize your messaging. An A/B test compares users' responses to multiple versions of the same campaign, while a multivariate test extends this to two or more variables. In Braze, the terms are used interchangeably because the setup process is the same. Use A/B testing with <a href='/docs/user_guide/brazeai/intelligence_suite/intelligent_selection/'>Intelligent Selection</a> to automatically optimize your results."
 
 page_type: landing
@@ -28,7 +28,7 @@ guide_featured_list:
     image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## When to use A/B testing
+## When to use A/B tests
 
 - **Trying a new messaging type:** Experiment and learn what resonates with your users.
 - **Onboarding campaigns or recurring sends:** Ensure high-traffic campaigns are as effective as possible.

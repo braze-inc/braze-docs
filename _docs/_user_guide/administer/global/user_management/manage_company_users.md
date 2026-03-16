@@ -24,8 +24,6 @@ To add a new user:
 The department listed in a user's profile determines what types of communications they receive from Braze. This is so everyone only receives the communications and alerts that are relevant to how they use Braze.
 {% endalert %}
 
-![User details fields.]({% image_buster /assets/img/add_new_user_2.png %}){: style="max-width:60%;"}
-
 {:start="4"}
 
 4. For users that aren't administrators, select the company-level and workspace-level [permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/#editing-a-users-permissions) you want this user to have.

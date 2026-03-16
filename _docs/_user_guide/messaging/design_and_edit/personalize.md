@@ -1,7 +1,7 @@
 ---
 nav_title: Personalize
 article_title: Personalize
-page_order: 3
+page_order: 1
 layout: dev_guide
 
 guide_top_header: "Personalize"

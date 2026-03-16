@@ -16,22 +16,22 @@ When you include an Experiment Paths step in your user journey, it will randomly
 
 ![An Experiment Path step that splits into Path 1, Path 2, and Control.]({% image_buster /assets/img/experiment_step/experiment_step.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
+## Prerequisites
+
+To use Experiment Paths, your Canvas must include conversion events. While you can't add conversion events after a Canvas has been launched, you can clone the launched Canvas and add conversion events to add Experiment Paths.
+
 ## Use cases
 
 Experiment Paths are best suited for testing delivery, cadence, message copy, and channel combinations.
 
-- **Delivery:** Compare the results between messages sent with different time [delays]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), based on user actions ([Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/)), and using [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/#canvas).<br><br>
+- **Delivery:** Compare the results between messages sent with different time [delays]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/delay_step/), based on user actions ([Action Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/action_paths/)), and using [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/#canvas).<br><br>
 - **Cadence:** Test multiple messaging flows over a specific period. For example, you could test two different onboarding cadences:
     - Cadence 1: Send 2 messages in the user's first 2 weeks
     - Cadence 2: Send 3 messages in the user's first 2 weeks
     
     When targeting lapsing users, you can test the effectiveness of sending two win-back messages in a week versus sending just one.
-- **Message copy:** Similar to a standard [A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/), you can test different message copy to see which wording results in a higher conversion rate.<br><br>
+- **Message copy:** Similar to a standard [A/B test]({{site.baseurl}}/user_guide/messaging/ab_testing/), you can test different message copy to see which wording results in a higher conversion rate.<br><br>
 - **Channel combinations:** Test the effectiveness of different message channel combinations. For example, you can compare the impact of using just an email versus an email combined with a push.
-
-## Prerequisite
-
-To use Experiment Paths, your Canvas must include conversion events. While you can't add conversion events after a Canvas has been launched, you can clone the launched Canvas and add conversion events to add Experiment Paths.
 
 ## Creating an experiment path
 
@@ -53,7 +53,7 @@ If Canvas re-eligibility is enabled, users who enter the Canvas and go down a ra
 
 ### Step 2: Turn on Winning Path or Personalized Paths (optional) {#step-2}
 
-You can choose to optimize your experiment by turning on [Winning Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path) or [Personalized Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths). Both options work by initially testing your paths with a portion of your audience. After the experiment ends, the remaining and subsequent users are sent down either the best-performing path overall (Winning Path) or the best-performing path for each user (Personalized Paths).
+You can choose to optimize your experiment by turning on [Winning Path]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/experiment_step/winning_path) or [Personalized Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/experiment_step/personalized_paths). Both options work by initially testing your paths with a portion of your audience. After the experiment ends, the remaining and subsequent users are sent down either the best-performing path overall (Winning Path) or the best-performing path for each user (Personalized Paths).
 
 ### Step 3: Create paths
 
@@ -69,9 +69,9 @@ To prevent experiment contamination, if your Canvas has an active or in-progress
 
 ## Tracking performance
 
-From the **Canvas Analytics** page, select the Experiment Path to open a [detailed table]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) identical to the **Analyze Variants** tab to compare detailed performance and conversion statistics across paths. You can also export the table via CSV and compare percent changes for metrics of interest relative to the path or control you select.
+From the **Canvas Analytics** page, select the Experiment Path to open a [detailed table]({{site.baseurl}}/user_guide/messaging/canvas/managing_canvases/change_your_canvas_after_launch/#performance-breakdown-by-variant) identical to the **Analyze Variants** tab to compare detailed performance and conversion statistics across paths. You can also export the table via CSV and compare percent changes for metrics of interest relative to the path or control you select.
 
-Each step in each path displays statistics in the [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) view, just like any Canvas step. However, keep in mind that individual step analytics and Experiment Path analytics measure conversions differently:
+Each step in each path displays statistics in the [Canvas Analytics]({{site.baseurl}}/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) view, just like any Canvas step. However, keep in mind that individual step analytics and Experiment Path analytics measure conversions differently:
 
 - **Experiment Path analytics** track conversions starting from when the user enters the Experiment Path step. This is the recommended view for comparing performance across paths because all paths share the same starting point.
 - **Individual step analytics** (such as Message step analytics) track conversions starting from when the user receives that specific step (for example, when the message sends).
@@ -82,8 +82,8 @@ Because these conversion windows have different starting points, they can show d
 
 Take advantage of Winning Paths to track performance over a period of time and then automatically send subsequent users down the path with the best performance. For more information on analytics when **Winning Path** or **Personalized Paths** are turned on for your experiment, refer to:
 
-- [Winning Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/#analytics)
-- [Personalized Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/#analytics)
+- [Winning Path]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/experiment_step/winning_path/#analytics)
+- [Personalized Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/experiment_step/personalized_paths/#analytics)
 
 ### Additional settings
 
