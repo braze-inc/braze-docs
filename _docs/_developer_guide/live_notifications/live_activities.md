@@ -317,7 +317,7 @@ To improve reliability when ending a Live Activity:
 2. Optionally include `dismissal_date` in that same `update` request to suggest when iOS should remove the Live Activity UI.
 3. Verify delivery outcomes in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
 
-Keep in mind that dismissal timing is controlled by iOS. Even after you send a valid end request, removal from the lock screen or Dynamic Island can be delayed or behave differently based on OS-level conditions.
+Note that dismissal timing is controlled by iOS. Even after you send a valid end request, removal from the lock screen or Dynamic Island can be delayed or behave differently based on OS-level conditions.
 
 A Live Activity can also end outside of Braze:
 
