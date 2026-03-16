@@ -37,8 +37,7 @@ sequenceDiagram
 
 ```
 
-
-### Step 1: Configuring your Google Cloud API key
+### Step 1: Configure your Google Cloud API key
 
 In developing your app, you'll need to provide the Braze Android SDK with your Firebase sender ID. Additionally, you'll need to provide an API Key for server applications to the Braze dashboard. Braze will use this API key to send messages to your devices. You will also need to check that FCM service is enabled in Google Developer's console. 
 
@@ -50,23 +49,23 @@ A common mistake during this step is using the app identifier API key instead of
 
 In typical integrations, the Braze Android SDK will handle registering devices for FCM capability. This will usually happen immediately upon opening the app for the first time. After registration, Braze will be provided with an FCM Registration ID, which is used to send messages to that device specifically. We will store the Registration ID for that user, and that user will become "push registered" if they previously did not have a push token for any of your apps.
 
-### Step 3: Launching a Braze push campaign
+### Step 3: Launch a Braze push campaign
 
 When a push campaign is launched, Braze will make requests to FCM to deliver your message. Braze will use the API key copied in the dashboard to authenticate and verify that we can send push notifications to the push tokens provided.
 
-### Step 4: Removing invalid tokens
+### Step 4: Remove invalid tokens
 
 If FCM informs us that any of the push tokens we were attempting to send a message to are invalid, we remove those tokens from the user profiles they were associated with. If users have no other push tokens, they will no longer show up as "Push Registered" under the **Segments** page.
 
 For more details about FCM, visit [Cloud messaging](https://firebase.google.com/docs/cloud-messaging/).
 
-## Utilizing the push error logs
+## Use the push error logs
 
-Braze provides push notification errors within the message activity log. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
+Braze provides push notification errors within the message activity log. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Selecting an error message redirects you to relevant documentation to help you troubleshoot a particular incident.
 
 ![]({% image_buster /assets/img_archive/message_activity_log.png %})
 
-## Troubleshooting scenarios
+## Troubleshooting
 
 ### Push isn't sending
 
@@ -176,9 +175,11 @@ The Firebase Cloud Messaging server key provided in the Braze dashboard is inval
 
 ### Push clicks not logged
 
-Braze logs push clicks automatically, so this scenario should be comparatively rare.
+If push clicks are not being logged, it is possible that push click data has not been flushed to our servers yet. Braze throttles the frequency of its flushes based on the strength of the network connection. 
 
-If push clicks are not being logged, it is possible that push click data has not been flushed to our servers yet. Braze throttles the frequency of its flushes based on the strength of the network connection. With a good network connection, push click-data should arrive at the server within a minute in most circumstances.
+If you implemented a custom `BroadcastReceiver`, check that you called the appropriate method (for example, `Braze.getInstance().logPushNotiifcationOpened()`) when the push intent is broadcasted. If the incorrect method is called, the push click analytic event is not logged.
+
+Braze logs push clicks automatically, so this scenario should be comparatively rare. With a good network connection, push click-data should arrive at the server within a minute in most circumstances.
 
 ### Deep links not working
 
