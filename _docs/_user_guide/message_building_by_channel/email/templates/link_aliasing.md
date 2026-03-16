@@ -146,7 +146,7 @@ In Braze, if you have a link alias in your email and a user clicks on it, the ev
 
 If you use the "Clicked Alias in Any Campaign or Canvas Step" segmentation filter and later decide to rename this link alias, the previous click data in the user profile **will not** be updated, meaning it will still show as the previous link alias. So, if you target users based on the new link alias, it will not include the data from the previous link alias.
 
-If you use the "Clicked Alias in Campaign" or "Clicked Alias in Canvas" segmentation filter, this will filter your users by whether they clicked a specific alias in a specific campaign or Canvas. If multiple users share the same email address and the link alias is clicked, all other users who share the email address will have their user profiles updated. Delivery and open events also update received-message data (used by "received" segmentation filters) for all profiles that share the same email address, not just click events. 
+If you use the "Clicked Alias in Campaign" or "Clicked Alias in Canvas" segmentation filter, this will filter your users by whether they clicked a specific alias in a specific campaign or Canvas. If multiple users share the same email address and the link alias is clicked, all other users who share the email address will have their user profiles updated. These profiles are also updated by delivery and open events, not just click events. 
 
 The following segmentation filters apply to click events that are tracked at the time the event is processed. This means untracked links won't remove existing data and tracking a link won't backfill the data. For more details, see [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 

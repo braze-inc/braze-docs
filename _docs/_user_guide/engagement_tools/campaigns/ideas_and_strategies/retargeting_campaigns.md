@@ -79,25 +79,25 @@ Use this filter to find users who are or are not in the control group of your ta
 
 ### Last received message from specific campaign 
 
-Use this filter to find users who last received a specific campaign before or after a specified date or number of days. This filter doesn't consider when users received other campaigns. When a message is delivered, opened, or clicked, Braze updates received-message data for all profiles that share the same channel identifier (for example, email or phone), so users who share an identifier with someone who received the message can match this filter even if they were not originally sent it.
+Use this filter to find users who last received a specific campaign before or after a specified date or number of days. This filter doesn't consider when users received other campaigns. {% multi_lang_include segments.md section='same channel identifier' %}
 
 ![]({% image_buster /assets/img_archive/last_received_specific_campaign.png %})
 
 ### Last received message from specific campaign or Canvas with tag 
 
-Use this filter to find users who last received a specific campaign or Canvas with a given tag before or after a specified date or number of days. This filter doesn't consider when users received other campaigns or Canvases. When a message is delivered, opened, or clicked, Braze updates received-message data for all profiles that share the same channel identifier (for example, email or phone), so users who share an identifier with someone who received the message can match this filter even if they were not originally sent it.
+Use this filter to find users who last received a specific campaign or Canvas with a given tag before or after a specified date or number of days. This filter doesn't consider when users received other campaigns or Canvases. {% multi_lang_include segments.md section='same channel identifier' %}
 
 ![]({% image_buster /assets/img_archive/last_received_campaign_with_tag.png %})
 
 ### Received message from campaign 
 
-Use this filter to find users who have or have not received your target campaign. When a message is delivered, opened, or clicked, Braze updates received-message data for all profiles that share the same channel identifier (for example, email or phone), so users who share an identifier with someone who received the message can match this filter even if they were not originally sent it.
+Use this filter to find users who have or have not received your target campaign. {% multi_lang_include segments.md section='same channel identifier' %}
 
 ![]({% image_buster /assets/img_archive/receivedcamp.png %})
 
 ### Received message from campaign or Canvas with tag 
 
-Use this filter to find users who have or have not received a campaign or Canvas that has your target tag. When a message is delivered, opened, or clicked, Braze updates received-message data for all profiles that share the same channel identifier (for example, email or phone), so users who share an identifier with someone who received the message can match this filter even if they were not originally sent it.
+Use this filter to find users who have or have not received a campaign or Canvas that has your target tag. {% multi_lang_include segments.md section='same channel identifier' %}
 
 ![]({% image_buster /assets/img_archive/received_campaign_with_tag.png %})
 
