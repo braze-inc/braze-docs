@@ -13,7 +13,7 @@ tags:
 # Content Card ranking and prioritization on Web
 
 {% alert tip %}
-**Use Banners when you need prioritization.** [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/) support [native prioritization]({{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority): you can set the order in which Banners are displayed when they share the same placement. We recommend using Banners for prioritization unless your use case specifically requires Content Cards.
+Using Content Cards for banner-style messages? Try out [Banners](https://github.com/braze-inc/braze-docs/blob/develop/_includes/banners/%7B%7Bsite.baseurl%7D%7D/user_guide/message_building_by_channel/banners)— perfect for inline, persistent in-app and web messages. Banners provides prioritization support out of the box. Consider using Banners unless your use case specifically requires Content Cards.
 {% endalert %}
 
 The following solutions apply when you need to use Content Cards (for example, when your experience depends on the Content Cards feed or card-based UI). This use case describes best practices for ranking and prioritizing those cards on websites that use the Braze Web SDK. Braze does not offer default prioritization for Content Cards (unlike [In-App Message prioritization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/#step-7-build-the-remainder-of-your-campaign-or-canvas) with Low, Medium, and High). The approaches below use key-value pairs (KVPs) and custom logic to achieve a similar Low, Medium, and High priority system.
