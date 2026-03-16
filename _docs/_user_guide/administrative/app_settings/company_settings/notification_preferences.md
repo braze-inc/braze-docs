@@ -50,6 +50,10 @@ If you delete the default **Recipients** value of **All Dashboard Users** and wa
 | Agents Console Error | Notifies recipients when an [Agent Console agent]({{site.baseurl}}/user_guide/brazeai/agents) has met its execution limit with the current functionality. | Email |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
+{% alert note %}
+[Suspended users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/#suspending-company-users) may still receive notifications from Braze.
+{% endalert %}
+
 ## Weekly analytics reporting
 
 Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5 am EST. You can select the custom events to be included in the weekly report from **Data Settings** > **Custom Events**.
