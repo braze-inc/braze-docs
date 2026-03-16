@@ -67,14 +67,14 @@ Within your existing `application(_:didFinishLaunchingWithOptions:)` method, add
 {% subtabs %}
 {% subtab SWIFT %}
 
-Add the Braze SDK imports at the top of the `AppDelegate.swift` file:
+Add the following code to your `AppDelegate.swift`:
 
 ```swift
 import BrazeKit
 import braze_plugin
-```
 
-```swift
+// ...
+
 override func application(
   _ application: UIApplication,
   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
@@ -103,14 +103,14 @@ override func application(
 {% endsubtab %}
 {% subtab OBJECTIVE-C %}
 
-Import the Braze SDK at the top of the `AppDelegate.m` file:
+Add the following code to your `AppDelegate.m`:
 
 ```objc
 @import BrazeKit;
 @import braze_plugin;
-```
 
-```objc
+// ...
+
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [BrazePlugin configure:^(BRZConfiguration *configuration) {
@@ -135,10 +135,6 @@ Import the Braze SDK at the top of the `AppDelegate.m` file:
 
 {% endtab %}
 {% tab Flutter SDK 17.1.0 and earlier %}
-
-{% alert tip %}
-Upgrading to 18.0.0? See [Migrating from `initBraze` to `initialize`](#migrating-from-initbraze-to-initialize) for a step-by-step checklist.
-{% endalert %}
 
 #### Android
 
@@ -248,7 +244,7 @@ import 'package:braze_plugin/braze_plugin.dart';
 final BrazePlugin braze = BrazePlugin();
 ```
 
-Then call `initialize()` with your app identifier API key and SDK endpoint to create the Braze instance. When you call `initialize()` determines how the SDK behaves at startup.
+Then call `initialize()` with your app identifier API key and SDK endpoint to create the Braze instance. See the options below for where to call this method in your app.
 
 #### Standard initialization
 
@@ -264,7 +260,7 @@ void initState() {
 
 #### Delayed initialization
 
-To defer SDK initialization until a later point in the session—for example, after the user grants consent or completes login—call `initialize()` when you're ready:
+To defer SDK initialization until a later point in the session — for example, after the user grants consent or completes login — call `initialize()` when you're ready:
 
 ```dart
 // ...
@@ -279,7 +275,7 @@ Push notifications and deep links received before `initialize()` is called are n
 
 #### Platform-specific API keys
 
-If your Android and iOS apps use different API keys, use platform detection:
+Since your Android and iOS apps use different API keys, use platform detection:
 
 ```dart
 import 'dart:io' show Platform;
@@ -317,21 +313,8 @@ To avoid undefined behaviors, only allocate and use a single instance of the `Br
 {% endtab %}
 {% endtabs %}
 
-## Migrating from `initBraze` to `initialize`
-
-Starting with Flutter SDK 18.0.0, `BrazePlugin.initBraze()` is deprecated. To migrate to the new `configure` + `initialize` pattern:
-
-1. **iOS:** In your `AppDelegate.swift`, replace `BrazePlugin.initBraze(configuration)` with `BrazePlugin.configure(_:postInitialization:)`. Remove the `static var braze` property and the `AppDelegate.braze = braze` assignment, as the plugin manages the Braze instance internally.
-2. **iOS:** Remove any manual channel subscription or in-app message data-forwarding code (for example, `braze.contentCards.subscribeToUpdates`, `braze.featureFlags.subscribeToUpdates`, or custom `inAppMessagePresenter` subscription hooks). The plugin now sets up these subscriptions automatically. Optional customization of the in-app message presenter using `postInitialization` is still supported; see [Customize in-app message presentation]({{site.baseurl}}/developer_guide/in-app_messages/customization/#flutter).
-3. **Android:** Remove `com_braze_api_key` and `com_braze_custom_endpoint` from your `braze.xml`. Keep other configuration entries such as FCM sender ID and push settings.
-4. **Dart:** Add `braze.initialize("<BRAZE_API_KEY>", "<BRAZE_ENDPOINT>")` after creating your `BrazePlugin` instance.
-
-{% alert note %}
-`BrazePlugin.initBraze()` still works in 18.0.0 but is deprecated. Existing integrations using `initBraze()` continue to function, and channel subscriptions are set up automatically regardless of which initialization method you use.
-{% endalert %}
-
 ## Testing the integration
-
+s
 You can verify that the SDK is integrated by checking session statistics in the dashboard. If you run your application on either platform, you should see a new session in the dashboard (in the **Overview** section).
 
 Open a session for a particular user by calling the following code in your app.
