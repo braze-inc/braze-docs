@@ -122,7 +122,7 @@ Instead, use [universal links and App Links]({{site.baseurl}}/user_guide/message
 
 ## Content Blocks with transparent images
 
-When a Content Block contains an image with a transparent background (for example, a logo) and is inserted by a Liquid tag, you may see a background color appear behind the image. This color comes from the drag-and-drop editor's [Global Styles]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings#email-global-style-settings)—specifically the **Email Background Color**. If your Global Styles use a color other than white, that color will appear instead.
+When a Content Block contains an image with a transparent background (for example, a logo) and is inserted by a Liquid tag, you may see a background color appear behind the image. This color comes from the drag-and-drop editor's [email global style settings]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings#email-global-style-settings)—specifically the **Email Background Color**. If your global style settings use a color other than white, that color will appear instead.
 
 To display the Content Block as intended:
 
