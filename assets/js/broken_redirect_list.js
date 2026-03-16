@@ -2863,7 +2863,7 @@ validurls['/docs/user_guide/data/custom_data/custom_attributes'] = '/docs/user_g
 validurls['/docs/user_guide/data/custom_data/custom_attributes/array_of_objects'] = '/docs/user_guide/data/activation/attributes/array_of_objects/';
 validurls['/docs/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support'] = '/docs/user_guide/data/activation/attributes/nested_custom_attribute_support/';
 validurls['/docs/user_guide/data/custom_data/event_naming_conventions'] = '/docs/user_guide/data/activation/events/event_naming_conventions/';
-validurls['/docs/user_guide/data/custom_data/managing_custom_data'] = '/docs/user_guide/data/activation/managing_custom_data/';
+validurls['/docs/user_guide/data/custom_data/managing_custom_data'] = '/docs/user_guide/data/activation/custom_data/managing_custom_data/';
 validurls['/docs/user_guide/data/custom_data/recommended_events'] = '/docs/user_guide/data/activation/events/recommended_events/';
 validurls['/docs/user_guide/data/custom_data/recommended_events/ecommerce_events'] = '/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/';
 validurls['/docs/user_guide/data/custom_data/recommended_events/product_blocks'] = '/docs/user_guide/data/activation/events/recommended_events/product_blocks/';
@@ -2880,7 +2880,7 @@ validurls['/docs/user_guide/data/activation/custom_data/custom_attributes'] = '/
 validurls['/docs/user_guide/data/activation/custom_data/custom_attributes/array_of_objects'] = '/docs/user_guide/data/activation/attributes/array_of_objects/';
 validurls['/docs/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support'] = '/docs/user_guide/data/activation/attributes/nested_custom_attribute_support/';
 validurls['/docs/user_guide/data/activation/custom_data/event_naming_conventions'] = '/docs/user_guide/data/activation/events/event_naming_conventions/';
-validurls['/docs/user_guide/data/activation/custom_data/managing_custom_data'] = '/docs/user_guide/data/activation/managing_custom_data/';
+validurls['/docs/user_guide/data/activation/custom_data/managing_custom_data'] = '/docs/user_guide/data/activation/custom_data/managing_custom_data/';
 validurls['/docs/user_guide/data/activation/custom_data/recommended_events'] = '/docs/user_guide/data/activation/events/recommended_events/';
 validurls['/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events'] = '/docs/user_guide/data/activation/events/recommended_events/ecommerce_events/';
 validurls['/docs/user_guide/data/activation/custom_data/recommended_events/product_blocks'] = '/docs/user_guide/data/activation/events/recommended_events/product_blocks/';
@@ -3362,7 +3362,7 @@ validurls['/docs/user_guide/administrative/access_braze/navigation/#navigating-b
 
 // User Guide - Data & Activation
 validurls['/docs/user_guide/data/activation/catalogs/create/#creating-a-catalog'] = '/docs/user_guide/data/activation/catalogs/create/#create-a-catalog';
-validurls['/docs/user_guide/data/activation/custom_data/managing_custom_data/#managing-custom-data'] = '/docs/user_guide/data/activation/managing_custom_data/#manage-custom-data';
+validurls['/docs/user_guide/data/activation/custom_data/managing_custom_data/#managing-custom-data'] = '/docs/user_guide/data/activation/custom_data/managing_custom_data/#manage-custom-data';
 validurls['/docs/user_guide/data/unification/creating_a_formula/#creating-a-formula'] = '/docs/user_guide/data/unification/creating_a_formula/#create-a-formula';
 validurls['/docs/user_guide/data/unification/data_transformation/creating_a_transformation/#creating-a-transformation'] = '/docs/user_guide/data/unification/data_transformation/creating_a_transformation/#create-a-transformation';
 validurls['/docs/user_guide/data/unification/user_data/import_users/#importing-users'] = '/docs/user_guide/data/unification/user_data/import_users/#import-users';
