@@ -12,6 +12,8 @@ channel:
 
 > In addition to changing the user’s subscription state, Braze will also record interactions with the user profile for filtering and triggering messages.<br><br>These filters and triggers allow you to filter users that have received WhatsApp messages or received WhatsApp messages from a specific WhatsApp campaign or Canvas step.
 
+When a message is delivered, opened, or clicked, Braze updates received-message data for all profiles that share the same channel identifier (for example, phone number), so users who share an identifier with someone who received the message can match "received" filters even if they were not originally sent it.
+
 ## Retargeting options
 
 {% alert note %}
@@ -26,7 +28,7 @@ Users can be filtered by when they last received a WhatsApp or if they have rece
 ![Filter for last receiving a WhatsApp message on April 22, 2025.]({% image_buster /assets/img/whatsapp/whatsapp23.png %}){: style="max-width:75%"}
 
 **Filter by received messages from WhatsApp campaign**<br>
-Filters users who have received a message from a specific WhatsApp campaign. With this filter, you also have the option to filter off those that have not received messages from a WhatsApp campaign.<br>
+Filters users who have received a message from a specific WhatsApp campaign. When a message is delivered, opened, or clicked, Braze updates received-message data for all profiles that share the same phone number, so users who share a number with someone who received the message can match this filter even if they were not originally sent it. With this filter, you also have the option to filter off those that have not received messages from a WhatsApp campaign.<br>
 ![Filter for receiving a WhatsApp campaign.]({% image_buster /assets/img/whatsapp/whatsapp22.png %}){: style="max-width:75%"}
 
 ### Filter by engagement

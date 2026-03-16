@@ -53,7 +53,7 @@ Check your message preview for any Message steps referencing Canvas entry proper
 
 ### Review Message steps for user advancement
 
-By default, users will advance through all Message steps regardless of whether they received the message. If you want to advance the users who receive a particular message, you can do so by adding a Decision Split step directly after your Message component. Add the filter "Received Message from Canvas Step" as the additional filter, then select the Canvas and Message step.
+By default, users will advance through all Message steps regardless of whether they received the message. If you want to advance the users who receive a particular message, you can do so by adding a Decision Split step directly after your Message component. Add the filter "Received Message from Canvas Step" as the additional filter, then select the Canvas and Message step. Note that when a message is delivered, opened, or clicked, Braze updates received-message data for all profiles that share the same channel identifier (for example, email or phone), so users who share an identifier with someone who received the message can advance past this filter even if they were not originally sent it.
 
 For Message steps with in-app messaging, you may want to use an Action Paths component instead of the Decision Split component. This will allow you to advance users based on whether they've viewed your in-app message. Define an action group by adding the filter "Interact with Step" and select **View in app message**. Then, set the evaluation window of the step to the expiration window of the in-app message.
 

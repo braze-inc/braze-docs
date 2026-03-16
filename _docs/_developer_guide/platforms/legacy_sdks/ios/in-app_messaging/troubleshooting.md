@@ -59,7 +59,7 @@ If your in-app messages are not being returned, you're likely experiencing a cam
 - Your user hit the frequency cap for the campaign.
   - Check the campaign [frequency cap settings]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) and ensure they align with your testing setup.
 - If there was a control group on the campaign, your user may have fallen into the control group.
-  - You can check if this has happened by creating a segment with a received campaign variant filter, where the campaign variant is set to **Control**, and checking if your user fell into that segment.
+  - You can check if this has happened by creating a segment with a received campaign variant filter, where the campaign variant is set to **Control**, and checking if your user fell into that segment. Note that received-message data is also updated for all profiles that share the same channel identifier (for example, email or phone) when a delivery, open, or click occurs, so a user who shares an identifier with someone in a non-control variant could be attributed that variant and not appear in the control segment even if they were never directly sent the message.
   - When creating campaigns for integration testing purposes, make sure to opt out of adding a control group.
 
 ### In-app message display {#troubleshooting-in-app-message-display}

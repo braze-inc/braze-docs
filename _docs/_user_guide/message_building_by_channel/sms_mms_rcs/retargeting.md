@@ -36,7 +36,7 @@ Users can be filtered by when they last received an SMS, MMS, or RCS or if they 
 ![Segmentation filter Last Received SMS after December 8, 2020.]({% image_buster /assets/img/sms/filter2.png %})
 
 **Filter by received messages from SMS/MMS/RCS campaign**<br>
-Filters users who have received a message from a specific campaign. With this filter, you also have the option to filter off those that have not received messages from a campaign. <br>
+Filters users who have received a message from a specific campaign. When a message is delivered, opened, or clicked, Braze updates received-message data for all profiles that share the same phone number, so users who share a number with someone who received the message can match this filter even if they were not originally sent it. With this filter, you also have the option to filter off those that have not received messages from a campaign. <br>
 ![Segmentation filter Has received message from campaign "SMS retargeting".]({% image_buster /assets/img/sms/filter1.png %})
 
 ### Trigger messages as users receive SMS, MMS, or RCS {#trigger-messages}

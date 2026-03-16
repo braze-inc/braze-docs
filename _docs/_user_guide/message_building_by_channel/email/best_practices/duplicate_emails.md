@@ -26,6 +26,8 @@ If users share an email address and you update one profile, Braze propagates the
 
 Because deduplication occurs when targeted users are included in the same dispatch, triggered campaigns (excluding API-triggered campaigns) and Canvases may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times.
 
+When a message is delivered, opened, or clicked, Braze updates "received message" data (used by segmentation filters like **Received Message from Campaign** and **Received Message from Canvas Step**) for all user profiles that share that email address. So a user who was never explicitly sent the message can still match "received" filters if they share an email with someone who received, opened, or clicked it. This affects re-eligibility, segment membership, and campaign or Canvas targeting that relies on those filters.
+
 ## Examples
 
 For example, if user A and user B share the email `johndoe@example.com` but their profile is in a different time zone, when the campaign trigger event includes sending in a user's time zone, the email `johndoe@example.com` will receive two emails.

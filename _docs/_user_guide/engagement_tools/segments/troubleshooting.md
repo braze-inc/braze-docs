@@ -78,7 +78,7 @@ Keep in mind that changing the data type of a custom attribute in the dashboard 
 
 ### *Message Sent* or *Unique Recipients* in Campaign Analytics doesn't match segment count 
 
-If your campaign analytics count for *Message Sent* or *Unique Recipients* doesn't match the number of users in the segment filter `Has received message from campaign X`, there could be two possible reasons why:
+If your campaign analytics count for *Message Sent* or *Unique Recipients* doesn't match the number of users in the segment filter `Has received message from campaign X`, there could be two possible reasons why. The "received" filters can also match users who share a channel identifier with someone who received, opened, or clicked the message. "Received" includes users who share a channel identifier with someone who received, opened, or clicked the message.
 
 1. **Users may have been archived, orphaned, or deleted since the campaign launch**<br><br>For example, let’s say 1,000 users receive a campaign and you make a CSV export the same day. You’ll see 1,000 users reported. Over the next month, 50 of those 1,000 users are deleted (for example, by the `users/delete` endpoint). When you make another CSV export, you’ll see 950 users reported while the *Unique Recipient* count in **Campaign Analytics** is still 1,000.<br><br>In other words, the *Unique Recipients* metric is an incremented count, while the segmenter and CSV export provide a count of currently existing users.<br><br>
 
