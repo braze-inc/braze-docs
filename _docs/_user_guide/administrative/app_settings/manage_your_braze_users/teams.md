@@ -96,9 +96,6 @@ The following are all available permissions you can assign at the Team level. An
 - Edit Canvas Templates
 - View Canvas Templates
 - Archive Canvas Templates
-- View Dashboard Reports
-- Create Dashboard Reports
-- Edit Dashboard Reports
 
 {% endtab %}
 {% tab Legacy permissions %}
