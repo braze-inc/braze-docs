@@ -31,7 +31,7 @@ To complete these goals, follow these steps:
 
 ### Step 1: Create a Braze website app {#step-1}
 
-In Braze, go to **Settings** > **App Settings**, then select **Add app**. Name the app "Shopify".
+In Braze, go to **Settings** > **App Settings**, then select **Add app**. Enter "Shopify" as the app name.
 
 {% alert warning %}
 The shop must be named “Shopify” or the integration may not work properly.
