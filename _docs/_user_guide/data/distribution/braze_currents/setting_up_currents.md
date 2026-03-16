@@ -16,10 +16,10 @@ search_rank: 8
 Currents are included with certain Braze packages. Contact your Braze representative if you have any questions or want to gain access.
 {% endalert %}
 
-If you see **"You do not have any remaining Currents integrations"** when adding a new integration, common causes are:
+If you see "You do not have any remaining Currents integrations" when adding a new integration, common causes are:
 
 - No Currents entitlement has been purchased for this workspace.
-- The Currents entitlement is available on a different App Group or workspace in your company.
+- The Currents entitlement is available in a different workspace in your company.
 
 Contact your Braze representative or Customer Success Manager to purchase an entitlement or confirm which workspace has access.
 
