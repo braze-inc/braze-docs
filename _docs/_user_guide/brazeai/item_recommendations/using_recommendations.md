@@ -100,8 +100,7 @@ Toggle **Image with Liquid**, then add the following to the **Dynamic URL** fiel
 
 {% raw %}
 ```liquid
-{% assign items = {{product_recommendation.${recommendation_name}}} %}
-{{ items[0].image_url_field }}
+{noformat}{% assign items = {{product_recommendation.${recommendation_name}}} %}{{ items[0].image_url_field }}{noformat}
 ```
 {% endraw %}
 
