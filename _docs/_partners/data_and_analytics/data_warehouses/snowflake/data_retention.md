@@ -164,7 +164,7 @@ CALL COPY_BRAZE_SHARE('SOURCE_DB', 'SOURCE_SCHEMA', 'DEST_DB', 'DEST_SCHEMA', DA
 {% endtabs %}
 
 {% alert note %}
-Repeatedly running the procedure won't create duplicate records because this procedure checks the most recent `SF_CREATED_AT` and only backs up data newer than that. 
+Repeatedly running the procedure only backs up rows with `SF_CREATED_AT` greater than the maximum already in your table, which under normal conditions avoids duplicates. If Braze refreshes or reprocesses the shared view, `SF_CREATED_AT` in the share can change and the same events could be copied again. For backup logic that is resilient to view refreshes, consider filtering on the `TIME` field where possible. For more on `SF_CREATED_AT` and incremental loads, see the [Snowflake Data Sharing FAQs]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/faqs/#data-sharing-view-refresh-and-incremental-loads).
 {% endalert %}
 
 ## Unloading data to stage
