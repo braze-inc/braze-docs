@@ -1,6 +1,6 @@
 ---
-nav_title: Errors & responses
-article_title: API Errors & Responses
+nav_title: Errors and responses
+article_title: API Errors and Responses
 description: "This reference article covers the various errors and server responses that can come up while using the Braze API and how to troubleshoot them."
 page_type: reference
 page_order: 2.3
@@ -22,7 +22,9 @@ If your POST payload was accepted by our servers, then successful messages are m
 }
 ```
 
-Note that success only means that the RESTful API payload was correctly formed and passed onto our push notification or email or other messaging services. It does not mean that the messages were actually delivered, as additional factors could prevent the message from being delivered (for example, a device could be offline, the push token could be rejected by Apple's servers, you may have provided an unknown user ID).
+Note that success means only that the RESTful API payload was correctly formed and passed to our push notification or email or other messaging services. It does not mean that the messages were actually delivered, as additional factors could prevent the message from being delivered (for example, a device could be offline, the push token could be rejected by Apple's servers, or you may have provided an unknown user ID).
+
+For endpoints like [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify), which don't send messages, a success message means only that Braze received the request for processing. If there is no match for the alias after processing, the request is stopped.
 
 If your message is successful but has non-fatal errors, you receive the following response:
 
@@ -92,10 +94,11 @@ All of the following error codes indicate that no messages are sent.
 | `400 Android Push Length Exceeded` | JSON payload is more than 4,000 bytes.|
 | `400 Bad Request` | Cannot parse `send_at` datetime.|
 | `400 Bad Request` | In your request, `in_local_time` is true but `time` has passed in your company’s time zone.|
-| `401 Unauthorized` | Invalid API key. This error can also occur if:<br><br> - You're sending the request to the incorrect [instance]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/). For example, if your account is on our EU instance (`https://dashboard-01.braze.eu`), the request should be sent to `https://rest.fra-01.braze.eu`.<br>- The API key syntax is using single or double quotes. The correct syntax is `Authorization: Bearer {YOUR-API-KEY}`. |
+| `401 Unauthorized` | Invalid API key. Common causes include:<br><br>- **Missing or malformed Authorization header.** The header value must be `Bearer` followed by a space and then your API key: `Authorization: Bearer YOUR-API-KEY`. Common mistakes include omitting `Bearer`, omitting the key after `Bearer`, or wrapping the value in quotes.<br>- **Wrong REST endpoint.** You're sending the request to the incorrect [instance]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/). For example, if your account is on our EU instance (`https://dashboard-01.braze.eu`), the request should be sent to `https://rest.fra-01.braze.eu`.<br>- **Insufficient permissions.** Each API key is scoped to a specific workspace and set of permissions. Verify the key's permissions under **Settings** > **API Keys** in the dashboard.<br>- **Wrong API key.** API keys are workspace-specific. A key from one workspace cannot be used to authenticate requests for a different workspace. |
 | `403 Forbidden` | The rate plan doesn't support, or the account is otherwise inactivated.|
-| `403 Access Denied` | The REST API key you are using does not have sufficient permissions, check the API key permissions under the **Settings** page.|
+| `403 Access Denied` | The REST API key you are using does not have sufficient permissions. Common causes include: {::nomarkdown}<ul><li><strong>API key predates the feature.</strong> If the API key was created before a feature was launched (such as subscription groups or catalogs), the key doesn't automatically inherit those permissions. Create a new API key with the required permissions under <strong>Settings</strong> &gt; <strong>API Keys</strong>.</li><li><strong>Missing endpoint-specific permission.</strong> Each API endpoint requires a specific permission scope (for example, <code>users.track</code> or <code>email.status</code>). Verify the key's permissions match the endpoint you're calling.</li><li><strong>Trailing slash or typo in the URL.</strong> For example, <code>/users/track/</code> (with a trailing slash) instead of <code>/users/track</code> can produce unexpected errors.</li></ul>{:/}|
 | `404 Not Found` | Invalid URL. |
+| `415 Unsupported Media Type` | The `Content-Type` request header is missing or incorrect. In the **Settings** page, add `Content-Type` with a value of `application/json`. |
 | `429 Rate Limited` | Over rate limit. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

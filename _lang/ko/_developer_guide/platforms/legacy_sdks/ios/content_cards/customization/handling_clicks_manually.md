@@ -1,6 +1,6 @@
 ---
-nav_title: 수동으로 클릭 처리하기
-article_title: iOS용 콘텐츠 카드 클릭 수동 처리하기
+nav_title: 클릭을 수동으로 처리하십시오
+article_title: iOS에서 콘텐츠 카드 클릭을 수동으로 처리하기
 platform: iOS
 page_order: 3
 description: "이 문서에서는 iOS 애플리케이션에서 콘텐츠 카드 클릭을 수동으로 처리하는 방법에 대해 설명합니다."
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# 수동으로 클릭 처리하기
+# 클릭을 수동으로 처리하십시오
 
 [`ABKContentCardsTableViewControllerDelegate`](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_content_cards_table_view_controller_delegate-p.html) 프로토콜을 구현하고 위임 오브젝트를 `ABKContentCardsTableViewController`의 `delegate` 속성정보로 설정하여 콘텐츠 카드 클릭을 수동으로 처리할 수 있습니다. 예제는 [콘텐츠 카드 샘플 앱을](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) 참조하세요. 
 

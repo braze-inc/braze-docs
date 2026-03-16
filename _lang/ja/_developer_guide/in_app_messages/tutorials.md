@@ -15,7 +15,7 @@ guide_featured_list:
   - name: 条件付き表示
     link: /docs/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages
     image: /assets/img/braze_icons/zap-off.svg
-  - name: トリガーされたメッセージの延期と復元
+  - name: トリガーメッセージを遅延させ、復元する
     link: /docs/developer_guide/in_app_messages/tutorials/deferring_triggered_messages
     image: /assets/img/braze_icons/watch-circle.svg
 ---

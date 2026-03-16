@@ -16,11 +16,11 @@ channel:
 
 # Calculadoras de cobrança SMS e RCS
 
-> Na Braze, as mensagens SMS são cobradas por segmento de mensagem, enquanto as mensagens RCS são cobradas por mensagem. Entender o que define um segmento de SMS e os diferentes tipos de cobrança RCS informará sua compreensão de como você será cobrado e ajudará a evitar cobranças acidentais.
+> Na Braze, mensagens SMS são cobradas por segmento de mensagem, enquanto mensagens RCS são cobradas por mensagem. Entender o que define um segmento de SMS e os diferentes tipos de cobrança RCS informará sua compreensão de como você será cobrado e ajudará a evitar cobranças acidentais.
 
 ## Cópia de mensagem SMS e calculadora de segmentos
 
-As mensagens SMS são cobradas por segmento de mensagem. Entender como as mensagens SMS são divididas é fundamental para entender sua cobrança.
+Mensagens SMS são cobradas por segmento de mensagem. Entender como as mensagens SMS são divididas é fundamental para entender sua cobrança.
 
 ### O que é um segmento de SMS?
 
@@ -93,19 +93,19 @@ Número de caracteres | Quantos segmentos?
 ### Calculadora de segmentos de SMS {#segment-calculator}
 ---
 
-{% include alerts/tip_alerts.md alert='SMS segment calculator' %}
+{% multi_lang_include alerts/tip_alerts.md alert='SMS segment calculator' %}
 
 ## Cobrança de mensagens RCS
 
-As mensagens RCS são cobradas com base em seu conteúdo e no país em que a mensagem é entregue. Para estimar custos com precisão, é essencial entender os diferentes tipos de mensagens e como elas são cobradas.
+Mensagens RCS são cobradas com base em seu conteúdo e no país em que a mensagem é entregue. Para estimar custos com precisão, é essencial entender os diferentes tipos de mensagens e como elas são cobradas.
 
 ### Tipos de cobrança RCS
 
 Nossa plataforma suporta dois modelos de cobrança principais: um modelo global e um modelo dos Estados Unidos.
 
-#### Modelo global (mercados não dos EUA)
+#### Modelo global (mercados fora dos EUA)
 
-As mensagens são cobradas por mensagem e classificadas como Básica ou Única.
+Mensagens são cobradas por mensagem e classificadas como Básica ou Única.
 
 {% tabs local %}
 {% tab Basic %}
@@ -135,7 +135,7 @@ As mensagens são categorizadas como Ricas ou Mídia Rica.
 {% tabs local %}
 {% tab Rich messages %}
 
-Mensagens ricas são mensagens apenas de texto com ou sem botões. Elas são cobradas por segmento, com cada segmento limitado a 160 bytes UTF-8, o que significa **o número de caracteres por segmento não é fixo**. Uma mensagem com apenas 160 caracteres em inglês simples é um segmento, mas uma mensagem com texto mais longo e emojis pode ser vários segmentos.
+Mensagens ricas são mensagens apenas de texto, com ou sem botões. Elas são cobradas por segmento, com cada segmento limitado a 160 bytes UTF-8, o que significa **que o número de caracteres por segmento não é fixo**. Uma mensagem com apenas 160 caracteres em inglês simples é um segmento, mas uma mensagem com texto mais longo e emojis pode ser múltiplos segmentos.
 
 {% endtab %}
 {% tab Rich media messages %}

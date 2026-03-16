@@ -71,7 +71,7 @@ Si vous recevez cette erreur, assurez-vous que l'utilisateur utilise la clé pub
 
 Le test de connexion est en cours d'exécution sur votre entrepôt de données, donc l’augmentation de la capacité de l'entrepôt peut l’accélérer. L'utilisation d'une instance SQL sans serveur permet de réduire ce temps de préchauffage et d’améliorer le débit des requêtes, mais peut entraîner des coûts d'intégration légèrement plus élevés.
 
-### Permission refusée pour la relation {table_name}
+### Accès refusé pour la relation {table_name}
 
 Si vous recevez cette erreur :
 
@@ -132,7 +132,7 @@ Si vous recevez cette erreur, consultez [Databricks: Erreur interdite lors de l'
 
 Chaque intégration a sa propre préférence de notification. Accédez à la page CDI et sélectionnez le nom de l'intégration que vous souhaitez mettre à jour. Dans la section **Préférences de notification**, vous pouvez mettre à jour la façon dont vous recevez les alertes concernant l'intégration sélectionnée.
 
-## Que se passe-t-il si un futur UPDATED_AT est synchronisé avec une intégration ?
+## Que se passe-t-il si un futurUPDATED_ATest synchronisé avec une intégration ?
 
 CDI utilise `UPDATED_AT` pour décider quelles données sont nouvelles. Après qu'un futur `UPDATED_AT` est synchronisé, toutes les données antérieures à cette date et heure futures ne seront pas traitées. Pour corriger cela :
 
@@ -142,7 +142,7 @@ CDI utilise `UPDATED_AT` pour décider quelles données sont nouvelles. Après q
 
 ## Pourquoi le nombre de « lignes synchronisées » ne correspond-il pas à celui de mon entrepôt ?
 
-CDI utilise `UPDATED_AT` pour décider quels enregistrements récupérer lors d'une synchronisation. Regardez [cette illustration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) pour voir comment cela fonctionne. Au début d'un cycle de synchronisation, CDI interroge votre entrepôt pour obtenir tous les enregistrements dont l'adresse `UPDATED_AT` est égale ou postérieure à l'horodatage `UPDATED_AT` précédemment traité. Tout enregistrement récupéré au moment de l'exécution de la requête sera synchronisé dans Braze. Voici les cas courants où un enregistrement pourrait ne pas être synchronisé :
+CDI utilise `UPDATED_AT` pour décider quels enregistrements récupérer lors d'une synchronisation. Regardez [cette illustration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) pour voir comment cela fonctionne. Au début d'une synchronisation, CDI interroge votre entrepôt de données pour obtenir tous les enregistrements dont`UPDATED_AT`la date et l'heure sont égales ou postérieures à `UPDATED_AT`la date et l'heure précédemment traitées. Tout enregistrement récupéré au moment de l'exécution de la requête sera synchronisé dans Braze. Voici les cas courants où un enregistrement pourrait ne pas être synchronisé :
 
 - Vous ajoutez des enregistrements au tableau avec une valeur `UPDATED_AT` qui a déjà été traitée.
 - Vous mettez à jour les valeurs des enregistrements après qu'elles ont été traitées par une synchronisation, mais vous laissez `UPDATED_AT` inchangé. 
@@ -155,6 +155,12 @@ Pour éviter ces comportements à l'avenir, nous recommandons d'utiliser des val
 ## Lors d'une synchronisation, l'ordre est-il préservé si plusieurs enregistrements partagent le même identifiant ?
 
 L'ordre de traitement n'est pas prévisible à 100%. Par exemple, s'il y a plusieurs lignes avec le même `EXTERNAL_ID` dans le tableau lors d'une synchronisation, nous ne pouvons pas garantir quelle valeur se retrouvera dans le profil final. Si vous mettez à jour le même site `EXTERNAL_ID` avec différents attributs dans la colonne payload, toutes les modifications sont prises en compte lorsque la synchronisation est terminée.
+
+## Pourquoi les nouveaux utilisateurs ne sont-ils pas créés à partir de ma synchronisation CDI ?
+
+Si l'option **« Mettre à jour uniquement les utilisateurs existants** » est activée dans votre intégration CDI, seuls les utilisateurs déjà présents dans Braze seront mis à jour, et aucun nouvel utilisateur ne sera créé. Cela signifie que si une ligne de votre tableau de synchronisation fait référence à un identifiant`EXTERNAL_ID`qui ne correspond à aucun utilisateur Braze existant, cette ligne est ignorée.
+
+Pour créer de nouveaux utilisateurs via CDI, veuillez basculer l'option « **Mettre à jour uniquement les utilisateurs existants** » dans vos paramètres d'intégration. Veuillez vous rendre dans **Paramètres des données** > **Ingestion de données dans le cloud** et sélectionner une intégration.
 
 ## Quelles sont les mesures de sécurité pour CDI ?
 

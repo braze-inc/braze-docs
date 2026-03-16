@@ -14,7 +14,7 @@ page_order: 2.3
 
 ## Réponses du serveur
 
-Si votre charge utile POST a été acceptée par nos serveurs, les messages réussis reçoivent la réponse suivante :
+Si votre charge utile POST a été acceptée par nos serveurs, les messages réussis sont accompagnés de la réponse suivante :
 
 ```json
 {
@@ -22,9 +22,11 @@ Si votre charge utile POST a été acceptée par nos serveurs, les messages réu
 }
 ```
 
-Notez que la réussite signifie que la charge utile de l’API RESTful a été correctement créée et transmise à notre notification push ou à nos e-mails ou autres services de messagerie. Cela ne signifie pas que les messages ont effectivement été envoyés, car des facteurs supplémentaires peuvent empêcher l'envoi du message (par exemple, un appareil peut être hors ligne, le jeton push peut être rejeté par les serveurs d'Apple, vous pouvez avoir fourni un ID utilisateur inconnu).
+Veuillez noter que le succès signifie uniquement que la charge utile de l'API RESTful a été correctement formée et transmise à notre service de notification push, à notre service d'envoi de messages par e-mail ou à d'autres services d'envoi de messages. Cela ne signifie pas que les messages ont été effectivement remis, car d'autres facteurs peuvent empêcher la remise du message (par exemple, un appareil peut être hors ligne, le jeton push peut être rejeté par les serveurs Apple ou vous avez peut-être fourni un ID utilisateur inconnu).
 
-Si votre message aboutit mais comporte des erreurs non fatales, vous recevez la réponse suivante :
+Pour les endpoints tels que [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify), qui n'envoient pas de messages, un message de réussite signifie uniquement que Braze a bien reçu la demande de traitement. Si aucune correspondance n'est trouvée pour l'alias après traitement, la requête est interrompue.
+
+Si votre message est accepté mais contient des erreurs non fatales, vous recevrez la réponse suivante :
 
 ```json
 {
@@ -32,7 +34,7 @@ Si votre message aboutit mais comporte des erreurs non fatales, vous recevez la 
 }
 ```
 
-En cas de succès, tous les messages qui n'ont pas été affectés par une erreur dans le tableau `errors` sont toujours envoyés. Si votre message comporte une erreur fatale, vous recevez la réponse suivante :
+En cas de réussite, tous les messages qui n'ont pas été affectés par une erreur dans le`errors`tableau sont tout de même livrés. Si votre message contient une erreur fatale, vous recevrez la réponse suivante :
 
 ```json
 {
@@ -58,7 +60,7 @@ L’élément du code d’état d’une réponse serveur est un numéro à 3 ch
 
 - Le code d'état de **classe 2XX** (non fatal) indique que **votre demande** a été reçue, comprise et acceptée avec succès.
 - La **classe 4XX** du code de statut (fatal) indique une **erreur du client**. Reportez-vous au tableau des erreurs fatales pour obtenir une liste complète des codes d’erreur et descriptions de la classe 4XX.
-- La **classe 5XX** du code de statut (fatal) indique une **erreur du serveur**. Il y a plusieurs causes possibles, par exemple, le serveur auquel vous essayez d'accéder n'est pas en mesure d'exécuter la requête, le serveur fait l'objet d'une maintenance qui l'empêche d'exécuter la requête, ou le serveur connaît des niveaux élevés de trafic. Dans ce cas, nous vous recommandons de réessayer votre demande avec un délai exponentiel. En cas d'incident ou de panne, Braze n'est pas en mesure de lire à nouveau un appel d’API REST qui a échoué pendant la fenêtre d'incident. Vous devez réessayer tous les appels qui ont échoué pendant la fenêtre d'incident.
+- La **classe 5XX** du code de statut (fatal) indique une **erreur du serveur**. Il y a plusieurs causes possibles, par exemple, le serveur auquel vous essayez d'accéder n'est pas en mesure d'exécuter la requête, le serveur fait l'objet d'une maintenance qui l'empêche d'exécuter la requête, ou le serveur connaît des niveaux élevés de trafic. Dans ce cas, nous vous recommandons de réessayer votre demande avec un délai exponentiel. En cas d'incident ou de panne, Braze n'est pas en mesure de lire à nouveau un appel d’API REST qui a échoué pendant la fenêtre d'incident. Il est nécessaire de réessayer tout appel qui a échoué pendant la période de l'incident.
   - Une **erreur 502** est un échec avant que le message n'atteigne le serveur de destination.
   - Une **erreur 503** signifie que la demande est parvenue jusqu'au serveur de destination, mais que nous ne pouvons pas la traiter en raison d'un manque de capacité, d'un problème de réseau ou d'un problème similaire.
   - Une **erreur 504** indique qu'un serveur n'a pas reçu de réponse d'un autre serveur en amont.
@@ -69,7 +71,7 @@ Les codes d'état suivants et les messages d'erreur associés sont renvoyés si 
 
 {% endraw %}
 {% alert warning %}
-Tous les codes d'erreur suivants indiquent qu'aucun message n'est envoyé.
+Tous les codes d'erreur suivants indiquent qu'aucun message n'a été envoyé.
 {% endalert %}
 {% raw %}
 

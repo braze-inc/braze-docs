@@ -6,7 +6,7 @@ page_type: reference
 description: "Aprenda a utilizar Braze para realizar la puntuación simple de clientes potenciales, la puntuación externa de clientes potenciales y el traspaso de clientes potenciales."
 ---
 
-# Crea un flujo de trabajo de puntuación de clientes potenciales
+# Crear un flujo de trabajo de puntuación de clientes potenciales
 
 > Este caso de uso demuestra cómo puede utilizar Braze para actualizar las puntuaciones de clientes potenciales de los usuarios en tiempo real y entregar automáticamente los clientes potenciales a sus equipos de ventas.
 
@@ -45,7 +45,7 @@ Todos los usuarios son elegibles para la puntuación de clientes potenciales, po
 
 ![Paso 3 de la creación de un Canvas con opciones para seleccionar segmentos y filtros para acotar la audiencia de entrada.]({% image_buster /assets/img/b2b/step_3_simple.png %}){: style="max-width:80%;"}
 
-#### Paso 3b: Configurar la reelegibilidad de Canvas
+#### Paso 3b: Establecer la reelegibilidad de Canvas
 
 Un usuario pasará por este lienzo muchas veces a lo largo de su ciclo de vida con usted, así que asegúrese de que pueda volver a entrar tan rápido como salió la vez anterior. Esto puede conseguirse mediante la configuración de la reelegibilidad. 
 
@@ -83,7 +83,7 @@ Añada los siguientes grupos a su ruta de acción:
 - **Grupo 3:** Todos los eventos que cuentan para un decremento de 1 punto.
 - **Todos los demás:** Las rutas de acción permiten definir la ventana para esperar a ver si un usuario realiza una acción, antes de incluirlo en un grupo de "todos los demás". Para la puntuación de clientes potenciales, esta es una oportunidad para disminuir la puntuación por "inactividad".
 
-![Ruta de acción que contiene Grupos de Acción para sumar un punto, cinco puntos y diez puntos; restar un punto y diez puntos; y "Todos los demás".]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %}){: style="max-width:20%;"}
+![Ruta de acción que contiene grupos de acciones para sumar un punto, cinco puntos y diez puntos; restar un punto y diez puntos; y «Todos los demás».]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %}){: style="max-width:20%;"}
 
 #### Paso 4c: Configure cada grupo para incluir los eventos pertinentes
 
@@ -182,7 +182,7 @@ Para actualizar el registro de clientes potenciales en Salesforce con el estado 
 
 | Encabezado | Contenido |
 | --- | --- |
-| Autorización | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar un token, [configura una aplicación conectada](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para el flujo de credenciales de cliente OAuth 2.0 y, a continuación, utiliza Contenido conectado para recuperar el portador de Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_3d3e325a-b4e8-418e-87af-a6b4ff4b3a6c/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorización | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar un token, [configura una aplicación conectada](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para el flujo de credenciales de cliente OAuth 2.0 y, a continuación, utiliza Contenido conectado para recuperar el portador de Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_e62c2011-7912-4abe-ba64-efadaa90d822/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
@@ -200,7 +200,7 @@ En el paso **Programar entrega**, seleccione lo siguiente:
 
 En el paso **Públicos objetivo**, incluya un filtro que excluya a los usuarios cuyo estado de cliente potencial ya esté en MQL o más allá, como "`lead_status` `is none of` `MQL`".
 
-![Las opciones de orientación del webhook con el filtro de “lead_status” no es ninguna de "MQL".]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
+![Opciones de segmentación de webhooks al filtrar por“lead_status” «MQL».]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
 
 ### Paso 3: Lanzar campaña
 

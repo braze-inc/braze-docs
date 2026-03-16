@@ -142,7 +142,7 @@ CDI uses `UPDATED_AT` to decide what data is new. After a future `UPDATED_AT` is
 
 ## Why doesn't "Rows Synced" match the number in my warehouse?
 
-CDI uses `UPDATED_AT` to decide which records to pick up during a sync. Check out [this illustration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) to see how it works. At the beginning of a sync run, CDI queries your warehouse to get all records with `UPDATED_AT` equal to or later than the previously processed `UPDATED_AT` timestamp. Any record picked up at the time when the query executes will be synced into Braze. Here are common cases when a record might not be synced:
+CDI uses `UPDATED_AT` to decide which records to pick up during a sync. Check out [this illustration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) to see how it works. At the beginning of a sync run, CDI queries your warehouse to get all records with `UPDATED_AT` later than the previously processed `UPDATED_AT` value. Records at the exact boundary timestamp may also be re-synced if new rows share that timestamp. Any record picked up at the time when the query executes is synced into Braze. Here are common cases when a record might not be synced:
 
 - You're adding records to the table with an `UPDATED_AT` value that has already been processed.
 - You're updating record values after they have been processed by a sync, but leaving `UPDATED_AT` unchanged. 
@@ -155,6 +155,12 @@ To avoid these behaviors in the future, we recommend using monotonically increas
 ## During a sync, is the order preserved if multiple records share the same ID?
 
 The processing order is not 100% predictable. For example, if there are multiple rows with the same `EXTERNAL_ID` in the table during a sync, we cannot guarantee which value will end up in the final profile. If you're updating the same `EXTERNAL_ID` with different attributes in the payload column, all changes are reflected when the sync is completed.
+
+## Why are new users not being created from my CDI sync?
+
+If your CDI integration has the **Update existing users only** option enabled, only users who already exist in Braze are updated, and new users are not created. This means that if a row in your sync table references an `EXTERNAL_ID` that doesn't match any existing Braze user, that row is skipped.
+
+To create new users through CDI, turn off the **Update existing users only** toggle in your integration settings. Go to **Data Settings** > **Cloud Data Ingestion** and select an integration.
 
 ## What are the security measures for CDI?
 

@@ -5,7 +5,7 @@ page_order: 2.2
 description: "Cet article de référence traite des directives de marque pour l'assistant de rédaction avec l’IA. Cette fonctionnalité vous permet d'adapter le style des textes générés par l'assistant de rédaction basé sur l'intelligence artificielle à la voix et au style de votre marque."
 ---
 
-# Générer des directives de marque avec <sup>BrazeAITM</sup>
+# Élaborez des directives de marque avec BrazeAI
 
 > Adaptez le style de votre texte généré par l’IA à la voix et à la personnalité de votre marque, grâce à des directives de marque personnalisées.
 
@@ -18,7 +18,7 @@ Procédez comme suit pour créer des directives de marque dans l'assistant de r�
 1. A partir de votre compositeur de messages, trouvez et sélectionnez <i class="fa-solid fa-wand-magic-sparkles" title="Intelligence artificielle Copywriter"></i> pour [ouvrir l'assistant de rédaction de l'intelligence artificielle]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/#access).
 2. Sélectionnez **Appliquer la directive de marque**, puis **Créer une directive de marque**.
 
-![Le menu déroulant "Appliquer les directives de marque" a été élargi et le bouton "Créer une directive de marque" a été mis en évidence.]({% image_buster /assets/img/ai_copywriter/create_brand_guideline_button.png %}){:style="max-width:75%"}
+![Le menu déroulant « Appliquer les directives de marque » s'est ouvert et le bouton « Créer une directive de marque » est apparu.]({% image_buster /assets/img/ai_copywriter/create_brand_guideline_button.png %}){:style="max-width:75%"}
 
 {: start="3"}
 
@@ -50,7 +50,7 @@ Pour les **exclusions**, énumérez tout langage ou style qui ne correspond pas 
 
 Testez vos directives pour en évaluer le résultat. Développez la section **Tester vos directives** pour générer des exemples de textes et, le cas échéant, les peaufiner.
 
-![Test des lignes directrices de la marque avec une promotion sur les soldes de printemps pour les lignes d'objet des e-mails.]({% image_buster /assets/img/ai_copywriter/test_brand_guidelines.png %})
+![Évaluation des directives de marque à l'aide d'une promotion sur les ventes de printemps pour les lignes d'objet d'e-mails.]({% image_buster /assets/img/ai_copywriter/test_brand_guidelines.png %})
 
 ### Étape 5 : Enregistrer vos directives
 

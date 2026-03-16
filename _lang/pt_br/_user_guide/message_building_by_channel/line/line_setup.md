@@ -3,7 +3,7 @@ nav_title: Configuração do LINE
 article_title: Configuração do LINE
 description: "Este artigo aborda como configurar o canal Braze LINE, incluindo os pré-requisitos e as próximas etapas sugeridas."
 page_type: partner
-search_tag: Partner
+search_tag: Parceiro
 page_order: 0
 channel:
  - LINE
@@ -28,7 +28,7 @@ Você precisará dos seguintes itens para integrar o LINE ao Braze:
 O envio de mensagens LINE a partir do Braze utiliza os Créditos de Mensagem da sua conta.
 
 {% alert note %}
-**Configuração `native_line_id`**: Você pode definir `native_line_id` enviando atualizações de usuário para o Braze (por exemplo, com o endpoint [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), [importação CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou [Ingestão de Dados na Nuvem]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). Se o seu SDK do lado do cliente não tiver um campo dedicado para `native_line_id`, envie-o nas atualizações de usuário do lado do servidor usando um desses métodos.
+**Configuração `native_line_id`**: Você pode definir `native_line_id` enviando atualizações de usuário para o Braze (por exemplo, com o endpoint [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), [importação CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou [Ingestão de Dados na Nuvem]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). Se seu SDK do lado do cliente não tiver um campo dedicado para `native_line_id`, envie-o nas atualizações de usuário do lado do servidor usando um desses métodos.
 {% endalert %}
 
 ## Tipos de contas LINE

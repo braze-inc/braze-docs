@@ -1,12 +1,12 @@
 ## Controle de tráfego de rede
 
-### Solicitação de políticas de processamento
+### Solicitando políticas de processamento
 
 A Braze permite que o usuário tenha a opção de controlar o tráfego de rede usando os seguintes protocolos:
 
 {% tabs local %}
 {% tab automatic %}
-Por padrão, o valor do enum `RequestPolicy` é definido como `automatic`. Quando definido, as solicitações imediatas do servidor são realizadas quando os dados voltados para o usuário são necessários para os recursos do Braze, como mensagens no app.
+Por padrão, o valor do enum `RequestPolicy` é definido como `automatic`. Quando definido, solicitações imediatas ao servidor são realizadas quando dados voltados para o usuário são necessários para os recursos do Braze, como mensagens no aplicativo.
 
 O SDK da Braze tratará automaticamente de toda a comunicação com o servidor, incluindo:
 
@@ -18,10 +18,10 @@ Para minimizar a carga do servidor, a Braze realiza descargas periódicas de nov
 {% endtab %}
 
 {% tab manual %}
-Quando o valor do enum `RequestPolicy` é `manual`, ele tem a mesma performance do processamento automático de solicitações, exceto:
+Quando o valor do enum `RequestPolicy` é `manual`, ele realiza a mesma ação que o processamento automático de solicitações, exceto:
 
 - Os atributos personalizados e os dados de eventos personalizados não são automaticamente enviados ao servidor durante a sessão do usuário.
-- A Braze ainda realizará solicitações automáticas de rede para recursos internos, como solicitação de mensagens no app, modelos Liquid em mensagens no app, geofences e monitoramento de localização. Para obter mais detalhes, consulte a [documentação](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum/manual) do site `Braze.Configuration.Api.RequestPolicy.manual`. Quando essas solicitações internas são feitas, o Braze pode liberar atributos personalizados armazenados localmente e dados de eventos personalizados para o servidor Braze, dependendo do tipo de solicitação.
+- A Braze ainda realizará solicitações automáticas de rede para recursos internos, como solicitação de mensagens no app, modelos Liquid em mensagens no app, geofences e monitoramento de localização. Para obter mais detalhes, consulte a [documentação](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum/manual) do site `Braze.Configuration.Api.RequestPolicy.manual`. Quando essas solicitações internas são feitas, o Braze pode descarregar atributos personalizados armazenados localmente e dados de eventos personalizados para o servidor Braze, dependendo do tipo de solicitação.
 {% endtab %}
 {% endtabs %}
 

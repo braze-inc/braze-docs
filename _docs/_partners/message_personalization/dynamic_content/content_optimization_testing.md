@@ -1,4 +1,4 @@
 ---
-nav_title: Content Optimization & Testing
+nav_title: Content Optimization and Testing
 config_only: true
 ---

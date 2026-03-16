@@ -20,22 +20,24 @@ Mediante el seguimiento de estos diferentes tipos de eventos, puedes obtener un 
 
 ## Eventos estándar
 
-En Braze, los eventos estándar son acciones predefinidas que los usuarios pueden realizar dentro de su aplicación y que Braze rastrea automáticamente después de integrar el SDK de Braze. He aquí algunos ejemplos de eventos estándar:
+En Braze, los eventos estándar son acciones predefinidas que Braze reconoce en toda su plataforma. A diferencia de [los eventos personalizados](#custom-events), no es necesario crear ni nombrar los eventos estándar, ya que están integrados. Sin embargo, no todos los eventos estándar se siguen de la misma manera.
 
-- Lanzamiento de la aplicación
-- [Compra](#purchase-events)
+Los siguientes eventos se realizan automáticamente tras la integración de SDK:
+
 - Inicio de la sesión
 - Fin de la sesión
-- Notificación push pulsada
-- Correo electrónico abierto
 
-Como vendedor, puede utilizar estos eventos estándar para comprender el comportamiento del usuario y el compromiso con su aplicación. Por ejemplo, puedes ver con qué frecuencia los usuarios inician tu aplicación o cuántas compras se realizan. Esta información puede ser muy valiosa a la hora de crear campañas de marketing específicas.
+El seguimiento de los siguientes eventos se realiza tras una configuración adicional:
 
-Es importante tener en cuenta que, si bien Braze realiza un seguimiento automático de los eventos estándar, los eventos de compra, los eventos personalizados y los atributos personalizados deben ser configurados por su equipo de desarrollo en función de sus necesidades y objetivos específicos.
+- [Eventos de compra](#purchase-events): Tu equipo de desarrollo los registra utilizando los métodos de compra del SDK. Para obtener más información, consulta la sección Eventos de compra.
+- Eventos de interacción con el correo electrónico (como aperturas de correos electrónicos y clics en enlaces): Braze realiza un seguimiento cuando configuras el correo electrónico de Braze y habilitas el seguimiento del correo electrónico.
+- Eventos de interacción push (como aperturas y clics en notificaciones push): Se realiza un seguimiento después de configurar las notificaciones push en Braze e implementar la gestión de notificaciones push con el SDK de Braze en tu aplicación.
+
+Como especialista en marketing, puedes utilizar eventos estándar para comprender el comportamiento y la interacción de los usuarios. Por ejemplo, los datos de sesión muestran la frecuencia con la que los usuarios abren tu aplicación o sitio web, mientras que los eventos de compra te ayudan al seguimiento de los ingresos a lo largo del tiempo.
 
 ## Eventos de compra
 
-Los eventos de compra son una forma de registrar y realizar un seguimiento de las compras realizadas por sus usuarios. Son un tipo de evento estándar que está disponible por defecto tras integrar el SDK de Braze. Por ello, cuando utiliza eventos de compra para realizar un seguimiento de las compras, puede supervisar sus ingresos a lo largo del tiempo y a través de diferentes fuentes de ingresos directamente desde Braze.
+Registra y realiza el seguimiento de las compras realizadas por tus usuarios. Después de la integración del SDK de Braze, tu equipo de desarrollo puede registrar las compras utilizando los métodos de compra del SDK. Cuando utilizas eventos de compra para realizar el seguimiento de las compras, puedes supervisar tus ingresos a lo largo del tiempo y en diferentes fuentes de ingresos directamente desde Braze.
 
 Los eventos de compra registran la siguiente información clave sobre una compra:
 
@@ -63,7 +65,7 @@ Aquí tienes un ejemplo de cómo registrar un evento de compra en una aplicació
 Appboy.sharedInstance()?.logPurchase("product_name", inCurrency: "USD", atPrice: NSDecimalNumber(string: "1.99"), withQuantity: 1)
 ```
 
-En este ejemplo, "product_name" es el nombre del producto que se compró, "USD" es la moneda de la compra, "1,99" es el precio del producto y "1" es la cantidad comprada.
+En este ejemplo,"product_name"  es el nombre del producto que se compró, «USD» es la moneda de la compra, «1,99» es el precio del producto y «1» es la cantidad comprada.
 
 {:start="3"}
 3\. **Ver el evento de compra en el panel de Braze:** Una vez registrado el evento de compra, puede verlo en el panel de control de Braze. Puede utilizar estos datos para analizar sus ingresos, segmentar a sus usuarios y mucho más.
@@ -82,7 +84,7 @@ Aquí tienes un ejemplo de cómo registrar un evento personalizado en una aplica
 Appboy.sharedInstance()?.logCustomEvent("completed_level")
 ```
 
-En este ejemplo, "completed_level" es el nombre del evento personalizado que se registra cuando un usuario completa un nivel en un juego. Ese evento personalizado se registra entonces en su perfil de usuario en Braze, que puede utilizar para activar campañas y personalizar los mensajes.
+En este ejemplo,"completed_level"  es el nombre del evento personalizado que se registra cuando un usuario completa un nivel en un juego. Ese evento personalizado se registra entonces en su perfil de usuario en Braze, que puede utilizar para activar campañas y personalizar los mensajes.
 
 Para más información, visite nuestro artículo dedicado a [los eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/).
 
@@ -100,7 +102,7 @@ Aquí tienes un ejemplo de cómo registrar un evento personalizado en una aplica
 Appboy.sharedInstance()?.logCustomEvent("updated_profile")
 ```
 
-En este ejemplo, "updated_profile" es el nombre del evento personalizado que se registra cuando un usuario actualiza su perfil.
+En este ejemplo,"updated_profile"  es el nombre del evento personalizado que se registra cuando un usuario actualiza su perfil.
 
 {:start="4"}
 4\. **Añada propiedades a su evento personalizado (opcional):** Si desea capturar detalles adicionales sobre el evento personalizado, puede añadirle propiedades. Esto se hace pasando un diccionario de propiedades cuando se registra el evento.

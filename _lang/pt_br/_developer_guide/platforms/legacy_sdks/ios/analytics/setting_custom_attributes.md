@@ -1,6 +1,6 @@
 ---
 nav_title: Definir atributos personalizados
-article_title: Definir atributos personalizados para iOS
+article_title: Defina Atributos Personalizados para iOS
 platform: iOS
 page_order: 3
 description: "Este artigo de referência mostra como definir atributos personalizados em seu aplicativo iOS."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Definir atributos personalizados para iOS
+# Defina atributos personalizados para iOS
 
 Braze fornece métodos para atribuir atributos aos usuários. Você poderá filtrar e segmentar seus usuários de acordo com essas atribuições no dashboard.
 
@@ -157,7 +157,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 
 ### atributo personalizado com um valor de array
 
-O número máximo de elementos em [arrays de atributos personalizados]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) é 25 por padrão. As matrizes que excederem o número máximo de elementos serão truncadas para conter o número máximo de elementos. O máximo para matrizes individuais pode ser aumentado para até 100. Se quiser aumentar esse limite máximo, entre em contato com o gerente de atendimento ao cliente. 
+O número máximo de elementos em [arrays de atributos personalizados]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) é 25 por padrão. Arrays que excedem o número máximo de elementos são truncados para conter o número máximo de elementos. O máximo para arrays individuais pode ser aumentado para até 500. Para aumentar esse limite acima de 500, entre em contato com seu gerente de sucesso do cliente da Braze.
 
 
 {% tabs %}

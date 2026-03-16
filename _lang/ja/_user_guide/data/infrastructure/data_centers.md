@@ -32,6 +32,10 @@ Brazeは、世界中の異なる地域にある複数のデータセンターを
 
 {% multi_lang_include data_centers.md datacenters='ID' %}
 
+### 日本
+
+{% multi_lang_include data_centers.md datacenters='JP' %}
+
 ### アメリカ合衆国
 
 {% multi_lang_include data_centers.md datacenters='US' %}

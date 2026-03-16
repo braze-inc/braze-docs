@@ -1,5 +1,5 @@
 ---
-nav_title: Android用ライブ更新
+nav_title: Android向けライブ更新
 article_title: Android Braze SDKのライブ更新
 page_order: 0.1
 description: "Android Braze SDK の Live 更新の設定方法を学びます。"
@@ -13,7 +13,7 @@ hidden: true
 
 > Braze SDK で Android Live 更新 ([Progress Centric Notifications とも言います](https://developer.android.com/about/versions/16/features/progress-centric-notifications)) を使用する方法について説明します。これらの通知は、[Swift Braze SDK のライブアクティビティ]({{site.baseurl}}/developer_guide/live_notifications/live_activities)に似ており、インタラクティブなロック画面通知を表示できます。Android 16 では、進行状況を中心とした通知が導入され、ユーザーが開始した最初から最後までのジャーニーをシームレスに追跡できます。
 
-## CDI の仕組み
+## 仕組み
 
 [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) インターフェイスを使用して、Braze プッシュ通知の表示方法をカスタマイズできます。`BrazeNotificationFactory` を拡張することで、通知がユーザーに表示される前に Braze はファクトリーの`createNotification()` メソッドを呼び出します。その後、Braze ダッシュボードまたは REST API を通じて送信されたカスタムのキーと値のペアを含むペイロードを渡します。
 
@@ -21,7 +21,7 @@ hidden: true
 
 このセクションでは、野生動物救助チームが誰が一番多くのフクロウを救えるかを競う新しいゲーム番組の司会者、スーパーブクロウとパートナーを組むことになる。Android アプリで Live 更新を活用して、進行中の一致のステータスを表示し、リアルタイムで通知をダイナミックに更新できるようにしようとしています。
 
-![Androidからのライブアップデートのサンプル]({% image_buster /assets/img/android/android-live-update.png %}){: style="max-width:40%;"}
+![Androidからのライブ更新の例]({% image_buster /assets/img/android/android-live-update.png %}){: style="max-width:40%;"}
 
 #{% multi_lang_include developer_guide/prerequisites/android.md %}
 

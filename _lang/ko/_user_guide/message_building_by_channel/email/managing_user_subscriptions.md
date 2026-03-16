@@ -60,7 +60,7 @@ Braze SDK를 사용하여 사용자의 구독 상태를 업데이트하세요.
 #### 사용자 프로필
 
 1. **사용자 검색**을 통해 사용자를 찾습니다. 
-2. **참여** 아래에서 **구독 취소됨**, **구독됨**, 또는 **옵트인**을 선택하여 사용자의 구독 상태를 변경합니다. 
+2. **참여** 아래에서 **구독 취소됨**, **구독됨**, 또는 **옵트인**을 선택하여 사용자의 구독 상태를 변경하세요. 
 
 가능한 경우 고객 프로필에는 사용자의 구독이 마지막으로 변경된 시점의 타임스탬프도 표시됩니다.
 
@@ -72,7 +72,7 @@ Braze SDK를 사용하여 사용자의 구독 상태를 업데이트하세요.
 
 ![User profile for John Doe with their email subscription state set to Subscribed.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
-다음 방법으로 사용자의 이메일 구독 상태를 확인할 수 있습니다:
+사용자의 이메일 구독 상태를 다음 방법으로 확인할 수 있습니다:
 
 1. **REST API 내보내기:** Use the [Export users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Export users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints to export individual user profiles in JSON format.
 2. **사용자 프로필:** Find the user's profile on the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) page, then select the **Engagement** tab to view and manually update a user's subscription state.
@@ -113,7 +113,7 @@ To archive your group from the **Subscription Groups** page, do the following:
 1. Find your group in the list of subscription groups. 
 2. Select **Archive** from the <i class="fa-solid fa-ellipsis-vertical"></i> dropdown menu.
 
-Braze는 아카이브된 그룹의 사용자 상태 변경을 처리하지 않습니다. 예를 들어, Alex가 구독 중인 구독 그룹 1을 아카이브하면, Alex는 탈퇴 링크를 클릭하더라도 여전히 "구독 중" 상태로 남아 있습니다. 이것은 중요하지 않습니다. 왜냐하면 구독 그룹 1이 아카이브되어 있고 이를 사용하여 메시지를 보낼 수 없기 때문입니다.
+Braze는 보관된 그룹의 사용자 상태 변경을 처리하지 않습니다. 예를 들어, Alex가 구독 중인 구독 그룹 1을 보관하면, Alex는 탈퇴 링크를 클릭하더라도 여전히 "구독 중" 상태로 남아 있습니다. 이것은 중요하지 않습니다. 왜냐하면 구독 그룹 1이 보관되어 있고 이를 사용하여 메시지를 보낼 수 없기 때문입니다.
 
 #### 구독 그룹 크기 보기
 
@@ -133,7 +133,7 @@ You can reference the **Subscription Group Timeseries** graph in the **Subscript
 ### 사용자의 이메일 구독 그룹 확인하기
 
 - **사용자 프로필:** 개별 사용자 프로필은 [사용자 검색]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles) 페이지의 Braze 대시보드를 통해 액세스할 수 있습니다. 여기에서 이메일 주소, 전화번호 또는 외부 사용자 아이디로 사용자 프로필을 조회할 수 있습니다. 사용자의 이메일 구독 그룹을 **참여** 탭에서 볼 수 있습니다.
-- **Braze REST API:** 개별 사용자 프로필의 구독 그룹을 보려면 [사용자의 구독 그룹 목록 엔드포인트]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) 또는 [사용자의 구독 그룹 상태 목록 엔드포인트]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/)를 사용하세요. 
+- **브레이즈 REST API:** 개별 사용자 프로필의 구독 그룹을 보려면 [사용자의 구독 그룹 목록 엔드포인트]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) 또는 [사용자의 구독 그룹 상태 목록 엔드포인트]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/)를 사용하세요. 
 
 ## 이메일 환경설정 센터
 
@@ -143,13 +143,13 @@ To learn more about how to add or customize a preference center, refer to [Prefe
 
 ## 이메일 구독 변경하기 {#changing-email-subscriptions}
 
-대부분의 경우, 사용자는 수신하는 이메일에 포함된 링크를 통해 이메일 구독을 관리합니다. 모든 이메일 하단에 탈퇴 링크가 포함된 법적으로 준수하는 바닥글을 삽입하세요. 사용자가 탈퇴 URL을 선택하면, Braze는 그들을 탈퇴시키고 변경을 확인하는 랜딩 페이지를 표시합니다. 다음 Liquid 태그를 포함하세요: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
+대부분의 경우, 사용자는 수신하는 이메일에 포함된 링크를 통해 이메일 구독을 관리합니다. 모든 이메일 하단에 탈퇴 링크가 포함된 법적으로 준수하는 바닥글을 삽입하세요. 사용자가 탈퇴 URL을 선택하면, Braze는 그들을 탈퇴시키고 변경을 확인하는 랜딩 페이지를 표시합니다. 이 Liquid 태그를 포함하세요: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
 
 사용자가 선호 센터에서 "위의 모든 유형의 이메일 탈퇴"를 선택하면, Braze는 그들의 전역 이메일 구독 상태를 `unsubscribed`로 설정하고 모든 그룹에서 탈퇴시킵니다.
 
 ### 커스텀 바닥글 만들기 {#custom-footer}
 
-기본 바닥글을 사용하고 싶지 않다면, 작업 공간 전체에 맞춤 이메일 바닥글을 만들고 {% raw %}`{{${email_footer}}}`{% endraw %}를 사용하여 모든 이메일에 템플릿으로 적용하세요.
+기본 바닥글을 사용하고 싶지 않다면, 작업 공간 전체에 맞춤 이메일 바닥글을 만들고 {% raw %}`{{${email_footer}}}`{% endraw %}를 사용하여 모든 이메일에 템플릿화하세요.
 
 이렇게 하면 모든 이메일 템플릿이나 이메일 캠페인에 대해 새로운 바닥글을 만들 필요가 없습니다. 단계는 [맞춤 이메일 바닥글]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/)을 참조하세요.
 
@@ -188,7 +188,7 @@ To learn more about how to add or customize a preference center, refer to [Prefe
 
 ## 구독 및 캠페인 타겟팅 {#subscriptions-and-campaign-targeting}
 
-기본적으로 Braze는 구독하거나 옵트인한 사용자에게 푸시 또는 이메일 메시지로 캠페인을 타겟팅합니다. **타겟 오디언스**에서 **이 사용자에게 전송:** 옆의 드롭다운을 선택하여 변경하세요.
+기본적으로 Braze는 구독하거나 옵트인한 사용자에게 푸시 또는 이메일 메시지로 캠페인을 타겟팅합니다. **타겟 오디언스**에서 **이 사용자에게 전송:** 옆의 드롭다운을 선택하여 이를 변경하세요.
 
 Braze는 세 가지 타겟팅 상태를 지원합니다:
 

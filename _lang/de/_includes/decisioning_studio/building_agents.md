@@ -1,4 +1,4 @@
-# Aufbau von KI-Entscheidungsagenten
+# Entwicklungsprozess von KI-Entscheidungsagenten
 
 > Erfahren Sie, wie Sie einen Agenten für BrazeAI Decisioning Studio™ erstellen, damit Sie personalisierte Experimente automatisieren und Ergebnisse wie Konversionen, Bindung oder Umsatz optimieren können – ohne manuelle A/B-Tests.
 
@@ -32,7 +32,7 @@ Bevor Sie einen Agenten erstellen können, müssen Sie [das BrazeAI Decisioning 
 
 ### Schritt 1: AI Expert Services kontaktieren
 
-Das Team von AI Expert Services wird eng mit Ihnen zusammenarbeiten, um Ihren Entscheidungsagenten zu konzipieren und zu erstellen. Wenn Sie es noch nicht getan haben, [nehmen Sie Kontakt mit uns auf](https://www.braze.com/get-started/), um loszulegen.
+Das Team von AI Expert Services wird eng mit Ihnen zusammenarbeiten, um Ihren Entscheidungsagenten zu konzipieren und zu erstellen. Falls Sie dies noch nicht getan haben, [kontaktieren Sie uns](https://www.braze.com/get-started/) bitte, um loszulegen.
 
 Sie werden die folgenden Schritte gemeinsam ausführen, um einen angepassten Agenten zu erstellen, der genau auf Sie zugeschnitten ist.
 
@@ -49,7 +49,7 @@ Wenn der Entwurf steht, wird das Team mit Ihnen zusammenarbeiten, um alle zusät
 
 ### Schritt 3: Richten Sie Ihre Zustellungsplattform ein
 
-Als nächstes hilft Ihnen das KI Expert Service Team bei der Einrichtung Ihrer Customer-Engagement-Plattform. Obwohl das Decisioning Studio am besten mit Braze funktioniert, wird eine Vielzahl anderer Plattformen unterstützt. Wenden Sie sich an Ihr KI Expert Service Team, um weitere Ressourcen zu erhalten.
+Anschließend wird Ihnen das AI Expert Service-Team bei der Einrichtung Ihrer Customer-Engagement-Plattform behilflich sein. Das Decisioning Studio funktioniert am besten mit Braze, es werden jedoch auch verschiedene andere Plattformen unterstützt. Bitte wenden Sie sich an Ihr AI Expert Service-Team, um weitere Informationen zu erhalten.
 
 {% tabs local %}
 {% tab Braze %}
