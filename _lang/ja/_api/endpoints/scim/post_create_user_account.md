@@ -2,7 +2,7 @@
 nav_title: "POST:新しいダッシュボード・ユーザー・アカウントを作成する"
 article_title: "POST:新しいダッシュボード・ユーザー・アカウントを作成する"
 alias: /post_create_user_account/
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 4
 layout: api_page
 page_type: reference
@@ -81,15 +81,15 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 
 | パラメーター | 必須 | データタイプ | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `schemas` | 必須 | 文字列の配列 | ユーザーオブジェクトに期待される SCIM 2.0 スキーマ名。 |
-| `userName` | 必須 | 文字列 | ユーザーのEメールアドレス。 |
+| `schemas` | 必須かどうか | 文字列の配列 | ユーザーオブジェクトに期待される SCIM 2.0 スキーマ名。 |
+| `userName` | 必須かどうか | 文字列 | ユーザーのEメールアドレス。 |
 | `name` | 必須 | JSONオブジェクト | このオブジェクトには、ユーザーの姓と名が含まれます。 |
-| `department` | 必須 | 文字列 | [部門文字列のドキュメント]({{site.baseurl}}/scim_api_appendix/#department-strings)にある有効な部門文字列。 |
+| `department` | 必須かどうか | 文字列 | [部門文字列のドキュメント]({{site.baseurl}}/scim_api_appendix/#department-strings)にある有効な部門文字列。 |
 | `permissions` | オプション | JSONオブジェクト | [権限オブジェクトのドキュメント]({{site.baseurl}}/scim_api_appendix/#permissions-object)で説明されている権限オブジェクト。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
@@ -145,7 +145,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
         "roles": [
             {
                 "roleName": "Test Role",
-                "roleId": "519dafcdba23dfaae7,
+                "roleId": "519dafcdba23dfaae7",
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25789fabcded",
@@ -163,7 +163,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
             },
             {
                 "roleName": "Another Test Role",
-                "roleId": "23125dad23dfaae7,
+                "roleId": "23125dad23dfaae7",
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25adfabcded",
@@ -222,7 +222,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 
 この`userName` またはメールアドレスを持つユーザーがBrazeにすでに存在する場合、エンドポイントは次のように応答する：
 
-```json
+```http
 HTTP/1.1 409 Conflict
 Date: Tue, 10 Sep 2019 02:22:30 GMT
 Content-Type: text/json;charset=UTF-8

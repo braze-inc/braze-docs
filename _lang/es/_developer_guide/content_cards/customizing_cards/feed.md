@@ -1,6 +1,6 @@
 ---
 nav_title: Fuente
-article_title: Personaliza la fuente de las tarjetas de contenido
+article_title: Personalizar la fuente para las tarjetas de contenido
 page_order: 3
 description: "Este artículo trata de las opciones de personalización de la fuente de la tarjeta de contenido."
 channel:
@@ -12,9 +12,9 @@ platform:
   - Web
 ---
 
-# Personaliza la fuente de las tarjetas de contenido
+# Personalizar la fuente para las tarjetas de contenido
 
-> Una fuente de tarjetas de contenido es la secuencia de tarjetas de contenido en tus aplicaciones móviles o Web. Este artículo cubre la configuración de cuándo se actualiza la fuente, el orden de las tarjetas, la gestión de múltiples fuentes y los mensajes de error de "fuente vacía". Para ver la lista completa de tipos de tarjetas de contenido, consulta [Acerca de las tarjetas de contenido]({{site.baseurl}}/developer_guide/content_cards/). 
+> Una fuente de tarjetas de contenido es la secuencia de tarjetas de contenido en tus aplicaciones móviles o Web. Este artículo cubre la configuración de cuándo se actualiza la fuente, el orden de las tarjetas, la gestión de múltiples fuentes y los mensajes de error de "fuente vacía". Para obtener la lista completa de tipos de tarjetas de contenido, consulta [Acerca de las tarjetas de contenido]({{site.baseurl}}/developer_guide/content_cards/). 
 
 {% multi_lang_include developer_guide/_shared/about_session_lifecycle.md %}
 
@@ -22,10 +22,10 @@ platform:
 
 ### Actualización automática
 
-Por predeterminado, la fuente de la tarjeta de contenido se actualizará automáticamente cuando:
+De forma predeterminada, la fuente de la tarjeta de contenido se actualizará automáticamente cuando:
 
 - Se inicia una nueva sesión
-- La fuente está abierta y han pasado más de 60 segundos desde la última actualización. (Esto sólo se aplica a la fuente predeterminada Tarjeta de contenido y ocurre una vez por cada apertura de la fuente).
+- La fuente está abierta y han pasado más de 60 segundos desde la última actualización. (Esto solo se aplica a la fuente predeterminada de la tarjeta de contenido y ocurre una vez por cada apertura de la fuente).
 
 {% alert tip %}
 Para mostrar dinámicamente tarjetas de contenido actualizadas sin actualizarlas manualmente, selecciona **En la primera impresión** durante la creación de la tarjeta. Estas tarjetas se actualizarán cuando estén disponibles.
@@ -33,7 +33,7 @@ Para mostrar dinámicamente tarjetas de contenido actualizadas sin actualizarlas
 
 ### Actualización manual
 
-Para actualizar manualmente la fuente a una hora determinada:
+Para actualizar manualmente la fuente en un momento específico:
 
 {% tabs %}
 {% tab web %}
@@ -112,12 +112,12 @@ let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
 
 Braze utiliza un algoritmo de contenedor de tokens para aplicar los siguientes límites de velocidad:
 - Hasta 5 llamadas de actualización por dispositivo, compartidas entre usuarios y llamadas a `openSession()`
-- Después de alcanzar el límite, una nueva llamada estará disponible cada 180 segundos (3 minutos)
-- El sistema retendrá hasta cinco llamadas para que las utilices en cualquier momento
-- `subscribeToContentCards()` seguirá devolviendo tarjetas almacenadas en caché aunque la tasa esté limitada
+- Una vez alcanzado el límite, se puede realizar una nueva llamada cada 180 segundos (3 minutos).
+- El sistema guardará hasta cinco llamadas para que las utilices en cualquier momento.
+- `subscribeToContentCards()` seguirás devolviendo tarjetas almacenadas en caché incluso cuando haya un límite de velocidad
 
 {% alert important %}
-El SDK de Braze también aplica límites de velocidad para el rendimiento y la fiabilidad. Tenlo en cuenta cuando realices pruebas automatizadas o controles de calidad manuales. Para más información, consulta [los límites de velocidad del SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration/rate_limits/).
+El SDK de Braze también aplica límites de velocidad para garantizar el rendimiento y la fiabilidad. Ten esto en cuenta al ejecutar pruebas de automatización o realizar controles de calidad manuales. Consulta [los límites de velocidad del SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration/rate_limits/) para obtener más información.
 {% endalert %}
 
 ## Personalizar el pedido de tarjeta mostrado
@@ -377,7 +377,7 @@ El estilo utilizado para mostrar este mensaje se puede encontrar a través de [`
 Para obtener más información sobre la personalización de los elementos de estilo de la tarjeta de contenido, consulta [Personalizar el estilo]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/style/).
 {% endsubtab %}
 {% subtab Jetpack Compose %}
-Para personalizar el mensaje de error "fuente vacía" con Jetpack Compose, puedes pasar un `emptyString` a [`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html). También puedes introducir [`emptyTextStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-list-styling/index.html#1193499348%2FProperties%2F-1725759721) a `ContentCardListStyling` para personalizar aún más este mensaje.
+Para personalizar el mensaje de error «fuente vacía» con Jetpack Compose, puedes pasar un`emptyString`  a [`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html). También puedes pasar  a`ContentCardListStyling`[`emptyTextStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-list-styling/index.html#1193499348%2FProperties%2F-1725759721)  para hacer este mensaje aún más personalizado.
 
 ```kotlin
 ContentCardsList(
@@ -388,7 +388,7 @@ ContentCardsList(
 )
 ```
 
-Si tienes un Composable que te gustaría mostrar en su lugar, puedes pasar `emptyComposable` a [`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html). Si se especifica `emptyComposable`, no se utilizará `emptyString`.
+Si tienes un Composable que te gustaría mostrar en su lugar, puedes pasar  a`emptyComposable` [`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html). Si se especifica `emptyComposable`, no se utilizará `emptyString`.
 
 ```kotlin
 ContentCardsList(
@@ -477,11 +477,11 @@ Para más información, consulta la [documentación del método SDK](https://js.
 {% subtabs %}
 {% subtab android view system %}
 
-Por predeterminado, la fuente de la tarjeta de contenido se muestra en un formato [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) y [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) devuelve una lista de tarjetas para mostrar después de recibir un archivo [`ContentCardsUpdatedEvent`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html) del SDK de Braze. Sin embargo, sólo ordena las tarjetas y no filtra directamente.
+De forma predeterminada, la fuente de tarjetas de contenido se muestra en un[`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html)  y[`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html)  devuelve una lista de tarjetas para mostrar después de recibir un[`ContentCardsUpdatedEvent`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html)  del SDK de Braze. Sin embargo, solo ordena las tarjetas y no gestiona ningún filtrado directamente.
 
 #### Paso 2.1: Crear un controlador personalizado
 
-Puedes filtrar las tarjetas de contenido implementando una función personalizada [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) utilizando los pares clave-valor establecidos por [`Card.getExtras()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html) en el panel, y modificándolo después para eliminar de la lista las tarjetas que no coincidan con el valor de `feed_type` que estableciste anteriormente.
+Puedes filtrar las tarjetas de contenido implementando una personalizada[`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html)  utilizando los pares clave-valor establecidos por[`Card.getExtras()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html)  en el panel y, a continuación, modificándola para eliminar de la lista cualquier tarjeta que no coincida con el valor que`feed_type`has establecido anteriormente.
 
 {% details Show Java example %}
 ```java
@@ -562,9 +562,9 @@ private fun getUpdateHandlerForFeedType(desiredFeedType: String): IContentCardsU
 ```
 {% enddetails %}
 
-#### Paso 2.2: Añádelo a un fragmento
+#### Paso 2.2: Añádalo a un fragmento.
 
-Después de crear un [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html)crea un [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) que lo utilice. Esta fuente personalizada puede utilizarse como cualquier otra `ContentCardsFragment`. En las distintas partes de tu aplicación, muestra distintas fuentes de tarjetas de contenido en función de la clave proporcionada en el panel. Cada fuente `ContentCardsFragment` tendrá un conjunto único de tarjetas mostradas gracias a la configuración personalizada `IContentCardsUpdateHandler` de cada fragmento.
+Después de crear un [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html), crea un[`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html)  que lo utilice. Esta fuente personalizada puede utilizarse como cualquier otra `ContentCardsFragment`. En las distintas partes de tu aplicación, muestra distintas fuentes de tarjetas de contenido en función de la clave proporcionada en el panel. Cada fuente `ContentCardsFragment` tendrá un conjunto único de tarjetas mostradas gracias a la configuración personalizada `IContentCardsUpdateHandler` de cada fragmento.
 
 {% details Show Java example %}
 ```java

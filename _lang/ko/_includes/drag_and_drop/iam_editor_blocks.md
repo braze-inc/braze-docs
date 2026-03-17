@@ -1,6 +1,6 @@
-## 인앱 메시지 편집기 블록 사용하기
+## 인앱 메시지 편집기 블록 사용
 
-편집기 블록은 인앱 메시지 **구축** 섹션 아래에 있습니다. 이를 사용하려면 열 안의 편집기 블록을 드래그합니다. 열 너비에 맞게 자동으로 조정됩니다. 각 편집기 블록에는 패딩에 대한 세분화된 제어와 같은 자체 설정이 있습니다. 오른쪽 패널은 선택한 콘텐츠 요소의 속성 패널로 자동 전환됩니다.
+편집기 블록은 인앱 메시지의 **구축** 섹션 아래에 위치합니다. 이를 사용하려면 열 안의 편집기 블록을 드래그합니다. 열 너비에 맞게 자동으로 조정됩니다. 각 편집기 블록에는 패딩에 대한 세분화된 제어와 같은 자체 설정이 있습니다. 오른쪽 패널은 선택한 콘텐츠 요소의 속성 패널로 자동 전환됩니다.
 
 ## 유형
 
@@ -11,16 +11,16 @@
 | 제목 | Enters a title text into the message. |
 | 단락  | Enters a paragraph text into the message. |
 | 버튼 | 표준 버튼을 추가합니다. 이 블록의 속성을 사용하면 편집, 링크 설정 및 분석 로깅을 수행할 수 있습니다. |
-| Radio Button | 사용자가 선택할 수 있는 옵션 목록을 추가합니다. 제출되면 고객 프로필에 관련 커스텀 속성이 기록되며, 이 속성은 문자열로 저장되어야 합니다. 다른 데이터 유형이 포함된 커스텀 속성은 사용자 프로필에 저장되지 않습니다. |
-| 이미지 | [미디어 라이브러리에서]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) 이미지를 삽입합니다. |
+| Radio Button | 사용자가 선택할 수 있는 옵션 목록을 추가합니다. 제출 시, 사용자 프로필은 저장해야 하는 문자열인 관련 커스텀 속성을 기록합니다. 다른 데이터 유형의 커스텀 속성은 사용자 프로필에 저장되지 않습니다. |
+| 이미지 | [미디어 라이브러리]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/)에서 이미지를 삽입합니다. |
 | 링크 | Inserts a hyperlink that users can click to navigate to a specified URL. Can be embedded within text or standalone. |
 | 공백 | 다른 블록 사이에 공간이나 패딩을 추가합니다. |
 | 사용자 지정 코드 | Inserts and runs custom HTML, CSS, or JavaScript for advanced customization.  |
-| Phone Capture | Inserts a form field for phone numbers. 제출하면 사용자는 [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) 또는 [WhatsApp 구독 그룹에]({{site.baseurl}}/whatsapp_subscription_groups/) 가입하게 됩니다. |
+| Phone Capture | Inserts a form field for phone numbers. 제출 시, 사용자는 [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) 또는 [WhatsApp 구독 그룹]({{site.baseurl}}/whatsapp_subscription_groups/)에 가입됩니다. |
 | 이메일 캡처 | Inserts a form field for email addresses. When submitted, the email address is added to that user's profile in Braze. |
 | Dropdown      | Inserts a dropdown with a pre-defined list of items from which users can select one. You can add any custom attribute strings to the list. |
 | Checkbox      | Inserts a checkbox. If the user checks the box, the block's attribute is set to `true`. If left unchecked, its attribute is set to `false`. |
-| 확인란 그룹| 사용자는 제시된 여러 선택지 중에서 선택할 수 있습니다. 값은 정의된 배열 커스텀 속성에 설정되거나 추가됩니다. |
+| 체크박스 그룹| 사용자는 제시된 여러 선택지 중에서 선택할 수 있습니다. 값은 정의된 배열 커스텀 속성에 설정되거나 추가됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 등록정보
@@ -98,7 +98,7 @@
 
 | Property | 설명 |
 | --- | --- |
-| 구독 그룹 | 사용자가 전화번호를 수집하여 가입할 [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) 또는 [WhatsApp 구독 그룹]({{site.baseurl}}/whatsapp_subscription_groups/) (모든 국가의 번호를 수집할 수 있는 옵션 포함) |
+| 구독 그룹 | 사용자의 전화번호를 수집하여 가입할 [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) 또는 [WhatsApp 구독 그룹]({{site.baseurl}}/whatsapp_subscription_groups/)으로, 모든 국가에서 번호를 수집할 수 있는 옵션이 있습니다. |
 | Text alignment | 텍스트를 왼쪽, 가운데, 오른쪽 또는 맞춤으로 정렬하도록 이동합니다. |
 | Placeholder text | A placeholder phone number to display |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -119,7 +119,7 @@
 
 ## 행동
 
-사용자가 메시징의 버튼, 링크 또는 이미지를 탭할 때 발생하는 동작을 지정할 수 있습니다. [Liquid를]({{site.baseurl}}/liquid/) 사용하여 작업을 개인화할 수도 있습니다. Details for each editor block's actions are provided in the following tables.
+사용자가 메시지에서 버튼, 링크 또는 이미지를 탭할 때 발생하는 작업을 지정할 수 있습니다. 작업을 개인화하기 위해 [Liquid]({{site.baseurl}}/liquid/)를 사용할 수도 있습니다. Details for each editor block's actions are provided in the following tables.
 
 ### 버튼
 
@@ -127,20 +127,20 @@
 | --- | --- |
 | Submit form when button is clicked | Submits the form and performs the selected on-click behavior. Turn this off to only perform the on-click behavior. |
 | Set separate behaviors for each platform | Customizes the behavior of the button for each platform separately. |
-| On-click behavior | 사용자가 메시지 닫기, 웹 URL 열기, 앱의 특정 페이지로 디링크, 다른 페이지로 이동, [푸시 권한 요청]({{site.baseurl}}/push_primer/) 등 버튼을 클릭할 때 수행할 작업을 결정합니다. |
+| On-click behavior | 사용자가 버튼을 클릭할 때의 작업을 결정합니다. 예를 들어 메시지를 닫거나, 웹 URL을 열거나, 앱의 특정 페이지로 딥링크하거나, 다른 페이지로 이동하거나, [푸시 권한 요청]({{site.baseurl}}/push_primer/)을 할 수 있습니다. |
 | Log custom attributes or events | Determines if clicking the button will update the user's profile with custom data. You can also select the identifier for reporting. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 이미지
 
-이미지 사양은 [인앱 메시지 이미지 사양을]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#in-app-messages) 참조하세요.
+이미지 사양에 대한 내용은 [인앱 메시지 이미지 사양]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#in-app-messages)을 참조하십시오.
 
 | Action | 설명 |
 | --- | --- |
 | Alt text | 이미지가 로드되지 않을 경우 이미지 대신 표시되는 텍스트 사본입니다. Screen readers announce alt text to explain images, so use plain language to provide key information about an image. |
 | Submit form when image is clicked | Submits the form and performs the selected on-click behavior. Turn this off to only perform the on-click behavior. |
 | Set separate behaviors for each platform | Customizes the behavior of the image for each platform separately. |
-| On-click behavior | 사용자가 이미지를 클릭할 때 수행할 작업(예: 메시지 닫기, 웹 URL 열기, 앱의 특정 페이지로 디링크, 다른 페이지로 이동, [푸시 권한 요청]({{site.baseurl}}/push_primer/) 등)을 결정합니다. |
+| On-click behavior | 사용자가 이미지를 클릭할 때의 작업을 결정합니다. 예를 들어 메시지를 닫거나, 웹 URL을 열거나, 앱의 특정 페이지로 딥링크하거나, 다른 페이지로 이동하거나, [푸시 권한 요청]({{site.baseurl}}/push_primer/)을 할 수 있습니다. |
 | Log custom attributes or events | Determines if clicking the image will update the user's profile with custom data. You can also select the identifier for reporting. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -149,6 +149,6 @@
 | Action | 설명 |
 | --- | --- |
 | URL | The hyperlink to navigate to |
-| Identifier for Reporting | 보고에 사용할 식별자를 결정합니다. |
+| Identifier for Reporting | 보고에 사용되는 식별자를 결정합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

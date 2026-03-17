@@ -1,5 +1,5 @@
 ---
-nav_title: Probar un mensaje
+nav_title: Probando un mensaje
 article_title: Enviar mensajes de prueba
 page_order: 10.0
 description: "Aprende a enviar un mensaje de prueba para el SDK de Braze."

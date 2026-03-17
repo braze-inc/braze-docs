@@ -45,7 +45,7 @@ Todos os usuários são elegíveis para a pontuação de leads, portanto, é pos
 
 ![Etapa 3 da criação de um canva com opções para selecionar segmentos e filtros para restringir o público-alvo.]({% image_buster /assets/img/b2b/step_3_simple.png %}){: style="max-width:80%;"}
 
-#### Etapa 3b: Definir a reelegibilidade do Canvas
+#### Etapa 3b: Definir re-eligibilidade do canva
 
 Um usuário passará por essa tela muitas vezes durante o ciclo de vida dele com você, portanto, certifique-se de que ele possa entrar novamente tão rapidamente quanto saiu da vez anterior. Isso pode ser feito por meio de configurações de reelegibilidade. 
 
@@ -83,7 +83,7 @@ Adicione os seguintes grupos à sua jornada de ação:
 - **Grupo 3:** Todos os eventos que contam para um decréscimo de 1 ponto.
 - **Todos os demais:** As jornadas de ação permitem definir a janela para esperar e ver se um usuário executa uma ação, antes de colocá-lo em um grupo "todos os outros". Para a pontuação de leads, essa é uma oportunidade de diminuir a pontuação por "inatividade".
 
-![Jornada de ação contendo grupos de ação para adicionar um ponto, cinco pontos e dez pontos; subtrair um ponto e dez pontos; e "Todos os outros".]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %}){: style="max-width:20%;"}
+![Caminho de Ação contendo Grupos de Ação para adicionar um ponto, cinco pontos e dez pontos; subtrair um ponto e dez pontos; e “Todos os Outros”.]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %}){: style="max-width:20%;"}
 
 #### Etapa 4c: Configure cada grupo para incluir os eventos relevantes
 
@@ -182,7 +182,7 @@ Para atualizar o registro do lead no Salesforce com o status do lead da Braze, r
 
 | Cabeçalho | Conteúdo |
 | --- | --- |
-| Autorização | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar um token, [configure um app conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para o fluxo de credenciais do cliente OAuth 2.0 e, em seguida, use o conteúdo conectado para recuperar o portador da Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_f4d610aa-eece-475b-8a2c-f1997de17b0d/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorização | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar um token, [configure um app conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para o fluxo de credenciais do cliente OAuth 2.0 e, em seguida, use o conteúdo conectado para recuperar o portador da Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_449236fc-ca64-480d-988b-f619086a6a91/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
@@ -200,7 +200,7 @@ Na etapa **Schedule Delivery**, selecione o seguinte:
 
 Na etapa de **direcionamento de públicos**, inclua um filtro que exclua usuários cujos status de lead já estejam em MQL ou além, como "`lead_status` `is none of` `MQL`".
 
-![As opções de direcionamento do webhook com o filtro de “lead_status” não são "MQL".]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
+![Opções de direcionamento de Webhook com o filtro de “lead_status” é nenhum dos “MQL”.]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
 
 ### Etapa 3: Campanha de lançamento
 

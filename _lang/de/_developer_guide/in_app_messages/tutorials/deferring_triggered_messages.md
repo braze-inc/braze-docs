@@ -1,5 +1,5 @@
 ---
-nav_title: Aufschieben getriggerter Nachrichten
+nav_title: Getriggerte Nachrichten zurückstellen
 article_title: "Anleitung: Aufschieben und Wiederherstellen getriggerter Nachrichten"
 description: ""
 page_order: 1
@@ -98,7 +98,7 @@ Um eine Nachricht anzuzeigen, anstatt sie zu verschieben, rufen Sie [`showInAppM
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/prerequisites/android.md %} Außerdem müssen Sie [In-App-Nachrichten für Android aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/android.md %} Bitte beachten Sie, dass Sie [für Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages) auch [In-App-Nachrichten aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages) müssen.
 
 ## Aufschieben und Wiederherstellen getriggerter Nachrichten für Android
 
@@ -254,7 +254,7 @@ Um die zuvor aufgeschobene Nachricht anzuzeigen, rufen Sie `showDeferredMessage(
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab swift %}
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Sie müssen auch [In-App-Nachrichten für Swift aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Bitte beachten Sie, dass Sie auch [In-App-Nachrichten für SWIFT aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages) müssen.
 
 ## Aufschieben und Wiederherstellen von getriggerten Nachrichten für Swift
 

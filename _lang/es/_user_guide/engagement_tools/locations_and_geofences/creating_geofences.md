@@ -16,7 +16,7 @@ search_rank: 9
 
 ## Cómo funciona
 
-Las geovallas pueden utilizarse para desencadenar campañas en tiempo real cuando los usuarios entran y salen de sus fronteras, o para enviar campañas de seguimiento horas o días después. Los usuarios que entran o salen de sus geocercas añaden una nueva capa de datos de usuario que puede utilizar para la segmentación y la reorientación.
+Las geovallas se pueden utilizar para desencadenar campañas en tiempo real cuando los usuarios entran y salen de sus límites, o para enviar campañas de seguimiento horas o días después. Los usuarios que entran o salen de sus geocercas añaden una nueva capa de datos de usuario que puede utilizar para la segmentación y la reorientación.
 
 Las geovallas se organizan en conjuntos de geovallas: un grupo de geovallas que pueden utilizarse para segmentar o interactuar con los usuarios en toda la plataforma. Cada conjunto de geovallas puede contener un máximo de 10 000 geovallas.
 
@@ -24,57 +24,57 @@ Puedes crear o cargar un número ilimitado de geovallas.
 
 - Las aplicaciones de Android solo pueden almacenar localmente hasta 100 geovallas a la vez. Braze está configurado para almacenar solo hasta 20 geovallas localmente por aplicación.
 - Los dispositivos iOS pueden controlar hasta 20 geovallas a la vez por aplicación. Braze supervisará hasta 20 ubicaciones si hay espacio disponible. 
-- Si el usuario es elegible para recibir más de 20 geovallas, Braze descargará la cantidad máxima de ubicaciones en función de la proximidad al usuario en el punto de inicio de la sesión.
+- Si tú eres elegible para recibir más de 20 geovallas, Braze descargará la cantidad máxima de ubicaciones en función de la proximidad al usuario en el momento del inicio de la sesión.
 - Para que las geovallas funcionen correctamente, debes asegurarte de que tu aplicación no está utilizando todos los puntos de geovalla disponibles.
 
-Consulta la tabla siguiente para conocer los términos comunes de geovalla y sus descripciones.
+Consulta la siguiente tabla para conocer los términos más comunes relacionados con el geovallado y sus descripciones.
 
 | Plazo | Descripción |
 |---|---|
 | Latitud y longitud | El centro geográfico de la geovalla. |
-| Radio | El radio de la geo-valla en metros, medido desde el centro geográfico. Recomendamos configurar un radio mínimo de 100-150 metros para todos los geovallados. |
-| Recuperación | Los usuarios reciben notificaciones desencadenadas por geovallas tras realizar transiciones de entrada o salida en geovallas individuales. Después de que se produzca una transición, hay un tiempo predefinido durante el cual ese usuario no puede volver a realizar la misma transición en esa geovalla individual. Este tiempo se denomina "enfriamiento" y está predefinido por Braze, y su finalidad principal es evitar peticiones de red innecesarias. |
+| Radio | El radio de la geo-valla en metros, medido desde el centro geográfico. Recomendamos establecer un radio mínimo de 100-150 metros para todas las geovallas. |
+| Recuperación | Los usuarios reciben notificaciones desencadenadas por geovallas tras realizar transiciones de entrada o salida en geovallas individuales. Después de que se produzca una transición, hay un tiempo predefinido durante el cual ese usuario no puede volver a realizar la misma transición en esa geovalla individual. Este tiempo se denomina «tiempo de espera» y está predefinido por Braze, y su objetivo principal es evitar solicitudes de red innecesarias. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Crea geovallas manualmente
+## Crear geovallas manualmente
 
 ### Paso 1: Crear un conjunto de geovallas
 
-Para crear una geovalla, primero tendrás que crear un conjunto de geovallas.
+Para crear una geovalla, primero debes crear un conjunto de geovallas.
 
 1. Ve a **Audiencia** > **Ubicaciones** en el panel de Braze.
 2. Selecciona **Crear conjunto de geovallas**.
 3. En **Nombre del conjunto**, introduce un nombre para tu conjunto de geovallas.
 4. (Opcional) Añade etiquetas para filtrar tu conjunto.
 
-### Paso 2: Añade las geovallas
+### Paso 2: Añadir las geovallas
 
 A continuación, puedes añadir geovallas a tu conjunto de geovallas.
 
-1. Selecciona **Dibujar geovalla** para hacer clic y arrastrar el círculo sobre el mapa. Repítelo para añadir más geovallas a tu conjunto según sea necesario.
+1. Selecciona **Dibujar geovalla** para hacer clic y arrastrar el círculo sobre el mapa. Repite el proceso para añadir más geovallas a tu conjunto según sea necesario.
 2. (Opcional) Puedes seleccionar **Editar** y sustituir la descripción de la geovalla por un nombre.
-3. Selecciona **Guardar configuración de geovalla** para guardarla.
+3. Selecciona **Guardar conjunto de geovallas** para guardar.
 
 {% alert tip %}
-Recomendamos crear geovallas con un radio de al menos 200 metros para una funcionalidad óptima. Para más información sobre las opciones configurables, consulta [Integraciones móviles](#mobile-integrations).
+Recomendamos crear geovallas con un radio de al menos 200 metros para una funcionalidad óptima. Para obtener más información sobre las opciones configurables, consulta [Integraciones móviles](#mobile-integrations).
 {% endalert %}
 
-![Un conjunto de geovallas con dos geovallas "EastCoastGreaterNY" y "WesternRegion" con dos círculos en el mapa.]({% image_buster /assets/img/geofence_example.png %})
+![Una geovalla configurada con dos geovallas «EastCoastGreaterNY» y «WesternRegion» con dos círculos en el mapa.]({% image_buster /assets/img/geofence_example.png %})
 
 ## Carga masiva de geovallas {#creating-geofence-sets-via-bulk-upload}
 
-Las geocercas pueden cargarse en bloque como un objeto GeoJSON de tipo `FeatureCollection`. Cada geovalla es un tipo de geometría `Point` de la colección de características. Las propiedades de cada característica requieren una clave `radius` y una clave opcional `name` para cada geovalla. 
+Las geocercas pueden cargarse en bloque como un objeto GeoJSON de tipo `FeatureCollection`. Cada geovalla es un tipo`Point` de geometría en la colección de características. Las propiedades de cada característica requieren una`radius`clave y una clave `name`opcional para cada geovalla. 
 
-Para subir tu GeoJSON, selecciona **Más** > **Subir GeoJSON**.
+Para cargar tu archivo JSON, selecciona **Más** > **Cargar JSON**.
 
-Cuando crees tus geovallas, ten en cuenta los siguientes detalles:
+Al crear tus geovallas, ten en cuenta los siguientes detalles:
 
-- El valor `coordinates` en el GeoJSON tiene el formato `[Longitude, Latitude]`.
-- El radio máximo de geovalla que se puede cargar es de 10.000 metros (unos 10 kilómetros o 6,2 millas).
+- El`coordinates`valor en GeoJSON tiene el formato`[Longitude, Latitude]` .
+- El radio máximo de la geovalla que se puede cargar es de 10 000 metros (unos 10 kilómetros o 6,2 millas).
 
 ### Ejemplo
 
-El siguiente ejemplo representa el GeoJSON correcto para especificar dos geovallas: una para la sede de Braze en NYC, y otra para la Estatua de la Libertad al sur de Manhattan.
+El siguiente ejemplo muestra el formato GeoJSON correcto para especificar dos geovallas: una para la sede central de Braze en Nueva York y otra para la Estatua de la Libertad, al sur de Manhattan.
 
 ```
 {
@@ -84,7 +84,7 @@ El siguiente ejemplo representa el GeoJSON correcto para especificar dos geovall
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-73.992473, 40.755669]
+        "coordinates": [-73.9853689, 40.7434683]
       },
       "properties": {
         "radius": 200,
@@ -110,7 +110,7 @@ El siguiente ejemplo representa el GeoJSON correcto para especificar dos geovall
 
 Una vez configuradas las geovallas, puedes utilizarlas para mejorar y enriquecer la forma en que te comunicas con tus usuarios.
 
-### Desencadenar campañas y lonas
+### Desencadenar campañas y lienzos
 
 Para utilizar datos de geocercas como parte de los activadores de campañas y Canvas, seleccione **Entrega basada en acciones** para el método de entrega. A continuación, añade una acción desencadenante de `Trigger a Geofence`. Por último, elige el conjunto de geovallas y los tipos de eventos de transición de geovalla para tu mensaje. También puede hacer avanzar a los usuarios a través de un lienzo mediante eventos de geovalla.
 
@@ -147,10 +147,10 @@ Las campañas desencadenadas por geovallas están disponibles en iOS y Android. 
 A partir de la versión 3.6.0 del SDK de Braze, la recopilación de ubicaciones de Braze está desactivada predeterminadamente. Para comprobar que está habilitado en Android, confirma que `com_braze_enable_location_collection` está configurado como `true` en tu `braze.xml`.
 {% endalert %}
 
-Consulta la documentación de [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing#choose-the-optimal-radius-for-your-geofence) o [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW5) para obtener más orientación en función de tu plataforma.
+Consulta la documentación de [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing#choose-the-optimal-radius-for-your-geofence) o [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW5) para obtener más información según tu plataforma.
 
 {% alert tip %}
-También puedes aprovechar las geovallas con nuestros socios tecnológicos, como [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/) y [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
+También puedes aprovechar las geovallas con nuestros socios tecnológicos, como [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/) y [Foursquare.]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 {% endalert %}
 
 ## Preguntas más frecuentes
@@ -165,13 +165,13 @@ El seguimiento de la ubicación se utiliza para recopilar y almacenar los datos 
 
 Las geocercas Braze utilizan una combinación de todos los proveedores de localización disponibles en un dispositivo para triangular la ubicación del usuario. Entre ellos se encuentran las torres Wi-Fi, GPS y de telefonía móvil.
 
-La precisión típica está en el intervalo de 20-50 m, y en el mejor de los casos estará en el intervalo de 5-10 m. En las zonas rurales, la precisión puede degradarse significativamente, pudiendo llegar a varios kilómetros. Braze recomienda crear geocercas con radios mayores en las zonas rurales.
+La precisión típica está en el rango de 20-50 m, y la precisión óptima estará en el rango de 5-10 m. En las zonas rurales, la precisión puede degradarse significativamente, pudiendo llegar a varios kilómetros. Braze recomienda crear geocercas con radios mayores en las zonas rurales.
 
 Para más información sobre la precisión de las geocercas, consulte la documentación de [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing) e [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW1).
 
 ### ¿Cómo afectan las geocercas a la duración de la batería?
 
-Nuestra solución de geovallado utiliza el servicio nativo del sistema de geovallas en iOS y Android y está ajustada para compensar de forma inteligente precisión y potencia, ahorrando batería y mejorando el rendimiento a medida que mejora el servicio subyacente.
+Nuestra solución de geovallado utiliza el servicio nativo de geovallado de iOS y Android y está optimizada para equilibrar de forma inteligente la precisión y el consumo energético, lo que permite ahorrar batería y mejorar el rendimiento a medida que mejora el servicio subyacente.
 
 ### ¿Cuándo están activas las geovallas?
 
@@ -185,5 +185,5 @@ No, Braze no almacena datos de geovallas en los perfiles de usuario. Las geovall
 
 ### ¿Puedo configurar una geovalla dentro de una geovalla?
 
-Como buena práctica, evita configurar geovallas que se solapen entre sí, ya que esto puede desencadenar problemas con las notificaciones.
+Como práctica recomendada, evita configurar geovallas que se superpongan entre sí, ya que esto puede causar problemas al desencadenar las notificaciones.
 

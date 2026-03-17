@@ -2,11 +2,11 @@
 
 > Mit Bannern können Sie personalisierte Nachrichten für Ihre Nutzer:innen erstellen und gleichzeitig die Reichweite Ihrer anderen Kanäle, wie E-Mail oder Push-Benachrichtigungen, erhöhen. Sie können Banner direkt in Ihre App oder Website einbetten, wodurch Sie sich mit den Nutzer:innen durch ein natürliches Erlebnis verbinden können.
 
-![Ein Beispiel für ein auf einem Gerät gerendertes Banner.]({% image_buster /assets/img/banners/sample_banner.png %})
+![Ein Beispiel für ein Banner, das auf einem Gerät angezeigt wird.]({% image_buster /assets/img/banners/sample_banner.png %})
 
 ## Voraussetzungen
 
-Die Verfügbarkeit von Bannern hängt von Ihrem Braze-Paket ab. Wenden Sie sich an Ihren Account Manager oder Customer-Success-Manager:in, um loszulegen.
+Die Verfügbarkeit von Bannern hängt von Ihrem Braze-Paket ab. Bitte wenden Sie sich an Ihren Account Manager oder Customer-Success-Manager, um loszulegen.
 
 ## Warum Banner verwenden?
 
@@ -30,7 +30,7 @@ Zu den Features für Banner gehören:
 - **Flexible Einsätze:** Definieren Sie mehrere Standorte innerhalb Ihrer Anwendung oder Website, an denen Banner erscheinen können, und ermöglichen Sie so ein präzises Targeting auf bestimmte Kontexte oder Nutzer:innen.
 - **Dynamische Personalisierung:** Die Banner werden bei jeder neuen Nutzer:innen-Sitzung dynamisch aktualisiert und sorgen dafür, dass die Inhalte mit den integrierten Personalisierungstools von Braze und der Liquid-Logik aktuell und personalisiert bleiben.
 - **Einheimische Prioritäten:** Legen Sie die Anzeigepriorität fest, wenn mehrere Banner auf dieselbe Platzierung abzielen, um sicherzustellen, dass die richtige Nachricht die Nutzer:innen zur richtigen Zeit erreicht.
-- **Angepasste HTML-Unterstützung:** Integrieren Sie angepasste HTML-Blöcke für fortgeschrittene Anpassungen oder eine nahtlose Integration mit Ihren bestehenden Internet-Styles.
+- **Benutzerdefinierter Code-Editor-Block:** Verwenden Sie den Editor-Block „Benutzerdefinierter Code-Editor“, um benutzerdefinierten HTML-Code für erweiterte Anpassungen oder eine nahtlose Integration in Ihre bestehenden Webstile hinzuzufügen.
 
 ## Über Banner {#about-banners}
 
@@ -40,7 +40,7 @@ Bannerplatzierungen sind bestimmte Standorte in Ihrer App oder Website, [die Sie
 
 Zu den üblichen Standorten gehören der obere Teil Ihrer Homepage, die Produktdetailseiten und die Kassenabläufe. Nachdem die Platzierungen erstellt wurden, können die Banner [in Ihrer Kampagne zugewiesen]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/) werden.
 
-Es gibt keine feste Grenze für die Anzahl der Vermittlungen, die Sie pro Workspace erstellen können, und Sie können so viele Vermittlungs-IDs erstellen, wie Ihre Erfahrung erfordert. Jede Platzierung muss innerhalb eines Workspace eindeutig sein. Eine einzelne Platzierungs-ID kann von bis zu 25 aktiven Nachrichten gleichzeitig referenziert werden.
+Es gibt keine feste Begrenzung für die Anzahl der Platzierungen, die Sie pro Workspace erstellen können, und Sie können so viele Platzierungs-IDs erstellen, wie es Ihre Anforderungen erfordern. Jede Platzierung muss innerhalb eines Workspaces eindeutig sein. Eine einzelne Platzierungs-ID kann gleichzeitig von bis zu 25 aktiven Nachrichten referenziert werden.
 
 {% alert important %}
 Vermeiden Sie die Änderung von Platzierungs-IDs nach dem Starten einer Kampagne.
@@ -48,9 +48,9 @@ Vermeiden Sie die Änderung von Platzierungs-IDs nach dem Starten einer Kampagne
 
 ### Banner Priorität {#priority}
 
-Wenn mehrere Nachrichten mit Bannern auf dieselbe ID referenzieren, werden die Banner in der Reihenfolge ihrer Priorität angezeigt: hoch, mittel oder niedrig. Standardmäßig sind Banner auf mittel eingestellt, aber Sie können [die Priorität manuell festlegen]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#set-priority), wenn Sie Ihre Banner Kampagne erstellen oder bearbeiten. 
+Wenn mehrere Banner-Nachrichten auf dieselbe Platzierungs-ID referenzieren, werden die Banner in der Reihenfolge ihrer Priorität angezeigt: hoch, mittel oder niedrig. Standardmäßig sind Banner auf „mittel“ eingestellt, jedoch können Sie [die Priorität manuell festlegen]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#set-priority), wenn Sie Ihre Banner-Kampagne erstellen oder bearbeiten. 
 
-Wenn mehrere Banner die gleiche Priorität haben, wird das neueste Banner, für das der Nutzer:innen berechtigt ist, zuerst angezeigt.
+Wenn mehrere Banner auf dieselbe Priorität eingestellt sind, wird das neueste Banner, für das der Nutzer:in berechtigt ist, zuerst angezeigt.
 
 ### Anfragen zur Platzierung {#requests}
 
@@ -58,9 +58,9 @@ Wenn mehrere Banner die gleiche Priorität haben, wird das neueste Banner, für 
 
 ### Zustellung von Nachrichten
 
-Bannernachrichten werden Ihrer App oder Website als HTML-Inhalt zugestellt, der in der Regel innerhalb eines iframe gerendert wird. Dies stellt sicher, dass Ihre Banner auf allen Geräten einheitlich dargestellt werden und hilft Ihnen, ihre Stile und Skripte vom Rest Ihres Codes zu trennen.
+Bannernachrichten werden Ihrer App oder Website als HTML-Inhalt zugestellt, der in der Regel innerhalb eines iframe gerendert wird. Dadurch wird sichergestellt, dass Ihre Banner auf allen Geräten konsistent dargestellt werden, und Sie können deren Stile und Skripte vom Rest Ihres Codes trennen.
 
-Iframes ermöglichen dynamische und personalisierte Updates von Inhalten, die keine Änderungen an Ihrer Codebasis erfordern. Jeder iframe ruft den HTML-Code für jede Nutzer:innen-Sitzung ab und zeigt ihn mit Hilfe der Logik für das Targeting und die Personalisierung der Kampagne an.
+Iframes ermöglichen dynamische und personalisierte Updates des Inhalts, ohne dass Änderungen an Ihrer Codebasis erforderlich sind. Jeder iframe ruft den HTML-Code für jede Nutzer:innen-Sitzung ab und zeigt ihn mit Hilfe der Logik für das Targeting und die Personalisierung der Kampagne an.
 
 {% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
 
@@ -69,7 +69,7 @@ Iframes ermöglichen dynamische und personalisierte Updates von Inhalten, die ke
 Hier erfahren Sie, was Sie über die Abmessungen und die Größe von Bannern wissen müssen:
 
 - Der Composer erlaubt Ihnen zwar die Vorschau von Bannern in verschiedenen Größen, aber diese Informationen werden nicht gespeichert oder an das SDK gesendet.
-- Der HTML-Code nimmt die gesamte Breite des Containers ein, in dem er dargestellt wird.
+- Der HTML-Code nimmt die gesamte Breite des Containers ein, in dem er gerendert wird.
 - Wir empfehlen, ein Element mit festen Abmessungen zu erstellen und diese Abmessungen im Composer zu testen.
 
 ## Beschränkungen
@@ -94,4 +94,4 @@ Da Sie nun über Banner Bescheid wissen, sind Sie bereit für die nächsten Schr
 
 1. [Erstellen von Bannerplatzierungen in Ihrer App oder Website]({{site.baseurl}}/developer_guide/banners/placements/)
 2. [Erstellen von Bannerkampagnen in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/)
-3. [Tutorial: Anzeige eines Banners nach Platzierungs-ID]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)
+3. [Anleitung: Anzeige eines Banners anhand der Platzierungs-ID]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)

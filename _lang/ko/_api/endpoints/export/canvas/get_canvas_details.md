@@ -46,7 +46,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## 응답
 
 {% alert note %}
-모든 캔버스 단계에는 `next_paths` 필드가 있으며, 이는 `{name, next_step_id}` 데이터의 배열입니다. 메시지 단계의 경우 `next_step_ids` 필드가 표시되지만 다른 캔버스 단계에 대한 데이터는 포함되지 않습니다.
+모든 캔버스 단계에는 `next_paths` 필드가 있으며, 이는 `{name, next_step_id}` 데이터의 배열입니다. 메시지 단계에서는 `next_step_ids` 필드가 존재하지만 다른 캔버스 단계에 대한 데이터는 포함되지 않습니다.
 {% endalert %}
 
 ```json
@@ -213,7 +213,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
         }
       }
     }
-  ],
+  ]
 }
 ```
 

@@ -181,9 +181,15 @@ This method requires the native setup in Step 3.1 for your platform. If you're u
 
 {% endtab %}
 {% tab iOS Native %}
+
+{% alert important %}
+To handle deep links from push notifications on iOS, you must also configure link handling in your native iOS layer.
+{% endalert %}
+
+This includes registering a custom URL scheme and implementing a URL handler in your `AppDelegate`. For full setup instructions, see [Handling deep links]({{site.baseurl}}/developer_guide/platforms/swift/in_app_messages/deep_linking/?tab=objective-c) in the native iOS documentation.
 #### Step 3.1: Store the push notification payload on app launch
 {% alert note %}
-Skip step 3.1 if you're using the Braze Expo plugin, as this is functionality is handled automatically.
+Skip step 3.1 if you're using the Braze Expo plugin, as this functionality is handled automatically.
 {% endalert %}
 
 For iOS, add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `didFinishLaunchingWithOptions` method. For example:

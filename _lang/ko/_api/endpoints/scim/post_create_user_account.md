@@ -89,7 +89,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 예시 요청
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
@@ -145,7 +145,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
         "roles": [
             {
                 "roleName": "Test Role",
-                "roleId": "519dafcdba23dfaae7,
+                "roleId": "519dafcdba23dfaae7",
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25789fabcded",
@@ -163,7 +163,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
             },
             {
                 "roleName": "Another Test Role",
-                "roleId": "23125dad23dfaae7,
+                "roleId": "23125dad23dfaae7",
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25adfabcded",
@@ -222,7 +222,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 
 `userName` 또는 이메일 주소를 가진 사용자가 이미 Braze에 존재하는 경우, 엔드포인트는 다음과 같이 응답합니다:
 
-```json
+```http
 HTTP/1.1 409 Conflict
 Date: Tue, 10 Sep 2019 02:22:30 GMT
 Content-Type: text/json;charset=UTF-8

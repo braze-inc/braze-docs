@@ -13,7 +13,7 @@ noindex: true
 
 # Caso de uso: Visualização do carrossel
 
-![Exemplo de app de notícias mostrando o carrossel de cartões de conteúdo em um artigo.]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Aplicativo de notícias de amostra mostrando carrossel de Cartões de Conteúdo em um artigo.]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 Esta seção aborda como implementar um feed de carrossel com vários cartões, em que o usuário pode deslizar horizontalmente para ver os cartões adicionais em destaque. Para integrar uma exibição de carrossel, você precisará usar uma implementação de cartão de conteúdo totalmente personalizado - a fase de "execução" da [abordagem crawl, walk, run]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches).
 

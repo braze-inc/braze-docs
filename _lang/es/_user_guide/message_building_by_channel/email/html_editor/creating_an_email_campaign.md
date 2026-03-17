@@ -10,7 +10,7 @@ channel:
 search_rank: 1  
 ---
 
-# Crear un correo electrónico con HTML personalizado
+# Crea un correo electrónico con HTML personalizado.
 
 > Los mensajes de correo electrónico son ideales para ofrecer contenidos a los usuarios en sus propios términos. También son excelentes herramientas para volver a captar usuarios que incluso pueden haber desinstalado su aplicación. El envío de mensajes de correo electrónico personalizados y adaptados mejorará la experiencia de sus usuarios y les ayudará a obtener el máximo valor de su aplicación. 
 
@@ -24,7 +24,7 @@ Si es la primera vez que creas una campaña de correo electrónico, te recomenda
 
 ## Paso 1: Elige dónde construir tu mensaje
 
-Utiliza campañas para mensajes únicos y sencillos. Utiliza Canvases para recorridos de usuario de varios pasos.
+Utiliza campañas de mensajería para mensajes únicos y sencillos. Utiliza lienzos para recorridos de usuarios de varios pasos.
 
 {% tabs %}
 {% tab Campaign %}
@@ -59,7 +59,7 @@ Braze ofrece dos experiencias de edición al crear una campaña de correo electr
 
 ![Elige entre el editor de arrastrar y soltar, el editor HTML o las plantillas para tu experiencia de edición de correo electrónico.]({% image_buster /assets/img_archive/choose_email_creation.png %}){: style="max-width:75%" }
 
-A continuación, puedes seleccionar una [plantilla de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template) existente, [subir una plantilla]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/) desde un archivo (sólo editor HTML) o utilizar una plantilla en blanco. 
+A continuación, puedes seleccionar una [plantilla de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template) existente, [cargar una plantilla]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/) desde un archivo (solo editor HTML) o utilizar una plantilla en blanco. 
 
 {% alert tip %}
 Recomendamos seleccionar una experiencia de edición por campaña de correo electrónico. Por ejemplo, elige el editor **HTML Clásico** o **Bloque** en una sola campaña de correo electrónico en lugar de cambiar entre editores.
@@ -71,7 +71,7 @@ Una vez seleccionada la plantilla, verá un resumen de su correo electrónico en
 
 ![El botón "Regenerar a partir de HTML".]({% image_buster /assets/img_archive/regenerate_from_html.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;" }
 
-Braze actualiza automáticamente la versión en texto plano a partir de la versión HTML hasta que detecta una edición en el texto plano. Cuando Braze detecta una edición, deja de actualizar el texto sin formato porque asume que has hecho cambios intencionados. Para restablecer la sincronización automática, ve a Texto sin **formato** y selecciona **Regenerar a partir de HTML** (visible sólo cuando el texto sin formato no se está sincronizando).
+Braze actualiza automáticamente la versión en texto sin formato a partir de la versión HTML hasta que detecta una edición en el texto sin formato. Después de que Braze detecta una edición, deja de actualizar el texto sin formato porque asume que has realizado cambios intencionados. Para restaurar la sincronización automática, ve a **Texto sin formato** y selecciona **Regenerar desde HTML** (visible solo cuando el texto sin formato no se está sincronizando).
 
 {% alert tip %}
 Para añadir movimiento en un correo electrónico con una previsualización precisa, utilice GIF en lugar de elementos que requieran JavaScript, ya que la mayoría de las bandejas de entrada no admiten JavaScript.
@@ -80,20 +80,20 @@ Para añadir movimiento en un correo electrónico con una previsualización prec
 ![Panel de variantes de correo electrónico para redactar tu correo electrónico.]({% image_buster /assets/img/email.png %}){: style="max-width:75%" }
 
 {% alert important %}
-Braze elimina automáticamente los controladores de eventos HTML referenciados como atributos. Esto modifica el HTML, así que vuelve a comprobar el correo electrónico después de terminar. Más información sobre [los controladores HTML](https://www.w3schools.com/tags/ref_eventattributes.asp).
+Braze elimina automáticamente los controladores de eventos HTML a los que se hace referencia como atributos. Esto modifica el HTML, así que vuelve a comprobar el correo electrónico cuando termines. Más información sobre [los controladores HTML](https://www.w3schools.com/tags/ref_eventattributes.asp).
 {% endalert %}
 
 {% alert tip %}
 ¿Necesitas ayuda para crear textos impactantes? Prueba a utilizar el [asistente de redacción de IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Introduzca el nombre o la descripción de un producto y la IA generará un texto de marketing similar al humano para utilizarlo en sus mensajes.
 
-![Lanza el botón AI Copywriter, situado en la pestaña Cuerpo del compositor de correo electrónico.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
+![Abre el botón AI Copywriter, con su ubicación en la pestaña Cuerpo del editor de correos electrónicos.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
 ¿Necesitas ayuda para crear mensajes de derecha a izquierda en idiomas como el árabe y el hebreo? Consulta [Crear mensajes de derecha a]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) izquierda para conocer las mejores prácticas.
 
 ### Paso 3a: Añade tu información de envío
 
-Cuando hayas terminado de diseñar y crear tu mensaje de correo electrónico, añade tu información de envío en **Configuración de envío**.
+Una vez que hayas terminado de diseñar y crear tu mensaje de correo electrónico, añade la información de envío en **la configuración de envío**.
 
 1. En **Información de envío**, seleccione un correo electrónico como **Nombre de remitente + Dirección**. También puede personalizarlo seleccionando **Personalizar desde Nombre para mostrar + Dirección**.
 2. Selecciona un correo electrónico como **dirección de responder a**. También puedes personalizarlo seleccionando **Personalizar dirección de respuesta a**.
@@ -106,11 +106,11 @@ En el panel de la derecha aparecerá una vista previa con la información de env
 
 #### Avanzado
 
-En **Configuración de envío** > **Avanzado**, activa el CSS en línea y añade personalización a las cabeceras y extras del correo electrónico para enviar datos adicionales a otros proveedores de servicios de correo electrónico.
+En **Configuración de envío** > **Avanzada**, activa CSS en línea y añade personalización para los encabezados de correo electrónico y los extras de correo electrónico para enviar datos adicionales a otros proveedores de servicios de correo electrónico.
 
 ##### Encabezados de correo electrónico
 
-Para añadir cabeceras de correo electrónico, seleccione **Añadir nueva cabecera**. Las cabeceras de correo electrónico contienen información sobre el mensaje que se envía. Estos [pares clave-valor]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) suelen incluir el remitente, el destinatario, el protocolo de autenticación y la información de enrutamiento. Braze añade automáticamente la información de cabecera requerida por RFC para que los correos electrónicos lleguen a los proveedores de buzón de entrada.
+Para añadir cabeceras de correo electrónico, seleccione **Añadir nueva cabecera**. Las cabeceras de correo electrónico contienen información sobre el mensaje que se envía. Estos [pares clave-valor]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) suelen incluir el remitente, el destinatario, el protocolo de autenticación y la información de enrutamiento. Braze añade automáticamente la información de encabezado requerida por el RFC para que los correos electrónicos lleguen a los proveedores de buzones de entrada.
 
 Braze le permite la flexibilidad de añadir cabeceras de correo electrónico adicionales según sea necesario para casos de uso avanzados. Hay algunos campos reservados que la plataforma Braze sobrescribirá durante el envío. 
 
@@ -174,11 +174,11 @@ Los valores adicionales del correo electrónico no se publican en Currents ni en
 
 ### Paso 3b: Vista previa y prueba de tu mensaje
 
-Cuando termines de redactar tu correo electrónico, pruébalo antes de enviarlo. En la parte inferior de la pantalla de resumen, selecciona **Vista previa y Prueba**. 
+Una vez que hayas terminado de redactar tu correo electrónico, compruébalos antes de enviarlo. En la parte inferior de la pantalla de resumen, selecciona **Vista previa y Prueba**. 
 
 Aquí puede previsualizar cómo aparecerá su correo electrónico en la bandeja de entrada de un cliente. Con la opción **Previsualizar como usuario** seleccionada, puede previsualizar su correo electrónico como un usuario aleatorio, seleccionar un usuario específico o crear un usuario personalizado. Esto le permite comprobar que su contenido conectado y las llamadas de personalización funcionan como deberían. 
 
-A continuación, puedes **Copiar enlace de vista previa** para generar y copiar un enlace de vista previa compartible que muestre el aspecto que tendrá el correo electrónico para un usuario cualquiera. El enlace durará siete días antes de que sea necesario regenerarlo.
+A continuación, puedes **copiar el enlace de vista previa** para generar y copiar un enlace de vista previa compartible que muestra cómo se verá el correo electrónico para un usuario aleatorio. El enlace tendrá una validez de siete días antes de que sea necesario volver a generarlo.
 
 También puede alternar entre las vistas de escritorio, móvil y texto sin formato para hacerse una idea de cómo aparecerá su mensaje en diferentes contextos.
 
@@ -186,7 +186,7 @@ También puede alternar entre las vistas de escritorio, móvil y texto sin forma
 ¿Tienes curiosidad por saber cómo se ve tu correo electrónico para los usuarios del modo oscuro? Seleccione el conmutador **Vista previa en modo oscuro** situado en la sección **Vista previa y prueba** (sólo en el editor de arrastrar y soltar).
 {% endalert %}
 
-Cuando estés listo para una comprobación final, selecciona **Prueba de envío** y envía un mensaje de prueba a ti mismo o a un grupo de probadores para confirmar que el correo electrónico se muestra correctamente en todos los dispositivos y clientes.
+Cuando estés listo para realizar una comprobación final, selecciona **Enviar prueba** y envía un mensaje de prueba a ti mismo o a un grupo de prueba para confirmar que el correo electrónico se muestra correctamente en todos los dispositivos y clientes.
 
 ![Opción de envío de prueba y vista previa de correo electrónico de ejemplo al redactar el correo electrónico.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
@@ -211,7 +211,7 @@ El editor señalará los problemas que detecte en tu mensaje antes de que lo env
 - Direcciones **"De"** y **"Para"** no válidas
 - Claves de **cabecera** duplicadas
 - Problemas de sintaxis líquida
-- Cuerpos de correo electrónico mayores de 400kb (se recomienda encarecidamente que los cuerpos sean [menores de 102kb]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size))
+- Cuerpos de correo electrónico de más de 400 kb (se recomienda encarecidamente que los cuerpos sean [inferiores a 102 kb]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size)).
 - Correos electrónicos con el **cuerpo** o el **asunto** en blanco
 - Correos electrónicos sin enlace para darse de baja
 - El correo electrónico desde el que envías no está en la lista permitida (los envíos estarán muy limitados para garantizar la entregabilidad).
@@ -220,11 +220,11 @@ El editor señalará los problemas que detecte en tu mensaje antes de que lo env
 
 {% tabs %}
 {% tab Campaign %}
-A continuación, ¡construye el resto de tu campaña! Consulta las secciones siguientes para obtener información detallada sobre cómo utilizar las herramientas Braze para crear tu campaña de correo electrónico.
+A continuación, ¡construye el resto de tu campaña! Consulta las siguientes secciones para obtener más información sobre cómo utilizar las herramientas de Braze para crear tu campaña de correo electrónico.
 
 #### Elige la programación o desencadenante de la entrega
 
-Entrega correos electrónicos en función de una hora programada, una acción o un desencadenante de la API. Para más información, consulta [Programar tu campaña]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
+Entregue correos electrónicos según una hora programada, una acción o un activador de API. Para más información, consulta [Programar tu campaña]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
 {% alert note %}
 Para las campañas activadas por API, cuando la acción de activación se establece en **Interactuar con campaña**, la selección de una opción **Recibir** como la interacción hará que su nueva campaña se active tan pronto como Braze marque la campaña seleccionada como enviada, incluso si ese mensaje rebota o no se entrega.
@@ -234,7 +234,7 @@ También puede establecer la duración de la campaña, especificar [las horas de
 
 #### Elige los usuarios a los que dirigirte
 
-A continuación, [dirígete a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) eligiendo segmentos o filtros. Braze muestra una vista previa en vivo de la población del segmento, incluyendo cuántos usuarios son localizables a través del correo electrónico. La pertenencia exacta a un segmento se calcula justo antes del envío.
+A continuación, [selecciona los usuarios objetivo]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) eligiendo segmentos o filtros. Braze muestra una vista previa en vivo de la población del segmento, incluyendo cuántos usuarios son localizables por correo electrónico. La pertenencia exacta al segmento se calcula justo antes del envío.
 
 {% multi_lang_include target_audiences.md %}
 
@@ -243,7 +243,7 @@ También puede optar por enviar su campaña sólo a los usuarios que tengan un [
 Opcionalmente, también puede limitar la entrega a un número determinado de usuarios dentro del segmento, o permitir que los usuarios reciban el mismo mensaje dos veces al repetirse la campaña.
 
 {% alert note %}
-Al crear una nueva campaña de correo electrónico, el Grupo de control está predeterminado al 20% y puede ajustarse o eliminarse según sea necesario para tu campaña.
+Al crear una nueva campaña de envío por correo electrónico, el grupo de control tiene un valor predeterminado del 20 % y se puede ajustar o eliminar según sea necesario para tu campaña.
 {% endalert %}
 
 ##### Campañas multicanal con correo electrónico y push
@@ -257,7 +257,7 @@ En el caso de las campañas multicanal dirigidas tanto al correo electrónico co
 Para ello, en **Resumen de audiencia**, seleccione enviar esta campaña sólo a "usuarios que hayan optado por ella". Esta opción comprobará que sólo los usuarios que hayan optado por recibirlo recibirán su correo electrónico, y Braze sólo enviará su push a los usuarios que estén habilitados para push de forma predeterminada.
 
 {% alert important %}
-Con esta configuración, no incluyas ningún filtro en el paso **Audiencias objetivo** que limite la audiencia a un único canal (por ejemplo, `Foreground Push Enabled = True` o `Email Subscription = Opted-In`).
+Con esta configuración, no incluyas ningún filtro en el paso **Audiencias objetivo** que limite la audiencia a un solo canal (por ejemplo,`Foreground Push Enabled = True`  o `Email Subscription = Opted-In`).
 {% endalert %}
 
 #### Elegir eventos de conversión
@@ -269,7 +269,7 @@ Braze le permite realizar un seguimiento de la frecuencia con la que los usuario
 - Realiza un evento personalizado específico
 - Abre el correo electrónico
 
-Puedes permitir una ventana de hasta 30 días durante la cual Braze cuenta una conversión si el usuario realiza la acción especificada. Aunque Braze realiza un seguimiento automático de las aperturas y los clics, puedes establecer el evento de conversión en una apertura o un clic para utilizar [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/).
+Puedes permitir un plazo de hasta 30 días durante el cual Braze contabiliza una conversión si el usuario realiza la acción especificada. Aunque Braze realiza un seguimiento automático de las aperturas y los clics, puedes configurar el evento de conversión como una apertura o un clic para utilizar [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/).
 {% endtab %}
 
 {% tab Canvas %}
@@ -279,7 +279,7 @@ Si aún no lo ha hecho, complete las secciones restantes de sus componentes Canv
 
 ## Paso 5: Revisar y desplegar
 
-La última sección resume la campaña que has diseñado. Confirma todos los detalles relevantes y selecciona **Lanzar campaña**. 
+La sección final resume la campaña que has diseñado. Confirma todos los detalles relevantes y selecciona **Lanzar campaña**. 
 
 Para saber cómo puedes acceder a los resultados de tus campañas por correo electrónico, consulta [Informes por correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 

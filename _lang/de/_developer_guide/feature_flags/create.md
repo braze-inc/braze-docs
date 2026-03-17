@@ -1,5 +1,5 @@
 ---
-nav_title: Feature-Flags erstellen
+nav_title: Feature-Flag erstellen
 article_title: Erstellen von Feature-Flags
 page_order: 20
 description: "Dieser Referenzartikel beschreibt, wie Sie Feature-Flags erstellen, um die Einführung neuer Features zu koordinieren."

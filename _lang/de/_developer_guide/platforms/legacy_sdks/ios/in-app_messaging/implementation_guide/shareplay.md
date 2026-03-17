@@ -1,5 +1,5 @@
 ---
-nav_title: Shareplay
+nav_title: Gemeinsames Spielen
 article_title: SharePlay-Implementierungsleitfaden für In-App-Nachrichten
 platform: iOS
 page_order: 1

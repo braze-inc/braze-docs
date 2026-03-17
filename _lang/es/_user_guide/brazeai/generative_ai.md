@@ -4,12 +4,12 @@ article_title: IA generativa
 page_order: 5
 layout: dev_guide
 guide_top_header: "IA generativa"
-guide_top_text: "<sup>BrazeAITM</sup> impulsa varias características de automatización de IA generativa que ayudan a aumentar tu eficacia y creatividad. Crea atractivas experiencias del cliente a través de canales cruzados dedicando menos tiempo a tareas rutinarias de redacción, perfeccionamiento de contenidos y creación de imágenes."
-description: "<sup>BrazeAITM</sup> impulsa varias características de automatización de IA generativa que ayudan a aumentar tu eficacia y creatividad."
+guide_top_text: "BrazeAI<sup>TM</sup> impulsa varias características de automatización de IA generativa que ayudan a aumentar tu eficacia y creatividad. Crea atractivas experiencias del cliente a través de canales cruzados dedicando menos tiempo a tareas rutinarias de redacción, perfeccionamiento de contenidos y creación de imágenes."
+description: "BrazeAI<sup>TM</sup> impulsa varias características de automatización de IA generativa que ayudan a aumentar tu eficacia y creatividad."
 
 guide_featured_title: "Características"
 guide_featured_list:
-- name: Asistente de redacción AI
+- name: Asistente de redacción con inteligencia artificial
   link: /docs/user_guide/brazeai/generative_ai/copywriting/
   image: /assets/img/braze_icons/edit-05.svg
 - name: Generador de imágenes por IA

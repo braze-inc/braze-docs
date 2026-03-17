@@ -17,9 +17,7 @@ description: "Este artigo descreve detalhes sobre o endpoint Ver tradução espe
 
 > Use este endpoint para ver uma tradução específica e local para um [modelo de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). Veja [Locais em mensagens]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para mais informações sobre recursos de tradução.
 
-{% alert important %}
-Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Pré-requisitos
 

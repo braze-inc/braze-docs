@@ -1,6 +1,6 @@
 ---
 nav_title: 사용자 ID 설정
-article_title: Braze 소프트웨어 개발 키트를 통해 사용자 ID 설정하기
+article_title: Braze SDK를 통해 사용자 ID 설정
 page_order: 1.1
 description: "Braze SDK를 통해 사용자 ID를 설정하는 방법을 알아보세요."
 
@@ -36,7 +36,7 @@ braze.changeUser(YOUR_USER_ID_STRING);
 
 일반적으로 웹사이트에서 전송한 데이터 레이어 변수를 사용하여 채워지는 **외부 사용자 ID** 필드에 현재 사용자의 고유 ID를 입력해야 합니다.
 
-![Braze 작업 태그 구성 설정을 보여주는 대화상자. 포함된 설정은 '태그 유형'과 '외부 사용자 ID'입니다.]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
+![Braze 작업 태그 구성 설정을 보여주는 대화상자. 포함된 설정은 "태그 유형" 및 "외부 사용자 ID"입니다.]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
 {% endtab %}
 
 {% tab ANDROID %}
@@ -86,7 +86,17 @@ m.Braze.setUserId(YOUR_USER_ID_STRING)
 AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
 ```
 {% endtab %}
+
+{% tab REACT NATIVE %}
+```javascript
+Braze.changeUser("YOUR_USER_ID_STRING");
+```
+{% endtab %}
 {% endtabs %}
+
+{% alert note %}
+`changeUser()`를 호출하면 현재 사용자의 세션을 종료하는 과정에서 데이터 플러시가 발생합니다. SDK는 새 사용자로 전환하기 전에 이전 사용자의 보류 중인 데이터를 자동으로 플러시하므로 `changeUser()`을 호출하기 전에 수동으로 데이터 플러시를 요청할 필요가 없습니다.
+{% endalert %}
 
 {% alert warning %}
 **사용자가 로그아웃할 때 정적 기본 ID를 할당하거나 `changeUser()` 으로 전화하지 마세요.** 이렇게 하면 공유 디바이스에서 이전에 로그인한 사용자를 다시 참여시킬 수 없습니다. 대신 모든 사용자 ID를 개별적으로 추적하고 앱의 로그아웃 프로세스에서 이전에 로그인한 사용자로 다시 전환할 수 있도록 하세요. 새 세션이 시작되면 Braze는 새로 활성화된 프로필의 데이터를 자동으로 새로 고칩니다.
@@ -149,24 +159,35 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 }
 ```
 {% endtab %}
+
+{% tab react native %}
+```javascript
+Braze.addAlias("ALIAS_NAME", "ALIAS_LABEL");
+```
+{% endtab %}
 {% endtabs %}
 
 ## ID 이름 지정 모범 사례 {#naming-best-practices}
 
 무작위로 잘 분산된 128비트 문자열인 [UUID(범용 고유 식별자)](https://en.wikipedia.org/wiki/Universally_unique_identifier) 표준을 사용하여 사용자 ID를 생성하는 것이 좋습니다.
 
-또는 기존 고유 식별자(예: 이름 또는 이메일 주소)를 해시하여 사용자 ID를 대신 생성할 수도 있습니다. 이 경우 사용자 사칭을 방지할 수 있도록 [SDK 인증을]({{site.baseurl}}/developer_guide/authentication/) 구현해야 합니다.
+또는 기존 고유 식별자(예: 이름 또는 이메일 주소)를 해시하여 사용자 ID를 대신 생성할 수도 있습니다. 이 경우 사용자 사칭을 방지할 수 있도록 [SDK 인증을]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) 구현해야 합니다.
+
+{% alert warning %}
+사용자 ID에 대해 추측할 수 있는 값이나 증가하는 숫자를 사용하지 마십시오. 이로 인해 귀하의 조직이 악의적인 공격이나 데이터 유출에 노출될 수 있습니다.
+
+추가 보안을 위해 [SDK 인증]({{site.baseurl}}/developer_guide/sdk_integration/authentication/)을 사용하십시오.
+{% endalert %}
 
 처음부터 사용자 ID의 이름을 올바르게 지정하는 것이 중요하지만 나중에 언제든지 [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) 엔드포인트를 사용하여 언제든지 이름을 변경할 수 있습니다.
 
-| 추천 | 권장하지 않음 |
+| 권장되지 않는 ID 유형 | 권장되지 않는 예 |
 | ------------ | ----------- |
-| 123e4567-e89b-12d3-a456-836199333115 | JonDoe829525552 |
-| 8c0b3728-7fa7-4c68-a32e-12de1d3ed2d5 | Anna@email.com |
-| f0a9b506-3c5b-4d86-b16a-94fc4fc3f7b0 | CompanyName-1-2-19 |
-| 2d9e96a1-8f15-4eaf-bf7b-eb8c34e25962 | jon-doe-1-2-19 |
+| 사용자가 볼 수 있는 프로필 ID 또는 사용자 이름 | JonDoe829525552 |
+| 이메일 주소 | Anna@email.com |
+| 자동 증가하는 사용자 ID | 123 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert warning %}
-사용자 아이디를 만드는 방법에 대한 세부 정보를 공유하면 조직이 악의적인 공격이나 데이터 삭제에 노출될 수 있으므로 공유하지 마세요.
+사용자 ID를 생성하는 방법에 대한 세부 정보를 공유하지 마십시오. 이는 귀하의 조직이 악의적인 공격이나 데이터 유출에 노출될 수 있습니다.
 {% endalert %}

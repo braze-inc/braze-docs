@@ -1,6 +1,6 @@
 ---
-nav_title: Kopieren über Workspaces hinweg
-article_title: Kopieren über Workspaces hinweg
+nav_title: Zwischen Workspaces kopieren
+article_title: Zwischen Workspaces kopieren
 page_order: 4
 alias: "/copying_to_workspaces/"
 page_type: reference
@@ -10,7 +10,7 @@ tool:
     - Canvas
 ---
 
-# Kopieren von Kampagnen und Canvase in verschiedenen Workspaces
+# Kampagnen und Canvases über Workspaces hinweg kopieren
 
 > Durch das Kopieren von Kampagnen über verschiedene Arbeitsbereiche hinweg können Sie mit einer Kopie einer Kampagne in einem anderen Arbeitsbereich beginnen und so die Erstellung Ihrer Nachrichten beschleunigen. Auf dieser Seite erfahren Sie, wie Sie Kampagnen in verschiedene Arbeitsbereiche kopieren können und was kopiert wird und was nicht.
 

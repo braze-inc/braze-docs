@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
-## 범용 대리인 만들기
+## 보편적인 위임자 만들기
 
 Android SDK는 콘텐츠 카드, 인앱 메시지, 푸시 알림에서 Braze가 여는 모든 딥링크를 사용자 지정 처리하도록 단일 위임 오브젝트를 설정할 수 있는 기능을 제공합니다.
 
@@ -142,24 +142,24 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 {% endtab %}
 {% endtabs %}
 
-## WebView 활동 커스텀하기 {#Custom_Webview_Activity}
+## WebView 활동 사용자 정의 {#Custom_Webview_Activity}
 
-Braze가 앱 내에서 웹사이트 딥링크를 열면 딥링크는 [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html).
+Braze가 앱 내에서 웹사이트 딥링크를 열 때, 딥링크는 [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html)에 의해 처리됩니다.
 
 {% alert note %}
-커스텀 HTML 인앱 메시지의 경우 `target="_blank"` 로 구성된 링크는 기기의 기본값 웹 브라우저에서 열리며 `BrazeWebViewActivity` 에서는 처리되지 않습니다.
+사용자 정의 HTML 인앱 메시지의 경우, `target="_blank"`로 구성된 링크는 기기의 기본 웹 브라우저에서 열리며 `BrazeWebViewActivity`에 의해 처리되지 않습니다.
 {% endalert %}
 
 이를 변경하려면:
 
-1. `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA` 키를 사용하여 `Intent.getExtras()`에서 대상 URL을 처리하는 새 활동을 생성합니다. 예를 보려면 [`BrazeWebViewActivity.kt`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt).
+1. `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA` 키를 사용하여 `Intent.getExtras()`에서 대상 URL을 처리하는 새 활동을 생성합니다. 예를 보려면 [`BrazeWebViewActivity.kt`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt)을 참조하십시오.
 2. 해당 활동을 `AndroidManifest.xml`에 추가하고 `exported`를 `false`로 설정합니다.
     ```xml
     <activity
         android:name=".MyCustomWebViewActivity"
         android:exported="false" />
     ```
-3. `BrazeConfig` [빌더 객체에서](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html) 사용자 지정 활동을 설정합니다. 빌더를 구축한 후 빌더를 [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html) 에 전달하고 [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()).
+3. `BrazeConfig` [빌더 객체에서](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html) 사용자 지정 활동을 설정합니다. 빌더를 구축하고 이를 [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html)에 전달하십시오. 당신의 [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate())에서.
 {% tabs %}
 {% tab JAVA %}
 
@@ -185,11 +185,11 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-## 제트팩 컴포지트 사용
+## Jetpack Compose 사용하기
 
-NavHost와 함께 젯팩 컴포즈를 사용할 때 딥링크를 처리합니다:
+NavHost와 함께 Jetpack Compose를 사용할 때 딥링크를 처리하려면:
 
-1. 디링크를 처리하는 활동이 Android 매니페스트에 등록되어 있는지 확인하세요.
+1. 딥링크를 처리하는 활동이 Android Manifest에 등록되어 있는지 확인하십시오.
     ```xml
     <activity
       ...
@@ -203,7 +203,7 @@ NavHost와 함께 젯팩 컴포즈를 사용할 때 딥링크를 처리합니다
       </intent-filter>
     </activity>
     ```
-2. NavHost에서 처리할 딥링크를 지정합니다.
+2. NavHost에서 처리할 딥링크를 지정하십시오.
     ```kotlin
     composableWithCompositionLocal(
         route = "YOUR_ROUTE_HERE",
@@ -223,7 +223,7 @@ NavHost와 함께 젯팩 컴포즈를 사용할 때 딥링크를 처리합니다
         )
     }
     ```
-3. 앱 아키텍처에 따라 현재 활동으로 전송되는 새로운 의도도 처리해야 할 수 있습니다.
+3. 앱 아키텍처에 따라 현재 활동으로 전송된 새로운 의도를 처리해야 할 수도 있습니다.
     ```kotlin
     DisposableEffect(Unit) {
         val listener = Consumer<Intent> {
