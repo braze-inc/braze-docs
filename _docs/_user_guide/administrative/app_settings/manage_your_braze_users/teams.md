@@ -125,12 +125,12 @@ To see descriptions of what each user permission includes and how to use them, c
 
 ## Assign Team tags {#tags-and-filters}
 
-You can assign a Team to Canvases, Campaigns, Content Cards, Segments, Email Templates, Webhook Templates, Content Blocks, and Media Library assets with the **Add Team** filter.
+You can assign a Team to Canvases, campaigns, Content Cards, segments, email templates, webhook templates, Content Blocks, and media library assets with the **Add Team** filter.
  
 ![Adding a Team tag to a campaign.]({% image_buster /assets/img/teams1.png %}){: style="max-width:70%;"}
 
 - Based on the *definitions* applied when the Team was created, when a Team filter is assigned, that engagement tool's audience is restricted to user profiles that match the definition.
-- Based on assigned *permissions*, Team members will only be allowed to access dashboard engagement tools that have their Team filter set. If they have limited or no workspace permissions, they must add a Team filter to certain objects before they can save or launch them. Team members are also able to filter Canvases, Campaigns, Content Cards, and Segments by Team to identify content relevant to them.
+- Based on assigned *permissions*, Team members will only be allowed to access dashboard engagement tools that have their Team filter set. If they have limited or no workspace permissions, they must add a Team filter to certain objects before they can save or launch them. Team members are also able to filter Canvases, campaigns, Content Cards, and segments by Team to identify content relevant to them.
 
 ### Use cases
 
