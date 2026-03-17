@@ -81,9 +81,24 @@ Check out [selections]({{site.baseurl}}/user_guide/data/activation/catalogs/sele
 
 ### Using Liquid `if` statements
 
-You can use catalog items to create conditional statements. For example, you can trigger a certain message to display when a specific item is selected in your campaign.
+You can use catalog items to create conditional statements. For example, you can trigger a certain message to display when a specific item is selected in your campaign. You must declare the catalog (and, if applicable, the selection) before referencing `items` in an `if` statement.
 
-To do this, you'll use a Liquid `if` statement, such as in this example:
+#### With catalog items
+
+{% raw %}
+```liquid
+{% catalog_items Games 1234 %}
+{% if items[0].on_sale == true %}
+  {{ items[0].title }} is on sale! Get it for {{ items[0].price }}.
+{% else %}
+  Check out {{ items[0].title }} at full price.
+{% endif %}
+```
+{% endraw %}
+
+In this example, the `catalog_items` tag fetches item `1234` from the `Games` catalog, and then the `if` statement checks the `on_sale` field to display different messages.
+
+#### With catalog selections
 
 {% raw %}
 ```liquid
@@ -98,9 +113,11 @@ Message if the venue name's size is 10 characters or fewer.
 ```
 {% endraw %}
 
-In this example, different messages display depending on the number of characters in the catalog item field `venue_name`. If `venue_name` is blank, the message is aborted.
+In this example, different messages display based on whether the `venue_name` field has more or fewer than 10 characters. If `venue_name` is blank, the message is aborted.
 
-Note that you must declare the catalog list and, if applicable, the selection before using `if` statements. In the example, `item-list` is the catalog list, and `selections` is the selection name.
+{% alert tip %}
+To avoid Liquid syntax errors, select the **+** plus button in the message composer to insert catalog Liquid tags automatically.
+{% endalert %}
 
 ### Using images {#using-images}
 

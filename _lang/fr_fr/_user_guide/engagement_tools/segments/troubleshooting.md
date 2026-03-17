@@ -1,6 +1,6 @@
 ---
 nav_title: Résolution des problèmes
-article_title: Résolution des problèmes des segmentations
+article_title: Résolution des problèmes pour les segments
 page_order: 12
 page_type: reference
 tool: 
@@ -8,51 +8,51 @@ tool:
 description: "Cet article de référence couvre les étapes de résolution des problèmes et les considérations à garder à l'esprit lors de l'utilisation des segments."
 ---
 
-# Résolution des problèmes des segmentations
+# Résolution des problèmes pour les segments
 
 ## Erreurs
 
 ### L'audience cible est trop complexe pour être lancée
 
-Cette erreur rare se produit si votre audience cible contient trop de valeurs d'expressions régulières, des valeurs d'expressions régulières trop longues, des filtres trop détaillés (tels que "est l'un des 30 000 codes postaux"), ou trop de filtres. Cela inclut tous les filtres d'une campagne ou d'une audience Canvas, que les filtres soient situés dans les segments référencés ou ajoutés en tant que filtres à l'étape du **ciblage de l'audience**.
+Cette erreur rare se produit si votre public cible contient un nombre excessif de valeurs d'expression régulière, des valeurs d'expression régulière trop longues, des filtres trop détaillés (tels que « correspond à l'un des 30 000 codes postaux ») ou un nombre trop important de filtres. Cela inclut tous les filtres d'une campagne ou d'une audience Canvas, qu'ils se trouvent dans les segments référencés ou qu'ils aient été ajoutés en tant que filtres à l'étape **« Audience cible** ».
 
-![Erreur pour une audience ciblée qui atteint le seuil de complexité.]({% image_buster /assets/img/segment/target_audience_too_complex_error.png %})
+![Erreur pour une audience cible qui atteint le seuil de complexité.]({% image_buster /assets/img/segment/target_audience_too_complex_error.png %})
 
-Lorsque vous ajoutez des filtres de segmentation à une campagne ou à un Canvas, ces filtres sont traduits en requêtes dans Braze (le nombre de caractères de ces requêtes n'est pas 1:1 par rapport au nombre de caractères que voit un utilisateur du tableau de bord). Lorsque Braze envoie une campagne ou un canvas, nous lançons une requête qui combine tous les filtres de l'audience ciblée. Nous appliquons un seuil limitant le nombre de caractères dans la requête résultante pour une audience ciblée. Pour une campagne ou un Canvas donné, nous additionnons le nombre de caractères sur l'ensemble des segments référencés, y compris tous les filtres supplémentaires. Pour un segment donné, nous additionnons le nombre de caractères pour tous les filtres et toutes les valeurs de filtre.
+Lorsque vous ajoutez des filtres de segment à une campagne ou à un canvas, ces filtres sont convertis en requêtes dans Braze (le nombre de caractères de ces requêtes ne correspond pas exactement au nombre de caractères affichés par l'utilisateur du tableau de bord). Lorsque Braze envoie une campagne ou un canvas, nous exécutons une requête qui combine tous les filtres de l'audience ciblée. Nous appliquons un seuil limitant le nombre de caractères dans la requête résultante pour une audience cible. Pour une campagne ou un canvas donné, nous calculons le nombre total de caractères dans tous les segments référencés, y compris tous les filtres supplémentaires. Pour un segment donné, nous calculons le nombre total de caractères pour tous les filtres et toutes les valeurs de filtre.
 
-Votre tableau de bord affichera une erreur lorsqu'une campagne, un Canvas ou un segment dépasse le seuil et ne peut être lancé. Si vous recevez cette erreur, simplifiez votre audience cible avant de procéder à un nouveau ciblage, notamment :
+Votre tableau de bord affichera une erreur lorsqu'une campagne, un canvas ou un segment dépassera le seuil et ne pourra pas être lancé. Si vous rencontrez cette erreur, veuillez simplifier votre audience cible avant de relancer, notamment :
 
-- Si votre audience fait référence à plusieurs segments, assurez-vous que les segments ne sont pas redondants, par exemple que les mêmes filtres apparaissent dans plusieurs segments.
-- Assurez-vous que vous ne faites pas référence à des données obsolètes dans les filtres de segmentation. Par exemple, un filtre obsolète peut rechercher les utilisateurs qui n'ont pas reçu une certaine étape du canvas au cours de la semaine écoulée, même si le canvas a été arrêté depuis des mois.
-- Les segments qui ne sont que des listes d'ID d'utilisateurs ou d'e-mails (qui utilisent souvent un filtre expression régulière) peuvent être convertis en une [importation]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/) CSV et être simplifiés en un seul filtre CSV.
-- Si vous disposez de CDI, vous pouvez créer un segment CDI qui extrait le groupe directement de votre entrepôt de données.
+- Si votre audience fait référence à plusieurs segments, veuillez vous assurer que ces segments ne présentent pas de redondances, telles que les mêmes filtres apparaissant dans plusieurs segments.
+- Veuillez vous assurer que vous ne faites pas référence à des données obsolètes dans les filtres de segment. Par exemple, un filtre obsolète pourrait rechercher les utilisateurs qui n'ont pas reçu une certaine étape du canvas au cours de la semaine écoulée, même si le canvas a été interrompu depuis plusieurs mois.
+- Les segments qui ne sont que des listes d'ID d'utilisateurs ou d'adresses e-mail (qui utilisent souvent une expression régulière) peuvent être convertis en [import]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/) [CSV]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/) et simplifiés en un seul filtre CSV.
+- Si vous disposez d'un CDI, vous pouvez créer un segment CDI qui extrait le groupe directement de votre entrepôt de données.
 
-Vous pouvez également [contacter le service d'assistance]({{site.baseurl}}/braze_support/) pour obtenir de l'aide sur l'optimisation des filtres.
+Vous pouvez également [contacter le service d'assistance]({{site.baseurl}}/braze_support/) pour obtenir de l'aide concernant l'optimisation des filtres.
 
 {% alert note %}
-Nous avons commencé à limiter le nombre de caractères en avril 2025. Les campagnes et les canevas lancés avant avril 2025 ont bénéficié de droits acquis, ce qui signifie qu'ils peuvent continuer à dépasser la limite, alors que les campagnes et les canevas nouvellement créés ne peuvent pas dépasser la limite. Si vous modifiez ou clonez une campagne ou un Canvas bénéficiant de droits acquis, vous **ne pourrez pas** le lancer tant que l'audience n'aura pas été mise à jour pour être inférieure à la limite.
+Nous avons commencé à limiter le nombre de caractères en avril 2025. Les campagnes et les canvases lancés avant avril 2025 ont bénéficié d'une clause d'antériorité, ce qui signifie qu'ils peuvent continuer à dépasser la limite, tandis que les campagnes et les canvases nouvellement créés ne peuvent pas dépasser la limite. Si vous modifiez ou clonez une campagne ou un canvas bénéficiant d'une clause d'antériorité, vous **ne** **pourrez pas** la lancer tant que l'audience n'aura pas été mise à jour pour être inférieure à la limite.
 {% endalert %}
 
-### X campagnes ou canevas actifs ou arrêtés dépassent le seuil de complexité de l'audience.
+### Les campagnes actives ou interrompues ou les canevas dépassent le seuil de complexité de l'audience.
 
-Cette bannière s'affiche en haut de la liste d'une campagne ou d'un canvas lorsque des campagnes ou des canevas actifs ou arrêtés ont des audiences qui dépassent le seuil de complexité de l'audience. Sélectionnez la bannière pour filtrer la liste jusqu'aux seules campagnes ou Toiles dépassant le seuil, puis suivez les étapes de résolution des problèmes dans [L'audience cible est trop complexe pour être lancée](#target-audience-is-too-complex-to-launch).
+Cette bannière s'affiche en haut d'une campagne ou d'une liste Canvas chaque fois que des campagnes ou des Canvases actives ou arrêtées ont des audiences qui dépassent le seuil de complexité de l'audience. Veuillez sélectionner la bannière pour filtrer la liste et n'afficher que les campagnes ou les canevas dépassant le seuil, puis suivez les étapes de résolution des problèmes décrites dans [La cible est trop complexe pour être lancée](#target-audience-is-too-complex-to-launch).
 
-![Bannière d'erreur indiquant que 4 toiles actives ou arrêtées dépassent le seuil de complexité de l'audience.]({% image_buster /assets/img/segment/audience_complexity_threshold_banner.png %})
+![Une bannière d'erreur indiquant que 4 canevas actifs ou arrêtés dépassent le seuil de complexité de l'audience.]({% image_buster /assets/img/segment/audience_complexity_threshold_banner.png %})
 
-### Le filtre dépasse 10 000 octets ou est trop long pour être enregistré
+### Le filtre dépasse 10 000 octets ou est trop long pour être enregistré.
 
-Braze limite les filtres de segments individuels à un maximum de 10 000 octets, ce qui équivaut à 10 000 caractères anglais ou 3 333 caractères japonais. Un avertissement apparaît dès qu'un filtre individuel dépasse 10 000 octets, que le filtre se trouve dans un segment ou qu'il soit ajouté directement à la campagne ou au Canvas. 
+Braze limite les filtres de segment individuels à un maximum de 10 000 octets, ce qui équivaut à 10 000 caractères anglais ou 3 333 caractères japonais. Un avertissement s'affiche dès qu'un filtre individuel dépasse 10 000 octets, que ce filtre se trouve dans un segment ou qu'il ait été ajouté directement à une campagne ou à Canvas. 
 
 ![Bannière d'erreur pour un filtre dont la valeur dépasse 10 000 caractères.]({% image_buster /assets/img/segment/filter_error.png %})
 
-![Erreur pour un filtre d'attribut personnalisé, `menu_item`, dont la valeur d'attribut dépasse 10 000 caractères.]({% image_buster /assets/img/segment/segment_filter_error.png %})
+![Erreur pour un filtre d'attribut personnalisé dont`menu_item`, la valeur d'attribut dépasse 10 000 caractères.]({% image_buster /assets/img/segment/segment_filter_error.png %})
 
 
-Cette erreur se produit très rarement, mais lorsqu'elle se produit, c'est généralement avec des filtres d'expression régulière qui ciblent une liste d'ID d'utilisateurs ou d'adresses e-mail. Dans ce cas, vous pouvez suivre les étapes suivantes pour convertir les filtres en un fichier CSV :
+Cette erreur est très rare, mais lorsqu'elle se produit, elle concerne généralement les filtres d'expression régulière qui effectuent le ciblage d'une liste d'ID d'utilisateurs ou d'adresses de e-mail. Dans ce cas, veuillez suivre les étapes suivantes pour convertir les filtres au format CSV :
 
-1. Exportez les utilisateurs du segment concerné ou du filtre d'expression régulière spécifique. 
-2. Nettoyez le CSV si nécessaire. Vous avez besoin de l'ID Braze ou de l'ID Appboy, mais vous pouvez supprimer toutes les autres colonnes si elles ne sont pas nécessaires. Nous vous recommandons également d'examiner vos données pour confirmer qu'elles sont récentes (par exemple, supprimez les utilisateurs que vous n'essayez plus de cibler).
-3. [Importez]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/) à nouveau le fichier CSV, qui regroupe automatiquement les utilisateurs en un seul filtre CSV très efficace.
+1. Veuillez exporter les utilisateurs du segment concerné ou du filtre d'expression régulière spécifique. 
+2. Veuillez nettoyer le fichier CSV si nécessaire. Vous avez besoin soit d'un ID Braze, soit d'un ID Appboy, mais vous pouvez supprimer toutes les autres colonnes si elles ne sont pas nécessaires. Nous vous recommandons également de vérifier vos données afin de vous assurer qu'elles sont récentes (par exemple, supprimez les utilisateurs que vous ne souhaitez plus cibler).
+3. [Veuillez réimporter]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/) le fichier CSV, ce qui regroupera automatiquement les utilisateurs dans un filtre CSV unique et hautement efficace.
 
 ## Comportement des utilisateurs
 
@@ -84,11 +84,11 @@ Si le nombre de *messages envoyés* ou de *destinataires uniques* de votre analy
 
 2. **La campagne est rééligible, de sorte que les utilisateurs peuvent participer plusieurs fois à la campagne**<br><br>Prenons l'exemple d'une campagne e-mail dont la rééligibilité est définie sur zéro minute (les utilisateurs peuvent réintégrer la campagne tant qu'ils répondent aux exigences de segmentation de l'audience), et qui est en cours depuis plus d'un mois. Le nombre de *messages envoyés* dans **Campaign Analytics** ne correspondrait pas à celui du segment, car ce champ inclurait les messages envoyés à des utilisateurs en double.<br><br>En effet, Braze comptabilise les utilisateurs uniques en tant que *destinataires uniques quotidiens*, c'est-à-dire le nombre d'utilisateurs ayant reçu un message particulier au cours d'une journée. Cela signifie que les utilisateurs rééligibles seront comptés plus d'une fois en tant que destinataire unique, car la fenêtre "unique" ne dure qu'un jour. Le nombre de *destinataires uniques quotidiens* peut ainsi être supérieur au nombre de profils utilisateurs dans l'exportation CSV. Les profils utilisateurs figurant dans le fichier CSV seront véritablement uniques.
 
-### L'utilisateur est affecté à deux applications alors qu'il n'enregistre une session que dans une seule application.
+### L'utilisateur est affecté à deux applications bien qu'il ne se soit connecté qu'à une seule application.
 
-Lors de la création d'un segment, vous pouvez cibler les utilisateurs qui ont [utilisé des apps spécifiques.]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform) Un utilisateur doit avoir ouvert une session dans une application spécifique pour être affecté à cette application ; cependant, il existe deux scénarios dans lesquels un utilisateur peut être affecté à une application spécifique sans avoir ouvert de session dans l'application. 
+Lors de la création d'un segment, vous pouvez cibler les utilisateurs qui ont [utilisé des applications spécifiques]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform). Un utilisateur doit avoir eu une session dans une application spécifique pour être affecté à cette application ; cependant, il existe deux cas de figure dans lesquels un utilisateur peut tout de même être affecté à une application spécifique sans avoir eu de session dans cette application. 
 
-Le premier scénario est le suivant : le champ `app_id` est rempli lors de l'utilisation de l'endpoint `/users/track`, en particulier lors de l'utilisation d'un [événement]({{site.baseurl}}/api/objects_filters/event_object/) ou d'un [objet d'achat]({{site.baseurl}}/api/objects_filters/purchase_object/), comme dans cet exemple :
+Le premier scénario concerne le cas où le`app_id`champ est renseigné lors de l'utilisation de`/users/track`l'endpoint, en particulier lors de l'utilisation d'un [événement]({{site.baseurl}}/api/objects_filters/event_object/) ou [d'un objet d'achat]({{site.baseurl}}/api/objects_filters/purchase_object/), comme dans l'exemple suivant :
 
 ```json
 {
@@ -103,7 +103,7 @@ Le premier scénario est le suivant : le champ `app_id` est rempli lors de l'uti
 }
 ```
 
-Le deuxième scénario est le suivant : le champ `app_id` est rempli lors de l'utilisation de l'endpoint `/users/track` pour migrer des tickets push, comme dans cet exemple : 
+Le deuxième scénario concerne le cas où le`app_id`champ est renseigné lors de l'utilisation de`/users/track`l'endpoint pour effectuer la migration des tickets push, comme dans cet exemple : 
 
 ```json
 {

@@ -77,7 +77,7 @@ Voici un exemple d'événement personnalisé :
 3. Définissez la **règle de baisse des prix**. Il s'agit de la logique utilisée pour déterminer si une notification doit être envoyée. Une baisse de prix peut être configurée en pourcentage de variation de prix ou en fonction de la variation de la valeur du champ de prix.
 4. Sélectionnez **Enregistrer les paramètres**.
 
-![Paramètres du catalogue qui montrent que la fonctionnalité de baisse des prix est activée. La règle de la baisse des prix est une modification de 3 % du prix d'origine.]({% image_buster /assets/img/price_drop_notifications.png %})
+![Paramètres du catalogue qui montrent que la fonctionnalité de baisse des prix est activée. La règle de baisse des prix consiste en une modification de trois pour cent du prix initial.]({% image_buster /assets/img/price_drop_notifications.png %})
 
 {% alert important %}
 Les règles de notification de ces paramètres ne remplacent pas les paramètres de notification de Canvas, tels que les heures calmes.
@@ -96,11 +96,13 @@ Désormais, vos clients seront avertis lorsque le prix d'un article baissera.
 
 ### Utilisation de Liquid
 
-Pour obtenir des tags détaillés sur le produit du catalogue dont le prix a baissé, vous pouvez utiliser l'étiquette Liquid `canvas_entry_properties` pour accéder à l’`item_id`. 
+Pour obtenir des tags détaillés sur le produit du catalogue dont le prix a baissé, vous pouvez utiliser l'étiquette Liquid `context` pour accéder à l’`item_id`. 
 
-L'utilisation de {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} renvoie l'ID de l'article dont le prix a baissé. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} renvoie la valeur du prix de l'article avant la mise à jour, et {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} renvoie la nouvelle valeur du prix après la mise à jour. 
+L'utilisation de {%raw%}``{{context.${catalog_update}.item_id}}``{%endraw%} renvoie l'ID de l'article dont le prix a baissé. {%raw%}``{{context.${catalog_update}.previous_value}}``{%endraw%} renvoie la valeur du prix de l'article avant la mise à jour, et {%raw%}``{{context.${catalog_update}.new_value}}``{%endraw%} renvoie la nouvelle valeur du prix après la mise à jour. 
 
-Utilisez cette étiquette Liquid {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} en tête de votre message, puis utilisez {%raw%}`{{items[0].<field_name>}}`{%endraw%} pour accéder aux données relatives à ce produit tout au long du message.
+Veuillez utiliser l'étiquette Liquid{%raw%}``{% catalog_items <name_of_your_catalog> {{context.${catalog_update}.item_id}} %}``{%endraw%} en haut de votre message, puis utilisez{%raw%}`{{items[0].<field_name>}}`{%endraw%}pour accéder aux données relatives à cet élément dans l'ensemble du message.
+
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
 {% multi_lang_include alerts/tip_alerts.md alert='catalog data images' %}
 
@@ -108,4 +110,4 @@ Utilisez cette étiquette Liquid {%raw%}``{% catalog_items <name_of_your_catalog
 
 - Les utilisateurs sont abonnés pour 90 jours. Si le prix d'un produit ne baisse pas dans les 90 jours, l'utilisateur est radié de l'abonnement.
 - Lorsque vous utilisez la règle de notification **Notifier tous les utilisateurs abonnés**, Braze notifie 100 000 utilisateurs en 10 minutes.
-- Braze traitera 10 demandes de mise à jour d'éléments de catalogue par minute. Les endpoints de mise à jour autorisent 50 mises à jour d'articles par demande, ce qui permet de prendre en charge jusqu'à 500 mises à jour d'articles par minute pouvant déclencher des notifications de rupture de stock.
+- Braze traitera 10 demandes de mise à jour d'éléments de catalogue par minute. Les endpoints de mise à jour permettent de mettre à jour 50 articles par requête, prenant en charge jusqu'à 500 mises à jour d'articles par minute, ce qui peut être un déclencheur pour des notifications de retour en stock.

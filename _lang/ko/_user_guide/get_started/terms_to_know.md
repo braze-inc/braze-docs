@@ -5,7 +5,7 @@ article_title: 알아두어야 할 Braze 용어
 
 layout: glossary_page
 glossary_top_header: "알아두어야 할 용어"
-glossary_top_text: "이 약관은 Braze와 고객 및 사용자 간의 유대감을 높이기 위한 여정을 시작할 때 도움이 될 것입니다. 온보딩을 시작하기 전에 이 글을 읽어보세요."
+glossary_top_text: "이 용어들은 Braze와 함께 고객 및 사용자 관계를 개선하는 여정을 시작할 때 도움이 될 것입니다. 온보딩을 시작하기 전에 이 내용을 읽어보세요."
 page_type: glossary
 description: "이 용어집에서는 Braze 온보딩 과정을 진행하면서 알아야 할 중요한 용어에 대해 설명합니다."
 

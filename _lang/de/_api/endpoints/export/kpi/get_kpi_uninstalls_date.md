@@ -1,7 +1,7 @@
 ---
 nav_title: "GET: Exportieren Sie KPIs für die tägliche Deinstallation von Apps nach Datum"
 article_title: "GET: KPIs für tägliche Deinstallationen von Apps nach Datum exportieren"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 layout: api_page
 page_type: reference
@@ -58,8 +58,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/uninstalls/d
 }
 ```
 
-{% alert tip %}
-Hilfe zu CSV- und API-Exporten finden Sie unter [Fehlerbehebung bei Exporten]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
-{% endalert %}
+{% multi_lang_include alerts/tip_alerts.md alert='Export troubleshooting' %}
 
 {% endapi %}

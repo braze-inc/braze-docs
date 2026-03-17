@@ -1,4 +1,6 @@
 ---
+description: "Verify Braze docs against platform source code to find discrepancies, draft updates, and open PRs. Use when asked to verify docs, cross-reference docs with source, find docs gaps, or update docs from product behavior."
+globs: _docs/**/*.md
 alwaysApply: false
 ---
 

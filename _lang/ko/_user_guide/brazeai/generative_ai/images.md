@@ -1,11 +1,11 @@
 ---
 nav_title: 이미지
-article_title: BrazeAI로 이미지 생성하기
+article_title: BrazeAI로 이미지를 생성하다
 page_order: 10
 description: "OpenAI 및 Braze 타사 제공업체의 AI 시스템인 DALL-E 3를 사용하여 미디어 라이브러리용 이미지를 생성하는 방법을 알아보세요."
 ---
 
-# <sup>BrazeAITM으로</sup> 이미지 생성
+# BrazeAI로 이미지를 생성하다
 
 > {% multi_lang_include brazeai/generative_ai/about_images.md %}
 

@@ -1,7 +1,7 @@
 ---
 nav_title: "PUT: Update der Übersetzung in einem Canvas"
-article_title: "PUT: Update der Übersetzung in einem Canvas"
-search_tag: Endpoint
+article_title: "PUT: Übersetzung in einem Canvas aktualisieren"
+search_tag: Endpunkt
 page_order: 1
 
 layout: api_page
@@ -15,13 +15,11 @@ description: "Dieser Artikel beschreibt Details zur Update-Übersetzung in einem
 /canvas/uebersetzungen
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um mehrere Übersetzungen für ein Canvas zu aktualisieren. Weitere Informationen zu den Features für die Übersetzung finden Sie unter [Lokalisierung in Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/).
+> Verwenden Sie diesen Endpunkt, um mehrere Übersetzungen für ein Canvas zu aktualisieren. Weitere Informationen zu den Übersetzungsfeatures finden Sie unter [„Locales in Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)“.
 
 Wenn Sie Übersetzungen aktualisieren möchten, nachdem ein Canvas gestartet wurde, müssen Sie zunächst [Ihre Nachricht als Entwurf speichern]({{site.baseurl}}/post-launch_edits/).
 
-{% alert important %}
-Dieser Endpunkt befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Voraussetzungen
 
@@ -42,12 +40,12 @@ Für diesen Endpunkt gibt es keine Pfadparameter.
 |`workflow_id` | Erforderlich | String | Die ID des Canvas. |
 |`step_id`| Erforderlich | String | Die ID Ihres Canvas-Schrittes. |
 |`message_variation_id`| Erforderlich | String | Die ID Ihrer Nachrichtenvariation. |
-|`locale_id`| Erforderlich | String | Die ID (UUID) des Gebietsschemas. |
+|`locale_id`| Erforderlich | String | Die ID (UUID) der Locale. |
 |`translation_map` | Erforderlich | Objekt | Objekt, das die neuen Übersetzungen enthält. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Alle Übersetzungs-IDs werden als universelle eindeutige Bezeichner (UUIDs) betrachtet, die in der Antwort des GET-Endpunkts zu finden sind.
+Alle Übersetzungs-IDs gelten als universelle eindeutige Bezeichner (UUIDs), die in der Antwort des GET-Endpunkts zu finden sind.
 {% endalert %}
 
 ## Beispiel Anfrage

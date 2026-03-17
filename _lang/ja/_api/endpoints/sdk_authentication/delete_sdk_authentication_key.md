@@ -1,7 +1,7 @@
 ---
-nav_title: "DELETE:SDK認証キーを削除する。"
+nav_title: "DELETE:SDK認証キーを削除する"
 article_title: "DELETE:SDK 認証キーを削除"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 3
 layout: api_page
 page_type: reference
@@ -44,13 +44,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | パラメーター | 必須 | データタイプ | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `app_id` | 必須 | string | アプリの API 識別子。 |
-| `key_id` | 必須 | string | 削除する SDK 認証キーの ID。 |
+| `app_id` | 必須かどうか | string | アプリの API 識別子。 |
+| `key_id` | 必須かどうか | string | 削除する SDK 認証キーの ID。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 
-```json
+```bash
 curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_authentication/delete' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \

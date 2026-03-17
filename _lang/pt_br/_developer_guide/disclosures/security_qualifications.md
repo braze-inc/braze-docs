@@ -23,7 +23,7 @@ Para saber mais sobre isso, dê uma olhada no [Braze Perspectives](https://www.b
 
 ![Imagem da certificação ISO]({% image_buster /assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png %}){: height="25%" width="25%" style="border:0px;"}
 
-_Braze possui certificação de conformidade com [ISO 27001](https://www.iso.org/standard/27001) a partir de 18 de dezembro de 2018, e renovada a partir de 29 de agosto de 2025. Expira em 15 de dezembro de 2027._
+_A Braze possui certificação de conformidade com [ISO 27001](https://www.iso.org/standard/27001) a partir de 18 de dezembro de 2018, e renovada em 29 de agosto de 2025. Expira em 15 de dezembro de 2027._
 
 Qualquer terceiro que deseje verificar de forma independente o status da certificação da Braze poderá consultar o [diretório de certificação Schellman](https://www.schellman.com/certificate-directory?certificateNumber=1504855-9) ou [consultar nossa certificação aqui]({{site.baseurl}}/assets/pdf/Braze_ISO_Cert.pdf).
 
@@ -33,13 +33,13 @@ Qualquer terceiro que deseje verificar de forma independente o status da certifi
 
 _Data/Período da última revisão: 1 de julho de 2024 a 30 de junho de 2025_
 
-Braze concluiu com sucesso o exame do Tipo 2 SOC 2 para _Segurança_ e _Disponibilidade_, realizado pela firma de CPA independente [Schellman & Company, LLC](https://www.schellman.com/).
+A Braze concluiu com sucesso o exame do Tipo 2 SOC 2 para _Segurança_ e _Disponibilidade_, realizado pela firma de CPA independente [Schellman & Company, LLC](https://www.schellman.com/).
 
 ## Avaliação TISAX
 
 ![Gráfico TISAX.]({% image_buster /assets/img/tisax.png %}){: height="25%" width="25%" style="border:0px;"}
 
-Braze está comprometida em manter os mais altos padrões de segurança da informação e proteção de dados e concluiu com sucesso uma Avaliação TISAX Nível 3 (AL3). Esses resultados de avaliação e a emissão de rótulos correspondentes refletem nossa dedicação em manter o mais alto nível de segurança da informação e garantia de proteção de dados. Os participantes atuais do TISAX podem verificar nossos resultados de avaliação para os seguintes objetivos de avaliação e local através do portal da Associação ENX usando as seguintes credenciais:
+A Braze está comprometida em manter os mais altos padrões de segurança da informação e proteção de dados e concluiu com sucesso uma Avaliação TISAX Nível 3 (AL3). Esses resultados de avaliação e a emissão de rótulos correspondentes refletem nossa dedicação em manter o mais alto nível de segurança da informação e garantia de proteção de dados. Os participantes atuais do TISAX podem verificar nossos resultados de avaliação para os seguintes objetivos de avaliação e local através do portal da Associação ENX usando as seguintes credenciais:
 
 - **Nome da Empresa:** Braze
 - **ID do Escopo:** SNCM4K

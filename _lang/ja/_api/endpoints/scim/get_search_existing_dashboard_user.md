@@ -2,7 +2,7 @@
 nav_title: "取得:既存のダッシュボードのユーザーアカウントをEメールで検索する"
 article_title: "取得:既存のダッシュボードユーザーアカウントをメールで検索"
 alias: /get_search_existing_dashboard_user_email/
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 4
 layout: api_page
 page_type: reference
@@ -12,7 +12,7 @@ description: "この記事では、EメールBrazeエンドポイントによる
 {% api %}
 # 既存のダッシュボードのユーザーアカウントをEメールで検索する
 {% apimethod get %}
-scim/v2/Users?filter=userName%20eq%20 "user%40test.com"
+scim/v2/Users?フィルター=ユーザーName eq "user@test.com"
 {% endapimethod %}
 
 > このエンドポイントを使用して、フィルタークエリーパラメーターにメールを指定して、既存のダッシュボードユーザーアカウントを検索します。
@@ -40,14 +40,14 @@ scim/v2/Users?filter=userName%20eq%20 "user%40test.com"
 
 ## リクエストパラメーター
 
-```json
+```http
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ## 例のリクエスト
-```json
+```bash
 curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \

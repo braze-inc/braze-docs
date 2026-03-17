@@ -4,7 +4,7 @@
 
 ### Métodos predefinidos
 
-Braze proporciona métodos predefinidos para configurar los siguientes atributos de usuario dentro de la clase [`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html) clase. Para las especificaciones del método, consulta [nuestro KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
+Braze proporciona métodos predefinidos para establecer los siguientes atributos de usuario dentro de la[`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)clase. Para obtener especificaciones sobre los métodos, consulta [nuestro KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
 
 - Nombre
 - Apellido
@@ -22,7 +22,7 @@ Todos los valores de cadena como nombre, apellidos, país y ciudad de residencia
 
 ### Configuración de atributos predeterminados
 
-Para establecer un atributo predeterminado para un usuario, llama al método `getCurrentUser()` en tu instancia de Braze para obtener una referencia al usuario actual de tu aplicación. A continuación, puedes llamar a los métodos para establecer un atributo de usuario.
+Para establecer un atributo predeterminado para un usuario, llama al`getCurrentUser()`método en tu instancia de Braze para obtener una referencia al usuario actual de tu aplicación. A continuación, puedes llamar a métodos para establecer un atributo de usuario.
 
 {% tabs %}
 {% tab JAVA %}
@@ -48,9 +48,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### Desactivar atributos predeterminados
+### Desactivar los atributos predeterminados
 
-Para desactivar un atributo de usuario, pasa `null` al método correspondiente.
+Para desactivar un atributo de usuario, pasa`null`  al método correspondiente.
 
 {% tabs %}
 {% tab JAVA %}
@@ -78,13 +78,13 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ## Atributos personalizados del usuario
 
-Además de los atributos predeterminados de usuario, Braze también te permite definir atributos personalizados utilizando varios tipos de datos diferentes. Para más información sobre la opción de segmentación de cada atributo, consulta [Recopilación de datos de usuario]({{site.baseurl}}/developer_guide/analytics).
+Además de los atributos de usuario predeterminados, Braze también te permite definir atributos personalizados utilizando varios tipos de datos diferentes. Para obtener más información sobre la opción de segmentación de cada atributo, consulta [Recopilación de datos de usuario]({{site.baseurl}}/developer_guide/analytics).
 
 ### Establecer atributos personalizados
 
 {% tabs local %}
 {% tab String %}
-Para establecer un atributo personalizado con un valor `string`:
+Para establecer un atributo personalizado con un`string`valor:
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -111,7 +111,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 {% tab Integers %}
-Para establecer un atributo personalizado con un valor `int`:
+Para establecer un atributo personalizado con un`int`valor:
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -143,7 +143,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 
-Para establecer un atributo personalizado con un valor entero `long`:
+Para establecer un atributo personalizado con un valor`long` entero:
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -170,7 +170,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 {% tab Floating-points %}
-Para establecer un atributo personalizado con un valor `float`:
+Para establecer un atributo personalizado con un`float`valor:
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -196,7 +196,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 
-Para establecer un atributo personalizado con un valor `double`:
+Para establecer un atributo personalizado con un`double`valor:
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -224,7 +224,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 
 {% tab Boolean %}
-Para establecer un atributo personalizado con un valor `boolean`:
+Para establecer un atributo personalizado con un`boolean`valor:
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -291,7 +291,7 @@ Las fechas pasadas a Braze con este método deben estar en el formato [ISO 8601]
 {% endtab %}
 {% tab Array %}
 
-El número máximo de elementos de las matrices de atributos personalizadas está predeterminado en 25. El máximo para matrices individuales puede aumentarse hasta 100 en el panel de Braze, en **Configuración de datos** > **Atributos personalizados**. Las matrices que superen la cantidad máxima de elementos se truncarán para contenerla. Para obtener más información sobre las matrices de atributos personalizadas y su comportamiento, consulta nuestra documentación sobre [Matrices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
+El número máximo de elementos de las matrices de atributos personalizadas está predeterminado en 25. El máximo para matrices individuales se puede aumentar hasta 500 en el panel de Braze, en **Configuración de datos** > **Atributos personalizados**. Las matrices que superan la cantidad máxima de elementos se truncan para contener la cantidad máxima de elementos. Para obtener más información sobre las matrices de atributos personalizados y su comportamiento, consulta [Matrices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -330,7 +330,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ### Desactivar atributos personalizados
 
-Para desactivar un atributo personalizado, pasa la clave del atributo correspondiente al método `unsetCustomUserAttribute`.
+Para desactivar un atributo personalizado, pasa la clave del atributo correspondiente al`unsetCustomUserAttribute`método.
 
 {% tabs %}
 {% tab JAVA %}
@@ -356,9 +356,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### Atributos personalizados anidados
+### Atributo personalizado anidado
 
-También puedes anidar propiedades dentro de atributos personalizados. En el siguiente ejemplo, se establece un objeto `favorite_book` con propiedades anidadas como atributo personalizado en el perfil de usuario. Para más detalles, consulta [Atributos personalizados anidados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+También puedes anidar propiedades dentro de atributos personalizados. En el siguiente ejemplo, un`favorite_book`objeto con propiedades anidadas se establece como un atributo personalizado en el perfil de usuario. Para obtener más información, consulta [Attributos personalizados anidados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
 
 {% tabs %}
 {% tab JAVA %}
@@ -393,11 +393,11 @@ braze.getCurrentUser { user ->
 {% endtab %}
 {% endtabs %}
 
-### Utilizar la API REST
+### Uso de la API REST
 
-También puedes utilizar nuestra API REST para establecer o desestablecer atributos de usuario. Para más información, consulta [Puntos finales de datos de usuario]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
+También puedes utilizar nuestra API REST para establecer o desactivar atributos de usuario. Para obtener más información, consulta [Puntos finales]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) de [datos de]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) [usuario]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
 
-## Configuración de las suscripciones de los usuarios
+## Configuración de suscripciones de usuarios
 
 Para configurar una suscripción para tus usuarios (por correo electrónico o push), llama a las funciones `setEmailNotificationSubscriptionType()` o `setPushNotificationSubscriptionType()`, respectivamente. Estas dos funciones toman como argumento el tipo de enumeración `NotificationSubscriptionType`. Este tipo tiene tres estados diferentes:
 

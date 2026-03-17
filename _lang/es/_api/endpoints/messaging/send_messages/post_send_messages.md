@@ -1,7 +1,7 @@
 ---
 nav_title: "PUBLICAR: Envía mensajes inmediatamente utilizando sólo la API"
 article_title: "PUBLICAR: Envía mensajes inmediatamente utilizando sólo la API"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
@@ -10,7 +10,7 @@ description: "Este artículo describe en detalle el punto final Enviar mensajes 
 ---
 {% api %}
 # Envía mensajes inmediatamente utilizando sólo la API
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /messages/send
 {% endapimethod %}
 
@@ -18,9 +18,26 @@ description: "Este artículo describe en detalle el punto final Enviar mensajes 
 
 Si te estás dirigiendo a un segmento específico, se almacenará un registro de tu solicitud en la [consola para desarrolladores](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
+
 {% multi_lang_include api/payload_size_alert.md %}
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
+{% alert important %}
+Al utilizar este punto final para campañas API, el destinatario debe existir ya en Braze para que la solicitud se realice correctamente. Esto se aplica al especificar usuarios en los parámetros`external_user_ids`  `user_aliases`o .
+{% endalert %}
+
+### Creación de nuevos usuarios con envíos API
+
+Si necesitas crear un usuario como parte de un envío mediante la API, tienes dos opciones:
+
+#### Opción 1: Usar`/users/track`  y enviar
+
+Primero, crea el usuario con el[`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)punto final y, a continuación, espera a que se propaguen los datos (por lo general, se recomienda esperar unos minutos) antes de iniciar el envío solo mediante API. Ten en cuenta que Braze no garantiza los tiempos de procesamiento de datos en `/users/track`, por lo que pueden producirse [condiciones de carrera]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) si no dejas suficiente tiempo entre estas llamadas.
+
+#### Opción 2: Utiliza una campaña desencadenada por API o Canvas.
+
+Utiliza una [campaña desencadenada por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) o un flujo de trabajo [de Canvas]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/). Te permiten crear un destinatario si aún no existe ninguno. Esta opción simplifica tus procesos de backend, pero requiere que configures una campaña o Canvas en el panel de Braze.
+
 
 ## Requisitos previos
 
@@ -33,7 +50,7 @@ Para utilizar este punto final, deberás generar una clave de API con el permiso
 ## Cuerpo de la solicitud
 
 {% alert tip %}
-Asegúrate de incluir [objetos de mensajería]({{site.baseurl}}/api/objects_filters/#messaging-objects) en tu cuerpo para completar tus peticiones.
+Asegúrate de incluir [objetos de mensajería]({{site.baseurl}}/api/objects_filters/#messaging-objects) en el cuerpo del mensaje para completar tus solicitudes.
 {% endalert %}
 
 ```
@@ -79,7 +96,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`user_aliases`| Opcional | Matriz de objetos alias de usuario| Ver [objeto alias de usuario]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 |`segment_id `| Opcional | Cadena | Ver [identificador de segmento]({{site.baseurl}}/api/identifier_types/#segment-identifier). |
 |`audience`| Opcional | Objeto de audiencia conectado | Ver [audiencia conectada]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`campaign_id`| Opcional\*. | Cadena | Consulte [el identificador de campaña]({{site.baseurl}}/api/identifier_types/#campaign-identifier/) para obtener más información. <br><br>\*Requerido si deseas hacer un seguimiento de las métricas de la campaña (como _Envíos_, _Clics_ o _Rebotes_) en el panel de Braze. |
+|`campaign_id`| Opcional\*. | Cadena | Consulte [el identificador de campaña]({{site.baseurl}}/api/identifier_types/#campaign-identifier/) para obtener más información. <br><br>\*Necesario si deseas realizar el seguimiento de las métricas de la campaña (como _envíos_, _clics_ o _rebotes_) en el panel de Braze. |
 |`send_id`| Opcional | Cadena | Ver [identificador de envío]({{site.baseurl}}/api/identifier_types/#send-identifier). |
 |`override_frequency_capping`| Opcional | Booleano | Ignore `frequency_capping` para las campañas, por defecto `false`. |
 |`recipient_subscription_state`| Opcional | Cadena | Utiliza esta opción para enviar mensajes solo a los usuarios que se hayan adherido voluntariamente (`opted_in`), solo a los usuarios que se hayan suscrito o estén adheridos voluntariamente (`subscribed`) o a todos los usuarios, incluidos los que hayan cancelado la suscripción (`all`). <br><br>El uso de `all` usuarios es útil para la mensajería transaccional por correo electrónico. De forma predeterminada, `subscribed`. |

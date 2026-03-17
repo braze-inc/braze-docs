@@ -15,13 +15,11 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Alterar
 /canvas/translations
 {% endapimethod %}
 
-> Use esse endpoint para alterar várias traduções para um canva. Consulte [Localidades nas mensagens]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obter mais informações sobre os recursos de tradução.
+> Use esse endpoint para alterar várias traduções para um canva. Veja [Locais em mensagens]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para saber mais sobre os recursos de tradução.
 
-Se quiser atualizar as traduções depois que um Canva for lançado, será necessário [salvar a mensagem como rascunho]({{site.baseurl}}/post-launch_edits/) primeiro.
+Se você quiser atualizar as traduções depois que um canva for lançado, precisará [salvar sua mensagem como um rascunho]({{site.baseurl}}/post-launch_edits/) primeiro.
 
-{% alert important %}
-Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Pré-requisitos
 
@@ -39,15 +37,15 @@ Não há parâmetros de jornada para este endpoint.
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
-|`workflow_id` | Obrigatória | String | A ID da tela. |
+|`workflow_id` | Obrigatória | String | O ID do canva. |
 |`step_id`| Obrigatória | String | O ID de sua etapa do canva. |
-|`message_variation_id`| Obrigatória | String | O ID de sua variação de mensagem. |
-|`locale_id`| Obrigatória | String | A ID (UUID) da localização. |
-|`translation_map` | Obrigatória | Objeto | Objeto que contém as novas traduções. |
+|`message_variation_id`| Obrigatória | String | O ID da sua variação de mensagem. |
+|`locale_id`| Obrigatória | String | O ID (UUID) do local. |
+|`translation_map` | Obrigatória | Objeto | Objeto contendo as novas traduções. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Todas as IDs de tradução são consideradas identificadores únicos universais (UUIDs), que podem ser encontrados na resposta do ponto de extremidade GET.
+Todos os IDs de tradução são considerados identificadores únicos universais (UUIDs), que podem ser encontrados na resposta do endpoint GET.
 {% endalert %}
 
 ## Exemplo de solicitação

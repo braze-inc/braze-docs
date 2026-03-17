@@ -6,11 +6,11 @@ page_type: reference
 description: "Dieser referenzierte Artikel erklärt, warum Barrierefreiheit bei Ihren Marketing-Inhalten wichtig ist und wie Sie in Braze barrierefreie Nachrichten erstellen können."
 ---
 
-# Erstellen Sie zugängliche Nachrichten in Braze
+# Erstellen Sie barrierefreie Nachrichten in Braze
 
 > Verstehen Sie, warum Barrierefreiheit bei Ihren Marketing-Inhalten wichtig ist und wie Sie in Braze barrierefreie Nachrichten erstellen können. Weitere Anleitungen finden Sie in unserem Kurs [Grundlagen des barrierefreien Messaging](https://learning.braze.com/accessible-messaging-foundations) auf Braze Lernangebote.
 
-Marketing-Inhalte, die Menschen mit Behinderungen ausschließen, selbst wenn dies unabsichtlich geschieht, können Millionen von Menschen davon abhalten, mit Ihrer Marke zu interagieren. Bei der Zugänglichkeit im Marketing geht es darum, jedem die Möglichkeit zu geben, Ihr Marketing zu erleben, Ihre Kommunikation zu verstehen und die Opportunity zu haben, in Ihr Produkt, Ihren Dienst oder Ihre Marke zu investieren oder ein Fan davon zu werden. 
+Marketing-Inhalte, die Menschen mit Behinderungen ausschließen, selbst wenn dies unabsichtlich geschieht, können Millionen von Menschen davon abhalten, mit Ihrer Marke zu interagieren. Barrierefreiheit im Marketing bedeutet Enablement, dass jeder Ihr Marketing erleben, Ihre Kommunikation verstehen und die Möglichkeit haben kann, in Ihr Produkt, Ihre Dienstleistung oder Ihre Marke zu investieren oder ein Fan davon zu werden. 
 
 Nehmen Sie sich bei der Gestaltung Ihres Messagings besonders viel Zeit, um zu überlegen, wie Sie Ihre Designs allen Kund:innen zugänglich machen können.
 
@@ -96,7 +96,7 @@ Je nach individuellem Bedarf verlassen sich diese Nutzer:innen auf:
 
 {% alert note %}
 - Einer von fünf Menschen in den Vereinigten Staaten hat Lern- und Aufmerksamkeitsprobleme (siehe [LDA](https://ldaamerica.org/lda_today/the-state-of-learning-disabilities-today/#:~:text=LD%20Today,have%20learning%20and%20attention%20issues.))
-- Ungefähr 10-20% der Weltbevölkerung gelten als neurodivergent (siehe [Deloitte](https://www2.deloitte.com/us/en/insights/topics/talent/neurodiversity-in-the-workplace.html))
+- Etwa 10 bis 20 % der Weltbevölkerung gelten als neurodivergent (siehe [Deloitte](https://www2.deloitte.com/us/en/insights/topics/talent/neurodiversity-in-the-workplace.html)).
 - Etwa 1 von 100 Kindern weltweit hat Autismus (siehe [WHO](https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders))
 {% endalert %}
 
@@ -241,7 +241,7 @@ Touch Targets sind alle Teile Ihrer Nachricht, auf die Nutzer:innen tippen, um e
 Wenn die Touch-Targets zu klein sind oder zu dicht beieinander liegen, kann es für Nutzer:innen mit eingeschränkter Mobilität oder Geschicklichkeit frustrierend oder unmöglich sein, mit Ihrer Nachricht zu interagieren. Wenn Sie dies verbessern, können Sie Fehler reduzieren und eine reibungslosere Erfahrung für alle schaffen.
 
 Das sollten Sie beachten:
-- **Verwenden Sie eine angemessene Targeting-Größe.** Streben Sie eine Mindestgröße für das Targeting von 44 x 44 Pixeln an. Dies entspricht den WCAG 2.2-Richtlinien für [Touch-Targeting](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) und den üblichen Standards für mobile Benutzerfreundlichkeit.
+- **Bitte verwenden Sie eine angemessene Größe für Touch-Ziele.** Streben Sie eine Mindestgröße für das Targeting von 44 x 44 Pixeln an. Dies entspricht den WCAG 2.2-Richtlinien für [Touch-Targeting](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) und den üblichen Standards für mobile Benutzerfreundlichkeit.
 - **Geben Sie jedem Targeting Raum zum Atmen.** Wenn Tap-Targets zu dicht beieinander liegen - wie gestapelte Links oder eng gruppierte Buttons -, kann man sie leicht übersehen oder auf das falsche tippen. Fügen Sie Abstand oder Padding zwischen den Elementen hinzu, um dies zu verhindern.
 - **Verlassen Sie sich nicht nur auf das Visuelle.** Selbst kleine Symbole können durch zusätzliches Padding besser nutzbar gemacht werden, so dass sie die Mindestgrößenanforderungen erfüllen, ohne das Layout zu verändern.
 - **Vorschau auf das Handy.** Testen Sie Ihre Nachrichten auf verschiedenen Bildschirmgrößen und stellen Sie sicher, dass die interaktiven Elemente einfach zu bedienen sind.

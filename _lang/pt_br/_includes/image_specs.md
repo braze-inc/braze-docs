@@ -28,7 +28,7 @@ As mensagens modais no app são projetadas para se ajustarem ao dispositivo nas 
 
 Embora não haja limites para o número de caracteres de texto que você pode incluir em uma mensagem no app (assim como botões, título, corpo principal e outros), moderamos o número de caracteres de texto que você usa. O excesso de texto exigirá que os usuários expandam e rolem a mensagem.
 
-Todas as mensagens no aplicativo têm um tamanho de imagem recomendado de 500 KB, tamanho máximo de imagem de 5 MB e suportam tipos de arquivo PNG, JPEG e GIF. Imagens WebP não são suportadas em todos os dispositivos ou navegadores; sugerimos converter imagens WebP para PNG ou JPEG antes de adicioná-las às mensagens no aplicativo.
+Todas as mensagens no aplicativo têm um tamanho de imagem recomendado de 500 KB, tamanho máximo de imagem de 5 MB e suportam os tipos de arquivo PNG, JPEG e GIF. Imagens WebP não são suportadas em todos os dispositivos ou navegadores; sugerimos converter imagens WebP para PNG ou JPEG antes de adicioná-las às mensagens no aplicativo.
 
 {% tabs %}
 {% tab Portrait %}
@@ -61,7 +61,7 @@ Todas as mensagens no aplicativo têm um tamanho de imagem recomendado de 500 KB
 
 | Tipo | Proporção | Qualidade da imagem | Notas |
 | --- | --- | --- | --- |
-| Modal (somente imagem) | 1:1 | Resolução máxima recomendada: 1200 x 2000 px <br> Resolução mínima: 600 x 600 px | A mensagem será redimensionada para se ajustar a imagens com a maioria das proporções. A resolução máxima recomendada tem uma proporção de 3:5, o que pode não fornecer resultados ideais. Embora imagens maiores sejam utilizáveis, elas podem levar a tempos de carregamento mais longos. <br> A proporção ideal para imagens é 1:1, e não atender a essa proporção pode disparar um aviso durante o upload. Este aviso é uma sugestão para melhores resultados e não impede o upload de imagens maiores. |
+| Modal (somente imagem) | 1:1 | Resolução máxima recomendada: 1200 x 2000 px <br> Resolução mínima: 600 x 600 px | A mensagem será redimensionada para se ajustar a imagens com a maioria das proporções. A resolução máxima recomendada tem uma proporção de 3:5, o que pode não fornecer resultados ideais. Embora imagens maiores sejam utilizáveis, elas podem levar a tempos de carregamento mais longos. <br> A proporção ideal para imagens é 1:1, e não atender a essa proporção pode disparar um aviso durante o upload. Esse aviso é uma sugestão para melhores resultados e não impede o upload de imagens maiores. |
 | Modal com texto | 29:10 | Alta resolução 1450 x 500 px <br> Resolução mínima de 600 x 205 px | As imagens altas serão reduzidas e centralizadas horizontalmente. Imagens largas serão cortadas nas bordas esquerda e direita. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
@@ -152,7 +152,7 @@ table td {
 | --- | --- | 
 | Tamanho | 5 MB |
 | Largura | Cabeçalho: 600 px<br>Corpo: 480 px |
-| Tipos de arquivos | PNG, JPEG, GIF<br><br> O suporte a imagens WebP varia entre os clientes de e-mail. Para renderização confiável, converta imagens WebP para PNG ou JPEG antes de adicioná-las às mensagens de e-mail. |
+| Tipos de arquivos | PNG, JPEG, GIF<br><br> O suporte a imagens WebP varia entre os clientes de e-mail. Para uma renderização confiável, converta imagens WebP para PNG ou JPEG antes de adicioná-las às mensagens de e-mail. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Especificações de texto | Propriedades máximas recomendadas |

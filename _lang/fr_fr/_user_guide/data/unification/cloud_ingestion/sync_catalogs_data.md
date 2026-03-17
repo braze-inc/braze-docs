@@ -194,10 +194,10 @@ GO
 
 {% endtab %}
 {% tab S3 %}
-Configurez vos fichiers sources dans S3 en fournissant des fichiers JSON ou CSV. N'oubliez pas :
+Veuillez configurer vos fichiers source dans S3 en fournissant des fichiers JSON ou CSV. Veuillez noter :
 
-- Les fichiers ne peuvent pas inclure une colonne `UPDATED_AT`   
-- Vous pouvez inclure un champ facultatif `DELETED` pour marquer les éléments à supprimer. 
+- Les fichiers ne peuvent pas contenir de`UPDATED_AT`colonne.  
+- Vous pouvez inclure un champ `DELETED`facultatif pour marquer les éléments à supprimer. 
 
 {% subtabs %}
 {% subtab JSON %}
@@ -216,14 +216,14 @@ ID,PAYLOAD,DELETED
 {% endsubtab %}
 {% endsubtabs %}
 
-Pour plus de détails sur la configuration, voir [Intégrations de stockage de fichiers]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
+Pour plus d'informations sur la configuration, veuillez consulter [la section Intégrations de stockage de fichiers]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
 
 {% endtab %}
 {% endtabs %}
 
 ## Comment fonctionne l'intégration
 
-Chaque fois que la synchronisation est exécutée, Braze récupère toutes les lignes pour lesquelles `UPDATED_AT` est égal ou postérieur au dernier horodatage synchronisé. Nous vous recommandons de créer une vue dans votre entrepôt de données à partir de vos données de catalogue afin de mettre en place une table source qui sera entièrement actualisée à chaque fois qu'une synchronisation est exécutée. Avec les vues, vous n'aurez pas besoin de réécrire la requête à chaque fois.
+À chaque exécution de la synchronisation, Braze récupérera toutes les lignes dont`UPDATED_AT`la date est égale ou postérieure à la dernière date synchronisée. Nous vous recommandons de créer une vue dans votre entrepôt de données à partir de vos données de catalogue afin de mettre en place une table source qui sera entièrement actualisée à chaque fois qu'une synchronisation est exécutée. Avec les vues, vous n'aurez pas besoin de réécrire la requête à chaque fois.
 
 Par exemple, si vous avez une table de données produit (`product_catalog_1`) avec `product_id` et trois attributs supplémentaires, vous pouvez synchroniser la vue ci-dessous :
 
@@ -307,4 +307,4 @@ FROM [braze].[product_catalog] ;
 
 - Les données extraites de l'intégration seront utilisées pour créer ou mettre à jour des articles dans le catalogue cible en fonction de l'adresse `id` fournie.
 - Si DELETED est défini sur `true`, le produit de catalogue correspondant sera supprimé.
-- La synchronisation n'enregistre pas les points de données, mais toutes les données synchronisées sont prises en compte dans l'utilisation totale de votre catalogue. Cette utilisation est mesurée sur la base de l'ensemble des données stockées, vous n'avez donc pas à vous soucier de synchroniser uniquement les données modifiées.
+- La synchronisation n'enregistre pas les points de données, mais toutes les données synchronisées sont prises en compte dans l'utilisation totale de votre catalogue. Cette utilisation est mesurée en fonction du total des données stockées, vous n'avez donc pas à vous soucier de ne synchroniser que les données modifiées.

@@ -1,6 +1,6 @@
 ---
-nav_title: 여러 작업 공간에 복사
-article_title: 작업 공간 간 복사
+nav_title: 작업 영역 간 복사
+article_title: 작업 영역 간 복사
 page_order: 4
 alias: "/copying_to_workspaces/"
 page_type: reference
@@ -10,7 +10,7 @@ tool:
     - Canvas
 ---
 
-# 여러 작업 공간에서 캠페인 및 캔버스 복사하기
+# 작업 공간 간 캠페인 및 캔버스 복사
 
 > 워크스페이스 간에 캠페인을 복사하면 다른 워크스페이스에 있는 캠페인의 복사본으로 시작하여 메시지 구성을 바로 시작할 수 있습니다. 이 페이지는 캠페인을 다른 작업 공간으로 복사하는 방법을 다루고 복사되지 않는 항목과 복사되는 항목을 나열합니다.
 

@@ -1,6 +1,6 @@
 ---
 nav_title: 사용자 ID 설정
-article_title: iOS용 사용자 ID 설정하기
+article_title: iOS용 사용자 ID 설정
 platform: iOS
 page_order: 1
 description: "이 참조 문서에서는 iOS 앱에서 사용자 ID를 설정하는 방법, 제안된 사용자 ID 명명 규칙 및 몇 가지 모범 사례를 보여줍니다."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# iOS용 사용자 ID 설정하기
+# iOS 사용자 ID 설정
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 

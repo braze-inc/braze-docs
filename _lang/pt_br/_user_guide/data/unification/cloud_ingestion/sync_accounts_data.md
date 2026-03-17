@@ -1,40 +1,40 @@
 ---
-nav_title: Sincronizar e excluir dados da conta
-article_title: Sincronizar dados da conta usando CDI
+nav_title: Sincronize e exclua os dados da conta
+article_title: Sincronize os dados da conta usando CDI
 page_order: 4
 page_type: reference
-description: "Saiba como sincronizar os dados de sua conta Braze usando o CDI."
+description: "Aprenda como sincronizar os dados da sua conta Braze usando CDI."
 
 ---
 
-# Sincronizar dados da conta usando CDI
+# Sincronize os dados da conta usando CDI
 
-> Saiba como sincronizar os dados de sua conta Braze usando o CDI.
+> Aprenda como sincronizar os dados da sua conta Braze usando CDI.
 
 {% alert important %}
-[Os objetos de conta](https://braze.com/unlisted_docs/account_opportunity_object/) estão na versão beta e são necessários para usar esse recurso. Entre em contato com o gerente da sua conta Braze se estiver interessado em participar da versão beta.
+[Objetos de conta](https://braze.com/unlisted_docs/account_opportunity_object/) estão em beta e são necessários para usar este recurso. Entre em contato com o gerente da sua conta Braze se estiver interessado em participar da versão beta.
 {% endalert %}
 
 ## Pré-requisitos
 
-Antes de sincronizar os dados da sua conta usando o CDI, você precisará [configurar o esquema de contas](https://braze.com/unlisted_docs/account_opportunity_object/).
+Antes de sincronizar os dados da sua conta usando CDI, você precisará [configurar o esquema das suas contas](https://braze.com/unlisted_docs/account_opportunity_object/).
 
 {% alert note %}
-Somente faça atualizações no esquema de sua conta quando a sincronização estiver pausada ou não estiver programada para evitar conflitos entre os dados de seu data warehouse e o esquema no Braze.
+Faça atualizações no seu esquema de conta apenas quando a sincronização estiver pausada ou não agendada para evitar conflitos entre os dados do seu data warehouse e o esquema no Braze.
 {% endalert %}
 
-## Como funciona a sincronização
+## Como a sincronização funciona
 
-- Cada sincronização importa as linhas em que `UPDATED_AT` é posterior ao último registro de data e hora sincronizado.
-- Os dados da integração criam ou atualizam contas com base nos dados fornecidos `id`.
-- Se `DELETED` for `true`, a conta será excluída.
-- A sincronização não registra pontos de dados, mas todos os dados sincronizados contam para o uso total de suas contas, medido pelo total de dados armazenados - não há necessidade de limitar-se apenas aos dados alterados.
-- Os campos que não estão no esquema de suas contas são descartados; atualize o esquema antes de sincronizar novos campos.
+- Cada sincronização importa linhas onde `UPDATED_AT` é posterior ao último timestamp sincronizado.
+- Os dados da integração criam ou atualizam contas com base no `id` fornecido.
+- Se `DELETED` for `true`, a conta é excluída.
+- A sincronização não registra pontos de dados, mas todos os dados sincronizados contam para o uso total das suas contas, medido pelo total de dados armazenados—não há necessidade de limitar apenas aos dados alterados.
+- Campos que não estão no seu esquema de contas são descartados; atualize o esquema antes de sincronizar novos campos.
 - Você pode atualizar, retomar ou pausar uma sincronização passando o mouse sobre o nome da sincronização e selecionando a ação relevante.
 
-## Sincronize os dados de sua conta
+## Sincronize os dados da sua conta
 
-Você pode sincronizar os dados de sua conta usando o CDI por meio de um data warehouse ou de um armazenamento de arquivos.
+Você pode sincronizar os dados da sua conta usando CDI através de um data warehouse ou um armazenamento de arquivos.
 
 {% tabs local %}
 {% tab Data Warehouse %}
@@ -43,7 +43,7 @@ Para integrar sua fonte de dados com seu data warehouse:
 {% subtabs %}
 {% subtab Snowflake %}
 
-1. Crie uma tabela de origem no Snowflake. Use os nomes do exemplo ou escolha seus próprios nomes de banco de dados, esquema e tabela. Você também pode usar uma visualização ou visualização materializada em vez de uma tabela.
+1. Crie uma tabela de origem no Snowflake. Use os nomes do exemplo ou escolha seus próprios nomes de banco de dados, esquema e tabela. Você também pode usar uma visão ou visão materializada em vez de uma tabela.
   ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
@@ -254,7 +254,7 @@ The following examples show valid JSON and CSV formats for syncing account data 
 ```  
 
 {% alert important %}
-Cada linha em seu arquivo de origem deve conter JSON válido ou o arquivo será ignorado.
+Cada linha no seu arquivo de origem deve conter JSON válido ou o arquivo será ignorado.
 {% endalert %}
 {% endsubtab %}
 {% subtab CSV Accounts with Delete %}
@@ -275,11 +275,11 @@ ID,NAME,PAYLOAD
 {% endtab %}
 {% endtabs %}
 
-## Criar uma visualização de sincronização
+## Crie uma visão de sincronização
 
-A criação de uma visualização de sincronização em seu data warehouse permite que a fonte seja atualizada automaticamente sem a necessidade de reescrever consultas adicionais.
+Criar uma visão de sincronização em seu data warehouse permite que a fonte seja atualizada automaticamente sem precisar reescrever consultas adicionais.
 
-Por exemplo, se você tiver uma tabela de dados de conta chamada `account_details_1` com `account_id`, `account_name` e três atribuições adicionais, poderá criar uma visualização de sincronização como a seguinte:
+Por exemplo, se você tiver uma tabela de dados de conta chamada `account_details_1` com `account_id`, `account_name` e três atributos adicionais, você poderia criar uma visão de sincronização como a seguinte:
 
 {% tabs %}
 {% tab Snowflake %}

@@ -27,7 +27,7 @@ Braze permite a los clientes sustituir las imágenes predeterminadas existentes 
 Como las tarjetas de contenido tienen un tamaño máximo de 2 KB para el contenido que introduzcas en el panel (incluido el texto del mensaje, las URL de las imágenes, los enlaces y todos los pares clave-valor), comprueba el tamaño antes de enviarlas. Si se supera esta cantidad, no se podrá enviar la tarjeta.
 
 {% alert important %}
-Actualmente no es posible sustituir las imágenes predeterminadas en nuestra integración .NET MAUI iOS.
+Actualmente, nuestra integración .NET MAUI iOS no admite la sustitución de imágenes predeterminadas.
 {% endalert %}
 
 ## Desactivar el modo oscuro

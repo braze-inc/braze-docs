@@ -20,7 +20,7 @@ El campo "De" debe mostrar claramente quién es el remitente. Procure no utiliza
 
 ### Direcciones sin respuesta
 
-Las direcciones de correo electrónico sin respuesta no suelen ser recomendables por múltiples razones, ya que desvinculan a tus lectores. Muchos destinatarios responden al correo electrónico para cancelar la suscripción, por lo que, si no se les permite hacerlo, la siguiente medida suele ser marcar el correo como no deseado.
+Por lo general, no se recomienda utilizar direcciones de correo electrónico sin respuesta por múltiples razones, ya que alejan a tus lectores. Muchos destinatarios responden al correo electrónico para cancelar la suscripción, por lo que, si no se les permite hacerlo, la siguiente medida suele ser marcar el correo como no deseado.
 
 Recibir respuestas fuera de la oficina puede proporcionar información valiosa, aumentar las tasas de apertura y disminuir los informes de spam (al eliminar a quienes no quieren recibir correos electrónicos). A nivel personal, una ausencia de respuesta puede parecer impersonal a los destinatarios y hacer que dejen de recibir correos electrónicos de su empresa.
 
@@ -33,7 +33,7 @@ El texto del preencabezado de un correo electrónico comunica el punto principal
 La cantidad de texto visible en el preencabezado depende del cliente de correo electrónico del usuario y de la longitud del asunto del mensaje. Por lo general, sugerimos que los encabezados de los correos electrónicos tengan entre 50 y 100 caracteres.
 
 {% alert note %}
-El preencabezado puede hacer referencia a Liquid en el cuerpo del correo electrónico, y el cuerpo del correo electrónico puede hacer referencia a Liquid en el preencabezado. Esto se debe a que el texto preencabezado forma parte del cuerpo del correo electrónico cuando envías mensajes a los destinatarios.
+El preencabezado puede hacer referencia a Liquid en el cuerpo del correo electrónico, y el cuerpo del correo electrónico puede hacer referencia a Liquid en el preencabezado. Esto se debe a que el texto del preencabezado forma parte del cuerpo del correo electrónico cuando envías mensajes a los destinatarios.
 {% endalert %}
 
 Estas son algunas de las mejores prácticas que debe tener en cuenta a la hora de redactar sus preencabezados:
@@ -43,13 +43,13 @@ Estas son algunas de las mejores prácticas que debe tener en cuenta a la hora d
   - Utilice palabras contundentes para que el lector sepa exactamente lo que le está pidiendo, pero asegúrese de que refleja la voz de la marca de su empresa y de que cada llamada a la acción exhibe algún tipo de valor para el consumidor.
   - El preencabezado no debe superar los 85 caracteres y debe contener algún tipo de llamada a la acción descriptiva que apoye la línea de asunto.
 
-2. El correo electrónico y los sitios de destino a los que dirijas a tus usuarios deben estar optimizados para móviles:
+2. El correo electrónico y los sitios de destino a los que redirijas a tus usuarios deben estar optimizados para dispositivos móviles:
   - Sin cajas intersticiales
   - Grandes campos de formulario
   - Navegación sencilla
   - Texto grande
   - Amplio espacio en blanco
-  - Cuerpo breve y conciso
+  - Texto breve y conciso
   - Llamadas a la acción claras
 
 ### Límites de caracteres del preencabezamiento
@@ -83,7 +83,7 @@ Estas son algunas de las mejores prácticas que debe tener en cuenta a la hora d
 
 ## Tamaño del correo electrónico
 
-Asegúrese de limitar el tamaño de su correo electrónico. Los cuerpos de correo electrónico de más de 102 KB no sólo son extremadamente gravosos para los servidores Braze, sino que también son recortados por Gmail y otros clientes de correo electrónico. Intente que el tamaño de su correo electrónico no supere los 25 KB sólo de texto o 60 KB con imágenes. Te recomendamos encarecidamente que utilices nuestro cargador de imágenes para alojarlas y que hagas referencia a ellas en `href`.
+Asegúrese de limitar el tamaño de su correo electrónico. Los cuerpos de correo electrónico de más de 102 KB no solo suponen una carga excesiva para los servidores de Braze, sino que también son recortados por Gmail y otros clientes de correo electrónico. Intente que el tamaño de su correo electrónico no supere los 25 KB sólo de texto o 60 KB con imágenes. Te recomendamos encarecidamente que utilices nuestro cargador de imágenes para alojarlas y que hagas referencia a ellas en `href`.
 
 |   Solo texto   | Texto con imágenes |     Anchura del correo electrónico    |
 |:-------------:|:----------------:|:------------------:|
@@ -91,7 +91,7 @@ Asegúrese de limitar el tamaño de su correo electrónico. Los cuerpos de corre
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-Para guardar tu campaña o plantilla de correo electrónico, asegúrate de que el cuerpo de tu correo electrónico no supera los 400 KB.
+Para guardar tu campaña o plantilla de correo electrónico, asegúrate de que el cuerpo del mensaje no supere los 400 KB.
 {% endalert %}
 
 ## Longitud del texto

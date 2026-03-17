@@ -30,7 +30,7 @@ Navigieren Sie zur Analytics-Seite Ihrer Kampagne, um mit der Einrichtung Ihrer 
 
 Für eine geplante wiederkehrende Kampagne können Sie obere und untere Schwellenwerte für die Nachrichten festlegen, die bei jedem Versand der Kampagne gesendet werden. Für eine ausgelöste Kampagne können Sie obere und untere Schwellenwerte für die Anzahl der stündlich und täglich versendeten Nachrichten festlegen.
 
-Sie können eine E-Mail-Benachrichtigung, eine Webhook-Benachrichtigung oder beides einrichten. Webhook-Benachrichtigungen können sehr nützlich sein, da Sie damit eine Benachrichtigung an einen Slack-Kanal senden können. Weitere Informationen zur Integration von Kampagnen-Benachrichtigungen in Slack finden Sie in der Dokumentation von Slack zum [Versenden von Nachrichten über eingehende Webhooks](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/).
+Sie können eine E-Mail-Benachrichtigung, eine Webhook-Benachrichtigung oder beides einrichten. Webhook-Benachrichtigungen können sehr nützlich sein, da Sie damit eine Benachrichtigung an einen Slack-Kanal senden können. Weitere Informationen zur Integration von Kampagnenbenachrichtigungen in Slack finden Sie in der Dokumentation von Slack zum Thema [„Senden von Nachrichten mithilfe eingehender Webhooks](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/)“.
 
 {% alert note %}
 Wenn Sie Kampagnenwarnungen für zukünftige Kampagnen einstellen, können Sie Aktualisierungen vor Beginn und nach Ende der Kampagne erhalten. Dies liegt daran, dass Kampagnenwarnungen so lange gesendet werden, bis die Kampagne manuell gestoppt wird.

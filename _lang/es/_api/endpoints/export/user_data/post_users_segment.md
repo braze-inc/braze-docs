@@ -1,7 +1,7 @@
 ---
 nav_title: "PUBLICAR: Exportar perfil de usuario por segmento"
 article_title: "PUBLICAR: Exportar perfil de usuario por segmento"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
@@ -23,7 +23,7 @@ Cuando utilices este punto final, ten en cuenta lo siguiente:<br><br>1\. El camp
 Los datos de usuario se exportan como varios archivos de objetos JSON de usuario separados por nuevas líneas (como un objeto JSON por línea). Los datos se exportan a una URL generada automáticamente o a un contenedor de S3 si esta integración ya está configurada.
 
 {% alert important %}
-**Formato de salida de la exportación**: Cuando una exportación se realiza correctamente, **siempre** recibes un archivo `.txt` que contiene un archivo comprimido (archivo ZIP o GZIP), independientemente de la cantidad de datos de usuario exportados. Si la exportación falla, recibirás una notificación por correo electrónico. Configurar las credenciales de almacenamiento en la nube (S3, Azure o Google Cloud Storage) minimiza la posibilidad de fallos porque el tamaño de los datos no es un problema cuando se utiliza el almacenamiento en la nube.
+**Formato de salida de exportación**: Cuando una exportación se realiza correctamente y no has configurado las credenciales de almacenamiento en la nube, la respuesta HTTP incluye una URL para descargar un archivo comprimido (archivo ZIP o GZIP). Cuando se configuran las credenciales de almacenamiento en la nube (S3, Azure o Google Cloud Storage), Braze escribe la exportación directamente en tu contenedor y la respuesta no incluye una URL de descarga. Si la exportación falla, recibirás una notificación por correo electrónico. Configurar las credenciales de almacenamiento en la nube reduce la probabilidad de que se produzcan fallos en las exportaciones de gran tamaño.
 {% endalert %}
 
 Ten en cuenta que una empresa puede ejecutar como máximo una exportación por segmento con este punto final en un momento dado. Espera a que se complete la exportación antes de volver a intentarlo.
@@ -40,7 +40,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Detalles de la respuesta basados en credenciales
 
-Si has añadido tus credenciales de [S3][1], [Azure][2] o [Google Cloud Storage][3] a Braze, cada archivo se cargará en tu contenedor como un archivo ZIP con el formato de clave similar a `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Si utilizas Azure, asegúrate de que tienes marcada la casilla **Hacer de éste el destino predeterminado de exportación de datos** en la página del socio de Azure en Braze. Generalmente, Braze crea 1 archivo por cada 5.000 usuarios para optimizar el procesamiento. Exportar segmentos más pequeños dentro de un espacio de trabajo grande puede dar lugar a varios archivos. A continuación, puedes extraer los archivos y concatenar todos los archivos `json` en un único archivo si es necesario. Si especificas un `output_format` de `gzip`, entonces la extensión del archivo será `.gz` en lugar de `.zip`.
+Si has añadido tus credenciales [de S3][1], [Azure][2] o [Google Cloud Storage][3] a Braze, cada archivo se subirá a tu contenedor como un archivo ZIP con un formato de clave similar a `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Si utilizas Azure, asegúrate de que tienes marcada la casilla **Hacer de éste el destino predeterminado de exportación de datos** en la página del socio de Azure en Braze. Por lo general, Braze crea un archivo por cada 5000 usuarios para optimizar el procesamiento. Exportar segmentos más pequeños dentro de un espacio de trabajo grande puede dar lugar a varios archivos. A continuación, puedes extraer los archivos y concatenar todos los archivos `json` en un único archivo si es necesario. Si especificas un`output_format`  de `gzip`, entonces la extensión del archivo será`.gz`  en lugar de `.zip`.
 
 {% details Export pathing breakdown for ZIP %}
 **Formato ZIP:**
@@ -62,11 +62,11 @@ Si has añadido tus credenciales de [S3][1], [Azure][2] o [Google Cloud Storage]
 
 {% enddetails %}
 
-Le recomendamos encarecidamente que configure sus propias credenciales de S3 o Azure cuando utilice este punto final para aplicar sus propias políticas de bucket en la exportación. Si no tienes tus credenciales de almacenamiento en la nube, la respuesta a la solicitud proporciona la URL donde se puede descargar un archivo ZIP que contiene todos los archivos del usuario. La URL se convierte en una ubicación válida sólo cuando la exportación está lista.
+Le recomendamos encarecidamente que configure sus propias credenciales de S3 o Azure cuando utilice este punto final para aplicar sus propias políticas de bucket en la exportación. Si no tienes tus credenciales de almacenamiento en la nube, la respuesta a la solicitud proporciona la URL donde se puede descargar un archivo ZIP que contiene todos los archivos del usuario. La ubicación solo será válida una vez que la exportación esté lista.
 
 Ten en cuenta que si no proporcionas tus credenciales de almacenamiento en la nube, existe una limitación en la cantidad de datos que puedes exportar desde este punto final. Dependiendo de los campos que estés exportando y del número de usuarios, la transferencia del archivo puede fallar si es demasiado grande. Una buena práctica es especificar los campos que quieres exportar utilizando `fields_to_export` y especificar sólo los campos que necesitas para que el tamaño de la transferencia sea menor. Si obtienes errores al generar el archivo, considera la posibilidad de dividir tu base de usuarios en más segmentos basándote en un número de contenedor aleatorio (por ejemplo, crea un segmento en el que el número de contenedor aleatorio sea inferior a 1.000 o esté comprendido entre 1.000 y 2.000).
 
-En cualquiera de los dos casos, puedes proporcionar opcionalmente un `callback_endpoint` para que se te notifique cuando la exportación esté lista. Si se proporciona la dirección `callback_endpoint`, Braze realiza una solicitud de envío a la dirección proporcionada cuando la descarga está lista. El cuerpo del mensaje es "éxito":true. Si no has añadido credenciales de S3 a Braze, el cuerpo de la entrada tiene además el atributo `url` con la URL de descarga como valor.
+En cualquiera de los dos casos, puedes proporcionar opcionalmente un `callback_endpoint` para que se te notifique cuando la exportación esté lista. Si se proporciona`callback_endpoint` el , Braze realiza una solicitud de publicación a la dirección proporcionada cuando la descarga está lista. El cuerpo de la publicación es «success»:true. Si no has añadido las credenciales de S3 a Braze, el cuerpo de la publicación tendrá además el atributo`url`  con la URL de descarga como valor.
 
 Las bases de usuarios más grandes dan lugar a tiempos de exportación más largos. Por ejemplo, una aplicación con 20 millones de usuarios podría tardar una hora o más.
 
@@ -156,7 +156,7 @@ La siguiente es una lista de elementos `fields_to_export` válidos. El uso de `f
 | `language`            | Cadena          | Idioma del usuario en la norma ISO-639-1.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `last_coordinates`    | Matriz de flotantes | Ubicación más reciente del dispositivo del usuario, formateada como `[longitude, latitude]`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `last_name`           | Cadena          | Apellido del usuario.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `phone`               | Cadena          | Número de teléfono del usuario en formato E.164.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `phone`               | Cadena          | Número de teléfono del usuario en el formato en que se importó a Braze. Por ejemplo, si se recibe una solicitud para añadir un número de teléfono con el formato `1234567890`, se exportará con el mismo formato.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `purchases`           | Matriz           | Compras que este usuario ha realizado en los últimos 90 días.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | `push_tokens`         | Matriz           | Información sobre los tokens de notificaciones push del usuario.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `random_bucket`       | Entero         | [Número de contenedor aleatorio]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event) del usuario, utilizado para crear segmentos uniformemente distribuidos de usuarios aleatorios.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -168,10 +168,10 @@ La siguiente es una lista de elementos `fields_to_export` válidos. El uso de `f
 
 ## Recordatorios importantes
 
-- Los campos de `custom_events`, `purchases`, `campaigns_received`, y `canvases_received` sólo contienen datos de los últimos 90 días.
-- Tanto `custom_events` como `purchases` contienen campos para `first` y `count`. Ambos campos reflejan información de todos los tiempos, y no se limitan a los datos de los últimos 90 días. Por ejemplo, si un usuario concreto realizó el evento por primera vez hace 90 días, esto se refleja con precisión en el campo `first`, y el campo `count` también tiene en cuenta los eventos ocurridos antes de los últimos 90 días.
-- El número de exportaciones de segmentos simultáneas que una empresa puede ejecutar en el nivel de punto final está limitado a 100. Los intentos que superan este límite provocan un error.
-- Si se intenta exportar un segmento por segunda vez mientras el primer trabajo de exportación sigue en ejecución, se produce un error 429.
+- Los campos ,`custom_events` `purchases`,`campaigns_received`  y  solo`canvases_received` contienen datos de los últimos 90 días.
+- Tanto `custom_events` como `purchases` contienen campos para `first` y `count`. Ambos campos reflejan información de todo el tiempo y no se limitan a los datos de los últimos 90 días. Por ejemplo, si un usuario concreto realizó el evento por primera vez hace 90 días, esto se refleja con precisión en el`first`campo , y el`count`campo también tiene en cuenta los eventos que se produjeron antes de los últimos 90 días.
+- El número de exportaciones de segmentos simultáneas que una empresa puede ejecutar en el nivel de punto final está limitado a 100. Los intentos que superen este límite darán lugar a un error.
+- Si intentas exportar un segmento por segunda vez mientras el primer trabajo de exportación aún se está ejecutando, se produce un error 429.
 
 ## Respuesta
 
@@ -183,13 +183,13 @@ La siguiente es una lista de elementos `fields_to_export` válidos. El uso de `f
 }
 ```
 
-Una vez que la URL está disponible, sólo es válida durante unas horas. Por ello, te recomendamos encarecidamente que añadas tus propias credenciales de S3 a Braze.
+Una vez que la URL está disponible, solo es válida durante unas pocas horas. Por ello, te recomendamos encarecidamente que añadas tus propias credenciales de S3 a Braze.
 
-Si ves `object_prefix` en la respuesta de tu API y ninguna URL para descargar los datos, significa que ya tienes un contenedor de S3 de Amazon configurado para este punto final. Cualquier dato exportado utilizando este endpoint va directamente a tu contenedor de S3.
+Si ves`object_prefix`  en la respuesta de la API y no hay ninguna URL para descargar los datos, significa que ya tienes un contenedor de S3 configurado para este punto final. Cualquier dato exportado mediante este punto final se envía directamente a tu contenedor de S3.
 
 ## Ejemplo de archivo de exportación de usuario
 
-Objeto de exportación del usuario (Braze incluye los menos datos posibles; si falta un campo en el objeto, debe suponerse que es nulo o está vacío):
+Objeto de exportación de usuarios (Braze incluye la menor cantidad de datos posible; si falta un campo en el objeto, se debe suponer que es nulo o está vacío):
 
 {% tabs %}
 {% tab All fields %}

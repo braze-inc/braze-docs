@@ -16,7 +16,7 @@ tool: Currents
 より具体的なユースケースがあり、BrazeにCurrentsインスタンスのサービスを依頼したい場合は、Brazeアカウントマネージャーに連絡し、Braze Data Professional Servicesについて尋ねてください。
 {% endalert %}
 
-## CDI の仕組み
+## 仕組み
 
 抽出、読み込み、変換 (ELT) プロセスは、データを [Snowflake](https://www.snowflake.com/) に移動する自動プロセスです。これにより、[Braze Looker Blocks](https://marketplace.looker.com/marketplace/directory)を使用して Looker でそのデータを可視化し、インサイトやフィードバックをキャンペーン、キャンバス、およびセグメントで活用できます。
 

@@ -2,7 +2,7 @@
 nav_title: "PUT:ダッシュボードのユーザーアカウントを更新する"
 article_title: "PUT:更新ダッシュボードユーザーアカウント"
 alias: /post_update_existing_user_account/
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 4
 layout: api_page
 page_type: reference
@@ -33,9 +33,9 @@ description: "この記事では、既存のダッシュボードのユーザー
 
 ## パスパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメータ | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
-| `id` | 必須 | 文字列 | ユーザーのリソースID。このパラメータは、`POST` `/scim/v2/Users/` または`GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` メソッドによって返される。 |
+| `id` | 必須かどうか | 文字列 | ユーザーのリソースID。このパラメータは、`POST` `/scim/v2/Users/` または`GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` メソッドによって返される。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 要求本文:
@@ -47,7 +47,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 ```json
 {
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
-    "name": {"name": {
+    "name": {
         "givenName": "Test",
         "familyName": "User"
     },
@@ -90,15 +90,15 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 
 | パラメーター | 必須 | データタイプ | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `schemas` | 必須 | 文字列の配列 | ユーザーオブジェクトに期待される SCIM 2.0 スキーマ名。 |
+| `schemas` | 必須かどうか | 文字列の配列 | ユーザーオブジェクトに期待される SCIM 2.0 スキーマ名。 |
 | `name` | 必須 | JSONオブジェクト | このオブジェクトには、ユーザーの姓と名が含まれます。 |
-| `department` | 必須 | 文字列 | [部門文字列のドキュメント]({{site.baseurl}}/scim_api_appendix/#department-strings)にある有効な部門文字列。 |
+| `department` | 必須かどうか | 文字列 | [部門文字列のドキュメント]({{site.baseurl}}/scim_api_appendix/#department-strings)にある有効な部門文字列。 |
 | `permissions` | 必須 | JSONオブジェクト | [権限オブジェクトのドキュメント]({{site.baseurl}}/scim_api_appendix/#permissions-object)で説明されている権限オブジェクト。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
 ## 例のリクエスト
-```json
+```bash
 curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
@@ -153,7 +153,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
         "roles": [
             {
                 "roleName": "Test Role",
-                "roleId": "519dafcdba23dfaae7,
+                "roleId": "519dafcdba23dfaae7",
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25789fabcded",
@@ -171,7 +171,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
             },
             {
                 "roleName": "Another Test Role",
-                "roleId": "23125dad23dfaae7,
+                "roleId": "23125dad23dfaae7",
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25adfabcded",
@@ -208,7 +208,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
 ### エラー状態
 このIDを持つユーザーがBrazeに存在しない場合、エンドポイントは次のように応答する：
 
-```json
+```http
 HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8
 
