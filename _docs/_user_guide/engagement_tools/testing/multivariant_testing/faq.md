@@ -46,7 +46,7 @@ Users are randomly assigned to a particular variant before receiving the campaig
 For example, let’s say we have a campaign or Canvas with three variants. If only Variant A and Variant B are changed or updated, then users in Variant C won’t be redistributed because Variant C's variant percentage wasn't changed. Control groups remain consistent if the variant percentage is unchanged. Users who previously received messages can’t enter the control group on a later send, nor can any user in the control group ever receive a message. 
 
 {% alert note %}
-A user can be marked as having "received" a message if they share a channel identifier (such as an email of phone number) with someone who received, opened, or clicked the message.
+A user can be marked as having "received" a message if they share a channel identifier (such as an email or phone number) with someone who received, opened, or clicked the message.
 {% endalert %}
 
 #### What about Experiment Paths?

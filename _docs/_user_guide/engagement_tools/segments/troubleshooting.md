@@ -84,7 +84,7 @@ If your campaign analytics count for *Message Sent* or *Unique Recipients* doesn
 
 2. **The campaign has re-eligibility set, so users can re-enter the campaign multiple times**<br><br>For example, let’s say an email campaign has re-eligibility set to zero minutes (users can re-enter the campaign as long as they meet the audience segment requirements), and the campaign has been running for over a month. The *Messages Sent* number in **Campaign Analytics** wouldn’t match the number in the segment because this field would include messages sent to duplicate users.<br><br>This is because Braze counts unique users as *Unique Daily Recipients*, or the number of users who received a particular message in a day. This means that re-eligible users will be counted more than once as a unique recipient because the "unique” window only lasts a day. This can result in the number of *Unique Daily Recipients* being higher than the number of user profiles in the CSV export. The user profiles in the CSV file will be truly unique.<br><br>
 
-3. **Users who share a channel identifier matched the filter**<br><br> The `Has received message from campaign X` fiter (and other "received" filters) can match users who share a channel identifier with someone who received, opened, or clicked the message.
+3. **Users who share a channel identifier matched the filter**<br><br> The `Has received message from campaign X` filter (and other "received" filters) can match users who share a channel identifier with someone who received, opened, or clicked the message.
 
 ### User is assigned to two apps despite logging a session in only one app
 
