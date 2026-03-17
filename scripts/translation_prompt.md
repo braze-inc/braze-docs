@@ -44,8 +44,8 @@ Preserve all of the following exactly as they appear in the English source:
 - **Tokens with underscores** (e.g., `user_id`, `campaign_name`) — preserve exactly
 - **Markdown link syntax structure** — translate the link text but preserve `[text](url)` structure and URLs
 - **Glossary filter identifiers** — on pages that use `glossary_tags` (e.g., `layout: glossary_page`):
-  - **For Japanese and Korean (non-Latin scripts):** preserve the following YAML values exactly as in the English source — do not translate them: the `glossary_tags` list (each `- name:` value), each `glossaries` entry `name`, and every `tags` list item. Non-Latin characters are stripped by Jekyll's `slugify` filter and the JavaScript `string_to_slug` function, producing empty or identical HTML IDs that break the filtering UI. Only translate the `description` values inside `glossaries` entries.
-  - **For Latin-script languages (de, es, fr, pt-br):** you may translate `glossary_tags` names, entry `name` values, and `tags` — but you **must** ensure that `glossary_tags` name values and corresponding entry `tags` values are **identical strings** so the filter/checkbox matching works correctly.
+  - **Non-Latin-script languages (e.g., Japanese, Korean, Chinese, Arabic, Thai, and any other language whose characters are not in the basic Latin alphabet):** preserve the following YAML values exactly as in the English source — do not translate them: the `glossary_tags` list (each `- name:` value), each `glossaries` entry `name`, and every `tags` list item. Non-Latin characters are stripped by Jekyll's `slugify` filter and the JavaScript `string_to_slug` function, producing empty or identical HTML IDs that break the filtering UI. Only translate the `description` values inside `glossaries` entries.
+  - **Latin-script languages (e.g., German, Spanish, French, Portuguese):** you may translate `glossary_tags` names, entry `name` values, and `tags` — but you **must** ensure that `glossary_tags` name values and corresponding entry `tags` values are **identical strings** so the filter/checkbox matching works correctly.
 
 ## Braze product terminology
 
