@@ -187,17 +187,17 @@ GO
 
 {:start="2"}
 
-2. Configura un servicio principal y concede los permisos adecuados. Si ya dispone de credenciales de una sincronización existente, puede reutilizarlas; sólo tiene que asegurarse de ampliar el acceso a la tabla de origen del catálogo. Para saber más sobre cómo crear una nueva entidad de seguridad de servicio y sus credenciales, consulta la página [Ingesta de datos en la nube]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views). 
+2. Configura un principal de servicio y concede los permisos adecuados. Si ya dispone de credenciales de una sincronización existente, puede reutilizarlas; sólo tiene que asegurarse de ampliar el acceso a la tabla de origen del catálogo. Para saber más sobre cómo crear una nueva entidad de seguridad de servicio y sus credenciales, consulta la página [Ingesta de datos en la nube]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views). 
 
 {:start="3"}
 3\. Si tienes políticas de red en vigor, debes dar acceso de red a Braze a tu instancia de Microsoft Fabric. Para ver una lista de IP, consulta la [Ingesta de datos en la nube]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
 {% tab S3 %}
-Configura tus archivos de origen en S3 proporcionando archivos JSON o CSV. Tenlo en cuenta:
+Configura tus archivos fuente en S3 proporcionando archivos JSON o archivos CSV. Ten en cuenta lo siguiente:
 
-- Los archivos no pueden incluir una columna `UPDATED_AT`   
-- Puedes incluir un campo opcional `DELETED` para marcar los elementos a eliminar 
+- Los archivos no pueden incluir una`UPDATED_AT`columna.  
+- Puedes incluir un campo `DELETED`opcional para marcar los elementos que deseas eliminar. 
 
 {% subtabs %}
 {% subtab JSON %}
@@ -216,14 +216,14 @@ ID,PAYLOAD,DELETED
 {% endsubtab %}
 {% endsubtabs %}
 
-Para más detalles sobre la configuración, consulta [Integraciones de almacenamiento de archivos]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
+Para obtener más información sobre la configuración, consulta [Integraciones de almacenamiento de archivos]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
 
 {% endtab %}
 {% endtabs %}
 
 ## Cómo funciona la integración
 
-Cada vez que se ejecute la sincronización, Braze extraerá todas las filas en las que `UPDATED_AT` sea igual o posterior a la última marca de tiempo sincronizada. Recomendamos crear una vista en el almacén de datos a partir de los datos del catálogo para establecer una tabla de origen que se actualice completamente cada vez que se ejecute una sincronización. Con las vistas, no tendrás que reescribir la consulta cada vez.
+Cada vez que se ejecuta la sincronización, Braze extraerá todas las filas en las que`UPDATED_AT`  sea igual o posterior a la última marca de tiempo sincronizada. Recomendamos crear una vista en el almacén de datos a partir de los datos del catálogo para establecer una tabla de origen que se actualice completamente cada vez que se ejecute una sincronización. Con las vistas, no tendrás que reescribir la consulta cada vez.
 
 Por ejemplo, si tiene una tabla de datos de productos (`product_catalog_1`) con `product_id` y tres atributos adicionales, podría sincronizar la siguiente vista:
 
@@ -307,4 +307,4 @@ FROM [braze].[product_catalog] ;
 
 - Los datos obtenidos de la integración se utilizarán para crear o actualizar elementos en el catálogo de destino basándose en la dirección `id` proporcionada.
 - Si DELETED está configurado como `true`, se borrará el elemento de catálogo correspondiente.
-- La sincronización no registrará puntos de datos, pero todos los datos sincronizados contarán para el uso total de tu catálogo; este uso se mide en función de los datos totales almacenados, por lo que no tienes que preocuparte de sincronizar sólo los datos modificados.
+- La sincronización no registrará puntos de datos, pero todos los datos sincronizados se contabilizarán en el uso total del catálogo; este uso se mide en función del total de datos almacenados, por lo que no es necesario que te preocupes por sincronizar solo los datos modificados.

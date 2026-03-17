@@ -96,11 +96,13 @@ After setting up the price drop notifications in a catalog, follow these steps t
 
 ### Liquid 사용
 
-가격이 하락한 카탈로그 항목에 대한 세부 정보를 템플릿화하려면 `canvas_entry_properties` Liquid 태그를 사용하여 `item_id`에 액세스할 수 있습니다. 
+가격이 하락한 카탈로그 항목에 대한 세부 정보를 템플릿화하려면 `context` Liquid 태그를 사용하여 `item_id`에 액세스할 수 있습니다. 
 
-Using {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} will return the ID of the item that dropped in price. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} will return the price value of the item before the update, and {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} will return the new price value after the update. 
+Using {%raw%}``{{context.${catalog_update}.item_id}}``{%endraw%} will return the ID of the item that dropped in price. {%raw%}``{{context.${catalog_update}.previous_value}}``{%endraw%} will return the price value of the item before the update, and {%raw%}``{{context.${catalog_update}.new_value}}``{%endraw%} will return the new price value after the update. 
 
-Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} at the top of your message, then use {%raw%}`{{items[0].<field_name>}}`{%endraw%} to access data about that item throughout the message.
+메시지의 맨 위에 Liquid 태그 {%raw%}``{% catalog_items <name_of_your_catalog> {{context.${catalog_update}.item_id}} %}``{%endraw%}를 사용한 다음, {%raw%}`{{items[0].<field_name>}}`{%endraw%}을 사용하여 해당 항목에 대한 데이터를 메시지 전반에 걸쳐 액세스합니다.
+
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
 {% multi_lang_include alerts/tip_alerts.md alert='catalog data images' %}
 
@@ -108,4 +110,4 @@ Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_en
 
 - 사용자는 90일 동안 구독됩니다. 항목의 가격이 90일 이내에 떨어지지 않으면 사용자는 구독에서 제거됩니다.
 - **구독한 모든 사용자에게 알림** 규칙을 사용할 때, Braze는 10분 동안 100,000명의 사용자에게 알림을 보냅니다.
-- Braze will process 10 requests to update catalog items per minute. 업데이트 엔드포인트는 요청당 50개의 항목 업데이트를 허용하며, 분당 최대 500개의 항목 업데이트를 지원하여 재고 알림을 트리거할 수 있습니다.
+- Braze will process 10 requests to update catalog items per minute. 업데이트 엔드포인트는 요청당 50개 항목 업데이트를 허용하며, 분당 최대 500개 항목 업데이트를 지원하여 재고 알림을 트리거할 수 있습니다.

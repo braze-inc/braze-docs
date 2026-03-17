@@ -1,5 +1,5 @@
 ---
-nav_title: Standorte &amp; Geoofences
+nav_title: Standorte und Geofences
 article_title: Standort &amp; Geofences für iOS
 platform: iOS
 page_order: 6
@@ -98,11 +98,11 @@ Damit die Ortung korrekt funktioniert, sollten Sie außerdem sicherstellen, dass
 
 ### Aktivieren Sie Geofences auf der Seite Standorte:
 
-![Die Geofence-Optionen auf der Seite Standorte von Braze.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
+![Die Geofence-Optionen auf der Braze-Standortseite.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
 ### Aktivieren Sie Geofences auf der Einstellungsseite:
 
-![Das Geofence-Kontrollkästchen auf den Braze-Einstellungsseiten.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
+![Das Kontrollkästchen „Geofence“ auf den Braze-Einstellungsseiten.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 
 ## Deaktivieren von automatischen Geofence-Anfragen
 

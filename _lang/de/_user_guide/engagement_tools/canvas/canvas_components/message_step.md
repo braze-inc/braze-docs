@@ -11,9 +11,9 @@ tool: Canvas
 
 # Nachricht 
 
-> Mit den Messaging-Schritten können Sie an jeder beliebigen Stelle in Ihrem Canvas eine eigenständige Nachricht hinzufügen.
+> Mit Nachrichten-Schritten können Sie eine eigenständige Nachricht an einer beliebigen Stelle in Ihrem Canvas einfügen.
 
-![Eine Nachricht mit dem Namen "Mittagspromo" über den Push-Kanal.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+![Eine Nachricht mit dem Titel „Mittagsaktion“, die über den Push-Kanal versendet wird.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 ## Erstellen einer Nachricht
 
@@ -22,7 +22,7 @@ Um eine Nachricht-Komponente zu erstellen, fügen Sie zunächst einen Schritt zu
 ### Schritt 1: Wählen Sie Ihren Messaging-Kanal aus
 
 Sie können aus den folgenden Messaging-Kanälen auswählen: 
-- Banner (im frühen Zugang)
+- Banner (im Early Access)
 - Content-Cards
 - E-Mail
 - LINE
@@ -32,7 +32,7 @@ Sie können aus den folgenden Messaging-Kanälen auswählen:
 - Webhook
 - WhatsApp
 
-![Eine Liste der verfügbaren Messaging-Kanäle, die Sie für den Schritt Nachricht auswählen können.]({% image_buster /assets/img/canvas_components/message_step2.png %})
+![Eine Liste der verfügbaren Messaging-Kanäle, die im Schritt „Nachricht“ ausgewählt werden können.]({% image_buster /assets/img/canvas_components/message_step2.png %})
 
 ### Schritt 2: Zustellungseinstellungen bearbeiten
 
@@ -63,20 +63,22 @@ Alle Nutzer:innen, die den Schritt „Nachricht“ eingeben, werden zum nächste
 Wenn ein aktionsbasiertes Canvas durch eine eingehende SMS-Nachricht ausgelöst wird, können Sie im ersten Schritt (Nachrichtenschritt) oder in einem Nachrichtenschritt, der unter einem Aktionspfadschritt verschachtelt ist, auf SMS-Eigenschaften verweisen. Im Schritt „Nachricht“ können Sie zum Beispiel `{{sms.${inbound_message_body}}}` oder `{{sms.${inbound_media_urls}}}` verwenden.
 {% endraw %}
 
-## Referenzieren von Canvas-Eingängen Eigenschaften
+## Kontexteigenschaften referenzieren
 
-Die Eingangs-Eigenschaften eines Canvas werden im **Zeitplan-Schritt** der Erstellung eines Canvas konfiguriert und geben den Auslöser an, der einen Nutzer:innen in ein Canvas bringt. Diese Eigenschaften können auch auf die Eigenschaften von Eingabe-Nutzdaten in API-ausgelösten Canvases zugreifen. Beachten Sie, dass das Objekt `canvas_entry_properties` maximal 50 KB groß sein darf. 
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
-Eingangs-Eigenschaften können in Liquid in jedem Schritt von Messaging verwendet werden. Verwenden Sie das folgende Liquid, wenn Sie auf diese Eingangs-Eigenschaften verweisen: {% raw %}``canvas_entry_properties${property_name}``{% endraw %}. Events müssen angepasste Events oder Kauf-Events sein, um auf diese Weise verwendet werden zu können.
+Die Eingangs-Eigenschaften werden im **Canvas**-Schritt beim Erstellen eines Canvas konfiguriert und geben den Auslöser an, der einen Nutzer:in in einen Canvas einträgt. Diese Eigenschaften können auch auf die Eigenschaften von Eingabe-Nutzdaten in API-ausgelösten Canvases zugreifen. Beachten Sie, dass das Objekt `context` maximal 50 KB groß sein darf.
+
+Eingangs-Eigenschaften können in Liquid in jedem Schritt von Messaging verwendet werden. Verwenden Sie das folgende Liquid, wenn Sie auf diese Eingangs-Eigenschaften verweisen: {% raw %}``{context.${property_name}}``{% endraw %}. Events müssen angepasste Events oder Kauf-Events sein, um auf diese Weise verwendet werden zu können.
 
 {% alert note %}
-Speziell für In-App-Nachricht-Kanäle gilt: `canvas_entry_properties` kann nur in Canvas referenziert werden.
+Speziell für In-App-Nachricht-Kanäle gilt: `context` kann nur in Canvas referenziert werden.
 {% endalert %}
 
-Verwenden Sie das folgende Liquid, wenn Sie auf diese Eingangs-Eigenschaften verweisen: {% raw %}``canvas_entry_properties${property_name}``{% endraw %}. Beachten Sie, dass es sich bei den Events um angepasste Events oder Kauf-Events handeln muss, um auf diese Weise verwendet werden zu können.
+Verwenden Sie das folgende Liquid, wenn Sie auf diese Eingangs-Eigenschaften verweisen: {% raw %}``context.${property_name}``{% endraw %}. Beachten Sie, dass es sich bei den Events um angepasste Events oder Kauf-Events handeln muss, um auf diese Weise verwendet werden zu können.
 
 {% raw %}
-Nehmen wir zum Beispiel die folgende Anfrage: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Sie können einer Nachricht mit dem Liquid `{{canvas_entry_properties.${product_name}}}` das Wort „Schuhe“ hinzufügen.
+Nehmen wir zum Beispiel die folgende Anfrage: `\"context\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Sie können einer Nachricht mit dem Liquid `{{context.${product_name}}}` das Wort „Schuhe“ hinzufügen.
 {% endraw %}
 
 Sie können auch [persistente Entry-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) in jedem Nachrichten-Schritt nutzen, um Ihre Nutzer:innen durch personalisierte Schritte in Ihrem Canvas-Workflow zu führen.
@@ -94,7 +96,7 @@ In Canvas können angepasste Event- und Kauf-Event-Eigenschaften in Liquid in je
 Im ersten Nachrichten-Schritt, der einem Aktionspfad folgt, können Sie `event_properties` verwenden, das sich auf das Event bezieht, das in diesem Aktionspfad referenziert wird. Zwischen dem Schritt „Aktionspfade“ und dem Schritt „Nachricht“ können weitere Schritte liegen (die keine anderen Aktionspfade oder Nachrichten sind). Beachten Sie, dass Sie nur dann auf `event_properties` zugreifen können, wenn Ihr Schritt „Nachricht“ auf einen Nicht-Alle-anderen-Pfad in einem Aktionspfad-Schritt zurückverfolgt werden kann.
 
 {% alert important %}
-Sie können `event_properties` nicht für den Lead-Nachrichtenschritt verwenden. Stattdessen müssen Sie `canvas_entry_properties` verwenden oder einen Aktionspfad-Schritt mit dem entsprechenden Event vor dem Schritt „Nachricht“ hinzufügen, der `event_properties` enthält.
+Sie können `event_properties` nicht für den Lead-Nachrichtenschritt verwenden. Stattdessen müssen Sie `context` verwenden oder einen Aktionspfad-Schritt mit dem entsprechenden Event vor dem Schritt „Nachricht“ hinzufügen, der `event_properties` enthält.
 {% endalert %}
 
 {% details Expand for original Canvas editor %}
@@ -102,8 +104,8 @@ Sie können `event_properties` nicht für den Lead-Nachrichtenschritt verwenden.
 Sie können Canvase nicht mehr mit dem Original-Editor erstellen oder duplizieren. Dieser Abschnitt ist nur zum Referenzieren verfügbar.
 
 - `event_properties` kann nicht in geplanten Vollschritten verwendet werden. Sie können jedoch `event_properties` im ersten vollständigen Schritt aktionsbasierter Canvase verwenden, auch wenn ein vollständiger Schritt geplant ist.
-- `canvas_entry_properties` kann nur im ersten vollständigen Schritt eines Canvas referenziert werden.
-- Speziell für In-App-Nachricht-Kanäle kann `canvas_entry_properties` im ursprünglichen Canvas-Editor referenziert werden, wenn Sie die persistenten Eingangs-Eigenschaften im Rahmen des früheren Early Access aktiviert haben.
+- `context` kann nur im ersten vollständigen Schritt eines Canvas referenziert werden.
+- Speziell für In-App-Nachricht-Kanäle kann `context` im ursprünglichen Canvas-Editor referenziert werden, wenn Sie die persistenten Eingangs-Eigenschaften im Rahmen des früheren Early Access aktiviert haben.
 
 {% enddetails %}
 

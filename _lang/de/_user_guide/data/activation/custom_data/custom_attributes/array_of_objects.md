@@ -21,6 +21,10 @@ description: "Dieser referenzierte Artikel behandelt die Verwendung eines Arrays
 
 Das Aktualisieren oder Entfernen von Artikeln in einem Array erfordert die Identifizierung des Artikels durch Schlüssel und Wert. Daher sollten Sie für jeden Artikel im Array einen eindeutigen Bezeichner angeben. Die Eindeutigkeit bezieht sich nur auf das Array und ist nützlich, wenn Sie bestimmte Objekte aus Ihrem Array aktualisieren und entfernen möchten. Dies wird von Braze nicht durchgesetzt.
 
+{% alert important %}
+Wenn ein verschachteltes angepasstes Attribut in Ihrer Anfrage ungültige Werte enthält (z. B. ungültige Zeitformate oder`null`Werte), werden alle Updates verschachtelter angepasster Attribute in der Anfrage von Braze aus der Verarbeitung ausgeschlossen. Dies gilt für alle verschachtelten Strukturen innerhalb dieses spezifischen Attributs. Bitte überprüfen Sie vor dem Senden, ob alle Werte innerhalb der verschachtelten angepassten Attribute gültig sind. Weitere Informationen finden Sie unter [Nutzer:innen erstellen und aktualisieren]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#how-does-userstrack-handle-invalid-nested-custom-attributes).
+{% endalert %}
+
 {% alert tip %}
 Weitere Informationen zur Verwendung von Objekt-Arrays für Nutzer:innen-Attribute finden Sie unter [Nutzer:innen-Attribute]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 {% endalert %}
@@ -170,9 +174,19 @@ Das folgende Beispiel zeigt, wie Sie ein beliebiges Objekt aus dem Array `pets` 
 {% endtab %}
 {% endtabs %}
 
+### Bearbeitungsauftrag
+
+Wenn eine einzelne`/users/track`Anfrage Operationen für dasselbe `$update`Array-Attribut enthält`$add`,`$remove` verarbeitet Braze diese in der folgenden Reihenfolge:
+
+1. `$add`
+2. `$remove`
+3. `$update`
+
+Da  vor  `$add`ausgeführt`$remove` wird, können Sie nicht  gefolgt von`$add`  als Upsert-Mechanismus innerhalb`$remove` einer einzelnen Anfrage verwenden. Zunächst wird `$add`die  verarbeitet, anschließend löscht`$remove` die  den Artikel. Um einen Upsert durchzuführen, senden Sie bitte die Daten`$remove`in einer separaten Anfrage vor dem Upsert`$add`.
+
 ### Zeitstempel
 
-Wenn Sie Felder wie Zeitstempel in ein Array von Objekten aufnehmen, verwenden Sie das Format `$time` anstelle von einfachen Strings oder Unix-Epochen-Ganzzahlen.
+Wenn Sie Felder wie Zeitstempel in ein Objekt-Array aufnehmen, verwenden Sie bitte das`$time`Format anstelle von einfachen Strings oder Unix-Epochen-Ganzzahlen.
 
 ```json
 {
@@ -194,7 +208,7 @@ Wenn Sie Felder wie Zeitstempel in ein Array von Objekten aufnehmen, verwenden S
 ```
 
 {% alert tip %}
-Weitere Informationen finden Sie unter [Verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
+Weitere Informationen finden Sie unter [verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
 {% endalert %}
 
 ## SDK Beispiel
@@ -579,12 +593,12 @@ Sie können ein Segment mit bis zu einer Ebene der Array-Schachtelung (Array inn
 
 ## Datenpunkte
 
-Datenpunkte werden unterschiedlich protokolliert, je nachdem, ob Sie eine Eigenschaft erstellen, aktualisieren oder entfernen.
+Datenpunkte werden unterschiedlich protokolliert, je nachdem, ob Sie eine Eigenschaft erstellen, ein Update durchführen oder entfernen.
 
 {% tabs local %}
 {% tab Create %}
 
-Die Erstellung eines neuen Arrays protokolliert einen Datenpunkt für jedes Attribut in einem Objekt. Dieses Beispiel kostet acht Datenpunkte - jedes Haustierobjekt hat vier Attribute und es gibt zwei Objekte.
+Beim Erstellen eines neuen Arrays wird für jedes Attribut in einem Objekt ein Datenpunkt protokolliert. Dieses Beispiel kostet acht Datenpunkte - jedes Haustierobjekt hat vier Attribute und es gibt zwei Objekte.
 
 ```json
 {
@@ -645,7 +659,7 @@ Beim Update eines bestehenden Arrays wird für jede hinzugefügte Eigenschaft ei
 {% endtab %}
 {% tab Remove %}
 
-Das Entfernen eines Objekts aus einem Array protokolliert einen Datenpunkt für jedes Entfernungskriterium, das Sie senden. Dieses Beispiel kostet drei Datenpunkte, auch wenn Sie mit dieser Anweisung möglicherweise mehrere Hunde entfernen.
+Das Entfernen eines Objekts aus einem Array protokolliert einen Datenpunkt für jedes von Ihnen übermittelte Entfernungskriterium. Dieses Beispiel kostet drei Datenpunkte, auch wenn Sie mit dieser Anweisung möglicherweise mehrere Hunde entfernen.
 
 ```json
 {

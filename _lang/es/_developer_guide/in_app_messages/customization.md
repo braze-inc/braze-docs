@@ -1,6 +1,6 @@
 ---
 nav_title: Personalizar mensajes
-article_title: Personaliza los mensajes dentro de la aplicación para el SDK de Braze
+article_title: Personalizar mensajes dentro de la aplicación para el SDK de Braze
 page_order: 0.1
 description: "Aprende a configurar mensajes dentro de la aplicación para el SDK de Braze."
 platform: 
@@ -10,9 +10,9 @@ platform:
   - Web
 ---
 
-# Personaliza los mensajes dentro de la aplicación
+# Personalizar mensajes dentro de la aplicación
 
-> Aprende a personalizar los mensajes dentro de la aplicación para el SDK de Braze. Para conocer técnicas de estilo avanzadas, consulta nuestro tutorial para [personalizar el estilo de los mensajes utilizando pares clave-valor]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).
+> Aprende a personalizar los mensajes dentro de la aplicación para el SDK de Braze. Para conocer técnicas de estilo avanzadas, consulta nuestro tutorial sobre cómo [personalizar el estilo de los mensajes mediante pares clave-valor]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).
 
 {% sdktabs %}
 {% sdktab web %}

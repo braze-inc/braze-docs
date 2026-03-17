@@ -1,12 +1,12 @@
-## Acerca de las tarjetas de contenido .NET MAUI
+## Acerca de las tarjetas de contenido de .NET MAUI
 
-El SDK de Braze .NET MAUI (antes Xamarin) incluye una fuente de tarjetas predeterminada para que empieces a utilizar las tarjetas de contenido. La fuente predeterminada de tarjetas incluida en el SDK de Braze gestionará todos los análisis de seguimiento, descarte de tarjetas y representación de las tarjetas de contenido de un usuario.
+El SDK Braze .NET MAUI (antes Xamarin) incluye una fuente de tarjetas predeterminada para que puedas empezar a utilizar las tarjetas de contenido. La fuente predeterminada de tarjetas incluida en el SDK de Braze gestionará todos los análisis de seguimiento, descarte de tarjetas y representación de las tarjetas de contenido de un usuario.
 
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
-## Tipos de tarjeta y propiedades
+## Tipos y propiedades de las tarjetas
 
-El SDK .NET MAUI de Braze tiene tres tipos únicos de tarjetas de contenido que comparten un modelo base: [Banner](#xamarin_banner), [Imagen subtitulada](#xamarin_captioned-image) y [Clásico](#xamarin_classic). Cada tipo hereda propiedades comunes de un modelo base y tiene las siguientes propiedades adicionales.
+El SDK Braze .NET MAUI tiene tres tipos de tarjetas de contenido únicos que comparten un modelo base: [Banner](#xamarin_banner), [imagen con pie de foto](#xamarin_captioned-image) y [clásico](#xamarin_classic). Cada tipo hereda propiedades comunes de un modelo base y tiene las siguientes propiedades adicionales.
 
 ### Modelo de tarjeta base
 
@@ -20,8 +20,8 @@ El SDK .NET MAUI de Braze tiene tres tipos únicos de tarjetas de contenido que 
 |`pinned`           | Si la tarjeta está anclada.                                                                                            |
 |`dismissed`        | Si el usuario ha descartado esta tarjeta. Marcar como descartada una tarjeta que ya ha sido descartada será un no-op. |
 |`dismissible`      | Si la tarjeta es descartable por el usuario.                                                                           |
-|`urlString`        | (Opcional) La cadena de URL asociada a la acción de clic en la tarjeta.                                                       |
-|`openUrlInWebView` | Si las URL de esta tarjeta deben abrirse en la Vista Web de Braze o no.                                                 |
+|`urlString`        | (Opcional) La cadena URL asociada a la acción de clic en la tarjeta.                                                       |
+|`openUrlInWebView` | Si las URL de esta tarjeta deben abrirse en Braze WebView o no.                                                 |
 |`isControlCard`    | Si esta tarjeta es una tarjeta de control. Las tarjetas de control no deben mostrarse al usuario.                                |
 |`extras`           | El mapa de extras clave-valor de esta tarjeta.                                                                             |
 |`isTest`           | Si esta tarjeta es una tarjeta de prueba.                                                                                      |

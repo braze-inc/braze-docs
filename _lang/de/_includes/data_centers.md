@@ -20,6 +20,13 @@
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endif %}
 
+{% if include.datacenters == "JP" %}
+| Dashboard URL | REST Endpunkt | SDK Endpunkt |
+| --- | --- | --- |
+| `https://dashboard.jp-01.braze.com` | `https://rest.jp-01.braze.com` | `sdk.jp-01.braze.com` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{% endif %}
+
 {% if include.datacenters == "US" %}
 | Dashboard URL | REST Endpunkt | SDK Endpunkt |
 | --- | --- | --- |
@@ -50,7 +57,8 @@
 |EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
 |EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
 |AU-01| `https://dashboard.au-01.braze.com`| `https://rest.au-01.braze.com` | `sdk.au-01.braze.com` |
-|ID-01| `https://dashboard.id-01.braze.com`| `https://rest.id-01.braze.com` | `sdk.id-01.braze.com` |
+|ID-01| `https://dashboard.id-01.braze.com`|`https://rest.id-01.braze.com`  |`sdk.id-01.braze.com`  |
+|JP-01|`https://dashboard.jp-01.braze.com`  |`https://rest.jp-01.braze.com`  |`sdk.jp-01.braze.com`  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 {% endif %}
 
@@ -126,6 +134,17 @@ Für die Instanz `ID-01` sind dies die entsprechenden IP-Adressen:
 - `16.78.14.134`
 - `16.78.162.208`
 - `43.218.73.35`
+{% endsubtab %}
+{% subtab Japan (JP) %}
+Für die Instanz `JP-01` sind dies die entsprechenden IP-Adressen:
+- `13.159.155.212`
+- `54.199.221.241`
+- `13.192.23.16`
+- `54.250.120.139`
+- `18.181.114.232`
+- `3.114.38.100`
+
+
 {% endsubtab %}
 {% endsubtabs %}
 {% endif %}

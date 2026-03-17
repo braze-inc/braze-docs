@@ -2,7 +2,7 @@
 
 ### El push no aparece después de cerrar la aplicación desde el conmutador de tareas
 
-Si observas que las notificaciones push ya no aparecen después de cerrar la aplicación desde el conmutador de tareas, es probable que tu aplicación esté en modo Depuración. .NET MAUI añade un andamiaje en modo Depuración que impide que las aplicaciones reciban notificaciones push después de que se cierre su proceso. Si ejecutas tu aplicación en Modo Lanzamiento, deberías ver push incluso después de cerrar la aplicación desde el conmutador de tareas.
+Si observas que las notificaciones push ya no aparecen después de cerrar la aplicación desde el selector de tareas, es probable que tu aplicación esté en modo de depuración. .NET MAUI añade un andamiaje en modo de depuración que impide que las aplicaciones reciban notificaciones push después de que se haya cerrado su proceso. Si ejecutas tu aplicación en Modo Lanzamiento, deberías ver push incluso después de cerrar la aplicación desde el conmutador de tareas.
 
 ### La fábrica de notificaciones personalizadas no se configura correctamente
 

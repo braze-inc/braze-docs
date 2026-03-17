@@ -9,7 +9,7 @@ description: "Aprende a añadir la interfaz JavaScript de Braze a tu aplicación
 
 # Mensajes HTML dentro de la aplicación
 
-> Aprende a añadir la interfaz JavaScript Braze a tu aplicación, para que puedas utilizar la API Braze para crear [mensajes HTML dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) en tus WebViews personalizadas.
+> Aprende a añadir la interfaz JavaScript de Braze a tu aplicación, para que puedas utilizar la API de Braze para crear [mensajes HTML dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) en tus WebViews personalizadas.
 
 {% sdktabs %}
 {% sdktab android %}

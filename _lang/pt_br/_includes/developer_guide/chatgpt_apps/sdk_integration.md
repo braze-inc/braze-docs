@@ -4,13 +4,13 @@
 
 ### Etapa 1: Obtenha o arquivo de integração do Braze
 
-Copie o arquivo `braze.js` do nosso [repositório de integração de apps ChatGPT](https://github.com/braze-inc/chatgpt-apps-braze-integration/blob/main/src/braze/braze.ts) para o seu projeto. Esse arquivo contém todas as funções auxiliares e de configuração do Braze SDK necessárias.
+Copie o arquivo `braze.js` do nosso repositório de [integração de apps ChatGPT](https://github.com/braze-inc/chatgpt-apps-braze-integration/blob/main/src/braze/braze.ts) para o seu projeto. Este arquivo contém toda a configuração necessária do SDK do Braze e funções auxiliares.
 
-### Etapa 2: Instalar dependências
+### Etapa 2: Instale as dependências
 
-Instale nosso Web SDK para obter o conjunto mais atualizado de recursos do Braze:
+Instale nosso SDK Web para o conjunto mais atualizado de recursos do Braze:
 
-**Para integração lado a lado com o cliente:**
+**Para integração do lado do cliente:**
 ```bash
 npm install @braze/web-sdk
 ```
@@ -24,19 +24,19 @@ npm install @braze/javascript-sdk
 
 ## Implementação
 
-Há duas maneiras de integrar o Braze ao seu app ChatGPT, dependendo do seu caso de uso:
+Existem duas maneiras de integrar o Braze com seu app ChatGPT, dependendo do seu caso de uso:
 
-### Integração lado a lado com o cliente (widgets personalizados)
+### Integração do lado do cliente (widgets personalizados)
 
 {% alert tip %}
-**Abordagem recomendada:** Esse método ativa experiências ricas de mensagens e rastreamento da interação do usuário em tempo real nos widgets do seu app ChatGPT.
+**Abordagem Recomendada:** Este método permite experiências de mensagens ricas e rastreamento de interações de usuários em tempo real dentro dos widgets do seu app ChatGPT.
 {% endalert %}
 
-Para exibir as mensagens do Braze e rastrear as interações dos usuários nos widgets personalizados do seu app ChatGPT, use a integração do SDK da Web. Um exemplo completo de envio de mensagens pode ser encontrado em nosso repositório de amostras [aqui](https://github.com/braze-inc/chatgpt-apps-braze-integration/tree/main/src/inbox).
+Para exibir mensagens do Braze e rastrear interações de usuários dentro dos widgets personalizados do seu app ChatGPT, use a integração do SDK Web. Um exemplo completo de mensagens pode ser encontrado em nosso repositório de amostras [aqui](https://github.com/braze-inc/chatgpt-apps-braze-integration/tree/main/src/inbox).
 
-#### Configurar metadados do widget
+#### Configure os metadados do widget
 
-Adicione os seguintes metadados ao arquivo do servidor MCP para permitir domínios do Braze, certificando-se de atualizar o domínio CDN com base em [sua região](https://www.braze.com/docs/developer_guide/platforms/web/content_security_policy):
+Adicione os seguintes metadados ao seu arquivo de servidor MCP para permitir domínios do Braze, garantindo que você atualize o domínio CDN com base na [sua região](https://www.braze.com/docs/developer_guide/platforms/web/content_security_policy):
 
 ```javascript
 "openai/widgetCSP": {
@@ -50,9 +50,9 @@ Adicione os seguintes metadados ao arquivo do servidor MCP para permitir domíni
 }
 ```
 
-Substitua `YOUR-SDK-ENDPOINT` por seu endpoint real do SDK do Braze.
+Substitua `YOUR-SDK-ENDPOINT` pelo seu endpoint real do SDK do Braze.
 
-#### Configurar o gancho useBraze
+#### Configure o hook useBraze
 
 ```javascript
 import { useBraze } from "./utils/braze";
@@ -81,7 +81,7 @@ function YourWidget() {
 }
 ```
 
-#### Exibir cartões de conteúdo do Braze
+#### Exiba os Cartões de Conteúdo do Braze
 
 ```javascript
 const [cards, setCards] = useState([]);
@@ -104,7 +104,7 @@ useEffect(() => {
 }, []);
 ```
 
-#### Rastreamento de eventos do widget
+#### Rastreie eventos do widget
 
 ```javascript
 // Track user interactions within your widget
@@ -123,10 +123,10 @@ const handleItemInteraction = (itemId) => {
 };
 ```
 
-### Integração lado a lado com o servidor (servidor MCP)
+### Integração do lado do servidor (servidor MCP)
 
 <!-- For tracking events and purchases from your MCP server, add these code snippets to your server file (typically `server.js` or `server.ts`) where you handle ChatGPT app requests and tool calls. -->
-Se também precisar de uma integração lado a lado do servidor para a funcionalidade de envio de mensagens no seu servidor MCP, entre em contato com <span style="white-space:nowrap;">`mcp-product@braze.com`</span>. Para rastreamento de eventos e compras de seu servidor MCP, use nossa [API REST]({{site.baseurl}}/api/home).
+Se você também precisar de uma integração do lado do servidor para funcionalidade de envio de mensagens no seu servidor MCP, entre em contato <span style="white-space:nowrap;">`mcp-product@braze.com`</span>. Para rastreamento de eventos e compras do seu servidor MCP, use nossa [API REST]({{site.baseurl}}/api/home).
 
 <!-- #### Import the Braze functions
 

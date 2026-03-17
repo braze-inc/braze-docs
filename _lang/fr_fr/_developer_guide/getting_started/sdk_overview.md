@@ -5,7 +5,7 @@ description: "Cette article de référence d’onboarding fournit un aperçu tec
 page_order: 0
 ---
 
-# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} SDK aperçu pour les développeurs
+# [![Cours Braze ]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}[Learning](https://learning.braze.com/path/developer/sdk-integration-basics) \- Aperçu du SDK pour les développeurs
 
 > Avant de commencer à intégrer les SDK Braze, vous vous demandez peut-être exactement ce que vous concevez et intégrez. Vous pourriez être curieux de savoir comment le SDK peut être personnalisé afin de mieux répondre à vos besoins. Cet article peut vous aider à répondre à toutes vos questions concernant SDK. 
 
@@ -25,11 +25,11 @@ Les SDK Braze ont une empreinte négligeable. Nous modifions automatiquement le 
 
 ## Compatibilité SDK
 
-Le SDK de Braze est conçu pour se comporter au mieux et ne pas interférer avec les autres SDK présents dans votre application. Si vous rencontrez des problèmes que vous pensez être dus à une incompatibilité avec un autre SDK, contactez le service d'assistance de Braze.
+Le SDK de Braze est conçu pour se comporter au mieux et ne pas interférer avec les autres SDK présents dans votre application. Si vous rencontrez des difficultés qui pourraient être dues à une incompatibilité avec un autre SDK, veuillez contacter le service d'assistance Braze.
 
 ## Analyses par défaut et gestion de session
 
-Certaines données utilisateur sont collectées automatiquement par notre SDK, par exemple, Première application utilisée, Dernière application utilisée, Nombre total de sessions, Système d’exploitation de l’appareil, etc. Si vous suivez nos guides d'intégration pour mettre en œuvre nos SDK, vous pourrez profiter de cette [collecte de données par défaut]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Vérifier cette liste pour éviter de stocker plusieurs fois les mêmes informations sur les utilisateurs. À l'exception du début et de la fin de la session, toutes les autres données suivies automatiquement ne sont pas prises en compte dans l'utilisation de vos points de données.
+Certaines données utilisateur sont collectées automatiquement par notre SDK, par exemple, Première application utilisée, Dernière application utilisée, Nombre total de sessions, Système d’exploitation de l’appareil, etc. Si vous suivez nos guides d'intégration pour mettre en œuvre nos SDK, vous pourrez profiter de cette [collecte de données par défaut]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Vérifier cette liste pour éviter de stocker plusieurs fois les mêmes informations sur les utilisateurs. À l'exception du début et de la fin de session, toutes les autres données suivies automatiquement ne sont pas prises en compte dans votre utilisation des points de donnée.
 
 {% alert note %}
 Toutes nos fonctionnalités sont configurables, mais il est judicieux de mettre en œuvre le modèle de collecte de données par défaut.

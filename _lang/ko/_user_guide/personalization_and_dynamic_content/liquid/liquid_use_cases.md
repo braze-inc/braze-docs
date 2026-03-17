@@ -73,7 +73,7 @@ Exactly three years ago today we met for the first time!
 {% raw %}
 ```liquid
 {% assign this_week = 'now' | date: '%W' %}
-{% assign birthday_week = ${date_of_birth}  | date: '%W' %}
+{% assign birthday_week = {{${date_of_birth}}} | date: '%W' %}
 {% assign last_week = {{this_week}} | minus: 1 %}
 {% assign next_week = {{this_week}} | plus: 1 %}
 {% assign birthday_week_conversion = {{birthday_week}} | plus: 0 %}
@@ -283,7 +283,7 @@ you have {{ difference_days }} days left!
 {% assign difference_e = express_shipping_end | minus: today %}
 {% assign difference_e_days = difference_e | divided_by: 86400.00 | round %}
 {% assign difference_o = overnight_shipping_end | minus: today %}
-{% assign difference_o_days = difference | divided_by: 86400.00 | round %}
+{% assign difference_o_days = difference_o | divided_by: 86400.00 | round %}
 
 {% if today >= standard_shipping_start and today <= standard_shipping_end %}
 {% if difference_s_days == 0 %}
@@ -544,7 +544,7 @@ Hi, the offer is only valid today.
 
 - [일치하는 사용자 지정 속성을 기반으로 메시지 개인화하기](#attribute-matching)
 - [두 개의 사용자 지정 속성을 빼서 차액을 금전적 가치로 표시합니다.](#attribute-monetary-difference)
-- [사용자의 전체 이름이 first_name 필드에 저장되어 있는 경우 사용자의 이름을 참조합니다.](#attribute-first-name)
+- [사용자의 전체 이름이 first_name 필드에 저장되어 있는 경우 사용자의 이름을 참조하십시오.](#attribute-first-name)
 
 ### 일치하는 사용자 지정 속성을 기반으로 메시지 개인화하기 {#attribute-matching}
 
@@ -579,7 +579,7 @@ You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise
 ```
 {% endraw %}
 
-### 사용자의 전체 이름이 first_name 필드에 저장되어 있는 경우 사용자의 이름을 참조합니다. {#attribute-first-name}
+### 사용자의 전체 이름이 first_name 필드 {#attribute-first-name}에 저장되어 있는 경우 사용자의 이름을 참조하십시오.
 
 이 사용 사례는 사용자의 이름(이름과 성이 모두 단일 필드에 저장되어 있는 경우)을 캡처한 다음 이 이름을 사용하여 환영 메시지를 표시합니다.
 
@@ -657,7 +657,7 @@ Did you forget something in your shopping cart?
 ```liquid
 {% assign category = {{custom_attribute.${categories_purchased}}} %}
 {% assign uniq_cat = {{category | uniq }} %}
-{% if {{uniq_cat | size}} == 1%}
+{% if {{uniq_cat | size}} == 1 %}
 {{uniq_cat}}
 {% else %}
 {% abort_message("Purchase category doesn't exist") %}
@@ -1146,8 +1146,8 @@ Link your Hertz account to use Hertz Fast Lane.
 
 {% raw %}
 ```liquid
-{% assign interest = {{custom_attribute.${Buyer Interest}} | first } %}
-{% assign marketplace = {{{{interest}} | split: "" | reverse | join: "" |  truncate: 4, ""}} %}
+{% assign interest = {{custom_attribute.${Buyer Interest}}} | first %}
+{% assign marketplace = interest | split: "" | reverse | join: "" | truncate: 4, "" %}
 {% if {{marketplace}} == '3243' %}
 
 Your last marketplace search was on {{custom_attribute.${Last marketplace buyer interest} | date: '%d.%m.%Y'}}. Check out all of our new offers.
@@ -1330,11 +1330,11 @@ This is a message for Verizon users!
 SMS
 {% endapitags %}
 
-- [인바운드 SMS 키워드에 따라 다양한 메시지로 응답하기](#sms-keyword-response)
+- [수신 SMS 키워드에 따라 다른 메시지로 응답하십시오.](#sms-keyword-response)
 
-### 인바운드 SMS 키워드에 따라 다양한 메시지로 응답하기 {#sms-keyword-response}
+### 수신 SMS 키워드 {#sms-keyword-response}에 따라 다른 메시지로 응답하십시오.
 
-이 사용 사례는 동적 SMS 키워드 처리를 통합하여 다양한 메시지 카피로 특정 인바운드 메시지에 응답합니다. 예를 들어, 누군가 "START" 문자를 보낼 때와 "JOIN" 문자를 보낼 때 다른 응답을 보낼 수 있습니다.
+이 사용 사례는 특정 수신 메시지에 대해 다른 메시지 복사로 응답하기 위해 동적 SMS 키워드 처리를 통합합니다. 예를 들어, 누군가 "START"와 "JOIN"을 문자로 보낼 때 다른 응답을 보낼 수 있습니다.
 
 {% raw %}
 ```liquid
@@ -1362,6 +1362,7 @@ Thanks for joining our SMS program!
 시간대
 {% endapitags %}
 
+- [사용자의 시간대에 맞춘 템플릿](#users-time-zone)
 - [사용자의 시간대에 따라 메시지 맞춤 설정하기](#personalize-timezone)
 - [사용자 지정 속성에 CST 표준 시간대 추가하기](#time-append-cst)
 - [타임스탬프 삽입](#time-insert-timestamp)
@@ -1369,6 +1370,37 @@ Thanks for joining our SMS program!
 - [사용자 현지 시간대의 특정 시간대에 반복되는 인앱 메시지 캠페인을 전송](#time-reocurring-iam-window)
 - [사용자의 현지 시간대에 따라 평일과 주말에 서로 다른 메시지 보내기](#time-weekdays-vs-weekends)
 - [사용자의 현지 시간대에 따라 다른 시간대에 다른 메시지 보내기](#time-of-day)
+
+### 사용자의 시간대에 맞춘 템플릿 {#users-time-zone}
+
+기본적으로 Liquid의 날짜와 시간은 협정 세계시(UTC)로 렌더링됩니다. 사용자의 로컬 시간대에 날짜와 시간을 표시하려면 `time_zone` 필터와 `date` 필터를 사용하십시오.
+
+#### 로컬 날짜 및 시간 할당
+
+사용자의 로컬 시간대에서 현재 날짜와 시간을 반영하는 변수를 할당하려면 다음 형식을 사용하십시오:
+
+{% raw %}
+```liquid
+{% assign local_date_time = 'now' | time_zone:{{${time_zone}}} | date: '%B %e, %Y' %}
+{{local_date_time}}
+```
+{% endraw %}
+
+- `now`: 이것은 현재 날짜와 시간을 UTC로 가져옵니다.
+- `time_zone`: 이것은 {% raw %}`{{${time_zone}}}`{% endraw %} 개인화 태그를 사용하여 기본 속성에서 사용자의 로컬 시간대를 가져옵니다.
+- `date`: 이것은 사용자의 로컬 날짜와 시간을 귀하의 사양에 맞게 형식화합니다. 이전 예제에서 시스템은 "2026년 2월 26일"과 같은 형식의 문자열을 표시합니다. 더 많은 형식 옵션은 [strftime.net](strftime.net)를 참조하십시오.
+
+#### 커스텀 속성에 사용자의 시간대 적용
+
+다음과 같이 커스텀 속성에 `time_zone` 필터를 적용할 수 있습니다:
+
+{% raw %}
+```liquid
+{{custom_attribute.${date_time_attribute} | time_zone: {{${time_zone}}} | date: '%a, %b %e, %Y'}}
+```
+{% endraw %}
+
+이것은 `date_time_attribute`를 주의 약어 형식으로 출력한 다음, 약어 월, 일 및 네 자리 연도로 이어집니다.
 
 ### 사용자의 시간대에 따라 메시지 맞춤 설정하기 {#personalize-timezone}
 
@@ -1548,7 +1580,7 @@ Here's an overview of what your spending looked like in {{month}}.
 ```liquid
 {% assign last_month_name = 'now' | date: "%Y-%m-01" | date: '%s' | minus: 1 | date: "%B" %}
 
-Here's an overview of what your spending looked like in {{month}}.
+Here's an overview of what your spending looked like in {{last_month_name}}.
 ```
 {% endraw %}
 
@@ -1614,10 +1646,10 @@ The date is correct
 
 {% comment %}Assign the correct number of days if the current month is February, taking into account leap years.{% endcomment %}
 
-{% assign leap_year_remainder = {{current_year | modulo: 4 }} != "0" %}
+{% assign leap_year_remainder = current_year | modulo: 4 %}
 {% if leap_year_remainder == 0 and current_month == "Feb" %}
 {% assign last_day_of_month = 29 %}
-{% elsif leap_year_remainder != "0" and current_month == "Feb" %}
+{% elsif current_month == "Feb" %}
 {% assign last_day_of_month = 28 %}
 {% endif %}
 

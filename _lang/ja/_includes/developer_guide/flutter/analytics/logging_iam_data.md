@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/flutter.md %}
 
-## メッセージデータを記録する
+## ログメッセージデータの記録
 
 `BrazeInAppMessage` を使用して分析をログに記録するには、インスタンスを目的の分析関数に渡します。
 
@@ -19,9 +19,9 @@ braze.logInAppMessageImpression(inAppMessage);
 braze.logInAppMessageButtonClicked(inAppMessage, 0);
 ```
 
-## メッセージデータにアクセスする
+## メッセージデータへのアクセス
 
-Flutterアプリでアプリ内メッセージデータにアクセスするために、`BrazePlugin` 、[Dart Streamsを](https://dart.dev/tutorials/language/streams)使ったアプリ内メッセージデータの送信をサポートしている。
+Flutterアプリでアプリ内メッセージデータにアクセスするには、[Dart Streams](https://dart.dev/tutorials/language/streams)を使用してアプリ内メッセージデータを送信する機能を`BrazePlugin`サポートしている。
 
 `BrazeInAppMessage` オブジェクトは、`uri`、`message`、`header`、`buttons`、`extras` などを含む、ネイティブモデルオブジェクトで使用可能なフィールドのサブセットをサポートします。
 
@@ -56,7 +56,7 @@ inAppMessageStreamSubscription.cancel();
 {% tab iOS %}
 {% subtabs %}
 
-アプリ内メッセージデータを転送するには、2つの方法がある：
+アプリ内メッセージデータは、次のいずれかの方法で転送できる：
 
 {% subtab UI Delegate %}
 
@@ -88,7 +88,7 @@ class CustomInAppMessagePresenter: BrazeInAppMessageUI {
 {% endtab %}
 {% endtabs %}
 
-### ステップ 3:アプリ内メッセージのコールバックを再生する（オプション）
+### ステップ 3:アプリ内メッセージのコールバックを再実行する（任意）
 
 コールバックが利用可能になる前にトリガーされたアプリ内メッセージを保存し、設定後に再生するには、`BrazePlugin` の初期化時に次のエントリを `customConfigs` マップに追加します。
 ```dart

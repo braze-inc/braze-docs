@@ -1,15 +1,15 @@
 ---
-nav_title: "POST: Criar chave de autenticação do SDK"
-article_title: "POST: Criar Chave de Autenticação do SDK"
+nav_title: "POST: Crie a chave de autenticação do SDK"
+article_title: "POST: Crie a chave de autenticação do SDK"
 search_tag: Endpoint
 page_order: 0
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o endpoint Braze da Chave de Autenticação do SDK Criar."
+description: "Este artigo descreve os detalhes sobre o endpoint Braze da chave de autenticação do SDK."
 ---
 
 {% api %}
-# Criar chave de autenticação do SDK
+# Crie a chave de autenticação do SDK
 {% apimethod post %}
 /app_group/sdk_authentication/create
 {% endapimethod %}
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Exemplo de solicitação
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_authentication/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -82,7 +82,7 @@ Este endpoint possui as seguintes regras de validação:
 
 - Você pode ter até 3 chaves de autenticação do SDK por app.
 - A string da chave pública RSA deve ser uma chave pública RSA válida no formato adequado.
-- O `app_id` deve ser um identificador de API de app válido.
+- O `app_id` deve ser um identificador de API do app válido.
 - A descrição não pode estar vazia.
 
 {% endapi %}

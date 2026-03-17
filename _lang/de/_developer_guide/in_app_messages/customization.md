@@ -1,6 +1,6 @@
 ---
 nav_title: Nachrichten anpassen
-article_title: In-App-Nachrichten für das Braze SDK anpassen
+article_title: Anpassen von In-App-Nachrichten für das Braze SDK
 page_order: 0.1
 description: "Erfahren Sie, wie Sie In-App-Nachrichten für das Braze SDK einrichten können."
 platform: 
@@ -10,9 +10,9 @@ platform:
   - Web
 ---
 
-# In-App-Nachrichten anpassen
+# Anpassen von In-App-Nachrichten
 
-> Erfahren Sie, wie Sie In-App-Nachrichten für das Braze SDK anpassen können. Für fortgeschrittene Styling-Techniken sehen Sie sich unser Tutorial zur [Anpassung des Nachrichten-Styles mit Hilfe von Schlüssel-Wert-Paaren]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling) an.
+> Erfahren Sie, wie Sie In-App-Nachrichten für das Braze SDK anpassen können. Für fortgeschrittene Formatierungstechniken empfehlen wir Ihnen unser Tutorial zur [Anpassung der Nachrichtenformatierung mithilfe von Schlüssel-Wert-Paaren]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).
 
 {% sdktabs %}
 {% sdktab web %}

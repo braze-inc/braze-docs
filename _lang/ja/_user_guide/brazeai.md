@@ -22,7 +22,7 @@ guide_featured_list:
   - name: コンテンツオプティマイザー
     link: /docs/user_guide/brazeai/content_optimizer/
     image: /assets/img/braze_icons/image-user-check.svg
-  - name: デシジョン・スタジオ
+  - name: Decisioning Studio
     link: /docs/user_guide/brazeai/decisioning_studio/
     image: /assets/img/braze_icons/stars-03.svg
   - name: 生成 AI
@@ -31,7 +31,7 @@ guide_featured_list:
   - name: Intelligence Suite
     link: /docs/user_guide/brazeai/intelligence_suite/
     image: /assets/img/braze_icons/clock.svg
-  - name: アイテムレコメンデーション
+  - name: 項目のレコメンデーション
     link: /docs/user_guide/brazeai/item_recommendations/
     image: /assets/img/braze_icons/hearts.svg
   - name: オペレータ

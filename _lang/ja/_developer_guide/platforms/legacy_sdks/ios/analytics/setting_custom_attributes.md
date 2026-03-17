@@ -1,6 +1,6 @@
 ---
 nav_title: カスタム属性を設定する
-article_title: iOSのカスタム属性を設定する
+article_title: iOS向けにカスタム属性を設定する
 platform: iOS
 page_order: 3
 description: "このリファレンス記事では、iOS アプリケーションでカスタム属性を設定する方法を説明します。"
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# iOSのカスタム属性を設定する
+# iOS向けにカスタム属性を設定する
 
 Braze には、ユーザーに属性を割り当てるメソッドが用意されています。ダッシュボード上のこれらの属性に従って、ユーザーのフィルター処理とセグメント化を行うことができます。
 
@@ -157,7 +157,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 
 ### 配列値のカスタム属性
 
-[カスタム属性配列]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)内の要素の最大数は、デフォルトで 25 に設定されています。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。個々の配列の最大数は、100 まで増やすことができます。この上限を引き上げる場合は、顧客保守マネージャーにお問い合わせください。 
+[カスタム属性配列]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)内の要素の最大数は、デフォルトで 25 に設定されています。要素数が最大値を超える配列は、最大要素数を含むように切り詰められる。個々の配列の最大値は500まで増やせる。この制限を500以上に引き上げるには、Brazeの顧客サクセスマネージャーに連絡すること。
 
 
 {% tabs %}

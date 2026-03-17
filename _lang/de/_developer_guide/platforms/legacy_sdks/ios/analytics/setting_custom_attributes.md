@@ -1,6 +1,6 @@
 ---
 nav_title: Angepasste Attribute festlegen
-article_title: Angepasste Attribute für iOS festlegen
+article_title: Benutzerdefinierte Attribute für iOS festlegen
 platform: iOS
 page_order: 3
 description: "Dieser Referenzartikel beschreibt, wie Sie angepasste Attribute in Ihrer iOS-Anwendung festlegen."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Angepasste Attribute für iOS einstellen
+# Angepasste Attribute für iOS festlegen
 
 Braze bietet Methoden für die Zuweisung von Attributen an Benutzer. Auf dem Dashboard können Sie Ihre Benutzer nach diesen Attributen filtern und segmentieren.
 
@@ -157,7 +157,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 
 ### Benutzerdefiniertes Attribut mit einem Array-Wert
 
-Die maximale Anzahl von Elementen in [benutzerdefinierten Attribut-Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) ist standardmäßig auf 25 festgelegt. Arrays, die die maximale Anzahl von Elementen überschreiten, werden so abgeschnitten, dass sie die maximale Anzahl von Elementen enthalten. Das Maximum für einzelne Arrays kann auf bis zu 100 erhöht werden. Wenn Sie diese Höchstgrenze erhöhen möchten, wenden Sie sich an Ihren Manager:in für den Kundendienst. 
+Die maximale Anzahl von Elementen in [benutzerdefinierten Attribut-Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) ist standardmäßig auf 25 festgelegt. Arrays, die die Höchstzahl an Elementen überschreiten, werden gekürzt, um die Höchstzahl an Elementen zu enthalten. Die maximale Anzahl einzelner Arrays kann auf bis zu 500 erhöht werden. Um dieses Limit auf über 500 zu erhöhen, wenden Sie sich bitte an Ihren Braze-Customer-Success-Manager.
 
 
 {% tabs %}

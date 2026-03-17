@@ -1,12 +1,12 @@
 ---
 nav_title: Salesforce Sales Cloud
-article_title: Verwalten Sie Leads mit Salesforce Sales Cloud
+article_title: Leads mit Salesforce Sales Cloud verwalten
 page_order: 3
 page_type: reference
 description: "Erfahren Sie, wie Sie mit Braze-Webhooks über den Endpunkt Salesforce sobjects/Lead Leads in Salesforce Sales Cloud erstellen und aktualisieren können."
 ---
 
-# Verwalten Sie Leads mit Salesforce Sales Cloud
+# Leads mit Salesforce Sales Cloud verwalten
 
 > [Salesforce](https://www.salesforce.com/) ist eine der weltweit führenden cloudbasierten Customer Relationship Management (CRM)-Plattformen, die Unternehmen bei der Verwaltung ihres gesamten Vertriebsprozesses unterstützt, einschließlich Lead-Generierung, Opportunity Tracking und Account Management.<br><br>Auf dieser Seite wird gezeigt, wie Sie mit Braze-Webhooks über eine von der Community vorgeschlagene Integration Leads in Salesforce Sales Cloud erstellen und aktualisieren können.
 

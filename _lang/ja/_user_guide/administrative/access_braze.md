@@ -4,7 +4,7 @@ article_title: Braze へのアクセス
 page_order: 0
 layout: dev_guide
 guide_top_header: "Braze へのアクセス"
-guide_top_text: "Brazeアカウントやダッシュボードへのアクセスや操作方法を学習する。このセクションでは、アカウント・アクセス、シングルサインオン、ダッシュボード・ナビゲーション、サポートを受ける方法について説明する。"
+guide_top_text: "Brazeアカウントやダッシュボードへのアクセス方法と操作方法を学習する。このセクションでは、アカウントへのアクセス、シングルサインオン、ダッシュボードの操作方法、サポートの受け方について説明する。"
 
 page_type: reference
 description: "このランディングページには、Braze アカウントまたはダッシュボードへのアクセスに関する記事がまとめられています。ここでは、SSO、ログイン、Braze インスタンス、SDK エンドポイント、パスワードのリセットなどに関するリソースを見つけることができます。"
@@ -23,7 +23,7 @@ guide_featured_list:
 - name: API と SDK のエンドポイント
   link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
   image: /assets/img/braze_icons/navigation-pointer-01.svg
-- name: ダッシュボード
+- name: Brazeダッシュボード
   link: /docs/user_guide/administrative/access_braze/braze_dashboard/
   image: /assets/img/braze_icons/browser.svg
 - name: 製品ポータル
@@ -41,9 +41,9 @@ guide_featured_list:
 
 ## 関連リソース
 
-ユーザー、ワークスペース、チームの管理などの管理タスクについては、こちらを参照のこと：
-- [Brazeユーザーをマネージャーする]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
-- [ワークスペースを作成・管理する]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/)
+ユーザーやワークスペース、チームの管理といった管理タスクについては、以下を参照せよ：
+- [Brazeユーザーを管理する]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
+- [ワークスペースを作成し管理する]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/)
 - [チーム]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)
 
 <br>

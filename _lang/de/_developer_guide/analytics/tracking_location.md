@@ -1,12 +1,12 @@
 ---
-nav_title: Tracking des Standorts
-article_title: Tracking des Standorts über das Braze SDK
+nav_title: Standort verfolgen
+article_title: Standort-Tracking über das Braze SDK
 page_order: 3.4
 description: "Lernen Sie, wie Sie Standorte mit dem Braze SDK tracken können."
 
 ---
 
-# Tracking des Standorts
+# Standort verfolgen
 
 > Lernen Sie, wie Sie Standorte mit dem Braze SDK tracken können.
 
@@ -21,5 +21,9 @@ description: "Lernen Sie, wie Sie Standorte mit dem Braze SDK tracken können."
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/analytics/tracking_location.md %}
+{% endsdktab %}
+
+{% sdktab react native %}
+{% multi_lang_include developer_guide/react_native/analytics/tracking_location.md %}
 {% endsdktab %}
 {% endsdktabs %}

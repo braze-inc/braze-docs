@@ -5,7 +5,7 @@ article_title: Begriffe zum Thema Braze
 
 layout: glossary_page
 glossary_top_header: "Begriffe zum Kennenlernen"
-glossary_top_text: "Diese Begriffe sollen Ihnen helfen, Ihre Reise zu einer besseren Bindung von Kund:innen und Nutzern:innen mit Braze zu beginnen. Lesen Sie dies, bevor Sie mit Ihrem Onboarding beginnen."
+glossary_top_text: "Diese Bedingungen sollen Ihnen dabei helfen, mit Braze eine bessere Kunden- und Nutzerbindung aufzubauen. Bitte lesen Sie dies, bevor Sie mit dem Onboarding beginnen."
 page_type: glossary
 description: "Dieses Glossar enthält wichtige Begriffe, die Sie während des Onboarding-Prozesses bei Braze kennen sollten."
 

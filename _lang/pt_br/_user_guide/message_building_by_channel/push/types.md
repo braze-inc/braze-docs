@@ -8,7 +8,7 @@ channel: push
 
 layout: glossary_page
 glossary_top_header: "Tipos de notificações por push"
-glossary_top_text: "Há muitos tipos de notificações por push que você pode usar para interagir com seus clientes. Elas podem ser reduzidas por canal e usadas para atender às necessidades de muitos usuários diferentes. É possível definir a maioria dessas configurações em suas campanhas push, mas há notas nas descrições a seguir que indicarão se são necessárias configurações de back-end e quais são elas."
+glossary_top_text: "Existem muitos tipos de notificações por push que você pode usar para interagir com seus clientes. Essas podem ser restringidas por canal e usadas para atender às necessidades de muitos usuários diferentes. Você pode configurar a maioria dessas configurações em suas campanhas de Push, mas há notas nas descrições a seguir que indicarão se alguma configuração de backend é necessária e quais podem ser."
 
 glossary_tag_name: Channels
 glossary_filter_text: "Select any of the following channels to narrow Push Type options."
@@ -53,7 +53,7 @@ glossaries:
       - iOS
       - Android
   - name: "Notificações por push provisórias para iOS"
-    description: "Introduzida pela Apple no iOS 12, a autorização provisória ocorre automaticamente na instalação de apps para iOS, permitindo que as marcas enviem notificações silenciosas sem exibir um prompt por push aos usuários. Quando o push silencioso for enviado e visualizado na bandeja de notificações do dispositivo, os usuários terão a opção de permitir ou descontinuar as notificações por push."
+    description: "Introduzida pela Apple no iOS 12, a autorização provisória ocorre automaticamente na instalação de aplicativos iOS, permitindo que as marcas enviem notificações sem exibir um aviso de push para os usuários. Essas notificações são entregues silenciosamente na central de notificações, onde os usuários podem escolher permitir ou descontinuar as notificações por push."
     tags:
       - iOS
   - name: "Notificações por push em HTML"
@@ -65,8 +65,8 @@ glossaries:
     tags:
       - iOS
       - Android
-  - name: "Notificações por push em segundo plano ou silenciosas"
-    description: "Notificações por push que não são renderizadas no dispositivo. Normalmente usado para enviar pacotes de informações para o app para processos em segundo plano e rastreamento de desinstalação. É necessário um token por push ativado em segundo plano para que um push em segundo plano ou silencioso seja enviado."
+  - name: "Notificações por Push em Segundo Plano (Push Silencioso)"
+    description: "Uma notificação por push que não é visível para o usuário final, tipicamente usada internamente para lidar com recursos como rastreamento de desinstalação, geofences e sincronização de dados. Push em segundo plano e push silencioso referem-se ao mesmo conceito. Um token por push habilitado para segundo plano é necessário. Para saber mais, veja <a href=\"/docs/developer_guide/push_notifications/silent\">Notificações push silenciosas</a>."
     tags:
       - Web
       - Android

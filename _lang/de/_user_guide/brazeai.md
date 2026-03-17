@@ -9,7 +9,7 @@ Tool:
   - Dashboard
 
 guide_top_header: "BrazeAI<sup>TM</sup>"
-guide_top_text: "BrazeAI<sup>TM</sup> bietet eine Sammlung von leicht zugänglichen, benutzerfreundlichen Tools, die die Einstiegshürden für Kreativität, Personalisierung und Optimierung Ihrer Engagement-Strategie senken. Mit den Funktionen von <sup>BrazeAITM</sup> haben Sie einen vertrauenswürdigen Berater, der Ihnen hilft, Ihre Kreativität zu lenken, bessere Entscheidungen zu treffen und das Benutzererlebnis für Ihre Kund:innen zu optimieren."
+guide_top_text: "BrazeAI<sup>TM</sup> bietet eine Sammlung von leicht zugänglichen, benutzerfreundlichen Tools, die die Einstiegshürden für Kreativität, Personalisierung und Optimierung Ihrer Engagement-Strategie senken. Mit den Funktionen von BrazeAI<sup>TM</sup> haben Sie einen vertrauenswürdigen Berater, der Ihnen hilft, Ihre Kreativität zu lenken, bessere Entscheidungen zu treffen und das Benutzererlebnis für Ihre Kund:innen zu optimieren."
 
 guide_featured_title: "Features"
 guide_featured_list:
@@ -22,7 +22,7 @@ guide_featured_list:
   - name: Content Optimizer
     link: /docs/user_guide/brazeai/content_optimizer/
     image: /assets/img/braze_icons/image-user-check.svg
-  - name: Studio für Entscheidungsfindung
+  - name: Entscheidungsstudio
     link: /docs/user_guide/brazeai/decisioning_studio/
     image: /assets/img/braze_icons/stars-03.svg
   - name: Generative KI
@@ -31,10 +31,10 @@ guide_featured_list:
   - name: Intelligence Suite
     link: /docs/user_guide/brazeai/intelligence_suite/
     image: /assets/img/braze_icons/clock.svg
-  - name: Item Recommendations
+  - name: Artikel-Empfehlungen
     link: /docs/user_guide/brazeai/item_recommendations/
     image: /assets/img/braze_icons/hearts.svg
-  - name: BrazeAI Operator
+  - name: Operator
     link: /docs/user_guide/brazeai/operator/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Predictive Suite
