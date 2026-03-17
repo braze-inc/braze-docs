@@ -314,7 +314,6 @@ To avoid undefined behaviors, only allocate and use a single instance of the `Br
 {% endtabs %}
 
 ## Testing the integration
-s
 You can verify that the SDK is integrated by checking session statistics in the dashboard. If you run your application on either platform, you should see a new session in the dashboard (in the **Overview** section).
 
 Open a session for a particular user by calling the following code in your app.
