@@ -10,8 +10,15 @@ alwaysApply: false
 
 Analyze Braze support case CSVs to identify documentation gaps and propose docs updates.
 
-<!-- This can be exported as a CSV from Looker https://braze.looker.com/x/4git0QPwJ9xjVtdBphbkPE or downloaded from the Snowflake Growth instance and stored in a local directory of your choice (for example, /path/to/support-analyzer-files/latest/ or a path configured via an environment variable). The query logic pulls resolved cases from the last two days and all related conversations. -->
+## Export from Looker
 
+To get the latest batch of support cases before running the analyzer:
+
+- **Weekly (GitHub Action):** The workflow "Support analyzer" (`.github/workflows/export-support-cases-from-looker.yml`) runs every Monday (14:00 UTC) and exports the latest CSV to the `support-analyzer-data` branch as `_data/support_cases_latest.csv` (export only; it does not run triage or draft updates). Add `LOOKER_CLIENT_ID` and `LOOKER_CLIENT_SECRET` as repository secrets. To run the full analyzer on that data, check out `support-analyzer-data` and run this rule on that CSV.
+- **On-demand (script):** Run `scripts/export_support_cases_from_looker.py` with `LOOKER_CLIENT_ID` and `LOOKER_CLIENT_SECRET` set. Optionally set `SUPPORT_ANALYZER_OUTPUT`; otherwise the script writes to `_data/support_cases_<YYYYMMDD>.csv`.
+- **Manual:** Export as CSV from the [Support Cases dashboard](https://braze.looker.com/x/4git0QPwJ9xjVtdBphbkPE) in Looker, or download from the Snowflake Growth instance. Save the file to a path the analyzer can use (e.g. `_data/` or a directory you pass in your prompt).
+
+The query logic pulls resolved cases from the last two days and all related conversations.
 
 ## CSV Schema
 
@@ -145,3 +152,5 @@ Cursor identifies team members based on the CODEOWNERS file. If no owner is foun
 @support-analyzer.mdc Analyze the CSV file in <directory with csv files> and draft docs updates.
 Focus on [specific product area] if applicable.
 ```
+
+To use the latest data from Looker: check out the `support-analyzer-data` branch (updated weekly by the GitHub Action) and run the analyzer on `_data/support_cases_latest.csv`, or run `python scripts/export_support_cases_from_looker.py` locally and point the analyzer at the exported CSV.
