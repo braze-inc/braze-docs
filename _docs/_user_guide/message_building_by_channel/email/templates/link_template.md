@@ -70,15 +70,9 @@ If you want to add query parameters after a URL in your email message:
 
 After you set up your link templates, you can apply them in your email.
 
-To apply a link template in the HTML editor, follow these steps:
+To apply a link template in the HTML editor or the drag-and-drop editor, follow these steps:
 
-1. Go to the **Link Management** tab in the **Content** section.
-2. Select **Add a Link Template**.
-3. Choose your link template, then select **Add**.
-
-To apply a link template in the drag-and-drop editor, follow these steps:
-
-1. Select **Content** > **Link Management**.
+1. Go to **Content** > **Link Management**.
 2. Select **Add a Link Template**.
 3. Choose your link template, then select **Add**.
 
