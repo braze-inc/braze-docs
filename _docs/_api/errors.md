@@ -85,7 +85,7 @@ All of the following error codes indicate that no messages are sent.
 | `400 Invalid Message Variant` | You provided a valid campaign ID, but the message variation ID doesn't match any of that campaign's messages.|
 | `400 Mismatched Message Type` | You provided a message variation of the wrong message type for at least one of your messages.|
 | `400 Invalid Extra Push Payload` | You provide the `extra` key for either `apple_push` or `android_push` but it is not a dictionary.|
-| `400 Max Input Length Exceeded` | Caused by calling more than 75 external IDs when hitting the `/users/track` endpoint.|
+| `400 Max Input Length Exceeded` | For `/users/track`, this error is caused by exceeding the maximum number of objects allowed in a single request. The limit depends on the rate-limit model: for most customers, each request supports up to 75 total objects combined across `attributes`, `events`, and `purchases`. For customers on legacy rate limits, each array supports up to 75 objects independently. For more information, see [POST: Create and update users]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).|
 | `400 The max number of external_ids and aliases per request was exceeded` | Caused by calling more than 50 external IDs.|
 | `400 The max number of ids per request was exceeded` | Caused by calling more than 50 external IDs.|
 | `400 No message to send` | No payload is specified for the message.|
