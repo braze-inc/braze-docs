@@ -28,7 +28,9 @@ flutter pub add braze_plugin
 {% tabs %}
 {% tab Flutter SDK 18.0.0+ %}
 
-#### Android
+#### 2.1 Set up Android
+
+##### Provide credentials at compile time
 
 Create a `braze.xml` file in your project's `android/res/values` folder. The API key and endpoint are provided at runtime from Dart, so they are not required in this file. To enable delayed initialization, add `com_braze_enable_delayed_initialization` to the file:
 
@@ -39,6 +41,8 @@ Create a `braze.xml` file in your project's `android/res/values` folder. The API
   <!-- API key and endpoint are not required here. They are set at runtime via Dart. -->
 </resources>
 ```
+
+##### Provide credentials at runtime
 
 Alternatively, you can enable delayed initialization programmatically in your `MainActivity.kt`:
 
@@ -60,7 +64,7 @@ Add the required permissions to your `AndroidManifest.xml` file:
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-#### iOS
+#### 2.2 Set up iOS
 
 Within your existing `application(_:didFinishLaunchingWithOptions:)` method, add a call to `BrazePlugin.configure(_:postInitialization:)` to store your configuration. The Braze instance is created later when `initialize()` is called from Dart. The API key and endpoint are not set here.
 
@@ -136,7 +140,7 @@ Add the following code to your `AppDelegate.m`:
 {% endtab %}
 {% tab Flutter SDK 17.1.0 and earlier %}
 
-#### Android
+#### 2.1 Set up Android
 
 To connect to Braze servers, create a `braze.xml` file in your project's `android/res/values` folder. Paste the following code and replace the API identifier key and endpoint with your values:
 
@@ -155,7 +159,7 @@ Add the required permissions to your `AndroidManifest.xml` file:
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-#### iOS
+#### 2.2 Set up iOS
 
 {% subtabs %}
 {% subtab SWIFT %}
