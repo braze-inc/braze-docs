@@ -24,7 +24,7 @@ jobs:
 
     steps:
       - name: Checkout braze-docs
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Clone reference repos
         env:

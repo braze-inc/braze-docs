@@ -1,8 +1,8 @@
 {% comment %}
   Accès anticipé ou alerte bêta. À utiliser pour les fonctionnalités/endpoints en accès anticipé ou en version bêta.
   Paramètres :
-  - fonctionnalité (obligatoire) : La fonctionnalité ou le sujet, e.g. "Cet endpoint", "Le provisionnement SCIM", "L'intégration Okta"
-  - type (facultatif) : "early_access" (par défaut) ou "beta"
+  - fonctionnalité (obligatoire) : La fonctionnalité ou le sujet, e.g. « Ce endpoint », « Provisioning SCIM », « L'intégration Okta »
+  - type (facultatif) :"early_access"(par défaut) ou « bêta »
 {% endcomment %}
 {% if include.type == "beta" %}
 {% alert important %}

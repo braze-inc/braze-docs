@@ -1,5 +1,5 @@
 ---
-nav_title: iOS 16アップグレードガイド
+nav_title: iOS 16 アップグレードガイド
 article_title: iOS 16アップグレードガイド
 page_order: 7
 platform: 

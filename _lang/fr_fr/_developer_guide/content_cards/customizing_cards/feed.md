@@ -1,6 +1,6 @@
 ---
 nav_title: Alimentation
-article_title: Personnaliser le flux pour les cartes de contenu
+article_title: Personnalisez le flux pour les cartes de contenu.
 page_order: 3
 description: "Cet article traite des options de personnalisation du flux de la carte de contenu."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# Personnaliser le flux pour les cartes de contenu
+# Personnalisez le flux pour les cartes de contenu.
 
 > Un flux de cartes de contenu correspond à la séquence de cartes de contenu dans vos applications mobiles ou Web. Cet article traite de la configuration du moment où le flux est actualisé, de l'ordre des cartes, de la gestion de plusieurs flux et des messages d'erreur "flux vide". Pour obtenir la liste complète des types de cartes de contenu, voir [À propos des cartes de contenu.]({{site.baseurl}}/developer_guide/content_cards/) 
 
@@ -117,7 +117,7 @@ Braze utilise un algorithme de compartiments à jetons pour appliquer les limite
 - `subscribeToContentCards()` renverra toujours les cartes mises en cache, même lorsque le débit est limité.
 
 {% alert important %}
-Le SDK de Braze applique également des limites de débit pour la performance et la fiabilité. Gardez cela à l'esprit lorsque vous exécutez des tests automatisés ou que vous effectuez une assurance qualité manuelle. Pour plus d'informations, consultez les [limites de débit du SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration/rate_limits/).
+Le SDK Braze applique également des limites de débit pour garantir les performances et la fiabilité. Veuillez garder cela à l'esprit lorsque vous effectuez des tests automatisés ou manuels d'assurance qualité. Veuillez consulter [les limites de débit du SDK Braze]({{site.baseurl}}/developer_guide/sdk_integration/rate_limits/) pour plus d'informations.
 {% endalert %}
 
 ## Personnalisation de l'ordre des cartes affichées

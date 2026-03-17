@@ -1,5 +1,5 @@
 ---
-nav_title: Indicateurs de messages lus et non lus
+nav_title: Indicateurs de messages non lus et lus
 article_title: Indicateurs de messages non lus et lus de carte de contenu pour iOS
 platform: iOS
 page_order: 4
@@ -16,7 +16,7 @@ noindex: true
 
 ## Désactivation de l’indicateur non visionné
 
-![Deux cartes de contenu affichées côte à côte. La carte sur la gauche a une ligne bleue en bas, indiquant qu’elle n’a pas été vue. La carte de droite ne comporte pas de ligne bleue, ce qui indique qu'elle a déjà été vue.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
+![Deux cartes de contenu affichées côte à côte. La carte sur la gauche a une ligne bleue en bas, indiquant qu’elle n’a pas été vue. La carte à droite ne comporte pas de ligne bleue, ce qui indique qu'elle a déjà été consultée.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
 
 Vous pouvez choisir de désactiver la ligne bleue au bas de la carte, qui indique si la carte a été visualisée en définissant la propriété `disableUnviewedIndicator` dans `ABKContentCardsTableViewController` sur `YES`.
 

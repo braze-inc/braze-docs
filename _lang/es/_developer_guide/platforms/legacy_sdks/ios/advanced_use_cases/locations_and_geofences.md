@@ -25,13 +25,13 @@ A partir de iOS 14, las Geovallas no funcionan de forma fiable para los usuarios
 
 ## Paso 1: Habilitar el push en segundo plano
 
-Para utilizar plenamente nuestra estrategia de sincronización de geovallas, debes tener habilitado [el push en segundo plano]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work), además de completar la integración push estándar.
+Para aprovechar al máximo nuestra estrategia de sincronización de geovallas, debes tener habilitada [la función push en segundo plano]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work), además de completar la integración push estándar.
 
 ## Paso 2: Habilitar geovallas
 
 Por predeterminado, las geovallas se habilitan en función de si está habilitada la recogida automática de ubicaciones. Puedes activar las geovallas utilizando el archivo `Info.plist`. Añade el diccionario `Braze` a tu archivo `Info.plist`. Dentro del diccionario `Braze`, añade la subentrada booleana `EnableGeofences` y establece el valor `YES`. Ten en cuenta que, antes de la versión 4.0.2 del SDK de iOS de Braze, debe usarse la clave de diccionario `Appboy` en lugar de `Braze`.
 
-También puedes habilitar geovallas al iniciar la aplicación mediante el método [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24) método. En el diccionario `appboyOptions`, establece `ABKEnableGeofencesKey` en `YES`. Por ejemplo:
+También puedes habilitar las geovallas al iniciar la aplicación utilizando el[`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24)método . En el diccionario `appboyOptions`, establece `ABKEnableGeofencesKey` en `YES`. Por ejemplo:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -102,7 +102,7 @@ Para que las ubicaciones funcionen correctamente, también debes confirmar que t
 
 ### Habilita las geovallas desde la página de configuración:
 
-![La casilla de geovalla situada en las páginas de configuración de Braze.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
+![La casilla de verificación «Geovalla» situada en las páginas de configuración de Braze.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 
 ## Desactivar las solicitudes automáticas de geovallas
 

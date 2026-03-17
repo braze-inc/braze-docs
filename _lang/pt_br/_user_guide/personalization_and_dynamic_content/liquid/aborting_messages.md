@@ -1,14 +1,14 @@
 ---
 nav_title: Abortar o envio de mensagens
-article_title: Envio de mensagens do Liquid Abort
+article_title: Abortar Mensagens Liquid
 page_order: 7
 description: "Este artigo de referência aborda o cancelamento de mensagens Liquid e alguns exemplos de casos de uso."
 
 ---
 
-# Envio de mensagens de cancelamento
+# Abortar mensagens
 
-> Opcionalmente, é possível usar a tag `abort_message("optional reason for aborting")` Liquid message nas condicionais para impedir o envio de mensagens a um usuário. Este artigo de referência lista alguns exemplos de como esse recurso pode ser usado em campanhas de marketing.
+> Opcionalmente, você pode usar a tag de mensagem Liquid `abort_message("optional reason for aborting")` dentro de condicionais para evitar o envio de uma mensagem para um usuário. Este artigo de referência lista alguns exemplos de como esse recurso pode ser usado em campanhas de marketing.
 
 {% alert note %}
 Se uma etapa de mensagens for abortada em um canva, o usuário **não sairá** do canva e **prosseguirá** para a próxima etapa.
@@ -65,6 +65,18 @@ Também é possível fazer com que a mensagem de abortar registre algo no Regist
 
 Você pode usar o [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) ou seu próprio data warehouse, se ele estiver conectado ao Braze, para consultar mensagens de aborto específicas que são disparadas quando a lógica do Liquid faz com que uma mensagem seja abortada.
 
+## Quando a lógica de abortar é avaliada
+
+O tempo de avaliação da lógica de abortar depende do canal da mensagem.
+
+### Push, e-mail, SMS, webhooks e Cartões de Conteúdo
+
+A lógica de abortar é avaliada no momento do envio, quando a Braze processa a mensagem para entrega.
+
+### Mensagem no app
+
+A lógica de abortar é avaliada no momento em que a mensagem no app é disparada (por exemplo, quando o usuário realiza o evento de gatilho ou inicia uma sessão), não quando a mensagem é inicialmente enviada para o dispositivo. As mensagens no app são entregues ao SDK no início da sessão e armazenadas localmente; o Liquid—incluindo quaisquer chamadas `abort_message()`—é executado quando a condição de gatilho é atendida.
+
 ## Considerações
 
-A tag de mensagem `abort_message()` Liquid impede que as mensagens sejam enviadas aos usuários, o que significa que a mensagem não será exibida nos perfis de usuário e não contará para entregas ou limite de frequência.
+A tag de mensagem Liquid `abort_message()` impede que mensagens sejam enviadas para os usuários, o que significa que a mensagem não será exibida nos perfis dos usuários e não contará para entregas ou limitação de frequência.

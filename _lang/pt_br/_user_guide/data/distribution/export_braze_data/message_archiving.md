@@ -16,14 +16,14 @@ O arquivamento de mensagens está disponível como um recurso complementar. Para
 
 ## Como funciona?
 
-Quando esse recurso está ativado, se você conectou um bucket de armazenamento em nuvem à Braze e o marcou como o destino de exportação de dados padrão, a Braze gravará um arquivo JSON compactado em gzip em seu bucket de armazenamento em nuvem para cada mensagem enviada a um usuário através dos canais selecionados (e-mail, SMS/MMS ou push). 
+Quando esse recurso está ativado, se você conectou um bucket de armazenamento em nuvem à Braze e o marcou como o destino padrão de exportação de dados, a Braze gravará um arquivo JSON compactado em gzip no seu bucket de armazenamento em nuvem para cada mensagem enviada a um usuário através dos canais selecionados (e-mail, SMS/MMS ou push). 
 
 Esse arquivo conterá os campos definidos em [Referências de arquivo](#file-references) e refletirá os modelos finais de mensagens enviadas ao usuário. Todos os valores de modelo definidos em sua campanha (por exemplo, {% raw %}`{{${first_name}}}`{% endraw %}) mostrarão o valor final que o usuário recebeu com base nas informações de perfil. Isso permite que você retenha uma cópia da mensagem enviada para atender aos requisitos de conformidade, auditoria ou suporte ao cliente.
 
 Se você configurar credenciais para vários provedores de armazenamento em nuvem, o arquivamento de mensagens só será exportado para aquele explicitamente marcado como o destino padrão de exportação de dados. Se nenhum padrão explícito for fornecido e um bucket S3 da AWS estiver conectado, o arquivamento de mensagens fará upload para esse bucket.
 
 {% alert important %}
-Ativar esse recurso impactará a velocidade de entrega de suas mensagens, pois o upload do arquivo é realizado imediatamente antes que a mensagem seja enviada para manter a precisão. A latência introduzida pela arquivação de mensagens dependerá do provedor de armazenamento em nuvem e da taxa de transferência e tamanho dos documentos salvos.
+Ativar esse recurso impactará a velocidade de entrega das suas mensagens, pois o upload do arquivo é realizado imediatamente antes da mensagem ser enviada para manter a precisão. A latência introduzida pela arquivação de mensagens dependerá do provedor de armazenamento em nuvem e da taxa de transferência e tamanho dos documentos salvos.
 {% endalert %}
 
 O JSON será salvo em seu bucket de armazenamento usando a seguinte estrutura de chave:
@@ -52,7 +52,7 @@ Esta seção o orienta na configuração do arquivamento de mensagens para o seu
 Se ainda não tiver feito isso, conecte um bucket de armazenamento em nuvem à Braze. Para obter etapas, consulte a documentação de nossos parceiros sobre o [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/), o [Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/) ou o [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/).
 
 {% alert note %}
-Você não precisa configurar Currents para a arquivação de mensagens, então pode pular esse pré-requisito na documentação do parceiro.
+Você não precisa configurar o Currents para a arquivação de mensagens, então pode pular esse pré-requisito na documentação do parceiro.
 {% endalert %}
 
 ### Etapa 2: Selecione canais de envio de mensagens
@@ -106,7 +106,7 @@ A seguir estão referências à carga útil JSON entregue ao seu bucket de armaz
 }
 ```
 
-O campo `extras` contém os pares chave-valor configurados no campo **Email Extras** ao compor um e-mail no editor de HTML. Os extras de e-mail funcionam para todos os provedores de serviços de e-mail (incluindo SendGrid e Sparkpost) e estão incluídos nas mensagens arquivadas, independentemente de qual provedor é utilizado. Para mais informações sobre como configurar os extras de e-mail, veja [Como criar uma campanha de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#adding-email-extras). Para enviar dados de volta ao Currents, consulte [Extras de mensagens]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
+O campo `extras` contém os pares chave-valor configurados no campo **Email Extras** ao compor um e-mail no editor de HTML. Os extras de e-mail funcionam para todos os provedores de serviços de e-mail (incluindo SendGrid e Sparkpost) e estão incluídos nas mensagens arquivadas, independentemente de qual provedor é utilizado. Para mais informações sobre como configurar os extras de e-mail, veja [Criando uma campanha de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#adding-email-extras). Para enviar dados de volta ao Currents, consulte [Extras de mensagens]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
 
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
@@ -161,6 +161,33 @@ O campo `extras` contém os pares chave-valor configurados no campo **Email Extr
 }
 ```
 
+### Variações na estrutura da carga útil de push
+
+{% alert important %}
+O campo de nível superior `payload` nos arquivos de notificação por push contém toda a carga útil do provedor conforme enviada ao dispositivo. Dentro deste JSON, chaves como `aps` (para APNs) ou `notification` e `data` (para FCM) podem variar significativamente dependendo do tipo de mensagem, plataforma e configuração.
+{% endalert %}
+
+A arquivação de mensagens captura a carga útil da mensagem em si, mas não inclui os metadados de entrega que são enviados para FCM ou APNs. Os metadados de entrega incluem:
+
+- Tokens de dispositivo
+- Configurações de prioridade
+- Tempo de vida (TTL)
+- IDs de colapso
+- Cabeçalhos APNs
+- Carimbos de expiração
+- Outros campos de configuração de entrega
+
+Esses campos atuam como instruções de entrega para o provedor de push. Eles geralmente não são considerados parte do conteúdo da mensagem.
+
+Por exemplo:
+
+- **notificações por push iOS** podem ter estruturas diferentes para notificações ricas (onde `aps.alert` é um objeto contendo campos como `title` e `body`) em comparação com notificações simples (onde `aps.alert` é uma string).
+- **notificações por push Android** (por exemplo, FCM) usam mensagens de dados com chaves personalizadas. A estrutura da carga útil pode incluir diferentes campos opcionais dependendo da configuração da mensagem, como botões de push, carrosséis ou metadados adicionais.
+
+Além disso, envios de teste do dashboard podem produzir estruturas de carga útil diferentes das mensagens de produção.
+
+O formato de carga útil JSON pode variar entre mensagens e pode mudar ao longo do tempo. Ao analisar cargas úteis de push arquivadas, não assuma uma estrutura fixa ou espere que os mesmos campos estejam sempre presentes. Implemente uma lógica de análise flexível que lide com vários formatos de carga útil.
+
 {% endtab %}
 {% endtabs %}
 
@@ -172,11 +199,11 @@ As modificações feitas depois que a mensagem sair do Braze não serão refleti
 
 ### O que são mensagens sob o valor "unassociated" (não associado) na jornada da campanha?
 
-Quando uma mensagem é enviada fora de uma campanha ou do Canva, a ID da campanha no nome do arquivo será "desassociada". Isso acontecerá quando você enviar mensagens de teste do dashboard, quando a Braze enviar respostas automáticas de SMS/MMS ou quando mensagens enviadas através da API não especificarem um ID de campanha.
+Quando uma mensagem é enviada fora de uma campanha ou do Canva, a ID da campanha no nome do arquivo será "desassociada". Isso acontecerá quando você enviar mensagens de teste do dashboard, quando o Braze enviar respostas automáticas de SMS/MMS, ou quando mensagens enviadas através da API não especificarem um ID de campanha.
 
 ### Como faço para obter mais informações sobre esse envio?
 
-Você pode usar tanto o `external_id` quanto o `dispatch_id` em conjunto com o `user_id` para cruzar a mensagem modelada com nossos dados Currents para encontrar mais informações, como o timestamp em que foi entregue, se o usuário abriu ou clicou na mensagem, e mais.
+Você pode usar `external_id` ou `dispatch_id` em conjunto com `user_id` para cruzar a mensagem template com nossos dados Currents para encontrar mais informações, como o carimbo de data/hora em que foi entregue, se o usuário abriu ou clicou na mensagem, e mais.
 
 ### Como as novas tentativas são tratadas?
 
@@ -190,7 +217,7 @@ Se suas credenciais de armazenamento em nuvem se tornarem inválidas em algum mo
 
 A cópia renderizada é feita upload imediatamente antes de enviar a mensagem ao usuário. Devido aos tempos de upload do armazenamento em nuvem, pode haver uma postergação de alguns segundos entre o registro de data e hora `sent_at` na cópia renderizada e a hora real em que o envio ocorre.
 
-### Posso criar um novo bucket especificamente para arquivação de mensagens enquanto mantenho o bucket atual usado para dados Currents?
+### Posso criar um novo bucket especificamente para arquivamento de mensagens enquanto mantenho o bucket atual usado para dados Currents?
 
 Não. Se você estiver interessado em criar esses buckets específicos, envie [feedback sobre o produto]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
 
@@ -198,6 +225,6 @@ Não. Se você estiver interessado em criar esses buckets específicos, envie [f
 
 Os dados são gravados em uma seção `sent_messages` do bucket. Consulte [Como funciona](#how-it-works) para mais detalhes.
 
-### Posso usar a arquivação de mensagens para agrupar arquivos em diferentes espaços de trabalho?
+### Posso usar o arquivamento de mensagens para agrupar arquivos em diferentes espaços de trabalho?
 
 Não. O arquivamento de mensagens não suporta agrupar arquivos com base em espaços de trabalho. Em vez disso, você pode determinar a qual espaço de trabalho o ID da campanha ou da etapa do canva pertence e, em seguida, agrupá-los com base nessa informação.

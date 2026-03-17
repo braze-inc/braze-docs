@@ -1,6 +1,6 @@
 ---
 nav_title: Fils multiples
-article_title: Utiliser plusieurs cartes de contenu pour iOS
+article_title: Utilisation de plusieurs flux de cartes de contenu pour iOS
 platform: iOS
 page_order: 6
 description: "Cet article de référence explique l’implémentation de plusieurs flux de carte de contenu dans votre application iOS."

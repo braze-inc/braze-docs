@@ -1,7 +1,7 @@
 ---
 nav_title: "DELETE:複数のカタログ項目を削除する"
 article_title: "DELETE:複数のカタログ項目を削除する"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 1
 
 layout: api_page
@@ -31,16 +31,16 @@ description: "この記事では、複数のカタログ項目を削除するBra
 
 ## パスパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメータ | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
-| `catalog_name` | 必須 | 文字列 | カタログ名。 |
+| `catalog_name` | 必須かどうか | 文字列 | カタログ名。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
-| `items` | required | 配列 | アイテム・オブジェクトを含む配列。項目オブジェクトには、Braze が削除すべき項目を参照する `id` が含まれている必要があります。リクエストごとに最大 50 個のアイテムオブジェクトが許可されます。 |
+| `items` | 必須かどうか | 配列 | アイテム・オブジェクトを含む配列。項目オブジェクトには、Braze が削除すべき項目を参照する `id` が含まれている必要があります。リクエストごとに最大 50 個のアイテムオブジェクトが許可されます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
@@ -86,7 +86,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
       "parameter_values": []
     }
   ],
-  "message": "Invalid Request",
+  "message": "Invalid Request"
 }
 ```
 

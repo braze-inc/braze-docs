@@ -118,7 +118,7 @@ pod install
 
 Jetzt sollten Sie den von CocoaPods erstellten neuen Xcode-Projektarbeitsbereich öffnen können. Stellen Sie sicher, dass Sie diesen Xcode-Workspace anstelle Ihres Xcode-Projekts verwenden.
 
-![Ein Braze-Beispielordner wurde erweitert, um das neue \`BrazeExample.workspace\` zu zeigen.]({% image_buster /assets/img/braze_example_workspace.png %})
+![Ein Braze-Beispielordner, der erweitert wurde, um das neue „BrazeExample.workspace.]({% image_buster /assets/img/braze_example_workspace.png %})
 
 #### Update des SDK mit CocoaPods
 
@@ -134,7 +134,7 @@ pod update
 
 Rufen Sie die [Braze SDK Release-Seite auf GitHub](https://github.com/braze-inc/braze-swift-sdk/releases) auf und laden Sie `braze-swift-sdk-prebuilt.zip` herunter.
 
-!["Die Braze SDK Release-Seite auf GitHub".]({% image_buster /assets/img/swift/sdk_integration/download-braze-swift-sdk-prebuilt.png %})
+![Die Braze SDK-Release-Seite auf GitHub.]({% image_buster /assets/img/swift/sdk_integration/download-braze-swift-sdk-prebuilt.png %})
 
 #### Schritt 1.2: Wählen Sie Ihre Frameworks aus
 
@@ -178,10 +178,10 @@ Als Nächstes integrieren Sie die **dynamischen** oder **statischen** XCFramewor
 
 Wählen Sie in Ihrem Xcode-Projekt Ihr Build-Target und dann **Allgemein**. Ziehen Sie die [Dateien, die Sie zuvor vorbereitet haben](#swift_step-3-prepare-your-files), per Drag-and-Drop unter **Frameworks, Bibliotheken und eingebettete Inhalte**.
 
-!["Ein Xcode-Beispielprojekt, bei dem jede Bibliothek von Braze auf ' & Zeichen einbetten' eingestellt ist."]({% image_buster /assets/img/swift/sdk_integration/embed-and-sign.png %})
+![Ein Beispielprojekt für Xcode, bei dem jede Braze-Bibliothek auf „Embed&Sign” eingestellt ist.]({% image_buster /assets/img/swift/sdk_integration/embed-and-sign.png %})
 
 {% alert note %}
-Ab dem Swift SDK 12.0.0 sollten Sie für die Braze XCFrameworks sowohl für die statische als auch für die dynamische Variante immer die Option **Embed & Sign** auswählen. Dadurch wird sichergestellt, dass die Ressourcen des Frameworks ordnungsgemäß in Ihr App-Bundle eingebettet werden.
+Ab dem Swift SDK 12.0.0 sollten Sie für die Braze XCFrameworks stets **„Embed&Sign“** sowohl für die statische als auch für die dynamische Variante auswählen. Dadurch wird sichergestellt, dass die Ressourcen des Frameworks ordnungsgemäß in Ihr App-Bundle eingebettet werden.
 {% endalert %}
 
 {% alert tip %}
@@ -206,17 +206,17 @@ empty_swift_file.swift
 
 ### Schritt 2: Verzögerte Initialisierung einrichten (optional)
 
-Sie können die Initialisierung des Braze Swift SDK verzögern. Das ist nützlich, wenn Ihre App eine Konfiguration laden oder auf die Zustimmung des Nutzers:innen warten muss, bevor Sie das SDK starten. Die verzögerte Initialisierung stellt sicher, dass Push-Benachrichtigungen und Push-Token von Braze, die vor der SDK-Initialisierung eingehen, in die Warteschlange gestellt und verarbeitet werden, sobald das SDK initialisiert ist.
+Sie haben die Möglichkeit, die Initialisierung des Braze SWIFT SDK zu verzögern. Dies ist nützlich, wenn Ihre App vor dem Start des SDK eine Konfiguration laden oder auf die Zustimmung der Nutzer:innen warten muss. Die verzögerte Initialisierung stellt sicher, dass Braze-Push-Benachrichtigungen und Push-Token, die vor der Initialisierung des SDK empfangen wurden, in die Warteschlange gestellt und nach der Initialisierung des SDK verarbeitet werden.
 
 Um die verzögerte Initialisierung zu verwenden, ist die Mindestversion des Braze SDK erforderlich:
 {% sdk_min_versions swift:11.2.0 %}
 
-#### Schritt 2.1: Vorbereiten auf eine verzögerte Initialisierung
+#### Schritt 2.1: Bitte beachten Sie, dass es zu einer verzögerten Initialisierung kommen kann.
 
-Rufen Sie `Braze.prepareForDelayedInitialization()` so früh wie möglich im Lebenszyklus Ihrer App auf, idealerweise in oder vor `application(_:didFinishLaunchingWithOptions:)`. Dadurch wird sichergestellt, dass Push-Benachrichtigungen, die vor der Initialisierung des SDK eingehen, korrekt erfasst und später verarbeitet werden.
+Rufen Sie diese Funktion`Braze.prepareForDelayedInitialization()` so früh wie möglich im Lebenszyklus Ihrer App auf, idealerweise in oder vor `application(_:didFinishLaunchingWithOptions:)`. Dadurch wird sichergestellt, dass Push-Benachrichtigungen, die vor der Initialisierung des SDK empfangen wurden, ordnungsgemäß erfasst und später verarbeitet werden.
 
 {% alert note %}
-Dies gilt nur für Push-Benachrichtigungen von Braze. Andere Push-Benachrichtigungen werden normalerweise von Systemdelegierten bearbeitet.
+Dies gilt ausschließlich für Push-Benachrichtigungen von Braze. Andere Push-Benachrichtigungen werden normalerweise von Systemdelegierten verarbeitet.
 {% endalert %}
 
 {% tabs %}
@@ -277,15 +277,15 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 {% endtab %}
 {% endtabs %}
 
-Wenn Sie die verzögerte Initialisierung verwenden, ist die Automatisierung der Push-Benachrichtigung implizit Enablement. Sie können [die](#swift_step-23-customize-push-automation-optional) Konfiguration der [Push Automatisierung anpassen](#swift_step-23-customize-push-automation-optional), indem Sie einen `pushAutomation` Parameter übergeben.
+Bei Verwendung der verzögerten Initialisierung wird die Automatisierung von Push-Benachrichtigungen implizit aktiviert. Sie können [die Push](#swift_step-23-customize-push-automation-optional)-Automatisierungskonfiguration [anpassen,](#swift_step-23-customize-push-automation-optional) indem Sie einen`pushAutomation`Parameter übergeben.
 
-#### Schritt 2.2: Konfigurieren Sie das Verhalten von Push Analytics (optional)
+#### Schritt 2.2: Konfigurieren Sie das Verhalten der Push-Analytics (optional)
 
-Wenn die verzögerte Initialisierung aktiviert ist, werden Push Analytics standardmäßig in eine Warteschlange gestellt. Sie können Push Analytics jedoch auch explizit in die Warteschlange stellen oder ganz weglassen.
+Wenn die verzögerte Initialisierung aktiviert ist, werden Push-Analytics standardmäßig in eine Warteschlange gestellt. Sie können jedoch auch explizit festlegen, dass Push-Analytics in die Warteschlange gestellt oder verworfen werden sollen.
 
-##### Ausdrücklich Warteschlange
+##### Explizit in die Warteschlange stellen
 
-Um Push Analytics explizit in die Warteschlange zu stellen (Standardverhalten), übergeben Sie `.queue` an den Parameter `analyticsBehavior`. Push Analytics-Ereignisse, die vor der Initialisierung in die Warteschlange gestellt wurden, werden bei der Initialisierung verarbeitet und auf den Server übertragen.
+Um Push-Analytics explizit in die Warteschlange zu stellen (Standardverhalten), übergeben`.queue`Sie den`analyticsBehavior`Parameter. Analytics-Ereignisse, die vor der Initialisierung in die Warteschlange gestellt wurden, werden bei der Initialisierung verarbeitet und an den Server gesendet.
 
 {% tabs local %}
 {% tab Swift %}
@@ -300,9 +300,9 @@ Braze.prepareForDelayedInitialization(analyticsBehavior: .queue)
 {% endtab %}
 {% endtabs %}
 
-##### Ablegen
+##### Tropfen
 
-Um Push Analytics zu verwerfen, die vor der Initialisierung des SDK empfangen wurden, übergeben Sie `.drop` an den Parameter `analyticsBehavior`. Mit dieser Option werden alle Push Analytics-Ereignisse, die auftreten, während das SDK nicht initialisiert ist, ignoriert.
+Um Push-Analytics zu verwerfen, die vor der SDK-Initialisierung empfangen wurden, übergeben`.drop`Sie den`analyticsBehavior`Parameter. Mit dieser Option werden alle Push-Analytics-Ereignisse, die auftreten, während das SDK nicht initialisiert ist, ignoriert.
 
 {% tabs local %}
 {% tab Swift %}
@@ -319,7 +319,7 @@ Braze.prepareForDelayedInitialization(analyticsBehavior: .drop)
 
 #### Schritt 2.3: Push-Automatisierung anpassen (optional)
 
-Sie können die Konfiguration der Push Automatisierung anpassen, indem Sie einen `pushAutomation` Parameter übergeben. Standardmäßig sind alle Features der Automatisierung mit Ausnahme von `requestAuthorizationAtLaunch` aktiviert.
+Sie können die Push-Automatisierung anpassen, indem Sie einen`pushAutomation`Parameter übergeben. Standardmäßig sind alle Features der Automatisierung aktiviert, mit Ausnahme von `requestAuthorizationAtLaunch`.
 
 {% tabs local %}
 {% tab SWIFT %}
@@ -351,7 +351,7 @@ automation.requestAuthorizationAtLaunch = NO;
 
 #### Schritt 2.4: Initialisieren Sie das SDK
 
-Nach der von Ihnen gewählten Verzögerungszeit (z.B. nach dem Abrufen der Konfiguration von einem Server oder nach der Zustimmung des Nutzers:innen), initialisieren Sie das SDK wie gewohnt:
+Nach Ablauf der von Ihnen gewählten Verzögerungszeit (beispielsweise nach dem Abrufen der Konfiguration von einem Server oder nach der Zustimmung der Nutzer:innen) initialisieren Sie das SDK wie gewohnt:
 
 {% tabs local %}
 {% tab SWIFT %}
@@ -385,13 +385,13 @@ func initializeBraze() {
 {% endtabs %}
 
 {% alert note %}
-Wenn das SDK initialisiert wird, werden alle in die Warteschlange gesetzten Push-Benachrichtigungen, Push-Tokens und Deeplinks automatisch verarbeitet.
+Bei der Initialisierung des SDK werden alle in der Warteschlange befindlichen Push-Benachrichtigungen, Push-Tokens und Deeplinks automatisch verarbeitet.
 {% endalert %}
 
 ### Schritt 3: Aktualisieren Sie Ihren App-Delegierten
 
 {% alert important %}
-Im Folgenden wird davon ausgegangen, dass Sie Ihrem Projekt bereits eine `AppDelegate` hinzugefügt haben (die nicht standardmäßig generiert werden) und dass Sie das Feature der verzögerten Initialisierung nicht verwenden. Wenn Sie nicht vorhaben, eine `AppDelegate` zu verwenden, sollten Sie das Braze SDK so früh wie möglich initialisieren, z. B. beim Start der App. Wenn Sie das Feature der verzögerten Initialisierung verwenden, beziehen Sie sich auf [Schritt 2.4](#swift_step-24-initialize-the-sdk) zur Initialisierung des SDK und ignorieren diesen Schritt.
+Im Folgenden wird davon ausgegangen, dass Sie bereits eine`AppDelegate`  zu Ihrem Projekt hinzugefügt haben (diese werden nicht als Standard generiert) und dass Sie das Feature zur verzögerten Initialisierung nicht verwenden. Falls Sie nicht vorhaben, `AppDelegate`ein zu verwenden, stellen Sie bitte sicher, dass Sie das Braze SDK so früh wie möglich initialisieren, beispielsweise beim Start der App. Wenn Sie das Feature zur verzögerten Initialisierung verwenden, referenzieren Sie bitte [Schritt 2.4](#swift_step-24-initialize-the-sdk) zur Initialisierung des SDK und überspringen Sie diesen Schritt.
 {% endalert %}
 
 {% subtabs local %}
@@ -466,13 +466,15 @@ Aktualisieren Sie `YOUR-APP-IDENTIFIER-API-KEY` und `YOUR-BRAZE-ENDPOINT` mit de
 
 ### Protokollieren
 
+Für eine zentralisierte Übersicht über alle Plattformen hinweg, sehen Sie [bitte unter Ausführliche Protokollierung]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging) nach. Informationen zum Interpretieren der Protokollausgabe finden Sie unter [Ausführliche Protokolle lesen]({{site.baseurl}}/developer_guide/sdk_integration/reading_verbose_logs).
+
 #### Protokollstufen
 
 Die Standard-Protokollebene für das Braze Swift SDK ist `.error`- dies ist auch die minimal unterstützte Ebene, wenn die Protokolle aktiviert sind. Dies ist die vollständige Liste der Protokollebenen:
 
 | Schnell       | Objective-C              | Beschreibung                                                  |
 | ----------- | ------------------------ | ------------------------------------------------------------ |
-| `.debug`    | `BRZLoggerLevelDebug`    | Debugging-Informationen protokollieren + `.info` + `.error`.              |
+| `.debug`    | `BRZLoggerLevelDebug`    | Debugging-Informationen protokollieren.`.info``.error`              |
 | `.info`     | `BRZLoggerLevelInfo`     | Allgemeine SDK-Informationen protokollieren (Nutzer:innen-Änderungen, etc.) + `.error`. |
 | `.error`    | `BRZLoggerLevelError`    | Fehler protokollieren.                                                  |
 | `.disabled` | `BRZLoggerLevelDisabled` | Es erfolgt keine Protokollierung.                                           |

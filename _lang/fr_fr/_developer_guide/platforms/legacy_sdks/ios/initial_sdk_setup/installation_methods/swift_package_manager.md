@@ -1,5 +1,5 @@
 ---
-nav_title: Gestion de paquets swift
+nav_title: Gestionnaire de paquets swift
 article_title: Intégration du Gestionnaire de paquets Swift pour iOS
 platform: iOS
 page_order: 3

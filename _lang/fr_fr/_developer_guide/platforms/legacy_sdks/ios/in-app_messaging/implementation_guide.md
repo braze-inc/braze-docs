@@ -1,5 +1,5 @@
 ---
-nav_title: Mise en œuvre avancée (facultatif)
+nav_title: Mise en œuvre avancée (facultative)
 article_title: Guide d’implémentation des messages in-app pour iOS (facultatif)
 platform: iOS
 page_order: 6
@@ -13,7 +13,7 @@ noindex: true
 
 <br>
 {% alert important %}
-Vous recherchez le guide d’intégration de base du développeur de messages in-app ? Trouvez-le [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/overview/).
+Vous recherchez le guide d’intégration de base du développeur de messages in-app ? Veuillez trouver [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/overview/).
 {% endalert %}
 
 # Guide d’implémentation de la messagerie in-app
@@ -230,7 +230,7 @@ Dans les paires clé-valeur, fournissez un `attribute_key` ; cette clé, ainsi 
 
 Le dictionnaire `extras` dans l’objet `ABKInAppMessage` vous permet de rechercher une clé `view_type` (le cas échéant) qui signale la vue correcte à afficher. Il est important de noter que les messages in-app sont configurés par message, de sorte que les vues modales personnalisées et par défaut puissent fonctionner harmonieusement.
 
-![Deux paires clé-valeur présentes dans le compositeur de messages. La première paire clé-valeur a pour valeur "attribute_key" "Favorite Teams", et la seconde a pour valeur "view_type" "picker".]({% image_buster /assets/img/iam_implementation/dashboard2.png %}){: style="max-width:65%;"}
+![Deux paires clé-valeur présentes dans le compositeur de messages. La première paire clé-valeur est"attribute_key"définie comme « Équipe favorite » et la seconde comme"view_type" « sélectionneur ».]({% image_buster /assets/img/iam_implementation/dashboard2.png %}){: style="max-width:65%;"}
 
 {% tabs %}
 {% tab Swift %}
@@ -367,7 +367,7 @@ Pour configurer un message in-app complet dans le tableau de bord, vous devez fo
 
 Dans les paires clé-valeur, fournissez un `attribute_key` ; cette clé, ainsi que la valeur sélectionnée par l’utilisateur, seront enregistrées dans son profil d’utilisateur en tant qu’attribut personnalisé. Votre logique d’affichage personnalisé doit gérer les attributs utilisateur envoyés à Braze.
 
-![Trois paires clé-valeur présentes dans le compositeur de messages. La première paire clé-valeur "attribute_key" est définie comme "Push Tags", la deuxième "subtitle_text" est définie comme "Enabling notifications will also...", et la troisième "view_type" est définie comme "table_list".]({% image_buster /assets/img/iam_implementation/dashboard3.png %}){: style="max-width:65%;"}
+![Trois paires clé-valeur dans le compositeur de messages : « attribute_key » (Push Tags), « subtitle_text » (Enabling notifications will also...), « view_type » (table_list).]({% image_buster /assets/img/iam_implementation/dashboard3.png %}){: style="max-width:65%;"}
 
 #### Interception des touches de message in-app
 ![Un appareil Apple affichant des rangées de paramètres et d’interrupteurs. L’affichage personnalisé gère les boutons, et toutes les touches en dehors des commandes des boutons sont gérées par le message in-app et le rejetteront.]({% image_buster /assets/img/iam_implementation_guide.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}

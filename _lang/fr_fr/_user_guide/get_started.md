@@ -1,5 +1,5 @@
 ---
-nav_title: Aperçu de Braze
+nav_title: Commencer
 article_title: "Pour commencer : Aperçu de Braze"
 page_order: 1
 page_type: reference
@@ -78,7 +78,7 @@ Voici le cadre de Braze pour estimer la durée de votre intégration sur la base
 Besoin d'aide pour votre migration ? Nos [partenaires certifiés Braze](https://www.braze.com/partners/solutions-partners) peuvent vous aider !
 {% endalert %}
 
-- **Volume d'e-mail :** Pour envoyer des e-mails, vous devez réchauffer vos adresses IP. Le [réchauffement d'adresses IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) consiste à créer une réputation d'expéditeur avec vos nouvelles adresses IP. Si vous envoyez moins de 2 à 3 millions d'e-mails par jour, le réchauffement d'IP devrait prendre 30 jours ou moins. Gardez à l'esprit vos pics d'envoi. Si vous envoyez normalement 2 millions d'e-mails par jour mais que vous prévoyez d'en envoyer 7 millions pendant une période saisonnière, c'est à ce « pic » d'envoi que vous devez vous préparer avec le réchauffement. Les expéditeurs de gros volumes peuvent utiliser plusieurs adresses IP pour accélérer le processus de réchauffement.
+- **Volume d'e-mail :** Pour envoyer des e-mails, vous devez réchauffer vos adresses IP. Le [réchauffement d'adresses IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) consiste à créer une réputation d'expéditeur avec vos nouvelles adresses IP. Si vous envoyez moins de 2 à 3 millions d'e-mails par jour, le réchauffement d’adresses IP devrait prendre 30 jours ou moins. Gardez à l'esprit vos pics d'envoi. Si vous envoyez normalement 2 millions d'e-mails par jour mais que vous prévoyez d'en envoyer 7 millions pendant une période saisonnière, c'est à ce « pic » d'envoi que vous devez vous préparer avec le réchauffement. Les expéditeurs de gros volumes peuvent utiliser plusieurs adresses IP pour accélérer le processus de réchauffement.
 - **La complexité organisationnelle :** Notre processus d'onboarding peut s'adapter aux besoins de votre entreprise. Que vous opériez dans un simple service commercial, un centre d'excellence ou plusieurs unités indépendantes, ou que vous fassiez appel à des agences pour renforcer vos équipes, Braze a de l'expérience dans tous les cas de figure.
 - **La sophistication de l'infrastructure de données :** Si vous ne mettez en œuvre que le SDK Braze ou si vous disposez déjà d'une plateforme de données client, il est possible de tout mettre en place en seulement 30 jours. L'utilisation d'une plateforme de données client moderne peut accélérer le processus. Mais si vous avez de nombreux systèmes dorsaux, outils ou bases de données à connecter à Braze, cela peut prendre plus de temps et nécessiter plus de ressources dédiées pour terminer la configuration.
 

@@ -6,7 +6,7 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre a opção Exibir todas as traduções para um ponto de extremidade de campanha."
+description: "Este artigo descreve detalhes sobre o endpoint Ver todas as traduções de uma campanha."
 ---
 
 {% api %}
@@ -15,11 +15,9 @@ description: "Este artigo descreve detalhes sobre a opção Exibir todas as trad
 /campaigns/translations
 {% endapimethod %}
 
-> Use esse ponto de extremidade para visualizar todas as traduções de cada variante de mensagens em uma campanha. Consulte [Localidades nas mensagens]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obter mais informações sobre os recursos de tradução.
+> Use esse ponto de extremidade para visualizar todas as traduções de cada variante de mensagens em uma campanha. Veja [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para saber mais sobre os recursos de tradução.
 
-{% alert important %}
-Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Pré-requisitos
 
@@ -34,13 +32,13 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`| Obrigatória | String | O ID de sua campanha. |
-|`message_variation_id`| Obrigatória | String | O ID de sua variação de mensagem. |
-|`locale_id`| Opcional | String | Um UUID de localização para filtrar as respostas. |
-| `post_launch_draft_version`| Opcional | Booleano | Quando `true` retorna a última versão de rascunho em vez da última versão publicada ao vivo. O padrão é `false`, que retorna a versão mais recente em tempo real.|
+|`message_variation_id`| Obrigatória | String | O ID da sua variação de mensagem. |
+|`locale_id`| Opcional | String | Um UUID de localidade para filtrar as respostas. |
+| `post_launch_draft_version`| Opcional | Booleano | Quando `true` retorna a versão mais recente do rascunho em vez da versão publicada mais recente. Padrão para `false` retornando a versão publicada mais recente.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Todas as IDs de tradução são consideradas identificadores únicos universais (UUIDs), que podem ser encontrados na resposta do ponto de extremidade GET.
+Todos os IDs de tradução são considerados identificadores únicos universais (UUIDs), que podem ser encontrados na resposta do endpoint GET.
 {% endalert %}
 
 ## Exemplo de solicitação
