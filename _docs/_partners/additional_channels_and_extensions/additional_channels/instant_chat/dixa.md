@@ -83,15 +83,14 @@ The following shows an example of the integration:
 
 Dixa uses webhooks to send data to Braze. You must be a Dixa administrator to configure webhooks.
 
-The first step is to create a data transformation in Braze. Go to **Data Settings** > **Data Transformations** > **Create transformation**.
+The first step is to create a data transformation in Braze. 
 
-Select **Start from scratch**, select destination **POST: Track Users**, and select **Create transformation**.
-
-In the transformation editor, copy the code example from **Example transformation tool** below and insert it in the **Transformation code** field. Click **Save**, copy the **Webhook URL**, and open Dixa.
-
-In Dixa, go to **Settings** > **Integrations** > **Webhooks** > **+ Outbound webhook**.
-
-On the webhook settings page, paste the URL from Braze and toggle the events you want to track. **Conversation created** is a good starting point to track customers' conversations. Click **Save** to finish the Dixa setup.
+1. Go to **Data Settings** > **Data Transformations** > **Create transformation**.
+2. Select **Start from scratch**, select destination **POST: Track Users**, and select **Create transformation**.
+3. In the transformation editor, copy the code example from **Example transformation tool** below and insert it in the **Transformation code** field. Select **Save**, copy the **Webhook URL**, and open Dixa.
+4. In Dixa, go to **Settings** > **Integrations** > **Webhooks** > **+ Outbound webhook**.
+5. On the webhook settings page, paste the URL from Braze and toggle the events you want to track. **Conversation created** is a good starting point to track customers' conversations. 
+6. Select **Save** to finish the Dixa setup.
 
 ### Example transformation tool
 
