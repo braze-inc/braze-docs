@@ -4,6 +4,7 @@ article_title: Integrate Poq with Braze
 description: "Learn about the Poq and Braze integration for native mobile app experiences, including push, in-app messages, analytics, Content Cards, and Banners."
 page_type: partner
 search_tag: Partner
+permalink: /docs/partners/poq/
 alias: /partners/poq/
 ---
 
