@@ -20,28 +20,105 @@ If you purchased WhatsApp but aren't on a message credits contract, you'll still
 
 **Message Credits Usage Overview** data is limited to the contract period, which is displayed in the **Credits contract overview**. You can't filter on a date range outside of the **Credits period**.
 
+![Message credit usage overview tab with panels for credits usage and an overview of credits contract.]({% image_buster /assets/img/app_settings/credits_usage_overview.png %})
+
 ### Message credits usage over contract
 
 The **Message Credits Usage over Contract** graph shows your usage over the selected period of time. The granularity of this chart depends on your selected time frame. Export export options by selecting the menu in the top right corner of the chart.
 
-![Message Credits Usage Overview dashboard with sections for credit usage, credit contract overview, and credit consumption over contract.]({% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %}){: style="max-width:70%;"}
+![Message credit usage over contract graph.]({% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %})
 
-## Channels
+## Credits Usage tab
 
-The **Credits Usage** tab shows the channels that are applicable to your company. For example, if you don't have WhatsApp, its tab won't appear.
+The **Credits Usage** tab shows credit usage across channels that are applicable to your company. For example, if you don't have WhatsApp, its tab won't appear.
+
+### Channels
 
 Refer to the following tabs for details on what is shown for each channel.
 
 {% tabs %}
+{% tab Banners %}
+
+### Banners
+
+**Banners Credits Usage** shows Banners credit usage across all accounts. Tiles show total credits consumed and total unique impressions. The **Usage by account** table includes **Braze workspace**, **Daily unique impressions**, **Credit ratio**, and **Credits**. When data is available, **Last updated** shows when the table was refreshed.
+
+#### Filters
+
+You can filter your data by:
+- Date range (defaults to the last 30 days)
+- Braze workspace
+
+Use **Export** to download the table data.
+
+![Banners Credits Usage with tiles for credits and unique impressions and a usage by account table.]({% image_buster /assets/img/app_settings/credits_usage_banners.png %}){: style="max-width:70%;"}
+
+{% endtab %}
+{% tab Content Cards %}
+
+### Content Cards
+
+**Content Cards Credits Usage** shows Content Cards credit usage across all accounts. Tiles show total credits consumed and total unique impressions. The **Usage by account** table includes **Braze workspace**, **Card type**, **Daily Unique Impressions**, **Credit ratio**, and **Credits**. When data is available, **Last updated** shows when the table was refreshed.
+
+#### Filters
+
+You can filter your data by:
+- Date range (defaults to the last 30 days)
+- Braze workspace
+- Card type
+
+Use **Export** to download the table data.
+
+![Content Cards Credits Usage with tiles for credits and unique impressions and a usage by account table.]({% image_buster /assets/img/app_settings/credits_usage_content_cards.png %}){: style="max-width:70%;"}
+
+{% endtab %}
+{% tab Email %}
+
+### Email
+
+**Email Credits Usage** shows Email credit usage across all accounts. Tiles show total credits consumed and total email sent. The **Usage by account** table includes **Braze workspace**, **Email sent**, **Credit ratio**, and **Credits**. When data is available, **Last updated** shows when the table was refreshed.
+
+#### Filters
+
+You can filter your data by:
+- Date range (defaults to the last 30 days)
+- Braze workspace
+
+Use **Export** to download the table data.
+
+![Email Credits Usage with tiles for credits and emails sent and a usage by account table.]({% image_buster /assets/img/app_settings/credits_usage_email.png %})
+
+{% endtab %}
+{% tab LINE %}
+
+### LINE
+
+**LINE Credits Usage** shows LINE credit usage across all accounts. Tiles show total credits consumed and total billable sends. The **Line** section table includes **Braze workspace**, **Month**, **Year**, **Company**, **Destination**, **Billable sends**, **Credit ratio**, and **Credits**. When data is available, **Last updated** shows when the table was refreshed.
+
+#### Filters
+
+You can filter your data by:
+- Date range (defaults to the last 30 days)
+- Braze workspace
+- Month
+- Year
+- Company
+- Destination
+
+Use **Export** to download the table data.
+
+![LINE Credits Usage with tiles for credits and billable sends and a detailed usage table.]({% image_buster /assets/img/app_settings/credits_usage_line.png %})
+
+{% endtab %}
 {% tab SMS, MMS, and RCS %}
 
 ### SMS, MMS, and RCS
 
-**SMS/MMS/RCS Credits Usage** shows the usage breakdown for the SMS, MMS, and RCS channel. The columns in the data table generally require you to have purchased Message Credits (though Braze still supports older billing models temporarily), and the **Credit ratio** and **Credits** columns indicate the respective country rate and consumed credits. Additionally, high-level tiles will indicate the total SMS and, when relevant, MMS consumption across the selected date range.
+**SMS/MMS/RCS Credits Usage** shows the usage breakdown for the SMS, MMS, and RCS channel. The **Credit ratio** and **Credits** columns indicate the respective country rate and consumed credits. Additionally, high-level tiles indicate the total SMS and, when relevant, MMS consumption across the selected date range.
 
 Filters are available allowing you to filter by **Country** or SMS and RCS type.
 
-![SMS/MSS/RCS Credits Usage with tiles for high-level data and a section for consumption by account.]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}){: style="max-width:70%;"}
+![SMS/MSS/RCS Credits Usage with tiles for high-level data and a section for consumption by account.]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %})
 
 Unlike the **Message Credits Usage Overview**, this section contains historical data from prior contract periods. 
 
@@ -49,7 +126,24 @@ Unlike the **Message Credits Usage Overview**, this section contains historical 
 It’s possible to select a date range that contains both non-credits and message credits usage. In this case, the consumption that occurred outside of message credits will display `—` (null) in the **Credit ratio** and **Credits** columns.
 {% endalert %}
 
-![SMS/MMS/RCS Credits Usage table with null values.]({% image_buster /assets/img/app_settings/sms_table_null3.png %}){: style="max-width:70%;"}
+![SMS/MMS/RCS Credits Usage table with null values.]({% image_buster /assets/img/app_settings/sms_table_null3.png %})
+
+{% endtab %}
+{% tab Webhooks %}
+
+### Webhooks
+
+**Webhooks Credits Usage** shows Webhooks credit usage across all accounts. Tiles show total credits consumed and total webhook sends. The **Usage by account** table includes **Braze workspace**, **Sends**, **Credit ratio**, and **Credits**. When data is available, **Last updated** shows when the table was refreshed.
+
+#### Filters
+
+You can filter your data by:
+- Date range (defaults to the last 30 days)
+- Braze workspace
+
+Use **Export** to download the table data.
+
+![Webhooks Credits Usage with tiles for credits and webhook sends and a usage by account table.]({% image_buster /assets/img/app_settings/credits_usage_webhooks.png %})
 
 {% endtab %}
 {% tab WhatsApp %}
@@ -67,7 +161,84 @@ You can filter your data by:
 - Conversation category type
 - Region
 
-![WhatsApp Credits Usage with a tile for total credits consumed and a usage by account table.]({% image_buster /assets/img/app_settings/whatsapp_credit_consumption4.png %}){: style="max-width:70%;"}
+![WhatsApp Credits Usage with a tile for total credits consumed and a usage by account table.]({% image_buster /assets/img/app_settings/whatsapp_credit_consumption4.png %})
+
+{% endtab %}
+{% endtabs %}
+
+### Other tabs
+
+{% tabs %}
+{% tab Credit Ratios %}
+
+### Credit Ratios
+
+**Credit Ratios** shows credit ratios across different channels and destinations. There are no summary tiles and no **Date range** control on this page. The **Credit ratios** table includes **Channel grouping**, **Destination**, and **Credit ratio**.
+
+#### Filters
+
+You can filter your data by:
+- Channel grouping
+- Destination
+
+Use **Export** to download the table data.
+
+![Credit Ratios page with a credit ratios table and channel and destination filters.]({% image_buster /assets/img/app_settings/credits_usage_credit_ratios.png %})
+
+{% endtab %}
+{% tab Agent Console %}
+
+### Agent Console
+
+**Agent Console Credits Usage** shows Agent Console credit usage across all accounts. Tiles show total credits consumed and total invocations. The **Usage by account** table includes **Braze workspace**, **Agent name**, **Model owner**, **Total invocations**, **Credit ratio**, and **Credits**. When data is available, **Last updated** shows when the table was refreshed.
+
+#### Filters
+
+You can filter your data by:
+- Date range (defaults to the last 30 days)
+- Braze workspace
+- Agent name
+- Model owner
+
+Use **Export** to download the table data.
+
+![Agent Console Credits Usage with tiles for credits and invocations and a usage by account table.]({% image_buster /assets/img/app_settings/credits_usage_agent_console.png %})
+
+{% endtab %}
+{% tab Audience Sync %}
+
+### Audience Sync
+
+**Audience Sync Credits Usage** shows Audience Sync credit usage across all accounts. Tiles show total credits consumed and total audience syncs. The **Usage by account** table includes **Braze workspace**, **Provider**, **Total syncs**, **Credit ratio**, and **Credits**. When data is available, **Last updated** shows when the table was refreshed.
+
+#### Filters
+
+You can filter your data by:
+- Date range (defaults to the last 30 days)
+- Braze workspace
+- Provider
+
+Use **Export** to download the table data.
+
+![Audience Sync Credits Usage with tiles for credits and audience syncs and a usage by account table.]({% image_buster /assets/img/app_settings/credits_usage_audience_sync.png %})
+
+{% endtab %}
+{% tab Message Archiving %}
+
+### Message Archiving
+
+**Message Archiving Credits Usage** shows Message Archiving credit usage across all accounts. Tiles show total credits consumed and total messages archived. The **Usage by account** table includes **Braze workspace**, **Channel**, **Messages archived**, **Credit ratio**, and **Credits**. When data is available, **Last updated** shows when the table was refreshed.
+
+#### Filters
+
+You can filter your data by:
+- Date range (defaults to the last 30 days)
+- Braze workspace
+- Channel
+
+Use **Export** to download the table data.
+
+![Message Archiving Credits Usage with tiles for credits and messages archived and a usage by account table.]({% image_buster /assets/img/app_settings/credits_usage_message_archiving.png %})
 
 {% endtab %}
 {% endtabs %}
