@@ -14,10 +14,10 @@
 
 1. Go to **Templates** > **Content Blocks**. Select <i class="fas fa-plus"></i> **Create Content Block** and select **HTML code editor**.
 2. Enter your HTML in the **HTML** tab, or build your Content Block in the **Classic** tab. <br><br> ![HTML code editor composer.]({% image_buster /assets/img_archive/html_content_block_composer.png %})<br><br>
-4. After creating your Content Block, select **Done**.
-5. Enter a name for your Content Block. This name will auto-populate as part of the **Content Block Liquid Tag**.
-6. (Optional) Add a description.
-7. Select the **Preview** tab to view how your Content Block will appear. Optionally select **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.<br><br> ![Preview tab for the HTML code editor composer.]({% image_buster /assets/img_archive/content_block_html_preview_link.png %})<br><br>
-8. Select **Launch Content Block**.
+3. After creating your Content Block, select **Done**.
+4. Enter a name for your Content Block. This name will auto-populate as part of the **Content Block Liquid Tag**.
+5. (Optional) Add a description.
+6. Select the **Preview** tab to view how your Content Block will appear. Optionally select **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.<br><br> ![Preview tab for the HTML code editor composer.]({% image_buster /assets/img_archive/content_block_html_preview_link.png %})<br><br>
+7. Select **Launch Content Block**.
 
 {% endif %}
