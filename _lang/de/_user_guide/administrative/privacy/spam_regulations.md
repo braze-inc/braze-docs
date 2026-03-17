@@ -104,7 +104,7 @@ Stellen Sie sicher, dass Ihre Nachricht nichts enthält, was Spam-Filter trigger
 
 ### E-Mail {#spam-email}
 
-Die Qualität Ihrer E-Mail-Liste ist besonders wichtig.  Eine Handvoll schlechter E-Mails in Ihrer Liste kann Ihre Zustellung für eine Million guter Nutzer ruinieren. Das Sammeln einer Liste mit schlechten E-Mails führt zu Bounces, Blocklisting, Spam-Trap-Treffern und senkt Ihre Antwortraten. Der erste Schritt besteht darin, E-Mails auszusortieren, die regelmäßig keine Aktivität aufweisen, und offensichtliche Bounces zu entfernen. Unabhängig davon, ob Sie ein Opt-in (Häkchen setzen), ein Opt-out (Häkchen entfernen), ein Confirm Opt-in (eine E-Mail, in der Sie sich für die Anmeldung bedanken und einen Link zum Abbestellen angeben) oder ein Double Opt-in (eine E-Mail, die einen Klick zur Bestätigung erfordert) einsetzen, sollten Sie die Qualität der Liste im Auge behalten.
+Die Qualität Ihrer E-Mail-Liste ist besonders wichtig. Eine Handvoll schlechter E-Mails in Ihrer Liste kann Ihre Zustellung für eine Million guter Nutzer ruinieren. Das Sammeln einer Liste mit schlechten E-Mails führt zu Bounces, Blocklisting, Spam-Trap-Treffern und senkt Ihre Antwortraten. Der erste Schritt besteht darin, E-Mails auszusortieren, die regelmäßig keine Aktivität aufweisen, und offensichtliche Bounces zu entfernen. Unabhängig davon, ob Sie ein Opt-in (Kontrollkästchen aktivieren), ein Opt-out (Kontrollkästchen deaktivieren), ein Bestätigungs-Opt-in (eine E-Mail mit einer Dankesnachricht für die Registrierung und einem Link zum Abmelden) oder ein Double-Opt-in (eine E-Mail, die zur Bestätigung einen Klick erfordert) implementieren, sollten Sie stets die Qualität der Liste berücksichtigen.
 
 ### iOS {#spam-ios-windows}
 

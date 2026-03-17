@@ -39,7 +39,7 @@ Se novas propriedades forem enviadas no futuro, elas não estarão no esquema at
 
 ## Etapa 2: Use o objeto aninhado
 
-Você pode fazer referência aos dados aninhados durante a segmentação e a personalização. Note que não é necessário ter um esquema. Consulte as seguintes seções para exemplos de uso:
+Você pode referenciar os dados aninhados durante a segmentação e personalização. Observe que um esquema não é necessário. Consulte as seguintes seções para exemplos de uso:
 
 - [Corpo da solicitação da API](#api-request-body)
 - [Modelos do Liquid](#liquid-templating)
@@ -84,7 +84,7 @@ Veja a seguir um `/users/track` exemplo com um evento personalizado "Criou playl
 {% tab Restaurant Example%}
 
 O seguinte é um `/users/track` exemplo com um evento personalizado "Comprou". Após um pedido ter sido concluído, capture as propriedades desse pedido enviando:
-- Uma solicitação da API que lista `r_details` como uma propriedade
+- Uma solicitação de API que lista `r_details` como uma propriedade
 - As propriedades aninhadas daquela ordem
 
 ```
@@ -141,7 +141,7 @@ Para usar essas propriedades para disparar uma campanha, selecione seu evento pe
 
 Acionando uma campanha com propriedades aninhadas do evento "Playlist Criada": 
 
-![Um usuário que escolhe uma propriedade aninhada para filtros de propriedade em um evento personalizado.]({% image_buster /assets/img/nested_object2.png %})
+![Um usuário escolhendo uma propriedade aninhada para filtros de propriedade em um evento personalizado.]({% image_buster /assets/img/nested_object2.png %})
 
 A condição de disparo `songs[].album.yearReleased` "é" "1968" corresponderá a um evento onde qualquer uma das músicas tenha um álbum lançado em 1968. Usamos a notação de colchetes `[]` para percorrer matrizes e correspondemos se **qualquer** item na matriz percorrida corresponder à propriedade do evento.
 
@@ -154,7 +154,7 @@ O filtro **does not equal** só corresponde se nenhuma das propriedades em sua m
 
 Acionando uma campanha com propriedades aninhadas do evento "Ordered": 
 
-![Um usuário que adiciona o filtro de propriedade r_details.name é SandwichEmperor para um evento personalizado.]({% image_buster /assets/img/nested_object1.png %})
+![Um usuário adicionando o filtro de propriedade r_details.name é SandwichEmperor para um evento personalizado.]({% image_buster /assets/img/nested_object1.png %})
 
 `r_details.name`: "SandwichEmperor"<br>
 `r_details.location.city`: Montclair
@@ -181,11 +181,30 @@ Usando o modal **Adicionar Personalização**, selecione **Propriedades Avançad
 
 ![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
 
+## Testando objetos aninhados em mensagens
+
+A ferramenta **Prévia & Teste** do painel não suporta a adição de dados simulados para objetos aninhados ou atributos personalizados aninhados. Para testar mensagens que referenciam dados aninhados através do Liquid, você pode visualizar mensagens com atributos aninhados como um usuário existente com esse atributo aninhado, ou visualizar mensagens com propriedades de evento personalizado lançando uma campanha ativa para usuários de teste.
+
+### Atributos personalizados aninhados
+
+1. Importe os atributos aninhados para o perfil do usuário de teste através da API.
+2. Na sua campanha ou Canvas, acesse **Prévia & Teste**.
+3. Selecione **Prévia como usuário** e pesquise o usuário de teste. O Liquid será resolvido usando os atributos aninhados reais no perfil desse usuário.
+
+### Propriedades de evento aninhadas
+
+As propriedades de evento aninhadas não podem ser visualizadas no painel porque requerem um disparador de evento ativo. Para testar:
+
+1. Crie uma campanha ou etapa do Canvas que tenha como alvo apenas seus usuários de teste e seja disparada por (ou referencie) o evento personalizado com propriedades aninhadas.
+2. Lance a campanha para seu público de teste.
+3. Registre o evento personalizado com a carga útil do objeto aninhado no perfil do seu usuário de teste (usando a API ou SDK).
+4. Verifique se a mensagem é renderizada corretamente com os valores das propriedades aninhadas.
+
 ## Perguntas frequentes
 
 ### O uso de objetos aninhados registra pontos de dados adicionais?
 
-Não há nenhuma alteração na forma como registramos os pontos de dados como resultado da adição desse recurso. A segmentação baseada em objetos aninhados usa extensões de segmento, que não usam pontos de dados adicionais.
+Não há mudança na forma como registramos pontos de dados como resultado da adição dessa capacidade. Segmentar com base em objetos aninhados usa Extensões de Segmento, que não utiliza pontos de dados adicionais.
 
 ### Quantos dados aninhados podem ser enviados?
 

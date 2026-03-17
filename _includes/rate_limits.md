@@ -114,6 +114,14 @@ Braze endpoints support batching API requests. A single request to the messaging
 {% elsif include.endpoint == "transactional email" %}
 The `/transactional/v1/campaigns/{campaign_id}/send` endpoint is a paid-for endpoint in units per hour (for example, 50,000 per hour depending on your package). There is no separate per-endpoint rate limit: you can send beyond your allotted volume, but only the allotted volume is covered by SLA. Requests to this endpoint count toward your [overall external API rate limit]({{site.baseurl}}/api/api_limits/). If you exceed that limit (for example, 250,000 requests per hour across all endpoints), Braze returns 429 and requests are throttled. The transactional volume count resets each hour, so after one hour, another allotment is available. Within the SLA-covered volume, 99.9% of emails will send in less than one minute.
 
+<!---POST /preference_center/v1 and PUT /preference_center/v1/{preferenceCenterExternalID}-->
+{% elsif include.endpoint == "post or put preference center" %}
+This endpoint has a rate limit of 10 requests per minute, per workspace, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
+<!---GET /preference_center/v1-->
+{% elsif include.endpoint == "get preference center" %}
+This endpoint has a rate limit of 1,000 requests per minute, per workspace, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
 <!---/sends/id/create-->
 
 {% elsif include.endpoint == "sends id create" %}

@@ -8,13 +8,13 @@ description: "Cet article donne un aperçu des paramètres multilingues du table
 
 # Traduction et paramètres multilingues
 
-> La fonctionnalité multilingue vous permet d'utiliser [les étiquettes de traduction]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) ] pour cibler des utilisateurs de langues et d'emplacements différents dans un seul et même message.
+> La fonctionnalité multilingue vous permet d'utiliser des étiquettes de traduction]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) pour réaliser un ciblage d'utilisateurs de différentes langues et provenant de différents emplacements, le tout dans un seul message.
 
 {% multi_lang_include locales.md section="Prerequisites" %}
 
 ## Ajouter un paramètre régional
 
-1. Allez dans **Paramètres** > **Paramètres de localisation**.
+1. Veuillez vous rendre dans **Paramètres** > **Paramètres de localisation**.
 2. Sélectionnez **Ajouter des paramètres régionaux**, puis sélectionnez **Paramètres régionaux par défaut** ou **Attributs personnalisés**.<br><br>![La liste déroulante "Ajouter des paramètres régionaux" avec des options pour sélectionner les paramètres régionaux par défaut ou des attributs personnalisés.]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
 3. Saisissez un nom pour le paramètre régional.
 4. Sélectionnez les attributs de l'utilisateur correspondant à l'option locale que vous avez choisie.
@@ -22,12 +22,12 @@ description: "Cet article donne un aperçu des paramètres multilingues du table
 {% tabs %}
 {% tab Default locale %}
 
-Pour les **Paramètres régionaux par défaut**, utilisez les menus déroulants pour sélectionner la langue à ajouter et, éventuellement, le pays à associer à la langue.<br><br>![Une fenêtre intitulée "Add locale - Default Language and Country" permet de spécifier la langue et le pays.]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
+Pour les **Paramètres régionaux par défaut**, utilisez les menus déroulants pour sélectionner la langue à ajouter et, éventuellement, le pays à associer à la langue.<br><br>![Une fenêtre intitulée « Ajouter une locale - Langue et pays par défaut » pour définir la langue et le pays.]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% tab Custom attributes %}
 
-Pour les **attributs personnalisés**, utilisez le menu déroulant pour sélectionner l'attribut personnalisé associé et dans le champ de texte, saisissez la valeur.<br><br>![Une fenêtre intitulée "Add locale - Custom Attributes" pour spécifier l'attribut personnalisé et sa valeur.]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
+Pour les **attributs personnalisés**, utilisez le menu déroulant pour sélectionner l'attribut personnalisé associé et dans le champ de texte, saisissez la valeur.<br><br>![Une fenêtre intitulée « Ajouter une locale - Attributs personnalisés » permettant de spécifier l'attribut personnalisé et sa valeur.]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% endtabs %}

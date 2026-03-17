@@ -13,7 +13,7 @@ description: "Este artigo o orientará sobre como configurar os recursos de logo
 
 ## Solicitações
 
-Após a configuração, você será solicitado a fornecer um URL do Assertion Consumer Service (ACS).  
+Durante a configuração, você será solicitado a fornecer uma URL de Serviço do Consumidor de Aserção (ACS).  
 
 | Requisito | Informações |
 |---|---|
@@ -35,10 +35,10 @@ Após a configuração, você será solicitado a fornecer um URL do Assertion Co
 2. Na página **Selecionar um método de logon único**, selecione **SAML** como seu método.
 3. Na página **Configurar logon único com SAML**, selecione o ícone de edição para **Configuração básica de SAML**.
 4. Configure o aplicativo no modo iniciado por IdP inserindo um **URL de resposta** que combine sua [instância da Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) com o seguinte padrão: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
-5. Opcionalmente, configure o RelayState inserindo sua chave de API gerada pelo Relay State no campo **Relay State (Optional)**.
+5. Configure o RelayState inserindo sua chave de API gerada no campo **Relay State**.
 
 {% alert important %}
-**Não** defina o campo **URL de logon**. Deixe esse campo em branco para evitar problemas com o SSO SAML iniciado pelo IdP.
+**Não** defina o campo **URL de Acesso**. Deixe este campo em branco para evitar problemas com seu SSO SAML iniciado pelo IdP.
 {% endalert %}
 
 {: start="6"}

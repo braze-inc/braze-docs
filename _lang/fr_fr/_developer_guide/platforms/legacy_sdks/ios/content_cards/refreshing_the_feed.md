@@ -1,6 +1,6 @@
 ---
 nav_title: Rafraîchir le flux
-article_title: Actualiser le fil de la carte de contenu pour iOS
+article_title: Veuillez actualiser le flux de la carte de contenu pour iOS.
 platform: iOS
 page_order: 4
 description: "Cet article de référence explique l’implémentation de cartes de contenu en actualisant votre application iOS."
@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Actualiser le flux
+# Veuillez actualiser le flux.
 
 ## Rafraîchir les cartes de contenu
 

@@ -1,7 +1,7 @@
 ---
-nav_title: Servidor MCP Braze
-article_title: Acerca del servidor Braze MCP
-description: "Infórmate sobre el servidor Braze MCP, una conexión segura de sólo lectura que permite a herramientas de IA como Claude y Cursor acceder a datos Braze no PII para responder preguntas, analizar tendencias y proporcionar información sin alterar los datos."
+nav_title: Servidor Braze MCP
+article_title: Acerca del servidor MCP de Braze
+description: "Descubre el servidor MCP de Braze, una conexión segura y de solo lectura que permite a herramientas de IA como Claude y Cursor acceder a datos de Braze que no son PII para responder preguntas, analizar tendencias y proporcionar información sin alterar los datos."
 page_order: 3
 alias: /mcp/
 ---

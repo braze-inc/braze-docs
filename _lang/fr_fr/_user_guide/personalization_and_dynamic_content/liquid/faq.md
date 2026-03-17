@@ -32,7 +32,7 @@ Reportez-vous à la section [Balises de personnalisation prises en charge]({{sit
 
 Vous pouvez créer et affecter des variables en utilisant l'étiquette `assign`. Cela crée une variable dans le compositeur du message qui peut également être référencée dans votre message.
 
-### L'utilisation de Liquid permet-elle d'enregistrer des points de données ?
+### L'utilisation de Liquid enregistre-t-elle des points de données ?
 
 Non.
 
@@ -74,7 +74,7 @@ Les boucles "for" sont également connues sous le nom d'[étiquettes d'itératio
 
 Dans Braze, cela pourrait être utilisé pour vérifier les éléments d'un attribut personnalisé de type tableau, ou une liste de valeurs et d'objets renvoyés par un [catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), une [sélection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) ou une réponse à un appel de [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). Plus précisément, vous pouvez utiliser une logique de boucle dans le cadre de votre communication pour vérifier si un produit est en stock ou si un produit présente une cote minimale. 
 
-Par exemple, disons que vous avez un catalogue appelé "Jeux" dont la sélection s'appelle "cheap_games".. Pour extraire les titres des jeux contenus dans "cheap_games",, vous pourriez utiliser cet extrait de code liquide :
+Par exemple, supposons que vous disposiez d'un catalogue intitulé « Jeux » contenant une sélection nommée"cheap_games".. Pour extraire les titres des jeux,"cheap_games",vous pourriez utiliser cet extrait de code Liquid :
 
 {% raw %}
 ```liquid
@@ -86,3 +86,35 @@ Par exemple, disons que vous avez un catalogue appelé "Jeux" dont la sélection
 {% endraw %}
 
 Une fois que les conditions fixées sont remplies, votre message peut être transmis. L'utilisation de cette logique est un moyen utile de gagner du temps, au lieu de répéter les blocs Liquid pour différentes conditions.
+
+### Pourquoi y a-t-il des espaces supplémentaires dans les messages qui utilisent des blocs de contenu ?
+
+Si vous remarquez des espaces supplémentaires dans les messages envoyés qui utilisent des blocs de contenu avec Liquid, il se peut que vos instructions conditionnelles contiennent des sauts de paragraphe ou de ligne inutiles. Veuillez rédiger vos instructions conditionnelles sur une seule ligne plutôt que sur plusieurs lignes.
+
+#### Exemple
+
+{% raw %}
+```liquid
+{% if {{custom_attribute.${has_discount}}} == true %}Discounted Item{% elsif {{custom_attribute.${is_new_arrival}}} == true %}New Arrival{% else %}Regular Item{% endif %}
+{% endraw %}
+
+### When should I use `assign` versus `capture`?
+
+Both `assign` and `capture` create Liquid variables, but they serve different purposes:
+
+- `assign` is for simple variables that store a single value, such as a boolean, number, or simple string. You can also apply a single filter in the same line.
+- `capture` is for storing a block of text that may include multiple variables, strings, or complex expressions. Use `capture` when the value is too complex for a single `assign` statement, such as URLs that utilize other Liquid variables or custom attributes as parameters. `capture` is also preferred when implementing Liquid variables in the body of Connected Content calls.
+
+#### Examples
+
+{% raw %}
+```liquid
+{% comment %} Valid assign usage {% endcomment %}
+{% assign name = {{custom_attribute.${first_name}}} %}
+{% assign price = {{custom_attribute.${price}}} | plus: 0 %}
+
+{% comment %} Use capture for complex strings {% endcomment %}
+{% capture greeting %}Hello, {{custom_attribute.${first_name}}}! Your order #{{custom_attribute.${order_id}}} is ready.{% endcapture %}
+{{ greeting }}
+```
+{% endraw %}

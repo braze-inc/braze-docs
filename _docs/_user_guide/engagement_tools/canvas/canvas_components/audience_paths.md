@@ -29,17 +29,23 @@ With Audience Paths, you can:
 - Precisely target users on a large scale.
   - Create up to eight audience groups (two default and six additional groups) per component, but you may want to connect multiple Audience Paths Steps to further sort your users. 
 
-### Allowing time for user evaluations
+### How users are evaluated
 
 ![Canvas showing a 24-hour delay after a Message step, followed by an Audience Path.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-Users are evaluated as soon as they reach the Audience Path step. After they have been evaluated, they will immediately progress to the next step. This makes it important to allow an appropriate time window to lapse if the Audience Path is determined by a user action.
+Users are evaluated against filters and segment membership **at the moment they reach the Audience Path step**—not when they entered the Canvas. After evaluation, they immediately progress to the matching path. When a user is placed in an audience group, they stay in that group even if their user profile changes afterward.
+
+{% alert important %}
+Audience Paths evaluate based on a user's current attributes, filters, and segment membership at the time of evaluation. They do not evaluate based on the specific event that triggered Canvas entry. To route users based on an action they perform (such as a custom event), use [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) instead.
+{% endalert %}
+
+### Allowing time for user evaluations
+
+Because evaluation is immediate, it's important to add a delay before the Audience Path if the path criteria depend on a user interaction with a previous step.
 
 For example, if users are sent Message A and the next step is an Audience Path that evaluates whether they interacted with that message, all users will progress to the step for those who haven't interacted with that message. This is because the users immediately progressed to the Audience Path step without time to interact with the message. In other words, users are evaluated for an interaction with the message almost immediately after the message sends.
 
-To give users time to interact with a sent message, a delay needs to be between the Message step and Audience Path. For example, a 24-hour delay would give users 24 hours after the message sends to interact with Message A before being evaluation.
-
-Note that users advance to the next step based on the first action they performed after entering the Audience Path step within the evaluation window. This means if a user performs a second custom event, they wouldn't switch audience groups.
+To give users time to interact with a sent message, add a delay between the Message step and Audience Path. For example, a 24-hour delay gives users 24 hours after the message sends to interact with Message A before evaluation.
 
 ## Creating an Audience Path
 

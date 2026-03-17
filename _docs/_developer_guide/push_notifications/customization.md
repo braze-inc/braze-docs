@@ -22,4 +22,8 @@ channel:
 {% sdktab fireos %}
 {% multi_lang_include developer_guide/fireos/push_notifications/customization.md %}
 {% endsdktab %}
+
+{% sdktab React Native %}
+{% multi_lang_include developer_guide/react_native/push_notifications/customization.md %}
+{% endsdktab %}
 {% endsdktabs %}

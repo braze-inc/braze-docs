@@ -147,7 +147,7 @@ Crie uma política de IAM para permitir que o Braze interaja com seu bucket de o
 {: start="3"}
 3\. Selecione **Revisar política** quando terminar.
 
-4. Dê um nome e uma descrição à política, e então selecione **Criar Política**.  
+4. Dê um nome e uma descrição à política, em seguida, selecione **Criar Política**.  
 
 ![Uma política de exemplo chamada "new-policy-name."]({% image_buster /assets/img/create_policy_3_name.png %})
 
@@ -162,15 +162,15 @@ Para concluir a configuração na AWS, você criará uma função de IAM e anexa
 ![O botão "Criar função".]({% image_buster /assets/img/create_role_1_list.png %})
 
 {: start="2"}
-2\. Copie o ID da conta AWS do Braze do seu dashboard. Acessar **Ingestão de Dados em Nuvem**, selecionar **Criar Nova Sincronização de Dados**, e selecionar **Importação S3**.
+2\. Copie o ID da conta AWS do Braze do seu dashboard. Acessar **Ingestão de Dados na Nuvem**, selecionar **Criar Nova Sincronização de Dados**, e selecionar **Importação S3**.
 3\. Na AWS, selecione **Outra conta AWS** como o tipo de seletor de entidade confiável. Forneça seu ID de conta Braze. Selecione a caixa de seleção **Requerer ID externo**.
-4\. No Braze, acesse **Configurações de Dados** > **Ingestão de Dados em Nuvem**, selecione **Criar Nova Sincronização de Dados**, e selecione **Importação S3** na seção de fontes de arquivo.
+4\. No Braze, acesse **Configurações de Dados** > **Ingestão de Dados na Nuvem**, selecione **Criar Nova Sincronização de Dados**, e selecione **Importação S3** na seção de fontes de arquivo.
 5\. Copie o **ID da Conta Braze** gerado automaticamente. 
 
 ![Seção de credenciais com o campo ID da Conta Braze.]({% image_buster /assets/img/braze_account_id.png %})
 
 {: start="6"}
-6\. No AWS, cole o ID da conta e selecione **Próximo**.
+6\. Na AWS, cole o ID da conta e, em seguida, selecione **Próximo**.
 
 ![A página "Create Role" (Criar função) do S3. Essa página tem campos para nome da função, descrição da função, entidades confiáveis, políticas e limite de permissões.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
@@ -184,9 +184,13 @@ Dê um nome e uma descrição à função, e selecione **Criar Função**.
 ![Uma função de exemplo chamada "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})
 
 {: start="8"}
-8\. Anote o ARN da função que você criou e o ID externo que você gerou, pois você precisará deles para criar a integração de Ingestão de Dados em Nuvem.
+8\. Anote o ARN da função que você criou e o ID externo que você gerou, pois você precisará deles para criar a integração de Ingestão de Dados na Nuvem.
 
 ## Configuração da ingestão de dados na nuvem no Braze
+
+{% alert important %}
+Clientes em integração em fevereiro de 2026 ou depois podem ter acesso antecipado a uma nova interface de usuário de CDI, onde fontes e sincronizações são configuradas separadamente. Nesta nova interface, crie primeiro uma fonte S3 com suas credenciais, bucket e região. Em seguida, crie uma sincronização com sua URL SQS e caminho da pasta (opcional).
+{% endalert %}
 
 1. Para criar uma nova integração, acesse **Configurações de dados** > **Ingestão de dados na nuvem**, selecione **Criar nova sincronização de dados** e selecione **Importação S3** na seção de fontes de arquivo. 
 2. Insira as informações do processo de configuração da AWS para criar uma nova sincronização. Especifique o seguinte:
@@ -194,16 +198,16 @@ Dê um nome e uma descrição à função, e selecione **Criar Função**.
   - Função do ARN
   - ID externo
   - URL do SQS (deve ser exclusivo para cada nova integração)
-  - nome do bucket
+  - Nome do bucket
   - Caminho da pasta (opcional, deve ser único entre as sincronizações em um espaço de trabalho)
   - Região
 
 ![Exemplo de credenciais de segurança conforme exibido no S3 para criar uma nova sincronização de importação.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
 
 {: start="3"}
-3\. Nomeie sua integração e selecione o tipo de dados para esta integração. 
+3\. Nomeie sua integração e selecione o tipo de dado para esta integração. 
 
-![Configurando detalhes da sincronização para "cdi-s3-as-source-integration" com atributos de usuário como o tipo de dados.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})
+![Configurando detalhes de sincronização para "cdi-s3-as-source-integration" com atributos de usuário como o tipo de dado.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})
 
 {: start="4"}
 4\. Adicione um e-mail de contato para receber notificações se a sincronização for interrompida devido a problemas de acesso ou permissões. Opcionalmente, ative as notificações para erros no nível do usuário e sucessos de sincronização. 
@@ -211,7 +215,7 @@ Dê um nome e uma descrição à função, e selecione **Criar Função**.
 ![Configurando preferências de notificação para notificações de erro de sincronização.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})
 
 {: start="5"}
-5\. Por fim, selecione **Test connection** para confirmar que o Braze pode acessar seu bucket e listar os arquivos disponíveis para ingestão (não os dados dentro desses arquivos). Em seguida, salve a sincronização. 
+5\. Por fim, selecione **Testar conexão** para confirmar que o Braze pode acessar seu bucket e listar os arquivos disponíveis para ingestão (não os dados dentro desses arquivos). Em seguida, salve a sincronização. 
 
 ![Uma opção para testar a conexão com uma prévia de dados.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
 
@@ -219,7 +223,7 @@ Dê um nome e uma descrição à função, e selecione **Criar Função**.
 
 A ingestão de dados na nuvem aceita arquivos JSON, CSV e Parquet. Cada arquivo deve conter uma ou mais das colunas de identificador suportadas e uma coluna de carga útil como uma string JSON.
 
-O Braze não impõe requisitos adicionais de nome de arquivo além do que é imposto pela AWS. Os nomes dos arquivos devem ser exclusivos. Recomendamos adicionar um timestamp para exclusividade.
+O Braze não impõe requisitos adicionais de nome de arquivo além do que é imposto pela AWS. Os nomes dos arquivos devem ser únicos. Recomendamos adicionar um timestamp para garantir a exclusividade.
 
 ### Identificadores de usuário
 
@@ -228,7 +232,7 @@ Seu arquivo de origem pode conter uma ou mais colunas ou chaves de identificador
 | Identificador | Descrição |
 | --- | --- |
 | `EXTERNAL_ID` | Isso identifica o usuário que você deseja atualizar. Esse valor deve corresponder ao valor `external_id` usado no Braze. |
-| `ALIAS_NAME` e `ALIAS_LABEL` | Essas duas colunas criam um objeto de alias de usuário. `alias_name` deve ser um identificador exclusivo, e `alias_label` especifica o tipo de alias. Os usuários podem ter vários aliases com rótulos diferentes, mas apenas um `alias_name` por `alias_label`. |
+| `ALIAS_NAME` e `ALIAS_LABEL` | Essas duas colunas criam um objeto de alias de usuário. `alias_name` deve ser um identificador único, e `alias_label` especifica o tipo de alias. Os usuários podem ter múltiplos aliases com rótulos diferentes, mas apenas um `alias_name` por `alias_label`. |
 | `BRAZE_ID` | O identificador de usuário do Braze. Isso é gerado pelo SDK da Braze, e novos usuários não podem ser criados usando um Braze ID por meio da ingestão de dados na nuvem. Para criar novos usuários, especifique um ID de usuário externo ou um alias de usuário. |
 | `EMAIL` | O endereço de e-mail do usuário. Se houver vários perfis com o mesmo endereço de e-mail, o perfil atualizado mais recentemente terá prioridade para atualizações. Se você incluir e-mail e telefone, usaremos o e-mail como identificador principal. |
 | `PHONE` | O número de telefone do usuário. Se houver vários perfis com o mesmo número de telefone, o perfil atualizado mais recentemente terá prioridade nas atualizações. |
@@ -287,25 +291,25 @@ ID,PAYLOAD,DELETED
 85,"{""product_name"": ""Product 85"", ""price"": 85.85}",false
 1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
 ```
-Inclua uma coluna opcional **DELETED**. Quando `DELETED` é `true`, esse item de catálogo é removido do catálogo no Braze. Veja [Deleting catalog items](#deleting-catalog-items).
+Inclua uma coluna opcional **DELETADO**. Quando `DELETED` é `true`, esse item de catálogo é removido do catálogo no Braze. Veja [Excluindo itens do catálogo](#deleting-catalog-items).
 {% endtab %}
 
 {% endtabs %}  
 
-Para exemplos de todos os tipos de arquivo suportados, consulte os arquivos de exemplo em [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).  
+Para exemplos de todos os tipos de arquivo suportados, consulte os arquivos de amostra em [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).  
 
 ## Excluindo dados
 
-A ingestão de dados em nuvem para S3 suporta a exclusão de usuários e itens de catálogo através de uploads de arquivos. Use sincronizações e formatos de arquivo separados para cada um.
+A Ingestão de Dados em Nuvem para S3 suporta a exclusão de usuários e itens do catálogo por meio de uploads de arquivos. Use sincronizações e formatos de arquivo separados para cada um.
 
 - **[Excluindo usuários](#deleting-users)** – Crie uma sincronização com o tipo de dado **Excluir Usuários** e faça upload de arquivos que contenham apenas identificadores de usuários (sem carga útil).
-- **[Excluindo itens de catálogo](#deleting-catalog-items)** – Use sua sincronização de catálogo existente e adicione uma coluna `deleted` (ou `DELETED`) para marcar itens para remoção.
+- **[Excluindo itens do catálogo](#deleting-catalog-items)** – Use sua sincronização de catálogo existente e adicione uma coluna `deleted` (ou `DELETED`) para marcar itens para remoção.
 
 ### Excluindo usuários
 
 Para excluir perfis de usuários no Braze usando arquivos no S3:
 
-1. Crie uma nova sincronização de ingestão de dados em nuvem (mesma [configuração AWS e Braze](#setting-up-cloud-data-ingestion-in-aws) que para outras sincronizações).
+1. Crie uma nova sincronização de Ingestão de Dados em Nuvem (mesma [configuração da AWS e Braze](#setting-up-cloud-data-ingestion-in-aws) que para outras sincronizações).
 2. Ao configurar a sincronização no Braze, defina **Tipo de Dado** como **Excluir Usuários**.
 3. Faça upload de arquivos para seu bucket S3 que contenham apenas colunas de identificador de usuário. Não inclua uma coluna `PAYLOAD`—a sincronização falha se a carga útil estiver presente, para evitar exclusões acidentais.
 
@@ -318,34 +322,34 @@ Cada linha no arquivo deve identificar exatamente um usuário usando um dos:
 | `BRAZE_ID` | ID de usuário gerado pelo Braze (apenas usuários existentes). |
 
 {% alert important %}
-Excluir usuários é permanente e não pode ser desfeito. Inclua apenas usuários que você pretende remover. Para mais detalhes, veja [Excluir usuários com ingestão de dados em nuvem]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/delete_users/).
+Excluir usuários é permanente e não pode ser desfeito. Inclua apenas usuários que você pretende remover. Para mais detalhes, veja [Excluir usuários com Ingestão de Dados em Nuvem]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/delete_users/).
 {% endalert %}
 
-**Exemplo – JSON (exclusões de usuários):**
+**Exemplo – JSON (usuário exclui):**
 ```jsonl
 {"external_id":"user-to-delete-001"}
 {"external_id":"user-to-delete-002"}
 {"braze_id":"braze-id-from-profile"}
 ```
 
-**Exemplo – CSV (exclusões de usuários):**
+**Exemplo – CSV (usuário exclui):**
 ```plaintext
 external_id
 user-to-delete-001
 user-to-delete-002
 ```
 
-Quando a sincronização é executada, o Braze processa novos arquivos no bucket e exclui os perfis de usuário correspondentes.
+Quando a sincronização é executada, a Braze processa novos arquivos no bucket e exclui os perfis de usuário correspondentes.
 
 ### Excluindo itens do catálogo
 
 Para remover itens de um catálogo usando armazenamento de arquivos:
 
 1. Use a mesma sincronização S3 que você usa para [sincronizar dados do catálogo]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/) (tipo de dado **Catálogos**).
-2. Em seus arquivos CSV ou JSON, adicione uma coluna opcional **`deleted`** (ou **`DELETED`**).
-3. Defina `deleted` como `true` para qualquer item do catálogo que você deseja remover do catálogo no Braze.
+2. Nos seus arquivos CSV ou JSON, adicione uma coluna opcional **`deleted`** (ou **`DELETED`**).
+3. Defina `deleted` como `true` para qualquer item do catálogo que você deseja remover do catálogo na Braze.
 
-Cada linha ainda precisa de `ID` e `PAYLOAD`. Para linhas marcadas para exclusão, a carga útil pode ser mínima; o Braze remove o item por `ID`.
+Cada linha ainda precisa de `ID` e `PAYLOAD`. Para linhas marcadas para exclusão, a carga útil pode ser mínima; a Braze remove o item por `ID`.
 
 **Exemplo – JSON (exclusão de item do catálogo):**
 ```jsonl
@@ -360,18 +364,18 @@ ID,PAYLOAD,DELETED
 1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
 ```
 
-Quando a sincronização é executada, linhas com `deleted: true` fazem com que o item correspondente do catálogo seja excluído no Braze. Para o comportamento completo de sincronização e exclusão do catálogo, veja [Sincronizar e excluir dados do catálogo]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/).
+Quando a sincronização é executada, linhas com `deleted: true` fazem com que o item do catálogo correspondente seja excluído na Braze. Para o comportamento completo de sincronização e exclusão do catálogo, veja [Sincronizar e excluir dados do catálogo]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/).
 
 ## Coisas para saber
 
-- Os arquivos adicionados ao bucket de origem S3 não devem exceder 512 MB. Arquivos maiores que 512 MB resultarão em um erro e não serão sincronizados com o Braze.
-- Embora não haja limite adicional no número de linhas por arquivo, recomendamos usar arquivos menores para melhorar a velocidade das suas sincronizações. Por exemplo, um arquivo de 500 MB levaria consideravelmente mais tempo para ser processado do que cinco arquivos separados de 100 MB.
+- Os arquivos adicionados ao bucket de origem S3 não devem exceder 512 MB. Arquivos maiores que 512 MB resultarão em um erro e não serão sincronizados com a Braze.
+- Embora não haja limite adicional no número de linhas por arquivo, recomendamos usar arquivos menores para melhorar a velocidade das suas sincronizações. Por exemplo, um arquivo de 500 MB levaria consideravelmente mais tempo para ser ingerido do que cinco arquivos separados de 100 MB.
 - Não há limite adicional no número de arquivos enviados em um determinado tempo.
 - A ordenação não é suportada em ou entre arquivos. Recomendamos agrupar atualizações periodicamente se você estiver monitorando por quaisquer condições de corrida esperadas.
 
 ## Solução de problemas
 
-### Carregando arquivos e processando
+### Fazendo upload de arquivos e processando
 
 O CDI só processará arquivos que forem adicionados após a sincronização ser criada. Neste processo, o Braze procura novos arquivos a serem adicionados, o que aciona uma nova mensagem para o SQS. Isso iniciará uma nova sincronização para processar o novo arquivo.
 
@@ -381,4 +385,4 @@ Você pode usar arquivos existentes para validar se o Braze pode acessar seu buc
 
 Se você estiver observando um alto número de erros ou arquivos falhados, pode haver outro processo adicionando arquivos ao bucket S3 em uma pasta diferente da pasta de destino para o CDI.
 
-Quando os arquivos são enviados para o bucket de origem, mas não na pasta de origem, o CDI processará a notificação SQS, mas não tomará nenhuma ação sobre o arquivo, então isso pode aparecer como um erro.
+Quando arquivos são enviados para o bucket de origem, mas não na pasta de origem, o CDI processará a notificação do SQS, mas não tomará nenhuma ação sobre o arquivo, então isso pode aparecer como um erro.

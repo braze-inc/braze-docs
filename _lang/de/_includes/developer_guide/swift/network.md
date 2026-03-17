@@ -1,12 +1,12 @@
-## Kontrolle des Netzwerkverkehrs
+## Netzwerkverkehrskontrolle
 
-### Anfrage zu Richtlinien für die Verarbeitung
+### Anfrage für Verarbeitungsrichtlinien
 
 Braze erlaubt es den Nutzer, den Netzwerkverkehr mit den folgenden Protokollen zu steuern:
 
 {% tabs local %}
 {% tab automatic %}
-Standardmäßig ist der `RequestPolicy` enum-Wert auf `automatic` eingestellt. Wenn diese Option eingestellt ist, werden sofortige Server-Anfragen durchgeführt, wenn benutzerseitige Daten für Braze-Features wie In-App-Nachrichten erforderlich sind.
+Standardmäßig ist der`RequestPolicy`enum-Wert auf gesetzt`automatic`. Wenn diese Option aktiviert ist, werden sofortige Serveranfragen ausgeführt, wenn für Braze-Features, wie beispielsweise In-App-Nachrichten, benutzerseitige Daten erforderlich sind.
 
 Das Braze SDK verarbeitet automatisch die gesamte Serverkommunikation, darunter:
 
@@ -18,10 +18,10 @@ Um die Serverlast zu minimieren, führt Braze regelmäßig alle paar Sekunden Fl
 {% endtab %}
 
 {% tab manual %}
-Wenn der `RequestPolicy` enum-Wert `manual` lautet, wird die gleiche Leistung wie bei der automatischen Verarbeitung von Anfragen erbracht, außer dass:
+Wenn der`RequestPolicy`enum-Wert „true“ ist`manual`, verhält es sich wie bei der automatischen Verarbeitung von Anfragen, mit folgenden Ausnahmen:
 
 - Benutzerdefinierte Attribute und benutzerdefinierte Ereignisdaten werden während der Benutzersitzung nicht automatisch an den Server übertragen.
-- Braze führt weiterhin automatische Netzwerkanforderungen für interne Features durch, wie z. B. das Anfordern von In-App-Nachrichten, Liquid-Templates in In-App-Nachrichten, Geofences und Standortverfolgung. Weitere Einzelheiten finden Sie in der [Dokumentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum/manual) `Braze.Configuration.Api.RequestPolicy.manual`. Bei diesen internen Anfragen kann Braze je nach Art der Anfrage lokal gespeicherte angepasste Attribute und angepasste Event-Daten an den Braze Server übertragen.
+- Braze führt weiterhin automatische Netzwerkanforderungen für interne Features durch, wie z. B. das Anfordern von In-App-Nachrichten, Liquid-Templates in In-App-Nachrichten, Geofences und Standortverfolgung. Weitere Einzelheiten finden Sie in der [Dokumentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum/manual) `Braze.Configuration.Api.RequestPolicy.manual`. Wenn diese internen Anfragen gestellt werden, kann Braze je nach Art der Anfrage lokal gespeicherte benutzerdefinierte Attribute und benutzerdefinierte Ereignisdaten an den Braze-Server übertragen.
 {% endtab %}
 {% endtabs %}
 

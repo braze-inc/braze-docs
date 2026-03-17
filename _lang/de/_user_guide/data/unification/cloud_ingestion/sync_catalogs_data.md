@@ -194,10 +194,10 @@ GO
 
 {% endtab %}
 {% tab S3 %}
-Richten Sie Ihre Quelldateien in S3 ein, indem Sie JSON- oder CSV-Dateien bereitstellen. Denken Sie daran:
+Richten Sie Ihre Quelldateien in S3 ein, indem Sie JSON- oder CSV-Dateien bereitstellen. Bitte beachten Sie:
 
-- Dateien können keine `UPDATED_AT` Spalte enthalten  
-- Sie können ein optionales `DELETED` Feld einfügen, um Artikel zum Entfernen zu markieren. 
+- Dateien dürfen keine Spalte`UPDATED_AT` enthalten.  
+- Sie können ein optionales`DELETED`Feld hinzufügen, um Artikel zum Entfernen zu markieren. 
 
 {% subtabs %}
 {% subtab JSON %}
@@ -216,14 +216,14 @@ ID,PAYLOAD,DELETED
 {% endsubtab %}
 {% endsubtabs %}
 
-Einzelheiten zur Einrichtung finden Sie unter [Integration von Dateispeichern]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
+Einzelheiten zur Einrichtung finden Sie unter [Dateispeicher-Integrationen]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
 
 {% endtab %}
 {% endtabs %}
 
 ## So funktioniert die Integration
 
-Bei jeder Synchronisierung zieht Braze alle Zeilen ein, bei denen `UPDATED_AT` gleich oder nach dem letzten synchronisierten Zeitstempel liegt. Wir empfehlen, in Ihrem Data Warehouse eine Ansicht aus Ihren Katalogdaten zu erstellen, um eine Quelltabelle einzurichten, die bei jeder Synchronisierung vollständig aktualisiert wird. Wenn Sie Ansichten verwenden, müssen Sie die Abfrage nicht jedes Mal neu schreiben.
+Bei jeder Synchronisierung ruft Braze alle Zeilen ab, deren`UPDATED_AT`Zeitstempel gleich oder nach dem letzten synchronisierten Zeitstempel liegt. Wir empfehlen, in Ihrem Data Warehouse eine Ansicht aus Ihren Katalogdaten zu erstellen, um eine Quelltabelle einzurichten, die bei jeder Synchronisierung vollständig aktualisiert wird. Wenn Sie Ansichten verwenden, müssen Sie die Abfrage nicht jedes Mal neu schreiben.
 
 Wenn Sie zum Beispiel eine Tabelle mit Produktdaten (`product_catalog_1`) mit der `product_id` und drei weiteren Attributen verwenden, können Sie folgende Ansicht synchronisieren:
 
@@ -307,4 +307,4 @@ FROM [braze].[product_catalog] ;
 
 - Die von der Integration abgerufenen Daten werden zur Erstellung bzw. Aktualisierung von Artikeln im Zielkatalog anhand der angegebenen `id` verwendet.
 - Wenn GELÖSCHT auf `true` gesetzt ist, wird der entsprechende Katalogartikel gelöscht.
-- Die Synchronisierung protokolliert keine Datenpunkte, aber alle synchronisierten Daten werden auf die Gesamtnutzung Ihres Katalogs angerechnet. Diese Nutzung wird auf der Grundlage der insgesamt gespeicherten Daten gemessen, so dass Sie sich keine Sorgen machen müssen, nur geänderte Daten zu synchronisieren.
+- Die Synchronisierung protokolliert keine Datenpunkte, jedoch werden alle synchronisierten Daten auf Ihre gesamte Katalognutzung angerechnet. Diese Nutzung wird anhand der insgesamt gespeicherten Daten gemessen, sodass Sie sich keine Gedanken darüber machen müssen, nur geänderte Daten zu synchronisieren.

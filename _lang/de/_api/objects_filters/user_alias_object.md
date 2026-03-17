@@ -9,7 +9,7 @@ description: "Dieser referenzierte Artikel erklärt die verschiedenen Komponente
 
 # Nutzer-Alias Objekt
 
-> Ein Alias dient als alternativer eindeutiger Bezeichner für Nutzer:innen. Mithilfe eines Nutzer-Alias-Objekts können Sie einen konsistenten Bezeichner für Analytics festlegen, der einen bestimmten Nutzer:in sowohl vor als auch nach der Anmeldung bei einer mobilen App oder Website verfolgt. Sie können dieses Objekt auch verwenden, um Ihren Nutzer:innen die Bezeichner eines Drittanbieters hinzuzufügen, um einen einfacheren externen Abgleich Ihrer Daten zu ermöglichen.
+> Ein Alias dient als alternativer eindeutiger Bezeichner für Nutzer:innen. Mithilfe eines Nutzer-Alias-Objekts können Sie einen konsistenten Bezeichner für Analytics festlegen, der einen bestimmten Nutzer:in sowohl vor als auch nach der Anmeldung bei einer mobilen App oder Website verfolgt. Sie können dieses Objekt auch verwenden, um die von einem Drittanbieter verwendeten Bezeichner zu Ihren Unternehmensnutzer:innen hinzuzufügen, um Ihre Daten extern einfacher abzugleichen.
 
 Das Nutzer-Alias-Objekt besteht aus zwei Teilen: einem `alias_name` für den Bezeichner selbst und einem `alias_label`, der den Typ des Alias angibt. Nutzer:innen können mehrere Aliasnamen mit unterschiedlichen Bezeichnungen haben, aber nur einen `alias_name` pro `alias_label`.
 

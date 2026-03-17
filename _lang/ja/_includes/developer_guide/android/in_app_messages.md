@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} アプリ内メッセージも有効にする必要がある。
+{% multi_lang_include developer_guide/prerequisites/android.md %} アプリ内メッセージもイネーブルメントする必要がある。
 
 ## メッセージの種類
 
@@ -14,15 +14,15 @@
 
 {% tabs local %}
 {% tab automatically %}
-[アクティビティライフサイクルコールバック統合]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking)はアプリ内メッセージ登録を自動的に処理するため、追加の統合は不要です。これはアプリ内メッセージ登録の推奨方法である。
+[アクティビティライフサイクルコールバック統合]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking)はアプリ内メッセージ登録を自動的に処理するため、追加の統合は不要です。アプリ内メッセージ登録の処理には、この方法が推奨される。
 {% endtab %}
 
 {% tab manually %}
 {% alert warning %}
-自動登録にアクティビティ・ライフサイクル・コールバックを使用している場合は、このステップを完了させないこと。
+自動登録のためにアクティビティのライフサイクルコールバックを使用している場合、このステップを完了してはならない。
 {% endalert %}
 
-あなたの [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate())を呼び出す [`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html):
+お前の[`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate())、呼び出す[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html)：
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -41,7 +41,7 @@ BrazeInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(cont
 {% endsubtab %}
 {% endsubtabs %}
 
-アプリ内メッセージを表示できるすべてのアクティビティで、そのアクティビティの [`registerInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/register-in-app-message-manager.html)`onResume()`を呼び出す：
+アプリ内メッセージを表示できるすべてのアクティビティにおいて、そのアクティビティの `onResume()`: を[`registerInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/register-in-app-message-manager.html)呼び出す。
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -71,7 +71,7 @@ public override fun onResume() {
 {% endsubtab %}
 {% endsubtabs %}
 
-がコールされたすべてのアクティビティにおいてである。 [`registerInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/register-in-app-message-manager.html)が呼び出されたすべてのアクティビティで、そのアクティビティの [`unregisterInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/unregister-in-app-message-manager.html)`onPause()`を呼び出す：
+呼び出された[`registerInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/register-in-app-message-manager.html)すべてのアクティビティにおいて、そのアクティビティの[`unregisterInAppMessageManager()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/unregister-in-app-message-manager.html)内で`onPause()`呼び出す：
 
 {% subtabs %}
 {% subtab JAVA %}
@@ -101,7 +101,7 @@ public override fun onPause() {
 {% endtab %}
 {% endtabs %}
 
-### ステップ 2:マネージャーのブロックリストを更新する（オプション）
+### ステップ 2:マネージャーのブロックリストを更新する（任意）
 
 統合では、アプリ内の特定のアクティビティにアプリ内メッセージを表示しないようにする必要が生じる場合があります。[アクティビティライフサイクルコールバックの統合]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking)により、これを簡単に実現できます。
 

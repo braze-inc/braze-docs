@@ -1,5 +1,5 @@
 ---
-nav_title: macOS (heredado)
+nav_title: MacOS (heredado)
 config_only: true
 noindex: true
 layout: redirect

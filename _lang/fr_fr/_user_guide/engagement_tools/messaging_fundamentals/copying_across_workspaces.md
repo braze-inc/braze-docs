@@ -1,6 +1,6 @@
 ---
-nav_title: Copie entre espaces de travail
-article_title: "Copier d'un espace de travail à l'autre"
+nav_title: Copier entre les espaces de travail
+article_title: Copier entre les espaces de travail
 page_order: 4
 alias: "/copying_to_workspaces/"
 page_type: reference
@@ -10,7 +10,7 @@ tool:
     - Canvas
 ---
 
-# Copier les campagnes et les toiles dans tous les espaces de travail
+# Copier des campagnes et des canevas entre les espaces de travail
 
 > La copie de campagnes entre espaces de travail vous permet d'accélérer la composition de vos messages en commençant par une copie d'une campagne dans un espace de travail différent. Cette page explique comment copier des campagnes dans différents espaces de travail et indique ce qui est copié et ce qui ne l'est pas.
 

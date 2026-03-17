@@ -360,7 +360,7 @@ Vous pouvez désormais personnaliser votre [agent Braze]({{site.baseurl}}/user_g
 - Structurer les résultats d'un agent en fournissant le [format de sortie.]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#output-format)
 - Adjusting the [temperature]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#temperature) for the level of deviation for your agent's output.
 
-### Modèles ChatGPT avec <sup>BrazeAITM</sup> Opérateur
+### Modèles ChatGPT avec BrazeAI<sup>TM</sup> Opérateur
 
 {% multi_lang_include release_type.md release="Beta" %}
 

@@ -1,12 +1,12 @@
 {% if include.datacenters == "AU" %}
-| URL do dashboard | endpoint REST | endpoint de SDK
+| URL do dashboard | Ponto final REST | Endpoint de SDK |
 | --- | --- | --- |
 | `https://dashboard.au-01.braze.com` | `https://rest.au-01.braze.com` | `sdk.au-01.braze.com` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endif %}
 
 {% if include.datacenters == "EU" %}
-| URL do dashboard | endpoint REST | endpoint de SDK
+| URL do dashboard | Ponto final REST | Endpoint de SDK |
 | --- | --- | --- |
 | `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
 | `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
@@ -14,14 +14,21 @@
 {% endif %}
 
 {% if include.datacenters == "ID" %}
-| URL do dashboard | endpoint REST | endpoint de SDK
+| URL do dashboard | Ponto final REST | Endpoint de SDK |
 | --- | --- | --- |
 | `https://dashboard.id-01.braze.com` | `https://rest.id-01.braze.com` | `sdk.id-01.braze.com` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endif %}
 
+{% if include.datacenters == "JP" %}
+| URL do dashboard | Ponto final REST | Endpoint de SDK |
+| --- | --- | --- |
+| `https://dashboard.jp-01.braze.com` | `https://rest.jp-01.braze.com` | `sdk.jp-01.braze.com` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{% endif %}
+
 {% if include.datacenters == "US" %}
-| URL do dashboard | endpoint REST | endpoint de SDK
+| URL do dashboard | Ponto final REST | Endpoint de SDK |
 | --- | --- | --- |
 | `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` | `sdk.iad-01.braze.com` |
 | `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com` | `sdk.iad-02.braze.com` |
@@ -36,21 +43,22 @@
 {% endif %}
 
 {% if include.datacenters == "instances" %}
-|Instance|URL|REST Endpoint|SDK Endpoint|
+|Instância|URL|Ponto final REST|Endpoint de SDK|
 \|---|---|---|
-|US-01| `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` | `sdk.iad-01.braze.com` |
-|US-02| `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com` | `sdk.iad-02.braze.com` |
-|US-03| `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com` | `sdk.iad-03.braze.com` |
-|US-04| `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com` | `sdk.iad-04.braze.com` |
-|US-05| `https://dashboard-05.braze.com` | `https://rest.iad-05.braze.com` | `sdk.iad-05.braze.com` |
-|US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
-|US-07| `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com` | `sdk.iad-07.braze.com` | 
-|US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
-|US-10| `https://dashboard.us-10.braze.com` | `https://rest.us-10.braze.com` | `sdk.us-10.braze.com` |
-|EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
-|EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
-|AU-01| `https://dashboard.au-01.braze.com`| `https://rest.au-01.braze.com` | `sdk.au-01.braze.com` |
-|ID-01| `https://dashboard.id-01.braze.com`| `https://rest.id-01.braze.com` | `sdk.id-01.braze.com` |
+|US-01|`https://dashboard-01.braze.com`  |`https://rest.iad-01.braze.com`  |`sdk.iad-01.braze.com`  |
+|US-02|`https://dashboard-02.braze.com`  |`https://rest.iad-02.braze.com`  |`sdk.iad-02.braze.com`  |
+|US-03|`https://dashboard-03.braze.com`  |`https://rest.iad-03.braze.com`  |`sdk.iad-03.braze.com`  |
+|US-04|`https://dashboard-04.braze.com`  |`https://rest.iad-04.braze.com`  |`sdk.iad-04.braze.com`  |
+|US-05|`https://dashboard-05.braze.com`  |`https://rest.iad-05.braze.com`  |`sdk.iad-05.braze.com`  |
+|US-06|`https://dashboard-06.braze.com`  |`https://rest.iad-06.braze.com`  |`sdk.iad-06.braze.com`  |
+|US-07|`https://dashboard-07.braze.com`  |`https://rest.iad-07.braze.com`  |`sdk.iad-07.braze.com`  |
+|US-08|`https://dashboard-08.braze.com`  |`https://rest.iad-08.braze.com`  |`sdk.iad-08.braze.com`  |
+|US-10|`https://dashboard.us-10.braze.com`  |`https://rest.us-10.braze.com`  |`sdk.us-10.braze.com`  |
+|EU-01|`https://dashboard-01.braze.eu`  |`https://rest.fra-01.braze.eu`  |`sdk.fra-01.braze.eu`  |
+|EU-02|`https://dashboard-02.braze.eu`  |`https://rest.fra-02.braze.eu`  |`sdk.fra-02.braze.eu`  |
+|AU-01| `https://dashboard.au-01.braze.com`|`https://rest.au-01.braze.com`  |`sdk.au-01.braze.com`  |
+|ID-01| `https://dashboard.id-01.braze.com`|`https://rest.id-01.braze.com`  |`sdk.id-01.braze.com`  |
+|JP-01|`https://dashboard.jp-01.braze.com`  |`https://rest.jp-01.braze.com`  |`sdk.jp-01.braze.com`  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 {% endif %}
 
@@ -126,6 +134,17 @@ Por exemplo `ID-01`, estes são os endereços IP relevantes:
 - `16.78.14.134`
 - `16.78.162.208`
 - `43.218.73.35`
+{% endsubtab %}
+{% subtab Japan (JP) %}
+Por exemplo `JP-01`, estes são os endereços IP relevantes:
+- `13.159.155.212`
+- `54.199.221.241`
+- `13.192.23.16`
+- `54.250.120.139`
+- `18.181.114.232`
+- `3.114.38.100`
+
+
 {% endsubtab %}
 {% endsubtabs %}
 {% endif %}

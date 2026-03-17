@@ -2,85 +2,85 @@
 nav_title: Conectar fontes de dados
 article_title: Conectar fontes de dados
 page_order: 1
-description: "Saiba como o BrazeAI Decisioning Studio Acessa os dados de seus clientes por meio de sua plataforma de engajamento com clientes."
+description: "Saiba como o BrazeAI Decisioning Studio Go se conecta aos seus dados de cliente através da sua Plataforma de Engajamento com Clientes."
 ---
 
 # Conectar fontes de dados
 
-> O BrazeAI Decisioning Studio™ Acessa os dados de seus clientes por meio de sua plataforma de engajamento com clientes (CEP). Este artigo explica quais dados são usados e como a conexão funciona.
+> O BrazeAI Decisioning Studio™ Go se conecta aos seus dados de cliente através da sua Plataforma de Engajamento com Clientes (CEP). Este artigo explica quais dados são utilizados e como a conexão funciona.
 
-## Como o Acessar acessa os dados de clientes
+## Como o Go acessa os dados de cliente
 
-Ao contrário do Decisioning Studio Pro, que suporta integrações diretas de dados com várias fontes, o Decisioning Studio Acessa os dados de clientes por meio do CEP. Isso significa que:
+Diferente do Decisioning Studio Pro, que suporta integrações diretas de dados com várias fontes, o Decisioning Studio Go acessa os dados de cliente através do seu CEP. Isso significa:
 
-- **Os dados do público** são extraídos diretamente de segmentos ou listas definidas em seu CEP (Braze, Salesforce Marketing Cloud ou Klaviyo) e só podem incluir determinadas atribuições predefinidas (não dados 1P)
-- **Os dados de engajamento** (aberturas, cliques, envios) são capturados por meio de consultas automatizadas ou integrações nativas com seu CEP
-- **Não** é necessária **nenhuma configuração adicional de pipeline de dados** além do que você configura em seu CEP
+- **Os dados do público** são extraídos diretamente de segmentos ou listas definidos no seu CEP (Braze, Salesforce Marketing Cloud ou Klaviyo) e podem incluir apenas certos atributos pré-definidos (não dados 1P)
+- **Os dados de engajamento** (aberturas, cliques, envios) são capturados através de consultas automatizadas ou integrações nativas com seu CEP
+- **Nenhuma configuração adicional de pipeline de dados** é necessária além do que você configura no seu CEP
 
 ## Padrões de integração suportados
 
-O Decisioning Studio Acessa os seguintes CEPs para acesso a dados:
+O Decisioning Studio Go suporta os seguintes CEPs para acesso a dados:
 
-| CEP | Fonte do público | Dados de engajamento |
+| CEP | Fonte de Público | Dados de engajamento |
 |-----|-----------------|-----------------|
-| **Braze** | Segmentos | Exportação de Braze Currents |
-| **Salesforce Marketing Cloud** | Extensões de dados | Automação de consultas de SQL |
-| **Klaviyo** | Segmentos | Integração de API nativa |
+| **Braze** | Segmentos | Exportação do Braze Currents |
+| **Salesforce Marketing Cloud** | Extensões de Dados | Automação de Consulta SQL |
+| **Klaviyo** | Segmentos | Integração nativa de API |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-## Requisitos de dados do CEP
+## Requisitos de dados por CEP
 
 {% tabs %}
 {% tab Braze %}
 
-### Requisitos de dados do Braze
+### requisitos de dados do Braze
 
-Para as integrações do Braze, o Decisioning Studio Acessar requer:
+Para integrações do Braze, o Decisioning Studio Go requer:
 
-1. **Braze Currents**: Você deve ter o Braze Currents ativado e configurado para exportar dados de engajamento para o Decisioning Studio Acessar. Isso permite que o agente aprenda com as respostas do cliente.
+1. **Braze Currents**: Você deve ter o Braze Currents habilitado e configurado para exportar dados de engajamento para o Decisioning Studio Go. Isso permite que o agente aprenda com as respostas dos clientes.
 
-2. **Acesso ao segmento**: A chave de API criada deve ter permissões para acessar segmentos que definem seu público-alvo.
+2. **Acesso a segmentos**: A chave de API que você criar deve ter permissões para acessar segmentos que definem seu público-alvo.
 
-3. **Dados de perfil de usuários**: Todos os atributos de perfil de usuário ou atributos personalizados que você deseja que o agente considere devem estar acessíveis por meio da API do Braze.
+3. **Dados do perfil do usuário**: Quaisquer atributos de perfil de usuário ou atributos personalizados que você deseja que o agente considere devem ser acessíveis através da API do Braze.
 
 {% alert important %}
-Certifique-se de que sua exportação do Braze Currents inclua dados de todas as campanhas com as quais você deseja comparar (incluindo campanhas BAU).
+Certifique-se de que sua exportação do Braze Currents inclua dados de quaisquer campanhas que você deseja comparar (incluindo campanhas BAU).
 {% endalert %}
 
 {% endtab %}
 {% tab Salesforce Marketing Cloud %}
 
-### Requisitos de dados SFMC
+### requisitos de dados do SFMC
 
-Para integrações com o Salesforce Marketing Cloud, o Decisioning Studio Acessar requer:
+Para integrações do Salesforce Marketing Cloud, o Decisioning Studio Go requer:
 
-1. **Extensões de dados**: Seu público deve ser definido em uma extensão de dados que o Decisioning Studio Acessar. Use o SubscriberKey como o identificador principal do usuário.
-2. **Acesso a eventos de rastreamento**: Desde que o pacote de aplicativos instalado ofereça suporte à configuração automatizada de ponta a ponta, nenhuma configuração adicional será necessária. 
+1. **Data Extensions**: Seu público deve ser definido em uma Data Extension que o Decisioning Studio Go possa acessar. Use o SubscriberKey como o identificador principal do usuário.
+2. **Acesso a eventos de rastreamento**: Desde que o Pacote de Aplicativo Instalado suporte configuração automatizada de ponta a ponta, nenhuma configuração adicional é necessária. 
 
-As extensões de dados e as consultas de SQL são configuradas como parte da [configuração da orquestração]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/).
+As extensões de dados e consultas de SQL são configuradas como parte da [configuração de orquestração]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/).
 
 {% endtab %}
 {% tab Klaviyo %}
 
-### Requisitos de dados do Klaviyo
+### requisitos de dados do Klaviyo
 
-Para integrações com a Klaviyo, o Decisioning Studio Acessar requer:
+Para integrações do Klaviyo, o Decisioning Studio Go requer:
 
-1. **Acesso ao segmento**: Seu público deve ser definido como um segmento da Klaviyo que a chave de API pode acessar.
-2. **Dados do perfil**: A chave de API deve ter acesso completo aos perfis para ler as atribuições do cliente.
-3. **Acesso às métricas**: A chave de acesso completo à API deve ter acesso total a métricas e eventos para capturar dados de engajamento.
+1. **Acesso a segmentos**: Seu público deve ser definido como um segmento Klaviyo que a chave de API pode acessar.
+2. **Dados do perfil**: A chave de API deve ter Acesso Total a Perfis para ler os atributos do cliente.
+3. **Acesso a métricas**: A chave de API deve ter Acesso Total a Métricas e Eventos para capturar dados de engajamento.
 
 {% endtab %}
 {% endtabs %}
 
 ## Melhores práticas
 
-- **Mantenha os dados atualizados**: Certifique-se de que seus segmentos de público e dados de clientes sejam atualizados regularmente (no mínimo, diariamente) para que o agente trabalhe com informações atuais.
-- **Inclua atribuições relevantes**: Pense nas características do cliente que podem influenciar a repercussão das mensagens - dados demográficos, histórico de engajamento, comportamento de compra e estágio do ciclo de vida são sinais valiosos.
+- **Mantenha os dados atualizados**: Certifique-se de que seus segmentos de público e dados de cliente sejam atualizados regularmente (no mínimo, diariamente) para que o agente trabalhe com informações atuais.
+- **Inclua atributos relevantes**: Pense sobre quais características do cliente podem influenciar quais mensagens ressoam—demografia, histórico de engajamento, comportamento de compra e estágio do ciclo de vida são todos sinais valiosos.
 
 ## Próximos passos
 
-Agora que você entende como o Acessa se conecta aos dados, prossiga para configurar sua integração com o CEP:
+Agora que você entende como o Go se conecta aos dados, prossiga para configurar sua integração CEP:
 
-- [Configurar a orquestração]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/)
+- [Configurar orquestração]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/)
 

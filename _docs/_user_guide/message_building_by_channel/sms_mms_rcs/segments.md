@@ -93,7 +93,7 @@ Regardless of the encoding type, each SMS message sent out by Braze has a limit 
 ### SMS segment calculator {#segment-calculator}
 ---
 
-{% include alerts/tip_alerts.md alert='SMS segment calculator' %}
+{% multi_lang_include alerts/tip_alerts.md alert='SMS segment calculator' %}
 
 ## RCS message billing
 

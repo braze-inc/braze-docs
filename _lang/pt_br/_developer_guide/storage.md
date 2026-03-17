@@ -66,7 +66,7 @@ O SDK do Braze não coleta o IDFA automaticamente. Os apps podem, opcionalmente,
 {% endtab %}
 {% endtabs %}
 
-Por padrão, todas as propriedades estão ativadas. No entanto, você pode optar por ativá-las ou desativá-las manualmente. Lembre-se de que alguns recursos do SDK do Braze exigem propriedades específicas (como entrega no fuso horário local e fuso horário), portanto, teste sua configuração antes de liberar para produção.
+Por padrão, todas as propriedades estão ativadas. No entanto, você pode optar por ativá-las ou desativá-las manualmente. Lembre-se de que alguns recursos do SDK do Braze exigem propriedades específicas (como entrega no fuso horário local e fuso horário), então, certifique-se de testar sua configuração antes de liberar para produção.
 
 {% tabs %}
 {% tab web %}
@@ -92,7 +92,7 @@ new BrazeConfig.Builder()
 {% endtab %}
 
 {% tab swift %}
-Por exemplo, você pode especificar a coleta de fuso horário e local para serem incluídos na lista permitida. Para saber mais, consulte a propriedade [Coleta de Dados do SDK](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) do objeto `configuration`.
+Por exemplo, você pode especificar a coleta de fuso horário e local para serem incluídos na lista permitida. Para saber mais, consulte a propriedade [SDK Data Collection](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) do objeto `configuration`.
 
 {% subtabs %}
 {% subtab swift %}
@@ -117,12 +117,12 @@ configuration.devicePropertyAllowList = @[
 {% endtabs %}
 
 {% alert tip %}
-Para saber mais sobre as propriedades de dispositivo coletadas automaticamente, consulte [Coleta de Dados do SDK]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/).
+Para saber mais sobre as propriedades de dispositivo coletadas automaticamente, consulte [SDK Data Collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/).
 {% endalert %}
 
 ## Armazenando cookies (apenas web) {#cookies}
 
-Após [inicializar o SDK Web do Braze](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize), ele criará e armazenará cookies com uma expiração de 400 dias que se renovam automaticamente em novas sessões.
+Após [inicializar o SDK Web do Braze](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize), ele criará e armazenará cookies com uma expiração de 400 dias que se renova automaticamente em novas sessões.
 
 Os seguintes cookies são armazenados:
 

@@ -10,7 +10,7 @@ description: "Cet article présente en détail l’endpoint Braze Planifier des 
 ---
 {% api %}
 # Planifier des campagnes déclenchées par API
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 
@@ -147,7 +147,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ### Exemple de réponse réussie
 
 ```json
-{
 {
     "dispatch_id": "dispatch_identifier",
     "schedule_id": "schedule_identifier",

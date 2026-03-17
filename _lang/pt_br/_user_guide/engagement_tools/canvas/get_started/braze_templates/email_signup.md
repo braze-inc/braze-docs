@@ -60,7 +60,7 @@ Além disso, considere manter as **Opções Baseadas em Ação** como estão par
 
 Para a **Janela de Entrada**, atualize o **Hora de Início (Obrigatório)** para a data e hora desejadas.
 
-![Um período de entrada com o horário de início 16 de janeiro de 2025 às 12:30. Os usuários entrarão nesta mensagem em seu fuso horário local.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
+![Um período de entrada com o horário de início 16 de janeiro de 2025 às 12:30. Os usuários receberão esta mensagem em seu fuso horário local.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
 
 ### Etapa 4: Selecione o público-alvo
 
@@ -83,21 +83,21 @@ Em seguida, construa o canva personalizando os canais e o conteúdo que você de
 - A página 1 captura os e-mails.
 - A página 2 exibe uma mensagem de confirmação.
 
-![Duas páginas de uma mensagem no app para capturar e-mails de usuários e exibir uma mensagem de sucesso.]({% image_buster /assets/img/canvas_templates/email_signup8.png %}){: style="max-width:90%;"}
+![Duas páginas de uma mensagem no app para capturar os e-mails dos usuários e exibir uma mensagem de sucesso.]({% image_buster /assets/img/canvas_templates/email_signup8.png %}){: style="max-width:90%;"}
 
 {:start="2"}
-2\. A partir daqui, mantenha a etapa do caminho de ação **Inscrito** como está. Esta etapa divide nossos usuários em dois grupos em um intervalo de um dia:
+2\. A partir daqui, mantenha a etapa do **Caminho de Ação Inscrito** como está. Esta etapa divide nossos usuários em dois grupos em um intervalo de um dia:
 
 - Usuários que se inscreveram no Steppington com seu e-mail
 - Usuários que não se inscreveram no Steppington com seu e-mail
 
 {:start="3"}
 3\. Em seguida, substitua o corpo do e-mail pelo nosso e-mail de confirmação da marca para a etapa de **Verificar e-mail**. Isso enviará um e-mail para nossos usuários inscritos e os solicitará a confirmar seu endereço de e-mail e optar por nossas mensagens.
-4\. Mantenha a etapa do caminho de ação **Confirmar inscrição** como está. Esta etapa divide ainda mais nossos usuários entre aqueles que confirmaram seu e-mail e aqueles que não confirmaram, com uma janela de uma semana.
+4\. Mantenha a etapa do caminho de ação **Confirmar inscrição** como está. Esta etapa divide ainda mais nossos usuários entre aqueles que confirmaram seu e-mail e aqueles que não confirmaram, com um intervalo de uma semana.
 5\. Por fim, atualize a etapa de **Mensagem de Boas-Vindas + Desconto** com nosso e-mail de confirmação que inclui um código de promoção exclusivo.
 
 {% alert note %}
-A etapa da mensagem **Verificar E-mail** é disparada na segunda sessão do usuário. Isso ocorre porque o evento de início da primeira sessão dispararia o canva, mas um início de segunda sessão após o usuário ter alcançado a primeira etapa da mensagem **Inscrição por E-mail** é necessário para que o usuário seja elegível para disparar a segunda mensagem no app.
+A etapa da mensagem **Verificar E-mail** é disparada na segunda sessão do usuário. Isso ocorre porque o evento de início da primeira sessão dispararia o canva, mas uma segunda sessão após o usuário ter alcançado a primeira etapa da mensagem **Inscrição por E-mail** é necessária para que o usuário seja elegível para disparar a segunda mensagem no app.
 {% endalert %}
 
 ### Etapa 7: Teste e inicie seu Canva

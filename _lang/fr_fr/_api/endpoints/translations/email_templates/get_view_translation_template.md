@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Voir toutes les traductions et locales pour le modèle d'e-mail"
+nav_title: "GET : Afficher toutes les traductions et toutes les configurations régionales pour le modèle d'e-mail"
 article_title: "GET : Voir toutes les traductions et localisations pour Email Template"
 search_tag: Endpoint
 page_order: 3
@@ -12,14 +12,12 @@ description: "Cet article décrit les détails du point de terminaison Afficher 
 {% api %}
 # Afficher toutes les traductions et locales d'un modèle d'e-mail
 {% apimethod get %}
-/templates/email/translations/
+/modèles/e-mail/traductions/
 {% endapimethod %}
 
-> Utilisez cet endpoint pour afficher toutes les traductions et locales d'un [modèle d'e-mail.]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) Pour plus d'informations sur les fonctionnalités de traduction, reportez-vous à la section [Locales dans les messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/).
+> Utilisez cet endpoint pour afficher toutes les traductions et locales d'un [modèle d'e-mail.]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) Veuillez consulter [la section Locales dans les messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) pour plus d'informations sur les fonctionnalités de traduction.
 
-{% alert important %}
-Cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Conditions préalables
 
@@ -95,7 +93,7 @@ Le code de statut `200` pourrait retourner l’en-tête et le corps de réponse 
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {

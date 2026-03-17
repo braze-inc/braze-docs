@@ -1,8 +1,8 @@
-{% multi_lang_include developer_guide/prerequisites/react_native.md %} Vous devrez également [configurer les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
+{% multi_lang_include developer_guide/prerequisites/react_native.md %} Il vous sera également nécessaire de [configurer les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
 
-## Permettre les contenus push
+## Activation du contenu push
 
-Pour le SDK React Native, les **contenus push sont disponibles par défaut pour Android**.
+Pour le SDK React native, **le contenu push est disponible par défaut pour Android**.
 
 Pour activer les contenus push sur iOS à l'aide d'Expo, assurez-vous qu'un groupe d'applications est défini pour votre application. Pour plus d'informations, voir [Ajouter un groupe d'applications]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/#adding-an-app-group).
 

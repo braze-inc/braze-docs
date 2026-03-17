@@ -11,9 +11,9 @@ description: "Dieser referenzierte Artikel erläutert die verschiedenen Komponen
 
 > Das Empfänger:innen-Objekt erlaubt es Ihnen, Informationen in unseren Endpunkten anzufragen oder zu schreiben.
 
-Sie müssen eines von `external_user_id`, `user_alias`, `braze_id` oder `email` in dieses Objekt aufnehmen. **In der Anfrage darf nur eine Angabe gemacht werden.**
+Bitte fügen Sie eines der `external_user_id`folgenden Elemente in dieses `email`Objekt ein: `user_alias`, `braze_id`, , oder . **In der Anfrage darf nur eine Angabe gemacht werden.**
 
-Mit dem Empfänger-Objekt können Sie das [Nutzer-Alias-Objekt]({{site.baseurl}}/api/objects_filters/user_alias_object/), das [Objekt der Trigger-Eigenschaften]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), das [Objekt der Canvas-Eingangs-Eigenschaften]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) und das [Objekt der Nutzer-Attribute]({{site.baseurl}}/api/objects_filters/user_attributes_object/) kombinieren.
+Mit dem Empfängerobjekt können Sie das [Nutzer-Alias-Objekt]({{site.baseurl}}/api/objects_filters/user_alias_object/), das [Triggereigenschafts-Objekt]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), das [Canvas-Objekt mit Eingangs-Eigenschaften]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) und das [Benutzer-Attribut-Objekt]({{site.baseurl}}/api/objects_filters/user_attributes_object/) kombinieren.
 
 ## Objektkörper
 
@@ -25,13 +25,13 @@ Mit dem Empfänger-Objekt können Sie das [Nutzer-Alias-Objekt]({{site.baseurl}}
   "email": (optional, string) email address of user to receive message,
   "prioritization": (optional, array) see Prioritization; required when using email,
   "trigger_properties": (optional, object) personalization key-value pairs for this user when sending a campaign or message; see Trigger Properties,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas Entry Properties,
+  "context": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas context object,
   "send_to_existing_only": (optional, boolean) defaults to true; cannot be used with user aliases,
   "attributes": (optional, object) fields in the attributes object create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values are overwritten
 }]
 ```
 
-Wenn `send_to_existing_only` auf `true` steht, sendet Braze die Nachricht nur an bestehende Nutzer:innen. Sie können dieses Flag jedoch nicht mit Nutzer:in verwenden. Wenn `send_to_existing_only` `false` ist, müssen Sie ein Attribut angeben. Braze erstellt einen Nutzer:innen mit der `id` und den Attributen, bevor die Nachricht gesendet wird.
+Wenn`send_to_existing_only`  ist`true`, sendet Braze die Nachricht nur an bestehende Nutzer:innen. Bitte beachten Sie, dass Sie dieses Flag nicht mit Benutzer-Aliasen verwenden können. Wenn`send_to_existing_only`  ist`false`, müssen Sie ein Attribut angeben. Braze erstellt einen Nutzer mit den `id`Attributen, bevor die Nachricht gesendet wird.
 
 - [Braze-ID]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)
 - [Nutzer-Aliasse]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
@@ -41,9 +41,9 @@ Wenn `send_to_existing_only` auf `true` steht, sendet Braze die Nachricht nur an
 
 ## Deduplizierung von Empfänger:in-Objekten
 
-Wenn es bei einem API-Aufruf mit dem Empfänger-Objekt **einen doppelten Empfänger gibt, der auf dieselbe Adresse Targeting betreibt (d.h. E-Mail, Push), dedupliziert Braze den Nutzer**:in, d.h. Braze entfernt identische Nutzer:in und lässt einen übrig.
+Wenn Sie einen API-Aufruf mit dem Empfängerobjekt durchführen und **ein doppelter Empfänger mit derselben Adresse (d. h. E-Mail, Push) vorhanden ist, führt Braze eine Deduplizierung der Nutzer:innen durch**, d. h. Braze entfernt identische Nutzer:innen und behält nur einen.
 
-Wenn Sie zum Beispiel dieselbe `external_user_id` verwenden, erhält der Nutzer:innen nur eine Nachricht. Ziehen Sie mehrere API-Aufrufe in Betracht, wenn Sie eine Abhilfe für dieses Verhalten benötigen.
+Wenn Sie beispielsweise dasselbe verwenden, erhält der Nutzer`external_user_id`:in nur eine Nachricht. Ziehen Sie mehrere API-Aufrufe in Betracht, wenn Sie eine Abhilfe für dieses Verhalten benötigen.
 
 ```json
 {"campaign_id":"#####","recipients":[

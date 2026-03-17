@@ -1,5 +1,5 @@
 ---
-nav_title: Acerca de los datos de seguimiento
+nav_title: Acerca del seguimiento de datos
 article_title: Acerca de los datos de seguimiento de la página de destino
 description: "Infórmate sobre el seguimiento y los datos anónimos de las páginas de destino en Braze."
 page_order: 10
@@ -14,7 +14,9 @@ alias: /landing_pages/data_tracking/
 
 ### SDK Web
 
-El SDK de la Web Braze sólo se inicializa cuando un usuario envía un formulario en la página de destino. Antes del envío del formulario, no se recopilan datos personales y el SDK no realiza un seguimiento activo de los usuarios. Una vez completada la inicialización, el SDK no almacena ningún dato en el navegador (como cookies, almacenamiento local u otros).
+El SDK Web de Braze se inicializa cuando un usuario envía un formulario en una página de destino. Antes del envío del formulario, no se recopilan datos personales y el SDK no realiza un seguimiento activo de los usuarios. Una vez completada la inicialización, el SDK no almacena ningún dato en el navegador (como cookies, almacenamiento local u otros). 
+
+El SDK web de Braze se inicializa inmediatamente cuando un usuario navega a la página de destino a través de un enlace generado por una etiqueta{% raw %}`{% landing_page_url %}`{% endraw %} de Liquid en un mensaje de Braze.
 
 Cuando se envía un formulario, el SDK recopilará los siguientes datos:
 
@@ -32,10 +34,10 @@ Dado que estos datos no están vinculados a usuarios identificables, no pueden u
 
 ## Fusión de perfiles de usuario duplicados
 
-Braze no fusiona automáticamente a los usuarios basándose en atributos, como el correo electrónico o el teléfono, cuando se envía un formulario de página de destino. Si se envía un formulario con un correo electrónico o número de teléfono que coincide con un perfil de usuario existente, Braze crea un perfil de usuario independiente.
+Braze no fusiona automáticamente a los usuarios en función de atributos, como el correo electrónico o el teléfono, cuando se envía un formulario de la página de destino. Si se envía un formulario con un correo electrónico o un número de teléfono que coincide con un perfil de usuario existente, Braze crea un perfil de usuario independiente.
 
 Para fusionar perfiles de usuario duplicados, puedes:
 
-- Desencadena el [punto final`/users/merge` ]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) cuando se envía un formulario de página de destino para fusionar el nuevo perfil con un perfil existente.
-- Programa la [fusión masiva]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#bulk-merging) para fusionar periódicamente perfiles duplicados basándote en identificadores coincidentes.
+- Desencadena el[`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/)[punto final]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) cuando se envíe un formulario de la página de destino para fusionar el nuevo perfil con uno ya existente.
+- Programar [la fusión masiva]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#bulk-merging) para fusionar periódicamente los perfiles duplicados basándose en identificadores coincidentes.
 
