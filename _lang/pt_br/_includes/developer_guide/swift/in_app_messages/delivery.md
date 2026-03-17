@@ -1,26 +1,26 @@
 {% multi_lang_include developer_guide/prerequisites/swift.md %}
 
-## Envio de mensagens
+## Gatilhos de mensagem
 
 ### Tipos de disparo
 
-As mensagens no app são disparadas automaticamente quando o SDK registra um dos seguintes tipos de eventos personalizados: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, e `Push Click`. Note que os disparadores `Specific Purchase` e `Custom Event` também contêm filtros de propriedade robustos.
+As mensagens no app são acionadas automaticamente quando o SDK registra um dos seguintes tipos de evento personalizado: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event` e `Push Click`. Observe que os gatilhos `Specific Purchase` e `Custom Event` também contêm filtros de propriedade robustos.
 
 {% alert note %}
-As mensagens no app não podem ser disparadas pela API ou por eventos da API - somente eventos personalizados registrados pelo SDK. Para saber mais sobre registro, consulte [Registro de eventos personalizados]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift).
+As mensagens no app não podem ser acionadas através da API ou por eventos da API—apenas eventos personalizados registrados pelo SDK. Para saber mais sobre registro, veja [Registro de Eventos Personalizados]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift).
 {% endalert %}
 
 ### Semântica de entrega
 
-Todas as mensagens no app elegíveis são enviadas para o dispositivo do usuário no início da sessão. Quando entregue, o SDK fará a pré-busca de ativos para que eles estejam disponíveis no momento do disparo, minimizando a latência da exibição. Se o evento de gatilho tiver mais de uma mensagem elegível no app, somente a mensagem com a prioridade mais alta será entregue.
+Todas as mensagens no app elegíveis são entregues ao dispositivo de um usuário no início de sua sessão. Quando entregues, o SDK irá pré-carregar os ativos, para que estejam disponíveis no momento do acionamento, minimizando a latência de exibição. Se o evento de gatilho tiver mais de uma mensagem no app elegível, apenas a mensagem com a maior prioridade será entregue.
 
-Para saber mais sobre a semântica de início de sessão do SDK, consulteSession[Lifecycle (Ciclo de vida]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift) da sessão).
+Para mais informações sobre a semântica de início de sessão do SDK, veja [Ciclo de Vida da Sessão]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift).
 
 ### Limite de frequência padrão
 
 Por padrão, você pode enviar uma mensagem no app uma vez a cada 30 segundos.
 
-Para substituir isso, adicione a propriedade `triggerMinimumTimeInterval` à sua configuração do Braze antes que a instância do Braze seja inicializada. Pode ser definido como qualquer número inteiro positivo e representa o intervalo de tempo mínimo em segundos. Por exemplo:
+Para substituir isso, adicione a propriedade `triggerMinimumTimeInterval` à sua configuração do Braze antes que a instância do Braze seja inicializada. Ela pode ser definida como qualquer número inteiro positivo e representa o intervalo mínimo de tempo em segundos. Por exemplo:
 
 {% tabs %}
 {% tab swift %}
@@ -36,7 +36,7 @@ let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 BRZConfiguration *configuration =
@@ -52,7 +52,7 @@ AppDelegate.braze = braze;
 
 ## Pares de valores chave
 
-Ao criar uma campanha no Braze, você pode definir pares de valores-chave como `extras`, que o objeto de mensagens no app pode usar para enviar dados ao seu aplicativo. Por exemplo:
+Quando você cria uma campanha no Braze, pode definir pares chave-valor como `extras`, que o objeto de envio de mensagens no app pode usar para enviar dados para seu app. Por exemplo:
 
 {% tabs %}
 {% tab swift %}
@@ -65,7 +65,7 @@ if customization == "colorful-slideup" {
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
@@ -81,16 +81,16 @@ if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
 
 Para obter uma implementação completa, consulte os exemplos de personalização de mensagens no app em nosso [aplicativo de exemplo](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples).
 
-## Desativação de disparos automáticos
+## Desabilitando gatilhos automáticos
 
-Para evitar que as mensagens no app sejam disparadas automaticamente:
+Para evitar que mensagens no app sejam acionadas automaticamente:
 
 1. Implemente o delegado `BrazeInAppMessageUIDelegate` conforme descrito no [artigo sobre iOS aqui](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 2. Atualize seu método delegado `inAppMessage(_:displayChoiceForMessage:)` para retornar `.discard`.
 
-## Envio manual de mensagens
+## Acionando mensagens manualmente
 
-### Usando um evento no lado do servidor
+### Usando um evento do lado do servidor
 
 Para disparar mensagens no app usando eventos do lado do servidor, envie um push silencioso para o dispositivo para permitir que ele registre um evento baseado no SDK. Este evento do SDK pode, posteriormente, disparar a mensagem no app voltada para o usuário.
 
@@ -111,7 +111,7 @@ func handleExtras(userInfo: [AnyHashable : Any]) {
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (void)handleExtrasFromPush:(NSDictionary *)userInfo {
@@ -135,11 +135,11 @@ Devido a uma mensagem por push ser usada para registrar um evento personalizado 
 
 Crie uma [campanha de push silenciosa]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift), que é disparada pelo evento enviado pelo servidor. 
 
-![Uma campanha de mensagens no app com entrega baseada em ação que será entregue aos usuários cujos perfis de usuário tenham o evento personalizado "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
+![Uma campanha de mensagem no app baseada em ação que será entregue a usuários cujos perfis de usuário têm o evento personalizado "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 
 A campanha de push precisa incluir extras de pares chave-valor, que indicam que esta campanha de push é enviada para registrar um evento personalizado do SDK. Este evento será usado para disparar a mensagem no app.
 
-![Uma campanha de mensagem no app de entrega baseada em ação que possui dois pares chave-valor. "CAMPAIGN_NAME" definido como "Exemplo de nome de mensagem no app" e "IS_SERVER_EVENT" definido como "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
+![Uma campanha de mensagem no app baseada em ação que tem dois pares chave-valor. "CAMPAIGN_NAME" definido como "Exemplo de nome de mensagem no app", e "IS_SERVER_EVENT" definido como "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 O código dentro do método `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` verifica a chave `IS_SERVER_EVENT` e registra um evento personalizado do SDK se estiver presente.
 
@@ -151,15 +151,15 @@ Crie sua campanha de mensagem no app visível para o usuário no dashboard da Br
 
 No exemplo a seguir, a mensagem no app específica a ser acionada foi configurada enviando a propriedade do evento como parte do push silencioso inicial.
 
-![Uma campanha de mensagens no app com entrega baseada em ação que será entregue aos usuários que executarem o evento personalizado "Disparo de mensagem no app", em que "campaign_name" é igual a "Exemplo de nome de campanha do IAM".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
+![Uma campanha de mensagem no app baseada em ação que será entregue aos usuários que realizarem o evento personalizado "Disparar mensagem no app" onde "campaign_name" é igual a "Exemplo de Nome da Campanha IAM".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 {% alert note %}
 Note que essas mensagens no app só serão disparadas se o push silencioso for recebido enquanto o aplicativo estiver em primeiro plano.
 {% endalert %}
 
-### Exibição de um
+### Exibindo um pré-definido
 
-Para exibir manualmente uma mensagem no app predefinida, use o seguinte método:
+Para exibir manualmente uma mensagem no app pré-definida, use o seguinte método:
 
 ```swift
 if let inAppMessage = AppDelegate.braze?.inAppMessagePresenter?.nextAvailableMessage() {
@@ -167,9 +167,9 @@ if let inAppMessage = AppDelegate.braze?.inAppMessagePresenter?.nextAvailableMes
 }
 ```
 
-### Envio de mensagens em tempo real
+### Exibindo uma mensagem em tempo real
 
-Você também pode exibir mensagens locais no app em tempo real, chamando manualmente o método [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/present(message:)) em seu site `inAppMessagePresenter`. Por exemplo:
+Você também pode exibir mensagens locais no app em tempo real chamando manualmente o método [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/present(message:)) no seu `inAppMessagePresenter`. Por exemplo:
 
 {% tabs %}
 {% tab swift %}
@@ -182,7 +182,7 @@ AppDelegate.braze?.inAppMessagePresenter?.present(message: customInAppMessage)
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 BRZInAppMessageRaw *customInAppMessage = [[BRZInAppMessageRaw alloc] init];
@@ -200,7 +200,7 @@ customInAppMessage.themes = @{
 {% endtabs %}
 
 {% alert note %}
-Ao criar sua própria mensagem no app, você aceita qualquer rastreamento de análise de dados e terá que lidar manualmente com o registro de cliques e impressões usando o site `message.context`.
+Ao criar sua própria mensagem no app, você opta por não participar de qualquer rastreamento de análise e terá que gerenciar manualmente o registro de cliques e impressões usando seu `message.context`.
 {% endalert %}
 
 ## A pilha de mensagens no app

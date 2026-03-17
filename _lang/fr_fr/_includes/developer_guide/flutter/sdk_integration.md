@@ -1,18 +1,18 @@
-## À propos du SDK de Flutter Braze
+## À propos du SDK Flutter Braze
 
-Après avoir intégré le SDK Flutter de Braze sur Android et iOS, vous pourrez utiliser l'API de Braze au sein de vos [applications Flutter](https://flutter.dev/) écrites en Dart. Ce plug-in offre une fonctionnalité d’analytique de base et vous permet d’intégrer des messages in-app et des cartes de contenu pour iOS et Android à l’aide d’une base de code unique.
+Une fois que vous aurez effectué l'intégration du SDK Braze Flutter sur Android et iOS, vous pourrez utiliser l'API Braze dans vos [applications Flutter](https://flutter.dev/) écrites en Dart. Ce plug-in offre une fonctionnalité d’analytique de base et vous permet d’intégrer des messages in-app et des cartes de contenu pour iOS et Android à l’aide d’une base de code unique.
 
 ## Intégration du SDK Flutter
 
 ### Conditions préalables
 
-Avant d'intégrer le SDK Flutter de Braze, vous devrez effectuer les opérations suivantes :
+Avant d'effectuer l'intégration du SDK Braze Flutter, veuillez effectuer les opérations suivantes :
 
 | Prérequis | Description |
 | --- | --- |
-| Identifiant de l'application API de Braze | Pour localiser l'identifiant de votre application, allez dans **Emplacements** > **API et identifiants** > **Identifiants d'application**. Pour plus d'informations, voir [Types d'identifiants API]({{site.baseurl}}/api/identifier_types/#app-identifier).|
+| Identifiant de l'application API Braze | Pour trouver l'identifiant de votre application, veuillez vous rendre dans **Réglages** > **API et identifiants** > **Identifiants d'application**. Pour plus d'informations, veuillez consulter [Types d'identifiants API]({{site.baseurl}}/api/identifier_types/#app-identifier).|
 | Endpoint REST Braze | L'URL de votre endpoint REST. Votre endpoint dépendra de l'[URL de Braze pour votre instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints).|
-| SDK Flutter | Installez le [SDK](https://docs.flutter.dev/get-started/install) officiel [de Flutter](https://docs.flutter.dev/get-started/install) et assurez-vous qu'il correspond à la [version minimale prise en charge par](https://github.com/braze-inc/braze-flutter-sdk#requirements) le SDK de Braze Flutter. |
+| SDK Flutter | Veuillez installer le [SDK Flutter](https://docs.flutter.dev/get-started/install) officiel et vous assurer qu'il répond aux exigences de [la version minimale prise en charge](https://github.com/braze-inc/braze-flutter-sdk#requirements) par le SDK Braze Flutter. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Étape 1 : Intégrez la bibliothèque Braze
@@ -60,7 +60,7 @@ Dans le même fichier, créez l’objet de configuration Braze dans la méthode 
 ```swift
 static var braze: Braze? = nil
 
-func application(
+override func application(
   _ application: UIApplication,
   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 ) -> Bool {
@@ -120,7 +120,7 @@ static Braze *_braze = nil;
 {% endtab %}
 {% endtabs %}
 
-### Étape 3 : Configurer le plugin
+### Étape 3 : Configurez le plugin
 
 Pour importer le plug-in dans votre code Dart, utilisez ce qui suit :
 
@@ -131,19 +131,19 @@ import 'package:braze_plugin/braze_plugin.dart';
 Ensuite, initialisez une instance du plug-in Braze en appelant `new BrazePlugin()` comme dans [notre exemple d'application](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart).
 
 {% alert important %}
-Pour éviter les comportements indéfinis, n'allouez et n'utilisez qu'une seule instance de `BrazePlugin` dans votre code Dart.
+Afin d'éviter tout comportement indéfini, veuillez allouer et utiliser une seule instance de  `BrazePlugin`dans votre code Dart.
 {% endalert %}
 
-## Tester l'intégration
+## Test de l'intégration
 
-Vous pouvez vérifier que le SDK est intégré en consultant les statistiques de session dans le tableau de bord. Si vous exécutez votre application sur l'une ou l'autre plateforme, vous devriez voir une nouvelle session dans le tableau de bord (dans la section **Aperçu** ).
+Vous pouvez vérifier que l'intégration SDK est bien réalisée en consultant les statistiques de session dans le tableau de bord. Si vous exécutez votre application sur l'une ou l'autre plateforme, vous devriez voir une nouvelle session dans le tableau de bord (dans la section **Aperçu** ).
 
-Ouvrez une session pour un utilisateur particulier en appelant le code suivant dans votre application.
+Veuillez ouvrir une session pour un utilisateur spécifique en appelant le code suivant dans votre application.
 
 ```dart
 BrazePlugin braze = BrazePlugin();
 braze.changeUser("{some-user-id}");
 ```
 
-Recherchez l'utilisateur avec `{some-user-id}` dans le tableau de bord sous **Audience** > Recherche d'utilisateurs. Vous pouvez y vérifier que les données de session et d’appareil ont été enregistrées.
+Veuillez rechercher `{some-user-id}`l'utilisateur dans le tableau de bord sous **Audience** > **Rechercher des utilisateurs**. Vous pouvez y vérifier que les données de session et d’appareil ont été enregistrées.
 

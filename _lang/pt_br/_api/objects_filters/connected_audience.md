@@ -7,9 +7,9 @@ description: "Este artigo explica os diferentes componentes do objeto de públic
 
 ---
 
-# Objeto do público conectado
+# Objeto de público conectado
 
-> Um objeto de público conectado é um seletor que identifica o público para o qual enviar a mensagem. 
+> Um objeto de público conectado identifica o público da sua mensagem. Por exemplo, se você usar arrays de atributos personalizados para rastrear cada categoria e programa de TV que um usuário favoritou, você pode usar públicos conectados para enviar automaticamente uma notificação por push ou e-mail para qualquer um que tenha favoritado um programa sempre que um novo episódio for lançado—sem precisar configurar um segmento para cada programa.
 
 Esse objeto é composto de um único filtro de público conectado ou de vários filtros de público conectados em uma expressão lógica usando os operadores `AND` ou `OR`.
 
@@ -34,7 +34,7 @@ Esse objeto é composto de um único filtro de público conectado ou de vários 
 
 ## Filtros de público conectados
 
-A combinação de vários filtros de atributos personalizados criará um filtro de público conectado, que criará um filtro de público conectado quando combinado com os operadores `AND` e `OR`.
+Combinar múltiplos filtros de atributos personalizados com `AND` e `OR` cria um filtro de público conectado.
 
 ### Filtro de atributo personalizado
 
@@ -60,8 +60,8 @@ O tipo de dados do atributo personalizado determina as comparações que são v�
 | String | `equals`, `not_equal`, `matches_regex`, `does_not_match_regex`, `exists`, `does_not_exist` |
 | Vetor | `includes_value`, `does_not_include_value`, `exists`, `does_not_exist` |
 | Numérico | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
-| Booleano | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
-| Horário | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
+| Booleano | `equals`, `not_equal`, `exists`, `does_not_exist` |
+| Horário | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Advertências sobre a comparação de atribuições
@@ -83,7 +83,9 @@ O tipo de dados do atributo personalizado determina as comparações que são v�
       "value": "blue"
     }
 }
+```
 
+```json
 {
   "custom_attribute":
   {
@@ -92,7 +94,9 @@ O tipo de dados do atributo personalizado determina as comparações que são v�
     "value": "pizza"
   }
 }
+```
 
+```json
 {
   "custom_attribute":
   {
@@ -142,7 +146,7 @@ Esse filtro permite segmentar com base no status de inscrição de e-mail de um 
 
 ### Último filtro de app usado
 
-Esse filtro permite segmentar com base em quando foi a última vez que o usuário usou o app. Esses filtros contêm dois campos:
+Esse filtro permite segmentar com base em quando o usuário usou o app pela última vez. Esses filtros contêm dois campos:
 
 #### Corpo do filtro
 ```json
@@ -160,4 +164,4 @@ Esse filtro permite segmentar com base em quando foi a última vez que o usuári
 
 ### Considerações
 
-Os públicos conectados não podem filtrar usuários por atributos padrão, eventos personalizados, segmentos ou eventos de engajamento com mensagens. Para usar esses filtros, recomendamos incorporá-los em um segmento de público e, em seguida, especificar esse segmento no filtro [`segment_id`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters).
+Públicos conectados não podem filtrar usuários por atributos padrão, eventos personalizados, segmentos ou eventos de engajamento com mensagens. Para usar esses filtros, recomendamos incorporá-los em um segmento de público e, em seguida, especificar esse segmento no parâmetro `segment_id` para o endpoint [`/messages/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters). Ao usar outros endpoints, você precisará adicionar o segmento à campanha acionada pela API ou ao Canvas no dashboard do Braze primeiro.

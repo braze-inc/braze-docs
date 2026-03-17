@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
-## Configuración de las notificaciones push
+## Configuración de notificaciones push
 
 Los teléfonos más nuevos fabricados por [Huawei](https://huaweimobileservices.com/) vienen equipados con Huawei Mobile Services (HMS), un servicio utilizado para entregar mensajes push en lugar de Firebase Cloud Messaging (FCM) de Google.
 
@@ -83,35 +83,43 @@ Después de añadir tu servicio push personalizado, añade lo siguiente a tu `An
 </service>
 ```
 
-### Paso 4: Prueba tus notificaciones push (opcional)
+### Paso 4: Gestionar las notificaciones en primer plano
+
+De forma predeterminada, cuando llega una notificación push mientras la aplicación está en primer plano, Huawei la muestra automáticamente. Para que Braze procese la carga útil de la notificación push (para el seguimiento de análisis, la gestión de vínculos profundos y el procesamiento personalizado), envía los datos push entrantes a Braze dentro de tu`HmsMessageService.onMessageReceived`método.
+
+Cuando llamas`BrazeHuaweiPushHandler.handleHmsRemoteMessageData`, Braze determina si la carga útil es una notificación push de Braze y, si es así, crea y muestra la notificación. Para obtener más información, consulta [Gestión de notificaciones en primer plano]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android#handling-foreground-notifications) en la documentación sobre notificaciones push de Android.
+
+Para ver un ejemplo completo, consulta la [referencia del controlador Huawei](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-huawei-push-handler/index.html) en la documentación del SDK de Braze para Android.
+
+### Paso 5: Prueba tus notificaciones push (opcional)
 
 En este punto, habrás creado una nueva aplicación Android de Huawei en el panel de Braze, la habrás configurado con tus credenciales de desarrollador de Huawei y habrás integrado los SDK de Braze y Huawei en tu aplicación.
 
 A continuación, podemos poner a prueba la integración probando una nueva campaña push en Braze.
 
-#### Paso 4.1: Crear una nueva campaña de notificación push
+#### Paso 5.1: Crear una nueva campaña de notificación push
 
 En la página **Campañas**, crea una nueva campaña y elige **Notificación push** como tipo de mensaje.
 
 Después de nombrar tu campaña, elige **Android Push** como plataforma push.
 
-![El compositor de creación de campañas que muestra las plataformas push disponibles.]({% image_buster /assets/img/huawei/huawei-test-push-platforms.png %})
+![El compositor de creación de campañas muestra las plataformas push disponibles.]({% image_buster /assets/img/huawei/huawei-test-push-platforms.png %})
 
 A continuación, crea tu campaña push con un título y un mensaje.
 
-#### Paso 4.2: Envía un push de prueba
+#### Paso 5.2: Envía un push de prueba
 
 En la pestaña **Prueba**, introduce tu ID de usuario, que habrás configurado en tu aplicación utilizando el [método`changeUser(USER_ID_STRING)` ]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id), y haz clic en **Enviar prueba** para enviar un push de prueba.
 
-![La pestaña de prueba del compositor de creación de campañas muestra que puedes enviarte un mensaje de prueba a ti mismo proporcionando tu ID de usuario e introduciéndolo en el campo "Añadir usuarios individuales".]({% image_buster /assets/img/huawei/huawei-test-send.png %})
+![La pestaña «Prueba» del compositor de creación de campañas te muestra que puedes enviarte un mensaje de prueba a ti mismo proporcionando tu ID de usuario e introduciéndolo en el campo «Añadir usuarios individuales».]({% image_buster /assets/img/huawei/huawei-test-send.png %})
 
 En este punto, deberías recibir una notificación push de prueba de Braze en tu dispositivo Huawei (HMS).
 
-#### Paso 4.3: Configura la segmentación de Huawei (opcional)
+#### Paso 5.3: Configurar la segmentación de Huawei (opcional)
 
 Como tu aplicación de Huawei en el panel de Braze se basa en la plataforma push de Android, tienes la flexibilidad de enviar push a todos los usuarios de Android (Firebase Cloud Messaging y Huawei Mobile Services), o puedes elegir segmentar la audiencia de tu campaña en aplicaciones específicas.
 
-Para enviar push solo a las aplicaciones de Huawei, [crea un nuevo segmento]({{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform) y selecciona tu aplicación de Huawei en la sección **Aplicaciones**.
+Para enviar notificaciones push solo a aplicaciones Huawei, crea un nuevo segmento]({{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform) y selecciona tu aplicación Huawei en la sección **Aplicaciones**.
 
 ![]({% image_buster /assets/img/huawei/huawei-segmentation.png %})
 

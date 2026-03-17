@@ -16,7 +16,7 @@ $ sudo gem install cocoapods
 
 **Nota**: Se for solicitado que você substitua o executável `rake`, consulte as [instruções de introdução em CocoaPods.org](http://guides.cocoapods.org/using/getting-started.html) para obter mais detalhes.
 
-**Nota**: Se você tiver problemas com o CocoaPods, consulte o [Guia de solução de problemas do CocoaPods](http://guides.cocoapods.org/using/troubleshooting.html).
+**Nota**: Se você tiver problemas com CocoaPods, consulte o [Guia de Solução de Problemas do CocoaPods](http://guides.cocoapods.org/using/troubleshooting.html).
 
 ### Etapa 2: Construindo o arquivo de pod
 
@@ -43,12 +43,12 @@ pod install
 
 Nesse ponto, você deve conseguir abrir o novo espaço de trabalho do projeto Xcode criado pelo CocoaPods. Use esse espaço de trabalho do Xcode em vez de seu projeto do Xcode. 
 
-![Novo espaço de trabalho]({% image_buster /assets/img_archive/podsworkspace.png %})
+![Novo Espaço de Trabalho]({% image_buster /assets/img_archive/podsworkspace.png %})
 
 ### Etapa 4: Atualização do delegate do seu app
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 Adicione a seguinte linha de código ao seu arquivo `AppDelegate.m`:
 
@@ -81,7 +81,7 @@ Em `AppDelegate.swift`, adicione o seguinte snippet ao seu `application(applicat
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions)
 ```
 
-**Nota**: O singleton do Braze `sharedInstance` será nulo antes de `startWithApiKey:` ser chamado, pois esse é um pré-requisito para usar qualquer funcionalidade do Braze.
+**Nota**: O `sharedInstance` singleton do Braze será nil antes que `startWithApiKey:` seja chamado, pois isso é um pré-requisito para usar qualquer funcionalidade do Braze.
 
 {% endtab %}
 {% endtabs %}
@@ -101,15 +101,15 @@ Não de esqueça de inicializar a Braze na thread principal de seu aplicativo. A
 Observe que, a partir de dezembro de 2019, os pontos de extremidade personalizados não serão mais fornecidos. Se você tiver um ponto de extremidade personalizado pré-existente, poderá continuar a usá-lo. Para obter mais informações, consulte nossa <a href="{{site.baseurl}}/api/basics/#endpoints">lista de endpoints disponíveis</a>.
 {% endalert %}
 
-Seu representante da Braze já deve ter informado sobre o [endpoint correto]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
+Seu representante do Braze já deve ter lhe informado sobre o [endpoint correto]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 #### Configuração do endpoint em tempo de compilação (recomendado)
-Se for fornecido um ponto de extremidade personalizado pré-existente...
+Se houver um endpoint personalizado pré-existente...
 - A partir do SDK da Braze para iOS v3.0.2, você pode definir um endpoint personalizado usando o arquivo `Info.plist`. Adicione o dicionário `Appboy` ao seu arquivo Info.plist. Dentro do dicionário `Appboy`, adicione a subentrada `Endpoint` string e defina o valor para a autoridade do url de seu endpoint personalizado (por exemplo, `sdk.iad-01.braze.com`, não `https://sdk.iad-01.braze.com`).
 
 #### Configuração do endpoint em tempo de execução
 
-Se for fornecido um ponto de extremidade personalizado pré-existente...
+Se houver um endpoint personalizado pré-existente...
 - A partir da Braze iOS SDK v3.17.0+, você pode substituir a definição do seu endpoint por meio do `ABKEndpointKey` dentro do parâmetro `appboyOptions` passado para `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Defina o valor como a autoridade do url do seu endpoint personalizado (por exemplo, `sdk.iad-01.braze.com`, não `https://sdk.iad-01.braze.com`).
 
 {% alert note %}
@@ -117,7 +117,7 @@ O suporte da configuração de endpoints em tempo de execução usando `ABKAppbo
 {% endalert %}
 
 {% alert important %}
-Para saber qual é o seu cluster específico, pergunte ao seu gerente de sucesso do cliente ou entre em contato com a nossa equipe de suporte.
+Para descobrir seu cluster específico, pergunte ao seu gerente de sucesso do cliente ou entre em contato com nossa equipe de suporte.
 {% endalert %}
 
 ### Integração completa de SDK
@@ -136,7 +136,7 @@ pod update
 
 Se desejar personalizar a Braze na inicialização, você poderá usar o método de inicialização da Braze `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions` e passar um `NSDictionary` opcional de chaves de inicialização da Braze.
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 Em seu arquivo `AppDelegate.m`, no método `application:didFinishLaunchingWithOptions`, adicione o seguinte métoda Braze:
 

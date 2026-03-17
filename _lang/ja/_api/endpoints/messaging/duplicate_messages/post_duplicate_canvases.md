@@ -1,7 +1,7 @@
 ---
 nav_title: "POST:キャンバスの複製"
 article_title: "POST:キャンバスの複製"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 5
 layout: api_page
 page_type: reference
@@ -10,15 +10,13 @@ description: "この記事では、「キャンバスの複製」エンドポイ
 
 {% api %}
 # API を使用したキャンバスの複製
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
 /canvas/duplicate
 {% endapimethod %}
 
 > このエンドポイントを使用して、キャンバスを複製します。この API エンドポイントは、[Braze ダッシュボードでのキャンバスの複製][1]に似ています。
 
-{% alert important %}
-このエンドポイントは現在早期アクセス中である。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## 前提条件
 
@@ -46,10 +44,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`| 必須 | string | [キャンバス識別子](https://www.braze.com/docs/api/identifier_types/)を参照してください。 |
-|`name`| 必須 | string | 作成されるキャンバスの名前。 |
+|`canvas_id`| 必須かどうか | string | [キャンバス識別子](https://www.braze.com/docs/api/identifier_types/)を参照してください。 |
+|`name`| 必須かどうか | string | 作成されるキャンバスの名前。 |
 |`description`| オプション | string | 結果のキャンバスの記述フィールド。 |
 |`tag_names` | オプション | string | 作成されるキャンバスのタグ。これらは存在するタグs である必要があります。リクエストに新しいタグs を追加すると、元のキャンバスにあったすべてのタグs が上書きされます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }

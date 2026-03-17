@@ -13,8 +13,7 @@ platform:
   - React Native
   - Roku
   - Unity
-  - Unreal Engine
-  - Xamarin
+  - .NET MAUI
 ---
 
 # Analytics
@@ -27,7 +26,7 @@ Besprechen Sie während der Implementierung von Braze unbedingt die Marketingzie
 
 ## Automatisch erfasste Daten
 
-Bestimmte Nutzerdaten werden von unserem SDK automatisch erfasst, z. B. die zuerst verwendete App, die zuletzt verwendete App, die Gesamtzahl der Sitzungen, das Betriebssystem des Geräts usw. Wenn Sie unseren Integrationsleitfäden folgen, um unsere SDKs zu implementieren, können Sie die Vorteile dieser [Standard Datenerfassung]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/) nutzen. Wenn Sie diese Liste überprüfen, können Sie vermeiden, die gleichen Informationen über Nutzer mehrfach zu speichern. Mit Ausnahme von Sitzungsbeginn und -ende werden alle anderen automatisch getrackten Daten nicht auf Ihr Datenpunkt-Kontingent angerechnet.
+Bestimmte Nutzerdaten werden von unserem SDK automatisch erfasst, z. B. die zuerst verwendete App, die zuletzt verwendete App, die Gesamtzahl der Sitzungen, das Betriebssystem des Geräts usw. Wenn Sie unseren Integrationsleitfäden folgen, um unsere SDKs zu implementieren, können Sie die Vorteile dieser [Standard Datenerfassung]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/) nutzen. Wenn Sie diese Liste überprüfen, können Sie vermeiden, die gleichen Informationen über Nutzer mehrfach zu speichern. Mit Ausnahme des Beginns und Endes einer Sitzung werden alle anderen automatisch erfassten Daten nicht auf Ihre Datenpunkt-Nutzung angerechnet.
 
 In unserem Artikel über [SDK Primer]({{site.baseurl}}/developer_guide/getting_started/sdk_overview/) können Sie Prozesse auflisten, die die standardmäßige Datenerfassung bestimmter Artikel blockieren.
 
@@ -51,7 +50,7 @@ Angepasste Events sind Aktionen, die von Ihren Nutzer:innen ausgeführt werden. 
 
 Braze merkt sich für die Segmentierung, wie oft diese Events aufgetreten sind und wann sie von den einzelnen Nutzern zuletzt ausgeführt wurden. Auf der Seite Analytics für **angepasste Events** können Sie sich ansehen, wie oft die einzelnen angepassten Events insgesamt auftreten, und für eine detailliertere Analyse auch nach Segmenten im Zeitverlauf. Dies ist besonders nützlich, um zu sehen, wie sich Ihre Kampagnen auf die Aktivität angepasster Events ausgewirkt haben. Dazu sehen Sie sich die grauen Linien an, die Braze über die Zeitreihe legt, um anzuzeigen, wann zuletzt eine Kampagne gesendet wurde.
 
-![Ein angepasstes Event Analytics Diagramm, das Statistiken über Nutzer:innen anzeigt, die eine Kreditkarte hinzugefügt und eine Suche über einen Zeitraum von dreißig Tagen durchgeführt haben.]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
+![Ein angepasstes Ereignisanalyse-Diagramm, das Statistiken zu Nutzer:innen anzeigt, die eine Kreditkarte hinzugefügt und innerhalb eines Zeitraums von dreißig Tagen eine Suche durchgeführt haben.]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
 {% alert note %}
 [Das Inkrementieren angepasster Attribute]({{site.baseurl}}/api/endpoints/messaging/) kann verwendet werden, um einen Zähler für eine Nutzer:in-Aktion zu führen, ähnlich wie bei einem angepassten Event. Sie können jedoch keine angepassten Attribut-Daten in einer Zeitserie anzeigen. Nutzer:innen-Aktionen, die nicht in Zeitreihen analysiert werden müssen, sollten mit dieser Methode erfasst werden.
@@ -67,14 +66,14 @@ Mit angepassten Event-Eigenschaften ermöglicht Braze Ihnen, Eigenschaften für 
 
 Wenn eine E-Commerce-Anwendung beispielsweise eine Nachricht an einen Benutzer senden möchte, wenn dieser seinen Warenkorb abbricht, könnte sie zusätzlich ihre Zielgruppe verbessern und eine stärkere Personalisierung der Kampagne zulassen, indem sie eine angepasste Event-Eigenschaft der `cart_value` der Warenkörbe der Benutzer hinzufügt.
 
-![Ein Beispiel für ein angepasstes Event, das eine Kampagne an einen Nutzer:in sendet, der seinen Warenkorb-Abbruch verursacht hat und den Warenkorbwert bei mehr als 100 und weniger als 200 belassen hat.]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
+![Ein Beispiel für ein angepasstes Event, das eine Kampagne an eine Nutzer:in sendet, die ihren Warenkorb verlassen hat und deren Warenkorbwert zwischen 100 und 200 liegt.]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
 Angepasste Event-Eigenschaften können auch zur Personalisierung im Messaging Template verwendet werden. Jede Kampagne, die [aktionsbasierte Zustellung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) mit einem triggernden Event verwendet, kann angepasste Event-Eigenschaften aus diesem Event für die Personalisierung von Nachrichten nutzen. Wenn eine Spielanwendung eine Nachricht an Nutzer:innen senden möchte, die ein Level abgeschlossen haben, kann sie die Nachricht mit einer Eigenschaft für die Zeit personalisieren, die Nutzer:innen für den Abschluss dieses Levels benötigt haben. In diesem Beispiel wird die Nachricht mithilfe [bedingter Logik]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/) für drei verschiedene Segmente personalisiert. Die angepasste Event-Eigenschaft namens ``time_spent`` kann durch den Aufruf von ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}`` in die Nachricht aufgenommen werden.
 
 {% raw %}
 ```liquid
 {% if {{event_properties.${time_spent}}} < 600 %}
-Congratulations on beating that level so fast! Check out our online portal where you can play against top players fromm around the world!
+Congratulations on beating that level so fast! Check out our online portal where you can play against top players from around the world!
 {% elsif {{event_properties.${time_spent}}} < 1800 %}
 Don't forget to visit the town store between levels to upgrade your tools.
 {% else %}
@@ -83,7 +82,7 @@ Talk to villagers for essential tips on how to beat levels!
 ```
 {% endraw %}
 
-Angepasste Event-Eigenschaften helfen Ihnen dabei, Ihr Messaging anzupassen oder granulare aktionsbasierte Zustellungskampagnen zu erstellen. Wenn Sie Segmente auf der Grundlage der Häufigkeit und der Eigenschaften von Events erstellen möchten, wenden Sie sich an Ihren Customer-Success-Manager oder an unser Support-Team.
+Angepasste Event-Eigenschaften helfen Ihnen dabei, Ihr Messaging anzupassen oder granulare aktionsbasierte Zustellungskampagnen zu erstellen. Wenn Sie Segmente basierend auf der Aktualität und Häufigkeit von Event-Eigenschaften erstellen möchten, wenden Sie sich bitte an Ihren Customer-Success-Manager oder unser Support-Team.
 
 ## Angepasste Attribute
 
@@ -99,7 +98,7 @@ Die folgenden Datenarten können als angepasste Attribute gespeichert werden:
 
 #### Strings (alphanumerische Zeichen)
 
-String Attribute sind nützlich, um Nutzereingaben zu speichern, z. B. eine Lieblingsmarke, eine Telefonnummer oder einen letzten Suchstring in Ihrer Anwendung. String Attribute können bis zu 255 Zeichen lang sein.
+String-Attribute sind nützlich, um Nutzereingaben zu speichern, z. B. eine Lieblingsmarke, eine Telefonnummer oder einen letzten Suchstring in Ihrer Anwendung. String-Attribute unterliegen den [Längenbeschränkungen](#length-constraints) für benutzerdefinierte Daten (479 Byte; ca. 479 Einzelbyte-Zeichen oder ca. 160 Zeichen für Mehrbyte-Schriften wie Japanisch).
 
 Die folgende Tabelle beschreibt die verfügbaren Segmentierungsoptionen für String-Attribute.
 
@@ -143,7 +142,7 @@ abUser.addToCustomAttributeArray('favorite_foods', 'pizza'); // => ['wings', 'pa
 abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta', 'fries', 'pizza', 'ice cream']
 ```
 
-Die maximale Anzahl von Elementen in benutzerdefinierten Attribut-Arrays ist standardmäßig auf 25 festgelegt. Das Maximum für einzelne Arrays kann im Braze-Dashboard unter **Dateneinstellungen** > Angepasste Attribute auf bis zu 100 erhöht werden. Wenn Sie möchten, dass dieser Höchstbetrag erhöht wird, wenden Sie sich an Ihren Kundenbetreuer. Arrays, die die maximale Anzahl von Elementen überschreiten, werden so abgeschnitten, dass sie die maximale Anzahl von Elementen enthalten.
+Die maximale Anzahl von Elementen in benutzerdefinierten Attribut-Arrays ist standardmäßig auf 25 festgelegt. Das Maximum für einzelne Arrays kann im Braze-Dashboard unter **„Dateneinstellungen“** > **„Angepasste Attribute“** auf bis zu 500 erhöht werden. Um dieses Limit auf über 500 zu erhöhen, wenden Sie sich bitte an Ihren Braze-Customer-Success-Manager. Arrays, die die Höchstzahl an Elementen überschreiten, werden gekürzt, um die Höchstzahl an Elementen zu enthalten.
 
 Die folgende Tabelle beschreibt die verfügbaren Segmentierungsoptionen für Array-Attribute.
 
@@ -325,11 +324,11 @@ Diese sollten nicht als Nutzer:innen IDs verwendet werden:
 - E-Mail-Adresse
 - Die Nutzer:in eines anderen Drittanbieters ID
 
-{% multi_lang_include sdk_auth_alert.md %}
+{% multi_lang_include alerts/important_alerts.md alert='SDK auth' %}
 
 #### Geben Sie angepassten Events und -Attributen lesbare Namen
 
-Stellen Sie sich vor, Sie sind ein Marketer, der Braze erst ein oder zwei Jahre nach der Implementierung einsetzt. Eine Dropdown-Liste voller Namen wie "usr_no_acct" ohne weiteren Kontext zu lesen, kann einschüchternd wirken. Wenn Sie Ihren Events und Attributen identifizierbare und lesbare Namen geben, wird es für alle Nutzer Ihrer Plattform einfacher. Beachten Sie die folgenden Best-Practice-Beispiele:
+Stellen Sie sich vor, Sie sind ein Marketer, der ein oder zwei Jahre nach der Implementierung mit der Nutzung von Braze beginnt. Eine Dropdown-Liste voller Namen wie ["usr_no_acct"...], ohne weiteren Kontext, kann einschüchternd wirken. Wenn Sie Ihren Events und Attributen identifizierbare und lesbare Namen geben, wird es für alle Nutzer Ihrer Plattform einfacher. Beachten Sie die folgenden Best-Practice-Beispiele:
 
 - Beginnen Sie ein angepasstes Event nicht mit einem numerischen Zeichen. Die Dropdown-Liste ist alphabetisch sortiert und beginnt mit einem numerischen Zeichen, was die Segmentierung nach dem ausgewählten Filter erschwert.
 - Versuchen Sie, möglichst keine obskuren Abkürzungen oder Fachausdrücke zu verwenden.
@@ -349,7 +348,7 @@ Beachten Sie bei der Implementierung angepasster Events die folgenden Beschränk
 
 #### Längenbeschränkungen
 
-Angepasste Events, Namen von angepassten Attributen (Schlüsseln) und String-Werte für angepasste Events, die 255 Zeichen oder länger sind, werden abgeschnitten. Idealerweise sollten diese so kurz wie möglich sein, um die Netzwerk- und Akku-Performance Ihrer App zu verbessern. Beschränken Sie sie nach Möglichkeit auf 50 Zeichen.
+Braze legt eine Längenbeschränkung in Bytes (479 Bytes) für benutzerdefinierte Ereignisnamen, benutzerdefinierte Attributnamen (Schlüssel) und benutzerdefinierte Ereigniszeichenfolgenwerte fest. Werte, die diesen Grenzwert überschreiten, werden abgeschnitten. In Zeichen ausgedrückt entspricht dies etwa 479 Einzelbyte-Zeichen (z. B. ASCII) oder etwa 160 Zeichen für Mehrbyte-Schriften wie Japanisch (unter der Annahme von etwa 3 Bytes pro Zeichen in UTF-8). Idealerweise sollten Namen und Werte so kurz wie möglich gehalten werden, um die Netzwerk- und Performance Ihrer App zu verbessern – wenn möglich, beschränken Sie sie auf 50 Zeichen.
 
 #### Inhaltliche Beschränkungen
 Die folgenden Inhalte werden programmgesteuert aus Ihren Attributen und Ereignissen herausgefiltert. Achten Sie darauf, Folgendes nicht zu verwenden:

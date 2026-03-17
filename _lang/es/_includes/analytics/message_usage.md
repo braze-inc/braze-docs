@@ -1,6 +1,6 @@
-# Panel de uso de mensajes
+# Panel de control de uso de mensajes
 
-> El panel de uso de mensajes proporciona información de autoservicio sobre tu uso de crédito de SMS, RCS y WhatsApp para obtener una visión completa del uso histórico y actual comparado con las asignaciones del contrato. Esta información puede reducir tu confusión y ayudarte a hacer ajustes para evitar riesgos de excedente.
+> El panel de control de uso de mensajes proporciona información detallada sobre el uso de créditos de SMS, RCS y WhatsApp, lo que permite obtener una visión completa del uso histórico y actual en comparación con las asignaciones del contrato. Esta información puede reducir tu confusión y ayudarte a hacer ajustes para evitar riesgos de excedente.
 
 El panel de **Uso de Mensajes** está dividido en tres secciones:
 - [Resumen del uso del crédito](#credit-usage-overview)
@@ -13,7 +13,7 @@ Accede al panel yendo a **Configuración** > **Facturación** > **Uso de mensaje
 
 **El resumen de uso de créditos de mensajes** proporciona un resumen del uso en todos los canales que utilizan créditos. Puedes ver cómo vas con respecto a tu asignación total de crédito, y encontrar detalles sobre tu contrato activo y tu periodo de contrato.
 
-Esta página se muestra si tienes un contrato de créditos por mensajes. Los canales que utilizan créditos de mensajes se muestran en el **resumen del contrato Créditos**.
+Esta página se muestra si tienes un contrato de créditos para mensajes. Los canales que utilizan créditos de mensajes se muestran en el **resumen del contrato Créditos**.
 
 {% alert note %}
 Si has comprado WhatsApp pero no tienes un contrato de créditos de mensajes, seguirás viendo el consumo de créditos de WhatsApp porque así es como se facturan los contratos de WhatsApp antiguos. Esto difiere de los SMS tradicionales, que sólo consumen créditos cuando tienes un contrato de créditos de mensajes.
@@ -25,15 +25,15 @@ Los datos **generales de uso de los créditos de mensajes** se limitan al period
 
 El gráfico **Uso de créditos de mensajes durante el contrato** muestra tu uso durante el periodo de tiempo seleccionado. La granularidad de este gráfico depende del marco temporal que hayas seleccionado. Exporta las opciones de exportación seleccionando el menú de la esquina superior derecha del gráfico.
 
-![Panel general de uso de créditos para mensajes con secciones para el uso de créditos, resumen del contrato de créditos y consumo de créditos sobre el contrato.]({% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %}){: style="max-width:70%;"}
+![Panel general de uso de créditos de mensajes con secciones para el uso de créditos, resumen del contrato de créditos y consumo de créditos sobre el contrato.]({% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %}){: style="max-width:70%;"}
 
 ## SMS, MMS y RCS
 
-**SMS/MMS/RCS Uso de créditos** muestra el desglose de uso del canal SMS, MMS y RCS. Las columnas de la tabla de datos generalmente requieren que hayas comprado Créditos para mensajes (aunque Braze aún admite temporalmente modelos de facturación más antiguos), y las columnas **Ratio de crédito** y **Créditos** indican la tasa del país respectivo y los créditos consumidos. Además, los mosaicos de alto nivel indicarán el consumo total de SMS y, si procede, de MMS en el intervalo de fechas seleccionado.
+**El uso de créditos SMS/MMS/RCS** muestra el desglose del uso de los canales SMS, MMS y RCS. Las columnas de la tabla de datos suelen requerir que hayas adquirido créditos de mensajes (aunque Braze sigue admitiendo temporalmente los modelos de facturación anteriores), y las columnas **«Ratio de créditos»** y **«Créditos»** indican la tasa del país correspondiente y los créditos consumidos. Además, los mosaicos de alto nivel indicarán el consumo total de SMS y, cuando sea pertinente, de MMS durante el intervalo de fechas seleccionado.
 
-Hay filtros disponibles que te permiten filtrar por **País** o por tipo de SMS y RCS.
+Hay filtros disponibles que te permiten filtrar por **país** o tipo de SMS y RCS.
 
-![SMS/MSS/RCS Utilización de créditos con mosaicos para los datos de alto nivel y una sección para el consumo por cuenta.]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}){: style="max-width:70%;"}
+![Uso de créditos SMS/MSS/RCS con mosaicos para datos de alto nivel y una sección para el consumo por cuenta.]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}){: style="max-width:70%;"}
 
 A diferencia del **Resumen de uso de créditos para mensajes**, esta sección contiene datos históricos de periodos contractuales anteriores. 
 
@@ -41,7 +41,7 @@ A diferencia del **Resumen de uso de créditos para mensajes**, esta sección co
 Es posible seleccionar un intervalo de fechas que contenga tanto el uso sin créditos como el uso con créditos de los mensajes. En este caso, el consumo que se haya producido fuera de los créditos del mensaje mostrará `—` (nulo) en las columnas **Ratio de créditos** y **Créditos**.
 {% endalert %}
 
-![SMS/MMS/RCS Tabla de utilización de créditos con valores nulos.]({% image_buster /assets/img/app_settings/sms_table_null3.png %}){: style="max-width:70%;"}
+![Tabla de uso de créditos SMS/MMS/RCS con valores nulos.]({% image_buster /assets/img/app_settings/sms_table_null3.png %}){: style="max-width:70%;"}
 
 ## WhatsApp
 
@@ -64,5 +64,18 @@ Puedes filtrar tus datos por:
 Los datos que se muestran en el panel de **Uso de mensajes** son a nivel de contrato y no se limitan a una empresa o espacio de trabajo individual del panel. Estos datos reflejan el uso de todos los espacios de trabajo de tu panel, y potencialmente de todos los paneles (si tienes varios).
 {% endalert %}
 
-- Los datos subyacentes se proporcionan en una cadencia diaria, con las tablas de datos actualizadas a las 3 am, 9 am, 12 pm y 6 pm EST. 
+- Los datos subyacentes se proporcionan en una cadencia diaria, con las tablas de datos actualizadas a las 3 am, 9 am, 12 pm y 6 pm EST. El panel **de uso de mensajes** puede tardar más de 24 horas en actualizarse.
 - Braze sigue la metodología estándar de redondeo: las cifras se redondean a la décima más próxima.
+
+### Selección del intervalo de fechas
+
+El panel **de uso de mensajes** excluye la fecha final del intervalo seleccionado de los resultados. Por ejemplo, si seleccionas del 1 al 31 de octubre, se excluyen las estadísticas de uso del 31 de octubre. Para incluir el último día del período deseado, amplía el intervalo en un día. Por ejemplo, para incluir todo el mes de octubre, selecciona del 1 de octubre al 1 de noviembre.
+
+### Comparación con proveedores externos
+
+Al comparar los datos de uso de mensajes de Braze con los de proveedores externos (como Infobip), ten en cuenta lo siguiente:
+
+- **Segmentos del mensaje frente a mensajes**: Braze cuenta los mensajes SMS por segmentos. Un único mensaje SMS que se divide en varios segmentos (por ejemplo, debido a su longitud) se cuenta como varios segmentos en Braze. Para obtener más información, consulta [las calculadoras de facturación de SMS y RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
+- **Mensajes basados en créditos frente a mensajes no basados en créditos**: El panel incluye mensajes basados en créditos y no basados en créditos. Es posible que los proveedores externos solo cuenten los mensajes basados en créditos, lo que puede provocar discrepancias en los totales.
+- **Entrante frente a saliente**: Asegúrate de que estás comparando los mismos tipos de mensajes. Algunos paneles de control de terceros incluyen tanto los mensajes entrantes como los salientes en sus totales, mientras que Braze te permite filtrar por dirección.
+- **Alineación del intervalo de fechas**: Dado que el panel excluye la fecha de finalización, las comparaciones diarias pueden ser más precisas que las comparaciones de intervalos de fechas más largos. Si estás comparando datos de un periodo específico, amplía el intervalo de fechas de Braze un día para incluir el último día del periodo de comparación.

@@ -1,6 +1,6 @@
 ---
 nav_title: Análise de dados
-article_title: Sobre a análise de dados para o SDK Braze
+article_title: Sobre a Análise de Dados para o SDK Braze
 page_order: 2.6
 description: "Saiba mais sobre a análise de dados do SDK Braze, para que você possa entender melhor quais dados o Braze coleta, a diferença entre eventos personalizados e atributos personalizados, e as melhores práticas para gerenciar a análise de dados."
 platform: 
@@ -13,8 +13,7 @@ platform:
   - React Native
   - Roku
   - Unity
-  - Unreal Engine
-  - Xamarin
+  - .NET MAUI
 ---
 
 # Análise de dados
@@ -22,12 +21,12 @@ platform:
 > Saiba mais sobre a análise de dados do SDK Braze, para que você possa entender melhor quais dados o Braze coleta, a diferença entre eventos personalizados e atributos personalizados, e as melhores práticas para gerenciar a análise de dados.
 
 {% alert tip %}
-Durante a sua implementação do Braze, certifique-se de discutir as metas de marketing com sua equipe, para que você possa decidir da melhor forma quais dados deseja rastrear e como deseja rastreá-los com o Braze. Como exemplo, veja nosso estudo de caso de [Taxi/Viagem por aplicativo](#example-case) no final deste guia.
+Durante a sua implementação do Braze, certifique-se de discutir as metas de marketing com sua equipe, para que você possa decidir da melhor forma quais dados deseja rastrear e como deseja rastreá-los com o Braze. Como exemplo, veja nosso estudo de caso de [Aplicativo de Táxi/Viagem por Aplicativo](#example-case) no final deste guia.
 {% endalert %}
 
 ## Dados coletados automaticamente
 
-Certos dados de usuários são coletados automaticamente pelo nosso SDK—por exemplo, Primeiro Uso do App, Último Uso do App, Contagem Total de Sessões, Sistema Operacional do Dispositivo, etc. Se você seguir nossos guias de integração para implementar nossos SDKs, poderá aproveitar esta [coleta de dados padrão]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Verificar esta lista pode ajudá-lo a evitar armazenar as mesmas informações sobre os usuários mais de uma vez. Com exceção do início e término da sessão, todos os outros dados rastreados automaticamente não contam para sua alocação de pontos de dados.
+Certos dados de usuários são coletados automaticamente pelo nosso SDK—por exemplo, Primeiro Uso do App, Último Uso do App, Contagem Total de Sessões, Sistema Operacional do Dispositivo, etc. Se você seguir nossos guias de integração para implementar nossos SDKs, poderá aproveitar esta [coleta de dados padrão]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Verificar esta lista pode ajudá-lo a evitar armazenar as mesmas informações sobre os usuários mais de uma vez. Com exceção do início e fim da sessão, todos os outros dados rastreados automaticamente não contam para o uso de pontos de dados.
 
 Consulte nosso artigo [SDK primer]({{site.baseurl}}/developer_guide/getting_started/sdk_overview/) para processos de lista de permissão que bloqueiam a coleta padrão de certos itens de dados.
 
@@ -51,7 +50,7 @@ Eventos personalizados são ações realizadas pelos seus usuários; eles são m
 
 Braze registra o número de vezes que esses eventos ocorreram, bem como a última vez que foram realizados por cada usuário para segmentação. Na página de análise de dados de **Eventos Personalizados**, você pode ver em agregado com que frequência cada evento personalizado ocorre, bem como por segmento ao longo do tempo para uma análise mais detalhada. Isso é particularmente útil para ver como suas campanhas afetaram a atividade de evento personalizado, observando as linhas cinzas que a Braze sobrepõe na série temporal para indicar a última vez que uma campanha foi enviada.
 
-![Um gráfico de análise de dados de evento personalizado mostrando estatísticas sobre usuários que adicionaram um cartão de crédito e fizeram uma pesquisa em um período de trinta dias.]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
+![Um gráfico de análise de dados de evento personalizado mostrando estatísticas sobre usuários que adicionaram um cartão de crédito e fizeram uma busca ao longo de um período de trinta dias.]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
 {% alert note %}
 O [incremento de atributos personalizados]({{site.baseurl}}/api/endpoints/messaging/) pode ser usado para manter um contador em uma ação do usuário semelhante a um evento personalizado. No entanto, você não poderá visualizar os dados do atributo personalizado em uma série temporal. Ações do usuário que não precisam ser analisadas em séries temporais devem ser registradas por meio deste método.
@@ -67,14 +66,14 @@ Com propriedades de evento personalizado, a Braze permite que você defina propr
 
 Por exemplo, se um aplicativo de eCommerce quisesse enviar uma mensagem a um usuário quando ele abandona o carrinho, poderia ainda melhorar seu público-alvo e permitir uma maior personalização da campanha ao adicionar uma propriedade de evento personalizada do `cart_value` dos carrinhos dos usuários.
 
-![Um exemplo de evento personalizado que enviará uma campanha a um usuário que abandonou seu carrinho e deixou o valor do carrinho em mais de 100 e menos de 200.]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
+![Um exemplo de evento personalizado que enviará uma campanha para um usuário que abandonou seu carrinho e deixou o valor do carrinho em mais de 100 e menos de 200.]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
 As propriedades do evento personalizado também podem ser usadas para personalização dentro do modelo de envio de mensagens. Qualquer campanha que use a [Entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) com um evento de gatilho pode usar propriedades de evento personalizado desse evento para personalização de envio de mensagens. Se um aplicativo de jogos quisesse enviar uma mensagem aos usuários que completaram um nível, ele poderia personalizar ainda mais a mensagem com uma propriedade para o tempo que os usuários levaram para completar esse nível. Neste exemplo, a mensagem é personalizada para três segmentos diferentes usando [lógica condicional]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/). A propriedade do evento personalizado chamada ``time_spent``, pode ser incluída na mensagem chamando ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 {% raw %}
 ```liquid
 {% if {{event_properties.${time_spent}}} < 600 %}
-Congratulations on beating that level so fast! Check out our online portal where you can play against top players fromm around the world!
+Congratulations on beating that level so fast! Check out our online portal where you can play against top players from around the world!
 {% elsif {{event_properties.${time_spent}}} < 1800 %}
 Don't forget to visit the town store between levels to upgrade your tools.
 {% else %}
@@ -83,7 +82,7 @@ Talk to villagers for essential tips on how to beat levels!
 ```
 {% endraw %}
 
-As propriedades do evento personalizado são projetadas para ajudá-lo a personalizar seu envio de mensagens ou criar campanhas de entrega baseada em ação granulares. Se você gostaria de criar segmentos com base na recência e frequência da propriedade do evento, entre em contato com seu gerente de sucesso do cliente ou nossa equipe de Suporte.
+As propriedades do evento personalizado são projetadas para ajudá-lo a personalizar seu envio de mensagens ou criar campanhas de entrega baseada em ação granulares. Se você gostaria de criar segmentos com base na recência e frequência das propriedades de eventos, entre em contato com seu gerente de sucesso do cliente ou nossa equipe de Suporte.
 
 ## Atributos personalizados
 
@@ -99,7 +98,7 @@ Os seguintes tipos de dados podem ser armazenados como atributos personalizados:
 
 #### Strings (caracteres alfanuméricos)
 
-Atributos de string são úteis para armazenar a entrada do usuário, como uma marca favorita, um número de telefone ou uma última string de pesquisa dentro do seu aplicativo. Os atributos de string podem ter até 255 caracteres.
+Os atributos de string são úteis para armazenar a entrada do usuário, como uma marca favorita, um número de telefone ou uma última string de pesquisa dentro do seu aplicativo. Atributos de string estão sujeitos às [restrições de comprimento](#length-constraints) para dados personalizados (479 bytes; aproximadamente 479 caracteres de byte único ou aproximadamente 160 caracteres para scripts de múltiplos bytes, como o japonês).
 
 A tabela a seguir descreve as opções de segmentação disponíveis para atributos de string.
 
@@ -143,7 +142,7 @@ abUser.addToCustomAttributeArray('favorite_foods', 'pizza'); // => ['wings', 'pa
 abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta', 'fries', 'pizza', 'ice cream']
 ```
 
-O número máximo de elementos em vetores de atributos personalizados é, por padrão, 25. O máximo para arrays individuais pode ser aumentado para até 100 no dashboard da Braze, em **Configurações de Dados** > **Atributos Personalizados**. Se você gostaria que esse máximo fosse aumentado, entre em contato com seu gerente de atendimento ao cliente. Arrays que excederem o número máximo de elementos serão truncados para conter o número máximo de elementos.
+O número máximo de elementos em matrizes de atributos personalizados tem como padrão 25. O máximo para arrays individuais pode ser aumentado para até 500 no dashboard do Braze, em **Configurações de Dados** > **Atributos Personalizados**. Para aumentar esse limite acima de 500, entre em contato com seu gerente de sucesso do cliente do Braze. Arrays que excedem o número máximo de elementos são truncados para conter o número máximo de elementos.
 
 A tabela a seguir descreve as opções de segmentação disponíveis para atributos de matriz.
 
@@ -325,11 +324,11 @@ Estes não devem ser usados como IDs de usuário:
 - Endereço de e-mail
 - ID de usuário de outro fornecedor de terceiros
 
-{% multi_lang_include sdk_auth_alert.md %}
+{% multi_lang_include alerts/important_alerts.md alert='SDK auth' %}
 
 #### Dê nomes legíveis a eventos e atributos personalizados
 
-Imagine que você é um profissional de marketing que começa a usar a Braze um ou dois anos depois da implementação. Ler uma lista suspensa cheia de nomes como "usr_no_acct" sem mais contexto pode gerar apreensão no seu dia a dia. Dar nomes identificáveis e legíveis aos seus eventos e atributos facilitará as coisas para todos os usuários da sua plataforma. Considere as seguintes melhores práticas:
+Imagine que você é um profissional de marketing que começa a usar o Braze um ou dois anos após a implementação; ler uma lista suspensa cheia de nomes como "usr_no_acct" sem mais contexto pode ser intimidador. Dar nomes identificáveis e legíveis aos seus eventos e atributos facilitará as coisas para todos os usuários da sua plataforma. Considere as seguintes melhores práticas:
 
 - Não comece um evento personalizado com um caractere numérico. A lista suspensa é classificada em ordem alfabética e começar com um caractere numérico dificulta a segmentação pelo filtro de sua escolha
 - Tente não usar abreviações obscuras ou jargão técnico, sempre que possível
@@ -349,7 +348,7 @@ Esteja atento às seguintes limitações e restrições ao implementar eventos p
 
 #### Restrições de comprimento
 
-Todos os eventos personalizados, nomes de atributos personalizados (chaves) e valores de string de eventos personalizados com 255 caracteres ou mais serão truncados. Idealmente, estes devem ser o mais curtos possível para melhorar a performance da rede e da bateria para o seu app. Se possível, limite-os a 50 caracteres.
+O Braze impõe um limite de comprimento em bytes (479 bytes) para nomes de eventos personalizados, nomes de atributos personalizados (chaves) e valores de string de eventos personalizados. Valores que excedem esse limite são truncados. Quando expressos em caracteres, isso é aproximadamente 479 caracteres de byte único (por exemplo, ASCII), ou aproximadamente 160 caracteres para scripts de múltiplos bytes, como o japonês (assumindo cerca de 3 bytes por caractere em UTF-8). Idealmente, mantenha nomes e valores o mais curtos possível para melhorar o desempenho da rede e da bateria do seu app—se possível, limite-os a 50 caracteres.
 
 #### Restrições de conteúdo
 O seguinte conteúdo será removido programaticamente de seus atributos e eventos. Tenha cuidado para não usar o seguinte:

@@ -14,7 +14,7 @@ search_tag: Partner
 > [Google Cloud Storage](https://cloud.google.com/storage/) es un sistema de almacenamiento de objetos masivo y escalable para datos no estructurados ofrecido por Google como parte del paquete de productos Cloud Computing.
 
 {% alert important %}
-Si cambias de proveedor de almacenamiento en la nube, ponte en contacto con tu administrador del éxito del cliente de Braze para que te ayude a configurar y validar tu nueva integración.
+Si vas a cambiar de proveedor de almacenamiento en la nube, ponte en contacto con tu administrador del éxito del cliente de Braze para que te ayude a configurar y validar tu nueva integración.
 {% endalert %}
 
 La integración de Braze y Google Cloud Storage te permite transmitir datos de Currents a Google Cloud Storage. Posteriormente, puede utilizar un proceso ETL (Extract, Transform, Load) para transferir sus datos a otras ubicaciones, como Google BigQuery.
@@ -24,18 +24,22 @@ La integración de Braze y Google Cloud Storage te permite transmitir datos de C
 | Requisito | Descripción |
 | ----------- | ----------- |
 | Cuenta Google Cloud Storage | Se necesita una cuenta de Google Cloud Storage para beneficiarse de esta asociación. |
-| Currents | Para volver a exportar datos a Google Cloud Storage, debes tener configurado [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) en tu cuenta. |
+| Currents | Para volver a exportar datos a Google Cloud Storage, debes tener configurado [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) en tu cuenta. Currents no es necesario si sólo estás configurando el archivo de mensajes. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integración
 
 Para integrarse con Google Cloud Storage, debe configurar las credenciales adecuadas que permitan a Braze obtener información sobre los buckets de almacenamiento en los que se está escribiendo (`storage.buckets.get`) y crear objetos dentro de ese bucket (`storage.objects.create`). 
 
+{% alert note %}
+Workload Identity Federation (WIF) no es compatible como método de autenticación para Currents. Debes utilizar una cuenta de servicio con una clave privada JSON.
+{% endalert %}
+
 Para ello, siga las siguientes instrucciones, que le guiarán a través de la creación de un rol y una cuenta de servicio que generarán una clave privada para utilizarla en su integración de Currents.
 
 ### Paso 1: Crear rol
 
-Crea un nuevo rol en tu consola de Google Cloud Platform accediendo a **IAM & admin** > **Roles** > **\+ Crear rol**.
+Crea un nuevo rol en tu Consola de Google Cloud Platform accediendo a **IAM & admin** > **Roles** > **\+ Crear Rol**.
 
 ![]({% image_buster /assets/img/gcs1.png %})
 
@@ -59,7 +63,7 @@ Cuando hayas terminado, selecciona **Crear**.
 
 #### Paso 2.1: Crear la cuenta de servicio
 
-Crea una nueva cuenta de servicio en tu consola de Google Cloud Platform accediendo a **IAM y admin** > **Cuentas de servicio** y seleccionando **Crear cuenta de servicio**.
+Crea una nueva cuenta de servicio en tu consola de Google Cloud Platform accediendo a **IAM & admin** > **Cuentas de servicio** y seleccionando **Crear cuenta de servicio**.
 
 ![]({% image_buster /assets/img/gcs3.png %})
 
@@ -77,10 +81,10 @@ En la parte inferior de la página, utilice el botón **Crear clave** para crear
 
 En Braze, ve a **Corrientes** > **\+ Crear corriente** > **Exportación de datos de Google Cloud Storage** e indica tu nombre de integración y tu correo electrónico de contacto.
 
-A continuación, sube tu clave privada JSON en **Credenciales JSON** de CGS e indica tu nombre de contenedor de CGS y el prefijo de CGS (opcional). 
+A continuación, sube tu clave privada JSON en **Credenciales JSON GCS** e indica tu nombre de contenedor GCS y el prefijo GCS (opcional). Ten en cuenta que debes generar estas credenciales a través de Google Cloud Platform, como se describe en los pasos anteriores.
 
 {% alert important %}
-Es importante que mantengas actualizado tu archivo de credenciales; si las credenciales de tu conector caducan, el conector dejará de enviar eventos. Si esto persiste durante más de **48 horas**, los eventos del conector se eliminarán y los datos se perderán permanentemente.
+Es importante que mantengas actualizado tu archivo de credenciales; si las credenciales de tu conector caducan, el conector dejará de enviar eventos. Si esto persiste durante más de **5 días**, los eventos del conector se eliminarán y los datos se perderán permanentemente.
 {% endalert %}
 
 ![La página Google Cloud Storage Currents en Braze. En esta página existen campos para el nombre de la integración, el correo electrónico de contacto, la credencial JSON de la GCS, el nombre de contenedor de la GCS y el prefijo.]({% image_buster /assets/img/gcs6.png %})
@@ -97,7 +101,7 @@ Ten en cuenta que la organización y el contenido de los archivos exportados ser
 Asegúrate de introducir el valor JSON completo [generado por Google Cloud](https://cloud.google.com/iam/docs/keys-create-delete).
 {% endalert %}
 
-![La página de Google Cloud Storage en el panel de Braze.]({% image_buster /assets/img/gcs7.png %}){: style="max-width:70%;"}
+![La página de Google Cloud Storage en el panel de control de Braze.]({% image_buster /assets/img/gcs7.png %}){: style="max-width:70%;"}
 
 ### Paso 5: Comprueba las credenciales de tu cuenta de servicio (opcional)
 
@@ -115,10 +119,16 @@ Para verificar estos permisos en el panel de Braze, ve a la página **Google Clo
 
 ## Comportamiento de la exportación
 
-Los usuarios que hayan integrado una solución de almacenamiento de datos en la nube e intenten exportar API, informes de cuadros de mando o informes CSV experimentarán lo siguiente:
+Los usuarios que hayan integrado una solución de almacenamiento en la nube y estén intentando exportar API, informes de panel o informes CSV experimentarán lo siguiente:
 
 - Todas las exportaciones de la API no devolverán una URL de descarga en el cuerpo de la respuesta y deberán recuperarse a través del almacenamiento de datos.
-- Todos los informes del panel de control y los informes CSV se enviarán al correo electrónico de los usuarios para su descarga (sin necesidad de permisos de almacenamiento) y se guardarán en el almacenamiento de datos.
+- Todos los informes del panel y los informes CSV se enviarán al correo electrónico del usuario para su descarga (sin necesidad de permisos de almacenamiento) y se realizará una copia de seguridad en Almacenamiento de datos.
+
+{% alert important %}
+**Requisito de formato JSON**: Para las exportaciones JSON, Braze utiliza el formato JSONL (JSON delimitado por nuevas líneas), en el que cada línea contiene un objeto JSON independiente. Este formato difiere del JSON estándar, que es una única matriz u objeto JSON. Cada línea del archivo exportado es un objeto JSON válido, pero el archivo en su conjunto no es un único documento JSON válido. Al procesar estos archivos, analiza cada línea individualmente como un objeto JSON distinto, en lugar de intentar analizar todo el archivo como un único documento JSON.
+
+Las exportaciones de Currents utilizan el formato Apache Avro (archivos`.avro` ), no JSON. Este requisito de formato JSON se aplica a las exportaciones de datos del panel y a las exportaciones de API que utilizan el formato JSON.
+{% endalert %}
 
 ## Solución de problemas
 

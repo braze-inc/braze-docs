@@ -1,7 +1,7 @@
 ---
 nav_title: "POST: Nutzer:innen identifizieren"
 article_title: "POST: Nutzer:innen identifizieren"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 3
 layout: api_page
 page_type: reference
@@ -21,15 +21,15 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Nutzer:innen i
 
 ## Funktionsweise
 
-Der Aufruf von `/users/identify` kombiniert ein Nutzerprofil, das durch einen Alias (Nur-Alias-Profil), eine E-Mail Adresse (Nur-E-Mail-Profil) oder eine Telefonnummer (Nur-Telefonnummer-Profil) identifiziert wird, mit einem Nutzerprofil, das über eine `external_id` (identifiziertes Profil) verfügt, und entfernt dann das Nur-Alias-Profil. 
+Der Aufruf von `/users/identify` kombiniert ein Nutzerprofil, das durch einen Alias (Nur-Alias-Profil), eine E-Mail Adresse (Nur-E-Mail-Profil) oder eine Telefonnummer (Nur-Telefonnummer-Profil) identifiziert wird, mit einem Nutzerprofil, das über eine `external_id` (identifiziertes Profil) verfügt, und entfernt dann das Nur-Alias-Profil.
 
 Die Identifizierung eines Nutzers:in erfordert eine `external_id`, die in den folgenden Objekten enthalten ist:
 
 - `aliases_to_identify`
-- `emails_to_identify` 
+- `emails_to_identify`
 - `phone_numbers_to_identify`
 
-Wenn es keinen Nutzer:in mit diesem `external_id` gibt, wird `external_id` zum Datensatz des Nutzer:innen hinzugefügt, und der Nutzer gilt als identifiziert. Nutzer:innen können nur einen Alias für ein bestimmtes Label haben. Wenn es bereits einen Nutzer:innen mit der Adresse `external_id` gibt, der einen Alias mit demselben Label wie das Profil "Nur Alias" hat, werden die Nutzerprofile nicht kombiniert.
+Wenn keine Nutzer:in mit dieser Bezeichnung vorhanden`external_id` ist, wird `external_id`die Information zum Datensatz der Alias-Nutzer:in hinzugefügt, und die Nutzer:in gilt als identifiziert. Nutzer:innen können nur einen Alias für ein bestimmtes Label haben. Wenn ein Nutzer:in bereits mit dem  `external_id`existiert und einen bestehenden Alias mit dem gleichen Alias-Label wie das Alias-only-Profil hat, werden die Nutzerprofile nicht zusammengeführt.
 
 {% alert tip %}
 Um unerwartete Datenverluste bei der Identifizierung von Nutzer:innen zu vermeiden, empfehlen wir Ihnen dringend, zunächst die [Best Practices für die Datenerfassung]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) zu referenzieren, um zu erfahren, wie Sie Nutzerdaten erfassen können, wenn bereits Bezeichner-Alias-Informationen vorhanden sind.
@@ -37,9 +37,9 @@ Um unerwartete Datenverluste bei der Identifizierung von Nutzer:innen zu vermeid
 
 ### Verhalten bei der Zusammenführung
 
-Standardmäßig führt dieser Endpunkt die folgende Liste von Feldern, die **ausschließlich** beim anonymen Nutzer:in zu finden sind, mit dem identifizierten Nutzer zusammen.
+Standardmäßig führt dieser Endpunkt die folgenden Felder, die **ausschließlich** bei anonymen Nutzer:innen vorhanden sind, mit denen des identifizierten Nutzers zusammen.
 
-{% details Liste der Felder, die zusammengeführt werden %}
+{% details List of fields that are merged %}
 - Vorname
 - Nachname
 - E-Mail
@@ -51,28 +51,28 @@ Standardmäßig führt dieser Endpunkt die folgende Liste von Feldern, die **aus
 - Land
 - Sprache
 - Anzahl der Sitzungen (die Summe der Sitzungen aus beiden Profilen)
-- Datum der ersten Sitzung (Braze wählt das frühere Datum der beiden Termine)
-- Datum der letzten Sitzung (Braze wählt das spätere Datum der beiden Termine)
+- Datum der ersten Sitzung (Braze wählt das frühere der beiden Daten)
+- Datum der letzten Sitzung (Braze wählt das spätere der beiden Daten aus)
 - Angepasste Attribute
 - Angepasste Event- und Kauf-Event-Daten
-- Angepasste Event- und Kauf-Event-Eigenschaften für die Segmentierung "X mal in Y Tagen" (wobei X<=50 und Y<=30)
+- Angepasste Event- und Kauf-Event-Eigenschaften für die Segmentierung „X-mal in Y Tagen“ (wobeiX<=50  und Y<=30)
 - Segmentierbare Zusammenfassung angepasster Events
   - Anzahl der Ereignisse (die Summe aus beiden Profilen)
-  - Das Ereignis ist zuerst eingetreten (Braze wählt das frühere Datum der beiden Daten)
-  - Letztes Ereignis (Braze wählt das spätere Datum der beiden Daten)
+  - Das Ereignis ist zum ersten Mal aufgetreten (Braze wählt das frühere der beiden Daten).
+  - Das Ereignis ist zuletzt aufgetreten (Braze wählt das spätere der beiden Daten).
 - In-App-Käufe insgesamt in Cent (die Summe aus beiden Profilen)
 - Gesamtzahl der Käufe (die Summe aus beiden Profilen)
-- Datum des ersten Kaufs (Braze wählt das frühere der beiden Daten)
-- Datum des letzten Kaufs (Braze wählt das spätere Datum der beiden Daten)
+- Datum des ersten Kaufs (Braze wählt das frühere der beiden Daten aus)
+- Datum des letzten Kaufs (Braze wählt das spätere der beiden Daten aus)
 - App Zusammenfassungen
-- Last_X_at Felder (Braze aktualisiert die Felder, wenn die verwaisten Profilfelder neueren Datums sind)
-- Kampagnen-Zusammenfassungen (Braze wählt die aktuellsten Datumsfelder aus)
+- Last_X_at Felder (Braze aktualisiert die Felder, wenn die verwaisten Profilfelder aktueller sind)
+- Kampagnenzusammenfassungen (Braze wählt die aktuellsten Datumsfelder aus)
 - Workflow-Zusammenfassungen (Braze wählt die aktuellsten Datumsfelder aus)
 - Verlauf des Messaging und des Engagements für Nachrichten
-- Angepasste Events und Kauf-Events mit Zählung und Zeitstempel für das erste und letzte Datum 
-  - Diese zusammengeführten Felder aktualisieren die Filter "für X Ereignisse in Y Tagen". Bei Kauf-Events umfassen diese Filter "Anzahl der Käufe in Y Tagen" und "Geldausgabe in den letzten Y Tagen".
+- Angepasste Events und Kauf-Events mit Zählung und Zeitstempel für das erste und letzte Datum
+  - Diese zusammengeführten Felder führen ein Update der Filter „für X Ereignisse in Y Tagen“ durch. Bei Kauf-Events umfassen diese Filter "Anzahl der Käufe in Y Tagen" und "Geldausgabe in den letzten Y Tagen".
 - Sitzungsdaten, wenn die App in beiden Nutzerprofilen vorhanden ist
-  - Wenn unsere Zielgruppe zum Beispiel keine App-Zusammenfassung für "ABCApp" hat, unser ursprünglicher Nutzer aber schon, dann hat der Nutzer:innen nach der Zusammenführung die App-Zusammenfassung "ABCApp" in seinem Profil.
+  - Wenn beispielsweise unsere Zielgruppe keine App-Zusammenfassung für „ABCApp“ hat, unser ursprünglicher Nutzer:in jedoch schon, wird der:die Nutzer:in der Zielgruppe nach der Zusammenführung die App-Zusammenfassung „ABCApp“ in seinem Profil angezeigt.
 {% enddetails %}
 
 ## Voraussetzungen
@@ -117,7 +117,7 @@ Eine der folgenden Angaben ist erforderlich: `aliases_to_identify`, `emails_to_i
 
 Wenn eine E-Mail-Adresse oder Telefonnummer als Bezeichner angegeben wird, müssen Sie auch `prioritization` in den Bezeichner aufnehmen.
 
-`prioritization` muss ein Array sein, das angibt, welcher Nutzer:innen zusammengeführt werden soll, wenn mehrere Nutzer:innen gefunden werden. `prioritization` ist ein geordnetes Array, d.h. wenn mehr als ein Nutzer:innen aus einer Priorisierung übereinstimmt, wird die Zusammenführung nicht durchgeführt.
+Es`prioritization`muss sich um ein Array handeln, das angibt, welcher Nutzer:in zusammengeführt werden soll, wenn mehrere Nutzer:innen gefunden werden.`prioritization`Es handelt sich um ein geordnetes Array, d. h., wenn mehr als ein Nutzer:in aus einer Priorisierung übereinstimmt, findet keine Zusammenführung statt.
 
 Die zulässigen Werte für das Array sind:
 
@@ -130,8 +130,6 @@ Es kann jeweils nur eine der folgenden Optionen im Prioritätsfeld vorhanden sei
 
 - `identified` bezieht sich auf die Priorisierung eines Nutzer:innen mit einem `external_id`
 - `unidentified` bezieht sich auf die Priorisierung eines Nutzer:in ohne ein `external_id`
-
-Wenn Sie in dem Array `identified` angeben, würde das bedeuten, dass der Nutzer:in über eine `external_id` verfügen **muss**, um in den Canvas eingegeben zu werden. Wenn Sie möchten, dass Nutzer:innen mit E-Mail-Adressen die Nachricht eingeben können, unabhängig davon, ob sie identifiziert sind oder nicht, verwenden Sie stattdessen nur den Parameter `most_recently_updated` oder `least_recently_updated`.
 
 ## Beispiel für eine Anfrage
 
@@ -166,8 +164,6 @@ Weitere Informationen zu `alias_name` und `alias_label` finden Sie in unserer Do
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
     "aliases_processed": 1,
     "message": "success"

@@ -2,49 +2,49 @@
 nav_title: WhatsAppと外部システム
 article_title: BrazeとWhatsAppを外部システムと統合する
 page_order: 2
-description: "この参考記事では、BrazeとWhatsAppを外部のAIやコミュニケーションシステムと統合するためのステップバイステップのガイドを提供する。"
+description: "この参考記事は、BrazeとWhatsAppの連携を外部AIシステムや通信システムに統合するためのステップを説明する。"
 page_type: reference
 alias: /whatsapp_external_system_integration/
 channel:
   - WhatsApp
 ---
 
-# BrazeとWhatsAppを外部のAIやコミュニケーションシステムと統合する
+# BrazeとWhatsAppを外部AIまたは通信システムと統合する
 
-> WhatsAppチャネルでAIチャットボットとライブエージェントハンドオフのパワーを活用し、顧客サポート業務を効率化しよう。定型的な問い合わせをオートメーション化し、必要に応じて人間のエージェントにシームレスに移行することで、レスポンスタイムを大幅に改善し、カスタマーエクスペリエンス全体を向上させることができる。
+> WhatsAppチャネルでAIチャットボットとライブエージェントへの引き継ぎを活用し、顧客サポート業務を効率化せよ。定型的な問い合わせをオートメーション化し、必要に応じて人間エージェントにシームレスに移行することで、応答時間を大幅に改善し、カスタマーエクスペリエンスを高めることができる。
 
 ## 仕組み
 
-Brazeと外部のAIやコミュニケーションシステムとの統合は、Brazeがコミュニケーションチャネルであり、外部システムがメッセージを処理し、レスポンスを策定する「インテリジェント」であるという双方向として機能する。
+Brazeと外部AIまたは通信システムとの連携は双方向で機能する。Brazeが通信チャネルとなり、外部システムがメッセージを処理し応答を生成する「知能」となる。
 
-統合ワークフローは、2つの主要なフローに分けられる：
-**インバウンドの流れ：**ユーザーのメッセージがBrazeに届き、処理のために外部システムに転送される。
-**アウトバウンドフロー：**外部システムはメッセージを処理した後、Brazeにレスポンスを送信し、Brazeはエンドユーザーにメッセージを配信する。
+統合ワークフローは、二つの主要な流れに分けられる：
+**流入量：**ユーザーのメッセージがBrazeに届くと、処理のために外部システムに転送される。
+**アウトバウンドフロー：**メッセージを処理した後、外部システムはBrazeに応答を送信する。その後、Brazeがメッセージをエンドユーザーに配信する。
 
-このコミュニケーションを効率的に自動化するために、この統合ではBrazeの2つの主要機能、[Webhookキャンペーンと]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) [APIトリガーキャンペーンを]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/)使用している。
+この通信を効率的にオートメーションするため、この統合ではBrazeの2つの主要機能を使用する：[webhookキャンペーン]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)と[APIトリガー型キャンペーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/)だ。
 
-![BrazeのWhatsAppチャネルと外部システムとの統合アーキテクチャ。]({% image_buster /assets/img/whatsapp/external_system_architecture.png %})
-<sup>*BrazeのWhatsAppチャネルと外部システムとの統合アーキテクチャ。*</sup>
+![BrazeのWhatsAppチャネルと外部システム間の統合アーキテクチャ。]({% image_buster /assets/img/whatsapp/external_system_architecture.png %})
+<sup>*BrazeのWhatsAppチャネルと外部システム間の統合アーキテクチャ。*</sup>
 
 ## 前提条件
 
 | 前提条件 | 説明 |
 | - | - |
-| 外部システム | チャットボット、APIを使用した自動クライアントサービスシステム、またはその両方を構築・管理できるサードパーティのAIまたはコミュニケーションシステム。 |
-| BrazeとWhatsAppの統合 | Brazeがマネージャーを務めるWhatsApp番号 |
-| REST APIキー | `campaigns.trigger.send` の権限を持つ REST API キー。これはダッシュボードの**「設定」**>「**APIキー**」で作成できる。 |
+| 外部システム | サードパーティのAIまたは通信システムで、チャットボットやオートメーションされた顧客サービスシステムを構築・管理できるもの、あるいはその両方に対応するものである。 |
+| BrazeとWhatsAppの連携 | Brazeが管理するWhatsApp番号 |
+| Braze REST APIキー | 権限`campaigns.trigger.send`付きのREST APIキー。これはBrazeダッシュボードの**「設定**」＞「**API キー」**から作成できる。 |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
 ## 統合の設定
 
-### ステップ 1: インバウンドメッセージ用のWebhookキャンペーンを作成する
+### ステップ 1: 受信メッセージ用のWebhookキャンペーンを作成する
 
-まず、Webhookキャンペーンを作成し、Brazeで受信したWhatsAppメッセージを外部システムに送信する方法を確立する。
+まず、Brazeが受信したWhatsAppメッセージを外部システムに送信する方法を確立するため、webhookキャンペーンを作成する。
 
 1. Brazeで、Webhookキャンペーンを作成する。
-2. Webhook Composerで、**Compose webhookを**選択する。
-3. **Webhook URL**フィールドに、メッセージを受信する外部システムのAPIエンドポイント（URL）を入力する。
-4. リクエストボディに**Raw textを**選択し、パーソナライズされたペイロードを入力する。パーソナライズされたペイロードには、ユーザーの`external_id` 、電話番号、メッセージ内容、その他の関連情報などが含まれる：
+2. Webhookコンポーザーで、**「Webhookを作成」**を選択する。
+3. **Webhook URL**フィールドには、メッセージを受信する外部システムのAPIエンドポイント（URL）を入力する。
+4. リクエスト本文には**「Raw text」**を選択し、ユーザーの`external_id`氏名と電話番号、メッセージ内容、その他の関連情報を含むパーソナライゼーションされたペイロードを入力する。例えば：
 
 {% raw %}
 ```liquid
@@ -57,41 +57,41 @@ Brazeと外部のAIやコミュニケーションシステムとの統合は、B
 {% endraw %}
 
 {: start="5"}
-5. キャンペーン作成画面の「**配信スケジュール」**ステップで、配信タイプに**「アクションベース**」を選択し、キャンペーントリガーに「**WhatsApp受信メッセージを送信**」を選択する。
+5. キャンペーン作成ツールの「**配信スケジュール**」ステップで、配信タイプに**「アクションベース」**を選択し、キャンペーンのトリガーに「**WhatsAppインバウンドメッセージを送信**」**を設定する**。
 
-![WhatsApp受信メッセージの送信をトリガーとしたアクションベースの配信。]({% image_buster /assets/img/whatsapp/inbound_message_trigger.png %})
+![WhatsAppの受信メッセージ送信をトリガーとするアクションベースの配信。]({% image_buster /assets/img/whatsapp/inbound_message_trigger.png %})
 
 {: start="6"}
-6. キャンペーンの作成が完了したら、保存してキャンペーンを開始する。キャンペーンを開始すると、メッセージを受信するたびにBrazeから外部システムにWebhookが送信される。
+6. キャンペーンの作成を完了したら、保存してキャンペーンを開始する。キャンペーンを開始すると、メッセージを受信するたびに、Brazeは外部システムにWebhookを送信する。
 
-### ステップ 2:アウトバウンドメッセージ用のAPIトリガーキャンペーンを作成する {#step-2}
+### ステップ 2:APIトリガーによる送信メッセージキャンペーンを作成する {#step-2}
 
-次にAPIトリガーキャンペーンを作成し、外部システムからWhatsAppを通してユーザーへメッセージを送信する方法を確立する。
+次に、APIトリガー型キャンペーンを作成する。これにより、外部システムからWhatsAppを通じてユーザーへメッセージを返信する仕組みを構築する。
 
 1. BrazeでWhatsAppキャンペーンを作成する。 
-2. メッセージ作成画面で**WhatsAppテンプレートメッセージ**または**レスポンスメッセージの**いずれかを選択し、テンプレートまたはレスポンスメッセージのレイアウトを選択する。受信メッセージは24時間WhatsAppウィンドウを開封しているため、レスポンシブメッセージのレイアウトは自由である。
+2. メッセージ作成画面で、**WhatsAppテンプレートメッセージ**か**返信メッセージ**のいずれかを選択し、次にテンプレートまたは返信メッセージのレイアウトを選ぶ。受信メッセージが24時間のWhatsAppウィンドウを開封したため、任意の返信メッセージレイアウトを選択できる。
 
-![メッセージタイプやメッセージレイアウトを選択できるメッセージ作成画面。]({% image_buster /assets/img/whatsapp/response_message_layout.png %})
+![メッセージ作成画面。メッセージの種類とレイアウトを選択するオプション付き。]({% image_buster /assets/img/whatsapp/response_message_layout.png %})
 
 {: start="3"}
-3\.メッセージボディにAPIトリガープロパティを追加する。例えば、{% raw %}```{{api_trigger_properties.${external_system_msg+body}}}```{% endraw %} 。これにより、AIシステムが送信されるメッセージを入力できるようになる。
+3\.メッセージ本文にAPIトリガープロパティを追加する。例えば{% raw %}```{{api_trigger_properties.${external_system_msg+body}}}```{% endraw %}。これにより、AIシステムが送信されるメッセージを生成できるようになる。
 
-![トリガープロパティを含むメッセージボディを持つメッセージ作成画面。]({% image_buster /assets/img/whatsapp/api_trigger_properties.png %})
+![トリガープロパティを含むメッセージ本文を持つメッセージ作成画面。]({% image_buster /assets/img/whatsapp/api_trigger_properties.png %})
 
 {: start="4"}
-4. キャンペーンコンポーザーの**スケジュール配信**ステップで、配信タイプに**アクション**ベースを選択する。
-5. キャンペーンを保存し、Brazeがこのキャンペーン用に生成したユニークな`campaign_id` をメモする。次のステップではIDが必要になる。
+4. キャンペーン作成ツールの**「配信スケジュール**」ステップで、配信タイプとして**「アクションベース」**を選択する。
+5. キャンペーンを保存し、その後、Brazeがこのキャンペーン用に生成した一意のID`campaign_id`をメモしておく。次のステップにはIDが必要だ。
 
-### ステップ 3:APIトリガーキャンペーンに外部システムを接続する。
+### ステップ 3:外部システムをAPIトリガー型キャンペーンに接続する
 
-最後に、外部システムがBrazeを呼び出し、レスポンスを送信するように設定する。
+最後に、外部システムを設定してBrazeを呼び出し、応答を送信する。
 
-1. 外部システムのコードで、受信したメッセージを処理してレスポンスを生成した後、Braze`/messages/send` エンドポイントにPOSTリクエストを行う。
-2. `/messages/send` リクエストボディに、[ステップ](#step-2)2の`campaign_id` 、ユーザーの`external_id` 、外部システムのレスポンスのコンテンツを含める。
-3. [ステップ](#step-2)2のAPIトリガープロパティを使って外部システムのレスポンスを挿入し、このcURLの例のように、認証のためにリクエストヘッダーにAPIキーを含めることを忘れないこと：
+1. 外部システムのコードでは、受信したメッセージを処理し応答を生成した後、Braze`/messages/send`のエンドポイントに対してPOSTリクエストを送信する。
+2. リクエスト`/messages/send`本文には、ステップ`campaign_id`[2](#step-2)からの値、ユーザーのID`external_id`、および外部システムの応答内容を記載する。
+3. [ステップ2](#step-2)のAPIトリガープロパティを使って外部システムの応答を挿入する。認証のためリクエストヘッダーにAPI キーを含めるのを忘れるな。例えば以下のcURL例のように：
 
 {% raw %}
-```json
+```bash
 curl -X POST \
   -H 'Content-Type:application/json' \
   -H 'Authorization: Bearer a valid rest API key' \
@@ -110,11 +110,11 @@ curl -X POST \
 ```
 {% endraw %}
 
-これでAIチャットボットのワークフローを構築するための強固な基礎ができた！
+これでAIチャットボットのワークフローを構築するための確かな基盤ができた！
 
 ### ワークフローをカスタマイズする
 
-統合ロジックを次のように拡張することができる：
-- Webhookキャンペーンをトリガーするキーワードを使い分ける。
-- マルチステップAPIトリガーキャンペーンで、より複雑なカンバセーションフローを作成する。
-- Brazeにチャット情報をカスタム属性として記録し、ユーザープロファイルを充実させ、将来のキャンペーンをセグメンテーションする。
+統合ロジックを次のように拡張できる：
+- 異なるキーワードを使って、それぞれ別のWebhookキャンペーンをトリガーする。
+- 複数のステップからなるAPIトリガー型キャンペーンで、より複雑なコンバージョンの流れを作成する。
+- Brazeでチャット情報をカスタム属性として記録し、ユーザープロファイルを充実させ、将来のキャンペーンをセグメント化する。

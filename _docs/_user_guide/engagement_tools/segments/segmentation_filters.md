@@ -14,6 +14,7 @@ glossary_tag_name: Filter Category
 glossary_filter_text: "Select a category to narrow the glossary:"
 
 # channel to icon/fa or image mapping
+# NOTE: glossary_tags names must match the "tags" under each glossary entry exactly (filter/checkbox logic). Do not translate.
 glossary_tags:
   - name: Segment or CSV membership
   - name: Custom attribute
@@ -33,6 +34,8 @@ glossary_tags:
   - name: Intelligence and predictive
   - name: Social activity
   - name: Other Filters
+  - name: Advertising use cases
+  - name: User Attributes
 
 glossaries:
   - name: Segment Membership
@@ -71,7 +74,7 @@ glossaries:
     description: Determines the earliest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> First Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Custom events
-  - name: Last Did Custom Event 
+  - name: Last Did Custom Event
     description: Determines the latest time that a user has performed a specially recorded event. This filter supports decimals, such as 0.25 hours. (24-hour period) <br><br>Example:<br> Last Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Custom events
@@ -83,7 +86,7 @@ glossaries:
     description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day looks at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day looks at 24-48 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, looks at 48-72 hours of user history, and so on.
     tags:
       - Custom events
-  - name: Email Address 
+  - name: Email Address
     description: Allows you to designate your campaign recipients by individual email addresses for testing. This can also be used to send transactional emails to all your users (including unsubscribed) using the "Email Address is not Blank" specifier within the filter, so that you can maximize delivery of emails regardless of opt-in status. <br><br>This filter only checks if user profiles have an email address, whereas the <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters#email-available">Email Available</a> filter checks for additional criteria.
     tags:
       - Other Filters
@@ -216,19 +219,19 @@ glossaries:
     tags:
       - Retargeting
   - name: Soft Bounced
-    description: Segment your users by whether they soft bounced X times in Y days. Segment filters can only look back 30 days, but you can look back further with Segment Extensions.<br><br>This filter operates differently than a soft bounce event in Currents. The Soft Bounced segment filter counts a soft bounce if there was no successful delivery during the 72 hour retry period. In Currents, every unsuccessful retry is sent as a soft bounce event. 
+    description: Segment your users by whether they soft bounced X times in Y days. Segment filters can only look back 30 days, but you can look back further with Segment Extensions.<br><br>This filter operates differently than a soft bounce event in Currents. The Soft Bounced segment filter counts a soft bounce if there was no successful delivery during the 72 hour retry period. In Currents, every unsuccessful retry is sent as a soft bounce event.
     tags:
       - Retargeting
   - name: Has Marked You As Spam
     description: Segments your users by whether or not they have marked your messages as spam.
     tags:
       - Retargeting
-  - name: Invalid Phone Number 
+  - name: Invalid Phone Number
     description: Segments your users by whether or not their phone number is invalid.
     tags:
       - Retargeting
   - name: Last Sent Specific SMS Inbound Keyword Category
-    description: Segments your users by when they last sent an SMS to a specific subscription group within a specific keyword category. 
+    description: Segments your users by when they last sent an SMS to a specific subscription group within a specific keyword category.
     tags:
       - Retargeting
   - name: Converted From Campaign
@@ -244,7 +247,7 @@ glossaries:
     tags:
       - Retargeting
   - name: In Canvas Control Group
-    description: Segments your users by whether or not they were in the control group for a specific Canvas. This filter only evaluates users who have entered the Canvas.<br><br>For example, if you filter for users who are not in the control group for a Canvas, you receive all users who entered the Canvas but are not in the control group.
+    description: Segments your users by whether or not they were in the control group for a specific Canvas. This filter only evaluates users who have entered the Canvas, so users who never entered are excluded from results entirely.<br><br>For example, if you filter for users who are not in the control group for a Canvas, you receive only users who entered the Canvas and were assigned to a non-control variant—users who never entered the Canvas are not included. To include all users regardless of Canvas entry, use the <code>Entered Canvas Variation</code> filter instead.
     tags:
       - Retargeting
   - name: Last Enrolled in Any Control Group
@@ -263,7 +266,7 @@ glossaries:
     description: Segments your users by the last time they have clicked or opened one of your messaging channels (Banners, Content Card, email, in-app, SMS, push, WhatsApp). For email messaging, the open event includes both machine opens and non-machine opens. (24-hour period)<br><br>For emails, this is when an email request is sent to the email service provider (regardless if it actually gets delivered). This also includes the option to filter by "opened any email (machine opens)" and "opened any email (other opens)". When multiple users share the same email address:<br>- On the initial send, only the specific targeted user's profile is updated. <br>- When the email is delivered, or if the user then opens the email or a link in the email, all users sharing that email address appear to have received the message.<br><br>For SMS, this is when the user last selected any shortened link in a message that has user click tracking turned on.<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
-  - name: Clicked card 
+  - name: Clicked card
     description: Segments your users by whether or not they have clicked a specific Content Card. This filter is available as a subfilter of "Clicked/opened campaign", "Clicked/opened campaign or Canvas with Tag", and "Clicked/opened step".
     tags:
       - Retargeting
@@ -276,7 +279,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Email Available
-    description: Segments your users by whether they have a valid email address, and if they are subscribed or opted-in to email. This filter checks for three criteria&#58; if the user is unsubscribed from emails, if Braze has received a hard bounce, and if the email was marked as spam. If any of these criteria are met, or if an email doesn't doesn't exist for a user, the user is not included.<br><br>Note that if you send a transactional message, users whose "Email Available" is <code>false</code> won't be included in the audience calculation but could still receive a message. However, the audience calculation includes only subscribed or opted-in users. <br><br>For emails where the opt-in status is important, we suggest using the "Email Available" filter instead of the <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address">Email Address</a> filter; the additional criteria can help you target users who truly want to see your messages.
+    description: Segments your users by whether they have a valid email address and whether they are subscribed or opted in to email. This filter checks for three criteria&#58; if the user is unsubscribed from emails, if Braze has received a hard bounce, and if the email was marked as spam. If any of these criteria are met, or if an email doesn't exist for a user, the user is not included.<br><br>Users whose Email Available is <code>false</code> are excluded from the campaign audience and do not receive the email—even if your send settings are configured to send to all users (including unsubscribed users).<br><br>For emails where opt-in status matters, use Email Available instead of <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address">Email Address</a>. The additional criteria help you target users who are eligible to receive email.
     tags:
       - Channel subscription behavior
   - name: Email Opt In Date
@@ -287,7 +290,7 @@ glossaries:
     description: Segments your users by their subscription status for email.
     tags:
       - Channel subscription behavior
-  - name: Email Unsubscribed Date 
+  - name: Email Unsubscribed Date
     description: Segments your users by the date on which they unsubscribed from future emails.
     tags:
       - Channel subscription behavior
@@ -345,7 +348,7 @@ glossaries:
       - Purchase behavior
   - name: Last Made Purchase
     description: Filter users by the last time they made a purchase.
-    tags: 
+    tags:
       - Purchase behavior
   - name: Last Purchased Product
     description: Filter users by when they last purchased a specific product.
@@ -442,15 +445,15 @@ glossaries:
   - name: Most Recent App Version Name
     description: Segments by the recent name of the user's app.<br><br>When using "less than" or "less than or equal to", if the main app version doesn't exist, this filter returns `true` because the user is older than the app version. This means that if the user’s last main app version doesn't exist, they automatically match the filter.
     tags:
-      - App 
+      - App
   - name: Most Recent App Version Number
     description: Segments by the recent app version number of the user's app.<br><br>When using “less than” or “less than or equal to”, if the main app version doesn't exist, this filter returns `true` because the user is older than the app version. This means that if the user’s last main app version doesn't exist, they automatically match the filter.<br><br>It may take time for the current app versions to populate. The app version on the user profile updates when the information is captured by the SDK, which relies on when users open their apps. If the user doesn't open the app, the current version won't be updated. These filters also won't apply retroactively. It's good to use "greater than" or "equal" to current and future versions, but using past version filters may cause unexpected behaviors.
     tags:
-      - App 
+      - App
   - name: Uninstalled
     description: Segments your users by whether they have uninstalled your app and have not reinstalled it.
     tags:
-      - Uninstall 
+      - Uninstall
   - name: Device Carrier
     description: Segments your users by their device carrier.
     tags:
@@ -464,21 +467,25 @@ glossaries:
     tags:
       - Devices
   - name: Device OS
-    description: Segments your users that have one or more devices with the specified operating system.
+    description: Segments your users that have one or more devices with the specified operating system. To segment users by a range of operating systems, use the <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters#device-os-version-number">Device OS Version Number</a> filter.
+    tags:
+      - Devices
+  - name: Device OS Version Number
+    description: Segments your users that have one or more devices with an operating system version that is within a specified range. For example, you can target users who have an iOS operating system version that is above or equal to 26.0.
     tags:
       - Devices
   - name: Most Recent Device Locale
     description: Segments your users by the <a href="/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/">locale information</a> from the most recently used device.
     tags:
-      - Devices      
+      - Devices
   - name: Most Recent Watch Model
     description: Segments your users by their most recent smartwatch model.
     tags:
-      - Devices    
+      - Devices
   - name: Provisionally Authorized on iOS
     description: Allows you to find users who are provisionally authorized on iOS 12 for a given app.
     tags:
-      - Devices   
+      - Devices
   - name: Web Browser
     description: Segments your users by the web browser they use to access your website.
     tags:
@@ -490,7 +497,7 @@ glossaries:
   - name: Device IDFV
     description: Allows you to designate your campaign recipients by IDFV for testing.
     tags:
-      - Advertising use cases 
+      - Advertising use cases
   - name: Device Google Ad ID
     description: Segments your users by the Google ad ID.
     tags:
@@ -502,7 +509,7 @@ glossaries:
   - name: Device Windows Ad ID
     description: Segments your users by the Windows ad ID.
     tags:
-      - Advertising use cases  
+      - Advertising use cases
   - name: Ad Tracking Enabled
     description: Allows you to filter based on whether your users have opted-in to ad tracking. Ad tracking relates to the IDFA or "identifier for advertisers" assigned to all iOS devices by Apple, which can be set by SDKs. This identifier allows advertisers to track users and serve them targeted ads.
     tags:
@@ -554,15 +561,15 @@ glossaries:
   - name: Install Attribution Adgroup
     description: Segments your users by the ad group that their install was attributed to.
     tags:
-      - Install Attribution
+      - Install attribution
   - name: Install Attribution Campaign
     description: Segments your users by the ad campaign that their install was attributed to.
     tags:
-      - Install Attribution
+      - Install attribution
   - name: Install Attribution Source
     description: Segments your users by the source that their install was attributed to.
     tags:
-      - Install Attribution
+      - Install attribution
   - name: Churn Risk Category
     description:  Segments your users by churn risk category according to a specific prediction.
     tags:
@@ -584,7 +591,7 @@ glossaries:
     tags:
       - Intelligence and predictive
   - name: Message Open Likelihood
-    description: Filters your users based on their likelihood to open a message on a specified channel on a scale of 0-100%. Users without sufficient data to measure a likelihood for a channel can be selected using "is blank."<br><br>For email, machine opens are excluded from the likelihood calculation.
+    description: Filters your users based on their <a href="/docs/user_guide/brazeai/intelligence/intelligent_channel/#individual-channels">likelihood to open a message on a specified channel</a> on a scale of 0-100%. Users without sufficient data to measure a likelihood for a channel can be selected using "is blank."<br><br>For email, machine opens are excluded from the likelihood calculation.
     tags:
       - Intelligence and predictive
   - name: Number of Facebook Friends Using App
@@ -606,5 +613,5 @@ glossaries:
   - name: Phone Number
     description: Segments your users by the E.164 formatted phone number field.<br><br> When a phone number is sent to Braze, Braze tries to coerce it into the <a href="/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers">e.164 format</a> that is used to send across SMS and WhatsApp channels. The coercion process can fail if the number isn't formatted properly, which results in the user profile having an unformatted phone number but not a sending phone number. This segment filter returns users by their e.164 formatted phone number (when available).<br><br>Use cases:<br> - Use this filter to understand the most accurate target audience size when sending SMS or WhatsApp messages.  <br>- Use regular expressions (regex) with this filter to segment by phone numbers with a specific country code. <br>- Use this filter to segment users by phone numbers that failed the e.164 coercion process.
     tags:
-      - Other filters
+      - Other Filters
 ---

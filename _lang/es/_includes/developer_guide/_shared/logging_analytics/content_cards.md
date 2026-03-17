@@ -1,4 +1,4 @@
-> Al crear una interfaz de usuario personalizada para tarjetas de contenido, debes registrar manualmente análisis como impresiones, clics y descartes, ya que esto sólo se gestiona automáticamente para los modelos de tarjeta predeterminados. El registro de estos eventos es una parte estándar de la integración de una tarjeta de contenido y es esencial para la precisión de los informes de campaña y la facturación. Para ello, rellena tu IU personalizada con datos de los modelos de datos Braze y luego registra manualmente los eventos. Una vez que entiendas cómo registrar los análisis, podrás ver las formas habituales en que los clientes de Braze [crean tarjetas de contenido personalizadas]({{site.baseurl}}/developer_guide/content_cards/creating_cards/). 
+> Al crear una interfaz de usuario personalizada para las tarjetas de contenido, debes registrar manualmente los datos de análisis, como las impresiones, los clics y los rechazos, ya que esto solo se gestiona automáticamente para los modelos de tarjetas predeterminados. El registro de estos eventos es una parte estándar de la integración de Content Card y es esencial para la elaboración de informes precisos sobre las campañas y la facturación. Para ello, rellena tu interfaz de usuario personalizada con datos de los modelos de datos de Braze y, a continuación, registra manualmente los eventos. Una vez que entiendas cómo registrar los análisis, podrás ver las formas habituales en que los clientes de Braze [crean tarjetas de contenido personalizadas]({{site.baseurl}}/developer_guide/content_cards/creating_cards/). 
 
 ## Escuchar las actualizaciones de las tarjetas
 
@@ -13,7 +13,38 @@ Todas las propiedades fuera de `id` y `extras` son opcionales para analizar las 
 
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+Registra una función de devolución de llamada para suscribirte a las actualizaciones cuando se actualicen las tarjetas.
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.subscribeToContentCardsUpdates((updates) => {
+  const cards = updates.cards;
+// For example:
+  cards.forEach(card => {
+    if (card.isControl) {
+      // Do not display the control card, but remember to call `logContentCardImpressions([card])`
+    }
+    else if (card instanceof braze.ClassicCard || card instanceof braze.CaptionedImage) {
+      // Use `card.title`, `card.imageUrl`, etc.
+    }
+    else if (card instanceof braze.ImageOnly) {
+      // Use `card.imageUrl`, etc.
+    }
+  })
+});
+
+braze.openSession();
+```
+
+{% alert note %}
+Las tarjetas de contenido sólo se actualizarán al iniciar la sesión si se llama a una petición de suscripción antes de `openSession()`. También puedes [actualizar manualmente el canal]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/).
+{% endalert %}
+
+{% endtab %}
+{% tab android %}
 {% subtabs local %}
 {% subtab Java %}
 
@@ -144,35 +175,43 @@ BRZCancellable *cancellable = [self.braze.contentCards subscribeToUpdates:^(NSAr
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab web %}
 
-Registra una función de devolución de llamada para suscribirte a las actualizaciones cuando se actualicen las tarjetas.
+{% tab react native %}
+
+Para obtener los datos de la tarjeta de contenido, utiliza el`getContentCards`método:
 
 ```javascript
-import * as braze from "@braze/web-sdk";
+import Braze from "@braze/react-native-sdk";
 
-braze.subscribeToContentCardsUpdates((updates) => {
-  const cards = updates.cards;
-// For example:
-  cards.forEach(card => {
-    if (card.isControl) {
-      // Do not display the control card, but remember to call `logContentCardImpressions([card])`
-    }
-    else if (card instanceof braze.ClassicCard || card instanceof braze.CaptionedImage) {
-      // Use `card.title`, `card.imageUrl`, etc.
-    }
-    else if (card instanceof braze.ImageOnly) {
-      // Use `card.imageUrl`, etc.
-    }
-  })
-});
-
-braze.openSession();
+const cards = await Braze.getContentCards();
 ```
 
-{% alert note %}
-Las tarjetas de contenido sólo se actualizarán al iniciar la sesión si se llama a una petición de suscripción antes de `openSession()`. También puedes [actualizar manualmente el canal]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/).
-{% endalert %}
+Para estar al tanto de las actualizaciones, suscríbete a los eventos de actualización de la tarjeta de contenido:
+
+```javascript
+const subscription = Braze.addListener(Braze.Events.CONTENT_CARDS_UPDATED, (update) => {
+  const cards = update.cards;
+  cards.forEach(card => {
+    if (card.isControl) {
+      // Do not display the control card, but remember to log an impression
+    } else {
+      // Use card.title, card.cardDescription, card.image, etc.
+    }
+  });
+});
+```
+
+Para solicitar una actualización manual de las tarjetas de contenido desde los servidores de Braze:
+
+```javascript
+Braze.requestContentCardsRefresh();
+```
+
+Para obtener tarjetas de contenido almacenadas en caché sin una solicitud de red:
+
+```javascript
+const cachedCards = await Braze.getCachedContentCards();
+```
 
 {% endtab %}
 {% endtabs %}
@@ -182,15 +221,34 @@ Las tarjetas de contenido sólo se actualizarán al iniciar la sesión si se lla
 Registrar métricas valiosas como impresiones, clics y descartes es rápido y sencillo. Configura un receptor de clics personalizado para gestionar manualmente estos análisis.
 
 {% tabs %}
+{% tab web %}
+
+Registrar eventos de impresión cuando las tarjetas son vistas por usuarios que utilizan [`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions):
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.logContentCardImpressions([card1, card2, card3]);
+```
+
+Registra los eventos de clic de tarjeta cuando los usuarios interactúan con una tarjeta utilizando [`logContentCardClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick):
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.logContentCardClick(card);
+```
+
+{% endtab %}
 {% tab android %}
 
-La página [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt) puede hacer referencia a las dependencias del SDK de Braze, como la lista de matrices de objetos de la tarjeta de contenido, para obtener el código [`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) para llamar a los métodos de registro Braze. Utiliza la clase base `ContentCardable` para referenciar y proporcionar datos fácilmente a `BrazeManager`. 
+Pueden hacer referencia[`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt) a las dependencias del SDK de Braze, como la matriz de objetos de la tarjeta de contenido, para obtener el[`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html)  y llamar a los métodos de registro de Braze. Utiliza la clase base `ContentCardable` para referenciar y proporcionar datos fácilmente a `BrazeManager`. 
 
 Para registrar una impresión o hacer clic en una tarjeta, llama a [`Card.logClick()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html) o [`Card.logImpression()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html) respectivamente. 
 
 Puedes registrar manualmente o establecer una tarjeta de contenido como "descartada" en Braze para una tarjeta concreta con [`isDismissed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissed.html). Si una tarjeta ya está marcada como descartada, no se puede volver a marcar como descartada.
 
-Para crear un receptor de clics personalizado, crea una clase que implemente [`IContentCardsActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html) y regístrala con [`BrazeContentCardsManager`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.managers/-braze-content-cards-manager/index.html). Implementa el método [`onContentCardClicked()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/on-content-card-clicked.html) que se ejecutará cuando el usuario haga clic en una tarjeta de contenido. A continuación, indica a Braze que utilice tu oyente de clic de la tarjeta de contenido. 
+Para crear un detector de clics personalizado, crea una clase que implemente[`IContentCardsActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html)  y realiza el registro con [`BrazeContentCardsManager`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.managers/-braze-content-cards-manager/index.html). Implementa el método [`onContentCardClicked()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/on-content-card-clicked.html) que se ejecutará cuando el usuario haga clic en una tarjeta de contenido. A continuación, indica a Braze que utilice tu oyente de clic de la tarjeta de contenido. 
 
 {% subtabs local %}
 {% subtab Java %}
@@ -235,6 +293,7 @@ BrazeContentCardsManager.getInstance().contentCardsActionListener = object : ICo
 Para manejar tarjetas de contenido con variantes de control en tu interfaz de usuario personalizada, pasa tu objeto [`com.braze.models.cards.Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) y llama al método `logImpression` como harías con cualquier otro tipo de tarjeta de contenido. El objeto registrará implícitamente una impresión de control para informar a nuestros análisis de cuándo un usuario habría visto la tarjeta de control.{% endalert %}
 
 {% endtab %}
+
 {% tab swift %}
 
 Implementa el protocolo [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) y establece tu objeto delegado como la propiedad `delegate` de tu `BrazeContentCardUI.ViewController`. Este delegado se encargará de devolver los datos de tu objeto personalizado a Braze para que los registre. Para ver un ejemplo, consulta [el tutorial de la interfaz de usuario de las tarjetas de contenido](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/).
@@ -280,22 +339,24 @@ Para manejar tarjetas de contenido con variantes de control en tu interfaz de us
 {% endalert %}
 {% endtab %}
 
-{% tab web %}
+{% tab react native %}
 
-Registrar eventos de impresión cuando las tarjetas son vistas por usuarios que utilizan [`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions):
+Registrar eventos de impresión cuando los usuarios ven las tarjetas:
 
 ```javascript
-import * as braze from "@braze/web-sdk";
-
-braze.logContentCardImpressions([card1, card2, card3]);
+Braze.logContentCardImpression(card.id);
 ```
 
-Registra los eventos de clic de tarjeta cuando los usuarios interactúan con una tarjeta utilizando [`logContentCardClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick):
+Registrar eventos de clic en tarjetas cuando los usuarios interactúan con una tarjeta:
 
 ```javascript
-import * as braze from "@braze/web-sdk";
+Braze.logContentCardClicked(card.id);
+```
 
-braze.logContentCardClick(card);
+Registra los eventos de descarte cuando un usuario descarta una tarjeta:
+
+```javascript
+Braze.logContentCardDismissed(card.id);
 ```
 
 {% endtab %}

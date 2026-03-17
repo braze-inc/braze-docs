@@ -1,16 +1,16 @@
-## Xamarin 콘텐츠 카드 정보
+## .NET MAUI 콘텐츠 카드에 대하여
 
-브레이즈 자마린 SDK에는 콘텐츠 카드를 시작할 수 있는 기본 카드 피드가 포함되어 있습니다. 기본 카드 피드는 Braze SDK에 포함되어 있으며 모든 분석 추적, 해제 및 사용자의 콘텐츠 카드 렌더링을 처리합니다.
+Braze .NET MAUI(구 Xamarin) SDK에는 콘텐츠 카드를 시작하는 데 도움이 되는 기본 카드 피드가 포함되어 있습니다. 기본 카드 피드는 Braze SDK에 포함되어 있으며 모든 분석 추적, 해제 및 사용자의 콘텐츠 카드 렌더링을 처리합니다.
 
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
 ## 카드 유형 및 속성
 
-브레이즈 자마린 SDK에는 기본 모델을 공유하는 세 가지 고유한 콘텐츠 카드 유형이 있습니다: [배너](#xamarin_banner), [캡션 이미지](#xamarin_captioned-image) 및 [클래식](#xamarin_classic). 각 유형은 기본 모델에서 공통 속성을 상속하며 다음과 같은 추가 속성이 있습니다.
+Braze .NET MAUI SDK에는 기본 모델을 공유하는 세 가지 고유한 콘텐츠 카드 유형이 있습니다: [배너](#xamarin_banner), [캡션 이미지](#xamarin_captioned-image), 및 [클래식](#xamarin_classic). 각 유형은 기본 모델에서 공통 속성을 상속하며 다음과 같은 추가 속성이 있습니다.
 
 ### 기본 카드 모델
 
-|등록정보           | 설명                                                                                                            |
+|Property           | 설명                                                                                                            |
 |-------------------|------------------------------------------------------------------------------------------------------------------------|
 |`idString`         | Braze에서 설정한 카드의 ID입니다.                                                                                            |
 |`created`          | Braze에서 카드가 생성된 시간의 UNIX 타임스탬프입니다.                                                             |
@@ -20,8 +20,8 @@
 |`pinned`           | 카드가 고정되어 있는지 여부.                                                                                            |
 |`dismissed`        | 사용자가 이 카드를 해지했는지 여부입니다. 이미 기각된 카드를 기각된 것으로 표시하는 것은 불가능합니다. |
 |`dismissible`      | 사용자가 카드를 해지할 수 있는지 여부입니다.                                                                           |
-|`urlString`        | (선택 사항) 카드 클릭 동작과 연결된 URL 문자열입니다.                                                       |
-|`openUrlInWebView` | 이 카드의 URL을 Braze WebView에서 열어야 하는지 여부입니다.                                                 |
+|`urlString`        | (선택 사항) 카드 클릭 작업과 관련된 URL 문자열입니다.                                                       |
+|`openUrlInWebView` | 이 카드의 URL이 Braze WebView에서 열려야 하는지 여부.                                                 |
 |`isControlCard`    | 이 카드가 제어 카드인지 여부. 제어 카드는 사용자에게 표시되지 않아야 합니다.                                |
 |`extras`           | 이 카드의 키 값 추가 항목 맵.                                                                             |
 |`isTest`           | 이 카드가 테스트 카드인지 여부.                                                                                      |

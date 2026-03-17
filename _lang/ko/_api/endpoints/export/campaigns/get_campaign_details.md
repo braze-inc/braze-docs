@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: 내보내기 캠페인 세부 정보"
+nav_title: "GET: 캠페인 세부 정보 내보내기"
 article_title: "GET: 내보내기 캠페인 세부 정보"
 search_tag: Endpoint
 page_order: 4
@@ -20,7 +20,7 @@ description: "이 문서에서는 내보내기 캠페인 세부 정보 Braze 엔
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `campaigns.details` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
@@ -32,7 +32,7 @@ description: "이 문서에서는 내보내기 캠페인 세부 정보 Braze 엔
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | 필수 | 문자열 | [캠페인 API 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요.<br><br> API 캠페인용 `campaign_id` 은 대시보드 내의 [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지와 **캠페인 세부정보** 페이지에서 찾을 수 있으며, [캠페인 목록 내보내기 엔드포인트를](#campaign-list-endpoint) 사용할 수도 있습니다. |
+| `campaign_id` | Required | 문자열 | [캠페인 API 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요.<br><br> API 캠페인용 `campaign_id` 은 대시보드 내의 [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지와 **캠페인 세부정보** 페이지에서 찾을 수 있으며, [캠페인 목록 내보내기 엔드포인트를](#campaign-list-endpoint) 사용할 수도 있습니다. |
 | `post_launch_draft_version` | 선택 사항 | 부울 | 출시 후 초안이 있는 메시지의 경우 이 값을 `true` 으로 설정하면 사용 가능한 모든 초안 변경 사항이 표시됩니다. 기본값은 다음과 같습니다. `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -47,8 +47,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 ## 응답
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "created_at" : (string) the date created as ISO 8601 date,
@@ -67,7 +65,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     "teams" : (array) the names of the Teams associated with the campaign,
     "messages": {
         "message_variation_id": (string) { // <=This is the actual id
-            "channel": (string) the channel type of the message, must be either email, ios_push, webhook, content_card, in-app_message, or sms,
+            "channel": (string) the channel type of the message, must be either email, ios_push, webhook, content_cards, trigger_in_app_message, or sms,
             "name": (string) the name of the message in the dashboard (eg., "Variation 1")
             ... channel-specific fields for this message, see the following messages section ...
         }
@@ -80,20 +78,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 `messages` 응답에는 각 메시지에 대한 정보가 포함됩니다. 다음은 각 채널에 대한 메시지 응답 예시입니다:
 
-#### 푸시
+{% tabs %}
+{% tab Content Cards %}
 
 ```json
 {
-    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
-    "name": (string) the name of the variant,
-    "alert": (string) the alert body text,
-    "extras": (hash) any key-value pairs provided,
-    "title": (string) the alert title text,
-    "action": (string) action link from click
+    "channel": "content_cards",
+    "name": (string) the name of variant,
+    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 
-#### 이메일
+{% endtab %}
+{% tab Email %}
 
 ```json
 {
@@ -114,7 +111,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### 인앱 메시지
+{% endtab %}
+{% tab In-app messages %}
+
+#### Surveys
 
 ```json
 {
@@ -124,7 +124,7 @@ Authorization: Bearer YOUR-REST-API-KEY
             {
                 "header":
                     {
-                         "text":(string) the display text for the header of the survey,
+                         "text":(string) the display text for the header of the survey
                     }
                 "choices": [
                     {
@@ -132,7 +132,7 @@ Authorization: Bearer YOUR-REST-API-KEY
                        "text": (string) the display text,
                        "custom_attribute_key": (string) the custom attribute key,
                        "custom_attribute_value": (sting) the custom attribute value,
-                       "deleted": (boolean) deleted from live campaign,
+                       "deleted": (boolean) deleted from live campaign
                     },
                     ...
                 ]
@@ -142,17 +142,47 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### 콘텐츠 카드
+#### 슬라이드업, 모달, 전체화면 인앱 메시지
 
 ```json
 {
-    "channel": "content_cards",
-    "name": (string) the name of variant,
-    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
+    "channel": "in_app_message",
+    "name": (string) the name of the variant,
+    "message": (string, optional) the body text,
+    "extras": (hash, optional) any key-value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 
-#### 웹훅
+{% endtab %}
+{% tab Push %}
+
+```json
+{
+    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
+    "name": (string) the name of the variant,
+    "alert": (string) the alert body text,
+    "extras": (hash) any key-value pairs provided,
+    "title": (string) the alert title text,
+    "action": (string) action link from click,
+    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
+    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
+}
+```
+
+{% endtab %}
+{% tab SMS %}
+
+```json
+{
+  "channel": "sms",
+  "body": (string) the payload body,
+  "from": (string) the list of numbers associated with the subscription group,
+  "subscription_group_id": (string) the API id of the subscription group targeted in the SMS message
+}
+```
+
+{% endtab %}
+{% tab Webhook %}
 
 ```json
 {
@@ -165,20 +195,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### SMS
+{% endtab %}
+{% tab WhatsApp %}
 
-```json
-{
-  "channel": "sms",
-  "body": (string) the payload body,
-  "from": (string) the list of numbers associated with the subscription group,
-  "subscription_group_id": (string) the API id of the subscription group targeted in the SMS message
-}
-```
-
-#### WhatsApp
-
-##### 템플릿 메시지
+#### 템플릿 메시지
 
 ```json
 {
@@ -193,7 +213,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-##### 응답 메시지
+#### 응답 메시지
 
 ```json
 {
@@ -208,7 +228,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### 제어 메시지
+{% endtab %}
+{% tab Control messages %}
 
 ```json
 {
@@ -217,11 +238,17 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
+{% endtab %}
+{% endtabs %}
+
+
 ### 전환 행동
 
-`conversion_behaviors` 배열에는 캠페인에 대해 설정된 각 전환 이벤트 동작에 대한 정보가 포함됩니다. 이러한 행동은 캠페인에서 설정한 순서대로 진행됩니다. 예를 들어, 전환 이벤트 A는 배열의 첫 번째 항목이 되고 전환 이벤트 B는 두 번째 항목이 되는 식입니다. 다음은 전환 이벤트 동작 응답의 예시입니다:
+`conversion_behaviors` 배열은 캠페인에 설정된 각 전환 이벤트 행동에 대한 정보를 포함합니다. 이러한 행동은 캠페인에서 설정한 순서대로 진행됩니다. 예를 들어, 전환 이벤트 A는 배열의 첫 번째 항목이고, 전환 이벤트 B는 두 번째 항목이며, 계속해서 그렇습니다. 다음은 전환 이벤트 동작 응답의 예시입니다:
 
-#### 이메일 클릭
+
+{% tabs %}
+{% tab Clicks email %}
 
 ```json
 {
@@ -230,7 +257,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### 이메일 열람
+{% endtab %}
+{% tab Opens email %}
 
 ```json
 {
@@ -239,7 +267,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### 구매(모든 구매)
+{% endtab %}
+{% tab Makes purchase (any purchase) %}
 
 ```json
 {
@@ -248,7 +277,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### 구매(특정 제품)
+{% endtab %}
+{% tab Makes purchase (specific product) %}
 
 ```json
 {
@@ -258,7 +288,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### 사용자 지정 이벤트 수행
+{% endtab %}
+{% tab Performs custom event %}
 
 ```json
 {
@@ -268,7 +299,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-#### 업그레이드 앱
+
+{% endtab %}
+{% tab Upgrades app %}
 
 ```json
 {
@@ -277,8 +310,8 @@ Authorization: Bearer YOUR-REST-API-KEY
     "app_ids": (array or null) array of app ids, such as ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
-
-#### 앱 사용
+{% endtab %}
+{% tab Uses app %}
 
 ```json
 {
@@ -287,6 +320,9 @@ Authorization: Bearer YOUR-REST-API-KEY
     "app_ids": (array or null) array of app ids, such as ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
+
+{% endtab %}
+{% endtabs %}
 
 {% alert tip %}
 CSV 및 API 내보내기 문제 해결에 대한 도움은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)를 방문하세요.

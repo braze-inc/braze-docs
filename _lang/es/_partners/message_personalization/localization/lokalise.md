@@ -16,7 +16,7 @@ _Esta integración está mantenida por Lokalise._
 
 ## Sobre la integración
 
-La integración de Braze y Lokalise aprovecha el Contenido conectado para permitirte insertar fácilmente contenido traducido en tus campañas Braze en función de la configuración de idioma del usuario.
+La integración de Braze y Lokalise utiliza el Contenido conectado para permitirte insertar fácilmente contenido traducido en tus campañas Braze en función de la configuración de idioma del usuario.
 
 ## Requisitos previos
 
@@ -114,16 +114,20 @@ Por último, guarda la plantilla de correo electrónico y visualízala previamen
 
 ## Preguntas más frecuentes
 
-**¿Qué ocurre si borro accidentalmente una clave de Lokalise?**<br>
+### ¿Qué ocurre si borro accidentalmente una clave de Lokalise?
+
 La cadena correspondiente en Braze ya no tendrá traducción.
 
-**Si tengo una localización `en` pero la sustituyo por `en-US` en Lokalise, ¿Braze la leerá como `en-US`?**<br>
+### Si tengo una localización `en` pero la sustituyo por `en-US` en Lokalise, ¿Braze la leerá como `en-US`?
+
 No, los códigos ISO de localización deben coincidir en Braze y Lokalise.
 
-**¿Podemos utilizar la bandera `:rerender` al conectar contenidos de Lokalise?**<br>
+### ¿Podemos utilizar la bandera `:rerender` al conectar contenidos de Lokalise?
+
 Sí, claro. Puedes consultar la documentación de Braze para saber cómo añadir esta bandera.
 
-**Después de actualizar el archivo de traducción en Lokalise, ¿por qué no puedo ver ningún cambio en el contenido traducido en Braze?**<br>
+### Después de actualizar el archivo de traducción en Lokalise, ¿por qué no puedo ver ningún cambio en el contenido traducido en Braze?
+
 Braze almacena en caché el contenido traducido, que puede tardar unos minutos en actualizarse. Si estás probando tus campañas y necesitas ver los resultados de las traducciones inmediatamente, puedes utilizar el parámetro `:cache_max_age` como se explica en este artículo de referencia.
 
 

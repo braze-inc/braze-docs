@@ -16,11 +16,7 @@ description: "이 문서에서는 중복 캠페인 엔드포인트에 대한 세
 
 > 이 엔드포인트를 사용하여 캠페인을 복제하십시오. 이 API 엔드포인트는 [Braze 대시보드에서 캠페인을 복제하는 것][1]과 유사합니다.
 
-{% alert important %}
-API를 사용하여 캠페인을 복제하는 것은 현재 초기 액세스 중입니다. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
-## Prerequisites
+## 필수 조건
 
 이 엔드포인트를 사용하려면 `campaigns.duplicate` 권한으로 API 키를 생성해야 합니다.
 
@@ -47,9 +43,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`| 필수 | 문자열 | [캠페인 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
-|`name`| 필수 | 문자열 | 결과 캠페인의 이름입니다. |
-|`description`| 선택 사항 | 문자열 | 결과 캠페인의 설명 필드입니다. |
+|`campaign_id`| Required | 문자열 | [캠페인 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
+|`name`| Required | 문자열 | 결과 캠페인의 이름입니다. |
+|`description`| Optional | 문자열 | 결과 캠페인의 설명 필드입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 

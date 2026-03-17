@@ -1,5 +1,5 @@
 ---
-nav_title: Troubleshooting webhook and connected content requests
+nav_title: Troubleshooting webhook and Connected Content requests
 article_title: Troubleshoot Webhook and Connected Content Requests
 page_order: 3
 channel:
@@ -13,7 +13,7 @@ description: "This article covers how to troubleshoot webhook and Connected Cont
 
 ## 4XX errors
 
-`4XX` errors indicate that there's an issue with the request sent to the endpoint. These errors are typically caused by erroneous requests, including malformed parameters, missing authentication headers, or incorrect URLs.
+`4XX` errors indicate that there's an issue with the request sent to the endpoint. These errors are typically caused by erroneous requests, including malformed parameters, missing authentication headers, or incorrect URLs. Note that these errors also apply to the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder).
 
 Refer to the following table for error code details and steps to resolve:
 
@@ -40,6 +40,7 @@ table td {
           <li>Check the request payload for any syntax errors.</li>
           <li>Confirm that all required fields are included and correctly formatted.</li>
           <li>If you're sending a JSON payload, validate the JSON structure.</li>
+          <li>If you're using Liquid to template in personalization tags in the webhook request, verify that the Liquid does not resolve to a blank value or produce JSON-breaking characters (such as unescaped quotes). Preview the message for a test user to confirm the rendered output is valid.</li>
         </ul>
       </td>
     </tr>

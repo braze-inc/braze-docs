@@ -2,13 +2,13 @@ Dans le tableau de bord de Braze, sélectionnez **Paramètres des données** > *
 
 Sélectionnez **Créer une transformation** pour nommer votre transformation, puis choisissez votre expérience de modification.
 
-![Détails de la transformation avec la possibilité de choisir « Utiliser un modèle » ou « Démarrer de zéro » pour votre expérience de modification.]({% image_buster /assets/img/data_transformation/data_transformation10.png %})
+![Détails de la transformation avec la possibilité de choisir "Utiliser un modèle" ou "Partir de zéro" pour votre expérience de modification.]({% image_buster /assets/img/data_transformation/data_transformation10.png %}){: style="max-width:80%;"}
 
 Sélectionnez **Utiliser un modèle** pour parcourir une bibliothèque de modèles, y compris les cas d'utilisation de la transformation des données. Vous pouvez également choisir de **partir de zéro** pour charger un modèle de code par défaut. 
 
 Si vous démarrez de zéro, choisissez une destination pour votre transformation. Vous pouvez toujours insérer un modèle de code à partir de la bibliothèque de modèles.
 
-{% details En savoir plus sur les destinations %}
+{% details More on destinations %}
 * **POST : Suivre les utilisateurs :** Transforme les webhooks d'une plateforme source en mises à jour du profil utilisateur, telles que les attributs, les événements ou les achats.
 * **PUT : Mettez à jour plusieurs éléments du catalogue :** Transforme les webhooks d'une plateforme source en mises à jour d'éléments du catalogue.
 * **DELETE : Supprimez plusieurs éléments du catalogue :** Transforme les webhooks d'une plateforme source en suppressions d'éléments du catalogue.
@@ -24,8 +24,8 @@ Après avoir créé votre transformation, vous verrez la vue détaillée de la t
 
 {% if include.location == "typeform" %}
 
-![]({% image_buster /assets/img/typeform/data_transformation_typeform.png %})
-
-Capturez l'**URL de votre webhook** pour l'utiliser à l'étape suivante.
+![Un exemple de détails de webhook et de code de transformation.]({% image_buster /assets/img/typeform/data_transformation_typeform.png %})
 
 {% endif %}
+
+Capturez l'**URL de votre webhook** pour l'utiliser à l'étape suivante.

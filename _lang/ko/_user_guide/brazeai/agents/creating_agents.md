@@ -1,173 +1,180 @@
 ---
-nav_title: 상담원 만들기
-article_title: 커스텀 상담원 만들기
-description: "상담원을 만드는 방법, 시작하기 전에 준비해야 할 사항, 메시징, 의사 결정 및 데이터 관리 전반에 걸쳐 상담원을 활용하는 방법에 대해 알아보세요."
+nav_title: 에이전트 생성
+article_title: 커스텀 에이전트 생성
+description: "에이전트를 생성하는 방법, 시작하기 전에 준비해야 할 사항, 그리고 메시징, 의사결정 및 데이터 관리 전반에 걸쳐 에이전트를 작동시키는 방법을 배웁니다."
+page_order: 1
 alias: /creating-agents/
 ---
 
-# 커스텀 상담원 만들기
+# 커스텀 에이전트 생성
 
-> 커스텀 상담원을 만드는 방법, 시작하기 전에 준비해야 할 사항, 메시징, 의사 결정 및 고객 데이터 관리 전반에 걸쳐 상담원을 활용하는 방법에 대해 알아보세요. 자세한 내용은 [Braze 에이전트를]({{site.baseurl}}/user_guide/brazeai/agents) 참조하세요. 
+> 커스텀 에이전트를 생성하는 방법, 시작하기 전에 준비해야 할 사항, 그리고 메시징, 의사결정 및 데이터 관리 전반에 걸쳐 에이전트를 작동시키는 방법을 배웁니다. 더 일반적인 정보는 [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents)를 참조하세요.
 
-{% alert important %}
-Braze 커런츠는 현재 베타 버전입니다. 시작하는 데 도움이 필요하면 고객 성공 매니저에게 문의하세요.
-{% endalert %}
+## 필수 조건
 
-## 전제 조건
+Before you start, you'll need the following:
 
-시작하기 전에 다음이 필요합니다:
-
-- 워크스페이스에서 **상담원 콘솔에** 액세스합니다. 이 옵션이 보이지 않는다면 Braze 관리자에게 문의하세요.  
-- 커스텀 AI 에이전트를 만들고 편집할 수 있는 권한. 
-- 상담원이 달성하기를 원하는 목표에 대한 아이디어입니다. Braze 에이전트는 다음 작업을 지원할 수 있습니다:  
-   - **메시징:** 제목란, 헤드라인, 제품 내 카피 또는 기타 콘텐츠를 생성합니다.  
-   - **의사 결정:** 행동, 환경설정 또는 커스텀 속성을 기반으로 캔버스에서 사용자를 라우팅하세요.  
-   - **데이터 관리:** 값을 계산하거나, 카탈로그 항목을 보강하거나, 프로필 필드를 새로고침할 수 있습니다.  
+- 작업 공간에서 **Agent Console**에 접근할 [권한]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions)이 필요합니다. 이 옵션이 보이지 않으면 Braze 관리자에게 확인하세요.  
+- 커스텀 AI 에이전트를 생성하고 편집할 수 있는 권한입니다.
+- 에이전트가 달성하기를 원하는 목표에 대한 아이디어입니다. Braze 에이전트는 다음과 같은 작업을 지원할 수 있습니다:  
+   - **메시징:** 주제 라인, 헤드라인, 제품 내 복사 또는 기타 콘텐츠를 생성합니다.  
+   - **의사결정:** 행동, 선호도 또는 커스텀 속성에 따라 Canvas에서 사용자를 라우팅합니다.  
+   - **데이터 관리:** 값을 계산하고, 카탈로그 항목을 보강하거나, 프로필 필드를 새로 고칩니다.  
 
 ## 작동 방식
 
-에이전트를 만들 때 에이전트의 목적을 정의하고 에이전트가 어떻게 작동해야 하는지에 대한 가드레일을 설정합니다. 유지 시간이 지나면 에이전트를 Braze에 배포하여 개인화된 사본을 생성하고, 실시간 의사 결정을 내리거나, 카탈로그 필드를 업데이트할 수 있습니다. 대시보드에서 언제든지 상담원을 일시 중지하거나 업데이트할 수 있습니다.
+에이전트를 생성할 때, 그 목적을 정의하고 어떻게 행동해야 하는지에 대한 가이드라인을 설정합니다. 라이브 상태가 되면, 에이전트는 Braze에서 개인화된 복사를 생성하고, 실시간 결정을 내리거나, 카탈로그 필드를 업데이트하는 데 배포될 수 있습니다. 대시보드에서 언제든지 에이전트를 일시 중지하거나 업데이트할 수 있습니다.
 
-## 상담원 만들기
+다음 사용 사례는 커스텀 에이전트를 활용하는 몇 가지 방법을 보여줍니다.
 
-커스텀 상담원을 만들려면 다음과 같이 하세요:  
+| Use case | 설명 |
+| --- | --- |
+| 고객 피드백 처리 | 사용자 피드백을 에이전트에게 전달하여 감정을 분석하고 공감하는 후속 메시지를 생성합니다. 고가치 사용자에 대해서는 에이전트가 응답을 에스컬레이션하거나 특전을 포함할 수 있습니다. |
+| 콘텐츠 현지화 | 글로벌 캠페인을 위해 카탈로그 텍스트를 다른 언어로 번역하거나 지역별 채널에 맞게 톤과 길이를 조정합니다. 예를 들어, “Classic Clubmaster Sunglasses”를 스페인어로 “Gafas de sol Classic Clubmaster”로 번역하거나 SMS 캠페인을 위해 설명을 줄입니다. |
+| 리뷰 또는 피드백 요약 | 감정이나 피드백을 새로운 필드로 요약합니다. 예를 들어, 긍정적, 중립적 또는 부정적과 같은 감정 점수를 할당하거나 “대부분의 고객이 좋은 핏을 언급하지만 느린 배송을 지적합니다.”와 같은 짧은 텍스트 요약을 생성합니다. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-1. Braze 대시보드에서 **상담원 콘솔** > **상담원 관리로** 이동합니다.  
-2. **상담원 만들기를** 선택합니다.  
-3. 팀이 목적을 이해하는 데 도움이 되는 이름과 설명을 입력하세요.  
-4. 상담원이 사용할 [모델을](#models) 선택합니다.  
+## 에이전트 생성
 
-Braze에서 커스텀 상담원을 만들기 위한 상담원 콘솔 인터페이스입니다. 화면에 상담원 이름과 설명을 입력하고 모델을 선택할 수 있는 필드가 표시됩니다.]( {% image_buster /assets/img/ai_agent/create_custom_agent.png %} )
+### 1단계: 에이전트 유형 선택
 
-5. 상담원에게 지침을 제공합니다. 지침은 [작성 지침을](#writing-instructions) 참조하세요.
-6. [상담원](#testing-your-agent) 출력을 [테스트하고](#testing-your-agent) 필요에 따라 지침을 조정합니다.
-7. 준비가 완료되면 상담원 **생성을** 선택하여 상담원을 활성화합니다. 
+커스텀 에이전트를 생성하려면:
 
-## 다음 단계
+1. Braze 대시보드에서 **에이전트 콘솔** > **에이전트 관리**로 이동합니다.  
+2. **에이전트 생성**을 선택합니다.
+3. 캔버스 에이전트 또는 카탈로그 에이전트를 생성하도록 선택합니다.
 
-이제 에이전트를 사용할 준비가 되었습니다! 자세한 내용은 [상담원 배포하기를]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/) 참조하세요. 
+### 2단계: 세부정보 설정
 
-## 참조
+다음으로, 에이전트의 세부정보를 설정합니다:
 
-### 모델
+1. 팀이 목적을 이해할 수 있도록 이름과 설명을 입력합니다.
+2. (선택 사항) 에이전트를 필터링하기 위해 태그를 추가합니다.
+3. 에이전트가 사용할 [모델]({{site.baseurl}}/user_guide/brazeai/agents/reference/#models)을 선택합니다.
+4. 모델의 사고 수준을 선택합니다. 최소, 낮음, 중간 또는 높음 중에서 선택할 수 있습니다. **최소**로 시작하고 에이전트의 응답을 테스트하고 필요에 따라 조정하는 것을 권장합니다.
 
-상담원을 설정할 때 응답을 생성하는 데 사용할 모델을 선택합니다. 두 가지 옵션이 있습니다:
+Braze에서 커스텀 에이전트를 생성하기 위한 ![ 에이전트 콘솔 인터페이스입니다. 화면에는 에이전트 이름과 설명을 입력하고 모델을 선택하는 필드가 표시됩니다.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:75%;"}
 
-#### 옵션 1: Braze 구동 모델 사용
+### 3단계: 지침을 작성하십시오 {#agent-instructions}
 
-이 옵션은 별도의 설정이 필요 없는 가장 간단한 옵션입니다. Braze는 대규모 언어 모델(LLM)에 직접 액세스할 수 있습니다. 이 옵션을 사용하려면 **자동을** 선택합니다.
+에이전트에게 지침을 제공합니다. 예기치 않거나 모호한 시나리오에서 에이전트가 수행해야 할 작업에 대한 지침을 포함하는 것이 좋습니다. 이것은 에이전트의 혼란이 오류로 이어질 위험을 최소화합니다. 예를 들어, 에이전트에게 "긍정적" 또는 "부정적" 감정 값만 요청하는 대신, 결정할 수 없으면 "확신 없음"을 반환하도록 요청하십시오.
 
-{% alert note %}
-Braze 기반 LLM을 사용하는 경우 베타 기간 동안에는 비용이 발생하지 않습니다. 호출은 하루에 50,000회, 총 500,000회 실행으로 제한됩니다. 자세한 내용은 [제한 사항을]({{site.baseurl}}/user_guide/brazeai/agents/#limitations) 참조하세요.
+최고의 관행을 위한 [지침 작성]({{site.baseurl}}/user_guide/brazeai/agents/reference/#writing-instructions)을 참조하고 에이전트를 유도하는 방법에 대한 영감을 얻기 위해 [예시]({{site.baseurl}}/user_guide/brazeai/agents/reference/#examples)를 참조하십시오.
+
+{% alert tip %}
+Canvas 에이전트의 경우, 사용자 속성(예: 이름 및 성 또는 커스텀 속성)을 참조하기 위해 지침에서 Liquid를 사용할 수 있습니다. 에이전트 지침의 모든 Liquid 변수는 사용자가 단계를 입력할 때 자동으로 에이전트 단계로 전달됩니다.
 {% endalert %}
 
-#### 옵션 2: API 키 가져오기
+#### 3.1 단계: 맥락 추가
 
-이 옵션을 사용하면 OpenAI, Anthropic, AWS Bedrock 또는 Google Gemini와 같은 제공업체에 Braze 계정을 연결할 수 있습니다. LLM 제공업체로부터 API 키를 직접 가져오는 경우, 비용은 Braze가 아닌 제공업체를 통해 직접 청구됩니다.
+에이전트가 참조할 수 있는 내용을 선택하려면 **맥락 추가**를 선택하십시오. This includes:
 
-설정하려면 다음과 같이 하세요:
-1. **파트너 통합** > **기술 파트너로** 이동하여 제공업체를 찾습니다.
-2. 공급업체에서 받은 API 키를 입력합니다.
-3. **저장을** 선택합니다.
+- [카탈로그 필드]({{site.baseurl}}/user_guide/brazeai/agents/reference/#catalogs-and-fields): 보다 정확한 응답을 위해 에이전트에게 카탈로그 데이터에 대한 액세스를 제공합니다.
+- [세그먼트 멤버십]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): 에이전트가 사용자가 속한 세그먼트에 따라 응답을 개인화할 수 있도록 합니다. 최대 다섯 개의 세그먼트를 선택할 수 있습니다.
+- [브랜드 가이드라인]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines): 에이전트가 따를 브랜드 음성과 스타일 가이드라인을 참조하십시오. 예를 들어, 에이전트가 사용자가 체육관 회원 가입을 유도하는 SMS 복사본을 생성하도록 하려면, 이 필드를 사용하여 미리 정의된 굵고 동기 부여가 되는 가이드라인을 참조할 수 있습니다.
+- [모든 캔버스 컨텍스트]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): 이 에이전트가 호출될 때 사용자의 모든 캔버스 컨텍스트 데이터를 분석하십시오. 여기에는 **지침** 섹션에서 참조되지 않은 변수도 포함됩니다.
 
-그런 다음 상담원에게 돌아가서 모델을 선택할 수 있습니다.
+#### 3.2 단계: 선택적 설정 추가
 
-### 작성 지침
+**선택적 설정**에서 에이전트 생성 복사본의 [온도]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature)를 조정할 수 있습니다. 더 높은 온도는 에이전트가 제공된 정보를 사용하여 더 창의적으로 만들 수 있게 합니다.
 
-안내는 상담원에게 제공하는 규칙이나 가이드라인입니다(시스템 프롬프트). 에이전트가 실행될 때마다 에이전트가 어떻게 작동해야 하는지 정의합니다. 시스템 지침은 최대 10KB까지 가능합니다.
+에이전트의 일일 실행 한도를 설정할 수도 있습니다. 기본적으로 이 값은 250,000으로 설정되어 있지만 1,000,000으로 높일 수 있습니다. 1,000,000 이상의 한도를 늘리려면 고객 성공 매니저에게 문의하여 자세히 알아보십시오.
+
+### 4단계: 출력 {#select-output} 선택
+
+**출력** 섹션에서 기본 스키마 또는 고급 스키마에 따라 에이전트의 출력을 구성하고 정의할 수 있습니다.
+
+최상의 결과를 얻으려면 **출력** 섹션에 지정한 내용이 [3단계](#agent-instructions)에 입력한 에이전트 지침과 일치하는지 확인하십시오. 예를 들어, 에이전트 지침에서 두 개의 문자열이 있는 객체를 원한다고 언급한 경우, **출력** 섹션에서 두 개의 문자열이 있는 객체를 지정해야 합니다. 에이전트 지침이 지정한 출력과 일치하지 않으면 에이전트가 혼란스러워 하거나 시간 초과되거나 원하지 않는 출력을 생성할 수 있습니다.
+
+#### 기본 스키마
+
+기본 스키마는 에이전트가 반환하는 간단한 출력입니다. 이것은 문자열, 숫자, 불리언, 문자열 배열 또는 숫자 배열일 수 있습니다.
+
+예를 들어, 제품을 받은 후 고객의 만족도를 결정하기 위해 간단한 피드백 설문조사에서 사용자 감정 점수를 수집하려는 경우, 출력 형식을 구조화하기 위해 기본 스키마로 **숫자**를 선택할 수 있습니다.
+
+{% alert important %}
+배열은 캔버스 에이전트에서만 사용할 수 있으며, 카탈로그 에이전트에서는 사용할 수 없습니다.
+{% endalert %}
+
+![에이전트 콘솔에서 기본 스키마로 선택된 번호.]({% image_buster /assets/img/ai_agent/basic_schema.png %}){: style="max-width:85%;"}
+
+#### 고급 스키마
+
+고급 스키마 옵션에는 필드를 수동으로 구조화하거나 JSON을 사용하는 것이 포함됩니다.
+
+- **Fields:** 일관되게 사용할 수 있는 에이전트 출력을 강제하는 코드 없는 방법입니다.
+- **JSON:** 정확한 출력 형식을 생성하는 코드 접근 방식으로, JSON 스키마 내에 변수와 객체를 중첩할 수 있습니다. 카탈로그 에이전트가 아닌 캔버스 에이전트에서만 사용할 수 있습니다.
+
+에이전트가 단일 값 출력을 반환하는 것이 아니라 구조화된 방식으로 정의된 여러 값을 가진 데이터 구조를 반환하도록 하려면 고급 스키마를 사용하는 것이 좋습니다. 이것은 출력을 일관된 컨텍스트 변수로 더 잘 형식화할 수 있게 해줍니다.
+
+예를 들어, 사용자가 제출한 양식을 기반으로 샘플 여행 일정을 생성하기 위한 에이전트 내에서 출력 형식을 사용할 수 있습니다. 출력 형식은 모든 에이전트 응답이 `tripStartDate`, `tripEndDate`, 및 `destination` 값에 대한 값을 반환해야 함을 정의할 수 있게 해줍니다. 이 값들은 모두 컨텍스트 변수에서 추출되어 Liquid를 사용하여 개인화를 위한 메시지 단계에 배치될 수 있습니다.
 
 {% tabs %}
-{% tab Best practices %}
+{% tab Fields %}
 
-다음은 메시징을 시작하는 데 도움이 되는 몇 가지 일반적인 모범 사례입니다:
+사용자가 귀하의 레스토랑의 최신 아이스크림 맛을 추천할 가능성을 결정하기 위한 간단한 피드백 설문조사에 대한 응답을 형식화하려면, 출력 형식을 구조화하기 위해 다음 필드를 설정할 수 있습니다:
 
-1. 끝을 염두에 두고 시작하세요. 먼저 목표를 명시하세요.
-2. 모델에게 역할 또는 페르소나를 지정합니다("귀하는 ...").
-3. 명확한 컨텍스트와 제약 조건(오디언스, 길이, 어조, 형식)을 설정하세요.
-4. 구조를 요청합니다("JSON/벌릿 목록/표 반환...").
-5. 말하지 말고 보여주세요. 몇 가지 수준 높은 예시를 포함하세요.
-6. 복잡한 작업을 순서대로 단계별로 나누기("1단계... 2단계...").
-7. 추론을 장려합니다("큰 소리로 생각한 다음 대답하기").
-8. 파일럿, 검사 및 반복. 작은 조정이 큰 품질 향상으로 이어질 수 있습니다.
-9. 가장자리 케이스 처리, 가드레일 추가, 거부 지침 추가.
-10. 재사용 및 확장을 위해 내부적으로 어떤 것이 효과적인지 측정하고 설명서를 작성하세요.
+| 필드 이름 | 값 |
+| --- | --- |
+| **likelihood_score** | 숫자 |
+| **설명** | 문자열 |
+| **confidence_score** | 숫자 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-프롬프트 모범 사례에 대한 자세한 내용은 다음 모델 제공업체의 가이드를 참조하세요:
-
-- [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)
-- [인류학](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview)
-- [쌍둥이자리](https://support.google.com/a/users/answer/14200040?hl=en)
+![가능성 점수, 설명 및 신뢰 점수를 위한 세 개의 출력 필드를 보여주는 에이전트 콘솔.]({% image_buster /assets/img/ai_agent/output_format_fields.png %}){: style="max-width:85%;"}
 
 {% endtab %}
-{% tab Examples %}
+{% tab JSON schema %}
 
-{% details Simple prompt %}
+레스토랑 체인에서 최근 식사 경험에 대한 사용자 피드백을 수집하려면, 출력 형식으로 **JSON 스키마**를 선택하고 감정 변수와 이유 변수를 포함하는 데이터 객체를 반환하기 위해 다음 JSON을 삽입할 수 있습니다.
 
-이 예제 프롬프트는 설문조사 입력을 받아 간단한 감성 분석을 출력합니다:
-
+```json
+{
+  "type": "object",
+  "properties": {
+    "sentiment": {
+      "type": "string"
+    },
+    "reasoning": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "sentiment",
+    "reasoning"
+  ]
+}
 ```
-From the survey text, classify overall sentiment toward product quality, delivery, and price as Positive, Neutral, or Negative
-Always output a single string with just one label.
-If any category is missing or unclear, treat it as Neutral.
-If sentiment across categories is mixed, return Neutral.
-
-Example Input: “The product works great, but shipping took forever and the cost felt too high.”
-Example Output: Neutral
-```
-
-{% enddetails %}
-
-{% details Complex prompt %}
-
-이 예제 프롬프트는 사용자의 설문조사 입력을 받아 이를 하나의 감성 라벨로 분류합니다. 그런 다음 그 결과를 사용하여 사용자를 다른 캔버스 경로(예: 긍정적인 피드백 대 부정적인 피드백)로 라우팅하거나 향후 타겟팅을 위해 감성을 고객 프로필에 커스텀 속성으로 저장할 수 있습니다.
-
-{% raw %}
-```
-You are a customer research AI for a retail brand.  
-Input: one open-text survey response from a user.  
-Output: A single structured JSON object with:  
-- sentiment (Positive, Neutral, Negative)  
-- topic (Product, Delivery, Price, Other)  
-- action_recommendation (Route: High-priority follow-up | Low-priority follow-up | No action)  
-
-Rules:  
-- Always return valid JSON.  
-- If the topic is unclear, default to Other.  
-- If sentiment is mixed, default to Neutral.  
-- If sentiment is Negative and topic = Product or Delivery → action_recommendation = High-priority follow-up.  
-- Otherwise, action_recommendation = Low-priority follow-up.  
-
-Example Input:  
-"The product works great, but shipping took forever and the cost felt too high."  
-
-Example Output:  
-{  
-  "sentiment": "Neutral",  
-  "topic": "Delivery",  
-  "action_recommendation": "High-priority follow-up"  
-}  
-```
-{% endraw %}
-{% enddetails %}
 
 {% endtab %}
 {% endtabs %}
 
+### 5단계: 에이전트를 테스트하고 생성합니다.
 
-#### 상담원 테스트  
+**미리보기** 창은 구성 경험 내에서 나란히 패널로 표시되는 에이전트의 인스턴스입니다. 에이전트를 생성하거나 업데이트하는 동안 테스트하는 데 사용할 수 있으며, 최종 사용자와 유사한 방식으로 경험할 수 있습니다. 이 단계는 예상대로 작동하는지 확인하는 데 도움이 되며, 라이브로 전환하기 전에 미세 조정할 기회를 제공합니다.
 
-**라이브 프리뷰** 창은 구성 환경 내에서 나란히 있는 패널로 표시되는 상담원의 인스턴스입니다. 에이전트를 만들거나 업데이트하는 동안 이를 사용하여 최종 사용자와 유사한 방식으로 에이전트를 테스트할 수 있습니다. 이 단계를 통해 예상한 대로 작동하는지 확인할 수 있으며, 라이브를 시작하기 전에 미세 조정할 수 있습니다.
+1. **에이전트를 테스트하세요** 필드에 예시 고객 데이터 또는 고객 응답을 입력하세요. 에이전트가 처리할 실제 시나리오를 반영하는 모든 것이 가능합니다.
+2. 무작위 사용자, 기존 사용자 또는 커스텀 사용자에 대한 에이전트의 응답을 미리 봅니다.
+3. **응답 시뮬레이션**을 선택하세요. 에이전트는 귀하의 구성에 따라 실행되고 응답을 표시합니다. 테스트 실행은 귀하의 일일 실행 한도에 포함됩니다.
 
-커스텀 상담원을 테스트하기 위한 라이브 프리뷰 창을 보여주는 상담원 콘솔. 인터페이스에는 예시 고객 데이터가 있는 샘플 입력 필드, 테스트 실행 버튼, 상담원 출력이 표시되는 응답 영역이 표시됩니다.]( {% image_buster /assets/img/ai_agent/custom_agent_test.png %} )
+![에이전트 콘솔이 커스텀 에이전트를 테스트하기 위한 미리 보기 창을 보여줍니다. 인터페이스는 예시 고객 데이터가 포함된 샘플 입력 필드, 테스트 실행 버튼, 에이전트 출력이 나타나는 응답 영역을 표시합니다.]({% image_buster /assets/img/ai_agent/custom_agent_test.png %})
 
-1. **샘플 입력** 필드에 상담원이 처리할 실제 시나리오를 반영하는 고객 데이터나 고객 응답의 예시를 입력합니다. 
-2. **테스트 실행을** 선택합니다. 에이전트가 구성에 따라 실행되고 응답을 표시합니다. 테스트 실행은 일일 및 총 호출 한도에 포함됩니다.
+출력을 비판적인 시각으로 검토하세요. 다음 질문을 고려하세요:
 
-비판적인 시각으로 결과물을 검토하세요. 다음 질문을 고려하세요:
+- 복사본이 브랜드에 맞게 느껴지나요?
+- 결정 논리가 고객을 의도한 대로 라우팅하나요?
+- 계산된 값이 정확한가요?
 
-- 카피가 브랜드에 어울리는 느낌인가요? 
-- 의사 결정 로직이 의도한 대로 고객을 라우팅하나요? 
-- 계산된 값이 정확한가요? 
+무언가가 이상하게 느껴지면 에이전트의 구성을 업데이트하고 다시 테스트하세요. 에이전트가 시나리오에 따라 어떻게 적응하는지 보기 위해 몇 가지 다른 입력을 실행하세요. 특히 데이터가 없거나 잘못된 응답과 같은 엣지 케이스를 포함하여요.
 
-뭔가 이상하다고 느껴지면 상담원의 구성을 업데이트하고 다시 테스트하세요. 몇 가지 다른 입력을 실행하여 에이전트가 여러 시나리오, 특히 데이터가 없거나 잘못된 응답과 같은 엣지 케이스에 어떻게 적응하는지 확인하세요.
+{% alert tip %}
+에이전트에게 정확히 무엇을 원하지 않는지 말하지 마세요. LLM은 지침에서 언급하면 여전히 해당 콘텐츠를 생성할 수 있습니다.
+{% endalert %}
 
+### Step 6: 귀하의 에이전트를 사용하세요
+
+귀하의 에이전트가 이제 사용 준비가 완료되었습니다! 자세한 내용은 [에이전트 배포]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/)를 참조하세요.
+
+## 관련 문서  
+
+- [에이전트 참조]({{site.baseurl}}/user_guide/brazeai/agents/reference/)

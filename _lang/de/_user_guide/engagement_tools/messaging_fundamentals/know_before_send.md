@@ -1,9 +1,9 @@
 ---
-nav_title: "Wissen, bevor Sie senden"
+nav_title: Bitte beachten Sie vor dem Versand
 article_title: Informationen vor dem Versand
 description: "Nachdem Sie unseren Leitfaden für die Markteinführung gelesen haben, sollten Sie sich die folgende Liste mit den wichtigsten Tipps und Tricks für Content-Cards, E-Mail, In-App-Nachrichten, Push und SMS ansehen."
 alias: /know_before_send/
-page_order: 10.2
+page_order: 7
 tool:
     - Campaigns
     - Canvas
@@ -20,7 +20,7 @@ Wir stellen Ihnen zwar eine umfangreiche Liste von Ressourcen zur Verfügung, di
 ## Allgemein
 
 #### Zu überprüfende Dinge
-- [**API Rate-Limits**](https://braze.com/resources/articles/whats-rate-limiting): Überprüfen Sie die Braze API [Rate-Limits]({{site.baseurl}}/api/api_limits/) für Ihre Workspaces, um Fehler zu vermeiden. Wenn Sie Ihre Rate-Limits erhöhen möchten (und bereits Anfragen bündeln), wenden Sie sich an Ihren Customer-Success-Manager. Denken Sie daran, dass dieser Prozess Vorlaufzeit erfordert, planen Sie also entsprechend.
+- [**API Rate-Limits**](https://braze.com/resources/articles/whats-rate-limiting): Überprüfen Sie die Braze API [Rate-Limits]({{site.baseurl}}/api/api_limits/) für Ihre Workspaces, um Fehler zu vermeiden. Wenn Sie Ihre Rate-Limits erhöhen möchten (und bereits Anfragen stapelweise bearbeiten), wenden Sie sich bitte an Ihren Customer-Success-Manager. Denken Sie daran, dass dieser Prozess Vorlaufzeit erfordert, planen Sie also entsprechend.
 - [**Notwendiges Frequency-Capping wird außer Kraft gesetzt**]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping): Es gibt Kampagnen, wie z.B. Transaktionsnachrichten, bei denen Sie die Nutzer:innen immer erreichen möchten, auch wenn Sie die Frequenzgrenze bereits erreicht haben (z.B. eine Zustellungsbenachrichtigung). Wenn Sie möchten, dass eine bestimmte Kampagne die Regeln für Frequency-Capping außer Kraft setzt, können Sie dies im Braze-Dashboard bei der Zeitplanung für die Zustellung dieser Kampagne einrichten, indem Sie Frequency-Capping ausschalten.
 
 #### Was Sie wissen sollten
@@ -46,7 +46,7 @@ Wenn Sie weitere Unterstützung bei der Fehlerbehebung für Canvas und Kampagnen
 - **Faktoren für das Sendevolumen**: Einige Faktoren, die das mögliche Sendevolumen für eine IP bestimmen, sind:
   - Briefkästen: Große E-Mail-Anbieter können wahrscheinlich Millionen von E-Mails pro Tag von einer einzigen IP-Adresse aus abwickeln, während ein kleinerer regionaler Mailbox-Anbieter oder einer mit einer kleineren Infrastruktur möglicherweise nicht in der Lage ist, diese Menge zu bewältigen.
   - Absender-Reputation: Sie können möglicherweise ein größeres Volumen pro Tag von einer einzigen IP-Adresse aus versenden, wenn der Sender auf dieses Volumen hochgefahren ist und wenn seine Absender-Reputation bei jedem Postfach oder jeder Domain, an die er sendet, stark genug ist.
-- **Bewährte Praktiken**: Informieren Sie sich über die [Best Practices für E-Mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) von Braze und wenden Sie sich an Ihr Braze-Konto Team, wenn Sie mehr über die Dienste zur Zustellbarkeit erfahren möchten.
+- **Bewährte Praktiken**: Bitte überprüfen Sie [die Best Practices für E-Mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) von Braze und wenden Sie sich an Ihr Braze-Konto-Team, wenn Sie weitere Informationen zu den Diensten für die Zustellbarkeit wünschen.
 
 ## Push
 
@@ -83,13 +83,13 @@ Wenn Sie weitere Unterstützung bei der Fehlerbehebung für Canvas und Kampagnen
 - **Vorrangig:** Wenn Sie mehrere Banner starten, können Sie die Priorität für die Anzeige jedes Banners manuell festlegen.
 
 #### Was Sie wissen sollten
-- **Liquid Personalisierung:** Die Liquid Personalisierung wird bei jeder Anfrage aktualisiert.
-- **Platzierung und Banner-Verhältnis:** Jede Bannerplatzierung kann in bis zu 10 Kampagnen in einem Workspace verwendet werden.  
+- **Liquid Personalisierung:** Die flüssige Personalisierung wird bei jeder Aktualisierungsanfrage neu geladen.
+- **Platzierung und Banner-Verhältnis:** Jede Bannerplatzierung kann in bis zu 25 Nachrichten in einem Workspace verwendet werden.  
 - **Klicks und Impressionen:** Klicks und Impressionen für Banner werden mit dem SDK automatisch getrackt.
-- **Beschränkungen:**  Derzeit werden die folgenden Features nicht unterstützt: Canvas-Integration, API-getriggerte und aktionsbasierte Kampagnen, Connected-Content, Aktionscodes, benutzergesteuerte Kündigungen und `catalog_items` unter Verwendung des [Tags`:rerender` ]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid).
+- **Beschränkungen:**  Derzeit werden die folgenden Features nicht unterstützt: Canvas-Integration, API-gesteuerte und aktionsbasierte Kampagnen, Connected-Content, Aktionscodes, benutzergesteuerte Ablehnungen und`catalog_items`die Verwendung des[`:rerender`]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid)[Tags]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid).
 - **Testen:** Um den Testbanner anzuzeigen, muss das Gerät, das Sie verwenden, Push-Benachrichtigungen im Vordergrund empfangen können.
 - **Angepasstes HTML:** Nutzen Sie die [JS-Bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge), um Klicks zu protokollieren, wenn Sie angepasstes HTML verwenden, um Klick-Aktionen, wie Links und Buttons, zu definieren. Klick-Aktionen werden nur dann automatisch protokolliert, wenn Sie die vorgefertigten Komponenten im Drag-and-Drop-Editor verwenden.
-- **Anfrage zur Platzierung:** Bis zu 10 Platzierungen können in einer einzigen Anfrage an das SDK zurückgegeben werden. Jede Platzierung enthält das Banner mit der höchsten Priorität, für das ein Nutzer:innen in Frage kommt.
+- **Anfrage zur Platzierung:** Bis zu 10 Platzierungen können in einer einzigen Aktualisierungsanfrage an das SDK zurückgegeben werden. Jede Platzierung enthält das Banner mit der höchsten Priorität, für das ein Nutzer:innen in Frage kommt.
 
 ## Content-Cards
 
@@ -103,7 +103,8 @@ Wenn Sie weitere Unterstützung bei der Fehlerbehebung für Canvas und Kampagnen
 - **Content-Card aktualisieren**: Standardmäßig aktualisiert Braze die Anfragen für Content-Cards bei der Synchronisierung zu Beginn der Sitzung, beim Wischen nach unten (mobil) und beim Öffnen der Kartenansicht, wenn die letzte Aktualisierung länger als eine Minute zurückliegt.
 - **Content-Cards zwischenspeichern**: Content-Card-Zwischenspeicheroptionen finden Sie in unseren [Android/FireOS-]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android) und [Internet-Dokumenten](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards). 
 - **Frequency-Capping**: Frequency-Capping gilt nicht für Content-Cards.
-- **Impressionen**: Impressionen werden in der Regel protokolliert, wenn eine Karte gesehen wird. Wenn Sie z.B. einen vollen Posteingang mit Content-Cards haben, wird eine Impression erst protokolliert, wenn der Nutzer:innen zu einer bestimmten Content-Card scrollt. Es gibt einige Unterschiede zwischen den Plattformen Internet, Android und iOS.  
+- **Impressionen**: Impressionen werden in der Regel protokolliert, wenn eine Karte gesehen wird. Wenn Sie z.B. einen vollen Posteingang mit Content-Cards haben, wird eine Impression erst protokolliert, wenn der Nutzer:innen zu einer bestimmten Content-Card scrollt. Es gibt einige Unterschiede zwischen den Plattformen Internet, Android und iOS.
+- **SDK-Sitzungen und Kartenerstellung**: Content-Cards werden nicht für Nutzer:innen ohne SDK-Sitzungen erstellt, auch wenn diese Nutzer:innen die Segment-Kriterien erfüllen. Wenn eine Nutzer:in jedoch bereits über eine Android-Sitzung verfügt, werden weiterhin Content-Cards mit iOS-spezifischen Klicks erstellt, und die Nutzer:in kann diese Content-Cards auf iOS anzeigen, sobald sie dort eine Sitzung hat. Refernzieren Sie die [Seite „Kartenerstellung“]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) für weitere Informationen darüber, wann Karten erstellt werden.  
 
 ## In-App-Nachrichten
 

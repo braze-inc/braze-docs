@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Himno del futuro
 
-> El producto todo en uno de Future Anthem para el sector del juego con dinero real, Amplifier AI, entrega personalización de contenidos, experiencias en tiempo real y audiencias dinámicas. La IA del Amplificador funciona fácilmente en deportes, casinos y loterías, permitiendo a los clientes mejorar los perfiles de jugador Braze con atributos de jugador específicos del sector, como juego favorito, equipo favorito, puntuación de interacción, recomendación de próxima apuesta, próxima apuesta esperada y mucho más.
+> El producto todo en uno de [Future Anthem](https://www.futureanthem.com/) para el sector del juego con dinero real, Amplifier AI, entrega personalización de contenidos, experiencias en tiempo real y audiencias dinámicas. La IA del Amplificador funciona fácilmente en deportes, casinos y loterías, permitiendo a los clientes mejorar los perfiles de jugador Braze con atributos de jugador específicos del sector, como juego favorito, equipo favorito, puntuación de interacción, recomendación de próxima apuesta, próxima apuesta esperada y mucho más.
 
 {% alert important %}
 Esta característica está actualmente en Acceso anticipado. Ponte en contacto con el equipo de éxito del cliente de Future Anthem para empezar.
@@ -44,7 +44,7 @@ El equipo de éxito del cliente de Future Anthem te ayudará a configurar tu int
 Estos son los atributos personalizados Braze disponibles. Para obtener información más detallada, consulta [Himno Futuro: Cómo empezar](https://knowledge.futureanthem.com/getting-started).
 
 {% tabs local %}
-{% tab Recomendaciones de apuestas %}
+{% tab Bet Recommendations %}
 
 | Subcategoría | Ejemplo (JSON) | Tipo de datos |
 | ------- | ----------- |----------- |
@@ -56,7 +56,7 @@ Estos son los atributos personalizados Braze disponibles. Para obtener informaci
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Recomendaciones adicionales %}
+{% tab Bonus Recommendations %}
 
 | Subcategoría | Ejemplo | Tipo de datos |
 | ------- | ----------- |----------- |
@@ -73,7 +73,7 @@ Estos son los atributos personalizados Braze disponibles. Para obtener informaci
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Recomendaciones de juegos %}
+{% tab Game Recommendations %}
 
 | Subcategoría | Ejemplo | Tipo de datos |
 | ------- | ----------- |----------- |
@@ -89,7 +89,7 @@ Estos son los atributos personalizados Braze disponibles. Para obtener informaci
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
-{% tab Grupo de jugadores %}
+{% tab Player Cluster %}
 
 | Subcategoría | Ejemplo | Tipo de datos |
 | ------- | ----------- |----------- |
@@ -97,7 +97,7 @@ Estos son los atributos personalizados Braze disponibles. Para obtener informaci
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
-{% tab Sostenimiento del jugador - Riesgo potencial del jugador %}
+{% tab Player Sustain - Player potential risk %}
 
 | Subcategoría | Ejemplo | Tipo de datos |
 | ------- | ----------- |----------- |

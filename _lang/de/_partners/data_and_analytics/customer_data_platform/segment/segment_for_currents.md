@@ -32,7 +32,7 @@ Die Integration von Braze und Segment erlaubt es Ihnen, Braze-Currents zu nutzen
 Wählen Sie in Ihrem Dashboard für Segmente Ihre Segmentquelle aus. Gehen Sie dann zu **Einstellungen > API-Schlüssel**. Hier finden Sie den **Schreibschlüssel für Segmente**.
 
 {% alert warning %}
-Es ist wichtig, dass Sie Ihren Schreibschlüssel für Segmente auf dem neuesten Stand halten. Wenn die Zugangsdaten Ihres Konnektors ablaufen, wird der Konnektor keine Ereignisse mehr senden. Wenn dieser Zustand länger als **48 Stunden** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
+Es ist wichtig, dass Sie Ihren Schreibschlüssel für Segmente auf dem neuesten Stand halten. Wenn die Zugangsdaten Ihres Konnektors ablaufen, wird der Konnektor keine Ereignisse mehr senden. Wenn dieser Zustand länger als **5 Tage** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
 {% endalert %}
 
 ### Schritt 2: Erstellen Sie einen neuen Currents Konnektor
@@ -49,17 +49,13 @@ Wählen Sie dann die Ereignisse für das Engagement in Nachrichten aus, die Sie 
 
 Denken Sie daran, dass Braze nur dann Ereignisdaten für Nutzer:innen ohne `external_user_id` sendet, wenn die Option **Ereignisse von anonymen Nutzer:innen einbeziehen** aktiviert ist.
 
-{% alert important %}
-Der anonyme Nutzer:in-Export befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Braze Account Manager, wenn Sie an der Early-Access-Phase teilnehmen möchten.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Anonymous user export' %}
 
 ![Liste aller verfügbaren Messaging-Ereignisse auf der Seite Segment Currents in Braze.]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
 
 Und schließlich wählen Sie **Launch Current**.
 
-{% alert warning %}
-Wenn Sie mehr als einen der gleichen Currents Konnektoren erstellen möchten (z.B. zwei Konnektoren für das Engagement von Nachrichten), müssen sich diese in verschiedenen Workspaces befinden. Da die Braze Segment Currents-Integration Ereignisse von verschiedenen Apps nicht in einem einzigen Workspace isolieren kann, führt dies zu unnötiger Daten-Deduplizierung und Datenverlust.
-{% endalert %}
+{% include alerts/warning_alerts.md alert='Segment Currents multiple connectors' %}
 
 Um mehr zu erfahren, besuchen Sie die [Dokumentation](https://segment.com/docs/connections/sources/catalog/cloud-apps/braze/) Segmentierung.
 

@@ -5,20 +5,18 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o ponto de extremidade Duplicate Canvas."
+description: "Este artigo descreve detalhes sobre o endpoint de Canvases Duplicados."
 ---
 
 {% api %}
-# Duplicação de telas usando a API
+# Canvases Duplicados usando a API
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canva/duplicate
 {% endapimethod %}
 
 > Use esse ponto de extremidade para duplicar Canvas. Esse endpoint da API é semelhante à [duplicação de Canvas no dashboard do Braze][1].
 
-{% alert important %}
-Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Pré-requisitos
 

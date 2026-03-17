@@ -7,7 +7,7 @@ guide_top_header: "Tus paneles de análisis"
 guide_top_text: "En esta sección encontrarás artículos sobre los paneles de análisis de Braze."
 search_rank: 1
 page_type: landing
-description: "Esta página de destino contiene artículos sobre el panel de rendimiento del correo electrónico, el panel de conversiones y la comprensión de los datos de uso de tu aplicación."
+description: "Esta página de inicio contiene artículos sobre el panel de rendimiento del correo electrónico, el panel de conversiones y la comprensión de los datos de uso de tu aplicación."
 tool: Reports
 
 guide_featured_title: "Artículos de sección"
@@ -24,8 +24,14 @@ guide_featured_list:
   - name: Centro de capacidad de entrega
     link: /docs/user_guide/analytics/dashboard/deliverability_center/
     image: /assets/img/braze_icons/navigation-pointer-01.svg
-  - name: Panel de uso de la API
+  - name: Dashboard de uso de API
     link: /docs/user_guide/analytics/dashboard/api_usage_dashboard/
     image: /assets/img/braze_icons/trend-up-01.svg
+  - name: Panel de control de ingresos del comercio electrónico
+    link: /docs/ecommerce_revenue_dashboard/
+    image: /assets/img/braze_icons/line-chart-up-04.svg  
+  - name: Panel de diagnóstico de mensajería
+    link: /docs/user_guide/analytics/dashboard/diagnostics_dashboard/
+    image: /assets/img/braze_icons/pie-chart-01.svg
 ---
 <br><br>

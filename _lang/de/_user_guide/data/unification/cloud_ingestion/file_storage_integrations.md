@@ -32,9 +32,9 @@ Für die Integration benötigen Sie die folgenden Ressourcen:
 
 ### AWS-Definitionen
 
-Lassen Sie uns zunächst einige der in dieser Aufgabe verwendeten Begriffe definieren.
+Bitte definieren Sie zunächst die in dieser Aufgabe verwendeten Begriffe.
 
-| Begriff | Definition |
+| Term | Definition |
 | --- | --- |
 | Amazon Ressourcen-Name (ARN) | Der ARN ist ein eindeutiger Bezeichner für AWS-Ressourcen. |
 | Identitäts- und Zugriffsmanagement (IAM) | IAM ist ein Internet-Dienst, mit dem Sie den Zugriff auf AWS-Ressourcen sicher kontrollieren können. In dieser Anleitung erstellen Sie eine IAM-Richtlinie und weisen sie einer IAM-Rolle zu, um Ihr S3-Bucket mit Braze Cloud Data Ingestion zu integrieren. |
@@ -53,8 +53,9 @@ Die Standardeinstellungen sind:
 - Sperren Sie den öffentlichen Zugang
 - Bucket Versionierung deaktivieren
 - SSE-S3 Verschlüsselung
+  - SSE-S3 ist der einzige unterstützte serverseitige Verschlüsselungstyp. Die Verschlüsselung durch Amazon KMS wird nicht unterstützt.
 
-Notieren Sie sich die Region, in der Sie den Bucket erstellt haben, da Sie im nächsten Schritt eine SQS-Warteschlange in derselben Region erstellen werden.
+Bitte notieren Sie sich die Region, in der Sie den Bucket erstellt haben, da Sie im nächsten Schritt eine SQS-Warteschlange in derselben Region erstellen werden.
 
 ### Schritt 2: SQS-Warteschlange erstellen
 
@@ -68,7 +69,7 @@ Stellen Sie sicher, dass Sie diese SQS in der gleichen Region anlegen, in der Si
 
 Notieren Sie sich unbedingt den ARN und die URL der SQS, da Sie sie während dieser Konfiguration häufig verwenden werden.
 
-![Auswählen von "Erweitert" mit einem JSON-Beispielobjekt, um festzulegen, wer auf eine Warteschlange zugreifen darf.]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
+![Auswählen von „Erweitert“ mit einem Beispiel-JSON-Objekt, um festzulegen, wer auf eine Warteschlange zugreifen darf.]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
 
 ### Schritt 3: Zugriffsrichtlinie einrichten
 
@@ -110,7 +111,7 @@ Wenn Sie Ihre Dateien in den Stammordner eines S3-Buckets hochladen und dann ein
 
 Erstellen Sie eine IAM Richtlinie, um Braze die Interaktion mit Ihrem Source Bucket zu erlauben. Um loszulegen, melden Sie sich bei der AWS Verwaltungskonsole als Account Administrator an. 
 
-1. Gehen Sie zum Abschnitt IAM der AWS Konsole, wählen Sie in der Navigationsleiste **Richtlinien** aus und wählen Sie dann **Richtlinie erstellen**.<br><br>![Der Button "Richtlinie erstellen" in der AWS-Konsole.]({% image_buster /assets/img/create_policy_1_list.png %})<br><br>
+1. Gehen Sie zum Abschnitt IAM der AWS Konsole, wählen Sie in der Navigationsleiste **Richtlinien** aus und wählen Sie dann **Richtlinie erstellen**.<br><br>![Der Button „Richtlinie erstellen“ in der AWS-Konsole.]({% image_buster /assets/img/create_policy_1_list.png %})<br><br>
 
 2. Öffnen Sie den Tab **JSON** und geben Sie den folgenden Code-Snippet in den Abschnitt **Policy Document** ein. Achten Sie darauf, `YOUR-BUCKET-NAME-HERE` durch Ihren Bucket-Namen und `YOUR-SQS-ARN-HERE` durch den Namen Ihrer SQS Warteschlange zu ersetzen: 
 
@@ -148,7 +149,7 @@ Erstellen Sie eine IAM Richtlinie, um Braze die Interaktion mit Ihrem Source Buc
 
 4. Geben Sie der Richtlinie einen Namen und eine Beschreibung und wählen Sie dann **Richtlinie erstellen**.  
 
-![Eine Beispielrichtlinie mit dem Namen "new-policy-name".]({% image_buster /assets/img/create_policy_3_name.png %})
+![Eine Beispielrichtlinie mit dem Namen „new-policy-name”.]({% image_buster /assets/img/create_policy_3_name.png %})
 
 ![Das Beschreibungsfeld für die Richtlinie.]({% image_buster /assets/img/create_policy_4_created.png %})
 
@@ -158,28 +159,38 @@ Um die Einrichtung auf AWS abzuschließen, erstellen Sie eine IAM-Rolle und füg
 
 1. Gehen Sie in demselben IAM-Bereich der Konsole, in dem Sie die IAM-Richtlinie erstellt haben, zu **Rollen** > **Rolle erstellen**. 
 
-<br><br>![Der Button "Rolle erstellen".]({% image_buster /assets/img/create_role_1_list.png %})<br><br>
+![Der Button „Rolle erstellen“.]({% image_buster /assets/img/create_role_1_list.png %})
 
 {: start="2"}
 2\. Kopieren Sie die ID des Braze-Kontos für AWS von Ihrem Braze-Dashboard. Gehen Sie zu **Cloud Datenaufnahme**, wählen Sie **Neue Datensynchronisation erstellen** und wählen Sie **S3 Import**.
+3\. Wählen Sie in AWS **ein anderes AWS-Konto** als SELEKTOR-Typ für vertrauenswürdige Entitäten aus. Bitte geben Sie Ihre Braze-Konto-ID an. Auswählen Sie das Kontrollkästchen **„Externe ID erforderlich**“.
+4\. Bitte gehen Sie in Braze zu **„Dateneinstellungen“** > **„Cloud-Datenaufnahme“**, wählen Sie **„Neue Datensynchronisierung erstellen**“ und anschließend **„S3-Import**“ im Abschnitt „Datenquellen“.
+5\. Bitte kopieren Sie die automatisch generierte **Braze-Konto-ID**. 
 
-3. Wählen Sie in AWS **ein anderes AWS-Konto** als SELEKTOR-Typ für vertrauenswürdige Entitäten aus. Geben Sie Ihre Braze-Konto ID an. Wählen Sie das Kontrollkästchen **Externe ID erforderlich** aus, und geben Sie eine externe ID ein, die Braze verwenden soll. Dies ist die externe ID, die beim Erstellen einer S3-Currents-Verbindung im Abschnitt **Zugangsdaten** Ihrer Currents-Verbindung im Braze-Dashboard generiert wurde. Wählen Sie nach Abschluss **Weiter** aus. 
+![Abschnitt „Zugangsdaten“ mit dem Feld „Braze-Konto-ID“.]({% image_buster /assets/img/braze_account_id.png %})
 
-<br><br> ![Die S3-Seite "Rolle erstellen". Diese Seite enthält Felder für den Rollennamen, die Rollenbeschreibung, vertrauenswürdige Entitäten, Richtlinien und die Berechtigungsgrenze.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
+{: start="6"}
+6\. Fügen Sie in AWS die Konto-ID ein und wählen Sie anschließend **„Weiter**“.
 
-{: start="4"}
-4\. Hängen Sie die in Schritt 4 erstellte Richtlinie an die Rolle an. Suchen Sie die Richtlinie in der Suchleiste, und wählen Sie ein Häkchen neben der Richtlinie aus, um sie anzuhängen. Wählen Sie nach Abschluss **Weiter** aus.
+![Die S3-Seite "Rolle erstellen". Diese Seite enthält Felder für den Rollennamen, die Rollenbeschreibung, vertrauenswürdige Entitäten, Richtlinien und die Berechtigungsgrenze.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
-<br><br>![Rollen-ARN mit dem ausgewählten new-policy-name.]({% image_buster /assets/img/create_role_3_attach.png %})<br><br>
+{: start="7"}
+7\. Hängen Sie die in Schritt 4 erstellte Richtlinie an die Rolle an. Suchen Sie die Richtlinie in der Suchleiste, und wählen Sie ein Häkchen neben der Richtlinie aus, um sie anzuhängen. Wählen Sie nach Abschluss **Weiter** aus.
+
+![Rolle ARN mit dem ausgewählten neuen Namen der Richtlinie.]({% image_buster /assets/img/create_role_3_attach.png %})
 
 Geben Sie der Rolle einen Namen und eine Beschreibung, und wählen Sie **Rolle erstellen**.
 
-<br><br>![Eine Beispielrolle mit dem Namen "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
+![Eine Beispielrolle mit dem Namen „new-role-name”.]({% image_buster /assets/img/create_role_4_name.png %})
 
-{: start="5"}
-5\. Notieren Sie sich den ARN der soeben erstellten Rolle und die externe ID, die Sie generiert haben, da Sie diese zum Erstellen der Integration für die Datenaufnahme in der Cloud verwenden werden.
+{: start="8"}
+8\. Bitte notieren Sie sich die ARN der von Ihnen erstellten Rolle und die von Ihnen generierte externe ID, da Sie diese für die Erstellung der Cloud Datenaufnahme-Integration benötigen.
 
 ## Einrichten der Datenaufnahme in der Cloud in Braze
+
+{% alert important %}
+Kund:innen, die im Februar 2026 oder später beim Onboarding hinzukommen, erhalten möglicherweise frühzeitig Zugriff auf eine neue CDI-UI, in der Quellen und Synchronisierungen separat konfiguriert werden. Erstellen Sie in dieser neuen UI zunächst eine S3-Quelle mit Ihren Zugangsdaten, Ihrem Bucket und Ihrer Region. Erstellen Sie anschließend eine Synchronisierung mit Ihrer SQS-URL und Ihrem Ordnerpfad (optional).
+{% endalert %}
 
 1. Um eine neue Integration zu erstellen, gehen Sie zu **Dateneinstellungen** > **Datenaufnahme in der Cloud**, wählen Sie **Neue Datensynchronisation erstellen** und wählen Sie **S3-Import** aus dem Abschnitt Dateiquellen. 
 2. Geben Sie die Informationen aus dem AWS-Einrichtungsprozess ein, um eine neue Synchronisierung zu erstellen. Geben Sie Folgendes an:
@@ -191,22 +202,22 @@ Geben Sie der Rolle einen Namen und eine Beschreibung, und wählen Sie **Rolle e
   - Ordnerpfad (optional, muss bei allen Synchronisierungen in einem Workspace eindeutig sein)
   - Region
 
-![Beispiel für die Zugangsdaten, wie sie in S3 angezeigt werden, um eine neue Importsynchronisation zu erstellen.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
+![Beispiel für Sicherheitszugangsdaten, wie sie in S3 angezeigt werden, um eine neue Import-Synchronisierung zu erstellen.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
 
 {: start="3"}
 3\. Benennen Sie Ihre Integration und wählen Sie den Datentyp für diese Integration aus. 
 
-<br><br>![Einrichten der Synchronisationsdetails für "cdi-s3-als-Quelle-Integration" mit Nutzer:in-Attributen als Datentyp.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
+![Einrichtung der Synchronisierungsdetails für „cdi-s3-as-source-integration” mit Benutzerattributen als Datentyp.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})
 
 {: start="4"}
 4\. Fügen Sie eine E-Mail für Benachrichtigungen hinzu, wenn die Synchronisierung aufgrund von Zugriffs- oder Berechtigungsproblemen unterbrochen wird. Schalten Sie optional Benachrichtigungen für Fehler auf Nutzer:innen-Ebene und erfolgreiche Synchronisierungen ein. 
 
-<br><br> ![Einrichten von Benachrichtigungseinstellungen für Synchronisationsfehler-Benachrichtigungen.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
+![Einrichten der Benachrichtigungseinstellungen für Synchronisierungsfehler.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})
 
 {: start="5"}
-5\. Testen Sie schließlich die Verbindung und speichern Sie die Synchronisierung. 
+5\. Auswählen Sie abschließend **„Verbindung testen“**, um zu bestätigen, dass Braze auf Ihren Bucket zugreifen kann, und listen Sie die Dateien auf, die zum Importieren verfügbar sind (nicht die Daten in diesen Dateien). Bitte speichern Sie anschließend die Synchronisierung. 
 
-<br><br>![Eine Option zum Testen der Verbindung mit einer Vorschau der Daten.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
+![Eine Option zum Testen der Verbindung mit einer Vorschau der Daten.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
 
 ## Erforderliche Dateiformate
 
@@ -276,15 +287,84 @@ s3-qa-load-2-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""EP1U0"", ""age""
 {% endtab %}
 {% tab CSV Catalogs  %}
 ```plaintext  
-ID,PAYLOAD
-85,"{""product_name"": ""Product 85"", ""price"": 85.85}" 
-1,"{""product_name"": ""Product 1"", ""price"": 1.01}" 
+ID,PAYLOAD,DELETED
+85,"{""product_name"": ""Product 85"", ""price"": 85.85}",false
+1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
 ```
+Fügen Sie eine optionale **DELETED**-Spalte hinzu. Wenn`DELETED`  ist`true`, wird dieser Katalogartikel aus dem Katalog in Braze entfernt. Siehe [Artikel löschen](#deleting-catalog-items).
 {% endtab %}
 
 {% endtabs %}  
 
 Beispiele für alle unterstützten Dateitypen finden Sie in den Beispieldateien in [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).  
+
+## Löschen von Daten
+
+Cloud Datenaufnahme für S3 unterstützt das Löschen von Nutzern und Katalogartikeln durch Datei-Uploads. Bitte verwenden Sie für jedes Dokument separate Synchronisierungen und Dateiformate.
+
+- **[Nutzer:innen löschen](#deleting-users)** – Erstellen Sie eine Synchronisierung mit dem Datentyp **„Nutzer:innen löschen“** und laden Sie Dateien hoch, die ausschließlich Bezeichner für Nutzer:innen enthalten (keine Nutzdaten).
+- **[Katalogartikel löschen](#deleting-catalog-items)** – Nutzen Sie Ihre bestehende Katalogsynchronisierung und fügen Sie eine Spalte`deleted` (oder `DELETED`) hinzu, um Artikel zum Entfernen zu markieren.
+
+### Nutzer:innen löschen
+
+Um Nutzerprofile in Braze mithilfe von Dateien in S3 zu löschen:
+
+1. Erstellen Sie eine neue Cloud Datenaufnahme-Synchronisierung (gleiche [AWS- und Braze-Einrichtung](#setting-up-cloud-data-ingestion-in-aws) wie für andere Synchronisierungen).
+2. Bitte stellen Sie bei der Konfiguration der Synchronisierung in Braze **den Datentyp** auf **„Nutzer:innen löschen”** ein.
+3. Bitte laden Sie Dateien in Ihren S3-Bucket hoch, die ausschließlich Spalten mit Bezeichnern für Nutzer:innen enthalten. Bitte fügen Sie keine Spalte`PAYLOAD` hinzu – die Synchronisierung schlägt fehl, wenn Nutzdaten vorhanden sind, um versehentliche Löschungen zu vermeiden.
+
+Jede Zeile in der Datei muss genau einen Nutzer:in identifizieren, indem eine der folgenden Angaben verwendet wird:
+
+| Bezeichner | Beschreibung |
+| --- | --- |
+| `EXTERNAL_ID` | Entspricht dem in `external_id`Braze verwendeten. |
+| `ALIAS_NAME` und `ALIAS_LABEL` | Beide Spalten zusammen sind Bezeichner für die Nutzer:innen anhand ihres Nutzer-Alias. |
+| `BRAZE_ID` | Von Braze generierte ID für Nutzer:innen (nur für bestehende Nutzer:innen). |
+
+{% alert important %}
+Das Löschen von Nutzer:innen ist endgültig und kann nicht rückgängig gemacht werden. Bitte nur Nutzer:innen einbeziehen, die Sie entfernen möchten. Weitere Informationen finden Sie unter [Nutzer:innen mit Cloud Datenaufnahme löschen]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/delete_users/).
+{% endalert %}
+
+**Beispiel – JSON (Nutzer:in löscht):**
+```jsonl
+{"external_id":"user-to-delete-001"}
+{"external_id":"user-to-delete-002"}
+{"braze_id":"braze-id-from-profile"}
+```
+
+**Beispiel – CSV (Nutzer:in löscht):**
+```plaintext
+external_id
+user-to-delete-001
+user-to-delete-002
+```
+
+Während der Synchronisierung verarbeitet Braze neue Dateien im Bucket und löscht die entsprechenden Nutzerprofile.
+
+### Katalogartikel löschen
+
+So entfernen Sie Artikel aus einem Katalog, der Dateispeicher verwendet:
+
+1. Bitte verwenden Sie dieselbe S3-Synchronisierung, die Sie zur [Synchronisierung von Katalogdaten]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/) (Datentyp **„Kataloge“**) verwenden.
+2. Fügen Sie in Ihren CSV-Dateien oder JSON-Dateien eine optionale Spalte**`deleted`**  (oder **`DELETED`**) hinzu.
+3. Bitte setzen Sie für jeden Katalogartikel, den Sie aus dem `true`Katalog`deleted` in Braze entfernen möchten, die Option auf „Entfernen“.
+
+Jede Zeile benötigt `ID`weiterhin  und `PAYLOAD`. Bei zum Löschen markierten Zeilen kann die Nutzlast minimal sein; Braze entfernt den Artikel durch `ID`.
+
+**Beispiel – JSON (Katalogartikel löschen):**
+```jsonl
+{"id":"85","payload":"{\"product_name\": \"Product 85\", \"price\": 85.85}"}
+{"id":"1","payload":"{\"product_name\": \"Product 1\", \"price\": 1.01}","deleted":true}
+```
+
+**Beispiel – CSV (Katalogartikel löschen):**
+```plaintext
+ID,PAYLOAD,DELETED
+85,"{""product_name"": ""Product 85"", ""price"": 85.85}",false
+1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
+```
+
+Wenn die Synchronisierung ausgeführt wird, führen Zeilen mit`deleted: true`  dazu, dass der entsprechende Artikel im Katalog in Braze gelöscht wird. Informationen zum vollständigen Synchronisieren und Löschen von Katalogen finden Sie unter [Synchronisieren und Löschen von Katalogdaten]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/).
 
 ## Was Sie wissen sollten
 
@@ -299,7 +379,7 @@ Beispiele für alle unterstützten Dateitypen finden Sie in den Beispieldateien 
 
 CDI verarbeitet nur Dateien, die nach der Erstellung der Synchronisierung hinzugefügt werden. Bei diesem Prozess sucht Braze nach neuen Dateien, die hinzugefügt werden sollen, was eine neue Nachricht an SQS triggert. Dadurch wird eine neue Synchronisierung gestartet, um die neue Datei zu verarbeiten.
 
-Vorhandene Dateien können verwendet werden, um die Datenstruktur in der Testverbindung zu validieren, sie werden jedoch nicht mit Braze synchronisiert. Bestehende Dateien, die synchronisiert werden sollen, müssen erneut in S3 hochgeladen werden, um von CDI verarbeitet zu werden.
+Sie können vorhandene Dateien verwenden, um zu überprüfen, ob Braze auf Ihren Bucket zugreifen und zu importierende Dateien erkennen kann. Diese Dateien werden jedoch nicht mit Braze synchronisiert. Damit das CDI diese verarbeiten kann, müssen Sie alle vorhandenen Dateien, die Sie synchronisieren möchten, erneut auf S3 hochladen. 
 
 ### Umgang mit unerwarteten Dateifehlern
 

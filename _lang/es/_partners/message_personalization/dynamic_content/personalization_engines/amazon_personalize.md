@@ -1,6 +1,6 @@
 ---
 nav_title: Amazon Personalizar
-article: Amazon Personalize
+article_title: Amazon Personalizar
 layout: redirect
 redirect_to: /docs/partners/amazon_personalize/
 ---

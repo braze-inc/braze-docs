@@ -42,6 +42,7 @@ glossary_tags:
   - name: Eメールリスト
   - name: メールテンプレート
   - name: KPI
+  - name: メディアライブラリ
   - name: 購入
   - name: 環境設定センター
   - name: メッセージをスケジュール
@@ -257,11 +258,11 @@ glossaries:
     tags:
       - Segments
   - name: "<a href='/docs/api/endpoints/export/segments/get_segment/'>/segments/list</a>"
-    description: "Segments の一覧をエクスポートします。それぞれに名前、Segment API 識別子、および分析 \"トラッキングが有効になっているかどうかが含まれます。"
+    description: "セグメントs の一覧をエクスポートします。それぞれに名前、セグメント API 識別子、および分析 \"トラッキングが有効になっているかどうかが含まれます。"
     tags:
       - Segments
-  - name: "<a href='/docs/api/endpoints/export/segments/post_cancel_export/'>/export/Segment/キャンセル</a>"
-    description: 指定されたSegment ID のエクスポートを取り消します。
+  - name: "<a href='/docs/api/endpoints/export/segments/post_cancel_export/'>/export/セグメント/キャンセル</a>"
+    description: 指定されたセグメント ID のエクスポートを取り消します。
     tags:
       - Segments
   - name: "<a href='/docs/api/endpoints/export/sessions/get_sessions_analytics/'>/sessions/data_series</a>"
@@ -472,4 +473,8 @@ glossaries:
     description: アプリの SDK 認証キーを削除する。
     tags:
       - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/media_library/manage_assets/create/'>/media_ライブラリー/作成</a>"
+    description: 素材をメディアライブラリーに読み込むします。
+    tags:
+      - Media Library
 ---

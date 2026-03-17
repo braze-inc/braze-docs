@@ -1,5 +1,5 @@
 ---
-nav_title: "WhatsApp Objekt"
+nav_title: "WhatsApp-Objekt"
 article_title: WhatsApp Messaging Objekt
 page_order: 15
 page_type: reference
@@ -19,7 +19,7 @@ description: "Dieser Referenzartikel erklärt die verschiedenen Komponenten des 
   "app_id": (required, string) see App Identifier,
   "subscription_group_id": (required, string) the ID of your subscription group,
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
-  "message_type": (required, string) the type of WhatsApp message being sent under the `message` key (template_message | text_response_message | text_image_response_message | quick_reply_response_message | list_response_message),
+  "message_type": (required, string) the type of WhatsApp message being sent under the `message` key (template_message | text_response_message | text_image_response_message | quick_reply_response_message | list_response_message | flow_response_message),
   "message": (required, object) The message object that must include the required fields based on the selected `message_type`. Below are the specific message structures for each type. Refer to the relevant message type for the required fields and their format.
 }
 ```
@@ -37,13 +37,23 @@ description: "Dieser Referenzartikel erklärt die verschiedenen Komponenten des 
   "header_variables": (optional, header variables object) an object to specify header variable values for specified template_name, required if the header has variables; see object specification below,
   "body_variables": (optional, body variable object) an object to specify body variable values for specified template_name, required if the body has variables; see object specification below,
   "button_variables": (optional, button variables object) an object to specify button variable values for specified template_name, required if buttons have variables; see object specification below,
-  "header_image_uri" :(optional, string) URI to the header image, if the header is of type IMAGE in specified template_name
+  "header_media_uri": (optional, string) URI to the header media, if the header is of type IMAGE in specified template_name. Only IMAGE and TEXT header types are supported by the messages/send API.
 }
 ```
+
+{% alert important %}
+**Einschränkungen beim Versand von Medien:** Medien-Sendungen (Dokumente, Videos und andere Medientypen) werden von der`messages/send`API nicht unterstützt. Für über die API gesendete Templates werden ausschließlich die Header-Typen TEXT und IMAGE unterstützt. Wenn Ihr WhatsApp-Template eine DOCUMENT-, Video- oder andere Medien-Header verwendet, können Sie diese nicht über die`messages/send`API versenden. Bitte verwenden Sie die [Campaigns Triggered API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) oder das Braze-Dashboard, um Templates mit Medien-Headern zu versenden.
+{% endalert %}
 
 ##### Kopfzeilen-Variablen Objekt
 
 Mit dem Objekt `header_variables` können Sie Werte für Kopfvariablen in der WhatsApp-Vorlage angeben. Jeder Schlüssel ist der Index der WhatsApp-Vorlagevariable (null-indiziert), die durch den angegebenen Wert ersetzt werden soll.
+
+{% alert note %}
+Sie können dies`header_variables`ausschließlich mit Templates verwenden, die Überschriften vom Typ TEXT enthalten. Für IMAGE-Header verwenden Sie bitte`header_media_uri` stattdessen. Die Header-Typen DOCUMENT, Video und andere Medien werden von der`messages/send`API nicht unterstützt.<br><br>
+
+`header_image_uri` wird ausschließlich für Antwortnachrichtentypen (wie z. B. `quick_reply_response_message`) verwendet, nicht für Templates.
+{% endalert %}
 
 ```json
 {
@@ -86,7 +96,7 @@ Mit dem Objekt `button_variables` können Sie Werte für Schaltflächenvariablen
 
 ```json
 {
-  "$TEMPLATE_VARIABLE_INDEX_1": "$TEMPLATE_VARIABLE_VALUE_1",
+  "$TEMPLATE_VARIABLE_INDEX_1": "$TEMPLATE_VARIABLE_VALUE_1"
 }
 ```
 
@@ -249,5 +259,49 @@ Der Typ `list_response_message` ermöglicht es Ihnen, in WhatsApp eine listenbas
       }
     ]
   }
+}
+```
+
+#### flow_response_message
+
+Mit diesem`flow_response_message`Typ ist es zulässig, eine flussbasierte Nachricht in WhatsApp zu senden. Dieser Nachrichtentyp umfasst einen interaktiven Ablauf, den die Empfänger:innen abschließen können.
+
+```json
+{
+  "header_text": (optional, string) the header text of the message to send,
+  "body": (required, string) the body of the message to send,
+  "footer": (optional, string) the footer of the message to send,
+  "flow_button": (required, object) the flow button object that contains:
+    "caption": (required, string) the text that will appear on the flow button,
+    "flow_id": (required, string) the unique identifier of the WhatsApp Flow,
+  "generate_custom_attribute": (optional, boolean) whether to save flow response on the user profile and generate a custom attribute upon responding to this flow message
+}
+```
+
+##### Flow-Button-Objekt
+
+```json
+{
+  "caption": (required, string) The text displayed on the button,
+  "flow_id": (required, string) The ID of the flow
+}
+```
+
+##### Einschränkungen
+
+- **flow_button**: Es müssen sowohl die Bildunterschrift als auch die Datei`flow_id` . enthalten sein.
+- **Bildunterschrift**: Maximal 20 Zeichen.
+- **flow_id**: Es muss sich um eine gültige, veröffentlichte Flow-ID handeln.
+
+##### Beispiel
+
+```json
+{
+  "body": "Please complete your order details",
+  "flow_button": {
+    "caption": "Start Order",
+    "flow_id": "594425479261596"
+  },
+  "generate_custom_attribute": true
 }
 ```

@@ -218,7 +218,7 @@ mParticleで、**Connections > Connect > [希望のプラットフォーム] > C
 - [カスタム属性は]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)、文字列、数値、ブーリアン、日付オブジェクト、配列をサポートするが、オブジェクトや階層化されたオブジェクトはサポートしない。 
 
 {% alert note %}
-Braze は `Time` タイプのカスタム属性で0年以前または3000年以降のタイムスタンプをサポートしていません。Brazeは、これらの値がmParticleから送信されると取り込むが、値は文字列として保存される。
+Braze は `Time` タイプのカスタム属性で0年以前または3000年以降のタイムスタンプをサポートしていません。Brazeは、これらの値がmParticleから送信されたときに取り込むが、値は文字列として保存される。
 {% endalert %}
 
 #### データマッピング

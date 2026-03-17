@@ -66,7 +66,7 @@ We can further personalize our message by adding some text around our Liquid:
 
 {% raw %}
 ```liquid
-Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
+Get the ultimate trio {% catalog_items Games 1234 1235 1236 %}
 {{ items[0].title }}, {{ items[1].title }}, and {{ items[2].title }} today!
 ```
 {% endraw %}
@@ -81,26 +81,43 @@ Check out [selections]({{site.baseurl}}/user_guide/data/activation/catalogs/sele
 
 ### Using Liquid `if` statements
 
-You can use catalog items to create conditional statements. For example, you can trigger a certain message to display when a specific item is selected in your campaign.
+You can use catalog items to create conditional statements. For example, you can trigger a certain message to display when a specific item is selected in your campaign. You must declare the catalog (and, if applicable, the selection) before referencing `items` in an `if` statement.
 
-To do this, you'll use a Liquid `if` statement, such as in this example:
+#### With catalog items
+
+{% raw %}
+```liquid
+{% catalog_items Games 1234 %}
+{% if items[0].on_sale == true %}
+  {{ items[0].title }} is on sale! Get it for {{ items[0].price }}.
+{% else %}
+  Check out {{ items[0].title }} at full price.
+{% endif %}
+```
+{% endraw %}
+
+In this example, the `catalog_items` tag fetches item `1234` from the `Games` catalog, and then the `if` statement checks the `on_sale` field to display different messages.
+
+#### With catalog selections
 
 {% raw %}
 ```liquid
 {% catalog_selection_items item-list selections %} 
 {% if items[0].venue_name.size > 10 %}
 Message if the venue name's size is more than 10 characters. 
-{% elsif items[0].venue_name.size < 10 %}
-Message if the venue name's size is less than 10 characters. 
+{% elsif items[0].venue_name.size <= 10 %}
+Message if the venue name's size is 10 characters or fewer. 
 {% else %} 
-{% abort_message(no venue_name) %} 
+{% abort_message('no venue_name') %} 
 {% endif %}
 ```
 {% endraw %}
 
-In this example, different messages will display if the custom attribute `venue_name` has more than 10 characters or less than 10 characters. If `venue_name` is `blank`, nothing will display. 
+In this example, different messages display based on whether the `venue_name` field has more or fewer than 10 characters. If `venue_name` is blank, the message is aborted.
 
-Note that you must declare the catalog list and, if applicable, the selection before using `if` statements. In the example, `item-list` is the catalog list, and `selections` is the selection name.
+{% alert tip %}
+To avoid Liquid syntax errors, select the **+** plus button in the message composer to insert catalog Liquid tags automatically.
+{% endalert %}
 
 ### Using images {#using-images}
 
@@ -185,7 +202,7 @@ To render the following Liquid content:
 
 {% raw %}
 ```liquid
-Hi ${first_name}
+Hi ${first_name},
 
 {% catalog_items Messages greet_msg :rerender %}
 {{ items[0].Welcome_Message }}

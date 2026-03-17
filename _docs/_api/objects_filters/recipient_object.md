@@ -25,7 +25,7 @@ The recipients object allows you to combine the [user alias object]({{site.baseu
   "email": (optional, string) email address of user to receive message,
   "prioritization": (optional, array) see Prioritization; required when using email,
   "trigger_properties": (optional, object) personalization key-value pairs for this user when sending a campaign or message; see Trigger Properties,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas Entry Properties,
+  "context": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas context object,
   "send_to_existing_only": (optional, boolean) defaults to true; cannot be used with user aliases,
   "attributes": (optional, object) fields in the attributes object create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values are overwritten
 }]
@@ -44,6 +44,11 @@ When `send_to_existing_only` is `true`, Braze only sends the message to existing
 When making an API call with the recipient object, **if there exists a duplicated recipient targeting the same address (that is, email, push), Braze dedupes the user**, meaning Braze removes identical users, leaving one.
 
 For example, if you use the same `external_user_id`, then the user receives only one message. Consider making multiple API calls if you need a workaround for this behavior.
+
+When the same `external_user_id` appears multiple times in the recipients array, Braze sends only one message and uses 
+the trigger properties from the last occurrence in the array. This behavior is deterministic and based on array order.
+
+In the following example, `userid1` receives one message using `"name": "Beth Test 2"` because that entry appears last in the array.
 
 ```json
 {"campaign_id":"#####","recipients":[

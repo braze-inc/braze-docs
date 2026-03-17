@@ -9,7 +9,7 @@
 기능 플래그 노출 횟수 로깅에 대해 자세히 알아보려면 [기능 플래그 생성]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#impressions)을 참조하세요.
 
 {% tabs %}
-{% tab 웹 %}
+{% tab Web %}
 
 ```javascript
 const featureFlag = braze.getFeatureFlag("my-new-feature");
@@ -74,13 +74,13 @@ if (featureFlag?.enabled == true) {
 
 추가 기본 속성을 편집, 추가 또는 제거하려면 **메시징** > **기능 플래그**에서 기능 플래그 자체를 편집하세요. 이형 상품이 비활성화되면 SDK는 지정된 기능 플래그에 대한 빈 속성 개체를 반환합니다.
 
-!['링크' 변수 키가 '/판매'로 덮어씌워진 '실험 변형' 섹션]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
+!['실험 배리언트' 섹션에서 'link' 변수 키가 '/sales'로 덮어쓰기되었습니다.]({% image_buster /assets/img/feature_flags/feature_flag_experiment_override.png %}){: style="max-width:80%"}
 
 ### 4단계: 타겟팅할 사용자 선택
 
 세그먼트 또는 필터 중 하나를 사용하여 [타겟 사용자를]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) 선택합니다. 예를 들어, **수신된 기능 플래그 변형** 필터를 사용하여 이미 A/B 테스트를 수신한 사용자를 리타겟팅할 수 있습니다.
 
-![필터 그룹 검색창에 '수신된 기능 플래그 변형'이 강조 표시된 기능 플래그 실험의 '대상' 페이지.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
+![필터 그룹 검색창에서 '수신된 기능 플래그 배리언트'가 강조 표시된 기능 플래그 실험의 '대상' 페이지.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
 
 {% alert note %}
 세그먼트 멤버십은 특정 사용자에 대한 기능 플래그가 새로 고쳐질 때 계산됩니다. 앱에서 기능 플래그를 새로 고치거나 새 세션을 시작할 때 변경 사항을 적용할 수 있습니다.

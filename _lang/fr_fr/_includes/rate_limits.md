@@ -1,4 +1,3 @@
-
 <!---DEFAULT RATE LIMIT-->
 
 {% if include.endpoint == "default" %}
@@ -33,87 +32,92 @@ Nous appliquons la limitation du débit de 1 000 requêtes par minute à cet e
 <!---/users/track-->
 
 {% elsif include.endpoint == "users track" %}
-À partir du 28 octobre 2024, nous appliquons une limite de vitesse de base de 3 000 requêtes par trois secondes à cet endpoint pour tous les clients. Chaque demande `/users/track` peut contenir jusqu’à 75 objets d’événement, 75 objets d’attributs et 75 objets d’achats. Chaque objet (événement, attribut et tableau d’achat) peut mettre à jour un utilisateur chacun. Au total, cela signifie qu’un maximum de 225 utilisateurs peuvent être mis à jour en un seul appel. En outre, un profil utilisateur unique peut être mis à jour par plusieurs objets.
+À compter du 28 octobre 2024, nous appliquerons une limite de vitesse de base de 3 000 requêtes toutes les trois secondes à cet endpoint pour tous les clients. Chaque demande `/users/track` peut contenir jusqu’à 75 objets d’événement, 75 objets d’attributs et 75 objets d’achats. Chaque objet (événement, attribut et tableau d’achat) peut mettre à jour un utilisateur chacun. Au total, cela signifie que vous pouvez mettre à jour jusqu'à 225 utilisateurs en un seul appel. De plus, vous pouvez mettre à jour un profil utilisateur unique avec plusieurs objets.
 
-Des limites différentes s'appliquent aux clients qui ont acheté le service **Utilisateurs actifs par mois - CY 24-25**. Pour plus de détails sur ces limites, voir [Utilisateurs actifs par mois - Limites CY 24-25]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25).
+Des limites différentes s'appliquent aux clients qui ont acheté le service **Utilisateurs actifs par mois - CY 24-25**. Pour plus de détails sur ces limites, voir [Utilisateurs actifs par mois - Limites CY 24-25]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau).
 
-Consultez notre page sur les [Limites de débit de l’API]({{site.baseurl}}/api/api_limits/) pour plus de détails, et contactez votre gestionnaire du succès des clients si vous avez besoin d’élever votre limite.
+Veuillez consulter notre page sur [les limites de débit API]({{site.baseurl}}/api/api_limits/) pour plus de détails et contacter votre gestionnaire de la satisfaction client si vous avez besoin d'augmenter votre limite.
 
 <!---/users/export/ids-->
 
 {% elsif include.endpoint == "users export ids" %}
 Si vous avez réalisé l’onboarding avec Braze le 22 août 2024 ou après, cet endpoint présente une limite de débit de 250 requêtes par minute, comme documenté dans [Limites de débit de l'API]({{site.baseurl}}/api/api_limits/).
 
-Vous pouvez également augmenter la limite de débit de cet endpoint à 40 requêtes par seconde en remplissant les conditions suivantes :
+Vous pouvez également augmenter la limite de débit de cet endpoint à 40 requêtes par seconde en respectant les conditions suivantes :
 
-- La limite de débit par défaut (250 requêtes par minute) est activée dans votre espace de travail. Contactez votre gestionnaire de compte Braze pour obtenir de l'aide afin de supprimer toute limite de débit préexistante.
-- Votre demande comprend le paramètre `fields_to_export` pour énumérer tous les champs que vous souhaitez recevoir.
+- Votre espace de travail dispose d'une limite de débit par défaut (250 requêtes par minute) activée. Veuillez contacter votre gestionnaire de compte Braze pour obtenir de l'aide afin de supprimer toute limite de débit préexistante dont vous pourriez disposer.
+- Votre requête inclut le`fields_to_export`paramètre permettant de lister tous les champs que vous souhaitez recevoir.
 
 {% alert important %}
-Si vous incluez `canvases_received` ou `campaigns_received` dans le paramètre `fields_to_export`, votre demande ne pourra pas bénéficier de la limite de débit plus rapide. Nous vous recommandons de ne les inclure dans votre demande que si vous avez un cas d'utilisation spécifique.
+Si vous incluez`canvases_received`« or »`campaigns_received` dans le`fields_to_export`paramètre, votre requête ne sera pas éligible à la limite de débit plus rapide. Nous vous recommandons de les inclure dans votre demande uniquement si vous avez un cas d'utilisation spécifique pour ceux-ci.
 {% endalert %}
 
 <!---/users/delete-->
 
 {% elsif include.endpoint == "users delete" %}
-Nous appliquons à cet endpoint une limite de débit partagée de 20 000 requêtes par minute. Cette limitation du débit est partagée avec les endpoints `/users/alias/new`, `/users/identify`, `/users/merge` et `/users/alias/update`, comme documenté dans [Limites de débit de l'API]({{site.baseurl}}/api/api_limits/).
+Nous appliquons une limite de débit partagée de 20 000 requêtes par minute à cet endpoint. Cette limitation du débit est partagée avec les endpoints `/users/alias/new`, `/users/identify`, `/users/merge` et `/users/alias/update`, comme documenté dans [Limites de débit de l'API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/alias/new-->
 
 {% elsif include.endpoint == "users alias new" %}
-Nous appliquons à cet endpoint une limite de débit partagée de 20 000 requêtes par minute. Cette limitation du débit est partagée avec les endpoints `/users/delete`, `/users/identify`, `/users/merge` et `/users/alias/update`, comme documenté dans [Limites de débit de l'API]({{site.baseurl}}/api/api_limits/).
+Nous appliquons une limite de débit partagée de 20 000 requêtes par minute à cet endpoint. Cette limitation du débit est partagée avec les endpoints `/users/delete`, `/users/identify`, `/users/merge` et `/users/alias/update`, comme documenté dans [Limites de débit de l'API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/alias/update-->
 
 {% elsif include.endpoint == "users alias update" %}
-Nous appliquons à cet endpoint une limite de débit partagée de 20 000 requêtes par minute. Cette limitation du débit est partagée avec les endpoints `/users/delete`, `/users/alias/new`, `/users/identify` et `/users/merge`, comme documenté dans [Limites de débit de l'API]({{site.baseurl}}/api/api_limits/).
+Nous appliquons une limite de débit partagée de 20 000 requêtes par minute à cet endpoint. Cette limitation du débit est partagée avec les endpoints `/users/delete`, `/users/alias/new`, `/users/identify` et `/users/merge`, comme documenté dans [Limites de débit de l'API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/identify-->
 
 {% elsif include.endpoint == "users identify" %}
-Nous appliquons à cet endpoint une limite de débit partagée de 20 000 requêtes par minute. Cette limitation du débit est partagée avec les endpoints `/users/delete`, `/users/alias/new`, `/users/merge` et `/users/alias/update`, comme documenté dans [Limites de débit de l'API]({{site.baseurl}}/api/api_limits/).
+Nous appliquons une limite de débit partagée de 20 000 requêtes par minute à cet endpoint. Cette limitation du débit est partagée avec les endpoints `/users/delete`, `/users/alias/new`, `/users/merge` et `/users/alias/update`, comme documenté dans [Limites de débit de l'API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/merge-->
 
 {% elsif include.endpoint == "users merge" %}
-Nous appliquons à cet endpoint une limite de débit partagée de 20 000 requêtes par minute. Cette limitation du débit est partagée avec les endpoints `/users/delete`, `/users/alias/new`, `/users/identify` et `/users/alias/update`, comme documenté dans [Limites de débit de l'API]({{site.baseurl}}/api/api_limits/).
+Nous appliquons une limite de débit partagée de 20 000 requêtes par minute à cet endpoint. Cette limitation du débit est partagée avec les endpoints `/users/delete`, `/users/alias/new`, `/users/identify` et `/users/alias/update`, comme documenté dans [Limites de débit de l'API]({{site.baseurl}}/api/api_limits/).
 
 <!---/custom_attributes-->
 
 {% elsif include.endpoint == "custom_attributes" %}
-Nous appliquons à cet endpoint une limite de débit partagée de 1 000 requêtes par heure. Cette limitation du débit est partagée avec les endpoints `/events`, `/events/list` et `/purchases/product_list`, comme documenté dans [Limites de débit de l’API]({{site.baseurl}}/api/api_limits/).
+Nous appliquons une limite de débit partagée de 1 000 requêtes par heure à cet endpoint. Cette limitation du débit est partagée avec les endpoints `/events`, `/events/list` et `/purchases/product_list`, comme documenté dans [Limites de débit de l’API]({{site.baseurl}}/api/api_limits/).
 
 <!---/events-->
 
 {% elsif include.endpoint == "events" %}
-Nous appliquons à cet endpoint une limite de débit partagée de 1 000 requêtes par heure. Cette limitation du débit est partagée avec les endpoints `/custom_attributes`, `/events/list` et `/purchases/product_list`, comme documenté dans [Limites de débit de l’API]({{site.baseurl}}/api/api_limits/).
+Nous appliquons une limite de débit partagée de 1 000 requêtes par heure à cet endpoint. Cette limitation du débit est partagée avec les endpoints `/custom_attributes`, `/events/list` et `/purchases/product_list`, comme documenté dans [Limites de débit de l’API]({{site.baseurl}}/api/api_limits/).
 
 <!---/events/list-->
 
 {% elsif include.endpoint == "events list" %}
-Nous appliquons à cet endpoint une limite de débit partagée de 1 000 requêtes par heure. Cette limitation du débit est partagée avec les endpoints `/custom_attributes`, `/events` et `/purchases/product_list`, comme documenté dans [Limites de débit de l’API]({{site.baseurl}}/api/api_limits/).
+Nous appliquons une limite de débit partagée de 1 000 requêtes par heure à cet endpoint. Cette limitation du débit est partagée avec les endpoints `/custom_attributes`, `/events` et `/purchases/product_list`, comme documenté dans [Limites de débit de l’API]({{site.baseurl}}/api/api_limits/).
 
 <!---/purchases/product_list-->
 
 {% elsif include.endpoint == "purchases product list" %}
-Nous appliquons à cet endpoint une limite de débit partagée de 1 000 requêtes par heure. Cette limitation du débit est partagée avec les endpoints `/custom_attributes`, `/events` et `/events/list`, comme documenté dans [Limites de débit de l’API]({{site.baseurl}}/api/api_limits/).
+Nous appliquons une limite de débit partagée de 1 000 requêtes par heure à cet endpoint. Cette limitation du débit est partagée avec les endpoints `/custom_attributes`, `/events` et `/events/list`, comme documenté dans [Limites de débit de l’API]({{site.baseurl}}/api/api_limits/).
 
 <!---/messages/send-->
 <!---/campaigns/trigger/send-->
 <!---/canvas/trigger/send-->
 
 {% elsif include.endpoint == "send endpoints" %}
-Lorsque vous spécifiez un segment ou une audience connectée dans votre demande, nous appliquons une limitation du débit de 250 demandes par minute à cet endpoint. Sinon, si vous spécifiez un `external_id`, cet endpoint présente une limitation du débit par défaut de 250 000 requêtes par heure, partagées entre `/messages/send`, `/campaigns/trigger/send` et `/canvas/trigger/send`, comme documenté dans [Limites de débit de l'API]({{site.baseurl}}/api/api_limits/).
+Lorsque vous utilisez les filtres d'audience dans votre requête, nous appliquons une limite de débit de 250 requêtes par minute à cet endpoint. Sinon, si vous spécifiez un `external_id`, cet endpoint présente une limitation du débit par défaut de 250 000 requêtes par heure, partagées entre `/messages/send`, `/campaigns/trigger/send` et `/canvas/trigger/send`, comme documenté dans [Limites de débit de l'API]({{site.baseurl}}/api/api_limits/).
+
+Les endpoints Braze prennent en charge le traitement par lots des requêtes API. Une seule demande aux endpoints de messagerie peut atteindre n’importe lequel des éléments suivants :
+
+- Jusqu’à 50 `external_ids` spécifiques, chacun avec des paramètres de message individuels
+- Un segment d'audience de toute taille, défini dans la requête comme un objet Connected Audience.
 
 <!---/transactional/v1/campaigns/{campaign_id}/send -->
 
 {% elsif include.endpoint == "transactional email" %}
-Les e-mails transactionnels de Braze ne sont pas soumis à une limitation du débit. Selon le package que vous avez choisi, un nombre défini d’e-mails transactionnels est couvert par heure par l’accord de niveau de service (SLA). Les requêtes qui dépassent ce taux sont toujours envoyées, mais ne sont pas couvertes par l'accord de niveau de service. 99,9 % des e-mails sont envoyés en moins d'une minute.
+Le`/transactional/v1/campaigns/{campaign_id}/send`point de terminaison est un point de terminaison payant facturé à l'heure (par exemple, 50 000 par heure selon votre forfait). Il n'existe pas de limite de débit distincte par endpoint : vous pouvez envoyer au-delà du volume qui vous est alloué, mais seul le volume alloué est couvert par le SLA. Les requêtes adressées à ce endpoint sont prises en compte dans votre [limite de débit globale de l'API externe]({{site.baseurl}}/api/api_limits/). Si vous dépassez cette limite (par exemple, 250 000 requêtes par heure sur tous les endpoints), Braze renvoie 429 et les requêtes sont limitées. Le nombre de transactions est réinitialisé toutes les heures, de sorte qu'après une heure, un nouveau contingent est disponible. Dans le cadre du volume couvert par le SLA, 99,9 % des e-mails seront envoyés en moins d'une minute.
 
 <!---/sends/id/create-->
 
 {% elsif include.endpoint == "sends id create" %}
-Le nombre maximum quotidien d’identificateurs d’envoi personnalisés pouvant être créés via cet endpoint est de 100 pour un espace de travail donné. Chaque combinaison de `send_id` et `campaign_id` que vous créez est prise en compte dans votre limite quotidienne. Les en-têtes de réponse pour toute requête valide incluent le statut de limitation du débit actuel. Voir [Limites de débit de l’API]({{site.baseurl}}/api/api_limits/) pour plus de détails.
+Vous pouvez créer jusqu'à 100 identifiants d'envoi personnalisés par jour à l'aide de cet endpoint pour un espace de travail donné. Chaque combinaison de `send_id` et `campaign_id` que vous créez est prise en compte dans votre limite quotidienne. Les en-têtes de réponse pour toute requête valide incluent l'état actuel de la limite de débit. Veuillez consulter [les limites de débit de l'API]({{site.baseurl}}/api/api_limits/) pour plus de détails.
 
 <!---/subscription/status/set-->
 {% elsif include.endpoint == "subscription status set" %}
@@ -160,7 +164,7 @@ Les endpoints Braze prennent en charge les [requêtes d’API en lots]({{site.ba
 
 {% if include.endpoint == "translation endpoints" %}
 
-Le débit de cet endpoint est limité à 250 000 requêtes par minute.
+Ce endpoint est soumis à une limite de débit de 250 000 requêtes par minute.
 
 {% endif %}
 
@@ -205,4 +209,3 @@ Cet endpoint a une limitation du débit de 50 requêtes par minute, partagée e
 Cet endpoint a une limitation du débit de 50 000 requêtes par minute.
 
 {% endif %}
-

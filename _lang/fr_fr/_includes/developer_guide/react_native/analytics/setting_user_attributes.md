@@ -6,7 +6,7 @@ Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous p
 
 ### Attributs par défaut de l’utilisateur
 
-Pour définir les attributs utilisateur collectés automatiquement par Braze, vous pouvez utiliser les méthodes setter fournies avec le SDK.
+Pour définir les attributs utilisateur automatiquement collectés par Braze, vous pouvez utiliser les méthodes de configuration fournies avec le SDK.
 
 ```javascript
 Braze.setFirstName("Name");
@@ -36,7 +36,7 @@ Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
 });
 ```
 
-#### Désactivation des attributs personnalisés
+#### Suppression des attributs personnalisés
 
 ```javascript
 Braze.unsetCustomUserAttribute("attribute_key", function(){
@@ -48,7 +48,7 @@ Braze.unsetCustomUserAttribute("attribute_key", function(){
 
 ```javascript
 
-// Adds a string to a custom atttribute string array, or creates that array if one doesn't exist.
+// Adds a string to a custom attribute string array, or creates that array if one doesn't exist.
 Braze.addToCustomUserAttributeArray("my-attribute-array", "new or existing value", optionalCallback);
 
 // Removes a string from a custom attribute string array.

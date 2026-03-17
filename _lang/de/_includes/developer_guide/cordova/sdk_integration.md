@@ -13,7 +13,7 @@ Fügen Sie das Braze Cordova SDK nur mit den unten aufgeführten Methoden hinzu.
 Wenn Sie Cordova 6 oder höher verwenden, können Sie das SDK direkt von GitHub hinzufügen. Alternativ können Sie auch eine ZIP-Datei des [GitHub-Repositorys](https://github.com/braze-inc/braze-cordova-sdk) herunterladen und das SDK manuell hinzufügen.
 
 {% tabs local %}
-{% tab Geofence deaktiviert %}
+{% tab geofence disabled %}
 Wenn Sie nicht vorhaben, Standorterfassung und Geofences zu nutzen, verwenden Sie den Branch `master` von GitHub.
 
 ```bash
@@ -21,7 +21,7 @@ cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#master
 ```
 {% endtab %}
 
-{% tab Geofence aktiviert %}
+{% tab geofence enabled %}
 Wenn Sie vorhaben, Standorterfassung und Geofences zu nutzen, verwenden Sie `geofence-branch` von GitHub.
 
 ```bash
@@ -161,7 +161,7 @@ Sie können jede der folgenden Einstellungen zum Element `platform` in der Datei
 | `ios_disable_un_authorization_option_provisional` | Legt fest, ob `UNAuthorizationOptionProvisional` deaktiviert werden soll.                                                                                                                                                                                   |
 | `trigger_action_minimum_time_interval_seconds` | Legt das minimale Zeitintervall in Sekunden zwischen Triggern fest. Der Standardwert ist 30 Sekunden.                                                                                                                                                                   |
 | `ios_push_app_group` | Legt die ID der App-Gruppe für iOS-Push-Erweiterungen fest.                                                                                                                                                                                                        |
-| `ios_forward_universal_links` | Legt fest, ob das SDK universelle Links automatisch erkennen und an die Systemmethoden weiterleiten soll.                                                                                                                                                     |
+\|`ios_forward_universal_links` Legt fest, ob das SDK Universal Links automatisch erkennt und an die Systemmethoden weiterleitet. Erforderlich, damit Deeplinks aus Push-Benachrichtigungen unter iOS funktionieren. Standardmäßig deaktiviert. |
 | `ios_log_level` | Legt die minimale Protokollierungsstufe für `Braze.Configuration.Logger` fest.                                                                                                                                                                                      |
 | `ios_use_uuid_as_device_id` | Legt fest, ob eine zufällig generierte UUID als ID für das Gerät verwendet werden soll.                                                                                                                                                                                    |
 | `ios_flush_interval_seconds` | Legt das Intervall in Sekunden zwischen automatischen Datenflushs fest. Der Standardwert ist 10 Sekunden.                                                                                                                                                                  |
@@ -183,7 +183,7 @@ Ausführlichere Informationen finden Sie unter [GitHub: Braze iOS Cordova Plugin
 | `android_large_notification_icon` | Legt das große Symbol für Benachrichtigungen fest.                                                                                                                                                             |
 | `android_notification_accent_color` | Legt die Akzentfarbe der Benachrichtigung in hexadezimaler Darstellung fest.                                                                                                                        |
 | `android_default_session_timeout` | Legt das Braze-Session-Timeout für Ihre Anwendung in Sekunden fest. Der Standardwert ist 10 Sekunden.                                                                                                       |
-| `android_handle_push_deep_links_automatically` | Legt fest, ob das Braze SDK Push Deeplinks automatisch verarbeiten soll.                                                                                                                       |
+\|`android_handle_push_deep_links_automatically` Legt fest, ob das Braze SDK Push-Deeplinks automatisch verarbeitet. Erforderlich, damit Deeplinks aus Push-Benachrichtigungen auf Android funktionieren. Standardmäßig deaktiviert. |
 | `android_log_level` | Legt die Protokollstufe für Ihre Anwendung fest. Die Standard-Protokollstufe ist 4\. Sie protokolliert nur minimale Informationen. Um die ausführliche Protokollierung für die Fehlersuche zu aktivieren, verwenden Sie die Protokollstufe 2\.                                    |
 | `firebase_cloud_messaging_registration_enabled` | Legt fest, ob Firebase Cloud Messaging für Push-Benachrichtigungen verwendet werden soll.                                                                                                                          |
 | `android_fcm_sender_id` | Legt die Firebase Cloud Messaging ID des Senders fest.                                                                                                                                                  |

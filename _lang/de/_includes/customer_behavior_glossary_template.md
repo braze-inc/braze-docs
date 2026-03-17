@@ -1,5 +1,5 @@
 ---
-nav_title: "Kundenverhalten und Nutzer:innen-Events"
+nav_title: Kundenverhalten und Benutzerereignisse
 layout: customer_behavior_events_glossary
 page_order: 4
 excerpt_separator: ""
@@ -11,13 +11,13 @@ search_rank: 7
 
 Wenden Sie sich an Ihre Braze-Vertretung oder öffnen Sie ein [Support-Ticket]({{site.baseurl}}/braze_support/), wenn Sie Zugang zu zusätzlichen Event-Berechtigungen benötigen. Wenn Sie auf dieser Seite nicht finden können, was Sie brauchen, sehen Sie sich unsere [Bibliothek mit den Ereignissen zum Thema Message Engagement]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) oder unsere [Beispieldaten von Currents](https://github.com/Appboy/currents-examples/tree/master/sample-data) an.
 
-{% details Erläuterung des Kundenverhaltens und der Nutzer:in-Event-Struktur und Plattformwerte %}
+{% details Explanation of customer behavior and user event structure and platform values %}
 
 ### Event-Struktur
 
 Diese Aufschlüsselung des Kundenverhaltens und der Benutzerereignisse zeigt, welche Art von Informationen im Allgemeinen in einem Kundenverhalten oder Benutzerereignis enthalten sind. Mit einem soliden Verständnis seiner Komponenten können Ihre Entwickler:in und Ihr Business-Intelligence Strategie Team die eingehenden Currents Ereignisdaten nutzen, um datengestützte Berichte und Charts zu erstellen und andere wertvolle Metriken zu nutzen.
 
-![Aufschlüsselung eines Benutzerereignisses, das ein Kaufereignis mit den aufgelisteten Eigenschaften gruppiert nach benutzerspezifischen Eigenschaften, verhaltensspezifischen Eigenschaften und gerätespezifischen Eigenschaften zeigt]({% image_buster /assets/img/customer_engagement_event.png %})
+![Aufschlüsselung eines Nutzerereignisses, das ein Kauf-Event mit den aufgeführten Eigenschaften zeigt, gruppiert nach benutzerspezifischen Eigenschaften, verhaltensspezifischen Eigenschaften und gerätespezifischen Eigenschaften.]({% image_buster /assets/img/customer_engagement_event.png %})
 
 Kundenverhalten und Nutzer-Events setzen sich aus **nutzerspezifischen** Eigenschaften, **verhaltensspezifischen** Eigenschaften und **gerätespezifischen** Eigenschaften zusammen.
 

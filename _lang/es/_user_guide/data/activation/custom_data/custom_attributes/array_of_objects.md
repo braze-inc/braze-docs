@@ -1,25 +1,29 @@
 ---
-nav_title: Matriz de objetos
-article_title: Matriz de objetos
+nav_title: Conjunto de objetos
+article_title: Conjunto de objetos
 alias: "/array_of_objects/"
 page_order: 0
 page_type: reference
-description: "Este artículo de referencia cubre el uso de una matriz de objetos como tipo de datos para atributos personalizados, incluyendo limitaciones y ejemplos de uso." 
+description: "Este artículo de referencia cubre el uso de un array de objetos como tipo de datos para atributos personalizados, incluyendo limitaciones y ejemplos de uso." 
 ---
 
-# Matriz de objetos
+# Conjunto de objetos
 
-> Esta página explica cómo utilizar una matriz de objetos para agrupar atributos relacionados. Por ejemplo, puedes tener un grupo de objetos mascota, objetos canción y objetos cuenta que pertenezcan todos a un usuario. Estas matrices de objetos pueden utilizarse para personalizar tu mensajería con Liquid, o crear segmentos de audiencia si algún elemento dentro de un objeto coincide con los criterios.
+> Esta página explica cómo utilizar una matriz de objetos para agrupar atributos relacionados. Por ejemplo, puede tener un grupo de objetos mascota, objetos canción y objetos cuenta que pertenezcan todos a un usuario. Estas matrices de objetos pueden utilizarse para personalizar sus mensajes con Liquid, o crear segmentos de audiencia si algún elemento de un objeto coincide con los criterios.
 
 {% multi_lang_include nested_attribute_objects/supported_data_types.md %}
 
 ## Limitaciones
 
-- Las matrices de objetos están pensadas para atributos personalizados enviados a través de la API. No se admite la carga de archivos CSV. Esto se debe a que las comas en el archivo CSV se interpretarán como un separador de columnas, y las comas en los valores provocarán errores de análisis. 
+- Las matrices de objetos están pensadas para atributos personalizados enviados a través de la API. No es posible cargar archivos CSV. Esto se debe a que las comas en el archivo CSV se interpretarán como un separador de columnas, y las comas en los valores causarán errores de análisis. 
 - Las matrices de objetos no tienen límite en el número de elementos, pero sí un tamaño máximo de 100 KB.
-- No todos los socios de Braze admiten matrices de objetos. Consulta la [documentación del socio]({{site.baseurl}}/partners/home) para confirmar si la integración admite esta característica.
+- No todos los socios Braze admiten matrices de objetos. Consulta la [documentación del socio]({{site.baseurl}}/partners/home) para confirmar si la integración admite esta característica.
 
-Actualizar o eliminar elementos de una matriz requiere identificar el elemento por clave y valor, así que considera la posibilidad de incluir un identificador único para cada elemento de la matriz. La unicidad sólo afecta a la matriz y es útil si quieres actualizar y eliminar objetos concretos de tu matriz. Braze no lo aplica.
+Actualizar o eliminar elementos de una matriz requiere identificar el elemento por clave y valor, así que considera la posibilidad de incluir un identificador único para cada elemento de la matriz. La unicidad se aplica sólo a la matriz y es útil si desea actualizar y eliminar objetos específicos de su matriz. Braze no lo aplica.
+
+{% alert important %}
+Cuando un atributo personalizado anidado en tu solicitud contiene valores no válidos (como formatos de hora o`null`valores no válidos), Braze descarta todas las actualizaciones de atributos personalizados anidados en la solicitud del procesamiento. Esto se aplica a todas las estructuras anidadas dentro de ese atributo específico. Comprueba que todos los valores de los atributos personalizados anidados sean válidos antes de enviarlos. Para obtener más información, consulta [Crear y actualizar usuarios]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#how-does-userstrack-handle-invalid-nested-custom-attributes).
+{% endalert %}
 
 {% alert tip %}
 Para más información sobre el uso de matrices de objetos para objetos de atributos de usuario, consulta [Objeto de atributos de usuario]({{site.baseurl}}/api/objects_filters/user_attributes_object).
@@ -30,7 +34,7 @@ Para más información sobre el uso de matrices de objetos para objetos de atrib
 {% tabs local %}
 {% tab Create %}
 
-A continuación se muestra un ejemplo de `/users/track` con una matriz `pets`. Para capturar las propiedades de las mascotas, envía una solicitud a la API que enumere `pets` como una matriz de objetos. Ten en cuenta que a cada objeto se le ha asignado un `id` único al que se puede hacer referencia posteriormente al realizar actualizaciones.
+A continuación se muestra un ejemplo de `/users/track` con una matriz `pets`. Para capturar las propiedades de las mascotas, envíe una solicitud de API que enumere `pets` como una matriz de objetos. Tenga en cuenta que a cada objeto se le ha asignado un único `id` al que se puede hacer referencia posteriormente al realizar actualizaciones.
 
 ```json
 {
@@ -58,7 +62,7 @@ A continuación se muestra un ejemplo de `/users/track` con una matriz `pets`. P
 {% endtab %}
 {% tab Add %}
 
-Añade otro elemento a la matriz utilizando el operador `$add`. El siguiente ejemplo muestra cómo se añaden otros tres objetos mascota a la matriz `pets` del usuario.
+Añade otro elemento a la matriz utilizando el operador `$add`. El siguiente ejemplo muestra la adición de tres objetos mascota más a la matriz `pets` del usuario.
 
 ```json
 {
@@ -94,11 +98,11 @@ Añade otro elemento a la matriz utilizando el operador `$add`. El siguiente eje
 {% endtab %}
 {% tab Update %}
 
-Actualiza los valores de determinados objetos de una matriz utilizando el parámetro `_merge_objects` y el operador `$update`. Similar a las actualizaciones de objetos de [atributos personalizados anidados]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) simples, realiza una fusión profunda.
+Actualice los valores de objetos específicos dentro de una matriz utilizando el parámetro `_merge_objects` y el operador `$update`. De forma similar a las actualizaciones de objetos de [atributos personalizados anidados]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) simples, esto realiza una fusión profunda.
 
 Ten en cuenta que `$update` no puede utilizarse para eliminar una propiedad anidada de un objeto dentro de una matriz. Para ello, tendrás que eliminar todo el elemento de la matriz y luego añadir el objeto sin esa clave específica (utilizando una combinación de `$remove` y `$add`).
 
-El siguiente ejemplo muestra la actualización de la propiedad `breed` a `goldfish` para el objeto con un `id` de `4`. Este ejemplo de solicitud también actualiza el objeto con `id` igual a `5` con un nuevo `name` de `Annette`. Puesto que el parámetro `_merge_objects` está ajustado a `true`, todos los demás campos de estos dos objetos siguen siendo los mismos.
+El siguiente ejemplo muestra la actualización de la propiedad `breed` a `goldfish` para el objeto con un `id` de `4`. Este ejemplo de solicitud también actualiza el objeto con `id` igual a `5` con un nuevo `name` de `Annette`. Dado que el parámetro `_merge_objects` se establece en `true`, todos los demás campos de estos dos objetos siguen siendo los mismos.
 
 ```json
 {
@@ -130,7 +134,7 @@ El siguiente ejemplo muestra la actualización de la propiedad `breed` a `goldfi
 ```
 
 {% alert warning %}
-Debes establecer `_merge_objects` en verdadero, o tus objetos se sobrescribirán. `_merge_objects` es falso por predeterminado.
+Debe establecer `_merge_objects` como verdadero, o sus objetos se sobrescribirán. `_merge_objects` es falso por defecto.
 {% endalert %}
 
 {% endtab %}
@@ -138,7 +142,7 @@ Debes establecer `_merge_objects` en verdadero, o tus objetos se sobrescribirán
 
 Elimina objetos de una matriz utilizando el operador `$remove` en combinación con una clave (`$identifier_key`) y un valor (`$identifier_value`) coincidentes.
 
-El siguiente ejemplo muestra la eliminación de cualquier objeto de la matriz `pets` que tenga un `id` con valor `1`, un `id` con valor `2`, y un `type` con valor `dog`. Si hay varios objetos con el valor `type` de `dog`, se eliminarán todos los objetos coincidentes.
+El siguiente ejemplo muestra la eliminación de cualquier objeto de la matriz `pets` que tenga un `id` con un valor de `1`, un `id` con un valor de `2`, y un `type` con un valor de `dog`. Si hay varios objetos con el valor `type` de `dog`, se eliminarán todos los objetos coincidentes.
 
 ```json
 {
@@ -170,9 +174,19 @@ El siguiente ejemplo muestra la eliminación de cualquier objeto de la matriz `p
 {% endtab %}
 {% endtabs %}
 
+### Procesamiento del pedido
+
+Cuando una sola`/users/track`solicitud incluye `$add`operaciones `$remove`,  `$update`y  para el mismo atributo de matriz, Braze las procesa en este orden:
+
+1. `$add`
+2. `$remove`
+3. `$update`
+
+Dado que`$add`  se ejecuta antes que `$remove`, no puedes utilizar un`$remove`  seguido de`$add`  como mecanismo de upsert dentro de una sola solicitud. Primero se `$add`procesa el  y, a continuación, el`$remove`  elimina el elemento. Para realizar una inserción o actualización, envía el`$remove`  en una solicitud separada antes del `$add`.
+
 ### Marcas de tiempo
 
-Cuando incluyas campos como marcas de tiempo en una matriz de objetos, utiliza el formato `$time` en lugar de cadenas simples o enteros de época Unix.
+Cuando incluyas campos como marcas de tiempo en una matriz de objetos, utiliza el`$time`formato  en lugar de cadenas simples o enteros de la época unix.
 
 ```json
 {
@@ -194,7 +208,7 @@ Cuando incluyas campos como marcas de tiempo en una matriz de objetos, utiliza e
 ```
 
 {% alert tip %}
-Para más información, consulta [Atributos personalizados anidados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
+Para obtener más información, consulta [Attributos personalizados anidados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
 {% endalert %}
 
 ## Ejemplo de SDK
@@ -505,9 +519,9 @@ braze.getUser().setCustomUserAttribute("pets", json, true);
 {% endtab %}
 {% endtabs %}
 
-## Plantilla líquida
+## Plantillas de Liquid
 
-Puedes utilizar esta matriz `pets` para personalizar un mensaje. El siguiente ejemplo de plantilla Liquid muestra cómo hacer referencia a las propiedades del objeto atributo personalizado guardadas de la solicitud API anterior y utilizarlas en tu mensajería.
+Puede utilizar esta matriz `pets` para personalizar un mensaje. El siguiente ejemplo de plantilla de Liquid muestra cómo hacer referencia a las propiedades del objeto de atributo personalizado guardadas de la solicitud de API anterior y utilizarlas en su mensajería.
 
 {% raw %}
 ```liquid
@@ -519,29 +533,29 @@ I have a {{pet.type}} named {{pet.name}}! They are a {{pet.breed}}.
 ```
 {% endraw %}
 
-En este caso, puedes utilizar Liquid para recorrer la matriz `pets` e imprimir una declaración por cada mascota. [Asigna una variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) al atributo personalizado `pets` y utiliza la notación de puntos para acceder a las propiedades de un objeto. Especifica el nombre del objeto, seguido de un punto `.`, seguido del nombre de la propiedad.
+En este caso, puede utilizar Liquid para recorrer la matriz `pets` e imprimir una declaración para cada mascota. [Asigne una variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) al atributo personalizado `pets` y utilice la notación de puntos para acceder a las propiedades de un objeto. Especifica el nombre del objeto, seguido de un punto `.`, seguido del nombre de la propiedad.
 
 ## Segmentación
 
-Al segmentar a los usuarios basándose en matrices de objetos, un usuario se clasificará en el segmento si algún objeto de la matriz coincide con los criterios. 
+Cuando se segmentan usuarios basándose en matrices de objetos, un usuario cumplirá los requisitos para el segmento si cualquier objeto de la matriz coincide con los criterios. 
 
-Crea un nuevo segmento y selecciona **Atributo personalizado anidado** como filtro. A continuación, busca y selecciona el nombre de tu matriz de objetos.
+Cree un nuevo segmento y seleccione **Atributo personalizado anidado** como filtro. A continuación, busque y seleccione el nombre de su matriz de objetos.
 
-Filtrar por matriz de objetos.]({% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %})
+![Filtrar por matriz de objetos.]({% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %})
 
-Utiliza la notación por puntos para especificar qué campo de la matriz de objetos quieres utilizar. Comienza el campo de texto con un conjunto vacío de corchetes `[]` para indicar a Braze que estás buscando dentro de una matriz de objetos. Después, añade un punto `.`, seguido del nombre del campo que quieras utilizar.
+Utilice la notación por puntos para especificar qué campo de la matriz de objetos desea utilizar. Inicie el campo de texto con un conjunto vacío de corchetes `[]` para indicar a Braze que está buscando dentro de una matriz de objetos. Después, añade un punto `.`, seguido del nombre del campo que quieras utilizar.
 
-Por ejemplo, si quieres filtrar la matriz de objetos `pets` basándote en el campo `type`, introduce `[].type` y elige qué tipo de mascota quieres filtrar, como `snake`.
+Por ejemplo, si desea filtrar la matriz de objetos `pets` basándose en el campo `type`, introduzca `[].type` y elija el tipo de mascota por el que desea filtrar, como `snake`.
 
-Filtrar por tipo de mascota es igual a serpiente.]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
+![Filtrar por tipo de mascota es igual a serpiente.]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
 
 O puedes filtrar por mascotas que tengan un `type` de `dog`. En este caso, un usuario tiene al menos un perro, por lo que entra en el segmento de "cualquier usuario que tenga al menos una mascota de tipo perro".
 
-\![Filtrar por tipo de mascota es igual a perro.]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
+![Filtrar por tipo de mascota igual a perro.]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
 
-### Niveles de anidación
+### Niveles de anidamiento
 
-Puedes crear un segmento con hasta un nivel de anidamiento de matrices (matriz dentro de otra matriz). Por ejemplo, dados los siguientes atributos, puedes hacer que un segmento para `pets[].name` contenga `Gus`, pero no puedes hacer que un segmento para `pets[].nicknames[]` contenga `Gugu`.
+Puede crear un segmento con un máximo de un nivel de anidamiento de matrices (matriz dentro de otra matriz). Por ejemplo, dados los siguientes atributos, puede hacer que un segmento para `pets[].name` contenga `Gus`, pero no puede hacer que un segmento para `pets[].nicknames[]` contenga `Gugu`.
 
 {% raw %}
 ```json
@@ -584,7 +598,7 @@ Los puntos de datos se registran de forma diferente dependiendo de si creas, act
 {% tabs local %}
 {% tab Create %}
 
-La creación de una nueva matriz registra un punto de datos por cada atributo de un objeto. Este ejemplo cuesta ocho puntos de datos: cada objeto mascota tiene cuatro atributos y hay dos objetos.
+Al crear una nueva matriz, se registra un punto de datos por cada atributo de un objeto. Este ejemplo cuesta ocho puntos de datos: cada objeto mascota tiene cuatro atributos y hay dos objetos.
 
 ```json
 {
@@ -612,7 +626,7 @@ La creación de una nueva matriz registra un punto de datos por cada atributo de
 {% endtab %}
 {% tab Update %}
 
-La actualización de una matriz existente registra un punto de datos por cada propiedad añadida. Este ejemplo cuesta dos puntos de datos, ya que sólo actualiza una propiedad en cada uno de los dos objetos.
+Al actualizar una matriz existente, se registra un punto de datos por cada propiedad añadida. Este ejemplo cuesta dos puntos de datos, ya que sólo actualiza una propiedad en cada uno de los dos objetos.
 
 ```json
 {
@@ -645,7 +659,7 @@ La actualización de una matriz existente registra un punto de datos por cada pr
 {% endtab %}
 {% tab Remove %}
 
-Eliminar un objeto de una matriz registra un punto de datos por cada criterio de eliminación que envíes. Este ejemplo cuesta tres puntos de datos, aunque puedes estar eliminando varios perros con esta afirmación.
+Al eliminar un objeto de una matriz de objetos, se registra un punto de datos por cada criterio de eliminación que envíes. Este ejemplo cuesta tres puntos de datos, a pesar de que puede estar eliminando varios perros con esta declaración.
 
 ```json
 {

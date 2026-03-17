@@ -4,53 +4,61 @@
 
 ## ¿Qué es BrazeAI Decisioning Studio™?
 
-[BrazeAI Decisioning Studio™](https://www.braze.com/product/brazeai-decisioning-studio/) sustituye las pruebas A/B por la toma de decisiones con IA que lo personaliza todo y maximiza cualquier métrica: impulsa los dólares, no los clics: con el estudio de toma de decisiones, puedes optimizar cualquier KPI empresarial.
+[BrazeAI Decisioning Studio™](https://www.braze.com/product/brazeai-decisioning-studio/) sustituye las pruebas A/B por agentes de decisión que realizan la personalización de todo y maximizan cualquier métrica: impulsa los ingresos, no los clics. Con Decisioning Studio, puedes optimizar cualquier métrica empresarial.
 
 Los agentes de decisión BrazeAI™ descubren automáticamente la acción óptima para cada cliente. Utilizando tus datos propios, BrazeAI™ puede maximizar cualquier KPI empresarial para una amplia gama de casos de uso, incluidas las ventas cruzadas, las ventas adicionales, las recompras, la retención, las renovaciones, los referidos, las devoluciones y mucho más.
 
-El equipo de Servicios Expertos en IA adaptará BrazeAI Decisioning Studio™ a las necesidades específicas de tu empresa. Aunque Decisioning Studio funciona mejor con Braze, ya es compatible con otras plataformas. Para saber más, [reserva una llamada](https://www.braze.com/get-started/) con Braze.
+
+Para obtener más información o empezar a utilizar Decisioning Studio, [reserva una llamada](https://www.braze.com/get-started/) con Braze.
+
+![Resumen del ciclo de retroalimentación de Decisioning Studio]({% image_buster /assets/img/decisioning_studio/decisioniong_studio_feedback_loop.png %})
 
 ## Características principales
 
-- **Mantén tu pila tecnológica, pero añade un cerebro:** BrazeAI™ se conecta como una capa de toma de decisiones entre tus sistemas de datos y tu plataforma de automatización del marketing.
+- **Mantén tu pila tecnológica, pero añade un cerebro:** BrazeAI™ se conecta como una capa de toma de decisiones entre tus sistemas de datos y tu plataforma de interacción con los clientes. Aunque Decisioning Studio funciona mejor con Braze, es compatible con otras plataformas. 
 - **Elige ganadores por personas, no por segmentos:** Utiliza todos tus datos propios para tomar la decisión 1:1 óptima para cada individuo.
 - **Personalízalo todo:** Los agentes de decisión de IA encuentran el mejor mensaje, producto, incentivo, canal, momento y frecuencia para cada cliente.
 - **Maximiza cualquier métrica:** Los clics no son dólares. Utiliza BrazeAI™ para elegir las ofertas o incentivos que maximicen los ingresos, la ganancia, el CLV o cualquier otro KPI empresarial.
 - **Abre la caja negra:** Mira cómo los agentes de toma de decisiones con IA personalizan los datos para obtener información profunda sobre los impulsores del comportamiento del cliente.
+- **Asistencia experta en todo momento:** Decisioning Studio Pro incluye el soporte de nuestro equipo de servicios de toma de decisiones basados en inteligencia artificial, que adaptará tus agentes de toma de decisiones a las necesidades específicas de tu negocio.
 
-## Sobre los agentes
+## Acerca de Decisioning Studio
 
 ### Cómo funciona
 
-Un agente es una configuración personalizada de BrazeAI Decisioning Studio™ hecha a medida para cumplir un objetivo de negocio específico.
+BrazeAI Decisioning Studio™ te permite diseñar e implementar agentes de toma de decisiones que optimizan cualquier métrica empresarial. 
 
-Por ejemplo, podrías crear un agente de repetición de compra para aumentar las conversiones de seguimiento tras una venta inicial. Tú defines la audiencia y el mensaje en Braze, mientras que el estudio de toma de decisiones ejecuta experimentos diarios, probando automáticamente diferentes combinaciones de ofertas de productos, tiempo de envío de mensajes y frecuencia para cada cliente. Con el tiempo, BrazeAI™ aprende lo que funciona mejor y orquesta envíos personalizados a través de Braze para maximizar las tasas de recompra.
+Para configurar Decisioning Studio, deberás:
+- Conecta orígenes de datos que indiquen al agente cómo reacciona un cliente ante sus decisiones.
+- Configura la orquestación para llevar a cabo las acciones del agente de decisión.
+- Diseña tu agente de toma de decisiones para definir qué resultado deseas maximizar y qué acciones puede realizar el agente para lograrlo.
+- Pon en marcha tu agente de toma de decisiones y deja que aprenda y se optimice continuamente para obtener los mejores resultados para tu negocio.
 
-Construir un buen agente consiste en lo siguiente:
+Mientras que Decisioning Studio Go es una plataforma de autoservicio, Decisioning Studio Pro incluye el soporte de los servicios de toma de decisiones basados en IA del equipo de ciencia de datos de Braze, que te ayudará a diseñar y configurar tu agente para maximizar los resultados de tu negocio. Ver [Decisioning Studio Go vs. Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/#decisioning-studio-go-vs-decisioning-studio-pro) para obtener más detalles.
 
-- Elegir una métrica de éxito para que BrazeAI™ la optimice, como ingresos, conversiones o ARPU.
-- Definir qué dimensiones probar, como la oferta, la línea del asunto, la creatividad, el canal o la hora de envío.
-- Seleccionar las opciones para cada dimensión, como correo electrónico frente a SMS, o frecuencia diaria frente a semanal.
+Para obtener más información, consulta [Introducción a Decisioning Studio]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/).
 
-### Agentes de muestra
+### Agentes de decisión frente a Agentes BrazeAI
 
-Aquí tienes algunos ejemplos de agentes que puedes construir con BrazeAI Decisioning Studio™. Tus agentes de decisión con IA aprenderán de cada interacción con el cliente y aplicarán esas informaciones a las acciones del día siguiente.
+Aunque ambos funcionan con BrazeAI™, los agentes de decisión y los agentes Braze tienen diferentes funciones en tu conjunto de herramientas de marketing.
 
-{% multi_lang_include decisioning_studio/sample_agents.md %}
+**Los agentes de decisión** son los coordinadores estratégicos de tus campañas. Operan a nivel de campaña, realizando continuamente experimentos en diferentes dimensiones, como la oferta, el canal, el momento y la frecuencia, con el fin de maximizar métricas empresariales como los ingresos, las conversiones o el ARPU. Un agente de toma de decisiones es el administrador de un caso de uso completo, como la recuperación de clientes, la venta cruzada o la renovación, aprendiendo con el tiempo qué combinación de acciones funciona mejor para cada cliente individual.
 
-## Acerca de los permisos de la clave de API
+**Los agentes Braze** son asistentes basados en inteligencia artificial que se encuentran dentro de los pasos individuales de Canvas o los campos del catálogo. Utilizan modelos de lenguaje grandes (LLM) para generar contenido (como líneas del asunto personalizadas o copias de mensajes), tomar decisiones de enrutamiento basadas en el contexto del cliente o enriquecer tus catálogos con valores generados de manera dinámica. Los agentes de Braze destacan por aportar creatividad y personalización a puntos de intervención específicos dentro de tu campaña.
 
-Durante tu integración de BrazeAI Decisioning Studio™, crearás una clave de API Braze con permisos específicos que definirán las capacidades de tu integración. Consulta la tabla siguiente para saber más sobre cada permiso.
+Piénsalo de esta manera: un agente de toma de decisiones es el director que coordina toda tu estrategia de campaña, mientras que los agentes de Braze son los músicos que añaden creatividad y matices a cada momento individual del recorrido del cliente. Puedes utilizarlos juntos: deja que un agente de decisión determine la oferta y el canal óptimos para cada cliente y, a continuación, utiliza un agente de Braze para generar un texto personalizado para ese mensaje específico.
 
-{% alert tip %}
-También puedes encontrar esta información en la página de [integración de BrazeAI Decisioning Studio™]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/integration).
-{% endalert %}
 
-{% multi_lang_include decisioning_studio/api_key_permissions.md %}
+{% multi_lang_include decisioning_studio/go_vs_pro.md %}
+
+
+### Acerca de esta guía
+
+En esta guía, primero aprenderás qué son los agentes de decisión y cómo funcionan. A continuación, configura el Decisioning Studio Go de autoservicio, seguido del Decisioning Studio Pro con servicios integrales. Por último, revisas los informes y la información para comprender el rendimiento de tus agentes de toma de decisiones.
 
 ## Próximos pasos
 
-Ahora que sabes más sobre BrazeAI Decisioning Studio™, estás preparado para los siguientes pasos:
-
-1. [Integración de Decisioning Studio]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/integration/)
-2. [Creación de agentes]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/building_agents/)
+1. [Introducción a Decisioning Studio]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/)
+2. [Configuración de Decisioning Studio Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/)
+3. [Configuración de Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/)
+4. [Visualización de informes y información]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/)

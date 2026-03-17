@@ -19,7 +19,7 @@ Für den Zugriff auf den Landing Page Builder benötigen Sie [bestimmte Berechti
 
 Gehen Sie zu **Messaging** > **Landing Pages** und wählen Sie dann **Landing Page erstellen**. Sie können auch den Namen einer bestehenden Landing Page auswählen, um sie zu duplizieren oder zu ändern.
 
-![Der Bereich Landing Pages im Braze-Dashboard.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
+![Der Bereich „Landing Pages“ im Braze-Dashboard.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
 
 ### Schritt 2: Geben Sie die Seitendetails ein
 
@@ -47,11 +47,11 @@ Wir empfehlen Ihnen, diese bewährten Verfahren zu befolgen:
 
 Falls Sie das noch nicht getan haben, wählen Sie **Als Entwurf speichern**. Um mit der Anpassung Ihrer Seite zu beginnen, wählen Sie **Landing Page bearbeiten**. Der Drag-and-Drop-Editor wird mit einem Standard Template vorgeladen, das Sie an Ihren Anwendungsfall anpassen können.
 
-![Ein Beispiel für eine Landing Page, die per Drag-and-Drop-Editor erstellt wird.]({% image_buster /assets/img/landing_pages/template.png %})
+![Ein Beispiel für eine Landing Page, die im Drag-and-Drop-Editor erstellt wird.]({% image_buster /assets/img/landing_pages/template.png %})
 
-Der Editor verwendet zwei Arten von Komponenten für die Gestaltung von Landing Pages: Basisblöcke und Formularblöcke. Alle Blöcke müssen in einer Reihe platziert werden.
+Der Editor verwendet zwei Arten von Komponenten für die Gestaltung der Landing Page: Basisblöcke und Formularblöcke. Alle Blöcke müssen in einer Reihe platziert werden.
 
-![Der Abschnitt 'Erstellen' mit 'Zeilen' und 'Formularblöcken'.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
+![Der Abschnitt „Erstellen“ enthält „Zeilen“ und „Formularblöcke“.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
 
 {% tabs %}
 {% tab Basic blocks %}
@@ -79,7 +79,7 @@ Sie können diese Blöcke verwenden, um Inhalte hinzuzufügen und das Layout Ihr
 
 Mit diesen Blöcken können Sie ein Formular erstellen, das von Nutzern:innen übermittelte Daten mit ihrem Profil in Braze verknüpft. Denken Sie daran, dass Sie bei Verwendung von Formularblöcken auch eine zusätzliche Landing Page für den Bestätigungsstatus erstellen müssen.
 
-![Ein Formularblock, der eine neue Kund:in registriert und einen Rabattcode an ihre E-Mail sendet.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
+![Ein Formularblock, der einen neuen Kunden registriert und einen Rabattcode an dessen E-Mail sendet.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
 
 | Block Typ     | Beschreibung |
 |---------------|-------------|
@@ -88,7 +88,7 @@ Mit diesen Blöcken können Sie ein Formular erstellen, das von Nutzern:innen ü
 | Eingabefeld   | Ein Formularfeld, das Standardattribute (z.B. Vor- und Nachname) oder einen angepassten Attribut String Ihrer Wahl unterstützt. |
 | Dropdown      | Nutzer:innen können einen Artikel aus einer vordefinierten Liste auswählen. Sie können der Liste beliebige angepasste Attribute Strings hinzufügen. |
 | Kontrollkästchen      | Wenn ein Nutzer:innen das Kästchen markiert, wird das Attribut des Blocks auf `true` gesetzt. Wenn es nicht markiert ist, wird sein Attribut auf `false` gesetzt. |
-| Kontrollkästchen-Gruppe| Nutzer:innen können aus mehreren angebotenen Möglichkeiten auswählen. Die Werte werden entweder festgelegt oder zu einem definierten Array angepasster Attribute hinzugefügt. |
+| Kontrollkästchen-Gruppe| Nutzer:innen können aus mehreren vorgegebenen Optionen auswählen. Die Werte werden entweder festgelegt oder zu einem definierten angepassten Attribut für ein benutzerdefiniertes Array hinzugefügt. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
@@ -104,15 +104,15 @@ Auf dem Tab **Seitencontainer** können Sie Stile festlegen, die auf alle releva
 
 Wir empfehlen, die Stile auf der Ebene der Seitencontainer einzurichten, bevor Sie die Stile auf der Blockebene anpassen. Sie können auch ein Hintergrundbild für die gesamte Seite hinzufügen.
 
-![Der Abschnitt 'Seitencontainer' mit Optionen zum Anpassen von Hintergrundbildern, Farben, Rahmendetails und der Gestaltung des Inhalts.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
+![Der Abschnitt „Seitencontainer“ mit Optionen zur Anpassung von Hintergrundbildern, Farben, Rahmendetails und Inhaltsgestaltung.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
 
-#### Responsiv auf Nutzer:innen-Geräte
+#### Responsiv gegenüber Benutzergeräten
 
-Sie können Ihre Landing Page responsiv an die Größe des Geräts eines Nutzers:innen anpassen, indem Sie die Spalten auf kleineren Bildschirmen vertikal stapeln. Um dies zu aktivieren, fügen Sie eine Spalte in die Zeile ein, die responsiv sein soll, und schalten Sie dann im Bereich **Spalten anpassen** die Option **Vertikal stapeln auf kleineren Bildschirmen** um.
+Sie können Ihre Landing Page responsiv gegenüber der Größe des Geräts einer Nutzer:in machen, indem Sie Spalten auf kleineren Bildschirmen vertikal stapeln. Um dies zu aktivieren, fügen Sie bitte eine Spalte in die Zeile ein, die Sie responsiv gestalten möchten, und schalten Sie anschließend im Abschnitt **„Spalten anpassen“** die Option **„Auf kleineren Bildschirmen vertikal stapeln“** um.
 
-Wenn dieses Enablement aktiviert ist, können Sie auch die Stapelspalten umkehren, um die vertikale Reihenfolge von mehrspaltigen Inhalten auf kleineren Bildschirmen zu steuern. Dadurch sehen die Seiten auf dem Handy besser aus und fühlen sich besser an, ohne angepassten Code.
+Wenn Enablement aktiviert ist, können Sie auch die Stacks umkehren, um die vertikale Reihenfolge von mehrspaltigen Inhalten auf kleineren Bildschirmen zu steuern. Dadurch werden Seiten auf Mobilgeräten ohne angepassten Code ansprechender dargestellt.
 
-![Das Umschalten von "Vertikal stapeln auf kleineren Bildschirmen" in der Sektion "Spalten anpassen".]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
+![Die Option „Auf kleineren Bildschirmen vertikal stapeln“ im Abschnitt „Spalten anpassen“.]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
 
 #### Optionale und obligatorische Felder
 
@@ -120,7 +120,7 @@ Sie können wählen, ob ein Formularfeld erforderlich oder optional ist. Erforde
 
 Um beispielsweise die Erfassung von Einwilligungen vor dem Absenden des Formulars zu erzwingen, können Sie die Option **Erforderliche Feldeingabe** aktivieren, um ein Kontrollkästchen mit dem entsprechenden Disclaimer-Text als erforderlich zu definieren.
 
-![Ein Formularfeld mit Kontrollkästchen, bei dem die Option "Erforderliches Eingabefeld" umgeschaltet wurde.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
+![Ein Kontrollkästchen-Formularfeld, bei dem die Option „Erforderliches Eingabefeld“ ausgewählt ist.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
 
 ### Schritt 4: Erstellen Sie eine Bestätigungsseite (optional)
 
@@ -135,14 +135,18 @@ Um die Bestätigungsseite zu verlinken:
 Wenn Sie keine Bestätigungsseite einfügen, wissen die Nutzer:innen möglicherweise nicht, dass ihr Formular erfolgreich abgeschickt wurde. Fügen Sie immer ein Bestätigungserlebnis hinzu, um die Reise abzuschließen.
 
 {% alert note %}
-Wenn Ihre Bestätigungsseite in einem neuen Tab geöffnet wird, kann ein Nutzer:innen, der zur ursprünglichen Landing Page zurückkehrt und eine erneute Anmeldung mit aktualisierten Daten vornimmt, die vorherige Anmeldung überschreiben, was zu inkonsistenten Daten führt.
+Wenn Ihre Bestätigungsseite in einem neuen Tab geöffnet wird, kann ein Nutzer, der zur ursprünglichen Landing Page zurückkehrt und die Daten mit aktualisierten Informationen erneut übermittelt, die vorherige Übermittlung überschreiben, was zu inkonsistenten Daten führt.
+{% endalert %}
+
+{% alert important %}
+Wenn Sie einen Button mit der Option **„Formular senden, wenn Button angeklickt** **wird**“ konfigurieren und die Option **„Verhalten bei Klick“** verwenden, um eine Web-URL in einem neuen Tab zu öffnen, kann der in iOS Safari integrierte Popup-Blocker die Navigation möglicherweise verhindern. Dies geschieht, weil das Absenden des Formulars und die anschließende Öffnung eines neuen Tabs als Pop-up behandelt werden.<br><br>Um dieses Problem zu vermeiden, konfigurieren Sie die Buttons für die Formularübermittlung so, dass die resultierende URL in demselben Tab (nicht in einem neuen Tab) geöffnet wird. Buttons ohne Formularübermittlung können URLs problemlos in neuen Tabs öffnen.
 {% endalert %}
 
 ### Schritt 5: Vorschau auf die Seite
 
 Auf der Registerkarte **Vorschau** des Editors können Sie eine Vorschau Ihrer Landing Page anzeigen. Nachdem Sie Ihre Landing Page als Entwurf gespeichert haben, können Sie die URL aufrufen, indem Sie zu **Landing Pages** gehen und **URL kopieren** neben Ihrer Landing Page wählen. Sie können die URL auch mit anderen Personen teilen.
 
-![Eine Landing Page, bei der das Menü geöffnet ist, um die Option "URL kopieren" anzuzeigen.]({% image_buster /assets/img/landing_pages/copy-url.png %})
+![Eine Landing Page mit Öffnung des Menüs, um die Option „URL kopieren“ anzuzeigen.]({% image_buster /assets/img/landing_pages/copy-url.png %})
 
 Vergewissern Sie sich, bevor Sie veröffentlichen:
 

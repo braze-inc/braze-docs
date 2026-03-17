@@ -9,7 +9,7 @@ description: "Este artículo explica los diferentes componentes del objeto audie
 
 # Objeto de audiencia conectado
 
-> Un objeto de audiencia conectado es un SELECTOR que identifica a la audiencia a la que enviar el mensaje. 
+> Un objeto de audiencia conectado tiene un identificador que identifica la audiencia de tu mensaje. Por ejemplo, si utilizas matrices de atributos personalizados para realizar el seguimiento de todas las categorías y programas de televisión que un usuario ha marcado como favoritos, puedes utilizar las audiencias conectadas para enviar automáticamente una notificación push o un correo electrónico a cualquier persona que haya marcado un programa como favorito cada vez que se estrene un nuevo episodio, sin necesidad de configurar un segmento para cada programa.
 
 Este objeto se compone de un único filtro de audiencia conectado o de varios filtros de audiencia conectados en una expresión lógica que utiliza los operadores `AND` o `OR`.
 
@@ -34,7 +34,7 @@ Este objeto se compone de un único filtro de audiencia conectado o de varios fi
 
 ## Filtros de audiencia conectados
 
-La combinación de varios filtros de atributos personalizados creará un filtro de audiencia conectado, que creará un filtro de audiencia conectado cuando se combine con los operadores `AND` y `OR`.
+La combinación de varios filtros de atributos personalizados con los operadores`AND``OR`  y  crea un filtro de audiencia conectado.
 
 ### Filtro de atributos personalizado
 
@@ -60,8 +60,8 @@ El tipo de datos del atributo personalizado determina las comparaciones válidas
 | Cadena | `equals`, `not_equal`, `matches_regex`, `does_not_match_regex`, `exists`, `does_not_exist` |
 | Matriz | `includes_value`, `does_not_include_value`, `exists`, `does_not_exist` |
 | Numérico | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
-| Booleano | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
-| Tiempo | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
+| Booleano | `equals`, `not_equal`, `exists`, `does_not_exist` |
+| Tiempo | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Advertencias sobre la comparación de atributos
@@ -83,7 +83,9 @@ El tipo de datos del atributo personalizado determina las comparaciones válidas
       "value": "blue"
     }
 }
+```
 
+```json
 {
   "custom_attribute":
   {
@@ -92,7 +94,9 @@ El tipo de datos del atributo personalizado determina las comparaciones válidas
     "value": "pizza"
   }
 }
+```
 
+```json
 {
   "custom_attribute":
   {
@@ -142,7 +146,7 @@ Este filtro te permite segmentar en función del estado de suscripción al corre
 
 ### Filtro de la última aplicación utilizada
 
-Este filtro te permite segmentar en función de cuándo fue la última vez que el usuario utilizó la aplicación. Estos filtros contienen dos campos:
+Este filtro te permite segmentar en función de cuándo utilizaste por última vez la aplicación. Estos filtros contienen dos campos:
 
 #### Cuerpo del filtro
 ```json
@@ -160,4 +164,4 @@ Este filtro te permite segmentar en función de cuándo fue la última vez que e
 
 ### Consideraciones
 
-Las audiencias conectadas no pueden filtrar usuarios por atributos predeterminados, eventos personalizados, segmentos o eventos de interacción con los clientes. Para utilizar estos filtros, te recomendamos incorporarlos a un segmento de audiencia y luego especificar ese segmento en el botón [`segment_id`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters).
+Las audiencias conectadas no pueden filtrar a los usuarios por atributos predeterminados, eventos personalizados, segmentos o eventos de interacción con mensajes. Para utilizar estos filtros, recomendamos incorporarlos a un segmento de audiencia y, a continuación, especificar ese segmento en el`segment_id`parámetro para el[`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters)[punto final]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters). Si utilizas otros puntos finales, primero deberás añadir el segmento a la campaña activada por API o al Canvas en el panel de Braze.

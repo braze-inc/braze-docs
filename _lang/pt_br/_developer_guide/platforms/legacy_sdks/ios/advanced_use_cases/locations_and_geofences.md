@@ -1,5 +1,5 @@
 ---
-nav_title: Localizações e Geofences
+nav_title: Localizações e geofences
 article_title: local e Geofences para iOS
 platform: iOS
 page_order: 6
@@ -25,7 +25,7 @@ A partir do iOS 14, as geofences têm funcionamento instável para os usuários 
 
 ## Etapa 1: ativar push em segundo plano
 
-Para usar completamente nossa estratégia de sincronização de geofences, você deve ter [background push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work) ativado, além de completar a integração padrão de push.
+Para usar completamente nossa estratégia de sincronização de geofences, você deve ter [push em segundo plano]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work) ativado, além de completar a integração padrão de push.
 
 ## Etapa 2: ativar geofences
 
@@ -34,7 +34,7 @@ Por padrão, as geofences são ativadas se a coleta automática de localização
 Você também pode ativar geofences no momento da inicialização do app usando o método [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24). No dicionário `appboyOptions`, defina `ABKEnableGeofencesKey` como `YES`. Por exemplo:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-API_KEY"
@@ -72,7 +72,7 @@ O recurso de geofences só funciona enquanto a autorização de localização `A
 Para solicitar autorização de localização `Always`, use o seguinte código:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 CLLocationManager *locationManager = [[CLLocationManager alloc] init];
@@ -98,11 +98,11 @@ Para que as localizações funcionem corretamente, confira também se seu app n�
 
 ### Ativar geofences na página de locais:
 
-![As opções de geofence na página de locais do Braze.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
+![As opções de geofence na página de localizações do Braze.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
 ### Ativar geofences na página de configurações:
 
-![A caixa de seleção de geofences localizada nas páginas de configurações da Braze.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
+![A caixa de seleção de geofence localizada nas páginas de configurações do Braze.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 
 ## Desativando solicitações automáticas de geofence
 
@@ -111,7 +111,7 @@ A partir da versão 3.21.3 do SDK do iOS, é possível desativar as geofences pa
 Você também pode desativar solicitações automáticas de geofences na inicialização do app pelo método [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24). No dicionário `appboyOptions`, defina `ABKDisableAutomaticGeofenceRequestsKey` como `YES`. Por exemplo:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-API_KEY"
@@ -142,7 +142,7 @@ Quando o SDK da Braze solicita geofences para monitorar do backend, ele relata a
 Para controlar o local que o SDK relata para fins de receber as geofences mais relevantes, a partir da versão 3.21.3 do SDK do iOS, é possível solicitar manualmente as geofences informando a latitude e longitude de um local. Recomenda-se desativar solicitações automáticas de geofences ao usar esse método. Para fazer isso, use o seguinte código:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance] requestGeofencesWithLongitude:longitude

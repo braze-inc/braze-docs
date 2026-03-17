@@ -1,6 +1,6 @@
-## Personalizando o comportamento de exibição
+## Personalização do comportamento de exibição
 
-Você pode alterar o comportamento de exibição das mensagens no aplicativo em tempo de execução através do seguinte:
+Você pode alterar o comportamento de exibição das mensagens no app em tempo de execução por meio do seguinte:
 
 ```csharp
 // Sets in-app messages to display immediately when triggered.
@@ -13,7 +13,7 @@ Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayA
 Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISCARD);
 ```
 
-## Definindo um ouvinte personalizado
+## Configuração de um ouvinte personalizado
 
 Se precisar de mais controle sobre como um usuário interage com as mensagens no app, use um `BrazeInAppMessageListener` e atribua-o a `Appboy.AppboyBinding.inAppMessageListener`. Para todos os delegados que você não quiser usar, basta deixá-los como `null`.
 

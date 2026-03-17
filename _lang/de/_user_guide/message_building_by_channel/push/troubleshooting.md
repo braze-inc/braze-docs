@@ -1,15 +1,15 @@
 ---
 nav_title: Fehlersuche
 article_title: Fehlerbehebung Push
-page_order: 23
+page_order: 24
 page_type: reference
 description: "Diese Seite enthält Fehlerbehebungen für verschiedene Probleme im Zusammenhang mit dem Push Messaging-Kanal."
 channel: push
 ---
 
-# Fehlerbehebung Push
+# Fehlerbehebung bei Push
 
-> Diese Seite hilft Ihnen bei der Behebung verschiedener Probleme, die mit dem Messaging-Kanal von Push auftreten können.
+> Bitte nutzen Sie diese Seite zur Fehlerbehebung bei Problemen mit dem Push-Messaging-Kanal.
 
 ## Fehlende Push-Benachrichtigungen
 
@@ -44,7 +44,7 @@ Vergewissern Sie sich, dass Sie in das Segment fallen, auf das Sie Targeting bet
 
 Sie können auch bestätigen, dass der Nutzer:innen Teil des Segments ist, indem Sie bei der Erstellung eines Segments die **Benutzersuche** verwenden.
 
-![Abschnitt Nutzer:in mit einem Suchfeld.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%;"}
+![Abschnitt „Nutzersuche“ mit einem Suchfeld.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%;"}
 
 #### Push-Benachrichtigungen Kappen
 
@@ -52,7 +52,7 @@ Prüfen Sie die globalen Frequenz-Caps. Es ist möglich, dass Sie die Push-Benac
 
 Sie können dies tun, indem Sie das [globale Frequency-Capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#freq-cap-feat-over) im Dashboard aktivieren. Wenn die Kampagne so eingestellt ist, dass sie den Frequency-Capping-Regeln unterliegt, sind einige Nutzer:innen von diesen Einstellungen betroffen.
 
-![Details zur Kampagne]({% image_buster /assets/img_archive/trouble3.png %})
+![Kampagne Details]({% image_buster /assets/img_archive/trouble3.png %})
 
 #### Rate-Limits
 
@@ -78,7 +78,7 @@ Ein Push-Token ist ein Bezeichner, den Absender verwenden, um bestimmte Geräte 
 
 Wenn Sie Push-Sendungen mit internen Nutzern testen, vergewissern Sie sich, dass der Nutzer:in, der die Push-Benachrichtigung erhalten soll, derzeit in der entsprechenden App angemeldet ist. Dies kann dazu führen, dass Nutzer:innen entweder keinen Push erhalten oder einen Push erhalten, von dem Sie glauben, dass er nicht segmentiert ist.
 
-## Push-Klicks öffnen unerwartet in der App
+## Push-Klicks werden unerwartet in der App geöffnet
 
 Wenn Sie Probleme damit haben, dass Links in Push-Benachrichtigungen unerwartet in Ihrer App statt in Ihrem Internetbrowser geöffnet werden, liegt möglicherweise ein Problem mit der Konfiguration Ihrer Kampagne oder der Implementierung des SDK vor. Beziehen Sie sich auf diese Schritte für Hilfe.
 
@@ -86,7 +86,7 @@ Wenn Sie Probleme damit haben, dass Links in Push-Benachrichtigungen unerwartet 
 
 Überprüfen Sie in Ihrer Kampagne oder im Canvas-Schritt, dass die Option **Internet-URL innerhalb der mobilen App öffnen** nicht ausgewählt ist. Ist dies der Fall, löschen Sie die Auswahl und starten Sie erneut. 
 
-!["Verhalten bei Klick" bei der Konfiguration eines Push auf "Internet-URL öffnen" gesetzt und "Internet-URL innerhalb der mobilen App öffnen" nicht markiert.]({% image_buster /assets/img/push_on_click.png %})
+![Das Feld „On-Click-Verhalten“ der Push-Konfiguration ist auf „Öffnung der Internet-URL“ eingestellt, wobei „Öffnung der Internet-URL in einer mobilen App“ deaktiviert ist.]({% image_buster /assets/img/push_on_click.png %})
 
 Die Standard-Interaktion für das Klickverhalten "Internet-URL öffnen" unterscheidet sich je nach SDK-Version. Bei den SDK-Versionen iOS 2.29.0 und Android 2.0.0 und höher ist diese Option standardmäßig ausgewählt und die Internet-URLs werden in einer Webansicht innerhalb der App geöffnet. Vor diesen Versionen ist diese Option standardmäßig deaktiviert und Internet-URLs werden im Standard Webbrowser des Geräts geöffnet.
 
@@ -101,7 +101,7 @@ Wenn Links in Ihren Push-Benachrichtigungen unerwartet in der App geöffnet werd
 3. **Überprüfen Sie die iOS Push-Registrierung:** Für iOS sehen Sie sich Schritt 1 der Anleitung zur Integration von [Push-Benachrichtigungen mit APNs]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns) an. Stellen Sie sicher, dass Ihr Delegatenobjekt synchron zugewiesen wird, bevor die App den Start beendet. Diesen Schritt sollten Sie mit der Methode `application:didFinishLaunchingWithOptions:` durchführen.
 4. **Testen Sie Ihre Integration:** Nachdem Sie die Anpassungen vorgenommen haben, testen Sie das Verhalten der Push-Benachrichtigung sowohl auf iOS- als auch auf Android-Geräten, um sicherzustellen, dass das Problem behoben ist.
 
-## Web-Push-Benachrichtigungen verhalten sich nicht wie erwartet
+## Web-Push-Benachrichtigungen funktionieren nicht wie erwartet.
 
 Wenn Sie Probleme mit Push-Benachrichtigungen in Ihrem Browser haben, müssen Sie möglicherweise die Benachrichtigungsberechtigungen Ihrer Website zurücksetzen und den Speicher Ihrer Website leeren. Beziehen Sie sich auf diese Schritte für Hilfe.
 
@@ -110,8 +110,8 @@ Wenn Sie Probleme mit Push-Benachrichtigungen in Ihrem Browser haben, müssen Si
 
 ### Chrome auf dem Desktop zurücksetzen
 
-1. Wählen Sie im Chrome-Browser neben Ihrer URL das Symbol für den Schieberegler **Site-Informationen anzeigen**.
-2. Wählen Sie unter **Benachrichtigungen** die Option **Berechtigung zurücksetzen**.
+1. Wählen Sie neben Ihrer URL im Chrome-Browser das Schieberegler-Symbol **„Website-Informationen anzeigen**“ aus.
+2. Wählen Sie unter **„Benachrichtigungen**“ **die Option „Berechtigung zurücksetzen**“.
 3. Öffnen Sie Chrome DevTools. Im Folgenden finden Sie die relevanten Tastenkombinationen pro Betriebssystem.
 
 <style> 
@@ -129,8 +129,8 @@ table {
 {:start="4"}
 4\. Navigieren Sie in DevTools zum Tab **Anwendung**.
 5\. Wählen Sie in der Seitenleiste **Speicher** aus.
-6\. Wählen Sie **Standortdaten löschen**.
-7\. Chrome fordert Sie auf, die Seite neu zu laden, um Ihre aktualisierten Einstellungen zu übernehmen. Wählen Sie **Neu laden**.
+6\. Auswählen **„Website-Daten löschen**“.
+7\. Chrome fordert Sie auf, die Seite neu zu laden, um Ihre aktualisierten Einstellungen zu übernehmen. Bitte wählen Sie **„Neu laden**“.
 
 Ihre Push-Berechtigungen werden jetzt zurückgesetzt. Öffnen Sie einen neuen Tab auf Ihrer Website und probieren Sie es aus.
 
@@ -139,14 +139,14 @@ Ihre Push-Berechtigungen werden jetzt zurückgesetzt. Öffnen Sie einen neuen Ta
 Wenn Sie eine Benachrichtigung von Ihrer Website in Ihrem Android Benachrichtigungsfeld sehen:
 
 1. Tippen Sie in der Push-Benachrichtigung auf <i class="fas fa-cog" title="Einstellungen"></i> und wählen Sie **Website-Einstellungen**.
-2. Tippen Sie in den **Website-Einstellungen** auf **Löschen & Zurücksetzen**.
+2. Bitte tippen Sie in **den Website-Einstellungen** auf **„Löschen“ und anschließend& auf „Zurücksetzen**“.
 
 Wenn Sie keine Benachrichtigung von Ihrer Website geöffnet haben:
 
 1. Öffnen Sie Chrome auf Android.
 2. Tippen Sie auf das Menü <i class="fas fa-ellipsis-vertical"></i>.
 3. Gehen Sie zu **Einstellungen** > **Website-Einstellungen** > **Benachrichtigungen**.
-4. Überprüfen Sie, ob die Benachrichtigungen **vor dem Senden** auf **Fragen** eingestellt sind **(empfohlen)**.
+4. Überprüfen Sie, dass die Benachrichtigungen auf **„Vor dem Senden fragen“** eingestellt sind **(empfohlen)**.
 5. Finden Sie Ihre Website in der Liste.
 6. Wählen Sie den Eintrag aus und tippen Sie auf **Löschen und Zurücksetzen**.
 
@@ -157,10 +157,10 @@ Ihre Push-Berechtigungen werden jetzt zurückgesetzt. Öffnen Sie einen neuen Ta
 
 ### Firefox auf dem Desktop zurücksetzen
 
-1. Wählen Sie neben der URL Ihrer Website <i class="fa-solid fa-circle-info" alt="info icon"></i> oder <i class="fas fa-lock" alt="lock icon"></i> aus.
+1. Auswählen Sie neben <i class="fa-solid fa-circle-info" alt="info icon"></i>Ihrer Website-URL entweder  oder <i class="fas fa-lock" alt="lock icon"></i>.
 2. Wählen Sie unter **Berechtigungen**, neben **Benachrichtigungen erhalten**<i class="fa-solid fa-circle-xmark" title="Diese Berechtigung löschen und erneut fragen"></i> um die Berechtigungen für Benachrichtigungen zu löschen.
 3. Wählen Sie im gleichen Menü **Cookies und Website-Daten löschen aus**.
-4. Wählen Sie in dem Dialog zur Bestätigung Ihrer Wahl **OK** aus.
+4. Wählen Sie im Dialogfeld zur Bestätigung Ihrer Auswahl **die Option „OK**“.
 
 Ihre Push-Berechtigungen werden jetzt zurückgesetzt. Öffnen Sie einen neuen Tab auf Ihrer Website und probieren Sie es aus.
 
@@ -174,16 +174,16 @@ Um Push-Berechtigungen unter Android zurückzusetzen, referenzieren Sie diesen [
 ### Safari auf macOS zurücksetzen
 
 {% alert note %}
-Diese Schritte gelten nur für macOS, da Apple Web-Push für Safari unter Windows nicht unterstützt.
+Diese Schritte gelten ausschließlich für MacOS, da Apple Web-Push für Safari unter Windows nicht unterstützt.
 {% endalert %}
 
 1. Öffnen Sie Safari.
 2. Gehen Sie in der [Menüleiste auf dem Mac](https://support.apple.com/guide/mac-help/whats-in-the-menu-bar-mchlp1446/mac) zu **Safari** > **Einstellungen** > **Websites** > **Benachrichtigungen**.
 3. Wählen Sie Ihren Standort aus der Liste aus.
-4. Wählen Sie **Entfernen**, um die Benachrichtigungsberechtigungen für die Website zu löschen.
+4. Wählen Sie **„Entfernen“,** um die Benachrichtigungsberechtigungen für die Website zu löschen.
 5. Gehen Sie dann zu **Datenschutz** > **Website-Daten verwalten**.
 6. Wählen Sie Ihren Standort aus der Liste aus.
-7. Wählen Sie **Entfernen**, oder um alle Daten der Website zu entfernen, wählen Sie **Alle entfernen**.
+7. Auswählen Sie **„Entfernen“** oder, um alle Website-Daten zu löschen, **„Alle entfernen**“.
 8. Wählen Sie **Erledigt**.
 
 Ihre Push-Berechtigungen werden jetzt zurückgesetzt. Öffnen Sie einen neuen Tab auf Ihrer Website und probieren Sie es aus.

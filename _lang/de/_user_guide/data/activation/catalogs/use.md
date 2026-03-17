@@ -1,11 +1,11 @@
 ---
-nav_title: Kataloge verwenden
+nav_title: Verwendung von Katalogen
 article_title: Kataloge verwenden
 page_order: 1.5
 description: "In diesem Referenzartikel erfahren Sie, wie Sie Kataloge verwenden, um Nicht-Nutzerdaten in Ihren Braze Kampagnen über Liquid zu referenzieren."
 ---
 
-# Kataloge verwenden
+# Verwendung von Katalogen
 
 > Nachdem Sie einen Katalog erstellt haben, können Sie in Ihren Braze-Kampagnen über [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) auf Nicht-Benutzerdaten verweisen. Sie können Kataloge in allen Ihren Nachrichtenkanälen verwenden, auch überall dort, wo Liquid im Drag-and-Drop-Editor unterstützt wird.
 
@@ -13,9 +13,9 @@ description: "In diesem Referenzartikel erfahren Sie, wie Sie Kataloge verwenden
 
 ### Schritt 1: Personalisierungsart hinzufügen {#step-one-personalization}
 
-Klicken Sie im Message Composer Ihrer Wahl auf das Plus-Symbol <i class="fas fa-plus-circle"></i>, um das Modal **"Personalisierung hinzufügen"** zu öffnen, und wählen Sie als **Personalisierungstyp**" **Katalogartikel** ". Wählen Sie dann Ihren **Katalognamen**. In unserem vorherigen Beispiel wählen wir den Katalog "Spiele".
+Wählen Sie im Nachrichten-Editor Ihrer Wahl das<i class="fas fa-plus-circle"></i>Plus-Symbol, um das Modal **„Personalisierung hinzufügen”** zu öffnen, und wählen Sie **„Katalogartikel”** als **Person**alisierungstyp aus. Wählen Sie anschließend den Namen Ihres Katalogs aus. In unserem vorherigen Beispiel wählen wir den Katalog "Spiele".
 
-\![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
+![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
 
 Wir können sofort die folgende Liquid-Vorschau sehen:
 
@@ -56,17 +56,17 @@ Sie erhalten eine E-Mail zum Herunterladen der CSV-Datei, nachdem Sie den Export
 
 ### Mehrere Artikel
 
-Sie sind nicht auf einen Artikel in einer einzigen Nachricht beschränkt. Sie können das Modal **Personalisierung hinzufügen** verwenden, um bis zu drei Katalogartikel auf einmal hinzuzufügen. Wenn Sie Ihrer Nachricht weitere Elemente hinzufügen möchten, wählen Sie im Nachrichten-Composer die Option **Personalisierung hinzufügen** und wählen Sie die zusätzlichen Katalogelemente und Informationen aus, die angezeigt werden sollen.
+Sie sind nicht auf einen Artikel pro Nachricht beschränkt. Verwenden Sie das Modal **„Personalisierung hinzufügen”,** um bis zu drei Katalogartikel gleichzeitig hinzuzufügen. Um weitere Elemente hinzuzufügen, wählen Sie im Editor erneut **„Personalisierung hinzufügen”** und wählen Sie zusätzliche Katalogartikel und Informationen aus, die angezeigt werden sollen.
 
 Sehen Sie sich dieses Beispiel an, in dem wir die `id` von drei Spielen, Tales, Teslagrad und Acaratus, für **Katalogartikel** hinzufügen und `title` für **Anzuzeigende Informationen** auswählen.
 
-\![]({% image_buster /assets/img_archive/catalog_multiple_items.png %}){: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/catalog_multiple_items.png %}){: style="max-width:70%" }
 
 Wir können unsere Nachricht weiter personalisieren, indem wir etwas Text um unser Liquid herum hinzufügen:
 
 {% raw %}
 ```liquid
-Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
+Get the ultimate trio {% catalog_items Games 1234 1235 1236 %}
 {{ items[0].title }}, {{ items[1].title }}, and {{ items[2].title }} today!
 ```
 {% endraw %}
@@ -90,15 +90,15 @@ Dazu verwenden Sie eine Liquid `if` Anweisung, wie in diesem Beispiel:
 {% catalog_selection_items item-list selections %} 
 {% if items[0].venue_name.size > 10 %}
 Message if the venue name's size is more than 10 characters. 
-{% elsif items[0].venue_name.size < 10 %}
-Message if the venue name's size is less than 10 characters. 
+{% elsif items[0].venue_name.size <= 10 %}
+Message if the venue name's size is 10 characters or fewer. 
 {% else %} 
-{% abort_message(no venue_name) %} 
+{% abort_message('no venue_name') %} 
 {% endif %}
 ```
 {% endraw %}
 
-In diesem Beispiel werden unterschiedliche Nachrichten angezeigt, wenn das angepasste Attribut `venue_name` mehr als 10 Zeichen oder weniger als 10 Zeichen hat. Wenn `venue_name` auf `blank` steht, wird nichts angezeigt. 
+In diesem Beispiel werden je nach Anzahl der Zeichen im Feld „Katalogartikel“ `venue_name`unterschiedliche Nachrichten angezeigt. Wenn das Feld`venue_name` leer ist, wird die Nachricht abgebrochen.
 
 Beachten Sie, dass Sie die Katalogliste und ggf. die Auswahl deklarieren müssen, bevor Sie `if` Anweisungen verwenden. Im Beispiel ist `item-list` die Katalogliste und `selections` ist der Name der Auswahl.
 
@@ -116,11 +116,11 @@ Wenn Sie z.B. die `image_link` aus unserem Spielekatalog zu unserer Werbebotscha
 ```
 {% endraw %}
 
-\![Content-Card-Komponist mit dem im Bildfeld verwendeten Liquid-Tag des Katalogs.]({% image_buster /assets/img_archive/catalog_image_link1.png %})
+![Content-Card-Composer mit dem Liquid-Tag des Katalogs, der im Bildfeld verwendet wird.]({% image_buster /assets/img_archive/catalog_image_link1.png %})
 
 So sieht das aus, wenn das Liquid gerendert wird:
 
-\![Beispiel Content-Card mit gerenderten Liquid-Tags.]({% image_buster /assets/img_archive/catalog_image_link2.png %}){: style="max-width:50%" }
+![Beispiel Content-Card mit gerenderten Liquid-Tags.]({% image_buster /assets/img_archive/catalog_image_link2.png %}){: style="max-width:50%" }
 
 ### Template für Katalogartikel
 
@@ -154,12 +154,12 @@ Um einen Benutzer zum Beispiel darüber zu informieren, dass Tales (ein Artikel 
 {% assign wishlist = {{custom_attribute.${wishlist}}}%}
 {% catalog_items Games {{ wishlist[0] }} %}
 
-Get {{ items[0].title }} now, for just {{ items[0].price }}!
+Get {{ items[0].title }} now for {{ items[0].price }}!
 ```
 {% endraw %}
 
 Sie wird wie folgt angezeigt:
-> Holen Sie sich Tales jetzt, für nur 7.49!
+> Erwerben Sie Tales jetzt für nur 7,49 Euro.
 
 Mit Hilfe von Templates können Sie für jede:n Nutzer:in einen anderen Katalogartikel rendern, der auf seinen angepassten Attributen, Event-Eigenschaften oder einem anderen in Templates definierbaren Feld basiert.
 
@@ -171,10 +171,6 @@ Sie können eine CSV-Datei mit neu hinzuzufügenden Katalogartikeln oder zu aktu
 
 Sie können Kataloge auch manuell mit Liquid logic zusammenstellen. Beachten Sie jedoch, dass Braze, wenn Sie eine ID eingeben, die nicht existiert, trotzdem ein Artikel-Array ohne Objekte zurückgibt. Wir empfehlen Ihnen, eine Fehlerbehandlung einzubauen, wie z. B. die Überprüfung der Größe des Arrays und die Verwendung einer `if` Anweisung, um den Fall eines leeren Arrays zu berücksichtigen.
 
-{% alert note %}
-Liquid kann derzeit nicht in Katalogen verwendet werden. Wenn die Liquid-Personalisierung innerhalb einer Zelle in Ihrem Katalog aufgeführt ist, wird der dynamische Wert nicht gerendert und nur das eigentliche Liquid wird angezeigt.
-{% endalert %}
-
 #### Template für Katalogartikel einschließlich Liquid
 
 Ähnlich wie bei [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) müssen Sie das Kennzeichen `:rerender` in einem Liquid-Tag verwenden, um den Liquid-Inhalt eines Katalogartikels darzustellen. Beachten Sie, dass das `:rerender` Flag nur eine Ebene tief ist, d. h. es gilt nicht für verschachtelte Liquid-Tag-Aufrufe.
@@ -183,13 +179,13 @@ Wenn ein Katalogeintrag Felder für Benutzerprofile enthält (innerhalb eines Li
 
 Wenn zum Beispiel ein Katalog mit dem Namen "Messages" einen Artikel mit diesem Liquid enthält:
 
-\![]({% image_buster /assets/img_archive/catalog_liquid_templating.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img_archive/catalog_liquid_templating.png %}){: style="max-width:80%;"}
 
 Um den folgenden Liquid-Inhalt wiederzugeben:
 
 {% raw %}
 ```liquid
-Hi ${first_name}
+Hi ${first_name},
 
 {% catalog_items Messages greet_msg :rerender %}
 {{ items[0].Welcome_Message }}

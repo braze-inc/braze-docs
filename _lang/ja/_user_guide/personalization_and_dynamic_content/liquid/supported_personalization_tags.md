@@ -1,16 +1,16 @@
 ---
-nav_title: 対応パーソナライズタグ
-article_title: 対応リキッド・パーソナライゼーション・タグ
+nav_title: サポートされているパーソナライズタグ
+article_title: サポートされているLiquidパーソナライゼーション・タグ
 page_order: 1
-description: "このリファレンス記事は、サポートされているリキッドパーソナライゼーションタグの完全なリストをカバーしている。"
+description: "このリファレンス記事は、サポートされているLiquidパーソナライゼーションタグの完全なリストをカバーしている。"
 search_rank: 1
 ---
 
-# 対応パーソナライズタグ
+# サポートされているパーソナライズタグ
 
-> このリファレンス記事は、サポートされているリキッドパーソナライゼーションタグの完全なリストをカバーしている。
+> このリファレンス記事は、サポートされているLiquidパーソナライゼーションタグの完全なリストをカバーしている。
 
-## 対応タグの概要
+## サポートされているタグの概要
 
 便宜上、サポートされているパーソナライゼーション・タグの概要を示す。各タイプのタグとベストプラクティスの詳細については、引き続きお読みください。
 
@@ -31,8 +31,8 @@ search_rank: 1
 | イベントプロパティ <br> (ワークスペースによって異なる)| `{{event_properties.${your_custom_event_property}}}` |
 | キャンバスのコンテキスト変数 | `{{context}}` |
 | カスタム属性 <br> (ワークスペースによって異なる) | `{{custom_attribute.${your_custom_attribute}}}` |
-| <a href='/docs/api/objects_filters/trigger_properties_object/'>API トリガーのプロパティ</a> |`{{api_trigger_properties}}` |
-| キャンバスエントリのプロパティ | `{{canvas_entry_properties.${property_name}}}` |
+| <a href='/docs/api/objects_filters/trigger_properties_object/'>API トリガープロパティ</a> |`{{api_trigger_properties}}` |
+| キャンバスエントリのプロパティ | `{{context.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
@@ -83,7 +83,7 @@ search_rank: 1
 | `{{app.${name}}}` | メッセージを要求するアプリ名（Brazeダッシュボードで定義されている）。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-例えば、このリキッドコードは、リクエストアプリがリストにある2つのAPIキーのうちの1つでない場合、メッセージを中止する：
+例えば、このLiquidコードは、リクエストアプリがリストにある2つのAPIキーのうちの1つでない場合、メッセージを中止する：
 
 ```liquid
 {% assign allowed_api_keys = 'sdk_api_key_1,sdk_api_key_2' | split: ',' %}
@@ -96,14 +96,14 @@ User is in list of apps
 
 ## ターゲットデバイス情報
 
-プッシュ通知、アプリ内メッセージ、バナーでは、メッセージを送信するデバイスのアトリビューションを以下のようにテンプレート化できる。つまり、プッシュ通知、アプリ内メッセージ、またはバナーは、メッセージが読まれる端末の端末属性を含むことができる。これらの属性はコンテンツカードでは機能しないことに注意しよう。 
+プッシュ通知、アプリ内メッセージ、バナーについては、メッセージを受信するデバイス向けに以下の属性をテンプレート化できる。プッシュ通知、アプリ内メッセージ、またはバナーには、ユーザーがメッセージを読む端末の属性が含まれることがある。これらの属性はコンテンツカードやメールでは機能しない。メールの場合、メッセージは送信前に表示されるため、ユーザーがメールを開封する端末は、その時点では不明である。
 
 |タグ | 説明 |
 |------------------|---|
 | `{{targeted_device.${id}}}` | これはBrazeのデバイス識別子である。iOS の場合、これは Apple のベンダー用識別子 (IDFV) または UUID になります。Android などのプラットフォームでは、ランダムに生成されたUUID です。たとえば、ユーザに5 つのデバイスがある場合、5 つのデバイスすべてに対して送信試行が行われ、それぞれに対応するデバイス識別子が使用されます。ユーザーが最後に使用したデバイスにメッセージを送信するようするように設定されている場合、Braze で識別された最後に使用されたデバイスに対して送信操作が1 回だけ試行されます。 |
 | `{{targeted_device.${carrier}}}` | 利用可能であれば、直近で使用したデバイスの電話サービスキャリア。例えば、「Verizon」や「Orange」などです。 |
 | `{{targeted_device.${idfa}}}` | iOS デバイスの場合、アプリケーションが[ オプションのIDFA コレクション]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/) で設定されている場合、この値はAdvertising (IDFA) の識別子になります。iOS以外のデバイスの場合、この値はNULLになる。 |
-| `{{targeted_device.${google_ad_id}}}` | Androidデバイスの場合、アプリケーションが当社の[オプションのGoogle Play広告IDコレクション]で設定されている場合、この値はGoogle Play広告識別子となる。Android以外のデバイスの場合、この値はNULLになる。 |
+| `{{targeted_device.${google_ad_id}}}` | Android端末の場合、この値はアプリケーションが当社の[オプションのGoogle Play広告識別子収集]で設定されている場合、Google Play広告識別子となる。Android以外のデバイスの場合、この値はNULLになる。 |
 | `{{targeted_device.${roku_ad_id}}}` | Rokuデバイスの場合、この値は、アプリケーションがBrazeで設定される際に収集されるRoku Advertising Identifierとなる。Roku以外のデバイスの場合、この値はNULLになる。 |
 | `{{targeted_device.${model}}}` | もしあれば、デバイスのモデル名。例えば、「iPhone 6S」や「Nexus 6P」、「Firefox」などだ。 |
 | `{{targeted_device.${os}}}` | もしあれば、デバイスのオペレーティングシステム。例えば、「iOS 9.2.1」や「アンドロイド（ロリポップ）」、「ウィンドウズ」などだ。 |
@@ -221,9 +221,9 @@ Sale on Converse!
 
 ## 構文タグ
 
-構文タグを使用して、Liquid のレンダリング方法を制御できます。`echo` タグを使用して式を返すことができます。これは、中括弧を使って式をラップするのと同じだが、リキッドタグの中でこのタグを使うことができる。また、`liquid` タグを使用して、各タグに区切り文字を使用せずにLiquid のブロックを設定することもできます。`liquid` タグを使用する場合、各タグは個別の行に配置する必要があります。より詳細な情報と例については、Shopifyの[構文タグに関する](https://shopify.dev/api/liquid/tags#syntax-tags)ドキュメントをチェックしよう。
+構文タグを使用して、Liquid のレンダリング方法を制御できます。`echo` タグを使用して式を返すことができます。これは、中括弧を使って式をラップするのと同じだが、Liquidタグの中でこのタグを使うことができる。また、`liquid` タグを使用して、各タグに区切り文字を使用せずにLiquid のブロックを設定することもできます。`liquid` タグを使用する場合、各タグは個別の行に配置する必要があります。より詳細な情報と例については、Shopifyの[構文タグに関する](https://shopify.dev/api/liquid/tags#syntax-tags)ドキュメントをチェックしよう。
 
-[ホワイトスペースコントロール](https://shopify.github.io/liquid/basics/whitespace/)を使用すると、タグの周りのホワイトスペースを削除できます。これにより、液体出力の外観をさらに制御することができます。
+[ホワイトスペースコントロール](https://shopify.github.io/liquid/basics/whitespace/)を使用すると、タグの周りのホワイトスペースを削除できます。これにより、Liquid出力の外観をさらに制御することができます。
 
 ## HTTPステータスコード {#http-personalization}
 

@@ -1,16 +1,20 @@
 ---
-nav_title: Administrador de la recopilación de datos
-article_title: Gestión de la recopilación de datos para el SDK de Braze
+nav_title: Administrar la recopilación de datos
+article_title: Gestionar la recopilación de datos para el SDK de Braze
 page_order: 8
-description: "Aprende a gestionar la recopilación de datos para el SDK de Braze."
+description: "Aprende a administrar la recopilación de datos para el SDK de Braze."
 
 ---
 
-# Administrador de la recopilación de datos
+# Administrar la recopilación de datos
 
-> Aprende a gestionar la recopilación de datos para el SDK de Braze, de modo que puedas cumplir cualquier normativa sobre privacidad de datos que sea necesaria.
+> Aprende a administrar la recopilación de datos para el SDK de Braze, de modo que puedas cumplir con cualquier normativa de privacidad de datos según sea necesario.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/analytics/managing_data_collection.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/analytics/managing_data_collection.md %}
 {% endsdktab %}
@@ -19,7 +23,8 @@ description: "Aprende a gestionar la recopilación de datos para el SDK de Braze
 {% multi_lang_include developer_guide/swift/analytics/managing_data_collection.md %}
 {% endsdktab %}
 
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/analytics/managing_data_collection.md %}
+{% sdktab react native %}
+{% multi_lang_include developer_guide/react_native/analytics/managing_data_collection.md %}
 {% endsdktab %}
+
 {% endsdktabs %}

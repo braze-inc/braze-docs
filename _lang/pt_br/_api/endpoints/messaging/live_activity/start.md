@@ -19,6 +19,8 @@ description: "Este artigo descreve detalhes sobre o endpoint \"Iniciar atividade
 
 Depois de criar uma atividade ao vivo, você pode fazer uma solicitação POST para iniciar remotamente sua atividade para qualquer segmento específico. Para saber mais sobre o Live Activities da Apple, consulte [Como iniciar e atualizar o Live Activities com notificações por push do ActivityKit](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications).
 
+Se `content-available` não estiver definido, a prioridade padrão do serviço de Notificações por Push da Apple (APNs) é 10. Se `content-available` estiver definido, essa prioridade é 5. Consulte [objeto de push da Apple]({{site.baseurl}}/api/objects_filters/messaging/apple_object) para mais detalhes.
+
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
 ## Pré-requisitos
@@ -47,7 +49,7 @@ Para usar este endpoint, você precisará concluir o seguinte:
   "stale_date": "(optional, datetime in ISO-8601 format) The time the Live Activity content is marked as outdated in the user’s UI.",
   "notification": "(required, object) Include an `apple_push` object to define a push notification that creates an alert for the user, displayed on paired watchOS devices. Should include `notification.alert.title` and `notification.alert.body`",
   // One of the following:
-  "external_user_ids": "(optional, array of strings) see external user identifier",
+  "external_user_ids": "(optional, array of strings) see external user identifier, maximum 50",
   "custom_audience": "(optional, connected audience object) see connected audience",
   "segment_id": "(optional, string) see segment identifier"
 }
@@ -64,15 +66,15 @@ Para usar este endpoint, você precisará concluir o seguinte:
 | `content_state` | Obrigatória | Objeto  | Você define os `ContentState` parâmetros quando cria sua Atividade ao Vivo. Passe os valores atualizados para o seu `ContentState` usando este objeto.<br><br>O formato desta solicitação deve corresponder à forma que você definiu inicialmente. |
 | `dismissal_date` | Opcional | Datetime <br>(string [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Esse parâmetro define o tempo para remover a atividade ao vivo da interface do usuário. |
 | `stale_date` | Opcional | Datetime <br>(string [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Este parâmetro informa ao sistema quando o conteúdo da Atividade ao Vivo é marcado como desatualizado na interface do usuário. |
-| `notification` | Obrigatória | Objeto | Inclua um [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) objeto para definir uma notificação por push. Esse comportamento dessa notificação por push depende se o usuário está ativo ou se o usuário está usando um dispositivo proxy. {::nomarkdown}<ul><li>Se um <code>notification</code> está incluído e o usuário está ativo em seu iPhone quando a atualização é entregue, a interface de atividade ao vivo atualizada deslizará para baixo e será exibida como uma notificação por push.</li><li>Se um <code>notification</code> está incluído e o usuário não está ativo em seu iPhone, sua tela acenderá para exibir a interface de Atividade ao Vivo atualizada em sua tela de bloqueio.</li><li>O <code>notification alert</code> não será exibido como uma notificação por push padrão. Além disso, se um usuário tiver um {dispositivo} proxy, como um Apple Watch, o <code>alert</code> será exibido lá.</li></ul>{:/} |
-| `external_user_ids` | Opcional se `segment_id` ou `audience` for fornecido | Matriz de strings | Consulte [ID de usuário externo]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields).  |
+| `notification` | Obrigatória | Objeto | Inclua um [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) objeto para definir uma notificação por push. O comportamento desta notificação por push depende se o usuário está ativo ou se o usuário está usando um dispositivo proxy. {::nomarkdown}<ul><li>Se um <code>notification</code> está incluído e o usuário está ativo em seu iPhone quando a atualização é entregue, a interface de atividade ao vivo atualizada deslizará para baixo e será exibida como uma notificação por push.</li><li>Se um <code>notification</code> está incluído e o usuário não está ativo em seu iPhone, sua tela acenderá para exibir a interface de Atividade ao Vivo atualizada em sua tela de bloqueio.</li><li>O <code>notification alert</code> não será exibido como uma notificação por push padrão. Além disso, se um usuário tiver um {dispositivo} proxy, como um Apple Watch, o <code>alert</code> será exibido lá.</li></ul>{:/} |
+| `external_user_ids` | Opcional se `segment_id` ou `audience` for fornecido | Matriz de strings | Consulte [ID de usuário externo]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). Máximo de 50 IDs de usuário externos.  |
 | `segment_id `  | Opcional se `external_user_ids` ou `audience` for fornecido | String    | Consulte [identificador de segmento]({{site.baseurl}}/api/identifier_types/). |
 | `custom_audience` | Opcional se `external_user_ids` ou `segment_id` for fornecido | Objeto do público conectado  | Veja [público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/start' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {YOUR-REST-API-KEY}' \
@@ -121,7 +123,7 @@ Um código de status `201` é retornado se a solicitação foi formatada correta
 
 A classe de código de status `4XX` indica um erro do cliente. Consulte o artigo [erros e respostas da API]({{site.baseurl}}/api/errors/) para saber mais sobre os erros que você pode encontrar.
 
-O código de status `400` pode retornar o seguinte corpo de resposta. 
+O código de status `400` pode retornar o seguinte corpo de resposta.
 
 ```json
 {

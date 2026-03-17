@@ -71,6 +71,10 @@ Sie haben die Möglichkeit, eine `{% else %}`-Anweisung in Ihre bedingte Logik a
 
 Das Tag `{% endif %}` signalisiert, dass Sie Ihre bedingte Logik abgeschlossen haben. Sie müssen das Tag `{% endif %}` in jede Nachricht mit bedingter Logik einfügen. Wenn Sie in Ihrer bedingten Logik kein `{% endif %}`-Tag einfügen, erhalten Sie eine Fehlermeldung, da Braze Ihre Nachricht nicht analysieren kann.
 
+{% alert note %}
+Bedingte Tags (`if`, `elsif`, `unless`) unterstützen Operatoren, jedoch keine Filter. Um einen gefilterten Wert in einer Bedingung auszuwerten, weisen Sie das Ergebnis des Filters zunächst einer Variablen zu und referenzieren Sie dann diese Variable. Weitere Informationen finden Sie unter [Wo werden Operatoren und Filter verwendet]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters)?
+{% endalert %}
+
 ### Anleitung: Standortbezogene Inhalte zustellen
 
 Wenn Sie mit diesem Tutorial fertig sind, werden Sie in der Lage sein, Tags mit "if"-, "elsif"- und "else"-Anweisungen zu verwenden, um Inhalte abhängig vom Standort eines Nutzers zuzustellen.
@@ -165,7 +169,7 @@ Mit dem folgenden Tag können Sie eine Nachricht für Nutzer:innen mit einem Att
 ```
 {% endraw %} 
 
-![Eine Beispielnachricht im Braze-Dashboard, die das Attribut 'Vorname' mit Null belegt.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
+![Eine Beispielnachricht im Braze-Dashboard, die das Attribut „Vorname“ mit Null belegt.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
 
 {% raw %}
 ```liquid
@@ -200,7 +204,7 @@ Nachdem Sie [angepasste Attribute erstellt]({{site.baseurl}}/user_guide/data_and
 
 Wenn Sie eine bedingte Logik verwenden, müssen Sie den Datentyp des angepassten Attributs kennen, um sicherzustellen, dass Sie die richtige Syntax verwenden. Suchen Sie auf der Seite **Benutzerdefinierte Attribute** im Dashboard nach dem Datentyp, der mit Ihrem benutzerdefinierten Attribut verknüpft ist, und verweisen Sie dann auf die folgenden Beispiele, die für jeden Datentyp aufgeführt sind.
 
-![Auswahl eines Datentyps für ein angepasstes Attribut. Das Beispiel zeigt ein Attribut von Favorite_Category mit dem Datentyp String.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
+![Auswählen eines Datentyps für ein benutzerdefiniertes Attribut. Das angegebene Beispiel zeigt ein Attribut mitFavorite_Category dem Datentyp „String“.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
 
 {% alert tip %}
 Bei Strings und Arrays sind gerade Apostrophe erforderlich, während Boolesche und ganze Zahlen niemals Apostrophe haben.
@@ -230,7 +234,7 @@ Bei Strings und Arrays sind gerade Apostrophe erforderlich, während Boolesche u
 
 {% endraw %}
 
-Sie können auch andere [grundlegende Operatoren](https://shopify.dev/docs/themes/liquid/reference/basics/operators) wie kleiner als (<) oder größer als (>) für ganze Zahlen verwenden:
+Sie können auch andere [grundlegende Operatoren](https://shopify.dev/docs/themes/liquid/reference/basics/operators) wie kleiner als(<)oder größer als (>) für ganze Zahlen verwenden:
 
 {% raw %}
 

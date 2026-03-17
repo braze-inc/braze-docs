@@ -21,15 +21,15 @@ Für Wrapper-SDKs, die nicht aufgeführt sind, verwenden Sie stattdessen die ent
 {% endalert %}
 
 {% sdktabs %}
+{% sdktab web %}
+Die GIF-Unterstützung ist standardmäßig in der Web SDK-Integration enthalten.
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/_global/gifs.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/gifs.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-Zur Zeit werden Content-Card-GIFs für das Internet Braze SDK nicht unterstützt.
 {% endsdktab %}
 {% endsdktabs %}

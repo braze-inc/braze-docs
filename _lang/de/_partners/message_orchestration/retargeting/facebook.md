@@ -46,7 +46,7 @@ Wenn Sie an den Beta-Tests für Meta Work Accounts teilnehmen, stellen Sie siche
 2\. Wählen Sie im Modul Facebook Audience Export die Option **Facebook verbinden**. <br><br>![Technologie-Partnerseite von Facebook auf der Braze-Plattform.]({% image_buster /assets/img/fb/afb_1.png %}){: style="max-width:70%;"}
 
 {: start="3"}
-3\. Im Dialogfenster Facebook oAuth autorisieren Sie Braze, angepasste Zielgruppen in Ihren Facebook-Anzeigenkonten zu erstellen. <br><br>![Das erste Facebook-Dialogfeld mit der Aufforderung "Verbinden Sie sich als X", wobei X Ihr Facebook-Benutzername ist.]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"}  ![Das zweite Facebook-Dialogfeld mit der Aufforderung, Anzeigen für Ihre Werbekonten verwalten zu dürfen.]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
+3\. Im Dialogfenster Facebook oAuth autorisieren Sie Braze, angepasste Zielgruppen in Ihren Facebook-Anzeigenkonten zu erstellen. <br><br>![Das erste Facebook-Dialogfeld mit der Aufforderung "Verbinden als X", wobei X Ihr Facebook-Benutzername ist.]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"}  ![Das zweite Dialogfeld von Facebook, in dem Sie um die Erlaubnis gebeten werden, Anzeigen für Ihre Werbekonten zu verwalten.]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
 
 {: start="4"}
 4\. Nachdem Braze mit Ihrem Facebook-Konto verknüpft ist, wählen Sie aus, welche Anzeigenkonten Sie in Ihrem Braze Workspace synchronisieren möchten. <br><br>![Eine Liste der verfügbaren Werbekonten, die Sie mit Facebook verbinden können.]({% image_buster /assets/img/fb/afb_4.png %}){: style="max-width:70%;"}<br><br> Nachdem Sie eine Verbindung hergestellt haben, gelangen Sie zurück zur Partnerseite, wo Sie sehen können, welche Konten verbunden sind und bestehende Konten trennen können. <br><br> ![Eine aktualisierte Version der Technologie-Partnerseite von Facebook, auf der die erfolgreich verbundenen Werbekonten angezeigt werden.]({% image_buster /assets/img/fb/afb_5.png %}){: style="max-width:70%;"}<br>
@@ -96,10 +96,28 @@ Beim Aufbau von Facebook Zielgruppen können Sie bestimmte Nutzer:innen auf der 
 
 - Wenn Sie Opt-Ins, Opt-Outs, `Do Not Sell Or Share` oder andere angepasste Attribute sammeln, sollten Sie diese als Filter in Ihre Canvas-Eingangskriterien aufnehmen: 
 
-![Ein Canvas mit einem Eingang Zielgruppe "opted_in_marketing" ist gleich "true".]({% image_buster /assets/img/tiktok/tiktok13.png %}){: style="max-width:75%;"}
+![Ein Canvas mit einem Eingang der Zielgruppe "opted_in_marketing" ist gleich "wahr".]({% image_buster /assets/img/tiktok/tiktok13.png %}){: style="max-width:75%;"}
 
 
 #### Ähnlich aussehende Zielgruppen
 
 Sobald Sie ein Segment erfolgreich als Facebook Audience exportiert haben, können Sie mit Facebook [Lookalike Audiences](https://www.facebook.com/business/help/164749007013531?id=401668390442328) weitere Gruppen erstellen. Dieses Feature betrachtet die demografischen Daten, Interessen und anderen Attribute der von Ihnen gewählten Zielgruppe und erstellt eine neue Zielgruppe mit ähnlichen Attributen.
 
+## Fehlersuche
+
+### Fehler bei der Validierung des Access Token
+
+Wenn Sie den Facebook-Export verwenden, wird der Fehler `Error Validating Access Token` angezeigt, wenn:
+- Sie haben Ihr Passwort geändert, wodurch Ihre aktuelle Sitzung ungültig wird
+- Facebook hat Sie als Sicherheitsvorkehrung abgemeldet
+
+Um diesen Fehler zu beheben, führen Sie die folgenden Schritte aus:
+1. Melden Sie sich bei Facebook ab und dann wieder an.
+2. Entfernen Sie in Braze Ihre Zugangsdaten für Facebook und speichern Sie. Bestätigen Sie, dass die Zugangsdaten entfernt wurden, indem Sie versuchen, ein Segment zu exportieren (das Exportsymbol sollte deaktiviert sein).
+3. Fügen Sie Ihre Facebook Zugangsdaten erneut hinzu und speichern Sie sie.
+4. Versuchen Sie erneut zu exportieren. 
+
+Wenn der Export nicht funktioniert, gehen Sie wie folgt vor:
+1. Entfernen Sie Ihre Zugangsdaten wieder und speichern Sie.
+2. Geben Sie Ihre Zugangsdaten erneut ein und speichern Sie.
+3. Trennen Sie die Facebook Integration auf der **Technologie-Partnerseite** und stellen Sie sie wieder her.

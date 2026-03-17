@@ -3,7 +3,7 @@ nav_title: Armazenamento
 article_title: Armazenamento para iOS
 page_order: 3.60
 page_type: reference
-description: "Saiba mais sobre as diferentes propriedades em nível de dispositivo que são armazenadas pelo Braze SDK."
+description: "Saiba mais sobre as diferentes propriedades de nível de dispositivo que são armazenadas pelo SDK do Braze."
 platform:
   - Android
   - FireOS
@@ -13,21 +13,31 @@ platform:
 
 # Armazenamento
 
-> Saiba mais sobre as diferentes propriedades em nível de dispositivo que são armazenadas pelo Braze SDK.
+> Saiba mais sobre as diferentes propriedades de nível de dispositivo que são armazenadas pelo SDK do Braze.
 
 ## Propriedades do dispositivo
 
-Por padrão, o Braze coletará as seguintes propriedades em nível de dispositivo para permitir a personalização de mensagens com base no dispositivo, no idioma e no fuso horário:
+Por padrão, o Braze coletará as seguintes propriedades de nível de dispositivo para permitir a personalização de mensagens com base no dispositivo, idioma e fuso horário:
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+- `BROWSER`
+- `BROWSER_VERSION`
+- `LANGUAGE`
+- `OS`
+- `RESOLUTION`
+- `TIME_ZONE`
+- `USER_AGENT`
+{% endtab %}
+
+{% tab android %}
 - `AD_TRACKING_ENABLED`
 - `ANDROID_VERSION`
 - `CARRIER`
 - `IS_BACKGROUND_RESTRICTED`
 - `LOCALE`
 - `MODEL`
-- `NOTIFICIATION_ENABLED`
+- `NOTIFICATION_ENABLED`
 - `RESOLUTION`
 - `TIMEZONE`
 
@@ -54,23 +64,25 @@ O SDK do Braze não coleta o IDFA automaticamente. Os apps podem, opcionalmente,
 2. Para definir o identificador do anunciante (IDFA), use [`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/).
 {% endalert %}
 {% endtab %}
-
-{% tab web %}
-- `BROWSER`
-- `BROWSER_VERSION`
-- `LANGUAGE`
-- `OS`
-- `RESOLUTION`
-- `TIME_ZONE`
-- `USER_AGENT`
-{% endtab %}
 {% endtabs %}
 
-Por padrão, todas as propriedades estão ativadas. No entanto, você pode optar por ativar ou desativar esses recursos manualmente. Lembre-se de que alguns recursos do Braze SDK exigem propriedades específicas (como entrega no horário local e fuso horário), portanto, certifique-se de testar sua configuração antes de liberá-la para a produção.
+Por padrão, todas as propriedades estão ativadas. No entanto, você pode optar por ativá-las ou desativá-las manualmente. Lembre-se de que alguns recursos do SDK do Braze exigem propriedades específicas (como entrega no fuso horário local e fuso horário), então, certifique-se de testar sua configuração antes de liberar para produção.
 
 {% tabs %}
-{% tab Android %}
-Por exemplo, você pode especificar a versão do sistema operacional Android e a localidade do dispositivo a serem incluídos na lista de permissões. Para saber mais, consulte a seção [`setDeviceObjectAllowlistEnabled()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html) e [`setDeviceObjectAllowlist()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html) métodos. 
+{% tab web %}
+Por exemplo, você pode especificar o idioma do dispositivo para ser incluído na lista permitida. Para saber mais, consulte a opção `devicePropertyAllowlist` para [`InitializationOptions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions).
+
+```javascript
+import * as braze from"@braze/web-sdk";
+braze.initialize("API-KEY", {
+    baseUrl: "BASE-URL",
+    devicePropertyAllowlist: [ braze.DeviceProperties.LANGUAGE ] // list of `DeviceProperties` you want to collect
+});
+```
+{% endtab %}
+
+{% tab android %}
+Por exemplo, você pode especificar a versão do Android OS e o local do dispositivo para serem incluídos na lista permitida. Para saber mais, consulte os métodos [`setDeviceObjectAllowlistEnabled()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html) e [`setDeviceObjectAllowlist()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html). 
 
 ```java
 new BrazeConfig.Builder()
@@ -80,7 +92,7 @@ new BrazeConfig.Builder()
 {% endtab %}
 
 {% tab swift %}
-Por exemplo, você pode especificar o fuso horário e a coleção de locais a serem permitidos. Para saber mais, consulte a propriedade [`devicePropertyAllowList`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) do objeto `configuration`.
+Por exemplo, você pode especificar a coleta de fuso horário e local para serem incluídos na lista permitida. Para saber mais, consulte a propriedade [SDK Data Collection](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) do objeto `configuration`.
 
 {% subtabs %}
 {% subtab swift %}
@@ -102,27 +114,15 @@ configuration.devicePropertyAllowList = @[
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-
-{% tab web %}
-Por exemplo, você pode especificar o idioma do dispositivo a ser incluído na lista de permissões. Para saber mais, consulte a opção `devicePropertyAllowlist` para [`InitializationOptions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions).
-
-```javascript
-import * as braze from"@braze/web-sdk";
-braze.initialize("API-KEY", {
-    baseUrl: "BASE-URL",
-    devicePropertyAllowlist: [ braze.DeviceProperties.LANGUAGE ] // list of `DeviceProperties` you want to collect
-});
-```
-{% endtab %}
 {% endtabs %}
 
 {% alert tip %}
-Para saber mais sobre as propriedades do dispositivo coletadas automaticamente, consulte [Coleta de dados do SDK]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/).
+Para saber mais sobre as propriedades de dispositivo coletadas automaticamente, consulte [SDK Data Collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/).
 {% endalert %}
 
-## Armazenamento de cookies (somente na Web) {#cookies}
+## Armazenando cookies (apenas web) {#cookies}
 
-Depois de [inicializar o SDK do Web Braze](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize), ele criará e armazenará cookies com uma expiração de 400 dias que se renova automaticamente em novas sessões.
+Após [inicializar o SDK Web do Braze](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize), ele criará e armazenará cookies com uma expiração de 400 dias que se renova automaticamente em novas sessões.
 
 Os seguintes cookies são armazenados:
 
@@ -137,7 +137,7 @@ Os seguintes cookies são armazenados:
 
 ### Desativação de cookies {#disable-cookies}
 
-Para desativar todos os cookies, use a opção [`noCookies`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) ao inicializar o Web SDK. Isso evitará que você associe usuários anônimos que navegam entre subdomínios e resultará em um novo usuário em cada subdomínio.
+Para desativar todos os cookies, use a opção [`noCookies`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) ao inicializar o Web SDK. Isso impedirá que você associe usuários anônimos que navegam entre subdomínios e resultará em um novo usuário em cada subdomínio.
 
 ```javascript
 import * as braze from"@braze/web-sdk";

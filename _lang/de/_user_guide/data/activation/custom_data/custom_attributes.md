@@ -7,7 +7,7 @@ description: "Diese Seite beschreibt angepasste Attribute und erläutert die ver
 search_rank: 1
 ---
 
-# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Angepasste Attribute
+# [![Braze Lernangebote-Kurs ]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Benutzerdefinierte Attribute
 
 > Auf dieser Seite finden Sie angepasste Attribute, die eine Sammlung eindeutiger Eigenschaften Ihrer Nutzer:innen darstellen. Angepasste Attribute eignen sich am besten zum Speichern von Attributen über Ihre Nutzer:innen oder von Informationen über geringwertige Aktionen innerhalb Ihrer Anwendung. 
 
@@ -17,12 +17,12 @@ In Braze gespeicherte angepasste Attribute können zum Aufbau von Zielgruppen-Se
 
 Um angepasste Attribute im Dashboard zu erstellen und zu verwalten, gehen Sie zu **Dateneinstellungen** > **Angepasste Attribute**. 
 
-![Vier angepasste Attribute, die Boolesche sind.]({% image_buster /assets/img/export_custom_attributes.png %})
+![Vier angepasste Attribute, die Boolesche Werte sind.]({% image_buster /assets/img/export_custom_attributes.png %})
 
 In der Spalte **Letztes Update** sehen Sie, wann das angepasste Attribut das letzte Mal bearbeitet wurde, z.B. wann es zuletzt auf Blockliste oder aktiv gesetzt wurde.
 
 {% alert important %}
-Für ein korrektes Targeting von Nachrichten sollten Sie darauf achten, dass der Datentyp Ihres angepassten Attributs mit dem tatsächlichen Attribut übereinstimmt.
+Für ein korrektes Targeting von Nachrichten sollten Sie darauf achten, dass der Datentyp Ihres angepassten Attributs mit dem tatsächlichen Attribut übereinstimmt. <br><br>Wenn beispielsweise  `newsletter_subscribed`als String definiert ist, sollte Ihre Liquid-Syntax wie folgt aussehen{% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == 'true' %}```{% endraw %}: . Wenn  als boolescher `newsletter_subscribed`Wert definiert ist, sollte die Liquid-Syntax keine einfachen Anführungszeichen enthalten: {% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == true %}```{% endraw %}.
 {% endalert %}
 
 Auf dieser Seite können Sie bereits angepasste Attribute anzeigen, verwalten, erstellen oder blockieren. Wählen Sie das Menü neben einem angepassten Attribut für die folgenden Aktionen aus:
@@ -50,15 +50,21 @@ Es gibt zwei Möglichkeiten, wie Sie angepasste Attribute aus Nutzerprofilen ent
 * Wählen Sie den Namen des angepassten Attributs aus, das in einem [Update-Schritt für Nutzer:innen]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/#removing-custom-attributes) entfernt werden soll.
 * Setzen Sie den Wert `null` in Ihrer API-Anfrage auf den [Endpunkt`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track).
 
-### Nutzungsberichte anzeigen
+### Daten exportieren
+
+Um die Liste der angepassten Attribute als CSV-Datei zu exportieren, wählen Sie oben auf der Seite **Alle exportieren**. Die CSV-Datei wird generiert, und ein Download-Link wird Ihnen per E-Mail zugesandt.
+
+## Nutzungsberichte anzeigen
 
 Der Nutzungsbericht listet alle Canvase, Kampagnen und Segmente auf, die ein bestimmtes angepasstes Attribut verwenden. Diese Liste enthält keine Verwendungen von Liquid. 
 
 Sie können bis zu 100 Nutzungsberichte auf einmal anzeigen, indem Sie die Kontrollkästchen neben den jeweiligen angepassten Attributen auswählen und dann **Nutzungsbericht anzeigen** wählen.
 
-### Daten exportieren
+### Tab „Werte“
 
-Um die Liste der angepassten Attribute als CSV-Datei zu exportieren, wählen Sie oben auf der Seite **Alle exportieren**. Die CSV-Datei wird generiert, und ein Download-Link wird Ihnen per E-Mail zugesandt.
+Wenn Sie einen Nutzungsbericht anzeigen, wählen Sie die Registerkarte **„Werte“,** um die höchsten Werte der ausgewählten angepassten Attribute basierend auf einer Stichprobe von etwa 250.000 Nutzer:innen anzuzeigen. Bitte beachten Sie, dass die Ergebnisse aus einer Teilmenge von Nutzer:innen stammen und daher nicht alle vorhandenen Werte enthalten. Dies bedeutet, dass das Tab **„Werte“** nicht zur Fehlerbehebung oder für Anwendungsfälle verwendet werden sollte, die die Einbeziehung von Daten aller Nutzer:innen erfordern.
+
+![Nutzungsbericht für ausgewählte angepasste Attribute mit geöffneter Registerkarte „Werte“, die ein Kreisdiagramm mit den Attributwerten für Länder wie „US“ und „PR“ anzeigt.]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
 
 ## Anpassen der Attribute
 
@@ -71,7 +77,7 @@ Im Folgenden finden Sie eine Liste von Methoden für verschiedene Plattformen, m
 - [Internet]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
 - [Unity]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=unity)
-- [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
+- [.NET MAUI (früher Xamarin)]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
 - [Roku]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/)
 
 {% enddetails %}
@@ -100,7 +106,7 @@ Boolesche Attribute sind nützlich, um einfache binäre Daten über Ihre Nutzer:
 
 | Möglichkeiten der Segmentierung | Dropdown-Filter | Eingabeoptionen | Beispiele |
 | ---------------------| --------------- | ------------- | -------- |
-| Prüfen Sie, ob der boolesche Wert entweder wahr, falsch, wahr oder nicht gesetzt oder falsch oder nicht gesetzt **ist**. | **IST**  | **TRUE**, **FALSE**, **TRUE OR NOT SET**, oder **FALSE OR NOT SET** | Wenn dieser Filter `coffee_drinker` angibt, wird ein Nutzer:in den folgenden Fällen mit diesem Filter übereinstimmen: <br> {::nomarkdown}<ul><li>Wenn dieser Filter <code>wahr</code> ist und der Nutzer:innen den Wert <code>coffee_drinker</code></li><li>Wenn dieser Filter <code>falsch</code> ist und der Nutzer:in nicht den Wert <code>coffee_drinker</code></li><li>Wenn dieser Filter <code>wahr oder nicht gesetzt</code> ist und der Nutzer:innen den Wert <code>coffee_drinker</code> oder keinen Wert</li><li>Wenn dieser Filter <code>falsch oder nicht gesetzt</code> ist und der Nutzer:innen keine <code>coffee_drinker</code> oder keinen Wert</li></ul>{:/} |
+| Prüfen Sie, ob der boolesche Wert entweder wahr, falsch, wahr oder nicht gesetzt oder falsch oder nicht gesetzt **ist**. | **IST**  | **TRUE**, **FALSE**, **TRUE OR NOT SET**, oder **FALSE OR NOT SET** | Wenn dieser Filter `coffee_drinker` angibt, wird ein Nutzer:in den folgenden Fällen mit diesem Filter übereinstimmen: <br> {::nomarkdown}<ul><li>Wenn dieser Filter <code>true</code> und der Nutzer:innen hat den Wert <code>coffee_drinker</code></li><li>Wenn dieser Filter <code>false</code> und der Nutzer:in hat nicht den Wert <code>coffee_drinker</code></li><li>Wenn dieser Filter <code>true or not set</code> und der Nutzer:innen hat den Wert <code>coffee_drinker</code> oder kein Wert</li><li>Wenn dieser Filter <code>false or not set</code> und der Nutzer:in hat nicht <code>coffee_drinker</code> oder einen beliebigen Wert</li></ul>{:/} |
 | Prüfen Sie, ob der boolesche Wert im Profil eines Nutzers:in **existiert** und nicht null ist. | **IST NICHT LEER**  | **--** | Wenn dieser Filter `coffee_drinker` angibt und ein Nutzer:innen einen Wert für das Attribut `coffee_drinker` hat, wird der Nutzer:innen diesem Filter entsprechen. | 
 | Prüfen Sie, ob der boolesche Wert im Profil eines Nutzers: **in nicht existiert** oder null ist. | **IST LEER**  | **--** | Wenn dieser Filter `coffee_drinker`angibt und ein Nutzer:innen entweder nicht über das Attribut `coffee_drinker` verfügt oder der Wert für `coffee_drinker` null ist, wird der Nutzer:innen diesem Filter entsprechen.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
@@ -152,9 +158,7 @@ Beachten Sie, dass Braze bei der Eingabe von Werten, die Leerzeichen zwischen, v
 | Prüfen Sie, ob das Attribut string **nicht teilweise mit einem** der eingegebenen Strings **übereinstimmt**. | **ENTHÄLT KEINE DER** | **STRING**<br>Groß-/Kleinschreibung beachten; mehrere Strings zulässig (maximal 256) | Wenn dieser Filter `gold` angibt und ein Nutzerprofil in keinem String `gold` enthält, wird der Nutzer:in diesem Filter berücksichtigt.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-Ein Datums-String wie "12-1-2021" oder "12/1/2021" wird in ein Datetime-Objekt umgewandelt und als [Attribut für die Zeit]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) behandelt.
-{% endalert %}
+{% multi_lang_include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
 
 {% alert important %}
 Wenn Sie mit dem Filter **DOES NOT MATCH REGEX** segmentieren, müssen Sie bereits ein angepasstes Attribut mit einem Wert in diesem Nutzerprofil zugewiesen haben. Braze schlägt vor, mit "OR"-Logik zu prüfen, ob ein angepasstes Attribut leer ist, um sicherzustellen, dass die Nutzer:innen richtig targetiert werden.
@@ -164,7 +168,7 @@ Wenn Sie mit dem Filter **DOES NOT MATCH REGEX** segmentieren, müssen Sie berei
 
 Array-Attribute sind gut geeignet, um zusammenhängende Listen mit Informationen über Ihre Nutzer:innen zu speichern. Wenn Sie zum Beispiel die letzten 100 Inhalte, die ein Nutzer:innen gesehen hat, in einem Array speichern, ist eine Segmentierung nach Interessen zulässig.
 
-Standardmäßig beträgt die Länge eines Arrays für ein Attribut bis zu 500 Artikel. Wenn Sie z.B. ein Attribut wie "Movies Watched" übermitteln und es auf 500 gesetzt ist, wird, wenn ein Nutzer:innen den 501\. Film anschaut, der erste Film aus dem Array entfernt und der jüngste Film wird hinzugefügt.
+Arrays haben eine maximale Größe von 100 KB. Die Standardlänge für ein Attribut beträgt bis zu 500 Artikel. Wenn Sie z.B. ein Attribut wie "Movies Watched" übermitteln und es auf 500 gesetzt ist, wird, wenn ein Nutzer:innen den 501\. Film anschaut, der erste Film aus dem Array entfernt und der jüngste Film wird hinzugefügt. 
 
 Beachten Sie, dass Braze bei der Eingabe von Werten, die Leerzeichen zwischen, vor oder nach Wörtern enthalten, auch auf diese Leerzeichen prüft.
 

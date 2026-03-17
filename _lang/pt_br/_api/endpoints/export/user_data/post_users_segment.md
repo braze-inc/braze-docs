@@ -14,15 +14,19 @@ description: "Este artigo descreve detalhes sobre o endpoint Exportar perfil de 
 /users/export/segment
 {% endapimethod %}
 
-> Use esse ponto de extremidade para exportar todos os usuários de um segmento. 
+> Use esse ponto de extremidade para exportar todos os usuários de um segmento.
 
 {% alert important %}
 Ao usar esse endpoint, observe o seguinte:<br><br>1\. O campo `fields_to_export` nessa solicitação da API é **obrigatório**.<br>2\. Os campos para `custom_events`, `purchases`, `campaigns_received` e `canvases_received` contêm apenas dados dos últimos 90 dias.
 {% endalert %}
 
-Os dados de usuários são exportados como vários arquivos de objetos JSON de usuários separados por novas linhas (como um objeto JSON por linha). Os dados são exportados para um URL gerado automaticamente ou para um bucket S3 se essa integração já estiver configurada.
+Os dados de usuários são exportados como vários arquivos de objetos JSON de usuários separados por novas linhas (como um objeto JSON por linha). Os dados são exportados para uma URL gerada automaticamente ou para um bucket S3 se essa integração já estiver configurada.
 
-Note que uma empresa pode executar no máximo uma exportação por segmento usando esse endpoint em um determinado momento. Aguarde a conclusão da exportação antes de tentar novamente. 
+{% alert important %}
+**Formato de saída da exportação**: Quando uma exportação é bem-sucedida e você não configurou credenciais de armazenamento em nuvem, a resposta HTTP inclui uma URL para baixar um arquivo compactado (arquivo ZIP ou GZIP). Quando as credenciais de armazenamento em nuvem (S3, Azure ou Google Cloud Storage) estão configuradas, a Braze escreve a exportação diretamente no seu bucket, e a resposta não inclui uma URL de download. Se a exportação falhar, você receberá uma notificação por e-mail em vez disso. Configurar credenciais de armazenamento em nuvem reduz a probabilidade de falhas em grandes exportações.
+{% endalert %}
+
+Note que uma empresa pode executar no máximo uma exportação por segmento usando esse endpoint em um determinado momento. Aguarde a conclusão da exportação antes de tentar novamente.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
@@ -36,9 +40,9 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Detalhes de resposta baseados em credenciais
 
-Se você tiver adicionado suas credenciais do [S3][1], [Azure][2] ou [Google Cloud Storage][3] ao Braze, cada arquivo será feito upload em seu bucket como um arquivo ZIP com o formato de chave semelhante a `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Se estiver usando o Azure, certifique-se de que a caixa **Tornar este o destino padrão de exportação de dados** esteja marcada na página de visão geral do parceiro do Azure no Braze. Em geral, criamos um arquivo para cada 5.000 usuários para otimizar o processamento. A exportação de segmentos menores em um espaço de trabalho grande pode resultar em vários arquivos. Em seguida, você pode extrair os arquivos e concatenar todos os arquivos `json` em um único arquivo, se necessário. Se você especificar um `output_format` de `gzip`, a extensão do arquivo será `.gz` em vez de `.zip`.
+Se você adicionou suas credenciais de [S3][1], [Azure][2] ou [Google Cloud Storage][3] à Braze, então cada arquivo é enviado para o seu bucket como um arquivo ZIP com o formato de chave que se parece com `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Se estiver usando o Azure, certifique-se de que a caixa **Tornar este o destino padrão de exportação de dados** esteja marcada na página de visão geral do parceiro do Azure no Braze. Geralmente, a Braze cria 1 arquivo para cada 5.000 usuários para otimizar o processamento. A exportação de segmentos menores em um espaço de trabalho grande pode resultar em vários arquivos. Em seguida, você pode extrair os arquivos e concatenar todos os arquivos `json` em um único arquivo, se necessário. Se você especificar um `output_format` de `gzip`, então a extensão do arquivo é `.gz` em vez de `.zip`.
 
-{% details Detalhamento da jornada de exportação para ZIP %}
+{% details Export pathing breakdown for ZIP %}
 **Formato ZIP:**
 `bucket-name/segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`
 
@@ -58,13 +62,13 @@ Se você tiver adicionado suas credenciais do [S3][1], [Azure][2] ou [Google Clo
 
 {% enddetails %}
 
-É altamente recomendável configurar suas próprias credenciais do S3 ou do Azure ao usar esse endpoint para aplicar suas próprias políticas de bucket na exportação. Se não tiver suas credenciais de armazenamento em nuvem, a resposta à solicitação fornecerá o URL onde um arquivo ZIP contendo todos os arquivos do usuário pode ser baixado. O URL só se tornará um local válido depois que a exportação estiver pronta. 
+É altamente recomendável configurar suas próprias credenciais do S3 ou do Azure ao usar esse endpoint para aplicar suas próprias políticas de bucket na exportação. Se não tiver suas credenciais de armazenamento em nuvem, a resposta à solicitação fornecerá o URL onde um arquivo ZIP contendo todos os arquivos do usuário pode ser baixado. A URL se torna um local válido apenas depois que a exportação está pronta.
 
 Esteja ciente de que, se você não fornecer suas credenciais de armazenamento em nuvem, há uma limitação na quantidade de dados que você pode exportar desse endpoint. Dependendo dos campos que você está exportando e do número de usuários, a transferência do arquivo pode falhar se ele for muito grande. Uma prática recomendada é especificar quais campos você deseja exportar usando `fields_to_export` e especificar apenas os campos necessários para manter o tamanho da transferência menor. Se você estiver recebendo erros ao gerar o arquivo, considere dividir sua base de usuários em mais segmentos com base em um número de balde aleatório (por exemplo, crie um segmento em que um número de balde aleatório seja menor que 1.000 ou entre 1.000 e 2.000).
 
-Em qualquer um dos cenários, você tem a opção de fornecer um `callback_endpoint` para receber uma notificação quando a exportação estiver pronta. Se o endereço `callback_endpoint` for fornecido, faremos uma solicitação de postagem para o endereço fornecido quando o download estiver pronto. O corpo da postagem será "success":true. Se você não tiver adicionado credenciais S3 ao Braze, o corpo da postagem também terá a atribuição `url` com o URL de download como valor.
+Em qualquer um dos cenários, você tem a opção de fornecer um `callback_endpoint` para receber uma notificação quando a exportação estiver pronta. Se o `callback_endpoint` for fornecido, a Braze faz uma solicitação POST para o endereço fornecido quando o download estiver pronto. O corpo do POST é "success":true. Se você não adicionou credenciais S3 à Braze, então o corpo do POST tem adicionalmente o atributo `url` com a URL de download como valor.
 
-Bases de usuários maiores resultarão em tempos de exportação mais longos. Por exemplo, um app com 20 milhões de usuários pode levar uma hora ou mais.
+Bases de usuários maiores resultam em tempos de exportação mais longos. Por exemplo, um app com 20 milhões de usuários pode levar uma hora ou mais.
 
 ## Corpo da solicitação
 
@@ -135,8 +139,8 @@ A seguir, uma lista de `fields_to_export` válidos. O uso do site `fields_to_exp
 | `attributed_source`   | String          | Dados de [integrações de atribuição]({{site.baseurl}}/partners/message_orchestration/), se configurados. Identificador da plataforma em que o anúncio estava.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `attributed_adgroup`  | String          | Dados de [integrações de atribuição]({{site.baseurl}}/partners/message_orchestration/), se configurados. Identificador de um subgrupo opcional abaixo da campanha.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | `attributed_ad`       | String          | Dados de [integrações de atribuição]({{site.baseurl}}/partners/message_orchestration/), se configurados. Identificador de um subgrupo opcional abaixo da campanha e do grupo de anúncios.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `push_subscribe`      | String          | Status da inscrição push do usuário.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `email_subscribe`     | String          | Status da inscrição de e-mail do usuário.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `push_subscribe`      | String          | Status de inscrição por push do usuário.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `email_subscribe`     | String          | Status de inscrição por e-mail do usuário.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `braze_id`            | String          | Identificador de usuário exclusivo específico do dispositivo definido pelo Braze para esse usuário.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `country`             | String          | País do usuário usando o padrão [ISO 3166-1 alfa-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | `created_at`          | String          | Data e hora em que o perfil do usuário foi criado, no formato ISO 8601.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -152,7 +156,7 @@ A seguir, uma lista de `fields_to_export` válidos. O uso do site `fields_to_exp
 | `language`            | String          | Idioma do usuário no padrão ISO-639-1.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `last_coordinates`    | Matriz de valores flutuantes | O local mais recente do dispositivo do usuário, formatado como `[longitude, latitude]`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `last_name`           | String          | Sobrenome do usuário.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `phone`               | String          | Número de telefone do usuário no formato E.164.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `phone`               | String          | Número de telefone do usuário no formato que foi importado para a Braze. Por exemplo, se uma solicitação para adicionar um número de telefone chegar como `1234567890`, então ele é exportado no mesmo formato.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `purchases`           | Vetor           | Compras que esse usuário fez nos últimos 90 dias.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | `push_tokens`         | Vetor           | Informações sobre os tokens por push do usuário.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `random_bucket`       | Inteiro         | [Número de bucket aleatório]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event) do usuário, usado para criar segmentos uniformemente distribuídos de usuários aleatórios.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -164,31 +168,31 @@ A seguir, uma lista de `fields_to_export` válidos. O uso do site `fields_to_exp
 
 ## Lembretes importantes
 
-- Os campos para `custom_events`, `purchases`, `campaigns_received` e `canvases_received` conterão apenas dados dos últimos 90 dias.
-- Tanto `custom_events` quanto `purchases` contêm campos para `first` e `count`. Esses dois campos refletirão informações de todo o período e não se limitarão apenas aos dados dos últimos 90 dias. Por exemplo, se um determinado usuário realizou o evento pela primeira vez há 90 dias, isso será refletido com precisão no campo `first`, e o campo `count` também levará em conta os eventos que ocorreram antes dos últimos 90 dias.
-- O número de exportações de segmentos simultâneas que uma empresa pode executar no nível do endpoint é limitado a 100. As tentativas que ultrapassarem esse limite resultarão em um erro.
-- A tentativa de exportar um segmento uma segunda vez enquanto o primeiro trabalho de exportação ainda estiver em execução resultará em um erro 429.
+- Os campos para `custom_events`, `purchases`, `campaigns_received` e `canvases_received` contêm apenas dados dos últimos 90 dias.
+- Tanto `custom_events` quanto `purchases` contêm campos para `first` e `count`. Ambos os campos refletem informações de todos os tempos e não estão limitados a dados dos últimos 90 dias. Por exemplo, se um usuário específico fez o evento pela primeira vez há 90 dias, isso é refletido com precisão no campo `first`, e o campo `count` leva em conta eventos que ocorreram antes dos últimos 90 dias também.
+- O número de exportações de segmentos simultâneas que uma empresa pode executar no nível do endpoint é limitado a 100. Tentativas que ultrapassam esse limite resultam em um erro.
+- Tentar exportar um segmento uma segunda vez enquanto o primeiro trabalho de exportação ainda está em execução resulta em um erro 429.
 
 ## Resposta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, for example, 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
+    "object_prefix": (required, string) the filename prefix that is used for the JSON file produced by this export, for example, 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
     "url" : (optional, string) the URL where the segment export data can be downloaded if you do not have your own S3 credentials
 }
 ```
 
-Depois que a URL for disponibilizada, ela só será válida por algumas horas. Portanto, é altamente recomendável que você adicione suas próprias credenciais S3 à Braze.
+Depois que a URL é disponibilizada, ela é válida apenas por algumas horas. Portanto, é altamente recomendável que você adicione suas próprias credenciais S3 à Braze.
+
+Se você ver `object_prefix` na sua resposta da API e nenhuma URL para baixar os dados, isso significa que você já tem um bucket S3 da Amazon configurado para este endpoint. Qualquer dado exportado usando este endpoint vai diretamente para o seu bucket S3.
 
 ## Exemplo de saída de arquivo de exportação do usuário
 
-Objeto de exportação do usuário (incluiremos o mínimo de dados possível - se um campo estiver faltando no objeto, ele deverá ser considerado nulo ou vazio):
+Objeto de exportação do usuário (Braze inclui o menor número possível de dados—se um campo estiver ausente do objeto, deve-se assumir que é nulo ou vazio):
 
 {% tabs %}
-{% tab Todos os campos %}
+{% tab All fields %}
 
 ```json
 {
@@ -276,7 +280,7 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
       {
         "name" : (string),
         "last_received" : (string) date,
-        "engaged" : 
+        "engaged" :
          {
            "opened_email" : (boolean),
            "opened_push" : (boolean),
@@ -330,7 +334,7 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
 ```
 
 {% endtab %}
-{% tab Saída de amostra %}
+{% tab Sample output %}
 
 ```json
 {
@@ -360,10 +364,10 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
     "attributed_source" : "braze_test_source_072219",
     "attributed_adgroup" : "braze_test_adgroup_072219",
     "attributed_ad" : "braze_test_ad_072219",
-    "push_subscribe" : "opted_in", 
+    "push_subscribe" : "opted_in",
     "push_opted_in_at": "2020-01-26T22:45:53.953Z",
     "email_subscribe" : "subscribed",
-    "custom_attributes": 
+    "custom_attributes":
     {
       "loyaltyId": "37c98b9d-9a7f-4b2f-a125-d873c5152856",
       "loyaltyPoints": "321",
@@ -423,12 +427,12 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
         "name": "Email Unsubscribe",
         "api_campaign_id": "d72fdc84-ddda-44f1-a0d5-0e79f47ef942",
         "last_received": "2022-06-02T03:07:38.105Z",
-        "engaged": 
+        "engaged":
         {
            "opened_email": true
         },
         "converted": true,
-        "multiple_converted": 
+        "multiple_converted":
         {
           "Primary Conversion Event - A": true
         },
@@ -458,7 +462,7 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
         ]
       }
       ...
-    ],    
+    ],
     "cards_clicked" : [
       {
         "name" : "Loyalty Promo"

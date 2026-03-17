@@ -13,11 +13,11 @@
 A exibição de mensagens no app é gerenciada pela classe [`BrazeInAppMessageManager`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html). Todas as atividades do seu app devem ser registradas no site `BrazeInAppMessageManager` para permitir que ele adicione visualizações de mensagens no app à hierarquia de visualizações. Há duas maneiras de fazer isso:
 
 {% tabs local %}
-{% tab automaticamente %}
-A [integração do retorno de chamada do ciclo de vida da atividade]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking) lida automaticamente com o registro de mensagens no app; não é necessária nenhuma integração extra. Este é o método recomendado para lidar com o registro de mensagens no app.
+{% tab automatically %}
+A [integração do retorno de chamada do ciclo de vida da atividade]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking) lida automaticamente com o registro de mensagens no app; não é necessária nenhuma integração extra. Este é o método recomendado para gerenciar o registro de mensagens no app.
 {% endtab %}
 
-{% tab manualmente %}
+{% tab manually %}
 {% alert warning %}
 Se você estiver usando retorno de chamada do ciclo de vida da atividade para registro automático, não complete esta etapa.
 {% endalert %}

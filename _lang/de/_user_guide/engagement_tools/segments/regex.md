@@ -164,7 +164,7 @@ Wir können diese Regex in die folgenden drei Teile zerlegen:
 
 Angenommen, Sie möchten nach E-Mails filtern, die mit "@braze.com" enden. Sie würden den Filter für E-Mail-Adressen verwenden, ihn auf `matches regex` einstellen und „@braze.com“ in das Regex-Feld eingeben. Dasselbe gilt für jede andere E-Mail-Domäne.
 
-![Filter für eine E-Mail Adresse, die dem Regex von "@braze.com" entspricht.]({% image_buster /assets/img/regex/regeximg1.png %})
+![Bitte verwenden Sie einen Filter für E-Mail-Adressen, die dem braze.comRegex „@“ entsprechen.]({% image_buster /assets/img/regex/regeximg1.png %})
 
 #### Wie kann ich Filterzahlen-Strings für Werte ≥ x oder ≤ x verwenden?
 
@@ -190,7 +190,7 @@ Verwenden Sie das Caret-Symbol (`^`), um zu kennzeichnen, womit der String begin
 
 Wenn Sie beispielsweise versuchen, Nutzer:innen zusammenzustellen, die in Städten leben, die mit „San“ beginnen, würde Ihre Regex `^San \w` lauten. Mit dieser Regex würden Sie erfolgreich Nutzer:innen aus Städten wie San Francisco, San Diego, San Jose usw. zusammenstellen.
 
-![Filter für einen Ort, der der Regex von "^San \\w" entspricht.]({% image_buster /assets/img/regex/regeximg2.png %})
+![Bitte verwenden Sie einen Filter für einen Ort, der dem Regex „^San \\w“ entspricht.]({% image_buster /assets/img/regex/regeximg2.png %})
 
 #### Wie kann ich nach bestimmten Telefonnummern filtern?
 
@@ -198,7 +198,7 @@ Bevor Sie Regex zum Filtern von Telefonnummern verwenden, denken Sie daran, dass
 
 Angenommen, Sie suchen nach US-Telefonnummern, verwenden Sie das Regex-Format `1?\d\d\d\d\d\d\d\d\d\d`, wobei jede Wiederholung von `\d` eine Ziffer ist, die Sie angeben möchten. Die ersten drei Ziffern sind die Ortsvorwahl.
 
-Ebenso ist das Format für britische Telefonnummern `^\+4\d\d\d\d\d\d\d\d\d\d\d`. Für jedes andere Land wird der entsprechende Ländercode verwendet, gefolgt von der erforderlichen Anzahl von `\d` Wiederholungen für jede verbleibende Ziffer. Im Fall von Litauen mit dem Code „3“ würde die Regex also `^\+3\d\d\d\d\d\d\d\d\d\d` lauten.
+Ebenso ist das Format für britische Telefonnummern `^\+4\d\d\d\d\d\d\d\d\d\d\d`. Für jedes andere Land gilt der jeweilige Code des Landes, gefolgt von der erforderlichen Anzahl an`\d`Wiederholungen für jede verbleibende Ziffer. Im Fall von Litauen mit dem Code „3“ würde die Regex also `^\+3\d\d\d\d\d\d\d\d\d\d` lauten.
 
 Nehmen wir zum Beispiel an, Sie möchten Nutzer:innen nach Telefonnummer für eine bestimmte Vorwahl, „718“, filtern. Verwenden Sie den Filter für Telefonnummern, setzen Sie ihn auf `matches regex` und geben Sie die folgende Regex ein:
 
@@ -206,6 +206,6 @@ Nehmen wir zum Beispiel an, Sie möchten Nutzer:innen nach Telefonnummer für ei
 ^1?718\d\d\d\d\d\d\d
 ```
 
-![Filter für eine Telefonnummer, die mit der Regex von "^1?718\\d\\d\\d\\d\\d\\d\\d" übereinstimmt.]({% image_buster /assets/img/regex/regeximg3.png %})
+![Bitte verwenden Sie einen Filter für eine Telefonnummer, die dem Regex „^1?718\\d\\d\\d\\d\\d\\d\\d“ entspricht.]({% image_buster /assets/img/regex/regeximg3.png %})
 
 

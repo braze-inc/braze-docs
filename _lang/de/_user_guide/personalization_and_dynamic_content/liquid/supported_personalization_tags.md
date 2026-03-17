@@ -22,7 +22,7 @@ Zur Erleichterung finden Sie hier eine Zusammenfassung der unterstützten Person
 | Geräteattribute | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
 | <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions'>E-Mail-Liste Attribute</a> | `{{${set_user_to_unsubscribed_url}}}` <br>Dieses Tag ersetzt das bisherige Tag `{{${unsubscribe_url}}}`. Das ältere Tag funktioniert zwar auch in bereits erstellten E-Mails, aber wir empfehlen Ihnen, stattdessen das neuere Tag zu verwenden. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
 | <a href='/docs/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/#trigger-messages'>SMS Attribute</a> | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
-| <a href='/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/'>WhatsApp Attribute</a> | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` |
+| <a href='/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/'>WhatsApp Attribute</a> | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` <br> `{{whats_app.${inbound_flow_response}}}` <br> `{{whats_app.${inbound_product_id}}}` <br> `{{whats_app.${inbound_catalog_id}}}` |
 | Kampagnenattribute | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
 | Canvas-Attribute | `{{canvas.${name}}}` <br> `{{canvas.${api_id}}}` <br> `{{canvas.${variant_name}}}` <br> `{{canvas.${variant_api_id}}}` |
 | Canvas Schritt Attribute | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
@@ -31,8 +31,8 @@ Zur Erleichterung finden Sie hier eine Zusammenfassung der unterstützten Person
 | Event-Eigenschaften <br> (Diese sind an Ihren Workspace angepasst.)| `{{event_properties.${your_custom_event_property}}}` |
 | Canvas-Kontextvariablen | `{{context}}` |
 | Angepasste Attribute <br> (Diese sind an Ihren Workspace angepasst.) | `{{custom_attribute.${your_custom_attribute}}}` |
-| <a href='/docs/api/objects_filters/trigger_properties_object/'>API triggern Eigenschaften</a> |`{{api_trigger_properties}}` |
-| Entry-Eigenschaften für Canvas | `{{canvas_entry_properties.${property_name}}}` |
+| <a href='/docs/api/objects_filters/trigger_properties_object/'>API-Trigger-Eigenschaften</a> |`{{api_trigger_properties}}` |
+| Entry-Eigenschaften für Canvas | `{{context.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
@@ -96,14 +96,14 @@ User is in list of apps
 
 ## Informationen zum jeweiligen Gerät
 
-Für Push-Benachrichtigungen und In-App-Kanäle für Nachrichten können Sie die folgenden Attribute für das Gerät, an das eine Nachricht gesendet wird, als Template eingeben. Das heißt, eine Push-Benachrichtigung oder In-App-Nachricht kann Geräteattribute des Geräts enthalten, auf dem die Nachricht gelesen wird. Beachten Sie, dass diese Attribute bei Content-Karten nicht funktionieren. 
+Für Push-Benachrichtigungen, In-App-Nachrichten und Banner können Sie die folgenden Attribute für das Gerät, das die Nachricht empfängt, als Template verwenden. Eine Push-Benachrichtigung, eine In-App-Nachricht oder ein Banner kann Attribute des Geräts enthalten, auf dem der Nutzer die Nachricht liest. Diese Attribute sind für Content-Cards oder E-Mails nicht verfügbar. Bei E-Mails werden Nachrichten vor dem Versand gerendert, sodass zu diesem Zeitpunkt nicht bekannt ist, auf welchem Gerät der Nutzer:in die E-Mail öffnet.
 
 |Taggen | Beschreibung |
 |------------------|---|
 | `{{targeted_device.${id}}}` | Dies ist der Bezeichner des Braze-Geräts. Unter iOS kann dies der Apple Identifier for Vendor (IDFV) oder eine UUID sein. Bei Android und anderen Plattformen handelt es sich um eine zufällig generierte UUID. Wenn ein Nutzer:innen zum Beispiel fünf Geräte hat, wird ein Sendeversuch für alle fünf Geräte unternommen, wobei jeder den entsprechenden Bezeichner des Geräts verwendet. Wenn eine Nachricht so konfiguriert ist, dass sie an das zuletzt verwendete Gerät eines Nutzers:innen gesendet wird, erfolgt nur ein Sendeversuch an das über Braze identifizierte zuletzt verwendete Gerät. |
 | `{{targeted_device.${carrier}}}` | Der zuletzt verwendete Telefondienstanbieter des Geräts, falls verfügbar. Beispiele hierfür sind „Verizon“ und „Orange“. |
 | `{{targeted_device.${idfa}}}` | Bei iOS-Geräten ist dieser Wert der Identifier for Advertisers (IDFA), wenn Ihre Anwendung mit unserer [optionalen IDFA-Sammlung]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/) konfiguriert ist. Bei Nicht-iOS-Geräten ist dieser Wert gleich Null. |
-| `{{targeted_device.${google_ad_id}}}` | Bei Android Geräten ist dieser Wert der Google Play Advertising Bezeichner, wenn Ihre Anwendung mit unserer [optionalen Google Play Advertising ID Sammlung] konfiguriert ist. Bei Nicht-Android-Geräten ist dieser Wert gleich Null. |
+| `{{targeted_device.${google_ad_id}}}` | Bei Android-Geräten entspricht dieser Wert dem Google Play-Werbe-Bezeichner, wenn Ihre Anwendung mit unserer optionalen Google Play-Werbe-ID-Erfassung konfiguriert ist. Bei Nicht-Android-Geräten ist dieser Wert gleich Null. |
 | `{{targeted_device.${roku_ad_id}}}` | Bei Roku-Geräten ist dieser Wert der Roku Advertising Identifier, der erfasst wird, wenn Ihre Anwendung mit Braze konfiguriert wird. Bei Geräten, die nicht von Roku stammen, ist dieser Wert gleich Null. |
 | `{{targeted_device.${model}}}` | Der Modellname des Geräts, falls verfügbar. Beispiele sind "iPhone 6S" und "Nexus 6P" und "Firefox". |
 | `{{targeted_device.${os}}}` | Das Betriebssystem des Geräts, falls verfügbar. Beispiele sind "iOS 9.2.1" und "Android (Lollipop)" und "Windows". |
@@ -117,7 +117,7 @@ Da es eine so große Bandbreite an Geräteträgern, Modellnamen und Betriebssyst
 
 Darüber hinaus ist es möglich, dass Braze bei Push-Benachrichtigungen unter bestimmten Umständen nicht in der Lage ist, das mit der Push-Benachrichtigung verbundene Gerät zu erkennen, z.B. wenn das Push-Token über die API importiert wurde, was dazu führt, dass die Werte für diese Nachrichten `null` sind.
 
-![Beispiel für die Verwendung des Standardwerts "there" bei Verwendung einer Variable für den Vornamen in einer Push Nachricht.]({% image_buster /assets/img_archive/personalized_firstname_.png %})
+![Beispiel für die Verwendung des Standardwerts "there" bei der Verwendung einer Vornamenvariable in einer Push-Nachricht.]({% image_buster /assets/img_archive/personalized_firstname_.png %})
 
 ### Verwendung einer bedingten Logik anstelle eines Standardwerts
 

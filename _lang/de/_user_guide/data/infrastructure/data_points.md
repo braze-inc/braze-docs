@@ -52,7 +52,7 @@ Bei den folgenden Aktionen werden keine Datenpunkte protokolliert:
 Ein Array ist eine geordnete Sammlung von Artikeln, die in einem angepassten Attribut gespeichert sind. Was den Verbrauch betrifft, so kostet das Update eines Arrays einen Datenpunkt pro API-Aufruf. Wenn Sie einem Array schrittweise Werte hinzufügen, wird dies als ein Datenpunkt pro Wert gezählt. 
 
 {% alert tip %}
-Wenn Sie das gesamte Array auf einmal setzen, wird es als ein einziger Datenpunkt gezählt. Daher sind Arrays ein hervorragendes Instrument, um Nutzer:innen-Profile mit relevanten Informationen auf dem neuesten Stand zu halten und Kosten zu senken.
+Wenn Sie bei einfachen Arrays das gesamte Array auf einmal setzen, gilt dies als ein einziger Datenpunkt. Daher sind Arrays ein hervorragendes Instrument, um Nutzer:innen-Profile mit relevanten Informationen auf dem neuesten Stand zu halten und Kosten zu senken. <br><br> Arrays von Objekten verbrauchen einen Datenpunkt für jeden Schlüssel, der aktualisiert wird. Reduzieren Sie den Verbrauch unnötiger Datenpunkte, indem Sie Updates nur an Braze weitergeben.
 {% endalert %}
 
 #### Verschachtelte angepasste Attribute
@@ -65,7 +65,7 @@ Das Update eines angepassten Attributs auf `null` verbraucht ebenfalls einen Dat
 
 #### CSV
 
-Angepasste Attribute, die über den CSV-Import hochgeladen werden, zählen für Ihre Datenpunkte. Bei CSV-Importen zum Zwecke der Segmentierung (Importe mit `external_id`, `braze_id` oder `user_alias_name` als einzigem Feld) werden jedoch keine Datenpunkte protokolliert.
+Angepasste Attribute, die über den CSV-Import hochgeladen werden, zählen für Ihre Datenpunkte. Bei CSV-Importen zum Zweck der Segmentierung (Importe mit `external_id`, `braze_id` oder `user_alias_name` als einzigem Feld) werden jedoch keine Datenpunkte protokolliert.
 
 Da bei Änderungen des Abo-Status keine Datenpunkte protokolliert werden, fallen auch beim Update der Felder `email_subscribe`, `push_subscribe`, `subscription_group_id` oder `subscription_state` in Ihrer CSV-Datei keine Kosten an.
 
@@ -161,7 +161,7 @@ table td {
 | Zuweisung der Mixpanel-Kohorte | Alle Zuweisungen | |
 | Zuweisung der Hightouch Kohorte | Alle Zuweisungen | |
 | Appsflyer Kohorten-Zuordnung | Alle Zuweisungen | |
-| Jüngster Standort | Alle aktuellen Standorte | Beim Betreten oder Verlassen von Geoofences werden keine Datenpunkte protokolliert, da Geofence-Daten nicht im Nutzerprofil gespeichert sind. Geofences werden von Apple und Google Serviceleistungen; Diensten überwacht; Braze wird nur benachrichtigt, wenn ein Nutzer:innen einen Geofence triggert. |
+| Jüngster Standort | Alle aktuellen Standorte | Beim Betreten oder Verlassen von Geoofences werden keine Datenpunkte protokolliert, da Geofence-Daten nicht im Nutzerprofil gespeichert werden. Geofences werden von Apple und Google Serviceleistungen; Diensten überwacht; Braze wird nur benachrichtigt, wenn ein Nutzer:innen einen Geofence triggert. |
 | Twitter | Nutzername | |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

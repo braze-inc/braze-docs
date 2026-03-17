@@ -46,6 +46,10 @@ Wie Sie angepasste Events für eine bestimmte Plattform einrichten, erfahren Sie
 - [Bezeichner der App]({{site.baseurl}}/api/identifier_types/)
 - [ISO 8601 Zeitcode](https://en.wikipedia.org/wiki/ISO_8601)
 
+{% alert note %}
+Einige Bezeichnerpaare können nicht zusammen in einer einzigen Anfrage verwendet werden. Wenn sowohl`email`  als auch  `phone`angegeben sind,`email`hat  Vorrang vor `phone`. Ausführliche Informationen werden in [der Bezeichnerauflösung]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution) referenziert.
+{% endalert %}
+
 #### Nur bestehende Profile aktualisieren
 
 Um nur bestehende Nutzerprofile in Braze zu aktualisieren, sollten Sie den Schlüssel `_update_existing_only` mit dem Wert `true` im Hauptteil Ihrer Anfrage übergeben. Wenn dieser Wert weggelassen wird, erstellt Braze ein neues Nutzerprofil, wenn das `external_id` nicht bereits existiert.
@@ -72,13 +76,24 @@ Bei den Eigenschaften kann es sich um jeden der folgenden Datentypen handeln:
 
 Objekte mit Event-Eigenschaften, die Array- oder Objektwerte enthalten, können eine Nutzlast für Event-Eigenschaften von bis zu 100 KB haben.
 
+### Reservierte Tasten
+
+Die folgenden Schlüssel sind reserviert und können nicht als benutzerdefinierte Ereigniseigenschaften verwendet werden:
+
+- `time`
+- `event_name`
+
+{% alert important %}
+Die Verwendung reservierter Schlüssel als angepasste Event-Eigenschaftsnamen führt zu API-Fehlern beim Senden von Anfragen an den`/users/track`Endpunkt.
+{% endalert %}
+
 ### Persistenz der Eigenschaften von Ereignissen
 
 Event-Eigenschaften dienen zum Filtern und zur Liquid Personalisierung von Nachrichten, die durch ihre übergeordneten Ereignisse getriggert werden. Standardmäßig werden sie nicht auf dem Braze Nutzerprofil persistent gehalten. Um die Werte von Event-Eigenschaften bei der Segmentierung zu verwenden, lesen Sie bitte den Abschnitt [Angepasste Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/), in dem die verschiedenen Ansätze zur langfristigen Speicherung von Werten für Event-Eigenschaften beschrieben werden.
 
 #### Ereignis Beispiel Anfrage
 
-```json
+```http
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY

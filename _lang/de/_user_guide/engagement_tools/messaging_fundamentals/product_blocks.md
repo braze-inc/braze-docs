@@ -1,7 +1,7 @@
 ---
-nav_title: Produkt-Blöcke
+nav_title: Produktblöcke
 article_title: Drag-and-Drop Produktblöcke
-page_order: 7.5
+page_order: 9
 description: "Dieser Artikel referenziert Produktblöcke per Drag-and-Drop, mit denen Nutzer:innen schnell dynamische oder statische Vitrinen für Katalogartikel hinzufügen und konfigurieren können."
 tool:
     - Campaigns
@@ -23,8 +23,8 @@ Das Drag-and-Drop Feature zum Blockieren von Produkten befindet sich noch im Anf
 | --- | --- |
 | E-Commerce empfohlene Veranstaltungen | [Die im E-Commerce empfohlenen Ereignisse]({{site.baseurl}}/ecommerce_events/) bieten standardisierte Datenschemata für wichtige Verhaltensereignisse, die vor und nach einer Bestellung auftreten. Diese Ereignisse werden schließlich das alte Kauf-Event von Braze ersetzen und zum Standard für das Tracking von handelsbezogenem Verhalten werden. <br><br> E-Commerce empfohlene Ereignisse sind für dynamische Produktblöcke erforderlich.<br><br> E-Commerce empfohlene Veranstaltungen sind derzeit im frühen Zugriff. Wenden Sie sich an Ihren Customer-Success-Manager:in von Braze, wenn Sie an diesem frühzeitigen Zugang teilnehmen möchten. |
 | E-Commerce Canvas Templates | Die empfohlenen E-Commerce-Ereignisse unterstützen vorgefertigte Templates, einschließlich E-Commerce Canvas-Templates, die für wichtige Anwendungsfälle wie abgebrochenes Browsing, abgebrochene Warenkörbe und Bestellbestätigungen entwickelt wurden. <br><br>Wenn Sie einen dieser wesentlichen E-Commerce Anwendungsfälle mit Hilfe der [E-Commerce Canvas-Vorlagen]({{site.baseurl}}/ecommerce_use_cases/) implementieren möchten, müssen Sie das mitgelieferte Canvas Template verwenden oder befolgen. |
-| Braze Katalog | Sie müssen einen Braze-Katalog erstellen, der die folgenden Felder enthält, die in Ihrer Produktblockkonfiguration verwendet werden sollen:{::nomarkdown}<code><ul><li>product_title</li><li>product_url</li><li>variant_image_url</li></ul></code>{:/} |
-| Katalogauswahl | Für statische Produktblöcke müssen Sie eine [Katalogauswahl]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) erstellen, um festzulegen, welche Produkte in Ihren Produktblock aufgenommen werden sollen. |
+| Braze Katalog | Bitte erstellen Sie einen Braze-Katalog, der die folgenden Felder enthält, die Sie in Ihrer Konfiguration des Produktblocks verwenden:{::nomarkdown}<code><ul><li>product_title</li><li>product_url</li><li>variant_image_url</li></ul></code>{:/} |
+| Katalogauswahl | Für statische Produktblöcke müssen Sie eine [Katalogauswahl]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) erstellen, um festzulegen, welche Produkte in Ihrem Produktblock enthalten sein sollen. |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
 ## Arten von Drag-and-Drop-Produktblöcken
@@ -32,7 +32,7 @@ Das Drag-and-Drop Feature zum Blockieren von Produkten befindet sich noch im Anf
 | Produkt-Block | Zweck | Anwendungsfälle | Verfügbarkeit |
 | --- | --- | --- | --- |
 | Dynamisch | Passen Sie Ihr Messaging mit einer Präsentation von Produkten auf der Grundlage von Kundeninteraktionen an, indem Sie [die von E-Commerce empfohlenen Events]({{site.baseurl}}/ecommerce_events/) und Kataloge innerhalb unserer [E-Commerce Canvas Templates]({{site.baseurl}}/ecommerce_use_cases/) verwenden. | {::nomarkdown}<ul><li>Verlassenes Stöbern</li><li>Warenkorb-Abbruch</li><li>Abgebrochene Kasse</li><li>Auftragsbestätigungen</li></ul>{:/} | Nur in Canvas erhältlich. |
-| Statisch | Personalisieren Sie Produkte mit Hilfe von Daten, die in einem Braze Katalog gespeichert sind. Sie müssen eine [Katalogauswahl]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) verwenden, um festzulegen, welche Produkte aufgenommen werden sollen. | Perfekt, um neue Produkte oder kategoriespezifische Angebote zu präsentieren.| |
+| Statisch | Personalisieren Sie Produkte mithilfe der in einem Braze-Katalog gespeicherten Daten. Bitte verwenden Sie eine [Katalogauswahl,]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) um anzugeben, welche Produkte ausgewählt werden sollen. | Perfekt, um neue Produkte oder kategoriespezifische Angebote zu präsentieren.| |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role=”presentation” }
 
 ## Konfiguration des Inhalts eines Produkt-Blocks
@@ -54,7 +54,7 @@ Wählen Sie im Bereich **Produktfelder** Ihren Produktblocktyp aus und schalten 
 | Menge | E-Commerce Empfohlene Eigenschaft eines Ereignisses| 
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
-\![Produktfelder für einen dynamischen Produktblock, die in Katalogdaten und Ereignisdaten unterteilt sind]({% image_buster /assets/img/product_blocks/dynamic_fields.png %}){: style="max-width:50%;"}
+![Produktfelder für einen dynamischen Produktblock, die in Katalogdaten und Veranstaltungsdaten unterteilt sind]({% image_buster /assets/img/product_blocks/dynamic_fields.png %}){: style="max-width:50%;"}
 
 #### Statischer Produktblock
 
@@ -66,7 +66,7 @@ Wählen Sie im Bereich **Produktfelder** Ihren Produktblocktyp aus und schalten 
 | Preis | Kataloge |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role=“presentation” }
 
-\![Produktfelder für einen statischen Produktblock, die alle als Katalogdaten kategorisiert sind.]({% image_buster /assets/img/product_blocks/static_fields.png %}){: style="max-width:50%;"}
+![Produktfelder für einen statischen Produktblock, die alle als Katalogdaten kategorisiert sind.]({% image_buster /assets/img/product_blocks/static_fields.png %}){: style="max-width:50%;"}
 
 ### Layout-Optionen
 
@@ -80,7 +80,7 @@ Verwenden Sie die Layout-Optionen, um die Darstellung Ihrer Produkte innerhalb I
 | Produktabstand | Legen Sie die Abstände zwischen den Produkten fest. |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
-Layout-Optionen für die Produktausrichtung, die Ausrichtung, die maximale Anzahl von Produkten pro Zeile und die Produktabstände.]({% image_buster /assets/img/product_blocks/layout_options.png %}){: style="max-width:50%;"}
+![Layout-Optionen für die Produktausrichtung, Ausrichtung, maximale Anzahl von Produkten pro Reihe und Produktabstand.]({% image_buster /assets/img/product_blocks/layout_options.png %}){: style="max-width:50%;"}
 
 ### Globale Einstellungen für den E-Mail-Stil 
 
@@ -88,7 +88,7 @@ Mit [den globalen Einstellungen für den E-Mail-Stil]({{site.baseurl}}/user_guid
 
 #### Wie globale Einstellungen für E-Mails mit Produktblöcken funktionieren
 
-Vorhandene Stile für Absätze und Buttons werden automatisch auf die Text- und Button-Elemente innerhalb des Produktblocks angewendet. Das bedeutet, dass alle Formatierungen, die Sie für Absätze und Buttons festgelegt haben, konsistent in Ihrem Produktblock verwendet werden, so dass die gesamte E-Mail ein einheitliches Erscheinungsbild aufweist.
+Bestehende Stile für Absätze und Buttons werden automatisch auf die Text- und Button-Elemente innerhalb des Produkt-Blocks angewendet. Dies bedeutet, dass Ihr Produktblock durchgängig die von Ihnen für Absätze und Buttons festgelegten Formatierungen verwendet, wodurch ein einheitliches Erscheinungsbild in Ihrer gesamten E-Mail gewährleistet wird.
 
 ## Einrichten von Produktblöcken
 
@@ -98,7 +98,7 @@ Vorhandene Stile für Absätze und Buttons werden automatisch auf die Text- und 
 Wenn Sie die Integration von Braze und Shopify für die [Produktsynchronisierung]({{site.baseurl}}/shopify_catalogs/) verwenden, müssen Sie keine zusätzlichen Schritte unternehmen, um Drag-and-Drop-Produktblöcke zu verwenden.<br><br> Wenn Sie nicht über Informationen zu Produktvarianten verfügen, müssen Sie die Informationen zu den Produkten der obersten Ebene sowohl in den Feldern für das Produkt als auch für die Produktvariante in den Ereignis-Nutzlasten und Katalogen duplizieren. Das bedeutet, dass Sie für beide Bezeichner dieselben Produktdetails angeben müssen, damit der Produktblock richtig funktioniert.
 {% endalert %}
 
-Um Drag-and-Drop-Produktblöcke zu verwenden, müssen Sie einen Braze-Katalog einrichten, der bestimmte Feldwerte enthält. Diese Felder werden in der Konfiguration Ihres Produktblocks verwendet. Stellen Sie sicher, dass Ihr Katalog die folgenden Felder enthält:
+Um Drag-and-Drop-Produktblöcke zu verwenden, müssen Sie einen Braze-Katalog einrichten, der bestimmte Feldwerte enthält. Sie verwenden diese Felder in Ihrer Konfiguration des Produktblocks. Stellen Sie sicher, dass Ihr Katalog die folgenden Felder enthält:
 
 | Feld | Beschreibung |
 | --- | --- |
@@ -108,7 +108,15 @@ Um Drag-and-Drop-Produktblöcke zu verwenden, müssen Sie einen Braze-Katalog ei
 
 Beginnen Sie mit diesem [Muster-Produktkatalog]({{site.baseurl}}/assets/download_file/ecommerce_product_catalog_sample.csv), der die erforderlichen Felder enthält. 
 
-\![Eine Beispiel-CSV-Datei mit den erforderlichen Feldern zusätzlich zu anderen.]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
+![Eine CSV-Datei mit den erforderlichen Feldern sowie weiteren Angaben.]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
+
+#### Abbildung zu Katalogfeldern
+
+Auf dem Tab **„Einstellungen“** Ihres Katalogs können Sie die **Produktblöcke** auswählen, die bestimmten Feldern und Informationen in Ihrem Katalog abgebildet werden sollen. Auf diese Weise können Sie auswählen, welche Felder als Produkttitel, Produkt-URL und Bild-URL verwendet werden sollen. Bitte beachten Sie, dass die Felder im Shopify-Katalog standardmäßig abgebildet sind und nicht geändert werden können.
+
+{% alert note %}
+Falls Sie Shopify nicht verwenden, können Sie sich an Ihren Account Manager wenden, um die Abbildung der Felder zu aktivieren. Damit können Sie jeden Katalog mit Produktblöcken verbinden und dessen Felder den Feldern `product_title`,`product_url` und zuordnen`variant_image_url`.
+{% endalert %}
 
 ## Produktblöcke erstellen
 
@@ -148,12 +156,12 @@ Wählen Sie den Produktkatalog aus, den Sie für die Personalisierung verwenden 
 {% tab Static product block %}
 
 Ziehen Sie einen Produktblock in Ihre E-Mail Nachricht und wählen Sie den statischen Blocktyp aus.
-Wählen Sie den Katalog aus, den Sie für Ihren Produktblock verwenden möchten. Sie müssen eine Katalogauswahl auswählen, um festzulegen, welche Produkte in Ihrem Produktblock angezeigt werden.
+Wählen Sie den Katalog aus, den Sie für Ihren Produktblock verwenden möchten. Bitte wählen Sie eine Katalogauswahl aus, um festzulegen, welche Produkte in Ihrem Produktblock angezeigt werden sollen.
 
 {% endtab %}
 {% endtabs %}
 
-\![Der Tab "Inhalt" mit Editor-Blöcken, wie z.B. Produkt-Blöcken.]({% image_buster /assets/img/product_blocks/product_block.png %}){: style="max-width:40%;"}
+![Die Registerkarte „Inhalt“ enthält Editor-Blöcke, wie beispielsweise Produkt-Blöcke.]({% image_buster /assets/img/product_blocks/product_block.png %}){: style="max-width:40%;"}
 
 ### Schritt 3: Produktfelder konfigurieren
 
@@ -161,7 +169,7 @@ Wählen Sie aus, welche [Produktfelder](#product-fields) im Produktblock angezei
 
 Sie können auch den Text vor Ihren Liquid-Tags anpassen. Sie können zum Beispiel ein Dollarzeichen ($) für den Preis eines Artikels voranstellen oder den Begriff für die Menge auf "Menge" oder eine andere bevorzugte Bezeichnung aktualisieren.
 
-\![Produktblock mit einem vorangestellten Dollarzeichen vor dem Preis des Artikels.]({% image_buster /assets/img/product_blocks/liquid.png %}){: style="max-width:45%;"}
+![Produktblock, bei dem dem Preis des Artikels ein Dollarzeichen vorangestellt ist.]({% image_buster /assets/img/product_blocks/liquid.png %}){: style="max-width:45%;"}
 
 ### Schritt 4: Layout-Einstellungen konfigurieren
 
@@ -172,18 +180,18 @@ Sie können auch den Text vor Ihren Liquid-Tags anpassen. Sie können zum Beispi
 {% tabs %}
 {% tab Dynamic product block %}
 
-1. Im Bereich **Vorschau & Test** können Sie eine Vorschau der Nachricht als angepasster Nutzer:in anzeigen.
+1. Im Abschnitt **&„Vorschau-Test**“ können Sie die Nachricht als benutzerdefinierter Nutzer:in in der Vorschau anzeigen.
 2. Geben Sie an, wie viele Artikel Sie in der Vorschau darstellen möchten.
 3. Vergewissern Sie sich, dass die richtige Anzahl von Artikeln angezeigt wird und dass Ihre Layout-Optionen korrekt angewendet werden. Beachten Sie, dass die angezeigten Artikel zufällig ausgewählt werden.
 
-\!["Vorschau als Nutzer:innen" Tab mit einem Dropdown-Bereich "Dynamischer Produktblock", der angibt, dass 4 Artikel angezeigt werden sollen.]({% image_buster /assets/img/product_blocks/preview_as_a_user.png %}){: style="max-width:40%;"}
+![Tab „Vorschau als Nutzer:in“ mit einem Dropdown-Bereich „Dynamischer Produktblock“, der die Anzeige von vier Artikeln festlegt.]({% image_buster /assets/img/product_blocks/preview_as_a_user.png %}){: style="max-width:40%;"}
 
 {% endtab %}
 {% tab Static product block %}
 
 Eine Vorschau wird im Drag-and-Drop Composer generiert, wenn Sie Änderungen an Ihrem Produktblock vornehmen. 
 
-\![E-Mail Drag-and-Drop Composer zeigt einen generierten Produktblock mit verschiedenen Artikel-Kacheln.]({% image_buster /assets/img/product_blocks/static_block_preview.png %})
+![E-Mail-Drag-and-Drop-Editor, der einen generierten Produktblock mit verschiedenen Artikelkacheln anzeigt.]({% image_buster /assets/img/product_blocks/static_block_preview.png %})
 
 {% endtab %}
 {% endtabs %}

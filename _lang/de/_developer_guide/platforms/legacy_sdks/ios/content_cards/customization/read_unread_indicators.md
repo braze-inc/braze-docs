@@ -1,5 +1,5 @@
 ---
-nav_title: Gelesen &amp; Ungelesen Indikatoren
+nav_title: Indikatoren für gelesene und ungelesene Nachrichten sowie eine Ungelesen-Anzeige
 article_title: Content-Card Lese- &amp; Ungelesen-Anzeigen für iOS
 platform: iOS
 page_order: 4
@@ -16,7 +16,7 @@ noindex: true
 
 ## Deaktivieren der Nicht-aufgerufen-Anzeige
 
-![Zwei Inhaltskarten werden nebeneinander angezeigt. Die Karte auf der linken Seite hat unten eine blaue Linie, die anzeigt, dass sie nicht gesehen wurde. Die Karte auf der rechten Seite hat keine blaue Linie, was bedeutet, dass sie bereits gesehen wurde.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
+![Zwei Inhaltskarten werden nebeneinander angezeigt. Die Karte auf der linken Seite hat unten eine blaue Linie, die anzeigt, dass sie nicht gesehen wurde. Die Karte auf der rechten Seite weist keine blaue Linie auf, was darauf hinweist, dass sie bereits angesehen wurde.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
 
 Sie können die blaue Linie am unteren Rand der Karte, die anzeigt, ob die Karte angesehen wurde oder nicht, deaktivieren, indem Sie die Eigenschaft `disableUnviewedIndicator` in `ABKContentCardsTableViewController` auf `YES` setzen.
 
@@ -34,7 +34,7 @@ So setzen Sie beispielsweise die Farbe der Nicht-aufgerufen-Anzeige auf Rot:
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 (card as? ABKBaseContentCardCell).unviewedLineView.backgroundColor = UIColor.red

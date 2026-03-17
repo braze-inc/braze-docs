@@ -34,7 +34,7 @@ L'intégration de Braze et Segment vous permet d'utiliser [Engage](https://segme
 1. Dans Segment, accédez à l'onglet **Audiences** d’Engage, puis cliquez sur **Nouveau**.
 2. Créez votre audience. Un éclair dans le coin supérieur de la page indique si l'audience se met à jour en temps réel.
 3. Sélectionnez ensuite Braze comme destination.
-4. Prévisualisez votre audience en cliquant sur **Vérifier et créer**. Par défaut, la segmentation interroge toutes les données historiques pour définir la valeur actuelle du trait et de l'audience calculés. Pour ne pas tenir compte de ces données, décochez la case **Historical Backfill (Remplissage historique)**.
+4. Prévisualisez votre audience en cliquant sur **Review & Create**. Par défaut, la segmentation interroge toutes les données historiques pour définir la valeur actuelle du trait et de l'audience calculés. Pour ne pas tenir compte de ces données, décochez la case **Historical Backfill (Remplissage historique)**.
 
 ### Étape 2 : Clé d'importation des données de votre cohorte
 
@@ -57,7 +57,7 @@ Dans Braze, naviguez vers **Segments**, créez un nouveau segment et sélectionn
 1. Dans Segmentation, accédez à l'onglet **Traits calculés** ou **Audiences** dans **Engage**, puis cliquez sur **Nouveau.**
 2. Créez votre trait de caractère ou votre audience calculée. Un éclair dans le coin supérieur de la page indique si le calcul est mis à jour en temps réel.
 3. Sélectionnez ensuite **Braze** comme destination. 
-4. Prévisualisez votre audience en cliquant sur **Vérifier et créer**. Par défaut, la segmentation interroge toutes les données historiques pour définir la valeur actuelle du trait et de l'audience calculés. Pour ne pas tenir compte de ces données, décochez la case **Historical Backfill (Remplissage historique)**.
+4. Prévisualisez votre audience en cliquant sur **Review & Create**. Par défaut, la segmentation interroge toutes les données historiques pour définir la valeur actuelle du trait et de l'audience calculés. Pour ne pas tenir compte de ces données, décochez la case **Historical Backfill (Remplissage historique)**.
 5. Dans les paramètres de trait calculé ou d'audience, ajustez les paramètres de connexion en fonction de la manière dont vous souhaitez que vos données soient envoyées à Braze.
 
 #### Traits et audiences calculés
@@ -69,7 +69,7 @@ Les [traits](https://segment.com/docs/engage/audiences/computed-traits/) et les 
 Vous pouvez choisir la méthode à utiliser (ou choisir d'utiliser les deux) lorsque vous connectez le trait calculé à la destination Braze.
 
 {% tabs %}
-{% tab Identifier %}
+{% tab Identify %}
 
 Vous pouvez envoyer des traits et des audiences calculés à Braze sous forme d'appels `identify` pour créer des attributs personnalisés dans Braze. 
 
@@ -77,10 +77,10 @@ Par exemple, si vous avez un trait calculé Engage pour « Article du dernier p
 
 | Trait calculé | Audiences |
 | -------------- | --------- |
-| ![La section des attributs personnalisés d'un profil utilisateur indique que "last_product_viewed_item" est « Pull ».]({% image_buster /assets/img/segment/last_viewed-id-braze.png %}) | ![La section d'attribut personnalisé dans le profil utilisateur indique "dormant_shopper" comme étant "true".]({% image_buster /assets/img/segment/dormant-identify-braze.png %}) |
+| ![La section des attributs personnalisés dans le profil utilisateur indique "last_product_viewed_item" comme "Sweater".]({% image_buster /assets/img/segment/last_viewed-id-braze.png %}) | ![Dans la section des attributs personnalisés du profil utilisateur, "dormant_shopper" est indiqué comme étant "true".]({% image_buster /assets/img/segment/dormant-identify-braze.png %}) |
 
 {% endtab %}
-{% tab Piste %}
+{% tab Track %}
 
 Vous pouvez envoyer des traits et des audiences calculés à Braze sous forme d'appels `track` pour créer des événements personnalisés dans Braze. 
 
@@ -88,7 +88,7 @@ Dans la continuité de l'exemple précédent, si un utilisateur dispose d'un tra
 
 | Trait calculé | Audiences |
 | -------------- | --------- |
-| ![La section des événements personnalisés dans le profil d'un utilisateur mentionne « Trait calculé » « 1 » fois, la dernière fois étant « il y a 20 heures ».]({% image_buster /assets/img/segment/last_viewed-track-braze.png %}) | ![La section des attributs personnalisés du profil utilisateur indique "Audience saisie" "1" fois, la dernière fois étant "9 mars à 1h45".]({% image_buster /assets/img/segment/dormant-track-braze.png %}) |
+| ![La section Événement personnalisée des profils utilisateur répertorie la « Caractéristique calculée » « 1 » fois, la dernière fois étant « il y a 20 heures ».]({% image_buster /assets/img/segment/last_viewed-track-braze.png %}) | ![La section Attribut personnalisée des profils utilisateur répertorie « Inscrit dans une audience » « 1 » fois, la dernière fois étant le « 9 mars à 1 h 45 ».]({% image_buster /assets/img/segment/dormant-track-braze.png %}) |
 
 {% endtab %}
 {% endtabs %}

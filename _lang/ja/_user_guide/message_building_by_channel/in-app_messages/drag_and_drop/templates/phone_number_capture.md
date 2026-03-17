@@ -20,7 +20,7 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 アプリ内メッセージをドラッグ＆ドロップで作成する場合、テンプレートに**SMSサインアップ**（RCSサインアップに対応）または**WhatsAppサインアップを**選択し、**メッセージの作成を**選択する。これらのテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
-![アプリ内メッセージ作成時に、テンプレートとしてSMSサインアップまたはWhatsAppサインアップを選択するモーダル。]({% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}){: style="max-width:80%"}
+![アプリ内メッセージ作成時にSMSサインアップまたはWhatsAppサインアップをテンプレートとして選択するモーダル。]({% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}){: style="max-width:80%"}
 
 ### ステップ 2:メッセージスタイルを設定する
 

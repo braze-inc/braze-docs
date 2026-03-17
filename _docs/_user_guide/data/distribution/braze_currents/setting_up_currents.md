@@ -93,10 +93,10 @@ To test your integration, you can select **Send Test Events** to send one event 
 
 Test Currents connectors are free versions of our existing connectors that can be used for testing and trying out different destinations. Test Currents have:
 
-- No limit to the number of Test Currents connectors you may build.
-- An aggregate maximum of 10,000 events per seven-day rolling period. This event total is updated hourly on the dashboard.
+- Up to 10 Test Currents connectors per workspace.
+- An aggregate maximum of 1,500 events per fixed 24-hour period, resetting at midnight UTC. This event total is updated hourly on the dashboard.
 
-After your Test Currents connectors reach the sending limit, your connector will not send events until the next seven-day period.
+After your Test Currents connectors reach the sending limit, your connector will not send events until the next day (at midnight UTC).
 
 To upgrade your Test Currents connector, edit the integration in the dashboard and select **Upgrade Test Integration**.
 

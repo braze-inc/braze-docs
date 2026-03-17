@@ -21,7 +21,7 @@ Für jede Kampagne prüft Braze eine Liste von Attributen und Benutzerverhalten 
 
 Um eine Konversions-Korrelationsanalyse durchzuführen, wählen Sie das Konversions-Event von Interesse aus dem Dropdown-Menü aus.
 
-Das Panel "Konversions-Korrelation" zeigt ein Beispiel, bei dem "Wählen Sie ein Konversions-Event" auf "Primäres Konversions-Event - A" eingestellt ist und die Ereigniseinstellung "Kauf innerhalb von 12 Stunden getätigt (Jedes Produkt)" lautet.]({% image_buster /assets/img/convcorr.png %})
+![Das Panel "Konversions-Korrelation" zeigt ein Beispiel, bei dem "Wählen Sie ein Konversions-Event" auf "Primäres Konversions-Event - A" mit der Event-Einstellung "Kauf innerhalb von 12 Stunden getätigt (beliebiges Produkt)" eingestellt ist.]({% image_buster /assets/img/convcorr.png %})
 
 ## Was wird kontrolliert?
 

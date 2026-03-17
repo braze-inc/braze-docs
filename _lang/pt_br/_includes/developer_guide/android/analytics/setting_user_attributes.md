@@ -4,7 +4,7 @@
 
 ### Métodos predefinidos
 
-O Braze fornece métodos predefinidos para definir os seguintes atributos de usuário dentro da classe [`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html). Para especificações de método, consulte [nosso KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
+A Braze fornece métodos predefinidos para definir os seguintes atributos de usuário dentro da classe [`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html). Para especificações de método, consulte [nosso KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
 
 - Nome
 - Sobrenome
@@ -22,7 +22,7 @@ Todos os valores de string, como nome, sobrenome, país e cidade natal, estão l
 
 ### Definindo atributos padrão
 
-Para definir um atributo padrão para um usuário, chame o método `getCurrentUser()` na sua instância do Braze para obter uma referência ao usuário atual do seu app. Então você pode chamar métodos para definir um atributo de usuário.
+Para definir um atributo padrão para um usuário, chame o método `getCurrentUser()` na sua instância da Braze para obter uma referência ao usuário atual do seu app. Então você pode chamar métodos para definir um atributo de usuário.
 
 {% tabs %}
 {% tab JAVA %}
@@ -78,7 +78,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ## Atributos personalizados do usuário
 
-Além dos atributos de usuário padrão, o Braze também permite que você defina atributos personalizados usando vários tipos de dados diferentes. Para mais informações sobre a opção de segmentação de cada atributo, veja [coleta de dados de usuários]({{site.baseurl}}/developer_guide/analytics).
+Além dos atributos de usuário padrão, a Braze também permite que você defina atributos personalizados usando vários tipos de dados diferentes. Para mais informações sobre a opção de segmentação de cada atributo, veja [Coleta de dados de usuários]({{site.baseurl}}/developer_guide/analytics).
 
 ### Definindo atributos personalizados
 
@@ -110,7 +110,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Inteiros %}
+{% tab Integers %}
 Para definir um atributo personalizado com um valor `int`:
 
 {% subtabs global %}
@@ -169,7 +169,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Pontos flutuantes %}
+{% tab Floating-points %}
 Para definir um atributo personalizado com um valor `float`:
 
 {% subtabs global %}
@@ -223,7 +223,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Booleano %}
+{% tab Boolean %}
 Para definir um atributo personalizado com um valor `boolean`:
 
 {% subtabs global %}
@@ -251,7 +251,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Data %}
+{% tab Date %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -289,9 +289,9 @@ As datas passadas para a Braze com esse método devem estar no formato [ISO 8601
 {% endalert %}
 
 {% endtab %}
-{% tab Matriz %}
+{% tab Array %}
 
-O número máximo de elementos em matrizes de atributos personalizados tem como padrão 25. O máximo para vetores individuais pode ser aumentado para até 100 no dashboard da Braze, em **Configurações de dados** > **Atributos personalizados**). As matrizes que excederem o número máximo de elementos serão truncadas para conter o número máximo de elementos. Para saber mais sobre matrizes de atributos personalizados e seu comportamento, consulte nossa documentação sobre [matrizes]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
+O número máximo de elementos em matrizes de atributos personalizados tem como padrão 25. O máximo para arrays individuais pode ser aumentado para até 500 no dashboard da Braze, em **Configurações de Dados** > **Atributos Personalizados**. Arrays que excedem o número máximo de elementos são truncados para conter o número máximo de elementos. Para mais informações sobre arrays de atributos personalizados e seu comportamento, veja [Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
 
 {% subtabs global %}
 {% subtab JAVA %}

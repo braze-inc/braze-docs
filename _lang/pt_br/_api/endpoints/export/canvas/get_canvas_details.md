@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Exportar detalhes da tela"
+nav_title: "OBTER: Exportar detalhes do Canvas"
 article_title: "OBTER: Exportar detalhes da tela"
 search_tag: Endpoint
 page_order: 4
@@ -46,12 +46,10 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## Respostas
 
 {% alert note %}
-Todas as etapas do canva têm um campo `next_paths`, que é uma matriz de dados `{name, next_step_id}`. Para etapas completas e etapas de mensagens, o campo `next_step_ids` estará presente, mas não conterá dados para outras etapas do Canvas Flow.
+Todas as etapas do canva têm um campo `next_paths`, que é uma matriz de dados `{name, next_step_id}`. Para etapas de Mensagem, o campo `next_step_ids` estará presente, mas não conterá dados para outras etapas de Canvas.
 {% endalert %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "created_at": (string) the date created as ISO 8601 date,
   "updated_at": (string) the date updated as ISO 8601 date,
@@ -215,7 +213,7 @@ A seguir, um exemplo de resposta que inclui mensagens do Canva enviadas por dife
         }
       }
     }
-  ],
+  ]
 }
 ```
 

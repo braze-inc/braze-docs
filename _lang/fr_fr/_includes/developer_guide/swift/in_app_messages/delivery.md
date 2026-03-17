@@ -1,10 +1,10 @@
 {% multi_lang_include developer_guide/prerequisites/swift.md %}
 
-## Les messages déclenchés
+## Déclencheurs de messages
 
 ### Types de déclencheurs
 
-Les messages in-app sont automatiquement déclenchés lorsque le SDK enregistre l'un des types d'événements personnalisés suivants : `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, et `Push Click`. Notez que les déclencheurs `Specific Purchase` et `Custom Event` contiennent également des filtres de propriété robustes.
+Les messages in-app sont automatiquement déclenchés lorsque le SDK enregistre l'un des types d'événements personnalisés suivants : `Any Purchase`, `Specific Purchase`,`Session Start` , `Custom Event`, et `Push Click`. Veuillez noter que les `Specific Purchase`déclencheurs`Custom Event` et contiennent également des filtres de propriétés robustes.
 
 {% alert note %}
 Les messages in-app ne peuvent pas être déclenchés par l'API ou par des événements de l'API, mais uniquement par des événements personnalisés enregistrés par le SDK. Pour en savoir plus sur la journalisation, reportez-vous à la section [Journalisation des événements personnalisés]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift).
@@ -12,15 +12,15 @@ Les messages in-app ne peuvent pas être déclenchés par l'API ou par des évé
 
 ### Sémantiques de livraison
 
-Tous les messages in-app éligibles sont envoyés à l'appareil d'un utilisateur au début de sa session. Lorsqu'il est livré, le SDK prélève les ressources de manière à ce qu'elles soient disponibles au moment du déclenchement, ce qui minimise la latence d'affichage. Si l'événement déclencheur comporte plusieurs messages in-app éligibles, seul le message ayant la priorité la plus élevée sera délivré.
+Tous les messages in-app éligibles sont envoyés sur l'appareil de l'utilisateur au début de sa session. À la livraison, le SDK préchargera les ressources afin qu'elles soient disponibles au moment du déclencheur, ce qui minimisera la latence d'affichage. Si l'événement déclencheur comporte plusieurs messages in-app éligibles, seul le message ayant la priorité la plus élevée sera délivré.
 
-Pour plus d'informations sur la sémantique de démarrage de session du SDK, reportez-vous à la[sectionCycle de vie d']({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift)une session.
+Pour plus d'informations sur la sémantique de démarrage de session du SDK, veuillez [consulter la section Cycle de vie de la session]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift).
 
-### Limite de débit par défaut
+### Limite de débit de taux de défaut
 
 Par défaut, vous pouvez envoyer un message in-app une fois toutes les 30 secondes.
 
-Pour outrepasser cela, ajoutez la propriété `triggerMinimumTimeInterval` à votre configuration Braze avant l'initialisation de l'instance Braze. Il peut être défini comme un nombre entier positif et représente l'intervalle de temps minimum en secondes. Par exemple :
+Pour contourner cela, veuillez ajouter la`triggerMinimumTimeInterval`propriété à votre configuration Braze avant l'initialisation de l'instance Braze. Il peut être défini sur n'importe quel nombre entier positif et représente l'intervalle de temps minimum en secondes. Par exemple :
 
 {% tabs %}
 {% tab swift %}
@@ -36,7 +36,7 @@ let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 BRZConfiguration *configuration =
@@ -52,7 +52,7 @@ AppDelegate.braze = braze;
 
 ## Paires clé-valeur
 
-Lorsque vous créez une campagne dans Braze, vous pouvez définir des paires clé-valeur en tant que `extras`, que l'objet de message in-app peut utiliser pour envoyer des données à votre application. Par exemple :
+Lorsque vous créez une campagne dans Braze, vous pouvez définir des paires clé-valeur que l'objet de message in-app peut utiliser pour`extras` envoyer des données à votre application. Par exemple :
 
 {% tabs %}
 {% tab swift %}
@@ -65,7 +65,7 @@ if customization == "colorful-slideup" {
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
@@ -83,7 +83,7 @@ Pour une mise en œuvre complète, vous pouvez vous référer aux exemples de pe
 
 ## Désactivation des déclencheurs automatiques
 
-Pour empêcher les messages in-app de se déclencher automatiquement :
+Pour éviter que les messages in-app ne se déclenchent automatiquement :
 
 1. Implémentez le délégué `BrazeInAppMessageUIDelegate` comme décrit dans notre [article iOS ici](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 2. Mettez à jour votre méthode de délégué `inAppMessage(_:displayChoiceForMessage:)` pour qu’elle retourne `.discard`.
@@ -111,7 +111,7 @@ func handleExtras(userInfo: [AnyHashable : Any]) {
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (void)handleExtrasFromPush:(NSDictionary *)userInfo {
@@ -131,15 +131,15 @@ Lorsque la notification push silencieuse est reçue, un événement enregistré 
 En raison d’un message push utilisé pour enregistrer un événement personnalisé, Braze devra stocker un jeton de notification push pour chaque utilisateur afin de permettre cette solution. Pour les utilisateurs d’iOS, Braze ne stocke un jeton qu’à partir du point où un utilisateur a été invité à l’invite de notification push de l’iOS. Avant cela, l’utilisateur ne sera pas joignable par notification push, et la solution précédente ne sera pas possible.
 {% endalert %}
 
-#### Étape 2 : Créez une campagne de push silencieuse
+#### Étape 2 : Créez une campagne de push silencieuse
 
 Créez une [campagne de push silencieuse]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift) déclenchée par l'événement envoyé par le serveur. 
 
-![Une campagne de messages in-app de livraison par action qui sera délivrée aux utilisateurs dont les profils utilisateurs ont l'événement personnalisé "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
+![Une campagne de messages in-app, basée sur l'événement, qui sera envoyée aux utilisateurs dont le profil utilisateur comporte l'événement personnalisé"server_event".]({%image_buster/assets/img_archive/iosServerSentPush.png %}).
 
 La campagne de notification push doit inclure des extras de paires clé-valeur, qui indiquent que cette campagne de notification push est envoyée pour enregistrer un événement personnalisé SDK. Cet événement sera utilisé pour déclencher le message in-app.
 
-![Une campagne de messages in-app de réception/distribution basée sur des actions qui comporte deux paires clé-valeur. "CAMPAIGN_NAME" devient "Exemple de nom de message in-app" et IS_SERVER_EVENT" devient "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
+![Une campagne de messages in-app basée sur l'événement qui comporte deux paires clé-valeur."CAMPAIGN_NAME"  est défini sur « Exemple de nom de message in-app » et"IS_SERVER_EVENT"  est défini sur « true ».]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 Le code de la méthode `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` vérifie la clé `IS_SERVER_EVENT` et enregistrera un événement personnalisé SDK s’il existe.
 
@@ -151,13 +151,13 @@ Créez votre campagne de messages in-app visibles par l'utilisateur dans le tabl
 
 Dans l’exemple suivant, le message in-app spécifique à déclencher a été configuré en envoyant la propriété de l’événement dans le cadre de la première notification push silencieuse.
 
-![Une campagne de messages in-app basée sur une action qui sera délivrée aux utilisateurs qui effectuent l'événement personnalisé "In-app message trigger" où "campaign_name" est égal à "IAM Campaign Name Example".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
+![Une campagne de messages in-app basée sur l'événement personnalisé « Déclencheur de message in-app » qui sera envoyée aux utilisateurs qui effectuent l'événement personnalisé « Déclencheur de message in-app » où"campaign_name"  est égal à « Exemple de nom de campagne IAM ».]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 {% alert note %}
 Notez que ces messages in-app ne se déclencheront que si la notification push silencieuse est reçue pendant que l’application se trouve au premier plan.
 {% endalert %}
 
-### Affichage d'une image prédéfinie
+### Affichage d'un élément prédéfini
 
 Pour afficher manuellement un message in-app prédéfini, utilisez la méthode suivante :
 
@@ -169,7 +169,7 @@ if let inAppMessage = AppDelegate.braze?.inAppMessagePresenter?.nextAvailableMes
 
 ### Affichage d'un message en temps réel
 
-Vous pouvez également afficher les messages in-app locaux en temps réel en appelant manuellement la méthode [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/present(message:)) sur votre site `inAppMessagePresenter`. Par exemple :
+Vous pouvez également afficher des messages in-app locaux en temps réel en appelant manuellement la[`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/present(message:))méthode sur votre `inAppMessagePresenter`. Par exemple :
 
 {% tabs %}
 {% tab swift %}
@@ -182,7 +182,7 @@ AppDelegate.braze?.inAppMessagePresenter?.present(message: customInAppMessage)
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 BRZInAppMessageRaw *customInAppMessage = [[BRZInAppMessageRaw alloc] init];

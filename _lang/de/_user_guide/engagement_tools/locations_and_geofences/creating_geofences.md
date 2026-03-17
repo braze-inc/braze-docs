@@ -1,5 +1,5 @@
 ---
-nav_title: Erstellen von Geofences
+nav_title: Geofences erstellen
 article_title: Geofences erstellen
 page_order: 1
 page_type: reference
@@ -32,7 +32,7 @@ Refer to the following table for common geofence terms and their descriptions.
 | Term | Description |
 |---|---|
 | Latitude and longitude | Der geographische Mittelpunkt des Geofence. |
-| Radius | Der Radius des Geofence in Metern, gemessen vom geografischen Zentrum. We recommend setting a minimum radius of 100–150 meters for all geofences. |
+| Radius | Der Radius des Geofence in Metern, gemessen vom geografischen Zentrum. Wir empfehlen, für alle Geofences einen Mindestradius von 100 bis 150 Metern festzulegen. |
 | Cooldown | Nutzer:innen erhalten durch Geofence getriggerte Benachrichtigungen, nachdem sie einzelne Geofences betreten oder verlassen haben. After a transition occurs, there is a pre-defined time during which that user may not perform the same transition on that individual geofence again. This time is called the "cooldown" and is pre-defined by Braze, and its main purpose is to prevent unnecessary network requests. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -59,22 +59,22 @@ Next, you can add geofences to your geofence set.
 Wir empfehlen, Geofences mit einem Radius von mindestens 200 Metern zu erstellen, um eine optimale Funktionalität zu gewährleisten. For more information on configurable options, refer to [Mobile integrations](#mobile-integrations).
 {% endalert %}
 
-![Ein Geofence-Set mit zwei Geofences "EastCoastGreaterNY" und "WesternRegion" mit zwei Kreisen auf der Karte.]({% image_buster /assets/img/geofence_example.png %})
+![Ein Geofence, der mit zwei Geofences „EastCoastGreaterNY” und „WesternRegion” mit zwei Kreisen auf der Karte festgelegt wurde.]({% image_buster /assets/img/geofence_example.png %})
 
 ## Bulk upload geofences {#creating-geofence-sets-via-bulk-upload}
 
-Geofences können in großen Mengen als GeoJSON-Objekt vom Typ `FeatureCollection` hochgeladen werden. Each geofence is a `Point` geometry type in the feature collection. Die Eigenschaften für jedes Feature erfordern einen `radius` Schlüssel und einen optionalen `name` Schlüssel für jeden Geofence. 
+Geofences können in großen Mengen als GeoJSON-Objekt vom Typ `FeatureCollection` hochgeladen werden. Each geofence is a `Point` geometry type in the feature collection. Die Eigenschaften für jedes Feature erfordern einen`radius`Schlüssel und einen optionalen`name`Schlüssel für jeden Geofence. 
 
-To upload your GeoJSON, select **More** > **Upload GeoJSON**.
+Um Ihre JSON-Datei hochzuladen, wählen Sie **„Mehr“** > **„JSON hochladen**“.
 
 When creating your geofences, consider the following details:
 
 - The `coordinates` value in the GeoJSON is formatted as `[Longitude, Latitude]`.
-- Der maximale Geofence-Radius, der hochgeladen werden kann, beträgt 10.000 Meter (etwa 10 Kilometer oder 6,2 Meilen).
+- Der maximale Radius für Geofences, der hochgeladen werden kann, beträgt 10.000 Meter (etwa 10 Kilometer oder 6,2 Meilen).
 
 ### Beispiel
 
-The following example represents the correct GeoJSON for specifying two geofences: one for Braze headquarters in NYC, and one for the Statue of Liberty south of Manhattan.
+Das folgende Beispiel veranschaulicht das korrekte GeoJSON-Format zur Festlegung von zwei Geofences: einer für den Hauptsitz von Braze in New York City und einer für die Freiheitsstatue südlich von Manhattan.
 
 ```
 {
@@ -84,7 +84,7 @@ The following example represents the correct GeoJSON for specifying two geofence
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-73.992473, 40.755669]
+        "coordinates": [-73.9853689, 40.7434683]
       },
       "properties": {
         "radius": 200,
@@ -114,7 +114,7 @@ After geofences have been configured, you can use them to enhance and enrich how
 
 Um Geofence-Daten als Teil von Kampagnen- und Canvas-Triggern zu verwenden, wählen Sie für die Zustellung die Option **Aktionsbasierte Zustellung**. Als Nächstes fügen Sie eine Aktion triggern von `Trigger a Geofence` hinzu. Wählen Sie schließlich den Geofence-Satz und die Geofence-Übergangs-Event-Typen für Ihre Nachricht. Sie können Nutzer:innen auch mit Geofence-Events durch ein Canvas voranbringen.
 
-![Eine aktionsbasierte Kampagne mit einem Geofence, der ausgelöst wird, wenn ein Nutzer:innen einen deutschen Flughafen betritt.]({% image_buster /assets/img_archive/action_based_geofence_trigger.png %})
+![Eine aktionsbasierte Kampagne mit einem Geofence, der ausgelöst wird, wenn ein Nutzer:in deutsche Flughäfen betritt.]({% image_buster /assets/img_archive/action_based_geofence_trigger.png %})
 
 ### Personalizing messages
 
@@ -165,7 +165,7 @@ Das Standort-Tracking wird verwendet, um die letzten Standortdaten eines Nutzers
 
 Die Geofences von Braze verwenden eine Kombination aller für ein Gerät verfügbaren Standortanbieter, um den Standort des Nutzers oder der Nutzerin dreidimensional zu bestimmen. Dazu gehören Wi-Fi, GPS und Mobilfunktürme.
 
-Die typische Genauigkeit liegt im Bereich von 20-50 m, und die beste Genauigkeit liegt im Bereich von 5-10 m. In ländlichen Gebieten kann sich die Genauigkeit erheblich verschlechtern, möglicherweise bis zu mehreren Kilometern. Braze empfiehlt, in ländlichen Gegenden Geofences mit größeren Radien anzulegen.
+Die typische Genauigkeit liegt im Bereich von 20 bis 50 m, und die beste Genauigkeit liegt im Bereich von 5 bis 10 m. In ländlichen Gebieten kann sich die Genauigkeit erheblich verschlechtern, möglicherweise bis zu mehreren Kilometern. Braze empfiehlt, in ländlichen Gegenden Geofences mit größeren Radien anzulegen.
 
 Weitere Informationen über die Genauigkeit von Geofences finden Sie in der Dokumentation [für Android](https://developer.android.com/develop/sensors-and-location/location/geofencing) und [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW1).
 
@@ -185,5 +185,5 @@ Nein, Braze speichert keine Geofence-Daten in Benutzerprofilen. Geofences werden
 
 ### Kann ich einen Geofence innerhalb eines Geofence einrichten?
 
-Vermeiden Sie es, Geoofences einzurichten, die sich gegenseitig überschneiden, da dies zu Problemen beim Triggern von Benachrichtigungen führen kann.
+Es wird empfohlen, Geofences nicht so einzurichten, dass sie sich überschneiden, da dies zu Problemen beim Triggern von Benachrichtigungen führen kann.
 

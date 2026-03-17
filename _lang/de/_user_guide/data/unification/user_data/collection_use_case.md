@@ -56,6 +56,6 @@ Diese Attribute ermöglichen es Ihnen, Kampagnen an Nutzer:innen zu senden:
 2. Verwenden Sie unsere Templates für Nachrichten und die [Features zur Personalisierung]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging), um das eindeutige Attribut des Aktionscodes in die Nachrichten an die Nutzer:innen zu ziehen.
 
 {% alert important %}
-Braze sperrt Nutzer:innen mit mehr als 5.000.000 Sitzungen und nimmt ihre SDK-Ereignisse nicht mehr auf, da sie in der Regel das Ergebnis von Fehlintegration sind. Wenn Sie feststellen, dass dies bei einem rechtmäßigen Nutzer:in passiert ist, wenden Sie sich an Ihren Braze-Konto Manager:in.
+Braze sperrt Nutzer:innen mit mehr als 5.000.000 Sitzungen und nimmt ihre SDK-Ereignisse nicht mehr auf, da sie in der Regel das Ergebnis von Fehlintegration sind. Wenn Sie feststellen, dass dies einem rechtmäßigen Nutzer:innen passiert ist, wenden Sie sich an Ihren Braze-Konto Manager:in.
 {% endalert %}
 

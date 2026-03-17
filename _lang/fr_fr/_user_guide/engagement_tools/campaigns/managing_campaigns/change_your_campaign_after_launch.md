@@ -1,20 +1,20 @@
 ---
-nav_title: Modifier votre campagne après son lancement
+nav_title: Modifiez votre campagne après son lancement
 article_title: Modifier votre campagne après son lancement
 page_order: 1
 tool: Campaigns
 page_type: reference
-description: "Cet article de référence donne un aperçu du résultat de la modification de certains aspects d'une campagne après son lancement."
+description: "Le présent article de référence donne un aperçu du résultat de la modification de certains aspects d’une campagne après son lancement."
 
 ---
 
-# Modifier votre campagne après son lancement
+# Modifiez votre campagne après son lancement
 
-> Cet article donne un aperçu des résultats obtenus en modifiant certains aspects d'une campagne après son lancement.
+> Le présent article donne un aperçu du résultat de la modification de certains aspects d’une campagne après son lancement.
 
 ## Arrêter votre campagne
 
-Pour arrêter une campagne, ouvrez la page des **détails de** votre **campagne** et sélectionnez **Arrêter la campagne**. Lorsqu'une campagne est arrêtée :
+Pour arrêter une campagne, ouvrez la page des **détails de votre campagne** et sélectionnez **Arrêter la campagne**. Lorsqu’une campagne est arrêtée :
 
 - Les messages dont l'envoi est planifié sont annulés.
 - Les tests A/B dont le test initial a déjà été envoyé seront définitivement annulés.
@@ -30,7 +30,7 @@ Si ces campagnes ont été déclenchées mais n'ont pas encore été envoyées (
 
 ### Campagnes planifiées
 
-Si vous devez apporter des modifications à une campagne après son lancement, prenez note des éléments suivants lorsque vous modifiez votre campagne afin de vérifier que vos changements ont les effets escomptés.
+Si vous devez apporter des modifications à une campagne après son lancement, prenez note des éléments suivants lors de la modification de votre campagne pour vérifier que vos modifications ont les effets souhaités.
 
 ### Contenu du message
 
@@ -38,22 +38,29 @@ Toute modification du contenu des messages (y compris les titres, les corps et l
 
 ### Planification et audience
 
-Si vous modifiez l'heure d'envoi prévue de votre campagne ou son audience, ces changements sont immédiatement répercutés dans la campagne elle-même.
+Si vous modifiez l’heure d’envoi planifiée de votre campagne ou son audience, ces changements sont reflétés immédiatement dans la campagne réelle.
 
-### Taux d'envoi
+#### Considérations
 
-Lorsque vous utilisez une limite de débit, Braze "planifie" vos messages dans des créneaux horaires de l'ordre de la minute. Par conséquent, si vous souhaitez modifier la vitesse d'envoi des messages, suivez la procédure suivante pour effectuer des changements immédiats.
+Si votre campagne utilise la fonctionnalité timing intelligent ou la diffusion selon l'heure locale, les modifications apportées à l'heure d'envoi prévue ne seront pas prises en compte si elles sont effectuées dans les 24 heures précédant l'heure d'envoi initiale. En effet :
+
+- **Timing intelligent :** Braze commence à calculer l'heure d'envoi optimale à minuit, heure de Samoa. Si ce délai est déjà écoulé, le message aura déjà commencé à être traité. Pour plus d'informations, veuillez vous référer à [la section « timing intelligent]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/) ».
+- **Réception/distribution selon l'heure locale :** La modification d’une campagne selon un fuseau horaire local qui est programmée moins de 24 heures à l’avance ne modifiera pas la planification du message. Pour plus d'informations, veuillez consulter la section [Comment réaliser la planification d'une campagne en fonction du fuseau horaire local ?]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign).
+
+### Taux d’envoi
+
+Lorsque vous utilisez une limitation du taux d’envoi, Braze « planifie » vos messages dans des créneaux horaires avec une granularité à l’échelle de la minute, donc si vous souhaitez modifier le débit d’envoi des messages, respectez le processus suivant pour effectuer des changements immédiats.
 
 ## Apporter des changements immédiats
 
-Si vous souhaitez que les modifications prennent effet immédiatement, procédez comme suit :
+Si vous avez besoin que les modifications prennent effet immédiatement, procédez comme suit :
 
 1. Arrêtez la campagne affectée.
 2. Dupliquez la campagne.
-3. Modifiez la campagne en double.
+3. Effectuez des modifications sur la campagne dupliquée.
 
 {% alert important %}
-Cette opération réinitialise l'éligibilité des personnes qui ont déjà reçu la campagne originale. Il se peut donc que vous deviez filtrer la campagne dupliquée pour les personnes qui n'ont pas reçu la campagne originale.
+Cela réinitialise l’admissibilité des personnes qui ont déjà reçu la campagne originale, vous devrez donc peut-être filtrer la campagne dupliquée aux personnes qui n’ont pas reçu l’original.
 {% endalert %}
 
 ## Enregistrer les brouillons des campagnes actives {#campaign-drafts}
@@ -70,7 +77,7 @@ Pour créer un brouillon, procédez comme suit :
 2. Effectuez vos modifications.
 3. Sélectionnez **Enregistrer comme brouillon**. Notez qu'après avoir créé un brouillon, vous ne pouvez pas modifier la campagne active tant que vous n'avez pas lancé ou abandonné votre brouillon.
 
-Une ébauche d'une campagne active avec une option permettant de visualiser la campagne active.]({% image_buster /assets/img/campaign_draft.png %})
+![Une ébauche d'une campagne active avec une option permettant de visualiser la campagne active.]({% image_buster /assets/img/campaign_draft.png %})
 
 Lorsque vous modifiez le projet, vous pouvez également faire référence à la campagne active dans l'en-tête du projet de campagne ou dans le pied de page de l'analyse/analytique de la campagne. 
 

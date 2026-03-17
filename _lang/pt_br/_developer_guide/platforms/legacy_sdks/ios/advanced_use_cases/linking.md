@@ -1,9 +1,9 @@
 ---
-nav_title: Deep linking
+nav_title: Deep links
 article_title: deep linking para iOS
 platform: iOS
 page_order: 0
-description: "Este artigo cobre como implementar o delegado de deep linking universal para seu app iOS e exemplos de como fazer deep link para as configurações do app."
+description: "Este artigo aborda como implementar o delegado de deep linking universal para seu app iOS e exemplos de como fazer deep link para as configurações do app."
 
 noindex: true
 ---
@@ -69,7 +69,7 @@ Para saber mais, consulte [a documentação da Apple](https://developer.apple.co
 Depois de ativar seu app, o iOS chamará o método [`application:openURL:options:`](https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc). O argumento importante é o objeto [NSURL](https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL).
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
@@ -102,7 +102,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 Para usar links universais, certifique-se de que você adicionou um domínio registrado às capacidades do seu app e fez o upload de um `apple-app-site-association` arquivo. Em seguida, implemente o método `application:continueUserActivity:restorationHandler:` no seu `AppDelegate`. Por exemplo:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)application
@@ -214,7 +214,7 @@ A partir do SDK da Braze para iOS v2.21.0, o SDK codifica percentualmente os lin
 Para decodificar um link codificado, use o `NSString` método [`stringByRemovingPercentEncoding`](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html#//apple_ref/occ/instm/NSString/stringByRemovingPercentEncoding). Nota que você também precisa retornar `YES` no `ABKURLDelegate` e que uma chamada para ação é necessária para disparar o manuseio do URL pelo app. Por exemplo:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<NSString *, id> *)options {
@@ -253,7 +253,7 @@ O protocolo `ABKURLDelegate` pode ser usado para personalizar o tratamento de UR
 #### Exemplo de integração: ABKURLDelegate
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)handleAppboyURL:(NSURL *)url fromChannel:(ABKChannel)channel withExtras:(NSDictionary *)extras {
@@ -296,7 +296,7 @@ O iOS pode levar os usuários do seu app para a sua página no aplicativo de con
 3. Se você estiver usando links profundos baseados em esquemas personalizados, adicione o seguinte código ao seu método `application:openURL:options:`:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)app

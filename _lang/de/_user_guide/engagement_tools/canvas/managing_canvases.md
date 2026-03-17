@@ -1,6 +1,6 @@
 ---
-nav_title: Leinwände verwalten
-article_title: Leinwände verwalten
+nav_title: Canvase verwalten
+article_title: Canvase verwalten
 page_order: 2
 layout: dev_guide
 guide_top_header: "Leinwände verwalten"

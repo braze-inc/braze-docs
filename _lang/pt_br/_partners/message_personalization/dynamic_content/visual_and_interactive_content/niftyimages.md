@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [NiftyImages](https://niftyimages.com) é um software de personalização de e-mail em tempo real que permite aos profissionais de marketing enviar comunicações de e-mail relevantes e atualizadas de forma mais eficiente, aumentando o engajamento e a receita. É uma ferramenta amigável e de autoatendimento que permite aos profissionais de marketing adicionar conteúdo dinâmico aos seus e-mails de forma fácil e rápida.
 
-_Essa integração é mantida pela NiftyImages._
+_Esta integração é mantida pela NiftyImages._
 
 ## Pré-requisitos
 
@@ -32,7 +32,7 @@ Aproveitando o NiftyImages no Braze, você pode criar imagens dinâmicas e perso
 
 Por exemplo, aqui está uma imagem personalizada gerada pela NiftyImages usando o nome de um cliente.
 
-![TEXTO_ALTERNATIVO.]({% image_buster /assets/img/niftyimages/1.png %}){: style="max-width:70%;"}
+![ALT_TEXT.]({% image_buster /assets/img/niftyimages/1.png %}){: style="max-width:70%;"}
 
 ## Como criar uma NiftyImage
 

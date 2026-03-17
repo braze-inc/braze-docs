@@ -32,7 +32,7 @@ noindex: true
 
 ## 1단계: APN 토큰 업로드
 
- %} developer_guide/swift/apns_token.md
+{% multi_lang_include developer_guide/swift/apns_token.md %}
 
 ## 2단계: 푸시 기능 사용
 
@@ -42,7 +42,7 @@ noindex: true
 
 개발 및 프로덕션 푸시 인증서가 따로 있는 경우 **일반** 탭에서 **서명을 자동으로 관리** 확인란을 선택 취소해야 합니다. Xcode의 자동 코드 서명 기능은 개발 서명만 수행하므로 각 빌드 구성에 대해 서로 다른 프로비저닝 프로필을 선택할 수 있습니다.
 
-!["일반" 탭이 표시된 Xcode 프로젝트 설정. 이 탭에서는 '자동으로 서명 관리' 옵션이 선택 취소되어 있습니다.]({% image_buster /assets/img_archive/xcode8_auto_signing.png %})
+!["일반" 탭이 표시된 Xcode 프로젝트 설정. 이 탭에서는 '자동 서명 관리' 옵션이 선택 취소되어 있습니다.]({% image_buster /assets/img_archive/xcode8_auto_signing.png %})
 
 ## 3단계: 푸시 알림 등록하기
 
@@ -148,7 +148,7 @@ UIApplication.shared.registerForRemoteNotifications()
 APN 등록이 완료되면 푸시 알림에 대해 사용자를 활성화하도록 결과 `deviceToken`을 Braze에 전달하기 위해 다음 메서드를 변경해야 합니다.
 
 {% tabs %}
-{% tab 목표-C %}
+{% tab OBJECTIVE-C %}
 
 `application:didRegisterForRemoteNotificationsWithDeviceToken:` 메소드에 다음 코드를 추가합니다:
 
@@ -181,7 +181,7 @@ Appboy.sharedInstance()?.registerDeviceToken(deviceToken)
 iOS 10 이상을 대상으로 빌드할 때는 `UserNotifications` 프레임워크를 통합하고 다음을 수행하는 것이 좋습니다:
 
 {% tabs %}
-{% tab 목표-C %}
+{% tab OBJECTIVE-C %}
 
 애플리케이션의 `application:didReceiveRemoteNotification:fetchCompletionHandler:` 메소드에 다음 코드를 추가합니다:
 
@@ -261,10 +261,10 @@ func userNotificationCenter(_ center: UNUserNotificationCenter,
 
 iOS 10에서는 푸시를 클릭하면 더 이상 `application:didReceiveRemoteNotification:fetchCompletionHandler:`를 호출하지 않도록 동작이 업데이트되었습니다. 따라서 iOS 10 이상에 대한 빌드로 업데이트하지 않고 `UserNotifications` 프레임워크를 사용하는 경우 이전 통합과 달리 이전 스타일의 위임 모두에서 Braze를 호출해야 합니다.
 
-iOS 10 이전 버전의 SDK에 대해 빌드된 앱의 경우 다음 지침을 사용합니다.
+SDK < iOS 10에 대해 구축하는 앱의 경우 다음 지침을 따르세요:
 
 {% tabs %}
-{% tab 목표-C %}
+{% tab OBJECTIVE-C %}
 
 푸시 알림에서 열람 추적을 활성화하려면 앱의 `application:didReceiveRemoteNotification:fetchCompletionHandler:` 메서드에 다음 코드를 추가합니다.
 

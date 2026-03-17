@@ -150,6 +150,8 @@ For additional guidance on using images in your push notifications, refer to the
 - [Create rich notifications for iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/)
 - [Create rich notifications for Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/)
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### On-click behavior
 
 Specify what happens when a user selects the body of a push notification with **On-Click Behavior**. For example, you can prompt customers to open your application, redirect customers to a specified Web URL, or even open a specific page of your application with a [deep link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
@@ -167,7 +169,22 @@ If a user has your app installed on multiple devices, by default, your push mess
 
 ![Device options checkbox to only send this push to the user's most recently used device.]({% image_buster /assets/img_archive/push_recent_device.png %}){: style="max-width:70%;" }
 
-There is some nuance for this setting. If this option is selected, Braze will limit multiple sends from occurring except when a campaign targets multiple platforms, such as both iOS and Android. If the user has your app on both an iOS and an Android device, they'll receive a push for both platforms. If a user's most recently used device isn't [push enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#foreground-push-enabled), the message will not send.
+
+By default, Braze sends messages to every device a user owns that has a valid push token. For iOS, you can further refine your reach by choosing to send notifications only to iPad devices, or only to iPhone and iPod devices.
+
+If desired, you can set the push destination to **Most recently used device**. 
+
+##### Most recently used device
+
+"Most recently used" is a technical status, not a behavioral one. Because Braze defaults to all devices, switching to this setting significantly narrows your reach and relies entirely on the status of the single device with the newest token.
+
+![Device options checkbox to only send this push to the user's most recently used device.]({% image_buster /assets/img_archive/push_recent_device.png %}){: style="max-width:70%;" }
+
+The most recently used device is determined by which device has the most recently updated push token, rather than which device had the most recent session. 
+* If a new device's push token is added to a user profile through the API, that device is immediately considered the most recently used, even if the user hasn't started a session on it yet. 
+* If a user's most recently used device is not [push enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#foreground-push-enabled), the message will not send at all.
+
+Multiple sends can still occur if a campaign targets different platforms, such as both iOS and Android. If a user has the app on both, they can receive a push for both platforms.
 
 For iOS, you can further limit messaging by only sending push notifications to iPad devices, or only sending to iPhone and iPod devices.
 

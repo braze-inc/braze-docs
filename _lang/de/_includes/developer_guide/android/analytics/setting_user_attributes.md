@@ -4,7 +4,7 @@
 
 ### Vordefinierte Methoden
 
-Braze bietet vordefinierte Methoden zum Festlegen der folgenden Nutzer:innen-Attribute innerhalb der [`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html) Klasse. Spezifikationen zur Methode finden Sie in [unserer KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
+Braze stellt vordefinierte Methoden zur Verfügung, um die folgenden Nutzerattribute innerhalb der[`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)Klasse festzulegen. Für Methodenspezifikationen referenzieren wir auf [unser KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
 
 - Vorname
 - Nachname
@@ -20,9 +20,9 @@ Braze bietet vordefinierte Methoden zum Festlegen der folgenden Nutzer:innen-Att
 Alle String-Werte wie Vorname, Nachname, Land und Wohnort sind auf 255 Zeichen begrenzt.
 {% endalert %}
 
-### Einstellung von Standardattributen
+### Standardattribut festlegen
 
-Um ein Standardattribut für einen Nutzer festzulegen, rufen Sie die Methode `getCurrentUser()` auf Ihrer Braze-Instanz auf, um eine Referenz auf den aktuellen Nutzer:innen Ihrer App zu erhalten. Dann können Sie Methoden aufrufen, um ein Nutzer:in-Attribut zu setzen.
+Um ein Standardattribut für einen Benutzer festzulegen, rufen Sie die`getCurrentUser()`Methode auf Ihrer Braze-Instanz auf, um eine Referenz zum aktuellen Benutzer Ihrer App zu erhalten. Dann können Sie Methoden aufrufen, um ein Nutzer:in-Attribut zu setzen.
 
 {% tabs %}
 {% tab JAVA %}
@@ -48,9 +48,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### Standardattribute zurücksetzen
+### Standardattribut zurücksetzen
 
-Um ein Nutzer:in-Attribut zu deaktivieren, übergeben Sie `null` an die entsprechende Methode.
+Um ein Attribut des Nutzers zurückzusetzen, übergeben Sie bitte`null` an die entsprechende Methode.
 
 {% tabs %}
 {% tab JAVA %}
@@ -110,7 +110,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Ganze Zahlen %}
+{% tab Integers %}
 So passen Sie ein angepasstes Attribut mit einem `int` Wert an:
 
 {% subtabs global %}
@@ -143,7 +143,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 
-So legen Sie ein angepasstes Attribut mit einem ganzzahligen Wert `long` fest:
+Um ein benutzerdefiniertes Attribut mit einem`long`ganzzahligen Wert festzulegen:
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -169,7 +169,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Gleitkommazahlen %}
+{% tab Floating-points %}
 So legen Sie ein angepasstes Attribut mit einem `float` Wert fest:
 
 {% subtabs global %}
@@ -223,7 +223,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Boolesch %}
+{% tab Boolean %}
 So legen Sie ein angepasstes Attribut mit einem `boolean` Wert fest:
 
 {% subtabs global %}
@@ -251,7 +251,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Datum %}
+{% tab Date %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -291,7 +291,7 @@ Datumsangaben, die mit dieser Methode an Braze übergeben werden, müssen entwed
 {% endtab %}
 {% tab Array %}
 
-Die maximale Anzahl von Elementen in benutzerdefinierten Attribut-Arrays ist standardmäßig auf 25 festgelegt. Das Maximum für einzelne Arrays kann im Braze-Dashboard unter **Dateneinstellungen** > Angepasste Attribute auf bis zu 100 erhöht werden. Arrays, die die maximale Anzahl von Elementen überschreiten, werden so abgeschnitten, dass sie die maximale Anzahl von Elementen enthalten. Weitere Informationen zu angepassten Attribut-Arrays und deren Verhalten finden Sie in unserer Dokumentation zu [Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
+Die maximale Anzahl von Elementen in benutzerdefinierten Attribut-Arrays ist standardmäßig auf 25 festgelegt. Das Maximum für einzelne Arrays kann im Braze-Dashboard unter **„Dateneinstellungen“** > **„Angepasste Attribute“** auf bis zu 500 erhöht werden. Arrays, die die Höchstzahl an Elementen überschreiten, werden gekürzt, um die Höchstzahl an Elementen zu enthalten. Weitere Informationen zu benutzerdefinierten Attribut-Arrays und deren Verhalten finden Sie unter [Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -330,7 +330,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ### Angepasste Attribute nicht anpassen
 
-Um ein angepasstes Attribut wieder freizugeben, übergeben Sie den entsprechenden Attributschlüssel an die Methode `unsetCustomUserAttribute`.
+Um ein angepasstes Attribut zu löschen, übergeben Sie den entsprechenden Attributschlüssel an die`unsetCustomUserAttribute`Methode.
 
 {% tabs %}
 {% tab JAVA %}
@@ -358,7 +358,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ### Verschachtelte angepasste Attribute
 
-Sie können auch Eigenschaften innerhalb angepasster Attribute verschachteln. Im folgenden Beispiel wird ein `favorite_book` Objekt mit verschachtelten Eigenschaften als angepasstes Attribut auf das Nutzerprofil gesetzt. Weitere Einzelheiten finden Sie unter [Verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+Sie können Eigenschaften auch in angepassten Attributen verschachteln. Im folgenden Beispiel wird ein`favorite_book`Objekt mit verschachtelten Eigenschaften als benutzerdefiniertes Attribut im Nutzerprofil festgelegt. Weitere Informationen finden Sie unter [verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
 
 {% tabs %}
 {% tab JAVA %}

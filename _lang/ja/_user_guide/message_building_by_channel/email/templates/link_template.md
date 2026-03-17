@@ -18,7 +18,7 @@ channel:
 リンクテンプレートはオプション機能である。**テンプレート**セクションに**メールリンクテンプレートが**ない場合は、アカウントマネージャーに連絡して機能をオンにしてもらう。
 {% endalert %}
 
-## CDI の仕組み
+## 仕組み
 
 リンク・テンプレートは、以下のような使用例でよく使われる：
 
@@ -88,7 +88,7 @@ channel:
 
 ## リンクテンプレートを管理する
 
-リンクテンプレートを[複製する]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)こともできる。テンプレートとクリエイティブ・コンテンツの作成とマネージャーについては、[テンプレート& メディアで]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)学習しよう。
+リンクテンプレートを[複製する]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)こともできる。[ テンプレート & メディア]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/) で、テンプレートとクリエイティブコンテンツの作成と管理について詳しく説明します。
 
 {% alert important %}
 テンプレートのアーカイブは、現在リンクテンプレートでは利用できません。

@@ -19,6 +19,7 @@ alias: /api/api_key/
 | [Cloud Data Ingestion]({{site.baseurl}}/api/endpoints/cdi/)                | Manage your data warehouse integrations and syncs.                                    |
 | [Email lists and addresses]({{site.baseurl}}/api/endpoints/email/)         | Set up and manage bi-directional sync between Braze and your email systems.           |
 | [Export]({{site.baseurl}}/api/endpoints/export/)                           | Access and export various details of your campaigns, Canvases, KPIs, and more.        |
+| [Media Library]({{site.baseurl}}/api/endpoints/media_library/)             | Manage assets within Braze.                                                           |
 | [Messages]({{site.baseurl}}/api/endpoints/messaging/)                      | Schedule, send, and manage your campaigns and Canvases.                               |
 | [Preference center]({{site.baseurl}}/api/endpoints/preference_center/)     | Build your preference center and update the styling of it.                            |
 | [SCIM]({{site.baseurl}}/api/endpoints/scim/)                               | Manage user identities in cloud-based applications and services.                      |
@@ -35,6 +36,12 @@ The following is an overview of terms you may see in the Braze REST API document
 ### Endpoints
 
 Braze manages a number of different instances for our dashboard and REST endpoints. When your account is provisioned, you log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket]({{site.baseurl}}/braze_support/) or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
+
+To find your REST endpoint in Braze:
+
+1. Log in to Braze and go to **Settings** > **APIs and Identifiers** > **API Keys**.
+2. Select an existing API key, or select **Create API Key** to make a new key.
+3. Copy the REST endpoint shown on this tab and use that endpoint for your API requests.
 
 {% alert important %}
 When using endpoints for API calls, use the REST endpoint.
@@ -344,6 +351,17 @@ Given that REST API keys allow access to potentially sensitive REST API endpoint
 
 If you accidentally expose a key, you can delete it from the Developer Console. For help with this process, open a [support ticket]({{site.baseurl}}/braze_support/).
 
+### Security of REST API keys and SDK API keys
+
+REST API keys and SDK API keys have different security profiles.
+
+| | REST API keys | SDK API keys |
+|---|---|---|
+| Purpose | Server-side authentication for the REST API (sending messages, exporting data, managing users) | Client-side identification for the Braze SDK (data ingestion, in-app messages, Content Cards) |
+| Visibility | **Must remain private**. Never expose in client-side code, public repositories, or user applications. | Designed to be public. Bundled inside your app binary or visible in web browser JavaScript, similar to a Google Analytics tracking ID. |
+| Solution if exposed | Immediately revoke the key and create a replacement in **Settings** > **APIs and Identifiers** > **API Keys**. An exposed REST API key can be used to send messages, export user data, or modify account settings. | No action required. An SDK API key can only ingest data and retrieve client-side messaging (such as in-app messages and Content Cards). It cannot export user data, send messages on your behalf, or modify campaigns. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
 ### API IP allowlisting
 
 For additional security, you can specify a list of IP addresses and subnets which are allowed to make REST API requests for a given REST API key. This is referred to as allowlisting, or whitelisting. To allow specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API key:
@@ -355,6 +373,38 @@ If you don't specify any, requests can be sent from any IP address.
 {% alert tip %}
 If you're making a Braze-to-Braze webhook and using allowlisting, see the list of [IPs to whitelist]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
 {% endalert %}
+
+## API authentication and security
+
+### Bearer token authentication
+
+Braze authenticates REST API requests using the REST API key passed as a Bearer token in the `Authorization` request header. When you send a request, include your API key in the following format:
+
+```bash
+Authorization: Bearer YOUR_REST_API_KEY
+```
+
+On each request, Braze performs the following server-side validation checks:
+
+1. **Token validity:** Verifies that the REST API key exists in Braze and is active (for example, not revoked or disabled).
+2. **Token authorization:** Confirms the API key has the required permissions for the requested endpoint.
+
+If authentication fails, the API returns an error response with an HTTP status code. For example, `401 Unauthorized` indicates an invalid or missing key, while `403 Forbidden` indicates the key doesn't have permission for the requested endpoint. For more information, see [API errors]({{site.baseurl}}/api/errors/).
+
+### Network-level security
+
+REST API requests to Braze are protected by Transport Layer Security (TLS) encryption across the full request path. The following table describes the network flow for an API request from your server to Braze:
+
+| Step | Component | Description |
+| --- | --- | --- |
+| 1 | Your server | Initiates an HTTPS request with TLS encryption. |
+| 2 | Cloudflare | Terminates the client TLS connection and applies network-level protections. |
+| 3 | Network Load Balancer (NLB) | Forwards packets to the application infrastructure. NLBs operate at Layer 4, meaning there's no Layer 7 proxying. Packets are forwarded without HTTP-level inspection or modification. |
+| 4 | NGINX ingress | Terminates the internal TLS connection and routes the request. |
+| 5 | Unicorn (application server) | Processes the authenticated request. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+TLS encryption covers every link in the chain. Your server connects to Cloudflare over TLS, and Cloudflare establishes a separate TLS connection through the NLB to the NGINX ingress, so your API key and request data remain encrypted in transit.
 
 ## Additional resources
 

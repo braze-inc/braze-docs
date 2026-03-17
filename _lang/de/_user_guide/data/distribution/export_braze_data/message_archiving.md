@@ -10,9 +10,9 @@ description: "Dieser referenzierte Artikel behandelt die Nachrichtenarchivierung
 
 # Nachrichten archivieren
 
-> Mit der Nachrichtenarchivierung können Sie eine Kopie der an Nutzer:innen gesendeten Nachrichten zu Archivierungs- oder Compliance-Zwecken in Ihrem AWS S3-Bucket, Azure Blob Storage-Container oder Google Cloud Storage-Bucket speichern. <br><br> In diesem Artikel erfahren Sie, wie Sie die Archivierung von Nachrichten einrichten, JSON-Payloads referenzieren und häufig gestellte Fragen beantworten.
+> Mit der Nachrichtenarchivierung können Sie eine Kopie der an Nutzer:innen gesendeten Nachrichten zu Archivierungs- oder Compliance-Zwecken in Ihrem AWS S3-Bucket, Azure Blob Storage-Container oder Google Cloud Storage-Bucket speichern. <br><br> Dieser Artikel behandelt die Einrichtung der Archivierung für Nachrichten, JSON-Payload-Referenzen und häufig gestellte Fragen.
 
-Die Archivierung von Nachrichten ist als zusätzliches Feature verfügbar. Wenden Sie sich an Ihren Customer-Success-Manager:in von Braze, um mit der Archivierung von Nachrichten zu beginnen.
+Die Archivierung von Nachrichten ist als zusätzliches Feature verfügbar. Um mit der Nachrichtenarchivierung zu beginnen, wenden Sie sich bitte an Ihren Braze-Customer-Success-Manager.
 
 ## Funktionsweise
 
@@ -51,6 +51,10 @@ Dieser Abschnitt führt Sie durch die Einrichtung der Archivierung von Nachricht
 
 Falls Sie dies noch nicht getan haben, verbinden Sie einen Cloud-Speicher-Bucket mit Braze. Weitere Schritte finden Sie in unserer Partner Dokumentation zu [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/), [Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/) oder [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/).
 
+{% alert note %}
+Sie müssen Currents nicht für die Archivierung von Nachrichten einrichten, daher können Sie diese Voraussetzung in der Dokumentation des Partners überspringen.
+{% endalert %}
+
 ### Schritt 2: Kanäle für die Archivierung von Nachrichten auswählen
 
 Auf der Seite mit den Einstellungen für **die Nachrichtenarchivierung** können Sie festlegen, welche Kanäle eine Kopie der gesendeten Nachrichten in Ihrem Cloud-Speicher Bucket speichern.
@@ -61,7 +65,7 @@ So wählen Sie Kanäle aus:
 2. Wählen Sie Ihre Kanäle aus.
 3. Wählen Sie **Änderungen speichern**.
 
-![Auf der Seite Archivierung von Nachrichten können Sie drei Kanäle auswählen: E-Mail, Push und SMS.]({% image_buster /assets/img/message_archiving_settings.png %})
+![Auf der Seite Nachrichtenarchivierung können Sie drei Kanäle auswählen: E-Mail, Push und SMS.]({% image_buster /assets/img/message_archiving_settings.png %})
 
 {% alert note %}
 Wenn Sie die **Nachrichtenarchivierung** in den **Einstellungen** nicht sehen, vergewissern Sie sich, dass Ihr Unternehmen die Nachrichtenarchivierung erworben und aktiviert hat.
@@ -69,14 +73,14 @@ Wenn Sie die **Nachrichtenarchivierung** in den **Einstellungen** nicht sehen, v
 
 ## Dateireferenzierungen
 
-Nachfolgend finden Sie Referenzen für die JSON-Nutzdaten, die Ihrem Cloud Storage Bucket bei jedem Versand einer Nachricht zugestellt werden. In unserem Code-Beispiel-Repository finden Sie [Beispieldateien für Nachrichtenarchive](https://github.com/braze-inc/braze-examples/tree/main/message-archiving).
+Im Folgenden finden Sie Verweise darauf, welche JSON-Nutzlast bei jeder zugestellten Nachricht an Ihren Cloud-Speicher-Bucket zugestellt wird. In unserem Code-Beispiel-Repository finden Sie [Beispieldateien für Nachrichtenarchive](https://github.com/braze-inc/braze-examples/tree/main/message-archiving).
 
 {% tabs %}
 {% tab Email %}
 
 ```json
 {
-  "version" : 1, //numerical version of the json structure
+  "version": 1, //numerical version of the JSON structure
   "to": ToAddress, ("customer@example.com")
   "subject": SubjectLine ("20% off coupon inside!"),
   "from_name": DisplayName ("Braze"),
@@ -84,7 +88,7 @@ Nachfolgend finden Sie Referenzen für die JSON-Nutzdaten, die Ihrem Cloud Stora
   "html_body": HtmlBody,
   "plaintext_body": PlainTextBody,
   "amp_body": AMPEmailBody,
-  "extras": Extra hash—for SendGrid users, this will be passed to SendGrid as Unique Arguments,
+  "extras": Hash of key-value pairs from Email Extras configured in the email editor,
   "headers": HashOfHeaders,
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
@@ -96,13 +100,13 @@ Nachfolgend finden Sie Referenzen für die JSON-Nutzdaten, die Ihrem Cloud Stora
   "attachments": Array of JSON Objects containing 'bytes' and 'file_name', // may not be available
   "user_id": String,
   "campaign_name": String, // will only be available if the message is from a campaign
-  "canvas_name": String, // will only be available if the message is a from Canvas
+  "canvas_name": String, // will only be available if the message is from Canvas
   "canvas_step_name": String, // will only be available if the message is from a Canvas
   "external_id": String
 }
 ```
 
-Das Feld `extras`, auf das in dieser Nutzlast verwiesen wird, stammt aus den Schlüssel-Wert-Paaren, die beim Verfassen einer E-Mail in das Feld **E-Mail Extras** eingefügt werden. Wie Sie Daten an Currents zurücksenden, erfahren Sie unter [Extras für Nachrichten]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
+Das`extras`Feld enthält die Schlüssel-Wert-Paare, die beim Verfassen einer E-Mail im HTML-Editor im Feld **„E-Mail-Extras“** konfiguriert wurden. E-Mail-Extras funktionieren mit allen E-Mail-Anbietern (einschließlich SendGrid und Sparkpost) und sind unabhängig vom verwendeten Anbieter in archivierten Nachrichten enthalten. Weitere Informationen zum Konfigurieren von E-Mail-Extras finden Sie unter [Erstellen einer E-Mail-Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#adding-email-extras). Wie Sie Daten an Currents zurücksenden, erfahren Sie unter [Extras für Nachrichten]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
 
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
@@ -111,7 +115,7 @@ Das Feld `extras`, auf das in dieser Nutzlast verwiesen wird, stammt aus den Sch
 
 ```json
 {
-  "version" : 1 //numerical version of the json structure
+  "version": 1 //numerical version of the JSON structure
   "to": PhoneNumber, ("+15555555555"),
   "body": Body ("Hi there!"),
   "subscription_group": SubscriptionGroupExternalId,
@@ -126,7 +130,7 @@ Das Feld `extras`, auf das in dieser Nutzlast verwiesen wird, stammt aus den Sch
   "message_variation_id": MessagVariationApiId, // may not be available
   "user_id": String,
   "campaign_name": String, // will only be available if the message is from a campaign
-  "canvas_name": String, // will only be available if the message is a from Canvas
+  "canvas_name": String, // will only be available if the message is from Canvas
   "canvas_step_name": String, // will only be available if the message is from a Canvas
   "external_id": String
 }
@@ -137,7 +141,7 @@ Das Feld `extras`, auf das in dieser Nutzlast verwiesen wird, stammt aus den Sch
 
 ```json
 {
-  "version" : 1, //numerical version of the json structure
+  "version": 1, //numerical version of the JSON structure
   "to": PushToken,
   "payload": JsonOfEntirePushPayload,
   "platform": one of "android_push" | "ios_push" | "kindle_push" | "web_push",
@@ -157,6 +161,33 @@ Das Feld `extras`, auf das in dieser Nutzlast verwiesen wird, stammt aus den Sch
 }
 ```
 
+### Variationen der Nutzlaststruktur
+
+{% alert important %}
+Das oberste`payload`Feld in Archiven für Push-Benachrichtigungen enthält die gesamte vom Anbieter an das Gerät gesendete Nutzlast. Innerhalb dieser JSON-Datei können Schlüssel wie`aps`(für APN) oder`notification`und`data`(für FCM) je nach Typ der Nachricht, Plattform und Konfiguration erheblich variieren.
+{% endalert %}
+
+Die Nachrichtenarchivierung erfasst die Nutzdaten der Nachricht selbst, jedoch nicht die Metadaten zur Zustellung, die an FCM oder APN gesendet werden. Die Metadaten der Zustellung umfassen:
+
+- Gerätetoken
+- Prioritätseinstellungen
+- Zeit bis zum Ablauf (TTL)
+- IDs ausblenden
+- APN-Header
+- Ablaufzeitstempel
+- Weitere Felder zur Zustellung
+
+Diese Felder dienen als Anweisungen für die Zustellung beim Push-Anbieter. Sie werden in der Regel nicht als Teil der Nachricht betrachtet.
+
+Zum Beispiel:
+
+- **iOS-Push-Benachrichtigungen** können unterschiedliche Strukturen für Rich-Benachrichtigungen (wobei ein Objekt`aps.alert` ist, das Felder wie`title`und enthält`body`) und einfache Benachrichtigungen (wobei eine `aps.alert`String-Zeichenfolge ist) aufweisen.
+- **Android-Push-Benachrichtigungen** (z. B. FCM) verwenden Datennachrichten mit angepassten Schlüsseln. Die Nutzlaststruktur kann je nach Konfiguration der Nachrichten verschiedene optionale Felder enthalten, wie z. B. Buttons, Karussells oder zusätzliche Metadaten.
+
+Darüber hinaus können Test-Sendungen über das Dashboard zu unterschiedlichen Nutzlaststrukturen als bei Produktionsnachrichten führen.
+
+Das JSON-Payload-Format kann zwischen den Nachrichten variieren und sich im Laufe der Zeit ändern. Bei der Analyse archivierter Push-Nutzdaten sollten Sie nicht von einer festen Struktur ausgehen oder davon ausgehen, dass immer dieselben Felder vorhanden sind. Implementieren Sie eine flexible Parsing-Logik, die verschiedene Payload-Formate verarbeitet.
+
 {% endtab %}
 {% endtabs %}
 
@@ -172,7 +203,7 @@ Wenn eine Nachricht außerhalb einer Kampagne oder eines Canvas versendet wird, 
 
 ### Wo finde ich weitere Informationen über diese Sendung?
 
-Sie können entweder `external_id` oder `dispatch_id` in Verbindung mit `user_id` verwenden, um die mit dem Template erstellte Nachricht mit unseren Currents-Daten zu referenzieren, um weitere Informationen zu finden, wie z.B. den Zeitstempel, zu dem die Nachricht zugestellt wurde, ob der Nutzer:innen die Nachricht geöffnet oder angeklickt hat, und vieles mehr.
+Sie können entweder das Symbol`external_id`  oder`dispatch_id`  in Verbindung mit dem Symbol  verwenden, um die vorlagenbasierte`user_id` Nachricht mit unseren Currents-Daten zu referenzieren und weitere Informationen zu erhalten, wie beispielsweise den Zeitstempel der Zustellung, ob die Öffnung der Nachricht erfolgt ist oder ob Klicks auf die Nachricht erfolgt sind und vieles mehr.
 
 ### Wie werden Wiederholungsversuche behandelt?
 
@@ -180,7 +211,7 @@ Wenn Ihr Bucket im Cloud-Speicher nicht erreichbar ist, versucht Braze es bis zu
 
 ### Was passiert, wenn meine Zugangsdaten ungültig sind?
 
-Wenn Ihre Zugangsdaten für den Cloud-Speicher zu irgendeinem Zeitpunkt ungültig werden, kann Braze keine Nachrichten in Ihrem Bucket für den Cloud-Speicher speichern und diese Nachrichten gehen verloren. Wir empfehlen Ihnen, Ihre [Benachrichtigungseinstellungen]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/notification_preferences/) für Amazon Web Serviceleistungen; Dienste, Google Cloud Serviceleistungen; Dienste oder Azure (Microsoft Cloud Serviceleistungen; Dienste) zu konfigurieren, damit Sie bei Problemen mit Zugangsdaten benachrichtigt werden.
+Wenn Ihre Zugangsdaten für den Cloud-Speicher zu irgendeinem Zeitpunkt ungültig werden, kann Braze keine Nachrichten in Ihrem Bucket für den Cloud-Speicher speichern und diese Nachrichten gehen verloren. Wir empfehlen Ihnen, Ihre [Benachrichtigungseinstellungen]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/notification_preferences/) für Amazon Web Services, Google Cloud Services oder Azure (Microsoft Azure) so zu konfigurieren, dass Sie bei Problemen mit Ihren Zugangsdaten eine Benachrichtigung erhalten.
 
 ### Warum weicht der Zeitstempel meiner Archivdatei `sent_at` leicht vom gesendeten Zeitstempel in Currents ab?
 
@@ -194,3 +225,6 @@ Nein. Wenn Sie an der Erstellung dieser speziellen Buckets interessiert sind, se
 
 Die Daten werden in einen `sent_messages` Bereich des Buckets geschrieben. Weitere Einzelheiten finden Sie unter [Wie es funktioniert](#how-it-works).
 
+### Ist es möglich, die Nachrichtenarchivierung zu verwenden, um Dateien in verschiedenen Workspaces zu gruppieren?
+
+Nein. Die Archivierung von Nachrichten unterstützt keine Gruppierung von Dateien nach Workspaces. Stattdessen können Sie feststellen, zu welchem Workspace die Kampagne oder die Canvas-Schritt-API-ID gehört, und sie dann anhand dieser Informationen gruppieren.

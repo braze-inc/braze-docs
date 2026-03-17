@@ -39,9 +39,7 @@ For example, if you'd like to send an in-app message to only iOS devices, select
 
 Add at least one filter to your segment. You can combine as many filters as you want to make your segmentation more specific. 
 
-{% alert note %}
-Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.
-{% endalert %}
+{% multi_lang_include alerts/note_alerts.md alert='Segment profiles first app use' %}
 
 #### Filter groups
 

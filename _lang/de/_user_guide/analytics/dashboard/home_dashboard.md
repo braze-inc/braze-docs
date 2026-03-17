@@ -15,7 +15,7 @@ tool:
 
 Die **Startseite** hat zwei Hauptbereiche:
 - [Machen Sie dort weiter, wo Sie aufgehört haben.](#pick-up-where-you-left-off)
-- [Performance-Übersicht](#peformance-overview)
+- [Performance-Übersicht](#performance-overview)
 
 ![Home-Dashboard in Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
 
@@ -26,7 +26,7 @@ Sie können dort weitermachen, wo Sie im Braze-Dashboard aufgehört haben, mit d
 Sie können die zuletzt bearbeiteten oder erstellten Kampagnen, Canvase und Segmente erneut aufrufen. Jede Karte ist mit Tags versehen, die den Content-Typ (Kampagne, Canvas, Segment) und den Status (aktiv, Entwurf, archiviert, gestoppt) angeben.
 
 {% alert note %}
-Der Abschnitt **Weitermachen, wo Sie aufgehört haben** erscheint, nachdem Sie eine Kampagne, ein Canvas oder ein Segment erstellt oder bearbeitet haben.
+Der Abschnitt **„Weitermachen, wo Sie aufgehört haben“** wird angezeigt, nachdem Sie eine Kampagne, ein Canvas oder ein Segment bearbeitet oder erstellt haben.
 {% endalert %}
 
 ![Ein Canvas-Entwurf, ein aktives Segment und ein Entwurf für eine Kampagne im Abschnitt "Weitermachen, wo Sie aufgehört haben".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
@@ -35,7 +35,7 @@ Der Abschnitt **Weitermachen, wo Sie aufgehört haben** erscheint, nachdem Sie e
 
 Standardmäßig zeigt die **Übersicht über die Performance** die Daten der letzten 30 Tage für alle Apps und Websites. Ihre Metriken werden alle auf der Grundlage des ausgewählten Datumsbereichs berechnet.
 
-![Datumsbereich und App-Felder auf dem Home Dashboard.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
+![Datumsbereich und App-Felder auf dem Home-Dashboard.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 Die Prozentsätze werden auf der Grundlage des aktuellen Datumsbereichs im Vergleich zum vorherigen Datumsbereich berechnet, mit Ausnahme der *monatlich aktiven Nutzer*:in (MAU), die den letzten Tag des vorherigen Zeitraums anstelle eines Bereichs verwenden. 
 
@@ -47,7 +47,39 @@ Wenn Sie beispielsweise den Datumsbereich auf **Letzte 7 Tage** einstellen und I
 
 Wählen Sie **Aufschlüsselung anzeigen** für jede Zeile der Performance-Übersichtsstatistik aus, um den Wert jeder Statistik pro Tag für den angegebenen Datumsbereich anzuzeigen.
 
-![Erweitern]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
+![Erweitern Sie]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
+
+### Performance im Zeitverlauf
+
+Das Diagramm **„Performance im Zeitverlauf“** zeigt den Wert jeder Statistik über den angegebenen Zeitraum für die angegebenen Apps.
+
+![Das Diagramm „Performance im Zeitverlauf“ zeigt Statistiken zu neuen Nutzer:innen über einen Zeitraum von 30 Tagen.]({% image_buster /assets/img/dashboards/performance_over_time.png %})
+
+Sie können Charts erstellen für:
+- Banner
+- Content-Cards
+- Täglich aktive Nutzer:innen
+  - (Optional) Aufschlüsselung nach Segmenten
+- E-Mail
+- In-App-Nachrichten
+- KPI-Formeln
+  - Auswählen Sie **„KPI-Formeln verwalten”,** um eine Formel zu erstellen oder eine vorhandene Formel zu bearbeiten.
+- LINE
+- Monatlich aktive Nutzer:innen (MAU)
+- Neue Nutzer:innen
+- Push
+  - (Optional) Aufschlüsselung nach Segmenten
+- Sitzungen
+  - (Optional) Aufschlüsselung nach Segment oder App-Version
+- Sitzungen pro Stunde
+- Sitzungen pro MAU
+- SMS
+- Kundenbindung
+- Deinstallationen
+  - (Optional) Aufschlüsselung nach Segmenten
+- Nutzer:innen
+- Webhooks
+- WhatsApp
 
 ## Verfügbare Statistiken
 
@@ -72,9 +104,34 @@ Der Prozentsatz neben der MAU-Zahl zeigt die Veränderung der MAU für diesen Ze
 
 $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of day before start date}}{\text{MAU of day before start date}}$$
 
+#### Regeln zur Berechnung der MAU
+
+Die MAU-Berechnungen unterliegen bestimmten Regeln, um eine genaue und konsistente Abrechnung zu gewährleisten:
+
+- **Berechnungszeitpunkt**: Wird einmal täglich um 12:05 UTC als 30-Tage-Momentaufnahme berechnet; die Zählungen werden niemals rückwirkend geändert.
+- **Anonyme Profile**: Bitte zählen Sie **nur,** wenn mindestens eine Sitzung protokolliert wurde.
+- **Identifizierte Profile**: Bitte zählen Sie automatisch, sobald sie vorhanden sind.
+- **Verwaiste Profile**: Duplikate, die mit einem anderen Nutzer:in zusammengeführt wurden, werden **nicht** gezählt.
+- **CSV-Uploads**: Nutzer:innen, die per CSV hochgeladen wurden, werden nur gezählt, wenn`date_of_first_session`  oder  angegeben`date_of_last_session` ist oder wenn sie sich später in einer Sitzung anmelden.
+- **API-Löschungen**: Das Löschen einer Nutzer:in über die API führt nicht zu einem sofortigen Update der MAU; die Anzahl wird im nächsten Monatszyklus automatisch korrigiert.
+
 {% alert note %}
 Anonyme Nutzer:innen zählen ebenfalls zu Ihren MAU. Bei mobilen Geräten sind anonyme Nutzer:innen geräteabhängig. Für Internet-Nutzer:innen sind anonyme Nutzer:innen vom Browser-Cache abhängig.
 {% endalert %}
+
+#### Beispiel für die Berechnung der MAU
+
+Das folgende Beispiel veranschaulicht, wie die MAU-Berechnungen anhand verschiedener Aktionen von Nutzern:innen funktionieren:
+
+| Schritt | Aktion | Sofortige Änderung des MAU | Gesamtergebnis |
+|------|--------|----------------------|-----------------|
+| (1 %) | Erstellen Sie **die anonyme Nutzer:in 1** und melden Sie sich für eine Sitzung an. | +1 | (1 %) |
+| (2 %) | **Anonyme:r Nutzer:in 1** identifizieren (Profil wird in identifiziert umgewandelt) | 0 | (1 %) |
+| 3 | Erstellen Sie **die anonyme:r Nutzer:in 2** und melden Sie sich an. | +1 | (2 %) |
+| (4 %) | Identifizieren Sie **den anonymen Nutzer:in 2** als **dieselbe Person** wie Nutzer:in 1 (Nutzer:in 2 wird verwaist). | –1 | (1 %) |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+MAU-Snapshots werden einmal täglich berechnet und werden niemals rückwirkend geändert. In diesem Beispiel bleibt die MAU-Zahl für den Tag nach Schritt 3 dauerhaft bei 2, auch wenn Nutzer:in 2 später verwaist. Die MAU-Zahl für die folgenden Tage spiegelt jedoch nur die nicht verwaisten Nutzer:innen wider. Innerhalb eines Zeitraums von 30 Tagen verbraucht dieser Ablauf letztendlich 1 MAU, da nur ein eindeutiger, nicht verwaistes Nutzer:in übrig bleibt.
 
 ### Täglich aktive Nutzer:innen
 
@@ -86,6 +143,10 @@ Anonyme Nutzer:innen zählen ebenfalls zu Ihren MAU. Bei mobilen Geräten sind a
 
 {% alert note %}
 Wenn Sie Braze zum ersten Mal integrieren, sehen alle Nutzer:innen wie neue Nutzer:innen aus, da Braze noch nie eine Sitzung für sie aufgezeichnet hat.
+{% endalert %}
+
+{% alert important %}
+Nutzer:innen, die mit mehr als einer App verknüpft sind, werden für jede App separat gezählt. Dies bedeutet, dass eine einzelne Nutzer:in mehrfach zur Anzahl der *neuen Nutzer:innen* beitragen kann, wenn sie Sitzungen in verschiedenen Apps in Ihrem Workspace startet.
 {% endalert %}
 
 ### Kundenbindung

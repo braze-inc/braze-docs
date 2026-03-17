@@ -77,9 +77,7 @@ This section allows you to manage BCC addresses you can append to outbound email
 
 BCC addresses are available for SendGrid and SparkPost only. As an alternative to BCC addresses, we recommend using [messaging archiving]({{site.baseurl}}/user_guide/data/export_braze_data/message_archiving/) to save a copy of messages sent to users for archival or compliance purposes.
 
-{% alert important %} 
-Appending a BCC address to your campaign or Canvas will result in doubling your billable emails for the campaign or Canvas component since Braze will send one message to your user and one to your BCC address.
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='BCC address billable emails' %}
 
 ![BCC Address section of the Email Settings tab.]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
 
@@ -102,7 +100,7 @@ For example, you can add {% raw %}`{{custom_attribute.${support_agent}}}`{% endr
 
 [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
-The email opening tracking pixel is an invisible 1 x 1&nbsp;px image that automatically gets inserted into your email HTML. This pixel helps Braze detect whether the end-users have opened your email. Email open information can be very useful, helping users determine effective marketing strategies by understanding the corresponding open rates.
+The email opening tracking pixel is an invisible 1 x 1&nbsp;px image and is automatically inserted into your email HTML. This pixel helps Braze detect whether your users have opened your email. When a user's email client makes a request to our tracking pixel, the request can contain information such as the IP address, user agent, and timestamp. Email open information can be very useful, helping you determine effective marketing strategies by understanding the corresponding open rates.
 
 ### Placing the tracking pixel
 

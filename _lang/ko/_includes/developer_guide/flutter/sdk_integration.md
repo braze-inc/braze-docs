@@ -1,8 +1,8 @@
-## Flutter Braze 소프트웨어 개발 키트 소개
+## Flutter Braze 소프트웨어 개발 키트 정보
 
-Android 및 iOS에서 Braze Flutter SDK를 통합하면 Dart로 작성된 [Flutter 앱](https://flutter.dev/) 내에서 Braze API를 사용할 수 있습니다. 이 플러그인은 기본적인 분석 기능을 제공하며, 이를 통해 단일 코드베이스에서 iOS 및 Android용 인앱 메시지와 콘텐츠 카드를 통합할 수 있습니다.
+Android 및 iOS에서 Braze Flutter 소프트웨어 개발 키트를 통합한 후에는 Dart로 작성된 [Flutter 앱](https://flutter.dev/) 내에서 Braze API를 사용할 수 있습니다. 이 플러그인은 기본적인 분석 기능을 제공하며, 이를 통해 단일 코드베이스에서 iOS 및 Android용 인앱 메시지와 콘텐츠 카드를 통합할 수 있습니다.
 
-## Flutter SDK 통합하기
+## Flutter SDK 통합
 
 ### 필수 조건
 
@@ -10,9 +10,9 @@ Braze Flutter SDK를 통합하기 전에 다음을 완료해야 합니다:
 
 | Prerequisite | 설명 |
 | --- | --- |
-| Braze API 앱 식별자 | 앱의 식별자를 찾으려면 **설정** > **API 및 식별자** > **앱 식별자로** 이동합니다. 자세한 내용은 [API 식별자 유형을]({{site.baseurl}}/api/identifier_types/#app-identifier) 참조하세요.|
+| Braze API 앱 식별자 | 앱 식별자를 찾으려면 **설정** > **API 및 식별자** > **앱 식별자로** 이동하세요. 자세한 내용은 [API 식별자 유형을]({{site.baseurl}}/api/identifier_types/#app-identifier) 참조하십시오.|
 | Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints).|
-| Flutter SDK | 공식 [Flutter SDK를](https://docs.flutter.dev/get-started/install) 설치하고 Braze Flutter SDK의 [최소 지원 버전을](https://github.com/braze-inc/braze-flutter-sdk#requirements) 충족하는지 확인합니다. |
+| Flutter SDK | 공식 [Flutter 소프트웨어 개발](https://docs.flutter.dev/get-started/install) 키트를 설치하고 Braze Flutter SDK의 [최소 지원 버전을](https://github.com/braze-inc/braze-flutter-sdk#requirements) 충족하는지 확인하십시오. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 1단계: Braze 라이브러리 통합
@@ -23,7 +23,7 @@ Braze Flutter SDK를 통합하기 전에 다음을 완료해야 합니다:
 flutter pub add braze_plugin
 ```
 
-### 2단계: 완벽한 네이티브 소프트웨어 개발 키트 설정
+### 2단계: 완전한 네이티브 소프트웨어 개발 키트 설정
 
 {% tabs %}
 {% tab Android %}
@@ -60,7 +60,7 @@ import braze_plugin
 ```swift
 static var braze: Braze? = nil
 
-func application(
+override func application(
   _ application: UIApplication,
   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 ) -> Bool {
@@ -120,7 +120,7 @@ static Braze *_braze = nil;
 {% endtab %}
 {% endtabs %}
 
-### 3단계: 플러그인 설정
+### 3단계: 플러그인 설정하기
 
 플러그인을 Dart 코드로 가져오려면 다음을 사용하세요:
 
@@ -131,19 +131,19 @@ import 'package:braze_plugin/braze_plugin.dart';
 그런 다음, [샘플 앱](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart)에서와 같이 `new BrazePlugin()`을 호출하여 Braze 플러그인 인스턴스를 초기화합니다.
 
 {% alert important %}
-정의되지 않은 동작을 방지하려면 Dart 코드에 `BrazePlugin` 인스턴스 하나만 할당하여 사용하세요.
+정의되지 않은 동작을 피하기 위해 Dart 코드 내에서 `BrazePlugin`해당 객체의 인스턴스를 단 하나만 할당하고 사용하십시오.
 {% endalert %}
 
-## 통합 테스트하기
+## 통합 테스트
 
 대시보드에서 세션 통계를 확인하여 SDK가 통합되었는지 확인할 수 있습니다. 어느 플랫폼에서든 애플리케이션을 실행하면 대시보드( **개요** 섹션)에 새 세션이 표시됩니다.
 
-앱에서 다음 코드를 호출하여 특정 사용자에 대한 세션을 엽니다.
+앱에서 다음 코드를 호출하여 특정 사용자에 대한 세션을 시작하십시오.
 
 ```dart
 BrazePlugin braze = BrazePlugin();
 braze.changeUser("{some-user-id}");
 ```
 
-대시보드의 **오디언스** > **사용자 검색에서** `{some-user-id}` 으로 사용자를 검색합니다. 여기에서 세션 및 디바이스 데이터가 기록되었는지 확인할 수 있습니다.
+대시보드의 **'오디언스** > **사용자** 검색'에서  를 `{some-user-id}`사용하여 사용자를 검색하세요. 여기에서 세션 및 디바이스 데이터가 기록되었는지 확인할 수 있습니다.
 

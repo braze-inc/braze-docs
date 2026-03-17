@@ -9,15 +9,15 @@ tool: Reports
 
 # Funnel-Berichte
 
-> Der Funnel-Bericht bietet einen visuellen Bericht, mit dem Sie die Reisen Ihrer Kund:in analysieren können, die sie nach dem Erhalt einer Kampagne oder eines Canvas unternehmen. \![Funnel-Bericht 2]({% image_buster /assets/img/funnel_report/funnel_report2.png %}){: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
+> Die Funnel-Berichterstattung bietet einen visuellen Bericht, mit dem Sie die Reise Ihrer Kunden nach Erhalt einer Kampagne oder eines Canvas analysieren können. ![Funnel-Bericht 2]({% image_buster /assets/img/funnel_report/funnel_report2.png %}){: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
 
 Wenn Ihre Kampagne oder Ihr Canvas eine Kontrollgruppe oder mehrere Varianten verwendet, können Sie nachvollziehen, wie sich die verschiedenen Varianten auf den Konversionstrichter ausgewirkt haben, und auf der Grundlage dieser Daten optimieren.
 
-\![Funnel-Bericht 1]({% image_buster /assets/img/funnel_report/funnel_report1.jpg %}){: style="max-width:80%;"}
+![Funnel-Bericht 1]({% image_buster /assets/img/funnel_report/funnel_report1.jpg %}){: style="max-width:80%;"}
 
 ## Funnel-Berichte einrichten
 
-\![Funnel-Bericht 5]({% image_buster /assets/img/funnel_report/canvas_campaign.png %}){: style="float:right;max-width:40%;border:0;margin-left:15px;"}
+![Funnel-Bericht 5]({% image_buster /assets/img/funnel_report/canvas_campaign.png %}){: style="float:right;max-width:40%;border:0;margin-left:15px;"}
 
 Sie können Funnel-Berichte für bestehende aktive Kampagnen und Canvase ausführen. Diese Berichte zeigen eine Reihe von Ereignissen, die ein Empfänger:in im Laufe von 1-30 Tagen ab dem Datum, an dem er das Canvas oder die Kampagne betritt, durchläuft. Ein Nutzer:in gilt als konvertiert, wenn er einen Schritt im Funnel in der angegebenen Reihenfolge ausführt.
 
@@ -38,7 +38,7 @@ Sie können einen Zeitrahmen für Ihren Bericht auswählen (innerhalb der letzte
 Wenn Sie das Zeitfenster für die Fertigstellung des Funnels auf einen Tag festlegen, muss das Funnel-Ereignis innerhalb von 24 Stunden nach Eingang der Nachricht stattfinden. Wenn Sie jedoch mehrere Tage auswählen, wird das Zeitfenster als Kalendertage in der Zeitzone des Unternehmens gezählt.
 {% endalert %}
 
-\![Funnel-Bericht für ein Canvas, bei dem "Letzte 7 Tage" im Zeitrahmen-Dropdown ausgewählt wurde.]({% image_buster /assets/img/funnel_report/funnel_report5.png %}){: style="max-width:90%;"}
+![Funnel-Bericht für ein Canvas, bei dem "Letzte 7 Tage" im Zeitrahmen-Dropdown ausgewählt ist.]({% image_buster /assets/img/funnel_report/funnel_report5.png %}){: style="max-width:90%;"}
 
 ### Schritt 2: Ereignisse für Funnel-Schritte auswählen
 
@@ -54,7 +54,7 @@ Bei jedem Funnel-Bericht ist das erste Ereignis, wenn der Nutzer:innen Ihre Nach
 Das Ereignis " **Mit Schritt interagiert** " kann nur mit Canvas-Schritten verwendet werden, die den E-Mail- oder Push Messaging-Kanal verwenden.
 {% endalert %}
 
-\![Funnel-Bericht für ein Canvas mit einer Dropdown-Liste der verfügbaren Berichtsereignisse.]({% image_buster /assets/img/funnel_report/funnel_report3.png %}){: style="max-width:80%;"}
+![Funnel-Bericht für ein Canvas mit einer Dropdown-Liste der verfügbaren Berichtsereignisse.]({% image_buster /assets/img/funnel_report/funnel_report3.png %}){: style="max-width:80%;"}
 
 Funnel-Berichte ermöglichen es Ihnen, den Erfolg Ihrer Nachrichten über die Konversions-Events oder Engagement-Events hinaus zu vergleichen, die Sie ursprünglich eingerichtet haben. Wenn es also ein Konversions-Event gibt, das Sie ursprünglich nicht hinzugefügt haben, können Sie die Konversionen für dieses Event dennoch mit einem Funnel tracken.
 
@@ -75,7 +75,7 @@ In Ihrem Funnel-Bericht können Sie die Kontrollgruppe direkt mit den Varianten 
 - **Option Regenerieren**: Ermöglicht Ihnen, Ihren Bericht neu zu generieren und zeigt an, wann der aktuelle Bericht zuletzt erstellt wurde. 
 - **Varianten**: Der durch farbige Spalten gekennzeichnete Funnel-Bericht lässt bis zu 8 Varianten und eine Kontrollgruppe zu. Standardmäßig werden im **Chart** nur drei Varianten angezeigt. Um mehr zu sehen, können Sie die restlichen Varianten manuell auswählen.
 
-\![Funnel-Bericht Chart.]({% image_buster /assets/img/funnel_report/funnel_report4.jpg %})
+![Funnel-Bericht Chart.]({% image_buster /assets/img/funnel_report/funnel_report4.jpg %})
 
 **Für Kampagnen mit mehreren Varianten**: Braze zeigt eine Tabelle mit Metriken für jedes Ereignis und jede Variante sowie die prozentuale Veränderung gegenüber der Kontrolle an. Die Konversionsrate ist die Anzahl der Nutzer:innen pro Empfänger:in der Nachricht, die das Ereignis (und die nachfolgenden) durchgeführt haben.
 

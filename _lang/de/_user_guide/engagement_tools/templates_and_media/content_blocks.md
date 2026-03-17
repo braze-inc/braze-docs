@@ -45,7 +45,7 @@ Es gibt zwei Arten von Editoren, mit denen Sie einen Inhaltsblock erstellen kön
 | Name | Pflichtfeld mit maximal 100 Zeichen. Dieses Feld kann nicht umbenannt werden, nachdem der Content-Block gespeichert wurde. Außerdem können Sie einem neuen Content-Block nicht denselben Namen geben wie einem früheren Content-Block, selbst wenn der vorherige archiviert wurde. |
 | Beschreibung | (optional) Maximal 250 Zeichen. Beschreiben Sie den Content-Block, damit andere Nutzer:innen von Braze wissen, wofür er gedacht ist und wo er verwendet wird. |
 | Content-Größe | Maximal 50 KB. |
-| Platzierung | Inhaltsblöcke können nicht in einer E-Mail-Fußzeile verwendet werden. |
+| Platzierung | Content-Blöcke können nicht in einer E-Mail-Fußzeile verwendet werden. Sie können jedoch [einen Content-Block erstellen](#email-footers), [der eine Fußzeile enthält](#email-footers), die Sie in Ihren E-Mails verwenden können. |
 | Erstellung | HTML-Editor oder Drag-and-Drop-Editor. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -80,7 +80,7 @@ Wenn Sie einen Inhaltsblock für eine einzelne Nachricht aktualisieren oder eine
 
 Nachdem Sie Änderungen an einem Content-Block vorgenommen haben, können Sie den aktualisierten Content-Block speichern und starten, indem Sie **Content-Block starten** auswählen. Oder Sie können **Mehr** > **Duplizieren** wählen, um ein Duplikat Ihres Inhaltsblocks zu erstellen.
 
-\![Ein Content-Block mit der Aufschrift "Willkommen zu unserem Newsletter".]({% image_buster /assets/img/copy-content-block.png %})
+![Ein Content-Block mit dem Text "Willkommen zu unserem Newsletter".]({% image_buster /assets/img/copy-content-block.png %})
 
 Sie können einen Content-Block auch [duplizieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Dadurch wird eine Entwurfskopie des Inhaltsblocks erstellt.
 
@@ -88,9 +88,9 @@ Sie können einen Content-Block auch [duplizieren]({{site.baseurl}}/user_guide/e
 
 Nachdem Sie einen Inhaltsblock in einer aktiven Kampagne oder einem Canvas hinzugefügt haben, können Sie eine Vorschau dieses Inhaltsblocks in der Inhaltsblock-Bibliothek anzeigen, indem Sie den Mauszeiger über den Inhaltsblock bewegen und das Symbol <i class="fa fa-eye preview-icon"></i> **Vorschau** auswählen. 
 
-Diese Vorschau enthält Informationen zum Content-Block, z. B. wer ihn erstellt hat, Tags, Erstellungsdatum, Datum der letzten Bearbeitung, Beschreibung, Editor-Typ, Anzahl der Einschlüsse mit Details und eine aktuelle Vorschau des Content-Blocks.
+Diese Vorschau enthält Informationen zum Content-Block, z. B. wer ihn erstellt hat, Tags, Erstellungsdatum, Datum der letzten Bearbeitung, Beschreibung, Editor-Typ, Anzahl der Einbindungen mit Details (eine anklickbare Liste von Nachrichten oder Content-Blöcken, die den Content-Block verwenden) und eine tatsächliche Vorschau des Content-Blocks.
 
-\![Eine Vorschau auf einen Content-Block "Workout_Promo" für Radfahren und Tanzen, der sechs Einschlüsse hat.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
+![Eine Vorschau eines Content-Blocks"Workout_Promo"für Radfahren und Tanzen, der eine Einbindung enthält.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
 
 ### Verschachtelte Content-Blöcke
 
@@ -100,20 +100,28 @@ Inhaltsblöcke können verschachtelt werden, aber nur einmal. Sie können Conten
 Sie können eine dritte Ebene von Content Block einfügen. Allerdings wird der Content in den Ebenen nach der zweiten nicht erweitert. Der Inhalt und das Liquid-Snippet werden aus der Nachricht entfernt.
 {% endalert %}
 
-Außerdem können Inhaltsblöcke nicht innerhalb einer E-Mail-Fußzeile verwendet werden, obwohl E-Mail-Fußzeilen innerhalb von Inhaltsblöcken verwendet werden können.
+### Verwendung von E-Mail-Fußzeilen in Content-Blöcken {#email-footers}
+
+Content-Blöcke können nicht in einer E-Mail-Fußzeile verwendet werden. Sie können jedoch einen Content-Block erstellen, der Fußzeileninhalte für die Verwendung in Ihren E-Mails enthält. Gehen Sie dazu folgendermaßen vor:
+
+1. Bitte gehen Sie zu **Einstellungen** > **E-Mail-Einstellungen** > **Angepasste Fußzeile** und erstellen Sie die gewünschte Fußzeile.
+2. Fügen Sie die Fußzeile zu einem Content-Block in der **Bibliothek der Content-Blöcke** hinzu.
+3. Fügen Sie diesen Content-Block zu Ihren E-Mail-Templates oder Nachrichten hinzu.
+
+Nun können Sie dieselbe Fußzeile für mehrere Nachrichten verwenden.
 
 ### Inhaltsblöcke archivieren
 
-\![Erweitertes Dropdown-Menü Einstellungen, das drei Optionen anzeigt: Archivieren, Duplizieren und In Arbeitsbereich kopieren.]({% image_buster /assets/img/template_archive_cog.png %}){: style="max-width:20%;float:right;margin-left:15px;" }
+![Erweitertes Dropdown-Menü Einstellungen, das drei Optionen anzeigt: Archivieren, Duplizieren und In Arbeitsbereich kopieren.]({% image_buster /assets/img/template_archive_cog.png %}){: style="max-width:20%;float:right;margin-left:15px;" }
 
-Wenn Sie die Verwendung eines Content-Blocks beendet haben, können Sie ihn auf der Seite [Templates & Medien]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) archivieren. Archivierte Content-Blöcke sind schreibgeschützt. Dearchivieren Sie also den Content-Block, bevor Sie ihn bearbeiten. Content-Blöcke können nicht archiviert werden, wenn sie in Nachrichten verwendet werden.
+Sobald Sie einen Content-Block nicht mehr benötigen, können Sie ihn auf der Seite [„Templates&und Medien“]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) archivieren. Archivierte Content-Blöcke sind schreibgeschützt. Dearchivieren Sie also den Content-Block, bevor Sie ihn bearbeiten. Content-Blöcke können nicht archiviert werden, wenn sie in Nachrichten verwendet werden.
 
 #### Bewährte Praktiken
 
 - Wenn Ihr Block nur in wenigen E-Mails verwendet wird, empfehlen wir Ihnen, den veralteten Block zu archivieren und Ihre Live-Nachrichten mit einem neueren Block zu aktualisieren, der nicht archiviert wurde.
 - Wenn Ihr Block nur einen Tippfehler hat oder eine kleine Änderung benötigt, empfehlen wir nicht, den Block zu archivieren. Aktualisieren Sie stattdessen den Block und schicken Sie ihn ab!
-- Wenn Ihr Block in mehr Nachrichten verwendet wird, als Sie mit dem ersten Vorschlag in dieser Liste vernünftig verwalten können, empfehlen wir, alle Inhalte aus dem Block zu entfernen und ihn zu archivieren. So stellen Sie sicher, dass keine veralteten Informationen in neu versendeten E-Mails enthalten sind.
+- Wenn Ihr Block in mehr Nachrichten verwendet wird, als Sie mit dem ersten Vorschlag in dieser Liste sinnvoll verwalten können, empfehlen wir, alle Inhalte aus dem Block zu entfernen. Dadurch wird verhindert, dass veraltete Informationen in Nachrichten enthalten sind.
 - Wenn Sie versehentlich einen Content-Block archiviert haben, können Sie die Archivierung aufheben.
 
-\![Panel für gespeicherte Content-Blöcke, in dem das Dropdown-Menü für die Einstellungen für "Test_32" erweitert wird und drei Optionen anzeigt: Entarchivieren, Duplizieren und Kopieren in den Arbeitsbereich]({% image_buster /assets/img/unarchive-content-block.png %})
+![Das Panel „Gespeicherte Content-Blöcke“, in dem das Dropdown-Menü für die "Test_32"Einstellungen erweitert ist und drei Optionen anzeigt: Entarchivieren, Duplizieren und Kopieren in den Arbeitsbereich]({% image_buster /assets/img/unarchive-content-block.png %})
 

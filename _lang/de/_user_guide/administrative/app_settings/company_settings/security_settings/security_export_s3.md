@@ -8,7 +8,11 @@ description: "Dieser referenzierte Artikel beschreibt, wie Sie jeden Tag um Mitt
 
 # Export von Sicherheitsereignissen mit Amazon S3
 
-> Sie können Sicherheitsereignisse mit einem täglichen Job, der um Mitternacht UTC ausgeführt wird, automatisch zu Amazon S3, einem Cloud-Speicheranbieter, exportieren. Nach der Einrichtung müssen Sie die Sicherheitsereignisse nicht mehr manuell aus dem Dashboard exportieren. Der Auftrag exportiert die Sicherheitsereignisse der letzten 24 Stunden im CSV-Format in Ihren konfigurierten S3-Speicher. Die CSV-Datei hat die gleiche Struktur wie ein manuell exportierter Bericht.
+> Sie können Sicherheitsereignisse automatisch zu Amazon S3, einem Cloud-Speicheranbieter, exportieren, wobei ein täglicher Job um Mitternacht UTC ausgeführt wird. Nach der Einrichtung ist es nicht erforderlich, Sicherheitsereignisse manuell aus dem Dashboard zu exportieren. Der Job exportiert die Sicherheitsereignisse der letzten 24 Stunden im CSV-Format in Ihren konfigurierten S3-Speicher. Die CSV-Datei weist dieselbe Struktur auf wie ein manuell exportierter Bericht.
+
+{% alert note %}
+Die Begrenzung auf 10.000 Zeilen gilt ausschließlich für den manuellen Download von CSV-Berichten über das Dashboard. Sicherheitsereignis-Exporte nach S3 unterliegen dieser Zeilenbegrenzung nicht.
+{% endalert %}
 
 Braze unterstützt zwei verschiedene S3-Authentifizierungs- und Autorisierungsmethoden für die Einrichtung des Amazon S3-Exports:
 
@@ -19,24 +23,24 @@ Braze unterstützt zwei verschiedene S3-Authentifizierungs- und Autorisierungsme
 
 Diese Methode generiert einen geheimen Schlüssel und eine Zugriffsschlüssel-ID, die es Braze erlaubt, sich als Nutzer:in Ihrem AWS-Konto zu authentifizieren, um Daten in Ihren Bucket zu schreiben.
 
-### Schritt 1: Erstellen Sie einen Nutzer:in für In-App-Nachrichten
+### Schritt 1: Erstellen Sie einen Nutzer für die Identitäts- und Zugriffsverwaltung (IAM).
 
-Um Ihren geheimen Zugangsschlüssel und die ID des Zugangsschlüssels abzurufen, müssen Sie einen Nutzer:in für In-App-Nachrichten erstellen. Folgen Sie dazu den Anweisungen unter [Einrichten Ihres AWS-Kontos](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html#create-an-admin).
+Um Ihren geheimen Zugriffsschlüssel und Ihre Zugriffsschlüssel-ID abzurufen, müssen Sie einen IAM-Nutzer erstellen. Befolgen Sie dazu die Anweisungen unter [Einrichten Ihres AWS-Kontos](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html#create-an-admin).
 
 ### Schritt 2: Zugangsdaten abrufen
 
 1. Nachdem Sie einen neuen Nutzer:innen angelegt haben, generieren Sie den Zugangsschlüssel und laden Ihre ID und Ihren geheimen Zugangsschlüssel herunter.
 
-![Eine Zusammenfassungsseite für eine Rolle namens "liyu-chen-test".]({% image_buster /assets/img/security_export/credentials1.png %})
+![Eine Übersichtsseite für eine Rolle namens „liyu-chen-test”.]({% image_buster /assets/img/security_export/credentials1.png %})
 
 {: start="2"}
 2\. Notieren Sie sich diese Zugangsdaten irgendwo, oder laden Sie die Dateien mit den Zugangsdaten herunter, da Sie diese später in Braze eingeben müssen.
 
-![Felder, die den Zugangsschlüssel und den geheimen Zugangsschlüssel enthalten.]({% image_buster /assets/img/security_export/retrieve_access_keys.png %})
+![Felder, die den Zugriffsschlüssel und den geheimen Zugriffsschlüssel enthalten.]({% image_buster /assets/img/security_export/retrieve_access_keys.png %})
 
 ### Schritt 3: Richtlinie erstellen
 
-1. Gehen Sie zu **IAM** > **Richtlinien** > **Richtlinie erstellen**, um Berechtigungen für Ihre Nutzer:innen hinzuzufügen. 
+1. Bitte gehen Sie zu **IAM** (Identitäts- und Zugriffsverwaltung) > **Richtlinien** > **Richtlinie erstellen,** um Berechtigungen für Ihre Nutzer:innen hinzuzufügen. 
 2. Wählen Sie **Eigene Richtlinie erstellen**, die eingeschränkte Berechtigungen erteilt, so dass Braze nur auf die angegebenen Buckets zugreifen kann.
 3. Geben Sie den Namen einer Richtlinie Ihrer Wahl an.
 4. Geben Sie den folgenden Code-Snippet in den Abschnitt **Richtlinien-Dokument** ein. Ersetzen Sie "INSERTBUCKETNAME" durch Ihren Bucket-Namen. Ohne diese Berechtigungen schlägt die Integration bei der Prüfung der Zugangsdaten fehl und kann nicht erstellt werden.
@@ -76,12 +80,12 @@ Jetzt können Sie Ihre AWS-Zugangsdaten mit Ihrem Braze-Konto verknüpfen!
     - Wenn Sie diesen Schlüssel eingeben, wählen Sie zunächst **Zugangsdaten testen** aus, um zu bestätigen, dass Ihre Zugangsdaten funktionieren.
 - AWS Bucket-Name 
 
-![Die Seite "Sicherheitsereignis-Download" mit ausgefüllten Braze-Kontos und externen IDs von Braze.]({% image_buster /assets/img/security_export/security_event_download1.png %})
+![Die Seite „Sicherheitsereignis-Download“ mit ausgefüllten Braze-Konto- und Braze-externen IDs.]({% image_buster /assets/img/security_export/security_event_download1.png %})
 
 {: start="4"}
 4\. Wählen Sie **Änderungen speichern**. 
 
-!["Änderungen speichern" Button.]({% image_buster /assets/img/security_export/save_changes_button.png %}){: style="max-width:50%;"}
+![Button „Änderungen speichern“.]({% image_buster /assets/img/security_export/save_changes_button.png %}){: style="max-width:50%;"}
 
 Sie haben AWS S3 in Ihr Braze-Konto integriert!
 
@@ -92,9 +96,9 @@ Die AWS-Rollen-ARN-Methode generiert einen Rollen-Amazon-Ressourcennamen (ARN), 
 ### Schritt 1: Richtlinie erstellen
 
 1. Melden Sie sich bei der AWS Verwaltungskonsole als Account Manager an. 
-2. Gehen Sie in der AWS-Konsole zum Bereich **IAM** > **Richtlinien** und wählen Sie dann **Richtlinie erstellen**.
+2. Bitte gehen Sie in der AWS-Konsole zum Abschnitt **„IAM** (Identity and Access Management)“ > **„Richtlinien“** und wählen Sie **„Create Policy“** aus.
 
-![Eine Seite mit einer Liste von Richtlinien und dem Button "Richtlinie erstellen".]({% image_buster /assets/img/security_export/policies.png %})
+![Eine Seite mit einer Liste von Richtlinien und einem Button zum Erstellen einer Richtlinie.]({% image_buster /assets/img/security_export/policies.png %})
 
 {: start="3"}
 3\. Öffnen Sie den Tab **JSON** und geben Sie den folgenden Code-Snippet in den Abschnitt **Richtliniendokument** ein. Ersetzen Sie `INSERTBUCKETNAME` durch Ihren Bucket-Namen. 
@@ -125,7 +129,7 @@ Die AWS-Rollen-ARN-Methode generiert einen Rollen-Amazon-Ressourcennamen (ARN), 
 {: start="5"}
 5\. Geben Sie der Richtlinie einen Namen und eine Beschreibung, und wählen Sie dann **Richtlinie erstellen**.
 
-![Eine Seite zur Überprüfung und Erstellung Ihrer Richtlinie.]({% image_buster /assets/img/security_export/review_and_create.png %})
+![Eine Seite, auf der Sie Ihre Richtlinie überprüfen und erstellen können.]({% image_buster /assets/img/security_export/review_and_create.png %})
 
 ### Schritt 2: Rolle erstellen
 
@@ -133,14 +137,14 @@ Die AWS-Rollen-ARN-Methode generiert einen Rollen-Amazon-Ressourcennamen (ARN), 
 2. Wählen Sie **AWS Role ARN**. 
 3. Notieren Sie sich die Bezeichner, die Braze-Konto ID und die externe ID, die Sie zur Erstellung Ihrer Rolle benötigen.
 
-![Die Seite "Sicherheitsereignis-Download" mit ausgefüllten Braze-Kontos und externen IDs von Braze.]({% image_buster /assets/img/security_export/security_event_download2.png %})
+![Die Seite „Sicherheitsereignis-Download“ mit ausgefüllten Braze-Konto- und Braze-externen IDs.]({% image_buster /assets/img/security_export/security_event_download2.png %})
 
-4. Gehen Sie in der AWS-Konsole zum Bereich **IAM** > **Rollen** > **Rolle erstellen**. 
+4. Bitte navigieren Sie in der AWS-Konsole zum Abschnitt **„IAM** (Identity and Access Management)“ > **„Roles“** > **„Create Role**“. 
 5. Wählen Sie **Anderes AWS-Konto** als SELEKTOR-Typ für die vertrauenswürdige Entität aus. 
 6. Geben Sie die ID Ihres Braze-Kontos an, markieren Sie das Kästchen **Externe ID erforderlich** und geben Sie dann Ihre externe ID von Braze ein. 
 7. Wählen Sie nach Abschluss **Weiter** aus.
 
-![Eine Seite mit Optionen zum Auswählen eines vertrauenswürdigen Entitätstyps und zur Angabe von Informationen über Ihr AWS-Konto.]({% image_buster /assets/img/security_export/select_trusted_entity.png %})
+![Eine Seite mit Optionen, um einen vertrauenswürdigen Entitätstyps auszuwählen und Informationen zu Ihrem AWS-Konto anzugeben.]({% image_buster /assets/img/security_export/select_trusted_entity.png %})
 
 ### Schritt 3: Richtlinie beifügen
 
@@ -160,18 +164,18 @@ Ihre neu erstellte Rolle wird in der Liste erscheinen!
 
 1. In der AWS-Konsole finden Sie Ihre neu erstellte Rolle in der Liste. Wählen Sie den Namen aus, um die Details zu dieser Rolle zu öffnen, und notieren Sie sich den **ARN**.
 
-![Die Zusammenfassungsseite für eine Rolle namens "security-event-export-olaf".]({% image_buster /assets/img/security_export/credentials2.png %})
+![Die Übersichtsseite für eine Rolle namens „security-event-export-olaf”.]({% image_buster /assets/img/security_export/credentials2.png %})
 
 {: start="2"}
 2\. Gehen Sie in Braze zu **Einstellungen** > **Unternehmenseinstellungen** > **Admin-Einstellungen** > **Sicherheitseinstellungen** und blättern Sie zum Abschnitt **Sicherheitsereignis-Download**.
 
-!["Sicherheitsereignis-Download" mit einem eingeschalteten Umschalter für "Export zu AWS S3".]({% image_buster /assets/img/security_export/security_event_download3.png %})
+![Abschnitt „Sicherheitsereignis herunterladen“ mit umgeschalteter Option „Nach AWS S3 exportieren“.]({% image_buster /assets/img/security_export/security_event_download3.png %})
 
 {: start="3"}
 3\. Vergewissern Sie sich, dass die **AWS-Rolle ARN** ausgewählt ist, und geben Sie dann Ihren Rollen-ARN und den AWS S3 Bucket-Namen in die entsprechenden Felder ein.
 4\. Wählen Sie **Zugangsdaten testen**, um zu bestätigen, dass Ihre Zugangsdaten richtig funktionieren.
 5\. Wählen Sie **Änderungen speichern**. 
 
-!["Änderungen speichern" Button.]({% image_buster /assets/img/security_export/save_changes_button.png %}){: style="max-width:40%;"}
+![Button „Änderungen speichern“.]({% image_buster /assets/img/security_export/save_changes_button.png %}){: style="max-width:40%;"}
 
 Sie haben AWS S3 in Ihr Braze-Konto integriert!

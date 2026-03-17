@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE : Supprimer le compte utilisateur de tableau de bord"
+nav_title: "DELETE : Supprimer un compte utilisateur de tableau de bord"
 article_title: "DELETE : Supprimer le compte utilisateur de tableau de bord"
 alias: /delete_existing_dashboard_user/
 search_tag: Endpoint
@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer un c
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Utilisez cet endpoint pour supprimer définitivement un utilisateur de tableau de bord existant en spécifiant la ressource `id` renvoyée par la méthode SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) . 
+> Utilisez cet endpoint pour supprimer définitivement un utilisateur de tableau de bord existant en spécifiant la ressource `id` renvoyée par la méthode SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) .
 
 Cette opération est similaire à la suppression d'un utilisateur dans la section **Utilisateurs de l'entreprise** du tableau de bord Braze.
 
@@ -38,14 +38,14 @@ Pour utiliser cet endpoint, vous aurez besoin d’un jeton SCIM. Vous utiliserez
 
 ## Corps de la demande
 
-```json
+```http
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ## Exemple de demande
-```json
+```bash
 curl --location --request DELETE 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
@@ -56,13 +56,13 @@ curl --location --request DELETE 'https://rest.iad-01.braze.com/scim/v2/Users/df
 
 ### Exemple de réponse échouée
 
-```json
+```http
 HTTP/1.1 204 Not Found
 Content-Type: text/html; charset=UTF-8
 ```
 
 Si cet ID ne correspond à aucun développeur dans Braze, l’endpoint répondra avec :
-```json
+```http
 HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8
 

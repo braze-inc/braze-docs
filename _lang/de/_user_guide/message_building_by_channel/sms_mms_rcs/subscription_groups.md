@@ -23,7 +23,7 @@ Es gibt zwei Abo-Status für SMS- und RCS-Nutzer:innen: `subscribed` und `unsubs
 | Status | Definition |
 | --------- | ---------- |
 | Abonniert | Nutzer:innen haben ausdrücklich bestätigt, dass sie SMS und RCS von einer bestimmten Abo-Gruppe erhalten möchten. Ein:e Nutzer:in kann entweder abonniert werden, indem sein oder ihr Abonnementstatus über die Braze-Abonnement-API aktualisiert wird, oder indem er oder sie eine Antwort mit einem Opt-in-Schlüsselwort per SMS sendet. Ein Nutzer:in muss bei einer Abo-Gruppe für SMS oder RCS abonniert sein, um SMS, RCS oder beides zu erhalten. |
-| Abgemeldet | Der Nutzer:in hat sich ausdrücklich gegen Messaging von Ihrer SMS- und RCS-Abo-Gruppe und den Abo-Telefonnummern innerhalb der Abo-Gruppe entschieden. Sie können sich abmelden, indem sie eine Antwort mit einem Opt-in-Schlüsselwort senden, oder eine Marke kann Nutzer:innen über die [Braze-Abo-API]({{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) abmelden. Nutzer:innen, die sich von einer Abo-Gruppe für SMS und RCS abgemeldet haben, erhalten keine SMS oder RCS mehr von sendenden Telefonnummern, die zu dieser Abo-Gruppe gehören.|
+| Abgemeldet | Der Nutzer:in hat sich ausdrücklich gegen Messaging von Ihrer SMS- und RCS-Abo-Gruppe und den Abo-Telefonnummern innerhalb der Abo-Gruppe entschieden. Sie können sich abmelden, indem sie eine Antwort mit einem Opt-in-Schlüsselwort senden, oder eine Marke kann Nutzer:innen über die [Braze-Abo-API]({{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) abmelden. Nutzer:innen, die sich von einer SMS- und RCS-Abo-Gruppe abgemeldet haben, erhalten keine SMS oder RCS mehr von den Absender-Telefonnummern, die zu dieser Abo-Gruppe gehören.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Den Status eines Nutzer:in festlegen
@@ -34,7 +34,7 @@ Wenn beispielsweise Nutzer:in A eine Telefonnummer hat, die mehreren Abonnementg
 
 Um den Status der Abo-Gruppe eines Nutzers:innen festzulegen, verwenden Sie eine der folgenden Methoden:
 
-- **Rest-API:** Nutzerprofile können programmatisch über den Endpunkt [\`/subscription/status/set\`]({{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) mit Hilfe der Braze REST API eingestellt werden.
+- **Rest-API:** Nutzerprofile können programmgesteuert über den Endpunkt [\`]({{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)/subscription/status/set\` mithilfe der Braze-REST-API festgelegt werden.
 - **SDK-Integration** Nutzer:innen können einer E-Mail- oder SMS- und RCS-Abo-Gruppe über die Methode `addToSubscriptionGroup` für [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/add-to-subscription-group.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)) oder [Internet](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup) hinzugefügt werden.
 - **Wird automatisch beim Opt-in/Opt-out des Nutzers oder der Nutzerin verarbeitet:** Wenn Nutzer:innen ein Standard Opt-in oder Opt-out [Schlüsselwort]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/) eingeben, setzt und aktualisiert Braze automatisch ihren Abo-Status.
 - **Nutzerimport**: Nutzer:innen können über **Benutzer importieren** zu E-Mail- oder SMS- und RCS-Abo-Gruppen hinzugefügt werden. Wenn Sie den Status der Abonnementgruppe aktualisieren, müssen Sie diese beiden Spalten in Ihrer CSV-Datei haben: `subscription_group_id` und `subscription_state`. Weitere Informationen finden Sie unter [Benutzerimport]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status).
@@ -48,13 +48,13 @@ Um die Abo-Gruppe eines Nutzers:innen zu überprüfen, verwenden Sie eine der fo
 
 ## Versenden von Nachrichten mit einer Abo-Gruppe
 
-Um eine SMS- oder RCS-Kampagne über Braze einzuführen, wählen Sie eine Abo-Gruppe aus dem Dropdown-Menü **SMS/MMS/RCS-Varianten** aus. Nach der Auswahl wird Ihrer Kampagne oder Ihrem Canvas automatisch ein Zielgruppenfilter hinzugefügt, der sicherstellt, dass nur Nutzer `subscribed`, die der ausgewählten Abonnementgruppe angehören, zur Zielgruppe gehören.
+Um eine SMS- oder RCS-Kampagne über Braze zu starten, wählen Sie bitte eine Abo-Gruppe aus dem Dropdown-Menü **„SMS/MMS/RCS-Varianten“** aus. Nach der Auswahl wird Ihrer Kampagne oder Ihrem Canvas automatisch ein Zielgruppenfilter hinzugefügt, der sicherstellt, dass nur Nutzer `subscribed`, die der ausgewählten Abonnementgruppe angehören, zur Zielgruppe gehören.
 
 {% alert important %}
 In Übereinstimmung mit den internationalen [Telekommunikationsvorschriften und -richtlinien]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/) wird Braze niemals SMS oder RCS an Nutzer:in senden, die nicht die ausgewählte Abo-Gruppe abonniert haben.  
 {% endalert %}
 
-![SMS-Editor mit geöffnetem Abo-Gruppen-Dropdown und der Markierung "Messaging Dienst A für SMS" durch den Nutzer:innen.]({% image_buster /assets/img/sms/sms_subgroup_select.png %})
+![SMS-Editor mit geöffneter Dropdown-Liste der Abo-Gruppe und „Messaging-Dienst A für SMS“ vom Nutzer oder von der Nutzerin hervorgehoben.]({% image_buster /assets/img/sms/sms_subgroup_select.png %})
 
 ## Enablement von Abo-Gruppen
 
@@ -62,13 +62,13 @@ Um Abo-Gruppen für SMS, MMS oder RCS zu aktivieren, referenzieren Sie auf Folge
 
 {% tabs local %}
 {% tab SMS %}
-Während Ihres SMS-Onboarding-Prozesses wird ein Braze Onboarding-Manager Abonnementgruppen für Ihr Dashboard-Konto einrichten. Er wird mit Ihnen zusammen festlegen, wie viele Abonnementgruppen Sie benötigen, und die entsprechenden Telefonnummern für den Versand zu Ihren Abonnementgruppen hinzufügen. Der Zeitrahmen für die Einrichtung einer Abonnementgruppe hängt von der Art der Telefonnummern ab, die Sie hinzufügen möchten. Shortcode-Anwendungen können beispielsweise zwischen 8 bis 12 Wochen dauern, während Langcodes innerhalb eines Tages eingerichtet werden können. Wenn Sie Fragen zur Einrichtung Ihres Braze-Dashboards haben, wenden Sie sich an Ihren Braze-Vertreter, um Unterstützung zu erhalten.  
+Während Ihres SMS-Onboarding-Prozesses wird ein Braze Onboarding-Manager Abonnementgruppen für Ihr Dashboard-Konto einrichten. Er wird mit Ihnen zusammen festlegen, wie viele Abonnementgruppen Sie benötigen, und die entsprechenden Telefonnummern für den Versand zu Ihren Abonnementgruppen hinzufügen. Der Zeitrahmen für die Einrichtung einer Abonnementgruppe hängt von der Art der Telefonnummern ab, die Sie hinzufügen möchten. Shortcode-Anwendungen können beispielsweise zwischen 8 bis 12 Wochen dauern, während Langcodes innerhalb eines Tages eingerichtet werden können. Sollten Sie Fragen zur Einrichtung Ihres Braze-Dashboards haben, wenden Sie sich bitte an Ihre Braze-Vertretung, um Unterstützung zu erhalten.  
 {% endtab %}
 
 {% tab MMS %}
 Um eine MMS-Nachricht senden zu können, muss mindestens eine Nummer in Ihrer Abonnementgruppe für den Versand von MMS aktiviert sein. Dies wird durch einen Tag angezeigt, der sich neben der Abo-Gruppe befindet. 
 
-![Abo-Gruppe mit hervorgehobenem "Messaging Dienst A für SMS" in der Auswahlliste. Dem Entry ist der Tag „MMS“ vorangestellt.]({% image_buster /assets/img/sms/mms_sub_group_tag.png %}){: style="max-width:40%"}
+![Dropdown-Menü Abonnementgruppe mit der Markierung "Nachrichtendienst A für SMS". Dem Entry ist der Tag „MMS“ vorangestellt.]({% image_buster /assets/img/sms/mms_sub_group_tag.png %}){: style="max-width:40%"}
 {% endtab %}
 
 {% tab RCS %}
@@ -99,7 +99,7 @@ Definieren Sie Ihre Zielgruppe mit einer der folgenden Methoden. Gehen Sie dann 
 
 | Methode                          | Beschreibung                                                                                                                                                                                                 |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Ein Segment erstellen**         | Erstellen Sie ein Segment, das alle Nutzer:innen einer Abo-Gruppe oder eine Teilmenge mit Hilfe von Segmentierungsfiltern (e.g., zufällige 5-10%) umfasst. Segmente werden vor jedem Versand aktualisiert, um Ihre aktuelle Nutzer:innen-Basis widerzuspiegeln.        |
+| **Ein Segment erstellen**         | Erstellen Sie ein Segment, das alle Nutzer:innen einer Abo-Gruppe oder einer Untergruppe umfasst, indem Sie Filter für die Segmentierung verwenden (z. B. zufällig ausgewählte 5–10 %). Segmente werden vor jedem Versand aktualisiert, um Ihre aktuelle Nutzer:innen-Basis widerzuspiegeln.        |
 | **Kampagne oder Canvas Filter anwenden** | Verfeinern Sie die Zielgruppe im **Target Audience-Schritt** Ihrer Kampagne oder Ihres Canvas. Passen Sie die Targeting-Optionen an, ohne die Seite zu verlassen, um noch flexibler zu sein.                                         |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
@@ -126,7 +126,7 @@ Fügen Sie einen Nutzer:innen-Update-Schritt zu Ihrem Canvas hinzu. Im Schritt �
 ```
 {% endraw %}
 
-!["User Update Object", das den zuvor angegebenen JSON Code enthält.]({% image_buster /assets/img/sms/user_update_object.png %})
+![„User Update Object“, das den zuvor genannten JSON-Code enthält.]({% image_buster /assets/img/sms/user_update_object.png %})
 
 ### Schritt 4: Testen Sie das Canvas
 
