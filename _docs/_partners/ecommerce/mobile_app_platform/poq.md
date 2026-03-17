@@ -23,7 +23,7 @@ The following channels and features are supported.
 
 | Channel/Feature | Description |
 | :---- | :---- |
-| Push notifications | Send targeted, personalized push notifications to app users via Braze, including rich push notifications. |
+| Push notifications | Send targeted, personalized push notifications to app users through Braze, including rich push notifications. |
 | In-app messages | Display Braze in-app messages within the native app experience to engage users at the right moment in their journey. |
 | Analytics and event tracking | Poq sends a comprehensive set of app events to Braze, covering the full customer journey. This data powers segmentation, campaign triggers, and personalization in Braze. |
 | Content Cards and message inbox | Deliver persistent Braze Content Cards within the app, either in a dedicated message inbox screen, or on pages built with Poq's Dynamic Content page builder or within pre-defined slots throughout the app. Content Cards are filtered using key-value pairs configured in Braze. |
