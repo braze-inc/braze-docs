@@ -43,7 +43,7 @@ If all of the messages in your campaign are going to be similar or have the same
 4. Choose when Braze calculates audience eligibility and personalization for the Content Card. This can be at step entry or at first impression (recommended). Steps containing Content Cards can be scheduled or action-based.
 5. Choose whether to remove Content Cards when users complete a purchase or perform a custom event.
 6. Set an expiration for the Content Card (time in feed). This can be after a duration of time or at a specific time.
-7. Filter your audience, or the recipients, for this step as necessary in the **Delivery Settings**. You can further refine your audience by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
+7. Filter your audience, or the recipients, for this step as necessary in the **Delivery Settings**. You can further refine your audience by specifying segments and adding additional filters. Audience options are checked after the delay, at the time messages are sent.
 8. Choose any other messaging channels that you want to pair with your message.
 
 {% endtab %}
@@ -72,7 +72,7 @@ The content here varies based on the **Card Type** chosen in the previous step, 
 
 #### Language
 
-Select **Add Languages** to add your desired languages from the provided list. This will insert [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
+Select **Add Languages** to add your desired languages from the provided list. This inserts [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
 ![A window with English, Spanish, and French selected for the languages, and title, description, and link text selected for fields to internationalize.]({% image_buster /assets/img/add_languages.png %}){: style="max-width:70%;"}
 
@@ -135,7 +135,7 @@ You can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user
 
 {% multi_lang_include alerts/note_alerts.md alert='Content Cards frequency capping' %}
 
-For action-based delivery, there is an expected short delay before the Content Card appears. For example, when a campaign is triggered on session start, this trigger event must first be flushed to Braze's servers. Next, the user's eligibility for the campaign is recorded. When the SDK syncs, the card is created and returned in the same sync response. If the SDK sync happened before the user's eligibility is recorded, they will not receive the card. For first-session users, this delay is unavoidable. For existing users who need instant availability, consider using scheduled delivery instead.
+For action-based delivery, there is an expected short delay before the Content Card appears. For example, when a campaign is triggered on session start, this trigger event must first be flushed to Braze's servers. Next, the user's eligibility for the campaign is recorded. When the SDK syncs, the card is created and returned in the same sync response. If the SDK sync happened before the user's eligibility is recorded, they do not receive the card. For first-session users, this delay is unavoidable. For existing users who need instant availability, consider using scheduled delivery instead.
 
 ##### Scheduled delivery
 
@@ -149,7 +149,7 @@ Next, [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fund
 
 #### Choose conversion events
 
-Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion is counted if the user takes the specified action.
 
 {% endtab %}
 
@@ -189,7 +189,7 @@ The entire data payload for a single Content Card cannot exceed 2 KB **after** a
 
 Using Liquid to pull in long strings of text (such as from custom attributes) can cause you to exceed the limit. 
 
-The campaign composer will display a warning if your static content exceeds the limit. (We do not predict the size for dynamic content using Liquid.) **If the message size exceeds 2 KB, it will be aborted at send time.** You can see these aborts in the Message Activity Log with the reason `Content card maximum size exceeded`.
+The campaign composer displays a warning if your static content exceeds the limit. (We do not predict the size for dynamic content using Liquid.) **If the message size exceeds 2 KB, it is aborted at send time.** You can see these aborts in the Message Activity Log with the reason `Content card maximum size exceeded`.
 
 {% alert important %}
 During test sends, Content Cards that exceed 2 KB can still be delivered and displayed properly.
@@ -204,7 +204,7 @@ Here are some best practices for managing Content Card payload size:
 
 #### Number of cards in feed
 
-Each user can have up to 250 non-expired Content Cards in their feed at any given time. When this limit is exceeded, Braze will stop returning the oldest cards, even if they are unread. Dismissed cards also count toward this limit, meaning a high number of dismissed cards can reduce the space available for older ones.
+Each user can have up to 250 non-expired Content Cards in their feed at any given time. When this limit is exceeded, Braze stops returning the oldest cards, even if they are unread. Dismissed cards also count toward this limit, meaning a high number of dismissed cards can reduce the space available for older ones.
 
 To prevent issues with the card limit, we advise the following best practices:
 
@@ -237,7 +237,7 @@ For users to only receive a message from a specific campaign once, add an audien
 
 ### Managing live Content Cards
 
-After Content Cards have been sent, they sit waiting in an "inbox" ready to be delivered to the user (similar to what happens for emails). After content is pulled into the Content Card (at the time of display), it cannot be changed during its lifespan. This applies even if you're calling an API through Connected Content, and the data from the endpoint changes. This data won't get updated. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only future cards that are sent will have the update.
+After Content Cards have been sent, they sit waiting in an "inbox" ready to be delivered to the user (similar to what happens for emails). After content is pulled into the Content Card (at the time of display), it cannot be changed during its lifespan. This applies even if you're calling an API through Connected Content, and the data from the endpoint changes. This data won't get updated. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only future cards that are sent have the update.
 
 #### Updating launched cards
 
@@ -271,7 +271,7 @@ Let's say you've set a campaign to be triggered by a session start, and it has r
 We recommend using this option for unique messages in a notification center or message inbox (such as promotions), when it’s important for analytics to be unified, or when the timeliness of the message isn't a concern (such as existing recipients can wait for the eligibility window before seeing the updated cards).
 {% endalert %}
 
-This approach keeps all your analytics unified in a single campaign. Newly eligible users will get the new card, but it delays the update for existing recipients until they are re-eligible:
+This approach keeps all your analytics unified in a single campaign. Newly eligible users receive the new card, but it delays the update for existing recipients until they are re-eligible:
 
 1. Stop your campaign and, when prompted, select **Remove card after the next sync**.
 2. Edit your campaign as needed.
@@ -280,7 +280,7 @@ This approach keeps all your analytics unified in a single campaign. Newly eligi
 ###### Impact
 
 * **Existing recipients:** Users who have already received the card would not receive the updated cards until they become re-eligible. If re-eligibility is turned off, they would never receive the new card.
-* **Reporting:** One campaign will contain all reporting analytics for the card versions launched. Braze won't differentiate between the versions launched.
+* **Reporting:** One campaign contains all reporting analytics for the card versions launched. Braze won't differentiate between the versions launched.
 
 Let's say you have a campaign that's triggered by a session start and has re-eligibility set to 30 days. A user received the campaign two days ago, and you want to change the copy. First, stop the campaign and remove the card from the feed. Second, re-publish the campaign with the new copy. If the user has another session, they'll receive the new card in 28 days.
 
@@ -291,20 +291,20 @@ Let's say you have a campaign that's triggered by a session start and has re-eli
 You can manually remove cards for all users' feeds at any time by stopping the campaign.
 
 1. Open the Content Card campaign and select Stop Campaign.
-2. When prompted, select **Remove card after the next sync**. The card will be removed on the next feed refresh.
+2. When prompted, select **Remove card after the next sync**. The card is removed on the next feed refresh.
 
 ##### Automated card removal {#action-based-card-removal}
 
 You can automatically remove a card when a user performs a specific action, such as completing a purchase or activating a feature.
 
-In your campaign or Canvas step, specify a removal event. When a user performs that event, the card will be removed from their feed on a subsequent refresh after Braze processes the event. 
+In your campaign or Canvas step, specify a removal event. When a user performs that event, the card is removed from their feed on a subsequent refresh after Braze processes the event. 
 
 {% alert note %}
 This removal is not instantaneous. There is a processing delay, so it may take several minutes and more than one feed refresh for the card to disappear.
 {% endalert %}
 
 {% alert tip %}
-You can specify multiple custom events and purchases that should remove a card from a user's feed. When **any** of those actions are performed by the user, any existing cards sent by the campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
+You can specify multiple custom events and purchases that should remove a card from a user's feed. When **any** of those actions are performed by the user, any existing cards sent by the campaign's cards are removed. Any future eligible cards continue to be sent according to the message's schedule.
 {% endalert %}
 
 ![Content Card Removal Conditions panel with Content Card Removal Event option.]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
