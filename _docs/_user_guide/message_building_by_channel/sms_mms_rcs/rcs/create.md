@@ -33,7 +33,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 
 {: start="6"} 
 6. Select an RCS-enabled [subscription group]({{site.baseurl}}/sms_rcs_subscription_groups/). When selecting a subscription group, Braze will automatically add a segmenting filter, ensuring that only users subscribed will receive the campaign. Only long codes and short codes that belong to that subscription group will be used to send SMS to target users.
-- **SMS fallback:** Braze strongly recommends that every subscription group that contains an RCS sender also includes at least one SMS code for fallback. This is important for deliverability in cases RCS messages fail to deliver. Some reasons for this may include user device incompatibility and incomplete carrier coverage in a given country or region. By enabling SMS fallback, your RCS message still delivers to your user and you don't miss that opportunity to connect with them.
+- **SMS fallback:** Braze strongly recommends that every subscription group that contains an RCS sender also includes at least one SMS code for fallback. This is important for deliverability in cases RCS messages fail to deliver. Some reasons for this may include user device incompatibility and incomplete carrier coverage in a given country or region. By enabling SMS fallback, your RCS message can still deliver through SMS when RCS cannot, so you don't miss that opportunity to connect with them.
 
 {% alert note %}
 MMS fallback currently isn't supported.
