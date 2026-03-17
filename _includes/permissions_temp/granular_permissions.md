@@ -160,7 +160,7 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | View PII                                        | View PII |
 | View User Profiles (PII Redacted)               | Access user search and view user profiles with redacted PII |
 | View Usage Data                                 | View usage data |
-| Merge Duplicate Users                           | Preview and combine duplicate users into one user. Duplicates are removed after merging. |
+| Merge Duplicate Users                           | Merge duplicate users into one user. Duplicates are removed after merging. |
 | View Canvas Templates                           | View Canvas templates |
 | Archive Canvas Templates                        | Move Canvas templates to archive |
 | Launch Content Blocks                           | Launch Content Blocks |
@@ -284,7 +284,7 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | Edit User Data                                  | Create and update user data |
 | View Merge Users                                | View a list of user merge records |
 | View User Deletion Records	            	  | View user deletion records |
-| Delete Users	                                  | Permanently delete users from the dashboard individually or in bulk. |      
+| Delete Users                                    | Permanently delete users from the dashboard individually or in bulk. |
 | View Custom AI Agents                           | Allows users to view custom AI agents. |
 | Edit Custom AI Agents                           | Allows users to create and update custom AI agents. |
 | Archive Custom AI Agents                        | Allows users to archive custom AI agents. |
