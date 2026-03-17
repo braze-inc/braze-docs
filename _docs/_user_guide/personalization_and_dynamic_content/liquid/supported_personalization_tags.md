@@ -311,7 +311,8 @@ The `{% random %}` tag returns a random number. You can use it for A/B-style log
 
 {% raw %}
 ```liquid
-{% assign roll = random %}
+{% capture roll_str %}{% random %}{% endcapture %}
+{% assign roll = roll_str | plus: 0 %}
 {% if roll < 0.5 %}
 Show variant A
 {% else %}
