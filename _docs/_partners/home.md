@@ -6,7 +6,7 @@ layout: partner_page
 search_tag: Partner
 
 partner_top_header: "Technology Partners"
-partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. <br> <br>  If you're looking for information on joining our Firebrands, a community of movers and shakers using Braze to modernize their customer experience and marketing, check out our information page <a href='https://brazefirebrands.splashthat.com/'>here</a>."
+partner_top_text: "Welcome to our list of Alloys—our Braze technology partners. Use this page to help you implement Technology Partners with your Braze SDK. In Braze, go to <b>Partner Integrations</b> > <b>Technology Partners</b> to connect with any of the partners listed on this page. <br> <br> If you're looking for information on joining our Firebrands community of customers using Braze to modernize their customer experience and marketing, see our <a href='https://brazefirebrands.splashthat.com/'>Customer Champions Program</a>."
 description: "This landing page includes all Braze partners. Use it to explore technical documentation that will help implement Technology Partners into your Braze SDK."
 
 valid_partner_list:
