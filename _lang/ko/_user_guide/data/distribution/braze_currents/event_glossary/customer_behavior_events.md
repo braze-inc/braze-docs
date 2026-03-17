@@ -47,7 +47,7 @@ search_rank: 7
 ## 무작위 버킷 번호 업데이트 이벤트 {#random-bucket-number-update-events}
 
 {% apitags %}
-무작위 버킷 번호
+Random Bucket Number
 {% endapitags %}
 
 이 사용자 이벤트는 워크스페이스 내에서 새 사용자가 생성될 때마다 발생합니다. 이 이벤트 동안, 각 신규 사용자는 무작위 버킷 번호가 할당되며, 이를 사용하여 무작위 사용자들의 균일하게 분포된 세그먼트를 생성할 수 있습니다. 이를 사용하여 무작위 버킷 번호 값의 범위를 그룹화하고 캠페인 및 캠페인 변형 간의 성능을 비교할 수 있습니다.
@@ -81,7 +81,7 @@ search_rank: 7
 ## 커스텀 이벤트 {#custom-events}
 
 {% apitags %}
-사용자 지정 이벤트
+Custom Events
 {% endapitags %}
 
 이 이벤트는 특정 사용자 지정 이벤트가 트리거될 때 발생합니다. 이를 사용하여 사용자가 애플리케이션에서 커스텀 이벤트를 수행하는 시기를 추적할 수 있습니다.
@@ -208,7 +208,7 @@ search_rank: 7
 ## 설치 경로 이벤트 {#install-attribution-events}
 
 {% apitags %}
-기여도
+Attribution
 {% endapitags %}
 
 이 이벤트는 앱 설치가 소스에 어트리뷰션될 때 발생합니다. 이를 사용하여 앱 설치의 출처를 추적할 수 있습니다.
@@ -299,7 +299,7 @@ search_rank: 7
 ## 위치 이벤트 {#location-events}
 
 {% apitags %}
-위치
+Locations
 {% endapitags %}
 
 이 이벤트는 사용자가 지정된 위치를 방문할 때 트리거됩니다. 이를 사용하여 앱에서 위치 이벤트를 트리거하는 사용자를 추적할 수 있습니다.
@@ -441,7 +441,7 @@ search_rank: 7
 ## 구매 이벤트 {#purchase-events}
 
 {% apitags %}
-구매
+Purchases
 {% endapitags %}
 
 이 이벤트는 사용자가 구매할 때 발생합니다. 이 데이터를 사용하여 사용자가 애플리케이션에서 상품을 구매한 시점을 추적합니다.
@@ -581,7 +581,7 @@ search_rank: 7
 ## 첫 세션 이벤트 {#first-session-events}
 
 {% apitags %}
-세션
+Sessions
 {% endapitags %}
 
 이 이벤트는 사용자가 애플리케이션에서 첫 세션을 시작할 때 발생합니다. 이 데이터를 사용하여 사용자가 세션을 시작하는 시점을 추적합니다.
@@ -698,7 +698,7 @@ search_rank: 7
 ## 세션 종료 이벤트 {#session-end-events}
 
 {% apitags %}
-세션
+Sessions
 {% endapitags %}
 
 이는 사용자가 애플리케이션을 종료하여 현재 세션이 종료될 때 발생합니다. 이 데이터를 사용하여 세션이 종료되는 시점을 추적하고 적절한 세션 시작 이벤트와 함께 세션의 지속 시간을 계산합니다.
@@ -810,7 +810,7 @@ search_rank: 7
 ## 세션 시작 이벤트 {#session-start-events}
 
 {% apitags %}
-세션
+Sessions
 {% endapitags %}
 
 이 이벤트는 사용자가 세션을 시작할 때 발생합니다. 이 데이터를 사용하여 사용자가 세션을 시작하는 시점을 추적합니다.
