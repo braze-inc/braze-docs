@@ -68,15 +68,19 @@ If you want to add query parameters after a URL in your email message:
 
 ## Using link templates in email campaigns
 
-After your link templates are set up, you can select the template to use in your email.
+After you set up your link templates, you can apply them in your email.
 
-- **HTML editor:** Go to the **Link Management** tab under the **Content** section. Select **Add a Link Template**, choose your link template, and select **Add**.
+To apply a link template in the HTML editor, follow these steps:
 
-{% alert important %}
-To access the **Link Management** tab in the updated HTML email editor, you must have link aliasing turned on. To turn on link aliasing, contact your account manager.
-{% endalert %}
+1. Go to the **Link Management** tab in the **Content** section.
+2. Select **Add a Link Template**.
+3. Choose your link template, then select **Add**.
 
-- **Drag-and-drop editor:** Select **Content** > **Link Management** tab. Then, select **Add a Link Template**. To access link templates in the drag-and-drop editor, you must have [link aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) turned on.
+To apply a link template in the drag-and-drop editor, follow these steps:
+
+1. Select **Content** > **Link Management**.
+2. Select **Add a Link Template**.
+3. Choose your link template, then select **Add**.
 
 ![Link Management tab in the drag-and-drop editor with an example list of link templates.]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
 
