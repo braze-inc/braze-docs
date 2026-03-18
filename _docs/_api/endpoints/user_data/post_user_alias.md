@@ -22,11 +22,11 @@ Up to 50 user aliases may be specified per request.
 
 **Creating a new alias-only user** requires the `external_id` to be omitted from the new user alias object. After the user is created, use the `/users/track` endpoint to associate the alias-only user with attributes, events, and purchases, and the `/users/identify` endpoint to identify the user with an `external_id`.
 
-### When the alias label and name already exist
+### When `alias_label` and `alias_name` already exist
 
 The combination of `alias_label` and `alias_name` must be unique across your user base. For more information, see [User aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases).
 
-If you send a request with an alias label and name that already exist for any user (whether on the same user or another), the endpoint still returns a successful response (for example, `"aliases_processed": 1`, `"message": "success"`). In that case, no new alias is added to the user in the request. The alias pair is already in use, so the request is effectively a no-op, and it can look like the alias was never added to the user in question.
+If you send a request where the `alias_label` and `alias_name` pair already exists for any user (whether on the same user or another), the endpoint still returns a successful response (for example, `"aliases_processed": 1`, `"message": "success"`). In that case, no new alias is added to the user in the request. Because the `alias_label` and `alias_name` pair is already in use, the request does not make any changes, and it can appear that the alias was never added to the user in question.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5cf18e64-fd02-452f-8c90-9a0f7c4d0487 {% endapiref %}
 
