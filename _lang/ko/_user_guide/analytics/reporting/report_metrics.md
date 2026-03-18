@@ -118,7 +118,7 @@ iOS 푸시, Android 푸시
 인앱 메시지
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %} _버튼 1 클릭_에 대한 보고는 인앱 메시지에서 **보고용 식별자**를 "0"으로 지정할 때만 작동합니다.
+{% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %} *버튼 1 클릭*에 대한 보고는 인앱 메시지에서 **보고용 식별자**를 "0"으로 지정할 때만 작동합니다.
 
 <span class="calculation-line">계산: (버튼 1 클릭) / (노출 횟수)</span>
 
@@ -132,7 +132,7 @@ iOS 푸시, Android 푸시
 인앱 메시지
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %} _버튼 2 클릭_에 대한 보고는 인앱 메시지에서 **보고용 식별자**를 "1"로 지정할 때만 작동합니다.
+{% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %} *버튼 2 클릭*에 대한 보고는 인앱 메시지에서 **보고용 식별자**를 "1"로 지정할 때만 작동합니다.
 
 <span class="calculation-line">계산: (버튼 2 클릭) / (노출 횟수)</span>
 

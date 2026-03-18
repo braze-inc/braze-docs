@@ -581,7 +581,7 @@ iOS プッシュ, Android プッシュ
 メール
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Machine Opens' %} この指標は、SendGridでは2021年11月11日から、SparkPostでは2021年12月2日からトラッキング 追跡される。Amazon SES の場合、分析は_開封数_として表示されます。ただし、クリックに対するボットフィルターはサポートされる予定です。
+{% multi_lang_include analytics/metrics.md metric='Machine Opens' %} この指標は、SendGridでは2021年11月11日から、SparkPostでは2021年12月2日からトラッキング 追跡される。Amazon SES の場合、分析は*開封数*として表示されます。ただし、クリックに対するボットフィルターはサポートされる予定です。
 
 {% endapi %}
 
