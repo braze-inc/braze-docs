@@ -51,7 +51,7 @@ If you follow the next steps, you connect your phone number to Twilio, which mea
 4. In the Twilio console, go to **2. Link WhatsApp Business Account with your number** > **2. Copy the phone number you register**, and select **Copy** next to the phone number.
 5. In the **Self Sign-up** window, on the **Add your WhatsApp phone number** page, select **Add a new phone number** and paste the phone number.
 6. Select **Phone call** as the verification method, then select **Next**.
-7. You'll receive the verification code in your email within 10 minutes.
+7. You receive the verification code in your email within 10 minutes.
 
 ### Step 3: Complete the embedded sign up workflow
 
