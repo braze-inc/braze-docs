@@ -82,74 +82,7 @@ The following table shows which data types you can use for user profile attribut
 
 ## Filtering and segmentation operators {#filtering-and-segmentation-operators}
 
-The following table summarizes filtering and segmentation operators by data type and surface. It does not replace the full operator lists for custom attributes (see the tabs under [Custom attribute data types](#custom-attribute-data-types)).
-
-<table role="presentation" class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4">
-  <thead>
-    <tr>
-      <th>Data type</th>
-      <th>Custom attributes (segmentation)</th>
-      <th>Event properties (segmentation)</th>
-      <th>Catalog selection filters</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Boolean</td>
-      <td><strong>IS</strong>, <strong>IS BLANK</strong>, <strong>IS NOT BLANK</strong></td>
-      <td>True/false matching in property filters.</td>
-      <td rowspan="6">Only <strong>equals</strong> and <strong>does not equal</strong> per filter row. See <a href="#considerations">Considerations</a>.</td>
-    </tr>
-    <tr>
-      <td>Number</td>
-      <td><strong>EXACTLY</strong>, <strong>DOES NOT EQUAL</strong>, <strong>MORE THAN</strong>, <strong>LESS THAN</strong>, <strong>IS BLANK</strong>, <strong>IS NOT BLANK</strong></td>
-      <td>Numeric comparisons (for example, equals, more than, less than) in property filters.</td>
-    </tr>
-    <tr>
-      <td>String</td>
-      <td>Includes <strong>MATCHES REGEX</strong>, <strong>IS ANY OF</strong>, <strong>IS NONE OF</strong>, <strong>CONTAINS ANY OF</strong>, <strong>IS NOT BLANK</strong>, <strong>BLANK</strong>, and more—see the <strong>Strings</strong> tab under <a href="#custom-attribute-data-types">Custom attribute data types</a>.</td>
-      <td>Multiple values (for example, equal to any of) and other operators; the set differs from custom attribute filters.</td>
-    </tr>
-    <tr>
-      <td>Time</td>
-      <td><strong>BEFORE</strong>, <strong>AFTER</strong>, <strong>MORE THAN</strong> / <strong>LESS THAN</strong> (days ago or in the future), <strong>IS BLANK</strong>, <strong>IS NOT BLANK</strong></td>
-      <td>Date and time operators in Segment Extension property filters.</td>
-    </tr>
-    <tr>
-      <td>Array</td>
-      <td>Includes <strong>INCLUDES VALUE</strong>, <strong>INCLUDES ANY OF</strong>, <strong>MATCHES REGEX</strong>, <strong>HAS A VALUE</strong>, <strong>IS EMPTY</strong>, and more—see <a href="{{site.baseurl}}/user_guide/data/activation/custom_data/data_types/?tab=arrays#custom-attribute-data-types">Custom attribute data types</a>.</td>
-      <td>Operators depend on segment type—see <a href="#considerations">Considerations</a>. Storage and element rules differ by surface—see the <strong>Array</strong> tab under <a href="#important-considerations">Data type considerations</a>.</td>
-    </tr>
-    <tr>
-      <td>Object</td>
-      <td>Filters on nested fields (paths). For more information, see <a href="{{site.baseurl}}/user_guide/data/activation/attributes/nested_custom_attribute_support/">Nested custom attributes</a>.</td>
-      <td><strong>equals</strong> and <strong>does not equal</strong> on nested keys, plus patterns in <a href="{{site.baseurl}}/user_guide/data/activation/events/custom_events/nested_objects/">Nested objects</a>.</td>
-    </tr>
-    <tr>
-      <td>Array of objects</td>
-      <td>Filters on fields inside objects in the array—see <a href="{{site.baseurl}}/user_guide/data/activation/attributes/array_of_objects/">Array of objects</a>.</td>
-      <td>Not supported</td>
-      <td>Not supported</td>
-    </tr>
-  </tbody>
-</table>
-
-### Filter considerations {#considerations}
-
-- **Event properties:** Operator choices depend on where you segment. [Segment Extensions]({{site.baseurl}}/user_guide/audience/segments/segment_extension/) use one set of property filters, standard segments use another when you filter on event properties (with a shorter lookback than extensions). For behavior, windows, and setup, see [Custom event properties]({{site.baseurl}}/user_guide/data/activation/events/custom_events/custom_event_properties/).
-- **Catalog selections:** For every filterable column in a [catalog selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/), the **Operator** dropdown offers only **equals** and **does not equal** (same for all types that support catalog filters).
-
-### Consolidated operators {#consolidated-operators}
-
-Braze uses the following operator names for attribute filters, custom attribute filters, and nested custom attribute filters. If you had filters that used the old labels, Braze updates them automatically to the new operators.
-
-| Data type | Old operator | New operator | Value |
-| --- | --- | --- | --- |
-| String | equals | is any of | At least 1 value |
-| String | does not equal | is none of | At least 1 value |
-| Array | includes value | includes any of | At least 1 value |
-| Array | doesn't include value | includes none of | At least 1 value |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+For a cross-surface summary of operators by data type, differences between [Segment Extensions]({{site.baseurl}}/user_guide/audience/segments/segment_extension/) and standard segments for event properties, catalog **equals** and **does not equal** limits, and legacy operator renames, see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/). For full segmentation options for each custom attribute type, see the tabs under [Custom attribute data types](#custom-attribute-data-types).
 
 ## Custom attribute data types {#custom-attribute-data-types}
 
@@ -298,7 +231,7 @@ You can change the data type of your custom attribute, but you should be aware o
 
 ## Event property data types {#event-property-data-types}
 
-When you log an event, you can attach extra information (for example, product name or price) as event properties. Each property has a name and a value. Event property values support the data types in the [Definitions](#definitions) table. For which operators you can use when segmenting on those properties, see [Filtering and segmentation operators](#filtering-and-segmentation-operators).
+When you log an event, you can attach extra information (for example, product name or price) as event properties. Each property has a name and a value. Event property values support the data types in the [Definitions](#definitions) table. For more information about which operators you can use when segmenting on those properties, see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/).
 
 {% tabs local %}
 {% tab Datetime %}
@@ -371,7 +304,7 @@ The ability to prevent automatic detection from updating the custom attribute da
 
 The following table lists each supported data type, how it can be created or updated, and format and examples.
 
-Catalog selection filters support only **equals** and **does not equal**; see [Filtering and segmentation operators](#filtering-and-segmentation-operators) and [Selections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/).
+Catalog selection filters support only **equals** and **does not equal**; see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/) and [Selections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/).
 
 | Data type | Description | Available via CSV upload | Available via API and CDI |
 | --- | --- | --- | --- |

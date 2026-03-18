@@ -1,7 +1,7 @@
 ---
 nav_title: Blocklist custom data
 article_title: Blocklist custom data
-page_order: 3
+page_order: 4
 page_type: reference
 description: "This reference article covers how to blocklist and delete custom events and attributes in Braze."
 ---
