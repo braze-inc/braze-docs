@@ -22,7 +22,7 @@ Up to 50 user aliases may be specified per request.
 
 **Creating a new alias-only user** requires the `external_id` to be omitted from the new user alias object. After the user is created, use the `/users/track` endpoint to associate the alias-only user with attributes, events, and purchases, and the `/users/identify` endpoint to identify the user with an `external_id`.
 
-### When `alias_label` and `alias_name` already exist
+## When `alias_label` and `alias_name` already exist
 
 The combination of `alias_label` and `alias_name` must be unique across your user base. For more information, see [User aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases).
 
