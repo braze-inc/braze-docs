@@ -42,7 +42,7 @@ Follow Twilio’s instructions to set up your Twilio phone number to receive the
 
 {% alert warning %}
 Only follow Twilio’s instructions to receive a verification code.
-If you follow the next steps, you’ll connect your phone number to Twilio. That means you can’t connect that number to Braze unless you do a migration or purchase a different number.
+If you follow the next steps, you connect your phone number to Twilio, which means you can’t connect that number to Braze unless you do a migration or purchase a different number.
 {% endalert %}
 
 1. In the Twilio console, go to the [Active Numbers page](https://www.twilio.com/console/phone-numbers/incoming) and select the phone number you purchased.
