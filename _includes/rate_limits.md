@@ -32,11 +32,15 @@ We apply a rate limit of 1,000 requests per minute to this endpoint, as document
 <!---/users/track-->
 
 {% elsif include.endpoint == "users track" %}
-Starting on October 28th, 2024, we apply a base speed limit of 3,000 requests per three seconds to this endpoint for all customers. Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means you can update up to 225 users in a single call. In addition, you can update a single user profile with multiple objects.
+Braze applies a base speed limit of 3,000 requests per three seconds to this endpoint. Each `/users/track` request can contain up to 75 total objects combined across `attributes`, `events`, and `purchases`. Each object can update one user. A single user profile can be updated by multiple objects.
 
-Different limits apply to customers who have purchased **Monthly Active Users - CY 24-25**. For details on these limits, see [Monthly Active Users - CY 24-25 limits]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau).
+For customers who have purchased Monthly Active Users CY 24-25, Universal MAU, Web MAU, or Mobile MAU, additional rate limits apply. For more information, reference [Monthly Active Users CY 24-25 limits]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau).
 
-See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details, and contact your customer success manager if you need your limit increased.
+{% details Legacy rate limits %}
+For customers on legacy rate limits, each `/users/track` request can contain up to 75 attribute objects, 75 event objects, and 75 purchase objects. Each object can update one user, for a combined maximum of up to 225 objects per request. A single user profile can be updated by multiple objects.
+{% enddetails %}
+
+For more information, see [API rate limits]({{site.baseurl}}/api/api_limits/). Contact a customer success manager to request an increase.
 
 <!---/users/export/ids-->
 

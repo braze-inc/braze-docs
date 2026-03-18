@@ -61,7 +61,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [![Braze学習]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"}[コース](https://learning.braze.com/path/push-fundamentals)のユースケース
+## [![Braze学習コース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"} ユースケース
 
 ![複数の Apple 製品にわたるプッシュ通知メッセージの例。]({% image_buster /assets/img/red-dress.gif %}){: height="400px"} ![iPhoneのホーム画面に表示されるStopwatchのプッシュメッセージの例:「こんにちは。これは iOS プッシュ通知です。」]({% image_buster /assets/img/ios_push.png %}){: height="400px"}
 

@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Cours]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"} [Braze Learning](https://learning.braze.com/path/developer) \- Premiers pas : Aperçu de la plate-forme
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"} Premiers pas : Aperçu de la plate-forme
 
 > Cet article traite des composants et capacités de base de la plateforme Braze. Les liens de cet article renvoient à des rubriques essentielles de Braze. 
 
