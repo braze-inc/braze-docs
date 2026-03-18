@@ -19,9 +19,9 @@ Antes de visualizar os relatórios do Decisioning Studio no Braze, você precisa
 
 ## Visualização de relatórios {#view}
 
-Para visualizar métricas de um agente do Decisioning Studio no Braze, acesse **IA Decisioning** > **BrazeIA Decisioning Studio™**, em seguida, selecione um agente.
+Para visualizar métricas de um agente do Decisioning Studio no Braze, acesse **IA Decisioning** > **BrazeAI Decisioning Studio™**, em seguida, selecione um agente.
 
-![Tela inicial de relatórios do BrazeIA Decisioning Studio™ mostrando um dashboard com múltiplos cartões de relatório. Cada cartão exibe um tipo de relatório, como Desempenho, Insights, Diagnóstico e Linha do tempo, com breves descrições e ícones para cada um.]( {% image_buster /assets/img/decisioning_studio/reporting_home.png %} )
+![Tela inicial de relatórios do BrazeAI Decisioning Studio™ mostrando um dashboard com múltiplos cartões de relatório. Cada cartão exibe um tipo de relatório, como Desempenho, Insights, Diagnóstico e Linha do tempo, com breves descrições e ícones para cada um.]( {% image_buster /assets/img/decisioning_studio/reporting_home.png %} )
 
 Aqui, você pode visualizar relatórios como desempenho, insights, diagnósticos e linhas do tempo. Para saber mais, consulte [Relatórios disponíveis](#reports).
 
@@ -29,13 +29,13 @@ Aqui, você pode visualizar relatórios como desempenho, insights, diagnósticos
 
 Após [abrir um relatório](#view), você pode alterar o intervalo de datas selecionando uma nova data inicial e final no menu suspenso do calendário.
 
-![Seletor de intervalo de datas do BrazeIA Decisioning Studio™ aberto com um menu suspenso de calendário. O calendário exibe datas de início e término selecionáveis para personalizar a exibição do relatório.]({% image_buster /assets/img/decisioning_studio/reporting_change_date_range.png %}){: style="max-width:50%;"}
+![Seletor de intervalo de datas do BrazeAI Decisioning Studio™ aberto com um menu suspenso de calendário. O calendário exibe datas de início e término selecionáveis para personalizar a exibição do relatório.]({% image_buster /assets/img/decisioning_studio/reporting_change_date_range.png %}){: style="max-width:50%;"}
 
 Você também pode definir uma data de início padrão ou escolher datas a serem sempre excluídas. As datas excluídas serão filtradas de todos os relatórios desse agente.
 
 Para definir ou excluir datas, selecione <i class="fa-solid fa-gear"></i> **Settings** e, em seguida, altere a data padrão ou exclua as datas conforme necessário.
 
-![Painel de configurações aberto no BrazeIA Decisioning Studio™ mostrando opções para definir uma data de início padrão e excluir datas específicas dos relatórios. O painel exibe duas seções denominadas Data de início padrão e Excluir datas. Em Excluir datas, várias datas são listadas com caixas de seleção ao lado de cada uma.]({% image_buster /assets/img/decisioning_studio/reporting_set_exclude_dates.png %})
+![Painel de configurações aberto no BrazeAI Decisioning Studio™ mostrando opções para definir uma data de início padrão e excluir datas específicas dos relatórios. O painel exibe duas seções denominadas Data de início padrão e Excluir datas. Em Excluir datas, várias datas são listadas com caixas de seleção ao lado de cada uma.]({% image_buster /assets/img/decisioning_studio/reporting_set_exclude_dates.png %})
 
 ## Relatórios disponíveis {#reports}
 
@@ -45,7 +45,7 @@ O relatório de performance oferece métricas de agente de alto nível que compa
 
 Por padrão, o relatório usa a visualização **Tendências**, que compara o desempenho do BrazeAI™ ao longo do tempo em relação aos seus grupos de controle e acompanha a evolução do aumento.
 
-![Visualização de tendência do relatório de performance mostrando um gráfico de linhas comparando a performance do BrazeIA™ e do grupo de controle ao longo do tempo. O gráfico exibe duas linhas rotuladas como BrazeAI™ e Controle, com o eixo y rotulado como Uplift e o eixo x mostrando as datas. Uma legenda identifica cada grupo por cor.]({% image_buster /assets/img/decisioning_studio/reporting_agent_performance_trending.png %})
+![Visualização de tendência do relatório de performance mostrando um gráfico de linhas comparando a performance do BrazeAI™ e do grupo de controle ao longo do tempo. O gráfico exibe duas linhas rotuladas como BrazeAI™ e Controle, com o eixo y rotulado como Uplift e o eixo x mostrando as datas. Uma legenda identifica cada grupo por cor.]({% image_buster /assets/img/decisioning_studio/reporting_agent_performance_trending.png %})
 
 Como alternativa, você pode selecionar **Driver Tree** para visualizar como os principais drivers de valor estão vinculados às métricas de destino e entender melhor a relação entre eles.
 

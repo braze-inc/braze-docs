@@ -8,9 +8,9 @@ page_order: 0.0
 
 # Générer du code liquid avec BrazeAI
 
-> L'assistant <sup>BrazeAITM</sup> Liquid est un assistant de chat alimenté par <sup>BrazeAITM</sup> qui aide à générer le Liquid dont vous avez besoin pour personnaliser le contenu des messages.
+> L'assistant BrazeAI<sup>TM</sup> Liquid est un assistant de chat alimenté par BrazeAI<sup>TM</sup> qui aide à générer le Liquid dont vous avez besoin pour personnaliser le contenu des messages.
 
-## À propos de l'assistant liquide <sup>BrazeAITM</sup> 
+## À propos de l'assistant liquide BrazeAI<sup>TM</sup> 
 
 L'assistant Liquid BrazeAI<sup>TM</sup> est conçu pour vous aider à écrire du code Liquid efficace et adapté à vos besoins marketing. Formée à la syntaxe Liquid et à la manière dont les marketeurs utilisent Liquid dans leurs messages, notre intelligence artificielle comprend les nuances de l'élaboration d'un contenu personnalisé.
 
@@ -18,7 +18,7 @@ De plus, en fournissant à l'assistant BrazeAI<sup>TM</sup> Liquid Assistant vos
 
 ## Canaux pris en charge
 
-Vous pouvez utiliser l'assistant liquide de <sup>BrazeAITM</sup> lors de la création : 
+Vous pouvez utiliser l'assistant liquide de BrazeAI<sup>TM</sup> lors de la création : 
 - messages SMS
 - Notifications push
 - Envois de messages e-mail en HTML
@@ -70,7 +70,7 @@ Vous pouvez générer un autre message en utilisant la même invite en sélectio
 
 ## Attributs liquides {#supported-attributes}
 
-Les attributs suivants sont actuellement en version bêta pour l'assistant liquide <sup>BrazeAITM</sup>:
+Les attributs suivants sont actuellement en version bêta pour l'assistant liquide BrazeAI<sup>TM</sup>:
 
 | Critère | Type de connaissance | 
 | - | - | 
@@ -82,11 +82,11 @@ Les attributs suivants sont actuellement en version bêta pour l'assistant liqui
 
 ## Bonnes pratiques
 
-Pour vous aider à rédiger des invites efficaces pour l'assistant liquide <sup>BrazeAITM</sup>, consultez nos meilleures pratiques :
+Pour vous aider à rédiger des invites efficaces pour l'assistant liquide BrazeAI<sup>TM</sup>, consultez nos meilleures pratiques :
 
 ### Utiliser le langage naturel
 
-L'assistant liquide <sup>BrazeAITM</sup> est formé pour comprendre le langage naturel. Discutez avec lui comme vous le feriez avec un collègue de travail lorsque vous demandez de l'aide. Il est ainsi plus facile pour l'assistant de comprendre vos besoins et de vous fournir une assistance précise.
+L'assistant liquide BrazeAI<sup>TM</sup> est formé pour comprendre le langage naturel. Discutez avec lui comme vous le feriez avec un collègue de travail lorsque vous demandez de l'aide. Il est ainsi plus facile pour l'assistant de comprendre vos besoins et de vous fournir une assistance précise.
 
 ### Précisez le contexte
 

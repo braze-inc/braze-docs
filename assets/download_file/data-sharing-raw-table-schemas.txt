@@ -1406,7 +1406,6 @@ USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED: when a user clicks an in app message
 	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
 	APP_API_ID (VARCHAR(16777216)): API ID of the app on which this event occurred
 	CARD_API_ID (VARCHAR(16777216)): API ID of the card
-	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
 	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
 	CAMPAIGN_ID (VARCHAR(16777216)): BSON ID of the campaign this event belongs to
 	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
@@ -1449,7 +1448,6 @@ USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED: when a user views an in app messa
 	TIME (NUMBER(38,0)): UNIX timestamp at which the event happened
 	APP_API_ID (VARCHAR(16777216)): API ID of the app on which this event occurred
 	CARD_API_ID (VARCHAR(16777216)): API ID of the card
-	DISPATCH_ID (VARCHAR(16777216)): ID of the dispatch this message belongs to
 	SEND_ID (VARCHAR(16777216)): Message send ID this message belongs to
 	CAMPAIGN_ID (VARCHAR(16777216)): BSON ID of the campaign this event belongs to
 	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to

@@ -30,7 +30,7 @@ URL의 길이는 켜져 있는 추적 유형에 따라 결정됩니다:
 또는 `http://`로 시작하는 모든`https://` 정적 URL은 단축됩니다. 정적 단축 URL은 생성일로부터 1년간 유효합니다. Liquid 개인화 기능이 포함된 단축 URL은 2개월 동안 유효합니다.
 
 {% alert note %}
-<sup>BrazeAITM</sup> [지능형 채널 필터를]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) 사용할 계획이고 SMS 및 RCS 채널을 선택할 수 있도록 하려면 고급 추적을 통해 링크 단축을 사용 설정하세요.
+BrazeAI<sup>TM</sup> [지능형 채널 필터를]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) 사용할 계획이고 SMS 및 RCS 채널을 선택할 수 있도록 하려면 고급 추적을 통해 링크 단축을 사용 설정하세요.
 {% endalert %}
 
 ## 링크 단축 사용

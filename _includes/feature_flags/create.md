@@ -38,7 +38,7 @@ Under **Feature flag details**, enter a name, ID, and description for your featu
 | Field        | Description                                                                |
 |--------------|----------------------------------------------------------------------------|
 | Name         | A human-readable title for your marketers and administrators.              |
-| ID           | The unique ID you'll use in your code to check if this feature is [enabled for a user](#enabled). This ID cannot be changed later, so review our [ID naming best practices](#naming-conventions) before continuing. |
+| ID           | The unique ID you'll use in your code to check if this feature is [enabled for a user](#enabled). This ID cannot be changed later, so review the [ID naming best practices](#naming-conventions) before continuing. |
 | Description  | An optional description that gives some context about your feature flag.   |
 | Properties   | Optional properties that remotely configure your feature flag. They can be overwritten in Canvas steps or feature flag experiments. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -831,13 +831,20 @@ featureFlagsStreamSubscription = braze.subscribeToFeatureFlags((featureFlags) {
 featureFlagsStreamSubscription.cancel();
 ```
 
-Then, make these changes in the iOS native layer as well. Note that there are no additional steps needed on the Android layer.
+{% subtabs %}
+{% subtab Flutter SDK 18.0.0+ %}
 
-1. Implement `featureFlags.subscribeToUpdates` to subscribe to feature flag updates as described in the [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/featureflags-swift.class/subscribetoupdates(_:)) documentation.
+Feature flag data is automatically forwarded from both the Android and iOS native layers. No additional setup is required.
 
-2. Your `featureFlags.subscribeToUpdates` callback implementation must call `BrazePlugin.processFeatureFlags(featureFlags)`.
+{% endsubtab %}
+{% subtab Flutter SDK 17.1.0 and earlier %}
 
-For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
+If you're using Flutter SDK 17.1.0 or earlier, feature flag data forwarding from the iOS native layer requires manual setup. Your application likely contains a `featureFlags.subscribeToUpdates` callback that calls `BrazePlugin.processFeatureFlags(featureFlags)`. To migrate to Flutter SDK 18.0.0, remove the `BrazePlugin.processFeatureFlags(_:)` call—data forwarding is now handled automatically.
+
+For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in the Braze Flutter SDK sample application.
+
+{% endsubtab %}
+{% endsubtabs %}
 
 {% endtab %}
 {% tab Roku %}

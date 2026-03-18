@@ -194,3 +194,23 @@ API-triggered and server-triggered campaigns are ideal for handling more advance
 | • Does not log data points<br><br>• Personalization elements are included in the JSON payload properties | • Does not allow you to create a segment of users eligible for the message in the JSON payload properties<br><br>• Not able to see incoming JSON payloads with the **Message Activity Log**|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+### What should I include when submitting a support ticket for a "Request Timed Out" error?
+
+If you encounter a "Request Timed Out" error while creating or editing a campaign or Canvas and need to contact [Braze Support]({{site.baseurl}}/braze_support/), include the following information to help speed up resolution:
+
+- **Screen recording:** A recording of the steps you took before seeing the error, including any page transitions.
+- **Timestamp and time zone:** The exact time the error occurred and your time zone.
+- **Browser and version:** The browser you're using (for example, Chrome 120, Safari 17) and whether you've tried reproducing the error in a different browser.
+- **Steps to reproduce:** A clear description of the actions that trigger the error, including any specific campaign or Canvas settings involved.
+- **Network logs (optional):** Open your browser developer tools (**Network** tab), reproduce the error, and export the network log as a HAR (HTTP Archive) log. This helps the support team identify which API call is timing out.
+
+### Why don't my send analytics match the maximum recipient limit I set?
+
+If you add or change a maximum recipient limit on an active campaign, the limit may not be reflected in your send analytics for the following reasons:
+
+- **Limit added post-launch:** If the maximum recipient limit is not set when the campaign launches, messages that are already enqueued before you apply the limit are still sent. The limit only takes effect for sends that you queue after you save the change.
+- **Rate limiting interaction:** If a campaign is also rate-limited, messages may be distributed over a longer time window. The maximum recipient limit is evaluated when messages are enqueued, not when they are delivered. If the limit is changed while messages are already in the queue, the original limit applies to those messages.
+- **Recurring campaigns:** For recurring campaigns, each scheduled send evaluates the maximum recipient limit independently. Changing the limit between sends does not retroactively adjust previous send counts.
+
+To avoid misalignment, set the maximum recipient limit before launching the campaign and avoid modifying it while sends are in progress.
+

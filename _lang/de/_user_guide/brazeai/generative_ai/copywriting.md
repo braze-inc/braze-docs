@@ -27,7 +27,7 @@ Sie können einen bestimmten Kanal für eine Ausgabelänge wählen, die auf kana
 
 Um Ihre Kopie weiter anzupassen, können Sie:
 
-- **Wenden Sie Markenrichtlinien an:** Nachdem Sie [mit <sup>BrazeAITM</sup> Markenrichtlinien erstellt haben]({{site.baseurl}}/user_guide/brazeai/generative_ai/brand_guidelines), können Sie diese bei der Erstellung Ihrer Texte verwenden.
+- **Wenden Sie Markenrichtlinien an:** Nachdem Sie [mit BrazeAI<sup>TM</sup> Markenrichtlinien erstellt haben]({{site.baseurl}}/user_guide/brazeai/generative_ai/brand_guidelines), können Sie diese bei der Erstellung Ihrer Texte verwenden.
 - **Wählen Sie einen Ton:** Jeder Ton erzeugt Texte in einem anderen Stil. Wählen Sie den Ton, der am besten zu Ihrer Marke passt.
 - **Referenzieren Sie Daten aus vergangenen Kampagnen**: Wenn diese Funktion aktiviert ist, werden frühere Push-Benachrichtigungen, die über Ihre Kampagnen oder Canvas-Schritte verschickt wurden, als stilistische Referenz verwendet, um Ihre neue Kopie zu erstellen. Weitere Informationen finden Sie unter [Verwendung früherer Kampagnen-Daten](#past-campaign-data).
 - **Automatisch übersetzte Kopie:** Sie können eine andere Ausgabesprache für Ihre Kopie wählen. Die generierten Inhalte werden in dieser Sprache ausgegeben.
