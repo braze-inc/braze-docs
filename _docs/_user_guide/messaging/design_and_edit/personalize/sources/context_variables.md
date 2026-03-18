@@ -11,11 +11,11 @@ description: "This reference article explains context variables in Braze Canvase
 
 ## Context variables and custom data
 
-Context variables are **not** the same as persisted **custom data**. They exist only inside a user's path through a specific Canvas. They aren't stored on the user profile like [custom attributes]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes/), and they aren't event payload fields like [custom event properties]({{site.baseurl}}/user_guide/data/activation/events/custom_events/custom_event_properties/). They aren't catalog data either.
+Context variables are not the same as persisted custom data. They exist only inside a user's path through a specific Canvas. They aren't stored on the user profile like [custom attributes]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes/), and they aren't event payload fields like [custom event properties]({{site.baseurl}}/user_guide/data/activation/events/custom_events/custom_event_properties/). They aren't catalog data either.
 
 For data that should live on the profile, on events, or in catalogs, use custom data. To set that up in the dashboard, start with [Manage custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/managing_custom_data/).
 
-When you choose **types and value formats** for context variables, those formats match what [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/) describes under [Event property data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#expected-format) (**Expected format**). That model isn't the same as [context variable filters](#context-variable-filters) in Canvas. For more information about operators on profiles, events, and catalog selections, see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/).
+When you choose types and value formats for context variables, those formats match what is described under [Event property data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#expected-format) (**Expected format**). That model isn't the same as [context variable filters](#context-variable-filters) in Canvas. For more information about operators on profiles, events, and catalog selections, see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/).
 
 ## How context variables work
 
@@ -54,10 +54,10 @@ Variable 3 will not be evaluated or stored because the sum of the previous varia
 
 ## Data types
 
-The following table lists the data types you can assign when you create or update a context variable in a **Context step**. For which types Braze supports for [custom attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#custom-attribute-data-types), [event properties]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#event-property-data-types), and [catalogs]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#catalog-data-types), see [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/). To compare operators on those surfaces with Canvas-only filters, see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/).
+The following table lists the data types you can assign when you create or update a context variable in a **Context step**. For which types Braze supports for custom attributes, event properties, and catalogs, see [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/). To compare operators on those surfaces with Canvas-only filters, see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/).
 
 {% alert note %}
-Context variables use the same expected value formats as **Data types** > **Event property data types** > [Expected format]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#expected-format). <br><br>When using the array type, Braze tries to parse the value as JSON, which allows arrays of objects to be successfully created. If the objects within your arrays are not valid JSON, the result will be a simple array of strings. <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
+Context variables use the same [expected value formats]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#expected-format) as event properties. <br><br>When using the array type, Braze tries to parse the value as JSON, which allows arrays of objects to be successfully created. If the objects within your arrays are not valid JSON, the result will be a simple array of strings. <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
 {% endalert %}
 
 | Data type | Example variable name | Example value |
@@ -214,8 +214,8 @@ In all circumstances, we strongly recommend using [Liquid time_zone filters]({{s
 
 ## Related articles
 
-- [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/)
+- [Context step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/context/)
 - [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/)
 - [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/)
 - [Manage custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/managing_custom_data/)
-- [Personalization and dynamic content with Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)
+- [Liquid reference]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/)
