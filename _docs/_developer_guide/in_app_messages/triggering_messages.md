@@ -2,7 +2,7 @@
 nav_title: Trigger messages
 article_title: Trigger in-app messages through the Braze SDK
 page_order: 0.2
-description: "Learn how to trigger in-app messages through the Braze SDK."
+description: "Learn how to trigger in-app messages through the Braze SDK, including chaining messages in one session and overriding the default rate limit."
 platform: 
   - Android
   - FireOS
@@ -23,14 +23,6 @@ At the start of a user's session, Braze will deliver all eligible in-app message
 {% alert note %}
 In-app messages can't be triggered through the API or by API events&#8212;only custom events logged by the SDK. To learn more about logging, see [Logging Custom Events]({{site.baseurl}}/developer_guide/analytics/logging_events/).
 {% endalert %}
-
-## Causes of in-app message delays
-
-If you receive an in-app message campaign a few seconds after session start, the delay may have been caused by:
-
-- A delay in the campaign trigger
-- Customizations
-- The trigger event recording later than you expected (such as with a `templated_iam`)
 
 ## Types of in-app messages
 
@@ -203,6 +195,10 @@ The initial in-app message display operation can be set in Braze config using th
 {% endsubtabs %}
 {% endtab %}
 {% endtabs %}
+
+## Chaining two in-app messages in one session
+
+You can trigger an in-app message from session start, then trigger a second in-app message after a button is pressed in the first. To do this, build a JavaScript bridge to log a button click event that triggers the second message. The trigger for the second message must occur on the device side (the Braze SDK won't pick up custom attribute changes that occur on Braze servers). The default 30-second cooldown between in-app message triggers must be altered to show multiple in-app messages in quick succession. For platform-specific configuration, see the next section.
 
 ## Overriding the default rate limit
 
@@ -521,6 +517,14 @@ Appboy.AppboyBinding.DisplayNextInAppMessage();
 ```
 {% endtab %}
 {% endtabs %}
+
+## Causes of in-app message delays
+
+If you receive an in-app message campaign a few seconds after session start, the delay may have been caused by:
+
+- A delay in the campaign trigger
+- Customizations
+- The trigger event recording later than you expected (such as with a `templated_iam`)
 
 ## Exit-intent messages for Web
 

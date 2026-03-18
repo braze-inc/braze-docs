@@ -707,10 +707,6 @@ Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS/MMS,
 |WhatsApp|Received at the time of display based on the trigger action defined.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-**In-app message (impressions):** Impressions are logged at the time of display, not at scheduled send. If there are multiple devices and re-eligibility is off, the user should only see the in-app message once; even if the user uses multiple devices, they will see it on the first device that is targeted (assuming the profile has consolidated devices and one user ID across devices). If re-eligibility is on, an impression is logged every time that user sees the in-app message.
-
-**In-app message (unique impressions):** Unique impressions can increment again after 24 hours if re-eligibility is on and the user performs the trigger action. If re-eligibility is on, Unique Impressions equals Unique Recipients. This increments at the time of display, not at scheduled send.
-
 {% endapi %}
 
 {% api %}

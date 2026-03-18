@@ -47,14 +47,14 @@ If you have set an in-app message delegate to manually handle message display or
 If you have set an in-app message delegate to manually handle message display or click actions, you must manually log clicks and impressions on the in-app message.
 {% endif %}
 
-### Impressions are greater than Unique Impressions
+### _Impressions_ are greater than _Unique Impressions_
 
-If your in-app message performance shows more _Impressions_ than _Unique Impressions_, the following may have happened:
+This is expected behavior and can happen when:
 
 - If re-eligibility isn't turned on, users who received the campaign may have more than one device.
 - If your in-app message has a scheduled delay for a few minutes after the trigger event occurs, users may have received the message more than once.
 
-For more information on re-eligibility, refer to [Re-eligibility for campaigns and Canvas]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).
+For more information on re-eligibility, see [Re-eligibility for campaigns and Canvas]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).
 
 ### Impressions are lower than expected
 
@@ -64,12 +64,19 @@ For more information on re-eligibility, refer to [Re-eligibility for campaigns a
 
 ![Custom Events page showing a graph for the number of times the custom event Added to Favorites occurred over a one month period]({% image_buster /assets/img_archive/trouble5.png %})
 
+Other reasons include:
+
+- Users haven't viewed the in-app message, so impressions aren't logged.
+- Multiple in-app messages are intercepting each other (such as multiple high-priority messages).
+- If the message is in a Canvas, users may be entering a Delay step that is longer than the session timeout before receiving the in-app message.
+
 ### Impressions are lower than they used to be
 
 1. Ensure no one unintentionally altered the segment or campaign since launch. Our segment and campaign changelogs will give you insight into changes that have been made, who made the change, and when it happened.
 
 ![Link to view changelog on the Campaign Details page with seven changes since the user has last viewed the campaign]({% image_buster /assets/img_archive/trouble4.png %})
 
+{: start="2"}
 2. Ensure you didn't reuse your trigger event in a separate in-app message campaign with a higher priority.
 
 ## Advanced Troubleshooting {#troubleshooting-in-app-advanced}

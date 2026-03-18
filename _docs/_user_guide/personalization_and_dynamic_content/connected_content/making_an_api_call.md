@@ -99,22 +99,6 @@ For more on planning endpoint capacity and reducing call volume, see [Best pract
 * Connected Content executes when the message is rendered. For in-app messages, the message is rendered at impression time.
 * Connected Content calls do not follow redirects.
 
-## Connected Content with in-app messages
-
-### When are Connected Content calls made with in-app messages? Can I run them on click?
-
-A Connected Content call is made as soon as the in-app message is delivered to the user's device, regardless of where the Connected Content call occurs in the in-app message. You can delay the call until rendering by checking **Re-evaluate campaign eligibility before displaying** in your campaign or Canvas step.
-
-### If I use the same Connected Content call in different buttons within my in-app message, where will the call happen?
-
-Braze doesn't tie the call to an on-click event, even if the call is in a button. If you have multiple buttons with calls, Braze makes a separate call for each button, even if they are identical calls.
-
-### Can I use data added to a user profile by REST API in the same session that user receives an in-app message?
-
-Yes, with some exceptions. For example, if a user is in an audience for an in-app message that is awaiting a trigger, they start a session, and in the same session data is added to their user profile by REST API, that updated data can be used in the user's in-app message. However, **Re-evaluate campaign eligibility before displaying** must be checked, and Braze won't template the in-app message until it's time to render.
-
-If the same trigger sends data to Braze **and** triggers the in-app message, you can't add the updated data to the in-app message (even with a scheduled delay). You must have two separate triggers: one to send the data, and one to trigger the in-app message.
-
 ## Best practices for high-volume endpoints
 
 If your messages use Connected Content and you send at high volume, plan for more requests than the number of recipients or sends:
@@ -284,3 +268,13 @@ Caching can help reduce duplicate Connected Content calls but isn't guaranteed t
 {% multi_lang_include connected_content.md section='default behavior' %}
 
 {% multi_lang_include connected_content.md section='http post' %}
+
+### If I use the same Connected Content call in different buttons within my in-app message, where will the call happen?
+
+Braze doesn't tie the call to an on-click event, even if the call is in a button. If you have multiple buttons with calls, Braze makes a separate call for each button, even if they are identical calls.
+
+### Can I use data added to a user profile by REST API in the same session that user receives an in-app message?
+
+Yes, with some exceptions. For example, if a user is in an audience for an in-app message that is awaiting a trigger, they start a session, and in the same session data is added to their user profile by REST API, that updated data can be used in the user's in-app message. However, **Re-evaluate campaign eligibility before displaying** must be checked, and Braze won't template the in-app message until it's time to render.
+
+If the same trigger sends data to Braze **and** triggers the in-app message, you can't add the updated data to the in-app message (even with a scheduled delay). You must have two separate triggers: one to send the data, and one to trigger the in-app message.

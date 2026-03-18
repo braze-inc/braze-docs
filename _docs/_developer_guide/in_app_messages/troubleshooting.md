@@ -25,11 +25,3 @@ channel:
 {% multi_lang_include developer_guide/swift/in_app_messages/troubleshooting.md %}
 {% endsdktab %}
 {% endsdktabs %}
-
-### Why are my in-app message impressions low?
-
-Your impressions may be low for several reasons, including:
-
-- Users haven't viewed the in-app message, so impressions aren't logged.
-- Multiple in-app messages are intercepting each other (such as multiple high-priority messages).
-- If the message is in a Canvas, users may be entering a Delay step that is longer than the session timeout before receiving the in-app message.

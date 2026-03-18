@@ -4,9 +4,9 @@ article_title: In-App Message Prep Guide
 page_order: 0.5
 
 page_type: reference
-description: "This article covers some questions and best practices you should consider before building your in-app messages."
+description: "This article covers questions and best practices to consider before building in-app messages, including targeting, scheduling, content, and conversions."
 channel: in-app messages
-
+toc_headers: h2
 ---
 
 # In-app message prep guide
@@ -26,6 +26,14 @@ channel: in-app messages
 - Which event should trigger this message?
 - Are any of your users using older versions of your app? If so, they might not be able to see some elements of your message.
 - What type of device or devices are you building this message for? Remember, you can preview your message using the **Preview** box or **Test** tab. Refer to [Testing]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) for more information.
+
+## Scheduling, delays, and session starts
+
+When an in-app message campaign has **Schedule Delay** with a trigger on session start, a user who starts a session and then closes the app before the in-app message displays can still get that message on the next session start, after the delay expires.
+
+That timing can produce unexpected display behavior, especially if **Re-evaluate campaign eligibility before displaying** isn't selected on the campaign.
+
+For example, a user might receive an in-app message with an eight-second delay a month after the campaign launched. That can happen if they started a session, immediately ended the session, started a session a month later, and then eight seconds later received the in-app message. If they navigate away from the app without closing it, the in-app message displays when they return to the app.
 
 ## Content considerations
 
@@ -48,14 +56,40 @@ channel: in-app messages
 
 ## Drag-and-drop editor considerations
 
-- **Adding deep links for different devices:** The drag-and-drop editor doesn't support adding different deep links for different devices (unlike the traditional editor).
-- **Adjusting background image opacity:** The opacity setting doesn't allow complete transparency of background images (unlike the traditional IAM editor). You can use opacity settings to make the message background color completely transparent.
-- **Setting the maximum width:** The maximum width in the drag-and-drop editor is limited at 325px; this is primarily meant to accommodate the dashboard preview. Messages can display properly on smaller screen devices.
-- **Selecting different backgrounds for different platforms:** It's not possible to show two different backgrounds for the same message on different platforms (such as web and mobile).
-- **Applying message styles:** Background images apply to the full message and can't be customized per page. Message styles apply to the full message, not individual pages.
-- **Measuring Spacer blocks height:** The measurement unit for Spacer blocks is pixels (px) and can't be changed.
-- **Supported formats:** Currently, only modal and fullscreen in-app messages are supported in the drag-and-drop editor.
-- **Adjusting to size and aspect ratio:** The background image will stretch the in-app message, as the modal adjusts to fit the size and aspect ratio of the background image; you can adjust the ratio as needed.
-- **Background images and on-click behavior:** These persist across pages. For multi-page in-app messages with different full images on each page, add a button to allow users to click to the next page.
+### Adding deep links for different devices
+
+The drag-and-drop editor doesn't support adding different deep links for different devices (unlike the traditional editor).
+
+### Adjusting background image opacity 
+
+The opacity setting doesn't allow complete transparency of background images (unlike the traditional IAM editor). You can use opacity settings to make the message background color completely transparent.
+
+### Setting the maximum width 
+
+The maximum width in the drag-and-drop editor is limited at 325px; this is primarily meant to accommodate the dashboard preview. Messages can display properly on smaller screen devices.
+
+### Selecting different backgrounds for different platforms 
+
+It's not possible to show two different backgrounds for the same message on different platforms (such as web and mobile).
+
+### Applying message styles 
+
+Background images apply to the full message and can't be customized per page. Message styles apply to the full message, not individual pages.
+
+### Measuring Spacer blocks height
+
+The measurement unit for Spacer blocks is pixels (px) and can't be changed.
+
+### Supported formats
+
+Currently, only modal and fullscreen in-app messages are supported in the drag-and-drop editor.
+
+### Adjusting to size and aspect ratio
+
+The background image will stretch the in-app message, as the modal adjusts to fit the size and aspect ratio of the background image; you can adjust the ratio as needed.
+
+### Background images and on-click behavior
+
+These persist across pages. For multi-page in-app messages with different full images on each page, add a button to allow users to click to the next page.
 
 

@@ -45,13 +45,11 @@ If auto-play is required and your tests show it doesn’t work by default, you c
 
 Most modern browsers allow auto-play only under certain conditions (commonly when the video is muted). If you use `autoplay` in a web in-app message, include `muted` and test across your supported browsers and devices, as browser policies vary and may still require a user gesture in some cases.
 
-To autoplay YouTube videos on web, add the UTM parameter `&autoplay=1`. For example, the following video will autoplay, be muted (`&mute=1`), and show no controls (`&controls=0`):
+To autoplay YouTube videos in a web in-app message, add the URL parameter `&autoplay=1`. For example, the following video will autoplay, be muted (`&mute=1`), and show no controls (`&controls=0`):
 
 ```html
 <iframe class="video" src="https://www.youtube.com/embed/VPIPAc4oQqw?autoplay=1&mute=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
-
-YouTube-embedded in-app messages on web display directly inside the app.
 
 ## How YouTube videos display
 
