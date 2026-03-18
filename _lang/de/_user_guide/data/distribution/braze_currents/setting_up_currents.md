@@ -8,7 +8,7 @@ tool: Currents
 search_rank: 8
 ---
 
-# [![Braze Learning-](https://learning.braze.com/currents-the-basics-2/)Kurs []({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"}„Currents einrichten“
+# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"} Currents einrichten
 
 > Auf dieser Seite wird der allgemeine Prozess zur Integration und Konfiguration von Braze-Currents beschrieben.
 

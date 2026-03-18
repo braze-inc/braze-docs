@@ -1,7 +1,7 @@
 ---
-nav_title: SimonAI
-article_title: SimonAI
-description: "Use the Braze and SimonAI integration to create and sync sophisticated audiences to Braze for orchestration, in real-time and without code."
+nav_title: Simon AI
+article_title: Simon AI
+description: "Use the Braze and Simon AI integration to create and sync sophisticated audiences to Braze for orchestration, in real-time and without code."
 alias: /partners/simon_data/
 page_type: partner
 search_tag: Partner
@@ -11,7 +11,7 @@ search_tag: Partner
 
 > The [Simon AI][1] Agentic Marketing Platform helps marketing teams achieve true one-to-one personalization. It combines a composable CDP with AI agents that operate directly in the Snowflake AI Data Cloud to act as a marketer's data and execution team.
 
-Use the Braze and Simon AI integration to build and sync advanced audiences to Braze for real-time, no-code orchestration. With this integration, you can tap into Simon AI’s identity resolution, customer data unification, and AI-driven segmentation to power more personalized and impactful Braze campaigns downstream.
+Use the Braze and Simon AI integration to build and sync advanced audiences to Braze for real-time, no-code orchestration. With this integration, you can tap into Simon AI's identity resolution, customer data unification, and AI-driven segmentation to power more personalized and impactful Braze campaigns downstream.
 
 ## Prerequisites
 
@@ -81,12 +81,7 @@ After Contact Traits is activated by your account manager:
 
 ![Selecting sync traits in Simon AI.][10]
 
-[1]: https://www.simondata.com
-
-
-
-
-[1]: https://www.simondata.com
+[1]: https://www.simon.ai/
 [2]: {{site.baseurl}}/api/basics/#creating-and-managing-rest-api-keys
 [3]: {{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints
 [4]: https://docs.simondata.com/docs/campaigns-flows
@@ -96,4 +91,3 @@ After Contact Traits is activated by your account manager:
 [8]: {% image_buster /assets/img/simon_data/ConnecttoBraze.png %}  
 [9]: {% image_buster /assets/img/simon_data/BrazeActions.png %}
 [10]: {% image_buster /assets/img/simon_data/BrazeTraitSyncing.png %}
-

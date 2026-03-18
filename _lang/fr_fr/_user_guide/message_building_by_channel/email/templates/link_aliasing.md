@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# [![C](https://learning.braze.com/link-aliasing)ours[]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"} [Braze LearningAlias](https://learning.braze.com/link-aliasing) de lien
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"} Alias de lien
  
 > Utilisez l’aliasage de lien pour créer des noms reconnaissables et générés par l’utilisateur pour identifier les liens envoyés dans les e-mails de Braze. Ces liens sont disponibles pour le reciblage de segmentation, le déclenchement basé sur l'action et l'analyse des liens.
 

@@ -8,7 +8,7 @@ page_type: reference
 search_rank: 7
 ---
 
-# [![](https://learning.braze.com/the-braze-support-portal/)Curso []({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}de [Braze Learning](https://learning.braze.com/the-braze-support-portal/) soporte de Braze
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"} Soporte de Braze
 
 ## Accede al portal de soporte
 
