@@ -72,7 +72,7 @@ The `BadToken` error may occur for several reasons:
 The `TopicDisallowed` error means APNs rejected the push because the topic (bundle ID) in the request isn't allowed for the authentication credentials being used. To resolve this:
 
 1. **Verify the bundle ID.** Confirm the bundle ID configured in your Braze app settings matches the bundle ID of your app exactly. This includes any suffix variations (for example, `.debug`, `.staging`).
-2. **Check your APNs key or certificate scope.** If you're using a `.p8` key, it's universal and supports all apps under your Apple Developer Team. If you're using a `.p12` certificate, it's scoped to a single bundle ID — make sure it matches the app you're sending to.
+2. **Check your APNs authentication setup.** Confirm your app is configured with the correct APNs `.p8` key and that the key is associated with the same Apple Developer Team as the app you're sending to.
 3. **Confirm the app environment.** If you have separate App IDs in Braze for development and production builds, verify that each is configured with the correct push credentials and environment.
 
 ### InvalidProviderToken
