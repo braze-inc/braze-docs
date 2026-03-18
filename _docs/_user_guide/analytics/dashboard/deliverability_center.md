@@ -71,13 +71,7 @@ Before connecting to the Deliverability Center, you'll need to set up a Google P
 
 1. Go to the [Google Postmaster Tools dashboard](https://postmaster.google.com/managedomains?pli=1).
 2. In the bottom right, select the <i class="fas fa-plus-circle"></i> plus icon.
-3. Enter your root domain or subdomain to authenticate your email. If you're adding and verifying the root domain, this allows the verification to be applied to subdomains. For example, by verifying `braze.com`, you can later add `demo.braze.com` and other subdomains without individually verifying them.
-
-{% alert important %}
-Be sure the TXT record is tied to the parent domain, not the subdomain you're using through Braze.
-{% endalert %}
-
-{: start="4"}
+3. Enter your root domain to authenticate your email. Be sure the TXT record is tied to the parent domain, **not** the subdomain you're using through Braze. By adding and verifying the root domain, the verification can be applied to subdomains. For example, by verifying `braze.com`, you can later add `demo.braze.com`.
 4. Google generates a TXT record that can be added directly to your domain's DNS. This is generally owned by whoever manages your DNS. For information and guidance on how to update your specific DNS, check out [Verify your domain (host-specific steps)](https://support.google.com/a/topic/1409901).
 5. Select **Next**. <br>![An example domain "demo.braze.com" to authenticate an email.]({% image_buster /assets/img_archive/domain_authentication.png %})
 6. After the TXT record is added to the DNS, return to the Google Postmaster Tools dashboard and select **Verify**. This step confirms you own the domain, so you can access Gmail deliverability metrics in your Postmaster account. <br> ![A prompt to verify ownership of the domain "demo.braze.com".]({% image_buster /assets/img_archive/domain_verification.png %})
