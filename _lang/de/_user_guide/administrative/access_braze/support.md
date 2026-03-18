@@ -8,7 +8,7 @@ page_type: reference
 search_rank: 7
 ---
 
-# [![Braze-Lernangebote-Kurs](https://learning.braze.com/the-braze-support-portal/)Braze[]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"} Support
+# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"} Braze Support
 
 ## Zugriff auf das Support-Portal
 

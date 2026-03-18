@@ -6,7 +6,7 @@ description: "Cet article propose un aperçu du Timing Intelligent (appelé aupa
 
 ---
 
-# [![](https://learning.braze.com/intelligent-timing)Cours[]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"} [Braze Learning](https://learning.braze.com/intelligent-timing) : « Intelligent Timing »
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"} Intelligent Timing
 
 > Utilisez le timing intelligent pour transmettre votre message à chaque utilisateur au moment où Braze détermine le moment optimal d'envoi, c'est-à-dire lorsque l'utilisateur est le plus susceptible d'interagir (ouvrir ou cliquer). Cela vous permet de vérifier plus facilement que vous effectuez l'envoi de messages à vos utilisateurs à l'heure qui leur convient le mieux, ce qui peut entraîner un engagement accru.
 
