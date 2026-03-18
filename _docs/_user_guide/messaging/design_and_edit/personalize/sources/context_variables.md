@@ -9,6 +9,14 @@ description: "This reference article explains context variables in Braze Canvase
 
 > Context variables are temporary pieces of data you can create and use within a user's journey through a specific Canvas. They enable you to personalize delays, segment users dynamically, and enrich messaging without altering a user's profile information permanently. Context variables exist only within the Canvas session and do not persist across different Canvases or outside the session.
 
+## Context variables and custom data
+
+Context variables are not the same as persisted custom data. They exist only inside a user's path through a specific Canvas. They aren't stored on the user profile like [custom attributes]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes/), and they aren't event payload fields like [custom event properties]({{site.baseurl}}/user_guide/data/activation/events/custom_events/custom_event_properties/). They aren't catalog data either.
+
+For data that should live on the profile, on events, or in catalogs, use custom data. To set that up in the dashboard, start with [Manage custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/managing_custom_data/).
+
+When you choose types and value formats for context variables, those formats match what is described under [Event property data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#expected-format) (**Expected format**). That model isn't the same as [context variable filters](#context-variable-filters) in Canvas. For more information about operators on profiles, events, and catalog selections, see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/).
+
 ## How context variables work
 
 Context variables can be set in two ways:
@@ -46,10 +54,10 @@ Variable 3 will not be evaluated or stored because the sum of the previous varia
 
 ## Data types
 
-Context variables that are created or updated in the step can be assigned the following data types.
+The following table lists the data types you can assign when you create or update a context variable in a **Context step**. For which types Braze supports for custom attributes, event properties, and catalogs, see [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/). To compare operators on those surfaces with Canvas-only filters, see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/).
 
 {% alert note %}
-Context variables have the same expected formats for data types as [event properties]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#expected-format). <br><br>When using the array type, Braze tries to parse the value as JSON, which allows arrays of objects to be successfully created. If the objects within your arrays are not valid JSON, the result will be a simple array of strings. <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
+Context variables use the same [expected value formats]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#expected-format) as event properties. <br><br>When using the array type, Braze tries to parse the value as JSON, which allows arrays of objects to be successfully created. If the objects within your arrays are not valid JSON, the result will be a simple array of strings. <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
 {% endalert %}
 
 | Data type | Example variable name | Example value |
@@ -145,7 +153,7 @@ The exit criteria state that at any point in a user’s journey in the Canvas, t
 {% endtab %}
 {% endtabs %}
 
-### Context variable filters
+### Context variable filters {#context-variable-filters}
 
 You can create filters that use previously declared context variables in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) and [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps.
 
@@ -153,11 +161,15 @@ You can create filters that use previously declared context variables in [Audien
 Context variable filters are only available for Audience Paths and Decision Split steps. 
 {% endalert %}
 
+#### How context variable filters differ from segments and catalogs
+
+Context variable filters run only inside a Canvas (Audience Paths and Decision Split). They don't appear in the segment builder, and you can't use context variables in [segments]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/) or in [catalog selections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/). The operators you see for each comparison are determined by the Canvas UI for that step and data type. They aren't the same as the operator sets for custom attributes, event properties, or catalog columns described in [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/).
+
 Context variables are declared and only accessible in the scope of a Canvas, meaning they can't be referenced in segments. Context variable filters function similarly in Audience Paths and Decision Split steps—Audience Path steps represent multiple groups, while Decision Split steps represent binary decisions.
 
 ![Decision Split step example with the option to create a filter with a context variable.]({% image_buster /assets/img/context_decision_split.png %}){: style="max-width:90%;"}
 
-Similar to how Canvas context variables have pre-defined types, the comparisons between context variables and static values must have [matching data types]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/#supported-data-types). The context variable filter allows comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for [nested custom attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/).
+Similar to how Canvas context variables have pre-defined types, the comparisons between context variables and static values must use compatible types. The context variable filter allows comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to [segmentation on nested custom attributes]({{site.baseurl}}/user_guide/data/activation/attributes/nested_custom_attribute_support/#segmentation).
 
 {% alert note %}
 Use the same data type for your context variable and comparison. For example, if your context variable is a time data type, use time comparisons (such as "before" or "after"). Using mismatching data types (such as string comparisons with a time context variable) may cause unexpected behavior.
@@ -202,5 +214,8 @@ In all circumstances, we strongly recommend using [Liquid time_zone filters]({{s
 
 ## Related articles
 
-- [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/)
-- [Personalization and dynamic content with Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)
+- [Context step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/context/)
+- [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/)
+- [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/)
+- [Manage custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/managing_custom_data/)
+- [Liquid reference]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/)

@@ -4,7 +4,7 @@ nav_title: Segmentation filters
 article_title: Segmentation Filters
 layout: glossary_page
 glossary_top_header: "Segmentation Filters"
-glossary_top_text: The Braze SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. You can search or narrow these filters by filter category.<br><br>To learn about the different custom attribute data types you can use to segment users, view <a href="/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types">Custom attribute data types</a>.
+glossary_top_text: The Braze SDK provides you with a powerful arsenal of filters to segment and target your users based on specific features and attributes. You can search or narrow these filters by filter category.<br><br>For custom attribute data types and full segmentation options for each type, see <a href="{{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#custom-attribute-data-types">Custom attribute data types</a> on the Data types page. For more information about how operators differ across custom attributes, event properties, and catalog selections, including Segment Extensions and standard segments, see <a href="{{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/">Filtering and segmentation operators</a>.
 
 page_type: glossary
 tool: Segments

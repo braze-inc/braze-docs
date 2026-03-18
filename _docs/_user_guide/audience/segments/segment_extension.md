@@ -11,7 +11,7 @@ tool: Segments
 
 > Segment Extensions allow you to build very precise segments over an extended period of a user's history. For example, using Segment Extensions you can target users who have purchased a particular product in the last sixteen months or have spent a certain amount of money with your service. Refine this audience by using event properties to make targeting even more granular.
 
-Braze segmentation allows you to target users based on custom event or purchase behavior. Segment Extensions enhances this capacity, letting you draw on historic data saved on the user profile. Using Segment Extensions, you can identify and reach users who have completed any custom event or purchase event any number of times in the past two years (730 days). 
+Braze segmentation allows you to target users based on custom event or purchase behavior. Segment Extensions enhances this capacity, letting you draw on historic data saved on the user profile. Using Segment Extensions, you can identify and reach users who have completed any custom event or purchase event any number of times in the past two years (730 days). Event property filters in Segment Extensions use a different operator set and lookback window than standard segments. For more information, see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/).
 
 ## Why use Segment Extensions?
 

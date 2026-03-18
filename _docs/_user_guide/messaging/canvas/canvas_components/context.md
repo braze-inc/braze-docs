@@ -23,7 +23,7 @@ Context steps allow you to create and use temporary data during a user's journey
 Context variables exist only for that specific Canvas journey. They don't change the user's profile permanently and don't appear in other Canvases. This makes them ideal for temporary information that's relevant only to a specific campaign or workflow.
 
 {% alert tip %}
-For a full reference on context variables, including data types, usage, and best practices, see the [Context variables reference]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/context_variables/).
+For a full reference on context variables, including data types, usage, and best practices, see the [Context variables reference]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/context_variables/). For value formats and how data types work across custom attributes, event properties, and catalogs, see [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/).
 {% endalert %}
 
 Within a Context step, you can define or update up to 10 context variables. These variables can be used to personalize delays, segment users dynamically, and enrich messaging throughout the Canvas. For example, you could create a context variable for a user's scheduled flight time, then use it to set personalized delays and send reminders.
