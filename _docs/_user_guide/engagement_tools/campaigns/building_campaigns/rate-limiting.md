@@ -16,8 +16,8 @@ description: "This reference article discusses the concept of rate limiting and 
 
 Braze allows you to control marketing pressure by rate limiting your campaigns, regulating the amount of outgoing traffic from your platform. You can implement two different types of rate limiting for your campaigns: 
 
-1. [**User-centric rate limiting:**](#user-centric-rate-limiting) Focuses on providing the best experience for the user.
-2. [**Delivery speed rate limiting:**](#delivery-speed-rate-limiting) Takes into consideration the bandwidth of your servers.
+1. [User-centric rate limiting:](#user-centric-rate-limiting) Focuses on providing the best experience for the user.
+2. [Delivery speed rate limiting:](#delivery-speed-rate-limiting) Takes into consideration the bandwidth of your servers.
 
 Braze will try to evenly distribute the message sends throughout the minute, but can't guarantee this. For example, if you have a campaign with a rate limit of 5,000 messages per minute, we'll try to distribute the 5,000 requests evenly through the minute (about 84 messages per second), but there may be some variation in the per-second rate.
 
@@ -52,6 +52,10 @@ In the **Target Audiences** step of your campaign composer, you can also limit t
 ![Audience Summary with a selected checkbox for limiting the number of people who receive the campaign.]({% image_buster /assets/img_archive/total_limit.png %}){: style="max-width:50%;"} 
 
 By selecting the maximum user limit, you can limit the volume of messages sent on a per-channel basis or globally across all message types.
+
+{% alert note %}
+The maximum user cap limits the number of users dispatched, not the number of messages successfully sent. Because aborted messages count toward this cap, the actual number of messages sent may be lower than the configured limit. For example, if you set a cap of 10,000 and 2,000 messages are aborted due to Liquid logic or other conditions, only 8,000 messages are sent.
+{% endalert %}
 
 ##### Maximum user cap with optimizations
 
@@ -319,4 +323,18 @@ For example, you might set up the following rule:
 > No more than three email campaigns or Canvas components per week from all campaigns and Canvas steps.
 
 This rule determines that no users receive more than 100 emails per week because, at most, users receive three emails per week from campaigns or Canvas components with frequency capping turned on.
+
+## Frequently asked questions
+
+### If I change a send throttle on an active Canvas, does it affect users already in the Canvas?
+
+Yes, when you increase or decrease a Canvas rate limit, the updated limit will take effect for new messages within approximately 30 seconds of the change due to caching.
+
+### Does frequency capping cause users to exit a Canvas?
+
+No. If a Canvas user is frequency-capped because of global frequency capping settings, the user will immediately advance to the next Canvas step. The user will **not** exit the Canvas because of the frequency cap.
+
+### How can I identify users who were frequency capped in a Canvas?
+
+Users who are frequency capped don't generate a send event for that step. To identify these users, you can use [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) to track message frequency capped events. Alternatively, you can create a [Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to analyze users who entered the Canvas but didn't receive the expected message.
 

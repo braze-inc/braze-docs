@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: 사용자 구독 그룹 상태 업데이트 v2"
+nav_title: "POST: 사용자의 구독 그룹 상태 업데이트 v2"
 alias: /post_update_user_subscription_group_status_v2/
 layout: api_page
 page_type: reference
@@ -20,36 +20,36 @@ channel:
 
 You can access a subscription group's `subscription_group_id` by navigating to the **Subscription Group** page.
 
-**이메일 구독 그룹에** 대한 이 엔드포인트의 예시를 보거나 테스트하려면 다음과 같이 하세요:
+예제나 **이메일 구독 그룹**에 대한 이 엔드포인트를 테스트하려면:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b1b9a0e0-6329-4df2-a465-53347f410662 {% endapiref %}
 
-**SMS 구독 그룹에** 대한 이 엔드포인트의 예시를 보거나 테스트하려면 다음과 같이 하세요:
+예제나 **SMS 구독 그룹**에 대한 이 엔드포인트를 테스트하려면:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
-**WhatsApp 그룹에** 대한 이 엔드포인트의 예를 보거나 테스트하려면 다음과 같이 하세요:
+예제나 **WhatsApp 그룹**에 대한 이 엔드포인트를 테스트하려면:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
 ## 필수 조건
 
-이 엔드포인트를 사용하려면 `subscription.status.set` 권한이 있는 [API 키가]({{site.baseurl}}/api/basics#rest-api-key/) 필요합니다.
+이 엔드포인트를 사용하려면 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)와 `subscription.status.set` 권한이 필요합니다.
 
 {% alert note %}
-이 엔드포인트를 [LINE 구독 그룹에]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/) 사용하려면 고객 성공 매니저에게 문의하세요.
+이 엔드포인트를 [LINE 구독 그룹]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/)와 함께 사용하려면 고객 성공 매니저에게 문의하세요.
 {% endalert %}
 
 ## V1과의 차이점
 
-V2 엔드포인트는 다음과 같은 점에서 [V1 엔드포인트와]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) 다릅니다:
+V2 엔드포인트는 다음과 같은 방식으로 [V1 엔드포인트]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)와 다릅니다:
 
-- **여러 구독 그룹**: V2에서는 한 번의 API 요청으로 여러 구독 그룹을 업데이트할 수 있는 반면, V1에서는 요청당 하나의 구독 그룹만 지원합니다.
-- **한 번의 통화로 이메일과 SMS를 모두 업데이트하세요**: `external_ids` 을 사용하면 한 번의 API 호출로 동일한 사용자에 대한 이메일 및 SMS 구독 그룹을 모두 업데이트할 수 있습니다. V1에서는 이메일 및 SMS 구독 그룹에 대해 별도의 API 호출을 수행해야 합니다.
-- **이메일 또는 전화 식별자 사용**: `external_ids` 대신 `emails` 또는 `phones` 을 사용하는 경우 동일한 요청으로 이메일 및 SMS 구독 그룹을 모두 업데이트할 수 없습니다. 이메일 구독 그룹과 SMS 구독 그룹에 대해 각각 별도의 API 호출을 해야 합니다.
+- **여러 구독 그룹**: V2는 단일 API 요청으로 여러 구독 그룹을 업데이트할 수 있도록 하며, V1은 요청당 하나의 구독 그룹만 지원합니다.
+- **이메일과 SMS를 한 번의 호출로 업데이트**: `external_ids`를 사용할 때, 동일한 사용자에 대해 이메일 및 SMS 구독 그룹을 단일 API 호출로 업데이트할 수 있습니다. V1에서는 이메일 및 SMS 구독 그룹에 대해 별도의 API 호출을 해야 합니다.
+- **이메일 또는 전화 식별자 사용**: `external_ids` 대신 `emails` 또는 `phones`을 사용하면 동일한 요청에서 이메일 및 SMS 구독 그룹을 업데이트할 수 없습니다. 이메일 구독 그룹과 SMS 구독 그룹 각각에 대해 별도의 API 호출을 해야 합니다.
 
 {% alert important %}
-**전화번호 형식**: 전화번호는 [E.164 형식이어야](https://en.wikipedia.org/wiki/E.164) 합니다(예: `+12223334444`). E.164 형식이 아닌 전화번호는 거부됩니다.
+**전화번호 형식**: 전화번호는 [E.164 형식](https://en.wikipedia.org/wiki/E.164)이어야 합니다(예: `+12223334444`). E.164 형식이 아닌 전화번호는 거부됩니다.
 {% endalert %}
 
 ## 사용량 제한
@@ -89,20 +89,20 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `subscription_state` | Required | 문자열 | 사용 가능한 값은 `unsubscribed` (구독 그룹에 속하지 않음) 또는 `subscribed` (구독 그룹에 속함)입니다. |
 | `external_ids` | 필수* | 문자열 배열 | 사용자(또는 사용자)의 `external_id` 에는 최대 50개의 `id`을 포함할 수 있습니다. |
 | `emails` | 필수* | 문자열 또는 문자열 배열 | 사용자의 이메일 주소는 문자열 배열로 전달할 수 있습니다. 이메일 주소를 하나 이상(최대 50개) 포함해야 합니다. <br><br>동일한 워크스페이스에서 여러 사용자(`external_id`)가 동일한 이메일 주소를 공유하는 경우 이메일 주소를 공유하는 모든 사용자에게 구독 그룹 변경 사항이 업데이트됩니다. |
-| `phones` | 필수* | 문자열의 [E.164](https://en.wikipedia.org/wiki/E.164) 형식 | 사용자 전화번호를 문자열 배열로 전달할 수 있습니다. 전화번호를 하나 이상 포함해야 합니다(최대 50개). 전화번호는 E.164 형식이어야 합니다(예: `+12223334444`). <br><br>동일한 워크스페이스에서 여러 사용자(`external_id`)가 동일한 전화번호를 공유하는 경우 전화번호를 공유하는 모든 사용자에게 동일한 가입 그룹 변경사항이 업데이트됩니다.|
-| `use_double_opt_in_logic` | 선택 사항 | 부울 | 이 매개변수를 생략하거나 `false` 로 설정하면 사용자는 SMS 이중 옵트인 워크플로에 입력되지 않습니다. |
+| `phones` | 필수* | 문자열의 [E.164](https://en.wikipedia.org/wiki/E.164) 형식 | 사용자 전화번호를 문자열 배열로 전달할 수 있습니다. 전화번호를 하나 이상 포함해야 합니다(최대 50개). 전화번호는 E.164 형식이어야 합니다 (예: `+12223334444`). <br><br>동일한 워크스페이스에서 여러 사용자(`external_id`)가 동일한 전화번호를 공유하는 경우 전화번호를 공유하는 모든 사용자에게 동일한 가입 그룹 변경사항이 업데이트됩니다.|
+| `use_double_opt_in_logic` | 선택 사항 | 부울 | 이 매개변수가 생략되거나 `false`로 설정되면, 사용자는 SMS 이중 옵트인 워크플로우에 입력되지 않습니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert important %}
 **식별자 선택**: 
-- 한 번의 API 호출로 이메일과 SMS 구독 그룹을 모두 업데이트하려면 `external_ids` 을 사용하세요. 동일한 요청에 `emails` 및 `phones` 주소를 모두 포함할 수 없습니다.
-- `external_ids` 대신 `emails` 또는 `phones` 을 사용하는 경우 이메일 구독 그룹과 SMS 구독 그룹에 대해 각각 별도의 API 호출을 수행합니다.
-- `emails`, `phones`, 또는 `external_ids` 으로 개별적으로 보낼 수 있습니다.
+- 이메일 및 SMS 구독 그룹을 단일 API 호출로 업데이트하려면 `external_ids`을 사용하십시오. 같은 요청에 `emails`와 `phones`을 모두 포함할 수 없습니다.
+- `external_ids` 대신 `emails` 또는 `phones`를 사용하는 경우, 이메일 구독 그룹과 SMS 구독 그룹 각각에 대해 별도의 API 호출을 하십시오.
+- `emails`, `phones` 또는 `external_ids`을 개별적으로 보낼 수 있습니다.
 {% endalert %}
 
 ### 요청 예시
 
-다음 예에서는 `external_ids` 을 사용하여 한 번의 API 호출로 이메일 및 SMS 구독 그룹을 모두 업데이트합니다. `external_ids`을 사용할 때만 가능하며, `emails` 또는 `phones` 을 사용할 때는 한 번의 호출로 이메일과 SMS 구독 그룹을 모두 업데이트할 수 없습니다.
+다음 예제는 단일 API 호출로 이메일 및 SMS 구독 그룹을 업데이트하기 위해 `external_ids`을 사용합니다. 이는 `external_ids`를 사용할 때만 가능하며, `emails` 또는 `phones`를 사용할 때는 이메일 및 SMS 구독 그룹을 한 번의 호출로 업데이트할 수 없습니다.
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/status/set' \

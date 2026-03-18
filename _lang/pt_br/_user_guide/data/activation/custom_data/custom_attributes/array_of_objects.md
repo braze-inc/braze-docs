@@ -21,6 +21,10 @@ description: "Este artigo de referência aborda o uso de um vetor de objetos com
 
 A atualização ou remoção de itens em uma matriz exige a identificação do item por chave e valor, portanto, considere a inclusão de um identificador exclusivo para cada item da matriz. A exclusividade tem escopo apenas para o vetor e é útil se você quiser atualizar e remover objetos específicos do vetor. Isso não é aplicado pela Braze.
 
+{% alert important %}
+Quando um atributo personalizado aninhado em sua solicitação contém valores inválidos (como formatos de hora inválidos ou valores `null`), o Braze descarta todas as atualizações de atributos personalizados aninhados na solicitação do processamento. Isso se aplica a todas as estruturas aninhadas dentro desse atributo específico. Verifique se todos os valores dentro dos atributos personalizados aninhados são válidos antes de enviar. Para saber mais, consulte [Criar e atualizar usuários]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#how-does-userstrack-handle-invalid-nested-custom-attributes).
+{% endalert %}
+
 {% alert tip %}
 Para saber mais sobre o uso de vetores de objetos para objetos de atributos do usuário, consulte [Objeto de atributos do usuário]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 {% endalert %}
@@ -170,9 +174,19 @@ O exemplo a seguir mostra a remoção de qualquer objeto do vetor `pets` que ten
 {% endtab %}
 {% endtabs %}
 
+### Ordem de processamento
+
+Quando uma única solicitação `/users/track` inclui operações `$add`, `$remove` e `$update` para o mesmo atributo de array, o Braze as processa nesta ordem:
+
+1. `$add`
+2. `$remove`
+3. `$update`
+
+Como `$add` é executado antes de `$remove`, você não pode usar um `$remove` seguido de `$add` como um mecanismo de upsert dentro de uma única solicitação. O `$add` é processado primeiro, depois o `$remove` exclui o item. Para upsert, envie o `$remove` em uma solicitação separada antes do `$add`.
+
 ### Carimbos de data/hora
 
-Ao incluir campos como carimbos de data/hora em um vetor de objetos, use o formato `$time` em vez de strings simples ou inteiros de época do Unix.
+Ao incluir campos como timestamps em um array de objetos, use o formato `$time` em vez de strings simples ou inteiros de época Unix.
 
 ```json
 {
@@ -194,7 +208,7 @@ Ao incluir campos como carimbos de data/hora em um vetor de objetos, use o forma
 ```
 
 {% alert tip %}
-Para saber mais, consulte [Atributos personalizados aninhados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
+Para saber mais, consulte [Atributos Personalizados Aninhados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
 {% endalert %}
 
 ## Exemplo de SDK
@@ -579,12 +593,12 @@ Você pode criar um segmento com até um nível de aninhamento de matriz (matriz
 
 ## Pontos de dados
 
-Os pontos de dados são registrados de forma diferente, dependendo da criação, atualização ou remoção de uma propriedade.
+Os pontos de dados são registrados de maneira diferente dependendo se você cria, atualiza ou remove uma propriedade.
 
 {% tabs local %}
 {% tab Create %}
 
-A criação de um novo vetor registra um ponto de dados para cada atributo em um objeto. Este exemplo custa oito pontos de dados – cada objeto pet tem quatro atribuições e há dois objetos.
+Criar um novo array registra um ponto de dados para cada atributo em um objeto. Este exemplo custa oito pontos de dados – cada objeto pet tem quatro atribuições e há dois objetos.
 
 ```json
 {
@@ -612,7 +626,7 @@ A criação de um novo vetor registra um ponto de dados para cada atributo em um
 {% endtab %}
 {% tab Update %}
 
-A atualização de uma matriz existente registra um ponto de dados para cada propriedade adicionada. Esse exemplo custa dois pontos de dados, pois atualiza apenas uma propriedade em cada um dos dois objetos.
+Atualizar um array existente registra um ponto de dados para cada propriedade adicionada. Esse exemplo custa dois pontos de dados, pois atualiza apenas uma propriedade em cada um dos dois objetos.
 
 ```json
 {
@@ -645,7 +659,7 @@ A atualização de uma matriz existente registra um ponto de dados para cada pro
 {% endtab %}
 {% tab Remove %}
 
-A remoção de um objeto de um vetor registra um ponto de dados para cada critério de remoção enviado. Esse exemplo custa três pontos de dados, embora você possa estar removendo vários cães com essa declaração.
+Remover um objeto de um array registra um ponto de dados para cada critério de remoção que você enviar. Esse exemplo custa três pontos de dados, embora você possa estar removendo vários cães com essa declaração.
 
 ```json
 {

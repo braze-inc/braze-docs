@@ -1,6 +1,6 @@
 ---
-nav_title: Tracking angepasster Events
-article_title: Tracking angepasster Events für iOS
+nav_title: Angepasste Events verfolgen
+article_title: Angepasste Events für iOS verfolgen
 platform: iOS
 page_order: 2
 description: "Dieser referenzierte Artikel beschreibt, wie Sie angepasste Events für Ihre iOS-Anwendung hinzufügen und tracken können."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Tracking angepasster Events für iOS
+# Angepasste Events für iOS verfolgen
 
 Sie können in Braze benutzerdefinierte Ereignisse aufzeichnen, um mehr über die Nutzungsmuster Ihrer App zu erfahren und Ihre Benutzer nach ihren Aktionen auf dem Dashboard zu segmentieren.
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Configurer Currents
-article_title: Mise en place des courants
+article_title: Configurer les courants
 page_order: 0
 page_type: tutorial
 description: "Cet article pratique vous guide dans le processus d’intégration et de configuration de Braze Currents."
@@ -8,7 +8,7 @@ tool: Currents
 search_rank: 8
 ---
 
-# [![Cours d'apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"} Mise en place des Currents
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"} Configurer Currents
 
 > Cette page décrit et décrit le processus générique d’intégration et de configuration de Braze Currents.
 
@@ -26,14 +26,14 @@ Les conditions suivantes sont les exigences élémentaires et minimales pour s�
 
 | Condition | Origine | Accès | Description
 |---|---|---|---|
-| Compte chez le partenaire | Organisez un compte avec ce partenaire ou contactez votre gestionnaire de compte Braze pour obtenir des suggestions. | Consultez le site de ce partenaire ou contactez-le pour vous inscrire. | Braze n’enverra pas de données à un partenaire si vous n’avez pas accès à ces données via le compte de votre société.
-| Clé ou Jeton (token) de l’API du partenaire | Généralement le tableau de bord du partenaire. | Copiez-le et collez-le dans le champ désigné pour Braze. | Braze a un champ désigné pour cela dans la page Intégrations pour ce partenaire. Nous en avons besoin pour mapper l'endroit où nous envoyons vos données. **Gardez vos clés ou jetons de partenaire à jour ; des identifiants non valides peuvent désactiver votre connecteur et faire tomber des événements.**
+| Compte chez le partenaire | Veuillez ouvrir un compte auprès de ce partenaire ou contacter votre gestionnaire de compte Braze pour obtenir des suggestions. | Veuillez consulter le site de ce partenaire ou le contacter pour effectuer l'inscription. | Braze n’enverra pas de données à un partenaire si vous n’avez pas accès à ces données via le compte de votre société.
+| Clé ou Jeton (token) de l’API du partenaire | Généralement le tableau de bord du partenaire. | Veuillez copier et coller le texte dans le champ Braze prévu à cet effet. | Braze a un champ désigné pour cela dans la page Intégrations pour ce partenaire. Nous avons besoin de ces informations pour effectuer le mappage des données à envoyer. **Veuillez vous assurer que vos clés ou jetons de partenaires sont à jour ; des informations d'identification non valides peuvent désactiver votre connecteur et entraîner la perte d'événements.**
 | Code/Clé d’authentification, Clé secrète, Fichier de certification | Contactez un représentant de votre compte chez ce partenaire. Elles sont parfois présentes sur le tableau de bord du partenaire. | Copiez et collez les clés dans le champ Braze désigné. Générez et chargez `.json`ou d’autres fichiers de certification dans l’emplacement approprié de Braze. | Braze a un champ désigné pour cela dans la page Intégrations pour ce partenaire. Cela fournit des identifiants à Braze et nous autorise à écrire des fichiers sur le compte du Partenaire. **Il est important que vos informations d'authentification soient à jour ; des identifiants non valides peuvent entraîner la désactivation de votre connecteur et l'abandon d'événements.**
-| Compartiment, chemin de dossier | Certains partenaires organisent et trient des données par compartiments. Vous devriez le voir dans le tableau de bord du partenaire. | Le cas échéant, copiez le nom du compartiment ou le chemin d'accès au fichier exactement dans l'espace prévu à cet effet dans Braze. | Certains partenaires l’exigent, et c’est important de ne pas se tromper si vous le faites. |
+| Compartiment, chemin de dossier | Certains partenaires organisent et trient des données par compartiments. Vous devriez le voir dans le tableau de bord du partenaire. | Si cela est nécessaire, veuillez copier le nom du compartiment ou le chemin d'accès au fichier exactement dans l'espace prévu à cet effet dans Braze. | Certains partenaires l’exigent, et c’est important de ne pas se tromper si vous le faites. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
-Il est important de garder les identifiants et les clés/jetons de votre partenaire à jour ; si les identifiants de votre connecteur expirent, le connecteur cessera d’envoyer des événements. Si cette situation persiste pendant plus de **5 jours**, les événements du connecteur seront abandonnés et les données seront définitivement perdues.
+Il est important de garder les identifiants et les clés/jetons de votre partenaire à jour ; si les identifiants de votre connecteur expirent, le connecteur cessera d’envoyer des événements. Si ce problème persiste pendant plus de **5 jours**, les événements du connecteur seront supprimés et les données seront définitivement perdues.
 {% endalert %}
 
 ## Configuration de Currents
@@ -46,7 +46,7 @@ Avant de commencer votre intégration, il est préférable de décider quelle in
 
 ### Étape 2 : Flux Currents ouverts
 
-Pour commencer, allez dans **Intégrations partenaires** > Currents. Vous serez dirigé vers la page de gestion des Intégrations Currents.
+Pour commencer, veuillez vous rendre dans **Intégrations partenaires** > **Currents**. Vous serez dirigé vers la page de gestion des Intégrations Currents.
 
 ![Page Currents dans le tableau de bord de Braze]({% image_buster /assets/img_archive/currents-main-page.png %})
 
@@ -73,7 +73,7 @@ Vous pouvez utiliser les transformations de champs Currents pour supprimer ou ha
 
 La sélection d'un champ pour l'une de ces transformations appliquera cette transformation à tous les événements dans lesquels ce champ apparaît. Par exemple, si vous sélectionnez `email_address` pour le hachage, le champ `email_address` sera haché dans les champs Envoi d'e-mail, Ouverture d'e-mail, Rebond d'e-mail et Changement d'état du groupe d'abonnement.
 
-![Ajouter des transformations de champs]({% image_buster /assets/img/current3.png %})
+![Ajout de transformations de champs]({% image_buster /assets/img/current3.png %})
 
 ### Étape 6 : Tester votre intégration
 
@@ -87,16 +87,16 @@ Avant de tester, pensez à consulter notre [échantillon de données Currents su
 
 Pour tester votre intégration, vous pouvez sélectionner **Envoyer des événements de test** pour envoyer un événement de chacun des types d'événements sélectionnés à ce Current. Pour obtenir des informations détaillées sur chaque type d'événement, consultez nos bibliothèques [Événements liés au comportement des clients]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) et [Événements liés à l'engagement des messages.]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)
 
-![La page "Test des courants" dans le tableau de bord de Braze.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
+![La page « Currents Test » dans le tableau de bord de Braze.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
 
 #### Test des connecteurs de courant
 
-Les connecteurs Test Currents sont des versions gratuites de nos connecteurs existants qui peuvent être utilisées pour tester et essayer différentes destinations. Les connecteurs test Currents présentent les propriétés suivantes :
+Les connecteurs Test Currents sont des versions gratuites de nos connecteurs existants qui peuvent être utilisées pour tester et essayer différentes destinations. Les tests Currents ont les caractéristiques suivantes :
 
-- Jusqu'à 10 connecteurs de courants de test par espace de travail.
-- Un maximum global de 1 500 événements par période fixe de 24 heures, avec remise à zéro à minuit UTC. Ce total d'événements est mis à jour toutes les heures sur le tableau de bord.
+- Jusqu'à 10 connecteurs Test Currents par espace de travail.
+- Un maximum cumulé de 1 500 événements par période fixe de 24 heures, réinitialisé à minuit UTC. Ce total d'événements est mis à jour toutes les heures sur le tableau de bord.
 
-Lorsque vos connecteurs Test Currents atteignent la limite d'envoi, votre connecteur n'enverra plus d'événements jusqu'au lendemain (à minuit UTC).
+Une fois que vos connecteurs Test Currents ont atteint la limite d'envoi, votre connecteur n'enverra plus d'événements avant le lendemain (à minuit UTC).
 
 Pour mettre à niveau votre connecteur Test Currents, modifiez l'intégration dans le tableau de bord et sélectionnez **Mettre à niveau l'intégration de test**.
 

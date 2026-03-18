@@ -49,7 +49,7 @@ table td {
 
 ### Berechtigung zur Abfrage des ungefähren Standorts
 
-![Genauer Standort]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+![Genaue Standort-Information]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
 
 #### Übersicht
 

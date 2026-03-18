@@ -38,7 +38,7 @@ table td {
 
 The Crawl approach puts the power of customization directly in the hands of marketers. While some light development work is necessary upfront to integrate Braze messaging channels with your app or site, this approach allows you to get up and running sooner. 
 
-Marketers determine the the content, audience, and timing of messages through the dashboard. Styling options are limited, however. This approach is best suited for teams with limited developer resources or who want to quickly share simple content. 
+Marketers determine the content, audience, and timing of messages through the dashboard. Styling options are limited, however. This approach is best suited for teams with limited developer resources or who want to quickly share simple content. 
 
 <table>
 <thead>

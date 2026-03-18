@@ -1,5 +1,5 @@
 ---
-nav_title: 조건부 메시지 표시하기
+nav_title: 조건부로 메시지 표시하기
 article_title: "Tutorial: 조건부 인앱 메시지 표시"
 description: ""
 page_order: 1
@@ -79,7 +79,7 @@ lines-index.js=16
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/prerequisites/android.md %} 또한 [Android용 인앱 메시지를 인에이블먼트해야]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages) 합니다.
+{% multi_lang_include developer_guide/prerequisites/android.md %} 또한 [안드로이드용 인앱 메시지 활성화]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages)가 필요합니다.
 
 ## Android용 인앱 메시지 조건부 표시하기
 
@@ -174,7 +174,7 @@ lines-MainApplication.kt=38,41
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab swift %}
-{% multi_lang_include developer_guide/prerequisites/swift.md %} 또한 [Swift에 대한 인앱 메시지를 인에이블먼트해야]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages) 합니다.
+{% multi_lang_include developer_guide/prerequisites/swift.md %} 또한 [스위프트용 인앱 메시지 활성화]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages)가 필요합니다.
 
 ## Swift용 인앱 메시지를 조건부로 표시하기
 

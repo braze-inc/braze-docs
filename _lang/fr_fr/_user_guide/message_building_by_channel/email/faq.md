@@ -22,7 +22,7 @@ Notez que cette déduplication se produit si les utilisateurs ciblés sont inclu
 Les campagnes déclenchées par l'API dédupliqueront ou enverront des messages dédupliqués en fonction de l'endroit où l’audience est définie. En résumé, les e-mails dupliqués doivent être directement ciblés comme des `user_ids` séparés dans l'appel API afin de recevoir plusieurs détails. Voici trois scénarios possibles pour les campagnes déclenchées par une API :
 
 - **Scénario 1 : E-mails dupliqués dans le segment cible :** Si le même e-mail apparaît dans plusieurs profils d'utilisateurs regroupés dans les filtres d'audience du tableau de bord pour une campagne déclenchée par l'API, un seul des profils recevra l'e-mail.
-- **Scénario 2 : E-mails dupliqués dans différents `user_ids` dans l’objet Destinataires :** Si le même e-mail apparaît dans plusieurs `External_user_IDs` référencés par l'objet `recipients``, l'e-mail sera envoyé deux fois.
+- **Scénario 2 : E-mails dupliqués dans différents `user_ids` dans l’objet Destinataires :** Si le même e-mail apparaît dans plusieurs`External_user_IDs`références de l'objet « destinataires », l'e-mail sera envoyé deux fois.
 - **Scénario 3 : Dupliquer les e-mails en raison d’user_ids en double dans l’objet Destinataires :** Si vous essayez d’ajouter le même profil utilisateur deux fois, seul un des profils recevra l’e-mail.
 
 ### Les mises à jour de mes paramètres de messagerie sortante s'appliqueront-elles rétroactivement ?
@@ -81,4 +81,30 @@ Braze suit les liens de désabonnement si le Liquid suivant est utilisé dans le
 Non, Braze n’offre pas cette fonctionnalité. C’est parce qu’une majorité croissante d’e-mails sont ouverts sur des appareils mobiles et des clients par e-mail modernes, qui rendent les images et le contenu sans aucun problème.
 
 **Contournement :** Pour obtenir le même résultat, vous pouvez héberger le contenu de votre e-mail sur une page de destination externe (comme votre site Web), qui peut ensuite être liée à partir de la campagne d'e-mail que vous construisez en utilisant l'outil **Link** lors de l'édition du corps de l'e-mail.
+
+### Pourquoi mes utilisateurs sont-ils automatiquement désabonnés par le logiciel de sécurité des e-mails ?
+
+Certains outils de sécurité des e-mails d'entreprise (tels que Barracuda, Proofpoint et autres services similaires) préchargent ou analysent toutes les URL contenues dans les e-mails entrants, y compris les liens de désabonnement. Cela peut entraîner des désabonnements involontaires lorsque l'outil de sécurité suit le lien de désabonnement en un clic.
+
+Pour atténuer ce problème :
+
+- **Veuillez recommander aux destinataires d'ajouter votre domaine d'envoi à leur liste blanche :** Veuillez collaborer avec les équipes informatiques des destinataires concernés afin d'ajouter votre domaine d'envoi et les domaines de suivi Braze à leur liste blanche de sécurité des e-mails.
+- **Veuillez utiliser un centre de préférences :** Au lieu d'un lien de désabonnement direct, veuillez utiliser un [centre de préférences]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) qui nécessite l'interaction de l'utilisateur pour confirmer l'action de désabonnement. Les scanners de sécurité ne remplissent généralement pas les formulaires comportant plusieurs étapes.
+- **Veuillez examiner les journaux de désabonnement :** Veuillez vérifier`User-Agent`l'en-tête et l'adresse IP dans les données relatives aux désabonnements de Currents afin d'identifier les schémas correspondant à un scan automatisé (tels que des en-têtes`User-Agent` identiques pour plusieurs désabonnements).
+
+Pour plus d'informations sur la manière dont l'analyse côté serveur peut affecter les indicateurs relatifs aux e-mails, veuillez vous reporter à [la section Gestion de l'augmentation des taux de clics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/#handling-increases-in-click-rates).
+
+### Pourquoi le taux d’ouverture de ma machine a-t-il subi une modification inattendue ?
+
+Le déclencheur [de l'ouverture automatique]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#machine-opens) des e-mails est constitué de fonctionnalités de sécurité telles que la protection de la confidentialité dans Mail (MPP), qui précharge le contenu des e-mails (y compris le pixel de suivi) sans que l'utilisateur n'ouvre physiquement l'e-mail. Les taux d’ouverture des machines peuvent varier en fonction des éléments suivants :
+
+- Modifications de la proportion de votre audience utilisant Apple Mail ou d'autres clients de e-mail dotés de fonctionnalités de confidentialité.
+- Mises à jour des fonctionnalités de confidentialité des fournisseurs de services d'e-mail ou des comportements de détection des robots.
+- Modifications dans la segmentation ou le ciblage de votre audience.
+
+Les pourcentages d'ouverture des machines ne constituent pas une mesure fiable de l'engagement réel. Pour obtenir une vision plus précise des performances des e-mails, concentrez-vous sur *les autres ouvertures* (ouvertures non automatiques) et *les clics uniques*. Vous pouvez également comparer ces indicateurs au fil du temps à l'aide du [tableau de bord des performances des e-mails]({{site.baseurl}}/user_guide/analytics/dashboard/email_performance_dashboard/).
+
+### L'indicateur *« Ouverture unique* » inclut-il les ouvertures automatiques ?
+
+Non. *Les ouvertures uniques* ne comptent que [les autres ouvertures]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#other-opens), ce qui exclut les e-mails identifiés comme ayant été ouverts par une machine. *Les ouvertures de machines* sont suivies séparément. Dans la vue **Analyse des campagnes** et **le Générateur de rapports**, vous pouvez consulter ces deux indicateurs indépendamment l'un de l'autre.
 

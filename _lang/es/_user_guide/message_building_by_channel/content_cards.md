@@ -4,7 +4,7 @@ article_title: Tarjetas de contenido
 page_order: 1
 layout: dev_guide
 guide_top_header: "Tarjetas de contenido"
-guide_top_text: "Con las tarjetas de contenido, puede enviar a sus clientes un flujo dinámico y muy específico de contenido enriquecido dentro de las aplicaciones que más les gustan, sin interrumpir su experiencia. <br><br>Las tarjetas de contenido se integran directamente en tu aplicación o sitio web, permitiéndote crear buzones de mensajes e interfaces personalizadas que amplían el alcance de otros canales, como el correo electrónico o las notificaciones push. Además, las Tarjetas de Contenido admiten más características personalizadas, como la fijación de tarjetas, el descarte de tarjetas, la entrega basada en API, el Contenido Conectado, tiempos de caducidad de tarjetas personalizados, análisis de tarjetas y una fácil coordinación con las notificaciones push. <br><br>**La disponibilidad de las tarjetas de contenido depende de tu paquete Braze. Ponte en contacto con tu director de cuentas o administrador del éxito del cliente para empezar.**"
+guide_top_text: "Con las tarjetas de contenido, puede enviar a sus clientes un flujo dinámico y muy específico de contenido enriquecido dentro de las aplicaciones que más les gustan, sin interrumpir su experiencia. <br><br>Las tarjetas de contenido se integran directamente en tu aplicación o sitio web, lo que te permite crear buzones de entrada de mensajes e interfaces personalizadas que amplían el alcance de otros canales, como el correo electrónico o las notificaciones push. Además, las tarjetas de contenido admiten características más personalizadas, como el anclaje de tarjetas, el descarte de tarjeta, la entrega basada en API, el contenido conectado, los tiempos de caducidad personalizados de las tarjetas, el análisis de tarjeta y la fácil coordinación con notificaciones push. <br><br>La disponibilidad de las tarjetas de contenido depende de tu paquete Braze. Ponte en contacto con tu director de cuentas o administrador del éxito del cliente para empezar.**"
 description: "Esta página de inicio alberga las tarjetas de contenido Braze. Aquí puede encontrar artículos sobre cómo crear una tarjeta de contenido, cómo personalizar sus tarjetas de contenido, pruebas, informes y mucho más."
 channel:
   - content cards
@@ -45,14 +45,14 @@ guide_featured_list:
 
 Como tú, el especialista en marketing, creas tú mismo las tarjetas de contenido en Braze, puedes actualizar la mensajería y recibir un retorno de la inversión sin tener que revisar completamente tu aplicación o sitio web. Aquí tienes algunas estadísticas útiles sobre el ROI de las tarjetas de contenido:
 
-- Las tarjetas de contenido son **38 veces** más eficaces que los correos electrónicos para aumentar las ventas en un plazo de 72 horas[^1].
-- Utilizar tarjetas de contenido en campañas de fidelización **multiplica por 5 las** conversiones[^1].
-- El envío de información a los usuarios a través de notificaciones push, mensajes dentro de la aplicación y tarjetas de contenido **multiplica por 6,9** el número de sesiones, en comparación con la interacción de los usuarios sólo a través de push[^2].
-- El envío de información a los usuarios por correo electrónico, mensajes dentro de la aplicación y tarjetas de contenido multiplica **por 3,6** la vida media de los usuarios, en comparación con los usuarios que sólo utilizan el correo electrónico[^2].
+- Las tarjetas de contenido son **38 veces** más eficaces que los correos electrónicos para impulsar las ventas en un plazo de 72 horas.[^1]
+- El uso de tarjetas de contenido en las campañas de inscripción en programas de fidelización multiplica por **cinco** las conversiones.[^1]
+- El envío de comunicaciones a los usuarios a través de notificaciones push, mensajes dentro de la aplicación y tarjetas de contenido da como resultado **6,9 veces** más sesiones, en comparación con los usuarios que tienen una interacción solo a través de notificaciones push.[^2]
+- El envío de comunicaciones a los usuarios a través del correo electrónico, mensajes dentro de la aplicación y tarjetas de contenido da como resultado una vida útil media de los usuarios **3,6 veces** mayor, en comparación con los usuarios que solo realizan interacción a través del correo electrónico.[^2]
 
 ## Cómo funciona
 
-Braze proporciona diferentes tipos de tarjeta de contenido para mostrar la tarjeta de contenido: Clásica, Imagen con subtítulos o Imagen. En el fondo, las tarjetas de contenido son en realidad una carga útil de datos, no el aspecto que tienen los datos. 
+Braze ofrece diferentes tipos de tarjetas de contenido para mostrar la tarjeta de contenido: Clásico, Imagen con leyenda o Imagen. En el fondo, las tarjetas de contenido son en realidad una carga útil de datos, no el aspecto que tienen los datos. 
 
 Ahora pongámonos un poco técnicos. Entre bastidores, hay tres partes principales de una tarjeta de contenido:
 
@@ -123,18 +123,18 @@ Aparte de estos casos de uso principales, nuestros clientes utilizan las tarjeta
 
 ## Tarjetas de contenido en tu aplicación
 
-Esta sección cubre las formas más comunes de colocar tarjetas de contenido dentro de tu aplicación o sitio web:
+Esta sección describe las formas más comunes de colocar tarjetas de contenido en tu aplicación o sitio web:
 
 - [Buzón de entrada de mensajes](#message-inbox)
 - [Carrusel](#carousel)
 
 La lógica y la implementación de estas colocaciones no están predeterminadas en Braze, por lo que tu equipo de ingeniería debe suministrar y apoyar el trabajo para conseguir estos casos de uso. Para obtener un resumen sobre cómo implementar estas colocaciones, consulta [Crear una tarjeta de contenido personalizada]({{site.baseurl}}/developer_guide/content_cards/creating_cards/).
 
-![3 tarjetas de contenido de ejemplo, que muestran las distintas opciones de colocación: buzón de entrada de mensajes, carrusel y banner.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
+![3 tarjetas de contenido de ejemplo, que muestran las diferentes opciones de ubicación: buzón de entrada de mensajes, carrusel y banner.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
 ### Buzón de entrada de mensajes
 
-![Un ejemplo de tarjeta de contenido que utiliza la colocación "buzón de entrada de mensajes".]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![Ejemplo de tarjeta de contenido que utiliza la ubicación «buzón de entrada de mensajes».]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Una bandeja de entrada de mensajes (también llamada centro de notificaciones o feed) es un lugar persistente en tu aplicación o sitio web donde puedes mostrar Tarjetas de contenido en el formato que prefieras. Cada mensaje de la bandeja de entrada es su propia tarjeta de contenido. 
 
@@ -156,7 +156,7 @@ Las tarjetas de contenido vienen con un estilo predeterminado, pero puedes elegi
 
 ### Carrusel
 
-![Un ejemplo de tarjeta de contenido que utiliza la colocación "carrusel".]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![Ejemplo de tarjeta de contenido con la ubicación «carrusel».]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Los carruseles muestran varias piezas de contenido en un único espacio que sus clientes pueden deslizar para verlas. Pueden ser una presentación de imágenes, texto, video o una combinación de ellos. Esta es una implementación personalizada y requiere un poco de trabajo por parte de sus desarrolladores.
 

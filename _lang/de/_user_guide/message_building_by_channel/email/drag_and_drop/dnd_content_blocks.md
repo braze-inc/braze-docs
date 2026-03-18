@@ -35,11 +35,11 @@ Es gibt zwei Möglichkeiten, den Content-Block zu Ihrer E-Mail hinzuzufügen: mi
 
 Um einen Content-Block im Editor hinzuzufügen, gehen Sie wie folgt vor:
 
-1. Gehen Sie im Editor auf die Registerkarte **Zeilen** und wählen Sie **Inhaltsblöcke**. 
+1. Bitte gehen Sie im Editor zur Registerkarte **„Zeilen“** und wählen Sie **„Content-Blöcke“** aus. 
 2. Ziehen Sie Ihren Content-Block per Drag & Drop in den E-Mail-Editor. 
-3. (Optional) Passen Sie die Breite Ihres Content-Blocks an, indem Sie den Button im Navigationsmenü auswählen. Der Standardwert für die Breite ist 100%, wenn Sie in den globalen Einstellungen für den E-Mail-Stil nichts angegeben haben. Andernfalls werden die globalen Einstellungen beachtet. <br><br>![Ein doppelseitiger Pfeil mit einer Option zur Bearbeitung der Breite.]({% image_buster /assets/img_archive/content_block_width_updated.png %}){: style="max-width:30%;" }<br><br>
+3. (Optional) Passen Sie die Breite Ihres Content-Blocks an, indem Sie den Button im Navigationsmenü auswählen. Die Standardbreite beträgt 100 %, sofern in Ihren globalen Einstellungen für die E-Mail-Stile nichts anderes angegeben ist. Andernfalls werden die globalen Einstellungen übernommen. <br><br>![Ein doppelseitiger Pfeil mit einer Option zur Bearbeitung der Breite.]({% image_buster /assets/img_archive/content_block_width_updated.png %}){: style="max-width:30%;" }<br><br>
 
-Nachdem Sie den Content-Block zum E-Mail-Editor hinzugefügt haben, können Sie Änderungen am Content-Block vornehmen, die sich nicht auf den ursprünglichen Content-Block auswirken, den Sie in **Templates & Medien** erstellt haben. Das liegt daran, dass Content-Blöcke, die per Drag-and-Drop hinzugefügt werden, nicht mit dem ursprünglichen Content-Block verknüpft sind. Um alle Änderungen am ursprünglichen Content-Block anzuzeigen, ziehen Sie ihn erneut in den E-Mail-Editor. 
+Nachdem Sie den Content-Block zum E-Mail-Editor hinzugefügt haben, können Sie Änderungen am Content-Block vornehmen, die sich nicht auf den ursprünglichen Content-Block auswirken, den Sie in **Templates und& Medien** erstellt haben. Das liegt daran, dass Content-Blöcke, die per Drag-and-Drop hinzugefügt werden, nicht mit dem ursprünglichen Content-Block verknüpft sind. Um alle Änderungen am ursprünglichen Content-Block anzuzeigen, ziehen Sie ihn erneut in den E-Mail-Editor. 
 
 Im Drag-and-Drop-Editor kann es zu Ausrichtungsfehlern kommen, wenn mehrere Content-Blöcke zu einem einzelnen Zeilenblock hinzugefügt werden. Versuchen Sie, separate Zeilenblöcke zu verwenden, um die Ausrichtung Ihres Contents auf Zeilenebene beizubehalten.
 
@@ -48,15 +48,15 @@ Im Drag-and-Drop-Editor kann es zu Ausrichtungsfehlern kommen, wenn mehrere Cont
 Um einen Content-Block mit Hilfe von Liquid hinzuzufügen, gehen Sie wie folgt vor:
 
 1. Gehen Sie zu Ihrer E-Mail-Kampagne und wählen Sie **E-Mail-Text bearbeiten**. 
-2. Klicken Sie auf <i class="fas fa-plus"></i> **Personalisierung**.
+2. Bitte wählen Sie<i class="fas fa-plus"></i>**„Personalisierung**“.
 3. Suchen Sie die Registerkarte **Personalisierung hinzufügen** und wählen Sie **Inhaltsblöcke** in der Dropdown-Liste **Personalisierungstyp**.
 4. Wählen Sie den Namen Ihres Inhaltsblocks im Feld **Attribut**. Das Liquid Snippet-Feld wird mit Ihrem Content Block Liquid Tag gefüllt. 
 5. Kopieren Sie das Liquid-Snippet und fügen Sie es in einen Texteditor-Block ein. <br>![Die Registerkarte Personalisierung hinzufügen mit Optionen.]({% image_buster /assets/img_archive/dnd_content_block_personalization.png %}){: style="max-width:30%;"}
 
-Wenn Sie eine Vorschau Ihrer E-Mail-Nachrichten anzeigen, wird das Liquid-Snippet als Inhaltsblock des Drag-and-Drop-Editors angezeigt. 
+Wenn Sie eine Vorschau Ihrer E-Mail-Nachrichten anzeigen, wird das Liquid-Snippet als Inhaltsblock des Drag-and-Drop-Editors angezeigt. Bitte beachten Sie, dass mobiles Styling (wie Ausrichtung und Textgröße) nicht unterstützt wird, wenn ein Content-Block als Liquid-Snippet enthalten ist.
 
 {% alert important %}
-Wenn ein Content-Block in den E-Mail-Editor mit Liquid eingefügt wird, ist dieser Content-Block mit dem ursprünglichen Content-Block verknüpft, der in **Templates & Medien** erstellt wurde. Das bedeutet, dass der Content-Block aktualisiert wird, um alle Änderungen an der ursprünglichen Content-Block-Template zu berücksichtigen.
+Wenn ein Content-Block mit Liquid in den E-Mail-Editor eingefügt wird, wird dieser Content-Block mit dem ursprünglichen Content-Block verknüpft, der in **Templates und& Medien** erstellt wurde. Das bedeutet, dass der Content-Block aktualisiert wird, um alle Änderungen an der ursprünglichen Content-Block-Template zu berücksichtigen.
 {% endalert %}
 
 ## Aktualisieren von Content-Blöcken

@@ -12,7 +12,7 @@ tool: Canvas
 
 > Während Sie Canvases erstellen und starten, können Sie ein aktives Canvas bearbeiten und als Entwurf speichern, so dass Sie Ihre Änderungen vor dem nächsten Start testen können. 
 
-Wenn Sie ein aktives Canvas haben, das umfangreiche Änderungen erfordert, können Sie dieses Feature nutzen, um die Änderungen zu erstellen, zu speichern und zu überprüfen, **bevor** Sie sie im aktiven Canvas einführen. 
+Wenn Sie über eine aktive Canvas-Umgebung verfügen, die umfangreiche Änderungen erfordert, können Sie dieses Feature nutzen, um die Änderungen zu erstellen, zu speichern und einer Qualitätsprüfung zu unterziehen, **bevor** Sie sie in der aktiven Canvas-Umgebung implementieren. 
 
 Wie bei jedem Canvas kann jeweils nur ein Benutzer einen Entwurf bearbeiten, und ein Canvas kann jeweils nur einen Entwurf haben. Für diese Entwürfe gibt es noch keine Analysen, da die Entwurfsänderungen noch nicht eingeführt wurden.
 

@@ -2,7 +2,7 @@
 nav_title: API e-mail Central de Preferências
 article_title: API e-mail Central de Preferências
 page_order: 1
-description: "Este artigo descreve o API e-mail Central de Preferências e como personalizá-lo."
+description: "Este artigo descreve a API e-mail Central de Preferências e como personalizá-la."
 channel:
   - email
 ---
@@ -11,7 +11,7 @@ channel:
 
 > A configuração de uma central de Preferências oferece um local único para os usuários editarem e gerenciarem suas preferências de notificação para o [envio de mensagens por e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/). Este artigo inclui etapas para a criação de um centro de preferências gerado pela API, mas você também pode criar um centro de preferências usando o [editor de arrastar e soltar]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/).
 
-No dashboard do Braze, acesse **público** > **Centros de Preferência de E-mail**.
+No dashboard do Braze, acesse **público** > **Centros de Preferências de E-mail**.
 
 É aqui que você pode gerenciar e visualizar cada grupo de inscrições. Cada grupo de inscrições que você cria é adicionado a essa lista da Central de Preferências. Você pode criar várias Centrais de Preferências.
 
@@ -118,13 +118,13 @@ Isso é usado para renderizar a Central de Preferências quando o Liquid {%raw%}
 
 Se você fizer referência a {%raw%}`${preference_center_url}`{%endraw%} em uma nova mensagem novamente, uma Central de Preferências chamada "PreferenceCenterBrazeDefault" será criada novamente.
 
-### Os centros de preferência suportam múltiplos idiomas?
+### Os centros de preferências suportam múltiplos idiomas?
 
 Não. No entanto, você pode aproveitar o Liquid ao escrever o HTML para páginas personalizadas de aceitação e cancelamento. Se você estiver usando links dinâmicos para gerenciar cancelamentos, este é um único link. 
 
 Por exemplo, se você estiver rastreando a taxa de cancelamento de inscrição para usuários de língua espanhola, precisaria usar campanhas separadas ou aproveitar a análise em torno dos Currents (como verificar quando um usuário cancela a inscrição e checar o idioma preferido desse usuário).
 
-Como outro exemplo, para rastrear taxas de cancelamento de inscrição para usuários de língua espanhola, você poderia adicionar uma string de parâmetro de consulta como `?Spanish=true` à URL de cancelamento se o idioma dos usuários for alemão e usar um link de cancelamento regular se não forem:
+Como outro exemplo, para rastrear taxas de cancelamento de inscrição para usuários de língua espanhola, você poderia adicionar uma string de parâmetro de consulta como `?Spanish=true` à URL de cancelamento se o idioma dos usuários for alemão e usar um link de cancelamento regular se não for:
 
 {% raw %}
 ```liquid
@@ -137,13 +137,13 @@ ${unsubscribe_url}
 
 Então, através dos Currents, você poderia identificar quais usuários falam espanhol e quantos eventos de clique houve para aquele link de cancelamento.
 
-### Ambos os links de cancelamento e centros de preferência de e-mail são necessários para o envio?
+### Os links de cancelamento e os centros de preferências de e-mail são obrigatórios para o envio?
 
-Não. Se você ver a mensagem "Seu corpo de e-mail não inclui um link de cancelamento" ao compor uma campanha de e-mail, este aviso é esperado se seu link de cancelamento estiver em um bloco de conteúdo.
+Não. Se você ver a mensagem "Seu corpo de e-mail não inclui um link de cancelamento" ao compor uma campanha de e-mail, esse aviso é esperado se o seu link de cancelamento estiver em um bloco de conteúdo.
 
 ### Como atualizo o ícone padrão do navegador?
 
-Por padrão, o ícone ao lado do nome da aba do navegador (favicon) usa o logo do Braze. Para adicionar um favicon personalizado, você o define através do atributo `links-tags` em sua chamada de API de Criar ou Atualizar [Centro de Preferência API]({{site.baseurl}}/api/endpoints/preference_center). O Braze então injeta a tag {% raw %}`<link rel="icon" ...>`{% endraw %} na página hospedada para você.
+Por padrão, o ícone ao lado do nome da aba do navegador (favicon) usa o logo do Braze. Para adicionar um favicon personalizado, você o define através do atributo `links-tags` na sua chamada de API Criar ou Atualizar [Centro de Preferências API]({{site.baseurl}}/api/endpoints/preference_center). O Braze então injeta a tag {% raw %}`<link rel="icon" ...>`{% endraw %} na página hospedada para você.
 
 {% raw %}
 ```

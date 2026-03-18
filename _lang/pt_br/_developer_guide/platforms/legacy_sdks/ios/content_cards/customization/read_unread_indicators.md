@@ -1,5 +1,5 @@
 ---
-nav_title: Indicadores de leitura e não leitura
+nav_title: Indicadores de lido e não lido
 article_title: Indicadores de Leitura e Não Lida do cartão de conteúdo para iOS
 platform: iOS
 page_order: 4
@@ -16,7 +16,7 @@ noindex: true
 
 ## Desativando o indicador não visualizado
 
-![Dois cartões de conteúdo exibidos lado a lado. O cartão à esquerda tem uma linha azul na parte inferior, indicando que não foi visto. O cartão à direita não tem uma linha azul, o que indica que ele já foi visto.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
+![Dois cartões de conteúdo exibidos lado a lado. O cartão à esquerda tem uma linha azul na parte inferior, indicando que não foi visto. O cartão à direita não tem uma linha azul, indicando que já foi visto.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
 
 Você pode optar por desativar a linha azul na parte inferior do cartão, que indica se o cartão foi visualizado ou não, configurando a propriedade `disableUnviewedIndicator` em `ABKContentCardsTableViewController` para `YES`.
 

@@ -16,11 +16,11 @@ Message archiving is available as an add-on feature. To get started with message
 
 ## How it works
 
-When this feature is turned on, if you have connected a cloud storage bucket to Braze and marked it as the default data export destination, Braze will write a gzipped JSON file to your cloud storage bucket for each message sent to a user through your selected channels (email, SMS/MMS, or push). 
+When this feature is turned on, Braze writes a gzipped JSON file for each message sent to a user through your selected channels (email, SMS/MMS, or push). Braze writes these files to your default data export destination. This includes all campaign types for each channel, such as transactional email campaigns sent through the [Transactional Email API]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign).
 
 This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (for example, {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This allows you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements.
 
-If you set up credentials for multiple cloud storage providers, message archiving will only export to the one explicitly marked as the default data export destination. If no explicit default is provided and an AWS S3 bucket is connected, message archiving will upload to that bucket.
+If you set up credentials for multiple cloud storage providers, message archiving only exports to the one marked as the default data export destination. If you don't set an explicit default and an AWS S3 bucket is connected, message archiving uploads to that bucket.
 
 {% alert important %}
 Turning on this feature will impact the delivery speed of your messages, as the file upload is performed immediately before the message is sent to maintain accuracy. The latency introduced by message archiving will depend on the cloud storage provider and the throughput and size of the saved documents.
@@ -160,6 +160,33 @@ The `extras` field contains the key-value pairs configured in the **Email Extras
   "external_id": String
 }
 ```
+
+### Push payload structure variations
+
+{% alert important %}
+The top-level `payload` field in push notification archives contains the entire provider payload as sent to the device. Within this JSON, keys such as `aps` (for APNs) or `notification` and `data` (for FCM) can vary significantly depending on the message type, platform, and configuration.
+{% endalert %}
+
+Message archiving captures the message payload itself, but does not include delivery metadata that is sent to FCM or APNs. Delivery metadata includes:
+
+- Device tokens
+- Priority settings
+- Time-to-live (TTL)
+- Collapse IDs
+- APNs headers
+- Expiration timestamps
+- Other delivery configuration fields
+
+These fields act as delivery instructions to the push provider. They are typically not considered part of the message content.
+
+For example:
+
+- **iOS push notifications** may have different structures for rich notifications (where `aps.alert` is an object containing fields such as `title` and `body`) versus simple notifications (where `aps.alert` is a string).
+- **Android push notifications** (for example, FCM) use data messages with custom keys. The payload structure may include different optional fields depending on the message configuration, such as push buttons, carousels, or additional metadata.
+
+Additionally, test sends from the dashboard may produce different payload structures than production messages.
+
+The JSON payload format can vary between messages and may change over time. When parsing archived push payloads, don't assume a fixed structure or expect the same fields to always be present. Implement flexible parsing logic that handles various payload formats.
 
 {% endtab %}
 {% endtabs %}

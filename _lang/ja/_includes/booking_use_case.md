@@ -6,9 +6,9 @@
 
 このサービスを作成するその他の利点は次のとおりです。
 - 送信されたメッセージは完全に追跡され、レポートに含まれます。
-- 技術者でないBrazeユーザーでもメッセージ内容を更新できる。
+- 技術的でない会社のユーザーは、メッセージの内容を更新できる。
 - メッセージは、キャンペーン設定ごとのユーザープロファイルのオプトインおよびオプトアウトステータスに従います。
-- 予約データとメッセージ・インタラクション・データの両方を使用して、ユーザーをセグメンテーションし、ターゲットを絞って追加メッセージを送ることができる。例えば、最初のリマインダーメッセージを開封しなかった人に、アポイントメントの前に追加のリマインダーでリターゲティングすることができる。
+- 予約データとメッセージのやり取りデータの両方を使って、ユーザーをセグメンテーションし、追加のメッセージングのターゲットにできる。例えば、最初のリマインダーメッセージを開封しなかった人に対して、予約時間前に追加のリマインダーを送ることでリターゲティングできる。
 
 このユースケースを実現するには、次のステップを実行します。
 1. [次の予約データを Braze ユーザープロファイルに書き込む](#step-1)
@@ -17,7 +17,7 @@
 
 ## ステップ1:次の予約データを Braze ユーザープロファイルに書き込む {#step-1}
 
-予約が行われるたびに、Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) エンドポイントを使用して、[階層化カスタム属性]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/)をユーザープロファイルに書き込みます。階層化されたカスタム属性に、リマインダーメッセージの送信とパーソナライゼーションに必要なすべての情報が含まれていることを確認する。このユースケースでは、階層化カスタム属性に「trips」という名前を付けます。
+予約が行われるたびに、Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) エンドポイントを使用して、[階層化カスタム属性]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/)をユーザープロファイルに書き込みます。階層化カスタム属性には、リマインダーメッセージを送信しパーソナライズするために必要な情報がすべて含まれていることを確認せよ。このユースケースでは、階層化カスタム属性に「trips」という名前を付けます。
 
 ### 予約の追加
 
@@ -42,7 +42,7 @@
 
 階層化カスタム属性「trips」は、ユーザープロファイルに表示されます。
 
-![ロンドン旅行とシドニー旅行の2つの階層化カスタム属性。]({% image_buster /assets/img/use_cases/2_nested_attributes.png %}){: style="max-width:70%;"}
+![ロンドン旅行とシドニー旅行用の、階層化カスタム属性だ。]({% image_buster /assets/img/use_cases/2_nested_attributes.png %}){: style="max-width:70%;"}
 
 ### 予約の更新
 ユーザーが予約を更新する場合、オブジェクトの配列に次の構造を使用して、`/users/track` エンドポイントを介してデータを Braze に送信します。
@@ -120,9 +120,9 @@ braze.getUser().setCustomUserAttribute("trips", json);
 {% endtab %}
 {% endtabs %}
 
-Brazeは、ユーザープロファイルの階層化カスタム属性から指定された予約を削除し、残りの予約を表示する。
+Brazeはユーザープロファイルの階層化カスタム属性から指定された予約を削除し、残りの予約を表示する。
 
-![ロンドン旅行の階層化カスタム属性。]({% image_buster /assets/img/use_cases/1_nested_attribute.png %}){: style="max-width:70%;"}
+![ロンドン旅行用の階層化カスタム属性。]({% image_buster /assets/img/use_cases/1_nested_attribute.png %}){: style="max-width:70%;"}
 
 ## ステップ 2:予約リマインダーメッセージを設定して開始する {#step-2}
 
@@ -132,7 +132,7 @@ Brazeは、ユーザープロファイルの階層化カスタム属性から指
 - 開始日まで**1日超**かつ
 - 開始日まで**2日以内** 
 
-![階層化されたカスタム属性 "trips "は、開始日が1日以上2日未満であることを条件とする。]({% image_buster /assets/img/use_cases/custom_nested_attribute.png %})
+![開始日が1日以上かつ2日未満という条件を持つ、階層化カスタム属性「trips」。]({% image_buster /assets/img/use_cases/custom_nested_attribute.png %})
 
 ### ステップ 2b: メッセージを作成する
 
@@ -155,7 +155,7 @@ You have the following booked in 2 days! Check the information below:
 
 ### ステップ 2c: キャンペーンを開始する
 
-リマインダーメールメッセージのキャンペーンを開始します。これで、Brazeが "trips "カスタム属性を受信するたびに、Brazeはそれぞれの予約のオブジェクトに含まれるデータに従ってメッセージをスケジュールされる。
+リマインダーメールメッセージのキャンペーンを開始します。現在、Brazeが「trips」カスタム属性を受信するたびに、Brazeは該当する予約オブジェクトに含まれるデータに基づいてメッセージをスケジュールする。
 
 ## ステップ 3:更新された予約とキャンセルを処理する {#step-3}
 
@@ -256,7 +256,7 @@ Hi {{${first_name}}}, you have successfully updated the date of your trip, {{eve
 
 #### 予約のキャンセル
 
-このユースケースのユーザーがシドニー旅行をキャンセルした場合、`/users/track` エンドポイントに次のようなコールを送ることになる：
+このユースケースにおいて、ユーザーがシドニー旅行をキャンセルした場合、以下の呼び出しをエンド`/users/track`ポイントに送信する：
 
 {% raw %}
 ```json

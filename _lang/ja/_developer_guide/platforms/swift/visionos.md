@@ -1,5 +1,5 @@
 ---
-nav_title: ヴィジョノスのサポート
+nav_title: ビジョノスのサポート
 article_title: visionOSサポート
 page_order: 7.2
 platform: 

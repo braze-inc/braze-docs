@@ -127,7 +127,7 @@ Si utilizas la API del proveedor HTTP/2, cualquier carga útil individual que en
 
 ###### Campañas activadas por API
 
-Braze permite enviar pares clave-valor de cadena definidos a medida, conocidos como `extras`. Para acceder a tus extras en campañas desencadenadas por API y programadas por API, en el panel establece una clave como "example_key", y un valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Esto dará lugar a una salida de consola de desarrollador de `"extras": { "test": { "foo": 1, "bar": 1 }`
+Braze permite enviar pares clave-valor de cadena definidos a medida, conocidos como `extras`. Para acceder a tus extras en campañas desencadenadas por API y campañas desencadenadas por API programadas, en el panel establece una clave como"example_key",  y un valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Esto dará lugar a una salida de consola de desarrollador de `"extras": { "test": { "foo": 1, "bar": 1 }`
 
 ### Android
 
@@ -145,7 +145,7 @@ El backend de su aplicación debe ser capaz de procesar pares clave-valor person
 
 ###### Campañas activadas por API
 
-Braze permite enviar pares clave-valor de cadena definidos a medida, conocidos como `extras`. Para acceder a tus extras en campañas desencadenadas por API y programadas por API, en el panel establece una clave como "example_key", y un valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Esto dará lugar a una salida de la consola de desarrollador de `"extras": { "test": { "foo": 1, "bar": 1 }`.
+Braze permite enviar pares clave-valor de cadena definidos a medida, conocidos como `extras`. Para acceder a tus extras en campañas desencadenadas por API y campañas desencadenadas por API programadas, en el panel establece una clave como"example_key",  y un valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Esto dará lugar a una salida de la consola de desarrollador de `"extras": { "test": { "foo": 1, "bar": 1 }`.
 
 ##### Opciones de mensajería del FCM
 
@@ -170,13 +170,13 @@ El sistema operativo iOS puede [bloquear las notificaciones]({{site.baseurl}}/de
 Puedes añadir un par clave-valor a un mensaje dentro de la aplicación en el [editor tradicional]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/) seleccionando la pestaña **Configuración**, seleccionando **Añadir nuevo par** y, a continuación, especificando tus pares clave-valor.
 
 {% alert note %}
-Los pares clave-valor no pueden configurarse a través del editor de arrastrar y soltar para mensajes dentro de la aplicación.
+Los pares clave-valor no se pueden configurar mediante el editor de arrastrar y soltar para los mensajes dentro de la aplicación.
 {% endalert %}
 ![]({% image_buster /assets/img_archive/keyvalue_iam.png %})
 
 #### Campañas activadas por API
 
-Braze permite enviar pares clave-valor de cadena definidos a medida, conocidos como `extras`. Para acceder a tus extras en campañas desencadenadas por API y programadas por API, en el panel establece una clave como "example_key", y un valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Esto dará lugar a una salida de la consola de desarrollador de `"extras": { "test": { "foo": 1, "bar": 1 }`.
+Braze permite enviar pares clave-valor de cadena definidos a medida, conocidos como `extras`. Para acceder a tus extras en campañas desencadenadas por API y campañas desencadenadas por API programadas, en el panel establece una clave como"example_key",  y un valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Esto dará lugar a una salida de la consola de desarrollador de `"extras": { "test": { "foo": 1, "bar": 1 }`.
 
 ## Correos electrónicos
 

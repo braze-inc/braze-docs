@@ -1,6 +1,6 @@
 ---
 nav_title: Modifiez votre campagne après son lancement
-article_title: Modifiez votre campagne après son lancement
+article_title: Modifier votre campagne après son lancement
 page_order: 1
 tool: Campaigns
 page_type: reference
@@ -39,6 +39,13 @@ Toute modification du contenu des messages (y compris les titres, les corps et l
 ### Planification et audience
 
 Si vous modifiez l’heure d’envoi planifiée de votre campagne ou son audience, ces changements sont reflétés immédiatement dans la campagne réelle.
+
+#### Considérations
+
+Si votre campagne utilise la fonctionnalité timing intelligent ou la diffusion selon l'heure locale, les modifications apportées à l'heure d'envoi prévue ne seront pas prises en compte si elles sont effectuées dans les 24 heures précédant l'heure d'envoi initiale. En effet :
+
+- **Timing intelligent :** Braze commence à calculer l'heure d'envoi optimale à minuit, heure de Samoa. Si ce délai est déjà écoulé, le message aura déjà commencé à être traité. Pour plus d'informations, veuillez vous référer à [la section « timing intelligent]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/) ».
+- **Réception/distribution selon l'heure locale :** La modification d’une campagne selon un fuseau horaire local qui est programmée moins de 24 heures à l’avance ne modifiera pas la planification du message. Pour plus d'informations, veuillez consulter la section [Comment réaliser la planification d'une campagne en fonction du fuseau horaire local ?]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign).
 
 ### Taux d’envoi
 

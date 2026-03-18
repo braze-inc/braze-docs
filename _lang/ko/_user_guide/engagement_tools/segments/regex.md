@@ -1,5 +1,5 @@
 ---
-nav_title: "정규표현식"
+nav_title: "정규 표현식"
 article_title: 정규 표현식
 page_order: 10
 
@@ -10,11 +10,11 @@ tool:
   
 ---
 
-# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} 정규표현식
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} 정규 표현식
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
-> 일반적으로 정규식으로 알려진 정규표현식은 검색 패턴을 정의하는 문자 시퀀스입니다. 정규식을 사용하면 텍스트 그룹화의 유효성을 검사하고 찾기 및 바꾸기 작업을 수행할 수 있습니다. Braze에서는 정규식을 활용하여 타겟 오디언스를 위한 세분화 및 캠페인 필터링에서 보다 유연한 문자열 매칭 솔루션을 제공합니다.<br><br>이 페이지에서는 정규식(정규식)과 사용 방법, 자주 묻는 질문을 다루고 정규식을 테스트할 수 있는 정규식 디버거를 제공합니다.
+> 일반적으로 정규식으로 알려진 정규표현식은 검색 패턴을 정의하는 문자 시퀀스입니다. 정규식을 사용하면 텍스트 그룹화의 유효성을 검사하고 찾기 및 바꾸기 작업을 수행할 수 있습니다. Braze에서는 정규식을 활용하여 타겟 오디언스를 위한 세분화 및 캠페인 필터링에서 보다 유연한 문자열 매칭 솔루션을 제공합니다.<br><br>이 페이지는 정규 표현식(정규식), 사용 방법, 자주 묻는 질문을 다루고 있으며, 정규 표현식을 테스트할 수 있는 정규식 디버거를 제공합니다.
 
 In the linked Braze Learning course, we show you how regular expressions can be used and tested on [Regex101](https://regex101.com/). 또한 [사내 정규식 테스터](#regex-debugger), 유용한 참조 페이지, 정규식 Braze 학습 동영상에 참조된 샘플 데이터, 자주 묻는 질문도 제공합니다.
 
@@ -27,9 +27,9 @@ In the linked Braze Learning course, we show you how regular expressions can be 
 ## 정규식 디버거
 
 {% alert important %}
-이 도구는 참고용으로만 제공되며, 정규식이 Braze 플랫폼과 100% 일치한다는 보장은 없습니다. 세분화 및 필터를 위한 Braze의 정규표현식은 `/gi` 수정자를 자동으로 추가합니다. [gi 수정자](https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm)는 문자열에서 대소문자를 구분하지 않고 정규표현식이 포함된 모든 항목을 검색하는 데 사용됩니다.  
+이 도구는 참고용으로만 제공되며, 정규식이 Braze 플랫폼과 100% 일치한다는 보장은 없습니다. Braze에서 세분화 및 필터를 위한 정규 표현식은 자동으로 `/gi` 수정자를 추가합니다. [gi 수정자](https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm)는 문자열에서 대소문자를 구분하지 않고 정규표현식이 포함된 모든 항목을 검색하는 데 사용됩니다.  
 <br>
-커스텀 이벤트 속성정보 및 트리거 필터에 대한 정규표현식은 `/g` 수정자(대소문자 구분, [g 수정자](https://www.w3schools.com/jsref/jsref_regexp_g.asp) 참조)를 사용하며 `/i` 수정자는 사용하지 않습니다. 커스텀 이벤트 속성정보 및 트리거 필터에 대/소문자를 구분하지 않으려면 `(?i)` 을 대신 사용하세요. 예를 들어 `Matches regex (?i)STOP(?-i)` 은 'STOP'의 모든 사용 사례(예: "중지", "제발 중지", "메시지 전송을 멈추지 마세요")를 포착합니다.
+사용자 정의 이벤트 트리거 속성과 트리거 필터에 대한 정규 표현식은 `/g` 수정자(대소문자 구분, [g 수정자](https://www.w3schools.com/jsref/jsref_regexp_g.asp) 참조)를 사용하며 `/i` 수정자는 사용하지 않습니다. 사용자 정의 이벤트 트리거 속성과 트리거 필터에 대한 대소문자 구분을 원할 경우 `(?i)`를 대신 사용하십시오. 예를 들어, `Matches regex (?i)STOP(?-i)`는 "STOP"의 모든 사용을 포착합니다(예: "stop", "please stop", "never stop sending me messages").
 {% endalert %}
 
 {% tabs %}
@@ -164,7 +164,7 @@ $( document ).ready(function() {
 
 "@braze.com"로 끝나는 이메일을 필터링하고 싶다고 가정해 보겠습니다. 이메일 주소 필터를 사용하여 `matches regex`로 설정하고 정규식 필드에 "@braze.com"를 입력합니다. 다른 이메일 도메인에도 동일하게 적용됩니다.
 
-!["@braze.com"의 정규식과 일치하는 이메일 주소를 필터링합니다.]({% image_buster /assets/img/regex/regeximg1.png %})
+![정규식 "@braze.com"와 일치하는 이메일 주소에 대한 필터.]({% image_buster /assets/img/regex/regeximg1.png %})
 
 #### 값 ≥ x 또는 ≤ x에 필터 번호 문자열을 사용하려면 어떻게 해야 하나요?
 
@@ -190,7 +190,7 @@ $( document ).ready(function() {
 
 예를 들어 'San'으로 시작하는 도시에 거주하는 사용자를 타겟팅하려는 경우 정규식은 `^San \w`이 됩니다. 이 정규식을 사용하면 샌프란시스코, 샌디에이고, 산호세 등의 도시에서 온 사용자를 성공적으로 타겟팅할 수 있습니다.
 
-!["^San \\w"의 정규식과 일치하는 도시를 필터링합니다.]({% image_buster /assets/img/regex/regeximg2.png %})
+![정규식 "^San \\w"와 일치하는 도시의 필터.]({% image_buster /assets/img/regex/regeximg2.png %})
 
 #### 특정 전화번호를 필터링하려면 어떻게 하나요?
 
@@ -198,7 +198,7 @@ Before using regex to filter phone numbers, remember that numbers logged for use
 
 미국 전화번호를 검색한다고 가정하면 `\d`의 각 반복은 지정하려는 숫자인 `1?\d\d\d\d\d\d\d\d\d\d` 정규식 형식을 사용합니다. 처음 세 자리는 지역 번호입니다.
 
-마찬가지로 영국 전화번호의 형식은 `^\+4\d\d\d\d\d\d\d\d\d\d\d` 입니다. 다른 국가는 해당 국가 코드를 입력한 후 나머지 숫자마다 필요한 `\d` 반복 횟수를 입력합니다. 따라서 국가 코드가 "3"인 리투아니아의 경우 해당 정규식은 `^\+3\d\d\d\d\d\d\d\d\d\d` 이 됩니다.
+마찬가지로 영국 전화번호의 형식은 `^\+4\d\d\d\d\d\d\d\d\d\d\d` 입니다. 다른 모든 국가는 해당 국가 코드 뒤에 남은 각 숫자에 대한 필요한 `\d` 반복 수가 옵니다. 따라서 국가 코드가 "3"인 리투아니아의 경우 해당 정규식은 `^\+3\d\d\d\d\d\d\d\d\d\d` 이 됩니다.
 
 예를 들어 특정 지역 번호인 '718'의 전화번호를 기준으로 사용자를 필터링하고 싶다고 가정해 보겠습니다. 전화번호 필터를 사용하여 `matches regex` 로 설정하고 다음 정규식을 입력합니다:
 
@@ -206,6 +206,6 @@ Before using regex to filter phone numbers, remember that numbers logged for use
 ^1?718\d\d\d\d\d\d\d
 ```
 
-!["^1?718\\d\\d\\d\\d\\d\\d\\d"의 정규식과 일치하는 전화번호를 필터링합니다.]({% image_buster /assets/img/regex/regeximg3.png %})
+![정규식 "^1?718\\d\\d\\d\\d\\d\\d\\d"와 일치하는 전화번호에 대한 필터.]({% image_buster /assets/img/regex/regeximg3.png %})
 
 

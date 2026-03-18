@@ -1,12 +1,12 @@
 ---
-nav_title: Einkäufe protokollieren
-article_title: Einkäufe über das Braze SDK protokollieren
+nav_title: Holzankäufe
+article_title: Bitte erfassen Sie Käufe über das Braze SDK.
 page_order: 3.2
 description: "Erfahren Sie, wie Sie Einkäufe über das Braze SDK protokollieren können."
 
 ---
 
-# Einkäufe protokollieren
+# Holzankäufe
 
 > Erfahren Sie, wie Sie In-App-Käufe über das Braze SDK protokollieren können, damit Sie Ihre Einnahmen im Laufe der Zeit und über verschiedene Quellen hinweg bestimmen können. Damit können Sie Nutzer:innen [anhand ihres Lifetime-Value]({{site.baseurl}}/developer_guide/analytics/#purchase-events--revenue-tracking) mit angepassten Events, angepassten Attributen und Kauf-Events segmentieren.
 
@@ -14,7 +14,7 @@ description: "Erfahren Sie, wie Sie Einkäufe über das Braze SDK protokollieren
 Für Wrapper-SDKs, die nicht aufgeführt sind, verwenden Sie stattdessen die entsprechende native Android- oder Swift-Methode.
 {% endalert %}
 
-Jede gemeldete Nicht-USD-Währung wird in Braze in USD angezeigt, basierend auf dem Wechselkurs an dem Tag, an dem sie gemeldet wurde. Um eine Konversion zu verhindern, codieren Sie die Währung fest in USD.
+Alle gemeldeten Nicht-USD-Währungen werden in Braze auf Basis des Wechselkurses am Tag der Meldung in USD angezeigt. Um eine Konversion zu vermeiden, legen Sie die Währung fest auf USD fest.
 
 ## Käufe und Einnahmen protokollieren
 
@@ -33,7 +33,7 @@ Wenn Sie stattdessen Google Tag Manager verwenden möchten, können Sie den Tag-
 1. Die Felder **Produkt-ID** und **Preis** sind erforderlich.
 2. Verwenden Sie den Button **Zeile hinzufügen**, um Kauf-Eigenschaften hinzuzufügen.
 
-![Ein Dialogfeld mit den Konfigurationseinstellungen für Braze Action Tags. Enthaltene Einstellungen sind "Tag-Typ", "externe ID", "Preis", "Währungscode", "Menge" und "Kauf-Details".]({% image_buster /assets/img/web-gtm/gtm-purchase.png %})
+![Ein Dialogfeld mit den Konfigurationseinstellungen für Braze Action Tags. Die enthaltenen Einstellungen umfassen „Tag-Typ“, „externe ID“, „Preis“, „Währungscode“, „Menge“ und „Kauf-Details“.]({% image_buster /assets/img/web-gtm/gtm-purchase.png %})
 {% endtab %}
 
 {% tab android %}
@@ -283,28 +283,32 @@ Die folgenden Schlüssel sind reserviert und können nicht als Kaufeigenschaften
 
 ## Unterstützte Währungen
 
-Dies sind die unterstützten Währungssymbole. Jedes andere Währungssymbol, das Sie angeben, führt zu einer Warnung und der Kauf wird nicht in Braze gespeichert.
+Braze unterstützt die folgenden Währungssymbole. Bei Verwendung eines anderen Währungssymbols wird eine Warnung protokolliert, und der Kauf wird nicht in Braze erfasst.
 
-- `USD`
-- `CAD`
-- `EUR`
-- `GBP`
-- `JPY`
-- `AUD`
-- `CHF`
-- `NOK`
-- `MXN`
-- `NZD`
-- `CNY`
-- `RUB`
-- `TRY`
-- `INR`
-- `IDR`
-- `ILS`
-- `SAR`
-- `ZAR`
-- `AED`
-- `SEK`
-- `HKD`
-- `SPD`
-- `DKK`
+- `AED`, `AFN`, `ALL`, `AMD`, `ANG`, `AOA`, `ARS`, `AUD`, `AWG`, `AZN`
+- `BAM`, `BBD`, `BDT`, `BGN`, `BHD`, `BIF`, `BMD`, `BND`, `BOB`, `BRL`
+- `BSD`, `BTC`, `BTN`, `BWP`, `BYR`, `BZD`
+- `CAD`, `CDF`, `CHF`, `CLF`, `CLP`, `CNY`, `COP`, `CRC`, `CUC`, `CUP`, `CVE`, `CZK`
+- `DJF`, `DKK`, `DOP`, `DZD`
+- `EEK`, `EGP`, `ERN`, `ETB`, `EUR`
+- `FJD`, `FKP`
+- `GBP`, `GEL`, `GGP`, `GHS`, `GIP`, `GMD`, `GNF`, `GTQ`, `GYD`
+- `HKD`, `HNL`, `HRK`, `HTG`, `HUF`
+- `IDR`, `ILS`, `IMP`, `INR`, `IQD`, `IRR`, `ISK`
+- `JEP`, `JMD`, `JOD`, `JPY`
+- `KES`, `KGS`, `KHR`, `KMF`, `KPW`, `KRW`, `KWD`, `KYD`, `KZT`
+- `LAK`, `LBP`, `LKR`, `LRD`, `LSL`, `LTL`, `LVL`, `LYD`
+- `MAD`, `MDL`, `MGA`, `MKD`, `MMK`, `MNT`, `MOP`, `MRO`, `MTL`, `MUR`, `MVR`, `MWK`, `MXN`, `MYR`, `MZN`
+- `NAD`, `NGN`, `NIO`, `NOK`, `NPR`, `NZD`
+- `OMR`
+- `PAB`, `PEN`, `PGK`, `PHP`, `PKR`, `PLN`, `PYG`
+- `QAR`
+- `RON`, `RSD`, `RUB`, `RWF`
+- `SAR`, `SBD`, `SCR`, `SDG`, `SEK`, `SGD`, `SHP`, `SLL`, `SOS`, `SRD`, `STD`, `SVC`, `SYP`, `SZL`
+- `THB`, `TJS`, `TMT`, `TND`, `TOP`, `TRY`, `TTD`, `TWD`, `TZS`
+- `UAH`, `UGX`, `USD`, `UYU`, `UZS`
+- `VEF`, `VND`, `VUV`
+- `WST`
+- `XAF`, `XAG`, `XAU`, `XCD`, `XDR`, `XOF`, `XPD`, `XPF`, `XPT`
+- `YER`
+- `ZAR`, `ZMK`, `ZMW`, `ZWL`

@@ -9,7 +9,7 @@ page_type: reference
 
 # Verschlüsselung des Bezeichners auf Feldebene
 
-{% include field_level_encryption_pii_description.md %}
+{% multi_lang_include field_level_encryption_pii_description.md %}
 
 {% alert important %}
 Die Verschlüsselung auf Bezeichner-Feldebene ist als zusätzliches Feature verfügbar. Wenden Sie sich an Ihren Braze-Konto Manager:in, um mit der Verschlüsselung auf Bezeichnerfeld-Ebene zu beginnen.
@@ -30,11 +30,11 @@ Führen Sie diese Schritte aus, um Ihre AWS Secret Key-Authentifizierungsmethode
 3. Sie müssen KMS in den folgenden AWS Regionen einrichten:
     - **Braze US-Cluster:** `us-east-1`
     - **Braze EU-Cluster:** `eu-central-1`
-    - **Braze AU cluster:** `ap-southeast-2`
-    - **Braze ID cluster:** `ap-southeast-3`
+    - **Braze AU-Cluster:** `ap-southeast-2`
+    - **Braze ID-Cluster:** `ap-southeast-3`
 4. Erstellen Sie im AWS Key Management Service zwei Schlüssel und vergewissern Sie sich, dass der IAM Nutzer:in den Schlüsselverwendungsberechtigungen hinzugefügt ist:
     - **[Verschlüsseln/Entschlüsseln](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html#create-symmetric-cmk):** Wählen Sie den Typ des **symmetrischen** Schlüssels und die Verwendung des Schlüssels **zum Ver- und Entschlüsseln** aus.
-    - **[Hash](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):** Wählen Sie den Typ **Symmetrischer** Schlüssel und **Generieren und überprüfen Sie die** Verwendung des **MAC-Schlüssels**. Die Schlüsselspezifikation sollte lauten **HMAC_256**. Notieren Sie sich nach der Erstellung des Schlüssels irgendwo die HMAC-Schlüssel-ID, da Sie diese in Braze eingeben müssen.
+    - **[Hash](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):** Wählen Sie den Typ **Symmetrischer** Schlüssel und **Generieren und überprüfen Sie die** Verwendung des **MAC-Schlüssels**. Die wichtigste Spezifikation sollte lauten**HMAC_256**: Notieren Sie sich nach der Erstellung des Schlüssels irgendwo die HMAC-Schlüssel-ID, da Sie diese in Braze eingeben müssen.
 
 ![]({% image_buster /assets/img/field_level_encryption_aws_prereq.png %})
 

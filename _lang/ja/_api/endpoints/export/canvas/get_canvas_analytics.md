@@ -1,7 +1,7 @@
 ---
 nav_title: "取得:キャンバスデータ系列分析をエクスポート"
 article_title: "取得:エクスポートキャンバスデータシリーズ分析"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 4
 layout: api_page
 page_type: reference
@@ -28,9 +28,9 @@ description: "この記事では、エクスポートキャンバスデータシ
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | 必須 | 文字列 | [キャンバス API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
+| `canvas_id` | 必須かどうか | 文字列 | [キャンバス API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
 | `ending_at` | 必須 | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データエクスポートを終了する日付。リクエストの時刻にデフォルト設定されます。 |
 | `starting_at` | オプション* | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データエクスポートを開始する日付。<br><br>* `length` または `starting_at` のいずれかが必要です。 |
 | `length` | オプション* | 文字列 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上14以下でなければなりません。<br><br>* `length` または `starting_at` のいずれかが必要です。 |
@@ -76,8 +76,8 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_seri
         "step_stats": (optional) {
           "00000000-0000-0000-0000-0000000000000": (string) the API identifier for the step {
             "name": (string) the name of step,
-            "revenue": (float) the the number of dollars of revenue (USD),
-            "conversions": (int) the the number of conversions,
+            "revenue": (float) the number of dollars of revenue (USD),
+            "conversions": (int) the number of conversions,
             "conversions_by_entry_time": (int) the number of conversions for the conversion event by entry time,
             "messages": {
               "email": [

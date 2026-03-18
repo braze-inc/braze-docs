@@ -22,4 +22,8 @@ description: "Learn how to track location through the Braze SDK."
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/analytics/tracking_location.md %}
 {% endsdktab %}
+
+{% sdktab react native %}
+{% multi_lang_include developer_guide/react_native/analytics/tracking_location.md %}
+{% endsdktab %}
 {% endsdktabs %}

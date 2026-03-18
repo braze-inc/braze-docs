@@ -3,7 +3,7 @@ nav_title: "Nutzer:innen mit CDI löschen"
 article_title: Benutzer mit Cloud Data Ingestion löschen
 page_order: 30
 page_type: reference
-description: "Diese Seite bietet eine Übersicht über den Prozess zum Löschen von Nutzer:innen mit Cloud Datenaufnahme."
+description: "Diese Seite bietet eine Übersicht über den Prozess zum Löschen von Nutzern mit Cloud Datenaufnahme."
 
 ---
 

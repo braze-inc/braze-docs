@@ -11,12 +11,12 @@ page_type: reference
 
 > Verbundene Quellen sind eine Null-Kopie-Alternative zur direkten Synchronisierung von Daten mit dem Feature Cloud Data Ingestion (CDI) von Braze. Eine verbundene Datenquelle fragt direkt Ihr Data Warehouse ab, um neue Segmente zu erstellen, ohne die zugrunde liegenden Daten nach Braze zu kopieren. 
 
-Nachdem Sie eine verbundene Quelle zu Ihrem Braze Workspace hinzugefügt haben, können Sie ein CDI-Segment innerhalb der Segment-Erweiterungen erstellen. Mit CDI Segment-Erweiterungen können Sie SQL-Anfragen direkt an Ihr Data Warehouse stellen (unter Verwendung von Daten, die dort über Ihre CDI Connected Source zur Verfügung gestellt werden) und eine Gruppe von Nutzer:innen erstellen und pflegen, die innerhalb von Braze gezielt angesprochen werden können. 
+Nachdem Sie eine verbundene Quelle zu Ihrem Braze Workspace hinzugefügt haben, können Sie ein CDI-Segment innerhalb der Segment-Erweiterungen erstellen. Mit CDI-Segment-Erweiterungen können Sie SQL-Befehle schreiben, die direkt Ihr Data Warehouse abfragen (unter Verwendung der Daten, die über Ihre CDI-verbundene Quelle verfügbar sind), und eine Gruppe von Nutzern:innen erstellen und verwalten, die innerhalb von Braze angesprochen werden können. 
 
-Weitere Informationen zur Erstellung eines Segments mit dieser Quelle finden Sie unter [CDI Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
+Weitere Informationen zum Erstellen eines Segments mit dieser Quelle referenzieren Sie unter [CDI-Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 
 {% alert warning %}
-Da die angeschlossenen Quellen direkt auf Ihrem Data Warehouse laufen, entstehen Ihnen alle Kosten, die mit der Ausführung dieser Abfragen in Ihrem Data Warehouse verbunden sind. Verbundene Quellen protokollieren keine Datenpunkte, und CDI Segment-Erweiterungen verbrauchen keine SQL-Segmentierungen.
+Da die angeschlossenen Quellen direkt auf Ihrem Data Warehouse laufen, entstehen Ihnen alle Kosten, die mit der Ausführung dieser Abfragen in Ihrem Data Warehouse verbunden sind. Verbundene Quellen protokollieren keine Datenpunkte, und CDI-Segment-Erweiterungen verbrauchen keine SQL-Segment-Credits.
 {% endalert %}
 
 ## Integration von verbundenen Quellen
@@ -43,14 +43,14 @@ Mit der Cloud-Datenaufnahme verbundene Datenquellen erfordern einige Einstellung
 **In Ihrem Data Warehouse**
 
 {: start="8"}
-8\. Hängen Sie den öffentlichen Schlüssel aus dem Braze-Dashboard [zur Authentifizierung an die Nutzer:innen von Snowflake](https://docs.snowflake.com/en/user-guide/key-pair-auth.html) an. Wenn Sie fertig sind, können Sie die verbundene Quelle verwenden, um eine oder mehrere CDI Segment-Erweiterungen zu erstellen.
+8\. Hängen Sie den öffentlichen Schlüssel aus dem Braze-Dashboard [zur Authentifizierung an die Nutzer:innen von Snowflake](https://docs.snowflake.com/en/user-guide/key-pair-auth.html) an. Wenn Sie fertig sind, können Sie die angeschlossene Quelle verwenden, um eine oder mehrere CDI-Segment-Erweiterungen zu erstellen.
 {% endtab %}
 
 {% tab Redshift %}
 1. Richten Sie die Quelldaten und die erforderlichen Ressourcen in Ihrer Redshift-Umgebung ein.
 2. Erstellen Sie eine neue verbundene Quelle im Braze Dashboard.
 4. Testen Sie die Integration.
-5. Verwenden Sie die verbundene Quelle, um eine oder mehrere CDI Segment-Erweiterungen zu erstellen.
+5. Verwenden Sie die verbundene Quelle, um eine oder mehrere CDI-Segment-Erweiterungen zu erstellen.
 {% endtab %}
 
 {% tab BigQuery %}
@@ -58,7 +58,7 @@ Mit der Cloud-Datenaufnahme verbundene Datenquellen erfordern einige Einstellung
 2. Erstellen Sie ein Dienstkonto und erlauben Sie den Zugriff auf das/die BigQuery-Projekt(e) und den/die Datensatz(e), die die zu synchronisierenden Daten enthalten.  
 3. Erstellen Sie eine neue verbundene Quelle im Braze Dashboard.
 4. Testen Sie die Integration.
-5. Verwenden Sie die verbundene Quelle, um eine oder mehrere CDI Segment-Erweiterungen zu erstellen.
+5. Verwenden Sie die verbundene Quelle, um eine oder mehrere CDI-Segment-Erweiterungen zu erstellen.
 {% endtab %}
 
 {% tab Databricks %}
@@ -66,10 +66,10 @@ Mit der Cloud-Datenaufnahme verbundene Datenquellen erfordern einige Einstellung
 2. Erstellen Sie ein Dienst-Konto und erlauben Sie den Zugriff auf das/die Databricks-Projekt(e) und den/die Datensatz(e), die die zu synchronisierenden Daten enthalten.  
 3. Erstellen Sie eine neue verbundene Quelle im Braze Dashboard.
 4. Testen Sie die Integration.
-5. Verwenden Sie die verbundene Quelle, um eine oder mehrere CDI Segment-Erweiterungen zu erstellen.
+5. Verwenden Sie die verbundene Quelle, um eine oder mehrere CDI-Segment-Erweiterungen zu erstellen.
 
 {% alert important %}
-Es kann zu einer Aufwärmzeit von zwei bis fünf Minuten kommen, wenn Braze eine Verbindung zu Classic- und Pro-SQL-Instanzen herstellt, was zu Verzögerungen beim Verbindungsaufbau und beim Testen sowie bei der Erstellung und Aktualisierung von CDI Segment-Erweiterungen führt. Die Verwendung einer serverlosen SQL-Instanz minimiert die Aufwärmzeit und verbessert den Abfragedurchsatz, kann aber zu etwas höheren Integrationskosten führen.
+Es kann zu einer Aufwärmzeit von zwei bis fünf Minuten kommen, wenn Braze eine Verbindung zu Classic- und Pro-SQL-Instanzen herstellt. Dies kann zu Verzögerungen beim Einrichten und Testen der Verbindung sowie beim Erstellen und Aktualisieren von CDI-Segment-Erweiterungen führen. Die Verwendung einer serverlosen SQL-Instanz minimiert die Aufwärmzeit und verbessert den Abfragedurchsatz, kann aber zu etwas höheren Integrationskosten führen.
 {% endalert %}
 
 {% endtab %}
@@ -79,7 +79,7 @@ Es kann zu einer Aufwärmzeit von zwei bis fünf Minuten kommen, wenn Braze eine
 2. Richten Sie in Ihrem Fabric Workspace die Quelldaten ein und erteilen Sie Ihrem Dienst-Principal Berechtigungen 
 3. Erstellen Sie eine neue verbundene Quelle im Braze Dashboard.
 4. Testen Sie die Integration.
-5. Verwenden Sie die verbundene Quelle, um eine oder mehrere CDI Segment-Erweiterungen zu erstellen.
+5. Verwenden Sie die verbundene Quelle, um eine oder mehrere CDI-Segment-Erweiterungen zu erstellen.
 {% endtab %}
 
 {% endtabs %}
@@ -92,11 +92,11 @@ Richten Sie die Quelldaten und die erforderlichen Ressourcen in Ihrer Data Wareh
 {% tab Snowflake %}
 #### Schritt 2.1: Eine Rolle erstellen und Berechtigungen erteilen
 
-Erstellen Sie eine Rolle, die Ihre verbundene Quelle verwenden soll. Diese Rolle wird verwendet, um die Liste der in Ihren CDI Segment-Erweiterungen verfügbaren Tabellen zu generieren und um Quelltabellen abzufragen, um neue Segmente zu erstellen. Nachdem die verbundene Quelle erstellt wurde, ermittelt Braze die Namen und Beschreibungen aller Tabellen, die dem Nutzer:innen im Quellschema zur Verfügung stehen.
+Erstellen Sie eine Rolle, die Ihre verbundene Quelle verwenden soll. Diese Rolle wird verwendet, um die Liste der in Ihren CDI-Segment-Erweiterungen verfügbaren Tabellen zu generieren und Quelltabellen abzufragen, um neue Segmente zu erstellen. Nachdem die verbundene Quelle erstellt wurde, ermittelt Braze die Namen und Beschreibungen aller Tabellen, die dem Nutzer:innen im Quellschema zur Verfügung stehen.
 
-Sie können wählen, ob Sie Zugriff auf alle Tabellen in einem Schema gewähren oder nur auf bestimmte Tabellen. Die Tabellen, auf die die Braze-Rolle Zugriff hat, stehen für die Abfrage in der CDI Segment-Erweiterung zur Verfügung.
+Sie können wählen, ob Sie Zugriff auf alle Tabellen in einem Schema gewähren oder nur auf bestimmte Tabellen. Alle Tabellen, auf die die Braze-Rolle Zugriff hat, können in den Segment-Erweiterungen der CDI abgefragt werden.
 
-Die Berechtigung `create table` ist erforderlich, damit Braze eine Tabelle mit den Abfrageergebnissen Ihrer CDI Segment-Erweiterung erstellen kann, bevor das Segment in Braze aktualisiert wird. Braze erstellt eine temporäre Tabelle pro Segment, die nur persistent ist, solange Braze das Segment aktualisiert.
+Die`create table`Berechtigung ist erforderlich, damit Braze eine Tabelle mit den Ergebnissen Ihrer CDI-Segment-Erweiterung erstellen kann, bevor das Segment in Braze ein Update erhält. Braze erstellt eine temporäre Tabelle pro Segment, die nur persistent ist, solange Braze das Segment aktualisiert.
 
 ```sql
 CREATE ROLE BRAZE_INGESTION_ROLE;
@@ -156,11 +156,11 @@ GRANT CREATE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
 GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user;
 ```
 
-Erstellen Sie einen Nutzer:in für Ihre verbundene Quelle, die Sie verwenden möchten. Dieser Nutzer:innen wird verwendet, um die Liste der in Ihren CDI Segment-Erweiterungen verfügbaren Tabellen zu generieren und die Quelltabellen abzufragen, um neue Segmente zu erstellen. Nachdem die verbundene Quelle erstellt wurde, ermittelt Braze die Namen und Beschreibungen aller Tabellen, die dem Nutzer:innen im Quellschema zur Verfügung stehen. Wenn Sie mehrere CDI-Integrationen erstellen, möchten Sie möglicherweise Berechtigungen für ein Schema erteilen oder Berechtigungen über eine Gruppe verwalten. 
+Erstellen Sie einen Nutzer:in für Ihre verbundene Quelle, die Sie verwenden möchten. Dieser Nutzer wird verwendet, um die Liste der in Ihren CDI-Segment-Erweiterungen verfügbaren Tabellen zu generieren und Quelltabellen abzufragen, um neue Segmente zu erstellen. Nachdem die verbundene Quelle erstellt wurde, ermittelt Braze die Namen und Beschreibungen aller Tabellen, die dem Nutzer:innen im Quellschema zur Verfügung stehen. Wenn Sie mehrere CDI-Integrationen erstellen, möchten Sie möglicherweise Berechtigungen für ein Schema erteilen oder Berechtigungen über eine Gruppe verwalten. 
 
-Sie können wählen, ob Sie Zugriff auf alle Tabellen in einem Schema gewähren oder nur auf bestimmte Tabellen. Die Tabellen, auf die die Braze-Rolle Zugriff hat, stehen für die Abfrage in der CDI Segment-Erweiterung zur Verfügung. Stellen Sie sicher, dass Sie dem Benutzer bei der Erstellung neuer Tabellen Zugriff auf diese gewähren, oder legen Sie Standardberechtigungen für den Benutzer fest. 
+Sie können wählen, ob Sie Zugriff auf alle Tabellen in einem Schema gewähren oder nur auf bestimmte Tabellen. Alle Tabellen, auf die die Braze-Rolle Zugriff hat, können in den Segment-Erweiterungen der CDI abgefragt werden. Stellen Sie sicher, dass Sie dem Benutzer bei der Erstellung neuer Tabellen Zugriff auf diese gewähren, oder legen Sie Standardberechtigungen für den Benutzer fest. 
 
-Die Berechtigung `create table` ist erforderlich, damit Braze eine Tabelle mit den Abfrageergebnissen Ihrer CDI Segment-Erweiterung erstellen kann, bevor das Segment in Braze aktualisiert wird. Braze erstellt eine temporäre Tabelle pro Segment, die nur persistent ist, solange Braze das Segment aktualisiert.
+Die`create table`Berechtigung ist erforderlich, damit Braze eine Tabelle mit den Ergebnissen Ihrer CDI-Segment-Erweiterung erstellen kann, bevor das Segment in Braze ein Update erhält. Braze erstellt eine temporäre Tabelle pro Segment, die nur persistent ist, solange Braze das Segment aktualisiert.
 
 
 #### Schritt 2.2: Zugriff auf Braze-IPs zulassen    
@@ -186,11 +186,11 @@ Erstellen Sie ein Service-Konto in GCP, über das Braze eine Verbindung herstell
 - **Nutzer:in von BigQuery-Jobs:** Ermöglicht den Zugriff auf Braze zur Ausführung von Aufträgen.
 - **bigquery.tables.create** Ermöglicht den Zugriff auf Braze, um temporäre Tabellen während der Segmentierung zu erstellen.
 
-Erstellen Sie ein Dienst-Konto für die Nutzung Ihrer verbundenen Quelle. Dieser Nutzer:innen wird verwendet, um die Liste der in Ihren CDI Segment-Erweiterungen verfügbaren Tabellen zu generieren und die Quelltabellen abzufragen, um neue Segmente zu erstellen. Nachdem die verbundene Quelle erstellt wurde, ermittelt Braze die Namen und Beschreibungen aller Tabellen, die dem Nutzer:innen im Quellschema zur Verfügung stehen. 
+Erstellen Sie ein Dienst-Konto für die Nutzung Ihrer verbundenen Quelle. Dieser Nutzer wird verwendet, um die Liste der in Ihren CDI-Segment-Erweiterungen verfügbaren Tabellen zu generieren und Quelltabellen abzufragen, um neue Segmente zu erstellen. Nachdem die verbundene Quelle erstellt wurde, ermittelt Braze die Namen und Beschreibungen aller Tabellen, die dem Nutzer:innen im Quellschema zur Verfügung stehen. 
 
-Sie können wählen, ob Sie den Zugriff auf alle Tabellen in einem Datensatz gewähren wollen oder ob Sie nur für bestimmte Tabellen Zugriffsrechte gewähren wollen. Die Tabellen, auf die die Braze-Rolle Zugriff hat, stehen für die Abfrage in der CDI Segment-Erweiterung zur Verfügung. 
+Sie können wählen, ob Sie den Zugriff auf alle Tabellen in einem Datensatz gewähren wollen oder ob Sie nur für bestimmte Tabellen Zugriffsrechte gewähren wollen. Alle Tabellen, auf die die Braze-Rolle Zugriff hat, können in den Segment-Erweiterungen der CDI abgefragt werden. 
 
-Die Berechtigung `create table` ist erforderlich, damit Braze eine Tabelle mit den Abfrageergebnissen Ihrer CDI Segment-Erweiterung erstellen kann, bevor das Segment in Braze aktualisiert wird. Braze erstellt eine temporäre Tabelle pro Segment, die nur persistent ist, solange Braze das Segment aktualisiert. 
+Die`create table`Berechtigung ist erforderlich, damit Braze eine Tabelle mit den Ergebnissen Ihrer CDI-Segment-Erweiterung erstellen kann, bevor das Segment in Braze ein Update erhält. Braze erstellt eine temporäre Tabelle pro Segment, die nur persistent ist, solange Braze das Segment aktualisiert. 
 
 Wenn Sie das Dienstkonto erstellt und die Berechtigungen erteilt haben, erzeugen Sie einen JSON-Schlüssel. Weitere Informationen finden Sie unter [Google Cloud: Schlüssel für Dienstkonten erstellen und löschen](https://cloud.google.com/iam/docs/keys-create-delete). Sie laden dies später auf das Braze Dashboard hoch.
 
@@ -208,17 +208,17 @@ Wenn Sie über Netzwerkrichtlinien verfügen, müssen Sie Braze Netzwerkzugriff 
 Damit Braze auf Databricks zugreifen kann, muss ein persönliches Token für den Zugriff erstellt werden.
 
 1. Wählen Sie in Ihrem Databricks Workspace Ihren Databricks-Benutzernamen in der oberen Leiste aus und wählen Sie dann **Benutzer:in** aus dem Dropdown-Menü.
-2. Vergewissern Sie sich, dass das Konto des Dienstes über die Berechtigung `CREATE TABLE` für das Schema verfügt, das für die verbundene Quelle verwendet wird. 
+2. Bitte stellen Sie sicher, dass das Dienstkonto über`CREATE TABLE`die erforderlichen Berechtigungen für das Schema verfügt, das für die verbundene Quelle verwendet wird. 
 3. Wählen Sie auf der Registerkarte **Zugriffstoken** die Option **Neues Token generieren**.
 4. Geben Sie einen Kommentar ein, der Ihnen hilft, dieses Token zu identifizieren, z. B. „Braze-CDI“, und ändern Sie die Lebensdauer des Tokens auf „keine Lebensdauer“, indem Sie das Feld „Lebensdauer (Tage)“ leer lassen.
 5. Wählen Sie **Erzeugen**.
 6. Kopieren Sie das angezeigte Token, und wählen Sie dann **Fertig**.
 
-Dieses Token wird verwendet, um die Liste der Tabellen zu generieren, die in Ihren CDI Segment-Erweiterungen verfügbar sind, und um Quelltabellen abzufragen, um neue Segmente zu erstellen. Nachdem die verbundene Quelle erstellt wurde, ermittelt Braze die Namen und Beschreibungen aller Tabellen, die dem Nutzer:innen im Quellschema zur Verfügung stehen. 
+Dieser Token wird verwendet, um die Liste der in Ihren CDI-Segment-Erweiterungen verfügbaren Tabellen zu generieren und Quelltabellen abzufragen, um neue Segmente zu erstellen. Nachdem die verbundene Quelle erstellt wurde, ermittelt Braze die Namen und Beschreibungen aller Tabellen, die dem Nutzer:innen im Quellschema zur Verfügung stehen. 
 
-Sie können wählen, ob Sie Zugriff auf alle Tabellen in einem Schema gewähren oder nur auf bestimmte Tabellen. Die Tabellen, auf die die Braze-Rolle Zugriff hat, stehen für die Abfrage in der CDI Segment-Erweiterung zur Verfügung.
+Sie können wählen, ob Sie Zugriff auf alle Tabellen in einem Schema gewähren oder nur auf bestimmte Tabellen. Alle Tabellen, auf die die Braze-Rolle Zugriff hat, können in den Segment-Erweiterungen der CDI abgefragt werden.
 
-Die Berechtigung `create table` ist erforderlich, damit Braze eine Tabelle mit den Abfrageergebnissen Ihrer CDI Segment-Erweiterung erstellen kann, bevor das Segment in Braze aktualisiert wird. Braze erstellt eine temporäre Tabelle pro Segment, die nur persistent ist, solange Braze das Segment aktualisiert. 
+Die`create table`Berechtigung ist erforderlich, damit Braze eine Tabelle mit den Ergebnissen Ihrer CDI-Segment-Erweiterung erstellen kann, bevor das Segment in Braze ein Update erhält. Braze erstellt eine temporäre Tabelle pro Segment, die nur persistent ist, solange Braze das Segment aktualisiert. 
 
 Bewahren Sie das Token an einem sicheren Ort auf, bis Sie es im Braze-Dashboard während des Schritts zur Erstellung der Zugangsdaten eingeben müssen.
 
@@ -241,7 +241,7 @@ Braze stellt die Verbindung zu Ihrem Fabric-Warehouse über einen Dienstprinzipa
 1. Navigieren Sie im Azure-Portal zum Microsoft Entra Admin Center und dann zu **App-Registrierungen**.
 2. Wählen Sie **\+ Neue Registrierung** unter **Identität > Anwendungen > App-Registrierungen** 
 3. Geben Sie einen Namen ein und wählen Sie `Accounts in this organizational directory only` als unterstützten Kontotyp aus. Wählen Sie dann **Registrieren**. 
-4. Wählen Sie die Anwendung (Dienstprinzipal) aus, die Sie gerade erstellt haben, und navigieren Sie dann zu **Zertifikate & secrets > + New client secret**
+4. Auswählen Sie die soeben erstellte Anwendung (Dienstprinzipal) und navigieren Sie zu **Zertifikate >& Geheimnisse > + Neues Client-Geheimnis**.
 5. Geben Sie eine Beschreibung für das Geheimnis ein und legen Sie einen Ablauf für das Geheimnis fest. Wählen Sie dann **Hinzufügen**. 
 6. Notieren Sie sich das Client-Geheimnis, das Sie bei der Einrichtung von Braze verwenden. 
 
@@ -259,7 +259,7 @@ Sie werden Braze den Zugang zu Ihrer Fabric-Instanz ermöglichen. Navigieren Sie
 
 Sie benötigen den SQL-Endpunkt für Ihr Warehouse, damit Braze eine Verbindung herstellen kann. Um den SQL-Endpunkt abzurufen, rufen Sie den **Arbeitsbereich** in Fabric auf. Bewegen Sie den Mauszeiger in der Liste der Elemente auf den Namen des Warehouse und wählen Sie **SQL-Verbindungszeichenfolge kopieren**.
 
-![Die Seite "Fabric Console" in Microsoft Azure, auf der Nutzer:innen den SQL Connection String abrufen sollten.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
+![Die Seite „Fabric Console“ in Microsoft Azure, auf der Nutzer:innen die SQL-Verbindungszeichenfolge abrufen sollten.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
 
 #### Schritt 2.4: Zulassen von Braze IPs in der Firewall (Optional)
 
@@ -287,7 +287,7 @@ Geben Sie die Informationen für Ihr Snowflake Data Warehouse und das Quellschem
 
 #### Schritt 3.2: Synchronisierungsdetails konfigurieren
 
-Wählen Sie einen Namen für die verbundene Quelle. Dieser Name wird in der Liste der verfügbaren Quellen verwendet, wenn Sie eine neue CDI Segment-Erweiterung erstellen. 
+Wählen Sie einen Namen für die verbundene Quelle. Dieser Name wird in der Liste der verfügbaren Quellen verwendet, wenn Sie eine neue CDI-Segment-Erweiterung erstellen. 
 
 Legen Sie eine maximale Laufzeit für diese Quelle fest. Braze bricht automatisch alle Abfragen ab, die die maximale Laufzeit überschreiten, wenn es ein Segment erstellt oder aktualisiert. Die maximal zulässige Laufzeit beträgt 60 Minuten; eine geringere Laufzeit reduziert die Kosten für Ihr Snowflake-Konto. 
 
@@ -317,7 +317,7 @@ Geben Sie die Informationen für Ihr Redshift Data Warehouse und das Quellschema
 
 #### Schritt 3.2: Synchronisierungsdetails konfigurieren
 
-Wählen Sie einen Namen für die verbundene Quelle. Dieser Name wird in der Liste der verfügbaren Quellen verwendet, wenn Sie eine neue CDI Segment-Erweiterung erstellen. 
+Wählen Sie einen Namen für die verbundene Quelle. Dieser Name wird in der Liste der verfügbaren Quellen verwendet, wenn Sie eine neue CDI-Segment-Erweiterung erstellen. 
 
 Legen Sie eine maximale Laufzeit für diese Quelle fest. Braze bricht automatisch alle Abfragen ab, die die maximale Laufzeit überschreiten, wenn es ein Segment erstellt oder aktualisiert. Die maximal zulässige Laufzeit beträgt 60 Minuten. Eine geringere Laufzeit reduziert die Kosten, die für Ihr Redshift-Konto anfallen. 
 
@@ -347,7 +347,7 @@ Geben Sie die Informationen für Ihr BigQuery-Projekt und Ihren Datensatz ein un
 
 #### Schritt 3.2: Synchronisierungsdetails konfigurieren
 
-Wählen Sie einen Namen für die verbundene Quelle. Dieser Name wird in der Liste der verfügbaren Quellen verwendet, wenn Sie eine neue CDI Segment-Erweiterung erstellen. 
+Wählen Sie einen Namen für die verbundene Quelle. Dieser Name wird in der Liste der verfügbaren Quellen verwendet, wenn Sie eine neue CDI-Segment-Erweiterung erstellen. 
 
 Legen Sie eine maximale Laufzeit für diese Quelle fest. Braze bricht automatisch alle Abfragen ab, die die maximale Laufzeit überschreiten, wenn es ein Segment erstellt oder aktualisiert. Die maximal zulässige Laufzeit beträgt 60 Minuten; eine geringere Laufzeit reduziert die Kosten, die für Ihr BigQuery-Konto anfallen. 
 
@@ -359,7 +359,7 @@ Wenn Abfragen immer wieder ins Stocken geraten und Sie eine maximale Laufzeit vo
 
 #### Schritt 3.3: Testen Sie die Verbindung
 
-Wählen Sie **Verbindung testen**, um zu überprüfen, ob die Liste der für den Benutzer sichtbaren Tabellen Ihren Erwartungen entspricht, und wählen Sie dann **Fertig**. Ihre verbundene Quelle ist nun erstellt und kann in CDI Segment-Erweiterungen verwendet werden.
+Wählen Sie **Verbindung testen**, um zu überprüfen, ob die Liste der für den Benutzer sichtbaren Tabellen Ihren Erwartungen entspricht, und wählen Sie dann **Fertig**. Ihre verbundene Quelle ist nun erstellt und kann in CDI-Segment-Erweiterungen verwendet werden.
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
 
@@ -377,7 +377,7 @@ Geben Sie die Informationen für Ihre Databricks-Zugangsdaten und, optional, den
 
 #### Schritt 3.2: Synchronisierungsdetails konfigurieren
 
-Wählen Sie einen Namen für die verbundene Quelle. Dieser Name wird in der Liste der verfügbaren Quellen verwendet, wenn Sie eine neue CDI Segment-Erweiterung erstellen. 
+Wählen Sie einen Namen für die verbundene Quelle. Dieser Name wird in der Liste der verfügbaren Quellen verwendet, wenn Sie eine neue CDI-Segment-Erweiterung erstellen. 
 
 Legen Sie eine maximale Laufzeit für diese Quelle fest. Braze bricht automatisch alle Abfragen ab, die die maximale Laufzeit überschreiten, wenn es ein Segment erstellt oder aktualisiert. Die maximal zulässige Laufzeit beträgt 60 Minuten; eine geringere Laufzeit reduziert die Kosten, die für Ihr Databricks-Konto anfallen. 
 
@@ -389,7 +389,7 @@ Wenn Abfragen immer wieder ins Stocken geraten und Sie eine maximale Laufzeit vo
 
 #### Schritt 3.3: Testen Sie die Verbindung
 
-Wählen Sie **Verbindung testen**, um zu überprüfen, ob die Liste der für den Benutzer sichtbaren Tabellen Ihren Erwartungen entspricht, und wählen Sie dann **Fertig**. Ihre verbundene Quelle ist nun erstellt und kann in CDI Segment-Erweiterungen verwendet werden.
+Wählen Sie **Verbindung testen**, um zu überprüfen, ob die Liste der für den Benutzer sichtbaren Tabellen Ihren Erwartungen entspricht, und wählen Sie dann **Fertig**. Ihre verbundene Quelle ist nun erstellt und kann in CDI-Segment-Erweiterungen verwendet werden.
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
 
@@ -407,7 +407,7 @@ Geben Sie die Informationen für Ihre Microsoft Fabric Zugangsdaten sowie das Qu
 
 #### Schritt 3.2: Synchronisierungsdetails konfigurieren
 
-Wählen Sie einen Namen für die verbundene Quelle. Dieser Name wird in der Liste der verfügbaren Quellen verwendet, wenn Sie eine neue CDI Segment-Erweiterung erstellen. 
+Wählen Sie einen Namen für die verbundene Quelle. Dieser Name wird in der Liste der verfügbaren Quellen verwendet, wenn Sie eine neue CDI-Segment-Erweiterung erstellen. 
 
 Legen Sie eine maximale Laufzeit für diese Quelle fest. Braze bricht automatisch alle Abfragen ab, die die maximale Laufzeit überschreiten, wenn es ein Segment erstellt oder aktualisiert. Die maximal zulässige Laufzeit beträgt 60 Minuten; eine geringere Laufzeit reduziert die Kosten, die für Ihr Microsoft Fabric-Konto anfallen. 
 
@@ -419,7 +419,7 @@ Wenn Abfragen immer wieder zeitlich begrenzt sind und Sie eine maximale Laufzeit
 
 #### Schritt 3.3: Testen Sie die Verbindung
 
-Wählen Sie **Verbindung testen**, um zu überprüfen, ob die Liste der für den Benutzer sichtbaren Tabellen Ihren Erwartungen entspricht, und wählen Sie dann **Fertig**. Ihre verbundene Quelle ist nun erstellt und kann in CDI Segment-Erweiterungen verwendet werden.
+Wählen Sie **Verbindung testen**, um zu überprüfen, ob die Liste der für den Benutzer sichtbaren Tabellen Ihren Erwartungen entspricht, und wählen Sie dann **Fertig**. Ihre verbundene Quelle ist nun erstellt und kann in CDI-Segment-Erweiterungen verwendet werden.
 
 ![]({% image_buster /assets/img/cloud_ingestion/connected_source_test_connection.png %})
 
@@ -434,19 +434,19 @@ Fügen Sie den Public Key, den Sie im letzten Schritt notiert haben, zu Ihren Nu
 
 Wenn Sie die Schlüssel irgendwann wechseln möchten, können Sie einen neuen öffentlichen Schlüssel erstellen, indem Sie in der **Datenzugriffsverwaltung** von **Cloud Data Ingestion** die Option **Neuen Schlüssel generieren** für das jeweilige Konto wählen.
 
-![Datenzugriffsverwaltung für Snowflake Zugangsdaten, mit einem Button zur Generierung eines neuen Schlüssels.]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_4.png %})
+![Datenzugriffsverwaltung für Snowflake-Zugangsdaten, mit einem Button zum Generieren eines neuen Schlüssels.]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_4.png %})
 
 ```sql
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';
 ```
 
-Nachdem Sie dem Benutzer in Snowflake den Schlüssel hinzugefügt haben, wählen Sie in Braze **Verbindung testen** und dann **Fertig**. Ihre verbundene Quelle ist nun erstellt und kann in CDI Segment-Erweiterungen verwendet werden.
+Nachdem Sie dem Benutzer in Snowflake den Schlüssel hinzugefügt haben, wählen Sie in Braze **Verbindung testen** und dann **Fertig**. Ihre verbundene Quelle ist nun erstellt und kann in CDI-Segment-Erweiterungen verwendet werden.
 {% endtab %}
 
 {% tab Redshift %}
 Wenn Sie eine Verbindung über einen SSH-Tunnel herstellen, fügen Sie den öffentlichen Schlüssel, den Sie im letzten Schritt notiert haben, dem Nutzer:in des SSH-Tunnels hinzu. 
 
-Nachdem Sie dem Benutzer den Schlüssel hinzugefügt haben, wählen Sie in Braze **Verbindung testen** und dann **Fertig**. Ihre verbundene Quelle ist nun erstellt und kann in CDI Segment-Erweiterungen verwendet werden.
+Nachdem Sie dem Benutzer den Schlüssel hinzugefügt haben, wählen Sie in Braze **Verbindung testen** und dann **Fertig**. Ihre verbundene Quelle ist nun erstellt und kann in CDI-Segment-Erweiterungen verwendet werden.
 
 {% endtab %}
 {% tab BigQuery %}
@@ -495,7 +495,7 @@ Sie können mit Braze mehrere Quellen einrichten, aber jede Quelle sollte so kon
 
 ## Verwendung der angeschlossenen Quelle
 
-Nachdem die Quelle erstellt wurde, können Sie damit eine oder mehrere CDI Segment-Erweiterungen erstellen. Weitere Informationen zur Erstellung eines Segments mit dieser Quelle finden Sie in der [Dokumentation zu CDI Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
+Nachdem die Quelle erstellt wurde, können Sie damit eine oder mehrere CDI-Segment-Erweiterungen erstellen. Weitere Informationen zum Erstellen eines Segments mit dieser Quelle finden Sie in der [Dokumentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) zu[ CDI-Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 
 {% alert note %}
 Wenn Abfragen immer wieder zu Zeitüberschreitungen führen und Sie eine maximale Laufzeit von 60 Minuten festgelegt haben, sollten Sie versuchen, die Ausführungszeit Ihrer Abfragen zu optimieren oder dem Braze-Benutzer mehr Rechenressourcen (z. B. ein größeres Warehouse) zuzuweisen.
