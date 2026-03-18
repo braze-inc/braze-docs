@@ -13,8 +13,7 @@ toc_headers: "h2"
 
 ## Missing Content Cards analytics
 
-If Content Cards are displayed correctly in your app but you are consistently not receiving any analytics (unique recipients, impressions, clicks, and so on), it is likely an SDK integration issue.
+If Content Cards are displayed correctly in your app but you consistently do not receive any analytics (unique recipients, impressions, clicks, and so on), it is likely an SDK integration issue.
 
-- **Custom Content Card views (Android, iOS):** If you are using a custom Content Card view, you must implement the logging of impressions and clicks manually within your application. The default Braze UI logs these automatically; custom implementations require explicit calls to the appropriate logging methods. See [Log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for your platform.
-- **Web:** Ensure that the Braze Web SDK is loaded and that you are calling the methods that log impressions and clicks when cards are displayed or clicked. Check the browser console for errors and verify that card data is being received.
-- **General:** Confirm that the user is identified (not anonymous) when cards are displayed and that the SDK is initialized before requesting or displaying cards.
+- **Custom Content Card views (Android, iOS, Web):** The default Braze UI logs impressions and clicks automatically on all platforms. If you are using a custom Content Card view or implementation, you must call the appropriate logging methods explicitly within your application. See [Log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for your platform. For custom Web implementations specifically, ensure the Braze Web SDK is loaded, check the browser console for errors, and verify that card data is being received.
+- **SDK initialization and user identification:** Ensure the SDK is fully initialized before displaying cards. Events are silently dropped (not queued) if the SDK is uninitialized, in delayed initialization mode, or GDPR-disabled. The SDK does log analytics for anonymous users, but dashboard metrics like "unique recipients" require a resolved user identity, so call changeUser before cards are displayed where possible.
