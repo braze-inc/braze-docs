@@ -161,7 +161,7 @@ A "pre-check" refers to a high-speed, bundled validation check that runs at the 
 
 If a user fails this single bundled check, they are dropped immediately. This bundled approach allows Braze to process massive volumes of messages at high speed and can contribute to faster, more stable performance for your campaigns and Canvases by reducing processing latency for each message.
 
-### What does an "other" abort reason mean?
+### What does an "other" abort outcome mean?
 
 These are aborts that didn’t fall into any of the pre-existing Braze categories. If you notice a large proportion of aborts with this outcome, contact [Braze Support]({{site.baseurl}}/support_contact/) for further assistance.
 
