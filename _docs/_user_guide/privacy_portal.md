@@ -19,34 +19,34 @@ guide_featured_list:
   link: /docs/dp-technical-assistance/
   image: /assets/img/braze_icons/settings-01.svg
 - name: Email open pixel and click tracking
-  link: /docs/user_guide/channels/email/email_setup/open_pixel_and_click_tracking/
+  link: /docs/user_guide/channels/email/email_setup/open_pixel_and_click_tracking
   image: /assets/img/braze_icons/mail-01.svg
 - name: Email subscriptions
-  link: /docs/user_guide/channels/email/managing_user_subscriptions/#subscription-states
+  link: /docs/user_guide/channels/email/managing_user_subscriptions#subscription-states
   image: /assets/img/braze_icons/mail-01.svg
 - name: Managing email subscriptions
   link: /docs/user_guide/channels/email/best_practices/managing_email_subscriptions#unsubscribed-email-addresses
   image: /assets/img/braze_icons/users-01.svg
 - name: Email preference center
-  link: /docs/user_guide/audience/subscription_preferences/preference_center/
+  link: /docs/user_guide/audience/subscription_preferences/preference_center
   image: /assets/img/braze_icons/list.svg
 - name: SMS subscription groups
   link: /docs/sms_rcs_subscription_groups/
   image: /assets/img/braze_icons/users-01.svg
 - name: SMS laws and regulations
-  link: /docs/user_guide/channels/sms_mms_and_rcs/laws_and_regulations/
+  link: /docs/user_guide/channels/sms_mms_and_rcs/laws_and_regulations
   image: /assets/img/braze_icons/briefcase-02.svg
 - name: WhatsApp subscription groups
   link: /docs/user_guide/channels/whatsapp/user_subscription
   image: /assets/img/braze_icons/whatsapp.svg
 - name: Push subscriptions
-  link: /docs/user_guide/channels/push/users_and_subscriptions/#push-sub-states
+  link: /docs/user_guide/channels/push/users_and_subscriptions#push-sub-states
   image: /assets/img/braze_icons/users-01.svg
 - name: Message archiving
-  link: /docs/user_guide/data_and_analytics/export_braze_data/message_archiving#overview
+  link: /docs/user_guide/data/distribution/export_braze_data/message_archiving#overview
   image: /assets/img/braze_icons/clock-rewind.svg
 - name: Default and minimum SDK data collection
-  link: /docs/user_guide/data/user_data_collection/sdk_data_collection/
+  link: /docs/user_guide/data/unification/user_data/sdk_data_collection
   image: /assets/img/braze_icons/settings-01.svg
 - name: Canvas Audience Sync data privacy considerations
   link: /docs/partners/canvas_steps/overview#data-privacy-considerations

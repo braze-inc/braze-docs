@@ -36,7 +36,7 @@ Recommended events function similarly to [custom events]({{site.baseurl}}/user_g
 
 #### eCommerce Canvas templates
 
-Check out our dedicated [eCommerce use cases]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/) for more ideas on how to use Braze Canvas pre-built templates to implement essential strategies.
+Check out our dedicated [eCommerce use cases]({{site.baseurl}}/user_guide/messaging/canvas/ideas_and_strategies/ecommerce_use_cases/) for more ideas on how to use Braze Canvas pre-built templates to implement essential strategies.
 
 ## Frequently asked questions
 

@@ -20,10 +20,10 @@ Dive into the what, who, and why!
 
 ## Mix and match
 
-Unlock new combinations of user journeys with [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/).
-- Split your users with [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) and build different workflows.
-- Space out your user journeys with a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) step.
-- Add [standalone messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) anywhere you want in your Canvas flow.
+Unlock new combinations of user journeys with [Canvas components]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/about/).
+- Split your users with [Decision Split]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/decision_split/) and build different workflows.
+- Space out your user journeys with a [Delay]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/delay_step/) step.
+- Add [standalone messages]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/) anywhere you want in your Canvas flow.
 
 {% alert note %}
 Canvas steps can move users only forward in the flow. You cannot configure a Canvas to link a step to a previous step, as this would send users backwards. This validation ensures users progress in a single direction through your Canvas.
@@ -33,17 +33,17 @@ Canvas steps can move users only forward in the flow. You cannot configure a Can
 
 Reel in your users with richer messages.
 
-- Build [in-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/) for onboarding Canvases to make the most out of your first impression.
-- Introduce [Content Cards]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/content-cards_in_canvas/) in a Canvas journey for promotional offers and push notifications.
+- Build [in-app messages]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/) for onboarding Canvases to make the most out of your first impression.
+- Introduce [Content Cards]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/canvas_by_channel/content-cards_in_canvas/) in a Canvas journey for promotional offers and push notifications.
 
 ## Test your user journeys
 
 Determine the impact of your Canvas messaging by incorporating control groups. This way, you can build an understanding of how your Canvas was received!
 
 - Name each step of your Canvas to identify your user journey.
-- Leverage the [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) component in your user journey to randomly assign users to different paths you create. 
+- Leverage the [Experiment Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/experiment_step/) component in your user journey to randomly assign users to different paths you create. 
 - Diversify your user journeys with Delay and Message steps to help uncover what path is most effective.
-- Check [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) to see the performance of each component in your user journey.
+- Check [Canvas analytics]({{site.baseurl}}/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) to see the performance of each component in your user journey.
 - [Edit your Canvas]({{site.baseurl}}/post-launch_edits/) after the initial launch.
 
 ## Scheduling your Canvases

@@ -85,7 +85,7 @@ The CSV output contains user profile data for every recipient of the campaign. B
 
 If you've linked your [Amazon S3 credentials]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/) to Braze, then the CSV will also be uploaded in your S3 bucket. Otherwise, the link emailed to you will expire in a few hours.
 
-The exported file includes the same user data fields that are included when you [export user data for a segment]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data). In addition to those data fields, if you choose "Export All Recipient Data," then the exported file will also contain the following data for each user:
+The exported file includes the same user data fields that are included when you [export user data for a segment]({{site.baseurl}}/user_guide/analytics/dashboards/home#exporting-app-usage-data). In addition to those data fields, if you choose "Export All Recipient Data," then the exported file will also contain the following data for each user:
 
 - Name of campaign variation received
 - API ID of campaign variation received

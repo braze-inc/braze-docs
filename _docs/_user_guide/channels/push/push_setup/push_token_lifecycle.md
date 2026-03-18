@@ -36,7 +36,7 @@ Push tokens are used to send both foreground and background push notifications.
 When a user opts-in to push notifications for your app, they'll be considered "push registered", meaning they can now be targeted using the `Foreground Push Enabled for App` segmentation filter in Braze.
 
 {% alert note %}
-This is different from the `Foreground Push Enabled` segmentation filter, which is used to identify users who have opted-in to at least one of your apps—not one specific app. For more information, see [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#foreground-push-enabled).
+This is different from the `Foreground Push Enabled` segmentation filter, which is used to identify users who have opted-in to at least one of your apps—not one specific app. For more information, see [Segmentation filters]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#foreground-push-enabled).
 {% endalert %}
 
 ### Multiple users on a device
@@ -91,7 +91,7 @@ iOS does not automatically generate push tokens for an app when it's installed. 
 
 There are two ways you can check a user's push subscription state with Braze:
 
-- **User Profile**: You can access individual user profiles through the Braze dashboard on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state.
+- **User Profile**: You can access individual user profiles through the Braze dashboard on the [User Search]({{site.baseurl}}/user_guide/audience/manage_audience/user_profiles/) page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state.
 - **Rest API Export**: You can export individual user profiles in JSON format using the export [Users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints. Braze will return a push tokens object that contains push enablement information per device.
 
 ### Checking push registration status

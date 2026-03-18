@@ -8,7 +8,7 @@ tool: Canvas
 
 # Winning Path in Experiment Paths
 
-> Winning Path is similar to [Winning Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) in campaigns, and lets you automate your A/B tests.
+> Winning Path is similar to [Winning Variant]({{site.baseurl}}/user_guide/messaging/ab_testing/optimizations/) in campaigns, and lets you automate your A/B tests.
 
 When Winning Path is turned on in an Experiment Path step, after a specified period of time, all subsequent users are sent down the path with the highest conversion rate.
 
@@ -16,7 +16,7 @@ When Winning Path is turned on in an Experiment Path step, after a specified per
 
 ### Step 1: Add an Experiment Path step
 
-Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) to your Canvas, then turn on **Winning Path**.
+Add an [Experiment Path]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/experiment_step/) to your Canvas, then turn on **Winning Path**.
 
 ![Settings in Experiment Path titled "Distribute Subsequent Users to Winning Path". The section includes a toggle for Winning Path, and options to configure the conversion event and experiment window.]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
 
@@ -24,7 +24,7 @@ Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/can
 
 Specify the conversion event that should determine the winner. If there are no conversion events available, return to the first step of Canvas setup and [assign conversion events]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/#choose-conversion-events). 
 
-If you choose opens or clicks as your conversion event, make sure the first step in the path is a [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step). Braze only counts engagement from the first Message step in each respective path. If the path starts with a different step (like a Delay or Audience Path step) and the message comes later, that message won’t be included when evaluating performance.
+If you choose opens or clicks as your conversion event, make sure the first step in the path is a [Message step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/). Braze only counts engagement from the first Message step in each respective path. If the path starts with a different step (like a Delay or Audience Path step) and the message comes later, that message won’t be included when evaluating performance.
 
 Next, set the **Experiment Window**. The **Experiment Window** specifies how long the experiment runs before the Winning Path is determined and all users who follow are sent down that path. The window begins when the first user enters the step.
 
@@ -44,7 +44,7 @@ A Delay Group appears in your path distribution only if your Canvas is set up fo
 
 A single Experiment Path component can contain up to four paths. However, if your Canvas is set up for [one-time entry](#one-time-entry), one path must be reserved for the Delay Group that Braze automatically adds when Winning Path is turned on. This means for Canvases with one-time entry, you can add up to three paths to your experiment.
 
-Finish setting up your Canvas as needed, then launch it. When the first user has entered the experiment, you can check the Canvas to see analytics as they come in and [track your experiment's performance]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#tracking-performance).
+Finish setting up your Canvas as needed, then launch it. When the first user has entered the experiment, you can check the Canvas to see analytics as they come in and [track your experiment's performance]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/experiment_step#tracking-performance).
 
 After a Winning Path concludes, all subsequent users who enter the Canvas go down the Winning Path, including users who re-entered and were previously in the control group of the Experiment Path step.
 

@@ -22,7 +22,7 @@ Common survey use cases include asking users how they'd like to use your app, le
 
 ## SDK requirements {#supported-sdk-versions}
 
-This in-app message will only be delivered to devices that support [Flex CSS](https://caniuse.com/flexbox), and must have at least the following [SDK versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions). 
+This in-app message will only be delivered to devices that support [Flex CSS](https://caniuse.com/flexbox), and must have at least the following [SDK versions]({{site.baseurl}}/user_guide/messaging/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions). 
 
 {% sdk_min_versions ios:3.23.0 android:8.0.0 web:2.5.0 %}
 
@@ -73,7 +73,7 @@ When custom attribute collection is enabled, choices that share the same custom 
 
 ##### Example 
 
-For example, in a [notification preferences survey](#notification-preferences), you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [user profile]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
+For example, in a [notification preferences survey](#notification-preferences), you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [user profile]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/) with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
 
 You can then use the `Custom Attribute` filter to create a segment for users with the custom attribute `Promotions Topic` `is` `true` to make sure that only users interested in your promotions will receive the relevant campaigns.
 
@@ -119,13 +119,13 @@ You can find your survey performance metrics by expanding the **Results** dropdo
 - **Survey results** display a breakdown of how many users selected each response option, along with the percentage of total submissions each choice represents.
 - **Confirmation page metrics** (if enabled) include how many users viewed the confirmation screen, clicked its button, or dismissed it without interacting.
 
-For definitions of survey metrics, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/) and filter by "In-App Message".
+For definitions of survey metrics, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/analytics/metrics_glossary/) and filter by "In-App Message".
 
 Check out [In-app message reporting]({{site.baseurl}}/user_guide/channels/in_app_messages/reporting/) for a breakdown of your campaign metrics.
 
 ### Currents {#currents}
 
-Selected choices will automatically flow through to Currents, under the [**In-App Message Click Events**]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#api_fzzdoylmrtwe) `button_id` field. Each choice will be sent with its universally unique identifier (UUID).
+Selected choices will automatically flow through to Currents, under the [**In-App Message Click Events**]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events#api_fzzdoylmrtwe) `button_id` field. Each choice will be sent with its universally unique identifier (UUID).
 
 ## Use cases
 

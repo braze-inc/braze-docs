@@ -23,7 +23,7 @@ This tutorial walks through how Jordan created:
 Jordan starts by defining the outcome that matters most for his upgrade strategy: a user moving from the free tier to Pro. Rather than relying on generic triggers like “time since signup,” he wants to forecast which users are actually likely to convert. This way, his team can act on real signals, not just assumptions.
 
 1. In the Braze dashboard, Jordan goes to **Analytics** > **Predictive Events**.
-2. He [creates a new event prediction]({{site.baseurl}}/user_guide/brazeai/predictive_events/creating_an_event_prediction/) and names it "Upgrade to Pro in 7 days"
+2. He [creates a new event prediction]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/creating_an_event_prediction/) and names it "Upgrade to Pro in 7 days"
 3. As the target event, he selects his custom event: `upgraded_to_pro`.
 4. Jordan sets the prediction window to 7 days, sets an update schedule, and creates the prediction.
 
@@ -31,10 +31,10 @@ Jordan starts by defining the outcome that matters most for his upgrade strategy
 
 ## Step 2: Segment users based on upgrade probability
 
-After training is complete, Braze assigns an [Event Likelihood Score]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#purchase_score) (0-100) to each eligible user. Jordan uses this score to create actionable segments—one for high-intent users who may not need a discount, and another for users who likely won’t convert without support.
+After training is complete, Braze assigns an [Event Likelihood Score]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/analytics#purchase_score) (0-100) to each eligible user. Jordan uses this score to create actionable segments—one for high-intent users who may not need a discount, and another for users who likely won’t convert without support.
 
 1. Jordan navigates to Segments in Braze.
-2. He creates two [segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) using the [Event Likelihood Score filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-score) and selects the prediction he created. The two segments are:
+2. He creates two [segments]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/) using the [Event Likelihood Score filter]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#event-likelihood-score) and selects the prediction he created. The two segments are:
   - **Likely to upgrade:** Score more than 70
   - **Needs nudge to upgrade:** Score more than 40 and less than 70
 
@@ -106,7 +106,7 @@ These users show minimal engagement overall. They’re unlikely to upgrade witho
 
 ## Step 4: Measure results and optimize your strategy
 
-After the campaign runs, Jordan reviews performance in [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) to understand how well the personalized paths performed—and whether combining predictive intent with behavioral signals improved upgrade rates.
+After the campaign runs, Jordan reviews performance in [Canvas Analytics]({{site.baseurl}}/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) to understand how well the personalized paths performed—and whether combining predictive intent with behavioral signals improved upgrade rates.
 
 Email performance by path:
 
@@ -133,7 +133,7 @@ Email performance by path:
 
 Compared to the team’s previous one-size-fits-all campaign (where a blanket discount after 7 days led to just 5% conversions and over-messaging) the targeted approach shows meaningful lift across all groups, with improved efficiency and fewer unnecessary discounts.
 
-The [funnel report]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) also shows a clear reduction in drop-off across key steps, particularly for low-intent users who received personalized messaging. More users are opening, clicking, and upgrading—proving the value of intent-based targeting.
+The [funnel report]({{site.baseurl}}/user_guide/analytics/reports/funnel_reports/) also shows a clear reduction in drop-off across key steps, particularly for low-intent users who received personalized messaging. More users are opening, clicking, and upgrading—proving the value of intent-based targeting.
 
 Jordan uses these insights to:
 

@@ -36,7 +36,7 @@ By default, **Ranking** is off. When a user enters the action path and performs 
 When **Advance users based on ranked order** is turned on, this means **Ranking** is on. So, all users are held until the end of the evaluation window. At the end of the evaluation period, users advance through the highest priority action group that they are eligible for at the end of the evaluation window. Users who do not perform any of the actions during the evaluation window advance through the default **Everyone Else** group.
 
 {% alert tip %}
-To route users based on their current attributes or segment membership rather than actions they perform, use [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) instead.
+To route users based on their current attributes or segment membership rather than actions they perform, use [Audience Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/audience_paths/) instead.
 {% endalert %}
 
 Note that you can trigger an action path when a nested custom attribute object changes, but not for arrays of nested custom attributes or changes to object array data types.
@@ -59,7 +59,7 @@ Add a trigger or multiple triggers to define your action groups. Here, you can s
 
 - Make a purchase
 - Start a session
-- Perform a [custom event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
+- Perform a [custom event]({{site.baseurl}}/user_guide/data/activation/events/custom_events/)
 - Perform a conversion event
 - Add an email address
 - Change a custom attribute value.

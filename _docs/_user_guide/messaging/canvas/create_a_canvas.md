@@ -71,7 +71,7 @@ The Canvas builder will guide you step-by-step through setting up your Canvas—
 Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/#teams), and create or add [Tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/#tags). You can also assign conversion events for the Canvas.
 
 {% alert tip %}
-Tag your Canvases so they're easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
+Tag your Canvases so they're easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/analytics/reports/report_builder/), you can filter by particular tags.
 {% endalert %}
 
 ![The Canvas details page, with fields for the Canvas name, description, location, and tags.]({% image_buster /assets/img/canvas_details.png %}){: style="max-width:70%;"}
@@ -109,7 +109,7 @@ You can choose one of three ways in which users can enter your Canvas.
 
   {% endtab %}
   {% tab API-Triggered Delivery %}
-    With API-triggered delivery, users will enter your Canvas and begin receiving messages after they have been added using the [`/canvas/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) via the API. In the dashboard, you can find an example cURL request that does this as well as assign optional [`context`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [context object]({{site.baseurl}}/api/objects_filters/context_object/). 
+    With API-triggered delivery, users will enter your Canvas and begin receiving messages after they have been added using the [`/canvas/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) via the API. In the dashboard, you can find an example cURL request that does this as well as assign optional [`context`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [context object]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/context/). 
 
     ![An example of API-triggered delivery with a Canvas ID and an example of a cURL request.]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
 
@@ -282,7 +282,7 @@ Select **Done** after you've finished configuring your Canvas component.
 {% tabs local %}
 {% tab Canvas Entry Properties %}
 
-The [`context` object]({{site.baseurl}}/api/objects_filters/context_object) is configured in the **Entry Schedule** step of creating a Canvas and indicates the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `context` object can be up to 50 KB. 
+The [`context` object]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/context/) is configured in the **Entry Schedule** step of creating a Canvas and indicates the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `context` object can be up to 50 KB. 
 
 Use the following Liquid when referencing these properties created upon entering the Canvas: {% raw %} ``context.${property_name}`` {% endraw %}. Note that the events must be custom events or purchase events to be used this way.
 
@@ -320,7 +320,7 @@ In this example, we have our Canvas divided into two variants. Variant 1 has 70%
 
 ### Intelligent Selection for Canvas
 
-Intelligent Selection capabilities are now available within multivariate Canvases. Similar to the [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) feature for multivariate Campaigns, Intelligent Selection for Canvas analyzes the performance of each Canvas variant and adjusts the percentage of users being funneled through each variant. This distribution is based on each variant's performance metrics to maximize the total expected number of conversions.
+Intelligent Selection capabilities are now available within multivariate Canvases. Similar to the [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_selection/) feature for multivariate Campaigns, Intelligent Selection for Canvas analyzes the performance of each Canvas variant and adjusts the percentage of users being funneled through each variant. This distribution is based on each variant's performance metrics to maximize the total expected number of conversions.
 
 Keep in mind that multivariate Canvases allow you to test more than copy, but timing and channels as well. Through Intelligent Selection, you can test Canvases more efficiently and have confidence that your users will be sent on the best possible Canvas journey.
 

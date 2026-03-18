@@ -12,19 +12,19 @@ description: "This landing page includes articles relating to SMS keyword proces
 guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Default opt-in/opt-out
-  link: /docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/optin_optout/
+  link: /docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/optin_optout
   image: /assets/img/braze_icons/message-dots-circle.svg
 - name: Double opt-in
-  link: /docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in/
+  link: /docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in
   image: /assets/img/braze_icons/phone-02.svg
 - name: Custom keyword handling
-  link: /docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/keyword_handling/
+  link: /docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/keyword_handling
   image: /assets/img/braze_icons/phone-02.svg
 - name: Handling unknown phone numbers
-  link: /docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/unknown_phone_numbers/
+  link: /docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/unknown_phone_numbers
   image: /assets/img/braze_icons/phone.svg
 - name: Fuzzy opt-out
-  link: /docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/fuzzy_opt_out/
+  link: /docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/fuzzy_opt_out
   image: /assets/img/braze_icons/hand.svg
 
 ---

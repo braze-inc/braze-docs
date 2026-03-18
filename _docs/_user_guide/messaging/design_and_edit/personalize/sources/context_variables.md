@@ -14,13 +14,13 @@ description: "This reference article explains context variables in Braze Canvase
 Context variables can be set in two ways:
 
 - **At Canvas entry:** When users enter a Canvas, data from the event or API trigger can automatically populate context variables.
-- **In a Context step:** You can define or update context variables manually inside the Canvas by adding a [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context).
+- **In a Context step:** You can define or update context variables manually inside the Canvas by adding a [Context step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/context/).
 
 Each context variable includes:
 
 - A name (such as `flight_time` or `subscription_renewal_date`)
 - A data type (such as number, string, time, or array)
-- A value you assign using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) or through the **Add Personalization** tool.
+- A value you assign using [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/) or through the **Add Personalization** tool.
 
 When defined, you can use a context variable throughout the Canvas by referencing it in this format: {% raw %}`{{context.${example_variable_name}}}`{% endraw %}.
 
@@ -32,7 +32,7 @@ For example, if a customer has two upcoming flights, they'll have two separate j
 
 ## Considerations
 
-You can define up to 10 context variables per [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/). Each variable name can be up to 100 characters and must use only letters, numbers, or underscores.
+You can define up to 10 context variables per [Context step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/context/). Each variable name can be up to 100 characters and must use only letters, numbers, or underscores.
 
 Context variable definitions can be up to 10,240 characters. If you pass context variables into an API-triggered Canvas, they share the same namespace as variables created in a Context step. For example, if you send a variable `purchased_item` in the [`/canvas/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) context object, you can reference it as {% raw %}`{{context.${purchased_item}}}`{% endraw %}. If you redefine that variable in a Context step, the new value will override the API value for that user's journey.
 
@@ -69,7 +69,7 @@ For example, if you're sending a message to a user the day before their birthday
 
 ## Using context variables
 
-You can use context variables anywhere you use Liquid in a Canvas, such as in [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) and [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update) steps, by selecting **Add Personalization**.
+You can use context variables anywhere you use Liquid in a Canvas, such as in [Message]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/) and [User Update]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/user_update/) steps, by selecting **Add Personalization**.
 
 For example, let's say you want to notify passengers about their VIP lounge access before their upcoming flight. This message should only be sent to passengers who purchased a first-class ticket. A context variable is a flexible way to track this information.
 
@@ -87,7 +87,7 @@ Next, we'll create a Message step to target users where {% raw %}`{{context.${lo
 ![A Message step with different messages to send, depending on the type of plane ticket purchased.]({% image_buster /assets/img/context_example3.png %}){: style="max-width:90%"}
 
 {% alert tip %}
-You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
+You can add [personalized delay options]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/delay_step#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
 {% endalert %}
 
 ### For Action Paths and exit criteria
@@ -147,7 +147,7 @@ The exit criteria state that at any point in a user’s journey in the Canvas, t
 
 ### Context variable filters
 
-You can create filters that use previously declared context variables in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) and [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps.
+You can create filters that use previously declared context variables in [Audience Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/audience_paths/) and [Decision Split]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/decision_split/) steps.
 
 {% alert note %}
 Context variable filters are only available for Audience Paths and Decision Split steps. 
@@ -157,7 +157,7 @@ Context variables are declared and only accessible in the scope of a Canvas, mea
 
 ![Decision Split step example with the option to create a filter with a context variable.]({% image_buster /assets/img/context_decision_split.png %}){: style="max-width:90%;"}
 
-Similar to how Canvas context variables have pre-defined types, the comparisons between context variables and static values must have [matching data types]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/#supported-data-types). The context variable filter allows comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for [nested custom attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/).
+Similar to how Canvas context variables have pre-defined types, the comparisons between context variables and static values must have [matching data types]({{site.baseurl}}/user_guide/data/activation/attributes/nested_custom_attribute_support#supported-data-types). The context variable filter allows comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for [nested custom attributes]({{site.baseurl}}/user_guide/data/activation/attributes/nested_custom_attribute_support/).
 
 {% alert note %}
 Use the same data type for your context variable and comparison. For example, if your context variable is a time data type, use time comparisons (such as "before" or "after"). Using mismatching data types (such as string comparisons with a time context variable) may cause unexpected behavior.
@@ -197,10 +197,10 @@ The following filter compares the context variable `reminder_date` to be before 
 While most event properties using the timestamp type are already in UTC in Canvas, there are some exceptions. With the addition of Canvas Context, all default timestamp event properties in action-based Canvases will consistently be in UTC. This change is part of a broader effort to ensure a more predictable and consistent experience when editing Canvas steps and messages. Note that this change will impact all action-based Canvases, whether the specific Canvas is using a Context step or not.
 
 {% alert important %}
-In all circumstances, we strongly recommend using [Liquid time_zone filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) for timestamps to be represented in the desired time zone. You can reference this [frequently asked question in the Context step article]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#faq-example) for an example.
+In all circumstances, we strongly recommend using [Liquid time_zone filters]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties#things-to-know) for timestamps to be represented in the desired time zone. You can reference this [frequently asked question in the Context step article]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/context#faq-example) for an example.
 {% endalert %}
 
 ## Related articles
 
-- [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/)
-- [Personalization and dynamic content with Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)
+- [Context step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/context/)
+- [Personalization and dynamic content with Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/)

@@ -38,7 +38,7 @@ In this approach, localization is applied to a single template in Braze using [L
 
 ### One template per country 
 
-This approach separates templating into different sending locales. After sending, the dashboard reports sending analytics based on each country separately, and any downstream user-level [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) events will also be tied to a specific campaign.
+This approach separates templating into different sending locales. After sending, the dashboard reports sending analytics based on each country separately, and any downstream user-level [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents#access-currents) events will also be tied to a specific campaign.
 
 - Templates benefit from implementing [tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/#tags) for maintenance and tracking purposes.
 - Campaigns can inherit the configurations from the same [Braze template]({{site.baseurl}}/user_guide/messaging/templates/) and [Content Blocks]({{site.baseurl}}/user_guide/messaging/design_and_edit/content_blocks/) (such as [email templates]({{site.baseurl}}/user_guide/messaging/templates/email_templates/) that contain Liquid).
@@ -71,7 +71,7 @@ Localization can be achieved with the following methods:
 - Separate Canvases per country, this ensures the complex user journeys are defined at the top of the funnel using audience filters
 - Bespoke user journeys per country, the implementation of [Audience Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/audience_paths/) to intuitively segment users on a large scale for each journey by creating separate message threads for each country in a single Canvas
 
-Once sent, the dashboard provides dynamic analytics per country and within user-level [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents#access-currents) events based on the customer’s current location.
+Once sent, the dashboard provides dynamic analytics per country and within user-level [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents#access-currents) events based on the customer’s current location.
 
 | Advantages | Considerations |
 | --- | --- |
@@ -230,7 +230,7 @@ Create a CSV in the following format:
 {% endsubtab %}
 {% endsubtabs %}
 
-These catalog items can them be referenced using [personalization]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/#using-catalogs-in-a-message), shown below, or [selections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections) that allow you to create groups of data. 
+These catalog items can them be referenced using [personalization]({{site.baseurl}}/user_guide/data/activation/catalogs/create#using-catalogs-in-a-message), shown below, or [selections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections) that allow you to create groups of data. 
 
 {% raw %}
 ```liquid

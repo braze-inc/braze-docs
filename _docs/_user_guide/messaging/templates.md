@@ -14,18 +14,18 @@ description: "Create and manage reusable message templates, Content Blocks, and 
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Manage templates
-    link: /docs/user_guide/messaging/templates/managing_templates/
+    link: /docs/user_guide/messaging/templates/managing_templates
     image: /assets/img/braze_icons/archive.svg
   - name: Canvas templates
-    link: /docs/user_guide/messaging/templates/canvas_templates/
+    link: /docs/user_guide/messaging/templates/canvas_templates
     image: /assets/img/braze_icons/palette.svg
   - name: Email templates
-    link: /docs/user_guide/messaging/templates/email_templates/
+    link: /docs/user_guide/messaging/templates/email_templates
     image: /assets/img/braze_icons/mail-01.svg
   - name: In-app message templates
-    link: /docs/user_guide/messaging/templates/in_app_message_templates/
+    link: /docs/user_guide/messaging/templates/in_app_message_templates
     image: /assets/img/braze_icons/phone-02.svg
   - name: Webhook templates
-    link: /docs/user_guide/messaging/templates/webhook_templates/
+    link: /docs/user_guide/messaging/templates/webhook_templates
     image: /assets/img/braze_icons/brackets.svg
 ---

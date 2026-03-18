@@ -178,7 +178,7 @@ For **Array** attributes, the following segmentation options are available.
 {% alert tip %}
 For more on how to use regular expressions (regex), check out these resources:
 - [Perl compatible regular expressions (PCRE)](https://www.regextester.com/pregsyntax.html)
-- [Regex with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
+- [Regex with Braze]({{site.baseurl}}/user_guide/audience/segments/regex/)
 - [Regex debugger and tester](https://www.regex101.com/)
 - [Regex tutorial](https://www.medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}

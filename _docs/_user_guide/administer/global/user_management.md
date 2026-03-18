@@ -12,19 +12,19 @@ description: "This section covers managing Braze dashboard users, permissions, t
 guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Company users
-  link: /docs/user_guide/administer/global/user_management/manage_company_users/
+  link: /docs/user_guide/administer/global/user_management/manage_company_users
   image: /assets/img/braze_icons/users-01.svg
 - name: Permissions
-  link: /docs/user_guide/administer/global/user_management/permissions/
+  link: /docs/user_guide/administer/global/user_management/permissions
   image: /assets/img/braze_icons/user-circle.svg
 - name: Teams
-  link: /docs/user_guide/administer/global/user_management/teams/
+  link: /docs/user_guide/administer/global/user_management/teams
   image: /assets/img/braze_icons/users-01.svg
 - name: Automated user provisioning
-  link: /docs/user_guide/administer/global/user_management/automated_user_provisioning/
+  link: /docs/user_guide/administer/global/user_management/automated_user_provisioning
   image: /assets/img/braze_icons/user-plus-01.svg
 - name: Internal groups
-  link: /docs/user_guide/administer/global/user_management/internal_groups/
+  link: /docs/user_guide/administer/global/user_management/internal_groups
   image: /assets/img/braze_icons/users-01.svg
 ---
 

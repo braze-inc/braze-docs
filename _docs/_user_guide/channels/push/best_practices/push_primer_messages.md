@@ -217,4 +217,4 @@ The `targeted_device` Liquid filter looks only at the device where the message i
 
 ## Step 6: Conversion events
 
-Braze suggests default settings for conversions, but you may want to set up [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) surrounding push primers.
+Braze suggests default settings for conversions, but you may want to set up [conversion events]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/conversion_events/) surrounding push primers.

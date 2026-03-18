@@ -12,10 +12,10 @@ alias: /data_transformation/
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Create a transformation
-    link: /docs/user_guide/data/unification/data_transformation/creating_a_transformation/
+    link: /docs/user_guide/data/unification/data_transformation/creating_a_transformation
     image: /assets/img/braze_icons/flip-forward.svg
   - name: Use cases
-    link: /docs/user_guide/data/unification/data_transformation/use_cases/
+    link: /docs/user_guide/data/unification/data_transformation/use_cases
     image: /assets/img/braze_icons/users-01.svg
 ---
 
@@ -67,7 +67,7 @@ While we would love for developers to use this feature as well, you don’t need
 
 Yes. You can have your transformations updating the `/users/track` endpoint with the [email address or phone number as an identifier]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-email-address).
 
-This works by using `email` or `phone` as your identifier property in the transformation code instead of `external_id` or `braze_id`. The example [transformation code]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/use_cases/#example-transformation-code) uses this functionality.
+This works by using `email` or `phone` as your identifier property in the transformation code instead of `external_id` or `braze_id`. The example [transformation code]({{site.baseurl}}/user_guide/data/unification/data_transformation/use_cases#example-transformation-code) uses this functionality.
 
 {% alert note %}
 Early access users of Braze Data Transformation who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function has been deprecated.

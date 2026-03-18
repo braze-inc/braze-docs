@@ -13,22 +13,22 @@ tool: Reports
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Home dashboard
-    link: /docs/user_guide/analytics/dashboards/home/
+    link: /docs/user_guide/analytics/dashboards/home
     image: /assets/img/braze_icons/phone-02.svg
   - name: Channel performance dashboard
-    link: /docs/user_guide/analytics/dashboards/channel_performance/
+    link: /docs/user_guide/analytics/dashboards/channel_performance
     image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Conversions dashboard
-    link: /docs/user_guide/analytics/dashboards/conversions/
+    link: /docs/user_guide/analytics/dashboards/conversions
     image: /assets/img/braze_icons/bar-chart-07.svg
   - name: Deliverability Center
-    link: /docs/user_guide/analytics/dashboards/deliverability_center/
+    link: /docs/user_guide/analytics/dashboards/deliverability_center
     image: /assets/img/braze_icons/navigation-pointer-01.svg
   - name: API usage dashboard
-    link: /docs/user_guide/analytics/dashboards/api_usage/
+    link: /docs/user_guide/analytics/dashboards/api_usage
     image: /assets/img/braze_icons/trend-up-01.svg
   - name: Dashboard Builder
-    link: /docs/user_guide/analytics/dashboards/dashboard_builder/
+    link: /docs/user_guide/analytics/dashboards/dashboard_builder
     image: /assets/img/braze_icons/tool-01.svg
 ---
 <br><br>

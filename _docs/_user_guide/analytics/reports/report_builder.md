@@ -137,5 +137,5 @@ You can share a dashboard link to the report by selecting **Share** and one of t
 1. Select the dotted icon at the top of the report table.
 2. Select **Add to dashboard**.
 3. Select whether you want to create a new dashboard or add to an existing dashboard.<br><br>![Window with options to select if you want to add the report to a new or existing dashboard.]({% image_buster /assets/img/report_builder_2/add_to_dashboard.png %}){: style="width:90%;"}<br><br>
-4. Follow the steps in [Dashboard Builder]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/) to learn more about building a dashboard.
+4. Follow the steps in [Dashboard Builder]({{site.baseurl}}/user_guide/analytics/dashboards/dashboard_builder/) to learn more about building a dashboard.
 

@@ -105,7 +105,7 @@ You can only add WhatsApp list messages to Canvases that are action-based, as th
 
 #### Step 2: Create a WhatsApp Message step
 
-Add a WhatsApp [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), and then select the response message layout of **List Message**.
+Add a WhatsApp [Message step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/), and then select the response message layout of **List Message**.
 
 ![A selectable collection of the different types of WhatsApp response messages you can create, including "List Message".]({% image_buster /assets/img/whatsapp/list_message_option.png %}){: style="max-width:70%;"}
 
@@ -121,7 +121,7 @@ Change the order of sections and rows by selecting and dragging the icon next to
 
 ![Dragging a list section into a new location.]({% image_buster /assets/img/whatsapp/drag_list_order.png %}){: style="max-width:60%;"}
 
-Back in the Canvas composer, add an [Action path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) after the Message step that has a group for each list response. In each group:
+Back in the Canvas composer, add an [Action path]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/action_paths/) after the Message step that has a group for each list response. In each group:
 
 1. Add a trigger for **Sent inbound WhatsApp subscription group** and select the respective WhatsApp subscription group.
 2. Check the **Where the message body** checkbox.
@@ -133,7 +133,7 @@ Continue to build out your Canvas.
 
 ### Creating actions paths for long descriptions
 
-If you have row descriptions, you must use **Matches regex** to specify a row. For example, if you want to specify a row with the description, "Our new style that fits over your favorite pair of ankle boots", you could use [regex]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/) with "ankle boots".
+If you have row descriptions, you must use **Matches regex** to specify a row. For example, if you want to specify a row with the description, "Our new style that fits over your favorite pair of ankle boots", you could use [regex]({{site.baseurl}}/user_guide/audience/segments/regex/) with "ankle boots".
 
 ![A WhatsApp trigger using the filter for "Matches regex" to capture response messages with "ankle boots".]({% image_buster /assets/img/whatsapp/regex_list_message.png %})
 
@@ -144,13 +144,13 @@ Response messages need to be sent within 24 hours of receiving a user's message.
 The following events unblock response messages: 
 
 - Inbound message 
-  - [Action Path]({{site.baseurl}}/action_paths/) or [action-based entry]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) with the trigger **Send a WhatsApp inbound message**.
+  - [Action Path]({{site.baseurl}}/action_paths/) or [action-based entry]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/) with the trigger **Send a WhatsApp inbound message**.
 
 ![An action-based entry step with the trigger "Send a WhatsApp inbound message".]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message_trigger.png %})
 
-- [API-triggered entry]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/)
+- [API-triggered entry]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery/)
 - Inbound product message 
-  - [`ecommerce.cart_updated`]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/?tab=ecommerce.cart_updated#types-of-ecommerce-recommended-events) event
+  - [`ecommerce.cart_updated`]({{site.baseurl}}/user_guide/data/activation/events/recommended_events/ecommerce_events#types-of-ecommerce-recommended-events?tab=ecommerce.cart_updated) event
 
 ![An Action Path with the trigger of a performed custom event `ecommerce.cart_updated`.]({% image_buster /assets/img/whatsapp/ecommerce_cart_updated.png %})
 

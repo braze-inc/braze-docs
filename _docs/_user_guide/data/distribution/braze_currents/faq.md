@@ -32,11 +32,11 @@ Braze is partnered with several data warehouses you can store your data in for q
 
 ### How reliable is Currents data?
 
-Currents guarantees "at-least-once" delivery, meaning duplicate events can occasionally be written to your storage bucket. If your use case requires exactly-once delivery, you can deduplicate events using the unique identifier field (`id`) sent with every event. For more details, refer to [Event delivery semantics]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics/).
+Currents guarantees "at-least-once" delivery, meaning duplicate events can occasionally be written to your storage bucket. If your use case requires exactly-once delivery, you can deduplicate events using the unique identifier field (`id`) sent with every event. For more details, refer to [Event delivery semantics]({{site.baseurl}}/user_guide/data/distribution/braze_currents/setting_up_currents/event_delivery_semantics/).
 
 ### How often is data synced to Currents?
 
-Data is continuously streamed. Braze sends a batch of events every time there is a full batch to send, or every 5 minutes, whichever comes first. For high-volume connectors, data arrives close to real-time. For low-volume connectors, expect data to arrive within 5 to 30 minutes. For more details, refer to [Avro write threshold]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics/#avro-write-threshold).
+Data is continuously streamed. Braze sends a batch of events every time there is a full batch to send, or every 5 minutes, whichever comes first. For high-volume connectors, data arrives close to real-time. For low-volume connectors, expect data to arrive within 5 to 30 minutes. For more details, refer to [Avro write threshold]({{site.baseurl}}/user_guide/data/distribution/braze_currents/setting_up_currents/event_delivery_semantics#avro-write-threshold).
 
 {% alert note %}
 If a device isn't connected to the internet, there may be a delay in creating the event. This is most common for in-app message events, since in-app messages can be triggered offline.
@@ -44,7 +44,7 @@ If a device isn't connected to the internet, there may be a delay in creating th
 
 ### How do I find which events are available for Currents?
 
-For a full list of events that Currents logs, refer to the [Customer behavior events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) and [Message engagement events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) glossaries. You can filter these glossaries by event type (such as sends, deliveries, or opens).
+For a full list of events that Currents logs, refer to the [Customer behavior events]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/) and [Message engagement events]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/) glossaries. You can filter these glossaries by event type (such as sends, deliveries, or opens).
 
 ### Are all send events logged to Currents?
 
@@ -60,11 +60,11 @@ Braze does not backfill events to Currents. However, custom events can be logged
 
 ### Can I include custom attributes in Currents send events?
 
-No. Currents does not include custom attributes in send events. Currents logs custom events and message engagement events. For a complete list of available fields, refer to the [event glossaries]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/).
+No. Currents does not include custom attributes in send events. Currents logs custom events and message engagement events. For a complete list of available fields, refer to the [event glossaries]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/).
 
 ### Does Currents include campaign tags or key-value pairs?
 
-No. Currents does not include campaign tags or message-level key-value pairs. As a workaround, you can use a webhook channel in the campaign to send this information to your own endpoint, using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) to template the tag and key-value pair data.
+No. Currents does not include campaign tags or message-level key-value pairs. As a workaround, you can use a webhook channel in the campaign to send this information to your own endpoint, using [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/) to template the tag and key-value pair data.
 
 ### How does Braze notify customers of changes to Currents?
 
@@ -84,4 +84,4 @@ If your storage bucket is unavailable at the time of data transfer, that data is
 
 ### How often does the schema ID update?
 
-Schema IDs are global across all event types and increment sequentially. Updates can occur at any time, and Braze will notify customers by email about upcoming changes. Each time a schema update occurs for any event type, the next available global ID is assigned. We recommend reading files recursively from the root path to handle schema ID changes. For more details, refer to [Avro schema changes]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics/#avro-schema-changes).
+Schema IDs are global across all event types and increment sequentially. Updates can occur at any time, and Braze will notify customers by email about upcoming changes. Each time a schema update occurs for any event type, the next available global ID is assigned. We recommend reading files recursively from the root path to handle schema ID changes. For more details, refer to [Avro schema changes]({{site.baseurl}}/user_guide/data/distribution/braze_currents/setting_up_currents/event_delivery_semantics#avro-schema-changes).

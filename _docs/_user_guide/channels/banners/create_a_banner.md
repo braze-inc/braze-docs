@@ -19,7 +19,7 @@ Creating a Banner message in Canvas is in early access. Contact your customer su
 
 ## Prerequisites
 
-Before you can launch your Banner, your development team must [set up placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/). You can still draft your Banner campaign in the meantime, but you won't be able to launch the campaign until the placements are configured.
+Before you can launch your Banner, your development team must [set up placements in your app or website]({{site.baseurl}}/developer_guide/banners/placements/). You can still draft your Banner campaign in the meantime, but you won't be able to launch the campaign until the placements are configured.
 
 ## Create a Banner message
 
@@ -148,7 +148,7 @@ Braze allows you to track [conversion events]({{site.baseurl}}/user_guide/messag
 
 {% tab Canvas %}
 
-If you haven't done so already, complete the remaining sections of your Canvas component. For further details on how build out the rest of your Canvas, implement [multivariate testing]({{site.baseurl}}/user_guide/messaging/ab_testing/) and [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/), and more, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
+If you haven't done so already, complete the remaining sections of your Canvas component. For further details on how build out the rest of your Canvas, implement [multivariate testing]({{site.baseurl}}/user_guide/messaging/ab_testing/) and [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_selection/), and more, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
 
 {% endtab %}
 {% endtabs %}

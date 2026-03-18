@@ -12,37 +12,37 @@ description: "This landing page covers all things Liquid, such as supported pers
 guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Use Liquid
-  link: /docs/user_guide/personalization_and_dynamic_content/liquid/using_liquid/
+  link: /docs/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid
   image: /assets/img/braze_icons/beaker-02.svg
 - name: Supported personalization tags
-  link: /docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
+  link: /docs/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags
   image: /assets/img/braze_icons/tag-01.svg
 - name: Operators
-  link: /docs/user_guide/personalization_and_dynamic_content/liquid/operators/
+  link: /docs/user_guide/messaging/design_and_edit/personalize/liquid/operators
   image: /assets/img/braze_icons/code-02.svg
 - name: Filters
-  link: /docs/user_guide/personalization_and_dynamic_content/liquid/filters/
+  link: /docs/user_guide/messaging/design_and_edit/personalize/liquid/filters
   image: /assets/img/braze_icons/flag-02.svg
 - name: Advanced filters
-  link: /docs/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/
+  link: /docs/user_guide/messaging/design_and_edit/personalize/liquid/advanced_filters
   image: /assets/img/braze_icons/settings-01.svg
 - name: Set default values
-  link: /docs/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
+  link: /docs/user_guide/messaging/design_and_edit/personalize/liquid/setting_default_values
   image: /assets/img/braze_icons/table.svg
 - name: Conditional messaging logic
-  link: /docs/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
+  link: /docs/user_guide/messaging/design_and_edit/personalize/liquid/conditional_logic
   image: /assets/img/braze_icons/columns-01.svg
 - name: Abort messages
-  link: /docs/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
+  link: /docs/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages
   image: /assets/img/braze_icons/refresh-ccw-01.svg
 - name: Liquid use cases
-  link: /docs/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/
+  link: /docs/user_guide/messaging/design_and_edit/personalize/liquid/liquid_use_cases
   image: /assets/img/braze_icons/list.svg
 - name: Tutorials
-  link: /docs/user_guide/personalization_and_dynamic_content/liquid/tutorials/
+  link: /docs/user_guide/messaging/design_and_edit/personalize/liquid/tutorials
   image: /assets/img/braze_icons/book-open-01.svg
 - name: Frequently asked questions
-  link: /docs/user_guide/personalization_and_dynamic_content/liquid/faq/
+  link: /docs/user_guide/messaging/design_and_edit/personalize/liquid/faq
   image: /assets/img/braze_icons/annotation-question.svg
   
 ---
@@ -51,13 +51,13 @@ guide_featured_list:
 
 Liquid acts as a bridge between your message and your user data. When you send a message, Braze scans the text for Liquid syntax. When it finds Liquid, it pulls the relevant data for that specific user and replaces the code with the actual value before the message is sent.
 
-For example, you can retrieve a custom attribute from a user profile that is an integer data type and round that value to the nearest whole number. For more on Liquid syntax and usage, refer to [**Supported personalization tags**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
+For example, you can retrieve a custom attribute from a user profile that is an integer data type and round that value to the nearest whole number. For more on Liquid syntax and usage, refer to [**Supported personalization tags**]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/).
 
 Liquid templating language supports the use of objects, tags, and filters.
 
-- [**Objects**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) allow you to insert personalized attributes into your messages.
-- [**Tags**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) allow you to insert data into messaging and use conditional logic to send messages if certain conditions are met. For example, you can use tags to include intelligent logic, such as "if" statements, in your campaigns.
-- [**Filters**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) allow you to reformat personalized attributes and dynamic content. For example, you could use the [`date` filter]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#date-filter) to convert a timestamp, such as *2016-09-07 08:43:50 UTC*, into a date, such as *September 7, 2016*.
+- [**Objects**]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/) allow you to insert personalized attributes into your messages.
+- [**Tags**]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/) allow you to insert data into messaging and use conditional logic to send messages if certain conditions are met. For example, you can use tags to include intelligent logic, such as "if" statements, in your campaigns.
+- [**Filters**]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/filters/) allow you to reformat personalized attributes and dynamic content. For example, you could use the [`date` filter]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/filters#date-filter) to convert a timestamp, such as *2016-09-07 08:43:50 UTC*, into a date, such as *September 7, 2016*.
 
 {% alert warning %}
 Braze currently doesn't support 100% of Shopify's Liquid, only certain portions which we have attempted to outline in our documentation. We highly recommend testing all messages using Liquid before sending them to reduce the risk of errors or using unsupported Liquid.
@@ -65,7 +65,7 @@ Braze currently doesn't support 100% of Shopify's Liquid, only certain portions 
 
 ### Liquid 5 support
 
-Braze supports Liquid up to and including **Liquid 5 from Shopify**. Liquid implementation supports syntax personalization tag types and whitespace control. For more information on specific tags, refer to [syntax tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#syntax-tags).
+Braze supports Liquid up to and including **Liquid 5 from Shopify**. Liquid implementation supports syntax personalization tag types and whitespace control. For more information on specific tags, refer to [syntax tags]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags#syntax-tags).
 
 The following new array and math filters are available for use in your Liquid as you build your messaging.
 - `at_least`
@@ -75,7 +75,7 @@ The following new array and math filters are available for use in your Liquid as
 - `sort_natural`
 - `where`
 
-Refer to [Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) for definitions.
+Refer to [Filters]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/filters/) for definitions.
 
 ### Liquid updates
 

@@ -30,7 +30,7 @@ Sort through the segments in the list by adjusting the following filters:
 - **Estimated Size:** Approximate range of how many users are in the segments
 - **Tags:** Tags associated with the segments
 - **Teams:** Teams associated with the segments
-- **Advanced Tracking Segments Only:** View only the segments that have [Analytics Tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) enabled.
+- **Advanced Tracking Segments Only:** View only the segments that have [Analytics Tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) enabled.
 
 ### Columns
 
@@ -53,7 +53,7 @@ Selecting **Show Starred Only** narrows your view to the segments that were star
 Go to a segment's **Messaging Use** section for an overview of where the segment is being used, such as within other segments, campaigns, and Canvases.
 
 {% alert note %}
-To prevent loops of segments referencing one another, segments that use the **Segment Membership** filter can't be referenced by other segments. For more details, refer to [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+To prevent loops of segments referencing one another, segments that use the **Segment Membership** filter can't be referenced by other segments. For more details, refer to [Segmentation Filters]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters/).
 {% endalert %}
 
 ## Managing specific segments

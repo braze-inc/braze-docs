@@ -13,22 +13,22 @@ tool: Campaigns
 guide_featured_title: "Delivery types"
 guide_featured_list:
   - name: Scheduled delivery
-    link: /docs/user_guide/messaging/campaigns/building_campaigns/delivery_types/scheduled_delivery/
+    link: /docs/user_guide/messaging/campaigns/building_campaigns/delivery_types/scheduled_delivery
     image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Action-based delivery
-    link: /docs/user_guide/messaging/campaigns/building_campaigns/delivery_types/triggered_delivery/
+    link: /docs/user_guide/messaging/campaigns/building_campaigns/delivery_types/triggered_delivery
     image: /assets/img/braze_icons/table.svg
   - name: API-triggered delivery
-    link: /docs/user_guide/messaging/campaigns/building_campaigns/delivery_types/api_triggered_delivery/
+    link: /docs/user_guide/messaging/campaigns/building_campaigns/delivery_types/api_triggered_delivery
     image: /assets/img/braze_icons/annotation-alert.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
   - name: Re-eligibility for campaigns
-    link: /docs/user_guide/messaging/messaging_fundamentals/re_eligibility/
+    link: /docs/user_guide/messaging/messaging_fundamentals/re_eligibility
     image: /assets/img/braze_icons/clock.svg
   - name: Campaign calendar
-    link: /docs/user_guide/messaging/campaigns/building_campaigns/delivery_types/campaign_calendar/
+    link: /docs/user_guide/messaging/campaigns/building_campaigns/delivery_types/campaign_calendar
     image: /assets/img/braze_icons/calendar-check-02.svg
 ---
 

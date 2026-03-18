@@ -9,7 +9,7 @@ description: "This article provides an overview of anonymous users and user alia
 
 # Anonymous users
 
-> Users who visit your website or application without logging in, like a guest visitor, are recognized as anonymous users. These users don't have `external_ids`, which are used to update user profiles with the Braze API, but they still have [data points]({{site.baseurl}}/user_guide/data/data_points/) assigned to them and can be targeted in your segments.
+> Users who visit your website or application without logging in, like a guest visitor, are recognized as anonymous users. These users don't have `external_ids`, which are used to update user profiles with the Braze API, but they still have [data points]({{site.baseurl}}/user_guide/data/infrastructure/data_points/) assigned to them and can be targeted in your segments.
 
 When an anonymous user visits your website or application, the Braze SDK creates and assigns them to an “anonymous” user profile. While the user browses, the SDK automatically captures data for their anonymous user profile, such as usage information, device information, and more if you’ve set up custom attributes and custom events.
 
@@ -31,7 +31,7 @@ You can do the following with captured anonymous users:
 
 ## Merging anonymous users  
 
-Sometimes anonymous user profiles are duplicates that have the same phone number or email address as other user profiles. One of the duplicates may even be an identified user profile. These duplicates can be merged into one user profile by using the [POST: Merge Users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) or one of the merge tools on the Braze platform, such as [rules-based merging]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#rules-based-merging).
+Sometimes anonymous user profiles are duplicates that have the same phone number or email address as other user profiles. One of the duplicates may even be an identified user profile. These duplicates can be merged into one user profile by using the [POST: Merge Users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) or one of the merge tools on the Braze platform, such as [rules-based merging]({{site.baseurl}}/user_guide/audience/manage_audience/merge_duplicate_users#rules-based-merging).
 
 ## Use cases
 

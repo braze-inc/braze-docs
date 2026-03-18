@@ -28,7 +28,7 @@ By default, Braze sets the Push TTL to the maximum for each push messaging servi
 | Huawei (HMS) | 15 days |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-These settings apply globally to all push campaigns unless a different TTL is set for a specific message. To adjust a message's TTL, see [Advanced campaign settings]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/advanced_campaign_settings/#ttl).
+These settings apply globally to all push campaigns unless a different TTL is set for a specific message. To adjust a message's TTL, see [Advanced campaign settings]({{site.baseurl}}/user_guide/channels/push/platform_specific_resources/android/advanced_campaign_settings#ttl).
 
 To set a different default Push TTL:
 
@@ -64,5 +64,5 @@ This setting applies globally to all new Android push campaigns unless a differe
 If FCM detects that your app frequently sends high-priority messages that don't result in user-visible notifications or user engagement, those messages may be automatically deprioritized to normal priority.
 {% endalert %}
 
-For more detailed information about FCM priority levels and deprioritization, see [Advanced campaign settings]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/advanced_campaign_settings/#fcm-priority).
+For more detailed information about FCM priority levels and deprioritization, see [Advanced campaign settings]({{site.baseurl}}/user_guide/channels/push/platform_specific_resources/android/advanced_campaign_settings#fcm-priority).
 

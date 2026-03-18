@@ -24,7 +24,7 @@ To use Experiment Paths, your Canvas must include conversion events. While you c
 
 Experiment Paths are best suited for testing delivery, cadence, message copy, and channel combinations.
 
-- **Delivery:** Compare the results between messages sent with different time [delays]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/delay_step/), based on user actions ([Action Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/action_paths/)), and using [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/#canvas).<br><br>
+- **Delivery:** Compare the results between messages sent with different time [delays]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/delay_step/), based on user actions ([Action Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/action_paths/)), and using [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing#canvas).<br><br>
 - **Cadence:** Test multiple messaging flows over a specific period. For example, you could test two different onboarding cadences:
     - Cadence 1: Send 2 messages in the user's first 2 weeks
     - Cadence 2: Send 3 messages in the user's first 2 weeks
@@ -89,7 +89,7 @@ Take advantage of Winning Paths to track performance over a period of time and t
 
 Experiment Paths record users who enter each step and convert while in the assigned path. This tracks all conversion events specified in the Canvas setup. On the **Additional Settings** tab, enter how many days (between 1 and 30) you want this experiment to track conversions. The time window you specify here determines how long conversion events (chosen in the Canvas setup) are tracked for the experiment. The per-event conversion windows specified in the Canvas setup don't apply to this step's tracking and are replaced by this conversion window.
 
-The conversion window starts when the user enters the Experiment Path step, not when a downstream message sends. If a path includes delays—such as a Delay step or [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)—those delays consume part of the conversion window.
+The conversion window starts when the user enters the Experiment Path step, not when a downstream message sends. If a path includes delays—such as a Delay step or [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/)—those delays consume part of the conversion window.
 
 {% alert important %}
 If you're using Intelligent Timing on a Message step within an experiment path, the time between experiment entry and the actual message send reduces the effective conversion window for that path. For example, if your experiment has a 5-day conversion window and Intelligent Timing delays the message by 2 days, users on that path only have 3 days after receiving the message to convert within the experiment window—even though the Message step's own analytics track conversions from the time of message send.<br><br>For cleaner experiment analytics, place any delays (such as Delay steps) **before** the Experiment Path step rather than within an experiment path. This way, all paths start from the same point and delays don't consume any of the conversion window.

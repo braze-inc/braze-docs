@@ -76,7 +76,7 @@ As a best practice, format your row and column properties before formatting any 
 
 #### Background image
 
-You can add a background image to a row in the **Row properties** panel. Toggle on **Background image**, and then provide an image URL or select an image from the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). Finally, configure your alt text, size, position, and whether the image repeats to create patterns across the row.
+You can add a background image to a row in the **Row properties** panel. Toggle on **Background image**, and then provide an image URL or select an image from the [media library]({{site.baseurl}}/user_guide/messaging/design_and_edit/media_library/). Finally, configure your alt text, size, position, and whether the image repeats to create patterns across the row.
 
 ![A row background image of a pizza that has a horizontal repeat pattern.]({% image_buster /assets/img_archive/background_row.png %})
 
@@ -118,7 +118,7 @@ If you're having trouble selecting a certain block, you can use the up arrow in 
 
 ![Icon to add Liquid personalization.]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
 
-To add [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) into your in-app message, select <i class="fa-solid fa-circle-plus"></i> **Add Personalization** from the editor toolbar. Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more.
+To add [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/) into your in-app message, select <i class="fa-solid fa-circle-plus"></i> **Add Personalization** from the editor toolbar. Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more.
 
 Next, take your generated Liquid snippet and insert it into your message. After designing and building your in-app message, go to **Preview & Test** to preview your message.
 

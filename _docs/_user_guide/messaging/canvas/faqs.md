@@ -20,7 +20,7 @@ You can add up to 200 steps in a Canvas.
 
 We enqueue a job for each step—they run at around the same time, and one of them "wins". In practice, this may be sorted somewhat evenly, but it's likely to have at least a slight bias toward the step that was created first. 
 
-Moreover, we can't make any guarantees about exactly what that distribution will look like. If you want an even split, add a [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) filter.
+Moreover, we can't make any guarantees about exactly what that distribution will look like. If you want an even split, add a [Random Bucket Number]({{site.baseurl}}/user_guide/messaging/ab_testing/concepts/random_bucket_numbers/) filter.
 
 ### Can I launch a Canvas with disconnected steps?
 
@@ -56,7 +56,7 @@ Stopping a Canvas won't cause users who are waiting to receive messages to exit 
 
 ### When does an exception event trigger?
 
-Exception events only trigger while the user is waiting to receive the Canvas component it's associated with. If a user performs an action in advance, the exception event will not trigger. If you want to exclude users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) instead.
+Exception events only trigger while the user is waiting to receive the Canvas component it's associated with. If a user performs an action in advance, the exception event will not trigger. If you want to exclude users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters/) instead.
 
 ### How does editing a Canvas affect users already in the Canvas?
 
@@ -107,11 +107,11 @@ There is a one-step Canvas with Quiet Hours enabled:
 
 ### What's the difference between a component and a step?
 
-A [component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
+A [component]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/about/) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
 
 ### How can I view analytics for each of my Canvas components?
 
-To view the analytics of a Canvas component, go to your Canvas and scroll down the **Canvas Details** page. Here, you can view each component's analytics. Check out [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) for more details.
+To view the analytics of a Canvas component, go to your Canvas and scroll down the **Canvas Details** page. Here, you can view each component's analytics. Check out [Canvas analytics]({{site.baseurl}}/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) for more details.
 
 ### When looking at the number of unique users, is Canvas analytics or the segmenter more accurate?
 
@@ -119,11 +119,11 @@ The segmenter is a more accurate statistic for unique user data versus Canvas or
 
 ### Why does the number of users entering a Canvas not match the expected number?
 
-The number of users entering a Canvas may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the Canvas if not part of your selected audience before any trigger actions are evaluated.
+The number of users entering a Canvas may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/attribute_triggers#change-custom-attribute-value) trigger). This will cause users to drop out of the Canvas if not part of your selected audience before any trigger actions are evaluated.
 
 ### What happens to anonymous users during their Canvas journey?
 
-While anonymous users can enter and exit Canvases, their actions aren't associated with a specific user profile until they're identified, so their interactions may not be fully tracked in your analytics. You can use the [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) to generate a report of these metrics.
+While anonymous users can enter and exit Canvases, their actions aren't associated with a specific user profile until they're identified, so their interactions may not be fully tracked in your analytics. You can use the [Query Builder]({{site.baseurl}}/user_guide/analytics/reports/query_builder/) to generate a report of these metrics.
 
 ### Why is my Canvas step conversion rate not equal to my Canvas variant total conversion rate?
 
@@ -139,7 +139,7 @@ For further assistance with Canvas troubleshooting, be sure to contact Braze Sup
 
 ### What is the difference between "Has not entered Canvas variation" and "Is not in Canvas control group"?
 
-Refer to [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) for full filter definitions.
+Refer to [Segmentation Filters]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters/) for full filter definitions.
 
 #### Has not entered Canvas variation
 
@@ -169,11 +169,11 @@ Previously, each full step included information such as delay and schedule setti
 
 #### Message component advancement
 
-[Message components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) advance all users who enter the step. There is no requirement to specify message advancement behavior, making configuring the overall step simpler. If you want to implement the **Advance when message sent** option, add a separate Audience Paths to filter users that didn't receive the previous step.  
+[Message components]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/) advance all users who enter the step. There is no requirement to specify message advancement behavior, making configuring the overall step simpler. If you want to implement the **Advance when message sent** option, add a separate Audience Paths to filter users that didn't receive the previous step.  
 
 #### Delay "in" behavior
 
-[Delay components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) will wait the entire delay time before proceeding to the next step. 
+[Delay components]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/delay_step/) will wait the entire delay time before proceeding to the next step. 
 
 Let's say on April 12 we have a Delay component where the delay is set to send your user to the next step in one day at 2 pm. A user enters the component at 2:01 pm on April 13. 
 - For the original workflow, the user would proceed to the next step at 2 pm on April 14, which is less than one day from the entry time. 
@@ -181,7 +181,7 @@ Let's say on April 12 we have a Delay component where the delay is set to send y
 
 #### Intelligent Timing behavior
 
-Since [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) is stored in the Message component, delays will be applied prior to Intelligent Timing calculations. This means that, depending on when a user enters the component, they may receive the message later than they would in a Canvas built with the original Canvas workflow.
+Since [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/) is stored in the Message component, delays will be applied prior to Intelligent Timing calculations. This means that, depending on when a user enters the component, they may receive the message later than they would in a Canvas built with the original Canvas workflow.
 
 Let's say your delay is set for 2 days, Intelligent Timing is turned on, and it has determined that the best time to send your message is 2 pm. A user enters the Delay step at 2:01 pm.
 - **Current workflow:** It will take 48 hours for the delay to pass, so the user receives the message on the third day at 2 pm.

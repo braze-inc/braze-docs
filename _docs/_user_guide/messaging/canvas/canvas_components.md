@@ -14,40 +14,40 @@ tool: Canvas
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Action Paths step  
-    link: /docs/user_guide/messaging/canvas/canvas_components/action_paths/
+    link: /docs/user_guide/messaging/canvas/canvas_components/action_paths
     image: /assets/img/braze_icons/zap.svg
   - name: Agent step
-    link: /docs/user_guide/messaging/canvas/canvas_components/agent_step/
+    link: /docs/user_guide/messaging/canvas/canvas_components/agent_step
     image: /assets/img/braze_icons/briefcase-01.svg
   - name: Audience Paths step
-    link: /docs/user_guide/messaging/canvas/canvas_components/audience_paths/
+    link: /docs/user_guide/messaging/canvas/canvas_components/audience_paths
     image: /assets/img/braze_icons/users-01.svg 
   - name: Audience Sync step
     link: /docs/partners/canvas_audience_sync/
     image: /assets/img/braze_icons/refresh-ccw-02.svg
   - name: Content Optimizer step
-    link: /docs/user_guide/messaging/canvas/canvas_components/content_optimizer_step/
+    link: /docs/user_guide/messaging/canvas/canvas_components/content_optimizer_step
     image: /assets/img/braze_icons/target-04.svg
   - name: Context step
-    link: /docs/user_guide/messaging/canvas/canvas_components/context/
+    link: /docs/user_guide/messaging/canvas/canvas_components/context
     image: /assets/img/braze_icons/file-search-02.svg
   - name: Decision Split step
-    link: /docs/user_guide/messaging/canvas/canvas_components/decision_split/
+    link: /docs/user_guide/messaging/canvas/canvas_components/decision_split
     image: /assets/img/braze_icons/dataflow-04.svg
   - name: Delay step
-    link: /docs/user_guide/messaging/canvas/canvas_components/delay_step/
+    link: /docs/user_guide/messaging/canvas/canvas_components/delay_step
     image: /assets/img/braze_icons/clock-stopwatch.svg
   - name: Experiment Paths step
-    link: /docs/user_guide/messaging/canvas/canvas_components/experiment_step/
+    link: /docs/user_guide/messaging/canvas/canvas_components/experiment_step
     image: /assets/img/braze_icons/columns-01.svg
   - name: Feature flags
-    link: /docs/user_guide/messaging/canvas/canvas_components/feature_flags/
+    link: /docs/user_guide/messaging/canvas/canvas_components/feature_flags
     image: /assets/img/braze_icons/dataflow-03.svg
   - name: Message step
-    link: /docs/user_guide/messaging/canvas/canvas_components/message_step/
+    link: /docs/user_guide/messaging/canvas/canvas_components/message_step
     image: /assets/img/braze_icons/message-square-02.svg
   - name: User Update step
-    link: /docs/user_guide/messaging/canvas/canvas_components/user_update/
+    link: /docs/user_guide/messaging/canvas/canvas_components/user_update
     image: /assets/img/braze_icons/user-check-01.svg
 ---
 

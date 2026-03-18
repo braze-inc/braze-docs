@@ -18,7 +18,7 @@ The WhatsApp Template Builder is currently in early access. Contact your Braze a
 
 ## Prerequisites
 
-Before creating a WhatsApp template in Braze, complete the [WhatsApp setup]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/).
+Before creating a WhatsApp template in Braze, complete the [WhatsApp setup]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/).
 
 ## Create a template
 
@@ -110,7 +110,7 @@ After Meta approves your template, you can use it in a WhatsApp campaign or Canv
 4. Update any variable content or personalization as needed. Fields locked by Meta (shown in gray) cannot be edited. To change locked content, you must edit and resubmit the template for approval.  
 5. Use the **Test** tab to preview the message, update body variables, and confirm the message looks as expected before launch.
 
-For more information about building WhatsApp campaigns, see [Create a WhatsApp message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/).
+For more information about building WhatsApp campaigns, see [Create a WhatsApp message]({{site.baseurl}}/user_guide/channels/whatsapp/create_a_whatsapp_message/).
 
 ## Frequently asked questions
 

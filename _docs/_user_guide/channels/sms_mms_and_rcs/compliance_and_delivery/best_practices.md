@@ -48,7 +48,7 @@ Traffic pumping is a form of fraud that occurs when a bad actor uses an online f
 
 * Premium rate numbers supporting this kind of scam are often, but not always, set up in countries outside of your normal sending geographies.
 * Unusual spikes in sending of messages from online forms might indicate traffic pumping.
-    * We recommend setting up [campaign alerts]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_alerts/) to cap and notify if an implausibly high number of messages are sent.
+    * We recommend setting up [campaign alerts]({{site.baseurl}}/user_guide/messaging/campaigns/manage_campaigns/campaign_alerts/) to cap and notify if an implausibly high number of messages are sent.
 * Incomplete online forms can indicate programmatic form filling.
 * When building online forms, we recommend setting rules to ensure forms are fully complete and use tools such as CAPTCHA to minimise risk.
 

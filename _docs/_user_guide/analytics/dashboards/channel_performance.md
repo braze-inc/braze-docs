@@ -65,8 +65,8 @@ The “Other” category includes any user string that cannot be identified as d
 
 To better understand what is in this "Other" category, you can extract the user agents using either of these options:
 
-1. [Currents]({{site.baseurl}}/user_guide/data/braze_currents) will send you the exact user agent string that was retrieved from your users' devices.
-2. Leverage our [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder) to use SQL or our [AI Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) to view the user agents.
+1. [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/) will send you the exact user agent string that was retrieved from your users' devices.
+2. Leverage our [Query Builder]({{site.baseurl}}/user_guide/analytics/reports/query_builder/) to use SQL or our [AI Query Builder]({{site.baseurl}}/user_guide/analytics/reports/query_builder#generating-sql-with-the-ai-query-builder) to view the user agents.
 
 ![Engagement by Device report that shows the number of clicks for mobile, desktop, tablet, and other devices. The most number of clicks occurs on mobile devices.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 

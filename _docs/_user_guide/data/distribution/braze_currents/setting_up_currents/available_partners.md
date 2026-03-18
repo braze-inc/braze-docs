@@ -23,7 +23,7 @@ Data warehouse storage offers a collection source for all the information stream
 * [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/)
 * [Microsoft Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/)
 
-We're so confident in the power of Currents and data warehouses together, [we use it ourselves]({{site.baseurl}}/user_guide/data/braze_currents/how_braze_uses_currents/)!
+We're so confident in the power of Currents and data warehouses together, [we use it ourselves]({{site.baseurl}}/user_guide/data/distribution/braze_currents/use_cases/how_braze_uses_currents/)!
 
 ## Customer data
 

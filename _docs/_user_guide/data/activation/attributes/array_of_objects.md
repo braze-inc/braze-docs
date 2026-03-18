@@ -26,7 +26,7 @@ When a nested custom attribute in your request contains any invalid values (such
 {% endalert %}
 
 {% alert tip %}
-For more information on using arrays of objects for user attributes objects, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
+For more information on using arrays of objects for user attributes objects, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/#migrating-push-tokens).
 {% endalert %}
 
 ## API example
@@ -208,7 +208,7 @@ When including fields like timestamps in an array of objects, use the `$time` fo
 ```
 
 {% alert tip %}
-For more information, see [Nested Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
+For more information, see [Nested Custom Attributes]({{site.baseurl}}/user_guide/data/activation/attributes/nested_custom_attribute_support/).
 {% endalert %}
 
 ## SDK example

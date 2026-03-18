@@ -10,21 +10,21 @@ description: "This landing page lists articles about the Braze data product call
 tool: currents
 search_rank: 9
 guide_top_header: "Braze Currents"
-guide_top_text: "Understanding the impact of your engagement strategy is critical in informing your iteration and optimization of your communications with your users. To tightly integrate this valuable engagement data with the rest of your operations and help amplify your investment in data science, the Braze platform tracks a wide array of event data from your integration for analysis, retargeting, and other use cases elsewhere within your own systems. <br> <br>The Currents tool is a real-time data stream of your engagement events that is the most robust, yet granular export out of the Braze platform. It provides you data in an Avro file type to one of our many <a href='/docs/user_guide/data/distribution/braze_currents/setting_up_currents/available_partners/'>data partners</a>, empowering you to use the unique and valuable data Braze creates to power your Business Intelligence (BI) and analytics efforts in other best-in-class platforms."
+guide_top_text: "Understanding the impact of your engagement strategy is critical in informing your iteration and optimization of your communications with your users. To tightly integrate this valuable engagement data with the rest of your operations and help amplify your investment in data science, the Braze platform tracks a wide array of event data from your integration for analysis, retargeting, and other use cases elsewhere within your own systems. <br> <br>The Currents tool is a real-time data stream of your engagement events that is the most robust, yet granular export out of the Braze platform. It provides you data in an Avro file type to one of our many <a href='/docs/user_guide/data/distribution/braze_currents/setting_up_currents/available_partners'>data partners</a>, empowering you to use the unique and valuable data Braze creates to power your Business Intelligence (BI) and analytics efforts in other best-in-class platforms."
 
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Set up Currents
-    link: /docs/user_guide/data/distribution/braze_currents/setting_up_currents/
+    link: /docs/user_guide/data/distribution/braze_currents/setting_up_currents
     image: /assets/img/braze_icons/building-01.svg
   - name: Currents event glossary
-    link: /docs/user_guide/data/distribution/braze_currents/event_glossary/
+    link: /docs/user_guide/data/distribution/braze_currents/event_glossary
     image: /assets/img/braze_icons/data.svg
   - name: Use cases
-    link: /docs/user_guide/data/distribution/braze_currents/use_cases/
+    link: /docs/user_guide/data/distribution/braze_currents/use_cases
     image: /assets/img/braze_icons/expand-05.svg
   - name: FAQ
-    link: /docs/user_guide/data/distribution/braze_currents/faq/
+    link: /docs/user_guide/data/distribution/braze_currents/faq
     image: /assets/img/braze_icons/annotation-question.svg
 ---
 

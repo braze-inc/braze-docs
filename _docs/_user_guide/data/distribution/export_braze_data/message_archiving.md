@@ -16,7 +16,7 @@ Message archiving is available as an add-on feature. To get started with message
 
 ## How it works
 
-When this feature is turned on, Braze writes a gzipped JSON file for each message sent to a user through your selected channels (email, SMS/MMS, or push). Braze writes these files to your default data export destination. This includes all campaign types for each channel, such as transactional email campaigns sent through the [Transactional Email API]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign).
+When this feature is turned on, Braze writes a gzipped JSON file for each message sent to a user through your selected channels (email, SMS/MMS, or push). Braze writes these files to your default data export destination. This includes all campaign types for each channel, such as transactional email campaigns sent through the [Transactional Email API]({{site.baseurl}}/user_guide/channels/transactional_email/create_a_transactional_email/).
 
 This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (for example, {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This allows you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements.
 

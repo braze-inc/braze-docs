@@ -12,9 +12,9 @@ description: "Set up automated notifications triggered by catalog data changes, 
 guide_featured_title: "Section articles"
 guide_featured_list:
 - name: Back-in-stock notifications
-  link: /docs/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications/
+  link: /docs/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications
   image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Price drop notifications
-  link: /docs/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications/
+  link: /docs/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications
   image: /assets/img/braze_icons/sale-03.svg
 ---

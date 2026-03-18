@@ -20,9 +20,9 @@ As a convenience, a summary of supported personalization tags are provided. For 
 | -------------  | ---- |
 | Standard (Default) Attributes | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` <br> `{{subscribed_state.${email_global}}}` <br> `{{subscribed_state.${subscription_group_id}}}` |
 | Device Attributes | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
-| <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions'>Email List Attributes</a> | `{{${set_user_to_unsubscribed_url}}}` <br>This tag replaces the previous `{{${unsubscribe_url}}}` tag. While the older tag will still work in previously created emails, we recommend that you use the newer tag instead. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
-| <a href='/docs/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/#trigger-messages'>SMS Attributes</a> | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
-| <a href='/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/'>WhatsApp Attributes</a> | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` <br> `{{whats_app.${inbound_flow_response}}}` <br> `{{whats_app.${inbound_product_id}}}` <br> `{{whats_app.${inbound_catalog_id}}}` |
+| <a href='/docs/user_guide/channels/email/subscriptions#managing-user-subscriptions'>Email List Attributes</a> | `{{${set_user_to_unsubscribed_url}}}` <br>This tag replaces the previous `{{${unsubscribe_url}}}` tag. While the older tag will still work in previously created emails, we recommend that you use the newer tag instead. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
+| <a href='/docs/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting#trigger-messages'>SMS Attributes</a> | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
+| <a href='/docs/user_guide/channels/whatsapp/message_processing/messaging_users'>WhatsApp Attributes</a> | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` <br> `{{whats_app.${inbound_flow_response}}}` <br> `{{whats_app.${inbound_product_id}}}` <br> `{{whats_app.${inbound_catalog_id}}}` |
 | Campaign Attributes and Canvas Step Attributes | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
 | Canvas Attributes | `{{canvas.${name}}}` <br> `{{canvas.${api_id}}}` <br> `{{canvas.${variant_name}}}` <br> `{{canvas.${variant_api_id}}}` |
 | Card Attributes | `{{card.${api_id}}}` <br> `{{card.${name}}}` |
@@ -120,7 +120,7 @@ Furthermore, for push notifications, it's possible that Braze won't be able to d
 
 ### Using conditional logic instead of a default value
 
-In some circumstances, you may opt to use [conditional logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/) instead of setting a default value. Conditional logic allows you to send messages that differ based on the value of a custom attribute. Additionally, you can use conditional logic to [abort messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/) to customers with null or blank attribute values. 
+In some circumstances, you may opt to use [conditional logic]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/conditional_logic/) instead of setting a default value. Conditional logic allows you to send messages that differ based on the value of a custom attribute. Additionally, you can use conditional logic to [abort messages]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages/) to customers with null or blank attribute values. 
 
 #### Use case
 
@@ -154,7 +154,7 @@ In this case, there are two options that may work better than setting a default 
    {% endif %}
    ```
 
-In this use case, a user with a blank or null first name will get the message "Thanks for downloading". You should include a [default value]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/) for first name to make sure that your customer doesn't see Liquid in the event of a mistake.
+In this use case, a user with a blank or null first name will get the message "Thanks for downloading". You should include a [default value]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/setting_default_values/) for first name to make sure that your customer doesn't see Liquid in the event of a mistake.
 
 {% endraw %}
 
@@ -226,7 +226,7 @@ With [whitespace control](https://shopify.github.io/liquid/basics/whitespace/), 
 
 ## HTTP status codes {#http-personalization}
 
-You can utilize the HTTP status from a [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
+You can utilize the HTTP status from a [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/) call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
 
 ```html
 {% connected_content https://example.com/api/endpoint :save connected %}

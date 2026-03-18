@@ -17,7 +17,7 @@ This type of email usually means there's an issue with your CDI setup. Here are 
 
 ### CDI can't access the data warehouse or table using your credentials
 
-This could mean the credentials in CDI are incorrect or are misconfigured on the data warehouse. For more information, refer to [Data Warehouse Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/).
+This could mean the credentials in CDI are incorrect or are misconfigured on the data warehouse. For more information, refer to [Data Warehouse Integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/).
 
 ### The table cannot be found
 
@@ -41,7 +41,7 @@ Test Connection is running on your data warehouse, so increasing warehouse capac
 
 ### Error connecting to Snowflake instance: Incoming request with IP is not allowed to access Snowflake
 
-Try adding the official Braze IPs to your IP allowlist. For more information, refer to [Data Warehouse Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/), or allow the relevant IPs:
+Try adding the official Braze IPs to your IP allowlist. For more information, refer to [Data Warehouse Integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/), or allow the relevant IPs:
 
 {% multi_lang_include data_centers.md datacenters='ips' %}
 
@@ -142,7 +142,7 @@ CDI uses `UPDATED_AT` to decide what data is new. After a future `UPDATED_AT` is
 
 ## Why doesn't "Rows Synced" match the number in my warehouse?
 
-CDI uses `UPDATED_AT` to decide which records to pick up during a sync. Check out [this illustration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) to see how it works. At the beginning of a sync run, CDI queries your warehouse to get all records with `UPDATED_AT` later than the previously processed `UPDATED_AT` value. Records at the exact boundary timestamp may also be re-synced if new rows share that timestamp. Any record picked up at the time when the query executes is synced into Braze. Here are common cases when a record might not be synced:
+CDI uses `UPDATED_AT` to decide which records to pick up during a sync. Check out [this illustration]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion#what-gets-synced) to see how it works. At the beginning of a sync run, CDI queries your warehouse to get all records with `UPDATED_AT` later than the previously processed `UPDATED_AT` value. Records at the exact boundary timestamp may also be re-synced if new rows share that timestamp. Any record picked up at the time when the query executes is synced into Braze. Here are common cases when a record might not be synced:
 
 - You're adding records to the table with an `UPDATED_AT` value that has already been processed.
 - You're updating record values after they have been processed by a sync, but leaving `UPDATED_AT` unchanged. 
@@ -178,4 +178,4 @@ Braze has the following measures in place for CDI:
 We recommend you and your team set up the following security measures on your side: 
 
 - Restrict credential access to the minimum required for CDI to operate. This is because we need to be able to run select (and count) on the specific tables and views.
-- Restrict the IPs that can access the tables to officially published [Braze IPs]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/.#step-1-set-up-tables-or-views).
+- Restrict the IPs that can access the tables to officially published [Braze IPs]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).

@@ -45,7 +45,7 @@ You can further configure the selected subscription groups by selecting the smar
 
 ![An example of a preference center with the options to subscribe to all messages, marketing, newsletter, and weekly emails, or to unsubscribe from all.]({% image_buster /assets/img/preference_center/preference_center3.png %}){: style="max-width:38%;"} ![]({% image_buster /assets/img/preference_center/preference_center4.png %}){: style="max-width:45%;"}
 
-The **Unsubscribe from all** button at the bottom of the template is non-removable and will [globally unsubscribe]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) the user from receiving any email messages.
+The **Unsubscribe from all** button at the bottom of the template is non-removable and will [globally unsubscribe]({{site.baseurl}}/user_guide/channels/email/subscriptions#subscription-states) the user from receiving any email messages.
 
 ## Step 4: Customize the preference center using the drag-and-drop editor
 
@@ -83,7 +83,7 @@ Blocks represent different types of content you can use in your message. Drag on
 
 ![Option to select blocks, including title, paragraph, button, image, and spacer.]({% image_buster /assets/img/preference_center/preference_center8.png %}){: style="max-width:45%;"}
 
-Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a styling panel for the selected content element. For more information, see [Editor block properties]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/).
+Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a styling panel for the selected content element. For more information, see [Editor block properties]({{site.baseurl}}/dnd/editor_blocks/).
 
 If you're using the Custom Code block in your preference center, inline frames may not generate in the custom code when delivered to your users.
 
@@ -112,7 +112,7 @@ To place a link to the preference center in your emails, copy the Liquid tag of 
 
 ![The Copy Liquid option in the row of a preference center.]({% image_buster /assets/img/preference_center/preference_center10.png %}){: style="max-width:75%;"}
 
-Add the Liquid tag to the desired place in your email, similar to how [unsubscribe URLs]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/#adding-a-custom-unsubscribe-link) are inserted.
+Add the Liquid tag to the desired place in your email, similar to how [unsubscribe URLs]({{site.baseurl}}/user_guide/channels/email/customize/custom_email_footer#adding-a-custom-unsubscribe-link) are inserted.
 
 ## Handling errors
 

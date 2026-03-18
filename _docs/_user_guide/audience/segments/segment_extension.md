@@ -15,7 +15,7 @@ Braze segmentation allows you to target users based on custom event or purchase 
 
 ## Why use Segment Extensions?
 
-Braze segments give you powerful targeting tools to create dynamic groups of users. For most use cases, this is enough to reach your audience effectively. Segment Extensions are designed for advanced use cases where you need to analyze behaviors from up to two years ago or apply complex logic—without compromising data retention or system performance. You can use [SQL]({{site.baseurl}}/user_guide/audience/segments/segment_extension/sql_segments/) queries (SQL Segment Extensions) or data from your own [data warehouse]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments) to refine your audience further.
+Braze segments give you powerful targeting tools to create dynamic groups of users. For most use cases, this is enough to reach your audience effectively. Segment Extensions are designed for advanced use cases where you need to analyze behaviors from up to two years ago or apply complex logic—without compromising data retention or system performance. You can use [SQL]({{site.baseurl}}/user_guide/audience/segments/segment_extension/sql_segments/) queries (SQL Segment Extensions) or data from your own [data warehouse]({{site.baseurl}}/user_guide/audience/segments/segment_extension/cdi_segments/) to refine your audience further.
 
 For example, Braze default segmentation will find users that fit specific criteria you define, such as identifying a user who recently purchased one of your products. Segment Extensions let you go deeper—like identifying users who bought a particular color of a specific product at least twice between 18 to 24 months ago. Segment Extensions are an enhancement, not a requirement. If you need more advanced filters or a longer lookback window, they're a great tool to help while keeping your data usage optimized.
 
@@ -80,14 +80,14 @@ For string properties, you can enter in multiple values at once. In the example 
 
 ![Segmenting based on datetime objects.]({% image_buster /assets/img/segment/property4.png %})
 
-We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
+We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data/activation/events/custom_events/nested_objects/).
 
 ![Segmenting based on nested event properties.]({% image_buster /assets/img/segment/nested_segment_extensions.png %})
 
 Segment Extensions rely on long term storage of event properties and don't have a time-stamped property storage limit. You can look back on event properties tracked within the past two years. Using event properties within Segment Extensions does not impact data point usage.
 
 {% alert note %}
-You don't need Segment Extensions to use event properties or nested custom attributes in your segment. Segment Extensions just extend the historic window used to create a default segment. You can create a real-time default [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) that uses event properties from the past 30 days or uses nested custom attributes. Similarly, you can [schedule your message]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) to trigger in real time based on an event property—no Segment Extension required. 
+You don't need Segment Extensions to use event properties or nested custom attributes in your segment. Segment Extensions just extend the historic window used to create a default segment. You can create a real-time default [segment]({{site.baseurl}}/user_guide/audience/segments/) that uses event properties from the past 30 days or uses nested custom attributes. Similarly, you can [schedule your message]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/) to trigger in real time based on an event property—no Segment Extension required. 
 {% endalert %}
 
 ### Step 4: Designate refresh settings (optional)
@@ -118,7 +118,7 @@ To view the Segment Extension criteria, select **View Extension Details** to sho
 
 ![Extension for "1 email click in the last 56 days".]({% image_buster /assets/img/segment/segment_extension8.png %}){: style="max-width:70%;"}
 
-Now you can proceed as usual with [creating your segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
+Now you can proceed as usual with [creating your segment]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/).
 
 ## Frequently asked questions
 

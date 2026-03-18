@@ -196,7 +196,7 @@ The cart event includes:
 - **Source:** Marked as "whats_app"
 - **Metadata:** Additional data like catalog ID and message text
 
-You can find additional Braze cart event information in [Types of eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events#types-of-ecommerce-recommended-events).
+You can find additional Braze cart event information in [Types of eCommerce recommended events]({{site.baseurl}}/user_guide/data/activation/events/recommended_events/ecommerce_events#types-of-ecommerce-recommended-events).
 
 ### Setting up a triggered response
 
@@ -248,8 +248,8 @@ Make an API call to your eCommerce system to generate a personalized checkout UR
 
 #### Setup
 
-1. Create a webhook campaign or Canvas step triggered by the [`ecommerce.cart_update`]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/?tab=ecommerce.cart_updated) eCommerce event, which will send the cart data to your eCommerce system.
-2. Create a WhatsApp campaign or Canvas Message step triggered by the same eCommerce event to send a WhatsApp response message with the cart URL to the user. Follow the direction in the subsequent response message to use [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content).
+1. Create a webhook campaign or Canvas step triggered by the [`ecommerce.cart_update`]({{site.baseurl}}/user_guide/data/activation/events/recommended_events/ecommerce_events?tab=ecommerce.cart_updated) eCommerce event, which will send the cart data to your eCommerce system.
+2. Create a WhatsApp campaign or Canvas Message step triggered by the same eCommerce event to send a WhatsApp response message with the cart URL to the user. Follow the direction in the subsequent response message to use [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/).
 
 ![Diagram showing the checkout experience workflow for a Connected Content call: Meta sends an order received message to Braze, which has back-and-forth calls with an eCommerce platform, then sends a WhatsApp message.]({% image_buster /assets/img/whatsapp/connected_content_checkout.png %})
 

@@ -10,7 +10,7 @@ search_rank: 2
 
 > This article shows how you can use a variety of user attributes to dynamically insert personal information into your messaging.
 
-Liquid is an open-source template language developed by Shopify and written in Ruby. You can use it in Braze to pull user profile data into your messages and customize that data. For example, you can use Liquid tags to create conditional messages, such as sending different offers based on a user's subscription anniversary date. Additionally, filters can manipulate data, like formatting a user's registration date from a timestamp into a more readable format, such as "January 15, 2022." For further details on Liquid syntax and its capabilities, refer to [Supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
+Liquid is an open-source template language developed by Shopify and written in Ruby. You can use it in Braze to pull user profile data into your messages and customize that data. For example, you can use Liquid tags to create conditional messages, such as sending different offers based on a user's subscription anniversary date. Additionally, filters can manipulate data, like formatting a user's registration date from a timestamp into a more readable format, such as "January 15, 2022." For further details on Liquid syntax and its capabilities, refer to [Supported personalization tags]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/).
 
 ## How it works
 
@@ -44,14 +44,14 @@ HTML comments (`<!-- -->`) are removed before any Liquid is read, so Liquid tags
 
 The following values can be substituted into a message, depending on their availability:
 
-- [Basic user information]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) (for example, `first_name`, `last_name`, `email_address`)
-- [Custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)
-    - [Nested custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#liquid-templating)
-- [Custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
-- [Most recently used device information]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information)
-- [Target device information]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#targeted-device-information)
+- [Basic user information]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/) (for example, `first_name`, `last_name`, `email_address`)
+- [Custom attributes]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes/)
+    - [Nested custom attributes]({{site.baseurl}}/user_guide/data/activation/attributes/nested_custom_attribute_support#liquid-templating)
+- [Custom event properties]({{site.baseurl}}/user_guide/data/activation/events/custom_events/)
+- [Most recently used device information]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags#most-recently-used-device-information)
+- [Target device information]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags#targeted-device-information)
 
-You can also pull content directly from a web server through Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/).
+You can also pull content directly from a web server through Braze [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/).
 
 {% alert important %}
 Braze currently supports Liquid up to and including Liquid 5 from Shopify.
@@ -59,7 +59,7 @@ Braze currently supports Liquid up to and including Liquid 5 from Shopify.
 
 ## Using Liquid
 
-Using [Liquid tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/), you can elevate the quality of your messages by enriching them with a personal touch. 
+Using [Liquid tags]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/), you can elevate the quality of your messages by enriching them with a personal touch. 
 
 ### Liquid syntax
 

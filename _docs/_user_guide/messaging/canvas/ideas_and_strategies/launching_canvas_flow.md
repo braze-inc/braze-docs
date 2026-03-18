@@ -18,7 +18,7 @@ As you prepare to launch your Canvas, Braze recommends that you check your Canva
 
 ## Race conditions 
 
-Consider the [race conditions]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/) that may be occur before launching your Canvas. 
+Consider the [race conditions]({{site.baseurl}}/user_guide/messaging/ab_testing/concepts/race_conditions/) that may be occur before launching your Canvas. 
 
 To enter a Canvas, users must be in the entry audience before the entry schedule occurs regardless of whether the Canvas is scheduled, action-based, or API-triggered. 
 
@@ -34,11 +34,11 @@ Check out [Entry schedule types]({{site.baseurl}}/user_guide/messaging/canvas/cr
 
 In general, avoid configuring an action-based or API-triggered Canvas with the same trigger as the audience filter. For example, after a Canvas is launched, users who perform a specific action will be included in the entry audience, so there's no need to add the event as an audience filter. 
 
-For more details on available segmentation filters to target your audience, see [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+For more details on available segmentation filters to target your audience, see [Segmentation Filters]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters/).
 
 ### Batch multiple API requests
 
-Make your requests in the same API call, rather than multiple calls, to confirm that the user profile is created or updated first. Refer to [Using multiple endpoints]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#using-multiple-api-endpoints) for more examples.
+Make your requests in the same API call, rather than multiple calls, to confirm that the user profile is created or updated first. Refer to [Using multiple endpoints]({{site.baseurl}}/user_guide/messaging/ab_testing/concepts/race_conditions#using-multiple-api-endpoints) for more examples.
 
 ### Add a delay
 
@@ -65,23 +65,23 @@ There are four main components you can use to segment your users in a simple, ef
 
 ### Audience Paths
 
-Use [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) steps to segment users within the Canvas based on custom attributes, custom events, and previous message engagement data from user profiles.
+Use [Audience Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/audience_paths/) steps to segment users within the Canvas based on custom attributes, custom events, and previous message engagement data from user profiles.
 
 ### Decision Split
 
-The [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) step allows you to send your users to different user journey paths based on their answers to a polar question.
+The [Decision Split]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/decision_split/) step allows you to send your users to different user journey paths based on their answers to a polar question.
 
 ### Action Paths
 
-[Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) focus on segmenting users based on real-time behaviors such as custom events, purchase events, and custom attribute changes. 
+[Action Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/action_paths/) focus on segmenting users based on real-time behaviors such as custom events, purchase events, and custom attribute changes. 
 
 ### Experiment Paths
 
-Similar to Action Paths, you can leverage [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) steps in your Canvas to test multiple Canvas paths against each other, along with a control group. This tracks path performance, allowing you to make informed decisions when building your Canvas journey. 
+Similar to Action Paths, you can leverage [Experiment Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/experiment_step/) steps in your Canvas to test multiple Canvas paths against each other, along with a control group. This tracks path performance, allowing you to make informed decisions when building your Canvas journey. 
 
 ## Testing before launch
 
-After reviewing the finer details of your Canvas, check out [Sending test Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) for different methods you can leverage to test your Canvas with test users.
+After reviewing the finer details of your Canvas, check out [Sending test Canvases]({{site.baseurl}}/user_guide/messaging/canvas/testing_canvases/sending_test_canvases/) for different methods you can leverage to test your Canvas with test users.
 
 ## Launch checklist
 
@@ -118,7 +118,7 @@ If your Canvas isn't loading and won't progress, this can be caused when a previ
 
 **Check user availability for additional filters in your Canvas step**
 - Confirm that they performed the prerequisite custom event or purchase.
-- Check if there's a [race condition]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/), which impacts the messages users receive if they trigger multiple actions at the same time.
+- Check if there's a [race condition]({{site.baseurl}}/user_guide/messaging/ab_testing/concepts/race_conditions/), which impacts the messages users receive if they trigger multiple actions at the same time.
 - Make sure there aren't specific filters in the step that could have blocked users from receiving the message.
 - Search for conflicts between different steps within the same Canvas. For example, users who didn't receive the message might be stopped by a filter that requires the completion of another step on a different branch.
 - Confirm that users meet additional validation rules.

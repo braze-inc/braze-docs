@@ -21,7 +21,7 @@ After creating a catalog, you can further reference your catalog data by incorpo
 
 - You can create up to 30 selections per catalog.
 - You can add up to 10 filters per selection.
-- Selections are great for refining recommendations from Braze catalog data. If you're looking for inspiration, check out [About item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/) for example use cases.
+- Selections are great for refining recommendations from Braze catalog data. If you're looking for inspiration, check out [About item recommendations]({{site.baseurl}}/user_guide/brazeai/item_recommendations/) for example use cases.
 
 ## Creating a selection
 

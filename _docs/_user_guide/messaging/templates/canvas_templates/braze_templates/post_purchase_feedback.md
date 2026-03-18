@@ -17,7 +17,7 @@ This article will walk you through a use case for the **Post-Purchase Feedback**
 
 To successfully use this template, you'll need the following:
 
-- A [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) to reference for feedback survey results.
+- A [custom attribute]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes#managing-custom-attributes) to reference for feedback survey results.
 - A configured [Braze Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/) with the partners and audiences you use.
 
 ## Tailoring the template to your needs

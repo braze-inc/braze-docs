@@ -72,7 +72,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 
 {% alert tip %}
-To enter users into the [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) workflow when subscribing them through the REST API, set the `use_double_opt_in_logic` parameter to `true` in your request. If you omit this parameter, users are subscribed without receiving a double opt-in confirmation.
+To enter users into the [SMS double opt-in]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in/) workflow when subscribing them through the REST API, set the `use_double_opt_in_logic` parameter to `true` in your request. If you omit this parameter, users are subscribed without receiving a double opt-in confirmation.
 
 This parameter is supported by the following endpoints:<br><br>
 - [`/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)

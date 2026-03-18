@@ -36,7 +36,7 @@ With Audience Paths, you can:
 Users are evaluated against filters and segment membership **at the moment they reach the Audience Path step**—not when they entered the Canvas. After evaluation, they immediately progress to the matching path. When a user is placed in an audience group, they stay in that group even if their user profile changes afterward.
 
 {% alert important %}
-Audience Paths evaluate based on a user's current attributes, filters, and segment membership at the time of evaluation. They do not evaluate based on the specific event that triggered Canvas entry. To route users based on an action they perform (such as a custom event), use [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) instead.
+Audience Paths evaluate based on a user's current attributes, filters, and segment membership at the time of evaluation. They do not evaluate based on the specific event that triggered Canvas entry. To route users based on an action they perform (such as a custom event), use [Action Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/action_paths/) instead.
 {% endalert %}
 
 ### Allowing time for user evaluations
@@ -70,7 +70,7 @@ After the Audience Paths step is complete, each audience group will have a separ
 
 ### Testing audience groups
 
-After adding segments and filters to your audience, you can test if your audience groups are set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm they match the audience criteria.
+After adding segments and filters to your audience, you can test if your audience groups are set up as expected by [looking up a user]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/) to confirm they match the audience criteria.
 
 ![The "User Lookup" section.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
@@ -86,15 +86,15 @@ For example, let's say you wanted to send a group of users ads for new products.
 
 When users enter this Audience Paths component, they'll first be evaluated if they fall under the highest-ranked audience group: Audience Group 1 "Likes Big Brand Shoes". If so, they'll continue to the next component defined in your Canvas. If they don't "Like Big Brand Shoes", they will then be evaluated for the next audience group, Audience Group 2 "Likes Big Brand Bags", and will continue to the next step if the criteria are met. Lastly, users don't fall into the previous groups would fall into the "Everybody Else" group and also continue to the next Canvas step you define for that path.
 
-You can also see the performance of this step using [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/#performance-visualization).
+You can also see the performance of this step using [Canvas analytics]({{site.baseurl}}/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics#performance-visualization).
 
 ### Segmenting Audience Paths with random bucket numbers
 
-If your Canvas uses a [rate limit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) (such as limiting the total number of users who will receive the Canvas), Braze recommends that you don't use random bucket numbers to segment your Audience Paths. 
+If your Canvas uses a [rate limit]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/frequency_capping/) (such as limiting the total number of users who will receive the Canvas), Braze recommends that you don't use random bucket numbers to segment your Audience Paths. 
 
-A [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) is a user attribute that can be used to create uniformly distributed segments of random users. Braze uses the random bucket number to group users during the segmentation phase of Canvas entry, and each group is processed separately. Depending on which groups finish processing first, some users may be capped at entry due to the rate limit, which could cause an uneven distribution of users when they reach the Audience Paths step.
+A [random bucket number]({{site.baseurl}}/user_guide/messaging/ab_testing/concepts/random_bucket_numbers/) is a user attribute that can be used to create uniformly distributed segments of random users. Braze uses the random bucket number to group users during the segmentation phase of Canvas entry, and each group is processed separately. Depending on which groups finish processing first, some users may be capped at entry due to the rate limit, which could cause an uneven distribution of users when they reach the Audience Paths step.
 
-In this scenario, try using [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) instead.
+In this scenario, try using [Experiment Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/experiment_step/) instead.
 
 ### Using Intelligent Channel filter with Audience Paths
 

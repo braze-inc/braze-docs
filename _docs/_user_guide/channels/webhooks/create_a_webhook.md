@@ -32,7 +32,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 3. Name your campaign something clear and meaningful.
 4. (Optional) Add a description to describe how this campaign will be used.
 4. Add [teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) and [tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) as needed.
-   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
+   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reports/report_builder/), you can filter by particular tags.
 5. Add and name as many variants as you need for your campaign. You can choose different webhook templates for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/messaging/ab_testing/).
 
 {% alert tip %}
@@ -109,7 +109,7 @@ JSON key-value pairs allow you to easily write a request for an endpoint that ex
 
 ![Request body set to JSON key-value pairs.]({% image_buster /assets/img/webhook_json_1.png %})
 
-You can personalize your key-value pairs using Liquid, such as including any user attribute, [custom attribute]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices), or [event property]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) in your request. For example, you can include a customer's first name and email in your request. Be sure to include a [default value]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web) for each attribute.
+You can personalize your key-value pairs using Liquid, such as including any user attribute, [custom attribute]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices), or [event property]({{site.baseurl}}/user_guide/data/activation/events/custom_events/) in your request. For example, you can include a customer's first name and email in your request. Be sure to include a [default value]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web) for each attribute.
 
 ##### Raw text
 

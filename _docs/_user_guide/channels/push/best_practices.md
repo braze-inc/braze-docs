@@ -118,7 +118,7 @@ Although you may be reluctant to stop sending pushes to users who originally opt
 
 ## Set conversion events for app opens
 
-When assigning [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) to a push campaign, you can track app opens for a certain period after the campaign is received. Setting a conversion event for app opens provides different insight from the results statistics you normally receive after a push campaign.
+When assigning [conversion events]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/conversion_events/) to a push campaign, you can track app opens for a certain period after the campaign is received. Setting a conversion event for app opens provides different insight from the results statistics you normally receive after a push campaign.
 
 While all push campaign results break down a message's direct opens and opens (which includes both direct and [influenced opens]({{site.baseurl}}/user_guide/analytics/tracking/influenced_opens/)), conversion tracking will track any type of open, whether direct or influenced.
 

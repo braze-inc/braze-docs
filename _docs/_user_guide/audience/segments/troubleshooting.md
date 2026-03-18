@@ -72,7 +72,7 @@ Users can have multiple apps, so selecting a specific app in the **Apps Used** s
 
 Your filter options are related to the format (data type) that you're passing to Braze for your custom attribute. To review the data type that Braze is recognizing for your custom attributes, navigate to **Data Settings** > **Custom Attributes**.
 
-If your filter options have changed, this is an indication that your data is being passed to Braze in a different format (data type) than before. For detailed descriptions of different data types and their filtering options, refer to [custom attribute data types]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes#custom-attribute-data-types).
+If your filter options have changed, this is an indication that your data is being passed to Braze in a different format (data type) than before. For detailed descriptions of different data types and their filtering options, refer to [custom attribute data types]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes#custom-attribute-data-types).
 
 Keep in mind that changing the data type of a custom attribute in the dashboard will reject data that is sent to Braze in a different format.
 
@@ -88,7 +88,7 @@ If your campaign analytics count for *Message Sent* or *Unique Recipients* doesn
 
 ### User is assigned to two apps despite logging a session in only one app
 
-When creating a segment, you can target users that have [used specific apps]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform). A user needs to have had a session in a specific app to be assigned to that app; however, there are two scenarios where a user can still be assigned to a specific app without having logged sessions in the app. 
+When creating a segment, you can target users that have [used specific apps]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment#step-3-choose-your-app-or-platform). A user needs to have had a session in a specific app to be assigned to that app; however, there are two scenarios where a user can still be assigned to a specific app without having logged sessions in the app. 
 
 The first scenario is if the `app_id` field is populated when using the `/users/track` endpoint—specifically when using an [event]({{site.baseurl}}/api/objects_filters/event_object/) or [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/), such as in this example:
 

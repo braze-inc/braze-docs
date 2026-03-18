@@ -26,7 +26,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 2. Select **In-App Message**. Note that in-app messages aren't available in multichannel campaigns.
 3. Name your campaign something clear and meaningful.
 4. Add [Teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) and [Tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) as needed.
-   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
+   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reports/report_builder/), you can filter by particular tags.
 5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/messaging/ab_testing/).
 
 {% alert tip %}
@@ -145,21 +145,21 @@ These in-app messages are customizable to your needs.
 </thead>
 <tbody>
   <tr>
-    <td><a href='/docs/user_guide/channels/in_app_messages/customize/#custom-html-messages'>Custom HTML Message</a></td>
+    <td><a href='/docs/user_guide/channels/in_app_messages/customize#custom-html-messages'>Custom HTML Message</a></td>
     <td>Custom messages that perform as defined in your custom code (HTML, CSS, and/or JavaScript).</td>
     <td>N/A</td>
     <td>Must set <span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> initialization option to <code>true</code> for your in-app message to work.</td>
     <td>This is a good option if you want all the advantages of IAMs but need additional functionality or for the appearance to stay "on brand". You can alter every little detail of the message—font, color, shape, size, buttons, etc. <br><br>Example use cases include asking users for app feedback, email capture forms, or paginated messages</td>
   </tr>
   <tr>
-    <td><a href='/docs/user_guide/channels/in_app_messages/customize/#email-capture-form'>Email Capture Form</a></td>
+    <td><a href='/docs/user_guide/channels/in_app_messages/customize#email-capture-form'>Email Capture Form</a></td>
     <td>Typically used to capture the viewer's email.</td>
     <td>N/A</td>
     <td>Must set <span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> initialization option to <code>true</code> for your in-app message to work.</td>
     <td>When prompting users to submit their email address.</td>
   </tr>
   <tr>
-    <td><a href='/docs/user_guide/channels/in_app_messages/customize/#web-modal-css'>Web Modal with CSS</a></td>
+    <td><a href='/docs/user_guide/channels/in_app_messages/customize#web-modal-css'>Web Modal with CSS</a></td>
     <td>Modal messages for web with customizable CSS.</td>
     <td>
       <ul>
@@ -236,8 +236,8 @@ When your customer clicks on a button in your in-app message, the following acti
 | Redirect to Web URL | Open a non-native web page. |
 | [Deep Link into App]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) | Deep link into an existing screen in your app. |
 | Close Message | Closes the currently active message. |
-| Log Custom Event | Choose a [custom event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) to trigger. Can be used to display another in-app message or trigger additional messaging. |
-| Log Custom Attribute | Choose a [custom attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) to set for the current user. |
+| Log Custom Event | Choose a [custom event]({{site.baseurl}}/user_guide/data/activation/events/custom_events/) to trigger. Can be used to display another in-app message or trigger additional messaging. |
+| Log Custom Attribute | Choose a [custom attribute]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes/) to set for the current user. |
 | Request Push Permission | Shows the native push permission. Read more about [push priming]({{site.baseurl}}/user_guide/channels/push/best_practices/push_primer_messages/), as well as [best practices]({{site.baseurl}}/user_guide/channels/push/push_setup/push_subscription_states/#best-practices) for priming users for push. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

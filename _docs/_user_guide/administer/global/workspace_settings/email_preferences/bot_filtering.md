@@ -35,7 +35,7 @@ The following Braze metrics can be affected by bot clicks:
 - Heatmap
 - Certain segment filters
 
-[Braze Intelligence features]({{site.baseurl}}/user_guide/brazeai/intelligence) that leverage click data on top of our detection systems may be impacted. Turning on the setting has the potential to disrupt our detection systems temporarily, which may result in a decrease in the metric or input due to this exclusion of suspected bot clicks:
+[Braze Intelligence features]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/) that leverage click data on top of our detection systems may be impacted. Turning on the setting has the potential to disrupt our detection systems temporarily, which may result in a decrease in the metric or input due to this exclusion of suspected bot clicks:
 
 - Intelligent Selection
 - Intelligent Channel
@@ -52,15 +52,15 @@ Unsubscribes from suspected bot clicks will not be affected. Braze will continue
 
 ## Segmentation filters affected by bot filtering
 
-The following [segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) can be affected by bot filtering for email messages:
+The following [segmentation filters]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters/) can be affected by bot filtering for email messages:
 
-- [Clicked/Opened Campaign or Canvas With Tag]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-opened-campaign-or-canvas-with-tag)
-- [Clicked/Opened Step]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-opened-step)
-- [Clicked Alias in Campaign]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-alias-in-campaign)
-- [Clicked Alias in Canvas Step]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-alias-in-canvas-step)
-- [Clicked Alias in Any Campaign or Canvas Step]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-alias-in-any-campaign-or-canvas-step)
-- [Last Engaged with Message]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#last-engaged-with-message)
-- [Intelligent Channel]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#intelligent-channel)
+- [Clicked/Opened Campaign or Canvas With Tag]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#clicked-opened-campaign-or-canvas-with-tag)
+- [Clicked/Opened Step]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#clicked-opened-step)
+- [Clicked Alias in Campaign]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#clicked-alias-in-campaign)
+- [Clicked Alias in Canvas Step]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#clicked-alias-in-canvas-step)
+- [Clicked Alias in Any Campaign or Canvas Step]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#clicked-alias-in-any-campaign-or-canvas-step)
+- [Last Engaged with Message]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#last-engaged-with-message)
+- [Intelligent Channel]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#intelligent-channel)
 
 ## Turning on bot filtering
 

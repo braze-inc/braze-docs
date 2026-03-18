@@ -19,18 +19,18 @@ channel:
 
 Link shortening and click tracking allow you to automatically shorten URLs contained in SMS or RCS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your campaigns.
 
-Link shortening and click tracking can be turned on at the [message variant-level]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) in both campaigns and Canvases. 
+Link shortening and click tracking can be turned on at the [message variant-level]({{site.baseurl}}/user_guide/messaging/ab_testing#step-1-create-your-campaign) in both campaigns and Canvases. 
 
 The length of the URL is determined by the type of tracking that is turned on:
 - **Basic tracking** enables campaign-level click tracking. Static URLs will have a length of 20 characters, and personalized URLs will have a length of 25 characters.
-- **Advanced tracking** enables campaign-level and user-level click tracking, and enables use of segmentation and retargeting capabilities which rely on clicks. Clicks will also generate an [SMS click event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) sent through Currents. Static URLs with advanced tracking will have a length of 27-28 characters, allowing you to create segments of users who have clicked on URLs. Personalized URLs will have a length of 32-33 characters.
+- **Advanced tracking** enables campaign-level and user-level click tracking, and enables use of segmentation and retargeting capabilities which rely on clicks. Clicks will also generate an [SMS click event]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/) sent through Currents. Static URLs with advanced tracking will have a length of 27-28 characters, allowing you to create segments of users who have clicked on URLs. Personalized URLs will have a length of 32-33 characters.
 
 Links are shortened using our shared short domain (`brz.ai`). An example URL may look something like this: `https://brz.ai/8jshX` (basic, static) or `https://brz.ai/p/8jshX/2dj8d` (advanced, personalized). Refer to [Testing](#testing) for more information.
 
 Any static URLs that start with `http://` or `https://` are shortened. Static shortened URLs are valid for one year from the date they were created. Shortened URLs that contain Liquid personalization are valid for two months.
 
 {% alert note %}
-If you plan to use the BrazeAI<sup>TM</sup> [Intelligent Channel filter]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) and want the SMS and RCS channels to be selectable, turn on link shortening with advanced tracking.
+If you plan to use the BrazeAI<sup>TM</sup> [Intelligent Channel filter]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_channel/) and want the SMS and RCS channels to be selectable, turn on link shortening with advanced tracking.
 {% endalert %}
 
 ## Using link shortening
@@ -53,7 +53,7 @@ You can dynamically construct your URL directly within the Braze composer, allow
 
 ### Create a URL with supported Liquid personalization tags
 
-URLs can be dynamically generated through the use of any [supported Liquid personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
+URLs can be dynamically generated through the use of any [supported Liquid personalization tags]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/).
 
 {% raw %}
 ```liquid
@@ -90,7 +90,7 @@ For a full list of request parameters, go to [request parameters]({{site.baseurl
 
 ## Testing
 
-Before launching your campaign or Canvas, it's best practice to preview and test your message first. To do so, go to the **Test** tab to preview and send an SMS or RCS message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups) or an individual user. 
+Before launching your campaign or Canvas, it's best practice to preview and test your message first. To do so, go to the **Test** tab to preview and send an SMS or RCS message to [content test groups]({{site.baseurl}}/user_guide/administer/global/user_management/internal_groups#content-test-groups) or an individual user. 
 
 This preview updates with relevant personalization and the shortened URL. The number of characters and [billable segments]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/billing_calculator/) also update to reflect the rendered personalization and the shortened URL.
 

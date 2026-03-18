@@ -3,7 +3,7 @@ nav_title: Engagement reports
 article_title: Engagement reports
 page_order: 5
 local_redirect:
-  report-glossary: '/docs/user_guide/data_and_analytics/report_metrics/'
+  report-glossary: '/docs/user_guide/analytics/metrics_glossary'
 page_type: tutorial
 description: "This how-to article walks you through creating, personalizing, and scheduling engagement reports for campaigns and Canvases."
 tool:

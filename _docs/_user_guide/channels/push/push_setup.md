@@ -12,10 +12,10 @@ description: "Learn about push token lifecycle and subscription states for push 
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Push token lifecycle
-    link: /docs/user_guide/channels/push/push_setup/push_token_lifecycle/
+    link: /docs/user_guide/channels/push/push_setup/push_token_lifecycle
     image: /assets/img/braze_icons/refresh-ccw-02.svg
   - name: Push subscription states
-    link: /docs/user_guide/channels/push/push_setup/push_subscription_states/
+    link: /docs/user_guide/channels/push/push_setup/push_subscription_states
     image: /assets/img/braze_icons/users-01.svg
 ---
 

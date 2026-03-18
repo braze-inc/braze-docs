@@ -80,7 +80,7 @@ Unlike a traditional iOS push token, a provisional push token acts as a "trial p
 Provisional Authorization has the potential dramatically increase your opt-in rate, but only if users see value in your messages. Be sure to use our [user segmentation]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/), [location targeting]({{site.baseurl}}/user_guide/audience/locations_and_geofences/), and [personalization]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/) features to ensure that the appropriate users are getting these "trial" notifications at the right time. Then, you can encourage users to fully opt-in to your push notifications, knowing that they add value to your users' experience with your app.
 {% endalert %}
 
-Whichever option the user chooses will add the appropriate token or [subscription status]({{site.baseurl}}/user_guide/channels/push/push_setup/push_subscription_states/) to their [Contact Settings]({{site.baseurl}}/user_guide/audience/segments/using_user_search/#engagement-tab) under the **Engagement** tab in their user profile.
+Whichever option the user chooses will add the appropriate token or [subscription status]({{site.baseurl}}/user_guide/channels/push/push_setup/push_subscription_states/) to their [Contact Settings]({{site.baseurl}}/user_guide/audience/manage_audience/user_profiles#engagement-tab) under the **Engagement** tab in their user profile.
 
 ![Contact settings with a push subscribed status.]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 

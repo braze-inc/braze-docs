@@ -31,7 +31,7 @@ If you delete the default **Recipients** value of **All Dashboard Users** and wa
 
 | Notification | Description | Available notification channels |
 |--------------|-------------|-----------------|
-| API Usage Alerts | Selecting this takes you to the **API Usage Dashboard**, where you can then go to the [**API Usage Alerts**]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_alerts/) tab and set up alerts to track key API request volumes. | Email, Webhook |
+| API Usage Alerts | Selecting this takes you to the **API Usage Dashboard**, where you can then go to the [**API Usage Alerts**]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/api_usage_alerts/) tab and set up alerts to track key API request volumes. | Email, Webhook |
 | AWS Credential Errors | Notifies recipients when Braze receives an error while attempting to use your Amazon Web Services credentials for a data export. This includes credential error notifications for Google Cloud Services and Azure (Microsoft Cloud Services). | Email, Webhook |
 | Campaign Automatically Stopped | Notifies recipients when Braze has stopped a campaign. | Email |
 | Canvas Automatically Stopped | Notifies recipients when Braze has stopped a Canvas. | Email |
@@ -51,7 +51,7 @@ If you delete the default **Recipients** value of **All Dashboard Users** and wa
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-[Suspended users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/#suspending-company-users) may still receive notifications from Braze.
+[Suspended users]({{site.baseurl}}/user_guide/administer/global/user_management/manage_company_users#suspending-company-users) may still receive notifications from Braze.
 {% endalert %}
 
 ## Weekly analytics reporting

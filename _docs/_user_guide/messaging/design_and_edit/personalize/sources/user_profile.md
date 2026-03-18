@@ -39,7 +39,7 @@ For example, to personalize a message based on a user's membership tier:
 ```
 {% endraw %}
 
-For more information about creating and managing custom attributes, see [Custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/).
+For more information about creating and managing custom attributes, see [Custom attributes]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes/).
 
 ## Event properties
 
@@ -53,7 +53,7 @@ Thanks for purchasing {{event_properties.${product_name}}}! Your order is on its
 ```
 {% endraw %}
 
-Event properties are available in action-based campaigns and the first step of an action-based Canvas. For more information, see [Custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/).
+Event properties are available in action-based campaigns and the first step of an action-based Canvas. For more information, see [Custom events]({{site.baseurl}}/user_guide/data/activation/events/custom_events/).
 
 ## API trigger properties
 

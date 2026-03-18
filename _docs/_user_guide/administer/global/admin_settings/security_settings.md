@@ -265,7 +265,7 @@ Removed Push Credential
 The **View PII** permission is only accessible to a few select company users. By default, all admins have their **View PII** permission turned on in user permissions. This means they can see all standard and custom attributes that your company has defined as PII throughout the dashboard. When this permission is turned off for users, those users won't be able to see any of those attributes.
 
 {% alert note %}
-You need the **View PII** permission to use [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/building_queries/), because it allows direct access to some customer data.
+You need the **View PII** permission to use [Query Builder]({{site.baseurl}}/user_guide/analytics/reports/query_builder/building_queries/), because it allows direct access to some customer data.
 {% endalert %}
 
 For the existing team permission capabilities, refer to [Setting user permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/#available-limited-and-team-role-permissions).

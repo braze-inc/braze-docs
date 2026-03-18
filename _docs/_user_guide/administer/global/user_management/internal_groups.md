@@ -66,7 +66,7 @@ After you create your internal group, add test users as members of that group.
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Add identified user** | Search for the user by their external user ID, email address, phone number, or push token.                                                                                                                                                           |
 | **Add anonymous user**  | Search by IP address. Then, provide a name for each test user you add. This is the name that all event logs are associated with on the [Event User Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/event_user_log/) page. |
-| **Bulk add users**      | Copy and paste a list of email addresses or external IDs. You can add only users who are already known in the dashboard. For more information, refer to [User import]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).          |
+| **Bulk add users**      | Copy and paste a list of email addresses or external IDs. You can add only users who are already known in the dashboard. For more information, refer to [User import]({{site.baseurl}}/user_guide/audience/manage_audience/import_users/).          |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![Internal Group Settings when creating a new internal group]({% image_buster /assets/img_archive/internal_group_add_user.png %})
@@ -76,7 +76,7 @@ After you create your internal group, add test users as members of that group.
 Similar to sending a preview test of a message, the Content Test Group saves you time and lets you launch tests to a pre-defined list of Braze users simultaneously. This is available for push, in-app messages, SMS, email, and Content Cards in Braze. Only groups tagged as Content Test Groups are available in the preview section of a message.
 
 {% alert note %}
-[SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/) test messages can only be sent to valid phone numbers in the database.
+[SMS]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/) test messages can only be sent to valid phone numbers in the database.
 {% endalert %}
 
 Select individual Braze users or any number of internal groups to send the message to. If your message includes any Liquid or other dynamic personalization, Braze uses the attributes available for each user to personalize the message contents. For users who have no attributes, Braze uses the default value set.

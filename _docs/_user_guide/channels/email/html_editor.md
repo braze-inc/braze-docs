@@ -33,7 +33,7 @@ Use campaigns for single, simple messaging. Use Canvases for multi-step user jou
 2. Select **Email**, or, for campaigns targeting multiple channels, select **Multichannel**.
 3. Name your campaign something clear and meaningful.
 4. Add [teams]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) and [tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) as needed.
-   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), you can filter by particular tags.
+   * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/analytics/reports/report_builder/), you can filter by particular tags.
 5. Add and name as many variants as you need for your campaign. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/messaging/ab_testing/).
 
 {% alert tip %}
@@ -59,7 +59,7 @@ Braze offers two editing experiences when creating an email campaign: our [drag-
 
 ![Choosing between the drag-and-drop editor, HTML editor, or templates for your email editing experience.]({% image_buster /assets/img_archive/choose_email_creation.png %}){: style="max-width:75%" }
 
-Then, you can either select an existing [email template]({{site.baseurl}}/user_guide/channels/email/creating_an_email_template/#creating-an-email-template), [upload a template]({{site.baseurl}}/user_guide/messaging/templates/email_templates/html_email_template/) from a file (HTML editor only), or use a blank template. 
+Then, you can either select an existing [email template]({{site.baseurl}}/user_guide/channels/email/html_editor#creating-an-email-template), [upload a template]({{site.baseurl}}/user_guide/messaging/templates/email_templates/html_email_template/) from a file (HTML editor only), or use a blank template. 
 
 {% alert tip %}
 We recommend selecting one editing experience per email campaign. For example, choose either the **HTML Classic** or **Block editor** in a single email campaign rather than switching between editors.
@@ -271,7 +271,7 @@ Braze allows you to track how often users perform specific actions, [conversion 
 - Performs specific custom event
 - Opens email
 
-You can allow up to a 30-day window during which Braze counts a conversion if the user takes the specified action. While Braze tracks opens and clicks automatically, you may set the conversion event to an open or click to use [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/).
+You can allow up to a 30-day window during which Braze counts a conversion if the user takes the specified action. While Braze tracks opens and clicks automatically, you may set the conversion event to an open or click to use [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_selection/).
 {% endtab %}
 
 {% tab Canvas %}

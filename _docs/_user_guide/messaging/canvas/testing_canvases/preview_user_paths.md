@@ -43,7 +43,7 @@ To view more details for the entrance criteria, select **See more**. Steps with 
 
 ### Liquid
 
-Braze processes Liquid logic during a test run, even if you're not sending an actual test message. This means the [abort message logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) and other Liquid logic are reflected and could impact the Canvas user journey.
+Braze processes Liquid logic during a test run, even if you're not sending an actual test message. This means the [abort message logic]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages/#abort-messages) and other Liquid logic are reflected and could impact the Canvas user journey.
 
 If your preview sends the last step of your user journey instead of aborting, the preview may be using the current time as the time being tested for Liquid evaluation, not the actual time the user would be in the step based on the Canvas entry time.
 
@@ -87,7 +87,7 @@ Canvas steps are responsive to timing when previewing user paths. Updates made v
 
 Similarly, filters recognize actions that occurred as a result of the test user interacting with other steps in the Canvas. For example, this preview mode recognizes that a user encountered a Message step that was “sent” earlier in the Canvas, and it recognizes that the test user “took action” to advance through an action path.
 
-Refer to [Exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) for more details on responsive behavior.
+Refer to [Exit criteria]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/exit_criteria/) for more details on responsive behavior.
 
 ## Connected Content
 
@@ -101,7 +101,7 @@ Webhooks execute when test messages are sent, but not during the test run. Simil
 
 ## Context variables and Seed Groups
 
-For a Message step with email as the messaging channel, Seed Groups send seed copies of emails when a user reaches this step in the Canvas. These seed copies are not sent as part of the Seed Group recipients' own Canvas journeys, so Braze does not execute [Context steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) or evaluate context variables for those recipients. If your email content references context variables, Seed Group recipients receive a seed copy without that data populated. To test messages that rely on context variable data, use the **Test Canvas** preview with test sends instead of Seed Groups.
+For a Message step with email as the messaging channel, Seed Groups send seed copies of emails when a user reaches this step in the Canvas. These seed copies are not sent as part of the Seed Group recipients' own Canvas journeys, so Braze does not execute [Context steps]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/context/) or evaluate context variables for those recipients. If your email content references context variables, Seed Group recipients receive a seed copy without that data populated. To test messages that rely on context variable data, use the **Test Canvas** preview with test sends instead of Seed Groups.
 
 ## Use case
 

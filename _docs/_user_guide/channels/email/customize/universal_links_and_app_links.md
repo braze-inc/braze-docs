@@ -1,6 +1,6 @@
 ---
-nav_title: "Universal links and app links"
-article_title: "Universal links and app links"
+nav_title: "Universal links and App Links"
+article_title: "Universal links and App Links"
 page_order: 6.4
 page_type: reference
 description: "This article describes how to set up Apple universal links and Android App Links."

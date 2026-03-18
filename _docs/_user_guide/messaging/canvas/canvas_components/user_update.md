@@ -16,7 +16,7 @@ tool: Canvas
 
 ![A User Update step named "Update loyalty" that updates an attribute "Is Premium Member" to "true".]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
-When using this component in your Canvas, updates don't count toward your `/users/track` requests per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook. Note that this component doesn't log [data points]({{site.baseurl}}/user_guide/data/data_points/) when being used to update non-billable data points (such as subscription groups).
+When using this component in your Canvas, updates don't count toward your `/users/track` requests per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook. Note that this component doesn't log [data points]({{site.baseurl}}/user_guide/data/infrastructure/data_points/) when being used to update non-billable data points (such as subscription groups).
 
 After users enter the User Update step and it completes processing, they advance to the next step. This means any subsequent messaging that relies on these user updates is up-to-date when the next step is run.
 
@@ -54,7 +54,7 @@ By incrementing a custom attribute that tracks an event, you can track the numbe
 
 ### Updating an array of objects
 
-An [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/) is a data-rich custom attribute stored on a user's profile. You can use it to create a history of the user's interactions with your brand and to create segments based on a calculated field, such as purchase history or total lifetime value.
+An [array of objects]({{site.baseurl}}/user_guide/data/activation/attributes/array_of_objects/) is a data-rich custom attribute stored on a user's profile. You can use it to create a history of the user's interactions with your brand and to create segments based on a calculated field, such as purchase history or total lifetime value.
 
 Using the **Advanced JSON Editor** option, you can insert JSON to add items to or remove items from this array of objects.
 
@@ -118,7 +118,7 @@ Track when a user has items in their shopping cart, when they add new items or r
 {% endraw %}
 
 {:start="2"}
-2. Create a [custom event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) named `add_item_to_cart` that is logged when a user adds an item to the basket. 
+2. Create a [custom event]({{site.baseurl}}/user_guide/data/activation/events/custom_events/) named `add_item_to_cart` that is logged when a user adds an item to the basket. 
 3. Create a Canvas that targets users who perform this custom event. Now, when a user adds an item to their cart, this Canvas is triggered. You can then target messaging directly to that user, offering coupon codes when they've reached a certain spend, abandoned their cart for a certain amount of time, or anything else that aligns with your use case. 
 
 The `shopping_cart` attribute carries the total of many custom events: the total cost of all the items, the total number of items in the cart, if the shopping cart contains a gift, and so on. This can look something like the following:
@@ -155,10 +155,10 @@ You can use the user update step to persist a `canvas_entry_property`. Let’s s
 
 To store the property of the trigger event for a Canvas as an attribute, use the personalization modal to extract and store the Canvas entry property. User Update also supports the following personalization features:
 
-* [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
+* [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/) 
 * [Content Blocks]({{site.baseurl}}/user_guide/messaging/design_and_edit/content_blocks/)
 * [Entry properties]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties/)
-* Liquid logic (including [aborting messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
+* Liquid logic (including [aborting messages]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages/))
 * Multiple attribute or event updates per object
 
 {% alert warning %}
@@ -167,7 +167,7 @@ We recommend careful use of Connected Content Liquid personalization in User Upd
 
 ## Advanced JSON editor
 
-Add an attribute, event, or purchase JSON object up to 65,536 characters to the JSON editor. A user's [global subscription]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) and [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) state can also be set.
+Add an attribute, event, or purchase JSON object up to 65,536 characters to the JSON editor. A user's [global subscription]({{site.baseurl}}/user_guide/channels/email/subscriptions#subscription-states) and [subscription group]({{site.baseurl}}/user_guide/channels/email/subscriptions#subscription-groups) state can also be set.
 
 ![]({% image_buster /assets/img_archive/canvas_user_update_composer.png %}){: style="max-width:90%;"}
 

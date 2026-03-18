@@ -157,7 +157,7 @@ Android push notifications can be further customized with FCM message options. T
 
 A silent push notification is a push notification containing no alert message or sound, used to update your app's interface or content in the background. These notifications make use of key-value pairs to trigger these background app actions. Silent push notifications also power our [uninstall tracking]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/).
 
-Marketers should test that silent push notifications trigger expected behavior before sending them to their app's users. After you compose your [iOS]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift) or [Android]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android) silent push notification, ensure that you only target a test user by filtering on [external user ID]({{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id) or [email address]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
+Marketers should test that silent push notifications trigger expected behavior before sending them to their app's users. After you compose your [iOS]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift) or [Android]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android) silent push notification, ensure that you only target a test user by filtering on [external user ID]({{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id) or [email address]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/).
 
 Upon campaign launch, you should check that you have not received any visible push notification on your test device.
 
@@ -167,7 +167,7 @@ The iOS operating system may [gate notifications]({{site.baseurl}}/developer_gui
 
 ## In-app messages
 
-You can add a key-value pair to an in-app message in the [traditional editor]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/) by selecting the **Settings** tab, selecting **Add New Pair**, and then specifying your key-value pairs.
+You can add a key-value pair to an in-app message in the [traditional editor]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/) by selecting the **Settings** tab, selecting **Add New Pair**, and then specifying your key-value pairs.
 
 {% alert note %}
 Key-value pairs cannot be set through the drag-and-drop editor for in-app messages.

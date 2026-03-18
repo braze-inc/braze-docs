@@ -29,7 +29,7 @@ Name the segment something memorable, like "Lapsed Users – 2 Weeks." Because w
 
 ## Step 2: Create a campaign
 
-Next, click **Create Campaign** and choose the type of campaign we will be sending to this segment. in this example, we'll create a new [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message).
+Next, click **Create Campaign** and choose the type of campaign we will be sending to this segment. in this example, we'll create a new [push campaign]({{site.baseurl}}/user_guide/channels/push/create_a_push_message/).
 
 ![]({% image_buster /assets/img_archive/2weeklapse2.png %}){: style="max-width:70%;"}
 

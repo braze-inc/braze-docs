@@ -29,7 +29,7 @@ You'll see an alert if you haven't scheduled enough of a buffer. A quick solutio
 
 After setting up the preliminary details of when your users should enter a Canvas, it's recommended to now check your segments or filters in the **Target Audience** step of building a Canvas. In this step, you can also review the **Target Population** summary to see how your target audience has been set up. 
 
-Here, consider using a regular expression for segments or filters in Audience Paths steps, delivery validation settings in Message and Decision Split steps as well. A [regular expression]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/) (also referred to as regex) is a string, which means it recognizes patterns and takes into account characters, instead of things like capitalization. This means that if you're using "Equals / Does Not Equal," you could be limiting your audience size because of simple syntax errors.
+Here, consider using a regular expression for segments or filters in Audience Paths steps, delivery validation settings in Message and Decision Split steps as well. A [regular expression]({{site.baseurl}}/user_guide/audience/segments/regex/) (also referred to as regex) is a string, which means it recognizes patterns and takes into account characters, instead of things like capitalization. This means that if you're using "Equals / Does Not Equal," you could be limiting your audience size because of simple syntax errors.
 
 If you notice that your target audience is smaller than expected, try using "Matches Regex" or "Does Not Match Regex" instead of "Equals" or "Does Not Equal". This may account for those missing users, and target a larger audience. 
 
@@ -40,12 +40,12 @@ A race condition can occur when you've used the same entry criteria in both your
 If you're using action-based entry, check that you haven't used the same trigger action here as in your target audience. A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't enter the Canvas.
 
 {% alert tip %}
-Check out the [best practices]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#scenario-3-matching-action-based-triggers-and-audience-filters) for avoiding this race condition when setting up an action-based Canvas with the same trigger as the audience filter.
+Check out the [best practices]({{site.baseurl}}/user_guide/messaging/ab_testing/concepts/race_conditions#scenario-3-matching-action-based-triggers-and-audience-filters) for avoiding this race condition when setting up an action-based Canvas with the same trigger as the audience filter.
 {% endalert %}
 
 ### Check Canvas entry properties and event properties
 
-Though similar in name, [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) function differently within your Canvas workflows. Canvas entry properties are tied to your entry settings, and they can be referenced in any message component throughout your Canvas. Canvas entry properties are properties of the event or API call that triggers a user's entry into a Canvas, using action-based or API-triggered entry settings.
+Though similar in name, [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/) function differently within your Canvas workflows. Canvas entry properties are tied to your entry settings, and they can be referenced in any message component throughout your Canvas. Canvas entry properties are properties of the event or API call that triggers a user's entry into a Canvas, using action-based or API-triggered entry settings.
 
 Event properties, on the other hand, can only be referenced in the first Message step following an Action Paths step. Event properties are properties of a custom event or purchase event that the user performed during the evaluation window of an Action Paths step, and that triggers their progression down one of the defined action path.
 
@@ -95,11 +95,11 @@ Additionally, check that the selected segment has users in it by reviewing the *
 Another apparent way to identify areas of adjustment for your Canvas can occur when there's a large drop-off from one Canvas step to the next. In this case, check that your audience filters and exception events don't have any misspellings or capitalization errors. And as always, check that your audience filters aren't so strict as to omit a majority of your users from entering the Canvas. 
 
 Next, it's important to identify these settings that can affect when and if messages are sent to your users:
-- [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)
+- [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/)
 - Quiet Hours
 - Delivery validations
 
-In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), not both. For more information on how to best use the Intelligence Suite, read our [Intelligent Suite use cases]({{site.baseurl}}/user_guide/brazeai/intelligence/#use-cases).
+In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/frequency_capping/), not both. For more information on how to best use the Intelligence Suite, read our [Intelligent Suite use cases]({{site.baseurl}}/user_guide/brazeai/intelligence_suite#use-cases).
 
 ### Suspicious send volumes between paths
 

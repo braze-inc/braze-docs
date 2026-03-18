@@ -32,7 +32,7 @@ Use cases include:
 
 ## Image
 
-A LINE image message can be added through the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/), a URL, or Liquid. These images are standalone and don't contain clickable links.
+A LINE image message can be added through the [media library]({{site.baseurl}}/user_guide/messaging/design_and_edit/media_library/), a URL, or Liquid. These images are standalone and don't contain clickable links.
 
 Use cases include:
 - Showcase a vacation destination to inspire users to look into purchasing plane tickets
@@ -45,7 +45,7 @@ Use cases include:
 
 Use URL images for use cases that incorporate:
 - Liquid dynamic images by including the Liquid in your image source attribute. For example, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image
-- [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) by pulling images directly from your web server or publicly accessible APIs
+- [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/) by pulling images directly from your web server or publicly accessible APIs
 - [Braze catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs/) by accessing images from imported CSV files and API endpoints
 
 | **Specifications** | **Recommended properties** |

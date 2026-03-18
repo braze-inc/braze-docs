@@ -14,14 +14,14 @@ guide_featured_list:
 - name: Spam regulations
   link: /docs/user_guide/administer/global/privacy/spam_regulations
   image: /assets/img/braze_icons/message-check-circle.svg
-- name: Managing consent
+- name: Manage consent
   link: /docs/user_guide/administer/global/privacy/managing_consent
   image: /assets/img/braze_icons/user-square.svg
 - name: Data Protection Technical Assistance
   link: /docs/dp-technical-assistance
   image: /assets/img/braze_icons/database-01.svg
 - name: SMS laws and regulations
-  link: /docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations/
+  link: /docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations
   image: /assets/img/braze_icons/channel-sms.svg
 ---
 

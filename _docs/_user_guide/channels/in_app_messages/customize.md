@@ -14,23 +14,23 @@ guide_featured_title: "Section articles"
 
 guide_featured_list:
 - name: Style settings
-  link: /docs/user_guide/channels/in_app_messages/customize/style_settings/
+  link: /docs/user_guide/channels/in_app_messages/customize/style_settings
   image: /assets/img/braze_icons/brush-02.svg
 - name: Dark mode themes
-  link: /docs/user_guide/channels/in_app_messages/customize/dark_mode_themes/
+  link: /docs/user_guide/channels/in_app_messages/customize/dark_mode_themes
   image: /assets/img/braze_icons/circle-cut.svg
 - name: Color profiles and CSS templates
-  link: /docs/user_guide/channels/in_app_messages/customize/color_profiles_and_css_templates/
+  link: /docs/user_guide/channels/in_app_messages/customize/color_profiles_and_css_templates
   image: /assets/img/braze_icons/palette.svg
 - name: Video in custom HTML
-  link: /docs/user_guide/channels/in_app_messages/customize/video_in_custom_html/
+  link: /docs/user_guide/channels/in_app_messages/customize/video_in_custom_html
   image: /assets/img/braze_icons/video-recorder.svg
 
 local_redirect:
-  custom-html-messages: '/docs/user_guide/channels/in_app_messages/message_types/custom_html/'
+  custom-html-messages: '/docs/user_guide/channels/in_app_messages/message_types/custom_html'
   web-modal-css: '/docs/user_guide/channels/in_app_messages/customize/color_profiles_and_css_templates#web-modal-css'
-  email-capture-form: '/docs/user_guide/channels/in_app_messages/message_types/email_capture_form/'
-  reusable-color-profiles: '/docs/user_guide/channels/in_app_messages/customize/color_profiles_and_css_templates/#web-modal-css'
+  email-capture-form: '/docs/user_guide/channels/in_app_messages/message_types/email_capture_form'
+  reusable-color-profiles: '/docs/user_guide/channels/in_app_messages/customize/color_profiles_and_css_templates#web-modal-css'
   video: '/docs/user_guide/channels/in_app_messages/customize/video_in_custom_html'
 ---
 <br><br>

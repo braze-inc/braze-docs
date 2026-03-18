@@ -13,16 +13,16 @@ channel: email
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: "Guidelines"
-    link: /docs/user_guide/channels/email/best_practices/email_guidelines/
+    link: /docs/user_guide/channels/email/best_practices/email_guidelines
     image: /assets/img/braze_icons/award-03.svg
   - name: "Email styling"
-    link: /docs/user_guide/channels/email/best_practices/email_styling/
+    link: /docs/user_guide/channels/email/best_practices/email_styling
     image: /assets/img/braze_icons/brush-02.svg
   - name: "Use cases"
-    link: /docs/user_guide/channels/email/best_practices/use_cases/
+    link: /docs/user_guide/channels/email/best_practices/use_cases
     image: /assets/img/braze_icons/edit-05.svg
   - name: "Sunset policies"
-    link: /docs/user_guide/channels/email/best_practices/sunset_policies/
+    link: /docs/user_guide/channels/email/best_practices/sunset_policies
     image: /assets/img/braze_icons/sun-setting-03.svg
   - name: "Sending test messages"
     link: /docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=email

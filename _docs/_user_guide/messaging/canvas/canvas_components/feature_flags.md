@@ -6,7 +6,7 @@ page_type: reference
 description: "This reference article covers how feature flags can be used in Canvas."
 tool: Canvas
 local_redirect:
-  create-a-feature-flag: '/docs/user_guide/messaging/feature_flags/create_feature_flags/'
+  create-a-feature-flag: '/docs/user_guide/messaging/feature_flags/create_feature_flags'
 ---
 
 # Feature Flag

@@ -1,6 +1,6 @@
 ---
-nav_title: Message usage dashboard
-article_title: Message Usage Dashboard
+nav_title: Message Usage dashboard
+article_title: Message Usage dashboard
 page_order: 1
 page_type: reference
 alias: /message_usage_dashboard/

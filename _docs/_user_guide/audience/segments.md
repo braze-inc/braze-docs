@@ -14,37 +14,37 @@ description: "This landing page covers articles on Segmentation within dashboard
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Create a segment
-    link: /docs/user_guide/audience/segments/creating_a_segment/
+    link: /docs/user_guide/audience/segments/creating_a_segment
     image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Manage segments
-    link: /docs/user_guide/audience/segments/managing_segments/
+    link: /docs/user_guide/audience/segments/managing_segments
     image: /assets/img/braze_icons/edit-05.svg
   - name: Segmentation filters
-    link: /docs/user_guide/audience/segments/segmentation_filters/
+    link: /docs/user_guide/audience/segments/segmentation_filters
     image: /assets/img/braze_icons/flag-02.svg
   - name: Segment data
-    link: /docs/user_guide/audience/segments/segment_data/
+    link: /docs/user_guide/audience/segments/segment_data
     image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Segment extensions
-    link: /docs/user_guide/audience/segments/segment_extension/
+    link: /docs/user_guide/audience/segments/segment_extension
     image: /assets/img/braze_icons/users-01.svg
   - name: Segment insights
-    link: /docs/user_guide/audience/segments/segment_insights/
+    link: /docs/user_guide/audience/segments/segment_insights
     image: /assets/img/braze_icons/pie-chart-01.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
   - name: Location targeting
-    link: /docs/user_guide/audience/segments/location_targeting/
+    link: /docs/user_guide/audience/segments/location_targeting
     image: /assets/img/braze_icons/marker-pin-06.svg
   - name: Regular expressions
-    link: /docs/user_guide/audience/segments/regex/
+    link: /docs/user_guide/audience/segments/regex
     image: /assets/img/braze_icons/search-sm.svg
   - name: Measure segment size
-    link: /docs/user_guide/audience/segments/measuring_segment_size/
+    link: /docs/user_guide/audience/segments/measuring_segment_size
     image: /assets/img/braze_icons/pie-chart-02.svg
   - name: Troubleshooting
-    link: /docs/user_guide/audience/segments/troubleshooting/
+    link: /docs/user_guide/audience/segments/troubleshooting
     image: /assets/img/braze_icons/annotation-question.svg
 
 ---

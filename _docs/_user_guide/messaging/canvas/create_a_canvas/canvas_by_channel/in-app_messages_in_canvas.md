@@ -18,13 +18,13 @@ channel: in-app messages
 
 Before you can use in-app messages in your Canvas, be sure to have a [Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/) set up with delay and audience options.
 
-In the Canvas builder, add a [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step and select **In-App Message** as your **Messaging Channel**. You can customize [when your message will expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior) it will have.
+In the Canvas builder, add a [Message]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/) step and select **In-App Message** as your **Messaging Channel**. You can customize [when your message will expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior) it will have.
 
 ## Adding an in-app message to your user journey
 
 To add an in-app message to your Canvas, do the following:
 
-1. Add a [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step to your user journey.
+1. Add a [Message]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/) step to your user journey.
 2. Select **In-App Message** for your **Messaging Channel**. 
 3. Determine [when your message will expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior-options) it will have.
 
@@ -179,7 +179,7 @@ Message steps automatically advance all users who enter the step. Note that it d
 
 When a user enters an in-app message step, they advance out of it immediately instead of being held for the expiration window. In this case, having a Delay step in your user journey can be helpful.
 
-To use the **Advance when message sent** option, add a separate [audience path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users who didn't receive the previous step.
+To use the **Advance when message sent** option, add a separate [audience path]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/audience_paths/) to filter users who didn't receive the previous step.
 
 {% details Original Canvas editor %}
 

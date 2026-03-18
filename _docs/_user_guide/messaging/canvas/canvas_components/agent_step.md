@@ -17,7 +17,7 @@ toc_headers: h2
 
 ## Prerequisites
 
-Agent steps use [Canvas context variables]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/context_variables) to ingest relevant context and output a variable that can be leveraged in the Canvas.
+Agent steps use [Canvas context variables]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/context_variables/) to ingest relevant context and output a variable that can be leveraged in the Canvas.
 
 ## How it works
 
@@ -41,15 +41,15 @@ Select the agent that will process data in this step. Choose an existing agent. 
 
 ### Step 3: Set your agent's output {#define-the-output-variable}
 
-Agent outputs are called "output variables" and are stored in a [context variable]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#context-variable-types) for easy access. To define the output variable, give the variable a name.
+Agent outputs are called "output variables" and are stored in a [context variable]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/context#context-variable-types) for easy access. To define the output variable, give the variable a name.
 
 Note that the output variable's data type is set from the [Agent Console]({{site.baseurl}}/user_guide/brazeai/agents). Agent outputs can be saved as strings, numbers, booleans, or objects. This makes them flexible for both text personalization and conditional logic in your Canvas. Here are some common uses for each type:
 
 | Data type | Common uses |
 | --- | --- |
 | String | Message personalization (subject lines, copy, responses) |
-| Number | Scoring, thresholds, routing in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) |
-| Boolean | Yes/No branching in [Decision Splits]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) |
+| Number | Scoring, thresholds, routing in [Audience Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/audience_paths/) |
+| Boolean | Yes/No branching in [Decision Splits]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/decision_split/) |
 | Object | Leverage one or more of the above data types with a single LLM call in a predictable data structure |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -80,7 +80,7 @@ After setting up your Agent step, you can test and preview the output of this st
 - If the connected model returns a rate limit error, Braze retries up to five times with exponential backoff.  
 - If the agent fails for any other reason (such as a timeout error or invalid API key), the output variable is set to `null`.
     - If an agent reaches its daily invocation limit, the output variable is set to `null`. 
-- Use [default Liquid values]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values) to buffer against errors. For example, in the **Add Personalization** modal, you can enter a default Liquid value such as {% raw %}`{{context.${response_variable_name}.push_title | default: 'Hello friend!'}}`{% endraw %} or {% raw %}`{{context.${response_variable_name}.push_body | default: 'Open our app to get your prize!'}}`{% endraw %}.
+- Use [default Liquid values]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/setting_default_values/) to buffer against errors. For example, in the **Add Personalization** modal, you can enter a default Liquid value such as {% raw %}`{{context.${response_variable_name}.push_title | default: 'Hello friend!'}}`{% endraw %} or {% raw %}`{{context.${response_variable_name}.push_body | default: 'Open our app to get your prize!'}}`{% endraw %}.
 - Responses are cached for identical inputs and may be reused for repeated identical invocations within a few minutes.
     - Responses that use cached values do still count toward total and daily invocations.
 - Agent steps may take time to process a large batch of users. If you see users who are still pending in this step, check your logs to verify that invocations are happening.

@@ -9,7 +9,7 @@ search_rank: 2
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom events
 
-> This article describes custom events and properties, related segmentation filters, Canvas entry properties, relevant analytics, and more. To learn about Braze events in general, refer to [Events]({{site.baseurl}}/user_guide/data/custom_data/events/).
+> This article describes custom events and properties, related segmentation filters, Canvas entry properties, relevant analytics, and more. To learn about Braze events in general, refer to [Events]({{site.baseurl}}/user_guide/data/activation/events/).
 
 Custom events are actions taken by, or updates about, your users. When custom events are logged, they can trigger any number and type of follow-up campaigns. You can then use [segmentation filters](#segmentation-filters) to segment users based on how recently and frequently those custom events occurred. This makes custom events best suited for tracking high-value user interactions within your application.
 
@@ -17,13 +17,13 @@ Custom events are actions taken by, or updates about, your users. When custom ev
 
 Some common custom event use cases include:
 
-- Triggering a campaign or Canvas based on a custom event using [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)
+- Triggering a campaign or Canvas based on a custom event using [action-based delivery]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/)
 - Segmenting users by how many times they performed a custom event, when the last time the event occurred, and similar
 - Using dashboard [custom event analytics](#analytics) to view an aggregate of how often each event occurred
-- Finding additional analytics using [funnel]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) and [retention]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) reports
-- Leveraging [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties/) to use metadata from your customer event for personalization in your Canvas steps
+- Finding additional analytics using [funnel]({{site.baseurl}}/user_guide/analytics/reports/funnel_reports#step-2-select-events-for-funnel-steps) and [retention]({{site.baseurl}}/user_guide/analytics/reports/retention_reports/) reports
+- Leveraging [persistent entry properties]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/canvas_persistent_entry_properties/) to use metadata from your customer event for personalization in your Canvas steps
 - Generating more sophisticated analytics with [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/)
-- Setting up [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria) to define when users should exit your Canvas
+- Setting up [exit criteria]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/exit_criteria/) to define when users should exit your Canvas
 
 ## Managing custom events
 
@@ -85,7 +85,7 @@ Custom events require additional setup. Refer to the list below for documentatio
 
 ## Custom event storage
 
-All data stored on the **User Profile**, including custom event metadata (first or last occurrence, total count, and X in Y over 30 days), is retained indefinitely as long as each profile is [active]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#active-users).
+All data stored on the **User Profile**, including custom event metadata (first or last occurrence, total count, and X in Y over 30 days), is retained indefinitely as long as each profile is [active]({{site.baseurl}}/user_archival#active-users).
 
 ## Segmentation filters
 
@@ -118,7 +118,7 @@ You can also use **Filters** to break down your custom events by hour, monthly a
 ![Custom event graph filters]({% image_buster /assets/img/custom_events_report_filters.png %}){: style="max-width:40%;"}
 
 {% alert tip %}
-[Increment custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) to keep a counter on a user action similar to a custom event. However, you can't view custom attribute data in a time series. User actions that don't need to be analyzed in a time series should be recorded using this method.
+[Increment custom attributes]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes#integers) to keep a counter on a user action similar to a custom event. However, you can't view custom attribute data in a time series. User actions that don't need to be analyzed in a time series should be recorded using this method.
 {% endalert %}
 
 ### Why custom events analytics aren't showing

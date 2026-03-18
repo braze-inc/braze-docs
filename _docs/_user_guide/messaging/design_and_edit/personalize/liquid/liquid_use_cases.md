@@ -937,7 +937,7 @@ Today's offer from {{store}}
 
 This use case allows users to set up upcoming reminders based on custom events. The example scenario allows a user to set a reminder for a policy renewal date that is 26 or more days away, where reminders are sent 26, 13, 7, or 2 days before the policy renewal date.
 
-With this use case, the following should go in the body of a [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) or Canvas step.
+With this use case, the following should go in the body of a [webhook campaign]({{site.baseurl}}/user_guide/channels/webhooks/create_a_webhook/) or Canvas step.
 
 {% raw %}
 ```liquid
@@ -1518,7 +1518,7 @@ Check out this new bar after work today. HH specials!
 ```
 {% endraw %}
 
-{% alert note %} This is the opposite of [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/time_based_campaign/#time-based-functionalities-for-campaigns). {% endalert %}
+{% alert note %} This is the opposite of [Quiet Hours]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/#time-based-options). {% endalert %}
 
 {% endapi %}
 

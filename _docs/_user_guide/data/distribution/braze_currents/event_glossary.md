@@ -12,15 +12,15 @@ description: "A reference for all Braze Currents events, including message engag
 guide_featured_title: "Event types"
 guide_featured_list:
 - name: Message engagement events
-  link: /docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/
+  link: /docs/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events
   image: /assets/img/braze_icons/message-square-02.svg
 - name: Customer behavior events
-  link: /docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/
+  link: /docs/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events
   image: /assets/img/braze_icons/users-01.svg
 
 guide_menu_title: "Resources"
 guide_menu_list:
 - name: Currents changelogs
-  link: /docs/user_guide/data/distribution/braze_currents/event_glossary/currents_changelogs/
+  link: /docs/user_guide/data/distribution/braze_currents/event_glossary/currents_changelogs
   image: /assets/img/braze_icons/file-02.svg
 ---

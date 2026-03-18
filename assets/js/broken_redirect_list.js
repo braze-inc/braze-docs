@@ -2376,6 +2376,9 @@ validurls['/docs/user_guide/engagement_tools/campaigns/building_campaigns/target
 validurls['/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/'] = '/docs/user_guide/messaging/messaging_fundamentals/re_eligibility/';
 
 validurls['/docs/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/'] = '/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/';
+validurls['/docs/user_guide/messaging/campaigns/building_campaigns/conversion_events/'] = '/docs/user_guide/messaging/messaging_fundamentals/conversion_events/';
+validurls['/docs/user_guide/messaging/campaigns/building_campaigns/time_based_campaign/'] = '/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/';
+validurls['/docs/user_guide/messaging/campaigns/ideas_and_strategies/localizing_a_campaign/'] = '/docs/user_guide/messaging/messaging_fundamentals/localization/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/'] = '/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/';
 
 validurls['/docs/developer_guide/platforms/android/migrating_to_firebase_cloud_messaging/'] = '/docs/developer_guide/push_notifications/?sdktab=android';

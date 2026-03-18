@@ -51,7 +51,7 @@ To use action buttons in your Android push messages, do the following:
 2. Select <i class="fas fa-plus-circle"></i> **Add Button** and specify your button text and **On-Click Behavior**. You can select from the following available actions:
   - Open App
   - Redirect to Web URL
-  - [Deep Link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) Into Application
+  - [Deep Link]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/deep_linking_to_in-app_content/) Into Application
 
 ![Selecting "Open App" as the on-click behavior for a notification button.]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
 

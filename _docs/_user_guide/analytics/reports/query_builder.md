@@ -9,7 +9,7 @@ alias: /query_builder/
 
 # Query Builder
 
-> The Query Builder generates reports using Braze data in Snowflake. The Query Builder comes with pre-built SQL [query templates]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/) to get you started, or you can write your own custom SQL queries to unlock even more insights.
+> The Query Builder generates reports using Braze data in Snowflake. The Query Builder comes with pre-built SQL [query templates]({{site.baseurl}}/user_guide/analytics/reports/query_builder/query_templates/) to get you started, or you can write your own custom SQL queries to unlock even more insights.
 
 Because the Query Builder allows direct access to some customer data, you can only access the Query Builder if you have the "View PII" [permission]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/).
 
@@ -33,7 +33,7 @@ Results from each report can be generated once a day. If you run the same report
 
 Access query templates by selecting **Create SQL Query** > **Query Template** when first creating a report.
 
-See [Query templates]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/) for a list of available templates.
+See [Query templates]({{site.baseurl}}/user_guide/analytics/reports/query_builder/query_templates/) for a list of available templates.
 
 ### Data timeframe
 
@@ -87,7 +87,7 @@ To generate SQL with the AI Query Builder:
 ### Tips
 
 - Familiarize yourself with the available [Snowflake data tables]({{site.baseurl}}/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/). Asking for data that doesn't exist in these tables may result in ChatGPT making up a fake table.
-- Familiarize yourself with the [SQL writing rules]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/#custom-sql) for this feature. Not following these rules will cause an error.
+- Familiarize yourself with the [SQL writing rules]({{site.baseurl}}/user_guide/analytics/reports/query_builder#custom-sql) for this feature. Not following these rules will cause an error.
 - You can send up to 20 prompts per minute with the AI Query Builder.
 
 ### How is my data used and sent to OpenAI?

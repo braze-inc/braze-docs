@@ -19,7 +19,7 @@ Everything you do in Braze happens within a workspace. Workspaces are a shared e
 
 ### Step 1: Have a plan
 
-Before you begin, make sure you've worked with your team and your Braze onboarding manager to determine the best workspace configuration for your use case. To learn more about planning your workspaces in Braze, check out our [Getting Started: Workspaces]({{site.baseurl}}/user_guide/getting_started/workspaces/) guide.
+Before you begin, make sure you've worked with your team and your Braze onboarding manager to determine the best workspace configuration for your use case. To learn more about planning your workspaces in Braze, check out our [Getting Started: Workspaces]({{site.baseurl}}/user_guide/get_started/workspaces/) guide.
 
 ### Step 2: Add your workspace
 
@@ -133,7 +133,7 @@ This depends on whether you're updating your app or creating an entirely new one
 
 #### Updating your app
 
-If you're updating your app, you should separate the old and new versions by creating a new app instance within the same workspace. This way, you can effectively target users on the new version when you select that app during segmentation. If you want to message users who are on the old version, you can use filters to [target the previous app version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions).
+If you're updating your app, you should separate the old and new versions by creating a new app instance within the same workspace. This way, you can effectively target users on the new version when you select that app during segmentation. If you want to message users who are on the old version, you can use filters to [target the previous app version]({{site.baseurl}}/user_guide/messaging/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions).
 
 If you create a new workspace, your users will exist in two places: the old workspace and the new workspace. They could also potentially have the same push token. This can lead to users receiving a marketing message intended for only old workspace users, even if they’ve already upgraded.
 

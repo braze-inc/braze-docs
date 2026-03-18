@@ -14,7 +14,7 @@ channel:
 
 Apple offers a native prompt, introduced with iOS 10.3, that lets users rate apps from within the app itself. If you want to request app ratings from users using an in-app message on iOS, you must use the native prompt, as Apple disallows custom review prompts (see [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/#code-of-conduct), section 5.6.1).
 
-Per Apple guidelines, app review prompts can be displayed to a user up to three times a year, so any app review campaigns should take advantage of [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/). Users can also opt out of seeing app review prompts entirely in their app settings. For more on App Store ratings, refer to Apple's article on [Ratings, Reviews, and Responses](https://developer.apple.com/app-store/ratings-and-reviews/).
+Per Apple guidelines, app review prompts can be displayed to a user up to three times a year, so any app review campaigns should take advantage of [rate limiting]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/frequency_capping/). Users can also opt out of seeing app review prompts entirely in their app settings. For more on App Store ratings, refer to Apple's article on [Ratings, Reviews, and Responses](https://developer.apple.com/app-store/ratings-and-reviews/).
 
 ## Using Braze to ask users for app reviews
 
@@ -22,7 +22,7 @@ While Apple requires you to use the native prompt, you can still take advantage 
 
 ### Approach 1: Deep linking to the App Store
 
-With this approach, you want to encourage users to visit the App Store to add a review. To do so, create an in-app message campaign that [deep links]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) to the App Store.
+With this approach, you want to encourage users to visit the App Store to add a review. To do so, create an in-app message campaign that [deep links]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/deep_linking_to_in-app_content/) to the App Store.
 
 ![Two mobile screens side-by-side. The first is an in-app message that asks the user to rate the app on the App Store. The second is the iOS App Store page for that app.]({% image_buster /assets/img_archive/app_store_app_review.png %})
 

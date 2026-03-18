@@ -12,12 +12,12 @@ description: "This section covers importing users and merging duplicate user pro
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: User profiles
-    link: /docs/user_guide/audience/manage_audience/user_profiles/
+    link: /docs/user_guide/audience/manage_audience/user_profiles
     image: /assets/img/braze_icons/users-01.svg
   - name: Import users
-    link: /docs/user_guide/audience/manage_audience/import_users/
+    link: /docs/user_guide/audience/manage_audience/import_users
     image: /assets/img/braze_icons/users-01.svg
   - name: Merge duplicate users
-    link: /docs/user_guide/audience/manage_audience/merge_duplicate_users/
+    link: /docs/user_guide/audience/manage_audience/merge_duplicate_users
     image: /assets/img/braze_icons/users-01.svg
 ---

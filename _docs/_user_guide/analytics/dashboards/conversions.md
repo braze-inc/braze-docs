@@ -53,7 +53,7 @@ If you select a custom event, you won't see the **Conversion Event** dropdown on
 
 For a user to be counted in the report, they must meet the following criteria within the selected date range:
 1. Enter the Canvas or campaign.
-2. Log an [attribution method]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#attribution-methods).
+2. Log an [attribution method]({{site.baseurl}}/user_guide/analytics/dashboards/conversions#attribution-methods).
 3. Perform the conversion event.
 
 For example, let's say a user does the following:
@@ -91,7 +91,7 @@ If you selected breakdown-level details for campaigns or Canvases when [setting 
 
 ### Conversion funnel
 
-This bar graph shows the absolute counts for each [engagement event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) based on the selected channel. The conversions count will be defined as per the selected attribution method.
+This bar graph shows the absolute counts for each [engagement event]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/) based on the selected channel. The conversions count will be defined as per the selected attribution method.
 
 By default, all selected campaigns and Canvases are shown. To deselect a campaign or Canvas, select the name of the campaign or Canvas that you'd like to exclude. For additional details on the engagement event, you can hover over each bar.
 
@@ -140,10 +140,10 @@ To troubleshoot, check your event tracking and conversion deadlines.
 
 #### Event tracking
 
-When a campaign triggers a session start or custom event, you want to ensure that this event, or session, is happening frequently enough to trigger the message. Check the [home dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) for session data, or your [custom events]({{site.baseurl}}/user_guide/analytics/reporting/configuring_reporting/) report.
+When a campaign triggers a session start or custom event, you want to ensure that this event, or session, is happening frequently enough to trigger the message. Check the [home dashboard]({{site.baseurl}}/user_guide/analytics/dashboards/home/) for session data, or your [custom events]({{site.baseurl}}/user_guide/analytics/reports/configure_reporting/) report.
 
 #### Conversion deadlines
 
-For each conversion event that you select per campaign, you set the [deadline]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#creating-a-campaign-with-conversion-tracking). This means you are setting a time limit within which a conversion must happen in order for it to count toward each respective campaign.
+For each conversion event that you select per campaign, you set the [deadline]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/conversion_events#creating-a-campaign-with-conversion-tracking). This means you are setting a time limit within which a conversion must happen in order for it to count toward each respective campaign.
 
-Check that you've reviewed information on [conversion tracking rules]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#conversion-tracking-rules) to understand your campaign metrics. For user conversions in Canvas, refer to [Canvas FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 
+Check that you've reviewed information on [conversion tracking rules]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/conversion_events#conversion-tracking-rules) to understand your campaign metrics. For user conversions in Canvas, refer to [Canvas FAQ]({{site.baseurl}}/user_guide/messaging/canvas/faqs#how-are-user-conversions-tracked-in-a-canvas). 

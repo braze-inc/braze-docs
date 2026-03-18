@@ -21,7 +21,7 @@ This editing experience is best for the following use cases:
 
 To create a campaign targeting multiple platforms and devices:
 
-1. Create a campaign or add a [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) to a Canvas.  
+1. Create a campaign or add a [Message step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/) to a Canvas.  
 2. Select **Push notification**.
 3. Select your desired platforms (Mobile, Web, Kindle) and mobile devices (iOS, Android). If you select multiple devices, multivariate testing will not be available for your campaign.
 

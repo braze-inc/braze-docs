@@ -22,8 +22,8 @@ Select **Create Segment** to begin building your segment. Name your segment by d
 
 Optionally, you can do the following:
 - Add a description to the segment to provide more details about the intention of this audience and leave notes for other team members to refer back to.
-- Add a [team]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) to your segment.
-- Add [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) to your segment for further organization.
+- Add a [team]({{site.baseurl}}/user_guide/administer/global/user_management/teams/) to your segment.
+- Add [tags]({{site.baseurl}}/user_guide/administer/global/workspace_settings/tags/) to your segment for further organization.
 
 ![Create Segment modal where the segment is named "Lapsed Users" with the Segment Description as "This is our main Lapsed User segment to target non-actives within the past fourteen days." with two buttons: Cancel and Create Segment.]({% image_buster /assets/img_archive/segment_app_selection.png %}){: style="max-width:80%;"}
 
@@ -82,7 +82,7 @@ If `not included`, `is not`, `does not equal`, or `does not match regex` are use
 
 #### Filter operators
 
-Depending on the specific filter you select, you will have different operators for identifying filter values. To dive deeper into the operators available for different types of custom attributes, see [Custom attribute storage]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#setting-custom-attributes). Note that when using the “is any of” operator, the maximum number of items you can include in that field is 256.
+Depending on the specific filter you select, you will have different operators for identifying filter values. To dive deeper into the operators available for different types of custom attributes, see [Custom attribute storage]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes#setting-custom-attributes). Note that when using the “is any of” operator, the maximum number of items you can include in that field is 256.
 
 {% alert note %}
 Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.
@@ -151,7 +151,7 @@ Select **Save**. Now you're ready to start sending messages to your users!
 
 ## Measuring segment size
 
-To learn about monitoring your segment’s membership and size, refer to [Measuring segment size]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
+To learn about monitoring your segment’s membership and size, refer to [Measuring segment size]({{site.baseurl}}/user_guide/audience/segments/measuring_segment_size/).
 
 ## Archiving segments
 
@@ -167,13 +167,13 @@ You can unarchive the segment by navigating to it within the **Segments** page, 
 
 ## Targeting behavior when users have multiple devices
 
-Users have more than one device if they log into the same account on multiple devices. You can check for multiple devices in the **Recent Devices** section of a [user profile]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/).
+Users have more than one device if they log into the same account on multiple devices. You can check for multiple devices in the **Recent Devices** section of a [user profile]({{site.baseurl}}/user_guide/audience/manage_audience/user_profiles/).
 
 When segmenting with device-dependent filters (device model, device OS, and app version), your segment will contain all users that match your filter criteria. These users will be sent a message on all their devices, including ones that may not meet your filter criteria. For example, let's say User A has two devices: Device 1 is OS 13.0, and Device 2 is OS 10.0. If a segment targets users with OS 10.0, this user will be part of that segment and receive messages on both of their devices.
 
 ### Push notifications
 
-You can specify that only one push notification is sent to each user. When [composing your message]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), select **Only send to the user’s last used device** under **Additional Settings**.
+You can specify that only one push notification is sent to each user. When [composing your message]({{site.baseurl}}/user_guide/channels/push/create_a_push_message#step-4-compose-your-push-message), select **Only send to the user’s last used device** under **Additional Settings**.
 
 !["Additional settings" with a checkbox for only sending to the user's last used device.]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
 

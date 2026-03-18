@@ -133,13 +133,13 @@ Next, we'll name this catalog "games_catalog" and select the **Process Catalog**
 
 Note that you won't be able to edit this name after the catalog is created. You can delete a catalog and re-upload an updated version using the same catalog name.
 
-After creating the catalog, you can begin referencing the [catalog in a campaign]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/).
+After creating the catalog, you can begin referencing the [catalog in a campaign]({{site.baseurl}}/user_guide/data/activation/catalogs/use/).
 {% endtab %}
 
 {% tab Create in browser %}
 ### Prerequisites
 
-Before you can edit or create catalogs in the browser, you need the following [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) for your workspace:
+Before you can edit or create catalogs in the browser, you need the following [user permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/) for your workspace:
 
 - View Catalogs
 - Edit Catalogs

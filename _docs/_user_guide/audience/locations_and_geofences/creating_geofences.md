@@ -115,7 +115,7 @@ Because Braze in-app messages don't include a built-in button action to invoke t
 - A deep link that triggers the native location permission prompt from within your app.
 - A deep link that opens the app's location settings page in the device's OS settings, which is useful for re-prompting users who previously denied or limited their permissions.
 
-For more information about deep links, see [Deep linking to in-app content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/). For platform-specific guidance on location and geofence integration, see [Geofences]({{site.baseurl}}/developer_guide/geofences/) in the developer guide.
+For more information about deep links, see [Deep linking to in-app content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/deep_linking_to_in-app_content/). For platform-specific guidance on location and geofence integration, see [Geofences]({{site.baseurl}}/developer_guide/geofences/) in the developer guide.
 
 ### Step 2: Build the location primer in-app message
 
@@ -150,7 +150,7 @@ In both cases, remind users to keep **Precise Location** turned on for the best 
 
 If a user previously denied location access or selected a limited permission, you can't trigger the native prompt again from within the app on most OS versions. Instead, direct them to update their permissions in device settings.
 
-Use a deep link inside a custom [in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/) to navigate the user to the app's location settings page in the OS. Your development team can set up a deep link for this as part of your app's location permission handling (refer to [Step 1](#step-1-work-with-your-development-team)).
+Use a deep link inside a custom [in-app message]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/) to navigate the user to the app's location settings page in the OS. Your development team can set up a deep link for this as part of your app's location permission handling (refer to [Step 1](#step-1-work-with-your-development-team)).
 
 When building this in-app message, consider the following:
 
@@ -313,7 +313,7 @@ In Braze, a geofence is a different concept from location tracking. Geofences ar
 
 Location tracking collects and stores a user's most recent location data. This data can be used to segment users based on the `Most Recent Location` filter. For example, you could use the `Most Recent Location` filter to target users located in New York.
 
-For more information, see [Location tracking]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/location_tracking/).
+For more information, see [Location tracking]({{site.baseurl}}/user_guide/audience/locations_and_geofences/location_tracking/).
 
 ### How accurate are Braze geofences?
 

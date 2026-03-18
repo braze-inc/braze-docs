@@ -55,7 +55,7 @@ Select a trigger event. This can include any of the following:
 - Sending an SMS inbound message
 - Sending a WhatsApp inbound message
 
-You can also further filter trigger events through Braze [custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/), allowing for customizable event properties for custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. 
+You can also further filter trigger events through Braze [custom event properties]({{site.baseurl}}/user_guide/data/activation/events/custom_events/), allowing for customizable event properties for custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. 
 
 For example, let's say we have a campaign with an abandoned cart custom event that is further targeted by the "cart value" property filter. This campaign will only reach users who've left between $100 and $200 worth of goods in their carts. 
 
@@ -84,18 +84,18 @@ Additionally, users who complete the trigger event after your campaign is launch
 
 ![]({% image_buster /assets/img_archive/schedule_triggered22.png %})
 
-You may also elect to send the campaign on either a specific day of the week (by choosing "on the next" and then selecting a day) or a specific number of days (by selecting "in") in the future. Alternatively, you may choose to send your message using the [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) feature instead of manually selecting a delivery time.
+You may also elect to send the campaign on either a specific day of the week (by choosing "on the next" and then selecting a day) or a specific number of days (by selecting "in") in the future. Alternatively, you may choose to send your message using the [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/) feature instead of manually selecting a delivery time.
 
 ![]({% image_buster /assets/img_archive/schedule_triggered7.png %})
 ![]({% image_buster /assets/img_archive/schedule_triggered8.png %})
 
 ### Step 3: Select exception events
 
-Select an exception event that will disqualify users from receiving this campaign. You can only do this if your triggered message sends after a time delay. [Exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) can be making a purchase, starting a session, performing one of a campaign's designated [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events), or performing a custom event. If a user completes the trigger event but then completes your exception event before the message sends due to the time delay, they will not receive the campaign. Users who do not receive the campaign due to the exception event will automatically be eligible to receive it in the future, the next time they complete the trigger event, even if you do not elect for users to become [re-eligible]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).
+Select an exception event that will disqualify users from receiving this campaign. You can only do this if your triggered message sends after a time delay. [Exception events]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/exit_criteria#exception-events) can be making a purchase, starting a session, performing one of a campaign's designated [conversion events]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/conversion_events/), or performing a custom event. If a user completes the trigger event but then completes your exception event before the message sends due to the time delay, they will not receive the campaign. Users who do not receive the campaign due to the exception event will automatically be eligible to receive it in the future, the next time they complete the trigger event, even if you do not elect for users to become [re-eligible]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/re_eligibility/).
 
 ![]({% image_buster /assets/img_archive/schedule_triggered32.png %})
 
-You can read more about how to employ exception events in our section on [use cases]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#use-cases).
+You can read more about how to employ exception events in our section on [use cases]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery#use-cases).
 
 > If you send a campaign with a trigger event that matches the exception event, Braze will cancel the campaign and automatically re-schedule a new campaign based on the exception event's message delivery time. For example, if your first trigger event starts at five minutes and the exception event starts at 10 minutes, you would rely on the exception event's 10 minutes as the official campaign's message delivery time.
 
@@ -109,7 +109,7 @@ Assign the campaign's duration by specifying a start time and optional end time.
 
 ![]({% image_buster /assets/img_archive/schedule_triggered43.png %})
 
-If a user completes a trigger event during the specified time frame but qualifies for the message outside of the time frame due to a scheduled delay, then they will not receive the campaign. Therefore, if you set a time delay longer than the message's time frame, no users will receive your campaign. In addition, you can elect to send the message in users' [local time zones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/#local-time-zone-campaigns).
+If a user completes a trigger event during the specified time frame but qualifies for the message outside of the time frame due to a scheduled delay, then they will not receive the campaign. Therefore, if you set a time delay longer than the message's time frame, no users will receive your campaign. In addition, you can elect to send the message in users' [local time zones]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/scheduled_delivery#local-time-zone-campaigns).
 
 ### Step 5: Select time frame
 
@@ -121,7 +121,7 @@ In the case where a user completes the trigger event within the time frame, but 
 
 ![]({% image_buster /assets/img_archive/schedule_triggered_next_available.png %})
 
-If a user doesn't receive the message because they miss the time frame, then they will still be qualified to receive it the next time they complete the trigger event, even if you did not elect for users to become [re-eligible]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/). If you do elect for users to become re-eligible, then users can receive the campaign each time they complete the trigger event, assuming they qualify during the specified time frame.
+If a user doesn't receive the message because they miss the time frame, then they will still be qualified to receive it the next time they complete the trigger event, even if you did not elect for users to become [re-eligible]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/re_eligibility/). If you do elect for users to become re-eligible, then users can receive the campaign each time they complete the trigger event, assuming they qualify during the specified time frame.
 
 If you have also assigned the campaign a certain duration, then a user must qualify within both the duration and the specific portion of the day to receive the message.
 
@@ -144,17 +144,17 @@ In addition, when creating welcome campaigns, you can trigger messages to send a
 Any of these things will prevent a user who has completed the trigger event from receiving the campaign:
 
 - The user completed the exception event before the time delay had fully elapsed.
-- Liquid [`abort_message` logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages)  was used and the message was aborted based on the `abort_message` logic or rules.
+- Liquid [`abort_message` logic]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages/)  was used and the message was aborted based on the `abort_message` logic or rules.
 - The time delay caused the user to become qualified to receive the campaign after the duration has ended.
 - The time delay caused the user to become qualified to receive the campaign outside of the specified portion of the day.
 - The user has already received the campaign, and users do not become re-eligible.
 - While users are re-eligible to receive the campaign, they can only re-trigger it after a certain period of time, and that period of time has not yet elapsed.
 
-[Segmenting]({{site.baseurl}}/user_guide/engagement_tools/segments/) a triggered campaign on user data recorded at the time of the event may cause a [race condition]({{site.baseurl}}/help/best_practices/race_conditions/#race-conditions). This happens when the user attribute on which the campaign is segmented gets changed, but the change hasn't been processed for the user when the campaign is sent. Since campaigns check for segment membership on entry, this can lead to the user not receiving the campaign.
+[Segmenting]({{site.baseurl}}/user_guide/audience/segments/) a triggered campaign on user data recorded at the time of the event may cause a [race condition]({{site.baseurl}}/help/best_practices/race_conditions/#race-conditions). This happens when the user attribute on which the campaign is segmented gets changed, but the change hasn't been processed for the user when the campaign is sent. Since campaigns check for segment membership on entry, this can lead to the user not receiving the campaign.
 
 For example, imagine you want to send an event-triggered campaign to male users who just registered. When the user registers, you record a custom event `registration` and simultaneously set the user's `gender` attribute. The event may trigger the campaign before Braze has processed the user's gender, preventing them from receiving the campaign.
 
-As a best practice, ensure that the attribute on which the campaign is segmented is flushed to Braze servers before the event. If this isn't possible, the best way to guarantee delivery is to use [custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) to attach the relevant user properties to the event and apply a property filter for the specific event property instead of a segmentation filter. For our example, you would add a `gender` property to the custom event `registration` so that Braze is guaranteed to have the data you need when your campaign is triggered.
+As a best practice, ensure that the attribute on which the campaign is segmented is flushed to Braze servers before the event. If this isn't possible, the best way to guarantee delivery is to use [custom event properties]({{site.baseurl}}/user_guide/data/activation/events/custom_events/custom_event_properties#custom-event-properties) to attach the relevant user properties to the event and apply a property filter for the specific event property instead of a segmentation filter. For our example, you would add a `gender` property to the custom event `registration` so that Braze is guaranteed to have the data you need when your campaign is triggered.
 
 Additionally, if a campaign is action-based and has a delay, you can check the option to **Re-evaluate segment membership at send-time** to ensure users are still part of the target audience when the message is sent.
 

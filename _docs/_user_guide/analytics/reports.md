@@ -13,37 +13,37 @@ search_rank: 2
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Campaign analytics
-    link: /docs/user_guide/analytics/reports/campaign_analytics/
+    link: /docs/user_guide/analytics/reports/campaign_analytics
     image: /assets/img/braze_icons/bar-chart-01.svg
   - name: Report Builder
-    link: /docs/user_guide/analytics/reports/report_builder/
+    link: /docs/user_guide/analytics/reports/report_builder
     image: /assets/img/braze_icons/tool-01.svg
   - name: Query Builder
-    link: /docs/user_guide/analytics/reports/query_builder/
+    link: /docs/user_guide/analytics/reports/query_builder
     image: /assets/img/braze_icons/code-02.svg
   - name: Engagement reports
-    link: /docs/user_guide/analytics/reports/engagement_reports/
+    link: /docs/user_guide/analytics/reports/engagement_reports
     image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Revenue report
-    link: /docs/user_guide/analytics/reports/revenue_report/
+    link: /docs/user_guide/analytics/reports/revenue_report
     image: /assets/img/braze_icons/piggy-bank-02.svg
   - name: Custom events report
-    link: /docs/user_guide/analytics/reports/custom_events_report/
+    link: /docs/user_guide/analytics/reports/custom_events_report
     image: /assets/img/braze_icons/calendar-check-02.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
   - name: Canvas analytics
-    link: /docs/user_guide/analytics/reports/canvas_analytics/
+    link: /docs/user_guide/analytics/reports/canvas_analytics
     image: /assets/img/braze_icons/line-chart-down-01.svg
   - name: Funnel reports
-    link: /docs/user_guide/analytics/reports/funnel_reports/
+    link: /docs/user_guide/analytics/reports/funnel_reports
     image: /assets/img/braze_icons/flag-02.svg
   - name: Retention reports
-    link: /docs/user_guide/analytics/reports/retention_reports/
+    link: /docs/user_guide/analytics/reports/retention_reports
     image: /assets/img/braze_icons/user-check-01.svg
   - name: Configure reporting
-    link: /docs/user_guide/analytics/reports/configure_reporting/
+    link: /docs/user_guide/analytics/reports/configure_reporting
     image: /assets/img/braze_icons/settings-01.svg
 ---
 

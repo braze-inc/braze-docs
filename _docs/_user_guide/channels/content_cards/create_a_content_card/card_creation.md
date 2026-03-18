@@ -19,14 +19,14 @@ To take advantage of this feature, you must upgrade to the following minimum SDK
 
 {% sdk_min_versions swift:5.2.0 android:23.0.0 web:4.2.0 %}
 
-After upgrading the SDK, your mobile users must upgrade their app. You can filter your campaign or Canvas audience to only [target users on these minimum app versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions).
+After upgrading the SDK, your mobile users must upgrade their app. You can filter your campaign or Canvas audience to only [target users on these minimum app versions]({{site.baseurl}}/user_guide/messaging/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions).
 
 ## Overview
 
 {% tabs %}
 {% tab Campaign %}
 
-You can choose when Braze creates a card on the **Delivery** step when creating a new [Content Card campaign]({{site.baseurl}}/user_guide/channels/content_cards/create/) with scheduled delivery.
+You can choose when Braze creates a card on the **Delivery** step when creating a new [Content Card campaign]({{site.baseurl}}/user_guide/channels/content_cards/create_a_content_card/) with scheduled delivery.
 
 ![Content Card Controls section when editing the delivery of a scheduled Content Card.]({% image_buster /assets/img_archive/card_creation.png %})
 
@@ -40,7 +40,7 @@ Regardless of your selected option, the Content Card expiration date countdown w
 {% endtab %}
 {% tab Canvas %}
 
-You can choose when Braze creates a card on the **Messaging Channels** tab of a Content Card [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/).
+You can choose when Braze creates a card on the **Messaging Channels** tab of a Content Card [Message step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/).
 
 ![Content Card Controls section when editing the delivery of a scheduled Content Card.]({% image_buster /assets/img_archive/card_creation_canvas.png %})
 

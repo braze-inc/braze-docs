@@ -8,7 +8,7 @@ description: "This reference page lists filters that can be used to reformat sta
 
 # Filters
 
-> This reference article provides an overview of filters in Liquid, and covers which filters are supported by Braze. Looking for ideas on how you can use these filters? Check out our [Liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/).
+> This reference article provides an overview of filters in Liquid, and covers which filters are supported by Braze. Looking for ideas on how you can use these filters? Check out our [Liquid use case library]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/liquid_use_cases/).
 
 Filters are how you can modify the output of numbers, strings, variables, and objects in Liquid. You can use filters to reformat static or dynamic text, such as changing a string from lowercase to uppercase or to perform mathematical operations, like addition or division.
 
@@ -44,7 +44,7 @@ BIG SALE
 In this example, `Big Sale` is a string, and `upcase` is the filter being applied.
 
 {% alert note %}
-Filters can be used in `assign` statements and output tags {% raw %}(`{{ }}`){% endraw %}, but not in conditionals (`if`, `elsif`, `unless`), `case`/`when`, `for` loops, or array access brackets. To use a filtered value in one of those contexts, assign the result to a variable first. For more details, see [Where to use operators and filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+Filters can be used in `assign` statements and output tags {% raw %}(`{{ }}`){% endraw %}, but not in conditionals (`if`, `elsif`, `unless`), `case`/`when`, `for` loops, or array access brackets. To use a filtered value in one of those contexts, assign the result to a variable first. For more details, see [Where to use operators and filters]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid#where-to-use-operators-and-filters).
 {% endalert %}
 
 ### Syntax for multiple filters
@@ -265,9 +265,9 @@ Straight quotes are different from curly quotes in Liquid. Be careful when copyi
 | [downcase](https://shopify.dev/api/liquid/filters/downcase)      | Converts a string into lowercase.         | ✅  Yes   |
 | [escape](https://shopify.dev/api/liquid/filters/escape)    | Escapes a string.             | ✅  Yes   |
 | [handleize](https://shopify.dev/api/liquid/filters/handleize)        | Formats a string into a handle.        | ⛔  No    |
-| [md5](https://shopify.dev/api/liquid/filters/md5)    | Converts a string into an MD5 hash. Refer to [Encoding Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) for more.   | ✅  Yes   |
-| [sha1](https://shopify.dev/api/liquid/filters/sha1)    | Converts a string into a SHA-1 hash. Refer to [Encoding Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) for more.  | ✅  Yes   |
-| hmac_sha1_hex<br>(previously [hmac_sha_1](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1)) | Converts a string into a SHA-1 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter. Refer to [Encoding Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) for more. | ✅  Yes   |
+| [md5](https://shopify.dev/api/liquid/filters/md5)    | Converts a string into an MD5 hash. Refer to [Encoding Filters]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/advanced_filters#encoding-filters) for more.   | ✅  Yes   |
+| [sha1](https://shopify.dev/api/liquid/filters/sha1)    | Converts a string into a SHA-1 hash. Refer to [Encoding Filters]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/advanced_filters#encoding-filters) for more.  | ✅  Yes   |
+| hmac_sha1_hex<br>(previously [hmac_sha_1](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1)) | Converts a string into a SHA-1 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter. Refer to [Encoding Filters]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/advanced_filters#encoding-filters) for more. | ✅  Yes   |
 | [hmac_sha256](https://shopify.dev/api/liquid/filters/hmac_sha256)    | Converts a string into a SHA-256 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter.       | ✅  Yes   |
 | hmac_sha512 | Converts a string into a SHA-512 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter. | ✅  Yes  |
 | [newline_to_br](https://shopify.dev/api/liquid/filters/newline_to_br)     | Inserts a `<br>` line break HTML tag in front of each line break in a string.        | ✅  Yes   |
@@ -301,7 +301,7 @@ The following general filters serve many purposes, including formatting or conve
 | [highlight](https://shopify.dev/api/liquid/filters/highlight)      | Wraps words inside search results with an HTML `<strong>` tag with the class highlight if it matches the submitted search terms. | ⛔  No    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-You can find more supported filters, such as encoding and URL filters, on our [Advanced Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/) page.
+You can find more supported filters, such as encoding and URL filters, on our [Advanced Filters]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/advanced_filters/) page.
 
 ### Date filter {#date-filter}
 

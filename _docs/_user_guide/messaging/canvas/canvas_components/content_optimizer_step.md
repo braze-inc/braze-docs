@@ -32,7 +32,7 @@ The base message is the starting point for your step. Variants for each content 
 During the beta period, email is the only supported channel. 
 {% endalert %}
 
-From the **Messaging Channels** tab, select **Email** and create your base email message. Refer to our dedicated [Email]({{site.baseurl}}/user_guide/message_building_by_channel/email) section for help. 
+From the **Messaging Channels** tab, select **Email** and create your base email message. Refer to our dedicated [Email]({{site.baseurl}}/user_guide/channels/email/) section for help. 
 
 The Content Optimizer agent uses the send settings (such as the email domain and reply-to address) specified in this variant to send all messages. You can either start with a new design or select an existing template for this message. At this step, consider which components of the message you want to optimize for. You will define these in [step 4](#step-4).
 

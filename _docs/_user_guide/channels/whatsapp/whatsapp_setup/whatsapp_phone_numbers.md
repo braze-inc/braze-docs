@@ -12,12 +12,12 @@ description: "Manage WhatsApp Business phone numbers including acquisition, migr
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Acquire a phone number
-    link: /docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/acquire_a_phone_number/
+    link: /docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/acquire_a_phone_number
     image: /assets/img/braze_icons/phone-01.svg
   - name: Migrate a phone number
-    link: /docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number/
+    link: /docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/migrate_a_phone_number
     image: /assets/img/braze_icons/switch-horizontal-02.svg
   - name: Transfer between workspaces
-    link: /docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/transfer_between_workspaces/
+    link: /docs/user_guide/channels/whatsapp/whatsapp_setup/whatsapp_phone_numbers/transfer_between_workspaces
     image: /assets/img/braze_icons/arrow-circle-right.svg
 ---

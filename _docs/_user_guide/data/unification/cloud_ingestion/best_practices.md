@@ -694,12 +694,12 @@ Fields within the payload should follow the same format as the corresponding `/u
 
 | Data type | Formatting specifications |
 | --------- | ---------| --------- | ----------- |
-| `attributes` | See [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
+| `attributes` | See [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/#migrating-push-tokens) |
 | `events` | See [events object]({{site.baseurl}}/api/objects_filters/event_object/) |
 | `purchases` | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Note the special requirement for [capturing dates]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#capturing-dates-as-object-properties) in nested attributes. 
+Note the special requirement for [capturing dates]({{site.baseurl}}/user_guide/data/activation/attributes/nested_custom_attribute_support#capturing-dates-as-object-properties) in nested attributes. 
 
 {% tabs local %}
 {% tab Nested Custom Attributes %}

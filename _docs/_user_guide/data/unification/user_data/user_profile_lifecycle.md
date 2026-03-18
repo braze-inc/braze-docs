@@ -36,7 +36,7 @@ Additional benefits of using an `external_id` include the following:
 - Provide a consistent user experience across multiple devices and platforms (for example, not sending lapsing user notifications to a user's Android tablet when they are a loyal user of the iPhone app).
 - Improve the accuracy of your analytics by confirming users aren't creating a new user profile every time they uninstall and reinstall, or install the app on a different device.
 - Enable import of user data from sources outside the app using the [User Data endpoints]({{site.baseurl}}/api/endpoints/user_data/) and target users with transactional messages using our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging/).
-- Search for individual users using our "Testing" [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) within the segmenter, and on the [**Search Users**]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) page.
+- Search for individual users using our "Testing" [filters]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters/) within the segmenter, and on the [**Search Users**]({{site.baseurl}}/user_guide/audience/manage_audience/user_profiles/) page.
 
 ### Considerations for external IDs
 

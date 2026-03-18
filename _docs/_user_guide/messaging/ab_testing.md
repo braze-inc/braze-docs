@@ -4,7 +4,7 @@ article_title: "A/B tests"
 page_order: 6
 layout: dev_guide
 guide_top_header: "A/B tests"
-guide_top_text: "Run experiments to optimize your messaging. An A/B test compares users' responses to multiple versions of the same campaign, while a multivariate test extends this to two or more variables. In Braze, the terms are used interchangeably because the setup process is the same. Use A/B testing with <a href='/docs/user_guide/brazeai/intelligence_suite/intelligent_selection/'>Intelligent Selection</a> to automatically optimize your results."
+guide_top_text: "Run experiments to optimize your messaging. An A/B test compares users' responses to multiple versions of the same campaign, while a multivariate test extends this to two or more variables. In Braze, the terms are used interchangeably because the setup process is the same. Use A/B testing with <a href='/docs/user_guide/brazeai/intelligence_suite/intelligent_selection'>Intelligent Selection</a> to automatically optimize your results."
 
 page_type: landing
 description: "Set up and analyze A/B tests and multivariate experiments in Braze."
@@ -12,19 +12,19 @@ description: "Set up and analyze A/B tests and multivariate experiments in Braze
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Concepts
-    link: /docs/user_guide/messaging/ab_testing/concepts/
+    link: /docs/user_guide/messaging/ab_testing/concepts
     image: /assets/img/braze_icons/lightbulb-02.svg
   - name: Create tests
-    link: /docs/user_guide/messaging/ab_testing/create_tests/
+    link: /docs/user_guide/messaging/ab_testing/create_tests
     image: /assets/img/braze_icons/plus-circle.svg
   - name: Optimizations
-    link: /docs/user_guide/messaging/ab_testing/optimizations/
+    link: /docs/user_guide/messaging/ab_testing/optimizations
     image: /assets/img/braze_icons/settings-01.svg
   - name: Analytics
-    link: /docs/user_guide/messaging/ab_testing/analytics/
+    link: /docs/user_guide/messaging/ab_testing/analytics
     image: /assets/img/braze_icons/bar-chart-01.svg
   - name: FAQ
-    link: /docs/user_guide/messaging/ab_testing/faq/
+    link: /docs/user_guide/messaging/ab_testing/faq
     image: /assets/img/braze_icons/annotation-question.svg
 ---
 

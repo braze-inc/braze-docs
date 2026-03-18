@@ -10,13 +10,13 @@ guide_top_text: "Explore common patterns for streaming Braze event data to your 
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: How Braze uses Currents
-    link: /docs/user_guide/data/distribution/braze_currents/use_cases/how_braze_uses_currents/
+    link: /docs/user_guide/data/distribution/braze_currents/use_cases/how_braze_uses_currents
     image: /assets/img/braze_icons/expand-05.svg
   - name: Transfer data from Amazon S3 to Snowflake
-    link: /docs/user_guide/data/distribution/braze_currents/use_cases/s3_to_snowflake/
+    link: /docs/user_guide/data/distribution/braze_currents/use_cases/s3_to_snowflake
     image: /assets/img/braze_icons/amazon.svg
   - name: Transfer data to Redshift
-    link: /docs/user_guide/data/distribution/braze_currents/use_cases/transferring_data_to_redshift/
+    link: /docs/user_guide/data/distribution/braze_currents/use_cases/transferring_data_to_redshift
     image: /assets/img/braze_icons/switch-horizontal-01.svg
 ---
 <br><br>

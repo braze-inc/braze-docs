@@ -70,7 +70,7 @@ You can manage your own responses that are sent to users after they text in a ke
 {% endtabs %}
 
 {% alert tip %} 
-If an action-based Canvas is triggered by an inbound SMS, MMS, or RCS message, you can reference SMS, MMS, or RCS properties in the first [message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) of the Canvas.
+If an action-based Canvas is triggered by an inbound SMS, MMS, or RCS message, you can reference SMS, MMS, or RCS properties in the first [message step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/) of the Canvas.
 {% endalert %}
 
 ## Multi-language support

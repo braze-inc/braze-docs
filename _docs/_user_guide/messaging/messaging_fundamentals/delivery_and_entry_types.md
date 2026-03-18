@@ -30,7 +30,7 @@ You can choose from the following options when using scheduled delivery:
 
 - Send as soon as the campaign is launched
 - Send at a designated time
-- [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)
+- [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/)
 {% endtab %}
 
 {% tab canvas %}

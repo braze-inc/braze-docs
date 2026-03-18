@@ -12,31 +12,31 @@ channel: email
 guide_featured_title: "Section articles"
 guide_featured_list:
 - name: "Setting up IPs and domains"
-  link: /docs/user_guide/channels/email/email_setup/setting_up_ips_and_domains/
+  link: /docs/user_guide/channels/email/email_setup/setting_up_ips_and_domains
   image: /assets/img/braze_icons/target-05.svg
 - name: "IP warming"
-  link: /docs/user_guide/channels/email/email_setup/ip_warming/
+  link: /docs/user_guide/channels/email/email_setup/ip_warming
   image: /assets/img/braze_icons/annotation-alert.svg
 - name: "Email validation"
-  link: /docs/user_guide/channels/email/email_setup/email_validation/
+  link: /docs/user_guide/channels/email/email_setup/email_validation
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: "Email authentication"
-  link: /docs/user_guide/channels/email/email_setup/authentication/
+  link: /docs/user_guide/channels/email/email_setup/authentication
   image: /assets/img/braze_icons/user-square.svg
 - name: "Importing your email list"
-  link: /docs/user_guide/channels/email/email_setup/import_your_email_list/
+  link: /docs/user_guide/channels/email/email_setup/import_your_email_list
   image: /assets/img/braze_icons/list.svg
 - name: "SSL overview"
-  link: /docs/user_guide/channels/email/email_setup/ssl/
+  link: /docs/user_guide/channels/email/email_setup/ssl
   image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: "Consent and address collection"
-  link: /docs/user_guide/channels/email/email_setup/consent_and_address_collection/
+  link: /docs/user_guide/channels/email/email_setup/consent_and_address_collection
   image: /assets/img/braze_icons/book-closed.svg
 - name: "Deliverability pitfalls and spam traps"
-  link: /docs/user_guide/channels/email/email_setup/deliverability_pitfalls_and_spam_traps/
+  link: /docs/user_guide/channels/email/email_setup/deliverability_pitfalls_and_spam_traps
   image: /assets/img/braze_icons/alert-triangle.svg
 - name: "Open pixel and click tracking"
-  link: /docs/user_guide/channels/email/email_setup/open_pixel_and_click_tracking/
+  link: /docs/user_guide/channels/email/email_setup/open_pixel_and_click_tracking
   image: /assets/img/braze_icons/cursor-click-02.svg
 ---
 

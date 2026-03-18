@@ -42,7 +42,7 @@ In addition to custom JavaScript, Braze SDKs can also send analytics data with t
 ### Button click tracking (deprecated)
 
 {% alert warning %}
-The use of `abButtonID` is not supported in [HTML with Preview]({{site.baseurl}}/user_guide/channels/in_app_messages/message_types/custom_html/#html-upload-with-preview/) message types. For more information, see our [upgrade guide]({{site.baseurl}}/user_guide/channels/in_app_messages/preview/#backward-incompatible-changes).
+The use of `abButtonID` is not supported in [HTML with Preview]({{site.baseurl}}/user_guide/channels/in_app_messages/message_types/custom_html/#html-upload-with-preview/) message types. For more information, see our [upgrade guide]({{site.baseurl}}/user_guide/channels/in_app_messages/message_types/custom_html/#html-upload-with-preview).
 {% endalert %}
 
 To log button clicks for in-app message analytics, you can add `abButtonId` as a query parameter to any deep link, redirect URL, or anchor element `<a>`. Use `?abButtonId=0` to log a "Button 1" click, and `?abButtonId=1` to log a "Button 2" click.
@@ -98,16 +98,16 @@ To use the HTML preview for in-app messages, you must upgrade to the following m
 {% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}
 
 {% alert warning %}
-Because this message type can only be received by certain later SDK versions, users who are on unsupported SDK versions will not receive the message. Consider adopting this message type after a significant portion of your user base is reachable, or target only those users whose app version is later than the requirements. Learn more about [filtering by most recent app version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions).
+Because this message type can only be received by certain later SDK versions, users who are on unsupported SDK versions will not receive the message. Consider adopting this message type after a significant portion of your user base is reachable, or target only those users whose app version is later than the requirements. Learn more about [filtering by most recent app version]({{site.baseurl}}/user_guide/messaging/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions).
 {% endalert %}
 
 ### Creating a campaign {#instructions}
 
-Your mobile app users need to upgrade to the supported SDK versions to receive a **Custom Code** in-app message. We recommend that you [nudge users to upgrade]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions.
+Your mobile app users need to upgrade to the supported SDK versions to receive a **Custom Code** in-app message. We recommend that you [nudge users to upgrade]({{site.baseurl}}/user_guide/messaging/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions.
 
 #### Asset files
 
-When creating custom code in-app messages with HTML upload, you can upload campaign assets to the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) to reference in your message.
+When creating custom code in-app messages with HTML upload, you can upload campaign assets to the [media library]({{site.baseurl}}/user_guide/messaging/design_and_edit/media_library/) to reference in your message.
 
 The following file types are supported for upload:
 

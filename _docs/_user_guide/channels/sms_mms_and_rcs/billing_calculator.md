@@ -40,7 +40,7 @@ It's important to note that **as you pass the character limit of your first segm
 - **UCS-2 encoding**
     - If you include non-GSM characters such as Emojis, Chinese, Korean, or Japanese script in SMS messages, those messages have to be sent via UCS-2 encoding. Messages exceeding the initial segment limit of 70 characters will cause the entire message to be concatenated into 67 character message segments. For example, a 71 character message will be sent as two messages, one with 67 characters and the second with 4 characters.
 
-Regardless of the encoding type, each SMS message sent out by Braze has a limit of up to 10 segments and is compatible with [Liquid templating]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/), [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), Emojis, and links.
+Regardless of the encoding type, each SMS message sent out by Braze has a limit of up to 10 segments and is compatible with [Liquid templating]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid/), [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/), Emojis, and links.
 
 {% tabs %}
 {% tab GSM-7 encoding %}
@@ -86,7 +86,7 @@ Regardless of the encoding type, each SMS message sent out by Braze has a limit 
 - **Compatible with Liquid templating, Connected Content, emojis, and links**
     - Liquid templating and Connected Content may put your message at risk of going over the character limit for your encoding type. You may be able to use the [truncate words filter](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) to limit the number of words that your Liquid could bring to the message.
     - Emojis have no standard character count across all emojis, so make sure to test that your messages are segmenting and displaying correctly.
-    - Links may make use of many characters, resulting in more message segments than intended. Though the use of link shorteners is possible, they are best used with short codes. Visit our [SMS FAQ]({{site.baseurl}}/sms_faq/) for more information.<br><br>
+    - Links may make use of many characters, resulting in more message segments than intended. Though the use of link shorteners is possible, they are best used with short codes. Visit our [SMS FAQ]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/faqs/) for more information.<br><br>
 - **Testing**
     - Always test your SMS messages before launch, especially when using Liquid and Connected Content as going over message or copy limits may result in additional charges. Note that test messages will count toward your message limits.
 

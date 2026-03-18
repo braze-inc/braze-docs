@@ -1,6 +1,6 @@
 ---
 nav_title: Report Builder (legacy)
-article_title: Report Builder (Legacy)
+article_title: Report Builder (legacy)
 alias: /report_builder_legacy/
 page_order: 1
 page_type: reference
@@ -10,9 +10,9 @@ tool:
 
 ---
 
-# Report Builder (Legacy)
+# Report Builder (legacy)
 
-> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you can export your data and save your report to view in the future.<br><br>For a descriptive list of the metrics you'll find in your reports, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
+> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you can export your data and save your report to view in the future.<br><br>For a descriptive list of the metrics you'll find in your reports, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/analytics/metrics_glossary/).
 
 ![Campaign Comparison Example]({% image_buster /assets/img/campaign_comparison/campaign_main.png %}){: style="max-width:80%;"}
 
@@ -64,7 +64,7 @@ After you've created your report, you'll find a blank table containing campaigns
 
 ![Campaign Options]({% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}){: style="max-width:80%;"}
 
-Your table will populate with the metrics you choose. For definitions of these metrics, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/). Some metrics are only available for campaign comparison reports.
+Your table will populate with the metrics you choose. For definitions of these metrics, refer to the [Report Metrics Glossary]({{site.baseurl}}/user_guide/analytics/metrics_glossary/). Some metrics are only available for campaign comparison reports.
 
 You can also toggle calculations for the **Average** of any rate or numerical metric and **Total** for any numerical metric.
 

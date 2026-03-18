@@ -14,7 +14,7 @@ alias: /line/reporting/
 > After launching your campaign or Canvas, you can view key metrics on the campaign details page or Canvas analytics. This article covers where you can find those metrics and what they represent.
 
 {% alert tip %}
-Looking for definitions for the terms and metrics in your report? Refer to [Report metrics glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
+Looking for definitions for the terms and metrics in your report? Refer to [Report metrics glossary]({{site.baseurl}}/user_guide/analytics/metrics_glossary/).
 {% endalert %}
 
 ## Campaign analytics
@@ -33,7 +33,7 @@ Review this panel to see overall metrics such as the number of messages sent to 
 
 #### Control groups
 
-To measure the impact of an individual LINE message, you can add a [control group]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) to an A/B test. The top-level **Campaign Details** panel doesn’t include metrics from the Control Group variant.
+To measure the impact of an individual LINE message, you can add a [control group]({{site.baseurl}}/user_guide/messaging/ab_testing/) to an A/B test. The top-level **Campaign Details** panel doesn’t include metrics from the Control Group variant.
 
 ### LINE performance
 
@@ -45,7 +45,7 @@ If you want to simplify your view, select **+ Add/Remove Columns** and clear any
 
 #### LINE metrics
 
-Here are some key LINE metrics you may see in your analytics. To see the definitions of all LINE metrics used in Braze, refer to [Report metrics glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
+Here are some key LINE metrics you may see in your analytics. To see the definitions of all LINE metrics used in Braze, refer to [Report metrics glossary]({{site.baseurl}}/user_guide/analytics/metrics_glossary/).
 
 | Term | Definition |
 | --- | --- |
@@ -64,10 +64,10 @@ To get a day-by-day breakdown, select the <i class="fas fa-bars"></i> hamburger 
 
 ### Conversion event details
  
-The **Conversion Event Details** panel shows you the performance of your conversion events for your campaign. For more information, refer to [Conversion events]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation).
+The **Conversion Event Details** panel shows you the performance of your conversion events for your campaign. For more information, refer to [Conversion events]({{site.baseurl}}/user_guide/messaging/ab_testing/concepts/conversion_correlation/).
 
 ### Conversion correlation
 
-The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation).
+The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion correlation]({{site.baseurl}}/user_guide/messaging/ab_testing/concepts/conversion_correlation/).
 
 

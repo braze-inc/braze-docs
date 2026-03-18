@@ -9,7 +9,7 @@ channel:
 
 # API email preference center
 
-> Setting up a preference center provides a one-stop shop for your users to edit and manage their notification preferences for your [email messaging]({{site.baseurl}}/user_guide/channels/email/). This article includes steps for building an API-generated preference center, but you can also build a preference center using the [drag-and-drop editor]({{site.baseurl}}/user_guide/channels/email/preference_center/dnd_preference_center/).
+> Setting up a preference center provides a one-stop shop for your users to edit and manage their notification preferences for your [email messaging]({{site.baseurl}}/user_guide/channels/email/). This article includes steps for building an API-generated preference center, but you can also build a preference center using the [drag-and-drop editor]({{site.baseurl}}/user_guide/audience/subscription_preferences/preference_center/dnd_preference_center/).
 
 In the Braze dashboard, go to **Audience** > **Email Preference Centers**.
 

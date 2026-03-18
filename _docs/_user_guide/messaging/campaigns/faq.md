@@ -18,11 +18,11 @@ To create a multichannel campaign, select **Messaging** > **Campaigns**. Then, s
 
 ### Can I add a control group to my multichannel campaign?
 
-No, control groups in campaigns are intended for single-channel messaging, such as Email A versus Email B. As an alternative, try using [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas) for testing different channels, messaging content, and delivery timing. 
+No, control groups in campaigns are intended for single-channel messaging, such as Email A versus Email B. As an alternative, try using [Canvas]({{site.baseurl}}/user_guide/messaging/canvas/) for testing different channels, messaging content, and delivery timing. 
 
 ### What are some ways I can start testing and optimizing campaigns?
 
-Multivariate campaigns and running Canvases with multiple variants are a great way to start! For example, you can run a [multivariate campaign]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) to test out one message that has different copies or subject lines. Canvases with multiple variants can help test entire workflows.
+Multivariate campaigns and running Canvases with multiple variants are a great way to start! For example, you can run a [multivariate campaign]({{site.baseurl}}/user_guide/messaging/ab_testing/) to test out one message that has different copies or subject lines. Canvases with multiple variants can help test entire workflows.
 
 ### Why did the open rate for my campaign decrease?
 
@@ -46,7 +46,7 @@ For example, if a multichannel campaign sends both an email and a push notificat
 
 ### Why does my campaign have a smaller reachable user base than the segment that I'm using for the campaign?
 
-If you have a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) set up, this will prevent a percentage of your reachable audience from receiving campaigns. This means that the number of reachable users for your segment can sometimes be larger than the number of reachable users for your campaign, even if the campaign is using that same segment.
+If you have a [Global Control Group]({{site.baseurl}}/user_guide/audience/global_control_group/) set up, this will prevent a percentage of your reachable audience from receiving campaigns. This means that the number of reachable users for your segment can sometimes be larger than the number of reachable users for your campaign, even if the campaign is using that same segment.
 
 ### What does local time zone delivery offer?
 
@@ -58,7 +58,7 @@ For example, a London-based company sending a campaign at 12 pm will reach users
 
 Braze will automatically determine a user's time zone from their device. This ensures time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a time zone will have your company's time zone as their default time zone until they are recognized in your app by the SDK. 
 
-You can check your company's time zone in your [company settings]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/) on the dashboard.
+You can check your company's time zone in your [company settings]({{site.baseurl}}/user_guide/administer/global/admin_settings/) on the dashboard.
 
 ### When does Braze evaluate users for local time zone delivery?
 
@@ -137,7 +137,7 @@ To avoid this, ensure your custom attribute or event updates occur more than one
 
 ### Why does the number of users entering a campaign not match the expected number?
 
-The number of users entering a campaign may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) trigger). This will cause users to drop out of the campaign if they're not initially part of your selected audience before any trigger actions are evaluated.
+The number of users entering a campaign may differ from your expected number because of how audiences and triggers are evaluated. In Braze, an audience is evaluated before the trigger (unless using a [change in attribute]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/attribute_triggers#change-custom-attribute-value) trigger). This will cause users to drop out of the campaign if they're not initially part of your selected audience before any trigger actions are evaluated.
 
 {% alert tip %}
 For further assistance with campaign troubleshooting, be sure to contact Braze Support within 30 days of your issue's occurrence, as we only have the last 30 days of diagnostic logs.
@@ -149,7 +149,7 @@ Selecting the **CSV Export Email Addresses** option downloads data for only user
 
 ### Can I search for a campaign by its API identifier?
 
-Yes, use the filter `api_id:YOUR_API_ID` on the **Campaigns** page to search for a campaign by its API identifier. Refer to [searching for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/) to learn more.
+Yes, use the filter `api_id:YOUR_API_ID` on the **Campaigns** page to search for a campaign by its API identifier. Refer to [searching for campaigns]({{site.baseurl}}/user_guide/messaging/campaigns/manage_campaigns/search_campaigns/) to learn more.
 
 ### Why does whitespace appear differently in input fields versus displayed text? 
 

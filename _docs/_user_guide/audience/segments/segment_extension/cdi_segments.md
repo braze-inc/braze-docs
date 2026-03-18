@@ -1,5 +1,5 @@
 ---
-nav_title: CDI segment extensions
+nav_title: CDI Segment Extensions
 article_title: CDI Segment Extensions
 page_order: 0
 page_type: reference
@@ -12,7 +12,7 @@ description: "This how-to article will walk you through how to set up Location t
 
 # CDI Segment Extensions
 
-> With Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/) (CDI), you can set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data on a recurring basis.
+> With Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/) (CDI), you can set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data on a recurring basis.
 
 {% alert warning %}
 CDI Segment Extensions query your data warehouse directly, so you will incur all costs associated with running these queries in your data warehouse. CDI Segment Extensions won't consume [SQL segment credits]({{site.baseurl}}/user_guide/audience/segments/segment_extension/sql_segments/#monitoring-your-sql-segments-usage), don't count towards your Segment Extension limit, and do not log data points.
@@ -20,17 +20,17 @@ CDI Segment Extensions query your data warehouse directly, so you will incur all
 
 ## Prerequisites
 
-To use your data warehouse data for segmentation within your Braze workspace, you'll need to create a [connected source]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/), then create a CDI segment within your [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). CDI Segment Extensions allow you to write SQL that directly queries your own data warehouse by using data made available through your CDI connections, and create a group of users that can be targeted within Braze.
+To use your data warehouse data for segmentation within your Braze workspace, you'll need to create a [connected source]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/connected_sources/), then create a CDI segment within your [Segment Extensions]({{site.baseurl}}/user_guide/audience/segments/segment_extension/). CDI Segment Extensions allow you to write SQL that directly queries your own data warehouse by using data made available through your CDI connections, and create a group of users that can be targeted within Braze.
 
 ## Creating a CDI segment
 
 ### Step 1: Set up your source
 
-Before creating your first CDI Segment Extension, set up a new connected source with your data warehouse by following the steps in [Connected sources]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/).
+Before creating your first CDI Segment Extension, set up a new connected source with your data warehouse by following the steps in [Connected sources]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/connected_sources/).
 
 ### Step 2: Create a segment
 
-First, create a new [Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), then select **Full refresh**.
+First, create a new [Segment Extension]({{site.baseurl}}/user_guide/audience/segments/segment_extension/), then select **Full refresh**.
 
 ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:60%;"}
 
@@ -58,7 +58,7 @@ If your query results include users that don't exist in Braze, those users are i
 To learn how you can preview your Segment Extensions, manage your Segment Extensions, and run automated membership refreshes, see [SQL Segment Extensions]({{site.baseurl}}/user_guide/audience/segments/segment_extension/sql_segments/).
 {% endalert %}
 
-Finally, you can [use this Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#step-5-use-your-extension-in-a-segment) within a Braze segment to send a campaign or Canvas to this audience.
+Finally, you can [use this Segment Extension]({{site.baseurl}}/user_guide/audience/segments/segment_extension#step-5-use-your-extension-in-a-segment) within a Braze segment to send a campaign or Canvas to this audience.
 
 ## Considerations
 

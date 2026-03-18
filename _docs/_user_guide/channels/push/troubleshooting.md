@@ -50,20 +50,20 @@ You can also confirm that the user is part of the segment by using **User Lookup
 
 Check the global frequency caps. It's possible you did not receive the push notification because your workspace has global frequency capping in place and you've already hit your push notification cap for the specified time frame.
 
-You can do this by checking [global frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#freq-cap-feat-over) in the dashboard. If the campaign is set to abide by frequency capping rules, there will be a number of users impacted by these settings
+You can do this by checking [global frequency capping]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/frequency_capping#freq-cap-feat-over) in the dashboard. If the campaign is set to abide by frequency capping rules, there will be a number of users impacted by these settings
 
 ![Campaign Details]({% image_buster /assets/img_archive/trouble3.png %})
 
 #### Rate limits
 
-If you have a rate limit set for your campaign or Canvas, you might be falling out of receiving messaging due to exceeding this limit. For more information, refer to [Rate Limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting).
+If you have a rate limit set for your campaign or Canvas, you might be falling out of receiving messaging due to exceeding this limit. For more information, refer to [Rate Limiting]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/frequency_capping#rate-limiting).
 
 #### Control group status
 
 If this is a single channel campaign or a Canvas with a control group, it's possible you are falling into the control group.
 
-  1. Check the [variant distribution]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#step-5-distribute-users-among-your-variants) to see if there is a control group.
-  2. If so, create a segment filtering for [in campaign control group]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#in-campaign-control-group-filter) then [export the segment]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/#exporting-to-csv) and check if your user ID is on this list.
+  1. Check the [variant distribution]({{site.baseurl}}/user_guide/messaging/ab_testing#step-5-distribute-users-among-your-variants) to see if there is a control group.
+  2. If so, create a segment filtering for [in campaign control group]({{site.baseurl}}/user_guide/messaging/campaigns/ideas_and_strategies/retargeting_campaigns#in-campaign-control-group-filter) then [export the segment]({{site.baseurl}}/user_guide/data/distribution/export_braze_data/segment_data_to_csv#exporting-to-csv) and check if your user ID is on this list.
 
 #### Valid push token
 A push token is an identifier that senders use to target specific devices with a push notification. So, if the device does not have a valid push token, then there is no way to send a push notification to it. 

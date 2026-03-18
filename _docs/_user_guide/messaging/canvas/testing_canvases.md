@@ -15,18 +15,18 @@ description: "This landing page is home to resources on Canvas testing including
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Preview user paths
-    link: /docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths/
+    link: /docs/user_guide/messaging/canvas/testing_canvases/preview_user_paths
     image: /assets/img/braze_icons/target-04.svg
   - name: Send test Canvases
-    link: /docs/user_guide/messaging/canvas/testing_canvases/sending_test_canvases/
+    link: /docs/user_guide/messaging/canvas/testing_canvases/sending_test_canvases
     image: /assets/img/braze_icons/user-check-01.svg
   - name: Canvas analytics
-    link: /docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/
+    link: /docs/user_guide/messaging/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics
     image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Retention reports
-    link: /docs/user_guide/analytics/reporting/retention_reports/
+    link: /docs/user_guide/analytics/reports/retention_reports
     image: /assets/img/braze_icons/line-chart-down-01.svg
   - name: Funnel reports
-    link: /docs/user_guide/analytics/reporting/funnel_reports/
+    link: /docs/user_guide/analytics/reports/funnel_reports
     image: /assets/img/braze_icons/flag-02.svg
 ---

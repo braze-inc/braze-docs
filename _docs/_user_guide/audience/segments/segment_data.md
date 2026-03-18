@@ -16,7 +16,7 @@ tool:
 
 ## Accessing data about your segments and membership
 
-The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and select the name of a segment to edit and view its data. To learn how to create a segment, check out [Create a Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment).
+The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and select the name of a segment to edit and view its data. To learn how to create a segment, check out [Create a Segment]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment#creating-a-segment).
 
 ![Segments page]({% image_buster /assets/img_archive/segments.png %})
 
@@ -58,7 +58,7 @@ You can view the following segment statistics, which update in real-time as you 
         </tr>
         <tr>
             <td class="no-split">Emailable (Opted-In)</td>
-            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Emailable' %} Due to <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">spam regulations</a> it's a good idea to ask your users to explicitly opt-in by implementing a double opt-in policy where users must click a link in an initial confirmation email. To encourage more users to opt-in, you can target a message at <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions">those who have neither opted in nor out</a>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Emailable' %} Due to <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">spam regulations</a> it's a good idea to ask your users to explicitly opt-in by implementing a double opt-in policy where users must click a link in an initial confirmation email. To encourage more users to opt-in, you can target a message at <a href="/docs/user_guide/channels/email/subscriptions#segmenting-by-user-subscriptions">those who have neither opted in nor out</a>.</td>
         </tr>
         <tr>
             <td class="no-split">Push Enabled (Opted-In)</td>
@@ -69,7 +69,7 @@ You can view the following segment statistics, which update in real-time as you 
 
 ### Segment Insights
 
-You can see how one segment is performing compared to another across a set of pre-selected KPIs by visiting the [Segment Insights]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_insights/) page of your dashboard.
+You can see how one segment is performing compared to another across a set of pre-selected KPIs by visiting the [Segment Insights]({{site.baseurl}}/user_guide/audience/segments/segment_insights/) page of your dashboard.
 
 ### Messaging use
 The **Messaging Use** section shows which segments, currently enabled campaigns, and currently enabled canvases are targeting your segment.
@@ -78,7 +78,7 @@ The **Messaging Use** section shows which segments, currently enabled campaigns,
 
 The **Historical Membership** section shows how the size of your segment changed over time. Use the dropdown to filter segment membership by date range.
 
-To learn more about monitoring your segment’s membership and size, refer to [Measuring segment size]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
+To learn more about monitoring your segment’s membership and size, refer to [Measuring segment size]({{site.baseurl}}/user_guide/audience/segments/measuring_segment_size/).
 
 ### User preview
 
@@ -86,7 +86,7 @@ To view detailed, user-specific information about your segments, click **User Da
 
 On this page, you can view a number of user-specific attributes, such as gender, age, number of sessions, and whether they have opted into push and email.
 
-Note that in cases where your segment is very small relative to your workspace size, it's possible for the User Preview to return zero users. This doesn't necessarily mean that there are zero users in your segment; run [Calculate Exact Stats]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/#statistics-for-segment-size) to determine your segment's exact size.
+Note that in cases where your segment is very small relative to your workspace size, it's possible for the User Preview to return zero users. This doesn't necessarily mean that there are zero users in your segment; run [Calculate Exact Stats]({{site.baseurl}}/user_guide/audience/segments/measuring_segment_size#statistics-for-segment-size) to determine your segment's exact size.
 
 ![User Preview]({% image_buster /assets/img_archive/user_preview.png %})
 
@@ -96,7 +96,7 @@ Use [Query Builder report templates]({{site.baseurl}}/user_guide/analytics/repor
 
 ## Creating a segment breakdown report using Query Builder
 
-To create a report from a [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) template, go to **Query Builder** and do the following:
+To create a report from a [Query Builder]({{site.baseurl}}/user_guide/analytics/reports/query_builder/) template, go to **Query Builder** and do the following:
 
 1. Select **Create SQL Query** > **Query Template**.
 2. Filter templates for those that have metrics that include “segment breakdowns”.

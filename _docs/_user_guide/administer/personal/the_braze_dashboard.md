@@ -21,7 +21,7 @@ When you log in, the dashboard provides a centralized view of your engagement to
 - **Left navigation:** Organizes tools by function (messaging, audience, analytics, settings)
 - **Global header:** Provides quick access to search, support, language settings, notifications, and your account
 
-Your dashboard experience is organized by [workspaces]({{site.baseurl}}/user_guide/getting_started/workspaces), which help you manage content for different brands, regions, or teams. You can [switch between workspaces](#workspace-switcher) at any time from the side navigation.
+Your dashboard experience is organized by [workspaces]({{site.baseurl}}/user_guide/get_started/workspaces/), which help you manage content for different brands, regions, or teams. You can [switch between workspaces](#workspace-switcher) at any time from the side navigation.
 
 ## Access your dashboard
 
@@ -50,7 +50,7 @@ The vertical menu on the left organizes Braze tools by function and keeps your m
 
 Located at the top of the side navigation, the workspace switcher lets you move between different workspaces in your Braze instance. The active workspace is highlighted.
 
-[Workspaces]({{site.baseurl}}/user_guide/getting_started/workspaces) help organize content by brand, region, product line, or team. Each workspace includes its own data, campaigns, and settings. Your access can vary between workspaces. For example, you might have editing access in one workspace and view-only access in another.
+[Workspaces]({{site.baseurl}}/user_guide/get_started/workspaces/) help organize content by brand, region, product line, or team. Each workspace includes its own data, campaigns, and settings. Your access can vary between workspaces. For example, you might have editing access in one workspace and view-only access in another.
 
 To switch workspaces, select the workspace dropdown at the top of the side navigation and choose the workspace you want to access. You can also [add favorite workspaces](#favorite-workspaces) for faster access to the ones you use most often.
 
@@ -142,7 +142,7 @@ On the **Home** page, the dashboard displays your recently edited or created cam
 
 ![A Canvas draft, an active segment, and a campaign draft in the "Pick up where you left off" section.]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
-For more information, see [Home dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analytics/home_dashboard/#pick-up-where-you-left-off).
+For more information, see [Home dashboard]({{site.baseurl}}/user_guide/analytics/dashboards/home#pick-up-where-you-left-off).
 
 ### Favorite workspaces
 
@@ -182,10 +182,10 @@ Want to tell us what you think? You can share feedback about navigation, accessi
 
 ### Key tasks and next steps
 
-- **Build campaigns**: [Create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/)
+- **Build campaigns**: [Create a campaign]({{site.baseurl}}/user_guide/messaging/campaigns/creating_campaign/)
 - **Create journeys**: [Build a Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/)
-- **Define audiences**: [Create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)
-- **Review performance**: [Analytics overview]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/)
+- **Define audiences**: [Create a segment]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/)
+- **Review performance**: [Analytics overview]({{site.baseurl}}/user_guide/analytics/dashboards/home/)
 - **Configure settings**: [App settings]({{site.baseurl}}/user_guide/administer/global/workspace_settings/)
 
 

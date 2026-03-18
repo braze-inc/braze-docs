@@ -10,7 +10,7 @@ tool: Currents
 
 # How Braze uses Currents
 
-> Braze uses Currents internally with selected [partners]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/).
+> Braze uses Currents internally with selected [partners]({{site.baseurl}}/user_guide/data/distribution/braze_currents/setting_up_currents/available_partners/).
 
 We filter our data from email and push campaigns into a business insights tool, Looker, but it takes a slightly different route to get there. We use an inverted version of the Extract, Transform, Load (ETL) methodology—switching the order to Extract, Load, Transform (ELT).
 

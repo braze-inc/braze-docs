@@ -1161,7 +1161,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_cancelled", properties:
 
 Braze has created pre-built Canvas templates that are powered by eCommerce recommended events, such as targeting customers who started the checkout process but left before placing their order. You can use these events to make informed decisions to enhance your user journey by personalizing messaging and targeting specific audiences.
 
-Check out our dedicated [eCommerce use cases]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases) for more ways on how you can use these events with Canvas templates.
+Check out our dedicated [eCommerce use cases]({{site.baseurl}}/user_guide/messaging/canvas/ideas_and_strategies/ecommerce_use_cases/) for more ways on how you can use these events with Canvas templates.
 
 ## User calculated fields
 
@@ -1179,19 +1179,19 @@ These user field calculations are also included on the **Transactions** tab of u
 
 ### Where can I view product-level purchase data?
 
-The user profile's **Transactions** tab shows high-level calculated fields (such as total revenue and total orders). To view product-level detail for a specific user, use the [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) to query eCommerce event data, or export event data through [Currents]({{site.baseurl}}/user_guide/data/braze_currents/).
+The user profile's **Transactions** tab shows high-level calculated fields (such as total revenue and total orders). To view product-level detail for a specific user, use the [Query Builder]({{site.baseurl}}/user_guide/analytics/reports/query_builder/) to query eCommerce event data, or export event data through [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/).
 
-Unlike legacy purchase events, eCommerce recommended events store product details as nested event properties within the `products` array. These properties are available in messaging through Liquid and in segmentation through [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/).
+Unlike legacy purchase events, eCommerce recommended events store product details as nested event properties within the `products` array. These properties are available in messaging through Liquid and in segmentation through [Segment Extensions]({{site.baseurl}}/user_guide/audience/segments/segment_extension/).
 
 ### How do I segment users by a specific product?
 
-The segmenter allows you to filter by the number of times a user performed an eCommerce event. To filter by specific product properties (such as `product_id` or `product_name`), use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), which support nested event property filtering. For example, you can find all users who purchased product "SKU-123" in the last 90 days.
+The segmenter allows you to filter by the number of times a user performed an eCommerce event. To filter by specific product properties (such as `product_id` or `product_name`), use [Segment Extensions]({{site.baseurl}}/user_guide/audience/segments/segment_extension/), which support nested event property filtering. For example, you can find all users who purchased product "SKU-123" in the last 90 days.
 
 ### What's the difference between legacy purchase events and eCommerce recommended events?
 
 Legacy purchase events use the Braze [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/) and record individual product purchases with a `product_id` and `price`. eCommerce recommended events (such as `ecommerce.order_placed`) use custom event properties and capture the full order context, including multiple products, discounts, and metadata in a single event.
 
-With the launch of eCommerce recommended events, Braze will phase out the legacy purchase event in the future. If you're currently using purchase events, you will receive advance notice. In the meantime, you can continue using purchase events until the official deprecation date. Refer to the [recommended events overview]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/) for more details.
+With the launch of eCommerce recommended events, Braze will phase out the legacy purchase event in the future. If you're currently using purchase events, you will receive advance notice. In the meantime, you can continue using purchase events until the official deprecation date. Refer to the [recommended events overview]({{site.baseurl}}/user_guide/data/activation/events/recommended_events/) for more details.
 
 ### Can I add custom properties to eCommerce recommended events?
 
@@ -1206,7 +1206,7 @@ It depends on how you're sending the events:
 
 ### Why don't nested product properties appear in the AI Recommendations setup dropdown?
 
-When configuring [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/), the **Property name** dropdown only lists top-level event properties (such as `order_id`, `total_value`, and `currency`). Nested properties within the `products` array (for example, `products.product_id` or `products.variant_id`) may not appear in this list, but you can type them manually using dot notation in the field. For most eCommerce implementations, Braze recommends using `products.product_id` as the item identifier and pairing it with a [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) whose item IDs match your `product_id` or `variant_id` values.
+When configuring [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/item_recommendations/), the **Property name** dropdown only lists top-level event properties (such as `order_id`, `total_value`, and `currency`). Nested properties within the `products` array (for example, `products.product_id` or `products.variant_id`) may not appear in this list, but you can type them manually using dot notation in the field. For most eCommerce implementations, Braze recommends using `products.product_id` as the item identifier and pairing it with a [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) whose item IDs match your `product_id` or `variant_id` values.
 
 ### Why are some of my eCommerce events not appearing in Braze?
 

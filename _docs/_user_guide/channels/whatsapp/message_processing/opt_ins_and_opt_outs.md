@@ -7,7 +7,7 @@ search_tag: Partner
 page_order: 5
 channel:
   - WhatsApp
-alias: /user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/
+alias: /user_guide/channels/whatsapp/message_processing/opt_ins_and_opt_outs/
 ---
 
 # Opt-in and opt-out
@@ -44,7 +44,7 @@ Wherever you already have marketing consent for email or texting, include an add
 
 #### Externally built opt-in list
 
-If you have used WhatsApp previously, you may have already built a user list with opt-ins per the WhatsApp requirements. In this case, upload a CSV or use the API with the [following information]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import#csv) into Braze.
+If you have used WhatsApp previously, you may have already built a user list with opt-ins per the WhatsApp requirements. In this case, upload a CSV or use the API with the [following information]({{site.baseurl}}/user_guide/audience/manage_audience/import_users#csv) into Braze.
 
 #### Outbound message in customer support WhatsApp channel
 
@@ -126,7 +126,7 @@ You can configure "START" and "STOP" keyword response workflows for WhatsApp wit
 
 ### User Update step
 
-The [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) can add the user's phone number to the WhatsApp subscription group when the user sends a keyword to the subscription group's phone number.
+The [User Update step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/user_update/) can add the user's phone number to the WhatsApp subscription group when the user sends a keyword to the subscription group's phone number.
 
 The User Update step avoids race conditions because the user won't progress to the next step in the Canvas before their phone number is added to the subscription group. It also has fewer steps to set up than the other methods, so Braze generally recommends this method.
 
@@ -164,7 +164,7 @@ For "STOP" messages, invert the message step confirming the opt-out and the User
 
 #### Considerations
 
-The update might complete at variable speeds because Braze batches the [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) requests.
+The update might complete at variable speeds because Braze batches the [User Update step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/user_update/) requests.
 
 ### Webhook campaign to trigger a second WhatsApp campaign
 

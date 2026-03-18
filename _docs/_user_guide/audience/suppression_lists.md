@@ -21,7 +21,7 @@ Suppression lists are dynamic and automatically apply to all forms of messaging,
 Suppression lists will apply to all message types and channels except for [feature flags]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/feature_flags/). This means that suppression lists by default apply to all channels, campaigns, and Canvases, including:
 - [API campaigns]({{site.baseurl}}/api/api_campaigns/)
 - API-triggered campaigns and Canvases
-- [Transactional emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/)
+- [Transactional emails]({{site.baseurl}}/user_guide/channels/transactional_email/create_a_transactional_email/)
 
 The only message type that suppression lists do not apply to is feature flags. Users in a suppression list won't be suppressed from feature flags, but will be suppressed from all other channels. 
 
@@ -36,7 +36,7 @@ Suppression lists are applied to API campaigns that are created in the Braze das
 ## Setting up suppression lists {#setup}
 
 {% alert note %}
-All users can view suppression lists, but only users with [admin permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?tab=admin#list-of-permissions) can create and manage suppression lists.
+All users can view suppression lists, but only users with [admin permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions#list-of-permissions?tab=admin) can create and manage suppression lists.
 {% endalert %}
 
 1. Go to **Audience** > **Suppression Lists**.<br><br>![The "Suppression Lists" page with a list of three suppression lists.]({% image_buster /assets/img/suppression_lists_home.png %})<br><br>
@@ -44,7 +44,7 @@ All users can view suppression lists, but only users with [admin permissions]({{
 3. Use segment filters to identify the users in your suppression lists. You must select at least one.
 
 {% alert important %}
-Though the setup process seems similar to [segment creation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), a suppression list is a group of users that you **do not** want to send messages to regardless of segment membership.
+Though the setup process seems similar to [segment creation]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/), a suppression list is a group of users that you **do not** want to send messages to regardless of segment membership.
 {% endalert %}
 
 ![A suppression list builder with a filter for users who last opened an email more than 90 days ago.]({% image_buster /assets/img/suppression_list_filters.png %})

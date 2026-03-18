@@ -18,7 +18,7 @@ This message type is available in the [traditional editor]({{site.baseurl}}/user
 
 When an end-user enters their email address to this form, the email address will get added to their user profile.
 
-- For [anonymous users]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#anonymous-user-profiles) who don't yet have an account, the email address will live on the anonymous user profile that is tied to the user's device.
+- For [anonymous users]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle#anonymous-user-profiles) who don't yet have an account, the email address will live on the anonymous user profile that is tied to the user's device.
 - If an email address already exists on the user profile, then the existing email address will be overwritten by the newly entered email address.
 - If the known user has an email address that is flagged as having [hard bounced]({{site.baseurl}}/help/help_articles/email/email_bounces#email-bounces), we'll check to see if the newly-entered email address differs to what's on their Braze profile. If the email address provided is different, the email address will be updated and the hard bounce status will be removed. 
 - If a user enters an invalid email address, the user will see the error message: "Please enter a valid email."
@@ -40,7 +40,7 @@ If an anonymous user enters their email in the form and submits it, Braze adds t
 
 If `changeUser` is called with an existing `external_id`, the anonymous user profile is orphaned and [specific user profile data fields]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge_updates-behavior) that do not already exist on the identified user are merged, but any fields that do already exist are lost, including the email address.
 
-For more information, refer to the [User profile lifecycle]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/).
+For more information, refer to the [User profile lifecycle]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/).
 
 {% enddetails %}
 

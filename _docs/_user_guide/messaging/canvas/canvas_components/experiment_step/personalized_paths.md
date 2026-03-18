@@ -8,7 +8,7 @@ tool: Canvas
 
 # Personalized Paths in Experiment Paths
 
-> Personalized Paths is similar to [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant) in campaigns and lets you personalize any point of a Canvas journey for individual users based on conversion likelihood.
+> Personalized Paths is similar to [Personalized Variant]({{site.baseurl}}/user_guide/messaging/ab_testing/optimizations#personalized-variant) in campaigns and lets you personalize any point of a Canvas journey for individual users based on conversion likelihood.
 
 ## How Personalized Paths works
 
@@ -21,7 +21,7 @@ When Personalized Paths is turned on in an Experiment Path step, the behavior is
 
 ### Step 1: Add an Experiment Path
 
-Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) to your Canvas, then turn on **Personalized Paths**.
+Add an [Experiment Path]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/experiment_step/) to your Canvas, then turn on **Personalized Paths**.
 
 ![]({% image_buster /assets/img/experiment_step/experiment_personalized_path.png %})
 
@@ -29,7 +29,7 @@ Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/can
 
 Specify the conversion event that should determine the winner. If there are no conversion events available, return to the first step of Canvas setup and [assign conversion events]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/#choose-conversion-events). 
 
-If you choose opens or clicks as your conversion event, make sure the first step in the path is a [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step). Braze only counts engagement from the first Message step in each respective path. If the path starts with a different step (like a Delay or Audience Path step) and the message comes later, that message won’t be included when evaluating performance.
+If you choose opens or clicks as your conversion event, make sure the first step in the path is a [Message step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/). Braze only counts engagement from the first Message step in each respective path. If the path starts with a different step (like a Delay or Audience Path step) and the message comes later, that message won’t be included when evaluating performance.
 
 Then set the **Experiment Window**. The **Experiment Window** determines how long users will be sent down all paths before choosing the best path for each user in the delay group. The window begins when the first user enters the step.
 
@@ -54,7 +54,7 @@ This option will send future users down the mix of paths according to the percen
 
 A single Experiment Path component can contain up to four paths. However, for single-send Canvases, you can add up to three paths when Personalized Paths is turned on. The fourth path should be reserved for the Delay Group that Braze automatically adds to your experiment.
 
-Finish setting up your Canvas as needed, then launch it. When the first user has entered the experiment, you can check the Canvas to see analytics as they come in and [track your experiment's performance]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#tracking-performance).
+Finish setting up your Canvas as needed, then launch it. When the first user has entered the experiment, you can check the Canvas to see analytics as they come in and [track your experiment's performance]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/experiment_step#tracking-performance).
 
 ![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_pending.png %}){: style="max-width:75%;" }
 
@@ -67,7 +67,7 @@ When the experiment window passes and the experiment is complete, Braze will sen
 
 You can test up to four paths in a single Experiment Path. Add your paths and finish setting up your Canvas as needed, then launch it.  
 
-When the first user has entered the experiment, you can check the Canvas to see analytics as they come in and [track your experiment's performance]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#tracking-performance).
+When the first user has entered the experiment, you can check the Canvas to see analytics as they come in and [track your experiment's performance]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/experiment_step#tracking-performance).
 
 When the experiment window passes and the experiment is complete, all subsequent users to enter the Canvas will be sent down the path most likely to result in conversion for them.
 

@@ -65,7 +65,7 @@ You can apply a specific time zone to multiple workspaces at one time by doing t
 Inform relevant teams and stakeholders within each workspace about any time zone changes to avoid confusion about campaign schedules.
 {% endalert %}
 
-- **Local time and Intelligent Time campaigns:** Campaigns and Canvases that use a user's local time or [Intelligent Time]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/#option-3-intelligent-timing) for delivery will continue to function as before and won't be affected by workspace time zones.
+- **Local time and Intelligent Time campaigns:** Campaigns and Canvases that use a user's local time or [Intelligent Time]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/scheduled_delivery#option-3-intelligent-timing) for delivery will continue to function as before and won't be affected by workspace time zones.
 - **Scheduled campaigns and Canvases:** Any scheduled campaign or Canvas that doesn't use the user's local time or Intelligent Time for delivery will now send based on the workspace's selected time zone.
 - **Campaigns scheduled before a time zone change:** If you scheduled a campaign or Canvas before changing the workspace time zone, Braze keeps the original send time and does not reschedule it. For example, if a campaign is set to send at 7 pm PST and the workspace time zone is changed to EST, the campaign still sends at 7 pm PST (which now corresponds with 10 pm EST). The system will continue to reference the original time, but will interpret it through the new workspace time zone.
 

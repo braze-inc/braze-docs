@@ -59,7 +59,7 @@ Soft bounces are emails that bounce due to a temporary or transient issue such a
 
 ### What are open tracking pixels?
 
-[Open tracking pixels]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#changing-location-of-tracking-pixel) leverage a sender's email click tracking domain to track email open events. The pixel is an image tag appended to the email's HTML. It is most commonly the last HTML element within the body tag. When a user loads their email, a request is made to populate the image from the branded tracking domain, which logs an open event.
+[Open tracking pixels]({{site.baseurl}}/user_guide/administer/global/workspace_settings/email_preferences#changing-location-of-tracking-pixel) leverage a sender's email click tracking domain to track email open events. The pixel is an image tag appended to the email's HTML. It is most commonly the last HTML element within the body tag. When a user loads their email, a request is made to populate the image from the branded tracking domain, which logs an open event.
 
 ### What happens when an email campaign or Canvas is stopped?
 
@@ -82,7 +82,7 @@ You may be seeing zero email opens and clicks if there's a misconfiguration with
 
 Certain elements of an email message, such as overly long messages or too many exclamation marks, have the potential to trigger email security responses. These responses can impact reporting, IP reputation, and can result in users unsubscribing. 
 
-For best practices on how to handle these responses, refer to [Handling increases in click rates]({{site.baseurl}}/help/help_articles/email/open_rates/).
+For best practices on how to handle these responses, refer to [Handling increases in click rates]({{site.baseurl}}/user_guide/channels/email/reporting/).
 
 ### Can Braze track unsubscribe links counted toward the "Unsubscribe" metric?
 
@@ -101,22 +101,22 @@ Some corporate email security tools (such as Barracuda, Proofpoint, and similar 
 To mitigate this:
 
 - **Recommend recipients allowlist your sending domain:** Work with the affected recipients' IT teams to add your sending domain and Braze tracking domains to their email security allow list.
-- **Use a preference center:** Instead of a direct unsubscribe link, use a [preference center]({{site.baseurl}}/user_guide/channels/email/preference_center/overview/) that requires user interaction to confirm the unsubscribe action. Security scanners typically won't complete multi-step forms.
+- **Use a preference center:** Instead of a direct unsubscribe link, use a [preference center]({{site.baseurl}}/user_guide/channels/email/subscriptions/) that requires user interaction to confirm the unsubscribe action. Security scanners typically won't complete multi-step forms.
 - **Review unsubscribe logs:** Check the `User-Agent` header and IP address in your Currents unsubscribe event data to identify patterns consistent with automated scanning (such as consistent `User-Agent` headers across multiple unsubscribes).
 
 For more details on how server-side scanning can affect email metrics, refer to [Handling increases in click rates]({{site.baseurl}}/user_guide/channels/email/reporting/#handling-increases-in-click-rates).
 
 ### Why has my machine open rate changed unexpectedly?
 
-[Machine opens]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#machine-opens) are triggered by email security features such as Apple Mail Privacy Protection (MPP), which pre-loads email content (including the tracking pixel) without the user physically opening the email. Machine open rates can fluctuate based on:
+[Machine opens]({{site.baseurl}}/user_guide/analytics/metrics_glossary#machine-opens) are triggered by email security features such as Apple Mail Privacy Protection (MPP), which pre-loads email content (including the tracking pixel) without the user physically opening the email. Machine open rates can fluctuate based on:
 
 - Changes in the proportion of your audience using Apple Mail or other privacy-enabled email clients.
 - Updates to email provider privacy features or bot detection behaviors.
 - Changes in your audience segmentation or targeting.
 
-Machine open percentages are not a reliable measure of actual engagement. For a more accurate view of email performance, focus on *Other Opens* (non-machine opens) and *Unique Clicks*. You can also compare these metrics over time using the [Email Performance Dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/email_performance_dashboard/).
+Machine open percentages are not a reliable measure of actual engagement. For a more accurate view of email performance, focus on *Other Opens* (non-machine opens) and *Unique Clicks*. You can also compare these metrics over time using the [Email Performance Dashboard]({{site.baseurl}}/user_guide/analytics/dashboards/channel_performance/).
 
 ### Does the *Unique Opens* metric include machine opens?
 
-No. *Unique Opens* count only [Other Opens]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#other-opens), which excludes emails identified as machine opens. *Machine Opens* are tracked separately. In the **Campaign Analytics** view and **Report Builder**, you can view both metrics independently.
+No. *Unique Opens* count only [Other Opens]({{site.baseurl}}/user_guide/analytics/metrics_glossary#other-opens), which excludes emails identified as machine opens. *Machine Opens* are tracked separately. In the **Campaign Analytics** view and **Report Builder**, you can view both metrics independently.
 

@@ -152,7 +152,7 @@ Refer to this table to understand what percentage of your inbound and outbound t
 | TLS Outbound | Shows the percentage of outgoing mail (from Gmail) accepted over TLS versus all mail sent to that domain. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For more ideas on improving deliverability, read [Deliverability pitfalls and spam traps]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/#deliverability-pitfalls-and-spam-traps). Be sure to reference our [Email best practices]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/) for things you should check for before sending an email campaign.
+For more ideas on improving deliverability, read [Deliverability pitfalls and spam traps]({{site.baseurl}}/user_guide/channels/email/email_setup/deliverability_pitfalls_and_spam_traps#deliverability-pitfalls-and-spam-traps). Be sure to reference our [Email best practices]({{site.baseurl}}/user_guide/channels/email/best_practices/) for things you should check for before sending an email campaign.
 
 ## Setting up Microsoft Smart Network Data Services (SNDS)
 

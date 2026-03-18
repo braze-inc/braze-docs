@@ -36,7 +36,7 @@ This feature allows you to target users who complete the following interactions 
 - Dismiss content card
 
 {% alert important %}
-Campaign Connector triggers cannot be used to trigger in-app message campaigns. In-app messages can only be triggered by SDK events, such as custom events or session start. For more information, see [Create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
+Campaign Connector triggers cannot be used to trigger in-app message campaigns. In-app messages can only be triggered by SDK events, such as custom events or session start. For more information, see [Create an in-app message]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/).
 {% endalert %}
 
 ### Delivery rules
@@ -57,7 +57,7 @@ Compose the messages that you wish to send to your users. You can select a singl
 
 ### Step 2: Select interaction and target campaign
 
-1. Select [Action-Based Delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) and add the "Interact with Campaign" trigger to target users who interact with an active campaign. 
+1. Select [Action-Based Delivery]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/) and add the "Interact with Campaign" trigger to target users who interact with an active campaign. 
 2. Choose the trigger interaction. 
 3. Next, you'll select the active campaign that you'd like to target.
 

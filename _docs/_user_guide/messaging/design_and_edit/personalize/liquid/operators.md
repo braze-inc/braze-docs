@@ -26,7 +26,7 @@ This table lists the operators that are supported. Note that parentheses are inv
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Operators can be used in conditional statements (`if`, `elsif`, `unless`) but not in `assign` statements, `for` loops, `case`/`when` statements, or array access brackets. For a full breakdown, see [Where to use operators and filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+Operators can be used in conditional statements (`if`, `elsif`, `unless`) but not in `assign` statements, `for` loops, `case`/`when` statements, or array access brackets. For a full breakdown, see [Where to use operators and filters]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid#where-to-use-operators-and-filters).
 {% endalert %}
 
 ### Grouping conditions without parentheses
@@ -243,7 +243,7 @@ Stream now!
 
 ![A push notification composer with the full Liquid code from the tutorial.]({% image_buster /assets/img/abort-if.png %})
 
-You can also [abort messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) based on Connected Content.
+You can also [abort messages]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/aborting_connected_content/) based on Connected Content.
 
 ## Troubleshooting
 

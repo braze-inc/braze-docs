@@ -31,7 +31,7 @@ The following Braze metrics and workflows are impacted by bot clicks:
     - **Intelligent Selection:** Excludes bot clicks when optimizing variant selection.
     - **Intelligent channel:** Excludes bot clicks when SMS or RCS is selected for accurate channel selection.
     - **Experiment steps:** Excludes bot clicks for reliable experiment outcomes.
-    - **Currents data exports:** Includes `is_suspected_bot_click` and `suspected_bot_click_reason` fields to help analyze human versus bot clicks. These fields are available in [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/), [Snowflake Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/), and [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/).
+    - **Currents data exports:** Includes `is_suspected_bot_click` and `suspected_bot_click_reason` fields to help analyze human versus bot clicks. These fields are available in [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/), [Snowflake Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/), and [Query Builder]({{site.baseurl}}/user_guide/analytics/reports/query_builder/).
 
 Unsubscribes from suspected bot clicks are unaffected. Braze processes all unsubscribe requests as usual. To block these unsubscribes, [submit product feedback]({{site.baseurl}}/user_guide/administer/personal/braze_support/).
 
@@ -47,7 +47,7 @@ Braze includes the following Currents fields for SMS click events:
 
 ## Query Builder template
 
-For help analyzing your data, you can use the pre-built mobile template **SMS click events by bots** in [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/).
+For help analyzing your data, you can use the pre-built mobile template **SMS click events by bots** in [Query Builder]({{site.baseurl}}/user_guide/analytics/reports/query_builder/query_templates/).
 
 ## Frequently asked questions
 

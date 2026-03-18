@@ -38,4 +38,4 @@ Change the month by selecting <i class="fa-solid fa-chevron-left" style="color: 
 
 ![The Send Calendar displaying all scheduled campaigns in the current month.]({% image_buster /assets/img/campaign_calendar/content_calendar_sends.png %})
 
-View or modify your campaigns by selecting the campaign in the calendar. For more information, see [Managing campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns).
+View or modify your campaigns by selecting the campaign in the calendar. For more information, see [Managing campaigns]({{site.baseurl}}/user_guide/messaging/campaigns/manage_campaigns/).

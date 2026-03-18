@@ -28,7 +28,7 @@ Your Global Control Group applies to all channels, campaigns, and Canvases, exce
 
 ### Assign users randomly to the Global Control Group
 
-Braze randomly selects multiple ranges of [random bucket numbers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) and includes users from those selected buckets. If you are currently using random bucket numbers for any other purposes, check out [Things to watch out for](#things-to-watch-for). 
+Braze randomly selects multiple ranges of [random bucket numbers]({{site.baseurl}}/user_guide/messaging/ab_testing/concepts/random_bucket_numbers#step-1-segment-your-users-by-the-random-bucket-attribute) and includes users from those selected buckets. If you are currently using random bucket numbers for any other purposes, check out [Things to watch out for](#things-to-watch-for). 
 
 When your Global Control Group is generated, all users with random bucket numbers are part of the group. Additionally, new users who join after this point (those acquired after the Global Control Group was generated) that have these random bucket numbers are also added to the Global Control Group. Similarly, if many users are deleted, you can expect the size of your Global Control Group to shrink because a percentage of those deleted users has fallen into this group. This maintains the size of your group as a constant percentage relative to your entire user base.
 
@@ -122,7 +122,7 @@ When generating your report, choose an event—either sessions or any custom eve
 
 Keep in mind that the percentage metrics in your report are rounded. For example, in cases where the number of conversions is a very low percentage of your overall control or treatment group, the conversion rate may round to 0%.
 
-This report also displays a [confidence]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#understanding-confidence) percentage for your change from control metric. In cases where the conversion rate between your control and treatment are identical, a confidence of 0% is expected — this indicates that there is a 0% chance of a difference in performance between the two groups. 
+This report also displays a [confidence]({{site.baseurl}}/user_guide/messaging/ab_testing/analytics#understanding-confidence) percentage for your change from control metric. In cases where the conversion rate between your control and treatment are identical, a confidence of 0% is expected — this indicates that there is a 0% chance of a difference in performance between the two groups. 
 
 #### Group sizes
 
@@ -178,7 +178,7 @@ Users in your Global Control Group are withheld from receiving any messages othe
 
 #### Global Control Group segments on the Developer Console
 
-You may see multiple **Global Control** segments in the **Additional API Identifiers** section of the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page. This is because each time the Global Control Group is enabled or disabled, a new Global Control Group is formed. This leads to multiple segments labeled "Global Control Group".
+You may see multiple **Global Control** segments in the **Additional API Identifiers** section of the [API Keys]({{site.baseurl}}/user_guide/administer/global/workspace_settings/apis_and_identifiers/) page. This is because each time the Global Control Group is enabled or disabled, a new Global Control Group is formed. This leads to multiple segments labeled "Global Control Group".
 
 Only one of these segments is active and can be queried using the [`/users/export/global_control_group` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/), or exported from the dashboard. The export from the dashboard specifically states which subsegments make up this Global Control Group.
 

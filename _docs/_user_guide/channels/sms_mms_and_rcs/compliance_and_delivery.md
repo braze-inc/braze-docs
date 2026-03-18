@@ -15,15 +15,15 @@ channel:
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Laws and regulations
-    link: /docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations/
+    link: /docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/laws_and_regulations
     image: /assets/img/braze_icons/briefcase-02.svg
   - name: Best practices
-    link: /docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/best_practices/
+    link: /docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/best_practices
     image: /assets/img/braze_icons/thumbs-up.svg
   - name: Collecting user opt-ins
-    link: /docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/collecting_user_opt_ins/
+    link: /docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/collecting_user_opt_ins
     image: /assets/img/braze_icons/message-check-circle.svg
   - name: Geographic permissions
-    link: /docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/geographic_permissions/
+    link: /docs/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/geographic_permissions
     image: /assets/img/braze_icons/globe-04.svg
 ---

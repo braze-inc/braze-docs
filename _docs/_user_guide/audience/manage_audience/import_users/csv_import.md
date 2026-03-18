@@ -139,7 +139,7 @@ The following data types can be used as custom attributes for CSV import. Column
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert important %}
-Arrays, push tokens, and custom event data types aren’t supported in user import, as commas in your CSV file will be interpreted as a column separator and cause errors while parsing your file.<br><br>To upload these kinds of values, use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/) instead.
+Arrays, push tokens, and custom event data types aren’t supported in user import, as commas in your CSV file will be interpreted as a column separator and cause errors while parsing your file.<br><br>To upload these kinds of values, use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/) instead.
 {% endalert %} 
 
 #### Default attributes
@@ -163,7 +163,7 @@ The following default attributes are available for user import.
 | `gender` | String | “M”, “F”, “O” (other), “N” (not applicable), “P” (prefer not to say), or nil (unknown). | No |
 | `home_city` | String | The home city of your users as they have indicated (for example, `London`). | No |
 | `language` | String | Language must be passed to Braze in the ISO-639-1 standard (for example, `en`). Refer to our [list of accepted languages]({{site.baseurl}}/user_guide/data/unification/user_data/language_codes/). | No |
-| `phone` | String | A telephone number as indicated by your users, in `E.164` format (for example, `+442071838750`). Refer to [User Phone Numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/) for formatting guidance. | No |
+| `phone` | String | A telephone number as indicated by your users, in `E.164` format (for example, `+442071838750`). Refer to [User Phone Numbers]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/) for formatting guidance. | No |
 | `email_open_tracking_disabled` | Boolean | true or false accepted. Set to true to disable the open tracking pixel from being added to all future emails sent to this user. Available for SparkPost and SendGrid only. | No |
 | `email_click_tracking_disabled` | Boolean | true or false accepted. Set to true to disable the click tracking for all links within a future email, sent to this user. Available for SparkPost and SendGrid only. | No |
 | `email_subscribe` | String | Available values are `opted_in` (explicitly registered to receive email messages), `unsubscribed` (explicitly opted out of email messages), and `subscribed` (neither opted in nor out). | No |
@@ -176,11 +176,11 @@ The following default attributes are available for user import.
 
 #### Updating subscription group status (optional)
 
-Additionally, you can add users to email or SMS subscription groups through user import. This is particularly useful for SMS, because a user must be enrolled into an SMS subscription group to be messaged with the SMS channel. For more information, refer to [SMS subscription groups](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/sms_subscription_group/#subscription-group-mms-enablement).
+Additionally, you can add users to email or SMS subscription groups through user import. This is particularly useful for SMS, because a user must be enrolled into an SMS subscription group to be messaged with the SMS channel. For more information, refer to [SMS subscription groups](https://www.braze.com/docs/sms_rcs_subscription_groups#subscription-group-mms-enablement).
 
 If you are updating subscription group statuses, you must have the following two columns in your CSV:
 
-- `subscription_group_id`: The `id` of the [subscription group](https://www.braze.com/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups).  
+- `subscription_group_id`: The `id` of the [subscription group](https://www.braze.com/docs/user_guide/channels/email/subscriptions#subscription-groups).  
 - `subscription_state`: Available values are `unsubscribed` (not in the subscription group) or `subscribed` (in the subscription group).
 
 | external_id | first_name | subscription_group_id | subscription_state |
@@ -219,7 +219,7 @@ For example, the custom event `trip_booked` may have the properties `destination
 | `user_alias_name` | String | A unique user identifier for anonymous users, that's an alternative to `external_id`. Must be used with `user_alias_label`. | Conditionally. See [Required identifiers](#required-identifiers-custom-events). |
 | `user_alias_label` | String | A common label by which to group user aliases. Must be used with `user_alias_name`. | Conditionally. See [Required identifiers](#required-identifiers-custom-events). |
 | `email` | String | The email of your users as they have indicated (for example, `jane.doe@braze.com`). | No, and can only be used in the absence of other identifiers. See the following note. |
-| `phone` | String | A telephone number as indicated by your users, in `E.164` format (for example, `+442071838750`). Refer to [User Phone Numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/) for formatting guidance. | No, and can only be used in the absence of other identifiers. See the following note. |
+| `phone` | String | A telephone number as indicated by your users, in `E.164` format (for example, `+442071838750`). Refer to [User Phone Numbers]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/user_phone_numbers/) for formatting guidance. | No, and can only be used in the absence of other identifiers. See the following note. |
 | `name` | String | A custom event of your users. | Yes |
 | `time` | String | The time of the event. May be passed in one of the following ISO-8601 formats: "YYYY-MM-DD" "YYYY-MM-DDTHH:MM:SS+00:00" "YYYY-MM-DDTHH:MM:SSZ" "YYYY-MM-DDTHH:MM:SS" (for example, 2019-11-20T18:38:57) | Yes |
 | `<event name>.properties.<property name>` | Multiple | An event property associated with a custom event. An example is `trip_booked.properties.destination` | No |
@@ -370,7 +370,7 @@ Dates not in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format won't be 
 
 If your upload completed with errors, there may be one or more invalid encrypted email addresses. Confirm that all email addresses are encrypted properly before importing them into Braze.
 
-- **When [updating or importing email address]({{site.baseurl}}/user_guide/analytics/field_level_encryption/#step-3-import-and-update-users)** in Braze, use the hashed email value wherever an email is included. These hash email values are provided by your internal team. 
+- **When [updating or importing email address]({{site.baseurl}}/user_guide/data/infrastructure/field_level_encryption#step-3-import-and-update-users)** in Braze, use the hashed email value wherever an email is included. These hash email values are provided by your internal team. 
 - **When creating a new user**, you must add `email_encrypted` with the user’s encrypted email value. Otherwise, Braze won’t create the user. Similarly, if you’re adding an email address to an existing user who doesn’t have an email, you must add `email_encrypted`. Otherwise, Braze won’t update the user.
 
 #### Data imported as custom attribute
@@ -379,7 +379,7 @@ If a piece of default user data (such as `email` or `first_name`) is imported as
 
 #### Change a custom attribute's data type
 
-If you need to change the data type of an existing custom attribute (for example, from string to boolean), update the data type on the [**Custom Attributes**]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) page in the dashboard before importing your CSV. If the data type in your CSV doesn't match the attribute's currently defined data type, the import fails with an error.
+If you need to change the data type of an existing custom attribute (for example, from string to boolean), update the data type on the [**Custom Attributes**]({{site.baseurl}}/user_guide/data/activation/custom_data/managing_custom_data/) page in the dashboard before importing your CSV. If the data type in your CSV doesn't match the attribute's currently defined data type, the import fails with an error.
 
 #### Multiple data types
 

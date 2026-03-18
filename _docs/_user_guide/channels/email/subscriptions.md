@@ -55,7 +55,7 @@ Use the Braze SDK to update a user's subscription state.
 
 #### REST API
 
-Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to update the [`email_subscribe` attribute]({{site.baseurl}}/api/objects_filters/user_attributes_object) for a user. For example, to set a user's email subscription state to unsubscribed when they use a custom unsubscribe link, include `email_subscribe: "unsubscribed"` in the user attributes in your request.
+Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to update the [`email_subscribe` attribute]({{site.baseurl}}/api/objects_filters/user_attributes_object/#migrating-push-tokens) for a user. For example, to set a user's email subscription state to unsubscribed when they use a custom unsubscribe link, include `email_subscribe: "unsubscribed"` in the user attributes in your request.
 
 #### User profile
 
@@ -75,7 +75,7 @@ Include [Preference center](#email-preference-center) Liquid at the bottom of yo
 You can check a user's email subscription state in the following ways:
 
 1. **REST API export:** Use the [Export users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Export users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints to export individual user profiles in JSON format.
-2. **User profile:** Find the user's profile on the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) page, then select the **Engagement** tab to view and manually update a user's subscription state.
+2. **User profile:** Find the user's profile on the [Search Users]({{site.baseurl}}/user_guide/audience/manage_audience/user_profiles/) page, then select the **Engagement** tab to view and manually update a user's subscription state.
 
 When a user updates their email address, their subscription state will be set to subscribed, unless the updated email address already exists elsewhere in a Braze workspace.
 
@@ -132,14 +132,14 @@ You can see counts of users who changed their subscription state (subscribed or 
 
 ### Checking a user's email subscription group
 
-- **User profile:** Individual user profiles can be accessed through the Braze dashboard from the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles) page. Here, you can look up user profiles by email address, phone number, or external user ID. You can also view a user's email subscription groups in the **Engagement** tab.
+- **User profile:** Individual user profiles can be accessed through the Braze dashboard from the [Search Users]({{site.baseurl}}/user_guide/audience/manage_audience/user_profiles#access-profiles) page. Here, you can look up user profiles by email address, phone number, or external user ID. You can also view a user's email subscription groups in the **Engagement** tab.
 - **Braze REST API:** Use the [List user’s subscription groups endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) or [List user’s subscription group status endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) to view individual user profile's subscription groups. 
 
 ## Email preference center
 
 The email preference center lets you manage which users receive subscription group newsletters. Find it in the dashboard under **Subscription Groups**. Each subscription group you create is added to the preference center list. 
 
-To learn more about how to add or customize a preference center, refer to [Preference center]({{site.baseurl}}/user_guide/channels/email/preference_center/overview/).
+To learn more about how to add or customize a preference center, refer to [Preference center]({{site.baseurl}}/user_guide/channels/email/subscriptions/).
 
 ## Changing email subscriptions {#changing-email-subscriptions}
 

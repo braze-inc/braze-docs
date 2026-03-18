@@ -29,7 +29,7 @@ Some Android devices manufactured by Chinese Original Equipment Manufacturers (O
 
 ## Prerequisites
 
-Push notifications sent using Push Max will only be delivered to devices that have at least the following [minimum SDK version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
+Push notifications sent using Push Max will only be delivered to devices that have at least the following [minimum SDK version]({{site.baseurl}}/user_guide/messaging/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions):
 
 {% sdk_min_versions android:29.0.1 %}
 
@@ -66,7 +66,7 @@ The following two features, Intelligent Timing and Time to Live, can be used in 
 
 ### Intelligent Timing
 
-Push Max works best when [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) is turned on. Intelligent Timing can calculate and send the push notification at a time when the user is most likely to be using the app and the push is most likely to be delivered.
+Push Max works best when [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/) is turned on. Intelligent Timing can calculate and send the push notification at a time when the user is most likely to be using the app and the push is most likely to be delivered.
 
 ### Time to Live (TTL)
 
@@ -86,4 +86,4 @@ This is because promotion codes are unique. If a push notification that contains
 
 ### Canvas event properties and entry properties
 
-Push Max may not work as expected if you include Liquid references to [Canvas entry properties or event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in your message. This is because the entry and event properties are not available when Push Max is attempting to resend the message.
+Push Max may not work as expected if you include Liquid references to [Canvas entry properties or event properties]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/) in your message. This is because the entry and event properties are not available when Push Max is attempting to resend the message.

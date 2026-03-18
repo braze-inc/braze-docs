@@ -6,7 +6,7 @@ page_type: reference
 description: "This article explains how to create multivariate and A/B tests with Braze."
 
 local_redirect: #optimizations
-  optimizations: '/docs/user_guide/messaging/ab_testing/optimizations/'
+  optimizations: '/docs/user_guide/messaging/ab_testing/optimizations'
 ---
 
 # Create multivariate and A/B tests {#creating-tests}
@@ -62,7 +62,7 @@ When using rate limiting with an A/B test, the rate limit isn't applied to the c
 
 #### Control groups with Intelligent Selection
 
-The size of the control group for a campaign with [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) is based on the number of variants. If each variant is sent to more than 20% of users, then the control group is 20%, and the variants are split evenly across the remaining 80%. However, if you have enough variants that each variant is sent to less than 20% of users, then the control group must become smaller. When Intelligent Selection starts analyzing the performance of your test, the control group grows or shrinks based on the results.
+The size of the control group for a campaign with [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_selection/) is based on the number of variants. If each variant is sent to more than 20% of users, then the control group is 20%, and the variants are split evenly across the remaining 80%. However, if you have enough variants that each variant is sent to less than 20% of users, then the control group must become smaller. When Intelligent Selection starts analyzing the performance of your test, the control group grows or shrinks based on the results.
 
 ## Step 5: Designate a conversion event (optional)
 
@@ -89,18 +89,18 @@ Depending on which channel you select, you can test different components of your
 | ---------------------| --------------- | ------------- |
 | Push | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (for example, "triple" versus "increase by 200%")  <br> Presentation of time (for example, "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
 | Email | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (for example, "triple" versus "increase by 200%") <br> Presentation of time (for example, "ends at midnight" versus "ends in 6 hours") | Opens  <br> Conversion Rate |
-| In-app message | Aspects listed for "push" <br> [In-app message image specifications]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#in-app-messages) | Click <br> Conversion Rate |
+| In-app message | Aspects listed for "push" <br> [In-app message image specifications]({{site.baseurl}}/user_guide/messaging/design_and_edit/media_library#in-app-messages) | Click <br> Conversion Rate |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
-When running A/B tests, don't forget to generate [funnel reports]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) that let you understand how each variant impacted your conversion funnel, especially if "conversion" for your business involves taking multiple steps or actions.
+When running A/B tests, don't forget to generate [funnel reports]({{site.baseurl}}/user_guide/analytics/reports/funnel_reports/) that let you understand how each variant impacted your conversion funnel, especially if "conversion" for your business involves taking multiple steps or actions.
 {% endalert %}
 
 In addition, the ideal length of your test may also vary depending on the channel. Keep in mind the average amount of time most users may need to engage with each channel.
 
 For instance, if you're testing a push, you may achieve significant results faster than when testing email, since users see pushes immediately, but it may be days before they see or open an email. If you're testing in-app messages, keep in mind that users must open the app to see the campaign, so you should wait longer to collect results from both your most active app openers as well as your more typical users.
 
-If you're unsure how long your test should run for, the [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) feature can be useful for finding a Winning Variant efficiently.
+If you're unsure how long your test should run for, the [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_selection/) feature can be useful for finding a Winning Variant efficiently.
 
 ### Choosing a segment {#choosing-a-segment}
 

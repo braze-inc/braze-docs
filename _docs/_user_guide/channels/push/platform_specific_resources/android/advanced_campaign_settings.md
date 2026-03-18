@@ -30,7 +30,7 @@ The **Time to Live** field allows you to set a custom length of time to store me
 
 To edit the time to live for your Android push, go to the composer and select the **Settings** tab. Find the **Time to Live** field and enter a value in days, hours, or seconds.
 
-The default values for time to live are defined by your admin on the [Push Settings]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/) page. By default, Braze sets Push TTL to the maximum value for each push messaging service. While default TTL settings apply globally, you can override them at the message level during campaign creation. This is helpful when different campaigns require varying urgency or delivery windows.
+The default values for time to live are defined by your admin on the [Push Settings]({{site.baseurl}}/user_guide/administer/global/workspace_settings/push_settings/) page. By default, Braze sets Push TTL to the maximum value for each push messaging service. While default TTL settings apply globally, you can override them at the message level during campaign creation. This is helpful when different campaigns require varying urgency or delivery windows.
 
 For example, let's say your app hosts a weekly trivia contest. You send a push notification an hour before it starts. By setting the TTL to 1 hour, you make sure that users who open the app after the contest starts won’t receive a notification about an event that has already begun.
 
@@ -64,7 +64,7 @@ The **Firebase Messaging Delivery Priority** field lets you control whether a pu
 
 #### Considerations
 
-- **Default setting**: You can set a default FCM priority for all Android campaigns in your [Push Settings]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/). This campaign-level setting will override the default if needed.
+- **Default setting**: You can set a default FCM priority for all Android campaigns in your [Push Settings]({{site.baseurl}}/user_guide/administer/global/workspace_settings/push_settings/). This campaign-level setting will override the default if needed.
 - **Deprioritization**: If FCM detects that your app frequently sends high-priority messages that don't result in user-visible notifications or user engagement, those messages may be automatically deprioritized to normal priority.
 - **Battery impact**: High-priority messages wake sleeping devices more aggressively and consume more battery. Use this priority judiciously.
 

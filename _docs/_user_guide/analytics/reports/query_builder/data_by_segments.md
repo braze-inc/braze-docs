@@ -12,9 +12,9 @@ tool:
 
 # Metrics by segments
 
-> Use [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) report templates to break down performance metrics for campaigns, Canvas, variants, and steps by segments.
+> Use [Query Builder]({{site.baseurl}}/user_guide/analytics/reports/query_builder/) report templates to break down performance metrics for campaigns, Canvas, variants, and steps by segments.
 
-[Analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) must be turned on for the segments you want to access metrics for.
+[Analytics tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) must be turned on for the segments you want to access metrics for.
 
 To run these reports, do the following:
 1. In **Query Builder**, choose to create a new SQL report with a template. 

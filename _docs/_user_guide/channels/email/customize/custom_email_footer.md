@@ -67,7 +67,7 @@ We suggest the following best practices when creating and using custom footers.
 
 ### Personalizing with attributes
 
-When creating a custom footer, Braze suggests using [attributes for personalization]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/). The full set of default and custom attributes are available, but here are a few you may find useful:
+When creating a custom footer, Braze suggests using [attributes for personalization]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/). The full set of default and custom attributes are available, but here are a few you may find useful:
 
 | Attribute | Tag |
 | --------- | --- |

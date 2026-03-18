@@ -8,7 +8,7 @@ description: "This article provides an overview of multi-language settings in th
 
 # Translation and multi-language settings
 
-> The multi-language feature allows you to use [translation tags]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) to target users in different languages and locations all within a single message.
+> The multi-language feature allows you to use [translation tags]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/) to target users in different languages and locations all within a single message.
 
 {% multi_lang_include locales.md section="Prerequisites" %}
 
@@ -35,7 +35,7 @@ For **Custom Attributes**, use the dropdown to select the associated custom attr
 {: start="5"}
 5. Select **Add locale**. 
 
-For steps to use these locales in your email campaigns and Canvas, refer to [Using locales]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/).
+For steps to use these locales in your email campaigns and Canvas, refer to [Using locales]({{site.baseurl}}/locales_in_messages/).
 
 ## Considerations
 

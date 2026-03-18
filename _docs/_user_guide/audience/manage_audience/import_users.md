@@ -51,7 +51,7 @@ You can use CSV import to record and update the following user attributes and cu
 
 You can use our serverless S3 Lambda CSV import script to upload user attributes to Braze. This solution works as a CSV uploader where you drop your CSVs into an S3 bucket, and the scripts upload it through our API.
 
-Estimated execution times for a file with 1,000,000 rows should be around five minutes. See [User attribute CSV to Braze import](https://www.braze.com/docs/user_guide/data/cloud_ingestion/) for more information.
+Estimated execution times for a file with 1,000,000 rows should be around five minutes. See [User attribute CSV to Braze import](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion) for more information.
 
 ### REST API
 
@@ -59,7 +59,7 @@ Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_
 
 ### Cloud Data Ingestion
 
-Use Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/) to import and maintain user attributes.
+Use Braze [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/) to import and maintain user attributes.
 
 ## Legally required transactional emails
 

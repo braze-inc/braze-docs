@@ -57,7 +57,7 @@ The following segmentation filters are available when targeting users:
 - X Purchase Property in Y Days
 - X Purchases in Last Y Days
 
-For details on each filter, refer to the [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) glossary and filter by "Purchase behavior".
+For details on each filter, refer to the [Segmentation filters]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters/) glossary and filter by "Purchase behavior".
 
 ![Filtering for users who made exactly three purchases]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
 
@@ -107,7 +107,7 @@ Thank you for your purchase of ${purchase_product_name}! As a token of our appre
 
 In addition to tracking purchase metrics for segmentation, Braze also notes the number of purchases for each product and the revenue generated over time. This can be helpful to identify the most popular products or measure the impact of a promotional campaign on sales.
 
-You can find this data on the [Revenue Report]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) page.
+You can find this data on the [Revenue Report]({{site.baseurl}}/user_guide/analytics/reports/revenue_report#revenue-data) page.
 
 ### Understanding revenue calculations
 
@@ -126,23 +126,23 @@ You can find this data on the [Revenue Report]({{site.baseurl}}/user_guide/data_
     </thead>
     <tbody>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">Lifetime Revenue</a></td>
+            <td class="no-split"><a href="/docs/user_guide/analytics/metrics_glossary#lifetime-revenue">Lifetime Revenue</a></td>
             <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Revenue' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">Lifetime Value Per User</a></td>
+            <td class="no-split"><a href="/docs/user_guide/analytics/metrics_glossary#lifetime-value-per-user">Lifetime Value Per User</a></td>
             <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Value Per User' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">Average Daily Revenue</a></td>
+            <td class="no-split"><a href="/docs/user_guide/analytics/metrics_glossary#average-daily-revenue">Average Daily Revenue</a></td>
             <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Average Daily Revenue' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics#daily-purchases">Daily Purchases</a></td>
+            <td class="no-split"><a href="/docs/user_guide/analytics/metrics_glossary#daily-purchases">Daily Purchases</a></td>
             <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Purchases' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">Daily Revenue Per User</a></td>
+            <td class="no-split"><a href="/docs/user_guide/analytics/metrics_glossary#daily-revenue-per-user">Daily Revenue Per User</a></td>
             <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Revenue Per User' %}</td>
         </tr>
     </tbody>
@@ -160,8 +160,8 @@ $$\text{Average purchase value} = \frac{\text{Total spend in dollars}}{\text{Tot
 
 There are two main places in Braze you can reference to understand your users' LTV:
 
-- For overall metrics like *Lifetime revenue* and the *Lifetime value per user* for each app and site, refer to your [Revenue Report]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
-- To understand a specific user's lifetime revenue, refer to their [user profile]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
+- For overall metrics like *Lifetime revenue* and the *Lifetime value per user* for each app and site, refer to your [Revenue Report]({{site.baseurl}}/user_guide/analytics/reports/revenue_report#revenue-data).
+- To understand a specific user's lifetime revenue, refer to their [user profile]({{site.baseurl}}/user_guide/audience/manage_audience/user_profiles#overview-tab).
 
 ##### Impact of refunds on lifetime revenue
 
@@ -202,7 +202,7 @@ These segmentation filters include:
 - Has made any purchases with property Y with value V X times in the last Y days
 - Adds 1-30 day segmentation on all purchases, events, and properties within purchases and events
 
-Unlike with [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and incur data points. Because of the additional data point charge, you must contact your Braze customer success manager to get event properties turned on for your custom events.
+Unlike with [Segment Extensions]({{site.baseurl}}/user_guide/audience/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and incur data points. Because of the additional data point charge, you must contact your Braze customer success manager to get event properties turned on for your custom events.
 
 When approved, additional properties can be added in the dashboard under **Data Settings** > **Custom Events** by selecting **Manage Properties**. You can then use these event properties in the target step of the campaign or Canvas builder.
 

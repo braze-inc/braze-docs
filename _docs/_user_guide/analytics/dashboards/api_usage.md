@@ -78,5 +78,5 @@ Data shown in the dashboard may have up to a short delay in showing recent traff
 
 ## Related articles
 
-- [API usage alerts]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_alerts)
+- [API usage alerts]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/api_usage_alerts/)
 - [Rate limits]({{site.baseurl}}/api/api_limits)

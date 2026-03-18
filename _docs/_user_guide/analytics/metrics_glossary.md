@@ -768,7 +768,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 {% multi_lang_include analytics/metrics.md metric='Sends' %} This metric is provided by Braze. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting.
 
 {% alert tip %}
-For Content Cards, this metric is calculated differently depending on what you selected for [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/):
+For Content Cards, this metric is calculated differently depending on what you selected for [Card creation]({{site.baseurl}}/user_guide/channels/content_cards/create_a_content_card/card_creation/):
 
 - **At launch or step entry:** The number of cards created and available to be seen. This doesn't count whether the users viewed the card.
 - **At first impression:** The number of cards displayed to users.
@@ -789,7 +789,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 {% multi_lang_include analytics/metrics.md metric='Messages Sent' %}  This metric is provided by Braze. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting.
 
 {% alert tip %}
-For Content Cards, this metric is calculated differently depending on what you selected for [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/):
+For Content Cards, this metric is calculated differently depending on what you selected for [Card creation]({{site.baseurl}}/user_guide/channels/content_cards/create_a_content_card/card_creation/):
 
 - **At launch or step entry:** The number of cards created and available to be seen. This doesn't count whether the users viewed the card.
 - **At first impression:** The number of cards displayed to users.
@@ -833,7 +833,7 @@ Email
 
 Note that _Soft Bounces_ differ from _Deferrals_. If no email is successfully delivered during this retry period, Braze sends one soft bounce event per attempted campaign send. Before February 25, 2025, these retries were counted as multiple soft bounces for one campaign send.
 
-While soft bounces aren’t tracked in your campaign analytics, you can monitor the soft bounces in the [Message Activity Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/). You can also exclude these users from your sending or look back at the amount of soft bounces from the last 30 days with the [Soft Bounced segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced). In the Message Activity Log, you can also see the reason for the soft bounces and understand possible discrepancies between the “sends” and “deliveries” for your email campaigns.
+While soft bounces aren’t tracked in your campaign analytics, you can monitor the soft bounces in the [Message Activity Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/). You can also exclude these users from your sending or look back at the amount of soft bounces from the last 30 days with the [Soft Bounced segment filter]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#soft-bounced). In the Message Activity Log, you can also see the reason for the soft bounces and understand possible discrepancies between the “sends” and “deliveries” for your email campaigns.
 
 {% endapi %}
 
@@ -998,7 +998,7 @@ Email, iOS Push, Android Push, Web Push, LINE
 Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Total Revenue' %} This metric is only available on Campaign Comparison Reports through the <a href='/docs/user_guide/analytics/reports/report_builder/'>Report Builder</a>.
+{% multi_lang_include analytics/metrics.md metric='Total Revenue' %} This metric is only available on Campaign Comparison Reports through the <a href='/docs/user_guide/analytics/reports/report_builder'>Report Builder</a>.
 
 {% endapi %}
 

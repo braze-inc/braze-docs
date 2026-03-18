@@ -5,10 +5,10 @@ alias: /iam_drag_and_drop/
 page_order: 1
 description: "This reference article covers creating an in-app message with the drag-and-drop editor, prerequisites, creative details, and more."
 local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in-app-message-components, #creative-details
-  set-message-level-styles: '/docs/user_guide/channels/in_app_messages/customize/style_settings/#message-level-styles'
-  add-a-custom-font: '/docs/user_guide/channels/in_app_messages/customize/style_settings/#custom-fonts'
-  drag-and-drop-in-app-message-components: '/docs/user_guide/channels/in_app_messages/customize/style_settings/#message-components'
-  creative-details: '/docs/user_guide/channels/in_app_messages/customize/style_settings/#creative-details'
+  set-message-level-styles: '/docs/user_guide/channels/in_app_messages/customize/style_settings#message-level-styles'
+  add-a-custom-font: '/docs/user_guide/channels/in_app_messages/customize/style_settings#custom-fonts'
+  drag-and-drop-in-app-message-components: '/docs/user_guide/channels/in_app_messages/customize/style_settings#message-components'
+  creative-details: '/docs/user_guide/channels/in_app_messages/customize/style_settings#creative-details'
 ---
 
 # Create an in-app message with drag-and-drop
@@ -20,7 +20,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop editor.
 
-Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys. After you've selected where to build your message, let's dive into the steps to create a drag-and-drop in-app message.
+Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys. After you've selected where to build your message, let's dive into the steps to create a drag-and-drop in-app message.
 
 ## Prerequisites
 
@@ -136,7 +136,7 @@ Here's where your message gets to strut down the runway, dressed in your brand's
 
 - For a list of available editor blocks and their properties, refer to [Editor blocks]({{site.baseurl}}/user_guide/messaging/design_and_edit/editor_blocks/?sdktab=in-app%20messages).
 - For help customizing the look and feel of your message, check out [Style settings]({{site.baseurl}}/user_guide/channels/in_app_messages/customize/style_settings/).
-- For best practices creating right-to-left messages, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
+- For best practices creating right-to-left messages, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## Step 5: Test your in-app message
 

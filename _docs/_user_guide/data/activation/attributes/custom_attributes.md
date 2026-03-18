@@ -18,13 +18,13 @@ When stored in Braze, custom attributes can be used to build out audience segmen
 Some common custom attribute use cases include:
 
 - Targeting and suppressing audiences by segmenting users based on traits like loyalty tier, subscription status, preferred language, or plan type
-- Personalizing messages with [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) by referencing attributes such as a user's first name, rewards points, or favorite category
+- Personalizing messages with [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/) by referencing attributes such as a user's first name, rewards points, or favorite category
 - Tracking lifecycle stages and user states, such as onboarding stage, account status, or trial end date
 - Counting low-value actions with [numeric attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#numbers), such as incrementing a `feature_views_count` attribute each time a user views a feature
 - Recording when low-value actions last occurred using [time attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#time), such as `last_support_ticket_at` or `last_password_reset_at`
 - Storing user interests and history as [arrays]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#arrays), such as favorite genres or recently viewed content, for interest-based targeting
 - Storing richer profile data as [objects]({{site.baseurl}}/user_guide/data/activation/attributes/nested_custom_attribute_support/) or [arrays of objects]({{site.baseurl}}/user_guide/data/activation/attributes/array_of_objects/), such as structured preferences or multiple saved addresses
-- Triggering action-based messages when an attribute value changes using [attribute triggers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/), such as sending a tier-up notification when a user's `rewards_tier` changes
+- Triggering action-based messages when an attribute value changes using [attribute triggers]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/attribute_triggers/), such as sending a tier-up notification when a user's `rewards_tier` changes
 
 ## Managing custom attributes
 
@@ -70,7 +70,7 @@ You can add tags to a custom attribute after it's created if you have the "Manag
 
 There are two ways you can remove custom attributes from user profiles:
 
-* Select the custom attribute name to be removed in a [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/#removing-custom-attributes).
+* Select the custom attribute name to be removed in a [User Update step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/user_update#removing-custom-attributes).
 * Set the `null` value in your API request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track).
 
 ### Exporting data
@@ -107,6 +107,6 @@ The following lists methods across various platforms that are used to set custom
 
 ## Custom attribute storage
 
-All data stored on the **User Profile**, including custom attribute data, is retained indefinitely as long as each profile is [active]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#active-users).
+All data stored on the **User Profile**, including custom attribute data, is retained indefinitely as long as each profile is [active]({{site.baseurl}}/user_archival#active-users).
 
 For a full reference of all data types you can store as custom attributes—including booleans, numbers, strings, arrays, time, objects, and arrays of objects—see [Custom attribute data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/).

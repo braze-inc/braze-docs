@@ -1,5 +1,5 @@
 ---
 layout: redirect
-redirect_to: /docs/user_guide/personalization_and_dynamic_content/
+redirect_to: /docs/user_guide/messaging/design_and_edit/personalize
 hidden: true
 ---

@@ -30,7 +30,7 @@ While campaigns can be built uniquely depending on the channel, there are four m
 Regular and A/B test campaigns can be scheduled (such as informing a list of users about an upcoming event) or automated to send in response to a user's action (such as sending an email when someone subscribes to your newsletter). Learn more about [scheduling campaigns]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/).
 {% endalert %}
 
-Regardless of the type of campaign you create, your campaigns can listen to your user's needs and deliver a thoughtful, personalized response. After you've sent your campaign, use our [built-in analytics tools]({{site.baseurl}}/user_guide/analytics/reporting/) to see how it performed and how many users converted based on your [conversion events]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/conversion_events/).
+Regardless of the type of campaign you create, your campaigns can listen to your user's needs and deliver a thoughtful, personalized response. After you've sent your campaign, use our [built-in analytics tools]({{site.baseurl}}/user_guide/analytics/reports/) to see how it performed and how many users converted based on your [conversion events]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/conversion_events/).
 
 Check out these additional resources to learn more about campaigns at Braze:
 
@@ -67,7 +67,7 @@ The following table outlines our supported channels.
 | Channel                                                                                              | Description                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Email]({{site.baseurl}}/user_guide/channels/email/)                        | Send personalized emails to your users' inboxes.                                                                                                       |
-| [Mobile push]({{site.baseurl}}/user_guide/channels/push/about/)                   | Deliver messages directly to users' mobile devices as notifications.                                                                                   |
+| [Mobile push]({{site.baseurl}}/user_guide/channels/push/create_a_push_message/)                   | Deliver messages directly to users' mobile devices as notifications.                                                                                   |
 | [Web push]({{site.baseurl}}/user_guide/channels/push/platform_specific_resources/web/)                         | Deliver notifications to users' web browsers, even when they are not actively on your website.                                                         |
 | [In-app messages]({{site.baseurl}}/user_guide/channels/in_app_messages/)    | Display messages within your mobile app while users are actively using it.                                                                             |
 | [SMS, MMS, and RCS]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/)*                   | Send text messages to users' mobile phones.                                                                                                            |
@@ -82,6 +82,6 @@ The following table outlines our supported channels.
 <sup>**Available as an add-on feature.*</sup>
 
 {% alert tip %}
-For short and urgent messages that can be communicated through most channels (email, SMS, push), take advantage of the [Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) filter to automatically send the message through the best channel for each user.
+For short and urgent messages that can be communicated through most channels (email, SMS, push), take advantage of the [Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_channel/) filter to automatically send the message through the best channel for each user.
 {% endalert %}
 

@@ -33,7 +33,7 @@ In this section, you can add the names and email addresses you can use when Braz
 
 #### Personalizing with Liquid
 
-You can also use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in the **From Display Name** and **Local Part** fields to dynamically template the sending email based on custom attributes. For example, you can use conditional logic to send from different brands or regions:
+You can also use [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/) in the **From Display Name** and **Local Part** fields to dynamically template the sending email based on custom attributes. For example, you can use conditional logic to send from different brands or regions:
 
 {% raw %}
 ```liquid
@@ -56,7 +56,7 @@ Adding an email address in this section allows you to select it as a reply-to ad
 
 #### Personalizing with Liquid
 
-You can also use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in the **Reply-To Address** field to dynamically template the reply-to address based on custom attributes. For example, you can use conditional logic to send replies to different regions or departments:
+You can also use [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/) in the **Reply-To Address** field to dynamically template the reply-to address based on custom attributes. For example, you can use conditional logic to send replies to different regions or departments:
 
 {% raw %}
 ```liquid
@@ -75,7 +75,7 @@ global-support@company.com
 
 This section allows you to manage BCC addresses you can append to outbound email messages sent from Braze. Appending a BCC address to an email message sends an identical copy of the message that your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent to your users for compliance requirements or customer support issues. BCC emails are not included in email reporting and analytics.
 
-BCC addresses are available for SendGrid and SparkPost only. As an alternative to BCC addresses, we recommend using [messaging archiving]({{site.baseurl}}/user_guide/data/export_braze_data/message_archiving/) to save a copy of messages sent to users for archival or compliance purposes.
+BCC addresses are available for SendGrid and SparkPost only. As an alternative to BCC addresses, we recommend using [messaging archiving]({{site.baseurl}}/user_guide/data/distribution/export_braze_data/message_archiving/) to save a copy of messages sent to users for archival or compliance purposes.
 
 {% multi_lang_include alerts/important_alerts.md alert='BCC address billable emails' %}
 
@@ -253,7 +253,7 @@ Use the toggle to include "[TEST]" and "[SEED]" in your test and seed email subj
 
 CSS inlining is a technique that automatically inlines CSS styles for your emails and new emails. For some email clients, this can improve the way that your emails render.
 
-Changing this setting does not affect any of your existing email messages or templates. You can override this default at any time while composing messages or templates. For more information, refer to [CSS inlining]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/css_inline/).
+Changing this setting does not affect any of your existing email messages or templates. You can override this default at any time while composing messages or templates. For more information, refer to [CSS inlining]({{site.baseurl}}/user_guide/channels/email/html_editor/css_inline/).
 
 ## Resubscribe users when their email changes
 
@@ -274,7 +274,7 @@ Note the following requirements when creating a custom footer for your email mes
 
 ![]({% image_buster /assets/img/email_settings/custom_footer.png %})
 
-To learn more about custom footer Liquid templating, check out our documentation on [Custom footers]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
+To learn more about custom footer Liquid templating, check out our documentation on [Custom footers]({{site.baseurl}}/user_guide/channels/email/subscriptions#changing-email-subscriptions).
 
 {% endtab %}
 {% tab Custom Unsubscribe Page %}
@@ -283,7 +283,7 @@ Braze lets you set a **Custom Unsubscribe Page** with your own HTML. This page a
 
 ![]({% image_buster /assets/img/email_settings/custom_unsubscribe.png %})
 
-Learn more about best practices for email list management in [Managing email subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/#unsubscribed-email-addresses).
+Learn more about best practices for email list management in [Managing email subscriptions]({{site.baseurl}}/user_guide/channels/email/faq#unsubscribed-email-addresses).
 
 {% endtab %}
 {% tab Custom Opt-In Page %}
@@ -292,7 +292,7 @@ You can create a custom opt-in page using your own HTML. Including this in your 
 
 ![]({% image_buster /assets/img/email_settings/custom_opt_in.png %})
 
-Learn more about best practices for email list management in [Managing email subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/#unsubscribed-email-addresses).
+Learn more about best practices for email list management in [Managing email subscriptions]({{site.baseurl}}/user_guide/channels/email/faq#unsubscribed-email-addresses).
 
 {% endtab %}
 {% endtabs %}

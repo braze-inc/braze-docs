@@ -18,7 +18,7 @@ Braze calculates the optimal send time based on a statistical analysis of your u
 - Push Direct Opens
 - Push Influenced Opens
 - Email Clicks
-- Email Opens (excluding [Machine Opens]({{site.baseurl}}/user_guide/data/report_metrics/#machine-opens))
+- Email Opens (excluding [Machine Opens]({{site.baseurl}}/user_guide/analytics/metrics_glossary#machine-opens))
 - SMS Clicks (only if [link shortening]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening/) and advanced tracking are enabled)
 
 For example, Sam might open your emails in the morning regularly, but she opens your app and interacts with notifications in the evening. That means Sam would receive an email campaign with Intelligent Timing in the morning, while she would receive campaigns with push notifications in the evening, when she's more likely to engage.
@@ -231,7 +231,7 @@ To calculate the optimal time, Intelligent Timing:
 
 #### Are Machine Opens included when calculating optimal time?
 
-No, [Machine Opens]({{site.baseurl}}/user_guide/data/report_metrics/#machine-opens) are excluded from calculations for optimal time. This means that send times are based solely on genuine user engagement, providing more accurate timing for your campaigns.
+No, [Machine Opens]({{site.baseurl}}/user_guide/analytics/metrics_glossary#machine-opens) are excluded from calculations for optimal time. This means that send times are based solely on genuine user engagement, providing more accurate timing for your campaigns.
 
 #### How precise is the optimal time?
 

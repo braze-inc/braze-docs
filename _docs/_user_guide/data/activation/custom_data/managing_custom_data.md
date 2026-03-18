@@ -32,7 +32,7 @@ Custom events and custom attributes are case-sensitive. Keep this in mind when y
 
 ## Managing properties
 
-After you have created a custom event or product, select **Manage Properties** for that event or product to add new properties, blocklist existing properties, and view which campaigns or Canvases use this property in a [trigger event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
+After you have created a custom event or product, select **Manage Properties** for that event or product to add new properties, blocklist existing properties, and view which campaigns or Canvases use this property in a [trigger event]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/).
 
 ![Custom properties for a custom event.]({% image_buster /assets/img_archive/manageproperties1.png %}){: style="max-width:80%"}
 
@@ -77,7 +77,7 @@ If you need all existing user data to match the new type, you must re-send the a
 | Number | Integers or Floats (such as `1`, `1.5`) are stored as numbers |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For more information on specific filter options exposed by different data type comparisons, check out [Configuring reporting]({{site.baseurl}}/user_guide/analytics/reporting/configuring_reporting/). For more information on the different available data types, refer to [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#custom-attribute-data-types).
+For more information on specific filter options exposed by different data type comparisons, check out [Configuring reporting]({{site.baseurl}}/user_guide/analytics/reports/configure_reporting/). For more information on the different available data types, refer to [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#custom-attribute-data-types).
 
 {% alert note %}
 Data sent to Braze is immutable and cannot be deleted or modified after Braze receives it. However, you can use any of the steps listed in the preceding sections to exercise control over what you're tracking in your dashboard. To blocklist or delete custom data, see [Blocklist custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/blocklist_custom_data/).

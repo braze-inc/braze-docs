@@ -58,7 +58,7 @@ Selecting **Calendar date** allows you to hold users in the step until a specifi
 If the selected date and time have already passed by the time users proceed to the Delay step, users will exit the Canvas. There can be up to 31 days between the start of the Canvas and the dates chosen for "wait until an exact day" steps.
 
 {% alert important %}
-If you're participating in the [Canvas Context early access]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context), you can set delays of up to 2 years.
+If you're participating in the [Canvas Context early access]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/context/), you can set delays of up to 2 years.
 {% endalert %}
 
 For example, users won't receive steps or messages in these scenarios:
@@ -106,7 +106,7 @@ If you add a Delay component to your Canvas and there are no subsequent steps, a
 
 {% multi_lang_include early_access_beta_alert.md feature='The personalized delays and extended delays feature' %}
 
-Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) to select the context variable to delay by. This will override the time of day set in the selected attribute or property. This is useful when applying an offset in days or weeks, and you want users to move forward at a specific time. The time zone comes from the attribute or property, or uses the fallback if none is available. 
+Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/context/) to select the context variable to delay by. This will override the time of day set in the selected attribute or property. This is useful when applying an offset in days or weeks, and you want users to move forward at a specific time. The time zone comes from the attribute or property, or uses the fallback if none is available. 
 
 #### Time zone behavior for "at specific time"
 
@@ -150,5 +150,5 @@ Time series for these analytics are available in the expanded component view.
 
 ### Personalization failed errors
 
-If users aren't triggering a personalized delay, it could be because the Context step you set to qualify them for the Delay step is not working as you expected. When a [context variable is invalid]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#troubleshooting), a user will continue through your Canvas without having their context set by the Context step. This can cause them to not qualify for steps later in your Canvas, such as personalized delays.
+If users aren't triggering a personalized delay, it could be because the Context step you set to qualify them for the Delay step is not working as you expected. When a [context variable is invalid]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/context#troubleshooting), a user will continue through your Canvas without having their context set by the Context step. This can cause them to not qualify for steps later in your Canvas, such as personalized delays.
 

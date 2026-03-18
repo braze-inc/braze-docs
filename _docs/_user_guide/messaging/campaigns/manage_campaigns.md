@@ -13,30 +13,30 @@ description: "This landing page covers managing campaigns. Here, you can find ar
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Changing your campaign after launch
-    link: /docs/user_guide/messaging/campaigns/managing_campaigns/change_your_campaign_after_launch/
+    link: /docs/user_guide/messaging/campaigns/managing_campaigns/change_your_campaign_after_launch
     image: /assets/img/braze_icons/edit-05.svg
   - name: Campaign alerts
-    link: /docs/user_guide/messaging/campaigns/managing_campaigns/campaign_alerts/
+    link: /docs/user_guide/messaging/campaigns/managing_campaigns/campaign_alerts
     image: /assets/img/braze_icons/bell-03.svg
   - name: Searching for campaigns
-    link: /docs/user_guide/messaging/campaigns/managing_campaigns/search_campaigns/
+    link: /docs/user_guide/messaging/campaigns/managing_campaigns/search_campaigns
     image: /assets/img/braze_icons/search-refraction.svg
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: Approval workflow
-    link: /docs/user_guide/messaging/governance/approvals/
+    link: /docs/user_guide/messaging/governance/approvals
     image: /assets/img/braze_icons/brush-02.svg
   - name: Messaging rules for approval
-    link: /docs/user_guide/messaging/governance/approvals/messaging_rules/
+    link: /docs/user_guide/messaging/governance/approvals/messaging_rules
     image: /assets/img/braze_icons/check-square.svg
   - name: Archiving campaigns
-    link: /docs/user_guide/messaging/governance/archiving/
+    link: /docs/user_guide/messaging/governance/archiving
     image: /assets/img/braze_icons/archive.svg
   - name: Copying across workspaces
-    link: /docs/user_guide/messaging/governance/copy_across_workspaces/
+    link: /docs/user_guide/messaging/governance/copy_across_workspaces
     image: /assets/img/braze_icons/copy-07.svg
   - name: Duplicating campaigns
-    link: /docs/user_guide/messaging/messaging_fundamentals/duplicating/
+    link: /docs/user_guide/messaging/messaging_fundamentals/duplicating
     image: /assets/img/braze_icons/copy-04.svg
 ---

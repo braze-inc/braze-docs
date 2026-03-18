@@ -11,16 +11,16 @@ description: "This section includes articles related to data unification in the 
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Cloud Data Ingestion
-    link: /docs/user_guide/data/unification/cloud_ingestion/
+    link: /docs/user_guide/data/unification/cloud_ingestion
     image: /assets/img/braze_icons/upload-cloud-01.svg
   - name: Data Transformation
-    link: /docs/user_guide/data/unification/data_transformation/
+    link: /docs/user_guide/data/unification/data_transformation
     image: /assets/img/braze_icons/database-01.svg
   - name: Create a formula
-    link: /docs/user_guide/data/unification/creating_a_formula/
+    link: /docs/user_guide/data/unification/creating_a_formula
     image: /assets/img/braze_icons/beaker-02.svg
   - name: User data
-    link: /docs/user_guide/data/unification/user_data/
+    link: /docs/user_guide/data/unification/user_data
     image: /assets/img/braze_icons/users-01.svg
 
 guide_menu_title2: "Related articles"

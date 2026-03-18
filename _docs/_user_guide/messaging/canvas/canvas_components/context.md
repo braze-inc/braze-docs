@@ -91,13 +91,13 @@ When referencing context variables, always use the format {% raw %}`{{context.${
 
 ### Context variable filters
 
-You can create filters using context variables in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) and [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps. For filter setup, comparison logic, and advanced examples, see [Context variables reference]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/context_variables/#context-variable-filters).
+You can create filters using context variables in [Audience Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/audience_paths/) and [Decision Split]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/decision_split/) steps. For filter setup, comparison logic, and advanced examples, see [Context variables reference]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/context_variables/#context-variable-filters).
 
 {% multi_lang_include alerts/important_alerts.md alert='time filter types' %}
 
 ## Previewing user paths
 
-We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience and context variables are evaluated to the expected outcomes.
+We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/messaging/canvas/testing_canvases/preview_user_paths/) to make sure your messages are sent to the right audience and context variables are evaluated to the expected outcomes.
 
 {% alert note %}
 If you're previewing your Canvas in the **Preview & Test Send** section of the editor, the timestamp in the test message preview **does not** standardize to UTC because this panel generates previews as strings. This means if a Canvas is set up to accept a `time` object, the message preview does not accurately preview what occurs when the Canvas is live. To test your Canvas most accurately, we recommend previewing user paths instead.
@@ -109,7 +109,7 @@ If the context variable is valid, you can reference the variable throughout your
 
 ## Converting Connected Content strings to JSON
 
-When making a [Connected Content call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) in a Context step, JSON returned from the call is evaluated as a string data type for consistency and error prevention. If you want to convert this string into JSON, convert it by using `as_json_string`. For example:
+When making a [Connected Content call]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call/) in a Context step, JSON returned from the call is evaluated as a string data type for consistency and error prevention. If you want to convert this string into JSON, convert it by using `as_json_string`. For example:
 
 {%raw%}
 ```liquid
@@ -159,7 +159,7 @@ If your Connected Content endpoint has rate limits, consider that Context steps 
 While most event properties using the timestamp type are already in UTC in Canvas, there are some exceptions. With the addition of Canvas Context, all default timestamp event properties in action-based Canvases are in UTC. This change is part of a broader effort to ensure a more predictable and consistent experience when editing Canvas steps and messages. Note that this change impacts all action-based Canvases, whether the specific Canvas is using a Context step or not.
 
 {% alert important %}
-In all circumstances, we strongly recommend using [Liquid time_zone filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) for timestamps to be represented in the desired time zone. You can reference this [frequently asked question](#faq-example) for an example.
+In all circumstances, we strongly recommend using [Liquid time_zone filters]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties#things-to-know) for timestamps to be represented in the desired time zone. You can reference this [frequently asked question](#faq-example) for an example.
 {% endalert %}
 
 ## Frequently asked questions
@@ -168,7 +168,7 @@ In all circumstances, we strongly recommend using [Liquid time_zone filters]({{s
 
 Now that Canvas Context is generally available, the following details apply:
 
-- All timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases are in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
+- All timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/activation/events/custom_events/custom_event_properties/) from [trigger event properties]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/) in action-based Canvases are in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
 - This change impacts all action-based Canvases, whether the specific Canvas is using a Context step or not.
 
 #### What is the reason for this change?

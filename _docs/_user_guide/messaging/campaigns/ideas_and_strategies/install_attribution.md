@@ -17,7 +17,7 @@ While Braze does not provide install attribution tracking, we can integrate with
 
 ## Segment your users
 
-Once your user installs your app, you can begin segmenting them based on the following [install attribution filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#install-attribution). For instance, a travel app could add users that came from an ad relating to beach vacation deals to a "Beach Lovers" segment. Similarly, a music app could segment users based on the genre of music displayed in the advertisement that led to the install.
+Once your user installs your app, you can begin segmenting them based on the following [install attribution filters]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#install-attribution). For instance, a travel app could add users that came from an ad relating to beach vacation deals to a "Beach Lovers" segment. Similarly, a music app could segment users based on the genre of music displayed in the advertisement that led to the install.
 
 ## Best practices
 

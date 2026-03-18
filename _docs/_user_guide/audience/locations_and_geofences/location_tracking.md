@@ -34,11 +34,11 @@ Now, Braze uses the IP address to set the country value on user profiles created
 
 Using location tracking data and segments, you can set up location-based campaigns and strategies. For example, you may want to run a promotional campaign for users who live in a particular region or exclude users in a region that has stricter regulations.
 
-Refer to [Location targeting]({{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/) for more information on creating a location segment.
+Refer to [Location targeting]({{site.baseurl}}/user_guide/audience/segments/location_targeting/) for more information on creating a location segment.
 
 ## Hard setting the default location attribute
 
-You can also use the [`users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) in our API to update the [`current_location`]({{site.baseurl}}/api/objects_filters/user_attributes_object/) standard attribute. An example is:
+You can also use the [`users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) in our API to update the [`current_location`]({{site.baseurl}}/api/objects_filters/user_attributes_object/#migrating-push-tokens) standard attribute. An example is:
 
 ```
 https://[your_braze_rest_endpoint]/users/track

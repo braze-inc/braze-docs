@@ -11,19 +11,19 @@ description: "Personalize your Braze campaigns with Liquid, Connected Content, d
 guide_featured_title: "Topics"
 guide_featured_list:
 - name: Sources
-  link: /docs/user_guide/messaging/design_and_edit/personalize/sources/
+  link: /docs/user_guide/messaging/design_and_edit/personalize/sources
   image: /assets/img/braze_icons/dataflow-03.svg
 - name: "Deep link to in-app content"
-  link: /docs/user_guide/messaging/design_and_edit/personalize/deep_linking_to_in-app_content/
+  link: /docs/user_guide/messaging/design_and_edit/personalize/deep_linking_to_in-app_content
   image: /assets/img/braze_icons/phone-02.svg
 - name: Liquid reference
-  link: /docs/user_guide/messaging/design_and_edit/personalize/liquid/
+  link: /docs/user_guide/messaging/design_and_edit/personalize/liquid
   image: /assets/img/braze_icons/beaker-02.svg
 - name: Connected Content reference
-  link: /docs/user_guide/messaging/design_and_edit/personalize/connected_content/
+  link: /docs/user_guide/messaging/design_and_edit/personalize/connected_content
   image: /assets/img/braze_icons/server-01.svg
 - name: Content Blocks
-  link: /docs/user_guide/messaging/design_and_edit/content_blocks/
+  link: /docs/user_guide/messaging/design_and_edit/content_blocks
   image: /assets/img/braze_icons/columns-01.svg
 ---
 

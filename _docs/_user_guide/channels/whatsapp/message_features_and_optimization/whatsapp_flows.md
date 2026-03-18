@@ -137,7 +137,7 @@ After the schema generates, the Flow **Custom Attribute** section will display t
 
 ### Step 1: Create an Action Path
 
-Create an [Action Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) Canvas step or an action-based campaign. Select a **Send a WhatsApp inbound message** trigger and **Responded to Flow** condition, and then select the relevant Flow or **Any Flow**.
+Create an [Action Path]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/action_paths/) Canvas step or an action-based campaign. Select a **Send a WhatsApp inbound message** trigger and **Responded to Flow** condition, and then select the relevant Flow or **Any Flow**.
 
 ![A trigger for users who sent an inbound WhatsApp message and responded to any Flow.]({% image_buster /assets/img/whatsapp/flows/trigger_responded_flow.png %})
 
@@ -188,7 +188,7 @@ A new WhatsApp message “clears” the Canvas’s ability to use (and reuse) th
 
 ## Adding a Flow personalization tag
 
-To use the Flow response through Liquid with [supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/), complete the following steps:
+To use the Flow response through Liquid with [supported personalization tags]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/), complete the following steps:
 
 1. When composing your WhatsApp message, select the plus icon to open the **Add Personalization** window
 2. Select **WhatsApp Properties** for the personalization type and **inbound_flow_response** for the custom attribute. This can be used to save information to user profiles, include it in messages, or forward it to other services, like webhooks.

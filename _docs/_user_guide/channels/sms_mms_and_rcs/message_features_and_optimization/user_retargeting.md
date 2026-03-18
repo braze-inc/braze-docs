@@ -94,7 +94,7 @@ Messages can be triggered as users send messages inbound based on keyword catego
 When evaluating if an inbound message meets a defined trigger event, the leading and trailing spaces are removed before evaluation begins.
 
 {% alert tip %} 
-If an action-based Canvas is triggered by an inbound SMS or MMS message, you can reference [supported SMS Liquid properties]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) in any Canvas step until the next action path.
+If an action-based Canvas is triggered by an inbound SMS or MMS message, you can reference [supported SMS Liquid properties]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/) in any Canvas step until the next action path.
 {% endalert %}
 
 **Trigger by inbound keyword category**<br>

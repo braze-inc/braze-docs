@@ -36,7 +36,7 @@ When a phone number is used in the search, it is changed into [`E.164`](https://
 
 User profiles are a great resource for troubleshooting and testing because you can easily access information about a user's engagement history, segment membership, device, and operating system.
 
-For example, if a user reports a problem and you aren't sure what device and operating system they are using, you can use the [Overview tab](#overview-tab) to find this information (as long as you have their email or user ID). You can also view a user's language, which could be helpful if you're troubleshooting a [multi-lingual campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) that didn't behave as expected.
+For example, if a user reports a problem and you aren't sure what device and operating system they are using, you can use the [Overview tab](#overview-tab) to find this information (as long as you have their email or user ID). You can also view a user's language, which could be helpful if you're troubleshooting a [multi-lingual campaign]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/localization/) that didn't behave as expected.
 
 You can use the [Engagement tab](#engagement-tab) to verify whether a certain user received a campaign. In addition, if this particular user did receive the campaign, you can see when they received it. You can also verify whether a user is in a certain segment and whether a user is opted in to push, email, or both. This information is useful for troubleshooting purposes. For example, you should check this information if a user doesn't receive a campaign that you expected them to receive or receives a campaign that you did not expect them to receive.
 
@@ -73,14 +73,14 @@ The **Engagement** tab contains information about a user's interactions with the
 
 | Engagement category | Contains |
 | --- | --- |
-| Contact settings | Subscription status for email, SMS, and push, and the subscription groups this user is associated with for these three channels. This section also includes changelog information for push tokens. Refer to [email]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/), and [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) for information on how subscriptions and opt-ins are set. |
+| Contact settings | Subscription status for email, SMS, and push, and the subscription groups this user is associated with for these three channels. This section also includes changelog information for push tokens. Refer to [email]({{site.baseurl}}/user_guide/channels/email/subscriptions/), [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/), and [push]({{site.baseurl}}/user_guide/channels/push/push_setup/push_subscription_states/) for information on how subscriptions and opt-ins are set. |
 | Campaigns received | Campaigns received are marked when the user receives the campaign, or when we first detect interaction data for a user. Select a campaign from the list to view it. |
 | Segments | Segments this user is included in. Select a segment from the list to view it. |
 | Communication stats | When this user last received messages from you from each channel. |
-| Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
-| Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/). |
+| Install attribution | Information about how and when a user installed your app. Learn more about [understanding user installs]({{site.baseurl}}/user_guide/messaging/campaigns/ideas_and_strategies/install_attribution/). |
+| Miscellaneous | The user's [random bucket number]({{site.baseurl}}/user_guide/messaging/ab_testing/concepts/random_bucket_numbers/). |
 | Canvas messages received | Canvas messages this user has received and when. Select a message from the list to view it. |
-| Predictions | [Churn prediction]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) and [event prediction]({{site.baseurl}}/user_guide/brazeai/predictive_events/) scores for this user. |
+| Predictions | [Churn prediction]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) and [event prediction]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![The Engagement tab of a user profile displaying their contact settings and communication statistics.]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
@@ -101,7 +101,7 @@ For each event in the **Messaging History** table, you can see the messaging cha
 
 ##### Message engagement events
 
-The following message engagement events are available for email, SMS, push, in-app messages, Content Cards, and webhooks. To learn more about how specific events are tracked, refer to the [Message engagement event glossary]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
+The following message engagement events are available for email, SMS, push, in-app messages, Content Cards, and webhooks. To learn more about how specific events are tracked, refer to the [Message engagement event glossary]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/).
 
 | Channel | Engagement events available |
 | --- | --- |
@@ -116,7 +116,7 @@ The following message engagement events are available for email, SMS, push, in-a
 
 ##### Message abort events
 
-Message abort events occur when a message sent to a user was aborted due to conditional logic in [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/) or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content#aborting-messages), or from Liquid rendering timeouts.
+Message abort events occur when a message sent to a user was aborted due to conditional logic in [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/aborting_messages/) or [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/aborting_connected_content#aborting-messages), or from Liquid rendering timeouts.
 
 Abort events are available for the following channels:
 
@@ -129,7 +129,7 @@ Abort events are currently not available for in-app messages and Content Cards.
 
 ##### Frequency cap events
 
-A frequency cap event occurs when a user is qualified to receive a message, but doesn't actually receive it due to [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) settings. You can customize frequency capping settings from **Settings** > **Frequency Capping Rules**.
+A frequency cap event occurs when a user is qualified to receive a message, but doesn't actually receive it due to [frequency capping]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/frequency_capping#frequency-capping) settings. You can customize frequency capping settings from **Settings** > **Frequency Capping Rules**.
 
 ##### Blank destinations
 
