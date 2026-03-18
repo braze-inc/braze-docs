@@ -40,7 +40,7 @@ La creación de un mensaje MMS requiere que su grupo de suscripción esté confi
 
 {% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
-![La pestaña "Redactar" para escribir tu mensaje.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
+![La pestaña «Redactar» para escribir tu mensaje.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
 
 ### Especificaciones de imagen
 
@@ -58,4 +58,4 @@ Braze proporciona una vista previa de la imagen que has cargado en el panel **Vi
 El orden de los activos SMS o MMS no se puede personalizar. El pedido depende del teléfono que recibe este mensaje.
 {% endalert %}
 
-![Un ejemplo de mensaje "¿Listo para ir al gimnasio... en casa?". La vista previa muestra el mensaje y la imagen enviados como textos.]({% image_buster /assets/img/sms/mms_preview.png %})
+![Un ejemplo de mensaje: «¿Listo para ir al gimnasio... en casa?». La vista previa muestra el mensaje y la imagen enviados como textos.]({% image_buster /assets/img/sms/mms_preview.png %})

@@ -2,30 +2,302 @@
 nav_title: Intelligentes Timing
 article_title: Intelligentes Timing
 page_order: 1.3
-description: "Dieser Artikel gibt einen Überblick über Intelligentes Timing (früher Intelligent Delivery) und wie Sie diese Funktion in Kampagnen und Canvases nutzen."
+description: "Dieser Artikel gibt Ihnen einen Überblick über Intelligentes Timing (früher Intelligenter Versand) und wie Sie diese Funktion in Ihren Kampagnen und Canvases nutzen können."
+
 ---
 
-# [![Braze Learning-Kurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligentes Timing
+# [![Braze-Lernangebote-Kurs ]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"}„Intelligentes Timing“
 
-> Nutzen Sie Intelligentes Timing, um Ihre Nachricht jedem Nutzer zu dem von Braze ermittelten optimalen Sendezeitpunkt zuzustellen – dem Zeitpunkt, zu dem ein Nutzer am ehesten interagiert (öffnet oder klickt). So stellen Sie leichter sicher, dass Sie Ihre Nutzer zu ihrer bevorzugten Zeit ansprechen, was zu höherem Engagement führen kann.
+> Nutzen Sie intelligentes Timing, um Ihre Nachricht an jeden Nutzer:in zu übermitteln, wenn Braze den optimalen Versandzeitpunkt für einen Nutzer:in ermittelt, d. h. den Zeitpunkt, zu dem die Wahrscheinlichkeit für Engagement (Öffnung oder Klick) am höchsten ist. Dadurch können Sie leichter überprüfen, ob Sie Ihre Nutzer:innen zu deren bevorzugter Zeit mit Nachrichten erreichen, was zu einem höheren Engagement führen kann.
 
 ## Über Intelligentes Timing
 
-Braze berechnet den optimalen Sendezeitpunkt anhand einer statistischen Auswertung der vergangenen Interaktionen Ihrer Nutzer mit Ihrer App und mit jedem Nachrichtenkanal. Dabei werden u. a. folgende Interaktionsdaten verwendet:
+Braze berechnet den optimalen Versandzeitpunkt auf Grundlage einer statistischen Analyse der bisherigen Interaktionen Ihrer Nutzer:innen mit Ihrer App und ihrer Interaktionen mit den einzelnen Messaging-Kanälen. Die folgenden Interaktionsdaten werden verwendet: 
 
-- Sitzungszeiten
-- Push Direct Opens
-- Push Influenced Opens
+- Zeiten der Sitzung
+- Push Direct Öffnet
+- Push Beeinflusst Öffnet
 - E-Mail-Klicks
-- E-Mail-Opens (ohne [Machine Opens]({{site.baseurl}}/user_guide/data/report_metrics/#machine-opens))
-- SMS-Klicks (nur bei aktivierter [Link-Verkürzung]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/) und erweitertem Tracking)
+- Öffnungen von E-Mails (ohne [Öffnungen von Maschinen]({{site.baseurl}}/user_guide/data/report_metrics/#machine-opens))
+- SMS-Klicks (nur wenn [Linkverkürzung]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/) und erweitertes Tracking aktiviert sind)
 
-Hat ein Nutzer keine relevanten Engagement-Daten für die Berechnung des optimalen Sendezeitpunkts, können Sie eine Fallback-Zeit angeben.
+So öffnet Sam vielleicht morgens regelmäßig Ihre E-Mails, aber abends öffnet sie Ihre App und interagiert mit Benachrichtigungen. Das bedeutet, dass Sam eine E-Mail-Kampagne mit intelligentem Timing am Morgen erhält, während sie Kampagnen mit Push-Benachrichtigungen am Abend erhält, wenn die Wahrscheinlichkeit größer ist, dass sie sich engagiert.
+
+Wenn für einen Nutzer:in keine relevanten Daten zum Engagement vorliegen, anhand derer Braze den optimalen Versandzeitpunkt berechnen kann, können Sie einen Fallback-Zeitpunkt festlegen.
 
 ## Anwendungsfälle
 
-- Wiederkehrende Kampagnen senden, die nicht zeitkritisch sind
-- Kampagnen mit Nutzern in mehreren Zeitzonen automatisieren
-- Wenn Sie Ihre engagiertesten Nutzer ansprechen (sie haben die meisten Engagement-Daten)
+- Senden Sie wiederkehrende Kampagnen, die nicht zeitkritisch sind
+- Automatisieren Sie Kampagnen mit Benutzern aus verschiedenen Zeitzonen
+- Wenn Sie Ihre am stärksten engagierten Benutzer anschreiben (sie haben die meisten Engagement-Daten)
 
-Ausführliche Konfigurationsschritte für Kampagnen und Canvases, Quiet Hours, Fallback-Zeit, Einschränkungen und FAQ finden Sie in der vollständigen Version dieses Artikels im linken Inhaltsverzeichnis oder in der Braze-Dashboard-Hilfe.
+## Intelligentes Timing verwenden
+
+In diesem Abschnitt wird beschrieben, wie Sie das intelligente Timing für Ihre Kampagnen und Canvase konfigurieren.
+
+{% tabs local %}
+{% tab Campaign %}
+### Schritt 1: Intelligentes Timing hinzufügen
+
+1. Erstellen Sie eine Kampagne und verfassen Sie Ihre Nachricht.
+2. Wählen Sie die **geplante Zustellung** als Zustellungsart aus.
+3. Wählen Sie unter **Zeitbasierte Planungsoptionen** die Option **Intelligentes Timing**.
+4. Legen Sie die Häufigkeit der Eingänge fest. Für einmalige Sendungen wählen Sie **Einmalig** und wählen Sie ein Sendedatum aus. Für wiederkehrende Sendungen wählen Sie **Täglich**, **Wöchentlich** oder **Monatlich** und konfigurieren die Wiederholungsoptionen. Siehe [Einschränkungen](#limitations) für weitere Hinweise.
+5. Optional können Sie [Ruhezeiten](#quiet-hours) konfigurieren.
+6. Geben Sie eine [Ausweichzeit](#campaign-fallback) an. Diese Nachricht wird gesendet, wenn das Nutzerprofil keine relevanten Ereignisse enthält, um einen optimalen Zeitpunkt zu berechnen.
+
+![Zeitplan-Bildschirm für Kampagnen mit intelligentem Timing, Fallback-Zeit und Einstellungen für Ruhezeiten]({% image_buster /assets/img/intelligent_timing/campaign_scheduling.png %})
+
+#### Ruhezeiten {#quiet-hours}
+
+Verwenden Sie die Funktion „Ruhezeiten“, um zu verhindern, dass Nachrichten zu bestimmten Zeiten versendet werden. Dies ist hilfreich, wenn Sie vermeiden möchten, Nachrichten in den frühen Morgenstunden oder über Nacht zu versenden, und gleichzeitig zulassen, dass Intelligent Timing das beste Zeitfenster für die Zustellung bestimmt.
+
+{% alert note %}
+Ruhezeiten hat die Einstellung **Nur innerhalb bestimmter Stunden senden** ersetzt. Anstatt zu wählen, wann Nachrichten gesendet werden können, wählen Sie jetzt, wann sie nicht gesendet werden sollen. Wenn Sie z.B. Nachrichten zwischen 16 und 18 Uhr senden möchten, stellen Sie Ruhezeiten von 18 bis 16 Uhr am nächsten Tag ein.
+{% endalert %}
+
+1. Wählen Sie **Enablement Ruhezeiten**.
+2. Wählen Sie die Start- und Endzeit, zu der **keine** Nachrichten gesendet werden sollen.
+
+![Die Funktion „Ruhezeiten“ wurde umgeschaltet, wobei Start- und Endzeit so eingestellt sind, dass die Zustellung von Nachrichten während der Nachtstunden blockiert wird.]({% image_buster /assets/img/intelligent_timing/quiet_hours.png %})
+
+Wenn die Ruhezeiten aktiviert sind, sendet Braze während der Ruhezeiten keine Nachrichten - selbst wenn diese Zeit mit der optimalen Sendezeit eines Nutzers:innen übereinstimmt. Wenn die optimale Zeit eines Nutzers:innen in das Ruhefenster fällt, wird die Nachricht stattdessen am nächstgelegenen Rand des Fensters gesendet.
+
+Wenn zum Beispiel die Ruhezeiten von 22:00 Uhr bis 6:00 Uhr morgens eingestellt sind und die optimale Zeit für einen Nutzer:innen 5:30 Uhr ist, hält Braze die Nachricht zurück und stellt sie um 6:00 Uhr morgens zu - die nächstgelegene Zeit außerhalb des Ruhezeitfensters.
+
+#### Vorschau der Lieferzeiten
+
+Um eine Schätzung zu erhalten, wie viele Nutzer die Nachricht in jeder Stunde des Tages erhalten werden, verwenden Sie das Vorschaudiagramm (nur Kampagnen).
+
+1. Fügen Sie im Schritt Zielgruppen Segmente oder Filter hinzu.
+2. Wählen Sie im Abschnitt **Vorschau der Zustellungszeiten für** (der sowohl in den Schritten Zielgruppen als auch Zeitplan der Zustellung erscheint) Ihren Kanal aus.
+3. Klicken Sie auf **Daten aktualisieren**.
+
+![Die Vorschau-Chart für Android Push zeigt, dass das höchste Engagement zwischen 12 und 14 Uhr liegt und die beliebteste App-Nutzungszeit 14 Uhr ist.]({% image_buster /assets/img/intel-timing-preview.png %})
+
+### Schritt 2: Wählen Sie ein Sendedatum
+
+Wählen Sie dann ein Sendedatum für Ihre Kampagne aus. Bitte beachten Sie beim Aufstellen des Zeitplans für Kampagnen mit intelligentem Timing Folgendes:
+
+#### Kampagne 48 Stunden im Voraus einführen
+
+Starten Sie Ihre Kampagne mindestens 48 Stunden vor dem geplanten Versanddatum. Das liegt an den unterschiedlichen Zeitzonen. Braze berechnet die optimale Zeit um Mitternacht in Samoa-Zeit (UTC+13), eine der ersten Zeitzonen der Welt. Ein Tag umfasst weltweit etwa 48 Stunden. Wenn Sie also eine Kampagne innerhalb dieses 48-Stunden-Zeitfensters starten, ist es möglich, dass der optimale Zeitpunkt für einen Nutzer:in in seiner Zeitzone bereits verstrichen ist und die Nachricht nicht gesendet wird.
+
+{% alert important %}
+Wenn eine Kampagne gestartet wird und die optimale Zeit eines Nutzers weniger als eine Stunde in der Vergangenheit liegt, wird die Nachricht sofort verschickt. Liegt die optimale Zeit mehr als eine Stunde zurück, wird die Nachricht gar nicht gesendet.
+{% endalert %}
+
+#### 3-Tage-Fenster für Segmente-Filter
+
+Wenn Sie eine Zielgruppe zusammenstellen, die in einem bestimmten Zeitraum eine Aktion durchgeführt hat, sollten Sie in Ihren Segmentfiltern ein Zeitfenster von mindestens 3 Tagen vorsehen. Verwenden Sie zum Beispiel statt `First used app more than 1 day ago` und `First used app less than 3 days ago` 1 Tag und 4 Tage.
+
+![Filter für die Zielgruppe, wobei die Kampagne auf Nutzer:innen ausgerichtet ist, die die App vor 1 bis 4 Tagen zum ersten Mal verwendet haben.]({% image_buster /assets/img/intelligent_timing/first_used_app.png %})
+
+Dies liegt auch an den Zeitzonen - die Auswahl eines Zeitraums von weniger als 3 Tagen kann dazu führen, dass einige Nutzer aus dem Segment herausfallen, bevor ihre optimale Sendezeit erreicht ist.
+
+Weitere Informationen finden Sie unter [FAQ: Intelligentes Timing](#when-does-braze-check-the-eligibility-criteria-for-segment-and-audience-filters).
+
+#### Erstellen Sie einen Zeitplan für erfolgreiche Varianten zwei Tage nach dem A/B-Test.
+
+Wenn Sie [A/B-Tests mit einer Optimierung]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) nutzen, z. B. die automatische Versendung der **Gewinner-Variante** oder die Verwendung einer **personalisierten Variante**, kann das intelligente Timing die Dauer und das Timing Ihrer Kampagne beeinflussen.
+
+Wenn Sie intelligentes Timing verwenden, empfehlen wir, den Zeitplan für den Versand der Gewinner-Variante mindestens **2 Tage nach** Beginn des A/B-Tests festzulegen. Wenn Ihr A/B-Test beispielsweise am 16\. April um 16:00 Uhr beginnt, planen Sie den Versand der Gewinner-Variante frühestens für den 18\. April um 16:00 Uhr. So hat Braze genügend Zeit, das Verhalten der Nutzer:innen zu bewerten und Nachrichten zum optimalen Zeitpunkt zu versenden.
+
+![A/B-Tests, die den A/B-Test mit ausgewählter Gewinnervariante, mit Gewinnerkriterien, Versanddatum und ausgewählter lokaler Versandzeit anzeigen]({% image_buster /assets/img/intelligent_timing/ab_testing_intelligent_timing.png %})
+
+### Schritt 3: Wählen Sie ein Zeitfenster für die Zustellung (optional)
+
+Optional können Sie das Zeitfenster für die Zustellung begrenzen. Dies kann nützlich sein, wenn sich Ihre Kampagne auf ein bestimmtes Ereignis, einen Verkauf oder eine Aktion bezieht, wird aber im Allgemeinen nicht empfohlen, wenn Sie Intelligent Timing verwenden. Weitere Informationen finden Sie unter [Einschränkungen](#limitations).
+
+Wenn Sie dies angeben, verwendet Braze nur Daten über das Engagement innerhalb dieses Zeitfensters, um die optimale Zustellung für einen Nutzer:innen zu bestimmen. Wenn innerhalb dieses Zeitfensters keine relevanten Ereignisse vorliegen, wird die Nachricht zu der von Ihnen festgelegten Fallback-Zeit versendet.
+
+So legen Sie ein Zeitfenster für die Zustellung fest:
+
+1. Wählen Sie bei der Konfiguration von Intelligent Timing die Option **Nur Nachrichten innerhalb bestimmter Stunden senden**.
+2. Geben Sie die Start- und Endzeit des Lieferfensters ein.
+
+![Kontrollkästchen für "Nachrichten nur innerhalb bestimmter Stunden senden" ausgewählt, wobei das Zeitfenster auf 8 bis 12 Uhr in der Ortszeit der Nutzerin oder des Nutzers festgelegt ist.]({% image_buster /assets/img/intelligent_timing_hours.png %})
+
+### Schritt 4: Wählen Sie eine Fallback-Zeit {#campaign-fallback}
+
+Bitte wählen Sie eine Fallback-Zeit, die verwendet werden soll, wenn das Nutzerprofil keine relevanten Ereignisse enthält, um eine optimale Zeit für die Zustellung zu berechnen.
+
+![Zeitplan für eine Kampagne mit intelligentem Timing]({% image_buster /assets/img/intelligent_timing_1.png %})
+
+{% multi_lang_include brazeai/intelligent_suite/fallback_time.md type="campaign" %}
+
+### Schritt 5: Vorschau der Lieferzeiten
+
+Um eine Schätzung zu erhalten, wie viele Nutzer:innen die Nachricht in jeder Stunde des Tages erhalten werden, verwenden Sie die Vorschau im Chart.
+
+1. Fügen Sie im Schritt Zielgruppen Segmente oder Filter hinzu.
+2. Wählen Sie im Abschnitt **Vorschau der Zustellungszeiten für** (der sowohl in den Schritten Zielgruppen als auch Zeitplan der Zustellung erscheint) Ihren Kanal aus.
+3. Wählen Sie **Daten aktualisieren**.
+
+![Beispielvorschau der Zeiten für die Zustellung für Android Push.]({% image_buster /assets/img/intel-timing-preview.png %})
+
+Wann immer Sie die Einstellungen für Intelligent Timing oder die Zielgruppe Ihrer Kampagne ändern, aktualisieren Sie die Daten erneut, um ein aktualisiertes Diagramm anzuzeigen.
+
+Das Chart zeigt in Blau die Nutzer:innen, die relevante Ereignisse zur Berechnung einer optimalen Zeit hatten, und in Rot die Nutzer:innen, die die Fallback-Zeit verwenden werden. Verwenden Sie die Berechnungsfilter, um die Vorschau für einen detaillierteren Blick auf die einzelnen Nutzer:innen anzupassen.
+{% endtab %}
+
+{% tab Canvas %}
+
+### Schritt 1: Intelligentes Timing hinzufügen
+
+Fügen Sie in Ihrem Canvas einen [Nachrichten-Schritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) hinzu, gehen Sie dann zu **Zustellungseinstellungen** und wählen Sie **Intelligentes Timing verwenden**.
+
+Nachrichten werden an Nutzer:innen gesendet, die den Schritt an diesem Tag zu ihrer optimalen Ortszeit eingegeben haben. Wenn ihre optimale Zeit an diesem Tag jedoch bereits verstrichen ist, wird sie stattdessen am nächsten Tag zu dieser Zeit zugestellt. Nachrichtenschritte, die auf mehrere Kanäle abzielen, können Nachrichten zu verschiedenen Zeiten für verschiedene Kanäle senden oder versuchen, sie zu senden. Wenn die erste Nachricht in einem Nachrichtenschritt zu senden versucht wird, werden alle Nutzer:innen automatisch vorangebracht.
+
+### Schritt 2: Wählen Sie eine Fallback-Zeit
+
+Bitte wählen Sie eine Ausweichzeit für die Nachricht, die an Nutzer:innen in Ihrer Zielgruppe gesendet werden soll, für die keine relevanten Daten zum Engagement vorliegen, damit Braze eine optimale Sendezeit berechnen kann. {% multi_lang_include brazeai/intelligent_suite/fallback_time.md %}
+
+### Schritt 4: Verzögerungsschritt hinzufügen
+
+Anders als bei Kampagnen müssen Sie Ihr Canvas nicht 48 Stunden vor dem Versanddatum einführen, da das intelligente Timing auf der Ebene der Schritte und nicht auf der Ebene des Canvas eingestellt wird.
+
+Bitte fügen Sie stattdessen eine [Verzögerung]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) von mindestens zwei Kalendertagen zwischen dem Aufrufen des Canvas durch den Nutzer:in und dem Erhalt des Schritts des intelligenten Timings ein.
+
+#### Kalender vs. 24-Stunden-Tage
+
+Wenn Sie Intelligentes Timing nach einem Verzögerungsschritt verwenden, kann das Zustellungsdatum variieren, je nachdem, wie Sie Ihre Verzögerung berechnen. Dies gilt nur, wenn Ihre Verzögerung auf **Nach einer Dauer** eingestellt ist, da es einen Unterschied zwischen der Berechnung von "Tagen" und "Kalendertagen" gibt.
+
+- **Tage:** 1 Tag sind 24 Stunden, gerechnet ab dem Zeitpunkt, an dem die:der Nutzer:in den Schritt Verzögerung eingibt.
+- **Kalendertage:** 1 Tag ist der Zeitraum von der Eingabe des Schritts Verzögerung durch die:den Nutzer:in bis Mitternacht in seiner Zeitzone. Das bedeutet, dass 1 Kalendertag nur wenige Minuten lang sein kann.
+
+Bei der Verwendung von intelligentem Timing empfehlen wir, für Verzögerungen Kalendertage anstelle von 24-Stunden-Tagen zu verwenden. Dies liegt daran, dass bei Kalendertagen die Nachricht am letzten Tag der Verzögerung zum optimalen Zeitpunkt versendet wird. Bei einem 24-Stunden-Tag besteht die Möglichkeit, dass der optimale Zeitpunkt für die Nutzer:innen vor dem Betreten des Schritts liegt, was bedeutet, dass ein zusätzlicher Tag zu ihrer Verzögerung hinzukommt.
+
+Nehmen wir zum Beispiel an, Lukas optimale Zeit ist 14:00 Uhr. Er betritt den Schritt Verzögerung um 14:01 Uhr am 1\. März und die Verzögerung ist auf 2 Tage eingestellt.
+
+- Tag 1 endet am 2\. März um 2:01 Uhr
+- Tag 2 endet am 3\. März um 2:01 Uhr
+
+Intelligent Timing soll jedoch um 14 Uhr liefern, was bereits geschehen ist. Luka wird die Nachricht also erst am nächsten Tag erhalten: 4\. März um 14:00 Uhr.
+
+![Grafik, die den Unterschied zwischen Tagen und Kalendertagen veranschaulicht: Wenn die optimale Zeit einer Nutzer:in 14:00 Uhr ist, sie jedoch um 14:01 Uhr in den Verzögerungsschritt eintritt und die Verzögerung auf 2 Tage eingestellt ist. „Tage“ liefert die Nachricht drei Tage später, da der Nutzer:in den Schritt nach der optimalen Zeit eingegeben hat, während „Kalendertage“ die Nachricht zwei Tage später, am letzten Tag der Verzögerung, liefert.]({% image_buster /assets/img/intelligent_timing_daysvcalendardays.png %}){: style="border:none;"}
+{% endtab %}
+{% endtabs %}
+
+## Beschränkungen
+
+- In-App-Nachrichten und Webhooks werden unverzüglich zugestellt und nicht zu optimalen Zeiten.
+- Intelligentes Timing ist nicht verfügbar für aktionsbasierte oder API-ausgelöste Kampagnen.
+- Intelligent Timing sollte in den folgenden Szenarien nicht verwendet werden:
+    - **Rate-Limiting:** Wenn sowohl die Ratenbegrenzung als auch Intelligent Timing verwendet werden, gibt es keine Garantie dafür, wann die Nachricht zugestellt wird. Täglich wiederkehrende Kampagnen mit intelligentem Timing unterstützen keine genaue Obergrenze für den Versand von Nachrichten.
+    - **IP-Warming-Kampagnen:** Einige der Intelligentes-Timing-Verhaltensweisen können dazu führen, dass Sie die täglichen Volumina, die beim ersten Aufwärmen Ihrer IP benötigt werden, nicht erreichen. Das liegt daran, dass Intelligent Timing die Segmente zweimal auswertet - einmal bei der Erstellung der Kampagne oder des Canvas und ein zweites Mal vor dem Versand an die Benutzer, um zu überprüfen, ob sie noch in diesem Segment sein sollten. Dies kann dazu führen, dass sich die Segmente verschieben und verändern, was oft dazu führt, dass einige Nutzer:innen bei der zweiten Auswertung aus dem Segment herausfallen. Diese Nutzer:innen werden nicht ersetzt, was sich darauf auswirkt, wie nah Sie an die maximale Nutzerobergrenze herankommen können.
+
+## Fehlersuche
+
+### Vorschaudiagramm mit wenigen Benutzern mit optimalen Zeiten
+
+Wenn für einen Nutzer:in keine relevanten Ereignisse vorliegen (z. B. bei neuen Nutzer:innen mit geringer oder keiner Interaktion), verwendet Braze die konfigurierte Fallback-Einstellung – entweder Ihre benutzerdefinierte Fallback-Zeit oder die beliebteste Zeit für die Nutzung der App unter allen Nutzer:innen.
+
+### Auswirkungen der Zeitzone auf die Zustellung von intelligentem Timing
+
+Intelligentes Timing basiert auf der angegebenen Ortszeit jeder Nutzer:in, sodass der Zeitplan für die Zustellung je nach Nutzer:in variieren kann.
+
+Sollten Nutzer:innen Nachrichten nicht wie erwartet erhalten, überprüfen Sie bitte, ob das Feld für die Zeitzone in ihrem Profil korrekt ausgefüllt ist. Wenn das Feld für die Zeitzone leer ist, kann es vorkommen, dass die Nutzer:innen Nachrichten erhalten, die sich nach der Zeitzone des Unternehmens richten und nicht nach ihrer Ortszeit.
+
+### Versenden nach dem Zeitplan
+
+Ihre Kampagne mit intelligentem Timing sendet möglicherweise über das geplante Datum hinaus, wenn Sie [A/B-Tests mit einer Optimierung]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) nutzen. Kampagnen, die A/B-Testing-Optimierungen verwenden, können automatisch die Gewinner-Variante senden, nachdem der erste Test abgeschlossen ist, wodurch sich die Dauer der Kampagne verlängert. Standardmäßig wird bei Kampagnen mit einer Optimierung die Gewinner-Variante am Tag nach dem ersten Test an die verbleibenden Benutzer gesendet, aber Sie können dieses Sendedatum ändern.
+
+Wenn Sie Intelligent Timing verwenden, empfehlen wir Ihnen, mehr Zeit für den Abschluss des A/B-Tests einzuplanen und den Versand der Gewinnervariante für 2 Tage nach dem ersten Test zu planen, anstatt für 1 Tag.
+
+## Häufig gestellte Fragen (FAQ) {#faq}
+
+### Allgemein
+
+#### Was sagt Intelligentes Timing voraus?
+
+Intelligentes Timing konzentriert sich auf die Prognose, wann ein Nutzer Ihre Nachrichten am ehesten öffnet oder klickt, um sicherzustellen, dass Ihre Nachrichten die Nutzer:innen zum optimalen Zeitpunkt erreichen.
+
+#### Wird das intelligente Timing für jeden Wochentag separat berechnet?
+
+Nein, Intelligentes Timing ist nicht an bestimmte Tage gebunden. Stattdessen personalisiert es die Sendezeiten auf der Grundlage des eindeutigen Engagements jedes Nutzers und des von Ihnen verwendeten Kanals, wie E-Mail oder Push-Benachrichtigungen. So können Sie sicherstellen, dass Ihre Nachrichten die Nutzer:innen dann erreichen, wenn sie am empfänglichsten sind.
+
+### Berechnungen
+
+#### Welche Daten werden verwendet, um die optimale Zeit für jeden Nutzer:innen zu berechnen?
+
+Um die optimale Zeit zu berechnen, verwenden Sie Intelligentes Timing:
+
+1. Analysiert die Interaktionsdaten für jeden Nutzer:innen, die vom Braze SDK aufgezeichnet wurden. Dies beinhaltet:
+  - Zeiten der Sitzung
+  - Push direkt öffnet
+  - Push beeinflusst Öffnungen
+  - E-Mail Klicks
+  - Öffnungen von E-Mails (ohne Öffnungen durch den Computer)
+2. Gruppiert diese Ereignisse nach Zeit und identifiziert die optimale Sendezeit für jeden Nutzer:innen.
+
+#### Werden die Öffnungen der Maschinen bei der Berechnung der optimalen Zeit berücksichtigt?
+
+Nein, [Öffnungen der Maschine]({{site.baseurl}}/user_guide/data/report_metrics/#machine-opens) sind von den Berechnungen für die optimale Zeit ausgeschlossen. Das bedeutet, dass die Sendezeiten ausschließlich auf dem echten Engagement der Nutzer:innen beruhen, was eine genauere Zeitplanung für Ihre Kampagnen ermöglicht.
+
+#### Wie genau ist der optimale Zeitpunkt?
+
+Intelligentes Timing plant Nachrichten während der "engagiertesten Stunde" jedes Nutzers, basierend auf dem Beginn der Sitzung und der Öffnung von Nachrichten. Innerhalb dieser Stunde wird der Zeitpunkt der Nachrichten auf die nächsten fünf Minuten gerundet. Wenn beispielsweise die optimale Zeit eines Nutzers:innen mit 16:58 Uhr berechnet wird, wird die Nachricht für 17:00 Uhr geplant. Es kann zu leichten Verzögerungen bei der Zustellung kommen, da das System in Stoßzeiten aktiv ist.
+
+#### Wie werden die Fallback-Berechnungen durchgeführt, wenn keine relevanten Ereignisse vorliegen?
+
+Wenn für einen Nutzer:in keine relevanten Ereignisse vorliegen, verwendet intelligentes Timing die in Ihren Nachrichteneinstellungen konfigurierte Fallback-Einstellung – entweder eine benutzerdefinierte Fallback-Zeit oder die beliebteste Zeit für die Nutzung der App unter allen Nutzer:innen. 
+
+### Kampagnen
+
+#### Wie weit im Voraus sollte ich eine Intelligent Timing Kampagne starten, um sie erfolgreich an alle Nutzer:innen in allen Zeitzonen zu bringen?
+
+Braze berechnet die optimale Zeit um Mitternacht in Samoa-Zeit, eine der ersten Zeitzonen der Welt. An einem einzigen Tag erstreckt er sich über etwa 48 Stunden. Zum Beispiel hat jemand, dessen optimale Zeit 12:01 Uhr ist und der in Australien lebt, seine optimale Zeit bereits überschritten, und es ist "zu spät", um ihm zu senden. Aus diesen Gründen müssen Sie einen Zeitplan von 48 Stunden vorbringen, um Ihre App erfolgreich an alle Nutzer weltweit zuzustellen.
+
+#### Warum werden in meiner Intelligent Timing-Kampagne nur wenige oder gar keine Sendungen angezeigt?
+
+Wenn für einen Nutzer:in keine relevanten Interaktionsereignisse vorliegen (z. B. bei neuen Nutzer:innen mit wenigen oder keinen Klicks oder Öffnungen), verwendet intelligentes Timing die konfigurierte Fallback-Einstellung – entweder Ihre benutzerdefinierte Fallback-Zeit oder die beliebteste Zeit für die Nutzung der App unter allen Nutzer:innen.
+
+#### Warum wird meine Intelligent Timing-Kampagne nach dem geplanten Datum gesendet?
+
+Ihre Kampagne mit intelligentem Timing versendet möglicherweise über das geplante Datum hinaus, weil Sie A/B-Tests nutzen. Kampagnen, die A/B-Tests verwenden, können die Gewinner-Variante automatisch versenden, nachdem der A/B-Test beendet ist, wodurch sich die Dauer des Kampagnenversands verlängert. Standardmäßig werden Intelligent Timing-Kampagnen so geplant, dass die Gewinner-Variante am nächsten Tag an die verbleibenden Nutzer versendet wird, aber Sie können dieses Versanddatum ändern.
+
+Wir empfehlen Ihnen, bei intelligenten Timing-Kampagnen mehr Zeit für den Abschluss des A/B-Tests einzuplanen und die Gewinnervariante für zwei Tage statt für einen Tag zu versenden. 
+
+### Funktionsweise
+
+#### Wann prüft Braze die Zulassungskriterien für Segmente und Zielgruppenfilter?
+
+Braze führt zwei Prüfungen durch, wenn eine Kampagne gestartet wird:
+
+1. **Erste Überprüfung:** Um Mitternacht in der ersten Zeitzone am Tag des Versands.
+2. **Prüfung des Zeitplans:** Kurz vor dem Senden zu der für den Nutzer:innen ausgewählten Zeit Intelligent Timing.
+
+Seien Sie vorsichtig, wenn Sie auf der Grundlage anderer Kampagnensendungen filtern, um das Targeting von nicht geeigneten Segmenten zu vermeiden. Wenn Sie z.B. zwei Kampagnen am selben Tag zu unterschiedlichen Zeiten versenden und einen Filter hinzufügen, der es Nutzern:innen nur erlaubt, die zweite Kampagne zu erhalten, wenn sie die erste erhalten haben, werden die Nutzer:innen die zweite Kampagne nicht erhalten. Dies liegt daran, dass zum Zeitpunkt der Erstellung der Kampagne und der Bildung der Segmente niemand berechtigt war.
+
+#### Kann ich Ruhezeiten in meiner Intelligent Timing-Kampagne verwenden?
+
+Ruhezeiten können in einer Kampagne verwendet werden, die Intelligentes Timing einsetzt. Der Algorithmus des intelligenten Timings vermeidet Ruhezeiten, so dass die Nachricht trotzdem an alle in Frage kommenden Nutzer:innen gesendet wird. Wir empfehlen jedoch, die Ruhezeiten zu deaktivieren, es sei denn, es gibt Richtlinien, Compliance- oder andere rechtliche Gründe dafür, wann Nachrichten gesendet werden können und wann nicht.
+
+#### Was passiert, wenn die optimale Zeit für einen Nutzer:innen innerhalb der Ruhezeiten liegt? 
+
+Wenn die ermittelte optimale Zeit in die Ruhezeiten fällt, findet Braze den nächstgelegenen Rand der Ruhezeiten und plant die Nachricht für die nächste zulässige Stunde vor oder nach den Ruhezeiten. Die Nachricht wird in die Warteschlange gestellt, um an der nächstgelegenen Grenze der Ruhezeiten in Bezug auf die optimale Zeit gesendet zu werden.
+
+#### Kann ich Intelligent Timing und Ratenbegrenzung verwenden?
+
+Rate-Limiting kann bei einer Kampagne verwendet werden, die Intelligent Timing einsetzt. Die Natur des Rate-Limiting bedeutet jedoch, dass einige Nutzer:innen ihre Nachrichten möglicherweise zu einem weniger als optimalen Zeitpunkt erhalten, insbesondere wenn eine große Anzahl von Nutzern im Verhältnis zur Größe der Rate-Limits zum Zeitpunkt des Fallbacks eingeplant ist, weil sie keine relevanten Ereignisse haben. 
+
+Wir empfehlen die Verwendung von Rate-Limits bei einer Intelligent Timing Kampagne nur dann, wenn es technische Anforderungen gibt, die mit Rate-Limits erfüllt werden müssen.
+
+#### Kann ich Intelligent Timing während der IP-Erwärmung verwenden?
+
+Braze rät davon ab, Intelligent Timing zu verwenden, wenn Nutzer:innen zum ersten Mal IP-Warming betreiben, da einige seiner Verhaltensweisen zu Schwierigkeiten beim Erreichen des täglichen Volumens führen können. Das liegt daran, dass Intelligent Timing die Kampagnensegmente doppelt auswertet. Einmal bei der Erstellung der Kampagne und ein zweites Mal vor dem Versand an die Nutzer, um zu überprüfen, ob sie noch in diesem Segment sein sollten.
+
+Dies kann dazu führen, dass sich die Segmente verschieben und verändern, was oft dazu führt, dass einige Nutzer:innen bei der zweiten Auswertung aus dem Segment herausfallen. Diese Nutzer:innen werden nicht ersetzt, was sich darauf auswirkt, wie nah Sie an die maximale Nutzer:innen-Obergrenze herankommen können.
+
+#### Wie wird die Zeit der beliebtesten App ermittelt?
+
+Die beliebteste App-Zeit wird durch die durchschnittliche Sitzungsstartzeit für den Workspace (in Ortszeit) bestimmt. Diese Metrik finden Sie im Dashboard bei der Vorschau der Zeiten für eine Kampagne, die in Rot angezeigt wird.
+
+#### Berücksichtigt Intelligentes Timing die Öffnungen maschinelle Öffnungen?
+
+Ja, maschinelle Öffnungen werden von Intelligent Timing herausgefiltert, so dass sie die Ausgabe nicht beeinflussen.
+
+#### Wie kann ich sicherstellen, dass Intelligent Timing so gut wie möglich funktioniert?
+
+Intelligentes Timing verwendet den individuellen Verlauf des Engagements jedes Nutzers:innen bei Nachrichten, unabhängig davon, zu welchen Zeiten sie diese erhalten haben. Bevor Sie intelligentes Timing verwenden, vergewissern Sie sich, dass Sie den Nutzer:innen Nachrichten zu verschiedenen Tageszeiten geschickt haben. Auf diese Weise können Sie "ausprobieren", wann der beste Zeitpunkt für die einzelnen Nutzer:innen ist. Eine unzureichende Auswahl verschiedener Tageszeiten kann dazu führen, dass Intelligent Timing eine suboptimale Sendezeit für eine:n Nutzer:in auswählt.

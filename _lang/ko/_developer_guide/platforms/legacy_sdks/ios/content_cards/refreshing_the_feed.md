@@ -1,6 +1,6 @@
 ---
 nav_title: 피드 새로 고침
-article_title: iOS용 콘텐츠 카드 피드 새로고침하기
+article_title: iOS용 콘텐츠 카드 피드를 새로고침
 platform: iOS
 page_order: 4
 description: "이 참조 문서에서는 iOS 애플리케이션에서 콘텐츠 카드 새로 고침을 구현하는 방법에 대해 설명합니다."
@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# 피드 새로고침하기
+# 피드를 새로고침
 
 ## 콘텐츠 카드 새로 고침
 

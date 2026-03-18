@@ -1,16 +1,16 @@
-{% multi_lang_include developer_guide/prerequisites/web.md %} Sie müssen auch [Push-Benachrichtigungen einrichten]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web).
+{% multi_lang_include developer_guide/prerequisites/web.md %} Bitte [richten]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web) Sie auch [Push-Benachrichtigungen ein]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web).
 
-## Über Soft-Push-Eingabeaufforderungen
+## Über sanfte Push-Benachrichtigungen
 
 Es ist oft eine gute Idee, eine "sanfte" Push-Aufforderung zu implementieren, mit der Sie den Nutzer:innen vor der Anfrage nach einer Push-Benachrichtigung "vorwarnen" ("prime") und sie für die Zusendung von Push-Benachrichtigungen gewinnen. Dies ist nützlich, da der Browser die Anzahl der direkten Anfragen an die Nutzer:innen drosselt, und wenn ein:e Nutzer:in die Erlaubnis verweigert, können Sie sie/ihn nie wieder fragen.
 
-Wenn Sie eine spezielle, angepasste Handhabung einbauen möchten, können Sie auch unsere [getriggerten In-App-Nachrichten]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web) verwenden, anstatt `requestPushPermission()` direkt aufzurufen, wie in der Standard [Web-Push Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration) beschrieben.
+Wenn Sie eine spezielle angepasste Verarbeitung einbinden möchten, verwenden Sie anstelle des`requestPushPermission()`direkten Aufrufs, wie in der Standard[-Web-Push-Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration) beschrieben, unsere [getriggerten In-App-Nachrichten]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web).
 
 {% alert tip %}
 Dies kann ohne SDK-Anpassung mit unserem neuen [No Code Push Primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) geschehen.
 {% endalert %}
 
-## Einrichten von Soft-Push-Eingabeaufforderungen
+## Einrichtung von Soft-Push-Aufforderungen
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -18,18 +18,18 @@ Dies kann ohne SDK-Anpassung mit unserem neuen [No Code Push Primer]({{site.base
 
 Zunächst müssen Sie im Braze-Dashboard eine In-App Messaging-"Prime for Push"-Kampagne erstellen:
 
-1. Erstellen Sie eine **Modal** In-App-Nachricht mit dem von Ihnen gewünschten Text und Styling. 
-2. Als nächstes stellen Sie das Verhalten bei Klick auf **Nachricht schließen** ein. Dieses Verhalten wird später angepasst.
+1. Erstellen Sie eine **modale** In-App-Nachricht mit dem gewünschten Text und Design. 
+2. Legen Sie anschließend das Verhalten beim Klick auf **„Nachricht schließen“** fest. Dieses Verhalten wird zu einem späteren Zeitpunkt angepasst.
 3. Fügen Sie der Nachricht ein Schlüssel-Wert-Paar hinzu, wobei der Schlüssel `msg-id` und der Wert `push-primer` lautet.
-4. Weisen Sie der Nachricht eine angepasste Event-triggernde Aktion zu (z. B. "prime-for-push"). Sie können das angepasste Event bei Bedarf manuell über das Dashboard erstellen.
+4. Weisen Sie der Nachricht eine angepasste Event-triggernde Aktion zu (z. B. "prime-for-push"). Bei Bedarf können Sie das angepasste Event manuell über das Dashboard erstellen.
 
 ### Schritt 2: Anrufe entfernen
 
 Suchen Sie in Ihrer Braze SDK-Integration nach Aufrufen von `automaticallyShowInAppMessages()` und entfernen Sie diese aus Ihrem ladenden Snippet.
 
-### Schritt 3: Update-Integration
+### Schritt 3: Integration Update
 
-Schließlich ersetzen Sie den entfernten Aufruf durch das folgende Snippet. Rufen Sie `subscribeToInAppMessage()` an, bevor Sie `openSession()` anrufen. Dadurch wird sichergestellt, dass Ihr In-App-Nachricht-Hörer rechtzeitig registriert wird, um die Push-Nachricht zu empfangen.
+Ersetzen Sie abschließend den entfernten Aufruf durch das folgende Snippet. Bitte rufen Sie `subscribeToInAppMessage()`an, bevor Sie anrufen`openSession()`. Dadurch wird sichergestellt, dass Ihr In-App-Nachrichten-Listener rechtzeitig registriert wird, um die Push-Primer-Nachricht zu empfangen.
 
 ```javascript
 import * as braze from "@braze/web-sdk";

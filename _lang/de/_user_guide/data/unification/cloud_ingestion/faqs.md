@@ -71,7 +71,7 @@ Wenn Sie diese Fehlermeldung erhalten, vergewissern Sie sich, dass der Nutzer:in
 
 Test Connection läuft auf Ihrem Data Warehouse, so dass eine Erhöhung der Data Warehouse-Kapazität dessen Geschwindigkeit verbessern kann. Die Verwendung einer serverlosen SQL-Instanz minimiert die Aufwärmzeit und verbessert den Abfragedurchsatz, kann aber zu etwas höheren Integrationskosten führen.
 
-### Erlaubnis für Beziehung verweigert {table_name}
+### Zugriff auf die Beziehung verweigert {table_name}
 
 Wenn Sie diesen Fehler erhalten:
 
@@ -132,7 +132,7 @@ Wenn Sie diesen Fehler erhalten, lesen Sie [Databricks: Unzulässiger Fehler bei
 
 Jede Integration hat ihre eigene Benachrichtigungspräferenz. Gehen Sie auf die CDI-Seite und wählen Sie den Namen der Integration aus, die Sie aktualisieren möchten. Im Bereich **Benachrichtigungseinstellungen** können Sie aktualisieren, wie Sie Benachrichtigungen über die ausgewählte Integration erhalten.
 
-## Was passiert, wenn eine zukünftige UPDATED_AT mit einer Integration synchronisiert wird?
+## Was geschieht, wenn eine Zukunft mit einer UPDATED_ATIntegration synchronisiert wird?
 
 CDI verwendet `UPDATED_AT`, um zu entscheiden, welche Daten neu sind. Nachdem ein zukünftiges `UPDATED_AT` synchronisiert wurde, werden Daten, die vor diesem zukünftigen Datum und Zeitpunkt liegen, nicht mehr verarbeitet. Um dies zu beheben:
 
@@ -142,7 +142,7 @@ CDI verwendet `UPDATED_AT`, um zu entscheiden, welche Daten neu sind. Nachdem ei
 
 ## Warum stimmt "Synchronisierte Zeilen" nicht mit der Anzahl in meinem Lager überein?
 
-CDI verwendet `UPDATED_AT`, um zu entscheiden, welche Datensätze bei einer Synchronisierung übernommen werden sollen. Sehen Sie sich [diese Illustration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) an, um zu sehen, wie es funktioniert. Zu Beginn eines Synchronisierungslaufs fragt CDI Ihr Lagerhaus ab, um alle Datensätze zu erhalten, deren `UPDATED_AT` gleich oder später ist als der zuvor verarbeitete `UPDATED_AT` Zeitstempel. Jeder Datensatz, der zum Zeitpunkt der Ausführung der Abfrage erfasst wird, wird mit Braze synchronisiert. Hier sind die häufigsten Fälle, in denen ein Datensatz nicht synchronisiert werden kann:
+CDI verwendet `UPDATED_AT`, um zu entscheiden, welche Datensätze bei einer Synchronisierung übernommen werden sollen. Sehen Sie sich [diese Illustration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) an, um zu sehen, wie es funktioniert. Zu Beginn eines Synchronisierungslaufs fragt CDI Ihr Lager ab, um alle Datensätze zu erhalten, deren`UPDATED_AT`Zeitstempel gleich oder später als der zuvor verarbeitete`UPDATED_AT`Zeitstempel ist. Jeder Datensatz, der zum Zeitpunkt der Ausführung der Abfrage erfasst wird, wird mit Braze synchronisiert. Hier sind die häufigsten Fälle, in denen ein Datensatz nicht synchronisiert werden kann:
 
 - Sie fügen der Tabelle Datensätze mit einem `UPDATED_AT` Wert hinzu, der bereits verarbeitet wurde.
 - Sie aktualisieren die Werte von Datensätzen, nachdem sie durch eine Synchronisierung verarbeitet wurden, lassen aber `UPDATED_AT` unverändert. 
@@ -155,6 +155,12 @@ Um dieses Verhalten in Zukunft zu vermeiden, empfehlen wir, monoton ansteigende 
 ## Wird bei einer Synchronisierung die Reihenfolge beibehalten, wenn mehrere Datensätze dieselbe ID haben?
 
 Die Reihenfolge der Bearbeitung ist nicht 100%ig vorhersehbar. Wenn zum Beispiel während einer Synchronisierung mehrere Zeilen mit demselben `EXTERNAL_ID` in der Tabelle vorhanden sind, können wir nicht garantieren, welcher Wert im endgültigen Profil landet. Wenn Sie dasselbe `EXTERNAL_ID` mit verschiedenen Attributen in der Nutzlastspalte aktualisieren, werden alle Änderungen übernommen, wenn die Synchronisierung abgeschlossen ist.
+
+## Warum werden bei meiner CDI-Synchronisierung keine neuen Nutzer:innen angelegt?
+
+Wenn in Ihrer CDI-Integration die Option **„Nur vorhandene Nutzer:innen aktualisieren“** aktiviert ist, werden nur Nutzer:innen aktualisiert, die bereits in Braze vorhanden sind, und es werden keine neuen Nutzer:innen erstellt. Dies bedeutet, dass eine Zeile in Ihrer Synchronisierungstabelle, die einen`EXTERNAL_ID`Eintrag referenziert, der mit keinem vorhandenen Braze-Nutzer:in übereinstimmt, übersprungen wird.
+
+Um über CDI neue Nutzer:innen anzulegen, schalten Sie bitte die Option **„Nur vorhandene Nutzer:innen aktualisieren“** in Ihren Integrationseinstellungen um. Bitte gehen Sie zu **„Dateneinstellungen“** > **„Cloud-Datenaufnahme“** und wählen Sie eine Integration aus.
 
 ## Welche Sicherheitsmaßnahmen gibt es für CDI?
 

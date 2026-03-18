@@ -19,9 +19,9 @@ channel:
 
 메시지를 분류하여 사용자의 알림 트레이에 그룹화하려면 Braze를 통해 iOS의 알림 그룹 기능을 활용할 수 있습니다.
 
-Create your iOS push campaign, then to to the **Settings** tab and open the **Notification group** dropdown.
+iOS 푸시 캠페인을 생성한 후, **설정** 탭으로 가서 **알림 그룹** 드롭다운을 엽니다.
 
-!["설정" 탭에 "알림 그룹" 드롭다운이 있으며, "쿠폰" 값을 선택했습니다.]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
+!["알림 그룹" 드롭다운이 "쿠폰" 값을 선택한 "설정" 탭입니다.]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
 
 드롭다운에서 알림 그룹을 선택합니다. 알림 그룹 설정이 잘못되었거나 드롭다운에서 **없음**을 선택하면 워크스페이스에 정의된 모든 사용자에게 정상적으로 메시지가 자동으로 전송됩니다.
 
@@ -86,7 +86,7 @@ Apple은 브랜드가 공식적으로 명시적으로 옵트인하기 전에 사
 
 [세분화 필터]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)를 사용하여 잠정 승인 여부에 따라 사용자를 타겟팅할 수 있습니다.
 
-![샘플 세그먼트 필터 "iOS 스톱워치에서 임시로 승인됨(true)"가 있는 세그먼트 세부정보 패널입니다.]({% image_buster /assets/img/segment-push-prov-auth.png %})
+![사용자를 타겟팅하기 위한 샘플 세그먼트 필터 "iOS 스톱워치에서 임시로 승인됨 (iOS)"가 있는 세그먼트 세부정보 패널입니다.]({% image_buster /assets/img/segment-push-prov-auth.png %})
 
 {% alert tip %}
 사용자가 임시 푸시를 "끄기"로 선택하면 더 이상 임시 푸시 메시지가 표시되지 않습니다. 이 기능을 사용하여 보내는 메시지 내용과 문장에 신중을 기하세요!
@@ -140,7 +140,7 @@ iOS 15의 새로운 집중 모드를 통해 사용자는 앱 알림이 소리나
 
 iOS 푸시 알림의 중단 수준을 변경하려면 **설정** 탭을 선택하고 **중단 수준** 드롭다운 메뉴에서 원하는 수준을 선택합니다.
 
-![중단 수준을 선택하는 드롭다운입니다.]({% image_buster /assets/img/ios/interruption_level.png %}){: style="max-width:50%"}
+![중단 수준을 선택하기 위한 드롭다운입니다.]({% image_buster /assets/img/ios/interruption_level.png %}){: style="max-width:50%"}
 
 이 기능은 최소 SDK 버전 요구 사항이 없으며 iOS 15 이상을 실행하는 기기에만 적용됩니다.
 

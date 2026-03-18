@@ -10,13 +10,13 @@ channel:
 
 # Inscrições em e-mail
 
-> Saiba sobre os estados de inscrição do usuário, como criar e gerenciar grupos de inscrições e como segmentar usuários com base em suas inscrições.
+> Saiba sobre os estados de inscrição do usuário, como criar e gerenciar grupos de inscrição e como segmentar usuários com base em suas inscrições.
 
 Este documento é apenas para fins informativos. Ele não se destina a fornecer, nem pode ser considerado como aconselhamento jurídico de qualquer tipo. O envio de e-mails de marketing e transação pode estar sujeito a requisitos legais específicos. Para garantir que esteja fazendo isso em conformidade com todas as leis, regras e regulamentos aplicáveis específicos da sua empresa, procure a orientação do seu consultor jurídico e/ou da equipe de conformidade regulamentar.
 
 ## Estados de inscrição {#subscription-states}
 
-Braze tem três estados globais de inscrição para usuários de e-mail. Esses estados bloqueiam suas mensagens para os usuários. Por exemplo, usuários no estado `unsubscribed` não recebem mensagens direcionadas a `subscribed` ou `opted-in`.
+A Braze tem três estados globais de inscrição para usuários de e-mail. Esses estados bloqueiam suas mensagens para os usuários. Por exemplo, usuários no estado `unsubscribed` não recebem mensagens direcionadas a `subscribed` ou `opted-in`.
 
 | Status | Definição |
 | ----- | ---------- |
@@ -31,9 +31,9 @@ A Braze não conta as alterações de estado da inscrição em relação aos seu
 
 ### Endereços de e-mail cancelados
 
-Braze cancela automaticamente a inscrição de qualquer usuário que se descadastre manualmente através de um [rodapé personalizado]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer). Se o usuário atualizar seu endereço de e-mail e **Reinscrever usuários quando atualizarem seu e-mail** estiver habilitado em **Configuração de Envio**, o envio normal é retomado.
+A Braze automaticamente cancela a inscrição de qualquer usuário que se descadastre manualmente através de um [rodapé personalizado]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer). Se o usuário atualizar seu endereço de e-mail e **Reinscrever usuários quando atualizarem seu e-mail** estiver habilitado em **Configuração de Envio**, o envio normal será retomado.
 
-Se um usuário marcar um ou mais de seus e-mails como spam, Braze envia apenas e-mails transacionais para esse usuário. E-mails transacionais referem-se à opção **Enviar para todos os usuários, incluindo usuários descadastrados** em **Público-Alvo**.
+Se um usuário marcar um ou mais de seus e-mails como spam, a Braze enviará apenas e-mails transacionais para esse usuário. E-mails transacionais referem-se à opção **Enviar para todos os usuários, incluindo usuários descadastrados** em **Público-Alvo**.
 
 {% alert tip %}
 Consulte nossas práticas recomendadas [de aquecimento de IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) para obter orientação sobre como reengajar seus usuários de forma eficaz.
@@ -43,7 +43,7 @@ Consulte nossas práticas recomendadas [de aquecimento de IP]({{site.baseurl}}/u
 
 {% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} {% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} 
 
-Quando um endereço de e-mail retorna com erro permanente, Braze não define automaticamente o estado de inscrição do usuário como "descadastrado". Se um endereço retornar com erro permanente (inválido ou não existir), Braze o marca como inválido e não tenta novos envios. Se o usuário mudar seu endereço de e-mail, Braze retoma o envio. Braze tenta novamente envios com erro temporário por 72 horas.
+Quando um endereço de e-mail retorna com erro permanente, a Braze não define automaticamente o estado de inscrição do usuário como "descadastrado". Se um endereço retornar com erro permanente (inválido ou não existir), a Braze o marca como inválido e não tenta novos envios. Se o usuário mudar seu endereço de e-mail, a Braze retoma o envio. A Braze tenta novamente envios que retornaram com erro temporário por 72 horas.
 
 ### Atualização dos estados de envio de e-mail
 
@@ -66,13 +66,13 @@ Se disponível, o perfil do usuário também exibe um carimbo de data/hora de qu
 
 #### Central de Preferências
 
-Inclua [Central de Preferências](#email-preference-center) Liquid no final de seus e-mails para permitir que os usuários optem por receber ou não. Braze gerencia atualizações de estado de inscrição a partir da central de preferências.
+Inclua [Central de Preferências](#email-preference-center) Liquid no final de seus e-mails para permitir que os usuários optem por entrar ou sair. A Braze gerencia atualizações de estado de inscrição a partir da central de preferências.
 
 ### Verificação do estado do envio de e-mail
 
 ![Perfil de usuário para John Doe com o estado de inscrição de e-mail definido como Subscribed (Inscrito).]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
-Você pode verificar o estado de inscrição por e-mail de um usuário das seguintes maneiras:
+Você pode verificar o estado de inscrição de e-mail de um usuário das seguintes maneiras:
 
 1. **Exportação da API REST:** Use os endpoints [Exportar usuários por segmento]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) ou [Exportar usuários por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) para exportar perfis de usuários individuais em formato JSON.
 2. **Perfil do usuário:** Encontre o perfil do usuário na página [Pesquisar usuários]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/), em seguida, selecione a guia **Engajamento** para visualizar e atualizar manualmente o estado de inscrição de um usuário.
@@ -113,7 +113,7 @@ Para arquivar seu grupo na página **Grupos de inscrições**, faça o seguinte:
 1. Encontre seu grupo na lista de grupos de inscrições. 
 2. Selecione **Arquivar** no menu suspenso <i class="fa-solid fa-ellipsis-vertical"></i>.
 
-Braze não processa alterações de estado para usuários em grupos arquivados. Por exemplo, se você arquivar o Grupo de Inscrições 1 enquanto Alex está inscrito nele, Alex permanece "inscrito" mesmo que clique em um link de cancelamento de inscrição. Isso não importa porque o Grupo de Inscrições 1 está arquivado e você não pode enviar mensagens usando-o.
+A Braze não processa mudanças de estado para usuários em grupos arquivados. Por exemplo, se você arquivar o Grupo de Inscrições 1 enquanto Alex está inscrito nele, Alex permanece "inscrito" mesmo que clique em um link de cancelamento de inscrição. Isso não importa porque o Grupo de Inscrições 1 está arquivado e você não pode enviar mensagens usando-o.
 
 #### Visualização dos tamanhos dos grupos de inscrições
 
@@ -130,22 +130,22 @@ Você pode ver a contagem de usuários que mudaram seu estado de inscrição (in
 
 ![A página "Desempenho da Mensagem de E-mail" exibindo a contagem agregada de mudanças de estado enviadas pelos clientes.]({% image_buster /assets/img/campaign_analytics_sub_groups.png %})
 
-### Verificando o grupo de inscrições de e-mail de um usuário
+### Verificando o grupo de inscrições por e-mail de um usuário
 
-- **Perfil do usuário:** Os perfis de usuários individuais podem ser acessados por meio do dashboard do Braze na página [Pesquisar usuários]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles). Aqui, é possível procurar perfis de usuários por endereço de e-mail, número de telefone ou ID de usuário externo. Você também pode visualizar os grupos de inscrições de e-mail de um usuário na aba **Engajamento**.
-- **API REST Braze:** Use o [endpoint Listar grupos de inscrição do usuário]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) ou [endpoint Listar status do grupo de inscrição do usuário]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) para visualizar os grupos de inscrição do perfil de usuário individual. 
+- **Perfil do usuário:** Os perfis de usuários individuais podem ser acessados por meio do dashboard do Braze na página [Pesquisar usuários]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles). Aqui, é possível procurar perfis de usuários por endereço de e-mail, número de telefone ou ID de usuário externo. Você também pode visualizar os grupos de inscrições por e-mail de um usuário na aba **Engajamento**.
+- **API REST do Braze:** Use o [endpoint Listar grupos de inscrições do usuário]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) ou [endpoint Listar status do grupo de inscrições do usuário]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) para visualizar os grupos de inscrições do perfil de um usuário individual. 
 
 ## Central de Preferências de E-mail
 
-O centro de preferências de e-mail permite que você gerencie quais usuários recebem boletins informativos dos grupos de inscrição. Encontre-o no dashboard sob **Grupos de Inscrições**. Cada grupo de inscrições que você cria é adicionado à lista da Central de Preferências. 
+O centro de preferências de e-mail permite que você gerencie quais usuários recebem newsletters dos grupos de inscrições. Encontre isso no dashboard sob **Grupos de Inscrições**. Cada grupo de inscrições que você cria é adicionado à lista da Central de Preferências. 
 
 Para saber mais sobre como adicionar ou personalizar uma Central de Preferências, consulte [Central de Preferências]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).
 
 ## Alteração de inscrições de e-mail {#changing-email-subscriptions}
 
-Na maioria dos casos, os usuários gerenciam sua inscrição por e-mail através de links incluídos nos e-mails que recebem. Insira um rodapé legalmente compatível com um link de cancelamento de inscrição na parte inferior de cada e-mail. Quando os usuários selecionam a URL de cancelamento de inscrição, o Braze os cancela e mostra uma página de destino confirmando a alteração. Inclua esta tag Liquid: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
+Na maioria dos casos, os usuários gerenciam sua inscrição por e-mail através de links incluídos nos e-mails que recebem. Insira um rodapé legalmente compatível com um link de cancelamento de inscrição na parte inferior de cada e-mail. Quando os usuários selecionam a URL de cancelamento de inscrição, o Braze os cancela e mostra uma landing page confirmando a mudança. Inclua esta tag Liquid: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
 
-Quando um usuário seleciona "Cancelar inscrição de todos os tipos de e-mails acima" no centro de preferências, o Braze define seu status global de inscrição de e-mail como `unsubscribed` e o cancela de todos os grupos.
+Quando um usuário seleciona "Cancelar inscrição de todos os tipos de e-mails acima" no centro de preferências, o Braze define seu status global de inscrição por e-mail como `unsubscribed` e o cancela de todos os grupos.
 
 ### Criação de rodapés personalizados {#custom-footer}
 
@@ -159,7 +159,7 @@ Se você antecipar endereços IP chineses, não confie apenas em um link de canc
 
 ### Criação de uma página de cancelamento de inscrição personalizada
 
-Quando os usuários selecionam uma URL de cancelamento de inscrição, o Braze mostra uma página de destino padrão confirmando a alteração.
+Quando os usuários selecionam uma URL de cancelamento de inscrição, o Braze mostra uma landing page padrão confirmando a mudança.
 
 Para criar uma landing page personalizada (em vez da padrão) exibida após a inscrição:
 
@@ -181,14 +181,14 @@ Use uma página de aceitação personalizada para permitir que os usuários reco
 Os usuários acessam esta página através da tag {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %}.
 
 {% alert tip %}
-Use um processo de dupla aceitação para melhorar o alcance. Braze envia um e-mail de confirmação adicional onde o usuário confirma as preferências de notificação através de um link. Após a confirmação, o usuário está aceito.
+Use um processo de dupla aceitação para melhorar o alcance. A Braze envia um e-mail de confirmação adicional onde o usuário confirma as preferências de notificação através de um link. Após a confirmação, o usuário está aceito.
 {% endalert %}
 
 ![E-mail de aceitação personalizado com uma mensagem "Ficamos felizes em ver que você ainda quer ouvir de nós".]({% image_buster /assets/img/custom_optin.png %})
 
 ## Inscrições e direcionamento de campanhas {#subscriptions-and-campaign-targeting}
 
-Por padrão, Braze direciona campanhas com mensagens push ou e-mail para usuários que estão inscritos ou aceitos. Altere isso em **Público Alvo** selecionando o dropdown ao lado de **Enviar para esses usuários:**.
+Por padrão, a Braze direciona campanhas com mensagens push ou e-mail para usuários que estão inscritos ou aceitos. Altere isso em **Público Alvo** selecionando o dropdown ao lado de **Enviar para esses usuários:**.
 
 A Braze oferece suporte a três estados de direcionamento:
 

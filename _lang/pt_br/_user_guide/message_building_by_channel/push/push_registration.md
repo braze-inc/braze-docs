@@ -23,7 +23,7 @@ Tenha em mente que os tokens por push não são identificadores estáticos que d
 Para detalhes específicos da plataforma, veja [Registro de token por push](#push-token-registration).
 {% endalert %}
 
-### Push em primeiro plano vs. em segundo plano {#foreground-vs-background}
+### Push em primeiro plano vs. push em segundo plano {#foreground-vs-background}
 
 Tokens por push são usados para enviar notificações por push tanto em primeiro plano quanto em segundo plano.
 
@@ -70,7 +70,7 @@ Quando seu app é instalado, um token por push é gerado automaticamente para se
 | versão       | Informações                                                                                                                                                |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Android 13**         | A permissão para push deve ser solicitada e concedida pelo usuário. Seu app pode solicitar permissão manualmente, ou os usuários serão solicitados automaticamente após um [canal de notificações](https://developer.android.com/reference/android/app/NotificationChannel) ser criado. |
-| **Android 12 e anteriores** | Todos os usuários são considerados `Subscribed` após sua primeira sessão. A Braze solicita automaticamente um token por push neste ponto, tornando o usuário habilitado para push com um token válido e um estado de inscrição padrão de `Subscribed`. |
+| **Android 12 e anteriores** | Todos os usuários são considerados `Subscribed` após sua primeira sessão. A Braze solicita automaticamente um token por push nesse ponto, tornando o usuário habilitado para push com um token válido e um estado de inscrição padrão de `Subscribed`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 
@@ -123,7 +123,7 @@ Quando um usuário abre um novo aplicativo e concede acesso push a partir de um 
 
 Se quisermos lançar uma campanha, criamos uma campanha na Braze que gera uma carga útil de push para enviar ao provedor push. A partir daí, o provedor entrega a carga útil do push para o dispositivo do usuário e o SDK passa o estado do envio de mensagens para o Braze.
 
-![Um fluxograma que mapeia o processo de push mencionado entre Braze, o cliente e o serviço de Notificações por Push da Apple ou Firebase Cloud Messaging.]({% image_buster /assets/img/push_process.png %})
+![Um fluxograma que mapeia o processo de push mencionado entre Braze, o cliente e o serviço de Notificações por Push da Apple ou o Firebase Cloud Messaging.]({% image_buster /assets/img/push_process.png %})
 
 | Etapas de registro | Etapas do envio de mensagens |
 | ------------------ | --------------- |

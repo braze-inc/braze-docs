@@ -1,5 +1,5 @@
 ---
-nav_title: フィードのカスタマイズ
+nav_title: フィードをカスタマイズする
 article_title: iOS のコンテンツカードフィードをカスタマイズする
 platform: iOS
 page_order: 2
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# コンテンツカードフィードのカスタマイズ
+# コンテンツカードのフィードをカスタマイズする
 
 `ABKContentCardsTableViewController` を拡張してすべての UI 要素とコンテンツカードの動作をカスタマイズすることで、独自のコンテンツカードインターフェイスを作成できます。コンテンツカードセルをサブクラス化してからプログラムで使用することも、新しいクラスを登録するカスタムストーリーボードを導入することによって使用することもできます。完全な例については、コンテンツカードの[サンプルアプリ](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp)をご確認ください。 
 
@@ -102,9 +102,9 @@ override func setUpUI() {
 
 カスタムインターフェイスを提供するには、必要なカードタイプごとにカスタムクラスを登録します。 
 
-![バナーコンテンツカード。バナーコンテンツカードには、バナーの右側にテキスト&quot の"画像が表示されます。読み込む ing Braze Demo!" をありがとうございます。]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
-![キャプション付き画像コンテンツカードキャプション付きコンテンツカードには、キャプションが下部&クォートにオーバーレイされたBraze "画像が表示されます。Braze Demo!"を読み込むしてくれてありがとうございます。]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
-![従来のコンテンツカード。典型的なコンテンツカードでは、カードの中央に"画像が表示されます。その下には「&quot」という単語があります。「読み込む demo"」というBrazeがあります。]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
+![バナーコンテンツカード。バナーのコンテンツカードには、バナーの右側に画像, 写真が表示され、「Brazeデモ版をダウンロードしてくれてありがとう！」というテキストが添えられている。]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
+![キャプション付き画像コンテンツカードキャプション付きのコンテンツカードには、Brazeの画像が表示され、その下部に「Brazeデモ版をダウンロードしてくれてありがとう！」というキャプションが重ねて表示されている。]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
+![従来のコンテンツカード。クラシックなコンテンツカードは、カードの中央に画像, 写真を表示し、その下に「Brazeデモ版をダウンロードしてくれてありがとう」という文字が表示される。]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
 
 Braze には、3 つのコンテンツカードテンプレート (バナー、キャプション付き画像、クラシック) が用意されています。または、独自のカスタムインターフェイスを提供する場合は、次のコードスニペットを参照してください。
 

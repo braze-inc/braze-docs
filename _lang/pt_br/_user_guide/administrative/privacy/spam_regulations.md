@@ -104,7 +104,7 @@ Certifique-se de que sua mensagem não contenha nada que possa disparar filtros 
 
 ### Envio de e-mail {#spam-email}
 
-A qualidade de sua lista de e-mails é especialmente importante.  Um punhado de e-mails ruins em sua lista pode arruinar a entrega para um milhão de bons usuários. A coleta de uma lista de e-mails ruins gera bounces, listas de bloqueio, acessos a armadilhas de spam e diminui suas taxas de resposta. O primeiro passo é o envio de e-mails sem atividade regular e a remoção de bounces óbvios. Independentemente de você implementar um opt-in (marcar a caixa), opt-out (desmarcar a caixa), confirm opt-in (um e-mail que agradece por inscrever-se e fornece um link de cancelamento de inscrição) ou double opt-in (um e-mail que exige um clique para confirmar), o importante é pensar na qualidade da lista.
+A qualidade de sua lista de e-mails é especialmente importante. Um punhado de e-mails ruins em sua lista pode arruinar a entrega para um milhão de bons usuários. A coleta de uma lista de e-mails ruins gera bounces, listas de bloqueio, acessos a armadilhas de spam e diminui suas taxas de resposta. O primeiro passo é o envio de e-mails sem atividade regular e a remoção de bounces óbvios. Se você implementar uma aceitação (marcar a caixa), uma desistência (desmarcar a caixa), uma confirmação de aceitação (um e-mail que diz obrigado por se inscrever e fornece um link de cancelamento de inscrição) ou uma dupla aceitação (um e-mail que requer um clique para confirmar), o que você deve considerar é a qualidade da lista.
 
 ### iOS {#spam-ios-windows}
 

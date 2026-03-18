@@ -1,12 +1,12 @@
 ---
-nav_title: Daten der Nachrichten protokollieren
-article_title: Protokollieren Sie Push-Benachrichtigungsdaten über das Braze SDK
+nav_title: Protokoll-Nachrichten-Daten
+article_title: Protokollieren Sie Daten der Push-Benachrichtigung über das Braze SDK.
 page_order: 7.2
 description: "Erfahren Sie, wie Sie Daten für Push-Benachrichtigungen über das Braze SDK protokollieren können."
 noindex: true
 ---
 
-# Daten der Push-Benachrichtigung protokollieren
+# Push-Benachrichtigungsdaten protokollieren
 
 > Erfahren Sie, wie Sie Daten für Push-Benachrichtigungen über das Braze SDK protokollieren können.
 

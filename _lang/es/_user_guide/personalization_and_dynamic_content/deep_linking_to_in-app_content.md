@@ -8,6 +8,10 @@ description: "Este artículo de referencia explica cómo añadir enlaces profund
 
 # Vinculación en profundidad al contenido de la aplicación
 
+{% alert tip %}
+**Para desarrolladores:** Para obtener una guía sobre cómo elegir entre esquemas personalizados, enlaces universales y otras opciones, incluyendo cuándo necesitas un archivo AASA, qué métodos de delegación de aplicaciones implementar y cómo depurar problemas, consulta [la guía de vinculación en profundidad de iOS]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide) y [la sección de solución de problemas de vinculación en profundidad]({{site.baseurl}}/developer_guide/push_notifications/deep_linking_troubleshooting).
+{% endalert %}
+
 ## ¿Qué es la vinculación en profundidad?
 
 La vinculación en profundidad es una forma de lanzar una aplicación nativa y proporcionar información adicional indicándole que realice una acción concreta o muestre un contenido específico.
@@ -23,7 +27,7 @@ Los enlaces profundos son URI personalizados que enlazan con una parte específi
 Todo lo que aparece después de los dos puntos dentro de un enlace profundo es texto libre. Depende de ti definir su estructura e interpretación; sin embargo, una convención común es modelarla según las URL de `http:`, incluyendo un `//` inicial y parámetros de consulta (por ejemplo, `?foo=1&bar=2`). En el ejemplo anterior, `twitter://user?screen_name=[id]` se utilizaría para lanzar un perfil específico en la aplicación.
 
 {% alert important %}
-Braze no admite el uso de un envoltorio como Flutter para enviar vínculos profundos. Para utilizar esta característica, debes configurar los vínculos en profundidad en la capa nativa.
+Para las aplicaciones creadas con marcos de envoltorio (por ejemplo, Flutter o Cordova), Braze no ofrece compatibilidad con vínculos profundos específicos para envoltorios. Debes configurar los vínculos profundos en las capas nativas de iOS y Android. Para Cordova, consulta [Vinculación en profundidad en notificaciones push]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=cordova).
 {% endalert %}
 
 ## Etiquetas UTM y atribución de campañas

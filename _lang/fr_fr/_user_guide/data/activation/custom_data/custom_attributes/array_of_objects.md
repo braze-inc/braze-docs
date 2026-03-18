@@ -21,6 +21,10 @@ description: "Cet article de référence couvre l'utilisation d'un tableau d'obj
 
 La mise à jour ou la suppression d'éléments d'un tableau nécessite l'identification de l'élément par sa clé et sa valeur ; pensez donc à inclure un identifiant unique pour chaque élément du tableau. Ces identifiants uniques s’appliqueront uniquement au tableau. Ils sont utiles si vous souhaitez mettre à jour ou supprimer des objets dans votre tableau. Braze n’oblige pas à utiliser de tels identifiants uniques. 
 
+{% alert important %}
+Lorsqu'un attribut personnalisé imbriqué dans votre requête contient des valeurs non valides (telles que des formats ou`null`des valeurs d'heure non valides), Braze ignore toutes les mises à jour des attributs personnalisés imbriqués dans la requête lors du traitement. Cela s'applique à toutes les structures imbriquées dans cet attribut spécifique. Veuillez vérifier que toutes les valeurs contenues dans les attributs personnalisés imbriqués sont valides avant l'envoi. Pour plus d'informations, veuillez vous référer à [la section Créer et mettre à jour des utilisateurs]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#how-does-userstrack-handle-invalid-nested-custom-attributes).
+{% endalert %}
+
 {% alert tip %}
 Pour plus d'informations sur l'utilisation de tableaux d'objets pour les objets d'attributs utilisateur, reportez-vous à [Objet d'attributs utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 {% endalert %}
@@ -170,9 +174,19 @@ L’exemple suivant montre la suppression d’un objet dans un `pets`tableau qui
 {% endtab %}
 {% endtabs %}
 
+### Ordre de traitement
+
+Lorsqu'une seule`/users/track`requête inclut `$add`des opérations`$update`,`$remove` et pour le même attribut de tableau, Braze les traite dans cet ordre :
+
+1. `$add`
+2. `$remove`
+3. `$update`
+
+Étant donné que`$add`  s'exécute avant `$remove`, il n'est pas possible d'utiliser un`$remove`  suivi d'un`$add`  comme mécanisme d'upsert dans une seule requête. Le`$add`  est traité en premier, puis le`$remove`  supprime l'élément. Pour effectuer une mise à jour, veuillez envoyer la requête`$remove`dans une requête distincte avant la requête`$add`.
+
 ### Horodatages
 
-Lorsque vous incluez des champs tels que des horodatages dans un tableau d'objets, utilisez le format `$time` au lieu de chaînes de caractères simples ou d'entiers d'époque Unix.
+Lorsque vous incluez des champs tels que des horodatages dans un tableau d'objets, veuillez utiliser le`$time`format au lieu de chaînes de caractères simples ou d'entiers unix epoch.
 
 ```json
 {
@@ -194,7 +208,7 @@ Lorsque vous incluez des champs tels que des horodatages dans un tableau d'objet
 ```
 
 {% alert tip %}
-Pour plus d'informations, voir [Attributs personnalisés imbriqués]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
+Pour plus d'informations, veuillez consulter [la section Attributs personnalisés imbriqués]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
 {% endalert %}
 
 ## Exemple de SDK
@@ -584,7 +598,7 @@ Les points de données sont enregistrés différemment selon que vous créez, me
 {% tabs local %}
 {% tab Create %}
 
-La création d'un nouveau tableau d'objets enregistre un point de données pour chaque attribut d'un objet. Cet exemple coûte huit points de données : chaque objet animal de compagnie possède quatre attributs et il y a deux objets.
+La création d'un nouveau tableau enregistre un point de donnée pour chaque attribut d'un objet. Cet exemple coûte huit points de données : chaque objet animal de compagnie possède quatre attributs et il y a deux objets.
 
 ```json
 {

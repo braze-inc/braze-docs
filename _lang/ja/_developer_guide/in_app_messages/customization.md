@@ -1,6 +1,6 @@
 ---
-nav_title: メッセージをカスタマイズする
-article_title: Braze SDKのアプリ内メッセージをカスタマイズする。
+nav_title: メッセージングをカスタマイズする
+article_title: Braze SDKのアプリ内メッセージをカスタマイズする
 page_order: 0.1
 description: "Braze SDKのアプリ内メッセージの設定方法を学習する。"
 platform: 
@@ -12,7 +12,7 @@ platform:
 
 # アプリ内メッセージをカスタマイズする
 
-> Braze SDKのアプリ内メッセージをカスタマイズする方法を学習。高度なスタイリング・テクニックについては、[キーと値のペアを使ってメッセージ・スタイリングをカスタマイズ]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling)するチュートリアルを参照されたい。
+> Braze SDKのアプリ内メッセージをカスタマイズする方法を学習。高度なスタイル設定については、[キーと値のペアを使ってメッセージのスタイルをカスタマイズする]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling)チュートリアルを参照せよ。
 
 {% sdktabs %}
 {% sdktab web %}

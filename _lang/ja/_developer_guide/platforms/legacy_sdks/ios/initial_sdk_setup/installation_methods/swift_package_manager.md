@@ -1,5 +1,5 @@
 ---
-nav_title: Swiftパッケージマネージャー
+nav_title: SWIFTパッケージマネージャー
 article_title: iOS 向け Swift Package Manager の統合
 platform: iOS
 page_order: 3

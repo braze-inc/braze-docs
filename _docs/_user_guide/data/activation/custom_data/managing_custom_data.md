@@ -79,8 +79,8 @@ To blocklist custom data, you need the [user permissions]({{site.baseurl}}/user_
 - View Webhook Templates
 - Edit Webhook Templates
 - Archive Webhook Templates
-- View Link Templates
-- Edit Link Templates
+- View Email Link Templates
+- Edit Email Link Templates
 - View Media Library Assets
 - Edit Media Library Assets
 - Delete Media Library Assets

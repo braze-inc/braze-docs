@@ -123,7 +123,7 @@ Cuando rellenes tu cuestionario, consulta a tu equipo jurídico y considera cóm
 #### Recopilación de datos predeterminada de Braze
 **Identificadores** \- El SDK de Braze siempre recoge un identificador anónimo del dispositivo. Actualmente está configurado para el dispositivo IDFV (identificador del vendedor).
 
-**Datos de uso**: pueden incluir datos de sesión de Braze, así como cualquier evento o recopilación de atributos que utilices para medir la interacción con el producto.
+**Datos de uso**: pueden incluir datos de sesión de Braze, así como cualquier recopilación de eventos o atributos que utilices para medir la interacción con el producto.
 
 #### Recopilación de datos opcional
 Datos que puedes estar recopilando opcionalmente a través de tu uso de Braze:

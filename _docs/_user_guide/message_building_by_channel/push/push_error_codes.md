@@ -75,6 +75,15 @@ The `TopicDisallowed` error means APNs rejected the push because the topic (bund
 2. **Check your APNs key or certificate scope.** If you're using a `.p8` key, it's universal and supports all apps under your Apple Developer Team. If you're using a `.p12` certificate, it's scoped to a single bundle ID — make sure it matches the app you're sending to.
 3. **Confirm the app environment.** If you have separate App IDs in Braze for development and production builds, verify that each is configured with the correct push credentials and environment.
 
+### InvalidProviderToken
+
+The `InvalidProviderToken` error means APNs rejected the request because the authentication token (from a `.p8` key) or the push certificate (`.p12`) doesn't match the app's bundle ID or Team ID. To resolve this:
+
+1. **Verify your Team ID and Key ID:** If you're using a `.p8` authentication key, confirm that the **Team ID** and **Key ID** configured in the Braze dashboard (**Settings** > **App Settings** > select your iOS app) match the values in your Apple Developer account.
+2. **Check the bundle ID:** Make sure the bundle ID registered in Braze matches the bundle ID of your app. A mismatch, such as a different capitalization or a `.debug` suffix, causes this error.
+3. **Re-upload the key or certificate:** If the `.p8` key or `.p12` certificate was recently regenerated or revoked, upload the new key to Braze and remove the old one.
+4. **Confirm the APNs environment:** If you're using a `.p12` certificate, verify you selected the correct environment (development versus production) when uploading it. For `.p8` keys, this is handled automatically.
+
 ### Push bounced: APNS feedback service removed
 
 This generally happens when someone uninstalls. Braze queries the APNS Feedback Service each night to get a list of invalid tokens. For more information, refer to Apple's [Communicating with APNs](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html).

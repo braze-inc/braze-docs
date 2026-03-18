@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} Sie müssen auch [In-App-Nachrichten einrichten]({{site.baseurl}}/developer_guide/in_app_messages).
+{% multi_lang_include developer_guide/prerequisites/android.md %} Bitte beachten Sie, dass Sie auch [In-App-Nachrichten einrichten]({{site.baseurl}}/developer_guide/in_app_messages) müssen.
 
 ## Angepasste Manager:in Hörer einstellen
 
@@ -20,7 +20,7 @@ Das Braze SDK verfügt über die Standardklasse `DefaultHtmlInAppMessageActionLi
 
 Erstellen Sie eine Klasse, die [`IInAppMessageManagerListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html) implementiert.
 
-Die Callbacks in Ihrer `IInAppMessageManagerListener` werden ebenfalls an verschiedenen Punkten im Lebenszyklus der In-App-Nachricht aufgerufen. Wenn Sie zum Beispiel einen angepassten Manager:in-Listener einstellen, wenn eine In-App-Nachricht von Braze eingeht, wird die [`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html) Methode aufgerufen werden. Wenn Ihre Implementierung dieser Methode [`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html) zurückgibt, weiß Braze, dass die In-App-Nachricht von der Host-App verarbeitet wird und nicht von Braze angezeigt werden sollte. Wenn [`InAppMessageOperation.DISPLAY_NOW`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-p-l-a-y_-n-o-w/index.html) zurückgegeben wird, wird Braze versuchen, die In-App-Nachricht anzuzeigen. Diese Methode sollte verwendet werden, wenn die In-App-Nachricht auf angepasste Art und Weise angezeigt werden soll.
+Die Callbacks in Ihrer `IInAppMessageManagerListener` werden ebenfalls an verschiedenen Punkten im Lebenszyklus der In-App-Nachricht aufgerufen. Wenn Sie beispielsweise einen angepassten Manager-Listener festlegen, wenn eine In-App-Nachricht von Braze empfangen wird, wird die[`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html)Methode aufgerufen. Wenn Ihre Implementierung dieser Methode [`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html) zurückgibt, weiß Braze, dass die In-App-Nachricht von der Host-App verarbeitet wird und nicht von Braze angezeigt werden sollte. Wenn  zurückgegeben[`InAppMessageOperation.DISPLAY_NOW`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-p-l-a-y_-n-o-w/index.html) wird, versucht Braze, die In-App-Nachricht anzuzeigen. Diese Methode sollte verwendet werden, wenn die In-App-Nachricht auf angepasste Art und Weise angezeigt werden soll.
 
 `IInAppMessageManagerListener` enthält auch Delegate-Methoden für Klicks auf Nachrichten und Buttons, die z.B. dazu verwendet werden können, eine Nachricht abzufangen, wenn ein Button oder eine Nachricht angeklickt wird, um sie weiter zu verarbeiten.
 
@@ -479,7 +479,7 @@ Sie können einige Farben direkt in Ihrer Braze Kampagne anpassen, ohne die XML-
 
 ### Anpassen der Schriftart
 
-Sie können eine angepasste Schriftart festlegen, indem Sie die Schriftart im Verzeichnis `res/font` suchen. Um sie zu verwenden, überschreiben Sie den Stil für Nachrichtentext, Überschriften und Button-Text und verwenden das Attribut `fontFamily`, um Braze anzuweisen, Ihre angepasste Schriftfamilie zu verwenden.
+Sie können eine angepasste Schriftart festlegen, indem Sie den Standort der Schriftart im`res/font`Verzeichnis suchen. Um sie zu verwenden, überschreiben Sie den Stil für Nachrichtentext, Überschriften und Button-Text und verwenden das Attribut `fontFamily`, um Braze anzuweisen, Ihre angepasste Schriftfamilie zu verwenden.
 
 Wenn Sie beispielsweise die Schriftart für den Text Ihres In-App-Nachricht-Buttons aktualisieren möchten, überschreiben Sie den Stil `Braze.InAppMessage.Button` und referenzieren Ihre angepasste Schriftfamilie. Der Wert des Attributs sollte auf eine Schriftfamilie in Ihrem Verzeichnis `res/font` verweisen.
 
@@ -502,6 +502,20 @@ Wie bei anderen angepassten Stilen muss der gesamte Stil in Ihre lokale `styles.
 {% endalert %}
 
 ## Entlassungen von Nachrichten
+
+### Durch Wischen werden Slideup-Nachrichten geschlossen.
+
+Standardmäßig können Slideup-In-App-Nachrichten durch eine Wischgeste geschlossen werden. Die Richtung des Wischens hängt von der Position des Slideup ab:
+
+- **Nach links oder rechts wischen:** Schließt das Slideup unabhängig von seiner Position.
+- **Von unten nach oben Slideup:** Durch Wischen von oben nach unten wird die Nachricht geschlossen. Durch Wischen von unten nach oben wird es nicht geschlossen.
+- **Von oben nach unten Slideup:** Durch Wischen von unten nach oben wird die Nachricht geschlossen. Durch Wischen von oben nach unten wird es nicht geschlossen.
+
+Dieses Wischverhalten ist standardmäßig integriert[`DefaultInAppMessageViewWrapper`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-default-in-app-message-view-wrapper/index.html) und gilt ausschließlich für Slideup-In-App-Nachrichten. Modale und vollständige In-App-Nachrichten unterstützen das Wegwischen nicht. Um dieses Verhalten anzupassen, können Sie eine [benutzerdefinierte View-Wrapper-Factory](#android_setting-custom-factories) implementieren.
+
+{% alert note %}
+Durch Antippen außerhalb einer Slideup-Nachricht wird diese standardmäßig nicht geschlossen. Dieses Verhalten unterscheidet sich von Modal-Nachrichten, die für das Schließen durch Tippen außerhalb konfiguriert werden können. Bei Slideups können Sie die Nachricht durch Wischen oder über den Button „Schließen“ ausblenden.
+{% endalert %}
 
 ### Deaktivieren des Zurück-Buttons
 
@@ -564,7 +578,7 @@ BrazeInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessa
 
 ## Anpassen der Ausrichtung
 
-Um eine feste Ausrichtung für eine In-App-Nachricht festzulegen, [legen Sie zunächst einen angepassten In-App-Nachrichten-Manager-Listener fest]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners). Aktualisieren Sie dann die Ausrichtung des `IInAppMessage` Objekts in der Delegatenmethode `beforeInAppMessageDisplayed()`:
+Um eine feste Ausrichtung für eine In-App-Nachricht festzulegen, [legen Sie zunächst einen angepassten In-App-Nachrichten-Manager-Listener fest]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners). Anschließend führen Sie ein Update der Ausrichtung des`IInAppMessage`Objekts in der`beforeInAppMessageDisplayed()`Delegate-Methode durch:
 
 {% tabs %}
 {% tab JAVA %}

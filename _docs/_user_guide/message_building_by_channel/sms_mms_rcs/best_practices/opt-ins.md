@@ -41,7 +41,8 @@ POST 'https://rest.iad-03.braze.com/subscription/status/set' \
   "subscription_group_id": "xyz-abcd-1234567",
   "subscription_state": "subscribed",
   "external_id": "external_identifier",
-  "phone": "+12223334444"
+  "phone": "+12223334444",
+  "use_double_opt_in_logic": true
 }
 '
 ```
@@ -49,14 +50,32 @@ POST 'https://rest.iad-03.braze.com/subscription/status/set' \
 {: start="2"}
 2. Use the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to subscribe the user to SMS.
 
-```http
-POST `https://rest.aid-03.braze.com/users/track` \
---header `Content-Type: application/json` \
---header `Authorization: Bearer YOUR-REST-API-KEY` \
---data-raw `{
-"attributes" : [
-Unknown macro: { "external_id" }
-]
-}
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--data-raw '{
+  "attributes": [
+    {
+      "external_id": "external_identifier",
+      "phone": "+12223334444",
+      "subscription_groups": [
+        {
+          "subscription_group_id": "xyz-abcd-1234567",
+          "subscription_state": "subscribed",
+          "use_double_opt_in_logic": true
+        }
+      ]
+    }
+  ]
+}'
 ```
 
+{% alert tip %}
+To enter users into the [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) workflow when subscribing them through the REST API, set the `use_double_opt_in_logic` parameter to `true` in your request. If you omit this parameter, users are subscribed without receiving a double opt-in confirmation.
+
+This parameter is supported by the following endpoints:<br><br>
+- [`/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)
+- [`/v2/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/)
+- [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
+{% endalert %}

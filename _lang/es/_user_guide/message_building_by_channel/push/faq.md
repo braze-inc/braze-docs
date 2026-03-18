@@ -10,33 +10,33 @@ channel:
 
 # Preguntas más frecuentes
 
-> Este artículo responde a algunas preguntas frecuentes sobre el canal push.
+> Este artículo ofrece respuestas a algunas preguntas frecuentes sobre el canal push.
 
-### ¿Qué ocurre cuando varios usuarios inician sesión en un mismo dispositivo?
+### ¿Qué sucede cuando varios usuarios inician sesión en un solo dispositivo?
 
-Cuando un usuario se desconecta de un dispositivo o sitio web, permanecerá accesible mediante push hasta que otro usuario se conecte. En ese momento, el token de notificaciones push se reasigna al nuevo usuario. Esto se debe a que cada dispositivo sólo puede tener una suscripción push activa por aplicación o sitio web.
+Cuando un usuario cierra sesión en un dispositivo o sitio web, seguirá estando disponible mediante notificaciones push hasta que otro usuario inicie sesión. En ese momento, el token de notificaciones push se reasigna al nuevo usuario. Esto se debe a que cada dispositivo solo puede tener una suscripción push activa por aplicación o sitio web.
 
-Cuando se reasigna un token de notificaciones push, el cambio se refleja en el registro de cambios push del perfil de usuario. Puedes encontrarlo yendo a la pestaña **"Interacción"** del perfil de usuario.
+Cuando se reasigna un token de notificaciones push, el cambio se refleja en el **registro de cambios de notificaciones** del perfil de usuario. Puedes encontrarlo en la pestaña **«Interacción»** del perfil de usuario.
 
-![El "Registro de cambios push" en la sección "Configuración de contactos".]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
+![El «Registro de cambios» en la sección «Configuración de contacto».]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
-### ¿Qué significa "Error al enviar push porque la carga útil no era válida"?
+### ¿Qué significa «Error al enviar la notificación push porque la carga útil no era válida»?
 
-Este mensaje indica que los APN rechazaron la solicitud push debido a una carga útil no válida (por ejemplo, una carga útil vacía o demasiado grande).
+Este mensaje indica que APN rechazó la solicitud push debido a una carga útil no válida (por ejemplo, una carga útil vacía o una carga útil demasiado grande).
 
-Para más detalles y pasos a seguir, consulta [Mensajes de error push comunes]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/).
+Para obtener más información y conocer los pasos siguientes, consulta [Mensajes de error comunes de push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/).
 
-### ¿Por qué un usuario con adhesión voluntaria no tiene un token de notificaciones push?
+### ¿Por qué un usuario que ha realizado la adhesión voluntaria no tiene un token de notificaciones push?
 
-Esto puede ocurrir si el token de notificaciones push del usuario fue reasignado a otra persona que utilizó el mismo dispositivo.
+Esto puede suceder si el token de notificaciones push del usuario se reasignó a otra persona que utilizó el mismo dispositivo.
 
-1. Ve **al registro de cambios push** en la pestaña de **interacción** del perfil del usuario afectado.
-2. Busca un mensaje que diga que el token de notificaciones push se ha movido a otro usuario.
+1. Ve al registro **de cambios** en la pestaña **«Interacción»** del perfil de usuario afectado.
+2. Busca un mensaje que indique que el token de notificaciones push se ha trasladado a otro usuario.
 3. Copia el token de notificaciones push y pégalo en la barra de búsqueda de usuarios. 
-4. Si el token de notificaciones push sigue existiendo, se te dirigirá al usuario que haya iniciado sesión más recientemente en el dispositivo.
+4. Si el token de notificaciones push aún existe, se te redirigirá al usuario que haya iniciado sesión más recientemente en el dispositivo.
 
-Si quieres que el token de notificaciones push se reasigne al usuario original:
+Si deseas que el token de notificaciones push se reasigne al usuario original:
 
-1. Haz que el usuario original inicie sesión en el perfil con el token de notificaciones push que falta.
-2. Desencadena un nuevo envío push. Esto devolverá el token a la cuenta si todavía tiene habilitada la función push en el dispositivo.
+1. Pide al usuario original que inicie sesión en el perfil con el token de notificaciones push que falta.
+2. Desencadena un nuevo envío push. Esto devolverá el token a la cuenta si todavía tienes habilitada la función push en el dispositivo.
 
