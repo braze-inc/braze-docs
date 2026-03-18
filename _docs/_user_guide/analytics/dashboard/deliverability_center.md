@@ -71,13 +71,13 @@ Before connecting to the Deliverability Center, you'll need to set up a Google P
 
 1. Go to the [Google Postmaster Tools dashboard](https://postmaster.google.com/managedomains?pli=1).
 2. In the bottom right, select the <i class="fas fa-plus-circle"></i> plus icon.
-3. Enter your root domain to authenticate your email. Be sure the TXT record is tied to the parent domain, **not** the subdomain you're using through Braze. By adding and verifying the root domain, the verification can be applied to subdomains. For example, by verifying `braze.com`, you can later add `demo.braze.com`.
+3. Enter your root (parent) domain to authenticate your email. Be sure the TXT record is tied to this root (parent) domain, **not** the subdomain you're using through Braze. Verifying the root (parent) domain lets you later add subdomains in Postmaster Tools without creating additional TXT records. For example, by verifying `braze.com`, you can later add `demo.braze.com` as a separate subdomain in Postmaster Tools to see subdomain-level metrics.
 4. Google generates a TXT record that can be added directly to your domain's DNS. This is generally owned by whoever manages your DNS. For information and guidance on how to update your specific DNS, check out [Verify your domain (host-specific steps)](https://support.google.com/a/topic/1409901).
 5. Select **Next**. <br>![An example domain "demo.braze.com" to authenticate an email.]({% image_buster /assets/img_archive/domain_authentication.png %})
 6. After the TXT record is added to the DNS, return to the Google Postmaster Tools dashboard and select **Verify**. This step confirms you own the domain, so you can access Gmail deliverability metrics in your Postmaster account. <br> ![A prompt to verify ownership of the domain "demo.braze.com".]({% image_buster /assets/img_archive/domain_verification.png %})
 
 {% alert note %}
-If your subdomains aren't included in the Deliverability Center for Google Postmaster, this can be a result of only adding the parent domain to Google Postmaster. After the parent domains are verified in Google Postmaster, you can add your subdomains, which are verified automatically. This process allows Google to report back on metrics on the subdomain-level, which can then be pulled into the Braze Deliverability Center.
+If your subdomains aren't included in the Deliverability Center for Google Postmaster, this can be a result of only adding the root (parent) domain to Google Postmaster. After the root (parent) domain is verified in Google Postmaster, you must add each subdomain you want to track. These subdomains are verified automatically (no additional TXT records are needed), which allows Google to report back on metrics at the subdomain level and for those metrics to be pulled into the Braze Deliverability Center.
 {% endalert %}
 
 ## Integrating Google Postmaster
