@@ -28,8 +28,24 @@ Common failures may include:
 - People are passing Braze registration tokens manually but don't call `getToken()`. For example, they may pass the entire instance ID. The token in the error message looks like `&#124;ID&#124;1&#124;:[regular token]`.  
 - People are registering with multiple services. We currently expect push registration intents to arrive old-style, so if folks are registering in multiple places and we catch intents from other services we can get malformed push tokens.
 
-### Push bounced: NotRegistered
+### Push bounced: NotRegistered {#notregistered}
 `NotRegistered` usually means that the app has been deleted from the device (such as our signal for Uninstall). This can also occur if multiple registration is happening and a second registration is invalidating the push token that Braze receives.
+
+### DEVICE_UNREGISTERED {#device-unregistered}
+
+This error appears in the Message Activity Log as:
+
+`Received 'Error: DEVICE_UNREGISTERED, ' sending to '[Token String]'`
+
+This typically occurs for one of the following reasons:
+
+- The user uninstalled the app. This is the most common cause. When the app is removed from a device, the push token becomes invalid.
+- Push credentials were updated in the app. If your team changed the FCM credentials or certificates bundled with the app, users who registered with the previous credentials have invalid tokens until the app re-registers them.
+- Custom logic is unregistering users from push. This is rare, but it's technically possible to programmatically unregister a device from push using the Firebase/Android SDK.
+
+{% alert note %}
+This error does not mean the user is push disabled—only that a specific token was removed from their profile. This is common for users who are testing functionality and frequently installing and uninstalling the app. To check if the user still has valid tokens, go to **User Search** and review the **Contact Settings** section on the **Engagement** tab.
+{% endalert %}
 
 {% endtab %}
 {% tab iOS %}
@@ -56,8 +72,8 @@ Next steps:
 ### Push bounced: BadToken
 
 The `BadToken` error may occur for several reasons:
-- The push token isn't being sent to us correctly in `[[Appboy sharedInstance] registerPushToken:]`
-	- Check the token in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). It should generally look like a long string of letters and numbers (such as `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). If it doesn't, check the code involved in sending Braze push token errors.<br><br>
+- The push token isn't being sent to Braze correctly (for example, in `registerDeviceToken:` or your platform's equivalent).
+	- Check the token in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). It should generally look like a long string of letters and numbers (such as `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). If it doesn't, check the code involved in sending Braze the push token.<br><br>
 - Mismatched provisioning environment:
 	- If you register with a development certificate and try to send with a production one, you can see this error.  
 	- Braze only supports universal certificates for production environments. Testing push on development environments with a universal certificate will not work. 
@@ -74,6 +90,22 @@ The `TopicDisallowed` error means APNs rejected the push because the topic (bund
 1. **Verify the bundle ID.** Confirm the bundle ID configured in your Braze app settings matches the bundle ID of your app exactly. This includes any suffix variations (for example, `.debug`, `.staging`).
 2. **Check your APNs authentication setup.** Confirm your app is configured with the correct APNs `.p8` key and that the key is associated with the same Apple Developer Team as the app you're sending to.
 3. **Confirm the app environment.** If you have separate App IDs in Braze for development and production builds, verify that each is configured with the correct push credentials and environment.
+
+### Unregistered {#ios-unregistered}
+
+This error appears in the Message Activity Log as:
+
+`Received 'Unregistered' sending to '[Token String]'`
+
+This is the iOS equivalent of the Android [DEVICE_UNREGISTERED](#device-unregistered) error. It typically occurs for one of the following reasons:
+
+- The user uninstalled the app. This is the most common cause.
+- Push certificates were updated. If your team changed or renewed the APNs certificates, users who registered with the previous certificates may have invalid tokens until the app re-registers them.
+- Custom logic is unregistering users from push. This is rare, but it's technically possible to programmatically unregister from remote notifications using the iOS SDK.
+
+{% alert note %}
+This error does not mean the user is push disabled—only that a specific token was removed from their profile. To check if the user still has valid tokens, go to **User Search** and review the **Contact Settings** section on the **Engagement** tab.
+{% endalert %}
 
 ### InvalidProviderToken
 

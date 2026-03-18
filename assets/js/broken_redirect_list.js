@@ -2364,7 +2364,8 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment'] = '/docs/partners/data_and_analytics/customer_data_platform/segment/segment';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_engage'] = '/docs/partners/data_and_analytics/customer_data_platform/segment/segment_engage';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents'] = '/docs/partners/data_and_analytics/customer_data_platform/segment/segment_for_currents';
-validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/simondata'] = '/docs/partners/data_and_analytics/customer_data_platform/simondata';
+validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/simondata'] = '/docs/partners/data_and_analytics/customer_data_platform/simonai';
+validurls['/docs/partners/data_and_analytics/customer_data_platform/simondata'] = '/docs/partners/data_and_analytics/customer_data_platform/simonai';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/snowplow'] = '/docs/partners/data_and_analytics/customer_data_platform/snowplow';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium'] = '/docs/partners/data_and_analytics/customer_data_platform/tealium';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium'] = '/docs/partners/data_and_analytics/customer_data_platform/tealium/tealium';
