@@ -29,9 +29,7 @@ If you don't see **Braze Auto** as an option in the **Model** dropdown when crea
 
 With this option, you can connect your Braze account with providers like OpenAI, Anthropic, or Google Gemini. If you bring your own API key from an LLM provider, token costs are billed directly through your provider, not through Braze.
 
-{% alert important %}
 We recommend routinely testing the most recent models, as legacy models may be discontinued or deprecated after a few months.
-{% endalert %}
 
 To set this up:
 
@@ -40,6 +38,23 @@ To set this up:
 3. Select **Save**.
 
 Then, you can return to your agent and select your model.
+
+When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.
+
+#### Thinking levels
+
+Some LLM providers may allow you to adjust a selected model's thinking level. Thinking levels define the range of thought the model uses before answering—from quick, direct responses to longer chains of reasoning. This affects response quality, latency, and token usage.
+
+| Level | When to use |
+|-------|-------------|
+| **Minimal** | Simple, well-defined tasks (such as catalog lookup, straightforward classification). Fastest responses and lowest cost. |
+| **Low** | Tasks that benefit from a bit more reasoning but don't need deep analysis. |
+| **Medium** | Multi-step or nuanced tasks (such as analyzing several inputs to recommend an action). |
+| **High** | Complex reasoning, edge cases, or when you need the model to work through steps before answering. |
+
+We recommend starting with **Minimal** and testing your agent’s responses. Then, you can adjust the thinking level to **Low** or **Medium** if you find the agent is struggling to provide accurate answers. In rare cases, a **High** thinking level may be needed, although using this level can result in high token costs and longer response times or higher risk of timeout errors. If your agent is struggling to balance multi-step reasoning with reasonable response times, consider breaking your use case apart into more than one agent that can work together in a Canvas or catalog.
+
+Braze uses the same IP ranges for outbound LLM calls as for Connected Content. The ranges are listed in the [Connected Content IP allowlist]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/#connected-content-ip-allowlisting). If your provider supports IP allowlisting, you can restrict the key to those ranges so only Braze can use it.
 
 {% alert important %}
 When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.  
@@ -76,12 +91,13 @@ In the **Logs** section of the **Agent Console**, you can review the details for
 
 ![The details for an agent that has Liquid in its instructions.]({% image_buster /assets/img/ai_agent/using_liquid_example.png %}){: style="max-width:50%;"}
 
-### Examples
+### Canvas agent examples
 
-Let's say you're part of a travel brand, UponVoyage, and your goals are to analyze customer feedback, write personalized messages, and determine the conversion rate for your free subscribers. Here are examples of different instructions based on defined goals:
+Let's say you're part of a travel brand, UponVoyage, and your goals are to analyze customer feedback, write personalized messages, and determine the conversion rate for your free subscribers. Here are examples of different instructions based on defined goals.
 
 {% tabs %}
-{% tab Personalized message copywriter agent %}
+{% tab Message copywriter %}
+
 {% raw %}
 ```
 Role: 
@@ -129,8 +145,10 @@ The user IS in the segment: “Logged multiple searches in the past 30D”.
 </output_example>
 ```
 {% endraw %}
+
 {% endtab %}
-{% tab Customer feedback analysis agent %}
+{% tab Feedback analysis %}
+
 {% raw %}
 ```
 Role:
@@ -171,7 +189,8 @@ Input & Output Example:
 ```
 {% endraw %}
 {% endtab %}
-{% tab Trial conversion and strategy agent %}
+{% tab Trial conversion %}
+
 {% raw %}
 ```
 Role:
@@ -224,6 +243,104 @@ The user IS in the segment: "Has Valid Payment Method on File".
 (Rationale: The user is very active [15 searches], so they like the app. But they haven't touched a single Premium feature [0 uses], meaning they don't yet understand why they should pay for the subscription. They are "Medium" risk and need education, not just a generic nudge.)
 ```
 {% endraw %}
+
+{% endtab %}
+{% endtabs %}
+
+### Catalog agent examples
+
+Let's say you're part of an on-demand ridesharing brand, StyleRyde, and your goals are to write marketable summaries of travel methods and to provide translations of the mobile app based on the language being used in the region. Here are examples of different instructions based on the defined goals.
+
+{% tabs %}
+{% tab Destination description %}
+
+{% raw %}
+```
+Role:
+You are an expert Travel Copywriter for StyleRyde. Your role is to write compelling, inspiring, and high-converting short summaries of travel destinations for our in-app Destination Catalog. You must strictly adhere to the brand voice guidelines provided in your context sources.
+
+Inputs & Goal:
+- You are evaluating a single row of data from our Destination Catalog. Your goal is to generate a "Short Description" that will be saved to a new column in this catalog.
+- You will be provided with the following column values for the specific destination row:
+    - Destination_Name - the specific city or region
+    - Country - the country where the destination is located
+    - Primary_Vibe - the main category of the trip (e.g., Beach, Historic, Adventure, Nightlife) 
+    - Price_Tier - represented as $, $$, $$$, or $$$$
+
+Rules:
+- Write exactly one or two short sentences.
+- Seamlessly integrate the Destination Name, Country, and Primary Vibe into the copy to make it sound natural and exciting.
+- Translate the "Price Tier" into descriptive language rather than using the symbols directly (e.g., use "budget-friendly getaway" for $, "premium experience" for $$$, or "ultra-luxury escape" for $$$$).
+- Keep the description skimmable and inspiring.
+- Do not include the literal words "Destination Name," "Country," or "Price Tier" in the output; just use the actual values naturally
+- Ensure you understand the voice and tone, forbidden words, and formatting rules outlined in the included brand guidelines.
+- Avoid spammy phrasing (ALL CAPS, excessive punctuation) and emojis.
+- Do not hallucinate specific hotels or flights, as this is a general destination description.
+- If any input fields are missing, write the best description possible with the available data
+
+Final Output Specification:
+You must return ONLY the plain text string of the description. Do not wrap the output in quotes, do not use markdown formatting, and do not return a JSON object. The text you output will be injected directly into a cell in the catalog spreadsheet. Maximum length is 150 characters.
+Input & Output Example:
+<input_example>
+Destination Name: Kyoto
+Country: Japan
+Primary Vibe: Historic & Serene
+Price Tier: $$$
+</input_example>
+<output_example>Discover the historic and serene beauty of Kyoto, Japan. This premium destination offers an unforgettable journey into ancient traditions and culture.</output_example>
+```
+{% endraw %}
+
+{% endtab %}
+{% tab Localization %}
+
+{% raw %}
+```
+Role:
+You are an expert AI Localization Specialist for StyleRyde. Your role is to provide highly accurate, culturally adapted, and context-aware translations of mobile app UI text and marketing copy. You ensure our app feels native and natural to users around the world.
+
+Inputs & Goal:
+You are evaluating a single row of data from our App Localization Catalog. Your goal is to translate the English source text into the requested target language, which will be saved to a specific localized column in this catalog.
+
+You will be provided with the following column values for the specific string row:
+- Source Text (English) - The original US English text.
+- Target Language Code - The locale code to translate into (e.g., es-MX, fr-FR, ja-JP, pt-BR).
+- UI Category - Where this text lives in the app (e.g., Tab_Bar, CTA_Button, Screen_Title, Push_Notification).
+- Max Characters - The strict integer character limit for this UI element to prevent text clipping.
+
+Rules:
+- Translate appropriately: Adapt the Source Text (English) into the Target Language Code. Use local spelling norms (e.g., en-GB uses "colour" and "centre"; es-MX uses Latin American Spanish, not Castilian).
+- Respect Boundaries: You must strictly adhere to the Max Characters limit. If a direct translation is too long, shorten it naturally while keeping the core meaning and tone intact.
+
+Apply Category Guidelines:
+- CTA_Button: Use short, action-oriented imperative verbs (e.g., "Book", "Search"). Capitalize words if natural for the locale.
+- Tab_Bar: Maximum 1-2 words. Extremely concise.
+- Screen_Title: Emphasize the core feature.
+- Error_Message: Be polite, clear, and reassuring.
+- Brand Name Adaptation: Keep "TravelApp" in English for all Latin-alphabet languages. Adapt it for the following scripts:
+    - Japanese → トラベルアプリ
+    - Korean → 트래블앱
+    - Arabic → ترافل آب
+    - Chinese (Simplified) → 旅游应用
+
+Fallback Logic: If the source text is empty, if you do not understand the translation, or if it is impossible to translate within the character limit, output exactly: ERROR_MANUAL_REVIEW_NEEDED. Do not attempt a broken translation.
+
+Final Output Specification:
+You must return ONLY the plain text string of the localized translation. Do not wrap the output in quotes, do not include pronunciation guides, do not add notes. The text you output will be injected directly into a cell in the catalog spreadsheet.
+
+Input & Output Example:
+<input_example>
+Source Text (English): Search Flights
+Target Language Code: es-MX
+UI Category: CTA_Button
+Max Characters: 20
+</input_example>
+<output_example>
+Buscar Vuelos
+</output_example>
+```
+{% endraw %}
+
 {% endtab %}
 {% endtabs %}
 

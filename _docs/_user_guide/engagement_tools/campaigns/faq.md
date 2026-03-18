@@ -204,3 +204,13 @@ If you encounter a "Request Timed Out" error while creating or editing a campaig
 - **Steps to reproduce:** A clear description of the actions that trigger the error, including any specific campaign or Canvas settings involved.
 - **Network logs (optional):** Open your browser developer tools (**Network** tab), reproduce the error, and export the network log as a HAR (HTTP Archive) log. This helps the support team identify which API call is timing out.
 
+### Why don't my send analytics match the maximum recipient limit I set?
+
+If you add or change a maximum recipient limit on an active campaign, the limit may not be reflected in your send analytics for the following reasons:
+
+- **Limit added post-launch:** If the maximum recipient limit is not set when the campaign launches, messages that are already enqueued before you apply the limit are still sent. The limit only takes effect for sends that you queue after you save the change.
+- **Rate limiting interaction:** If a campaign is also rate-limited, messages may be distributed over a longer time window. The maximum recipient limit is evaluated when messages are enqueued, not when they are delivered. If the limit is changed while messages are already in the queue, the original limit applies to those messages.
+- **Recurring campaigns:** For recurring campaigns, each scheduled send evaluates the maximum recipient limit independently. Changing the limit between sends does not retroactively adjust previous send counts.
+
+To avoid misalignment, set the maximum recipient limit before launching the campaign and avoid modifying it while sends are in progress.
+

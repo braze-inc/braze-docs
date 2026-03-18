@@ -1,5 +1,5 @@
 ---
-nav_title: Emplacements/localisations et géorepérages
+nav_title: Emplacements et géorepérage
 article_title: Localisations et géorepérages pour iOS
 platform: iOS
 page_order: 6

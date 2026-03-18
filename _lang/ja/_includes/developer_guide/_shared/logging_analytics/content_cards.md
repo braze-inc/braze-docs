@@ -1,4 +1,4 @@
-> コンテンツカードのカスタムUIを構築する場合、インプレッション、クリック、棄却などの分析を手動で記録する必要がある。これらのイベントのログは、コンテンツカード統合の標準的な部分であり、正確なキャンペーンレポートと課金に不可欠である。これを行うには、カスタムUIにBrazeデータモデルからのデータを入力し、手動でイベントを記録する。分析の記録方法を理解したら、Braze の顧客が[カスタムコンテンツカードを作成する]({{site.baseurl}}/developer_guide/content_cards/creating_cards/)一般的な方法がわかります。 
+> コンテンツカード用のカスタムUIを構築する際は、インプレッション、クリック、非表示といった分析データを必ず手動で記録しなければならない。デフォルトのカードモデルではのみ自動処理されるからだ。これらのイベントの記録は、コンテンツカード統合の標準的な部分であり、正確なキャンペーンレポートと請求に不可欠である。これを行うには、カスタムUIにBrazeのデータモデルからデータを入力し、その後手動でイベントを記録する。分析の記録方法を理解したら、Braze の顧客が[カスタムコンテンツカードを作成する]({{site.baseurl}}/developer_guide/content_cards/creating_cards/)一般的な方法がわかります。 
 
 ## カード更新のリスニング
 
@@ -175,6 +175,45 @@ BRZCancellable *cancellable = [self.braze.contentCards subscribeToUpdates:^(NSAr
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
+
+{% tab react native %}
+
+コンテンツカードのデータを取得するには、メソッド`getContentCards`を使用する：
+
+```javascript
+import Braze from "@braze/react-native-sdk";
+
+const cards = await Braze.getContentCards();
+```
+
+更新を監視するには、コンテンツカードの更新イベントを購読する。
+
+```javascript
+const subscription = Braze.addListener(Braze.Events.CONTENT_CARDS_UPDATED, (update) => {
+  const cards = update.cards;
+  cards.forEach(card => {
+    if (card.isControl) {
+      // Do not display the control card, but remember to log an impression
+    } else {
+      // Use card.title, card.cardDescription, card.image, etc.
+    }
+  });
+});
+```
+
+Brazeサーバーからコンテンツカードを手動で更新するには：
+
+```javascript
+Braze.requestContentCardsRefresh();
+```
+
+ネットワークリクエストなしでキャッシュされたコンテンツカードを取得するには：
+
+```javascript
+const cachedCards = await Braze.getCachedContentCards();
+```
+
+{% endtab %}
 {% endtabs %}
 
 ## イベントのロギング
@@ -203,13 +242,13 @@ braze.logContentCardClick(card);
 {% endtab %}
 {% tab android %}
 
-を参照できる。 [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt)は、コンテンツカードオブジェクト配列リストのようなBraze SDKの依存関係を参照して、Brazeロギングメソッドを呼び出すことができる。 [`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html)Brazeロギングメソッドを呼び出す。`ContentCardable`基本クラスを使用すると、`BrazeManager`へのデータの参照や提供が容易になります。 
+このオブジェクトは[`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt)、コンテンツカードオブジェクトの配列リストなどのBraze SDK依存関係を参照できる。これにより、Brazeのロギングメソッドを呼び出すための[`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html)参照を取得できる。`ContentCardable`基本クラスを使用すると、`BrazeManager`へのデータの参照や提供が容易になります。 
 
 インプレッションやカードのクリックを記録するには、[`Card.logClick()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html)または[`Card.logImpression()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html)をそれぞれ呼び出します。 
 
 [`isDismissed`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-dismissed.html)を使用して、Braze の特定のコンテンツカードを手動で「却下」として記録したり設定したりできます。カードがすでに却下済みとしてマークされている場合、そのカードを再度却下済みとしてマークすることはできません。
 
-カスタム・クリック・リスナーを作成するには、以下を実装したクラスを作成する。 [`IContentCardsActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html)を実装したクラスを作り、それを [`BrazeContentCardsManager`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.managers/-braze-content-cards-manager/index.html).ユーザーがコンテンツカードをクリックしたときに呼び出される[`onContentCardClicked()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/on-content-card-clicked.html)メソッドを実装します。次に、コンテンツカードクリックリスナーを使用するよう Braze に指示します。 
+カスタムクリックリスナーを作成するには、\`ClickListener\`を実装する[`IContentCardsActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html)クラスを作成し、それを`OnClickListener`に登録する[`BrazeContentCardsManager`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.managers/-braze-content-cards-manager/index.html)。ユーザーがコンテンツカードをクリックしたときに呼び出される[`onContentCardClicked()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/on-content-card-clicked.html)メソッドを実装します。次に、コンテンツカードクリックリスナーを使用するよう Braze に指示します。 
 
 {% subtabs local %}
 {% subtab Java %}
@@ -298,5 +337,27 @@ contentCardsController.delegate = delegate;
 {% alert important %}
 カスタム UI でコントロールバリアントコンテンツカードを処理するには、[`Braze.ContentCard.Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control(_:)) を渡した後、他のコンテンツカードタイプと同様に `logImpression` メソッドを呼び出します。オブジェクトはコントロールインプレッションを暗黙的にログに記録して、ユーザーがいつコントロールカードを表示したかを分析に通知します。
 {% endalert %}
+{% endtab %}
+
+{% tab react native %}
+
+ユーザーがカードを見たときにインプレッションイベントを記録する。
+
+```javascript
+Braze.logContentCardImpression(card.id);
+```
+
+ユーザーがカードとやり取りした際のカードクリックイベントを記録する：
+
+```javascript
+Braze.logContentCardClicked(card.id);
+```
+
+ユーザーがカードを閉じた際に、閉じたイベントを記録する。
+
+```javascript
+Braze.logContentCardDismissed(card.id);
+```
+
 {% endtab %}
 {% endtabs %}

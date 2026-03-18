@@ -1,5 +1,5 @@
 ---
-nav_title: 메시지 스타일 커스텀하기
+nav_title: 메시지 스타일 사용자 정의
 article_title: "Tutorial: 키-값 쌍을 사용하여 스타일링 사용자 지정하기"
 description: ""
 page_order: 1
@@ -82,7 +82,7 @@ lines-index.js=19
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/prerequisites/android.md %} 또한 [Android용 인앱 메시지를 인에이블먼트해야]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages) 합니다.
+{% multi_lang_include developer_guide/prerequisites/android.md %} Android용 인앱 메시지를 [활성화해야 합니다.]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages)
 
 ## Android용 키-값 쌍을 사용하여 메시지 스타일 지정하기
 
@@ -222,7 +222,7 @@ lines-CustomInAppMessageViewFactory.kt=30-32,35-41
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab swift %}
-{% multi_lang_include developer_guide/prerequisites/swift.md %} 또한 [Swift에 대한 인앱 메시지를 인에이블먼트해야]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages) 합니다.
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Swift용 인앱 메시지를 [활성화해야 합니다.]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages)
 
 ## Swift에서 키-값 쌍을 사용하여 메시지 스타일 지정하기
 

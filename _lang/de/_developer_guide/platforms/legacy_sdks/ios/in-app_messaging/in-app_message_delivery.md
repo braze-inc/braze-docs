@@ -1,5 +1,5 @@
 ---
-nav_title: In-App-Nachricht Zustellung
+nav_title: In-App-Nachrichten-Zustellung
 article_title: In-App Nachrichtenzustellung für iOS
 platform: iOS
 page_order: 3

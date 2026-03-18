@@ -1,6 +1,6 @@
 ---
 nav_title: 통합 완료
-article_title: iOS SDK 통합 완료하기
+article_title: iOS SDK 통합을 완료하십시오
 platform: iOS
 description: "이 참조 문서에서는 통합 옵션 중 하나를 통해 Braze SDK를 설치한 후 해당 통합을 완료하는 방법을 보여줍니다."
 page_order: 2
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# 통합 완료하기
+# 통합을 완료하십시오
 
 이 단계를 수행하기 전에 [Carthage]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/carthage_integration/), [CocoaPods]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/cocoapods/), [스위프트 패키지 매니저]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/swift_package_manager/) 또는 [수동]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/) 통합을 사용하여 SDK를 통합했는지 확인합니다.
 

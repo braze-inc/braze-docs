@@ -1,7 +1,7 @@
 ---
-nav_title: "GET: Estado del grupo de suscripción de los usuarios de la lista"
+nav_title: "GET: Mostrar el estado del grupo de suscripción de los usuarios"
 article_title: "GET: Listar el estado del grupo de suscripción del usuario"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
@@ -96,8 +96,8 @@ Todas las respuestas correctas devolverán `Subscribed`, `Unsubscribed`, o `Unkn
 }
 ```
 
-{% alert note %}
-Cuando un usuario se da de baja globalmente, se le da de baja de cada grupo de suscripción. Este punto final devuelve el último estado de suscripción de cada grupo de suscripción. Este es el comportamiento esperado porque si el usuario decide volver a suscribirse globalmente, Braze revierte cada estado de suscripción.
+{% alert important %}
+Este punto final devuelve el estado del grupo de suscripción independientemente del estado de suscripción global del usuario. Si un usuario cancela su suscripción globalmente, el panel de Braze te muestra como dado de baja de cada grupo de suscripción. Sin embargo, este punto final sigue devolviendo el último estado del grupo de suscripción (por ejemplo, `Subscribed`) porque el estado global de las suscripciones sustituye a los grupos de suscripción individuales sin sobrescribirlos.<br><br>Braze conserva los estados individuales de los grupos de suscripción, de modo que, si el usuario vuelve a suscribirse globalmente, cada grupo de suscripción vuelve al estado guardado anteriormente. Para determinar el estado efectivo de la suscripción de un usuario, comprueba tanto tu estado de suscripción global como el estado del grupo de suscripción devuelto por este punto final.
 {% endalert %}
 
 {% endapi %}

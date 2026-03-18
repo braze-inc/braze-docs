@@ -11,9 +11,9 @@ tool: Canvas
 
 # 결정 분할 
 
-> 캔버스의 결정 분할 구성 요소를 사용하면 사용자에게 개인화된 실시간 경험을 제공할 수 있습니다.
+> Canvas의 결정 분할 구성 요소는 사용자에게 개인화된 실시간 경험을 제공할 수 있습니다.
 
-![푸시가 활성화되지 않은 사용자와 푸시가 활성화된 사용자를 위한 "푸시 사용 가능?"이라는 결정 분할 단계가 있습니다.]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
+![푸시가 활성화되지 않은 사용자와 푸시가 활성화된 사용자를 위한 "푸시 활성화?"라는 이름의 결정 분할 단계입니다.]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 
 이 구성 요소는 사용자가 쿼리와 일치하는지 여부에 따라 캔버스 분기를 만드는 데 사용할 수 있습니다.
 
@@ -25,7 +25,7 @@ To create a decision split in your workflow, add a step to your Canvas. Then, dr
 
 사용자를 어떻게 분할하고 싶으신가요? You can use [segments]({{site.baseurl}}/user_guide/engagement_tools/segments/) and filters to draw the line. 기본적으로 `true` 또는 `false` 쿼리를 만들어 사용자를 평가한 다음 사용자를 한 단계 또는 다른 단계로 유도하는 것입니다. 하나 이상의 세그먼트 또는 하나의 필터를 사용해야 합니다. 세그먼트와 필터를 모두 사용할 필요는 없습니다.
 
-!["포그라운드 푸시 활성화됨" 필터가 선택된 결정 분할 단계.]({% image_buster /assets/img/define-split-2.png %})
+!["전경 푸시 활성화가 true" 필터가 선택된 결정 분할 단계입니다.]({% image_buster /assets/img/define-split-2.png %})
 
 {% alert note %}
 By default, segments and filters for a Decision Split step are checked right after receiving a previous step, unless you add a delay.
@@ -39,7 +39,7 @@ By default, segments and filters for a Decision Split step are checked right aft
 
 경로 중 하나를 따라가는 단계가 없는 경우 해당 경로로 이동한 사용자는 캔버스를 종료합니다. 
 
-![A Decision Split step named "Push enabled?" for users who aren't push enabled and those who are. For users who aren't push enabled, they'll experience a 3-day delay then receive an email message. 푸시를 인에이블한 사용자의 경우, 1일 지연 후 푸시 알림을 받은 후 2일 지연 후 푸시를 인에이블하지 않은 사용자와 동일한 이메일 메시지를 받게 됩니다.]({% image_buster /assets/img/use-split-onboarding-3.png %}){: style="max-width:60%"}
+![A Decision Split step named "Push enabled?" for users who aren't push enabled and those who are. For users who aren't push enabled, they'll experience a 3-day delay then receive an email message. 푸시가 활성화된 사용자는 1일 지연을 경험하고, 푸시 알림을 받은 후 2일 지연을 겪으며, 푸시가 활성화되지 않은 사용자와 동일한 이메일 메시지를 받게 됩니다.]({% image_buster /assets/img/use-split-onboarding-3.png %}){: style="max-width:60%"}
 
 ## 분석
 

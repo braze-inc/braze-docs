@@ -8,9 +8,9 @@ description: "Esta página de referência nota os operadores que o Liquid suport
 
 # Operadores
 
-> O Liquid oferece suporte a muitos [operadores](https://docs.shopify.com/themes/liquid/basics/operators) que podem ser usados em suas instruções condicionais. Esta página cobre os operadores que Liquid suporta e fornece casos de uso de como você pode usá-los em suas mensagens.
+> O Liquid suporta muitos [operadores](https://docs.shopify.com/themes/liquid/basics/operators) que podem ser usados em suas declarações condicionais. Esta página cobre os operadores que Liquid suporta e fornece casos de uso de como você pode usá-los em suas mensagens.
 
-Esta tabela lista os operadores que são suportados. Note que os parênteses são caracteres inválidos no Liquid e impedem que suas tags funcionem.
+Esta tabela lista os operadores que são suportados. Note que parênteses são caracteres inválidos no Liquid e impedem que suas tags funcionem.
 
 |   Sintaxe| Descrição do operador|
 |---------|-----------|
@@ -24,6 +24,31 @@ Esta tabela lista os operadores que são suportados. Note que os parênteses sã
 | e | condição A e condição B|
 | contém | verifica se uma string ou matriz de string contém uma string|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% alert note %}
+Operadores podem ser usados em declarações condicionais (`if`, `elsif`, `unless`), mas não em declarações `assign`, loops `for`, declarações `case`/`when` ou colchetes de acesso a arrays. Para uma explicação completa, veja [Onde usar operadores e filtros]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+{% endalert %}
+
+### Agrupando condições sem parênteses
+
+O Liquid não suporta parênteses para agrupar expressões. Para avaliar lógica booleana complexa como `(a and b) or c`, use declarações `if` aninhadas ou variáveis intermediárias.
+
+Por exemplo, para verificar se um valor satisfaz uma condição composta, atribua uma variável intermediária:
+
+{% raw %}
+```liquid
+{% assign qualifies = false %}
+{% if points > 100 %}
+{% assign qualifies = true %}
+{% elsif points == 100 and member_level == 'gold' %}
+{% assign qualifies = true %}
+{% endif %}
+
+{% if qualifies %}
+You qualify for a reward!
+{% endif %}
+```
+{% endraw %}
 
 ## Tutoriais
 
@@ -75,7 +100,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 {% endraw %}
 {% enddetails %}
 
-Agora, se o atributo personalizado "Total Spend" de um usuário for maior que `0`, ele receberá a mensagem:
+Agora, se o atributo personalizado "Total Gasto" de um usuário for maior que `0`, ele receberá a mensagem:
 
 ```
 Surprise! We added a 15% discount code to your account that automatically applies to your next order.
@@ -110,7 +135,7 @@ Your fleet awaits your next orders. Log on when you're ready to rejoin the war f
 {% endraw %}
 
 {: start="3"}
-3\. Use a tag `elsif` com os operadores "does not equal" (`!=`) e "and" (`and`) para verificar se o usuário tem um jogo recente (ou seja, se o valor não está em branco) e se o jogo não é *Awkward Dinner Party* ou *Proxy War 3: War of Thirst*. Em seguida, crie uma mensagem para enviar a esses usuários.
+3\. Use a tag `elsif` com o operador "não é igual" (`!=`) e "e" (`and`) para verificar se o usuário tem um jogo recente (significando que o valor não está em branco), e que o jogo não é *Jantar Desconfortável* ou *Guerra Proxy 3: War of Thirst*. Em seguida, crie uma mensagem para enviar a esses usuários.
 
 {% raw %}
 ```liquid
@@ -220,4 +245,28 @@ Stream now!
 
 Você também pode [abortar mensagens]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) com base no Connected Content.
 
+## Solução de problemas
 
+### A prévia pode coercionar incorretamente os tipos de propriedade 
+
+Ao visualizar uma mensagem no dashboard, a maioria das variáveis (como atributos personalizados) é coercionada para o tipo correto. No entanto, algumas variáveis não têm um tipo definido que a prévia pode consultar:
+
+- `api_trigger_properties`
+- `canvas_entry_properties`
+- `context`
+
+Para essas propriedades, a prévia tenta inferir o tipo a partir do valor. Isso significa que um valor que você pretende que seja um **string** pode ser interpretado erroneamente como um **número**. Por exemplo, se o valor de uma propriedade for uma string `"3"`, a prévia pode coercioná-la para o inteiro `3`, o que pode causar comportamentos inesperados em operações de string como `contains` ou `split`.
+
+Se você ver resultados inesperados na prévia ao usar esses tipos de propriedade, tenha em mente que a inferência de tipo da prévia pode não corresponder ao que acontece no momento do envio. No momento do envio, os tipos de dados reais do evento que acionou ou da chamada da API são preservados.
+
+Para forçar um tipo específico na prévia, você pode converter explicitamente o valor:
+
+{% raw %}
+```liquid
+{% comment %} Force a value to be treated as a number {% endcomment %}
+{% assign orders = {{canvas_entry_properties.${number_of_orders}}} | plus: 0 %}
+
+{% comment %} Force a value to be treated as a string {% endcomment %}
+{% assign code = {{api_trigger_properties.${promo_code}}} | append: "" %}
+```
+{% endraw %}

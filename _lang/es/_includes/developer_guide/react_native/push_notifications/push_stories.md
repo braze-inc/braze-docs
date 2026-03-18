@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/react_native.md %} También tendrás que [configurar las notificaciones push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
 
-## Habilitación de historias push
+## Habilitar historias push
 
 Para el SDK de React Native, **las historias push están disponibles para Android de forma predeterminada**.
 

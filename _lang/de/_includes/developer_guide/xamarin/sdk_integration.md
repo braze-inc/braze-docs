@@ -1,47 +1,51 @@
 ## Integration des .NET MAUI SDK
 
-Durch die Integration des Braze .NET MAUI (ehemals Xamarin) SDK erhalten Sie grundlegende Analytics-Funktionen sowie funktionierende In-App-Nachrichten, mit denen Sie Ihre Nutzer:innen engagieren können. 
+Durch die Integration des Braze .NET MAUI (ehemals Xamarin) SDK erhalten Sie grundlegende Analytics-Funktionen sowie funktionierende In-App-Nachrichten, mit denen Sie Ihr Engagement mit den Nutzer:innen steigern können. 
 
 ### Voraussetzungen
 
-Bevor Sie das .NET MAUI Braze SDK integrieren können, müssen Sie sicherstellen, dass Sie die folgenden Anforderungen erfüllen:
+Bevor Sie die .NET MAUI Braze SDK-Integration durchführen können, stellen Sie bitte sicher, dass Sie die folgenden Anforderungen erfüllen:
 
 - Ab `version 3.0.0` erfordert dieses SDK die Verwendung von .NET 6+ und entfernt die Unterstützung für Projekte, die das Xamarin-Framework verwenden.
-- Ab `version 4.0.0` hat dieses SDK die Unterstützung für Xamarin & Xamarin.Forms eingestellt und Unterstützung für .NET MAUI hinzugefügt. Siehe [Microsofts Richtlinie](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) über das Supportende für Xamarin.
+- Ab diesem`version 4.0.0` Zeitpunkt hat dieses SDK die Unterstützung für Xamarin eingestellt&Xamarin.Forms und die Unterstützung für .NET MAUI hinzugefügt. Siehe [Microsofts Richtlinie](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) über das Supportende für Xamarin.
 
-### Schritt 1: Holen Sie sich die .NET MAUI-Bindung
+### Schritt 1: Bitte laden Sie die .NET MAUI-Bindung herunter.
 
 {% tabs %}
 {% tab android %}
-Eine .NET MAUI-Bindung ist eine Möglichkeit, native Bibliotheken in .NET MAUI-Apps zu verwenden. Die Implementierung des Bindings besteht darin, eine C#-Schnittstelle zur Bibliothek zu erstellen und diese Schnittstelle dann in Ihrer Anwendung zu verwenden.  Siehe die [ Dokumentation zu .NET MAUI](http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/). Es gibt zwei Möglichkeiten, das Braze SDK Binding einzuschließen: mit NuGet oder durch Kompilieren aus der Quelle.
+Eine .NET MAUI-Bindung ermöglicht die Verwendung nativer Bibliotheken in .NET MAUI-Apps. Die Implementierung des Bindings besteht darin, eine C#-Schnittstelle zur Bibliothek zu erstellen und diese Schnittstelle dann in Ihrer Anwendung zu verwenden.  Bitte beachten Sie die [.NET MAUI-Dokumentation](http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/). Es gibt zwei Möglichkeiten, das Braze SDK Binding einzuschließen: mit NuGet oder durch Kompilieren aus der Quelle.
 
 {% subtabs local %}
 {% subtab NuGet %}
 Die einfachste Methode der Integration besteht darin, sich das Braze SDK aus dem zentralen [NuGet.org](https://www.nuget.org/)-Repository zu holen. Klicken Sie in der Seitenleiste von Visual Studio mit der rechten Maustaste auf den Ordner `Packages` und dann auf `Add Packages...`.  Suchen Sie nach "Braze" und installieren Sie das Paket [`BrazePlatform.BrazeAndroidBinding`](https://www.nuget.org/packages/BrazePlatform.BrazeAndroidBinding/) in Ihr Projekt.
+
+Um die Standortdienste und Geofences von Braze nutzen zu können, installieren Sie bitte auch das[`BrazePlatform.BrazeAndroidLocationBinding`](https://www.nuget.org/packages/BrazePlatform.BrazeAndroidLocationBinding/)Paket.
 {% endsubtab %}
 
 {% subtab Source %}
-Die zweite Methode besteht darin, die [Binding-Quelle](https://github.com/braze-inc/braze-xamarin-sdk) einzubeziehen. Unter [`appboy-component/src/androidnet6`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/androidnet6/BrazeAndroidNet6Binding) finden Sie den Quellcode unserer Bindung. Wenn Sie in Ihrer .NET MAUI-Anwendung eine Projektreferenz auf ```BrazeAndroidBinding.csproj``` hinzufügen, wird die Bindung mit Ihrem Projekt erstellt und Sie erhalten Zugriff auf das Braze Android SDK.
+Die zweite Methode besteht darin, die [Binding-Quelle](https://github.com/braze-inc/braze-xamarin-sdk) einzubeziehen. Unter finden[`appboy-component/src/androidnet6`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/androidnet6/BrazeAndroidNet6Binding) Sie unseren Bindungscode. Wenn Sie in Ihrer .NET```BrazeAndroidBinding.csproj``` MAUI-Anwendung ein Projekt referenzieren, wird die Bindung mit Ihrem Projekt erstellt und Sie erhalten Zugriff auf das Braze Android SDK.
+
+Um die Standortdienste und Geofences von Braze zu nutzen, fügen Sie bitte auch eine Projektreferenz zu den ```BrazeAndroidLocationBinding.csproj```unter  zu finden[`appboy-component/src/androidnet6/BrazeAndroidLocationBinding`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/androidnet6/BrazeAndroidLocationBinding).
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 
 {% tab ios %}
 {% alert important %}
-Die iOS-Bindungen für .NET MAUI SDK Version 4.0.0 und höher verwenden das [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk/), während frühere Versionen das [ältere AppboyKit SDK](https://github.com/Appboy/Appboy-ios-sdk) verwenden.
+Die iOS-Bindungen für das .NET MAUI SDK Version 4.0.0 und höher verwenden das [Braze SWIFT SDK](https://github.com/braze-inc/braze-swift-sdk/), während frühere Versionen das [ältere AppboyKit SDK](https://github.com/Appboy/Appboy-ios-sdk) verwenden.
 {% endalert %}
 
-Eine .NET MAUI-Bindung ist eine Möglichkeit, native Bibliotheken in .NET MAUI-Apps zu verwenden. Die Implementierung eines Bindings besteht darin, eine C#-Schnittstelle zur Bibliothek zu erstellen und diese Schnittstelle dann in Ihrer Anwendung zu verwenden. Es gibt zwei Möglichkeiten, das Braze SDK Binding einzuschließen: mit NuGet oder durch Kompilieren aus der Quelle.
+Eine .NET MAUI-Bindung ermöglicht die Verwendung nativer Bibliotheken in .NET MAUI-Apps. Die Implementierung eines Bindings besteht darin, eine C#-Schnittstelle zur Bibliothek zu erstellen und diese Schnittstelle dann in Ihrer Anwendung zu verwenden. Es gibt zwei Möglichkeiten, das Braze SDK Binding einzuschließen: mit NuGet oder durch Kompilieren aus der Quelle.
 
 {% subtabs local %}
 {% subtab NuGet %}
-Die einfachste Methode der Integration besteht darin, sich das Braze SDK aus dem zentralen [NuGet.org](https://www.nuget.org/)-Repository zu holen. Klicken Sie in der Seitenleiste von Visual Studio mit der rechten Maustaste auf den Ordner `Packages` und dann auf `Add Packages...`.  Suchen Sie nach 'Braze' und installieren Sie die neuesten .NET MAUI iOS NuGet-Pakete: [Braze.iOS.BrazeKit](https://www.nuget.org/packages/Braze.iOS.BrazeKit), [Braze.iOS.BrazeUI](https://www.nuget.org/packages/Braze.iOS.BrazeUI), und [Braze.iOS.BrazeLocation](https://www.nuget.org/packages/Braze.iOS.BrazeLocation) in Ihr Projekt.
+Die einfachste Methode der Integration besteht darin, sich das Braze SDK aus dem zentralen [NuGet.org](https://www.nuget.org/)-Repository zu holen. Klicken Sie in der Seitenleiste von Visual Studio mit der rechten Maustaste auf den Ordner `Packages` und dann auf `Add Packages...`.  Suchen Sie nach „Braze“ und installieren Sie die neuesten .NET MAUI iOS NuGet-Pakete: [Braze.iOS.BrazeKit](https://www.nuget.org/packages/Braze.iOS.BrazeKit), [Braze.iOS.BrazeUI](https://www.nuget.org/packages/Braze.iOS.BrazeUI), und[Braze.iOS.BrazeLocation](https://www.nuget.org/packages/Braze.iOS.BrazeLocation)  in Ihrem Projekt.
 
 Wir stellen auch die Pakete der kompatiblen Bibliotheken – [Braze.iOS.BrazeKitCompat](https://www.nuget.org/packages/Braze.iOS.BrazeKitCompat) und [Braze.iOS.BrazeUICompat](https://www.nuget.org/packages/Braze.iOS.BrazeUICompat) – zur Verfügung, um Ihnen die Migration zu .NET MAUI zu erleichtern.
 {% endsubtab %}
 
 {% subtab Source %}
-Die zweite Methode besteht darin, die [Binding-Quelle](https://github.com/braze-inc/braze-xamarin-sdk) einzubeziehen. Unter [`appboy-component/src/iosnet6`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/iosnet6/BrazeiOSNet6Binding) finden Sie den Quellcode unserer Bindung. Wenn Sie in Ihrer .NET MAUI-Anwendung eine Projektreferenz auf ```BrazeiOSBinding.csproj``` hinzufügen, wird die Bindung mit Ihrem Projekt erstellt und Sie erhalten Zugriff auf das Braze iOS SDK. Stellen Sie sicher, dass `BrazeiOSBinding.csproj` im Ordner "Referenzieren" Ihres Projekts angezeigt wird.
+Die zweite Methode besteht darin, die [Binding-Quelle](https://github.com/braze-inc/braze-xamarin-sdk) einzubeziehen. Unter finden Sie unseren [`appboy-component/src/iosnet6`](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/iosnet6/BrazeiOSNet6Binding)Bindungscode. Wenn Sie in Ihrer .NET```BrazeiOSBinding.csproj``` MAUI-Anwendung ein Projekt referenzieren, wird die Bindung mit Ihrem Projekt erstellt und Sie erhalten Zugriff auf das Braze iOS SDK. Stellen Sie sicher, dass `BrazeiOSBinding.csproj` im Ordner "Referenzieren" Ihres Projekts angezeigt wird.
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -126,7 +130,7 @@ Jetzt können Sie Ihre Anwendung starten und sehen, wie die Sitzungen im Braze-D
 Jetzt können Sie Ihre Anwendung starten und sehen, wie die Sitzungen im Braze-Dashboard protokolliert werden. Eine ausführlichere Diskussion der besten Praktiken für die grundlegende SDK-Integration finden Sie in der [Anleitung zur iOS-Integration]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift).
 
 {% alert important %}
-Unsere derzeitige öffentliche .NET MAUI-Bindung für das iOS SDK stellt keine Verbindung zum iOS Facebook SDK (Verknüpfung von Social-Daten) her und beinhaltet nicht die Übermittlung des IDFA an Braze.
+Unsere derzeitige öffentliche .NET MAUI-Bindung für das iOS SDK stellt keine Verbindung zum iOS Facebook SDK her (Verknüpfung von Social-Daten) und umfasst nicht das Senden der IDFA an Braze.
 {% endalert %}
 {% endtab %}
 {% endtabs %}

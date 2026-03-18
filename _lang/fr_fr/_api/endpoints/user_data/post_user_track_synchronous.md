@@ -10,21 +10,21 @@ description: "Cet article présente en détail l’endpoint synchrone Suivi util
 ---
 {% api %}
 # Créer et mettre à jour des utilisateurs (synchrone)
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/users/track/sync
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
+/utilisateurs/suivi/synchronisation
 {% endapimethod %}
 
 > Utilisez cet endpoint pour enregistrer les événements personnalisés et les achats et pour mettre à jour les attributs de profil utilisateur de manière synchrone. Cet endpoint fonctionne de la même manière que l’[endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track), qui met à jour les profils utilisateurs de manière asynchrone.
 
 {% alert important %}
-Cet endpoint est actuellement en **version bêta limitée**. Bien que nous n'ajoutions pas de nouveaux clients à la version bêta pour le moment, faites savoir à votre gestionnaire de compte Braze si vous pensez que cette fonctionnalité pourrait être utile pour votre intégration Braze.
+Cet endpoint est actuellement en **version bêta limitée**. Bien que nous n'ajoutions pas de nouveaux clients à la version bêta pour le moment, veuillez informer votre gestionnaire de compte Braze si vous pensez que cette fonctionnalité pourrait être utile pour votre intégration Braze.
 {% endalert %}
 
 ## Appels d'API synchrones et asynchrones
 
-Dans le cas d'un appel asynchrone, l'API renvoie le code d'état `201`, indiquant que votre demande a été reçue, comprise et acceptée avec succès. Toutefois, cela ne signifie pas que votre requête a été entièrement exécutée.
+Dans le cadre d'un appel asynchrone, l'API renvoie le code d'état`201` , indiquant que votre demande a été reçue, comprise et acceptée avec succès. Toutefois, cela ne signifie pas que votre requête a été entièrement exécutée.
 
-Dans le cas d'un appel synchrone, l'API renvoie un code d'état `201`, indiquant que votre demande a été reçue, comprise, acceptée et exécutée avec succès. La réponse à l'appel montre les champs du profil utilisateur sélectionnés à la suite de l'opération.
+Dans le cadre d'un appel synchrone, l'API renvoie un code d'état indiquant que votre demande a été reçue`201`, comprise, acceptée et traitée avec succès. La réponse à l'appel affiche certains champs du profil utilisateur à la suite de l'opération.
 
 La limite de débit de cet endpoint est inférieure à celle de l'endpoint `/users/track` (voir [Limite de débit](#rate-limit) ci-dessous). Chaque demande `/users/track/sync` ne peut contenir qu'un seul objet d'événement, un seul objet d'attribut **ou** un seul objet d'achat. Cet endpoint doit être réservé aux mises à jour du profil utilisateur pour lesquelles un appel synchrone est nécessaire. Pour une implémentation saine, nous vous recommandons d'utiliser `/users/track/sync` et `/users/track` ensemble.
 
@@ -58,7 +58,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ### Paramètres de demande
 
 {% alert important %}
-Pour chaque composant de la demande énuméré dans le tableau suivant, vous devez inclure l'un des éléments suivants : `external_id`, `user_alias`, `braze_id`, `email`, ou `phone`.
+Pour chaque composant de requête répertorié dans le tableau suivant, il est nécessaire d'inclure l'un des éléments `external_id`suivants `user_alias`: `braze_id`, , `email`, , ou `phone`.
 {% endalert %}
 
 | Paramètre | Requis | Type de données | Description |
@@ -271,11 +271,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 
 ### Dois-je utiliser l'endpoint asynchrone ou synchrone ?
 
-Pour la plupart des mises à jour de profil, l'endpoint `/users/track` est le mieux adapté en raison de sa limite de débit plus élevée et de sa flexibilité qui vous permet de regrouper les demandes. Cependant, l'endpoint `/users/track/sync` est utile si vous rencontrez des conditions de concurrence dues à des demandes rapides et consécutives pour le même utilisateur.
+Pour la plupart des mises à jour de profil, `/users/track`l'endpoint est le plus efficace en raison de sa limite de débit plus élevée et de sa flexibilité qui vous permet de regrouper les requêtes. Cependant, l'endpoint `/users/track/sync` est utile si vous rencontrez des conditions de concurrence dues à des demandes rapides et consécutives pour le même utilisateur.
 
 ### Le temps de réponse diffère-t-il de l'endpoint `/users/track`?
 
-Dans le cas d'un appel synchrone, l'API attend que Braze ait terminé la demande pour renvoyer une réponse. Par conséquent, les demandes synchrones prennent en moyenne plus de temps que les demandes asynchrones à `/users/track`. Pour la majorité des requêtes, vous pouvez vous attendre à une réponse en quelques secondes.
+Avec un appel synchrone, l'API attend que Braze termine la requête pour renvoyer une réponse. Par conséquent, les requêtes synchrones prennent en moyenne plus de temps que les requêtes asynchrones.`/users/track` Pour la majorité des requêtes, vous pouvez vous attendre à une réponse en quelques secondes.
 
 ### Puis-je envoyer plusieurs demandes en même temps ?
 

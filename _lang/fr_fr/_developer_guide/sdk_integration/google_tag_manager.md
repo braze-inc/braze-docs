@@ -1,6 +1,6 @@
 ---
 nav_title: Google Tag Manager
-article_title: Google Tag Manager avec le SDK de Braze
+article_title: Google Tag Manager avec le SDK Braze
 platform: 
   - Android
   - FireOS
@@ -10,9 +10,9 @@ description: "Découvrez comment initialiser le SDK Braze à l'aide de méthodes
 
 ---
 
-# Google Tag Manager avec le SDK de Braze
+# Google Tag Manager avec le SDK Braze
 
-> Apprenez à utiliser [Google Tag Manager (GTM)](https://developers.google.com/tag-platform/tag-manager) avec le SDK Braze, afin de pouvoir contrôler à distance le suivi des événements Braze et les mises à jour des attributs des utilisateurs sans avoir à modifier le code ou à lancer de nouvelles applications.
+> Découvrez comment utiliser [Google Tag Manager (GTM)](https://developers.google.com/tag-platform/tag-manager) avec le SDK Braze afin de contrôler à distance le suivi des événements Braze et les mises à jour des attributs utilisateur sans avoir à modifier le code ou à publier de nouvelles versions de l'application.
 
 {% sdktabs %}
 {% sdktab web %}

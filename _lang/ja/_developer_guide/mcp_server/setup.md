@@ -1,7 +1,7 @@
 ---
-nav_title: Braze MCPサーバーのセットアップ
-article_title: Braze MCPサーバーの設定
-description: "ClaudeやCursorのような自然言語ツールを使ってBrazeデータと対話できるように、Braze MCPサーバーの設定方法を学習する。"
+nav_title: Braze MCPサーバーの設定
+article_title: Braze MCPサーバーを設定する
+description: "Braze MCPサーバーの設定方法を学習すれば、ClaudeやCursorのような自然言語ツールを使ってBrazeデータとやり取りできるようになる。"
 page_order: 1.1
 noindex: true
 ---

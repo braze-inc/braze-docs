@@ -605,6 +605,32 @@ def check_untranslated(english_content, translated_content):
     return warnings
 
 
+def repair_brazeai_trademark(translated_content):
+    """Fix BrazeAI trademark formatting: only TM should be in <sup>, not the product name.
+    Handles trailing language particles/suffixes inside the tag (e.g. <sup>BrazeAITM의</sup>
+    in Korean, <sup>BrazeAITMで</sup> in Japanese) by moving them after BrazeAI<sup>TM</sup>.
+    """
+    repairs = []
+    patterns = [
+        # BrazeAI + TM/™ + optional trailing text inside <sup> (e.g. particles 의, で)
+        (re.compile(r'<sup>BrazeAI\s*(?:TM|™)([^<]*)</sup>'), r'BrazeAI<sup>TM</sup>\1',
+         'brazeai-tm — BrazeAI+TM in <sup> (trailing moved out) → TM only in <sup>'),
+        (re.compile(r'<sup>BrazeAI</sup>\s*(?:TM|™)'), 'BrazeAI<sup>TM</sup>',
+         'brazeai-tm — BrazeAI in <sup> with TM after → TM only in <sup>'),
+        (re.compile(r'BrazeAI(?:<sup>)?™(?:</sup>)?'), 'BrazeAI<sup>TM</sup>',
+         'brazeai-tm — normalized ™ to TM in <sup>'),
+        (re.compile(r'BrazeIA'), 'BrazeAI',
+         'brazeai-tm — corrected BrazeIA typo to BrazeAI'),
+    ]
+    for item in patterns:
+        pattern, replacement = item[0], item[1]
+        message = item[2]
+        if pattern.search(translated_content):
+            translated_content = pattern.sub(replacement, translated_content)
+            repairs.append(message)
+    return translated_content, repairs
+
+
 def qc_check_file(english_path, translated_path, lang_key):
     """Run all QC checks on one file pair. Auto-repairs are written back."""
     english_content = Path(english_path).read_text()
@@ -631,6 +657,11 @@ def qc_check_file(english_path, translated_path, lang_key):
         english_content, translated_content
     )
     findings["repairs"].extend(url_repairs)
+
+    translated_content, brazeai_repairs = repair_brazeai_trademark(
+        translated_content
+    )
+    findings["repairs"].extend(brazeai_repairs)
 
     if findings["repairs"]:
         Path(translated_path).write_text(translated_content)

@@ -84,7 +84,7 @@ Voici un exemple d’événement personnalisé `/users/track` « Liste de lectu
 {% tab Restaurant Example%}
 
 Voici un exemple d’événement personnalisé `/users/track` « Commandé ». Une fois qu'une commande a été effectuée, saisissez les propriétés de cette commande en l'envoyant :
-- Une requête API qui liste `r_details` comme propriété
+- Une requête API qui répertorie`r_details`en tant que propriété
 - Les propriétés imbriquées de cet ordre
 
 ```
@@ -141,7 +141,7 @@ Pour utiliser ces propriétés afin de déclencher une campagne, sélectionnez v
 
 Déclenchement d’une campagne avec des propriétés imbriquées à partir de l’événement « Liste de lecture créée » :
 
-![Un utilisateur choisissant une propriété imbriquée pour les filtres de propriété sur un événement personnalisé.]({% image_buster /assets/img/nested_object2.png %})
+![Un utilisateur sélectionnant une propriété imbriquée pour les filtres de propriété sur un événement personnalisé.]({% image_buster /assets/img/nested_object2.png %})
 
 L’état de déclenchement `songs[].album.yearReleased` « is » (est) « 1968 » correspond à un événement où l’une des chansons est dans un album publié en 1968. Nous utilisons la notation entre crochets `[]` pour parcourir les tableaux, et nous vérifions si **un** élément du tableau parcouru correspond à la propriété de l'événement.
 
@@ -154,9 +154,9 @@ Le filtre " **does not equal"** ne s'applique que si aucune des propriétés de 
 
 Déclenchement d’une campagne avec des propriétés imbriquées à partir de l’événement « Commandé » :
 
-![Un utilisateur ajoutant le filtre de propriété r_details.name est SandwichEmperor pour un événement personnalisé.]({% image_buster /assets/img/nested_object1.png %})
+![L'utilisateur qui ajoute le filtre de propriétér_details.name est SandwichEmperor pour un événement personnalisé.]({% image_buster /assets/img/nested_object1.png %})
 
-`r_details.name` : "Empereur du sandwich"<br>
+`r_details.name` : « SandwichEmperor »<br>
 `r_details.location.city` : "Montclair
 {% endtab %}
 {% endtabs %}
@@ -181,11 +181,30 @@ Dans la fenêtre modale/boîte de dialogue **Ajouter une personnalisation**, sé
 
 ![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
 
+## Test des objets imbriqués dans les messages
+
+L'outil **de test de &prévisualisation** du tableau de bord ne prend pas en charge l'ajout de données fictives pour les objets imbriqués ou les attributs personnalisés imbriqués. Pour tester les messages qui font référence à des données imbriquées via Liquid, vous pouvez prévisualiser les messages avec des attributs imbriqués en tant qu'utilisateur existant disposant de cet attribut imbriqué, ou prévisualiser les messages avec des propriétés d'événement personnalisées en lançant une campagne en ligne pour tester les utilisateurs.
+
+### Attributs personnalisés imbriqués
+
+1. Veuillez importer les attributs imbriqués dans le profil utilisateur test via l'API.
+2. Dans votre campagne ou votre canvas, veuillez vous rendre dans **Aperçu&  Test**.
+3. Veuillez sélectionner **« Aperçu en tant qu'utilisateur** » et effectuer la recherche d'utilisateurs pour trouver l'utilisateur test. Le Liquid sera résolu en utilisant les attributs imbriqués réels du profil utilisateur.
+
+### Propriétés d'événement imbriquées
+
+Les propriétés de l'événement imbriqué ne peuvent pas être prévisualisées dans le tableau de bord, car elles nécessitent un déclencheur d'événement en ligne/en production/instantané. Pour tester :
+
+1. Créez une campagne ou une étape du canvas qui cible uniquement vos utilisateurs test et qui est déclenchée par (ou fait référence à) l'événement personnalisé avec des propriétés imbriquées.
+2. Veuillez lancer la campagne auprès de votre audience test.
+3. Enregistrez l'événement personnalisé avec la charge utile de l'objet imbriqué dans le profil utilisateur test (à l'aide de l'API ou du SDK).
+4. Veuillez vérifier que le message s'affiche correctement avec les valeurs de propriété imbriquées.
+
 ## Foire aux questions
 
-### L'utilisation d'objets imbriqués permet-elle d'enregistrer des points de données supplémentaires ?
+### L'utilisation d'objets imbriqués entraîne-t-elle l'enregistrement de points de données supplémentaires ?
 
-L'ajout de cette fonctionnalité ne modifie en rien la manière dont nous enregistrons les points de données. La segmentation basée sur des objets imbriqués utilise les extensions de segments, qui n'utilisent pas de points de données supplémentaires.
+L'ajout de cette fonctionnalité n'entraîne aucun changement dans la manière dont nous enregistrons les points de donnée. La segmentation basée sur des objets imbriqués utilise les extensions de segments, qui n'utilisent pas de points de données supplémentaires.
 
 ### Combien de données imbriquées peuvent être envoyées ?
 

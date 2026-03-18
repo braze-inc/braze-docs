@@ -1,6 +1,6 @@
 ---
 nav_title: Definir delegados
-article_title: Definir delegados de mensagens no app para iOS
+article_title: Definir delegados de mensagem no app para iOS
 platform: iOS
 page_order: 2
 description: "Este artigo de referência cobre a configuração de envios de mensagens no app para seu app iOS."

@@ -12,7 +12,7 @@ setContent {
 
 ## Gestión de los clics de la tarjeta
 
-Para gestionar los clics de las tarjetas, pasa una función que tome un `Card` y devuelva un `Boolean` a `onCardClicked`. Si se devuelve `true`, Braze no procesará nada del clic aparte de registrarlo para análisis. Si se devuelve `false`, Braze se encargará del clic.
+Para gestionar los clics de las tarjetas, pasa una función que tome un `Card` y devuelva un `Boolean` a `onCardClicked`. Si se devuelve `true`, Braze no procesará nada del clic aparte de registrarlo para análisis. Si`false`se devuelve , Braze gestionará el clic.
 
 ```kotlin
 ContentCardsList(

@@ -18,7 +18,7 @@ Standardmäßig sind die Standortdienste von Braze nicht aktiviert. Um sie in Ih
 
 Öffnen Sie in Xcode den Tab **Allgemein**. Fügen Sie unter **Frameworks, Bibliotheken und eingebettete Inhalte** das Modul `BrazeLocation` hinzu.
 
-![Fügen Sie das BrazeLocation-Modul in Ihr Xcode-Projekt ein]({% image_buster /assets/img/sdk_geofences/add-brazeLocation-module-xcode.png %})
+![Fügen Sie das BrazeLocation-Modul in Ihr Xcode-Projekt ein.]({% image_buster /assets/img/sdk_geofences/add-brazeLocation-module-xcode.png %})
 
 #### Schritt 2.2: Aktualisieren Sie Ihr `Info.plist`
 
@@ -84,9 +84,9 @@ Standardmäßig werden Geofence-Ereignisse nur überwacht, wenn sich Ihre App im
 
 Sie können jedoch auch Geofence-Ereignisse überwachen, wenn Ihre App im Hintergrund läuft oder über eine [`When In Use` Autorisierung](#swift_request-authorization) verfügt. 
 
-Um diese zusätzlichen Geofence-Ereignisse zu überwachen, öffnen Sie Ihr Xcode-Projekt und gehen Sie dann zu **Signing & Capabilities**. Aktivieren Sie unter **Hintergrundmodi** die Option **Standort-Updates**.
+Um diese zusätzlichen Geofence-Ereignisse zu überwachen, öffnen Sie bitte Ihr Xcode-Projekt und gehen Sie zu **„Signing&Capabilities**“. Aktivieren Sie unter **Hintergrundmodi** die Option **Standort-Updates**.
 
-![In Xcode, Hintergrundmodus > Standort Updates]({% image_buster /assets/img/sdk_geofences/xcode-background-modes-location-updates.png %})
+![In Xcode, Hintergrundmodus > Standort-Updates]({% image_buster /assets/img/sdk_geofences/xcode-background-modes-location-updates.png %})
 
 Als nächstes aktivieren Sie `allowBackgroundGeofenceUpdates` im Code Ihrer App. So kann Braze den Status "In Betrieb" Ihrer App verlängern, indem es kontinuierlich Updates des Standorts überwacht. Diese Einstellung funktioniert nur, wenn sich Ihre App im Hintergrund befindet. Wenn die App wieder geöffnet wird, werden alle bestehenden Hintergrundprozesse angehalten und stattdessen Vordergrundprozesse priorisiert.
 
@@ -270,7 +270,7 @@ Nachstehend finden Sie weitere mögliche Gründe, warum Geofences auf Ihrem Ger�
 
 Das Betriebssystem iOS erlaubt es nur, bis zu 20 Geofences für eine bestimmte App zu speichern. Wenn Geofences aktiviert sind, wird Braze einige dieser 20 verfügbaren Slots verwenden.
 
-Um versehentliche oder unerwünschte Unterbrechungen anderer Geofence-bezogener Funktionen in Ihrer App zu vermeiden, müssen Sie Geofencing für einzelne Apps auf dem Dashboard aktivieren. Damit unsere Serviceleistungen; Dienste korrekt funktionieren, überprüfen Sie, ob Ihre App nicht alle verfügbaren Geofence-Spots nutzt.
+Um versehentliche oder unerwünschte Störungen anderer Geofence-Funktionen in Ihrer App zu vermeiden, müssen Sie Standort-Geofences für einzelne Apps im Dashboard aktivieren. Damit unsere Serviceleistungen; Dienste korrekt funktionieren, überprüfen Sie, ob Ihre App nicht alle verfügbaren Geofence-Spots nutzt.
 
 ##### Rate-Limiting
 
@@ -280,7 +280,7 @@ Braze hat ein Limit von 1 Geofence-Aktualisierung pro Sitzung, um unnötige Anfr
 
 Wie bereits erwähnt, ist es unter iOS zulässig, dass eine einzelne App maximal 20 Geofences einspeichert. Dieser Speicher wird sowohl von Braze- als auch von Nicht-Braze-Geofences gemeinsam genutzt und wird von [CLLocationManager](https://developer.apple.com/documentation/corelocation/cllocationmanager) verwaltet.
 
-Wenn Ihre App beispielsweise 20 Geofences enthält, die nicht von Braze stammen, gibt es keinen Speicherplatz für das Tracking von Braze-Geofences (oder umgekehrt). Um neue Geoofences zu erhalten, müssen Sie [die Standort-APIs von Apple](https://developer.apple.com/documentation/corelocation) verwenden, um die Überwachung einiger der bestehenden Geoofences auf dem Gerät zu beenden.
+Wenn Ihre App beispielsweise 20 Nicht-Braze-Geofences enthält, wäre kein Speicherplatz verfügbar, um Braze-Geofences zu verfolgen (oder umgekehrt). Um neue Geoofences zu erhalten, müssen Sie [die Standort-APIs von Apple](https://developer.apple.com/documentation/corelocation) verwenden, um die Überwachung einiger der bestehenden Geoofences auf dem Gerät zu beenden.
 
 #### Kann das Feature Geofences verwendet werden, wenn ein Gerät offline ist?
 

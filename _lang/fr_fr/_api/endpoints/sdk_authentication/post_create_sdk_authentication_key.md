@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Exemple de demande
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_authentication/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \

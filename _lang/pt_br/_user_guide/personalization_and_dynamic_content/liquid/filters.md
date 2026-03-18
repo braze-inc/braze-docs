@@ -13,7 +13,7 @@ description: "Esta página de referência lista os filtros que podem ser usados 
 Os filtros são a forma como você pode modificar a saída de números, strings, variáveis e objetos no Liquid. Você pode usar filtros para reformatar textos estáticos ou dinâmicos, como alterar uma string de minúscula para maiúscula, ou para realizar operações matemáticas, como adição ou divisão.
 
 {% alert important %}
-O Braze não é compatível com todos os filtros Liquid da Shopify. Esta página tenta delinear os filtros Liquid que a Braze testou, mas pode não ser uma lista completa. Sempre teste seu Liquid antes de enviar qualquer mensagem. <br><br>Se tiver alguma dúvida sobre um filtro que não esteja listado aqui, entre em contato com o gerente de sucesso do cliente.
+O Braze não é compatível com todos os filtros Liquid da Shopify. Esta página tenta delinear os filtros Liquid que a Braze testou, mas pode não ser uma lista completa. Sempre teste seu Liquid antes de enviar qualquer mensagem. <br><br>Se você tiver alguma dúvida sobre um filtro que não está listado aqui, entre em contato com seu gerente de sucesso do cliente.
 {% endalert %}
 
 ## Sintaxe do filtro
@@ -42,6 +42,10 @@ BIG SALE
 {% endtabs %}
 
 Neste exemplo, `Big Sale` é uma string e `upcase` é o filtro que está sendo aplicado.
+
+{% alert note %}
+Os filtros podem ser usados em `assign` declarações e tags de saída {% raw %}(`{{ }}`){% endraw %}, mas não em condicionais (`if`, `elsif`, `unless`), `case`/`when`, `for` loops ou colchetes de acesso a arrays. Para usar um valor filtrado em um desses contextos, atribua o resultado a uma variável primeiro. Para mais detalhes, veja [Onde usar operadores e filtros]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+{% endalert %}
 
 ### Sintaxe para vários filtros
 
@@ -79,7 +83,7 @@ Os filtros de matriz são usados para alterar a saída das matrizes.
 | [map](https://shopify.dev/api/liquid/filters/map)           | Aceita a atribuição de um elemento da matriz como parâmetro e cria uma matriz a partir do valor de cada elemento da matriz.        | ✅ Sim   |
 | [reverse](https://shopify.dev/api/liquid/filters/reverse)       | Inverte a ordem dos itens em uma matriz.                                                                       | ✅ Sim   |
 | [size](https://shopify.dev/api/liquid/filters/size)          | Retorna o tamanho de uma string (o número de caracteres) ou de uma matriz (o número de elementos).                      | ✅ Sim   |
-| [slice](https://shopify.dev/api/liquid/filters/slice)        | Retorna uma substring de uma string ou um subconjunto de uma matriz, começando no índice especificado.                          | ✅ Sim   |
+| [slice](https://shopify.dev/api/liquid/filters/slice)        | Retorna uma substring de uma string ou um subconjunto de um array, começando no índice especificado.                          | ✅ Sim   |
 | [sort](https://shopify.dev/api/liquid/filters/sort)         | Classifica os elementos de uma matriz por uma determinada atribuição de um elemento da matriz.                                    | ✅ Sim   |
 | [sort_natural](https://shopify.dev/api/liquid/sort_natural) | Classifica os itens de uma matriz em ordem alfabética sem distinção entre maiúsculas e minúsculas.                                                | ✅ Sim   |
 | [uniq](https://shopify.dev/api/liquid/filters/uniq)         | Remove quaisquer instâncias duplicadas de elementos em uma matriz.                                                           | ✅ Sim   |
@@ -256,14 +260,14 @@ As aspas retas são diferentes das aspas curvas no Liquid. Tenha cuidado ao copi
 | Filtrar          | Descrição     | Com suporte |
 | :--------------- | ------------- | --------- |
 | [append](https://shopify.dev/api/liquid/filters/append)     | Acrescenta caracteres a uma string.           | ✅ Sim   |
-| [camelizar](https://shopify.dev/docs/api/liquid/filters/camelize)     | Converte uma string em CamelCase.             | ⛔ Não    |
+| [camelize](https://shopify.dev/docs/api/liquid/filters/camelize)     | Converte uma string em CamelCase.             | ⛔ Não    |
 | [capitalize](https://shopify.dev/api/liquid/filters/capitalize)     | Coloca a primeira palavra em maiúscula em uma string e reduz a minúscula dos caracteres restantes.         | ✅ Sim   |
 | [downcase](https://shopify.dev/api/liquid/filters/downcase)      | Converte uma string em letras minúsculas.         | ✅ Sim   |
 | [escape](https://shopify.dev/api/liquid/filters/escape)    | Escapa uma string.             | ✅ Sim   |
-| [manipular](https://shopify.dev/api/liquid/filters/handleize)        | Formata uma string em um identificador.        | ⛔ Não    |
-| [md5](https://shopify.dev/api/liquid/filters/md5)    | Converte uma string em um hash MD5. Consulte [Filtros de codificação]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) para obter mais informações.   | ✅ Sim   |
-| [sha1](https://shopify.dev/api/liquid/filters/sha1)    | Converte uma string em um hash SHA-1. Consulte [Filtros de codificação]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) para obter mais informações.  | ✅ Sim   |
-| hmac_sha1_hex<br>(anteriormente [hmac_sha_1](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1)) | Converte uma string em um hash SHA-1 usando um código de autenticação de mensagem de hash (HMAC). Passe a chave secreta da mensagem como um parâmetro para o filtro. Consulte [Filtros de codificação]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) para obter mais informações. | ✅ Sim   |
+| [handleize](https://shopify.dev/api/liquid/filters/handleize)        | Formata uma string em um identificador.        | ⛔ Não    |
+| [md5](https://shopify.dev/api/liquid/filters/md5)    | Converte uma string em um hash MD5. Consulte [Filtros de Codificação]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) para mais.   | ✅ Sim   |
+| [sha1](https://shopify.dev/api/liquid/filters/sha1)    | Converte uma string em um hash SHA-1. Consulte [Filtros de Codificação]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) para mais.  | ✅ Sim   |
+| hmac_sha1_hex<br>(anteriormente [hmac_sha_1](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1)) | Converte uma string em um hash SHA-1 usando um código de autenticação de mensagem de hash (HMAC). Passe a chave secreta da mensagem como um parâmetro para o filtro. Consulte [Filtros de Codificação]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters) para mais. | ✅ Sim   |
 | [hmac_sha256](https://shopify.dev/api/liquid/filters/hmac_sha256)    | Converte uma string em um hash SHA-256 usando um código de autenticação de mensagem de hash (HMAC). Passe a chave secreta da mensagem como um parâmetro para o filtro.       | ✅ Sim   |
 | hmac_sha512 | Converte uma string em um hash SHA-512 usando um código de autenticação de mensagem de hash (HMAC). Passe a chave secreta da mensagem como um parâmetro para o filtro. | ✅ Sim  |
 | [newline_to_br](https://shopify.dev/api/liquid/filters/newline_to_br)     | Insere uma tag HTML de quebra de linha `<br>` na frente de cada quebra de linha em uma string.        | ✅ Sim   |

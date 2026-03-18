@@ -351,6 +351,17 @@ Given that REST API keys allow access to potentially sensitive REST API endpoint
 
 If you accidentally expose a key, you can delete it from the Developer Console. For help with this process, open a [support ticket]({{site.baseurl}}/braze_support/).
 
+### Security of REST API keys and SDK API keys
+
+REST API keys and SDK API keys have different security profiles.
+
+| | REST API keys | SDK API keys |
+|---|---|---|
+| Purpose | Server-side authentication for the REST API (sending messages, exporting data, managing users) | Client-side identification for the Braze SDK (data ingestion, in-app messages, Content Cards) |
+| Visibility | **Must remain private**. Never expose in client-side code, public repositories, or user applications. | Designed to be public. Bundled inside your app binary or visible in web browser JavaScript, similar to a Google Analytics tracking ID. |
+| Solution if exposed | Immediately revoke the key and create a replacement in **Settings** > **APIs and Identifiers** > **API Keys**. An exposed REST API key can be used to send messages, export user data, or modify account settings. | No action required. An SDK API key can only ingest data and retrieve client-side messaging (such as in-app messages and Content Cards). It cannot export user data, send messages on your behalf, or modify campaigns. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
 ### API IP allowlisting
 
 For additional security, you can specify a list of IP addresses and subnets which are allowed to make REST API requests for a given REST API key. This is referred to as allowlisting, or whitelisting. To allow specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API key:

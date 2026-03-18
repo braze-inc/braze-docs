@@ -1,5 +1,5 @@
 ---
-nav_title: Crear banderas de características
+nav_title: Crear indicadores de características
 article_title: Crear indicadores de características
 page_order: 20
 description: "Este artículo de referencia explica cómo crear indicadores de características para coordinar el despliegue de nuevas características."

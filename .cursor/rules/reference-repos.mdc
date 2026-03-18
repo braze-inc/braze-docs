@@ -43,6 +43,10 @@ To have these folders available in the workspace, open **`braze-workspace.code-w
 
 **Layout:** The workspace uses relative paths. It works for anyone as long as braze-docs and all reference repos are **sibling folders** in the same parent (e.g. `~/Documents/braze-docs`, `~/Documents/platform`, …). The parent folder can be anywhere (Documents, `~/code`, etc.).
 
+### PR descriptions and public output
+
+When content has been verified using these Braze source repos, **never publish code paths** (e.g. file paths inside `platform` or SDK repos) in PR descriptions or other public-facing output. Use a generic phrase such as **"Verified against Braze source code."** instead.
+
 ### Keeping repos up to date
 
 Keep your reference repos current when verifying SDK behavior, APIs, or product behavior so documentation checks use the latest code.

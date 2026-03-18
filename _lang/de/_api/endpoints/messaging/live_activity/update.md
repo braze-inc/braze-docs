@@ -1,7 +1,7 @@
 ---
-nav_title: "POST: Update der Live-Aktivität"
+nav_title: "POST: Live-Aktivitäten aktualisieren"
 article_title: "POST: Live-Aktivität aktualisieren"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 1
 
 layout: api_page
@@ -19,7 +19,7 @@ description: "Dieser Artikel enthält Einzelheiten zum Endpunkt Update Live Acti
 
 Nachdem Sie eine Live-Aktivität registriert haben, können Sie eine JSON-Nutzlast übergeben, um Ihren Apple Push-Benachrichtigungsdienst (APNs) zu aktualisieren. Weitere Informationen finden Sie in der Dokumentation von Apple zum [Update Ihrer Live-Aktivitäten mit Push-Benachrichtigungen](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications).
 
-Wenn `content-available` nicht eingestellt ist, hat der Apple Push-Benachrichtigungsdienst (APNs) standardmäßig die Priorität 10. Wenn `content-available` eingestellt ist, ist diese Priorität 5. Weitere Informationen finden Sie unter [Apple Push-Objekt]({{site.baseurl}}/api/objects_filters/messaging/apple_object).
+Wenn`content-available`nicht festgelegt ist, beträgt die Standardpriorität des Apple-Push-Benachrichtigungs-Dienstes (APN) 10. Wenn  gesetzt`content-available` ist, beträgt diese Priorität 5. Weitere Informationen referenzieren Sie unter [Apple Push-Objekt]({{site.baseurl}}/api/objects_filters/messaging/apple_object).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
@@ -60,12 +60,12 @@ Um diesen Endpunkt zu verwenden, müssen Sie Folgendes tun:
 | `end_activity` | Optional | Boolesch | Wenn `true`, beendet diese Anfrage die Live-Aktivität. |
 | `dismissal_date` | Optional | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) String) | Dieser Parameter legt die Zeit fest, nach der die Live-Aktivität aus dem UI des Nutzers:innen entfernt wird. Wenn dieser Zeitpunkt in der Vergangenheit liegt und `end_activity` `true` ist, wird die Live-Aktivität sofort entfernt.<br><br> Wenn `end_activity` `false` ist oder weggelassen wird, aktualisiert dieser Parameter nur die Live-Aktivität.|
 | `stale_date` | Optional | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) String) | Dieser Parameter teilt dem System mit, wenn der Inhalt der Live-Aktivität in der UI des Nutzers:in als veraltet markiert wird. |
-| `notification` | Optional | Objekt | Fügen Sie ein [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) Objekt ein, um eine Push-Benachrichtigung zu definieren. Das Verhalten dieser Push-Benachrichtigung hängt davon ab, ob der Nutzer:innen aktiv ist oder ob er ein Proxy-Gerät verwendet. {::nomarkdown}<ul><li>Wenn ein <code>notification</code> enthalten ist und der Nutzer:innen auf seinem iPhone aktiv ist, wenn das Update zugestellt wird, wird die aktualisierte Live Activity UI nach unten geschoben und wie eine Push-Benachrichtigung angezeigt.</li><li>Wenn ein <code>notification</code> enthalten ist und der Nutzer:innen auf seinem iPhone nicht aktiv ist, leuchtet sein Bildschirm auf und zeigt das aktualisierte Live Activity UI auf seinem Sperrbildschirm an.</li><li>Die <code>notification alert</code> wird nicht als normale Push-Benachrichtigung angezeigt. Wenn ein Nutzer:innen ein Proxy-Gerät, wie eine Apple Watch, besitzt, kann die <code>alert</code> wird dort angezeigt.</li></ul>{:/} |
+| `notification` | Optional | Objekt | Fügen Sie ein [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) Objekt ein, um eine Push-Benachrichtigung zu definieren. Das Verhalten dieser Push-Benachrichtigung hängt davon ab, ob die Nutzer:innen aktiv sind oder ein Proxy-Gerät verwenden. {::nomarkdown}<ul><li>Wenn ein <code>notification</code> enthalten ist und der Nutzer:innen auf seinem iPhone aktiv ist, wenn das Update zugestellt wird, wird die aktualisierte Live Activity UI nach unten geschoben und wie eine Push-Benachrichtigung angezeigt.</li><li>Wenn ein <code>notification</code> enthalten ist und der Nutzer:innen auf seinem iPhone nicht aktiv ist, leuchtet sein Bildschirm auf und zeigt das aktualisierte Live Activity UI auf seinem Sperrbildschirm an.</li><li>Die <code>notification alert</code> wird nicht als normale Push-Benachrichtigung angezeigt. Wenn ein Nutzer:innen ein Proxy-Gerät, wie eine Apple Watch, besitzt, kann die <code>alert</code> wird dort angezeigt.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/update' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {YOUR-REST-API-KEY}' \

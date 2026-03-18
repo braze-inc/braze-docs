@@ -59,7 +59,7 @@ Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/user_guide/
 
 Aqui, você pode classificar, pesquisar e desativar o rastreamento para aliases de link.
 
-![Página de Alias de Link Rastreado que mostra aliases de link ativos e inativos associados a várias campanhas.]({% image_buster /assets/img/tracked_aliases.png %})
+![Página de Aliases de Link Rastreado que mostra aliases de link ativos e inativos associados a várias campanhas.]({% image_buster /assets/img/tracked_aliases.png %})
 
 {% alert tip %}
 Use os endpoints [List link alias for campaign]({{site.baseurl}}/get_campaign_link_alias/) e [List link alias for Canvas]({{site.baseurl}}/get_canvas_link_alias/) para extrair o conjunto `alias` em cada variante de mensagem em uma campanha ou um componente Canvas específico de e-mail.
@@ -136,7 +136,7 @@ O Braze só rastreia até os últimos 100 aliases de links clicados no nível do
 
 ### Filtros baseados em ações
  
-Você pode criar mensagens baseadas em ações direcionando qualquer link (rastreado ou não rastreado) ou redirecionar usuários com base em se eles clicaram em um alias em qualquer campanha de e-mail ou componente Canvas.
+Você pode criar mensagens baseadas em ações direcionando qualquer link (rastreado ou não rastreado) ou redirecionar usuários com base em se eles clicaram em um alias em qualquer campanha de e-mail ou componente do Canvas.
 
 ![Opções Baseadas em Ação para segmentar usuários que clicaram em um alias em um componente Canva ou interagiram com uma campanha.]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
 
@@ -156,7 +156,7 @@ Desvincular um link não realocará os segmentos existentes com o filtro para o 
 
 Os links em mensagens arquivadas são automaticamente desmarcados. No entanto, se as mensagens arquivadas forem desarquivadas, os links precisarão ser rastreados novamente. Quando os aliases de links são rastreados, os relatórios de links são indexados pelo alias em vez de domínios de nível superior ou URLs completos.
 
-Para visualizar todos os links em sua campanha de e-mail e seus respectivos cliques totais, acesse **Análise de Mensagens** > **Desempenho de E-mail** > **Prévia & Mapa de Calor**, e selecione o alternador **Mostrar Mapa de Calor**.
+Para visualizar todos os links em sua campanha de e-mail e seus respectivos cliques totais, acesse **Análise de Mensagens** > **Desempenho de E-mail** > **Prévia & Mapa de Calor**, e selecione o toggle **Mostrar Mapa de Calor**.
 
 ![Painel da Tabela de Links por Cliques Totais com aliases de link e seus cliques totais.]({% image_buster /assets/img/link_alias_total_clicks.png %}){: style="max-width:60%;"}
 
@@ -213,7 +213,7 @@ Para blocos de conteúdo, o Braze recomenda a criação de cópias de blocos de 
 
 ## Aliasing de links para URLs gerados pelo Liquid
 
-Para URLs que são geradas pelo Liquid, como `assign` declarações no HTML ou de um Bloco de Conteúdo, você deve adicionar um ponto de interrogação (`?`) ao tag Liquid. Isso permite que o Braze acrescente parâmetros de consulta (`lid = somevalue`) para que o link aliasing possa funcionar corretamente. Sem identificar onde anexar os parâmetros de consulta, o aliasing de links não reconhecerá esses URLs e os modelos de links não serão aplicados.
+Para URLs que são geradas por Liquid, como `assign` declarações no HTML ou de um Bloco de Conteúdo, você deve adicionar um ponto de interrogação (`?`) ao tag Liquid. Isso permite que o Braze acrescente parâmetros de consulta (`lid = somevalue`) para que o link aliasing possa funcionar corretamente. Sem identificar onde anexar os parâmetros de consulta, o aliasing de links não reconhecerá esses URLs e os modelos de links não serão aplicados.
 
 ### Exemplo
 
