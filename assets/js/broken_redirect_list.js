@@ -1399,7 +1399,7 @@ validurls['/docs/help/help_articles/in-app_messages/'] = '/docs/developer_guide/
 validurls['/docs/_help/help_articles/in-app_messages/in-app_message_impressions_appear_lower_than_expected/'] = '/docs/developer_guide/home/';
 validurls['/docs/help/help_articles/in-app_messages/in-app_messages_not_displaying'] = '/docs/developer_guide/home/';
 validurls['/docs/help/help_articles/push/no_push_notification_was_received/'] = '/docs/user_guide/channels/push/troubleshooting/';
-validurls['/docs/help/help_articles/push/push_error_codes/'] = '/docs/user_guide/channels/push/troubleshooting/#push-error-codes';
+validurls['/docs/help/help_articles/push/push_error_codes/'] = '/docs/user_guide/channels/push/push_error_codes/';
 
 validurls['/docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/react_native/sdk_integration/';
 
@@ -2508,7 +2508,8 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment'] = '/docs/partners/data_and_analytics/customer_data_platform/segment/segment';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_engage'] = '/docs/partners/data_and_analytics/customer_data_platform/segment/segment_engage';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents'] = '/docs/partners/data_and_analytics/customer_data_platform/segment/segment_for_currents';
-validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/simondata'] = '/docs/partners/data_and_analytics/customer_data_platform/simondata';
+validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/simondata'] = '/docs/partners/data_and_analytics/customer_data_platform/simonai';
+validurls['/docs/partners/data_and_analytics/customer_data_platform/simondata'] = '/docs/partners/data_and_analytics/customer_data_platform/simonai';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/snowplow'] = '/docs/partners/data_and_analytics/customer_data_platform/snowplow';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium'] = '/docs/partners/data_and_analytics/customer_data_platform/tealium';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium'] = '/docs/partners/data_and_analytics/customer_data_platform/tealium/tealium';
@@ -4336,16 +4337,14 @@ validurls['/docs/user_guide/message_building_by_channel/push/testing'] = '/docs/
 validurls['/docs/user_guide/message_building_by_channel/push/testing/'] = '/docs/user_guide/messaging/messaging_fundamentals/sending_test_messages/?tab=push';
 validurls['/docs/user_guide/message_building_by_channel/push/types'] = '/docs/user_guide/channels/push/types';
 validurls['/docs/user_guide/message_building_by_channel/push/types/'] = '/docs/user_guide/channels/push/types/';
-validurls['/docs/user_guide/message_building_by_channel/push/push_error_codes'] = '/docs/user_guide/channels/push/troubleshooting/#push-error-codes';
-validurls['/docs/user_guide/message_building_by_channel/push/push_error_codes/'] = '/docs/user_guide/channels/push/troubleshooting/#push-error-codes';
+validurls['/docs/user_guide/message_building_by_channel/push/push_error_codes'] = '/docs/user_guide/channels/push/push_error_codes/';
+validurls['/docs/user_guide/message_building_by_channel/push/push_error_codes/'] = '/docs/user_guide/channels/push/push_error_codes/';
 validurls['/docs/user_guide/message_building_by_channel/push/advanced_push_options'] = '/docs/user_guide/channels/push/create_a_push_message';
 validurls['/docs/user_guide/message_building_by_channel/push/advanced_push_options/'] = '/docs/user_guide/channels/push/create_a_push_message/';
 validurls['/docs/user_guide/message_building_by_channel/push/android'] = '/docs/user_guide/channels/push/platform_specific_resources/android';
 validurls['/docs/user_guide/message_building_by_channel/push/android/'] = '/docs/user_guide/channels/push/platform_specific_resources/android/';
 validurls['/docs/user_guide/message_building_by_channel/push/ios'] = '/docs/user_guide/channels/push/platform_specific_resources/ios';
 validurls['/docs/user_guide/message_building_by_channel/push/ios/'] = '/docs/user_guide/channels/push/platform_specific_resources/ios/';
-validurls['/docs/user_guide/channels/push/push_error_codes'] = '/docs/user_guide/channels/push/troubleshooting/#push-error-codes';
-validurls['/docs/user_guide/channels/push/push_error_codes/'] = '/docs/user_guide/channels/push/troubleshooting/#push-error-codes';
 validurls['/docs/user_guide/channels/push/advanced_push_options'] = '/docs/user_guide/channels/push/create_a_push_message';
 validurls['/docs/user_guide/channels/push/advanced_push_options/'] = '/docs/user_guide/channels/push/create_a_push_message/';
 validurls['/docs/user_guide/channels/push/advanced_push_options/push_action_buttons'] = '/docs/user_guide/channels/push/create_a_push_message/push_action_buttons';
