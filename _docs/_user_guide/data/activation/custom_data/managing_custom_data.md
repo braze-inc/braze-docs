@@ -10,6 +10,8 @@ description: "This reference article covers how to manage custom events and attr
 
 > This page covers how to pre-populate custom data in your campaigns and segments, manage custom events and attributes and their properties, and configure data types. For blocklisting and deleting custom data, see [Blocklist custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/blocklist_custom_data/).
 
+For support data types for temporary variables in Canvases only, see [Context variables]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/context_variables/).
+
 To learn how to manage custom attributes in particular (including adding descriptions, adding tags, and marking attributes as PII), refer to [Managing custom attributes]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes/#managing-custom-attributes).
 
 ## Pre-populating custom data
