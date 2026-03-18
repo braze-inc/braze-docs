@@ -72,6 +72,8 @@ Fullscreen messages are exactly what you'd expect—they take up the whole scree
 
 In addition to these default message templates, you can also further customize your messaging using custom HTML in-app messages, web modals with CSS, or web email capture forms. For more information, refer to [Customization]({{site.baseurl}}/user_guide/channels/in_app_messages/customize/).
 
+For how templated delivery at display time affects **abort** logging, see [In-App Message FAQ]({{site.baseurl}}/user_guide/channels/in_app_messages/faq/).
+
 ## Next steps
 
 - [Create an in-app message with the drag-and-drop editor]({{site.baseurl}}/user_guide/channels/in_app_messages/drag_and_drop/)

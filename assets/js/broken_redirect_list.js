@@ -2358,8 +2358,8 @@ validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/loca
 validurls['/docs/user_guide/engagement_tools/canvas/get_started/canvas_status/'] = '/docs/user_guide/messaging/governance/statuses/';
 validurls['/docs/user_guide/engagement_tools/campaigns/getting_started/understanding_campaign_status/'] = '/docs/user_guide/messaging/governance/statuses/';
 
-validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/archiving_campaigns/'] = '/docs/user_guide/messaging/messaging_fundamentals/archiving/';
-validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/archiving_canvases/'] = '/docs/user_guide/messaging/messaging_fundamentals/archiving/';
+validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/archiving_campaigns/'] = '/docs/user_guide/messaging/governance/archiving/';
+validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/archiving_canvases/'] = '/docs/user_guide/messaging/governance/archiving/';
 
 validurls['/docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_duplication/'] = '/docs/user_guide/messaging/messaging_fundamentals/duplicating/';
 validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/'] = '/docs/user_guide/messaging/messaging_fundamentals/duplicating/';
@@ -2673,8 +2673,8 @@ validurls['/docs/api/endpoints/messaging/duplicate_canvases/'] = '/docs/api/endp
 
 validurls['/docs/user_guide/audience/segments/segment_funnels/'] = '/docs/user_guide/audience/segments/measuring_segment_size/';
 
-validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/'] = '/docs/user_guide/messaging/messaging_fundamentals/copy_across_workspaces/';
-validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/?tab=email%20body'] = '/docs/user_guide/messaging/messaging_fundamentals/copying_across_workspaces/#email-body';
+validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/'] = '/docs/user_guide/messaging/governance/copy_across_workspaces/';
+validurls['/docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/?tab=email%20body'] = '/docs/user_guide/messaging/governance/copy_across_workspaces/#email-body';
 
 validurls['/docs/developer_guide/banners/embedding_banners/'] = '/docs/developer_guide/banners/creating_placements/';
 
@@ -3348,7 +3348,7 @@ validurls['/docs/user_guide/engagement_tools/landing_pages/tracking_users/#track
 validurls['/docs/user_guide/engagement_tools/landing_pages/customizing_urls/#customizing-landing-page-urls'] = '/docs/user_guide/messaging/landing_pages/customizing_urls/#customize-landing-page-urls';
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/targeting_users/#targeting-users'] = '/docs/user_guide/messaging/messaging_fundamentals/targeting_users/#target-users';
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/#scheduling-your-message'] = '/docs/user_guide/messaging/messaging_fundamentals/delivery_types/#schedule-your-message';
-validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/#copying-campaigns-and-canvases-across-workspaces'] = '/docs/user_guide/messaging/messaging_fundamentals/copying_across_workspaces/#copy-campaigns-and-canvases-across-workspaces';
+validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/#copying-campaigns-and-canvases-across-workspaces'] = '/docs/user_guide/messaging/governance/copy_across_workspaces/#copy-campaigns-and-canvases-across-workspaces';
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/accessibility/#building-accessible-messages-in-braze'] = '/docs/user_guide/messaging/messaging_fundamentals/accessibility/#build-accessible-messages-in-braze';
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/#creating-right-to-left-messages'] = '/docs/user_guide/messaging/messaging_fundamentals/localization/right_to_left_messages/#create-right-to-left-messages';
 validurls['/docs/user_guide/engagement_tools/templates_and_media/managing_templates/#managing-templates'] = '/docs/user_guide/messaging/templates/managing_templates/#manage-templates';
@@ -3740,9 +3740,12 @@ validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/approvals/']
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules/'] = '/docs/user_guide/messaging/governance/approvals/messaging_rules/';
 validurls['/docs/user_guide/messaging/messaging_fundamentals/approvals/'] = '/docs/user_guide/messaging/governance/approvals/';
 validurls['/docs/user_guide/messaging/messaging_fundamentals/approvals/messaging_rules/'] = '/docs/user_guide/messaging/governance/approvals/messaging_rules/';
-validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/archiving/'] = '/docs/user_guide/messaging/messaging_fundamentals/archiving/';
+validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/archiving/'] = '/docs/user_guide/messaging/governance/archiving/';
+validurls['/docs/user_guide/messaging/messaging_fundamentals/archiving/'] = '/docs/user_guide/messaging/governance/archiving/';
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/conversion_events/'] = '/docs/user_guide/messaging/messaging_fundamentals/conversion_events/';
-validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'] = '/docs/user_guide/messaging/messaging_fundamentals/copy_across_workspaces/';
+validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'] = '/docs/user_guide/messaging/governance/copy_across_workspaces/';
+validurls['/docs/user_guide/messaging/messaging_fundamentals/copy_across_workspaces/'] = '/docs/user_guide/messaging/governance/copy_across_workspaces/';
+validurls['/docs/user_guide/messaging/messaging_fundamentals/copying_across_workspaces/'] = '/docs/user_guide/messaging/governance/copy_across_workspaces/';
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/'] = '/docs/user_guide/messaging/messaging_fundamentals/delivery_and_entry_types/';
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/'] = '/docs/user_guide/messaging/messaging_fundamentals/duplicating/';
 validurls['/docs/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/'] = '/docs/user_guide/messaging/design_and_edit/editor_blocks/';

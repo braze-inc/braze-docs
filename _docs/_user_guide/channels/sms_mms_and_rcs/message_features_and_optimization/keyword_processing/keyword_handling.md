@@ -126,7 +126,17 @@ This trigger supports filtering on the specific inbound message using is or is n
 
 ### Dealing with unknown keywords
 
-We strongly recommend setting up an auto-response for when users send inbound keywords that don't match an existing keyword. For more information, see [Handle unknown phone numbers]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/unknown_phone_numbers/).
+We strongly recommend setting up an auto-response when subscribed users text something that doesn't match any of your defined keywords (handled under the **OTHER** keyword category).
+
+To send a default reply—for example, "Sorry! We didn't recognize that keyword."—do the following:
+
+1. Create an [SMS campaign]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/create/).
+2. For **Target audience**, choose **All users** (the trigger still limits who receives the message).
+3. For **Schedule**, choose **Action-based delivery**.
+4. Set the trigger to **Send inbound SMS** to the appropriate subscription group **within keyword category OTHER**.
+5. In the **Messaging** step, enter the response body you want users to receive.
+
+For how Braze handles inbound messages from **unknown** phone numbers (before a profile exists), see [Handle unknown phone numbers]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/unknown_phone_numbers/).
 
 {% alert tip %}
 Interested in seeing how these keywords and keyword categories can be used in your campaigns and Canvases to retarget and trigger messages? Visit [User retargeting]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/user_retargeting/) for more information.

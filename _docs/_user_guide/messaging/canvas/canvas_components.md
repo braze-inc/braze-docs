@@ -1,5 +1,5 @@
 ---
-nav_title: Build Canvases
+nav_title: Canvas components
 article_title: Canvas components
 page_order: 3
 alias: "/user_guide/messaging/canvas/canvas_components/about/"

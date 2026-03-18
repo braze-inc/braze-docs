@@ -15,6 +15,8 @@ description: "This landing page is home to SMS (Short Messaging Service), MMS (M
 
 > SMS (Short Messaging Service), MMS (Multimedia Messaging Service), and RCS (Rich Communication Services) offer a more direct way to reach your users than most other messaging channels, as they utilize phone numbers for real-time reach.
 
+SMS remains one of the most widely used channels worldwide—billions of text messages are sent every day—because it is fast, direct, and familiar to customers.
+
 ## Prerequisites
 
 SMS, MMS, and RCS availability depends on your Braze package. Contact your account manager or customer success manager to get started.
@@ -41,6 +43,17 @@ Before you start, make sure you have the following:
 - **SMS** delivers text-only messages up to 160 characters (or 70 characters with Unicode). It's universally supported across all mobile devices and carriers.
 - **MMS** extends SMS with support for multimedia content, including images, GIFs, and audio. MMS requires carrier and device support.
 - **RCS** is the next generation of business messaging, offering rich features such as branded sender profiles, suggested replies, carousels, and read receipts. RCS availability depends on carrier and device support.
+
+### Why use RCS?
+
+RCS (Rich Communication Services) builds on SMS with a richer, more app-like experience in the default messaging app on supported devices. Brands use RCS to:
+
+- Deliver high-resolution images and video instead of only plain text.
+- Add suggested replies and actions so customers can respond with one tap.
+- Show a verified sender profile with branding so messages are easy to trust.
+- Support read receipts and typing indicators where carriers allow it.
+
+RCS is suited to use cases such as transactional updates (shipping, appointments), promotions with rich creative, customer support with quick-reply paths, and onboarding or tutorials that benefit from media and structured actions. For setup and migration from SMS, see [RCS setup]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup/).
 
 ## Next steps
 

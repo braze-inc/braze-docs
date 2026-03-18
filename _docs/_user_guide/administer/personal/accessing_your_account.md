@@ -29,9 +29,7 @@ You can either log in from the [Braze.com](https://www.braze.com) home site, or 
 * [Okta]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/okta/)
 * [OneLogin]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/onelogin/)
 
-{% alert note %}
-After you log into Braze with SSO, you can no longer use your password to log into the dashboard.
-{% endalert %}
+After you log into Braze with SSO, you can no longer use your password to log into the dashboard.Both email addresses will direct emails to the same inbox, but Braze will recognize them as separate accounts when you log in. Clearing cookies will log you out, so unsaved work will be lost.
 
 ## Supported browsers
 
@@ -93,6 +91,16 @@ Clearing cookies logs you out, so unsaved work is lost.
 - [Delete all cookies in Microsoft Edge](https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d#bkmk_deleteallcookies)
 
 If clearing your browser cache and cookies doesn't resolve your issues, contact [Support]({{site.baseurl}}/support_contact/).
+
+### "Please Refresh Page" or "Unexpected Error" while navigating the dashboard
+
+This error may appear when a company user does not belong to any workspaces. To troubleshoot:
+
+1. Go to the [Company Users]({{site.baseurl}}/user_guide/administer/global/user_management/manage_company_users/) page.
+2. Check whether the user has been added to a workspace.
+3. If they are not part of any workspace, add them and assign the appropriate permissions.
+4. Ask the user to refresh their dashboard.
+5. If the issue persists, contact [Support]({{site.baseurl}}/support_contact/).
 
 ### Accessing the drag-and-drop editor
 

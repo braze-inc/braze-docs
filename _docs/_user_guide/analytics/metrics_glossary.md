@@ -643,17 +643,17 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 
 {% multi_lang_include analytics/metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} 
 
-|Channel|Behavior|
-|-------------|----------------------|
-|Email, Push, Webhooks|The user is counted as a recipient after the message is sent.|
-|Content Cards, In-app messages|The user is counted as a recipient after they view the message for the first time.|
+|Channel|Additional information|
+|-------|-----------------------|
+|Email, Push, Webhooks|After the initial send.|
+|Content Cards, In-app messages|When the user views the Content Card or message for the first time.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     Calculation:
     <ul>
-        <li><i>Primary Conversions (A) or Primary Conversion Event</i>: Number of users who completed the primary conversion event within the defined conversion window </li>
+        <li><i>Primary Conversions (A) or Primary Conversion Event</i>: Count</li>
         <li><i>Primary Conversions (A) %</i> or <i>Primary Conversion Event Rate</i>: (Primary Conversions) / (Unique Recipients)</li>
     </ul>
 </span>
@@ -830,6 +830,8 @@ Email
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} If an email receives a soft bounce, we will usually retry within 72 hours, but the number of retry attempts varies from receiver to receiver.
+
+Note that _Soft Bounces_ differ from _Deferrals_. If no email is successfully delivered during this retry period, Braze sends one soft bounce event per attempted campaign send. Before February 25, 2025, these retries were counted as multiple soft bounces for one campaign send.
 
 While soft bounces aren’t tracked in your campaign analytics, you can monitor the soft bounces in the [Message Activity Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/). You can also exclude these users from your sending or look back at the amount of soft bounces from the last 30 days with the [Soft Bounced segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced). In the Message Activity Log, you can also see the reason for the soft bounces and understand possible discrepancies between the “sends” and “deliveries” for your email campaigns.
 

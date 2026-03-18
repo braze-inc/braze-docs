@@ -118,6 +118,10 @@ You can also include a [contact card]({{site.baseurl}}/user_guide/channels/sms_m
 
 MMS messages are billed at a different rate than text-only SMS. Not all carriers can accept MMS. In these cases, the MMS is automatically converted to an image link the user can select.
 
+### Inbound MMS and personalization
+
+When a customer sends an inbound message that includes media, Braze exposes the media in [Currents SMS inbound events]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events) and in Liquid as `{{sms.${inbound_media_urls}}}` (for example in retargeting or follow-up messages). For more on using inbound SMS properties in Canvas, see [Message step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/).
+
 {% endtab %}
 {% tab RCS %}
 

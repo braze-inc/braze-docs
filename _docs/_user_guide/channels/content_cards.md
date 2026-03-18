@@ -31,6 +31,18 @@ Here are some benefits of using Content Cards versus having your developers buil
 
 {% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
 
+## Content Cards by the numbers
+
+When you build Content Cards in Braze, you can update messaging and measure impact without overhauling your app or website. Highlights from Braze research include:
+
+- Content Cards are **38X** more effective than email at boosting sales over a 72-hour window.[^1]
+- Using Content Cards in loyalty enrollment campaigns boosts conversions by **5X**.[^1]
+- Outreach through push notifications, in-app messages, and Content Cards drives **6.9X** more sessions than push alone.[^2]
+- Outreach through email, in-app messages, and Content Cards drives **3.6X** longer average user lifetime than email alone.[^2]
+
+[^1]: [8 tips for making the most of your customer retention campaigns](https://www.braze.com/resources/articles/8-tips-for-making-the-most-of-your-customer-retention-campaigns)
+[^2]: [Report: The cross-channel marketing difference](https://www.braze.com/resources/reports-and-guides/the-cross-channel-marketing-difference-report)
+
 ## Use cases
 
 Refer to this section for some common use cases for Content Cards.

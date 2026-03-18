@@ -34,10 +34,10 @@ guide_menu_list:
     link: /docs/user_guide/messaging/governance/approvals/messaging_rules/
     image: /assets/img/braze_icons/check-square.svg
   - name: Archiving messages
-    link: /docs/user_guide/messaging/messaging_fundamentals/archiving/
+    link: /docs/user_guide/messaging/governance/archiving/
     image: /assets/img/braze_icons/archive.svg
   - name: Copying across workspaces
-    link: /docs/user_guide/messaging/messaging_fundamentals/copying_across_workspaces/
+    link: /docs/user_guide/messaging/governance/copy_across_workspaces/
     image: /assets/img/braze_icons/copy-07.svg
   - name: Duplicating messages
     link: /docs/user_guide/messaging/messaging_fundamentals/duplicating/
