@@ -295,7 +295,7 @@ The following errors are specific to the `/users/track` endpoint and are returne
 | `BAD_SUBSCRIPTION_GROUP_STATE` | `subscription_state` for a subscription group must be `subscribed` or `unsubscribed`. |
 | `BLACKLISTED_EXTERNAL_USER_ID` | The provided `external_id` is blocklisted and disallowed. |
 | `EMAIL_BAD_FORMAT` | The value provided for `email` is not a valid email address. |
-| `EXTERNAL_USER_ID_TOO_LARGE` | The `external_id` exceeds the maximum allowed length of 1,000 bytes. |
+| `EXTERNAL_USER_ID_TOO_LARGE` | The `external_id` exceeds the maximum allowed length of 987 bytes. |
 | `INVALID_ATTRIBUTE_EMAIL_SUBSCRIPTION_INFO` | `email_subscription_info` is not a valid attribute. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
