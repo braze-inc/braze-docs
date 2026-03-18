@@ -15,7 +15,7 @@ Context variables are **not** the same as persisted **custom data**. They exist 
 
 For data that should live on the profile, on events, or in catalogs, use custom data. To set that up in the dashboard, start with [Manage custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/managing_custom_data/).
 
-When you choose **types and value formats** for context variables, those formats match what [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/) describes under [Event property data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#expected-format) (**Expected format**). That article also explains how [filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#filtering-and-segmentation-operators) differ across custom attributes, event properties, and catalog selections—which helps when you compare Canvas behavior (for example, [context variable filters](#context-variable-filters)) to segments or catalog selections.
+When you choose **types and value formats** for context variables, those formats match what [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/) describes under [Event property data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#expected-format) (**Expected format**). That model isn't the same as [context variable filters](#context-variable-filters) in Canvas. For more information about operators on profiles, events, and catalog selections, see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/).
 
 ## How context variables work
 
@@ -54,7 +54,7 @@ Variable 3 will not be evaluated or stored because the sum of the previous varia
 
 ## Data types
 
-The following table lists the data types you can assign when you create or update a context variable in a **Context step**. For a single reference on which types Braze supports for [custom attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#custom-attribute-data-types), [event properties]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#event-property-data-types), and [catalogs]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#catalog-data-types), see [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/). To compare operators across those surfaces (and how they differ from Canvas-only filters), see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#filtering-and-segmentation-operators).
+The following table lists the data types you can assign when you create or update a context variable in a **Context step**. For which types Braze supports for [custom attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#custom-attribute-data-types), [event properties]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#event-property-data-types), and [catalogs]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#catalog-data-types), see [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/). To compare operators on those surfaces with Canvas-only filters, see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/).
 
 {% alert note %}
 Context variables use the same expected value formats as **Data types** > **Event property data types** > [Expected format]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#expected-format). <br><br>When using the array type, Braze tries to parse the value as JSON, which allows arrays of objects to be successfully created. If the objects within your arrays are not valid JSON, the result will be a simple array of strings. <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
@@ -161,6 +161,10 @@ You can create filters that use previously declared context variables in [Audien
 Context variable filters are only available for Audience Paths and Decision Split steps. 
 {% endalert %}
 
+#### How context variable filters differ from segments and catalogs
+
+Context variable filters run only inside a Canvas (Audience Paths and Decision Split). They don't appear in the segment builder, and you can't use context variables in [segments]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/) or in [catalog selections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/). The operators you see for each comparison are determined by the Canvas UI for that step and data type. They aren't the same as the operator sets for custom attributes, event properties, or catalog columns described in [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/).
+
 Context variables are declared and only accessible in the scope of a Canvas, meaning they can't be referenced in segments. Context variable filters function similarly in Audience Paths and Decision Split steps—Audience Path steps represent multiple groups, while Decision Split steps represent binary decisions.
 
 ![Decision Split step example with the option to create a filter with a context variable.]({% image_buster /assets/img/context_decision_split.png %}){: style="max-width:90%;"}
@@ -211,6 +215,7 @@ In all circumstances, we strongly recommend using [Liquid time_zone filters]({{s
 ## Related articles
 
 - [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/)
+- [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/)
 - [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/)
 - [Manage custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/managing_custom_data/)
 - [Personalization and dynamic content with Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)

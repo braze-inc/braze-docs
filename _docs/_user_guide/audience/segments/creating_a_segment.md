@@ -37,7 +37,7 @@ For example, if you'd like to send an in-app message to only iOS devices, select
 
 ## Step 4: Add filters to your segment
 
-Add at least one filter to your segment. You can combine as many filters as you want to make your segmentation more specific. 
+Add at least one filter to your segment. You can combine as many filters as you want to make your segmentation more specific. For more information about how operators apply to custom attributes, event properties, and catalog-related targeting, and how Segment Extensions compare to standard segments, see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/).
 
 {% multi_lang_include alerts/note_alerts.md alert='Segment profiles first app use' %}
 

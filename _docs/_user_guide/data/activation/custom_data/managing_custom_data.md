@@ -1,7 +1,7 @@
 ---
 nav_title: Manage custom data
 article_title: Manage Custom Data
-page_order: 2
+page_order: 3
 page_type: reference
 description: "This reference article covers how to manage custom events and attributes—pre-populating, adding descriptions and tags, managing event properties, forcing data types, and marking attributes as PII."
 ---

@@ -49,7 +49,7 @@ For more information, refer to [Catalogs]({{site.baseurl}}/user_guide/data/activ
 
 Braze supports several data types for your custom data—including boolean, number, string, array, time, and object types—each with specific behaviors and segmentation options. The data type you choose affects how you can filter and personalize in campaigns and segments.
 
-For a full reference of supported data types for custom attributes, event properties, and catalogs, refer to [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/).
+For a full reference of supported data types for custom attributes, event properties, and catalogs, refer to [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/). For more information about how filtering and segmentation operators differ across those surfaces and about catalog selection limits, refer to [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/).
 
 ## Managing your data integrity
 

@@ -32,7 +32,7 @@ To create a selection, do the following.
 3. Give your selection a name and optional description.
 4. For **Filter Field**, select the catalog column you want to filter by. String fields with more than 1,000 characters can't be selected for filters.
 5. For **Operator**, choose **equals** or **does not equal**. These are the only operators available for catalog selection filters, regardless of column type.
-6. For **Attribute**, enter the comparison value. You can use Liquid (for example, a custom attribute). For how this compares to segmentation on profiles and events, see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#filtering-and-segmentation-operators) on the Data types page.
+6. For **Attribute**, enter the comparison value. You can use Liquid (for example, a custom attribute). For more information about how this compares to segmentation on profiles and events, see [Filtering and segmentation operators]({{site.baseurl}}/user_guide/data/activation/custom_data/filtering_operators/).
 7. In the **Sort type** section, determine how results are sorted. By default, results are returned in no particular order. To specify sorting by a specific field, turn off **Randomize Sort Order** and specify the **Sort Field** and **Sort Order** (ascending or descending).
 8. In the **Results limit** section, enter the results (up to 50).
 9. Select **Create Selection**.
