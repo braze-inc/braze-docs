@@ -101,7 +101,7 @@ The following are all available permissions you can assign at the Team level. An
 - Launch Campaigns
 - Launch Canvases
 - Export User Data
-- View User Profiles PII Compliant
+- View User Profiles (PII Redacted)
 - Edit Dashboard Users
 - Approve Campaigns
 - Approve Canvases
