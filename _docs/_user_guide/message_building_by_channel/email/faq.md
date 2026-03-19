@@ -68,7 +68,7 @@ You may see no email opens or clicks if there's a misconfiguration in your track
 
 ### What are the potential risks of triggering server clicks?
 
-Certain elements of an email message, such as overly long messages or too many exclamation marks, can trigger email security responses. These responses can affect reporting and IP reputation and lead users to unsubscribe. 
+Certain elements of an email message, such as overly long messages or too many exclamation marks, can trigger email security responses. These responses can affect reporting and IP reputation and lead users to unsubscribe.
 
 For best practices on how to handle these responses, refer to [Handling increases in click rates]({{site.baseurl}}/help/help_articles/email/open_rates/).
 
