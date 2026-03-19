@@ -1,6 +1,6 @@
 ---
-nav_title: Connected sources
-article_title: Connected sources
+nav_title: Connected Sources
+article_title: Connected Sources
 description: "This page covers how to use Braze Cloud Data Ingestion to sync relevant data with your Snowflake, Redshift, BigQuery, and Databricks integration."
 page_order: 2
 page_type: reference
@@ -13,7 +13,7 @@ page_type: reference
 
 After adding a connected source to your Braze workspace, you can create a CDI segment within Segment Extensions. CDI Segment Extensions let you write SQL that directly queries your data warehouse (using data there that’s made available through your CDI Connected Source), and creates and maintains a group of users that can be targeted within Braze. 
 
-For more information on creating a segment with this source, refer to [CDI Segment Extensions]({{site.baseurl}}/user_guide/audience/segments/segment_extension/cdi_segments/).
+For more information on creating a segment with this source, refer to [CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 
 {% alert warning %}
 Because connected sources run on your data warehouse directly, you will incur all costs associated with running these queries in your data warehouse. Connected sources don't log data points, and CDI Segment Extensions don't consume SQL segment credits.
@@ -495,7 +495,7 @@ You may set up multiple sources with Braze, but each source should be configured
 
 ## Using the connected source
 
-After the source is created, you can use it to create one or more CDI Segment Extensions. For more information on creating a segment with this source, refer to the [CDI Segment Extensions documentation]({{site.baseurl}}/user_guide/audience/segments/segment_extension/cdi_segments/).
+After the source is created, you can use it to create one or more CDI Segment Extensions. For more information on creating a segment with this source, refer to the [CDI Segment Extensions documentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 
 {% alert note %}
 If queries are consistently timing out and you have set a maximum runtime of 60 minutes, consider trying to optimize your query execution time or dedicating more compute resources (such as a larger warehouse) to the Braze user.

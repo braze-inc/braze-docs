@@ -1,16 +1,14 @@
 ---
 nav_title: Manage custom data
 article_title: Manage Custom Data
-page_order: 2
+page_order: 20
 page_type: reference
-description: "This reference article covers how to manage custom events and attributes—pre-populating, adding descriptions and tags, managing event properties, forcing data types, and marking attributes as PII."
+description: "This reference article covers how to manage custom data, such as pre-populating campaigns and segments or blocklisting and deleting data."
 ---
 
 # Manage custom data
 
-> This page covers how to pre-populate custom data in your campaigns and segments, manage custom events and attributes and their properties, and configure data types. For blocklisting and deleting custom data, see [Blocklist custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/blocklist_custom_data/).
-
-To learn how to manage custom attributes in particular (including adding descriptions, adding tags, and marking attributes as PII), refer to [Managing custom attributes]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes/#managing-custom-attributes).
+> This page covers how to pre-populate custom data in your campaigns and segments, blocklist data that is no longer useful, and manage custom events and attributes and properties.<br><br>To learn how to manage custom attributes in particular, refer to [Managing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes).
 
 ## Pre-populating custom data
 
@@ -23,34 +21,156 @@ To pre-populate custom events and attributes, do the following:
 ![Navigate to Custom Attributes or Custom Events or Products.]({% image_buster /assets/img_archive/prepopulate_page.png %}){: style="max-width:90%;" }
 
 {: start="2"}
-2. To add a custom attribute, event, or product, go to the respective page and select **Add Custom Attributes** or **Add Custom Events** or **Add Products**.<br><br>For custom attributes, select a [data type]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#custom-attribute-data-types) for this attribute (for instance, boolean or string). An attribute's data type determines the segmentation filters available for that attribute. <br><br>![Add new attribute or event]({% image_buster /assets/img_archive/prepopulate_add.png %}){: style="max-width:80%;" }
+2. To add a custom attribute, event, or product, go to the respective page and select **Add Custom Attributes** or **Add Custom Events** or **Add Products**.<br><br>For custom attributes, select a [data type]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) for this attribute (for instance, boolean or string). An attribute's data type will determine the segmentation filters available for that attribute. <br><br>![Add new attribute or event]({% image_buster /assets/img_archive/prepopulate_add.png %}){: style="max-width:80%;" }
 3. Select **Save**.
 
 ### Naming custom events and custom attributes
 
-Custom events and custom attributes are case-sensitive. Keep this in mind when your development team integrates these custom events or attributes later. They must name the custom events or attributes exactly as you named them here, or Braze generates a different custom event or attribute.
+Custom events and custom attributes are case-sensitive. Keep this in mind when your development team integrates these custom events or attributes later. They must name the custom events or attributes exactly as you named them here, or Braze will generate a different custom event or attribute.
 
 ## Managing properties
 
-After you have created a custom event or product, select **Manage Properties** for that event or product to add new properties, blocklist existing properties, and view which campaigns or Canvases use this property in a [trigger event]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/).
+After you have created a custom event or product, select **Manage Properties** for that event or product to add new properties, blocklist existing properties, and view which campaigns or Canvases use this property in a [trigger event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
 
 ![Custom properties for a custom event.]({% image_buster /assets/img_archive/manageproperties1.png %}){: style="max-width:80%"}
 
-To blocklist event or product properties, use the actions menu on the properties page. For blocklisting custom attributes, events, or products entirely, see [Blocklist custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/blocklist_custom_data/).
+To make these added custom attributes, events, products, or event properties traceable, you must ask your development team to create them in the SDK using the exact name you used to add them earlier. Or, you can use the Braze [API]({{site.baseurl}}/api/basics/) to import data on that attribute. After that, the custom attribute, event, or other will be actionable and applied to your users.
 
-To make these added custom attributes, events, products, or event properties traceable, you must ask your development team to create them in the SDK using the exact name you used to add them earlier. Or, you can use the Braze [API]({{site.baseurl}}/api/basics/) to import data on that attribute. After that, the custom attribute, event, or other is actionable and applied to your users.
+{% multi_lang_include alerts/note_alerts.md alert='Manage custom data storage' %}
 
-{% include alerts/note_alerts.md alert='Manage custom data storage' %}
+## Blocklisting custom data
 
-## Data type detection across environments
+You may occasionally identify custom attributes, custom events, or purchase events that either log too many data points, are no longer useful to your marketing strategy, or were recorded in error. 
 
-Braze automatically detects the data type of a custom attribute based on the first value it receives. If your development environment sends a numeric value like `100` first, the attribute is stored as a number. If your production environment's first value arrives as a string (such as `"100"` wrapped in quotes), the attribute is stored as a string.
+To stop this data from being sent to Braze, you can blocklist a custom data object while your engineering team works to remove it from the backend of your app or website. Blocklisting prevents a particular custom data object from being recorded by Braze going forward, meaning it won't show up when searching for a specific user.
 
-To prevent this, ensure your integration sends consistent data types across all environments. If the wrong type is already set, you can force the correct data type in **Data Settings** > **Custom Attributes** by using the [data type dropdown](#forcing-data-type-comparisons).
+Blocklisted data will not be sent by the SDK, and the Braze dashboard won't process blocklisted data from other sources (for example, the API). However, blocklisting doesn't remove data from user profiles or retroactively decrease the amount of data points incurred for that custom data object.
 
-## Forcing data type comparisons {#forcing-data-type-comparisons}
+### Required user permissions
 
-Braze automatically recognizes data types for attribute data that is sent to it. However, in the event multiple data types are applied to a single attribute, you can force the data type of any attribute to let Braze know what it is. Select from the dropdown in the **Data Type** column.
+To blocklist custom data, you need the [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) in the following dropdown for your workspace.
+
+{% details User permissions for blocklisting custom data %}
+
+{% multi_lang_include deprecations/user_permissions.md %}
+
+- View Campaigns
+- Edit Campaigns
+- Archive Campaigns
+- View Canvases
+- Edit Canvases
+- Archive Canvases
+- View Frequency Capping Rules
+- Edit Frequency Capping Rules
+- View Message Prioritization
+- Edit Message Prioritization
+- View Content Blocks
+- View Feature Flags
+- Edit Feature Flags
+- Archive Feature Flags
+- View Segments
+- Edit Segments
+- View IAM Templates
+- Edit IAM Templates
+- Archive IAM Templates
+- View Email Templates
+- Edit Email Templates
+- Archive Email Templates
+- View Webhook Templates
+- Edit Webhook Templates
+- Archive Webhook Templates
+- View Email Link Templates
+- Edit Email Link Templates
+- View Media Library Assets
+- Edit Media Library Assets
+- Delete Media Library Assets
+- View Locations
+- Edit Locations
+- Archive Locations
+- View Promotion Codes
+- Edit Promotion Codes
+- Export Promotion Codes
+- View Preference Centers
+- Edit Preference Centers
+- View Reports
+- Edit Reports
+
+{% enddetails %}
+
+### Blocklisting custom attributes, custom events, and products
+
+{% alert important %}
+When an event or attribute is blocklisted, any segment, campaign, or Canvas using that event or attribute will be archived.
+{% endalert %}
+
+To stop tracking a specific custom attribute, event, or product, follow these steps:
+
+1. Search for it in the **Custom Attributes**, **Custom Events**, or **Products** pages.
+2. Select the custom attribute, event, or product. For custom attributes and events, you can select up to 100 to blocklist at a time.
+3. Select **Blocklist**.
+
+![Multiple selected custom attributes that are blocklisted on the Custom Attributes page.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
+
+You can blocklist up to 300 custom attributes and 300 custom events. To prevent collecting certain device attributes, see our [SDK guide]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection). 
+
+{% alert important %}
+Custom attributes or custom events with a **Trashed** status will count towards the blocklisting limit until they're deleted.
+{% endalert %}
+
+When a custom event or attribute is blocklisted, the following applies:
+
+- No data sent to Braze will be processed, and blocklisted events and attributes will no longer count as data points
+- Existing data will be unavailable unless reactivated
+- Blocklisted events and attributes will not show up in filters or graphs
+- References to blocklisted data within drafts of active Canvases will load as invalid values, which may cause errors
+- Anything using the blocklisted event or attribute will be archived
+
+To accomplish this, Braze sends the blocklisting information down to each device. This is important when thinking about blocklisting a huge number of events and attributes (hundreds of thousands or millions) as it would be a data-intensive operation.
+
+### Considerations for blocklisting
+
+Blocklisting a high number of events and attributes is possible, but not advisable. This is because each time an event is performed or an attribute is (potentially) sent up to Braze, this event or attribute has to be checked against the entire blocklist.
+
+Up to 300 items are sent to the SDK for blocklisting. If you blocklist more than 300 items, this data will be sent from the SDK. If you do not need to use the event or attribute in the future, consider removing it from your app code during your next release. Changes to the blocklist may take a few minutes to propagate. You can re-enable any blocklist event or attribute at any time.
+
+## Deleting custom data
+
+As you build targeted campaigns and segments, you may find that you no longer need a custom event or custom attribute. For example, if you used a specific custom attribute as part of a one-time campaign, you can delete this data after [blocklisting it](#blocklisting-custom-attributes-custom-events-and-products) and remove its references from your app. You can delete any data types (such as strings, numbers, and nested custom attributes).
+
+{% alert important %}
+You must be a [Braze admin]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to delete custom data.
+{% endalert %}
+
+To delete a custom event or custom attribute, do the following:
+
+1. Go to **Data Settings** > **Custom Attributes** or **Custom Events**, depending on which data type you want to delete.
+2. Go to the custom data and select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Blocklist**.
+3. After your custom data has been blocklisted for 7 days, select <i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;**Actions** > **Delete**.
+
+### How deletion works
+
+When you delete custom data, the following occurs: 
+
+- **For custom attributes:** Permanently removes the attribute data from every user's profile.
+- **For custom events:** Permanently removes the event metadata from every user's profile.
+
+When an attribute or event is selected for deletion, its status is changed to **Trashed**. For the next seven days, it's possible to restore the attribute or event. If you don't restore it after seven days, the data will be permanently deleted. If you restore the attribute or event, it will be set back to the blocklisted state.
+
+Deleting doesn't prevent additional recording of the custom data objects on user profiles, so make sure the custom data is no longer being recorded before deleting the event or attribute.
+
+### Things to know
+
+When deleting custom data, keep in mind the following details:
+
+* **Deletion is permanent**. Data cannot be recovered.
+* Data is removed from the Braze platform and from user profiles.
+* You can "reuse" the custom attribute name or custom event name after deletion. This means if you notice that custom data "reappears" in Braze after deletion, this may be caused by an integration that hasn’t been stopped and is sending data with the same custom data name.
+* You may need to blocklist an item again if your deletion results in custom data reappearing. Blocklisting status isn’t preserved because the custom data is deleted.
+* Deleting custom data doesn't log any [data points]({{site.baseurl}}/user_guide/data/data_points) and also doesn't generate new data points to use.
+
+## Forcing data type comparisons
+
+Braze automatically recognizes data types for attribute data that is sent to us. However, in the event multiple data types are applied to a single attribute, you can force the data type of any attribute to let us know what it is. Select from the dropdown in the **Data Type** column.
 
 {% alert note %}
 Forcing data types does not apply to event properties or purchase properties.
@@ -59,26 +179,22 @@ Forcing data types does not apply to event properties or purchase properties.
 ![Custom attributes data type dropdown]({% image_buster /assets/img_archive/custom_events_view_data_type_dropdown.png %})
 
 {% alert warning %}
-If you choose to force the data type for an attribute, any data that comes in that isn't the specified type is coerced into that type. If such coercion is impossible (for example, a string containing letters being coerced into a number), the data is ignored. Any data ingested before the type change continues to be stored as the old type (and therefore may not be segmentable), and a warning appears next to the attribute on the affected users' profiles.
+If you choose to force the data type for an attribute, any data that comes in that isn't the specified type will be coerced into that type. If such coercion is impossible (for example, a string containing letters being coerced into a number), the data will be ignored. Any data ingested before the type change will continue to be stored as the old type (and therefore may not be segmentable), and a warning will appear next to the attribute on the affected users' profiles.
 {% endalert %}
-
-### Existing data after a type change
-
-Forcing a data type change only affects new data coming into Braze. Any data ingested before the type change continues to be stored as the old type and may not be segmentable with the new type's filters. A warning appears on the affected users' profiles. For new incoming data, if a value doesn't match the forced type, Braze may coerce it into the forced type (for example, the string `"100"` to the number `100`); values that can't be coerced are ignored and don't update the attribute.
-
-If you need all existing user data to match the new type, you must re-send the attribute values for those users through the SDK, API, or a CSV import. There is no automatic bulk conversion for existing data.
 
 ### Data type coercion
 
 | Forced Data Type | Description |
 |------------------|-------------|
-| Boolean | Inputs of `1`, `true`, `t` (not case sensitive) are stored as `true` |
-| Boolean | Inputs of `0`, `false`, `f` (not case sensitive) are stored as `false` |
-| Number | Integers or Floats (such as `1`, `1.5`) are stored as numbers |
+| Boolean | Inputs of `1`, `true`, `t` (not case sensitive) will be stored as `true` |
+| Boolean | Inputs of `0`, `false`, `f` (not case sensitive) will be stored as `false` |
+| Number | Integers or Floats (such as `1`, `1.5`) will be stored as numbers |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For more information on specific filter options exposed by different data type comparisons, check out [Configuring reporting]({{site.baseurl}}/user_guide/analytics/reports/configure_reporting/). For more information on the different available data types, refer to [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#custom-attribute-data-types).
+For more information on specific filter options exposed by different data type comparisons, check out [Configuring reporting]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting). For more information on the different available data types, refer to [Custom attribute data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types).
 
 {% alert note %}
-Data sent to Braze is immutable and cannot be deleted or modified after Braze receives it. However, you can use any of the steps listed in the preceding sections to exercise control over what you're tracking in your dashboard. To blocklist or delete custom data, see [Blocklist custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/blocklist_custom_data/).
+Data sent to Braze is immutable and cannot be deleted or modified after we've received it. However, you can use any of the steps listed in the preceding sections to exercise control over what you're tracking in your dashboard.
 {% endalert %}
+
+

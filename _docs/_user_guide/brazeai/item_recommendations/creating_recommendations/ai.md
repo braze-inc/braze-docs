@@ -51,7 +51,7 @@ Give your recommendation a name and optional description.
 
 ### Step 3: Define your recommendation {#recommendation-type}
 
-Select a recommendation type. Each type uses the last six months of item interaction data, such as a purchase or custom event data. For more detailed information and uses cases for each, see [Types and Uses Cases]({{site.baseurl}}/user_guide/brazeai/item_recommendations/).
+Select a recommendation type. Each type uses the last six months of item interaction data, such as a purchase or custom event data. For more detailed information and uses cases for each, see [Types and Uses Cases]({{site.baseurl}}/user_guide/brazeai/recommendations/).
 
 {% alert tip %}
 When using **Most recent** or **AI Personalized**, users with insufficient data to create individualized recommendations will receive **Most popular** items as a fallback. The proportion of users receiving the **Most popular** fallback is displayed on the **Analytics** page.
@@ -117,7 +117,7 @@ There are some requirements for selecting your property:
 - **If you selected Purchase Object:** Must be the `product_id` or a field of your interaction event's `properties`.
 - **If you selected Custom Event:** Must be a field of your custom event's `properties`.
 - Nested fields must be typed into the **Property Name** dropdown in dot notation with the format of `event_property.nested_property`. For example, if selecting the nested property `district_name` within the event property `location`, you would enter `location.district_name`.
-- **If using [eCommerce events]({{site.baseurl}}/user_guide/data/activation/events/recommended_events/ecommerce_events/) to train item recommendations:** Add `products.product_id` to access the product ID from events.
+- **If using [eCommerce events]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/) to train item recommendations:** Add `products.product_id` to access the product ID from events.
 - The field can be inside an array of products, or end with an array of IDs. In either case, each product ID will be treated as a separate, sequential event with the same timestamp.
 
 #### Example mappings

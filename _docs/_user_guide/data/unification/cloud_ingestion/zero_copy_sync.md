@@ -1,7 +1,7 @@
 ---
 nav_title: Zero-copy personalization
 article_title: Zero-copy personalization using CDI
-page_order: 7
+page_order: 4
 page_type: reference
 description: "This page provides an overview of how to trigger Braze Canvases using CDI."
 ---
@@ -288,7 +288,7 @@ To sync Canvas triggers from file storage, create a source file with the followi
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
-Filenames must follow AWS rules and be unique. Append timestamps to help ensure uniqueness. For more on Amazon S3 syncing, see [File Storage Integrations](https://www.braze.com/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations).
+Filenames must follow AWS rules and be unique. Append timestamps to help ensure uniqueness. For more on Amazon S3 syncing, see [File Storage Integrations](https://www.braze.com/docs/user_guide/data/cloud_ingestion/file_storage_integrations).
 {% endalert %}
 
 {% endtab %}
@@ -296,9 +296,9 @@ Filenames must follow AWS rules and be unique. Append timestamps to help ensure 
 
 #### Step 2: Configure your destination Canvas
 
-1. Set up your destination Canvas for Canvas triggers. Create a new or select an existing API-triggered Canvas. Refer to [Entry schedule types]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas#entry-schedule-types) for instructions on how to create a canvas with an API-triggered delivery schedule type.
+1. Set up your destination Canvas for Canvas triggers. Create a new or select an existing API-triggered Canvas. Refer to [Entry schedule types]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#entry-schedule-types) for instructions on how to create a canvas with an API-triggered delivery schedule type.
 2. After selecting the API-triggered delivery schedule type, continue with Canvas setup and build your Canvas. Canvases can range from simple single-message sends to complex customer workflows with multiple steps.
-3. Within your Canvas steps, use [Canvas entry properties]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/context_and_event_properties/) to personalize messages with properties fields that you plan to sync from your source table.
+3. Within your Canvas steps, use [Canvas entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) to personalize messages with properties fields that you plan to sync from your source table.
   * For example, if in Step 1 you instrumented a properties field for `account_balance`, you would use the following Liquid templating to personalize your message: `\{\{canvas_entry_properties.\$\{account_balance\}\}\}`.
 5. After building your Canvas, launch it and proceed to [Step 3](#step-3-create-your-zero-copy-sync).
 

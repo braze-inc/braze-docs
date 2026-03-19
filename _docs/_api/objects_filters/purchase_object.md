@@ -94,11 +94,23 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Purchase properties object {#purchase-properties-object}
+## Purchase properties object
 
-{% include data_activation/purchase_event_property_data_types.md %}
+Custom events and purchases may have event properties. The "properties" values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs.
 
-For a consolidated reference of data types across custom attributes, event properties, and catalogs, see [Data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#purchase-event-property-data-types).
+Property values can be any of the following data types:
+
+| Data Type | Description |
+| --- | --- |
+| Numbers | As either [integers](https://en.wikipedia.org/wiki/Integer) or [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
+| Booleans |  |
+| Datetimes | Formatted as strings in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) or `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. Not supported within arrays. |
+| Strings | 255 characters or fewer. |
+| Arrays | Arrays cannot include datetimes. |
+| Objects | Objects are ingested as strings. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+Event property objects that contain array or object values can have an event property payload of up to 50&nbsp;KB.
 
 ### Purchase properties
 

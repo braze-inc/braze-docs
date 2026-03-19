@@ -417,7 +417,7 @@ Because this metric is recalculated on an ongoing cadence, the _Estimated Real O
 
 Typically around 10,000 delivered emails are required for the statistic to be computed successfully, though that number can vary depending on click rate. If the statistic can't be computed, then the column displays "--".
 
-###### Considerations
+###### Limitations
 
 Estimated Real Open Rate is only available in campaigns, and is not reported in Current events. This metric is only retroactively calculated for active campaigns launched before November 14, 2023.
 

@@ -1,5 +1,5 @@
 ---
-nav_title: FAQ
+nav_title: FAQs
 article_title: Audience Sync FAQ
 alias: /partners/audience_sync_faq/
 description: "This article provides answers to frequently asked questions about Audience Sync."
