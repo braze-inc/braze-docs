@@ -488,6 +488,10 @@ def cmd_translate(args):
     prompt = load_prompt()
     results = load_results()
     results["skipped"] = []
+    results["chunked"] = [
+        {"source": f, "size_kb": round((REPO_ROOT / f).stat().st_size / 1024)}
+        for f in chunked
+    ]
     glossaries = {lang: load_glossary(lang) for lang in LANGUAGES}
     styleguides = {lang: load_styleguide(lang) for lang in LANGUAGES}
 
@@ -1141,7 +1145,7 @@ def cmd_summary(_args):
     results = load_results()
     translated = results.get("translated", [])
     failed = results.get("failed", [])
-    skipped = results.get("skipped", [])
+    chunked_files = results.get("chunked", [])
     build = results.get("build_results", {})
 
     lines = ["## Auto-translation summary\n"]
@@ -1151,15 +1155,15 @@ def cmd_summary(_args):
     lines.append(f"**Translation files created/updated:** {len(translated)}  ")
     if failed:
         lines.append(f"**Translation API failures:** {len(failed)}  ")
-    if skipped:
-        lines.append(f"**Files skipped (too large):** {len(skipped)}  ")
+    if chunked_files:
+        lines.append(f"**Large files (chunked translation):** {len(chunked_files)}  ")
     lines.append("")
 
-    if skipped:
-        lines.append("### Skipped files (exceed size limit)\n")
-        lines.append("These files are too large for single-pass LLM translation and "
-                      "need manual translation or a chunked approach.\n")
-        for item in sorted(skipped, key=lambda x: -x["size_kb"]):
+    if chunked_files:
+        lines.append("### Large files (chunked translation)\n")
+        lines.append("These files exceeded the single-pass size limit and were "
+                      "translated in chunks at H2 heading boundaries.\n")
+        for item in sorted(chunked_files, key=lambda x: -x["size_kb"]):
             lines.append(f"- `{item['source']}` ({item['size_kb']} KB)")
         lines.append("")
 
@@ -1207,13 +1211,20 @@ def cmd_summary(_args):
                 for w in f.get("warnings", []):
                     lang_stats[lang]["details"].append(f"[warning] {w}")
 
+            translated_langs = set(t["lang"] for t in translated)
+
             lines.append("| Language | Repairs | Warnings | Status |")
             lines.append("|----------|---------|----------|--------|")
             for lang_key in sorted(LANGUAGES):
                 if lang_key not in lang_stats:
-                    lines.append(
-                        f"| {LANGUAGES[lang_key]['name']} | 0 | 0 | Passed |"
-                    )
+                    if lang_key not in translated_langs:
+                        lines.append(
+                            f"| {LANGUAGES[lang_key]['name']} | — | — | No translations |"
+                        )
+                    else:
+                        lines.append(
+                            f"| {LANGUAGES[lang_key]['name']} | 0 | 0 | Passed |"
+                        )
                     continue
                 s = lang_stats[lang_key]
                 if s["warnings"]:
