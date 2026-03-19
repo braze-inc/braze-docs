@@ -42,6 +42,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       # ------------------------------------------------------------------
       # Detect which English docs changed
