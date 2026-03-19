@@ -44,6 +44,17 @@ Before you start, make sure you have the following:
 - **MMS** extends SMS with support for multimedia content, including images, GIFs, and audio. MMS requires carrier and device support.
 - **RCS** is the next generation of business messaging, offering rich features such as branded sender profiles, suggested replies, carousels, and read receipts. RCS availability depends on carrier and device support.
 
+### Why use RCS?
+
+RCS (Rich Communication Services) builds on SMS with a richer, more app-like experience in the default messaging app on supported devices. Brands use RCS to:
+
+- Deliver high-resolution images and video instead of only plain text.
+- Add suggested replies and actions so customers can respond with one tap.
+- Show a verified sender profile with branding so messages are easy to trust.
+- Support read receipts and typing indicators where carriers allow it.
+
+RCS is suited to use cases such as transactional updates (shipping, appointments), promotions with rich creative, customer support with quick-reply paths, and onboarding or tutorials that benefit from media and structured actions. For setup and migration from SMS, see [RCS setup]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup/).
+
 ## Next steps
 
 - [Message setup]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/)
