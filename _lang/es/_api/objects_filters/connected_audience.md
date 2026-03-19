@@ -1,19 +1,95 @@
 ---
-nav_title: "Filtro y objeto de Audiencia conectada"
-article_title: Objeto de Audiencia conectada de API
+nav_title: "Filtro y objeto de audiencia conectada"
+article_title: Objeto de audiencia conectada de API
 page_order: 3
 page_type: reference
-description: "Este artículo explica los diferentes componentes del objeto audiencia conectada y los filtros que lo crean."
+description: "Este artículo explica el objeto de audiencia conectada, incluyendo cómo funciona, casos de uso y los diferentes filtros que lo crean."
 
 ---
 
-# Objeto de audiencia conectado
+# Objeto de audiencia conectada
 
-> Un objeto de audiencia conectado tiene un identificador que identifica la audiencia de tu mensaje. Por ejemplo, si utilizas matrices de atributos personalizados para realizar el seguimiento de todas las categorías y programas de televisión que un usuario ha marcado como favoritos, puedes utilizar las audiencias conectadas para enviar automáticamente una notificación push o un correo electrónico a cualquier persona que haya marcado un programa como favorito cada vez que se estrene un nuevo episodio, sin necesidad de configurar un segmento para cada programa.
+> Una audiencia conectada es un filtro de audiencia dinámico que defines en línea dentro de tu solicitud de API, para que puedas dirigirte a los usuarios correctos en el momento del envío sin crear ni gestionar segmentos en el dashboard de Braze.
 
-Este objeto se compone de un único filtro de audiencia conectado o de varios filtros de audiencia conectados en una expresión lógica que utiliza los operadores `AND` o `OR`.
+En lugar de crear previamente un segmento para cada posible combinación de audiencia, pasas los criterios de filtro directamente en el parámetro `audience` de tu llamada a la API. Braze evalúa a cada usuario contra esos criterios en tiempo real y entrega el mensaje solo a los usuarios que coincidan. Esto significa que una sola campaña, Canvas o definición de mensaje solo de API puede servir a un número ilimitado de variaciones de audiencia, impulsadas completamente por tu lógica de negocio.
 
-**Ejemplo de filtro múltiple:**
+## Cómo funciona
+
+1. Define tu mensaje creando una campaña activada por API o un Canvas en el dashboard de Braze, o define el contenido del mensaje completamente en línea usando los [objetos de mensajería]({{site.baseurl}}/api/objects_filters/#messaging-objects) en tu solicitud de API. Usa [propiedades de desencadenamiento]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) o [contexto de Canvas]({{site.baseurl}}/api/objects_filters/context_object/) para personalización dinámica.
+2. Llama a un punto de conexión compatible e incluye el parámetro `audience` con tus criterios de filtro. Puedes filtrar por atributos personalizados, estado de suscripción push, estado de suscripción de correo electrónico y hora de último uso de la aplicación.
+3. Braze evalúa los filtros en el momento del envío, entregando el mensaje solo a los usuarios que coincidan con tus criterios.
+
+{% alert tip %}
+No se requiere un `campaign_id` cuando usas el parámetro `audience`. Los puntos de conexión [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) y [`/messages/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages/) te permiten definir el contenido del mensaje en línea sin una campaña creada previamente. Sin embargo, si deseas rastrear métricas a nivel de campaña (como envíos, clics o rebotes) en el dashboard, incluye un `campaign_id`.
+{% endalert %}
+
+Dado que la audiencia se define por solicitud, tus sistemas de backend pueden desencadenar mensajes contextualmente relevantes en respuesta a cualquier evento de negocio (un cambio de precio, una alerta meteorológica, una actualización de puntuación en vivo) sin intervención del dashboard.
+
+### Puntos de conexión compatibles
+
+Puedes usar el objeto de audiencia conectada con el parámetro `audience` en estos puntos de conexión:
+
+- [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)
+- [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/)
+- [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)
+- [`/messages/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages/)
+- [`/campaigns/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/)
+- [`/canvas/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/)
+
+## Casos de uso
+
+Usa audiencias conectadas para escenarios en los que tus sistemas de backend detectan un evento y necesitan notificar a un conjunto de usuarios determinado dinámicamente:
+
+| Categoría | Ejemplo |
+| --- | --- |
+| Alertas meteorológicas | Un proveedor de datos meteorológicos detecta un evento climático severo y envía notificaciones push a los usuarios cuyo atributo `preferred_city` coincide con el área afectada. |
+| Deportes y eventos en vivo | Una aplicación deportiva envía actualizaciones de puntuación en tiempo real o alertas de partidos a los usuarios cuyo atributo `favorite_team` coincide con uno de los equipos que juegan. |
+| Contenido y entretenimiento | Un servicio de streaming notifica a los usuarios cuya matriz `favorite_shows` incluye el título de una serie cada vez que se estrena un nuevo episodio. |
+| Comercio electrónico | Un comercio minorista en línea envía alertas de bajada de precio o de reposición de stock a los usuarios cuya matriz `wishlisted_products` incluye el ID del producto relevante. |
+| Viajes | Una aplicación de viajes envía notificaciones de retraso de vuelo a los usuarios cuyo atributo `booked_flight` coincide con el número de vuelo afectado. |
+| Servicios financieros | Una plataforma de trading alerta a los usuarios cuya matriz `watchlist` incluye un símbolo bursátil que ha cruzado un umbral de precio. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+En cada caso, una sola campaña o definición de mensaje solo de API maneja todas las variaciones. Tu backend determina los valores de filtro y los pasa en la solicitud de API, por lo que no necesitas crear un segmento o campaña separada para cada producto, programa, equipo o ubicación.
+
+## Ejemplo de solicitud
+
+El siguiente ejemplo usa el punto de conexión [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) para dirigirse a los usuarios que han marcado como favorito un programa específico y han optado por recibir notificaciones push:
+
+```json
+{
+  "campaign_id": "YOUR_CAMPAIGN_ID",
+  "audience": {
+    "AND": [
+      {
+        "custom_attribute": {
+          "custom_attribute_name": "favorite_shows",
+          "comparison": "includes_value",
+          "value": "Example Show"
+        }
+      },
+      {
+        "push_subscription_status": {
+          "comparison": "is",
+          "value": "opted_in"
+        }
+      }
+    ]
+  },
+  "trigger_properties": {
+    "show_title": "Example Show",
+    "episode_title": "Season 3, Episode 1",
+    "deep_link": "https://example.com/shows/example-show/s3e1"
+  },
+  "broadcast": false
+}
+```
+
+## Cuerpo del objeto
+
+El objeto de audiencia conectada se compone de un único filtro de audiencia conectada o de varios filtros de audiencia conectada combinados con los operadores `AND` y `OR`.
+
+**Ejemplo con múltiples filtros:**
 
 ```json
 {
@@ -32,11 +108,11 @@ Este objeto se compone de un único filtro de audiencia conectado o de varios fi
 }
 ```
 
-## Filtros de audiencia conectados
+## Filtros de audiencia conectada
 
-La combinación de varios filtros de atributos personalizados con los operadores`AND``OR`  y  crea un filtro de audiencia conectado.
+Combina varios filtros con los operadores `AND` y `OR` para crear un filtro de audiencia conectada.
 
-### Filtro de atributos personalizado
+### Filtro de atributo personalizado
 
 Este filtro te permite segmentar en función del atributo personalizado de un usuario. Estos filtros contienen hasta tres campos:
 
@@ -106,7 +182,7 @@ El tipo de datos del atributo personalizado determina las comparaciones válidas
   }
 }
 ```
-### Filtro push de suscripción
+### Filtro de suscripción push
 
 Este filtro te permite segmentar en función del estado de suscripción push de un usuario.
 
@@ -125,9 +201,9 @@ Este filtro te permite segmentar en función del estado de suscripción push de 
 - **Comparaciones permitidas:** `is`, `is_not`
 - **Valores permitidos:** `opted_in`, `subscribed`, `unsubscribed`
 
-### Filtro de suscripción por correo electrónico
+### Filtro de suscripción de correo electrónico
 
-Este filtro te permite segmentar en función del estado de suscripción al correo electrónico de un usuario.
+Este filtro te permite segmentar en función del estado de suscripción de correo electrónico de un usuario.
 
 #### Cuerpo del filtro
 
@@ -144,9 +220,9 @@ Este filtro te permite segmentar en función del estado de suscripción al corre
 - **Comparaciones permitidas:** `is`, `is_not`
 - **Valores permitidos:** `opted_in`, `subscribed`, `unsubscribed`
 
-### Filtro de la última aplicación utilizada
+### Filtro de última aplicación utilizada
 
-Este filtro te permite segmentar en función de cuándo utilizaste por última vez la aplicación. Estos filtros contienen dos campos:
+Este filtro te permite segmentar en función de cuándo el usuario utilizó la aplicación por última vez. Estos filtros contienen dos campos:
 
 #### Cuerpo del filtro
 ```json
@@ -164,4 +240,4 @@ Este filtro te permite segmentar en función de cuándo utilizaste por última v
 
 ### Consideraciones
 
-Las audiencias conectadas no pueden filtrar a los usuarios por atributos predeterminados, eventos personalizados, segmentos o eventos de interacción con mensajes. Para utilizar estos filtros, recomendamos incorporarlos a un segmento de audiencia y, a continuación, especificar ese segmento en el`segment_id`parámetro para el[`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters)[punto final]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters). Si utilizas otros puntos finales, primero deberás añadir el segmento a la campaña activada por API o al Canvas en el panel de Braze.
+Las audiencias conectadas no pueden filtrar a los usuarios por atributos predeterminados, eventos personalizados, segmentos o eventos de interacción con mensajes. Para utilizar estos filtros, recomendamos incorporarlos a un segmento de audiencia y, a continuación, especificar ese segmento en el parámetro `segment_id` del [punto de conexión `/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters). Si utilizas otros puntos de conexión, primero deberás añadir el segmento a la campaña activada por API o al Canvas en el dashboard de Braze.

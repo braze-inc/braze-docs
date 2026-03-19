@@ -1,19 +1,19 @@
 ---
 nav_title: "受信者オブジェクト"
-article_title: API受信者オブジェクト
+article_title: API 受信者オブジェクト
 page_order: 9
 page_type: reference
-description: "この参考記事では、Braze 受信者オブジェクトのさまざまなコンポーネントについて説明します。"
+description: "この参照記事では、Braze 受信者オブジェクトのさまざまなコンポーネントについて説明します。"
 
 ---
 
 # 受信者オブジェクト
 
-> 受信者オブジェクトは、エンドポイントに情報を要求したり書き込んだりすることができる。
+> 受信者オブジェクトを使用すると、エンドポイントで情報をリクエストしたり書き込んだりできます。
 
-このオブジェクトには`email`、必ず`user_alias`、`external_user_id`またはのいずれか`braze_id`を含めなければならない。**リクエストでは 1 つだけ指定する必要があります。**
+このオブジェクトには、`external_user_id`、`user_alias`、`braze_id`、または `email` のいずれかを含める必要があります。**リクエストでは1つだけ指定してください。**
 
-受信者オブジェクトは、[ユーザーエイリアスオブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object/)、[トリガープロパティオブジェクト]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)、[キャンバスエントリプロパティオブジェクト]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)、および[ユーザー属性オブジェクト]({{site.baseurl}}/api/objects_filters/user_attributes_object/)を組み合わせることができる。
+受信者オブジェクトを使用すると、[ユーザーエイリアスオブジェクト]({{site.baseurl}}/api/objects_filters/user_alias_object/)、[トリガープロパティオブジェクト]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)、[Canvas エントリプロパティオブジェクト]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)、および[ユーザー属性オブジェクト]({{site.baseurl}}/api/objects_filters/user_attributes_object/)を組み合わせることができます。
 
 ## オブジェクト本体
 
@@ -31,19 +31,23 @@ description: "この参考記事では、Braze 受信者オブジェクトのさ
 }]
 ```
 
-が`send_to_existing_only`の場合`true`、Brazeは既存ユーザーにのみメッセージを送信する。ただし、このフラグはユーザーエイリアスでは使用できない。が `send_to_existing_only`の場合`false`、属性を含めなければならない。Brazeはメッセージを送信する前に、ユーザーと`id`属性を生成する。
+`send_to_existing_only` が `true` の場合、Braze は既存のユーザーにのみメッセージを送信します。ただし、このフラグはユーザーエイリアスでは使用できません。`send_to_existing_only` が `false` の場合、属性を含める必要があります。Braze はメッセージを送信する前に、`id` と属性を持つユーザーを作成します。
 
 - [Braze ID]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)
-- [ユーザーのエイリアス]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
-- [外部ユーザ ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
+- [ユーザーエイリアス]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
+- [外部ユーザー ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [優先順位付け]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/#identifying-users-by-email)
 - [ユーザー属性オブジェクト]({{site.baseurl}}/api/objects_filters/user_attributes_object/)
 
-## 受信者オブジェクトのデデュープ
+## 受信者オブジェクトの重複排除
 
-受信者オブジェクトでAPI呼び出しを行う際、**同一のアドレス（つまりメールやプッシュ通知）をターゲットとする重複した受信者が存在する場合、Brazeはユーザーを重複排除する**。つまりBrazeは同一のユーザーを削除し、1つだけを残す。
+受信者オブジェクトを使用して API 呼び出しを行う際、**同一の宛先（つまりメールやプッシュ通知）をターゲットとする重複した受信者が存在する場合、Braze はユーザーの重複を排除します**。つまり、Braze は同一のユーザーを削除し、1つだけを残します。
 
-例えば、同じものを使うと、ユーザーは`external_user_id`一つのメッセージしか受け取らない。この動作を回避する必要がある場合は、複数のAPIコールを行うことを検討してください。
+例えば、同じ `external_user_id` を使用した場合、ユーザーはメッセージを1つだけ受信します。この動作を回避する必要がある場合は、複数の API 呼び出しを行うことを検討してください。
+
+同じ `external_user_id` が受信者配列内に複数回出現する場合、Braze はメッセージを1つだけ送信し、配列内の最後のエントリのトリガープロパティを使用します。この動作は決定論的であり、配列の順序に基づいています。
+
+次の例では、`userid1` は `"name": "Beth Test 2"` を使用したメッセージを1つ受信します。これは、そのエントリが配列内で最後に出現するためです。
 
 ```json
 {"campaign_id":"#####","recipients":[
