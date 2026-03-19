@@ -19,7 +19,7 @@ Este guia descreve como integrar os feeds Live Push de perfil de usuário, ativi
 
 * [Atividade do usuário de push ao vivo](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/LivePushUserActivity.html): Inclui dados de conclusões de atividades de usuários.
 
-* [Redenção de usuários por push ao vivo](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/LivePushUserRedemption.html): Inclui dados de resgates de recompensas de usuários. 
+* [Resgate de usuário por push ao vivo](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/LivePushUserRedemption.html): Inclui dados de resgates de recompensas de usuários. 
 
 Ao usar um modelo de transformação de dados do Braze, você pode filtrar os elementos do Data Push que não são relevantes para o Braze e atribuir os valores necessários no Braze para que possam ser aproveitados pelos "destinos" disponíveis.
 
@@ -48,16 +48,16 @@ Conforme mostrado na [documentação do Data Push do Oracle Crowdtwist](https://
 
 ## Etapa 2: Atualizar e testar o modelo
 
-Abaixo, você verá os modelos anotados. O corpo desses modelos foi projetado para ser aplicado ao destino `/users/track`. As anotações são marcadas pelo início da linha `//` e pelo texto verde, e você pode excluí-las sem afetar a operação do código de transformação. 
+Abaixo, você verá os modelos anotados. O corpo desses modelos foi projetado para ser aplicado ao destino `/users/track`. As anotações são marcadas pelo início de linha `//` e pelo texto verde, e você pode excluí-las sem afetar a operação do código de transformação. 
 
-A transformação usa JavaScript, que cria um objeto chamado "brazecall". Esse objeto é onde você cria o corpo da solicitação que é enviado para um endpoint da Braze REST API. Para obter orientação sobre as estruturas necessárias das solicitações para esses destinos, consulte os links na seção "destinos".    
+A transformação usa JavaScript, que cria um objeto chamado "brazecall". Esse objeto é onde você cria o corpo da solicitação que é enviada para um endpoint da Braze REST API. Para obter orientação sobre as estruturas necessárias das solicitações para esses destinos, consulte os links na seção "destinos".    
 
 {% alert note %}
-Observe que os "valores" de cada "chave" começam com `payload.`. A carga útil representa o objeto de dados recebido do Oracle Crowdtwist. Use a notação de ponto do JavaScript para escolher qual dado você deseja preencher os elementos do seu objeto Braze. Por exemplo, quando você vê `external_id: payload.thirdPartyId`, isso significa que a ID externa do Braze é definida pelo valor `third_party_id` armazenado no Oracle Crowdtwist. Para saber mais sobre o esquema ou a composição dos objetos provenientes do Oracle Crowdtwist, consulte [a documentação da Oracle](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/LivePushUserActivity.html).
+Observe que os "valores" de cada "chave" começam com `payload.`. A carga útil representa o objeto de dados recebido do Oracle Crowdtwist. Use a notação de ponto do JavaScript para escolher qual dado você deseja preencher os elementos de seu objeto Braze. Por exemplo, quando você vê `external_id: payload.thirdPartyId`, isso significa que a ID externa do Braze é definida pelo valor `third_party_id` armazenado no Oracle Crowdtwist. Para saber mais sobre o esquema ou a composição dos objetos provenientes do Oracle Crowdtwist, consulte [a documentação da Oracle](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/LivePushUserActivity.html).
 {% endalert %}
 
 {% alert important %}
- Use os objetos enviados do Oracle Crowdtwist para criar usuários no Braze. Ao incluir a chave `update_existing_only` com o valor `false`, se um atributo ou objeto de evento incluir um identificador que não exista no Braze, o Braze criará um perfil de usuário com as atribuições incluídas no evento ou objeto de atributo. Se você preferir que o Oracle Crowdtwist atualize somente os perfis que já existem no Braze, defina essa atribuição como `true` em cada atributo ou objeto de evento.
+ Use os objetos enviados do Oracle Crowdtwist para criar usuários no Braze. Ao incluir a chave `update_existing_only` com o valor `false`, se um atributo ou objeto de evento incluir um identificador que não exista no Braze, o Braze criará um perfil de usuário com as atribuições incluídas no evento ou objeto de atributo. Se você preferir que o Oracle Crowdtwist atualize apenas os perfis que já existem no Braze, defina essa atribuição como `true` em cada atributo ou objeto de evento.
 {% endalert %}
 
 ### Modelos de transformação de dados

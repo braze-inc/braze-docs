@@ -30,7 +30,7 @@ Les avantages de l'utilisation de cette intégration sont les suivants :
 | Condition   | Description  |
 | ------------------- | ---------------- |
 | Compte Jasper      | Vous devez disposer d'un compte Jasper pour utiliser ce partenariat. |
-| Clé API REST de Braze  | Une clé API REST de Braze avec les autorisations suivantes. <br>  <br>`templates.email.create` <br> `templates.email.update` <br>`content_blocks.create` <br>`content_blocks.update` <br><br>Cette clé peut être générée dans le tableau de bord de Braze en naviguant vers **Paramètres > Clés API.**  |
+| Clé de l'API REST de Braze  | Une clé API REST de Braze avec les autorisations suivantes. <br>  <br>`templates.email.create` <br> `templates.email.update` <br>`content_blocks.create` <br>`content_blocks.update` <br><br>Cette clé peut être générée dans le tableau de bord de Braze en naviguant vers **Paramètres > Clés API.**  |
 | Endpoint REST de Braze | L'URL de votre endpoint REST. Votre endpoint spécifique dépend de l'URL de Braze pour votre instance. Consultez le site [Braze API Basics : Endpoints]({{site.baseurl}}/api/basics#endpoints) pour plus de détails. |
 {: .reset-td-br-1 .rest-td-br-2 role=“presentation” }
 
@@ -81,7 +81,7 @@ Cette méthode est idéale pour créer et mettre à jour par programme des modè
 ### Demande d'échantillon
 
 {% raw %}
-```json
+```bash
 curl --location 'https://api.jasper.ai/v1/templates/skl_BC53D8AC5B4B47E8BE557EBB706E9B47/run?toneId=ton_811696974b3c4db4b3ac0041685c3b7c&knowledgeIds=kno_0a62fc17529e4fe69a71f30b6f0e88a7&audienceId=aud_0199117a690a7cc98481f8700916e2a6' \
 --header 'Content-Type: application/json' \
 --header 'x-api-key: ••••••' \
@@ -122,7 +122,7 @@ curl --location 'https://api.jasper.ai/v1/templates/skl_BC53D8AC5B4B47E8BE557EBB
 
 ### Exemple de requête API de Braze pour créer un modèle d'e-mail
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-03.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <YOUR_BRAZE_API_KEY>' \
@@ -148,7 +148,7 @@ Jasper Studio est une plateforme no-code au sein de Jasper qui vous permet de cr
 6. Fournissez un exemple de la sortie souhaitée, qui peut inclure une sortie JSON automatisée formatée pour les charges utiles de Braze.
 7. Générez et exportez les éléments suivants :
 - **Copier/coller direct :** Le contenu peut être copié et collé directement dans la plateforme Braze.
-- **Sortie JSON :** Générer une sortie JSON. Ce payload peut ensuite être utilisé pour appeler directement l'endpoint Braze via `curl` ou un logiciel intermédiaire, ou être intégré dans votre flux de travail des opérations d'e-mail.
+- **Sortie JSON :** Générer une sortie JSON. Ce payload peut ensuite être utilisé pour appeler directement l'endpoint Braze via `curl` ou un middleware, ou être intégré dans votre flux de travail des opérations d'e-mail.
 
 ![Application personnalisée de Jasper Braze.]({% image_buster /assets/img/jasper/jasper_custom_app.png %})
 
@@ -176,7 +176,7 @@ Jasper Studio est une plateforme no-code au sein de Jasper qui vous permet de cr
 ## Exemple de demande à l'API de Braze (à l'aide d'une sortie d'application personnalisée)
 
 {% raw %}
-```json
+```bash
 curl --location --request POST 'https://rest.iad-03.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <YOUR_BRAZE_API_KEY>' \

@@ -1,7 +1,7 @@
 ---
 nav_title: API 및 SDK 엔드포인트
 article_title: API 및 SDK 엔드포인트
-page_order: 2.4
+page_order: 4
 page_type: reference
 description: "이 참조 문서에는 사용 가능한 Braze 인스턴스에 대한 대시보드 URL, API 엔드포인트 및 SDK 엔드포인트가 나열되어 있습니다."
 

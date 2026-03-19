@@ -148,6 +148,10 @@ You can find this data on the [Revenue Report]({{site.baseurl}}/user_guide/data_
     </tbody>
 </table>
 
+#### Currency conversion
+
+When purchase events are logged in a non-USD currency, Braze converts the amount to USD using exchange rates from [Open Exchange Rates](http://openexchangerates.org). These rates are refreshed once every 24 hours. Because the exchange rates are cached, there may be slight differences from the real-time market rate, particularly for currencies experiencing rapid fluctuation.
+
 #### Lifetime revenue calculation
 
 Braze uses purchase events to calculate the lifetime revenue (also called lifetime value or LTV) of a user, which is a prediction of the net profit attributed to the entire future relationship with a customer. This can help you make informed decisions about customer acquisition and retention strategies.
@@ -174,6 +178,10 @@ While Sam would have two purchase events on their profile, in reality, they only
 ## Purchase event properties {#purchase-properties}
 
 With purchase event properties, you can set properties on purchases that can be used to further qualify trigger conditions, increase personalization in messaging, and generate more sophisticated analytics through raw data export. Property value types (string, numeric, boolean, date) vary per platform and are often assigned as key-value pairs.
+
+{% alert warning %}
+The following keys are reserved and cannot be used as purchase event property names: `time`, `product_id`, `quantity`, `event_name`, `price`, and `currency`. Using a reserved key in the `properties` object will return the error "Invalid 'properties' field".
+{% endalert %}
 
 For example, if you have an eCommerce application and want to message a user after making a purchase, you could additionally improve your target audience and allow for increased campaign personalization by adding a purchase event property of `brand_name`.
 

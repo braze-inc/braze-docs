@@ -6,7 +6,7 @@ layout: dev_guide
 channel:
   - LINE
 guide_top_header: "LINE"
-guide_top_text: "[LINE](https://www.lycbiz.com/sites/default/files/media/jp/download/LINE%20Business%20Guide_202310-202403.pdf)는 일본에서 가장 인기 있는 메시징 앱으로, 월간 활성 사용자 수가 9500만 명이 넘습니다. 메시징 외에도 LINE은 사용자에게 소셜 미디어, 게임, 쇼핑 및 결제를 위한 \"올인원\" 플랫폼을 제공합니다.<br><br>LINE 계정을 Braze와 통합하여 제로 및 퍼스트 파티 고객 데이터를 활용하여 고객의 선호도, 행동 및 크로스채널 상호작용을 기반으로 적절한 고객에게 매력적인 LINE 메시지를 보낼 수 있습니다.<br><br>**LINE 사용 가능 여부는 귀하의 Braze 패키지에 따라 다릅니다.** **시작하려면 계정 매니저 또는 고객 성공 매니저에게 문의하십시오.**"
+guide_top_text: "[LINE](https://www.lycbiz.com/sites/default/files/media/jp/download/LINE%20Business%20Guide_202310-202403.pdf)는 일본에서 가장 인기 있는 메시징 앱으로, 월간 활성 사용자 수가 9500만 명이 넘습니다. 메시징 외에도 LINE은 사용자에게 소셜 미디어, 게임, 쇼핑 및 결제를 위한 \"올인원\" 플랫폼을 제공합니다.<br><br>LINE 계정을 Braze와 통합하여 제로 및 퍼스트 파티 고객 데이터를 활용하여 고객의 선호도, 행동 및 크로스채널 상호작용을 기반으로 적절한 고객에게 매력적인 LINE 메시지를 보낼 수 있습니다.<br><br>**LINE 가용성은 귀하의 Braze 패키지에 따라 다릅니다.** **시작하려면 계정 매니저 또는 고객 성공 매니저에게 문의하십시오.**"
 description: "이 랜딩 페이지는 LINE 채널의 홈입니다. 여기에서 LINE 설정, LINE 구독 그룹, LINE 캠페인, LINE 보고서 등을 다루는 기사를 찾을 수 있습니다."
 alias: /line/
 

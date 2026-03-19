@@ -38,11 +38,11 @@ Une explication possible pourrait être que la campagne ou Canvas a activé la r
 
 Par exemple, si vous avez un Canvas qui dispose à la fois d’une notification push iOS et Web, un utilisateur donné possédant à la fois un téléphone et un ordinateur de bureau peut recevoir plus d’un message.
 
-### Pourquoi le nombre de conversions peut-il dépasser le nombre d'utilisateurs uniques pour les campagnes multicanal ?
+### Pourquoi le nombre de conversions peut-il dépasser le nombre d'utilisateurs uniques pour les campagnes multicanales ?
 
-Pour les campagnes multicanal, Braze comptabilise les conversions par canal, et non par utilisateur. Lorsqu'un utilisateur effectue une action de conversion unique dans la fenêtre de conversion, Braze attribue cette conversion à chaque canal dont l'utilisateur a reçu un message. Cela signifie que si un utilisateur reçoit des messages sur plusieurs canaux (par exemple, à la fois par e-mail et par push) et qu'il se convertit, Braze comptabilise plusieurs conversions, une pour chaque canal. Par conséquent, le nombre total de conversions peut dépasser le nombre d'utilisateurs uniques qui se sont convertis.
+Pour les campagnes multicanales, Braze comptabilise les conversions par canal et non par utilisateur. Lorsqu'un utilisateur effectue une seule action de conversion dans la fenêtre de conversion, Braze attribue cette conversion à chaque canal à partir duquel l'utilisateur a reçu un message. Cela signifie que si un utilisateur reçoit des messages sur plusieurs canaux (par exemple, à la fois par e-mail et par notification push) et effectue une conversion, Braze comptabilise plusieurs conversions, une pour chaque canal. Par conséquent, le nombre total de conversions peut dépasser le nombre d'utilisateurs uniques qui ont effectué une conversion.
 
-Par exemple, si une campagne multicanale envoie à la fois un e-mail et une notification push à un utilisateur, et que cet utilisateur effectue une action de conversion après avoir reçu les deux messages et dans la fenêtre de conversion, Braze comptabilise cela comme deux conversions, l'une attribuée à l'e-mail et l'autre au push, même s'il s'agit d'une seule action effectuée par le même utilisateur.
+Par exemple, si une campagne multicanal envoie à la fois un e-mail et une notification push à un utilisateur, et que cet utilisateur effectue une action de conversion après avoir reçu les deux messages et dans la fenêtre de conversion, Braze compte cela comme deux conversions, l'une attribuée à l'e-mail et l'autre attribuée à la notification push, même s'il s'agit d'une seule action effectuée par le même utilisateur.
 
 ### Pourquoi ma campagne a-t-elle une plus petite base d’utilisateurs accessible que le segment que j’utilise pour cette campagne ?
 
@@ -62,17 +62,17 @@ Vous pouvez vérifier le fuseau horaire de votre entreprise dans vos [paramètre
 
 ### Quand Braze évalue-t-il les utilisateurs pour la livraison selon un fuseau horaire local ?
 
-Pour la livraison selon un fuseau horaire local, Braze évalue les utilisateurs pour leur éligibilité à l’entrée à deux moments :
+Braze évalue l'admissibilité des utilisateurs à l'adresse suivante :
 
-- À l’heure des Samoa (UTC + 13) du jour planifié
-- À l’heure locale du jour planifié
+- Heure des Samoa (UTC+13) ou UTC+14 pendant l'heure d'été
+- L'heure locale du jour de la planification
 
 Pour que l’utilisateur puisse être admissible à l’entrée, il doit être admissible pour les deux vérifications. Par exemple, si un Canvas est prévu pour être lancé le 7 août 2021 à 14 h du fuseau horaire local, cibler un utilisateur situé à New York nécessite les vérifications d’admissibilité suivantes :
 
 - New York, le 6 août 2021 à 21 h
 - New York, le 7 août 2021 à 14 h
 
-Notez que l’utilisateur doit être dans le segment pendant 24 heures avant le lancement. Si l’utilisateur n’est pas admissible à la première vérification, alors Braze n’essaiera pas de faire la deuxième.
+L'utilisateur doit être dans le segment pendant 24 heures avant le lancement. Si l'utilisateur n'est pas éligible lors de la première vérification, Braze ne procède pas à la deuxième vérification.
 
 Par exemple, si une campagne est planifiée pour une livraison à 19 h UTC, nous commencerons à placer les envois de la campagne en file d’attente dès qu’un fuseau horaire est identifié (tpar exemple, les Samoa). Cela signifie que nous nous préparons à envoyer le message, et non à envoyer la campagne. Si les utilisateurs ne correspondent à aucun filtre lorsque nous vérifions leur éligibilité, ils ne feront pas partie de l'audience cible.
 
@@ -105,7 +105,7 @@ La livraison selon un fuseau horaire local peut manquer les utilisateurs de ce s
 
 ### Quels changements puis-je apporter aux campagnes planifiées avant le lancement ?
 
-Lorsque la campagne est planifiée, les modifications touchant autre chose que la composition du message doivent être effectuées avant qu’il ne soit placé dans la file d’attente d’envois. Comme pour toutes les campagnes, vous ne pouvez pas modifier les événements de conversion après son lancement.
+Une fois la campagne planifiée, il est nécessaire de modifier tout élément autre que la composition du message avant que nous mettions les messages en file d'attente pour les envoyer. Comme pour toutes les campagnes, il n'est pas possible de modifier les événements de conversion après leur lancement.
 
 ### J'ai mis à jour ma campagne programmée. Pourquoi n’a-t-elle pas été lancée ?
 
@@ -122,10 +122,18 @@ Nous vous recommandons de modifier les messages dans les délais suivants :
 
 Si vous apportez des modifications à votre message en dehors de ces recommandations, il se peut que les mises à jour ne soient pas reflétées dans le message envoyé. Par exemple, si vous modifiez l'heure d'envoi trois heures avant une campagne dont l'envoi est planifié à 12 heures, heure locale, la situation suivante peut se produire :
 
-- Braze n’enverra pas de messages aux utilisateurs qui ont manqué l’heure d’envoi de plus d’une heure.
+- Braze n'envoie pas de messages aux utilisateurs qui ont dépassé l'heure d'envoi de plus d'une heure.
 - Les messages pré-enregistrés peuvent toujours être envoyés à l'heure initialement prévue, plutôt qu'à l'heure Adjust.
 
-Si vous devez apporter des modifications, nous vous recommandons d'arrêter la campagne en cours (ce qui annulera tous les messages en file d'attente). Vous pouvez ensuite dupliquer la campagne, apporter les modifications nécessaires et lancer la nouvelle campagne. Vous devrez peut-être exclure les utilisateurs de cette campagne qui ont déjà reçu la première. Assurez-vous de réajuster les heures de planification de la campagne pour permettre l’envoi selon un fuseau horaire.
+Si vous devez apporter des modifications, nous vous recommandons d'interrompre la campagne en cours (ceci annule tous les messages en attente). Vous pouvez ensuite dupliquer la campagne, apporter les modifications nécessaires et lancer la nouvelle campagne. Vous devrez peut-être exclure les utilisateurs de cette campagne qui ont déjà reçu la première. Assurez-vous de réajuster les heures de planification de la campagne pour permettre l’envoi selon un fuseau horaire.
+
+### Pourquoi aucun utilisateur n'a-t-il participé à ma campagne quotidienne de planification le jour du passage à l'heure d'été ?
+
+Lors des jours de transition à l'heure d'été, les campagnes quotidiennes de planification peuvent être diffusées jusqu'à une heure plus tôt ou plus tard que d'habitude, selon que les horloges avancent ou reculent. Si votre segment repose sur des attributs personnalisés ou des événements avec des horodatages situés dans l'heure précédant l'heure de planification de l'envoi, ces utilisateurs pourraient ne pas encore être éligibles lorsque la campagne évaluera l'éligibilité le jour du passage à l'heure d'été.
+
+Par exemple, supposons que les utilisateurs reçoivent généralement une mise à jour des attributs personnalisés à 15 h UTC et que votre campagne soit diffusée quotidiennement à 10 h 30 à New York (heure de l'Est). Alors que New York est à l'heure standard (UTC-5), 10h30 ET correspond à 15h30 UTC, la campagne est donc diffusée après l'enregistrement de l'attribut. Lorsque New York passe à l'heure d'été (UTC-4), 10h30 (heure de l'Est) correspond à 14h30 (UTC). Ainsi, le jour du passage à l'heure d'été, la campagne peut être diffusée avant la mise à jour des attributs à 15h (UTC). Étant donné que l'attribut de qualification n'existe pas encore, ces utilisateurs sont exclus. Si la rééligibilité est désactivée, les utilisateurs qui ont participé les jours précédents ne peuvent pas participer à nouveau, ce qui entraîne un nombre de participations nul pour ce jour-là.
+
+Pour éviter cela, veuillez vous assurer que vos mises à jour d'attributs personnalisés ou d'événements personnalisés ont lieu plus d'une heure avant l'heure de planification de l'envoi de la campagne.
 
 ### Pourquoi le nombre d’utilisateurs qui accèdent à une campagne ne correspond pas au nombre prévu ?
 
@@ -135,9 +143,9 @@ Le nombre d’utilisateurs accédant à une campagne peut être différent du no
 Pour obtenir de l'aide dans la résolution des problèmes liés aux campagnes, contactez le service d'assistance de Braze dans les 30 jours suivant l'apparition de votre problème, car nous ne disposons que des journaux de diagnostic des 30 derniers jours.
 {% endalert %}
 
-### Quelle est la différence entre les options Exportation CSV des données utilisateurs et Exportation CSV des adresses e-mail sur ma page des analyses de campagne ?
+### Quelle est la différence entre les options « Exportation CSV des données utilisateur » et « Exportation CSV des adresses e-mail » sur la page d'analyse de ma campagne ?
 
-Sélectionner l'option **Adresses e-mail d'exportation CSV** ne téléchargera que les données des utilisateurs avec des adresses e-mail. Par exemple, si vous avez un segment de 100 000 utilisateurs, mais que seulement 50 000 de ces utilisateurs ont des adresses e-mail, et que vous cliquez sur **Exportation CSV des adresses e-mail**, alors vous devriez vous attendre à voir seulement 50 000 lignes de données dans le fichier CSV. En comparaison, l’option **Exporter les données utilisateur en CSV** exportera toutes les données utilisateur.
+En sélectionnant l'option **« Exporter les adresses e-mail au format CSV** », seules les données des utilisateurs disposant d'une adresse e-mail seront téléchargées. Par exemple, si vous disposez d'un segment de 100 000 utilisateurs, mais que seuls 50 000 d'entre eux possèdent une adresse e-mail, et que vous cliquez sur **Exporter les adresses e-mail au format CSV**, l'exportation ne contiendra que 50 000 lignes de données. En comparaison, sélectionner **Exporter les données utilisateur au format CSV** exporte toutes les données utilisateur.
 
 ### Puis-je rechercher une campagne en utilisant son identifiant API ?
 
@@ -145,11 +153,11 @@ Oui, utilisez le filtre `api_id:YOUR_API_ID` sur la page **Campagnes** pour rech
 
 ### Pourquoi les espaces blancs apparaissent-ils différemment dans les champs de saisie et dans le texte affiché ? 
 
-La gestion des espaces blancs diffère entre les champs de saisie et les composants de texte affichés en raison du style CSS. Dans les composants de texte avec le CSS par défaut `white-space: normal`, plusieurs espaces consécutifs se réduisent en un seul espace lors de l'affichage. Il s'agit d'un comportement HTML standard pour le texte rendu. 
+Le traitement des espaces blancs diffère entre les champs de saisie et les composants de texte affichés en raison du style CSS. Dans les composants de texte utilisant le CSS par`white-space: normal` défaut, plusieurs espaces consécutifs sont réduits à un seul espace lors de l'affichage. Il s'agit du comportement HTML standard pour le texte affiché. 
 
-Les champs de saisie conservent les espaces multiples exactement comme vous les saisissez, car vous devez voir et modifier l'espacement exact pour une saisie précise des données. Cela signifie qu'un texte comportant plusieurs espaces peut apparaître différemment lorsqu'il est affiché dans un champ de saisie (où tous les espaces sont préservés) et lorsqu'il est affiché dans d'autres parties du tableau de bord (où le CSS peut réduire les espaces multiples). 
+Les champs de saisie conservent les espaces multiples exactement tels que vous les avez saisis, car il est nécessaire de voir et de modifier l'espacement exact pour une saisie précise des données. Cela signifie que le texte comportant plusieurs espaces peut apparaître différemment lorsqu'il est affiché dans un champ de saisie (où tous les espaces sont conservés) par rapport à son affichage dans d'autres parties du tableau de bord (où le CSS peut réduire plusieurs espaces). 
 
-Par exemple, si vous saisissez un nom de campagne ou un paramètre UTM avec plusieurs espaces dans un champ de saisie, vous voyez tous les espaces préservés. Toutefois, lorsque ce même texte apparaît dans les résultats de recherche, les listes de campagne ou d'autres composants textuels, plusieurs espaces peuvent apparaître comme un seul espace en raison de la gestion des espaces blancs par le CSS. 
+Par exemple, si vous saisissez un nom de campagne ou un paramètre UTM comportant plusieurs espaces dans un champ de saisie, tous les espaces sont conservés. Cependant, lorsque ce même texte apparaît dans les résultats de recherche, les listes de campagnes ou d'autres composants textuels, plusieurs espaces peuvent apparaître comme un seul espace en raison du traitement des espaces blancs CSS. 
 
 ### Quelle est la différence entre les campagnes API et les campagnes déclenchées par l'API ?
 
@@ -183,6 +191,6 @@ Les campagnes déclenchées par l'API et par le serveur sont idéales pour trait
 
 | Avantages | Considérations | 
 | ---- | ---- |
-| \- N'enregistre pas de points de données<br><br>• Les éléments de personnalisation sont compris dans les propriétés de l’événement | • Ne vous permet pas de créer un segment d’utilisateurs éligibles au message dans les propriétés de la charge utile JSON<br><br>\- Impossible de voir les charges utiles JSON entrantes avec le **journal d'activité des messages**|
+| • N'enregistre pas les points de données<br><br>• Les éléments de personnalisation sont compris dans les propriétés de l’événement | • Ne vous permet pas de créer un segment d’utilisateurs éligibles au message dans les propriétés de la charge utile JSON<br><br>\- Impossible de voir les charges utiles JSON entrantes avec le **journal d'activité des messages**|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

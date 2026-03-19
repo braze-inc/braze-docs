@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} Sie müssen auch In-App-Nachrichten aktivieren.
+{% multi_lang_include developer_guide/prerequisites/android.md %} Bitte beachten Sie, dass Sie auch In-App-Nachrichten aktivieren müssen.
 
 ## Nachrichtentypen
 

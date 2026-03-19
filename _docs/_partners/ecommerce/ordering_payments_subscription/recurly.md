@@ -18,7 +18,7 @@ _This integration is maintained by Recurly._
 The integration between Recurly and Braze simplifies the process of sharing subscription data with Braze, enabling targeted communication with customers.
 
 - Leverage Recurly subscription lifecycle events (for example, subscription renewals, pauses, or cancels) in Braze to trigger personalized campaigns and communications.
-- Leverage Recurly subscription data (for example, subscription plans, add-ons, or status) to create and manage Braze users, segments, and Canvases to execute cohort-specific campaigns and communications.
+- Leverage Recurly subscription data (for example, subscription plans, add-ons, or status) to create and manage company users, segments, and Canvases to execute cohort-specific campaigns and communications.
 - Send Recurly data directly to Braze, enabling additional messaging use cases and reducing developmental overhead costs.
 
 Additional details around using Recurly with Braze can be found in the [Recurly Docs](https://docs.recurly.com/docs/braze-integration).

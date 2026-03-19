@@ -66,6 +66,7 @@ For Snowflake, data sharing happens between a [data provider](https://docs.snowf
 
 {% alert warning %}
 If you delete and recreate a share in the Braze dashboard, you must drop the previously-created database and recreate it using `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` to query the inbound share.
+여러 워크스페이스가 동일한 Snowflake 계정으로 데이터를 공유하는 경우, 다중 워크스페이스 구성 관리에 대한 안내는 [Snowflake 데이터 공유 FAQ를]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/faqs/) 참조하세요.
 {% endalert %}
 
 ## Usage and visualization
@@ -131,7 +132,7 @@ The archive of historical event data in Snowflake goes back to April 2019. In th
 
 ### General Data Protection Regulation (GDPR) compliance
 
-Nearly every event record Braze stores includes a few fields representing users' personally identifiable information (PII). Some events may include email address, phone number, device ID, language, gender, and location information. If a user's request to be forgotten is submitted to Braze, we will null out those PII fields for any event belonging to those users. This way, we're not removing the historical record of the event, but now the event can never be tied back to a specific individual.
+{% include partners/snowflake_pii_gdpr.md %}
 
 ### Speed, performance, cost of queries
 

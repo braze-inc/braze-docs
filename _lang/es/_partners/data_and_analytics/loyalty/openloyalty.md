@@ -44,7 +44,7 @@ Antes de empezar, necesitas lo siguiente:
 
 ## Integración
 
-La integración principal sincroniza los eventos webhook de Open Loyalty con Braze mediante la Transformación de Datos.
+La integración principal sincroniza los eventos webhook de Open Loyalty con Braze mediante Transformación de Datos.
 
 ### Paso 1: Generar la URL del Webhook en Braze
 

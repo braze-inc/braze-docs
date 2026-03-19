@@ -1,7 +1,7 @@
 ---
-nav_title: "PUT:プライマリSDK認証キーを設定する。"
+nav_title: "PUT:プライマリ SDK 認証キーを設定する"
 article_title: "PUT:プライマリ SDK 認証キーを設定"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 2
 layout: api_page
 page_type: reference
@@ -40,12 +40,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | パラメーター | 必須 | データタイプ | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `app_id` | 必須 | string | アプリの API 識別子。 |
-| `key_id` | 必須 | string | プライマリとしてマークする SDK 認証キーの ID。 |
+| `app_id` | 必須かどうか | string | アプリの API 識別子。 |
+| `key_id` | 必須かどうか | string | プライマリとしてマークする SDK 認証キーの ID。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
-```json
+```bash
 curl --location --request PUT 'https://rest.iad-01.braze.com/app_group/sdk_authentication/primary' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \

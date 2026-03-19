@@ -1,7 +1,7 @@
 ---
 nav_title: "DELETE:メールアドレスまたは電話番号でサブスクリプション状態を削除"
 article_title: "DELETE:メールアドレスまたは電話番号でサブスクリプション状態を削除"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 0
 hidden: true
 layout: api_page
@@ -20,7 +20,7 @@ description: "この記事では、メールアドレスまたは電話番号の
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --- | --- | --- | --- |
 | `email` | はい | 文字列 | ユーザーのメールアドレス （最低1個、最大50個のアドレスを含むこと）。 |
 | `phone` | はい | 文字列 | ユーザーの電話番号 （最低1個、最大50個の電話番号を含むこと）。これは、E.164 形式で指定することをお勧めします。 |
@@ -28,7 +28,7 @@ description: "この記事では、メールアドレスまたは電話番号の
 
 ## 例のリクエスト
 
-```json
+```http
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 {

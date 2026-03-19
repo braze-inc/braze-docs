@@ -13,9 +13,9 @@ description: "このリファレンス記事では、開封ピクセルとクリ
 
 ## 開封ピクセルとクリックの追跡の有効化
 
-[API]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)、[CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv)、または[Cloud Data Ingestion (CDI)]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/) を使用してユーザープロファイルをインポートまたは更新する場合、次の2 つのフィールドs を変更できます。
+[API]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)、[CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv)、または[クラウドデータ取り込み（CDI）]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/)を通じてユーザープロファイルをインポートまたは更新する際、変更可能なフィールドは次の2つである：
 
-- `email_open_tracking_disabled`: `true` または `false` を受け入れます。`false`に設定して、このユーザーに送信されるすべての将来のメールに開封トラッキングピクセルを追加します。SparkPostとSendGridでのみ利用可能。
+- `email_open_tracking_disabled`:`true` または `false` を受け入れます。`false`に設定して、このユーザーに送信されるすべての将来のメールに開封トラッキングピクセルを追加します。SparkPostとSendGridでのみ利用可能。
 - `email_click_tracking_disabled`:`true` または `false` を受け入れます。`false`に設定して、このユーザーに送信される将来のメール内のすべてのリンクにクリックトラッキングを追加します。SparkPostとSendGridでのみ利用可能。
 
 参考までに、この情報はユーザープロファイルのメール**連絡設定**に反映され、**エンゲージメント**タブにあります。

@@ -16,7 +16,7 @@ search_tag: Partner
 Se estiver alternando entre provedores de armazenamento em nuvem, entre em contato com o gerente de sucesso do cliente do Braze para obter mais assistência na configuração e validação da nova integração.
 {% endalert %}
 
-A integração entre o Braze e o Amazon S3 apresenta duas estratégias de integração:
+A integração do Braze com o Amazon S3 apresenta duas estratégias de integração:
 
 - Aproveite o [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), que o capacita a armazenar dados até que você queira conectá-los a outras plataformas, ferramentas e locais.
 - Use exportações de dados do dashboard (como exportações CSV e relatórios de engajamento).

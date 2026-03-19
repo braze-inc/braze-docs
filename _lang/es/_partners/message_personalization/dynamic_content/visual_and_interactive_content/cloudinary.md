@@ -25,7 +25,7 @@ Son posibles métodos de integración más avanzados, como el uso de [contenido 
 
 | Requisitos     | Descripción |                        
 |-----------------------|-----------------|
-| Cuenta Cloudinary  | Se requiere una [Cuenta Cloudinary](https://cloudinary.com/users/register_free?utm_source=braze+docs+page) para beneficiarse de esta asociación  |
+| Cuenta Cloudinary  | Se requiere una [Cuenta Cloudinary](https://cloudinary.com/users/register_free?utm_source=braze+docs+page) para aprovechar esta asociación  |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation”}
 
 ## Métodos de integración

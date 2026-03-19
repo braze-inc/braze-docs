@@ -22,7 +22,7 @@ L'envoi de MMS à des numéros situés en dehors des États-Unis et du Canada es
 
 Certains utilisateurs peuvent ne pas implémenter ou utiliser des codes courts MMS, mais ils seront disponibles si nécessaire à une date ultérieure.
 
-Pour les utilisateurs qui ont obtenu leurs codes courts avant que Braze ne prenne en charge les MMS, tous les clients existants avec des codes courts américains sont éligibles pour activer instantanément les MMS. Contactez votre gestionnaire de la satisfaction client si vous êtes dans cette situation et que vous souhaitez que les MMS soient activés.
+Pour les utilisateurs qui ont obtenu leurs codes courts avant que Braze ne prenne en charge les MMS, tous les clients existants avec des codes courts américains sont éligibles pour activer instantanément les MMS. Contactez votre gestionnaire de la satisfaction client si vous êtes dans cette situation et si vous souhaitez que les MMS soient activés.
 
 {% alert important %}
 Lors de l'activation des MMS pour des codes courts qui n'avaient pas précédemment les MMS activés, les codes courts devront peut-être être de nouveau approuvés dans un processus d'approbation qui peut prendre plusieurs semaines. Il est important de tenir compte de ce délai lors de l’activation ou non des MMS.

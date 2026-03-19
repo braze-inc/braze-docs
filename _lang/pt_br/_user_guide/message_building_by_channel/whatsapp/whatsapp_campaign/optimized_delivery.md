@@ -16,7 +16,7 @@ channel:
 
 As mensagens do WhatsApp com entrega otimizada são enviadas usando a [API de mensagens de marketing](https://developers.facebook.com/docs/whatsapp/marketing-messages-api-for-whatsapp) da Meta [para WhatsApp](https://developers.facebook.com/docs/whatsapp/marketing-messages-api-for-whatsapp) (MM API para WhatsApp), que oferece entrega dinâmica e baseada em engajamento. Isso significa que suas mensagens de alto engajamento (por exemplo, aquelas com maior probabilidade de serem lidas e clicadas) podem alcançar mais usuários que provavelmente se envolverão com elas. O WhatsApp considera suas mensagens de alto engajamento se elas forem esperadas, relevantes e oportunas e, portanto, mais propensas a serem lidas e clicadas. 
 
-As marcas podem esperar uma entregabilidade igual ou maior com o MM API para WhatsApp, em comparação com o Cloud API. Na Índia, as mensagens de marketing com alto engajamento tiveram até 9% mais mensagens entregues em comparação com a Cloud API, de acordo com a Meta. Note que a API do MM para WhatsApp ainda não garante 100% de entregabilidade.
+As marcas podem esperar uma entregabilidade igual ou maior com o MM API para WhatsApp, em comparação com o Cloud API. Na Índia, as mensagens de marketing com alto engajamento tiveram até 9% mais mensagens entregues em comparação com a Cloud API, de acordo com a Meta. Note que o MM API para WhatsApp ainda não garante 100% de entregabilidade.
 
 ### Disponibilidade regional
 
@@ -34,9 +34,9 @@ A disponibilidade e os recursos de otimização da entrega otimizada dependem da
 
 ![Seção Gerenciamento de contas do WhatsApp Business com um grupo de inscrições listado que tenha um status de número Ativo.]({% image_buster /assets/img/whatsapp/optimized_delivery_message.png %})
 
-Como alternativa, você pode ativar a entrega otimizada diretamente no gerenciador do WhatsApp e, em seguida, começar a enviar no Braze.
+Como alternativa, você pode ativar a entrega otimizada diretamente no gerenciador do WhatsApp e começar a enviar no Braze.
 
-### Solução de problemas em sua configuração
+### Solução de problemas de sua configuração
 
 - **Erro geral:** Se algo der errado durante o upgrade, este banner de erro será exibido e o aconselhará a entrar [em contato com o Suporte]({{site.baseurl}}/braze_support/).
 - **Erro não elegível:** Se você estiver restrito pelo Meta, esse banner de erro será exibido: "Pelo menos uma conta do WhatsApp Business é restrita pela Meta. As contas devem estar em situação regular para fazer upgrade." Isso não pode ser descartado até que o problema seja resolvido.

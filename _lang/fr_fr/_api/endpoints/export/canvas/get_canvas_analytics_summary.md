@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article décrit le point de terminaison Export Canvas data summary analytics Braze."
+description: "Cet article décrit l'endpoint Braze permettant d'exporter les analyses récapitulatives des données Canvas."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "Cet article décrit le point de terminaison Export Canvas data sum
 /canvas/data_summary
 {% endapimethod %}
 
-> Utilisez cet endpoint pour exporter des rollups de données de séries temporelles pour un Canvas, fournissant un résumé concis des résultats du Canvas.
+> Veuillez utiliser cet endpoint pour exporter des synthèses de données chronologiques pour un canvas, fournissant ainsi un résumé concis des résultats du canvas.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1eb1b760-6b00-4c03-bcfb-12646f2ba6da {% endapiref %}
 
@@ -31,16 +31,16 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Requis | Chaîne de caractères | Voir l'[identifiant de l'API Canvas]({{site.baseurl}}/api/identifier_types/). |
-| `ending_at` | Requis | DateTime <br>chaîne ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date de fin de l'exportation des données. La valeur par défaut est l'heure de la demande. |
+| `ending_at` | Requis | DateTime <br>chaîne ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date de fin pour l'exportation des données. La valeur par défaut correspond à l'heure de la demande. |
 | `starting_at` | En option* | DateTime <br>chaîne ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date de début de l'exportation des données. <br><br>\* L'adresse `length` ou `starting_at` est requise. |
-| `length` | En option* | Chaîne de caractères | Nombre maximal de jours avant `ending_at` inclus dans la série renvoyée. Doit être compris entre 1 et 14 (inclus). <br><br>\* L'adresse `length` ou `starting_at` est requise. |
-| `include_variant_breakdown` | Facultatif | Valeur booléenne | Indique s'il faut inclure des statistiques sur les variantes (par défaut : `false`).  |
-| `include_step_breakdown` | Facultatif | Valeur booléenne | Indique s'il faut inclure des statistiques sur les étapes (par défaut : `false`). |
-| `include_deleted_step_data` | Facultatif | Valeur booléenne | Inclure ou non les statistiques des étapes supprimées (valeur par défaut : `false`). |
+| `length` | En option* | Chaîne de caractères | Nombre maximal de jours avant`ending_at`d'être inclus dans la série renvoyée. Doit être compris entre 1 et 14 (inclus). <br><br>\* L'adresse `length` ou `starting_at` est requise. |
+| `include_variant_breakdown` | Facultatif | Valeur booléenne | Si l'on souhaite inclure les statistiques des variantes (valeur par défaut : `false`).  |
+| `include_step_breakdown` | Facultatif | Valeur booléenne | Si l'on souhaite inclure les statistiques par étape (valeur par défaut : `false`). |
+| `include_deleted_step_data` | Facultatif | Valeur booléenne | Si vous souhaitez inclure les statistiques des étapes supprimées (valeur par défaut : `false`). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
-**Alignement des fuseaux horaires :** Les analyses/analytiques du tableau de bord de Braze sont agrégées quotidiennement dans le fuseau horaire configuré de votre entreprise dans le tableau de bord. Assurez-vous que vos horodatages s'alignent sur le fuseau horaire de votre entreprise afin que vos statistiques correspondent au tableau de bord. Par exemple, si l'heure de votre entreprise est UTC+2, l'horodatage doit être 12AM UTC+2.
+**Alignement des fuseaux horaires :** Les analyses du tableau de bord de Braze sont agrégées quotidiennement dans le fuseau horaire configuré pour votre entreprise dans le tableau de bord. Veuillez vous assurer que vos horodatages correspondent au fuseau horaire de votre entreprise afin que vos statistiques correspondent au tableau de bord. Par exemple, si l'heure de votre entreprise est UTC+2, l'horodatage devrait être 12 h UTC+2.
 {% endalert %}
 
 ## Exemple de demande
@@ -99,7 +99,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 ```
 
 {% alert important %}
-**`influenced_opens` champ :** Dans la réponse de l'API, le champ `influenced_opens` représente le nombre total d'ouvertures (ouvertures directes et influencées combinées). Dans le tableau de bord de Braze, les " ouvertures influencées " se réfèrent uniquement aux ouvertures influencées, à l'exclusion des ouvertures directes. Cela est dû à une convention de dénomination héritée de l'API.
+**`influenced_opens` domaine :** Dans la réponse API, le`influenced_opens`champ représente le nombre total d'ouvertures (ouvertures directes et influencées combinées). Dans le tableau de bord de Braze, le terme « ouvertures influencées » désigne uniquement les ouvertures influencées, à l'exclusion des ouvertures directes. Cela est dû à une convention de nommage héritée dans l'API.
 {% endalert %}
 
 {% alert tip %}

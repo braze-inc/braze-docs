@@ -20,7 +20,7 @@ Su vista de análisis variará dependiendo de si seleccionó una [optimización]
 
 Si seleccionó **Sin optimización** al configurar su campaña, su vista de análisis permanecerá igual. La página **de Análisis de Campaña** de su campaña mostrará el rendimiento de sus variantes frente a su grupo de control, si incluyó uno.
 
-![Sección de rendimiento de los análisis de campaña para una campaña de correo electrónico con múltiples variantes. La tabla enumera diversas métricas de rendimiento para cada variante, como destinatarios, rebotes, clics y conversiones.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
+![Sección de rendimiento de los análisis de campaña para una campaña de correo electrónico con múltiples variantes. La tabla muestra diversas métricas de rendimiento para cada variante, como destinatarios, rebotes, clics y conversiones.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
 
 Para obtener más información, consulte el artículo [Análisis de campañas]({{site.baseurl}}/user_guide/analytics/reporting/campaign_analytics/) para su canal de mensajería.
 
@@ -39,11 +39,11 @@ Si una variante supera a todas las demás con una [confianza]({{site.baseurl}}/u
 
 Si ninguna variante supera a todas las demás con un 95% de confianza y usted opta por enviar la variante con mejores resultados de todos modos, se seguirá enviando la variante con mejores resultados y se indicará con la etiqueta "Ganador".
 
-![Resultados de una prueba inicial enviada para determinar la Variante Ganadora, en la que ninguna variante rindió mejor que las demás con la confianza suficiente para alcanzar el umbral de confianza del 95% para la significación estadística.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
+![Resultados de una prueba inicial enviada para determinar la variante ganadora, en la que ninguna variante obtuvo un mejor rendimiento que las demás con la suficiente fiabilidad como para alcanzar el umbral de confianza del 95 % para la significación estadística.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
 
 #### Cómo se selecciona la Variante Ganadora
 
-Braze prueba todas las variantes entre sí con [las pruebas chi-cuadrado de Pearson](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). Mide si una variante supera estadísticamente a todas las demás con un nivel de significación de p < 0,05, o lo que denominamos significación del 95%. Si es así, la variante ganadora se indica con la etiqueta "Ganador".
+Braze prueba todas las variantes entre sí con [las pruebas chi-cuadrado de Pearson](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). Esto mide si una variante supera estadísticamente a todas las demás con un nivel de significación de p<  0,05, o lo que denominamos significación del 95 %. Si es así, la variante ganadora se indica con la etiqueta "Ganador".
 
 Se trata de una prueba independiente de la puntuación de confianza, que sólo describe el rendimiento de una variante en comparación con el control con un valor numérico entre 0 y 100%.
 
@@ -54,7 +54,7 @@ Una variante puede obtener mejores resultados que el grupo de control, pero la p
 
 La pestaña **Variante ganadora** muestra los resultados del segundo envío, en el que a cada usuario restante se le envió la variante con mejor rendimiento de la prueba inicial. Su **Audiencia %** sumará el porcentaje del segmento objetivo que reservó para el grupo Variante ganadora.
 
-![Resultados de la Variante Ganadora enviados al grupo Variante Ganadora.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
+![Resultados de la variante ganadora enviados al grupo de la variante ganadora.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -78,7 +78,7 @@ Las relaciones entre los eventos personalizados y las preferencias de mensajes s
 
 ![]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
 
-Si la prueba no puede encontrar una relación significativa entre los eventos personalizados y las preferencias de ruta, la prueba vuelve a un método de análisis basado en la sesión, y no se muestran tablas de datos de eventos personalizados.
+Si la prueba no encuentra una relación significativa entre los eventos personalizados y las preferencias de ruta, se recurre a un método de análisis basado en sesiones y no se muestran tablas de datos de eventos personalizados.
 
 {% details Fallback analysis method %}
 
@@ -91,9 +91,9 @@ Estas características son:
 - **Frecuencia:** Frecuencia de las sesiones
 - **Permanencia:** Cuánto tiempo llevan siendo usuarios
 
-Por ejemplo, la prueba puede descubrir que la mayoría de los usuarios prefieren la variante A, pero los usuarios que tuvieron una sesión hace unos 3-12 días, tienen entre 1-12 días entre sesiones y fueron creados en los últimos 67-577 días tienden a preferir la variante B. Por lo tanto, los usuarios de esa subpoblación recibieron la variante B en el segundo envío, mientras que el resto recibió la variante A.
+Por ejemplo, la prueba puede revelar que la mayoría de los usuarios prefieren la variante A, pero que los usuarios que tuvieron una sesión hace entre 3 y 12 días, tienen entre 1 y 12 días entre sesiones y se crearon en los últimos 67-577 días tienden a preferir la variante B. Por lo tanto, los usuarios de esa subpoblación recibieron la variante B en el segundo envío, mientras que el resto recibió la variante A.
 
-![La tabla de características de los usuarios, que muestra qué usuarios se prevé que prefieran la variante A y la variante B en función de los tres contenedores en los que se encuentran por antigüedad, frecuencia y permanencia.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
+![La tabla Características de los usuarios, que muestra qué usuarios se prevé que prefieran la variante A y la variante B en función de los tres contenedores en los que se clasifican según la actualidad, la frecuencia y la antigüedad.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
 
 **Cómo se seleccionan las variantes personalizadas**<br>
 Con este método, el mensaje recomendado de un usuario individual es la suma de los efectos de su recencia, frecuencia y permanencia específicas. La recurrencia, la frecuencia y la permanencia se dividen en categorías, como se ilustra en la tabla de **características de los usuarios**. El intervalo de tiempo de cada cubo viene determinado por los datos de los usuarios de cada campaña individual y cambiará de una campaña a otra. 
@@ -113,7 +113,7 @@ Las tres tarjetas de esta página muestran su ascensor proyectado, los resultado
 - **Resultados globales:** Los resultados del segundo envío basados en la métrica de optimización elegida*(Aperturas Únicas*, *Clics Únicos* o *Evento de Conversión Principal*).
 - **Resultados previstos:** Los resultados previstos del segundo envío en función de la métrica de optimización elegida si en su lugar hubiera enviado sólo la Variante Ganadora. 
 
-![Ficha Variante personalizada para una campaña optimizada para aperturas únicas. Las tarjetas muestran el Ascenso Proyectado, las Aperturas Únicas Totales (con Variante Personalizada) y las Aperturas Únicas Proyectadas (con Variante Ganadora).]({% image_buster /assets/img_archive/ab_analytics_pv_1.png %})
+![Ficha Variante personalizada para una campaña optimizada para aperturas únicas. Las tarjetas muestran el aumento previsto, las Unique Opens totales (con variante de personalización) y las Unique Opens previstas (con variante ganadora).]({% image_buster /assets/img_archive/ab_analytics_pv_1.png %})
 
 La tabla de esta página muestra las métricas de cada variante del envío de Variantes Personalizadas. Su **Audiencia %** suma el porcentaje del segmento objetivo que reservó para el grupo Variante personalizada.
 
@@ -151,17 +151,17 @@ Tanto si la prueba tiene un claro ganador como si no, puede ser útil realizar u
 
 ## Discrepancias entre el grupo de control y la variante
 
-En las campañas de mensajes dentro de la aplicación, la forma en que se realiza el seguimiento de los usuarios y cómo se registran las impresiones puede causar discrepancias en la división prevista entre el grupo de control y la variante. Esto se debe a que las impresiones reales registradas pueden no reflejar esta división, y en última instancia Braze no tiene control sobre el comportamiento individual del usuario que desencadenará la acción.
+En las campañas de mensajes dentro de la aplicación, la forma en que se realiza el seguimiento de los usuarios y cómo se registran las impresiones puede provocar discrepancias en la división prevista entre el grupo de control y la variante. Esto se debe a que las impresiones reales registradas pueden no reflejar esta división y, en última instancia, Braze no tiene control sobre el comportamiento individual de los usuarios que desencadenarán el desencadenante.
 
-Por ejemplo, supongamos que una campaña tiene una audiencia objetivo de 200 usuarios en su lanzamiento, con 100 usuarios en el grupo de control y 100 usuarios en la variante.
+Por ejemplo, supongamos que una campaña tiene una audiencia objetivo de 200 usuarios en el momento del lanzamiento, con 100 usuarios en el grupo de control y 100 usuarios en la variante.
 
-Los 100 usuarios de la variante reciben la carga útil del mensaje dentro de la aplicación, y 50 de ellos realizan la acción desencadenante y ven el mensaje dentro de la aplicación. Los 100 usuarios del grupo de control sólo son objeto de seguimiento si realizan la acción desencadenante de la campaña, y 75 de ellos realizan la acción desencadenante y registran una impresión, pero no ven el mensaje dentro de la aplicación.
+Los 100 usuarios de la variante reciben la carga útil del mensaje dentro de la aplicación, y 50 de ellos realizan la acción desencadenante y ven el mensaje dentro de la aplicación. Los 100 usuarios del grupo de control solo se rastrean si realizan la acción desencadenante de la campaña, y 75 de ellos realizan la acción desencadenante y registran una impresión, pero no ven el mensaje dentro de la aplicación.
 
-A pesar del 50/50 inicial, las impresiones únicas registradas no están equilibradas. El grupo de variantes tiene 50 impresiones, mientras que el grupo de control tiene 75 impresiones.
+A pesar de la división inicial al 50 %, las impresiones únicas registradas no están equilibradas. El grupo variante tiene 50 impresiones, mientras que el grupo de control tiene 75 impresiones.
 
 ### Retrasos en los mensajes dentro de la aplicación 
 
-Para las campañas de mensajes dentro de la aplicación desencadenadas que incluyan visualizaciones diferidas, las impresiones del grupo de control se registrarán cuando el usuario final hubiera recibido originalmente el mensaje dentro de la aplicación. Por ejemplo, si una campaña está configurada para retrasar la visualización una hora, las impresiones del grupo de control no se registrarán hasta que haya transcurrido el retraso de una hora. Esto ayuda a realizar un seguimiento preciso de las impresiones relacionadas con el momento previsto de la entrega del mensaje.
+En el caso de las campañas de mensajes dentro de la aplicación activadas que incluyen visualizaciones retardadas, las impresiones del grupo de control se registrarán cuando el usuario final hubiera recibido originalmente el mensaje dentro de la aplicación. Por ejemplo, si una campaña está configurada para retrasar la visualización una hora, las impresiones del grupo de control no se registrarán hasta que haya transcurrido ese retraso de una hora. Esto ayuda a realizar un seguimiento preciso de las impresiones relacionadas con el momento previsto para la entrega del mensaje.
 
 ## Seguimientos recomendados {#recommended-follow-ups}
 

@@ -45,7 +45,7 @@ Antes de configurar o conector WhatsApp BYO, confirme que o envio anterior da su
 3\. Dê à chave um nome significativo, como “Braze - Meu Nome de Espaço de Trabalho - Meu Nome de WABA”.
 4\. Adicione uma data de vencimento que esteja longe no futuro para evitar problemas com a expiração do token.
     \- Faça uma nota para gerar uma nova chave de API e reconectar seu WABA antes da data de vencimento.
-5\. Selecione esses escopos:
+5\. Selecione estes escopos:
 - `Message:send`
 - `Whatsapp:manage`
 - `Whatsapp:message:send`
@@ -78,7 +78,7 @@ Antes de configurar o conector WhatsApp BYO, confirme que o envio anterior da su
 - Você deve criar um novo WABA, não selecionar um existente.
 
 {% alert note %}
-Para receber o código de verificação, acesse seu dashboard do Infobip > **Abrir** > **Logs**, e pegue o código da mensagem SMS recebida.  
+Para receber o código de verificação, acesse seu dashboard do Infobip > **Analisar** > **Logs**, e pegue o código da mensagem SMS recebida.  
 {% endalert %}
 
 ![Registros de mensagens mostrando uma mensagem SMS recebida com o código de verificação.]({% image_buster /assets/img/whatsapp/byo_connector/verification_code.png %})

@@ -56,7 +56,7 @@ Utiliza tarjetas de ofertas para proporcionar información clave sobre las ofert
 2. En **Oferta**, introduce un breve resumen del descuento. Un ejemplo es "20% de descuento en todos los zapatos".
 3. (opcional) En **Código**, añade el código promocional que el usuario debe aplicar al pagar.
 4. Introduce al menos una de las siguientes URL. 
--  **URL de la página de la oferta:** La URL de la página de destino de la oferta específica. Esto crea un botón "Comprar ahora" (o similar). Te recomendamos que facilites esta URL para tu Tarjeta de Trato. 
+-  **URL de la página de la oferta:** La URL de la página de destino de la oferta específica. Esto crea un botón "Comprar ahora" (o similar). Te recomendamos que facilites esta URL para tu tarjeta de ofertas. 
 - **URL de la página de inicio del comerciante:** La URL de tu página de inicio principal. Utiliza este campo sólo si no está disponible la URL de una página de oferta específica.
 5. (opcional) Añade una fecha de inicio para la oferta.
 6. Determina si la oferta debe terminar a una hora determinada o no terminar nunca.
@@ -78,7 +78,7 @@ Te recomendamos que subas las imágenes de tus productos a la biblioteca multime
 {% endalert %}
 
 {: start="5"}
-5\. Personaliza tu tarjeta promocional añadiendo un titular, una moneda, un precio y un valor de descuento.
+5\. Personaliza tu tarjeta promocional añadiendo un titular, una moneda, un precio y el valor del descuento.
 
 | Propiedad personalizable | Descripción |
 |---|---|

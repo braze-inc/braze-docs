@@ -2,7 +2,7 @@
 nav_title: Zielgruppen-Pfade
 article_title: Zielgruppenpfade 
 alias: /audience_paths/
-page_order: 1
+page_order: 3
 page_type: reference
 description: "Dieser Referenzartikel beschreibt, wie Sie Zielgruppenpfade in Ihrem Canvas verwenden können, um Nutzer:innen in großem Umfang intuitiv zu filtern und zu segmentieren, und zwar mit strategischen, prioritätsbasierten Nutzergruppierungen."
 tool: Canvas
@@ -29,17 +29,23 @@ Mit Zielgruppenpfade können Sie Folgendes tun:
 - Stellen Sie Nutzer:innen in großem Umfang gezielt zusammen.
   - Erstellen Sie bis zu acht Zielgruppen (zwei Standard- und sechs zusätzliche Gruppen) pro Komponente. Sie können jedoch mehrere Schritte für den Zielgruppenpfad miteinander verbinden, um Ihre Nutzer:innen weiter zu sortieren. 
 
-### Zeit für Nutzer:innen-Bewertungen zulassen
+### Wie Nutzer:innen bewertet werden
 
 ![Canvas zeigt eine 24-stündige Verzögerung nach einem Nachrichten-Schritt, gefolgt von einem Zielgruppen-Pfad.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-Nutzer:innen werden ausgewertet, sobald sie den Schritt Zielgruppen-Pfad erreichen. Nachdem sie bewertet worden sind, werden sie sofort zum nächsten Schritt übergehen. Daher ist es wichtig, ein angemessenes Zeitfenster verstreichen zu lassen, wenn der Zielgruppen-Pfad durch eine Nutzeraktion bestimmt wird.
+Nutzer:innen werden anhand von Filtern und Segmentzugehörigkeit **in dem Moment** bewertet**, in dem sie den Schritt „Zielgruppen-Pfad“ erreichen** – nicht, wenn sie die Canvas betreten haben. Nach der Bewertung werden sie umgehend auf den entsprechenden Pfad weitergeleitet. Wenn ein Nutzer einer Zielgruppe zugeordnet wird, verbleibt er in dieser Gruppe, auch wenn sich sein Nutzerprofil später ändert.
+
+{% alert important %}
+Zielgruppen-Pfade werden auf Grundlage der aktuellen Attribute, Filter und Segmentzugehörigkeit einer Nutzer:in zum Zeitpunkt der Auswertung bewertet. Sie bewerten nicht auf der Grundlage des spezifischen Ereignisses, das den Eingang in Canvas getriggert hat. Um Nutzer:innen basierend auf einer von ihnen ausgeführten Aktion (z. B. einem angepassten Event) weiterzuleiten, verwenden Sie bitte stattdessen [Aktions-Pfade]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/).
+{% endalert %}
+
+### Zeit für Nutzer:innen-Bewertungen zulassen
+
+Da die Auswertung unmittelbar erfolgt, ist es wichtig, eine Verzögerung vor dem Zielgruppen-Pfad einzufügen, wenn die Pfadkriterien von einer Benutzerinteraktion mit einem vorherigen Schritt abhängen.
 
 Wenn Nutzern beispielsweise Nachricht A gesendet wird und der nächste Schritt ein Zielgruppen-Pfad ist, der auswertet, ob sie mit dieser Nachricht interagiert haben, gelangen alle Nutzer:innen zu dem Schritt für diejenigen, die nicht mit dieser Nachricht interagiert haben. Das liegt daran, dass die Nutzer:innen sofort zum Schritt Zielgruppen-Pfad übergegangen sind, ohne Zeit für eine Interaktion mit der Nachricht zu haben. Mit anderen Worten: Nutzer:innen werden fast unmittelbar nach dem Versand der Nachricht auf eine Interaktion mit der Nachricht geprüft.
 
-Um Nutzern:innen Zeit zu geben, mit einer gesendeten Nachricht zu interagieren, muss zwischen dem Schritt Nachricht und Zielgruppen-Pfad eine Verzögerung liegen. Eine Verzögerung von 24 Stunden würde den Nutzer:innen beispielsweise 24 Stunden nach dem Versand der Nachricht Zeit geben, mit Nachricht A zu interagieren, bevor sie bewertet wird.
-
-Beachten Sie, dass Nutzer:innen auf der Grundlage der ersten Aktion, die sie nach der Eingabe des Schritts Zielgruppen-Pfad innerhalb des Bewertungsfensters durchgeführt haben, zum nächsten Schritt vorbringen. Das bedeutet, dass ein Nutzer:in, wenn er ein zweites angepasstes Event durchführt, nicht die Zielgruppe wechselt.
+Um den Nutzer:innen Zeit für die Interaktion mit einer gesendeten Nachricht zu geben, fügen Sie bitte eine Verzögerung zwischen dem Schritt „Nachricht“ und dem Zielgruppen-Pfad ein. Beispielsweise gewährt eine Verzögerung von 24 Stunden den Nutzer:innen nach dem Versand der Nachricht 24 Stunden Zeit, um mit Nachricht A zu interagieren, bevor sie bewertet wird.
 
 ## Erstellen eines Zielgruppenpfads
 
@@ -56,17 +62,17 @@ Der folgende Screenshot zeigt das Layout eines erweiterten Audience Paths-Schrit
 
 Wenn Sie beispielsweise das Onboarding Messaging auf eine Gruppe von Nutzern ausrichten möchten, könnten Sie Retargeting-Filter auswählen, z. B. "Hat auf E-Mail geklickt" und "Hat auf In-App-Nachrichten geklickt".
 
-![Ein erweiterter Zielgruppen-Pfad mit Gruppen für "Liebt die asiatische Küche", "Liebt die lateinische Küche", "Liebt die europäische Küche" und "Alle anderen".]({% image_buster /assets/img/audience_path/audience_path3.png %})
+![Ein erweiterter Zielgruppen-Pfad mit Gruppen für „Liebhaber asiatischer Küche“, „Liebhaber lateinamerikanischer Küche“, „Liebhaber europäischer Küche“ und „Alle anderen“.]({% image_buster /assets/img/audience_path/audience_path3.png %})
 
 Nachdem der Schritt für Zielgruppenpfade abgeschlossen ist, hat jede Zielgruppe einen eigenen Branch. Sie können mit der Verwendung von Zielgruppenpfaden fortfahren, um Ihr Publikum weiter zu filtern. Alternativ können Sie Ihre Canvas-Journey mit den Standard-Canvas-Schritten fortsetzen. 
 
-![Zwei Zielgruppen-Pfade mit unterschiedlichen Gruppen auf der Basis von Engagement.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
+![Zwei Zielgruppen-Pfade mit unterschiedlichen Gruppen, basierend auf dem Engagement.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
 
 ### Testen von Zielgruppen
 
 Nachdem Sie Ihrer Zielgruppe Segmente und Filter hinzugefügt haben, können Sie testen, ob Ihre Zielgruppen wie erwartet eingerichtet sind, indem Sie [nach einem Benutzer suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), um zu überprüfen, ob er den Zielgruppenkriterien entspricht.
 
-![Die Rubrik "Nutzer:innen".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
+![Der Abschnitt „Benutzersuche“.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 ## Audience Paths verwenden
 

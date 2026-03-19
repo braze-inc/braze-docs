@@ -20,7 +20,7 @@ Le champ « De » doit indiquer clairement l’expéditeur. Essayez de ne pas
 
 ### Adresses « noreply »
 
-Les adresses e-mail sans réponse sont généralement déconseillées pour de multiples raisons, car elles désengagent vos lecteurs. De nombreux destinataires répondent à l’e-mail pour se désabonner, donc s’ils ne sont pas autorisés à le faire, leur action suivante est le plus souvent de marquer l’e-mail comme étant du spam.
+Les adresses e-mail sans réponse ne sont généralement pas recommandées pour plusieurs raisons, car elles peuvent dissuader vos lecteurs. De nombreux destinataires répondent à l’e-mail pour se désabonner, donc s’ils ne sont pas autorisés à le faire, leur action suivante est le plus souvent de marquer l’e-mail comme étant du spam.
 
 Les réponses automatiques (de type « absent du bureau ») peuvent en fait fournir des informations précieuses, améliorer les taux d’ouverture et diminuer les signalements de spam (en retirant ceux qui ne veulent pas recevoir d’e-mails). Au niveau personnel, un message avec « Ne pas répondre » peut paraitre impersonnel aux destinataires et les faire renoncer à recevoir d’autres e-mails de votre marque ou entreprise.
 
@@ -33,7 +33,7 @@ Dans un e-mail, le texte d’accroche doit communiquer efficacement le point ess
 La quantité de texte d’accroche visible dépend du client d’e-mail de l’utilisateur et de la longueur de la ligne objet de l’e-mail. En général, nous recommandons que les accroches d’e-mail fassent entre 50 et 100 caractères.
 
 {% alert note %}
-L'accroche peut faire référence à Liquid dans le corps de l'e-mail, et le corps de l'e-mail peut faire référence à Liquid dans l'accroche. En effet, le texte de l'accroche fait partie du corps de l'e-mail lorsque vous envoyez des messages aux destinataires.
+L'accroche peut faire référence à Liquid dans le corps de l'e-mail, et le corps de l'e-mail peut faire référence à Liquid dans l'accroche. En effet, le texte de l'accroche fait partie du corps du message lorsque vous envoyez des messages à vos destinataires.
 {% endalert %}
 
 Voici quelques bonnes pratiques à garder à l’esprit au moment de rédiger vos accroches :
@@ -43,13 +43,13 @@ Voici quelques bonnes pratiques à garder à l’esprit au moment de rédiger vo
   - Utilisez des mots forts pour que le lecteur sache exactement ce que vous lui demandez, mais veillez à refléter la voix de la marque de votre entreprise et faites en sorte que chaque appel à l’action fournisse une certaine valeur au consommateur.
   - L’accroche ne doit pas faire plus de 85 caractères, et elle doit avoir une sorte d’appel à l’action descriptif lié à la ligne Objet.
 
-2. Les e-mails et les sites de destination vers lesquels vous dirigez vos utilisateurs doivent être optimisés pour les mobiles :
+2. Les e-mails et les pages d'accueil vers lesquels vous redirigez vos utilisateurs doivent être optimisés pour les appareils mobiles :
   - Pas de message interstitiel
   - Grands champs sur le formulaire
   - Navigation facile
   - Grand texte
   - Beaucoup d’espace vide
-  - Un texte court et concis
+  - Texte court et concis
   - Appels à l’action clairs
 
 ### Limites de caractères de l’accroche
@@ -91,7 +91,7 @@ Assurez-vous de limiter la taille de vos e-mails. Les corps d'e-mails de plus de
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-Pour enregistrer votre campagne d'e-mail ou votre modèle, assurez-vous que le corps de votre e-mail ne dépasse pas 400 Ko.
+Pour enregistrer votre campagne ou votre modèle d'e-mail, veuillez vous assurer que le corps de votre e-mail ne dépasse pas 400 Ko.
 {% endalert %}
 
 ## Longueur du texte

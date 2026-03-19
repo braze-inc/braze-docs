@@ -10,7 +10,7 @@ channel:
 
 # Transférez les numéros de téléphone WhatsApp et les groupes d'abonnement entre les espaces de travail.
 
-> Cette page explique comment déplacer un numéro de téléphone WhatsApp Business Account (WABA) et son groupe d'abonnement associé d'un espace de travail à un autre au sein de Braze. Ce processus simplifie votre expérience de l'utilisation de WhatsApp avec Braze, et réduit le besoin d'une aide technique.
+> Cette page explique comment vous pouvez déplacer un numéro de téléphone WhatsApp Business Account (WABA) et son groupe d'abonnement associé d'un espace de travail à un autre au sein de Braze. Ce processus simplifie votre expérience de l'utilisation de WhatsApp avec Braze, et réduit le besoin d'une aide technique.
 
 ## Conditions préalables
 

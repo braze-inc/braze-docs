@@ -16,7 +16,7 @@ tool:
 
 예를 들어, 사용자에게 앱 사용 방법을 묻거나, 개인 선호도에 대해 자세히 알아보고, 특정 기능에 대한 만족도를 물어볼 수 있습니다.
 
-![알림 선호도, 식단 선호도, 고객 만족 설문조사의 세 가지 간단한 설문조사 메시지입니다. 설문조사에서 선택한 옵션은 해당 사용자에 대해 기록될 커스텀 속성에 해당합니다.]({% image_buster /assets/img/iam/iam-survey.png %})
+![알림 선호도, 식단 선호도, 고객 만족 설문조사의 세 가지 간단한 설문조사 메시지입니다. 선택된 옵션은 해당 사용자의 커스텀 속성에 기록됩니다.]({% image_buster /assets/img/iam/iam-survey.png %})
 
 ## SDK 요구 사항 {#supported-sdk-versions}
 
@@ -38,7 +38,7 @@ tool:
 
 설문조사 작성을 시작하려면 설문조사 **헤더** 필드에 질문을 추가합니다. 원하는 경우 설문조사 질문 아래에 표시할 **본문** 메시지(선택 사항)를 추가할 수 있습니다.
 
-![간단한 설문조사 편집기의 작성 탭에는 머리글, 본문(선택 사항), 헬퍼 텍스트(선택 사항)를 입력할 수 있는 필드가 있습니다.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
+![간단한 설문 조사 편집기의 작성 탭으로, 헤더, 선택적 본문 및 선택적 도움말 텍스트 필드가 포함되어 있습니다.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
 
 {% alert tip %}
 이 필드에는 Liquid와 이모티콘을 모두 포함할 수 있으므로 멋지게 꾸며보세요!
@@ -52,7 +52,7 @@ tool:
 
 그런 다음 [사용자 지정 속성을 수집할지](#custom-attributes) 아니면 [응답만 기록할지](#no-attributes) 결정합니다.
 
-!['제출 시 로그 속성'을 선택한 상태에서 선택 드롭다운을 선택합니다.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
+!["제출 시 속성 기록"이 선택된 선택 항목 드롭다운.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
 
 #### 커스텀 속성 수집 {#custom-attributes}
 
@@ -63,7 +63,7 @@ tool:
 사용자 지정 속성의 데이터 유형은 설문조사를 설정한 방식에 따라 달라집니다.
 
 - **객관식 선택:** 사용자 지정 속성의 데이터 유형은 배열이어야 합니다. 사용자 지정 속성이 다른 데이터 유형으로 설정되어 있으면 응답이 기록되지 않습니다.
-- **단수 선택:** 사용자 지정 속성의 데이터 유형은 배열이 _아니어야_ 합니다. 속성이 배열인 경우 응답이 기록되지 않습니다.
+- **단수 선택:** 커스텀 속성의 데이터 유형은 문자열이어야 합니다. 문자열 유형이 아닌 커스텀 속성은 드롭다운에 나타나지 않으며, 응답이 기록되지 않습니다.
 
 {% alert important %}
 사용자 지정 속성 컬렉션이 활성화되면 동일한 사용자 지정 속성 이름을 공유하는 선택 항목이 배열로 결합됩니다.
@@ -89,11 +89,11 @@ tool:
 
 **설문조사** 탭 하단의 **제출 버튼** 섹션에서 버튼 텍스트와 클릭 시 동작을 수정합니다:
 
-![클릭 시 동작을 '응답 제출 및 확인 페이지 표시'로 설정합니다.]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
+![클릭 시 동작이 "응답 제출 및 확인 페이지 표시"로 설정됩니다.]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
 
 확인 페이지를 추가하기로 선택한 경우 **확인 페이지** 탭으로 전환하여 메시지를 사용자 지정합니다:
 
-![간편 설문조사 편집기의 확인 페이지 탭으로 이동합니다. 사용 가능한 필드는 헤더, 선택적 본문, 버튼 텍스트 및 클릭 시 동작 버튼입니다.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
+![간편 설문조사 편집기의 확인 페이지 탭으로 이동합니다. 사용 가능한 필드는 헤더, 선택적 본문, 버튼 텍스트 및 버튼 클릭 동작입니다.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
 
 사용자를 앱이나 웹사이트의 다른 페이지로 안내하려면 버튼의 **클릭 시 동작을** 변경하세요.
 
@@ -101,7 +101,7 @@ tool:
 
 **색상 테마** 선택기를 사용하여 메시지의 글꼴 색상과 강조 색상을 사용자 지정할 수 있습니다.
 
-![사용자가 색상 팔레트를 클릭한 후 색상 테마 선택기가 펼쳐진 상태에서 간단한 설문조사 편집기의 작성 탭을 클릭합니다.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
+![사용자가 색상 팔레트를 클릭한 후 색상 테마 선택기가 확장된 간단한 설문 조사 편집기의 작성 탭입니다.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
 ## 결과 분석 {#analytics}
 
@@ -134,7 +134,7 @@ tool:
 
 **목표:** 고객 만족도를 측정하고 낮은 점수를 남긴 사용자에게 윈백 캠페인을 보내세요.
 
-이를 설정하려면 "😡 매우 불만족"에서 "😍 매우 만족"까지 5가지 옵션이 있는 단답형 선택 설문조사를 사용합니다. 각 선택 항목은 사용자 지정 속성 `customer_satisfaction` 에 매핑되며, 1에서 5까지의 숫자 값(1은 만족도가 가장 낮고 5는 가장 만족도가 높음을 나타냄)으로 표시됩니다.
+이를 설정하려면 "😡 매우 불만족"에서 "😍 매우 만족"까지 5가지 옵션이 있는 단답형 선택 설문조사를 사용합니다. 각 선택 항목은 사용자 지정 속성 `customer_satisfaction` 에 매핑되며, 1에서 5까지의 숫자 값(1은 만족도가 가장 낮고 5는 가장 만족도가 높음을 나타냄)으로 표시됩니다. 이 숫자 값은 문자열로 저장되며, 단일 선택을 위해 문자열 커스텀 속성이 필요합니다.
 
 | 선택                                | 속성              | 값 |
 |---------------------------------------|------------------------|-------|
@@ -145,7 +145,7 @@ tool:
 | 😍 매우 만족                     | `customer_satisfaction` | 5     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-사용자가 설문조사를 제출하면 선택한 값이 사용자 지정 속성으로 기록됩니다. 그런 다음 오디언스 필터를 사용하여 후속 캠페인을 구축할 수 있습니다. 예를 들어, `customer_satisfaction` 속성이 1 또는 2인 사용자를 대상으로 윈백 메시지를 타겟팅합니다.
+사용자가 설문조사를 제출하면 선택한 값이 사용자 지정 속성으로 기록됩니다. 그런 다음 오디언스 필터를 사용하여 후속 캠페인을 구축할 수 있습니다. 예를 들어, `customer_satisfaction` 속성이 "1" 또는 "2"인 사용자에게 타겟 재유치 메시지를 보냅니다.
 
 {% endtab %}
 {% tab Notification preferences %}
@@ -161,7 +161,7 @@ tool:
 | 제품 업데이트    | `wants_product_updates`| `true` |
 | 프로모션         | `wants_promotions`     | `true` |
 | 이벤트 초대      | `wants_event_invites`  | `true` |
-| 설문조사 & 피드백 | `wants_surveys`        | `true` |
+| 설문 조사 & 피드백 | `wants_surveys`        | `true` |
 | 팁 & 튜토리얼   | `wants_tips`           | `true` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 

@@ -18,7 +18,7 @@ description: "이 문서에서는 목록 작업 동기화 상태 Braze 엔드포
 > 이 엔드포인트를 사용하여 주어진 통합에 대한 과거 동기화 상태 목록을 반환합니다.
 
 {% alert note %}
-이 엔드포인트를 사용하려면 `cdi.integration_job_status` 권한이 있는 API 키를 생성해야 합니다.
+이 엔드포인트를 사용하려면 `cdi.integration_job_status` 권한으로 API 키를 생성해야 합니다.
 {% endalert %}
 
 ## 사용량 제한
@@ -82,8 +82,8 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
         "sync_finish_time": (string) time the sync finished in ISO 8601,
         "last_timestamp_synced": (string) last UPDATED_AT timestamp processed by the sync in ISO 8601,
         "rows_synced": (integer) number of rows successfully synced to Braze,
-        "rows_failed_with_errors": (integer) number of rows failed because of errors,
-    },
+        "rows_failed_with_errors": (integer) number of rows failed because of errors
+    }
   ],
   "message": "success"
 }
@@ -108,6 +108,6 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 | `400 Invalid integration ID` | `integration_id` 주소가 유효한지 확인합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-추가 상태 코드 및 관련 오류 메시지는 [심각한 오류 & 응답을]({{site.baseurl}}/api/errors/#fatal-errors) 참조하세요.
+추가 상태 코드 및 관련 오류 메시지는 [치명적인 오류 & 응답]({{site.baseurl}}/api/errors/#fatal-errors)을 참조하십시오.
 
 {% endapi %}

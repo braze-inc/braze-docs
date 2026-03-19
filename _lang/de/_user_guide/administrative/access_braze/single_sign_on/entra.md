@@ -13,7 +13,7 @@ description: "In diesem Artikel erfahren Sie, wie Sie die Microsoft Entra Single
 
 ## Anforderungen
 
-Bei der Einrichtung werden Sie aufgefordert, eine URL für den Assertion Consumer Service (ACS) anzugeben.  
+Bei der Einrichtung werden Sie gebeten, eine Assertion Consumer Service (ACS)-URL anzugeben.  
 
 | Anforderung | Details |
 |---|---|
@@ -35,10 +35,10 @@ Bei der Einrichtung werden Sie aufgefordert, eine URL für den Assertion Consume
 2. Wählen Sie auf der Seite **Wählen Sie eine Methode für die einmalige Anmeldung** **SAML** als Ihre Methode.
 3. Wählen Sie auf der Seite **Single Sign-On mit SAML einrichten** das Bearbeitungssymbol für die **grundlegende SAML-Konfiguration**.
 4. Konfigurieren Sie die Anwendung im IdP-initiierten Modus, indem Sie eine **Antwort-URL** eingeben, die Ihre [Braze-Instanz]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) mit dem folgenden Muster kombiniert: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
-5. Konfigurieren Sie optional RelayState, indem Sie Ihren von Relay State generierten API-Schlüssel in das Feld **Relay State (Optional)** eingeben.
+5. Bitte konfigurieren Sie RelayState, indem Sie Ihren von Relay State generierten API-Schlüssel in das Feld **„Relay State“** eingeben.
 
 {% alert important %}
-Legen Sie das Feld **Anmelde-URL** **nicht** fest. Lassen Sie dieses Feld leer, um Probleme mit dem von Ihrem IdP initiierten SAML SSO zu vermeiden.
+**Bitte** stellen **Sie** das Feld **„Anmelde-URL“** **nicht** ein. Bitte lassen Sie dieses Feld leer, um Probleme mit Ihrem vom Identitätsanbieter initiierten SAML SSO zu vermeiden.
 {% endalert %}
 
 {: start="6"}

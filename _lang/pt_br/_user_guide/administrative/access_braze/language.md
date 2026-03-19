@@ -1,7 +1,7 @@
 ---
 nav_title: Configurações de idioma
 article_title: Configurações de idioma
-page_order: 2.5
+page_order: 3
 page_type: reference
 description: "Este artigo descreve como alterar o idioma em que o dashboard da Braze é exibido."
 

@@ -35,7 +35,7 @@ Qualquer tentativa de enviar um modelo para um usuário do WhatsApp com um núme
 
 O Meta limitará o número de mensagens de modelo de marketing que um usuário pode receber em todas as empresas em um determinado período de tempo, começando com mensagens que têm menos probabilidade de serem lidas. 
 
-Uma exceção é que, se uma pessoa responder a uma mensagem de marketing, ela iniciará uma janela de atendimento ao cliente de 24 horas. O envio de mensagens de marketing dentro dessa janela não será contabilizado no limite de uma pessoa.
+Uma exceção é que, se uma pessoa responder a uma mensagem de marketing, ela iniciará uma janela de atendimento ao cliente de 24 horas. As mensagens de marketing enviadas dentro dessa janela não contarão para o limite de uma pessoa.
 
 O limite específico varia de acordo com o usuário, dependendo do seu nível de engajamento. Saiba mais sobre os limites por usuário para mensagens de marketing com modelo no WhatsApp [aqui](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates#per-user-marketing-template-message-limits). 
 

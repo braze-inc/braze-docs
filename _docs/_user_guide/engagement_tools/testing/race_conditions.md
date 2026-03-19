@@ -80,7 +80,7 @@ When these objects are included with the trigger, the attributes are processed f
 
 Use the [`/users/track/sync/` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous) to record custom events and purchases and update user profile attributes synchronously. Using this endpoint to update user profiles at the same time and in a single call can help prevent potential race conditions.
 
-{% include early_access_beta_alert.md feature='This endpoint' type='beta' %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' type='beta' %}
 
 ## Scenario 3: Matching action-based triggers and audience filters
 

@@ -1,6 +1,6 @@
 ---
-nav_title: Braze Docs Style Guide
-article_title: Braze Docs Style Guide
+nav_title: Braze Docs style guide
+article_title: Braze Docs style guide
 description: "Writing style guide for Braze Docs."
 page_order: 0
 noindex: true
@@ -190,10 +190,10 @@ If someone has difficulty with the steps or instructions, your casual descriptor
 
 ##### Customers versus clients
 
-When referring to Braze users and their consumers, use the following terms accordingly:
+When referring to company users and their consumers, use the following terms accordingly:
 
 * **Customers:** Brands we work with. Never refer to our customers as “clients”.  
- * **Braze users:** In the context of documentation, when it is important to distinguish between users of the platform and the end users who receive marketing messages, use "Braze users".  
+ * **Company users:** In the context of documentation, when it is important to distinguish between users of the platform and the end users who receive marketing messages, use "company users".  
 * **Consumers:** Customers of a brand we work with.   
 * **Users:** Generally reserved for a specific statistic that depends on “user” metrics (such as “user retention”). When referring to “users” in our content, first aim to be more specific. Think shoppers, consumers, patients, players.
 
@@ -576,7 +576,7 @@ To add additional clarity to your writing and to aid in localization, use pronou
 
 #### Capitalization {#capitalization}
 
-Avoid unnecessary capitalization. In most instances, use sentence case. Title case should only be used for proper nouns or feature names (unless otherwise specified, see [Glossary](https://confluence.braze.com/pages/viewpage.action?spaceKey=MAR&title=Braze+Glossary)).
+Avoid unnecessary capitalization. In most instances, use sentence case. Title case should only be used for proper nouns or feature names.
 
 {::nomarkdown}
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
@@ -756,7 +756,7 @@ If you’re telling the reader to do something, then you can omit the “you” 
 </thead>
 <tbody>
 <tr><td style="width: 50%;">Upload the CSV file.</td><td style="width: 50%;">You can upload the CSV file.</td></tr>
-<tr><td style="width: 50%;">Click Submit.</td><td style="width: 50%;">You’ll need to click Submit.</td></tr>
+<tr><td style="width: 50%;">Select Submit.</td><td style="width: 50%;">You’ll need to select Submit.</td></tr>
 </tbody>
 </table>
 {:/}
@@ -1137,7 +1137,7 @@ For guidance on what verbs to use when describing interactions with the UI, refe
 <tr><td>Choose</td><td>Making a decision that is subjective, strategic, open-ended, or complex.</td><td>Choose a campaign strategy.</td></tr>
 <tr><td>Select</td><td><ul><li>Selecting a checkbox</li><li>Selecting items from a dropdown</li><li>Selecting a tab</li><li>Making a simple decision</li></ul></td><td><ul><li>Select <strong>Show Password</strong>.</li><li>Select a data type from the dropdown.</li><li>On the <strong>Manage Settings</strong> page, select the <strong>Custom Events</strong> tab.</li><li>Select an image.</li></ul></td></tr>
 <tr><td>Clear</td><td>Clearing the selection from a checkbox.</td><td>Clear the <strong>Show Password</strong> checkbox.</td></tr>
-<tr><td>Click</td><td>Clicking an element in the UI.</td><td>Add a custom attribute and click <strong>Save</strong>.</td></tr>
+<tr><td>Select</td><td>Selecting an element in the UI.</td><td>Add a custom attribute and select <strong>Save</strong>.</td></tr>
 <tr><td>Turn on</td><td>Enabling a toggle option</td><td>Turn on the <strong>List-Unsubscribe header</strong>.</td></tr>
 <tr><td>Turn off</td><td>Disabling a toggle option</td><td>Turn off <strong>Inline CSS on New Emails by Default</strong>.</td></tr>
 <tr><td>Enter</td><td>Typing a value.</td><td><ul><li>In the text field, enter the name of your custom attribute.</li><li>Enter "Braze" as the source name.</li></ul></td></tr>
@@ -1236,17 +1236,17 @@ This section covers some guidelines to keep in mind when writing instructions fo
 General guidelines:
 
 * **Use the right tone.** For instructions, keep your writing short, to the point, and task-oriented. Your writing doesn’t need to be terse or dry, but it should be direct. When introducing tasks or subtasks, you can use a more informal tone to add variety. Avoid using “please” to keep the tone informal. Make liberal use contractions to keep your tone approachable.   
-* **Follow parallel heading format.** Pick one format for your headings and stick to it. Keep your content scannable and predictable. In general, use gerunds (ing-words) for page titles, and imperative verbs for task-based headings. 
+* **Follow parallel heading format.** Pick one format for your headings and stick to it. Keep your content scannable and predictable. For task-based headings and page titles, prefer imperative verbs (for example, “Create an email campaign”).
 
 Before instructions:
 
-* **Use introductions and prerequisites.** Don’t jump straight into the steps. Instead, give context on what your article or section covers, and provide any information the reader needs to know before they scan the instructions. Make sure any prerequisites are listed at the top of the document.  
+* **Use introductions and prerequisites.** Don’t jump straight into the steps. Instead, give context on what your article or section covers, and provide any information the reader needs to know before they scan the instructions. Make sure any prerequisites are listed at the top of the article with the heading "Prerequisites". Table headers in this section should read "Requirements". "Requirements" is an acceptable term to use for stating a requirement from Braze, a third-party provider, or partner.
 * **Start at the beginning of the procedure.** Don’t assume the reader has reached this page after completing a previous step. If the instructions for a task pick up where another left off, give an overview of where the reader is in the procedure, and what they must complete before this step. Include links to any previous steps.
 
 Writing instructions:
 
 * **Use actionable language.** Structure documentation around what the user can do, not what the product can do. Avoid language like “This feature [does xyz]”. Instead, think in terms of “Use this feature to [do xyz]”.  
-* **Provide location steps when needed.** Make sure the reader is looking in the right place with brief phrases such as “On the **Settings** page, click **Edit**.” If that may not be clear enough, provide an introductory step. For example, “Go to **Manage Settings** and select the **Settings** tab.”   
+* **Provide location steps when needed.** Make sure the reader is looking in the right place with brief phrases such as “On the **Settings** page, select **Edit**.” If that may not be clear enough, provide an introductory step. For example, “Go to **Manage Settings** and select the **Settings** tab.”   
 * **Preface conditional statements**. Put [conditional clauses](#clause-order) first. For conditional instructions, preface the step with “if” so the reader knows they can skip the step if the condition doesn’t apply to them. For example, “If you need X, then do A > B > C.”  
 * **Reinforce task order.** For progress within a series of steps, use the phrase “When you’ve” or “After you’ve”. For progress between tasks, begin a section with “Now that you’ve” or “After you’ve”. Avoid the phrase “Once you’ve”, as that specific use of “once” doesn’t translate well. 
 
@@ -1276,7 +1276,7 @@ To display a full address, use the numeral, followed by the street name, followe
 
 #### Button labels {#buttons-labels}
 
-Button labels should be clear and predictable—the user should know what action occurs upon clicking the button. Use sentence case for button labels, and lead with a strong verb. If it may be unclear what the verb is referring to, use the format [verb] + [noun]. 
+Button labels should be clear and predictable—the user should know what action occurs upon selecting the button. Use sentence case for button labels, and lead with a strong verb. If it may be unclear what the verb is referring to, use the format [verb] + [noun]. 
 
 {::nomarkdown}
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
@@ -1549,7 +1549,7 @@ To refer to a button, use only the button’s label. Do not refer to a button as
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">Click <strong>Add Languages</strong>.</td><td style="width: 50%;">Click the <strong>Add Language</strong>s button. <br><br> Click “Add Languages”.</td></tr>
+<tr><td style="width: 50%;">Select <strong>Add Languages</strong>.</td><td style="width: 50%;">Select the <strong>Add Language</strong>s button. <br><br> Select “Add Languages”.</td></tr>
 </tbody>
 </table>
 {:/}
@@ -1562,7 +1562,7 @@ If the label ends with a colon or ellipsis, omit the ending punctuation.
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">Click <strong>Save as</strong></td><td style="width: 50%;">Click <strong>Save as…</strong></td></tr>
+<tr><td style="width: 50%;">Select <strong>Save as</strong></td><td style="width: 50%;">Select <strong>Save as…</strong></td></tr>
 </tbody>
 </table>
 {:/}
@@ -1575,7 +1575,7 @@ If a button is an icon, include the name of the button as shown in the tooltip. 
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">Click ➕ <strong>Add</strong>.</td><td style="width: 50%;">Click the ➕ icon.</td></tr>
+<tr><td style="width: 50%;">Select ➕ <strong>Add</strong>.</td><td style="width: 50%;">Select the ➕ icon.</td></tr>
 </tbody>
 </table>
 {:/}
@@ -1610,7 +1610,7 @@ Avoid referring to dialog boxes by name unless clarity is needed. Instead, descr
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">Click <strong>Upload</strong> then select a file to upload.</td><td style="width: 50%;">Click <strong>Upload</strong> and use the <strong>File Upload</strong> dialog box to select a file to upload.</td></tr>
+<tr><td style="width: 50%;">Select <strong>Upload</strong> then select a file to upload.</td><td style="width: 50%;">Select <strong>Upload</strong> and use the <strong>File Upload</strong> dialog box to select a file to upload.</td></tr>
 </tbody>
 </table>
 {:/}
@@ -1824,9 +1824,9 @@ Capitalize all states and provinces.
 
 #### Headings and titles {#headings-and-titles}
 
-For article headings and titles, use sentence case capitalization. Be descriptive when writing headings and titles, and focus on the main purpose of the content based on the article type. 
+For article headings and titles, use sentence case capitalization. Be descriptive when writing headings and titles, and focus on the main purpose of the content based on the article type. Do not use ampersands in place of the word "and".
 
-For article titles, use gerunds (verbs ending in *-ing*) to begin the title when applicable. Keep the article titles concise and make sure it is appropriate for the content. For example, a reference article about SMS messages could be titled “About SMS”.
+For article titles, when possible, avoid gerunds (verbs ending in *-ing*) in favor of imperative verbs. Keep the article titles concise and make sure it is appropriate for the content. For example, a reference article about SMS messages could be titled “About SMS”.
 
 For article headings, be concise and consistent across heading titles. For example, if the article’s Heading 1 style defines each step (ex. **Step 1: Create a new push campaign**), then keep this format across the article headings for consistency.
 
@@ -1997,7 +1997,7 @@ Use numerals and a percent sign (%) without a space in between them. However, if
 </thead>
 <tbody>
 <tr><td style="width: 50%;">10%</td><td style="width: 50%;">10 %</td></tr>
-<tr><td style="width: 50%;">Twenty percent of Braze users are...</td><td style="width: 50%;">20% of Braze users are...</td></tr>
+<tr><td style="width: 50%;">Twenty percent of company users are...</td><td style="width: 50%;">20% of company users are...</td></tr>
 </tbody>
 </table>
 {:/}
@@ -2152,9 +2152,9 @@ Apply the following guidelines when writing link text:
 * Write unique, descriptive link text that makes sense without the surrounding text. Research by the [Nielsen Norman Group](https://www.nngroup.com/articles/link-promise/#links-should-stand-alone) (NN/g) shows that readers scan for salient information on a page, so make sure links can stand alone.  
 * Don’t use the following words or phrases for link text. They’re bad for accessibility and scannability.  
  * Learn more (on its own)  
- * Click here  
- * here  
- * this document  
+ * Click here
+ * here
+ * this document
  * this article
 
 {::nomarkdown}
@@ -2195,7 +2195,7 @@ If a link downloads a file, then make that clear in the link text, and mention t
 {::nomarkdown}
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
-<tr><th style="width: 50%;">Do: <em>Make sure the link text communicates that clicking it downloads a file</em></th><th style="width: 50%;">Don't</th></tr>
+<tr><th style="width: 50%;">Do: <em>Make sure the link text communicates that selecting it downloads a file</em></th><th style="width: 50%;">Don't</th></tr>
 </thead>
 <tbody>
 <tr><td style="width: 50%;">For tips, download the <a href="{{site.baseurl}}">Regex Cheat Sheet PDF</a>.</td><td style="width: 50%;">Check out our <a href="{{site.baseurl}}">RegEx Cheat Sheet</a>.</td></tr>
@@ -2308,8 +2308,8 @@ Use “Braze Bonfire community” on the first mention, then it’s fine to use 
 ⛔️ **blacklist**  
 Don’t use. Instead, use “blocklist” or “denylist”. For the verb form of these words, consider rewording the sentence to remove the problematic term. For example:
 
->✅ **Recommended:** To block an existing property from being used in new messages, click **Manage Properties**. <br>
->⛔️ **Not recommended:** To blocklist an existing property, click **Manage Properties**. 
+>✅ **Recommended:** To block an existing property from being used in new messages, select **Manage Properties**. <br>
+>⛔️ **Not recommended:** To blocklist an existing property, select **Manage Properties**. 
 
 **Braze-to-Braze webhook**
 
@@ -2412,7 +2412,7 @@ Lowercase.
 
 #### D
 
-**Dark Mode**
+**Dark Mode theme / Dark Mode Preview / dark mode concept**
 
 **dashboard / Braze dashboard**  
 Use to refer to Braze as a platform. Use lowercase (dashboard not Dashboard).
@@ -2757,7 +2757,8 @@ Use title case.
 ⛔️ **QA (quality assurance)**  
 Do not use the acronym as a verb. Instead, rewrite as “perform quality assurance”.
 
-**Quiet Hours**
+**quiet hours**
+Use "Quiet hours" at sentence start and "quiet hours" mid-sentence. Do not use title case "Quiet Hours" because it is not a branded feature.
 
 ⚠️ **quick / quickly**  
 Avoid using. What is quick for you may not be quick for others. For related guidelines, refer to [Condescending Language](#condescending-language).

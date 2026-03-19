@@ -21,7 +21,7 @@ channel:
 
 사용자가 인앱 메시지에서 SMS를 수신할 수 있도록 하려면 Braze에서 제공하는 [전화번호 캡처 양식을]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) 사용하여 전화번호를 수집하고 SMS 목록을 늘릴 수 있는 브랜드 양식을 만드세요.
 
-![인앱 메시지 작성기와 전화번호 수집을 위한 템플릿.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%;"}
+![전화번호 수집을 위한 템플릿이 있는 인앱 메시지 작성기.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%;"}
 
 Braze는 [SMS 이중 옵트인]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) 기능도 사용할 것을 권장합니다. 이 기능은 인앱 메시지 전화번호 캡처 양식과 자동으로 연동되어 사용자가 양식을 통해 전화번호를 제출한 후 의사를 확인하는 메시지를 표시합니다.
 
@@ -33,7 +33,7 @@ Braze는 [SMS 이중 옵트인]({{site.baseurl}}/user_guide/message_building_by_
 
 1. [`/subscription/status/set` 엔드포인트]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/#update-users-subscription-group-status)를 사용하여 사용자를 생성하고 해당 사용자의 속성을 저장합니다.
 
-```json
+```http
 POST 'https://rest.iad-03.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -49,7 +49,7 @@ POST 'https://rest.iad-03.braze.com/subscription/status/set' \
 {: start="2"}
 2\. [`/users/track` 엔드포인트를]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 사용하여 사용자를 SMS에 가입시킵니다.
 
-```json
+```http
 POST `https://rest.aid-03.braze.com/users/track` \
 --header `Content-Type: application/json` \
 --header `Authorization: Bearer YOUR-REST-API-KEY` \

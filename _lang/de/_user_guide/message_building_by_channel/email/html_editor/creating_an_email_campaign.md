@@ -10,7 +10,7 @@ channel:
 search_rank: 1  
 ---
 
-# Erstellen Sie eine E-Mail mit angepasstem HTML
+# Erstellen Sie eine E-Mail mit angepasstem HTML-Code.
 
 > E-Mail-Nachrichten eignen sich hervorragend, um Ihren Nutzern Inhalte zu ihren Bedingungen zu übermitteln. Sie sind auch ein hervorragendes Instrument, um Nutzer, die Ihre App vielleicht sogar deinstalliert haben, wieder anzusprechen. Das Versenden von individuellen und maßgeschneiderten E-Mail-Nachrichten verbessert die Erfahrung Ihrer Nutzer und hilft ihnen, den größten Nutzen aus Ihrer App zu ziehen. 
 
@@ -24,7 +24,7 @@ Wenn Sie zum ersten Mal eine Kampagne per E-Mail erstellen, empfehlen wir Ihnen 
 
 ## Schritt 1: Wählen Sie, wo Sie Ihre Botschaft aufbauen möchten
 
-Verwenden Sie Kampagnen für einzelne, einfache Nachrichten. Verwenden Sie Canvase für mehrstufige Nutzer:innen.
+Verwenden Sie Kampagnen für einzelne, einfache Nachrichten. Verwenden Sie Canvases für mehrstufige Benutzerreisen.
 
 {% tabs %}
 {% tab Campaign %}
@@ -71,7 +71,7 @@ Nachdem Sie Ihre Vorlage ausgewählt haben, sehen Sie eine Übersicht über Ihre
 
 ![Der Button "Aus HTML neu generieren".]({% image_buster /assets/img_archive/regenerate_from_html.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;" }
 
-Braze aktualisiert die Klartextversion automatisch anhand der HTML-Version, bis es eine Bearbeitung des Klartextes feststellt. Nachdem Braze eine Bearbeitung erkannt hat, wird das Update des Klartextes gestoppt, da es davon ausgeht, dass Sie absichtlich Änderungen vorgenommen haben. Um die automatische Synchronisierung wiederherzustellen, gehen Sie zu **Klartext** und wählen Sie **Aus HTML neu generieren** (nur sichtbar, wenn Klartext nicht synchronisiert wird).
+Braze führt automatisch ein Update der Klartextversion aus der HTML-Version durch, bis eine Änderung am Klartext festgestellt wird. Nachdem Braze eine Änderung erkannt hat, wird das Update des Klartexts eingestellt, da davon ausgegangen wird, dass Sie mit Absicht Änderungen vorgenommen haben. Um die automatische Synchronisierung wiederherzustellen, gehen Sie zu **„Klartext“** und wählen Sie **„Aus HTML neu generieren“** (nur sichtbar, wenn Klartext nicht synchronisiert wird).
 
 {% alert tip %}
 Zur Erstellung von E-Mails mit Bewegungselementen und einer genauen Vorschau sollten Sie GIFs anstelle von Elementen verwenden, die JavaScript erfordern, da die meisten Posteingänge JavaScript nicht unterstützen.
@@ -80,20 +80,20 @@ Zur Erstellung von E-Mails mit Bewegungselementen und einer genauen Vorschau sol
 ![Panel für E-Mail-Varianten zum Verfassen Ihrer E-Mail.]({% image_buster /assets/img/email.png %}){: style="max-width:75%" }
 
 {% alert important %}
-Braze entfernt automatisch HTML Event Handler, die als Attribute referenziert werden. Dadurch wird der HTML-Code geändert. Überprüfen Sie die E-Mail daher noch einmal, nachdem Sie sie fertiggestellt haben. Erfahren Sie mehr über [HTML-Handler](https://www.w3schools.com/tags/ref_eventattributes.asp).
+Braze entfernt automatisch HTML-Handler, die als Attribute referenziert werden. Dies verändert den HTML-Code. Bitte überprüfen Sie die E-Mail nach Abschluss erneut. Erfahren Sie mehr über [HTML-Handler](https://www.w3schools.com/tags/ref_eventattributes.asp).
 {% endalert %}
 
 {% alert tip %}
 Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
 
-![Starten Sie den KI Copywriter Button, der sich auf dem Tab Body des E-Mail Composers befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
+![Bitte aktivieren Sie den Button „AI Copywriter“, der sich in der Registerkarte „Body“ des E-Mail-Editors befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
 Benötigen Sie Hilfe bei der Erstellung von Nachrichten von rechts nach links für Sprachen wie Arabisch und Hebräisch? Lesen Sie den Abschnitt [Erstellen von Nachrichten von rechts nach links]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) für bewährte Verfahren.
 
 ### Schritt 3a: Sendeinformationen hinzufügen
 
-Nachdem Sie Ihre E-Mail Nachricht entworfen und erstellt haben, fügen Sie Ihre Sendeinformationen in den **Sendeeinstellungen** hinzu.
+Nachdem Sie Ihre E-Mail-Nachricht entworfen und erstellt haben, fügen Sie bitte Ihre Versandinformationen in **den Versandeinstellungen** hinzu.
 
 1. Wählen Sie unter **Sende-Info** eine E-Mail als **Absender-Anzeigename + Adresse**. Sie können dies auch anpassen, indem Sie **Anpassen aus Anzeigename + Adresse** wählen.
 2. Wählen Sie eine E-Mail als **Reply-To Adresse**. Sie können diese auch anpassen, indem Sie **Antwortadresse anpassen** auswählen.
@@ -106,11 +106,11 @@ Im rechten Panel wird eine Vorschau mit Ihren Sendeinformationen eingeblendet. D
 
 #### Erweitert
 
-Schalten Sie unter **Sendeeinstellungen** > **Erweitert** Inline-CSS ein und fügen Sie eine Personalisierung für E-Mail-Kopfzeilen und E-Mail-Extras hinzu, um zusätzliche Daten an andere E-Mail-Dienstleister zurückzusenden.
+Aktivieren Sie unter **„Sendeeinstellungen** > **Erweitert**“ die Option „Inline-CSS“ und fügen Sie Personalisierungen für E-Mail-Header und E-Mail-Extras hinzu, um zusätzliche Daten an andere E-Mail-Anbieter zurückzusenden.
 
 ##### E-Mail-Kopfzeilen
 
-Um E-Mail-Header hinzuzufügen, wählen Sie **Neuen Header hinzufügen**. E-Mail-Kopfzeilen enthalten Informationen über die gesendete E-Mail. Diese [Schlüssel-Wert-Paare]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) enthalten in der Regel Sender, Empfänger, Authentifizierungsprotokoll und Routing-Informationen. Braze fügt automatisch die RFC-erforderlichen Header-Informationen für E-Mails an Posteingang-Anbieter hinzu.
+Um E-Mail-Header hinzuzufügen, wählen Sie **Neuen Header hinzufügen**. E-Mail-Kopfzeilen enthalten Informationen über die gesendete E-Mail. Diese [Schlüssel-Wert-Paare]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) umfassen in der Regel Sender, Empfänger:innen, Authentifizierungsprotokoll und Routing-Informationen. Braze fügt automatisch die gemäß RFC erforderlichen Header-Informationen für E-Mails hinzu, damit diese die Posteingänge erreichen.
 
 Braze lässt Ihnen die Flexibilität, bei Bedarf zusätzliche E-Mail-Header für fortgeschrittene Anwendungsfälle hinzuzufügen. Es gibt einige reservierte Felder, die von der Braze-Plattform beim Senden überschrieben werden. 
 
@@ -174,7 +174,7 @@ E-Mail-Extrawerte werden nicht in Currents oder Snowflake veröffentlicht. Wenn 
 
 ### Schritt 3b: Vorschau und Test Ihrer Nachricht
 
-Nachdem Sie Ihre E-Mail verfasst haben, sollten Sie sie vor dem Versand testen. Wählen Sie unten auf dem Übersichtsbildschirm **Vorschau und Test** aus. 
+Nachdem Sie Ihre E-Mail verfasst haben, überprüfen Sie diese bitte vor dem Versenden. Wählen Sie unten auf dem Übersichtsbildschirm **Vorschau und Test** aus. 
 
 Hier können Sie eine Vorschau darauf sehen, wie Ihre E-Mail im Posteingang eines Kunden erscheinen wird. Wenn Sie **Vorschau als Benutzer** ausgewählt haben, können Sie Ihre E-Mail als zufälliger Benutzer anzeigen lassen, einen bestimmten Benutzer auswählen oder einen benutzerdefinierten Benutzer erstellen. So können Sie testen, ob Ihre Connected-Content- und Personalisierungsaufrufe wie gewünscht funktionieren. 
 
@@ -186,7 +186,7 @@ Sie können auch zwischen der Desktop-, der Mobil- und der Klartextansicht wechs
 Sind Sie neugierig, wie Ihre E-Mails für Nutzer:innen im Dark Mode aussehen? Wählen Sie den Schalter für die **Vorschau im dunklen Modus** im Bereich **Vorschau und Test** (nur im Drag & Drop-Editor).
 {% endalert %}
 
-Wenn Sie bereit für eine abschließende Prüfung sind, wählen Sie **Senden testen** und senden Sie eine Testnachricht an sich selbst oder an eine Testgruppe, um sicherzustellen, dass die E-Mail auf allen Geräten und Clients korrekt angezeigt wird.
+Wenn Sie für eine abschließende Überprüfung bereit sind, wählen Sie **„Testversand“** und senden Sie eine Testnachricht an sich selbst oder eine Testgruppe, um sicherzustellen, dass die E-Mail auf allen Geräten und Clients korrekt angezeigt wird.
 
 ![Testen Sie die Sendeoption und die Vorschau auf eine Beispiel-E-Mail beim Verfassen Ihrer E-Mail.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
@@ -220,11 +220,11 @@ Der Editor weist Sie auf alle Probleme hin, die er in Ihrer Nachricht entdeckt, 
 
 {% tabs %}
 {% tab Campaign %}
-Als Nächstes erstellen Sie den Rest Ihrer Kampagne. In den folgenden Abschnitten erfahren Sie, wie Sie die Tools von Braze für die Erstellung Ihrer E-Mail Kampagne verwenden.
+Als Nächstes erstellen Sie den Rest Ihrer Kampagne. In den folgenden Abschnitten finden Sie detaillierte Informationen zur Verwendung der Braze-Tools für die Erstellung Ihrer E-Mail-Kampagne.
 
 #### Wählen Sie einen Zeitplan für die Zustellung oder triggern Sie
 
-Stellen Sie E-Mails basierend auf einem Zeitplan, einer Aktion oder einem API-Trigger zu. Mehr dazu erfahren Sie unter [Planen Ihrer Kampagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
+Versenden Sie E-Mails basierend auf einem festgelegten Zeitpunkt, einer Aktion oder einem API-Trigger. Mehr dazu erfahren Sie unter [Planen Ihrer Kampagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
 {% alert note %}
 Wenn bei API-ausgelösten Kampagnen die Auslöseaktion auf **Mit Kampagne interagieren** eingestellt ist, führt die Auswahl der Option **Empfangen** als Interaktion dazu, dass Ihre neue Kampagne ausgelöst wird, sobald Braze die ausgewählte Kampagne als gesendet markiert, selbst wenn die Nachricht abprallt oder nicht zugestellt werden kann.
@@ -234,13 +234,17 @@ Sie können auch die Dauer der Kampagne festlegen, [stille Stunden]({{site.baseu
 
 #### Zielgruppe auswählen
 
-Als nächstes stellen Sie [Nutzer:innen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) durch die Auswahl von Segmenten oder Filtern [zielgerichtet zusammen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). Braze zeigt eine Live-Vorschau der Segmente an, einschließlich der Anzahl der Nutzer:innen, die per E-Mail erreichbar sind. Die genaue Segmentzugehörigkeit wird erst kurz vor dem Senden berechnet.
+Anschließend [können]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) [Sie Zielgruppen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) durch die Auswahl von Segmenten oder Filtern [zusammenstellen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). Braze zeigt eine Live-Vorschau der Segment-Population an, einschließlich der Anzahl der Nutzer:innen, die per E-Mail erreichbar sind. Die genaue Segmentzugehörigkeit wird unmittelbar vor dem Versand berechnet.
 
 {% multi_lang_include target_audiences.md %}
 
 Sie können Ihre Kampagne auch nur an Benutzer senden, die einen bestimmten [Abonnementstatus]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) haben, z. B. an diejenigen, die ein Abonnement abgeschlossen und sich für E-Mails angemeldet haben.
 
 Optional können Sie auch die Zustellung auf eine bestimmte Anzahl von Nutzern innerhalb des Segments beschränken oder zulassen, dass Nutzer die gleiche Nachricht bei einer Wiederholung der Kampagne zweimal erhalten.
+
+{% alert note %}
+Beim Erstellen einer neuen E-Mail-Kampagne ist die Kontrollgruppe standardmäßig auf 20 % eingestellt und kann je nach Bedarf für Ihre Kampagne angepasst oder entfernt werden.
+{% endalert %}
 
 ##### Mehrkanalige Kampagnen mit E-Mail und Push
 
@@ -265,7 +269,7 @@ Mit Braze können Sie nachverfolgen, wie oft Benutzer nach Erhalt einer Kampagne
 - Führt ein bestimmtes benutzerdefiniertes Ereignis aus
 - Öffnet E-Mail
 
-Sie können ein Zeitfenster von bis zu 30 Tagen zulassen, in dem Braze eine Konversion zählt, wenn der Nutzer:innen die angegebene Aktion durchführt. Während Braze Öffnungen und Klicks automatisch verfolgt, können Sie das Konversions-Event auf eine Öffnung oder einen Klick festlegen, um die [intelligente Auswahl]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) zu verwenden.
+Es ist zulässig, einen Zeitraum von bis zu 30 Tagen festzulegen, innerhalb dessen Braze eine Konversion zählt, wenn die Nutzer:in die angegebene Aktion ausführt. Während Braze Öffnungen und Klicks automatisch nachverfolgt, können Sie das Konversions-Event auf eine Öffnung oder einen Klick einstellen, um [die intelligente Auswahl]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) zu nutzen.
 {% endtab %}
 
 {% tab Canvas %}
@@ -275,7 +279,7 @@ Falls noch nicht geschehen, füllen Sie die restlichen Abschnitte der Canvas-Kom
 
 ## Schritt 5: Überprüfen und einsetzen
 
-Der letzte Abschnitt fasst die von Ihnen entworfene Kampagne zusammen. Bestätigen Sie alle relevanten Details und wählen Sie **Kampagne starten**. 
+Der letzte Abschnitt fasst die von Ihnen entworfene Kampagne zusammen. Bitte überprüfen Sie alle relevanten Angaben und wählen Sie **„Kampagne starten**“. 
 
 Wie Sie die Ergebnisse Ihrer E-Mail-Kampagnen einsehen können, erfahren Sie unter [E-Mail-Berichterstattung]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 

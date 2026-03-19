@@ -1,6 +1,6 @@
 ---
 nav_title: Stil
-article_title: Den Stil von Content-Cards anpassen
+article_title: Passen Sie den Stil der Content-Cards an.
 page_order: 1
 description: "Dieser Artikel behandelt die Gestaltungsmöglichkeiten für Ihre Inhaltskarten."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# Den Stil von Content-Cards anpassen
+# Passen Sie den Stil der Content-Cards an.
 
 > Braze Content Cards werden mit einem Standard-Look and Feel geliefert. Dieser Artikel befasst sich mit den Styling-Optionen für Ihre Content Cards, die Sie an Ihre Markenidentität anpassen können. Eine vollständige Liste der Content-Card-Typen finden Sie unter [Über Content-Cards]({{site.baseurl}}/developer_guide/content_cards/).
 
@@ -20,7 +20,7 @@ platform:
 
 Die Standard-Benutzeroberfläche für Content Cards wird aus der Benutzeroberflächenschicht des Braze SDK importiert. Von dort aus können Sie bestimmte Teile des Designs der Karte, die Reihenfolge der Karten und die Art und Weise, wie der Feed Ihren Nutzern angezeigt wird, optimieren.
 
-![Zwei Content-Cards, eine mit der Standardschriftart und quadratischen Ecken und eine mit abgerundeten Ecken und einer geschweiften Schriftart]({% image_buster/assets/img/content_cards/content-card-customization-attributes.png %})
+![Zwei Content-Cards, eine mit der Standard-Schriftart und eckigen Ecken und eine mit abgerundeten Ecken und einer geschwungenen Schriftart.]({% image_buster/assets/img/content_cards/content-card-customization-attributes.png %})
 
 {% alert note %}
 Eigenschaften von Content-Cards wie `title`, `cardDescription`, `imageUrl` usw. können direkt über das [Dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details) bearbeitet werden, was die bevorzugte Methode zum Ändern dieser Details ist.
@@ -30,13 +30,15 @@ Eigenschaften von Content-Cards wie `title`, `cardDescription`, `imageUrl` usw. 
 {% tabs %}
 {% tab web %}
 
-Die Standardstile von Braze sind im Braze SDK in CSS definiert. Indem Sie ausgewählte Stile in Ihrer Anwendung außer Kraft setzen, können Sie unseren Standard-Feed mit Ihren eigenen Hintergrundbildern, Schriftfamilien, Stilen, Größen, Animationen und vielem mehr anpassen. Das folgende Beispiel ist eine Überschreibung, die bewirkt, dass Content-Cards mit einer Breite von 800 Pixeln angezeigt werden:
+Die Standard-Stile von Braze sind in CSS im Braze SDK definiert. Durch das Überschreiben ausgewählter Stile in Ihrer Anwendung können Sie unseren Standard-Feed mit Ihren eigenen Hintergrundbildern, Schriftarten, Stilen, Größen, Animationen und vielem mehr anpassen. Das folgende Beispiel zeigt eine Überschreibung, die bewirkt, dass Content-Cards mit einer Breite von 800 px angezeigt werden:
 
 ``` css
 body .ab-feed {
   width: 800px;
 }
 ```
+
+Eine vollständige Liste der Eigenschaften, die Sie ändern können, finden Sie unter [Braze SDK-Konfigurationsoptionen](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html).
 
 {% endtab %}
 {% tab android %}
@@ -179,7 +181,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 
 **Programmatisches Ändern von Content-Cards**
 
-Content-Cards können programmatisch geändert werden, indem der Funktionsabschluss [`transform`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/transform) in der Struktur `Attributes` zugewiesen wird. Das folgende Beispiel ändert die `title` und `description` von kompatiblen Karten:
+Sie können Content-Cards programmgesteuert ändern, indem Sie die[`transform`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/transform)Closure Ihrer`Attributes`Struktur zuweisen. Das folgende Beispiel ändert die `title` und `description` von kompatiblen Karten:
 
 ```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
@@ -295,7 +297,7 @@ In der [Beispielanwendung Examples](https://github.com/braze-inc/braze-swift-sdk
 
 ### Angepasste gepinnte Symbole
 
-Bei der Erstellung einer Content-Card haben Marketer die Möglichkeit, die Karte zu pinnen. Eine angeheftete Karte wird oben im Feed eines Benutzers angezeigt und kann vom Benutzer nicht abgewählt werden. Beim Ändern der Kartenstile können Sie auch das Aussehen des gepinnten Symbols ändern.
+Bei der Erstellung einer Content-Card haben Marketer die Möglichkeit, die Karte zu pinnen. Eine gepinnte Karte wird oben im Feed einer Nutzer:in angezeigt und kann von der Nutzer:in nicht ausgeblendet werden. Während Sie Ihre Kartenstile anpassen, können Sie das Aussehen des angehefteten Symbols ändern.
 
 ![Side-by-Side-Vorschau der Content-Cards in Braze für Mobilgeräte und Web mit aktivierter Option „Diese Karte oben im Feed pinnen“.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
@@ -310,9 +312,9 @@ Die Struktur des gepinnten Symbols für Content-Cards lautet wie folgt:
 </div>
 ```
 
-Wenn Sie ein anderes FontAwesome-Symbol verwenden möchten, können Sie einfach den Klassennamen des Elements `i` durch den Klassennamen des gewünschten Symbols ersetzen. 
+Sollten Sie ein anderes FontAwesome-Symbol verwenden wollen, können Sie den Klassennamen des`i`Elements durch den Klassennamen des gewünschten Symbols ersetzen. 
 
-Wenn Sie das Symbol ganz austauschen möchten, entfernen Sie das Element `i` und fügen das benutzerdefinierte Symbol als untergeordnetes Element von `ab-pinned-indicator` hinzu. Es gibt verschiedene Möglichkeiten, wie Sie vorgehen können, aber eine einfache Methode wäre, `replaceChildren()` im Element `ab-pinned-indicator` zu verwenden.
+Wenn Sie das Symbol vollständig austauschen möchten, entfernen Sie bitte das`i`Element und fügen Sie das angepasste Symbol als untergeordnetes Element von hinzu`ab-pinned-indicator`. Es gibt mehrere Möglichkeiten, das Symbol zu ändern. Eine einfache Methode besteht darin, das`ab-pinned-indicator`Element`replaceChildren()` zu verwenden.
 
 Zum Beispiel:
 
@@ -358,7 +360,7 @@ ContentCardStyling(
 )
 ```
 
-Sie können auch ein Composable in [`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721) von `ContentCardStyling` angeben. Wenn `pinnedComposable` angegeben wird, wird der Wert `pinnedResourceId` überschrieben.
+Sie können auch ein Composable in [`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721) von `ContentCardStyling` angeben. Wenn`pinnedComposable`angegeben, überschreibt es den`pinnedResourceId`Wert.
 
 ```kotlin
 ContentCardStyling(
@@ -412,7 +414,7 @@ Das Anpassen der Pin-Anzeige über `Attributes` wird in Objective-C nicht unters
 
 Inhaltskarten enthalten eine blaue Linie am unteren Rand der Karte, die anzeigt, ob die Karte bereits angesehen wurde oder nicht. 
 
-![Zwei Inhaltskarten werden nebeneinander angezeigt. Die erste Karte hat eine blaue Linie am unteren Rand, was bedeutet, dass sie nicht gesehen wurde. Die zweite Karte hat keine blaue Linie, was bedeutet, dass sie bereits gesehen wurde.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %})
+![Zwei Inhaltskarten werden nebeneinander angezeigt. Die erste Karte hat eine blaue Linie am unteren Rand, was bedeutet, dass sie nicht gesehen wurde. Die zweite Karte weist keine blaue Linie auf, was darauf hinweist, dass sie bereits angesehen wurde.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %})
 
 {% tabs %}
 {% tab web %}
@@ -460,7 +462,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze)
 viewController.view.tintColor = .systemGreen
 ```
 
-Wenn Sie jedoch nur die Nicht-aufgerufen-Anzeige ändern möchten, können Sie auf die Eigenschaft `unviewedIndicatorColor` der Struktur `BrazeContentCardUI.ViewController.Attributes` zugreifen. Wenn Sie in Braze `UITableViewCell`-Implementierungen verwenden, sollten Sie auf die Eigenschaft zugreifen, bevor die Zelle gezeichnet wird.
+Wenn Sie jedoch nur den Indikator für „nicht angesehen“ ändern möchten, können Sie auf die`unviewedIndicatorColor`Eigenschaft Ihrer`BrazeContentCardUI.ViewController.Attributes`Struktur zugreifen. Wenn Sie `UITableViewCell`Braze-Implementierungen verwenden, greifen Sie auf die Eigenschaft zu, bevor die Zelle gezeichnet wird.
 
 So setzen Sie beispielsweise die Farbe der Nicht-aufgerufen-Anzeige auf Rot:
 

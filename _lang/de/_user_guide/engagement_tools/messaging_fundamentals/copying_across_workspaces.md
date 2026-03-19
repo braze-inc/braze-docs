@@ -1,6 +1,6 @@
 ---
-nav_title: Kopieren über Workspaces hinweg
-article_title: Kopieren über Workspaces hinweg
+nav_title: Zwischen Workspaces kopieren
+article_title: Zwischen Workspaces kopieren
 page_order: 4
 alias: "/copying_to_workspaces/"
 page_type: reference
@@ -10,7 +10,7 @@ tool:
     - Canvas
 ---
 
-# Kopieren von Kampagnen und Canvase in verschiedenen Workspaces
+# Kampagnen und Canvases über Workspaces hinweg kopieren
 
 > Durch das Kopieren von Kampagnen über verschiedene Arbeitsbereiche hinweg können Sie mit einer Kopie einer Kampagne in einem anderen Arbeitsbereich beginnen und so die Erstellung Ihrer Nachrichten beschleunigen. Auf dieser Seite erfahren Sie, wie Sie Kampagnen in verschiedene Arbeitsbereiche kopieren können und was kopiert wird und was nicht.
 
@@ -68,8 +68,8 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 | Konvertierungsverhalten (verschachtelt) | Genehmigungen | 
 | Konfigurationen für die stille Zeit | Auslösezeitplan | 
 | Frequency-Capping | Kampagnen-Zusammenfassungen | 
-| Abonnementstatus |  | 
-| Wiederholungen |  | 
+| Abonnementstatus | Filter | 
+| Wiederkehrender Zeitplan |  | 
 | Ist transaktional |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -84,8 +84,8 @@ Beachten Sie, dass die folgende Liste nicht vollständig ist, was in die Workspa
 | Konvertierungsverhalten (verschachtelt) | Genehmigungen | 
 | Konfigurationen für die stille Zeit | Auslösezeitplan | 
 | Frequency-Capping | Canvas-Zusammenfassungen | 
-| Abonnementstatus |  | 
-| Wiederholungen |  | 
+| Abonnementstatus | Filter | 
+| Wiederkehrender Zeitplan |  | 
 | Ist transaktional |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

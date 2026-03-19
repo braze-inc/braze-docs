@@ -1,7 +1,7 @@
 ---
 nav_title: "GET: Listar catálogos"
 article_title: "GET: Listar catálogos"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 2
 
 layout: api_page
@@ -106,12 +106,12 @@ El código de estado `200` podría devolver el siguiente cuerpo de respuesta.
         {
           "name": "time_field",
           "type": "time"
-        },
+        }
       ],
       "name": "my_catalog",
       "num_items": 3,
       "updated_at": "2022-11-02T09:03:19.967+00:00"
-    },
+    }
   ],
   "message": "success"
 }

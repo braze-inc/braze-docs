@@ -14,7 +14,7 @@ channel:
 > Esta página explica cómo activar el seguimiento de clics en tus mensajes de LINE, probar los enlaces acortados, utilizar tu dominio personalizado en los enlaces rastreados y mucho más.
 
 
-Cuando el seguimiento de clics de LINE está activado, Braze acorta automáticamente tus URL, añade mecanismos de seguimiento y registra los clics en tiempo real. Mientras que LINE te ofrece datos de clics agregados, Braze te proporciona información granular sobre el usuario que es oportuna y procesable. Estos datos te permiten crear estrategias de segmentación y reorientación más específicas, como segmentar a los usuarios en función de su comportamiento al hacer clic y desencadenar mensajes en respuesta a clics concretos.
+Cuando el seguimiento de clics de LINE está activado, Braze acorta automáticamente tus URL, añade mecanismos de seguimiento y registra los clics en tiempo real. Mientras que LINE te ofrece datos agregados de clics, Braze te proporciona información granular sobre el usuario que es oportuna y procesable. Estos datos te permiten crear estrategias de segmentación y reorientación más específicas, como segmentar a los usuarios en función de su comportamiento al hacer clic y desencadenar mensajes en respuesta a clics concretos.
 
 El seguimiento de clics de LINE puede utilizarse para mensajes de texto, enriquecidos y basados en tarjetas. Admite enlaces dentro de botones y áreas mapeadas con imágenes que tengan una URL como acción al hacer clic. También puedes personalizar las URL utilizando Liquid y dominios personalizados.
 
@@ -48,7 +48,7 @@ Puedes ver vistas previas del enlace acortado mientras estás en la pestaña **C
 Para configurar el seguimiento de clics de un mensaje enriquecido:
 
 1. Arrastra un **mensaje enriquecido** al compositor y selecciona una plantilla.
-2. Selecciona **URI** para el **comportamiento Al hacer clic** en el área seleccionable.
+2. Selecciona **URI** para el **comportamiento Al hacer clic** para el área tappable aplicable.
 3. Introduce una URL en el campo **Abrir URL**.
 
 ![Creador de mensajes LINE con un mensaje enriquecido con dos áreas que se pueden tocar y que tienen cada una una URL.]({% image_buster /assets/img/line/rich_message_click_tracking.png %})

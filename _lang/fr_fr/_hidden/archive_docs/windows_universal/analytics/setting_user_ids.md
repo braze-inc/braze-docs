@@ -1,6 +1,6 @@
 ---
 nav_title: Définir les ID des utilisateurs
-article_title: "Définir les ID d'utilisateur pour Windows Universal"
+article_title: Définir les ID des utilisateurs pour Windows Universal
 platform: Windows Universal
 page_order: 1
 description: "Cet article de référence explique comment définir les ID utilisateur sur la plateforme Windows Universal."

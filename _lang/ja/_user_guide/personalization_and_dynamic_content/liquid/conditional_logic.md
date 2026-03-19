@@ -71,6 +71,10 @@ This is a message from Braze! This is going to go to anyone who did not match th
 
 `{% endif %}` タグは、条件ロジックが終了したことを知らせます。条件付きロジックを含むメッセージには `{% endif %}` タグを必ず含める必要があります。条件ロジックに`{% endif %}` タグを含めないと、Brazeがメッセージを解析できないのでエラーになる。
 
+{% alert note %}
+条件タグ（`if`, `elsif`, `unless`）は演算子をサポートするが、フィルターはサポートしない。条件式内でフィルター処理された値を評価するには、まずフィルター結果を変数に代入し、その変数を参照するのだ。詳細については、[演算子とフィルターの使用箇所を]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters)参照せよ。
+{% endalert %}
+
 ### チュートリアル: 位置情報コンテンツの配信
 
 このチュートリアルを完了すると、"if"、"elsif"、および"else"ステートメントを含むタグを使用して、ユーザーの場所に基づいてコンテンツを配信できるようになります。
@@ -200,7 +204,7 @@ NULL の属性値は、値型と厳密には関連付けられていないこと
 
 条件付きロジックを使用する場合、正しい構文を使用していることを確認するために、カスタム属性のデータ型を知っておく必要がある。ダッシュボードの**カスタム属性**ページから、カスタム属性に関連するデータタイプを探し、各データタイプに記載されている以下の例を参照する。
 
-![カスタム属性のデータ型を選択する。ここでは、Favorite_Category の属性を文字列型で示します。]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
+![カスタム属性のデータ型を選択する。提供された例は、データ型Favorite_Categoryが文字列である属性を示している。]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
 
 {% alert tip %}
 文字列と配列には一重引用符が必要ですが、ブール値と整数には必要ありません。
@@ -230,7 +234,7 @@ NULL の属性値は、値型と厳密には関連付けられていないこと
 
 {% endraw %}
 
-整数には、他の[基本演算子](https://shopify.dev/docs/themes/liquid/reference/basics/operators)((<)より小さい、またはより大きい(>)など)を使用することもできます。
+整数に対しては、より小さい（(<)<）やより大きい（>）といった他の[基本的な演算子](https://shopify.dev/docs/themes/liquid/reference/basics/operators)も使える。
 
 {% raw %}
 

@@ -137,11 +137,11 @@ Content-Blöcke werden in Braze unter der Rubrik **Templates & Media** verwaltet
 
 ### Übersetzung als Teil der Nachrichtenkomponente gespeichert
 
-Übersetzungs-Tags gehören in den Content-Block. Smartling führt die Übersetzungen jedoch auf der Ebene der Nachrichten aus; der Inhalt wird nur dann übersetzt, wenn er in einer Kampagne oder einem Canvas enthalten ist und das Zielgebietsschema festgelegt ist.
+Tags für Übersetzungen gehören in den Content-Block. Smartling führt die Übersetzungen jedoch auf der Ebene der Nachrichten aus. Der Inhalt wird nur dann übersetzt, wenn er in einer Kampagne oder einem Canvas enthalten ist und das Zielgebietsschema festgelegt ist.
 
 ### Überlegungen
 
-- Übersetzungs-Tags müssen sowohl bei HTML- als auch bei Drag-and-Drop-Editoren für Content-Blöcke manuell in den Content-Block eingefügt werden.
+- Übersetzungs-Tags müssen sowohl für HTML- als auch für Drag-and-Drop-Content-Block-Editoren manuell zum Content-Block hinzugefügt werden.
 - Die Lokalisierung wird auf der Ebene der Nachrichten ausgewählt, nicht auf den Content-Blöcken selbst.
 - Für Canvas empfehlen wir die Verwendung von Zeilen, um Content-Blöcke in Ihre Nachricht einzufügen, anstatt sie manuell mit einem Liquid-Tag hinzuzufügen. Wenn Sie einen Content-Block aus der Vorschau in eine E-Mail ziehen, wird eine lokale Kopie erstellt. Alle Änderungen am "übergeordneten" Content-Block werden nicht auf andere Kampagnen übertragen, die diesen Block verwenden.
 - Wenn Sie einen Liquid-Tag für den Content-Block verwenden, sollten Sie mindestens einen Tag für die Übersetzung direkt in den Text der E-Mail einfügen. Durch das manuelle Hinzufügen des Tags für die Übersetzung können Sie die Gebietsschemata aus dem Dropdown-Menü für mehrere Sprachen auswählen. Smartling übernimmt die Übersetzungstags für den Content-Block. Sie können einen `comment` Tag hinzufügen, damit der Text für den Nutzer:in nicht sichtbar ist.

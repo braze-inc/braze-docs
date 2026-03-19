@@ -317,7 +317,7 @@ A integração do Shopify usa [eventos recomendados de comércio eletrônico]({{
        "price": "80.00",
        "fulfillment_status": null
      }
-   ],
+   ]
  }
 }
 ```
@@ -391,9 +391,9 @@ A integração do Shopify usa [eventos recomendados de comércio eletrônico]({{
 {% subtab Account login %}
 ```json
 {
-	name: "shopify_account_login",
-	properties: {
-	source: "braze-mock-storefront.myshopify.com"
+	"name": "shopify_account_login",
+	"properties": {
+	"source": "braze-mock-storefront.myshopify.com"
   }
 }
 ```
@@ -472,7 +472,7 @@ Para saber mais sobre como criar um loop do Liquid `for` para adicionar dinamica
 **Disparado**: Quando um usuário navega até a página de checkout<br>
 **Caso de uso**: Abandono do checkout
 
-Para Canvas de checkout abandonado, primeiro você precisa usar a seguinte Liquid tag:
+Para as telas de checkout abandonado, primeiro você precisa usar a seguinte Liquid tag:
 
 {% raw %}
 ```liquid
@@ -578,7 +578,7 @@ Fechado | Carimbo de data/hora | `{{event_properties.${closed_at}}}` |
 | Envio do processamento | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | SKU do processamento | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
 | Título do processamento | `{{event_properties.${fulfillments}[0].line_items[0].title}}`
-| Fornecedor do processamento | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Fornecedor do processamento | `{{event_properties.${fulfillments}[0].line_items[0].vendor}}` |
 | ID da variante | `{{event_properties.${line_items}[0].variant_id}}` |
 | Título variante | `{{event_properties.${line_items}[0].variant_title}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
@@ -628,7 +628,7 @@ Fechado | Carimbo de data/hora | `{{event_properties.${closed_at}}}` |
 | Envio do processamento | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | SKU do processamento | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
 | Título do processamento | `{{event_properties.${fulfillments}[0].line_items[0].title}}`
-| Fornecedor do processamento | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Fornecedor do processamento | `{{event_properties.${fulfillments}[0].line_items[0].vendor}}` |
 | ID da variante | `{{event_properties.${line_items}[0].variant_id}}` |
 | Título variante | `{{event_properties.${line_items}[0].variant_title}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
@@ -638,7 +638,7 @@ Fechado | Carimbo de data/hora | `{{event_properties.${closed_at}}}` |
 {% subtab Paid order %}
 **Evento**: `shopify_paid_order`<br>
 **Tipo**: [Evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
-**Disparado**: Quando o pedido de um usuário é marcado como pago no Shopify<br>  
+**Disparado**: Quando o pedido de um usuário é marcado como pago na Shopify<br>  
 **Caso de uso**: (Transacional) Confirmação de pagamento
 
 {% raw %}
@@ -826,7 +826,7 @@ Para saber mais sobre quais dados são coletados pelos SDKs do Braze, consulte [
 
 ## Provisionamento de dados históricos
 
-Durante a integração da sua loja Shopify, você pode iniciar uma sincronização inicial de dados por meio do backfill histórico para interagir imediatamente com seus clientes. Como parte desse backfill, o Braze executará uma sincronização inicial de dados de todos os clientes e pedidos feitos nos últimos 90 dias antes de sua conexão de integração com o Shopify. Quando o Braze importar seus clientes do Shopify, atribuiremos o tipo de `external_id` que você escolheu em suas definições de configuração.
+Durante a integração da sua loja Shopify, você pode iniciar uma sincronização inicial de dados por meio do backfill histórico para interagir imediatamente com seus clientes. Como parte desse backfill, o Braze executará uma sincronização inicial de dados de todos os clientes e pedidos feitos nos últimos 90 dias antes de sua conexão de integração com o Shopify. Quando o Braze importar seus clientes do Shopify, atribuiremos o tipo `external_id` que você escolheu em suas definições de configuração.
 
 {% alert note %}
 Se você planeja integrar com um ID externo personalizado (para a [integração padrão]({{site.baseurl}}/partners/ecommerce/shopify/shopify_standard_integration/#step-4-configure-how-you-manage-users) ou a [integração personalizada]({{site.baseurl}}/partners/ecommerce/shopify/shopify_custom_integration/#step-6-configure-how-you-manage-users-optional)), será necessário adicionar seu ID externo personalizado como um metacampo de cliente da Shopify a todos os perfis de clientes existentes da Shopify e, em seguida, realizar o preenchimento retroativo histórico.

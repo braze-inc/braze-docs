@@ -265,7 +265,7 @@ Lembre-se de salvar seu modelo antes de sair da página! <br>Os modelos de webho
 
 ## Recuperar detalhes do passe pelo conteúdo conectado
 
-Além de criar e atualizar passes, também é possível recuperar os metadados dos passes de seus usuários por meio do Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) para incorporar detalhes personalizados dos passes em suas campanhas de mensagens.
+Além de criar e atualizar passes, também é possível recuperar os metadados dos passes dos usuários por meio do Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) para incorporar detalhes personalizados dos passes em suas campanhas de mensagens.
 
 **Chamada de conteúdo conectado da PassKit**
 

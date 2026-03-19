@@ -187,7 +187,7 @@ Lorsqu'une demande est adressée à l'endpoint, SessionM renvoie la liste compl�
 ```
 {% endraw %}
 
-En utilisant la notation par points Liquid, il est possible de l'insérer dans le message. Par exemple, pour personnaliser le message avec le résultat `offer_id`, vous pouvez exploiter la charge utile de retour en utilisant {% raw %}`{{wallet.payload.available_points}`{% endraw %}, qui renvoie `100`.
+En utilisant la notation par points Liquid, il est possible de l'insérer dans le message. Par exemple, pour personnaliser le message avec le résultat `offer_id`, vous pouvez exploiter la charge utile de retour en utilisant {% raw %}`{{wallet.payload.available_points}}`{% endraw %}, qui renvoie `100`.
 
 {% alert note %}
 Il s'agit d'une API individuelle. Si vous avez l'intention d'envoyer un lot de plus de 500 utilisateurs, contactez votre équipe de compte SessionM pour savoir comment incorporer les données en vrac dans l'intégration.
@@ -254,7 +254,7 @@ Mettez à jour les paramètres avancés de la campagne SessionM afin d'inclure l
 
 Créez un message déclenché en fonction de la planification ou du comportement souhaité. Ensuite, sélectionnez la **variante** **d'envoi de messages Braze** dans le menu **Message externe** pour utiliser le modèle.
 
-![SessionM message externe.]({% image_buster /assets/img/sessionm/SessionMExternalMessage.png %})
+![Message externe de la SessionM.]({% image_buster /assets/img/sessionm/SessionMExternalMessage.png %})
 
 Ce modèle extrait les attributs statiques et dynamiques pertinents et fait appel au point d'extrémité de Braze.
 

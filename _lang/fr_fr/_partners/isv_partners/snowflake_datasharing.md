@@ -48,6 +48,69 @@ Dans la mesure du possible, les changements disruptifs seront précédés d'une 
 - Suppression d'une colonne d'une table ou d'une vue existante
 - Modifier le type ou la nullité d'une colonne existante
 
+## Lorsque les tableaux SNAPSHOTS et CHANGELOGS sont mis à jour
+
+Les tableaux SNAPSHOTS et CHANGELOGS permettent de suivre les modifications apportées aux campagnes et aux toiles. Il est important de savoir quand ces tables sont mises à jour pour pouvoir interroger les variations de messages et les configurations Canvas les plus récentes.
+
+### CHANGELOGS_CAMPAIGN_SHARED
+
+Une ligne est ajoutée à `CHANGELOGS_CAMPAIGN_SHARED` lorsque
+- La campagne est lancée, OU
+- L'un des champs snapshottables suivants est modifié :
+  - Nom
+  - Actions (y compris les modifications du contenu des messages)
+  - Comportements de conversion
+
+{% alert important %}
+Le fait d'enregistrer ou de mettre à jour le projet après le lancement ne déclenche pas automatiquement une mise à jour. La mise à jour n'est déclenchée que lorsque vous lancez la campagne ou que vous appliquez les modifications de l'avant-projet après le lancement à la campagne active.
+{% endalert %}
+
+### SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED
+
+`SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED` est dérivé de `CHANGELOGS_CAMPAIGN_SHARED`. Ce tableau extrait et aplatit la colonne "actions" du site `CHANGELOGS_CAMPAIGN_SHARED` en enregistrements de variations de messages individuels. Il est mis à jour en conséquence lorsque `CHANGELOGS_CAMPAIGN_SHARED` est mis à jour.
+
+### CHANGELOGS_CANVAS_SHARED
+
+Une ligne est ajoutée à `CHANGELOGS_CANVAS_SHARED` lorsque
+- Le Canvas est lancé, OU
+- L'un des champs snapshottables suivants est modifié :
+  - Nom
+  - Comportements de conversion
+  - Variations (pourcentage, assignation de la première étape, noms des variations)
+
+{% alert important %}
+Le fait d'enregistrer ou de mettre à jour le projet après le lancement ne déclenche pas automatiquement une mise à jour. La mise à jour n'est déclenchée que lorsque vous lancez le canvas ou que vous appliquez les modifications de l'ébauche post-lancement au canvas actif.
+{% endalert %}
+
+### SNAPSHOTS_CANVAS_VARIATION_SHARED
+
+`SNAPSHOTS_CANVAS_VARIATION_SHARED` est dérivé de `CHANGELOGS_CANVAS_SHARED`. Ce tableau utilise le même modèle d'extraction que `SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED` et est mis à jour en conséquence lorsque `CHANGELOGS_CANVAS_SHARED` est mis à jour.
+
+### SNAPSHOTS_CANVAS_STEP_SHARED
+
+Une ligne est ajoutée à `SNAPSHOTS_CANVAS_STEP_SHARED` lorsque
+- Le Canvas est lancé, OU
+- Le Canvas actif est mis à jour (le brouillon post-lancement est appliqué), OU
+- L'un des champs snapshottables suivants est modifié :
+  - Nom
+  - Actions (y compris les modifications du contenu des messages au sein des variations de messages)
+
+{% alert important %}
+Le fait d'enregistrer le projet après le lancement ne déclenche pas automatiquement une mise à jour. La mise à jour n'est déclenchée que lorsque vous lancez le canvas ou que vous appliquez les modifications de l'ébauche post-lancement au canvas actif.
+{% endalert %}
+
+### SNAPSHOTS_CANVAS_FLOW_STEP_SHARED
+
+Une ligne est ajoutée à `SNAPSHOTS_CANVAS_FLOW_STEP_SHARED` lorsque
+- Le Canvas est lancé, OU
+- Le Canvas actif est mis à jour (le brouillon post-lancement est appliqué), OU
+- L'un des champs snapshottables suivants est modifié :
+  - Nom
+
+{% alert important %}
+Le fait d'enregistrer le projet après le lancement ne déclenche pas automatiquement une mise à jour. La mise à jour n'est déclenchée que lorsque vous lancez le canvas ou que vous appliquez les modifications de l'ébauche post-lancement au canvas actif.
+{% endalert %}
+
 ## Conformité au règlement général sur la protection des données (RGPD).
 
-Presque tous les enregistrements d'événements stockés par Braze comprennent quelques champs conseillant les utilisateurs en matière d'informations personnelles identifiables (PII). Certains événements peuvent inclure l'adresse e-mail, le numéro de téléphone, l'ID de l'appareil, la langue, le sexe et les informations d'emplacement/localisation. Si la requête d'oubli d'un utilisateur est soumise à Braze, nous supprimerons ces champs d'informations nominatives pour tout événement appartenant à ces utilisateurs. De cette manière, nous ne supprimons pas l'enregistrement historique de l'événement, mais l'événement ne peut plus être lié à une personne spécifique.
+{% include partners/snowflake_pii_gdpr.md %}

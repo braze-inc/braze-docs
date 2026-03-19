@@ -1,6 +1,6 @@
 ---
-nav_title: Criar uma campanha MMS
-article_title: Criar uma Campanha MMS
+nav_title: Crie uma campanha de MMS
+article_title: Crie uma campanha de MMS
 page_order: 2
 description: "Este artigo de referência aborda as etapas envolvidas na criação, no envio e na prévia de uma mensagem MMS."
 page_type: reference
@@ -12,7 +12,7 @@ channel:
 search_rank: 1  
 ---
 
-# Criar uma campanha MMS
+# Crie uma campanha de MMS
 
 > Este artigo contém informações específicas sobre a composição de MMS, que faz parte do criador de SMS. Para saber mais informações detalhadas sobre o criador de SMS/MMS, consulte o [criador de SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/create/).
 
@@ -37,6 +37,8 @@ Os cartões de contato (às vezes conhecidos como vCard ou Virtual Contact Files
 ## Criação de uma mensagem MMS
 
 A criação de uma mensagem MMS requer que seu grupo de inscrições esteja configurado para o envio de MMS. Isso é indicado pela visualização da tag MMS ao selecionar um grupo de inscrições. Ao selecionar um grupo de inscrições habilitado para MMS, você poderá fazer upload de uma imagem, fazer referência a um URL de imagem ou incluir um cartão de contato.
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 ![A guia "Compor" para escrever sua mensagem.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
 

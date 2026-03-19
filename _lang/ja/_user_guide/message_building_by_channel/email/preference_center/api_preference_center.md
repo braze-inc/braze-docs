@@ -1,17 +1,17 @@
 ---
-nav_title: 原薬メール ユーザー設定センター
-article_title: 原薬メール ユーザー設定センター
+nav_title: APIメール ユーザー設定センター
+article_title: APIメール ユーザー設定センター
 page_order: 1
-description: "ここでは、API メール ユーザー設定センターとそのカスタマイズ方法について説明します。"
+description: "この記事では、APIメールユーザー設定センターとそのカスタマイズ方法について説明する。"
 channel:
   - email
 ---
 
-# 原薬メール ユーザー設定センター
+# APIメール ユーザー設定センター
 
 > ユーザー設定センターを設定することで、ユーザーが[メールメッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/email/)の通知設定を編集や管理するためのワンストップショップを提供できます。この記事では、API で生成されたユーザー設定センターの作成手順を説明しますが、[ドラッグ＆ドロップエディター]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/)を使ってユーザー設定センターを作成することもできます。
 
-Braze ダッシュボードで、**Audience**> **Email Preference Centers** に移動します。
+Brazeのダッシュボードで、**オーディエンス**＞**メールユーザー設定センター**に移動する。
 
 ここで各サブスクリプショングループを管理し、見ることができる。作成した各購読グループは、このユーザー設定センターリストに追加されます。複数のユーザー設定センターを作成することができます。
 
@@ -106,7 +106,7 @@ My encoded string is: {{my_string}}
 {
     "user_id": "1234567890",
     "name": "John Doe",
-    "category": offers
+    "category": "offers"
 }
 ```
 
@@ -141,9 +141,9 @@ ${unsubscribe_url}
 
 いいえ。配信停止リンクがコンテンツブロック内にある場合、メールキャンペーンの作成中に「メール本文に配信停止のリンクが含まれていません」というメッセージが表示されます。
 
-### デフォルト ブラウザーアイコンを更新するには?
+### デフォルトのブラウザアイコンをどうやって更新するんだ？
 
-デフォルトでは、ブラウザタブ名(ファビコン)の横にあるアイコンはBrazeのロゴを使用します。カスタムファビコンを追加するには、Create またはUpdate [Preference Center API call]({{site.baseurl}}/api/endpoints/preference_center) の`links-tags` 属性で設定します。次に、Braze は{% raw %}`<link rel="icon" ...>`{% endraw %} タグをホストページに挿入します。
+デフォルトでは、ブラウザタブ名の横にあるアイコン（ファビコン）はBrazeのロゴを使用する。カスタムファビコンを追加するには、Create または Update [ユーザー設定センター API 呼び出し]({{site.baseurl}}/api/endpoints/preference_center)の \`icon\``links-tags`属性で設定する。Brazeはその後、ホストされたページにタグ{% raw %}`<link rel="icon" ...>`{% endraw %}を挿入する。
 
 {% raw %}
 ```

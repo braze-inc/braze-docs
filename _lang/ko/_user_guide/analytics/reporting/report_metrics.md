@@ -118,7 +118,7 @@ iOS 푸시, Android 푸시
 인앱 메시지
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %} _버튼 1 클릭_에 대한 보고서는 인앱 메시지에서 **보고용 식별자**를 "0"으로 지정할 때만 작동합니다.
+{% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %} _버튼 1 클릭_에 대한 보고는 인앱 메시지에서 **보고용 식별자**를 "0"으로 지정할 때만 작동합니다.
 
 <span class="calculation-line">계산: (버튼 1 클릭) / (노출 횟수)</span>
 
@@ -132,7 +132,7 @@ iOS 푸시, Android 푸시
 인앱 메시지
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %} _버튼 2 클릭_에 대한 보고서는 인앱 메시지에서 **보고용 식별자**를 "1"로 지정할 때만 작동합니다.
+{% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %} _버튼 2 클릭_에 대한 보고는 인앱 메시지에서 **보고용 식별자**를 "1"로 지정할 때만 작동합니다.
 
 <span class="calculation-line">계산: (버튼 2 클릭) / (노출 횟수)</span>
 
@@ -495,7 +495,7 @@ Performance metrics for the message in a Feature Flag experiment. The specific m
 SMS/MMS, RCS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Help' %} 사용자가 귀하의 메시지를 받은 후 4시간 이내에 인바운드 메시지를 보낼 때마다 사용자 응답이 측정됩니다.
+{% multi_lang_include analytics/metrics.md metric='Help' %} 사용자가 귀하의 메시지를 수신한 후 4시간 이내에 인바운드 메시지를 보낼 때마다 사용자 응답이 측정됩니다.
 
 {% endapi %}
 
@@ -605,7 +605,7 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 SMS/MMS, RCS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Opt-Out' %} 사용자가 귀하의 메시지를 받은 후 4시간 이내에 인바운드 메시지를 보낼 때마다 사용자 응답이 측정됩니다.
+{% multi_lang_include analytics/metrics.md metric='Opt-Out' %} 사용자가 귀하의 메시지를 수신한 후 4시간 이내에 인바운드 메시지를 보낼 때마다 사용자 응답이 측정됩니다.
 
 {% endapi %}
 
@@ -617,7 +617,7 @@ SMS/MMS, RCS
 이메일
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Other Opens' %} 사용자가 이메일을 열 수 있으며(예: 다른 열기 수에 대한 카운트) 기계 열기 수가 기록되기 전에 발생할 수 있습니다. 사용자가 Apple Mail이 아닌 받은 편지함에서 컴퓨터 열기 이벤트가 발생한 후 이메일을 한 번 이상 여는 경우, 사용자가 이메일을 여는 횟수는 기타 열기 횟수에 대해 계산되고 고유 열기 횟수에 대해서는 한 번만 계산됩니다.
+{% multi_lang_include analytics/metrics.md metric='Other Opens' %} 사용자가 이메일을 열 수 있으며(예: 다른 열기 수에 대한 열기 수) 기계 열기 수가 기록되기 전에 발생할 수 있습니다. 사용자가 Apple Mail이 아닌 받은 편지함에서 컴퓨터 열기 이벤트가 발생한 후 이메일을 한 번 이상 여는 경우, 사용자가 이메일을 여는 횟수는 기타 열기 횟수에 대해 계산되고 고유 열기 횟수에 대해서는 한 번만 계산됩니다.
 
 {% endapi %}
 

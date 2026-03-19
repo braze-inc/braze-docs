@@ -52,7 +52,7 @@ Use the field shown to allowlist specific IP addresses and subnets from which us
 
 ## Two-factor authentication (2FA)
 
-Two-factor authentication is required for all Braze users. It adds a second level of identity verification to an account log, making it more secure than just a username and password. If your dashboard cannot support two-factor authentication, contact your customer success manager. 
+Two-factor authentication is required for all company users. It adds a second level of identity verification to an account log, making it more secure than just a username and password. If your dashboard cannot support two-factor authentication, contact your customer success manager. 
 
 When two-factor authentication is turned on:
 
@@ -85,7 +85,7 @@ A reset can solve common authentication issues such as trouble with authenticato
 
 ### Requirements for 2FA at the company level
 
-First, verify whether 2FA is enabled for your dashboard by going to **Company Settings** > **Security Settings** > **Two Factor Authentication**. If the toggle is gray, 2FA hasn't been turned on for your company and isn't mandatory for all dashboard users.
+First, verify whether 2FA is enabled for your dashboard by going to **Company Settings** > **Security Settings** > **Two Factor Authentication**. If the toggle is gray, 2FA hasn't been turned on for your company and isn't mandatory for all company users.
 
 #### User options when 2FA isn't mandatory
 
@@ -96,7 +96,7 @@ If 2FA isn't enforced at the company level, individual users can set up 2FA for 
 If 2FA is enforced at the company level, users who don't set it up on their own accounts upon logging in will be locked out of the dashboard. Users must complete the 2FA setup to maintain access.
 
 {% alert important %}
-2FA is required for all Braze users only if Single Sign-On (SSO) isn't enabled. If SSO is in use, 2FA doesn't need to be enforced at the company level.
+2FA is required for all company users only if Single Sign-On (SSO) isn't enabled. If SSO is in use, 2FA doesn't need to be enforced at the company level.
 {% endalert %}
 
 ## Setting up two-factor authentication (2FA)
@@ -262,7 +262,7 @@ Removed Push Credential
 
 ## Viewing personally identifiable information (PII) {#view-pii}
 
-The **View PII** permission is only accessible to a few select Braze users. By default, all admins have their **View PII** permission turned on in user permissions. This means they can see all standard and custom attributes that your company has defined as PII throughout the dashboard. When this permission is turned off for users, those users won't be able to see any of those attributes.
+The **View PII** permission is only accessible to a few select company users. By default, all admins have their **View PII** permission turned on in user permissions. This means they can see all standard and custom attributes that your company has defined as PII throughout the dashboard. When this permission is turned off for users, those users won't be able to see any of those attributes.
 
 {% alert note %}
 You need the **View PII** permission to use [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/building_queries/), because it allows direct access to some customer data.
@@ -273,12 +273,12 @@ For the existing team permission capabilities, refer to [Setting user permission
 ### Defining PII
 
 {% alert important %}
-Selecting and defining certain fields as PII fields only affects what Users can view on the Braze dashboard and does not impact how the End User data in such PII fields is handled.<br><br>Consult your legal team to align your dashboard's settings with any privacy regulations and policies applicable to your company, including those related to [data retention]({{site.baseurl}}/data_retention/).
+Selecting and defining certain fields as PII fields only affects what users can view on the Braze dashboard and does not impact how the End User data in such PII fields is handled.<br><br>Consult your legal team to align your dashboard's settings with any privacy regulations and policies applicable to your company, including those related to [data retention]({{site.baseurl}}/data_retention/).
 {% endalert %}
 
 You can select the fields your company designates as PII in the dashboard. To do this, go to **Company Settings** > **Admin Settings** > **Security Settings**.
 
-The following attributes can be designated as PII and hidden from Braze users who don't have **View PII** permissions.
+The following attributes can be designated as PII and hidden from company users who don't have **View PII** permissions.
 
 #### Potential PII attributes
 
@@ -289,7 +289,7 @@ The following attributes can be designated as PII and hidden from Braze users wh
 
 ### Limited areas
 
-The following assumes that all fields are set as PII, and the users mentioned are those who use the Braze platform. Also, "preceding" attributes refer to those in the [Potential PII attributes](#potential-pii-attributes) table. Removing PII permissions from a user can impact usability beyond these listed areas.
+The following assumes that all fields are set as PII, and the users mentioned are company users who use the Braze platform. Also, "preceding" attributes refer to those in the [Potential PII attributes](#potential-pii-attributes) table. Removing PII permissions from a user can impact usability beyond these listed areas.
 
 | Dashboard Navigation | Result | Notes |
 | -------------------- | ------ | ----- |

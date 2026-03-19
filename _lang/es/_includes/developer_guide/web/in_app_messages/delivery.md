@@ -1,20 +1,20 @@
 {% multi_lang_include developer_guide/prerequisites/web.md %}
 
-## Mensajes desencadenados
+## Desencadenantes de mensajes
 
 ## Tipos de desencadenantes
 
-Los mensajes dentro de la aplicación se desencadenan automáticamente cuando el SDK registra uno de los siguientes tipos de eventos personalizados: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, y `Push Click`. Ten en cuenta que los desencadenadores `Specific Purchase` y `Custom Event` también contienen sólidos filtros de propiedades.
+Los mensajes dentro de la aplicación se desencadenan automáticamente cuando el SDK registra uno de los siguientes tipos de eventos personalizados: `Any Purchase`,`Specific Purchase` `Session Start`, `Custom Event`, y `Push Click`. Ten en cuenta que los `Specific Purchase`desencadenantes`Custom Event`  y  también contienen filtros de propiedades robustos.
 
 {% alert note %}
-Los mensajes dentro de la aplicación no pueden desencadenarse a través de la API ni mediante eventos de la API: sólo eventos personalizados registrados por el SDK. Para saber más sobre el registro, consulta [Registrar eventos personalizados]({{site.baseurl}}/developer_guide/analytics/logging_events/).
+Los mensajes dentro de la aplicación no se pueden desencadenar a través de la API ni mediante eventos de la API, solo mediante eventos personalizados registrados por el SDK. Para obtener más información sobre el registro, consulta [Registro de eventos personalizados]({{site.baseurl}}/developer_guide/analytics/logging_events/).
 {% endalert %}
 
 ### Semántica de la entrega
 
-Todos los mensajes elegibles dentro de la aplicación se entregan al dispositivo del usuario al inicio de su sesión. Cuando se entreguen, el SDK precargará los activos, para que estén disponibles en el momento de desencadenar, minimizando la latencia de visualización. Si el evento desencadenado tiene más de un mensaje dentro de la aplicación elegible, sólo se entregará el mensaje con la prioridad más alta.
+Todos los mensajes elegibles dentro de la aplicación se entregan al dispositivo del usuario al inicio de la sesión. Cuando se entregue, el SDK precargará los activos para que estén disponibles en el momento del desencadenamiento, minimizando así la latencia de visualización. Si el evento desencadenante tiene más de un mensaje dentro de la aplicación elegible, solo se entregará el mensaje con la prioridad más alta.
 
-Para más información sobre la semántica de inicio de sesión del SDK,[consultaCiclo de vida de]({{site.baseurl}}/developer_guide/platform_integration_guides/analytics/tracking_sessions/) la sesión.
+Para obtener más información sobre la semántica de inicio de sesión del SDK, consulta[ Ciclo de vida de la sesión]({{site.baseurl}}/developer_guide/platform_integration_guides/analytics/tracking_sessions/).
 
 ### Límites de tarifa
 
@@ -54,11 +54,11 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 });
 ```
 
-## Desactivar los desencadenantes automáticos
+## Desactivación de los activadores automáticos
 
 Para evitar que los mensajes dentro de la aplicación se desencadenen automáticamente:
 
-Elimina la llamada a `braze.automaticallyShowInAppMessages()` dentro de tu fragmento de código de carga y, a continuación, crea una lógica personalizada para mostrar o no los mensajes dentro de la aplicación.
+Elimina la llamada a`braze.automaticallyShowInAppMessages()`  dentro de tu fragmento de código de carga y, a continuación, crea una lógica personalizada para gestionar la visualización o no de los mensajes dentro de la aplicación.
 
 ```javascript
 braze.subscribeToInAppMessage(function(inAppMessage) {
@@ -81,14 +81,14 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 ```
 
 {% alert important %}
-Si no eliminas `braze.automaticallyShowInAppMessages()` de tu sitio web y llamas a `braze.showInAppMessage`, el mensaje puede aparecer varias veces.
+Si no eliminas`braze.automaticallyShowInAppMessages()`  de tu sitio web, llama al`braze.showInAppMessage` , el mensaje puede aparecer varias veces.
 {% endalert %}
 
 El parámetro `inAppMessage` será una subclase [`braze.InAppMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html) o un objeto [`braze.ControlMessage`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.controlmessage.html), cada uno de los cuales tiene varios métodos de suscripción a eventos del ciclo de vida. Consulta la documentación completa en [los JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.inappmessage.html).
 
 Se puede mostrar solo un mensaje dentro de la aplicación [`Modal`]({{site.baseurl}}/developer_guide/in_app_messages/?tab=modal&sdktab=web) o [`Full`]({{site.baseurl}}/developer_guide/in_app_messages/?tab=full&sdktab=web) en un momento determinado. Si intentas mostrar un segundo mensaje modal o completo mientras ya se está mostrando uno, `braze.showInAppMessage` devolverá false y el segundo mensaje no se mostrará.
 
-## Desencadenar mensajes manualmente
+## Activación manual de mensajes desencadenados
 
 ### Mostrar un mensaje en tiempo real
 
@@ -101,11 +101,11 @@ También se pueden crear mensajes dentro de la aplicación en tu sitio y mostrar
   braze.showInAppMessage(message);
 ```
 
-## Desencadenar mensajes de intención de salida
+## Desencadenamiento de mensajes de intención de salida
 
-Los mensajes de intención de salida son mensajes dentro de la aplicación no disruptivos que se utilizan para comunicar información importante a los visitantes antes de que abandonen tu sitio.
+Los mensajes de intención de salida son mensajes no intrusivos que se muestran dentro de la aplicación y se utilizan para comunicar información importante a los visitantes antes de que abandonen tu sitio web.
 
-Para configurar desencadenadores para estos tipos de mensajes, implementa una biblioteca de intención de salida en tu sitio web (como [la biblioteca de código abierto de ouibounce](https://github.com/carlsednaoui/ouibounce)), y luego utiliza el código siguiente para registrar `'exit intent'` como un evento personalizado en Braze. Ahora tus futuras campañas de mensajería dentro de la aplicación pueden utilizar este tipo de mensaje como desencadenante de un evento personalizado.
+Para configurar los activadores de estos tipos de mensajes, implementa una biblioteca de intención de salida en tu sitio web (como [la biblioteca de código abierto de ouibounce](https://github.com/carlsednaoui/ouibounce)) y, a continuación, utiliza el siguiente código para registrarlo`'exit intent'`como un evento personalizado en Braze. Ahora, tus futuras campañas de mensajes dentro de la aplicación pueden utilizar este tipo de mensaje como desencadenante de eventos personalizados.
 
 ```javascript
   var _ouibounce = ouibounce(false, {

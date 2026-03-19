@@ -16,7 +16,7 @@ _Diese Integration wird von SalesWings gepflegt._
 
 ## Über die Integration
 
-SalesWings erlaubt es Marketing Teams und Marketing Operations Managern, Leads und Accounts für ihre Vertriebsteams zu qualifizieren, was für die Ausrichtung von Vertrieb und Marketing und die operative Effizienz unerlässlich ist. Darüber hinaus kann SalesWings zusammen mit Braze den Vertriebsmitarbeitern die vollständige Customer Journey eines Leads und eines Kontos sowie Daten über das Engagement der Braze-Kampagnen anzeigen, was es Ihnen erlaubt, die Lead-Qualifizierungsraten durch fundiertere Gespräche zu erhöhen. SalesWings identifiziert Bedürfnisse und Interessen zusammen mit anderen Signalen und erlaubt so die automatisierte Übergabe qualifizierter Käufer an Vertriebsteams innerhalb Ihres CRM. Sie können die ermittelten Bedürfnisse, Interessen und die Verkaufsbereitschaft als Attribute der Nutzer:innen von Braze zur Personalisierung und Segmentierung verwenden.
+SalesWings erlaubt es Marketing Teams und Marketing Operations Managern, Leads und Accounts für ihre Vertriebsteams zu qualifizieren, was für die Ausrichtung von Vertrieb und Marketing und die operative Effizienz unerlässlich ist. Darüber hinaus kann SalesWings zusammen mit Braze den Vertriebsmitarbeitern die vollständige Customer Journey eines Leads und eines Kontos sowie Daten über das Engagement der Braze-Kampagnen anzeigen, was es Ihnen erlaubt, die Qualifikationsraten von Leads durch fundiertere Gespräche zu erhöhen. SalesWings identifiziert Bedürfnisse und Interessen zusammen mit anderen Signalen und erlaubt so die automatisierte Übergabe qualifizierter Käufer an Vertriebsteams innerhalb Ihres CRM. Sie können die ermittelten Bedürfnisse, Interessen und die Verkaufsbereitschaft als Attribute der Nutzer:innen von Braze zur Personalisierung und Segmentierung verwenden.
 
 ## Voraussetzungen
  
@@ -72,7 +72,7 @@ Durch die native SalesWings-Integration mit Salesforce können Sie automatisiert
 
 ![Ein Beispiel für ein Dashboard, das mit dem Marketing-Engagement von Braze E-Mail & in Salesforce verknüpft ist und die Auswirkungen der Kampagnen von Braze auf die Vertriebsergebnisse und -erfolge untersucht.]({% image_buster /assets/img/saleswings/saleswings_email_campaign_attribution_dashboard.png %})
 
-_Beispiel für ein Dashboard, das mit dem Marketing-Engagement von Braze E-Mail & in Salesforce verknüpft ist und die Auswirkungen der Kampagnen von Braze auf die Verkaufsergebnisse und -resultate untersucht._
+_Beispiel für ein Dashboard, das mit dem Marketing-Engagement von Braze E-Mail & in Salesforce verknüpft ist und die Auswirkungen der Kampagnen von Braze auf die Verkaufszahlen und -ergebnisse untersucht._
 {% endtab %}
 {% endtabs %}
 

@@ -120,7 +120,7 @@ UNNotificationCategory *likeCategory = [UNNotificationCategory categoryWithIdent
 {% endtabs %}
 
 {% alert note %}
-When you create a `UNNotificationAction`, you can specify a list of action options. For example, `UNNotificationActionOptions.foreground` let's your users open your app after tapping the action button. This is necessary for navigational on-click behaviors, such as "Open App" and "Deep Link into Application". For more information, see [`UNNotificationActionOptions`](https://developer.apple.com/documentation/usernotifications/unnotificationactionoptions).
+When you create a `UNNotificationAction`, you can specify a list of action options. For example, `.foreground` lets your users open your app after tapping the action button. This is necessary for navigational on-click behaviors, such as "Open App" and "Deep Link into Application". If you want an action button that simply dismisses the notification without opening the app, leave `.foreground` out of the action's `options` array. For more information, see [`UNNotificationActionOptions`](https://developer.apple.com/documentation/usernotifications/unnotificationactionoptions).
 {% endalert %}
 
 ### Step 2: Select your categories
@@ -128,7 +128,7 @@ When you create a `UNNotificationAction`, you can specify a list of action optio
 After you register a category, use the Braze dashboard to send notifications of that type to users.
 
 {% alert tip %}
-You only need to define custom notification categories for action buttons with _special actions_, such as deep linking into your app or opening a URL. You do not need to define them for action buttons that only dismiss a notification.
+You only need to define action buttons on the Braze dashboard for behaviors that can't be created locally in your Swift code, such as deep linking into your app or redirecting to a web URL. These actions need to be configured on the dashboard so they can define what URL or deep link to open. For action buttons that simply dismiss the notification without opening the app, you don't need to configure them on the dashboard—dismissal behavior is handled automatically by iOS. Just register your custom category and its actions in your app code, then enter the matching category name on the dashboard.
 {% endalert %}
 
 1. In the Braze dashboard, select **Messaging** > **Push Notifications**, then choose your iOS [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message).
@@ -137,6 +137,33 @@ You only need to define custom notification categories for action buttons with _
 4. Finally, enter one of the categories you created earlier. The following example, uses the custom category: `LIKE_CATEGORY`.
 
 ![The push notification campaign dashboard with the setup for custom categories.]({% image_buster /assets/img_archive/ios-notification-category.png %})
+
+### Example: Custom push category {#example-custom-push-category}
+
+Suppose you want to create a push notification with two action buttons: **Manage**, which deep links into your app, and **Keep**, which simply dismisses the notification.
+
+In the following example, the `MANAGE_IDENTIFIER` action includes the `.foreground` option, which opens the app when tapped—this is necessary because it will deep link into a specific part of the app. The `KEEP_IDENTIFIER` action uses an empty options array, meaning it will dismiss the notification without opening the app.
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+Braze.Notifications.categories.insert(
+  .init(identifier: "YOUR_CATEGORY",
+        actions: [
+          .init(identifier: "KEEP_IDENTIFIER", title: "Keep", options: []),
+          .init(identifier: "MANAGE_IDENTIFIER", title: "Manage", options: [.foreground])
+        ],
+        intentIdentifiers: []
+       )
+)
+UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications.categories)
+```
+
+{% endtab %}
+{% endtabs %}
+
+Because `MANAGE_IDENTIFIER` deep links into the app, you would set up that action button on the Braze dashboard with the associated deep link URL. However, you don't need to define a button on the dashboard for `KEEP_IDENTIFIER` because it only dismisses the notification. On the dashboard, you only need to enter the category name (for example, `YOUR_CATEGORY`) to match what you registered in your app code.
 
 ## Customizing badges
 

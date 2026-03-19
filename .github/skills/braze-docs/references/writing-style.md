@@ -1,0 +1,176 @@
+# Writing Style Reference
+
+Detailed writing and formatting rules for Braze documentation. For the
+canonical source of truth, consult `_docs/_contributing/style_guide/writing_style_guide.md`.
+
+## Voice and tone
+
+The Braze voice is **straightforward**, **empowering**, and **human**.
+
+- Explain complicated things simply. Be concise.
+- Explain the "why" and "how" to give users confidence to take action.
+- Aim for a conversational tone, not a formal one.
+- Cut jargon and acronyms. If unavoidable, define them on first use.
+- Write for a global audience. Avoid slang, idioms, and culturally specific humor.
+
+## Core writing rules
+
+### Active voice
+
+Use active voice. Avoid passive voice unless de-emphasizing a subject (to avoid
+blaming the reader) or when who performed the action is unimportant.
+
+- Do: "Braze connects consumers to the brands they love."
+- Don't: "Consumers are connected to the brands they love."
+
+### Second person
+
+Address the reader as "you". Avoid first person ("we", "our") except when
+referring to Braze as an organization. Use the imperative for direct instructions.
+
+- Do: "Upload the CSV file."
+- Don't: "You can upload the CSV file." / "We can upload the CSV file."
+
+### Present tense
+
+Use present tense. Avoid "will" or hypothetical "would" for the result of user action.
+
+- Do: "Archived subscription groups cannot be edited and no longer appear in segment filters."
+- Don't: "Archived groups cannot be edited and will no longer appear in segment filters."
+
+### Contractions
+
+Use standard contractions (you're, can't, don't) for an approachable tone. Do
+not use noun+verb contractions (Braze'll) or double contractions (mightn't've).
+
+### Avoid condescending language
+
+Never use "simple", "simply", "just", "easy", or "it's easy" when describing
+steps or instructions.
+
+### Oxford comma
+
+Always use the Oxford (serial) comma before the last conjunction in a series.
+
+- Do: "campaigns, Canvases, and segments"
+- Don't: "campaigns, Canvases and segments"
+
+### Abbreviations
+
+Spell out uncommon abbreviations on first mention, followed by the abbreviation
+in parentheses. Use the abbreviation for subsequent mentions. Do not spell out
+common abbreviations (PDF, USB, API, SDK).
+
+- Pluralize without an apostrophe: APIs, SDKs
+- Use "a" or "an" based on pronunciation: "an ISP", "a CSV file"
+
+## Inclusive language
+
+- Use gender-neutral pronouns ("they/them/theirs" is always acceptable as singular).
+- Use gender-neutral job titles (salesperson, not salesman).
+- Avoid ableist language (do not use "crazy", "insane", "blind to", "cripple", "dumb").
+- Do not refer to age, disability, race, religion, or ethnicity unless specifically relevant.
+- Use "customers" for brands Braze works with. Never say "clients".
+- Use "consumers" for customers' customers. Reserve "users" for user-metric contexts.
+
+## Formatting conventions
+
+### Headings and titles
+
+- Use sentence case capitalization for all headings and titles.
+- Use gerunds (-ing words) for article titles when applicable.
+- Use imperative verbs for task-based headings.
+- Do not skip heading levels (h3 follows h2, etc.).
+- Use an h1 for page titles only.
+
+### UI elements in instructions
+
+| Element | Formatting | Example |
+|---------|-----------|---------|
+| Buttons | **Bold** the label. Do not say "the X button". | Click **Add Languages**. |
+| Checkboxes | **Bold** the label. Use "select/clear", not "check/uncheck". | Select **Send in local time zone**. |
+| Pages | **Bold** the page name. Use "the X page". | Go to the **Segments** page. |
+| Tabs | **Bold** the tab name. | Select the **Settings** tab. |
+| Filters/operators | `Code text`. Match UI case. | Select the `First Used App` filter. |
+| Filenames/paths | `Code text`. | Open the `braze.xml` file. |
+| Error messages | "Quotation marks". | "Push Bounced: MismatchSenderId" |
+| Metrics (in text) | *Italics* with initial caps. | The *Machine Opens* metric shows... |
+| Permissions | "Quotation marks". | Grant the "Manage Segments" permission. |
+
+### Code in text
+
+Use backtick code font for: attribute names/values, API parameters, filenames,
+file paths, method/variable/parameter names, HTML/XML elements, HTTP status
+codes, terminal input.
+
+### Lists
+
+- Bulleted lists: unordered information.
+- Numbered lists: sequential steps.
+- Lettered lists: mutually exclusive options.
+- Start each item with a capital letter.
+- Omit ending punctuation for single words, fragments without verbs, code items, or link/title items.
+- Use parallel syntax across all items.
+
+### Numbers
+
+- Spell out numerals one through nine. Use numerals for 10+.
+- Use commas for numbers over three digits (1,000).
+- Never start a sentence with a numeral (except years).
+- Percentages: use numeral + % with no space (10%). Spell out if starting a sentence.
+
+### Links
+
+- Use descriptive link text. Never use "Learn more", "here", "click here", or "this document".
+- Use "For more information, see [Topic Name]" or "For more information about X, see [Topic Name]".
+- Match link text to the destination's title or heading.
+- Do not place two links back to back without separating text.
+
+### Alerts
+
+Four types: Important, Note, Tip, Warning. Use sparingly.
+
+- **Important:** Essential info (deprecated features, billing impacts, beta status).
+- **Note:** One-off caveats or helpful callouts.
+- **Tip:** Supplementary knowledge, shortcuts, additional resources.
+- **Warning:** Irreversible consequences, feature-breaking behavior, data loss.
+
+Do not use alerts for essential article structure (intros, setup steps). Avoid
+stacking two or more alerts in a row. Keep alert content short and concise.
+
+## Procedures and instructions
+
+- Do not jump straight into steps. Provide context and list prerequisites first.
+- Structure around what the user can do, not what the product can do.
+  - Do: "Use this feature to send targeted messages."
+  - Don't: "This feature sends targeted messages."
+- Provide location steps: "On the **Settings** page, click **Edit**."
+- Put conditional clauses first: "If you need X, do A then B."
+- Use "When you've" or "After you've" to reinforce task order. Avoid "Once you've" (does not translate well).
+
+## Accessibility
+
+- Use plain language. Aim for no more than 20 words per sentence, five sentences per paragraph.
+- Front-load sections with the most important information (inverted pyramid).
+- Provide alt text for every image.
+- Do not use images as the only way to show information.
+- Do not use ampersands (&) in place of "and" unless matching UI text.
+- Avoid Latin phrases; use simple alternatives.
+
+## Punctuation quick reference
+
+- **Colons:** Introductory sentence must stand alone as a complete sentence before the colon. Bold the colon if preceding text is bold.
+- **Semicolons:** Use to separate closely related independent clauses. Use sparingly.
+- **Apostrophes:** Singular nouns ending in S take 's (Chris's). Plural nouns ending in S take only ' (users').
+- **Ampersands:** Do not use & for "and" in text or headings unless matching UI.
+
+## Describing limitations
+
+Write candidly about product limitations. Do not distort or minimize. Frame
+limitations with appropriate, positive context without promising future features.
+
+## Reviews
+
+When reviewing content, verify compliance with all rules above. Flag and correct
+violations. For detailed guidance on any topic, consult the relevant source file
+listed in the style guide source files table in SKILL.md.

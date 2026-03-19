@@ -15,7 +15,7 @@ tool:
 
 La page d **'accueil** comporte deux sections principales :
 - [Reprendre là où vous vous êtes arrêté](#pick-up-where-you-left-off)
-- [Aperçu des performances](#peformance-overview)
+- [Aperçu des performances](#performance-overview)
 
 ![Tableau de bord de Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
 
@@ -26,7 +26,7 @@ Vous pouvez reprendre là où vous vous étiez arrêté dans le tableau de bord 
 Vous pouvez revenir sur des campagnes, des canvas et des segments récemment modifiés ou créés. Chaque carte est associée à des tags qui indiquent le type de contenu (campagne, Canvas, segment) et le statut (actif, brouillon, archivé, arrêté).
 
 {% alert note %}
-La section **Reprendre là où vous vous étiez arrêté** apparaît après que vous avez modifié ou créé une campagne, un Canvas ou un segment.
+La section **Reprendre là où vous vous êtes arrêté** apparaît après avoir modifié ou créé une campagne, un canvas ou un segment.
 {% endalert %}
 
 ![Un projet de canvas, un segment actif et un projet de campagne dans la section "Reprendre là où vous vous êtes arrêté".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
@@ -48,6 +48,38 @@ Par exemple, si vous définissez votre plage de dates sur les **7 derniers jour
 Sélectionnez **Afficher la décomposition** pour chaque ligne des statistiques de l'aperçu des performances afin d'afficher la valeur de chaque statistique par jour pour la plage de dates spécifiée.
 
 ![Développer]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
+
+### Évolution des performances
+
+Le graphique **Performances au fil du temps** affiche la valeur de chaque statistique sur la période spécifiée pour les applications indiquées.
+
+![Le graphique « Performance au fil du temps » présente les statistiques relatives aux nouveaux utilisateurs sur une période de 30 jours.]({% image_buster /assets/img/dashboards/performance_over_time.png %})
+
+Vous pouvez représenter graphiquement les statistiques pour :
+- Bannières
+- Cartes de contenu
+- Utilisateurs actifs quotidiens
+  - (Facultatif) Ventilation par segment
+- E-mail
+- in-app Messages
+- Formules de KPI
+  - Veuillez sélectionner **Gérer les formules indicateurs clés de performance** pour créer une formule ou modifier une formule existante.
+- LINE
+- Utilisateur actif par mois (MAU)
+- Nouveaux utilisateurs
+- Notification push
+  - (Facultatif) Ventilation par segment
+- Sessions
+  - (Facultatif) Répartition par segment ou version de l'application
+- Sessions par heure
+- Sessions par MAU
+- SMS
+- Adhérence
+- Désinstallations
+  - (Facultatif) Ventilation par segment
+- Utilisateurs
+- Webhooks
+- WhatsApp
 
 ## Statistiques disponibles
 
@@ -74,32 +106,32 @@ $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of d
 
 #### Règles de calcul des MAU
 
-Le calcul des MAU suit des règles spécifiques afin de garantir une facturation précise et cohérente :
+Les calculs MAU suivent des règles spécifiques afin de garantir une facturation précise et cohérente :
 
-- **Moment du calcul**: Calculé une fois par jour à 12:05 UTC comme un instantané de 30 jours ; les chiffres ne changent jamais rétroactivement.
-- **Profils anonymes**: **Ne** comptez **que** lorsqu'au moins une session est enregistrée.
-- **Profils identifiés**: Compter automatiquement dès qu'ils existent.
-- **Profils orphelins**: Les doublons fusionnés avec un autre utilisateur **ne** sont **pas** comptabilisés.
-- **Téléchargement de fichiers CSV**: Les utilisateurs téléchargés par CSV ne sont pris en compte que lorsque `date_of_first_session` ou `date_of_last_session` est fourni, ou lorsqu'ils enregistrent une session ultérieurement.
-- **Suppressions d'API**: La suppression d'un utilisateur via l'API ne met pas immédiatement à jour l'UAM ; le décompte se corrige de lui-même lors du cycle mensuel suivant.
+- **Calcul du moment opportun** : Calculé une fois par jour à 12 h 05 UTC sous forme d'instantané sur 30 jours ; les comptes ne sont jamais modifiés rétroactivement.
+- **Profils anonymes** : Veuillez compter **uniquement** lorsqu'au moins une session est enregistrée.
+- **Profils identifiés** : Veuillez compter automatiquement dès qu'ils sont disponibles.
+- **Profils orphelins** : Les doublons fusionnés avec un autre utilisateur **ne** sont **pas** pris en compte.
+- **Téléchargements CSV** : Les utilisateurs téléchargés par CSV ne sont comptabilisés que lorsque`date_of_first_session`  ou`date_of_last_session`  est fourni, ou lorsqu'ils se connectent ultérieurement à une session.
+- **Suppression d'API** : La suppression d'un utilisateur via l'API ne met pas immédiatement à jour le nombre d'utilisateurs actifs mensuels (MAU) ; le décompte se corrige automatiquement lors du cycle mensuel suivant.
 
 {% alert note %}
 Les utilisateurs anonymes sont également pris en compte dans votre MAU. Pour les appareils mobiles, les utilisateurs anonymes dépendent de l’appareil. Pour les utilisateurs Web, les utilisateurs anonymes dépendent du cache du navigateur.
 {% endalert %}
 
-#### Exemple de calcul des MAU
+#### Exemple de calcul du nombre d'utilisateurs actifs mensuels (MAU)
 
-L'exemple suivant illustre le fonctionnement du calcul des MAU à travers différentes actions de l'utilisateur :
+L'exemple suivant illustre le fonctionnement des calculs MAU à travers différentes actions utilisateur :
 
-| Étape | Action | Changement immédiat des MAU | Total résultant |
+| Étape | Action | Modification immédiate du MAU | Total obtenu |
 |------|--------|----------------------|-----------------|
-| 1 | Créez l'**utilisateur anonyme 1** et ouvrez une session. | +1 | 1 |
-| 2 | Identifier l'**utilisateur anonyme 1** (le profil est converti en identifié) | 0 | 1 |
-| 3 | Créez l'**utilisateur anonyme 2** et ouvrez une session. | +1 | 2 |
-| 4 | Identifier l'**utilisateur anonyme 2** comme étant la **même personne** que l'utilisateur 1 (l'utilisateur 2 devient orphelin). | -1 | 1 |
+| 1 | Veuillez créer **l'utilisateur anonyme 1** et vous connecter à une session. | +1 | 1 |
+| 2 | Identifier **l'utilisateur anonyme 1** (le profil est converti en profil identifié) | 0 | 1 |
+| 3 | Veuillez créer **l'utilisateur anonyme 2** et vous connecter à une session. | +1 | 2 |
+| 4 | Identifier **l'utilisateur anonyme 2** comme étant la **même personne** que l'utilisateur 1 (l'utilisateur 2 devient orphelin). | –1 | 1 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
-Les instantanés MAU sont calculés une fois par jour et ne sont jamais modifiés rétroactivement. Dans cet exemple, le nombre de MAU pour le jour suivant l'étape 3 reste en permanence à 2, même si l'utilisateur 2 devient orphelin par la suite. Toutefois, le décompte des MAU pour les jours suivants ne reflète que l'utilisateur non orphelin. Dans une fenêtre de 30 jours, ce flux consomme finalement 1 MAU puisqu'il ne reste qu'un seul utilisateur distinct, non orphelin.
+Les instantanés MAU sont calculés une fois par jour et ne sont jamais modifiés rétroactivement. Dans cet exemple, le nombre d'utilisateurs actifs mensuels (MAU) pour le jour suivant l'étape 3 reste définitivement à 2, même si l'utilisateur 2 devient par la suite orphelin. Cependant, le nombre de MAU pour les jours suivants ne reflète que les utilisateurs non orphelins. Au cours d'une période de 30 jours, ce flux consomme finalement 1 MAU, car il ne reste qu'un seul utilisateur distinct et non orphelin.
 
 ### Utilisateurs actifs quotidiens
 
@@ -111,6 +143,10 @@ Les *utilisateurs actifs quotidiens* (DAU) affichent le nombre d'utilisateurs un
 
 {% alert note %}
 Lors de l'intégration initiale de Braze, tous les utilisateurs auront l'air de nouveaux utilisateurs car Braze n'a jamais enregistré de session pour eux auparavant.
+{% endalert %}
+
+{% alert important %}
+Les utilisateurs associés à plusieurs applications sont comptabilisés séparément pour chaque application. Cela signifie qu'un même utilisateur peut contribuer plusieurs fois au nombre de *nouveaux utilisateurs* s'il démarre des sessions sur différentes applications de votre espace de travail.
 {% endalert %}
 
 ### Adhérence

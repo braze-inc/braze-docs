@@ -1,17 +1,17 @@
 ---
 nav_title: Rastreamento de usuários
 article_title: Rastrear usuários através de um formulário
-description: "Aprenda como identificar usuários que enviam um formulário através da sua landing page adicionando uma Liquid tag às suas mensagens."
+description: "Aprenda como identificar usuários que enviam um formulário através da sua landing page adicionando uma tag Liquid às suas mensagens."
 page_order: 2
 ---
 
 # Rastrear usuários através de um formulário
 
-> Aprenda como rastrear usuários que enviam um formulário através da sua landing page adicionando uma Liquid tag de landing page às suas mensagens. Essa Liquid tag é suportada em todos os canais de envio de mensagens do Braze, incluindo e-mail, SMS, mensagens no app e muito mais. Para saber mais sobre dados de rastreamento, consulte [Sobre os dados de rastreamento da landing page]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/about_tracking_data).
+> Aprenda como rastrear usuários que enviam um formulário através da sua landing page adicionando uma tag Liquid de landing page às suas mensagens. Essa Liquid tag é suportada em todos os canais de envio de mensagens do Braze, incluindo e-mail, SMS, mensagens no app e muito mais. Para saber mais sobre dados de rastreamento, consulte [Sobre os dados de rastreamento da landing page]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/about_tracking_data).
 
 ## Como funciona?
 
-Você pode adicionar uma {% raw %}`{% landing_page_url %}`{% endraw %} Liquid tag a qualquer uma das suas mensagens de canal único ou multi-canal no Braze. Quando um usuário visitar essa landing page e enviar o formulário, o Braze vinculará automaticamente esses dados ao seu perfil existente, em vez de criar um novo perfil para esse usuário. No exemplo a seguir, uma Liquid tag de landing page é usada para vincular clientes a uma pesquisa:
+Você pode adicionar uma tag Liquid {% raw %}`{% landing_page_url %}`{% endraw %} a qualquer uma das suas mensagens de canal único ou múltiplo no Braze. Quando um usuário visitar essa landing page e enviar o formulário, o Braze vinculará automaticamente esses dados ao seu perfil existente, em vez de criar um novo perfil para esse usuário. No exemplo a seguir, uma tag Liquid de landing page é usada para vincular clientes a uma pesquisa:
 
 {% raw %}
 ```html
@@ -31,13 +31,13 @@ Antes de começar, você precisará criar uma [landing page]({{site.baseurl}}/us
 
 ### Etapa 1: Verifique a URL da página {#page-url}
 
-O Braze usará a URL da sua landing page para gerar sua Liquid tag única. Se você quiser alterar a URL da página atual, acesse **Envio de Mensagens** > **Landing Pages**, então abra sua landing page. Em **URL da página**, você pode inserir uma nova URL da página.
+O Braze usará a URL da sua landing page para gerar sua tag Liquid única. Se você quiser mudar a URL da página atual, acesse **Envio de Mensagens** > **Landing Pages**, então abra sua landing page. Em **URL da página**, você pode inserir uma nova URL da página.
 
 {% alert warning %}
-Se você alterar a URL da página após enviar sua mensagem, qualquer usuário que tentar visitar sua landing page usando a URL antiga será enviado para uma página `404`.
+Se você mudar a URL da página após enviar sua mensagem, qualquer usuário que tentar visitar sua landing page usando a URL antiga será enviado para uma página `404`.
 {% endalert %}
 
-![Uma URL de página de exemplo para uma landing page no Braze.]({% image_buster /assets/img/landing_pages/url-handle-example.png %}){: style="max-width:80%;"}
+![Um exemplo de URL de página para uma landing page no Braze.]({% image_buster /assets/img/landing_pages/url-handle-example.png %}){: style="max-width:80%;"}
 
 ### Etapa 2: Gerar a Liquid tag
 
@@ -45,7 +45,7 @@ Acesse **Envio de mensagens** > **Campanhas** e escolha uma campanha. No editor 
 
 ![O botão 'Adicionar personalização' no editor de arrastar e soltar.]({% image_buster /assets/img/landing_pages/select-personalization.png %}){: style="max-width:75%;"}
 
-O Braze gerará automaticamente uma Liquid tag usando sua [URL da landing page](#page-url). Consulte a tabela a seguir para gerar sua tag:
+O Braze gerará automaticamente uma tag Liquid usando sua [URL da landing page](#page-url). Consulte a tabela a seguir para gerar sua tag:
 
 \|**Tipo de personalização**| Escolha **Landing Page**.|
 \|**Landing page**|Escolha a landing page [que você criou anteriormente](#prerequisites).|
@@ -53,7 +53,7 @@ O Braze gerará automaticamente uma Liquid tag usando sua [URL da landing page](
 
 Para adicionar a tag Liquid à sua mensagem, você pode selecionar **Inserir** ou copiar o trecho para a área de transferência e adicioná-lo manualmente.
 
-![Uma Liquid tag gerada automaticamente para a landing page selecionada.]({% image_buster /assets/img/landing_pages/get-snippet.png %}){: style="max-width:40%;"}
+![Uma tag Liquid gerada automaticamente para a landing page selecionada.]({% image_buster /assets/img/landing_pages/get-snippet.png %}){: style="max-width:40%;"}
 
 Seu snippet será semelhante ao seguinte:
 

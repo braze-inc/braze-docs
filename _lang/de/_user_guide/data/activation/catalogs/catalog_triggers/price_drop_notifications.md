@@ -96,11 +96,13 @@ Jetzt werden Ihre Kunden benachrichtigt, wenn der Preis eines Artikels sinkt.
 
 ### Liquid verwenden
 
-Um ein Template mit Details zu dem reduzierten Katalogartikel zu erstellen, können Sie das Liquid-Tag `canvas_entry_properties` verwenden, um auf die Seite `item_id` zuzugreifen. 
+Um ein Template mit Details zu dem reduzierten Katalogartikel zu erstellen, können Sie das Liquid-Tag `context` verwenden, um auf die Seite `item_id` zuzugreifen. 
 
-Die Verwendung von {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} gibt die ID des Artikels zurück, dessen Preis gesunken ist. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} gibt den Preiswert des Artikels vor dem Update zurück, und {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} gibt den neuen Preiswert nach dem Update zurück. 
+Die Verwendung von {%raw%}``{{context.${catalog_update}.item_id}}``{%endraw%} gibt die ID des Artikels zurück, dessen Preis gesunken ist. {%raw%}``{{context.${catalog_update}.previous_value}}``{%endraw%} gibt den Preiswert des Artikels vor dem Update zurück, und {%raw%}``{{context.${catalog_update}.new_value}}``{%endraw%} gibt den neuen Preiswert nach dem Update zurück. 
 
-Verwenden Sie diesen Liquid-Tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} am Anfang Ihrer Nachricht und verwenden Sie dann {%raw%}`{{items[0].<field_name>}}`{%endraw%}, um in der gesamten Nachricht auf Daten zu diesem Artikel zuzugreifen.
+Verwenden Sie das Liquid-Tag{%raw%}``{% catalog_items <name_of_your_catalog> {{context.${catalog_update}.item_id}} %}``{%endraw%}am Anfang Ihrer Nachricht und nutzen Sie anschließend{%raw%}`{{items[0].<field_name>}}`{%endraw%}, um auf Daten zu diesem Artikel in der gesamten Nachricht zuzugreifen.
+
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
 {% multi_lang_include alerts/tip_alerts.md alert='catalog data images' %}
 
@@ -108,4 +110,4 @@ Verwenden Sie diesen Liquid-Tag {%raw%}``{% catalog_items <name_of_your_catalog>
 
 - Benutzer sind für 90 Tage abonniert. Wenn der Preis eines Artikels innerhalb von 90 Tagen nicht sinkt, wird der Benutzer aus dem Abonnement entfernt.
 - Wenn Sie die Benachrichtigungsregel **Alle abonnierten Benutzer benachrichtigen** verwenden, wird Braze 100.000 Benutzer innerhalb von 10 Minuten benachrichtigen.
-- Braze verarbeitet 10 Anfragen zum Update von Katalogartikeln pro Minute. Die Update-Endpunkte erlauben 50 Artikel-Updates pro Anfrage und unterstützen bis zu 500 Artikel-Updates pro Minute, die Back-in-Stock-Benachrichtigungen auslösen können.
+- Braze verarbeitet 10 Anfragen zum Update von Katalogartikeln pro Minute. Update-Endpunkte erlauben 50 Artikel-Updates pro Anfrage und unterstützen bis zu 500 Artikel-Updates pro Minute, die Benachrichtigungen über wieder verfügbare Artikel triggern können.

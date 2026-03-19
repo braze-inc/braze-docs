@@ -1,5 +1,5 @@
 ---
-nav_title: 캔버스 구성 요소
+nav_title: 캔버스 컴포넌트
 article_title: 캔버스 구성 요소
 page_order: 2
 alias: "/user_guide/engagement_tools/canvas/canvas_components/about/"
@@ -13,33 +13,42 @@ tool: Canvas
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
-  - name: 메시지 단계
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
-    image: /assets/img/braze_icons/message-square-02.svg
-  - name: 지연 단계
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
-    image: /assets/img/braze_icons/clock-stopwatch.svg
-  - name: 결정 분할 단계
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
-    image: /assets/img/braze_icons/dataflow-04.svg
-  - name: 오디언스 경로 단계
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
-    image: /assets/img/braze_icons/users-01.svg 
   - name: 행동 경로 단계  
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/action_paths/
     image: /assets/img/braze_icons/zap.svg
+  - name: 에이전트 단계
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/agent_step/
+    image: /assets/img/braze_icons/briefcase-01.svg
+  - name: 오디언스 경로 단계
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
+    image: /assets/img/braze_icons/users-01.svg 
+  - name: 오디언스 동기화 단계
+    link: /docs/partners/canvas_audience_sync/
+    image: /assets/img/braze_icons/refresh-ccw-02.svg
+  - name: 콘텐츠 최적화 단계
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/content_optimizer_step/
+    image: /assets/img/braze_icons/target-04.svg
+  - name: 컨텍스트 단계
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/context/
+    image: /assets/img/braze_icons/file-search-02.svg
+  - name: 결정 분할 단계
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
+    image: /assets/img/braze_icons/dataflow-04.svg
+  - name: 지연 단계
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
+    image: /assets/img/braze_icons/clock-stopwatch.svg
   - name: 실험 경로 단계
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
     image: /assets/img/braze_icons/columns-01.svg
-  - name: 사용자 업데이트 단계
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
-    image: /assets/img/braze_icons/user-check-01.svg
   - name: 캔버스의 기능 플래그
     link: /docs/developer_guide/feature_flags/canvas/
     image: /assets/img/braze_icons/dataflow-03.svg
-  - name: 캔버스 오디언스 동기화
-    link: /docs/partners/canvas_audience_sync/
-    image: /assets/img/braze_icons/refresh-ccw-02.svg
+  - name: 메시지 단계
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
+    image: /assets/img/braze_icons/message-square-02.svg
+  - name: 사용자 업데이트 단계
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
+    image: /assets/img/braze_icons/user-check-01.svg
 ---
 
 ## 캔버스 구성 요소 정보
@@ -48,7 +57,7 @@ guide_featured_list:
 
 ### 사용자 여정 맞춤화
 
-![결정 분할 단계와 지연 단계 및 메시지 단계가 있는 캔버스 사용자 여정의 예시입니다.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
+![캔버스 사용자 여정의 예시: 결정 분할 단계에 이어 지연 단계와 메시지 단계가 배치된 구성.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
 [작업 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths)를 사용하여 구매와 같은 행동 및 인게이지먼트 이벤트를 기반으로 사용자 여정을 분할할 수 있습니다. 오디언스를 필터링하고 타겟팅하려는 경우, [오디언스 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths)를 사용하면 오디언스 기준에 따라 사용자를 다양한 캔버스 경로로 전송하여 사용자 타겟팅을 간소화할 수 있습니다.
 
@@ -63,4 +72,3 @@ guide_featured_list:
 ### Integration
 
 브랜드의 퍼스트 파티 사용자 데이터와 동기화하고 싶으신가요? [Facebook]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) 및 [Google에서]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) 사용 가능한 오디언스 동기화 옵션을 활용하세요.
-

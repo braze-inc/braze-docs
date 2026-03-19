@@ -39,7 +39,7 @@ amplitude.setDeviceId(Appboy.getInstance(context).getDeviceId();)
 
 Amplitudeには2種類のイベントをエクスポートできる：[メッセージエンゲージメントイベント](#supported-currents-events) (メッセージ送信に直接関連する Braze イベントで構成される) と、[顧客行動イベント](#supported-currents-events) (セッション、カスタムイベント、プラットフォーム経由で追跡された購入などのその他のアプリまたは Web サイトアクティビティを含む) です。すべての標準的なイベントには `[Appboy]` が接頭辞として付加され、すべてのカスタムイベントには `[Appboy] [Custom Event]` が付加されます。カスタムイベントプロパティの接頭辞は `[Custom event property]`、購入イベントプロパティの接頭辞は `[Purchase property]` です。
 
-名前が付けられ Braze にインポートされるすべてのコホートには、接頭辞として `[Amplitude]` が、接尾辞として`cohort_id` が付加されます。これは、"TEST_COHORT" という名前のコホートで`cohort_id` "abcd1234" は、Braze フィルターs では`[Amplitude] TEST_COHORT: abcd1234` という名前になることを意味します。
+名前が付けられ Braze にインポートされるすべてのコホートには、接頭辞として `[Amplitude]` が、接尾辞として`cohort_id` が付加されます。これは、"TEST_COHORT" という名前のコホートで`cohort_id` "abcd1234" は、Braze フィルター では`[Amplitude] TEST_COHORT: abcd1234` という名前になることを意味します。
 
 その他のイベントの種類にアクセスする必要がある場合は、アカウントマネージャーに問い合わせるか、[サポートチケット]({{site.baseurl}}/braze_support/)を開いてください。
 

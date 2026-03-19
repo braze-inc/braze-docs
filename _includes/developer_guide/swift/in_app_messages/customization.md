@@ -106,7 +106,7 @@ The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
 
 ### Handling the custom behavior
 
-The following [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) delegate method is called when an in-app message is clicked. For clicks on in-app message buttons and HTML in-app message buttons (links), a button ID is provided as an optional parameter.
+The following [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) delegate method is called when a user clicks an in-app message. This callback is triggered for user-initiated clicks on in-app message buttons and HTML in-app message buttons (links), and a button ID is provided as an optional parameter for these interactions. This callback is not invoked for programmatic clicks triggered through `brazeBridge.logClick()`.
 
 {% tabs %}
 {% tab swift %}
@@ -199,6 +199,20 @@ func inAppMessage(
 
 {% endtab %}
 {% endtabs %}
+
+## Swiping to dismiss slideup messages
+
+By default, slideup in-app messages can be dismissed with a swipe gesture. The direction of the swipe depends on the slideup position:
+
+- **Left or right swipe:** Dismisses the slideup regardless of its position.
+- **Slideup from the bottom:** Swiping from top to bottom dismisses the message. Swiping from bottom to top does not dismiss it.
+- **Slideup from the top:** Swiping from bottom to top dismisses the message. Swiping from top to bottom does not dismiss it.
+
+This swipe behavior is built into the default `BrazeInAppMessageUI` [`SlideupView`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/slideupview) and applies only to slideup in-app messages. Modal and full in-app messages don't support swipe-to-dismiss. To further customize the slideup view, including swipe behavior, you can modify the [`SlideupView.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/slideupview/attributes-swift.struct) or provide a custom view via subclassing.
+
+{% alert note %}
+Tapping outside of a slideup message does not dismiss it. For modal or full in-app messages, you can enable outside tap dismissals using the `dismissOnBackgroundTap` attribute described below.
+{% endalert %}
 
 ## Customizing modal dismissals
 

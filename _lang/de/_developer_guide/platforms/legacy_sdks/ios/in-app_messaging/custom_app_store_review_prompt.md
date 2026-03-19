@@ -1,5 +1,5 @@
 ---
-nav_title: Angepasste App Shop-Bewertungsaufforderung
+nav_title: Angepasste App Store-Bewertungsaufforderung
 article_title: Angepasste App Store-Bewertungsaufforderung
 platform: iOS
 page_order: 4

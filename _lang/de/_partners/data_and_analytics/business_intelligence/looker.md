@@ -77,7 +77,7 @@ Richten Sie eine Braze Looker-Aktion mit Ihrem Braze REST API-Schlüssel und Ihr
 Wählen Sie in Looker Develop die entsprechenden Ansichten aus. Fügen Sie `braze_id` zum Tag dimensions hinzu und bestätigen Sie die Änderungen.
 Dieser `braze_id` Tag wird verwendet, um zu bestimmen, welches Feld der eindeutige Schlüssel ist.
 
-```json
+```lookml
 dimension: external_id {
     type: string
     primary_key: yes

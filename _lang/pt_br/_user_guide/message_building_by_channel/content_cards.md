@@ -4,7 +4,7 @@ article_title: Cartões de conteúdo
 page_order: 1
 layout: dev_guide
 guide_top_header: "Cartões de conteúdo"
-guide_top_text: "Com os cartões de conteúdo, você pode enviar um fluxo dinâmico e altamente direcionado de conteúdo avançado para seus clientes nos apps que eles adoram, sem interromper a experiência deles. <br><br>Os Cartões de Conteúdo são incorporados diretamente no seu app ou site, permitindo que você crie caixas de mensagens e interfaces personalizadas que ampliam o alcance de outros canais, como e-mail ou notificações por push. Além disso, os Cartões de Conteúdo suportam recursos mais personalizados, incluindo fixação de cartão, descarte de cartão, entrega baseada em API, Conteúdo Conectado, tempos de expiração de cartão personalizados, análise de cartão e fácil coordenação com notificações por push. <br><br>**A disponibilidade dos Cartões de Conteúdo depende do seu pacote Braze. Entre em contato com seu gerente de conta ou gerente de sucesso do cliente para começar.**"
+guide_top_text: "Com os cartões de conteúdo, você pode enviar um fluxo dinâmico e altamente direcionado de conteúdo avançado para seus clientes nos apps que eles adoram, sem interromper a experiência deles. <br><br>Os Cartões de Conteúdo são incorporados diretamente no seu app ou site, permitindo que você crie caixas de mensagens e interfaces personalizadas que ampliam o alcance de outros canais, como e-mail ou notificações por push. Além disso, os Cartões de Conteúdo suportam recursos mais personalizados, incluindo fixação de cartão, descarte de cartão, entrega baseada em API, Conteúdo Conectado, tempos de expiração de cartão personalizados, análise de cartões e fácil coordenação com notificações por push. <br><br>**A disponibilidade dos Cartões de Conteúdo depende do seu pacote Braze. Entre em contato com seu gerente de conta ou gerente de sucesso do cliente para começar.**"
 description: "Esta landing page é a página inicial dos cartões de conteúdo Braze. Aqui, você pode encontrar artigos sobre como criar um cartão de conteúdo, como personalizar seus cartões de conteúdo, testes, relatórios e muito mais."
 channel:
   - content cards
@@ -61,6 +61,8 @@ Agora vamos ficar um pouco técnicos. Nos bastidores, há três partes principai
 - **Controlador:** Como o usuário interage com o cartão
 
 Para uma implementação padrão, você adiciona o conteúdo do cartão - o modelo - a partir do dashboard ou por meio de APIs, e a visualização e o controlador são tratados pelo que é chamado de view controller. Um controlador de visualização é a "cola" entre o aplicativo geral e a tela.
+
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
 
 ## Casos de uso
 

@@ -1,50 +1,50 @@
 ---
-nav_title: Synchronisation et suppression des données du compte
+nav_title: Synchroniser et supprimer les données du compte
 article_title: "Synchronisation des données de compte à l'aide de CDI"
 page_order: 4
 page_type: reference
-description: "Découvrez comment synchroniser les données de votre compte Braze à l'aide de CDI."
+description: "Veuillez découvrir comment synchroniser les données de votre compte Braze à l'aide de CDI."
 
 ---
 
 # Synchronisation des données de compte à l'aide de CDI
 
-> Découvrez comment synchroniser les données de votre compte Braze à l'aide de CDI.
+> Veuillez découvrir comment synchroniser les données de votre compte Braze à l'aide de CDI.
 
 {% alert important %}
-Les [objets de compte](https://braze.com/unlisted_docs/account_opportunity_object/) sont en version bêta et sont nécessaires pour utiliser cette fonctionnalité. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à la version bêta.
+[Les objets de compte](https://braze.com/unlisted_docs/account_opportunity_object/) sont en version bêta et sont nécessaires pour utiliser cette fonctionnalité. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à la version bêta.
 {% endalert %}
 
 ## Conditions préalables
 
-Avant de synchroniser les données de vos comptes à l'aide de CDI, vous devez [configurer votre schéma de comptes.](https://braze.com/unlisted_docs/account_opportunity_object/)
+Avant de pouvoir synchroniser les données de votre compte à l'aide de CDI, il est nécessaire de [configurer le schéma de vos comptes](https://braze.com/unlisted_docs/account_opportunity_object/).
 
 {% alert note %}
-N'effectuez des mises à jour du schéma de votre compte que lorsque la synchronisation est en pause ou n'est pas planifiée, afin d'éviter les conflits entre les données de votre entrepôt de données et le schéma dans Braze.
+Veuillez effectuer les mises à jour de votre schéma de compte uniquement lorsque la synchronisation est suspendue ou non en phase de planification afin d'éviter tout conflit entre les données de votre entrepôt de données et le schéma dans Braze.
 {% endalert %}
 
-## Comment fonctionne la synchronisation
+## Fonctionnement de la synchronisation
 
-- Chaque synchronisation importe les lignes pour lesquelles `UPDATED_AT` est postérieur au dernier horodatage synchronisé.
-- Les données issues de l'intégration permettent de créer ou de mettre à jour des comptes sur la base des informations fournies à l'adresse `id`.
-- Si `DELETED` est `true`, le compte est supprimé.
-- La synchronisation n'enregistre pas les points de données, mais toutes les données synchronisées sont prises en compte dans votre utilisation totale des comptes, mesurée par le nombre total de données stockées - il n'est pas nécessaire de se limiter aux données modifiées.
-- Les champs qui ne figurent pas dans le schéma de votre comptabilité sont supprimés ; mettez à jour le schéma avant de synchroniser de nouveaux champs.
-- Vous pouvez actualiser, reprendre ou mettre en pause une synchronisation en survolant le nom de la synchronisation et en sélectionnant l'action appropriée.
+- Chaque synchronisation importe les lignes dont la date`UPDATED_AT` est postérieure à la dernière synchronisation.
+- Les données issues de l'intégration permettent de créer ou de mettre à jour des comptes en fonction des informations fournies`id`.
+- Si`DELETED`  est `true`, le compte est supprimé.
+- La synchronisation n'enregistre pas les points de données, mais toutes les données synchronisées sont prises en compte dans l'utilisation totale de vos comptes, mesurée par le total des données stockées. Il n'est pas nécessaire de se limiter aux seules données modifiées.
+- Les champs qui ne figurent pas dans le schéma de vos comptes sont supprimés ; veuillez mettre à jour le schéma avant de synchroniser de nouveaux champs.
+- Vous pouvez actualiser, reprendre ou suspendre une synchronisation en plaçant le curseur sur le nom de la synchronisation et en sélectionnant l'action appropriée.
 
-## Synchronisez les données de votre compte
+## Veuillez synchroniser les données de votre compte.
 
-Vous pouvez synchroniser les données de vos comptes à l'aide de CDI par l'intermédiaire d'un entrepôt de données ou d'un stockage de fichiers.
+Vous pouvez synchroniser les données de votre compte à l'aide de CDI via un entrepôt de données ou un stockage de fichiers.
 
 {% tabs local %}
 {% tab Data Warehouse %}
-Pour intégrer votre source de données à votre entrepôt de données :
+Pour réaliser l'intégration de votre source de données à votre entrepôt de données :
 
 {% subtabs %}
 {% subtab Snowflake %}
 
-1. Créez une table source dans Snowflake. Utilisez les noms indiqués dans l'exemple ou choisissez vos propres noms de base de données, de schéma et de table. Vous pouvez également utiliser une vue ou une vue matérialisée au lieu d'une table.
-  ```json
+1. Veuillez créer une table source dans Snowflake. Veuillez utiliser les noms fournis dans l'exemple ou sélectionner vos propres noms de base de données, de schéma et de table. Vous pouvez également utiliser une vue ou une vue matérialisée à la place d'une table.
+  ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
     CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC (
@@ -60,7 +60,7 @@ Pour intégrer votre source de données à votre entrepôt de données :
     );
     ```
 2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
-    ```json
+    ```sql
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
     GRANT USAGE ON DATABASE BRAZE_CLOUD_PRODUCTION TO ROLE BRAZE_INGESTION_ROLE;
@@ -86,7 +86,7 @@ Pour intégrer votre source de données à votre entrepôt de données :
 {% subtab Redshift %}
 
 1. Create a source table in Redshift. Use the names in the example or choose your own database, schema, and table names. You can also use a view or materialized view instead of a table.
-    ```json
+    ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
     CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC (
@@ -103,7 +103,7 @@ Pour intégrer votre source de données à votre entrepôt de données :
     ```
 2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     {% raw %}
-    ```json 
+    ```sql 
     CREATE USER braze_user PASSWORD '{password}';
     GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
     GRANT SELECT ON TABLE ACCOUNTS_SYNC TO braze_user;
@@ -115,12 +115,12 @@ Pour intégrer votre source de données à votre entrepôt de données :
 {% subtab BigQuery %}
 
 1. (Optional) Create a new project or dataset for your source table.  
-    ```json
+    ```sql
     CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
     ```
 
 2. Create the source table for your CDI integration:  
-    ```json
+    ```sql
     CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
     (
       updated_at TIMESTAMP DEFAULT current_timestamp,
@@ -162,12 +162,12 @@ Pour intégrer votre source de données à votre entrepôt de données :
 {% subtab Databricks %}
 
 1. Create a catalog or schema for your source table.  
-    ```json
+    ```sql
     CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
     ```
 
 2. Create the source table for your CDI integration:  
-    ```json
+    ```sql
     CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
     (
       updated_at TIMESTAMP DEFAULT current_timestamp(),
@@ -204,7 +204,7 @@ Pour intégrer votre source de données à votre entrepôt de données :
 {% subtab Microsoft Fabric %}
 
 1. Create one or more tables for your CDI integration with these fields:
-    ```json
+    ```sql
     CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
     (
       UPDATED_AT DATETIME2(6) NOT NULL,
@@ -246,7 +246,7 @@ The following examples show valid JSON and CSV formats for syncing account data 
 
 {% subtabs %}
 {% subtab JSON Accounts %}
-```json  
+```jsonl  
 {"id":"s3-qa-0","name":"account0","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}"}
 {"id":"s3-qa-1","name":"account1","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}","deleted":true}
 {"id":"s3-qa-2","name":"account2","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}","deleted":false}
@@ -275,15 +275,15 @@ ID,NAME,PAYLOAD
 {% endtab %}
 {% endtabs %}
 
-## Créer une vue de synchronisation
+## Créer une vue synchronisée
 
-La création d'une vue synchrone dans votre entrepôt de données permet d'actualiser automatiquement la source sans avoir à réécrire des requêtes supplémentaires.
+La création d'une vue synchronisée dans votre entrepôt de données permet à la source d'actualiser automatiquement sans qu'il soit nécessaire de réécrire des requêtes supplémentaires.
 
-Par exemple, si vous avez une table de données de compte appelée `account_details_1` avec `account_id`, `account_name`, et trois attributs supplémentaires, vous pouvez créer une vue de synchronisation comme suit :
+Par exemple, si vous disposez d'une table de données comptables intitulée`account_details_1`  avec `account_id`,`account_name` , et trois attributs supplémentaires, vous pouvez créer une vue de synchronisation comme suit :
 
 {% tabs %}
 {% tab Snowflake %}
-```json
+```sql
 CREATE VIEW BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS 
 SELECT
     CURRENT_TIMESTAMP as UPDATED_AT,
@@ -301,7 +301,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Redshift %}
-```json
+```sql
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS
 SELECT
     CURRENT_TIMESTAMP as UPDATED_AT,
@@ -319,7 +319,7 @@ SELECT
 ```
 {% endtab %}
 {% tab BigQuery %}
-```json
+```sql
 CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SELECT
     last_updated as UPDATED_AT,
     account_id as ID,
@@ -335,7 +335,7 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SEL
 ```
 {% endtab %}
 {% tab Databricks %}
-```json
+```sql
 CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SELECT
     last_updated as UPDATED_AT,
     account_id as ID,
@@ -351,7 +351,7 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SEL
 ```
 {% endtab %}
 {% tab Microsoft Fabric %}
-```json
+```sql
 CREATE VIEW [BRAZE_CLOUD_PRODUCTION].[INGESTION].[ACCOUNTS_SYNC]
 AS SELECT 
     account_id as ID,

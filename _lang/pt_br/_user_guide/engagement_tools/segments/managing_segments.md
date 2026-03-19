@@ -53,7 +53,7 @@ A seleção de **Show Starred Only** restringe sua visualização aos segmentos 
 Acesse a seção **Uso de mensagens** de um segmento para obter uma visão geral de onde o segmento está sendo usado, como em outros segmentos, campanhas e Canvas.
 
 {% alert note %}
-Para evitar loops de segmentos que fazem referência uns aos outros, os segmentos que usam o filtro **Segment Membership** não podem ser referenciados por outros segmentos. Para obter mais detalhes, consulte [Filtros de segmentação]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+Para evitar que loops de segmentos façam referência uns aos outros, os segmentos que usam o filtro **Segment Membership** não podem ser referenciados por outros segmentos. Para obter mais detalhes, consulte [Filtros de segmentação]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 {% endalert %}
 
 ## Gerenciamento de segmentos específicos

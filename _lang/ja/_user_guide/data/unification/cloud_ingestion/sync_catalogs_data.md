@@ -27,7 +27,7 @@ description: "このページでは、カタログデータの同期方法の概
 {% tab Snowflake %}
 
 1. Snowflake でソーステーブルを設定します。次の例の名前を使用することも、独自のデータベース、スキーマ、およびテーブルの名前を選択することもできます。テーブルの代わりに、ビューまたはマテリアライズドビューを使用することもできます。
-  ```json
+  ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
     CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC (
@@ -41,7 +41,7 @@ description: "このページでは、カタログデータの同期方法の概
     );
     ```
 2. Set up a role, warehouse, and user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the catalog source table.
-    ```json
+    ```sql
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
     GRANT USAGE ON DATABASE BRAZE_CLOUD_PRODUCTION TO ROLE BRAZE_INGESTION_ROLE;
@@ -66,7 +66,7 @@ description: "このページでは、カタログデータの同期方法の概
 {% tab Redshift %}
 
 1. Set up a source table in Redshift. You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.
-    ```json
+    ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
     CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC (
@@ -81,7 +81,7 @@ description: "このページでは、カタログデータの同期方法の概
     ```
 2. Set up a user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the catalog source table.
     {% raw %}
-    ```json 
+    ```sql 
     CREATE USER braze_user PASSWORD '{password}';
     GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
     GRANT SELECT ON TABLE CATALOGS_SYNC TO braze_user;
@@ -94,13 +94,13 @@ description: "このページでは、カタログデータの同期方法の概
 
 1. Optionally, set up a new project or dataset to hold your source table. 
 
-```json
+```sql
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 ```
 
 次のフィールドを持ち、CDI 連携に使用するテーブルを 1 つ以上作成します。
 
-```json
+```sql
 CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 (
   updated_at TIMESTAMP DEFAULT current_timestamp,
@@ -134,11 +134,11 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 
 1. Databricks でソース テーブルを設定します。以下の例の名前を使うこともできるし、カタログ名、スキーマ名、テーブル名を選ぶこともできる。テーブルの代わりにビューやマテリアライズド・ビューを使うこともできる。
 
-```json
+```sql
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 ```
 
-```json
+```sql
 CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 (
   updated_at TIMESTAMP DEFAULT current_timestamp(),
@@ -174,7 +174,7 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
 
 次のフィールドを持ち、CDI 連携に使用するテーブルを 1 つ以上作成します。
 
-```json
+```sql
 CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
 (
   UPDATED_AT DATETIME2(6) NOT NULL,
@@ -194,14 +194,14 @@ GO
 
 {% endtab %}
 {% tab S3 %}
-JSONまたはCSVファイルを提供して、S3にソースファイルを設定する。心に留めておいてほしい：
+JSONファイルまたはCSVファイルを提供することで、S3にソースファイルを設定する。覚えておけ：
 
-- ファイルに`UPDATED_AT` 列を含めることはできない。  
-- 削除する項目をマークするために、オプションで`DELETED` フィールドを含めることができる。 
+- ファイルには`UPDATED_AT`列を含めることはできない  
+- 削除対象の項目をマークするためのオプション`DELETED`フィールドを含めることができる 
 
 {% subtabs %}
 {% subtab JSON %}
-```json
+```jsonl
 {"id":"85","payload":"{\"product_name\":\"Product 85\",\"price\":85.85}"}
 {"id":"1","payload":"{\"product_name\":\"Product 1\",\"price\":1.01}","deleted":true}
 ```
@@ -216,20 +216,20 @@ ID,PAYLOAD,DELETED
 {% endsubtab %}
 {% endsubtabs %}
 
-セットアップの詳細については、[ファイル・ストレージ統合を]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/)参照のこと。
+設定の詳細については、[ファイルストレージの統合を]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/)参照せよ。
 
 {% endtab %}
 {% endtabs %}
 
 ## 連携の仕組み
 
-同期が実行されるたびに、Brazeは、`UPDATED_AT` が最後に同期されたタイムスタンプと同じかそれ以降のすべての行を取り込む。カタログデータからデータウェアハウスにビューを作成し、同期が実行されるたびに完全にリフレッシュされるソーステーブルを設定することをお勧めする。ビューを使えば、クエリーを毎回書き直す必要はない。
+同期が実行されるたびに、Brazeは最後の同期タイムスタンプ以降の`UPDATED_AT`ものと等しい、またはそれ以降のすべての行を取得する。カタログデータからデータウェアハウスにビューを作成し、同期が実行されるたびに完全にリフレッシュされるソーステーブルを設定することをお勧めする。ビューを使えば、クエリーを毎回書き直す必要はない。
 
 例えば、`product_id` と 3 つの追加属性を含む製品データテーブル (`product_catalog_1`) がある場合、以下のビューを同期できます。
 
 {% tabs %}
 {% tab Snowflake %}
-```json
+```sql
 CREATE VIEW BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS 
 SELECT
     CURRENT_TIMESTAMP as UPDATED_AT,
@@ -246,7 +246,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Redshift %}
-```json
+```sql
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS
 SELECT
     CURRENT_TIMESTAMP as UPDATED_AT,
@@ -263,7 +263,7 @@ SELECT
 ```
 {% endtab %}
 {% tab BigQuery %}
-```json
+```sql
 CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SELECT
     last_updated as UPDATED_AT,
     product_id as ID,
@@ -278,7 +278,7 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SEL
 ```
 {% endtab %}
 {% tab Databricks %}
-```json
+```sql
 CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SELECT
     last_updated as UPDATED_AT,
     product_id as ID,
@@ -293,7 +293,7 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SEL
 ```
 {% endtab %}
 {% tab Microsoft Fabric %}
-```json
+```sql
 CREATE VIEW [braze].[user_update_example]
 AS SELECT 
     id as ID,
@@ -307,4 +307,4 @@ FROM [braze].[product_catalog] ;
 
 - 連携からフェッチされたデータは、指定した `id` に基づいて、ターゲットカタログ内のアイテムの作成または更新に使用されます。
 - DELETED が `true` に設定されている場合、対応するカタログアイテムが削除されます。
-- 同期によってデータポイントは記録されないが、同期されたデータはすべてカタログの総使用量にカウントされる。この使用量は、保存されているデータの合計に基づいて計測されるため、変更されたデータだけを同期することを心配する必要はない。
+- 同期ではデータポイントが記録されないが、同期された全データはカタログ使用量の合計にカウントされる。この使用量は保存されたデータ全体の量に基づいて計測されるため、変更されたデータのみを同期する必要はない。

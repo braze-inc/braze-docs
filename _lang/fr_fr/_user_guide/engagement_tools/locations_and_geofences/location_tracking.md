@@ -26,7 +26,7 @@ En général, les applications mobiles utilisent la puce GPS de l'appareil et d'
 
 Braze détecte les emplacements/localisations des utilisateurs à partir du pays géolocalisé en utilisant l'adresse IP du début de la première session SDK. 
 
-Auparavant, Braze utilisait le code pays des paramètres régionaux de l'appareil lors de la création de l'utilisateur du SDK et pendant la durée de la première session. Ce n'est qu'après le traitement de la première session que l'adresse IP est utilisée pour définir un pays plus fiable pour l'utilisateur. Cela signifie que le pays de l'utilisateur n'a été défini avec une plus grande précision qu'à partir de la deuxième session, une fois que le début de la première session a été traité.
+Auparavant, Braze utilisait le code pays des paramètres régionaux de l'appareil lors de la création de l'utilisateur du SDK et pour la durée de la première session. Ce n'est qu'après le traitement de la première session que l'adresse IP est utilisée pour définir un pays plus fiable pour l'utilisateur. Cela signifie que le pays de l'utilisateur n'a été défini avec une plus grande précision qu'à partir de la deuxième session, une fois que le début de la première session a été traité.
 
 Désormais, Braze utilise l'adresse IP pour définir la valeur du pays sur les profils utilisateurs créés via le SDK, et ce paramètre de pays basé sur l'IP est disponible pendant et après la première session.
 

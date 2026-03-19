@@ -38,7 +38,7 @@ Sie können zwei Arten von API-Aktivitäten tracken:
 - **REST API Endpunkte:** Aktionen wie das Senden von Nachrichten, das Erstellen von Kampagnen oder das Exportieren von Daten.
 - **SDK API-Anfragen:** Ereignisse aus Ihrem Kundenerlebnis, wie das Triggern von In-App-Nachrichten oder die Synchronisierung von Benutzerprofilen. *Dieses Feature ist verfügbar, wenn Sie monatlich aktive:r Nutzer:innen (CY 24-25) erworben haben.*
 
-Sobald Sie ausgewählt haben, was getrackt werden soll, können Sie Warnbedingungen definieren. Lassen Sie sich zum Beispiel benachrichtigen, wenn die Fehlerantworten innerhalb einer Stunde um 20% steigen. Sie erhalten eine Benachrichtigung per E-Mail, Webhook oder beides, je nach Ihren Einstellungen. Weitere Informationen finden Sie unter [Warnungen zur API-Nutzung]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_alerts/).
+Sobald Sie ausgewählt haben, was getrackt werden soll, können Sie Warnbedingungen definieren. Lassen Sie sich z.B. benachrichtigen, wenn die Fehlerantworten innerhalb einer Stunde um 20% steigen. Sie erhalten eine Benachrichtigung per E-Mail, Webhook oder beides, je nach Ihren Einstellungen. Weitere Informationen finden Sie unter [Warnungen zur API-Nutzung]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_alerts/).
 
 ## App-Kennungen
 

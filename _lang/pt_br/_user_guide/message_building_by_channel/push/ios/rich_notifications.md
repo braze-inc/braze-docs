@@ -99,7 +99,7 @@ O texto do corpo é encurtado em cerca de 10 caracteres por linha quando uma ima
 
 Para o iOS 15, as denotações Sensível ao tempo e Crítico empurram o título para uma nova linha sem o carimbo de data/hora, dando-lhe um pouco mais de espaço.
 
-![Exemplo de notificação por push sem denotação de Tempo Sensível ou Crítico e com uma contagem de caracteres de título de 35.]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %})
+![Exemplo de notificação por push sem denotação de Tempo Sensível ou Crítico e uma contagem de caracteres de título de 35.]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %})
 <br>Contagem de caracteres do título: **35**
 
 ![Exemplo de notificação por push com uma denotação sensível ao tempo e uma contagem de caracteres de título de 39.]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})

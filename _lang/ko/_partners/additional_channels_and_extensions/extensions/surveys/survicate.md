@@ -215,7 +215,7 @@ Survicate 패널의 커스텀 속성으로 응답 보내기에서 모든 질문,
 
 ### Test the integration
 
-설문조사가 준비되고 통합 설정이 완료되면, 생성한 속성, 태그 또는 새 연락처 설정 옆에 있는 통합 테스트 버튼을 클릭하여 Survicate를 종료하지 않고도 테스트할 수 있습니다. Survicate는 Braze 계정에 테스트 연락처(`braze-test@survicate.com`)를 생성합니다. 연락처의 프로필에는 설정에 따라 업데이트된 필드가 포함됩니다.
+설문조사가 준비되고 통합 설정이 완료되면 생성한 속성, 태그 또는 새 연락처 설정 옆에 있는 통합 테스트 버튼을 클릭하여 Survicate를 종료하지 않고도 테스트할 수 있습니다. Survicate는 Braze 계정에 테스트 연락처(`braze-test@survicate.com`)를 생성합니다. 연락처의 프로필에는 설정에 따라 업데이트된 필드가 포함됩니다.
 
 ![통합 테스트 버튼을 클릭합니다.]({% image_buster /assets/img/survicate/survicate_26.png %})
 

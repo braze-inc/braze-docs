@@ -14,7 +14,7 @@ description: "Este artigo de referência descreve como criar notificações de q
 
 Quando um usuário aciona um evento personalizado para um item, nós automaticamente os inscreveremos para receber notificações de queda de preço para esse item. Quando o preço do item atender à sua regra de inventário (como uma queda maior que 50%), todos os assinantes serão elegíveis para notificações por meio de uma campanha ou Canva. No entanto, apenas os usuários que optaram por receber notificações receberão notificações. 
 
-## Definindo um evento personalizado para notificações de queda de preço
+## Configurando um evento personalizado para notificações de queda de preço
 
 Você configurará um evento personalizado para usar como um evento de inscrição, como um evento `product_clicked`. Este evento deve conter uma propriedade do ID do item (IDs dos itens do catálogo). Recomendamos incluir um nome de catálogo, mas isso não é obrigatório. Você também fornecerá o nome de um campo de preço, que deve ser um tipo de dado numérico. 
 
@@ -67,10 +67,10 @@ Aqui está um exemplo de evento personalizado:
 
 ### Configurando regras de notificação
 
-1. Acesse a página de **Configurações** do seu catálogo. 
+1. Acessar a página de **Configurações** do seu catálogo. 
 2. Para **Regras de notificação**, selecione entre as seguintes opções:<br>
 
-    - **Notificar todos os usuários inscritos:** Notifique todos os clientes que estão esperando quando o preço do item cair.
+    - **Notificar todos os usuários inscritos:** Notificar todos os clientes que estão esperando quando o preço do item cair.
     - **Definir limites de notificação:** Notifique um número especificado de clientes de acordo com seu período de notificação configurado. Braze notificará os números especificados de clientes em incrementos até que não haja mais clientes para notificar ou até que o preço do item volte a subir. Sua taxa de notificação não pode exceder a notificação de 10.000 usuários por minuto.<br>
 
 2. Defina o campo **Preço no catálogo**. Este é o campo do catálogo que será usado para determinar o preço do item. Deve ser um tipo numérico.
@@ -96,11 +96,13 @@ Agora, seus clientes serão notificados quando o preço de um item cair.
 
 ### Usando Liquid
 
-Para modelo em detalhes sobre o item do catálogo que teve uma queda de preço, você pode usar a `canvas_entry_properties` Liquid tag para acessar o `item_id`. 
+Para modelo em detalhes sobre o item do catálogo que teve uma queda de preço, você pode usar a `context` Liquid tag para acessar o `item_id`. 
 
-Usar {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} retornará o ID do item que teve a queda de preço. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} retornará o valor do preço do item antes da atualização, e {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} retornará o novo valor do preço após a atualização. 
+Usar {%raw%}``{{context.${catalog_update}.item_id}}``{%endraw%} retornará o ID do item que teve a queda de preço. {%raw%}``{{context.${catalog_update}.previous_value}}``{%endraw%} retornará o valor do preço do item antes da atualização, e {%raw%}``{{context.${catalog_update}.new_value}}``{%endraw%} retornará o novo valor do preço após a atualização. 
 
-Use esta Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} no topo da sua mensagem, depois use {%raw%}`{{items[0].<field_name>}}`{%endraw%} para acessar dados sobre esse item ao longo da mensagem.
+Use a tag Liquid {%raw%}``{% catalog_items <name_of_your_catalog> {{context.${catalog_update}.item_id}} %}``{%endraw%} no topo da sua mensagem, depois use {%raw%}`{{items[0].<field_name>}}`{%endraw%} para acessar dados sobre esse item ao longo da mensagem.
+
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
 {% multi_lang_include alerts/tip_alerts.md alert='catalog data images' %}
 
@@ -108,4 +110,4 @@ Use esta Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_en
 
 - Os usuários estão inscritos por 90 dias. Se um item não baixar de preço em 90 dias, o usuário é removido da inscrição.
 - Ao usar a regra de notificação **Notificar todos os usuários inscritos**, a Braze notificará 100.000 usuários em 10 minutos.
-- Braze processará 10 solicitações para atualizar itens do catálogo por minuto. Os endpoints de atualização permitem 50 atualizações de itens por solicitação, suportando até 500 atualizações de itens por minuto que podem disparar notificações de volta ao estoque.
+- A Braze processará 10 solicitações para atualizar itens do catálogo por minuto. Os endpoints de atualização permitem 50 atualizações de itens por solicitação, suportando até 500 atualizações de itens por minuto que podem disparar notificações de volta ao estoque.

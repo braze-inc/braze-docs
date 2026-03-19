@@ -75,7 +75,7 @@ Los usuarios de acceso temprano de Braze Data Transformation que empezaron antes
 
 ### ¿La Transformación de Datos Braze registra puntos de datos?
 
-Sí, en la mayoría de los casos. La Transformación de datos de Braze crea, finalmente, una llamada a `/users/track` que escribe los atributos, eventos y compras que desees. Estos registrarán los puntos de datos de la misma forma que si la llamada a `/users/track` se realizara de forma independiente. Tienes control sobre cuántos puntos de datos se registran en función de cómo escribas tu transformación.
+Sí, en la mayoría de los casos. La Transformación de datos de Braze crea, finalmente, una llamada a `/users/track` que escribe los atributos, eventos y compras que desees. Éstos registrarán los puntos de datos del mismo modo que si la llamada a `/users/track` se realizara de forma independiente. Tienes control sobre cuántos puntos de datos se registran en función de cómo escribas tu transformación.
 
 ### ¿Cómo puedo obtener ayuda para configurar mi caso de uso o con mi código de transformación?
 

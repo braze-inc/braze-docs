@@ -129,7 +129,7 @@ Einmal gespeichert, können Sie dieses Segment bei der Erstellung von Canvas ode
 
 #### Deaktivieren und Löschen von Verbindungen
 
-Da mParticle die Segmente nicht direkt in Braze verwaltet, werden die Segmente nicht gelöscht, wenn die entsprechende mParticle-Zielgruppenverbindung gelöscht oder deaktiviert wird. In diesem Fall wird mParticle die Attribute der Nutzer:innen in Braze nicht aktualisieren, um die Zielgruppe von jedem Nutzer zu entfernen.
+Da mParticle die Segmente in Braze nicht direkt verwaltet, werden die Segmente nicht gelöscht, wenn die entsprechende mParticle-Zielgruppenverbindung gelöscht oder deaktiviert wird. In diesem Fall wird mParticle die Attribute der Nutzer:innen in Braze nicht aktualisieren, um die Zielgruppe von jedem Nutzer zu entfernen.
 
 Um die Zielgruppe eines Braze-Nutzers vor dem Löschen zu entfernen, passen Sie die Zielgruppen-Filter so an, dass die Zielgruppengröße vor dem Löschen einer Zielgruppe auf 0 gesetzt wird. Nachdem die Berechnung der Zielgruppe abgeschlossen ist und 0 Nutzer:innen ergibt, löschen Sie die Zielgruppe. Dann wird die Mitgliedschaft der Zielgruppe in Braze auf `false` für die Option Einzelattribut aktualisiert oder die ID der Zielgruppe aus dem Array-Format entfernt.
 

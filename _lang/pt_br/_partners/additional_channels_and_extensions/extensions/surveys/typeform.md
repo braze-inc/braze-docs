@@ -68,7 +68,7 @@ Este valor de retorno deve aderir ao formato do corpo da solicitação da Braze 
 
 ## Exemplo de carga útil do webhook do Typeform
 
-```json
+```http
 Content-Type: application/json
 
 {

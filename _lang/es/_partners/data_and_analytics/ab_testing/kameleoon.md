@@ -39,7 +39,7 @@ En tu aplicación Kameleoon, selecciona **Admin** y luego **Integraciones** en l
 
 Por defecto, la herramienta Braze no está instalada. Busca el icono Braze y selecciona **Instalar la herramienta**. ![Un cuadrado gris con una flecha apuntando hacia abajo.]({% image_buster /assets/img/kameleoon/img_2.png %})
 
-Selecciona los proyectos para los que deseas activar la herramienta Braze, de modo que los datos de Kameleoon se reporten correctamente a Braze.
+Selecciona los proyectos para los que quieres activar la herramienta Braze, de modo que los datos de Kameleoon se reporten correctamente a Braze.
 
 ![El icono de la herramienta Braze en Kameloon.]({% image_buster /assets/img/kameleoon/img_3.png %})
 

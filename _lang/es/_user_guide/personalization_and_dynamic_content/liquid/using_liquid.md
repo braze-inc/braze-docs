@@ -6,9 +6,9 @@ description: "Este artículo de referencia ofrece una visión general de los cas
 search_rank: 2
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Utilizando Liquid
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Uso de Liquid
 
-> Este artículo muestra cómo puedes utilizar diversos atributos de usuario para insertar dinámicamente información personal en tu mensajería.
+> Este artículo muestra cómo puedes utilizar diversos atributos de usuario para insertar de forma dinámica información personal en tu mensajería.
 
 Liquid es un lenguaje de plantillas de código abierto desarrollado por Shopify y escrito en Ruby. Puedes utilizarlo en Braze para introducir datos de perfil de usuario en tus mensajes y personalizar esos datos. Por ejemplo, puedes utilizar etiquetas de Liquid para crear mensajes condicionales, como enviar ofertas diferentes en función de la fecha de aniversario de la suscripción de un usuario. Además, los filtros pueden manipular datos, como formatear la fecha de registro de un usuario de una marca de tiempo a un formato más legible, como "15 de enero de 2022". Para más detalles sobre la sintaxis de Liquid y sus capacidades, consulta [Etiquetas de personalización compatibles]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
@@ -37,7 +37,7 @@ Hi Valued User, thanks for using the App!
 ```
 
 {% alert important %}
-Los comentarios HTML (`<!-- -->`) se eliminan antes de leer cualquier Liquid, por lo que las etiquetas de Liquid dentro de los comentarios HTML **no** aparecen en tu mensaje. Para una representación correcta, asegúrate de que todas las etiquetas de Liquid que quieras utilizar estén fuera de los comentarios HTML.
+Los comentarios HTML (`<!-- -->`) se eliminan antes de leer cualquier Liquid, por lo que las etiquetas de Liquid dentro de los comentarios HTML **no** **se** muestran en tu mensaje. Para una representación adecuada, asegúrate de que todas las etiquetas de Liquid que deseas utilizar estén fuera de los comentarios HTML.
 {% endalert %}
 
 ## Valores admitidos para sustituir
@@ -68,6 +68,103 @@ Liquid sigue una estructura o sintaxis específica que deberá tener en cuenta a
 1. **Utilice comillas rectas en Braze:** Existe una diferencia entre las comillas rizadas ('**')** y las rectas ('**')**. Utilice comillas rectas ('**')** en su Líquido en Braze. Es posible que vea comillas rizadas al copiar y pegar desde ciertos editores de texto, lo que puede causar problemas en su Liquid. Si introduces las cotizaciones directamente en el panel de control de Braze, todo irá bien.
 2. **Los corchetes vienen en pares:** Cada corchete debe abrir y cerrar **{ }**. ¡Asegúrate de utilizar llaves!
 3. **Las afirmaciones If vienen en pares:** Por cada `if`, se necesita un `endif` para indicar que la afirmación `if` ha terminado.
+4. **Los nombres de las variables deben utilizar caracteres ASCII:** Los nombres de variables Liquid (creados con`assign`  o `capture`) solo admiten letras ASCII, dígitos y guiones bajos. Los nombres de los atributos de personalización de Braze (dentro de`custom_attribute.${...}`  o `event_properties.${...}`) pueden incluir caracteres no ASCII.
+
+#### Dónde utilizar operadores y filtros para filtrar datos
+
+Los operadores (como `==`, `!=`, `>`, `and`, `or`) y los filtros (como `| size`, `| plus`) solo pueden utilizarse en contextos Liquid específicos.
+
+| Contexto | Operadores | Filtros |
+|-----------|-----------|---------|
+| `assign` | No se admite | Apoyado |
+| `if`, `elsif`, `unless` | Apoyado | No se admite |
+| `case`, `when` | No se admite | No se admite |
+| `for` | No se admite | No se admite |
+| Acceso a la matriz (`[ ]`) | No se admite | No se admite |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+Cuando necesites un valor filtrado en un contexto que no admite filtros, asigna primero el resultado a una variable.
+
+{% raw %}
+
+##### Utilizar un resultado de filtrado en una condición
+
+No puedes utilizar un filtro directamente en una instrucción condicional. Esto es incorrecto:
+
+```liquid
+{% if my_array | size > 3 %}
+You have more than 3 items!
+{% endif %}
+```
+
+En su lugar, asigna el resultado del filtrado a una variable:
+
+```liquid
+{% assign array_size = my_array | size %}
+{% if array_size > 3 %}
+You have more than 3 items!
+{% endif %}
+```
+
+##### Utilizar un resultado de filtrar en un bucle «for»
+
+No puedes filtrar el iterable en un`for`bucle. Esto es incorrecto:
+
+```liquid
+{% for item in my_array | reverse %}
+{{ item }}
+{% endfor %}
+```
+
+En su lugar, asigna el valor filtrado a una variable:
+
+```liquid
+{% assign reversed = my_array | reverse %}
+{% for item in reversed %}
+{{ item }}
+{% endfor %}
+```
+
+##### Utiliza un resultado de filtrado para acceder a la matriz.
+
+No puedes filtrar entre corchetes. Esto es incorrecto:
+
+```liquid
+{{ my_array[my_var | minus: 1] }}
+```
+
+En su lugar, asigna primero el valor filtrado:
+
+```liquid
+{% assign adjusted_index = my_var | minus: 1 %}
+{{ my_array[adjusted_index] }}
+```
+
+##### Almacenar el resultado de la comparación en una variable
+
+No puedes utilizar un operador en una`assign`  declaración. Esto es incorrecto:
+
+```liquid
+{% assign is_vip = total_spend > 100 %}
+{% if is_vip %}
+Welcome to the VIP lounge!
+{% endif %}
+```
+
+En su lugar, utiliza una condición para establecer la variable:
+
+```liquid
+{% assign is_vip = false %}
+{% if total_spend > 100 %}
+{% assign is_vip = true %}
+{% endif %}
+
+{% if is_vip %}
+Welcome to the VIP lounge!
+{% endif %}
+```
+
+{% endraw %}
 
 #### Atributos predeterminados y atributos personalizados
 
@@ -75,7 +172,7 @@ Liquid sigue una estructura o sintaxis específica que deberá tener en cuenta a
 
 Si incluye el siguiente texto en su mensaje: `{{${first_name}}}`, el nombre de pila del usuario (extraído de su perfil) será sustituido cuando se envíe el mensaje. Puedes utilizar el mismo formato con otros atributos predeterminados de usuario.
 
-Si quieres utilizar el valor de un atributo personalizado, debes añadir el espacio de nombres "custom_attribute" a la variable. Por ejemplo, para utilizar un atributo personalizado denominado "código postal", deberá incluir `{{custom_attribute.${zip code}}}` en su mensaje.
+Si deseas utilizar el valor de un atributo personalizado, debes añadir el espacio de nombres"custom_attribute"  a la variable. Por ejemplo, para utilizar un atributo personalizado denominado "código postal", deberá incluir `{{custom_attribute.${zip code}}}` en su mensaje.
 
 ### Insertar etiquetas
 
@@ -83,9 +180,9 @@ Puedes insertar etiquetas escribiendo dos llaves abiertas `{{` en cualquier mens
 
 Si utilizas una etiqueta personalizada, puedes copiarla y pegarla en el mensaje que desees.
 
-#### Excepciones para paréntesis dobles
+#### Excepciones para los corchetes dobles
 
-Si utilizas una etiqueta dentro de otra etiqueta de Liquid, como `{% assign %}` o `{% if %}`, puedes utilizar corchetes dobles o ningún corchete. Sólo cuando la etiqueta está sola debe ir entre corchetes dobles. Para simplificar, siempre puedes utilizar paréntesis dobles. 
+Si usas una etiqueta dentro de otra etiqueta de Liquid, como`{% assign %}`  o `{% if %}`, puedes usar corchetes dobles o no usar corchetes. Solo cuando la etiqueta aparece sola debe ir entre corchetes dobles. Para simplificar, siempre puedes utilizar corchetes dobles. 
 
 Las siguientes etiquetas son todas correctas:
 
@@ -110,13 +207,13 @@ Si utilizas Liquid en tus mensajes de correo electrónico, asegúrate de:
 
 ### Insertar variables preformateadas
 
-Puedes insertar variables preformateadas con valores predeterminados a través del modal **Añadir personalización**, situado cerca de cualquier campo de texto de la plantilla.
+Puedes insertar variables preformateadas con valores predeterminados a través del modal **Añadir personalización** con su ubicación cerca de cualquier campo de texto de plantilla.
 
-![El modal Añadir personalización que aparece tras seleccionar insertar personalización. El modal tiene campos para el tipo de personalización, atributo, valor predeterminado opcional y muestra una vista previa de la sintaxis de Liquid.]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
+![El modal Añadir personalización que aparece tras seleccionar insertar personalización. El modal tiene campos para el tipo de personalización, el atributo y el valor predeterminado opcional, y muestra una vista previa de la sintaxis Liquid.]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
 
-El modal insertará Liquid con el valor predeterminado que hayas especificado en el punto donde estaba el cursor. El punto de inserción también se especifica mediante el cuadro de vista previa, que tiene el texto anterior y posterior. Si se resalta un bloque de texto, se sustituirá el texto resaltado.
+El modal insertará Liquid con el valor predeterminado especificado en el punto donde se encontraba el cursor. El punto de inserción también se especifica mediante el cuadro de vista previa, que tiene el texto anterior y posterior. Si se resalta un bloque de texto, se sustituirá el texto resaltado.
 
-![Un GIF del modal Añadir personalización que muestra al usuario insertando "compañero de viaje" como valor predeterminado, y al modal sustituyendo el texto resaltado "nombre" en el compositor por el fragmento de código de Liquid.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
+![Un GIF del modal Añadir personalización que muestra al usuario insertando «compañero de viaje» como valor predeterminado, y el modal sustituyendo el texto resaltado «nombre» en el compositor por el fragmento de código Liquid.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
 
 ### Asignación de variables
 

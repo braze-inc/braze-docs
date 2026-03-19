@@ -68,7 +68,7 @@ Este valor de retorno debe ajustarse al formato del cuerpo de la solicitud de Br
 
 ## Ejemplo de carga útil de webhook de Typeform
 
-```json
+```http
 Content-Type: application/json
 
 {

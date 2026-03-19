@@ -3,7 +3,7 @@ nav_title: Supprimer des utilisateurs avec CDI
 article_title: "Supprimer des utilisateurs avec l'ingestion de données en nuage"
 page_order: 30
 page_type: reference
-description: "Cette page fournit un aperçu du processus de suppression des utilisateurs avec Cloud Data Ingestion."
+description: "Cette page présente un aperçu du processus de suppression d'utilisateurs avec l'ingestion de données."
 
 ---
 
@@ -40,7 +40,7 @@ N'incluez pas de colonne `PAYLOAD` dans votre tableau pour la suppression de l'u
 
 {% tabs %}
 {% tab Snowflake %}
-```json
+```sql
 CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
      UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT SYSDATE(),
      --at least one of external_id, alias_name and alias_label, or braze_id is required  
@@ -54,7 +54,7 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
 ```
 {% endtab %}
 {% tab Redshift %}
-```json
+```sql
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_DELETES (
    updated_at timestamptz default sysdate,
    --at least one of external_id, alias_name and alias_label, or braze_id is required
@@ -92,7 +92,7 @@ Créez une table avec les champs suivants :
 | `BRAZE_ID`| CHAÎNE DE CARACTÈRES | NULLABLE |
 {% endtab %}
 {% tab Microsoft Fabric %}
-```json
+```sql
 CREATE OR ALTER TABLE [warehouse].[schema].[users_deletes] 
 (
   UPDATED_AT DATETIME2(6) NOT NULL,
