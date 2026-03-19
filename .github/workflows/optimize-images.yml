@@ -15,7 +15,7 @@ jobs:
 
     steps:
       # Checks out the PR branch with history so diffs can be detected.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0

@@ -24,7 +24,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Rate limit
 
-This endpoint has a rate limit of 10 requests per minute, per workspace.
+{% multi_lang_include rate_limits.md endpoint='post or put preference center' %}
 
 ## Request body
 

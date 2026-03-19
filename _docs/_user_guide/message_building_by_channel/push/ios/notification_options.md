@@ -19,7 +19,7 @@ channel:
 
 If you want to categorize your messages and group them in your user's notification tray, you can utilize iOS's Notification Groups feature through Braze.
 
-Create your iOS push campaign, then to to the **Settings** tab and open the **Notification group** dropdown.
+Create your iOS push campaign, then go to the **Settings** tab and open the **Notification group** dropdown.
 
 ![The "Settings" tab with a "Notification group" dropdown that selected a value of "Coupons".]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
 
@@ -174,6 +174,6 @@ This feature does not have minimum SDK version requirements, but is only applied
 
 For more information on maximum message lengths for different message types, refer to the following resources:
 
-- [Image and text specifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
+- [Push image and text specifications]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push)
 - [iOS character count guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count)
 

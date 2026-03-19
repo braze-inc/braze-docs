@@ -22,7 +22,7 @@ Eine Benachrichtigungs-ID ist eine eindeutige Kennung für eine von Ihnen gewäh
 
 Um eine Benachrichtigungs-ID zuzuweisen, navigieren Sie zur Kompositionsseite des Push, dem Sie die ID hinzufügen möchten, und wählen Sie die Registerkarte **Einstellungen**. Geben Sie eine ganze Zahl in den Abschnitt **Benachrichtigungs-ID** ein. Um diese Benachrichtigung zu aktualisieren, nachdem Sie sie herausgegeben haben, senden Sie eine weitere Benachrichtigung mit der gleichen ID, die Sie zuvor verwendet haben.
 
-![Feld ID der Benachrichtigung.]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:60%;" }
+![Feld „Benachrichtigungs-ID“.]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:60%;" }
 
 ## Lebenserwartung (TTL) {#ttl}
 
@@ -40,8 +40,8 @@ Nehmen wir zum Beispiel an, Ihre App veranstaltet einen wöchentlichen Quiz-Wett
 
 Kürzere TTLs sorgen dafür, dass Nutzer:innen rechtzeitig über Ereignisse oder Aktionen benachrichtigt werden, die schnell an Bedeutung verlieren. Zum Beispiel:
 
-- **Einzelhandel:** Senden Sie einen Push für einen Flash-Sale, der in 2 Stunden endet (TTL: 1-2 Stunden)
-- **Zustellung von Lebensmitteln:** Benachrichtigung der Nutzer:in, wenn ihre Bestellung in der Nähe ist (TTL: 10-15 Minuten)
+- **Einzelhandel:** Senden Sie einen Push für einen Flash-Sale, der in 2 Stunden endet (TTL: 1–2 Stunden)
+- **Zustellung von Lebensmitteln:** Benachrichtigung der Nutzer:in, wenn ihre Bestellung in der Nähe ist (TTL: 10–15 Minuten)
 - **Transport-Apps:** Updates für die Ankunft von Mitfahrgelegenheiten (TTL: ein paar Minuten)
 - **Event-Erinnerungen:** Nutzer:innen benachrichtigen, wenn ein Webinar bald beginnt (TTL: unter 1 Stunde)
 
@@ -74,17 +74,17 @@ Ausführlichere Informationen zur Behandlung von Nachrichten und zur Depriorisie
 
 Mit dem Zusammenfassungstext können Sie zusätzlichen Text in der erweiterten Benachrichtigungsansicht einstellen. Es dient auch als Beschriftung für Benachrichtigungen mit Bildern.
 
-![Eine Android Nachricht mit dem Titel "Dies ist der Titel der Benachrichtigung." und dem Zusammenfassungstext "Dies ist der Zusammenfassungstext der Benachrichtigung."]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
+![Eine Android-Nachricht mit dem Titel „Dies ist der Titel für die Benachrichtigung.“ und dem Zusammenfassungstext „Dies ist der Zusammenfassungstext für die Benachrichtigung.“]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
 Der Zusammenfassungstext wird in der erweiterten Ansicht unter dem Text der Nachricht angezeigt. 
 
-![Eine Android Nachricht mit dem Titel "Dies ist der Titel der Benachrichtigung." und dem Zusammenfassungstext "Dies ist der Zusammenfassungstext der Benachrichtigung."]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
+![Eine Android-Nachricht mit dem Titel „Dies ist der Titel für die Benachrichtigung.“ und dem Zusammenfassungstext „Dies ist der Zusammenfassungstext für die Benachrichtigung.“]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 Bei Push-Benachrichtigungen, die Bilder enthalten, wird der Nachrichtentext in der eingeklappten Ansicht angezeigt, während der Zusammenfassungstext als Bildunterschrift angezeigt wird, wenn die Benachrichtigung erweitert wird. 
 
 ## Benutzerdefinierte URIs
 
-Mit der Funktion **Benutzerdefinierte URI** können Sie eine Web-URL oder eine Android-Ressource angeben, zu der navigiert werden soll, wenn die Benachrichtigung angeklickt wird. Wenn kein benutzerdefinierter URI angegeben ist, gelangen Benutzer durch Klicken auf die Benachrichtigung zu Ihrer App. Sie können die angepasste URI verwenden, um Deeplinks innerhalb Ihrer App zu setzen und Nutzer:innen auf Ressourcen zu verweisen, die auch außerhalb Ihrer App existieren. Dies kann über unsere [Messaging API]({{site.baseurl}}/api/endpoints/messaging/) oder im Tab **Compose** des Push-Editors festgelegt werden.
+Mit der Funktion **Benutzerdefinierte URI** können Sie eine Web-URL oder eine Android-Ressource angeben, zu der navigiert werden soll, wenn die Benachrichtigung angeklickt wird. Wenn kein benutzerdefinierter URI angegeben ist, gelangen Benutzer durch Klicken auf die Benachrichtigung zu Ihrer App. Sie können die angepasste URI verwenden, um Deeplinks innerhalb Ihrer App zu setzen und Nutzer:innen auf Ressourcen zu verweisen, die auch außerhalb Ihrer App existieren. Dies kann über unsere [Messaging-API]({{site.baseurl}}/api/endpoints/messaging/) oder auf dem Tab **„Verfassen“** des Push-Composers festgelegt werden.
 
 ![Angepasstes URI-Feld.]({% image_buster /assets/img_archive/deep_link.png %}){: style="max-width:60%;"}
 
@@ -117,7 +117,7 @@ Weitere Informationen finden Sie in der Dokumentation von Google zu [Android-Ben
 
 Android-Push-Benachrichtigungen bieten die Möglichkeit, anzugeben, ob Ihre Benachrichtigung in eine vordefinierte Kategorie fällt. Die Android-Benutzeroberfläche kann diese Kategorie verwenden, um zu entscheiden, wo die Benachrichtigung in der Benachrichtigungsleiste des Benutzers platziert werden soll.
 
-![Tab Einstellungen, wobei die Kategorie auf Keine eingestellt ist, was der Standardeinstellung entspricht.]({% image_buster /assets/img_archive/braze_category.png %}){: style="max-width:60%;"}
+![Tab „Einstellungen“ mit der Kategorie „Keine“, was die Standard-Einstellung ist.]({% image_buster /assets/img_archive/braze_category.png %}){: style="max-width:60%;"}
 
 | Kategorie | Beschreibung |
 |---|-------|
@@ -168,7 +168,7 @@ Für Geräte mit Android-Versionen vor Android O können Sie mit Braze den Ton e
 
 Wenn Sie in diesem Feld **Standard** wählen, wird der Standard-Benachrichtigungston auf dem Gerät abgespielt. Dies kann über unsere [Messaging API]({{site.baseurl}}/api/endpoints/messaging/) oder in den **Einstellungen** im Push-Editor festgelegt werden.
 
-![Das Feld "Ton".]({% image_buster /assets/img_archive/sound_android.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Das Feld „Ton“.]({% image_buster /assets/img_archive/sound_android.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Als nächstes geben Sie die vollständige URI der Ton-Ressource (z. B. `android.resource://com.mycompany.myapp/raw/mysound`) in das Dashboard-Prompt ein.
 

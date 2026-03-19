@@ -11,9 +11,9 @@ tool: Canvas
 
 # Message 
 
-> Les étapes du message vous permettent d'ajouter un message autonome à l'endroit de votre choix dans votre Canvas.
+> Les étapes de message vous permettent d'ajouter un message autonome à l'endroit souhaité dans votre canevas.
 
-![Une étape Message nommée "Lunch promo" utilisant le canal de communication.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+![Une étape Message intitulée « Promotion déjeuner » utilisant le canal push.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 ## Création d'un message
 
@@ -32,7 +32,7 @@ Vous pouvez choisir parmi les canaux de communication suivants :
 - Webhook
 - WhatsApp
 
-![Liste des canaux de communication disponibles à sélectionner pour l'étape Message.]({% image_buster /assets/img/canvas_components/message_step2.png %})
+![Une liste des canaux de communication disponibles à sélectionner pour l'étape Message.]({% image_buster /assets/img/canvas_components/message_step2.png %})
 
 ### Étape 2 : Modifier les paramètres de livraison
 
@@ -63,20 +63,22 @@ Tous les utilisateurs qui entrent dans l'étape Message passeront à l'étape su
 Si un Canvas basé sur une action est déclenché par un message SMS entrant, vous pouvez référencer les propriétés du SMS dans la première étape (étape Message) ou dans une étape Message imbriquée sous une étape Parcours d'action. Par exemple, à l’étape Message, vous pouvez utiliser `{{sms.${inbound_message_body}}}` ou `{{sms.${inbound_media_urls}}}`.
 {% endraw %}
 
-## Référencement des propriétés d'entrée du canvas
+## Référencement des propriétés de contexte
 
-Les propriétés d'entrée dans le canevas sont configurées à l'étape de la **planification de l'entrée** lors de la création d'un canevas et indiquent le déclencheur qui permet à un utilisateur d'entrer dans un canevas. Ces propriétés peuvent également accéder aux propriétés des charges utiles d’entrée dans les Canvas déclenchés par API. Notez que l’objet `canvas_entry_properties` a une taille maximale limite de 50 KB. 
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
-Les propriétés d'entrée peuvent être utilisées dans Liquid dans n'importe quelle étape du message. Utilisez le Liquid suivant lorsque vous faites référence à ces propriétés d'entrée : {% raw %}``canvas_entry_properties${property_name}``{% endraw %}. Les événements doivent être des événements personnalisés ou des événements d'achat pour être utilisés de cette manière.
+Les propriétés d'entrée sont configurées dans l'étape **de planification de l'entrée** lors de la création d'un canevas et indiquent le déclencheur qui fait entrer un utilisateur dans un canevas. Ces propriétés peuvent également accéder aux propriétés des charges utiles d’entrée dans les Canvas déclenchés par API. Notez que l’objet `context` a une taille maximale limite de 50 KB.
+
+Les propriétés d'entrée peuvent être utilisées dans Liquid dans n'importe quelle étape du message. Utilisez le Liquid suivant lorsque vous faites référence à ces propriétés d'entrée : {% raw %}``{context.${property_name}}``{% endraw %}. Les événements doivent être des événements personnalisés ou des événements d'achat pour être utilisés de cette manière.
 
 {% alert note %}
-Pour les canaux de communication in-app en particulier, `canvas_entry_properties` ne peut être référencé que dans Canvas.
+Pour les canaux de communication in-app en particulier, `context` ne peut être référencé que dans Canvas.
 {% endalert %}
 
-Utilisez le Liquid suivant lorsque vous faites référence à ces propriétés d'entrée : {% raw %}``canvas_entry_properties${property_name}``{% endraw %}. Notez que les événements doivent être des événements personnalisés ou des événements d'achat pour être utilisés de cette manière.
+Utilisez le Liquid suivant lorsque vous faites référence à ces propriétés d'entrée : {% raw %}``context.${property_name}``{% endraw %}. Notez que les événements doivent être des événements personnalisés ou des événements d'achat pour être utilisés de cette manière.
 
 {% raw %}
-Imaginons, par exemple, la requête suivante : `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Vous pouvez ajouter le mot « chaussures » à un message avec le code Liquid `{{canvas_entry_properties.${product_name}}}`.
+Imaginons, par exemple, la requête suivante : `\"context\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Vous pouvez ajouter le mot « chaussures » à un message avec le code Liquid `{{context.${product_name}}}`.
 {% endraw %}
 
 Vous pouvez également exploiter les [propriétés d'entrées persistantes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) dans n'importe quelle étape du message pour guider vos utilisateurs à travers des étapes personnalisées tout au long de votre flux de travail Canvas.
@@ -94,7 +96,7 @@ Dans Canvas, les propriétés d'événement personnalisé et d'achat peuvent êt
 Dans la première étape de message suivant un parcours d’action, vous pouvez utiliser les `event_properties` liées à l’événement référencé dans le parcours d’action. Vous pouvez disposer d’autres étapes (n’étant pas un autre parcours d’action ou une étape de message) entre cette étape de parcours d’action et celle de message. Prenez en compte le fait que vous n’aurez accès aux `event_properties` que si votre étape de message peut être remontée jusqu’à un parcours n’étant pas « Tous les autres » dans l’étape du parcours d’action.
 
 {% alert important %}
-Vous ne pouvez pas utiliser les `event_properties` dans la première étape de message. Au lieu de cela, vous devez utiliser `canvas_entry_properties` ou ajouter une étape de parcours d’action avec l’événement correspondant avant l’étape de message qui comprend `event_properties`.
+Vous ne pouvez pas utiliser les `event_properties` dans la première étape de message. Au lieu de cela, vous devez utiliser `context` ou ajouter une étape de parcours d’action avec l’événement correspondant avant l’étape de message qui comprend `event_properties`.
 {% endalert %}
 
 {% details Expand for original Canvas editor %}
@@ -102,8 +104,8 @@ Vous ne pouvez pas utiliser les `event_properties` dans la première étape de m
 Vous ne pouvez plus créer ou dupliquer des toiles à l'aide de l'éditeur original. Cette section n'est disponible qu'à titre de référence.
 
 - `event_properties` ne peut pas être utilisé dans des étapes complètes planifiées. Cependant, vous pouvez utiliser les `event_properties` dans la première étape complète d’un Canvas par événement, même si l’étape complète est planifiée.
-- `canvas_entry_properties` ne peut être référencée que dans la première étape complète d'un canvas.
-- Pour les canaux de messages in-app en particulier, `canvas_entry_properties` peut être référencé dans l'éditeur Canvas original si vous avez activé les propriétés d'entrées persistantes dans le cadre de l'accès anticipé précédent.
+- `context` ne peut être référencée que dans la première étape complète d'un canvas.
+- Pour les canaux de messages in-app en particulier, `context` peut être référencé dans l'éditeur Canvas original si vous avez activé les propriétés d'entrées persistantes dans le cadre de l'accès anticipé précédent.
 
 {% enddetails %}
 

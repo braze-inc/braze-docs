@@ -1,12 +1,12 @@
 {% multi_lang_include developer_guide/prerequisites/swift.md %}
 
-## UI デリゲートの設定(必須)
+## UIデリゲートの設定（必須）
 
-アプリ内メッセージの表示をカスタマイズし、さまざまなライフサイクルイベントに対応するには、[`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) を設定する必要があります。これは、トリガーのアプリ内メッセージ有料読み込むsの受信と処理、ディスプレイライフサイクルイベントの受信、およびディスプレイタイミングのコントロールに使用されるデリゲートプロトコルです。`BrazeInAppMessageUIDelegate` を使用するには、次の操作を行う必要があります。
-- デフォルト[`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui) インプリメンテーションを`inAppMessagePresenter` として使用します。 
-- `BrazeUI` ライブラリーをプロジェクトに含めます。
+アプリ内メッセージの表示をカスタマイズし、様々なライフサイクルイベントに対応するには、設定を行う必要がある[`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate)。これは、アプリ内でトリガーされたアプリ内メッセージのペイロードを受信・処理し、表示ライフサイクルイベントを受信し、表示タイミングをコントロールするために使用されるデリゲートプロトコルである。を使用するには`BrazeInAppMessageUIDelegate`、次のことを行わなければならない：
+- デフォルト[`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui)の実装をそのまま使え`inAppMessagePresenter`。 
+- ライブラリー`BrazeUI`をプロジェクトに含めろ。
 
-### ステップ 1: `BrazeInAppMessageUIDelegate` プロトコルを実装する 
+### ステップ 1: プロトコル`BrazeInAppMessageUIDelegate`を実装する 
 
 まず、`BrazeInAppMessageUIDelegate` プロトコルと、対応する必要なメソッドを実装します。以下の例では、このプロトコルをアプリケーションの `AppDelegate` クラスに実装しています。
 
@@ -31,9 +31,9 @@ extension AppDelegate: BrazeInAppMessageUIDelegate {
 {% endtab %}
 {% endtabs %}
 
-### ステップ 2:`delegate` オブジェクトを割り当てます 
+### ステップ 2:オブジェクト`delegate`を割り当てる 
 
-`delegate` オブジェクトを`BrazeInAppMessageUI` インスタンスに割り当ててから、このアプリ内メッセージ UI を`inAppMessagePresenter` として割り当てます。
+このアプリ内メッセージUIを割り当てる前に、インスタンス`BrazeInAppMessageUI`上の`inAppMessagePresenter`オブジェクト`delegate`を割り当てよ。
 
 {% tabs %}
 {% tab swift %}
@@ -106,7 +106,7 @@ func inAppMessage(
 
 ### カスタム動作の処理
 
-アプリ内メッセージがクリックされると、次の [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) デリゲートメソッドが呼び出されます。アプリ内メッセージボタンと HTML アプリ内メッセージボタン（リンク）のクリックについては、ボタン ID がオプションのパラメータとして提供されます。
+ユーザーがアプリ内メッセージをクリックした際に、以下の[`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate)デリゲートメソッドが呼び出される。このコールバックは、アプリ内メッセージボタンやHTMLアプリ内メッセージボタン（リンク）に対するユーザーによるクリックで発動する。これらの操作に対しては、オプションのパラメータとしてボタンIDが提供される。このコールバックは、プログラムによるクリック操作によってトリガーされた場合には呼び出されない`brazeBridge.logClick()`。
 
 {% tabs %}
 {% tab swift %}
@@ -200,7 +200,21 @@ func inAppMessage(
 {% endtab %}
 {% endtabs %}
 
-## モーダル消去のカスタマイズ
+## スワイプしてスライドアップメッセージを消す
+
+デフォルトでは、スライドアップするアプリ内メッセージはスワイプ操作で閉じることができる。スワイプの方向はスライドアップ位置によって決まる：
+
+- **左か右にスワイプする：**スライドアップを、その位置に関係なく無視する。
+- **下からスライドアップする：**上から下にスワイプすると、メッセージを消す。下から上にスワイプしても消えない。
+- **上からスライドアップする：**下から上にスワイプすると、メッセージを消す。上から下にスワイプしても消えない。
+
+このスワイプ動作はデフォルトで`BrazeInAppMessageUI`[`SlideupView`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/slideupview)組み込まれており、アプリ内メッセージのスライドアップ操作にのみ適用される。モーダルおよびフル画面のアプリ内メッセージは、スワイプによる閉じ操作をサポートしていない。スライドアップビューをさらにカスタマイズするには、スワイプ動作を含め、\`View\`を[`SlideupView.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/slideupview/attributes-swift.struct)修正するか、サブクラス化によってカスタムビューを提供できる。
+
+{% alert note %}
+スライドアップメッセージの外側をタップしても、メッセージは消えない。モーダルまたはフル画面のアプリ内メッセージについては、以下で説明する\`outsideTap\``dismissOnBackgroundTap`属性を使用して、画面外タップによる閉じ操作をイネーブルメントできる。
+{% endalert %}
+
+## モーダルウィンドウの閉じ方をカスタマイズする
 
 外側のタップで閉じる操作を有効にするため、カスタマイズするアプリ内メッセージの種類の `Attributes` 構造体で `dismissOnBackgroundTap` プロパティを変更できます。 
 
@@ -231,15 +245,15 @@ BrazeInAppMessageUI.ModalImageView.Attributes.defaults.dismissOnBackgroundTap = 
 
 アプリ内メッセージのカスタマイズの詳細については、こちらの[記事](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/in-app-message-customization)を参照してください。
 
-## メッセージの方向をカスタマイズする
+## メッセージングの向きをカスタマイズする
 
-アプリ内メッセージの向きをカスタマイズできます。すべてのメッセージに新しいデフォルトの向きを設定したり、1つのメッセージにカスタムの向きを設定したりできます。
+アプリ内メッセージの向きは自由に設定できる。すべてのメッセージに対して新しいデフォルトの向きを設定することも、単一のメッセージに対してカスタムの向きを設定することもできる。
 
 {% tabs local %}
 {% tab all messages %}
-すべてのアプリ内メッセージ s のデフォルト方向を選択するには、[`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) メソッドを使用して、`preferredOrientation` プロパティを`PresentationContext` に設定します。 
+アプリ内の全アプリ内メッセージのデフォルト向きを選択するには、\`setOrientation\`[`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog)メソッドを使用して`Activity`の``PresentationContext`orientation\``preferredOrientation`プロパティを設定する。 
 
-たとえば、縦向きをデフォルト方向に設定するには:
+例えば、縦向きをデフォルトの向きに設定するには：
 
 {% subtabs %}
 {% subtab swift %}
@@ -267,7 +281,7 @@ func inAppMessage(
 {% endtab %}
 
 {% tab single message %}
-単一のメッセージの方向を設定するには、`orientation` プロパティの`Braze.InAppMessage` を変更します。
+単一のメッセージの向きを設定するには、の`orientation`プロパティを変更`Braze.InAppMessage`する：
 
 {% subtabs %}
 {% subtab swift %}
@@ -302,11 +316,11 @@ inAppMessage.orientation = BRZInAppMessageRawOrientationLandscape;
 {% endtab %}
 {% endtabs %}
 
-アプリ内メッセージが表示された後、メッセージが表示されている間にデバイスの向きが変更されると、メッセージはデバイスと共に回転します(メッセージの`orientation` 設定でサポートされている場合)。
+アプリ内メッセージが表示された後、メッセージが表示されている間に端末の向きが変わると、メッセージは端末の向きに合わせて回転する（メッセージ`orientation`の設定でそれがサポートされている場合に限る）。
 
-また、表示するためには、アプリ内メッセージの`orientation` プロパティで装置の向きをサポートする必要があります。また、`preferredOrientation` 設定が適用されるのは、Xcodeのターゲットの設定の [**導入情報**] セクションで、アプリケーションでサポートされているインターフェイスの向きにその向きが含まれている場合に限られます。
+アプリ内メッセージが表示されるためには、デバイスの向きがメッセージ`orientation`のプロパティによってサポートされている必要がある。また、`preferredOrientation` 設定が適用されるのは、Xcodeのターゲットの設定の [**導入情報**] セクションで、アプリケーションでサポートされているインターフェイスの向きにその向きが含まれている場合に限られます。
 
-![Xコードでサポートされる方向。]({% image_buster /assets/img/supported_interface_orientations_xcode.png %})
+![Xcodeでサポートされている方向性。]({% image_buster /assets/img/supported_interface_orientations_xcode.png %})
 
 {% alert note %}
 向きはメッセージの表示にのみ適用されます。デバイスの向きが変わると、メッセージビューでサポートされている向きのいずれかが採用されます。小型のデバイス (iPhone、iPod Touch) では、モーダルアプリ内メッセージやフルアプリ内メッセージを横向きに設定すると、コンテンツが切り捨てられることがあります。
@@ -347,10 +361,10 @@ func inAppMessage(
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-`InAppMessageUI`のサンプルについては、[Swift Braze SDKリポジトリー](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift/Sources/InAppMessageUI)と[Objective-C](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/ObjC/Sources/InAppMessageUI)を確認してください。
+サンプルについては`InAppMessageUI`、[Swift Braze SDKリポジトリ](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift/Sources/InAppMessageUI)と[OBJECTIVE-C](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/ObjC/Sources/InAppMessageUI)を確認してほしい。
 {% endalert %}
 
-## ステータス棒を非表示にする
+## ステータスバーを非表示にする
 
 `Full`、`FullImage`、および `HTML` アプリ内メッセージについて、SDK ではステータスバーがデフォルトで非表示になります。他の種類のアプリ内メッセージでは、ステータスバーは変更されません。この動作を設定するには、`inAppMessage(_:prepareWith:)` [デリゲートメソッド](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog)を使用して `PresentationContext` で `statusBarHideBehavior` プロパティを設定します。このフィールドの値は次のうちいずれかになります。
 
@@ -468,12 +482,12 @@ func inAppMessage(
 {% endtab %}
 {% endtabs %}
 
-## アプリストアレビュープロンプトのカスタマイズ
+## アプリストアのレビュー依頼メッセージをカスタマイズする
 
-キャンペーンでアプリ内メッセージ s を使用して、ユーザー s にアプリストアの確認を依頼できます。
+キャンペーン内でアプリ内メッセージを使って、ユーザーにApp Storeのレビューを依頼できる。
 
 {% alert note %}
-このプロンプトの例は Braze のデフォルト動作をオーバーライドするため、これが実装されるとインプレッションを自動的に追跡できません。[ 独自の分析]({{site.baseurl}}/developer_guide/analytics/) を記録する必要があります。
+このプロンプトの例は Braze のデフォルト動作をオーバーライドするため、これが実装されるとインプレッションを自動的に追跡できません。お前[自身が分析データを記録]({{site.baseurl}}/developer_guide/analytics/)しなければならない。
 {% endalert %}
 
 ### ステップ 1: アプリ内メッセージデリゲートの設定

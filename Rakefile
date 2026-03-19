@@ -44,7 +44,7 @@ def jekyll_serve(config_file = '_config.yml')
     pipe "bundle exec jekyll s --port 5006 --config #{config_file}"
   else
     # Force a clean build of the site and the pipeline assets
-    puts `rm .jekyll-metadata`
+    puts `rm -f .jekyll-metadata`
     
     # Start file watcher in a separate thread
     watcher_thread = Thread.new do

@@ -1,6 +1,7 @@
 ---
 nav_title: Integrações de data warehouse
 article_title: Integrações de data warehouse
+alias: /partners/databricks/
 description: "Esta página aborda como usar a ingestão de dados do Braze Cloud para sincronizar dados relevantes com sua integração do Snowflake, Redshift, BigQuery e Databricks."
 page_order: 2
 page_type: reference
@@ -90,8 +91,8 @@ Você pode nomear o banco de dados, o esquema e a tabela como quiser, mas os nom
     - `EXTERNAL_ID` - Isso identifica o usuário que você deseja atualizar. Esse valor deve corresponder ao valor `external_id` usado no Braze. 
     - `ALIAS_NAME` e `ALIAS_LABEL` \- Essas duas colunas criam um objeto de alias de usuário. `alias_name` deve ser um identificador exclusivo e `alias_label` especifica o tipo de alias. Os usuários podem ter vários aliases com rótulos diferentes, mas apenas um `alias_name` por `alias_label`.
     - `BRAZE_ID` - O identificador de usuário do Braze. Isso é gerado pelo SDK da Braze, e novos usuários não podem ser criados usando um Braze ID por meio da ingestão de dados na nuvem. Para criar novos usuários, especifique um ID de usuário externo ou um alias de usuário.
-    - `EMAIL` - O endereço de e-mail do usuário. Se houver vários perfis com o mesmo endereço de e-mail, o perfil atualizado mais recentemente terá prioridade para atualizações. Se você incluir e-mail e telefone, o e-mail será usado como o identificador principal.
-    - `PHONE` - O número de telefone do usuário. Se houver vários perfis com o mesmo número de telefone, o perfil atualizado mais recentemente terá prioridade nas atualizações.
+    - `EMAIL` - O endereço de e-mail do usuário. Se vários perfis com o mesmo endereço de e-mail existirem, o perfil mais recentemente atualizado é priorizado para atualizações. Se você incluir tanto e-mail quanto telefone, o e-mail é usado como o identificador principal.
+    - `PHONE` - O número de telefone do usuário. Se vários perfis com o mesmo número de telefone existirem, o perfil mais recentemente atualizado é priorizado para atualizações.
 - `PAYLOAD` - Essa é uma string JSON dos campos que você deseja sincronizar com o usuário no Braze.
 
 #### Etapa 1.2: Configurar a função e as permissões do banco de dados
@@ -173,8 +174,8 @@ Você pode nomear o banco de dados, o esquema e a tabela como quiser, mas os nom
     - `EXTERNAL_ID` - Isso identifica o usuário que você deseja atualizar. Esse valor deve corresponder ao valor `external_id` usado no Braze. 
     - `ALIAS_NAME` e `ALIAS_LABEL` \- Essas duas colunas criam um objeto de alias de usuário. `alias_name` deve ser um identificador exclusivo e `alias_label` especifica o tipo de alias. Os usuários podem ter vários aliases com rótulos diferentes, mas apenas um `alias_name` por `alias_label`.
     - `BRAZE_ID` - O identificador de usuário do Braze. Isso é gerado pelo SDK da Braze, e novos usuários não podem ser criados usando um Braze ID por meio da ingestão de dados na nuvem. Para criar novos usuários, especifique um ID de usuário externo ou um alias de usuário.
-    - `EMAIL` - O endereço de e-mail do usuário. Se houver vários perfis com o mesmo endereço de e-mail, o perfil atualizado mais recentemente terá prioridade para atualizações. Se você incluir e-mail e telefone, o e-mail será usado como o identificador principal.
-    - `PHONE` - O número de telefone do usuário. Se houver vários perfis com o mesmo número de telefone, o perfil atualizado mais recentemente terá prioridade nas atualizações.
+    - `EMAIL` - O endereço de e-mail do usuário. Se vários perfis com o mesmo endereço de e-mail existirem, o perfil mais recentemente atualizado é priorizado para atualizações. Se você incluir tanto e-mail quanto telefone, o e-mail é usado como o identificador principal.
+    - `PHONE` - O número de telefone do usuário. Se vários perfis com o mesmo número de telefone existirem, o perfil mais recentemente atualizado é priorizado para atualizações.
 - `PAYLOAD` - Essa é uma string JSON dos campos que você deseja sincronizar com o usuário no Braze.
  
 #### Etapa 1.2: Criar usuário e conceder permissões
@@ -250,20 +251,20 @@ Você pode nomear o projeto, o conjunto de dados e a tabela como quiser, mas os 
     - `EXTERNAL_ID` - Isso identifica o usuário que você deseja atualizar. Esse valor deve corresponder ao valor `external_id` usado no Braze. 
     - `ALIAS_NAME` e `ALIAS_LABEL` \- Essas duas colunas criam um objeto de alias de usuário. `alias_name` deve ser um identificador exclusivo e `alias_label` especifica o tipo de alias. Os usuários podem ter vários aliases com rótulos diferentes, mas apenas um `alias_name` por `alias_label`.
     - `BRAZE_ID` - O identificador de usuário do Braze. Isso é gerado pelo SDK da Braze, e novos usuários não podem ser criados usando um Braze ID por meio da ingestão de dados na nuvem. Para criar novos usuários, especifique um ID de usuário externo ou um alias de usuário.
-    - `EMAIL` - O endereço de e-mail do usuário. Se houver vários perfis com o mesmo endereço de e-mail, o perfil atualizado mais recentemente terá prioridade para atualizações. Se você incluir e-mail e telefone, o e-mail será usado como o identificador principal.
-    - `PHONE` - O número de telefone do usuário. Se houver vários perfis com o mesmo número de telefone, o perfil atualizado mais recentemente terá prioridade nas atualizações.
+    - `EMAIL` - O endereço de e-mail do usuário. Se vários perfis com o mesmo endereço de e-mail existirem, o perfil mais recentemente atualizado é priorizado para atualizações. Se você incluir tanto e-mail quanto telefone, o e-mail é usado como o identificador principal.
+    - `PHONE` - O número de telefone do usuário. Se vários perfis com o mesmo número de telefone existirem, o perfil mais recentemente atualizado é priorizado para atualizações.
 - `PAYLOAD` - Essa é uma string JSON dos campos que você deseja sincronizar com o usuário no Braze.
 
 {% alert important %}
 **Particionamento do BigQuery**
 
-A CDI oferece suporte a partições para o BigQuery. Se você fizer a partição por uma função de `UPDATED_AT` (por exemplo, na granularidade de um dia, uma semana ou uma hora, dependendo do tamanho do seu conjunto de dados), o BigQuery poderá podar os dados que precisa examinar. Isso melhora a performance e a eficiência de tabelas muito grandes.
+O CDI suporta partições para o BigQuery. Se você particionar por uma função de `UPDATED_AT` (por exemplo, na granularidade de um dia, semana ou hora, dependendo do tamanho do seu conjunto de dados), o BigQuery pode podar os dados que precisa escanear. Isso melhora a performance e a eficiência para tabelas muito grandes.
 
-Não faça a partição por nenhum outro campo. Teste diferentes configurações para encontrar a melhor configuração para seus dados específicos.
+Não particione por nenhum outro campo. Teste diferentes configurações para encontrar a melhor configuração para seus dados específicos.
 
-Todas as consultas CDI são filtradas por `UPDATED_AT`, mas esse comportamento pode mudar. Projete seu esquema de tabela para _não_ exigir que as consultas incluam essa cláusula.
+Todas as consultas do CDI filtram por `UPDATED_AT`, mas esse comportamento pode mudar. Projete o esquema da sua tabela para _não_ exigir que as consultas incluam essa cláusula.
 
-Para saber mais, consulte a [documentação sobre particionamento do BigQuery](https://docs.cloud.google.com/bigquery/docs/partitioned-tables).
+Para saber mais, consulte a [documentação de particionamento do BigQuery](https://docs.cloud.google.com/bigquery/docs/partitioned-tables).
 {% endalert %}
 
 #### Etapa 1.2: Criar uma conta de serviço e conceder permissões 
@@ -334,8 +335,8 @@ Você pode nomear o esquema e a tabela como quiser, mas os nomes das colunas dev
     - `EXTERNAL_ID` - Isso identifica o usuário que você deseja atualizar. Esse valor deve corresponder ao valor `external_id` usado no Braze. 
     - `ALIAS_NAME` e `ALIAS_LABEL` \- Essas duas colunas criam um objeto de alias de usuário. `alias_name` deve ser um identificador exclusivo e `alias_label` especifica o tipo de alias. Os usuários podem ter vários aliases com rótulos diferentes, mas apenas um `alias_name` por `alias_label`.
     - `BRAZE_ID` - O identificador de usuário do Braze. Isso é gerado pelo SDK da Braze, e novos usuários não podem ser criados usando um Braze ID por meio da ingestão de dados na nuvem. Para criar novos usuários, especifique um ID de usuário externo ou um alias de usuário. 
-    - `EMAIL` - O endereço de e-mail do usuário. Se houver vários perfis com o mesmo endereço de e-mail, o perfil atualizado mais recentemente terá prioridade para atualizações. Se você incluir e-mail e telefone, o e-mail será usado como o identificador principal.
-    - `PHONE` - O número de telefone do usuário. Se houver vários perfis com o mesmo número de telefone, o perfil atualizado mais recentemente terá prioridade nas atualizações.
+    - `EMAIL` - O endereço de e-mail do usuário. Se vários perfis com o mesmo endereço de e-mail existirem, o perfil mais recentemente atualizado é priorizado para atualizações. Se você incluir tanto e-mail quanto telefone, o e-mail é usado como o identificador principal.
+    - `PHONE` - O número de telefone do usuário. Se vários perfis com o mesmo número de telefone existirem, o perfil mais recentemente atualizado é priorizado para atualizações.
 - `PAYLOAD` - Essa é uma string ou struct dos campos que você deseja sincronizar com o usuário no Braze.
 
 #### Etapa 1.2: Criar um token de acesso  
@@ -369,7 +370,7 @@ O Braze se conectará ao seu armazém Fabric usando uma entidade de serviço com
 1. No portal do Azure, navegue até o centro de administração do Microsoft Entra e, em seguida, Registros de app 
 2. Selecione **\+ Novo registro** em **Identidade** > **Aplicativos** > **Registros de app**.
 3. Digite um nome e selecione `Accounts in this organizational directory only` como o tipo de conta compatível. Em seguida, selecione **Registrar**. 
-4. Selecione o aplicativo (service principal) que acabou de criar e navegue até **Certificados & secrets** > **\+ New client secret**.
+4. Selecione o aplicativo (principal de serviço) que você acabou de criar, depois navegue até **Certificados & segredos** > **\+ Novo segredo do cliente**.
 5. Digite uma descrição para o segredo e defina um período de vencimento para o segredo. Em seguida, selecione **Adicionar**. 
 6. Note o segredo do cliente criado para ser usado na configuração do Braze. 
 
@@ -413,15 +414,15 @@ Você pode nomear o depósito, o esquema e a tabela ou visualização como quise
     - `EXTERNAL_ID` - Isso identifica o usuário que você deseja atualizar. Esse valor deve corresponder ao valor `external_id` usado no Braze. 
     - `ALIAS_NAME` e `ALIAS_LABEL` \- Essas duas colunas criam um objeto de alias de usuário. `alias_name` deve ser um identificador exclusivo e `alias_label` especifica o tipo de alias. Os usuários podem ter vários aliases com rótulos diferentes, mas apenas um `alias_name` por `alias_label`.
     - `BRAZE_ID` - O identificador de usuário do Braze. Isso é gerado pelo SDK da Braze, e novos usuários não podem ser criados usando um Braze ID por meio da ingestão de dados na nuvem. Para criar novos usuários, especifique um ID de usuário externo ou um alias de usuário.
-    - `EMAIL` - O endereço de e-mail do usuário. Se houver vários perfis com o mesmo endereço de e-mail, o perfil atualizado mais recentemente terá prioridade para atualizações. Se você incluir e-mail e telefone, o e-mail será usado como o identificador principal.
-    - `PHONE` - O número de telefone do usuário. Se houver vários perfis com o mesmo número de telefone, o perfil atualizado mais recentemente terá prioridade nas atualizações.
+    - `EMAIL` - O endereço de e-mail do usuário. Se vários perfis com o mesmo endereço de e-mail existirem, o perfil mais recentemente atualizado é priorizado para atualizações. Se você incluir tanto e-mail quanto telefone, o e-mail é usado como o identificador principal.
+    - `PHONE` - O número de telefone do usuário. Se vários perfis com o mesmo número de telefone existirem, o perfil mais recentemente atualizado é priorizado para atualizações.
 - `PAYLOAD` - Essa é uma string JSON dos campos que você deseja sincronizar com o usuário no Braze.
 
 
 #### Etapa 1.4: Obter a string de conexão do warehouse
 Você precisará do endpoint SQL do seu depósito para que o Braze possa se conectar. Para recuperar isso, acesse o **espaço de trabalho** no Fabric e, na lista de itens, passe o mouse sobre o nome do depósito e selecione **Copiar string de conexão SQL**.
 
-![A página "Fabric Console" no Microsoft Azure, onde os usuários devem recuperar a string de conexão do SQL.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
+![A página "Console do Fabric" no Microsoft Azure, onde os usuários devem recuperar a String de Conexão SQL.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
 
 
 #### Etapa 1.5: Permitir IPs do Braze no firewall (opcional)
@@ -439,13 +440,15 @@ Dependendo da configuração de sua conta Microsoft Fabric, talvez seja necessá
 {% tabs %}
 {% tab Snowflake %}
 
-No dashboard do Braze, vá para **Configurações de dados** > **Ingestão de dados na nuvem**, selecione **Criar nova sincronização de dados** e, em seguida, selecione **Importação do Snowflake**.
+No Dashboard do Braze, acesse **Configurações de Dados** > **Ingestão de Dados na Nuvem**, selecione **Criar Nova Sincronização de Dados**, e então selecione **Importação do Snowflake**.
 
 #### Etapa 2.1: Adicionar informações de conexão do Snowflake e tabela de origem
 
 Insira as informações de seu data warehouse do Snowflake e da tabela de origem e, em seguida, prossiga para a próxima etapa.
 
-![A página "Create new import sync" (Criar nova sincronização de importação) do Snowflake no dashboard do Braze com os dados de exemplo inseridos na etapa 1: "Set up connection" (Configurar conexão).]({% image_buster /assets/img/cloud_ingestion/ingestion_1.png %})
+{% alert note %}
+Para o campo **Localizador de Conta do Snowflake**, insira seu [identificador de conta do Snowflake](https://docs.snowflake.com/en/user-guide/admin-account-identifier), que normalmente segue um formato como `xy12345.us-east-1.aws`. Isso não é o mesmo que um nome de banco de dados ou nome de armazém.
+{% endalert %}
 
 #### Etapa 2.2: Configurar detalhes de sincronização
 
@@ -457,8 +460,6 @@ Os e-mails de contato receberão apenas notificações de erros globais ou de n�
 - Falta de recursos
 - Problemas de permissões
 - (Somente para sincronizações de catálogos) A camada do catálogo está sem espaço
-
-![A página "Create new import sync" (Criar nova sincronização de importação) do Snowflake no dashboard do Braze com os dados de exemplo inseridos na etapa 2: "Configurar detalhes de sincronização".]({% image_buster /assets/img/cloud_ingestion/ingestion_2.png %})
 
 Você também escolherá o tipo de dados e a frequência de sincronização. A frequência pode variar de cada 15 minutos a uma vez por mês. Usaremos o fuso horário configurado em seu dashboard do Braze para agendar a sincronização recorrente. Os tipos de dados compatíveis são Atributos personalizados, Eventos personalizados e Eventos de compra, e o tipo de dados de uma sincronização não pode ser alterado após a criação. 
 
@@ -469,22 +470,20 @@ Nesse ponto, você deve voltar ao Snowflake para concluir a configuração. Adic
 Para obter mais informações sobre como fazer isso, consulte a [documentação do Snowflake](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). Se você quiser alternar as chaves a qualquer momento, podemos gerar um novo par de chaves e fornecer a você a nova chave pública.
 
 ```sql
-ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
+ALTER USER BRAZE_INGESTION_USER SET RSA_PUBLIC_KEY='MIIBIjANBgkqhkiG9w0BA...';
 ```
 {% endtab %}
 {% tab Redshift %}
 
-No dashboard do Braze, acesse **Data Settings** > **Cloud Data Ingestion**, selecione **Create New Data Sync** e, em seguida, selecione **Amazon Redshift Import**.
+No Dashboard do Braze, acesse **Configurações de Dados** > **Ingestão de Dados na Nuvem**, selecione **Criar Nova Sincronização de Dados**, e então selecione **Importação do Amazon Redshift**.
 
 #### Etapa 2.1: Adicionar informações de conexão e tabela de origem do Redshift
 
 Insira as informações de seu data warehouse Redshift e da tabela de origem. Se estiver usando um túnel de rede privada, alterne o controle deslizante e insira as informações do túnel. Em seguida, prossiga para a próxima etapa. 
 
 {% alert note %}
-No dashboard do Braze, o campo **Nome do banco de dados** aceita apenas letras (A-Z, a-z), números (0-9) e sublinhados (_),, embora o Amazon Redshift ofereça suporte a caracteres adicionais em identificadores de banco de dados.
+No painel do Braze, o campo **Nome do banco de dados** aceita apenas letras (A–Z, a–z), números (0–9) e sublinhados (_),, embora o Amazon Redshift suporte caracteres adicionais em identificadores de banco de dados.
 {% endalert %}
-
-![A página "Criar nova sincronização de importação" para o Redshift no dashboard do Braze, definida como Etapa 1: "Set up connection" (Configurar conexão).]({% image_buster /assets/img/cloud_ingestion/ingestion_6.png %})
 
 #### Etapa 2.2: Configurar detalhes de sincronização
 
@@ -496,20 +495,16 @@ Os e-mails de contato receberão apenas notificações de erros globais ou de n�
 - Falta de recursos
 - Problemas de permissões
 - (Somente para sincronizações de catálogos) A camada do catálogo está sem espaço
-
-![A página "Criar nova sincronização de importação" para Redshift no dashboard do Braze com alguns dados de exemplo adicionados à etapa 2: "Configurar detalhes de sincronização".]({% image_buster /assets/img/cloud_ingestion/ingestion_7.png %})
 
 Você também escolherá o tipo de dados e a frequência de sincronização. A frequência pode variar de cada 15 minutos a uma vez por mês. Usaremos o fuso horário configurado em seu dashboard do Braze para agendar a sincronização recorrente. Os tipos de dados compatíveis são Atributos personalizados, Eventos personalizados e Eventos de compra, e o tipo de dados de uma sincronização não pode ser alterado após a criação.
 {% endtab %}
 {% tab BigQuery %}
 
-No dashboard do Braze, acesse **Data Settings** > **Cloud Data Ingestion**, selecione **Create New Data Sync** e, em seguida, selecione **Google BigQuery Import**.
+No painel do Braze, acesse **Configurações de Dados** > **Ingestão de Dados na Nuvem**, selecione **Criar Nova Sincronização de Dados**, e então selecione **Importação do Google BigQuery**.
 
 #### Etapa 2.1: Adicionar informações de conexão do BigQuery e tabela de origem
 
 Faça upload da chave JSON e forneça um nome para a conta de serviço e, em seguida, insira os detalhes de sua tabela de origem.
-
-![A página "Criar nova sincronização de importação" para o Redshift no dashboard do Braze, definida como Etapa 1: "Set up connection" (Configurar conexão).]({% image_buster /assets/img/cloud_ingestion/ingestion_11.png %})
 
 #### Etapa 2.2: Configurar detalhes de sincronização
 
@@ -521,21 +516,17 @@ Os e-mails de contato receberão apenas notificações de erros globais ou de n�
 - Falta de recursos
 - Problemas de permissões
 - (Somente para sincronizações de catálogos) A camada do catálogo está sem espaço
-
-![A página "Criar nova sincronização de importação" para o Redshift no dashboard do Braze, definida como Etapa 2: "Configurar detalhes de sincronização".]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
 
 Você também escolherá o tipo de dados e a frequência de sincronização. A frequência pode variar de cada 15 minutos a uma vez por mês. Usaremos o fuso horário configurado em seu dashboard do Braze para agendar a sincronização recorrente. Os tipos de dados suportados são Atributos personalizados, Eventos personalizados, Eventos de compra e Exclusões de usuários. O tipo de dados de uma sincronização não pode ser alterado após a criação. 
 
 {% endtab %}
 {% tab Databricks %}
 
-No dashboard do Braze, acesse **Data Settings** > **Cloud Data Ingestion**, selecione **Create New Data Sync** e, em seguida, selecione **Databricks Import**.
+No painel do Braze, acesse **Configurações de Dados** > **Ingestão de Dados na Nuvem**, selecione **Criar Nova Sincronização de Dados**, e então selecione **Importação do Databricks**.
 
 #### Etapa 2.1: Adicionar informações de conexão e tabela de origem do Databricks
 
 Insira as informações do data warehouse e da tabela de origem do Databricks e prossiga para a próxima etapa.
-
-![A página "Criar nova sincronização de importação" para o Redshift no dashboard do Braze, definida como Etapa 1: "Set up connection" (Configurar conexão).]({% image_buster /assets/img/cloud_ingestion/ingestion_16.png %})
 
 #### Etapa 2.2: Configurar detalhes de sincronização
 
@@ -547,8 +538,6 @@ Os e-mails de contato receberão apenas notificações de erros globais ou de n�
 - Falta de recursos
 - Problemas de permissões
 - (Somente para sincronizações de catálogos) A camada do catálogo está sem espaço
-
-![A página "Criar nova sincronização de importação" para o Redshift no dashboard do Braze, definida como Etapa 2: "Configurar detalhes de sincronização".]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
 
 Você também escolherá o tipo de dados e a frequência de sincronização. A frequência pode variar de cada 15 minutos a uma vez por mês. Usaremos o fuso horário configurado em seu dashboard do Braze para agendar a sincronização recorrente. Os tipos de dados suportados são atributos personalizados, eventos personalizados, eventos de compra e exclusões de usuários. O tipo de dados de uma sincronização não pode ser alterado após a criação. 
 
@@ -557,7 +546,7 @@ Você também escolherá o tipo de dados e a frequência de sincronização. A f
 
 #### Etapa 2.1: Configurar uma sincronização de ingestão de dados na nuvem
 
-Você criará uma nova sincronização de dados para o Microsoft Fabric. No dashboard do Braze, acesse **Data Settings** > **Cloud Data Ingestion**, selecione **Create New Data Sync** e, em seguida, selecione **Microsoft Fabric Import**.
+Você criará uma nova sincronização de dados para o Microsoft Fabric. No painel do Braze, acesse **Configurações de Dados** > **Ingestão de Dados na Nuvem**, selecione **Criar Nova Sincronização de Dados**, e então selecione **Importação do Microsoft Fabric**.
 
 #### Etapa 2.2: Adicionar informações de conexão e tabela de origem do Microsoft Fabric
 
@@ -565,8 +554,6 @@ Insira as informações de suas credenciais do Microsoft Fabric warehouse e da t
 
 - Credentials Name é um rótulo para essas credenciais no Braze, você pode definir um valor útil aqui
 - Consulte as etapas na seção 1 para obter detalhes sobre como recuperar o Tenant ID, o Principal ID, o Client Secret e a Connection String
-
-![A página "Criar nova sincronização de importação" para o Redshift no dashboard do Braze, definida como Etapa 1: "Set up connection" (Configurar conexão).]({% image_buster /assets/img/cloud_ingestion/fabric_setup_1.png %})
 
 #### Etapa 2.3: Configurar detalhes de sincronização
 
@@ -576,9 +563,6 @@ Em seguida, configure os seguintes detalhes para sua sincronização:
 - Tipo de dados - Os tipos de dados suportados são atributos personalizados, eventos personalizados, eventos de compra, catálogos e exclusões de usuários. O tipo de dados de uma sincronização não pode ser alterado após a criação. 
 - Frequência de sincronização - A frequência pode variar de cada 15 minutos a uma vez por mês. Usaremos o fuso horário configurado em seu dashboard do Braze para agendar a sincronização recorrente. 
   - As sincronizações não recorrentes podem ser disparadas manualmente ou por meio da [API]({{site.baseurl}}/api/endpoints/cdi) 
-
-![A página "Criar nova sincronização de importação" do Microsoft Fabric no dashboard do Braze, definida como Etapa 2: "Configurar detalhes de sincronização".]({% image_buster /assets/img/cloud_ingestion/fabric_setup_2.png %})
-
 
 #### Etapa 2.4: Configurar preferências de notificação
 
@@ -593,9 +577,6 @@ Por padrão, os e-mails de contato receberão apenas notificações de erros glo
 
 Você também pode configurar alertas para problemas no nível da linha ou optar por receber um alerta sempre que uma sincronização for executada com êxito. 
 
-![A página "Criar nova sincronização de importação" do Microsoft Fabric no dashboard do Braze, definida como Etapa 3: "Configurar preferências de notificação".]({% image_buster /assets/img/cloud_ingestion/fabric_setup_3.png %})
-
-
 {% endtab %}
 
 {% endtabs %}
@@ -606,22 +587,16 @@ Você também pode configurar alertas para problemas no nível da linha ou optar
 {% tab Snowflake %}
 
 Retorne ao dashboard do Braze e selecione **Testar conexão**. Se for bem-sucedido, você verá uma prévia dos dados. Se, por algum motivo, não conseguirmos nos conectar, exibiremos uma mensagem de erro para ajudá-lo a solucionar o problema.
-
-![A página "Criar nova sincronização de importação" para o Snowflake no dashboard do Braze com a etapa 3: "Testar conexão" exibindo uma chave pública RSA.]({% image_buster /assets/img/cloud_ingestion/ingestion_3.png %})
 {% endtab %}
 
 {% tab Redshift %}
 {% subtabs local %}
 {% subtab Public Network %}
 Retorne ao dashboard do Braze e selecione **Testar conexão**. Se for bem-sucedido, você verá uma prévia dos dados. Se, por algum motivo, não conseguirmos nos conectar, exibiremos uma mensagem de erro para ajudá-lo a solucionar o problema.
-
-![A página "Criar nova sincronização de importação" para o Redshift no dashboard do Braze, definida como Etapa 3: "Testar conexão".]({% image_buster /assets/img/cloud_ingestion/ingestion_8.png %})
 {% endsubtab %}
 
 {% subtab Private Network %}
 Retorne ao dashboard do Braze e selecione **Testar conexão**. Se for bem-sucedido, você verá uma prévia dos dados. Se, por algum motivo, não conseguirmos nos conectar, exibiremos uma mensagem de erro para ajudá-lo a solucionar o problema.
-
-![A página "Create new import sync" (Criar nova sincronização de importação) para a Redshift Private Network no dashboard do Braze, com a etapa 4: "Testar conexão" exibindo uma chave pública RSA.]({% image_buster /assets/img/cloud_ingestion/ingestion_19.png %})
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -630,22 +605,16 @@ Retorne ao dashboard do Braze e selecione **Testar conexão**. Se for bem-sucedi
 
 Depois que todos os detalhes de configuração de sua sincronização forem inseridos, selecione **Testar conexão**. Se for bem-sucedido, você verá uma prévia dos dados. Se, por algum motivo, não conseguirmos nos conectar, exibiremos uma mensagem de erro para ajudá-lo a solucionar o problema.
 
-![A página "Criar nova sincronização de importação" para o Redshift no dashboard do Braze, definida como Etapa 3: "Testar conexão".]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
-
 {% endtab %}
 
 {% tab Databricks %}
 
 Depois que todos os detalhes de configuração de sua sincronização forem inseridos, selecione **Testar conexão**. Se for bem-sucedido, você verá uma prévia dos dados. Se, por algum motivo, não conseguirmos nos conectar, exibiremos uma mensagem de erro para ajudá-lo a solucionar o problema.
 
-![A página "Criar nova sincronização de importação" para o Redshift no dashboard do Braze, definida como Etapa 3: "Testar conexão".]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
-
 {% endtab %}
 {% tab Microsoft Fabric %}
 
 Depois que todos os detalhes de configuração de sua sincronização forem inseridos, selecione **Testar conexão**. Se for bem-sucedido, você verá uma prévia dos dados. Se, por algum motivo, não conseguirmos nos conectar, exibiremos uma mensagem de erro para ajudá-lo a solucionar o problema.
-
-![A página "Criar nova sincronização de importação" do Microsoft Fabric no dashboard do Braze, definida como Etapa 4: "Testar conexão".]({% image_buster /assets/img/cloud_ingestion/fabric_setup_4.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -660,14 +629,10 @@ Você deve testar com êxito uma integração antes que ela possa passar do esta
 {% tab Snowflake %}
 Você pode configurar várias integrações com o Braze, mas cada integração deve ser configurada para sincronizar uma tabela diferente. Ao criar sincronizações adicionais, você pode reutilizar as credenciais existentes se estiver se conectando à conta do Snowflake.
 
-![A página "Create new import sync" (Criar nova sincronização de importação) do Snowflake no dashboard do Braze, com o menu suspenso "Select credentials" (Selecionar credenciais) aberto na etapa 1: "Set up connection" (Configurar conexão).]({% image_buster /assets/img/cloud_ingestion/ingestion_4.png %})
-
 Se você reutilizar o mesmo usuário e função em todas as integrações, **não** precisará passar pela etapa de adicionar a chave pública novamente.
 {% endtab %}
 {% tab Redshift %}
 Você pode configurar várias integrações com o Braze, mas cada integração deve ser configurada para sincronizar uma tabela diferente. Ao criar sincronizações adicionais, você pode reutilizar as credenciais existentes se estiver se conectando à mesma conta do Snowflake ou do Redshift.
-
-![A página "Create new import sync" (Criar nova sincronização de importação) do Snowflake no dashboard do Braze, com o menu suspenso "Select credentials" (Selecionar credenciais) aberto na etapa 1: "Set up connection" (Configurar conexão).]({% image_buster /assets/img/cloud_ingestion/ingestion_9.png %})
 
 Se você reutilizar o mesmo usuário em várias integrações, não será possível excluir o usuário no dashboard do Braze até que ele seja removido de todas as sincronizações ativas.
 {% endtab %}
@@ -675,16 +640,12 @@ Se você reutilizar o mesmo usuário em várias integrações, não será possí
 
 Você pode configurar várias integrações com o Braze, mas cada integração deve ser configurada para sincronizar uma tabela diferente. Ao criar sincronizações adicionais, você pode reutilizar as credenciais existentes se estiver se conectando à mesma conta do BigQuery.
 
-![A página "Create new import sync" (Criar nova sincronização de importação) do Snowflake no dashboard do Braze, com o menu suspenso "Select credentials" (Selecionar credenciais) aberto na etapa 1: "Set up connection" (Configurar conexão).]({% image_buster /assets/img/cloud_ingestion/ingestion_14.png %})
-
 Se você reutilizar o mesmo usuário em várias integrações, não será possível excluir o usuário no dashboard do Braze até que ele seja removido de todas as sincronizações ativas.
 
 {% endtab %}
 {% tab Databricks %}
 
 Você pode configurar várias integrações com o Braze, mas cada integração deve ser configurada para sincronizar uma tabela diferente. Ao criar sincronizações adicionais, você pode reutilizar as credenciais existentes se estiver se conectando à mesma conta do Databricks.
-
-![A página "Create new import sync" (Criar nova sincronização de importação) do Snowflake no dashboard do Braze, com o menu suspenso "Select credentials" (Selecionar credenciais) aberto na etapa 1: "Set up connection" (Configurar conexão).]({% image_buster /assets/img/cloud_ingestion/ingestion_17.png %})
 
 Se você reutilizar o mesmo usuário em várias integrações, não será possível excluir o usuário no dashboard do Braze até que ele seja removido de todas as sincronizações ativas.
 
@@ -704,27 +665,19 @@ Se você reutilizar o mesmo usuário em várias integrações, não será possí
 {% tab Snowflake %}
 Quando ativada, sua sincronização será executada de acordo com a programação configurada durante a instalação. Se você quiser executar a sincronização fora da programação normal de testes ou buscar os dados mais recentes, selecione **Sync Now (Sincronizar agora**). Essa execução não afetará as sincronizações futuras programadas regularmente.
 
-![A página "Data Import" (Importação de dados) do Snowflake no dashboard do Braze exibe a opção "Sync now" (Sincronizar agora) no menu de elipses verticais.]({% image_buster /assets/img/cloud_ingestion/ingestion_5.png %})
-
 {% endtab %}
 {% tab Redshift %}
 Quando ativada, sua sincronização será executada de acordo com a programação configurada durante a instalação. Se você quiser executar a sincronização fora da programação normal de testes ou buscar os dados mais recentes, selecione **Sync Now (Sincronizar agora**). Essa execução não afetará as sincronizações futuras programadas regularmente.
-
-![A página "Data Import" (Importação de dados) do Redshift no dashboard do Braze exibe a opção "Sync now" (Sincronizar agora) no menu de elipses verticais.]({% image_buster /assets/img/cloud_ingestion/ingestion_10.png %})
 
 {% endtab %}
 {% tab BigQuery %}
 
 Quando ativada, sua sincronização será executada de acordo com a programação configurada durante a instalação. Se você quiser executar a sincronização fora da programação normal de testes ou buscar os dados mais recentes, selecione **Sync Now (Sincronizar agora**). Essa execução não afetará as sincronizações futuras programadas regularmente.
 
-![A página "Data Import" (Importação de dados) do BigQuery no dashboard do Braze exibe a opção "Sync now" (Sincronizar agora) no menu de elipses verticais.]({% image_buster /assets/img/cloud_ingestion/ingestion_15.png %})
-
 {% endtab %}
 {% tab Databricks %}
 
 Quando ativada, sua sincronização será executada de acordo com a programação configurada durante a instalação. Se você quiser executar a sincronização fora da programação normal de testes ou buscar os dados mais recentes, selecione **Sync Now (Sincronizar agora**). Essa execução não afetará as sincronizações futuras programadas regularmente.
-
-![A página "Data Import" (Importação de dados) do Databricks no dashboard do Braze exibe a opção "Sync now" (Sincronizar agora) no menu de elipses verticais.]({% image_buster /assets/img/cloud_ingestion/ingestion_18.png %})
 
 {% endtab %}
 {% tab Microsoft Fabric %}

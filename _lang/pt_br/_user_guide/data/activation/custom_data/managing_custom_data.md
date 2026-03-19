@@ -1,6 +1,6 @@
 ---
 nav_title: Gerenciar dados personalizados
-article_title: Gerenciar dados personalizados
+article_title: Gerenciar Dados Personalizados
 page_order: 20
 page_type: reference
 description: "Este artigo de referência aborda como gerenciar dados personalizados, como campanhas e segmentos pré-preenchidos ou lista de bloqueio e exclusão de dados."
@@ -21,7 +21,7 @@ Para preencher previamente eventos e atributos personalizados, faça o seguinte:
 ![Navegue até Atributos personalizados, Eventos personalizados ou Produtos.]({% image_buster /assets/img_archive/prepopulate_page.png %}){: style="max-width:90%;" }
 
 {: start="2"}
-2\. Para adicionar um atributo personalizado, evento ou produto, acesse a respectiva página e selecione **Add Custom Attributes (Adicionar atributos personalizados)** ou **Add Custom Events (Adicionar eventos personalizados)** ou **Add Products (Adicionar produtos)**.<br><br>Para atributos personalizados, selecione um [tipo de dados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) para esse atributo (por exemplo, booleano ou string). O tipo de dados de uma atribuição determinará os filtros de segmentação disponíveis para esse atributo. <br><br>![Adicionar nova atribuição ou evento]({% image_buster /assets/img_archive/prepopulate_add.png %}){: style="max-width:80%;" }
+2\. Para adicionar um atributo personalizado, evento ou produto, acesse a respectiva página e selecione **Add Custom Attributes (Adicionar atributos personalizados)** ou **Add Custom Events (Adicionar eventos personalizados)** ou **Add Products (Adicionar produtos)**.<br><br>Para atributos personalizados, selecione um [tipo de dado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) para este atributo (por exemplo, booleano ou string). O tipo de dados de uma atribuição determinará os filtros de segmentação disponíveis para esse atributo. <br><br>![Adicionar nova atribuição ou evento]({% image_buster /assets/img_archive/prepopulate_add.png %}){: style="max-width:80%;" }
 3\. Selecione **Salvar**.
 
 ### Nomeação de eventos personalizados e atributos personalizados
@@ -36,19 +36,66 @@ Depois de criar um evento personalizado ou produto, selecione **Gerenciar propri
 
 Para tornar rastreáveis esses atributos personalizados, eventos, produtos ou propriedades de eventos adicionados, é necessário pedir à equipe de desenvolvimento que os crie no SDK usando o nome exato que você usou para adicioná-los anteriormente. Ou você pode usar a [API]({{site.baseurl}}/api/basics/) do Braze para importar dados sobre essa atribuição. Depois disso, o atributo personalizado, evento ou outro será acionável e se aplicará aos seus usuários.
 
-{% include alerts/note_alerts.md alert='Manage custom data storage' %}
+{% multi_lang_include alerts/note_alerts.md alert='Manage custom data storage' %}
 
 ## Lista de bloqueio de dados personalizados
 
-Ocasionalmente, é possível identificar atributos personalizados, eventos personalizados ou eventos de compra que registram muitos pontos de dados, não são mais úteis para sua estratégia de marketing ou foram registrados por engano. 
+Você pode ocasionalmente identificar atributos personalizados, eventos personalizados ou eventos de compra que registram muitos pontos de dados, não são mais úteis para sua estratégia de marketing ou foram registrados por engano. 
 
 Para impedir que esses dados sejam enviados ao Braze, você pode colocar um objeto de dados personalizado em uma lista de bloqueio enquanto sua equipe de engenharia trabalha para removê-lo do backend do seu app ou site. A lista de bloqueio impede que um determinado objeto de dados personalizado seja registrado pelo Braze no futuro, o que significa que ele não será exibido ao pesquisar um usuário específico.
 
-{% alert important %}
-Para colocar dados personalizados em listas de bloqueio, é necessário ter [permissões de usuário]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) para acessar e editar campanhas, Canvas e segmentos.
-{% endalert %}
-
 Os dados incluídos na lista de bloqueio não serão enviados pelo SDK, e o dashboard da Braze não processará dados incluídos na lista de bloqueio de outras fontes (por exemplo, a API). No entanto, a lista de bloqueio não remove dados dos perfis de usuários nem diminui retroativamente a quantidade de pontos de dados incorridos para esse objeto de dados personalizado.
+
+### Permissões de usuário necessárias
+
+Para bloquear dados personalizados, você precisa das [permissões de usuário]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) no seguinte menu suspenso para seu espaço de trabalho.
+
+{% details User permissions for blocklisting custom data %}
+
+{% multi_lang_include deprecations/user_permissions.md %}
+
+- Ver campanhas
+- Editar campanhas
+- Arquivar campanha
+- Ver canvas
+- Editar canvas
+- Arquivar canvas
+- Ver regras de limite de frequência
+- Editar regras de limite de frequência
+- Ver priorização de mensagens
+- Editar priorização de mensagens
+- Ver blocos de conteúdo
+- Visualizar Feature Flags
+- Editar Feature Flag
+- Arquivar Feature Flags
+- Exibir segmentos
+- Editar segmentos
+- Exibir modelos de IAM
+- Editar modelos de IAM
+- Arquivar modelos de IAM
+- Exibir modelos de e-mail
+- Editar modelo de e-mail
+- Arquivar modelos de e-mail
+- Exibir modelos de webhook
+- Editar modelos de webhook
+- Arquivar modelos de webhooks
+- Exibir modelos de links
+- Editar modelos de links
+- Exibir ativos da biblioteca de mídia
+- Editar ativos da biblioteca de mídia
+- Excluir ativos da biblioteca de mídia
+- Ver locais
+- Editar locais
+- Arquivar locais
+- Ver Códigos de Promoção
+- Editar Códigos de Promoção
+- Exportar Códigos de Promoção
+- Ver Centrais de Preferências
+- Editar Centrais de Preferências
+- Ver Relatórios
+- Editar Relatórios
+
+{% enddetails %}
 
 ### Lista de bloqueio de atributos personalizados, eventos personalizados e produtos
 
@@ -62,12 +109,12 @@ Para interromper o rastreamento de um atributo personalizado, evento ou produto 
 2. Selecione o atributo personalizado, o evento ou o produto. Para atributos e eventos personalizados, você pode selecionar até 100 para colocar em uma lista de bloqueio por vez.
 3. Selecione **Blocklist**.
 
-![Vários atributos personalizados selecionados que estão em uma lista de bloqueio na página Atributos personalizados.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
+![Múltiplos atributos personalizados selecionados que estão na lista de bloqueio na página de Atributos Personalizados.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
 
-Você pode colocar em uma lista de bloqueio até 300 atributos personalizados e 300 eventos personalizados. Para evitar a coleta de determinadas atribuições do dispositivo, consulte nosso [guia SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection). 
+Você pode colocar em uma lista de bloqueio até 300 atributos personalizados e 300 eventos personalizados. Para evitar a coleta de certos atributos de dispositivo, consulte nosso [guia do SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection). 
 
 {% alert important %}
-Atributos personalizados ou eventos personalizados com status de **Lixeira** contarão para o limite da lista de bloqueio até que sejam excluídos.
+Atributos personalizados ou eventos personalizados com status **Deletado** contarão para o limite de bloqueio até serem excluídos.
 {% endalert %}
 
 Quando um evento personalizado ou atributo é colocado em uma lista de bloqueio, aplica-se o seguinte:
@@ -119,7 +166,7 @@ Ao excluir dados personalizados, lembre-se dos seguintes detalhes:
 * Os dados são removidos da plataforma Braze e dos perfis dos usuários.
 * Você pode "reutilizar" o nome do atributo personalizado ou o nome do evento personalizado após a exclusão. Isso significa que se você notar que os dados personalizados "reaparecem" no Braze após a exclusão, isso pode ser causado por uma integração que não foi interrompida e está enviando dados com o mesmo nome de dados personalizados.
 * Talvez seja necessário colocar um item na lista de bloqueio novamente se a exclusão resultar no reaparecimento de dados personalizados. O status da lista de bloqueio não é preservado porque os dados personalizados são excluídos.
-* A exclusão de dados personalizados não registra nenhum [ponto de dados]({{site.baseurl}}/user_guide/data/data_points) e também não gera novos pontos de dados para uso.
+* Excluir dados personalizados não registra nenhum [ponto de dados]({{site.baseurl}}/user_guide/data/data_points) e também não gera novos pontos de dados para uso.
 
 ## Forçar comparações de tipos de dados
 
@@ -144,7 +191,7 @@ Se você optar por forçar o tipo de dados de uma atribuição, todos os dados r
 | Número | Os números inteiros ou flutuantes (como `1`, `1.5`) serão armazenados como números |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para saber mais sobre as opções de filtro específicas expostas por diferentes comparações de tipos de dados, consulte [Configuração de relatórios]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting). Para saber mais sobre os diferentes tipos de dados disponíveis, consulte [Tipos de dados de atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types).
+Para saber mais sobre opções de filtro específicas expostas por diferentes comparações de tipos de dados, confira [Configurando relatórios]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting). Para saber mais sobre os diferentes tipos de dados disponíveis, consulte [Tipos de dados de atributo personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types).
 
 {% alert note %}
 Os dados enviados ao Braze são imutáveis e não podem ser excluídos ou modificados depois que os recebemos. No entanto, é possível usar qualquer uma das etapas listadas nas seções anteriores para exercer controle sobre o que está sendo rastreado no dashboard.

@@ -14,7 +14,7 @@ tool: Campaigns
 
 ### Wie erstelle ich eine Multichannel-Kampagne?
 
-Um eine Multichannel-Kampagne zu erstellen, wählen Sie **Messaging** > **Kampagnen**. Wählen Sie dann **Kampagne erstellen** > **Multichannel**. Von hier aus können Sie aus den folgenden Messaging-Kanälen auswählen: Content-Cards, E-Mail, LINE, Push-Benachrichtigungen, SMS/MMS/RCS, Webhook, oder WhatsApp.
+Um eine Multichannel-Kampagne zu erstellen, wählen Sie **Messaging** > **Kampagnen**. Wählen Sie dann **Kampagne erstellen** > **Multichannel**. Von hier aus können Sie aus den folgenden Messaging-Kanälen auswählen: Content-Cards, E-Mail, LINE, Push-Benachrichtigungen, SMS/MMS/RCS, Webhook oder WhatsApp.
 
 ### Kann ich eine Kontrollgruppe zu meiner Multichannel-Kampagne hinzufügen?
 
@@ -38,11 +38,11 @@ Eine mögliche Erklärung könnte sein, dass die Kampagne oder Canvas die Wieder
 
 Wenn Sie z.B. ein Canvas haben, das sowohl iOS- als auch Web-Push-Benachrichtigungen enthält, könnte ein bestimmter Benutzer mit einem mobilen und einem Desktop-Gerät mehr als eine Nachricht erhalten.
 
-### Warum kann die Zahl der Konversionen bei Multichannel-Kampagnen die Zahl der eindeutigen Nutzer:innen übersteigen?
+### Warum kann die Anzahl der Konversionen bei Multichannel-Kampagnen die Anzahl der eindeutigen Nutzer:innen übersteigen?
 
-Bei Kampagnen mit mehreren Kanälen zählt Braze die Konversionen pro Kanal, nicht pro Nutzer:innen. Wenn ein Nutzer eine einzelne Konversion innerhalb des Konversionsfensters durchführt, attributiert Braze diese Konversion jedem Kanal, von dem der Nutzer eine Nachricht erhalten hat. Das heißt, wenn ein Nutzer:innen Nachrichten über mehrere Kanäle erhält (z.B. sowohl E-Mail als auch Push) und konvertiert, zählt Braze mehrere Konversionen, eine für jeden Kanal. Daher kann die Gesamtzahl der Konversionen die Anzahl der eindeutigen Nutzer:innen übersteigen, die konvertiert haben.
+Bei Multichannel-Kampagnen zählt Braze die Konversionen pro Kanal und nicht pro Nutzer:in. Wenn ein Nutzer innerhalb des Konversionsfensters eine einzelne Konversionsaktion durchführt, ordnet Braze diese Konversion jedem Kanal zu, von dem der Nutzer eine Nachricht erhalten hat. Dies bedeutet, dass, wenn eine Nutzer:in Nachrichten über mehrere Kanäle (z. B. sowohl per E-Mail als auch per Push-Benachrichtigung) erhält und konvertiert, Braze mehrere Konversionen zählt, eine für jeden Kanal. Infolgedessen kann die Gesamtzahl der Konversionen die Anzahl der eindeutigen Nutzer:innen, die eine Konversion durchgeführt haben, übersteigen.
 
-Wenn eine Multichannel-Kampagne beispielsweise sowohl eine E-Mail als auch eine Push-Benachrichtigung an einen Nutzer sendet und dieser Nutzer eine Konversion durchführt, nachdem er beide Nachrichten erhalten hat und innerhalb des Konversionsfensters, zählt Braze dies als zwei Konversionen, von denen eine der E-Mail und eine der Push-Benachrichtigung zugerechnet wird, obwohl es sich um eine einzige Aktion desselben Nutzers handelt.
+Wenn beispielsweise im Rahmen einer Multichannel-Kampagne sowohl eine E-Mail als auch eine Push-Benachrichtigung an einen Nutzer gesendet werden und dieser Nutzer nach Erhalt beider Nachrichten und innerhalb des Conversion-Fensters eine Konversion durchführt, zählt Braze dies als zwei Konversionen, eine für die E-Mail und eine für die Push-Benachrichtigung, obwohl es sich um eine einzige Aktion desselben Nutzers handelt.
 
 ### Warum hat meine Kampagne eine kleinere erreichbare Nutzerbasis als das Segment, das ich für die Kampagne verwende?
 
@@ -62,17 +62,17 @@ Sie können die Zeitzone Ihres Unternehmens in Ihren [Unternehmenseinstellungen]
 
 ### Wann bewertet Braze die Benutzer für die Bereitstellung in der lokalen Zeitzone?
 
-Für die Zustellung zur Ortszeit prüft Braze die Nutzer:innen während dieser beiden Instanzen auf ihre Zugangsberechtigung:
+Braze überprüft die Teilnahmeberechtigung der Nutzer:innen unter:
 
-- Um Samoa-Zeit (UTC+13) des geplanten Tages
-- Zur Ortszeit des geplanten Tages
+- Samoa-Zeit (UTC+13) oder UTC+14 während der Sommerzeit
+- Die Ortszeit des Tages gemäß dem Zeitplan
 
 Damit ein:e Nutzer:in für einen Entry in Frage kommt, muss er für beide Prüfungen in Frage kommen. Wenn ein Canvas zum Beispiel am 7\. August 2021 um 14 Uhr Ortszeit gestartet werden soll, müssten für einen Nutzer in New York die folgenden Prüfungen durchgeführt werden, um die Berechtigung zu prüfen:
 
 - New York am 6\. August 2021 um 9 Uhr
 - New York am 7\. August 2021 um 2 Uhr nachmittags
 
-Beachten Sie, dass der oder die Nutzer:in 24 Stunden vor dem Start in dem Segment sein muss. Wenn der oder die Nutzer:in bei der ersten Prüfung nicht teilnahmeberechtigt ist, führt Braze die zweite Prüfung nicht durch.
+Die Nutzer:innen müssen sich vor dem Start 24 Stunden lang im Segment befinden. Wenn die Nutzer:in bei der ersten Überprüfung nicht berechtigt ist, führt Braze keine zweite Überprüfung durch.
 
 Wenn eine Kampagne beispielsweise um 19 Uhr UTC zugestellt werden soll, beginnen wir mit dem Versand der Kampagne in die Warteschlange, sobald eine Zeitzone (wie Samoa) zugewiesen wird. Das bedeutet, dass wir uns darauf vorbereiten, die Nachricht zu senden, nicht die Kampagne zu senden. Wenn Nutzer:innen bei der Eignungsprüfung keinem Filter entsprechen, gehören sie nicht zur Zielgruppe.
 
@@ -105,7 +105,7 @@ Bei der Zustellung in der lokalen Zeitzone können Benutzer in diesem Segment au
 
 ### Welche Änderungen kann ich an geplanten Kampagnen vor dem Start vornehmen?
 
-Wenn die Kampagne geplant ist, müssen außer der Zusammensetzung der Nachricht noch andere Änderungen vorgenommen werden, bevor wir die Nachrichten in die Warteschlange stellen. Wie bei allen Kampagnen können Sie Konversions-Events nicht mehr bearbeiten, nachdem sie gestartet wurden.
+Wenn der Zeitplan für die Kampagne erstellt wurde, müssen Sie alle Änderungen, die nicht die Nachrichtenzusammensetzung betreffen, vornehmen, bevor wir die zu versendenden Nachrichten in die Warteschlange stellen. Wie bei allen Kampagnen können Sie Konversions-Events nach dem Start nicht mehr bearbeiten.
 
 ### Ich habe meine geplante Kampagne aktualisiert. Warum ist es nicht gestartet?
 
@@ -122,10 +122,18 @@ Wir empfehlen, Änderungen an Nachrichten innerhalb der folgenden Zeiten vorzune
 
 Wenn Sie außerhalb dieser Empfehlungen Änderungen an Ihrer Nachricht vornehmen, werden diese Updates möglicherweise nicht in der gesendeten Nachricht angezeigt. Wenn Sie beispielsweise die Sendezeit drei Stunden vor dem geplanten Versand einer Kampagne um 12 Uhr Ortszeit bearbeiten, kann Folgendes passieren:
 
-- Braze sendet keine Nachrichten an Benutzer, die die Sendezeit um mehr als eine Stunde überschritten haben.
+- Braze versendet keine Nachrichten an Nutzer:innen, die den Versandzeitpunkt um mehr als eine Stunde verpasst haben.
 - Nachrichten, die sich in der Warteschlange befinden, werden möglicherweise immer noch zu der ursprünglich eingestellten Zeit gesendet und nicht zu der angepassten Zeit.
 
-Wenn Sie Änderungen vornehmen müssen, empfehlen wir Ihnen, die aktuelle Kampagne zu stoppen (dadurch werden alle Nachrichten in der Warteschlange gelöscht). Sie können dann die Kampagne duplizieren, die erforderlichen Änderungen vornehmen und die neue Kampagne starten. Möglicherweise müssen Sie Nutzer von dieser Kampagne ausschließen, die bereits die erste Kampagne erhalten haben. Stellen Sie sicher, dass Sie die Zeitpläne der Kampagnen so anpassen, dass das Senden in der Zeitzone zulässig ist.
+Sollten Änderungen erforderlich sein, empfehlen wir, die aktuelle Kampagne zu beenden (dadurch werden alle in der Warteschlange befindlichen Nachrichten storniert). Sie können dann die Kampagne duplizieren, die erforderlichen Änderungen vornehmen und die neue Kampagne starten. Möglicherweise müssen Sie Nutzer von dieser Kampagne ausschließen, die bereits die erste Kampagne erhalten haben. Stellen Sie sicher, dass Sie den Kampagnenzeitplan so anpassen, dass der Versand in der jeweiligen Zeitzone zulässig ist.
+
+### Warum haben am Tag der Zeitumstellung keine Nutzer:innen an meiner täglich geplanten Kampagne teilgenommen?
+
+An Tagen, an denen die Sommerzeit beginnt oder endet, können täglich im Zeitplan stehende Kampagnen bis zu einer Stunde früher oder später als üblich ausgeführt werden, je nachdem, ob die Uhren vor- oder zurückgestellt werden. Wenn Ihr Segment auf benutzerdefinierten Attributen oder Ereignissen mit Zeitstempeln basiert, die innerhalb einer Stunde vor dem geplanten Versandzeitpunkt liegen, sind diese Nutzer:innen möglicherweise noch nicht qualifiziert, wenn die Kampagne die Berechtigung am Tag der Sommerzeitumstellung bewertet.
+
+Nehmen wir beispielsweise an, dass Nutzer:innen in der Regel um 15:00 Uhr UTC ein Update für die angepassten Attribute erhalten und Ihre Kampagne täglich um 10:30 Uhr in New York (Eastern Time) läuft. Während New York der Standardzeit (UTC-5) unterliegt, entspricht 10:30 Uhr ET 15:30 Uhr UTC, sodass die Kampagne nach der Protokollierung des Attributs durchgeführt wird. Wenn New York auf Sommerzeit (UTC-4) umstellt, entspricht 10:30 Uhr ET 14:30 Uhr UTC, sodass die Kampagne am Tag der Zeitumstellung auf Sommerzeit vor dem Update des Attributs um 15:00 Uhr UTC ausgeführt werden kann. Da das qualifizierende Attribut noch nicht vorhanden ist, werden diese Nutzer:innen herausgefiltert. Wenn die Wiederteilnahme deaktiviert ist, können Nutzer:innen, die an vorherigen Tagen teilgenommen haben, nicht erneut teilnehmen, was zu null Eingängen für diesen Tag führt.
+
+Um dies zu vermeiden, stellen Sie bitte sicher, dass Ihre benutzerdefinierten Attribut- oder Ereignis-Updates mehr als eine Stunde vor der geplanten Versandzeit der Kampagne erfolgen.
 
 ### Warum stimmt die Anzahl der Nutzer, die eine Kampagne betreten, nicht mit der erwarteten Anzahl überein?
 
@@ -135,21 +143,21 @@ Die Anzahl der Nutzer, die eine Kampagne betreten, kann von der von Ihnen erwart
 Wenn Sie weitere Unterstützung bei der Fehlerbehebung in Kampagnen benötigen, wenden Sie sich bitte innerhalb von 30 Tagen nach dem Vorkommen des Problems an den Braze Support, da uns nur die Diagnoseprotokolle der letzten 30 Tage vorliegen.
 {% endalert %}
 
-### Was ist der Unterschied zwischen den Optionen CSV-Export von Benutzerdaten und CSV-Export von E-Mail-Adressen auf meiner Kampagnenanalyseseite?
+### Was ist der Unterschied zwischen den Optionen „CSV-Export von Nutzerdaten“ und „CSV-Export von E-Mail-Adressen“ auf meiner Seite der Kampagnen-Analytics?
 
-Wenn Sie die Option **CSV-Export von E-Mail-Adressen** wählen, werden nur Daten für Benutzer mit E-Mail-Adressen heruntergeladen. Wenn Sie z.B. ein Segment mit 100.000 Benutzern haben, aber nur 50.000 dieser Benutzer E-Mail-Adressen haben und Sie auf **CSV-Export von E-Mail-Adressen** klicken, dann sollten Sie nur 50.000 Datenzeilen in der CSV-Datei sehen. Wenn Sie dagegen **CSV Benutzerdaten exportieren** wählen, werden alle Benutzerdaten exportiert.
+Durch Auswahl der Option **„E-Mail-Adressen für CSV-Export** auswählen“ werden nur die Daten von Nutzern:innen mit E-Mail-Adressen heruntergeladen. Wenn Sie beispielsweise ein Segment mit 100.000 Nutzern haben, aber nur 50.000 dieser Nutzer über E-Mail-Adressen verfügen, und Sie auf **„E-Mail-Adressen als CSV exportieren“** klicken, enthält der Export nur 50.000 Datenzeilen. Im Vergleich dazu werden bei der Auswahl von **„CSV-Export Nutzerdaten“** alle Nutzerdaten exportiert.
 
 ### Kann ich nach einer Kampagne anhand ihrer API-Kennung suchen?
 
 Ja, verwenden Sie den Filter `api_id:YOUR_API_ID` auf der Seite **Kampagnen**, um nach einer Kampagne anhand ihrer API-Kennung zu suchen. Weitere Informationen finden Sie unter [Suche nach Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/).
 
-### Warum werden Leerzeichen in Eingabefeldern anders dargestellt als in angezeigtem Text? 
+### Warum werden Leerzeichen in Eingabefeldern anders dargestellt als im angezeigten Text? 
 
-Die Behandlung von Leerzeichen unterscheidet sich zwischen Eingabefeldern und angezeigten Textkomponenten aufgrund des CSS-Stylings. In Textkomponenten mit dem Standard-CSS `white-space: normal` werden mehrere aufeinanderfolgende Leerzeichen bei der Anzeige zu einem einzigen Leerzeichen zusammengefasst. Dies ist das Standardverhalten von HTML für gerenderten Text. 
+Die Behandlung von Leerzeichen unterscheidet sich aufgrund der CSS-Formatierung zwischen Eingabefeldern und angezeigten Textkomponenten. In Textkomponenten mit dem `white-space: normal`Standard-CSS werden mehrere aufeinanderfolgende Leerzeichen bei der Anzeige zu einem einzigen Leerzeichen zusammengefasst. Dies entspricht dem Standardverhalten von HTML für gerenderten Text. 
 
-Eingabefelder behalten mehrere Leerzeichen genau so bei, wie Sie sie eingeben, da Sie die genauen Abstände für eine genaue Dateneingabe sehen und bearbeiten müssen. Das bedeutet, dass Text mit mehreren Leerzeichen anders aussehen kann, wenn er in einem Eingabefeld angezeigt wird (wo alle Leerzeichen erhalten bleiben), als wenn er in anderen Teilen des Dashboards angezeigt wird (wo CSS mehrere Leerzeichen ausblenden kann). 
+Eingabefelder behalten mehrere Leerzeichen genau so bei, wie Sie sie eingeben, da Sie den genauen Abstand für korrekte Daten-Eingaben sehen und bearbeiten müssen. Dies bedeutet, dass Text mit mehreren Leerzeichen in einem Eingabefeld (wo alle Leerzeichen beibehalten werden) anders dargestellt werden kann als in anderen Bereichen des Dashboards (wo CSS mehrere Leerzeichen zusammenfassen kann). 
 
-Wenn Sie zum Beispiel einen Kampagnennamen oder einen UTM-Parameter mit mehreren Leerzeichen in ein Eingabefeld eingeben, bleiben alle Leerzeichen erhalten. Wenn derselbe Text jedoch in Suchergebnissen, Kampagnenlisten oder anderen Textkomponenten erscheint, können mehrere Leerzeichen aufgrund der CSS-Whitespace-Behandlung als ein einziges Leerzeichen erscheinen. 
+Wenn Sie beispielsweise einen Namen für eine Kampagne oder einen UTM-Parameter mit mehreren Leerzeichen in ein Eingabefeld eingeben, werden alle Leerzeichen beibehalten. Wenn derselbe Text jedoch in Suchergebnissen, Listen mit Kampagnen oder anderen Textkomponenten erscheint, können aufgrund der CSS-Leerzeichenbehandlung mehrere Leerzeichen als ein einziges Leerzeichen angezeigt werden. 
 
 ### Was ist der Unterschied zwischen API-Kampagnen und API-getriggerten Kampagnen?
 
@@ -183,6 +191,6 @@ API-getriggerte und Server-getriggerte Kampagnen sind ideal für die Abwicklung 
 
 | Vorteile | Überlegungen | 
 | ---- | ---- |
-| \- Zeichnet keine Datenpunkte auf<br><br>\- Personalisierungselemente sind in den JSON-Nutzdateneigenschaften enthalten | • Es ist nicht möglich, in den Eigenschaften der JSON-Payload ein Segment von Nutzer:innen zu erstellen, die für die Nachricht berechtigt sind<br><br>\- Eingehende JSON-Payloads können mit dem **Message Activity Log** nicht angezeigt werden|
+| • Protokolliert keine Datenpunkte<br><br>\- Personalisierungselemente sind in den JSON-Nutzdateneigenschaften enthalten | • Es ist nicht möglich, in den Eigenschaften der JSON-Payload ein Segment von Nutzer:innen zu erstellen, die für die Nachricht berechtigt sind<br><br>\- Eingehende JSON-Payloads können mit dem **Message Activity Log** nicht angezeigt werden|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

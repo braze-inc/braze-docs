@@ -1,6 +1,6 @@
 ---
 nav_title: in-app Messages
-article_title: Enregistrer les données des messages in-app via le SDK de Braze
+article_title: Enregistrez les données des messages in-app via le SDK Braze.
 page_order: 7.1
 description: "Découvrez comment enregistrer les données des messages in-app (IAM) via le SDK de Braze."
 noindex: true

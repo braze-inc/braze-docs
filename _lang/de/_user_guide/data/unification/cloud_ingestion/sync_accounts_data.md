@@ -1,49 +1,49 @@
 ---
-nav_title: Kontodaten synchronisieren und löschen
-article_title: Kontodaten über CDI synchronisieren
+nav_title: Synchronisieren und Löschen von Kontodaten
+article_title: Synchronisieren Sie Daten über CDI.
 page_order: 4
 page_type: reference
-description: "Erfahren Sie, wie Sie die Daten Ihres Braze-Kontos mit CDI synchronisieren können."
+description: "Erfahren Sie, wie Sie die Daten Ihres Braze-Kontos mithilfe von CDI synchronisieren können."
 
 ---
 
-# Kontodaten über CDI synchronisieren
+# Synchronisieren Sie Daten über CDI.
 
-> Erfahren Sie, wie Sie die Daten Ihres Braze-Kontos mit CDI synchronisieren können.
+> Erfahren Sie, wie Sie die Daten Ihres Braze-Kontos mithilfe von CDI synchronisieren können.
 
 {% alert important %}
-[Kontoobjekte](https://braze.com/unlisted_docs/account_opportunity_object/) sind in der Beta-Phase und werden benötigt, um dieses Feature zu nutzen. Wenden Sie sich an Ihren Braze-Konto Manager:in, wenn Sie an einer Teilnahme an der Beta interessiert sind.
+[Kontoobjekte](https://braze.com/unlisted_docs/account_opportunity_object/) befinden sich in der Beta-Phase und sind für die Nutzung dieses Features erforderlich. Wenden Sie sich an Ihren Braze-Konto Manager:in, wenn Sie an einer Teilnahme an der Beta interessiert sind.
 {% endalert %}
 
 ## Voraussetzungen
 
-Bevor Sie Ihre Kontodaten mit CDI synchronisieren können, müssen Sie [Ihr Kontenschema konfigurieren](https://braze.com/unlisted_docs/account_opportunity_object/).
+Bevor Sie Ihre Kontodaten mit CDI synchronisieren können, müssen Sie [Ihr Kontoschema konfigurieren.](https://braze.com/unlisted_docs/account_opportunity_object/)
 
 {% alert note %}
-Nehmen Sie Updates an Ihrem Kontenschema nur dann vor, wenn die Synchronisierung pausiert oder nicht geplant ist, um Konflikte zwischen Ihren Data Warehouse Daten und dem Schema in Braze zu vermeiden.
+Bitte nehmen Sie Updates an Ihrem Kontoschema nur vor, wenn die Synchronisierung pausiert oder kein Zeitplan für die Synchronisierung besteht, um Konflikte zwischen Ihren Data-Warehouse-Daten und dem Schema in Braze zu vermeiden.
 {% endalert %}
 
-## So funktioniert die Synchronisierung
+## Wie die Synchronisierung funktioniert
 
-- Bei jeder Synchronisierung werden Zeilen importiert, bei denen `UPDATED_AT` später als der letzte synchronisierte Zeitstempel liegt.
-- Die Daten aus der Integration erstellen oder aktualisieren Konten auf der Grundlage der bereitgestellten `id`.
-- Wenn `DELETED` auf `true` steht, wird das Konto gelöscht.
-- Bei der Synchronisierung werden keine Datenpunkte protokolliert, aber alle synchronisierten Daten werden auf die Gesamtnutzung Ihres Kontos angerechnet, gemessen an der Gesamtzahl der gespeicherten Daten - Sie müssen sich nicht auf geänderte Daten beschränken.
-- Felder, die nicht in Ihrem Kontenschema enthalten sind, werden gelöscht. Aktualisieren Sie das Schema, bevor Sie neue Felder synchronisieren.
-- Sie können eine Synchronisierung aktualisieren, fortsetzen oder pausieren, indem Sie mit dem Mauszeiger über den Namen der Synchronisierung fahren und die entsprechende Aktion auswählen.
+- Bei jeder Synchronisierung werden Zeilen importiert, deren Zeitstempel nach dem letzten `UPDATED_AT`synchronisierten Zeitstempel liegt.
+- Die Daten aus der Integration erstellen oder führen Updates für Konten durch auf Grundlage der bereitgestellten Informationen`id`.
+- Wenn`DELETED`  ist`true`, wird das Konto gelöscht.
+- Bei der Synchronisierung werden keine Datenpunkte protokolliert, jedoch werden alle synchronisierten Daten auf Ihre gesamte Kontonutzung angerechnet, gemessen an der Gesamtmenge der gespeicherten Daten – es ist nicht erforderlich, sich nur auf geänderte Daten zu beschränken.
+- Felder, die nicht in Ihrem Kontenschema enthalten sind, werden entfernt. Bitte führen Sie ein Update des Schemas durch, bevor Sie neue Felder synchronisieren.
+- Sie können eine Synchronisierung aktualisieren, fortsetzen oder unterbrechen, indem Sie mit der Maus über den Namen der Synchronisierung fahren und die entsprechende Aktion auswählen.
 
 ## Synchronisieren Sie Ihre Kontodaten
 
-Sie können Ihre Kontodaten mit CDI über ein Data Warehouse oder einen Dateispeicher synchronisieren.
+Sie können Ihre Kontodaten mithilfe von CDI über ein Data Warehouse oder einen Dateispeicher synchronisieren.
 
 {% tabs local %}
 {% tab Data Warehouse %}
-So integrieren Sie Ihre Datenquelle mit Ihrem Data Warehouse:
+Um Ihre Datenquelle in Ihr Data Warehouse zu integrieren:
 
 {% subtabs %}
 {% subtab Snowflake %}
 
-1. Erstellen Sie eine Quelltabelle in Snowflake. Verwenden Sie die Namen aus dem Beispiel oder wählen Sie Ihre eigenen Datenbank-, Schema- und Tabellennamen. Sie können auch eine Ansicht oder eine materialisierte Ansicht anstelle einer Tabelle verwenden.
+1. Erstellen Sie eine Quelltabelle in Snowflake. Verwenden Sie die Namen aus dem Beispiel oder wählen Sie Ihre eigenen Datenbank-, Schema- und Tabellennamen. Sie können anstelle einer Tabelle auch eine Ansicht oder eine materialisierte Ansicht verwenden.
   ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
@@ -254,7 +254,7 @@ The following examples show valid JSON and CSV formats for syncing account data 
 ```  
 
 {% alert important %}
-Jede Zeile in Ihrer Quelldatei muss gültiges JSON enthalten, sonst wird die Datei übersprungen.
+Jede Zeile in Ihrer Quelldatei muss gültiges JSON enthalten, andernfalls wird die Datei übersprungen.
 {% endalert %}
 {% endsubtab %}
 {% subtab CSV Accounts with Delete %}
@@ -275,11 +275,11 @@ ID,NAME,PAYLOAD
 {% endtab %}
 {% endtabs %}
 
-## Eine Synchronisationsansicht erstellen
+## Synchronisierungsansicht erstellen
 
-Wenn Sie eine Synchronisationsansicht in Ihrem Data Warehouse erstellen, wird die Quelle automatisch aktualisiert, ohne dass Sie zusätzliche Abfragen neu schreiben müssen.
+Durch das Erstellen einer Synchronisierungsansicht in Ihrem Data Warehouse kann die Datenquelle automatisch aktualisiert werden, ohne dass zusätzliche Abfragen neu geschrieben werden müssen.
 
-Wenn Sie z.B. eine Tabelle mit Kontodaten namens `account_details_1` mit `account_id`, `account_name` und drei zusätzlichen Attributen haben, könnten Sie eine Sync-Ansicht wie die folgende erstellen:
+Wenn Sie beispielsweise eine Tabelle mit Kontodaten namens`account_details_1`  mit `account_id`,`account_name`  und drei zusätzlichen Attributen haben, könnten Sie eine Synchronisierungsansicht wie die folgende erstellen:
 
 {% tabs %}
 {% tab Snowflake %}

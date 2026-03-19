@@ -52,7 +52,7 @@ Eine App oder Website kann nur ein Push-Abonnement pro Gerät haben. Wenn sich a
 Da es für Push-Anbieter (APNs/FCMs) keine Möglichkeit gibt, zwischen mehreren Benutzern auf einem Gerät zu unterscheiden, übergeben wir das Push-Token an den zuletzt eingeloggten Benutzer, um zu bestimmen, welcher Benutzer auf dem Gerät für Push angesprochen werden soll.
 
 {% alert tip %}
-Wenn Sie unter **Kontakteinstellungen** > **Push Changelog** eine Fehlermeldung sehen, finden Sie unter [Häufige Push-Fehlermeldungen]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/) Erklärungen und weitere Schritte.
+Sollten Sie eine Fehlermeldung unter **„Kontakteinstellungen** > **Push-Changelog“** sehen, referenzieren Sie Erläuterungen und weitere Schritte unter [„Häufige Push-Fehlermeldungen]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/)“.
 {% endalert %}
 
 ## Push-Token-Registrierung
@@ -123,7 +123,7 @@ Wenn ein:e Nutzer:in eine neue Anwendung öffnet und den Push-Zugriff über eine
 
 Wenn wir eine Kampagne starten möchten, erstellen wir in Braze eine Kampagne, die eine Push-Nutzlast erzeugt, die an den Push-Anbieter gesendet wird. Von dort aus stellt der Anbieter die Push-Nutzdaten dem Gerät des Nutzers oder der Nutzerin zu und das SDK übergibt den Messaging-Status an Braze.
 
-![Ein Flussdiagramm, das den oben erwähnten Push-Prozess zwischen Braze, dem Kunden und dem Apple Push-Benachrichtigungsdienst oder Firebase Cloud Messaging abbildet.]({% image_buster /assets/img/push_process.png %})
+![Ein Flussdiagramm, das die oben genannte Push-Prozesse zwischen Braze, der Kund:in und dem Apple Push Notification Service oder Firebase Cloud Messaging abbildet.]({% image_buster /assets/img/push_process.png %})
 
 | Registrierungsschritte | Messaging-Schritte |
 | ------------------ | --------------- |

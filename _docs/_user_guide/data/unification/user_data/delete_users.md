@@ -140,7 +140,7 @@ You can also check the status of previous deletions by downloading a security ev
 
 ### Can I delete segments with more than 100 million users?
 
-No. You cannot delete segments with more than 100 million users. If you need help deleting a segment of this size, contact [support@braze.com](mailto:support@braze.com).
+No. You cannot delete segments with more than 100 million users. If you need help deleting a segment of this size, contact [Braze Support]({{site.baseurl}}/user_guide/administrative/access_braze/support).
 
 ### It looks like I am not able to delete 100 million users and am limited to deleting only 10 million. Is this a bug?
 

@@ -16,6 +16,7 @@ Before you start, you'll need the following:
 
 - [Permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) to access the **Agent Console** in your workspace. Check with your Braze admins if you don’t see this option.  
 - Permission to create and edit custom AI Agents.
+- An [AI model provider]({{site.baseurl}}/partners/ai_model_providers) integrated with Braze.
 - An idea of what you want the agent to accomplish. Braze Agents can support the following actions:  
    - **Messaging:** Generate subject lines, headlines, in-product copy, or other content.  
    - **Decisioning:** Route users in Canvas based on behavior, preferences, or custom attributes.  
@@ -51,9 +52,10 @@ Next, set up the details for your agent:
 1. Enter a name and description to help your team understand its purpose.
 2. (optional) Add tags to filter your agent.
 3. Choose the [model]({{site.baseurl}}/user_guide/brazeai/agents/reference/#models) for your agent to use.
-4. Select the model's thinking level. You can choose from minimal, low, medium, or high. We recommend starting with **Minimal** and testing your agent's responses and adjusting this as needed.
+4. If you're not using the **Braze Auto** model, select the model's [thinking level]({{site.baseurl}}/user_guide/brazeai/agents/reference/#thinking-levels). You can choose from minimal, low, medium, or high. We recommend starting with **Minimal** and testing your agent's responses and adjusting this as needed.
+5. Set a daily execution limit. By default, this value is set to 250,000, but can be raised to 1,000,000. If you're interested in increasing the limit above 1,000,000, contact your customer success manager to learn more.
 
-![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:75%;"}
+![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model, and setting a daily execution limit.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:75%;"}
 
 ### Step 3: Write the instructions {#agent-instructions}
 
@@ -65,20 +67,18 @@ Refer to the [Writing instructions]({{site.baseurl}}/user_guide/brazeai/agents/r
 For Canvas agents, you can use Liquid in your instructions to reference user attributes, such as their first and last name, or custom attributes. Any Liquid variable in the agent instructions is automatically passed to the Agent step when a user enters the step.
 {% endalert %}
 
-#### Step 3.1: Add context
+#### Step 3.1: Add resources
 
-Select **Add context** to choose what your agent can reference. This includes:
+Select **Add resources** to choose what your agent can reference. This includes:
 
 - [Catalog fields]({{site.baseurl}}/user_guide/brazeai/agents/reference/#catalogs-and-fields): Give the agent access to your catalog data for more accurate responses.
-- [Segment membership]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Let the agent personalize responses based on which segments a user belongs to. You can select up to three segments.
+- [Segment membership]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Let the agent personalize responses based on which segments a user belongs to. You can select up to five segments.
 - [Brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines): Reference the brand voice and style guidelines for the agent to follow. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
 - [All Canvas Context]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): Analyze all Canvas context data for a user when this agent is invoked, including any variables that are not referenced in the **Instructions** section.
 
 #### Step 3.2: Add optional settings
 
 In the **Optional settings**, you can adjust the [temperature]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature) of the agent-generated copy. A higher temperature allows the agent to use the information provided to be more creative.
-
-You can also set the daily execution limit for your agent. By default, this value is set to 250,000, but can be raised to 1,000,000. If you're interested in increasing the limit above 1,000,000, contact your customer success manager to learn more.
 
 ### Step 4: Select the output {#select-output}
 
@@ -155,7 +155,11 @@ The **Preview** pane is an instance of the agent that shows up as a side-by-side
 
 1. In the **Test your agent** field, enter example customer data or customer responses—anything that reflects real scenarios your agent will handle.
 2. Preview the agent's response for a random user, existing user, or custom user.
-3. Select **Simulate response**. The agent will execute based on your configuration and display its response. Test runs count toward your daily execution limit.
+3. Select **Simulate response**. The agent will execute based on your configuration and display its response.
+
+{% alert note %}
+Test runs count toward your daily execution limit.
+{% endalert %}
 
 ![Agent Console showing the Preview pane for testing a custom agent. The interface displays a Sample inputs field with example customer data, a Run test button, and a response area where the agent output appears.]({% image_buster /assets/img/ai_agent/custom_agent_test.png %})
 
@@ -166,6 +170,10 @@ Review the output with a critical eye. Consider the following questions:
 - Are the calculated values accurate?
 
 If something feels off, update the agent’s configuration and test again. Run a few different inputs to see how the agent adapts across scenarios, especially edge cases like no data or invalid responses.
+
+{% alert tip %}
+Avoid telling the agent exactly what you do not want it to do. LLMs may still generate that content if you mention it in the instructions.
+{% endalert %}
 
 ### Step 6: Use your agent
 

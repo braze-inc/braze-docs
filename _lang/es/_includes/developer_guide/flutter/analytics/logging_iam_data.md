@@ -19,9 +19,9 @@ braze.logInAppMessageImpression(inAppMessage);
 braze.logInAppMessageButtonClicked(inAppMessage, 0);
 ```
 
-## Acceder a los datos de los mensajes
+## Acceso a los datos de los mensajes
 
-Para acceder a los datos de mensajes dentro de la aplicación Flutter, `BrazePlugin` admite el envío de datos de mensajes dentro de la aplicación mediante [Dart Streams](https://dart.dev/tutorials/language/streams).
+Para acceder a los datos de mensajes dentro de la aplicación en tu aplicación Flutter, el`BrazePlugin`  admite el envío de datos de mensajes dentro de la aplicación mediante [Dart Streams](https://dart.dev/tutorials/language/streams).
 
 El objeto `BrazeInAppMessage` admite un subconjunto de campos disponibles en los objetos del modelo nativo, como `uri`, `message`, `header`, `buttons`, `extras`, etc.
 
@@ -56,7 +56,7 @@ Los datos de los mensajes dentro de la aplicación se reenvían automáticamente
 {% tab iOS %}
 {% subtabs %}
 
-Puedes reenviar datos de mensajes dentro de la aplicación de una de estas dos formas:
+Puedes reenviar los datos de los mensajes dentro de la aplicación de dos maneras:
 
 {% subtab UI Delegate %}
 
@@ -88,7 +88,7 @@ class CustomInAppMessagePresenter: BrazeInAppMessageUI {
 {% endtab %}
 {% endtabs %}
 
-### Paso 3: Repetición de la devolución de llamada para mensajes dentro de la aplicación (opcional)
+### Paso 3: Reproducir la devolución de llamada para mensajes dentro de la aplicación (opcional)
 
 Para almacenar cualquier mensaje dentro de la aplicación desencadenado antes de que la devolución de llamada esté disponible y reproducirlo después de que se haya establecido, añade la siguiente entrada al mapa `customConfigs` al inicializar `BrazePlugin`:
 ```dart

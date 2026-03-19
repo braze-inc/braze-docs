@@ -34,7 +34,7 @@ Vamos a ajustar los detalles del Canvas para reflejar nuestro objetivo.
 
 1. Selecciona **Editar** junto al nombre de la plantilla.
 
-![El título actual y la descripción del Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_old_name_description.png %}){: style="max-width:45%;"}
+![El título y la descripción actuales del Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_old_name_description.png %}){: style="max-width:45%;"}
 
 {:start="2"}
 2\. Actualiza el nombre del Canvas para especificar que el Canvas es para dirigirse a los usuarios cuando nuestro producto Pierna recta clásica vuelva a estar en stock.
@@ -76,7 +76,7 @@ Definiremos nuestra audiencia objetivo como los usuarios que pensamos que tienen
 {: start="3"}
 3\. Adjust the entry controls to allow users to re-enter the Canvas after the Canvas's maximum duration, to prevent the likelihood of users triggering the same step concurrently.
 
-![Sección "Controles de entrada" con una casilla de verificación para permitir a los usuarios volver a entrar en este Canvas con una duración máxima del Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_6.png %})
+![Sección «Controles de entrada» con una casilla de verificación para permitir a los usuarios volver a entrar en este Canvas con una duración máxima del Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_6.png %})
 
 {: start="4"}
 4\. Ajusta los criterios de salida para eliminar a los usuarios que realizaron el evento personalizado de desfavorecer los vaqueros Classic Straight Leg.
@@ -99,10 +99,10 @@ Puedes utilizar [las propiedades de entrada del]({{site.baseurl}}/user_guide/eng
 
 Comenzaremos nuestra personalización pasando por cada paso de Mensaje para actualizar el contenido.
 
-1. Sustituye `!!YOURCATALOGHERE!!` por el nombre de nuestro catálogo (“Straight_Leg_Pants”).
-2. Sustituye `[0]` por el número de índice de los vaqueros Classic Straight Leg, que es "9" porque los vaqueros son el décimo artículo de la matriz `items` de nuestro catálogo. (Las matrices tienen índice cero en Liquid, por lo que el primer elemento es `0` y no `1`.)
+1. Reemplaza`!!YOURCATALOGHERE!!`  con el nombre de tu catálogo. (“Straight_Leg_Pants”).
+2. Reemplaza`[0]`  con el número de índice de los vaqueros Classic Straight Leg, que es «9» porque los vaqueros son el décimo artículo de la`items`  matriz de tu catálogo. (Las matrices tienen índice cero en Liquid, por lo que el primer elemento es `0` y no `1`.)
 3. Repite los pasos 1 y 2 para todos los pasos de Mensajes restantes, incluyendo:
-    - El mensaje "In-Product Msg & Correo electrónico" que se envía tras el retraso de un día
+    - El mensaje «In-Product Msg&correo electrónico» que se envía tras el retraso de un día.
     - Los mensajes de "Alerta Push+Email" que se envían a los usuarios que no han realizado una compra
 4. Actualiza el paso Rutas de acción seleccionando el grupo de acciones **Comprar**. A continuación, selecciona **Hacer una compra específica** y elige Vaqueros clásicos de pierna recta como producto.
 
