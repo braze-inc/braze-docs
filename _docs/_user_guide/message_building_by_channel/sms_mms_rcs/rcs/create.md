@@ -53,7 +53,7 @@ If all of the messages in your campaign are going to be similar or have the same
 - **SMS fallback**: Braze strongly recommends that every subscription group that contains an RCS sender also includes at least one SMS code for fallback. This is important for deliverability in cases RCS messages fail to deliver. Some reasons for this may include user device incompatibility and incomplete carrier coverage in a given country or region. By enabling SMS fallback, your message will still deliver to your user and that you never miss that opportunity to connect with them.
 
 {: start="5"}
-5. Choose between SMS and RCS. Before composing RCS messages, choose the channel you send with. We generally recommend using RCS wherever possible as there are significant user engagement benefits over SMS; however, we always provide the option of sending with SMS so that you have maximum flexibility and control. 
+5. Choose between SMS and RCS. Before composing RCS messages, choose the channel you send with. We generally recommend using RCS wherever possible as there are significant user engagement benefits over SMS; however, we always provide the option of sending with SMS so that you have maximum flexibility and control.
 
 ![Options to select from an RCS or SMS/MMS message type.]({% image_buster /assets/img/rcs/rcs_message_type.png %}){: style="max-width:65%;"}
 
@@ -68,21 +68,21 @@ For your RCS message type, choose between **Text** or **Media**.
 
 {% tabs %}
 {% tab Text %}
-As the name implies, RCS text messages focus on text as a medium. If you type up to 160 characters, the RCS message is billed as a text-only (or "basic") message. If you exceed 160 characters or use a rich element, the message is billed as a rich (or "single") RCS message (and the character limit increases to 3,072 characters). 
+As the name implies, RCS text messages focus on text as a medium. If you type up to 160 characters, the RCS message is billed as a text-only (or "basic") message. If you exceed 160 characters or use a rich element, the message is billed as a rich (or "single") RCS message (and the character limit increases to 3,072 characters).
 
 #### Features
 
-- Text message types include all SMS features. Only Advanced Tracking is possible for URL click tracking to give you user-level reporting granularity. 
-- In addition, you now have the option to include engaging **Suggested Replies** and **Suggested Actions** buttons that drive high-engagement user actions, such as visiting a landing page or placing an order. 
-    - **Suggested Replies** are buttons containing suggested responses for users to click and pre-populate in their text input, removing the friction of having to think of a response by providing a constrained set of choices for them. 
-    - **Suggested Actions** are buttons that initiate an action on the user’s device. They typically consist of one of two descriptive words and a visual icon to help the user understand what the button does. Braze currently supports OpenURL Suggested Actions. This functions similarly to a URL, where users who select the button are redirected to a webpage or other URL-identified location. 
+- Text message types include all SMS features. Only Advanced Tracking is possible for URL click tracking to give you user-level reporting granularity.
+- In addition, you now have the option to include engaging **Suggested Replies** and **Suggested Actions** buttons that drive high-engagement user actions, such as visiting a landing page or placing an order.
+    - **Suggested Replies** are buttons containing suggested responses for users to click and pre-populate in their text input, removing the friction of having to think of a response by providing a constrained set of choices for them.
+    - **Suggested Actions** are buttons that initiate an action on the user’s device. They typically consist of one of two descriptive words and a visual icon to help the user understand what the button does. Braze currently supports OpenURL Suggested Actions. This functions similarly to a URL, where users who select the button are redirected to a webpage or other URL-identified location.
 
 ![A GIF of three Suggested Actions for an RCS message promoting trending fashion styles: "Fairytale royalty", "Edgy academia", and "Show me your other styles".]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
 
 #### Considerations
 
 - For character limits on text, you may write up to 160 characters for a text-only (basic) RCS message or up to 3,072 for a rich (single) RCS message.
-- Android and iOS have different truncation behavior. Android currently doesn’t truncate rich messages, while iOS truncates after the third line. 
+- Android and iOS have different truncation behavior. Android currently doesn’t truncate rich messages, while iOS truncates after the third line.
 - For button limits, you can add up to five buttons per message. These buttons can be either suggested actions or suggested replies.
 - Longer text blocks and too many buttons can frustrate users, so wherever possible, we recommend leaning into simplicity. 
 - In some cases, it can be more cost-effective to send longer text-only messages through RCS than with SMS. This is because longer SMS messages are broken down into multiple segments, each of which is billable, whereas RCS messages are instead billed per message. Contact your Braze account manager for more details and guidance. 
