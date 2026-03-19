@@ -536,7 +536,7 @@ For method signatures and full details, see the [Braze SDK reference documentati
 
 #### Logging impressions
 
-Call the platform's Banner impression method when your custom UI considers the Banner "viewed." Build robust logic for what counts as an impression to avoid duplicate events—for example, log only once per placement per session when the Banner enters the viewport (or equivalent), and do not log again when the same Banner is scrolled back into view or when your component re-renders without a new view event.
+Call the platform's Banner impression method when your custom UI considers the Banner "viewed." Build robust logic for what counts as an impression to avoid duplicate events—for example, log only when the Banner enters the viewport (or equivalent), and do not log again when the same Banner is scrolled back into view or when your component re-renders without a new view event.
 
 {% tabs %}
 {% tab Web %}
