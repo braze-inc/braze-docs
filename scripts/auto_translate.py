@@ -1201,8 +1201,6 @@ def cmd_summary(_args):
     # QC checks
     if QC_RESULTS_FILE.exists():
         qc = json.loads(QC_RESULTS_FILE.read_text())
-        total_repairs = qc.get("total_repairs", 0)
-        total_warnings = qc.get("total_warnings", 0)
 
         lines.append("### Quality checks\n")
 
