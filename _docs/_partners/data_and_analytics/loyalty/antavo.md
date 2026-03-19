@@ -80,7 +80,7 @@ The data fields are populated based on the configured field mapping.
 
 ## Triggers
 
-In addition to configuring field mapping, the integration provides further capabilities through features built into Antavo’s [Workflows](https://antavo.atlassian.net/wiki/spaces/AUM/pages/581402629) tool. All Braze custom attribute [data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-storage) and custom event property [data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#expected-format) can be synchronized through workflows as well.
+In addition to configuring field mapping, the integration provides further capabilities through features built into Antavo’s [Workflows](https://antavo.atlassian.net/wiki/spaces/AUM/pages/581402629) tool. All Braze custom attribute [data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-storage) and custom event property [data types]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/#event-property-data-types) can be synchronized through workflows as well.
 
 ### Synchronizing loyalty data occasionally
 

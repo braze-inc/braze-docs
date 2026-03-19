@@ -10,11 +10,11 @@ description: "This article contains release notes for October 2019."
 
 ## Improved Canvas variant analytics
 
-Canvas has new and improved analytics to view the performance of each of your variants. There are new metrics, especially around conversion events and confidence, and new capabilities like copying cells, API IDs, and downloading a `.csv` of the results. Read more about the [improved Canvas variant analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant).
+Canvas has new and improved analytics to view the performance of each of your variants. There are new metrics, especially around conversion events and confidence, and new capabilities like copying cells, API IDs, and downloading a `.csv` of the results. Read more about the [improved Canvas variant analytics]({{site.baseurl}}/user_guide/messaging/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-details).
 
 ## SMS
 
-Braze now provides SMS with campaigns, Canvas, and [currents]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)! Check out our [set up guide]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/) to get started and our [SMS sending guide]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) to learn more!
+Braze now provides SMS with campaigns, Canvas, and [currents]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)! Check out our [set up guide]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/) to get started and our [SMS sending guide]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/) to learn more!
 
 ## Content Block improvements
 

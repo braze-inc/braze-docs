@@ -9,7 +9,7 @@ description: "This article contains release notes for July 2020."
 
 ## Promotion codes
 
-Using Liquid, you can have your messages pull from a list of [promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/#promotion-codes) you upload. This feature offers expiry dates of up to six months and supports u to 20MM individual codes per list.
+Using Liquid, you can have your messages pull from a list of [promotion codes]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes/#promotion-codes) you upload. This feature offers expiry dates of up to six months and supports u to 20MM individual codes per list.
 
 ## Variant retention report
 
