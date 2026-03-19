@@ -543,7 +543,7 @@ Call the platform's Banner impression method when your custom UI considers the B
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-// Log impression when your custom UI considers the banner viewed (e.g., once when it enters viewport)
+// Log impression when your custom UI considers the banner viewed (for example, once when it enters viewport)
 const banner = braze.getBanner("placement_id_homepage_top");
 if (banner) {
   braze.logBannerImpressions([banner]);
@@ -555,13 +555,13 @@ if (banner) {
 {% subtabs %}
 {% subtab Kotlin %}
 ```kotlin
-// Log impression when your custom UI considers the banner viewed (e.g., once when it enters viewport)
+// Log impression when your custom UI considers the banner viewed (for example, once when it enters viewport)
 Braze.getInstance(context).logBannerImpression("placement_id_homepage_top")
 ```
 {% endsubtab %}
 {% subtab Java %}
 ```java
-// Log impression when your custom UI considers the banner viewed (e.g., once when it enters viewport)
+// Log impression when your custom UI considers the banner viewed (for example, once when it enters viewport)
 Braze.getInstance(context).logBannerImpression("placement_id_homepage_top");
 ```
 {% endsubtab %}
@@ -570,21 +570,23 @@ Braze.getInstance(context).logBannerImpression("placement_id_homepage_top");
 {% endtab %}
 {% tab Swift %}
 ```swift
-// Log impression when your custom UI considers the banner viewed (e.g., once when it enters viewport)
-braze.banners.logImpression(placementId: "placement_id_homepage_top")
+// Retrieve a banner and log an impression on it (for example, once when it enters viewport)
+braze.banners.getBanner(for: "placement_id_homepage_top") { banner in
+ banner?.logImpression(using: braze)
+}
 ```
 [Swift SDK reference](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/banner)
 {% endtab %}
 {% tab React Native %}
 ```javascript
-// Log impression when your custom UI considers the banner viewed (e.g., once when it enters viewport)
+// Log impression when your custom UI considers the banner viewed (for example, once when it enters viewport)
 Braze.logBannerImpression("placement_id_homepage_top");
 ```
 See the [React Native SDK repository](https://github.com/braze-inc/braze-react-native-sdk) for the latest method signatures.
 {% endtab %}
 {% tab Flutter %}
 ```dart
-// Log impression when your custom UI considers the banner viewed (e.g., once when it enters viewport)
+// Log impression when your custom UI considers the banner viewed (for example, once when it enters viewport)
 braze.logBannerImpression("placement_id_homepage_top");
 ```
 [Flutter SDK reference](https://pub.dev/documentation/braze_plugin/latest/braze_plugin/BrazePlugin/logBannerImpression.html)
@@ -600,8 +602,8 @@ Call the platform's Banner click method when the user taps your custom Banner (o
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-// Log click (optional buttonId for button-specific clicks)
-braze.logBannerClick("placement_id_homepage_top", buttonId);  // buttonId is optional
+// Log click
+braze.logBannerClick("placement_id_homepage_top", buttonId);  // buttonID is optional
 ```
 [Web SDK reference](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logbannerclick)
 {% endtab %}
@@ -609,14 +611,14 @@ braze.logBannerClick("placement_id_homepage_top", buttonId);  // buttonId is opt
 {% subtabs %}
 {% subtab Kotlin %}
 ```kotlin
-// Log click (optional buttonId for button-specific clicks)
-Braze.getInstance(context).logBannerClick("placement_id_homepage_top", buttonId)  // buttonId nullable
+// Log click
+Braze.getInstance(context).logBannerClick("placement_id_homepage_top", buttonId)  // buttonID parameter can be null
 ```
 {% endsubtab %}
 {% subtab Java %}
 ```java
-// Log click (optional buttonId for button-specific clicks)
-Braze.getInstance(context).logBannerClick("placement_id_homepage_top", buttonId);  // buttonId may be null
+// Log click
+Braze.getInstance(context).logBannerClick("placement_id_homepage_top", buttonId);  // buttonID parameter can be null
 ```
 {% endsubtab %}
 {% endsubtabs %}
@@ -624,22 +626,24 @@ Braze.getInstance(context).logBannerClick("placement_id_homepage_top", buttonId)
 {% endtab %}
 {% tab Swift %}
 ```swift
-// Log click (optional buttonId for button-specific clicks)
-braze.banners.logClick(placementId: "placement_id_homepage_top", buttonId: buttonId)  // buttonId optional
+// Retrieve a banner and log a click on it
+braze.banners.getBanner(for: "placement_id_homepage_top") { banner in
+ banner?.logClick(buttonId: buttonId, using: braze)  // buttonID is optional
+}
 ```
 [Swift SDK reference](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/banner)
 {% endtab %}
 {% tab React Native %}
 ```javascript
-// Log click (optional buttonId for button-specific clicks)
-Braze.logBannerClick("placement_id_homepage_top", buttonId);  // buttonId optional
+// Log click
+Braze.logBannerClick("placement_id_homepage_top", buttonId);  // buttonID is optional
 ```
 See the [React Native SDK repository](https://github.com/braze-inc/braze-react-native-sdk) for the latest method signatures.
 {% endtab %}
 {% tab Flutter %}
 ```dart
-// Log click (optional buttonId for button-specific clicks)
-braze.logBannerClicked("placement_id_homepage_top", buttonId);  // buttonId nullable
+// Log click
+braze.logBannerClicked("placement_id_homepage_top", buttonId);  // buttonID parameter can be null
 ```
 [Flutter SDK reference](https://pub.dev/documentation/braze_plugin/latest/braze_plugin/BrazePlugin/logBannerClicked.html)
 {% endtab %}
