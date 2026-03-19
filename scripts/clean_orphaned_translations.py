@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-# This script finds and deletes all files that exist in one or more '_lang' 
-# subdirectories that don't exist in the primary '_docs' directory. If no 
-# argument is given, all languages are processed. To see the full list of 
-# options, append '--help' to the script.
+# This script finds and deletes all files that exist in one or more '_lang'
+# subdirectories that don't have a corresponding source file in '_docs/' or
+# '_includes/'. If no argument is given, all languages are processed. To see
+# the full list of options, append '--help' to the script.
 #
 # Usage:  ./scripts/clean_orphaned_translations.py [LANGUAGE]
 
@@ -38,7 +38,7 @@ def get_all_files(directory):
     return all_files
 
 help_text = f"""This script finds and deletes all files that exist in one or more '_lang' subdirectories
-that don't exist in the primary '_docs' directory. It can be run against a single language or all languages.
+that don't have a corresponding source file in '_docs/' or '_includes/'. It can be run against a single language or all languages.
 
 USAGE:
   ./scripts/clean_orphaned_translations.py [LANGUAGE]

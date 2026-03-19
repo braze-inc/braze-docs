@@ -240,8 +240,10 @@ def call_claude(client, system_prompt, user_message, retries=3):
                 stop_reason = stream.get_final_message().stop_reason
             full_text = "".join(text_chunks)
             if stop_reason == "max_tokens":
-                print(f"    WARNING: output truncated (hit {MAX_TOKENS} token limit). "
-                      "Consider increasing TRANSLATION_MAX_TOKENS.")
+                raise RuntimeError(
+                    f"Output truncated (hit {MAX_TOKENS} token limit). "
+                    "Increase TRANSLATION_MAX_TOKENS or use chunked translation."
+                )
             return strip_code_fences(full_text)
         except Exception as exc:
             if attempt < retries - 1:
@@ -1202,61 +1204,60 @@ def cmd_summary(_args):
         total_repairs = qc.get("total_repairs", 0)
         total_warnings = qc.get("total_warnings", 0)
 
-        if total_repairs or total_warnings:
-            lines.append("### Quality checks\n")
+        lines.append("### Quality checks\n")
 
-            lang_stats = {}
-            for f in qc.get("findings", []):
-                lang = f["lang"]
-                if lang not in lang_stats:
-                    lang_stats[lang] = {"repairs": 0, "warnings": 0, "details": []}
-                lang_stats[lang]["repairs"] += len(f.get("repairs", []))
-                lang_stats[lang]["warnings"] += len(f.get("warnings", []))
-                for r in f.get("repairs", []):
-                    lang_stats[lang]["details"].append(f"[repaired] {r}")
-                for w in f.get("warnings", []):
-                    lang_stats[lang]["details"].append(f"[warning] {w}")
+        lang_stats = {}
+        for f in qc.get("findings", []):
+            lang = f["lang"]
+            if lang not in lang_stats:
+                lang_stats[lang] = {"repairs": 0, "warnings": 0, "details": []}
+            lang_stats[lang]["repairs"] += len(f.get("repairs", []))
+            lang_stats[lang]["warnings"] += len(f.get("warnings", []))
+            for r in f.get("repairs", []):
+                lang_stats[lang]["details"].append(f"[repaired] {r}")
+            for w in f.get("warnings", []):
+                lang_stats[lang]["details"].append(f"[warning] {w}")
 
-            translated_langs = set(t["lang"] for t in translated)
+        translated_langs = set(t["lang"] for t in translated)
 
-            lines.append("| Language | Repairs | Warnings | Status |")
-            lines.append("|----------|---------|----------|--------|")
-            for lang_key in sorted(LANGUAGES):
-                if lang_key not in lang_stats:
-                    if lang_key not in translated_langs:
-                        lines.append(
-                            f"| {LANGUAGES[lang_key]['name']} | — | — | No translations |"
-                        )
-                    else:
-                        lines.append(
-                            f"| {LANGUAGES[lang_key]['name']} | 0 | 0 | Passed |"
-                        )
-                    continue
-                s = lang_stats[lang_key]
-                if s["warnings"]:
-                    status = "Needs review"
-                elif s["repairs"]:
-                    status = "Auto-repaired"
+        lines.append("| Language | Repairs | Warnings | Status |")
+        lines.append("|----------|---------|----------|--------|")
+        for lang_key in sorted(LANGUAGES):
+            if lang_key not in lang_stats:
+                if lang_key not in translated_langs:
+                    lines.append(
+                        f"| {LANGUAGES[lang_key]['name']} | — | — | No translations |"
+                    )
                 else:
-                    status = "Passed"
-                lines.append(
-                    f"| {LANGUAGES[lang_key]['name']} | {s['repairs']} | "
-                    f"{s['warnings']} | {status} |"
-                )
-            lines.append("")
+                    lines.append(
+                        f"| {LANGUAGES[lang_key]['name']} | 0 | 0 | Passed |"
+                    )
+                continue
+            s = lang_stats[lang_key]
+            if s["warnings"]:
+                status = "Needs review"
+            elif s["repairs"]:
+                status = "Auto-repaired"
+            else:
+                status = "Passed"
+            lines.append(
+                f"| {LANGUAGES[lang_key]['name']} | {s['repairs']} | "
+                f"{s['warnings']} | {status} |"
+            )
+        lines.append("")
 
-            for lang_key in sorted(lang_stats):
-                s = lang_stats[lang_key]
-                if not s["details"]:
-                    continue
-                name = LANGUAGES[lang_key]["name"]
-                count = len(s["details"])
-                lines.append(
-                    f"<details><summary>{name} — {count} finding(s)</summary>\n"
-                )
-                for d in s["details"]:
-                    lines.append(f"- {d}")
-                lines.append("\n</details>\n")
+        for lang_key in sorted(lang_stats):
+            s = lang_stats[lang_key]
+            if not s["details"]:
+                continue
+            name = LANGUAGES[lang_key]["name"]
+            count = len(s["details"])
+            lines.append(
+                f"<details><summary>{name} — {count} finding(s)</summary>\n"
+            )
+            for d in s["details"]:
+                lines.append(f"- {d}")
+            lines.append("\n</details>\n")
 
     # Translated files grouped by source
     if translated:
