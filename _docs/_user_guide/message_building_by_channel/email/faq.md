@@ -106,5 +106,5 @@ Machine open percentages are not a reliable measure of actual engagement. For a 
 
 ### Does the *Unique Opens* metric include *Machine Opens*?
 
-Yes. *Unique Opens* include *Machine Opens*. In the **Campaign Analytics** view and **Report Builder**, you can view both metrics.
+Yes. *Unique Opens* include *Machine Opens*. In the **Campaign Analytics** page and **Report Builder**, you can view both metrics.
 
