@@ -104,7 +104,7 @@ For more details on how server-side scanning can affect email metrics, refer to 
 
 Machine open percentages are not a reliable measure of actual engagement. For a more accurate view of email performance, focus on *Other Opens* (non-machine opens) and *Unique Clicks*. You can also compare these metrics over time using the [Email Performance Dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/email_performance_dashboard/).
 
-### Does the *Unique Opens* metric include machine opens?
+### Does the *Unique Opens* metric include *Machine Opens*?
 
 Yes. *Unique Opens* include *Machine Opens*. In the **Campaign Analytics** view and **Report Builder**, you can view both metrics.
 
