@@ -136,14 +136,14 @@ The archive of historical event data in Snowflake goes back to April 2019. In th
 
 ### Querying shared data and incremental loads
 
-Event data in the data sharing views (for example, `USERS_BEHAVIORS_CUSTOMEVENT_SHARED`) is clustered on the `TIME` field. When you filter events based on when they occurred, use `TIME` as the preferred field. `TIME` is the Unix timestamp at which the event happened and is stable for the lifetime of the event.
+Event data in the data sharing views (for example, `USERS_BEHAVIORS_CUSTOMEVENT_SHARED`) is **clustered on the `TIME` field**. That supports **general analytical queries** where you filter by **when the event took place**—use `TIME` for those filters. `TIME` is the Unix timestamp at which the event happened.
 
-| Field | Meaning | Use for incremental loads? |
-| ----- | ------- | --------------------------- |
-| `TIME` | Unix timestamp when the event occurred. Stable and aligned with how data is clustered. | **Preferred.** Filter on `TIME` (for example, `WHERE TIME > {last_max_time}`) for deterministic, efficient incremental reads. |
-| `SF_CREATED_AT` | Timestamp when the row was written into the shared view by Braze's pipeline. | Use with care. This value can change or not advance monotonically when Braze refreshes or backfills data, which can cause incremental logic that relies only on `MAX(SF_CREATED_AT)` to read more rows than intended (including full-table scans) on some runs. |
+| Field | Meaning | When to use it |
+| ----- | ------- | ---------------- |
+| `TIME` | Unix timestamp when the event occurred. Aligns with table clustering. | **Analytics and reporting.** Filter on `TIME` when you care about event occurrence in a calendar or business sense (for example, events in the last seven days). |
+| `SF_CREATED_AT` | Timestamp when the row was loaded into Snowflake (ingestion time). | **Incremental pipelines.** Watermark on `SF_CREATED_AT` (for example, `WHERE SF_CREATED_AT > {last_max}`) so each run picks up **newly loaded** rows. Don't rely on `TIME` alone as a watermark—events can be **ingested long after they occurred**, so `TIME` does not track "what's new in the share" the way load time does. |
 
-If your pipeline uses Snowflake Tasks or similar orchestration to pull only new events, design your incremental logic around `TIME` (event occurrence) rather than `SF_CREATED_AT` (ingestion time). That way, you avoid unexpected full loads when the shared view is refreshed or backfilled. For more context on view refresh behavior and `SF_CREATED_AT`, see the [Snowflake Data Sharing FAQs]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/faqs/#data-sharing-view-refresh-and-incremental-loads).
+For more detail, see the [Snowflake Data Sharing FAQs]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/faqs/#incremental-pipelines-and-time-vs-sf-created-at).
 
 ### Speed, performance, cost of queries
 

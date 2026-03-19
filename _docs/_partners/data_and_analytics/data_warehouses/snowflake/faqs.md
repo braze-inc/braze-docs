@@ -9,21 +9,23 @@ description: "This article answers frequently asked questions about Snowflake da
 
 # Frequently asked questions
 
-### Why does the shared view sometimes appear to "refresh" or return more data than expected? {#data-sharing-view-refresh-and-incremental-loads}
+### Why does my incremental pipeline sometimes process far more rows than expected? {#incremental-pipelines-and-time-vs-sf-created-at}
 
-The data sharing views are backed by Braze's data pipeline. Braze can refresh or update the underlying data for reasons such as pipeline updates, backfills, maintenance, or reprocessing. When that happens, the set of rows visible in the view (and the values of `SF_CREATED_AT`, which reflect when rows were written into the share) can change. There is no fixed schedule for these refreshes; they occur as needed for data quality and operations.
+Shared data is exposed through **non-materialized** views over Braze's underlying Snowflake tables. The views do not get "refreshed" as a separate step; they reflect the current underlying data.
 
-If your incremental logic relies only on `MAX(SF_CREATED_AT)` from the previous run (for example, "read rows where `SF_CREATED_AT` > last max"), a refresh can make it appear that many or all rows are "new" because ingestion timestamps may have changed or the view may expose a full snapshot. That can cause your downstream pipeline (for example, a Snowflake Task that loads into Mixpanel) to process a full load instead of a small delta and lead to timeouts or failures.
+If something other than `SF_CREATED_AT` drives your watermark (for example, only `TIME`), you can see surprising batch sizes: events are often **ingested much later** than they occurred, so **event time** and **load time** diverge. That is why Braze recommends **`SF_CREATED_AT` for incremental extraction**, not `TIME`. For more on clustering and when to use each field, see [Querying shared data and incremental loads]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/#querying-shared-data-and-incremental-loads) on the main Snowflake page.
 
 ### How should I design my incremental pipeline?
 
-Use the `TIME` field (event occurrence time) as the basis for incremental reads, not `SF_CREATED_AT`. Event data is clustered on `TIME`, and `TIME` is stable for each event. Filter with something like `WHERE TIME > {last_max_time}` (storing the last seen `TIME` in your own state table or variable). That way, your pipeline consistently reads only new events by occurrence time and is resilient to view refreshes. For more detail, see [Querying shared data and incremental loads]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/#querying-shared-data-and-incremental-loads) on the main Snowflake page.
+Watermark incremental loads on **`SF_CREATED_AT`** (when the row was loaded into Snowflake), for example `WHERE SF_CREATED_AT > {last_max_sf_created_at}`. Events can arrive long after they occurred, so **`TIME` is a poor watermark** for pipelines that need every new row since the last run—using `TIME` alone can miss late-arriving data or force awkward replays.
+
+Use **`TIME`** when you are **filtering for analytics** (for example, "events that happened in the last seven days"). Event data is **clustered on `TIME`** so those queries perform well. That clustering supports analytical use cases where you care about **when the event took place**, not ingestion order.
 
 ### Can SF_CREATED_AT change over time?
 
-Yes. `SF_CREATED_AT` represents when the row was written into the shared view by Braze's pipeline. It can change if data is reprocessed, backfilled, or if the view is refreshed. Do not assume it is immutable or strictly increasing across runs when querying the share. For stable, event-time-based filtering, use the `TIME` field instead.
+No. `SF_CREATED_AT` is set when the row is first loaded into Snowflake (ingestion time). After that, it does **not** change—once data has landed in Snowflake, it is settled.
 
-Procedures that copy from the share into your own tables (for example, the backup procedure in [Snowflake data retention]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/data_retention/)) use `SF_CREATED_AT` to avoid re-copying the same rows; that works under normal conditions. If the share is refreshed and ingestion timestamps change, the same event could be copied again. For backup logic that is resilient to view refreshes, consider filtering on `TIME` in addition to or instead of `SF_CREATED_AT` where possible.
+Procedures that copy from the share into your own tables (for example, the backup procedure in [Snowflake data retention]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/data_retention/)) use `SF_CREATED_AT` to avoid inserting the same rows again because each row keeps a fixed load timestamp relative to your destination table.
 
 ### Is it possible to obfuscate PII data via Snowflake data sharing?
 No, as of now that is not supported.

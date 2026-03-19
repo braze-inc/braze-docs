@@ -164,7 +164,9 @@ CALL COPY_BRAZE_SHARE('SOURCE_DB', 'SOURCE_SCHEMA', 'DEST_DB', 'DEST_SCHEMA', DA
 {% endtabs %}
 
 {% alert note %}
-Repeatedly running the procedure only backs up rows with `SF_CREATED_AT` greater than the maximum already in your table, which under normal conditions avoids duplicates. If Braze refreshes or reprocesses the shared view, `SF_CREATED_AT` in the share can change and the same events could be copied again. For backup logic that is resilient to view refreshes, consider filtering on the `TIME` field where possible. For more on `SF_CREATED_AT` and incremental loads, see the [Snowflake Data Sharing FAQs]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/faqs/#data-sharing-view-refresh-and-incremental-loads).
+Repeatedly running the procedure only backs up rows with `SF_CREATED_AT` greater than the maximum already in your table, which avoids copying rows you have already backed up. Secure Data Sharing gives you read-only access to live views over Braze's underlying tables; those views are not materialized, and the underlying event data is not replaced or reprocessed as a separate "view refresh."
+
+For how `TIME` and `SF_CREATED_AT` are used for analytics versus incremental loads, see [Snowflake Data Sharing FAQs]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/faqs/#incremental-pipelines-and-time-vs-sf-created-at).
 {% endalert %}
 
 ## Unloading data to stage
