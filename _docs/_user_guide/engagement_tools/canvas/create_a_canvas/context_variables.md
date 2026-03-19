@@ -163,7 +163,7 @@ The exit criteria state that at any point in a user’s journey in the Canvas, t
 
 For [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/) and [in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) in a Canvas [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step, select **A duration after the step is available** for expiration, then turn on **Personalize duration** to drive the availability window from a context variable—for example, to match a promotion or booking duration from a Context step.
 
-**Personalize duration** applies to that duration-based expiration option. If you choose **On a specific date and time** instead, set the expiration using the date and time controls (not **Personalize duration**).
+**Personalize duration** applies to that duration-based expiration option. If you choose **On a specific date and time** instead, set the expiration using the date and time controls.
 
 ### Action Path delays
 
