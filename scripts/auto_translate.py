@@ -321,6 +321,21 @@ def review_file(client, english_content, translated_content, language_name, extr
 
 
 
+ACCEPTED_PREFIXES = ("_docs/", "_includes/")
+
+
+def _relative_for_translation(fpath):
+    """Return the path relative to the repo root, adjusted for _lang/ layout.
+
+    _docs/ files are stored directly under _lang/<code>/ so we strip the
+    prefix.  _includes/ files keep their prefix because _lang/<code>/
+    mirrors the top-level _includes/ directory.
+    """
+    if fpath.startswith("_docs/"):
+        return str(Path(fpath).relative_to("_docs"))
+    return fpath
+
+
 def translation_path(english_relative, lang_dir):
     """Map an English-relative path to its _lang/ counterpart."""
     return REPO_ROOT / "_lang" / lang_dir / english_relative
@@ -437,7 +452,9 @@ def cmd_translate(args):
     all_files = [line.strip() for line in changed_path.read_text().splitlines() if line.strip()]
     md_files = [
         f for f in all_files
-        if f.startswith("_docs/") and f.endswith(".md") and (REPO_ROOT / f).exists()
+        if any(f.startswith(p) for p in ACCEPTED_PREFIXES)
+        and f.endswith(".md")
+        and (REPO_ROOT / f).exists()
     ]
 
     if not md_files:
@@ -479,7 +496,7 @@ def cmd_translate(args):
         futures = {}
         with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
             for fpath in translatable:
-                relative = str(Path(fpath).relative_to("_docs"))
+                relative = _relative_for_translation(fpath)
                 english_content = (REPO_ROOT / fpath).read_text()
 
                 for lang_key, lang_info in LANGUAGES.items():
@@ -517,7 +534,7 @@ def cmd_translate(args):
     if chunked:
         print(f"\nStarting chunked translation for {len(chunked)} large file(s)...")
         for fpath in chunked:
-            relative = str(Path(fpath).relative_to("_docs"))
+            relative = _relative_for_translation(fpath)
             english_content = (REPO_ROOT / fpath).read_text()
             print(f"\n  {fpath} ({len(english_content) // 1024}KB)")
 
