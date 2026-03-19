@@ -81,9 +81,9 @@ In an [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canva
 
 In Liquid (such as in a [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step), use {% raw %}`{{context.${order_summary}.shipping.carrier}}`{% endraw %} instead.
 
-## Use context variables
+## Using context variables
 
-You can also use context variables anywhere you use Liquid in a Canvas, such as in [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) and [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update) steps, by selecting **Add Personalization**. For in-app messages and Banners in Message steps, you can select context variables to determine when the message should expire.
+You can use context variables anywhere you use Liquid in a Canvas, such as in [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) and [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update) steps, by selecting **Add Personalization**. For in-app messages and Banners in Message steps, you can select context variables to determine when the message should expire.
 
 For example, let's say you want to notify passengers about their VIP lounge access before their upcoming flight. This message should only be sent to passengers who purchased a first-class ticket. A context variable is a flexible way to track this information.
 
