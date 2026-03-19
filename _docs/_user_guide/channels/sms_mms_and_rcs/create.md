@@ -146,7 +146,7 @@ RCS text messages focus on text as a medium. Messages up to 160 characters are b
 **Considerations:**
 
 - For character limits, you may write up to 160 characters for a basic RCS message or up to 3,072 characters for a rich (single) RCS message when rich elements or longer copy apply.
-- Android and iOS can truncate differently: Android often shows full rich message text, while iOS may truncate after the third line.
+- Android and iOS can truncate differently: Android shows full rich message text, while iOS truncates after the third line.
 - You can add up to five buttons per message. These can be either suggested actions or suggested replies.
 - Longer text blocks and many buttons can overwhelm recipients; favor simplicity when you can.
 - In some cases, it can be more cost-effective to send longer text-only messages through RCS than with SMS, because longer SMS messages are broken into multiple billable segments, whereas RCS messages are billed per message.
