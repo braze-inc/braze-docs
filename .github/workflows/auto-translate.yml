@@ -14,7 +14,7 @@ name: Auto-translate
 on:
   # push:
   #   branches: [main]
-  #   paths: ['_docs/**']
+  #   paths: ['_docs/**', '_includes/**']
   workflow_dispatch:
     inputs:
       files:
@@ -91,14 +91,18 @@ jobs:
         run: pip install anthropic
 
       - name: Translate changed files
+        id: translate
         if: steps.changes.outputs.count != '0'
+        continue-on-error: true
         run: python scripts/auto_translate.py translate --changed-files changed_files.txt
 
       # ------------------------------------------------------------------
       # Quality checks
       # ------------------------------------------------------------------
       - name: Run translation QC checks
+        id: qc
         if: steps.changes.outputs.count != '0'
+        continue-on-error: true
         run: python scripts/auto_translate.py qc
 
       # ------------------------------------------------------------------
@@ -116,7 +120,9 @@ jobs:
         run: python scripts/clean_orphaned_translations.py
 
       - name: Verify builds and fix errors
+        id: verify
         if: steps.changes.outputs.count != '0'
+        continue-on-error: true
         run: python scripts/auto_translate.py verify --max-attempts 3
 
       # ------------------------------------------------------------------
@@ -140,3 +146,12 @@ jobs:
           delete-branch: true
           add-paths: |
             _lang/
+
+      - name: Report failures
+        if: steps.translate.outcome == 'failure' || steps.qc.outcome == 'failure' || steps.verify.outcome == 'failure'
+        run: |
+          echo "::warning::One or more translation steps had failures — check the PR summary for details."
+          echo "  Translate: ${{ steps.translate.outcome }}"
+          echo "  QC:        ${{ steps.qc.outcome }}"
+          echo "  Verify:    ${{ steps.verify.outcome }}"
+          exit 1

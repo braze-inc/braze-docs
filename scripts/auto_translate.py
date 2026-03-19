@@ -62,7 +62,7 @@ BRAZE_PRODUCT_NAMES = [
     "Campaign", "Segments", "Segment", "Braze", "Liquid", "SDK", "API",
 ]
 
-NON_LATIN_LANGUAGES = frozenset({"ja", "ko", "zh", "ar", "th", "hi"})
+NON_LATIN_LANGUAGES = frozenset({"ja", "ko"})
 
 COMPLETENESS_MIN_RATIO = float(os.environ.get("QC_MIN_RATIO", "0.6"))
 COMPLETENESS_MAX_RATIO = float(os.environ.get("QC_MAX_RATIO", "1.6"))
@@ -420,7 +420,7 @@ def translate_one_chunked(client, prompt, fpath, relative, english_content,
             )
             translated_chunks.append(translated)
 
-        full_translation = "\n".join(translated_chunks)
+        full_translation = "\n\n".join(c.strip() for c in translated_chunks)
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(full_translation)
         return {
@@ -569,6 +569,8 @@ def cmd_translate(args):
     ok = len(results["translated"])
     fail = len(results["failed"])
     print(f"\nTranslation complete: {ok} succeeded, {fail} failed")
+    if fail:
+        sys.exit(1)
 
 
 # ---------------------------------------------------------------------------
@@ -1045,6 +1047,8 @@ def cmd_qc(_args):
 
     print(f"\nQC complete: {len(translated)} files checked, "
           f"{repair_count} auto-repairs, {warning_count} warnings")
+    if warning_count:
+        sys.exit(1)
 
 
 # ---------------------------------------------------------------------------
@@ -1134,6 +1138,8 @@ def cmd_verify(args):
     print(f"  Passed:        {len(build_results['passed'])}")
     print(f"  Fixed & passed: {len(build_results['fixed'])}")
     print(f"  Failed:        {len(build_results['failed'])}")
+    if build_results["failed"]:
+        sys.exit(1)
 
 
 # ---------------------------------------------------------------------------
