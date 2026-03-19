@@ -35,7 +35,7 @@ A retailer uses Odicci’s gamified experiences to collect email addresses for a
 
 Before you start, you'll need the following:
 
-| Prerequisite             | Description                                                               |
+| Requirements             | Description                                                               |
 |---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | An Odicci account            | An Odicci account with access to the **Integrations** section is required to take advantage of this partnership.|
 | Braze REST API key        | A Braze REST API key with the `users.track` and 'campaigns.list' permissions. |

@@ -1,7 +1,7 @@
 ---
 nav_title: Collection best practices
 article_title: Collection Best Practices
-page_order: 3.1
+page_order: 4
 page_type: reference
 description: "The following article helps clarify different methods and best practices for collecting new and existing user data."
 
@@ -38,7 +38,7 @@ When a user enters content through a web form, check if a user with that email a
 
 ## Capturing user emails through an email capture form
 
-Use an email capture form to prompt users to submit their email address, which will be added to their user profile. For more information on how to set up this form, check out [Email capture form]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/).
+Use an email capture form to prompt users to submit their email address, which will be added to their user profile. For more information on how to set up this form, check out [Email capture form]({{site.baseurl}}/user_guide/channels/in_app_messages/message_types/email_capture_form/).
  
 ## Identifying alias-only users
 
@@ -55,7 +55,7 @@ When a user creates an account or identifies themselves through email sign-up, y
 
 ### Merging duplicate user profiles
 
-As your user data grows, you can merge duplicate user profiles from the Braze dashboard. These duplicate profiles must be found using the same search query. For more information on how to duplicate user profiles, check out [Merge profiles]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#merge-profiles).
+As your user data grows, you can merge duplicate user profiles from the Braze dashboard. These duplicate profiles must be found using the same search query. For more information on how to duplicate user profiles, check out [Merge profiles]({{site.baseurl}}/user_guide/audience/manage_audience/user_profiles#merge-profiles).
 
 You can also use the [Merge users endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) to merge one user profile into another. 
 
@@ -64,6 +64,6 @@ After user profiles are merged, this action cannot be undone.
 {% endalert %}
 
 ## Additional resources
-- Check out our article on the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) for additional context.<br>
+- Check out our article on the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/) for additional context.<br>
 - View our documentation on setting user IDs and calling the `changeUser()` method for [Android]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=android), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#suggested-user-id-naming-convention), and [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web).
 

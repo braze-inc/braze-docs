@@ -38,7 +38,7 @@ popular_topic_list:
   - name: Deleting Users via API
     link: /docs/help/help_articles/api/delete_user/
   - name: Changing Custom Data Type
-    link: /docs/help/help_articles/data/change_custom_data_type/
+    link: /docs/user_guide/data/activation/custom_data/data_types/#changing-custom-attribute-or-event-data-type
   - name: Using Event Logging
     link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/ 
 ---

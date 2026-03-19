@@ -18,7 +18,7 @@ _This integration is maintained by Friendbuy._
 
 Before you start, you'll need the following:
 
-| Prerequisite          | Description                                                                                                                              |
+| Requirements          | Description                                                                                                                              |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | A Friendbuy account   | A [Friendbuy account](https://retailer.friendbuy.io/) is required to take advantage of this partnership.                                                              |
 | A Braze REST API key  | A Braze REST API key with `users.track` permissions. This can be created in the Braze dashboard from **Settings** > **API Keys**.        |

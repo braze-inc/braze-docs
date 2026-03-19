@@ -130,7 +130,7 @@ Open the Branch link from the Notes app on a physical iOS device. If it doesn't 
 
 ### Enable dual logging
 
-1. **Braze**: [Enable verbose logging]({{site.baseurl}}/developer_guide/verbose_logging) and look for `Opening '<URL>':` entries. This confirms the SDK received the link.
+1. **Braze**: [Enable verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging/) and look for `Opening '<URL>':` entries. This confirms the SDK received the link.
 2. **Branch**: Enable [Branch test mode](https://help.branch.io/developers-hub/docs/ios-basic-integration#test-deep-linking) and check the Branch dashboard for link click events.
 3. **Compare**: If Braze logs the link but Branch doesn't see a click, the `BrazeDelegate` routing logic is likely not intercepting the link correctly. Check that the domain match in `shouldOpenURL` includes your Branch domain.
 
