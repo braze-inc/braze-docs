@@ -260,4 +260,4 @@ If you set a session timeout, all session semantics will automatically extend to
 A user profile can have 0 sessions if the user was created outside the SDK:
 
 - **Created by REST API:** If a user is created through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint with an `app_id` in the request, the profile appears associated with that app but has no session data because the SDK was never initialized for that user.
-- **Created by CSV import:** If a user is imported through [CSV]({{site.baseurl}}/user_guide/audience/manage_audience/import_users/csv_import/) without values for first or last session fields, the profile exists with 0 sessions.
+- **Created by CSV import:** If a user is imported through [CSV]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/) without values for first or last session fields, the profile exists with 0 sessions.

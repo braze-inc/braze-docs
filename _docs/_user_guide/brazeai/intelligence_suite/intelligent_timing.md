@@ -18,8 +18,8 @@ Braze calculates the optimal send time based on a statistical analysis of your u
 - Push Direct Opens
 - Push Influenced Opens
 - Email Clicks
-- Email Opens (excluding [Machine Opens]({{site.baseurl}}/user_guide/analytics/metrics_glossary#machine-opens))
-- SMS Clicks (only if [link shortening]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening/) and advanced tracking are enabled)
+- Email Opens (excluding [Machine Opens]({{site.baseurl}}/user_guide/data/report_metrics/#machine-opens))
+- SMS Clicks (only if [link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/) and advanced tracking are enabled)
 
 For example, Sam might open your emails in the morning regularly, but she opens your app and interacts with notifications in the evening. That means Sam would receive an email campaign with Intelligent Timing in the morning, while she would receive campaigns with push notifications in the evening, when she's more likely to engage.
 
@@ -42,8 +42,8 @@ This section describes how to configure Intelligent Timing for your campaigns an
 1. Create a campaign and compose your message.
 2. Select the **Scheduled Delivery** as your delivery type.
 3. Under **Time-Based Scheduling Options**, select **Intelligent Timing**.
-4. Set the entry frequency. For one-time sends, select **Once** and select a send date. For recurring sends, select **Daily**, **Weekly**, or **Monthly** and configure the recurrence options. See [Considerations](#considerations) for more guidance.
-5. Optionally, configure [Quiet Hours](#quiet-hours).
+4. Set the entry frequency. For one-time sends, select **Once** and select a send date. For recurring sends, select **Daily**, **Weekly**, or **Monthly** and configure the recurrence options. See [limitations](#limitations) for more guidance.
+5. Optionally, configure [quiet hours](#quiet-hours).
 6. Specify a [fallback time](#campaign-fallback). This is when the message is sent if a user's profile doesn't have any relevant events to calculate an optimal time.
 
 ![Campaign scheduling screen showing Intelligent Timing with fallback time and quiet hours settings]({% image_buster /assets/img/intelligent_timing/campaign_scheduling.png %})
@@ -99,7 +99,7 @@ For more information, refer to [FAQ: Intelligent Timing](#when-does-braze-check-
 
 #### Schedule winning variants 2 days after A/B test
 
-If you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/messaging/ab_testing/optimizations/), such as automatically sending the **Winning Variant** or using a **Personalized Variant**, Intelligent Timing may affect the duration and timing of your campaign.
+If you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/), such as automatically sending the **Winning Variant** or using a **Personalized Variant**, Intelligent Timing may affect the duration and timing of your campaign.
 
 When using Intelligent Timing, we recommend scheduling the Winning Variant send time at least **2 days after** the A/B test begins. For example, if your A/B test starts on April 16 at 4:00 PM, schedule the Winning Variant to send no sooner than April 18 at 4:00 PM. This gives Braze enough time to evaluate user behavior and send messages at the optimal time.
 
@@ -107,7 +107,7 @@ When using Intelligent Timing, we recommend scheduling the Winning Variant send 
 
 ### Step 3: Configure quiet hours (optional)
 
-Optionally, you can choose to limit the delivery window. This may be useful if your campaign pertains to a specific event, sale, or promotion, but is generally not recommended when using Intelligent Timing. For more information, refer to [Considerations](#considerations).
+Optionally, you can configure quiet hours to prevent messages from being sent during a specific time range. This may be useful if you don't want to contact users overnight or during certain hours, but is generally not recommended when using Intelligent Timing. For more information, refer to [limitations](#limitations).
 
 Quiet hours act as a no-send window. Intelligent Timing still determines each user's optimal send time, but if that time falls within quiet hours, Braze delays the message until the next available time outside the quiet hours period.
 
@@ -143,7 +143,7 @@ The chart shows users who had relevant events to calculate an optimal time in bl
 
 ### Step 1: Add Intelligent Timing
 
-In your Canvas, add a [Message step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/), then go to **Delivery Settings** and select **Using Intelligent Timing**.
+In your Canvas, add a [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), then go to **Delivery Settings** and select **Using Intelligent Timing**.
 
 Messages will be sent to users who entered the step that day at their optimal local time. However, if their optimal time has already passed that day, it'll be delivered at that time during the following day instead. Message steps that target multiple channels may send or attempt to send messages at different times for different channels. When the first message in a Message step attempts to send, all users are auto-advanced.
 
@@ -155,7 +155,7 @@ Choose a fallback time for the message to send to users in your audience who don
 
 Unlike with campaigns, you don't need to launch your Canvas 48 hours before the send date because Intelligent Timing is set on the step level, not the Canvas level.
 
-Instead, add a [Delay step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/delay_step/) of at least two calendar days between the user entering the Canvas and when they receive the Intelligent Timing step.
+Instead, add a [Delay step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) of at least two calendar days between the user entering the Canvas and when they receive the Intelligent Timing step.
 
 #### Calendar vs. 24-hour days
 
@@ -177,7 +177,7 @@ However, Intelligent Timing is set to deliver at 2 pm, which has already passed.
 {% endtab %}
 {% endtabs %}
 
-## Considerations
+## Limitations
 
 - In-app messages and webhooks are delivered immediately and not given optimal times.
 - Intelligent Timing is not available for action-based or API-triggered campaigns.
@@ -199,7 +199,7 @@ If users don't receive messages as expected, check that the time zone field in t
 
 ### Sending past the scheduled date
 
-Your Intelligent Timing campaign might be sending past the scheduled date if you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/messaging/ab_testing/optimizations/). Campaigns using A/B testing optimizations can automatically send the Winning Variant after the initial test is over, increasing the duration of the campaign. By default, campaigns with an optimization will send the Winning Variant to the remaining users the day after the initial test, but you can change this send date.
+Your Intelligent Timing campaign might be sending past the scheduled date if you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/). Campaigns using A/B testing optimizations can automatically send the Winning Variant after the initial test is over, increasing the duration of the campaign. By default, campaigns with an optimization will send the Winning Variant to the remaining users the day after the initial test, but you can change this send date.
 
 If you use Intelligent Timing, we recommend leaving more time for the A/B test to finish and scheduling the Winning Variant to send for 2 days after the initial test instead of 1 day.
 
@@ -231,7 +231,7 @@ To calculate the optimal time, Intelligent Timing:
 
 #### Are Machine Opens included when calculating optimal time?
 
-No, [Machine Opens]({{site.baseurl}}/user_guide/analytics/metrics_glossary#machine-opens) are excluded from calculations for optimal time. This means that send times are based solely on genuine user engagement, providing more accurate timing for your campaigns.
+No, [Machine Opens]({{site.baseurl}}/user_guide/data/report_metrics/#machine-opens) are excluded from calculations for optimal time. This means that send times are based solely on genuine user engagement, providing more accurate timing for your campaigns.
 
 #### How precise is the optimal time?
 

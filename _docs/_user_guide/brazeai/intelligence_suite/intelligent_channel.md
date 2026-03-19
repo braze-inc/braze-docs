@@ -23,7 +23,7 @@ Every time a message is sent to a user, or a user interacts with a message, the 
 To enable the Intelligent Channel filter, select the **Intelligent Channel** filter on the **Target Audiences** page when creating a email, web push, or mobile push campaign.
 
 {% alert important %}
-To compute the engagement rate of the SMS channel, turn on [SMS link shortening]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening#overview/) with advanced tracking and click tracking. Without this tracking, SMS may be selected as the Intelligent Channel for a 0% engagement rate because of our [tie-breaking behavior]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_channel#tie-breaking).
+To compute the engagement rate of the SMS channel, turn on [SMS link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/#overview/) with advanced tracking and click tracking. Without this tracking, SMS may be selected as the Intelligent Channel for a 0% engagement rate because of our [tie-breaking behavior]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/#tie-breaking).
 {% endalert %}
 
 ## The "Not enough data" option
@@ -37,7 +37,7 @@ For example, let's say you want users who prefer push messages to receive a push
 ![Intelligent Channel filters for mobile push or not enough data.]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
 
 {% alert note %}
-Campaigns and Canvas Steps that ignore [frequency capping]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/frequency_capping#delivery-rules) will not be accounted for by Intelligent Channel and cannot contribute to the data requirements.
+Campaigns and Canvas Steps that ignore [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) will not be accounted for by Intelligent Channel and cannot contribute to the data requirements.
 {% endalert %}
 
 ## The "Mobile push" option
@@ -48,7 +48,7 @@ For example, if a user has several mobile devices, their mobile engagement rate 
 
 ## Message Open Likelihood filter for individual channels {#individual-channels}
 
-Rather than let Braze choose the single best channel for a user, you can use the ["Message Open Likelihood" segmentation filter]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#message-open-likelihood) to filter users based on whether or not they're likely to open a message on a specific channel you choose. This filter is calculated by the percentage of interactions divided by the total messages received for the last 100 messages sent per channel.
+Rather than let Braze choose the single best channel for a user, you can use the ["Message Open Likelihood" segmentation filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#message-open-likelihood) to filter users based on whether or not they're likely to open a message on a specific channel you choose. This filter is calculated by the percentage of interactions divided by the total messages received for the last 100 messages sent per channel.
 
 Note that a user must have received at least three messages on a specific channel before they can have a likelihood score for that channel. Users without sufficient data to measure a likelihood for a channel can be selected using "is blank."
 

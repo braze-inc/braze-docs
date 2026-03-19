@@ -1,7 +1,7 @@
 ---
 nav_title: Privacy portal
 article_title: Privacy Portal
-page_order: 9
+page_order: 60
 layout: dev_guide
 search_rank: 3
 guide_top_header: "Braze Privacy Portal"
@@ -15,88 +15,88 @@ description: ""
 
 guide_featured_title: "Using Braze"
 guide_featured_list:
-- name: Data protection technical assistance for data subject requests
+- name: Data Protection Technical Assistance for Data Subject Requests
   link: /docs/dp-technical-assistance/
   image: /assets/img/braze_icons/settings-01.svg
-- name: Email open pixel and click tracking
-  link: /docs/user_guide/channels/email/email_setup/open_pixel_and_click_tracking
+- name: Email Open Pixel and Click Tracking
+  link: /docs/user_guide/data_and_analytics/tracking/email_tracking#open-pixel-and-click-tracking-overview
   image: /assets/img/braze_icons/mail-01.svg
-- name: Email subscriptions
-  link: /docs/user_guide/channels/email/managing_user_subscriptions#subscription-states
+- name: Email Subscriptions
+  link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states
   image: /assets/img/braze_icons/mail-01.svg
-- name: Managing email subscriptions
-  link: /docs/user_guide/channels/email/best_practices/managing_email_subscriptions#unsubscribed-email-addresses
+- name: Managing Email Subscriptions
+  link: /docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions#unsubscribed-email-addresses
   image: /assets/img/braze_icons/users-01.svg
-- name: Email preference center
-  link: /docs/user_guide/audience/subscription_preferences/preference_center
+- name: Email Preference Center
+  link: /docs/user_guide/message_building_by_channel/email/preference_center
   image: /assets/img/braze_icons/list.svg
-- name: SMS subscription groups
+- name: SMS Subscription Groups
   link: /docs/sms_rcs_subscription_groups/
   image: /assets/img/braze_icons/users-01.svg
-- name: SMS laws and regulations
-  link: /docs/user_guide/channels/sms_mms_and_rcs/laws_and_regulations
+- name: SMS Laws and Regulations
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/
   image: /assets/img/braze_icons/briefcase-02.svg
-- name: WhatsApp subscription groups
-  link: /docs/user_guide/channels/whatsapp/user_subscription
+- name: WhatsApp Subscription Groups
+  link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription
   image: /assets/img/braze_icons/whatsapp.svg
-- name: Push subscriptions
-  link: /docs/user_guide/channels/push/users_and_subscriptions#push-sub-states
+- name: Push Subscriptions
+  link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-sub-states
   image: /assets/img/braze_icons/users-01.svg
-- name: Message archiving
-  link: /docs/user_guide/data/distribution/export_braze_data/message_archiving#overview
+- name: Message Archiving
+  link: /docs/user_guide/data_and_analytics/export_braze_data/message_archiving#overview
   image: /assets/img/braze_icons/clock-rewind.svg
-- name: Default and minimum SDK data collection
-  link: /docs/user_guide/data/unification/user_data/sdk_data_collection
+- name: Default and Minimum SDK Data Collection
+  link: /docs/user_guide/data/user_data_collection/sdk_data_collection/
   image: /assets/img/braze_icons/settings-01.svg
-- name: Canvas Audience Sync data privacy considerations
+- name: Canvas Audience Sync Data Privacy Considerations
   link: /docs/partners/canvas_steps/overview#data-privacy-considerations
   image: /assets/img/braze_icons/fingerprint-03.svg
-- name: Braze data retention
+- name: Braze Data Retention
   link: /docs/api/data_retention#data-retention-handled-by-braze-for-specific-features-of-the-braze-services
   image: /assets/img/braze_icons/database-01.svg
-- name: User archival
+- name: User Archival
   link: /docs/user_archival/
   image: /assets/img/braze_icons/users-01.svg
-- name: Additional privacy resources
+- name: Additional Privacy Resources
   link: https://www.braze.com/resources/search?section%5B%5D=articles&q=privacy
   image: /assets/img/braze_icons/book-closed.svg
 
 guide_menu_title: "Legal"
 guide_menu_list:
-- name: Data processing addendum (PDF)
+- name: Data Processing Addendum (PDF)
   link: https://cdn.sanity.io/files/b7pblshe/marketing-prod/278808c2579b16e3d478e52c341890a28d3216ab.pdf
   image: /assets/img/braze_icons/briefcase-02.svg
 - name: DPA FAQs
   link: https://www.braze.com/company/legal/dpa
   image: /assets/img/braze_icons/annotation-question.svg
-- name: Standard contractual clauses
+- name: Standard Contractual Clauses
   link: https://www.braze.com/company/legal/scc
   image: /assets/img/braze_icons/briefcase-02.svg
-- name: Braze subprocessors
+- name: Braze Subprocessors
   link: https://www.braze.com/company/legal/subprocessors
   image: /assets/img/braze_icons/dataflow-04.svg
-- name: Transparency report
+- name: Transparency Report
   link: https://www.braze.com/company/legal/transparency-report
   image: /assets/img/braze_icons/search-refraction.svg
 - name: GDPR FAQs
   link: https://www.braze.com/company/legal/gdpr-faq
   image: /assets/img/braze_icons/annotation-question.svg
-- name: Acceptable use policy
+- name: Acceptable Use Policy
   link: https://www.braze.com/company/legal/aup
   image: /assets/img/braze_icons/thumbs-up.svg
-- name: Innovation statement
+- name: Innovation Statement
   link: /docs/developer_guide/disclosures/innovation_statement
   image: /assets/img/braze_icons/lightbulb-05.svg
-- name: Data privacy framework notice
+- name: Data Privacy Framework Notice
   link: https://www.braze.com/company/legal/data-privacy-framework-notice
   image: /assets/img/braze_icons/book-closed.svg
 
 guide_menu_title2: "Security"
 guide_menu_list2:
-- name: Security, privacy, and architecture datasheet
+- name: Security, Privacy, and Architecture Datasheet
   link: https://www.braze.com/company/legal/security-schedule
   image: /assets/img/braze_icons/lock-01.svg
-- name: Braze security certifications
+- name: Braze Security Certifications
   link: /docs/developer_guide/disclosures/security_qualifications/#soc-2-examination
   image: /assets/img/braze_icons/lock-01.svg
 

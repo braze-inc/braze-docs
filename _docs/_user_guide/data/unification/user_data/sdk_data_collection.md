@@ -102,12 +102,12 @@ The Braze SDK doesn't store any IP addresses locally.
 
 ## Personalized integration
 
-To make the most out of Braze, our SDK integrators often implement the Braze SDKs and log [custom attributes]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes#setting-custom-attributes), [custom events]({{site.baseurl}}/user_guide/data/activation/events/custom_events#logging-custom-events) and [purchase events]({{site.baseurl}}/user_guide/data/activation/events/purchase_events#logging-purchase-events) that are pertinent to their business on top of the automatically collected data.
+To make the most out of Braze, our SDK integrators often implement the Braze SDKs and log [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#setting-custom-attributes), [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#logging-custom-events) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#logging-purchase-events) that are pertinent to their business on top of the automatically collected data.
 
 A personalized integration allows for customized communication that is relevant to your users' experience.
 
 {% alert important %}
-Braze will ban or block users with over 5,000,000 sessions ("dummy users") and will no longer ingest their SDK events. For more information, refer to [Spam blocking]({{site.baseurl}}/user_archival#spam-blocking).
+Braze will ban or block users with over 5,000,000 sessions ("dummy users") and will no longer ingest their SDK events. For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).
 {% endalert %}
 
 

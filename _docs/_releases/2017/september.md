@@ -17,7 +17,7 @@ You can now use [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analyt
 
 ## Updates to user profile page
 
-The [User Profile Page]({{site.baseurl}}/user_guide/audience/manage_audience/user_profiles/#using-user-search) has been updated.
+The [User Profile Page]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#using-user-search) has been updated.
 
 ## Web push notifications that require user action to dismiss
 

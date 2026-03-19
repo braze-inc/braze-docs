@@ -53,7 +53,7 @@ If your in-app messages are not being requested, your app might not be tracking 
 If your in-app messages are not being returned, you're likely experiencing a campaign targeting issue:
 
 - Your segment does not contain your user.
-  - Check your user's [**Engagement**]({{ site.baseurl }}/user_guide/audience/manage_audience/user_profiles/#engagement-tab) tab to see if the correct segment appears under **Segments**.
+  - Check your user's [**Engagement**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) tab to see if the correct segment appears under **Segments**.
 - Your user has previously received the in-app message and was not re-eligible to receive it again.
   - Check the [campaign re-eligibility settings]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) under the **Delivery** step of the **Campaign Composer** and make sure the re-eligibility settings align with your testing setup.
 - Your user hit the frequency cap for the campaign.

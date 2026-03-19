@@ -2,7 +2,7 @@
 nav_title: Best practices
 article_title: Cloud Data Ingestion Best Practices
 toc_headers: h2
-page_order: 1
+page_order: 0
 page_type: reference
 description: "This page provides an overview of Cloud Data Ingestion, best practices, and product limitations."
 
@@ -42,16 +42,6 @@ Cloud Data Ingestion supports the following data types:
 - Purchase events
 - Catalog items
 - User delete requests
-
-### Avoiding data type issues
-
-When using CDI to sync data from external sources (such as Databricks or Snowflake), ensure your source columns use the correct data types before syncing. Common issues include:
-
-- **Timestamps stored as strings:** Make sure your date columns use a timestamp or datetime type in your source database, not a varchar or string.
-- **Numbers stored as strings:** Cast numeric columns to integer or float types in your source query before syncing.
-- **Inconsistent types across syncs:** If a column type changes between syncs, Braze may reject the new data. Verify your source schema remains consistent.
-
-For forcing or changing data types for custom attributes in the Braze dashboard, see [Manage custom data]({{site.baseurl}}/user_guide/data/activation/custom_data/managing_custom_data/#forcing-data-type-comparisons).
 
 You can update user data by external ID, user alias, Braze ID, email, or phone number. You can delete users by external ID, user alias, or Braze ID. 
 
@@ -694,12 +684,12 @@ Fields within the payload should follow the same format as the corresponding `/u
 
 | Data type | Formatting specifications |
 | --------- | ---------| --------- | ----------- |
-| `attributes` | See [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/#migrating-push-tokens) |
+| `attributes` | See [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
 | `events` | See [events object]({{site.baseurl}}/api/objects_filters/event_object/) |
 | `purchases` | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Note the special requirement for [capturing dates]({{site.baseurl}}/user_guide/data/activation/attributes/nested_custom_attribute_support#capturing-dates-as-object-properties) in nested attributes. 
+Note the special requirement for [capturing dates]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#capturing-dates-as-object-properties) in nested attributes. 
 
 {% tabs local %}
 {% tab Nested Custom Attributes %}

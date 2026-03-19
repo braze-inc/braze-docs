@@ -24,7 +24,7 @@ Content Optimizer is an agent that runs in a Canvas step. It helps you define me
 - Test high volumes of content variants quickly, leveraging AI for ideation.
 - Automatically phase out underperforming content and scale up winners.
 
-Learn how to create a [Content Optimizer step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/content_optimizer_step/).
+Learn how to create a [Content Optimizer step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/content_optimizer_step/).
 
 ## Use cases
 
@@ -47,7 +47,7 @@ Braze's proprietary bandit optimization algorithm is built specifically for the 
 
 When the step first launches, Content Optimizer sends variants randomly to collect initial performance data. After this initial exploration period, the algorithm begins shifting traffic toward higher-performing content combinations, gradually reducing allocation to underperforming options. During the exploration period, traffic is generally distributed across available variants to allow the algorithm to learn from their relative performance.
 
-Content Optimizer is similar to the Message step in Canvas, with features like quiet hours, [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/), and event logging. You can configure a Content Optimizer step by creating a base message and defining which content components (such as subject line, body text, or call-to-action) to optimize. Variants for each component can be generated with AI or entered manually, and Liquid tags must be added to the base message to map components into the message content.
+Content Optimizer is similar to the Message step in Canvas, with features like quiet hours, [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing), and event logging. You can configure a Content Optimizer step by creating a base message and defining which content components (such as subject line, body text, or call-to-action) to optimize. Variants for each component can be generated with AI or entered manually, and Liquid tags must be added to the base message to map components into the message content.
 
 Each user receives one message per entry into the Content Optimizer step. Re-entries are treated as new, with no memory of previous variants.
 
@@ -66,7 +66,7 @@ This means you can still use Content Optimizer in single-send or short-term Canv
 | Optimization event       | Determines how Content Optimizer evaluates performance and allocates traffic to content combinations over time, such as clicks or opens for email. Applies to all content components in a step. Content Optimizer continuously learns from this event and automatically shifts delivery toward higher-performing content combinations. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Considerations
+## Limitations
 
 - Content Optimizer is currently in beta and only available for email messages.
 - The agent can generate up to 125 combinations per step:
@@ -80,4 +80,4 @@ This means you can still use Content Optimizer in single-send or short-term Canv
 ## Next steps
 
 - Contact your customer success manager to join the beta or for onboarding support.
-- Learn how to create a [Content Optimizer step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/content_optimizer_step/).
+- Learn how to create a [Content Optimizer step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/content_optimizer_step/).

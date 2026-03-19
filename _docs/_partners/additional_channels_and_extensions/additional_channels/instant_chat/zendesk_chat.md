@@ -15,7 +15,7 @@ search_tag: Partner
 ## Prerequisites
 
 
-| Requirements | Description |
+| Prerequisite | Description |
 |---|---|
 | A Zendesk account | A Zendesk account is required to take advantage of this partnership.|
 | A Zendesk Basic Authorization Token | A Zendesk Basic Authorization Token is used to make an outbound webhook request from Braze to Zendesk.|
