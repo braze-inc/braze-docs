@@ -435,7 +435,7 @@ $(document).ready(function() {
     btn.attr('aria-label', label);
     btn.attr('title', label);
     btn.attr('aria-expanded', !isCollapsed);
-    if (btn.data('bs.tooltip')) {
+    if (typeof $.fn.tooltip !== 'undefined' && btn.data('bs.tooltip')) {
       btn.tooltip('dispose');
       btn.tooltip({ placement: 'right', trigger: 'hover focus' });
     }
@@ -476,21 +476,25 @@ $(document).ready(function() {
   // Update nav section caret icon and aria-label when expand/collapse (GitLab-style)
   $(document).on('shown.bs.collapse', '#left_navmenu .collapse', function() {
     var id = $(this).attr('id');
-    var $btn = $('#left_navmenu button.nav_toggle[data-target="#' + id + '"]');
+    var $btn = $('#left_navmenu button[data-target="#' + $.escapeSelector(id) + '"]');
     if (!$btn.length) { return; }
     $btn.attr('aria-expanded', 'true');
-    var collapseLabel = $btn.attr('data-collapse-label');
-    if (collapseLabel) { $btn.attr('aria-label', collapseLabel); }
-    $btn.find('i.fas').removeClass('fa-chevron-right').addClass('fa-chevron-down');
+    $btn.each(function() {
+      var collapseLabel = $(this).attr('data-collapse-label');
+      if (collapseLabel) { $(this).attr('aria-label', collapseLabel); }
+    });
+    $btn.filter('.nav_toggle').find('i.fas').removeClass('fa-chevron-right').addClass('fa-chevron-down');
   });
   $(document).on('hidden.bs.collapse', '#left_navmenu .collapse', function() {
     var id = $(this).attr('id');
-    var $btn = $('#left_navmenu button.nav_toggle[data-target="#' + id + '"]');
+    var $btn = $('#left_navmenu button[data-target="#' + $.escapeSelector(id) + '"]');
     if (!$btn.length) { return; }
     $btn.attr('aria-expanded', 'false');
-    var expandLabel = $btn.attr('data-expand-label');
-    if (expandLabel) { $btn.attr('aria-label', expandLabel); }
-    $btn.find('i.fas').removeClass('fa-chevron-down').addClass('fa-chevron-right');
+    $btn.each(function() {
+      var expandLabel = $(this).attr('data-expand-label');
+      if (expandLabel) { $(this).attr('aria-label', expandLabel); }
+    });
+    $btn.filter('.nav_toggle').find('i.fas').removeClass('fa-chevron-down').addClass('fa-chevron-right');
   });
 
   function setPanZoom(mermaid_charts){

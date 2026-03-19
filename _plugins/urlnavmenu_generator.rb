@@ -1,3 +1,5 @@
+require 'cgi'
+
 # Custom Navigation Plugin based on initial code structure from https://github.com/govdelivery/jekyll-nested-menu-generator
 # Updated to allow for dynamic navigation via the URL string
 # ie from /documents/documentation/iOS/Integration/SDK
@@ -223,6 +225,7 @@ module Jekyll
 
               unless menu_hash[@menu_nav_list].nil?
                 page_title =  ma[@page_title_index]
+                page_title_escaped = CGI.escapeHTML(page_title.to_s)
 
                 unless ma[@page_key_index].nil?
                     page_key = ma[@page_key_index].to_s.gsub(/[^0-9a-z]/i, '')
@@ -299,20 +302,20 @@ module Jekyll
                   unless item.empty?
                     items << "<div class='#{ @nav_active_page_class } nav_item_row'  data-parent='parent_#{@nav_prefix}_#{parent_key}'>"
                     if is_active
-                      items << "<span class='#{@nav_title_class}'>#{page_title}</span>"
+                      items << "<span class='#{@nav_title_class}'>#{page_title_escaped}</span>"
                     else
-                      items << "<a href='#{ cur_url }' class='#{@nav_item_link_class}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{page_title}'>#{page_title}</a>"
+                      items << "<a href='#{ cur_url }' class='#{@nav_item_link_class}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{page_title_escaped}'>#{page_title_escaped}</a>"
                     end
-                    expand_label = "#{@expand_section_label}: #{page_title}"
-                    collapse_label = "#{@collapse_section_label}: #{page_title}"
+                    expand_label = CGI.escapeHTML("#{@expand_section_label}: #{page_title}")
+                    collapse_label = CGI.escapeHTML("#{@collapse_section_label}: #{page_title}")
                     items << "<button type='button' class='#{@nav_toggle_class}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{ariaexpanded ? collapse_label : expand_label}' data-expand-label='#{expand_label}' data-collapse-label='#{collapse_label}'><i class='#{@fa_class} fa-chevron-#{ariaexpanded ? "down" : "right"}' aria-hidden='true'></i></button>"
                     items << "</div>\n"
                   else
                     items << "<div class='#{ @nav_active_basic_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><div class='#{ @nav_title_block}'>"
                     if is_active
-                      items << "<div class='#{@nav_title_class}'  data-parent='parent_#{@nav_prefix}_#{parent_key}'>#{page_title}</div>"
+                      items << "<div class='#{@nav_title_class}'  data-parent='parent_#{@nav_prefix}_#{parent_key}'>#{page_title_escaped}</div>"
                     else
-                      items << "<a href='#{ cur_url }' class='#{@nav_item_link_class}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{page_title}'><div class='#{@nav_title_class}'>#{page_title}</div></a>"
+                      items << "<a href='#{ cur_url }' class='#{@nav_item_link_class}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{page_title_escaped}'><div class='#{@nav_title_class}'>#{page_title_escaped}</div></a>"
                     end
                     items << "</div></div>\n"
                   end
@@ -325,12 +328,12 @@ module Jekyll
                   # Last item (section with no page): row with title + caret button if has children
                   if item.empty?
                     items << " <div class='#{ @nav_title_block}'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><div class='#{ @nav_active_basic_class } #{@nav_title_class}'>"
-                    items << "#{page_title}"
+                    items << "#{page_title_escaped}"
                     items << "</div></div></div>\n"
                   else
-                    expand_label = "#{@expand_section_label}: #{page_title}"
-                    collapse_label = "#{@collapse_section_label}: #{page_title}"
-                    items << "<div class='#{ @nav_active_page_class } nav_item_row'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><button type='button' class='#{@nav_title_class}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}'>#{page_title}</button><button type='button' class='#{@nav_toggle_class}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{ariaexpanded ? collapse_label : expand_label}' data-expand-label='#{expand_label}' data-collapse-label='#{collapse_label}'><i class='#{@fa_class} fa-chevron-#{ariaexpanded ? "down" : "right"}' aria-hidden='true'></i></button></div>"
+                    expand_label = CGI.escapeHTML("#{@expand_section_label}: #{page_title}")
+                    collapse_label = CGI.escapeHTML("#{@collapse_section_label}: #{page_title}")
+                    items << "<div class='#{ @nav_active_page_class } nav_item_row'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><button type='button' class='#{@nav_title_class}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' aria-expanded='#{ariaexpanded}' aria-label='#{ariaexpanded ? collapse_label : expand_label}' data-expand-label='#{expand_label}' data-collapse-label='#{collapse_label}'>#{page_title_escaped}</button><button type='button' class='#{@nav_toggle_class}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}' aria-label='#{ariaexpanded ? collapse_label : expand_label}' data-expand-label='#{expand_label}' data-collapse-label='#{collapse_label}'><i class='#{@fa_class} fa-chevron-#{ariaexpanded ? "down" : "right"}' aria-hidden='true'></i></button></div>"
                     items << "</div>\n"
                   end
                 end
