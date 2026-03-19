@@ -120,7 +120,7 @@ MMS messages are billed at a different rate than text-only SMS. Not all carriers
 
 ### Inbound MMS and personalization
 
-When a customer sends an inbound message that includes media, Braze exposes the media in [Currents SMS inbound events]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events) and in Liquid as `{{sms.${inbound_media_urls}}}` (for example in retargeting or follow-up messages). For more on using inbound SMS properties in Canvas, see [Message step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/).
+When a customer sends an inbound message that includes media, Braze exposes the media in [Currents SMS inbound events]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events) and in Liquid as {% raw %}`{{sms.${inbound_media_urls}}}`{% endraw %} (for example in retargeting or follow-up messages). For more on using inbound SMS properties in Canvas, see [Message step]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/message_step/).
 
 {% endtab %}
 {% tab RCS %}
