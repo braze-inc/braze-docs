@@ -44,5 +44,5 @@ Storage schemas apply to the flat file event data we send to data warehouse stor
 {% endalert %}
 
 {% alert note %}
-Many of the events in this glossary are SDK-initiated. For SDK-initiated events, the `sdk_version`, `gender`, `language`, and `country` fields may be `null` if that information is not available or not set for the user.
+Many of the events in this glossary are SDK-initiated. Some events, such as `token_state_change`, can be initiated by either the SDK or the backend (for example, in response to a push bounce). The `sdk_version`, `gender`, `language`, and `country` fields are only set for SDK-initiated events; for backend-initiated events, or when that information is not available or not set for the user, these fields may be `null`.
 {% endalert %}
