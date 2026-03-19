@@ -239,19 +239,20 @@ def call_claude(client, system_prompt, user_message, retries=3):
                     text_chunks.append(text)
                 stop_reason = stream.get_final_message().stop_reason
             full_text = "".join(text_chunks)
-            if stop_reason == "max_tokens":
-                raise RuntimeError(
-                    f"Output truncated (hit {MAX_TOKENS} token limit). "
-                    "Increase TRANSLATION_MAX_TOKENS or use chunked translation."
-                )
-            return strip_code_fences(full_text)
         except Exception as exc:
             if attempt < retries - 1:
                 wait = 2 ** (attempt + 1)
                 print(f"    API error: {exc} — retrying in {wait}s...")
                 time.sleep(wait)
-            else:
-                raise
+                continue
+            raise
+
+        if stop_reason == "max_tokens":
+            raise RuntimeError(
+                f"Output truncated (hit {MAX_TOKENS} token limit). "
+                "Increase TRANSLATION_MAX_TOKENS or use chunked translation."
+            )
+        return strip_code_fences(full_text)
 
 
 def translate_file(client, prompt, english_content, existing_translation, language_name, extra_context=""):
