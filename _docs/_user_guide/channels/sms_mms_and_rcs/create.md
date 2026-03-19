@@ -5,7 +5,6 @@ page_order: 1
 description: "This article covers how to create and send an SMS, MMS, or RCS message in Braze."
 page_type: reference
 alias: /create_sms_mms_rcs_message/
-alias: /create_rcs_message/
 tool:
   - Campaigns
 channel:
