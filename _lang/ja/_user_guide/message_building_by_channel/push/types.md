@@ -20,58 +20,58 @@ glossary_tags:
   - name: iOS
 
 glossaries:
-  - name: "レギュラープッシュ"
+  - name: "Regular Push"
     description: "包括的なプッシュ・メッセージだ。ユーザーのデバイスで通知音を送出し、通知バーやスタックにメッセージをスライド表示します。"
     tags:
       - Web
       - Android
       - iOS
-  - name: "ウェブプッシュ"
+  - name: "Web Push"
     description: "これらのプッシュメッセージは、ウェブアプリやブラウザに表示される。それでも、顧客にリーチするには許可が必要です。ユーザーが非表示のブラウザーを使用している場合、ウェブ・プッシュは機能しないことに注意。"
     tags:
       - Web
-  - name: "プッシュプライマーキャンペーン"
+  - name: "Push Primer Campaigns"
     description: "ユーザーからプッシュ通知の明示的なオプトインまたはオプトアウトの意志を確認するために使用されるアプリ内メッセージのキャンペーン。プライマーを通じて、デバイスの設定でプッシュをオフにしている可能性の高いユーザーへの通知送信を避けることができる。iOS の場合、プッシュ通知のキャンペーンが重要です。これは、ユーザーが明示的に iOS のネイティブプッシュプロンプトにオプトインするまで、フォアグラウンドのプッシュ通知 (デバイスをスリープ解除する通知など) が有効にならないためです。"
     tags:
       - Web
       - Android
       - iOS
-  - name: "プッシュ通知ストーリー"
+  - name: "Push Stories"
     description: "プッシュストーリーは、カルーセルの形でユーザーを視覚的な旅に誘う没入型のメッセージだ。これらはモバイルデバイスでのみ使用できます。"
     tags:
       - iOS
       - Android
-  - name: "アクションボタンによるプッシュ通知"
+  - name: "Push with Action Buttons"
     description: "プッシュ・ウィズ・アクション・ボタンは、ユーザーに選択肢を提供し、いくつかの行動を呼びかけることができるメッセージだ。"
     tags:
       - Web
       - Android
       - iOS
-  - name: "リッチなプッシュ通知"
+  - name: "Rich Push Notifications"
     description: "リッチプッシュ通知とは、単純なアイコンと行動喚起のテキストだけでなく、没入感のある画像やクリエイティブなコンテンツを含む通知である。"
     tags:
       - iOS
       - Android
-  - name: "iOS 向けの暫定プッシュ通知"
+  - name: "Provisional Push Notifications for iOS"
     description: "iOS 12でAppleが導入した仮承認機能は、iOSアプリのインストール時に自動的に発生する。これによりブランドは、ユーザーにプッシュ通知の許可プロンプトを表示せずに通知を送信できる。これらの通知は通知センターに静かに配信される。ユーザーはそこでプッシュ通知を許可するか停止するかを選択できる。"
     tags:
       - iOS
-  - name: "HTML プッシュ通知"
+  - name: "HTML Push Notifications"
     description: "HTMLプッシュ通知は、HTMLでハードコーディングされたプッシュメッセージで、Brazeが提供するあらかじめ設定されたプッシュテンプレートを使用しない。HTMLプッシュ通知を作成するオプションがあることで、プッシュメッセージをどのように見せるかに関して、御社は完全な創造的自由と一貫したブランディングを持つことができる。"
     tags:
       - Android
-  - name: "通知IDとチャンネルID"
+  - name: "Notification IDs & Channel IDs"
     description: "通知 ID とチャネル ID を使用すると、ユーザーがすでに受信したが開封していないプッシュ通知を置き換えたり更新したりできます。"
     tags:
       - iOS
       - Android
-  - name: "バックグラウンドプッシュ通知（サイレントプッシュ）"
+  - name: "Background Push Notifications (Silent Push)"
     description: "エンドユーザーには表示されないプッシュ通知であり、主に内部で利用される。アンインストール追跡、ジオフェンス、データ同期といった機能の処理に用いられる。バックグラウンドプッシュとサイレントプッシュは同じ概念を指す。バックグラウンド対応のプッシュトークンが必要だ。詳しくは、<a href=\"/docs/developer_guide/push_notifications/silent\">サイレント・プッシュ</a>通知を参照のこと。"
     tags:
       - Web
       - Android
       - iOS
-  - name: "ウェアラブルプッシュ通知"
+  - name: "Wearable Push Notifications"
     description: "これらのプッシュ通知によって、ブランドはApple Watchのようなウェアラブル端末に直接メッセージを送ることができる。"
     tags:
       - iOS

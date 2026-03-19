@@ -2,7 +2,7 @@
 nav_title: Message engagement events
 layout: message_engagement_events_glossary
 alias: /message_events_glossary/
-page_order: 5
+page_order: 2
 excerpt_separator: ""
 page_type: glossary
 description: "This glossary lists the various Message Engagement Events that Braze can track and send to chosen Data Warehouses using Currents."
@@ -10,9 +10,13 @@ tool: Currents
 search_rank: 6
 ---
 
-Storage schemas apply to the flat file event data we send to Data Warehouse Storage partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). For schemas that apply to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/) and check their respective pages.
+Storage schemas apply to the flat file event data we send to Data Warehouse Storage partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). For schemas that apply to the other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data/distribution/braze_currents/setting_up_currents/available_partners/) and check their respective pages.
 
-Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements. If you can't find what you need in this article, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
+{% alert tip %}
+These events are also available as SQL tables in the [Query Builder]({{site.baseurl}}/user_guide/analytics/reports/query_builder/), [SQL Segment Extensions]({{site.baseurl}}/user_guide/audience/segments/segment_extension/sql_segments/), and [Snowflake Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/). For SQL table schemas and column details, refer to the [SQL table reference]({{site.baseurl}}/user_guide/audience/segments/segment_extension/sql_segments/sql_segments_tables/).
+{% endalert %}
+
+Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements. If you can't find what you need in this article, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 {% details Explanation of message engagement event structure and platform values %}
 
@@ -3228,7 +3232,7 @@ This event occurs when a user clicks a Content Card.
 #### Property details
 
 - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 {% endapi %}
 
 {% api %}
@@ -3457,7 +3461,7 @@ This event occurs when a user dismisses a Content Card.
 #### Property details
 
 - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 {% endapi %}
 
 {% api %}
@@ -3686,7 +3690,7 @@ This event occurs when a user views a Content Card.
 #### Property details
 
 - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 {% endapi %}
 
 {% api %}
@@ -6109,7 +6113,7 @@ Email, Subscription
 This event occurs when the end-user has clicked "unsubscribe" from the email.
 
 {% alert important %}
-The `Unsubscribe` event is considered a specialized click event that is fired when your user clicks the unsubscribe link in the email (either a normal unsubscribe link within the email body or footer, or using the [list-unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)), not when the user changes state to unsubscribed. If subscription state change is sent through the API, or with a custom (non-Braze) unsubscribe link, it does not trigger an email unsubscribe event on Currents.
+The `Unsubscribe` event is considered a specialized click event that is fired when your user clicks the unsubscribe link in the email (either a normal unsubscribe link within the email body or footer, or using the [list-unsubscribe header]({{site.baseurl}}/user_guide/administer/global/workspace_settings/email_preferences/#include-a-list-unsubscribe-header)), not when the user changes state to unsubscribed. If subscription state change is sent through the API, or with a custom (non-Braze) unsubscribe link, it does not trigger an email unsubscribe event on Currents.
 {% endalert %}
 
 {% tabs %}
@@ -6991,7 +6995,7 @@ For in-app messages, `dispatch_id` returns `null`.
 #### Property details
 
 - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 {% endapi %}
 
 {% api %}
@@ -7234,7 +7238,7 @@ For in-app messages, `dispatch_id` returns `null`.
 #### Property details
 
 - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 {% endapi %}
 
 {% api %}
@@ -8976,7 +8980,7 @@ This event occurs when an error is received from either Apple Push Notification 
 
 #### Property details
 
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
 {% endapi %}
 
@@ -9146,7 +9150,7 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
 #### Property details
 
 - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
 {% endapi %}
 
@@ -9381,7 +9385,7 @@ In rare cases, a push open may appear before the corresponding push send event i
 #### Property details
 
 - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
 {% endapi %}
 
@@ -9820,7 +9824,7 @@ This event occurs when Braze processes a push message for a user, communicating 
 #### Property details
 
 - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
 - `message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more.
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
 {% endapi %}

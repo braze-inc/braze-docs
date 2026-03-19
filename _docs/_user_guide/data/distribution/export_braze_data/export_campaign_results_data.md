@@ -1,7 +1,7 @@
 ---
-nav_title: Export campaign data
+nav_title: Campaign data
 article_title: Export Campaign Data
-page_order: 0
+page_order: 2
 page_type: reference
 description: "This reference article covers how to export campaign results data from single, multi-channel, or multivariate campaigns. The article also lists how to export user data from the recipients."
 tool: 
@@ -76,7 +76,7 @@ In-app message campaign results contain graphs for the following analytics:
 You can export user data for all the recipients of a campaign as a CSV file. To do so, select the **User Data** button in the **Campaign Details** section.
 
 {% alert note %}
-Can't see the **User Data** button? To export user data, you need the **Export User Data** [permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) for that workspace.
+Can't see the **User Data** button? To export user data, you need the **Export User Data** [permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/#limited-and-team-role-permissions) for that workspace.
 {% endalert %}
 
 ![User Data dropdown on the Campaign Details page]({% image_buster /assets/img/campaign_export_example.png %})
@@ -85,13 +85,13 @@ The CSV output contains user profile data for every recipient of the campaign. B
 
 If you've linked your [Amazon S3 credentials]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/) to Braze, then the CSV will also be uploaded in your S3 bucket. Otherwise, the link emailed to you will expire in a few hours.
 
-The exported file includes the same user data fields that are included when you [export user data for a segment]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data). In addition to those data fields, if you choose "Export All Recipient Data," then the exported file will also contain the following data for each user:
+The exported file includes the same user data fields that are included when you [export user data for a segment]({{site.baseurl}}/user_guide/analytics/dashboards/home#exporting-app-usage-data). In addition to those data fields, if you choose "Export All Recipient Data," then the exported file will also contain the following data for each user:
 
 - Name of campaign variation received
 - API ID of campaign variation received
 - Whether user is in control group
 
 {% alert tip %}
-For help with CSV and API exports, check out [Export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, check out [Export troubleshooting]({{site.baseurl}}/user_guide/data/distribution/export_braze_data/export_troubleshooting/).
 {% endalert %}
 

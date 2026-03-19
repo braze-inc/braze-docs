@@ -7,7 +7,7 @@ description: "This reference article covers how to use catalogs to reference non
 
 # Using catalogs
 
-> After creating a catalog, you can reference non-user data in your Braze campaigns through [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). You can use catalogs in all of your messaging channels, including anywhere in the drag-and-drop editor where Liquid is supported.
+> After creating a catalog, you can reference non-user data in your Braze campaigns through [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/). You can use catalogs in all of your messaging channels, including anywhere in the drag-and-drop editor where Liquid is supported.
 
 ## Using catalogs in a message
 
@@ -158,7 +158,7 @@ You can also use templating to dynamically pull catalog items based on custom at
 JSON objects in catalogs are only ingested through the API. You can't upload a JSON object using a CSV file.
 {% endalert %}
 
-Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) to your custom attribute, then use the **Add Personalization** modal to pull a specific item from the array. Variables referenced as the catalog item ID must be wrapped in curly brackets to be referenced properly, such as `{{result}}`.
+Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid#assigning-variables) to your custom attribute, then use the **Add Personalization** modal to pull a specific item from the array. Variables referenced as the catalog item ID must be wrapped in curly brackets to be referenced properly, such as `{{result}}`.
 
 {% alert tip %}
 Remember, arrays start at `0`, not `1`.
@@ -190,7 +190,7 @@ You can also manually piece together catalogs with Liquid logic. However, note t
 
 #### Templating catalog items including Liquid
 
-Similar to [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), you must use the `:rerender` flag in a Liquid tag to render a catalog item's Liquid content. Note that the `:rerender` flag is only one level deep, meaning it won't apply to any nested Liquid tag calls.
+Similar to [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/), you must use the `:rerender` flag in a Liquid tag to render a catalog item's Liquid content. Note that the `:rerender` flag is only one level deep, meaning it won't apply to any nested Liquid tag calls.
 
 If a catalog item contains user profile fields (within a Liquid personalization tag), these values must be defined in Liquid earlier in the message and before the templating in order to render the Liquid properly. If the `:rerender` flag isn't provided, it will render the raw Liquid content.
 

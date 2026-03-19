@@ -17,7 +17,7 @@ _This integration is maintained by Limbik._
 
 The following are required to use Limbik with Braze:
 
-| Prerequisite | Description |
+| Requirements | Description |
 | --- | --- |
 | Limbik `account_id` | Speak to your Limbik account team, or make a GET request to Limbik’s `/rest/api/organizations` endpoint |
 | Limbik access token (`access_token`) | Make a POST request to Limbik’s `login` endpoint and use the returned `access_token` value as the Bearer token in the `Authorization` header. |

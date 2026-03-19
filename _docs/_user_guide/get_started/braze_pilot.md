@@ -9,13 +9,13 @@ description: "Check out the different ways you can use Braze to launch messages 
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Getting Started with Braze Pilot
-    link: /docs/user_guide/getting_started/braze_pilot/getting_started/
+    link: /docs/user_guide/get_started/braze_pilot/getting_started
     image: /assets/img/braze_icons/brush-02.svg
   - name: Data Dictionary
-    link: /docs/user_guide/getting_started/braze_pilot/data_dictionary/
+    link: /docs/user_guide/get_started/braze_pilot/data_dictionary
     image: /assets/img/braze_icons/book-closed.svg
   - name: Deep Links
-    link: /docs/user_guide/getting_started/braze_pilot/deep_links/
+    link: /docs/user_guide/get_started/braze_pilot/deep_links
     image: /assets/img/braze_icons/link-03.svg
 
 ---
@@ -29,7 +29,7 @@ The core of Braze Pilot is its library of app simulations. Each app is a realist
 
 ### Steppington
 
-Steppington is a fitness app with workouts, exercise goals, and a Steppington+ premium service. It offers several places to demonstrate [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards), a section that can be revealed with [feature flags]({{site.baseurl}}/developer_guide/feature_flags), and a robust library of custom event logging that make it possible to illustrate many customer journeys for this industry.
+Steppington is a fitness app with workouts, exercise goals, and a Steppington+ premium service. It offers several places to demonstrate [Content Cards]({{site.baseurl}}/user_guide/channels/content_cards/), a section that can be revealed with [feature flags]({{site.baseurl}}/developer_guide/feature_flags), and a robust library of custom event logging that make it possible to illustrate many customer journeys for this industry.
 
 ![The home page for Steppington with icons for marathon training, yoga, cycling, and weights.]({% image_buster /assets/img/braze_pilot/steppington_app.png %}){:style="max-width:50%"}
 
@@ -66,7 +66,7 @@ After Pilot connects to your Braze dashboard, the Braze SDK functions in the app
 - Automatically collect session data, device info, and push tokens.
 - Power push notifications, in-app messages, and Content Card messaging channels that require SDK integration to function.
 
-For more on the Braze SDK, check out [Integration]({{site.baseurl}}/user_guide/getting_started/integration).
+For more on the Braze SDK, check out [Integration]({{site.baseurl}}/user_guide/get_started/integrations/).
 
 ![The Braze customer engagement stack, which includes integrations, APIs, SDKs for data ingestion, classification, orchestration, personalization, and action with messaging channels for an interactive feedback loop with your customers.]({% image_buster /assets/img/braze_pilot/braze_sdk_diagram.png %}){:style="max-width:70%"}
 
@@ -76,7 +76,7 @@ Every piece of data sent to Braze is stored in a user profile dedicated to a par
 
 ### Anonymous 
 
-This connection status represents the experience of a guest of your app or website who hasn’t logged in yet. If you initialize Pilot as an anonymous user, Braze creates an [anonymous user profile]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users) for you and logs data about your activity there. Anonymous users can still be targeted with campaigns, but you won’t be able to look up their user profile directly in your Braze dashboard.
+This connection status represents the experience of a guest of your app or website who hasn’t logged in yet. If you initialize Pilot as an anonymous user, Braze creates an [anonymous user profile]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/anonymous_users/) for you and logs data about your activity there. Anonymous users can still be targeted with campaigns, but you won’t be able to look up their user profile directly in your Braze dashboard.
 
 ### Identified
 
@@ -136,6 +136,6 @@ Campaigns and Canvases are how you send messages to your users.
 
 ## Supported messaging channels
 
-Braze Pilot currently supports [in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about), which appear in your app, delivering timely messaging while the user is actively engaging.
+Braze Pilot currently supports [in-app messages]({{site.baseurl}}/in-app_messages/), which appear in your app, delivering timely messaging while the user is actively engaging.
 
 ![An in-app message in the MovieCanon app "Enjoying MovieCanon? Refer your friends!" with an option to enter your email address to send a referral.]({% image_buster /assets/img/braze_pilot/moviecanon_iam.png %}){:style="max-width:40%"}

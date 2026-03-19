@@ -22,7 +22,7 @@ Refer to the following table for more details about this report:
 | Dimension | The attribute used to organize results, such as channel, campaign, or platform. |
 | Comparison group | The groups that you want to compare in your report. You can select multiple comparison groups. |
 | Parameter | The metric applied to that attribute, such as opens, clicks, or conversion rate. |
-| Segment | The [audience segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) that you created in Braze. |
+| Segment | The [audience segment]({{site.baseurl}}/user_guide/audience/segments/) that you created in Braze. |
 | Option             | The specific recommendation option selected from the action bank. |
 | Description        | A short explanation of what the option represents.            |
 | # of times chosen  | The total count of how often the option was selected.         |

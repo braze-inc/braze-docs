@@ -61,6 +61,8 @@ BRAZE_PRODUCT_NAMES = [
     "Campaign", "Segments", "Segment", "Braze", "Liquid", "SDK", "API",
 ]
 
+NON_LATIN_LANGUAGES = frozenset({"ja", "ko", "zh", "ar", "th", "hi"})
+
 COMPLETENESS_MIN_RATIO = float(os.environ.get("QC_MIN_RATIO", "0.6"))
 COMPLETENESS_MAX_RATIO = float(os.environ.get("QC_MAX_RATIO", "1.6"))
 UNTRANSLATED_BLOCK_THRESHOLD = 200
@@ -498,6 +500,111 @@ def repair_urls(english_content, translated_content):
     return repaired, repairs
 
 
+def repair_apitags(english_content, translated_content):
+    """Restore canonical English apitags from the English source.
+
+    Filter/checkbox logic in event glossary layouts depends on exact tag-key
+    matches.  Translated tags fragment filters and break the UI.
+    """
+    pattern = re.compile(
+        r'(\{%\s*apitags\s*%\})(.*?)(\{%\s*endapitags\s*%\})', re.DOTALL
+    )
+    en_blocks = [m.group(2).strip() for m in pattern.finditer(english_content)]
+    tr_matches = list(pattern.finditer(translated_content))
+
+    if not en_blocks:
+        return translated_content, []
+
+    if len(en_blocks) != len(tr_matches):
+        return translated_content, [
+            f"apitags — count mismatch (English: {len(en_blocks)}, "
+            f"translated: {len(tr_matches)}); skipped auto-repair"
+        ]
+
+    repairs = []
+    result = translated_content
+    for match, eng_block in zip(reversed(tr_matches), reversed(en_blocks)):
+        tr_block = match.group(2).strip()
+        if tr_block != eng_block:
+            result = (
+                result[:match.start(2)] + '\n' + eng_block + '\n'
+                + result[match.end(2):]
+            )
+            repairs.append(f"apitags — restored English tags")
+
+    if len(repairs) > 1:
+        repairs = [f"apitags — restored {len(repairs)} blocks to English"]
+
+    return result, repairs
+
+
+def repair_glossary_identifiers(english_content, translated_content, lang_key):
+    """Restore English glossary_tags, entry names, and entry tags for non-Latin
+    languages.  Jekyll's slugify and the JS string_to_slug strip non-Latin
+    characters, producing empty/identical HTML IDs that break filter checkboxes.
+    """
+    if lang_key not in NON_LATIN_LANGUAGES:
+        return translated_content, []
+
+    en_fm, _ = _extract_front_matter(english_content)
+    tr_fm, tr_body = _extract_front_matter(translated_content)
+
+    if not en_fm or not tr_fm:
+        return translated_content, []
+
+    en_gt_block = _extract_fm_block(en_fm, 'glossary_tags')
+    if not en_gt_block:
+        return translated_content, []
+
+    repairs = []
+    repaired_fm = tr_fm
+
+    tr_gt_block = _extract_fm_block(repaired_fm, 'glossary_tags')
+    if tr_gt_block and tr_gt_block != en_gt_block:
+        repaired_fm = repaired_fm.replace(tr_gt_block, en_gt_block)
+        repairs.append("glossary_tags — restored English filter names")
+
+    en_gl_block = _extract_fm_block(en_fm, 'glossaries')
+    tr_gl_block = _extract_fm_block(repaired_fm, 'glossaries')
+
+    if en_gl_block and tr_gl_block:
+        en_names = re.findall(r'  - name:\s*(.*)', en_gl_block)
+        tr_names = re.findall(r'  - name:\s*(.*)', tr_gl_block)
+        en_tag_lists = re.findall(r'    - ([^\n]+)', en_gl_block)
+        tr_tag_lists = re.findall(r'    - ([^\n]+)', tr_gl_block)
+
+        name_fixes = 0
+        for en_name, tr_name in zip(en_names, tr_names):
+            en_val = en_name.strip().strip('"').strip("'")
+            tr_val = tr_name.strip().strip('"').strip("'")
+            if en_val != tr_val:
+                old_line = f'  - name: {tr_name}'
+                quoted = f'"{en_val}"' if ':' in en_val or '#' in en_val else f'"{en_val}"'
+                new_line = f'  - name: {quoted}'
+                repaired_fm = repaired_fm.replace(old_line, new_line, 1)
+                name_fixes += 1
+
+        tag_fixes = 0
+        for en_tag, tr_tag in zip(en_tag_lists, tr_tag_lists):
+            en_t = en_tag.strip()
+            tr_t = tr_tag.strip()
+            if en_t != tr_t:
+                repaired_fm = repaired_fm.replace(
+                    f'    - {tr_tag}', f'    - {en_t}', 1
+                )
+                tag_fixes += 1
+
+        if name_fixes:
+            repairs.append(f"glossary_names — restored {name_fixes} entry names")
+        if tag_fixes:
+            repairs.append(f"glossary_entry_tags — restored {tag_fixes} tags")
+
+    if repairs:
+        translated_content = f"---\n{repaired_fm}\n---\n{tr_body}"
+
+    return translated_content, repairs
+
+
 def check_liquid_tags(english_content, translated_content):
     """Check that Liquid tags are preserved between source and translation."""
     warnings = []
@@ -662,6 +769,16 @@ def qc_check_file(english_path, translated_path, lang_key):
         translated_content
     )
     findings["repairs"].extend(brazeai_repairs)
+
+    translated_content, apitag_repairs = repair_apitags(
+        english_content, translated_content
+    )
+    findings["repairs"].extend(apitag_repairs)
+
+    translated_content, glossary_id_repairs = repair_glossary_identifiers(
+        english_content, translated_content, lang_key
+    )
+    findings["repairs"].extend(glossary_id_repairs)
 
     if findings["repairs"]:
         Path(translated_path).write_text(translated_content)

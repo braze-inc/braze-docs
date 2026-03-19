@@ -23,7 +23,7 @@ Braze currently offers two integrations to Salesforce Sales Cloud for the follow
 2. [Updating a lead in Salesforce Sales Cloud](#updating-lead)
 
 {% alert note %}
-This integration is purely to update Salesforce from Braze as part of your lead acquisition and nurturing efforts. For syncing data from Salesforce back to Braze, check out [B2B data model]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models/) or connect with one of our [technology partners]({{site.baseurl}}/partners/home/). 
+This integration is purely to update Salesforce from Braze as part of your lead acquisition and nurturing efforts. For syncing data from Salesforce back to Braze, check out [B2B data model]({{site.baseurl}}/user_guide/get_started/b2b_use_cases/b2b_data_models/) or connect with one of our [technology partners]({{site.baseurl}}/partners/home/). 
 {% endalert %}
 
 ## Prerequisites
@@ -92,9 +92,9 @@ Select **+ Add New Header** for each of the following request headers.
  
 ## Updating a lead in Salesforce Sales Cloud {#updating-lead}
 
-To set up a Braze Salesforce Sales Cloud webhook that updates leads in Salesforce, you need a common identifier between Salesforce Sales Cloud and Braze. The example below uses the Salesforce `lead_id` as the Braze `external_id`, but you can also accomplish this by using a `user_alias`. For details on this, refer to [B2B Data]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models)
+To set up a Braze Salesforce Sales Cloud webhook that updates leads in Salesforce, you need a common identifier between Salesforce Sales Cloud and Braze. The example below uses the Salesforce `lead_id` as the Braze `external_id`, but you can also accomplish this by using a `user_alias`. For details on this, refer to [B2B Data]({{site.baseurl}}/user_guide/get_started/b2b_use_cases/b2b_data_models/)
 
-This example specifically demonstrates how to update a lead’s lead stage to “MQL” (Marketing Qualified Lead) after a lead crosses a certain lead threshold. This is a core part of our [B2B lead scoring workflow]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/) use case.
+This example specifically demonstrates how to update a lead’s lead stage to “MQL” (Marketing Qualified Lead) after a lead crosses a certain lead threshold. This is a core part of our [B2B lead scoring workflow]({{site.baseurl}}/user_guide/get_started/b2b_use_cases/lead_scoring/) use case.
 
 ### Step 1: Collect your `client_id` and `client_secret`
 
@@ -158,7 +158,7 @@ To create a lead in Salesforce when a user provides their email address, you can
 
 ### Lead scoring Canvas for crossing the Marketing Qualified Lead (MQL) threshold {#lead-scoring}
 
-This webhook is covered in the [lead scoring]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff) use case, but you can also check for MQLs and directly update Salesforce within the lead scoring Canvas (as opposed to creating a separate webhook campaign): 
+This webhook is covered in the [lead scoring]({{site.baseurl}}/user_guide/get_started/b2b_use_cases/lead_scoring#lead-handoff) use case, but you can also check for MQLs and directly update Salesforce within the lead scoring Canvas (as opposed to creating a separate webhook campaign): 
 
 Add a subsequent step to your user update to check if a user has crossed your defined MQL threshold. If they have crossed, update the user’s status to “MQL”, and then update Salesforce with the same “MQL” status by using this webhook template. Salesforce takes care of the rest by routing this lead to the appropriate sales teams using your defined lead routing rules.  
 
@@ -185,7 +185,7 @@ Now your Canvas flow will update users who’ve crossed your MQL threshold!
 
 ## Troubleshooting
 
-These workflows have limited debugging capability within Salesforce, so we recommend referring to the Braze [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab#message-activity-log) to find out why a Webhook failed and if any errors occurred.
+These workflows have limited debugging capability within Salesforce, so we recommend referring to the Braze [Message Activity Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log#message-activity-log) to find out why a Webhook failed and if any errors occurred.
 
 For example, an error caused by an invalid URL used for oAuth token retrieval would display as `https://[insert_instance_name].my.salesforce.com/services/oauth2/token is not a valid URL`.
 

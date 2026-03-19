@@ -224,7 +224,7 @@ Braze will work with you to collect all the necessary details to provision your 
 The setup timeline depends on the provisioning country. Typically, long codes and toll-free numbers take between 1-4 weeks to be approved.
 
 {% alert important %}
-All customers who currently have and/or use US long codes to send to US customers are required to register their long codes. To read more about the specifics of US A2P 10DLC registration and why it’s required, visit our dedicated [10DLC article]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/).
+All customers who currently have and/or use US long codes to send to US customers are required to register their long codes. To read more about the specifics of US A2P 10DLC registration and why it’s required, visit our dedicated [10DLC article]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc/).
 {% endalert %}
 
 {% endtab %}

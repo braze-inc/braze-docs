@@ -148,6 +148,6 @@ Refer to the following examples for how and why each alert type is used in our d
 
 {% multi_lang_include alerts/warning_alerts.md alert='Canvas race condition audience trigger' %}
 
-* **Article:** [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)
+* **Article:** [Create a Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/)
 * **Use case:** Lists the information that may cause the feature to not work. Details how the intended audience may not receive the campaign or enter the Canvas.
 * **Alert reasoning:** The Warning alert is used here to note how the feature may work incorrectly. This information is best relayed using a Warning alert as opposed to an Important alert because the information is critical and may result in breaking the Canvas delivery.

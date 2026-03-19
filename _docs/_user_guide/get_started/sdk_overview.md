@@ -24,23 +24,23 @@ Because this functionality comes default from Braze, your developers are freed u
 
 To incorporate an SDK into your app or site, someone will need to add the SDK's code to the larger overall code base powering that application. This means your Engineering team will be involved, essentially tying our apps together so that information and actions flow between them. But although your developers are involved, the SDK is designed to be lightweight and user-friendly to integrate. 
 
-For the sake of saving you time and ensuring a smooth integration, we recommend you and your Engineering team set up your custom events, custom attributes, and the SDK at the same time. Learn more about the steps that your Marketing and Engineering teams will need to think through together by reading our [implementation article]({{site.baseurl}}/user_guide/getting_started/integration/). 
+For the sake of saving you time and ensuring a smooth integration, we recommend you and your Engineering team set up your custom events, custom attributes, and the SDK at the same time. Learn more about the steps that your Marketing and Engineering teams will need to think through together by reading our [implementation article]({{site.baseurl}}/user_guide/get_started/integrations/). 
 
 ## Data aggregation
 
-The Braze SDK automatically captures user-level data, giving you key metrics for your app and user base. Group similar apps into a single workspace (for example, iOS and Android versions together) to view collected data across platforms and build a complete picture of user activity. See the article on the [Home page]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) for more information.
+The Braze SDK automatically captures user-level data, giving you key metrics for your app and user base. Group similar apps into a single workspace (for example, iOS and Android versions together) to view collected data across platforms and build a complete picture of user activity. See the article on the [Home page]({{site.baseurl}}/user_guide/analytics/dashboards/home/) for more information.
 
 ## In-app messaging
 
-Use the SDK to compose and send in-app messages directly. You can choose slideup, modal, or fullscreen messages based on your campaign strategy. For composition details, refer to [Create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
+Use the SDK to compose and send in-app messages directly. You can choose slideup, modal, or fullscreen messages based on your campaign strategy. For composition details, refer to [Create an in-app message]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/).
 
 ![Push displayed on a web browser]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
 ## Push notifications
 
-Push notifications are another great option to engage with your users and are especially useful to handle time-sensitive calls to action. Mobile push notifications appear on your users' devices, and web push notifications appear even when your site is not open. For specifics on using push notifications, see our [push notification article]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/).
+Push notifications are another great option to engage with your users and are especially useful to handle time-sensitive calls to action. Mobile push notifications appear on your users' devices, and web push notifications appear even when your site is not open. For specifics on using push notifications, see our [push notification article]({{site.baseurl}}/user_guide/channels/push/).
 
-Users of your website or app need to opt-in to receive push notifications. See [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) for more details. 
+Users of your website or app need to opt-in to receive push notifications. See [push priming]({{site.baseurl}}/user_guide/channels/push/best_practices/push_primer_messages/) for more details. 
 
 ## Segmentation and delivery rules
 

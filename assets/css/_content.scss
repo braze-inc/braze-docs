@@ -741,6 +741,22 @@ table td code.highlighter-rouge {
 	}
 }
 
+/* Definitions table: prevent awkward line breaks in support columns and definition column */
+table.definitions-table {
+	th:nth-child(3),
+	th:nth-child(4),
+	th:nth-child(5),
+	td:nth-child(3),
+	td:nth-child(4),
+	td:nth-child(5) {
+		white-space: nowrap;
+	}
+	th:nth-child(2),
+	td:nth-child(2) {
+		min-width: 12rem;
+	}
+}
+
 code {
   font-size: 14px;
   font-family: $braze-code;
