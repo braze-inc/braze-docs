@@ -302,7 +302,7 @@ The `{% random %}` tag returns a random number. You can use it for A/B-style log
 | Tag | Description |
 |-------|--------------|
 | `{% random %}` | A float between 0 and 1 (inclusive of 0, exclusive of 1). |
-| `{% random 10 %}` (integer argument) | An integer from 0 up to and including the given integer. For example, `{% random 10 %}` returns an integer from 0 to 10. |
+| `{% random 10 %}` (integer argument) | An integer ranging from 0 up to, but not including, the specified integer. For example, `{% random 10 %}` returns an integer from 0 to 9. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
