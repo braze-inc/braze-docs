@@ -134,16 +134,14 @@ The archive of historical event data in Snowflake goes back to April 2019. In th
 
 {% multi_lang_include partners/snowflake_pii_gdpr.md %}
 
-### Querying shared data and incremental loads
+### Querying shared data: `TIME` and query performance
 
-Event data in the data sharing views (for example, `USERS_BEHAVIORS_CUSTOMEVENT_SHARED`) is **clustered on the `TIME` field**. That supports **general analytical queries** where you filter by **when the event took place**—use `TIME` for those filters. `TIME` is the Unix timestamp at which the event happened.
+Event data in the data sharing views (for example, `USERS_BEHAVIORS_CUSTOMEVENT_SHARED`) is **clustered on the `TIME` field**. When you filter by **when the event occurred**, use **`TIME`** as the preferred filter. Queries that restrict rows using **`TIME`** are generally **more performant** than queries that filter on **`SF_CREATED_AT`**, because clustering aligns with event time.
 
-| Field | Meaning | When to use it |
-| ----- | ------- | ---------------- |
-| `TIME` | Unix timestamp when the event occurred. Aligns with table clustering. | **Analytics and reporting.** Filter on `TIME` when you care about event occurrence in a calendar or business sense (for example, events in the last seven days). |
-| `SF_CREATED_AT` | Timestamp when the row was loaded into Snowflake (ingestion time). | **Incremental pipelines.** Watermark on `SF_CREATED_AT` (for example, `WHERE SF_CREATED_AT > {last_max}`) so each run picks up **newly loaded** rows. Don't rely on `TIME` alone as a watermark—events can be **ingested long after they occurred**, so `TIME` does not track "what's new in the share" the way load time does. |
-
-For more detail, see the [Snowflake Data Sharing FAQs]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/faqs/#incremental-pipelines-and-time-vs-sf-created-at).
+| Field | Meaning |
+| ----- | ------- |
+| `TIME` | Unix timestamp at which the event happened. Prefer this when filtering by occurrence time. |
+| `SF_CREATED_AT` | Timestamp when the row was loaded into Snowflake (ingestion time). |
 
 ### Speed, performance, cost of queries
 

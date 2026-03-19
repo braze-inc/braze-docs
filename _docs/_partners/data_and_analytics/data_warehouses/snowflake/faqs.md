@@ -9,24 +9,6 @@ description: "This article answers frequently asked questions about Snowflake da
 
 # Frequently asked questions
 
-### Why does my incremental pipeline sometimes process far more rows than expected? {#incremental-pipelines-and-time-vs-sf-created-at}
-
-Shared data is exposed through **non-materialized** views over Braze's underlying Snowflake tables. The views do not get "refreshed" as a separate step; they reflect the current underlying data.
-
-If something other than `SF_CREATED_AT` drives your watermark (for example, only `TIME`), you can see surprising batch sizes: events are often **ingested much later** than they occurred, so **event time** and **load time** diverge. That is why Braze recommends **`SF_CREATED_AT` for incremental extraction**, not `TIME`. For more on clustering and when to use each field, see [Querying shared data and incremental loads]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/#querying-shared-data-and-incremental-loads) on the main Snowflake page.
-
-### How should I design my incremental pipeline?
-
-Watermark incremental loads on **`SF_CREATED_AT`** (when the row was loaded into Snowflake), for example `WHERE SF_CREATED_AT > {last_max_sf_created_at}`. Events can arrive long after they occurred, so **`TIME` is a poor watermark** for pipelines that need every new row since the last run—using `TIME` alone can miss late-arriving data or force awkward replays.
-
-Use **`TIME`** when you are **filtering for analytics** (for example, "events that happened in the last seven days"). Event data is **clustered on `TIME`** so those queries perform well. That clustering supports analytical use cases where you care about **when the event took place**, not ingestion order.
-
-### Can SF_CREATED_AT change over time?
-
-No. `SF_CREATED_AT` is set when the row is first loaded into Snowflake (ingestion time). After that, it does **not** change—once data has landed in Snowflake, it is settled.
-
-Procedures that copy from the share into your own tables (for example, the backup procedure in [Snowflake data retention]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/data_retention/)) use `SF_CREATED_AT` to avoid inserting the same rows again because each row keeps a fixed load timestamp relative to your destination table.
-
 ### Is it possible to obfuscate PII data via Snowflake data sharing?
 No, as of now that is not supported.
 
