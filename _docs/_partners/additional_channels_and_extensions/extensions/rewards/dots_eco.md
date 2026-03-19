@@ -31,7 +31,7 @@ Braze and DOTS.ECO connect customer engagement journeys to real-world impact rew
 
 Before you begin, you need the following:
 
-| Requirements | Description |
+| Prerequisite | Description |
 |---|---|
 | DOTS.ECO account | DOTS.ECO account access. |
 | DOTS.ECO credentials | The request in this article requires a DOTS.ECO app token, API key, and allocation ID. To retrieve these, contact your DOTS.ECO customer success manager. |

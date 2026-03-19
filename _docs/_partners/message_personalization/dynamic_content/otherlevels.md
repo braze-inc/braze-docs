@@ -24,7 +24,7 @@ Give your users a better experience with OtherLevels AI-powered experiences. Tra
 
 Before you start, you'll need the following:
 
-| Requirements          | Description                                                                                                                                |
+| Prerequisite          | Description                                                                                                                                |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | An OtherLevels account   | An OtherLevels account is required to take advantage of this partnership.                                                                     |
 | A Braze REST API key  | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |

@@ -1,6 +1,6 @@
 ---
-nav_title: FAQ
-article_title: Snowflake Data Sharing FAQ
+nav_title: FAQs
+article_title: Snowflake Data Sharing FAQs
 page_order: 50
 page_type: FAQ
 description: "This article answers frequently asked questions about Snowflake data sharing."

@@ -18,7 +18,7 @@ The Braze and Dixa integration offers a better view on all your users by providi
 
 Before you start, you'll need the following:
 
-| Requirements          | Description                                                                                                                                                       |
+| Prerequisite          | Description                                                                                                                                                       |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | A Dixa account        | A Dixa admin account is required to take advantage of this partnership.                                                                                           |
 | A Braze REST API key  | A Braze REST API key with `users.export.ids` and `email.status` permissions.<br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |

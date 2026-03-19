@@ -12,7 +12,7 @@ page_order: 1.3
 
 ## About predictive event analytics
 
-As soon as the prediction is done training and this page is populated, you can start using [filters]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users#filters) in segments or campaigns to begin using the outputs of the model. If you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals.
+As soon as the prediction is done training and this page is populated, you can start using [filters]({{site.baseurl}}/user_guide/brazeai/predictive_churn/messaging_users/#filters) in segments or campaigns to begin using the outputs of the model. If you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals.
 
 These are the components that make up predictive event analytics:
 
@@ -41,10 +41,10 @@ The scores and the corresponding categories will be updated according to the sch
 
 ### Accessing user-level likelihood scores
 
-To view the likelihood score for a single user, look up that user in the dashboard and go to **Engagement** > **Predictions** to see their score. To access scores and categories for many users at once, create a [segment]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/) using the [Event Likelihood Score]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#event-likelihood-score) or [Event Likelihood Category]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters#event-likelihood-category) filters, then export the users from that segment. When exporting, you can include the likelihood scores in the export data.
+To view the likelihood score for a single user, look up that user in the dashboard and go to **Engagement** > **Predictions** to see their score. To access scores and categories for many users at once, create a [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) using the [Event Likelihood Score]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-score) or [Event Likelihood Category]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-category) filters, then export the users from that segment. When exporting, you can include the likelihood scores in the export data.
 
 {% alert note %}
-While both predictive events and [predictive churn]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/) assign scores to users, there are important differences:<br><br>
+While both predictive events and [predictive churn]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) assign scores to users, there are important differences:<br><br>
 
 - **Predictive events** (purchase predictions): Consider all users in the prediction audience, regardless of whether they've performed the target event before. For example, a purchase prediction can identify users likely to make their first purchase.
 - **Predictive churn**: Only considers users who have already performed the custom event. Churn predictions identify users who have done something before and are likely to stop doing it. A user who has never logged in cannot be considered "churned" if they don't log in.
