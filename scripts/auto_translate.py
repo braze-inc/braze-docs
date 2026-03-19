@@ -327,11 +327,11 @@ ACCEPTED_PREFIXES = ("_docs/", "_includes/")
 
 
 def _relative_for_translation(fpath):
-    """Return the path relative to the repo root, adjusted for _lang/ layout.
+    """Return the path relative to ``_lang/<code>/`` for use with translation_path().
 
     _docs/ files are stored directly under _lang/<code>/ so we strip the
-    prefix.  _includes/ files keep their prefix because _lang/<code>/
-    mirrors the top-level _includes/ directory.
+    ``_docs/`` prefix.  _includes/ files keep their prefix because
+    _lang/<code>/ mirrors the top-level _includes/ directory.
     """
     if fpath.startswith("_docs/"):
         return str(Path(fpath).relative_to("_docs"))
