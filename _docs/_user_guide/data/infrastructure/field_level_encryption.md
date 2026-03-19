@@ -9,6 +9,8 @@ page_type: reference
 
 # Identifier field-level encryption
 
+> Encrypt email addresses to minimize personally identifiable information (PII) shared in Braze.
+
 {% multi_lang_include field_level_encryption_pii_description.md %}
 
 {% alert important %}
@@ -84,7 +86,7 @@ These features are not supported with identifier field-level encryption:
 
 ### User attributes object
 
-When using identifier field-level encryption with the `/users/track` endpoint, note these field details for the [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object):
+When using identifier field-level encryption with the `/users/track` endpoint, note these field details for the [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/#migrating-push-tokens):
 
 - The `email` field must be the hashed value of the email.
 - The `email_encrypted` field must be the encrypted value for the email.

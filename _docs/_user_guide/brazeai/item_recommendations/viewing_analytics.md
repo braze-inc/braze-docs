@@ -43,7 +43,7 @@ Refer to the following table for more information:
 
 | Metric              | Description |
 | ------------------- | ---------- |
-| **Personalized items**<br><br>**Most recent items** | This column lists each item in the catalog in descending order of most often recommended to users. This column also shows how many users were assigned each item by the model.<br><br>Either **Personalized** or **Most recent** items will be listed depending on the [recommendation type]({{site.baseurl}}/user_guide/brazeai/recommendations/). |
+| **Personalized items**<br><br>**Most recent items** | This column lists each item in the catalog in descending order of most often recommended to users. This column also shows how many users were assigned each item by the model.<br><br>Either **Personalized** or **Most recent** items will be listed depending on the [recommendation type]({{site.baseurl}}/user_guide/brazeai/item_recommendations/). |
 | **Most Popular items** | This column lists each item in the catalog in descending order of popularity. Popularity here refers to items in the catalog that users interact with most often in the entire workspace. Most popular is used as the fallback when personalized or most recent cannot be calculated for an individual user. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

@@ -8,5 +8,5 @@ platform:
   - Android
   - Web
 layout: redirect
-redirect_to: /docs/user_guide/engagement_tools/canvas/canvas_components/feature_flags/
+redirect_to: /docs/user_guide/messaging/canvas/canvas_components/feature_flags/
 ---

@@ -136,7 +136,7 @@ Create a target audience to receive reminders using multi-criteria segmentation.
 
 ### Step 2b: Create your message
 
-Create the reminder email message by following the steps in [Creating an email with custom HTML]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/). Use Liquid to personalize the message with data from the custom customer attribute you created (“trips”), such as in this example.
+Create the reminder email message by following the steps in [Creating an email with custom HTML]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/). Use Liquid to personalize the message with data from the custom customer attribute you created (“trips”), such as in this example.
 
 {% raw %}
 ```liquid

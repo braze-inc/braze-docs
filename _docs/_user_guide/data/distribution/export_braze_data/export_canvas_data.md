@@ -1,7 +1,7 @@
 ---
-nav_title: Export Canvas data
+nav_title: Canvas data
 article_title: Export Canvas Data
-page_order: 1
+page_order: 3
 page_type: reference
 description: "This reference article covers how to export Canvas analytics."
 tool: 
@@ -33,6 +33,6 @@ Canvas results can be exported on an individual component basis for the original
 ![User Data dropdown on the Canvas Details page.]({% image_buster /assets/img/canvas_csv_export.png %})
 
 {% alert tip %}
-For help with CSV and API exports, visit our [export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/) article.
+For help with CSV and API exports, visit our [export troubleshooting]({{site.baseurl}}/user_guide/data/distribution/export_braze_data/export_troubleshooting/) article.
 {% endalert %}
 

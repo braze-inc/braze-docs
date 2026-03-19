@@ -42,6 +42,7 @@ LANGUAGES = {
 MODEL = os.environ.get("TRANSLATION_MODEL", "claude-opus-4-6")
 MAX_TOKENS = int(os.environ.get("TRANSLATION_MAX_TOKENS", "65536"))
 MAX_FILE_KB = int(os.environ.get("TRANSLATION_MAX_FILE_KB", "130"))
+CHUNK_TARGET_KB = int(os.environ.get("TRANSLATION_CHUNK_KB", "80"))
 MAX_WORKERS = int(os.environ.get("TRANSLATION_WORKERS", "6"))
 REPO_ROOT = Path(os.environ.get("GITHUB_WORKSPACE", Path.cwd()))
 RESULTS_FILE = REPO_ROOT / "translation_results.json"
@@ -129,6 +130,96 @@ def strip_code_fences(text):
     stripped = text.strip()
     match = re.match(r"^```(?:\w*)\s*\n(.*)\n```\s*$", stripped, re.DOTALL)
     return match.group(1) if match else stripped
+
+
+def split_into_chunks(content, max_chunk_kb=None):
+    """Split a large Markdown file into translatable chunks at H2 boundaries.
+
+    Returns a list of strings.  The first element is everything before the
+    first ``## `` heading (front matter + intro).  Subsequent elements group
+    consecutive H2 sections so that each chunk stays under *max_chunk_kb*.
+    If the file has no H2 headings, falls back to a line-count split.
+    """
+    if max_chunk_kb is None:
+        max_chunk_kb = CHUNK_TARGET_KB
+    max_bytes = max_chunk_kb * 1024
+
+    parts = re.split(r'(?=\n## )', content)
+
+    if len(parts) <= 1:
+        lines = content.split('\n')
+        target_lines = max(200, len(lines) // ((len(content) // max_bytes) + 1))
+        chunks = []
+        for i in range(0, len(lines), target_lines):
+            chunks.append('\n'.join(lines[i:i + target_lines]))
+        return chunks
+
+    preamble = parts[0]
+    sections = parts[1:]
+
+    chunks = [preamble]
+    current_chunk = ""
+
+    for section in sections:
+        if current_chunk and len((current_chunk + section).encode()) > max_bytes:
+            chunks.append(current_chunk)
+            current_chunk = section
+        else:
+            current_chunk += section
+
+    if current_chunk:
+        chunks.append(current_chunk)
+
+    return chunks
+
+
+def _extract_heading_anchor(heading_line):
+    """Extract the {#anchor-id} from an H2 heading line, if present."""
+    m = re.search(r'\{#([^}]+)\}', heading_line)
+    return m.group(1) if m else None
+
+
+def match_existing_chunks(english_chunks, existing_translation):
+    """Given English chunks and a full existing translation, return a list of
+    corresponding translation chunks (one per English chunk) by matching on
+    heading anchor IDs (``{#id}``).  Falls back to heading text when anchors
+    are absent.  Returns empty strings for unmatched chunks.
+    """
+    if not existing_translation:
+        return [""] * len(english_chunks)
+
+    tr_parts = re.split(r'(?=\n## )', existing_translation)
+
+    tr_by_anchor = {}
+    tr_by_text = {}
+    for part in tr_parts:
+        m = re.match(r'\n## (.+)', part)
+        if m:
+            heading = m.group(1).strip()
+            anchor = _extract_heading_anchor(heading)
+            if anchor:
+                tr_by_anchor[anchor] = part
+            tr_by_text[heading] = part
+
+    result = []
+    for chunk in english_chunks:
+        headings = re.findall(r'^## (.+)', chunk, re.MULTILINE)
+        matched_parts = []
+        for h in headings:
+            h_stripped = h.strip()
+            anchor = _extract_heading_anchor(h_stripped)
+            if anchor and anchor in tr_by_anchor:
+                matched_parts.append(tr_by_anchor[anchor])
+            elif h_stripped in tr_by_text:
+                matched_parts.append(tr_by_text[h_stripped])
+        if matched_parts:
+            result.append("".join(matched_parts))
+        elif not headings:
+            result.append(tr_parts[0] if tr_parts else "")
+        else:
+            result.append("")
+
+    return result
 
 
 def call_claude(client, system_prompt, user_message, retries=3):
@@ -286,6 +377,56 @@ def translate_one(client, prompt, fpath, relative, english_content,
         }
 
 
+def translate_one_chunked(client, prompt, fpath, relative, english_content,
+                          lang_key, lang_info, glossary, styleguide):
+    """Translate a large file by splitting into chunks, translating each, and
+    reassembling.  Skips the second-pass review (chunks are self-contained and
+    the review would require the full file which exceeds context limits)."""
+    target = translation_path(relative, lang_info["dir"])
+    existing = target.read_text() if target.exists() else None
+
+    filtered = filter_glossary(glossary, english_content)
+    glossary_section = format_glossary_for_prompt(filtered)
+    extra_context = styleguide + glossary_section
+
+    en_chunks = split_into_chunks(english_content)
+    tr_chunks = match_existing_chunks(en_chunks, existing)
+
+    print(f"    [{lang_key}] chunked: {len(en_chunks)} chunks")
+
+    translated_chunks = []
+    try:
+        for i, (en_chunk, tr_chunk) in enumerate(zip(en_chunks, tr_chunks)):
+            print(f"    [{lang_key}] translating chunk {i + 1}/{len(en_chunks)} "
+                  f"({len(en_chunk) // 1024}KB)...")
+            translated = translate_file(
+                client, prompt, en_chunk, tr_chunk or None,
+                lang_info["name"], extra_context,
+            )
+            translated_chunks.append(translated)
+
+        full_translation = "\n".join(translated_chunks)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(full_translation)
+        return {
+            "ok": True,
+            "source": fpath,
+            "target": str(target.relative_to(REPO_ROOT)),
+            "lang": lang_key,
+            "chunked": True,
+            "chunks": len(en_chunks),
+        }
+    except Exception as exc:
+        return {
+            "ok": False,
+            "source": fpath,
+            "target": str(target.relative_to(REPO_ROOT)),
+            "lang": lang_key,
+            "error": str(exc),
+            "chunked": True,
+        }
+
+
 def cmd_translate(args):
     """Translate changed English docs into every supported language."""
     changed_path = REPO_ROOT / args.changed_files
@@ -303,73 +444,105 @@ def cmd_translate(args):
         print("No English .md files changed. Nothing to translate.")
         return
 
-    skipped = []
     translatable = []
+    chunked = []
     for fpath in md_files:
         size_kb = (REPO_ROOT / fpath).stat().st_size / 1024
         if size_kb > MAX_FILE_KB:
-            skipped.append({"source": fpath, "size_kb": round(size_kb)})
-            print(f"  SKIP: {fpath} ({round(size_kb)} KB exceeds {MAX_FILE_KB} KB limit)")
+            chunked.append(fpath)
+            print(f"  CHUNKED: {fpath} ({round(size_kb)} KB — will use chunked translation)")
         else:
             translatable.append(fpath)
 
-    if not translatable:
-        print("All changed files exceed the size limit. Nothing to translate.")
-        results = load_results()
-        results["skipped"] = skipped
-        save_results(results)
+    if not translatable and not chunked:
+        print("No translatable files found.")
         return
 
     total_tasks = len(translatable) * len(LANGUAGES)
+    chunked_tasks = len(chunked) * len(LANGUAGES)
     print(f"Translating {len(translatable)} file(s) into {len(LANGUAGES)} language(s) "
           f"({total_tasks} tasks, {MAX_WORKERS} workers)")
-    if skipped:
-        print(f"  ({len(skipped)} file(s) skipped — too large for single-pass translation)")
+    if chunked:
+        print(f"  + {len(chunked)} large file(s) via chunked translation "
+              f"({chunked_tasks} tasks, sequential)")
     print()
 
     client = _get_anthropic_client()
     prompt = load_prompt()
     results = load_results()
-    results["skipped"] = skipped
+    results["skipped"] = []
     glossaries = {lang: load_glossary(lang) for lang in LANGUAGES}
     styleguides = {lang: load_styleguide(lang) for lang in LANGUAGES}
 
-    futures = {}
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
-        for fpath in translatable:
+    # --- Normal parallel translation for files under the size limit ---
+    if translatable:
+        futures = {}
+        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
+            for fpath in translatable:
+                relative = str(Path(fpath).relative_to("_docs"))
+                english_content = (REPO_ROOT / fpath).read_text()
+
+                for lang_key, lang_info in LANGUAGES.items():
+                    future = pool.submit(
+                        translate_one, client, prompt, fpath, relative,
+                        english_content, lang_key, lang_info,
+                        glossaries[lang_key], styleguides[lang_key],
+                    )
+                    futures[future] = (relative, lang_info["name"])
+
+            done_count = 0
+            for future in as_completed(futures):
+                done_count += 1
+                relative, lang_name = futures[future]
+                result = future.result()
+
+                if result["ok"]:
+                    results["translated"].append({
+                        "source": result["source"],
+                        "target": result["target"],
+                        "lang": result["lang"],
+                    })
+                    print(f"  [{done_count}/{total_tasks}] {relative} → {lang_name} done")
+                else:
+                    results["failed"].append({
+                        "source": result["source"],
+                        "target": result["target"],
+                        "lang": result["lang"],
+                        "error": result["error"],
+                    })
+                    print(f"  [{done_count}/{total_tasks}] {relative} → {lang_name} "
+                          f"FAILED ({result['error']})")
+
+    # --- Chunked translation for large files ---
+    if chunked:
+        print(f"\nStarting chunked translation for {len(chunked)} large file(s)...")
+        for fpath in chunked:
             relative = str(Path(fpath).relative_to("_docs"))
             english_content = (REPO_ROOT / fpath).read_text()
+            print(f"\n  {fpath} ({len(english_content) // 1024}KB)")
 
             for lang_key, lang_info in LANGUAGES.items():
-                future = pool.submit(
-                    translate_one, client, prompt, fpath, relative,
-                    english_content, lang_key, lang_info,
+                result = translate_one_chunked(
+                    client, prompt, fpath, relative, english_content,
+                    lang_key, lang_info,
                     glossaries[lang_key], styleguides[lang_key],
                 )
-                futures[future] = (relative, lang_info["name"])
-
-        done_count = 0
-        for future in as_completed(futures):
-            done_count += 1
-            relative, lang_name = futures[future]
-            result = future.result()
-
-            if result["ok"]:
-                results["translated"].append({
-                    "source": result["source"],
-                    "target": result["target"],
-                    "lang": result["lang"],
-                })
-                print(f"  [{done_count}/{total_tasks}] {relative} → {lang_name} done")
-            else:
-                results["failed"].append({
-                    "source": result["source"],
-                    "target": result["target"],
-                    "lang": result["lang"],
-                    "error": result["error"],
-                })
-                print(f"  [{done_count}/{total_tasks}] {relative} → {lang_name} "
-                      f"FAILED ({result['error']})")
+                if result["ok"]:
+                    results["translated"].append({
+                        "source": result["source"],
+                        "target": result["target"],
+                        "lang": result["lang"],
+                    })
+                    print(f"    {lang_info['name']} done "
+                          f"({result.get('chunks', '?')} chunks)")
+                else:
+                    results["failed"].append({
+                        "source": result["source"],
+                        "target": result["target"],
+                        "lang": result["lang"],
+                        "error": result["error"],
+                    })
+                    print(f"    {lang_info['name']} FAILED ({result['error']})")
 
     save_results(results)
     ok = len(results["translated"])

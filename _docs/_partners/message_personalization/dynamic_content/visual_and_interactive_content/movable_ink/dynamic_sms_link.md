@@ -33,7 +33,7 @@ To allow link preview images for iOS, users must add your brand (the sender) as 
 
 #### Step 1: Create a contact card campaign
 
-After users save your brand as a contact, either through a [contact card]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/) or another method, they will be able to view **Tap to Load Preview** prompts and Movable Ink links.
+After users save your brand as a contact, either through a [contact card]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/create/contact_card/) or another method, they will be able to view **Tap to Load Preview** prompts and Movable Ink links.
 
 ![1]{: style="max-width:30%;"}
 

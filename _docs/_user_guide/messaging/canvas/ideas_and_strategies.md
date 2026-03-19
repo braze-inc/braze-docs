@@ -1,0 +1,49 @@
+---
+nav_title: Ideas and strategies
+article_title: Ideas and strategies
+layout: dev_guide
+guide_top_header: "Ideas and strategies"
+guide_top_text: "Learn more about how to test and check your Canvases with different ideas and strategies."
+page_order: 6
+
+tool: Canvas
+page_type: landing
+description: "This landing page is home to Canvas ideas and strategies, including best practices, a pre and post-launch checklist, and guidance on launching with Canvas."
+
+guide_featured_title: "Section articles"
+guide_featured_list:
+  - name: Canvas outlines
+    link: /docs/user_guide/messaging/canvas/ideas_and_strategies/canvas_outlines
+    image: /assets/img/braze_icons/git-branch-01.svg
+  - name: Best practices
+    link: /docs/user_guide/messaging/canvas/ideas_and_strategies/best_practices
+    image: /assets/img/braze_icons/book-closed.svg
+  - name: Pre and post-launch checklist
+    link: /docs/user_guide/messaging/canvas/ideas_and_strategies/pre_post_launch_checklist
+    image: /assets/img/braze_icons/check-square-broken.svg
+  - name: Launch with Canvas Flow
+    link: /docs/user_guide/messaging/canvas/ideas_and_strategies/launching_canvas_flow
+    image: /assets/img/braze_icons/git-branch-01.svg
+
+guide_menu_title: "More articles"
+guide_menu_list:
+  - name: Localization
+    link: /docs/user_guide/messaging/messaging_fundamentals/localization
+    image: /assets/img/braze_icons/globe-02.svg
+  - name: Use Braze Canvas templates
+    link: /docs/user_guide/messaging/templates/canvas_templates/braze_templates
+    image: /assets/img/braze_icons/target-04.svg
+  - name: Send test Canvases
+    link: /docs/user_guide/messaging/canvas/testing_canvases/sending_test_canvases
+    image: /assets/img/braze_icons/user-check-01.svg
+  - name: Lead scoring
+    link: /docs/user_guide/get_started/b2b_use_cases/lead_scoring
+    image: /assets/img/braze_icons/dataflow-02.svg
+  - name: Booking reminder email system
+    link: /docs/user_guide/messaging/canvas/ideas_and_strategies/booking_use_case
+    image: /assets/img/braze_icons/channel-email.svg
+  - name: eCommerce use cases
+    link: /docs/ecommerce_use_cases/
+    image: /assets/img/braze_icons/users-01.svg
+
+---

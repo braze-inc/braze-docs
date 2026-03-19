@@ -24,7 +24,7 @@ Snowflake's [Secure Data Shares](https://docs.snowflake.com/en/user-guide/data-s
 
 ## Prerequisites
 
-| Prerequisite       | Description                                                                                                                                                                                     |
+| Requirements       | Description                                                                                                                                                                                     |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Snowflake Account | You need a Snowflake account with admin-level permissions.                                                                                                                                      |
 | LiveRamp Account  | Contact your LiveRamp account team or [snowflake@liveramp.com](mailto:snowflake@liveramp.com) to discuss the required LiveRamp applications within Snowflake.                              |
