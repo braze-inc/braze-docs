@@ -24,7 +24,7 @@ Let's explore the power of Braze together.
 Braze is a customer engagement platform that helps brands of all sizes create personalized and targeted campaigns across various channels. Braze gives you the ability to listen to your customers, understand what their behavior is signaling, and then act by sending customers the right message, through the right channel, at the right time.
 
 {% alert tip %}
-Make sure to [add your colleagues to Braze]({{site.baseurl}}/user_guide/administer/global/user_management/manage_company_users/) so they can explore the platform with you.
+Make sure to [add your colleagues to Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) so they can explore the platform with you.
 {% endalert %}
 
 ## Users and segments
@@ -39,7 +39,7 @@ Segments are dynamic—users can move in and out of segments in real time based 
 
 ![]({% image_buster /assets/img/getting_started/segment.png %})
 
-For more, check out: [Getting Started: Users and segments]({{site.baseurl}}/user_guide/get_started/users_and_segments/).
+For more, check out: [Getting Started: Users and segments]({{site.baseurl}}/user_guide/getting_started/users_segments/).
 
 ## Campaigns and Canvases
 
@@ -49,7 +49,7 @@ Campaigns are best for single messages sent to a specific audience segment acros
 
 Canvases are advanced campaign workflows that allow you to automate and orchestrate personalized customer journeys across multiple channels. Within a Canvas, you can set up branching logic, delays, decision points, and conversion events to guide customers through a series of interactions. Canvases help ensure consistent and seamless communication across different touchpoints, increasing the chances of customer engagement and conversion. 
 
-For more, check out: [Getting Started: Campaigns and Canvases]({{site.baseurl}}/user_guide/get_started/campaigns_and_canvases/).
+For more, check out: [Getting Started: Campaigns and Canvases]({{site.baseurl}}/user_guide/getting_started/campaigns_canvases/).
 
 ## Workspaces
 
@@ -62,7 +62,7 @@ Example uses for workspaces include:
 - Separate businesses
 - Testing environment
 
-For more, check out: [Getting Started: Workspaces]({{site.baseurl}}/user_guide/get_started/workspaces/).
+For more, check out: [Getting Started: Workspaces]({{site.baseurl}}/user_guide/getting_started/workspaces/).
 
 ## Integrating Braze
 
@@ -78,9 +78,9 @@ Here's the Braze framework for estimating the length of your integration based o
 Need help with your migration? Our [certified Braze partners](https://www.braze.com/partners/solutions-partners) can help!
 {% endalert %}
 
-- **Email volume:** To send emails, you'll need to warm up your IPs. [IP warming]({{site.baseurl}}/user_guide/channels/email/email_setup/ip_warming/) is the process of building sender reputation with your newly assigned IP addresses. If you send less than 2-3 million emails per day, your IP warming should take 30 days or less. Keep in mind your peak sending. If you normally send 2 million emails a day but plan to send 7 million for a seasonal period, that "peak" sending is what you should warm up to. High-volume senders can use multiple IPs to speed up the warming process.
+- **Email volume:** To send emails, you'll need to warm up your IPs. [IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) is the process of building sender reputation with your newly assigned IP addresses. If you send less than 2-3 million emails per day, your IP warming should take 30 days or less. Keep in mind your peak sending. If you normally send 2 million emails a day but plan to send 7 million for a seasonal period, that "peak" sending is what you should warm up to. High-volume senders can use multiple IPs to speed up the warming process.
 - **Organizational complexity:** Our onboarding process can adapt to your business needs. Whether you're a single business unit, have a Center of Excellence, multiple independent units, or use agencies to augment your teams, Braze has experience working in all scenarios.
 - **Data infrastructure sophistication:** If you're only implementing the Braze SDK or already have a Customer Data Platform (CDP), it's possible to get everything set up in just 30 days. Using a modern CDP can speed up the process. But if you have many backend systems, tools, or databases to connect with Braze, it might take longer and need more dedicated resources to finish setup.
 
-For more, check out: [Getting Started: Integration overview]({{site.baseurl}}/user_guide/get_started/integrations/).
+For more, check out: [Getting Started: Integration overview]({{site.baseurl}}/user_guide/getting_started/integration/).
 

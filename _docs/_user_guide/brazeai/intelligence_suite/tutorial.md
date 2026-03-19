@@ -10,7 +10,7 @@ tool:
 
 # Intelligence Suite tutorial
 
-> New to the Braze Intelligence Suite? Start with this tutorial! For more general information, see [Intelligence Suite]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/).
+> New to the Braze Intelligence Suite? Start with this tutorial! For more general information, see [Intelligence Suite]({{site.baseurl}}/user_guide/brazeai/intelligence/).
 
 ## Tutorial: Quick service restaurant
 

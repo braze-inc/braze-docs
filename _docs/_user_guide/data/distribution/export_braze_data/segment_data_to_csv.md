@@ -1,7 +1,7 @@
 ---
-nav_title: Segment data
-article_title: Export Segment Data
-page_order: 4
+nav_title: Export segment data to CSV
+article_title: Export Segment Data to CSV
+page_order: 2
 page_type: reference
 description: "This reference article covers how to export segment data to CSV."
 
@@ -95,7 +95,7 @@ The following is included in your export depending on your selection.
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-For help with CSV and API exports, visit our [troubleshooting]({{site.baseurl}}/user_guide/data/distribution/export_braze_data/export_troubleshooting/) article.
+For help with CSV and API exports, visit our [troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/) article.
 {% endalert %} 
 
 ## Exporting large segments
@@ -110,7 +110,7 @@ You can split a large segment into smaller segments and then export each of the 
 {% endtab %}
 {% tab Random bucket numbers %}
 
-You can also use [random bucket numbers]({{site.baseurl}}/user_guide/messaging/ab_testing/concepts/random_bucket_numbers/) to break your user base into multiple segments, and then combine them after export. For example, if you need to break up your segment into two different segments, you can do so with the following filters:
+You can also use [random bucket numbers]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) to break your user base into multiple segments, and then combine them after export. For example, if you need to break up your segment into two different segments, you can do so with the following filters:
 - Segment 1: Random bucket number is less than 5000 (includes 0-4999)
 - Segment 2: Random bucket number is more than 4999 (includes 5000-9999)
 

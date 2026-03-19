@@ -3,7 +3,7 @@ nav_title: Cloud Data Ingestion
 article_title: Braze Cloud Data Ingestion
 alias: /cloud_ingestion/
 description: "This reference article covers Braze Cloud Data Ingestion sources and data setup recommendations."
-page_order: 1
+page_order: 0.1
 toc_headers: h2
 ---
 
@@ -78,7 +78,7 @@ For detailed information about setting up tables with these identifiers, refer t
 
 ## Data point usage
 
-For customers on data points-based billing, data point billing for Cloud Data Ingestion is equivalent to billing for updates through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track). Refer to [Data points]({{site.baseurl}}/user_guide/data/infrastructure/data_points/) for more information. 
+For customers on data points-based billing, data point billing for Cloud Data Ingestion is equivalent to billing for updates through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track). Refer to [Data points]({{site.baseurl}}/user_guide/data/data_points/) for more information. 
 
 {% alert important %}
 Braze Cloud Data Ingestion counts toward the available rate limit, so if you're sending data using another method, the rate limit is combined between the Braze API and Cloud Data Ingestion.

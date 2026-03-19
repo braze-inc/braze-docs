@@ -12,24 +12,24 @@ description: "This section provides an introduction to Decisioning Studio, and h
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Overview
-    link: /docs/user_guide/brazeai/decisioning_studio/getting_started/overview
+    link: /docs/user_guide/brazeai/decisioning_studio/getting_started/overview/
     image: /assets/img/braze_icons/list.svg
-  - name: Preparing your data sources
-    link: /docs/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources
+  - name: Preparing Your Data Sources
+    link: /docs/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources/
     image: /assets/img/braze_icons/database-01.svg
-  - name: Preparing your orchestration
-    link: /docs/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_orchestration
+  - name: Preparing Your Orchestration
+    link: /docs/user_guide/brazeai/decisioning_studio/getting_started/preparing_your_orchestration/
     image: /assets/img/braze_icons/dataflow-04.svg
-  - name: Designing decisioning agents
-    link: /docs/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents
+  - name: Designing Decisioning Agents
+    link: /docs/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/
     image: /assets/img/braze_icons/settings-01.svg
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: About Decisioning Studio
-    link: /docs/user_guide/brazeai/decisioning_studio/about
+    link: /docs/user_guide/brazeai/decisioning_studio/about/
     image: /assets/img/braze_icons/info-circle.svg
   - name: Decisioning Studio FAQ
-    link: /docs/user_guide/brazeai/decisioning_studio/faq
+    link: /docs/user_guide/brazeai/decisioning_studio/faq/
     image: /assets/img/braze_icons/annotation-question.svg
 ---

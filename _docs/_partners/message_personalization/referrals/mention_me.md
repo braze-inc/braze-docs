@@ -17,7 +17,7 @@ _This integration is maintained by Mention Me._
 
 Before you start, you'll need the following:
 
-| Requirements          | Description                                                                                                                                |
+| Prerequisite          | Description                                                                                                                                |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | A Mention Me account   | A [Mention Me](https://mention-me.com/login) account is required to take advantage of this partnership.                                                                     |
 | A Braze REST API key  | A Braze REST API key with `users.track` and `templates.email.create` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |

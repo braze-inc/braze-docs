@@ -100,7 +100,7 @@ Before you can use event property segmentation, you'll need it enabled in Braze.
 
 The custom event sent from VWO to Braze&#8212;including any event properties enabled for segmentation&#8212;will log data points in your Braze instance.
 
-### Considerations
+### Limitations
 
 Currently, this integration doesn't support real-time sync of test data. There may be a delay of up to 15 minutes for test data to appear in Braze.
 

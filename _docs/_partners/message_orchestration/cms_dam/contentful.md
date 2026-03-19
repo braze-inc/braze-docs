@@ -17,7 +17,7 @@ After you're integrated, you can use Contentful's RESTful APIs to deliver your c
 
 Before you start, you'll need the following:
 
-| Requirements          | Description                        |
+| Prerequisite          | Description                        |
 |-----------------------|------------------------------------|
 | A Contentful account | You need a Contentful account with access to the Content Delivery API. |
 | A Braze account | You need a Braze account with access to the Connected Content feature. |
