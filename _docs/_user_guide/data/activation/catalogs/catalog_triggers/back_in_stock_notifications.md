@@ -74,7 +74,7 @@ After setting up the back-in-stock feature in a catalog, follow these steps to u
 1. Set up an action-based Canvas.
 2. Select **Back in stock** as the trigger.
 3. Select the name of the catalog with the back-in-stock notifications.
-4. Continue [setting up]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) your Canvas as you would.
+4. Continue [setting up]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/) your Canvas as you would.
 
 Now, your customers can be notified when an item is back in stock.
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Data Transformation
 article_title: Data Transformation
-page_order: 0.3
+page_order: 2
 layout: dev_guide
 guide_top_header: "Data Transformation"
 guide_top_text: "Braze Data Transformation allows you to build and manage webhook integrations to automate data flow from external platforms into Braze. This newly integrated user data can then power even more sophisticated marketing use cases. Braze Data Transformation can expedite your data integration, even if you have very little coding experience, and can help replace your team's dependency on manual API calls, third-party integration tools, or even customer data platforms."
@@ -11,11 +11,11 @@ alias: /data_transformation/
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Create a Transformation
-    link: /docs/user_guide/data/unification/data_transformation/creating_a_transformation/
+  - name: Create a transformation
+    link: /docs/user_guide/data/unification/data_transformation/creating_a_transformation
     image: /assets/img/braze_icons/flip-forward.svg
-  - name: Use Cases
-    link: /docs/user_guide/data/unification/data_transformation/use_cases/
+  - name: Use cases
+    link: /docs/user_guide/data/unification/data_transformation/use_cases
     image: /assets/img/braze_icons/users-01.svg
 ---
 
@@ -67,7 +67,7 @@ While we would love for developers to use this feature as well, you don’t need
 
 Yes. You can have your transformations updating the `/users/track` endpoint with the [email address or phone number as an identifier]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-email-address).
 
-This works by using `email` or `phone` as your identifier property in the transformation code instead of `external_id` or `braze_id`. The example [transformation code]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/use_cases/#example-transformation-code) uses this functionality.
+This works by using `email` or `phone` as your identifier property in the transformation code instead of `external_id` or `braze_id`. The example [transformation code]({{site.baseurl}}/user_guide/data/unification/data_transformation/use_cases#example-transformation-code) uses this functionality.
 
 {% alert note %}
 Early access users of Braze Data Transformation who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function has been deprecated.

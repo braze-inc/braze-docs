@@ -29,7 +29,7 @@ Connect customer profiles and engagement data so that the decisioning agents you
 You typically only need to connect your data sources once, during the initial setup of Decisioning Studio. If you expand your use cases later, you may need to add new data sources.
 
 {% alert tip %}
-Any data already in the [Braze Data Platform]({{site.baseurl}}/user_guide/data/braze_data_platform) is automatically available to Decisioning Studio.
+Any data already in the [Braze Data Platform]({{site.baseurl}}/user_guide/data/) is automatically available to Decisioning Studio.
 {% endalert %}
 
 For detailed guidance, see the documentation for your tier of Decisioning Studio:

@@ -20,7 +20,7 @@ Before setting up a new transformation in Braze, we recommend reviewing the supp
 
 Before you start, you'll need the following:
 
-| Prerequisite             | Description                                                               |
+| Requirements             | Description                                                               |
 |---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | A Front account            | A Front account is required to take advantage of this partnership.|
 | Braze Data Transformation Webhook URL | [Braze Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview/) will be used to reformat the incoming webhook from Front so it can be accepted by the Braze /users/track endpoint.|

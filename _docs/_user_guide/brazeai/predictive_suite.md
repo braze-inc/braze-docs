@@ -12,10 +12,10 @@ guide_top_text: "The Braze Predictive Suite puts machine learning tools directly
 guide_featured_title: "Topics"
 guide_featured_list:
 - name: Predictive Churn
-  link: /docs/user_guide/brazeai/predictive_suite/predictive_churn/
+  link: /docs/user_guide/brazeai/predictive_suite/predictive_churn
   image: /assets/img/braze_icons/stars-01.svg
 - name: Predictive Events
-  link: /docs/user_guide/brazeai/predictive_suite/predictive_events/
+  link: /docs/user_guide/brazeai/predictive_suite/predictive_events
   image: /assets/img/braze_icons/calendar-check-01.svg
 
 ---

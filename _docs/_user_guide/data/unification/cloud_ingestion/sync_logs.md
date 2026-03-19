@@ -1,7 +1,7 @@
 ---
 nav_title: Sync logs and observability
 article_title: Sync logs and observability
-page_order: 10
+page_order: 8
 page_type: reference
 description: "This page provides an overview of the observability features available in CDI."
 ---

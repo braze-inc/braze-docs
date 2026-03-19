@@ -11,10 +11,10 @@ page_order: 2
 
 ## About rules-based item recommendations
 
-A rules-based recommendation engine uses user data and product information to suggest relevant items to users within messages. It uses [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) and either Braze [catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs/) or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) to dynamically personalize content based on user behavior and attributes.
+A rules-based recommendation engine uses user data and product information to suggest relevant items to users within messages. It uses [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/) and either Braze [catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs/) or [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/) to dynamically personalize content based on user behavior and attributes.
 
 {% alert important %}
-Rules-based recommendations are based on fixed logic that you must manually set. This means your recommendations won’t adjust to a user's purchase history and tastes unless you update the logic.<br><br>To create personalized AI recommendations that automatically adjust to a user’s history, check out [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
+Rules-based recommendations are based on fixed logic that you must manually set. This means your recommendations won’t adjust to a user's purchase history and tastes unless you update the logic.<br><br>To create personalized AI recommendations that automatically adjust to a user’s history, check out [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/ai/).
 {% endalert %}
 
 ## Recommendation engine options
@@ -213,7 +213,7 @@ Replace the following:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-This is a basic example and you might need to modify it further based on your specific needs and data structure. For more detailed guidance, refer to the [Liquid documentation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) or consult with a developer.
+This is a basic example and you might need to modify it further based on your specific needs and data structure. For more detailed guidance, refer to the [Liquid documentation]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/) or consult with a developer.
 {% endalert %}
 
 ### Example
