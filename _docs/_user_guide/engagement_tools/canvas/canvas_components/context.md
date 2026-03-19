@@ -33,7 +33,7 @@ You can set context variables in two ways:
 - **At Canvas entry:** Data from the event or API trigger can automatically populate context variables.
 - **In a Context step:** Define or update context variables manually by adding a Context step.
 
-Each context variable requires a name, a data type, and a value (set using Liquid or the Add Personalization tool). When defined, you can reference context variables throughout the Canvas using Liquid, such as {% raw %}`{{context.${flight_time}}}`{% endraw %}.
+Each context variable requires a name, a data type, and a value (set using Liquid or the Add Personalization tool). When defined, you can reference context variables throughout the Canvas using Liquid, such as {% raw %}`{{context.${flight_time}}}`{% endraw %}. In the Canvas steps, you can also select a context variable from a dropdown instead of typing Liquid. For details, see [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#banner-expiration-in-app-message-expiration-and-action-path-delays).
 
 Each Canvas entry redefines context variables based on the latest entry data and Canvas setup, allowing users to have multiple active journeys with their own context. For example, if a customer has two upcoming flights, they'll have two separate journey states running simultaneously&#8212;each with its own flight-specific context variables like departure time and destination. This allows you to send personalized reminders about their 2 pm flight to New York while sending different updates about their 8 am flight to Los Angeles tomorrow, so that each message stays relevant to the specific booking.
 
@@ -83,7 +83,7 @@ To define a context variable:
 5. (Optional) To add additional variables, select **Add Context variable** and repeat steps 1-4.
 6. When you're finished, select **Done**.
 
-Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
+Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. Where supported, you can also choose a context variable from a **dropdown** in the step editor. For a full walkthrough, see [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
 {% alert important %}
 When referencing context variables, always use the format {% raw %}`{{context.${variable_name}}}`{% endraw %}.
