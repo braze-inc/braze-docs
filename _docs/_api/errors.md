@@ -10,8 +10,6 @@ page_order: 2.3
 
 > This reference article covers the various errors and server responses that can come up while using the Braze API and how to troubleshoot them.
 
-{% raw %}
-
 ## Server responses
 
 If your POST payload was accepted by our servers, then successful messages are met with the following response:
@@ -69,11 +67,9 @@ The status code element of a server response is a 3-digit number where the first
 
 The following status codes and associated error messages are returned if your request encounters a fatal error.
 
-{% endraw %}
 {% alert warning %}
 All of the following error codes indicate that no messages are sent.
 {% endalert %}
-{% raw %}
 
 | Error Code | Description |
 |---|---|
@@ -101,5 +97,3 @@ All of the following error codes indicate that no messages are sent.
 | `415 Unsupported Media Type` | The `Content-Type` request header is missing or incorrect. In the **Settings** page, add `Content-Type` with a value of `application/json`. |
 | `429 Rate Limited` | Over rate limit. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% endraw %}
