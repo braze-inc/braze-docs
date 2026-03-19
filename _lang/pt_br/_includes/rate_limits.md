@@ -32,92 +32,92 @@ Aplicamos um limite de frequência de 1.000 solicitações por minuto a esse end
 <!---/users/track-->
 
 {% elsif include.endpoint == "users track" %}
-A partir de 28 de outubro de 2024, aplicaremos um limite de velocidade básico de 3.000 solicitações por três segundos a esse endpoint para todos os clientes. Cada solicitação `/users/track` pode conter até 75 objetos de evento, 75 objetos de atribuição e 75 objetos de compra. Cada objeto (evento, atributo e vetores de compra) pode atualizar um usuário cada. No total, isso significa que você pode atualizar até 225 usuários em uma única chamada. Além disso, é possível atualizar um único perfil de usuário com vários objetos.
+A partir de 28 de outubro de 2024, aplicamos um limite de velocidade base de 3.000 solicitações a cada três segundos para este endpoint para todos os clientes. Cada solicitação `/users/track` pode conter até 75 objetos de evento, 75 objetos de atribuição e 75 objetos de compra. Cada objeto (evento, atributo e vetores de compra) pode atualizar um usuário cada. No total, isso significa que você pode atualizar até 225 usuários em uma única chamada. Além disso, você pode atualizar um único perfil de usuário com múltiplos objetos.
 
 Limites diferentes se aplicam aos clientes que adquiriram **Usuários ativos mensais - CY 24-25**. Para obter detalhes sobre esses limites, consulte [Usuários ativos mensais - limites do CY 24-25]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau).
 
-Consulte nossa página sobre [limites de frequência da API]({{site.baseurl}}/api/api_limits/) para obter detalhes e entre em contato com o gerente de sucesso do cliente se precisar aumentar seu limite.
+Veja nossa página sobre [limites de taxa da API]({{site.baseurl}}/api/api_limits/) para detalhes e entre em contato com seu gerente de sucesso do cliente se precisar aumentar seu limite.
 
 <!---/users/export/ids-->
 
 {% elsif include.endpoint == "users export ids" %}
 Se sua integração com a Braze ocorreu em 22 de agosto de 2024 ou após essa data, esse endpoint tem um limite de frequência de 250 solicitações por minuto, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
-Você também pode aumentar o limite de frequência desse ponto de extremidade para 40 solicitações por segundo, atendendo aos seguintes requisitos:
+Você também pode aumentar o limite de taxa deste endpoint para 40 solicitações por segundo atendendo aos seguintes requisitos:
 
-- Seu espaço de trabalho tem o limite de frequência padrão (250 solicitações por minuto) ativado. Entre em contato com seu gerente de conta Braze para obter mais assistência na remoção de qualquer limite de frequência pré-existente que possa ter.
+- Seu espaço de trabalho tem o limite de taxa padrão (250 solicitações por minuto) habilitado. Entre em contato com seu gerente de conta da Braze para mais assistência na remoção de qualquer limite de taxa pré-existente que você possa ter.
 - Sua solicitação inclui o parâmetro `fields_to_export` para listar todos os campos que você deseja receber.
 
 {% alert important %}
-Se você incluir `canvases_received` ou `campaigns_received` no parâmetro `fields_to_export`, sua solicitação não será elegível para o limite de frequência mais rápido. Recomendamos incluí-los em sua solicitação apenas se você tiver um caso de uso específico para eles.
+Se você incluir `canvases_received` ou `campaigns_received` no parâmetro `fields_to_export`, sua solicitação não será elegível para o limite de taxa mais rápido. Recomendamos incluir esses apenas em sua solicitação se você tiver um caso de uso específico para eles.
 {% endalert %}
 
 <!---/users/delete-->
 
 {% elsif include.endpoint == "users delete" %}
-Aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/alias/new`, `/users/identify`, `/users/merge` e `/users/alias/update`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de taxa compartilhado de 20.000 solicitações por minuto para este endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/alias/new`, `/users/identify`, `/users/merge` e `/users/alias/update`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/alias/new-->
 
 {% elsif include.endpoint == "users alias new" %}
-Aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/identify`, `/users/merge` e `/users/alias/update`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de taxa compartilhado de 20.000 solicitações por minuto para este endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/identify`, `/users/merge` e `/users/alias/update`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/alias/update-->
 
 {% elsif include.endpoint == "users alias update" %}
-Aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/alias/new`, `/users/identify` e `/users/merge`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de taxa compartilhado de 20.000 solicitações por minuto para este endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/alias/new`, `/users/identify` e `/users/merge`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/identify-->
 
 {% elsif include.endpoint == "users identify" %}
-Aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/alias/new`, `/users/merge` e `/users/alias/update`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de taxa compartilhado de 20.000 solicitações por minuto para este endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/alias/new`, `/users/merge` e `/users/alias/update`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/users/merge-->
 
 {% elsif include.endpoint == "users merge" %}
-Aplicamos um limite de frequência compartilhada de 20.000 solicitações por minuto a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/alias/new`, `/users/identify` e `/users/alias/update`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de taxa compartilhado de 20.000 solicitações por minuto para este endpoint. Esse limite de frequência é compartilhado com os endpoints `/users/delete`, `/users/alias/new`, `/users/identify` e `/users/alias/update`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/custom_attributes-->
 
 {% elsif include.endpoint == "custom_attributes" %}
-Aplicamos um limite de frequência compartilhada de 1.000 solicitações por hora a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/events`, `/events/list` e `/purchases/product_list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de taxa compartilhado de 1.000 solicitações por hora para este endpoint. Esse limite de frequência é compartilhado com os endpoints `/events`, `/events/list` e `/purchases/product_list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/events-->
 
 {% elsif include.endpoint == "events" %}
-Aplicamos um limite de frequência compartilhada de 1.000 solicitações por hora a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/custom_attributes`, `/events/list` e `/purchases/product_list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de taxa compartilhado de 1.000 solicitações por hora para este endpoint. Esse limite de frequência é compartilhado com os endpoints `/custom_attributes`, `/events/list` e `/purchases/product_list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/events/list-->
 
 {% elsif include.endpoint == "events list" %}
-Aplicamos um limite de frequência compartilhada de 1.000 solicitações por hora a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/custom_attributes`, `/events` e `/purchases/product_list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de taxa compartilhado de 1.000 solicitações por hora para este endpoint. Esse limite de frequência é compartilhado com os endpoints `/custom_attributes`, `/events` e `/purchases/product_list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/purchases/product_list-->
 
 {% elsif include.endpoint == "purchases product list" %}
-Aplicamos um limite de frequência compartilhada de 1.000 solicitações por hora a esse endpoint. Esse limite de frequência é compartilhado com os endpoints `/custom_attributes`, `/events` e `/events/list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Aplicamos um limite de taxa compartilhado de 1.000 solicitações por hora para este endpoint. Esse limite de frequência é compartilhado com os endpoints `/custom_attributes`, `/events` e `/events/list`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
 <!---/messages/send-->
 <!---/campaigns/trigger/send-->
 <!---/canvas/trigger/send-->
 
 {% elsif include.endpoint == "send endpoints" %}
-Ao usar filtros do Connected Audience em sua solicitação, aplicamos um limite de frequência de 250 solicitações por minuto a esse endpoint. Caso contrário, se estiver especificando um `external_id`, esse endpoint terá um limite de frequência padrão de 250.000 solicitações por hora compartilhadas entre `/messages/send`, `/campaigns/trigger/send` e `/canvas/trigger/send`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
+Ao usar filtros de Público Conectado em sua solicitação, aplicamos um limite de taxa de 250 solicitações por minuto para este endpoint. Caso contrário, se estiver especificando um `external_id`, esse endpoint terá um limite de frequência padrão de 250.000 solicitações por hora compartilhadas entre `/messages/send`, `/campaigns/trigger/send` e `/canvas/trigger/send`, conforme documentado em [Limites de frequência da API]({{site.baseurl}}/api/api_limits/).
 
-Os pontos de extremidade do Braze suportam solicitações de API em lote. Uma única solicitação para os endpoints de envio de mensagens pode alcançar qualquer um dos seguintes itens:
+Os endpoints da Braze suportam agrupamento de solicitações da API. Uma única solicitação para os endpoints de envio de mensagens pode alcançar qualquer um dos seguintes itens:
 
 - Até 50 sites específicos `external_ids`, cada um com parâmetros de mensagens individuais
-- Um segmento de público de qualquer tamanho, definido na solicitação como um objeto Connected Audience
+- Um segmento de público de qualquer tamanho, definido na solicitação como um objeto de Público Conectado.
 
 <!---/transactional/v1/campaigns/{campaign_id}/send -->
 
 {% elsif include.endpoint == "transactional email" %}
-O ponto de extremidade `/transactional/v1/campaigns/{campaign_id}/send` é um ponto de extremidade pago em unidades por hora (por exemplo, 50.000 por hora, dependendo do seu pacote). Não há limite de frequência separado por ponto de extremidade: você pode enviar além do volume alocado, mas somente o volume alocado é coberto pelo SLA. As solicitações a esse endpoint contam para seu [limite geral de frequência da API externa]({{site.baseurl}}/api/api_limits/). Se você exceder esse limite (por exemplo, 250.000 solicitações por hora em todos os endpoints), o Braze retornará 429 e as solicitações serão limitadas. A contagem do volume transacional é redefinida a cada hora, portanto, após uma hora, outra alocação estará disponível. Dentro do volume coberto pelo SLA, 99,9% dos e-mails serão enviados em menos de um minuto.
+O endpoint `/transactional/v1/campaigns/{campaign_id}/send` é um endpoint pago em unidades por hora (por exemplo, 50.000 por hora, dependendo do seu pacote). Não há limite de taxa separado por endpoint: você pode enviar além do seu volume alocado, mas apenas o volume alocado é coberto pelo SLA. As solicitações para este endpoint contam para o seu [limite geral de taxa da API externa]({{site.baseurl}}/api/api_limits/). Se você exceder esse limite (por exemplo, 250.000 solicitações por hora em todos os endpoints), a Braze retorna 429 e as solicitações são limitadas. A contagem do volume transacional é redefinida a cada hora, então após uma hora, outra alocação está disponível. Dentro do volume coberto pelo SLA, 99,9% dos e-mails serão enviados em menos de um minuto.
 
 <!---/sends/id/create-->
 
 {% elsif include.endpoint == "sends id create" %}
-Você pode criar até 100 identificadores de envio personalizados por dia usando esse endpoint para um determinado espaço de trabalho. Cada combinação de `send_id` e `campaign_id` que você criar contará para o seu limite diário. Os cabeçalhos de resposta de qualquer solicitação válida incluem o status do limite de frequência atual. Consulte [os limites de frequência da API]({{site.baseurl}}/api/api_limits/) para obter detalhes.
+Você pode criar até 100 identificadores de envio personalizados por dia usando este endpoint para um determinado espaço de trabalho. Cada combinação de `send_id` e `campaign_id` que você criar contará para o seu limite diário. Os cabeçalhos de resposta para qualquer solicitação válida incluem o status atual do limite de frequência. Veja [limites de frequência da API]({{site.baseurl}}/api/api_limits/) para mais detalhes.
 
 <!---/subscription/status/set-->
 {% elsif include.endpoint == "subscription status set" %}
@@ -141,7 +141,7 @@ Esse endpoint tem um limite de frequência de 100 solicitações por minuto.
 
 <!---Additional if statement for Messaging endpoints-->
 
-{% if include.category == "endpoints de mensagens" %}
+{% if include.category == "message endpoints" %}
 
 Os endpoints da Braze aceitam [solicitações de API em lote]({{site.baseurl}}/api/api_limits/#batching-api-requests). Uma única solicitação para os endpoints de envio de mensagens pode alcançar qualquer um dos seguintes itens:
 
@@ -151,7 +151,7 @@ Os endpoints da Braze aceitam [solicitações de API em lote]({{site.baseurl}}/a
 
 {% endif %}
 
-{% if include.category == "enviar endpoints de mensagens" %}
+{% if include.category == "send messages endpoints" %}
 
 Os endpoints da Braze aceitam [solicitações de API em lote]({{site.baseurl}}/api/api_limits/#batching-api-requests). Uma única solicitação para os endpoints de envio de mensagens pode alcançar qualquer um dos seguintes itens:
 
@@ -164,7 +164,7 @@ Os endpoints da Braze aceitam [solicitações de API em lote]({{site.baseurl}}/a
 
 {% if include.endpoint == "translation endpoints" %}
 
-Esse endpoint tem um limite de frequência de 250.000 solicitações por minuto.
+Este endpoint tem um limite de frequência de 250.000 solicitações por minuto.
 
 {% endif %}
 

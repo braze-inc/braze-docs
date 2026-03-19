@@ -29,7 +29,7 @@ L'identification d'un utilisateur nécessite qu'une adresse `external_id` soit i
 - `emails_to_identify`
 - `phone_numbers_to_identify`
 
-S'il n'existe pas d'utilisateur possédant ce `external_id`, le `external_id` est ajouté à l'enregistrement de l'utilisateur aliasé, et l'utilisateur est considéré comme identifié. Les utilisateurs ne peuvent avoir qu'un seul alias pour un libellé donné. Si un utilisateur existe déjà sur le site `external_id` et qu'il dispose d'un alias existant avec le même libellé que le profil alias uniquement, les profils utilisateurs ne sont pas combinés.
+S'il n'existe aucun utilisateur avec cet identifiant`external_id`, celui-ci`external_id`est ajouté à l'enregistrement de l'utilisateur aliasé, et l'utilisateur est considéré comme identifié. Les utilisateurs ne peuvent disposer que d'un seul alias pour une étiquette spécifique. Si un utilisateur existe déjà avec le`external_id`  et dispose d'un alias existant avec le même libellé d'alias que le profil alias uniquement, les profils utilisateur ne sont pas fusionnés.
 
 {% alert tip %}
 Pour éviter toute perte inattendue de données lors de l'identification des utilisateurs, nous vous recommandons vivement de vous reporter d'abord aux [meilleures pratiques en]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) matière de [collecte de données]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) pour savoir comment capturer les données des utilisateurs lorsque des informations sur les utilisateurs sous forme d'alias seulement sont déjà présentes.
@@ -37,7 +37,7 @@ Pour éviter toute perte inattendue de données lors de l'identification des uti
 
 ### Comportement de fusion
 
-Par défaut, cet endpoint fusionne la liste suivante de champs trouvés **exclusivement** sur l'utilisateur anonyme vers l'utilisateur identifié.
+Par défaut, cet endpoint fusionne la liste suivante de champs trouvés **exclusivement** sur l'utilisateur anonyme avec l'utilisateur identifié.
 
 {% details List of fields that are merged %}
 - Prénom
@@ -51,28 +51,28 @@ Par défaut, cet endpoint fusionne la liste suivante de champs trouvés **exclus
 - Pays
 - Langue
 - Décompte des sessions (la somme des sessions des deux profils)
-- Date de la première session (Braze choisit la première des deux dates)
-- Date de la dernière session (Braze choisit la dernière des deux dates)
+- Date de la première session (Braze sélectionne la date la plus proche des deux dates)
+- Date de la dernière session (Braze sélectionne la date la plus récente parmi les deux dates)
 - Attributs personnalisés
 - Données d'événements personnalisés et d'événements d'achat
-- Propriétés d'événement personnalisé et d'achat pour la segmentation "X fois dans Y jours" (où X<=50 et Y<=30)
+- Propriétés d'événement personnalisé et d'événement d'achat pour la segmentation « X fois en Y jours » (oùX<=50et Y<=30)
 - Résumé des événements personnalisés pouvant être segmentés
   - Nombre d’événements (la somme des deux profils)
-  - Date à laquelle l'événement s'est produit pour la première fois (Braze choisit la première des deux dates)
-  - Dernière date à laquelle l'événement s'est produit (Braze choisit la date la plus tardive des deux)
+  - Date à laquelle l'événement s'est produit pour la première fois (Braze sélectionne la date la plus ancienne parmi les deux dates)
+  - Dernière occurrence de l'événement (Braze sélectionne la date la plus récente parmi les deux dates)
 - Total des achats intégrés à l’application en centimes (la somme des deux profils)
 - Nombre total d’achats (la somme des deux profils)
-- Date du premier achat (Braze choisit la première des deux dates)
-- Date du dernier achat (Braze choisit la date la plus tardive des deux dates)
+- Date du premier achat (Braze sélectionne la date la plus ancienne parmi les deux dates)
+- Date du dernier achat (Braze sélectionne la date la plus récente parmi les deux dates)
 - Résumés des applications
-- Last_X_at champs (Braze met à jour les champs si les champs du profil orphelins sont plus récents)
+- Last_X_at champs (Braze met à jour les champs si les champs du profil orphelin sont plus récents)
 - Résumés de campagne (Braze sélectionne les champs de date les plus récents)
 - Résumés du flux de travail (Braze sélectionne les champs de date les plus récents)
 - Message et historique d’engagement du message
 - Nombre d’événements d’achats et personnalisés, ainsi que les horodatages correspondant à la première et dernière dates
-  - Ces champs fusionnés mettent à jour les filtres "pour X événements dans Y jours". Pour les événements d’achat, ces filtres incluent « nombre d’achats en Y jours » et « argent dépensé au cours des Y derniers jours ».
+  - Ces champs fusionnés mettent à jour les filtres « pour X événements en Y jours ». Pour les événements d’achat, ces filtres incluent « nombre d’achats en Y jours » et « argent dépensé au cours des Y derniers jours ».
 - Données de session si l'application existe sur les deux profils utilisateurs.
-  - Par exemple, si notre utilisateur cible n'a pas de résumé d'application pour "ABCApp" mais que notre utilisateur d'origine en a un, l'utilisateur cible a le résumé d'application "ABCApp" sur son profil après la fusion.
+  - Par exemple, si notre utilisateur cible ne dispose pas d'un résumé d'application pour « ABCApp », mais que notre utilisateur d'origine en possède un, l'utilisateur cible aura le résumé d'application « ABCApp » sur son profil utilisateur après la fusion.
 {% enddetails %}
 
 ## Conditions préalables
@@ -117,7 +117,7 @@ L'un des éléments suivants est requis : `aliases_to_identify`, `emails_to_iden
 
 Si une adresse e-mail ou un numéro de téléphone est spécifié comme identifiant, vous devez également inclure `prioritization` dans l'identifiant.
 
-`prioritization` doit être un tableau spécifiant l'utilisateur à fusionner si plusieurs utilisateurs ont été trouvés. `prioritization` est un tableau ordonné, ce qui signifie que si plus d'un utilisateur correspond à un ordre de priorité, la fusion n'a pas lieu.
+Il`prioritization`doit s'agir d'un tableau spécifiant quel utilisateur fusionner si plusieurs utilisateurs sont trouvés.`prioritization`Il s'agit d'un tableau ordonné, ce qui signifie que si plusieurs utilisateurs correspondent à une priorité, la fusion n'a pas lieu.
 
 Les valeurs autorisées pour le tableau sont les suivantes :
 
@@ -130,8 +130,6 @@ Une seule des options suivantes peut exister à la fois dans le tableau de prior
 
 - `identified` Il s'agit de donner la priorité à un utilisateur ayant une `external_id`
 - `unidentified` Il s'agit de donner la priorité à un utilisateur qui n'a pas de `external_id`
-
-Si vous indiquez `identified` dans le tableau, cela signifie que l'utilisateur **doit** avoir un `external_id` pour être inscrit dans le Canvas. Si vous souhaitez que les utilisateurs disposant d'une adresse e-mail entrent dans le message, qu'ils soient identifiés ou non, utilisez plutôt le paramètre `most_recently_updated` ou `least_recently_updated`.
 
 ## Exemple de demande
 

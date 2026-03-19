@@ -1,12 +1,12 @@
 ---
-nav_title: Lead Scoring
+nav_title: Lead-Bewertung
 article_title: Erstellen Sie einen Lead-Scoring-Workflow
 page_order: 1
 page_type: reference
 description: "Lernen Sie, wie Sie mit Braze einfaches Lead Scoring, ein externes Lead Scoring und die Übergabe von Leads durchführen können."
 ---
 
-# Erstellen Sie einen Arbeitsablauf zur Lead-Bewertung
+# Erstellen Sie einen Lead-Scoring-Workflow
 
 > Dieser Anwendungsfall zeigt, wie Sie mit Braze die Lead-Bewertungen der Benutzer in Echtzeit aktualisieren und Leads automatisch an Ihre Vertriebsteams weitergeben können.
 
@@ -83,7 +83,7 @@ Fügen Sie die folgenden Gruppen zu Ihrem Aktionspfad hinzu:
 - **Gruppe 3:** Alle Ereignisse, die für einer 1-Punkte-Verringerung zählen.
 - **Alle anderen:** Aktions-Pfade ermöglichen es Ihnen, das Fenster zu definieren, in dem gewartet wird, ob ein Nutzer:innen eine Aktion ausführt, bevor er in eine Gruppe "Alle anderen" eingeordnet wird. Für das Lead Scoring ist dies eine Opportunity, um die Punktzahl für „Inaktivität“ zu verringern.
 
-![Aktions-Pfad mit Aktionsgruppen für das Hinzufügen von einem Punkt, fünf Punkten und zehn Punkten, das Abziehen von einem Punkt und zehn Punkten und "Alle anderen".]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %}){: style="max-width:20%;"}
+![Aktions-Pfad mit Aktionsgruppen zum Hinzufügen von einem Punkt, fünf Punkten und zehn Punkten; zum Subtrahieren von einem Punkt und zehn Punkten; sowie „Alle anderen“.]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %}){: style="max-width:20%;"}
 
 #### Schritt 4c: Jede Gruppe so konfigurieren, dass sie die relevanten Event enthält
 
@@ -182,7 +182,7 @@ Um den Lead-Datensatz in Salesforce mit dem Lead-Status von Braze zu aktualisier
 
 | Header | Content |
 | --- | --- |
-| Autorisierung | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Um ein Token abzurufen, [konfigurieren Sie eine verbundene App](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) für den OAuth 2.0 Client-Zugangsdaten-Flow und verwenden Sie dann Connected-Content, um den Bearer aus Salesforce abzurufen: <br><br>{% raw %}<code>{% connected_content <mem_24630699-0550-48b7-8107-9c2184707e4a/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorisierung | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Um ein Token abzurufen, [konfigurieren Sie eine verbundene App](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) für den OAuth 2.0 Client-Zugangsdaten-Flow und verwenden Sie dann Connected-Content, um den Bearer aus Salesforce abzurufen: <br><br>{% raw %}<code>{% connected_content <mem_11e10506-bf9e-4bb2-86bc-6309e04a5fa2/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
@@ -200,7 +200,7 @@ Im Schritt **Lieferung planen** wählen Sie Folgendes aus:
 
 Fügen Sie im Schritt **Zielgruppen** einen Filter ein, der Nutzer:innen ausschließt, deren Lead-Status bereits auf MQL oder darüber hinaus ist, z. B. „`lead_status` `is none of` `MQL`“.
 
-![Webhook Targeting Optionen mit dem Filter von “lead_status” ist keine von "MQL".]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
+![Die Targeting-Optionen für Webhooks “lead_status”mit dem Filter „ist kein MQL“ sind wie folgt:]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
 
 ### Schritt 3: Kampagne starten
 

@@ -23,7 +23,7 @@ Não tem certeza se deve usar uma campanha ou um Canva? Campanhas são melhores 
 {% tabs %}
 {% tab Campaign %}
 1. Acesse **Envio de mensagens** > **Campanhas**, depois selecione **Criar campanha**.
-2. Para campanhas com direcionamento para vários canais, selecione **Multicanal**. Caso contrário, selecione **notificação por push**. Se ainda não tiver certeza, consulte a seção **Decidir entre uma campanha push regular ou multicanal** abaixo.
+2. Para campanhas com direcionamento para vários canais, selecione **Multicanal**. Caso contrário, selecione **Notificação por push**. Se ainda não tiver certeza, consulte a seção **Decidir entre uma campanha push regular ou multicanal** abaixo.
 3. Dê à sua campanha um nome claro e significativo.
 4. Adicione [Equipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário. 
 
@@ -194,7 +194,7 @@ Nessa etapa, também é possível especificar controles de entrega, como permiti
 
 #### Escolha os usuários a serem direcionados
 
-Em seguida, você deve [direcionar usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você recebe automaticamente uma prévia de como é a população aproximada do segmento. Estatísticas detalhadas do público para os canais direcionados por sua campanha estão disponíveis no rodapé. Para ver qual porcentagem da sua base de usuários está sendo direcionada e o valor do tempo de vida desse segmento, selecione **Show Additional Stats (Mostrar estatísticas adicionais)**.
+Em seguida, você deve [segmentar usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você recebe automaticamente uma prévia de como é a população aproximada do segmento. Estatísticas detalhadas do público para os canais direcionados por sua campanha estão disponíveis no rodapé. Para ver qual porcentagem da sua base de usuários está sendo direcionada e o valor do tempo de vida desse segmento, selecione **Show Additional Stats (Mostrar estatísticas adicionais)**.
 
 {% multi_lang_include target_audiences.md %}
 

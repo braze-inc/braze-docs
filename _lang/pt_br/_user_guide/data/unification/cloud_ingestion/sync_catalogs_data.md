@@ -196,8 +196,8 @@ GO
 {% tab S3 %}
 Configure seus arquivos de origem no S3 fornecendo arquivos JSON ou CSV. Tenha em mente:
 
-- Os arquivos não podem incluir uma coluna `UPDATED_AT`  
-- Você pode incluir um campo `DELETED` opcional para marcar itens para remoção 
+- Os arquivos não podem incluir uma coluna `UPDATED_AT`.  
+- Você pode incluir um campo `DELETED` opcional para marcar itens para remoção. 
 
 {% subtabs %}
 {% subtab JSON %}
@@ -223,7 +223,7 @@ Para detalhes de configuração, veja [Integrações de armazenamento de arquivo
 
 ## Como a integração funciona
 
-Cada vez que a sincronização é executada, a Braze irá puxar todas as linhas onde `UPDATED_AT` é igual ou posterior ao último timestamp sincronizado. Recomendamos criar uma visualização no seu data warehouse a partir dos dados do seu catálogo para configurar uma tabela de origem que será totalmente atualizada cada vez que uma sincronização for executada. Com visualizações, você não precisará reescrever a consulta cada vez.
+Cada vez que a sincronização é executada, o Braze irá puxar todas as linhas onde `UPDATED_AT` é igual ou posterior ao último timestamp sincronizado. Recomendamos criar uma visualização no seu data warehouse a partir dos dados do seu catálogo para configurar uma tabela de origem que será totalmente atualizada cada vez que uma sincronização for executada. Com visualizações, você não precisará reescrever a consulta cada vez.
 
 Por exemplo, se você tiver uma tabela de dados de produtos (`product_catalog_1`) com `product_id` e três atributos adicionais, você poderá sincronizar a visualização abaixo:
 

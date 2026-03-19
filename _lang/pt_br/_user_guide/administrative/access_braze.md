@@ -4,7 +4,7 @@ article_title: Acesso à Braze
 page_order: 0
 layout: dev_guide
 guide_top_header: "Acesso à Braze"
-guide_top_text: "Saiba como acessar e navegar em sua conta Braze ou dashboard. Esta seção aborda o acesso à conta, o logon único, a navegação no dashboard e a obtenção de suporte."
+guide_top_text: "Aprenda a acessar e navegar na sua conta ou dashboard do Braze. Esta seção abrange acesso à conta, logon único, navegação no dashboard e obtenção de suporte."
 
 page_type: reference
 description: "Esta landing page contém artigos sobre como acessar sua conta Braze ou dashboard. Aqui, você pode encontrar recursos sobre SSO, login, instâncias da Braze, endpoints de SDK, redefinição de senha e muito mais."
@@ -23,7 +23,7 @@ guide_featured_list:
 - name: Endpoints de API e SDK
   link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
   image: /assets/img/braze_icons/navigation-pointer-01.svg
-- name: O Braze Dashboard
+- name: O Dashboard do Braze
   link: /docs/user_guide/administrative/access_braze/braze_dashboard/
   image: /assets/img/braze_icons/browser.svg
 - name: Portal do produto
@@ -41,7 +41,7 @@ guide_featured_list:
 
 ## Recursos relacionados
 
-Para tarefas administrativas, como gerenciamento de usuários, espaços de trabalho e equipes, consulte:
+Para tarefas administrativas como gerenciar usuários, espaços de trabalho e equipes, veja:
 - [Gerenciar usuários do Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
 - [Criar e gerenciar espaços de trabalho]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/)
 - [Equipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)

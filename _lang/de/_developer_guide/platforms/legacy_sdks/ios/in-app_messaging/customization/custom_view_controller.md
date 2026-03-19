@@ -1,5 +1,5 @@
 ---
-nav_title: Angepasste Ansicht Controller
+nav_title: Angepasster Ansichts-Controller
 article_title: In-App Nachricht in einem benutzerdefinierten View Controller für iOS
 platform: iOS
 page_order: 7

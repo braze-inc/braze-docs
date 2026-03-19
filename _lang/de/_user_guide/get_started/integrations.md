@@ -46,8 +46,8 @@ Teilen Sie Ihren Entwicklern mit, welche Kanäle Sie verwenden möchten, um sich
 | In-App-Nachrichten | Erfordert die SDK-Implementierung sowie diese kanalspezifischen Schritte. |
 | Push | Erfordert eine SDK-Implementierung für die korrekte Handhabung von Messaging-Zugangsdaten und Push-Token. |
 | E-Mail | Dies ist ein völlig anderer Prozess. Weitere Einzelheiten zur Integration finden Sie im Abschnitt [E-Mail-Einrichtung]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/). |
-| Content-Cards | Um mit [Content-Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) zu arbeiten, wenden Sie sich an Ihren Customer-Success-Manager:in von Braze. |
-| SMS & MMS | Weitere Einzelheiten zur Integration finden Sie im Abschnitt [SMS-Einrichtung]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/). |
+| Content-Cards | Um mit [Content-Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) zu beginnen, wenden Sie sich bitte an Ihren Braze-Customer-Success-Manager. |
+| SMS&  MMS | Weitere Einzelheiten zur Integration finden Sie im Abschnitt [SMS-Einrichtung]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/). |
 | Webhooks | Erfordert eine SDK-Implementierung sowie kanalspezifische Schritte. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

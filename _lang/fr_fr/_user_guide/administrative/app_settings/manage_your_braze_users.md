@@ -1,12 +1,12 @@
 ---
 nav_title: Utilisateurs de l’entreprise
-article_title: "Gérer les utilisateurs de l'entreprise"
+article_title: "Gestionnaire des utilisateurs de l'entreprise"
 page_order: 23
 page_type: reference
-description: "Cette page traite de la gestion des utilisateurs de votre entreprise, comme l'ajout et la suppression d'utilisateurs, la définition des autorisations des utilisateurs, la création de Teams et la gestion des paramètres de l'entreprise."
+description: "Cette page traite de la gestion des utilisateurs de votre entreprise, notamment l'ajout et la suppression d'utilisateurs, la configuration des autorisations utilisateur, la création de Teams et la gestion des paramètres de l'entreprise."
 ---
 
-# Gérer les utilisateurs de l'entreprise
+# Gestionnaire des utilisateurs de l'entreprise
 
 > Apprenez à gérer les utilisateurs dans le compte de votre entreprise, y compris l'ajout, la suspension et la suppression d'utilisateurs.
 
@@ -14,21 +14,21 @@ description: "Cette page traite de la gestion des utilisateurs de votre entrepri
 Plusieurs sections de cette page renvoient à la page **Utilisateurs de l'entreprise**. Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), la rubrique **Utilisateurs de l'entreprise** s'appelle **Gérer les utilisateurs** et se trouve sous l'icône de votre compte.
 {% endalert %}
 
-## Ajout d'utilisateurs de l'entreprise
+## Ajouter des utilisateurs de l'entreprise
 
 Vous devez disposer d'autorisations d'administrateur pour ajouter des utilisateurs à votre compte Braze. 
 
 Pour ajouter un nouvel utilisateur :
 
 1. Allez dans **Paramètres** > **Utilisateurs de l'entreprise**.
-2. Cliquez sur **\+ Ajouter un nouvel utilisateur**.
-3. Saisissez les informations qui vous sont demandées, notamment leur e-mail, leur département et leur [rôle d'utilisateur]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#creating-a-role).
+2. Veuillez sélectionner **« Ajouter un nouvel utilisateur** ».
+3. Veuillez saisir leurs informations comme indiqué, y compris leur e-mail, leur service et [leur rôle d'utilisateur]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#creating-a-role).
 
 {% alert tip %}
 Le service indiqué dans le profil d'un utilisateur détermine les types de communications qu'il reçoit de Braze. Ainsi, chacun ne reçoit que les communications et les alertes qui correspondent à la manière dont il utilise Braze.
 {% endalert %}
 
-![Champs de détails de l'utilisateur.]({% image_buster /assets/img/add_new_user_2.png %}){: style="max-width:60%;"}
+![Champs relatifs aux informations de l'utilisateur.]({% image_buster /assets/img/add_new_user_2.png %}){: style="max-width:60%;"}
 
 {:start="4"}
 
@@ -44,29 +44,29 @@ Si votre équipe utilise Gmail et que vous rencontrez des difficultés pour ajou
 
 ### Puis-je modifier l'adresse e-mail de mon compte Braze ?
 
-Pour des raisons de sécurité, les utilisateurs ne peuvent pas modifier l'adresse e-mail associée à leur compte Braze. Si un utilisateur souhaite mettre à jour son adresse e-mail, un administrateur doit lui [créer un nouveau compte](#adding-braze-users) avec son adresse e-mail préférée.
+Pour des raisons de sécurité, les utilisateurs ne peuvent pas modifier l'adresse e-mail associée à leur compte Braze. Si un utilisateur souhaite mettre à jour son adresse e-mail, un administrateur doit [créer un nouveau compte](#adding-braze-users) pour lui avec l'adresse e-mail de son choix.
 
 ## Attribution de l'accès et des responsabilités des utilisateurs
 
 {% multi_lang_include permissions.md content="Differences" %}
 
-## Suspension des utilisateurs de l'entreprise
+## Suspension des utilisateurs professionnels
 
-La suspension d'un utilisateur met son compte dans un état inactif, où l'utilisateur ne peut plus se connecter, mais où les données associées à son compte sont conservées. Seuls les administrateurs peuvent suspendre ou annuler la suspension des utilisateurs de l'entreprise.
+La suspension d'un utilisateur met son compte dans un état inactif, où l'utilisateur ne peut plus se connecter, mais où les données associées à son compte sont conservées. Seuls les administrateurs ont la possibilité de suspendre ou de réactiver les comptes des utilisateurs de l'entreprise. Veuillez noter que les utilisateurs suspendus peuvent toujours recevoir des notifications de Braze.
 
-Pour suspendre un utilisateur, allez dans **Paramètres** > **Utilisateurs de l'entreprise**, recherchez son nom d'utilisateur et sélectionnez <i class="fa-solid fa-user-lock"></i> **Suspendre**.
+Pour suspendre un utilisateur, veuillez vous rendre dans **Paramètres** > **Utilisateurs de l'entreprise**, recherchez son nom d'utilisateur et sélectionnez<i class="fa-solid fa-user-lock"></i>**Suspendre**.
 
-![Option permettant de suspendre un utilisateur.]({% image_buster /assets/img_archive/suspend_user.png %})
+![Possibilité de suspendre un utilisateur.]({% image_buster /assets/img_archive/suspend_user.png %})
 
-Les administrateurs peuvent également suspendre un utilisateur en sélectionnant son nom dans la liste et en cliquant sur **Suspendre l'utilisateur** dans le pied de page.
+Les administrateurs peuvent également suspendre un utilisateur en sélectionnant son nom dans la liste et en choisissant **Suspendre l'utilisateur** dans le pied de page.
 
-![Suspendez un utilisateur lorsque vous modifiez ses coordonnées.]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
+![Veuillez suspendre un utilisateur lors de la modification des détails de l'utilisateur.]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
 
 ## Suppression des utilisateurs de l'entreprise
 
-Pour supprimer un utilisateur, allez dans **Paramètres** > **Utilisateurs de l'entreprise**, recherchez son nom d'utilisateur et sélectionnez <i class="fa fa-trash-can"></i> **Supprimer l'utilisateur**.
+Pour supprimer un utilisateur, veuillez vous rendre dans **Paramètres** > **Utilisateurs de l'entreprise**, localiser son nom d'utilisateur et sélectionner<i class="fa fa-trash-can"></i>**Supprimer l'utilisateur**.
 
-![Supprimer un utilisateur]({% image_buster /assets/img_archive/delete_user_new.png %})
+![Veuillez supprimer un utilisateur.]({% image_buster /assets/img_archive/delete_user_new.png %})
 
 Après la suppression d’un utilisateur, Braze ne conserve aucune des données de compt suivantes :
 
@@ -84,11 +84,11 @@ Braze conservera les données de compte suivantes :
 - Attributs personnalisés ou données de test associés à leur compte
 - Les campagnes ou les toiles qu'ils ont créées (mais le nom de l'utilisateur n'y apparaîtra pas, par exemple dans la colonne **Dernière modification par** ).
 
-### Impact de la suppression d'un utilisateur du tableau de bord
+### Conséquences de la suppression d'un utilisateur du tableau de bord
 
-Lorsqu'un utilisateur de tableau de bord est supprimé, il n'y aura pas d'impact significatif sur les ressources qu'il a créées dans le tableau de bord, telles que les campagnes, les segments et les Canevas. Toutefois, il est important de noter que le champ **Created By (Créé par)** de ces ressources affichera une valeur "null" au lieu de l'adresse e-mail de l'utilisateur supprimé.
+Lorsqu'un utilisateur du tableau de bord est supprimé, cela n'a aucune incidence significative sur les ressources qu'il a créées dans le tableau de bord, telles que les campagnes, les segments et les canevas. Cependant, le champ **Créé par** pour ces ressources affiche une valeur « nulle » au lieu de l'adresse e-mail de l'utilisateur supprimé.
 
-Si un nouvel utilisateur du tableau de bord est créé par la suite avec la même adresse e-mail que l'utilisateur supprimé, Braze ne réassociera pas les ressources créées par l'utilisateur supprimé au nouvel utilisateur. Le nouvel utilisateur du tableau de bord fera table rase du passé et ne sera pas crédité en tant que créateur des ressources existantes dans le tableau de bord.
+Si un nouvel utilisateur du tableau de bord est créé ultérieurement avec la même adresse e-mail que l'utilisateur supprimé, Braze ne réassociera pas les ressources créées par l'utilisateur supprimé au nouvel utilisateur. Le nouvel utilisateur du tableau de bord commencera avec une page blanche et ne sera pas crédité en tant que créateur des ressources existantes dans le tableau de bord.
 
 ## Résolution des problèmes
 
@@ -101,4 +101,4 @@ Pour créer ce nouvel utilisateur, vous pouvez effectuer l'une des opérations s
 1. Supprimez l'utilisateur de l'autre instance avant de pouvoir le créer dans la nouvelle, ou
 2. Créez l'utilisateur avec une chaîne de caractères d'e-mail différente (telle que `testing+01@braze.com`) ou un autre alias d'utilisateur. 
 
-Si vous ne recevez pas l'activation du message dans votre boîte de réception lorsque vous utilisez `testing+01@braze.com`, vérifiez auprès de votre équipe informatique que vous pouvez accepter des messages provenant de ce type d'adresse e-mail. Certains administrateurs filtrent les messages envoyés à des adresses e-mail comportant un `+`.
+Si vous ne recevez pas le message d'activation dans votre boîte de réception lorsque vous utilisez `testing+01@braze.com`, veuillez vérifier auprès de votre équipe informatique que vous pouvez accepter les messages provenant de ce type d'adresse e-mail. Certains administrateurs filtrent les messages envoyés à des adresses e-mail comportant un `+`.

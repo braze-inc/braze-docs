@@ -1,5 +1,5 @@
 ---
-nav_title: "La poignée s'enclenche manuellement"
+nav_title: Gérer les clics manuellement
 article_title: Gérer manuellement les clics sur les cartes de contenu pour iOS
 platform: iOS
 page_order: 3
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# La poignée s'enclenche manuellement
+# Gérer les clics manuellement
 
 Vous pouvez gérer manuellement les clics sur les cartes de contenu en implémentant le protocole [`ABKContentCardsTableViewControllerDelegate`](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_content_cards_table_view_controller_delegate-p.html) et en définissant votre objet délégué comme la propriété `delegate` du `ABKContentCardsTableViewController`. Reportez-vous à l'exemple d'application [Content Cards](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) pour un exemple. 
 

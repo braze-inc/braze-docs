@@ -107,5 +107,6 @@ To generate AI output through BrazeAI features that leverage OpenAI ("Output"), 
 
 ## Next steps
 
-- [Reviewing actions]({{site.baseurl}}/user_guide/brazeai/operator/reviewing_actions/): Learn how to review and approve Operator's proposed changes
+- [Review actions]({{site.baseurl}}/user_guide/brazeai/operator/reviewing_actions/): Learn how to review and approve Operator's proposed changes
+- [File support tickets]({{site.baseurl}}/user_guide/brazeai/operator/support_tickets/): File support tickets directly from Operator
 - [Troubleshooting]({{site.baseurl}}/user_guide/brazeai/operator/troubleshooting/): Reference common issues and solutions

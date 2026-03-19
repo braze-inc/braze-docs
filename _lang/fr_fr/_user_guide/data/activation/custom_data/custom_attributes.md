@@ -7,7 +7,7 @@ description: "Cette page décrit les attributs personnalisés et explique les di
 search_rank: 1
 ---
 
-# [![Cours d'apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Attributs personnalisés
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Attributs personnalisés
 
 > Cette page traite des attributs personnalisés, qui regroupent les caractéristiques uniques de vos utilisateurs. Les attributs personnalisés sont les plus appropriés pour stocker des attributs sur vos utilisateurs, ou des informations sur les actions à faible valeur dans votre application. 
 
@@ -17,12 +17,12 @@ Lorsqu'ils sont stockés dans Braze, les attributs personnalisés peuvent être 
 
 Pour créer et gérer des attributs personnalisés dans le tableau de bord, sélectionnez **Paramètres des données** > **Attributs personnalisés**. 
 
-![Quatre attributs personnalisés qui sont des booléens.]({% image_buster /assets/img/export_custom_attributes.png %})
+![Quatre attributs personnalisés de type booléen.]({% image_buster /assets/img/export_custom_attributes.png %})
 
 La colonne **Dernière mise à jour** indique la dernière fois que l'attribut personnalisé a été modifié, par exemple lorsqu'il a été défini comme liste de blocage ou actif pour la dernière fois.
 
 {% alert important %}
-Pour un ciblage correct des messages, assurez-vous que le type de données de votre attribut personnalisé correspond à l'attribut personnalisé réel.
+Pour un ciblage correct des messages, assurez-vous que le type de données de votre attribut personnalisé correspond à l'attribut personnalisé réel. <br><br>Par exemple, si`newsletter_subscribed`  est défini comme une chaîne de caractères, votre syntaxe Liquid devrait ressembler à {% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == 'true' %}```{% endraw %}. Si`newsletter_subscribed`  est défini comme une valeur booléenne, la syntaxe Liquid ne doit pas comporter de guillemets simples : {% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == true %}```{% endraw %}.
 {% endalert %}
 
 Cette page vous permet d'afficher, de gérer, de créer ou de mettre sur liste de blocage des attributs personnalisés existants. Sélectionnez le menu à côté d'un attribut personnalisé pour les actions suivantes :
@@ -62,9 +62,9 @@ Vous pouvez consulter jusqu'à 100 rapports d'utilisation à la fois en cochant 
 
 ### Onglet Valeurs
 
-Lorsque vous consultez un rapport d'utilisation, sélectionnez l'onglet **Valeurs** pour afficher les valeurs maximales des attributs personnalisés sélectionnés sur la base d'un échantillon d'environ 250 000 utilisateurs. Notez que les résultats étant échantillonnés à partir d'un sous-ensemble d'utilisateurs, l'échantillon ne comprendra pas toutes les valeurs existantes. Cela signifie que l'onglet **Valeurs** ne doit pas être utilisé pour la résolution des problèmes ou pour les cas d'utilisation qui nécessitent l'incorporation des données de tous les utilisateurs.
+Lorsque vous consultez un rapport d'utilisation, veuillez sélectionner l'onglet **Valeurs** pour afficher les valeurs les plus élevées des attributs personnalisés sélectionnés, sur la base d'un échantillon d'environ 250 000 utilisateurs. Veuillez noter que, les résultats étant échantillonnés à partir d'un sous-ensemble d'utilisateurs, l'échantillon n'inclura pas toutes les valeurs existantes. Cela signifie que l'onglet **Valeurs** ne doit pas être utilisé pour la résolution des problèmes ou pour les cas d'utilisation qui nécessitent l'intégration des données de tous les utilisateurs.
 
-![Rapport d'utilisation pour les attributs personnalisés sélectionnés avec un onglet "Valeurs" ouvert montrant un diagramme circulaire des valeurs des attributs de pays, tels que "US" et "PR".]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
+![Rapport d'utilisation pour les attributs personnalisés sélectionnés avec l'onglet « Valeurs » ouvert, présentant un graphique circulaire des valeurs d'attributs de pays, telles que « US » et « PR ».]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
 
 ## Définition des attributs personnalisés
 
@@ -158,7 +158,7 @@ Prenez en compte le fait que, si vous saisissez des valeurs comprenant des espac
 | Vérifier si l'attribut chaîne **ne correspond pas partiellement à l'une des** chaînes de caractères saisies. | **NE CONTIENT AUCUN DES ÉLÉMENTS SUIVANTS** | **CHAÎNE DE CARACTÈRES**<br>Sensible à la casse ; plusieurs chaînes de caractères autorisées (256 au maximum) | Si ce filtre spécifie `gold` et qu'un profil utilisateur ne contient pas `gold` dans une chaîne de caractères, l'utilisateur correspondra à ce filtre.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-{% include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
+{% multi_lang_include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
 
 {% alert important %}
 Lorsque vous effectuez une segmentation à l'aide du filtre **DOES NOT MATCH REGEX**, vous devez déjà disposer d'un attribut personnalisé avec une valeur attribuée dans ce profil utilisateur. Braze suggère d’utiliser la logique « OR » (OU) pour vérifier si un attribut personnalisé est vide pour s’assurer que les utilisateurs sont correctement ciblés.

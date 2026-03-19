@@ -8,9 +8,9 @@ description: "Le présent article de référence couvre la manière dont les bal
 
 # Logique de messagerie conditionnelle
 
-> Les [étiquettes](https://docs.shopify.com/themes/liquid-documentation/tags) vous permettent d'inclure une logique de programmation dans vos campagnes d'envoi de messages. Les balises peuvent être utilisées pour exécuter des relevés conditionnels ainsi que pour des cas d’utilisation avancés, comme l’attribution de variables ou l’itération par un bloc de code. <br><br>Cette page explique comment les tags peuvent et doivent être utilisés, par exemple comment prendre en compte les valeurs d'attributs null, nil et blank, et comment référencer des attributs personnalisés.
+> Les [étiquettes](https://docs.shopify.com/themes/liquid-documentation/tags) vous permettent d'inclure une logique de programmation dans vos campagnes d'envoi de messages. Les balises peuvent être utilisées pour exécuter des relevés conditionnels ainsi que pour des cas d’utilisation avancés, comme l’attribution de variables ou l’itération par un bloc de code. <br><br>Cette page explique comment les tags peuvent et doivent être utilisés, notamment comment traiter les valeurs d'attribut null, nil et vides, et comment référencer des attributs personnalisés.
 
-## Tags de mise en forme
+## Balises de mise en forme
 
 {% raw %}
 Une balise doit être enveloppée dans `{% %}`.
@@ -61,7 +61,7 @@ This is a message from Braze! This is going to go to anyone who did not match th
 
 #### `if` et `elsif`
 
-La logique conditionnelle commence par l'étiquette `if`, qui énonce la première condition à vérifier. Les conditions suivantes utilisent l'étiquette `elsif` et seront vérifiées si les conditions précédentes ne sont pas remplies. Dans cet exemple, si l'appareil de l'utilisateur n'est pas réglé sur l'anglais, ce code vérifiera si l'appareil de l'utilisateur est réglé sur l'espagnol et, en cas d'échec, il vérifiera si l'appareil est réglé sur l'anglais. Si l'appareil de l'utilisateur remplit l'une de ces conditions, l'utilisateur recevra un message dans la langue concernée.
+La logique conditionnelle commence par l'étiquette `if`, qui énonce la première condition à vérifier. Les conditions suivantes utilisent l'étiquette `elsif` et seront vérifiées si les conditions précédentes ne sont pas remplies. Dans cet exemple, si l'appareil de l'utilisateur n'est pas réglé sur l'anglais, ce code vérifiera si l'appareil de l'utilisateur est réglé sur l'espagnol et, en cas d'échec, il vérifiera si l'appareil est réglé sur l'anglais. Si l'appareil de l'utilisateur remplit l'une de ces conditions, l'utilisateur recevra un message dans la langue appropriée.
 
 #### `else`
 
@@ -69,7 +69,11 @@ Vous avez la possibilité d’inclure une instruction `{% else %}` dans votre lo
 
 #### `endif`
 
-L'étiquette `{% endif %}` indique que vous avez terminé votre logique conditionnelle. Vous devez inclure l'étiquette `{% endif %}` dans tout message comportant une logique conditionnelle. Si vous n'incluez pas d'étiquette `{% endif %}` dans votre logique conditionnelle, vous obtiendrez une erreur car Braze ne pourra pas analyser votre message.
+L'étiquette`{% endif %}` indique que vous avez terminé votre logique conditionnelle. Il est nécessaire d'inclure la`{% endif %}`balise dans tout message contenant une logique conditionnelle. Si vous n'incluez pas `{% endif %}`d'étiquette dans votre logique conditionnelle, vous obtiendrez une erreur car Braze ne pourra pas analyser votre message.
+
+{% alert note %}
+Les étiquettes conditionnelles (`if`, `elsif`, `unless`) prennent en charge les opérateurs, mais pas les filtres. Pour évaluer une valeur filtrée dans une condition, veuillez d'abord attribuer le résultat du filtre à une variable, puis référencer cette variable. Pour plus de détails, veuillez consulter [la section Où utiliser les opérateurs et les filtres]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+{% endalert %}
 
 ### Tutoriel : Fournir un contenu basé sur l'emplacement/localisation
 
@@ -151,9 +155,9 @@ La logique conditionnelle est un moyen utile de tenir compte des valeurs d'attri
 
 ### Valeurs d'attribut nulles et nil
 
-Une valeur nulle se produit lorsque la valeur d'un attribut personnalisé n'a pas été définie. Par exemple, un utilisateur qui n'a pas encore défini son prénom n'aura pas de prénom enregistré dans Braze.
+Une valeur nulle ou nulle apparaît lorsque la valeur d'un attribut personnalisé n'a pas été définie. Par exemple, un utilisateur qui n'a pas encore défini son prénom n'aura pas de prénom enregistré dans Braze.
 
-Dans certaines circonstances, vous souhaiterez peut-être envoyer un message complètement différent aux utilisateurs qui ont un prénom et à ceux qui n'en ont pas.
+Dans certaines circonstances, vous pourriez souhaiter envoyer un message distinct aux utilisateurs qui ont défini un prénom et à ceux qui n'en ont pas défini.
 
 La balise suivante vous permet de spécifier un message pour les utilisateurs ayant un attribut  « prénom »  nul.
 
@@ -200,7 +204,7 @@ Après avoir [créé des attrib]({{site.baseurl}}/user_guide/data_and_analytics/
 
 Lorsque vous utilisez une logique conditionnelle, vous devez connaître le type de données de l’attribut personnalisé pour vous assurer que vous utilisez la syntaxe correcte. À partir de la page **Attributs personnalisés** dans le tableau de bord, recherchez le type de données associé à votre attribut personnalisé, puis consultez les exemples suivants répertoriés pour chaque type de données.
 
-![Sélection d’un type de données pour un attribut personnalisé. L'exemple fourni montre un attribut Favorite_Category avec une chaîne de caractères comme type de données.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
+![Sélection d’un type de données pour un attribut personnalisé. L'exemple fourni montre un attribut deFavorite_Categorytype chaîne de caractères.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
 
 {% alert tip %}
 Les chaînes de caractères et les baies nécessitent des apostrophes droites autour de eux, tandis que les booléens et les entiers n’auront jamais d’apostrophes.
@@ -230,7 +234,7 @@ Les [nombres]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_
 
 {% endraw %}
 
-Vous pouvez également utiliser d'autres [opérateurs de base](https://shopify.dev/docs/themes/liquid/reference/basics/operators) tels que moins que (<) ou plus grand que (>) pour les nombres entiers :
+Vous pouvez également utiliser d'autres [opérateurs de base](https://shopify.dev/docs/themes/liquid/reference/basics/operators) tels que inférieur à(<)ou supérieur à (>) pour les nombres entiers :
 
 {% raw %}
 

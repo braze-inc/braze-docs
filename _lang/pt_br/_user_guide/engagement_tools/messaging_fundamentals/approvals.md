@@ -3,96 +3,96 @@ nav_title: Aprovações
 article_title: Aprovações
 page_order: 1
 page_type: reference
-description: "Este artigo de referência oferece uma visão geral dos vários status que uma campanha e uma tela podem ter e o que significam."
+description: "Este artigo de referência fornece uma visão geral dos vários status que uma campanha e um canva podem ter e o que eles significam."
 tool:
     - Campaigns
     - Canvas
 ---
 
-# Aprovações para campanhas e telas
+# Aprovações para campanhas e canvases
 
-> Use as aprovações para adicionar um ponto de verificação final às suas campanhas e Canvas antes do lançamento. Com esse fluxo de trabalho, é possível verificar e aprovar o conteúdo em todas as seções necessárias da sua mensagem.
+> Use aprovações para adicionar um ponto de verificação final às suas campanhas e canvases antes do lançamento. Com este fluxo de trabalho, você pode verificar e aprovar o conteúdo em todas as seções necessárias da sua mensagem.
 
 ## Como funciona?
 
-Você pode revisar os detalhes de sua campanha ou canva na etapa final da edição. 
+Você pode revisar os detalhes da sua campanha ou canva na etapa final de edição. 
 
-Tanto para Canvas quanto para Campaigns, você deve salvar todas as alterações antes de aprová-las, mesmo que sejam suas próprias alterações. Um usuário com as permissões apropriadas deve aprovar cada seção do resumo antes que a mensagem possa ser iniciada. O status padrão de cada seção é **Pending Approval (Aprovação pendente**).
+Para ambos, canvases e campanhas, você deve salvar todas as alterações antes de aprovar, mesmo que sejam suas próprias alterações. Um usuário com as permissões apropriadas deve aprovar cada seção do resumo antes que a mensagem possa ser lançada. O status padrão para cada seção é **Pending Approval**.
 
 {% tabs %}
 {% tab campaign %}
-Para lançar uma campanha, você deve aprovar esses componentes:
+Para lançar uma campanha, você deve aprovar estes componentes:
 
-- **Envio de mensagens:** Essa é a mensagem da campanha.
-- **Entrega:** Esse é o tipo de entrega e determina quando os usuários recebem a campanha.
-- **Público-alvo:** Isso determina quem receberá a Campanha.
-- **Eventos de conversão** Essa é a métrica que você está rastreando para fins de engajamento e relatórios.
+- **Mensagens:** Esta é a mensagem da campanha.
+- **Entrega:** Este é o tipo de entrega e determina quando os usuários recebem a campanha.
+- **Público-alvo:** Isto determina quem receberá a campanha.
+- **Eventos de conversão** Esta é a métrica que você está rastreando para fins de engajamento e relatórios.
 {% endtab %}
 
 {% tab canvas %}
-Para lançar um Canva, você deve aprovar esses componentes principais:
+Para lançar um canva, você deve aprovar estes componentes principais:
 
-- **Eventos de conversão** Essa é a métrica que você está rastreando para fins de engajamento e relatórios.
-- **Cronograma de entrada:** Isso inclui o tipo de programação de entrada e quando os usuários entram no Canva.
-- **Público-alvo:** Isso determina quem entrará nessa tela.
-- **Enviar configurações:** Essas são as opções de envio para todas as etapas do Canva. 
-- **Construir canvas:** Essa é a jornada do usuário do Canva.
+- **Eventos de conversão** Esta é a métrica que você está rastreando para fins de engajamento e relatórios.
+- **Cronograma de entrada:** Isto inclui o tipo de cronograma de entrada e quando os usuários entram no canva.
+- **Público-alvo:** Isto determina quem irá entrar neste canva.
+- **Configurações de Envio:** Estas são as opções de envio para todas as etapas no canva. 
+- **Construir Canva:** Esta é a jornada do usuário do canva.
 {% endtab %}
 {% endtabs %}
 
-## Ativação do fluxo de trabalho de aprovação
+## Ativando o fluxo de trabalho de aprovação
 
-Por padrão, a configuração do fluxo de trabalho de aprovação está desativada para Campaigns e Canvas. Para ativar esse recurso, acesse **Configurações** > **Fluxo de trabalho de aprovação** e selecione o botão de alternância aplicável:
+Por padrão, a configuração do fluxo de trabalho de aprovação está desativada para Campanhas e canvases. Para ativar este recurso, acesse **Configurações** > **Fluxo de Trabalho de Aprovação** e selecione o toggle aplicável:
 
-- **Use o fluxo de trabalho de aprovação para todas as campanhas em [seu espaço de trabalho]**
-- **Use o fluxo de trabalho de aprovação para todas as telas em [seu espaço de trabalho]**
+- **Usar fluxo de trabalho de aprovação para todas as Campanhas em [seu espaço de trabalho]**
+- **Usar fluxo de trabalho de aprovação para todos os canvases em [seu espaço de trabalho]**
 
 {% alert important %}
-A aprovação da campanha não é suportada para [campanhas de API]({{site.baseurl}}/api/api_campaigns) e [campanhas de e-mail de transação]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign).
+A aprovação de campanhas não é suportada para [campanhas de API]({{site.baseurl}}/api/api_campaigns) e [campanhas de e-mail de transação]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign).
 {% endalert %}
 
 ## Definição de permissões de usuário
 
-Depois de ativar o fluxo de trabalho de aprovação, é necessário definir as permissões de usuário para que os usuários da sua empresa possam aprovar ou negar Campaigns e Canvas. Ambas as permissões também podem ser aplicadas a espaços de trabalho ou [equipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) ou adicionadas a um [conjunto de permissões]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets).
+Depois de ativar o fluxo de trabalho de aprovação, você deve definir as permissões dos usuários para que os usuários da sua empresa possam aprovar ou negar Campanhas e canvases. Ambas as permissões também podem ser aplicadas a Espaços de Trabalho ou [Equipes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) ou adicionadas a um [conjunto de permissões]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets).
 
 {% tabs %}
 {% tab campaign %}
-Você deve ter a [ permissão "Approve and Deny Campaigns" (Aprovar e recusar campanhas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions)). Essa permissão controla quem pode atualizar o status de aprovação de uma campanha. Com essa permissão, você pode fazer o seguinte:
+Você deve ter a ["Permissão para Aprovar e Negar Campanhas"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions). Essa permissão controla quem pode atualizar o status de aprovação de uma campanha. Com esta permissão, você pode fazer o seguinte:
 
-- Auto-aprovação da campanha
-- Aprovar e lançar a campanha
-- Aprovar, mas não lançar a campanha (um usuário diferente com a permissão "Send Campaigns, Canvases" pode lançar a campanha)
-- Não aprovar nem lançar a Campanha
+- Autoaprovar a Campanha
+- Aprovar e lançar a Campanha
+- Aprovar, mas não lançar a Campanha (um usuário diferente com a permissão "Enviar Campanhas, canvases" pode lançar a Campanha)
+- Nem aprovar nem lançar a Campanha
 
-Depois que os status de aprovação forem definidos na etapa **Resumo**, todas as alterações subsequentes feitas na campanha redefinirão todos os status de aprovação quando forem salvas. Isso se aplica a todas as alterações feitas em um rascunho de campanha ou em uma campanha pós-lançamento. Por exemplo, se você só fizer alterações no público-alvo, a etapa **Resumo** reverterá os status de aprovação de todas as seções para o estado padrão, **Aprovação pendente**.
+Depois que os status de aprovação são definidos na etapa **Resumo**, quaisquer alterações subsequentes feitas na Campanha redefinem todos os status de aprovação quando salvos. Isso se aplica a quaisquer alterações feitas em uma Campanha em rascunho ou em uma campanha pós-lançamento. Por exemplo, se você fizer apenas alterações no Público-Alvo, a etapa **Resumo** reverte os status de aprovação de todas as seções de volta ao estado padrão, **Aguardando Aprovação**.
 
 {% endtab %}
 
 {% tab canvas %}
-Você deve ter a [ permissão "Approve and Deny Canvases" (Aprovar e recusar telas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions)). Essa permissão controla quem pode atualizar o status de aprovação de um Canva. Com essa permissão, você pode fazer o seguinte:
+Você deve ter a ["Permissão para Aprovar e Negar canvases"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions). Esta permissão controla quem pode atualizar o status de aprovação de um canva. Com esta permissão, você pode fazer o seguinte:
 
-- Auto-aprovação do Canva
+- Aprovar o Canvas
 - Aprovar e lançar o Canva
-- Aprovar, mas não iniciar o Canvas (um usuário diferente com a permissão "Send Campaigns, Canvases" pode iniciar o Canvas)
-- Não aprovar nem lançar o Canva
+- Aprovar, mas não lançar o Canvas (um usuário diferente com a permissão "Enviar Campanhas, Canvases" pode lançar o Canvas)
+- Nem aprovar nem lançar o Canvas
 
-Depois que os status de aprovação forem definidos na etapa **do Resumo**, todas as alterações subsequentes feitas no Canva redefinirão todos os status de aprovação quando forem salvas. Isso se aplica a todas as alterações feitas em um rascunho do Canvas ou em um Canvas pós-lançamento. Por exemplo, se você só fizer alterações no público-alvo, a etapa **Resumo** reverterá os status de aprovação de todas as seções para o estado padrão, **Aprovação pendente**.
+Após os status de aprovação serem definidos na etapa **Resumo**, quaisquer alterações subsequentes feitas no Canvas redefinem todos os status de aprovação ao serem salvas. Isso se aplica a todas as alterações feitas em um rascunho do Canvas ou em um Canvas pós-lançamento. Por exemplo, se você fizer alterações apenas no público-alvo, a etapa **Resumo** reverte os status de aprovação de todas as seções para o estado padrão, **Aguardando Aprovação**.
 
 {% alert note %}
 **Status de aprovação e salvamento**
 
 - Quando você clica em **Aprovar** para uma seção na etapa **Resumo**, essa aprovação é salva imediatamente.
-- O botão **Salvar** salva as alterações no conteúdo e nas configurações do Canva, não no status de aprovação.
+- O botão **Salvar** salva as alterações no conteúdo e configurações do Canvas, não o status de aprovação.
 
-Para evitar a perda de aprovações:
+Para evitar perder aprovações:
 
-1. Faça as edições necessárias no Canvas e clique em **Save (Salvar**).
-2. Depois que o Canva terminar de ser salvo, aprove as seções relevantes na etapa **do Resumo**.
-3. Clique em **Salvar** novamente somente se você fizer alterações adicionais no Canva após a aprovação. Se você alterar o Canva e salvar, todos os status de aprovação serão redefinidos para **Pending Approval (Aprovação pendente**).
+1. Faça as edições necessárias no Canvas e, em seguida, clique em **Salvar**.
+2. Após o Canvas terminar de salvar, aprove as seções relevantes na etapa **Resumo**.
+3. Clique em **Salvar** novamente apenas se você fizer alterações adicionais no Canvas após a aprovação. Se você alterar o Canvas e salvar, todos os status de aprovação serão redefinidos para **Aguardando Aprovação**.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
 
 {% alert important %}
-Para editar uma campanha ativa, você precisa da permissão "Approve and Deny Campaigns" (Aprovar e recusar campanhas). Um usuário deve aprovar suas alterações porque uma versão preliminar do Campaigns ainda não está disponível. Esse não é o caso dos Canvas, pois um usuário pode fazer alterações e salvar como rascunho, e outro usuário pode aprovar e iniciar o Canvas.
+Para editar uma Campanha ativa, você precisa da permissão "Aprovar e Negar Campanhas". Um usuário deve aprovar suas alterações porque uma versão em rascunho das Campanhas ainda não está disponível. Esse não é o caso dos Canvas, pois um usuário pode fazer alterações e salvar como rascunho, e outro usuário pode aprovar e iniciar o Canvas.
 {% endalert %}

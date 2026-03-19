@@ -5,7 +5,7 @@ article_title: Braze 사용자 가이드
 layout: user_guide
 
 user_top_header: "Braze 사용자 가이드"
-user_top_text: "마케터와 관리자가 Braze를 시작하기 위해 알아야 할 모든 것과 의미 있는 데이터 중심 고객 상호작용을 설계하는 방법을 배울 수 있는 곳입니다."
+user_top_text: "여기에서 마케팅 담당자와 관리자들은 Braze를 시작하는 데 필요한 모든 것과 의미 있는 데이터 중심 고객 상호작용을 설계하는 방법을 배울 수 있습니다."
 description: "이것은 사용자 가이드 랜딩 페이지입니다. 여기에서 마케터와 관리자들은 Braze를 시작하는 데 필요한 모든 것을 배우고, 의미 있는 데이터 중심 고객 상호작용을 설계하는 방법을 배울 수 있습니다."
 
 user_menu_list:
@@ -18,12 +18,12 @@ user_menu_list:
     image: /assets/img/braze_icons/log-in-04-braze-pink-dark.svg
     bg_color: '#F8D3E8'
     link: /docs/user_guide/administrative/access_braze/accessing_your_account/
-    description: 플랫폼에 로그인합니다.
+    description: 플랫폼에 로그인하세요.
   - name: 캔버스를 만들기
     bg_color: '#FFD4BC'
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/users-01-braze-orange-dark.svg
-    description: 이 가이드는 고객 여정 구축을 시작하는 방법을 안내합니다.
+    description: 이 가이드는 고객 여정을 구축하는 방법을 안내합니다.
 
 popular_topic_list:
   - name: 사용자 가져오기

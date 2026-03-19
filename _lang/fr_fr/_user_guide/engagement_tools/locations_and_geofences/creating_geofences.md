@@ -1,6 +1,6 @@
 ---
-nav_title: Créer des géorepérages
-article_title: Créer des géorepérages
+nav_title: Créer du géorepérage
+article_title: Créer du géorepérage
 page_order: 1
 page_type: reference
 toc_headers: h2
@@ -32,7 +32,7 @@ Reportez-vous au tableau suivant pour connaître les termes courants de géorep�
 | Terme | Description |
 |---|---|
 | Latitude et longitude | Le centre géographique de la géorepérage. |
-| Rayon | Le rayon de la géorepérage exprimé en mètres et mesuré par son centre géographique. Nous vous recommandons de définir un rayon minimum de 100 à 150 mètres pour tous les géorepérages. |
+| Rayon | Le rayon de la géorepérage exprimé en mètres et mesuré par son centre géographique. Nous recommandons de définir un rayon minimum de 100 à 150 mètres pour tous les géorepérages. |
 | Temps de récupération | Les utilisateurs reçoivent des notifications déclenchées par la géorepérage après avoir effectué des transitions d'entrée ou de sortie sur des géofences individuelles. Après une transition, il existe un délai prédéfini pendant lequel l'utilisateur ne peut plus effectuer la même transition sur ce géorepérage individuel. Ce temps, appelé "cooldown", est prédéfini par Braze et a pour principal objectif d'éviter les requêtes inutiles sur le réseau. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -59,22 +59,22 @@ Ensuite, vous pouvez ajouter des géofences à votre ensemble de géorepérages.
 Nous recommandons de créer des géorepérages avec un rayon d’au moins 200 mètres pour qu’elles fonctionnent de manière optimale. Pour plus d'informations sur les options configurables, reportez-vous à la section [Intégrations mobiles.](#mobile-integrations)
 {% endalert %}
 
-![Un ensemble de géoréseaux avec deux géoréseaux "EastCoastGreaterNY" et "WesternRegion" avec deux cercles sur la carte.]({% image_buster /assets/img/geofence_example.png %})
+![Un géorepérage défini avec deux géorepérages « EastCoastGreaterNY » et « WesternRegion » avec deux cercles sur la carte.]({% image_buster /assets/img/geofence_example.png %})
 
 ## Téléchargement en masse de géorepérages {#creating-geofence-sets-via-bulk-upload}
 
-Les géorepérages peuvent être téléchargées en bloc en tant qu’objet GeoJSON de type `FeatureCollection`. Chaque géorepérage est un type de géométrie `Point` dans la collection de fonctionnalités. Les propriétés de chaque fonctionnalité requièrent une clé `radius` et une clé `name` facultative pour chaque géorepérage. 
+Les géorepérages peuvent être téléchargées en bloc en tant qu’objet GeoJSON de type `FeatureCollection`. Chaque géorepérage est un type de géométrie `Point` dans la collection de fonctionnalités. Les propriétés de chaque fonctionnalité nécessitent une`radius`clé et une clé `name`facultative pour chaque géorepérage. 
 
-Pour télécharger votre GeoJSON, sélectionnez **Plus** > **Télécharger GeoJSON**.
+Pour télécharger votre fichier JSON, veuillez sélectionner **Plus** > **Télécharger JSON**.
 
 Lorsque vous créez vos géorepérages, tenez compte des détails suivants :
 
 - La valeur `coordinates` dans le GeoJSON est formatée comme `[Longitude, Latitude]`.
-- Le rayon maximum de géorepérage pouvant être téléchargé est de 10 000 mètres (environ 10 kilomètres ou 6,2 miles).
+- Le rayon maximal du géorepérage pouvant être téléchargé est de 10 000 mètres (environ 10 kilomètres ou 6,2 miles).
 
 ### Exemple
 
-L'exemple suivant conseille un GeoJSON correct pour spécifier deux géorepérages : l'un pour le siège de Braze à New York et l'autre pour la Statue de la Liberté au sud de Manhattan.
+L'exemple suivant illustre le format GeoJSON approprié pour définir deux géorepérages : l'un pour le siège social de Braze à New York, et l'autre pour la Statue de la Liberté au sud de Manhattan.
 
 ```
 {
@@ -84,7 +84,7 @@ L'exemple suivant conseille un GeoJSON correct pour spécifier deux géorepérag
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-73.992473, 40.755669]
+        "coordinates": [-73.9853689, 40.7434683]
       },
       "properties": {
         "radius": 200,
@@ -114,7 +114,7 @@ Une fois les géorepérages configurés, vous pouvez les utiliser pour améliore
 
 Pour utiliser les données de géorepérage dans le cadre des déclencheurs de campagne et de Canvas, choisissez la **livraison par événement** pour la méthode de livraison. Ensuite, ajoutez une action de déclenchement `Trigger a Geofence`. Pour finir, choisissez l’ensemble de géorepérages et les types d’événements de transition de géorepérage pour votre message. Vous pouvez également faire progresser les utilisateurs dans un Canvas à l’aide des événements de géorepérage.
 
-![Une campagne basée sur l'action avec un géorepérage qui se déclenchera lorsqu'un utilisateur entrera dans les aéroports allemands.]({% image_buster /assets/img_archive/action_based_geofence_trigger.png %})
+![Une campagne basée sur l'action avec un géorepérage qui se déclenche lorsqu'un utilisateur entre dans un aéroport allemand.]({% image_buster /assets/img_archive/action_based_geofence_trigger.png %})
 
 ### Personnalisation des messages
 
@@ -165,7 +165,7 @@ La géolocalisation est utilisée pour collecter et stocker les données d'empla
 
 Les géorepérages de Braze utilisent une combinaison de tous les outils de géolocalisation disponibles sur un appareil pour trianguler l’emplacement de l’utilisateur. Ces outils incluent, entre autres, le WI-FI, le GPS et les antennes-relais.
 
-La précision typique se situe entre 20 et 50 mètres, et la précision optimale se situe entre 5 et 10 mètres. Dans les zones rurales, la précision peut se dégrader considérablement, potentiellement sur plusieurs kilomètres. Braze recommande de créer des géorepérages avec des rayons plus importants pour les zones rurales.
+La précision habituelle se situe entre 20 et 50 mètres, et la précision optimale entre 5 et 10 mètres. Dans les zones rurales, la précision peut se dégrader considérablement, potentiellement sur plusieurs kilomètres. Braze recommande de créer des géorepérages avec des rayons plus importants pour les zones rurales.
 
 Pour plus d'informations sur la précision des géorepérages, reportez-vous à la documentation [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing) et [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW1).
 
@@ -185,5 +185,5 @@ Non, Braze ne stocke pas de données de géorepérage dans les profils utilisate
 
 ### Puis-je définir un géorepérage au sein d’un géorepérage ?
 
-À titre de bonne pratique, évitez de configurer des géorepérages qui se chevauchent les uns les autres, car cela peut poser des problèmes de déclenchement des notifications.
+Il est recommandé d'éviter de configurer des géorepérages qui se chevauchent, car cela pourrait entraîner des problèmes lors du déclenchement des déclencheurs de notifications.
 

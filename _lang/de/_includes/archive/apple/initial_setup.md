@@ -101,7 +101,7 @@ Stellen Sie sicher, dass Sie Braze im Haupt-Thread Ihrer Anwendung initialisiere
 Beachten Sie, dass ab Dezember 2019 keine benutzerdefinierten Endpunkte mehr vergeben werden. Wenn Sie einen bereits bestehenden benutzerdefinierten Endpunkt haben, können Sie ihn weiterhin verwenden. Weitere Einzelheiten finden Sie in unserer <a href="{{site.baseurl}}/api/basics/#endpoints">Liste der verfügbaren Endpunkte</a>.
 {% endalert %}
 
-Ihre Vertretung von Braze sollte Ihnen bereits den [richtigen Endpunkt]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/)] mitgeteilt haben.
+Ihre Braze-Vertretung sollte Sie bereits über den korrekten Endpunkt]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/) informiert haben.
 
 #### Endpunktkonfiguration zur Kompilierzeit (empfohlen)
 Wenn ein bereits vorhandener angepasster Endpunkt...
@@ -117,7 +117,7 @@ Die Unterstützung für das Setzen von Endpunkten zur Laufzeit mit `ABKAppboyEnd
 {% endalert %}
 
 {% alert important %}
-Um Ihr spezifisches Cluster herauszufinden, fragen Sie Ihren Customer-Success-Manager:in oder kontaktieren Sie unser Support-Team.
+Um Ihren spezifischen Cluster zu ermitteln, wenden Sie sich bitte an Ihren Customer-Success-Manager oder kontaktieren Sie unser Support-Team.
 {% endalert %}
 
 ### SDK-Integration abgeschlossen

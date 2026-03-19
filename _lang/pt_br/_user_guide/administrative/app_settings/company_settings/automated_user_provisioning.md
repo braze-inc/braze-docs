@@ -12,31 +12,31 @@ alias: /scim/automated_user_provisioning/
 
 > Use o provisionamento SCIM para criar e gerenciar automaticamente usuários do Braze através da API. Este artigo orienta você sobre quais informações fornecer, como gerar seu token SCIM e onde encontrar seu endpoint da API SCIM.
 
-{% include early_access_beta_alert.md feature='SCIM provisioning' %}
+{% multi_lang_include early_access_beta_alert.md feature='SCIM provisioning' %}
 
 ## Acessando as configurações de provisionamento SCIM
 
 1. No painel do Braze, acesse **Configurações** > **Configurações do Administrador** > **Provisionamento SCIM**, e então selecione **Configurar integração SCIM**.
-2. Na etapa de **configuração do Braze**, selecione um método de provisionamento e forneça as configurações de acesso.
+2. Na etapa **Configuração do Braze**, selecione um método de provisionamento e forneça as configurações de acesso.
 
 ![Uma página para configurar a integração SCIM com seções para selecionar um método de provisionamento e fornecer configurações de acesso.]({% image_buster /assets/img_archive/scim_braze_config.png %}){: style="max-width:70%;"}
 
 {: start="3"}
-3\. Na etapa de **configuração do IdP**, siga os passos dentro da plataforma para o método de provisionamento selecionado.
+3\. Na etapa **Configuração do IdP**, siga os passos dentro da plataforma para o método de provisionamento selecionado.
 
 {% tabs %}
 {% tab Okta - Braze app %}
 
-{% include early_access_beta_alert.md feature='The Okta integration' %}
+{% multi_lang_include early_access_beta_alert.md feature='The Okta integration' %}
 
-Use a opção **Okta - aplicativo Braze** se você configurou o aplicativo Braze para SSO SAML no Okta. Se você configurou um aplicativo personalizado para SSO, siga as instruções na aba [Integração de aplicativo personalizado Okta]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/?tab=okta%20-%20custom%20app%20integration#step-1-set-up-scim-provisioning).
+Use a opção **Aplicativo Okta - Braze** se você configurou o aplicativo Braze para SSO SAML no Okta. Se você configurou um aplicativo personalizado para SSO, siga as instruções na aba [Integração de aplicativo personalizado Okta]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/?tab=okta%20-%20custom%20app%20integration#step-1-set-up-scim-provisioning).
 
 ## Etapa 1: Configure o provisionamento SCIM
 
 ### Etapa 1.1: Ativar SCIM
 
 1. No Okta, acesse **Aplicações** > **Aplicações**, então selecione **Criar Integração de Aplicativo**. Selecione **SAML 2.0** como o método de login.
-2. Preencha os seguintes detalhes (que estão localizados na etapa [**configuração do IdP** do Braze](#accessing-scim-provisioning-settings)) para criar um aplicativo personalizado:
+2. Preencha os seguintes detalhes (que estão localizados na etapa [**Configuração do IdP** do Braze](#accessing-scim-provisioning-settings)) para criar um aplicativo personalizado:
 - Logotipo do app
 - URL de logon único
 - URL do público (ID da entidade SP)
@@ -45,7 +45,7 @@ Use a opção **Okta - aplicativo Braze** se você configurou o aplicativo Braze
 5. Na seção **Configurações do Aplicativo**, selecione **Editar**.
 6. No campo **Provisionamento**, selecione **SCIM**. 
 
-### Etapa 1.2: Desativar a visibilidade do aplicativo
+### Etapa 1.2: Desativar visibilidade do aplicativo
 
 1. No campo **Visibilidade do Aplicativo**, selecione a caixa de seleção **Não exibir ícone do aplicativo para o usuário**. Isso impede que os usuários acessem o SSO através do aplicativo, que é destinado exclusivamente ao SCIM. 
 2. Selecione **Salvar**.
@@ -73,20 +73,20 @@ Selecione **Testar Credenciais da API**. Uma mensagem de verificação aparece s
 1. Selecione a guia **Atribuição**.
 2. Selecione **Atribuir** e escolha uma opção.
 3. Atribua o app às pessoas que devem ter acesso ao Braze.
-4. Selecione **Concluído** quando você tiver completado a atribuição.
+4. Selecione **Concluído** quando você tiver finalizado a atribuição.
 
 {% endtab %}
 {% tab Okta - Custom app integration %}
 
-{% include early_access_beta_alert.md feature='The Okta integration' %}
+{% multi_lang_include early_access_beta_alert.md feature='The Okta integration' %}
 
-Use a opção **Okta - Integração de app personalizado** se você configurou um app personalizado para SSO. Se você configurou o app Braze para SAML SSO no Okta, siga as instruções na guia [Okta - app Braze]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/?tab=okta%20-%20braze%20app#step-1-set-up-scim-provisioning).
+Use a opção **Okta - Integração de app personalizado** se você configurou um app personalizado para SSO. Se você configurou o app Braze para SSO SAML no Okta, siga as instruções na guia [Okta - app Braze]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/?tab=okta%20-%20braze%20app#step-1-set-up-scim-provisioning).
 
 ## Etapa 1: Configure o provisionamento SCIM
 
 ### Etapa 1.1: Ativar SCIM
 
-1. No Okta, acesse seu app Braze.
+1. No Okta, vá para o seu app Braze.
 2. Selecione a aba **Geral**.
 3. Na seção **Configurações do Aplicativo**, selecione **Editar**.
 4. No campo **Provisionamento**, selecione **SCIM**.
@@ -118,7 +118,7 @@ Use a opção **Okta - Integração de app personalizado** se você configurou u
 {% endtab %}
 {% tab Entra ID %}
 
-{% include early_access_beta_alert.md feature='The Entra ID integration' %}
+{% multi_lang_include early_access_beta_alert.md feature='The Entra ID integration' %}
 
 ## Etapa 1: Configure o app de provisionamento SCIM
 
@@ -126,13 +126,13 @@ Use a opção **Okta - Integração de app personalizado** se você configurou u
 
 Faça login no seu centro de administração do Microsoft Entra.
 
-### Etapa 1.2: Crie e configure seu aplicativo SCIM
+### Etapa 1.2: Crie e configure seu app SCIM
 
 1. No menu de navegação, acesse **Entra ID** > **Aplicativos corporativos**.
-2. Selecione **Novo aplicativo**.
-3. Selecione **Crie seu próprio aplicativo**.
+2. Selecione **Nova aplicação**.
+3. Selecione **Crie sua própria aplicação**.
 4. No painel, insira um nome para seu app.
-5. Na seção **O que você está procurando fazer com seu aplicativo?**, selecione **Integrar aplicativo que você não encontra na galeria (Não-galeria)**.
+5. Na seção **O que você está procurando fazer com sua aplicação?**, selecione **Integrar aplicação que você não encontra na galeria (Não-galeria)**.
 6. Selecione **Criar**.
 
 ### Etapa 1.3: Configure a integração SCIM

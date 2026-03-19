@@ -1,7 +1,7 @@
 ---
 nav_title: "取得:今後のスケジュールされた キャンペーンとキャンバスを一覧表示する"
 article_title: "取得:今後スケジュールされているキャンペーンとキャンバスをリスト"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 0
 layout: api_page
 page_type: reference
@@ -30,7 +30,7 @@ description: "この記事では、「今後スケジュールされているキ
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
 | `end_time` | 必須 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)形式の文字列 | 今後予定されているキャンペーンとキャンバスを取得する範囲の終了日。これは、API によって UTC 時間の午前 0 時として扱われます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -52,8 +52,8 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
       "type": (string) the broadcast type either Canvas or Campaign,
       "tags": (array) an array of tag names formatted as strings,
       "next_send_time": (string) The next send time formatted in ISO 8601, may also include time zone if not local/intelligent delivery,
-      "schedule_type": (string) The schedule type, either local_time_zones, intelligent_delivery or the name of your company's time zone,
-    },
+      "schedule_type": (string) The schedule type, either local_time_zones, intelligent_delivery or the name of your company's time zone
+    }
   ]
 }
 ```

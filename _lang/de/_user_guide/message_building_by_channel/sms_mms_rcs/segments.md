@@ -1,5 +1,5 @@
 ---
-nav_title: Rechner für Rechnungen
+nav_title: Abrechnungsrechner
 article_title: SMS- und RCS-Abrechnungsrechner
 page_order: 5
 description: "In diesem referenzierten Artikel erfahren Sie, was ein SMS-Segment ist, wie es für die Abrechnung gezählt wird und was Sie bei der Erstellung von SMS- und RCS-Nachrichtenkopien beachten müssen."
@@ -93,27 +93,27 @@ Unabhängig von der Kodierungsart hat jede von Braze versandte SMS ein Limit von
 ### SMS-Segmentrechner {#segment-calculator}
 ---
 
-{% include alerts/tip_alerts.md alert='SMS segment calculator' %}
+{% multi_lang_include alerts/tip_alerts.md alert='SMS segment calculator' %}
 
-## Abrechnung von RCS Nachrichten
+## Abrechnung von RCS-Nachrichten
 
-RCS-Nachrichten werden auf der Grundlage ihres Inhalts und des Landes, in dem die Nachricht zugestellt wird, abgerechnet. Um die Kosten genau einschätzen zu können, müssen Sie die verschiedenen Arten von Nachrichten verstehen und wissen, wie sie abgerechnet werden.
+RCS-Nachrichten werden auf Grundlage ihres Inhalts und des Landes, in dem die Nachricht zugestellt wird, abgerechnet. Um die Kosten genau einschätzen zu können, ist es unerlässlich, die verschiedenen Typen von Nachrichten und deren Abrechnungsmodalitäten zu verstehen.
 
 ### RCS-Abrechnungsarten
 
-Unsere Plattform unterstützt zwei primäre Abrechnungsmodelle: ein globales Modell und ein Modell für die Vereinigten Staaten.
+Unsere Plattform unterstützt zwei primäre Abrechnungsmodelle: ein globales Modell und ein US-amerikanisches Modell.
 
-#### Globales Modell (Nicht-US-Märkte)
+#### Globales Modell (Märkte außerhalb der USA)
 
-Messaging wird pro Nachricht abgerechnet und entweder als Basic oder Single eingestuft.
+Nachrichten werden pro Nachricht abgerechnet und entweder als „Basic“ oder „Single“ klassifiziert.
 
 {% tabs local %}
 {% tab Basic %}
 
-Einfache RCS-Nachrichten sind reine Textnachrichten mit bis zu 160 Zeichen und werden als eine einzige Nachricht abgerechnet.
+Einfache RCS-Nachrichten sind reine Textnachrichten mit einer Länge von bis zu 160 Zeichen und werden als einzelne Nachricht abgerechnet.
 
 {% alert note %}
-Wenn Sie Buttons oder andere Rich-Elemente hinzufügen, ändert sich der Nachrichtentyp in eine einzelne RCS-Nachricht.
+Durch das Hinzufügen von Buttons oder anderen Rich-Elementen wird der Nachrichtentyp in eine einzelne RCS-Nachricht geändert.
 {% endalert %}
 
 {% endtab %}
@@ -122,31 +122,31 @@ Wenn Sie Buttons oder andere Rich-Elemente hinzufügen, ändert sich der Nachric
 Einzelne RCS-Nachrichten sind Nachrichten, die mehr als 160 Zeichen umfassen ODER Rich-Elemente wie Buttons oder Medien enthalten. Diese werden unabhängig von der Länge der Nachricht als eine einzige Nachricht abgerechnet.
 
 {% alert note %}
-Das Versenden einer Textnachricht und einer separaten Mediendatei wird immer noch als zwei verschiedene Nachrichten abgerechnet.
+Das Versenden einer Textnachricht und einer separaten Mediendatei wird weiterhin als zwei separate Nachrichten abgerechnet.
 {% endalert %}
 
 {% endtab %}
 {% endtabs %}
 
-#### Modell Vereinigte Staaten
+#### US-Modell
 
 Nachrichten werden entweder als Rich oder Rich Media kategorisiert.
 
 {% tabs local %}
 {% tab Rich messages %}
 
-Rich Messages sind reine Textnachrichten mit oder ohne Buttons. Sie werden pro Segment abgerechnet, wobei jedes Segment auf 160 UTF-8 Bytes begrenzt ist, d.h. **die Anzahl der Zeichen pro Segment ist nicht festgelegt**. Eine Nachricht mit nur 160 einfachen englischen Zeichen ist ein Segment, aber eine Nachricht mit längerem Text und Emojis könnte aus mehreren Segmenten bestehen.
+Rich Messages sind reine Textnachrichten mit oder ohne Buttons. Sie werden pro Segment abgerechnet, wobei jedes Segment auf 160 UTF-8-Bytes begrenzt ist, was bedeutet, dass **die Anzahl der Zeichen pro Segment nicht festgelegt ist**. Eine Nachricht mit nur 160 Zeichen in einfachem Englisch ist ein Segment, jedoch kann eine Nachricht mit längerem Text und Emojis aus mehreren Segmenten bestehen.
 
 {% endtab %}
 {% tab Rich media messages %}
 
-Rich Media Nachrichten enthalten eine Mediendatei (Bild, Video) oder eine Rich Card und werden als einzelne Nachricht abgerechnet.
+Rich-Media-Nachrichten enthalten eine Mediendatei (Bild, Video) oder eine Rich Card und werden als einzelne Nachricht abgerechnet.
 
 {% endtab %}
 {% endtabs %}
 
-### Nachrichten-Editor und Dashboard für die Verwendung von Nachrichten
+### Nachrichten-Editor und Dashboard zur Nachrichtenverwendung
 
-Während Sie Ihre Nachricht erstellen, zeigt der Nachrichten-Editor die Art der Abrechnung in Realtime durch ein Etikett an (Basic RCS, Single RCS, Rich oder Rich Media), so dass Sie die Kosten vor dem Versand verfolgen können.
+Während Sie Ihre Nachricht erstellen, zeigt der Nachrichten-Editor die Abrechnungsart in Realtime über eine Beschriftung an (Basic RCS, Single RCS, Rich oder Rich Media), sodass Sie die Kosten vor dem Versand verfolgen können.
 
-Ihr [Dashboard für die Nutzung von Nachrichten]({{site.baseurl}}/message_usage_dashboard/) spiegelt diese Abrechnungsarten wider und gibt die Anzahl der Segmente an, die für US-Nachrichten verwendet werden. So erhalten Sie einen transparenten Überblick über den Verbrauch Ihres Nachrichten-Guthabens.
+Ihr [Dashboard zur Nachrichtennutzung]({{site.baseurl}}/message_usage_dashboard/) spiegelt diese Abrechnungsarten wider und zeigt die Anzahl der für US-Nachrichten verwendeten Segmente an, sodass Sie einen transparenten Überblick über Ihren Nachrichtenguthabenverbrauch erhalten.

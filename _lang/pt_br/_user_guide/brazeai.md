@@ -1,15 +1,15 @@
 ---
-nav_title: BrazeAI™
-article_title: BrazeAI™
-description: "O <sup>BrazeAITM</sup> oferece uma coleção de ferramentas acessíveis e fáceis de usar que reduzem as barreiras de entrada para a criatividade, a personalização e a otimização de sua estratégia de engajamento."
+nav_title: BrazeAI
+article_title: BrazeAI
+description: "O BrazeAI<sup>TM</sup> oferece uma coleção de ferramentas acessíveis e fáceis de usar que reduzem as barreiras de entrada para a criatividade, a personalização e a otimização de sua estratégia de engajamento."
 page_order: 6.5
 layout: dev_guide
 search_rank: 12
 Tool:
   - Dashboard
 
-guide_top_header: "<sup>BrazeAI™</sup>"
-guide_top_text: "O <sup>BrazeAITM</sup> oferece uma coleção de ferramentas acessíveis e fáceis de usar que reduzem as barreiras de entrada para a criatividade, a personalização e a otimização de sua estratégia de engajamento. Com os recursos do <sup>BrazeAITM</sup>, você pode ter um consultor confiável para ajudar a orientar sua criatividade, tomar decisões melhores e otimizar a experiência do usuário para seus clientes."
+guide_top_header: "BrazeAI<sup>TM</sup>"
+guide_top_text: "O BrazeAI<sup>TM</sup> oferece uma coleção de ferramentas acessíveis e fáceis de usar que reduzem as barreiras de entrada para a criatividade, a personalização e a otimização de sua estratégia de engajamento. Com os recursos do BrazeAI<sup>TM</sup>, você pode ter um consultor confiável para ajudar a orientar sua criatividade, tomar decisões melhores e otimizar a experiência do usuário para seus clientes."
 
 guide_featured_title: "Recursos"
 guide_featured_list:
@@ -22,7 +22,7 @@ guide_featured_list:
   - name: Otimizador de conteúdo
     link: /docs/user_guide/brazeai/content_optimizer/
     image: /assets/img/braze_icons/image-user-check.svg
-  - name: Estúdio de Decisão
+  - name: Estúdio de Decisões
     link: /docs/user_guide/brazeai/decisioning_studio/
     image: /assets/img/braze_icons/stars-03.svg
   - name: IA generativa
@@ -34,10 +34,10 @@ guide_featured_list:
   - name: Recomendações de itens
     link: /docs/user_guide/brazeai/item_recommendations/
     image: /assets/img/braze_icons/hearts.svg
-  - name: Operador BrazeAI
+  - name: Operador
     link: /docs/user_guide/brazeai/operator/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Suite preditiva
+  - name: Suíte Preditiva
     link: /docs/user_guide/brazeai/predictive_suite/
     image: /assets/img/braze_icons/stars-01.svg
   - name: Jornadas personalizadas

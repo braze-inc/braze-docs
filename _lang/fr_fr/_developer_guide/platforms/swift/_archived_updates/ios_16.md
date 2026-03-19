@@ -1,5 +1,5 @@
 ---
-nav_title: "Guide de mise à jour d'iOS 16"
+nav_title: Guide de mise à niveau vers iOS 16
 article_title: Guide de mise à niveau iOS 16
 page_order: 7
 platform: 

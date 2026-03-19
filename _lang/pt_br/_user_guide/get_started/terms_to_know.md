@@ -5,7 +5,7 @@ article_title: Termos de Braze para conhecer
 
 layout: glossary_page
 glossary_top_header: "Termos a serem conhecidos"
-glossary_top_text: "Esses termos devem ajudá-lo à medida que você começa sua jornada para melhores vínculos com clientes e usuários com a Braze. Leia isso antes de começar sua integração."
+glossary_top_text: "Esses termos devem ajudá-lo a começar sua jornada para melhores vínculos com clientes e usuários com a Braze. Leia isso antes de começar sua integração."
 page_type: glossary
 description: "Este glossário abrange termos importantes que você deve conhecer durante o processo de integração no Braze."
 
