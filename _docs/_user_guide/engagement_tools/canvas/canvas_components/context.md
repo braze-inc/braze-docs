@@ -152,11 +152,11 @@ The `:retry` tag used in standard Connected Content doesn't apply to Connected C
 - Whether Connected Content is used (and its response time)
 - The batch size (default 1,000 users per batch)
 
-If your Connected Content endpoint has rate limits, consider that Context steps process users sequentially within each batch, which helps respect rate limits naturally. However, multiple batches process in parallel, so ensure your endpoint can handle concurrent requests from multiple batches.
+If your Connected Content endpoint has rate limits, consider that Context steps process users sequentially within each batch, which helps respect rate limits naturally. However, multiple batches are processed in parallel, so ensure your endpoint can handle concurrent requests from multiple batches.
 
 ## Time zone consistency standardization
 
-While most event properties using the timestamp type are already in UTC in Canvas, there are some exceptions. With the addition of Canvas Context, all default timestamp event properties in action-based Canvases are in UTC. This change is part of a broader effort to ensure a more predictable and consistent experience when editing Canvas steps and messages. Note that this change impacts all action-based Canvases, whether the specific Canvas is using a Context step or not.
+With Canvas Context generally available, all default timestamp event properties in action-based Canvases are in UTC. This change is part of a broader effort to ensure a more predictable and consistent experience when editing Canvas steps and messages. Note that this change impacts all action-based Canvases, whether the specific Canvas is using a Context step or not.
 
 {% alert important %}
 In all circumstances, we strongly recommend using [Liquid time_zone filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) for timestamps to be represented in the desired time zone. You can reference this [frequently asked question](#faq-example) for an example.
