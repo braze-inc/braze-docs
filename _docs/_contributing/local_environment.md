@@ -190,7 +190,7 @@ To stop your server, reopen the terminal and press **Control+C**.
 
 ### Last modified timestamps at build time
 
-During `jekyll build`, a generator sets each page’s `last_modified_at` from **Git commit time** when the repo is a Git checkout, using the page’s Markdown file and any `_includes` partials the generator discovers from that file. If Git is not available, it falls back to **filesystem modification times** on those same files. Set `JEKYLL_GIT_LAST_MODIFIED=false` in the environment to disable this generator entirely (no automatic last-modified value). You can override a page by setting `last_modified_at` in that page’s YAML front matter.
+During `jekyll build`, a generator sets each page’s `last_modified_at` from **Git commit time** when the repo is a Git checkout, using the page’s Markdown file and any `_includes` partials the generator discovers from that file. If Git is not available, it falls back to **filesystem modification times** on those same files. Set `JEKYLL_GIT_LAST_MODIFIED=false` in the environment to disable this generator entirely (no automatic last-modified value). You can override a page by setting `last_modified_at` in that page’s YAML front matter. Each locale’s `sitemap.xml` uses the same values for `<lastmod>` (as a `YYYY-MM-DD` date): `last_modified_at`, then front matter `date`, then the build date.
 
 ## Next steps
 

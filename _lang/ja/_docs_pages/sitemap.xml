@@ -18,7 +18,7 @@ layout: bare
   {% unless hide_url or page.layout == 'redirect' or page.layout == 'blank_config' or page.noindex == true or page.config_only == true %}
   <url>
     <loc>{{site.homeurl}}{{site.baseurl}}{{ page.url }}</loc>
-    <lastmod>{{site.time | date: "%Y-%m-%d"}}</lastmod>
+    <lastmod>{% include sitemap_lastmod_date.html page=page %}</lastmod>
   </url>
   {%- endunless -%}
 {%- endfor -%}

@@ -1,0 +1,2 @@
+{%- assign _sitemap_page = include.page -%}
+{%- if _sitemap_page.last_modified_at -%}{{ _sitemap_page.last_modified_at | date: "%Y-%m-%d" }}{%- elsif _sitemap_page.date -%}{{ _sitemap_page.date | date: "%Y-%m-%d" }}{%- else -%}{{ site.time | date: "%Y-%m-%d" }}{%- endif -%}
