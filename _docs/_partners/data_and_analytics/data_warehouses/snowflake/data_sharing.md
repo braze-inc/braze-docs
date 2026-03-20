@@ -51,9 +51,11 @@ For Snowflake, data sharing happens between a [data provider](https://docs.snowf
 
 1. After a few minutes, you should receive the inbound datashare in your Snowflake account.
 2. Using the inbound datashare, create a database to view and query the tables. For example:
+    {% raw %}
     ```sql
     CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>
     ```
+    {% endraw %}
 3. Grant privileges to query the new database.
 
 {% alert warning %}
