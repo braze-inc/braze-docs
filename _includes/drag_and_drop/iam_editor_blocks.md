@@ -1,4 +1,4 @@
-## Using in-app message editor blocks
+## Using editor blocks in in-app messages
 
 Editor blocks are located under the **Build** section for in-app messages. To use them, drag an editor block inside a column. It will auto-adjust to the column width. Each editor block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.
 
@@ -18,6 +18,7 @@ The following table describes how you can use each editor block type.
 | Custom Code | Inserts and runs custom HTML, CSS, or JavaScript for advanced customization.  |
 | Phone Capture | Inserts a form field for phone numbers. When submitted, the user is subscribed to the [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) or [WhatsApp subscription group]({{site.baseurl}}/whatsapp_subscription_groups/). |
 | Email Capture | Inserts a form field for email addresses. When submitted, the email address is added to that user's profile in Braze. |
+| Short Text    | Inserts a form field that supports standard attributes (such as first and last name) or a custom attribute string of your choice. |
 | Dropdown      | Inserts a dropdown with a pre-defined list of items from which users can select one. You can add any custom attribute strings to the list. |
 | Checkbox      | Inserts a checkbox. If the user checks the box, the block's attribute is set to `true`. If left unchecked, its attribute is set to `false`. |
 | Checkbox Group| Users can select from multiple choices presented. Values are either set or added to a defined array custom attribute. |

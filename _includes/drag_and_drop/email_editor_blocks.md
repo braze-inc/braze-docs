@@ -1,4 +1,4 @@
-## Using email editor blocks
+## Using editor blocks in emails
 
 Editor blocks are located under the **Content** section for email messages. To use an editor block, drag an editor block inside a column in the drag-and-drop editor. It will auto-adjust to the column width. Each editor block has its owns settings, such as granular control on padding.
 
