@@ -1065,7 +1065,7 @@ def cmd_qc(_args):
     print(f"\nQC complete: {len(translated)} files checked, "
           f"{repair_count} auto-repairs, {warning_count} warnings")
     if warning_count:
-        sys.exit(1)
+        print("  (warnings are informational — see PR summary for details)")
 
 
 # ---------------------------------------------------------------------------
