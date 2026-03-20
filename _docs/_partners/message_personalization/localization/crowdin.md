@@ -57,7 +57,7 @@ Before you connect Crowdin, add your target languages in Braze.
 ![Braze Locales page under Settings, showing locale names, locale keys, and Add locale.]({% image_buster /assets/img/crowdin/braze_locales.png %}){: style="max-width:85%;"}
 
 {: start="3"}
-3. Note each **Locale ID** (for example, `en-US`, `fr-FR`, `es-ES`). You use these values when you map languages in Crowdin.
+3. Note each **Locale key** (for example, `en-US`, `fr-FR`, `es-ES`). You use these values when you map languages in Crowdin.
 
 ### Step 2: Set up the Braze project in Crowdin
 
@@ -76,8 +76,8 @@ Authorize the connection with your Braze API credentials:
 
 ![Crowdin Braze Campaigns & Canvas connection form with REST API key, REST endpoint, and Log in with Braze Campaigns & Canvas.]({% image_buster /assets/img/crowdin/crowdin_campaigns_canvas_login.png %}){: style="max-width:85%;"}
 
-- **Braze REST API key**: Create this in Braze under **Settings** > **APIs and Identifiers** > **API Keys**. Grant the permissions this integration needs (campaigns, Canvas, Content Blocks, and custom attributes).
-- **Braze REST endpoint**: Enter the URL for your Braze instance (for example, `https://rest.iad-03.braze.com`). For more information, see [REST API endpoints]({{site.baseurl}}/api/basics/#endpoints).
+- **Braze REST API key:** Create this in Braze under **Settings** > **APIs and Identifiers** > **API Keys**. Grant the permissions this integration needs (campaigns, Canvas, Content Blocks, and custom attributes).
+- **Braze REST endpoint:** Enter the URL for your Braze instance (for example, `https://rest.iad-03.braze.com`). For more information, see [REST API endpoints]({{site.baseurl}}/api/basics/#endpoints).
 
 ![Braze REST API Keys page with Create API Key and the REST Endpoint copy control.]({% image_buster /assets/img/crowdin/braze_rest_api_keys.png %}){: style="max-width:85%;"}
 
@@ -93,9 +93,9 @@ After you connect your account, map each Crowdin project language to the matchin
 
 {: start="2"}
 2. Open the **General Settings** tab.
-3. **Enter local keys**: Crowdin lists your project languages (for example, French, Italian). In each field, enter the matching **Braze local key**.
+3. **Enter locale keys:** Crowdin lists your project languages (for example, French, Italian). In each field, enter the matching **Braze locale key**.
    - For example, if Braze uses `it` for Italian, enter `it` next to Italian in Crowdin.
-   - Keys must match the **Locale ID** in your Braze **Localization Settings** exactly.
+   - Each entry must match the **Locale key** for that locale in Braze **Localization Settings** exactly.
 
 ![Settings modal on the General Settings tab, showing file filter fields and language mapping rows (for example, French mapped to fr).]({% image_buster /assets/img/crowdin/crowdin_language_mapping_settings.png %}){: style="max-width:85%;"}
 
@@ -104,21 +104,22 @@ After you connect your account, map each Crowdin project language to the matchin
 
 ### Step 4: Add translation tags to your Braze message
 
-Crowdin reads Liquid-based translation tags. Wrap every text segment, image URL, and link URL you want translated.
+Crowdin reads the same Liquid **translation tags** Braze uses for multi-language messages. Add {% raw %}`{% translation your_id_here %}` and `{% endtranslation %}`{% endraw %} around every piece of text, image URL, or link URL you want translated. Each block needs a unique `id` (for example, `greeting` or `welcome_header`).
 
-**Example format:** {% raw %}`{{ 'Source Text' | bin: 'unique_identifier' }}`{% endraw %}
+**Example:**
 
-- **Source text**: The original content (for example, "Hello!").
-- **Unique identifier**: A key that identifies this specific string (for example, `welcome_header`).
+{% raw %}`{% translation greeting %}Hello!{% endtranslation %}`{% endraw %}
 
-Save your Braze message as a **Draft** before Crowdin can detect and pull the content. For more information, see [Translating locales]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales).
+For HTML, Liquid in links, and other patterns, follow the same rules as in [Translating locales]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) (for example, keep tags around the smallest segments possible, and wrap only language-specific parts of URLs when localizing links).
+
+Save your Braze message as a **Draft** before Crowdin can detect and pull the content.
 
 ### Step 5: Manage translations in Crowdin
 
 The integration screen has two sides:
 
-- **Right side (Braze)**: Your campaigns and Canvases.
-- **Left side (Crowdin)**: Content already synced for translation.
+- **Right side (Braze):** Your campaigns and Canvases.
+- **Left side (Crowdin):** Content already synced for translation.
 
 ![Crowdin and Braze Campaigns & Canvas panels with folders for campaigns and locales, Sync to Braze, and Sync to Crowdin.]({% image_buster /assets/img/crowdin/crowdin_campaigns_canvas_sync_panels.png %}){: style="max-width:85%;"}
 
@@ -167,20 +168,20 @@ Authorize the connection with your Braze API credentials:
 
 ![Crowdin Braze Email Templates connection form with REST API key, REST endpoint, and Log in with Braze Email Templates.]({% image_buster /assets/img/crowdin/crowdin_email_templates_login.png %}){: style="max-width:85%;"}
 
-1. **Braze REST API key**: Grant `templates.email` and `content_blocks` (read and write). Create the key in Braze under **Settings** > **APIs and Identifiers** > **API Keys**.
+1. **Braze REST API key:** Grant `templates.email` and `content_blocks` (read and write). Create the key in Braze under **Settings** > **APIs and Identifiers** > **API Keys**.
 
 ![Braze REST API Keys page with Create API Key and the REST Endpoint copy control.]({% image_buster /assets/img/crowdin/braze_rest_api_keys.png %}){: style="max-width:85%;"}
 
 {: start="2"}
-2. **Braze REST endpoint**: Use your instance-specific URL (for example, `https://rest.iad-03.braze.com`).
+2. **Braze REST endpoint:** Use your instance-specific URL (for example, `https://rest.iad-03.braze.com`).
 3. Click **Log in with Braze Email Templates**.
 
 ### Step 3: Sync content for translation
 
 The integration screen shows your Braze library:
 
-- **Right side (Braze)**: **Email Templates** and **Content Blocks** you can sync.
-- **Left side (Crowdin)**: Content in translation.
+- **Right side (Braze):** **Email Templates** and **Content Blocks** you can sync.
+- **Left side (Crowdin):** Content in translation.
 
 1. On the **Braze (Right)** side, select the checkbox next to the templates or blocks you want to localize.
 2. Click **Sync to Crowdin**.
