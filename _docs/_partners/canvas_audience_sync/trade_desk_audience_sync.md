@@ -85,7 +85,7 @@ There is no minimum audience size for CRM audiences in The Trade Desk.
 
 ### How do I know if users have matched after passing users to The Trade Desk?
 
-In The Trade Desk, received IDs will populate next to the segment.
+In The Trade Desk, received IDs populate next to the segment.
 
 - Received IDs are the number of IDs we received in the last 30 days.
 - Active IDs are the number of IDs we've seen in bidding in the last seven days.
