@@ -10,15 +10,15 @@ tool: Reporting
 
 # Configurar los informes
 
-> Braze genera automáticamente un informe semanal por correo electrónico para ayudarle a comprender el rendimiento de sus aplicaciones y campañas de mensajería. 
+> Braze genera automáticamente un informe semanal por correo electrónico para ayudarte a comprender el rendimiento de tus aplicaciones y campañas de mensajería. 
 
 ## Suscribirse a los informes
 
-Puede suscribirse a este informe en la página **Preferencias de notificación**. 
+Puedes suscribirte a este informe desde la página **Preferencias de notificación**. 
 
-1. Vaya a **Configuración** > **Configuración del administrador** > **Preferencias de notificación**. 
-2. Seleccione el **Informe Analítico Semanal** y añádase a los destinatarios de la lista.
+1. Ve a **Configuración** > **Configuración del administrador** > **Preferencias de notificación**. 
+2. Selecciona el **Informe analítico semanal** y añádete a la lista de destinatarios.
 
 ## Añadir eventos personalizados a los informes
 
-Además, si utilizas eventos personalizados, puedes seleccionar hasta cinco eventos clave de la página **Eventos personalizados** para incluirlos en tu informe semanal. Vaya a **Configuración de datos** > **Eventos personalizados** para actualizar estos eventos en cualquier momento.
+Además, si utilizas eventos personalizados, puedes seleccionar hasta cinco eventos clave de la página **Eventos personalizados** para incluirlos en tu informe semanal. Ve a **Configuración de datos** > **Eventos personalizados** para actualizar estos eventos en cualquier momento.

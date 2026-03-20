@@ -11,50 +11,51 @@ description: "Este artículo de referencia explica cómo exportar datos de segme
 
 > Esta página explica cómo solicitar una exportación CSV de los datos de usuario de un segmento, y los datos incluidos en la exportación.
 
-Para exportar los datos de un segmento a un CSV, selecciona el menú desplegable **Datos de usuario** mientras editas un segmento y elige exportar los datos de usuario o las direcciones de correo electrónico del segmento.
+Para exportar los datos de un segmento a un CSV, selecciona el menú desplegable **User Data** mientras editas un segmento y elige exportar los datos de usuario o las direcciones de correo electrónico del segmento.
 
-![Sección Detalles del segmento con el desplegable Datos de usuario que muestra las opciones de exportación.]({% image_buster /assets/img_archive/csvexport.png %})
+![Sección Detalles del segmento con el desplegable User Data que muestra las opciones de exportación.]({% image_buster /assets/img_archive/csvexport.png %})
 
-También puede solicitar una exportación CSV desde la página principal de **Segmentos** seleccionando el desplegable <i class="fas fa-gear"></i> **Settings** para un segmento:
+También puedes solicitar una exportación CSV desde la página principal de **Segments** seleccionando el desplegable <i class="fas fa-gear"></i> **Settings** para un segmento:
 
-![Desplegable de configuración en la página principal de Segmentos.]({% image_buster /assets/img_archive/csvexport2.png %})
+![Desplegable de configuración en la página principal de Segments.]({% image_buster /assets/img_archive/csvexport2.png %})
 
 {% alert tip %}
-Para exportar los datos de todos sus perfiles de usuario, cree un segmento sin filtros y, a continuación, solicite una exportación CSV.
+Para exportar los datos de todos tus perfiles de usuario, crea un segmento sin filtros y, a continuación, solicita una exportación CSV.
 {% endalert %}
 
-La salida CSV contiene los datos de cada perfil de usuario capturado en el segmento en el momento de la exportación. Puede exportar cualquier segmento seleccionando el icono del engranaje y Exportar CSV. Braze generará el informe en segundo plano y lo enviará por correo electrónico al usuario que esté conectado en ese momento.
+La salida CSV contiene los datos de cada perfil de usuario capturado en el segmento en el momento de la exportación. Puedes exportar cualquier segmento seleccionando el ícono de engranaje y la exportación CSV. Braze generará el informe en segundo plano y lo enviará por correo electrónico al usuario que esté conectado en ese momento.
 
-{% alert important %}
-Debido a las restricciones de tamaño de los archivos, la exportación puede fallar si el tamaño estimado de tu segmento es superior a 500 000 usuarios. Tenga en cuenta que esta restricción utiliza el tamaño estimado de su segmento, y no el cálculo exacto. Para más detalles, consulta [Exportar segmentos grandes](#exporting-large-segments).
+{% alert important %} 
+Debido a las restricciones de tamaño de los archivos, la exportación puede fallar si el tamaño estimado de tu segmento es superior a 500 000 usuarios. Ten en cuenta que esta restricción utiliza el tamaño estimado de tu segmento, y no el cálculo exacto. Para más detalles, consulta [Exportar segmentos grandes](#exporting-large-segments).
 {% endalert %}
 
-Si has vinculado tus [credenciales de Amazon S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration) a Braze, el CSV se cargará en tu contenedor de S3 con la clave `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. Debes haber iniciado sesión en el panel para acceder al enlace de descarga que se te ha enviado por correo electrónico.
+Si has vinculado tus [credenciales de Amazon S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration) a Braze, el CSV se cargará en tu contenedor de S3 con la clave `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. Debes haber iniciado sesión en el dashboard para acceder al enlace de descarga que se te ha enviado por correo electrónico.
 
 {% multi_lang_include alerts/important_alerts.md alert='S3 file bucket export' %}
 
 ## Datos incluidos en la exportación
 
-Dependiendo de su selección, su exportación incluirá lo siguiente.
+Dependiendo de tu selección, tu exportación incluirá lo siguiente.
 
-### Exportar datos de usuario CSV
+### Exportación CSV de datos de usuario
 
 | Nombre del campo                  | Descripción                                              |
 | --------------------------- | -------------------------------------------------------- |
 | Appboy ID                   | ID interno (no se puede cambiar)                           |
 | country                     | País                                    |
 | created_at                  | Fecha y hora de creación del perfil de usuario                   |
+| created_from                | Método utilizado para crear el perfil de usuario (por ejemplo, API REST, SDK o importación CSV)         |
 | devices                     | Información sobre el dispositivo                           |
 | date_of_birth               | Fecha de nacimiento                                            |
-| correo electrónico                       | Dirección de correo electrónico                                            |
-| unsubscribed_from_emails_at | Fecha de cancelación de suscripción por correo electrónico                            |
+| email                       | Dirección de correo electrónico                                            |
+| unsubscribed_from_emails_at | Fecha de cancelación de suscripción de correos electrónicos                            |
 | user_id                     | ID externo                                              |
 | first_name                  | Nombre                                               |
 | first_session               | Fecha y hora de la primera sesión                           |
 | gender                      | Género                                                   |
 | google_ad_ids               | ID de publicidad de Google asociados al usuario                      |
-| ciudad                        | Localidad                                     |
-| IDFAs                       | Valores del Identificador para Publicidad (IDFA)                 |
+| city                        | Ciudad                                     |
+| IDFAs                       | Valores del identificador para publicidad (IDFA)                 |
 | IDFVs                       | Valores del identificador de proveedor (IDFV)                      |
 | language                    | Idioma en la norma ISO-639-1                                        |
 | last_app_version_used       | Última versión de la aplicación utilizada                             |
@@ -65,14 +66,14 @@ Dependiendo de su selección, su exportación incluirá lo siguiente.
 | number_of_IDFVs             | Recuento de IDFV asociados                                |
 | number_of_push_tokens       | Recuento de tokens de notificación push asociados             |
 | number_of_roku_ad_ids       | Recuento de ID de publicidad de Roku asociados                 |
-| number_of_windows_ad_ids    | Recuento de identificadores de publicidad de Windows asociados              |
+| number_of_windows_ad_ids    | Recuento de ID de publicidad de Windows asociados              |
 | phone_number                | Número de teléfono                                             |
-| opted_into_push_at          | Fecha de aceptación de las notificaciones push                       |
+| opted_into_push_at          | Fecha de adhesión voluntaria a las notificaciones push                       |
 | unsubscribed_from_push_at   | Fecha de baja de las notificaciones push                |
 | random_bucket               | Número de contenedor aleatorio                                 |
 | roku_ad_ids                 | ID de publicidad de Roku                          |
 | session_count               | Número total de sesiones                                 |
-| zona horaria                    | Zona horaria del usuario en el mismo formato que la base de datos de zonas horarias de IANA                                         |
+| timezone                    | Zona horaria del usuario en el mismo formato que la base de datos de zonas horarias de IANA                                         |
 | in_app_purchase_total       | Importe total gastado en compras dentro de la aplicación                   |
 | user_aliases                | Alias de usuario, en su caso                                          |
 | windows_ad_ids              | ID de publicidad de Windows                       |
@@ -80,26 +81,26 @@ Dependiendo de su selección, su exportación incluirá lo siguiente.
 | Atributos personalizados           | Basado en la selección en la exportación                             |
 {: .reset-td-br-1 .reset-td-br-2 }
 
-### Exportación de direcciones de correo electrónico a CSV
+### Exportación CSV de direcciones de correo electrónico
 
 | Nombre del campo                  | Descripción            |
 | --------------------------- | ---------------------- |
 | user_id                     | ID externo del usuario     |
 | first_name                  | Nombre             |
 | last_name                   | Apellido              |
-| correo electrónico                       | Correo electrónico                  |
-| unsubscribed_from_emails_at | Fecha de cancelación de suscripción por correo electrónico |
-| opted_in_to_emails_at       | Fecha de suscripción      |
+| email                       | Correo electrónico                  |
+| unsubscribed_from_emails_at | Fecha de cancelación de suscripción de correos electrónicos |
+| opted_in_to_emails_at       | Fecha de adhesión voluntaria a correos electrónicos      |
 | user_aliases                | Alias de usuario, en su caso   |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Para obtener ayuda con las exportaciones CSV y API, visite nuestro artículo de [solución de problemas]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
+Para obtener ayuda con las exportaciones CSV y API, visita nuestro artículo de [solución de problemas]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %} 
 
-## Exportación de grandes segmentos
+## Exportación de segmentos grandes
 
-Existen varios métodos para exportar un gran segmento de usuarios que contenga más de 500.000 usuarios.
+Existen varios métodos para exportar un segmento grande de usuarios que contenga más de 500 000 usuarios.
 
 {% tabs %}
 {% tab Multiple segments %}

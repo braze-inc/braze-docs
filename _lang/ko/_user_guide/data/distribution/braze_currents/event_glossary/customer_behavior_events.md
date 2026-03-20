@@ -4,29 +4,33 @@ layout: customer_behavior_events_glossary
 page_order: 4
 excerpt_separator: ""
 page_type: glossary
-description: "이 용어집에는 Braze가 커런트를 사용하여 추적하고 선택한 데이터 웨어하우스로 전송할 수 있는 다양한 고객 행동 및 사용자 이벤트가 나열되어 있습니다."
+description: "이 용어집에는 Braze가 커런츠를 사용하여 추적하고 선택한 데이터 웨어하우스로 전송할 수 있는 다양한 고객 행동 및 사용자 이벤트가 나열되어 있습니다."
 tool: Currents
 search_rank: 7
 ---
 
-추가 이벤트 자격에 대한 액세스가 필요한 경우 Braze 담당자에게 문의하거나 [지원 티켓을]({{site.baseurl}}/braze_support/) 개설하세요. 이 페이지에서 필요한 정보를 찾을 수 없다면 [메시지 참여 이벤트 라이브러리]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) 또는 [커런츠 샘플 데이터 예시를](https://github.com/Appboy/currents-examples/tree/master/sample-data) 확인하세요.
+{% alert tip %}
+이러한 이벤트는 [쿼리 빌더]({{site.baseurl}}/user_guide/analytics/query_builder/), [SQL 세그먼트 확장]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/), [Snowflake 데이터 공유]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/)에서 SQL 테이블로도 사용할 수 있습니다. SQL 테이블 스키마 및 열 세부 정보는 [SQL 테이블 참조]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/sql_segments/sql_segments_tables/)를 참조하세요.
+{% endalert %}
 
-{% details Explanation of customer behavior and user event structure and platform values %}
+추가 이벤트 자격에 대한 액세스가 필요한 경우 Braze 담당자에게 문의하거나 [고객지원 티켓]({{site.baseurl}}/braze_support/)을 개설하세요. 이 페이지에서 필요한 정보를 찾을 수 없다면 [메시지 참여 이벤트 라이브러리]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) 또는 [커런츠 샘플 데이터 예시](https://github.com/Appboy/currents-examples/tree/master/sample-data)를 확인하세요.
+
+{% details 고객 행동 및 사용자 이벤트 구조와 플랫폼 값 설명 %}
 
 ### 이벤트 구조
 
-이 고객 행동 및 사용자 이벤트 분석은 일반적으로 고객 행동 또는 사용자 이벤트에 어떤 유형의 정보가 포함되는지 보여줍니다. 구성 요소에 대한 확실한 이해를 바탕으로 개발자와 비즈니스 인텔리전스 전략 팀은 수신되는 Currents 이벤트 데이터를 사용하여 데이터 기반 보고서와 차트를 만들고 다른 유용한 데이터 메트릭을 활용할 수 있습니다.
+이 고객 행동 및 사용자 이벤트 분석은 일반적으로 고객 행동 또는 사용자 이벤트에 어떤 유형의 정보가 포함되는지 보여줍니다. 구성요소에 대한 확실한 이해를 바탕으로 개발자와 비즈니스 인텔리전스 전략 팀은 수신되는 커런츠 이벤트 데이터를 사용하여 데이터 중심 보고서와 차트를 만들고 다른 유용한 데이터 측정기준을 활용할 수 있습니다.
 
-![구매 이벤트를 보여주는 사용자 이벤트의 분류로, 사용자 특정 속성, 행동 특정 속성 및 기기 특정 속성으로 그룹화된 나열된 속성]({% image_buster /assets/img/customer_engagement_event.png %})
+![구매 이벤트를 보여주는 사용자 이벤트의 분류로, 사용자별 속성, 행동별 속성 및 기기별 속성으로 그룹화된 나열된 등록정보]({% image_buster /assets/img/customer_engagement_event.png %})
 
 고객 행동 및 사용자 이벤트는 **사용자별** 속성, **행동별** 속성, **기기별** 속성으로 구성됩니다.
 
-### 플랫폼 가치
+### 플랫폼 값
 
 특정 이벤트는 사용자 기기의 플랫폼을 지정하는 `platform` 값을 반환합니다.
 <br>다음 표에서는 반환 가능한 값을 자세히 설명합니다:
 
-| 사용자 디바이스 | 플랫폼 가치 |
+| 사용자 기기 | 플랫폼 값 |
 | --- | --- |
 | iOS | `ios` |
 | Android | `android` |
@@ -40,7 +44,7 @@ search_rank: 7
 {% enddetails %}
 
 {% alert important %}
-저장 스키마는 우리가 데이터 웨어하우스 저장 파트너(예: Google Cloud Storage, Amazon S3 및 Microsoft Azure Blob Storage)로 보내는 평면 파일 이벤트 데이터에 적용됩니다. 여기에 나열된 일부 이벤트와 목적지 조합은 아직 일반적으로 사용할 수 없습니다. 다양한 파트너가 지원하는 이벤트에 대한 자세한 내용은 [사용 가능한 파트너]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/) 목록을 참조하여 각 페이지를 확인하세요.<br><br>또한, 커런츠는 페이로드가 900KB를 초과하는 지나치게 큰 이벤트는 삭제한다는 점에 유의하세요.
+저장 스키마는 데이터 웨어하우스 저장 파트너(예: Google Cloud Storage, Amazon S3 및 Microsoft Azure Blob Storage)로 전송하는 플랫 파일 이벤트 데이터에 적용됩니다. 여기에 나열된 일부 이벤트와 대상 조합은 아직 일반적으로 사용할 수 없습니다. 다양한 파트너가 지원하는 이벤트에 대한 자세한 내용은 [사용 가능한 파트너]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/) 목록을 참조하여 각 페이지를 확인하세요.<br><br>또한, 커런츠는 페이로드가 900&nbsp;KB를 초과하는 지나치게 큰 이벤트는 삭제한다는 점에 유의하세요.
 {% endalert %}
 
 {% api %}
@@ -50,11 +54,11 @@ search_rank: 7
 Random Bucket Number
 {% endapitags %}
 
-이 사용자 이벤트는 워크스페이스 내에서 새 사용자가 생성될 때마다 발생합니다. 이 이벤트 동안, 각 신규 사용자는 무작위 버킷 번호가 할당되며, 이를 사용하여 무작위 사용자들의 균일하게 분포된 세그먼트를 생성할 수 있습니다. 이를 사용하여 무작위 버킷 번호 값의 범위를 그룹화하고 캠페인 및 캠페인 변형 간의 성능을 비교할 수 있습니다.
+이 사용자 이벤트는 워크스페이스 내에서 새 사용자가 생성될 때마다 발생합니다. 이 이벤트 동안 각 신규 사용자에게 무작위 버킷 번호가 할당되며, 이를 사용하여 무작위 사용자들의 균일하게 분포된 세그먼트를 생성할 수 있습니다. 이를 사용하여 무작위 버킷 번호 값의 범위를 그룹화하고 캠페인 및 캠페인 배리언트 간의 성과를 비교할 수 있습니다.
 
 {% alert important %}
 이 커런츠 이벤트는 "모든 이벤트 커넥터"를 구매한 고객만 사용할 수 있으며, Amazon S3, Microsoft Azure 및 Google Cloud Storage와 같은 저장 이벤트 커넥터에만 사용할 수 있습니다.
-<br><br>이 이벤트를 활성화하고 워크스페이스에서 기존 사용자의 무작위 버킷 번호에 대한 백필을 예약하려면 고객 성공 관리자에게 문의하세요.
+<br><br>이 이벤트를 활성화하고 워크스페이스에서 기존 사용자의 무작위 버킷 번호에 대한 백필을 예약하려면 고객 성공 매니저에게 문의하세요.
 {% endalert %}
 
 {% tabs %}
@@ -84,7 +88,7 @@ Random Bucket Number
 Custom Events
 {% endapitags %}
 
-이 이벤트는 특정 사용자 지정 이벤트가 트리거될 때 발생합니다. 이를 사용하여 사용자가 애플리케이션에서 커스텀 이벤트를 수행하는 시기를 추적할 수 있습니다.
+이 이벤트는 특정 커스텀 이벤트가 트리거될 때 발생합니다. 이를 사용하여 사용자가 애플리케이션에서 커스텀 이벤트를 수행하는 시기를 추적할 수 있습니다.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -197,11 +201,11 @@ Custom Events
 {% endtab %}
 {% endtabs %}
 
-#### 부동산 세부 정보
+#### 등록정보 세부 정보
 
-- For Custom Events, the payload will also be populated with any [custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events#custom-event-properties) that are associated with the event.
-- `ad_id`, `ad_id_type`, 및 `ad_tracking_enabled`의 경우, 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우, 고객 성공 매니저 또는 계정 매니저에게 연락하여 `ad_id` 전송을 위한 기능 플리퍼를 활성화하십시오.
+- 커스텀 이벤트의 경우, 페이로드에는 해당 이벤트와 연결된 모든 [커스텀 이벤트 등록정보]({{site.baseurl}}/user_guide/data/custom_data/custom_events#custom-event-properties)도 포함됩니다.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled`의 경우, 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. 자세한 내용은 여기에서 확인하세요: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+- Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우, 고객 성공 매니저 또는 계정 매니저에게 연락하여 `ad_id` 전송을 위한 기능 플리퍼를 활성화하세요.
 {% endapi %}
 
 {% api %}
@@ -211,7 +215,7 @@ Custom Events
 Attribution
 {% endapitags %}
 
-이 이벤트는 앱 설치가 소스에 어트리뷰션될 때 발생합니다. 이를 사용하여 앱 설치의 출처를 추적할 수 있습니다.
+이 이벤트는 앱 설치가 소스에 기여도가 부여될 때 발생합니다. 이를 사용하여 앱 설치의 출처를 추적할 수 있습니다.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -431,10 +435,10 @@ Locations
 {% endtab %}
 {% endtabs %}
 
-#### 부동산 세부 정보
+#### 등록정보 세부 정보
 
-- `ad_id`, `ad_id_type`, 및 `ad_tracking_enabled`의 경우, 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우, 고객 성공 매니저 또는 계정 매니저에게 연락하여 `ad_id` 전송을 위한 기능 플리퍼를 활성화하십시오.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled`의 경우, 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. 자세한 내용은 여기에서 확인하세요: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+- Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우, 고객 성공 매니저 또는 계정 매니저에게 연락하여 `ad_id` 전송을 위한 기능 플리퍼를 활성화하세요.
 {% endapi %}
 
 {% api %}
@@ -447,7 +451,7 @@ Purchases
 이 이벤트는 사용자가 구매할 때 발생합니다. 이 데이터를 사용하여 사용자가 애플리케이션에서 상품을 구매한 시점을 추적합니다.
 
 {% alert tip %}
-구매는 특별한 사용자 지정 이벤트이며, 사용자 지정 이벤트와 동일한 방식으로 JSON으로 인코딩된 사용자 지정 이벤트 속성 문자열이 함께 제공됩니다.
+구매는 특별한 커스텀 이벤트이며, 커스텀 이벤트와 동일한 방식으로 JSON으로 인코딩된 커스텀 이벤트 등록정보 문자열이 함께 제공됩니다.
 {% endalert %}
 
 {% tabs %}
@@ -570,11 +574,11 @@ Purchases
 {% endtab %}
 {% endtabs %}
 
-#### 부동산 세부 정보
+#### 등록정보 세부 정보
 
-- For Purchase events, the payload will also be populated with any [purchase event properties]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#purchase-properties) that are associated with the event.
-- `ad_id`, `ad_id_type`, 및 `ad_tracking_enabled`의 경우, 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우, 고객 성공 매니저 또는 계정 매니저에게 연락하여 `ad_id` 전송을 위한 기능 플리퍼를 활성화하십시오.
+- 구매 이벤트의 경우, 페이로드에는 해당 이벤트와 연결된 모든 [구매 이벤트 등록정보]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#purchase-properties)도 포함됩니다.
+- `ad_id`, `ad_id_type`, `ad_tracking_enabled`의 경우, 네이티브 SDK를 통해 iOS IDFA 및 Android Google 광고 ID를 명시적으로 수집해야 합니다. 자세한 내용은 여기에서 확인하세요: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+- Kafka를 사용하여 [커런츠]({{site.baseurl}}/user_guide/data/braze_currents/) 데이터를 수집하는 경우, 고객 성공 매니저 또는 계정 매니저에게 연락하여 `ad_id` 전송을 위한 기능 플리퍼를 활성화하세요.
 {% endapi %}
 
 {% api %}
@@ -701,7 +705,7 @@ Sessions
 Sessions
 {% endapitags %}
 
-이는 사용자가 애플리케이션을 종료하여 현재 세션이 종료될 때 발생합니다. 이 데이터를 사용하여 세션이 종료되는 시점을 추적하고 적절한 세션 시작 이벤트와 함께 세션의 지속 시간을 계산합니다.
+이 이벤트는 사용자가 애플리케이션을 종료하여 현재 세션이 종료될 때 발생합니다. 이 데이터를 사용하여 세션이 종료되는 시점을 추적하고, 적절한 세션 시작 이벤트와 함께 세션의 지속 시간을 계산합니다.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -925,7 +929,7 @@ Sessions
 Live Activity, Push To Start Token
 {% endapitags %}
 
-이 이벤트는 Braze가 사용자와 함께 라이브 활동 푸시 시작 토큰을 동기화할 때 발생합니다.
+이 이벤트는 Braze가 사용자와 라이브 활동 푸시 시작 토큰을 동기화할 때 발생합니다.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -1034,7 +1038,7 @@ Live Activity, Push To Start Token
 Live Activity, Update Token
 {% endapitags %}
 
-This event occurs when Braze syncs Live Activity update token with the user
+이 이벤트는 Braze가 사용자와 라이브 활동 업데이트 토큰을 동기화할 때 발생합니다.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -1143,7 +1147,7 @@ This event occurs when Braze syncs Live Activity update token with the user
 Push, Token State Change
 {% endapitags %}
 
-이 이벤트는 푸시 토큰이 삽입, 업데이트 또는 제거될 때 발생합니다. Use this to track the states of push tokens.
+이 이벤트는 푸시 토큰이 삽입, 업데이트 또는 제거될 때 발생합니다. 이를 사용하여 푸시 토큰의 상태를 추적할 수 있습니다.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -1274,54 +1278,54 @@ Push, Token State Change
 {% endtab %}
 {% endtabs %}
 
-#### 부동산 세부 정보
+#### 등록정보 세부 정보
 
 - `push_token_foreground_push_disabled` 필드는 푸시 토큰이 포그라운드 또는 백그라운드 푸시를 받을 수 있는지를 나타냅니다.
-  - 사용자가 자신의 기기에서 푸시 알림 권한을 명시적으로 허용한 경우, 이는 `false`이 되며, 토큰은 포그라운드 푸시 알림을 받을 수 있습니다.
-  - 사용자가 자신의 기기에서 푸시 알림 권한을 명시적으로 거부한 경우, 이는 `true`이 되며, 토큰은 백그라운드 푸시 알림만 허용됩니다.
-  - 푸시 권한이 알려지지 않은 경우, 이는 비어 있습니다. 기본적으로 Braze는 토큰에 포그라운드 푸시 알림을 보내려고 시도합니다.
+  - 사용자가 기기에서 푸시 알림 권한을 명시적으로 허용한 경우, 이 값은 `false`이며 토큰은 포그라운드 푸시 알림을 받을 수 있습니다.
+  - 사용자가 기기에서 푸시 알림 권한을 명시적으로 거부한 경우, 이 값은 `true`이며 토큰은 백그라운드 푸시 알림만 허용됩니다.
+  - 푸시 권한이 알려지지 않은 경우, 이 값은 비어 있습니다. 기본적으로 Braze는 토큰에 포그라운드 푸시 알림을 보내려고 시도합니다.
 - `push_token_provisionally_opted_in` 필드는 iOS 푸시 토큰에만 적용됩니다.
-  - [임시 승인]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push)이 설정되어 있으면, 임시 토큰은 이 필드가 `true`로 설정됩니다. 모든 다른 푸시 토큰은 `false`이 됩니다.
+  - [임시 승인]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push)이 설정되어 있으면, 임시 토큰은 이 필드가 `true`로 설정됩니다. 다른 모든 푸시 토큰은 `false`가 됩니다.
 - `sdk_version` 필드는 토큰 상태 변경이 SDK에 의해 시작된 경우에만 채워집니다.
   - 토큰이 한 사용자에서 다른 사용자로 이동하도록 트리거하는 `changeUser` SDK 이벤트가 있는 경우, `sdk_version` 필드가 채워집니다.
-  - 푸시 바운스가 발생하면(예: 제거로 인한 경우), `sdk_version` 필드는 비어 있습니다.
-- 푸시 토큰이 Braze에 들어올 때마다, 그 생애 주기 이벤트가 기록됩니다. `push_token_state_change_type` 필드에는 세 가지 유형의 토큰 변경 이벤트("추가", "업데이트", "제거")가 기록됩니다.
+  - 푸시 반송이 발생하면(예: 제거로 인한 경우), `sdk_version` 필드는 비어 있습니다.
+- 푸시 토큰이 Braze에 들어올 때마다 생애 주기 이벤트가 기록됩니다. `push_token_state_change_type` 필드에는 세 가지 유형의 토큰 변경 이벤트("add", "update", "remove")가 기록됩니다.
 
 #### 이벤트 유형
 
 ##### 추가
 
-새 토큰이 등록될 때 "추가" 이벤트가 수집됩니다. 사용자가 새 기기에서 앱을 처음 열거나, 이전에 토큰이 없었던 사용자에 대해 [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 엔드포인트를 통해 `push_tokens`으로 설정될 때 발생합니다.
+새 토큰이 등록될 때 "add" 이벤트가 수집됩니다. 사용자가 새 기기에서 앱을 처음 열거나, 이전에 토큰이 없었던 사용자에 대해 [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 엔드포인트를 통해 `push_tokens`로 설정될 때 발생합니다.
 
 ##### 업데이트
 
-기존 토큰의 속성이 변경되지만 토큰 문자열 자체는 변경되지 않을 때 "업데이트" 이벤트가 수집됩니다. 토큰은 동일한 문자열, 동일한 사용자 및 동일한 앱을 가지지만, 다음 필드 중 하나 이상이 변경되었습니다: `foreground_push_disabled`, APNs 게이트웨이, 웹 푸시 키, `provisionally_opted_in` 또는 `device_id`.
+기존 토큰의 속성이 변경되지만 토큰 문자열 자체는 변경되지 않을 때 "update" 이벤트가 수집됩니다. 토큰은 동일한 문자열, 동일한 사용자 및 동일한 앱을 가지지만, 다음 필드 중 하나 이상이 변경되었습니다: `foreground_push_disabled`, APN 게이트웨이, 웹 푸시 키, `provisionally_opted_in` 또는 `device_id`.
 
 {% alert note %}
-대부분의 경우, 앱 재설치 또는 백업 복원은 새로운 `push_token`와 새로운 `device_id`을 가진 새로운 "추가" 이벤트를 발생시킵니다(왜냐하면 SDK가 새로운 `device_id`를 생성하고 OS가 새로운 푸시 토큰 문자열을 제공하기 때문입니다). 이로 인해 사용자 프로필에 두 개의 별도의 토큰 및 기기 항목이 생성되며, 이전 항목은 제거 추적 또는 캠페인 전송을 통해 나중에 정리됩니다.
+대부분의 경우, 앱 재설치 또는 백업 복원은 새로운 `push_token`과 새로운 `device_id`를 가진 새로운 "add" 이벤트를 발생시킵니다(SDK가 새로운 `device_id`를 생성하고 OS가 새로운 푸시 토큰 문자열을 제공하기 때문입니다). 이로 인해 사용자 프로필에 두 개의 별도 토큰 및 기기 항목이 생성되며, 이전 항목은 제거 추적 또는 캠페인 전송을 통해 나중에 정리됩니다.
 
-오직 `device_id`만 변경되고 `push_token`는 변경되지 않는 경우는 극히 드물 것입니다(이 경우 OS가 재설치 후 동일한 토큰 문자열을 반환해야 합니다).
+`push_token`은 변경되지 않고 `device_id`만 변경되는 경우는 극히 드뭅니다(이 경우 OS가 재설치 후 동일한 토큰 문자열을 반환해야 합니다).
 {% endalert %}
 
 ##### 제거
 
-Braze가 토큰을 제거할 때 독립적인 "제거" 이벤트가 수집됩니다. 이는 여러 가지 이유로 발생할 수 있습니다:
+Braze가 토큰을 제거할 때 독립적인 "remove" 이벤트가 수집됩니다. 이는 여러 가지 이유로 발생할 수 있습니다:
 
-- 푸시 바운스(APNs, FCM 또는 HMS가 토큰을 유효하지 않거나 만료된 것으로 보고함)
-- 조용한 푸시를 통한 제거 감지
-- REST API 또는 APNs 피드백 서비스에 의해 제거된 토큰
+- 푸시 반송(APN, FCM 또는 HMS가 토큰을 유효하지 않거나 만료된 것으로 보고함)
+- 사일런트 푸시를 통한 제거 감지
+- REST API 또는 APN 피드백 서비스를 통해 토큰이 제거됨
 
-##### 쌍을 추가하고 제거하기
+##### 추가 및 제거 쌍
 
-쌍을 추가하고 제거하는 것은 두 가지 범주로 나뉩니다:
+추가 및 제거 쌍은 두 가지 범주로 나뉩니다:
 
-**토큰 문자열 새로고침 (동일한 사용자):** 운영 체제는 동일한 기기에서 토큰 문자열을 회전시킵니다 (예: APNs 또는 FCM 토큰 회전). "추가" 이벤트 (새 토큰)와 "제거" 이벤트 (오래된 토큰)는 동일한 `user_id`, 동일한 `device_id`, 다른 `push_token`, 그리고 동일한 `time_ms`를 가집니다.
+**토큰 문자열 새로고침(동일한 사용자):** OS가 동일한 기기에서 토큰 문자열을 회전시킵니다(예: APN 또는 FCM 토큰 회전). "add" 이벤트(새 토큰)와 "remove" 이벤트(이전 토큰)는 동일한 `user_id`, 동일한 `device_id`, 다른 `push_token`, 그리고 동일한 `time_ms`를 가집니다.
 
-**토큰이 사용자 간에 이동:** 토큰이 한 사용자에서 다른 사용자로 이동합니다. "추가" 이벤트 (새 사용자)와 "제거" 이벤트 (오래된 사용자)는 다른 `user_id`, 동일한 `device_id`, 동일한 `push_token`, 그리고 다른 `time_ms`를 가집니다 (일반적으로 100밀리초 미만의 간격). 다음 중 하나에 의해 트리거됩니다:
+**토큰이 사용자 간에 이동:** 토큰이 한 사용자에서 다른 사용자로 이동합니다. "add" 이벤트(새 사용자)와 "remove" 이벤트(이전 사용자)는 다른 `user_id`, 동일한 `device_id`, 동일한 `push_token`, 그리고 다른 `time_ms`를 가집니다(일반적으로 100밀리초 미만의 간격). 다음 중 하나에 의해 트리거됩니다:
 
-- SDK는 익명 프로필에서 식별된 프로필로 `changeUser`을 호출합니다. "제거" 이벤트는 빈 `external_user_id`를 가집니다.
-- SDK는 한 식별된 프로필에서 다른 식별된 프로필로 `changeUser`을 호출합니다. 두 이벤트 모두 비어 있지 않은 `external_user_id`를 가집니다.
-- [`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) 엔드포인트 또는 중복 사용자 정리는 고아 사용자의 토큰을 생존 사용자에게 이동시킵니다.
+- SDK가 익명 프로필에서 식별된 프로필로 `changeUser`를 호출합니다. "remove" 이벤트는 빈 `external_user_id`를 가집니다.
+- SDK가 한 식별된 프로필에서 다른 식별된 프로필로 `changeUser`를 호출합니다. 두 이벤트 모두 비어 있지 않은 `external_user_id`를 가집니다.
+- [`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) 엔드포인트 또는 중복 사용자 정리가 고아 사용자의 토큰을 생존 사용자에게 이동시킵니다.
 
 {% alert note %}
 익명 프로필이 [`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) 엔드포인트를 통해 식별되면, `user_id`는 변경되지 않으며 토큰 상태 변경 이벤트가 발생하지 않습니다.
@@ -1329,7 +1333,7 @@ Braze가 토큰을 제거할 때 독립적인 "제거" 이벤트가 수집됩니
 
 #### 최신 활성 토큰 상태 쿼리
 
-각 사용자의 현재 푸시 토큰 상태를 결정하기 위해, 토큰 상태 변경 이벤트를 `push_token`, `user_id`, 및 `app_id`으로 분할한 다음, `time_ms`를 내림차순으로 정렬하고 "제거" 이벤트를 필터링합니다. 내부적으로, 토큰은 사용자당 토큰 문자열과 `app_id`로 키가 지정됩니다. `device_id`을 파티션 키로 사용하는 것은 권장되지 않습니다. 왜냐하면 `device_id`은 변경 가능한 속성이며, 이를 기준으로 파티션을 나누면 단일 토큰의 생애 주기가 여러 파티션에 걸쳐 나뉘어질 수 있기 때문입니다.
+각 사용자의 현재 푸시 토큰 상태를 확인하려면, 토큰 상태 변경 이벤트를 `push_token`, `user_id`, `app_id`로 파티션한 다음 `time_ms`를 내림차순으로 정렬하고 "remove" 이벤트를 필터링합니다. 내부적으로 토큰은 사용자당 토큰 문자열과 `app_id`로 키가 지정됩니다. `device_id`를 파티션 키로 사용하는 것은 권장되지 않습니다. `device_id`는 변경 가능한 속성이며, 이를 기준으로 파티션을 나누면 단일 토큰의 생애 주기가 여러 파티션에 걸쳐 분할될 수 있기 때문입니다.
 
 다음 SQL 쿼리는 Snowflake에서 사용자별로 최신 활성 토큰 상태를 반환합니다:
 
