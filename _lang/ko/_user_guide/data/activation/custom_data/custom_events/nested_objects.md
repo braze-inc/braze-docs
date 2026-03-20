@@ -84,7 +84,7 @@ If new properties are sent in the future, they won't be in the schema until it i
 {% tab Restaurant Example%}
 
 다음은 '주문됨' 사용자 지정 이벤트가 포함된 `/users/track` 예제입니다. 주문이 완료되면 해당 주문의 속성을 전송하여 캡처합니다:
-- `r_details` 을 속성으로 나열하는 API 요청
+- API 요청이 `r_details`을 속성으로 나열합니다.
 - 해당 주문의 중첩된 속성
 
 ```
@@ -141,7 +141,7 @@ For nested custom event properties, if the year is less than 0 or greater than 3
 
 '생성된 재생 목록' 이벤트에서 중첩된 속성이 있는 캠페인을 트리거합니다:
 
-![커스텀 이벤트의 속성 필터에 중첩된 이벤트 속성정보를 선택하는 사용자.]({% image_buster /assets/img/nested_object2.png %})
+![사용자가 커스텀 이벤트의 속성 필터에 대해 중첩 속성을 선택합니다.]({% image_buster /assets/img/nested_object2.png %})
 
 트리거 조건 `songs[].album.yearReleased` "is" "1968"은 1968년에 발매된 앨범이 있는 노래가 있는 이벤트와 일치합니다. 배열을 트래버스할 때는 괄호 표기법 `[]`를 사용하고, 트래버스된 배열의 **항목**이 이벤트 속성정보와 일치하는 경우 일치시킵니다.
 
@@ -154,9 +154,9 @@ For nested custom event properties, if the year is less than 0 or greater than 3
 
 '주문됨' 이벤트에서 중첩된 속성이 있는 캠페인을 트리거합니다:
 
-![커스텀 이벤트를 위해 속성 필터 r_details.name 를 추가하는 사용자는 SandwichEmperor입니다.]({% image_buster /assets/img/nested_object1.png %})
+![사용자가 커스텀 이벤트에 대해 속성 필터 r_details.name를 SandwichEmperor로 추가합니다.]({% image_buster /assets/img/nested_object1.png %})
 
-`r_details.name`: "샌드위치황제"<br>
+`r_details.name`: "SandwichEmperor"<br>
 `r_details.location.city`: "몽클레어"
 {% endtab %}
 {% endtabs %}
@@ -181,11 +181,30 @@ To edit or create Segment Extensions, you'll need "Edit Segments" permission.
 
 ![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
 
+## 메시지에서 중첩 객체 테스트
+
+대시보드의 **미리보기 & 테스트** 도구는 중첩 객체나 중첩 커스텀 속성에 대한 모의 데이터를 추가하는 것을 지원하지 않습니다. Liquid를 통해 중첩 데이터를 참조하는 메시지를 테스트하려면, 해당 중첩 속성을 가진 기존 사용자로서 중첩 속성이 있는 메시지를 미리 보거나, 테스트 사용자를 위해 라이브 캠페인을 시작하여 커스텀 이벤트 속성이 있는 메시지를 미리 볼 수 있습니다.
+
+### Nested custom attributes
+
+1. API를 통해 중첩 속성을 테스트 사용자 프로필로 가져옵니다.
+2. 캠페인 또는 캔버스에서 **미리보기 & 테스트**로 이동합니다.
+3. **사용자로서 미리보기**를 선택하고 테스트 사용자를 검색합니다. Liquid는 해당 사용자의 프로필에 있는 실제 중첩 속성을 사용하여 해결됩니다.
+
+### 중첩된 이벤트 속성
+
+중첩 이벤트 속성은 라이브 이벤트 트리거가 필요하기 때문에 대시보드에서 미리 볼 수 없습니다. 테스트하려면:
+
+1. 테스트 사용자만 타겟팅하고 중첩 속성이 있는 커스텀 이벤트에 의해 트리거되는 캠페인 또는 캔버스 단계를 만듭니다.
+2. 테스트 오디언스를 위해 캠페인을 시작합니다.
+3. API 또는 SDK를 사용하여 중첩 객체 페이로드로 커스텀 이벤트를 테스트 사용자 프로필에 기록합니다.
+4. 메시지가 중첩 속성 값으로 올바르게 렌더링되는지 확인합니다.
+
 ## Frequently asked questions
 
-### 중첩된 개체를 사용하면 추가 데이터 포인트가 기록되나요?
+### 중첩 객체를 사용하면 추가 데이터 포인트가 기록됩니까?
 
-이 기능을 추가해도 데이터 포인트를 기록하는 방식에는 아무런 변화가 없습니다. 중첩된 개체를 기반으로 세분화할 때는 추가 데이터 포인트를 사용하지 않는 세그먼트 확장을 사용합니다.
+이 기능을 추가한 결과로 데이터 포인트 기록 방식에 변화가 없습니다. 중첩된 객체를 기반으로 세그먼트를 만드는 것은 세그먼트 확장을 사용하며, 추가 데이터 포인트를 사용하지 않습니다.
 
 ### 중첩된 데이터는 얼마나 많이 전송할 수 있나요?
 

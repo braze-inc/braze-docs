@@ -1,12 +1,12 @@
-## Contrôle du trafic sur le réseau
+## Contrôle du trafic réseau
 
-### Demande de politiques de traitement
+### Politique de traitement des demandes
 
 Braze permet à l’utilisateur de contrôler le trafic réseau à l’aide des protocoles suivants :
 
 {% tabs local %}
 {% tab automatic %}
-Par défaut, la valeur de l'enum `RequestPolicy` est fixée à `automatic`. Lorsqu'elle est définie, des requêtes immédiates au serveur sont effectuées lorsque des données orientées vers l'utilisateur sont requises pour les fonctionnalités de Braze, telles que les messages in-app.
+Par défaut, la valeur`RequestPolicy` enum est définie sur `automatic`. Lorsque cette option est activée, les requêtes immédiates au serveur sont effectuées lorsque des données destinées à l'utilisateur sont requises pour les fonctionnalités Braze, telles que les messages in-app.
 
 Le SDK Braze gérera automatiquement toutes les communications du serveur, y compris :
 
@@ -18,10 +18,10 @@ Pour minimiser la charge serveur, Braze effectue des purges périodiques des nou
 {% endtab %}
 
 {% tab manual %}
-Lorsque la valeur de l'enum `RequestPolicy` est `manual`, le traitement des demandes est identique au traitement automatique des demandes, à l'exception de ce qui suit :
+Lorsque la valeur`RequestPolicy` de l'enumération est `manual`, le fonctionnement est identique à celui du traitement automatique des requêtes, à l'exception des éléments suivants :
 
 - Les attributs personnalisés et les données d’événements personnalisés ne sont pas automatiquement purgés du serveur tout au long de la session utilisateur.
-- Braze effectuera toujours des requêtes réseau automatiques pour les fonctionnalités internes, telles que la demande de messages in-app, la création de modèles Liquid dans les messages in-app, les géorepérages et le suivi de la localisation. Pour plus de détails, consultez la [documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum/manual) `Braze.Configuration.Api.RequestPolicy.manual`. Lors de ces requêtes internes, Braze peut déverser sur le serveur Braze des attributs personnalisés et des données d'événements personnalisés stockés localement, en fonction du type de requête.
+- Braze effectuera toujours des requêtes réseau automatiques pour les fonctionnalités internes, telles que la demande de messages in-app, la création de modèles Liquid dans les messages in-app, les géorepérages et le suivi de la localisation. Pour plus de détails, consultez la [documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum/manual) `Braze.Configuration.Api.RequestPolicy.manual`. Lorsque ces requêtes internes sont effectuées, Braze peut transférer les attributs personnalisés et les données d'événements personnalisés stockés localement vers le serveur Braze, en fonction du type de requête.
 {% endtab %}
 {% endtabs %}
 

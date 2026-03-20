@@ -1,7 +1,7 @@
 ---
 page_order: 2
 nav_title: Notificaciones silenciosas
-article_title: Configurar notificaciones push silenciosas para el SDK de Braze
+article_title: Configura notificaciones push silenciosas para el SDK de Braze.
 channel:
   - push notifications
 ---

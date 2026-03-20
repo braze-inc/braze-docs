@@ -1,7 +1,7 @@
 {% if include.alert == "Shopify deprecation" %}
 
 {% alert important %}
-Uma [nova versão da integração Shopify]({{site.baseurl}}/partners/shopify/#new-shopify-integration) será lançada em fases a partir de abril de 2025. As fases serão baseadas no tipo de loja Shopify e no ID externo usado para configurar a integração inicial. <br><br>**A versão antiga da integração não estará mais disponível após 28 de agosto de 2025. Atualize para a nova versão antes desta data para continuar usando a integração sem problemas.**
+Uma [nova versão da integração do Shopify]({{site.baseurl}}/partners/shopify/#new-shopify-integration) será lançada em fases a partir de abril de 2025. As fases serão baseadas no tipo de loja Shopify e no ID externo usado para configurar a integração inicial. <br><br>**A versão antiga da integração não estará mais disponível após 28 de agosto de 2025. Atualize para a nova versão antes dessa data para continuar usando a integração sem problemas.**
 {% endalert %}
 
 {% endif %}
@@ -17,7 +17,7 @@ Janelas de navegação privada não suportam web push.
 {% if include.alert == 'BCC address billable emails' %}
 
 {% alert important %}
-Adicionar um endereço BCC à sua campanha ou Canvas resulta na duplicação dos seus e-mails faturáveis para a campanha ou componente Canvas, uma vez que a Braze envia uma mensagem para o seu usuário e uma para o seu endereço BCC.
+Adicionar um endereço BCC à sua campanha ou Canvas resulta na duplicação dos seus e-mails faturáveis para a campanha ou componente Canvas, já que a Braze envia uma mensagem para o seu usuário e uma para o seu endereço BCC.
 {% endalert %}
 
 {% endif %}
@@ -25,7 +25,7 @@ Adicionar um endereço BCC à sua campanha ou Canvas resulta na duplicação dos
 {% if include.alert == 'Android notification priority' %}
 
 {% alert important %}
-A configuração de Prioridade de Exibição de Notificações não é mais usada em dispositivos que executam Android O ou posterior. Nestes dispositivos, defina a prioridade através da [configuração do canal de notificação](https://developer.android.com/training/notify-user/channels#importance).
+A configuração de Prioridade de Exibição de Notificações não é mais usada em dispositivos que executam Android O ou posterior. Nestes dispositivos, defina a prioridade através da [configuração do canal de notificações](https://developer.android.com/training/notify-user/channels#importance).
 {% endalert %}
 
 {% endif %}
@@ -53,7 +53,7 @@ Para maior segurança, recomendamos adicionar nosso recurso de [autenticação d
 {% if include.alert == 'Preference Center warning' %}
 
 {% alert important %}
-Existem certos navegadores, como os aplicativos Naver para Android e iOS, que não suportam o central de preferências da Braze. Caso preveja que alguns de seus usuários usem esses navegadores, considere fornecer métodos alternativos para que eles gerenciem suas preferências de e-mail.
+Existem certos navegadores, como os aplicativos Naver para Android e iOS, que não suportam o centro de preferências da Braze. Caso preveja que alguns de seus usuários usem esses navegadores, considere fornecer métodos alternativos para que eles gerenciem suas preferências de e-mail.
 {% endalert %}
 
 {% endif %}
@@ -85,7 +85,7 @@ Os arquivos exportados armazenados em buckets S3 são automaticamente excluídos
 {% if include.alert == 'Shopify customer create' %}
 
 {% alert important %}
-A integração Shopify suporta webhooks de criação e atualização de clientes Shopify, que estão localizados nas suas configurações de configuração de dados. Quando um perfil de usuário é criado ou atualizado no Shopify, um perfil de usuário correspondente na Braze será criado ou atualizado. <br><br>Essas ações não disparam eventos personalizados na Braze e são usadas exclusivamente para [sincronizar dados de usuários do Shopify com a Braze]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview/#how-the-integration-works). Os dados sincronizados incluem [atributos personalizados]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#supported-shopify-custom-attributes), [atributos padrão]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#supported-shopify-standard-attributes), e, se habilitado em sua configuração, [estados de grupo de inscrições]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview#syncing-shopify-email-and-sms-marketing-opt-ins).
+A integração do Shopify suporta webhooks de criação e atualização de clientes do Shopify, que estão localizados nas suas configurações de configuração de dados. Quando um perfil de usuário é criado ou atualizado no Shopify, um perfil de usuário correspondente na Braze será criado ou atualizado. <br><br>Essas ações não disparam eventos personalizados na Braze e são usadas exclusivamente para [sincronizar dados de usuários do Shopify com a Braze]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview/#how-the-integration-works). Os dados sincronizados incluem [atributos personalizados]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#supported-shopify-custom-attributes), [atributos padrão]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#supported-shopify-standard-attributes), e, se habilitado em sua configuração, [estados de grupo de inscrições]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview#syncing-shopify-email-and-sms-marketing-opt-ins).
 {% endalert %}
 
 {% endif %}
@@ -93,7 +93,15 @@ A integração Shopify suporta webhooks de criação e atualização de clientes
 {% if include.alert == 'context variable' %}
 
 {% alert important %}
-Se você está participando do acesso antecipado do Canvas Context, as propriedades de entrada do Canvas fazem parte das variáveis de contexto do Canvas. Isso significa que `canvas_entry_properties` agora é referenciado como `context`. Cada variável de contexto inclui um nome, um tipo de dados e um valor que pode incluir Liquid. Atualmente, `canvas_entry_properties` ainda são compatíveis com versões anteriores. Para mais detalhes, veja [Context]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) e [objeto de propriedades de entrada do Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
+As propriedades de entrada do Canvas fazem parte das variáveis de contexto do Canvas. Isso significa que `canvas_entry_properties` é referenciado como `context`. Cada variável `context` inclui um nome, tipo de dado e um valor que pode incluir Liquid. Atualmente, `canvas_entry_properties` são compatíveis com versões anteriores. Para mais detalhes, veja [Contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) e [objeto de contexto do Canvas]({{site.baseurl}}/api/objects_filters/context_object).
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Braze Agents' %}
+
+{% alert important %}
+Este parceiro aparece na sua página **Parceiros de Tecnologia** apenas se você tiver [Agentes Braze]({{site.baseurl}}/user_guide/brazeai/agents/) habilitados. Para ajuda para começar, entre em contato com seu gerente de sucesso do cliente.
 {% endalert %}
 
 {% endif %}
@@ -109,6 +117,14 @@ Se você está participando do acesso antecipado do Canvas Context, as proprieda
 Usar "Dia do ano" para datas absolutas pode produzir resultados incorretos ou inesperados porque o cálculo ignora o componente do ano. Por exemplo, se você estiver comparando uma data futura de término de contrato em abril para determinar se está dentro de 63 dias, usar "Dia do ano" pode corresponder incorretamente as datas porque compara apenas os números dos dias (119 vs 359) sem considerar que abril está na verdade a 188 dias de distância.
 
 **Diretriz geral**: A data se repete a cada ano? **Sim** → Use "Dia do ano". **Não** → Use "Hora".
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'granular permissions ea' %}
+
+{% alert important %}
+Permissões granulares estão em acesso antecipado. Quando a migração é planejada para sua empresa, seus administradores do Braze receberão e-mails e banners no dashboard notificando-os sobre a [migração de permissões granulares]({{site.baseurl}}/granular_permissions_migration/).
 {% endalert %}
 
 {% endif %}

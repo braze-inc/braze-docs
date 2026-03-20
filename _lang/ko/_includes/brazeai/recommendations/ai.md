@@ -1,6 +1,6 @@
 {% if include.section == "Plan-specific features" %}
 
-## 요금제별 AI 기능
+## 플랜별 AI 기능
 
 다음 표는 AI 개인화된, 인기 있는, 트렌딩 추천 유형의 무료 및 프로 버전 간의 차이점을 설명합니다.
 

@@ -1,13 +1,13 @@
 ---
 nav_title: Notificações por push
-article_title: "Notificações por push para o SDK do Braze"
+article_title: "Notificações por push para o SDK Braze"
 page_order: 2.3
-description: "Essa landing page é o lar de todos os assuntos relacionados a notificações por push."
+description: "Esta landing page é o lar de tudo sobre notificações por push."
 ---
 
 # Notificações por push
 
-> [Notificações por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) permitem que você envie notificações do seu app quando eventos importantes ocorrerem. Você pode enviar uma notificação por push quando tiver novas mensagens instantâneas para entregar, alertas de notícias de última hora para enviar ou o episódio mais recente do programa de TV favorito do seu usuário pronto para ele baixar para visualização offline. Eles também são mais eficientes do que a busca em segundo plano, pois seu aplicativo só é iniciado quando necessário.
+> [Notificações por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) permitem que você envie notificações do seu app quando eventos importantes ocorrerem. Você pode enviar uma notificação por push quando tiver novas mensagens instantâneas para entregar, alertas de notícias de última hora para enviar ou o episódio mais recente do programa de TV favorito do seu usuário pronto para ele baixar para visualização offline. Elas também são mais eficientes do que a busca em segundo plano, já que seu aplicativo só é iniciado quando necessário.
 
 {% sdktabs %}
 {% sdktab web %}

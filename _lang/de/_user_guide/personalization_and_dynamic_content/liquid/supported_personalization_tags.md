@@ -31,8 +31,8 @@ Zur Erleichterung finden Sie hier eine Zusammenfassung der unterstützten Person
 | Event-Eigenschaften <br> (Diese sind an Ihren Workspace angepasst.)| `{{event_properties.${your_custom_event_property}}}` |
 | Canvas-Kontextvariablen | `{{context}}` |
 | Angepasste Attribute <br> (Diese sind an Ihren Workspace angepasst.) | `{{custom_attribute.${your_custom_attribute}}}` |
-| <a href='/docs/api/objects_filters/trigger_properties_object/'>API triggern Eigenschaften</a> |`{{api_trigger_properties}}` |
-| Entry-Eigenschaften für Canvas | `{{canvas_entry_properties.${property_name}}}` |
+| <a href='/docs/api/objects_filters/trigger_properties_object/'>API-Trigger-Eigenschaften</a> |`{{api_trigger_properties}}` |
+| Entry-Eigenschaften für Canvas | `{{context.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
@@ -96,14 +96,14 @@ User is in list of apps
 
 ## Informationen zum jeweiligen Gerät
 
-Für Push-Benachrichtigungen, In-App-Nachrichten und Banner können Sie die folgenden Attribute für das Gerät, an das eine Nachricht gesendet wird, als Template eingeben. Das heißt, eine Push-Benachrichtigung, eine In-App-Nachricht oder ein Banner kann die Attribute des Geräts enthalten, auf dem die Nachricht gelesen wird. Beachten Sie, dass diese Attribute bei Content-Karten nicht funktionieren. 
+Für Push-Benachrichtigungen, In-App-Nachrichten und Banner können Sie die folgenden Attribute für das Gerät, das die Nachricht empfängt, als Template verwenden. Eine Push-Benachrichtigung, eine In-App-Nachricht oder ein Banner kann Attribute des Geräts enthalten, auf dem der Nutzer die Nachricht liest. Diese Attribute sind für Content-Cards oder E-Mails nicht verfügbar. Bei E-Mails werden Nachrichten vor dem Versand gerendert, sodass zu diesem Zeitpunkt nicht bekannt ist, auf welchem Gerät der Nutzer:in die E-Mail öffnet.
 
 |Taggen | Beschreibung |
 |------------------|---|
 | `{{targeted_device.${id}}}` | Dies ist der Bezeichner des Braze-Geräts. Unter iOS kann dies der Apple Identifier for Vendor (IDFV) oder eine UUID sein. Bei Android und anderen Plattformen handelt es sich um eine zufällig generierte UUID. Wenn ein Nutzer:innen zum Beispiel fünf Geräte hat, wird ein Sendeversuch für alle fünf Geräte unternommen, wobei jeder den entsprechenden Bezeichner des Geräts verwendet. Wenn eine Nachricht so konfiguriert ist, dass sie an das zuletzt verwendete Gerät eines Nutzers:innen gesendet wird, erfolgt nur ein Sendeversuch an das über Braze identifizierte zuletzt verwendete Gerät. |
 | `{{targeted_device.${carrier}}}` | Der zuletzt verwendete Telefondienstanbieter des Geräts, falls verfügbar. Beispiele hierfür sind „Verizon“ und „Orange“. |
 | `{{targeted_device.${idfa}}}` | Bei iOS-Geräten ist dieser Wert der Identifier for Advertisers (IDFA), wenn Ihre Anwendung mit unserer [optionalen IDFA-Sammlung]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/) konfiguriert ist. Bei Nicht-iOS-Geräten ist dieser Wert gleich Null. |
-| `{{targeted_device.${google_ad_id}}}` | Bei Android Geräten ist dieser Wert der Google Play Advertising Bezeichner, wenn Ihre Anwendung mit unserer [optionalen Google Play Advertising ID Sammlung] konfiguriert ist. Bei Nicht-Android-Geräten ist dieser Wert gleich Null. |
+| `{{targeted_device.${google_ad_id}}}` | Bei Android-Geräten entspricht dieser Wert dem Google Play-Werbe-Bezeichner, wenn Ihre Anwendung mit unserer optionalen Google Play-Werbe-ID-Erfassung konfiguriert ist. Bei Nicht-Android-Geräten ist dieser Wert gleich Null. |
 | `{{targeted_device.${roku_ad_id}}}` | Bei Roku-Geräten ist dieser Wert der Roku Advertising Identifier, der erfasst wird, wenn Ihre Anwendung mit Braze konfiguriert wird. Bei Geräten, die nicht von Roku stammen, ist dieser Wert gleich Null. |
 | `{{targeted_device.${model}}}` | Der Modellname des Geräts, falls verfügbar. Beispiele sind "iPhone 6S" und "Nexus 6P" und "Firefox". |
 | `{{targeted_device.${os}}}` | Das Betriebssystem des Geräts, falls verfügbar. Beispiele sind "iOS 9.2.1" und "Android (Lollipop)" und "Windows". |

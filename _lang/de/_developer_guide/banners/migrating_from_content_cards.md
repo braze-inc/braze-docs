@@ -1,7 +1,7 @@
 ---
 nav_title: "Von Content-Cards migrieren"
-article_title: "Migration von Content-Cards zu Bannern"
-description: "Erfahren Sie, wie Sie von Content-Cards zu Bannern migrieren können, einschließlich Code-Beispiele für alle unterstützten SDKs, Einschränkungen und Vorteile."
+article_title: "Von Content-Cards zu Bannern migrieren"
+description: "Erfahren Sie, wie Sie von Content-Cards zu Bannern migrieren können, einschließlich Code-Beispielen für alle unterstützten SDKs, Einschränkungen und Vorteilen."
 page_order: 5
 toc_headers: h2
 channel:
@@ -14,61 +14,61 @@ platform:
   - React Native
 ---
 
-# Migration von Content-Cards zu Bannern
+# Von Content-Cards zu Bannern migrieren
 
-> Diese Anleitung hilft Ihnen bei der Migration von Content-Cards zu Bannern für Messaging-Anwendungsfälle im Banner-Stil. Banner sind ideal für persistente In-App- und Internet-Nachrichten, die an bestimmten Stellen in Ihrer Anwendung erscheinen.
+> Dieser Leitfaden unterstützt Sie bei der Migration von Content-Cards zu Bannern für Anwendungsfälle im Bereich des bannerartigen Messaging. Banner eignen sich ideal für Inline-Anzeigen, persistente In-App- und Internet-Nachrichten, die an bestimmten Stellen in Ihrer App erscheinen.
 
-## Warum die Migration zu Banners?
+## Warum zu Bannern migrieren?
 
-- Wenn Ihr Entwicklerteam angepasste Content-Cards erstellt oder pflegt, kann die Migration zu Banners diese laufenden Investitionen reduzieren. Mit Bannern können Marketer das UI direkt steuern und Entwickler:in für andere Aufgaben freistellen.
-- Wenn Sie neue Nachrichten für Ihre Homepage, Onboarding-Flows oder persistente Ankündigungen einführen möchten, sollten Sie mit Bannern beginnen, anstatt auf Content-Cards aufzubauen. Profitieren Sie von der Personalisierung in Realtime, der unbegrenzten Gültigkeit von 30 Tagen, der unbegrenzten Größe und der nativen Priorisierung vom ersten Tag an.
-- Wenn Sie die 30-tägige Ablauffrist umgehen, eine komplexe Logik für die Wiederzulassung verwalten oder sich über veraltete Personalisierung ärgern müssen, löst Banners diese Probleme von Haus aus.
+- Wenn Ihr Entwicklerteam angepasste Content-Cards erstellt oder wartet, kann die Migration zu Bannern diese laufenden Investitionen reduzieren. Mit Bannern können Marketer die UI direkt steuern, wodurch Entwickler:innen für andere Aufgaben entlastet werden.
+- Wenn Sie neue Homepage-Nachrichten, Onboarding-Abläufe oder persistente Ankündigungen einführen möchten, empfehlen wir, zunächst mit Bannern zu beginnen, anstatt auf Content-Cards aufzubauen. Sie profitieren von Realtime-Personalisierung, keiner 30-tägigen Ablaufzeit, keiner Größenbeschränkung und nativer Priorisierung vom ersten Tag an.
+- Wenn Sie mit der 30-tägigen Ablaufgrenze arbeiten, komplexe Logik zur erneuten Berechtigungsprüfung verwalten oder von veralteter Personalisierung frustriert sind, löst Banners diese Probleme auf native Weise.
 
-Banner bieten mehrere Vorteile gegenüber Content-Cards für bannerähnliches Messaging:
+Banner bieten gegenüber Content-Cards mehrere Vorteile für das Messaging im Banner-Stil:
 
 ### Beschleunigte Produktion
 
-- **Geringerer Bedarf an laufender technischer Unterstützung**: Marketer können angepasste Nachrichten mit einem Drag-and-Drop-Editor und angepasstem HTML erstellen, ohne dass Entwickler:in für die Anpassung benötigt werden.
-- **Flexible Anpassungsmöglichkeiten**: Gestalten Sie direkt im Editor, verwenden Sie HTML oder nutzen Sie vorhandene Datenmodelle mit angepassten Eigenschaften.
+- **Reduzierter laufender technischer Support erforderlich**: Marketer können mithilfe eines Drag-and-Drop-Editors und angepasstem HTML individuelle Nachrichten erstellen, ohne dass sie für die Anpassung die Unterstützung von Entwickler:innen benötigen.
+- **Flexible Anpassungsmöglichkeiten**: Entwerfen Sie direkt im Editor, verwenden Sie HTML oder nutzen Sie vorhandene Datenmodelle mit angepassten Eigenschaften.
 
-### Bessere UX
+### Verbesserte Benutzererfahrung
 
-- **Dynamische Updates von Inhalten**: Banner aktualisieren Liquid logic und Eignung bei jeder Aktualisierung, so dass die Nutzer:innen immer die relevantesten Inhalte sehen.
-- **Unterstützung bei der Platzierung von Einheimischen**: Nachrichten erscheinen in bestimmten Kontexten und nicht in einem Feed, was eine bessere kontextuelle Relevanz bietet
-- **Einheimische Prioritäten**: Kontrolle über die Anzeigereihenfolge ohne angepasste Logik, wodurch die Verwaltung der Nachrichtenhierarchie erleichtert wird
+- **Dynamische Content-Updates**: Banner aktualisieren Liquid Logic und die Berechtigung bei jeder Aktualisierung, um sicherzustellen, dass die Nutzer:innen stets die relevantesten Inhalte sehen.
+- **Native Platzierungsunterstützung**: Nachrichten werden in bestimmten Kontexten und nicht in einem Feed angezeigt, wodurch eine bessere kontextuelle Relevanz gewährleistet wird.
+- **Native Priorisierung**: Steuerung der Anzeigereihenfolge ohne angepasste Logik, wodurch die Verwaltung der Nachrichtenhierarchie vereinfacht wird.
 
 ### Persistenz
 
-- **Kein Verfallsdatum**: Banner-Kampagnen haben keine 30-tägige Ablauffrist wie Content-Cards, was eine echte Persistenz der Nachrichten zulässt.
+- **Keine Verfallsfrist**: Bannerkampagnen haben keine 30-tägige Ablaufgrenze wie Content-Cards, was eine echte Persistenz der Nachrichten ermöglicht.
 
-## Wann Sie migrieren sollten
+## Wann sollte die Migration erfolgen?
 
-Ziehen Sie eine Migration zu Banners in Betracht, wenn Sie Content-Cards für verwenden:
+Erwägen Sie eine Migration zu Bannern, wenn Sie Content-Cards für folgende Zwecke verwenden:
 
-- Homepage-Helden, Aktionen auf der Produktseite, Angebote an der Kasse
-- Persistente Ankündigungen in der Navigation oder Nachrichten in der Seitenleiste
-- Immer aktive Nachrichten, die länger als 30 Tage laufen
-- Nachrichten, bei denen Sie eine Personalisierung in Realtime und eine Berechtigung wünschen
+- Homepage-Banner, Aktionen auf Produktseiten, Checkout-Angebote
+- Persistente Navigationsansagen oder Sidebar-Nachrichten
+- Always-on-Nachrichten, die länger als 30 Tage angezeigt werden
+- Nachrichten, bei denen Sie eine Realtime-Personalisierung und eine Eignungsprüfung wünschen
 
-## Wann Sie Content-Cards behalten sollten
+## Wann sollten Sie Content-Cards beibehalten?
 
-Verwenden Sie bei Bedarf weiterhin Content-Cards:
+Verwenden Sie weiterhin Content-Cards, wenn Sie Folgendes benötigen:
 
-- **Erfahrungen füttern:** Jeder Anwendungsfall, der mehrere scrollbare Nachrichten oder einen kartenbasierten "Posteingang" beinhaltet.
-- **Besondere Features:** Nachrichten, die Connected-Content oder Aktionscodes erfordern, da Banner diese von Haus aus nicht unterstützen.
-- **Ausgelöste Zustellung:** Anwendungsfälle, die unbedingt eine API-getriggerte oder aktionsbasierte Zustellung erfordern. Während Banner keine API-getriggerte oder aktionsbasierte Zustellung unterstützen, bedeutet die Bewertung der Eignung in Realtime, dass Nutzer:innen bei jeder Aktualisierung sofort anhand ihrer Segmentzugehörigkeit qualifiziert oder disqualifiziert werden.
+- **Feed-Erlebnisse:** Jeder Anwendungsfall, der mehrere scrollbare Nachrichten oder einen kartenbasierten „Posteingang" umfasst.
+- **Besondere Features:** Nachrichten, die Connected-Content oder Aktionscodes erfordern, da Banner diese nicht nativ unterstützen.
+- **Getriggerte Zustellung:** Anwendungsfälle, die eine API-gesteuerte oder aktionsbasierte Zustellung erfordern. Obwohl Banner keine API-gesteuerte oder aktionsbasierte Zustellung unterstützen, bedeutet die Realtime-Berechtigungsevaluierung, dass Nutzer:innen bei jeder Aktualisierung sofort anhand ihrer Segmentzugehörigkeit qualifiziert oder disqualifiziert werden.
 
-## Leitfaden für die Migration
+## Migrationsleitfaden
 
 ### Voraussetzungen
 
-Stellen Sie vor der Migration sicher, dass Ihr Braze SDK die Mindestanforderungen an die Version erfüllt:
+Stellen Sie vor der Migration sicher, dass das Braze SDK die Mindestversionsanforderungen erfüllt:
 
 {% multi_lang_include sdk_versions.md feature='banners' %}
 
 ### Updates abonnieren
 
-#### Content-Cards Ansatz
+#### Content-Cards-Ansatz
 
 {% tabs %}
 {% tab Web %}
@@ -126,7 +126,7 @@ StreamSubscription contentCardsStreamSubscription = braze.subscribeToContentCard
 {% endtab %}
 {% endtabs %}
 
-#### Banner Ansatz
+#### Banner-Ansatz
 
 {% tabs %}
 {% tab Web %}
@@ -135,9 +135,9 @@ import * as braze from "@braze/web-sdk";
 
 braze.subscribeToBannersUpdates((banners) => {
   // Get banner for specific placement
-  const globalBanner = braze.getBanner("global_banner");
-  if (globalBanner) {
-    console.log("Banner received for placement:", globalBanner.placementId);
+  const banner = braze.getBanner("sample_placement_id");
+  if (banner) {
+    console.log("Banner received for placement:", banner.placementId);
   }
 });
 ```
@@ -146,9 +146,9 @@ braze.subscribeToBannersUpdates((banners) => {
 ```kotlin
 Braze.getInstance(context).subscribeToBannersUpdates { update ->
   // Get banner for specific placement
-  val globalBanner = Braze.getInstance(context).getBanner("global_banner")
-  if (globalBanner != null) {
-    Log.d(TAG, "Banner received for placement: ${globalBanner.placementId}")
+  val banner = Braze.getInstance(context).getBanner("sample_placement_id")
+  if (banner != null) {
+    Log.d(TAG, "Banner received for placement: ${banner.placementId}")
   }
 }
 ```
@@ -157,10 +157,10 @@ Braze.getInstance(context).subscribeToBannersUpdates { update ->
 ```swift
 braze.banners.subscribeToUpdates { banners in
   // Get banner for specific placement
-  braze.banners.getBanner(for: "global_banner") { banner in
-    if let banner = banner {
-      print("Banner received for placement: \(banner.placementId)")
-    }
+  braze.banners.getBanner(for: "sample_placement_id") { banner in
+    guard let banner = banner else { return }
+
+    print("Banner received for placement: \(banner.placementId)")
   }
 }
 ```
@@ -170,7 +170,7 @@ braze.banners.subscribeToUpdates { banners in
 Braze.addListener(Braze.Events.BANNER_CARDS_UPDATED, (data) => {
   const banners = data.banners;
   // Get banner for specific placement
-  Braze.getBanner("global_banner").then(banner => {
+  Braze.getBanner("sample_placement_id").then(banner => {
     if (banner) {
       console.log("Banner received for placement:", banner.placementId);
     }
@@ -182,7 +182,7 @@ Braze.addListener(Braze.Events.BANNER_CARDS_UPDATED, (data) => {
 ```dart
 StreamSubscription bannerStreamSubscription = braze.subscribeToBanners((List<BrazeBanner> banners) {
   // Get banner for specific placement
-  braze.getBanner("global_banner").then((banner) {
+  braze.getBanner("sample_placement_id").then((banner) {
     if (banner != null) {
       print("Banner received for placement: ${banner.placementId}");
     }
@@ -195,10 +195,10 @@ StreamSubscription bannerStreamSubscription = braze.subscribeToBanners((List<Bra
 ### Inhalt anzeigen
 
 {% alert note %}
-Content-Cards können manuell mit angepasster UI-Logik gerendert werden, während Banner nur mit den Out-of-the-Box SDK-Methoden gerendert werden können.
+Content-Cards können manuell mit angepasster UI-Logik gerendert werden, während Banner nur mit den vorgefertigten SDK-Methoden gerendert werden können.
 {% endalert %}
 
-#### Content-Cards Ansatz
+#### Content-Cards-Ansatz
 
 {% tabs %}
 {% tab Web %}
@@ -283,26 +283,26 @@ for (final card in cards) {
 {% endtab %}
 {% endtabs %}
 
-#### Banner Ansatz
+#### Banner-Ansatz
 
 {% tabs %}
 {% tab Web %}
 ```javascript
 braze.subscribeToBannersUpdates((banners) => {
-  const globalBanner = braze.getBanner("global_banner");
-  if (!globalBanner) {
+  const banner = braze.getBanner("sample_placement_id");
+  if (!banner) {
     return;
   }
 
   const container = document.getElementById("global-banner-container");
-  braze.insertBanner(globalBanner, container);
+  braze.insertBanner(banner, container);
 
-  if (globalBanner.isControl) {
+  if (banner.isControl) {
     container.style.display = "none";
   }
 });
 
-braze.requestBannersRefresh(["global_banner"]);
+braze.requestBannersRefresh(["sample_placement_id"]);
 ```
 {% endtab %}
 {% tab Android %}
@@ -312,22 +312,22 @@ braze.requestBannersRefresh(["global_banner"]);
 //     android:id="@+id/banner_view"
 //     android:layout_width="match_parent"
 //     android:layout_height="wrap_content"
-//     app:placementId="global_banner" />
+//     app:placementId="sample_placement_id" />
 
 // Or programmatically
 val bannerView = BannerView(context).apply {
-  placementId = "global_banner"
+  placementId = "sample_placement_id"
 }
 container.addView(bannerView)
 
-Braze.getInstance(context).requestBannersRefresh(listOf("global_banner"))
+Braze.getInstance(context).requestBannersRefresh(listOf("sample_placement_id"))
 ```
 {% endtab %}
 {% tab Swift %}
 ```swift
 // Using BannerUIView
 let bannerView = BrazeBannerUI.BannerUIView(
-  placementId: "global_banner",
+  placementId: "sample_placement_id",
   braze: braze,
   processContentUpdates: { result in
     switch result {
@@ -342,57 +342,57 @@ let bannerView = BrazeBannerUI.BannerUIView(
 )
 view.addSubview(bannerView)
 
-braze.banners.requestBannersRefresh(placementIds: ["global_banner"])
+braze.banners.requestBannersRefresh(placementIds: ["sample_placement_id"])
 ```
 {% endtab %}
 {% tab React Native %}
 ```javascript
 // Using BrazeBannerView component
 <Braze.BrazeBannerView
-  placementID='global_banner'
+  placementID='sample_placement_id'
 />
 
 // Or get banner data
-const banner = await Braze.getBanner("global_banner");
+const banner = await Braze.getBanner("sample_placement_id");
 if (banner) {
   // Render custom banner UI
 }
 
-Braze.requestBannersRefresh(["global_banner"]);
+Braze.requestBannersRefresh(["sample_placement_id"]);
 ```
 {% endtab %}
 {% tab Flutter %}
 ```dart
 // Using BrazeBannerView widget
 BrazeBannerView(
-  placementId: "global_banner",
+  placementId: "sample_placement_id",
 )
 
 // Or get banner data
-final banner = await braze.getBanner("global_banner");
+final banner = await braze.getBanner("sample_placement_id");
 if (banner != null) {
   // Render custom banner UI
 }
 
-braze.requestBannersRefresh(["global_banner"]);
+braze.requestBannersRefresh(["sample_placement_id"]);
 ```
 {% endtab %}
 {% endtabs %}
 
-### Log Analytics (angepasste Implementierungen)
+### Analytics protokollieren (angepasste Implementierungen)
 
 {% alert note %}
-Sowohl Content-Cards als auch Banner verfolgen automatisch Analytics, wenn Sie ihre Standard UI-Komponenten verwenden. Die folgenden Beispiele sind für angepasste Implementierungen, bei denen Sie Ihr eigenes UI erstellen.
+Sowohl Content-Cards als auch Banner erfassen automatisch Analytics, wenn ihre Standard-UI-Komponenten verwendet werden. Die folgenden Beispiele beziehen sich auf angepasste Implementierungen, bei denen Sie Ihre eigene UI erstellen.
 {% endalert %}
 
-#### Content-Cards Ansatz
+#### Content-Cards-Ansatz
 
 {% tabs %}
 {% tab Web %}
 ```javascript
 // Manual impression logging required for custom implementations
 cards.forEach(card => {
-    braze.logContentCardImpressions([card]);
+  braze.logContentCardImpressions([card]);
 });
 
 // Manual click logging required for custom implementations
@@ -403,7 +403,7 @@ card.logClick();
 ```kotlin
 // Manual impression logging required for custom implementations
 cards.forEach { card ->
-    card.logImpression()
+  card.logImpression()
 }
 
 // Manual click logging required for custom implementations
@@ -414,7 +414,7 @@ card.logClick()
 ```swift
 // Manual impression logging required for custom implementations
 for card in cards {
-    card.context?.logImpression()
+  card.context?.logImpression()
 }
 
 // Manual click logging required for custom implementations
@@ -425,7 +425,7 @@ card.context?.logClick()
 ```javascript
 // Manual impression logging required for custom implementations
 cards.forEach(card => {
-    Braze.logContentCardImpression(card.id);
+  Braze.logContentCardImpression(card.id);
 });
 
 // Manual click logging required for custom implementations
@@ -436,7 +436,7 @@ Braze.logContentCardClicked(card.id);
 ```dart
 // Manual impression logging required for custom implementations
 for (final card in cards) {
-    braze.logContentCardImpression(card);
+  braze.logContentCardImpression(card);
 }
 
 // Manual click logging required for custom implementations
@@ -445,13 +445,13 @@ braze.logContentCardClicked(card);
 {% endtab %}
 {% endtabs %}
 
-#### Banner Ansatz
+#### Banner-Ansatz
 
 {% tabs %}
 {% tab Web %}
 
 {% alert important %}
-Analytics werden automatisch getrackt, wenn Sie `insertBanner()` verwenden. Die manuelle Protokollierung sollte nicht verwendet werden, wenn Sie `insertBanner()` verwenden.
+Analytics werden bei der Verwendung von `insertBanner()` automatisch erfasst. Bei der Verwendung von `insertBanner()` sollte keine manuelle Protokollierung verwendet werden.
 {% endalert %}
 
 ```javascript
@@ -460,16 +460,16 @@ Analytics werden automatisch getrackt, wenn Sie `insertBanner()` verwenden. Die 
 
 // For custom implementations, use manual logging methods:
 // Log impression
-braze.logBannerImpressions([globalBanner]);
+braze.logBannerImpressions([banner]);
 
 // Log click (with optional buttonId)
-braze.logBannerClick("global_banner", buttonId);
+braze.logBannerClick("sample_placement_id", buttonId);
 ```
 {% endtab %}
 {% tab Android %}
 
 {% alert important %}
-Analytics werden automatisch getrackt, wenn Sie BannerView verwenden. Die manuelle Protokollierung sollte bei der Verwendung von BannerView nicht verwendet werden.
+Bei der Verwendung von BannerView werden Analytics automatisch erfasst. Bei der Verwendung von BannerView sollte keine manuelle Protokollierung durchgeführt werden.
 {% endalert %}
 
 ```kotlin
@@ -478,16 +478,16 @@ Analytics werden automatisch getrackt, wenn Sie BannerView verwenden. Die manuel
 
 // For custom implementations, use manual logging methods:
 // Log impression
-Braze.getInstance(context).logBannerImpression("global_banner");
+Braze.getInstance(context).logBannerImpression("sample_placement_id");
 
 // Log click (with optional buttonId)
-Braze.getInstance(context).logBannerClick("global_banner", buttonId);
+Braze.getInstance(context).logBannerClick("sample_placement_id", buttonId);
 ```
 {% endtab %}
 {% tab Swift %}
 
 {% alert important %}
-Analytics werden automatisch getrackt, wenn Sie BannerUIView verwenden. Die manuelle Protokollierung sollte nicht für Standard BannerUIView verwendet werden.
+Bei der Verwendung von BannerUIView werden Analytics automatisch erfasst. Die manuelle Protokollierung sollte nicht für die Standard-BannerUIView verwendet werden.
 {% endalert %}
 
 ```swift
@@ -495,11 +495,16 @@ Analytics werden automatisch getrackt, wenn Sie BannerUIView verwenden. Die manu
 // Manual logging should not be used for default BannerUIView
 
 // For custom implementations, use manual logging methods:
-// Log impression
-braze.banners.logImpression(placementId: "global_banner")
+// Get banner for specific placement
+braze.banners.getBanner(for: "sample_placement_id") { banner in
+  guard let banner = banner else { return }
 
-// Log click (with optional buttonId)
-braze.banners.logClick(placementId: "global_banner", buttonId: buttonId)
+  // Log impression
+  banner.context?.logImpression()
+
+  // Log click (with optional buttonId)
+  banner.context?.logClick(buttonId: buttonId)
+}
 
 // Control groups are automatically handled by BannerUIView
 ```
@@ -507,7 +512,7 @@ braze.banners.logClick(placementId: "global_banner", buttonId: buttonId)
 {% tab React Native %}
 
 {% alert important %}
-Analytics werden automatisch getrackt, wenn Sie BrazeBannerView verwenden. Keine manuelle Protokollierung erforderlich.
+Bei der Verwendung von BrazeBannerView werden Analytics automatisch erfasst. Es ist keine manuelle Protokollierung erforderlich.
 {% endalert %}
 
 ```javascript
@@ -521,7 +526,7 @@ Analytics werden automatisch getrackt, wenn Sie BrazeBannerView verwenden. Keine
 {% tab Flutter %}
 
 {% alert important %}
-Analytics werden automatisch getrackt, wenn Sie BrazeBannerView verwenden. Keine manuelle Protokollierung erforderlich.
+Bei der Verwendung von BrazeBannerView werden Analytics automatisch erfasst. Es ist keine manuelle Protokollierung erforderlich.
 {% endalert %}
 
 ```dart
@@ -534,9 +539,99 @@ Analytics werden automatisch getrackt, wenn Sie BrazeBannerView verwenden. Keine
 {% endtab %}
 {% endtabs %}
 
+### Eigenschaften abrufen
+
+#### Content-Cards-Ansatz
+
+{% tabs %}
+{% tab Web %}
+```javascript
+cards.forEach(card => {
+  console.log("Card id:", card.id, "Extras:", card.extras);
+});
+```
+{% endtab %}
+{% tab Android %}
+```kotlin
+cards.forEach { card ->
+  Log.d(TAG, "Card id: ${card.id} Extras: ${card.extras}")
+}
+```
+{% endtab %}
+{% tab Swift %}
+```swift
+for card in cards {
+  print("Card id: \(card.id) Extras: \(card.extras)")
+}
+```
+{% endtab %}
+{% tab React Native %}
+```javascript
+cards.forEach(card => {
+  console.log("Card id:", card.id, "Extras:", card.extras);
+});
+```
+{% endtab %}
+{% tab Flutter %}
+```dart
+for (final card in cards) {
+  print("Card id: ${card.id} Extras: ${card.extras}");
+}
+```
+{% endtab %}
+{% endtabs %}
+
+#### Banner-Ansatz
+
+{% tabs %}
+{% tab Web %}
+```javascript
+const banner = braze.getBanner("sample_placement_id");
+if (!banner) {
+  return;
+}
+
+console.log("Banner placement:", banner.placementId, "Properties:", banner.properties);
+```
+{% endtab %}
+{% tab Android %}
+```kotlin
+val banner = Braze.getInstance(context).getBanner("sample_placement_id")
+if (banner != null) {
+  Log.d(TAG, "Banner placement: ${banner.placementId} Properties: ${banner.properties}")
+}
+```
+{% endtab %}
+{% tab Swift %}
+```swift
+braze.banners.getBanner(for: "sample_placement_id") { banner in
+  guard let banner = banner else { return }
+
+  print("Banner placement: \(banner.placementId) Properties: \(banner.properties)")
+}
+```
+{% endtab %}
+{% tab React Native %}
+```javascript
+const banner = await Braze.getBanner("sample_placement_id");
+if (banner) {
+  console.log("Banner placement:", banner.placementId, "Properties:", banner.properties);
+}
+```
+{% endtab %}
+{% tab Flutter %}
+```dart
+final banner = await braze.getBanner("sample_placement_id");
+if (banner != null) {
+  print("Banner placement: ${banner.placementId} Properties: ${banner.properties}");
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ### Umgang mit Kontrollgruppen
 
-#### Content-Cards Ansatz
+#### Content-Cards-Ansatz
 
 {% tabs %}
 {% tab Web %}
@@ -596,24 +691,24 @@ for (final card in cards) {
 {% endtab %}
 {% endtabs %}
 
-#### Banner Ansatz
+#### Banner-Ansatz
 
 {% tabs %}
 {% tab Web %}
 ```javascript
 braze.subscribeToBannersUpdates((banners) => {
-  const globalBanner = braze.getBanner("global_banner");
-  if (!globalBanner) {
+  const banner = braze.getBanner("sample_placement_id");
+  if (!banner) {
     return;
   }
 
   const container = document.getElementById("global-banner-container");
-  
+
   // Always call insertBanner to track impression (including control)
-  braze.insertBanner(globalBanner, container);
-  
+  braze.insertBanner(banner, container);
+
   // Hide if control group
-  if (globalBanner.isControl) {
+  if (banner.isControl) {
     container.style.display = "none";
   }
 });
@@ -624,7 +719,7 @@ braze.subscribeToBannersUpdates((banners) => {
 // BannerView automatically handles control groups
 // No additional code needed
 val bannerView = BannerView(context).apply {
-  placementId = "global_banner"
+  placementId = "sample_placement_id"
 }
 ```
 {% endtab %}
@@ -633,7 +728,7 @@ val bannerView = BannerView(context).apply {
 // BannerUIView automatically handles control groups
 // No additional code needed
 let bannerView = BrazeBannerUI.BannerUIView(
-  placementId: "global_banner",
+  placementId: "sample_placement_id",
   braze: braze
 )
 ```
@@ -643,7 +738,7 @@ let bannerView = BrazeBannerUI.BannerUIView(
 // BrazeBannerView automatically handles control groups
 // No additional code needed
 <Braze.BrazeBannerView
-  placementID='global_banner'
+  placementID='sample_placement_id'
 />
 ```
 {% endtab %}
@@ -652,67 +747,66 @@ let bannerView = BrazeBannerUI.BannerUIView(
 // BrazeBannerView automatically handles control groups
 // No additional code needed
 BrazeBannerView(
-  placementId: "global_banner",
+  placementId: "sample_placement_id",
 )
 ```
 {% endtab %}
 {% endtabs %}
 
-## Beschränkungen
+## Einschränkungen
 
-Bei der Migration von Content-Cards zu Bannern sollten Sie die folgenden Einschränkungen beachten:
+Beachten Sie bei der Migration von Content-Cards zu Bannern die folgenden Einschränkungen:
 
 ### Migration getriggerter Nachrichten
 
-Banner unterstützen nur Kampagnen mit Zeitplan für die Zustellung. Um eine Nachricht zu migrieren, die zuvor API-getriggert oder aktionsbasiert war, konvertieren Sie sie in segmentbasiertes Targeting:
+Banner unterstützen ausschließlich geplante Zustellungskampagnen. Um eine Nachricht zu migrieren, die zuvor API-gesteuert oder aktionsbasiert war, konvertieren Sie sie in ein segmentbasiertes Targeting:
 
-- **Beispiel:** Anstatt eine Karte "Profil vervollständigen" mit der API zu triggern, erstellen Sie ein Segment für Nutzer:innen, die sich in den letzten 7 Tagen angemeldet, aber ihr Profil nicht vervollständigt haben.
-- **Teilnahmeberechtigung in Echtzeit:** Nutzer:innen qualifizieren oder disqualifizieren sich für das Banner sofort bei jeder Aktualisierung auf der Grundlage ihrer Mitgliedschaft in einem Segment.
+- **Beispiel:** Anstatt eine Karte „Profil vervollständigen" mit der API zu triggern, erstellen Sie ein Segment für Nutzer:innen, die sich in den letzten 7 Tagen registriert haben, ihr Profil jedoch noch nicht vervollständigt haben.
+- **Realtime-Berechtigung:** Nutzer:innen werden bei jeder Aktualisierung sofort für das Banner qualifiziert oder disqualifiziert, basierend auf ihrer Segmentzugehörigkeit.
 
-### Feature Unterschiede
+### Unterschiede in den Features
 
 | Feature | Content-Cards | Banner |
 |---------|--------------|---------|
-| **Inhaltliche Struktur** |
-| Mehrere Karten im Feed | ✅ Unterstützt | ✅ Sie können mehrere Platzierungen erstellen, um eine karussellartige Implementierung zu erreichen. Pro Platzierung wird nur ein Banner zurückgegeben. |
-| Mehrere Platzierungen | -- | ✅ Mehrere Platzierungen unterstützt |
-| Kartentypen (Klassisch, Mit Bildunterschrift, Nur Bild) | ✅ Mehrere vordefinierte Typen | ✅ Einzelner HTML-basierter Banner (flexibler) |
-| **Content Management** |
-| Drag-and-Drop-Editor | ❌ Benötigt Entwickler:in für die Anpassung | ✅ Marketer können ohne Technik erstellen/aktualisieren |
-| Angepasstes HTML/CSS | ❌ Begrenzt auf die Kartenstruktur | Vollständige HTML/CSS-Unterstützung |
-| Schlüssel-Wert-Paare für die Anpassung | ✅ Erforderlich für fortgeschrittene Anpassungen | Stark typisierte Schlüssel-Wert-Paare, so genannte "Eigenschaften", für fortgeschrittene Anpassungen |
-| **Persistenz & Verfall** |
-| Ablauf der Karte | ✅ Unterstützt (30-Tage-Limit) | ✅ Unterstützt (kein Verfallsdatum) |
-| Echte Persistenz | ❌ Maximal 30 Tage | ✅ Unbegrenzte Persistenz |
+| **Inhaltsstruktur** |
+| Mehrere Karten im Feed | ✅ Unterstützt | ✅ Es können mehrere Platzierungen erstellt werden, um eine karussellähnliche Implementierung zu erzielen. Pro Platzierung wird nur ein Banner zurückgegeben. |
+| Mehrere Platzierungen | N/A | ✅ Mehrere Platzierungen werden unterstützt |
+| Kartentypen (klassisch, mit Bildunterschrift, nur Bild) | ✅ Mehrere vordefinierte Typen | ✅ Einzelnes HTML-basiertes Banner (flexibler) |
+| **Inhaltsverwaltung** |
+| Drag-and-Drop-Editor | ❌ Erfordert Entwickler:innen für die Anpassung | ✅ Marketer können ohne technische Unterstützung Inhalte erstellen und Updates durchführen |
+| Angepasstes HTML/CSS | ❌ Beschränkt auf die Kartenstruktur | ✅ Vollständige HTML/CSS-Unterstützung |
+| Schlüssel-Wert-Paare für die Anpassung | ✅ Für erweiterte Anpassungen erforderlich | ✅ Stark typisierte Schlüssel-Wert-Paare, die als „Eigenschaften" bezeichnet werden, ermöglichen eine erweiterte Anpassung |
+| **Persistenz & Ablauf** |
+| Ablauf der Karte | ✅ Unterstützt (30-Tage-Limit) | ✅ Unterstützt (ohne Ablaufdatum) |
+| Wahre Persistenz | ❌ Maximal 30 Tage | ✅ Unbegrenzte Persistenz |
 | **Anzeige & Targeting** |
-| Feed UI | ✅ Standard Futtermittel verfügbar | ❌ Nur platzierungsbezogen |
-| Kontextspezifische Platzierung | ❌ Futtermittelbasiert | ✅ Unterstützung der nativen Platzierung |
-| Native Prioritätensetzung | ❌ Benötigt angepasste Logik | ✅ Eingebaute Prioritätensetzung |
-| **Nutzer:in Interaktion** |
-| Manuelle Entlassung | ✅ Unterstützt | ❌ Nicht unterstützt |
-| Gepinnte Karten | ✅ Unterstützt | -- |
+| Feed-UI | ✅ Standard-Feed verfügbar | ❌ Nur platzierungsbasiert |
+| Kontextspezifische Platzierung | ❌ Feed-basiert | ✅ Native Platzierungsunterstützung |
+| Native Priorisierung | ❌ Erfordert angepasste Logik | ✅ Integrierte Priorisierung |
+| **Benutzerinteraktion** |
+| Manuelles Schließen | ✅ Unterstützt | ❌ Nicht unterstützt |
+| Gepinnte Karten | ✅ Unterstützt | N/A |
 | **Analytics** |
-| Automatische Analytics (Standard UI) | ✅ Unterstützt | ✅ Unterstützt |
-| Prioritätssortierung | ❌ Nicht unterstützt | ✅ Unterstützt | 
-| **Contentful Updates** |
-| Liquid-Templates aktualisieren | ❌ Einmal pro Karte beim Senden/Launch | ✅ Aktualisiert bei jeder Aktualisierung |
-| Berechtigung aktualisieren | ❌ Einmal pro Karte beim Senden/Launch | ✅ Erfrischt bei jeder Sitzung |
+| Automatische Analytics (Standard-UI) | ✅ Unterstützt | ✅ Unterstützt |
+| Prioritätssortierung | ❌ Nicht unterstützt | ✅ Unterstützt |
+| **Inhaltsupdates** |
+| Liquid-Template-Aktualisierung | ❌ Einmal pro Karte beim Senden/Starten | ✅ Aktualisiert bei jeder Aktualisierung |
+| Aktualisierung der Berechtigung | ❌ Einmal pro Karte beim Senden/Starten | ✅ Wird bei jeder Sitzung aktualisiert |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-### Einschränkungen des Produkts
+### Produkteinschränkungen
 
 - Bis zu 25 aktive Nachrichten pro Platzierung.
-- Bis zu 10 IDs pro Aktualisierungsanfrage; darüber hinausgehende Anfragen werden abgeschnitten.
+- Bis zu 10 Platzierungs-IDs pro Aktualisierungsanfrage; darüber hinausgehende Anfragen werden gekürzt.
 
-### SDK Einschränkungen
+### SDK-Einschränkungen
 
-- Banner werden derzeit nicht auf den Plattformen .NET MAUI (Xamarin), Cordova, Unity, Vega oder TV unterstützt.
+- Banner werden derzeit auf den Plattformen .NET MAUI (Xamarin), Cordova, Unity, Vega oder TV nicht unterstützt.
 - Stellen Sie sicher, dass Sie die in den Voraussetzungen aufgeführten Mindestversionen des SDK verwenden.
 
-## Ähnliche Artikel
+## Verwandte Artikel
 
-- [Banner Platzierungen]({{site.baseurl}}/developer_guide/banners/placements)
-- [Tutorial: Anzeige eines Banners nach Platzierungs-ID]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)
-- [Banner-Analytik]({{site.baseurl}}/developer_guide/banners/analytics)
-- [Banner FAQ]({{site.baseurl}}/developer_guide/banners/faq)
-
+- [Bannerplatzierungen]({{site.baseurl}}/developer_guide/banners/placements)
+- [Anleitung: Anzeige eines Banners anhand der Platzierungs-ID]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)
+- [Banner-Analytics]({{site.baseurl}}/developer_guide/banners/analytics)
+- [Häufig gestellte Fragen zu Bannern]({{site.baseurl}}/developer_guide/banners/faq)

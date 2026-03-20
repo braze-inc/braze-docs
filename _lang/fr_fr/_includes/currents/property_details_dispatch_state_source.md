@@ -1,6 +1,6 @@
 <ul>
-<li><code>dispatch_id</code> est un ID pour un envoi de messages spécifique, tel qu'un envoi de campagne. Tous les événements "push" qui proviennent du même envoi comprennent le même <code>dispatch_id</code>. Utilisation <code>dispatch_id</code> pour regrouper les événements qui appartiennent au même envoi, ce qui vous permet de regrouper et de corréler le cycle de vie du message push pour cet envoi (comme l'envoi, le rebond et l'ouverture).</li>
-<li><code>state_change_source</code> renvoie une chaîne de caractères contenant le nom complet de la source. Par exemple, l'importation de la source CSV renverra la chaîne de caractères suivante <code>CSV import</code>. Les sources disponibles sont énumérées ci-dessous :</li>
+<li><code>dispatch_id</code> est un ID pour l'envoi d'un message spécifique, tel qu'une campagne. Tous les événements push provenant du même envoi incluent le même <code>dispatch_id</code>. Utilisation <code>dispatch_id</code> regrouper les événements appartenant à la même expédition, ce qui vous permet de regrouper et de corréler le cycle de vie des messages push pour cette expédition (tels que Envoi, Rebond et Ouverture).</li>
+<li><code>state_change_source</code> Renvoie une chaîne de caractères contenant le nom complet de la source. Par exemple, l'importation CSV source renverra une chaîne de caractères <code>CSV import</code>. Les sources disponibles sont énumérées ci-dessous :</li>
 </ul>
 <table class="reset-td-br-1 reset-td-br-2" role="presentation">
 <thead>

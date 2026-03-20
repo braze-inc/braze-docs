@@ -1,6 +1,6 @@
 ---
-nav_title: 대리인 설정
-article_title: iOS용 인앱 메시지 델리게이트 설정하기
+nav_title: 위임자 설정
+article_title: iOS용 인앱 메시지 위임자 설정
 platform: iOS
 page_order: 2
 description: "이 참조 문서에서는 iOS 애플리케이션의 인앱 메시징 위임 설정을 다룹니다."
@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# 대리인 설정
+# 위임자 설정
 
 인앱 메시지 표시 및 전달을 위임(선택 사항)을 설정하여 코드에서 사용자 지정할 수 있습니다.
 

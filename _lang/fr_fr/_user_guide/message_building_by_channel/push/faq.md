@@ -18,13 +18,13 @@ Lorsqu'un utilisateur se déconnecte d'un appareil ou d'un site web, il reste jo
 
 Lorsqu'un jeton de poussée est réattribué, la modification est reflétée dans le **journal des modifications de la poussée** du profil utilisateur. Vous pouvez le trouver en allant dans l'onglet **Engagement** dans le profil utilisateur.
 
-![Le "Push Changelog" dans la section "Contact Settings".]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
+![La section « Journal des modifications » dans la section « Paramètres de contact ».]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
-### Que signifie "Error sending push because the payload was invalid" ?
+### Que signifie « Erreur lors de l'envoi de la notification push en raison d'une charge utile non valide » ?
 
-Ce message indique que les APN ont rejeté la demande de push en raison d'une charge utile non valide (par exemple, une charge utile vide ou trop volumineuse).
+Ce message indique que les APN ont rejeté la demande push en raison d'une charge utile non valide (par exemple, une charge utile vide ou trop volumineuse).
 
-Pour plus de détails et les étapes suivantes, reportez-vous à la section [Messages d'erreur communs à la poussée]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/).
+Pour plus de détails et les étapes suivantes, veuillez consulter [la section Messages d'erreur courants liés à la publication]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/).
 
 ### Pourquoi un utilisateur bénéficiant d'un abonnement n'a-t-il pas de jeton de poussée ?
 

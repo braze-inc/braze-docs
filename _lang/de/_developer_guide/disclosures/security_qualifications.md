@@ -21,31 +21,31 @@ Mehr dazu finden Sie bei [Braze Perspectives](https://www.braze.com/perspectives
 
 ## ISO 27001 Zertifizierung
 
-![Grafik zur ISO-Zertifizierung]({% image_buster /assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png %}){: height="25%" width="25%" style="border:0px;"}
+![ISO-Zertifizierungsgrafik]({% image_buster /assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png %}){: height="25%" width="25%" style="border:0px;"}
 
-_Braze ist seit dem 18\. Dezember 2018 für die Einhaltung von [ISO 27001](https://www.iso.org/standard/27001) zertifiziert und wurde bis zum 29\. August 2025 erneuert. Läuft am 15\. Dezember 2027 aus._
+_Braze verfügt über eine Zertifizierung gemäß [ISO 27001](https://www.iso.org/standard/27001), die am 18\. Dezember 2018 ausgestellt und am 29\. August 2025 erneuert wurde. Läuft am 15\. Dezember 2027 aus._
 
 Dritte, die den Status der Zertifizierung von Braze unabhängig überprüfen möchten, können das [Schellman-Zertifikatsverzeichnis](https://www.schellman.com/certificate-directory?certificateNumber=1504855-9) einsehen oder [unser Zertifikat hier prüfen]({{site.baseurl}}/assets/pdf/Braze_ISO_Cert.pdf).
 
 ## SOC 2 Prüfung
 
-![SOC 2 Prüfungsgrafik]({% image_buster /assets/img/SOC2.png %}){: height="25%" width="25%" style="border:0px;"}
+![SOC 2-Prüfungsgrafik]({% image_buster /assets/img/SOC2.png %}){: height="25%" width="25%" style="border:0px;"}
 
 _Datum/Zeitraum der letzten Überprüfung: 1\. Juli 2024 bis 30\. Juni 2025_
 
-Braze hat die SOC 2-Prüfung für _Sicherheit_ und _Verfügbarkeit_, die von der unabhängigen Wirtschaftsprüfungsgesellschaft [Schellman & Company, LLC](https://www.schellman.com/) durchgeführt wurde, erfolgreich abgeschlossen.
+Braze hat die SOC 2-Prüfung Typ 2 für _Sicherheit_ und _Verfügbarkeit_, die von der unabhängigen Wirtschaftsprüfungsgesellschaft [Schellman&Company, LLC](https://www.schellman.com/) durchgeführt wurde, erfolgreich abgeschlossen.
 
 ## TISAX-Bewertung
 
-![TISAX Grafik.]({% image_buster /assets/img/tisax.png %}){: height="25%" width="25%" style="border:0px;"}
+![TISAX-Grafik.]({% image_buster /assets/img/tisax.png %}){: height="25%" width="25%" style="border:0px;"}
 
-Braze hat sich verpflichtet, die höchsten Standards der Informationssicherheit und des Datenschutzes aufrechtzuerhalten und hat ein TISAX Assessment Level 3 (AL3) erfolgreich abgeschlossen. Diese Bewertungsergebnisse und die Vergabe der entsprechenden Gütesiegel spiegeln unser Engagement für die Aufrechterhaltung des höchsten Niveaus der Informationssicherheit und des Datenschutzes wider. Aktuelle TISAX-Teilnehmer können unsere Bewertungsergebnisse für die folgenden Bewertungsziele und Standorte über das Portal der ENX Association anhand der folgenden Zugangsdaten überprüfen:
+Braze verpflichtet sich zur Einhaltung höchster Standards in Bezug auf Informationssicherheit und Datenschutz und hat erfolgreich eine TISAX-Bewertung der Stufe 3 (AL3) abgeschlossen. Diese Bewertungsergebnisse und die Vergabe entsprechender Labels spiegeln unser Engagement für die Aufrechterhaltung eines Höchstmaßes an Informationssicherheit und Datenschutz wider. Aktuelle TISAX-Teilnehmer können unsere Bewertungsergebnisse für die folgenden Bewertungsziele und Standorte über das Portal der ENX Association mit den folgenden Zugangsdaten überprüfen:
 
-- **Name des Unternehmens:** Braze
-- **Scope ID:** SNCM4K
-- **Bewertung ID:** AMH9TZ-1
-- **Ziele der Bewertung:** \* Datenschutz gemäß EU-DSGVO Art. 28 ("Prozessor")
-    - Datenschutz bei besonderen Kategorien von personenbezogenen Daten
+- **Firmenname:** Braze
+- **Umfang-ID:** SNCM4K
+- **Bewertungs-ID:** AMH9TZ-1
+- **Bewertungsziele:** \* Datenschutz gemäß EU-DSGVO Art. 28 („Verarbeiter“)
+    - Datenschutz bei besonderen Kategorien personenbezogener Daten
     - Hohe Verfügbarkeit
     - Sehr hohe Verfügbarkeit
     - Vertraulich

@@ -1,9 +1,9 @@
 ---
-nav_title: Adhesión voluntaria y exclusión voluntaria
+nav_title: Adhesiones voluntarias y bajas
 article_title: Adhesiones voluntarias y cancelaciones de WhatsApp
 description: "Este artículo de referencia trata de los diferentes métodos de inclusión y exclusión de WhatsApp."
 page_type: partner
-search_tag: Partner
+search_tag: Socio
 page_order: 5
 channel:
   - WhatsApp
@@ -98,11 +98,11 @@ Puedes configurar una campaña o Canvas que permita a los usuarios que envíen m
 
 #### Paso 1: Crear un lienzo con el desencadenante "Mensaje de WhatsApp entrante"
  
-![Paso en Canvas basado en acciones que da entrada a los usuarios que envían un mensaje entrante de WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
+![Paso de entrada en Canvas basado en acciones que introduce a los usuarios que envían un mensaje entrante de WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
 
 Cuando selecciones palabras clave desencadenantes, incluye palabras como "Detener" o "Sin mensaje". Si eliges este método, asegúrate de que tus clientes conocen tus palabras de cancelación. Por ejemplo, después de recibir la adhesión voluntaria inicial, incluye una respuesta de seguimiento como "Para cancelar estos mensajes, envía el mensaje "Detener" en cualquier momento". 
 
-![Paso de mensaje para enviar un mensaje entrante de WhatsApp en el que el cuerpo del mensaje sea "STOP" o "SIN MENSAJE".]({% image_buster /assets/img/whatsapp/whatsapp117.png %}){: style="max-width:85%;"}
+![Paso de mensaje para enviar un mensaje entrante de WhatsApp cuyo cuerpo sea «STOP» o «NO MESSAGE».]({% image_buster /assets/img/whatsapp/whatsapp117.png %}){: style="max-width:85%;"}
 
 #### Paso 2: Actualizar el perfil del usuario
 
@@ -227,7 +227,7 @@ En esta tabla, `STOP` se utiliza como palabra desencadenante de ejemplo para dem
 | Modificador | Palabra desencadenante | Acción |
 | --- | --- | --- |
 | `Is` | `STOP` | Capta cualquier uso de "stop" en toda la palabra, independientemente del caso. Por ejemplo, esto capta "para" pero no "por favor, para". |
-| `Matches regex` | `STOP` | Captura cualquier uso de "STOP" en ese caso exacto. Por ejemplo, esto capta "PARE" y "POR FAVOR PARE", pero no "pare". |
+| `Matches regex` | `STOP` | Detecta cualquier uso de «STOP» en ese caso concreto. Por ejemplo, esto detecta «STOP» y «PLEASE STOP», pero no «stop». |
 | `Matches regex` | `(?i)STOP(?-i)` | Captura cualquier uso de "STOP" en cualquier caso. Por ejemplo, esto capta "para", "por favor, para" y "nunca dejes de enviarme mensajes". |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 

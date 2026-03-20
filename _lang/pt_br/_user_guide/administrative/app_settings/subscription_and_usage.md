@@ -23,7 +23,7 @@ A página **Faturamento** inclui as seguintes guias:
 
 ## Inscrições e uso
 
-A guia **Inscrições e uso** inclui gráficos de uso e os detalhes de seu contrato. Os dados desta página são atualizados diariamente às 22h, horário do leste dos EUA (ET). Ele não reflete a atividade em tempo real.
+A guia **Inscrições e uso** inclui gráficos de uso e os detalhes de seu contrato. Os dados nesta página são atualizados diariamente às 22:00, horário do leste dos EUA (ET). Não reflete a atividade em tempo real.
 
 ### Gráficos de uso
 
@@ -39,36 +39,40 @@ Os detalhes do contrato listam a data de início e de término de seu contrato a
 
 #### Considerações
 
-Se o seu contrato usar Visitantes Únicos Mensais (MUV) e você mudar para um contrato que use apenas Usuários Ativos Mensais (MAU), seus dados históricos ainda aparecerão no gráfico MUV e seus novos dados aparecerão apenas no gráfico MAU. Por exemplo, se seu contrato terminar em outubro, o gráfico MUV mostrará dados até o final de setembro.
+Se o seu contrato usa Visitantes Únicos Mensais (MUV) e você mudar para um contrato que usa apenas Usuários Ativos Mensais (MAU), seus dados históricos ainda aparecerão no gráfico de MUV e seus novos dados aparecerão apenas no gráfico de MAU. Por exemplo, se o seu contrato terminar em outubro, o gráfico de MUV mostrará dados até o final de setembro.
 
 ## Eventos e atribuições mais usados por aplicativo
 
-Em **Most Used Events and Attributes By App (Eventos e atributos mais usados por aplicativo**), você pode verificar os drivers de seu atributo e o uso de pontos de dados de eventos personalizados. 
+Sob **Eventos e Atributos Mais Usados Por App**, você pode verificar os fatores de uso dos seus pontos de dados de atributo e evento personalizado. 
 
 ![Eventos e atribuições mais usados por aplicativo]({% image_buster /assets/img/most_used_events_attributes_time.png %})
 
 Para cada app, você pode selecionar **Ver detalhamento** para visualizar uma contagem estimada de cada atributo personalizado específico, atributo de perfil e evento personalizado para o período de tempo selecionado, bem como a porcentagem das atualizações de atributo e evento desse app que foram impulsionadas por esse atributo ou evento. 
 
-![Guia Detalhamento dos eventos e atributos mais usados por app]({% image_buster /assets/img/most_used_events_attributes_2.png %}){: style="max-width:60%"}
+A aba ![Eventos e Atributos Mais Usados Por App]({% image_buster /assets/img/most_used_events_attributes_2.png %}){: style="max-width:60%"}
 
 Detalhamentos de dados como esses podem ajudá-lo a entender quais pontos de dados específicos estão ocupando grandes porcentagens de sua cota de dados. Recomendamos que você monitore essas informações periodicamente para se certificar de que não está gastando pontos de dados de maneiras acidentais e desnecessárias. Seu gerente de sucesso do cliente pode fornecer orientações para aproveitar ao máximo seu plano atual ou oferecer opções para maior flexibilidade. 
 
 ## Painel de controle do total de pontos de dados
 
-A guia **Total Data Points Usage (Uso total de pontos de dados** ) fornece uma visão detalhada do uso de seus pontos de dados. É possível visualizar todos os dados dessa seção agregados por semanas ou meses.
+A aba **Pontos de Dados Totais de Uso** fornece uma visão detalhada do uso dos seus pontos de dados. É possível visualizar todos os dados dessa seção agregados por semanas ou meses.
+
+{% alert note %}
+As informações dos pontos de dados são armazenadas em cache a cada 24 horas.
+{% endalert %}
 
 ![Filtragem do uso de pontos de dados por semanas]({% image_buster /assets/img/subscription_and_billing2.png %})
 
 ### Informações do contrato
 
-Aqui, você encontra informações sobre quando seu contrato Braze atual começa e termina, bem como os pontos de dados alocados e uma soma de todos os pontos de dados que foram usados até o momento em seu contrato atual.
+Aqui, você encontra informações sobre quando seu contrato atual com a Braze começa e termina, bem como os pontos de dados alocados e um total de todos os pontos de dados que foram usados até agora em seu contrato atual.
 
 Os campos dessa seção são definidos da seguinte forma:
 
 - **Tipo de contrato:** Estrutura de prazo de faturamento, anual ou plurianual.
 - **Data de início e término do contrato:** Data de início e término de todo o contrato.
 - **Pontos de dados alocados:** A quantidade de pontos de dados alocados no contrato por período de faturamento.
-- **Uso do ponto de dados do contrato:** Um total cumulativo de todos os pontos de dados registrados durante a vida útil do contrato e não é redefinido no próximo período de faturamento.
+- **Uso do ponto de dados do contrato:** Um total acumulado de todos os pontos de dados registrados ao longo da duração do contrato, e não é redefinido no próximo período de faturamento.
 
 ![Seção Detalhes do contrato da guia Uso total de pontos de dados]({% image_buster /assets/img/contract_details.png %})
 

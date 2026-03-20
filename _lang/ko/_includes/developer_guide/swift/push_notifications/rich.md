@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/swift.md %} [푸시 알림도 설정해야]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) 합니다.
+{% multi_lang_include developer_guide/prerequisites/swift.md %} 푸시 알림을 [설정해야 합니다]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift).
 
 ## 리치 푸시 알림 설정하기
 
@@ -16,7 +16,17 @@
 
 알림 서비스 확장 프로그램의 번들 ID는 기본 앱 대상의 번들 ID와 구별되어야 합니다. 예를 들어 앱의 번들 ID가 `com.company.appname`인 경우 서비스 확장에 `com.company.appname.AppNameServiceExtension`을 사용할 수 있습니다.
 
-### 3단계: 리치 푸시 알림 통합
+### 3단계: 앱 그룹 추가
+
+Xcode에서 **서명 & 기능** 창에서 앱 그룹 기능을 추가하여 기본 앱 타겟과 알림 서비스 확장 타겟에 추가합니다. 그런 다음 **+** 버튼을 클릭합니다. 앱의 번들 ID를 사용하여 앱 그룹을 만드십시오. 예를 들어 앱의 번들 ID가 `com.company.appname`인 경우 앱 그룹 이름을 `group.com.company.appname.xyz`로 지정할 수 있습니다.
+
+{% alert important %}
+이 컨텍스트에서 앱 그룹은 Braze 워크스페이스(이전 앱 그룹) ID가 아닌 Apple의 [앱 그룹 권한](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups)을 의미합니다.
+{% endalert %}
+
+주 앱과 알림 서비스 확장이 공유 데이터를 접근할 수 있도록 공유 앱 그룹이 필요합니다. 앱을 앱 그룹에 추가하지 않으면 푸시 페이로드에서 특정 필드를 채우지 못할 수 있으며 예상대로 작동하지 않을 수 있습니다.
+
+### 4단계: 리치 푸시 알림 통합
 
 리치 푸시 알림을 `BrazeNotificationService`와 통합하는 방법에 대한 단계별 가이드는 [튜토리얼](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b2-rich-push-notifications)을 참조하세요.
 
@@ -29,7 +39,7 @@
 
 [스위프트 패키지 매니저 통합 가이드]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager/)를 수행한 후 다음을 수행하여 `Notification Service Extension`에 `BrazeNotificationService`를 추가합니다.
 
-1. Xcode의 프레임워크 및 라이브러리에서 <i class="fas fa-plus"></i> 추가 아이콘을 선택하여 프레임워크를 추가합니다. <br><br>![더하기 아이콘은 Xcode의 프레임워크 및 라이브러리 아래에 있습니다.]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
+1. Xcode의 프레임워크 및 라이브러리에서 <i class="fas fa-plus"></i> 추가 아이콘을 선택하여 프레임워크를 추가합니다. <br><br>![플러스 아이콘은 Xcode의 프레임워크 및 라이브러리 아래에 있습니다.]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
 
 2. "BrazeNotificationService" 프레임워크를 선택합니다. <br><br>!["BrazeNotificationService 프레임워크는 열리는 모달에서 선택할 수 있습니다.]({% image_buster /assets/img_archive/rich_notification2.png %})
 
@@ -97,6 +107,17 @@ class NotificationService: UNNotificationServiceExtension {
 }
 ```
 
-### 4단계: 대시보드에서 리치 알림 만들기
+### 5단계: Braze에서 앱 그룹 구성하기
 
-마케팅팀은 대시보드에서 다양한 알림을 만들 수도 있습니다. 푸시 작성기를 통해 푸시 알림을 생성하고 이미지나 GIF를 첨부하거나 이미지, GIF 또는 비디오를 호스팅하는 URL을 제공하기만 하면 됩니다. 푸시 알림을 받으면 자산이 다운로드되므로 콘텐츠를 호스팅하는 경우 요청이 동시에 급증하는 상황에 대비해야 합니다.
+Braze를 초기화하기 전에 앱 그룹의 이름을 Braze 구성의 [`push.appGroup`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/appgroup) 속성에 할당하십시오.
+
+```swift
+let configuration = Braze.Configuration(apiKey: "<YOUR-BRAZE-API-KEY>",
+                                        endpoint: "<YOUR-BRAZE-ENDPOINT>")
+configuration.push.appGroup = "REPLACE_WITH_APPGROUP"
+let braze = Braze(configuration: configuration)
+```
+
+### Step 6: 대시보드에서 리치 알림 만들기
+
+마케팅 팀은 대시보드에서 리치 알림을 생성할 수 있습니다. 푸시 작곡기를 통해 푸시 알림을 생성하고 이미지나 GIF를 첨부하거나 이미지를 호스팅하는 URL, GIF 또는 비디오를 제공하세요. 푸시 알림을 받으면 자산이 다운로드되므로 콘텐츠를 호스팅하는 경우 요청이 동시에 급증하는 상황에 대비해야 합니다.

@@ -9,9 +9,13 @@ description: "Apprenez à utiliser le débogueur du SDK de Braze, afin de pouvoi
 
 > Apprenez à utiliser le débogueur intégré au SDK de Braze, afin de pouvoir résoudre les problèmes de vos canaux alimentés par le SDK, sans avoir à activer la journalisation verbeuse dans votre application.
 
+{% alert tip %}
+Pour une analyse plus approfondie, il est également possible [d'activer la journalisation détaillée]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging) afin de capturer les sorties SDK détaillées et [d'apprendre à lire les journaux détaillés]({{site.baseurl}}/developer_guide/sdk_integration/reading_verbose_logs) pour des canaux spécifiques.
+{% endalert %}
+
 ## Conditions préalables
 
-Pour utiliser le débogueur du SDK de Braze, vous devez disposer des autorisations "View PII" et "View User Profiles PII Compliant". Pour télécharger les journaux de votre session de débogage, vous devez également disposer de l'autorisation "Exporter les données de l'utilisateur". En outre, votre SDK Braze doit être conforme ou pointer vers les versions minimales suivantes : 
+Pour utiliser le débogueur Braze SDK, vous devez disposer des autorisations « Afficher les informations personnelles identifiables » et « Afficher les profils utilisateurs conformes aux informations personnelles identifiables ». Pour télécharger les journaux de vos sessions de débogage, vous aurez également besoin de l'autorisation « Exporter les données utilisateur ». En outre, votre SDK Braze doit être conforme ou pointer vers les versions minimales suivantes : 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
@@ -29,11 +33,11 @@ Avant de commencer votre session de débogage, fermez l'application qui pose pro
 
 Dans Braze, allez dans **Settings**, puis sous **Setup and Testing**, sélectionnez **SDK Debugger**.
 
-![La section "Configuration et test" avec "SDK Debugger" en surbrillance.]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
+![La section « Configuration et test » avec « SDK Debugger » mis en évidence.]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
 
 Sélectionnez **Créer une session de débogage**.
 
-![La page "SDK Debugger".]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
+![La page « SDK Debugger ».]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
 
 ### Étape 3 : Sélectionnez un utilisateur
 
@@ -57,7 +61,7 @@ Lorsque vous reproduisez l'erreur, veillez à suivre les étapes de la reproduct
 
 Lorsque vous avez terminé les étapes de reproduction, sélectionnez **Terminer la session** > **Fermer**.
 
-![La session de débogage affiche le bouton "Fin de la session".]({% image_buster /assets/img/sdk_debugger/close_debugging_session.png %}){: style="max-width:85%;"}
+![La session de débogage affichant le bouton « Terminer la session ».]({% image_buster /assets/img/sdk_debugger/close_debugging_session.png %}){: style="max-width:85%;"}
 
 {% alert note %}
 La génération des journaux peut prendre quelques minutes en fonction de la durée de la session et de la connectivité du réseau.
@@ -67,4 +71,4 @@ La génération des journaux peut prendre quelques minutes en fonction de la dur
 
 Après votre session, vous pouvez exporter vos journaux de session sous forme de fichier CSV. En outre, d'autres personnes peuvent utiliser votre **ID de session** pour rechercher votre session de débogage, de sorte que vous n'avez pas besoin de leur envoyer directement vos journaux.
 
-![La page de débogage avec "Exporter les journaux" et "Copier l'ID de la session" s'affiche après la session.]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})
+![La page de débogage avec « Exporter les journaux » et « Copier l'ID de session » s'affiche après la session.]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})

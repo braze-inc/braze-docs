@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: 사용 가능한 콘텐츠 블록 목록 보기"
+nav_title: "GET: 사용 가능한 콘텐츠 블록 목록"
 article_title: "GET: 사용 가능한 콘텐츠 블록 목록"
 search_tag: Endpoint
 page_order: 4
@@ -55,7 +55,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list
       "inclusion_count" : (integer) the inclusion count,
       "created_at": (string) The time the Content Block was created in ISO 8601,
       "last_edited": (string) The time the Content Block was last edited in ISO 8601,
-      "tags": (array) An array of tags formatted as strings,
+      "tags": (array) An array of tags formatted as strings
     }
   ]
 }

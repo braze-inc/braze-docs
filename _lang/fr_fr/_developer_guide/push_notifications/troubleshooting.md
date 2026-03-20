@@ -1,12 +1,12 @@
 ---
 page_order: 10.9
 nav_title: Résolution des problèmes
-article_title: Résolution des problèmes des notifications push pour le SDK de Braze
+article_title: Résolution des problèmes pour les notifications push pour le SDK Braze
 channel:
   - push notifications
 ---
 
-# Résolution des problèmes des notifications push
+# Résolution des problèmes pour les notifications push
 
 > Découvrez comment résoudre les problèmes liés aux notifications push pour le SDK de Braze.
 

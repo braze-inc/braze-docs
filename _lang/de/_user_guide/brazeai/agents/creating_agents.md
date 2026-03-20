@@ -1,122 +1,132 @@
 ---
 nav_title: Agenten erstellen
 article_title: Angepasste Agenten erstellen
-description: "Erfahren Sie, wie Sie Agenten erstellen, was Sie vorbereiten müssen und wie Sie sie in den Bereichen Messaging, Entscheidungsfindung und Datenverwaltung einsetzen können."
+description: "Erfahren Sie, wie Sie Agenten erstellen, was Sie vor dem Start vorbereiten müssen und wie Sie diese für Messaging, Entscheidungsfindung und Datenmanagement einsetzen können."
 page_order: 1
 alias: /creating-agents/
 ---
 
 # Angepasste Agenten erstellen
 
-> Erfahren Sie, wie Sie angepasste Agenten erstellen, was Sie vorbereiten müssen und wie Sie sie in den Bereichen Messaging, Entscheidungsfindung und Daten-Management einsetzen können. Weitere allgemeine Informationen finden Sie unter [Braze-Agenten]({{site.baseurl}}/user_guide/brazeai/agents). 
-
-{% alert important %}
-Braze-Agenten befinden sich derzeit in der Beta-Phase. Wenn Sie Hilfe benötigen, wenden Sie sich an Ihren Customer-Success-Manager:in.
-{% endalert %}
+> Erfahren Sie, wie Sie angepasste Agenten erstellen, was Sie vor dem Start vorbereiten müssen und wie Sie diese für Messaging, Entscheidungsfindung und Datenmanagement einsetzen können. Weitere allgemeine Informationen finden Sie unter [Braze-Agenten]({{site.baseurl}}/user_guide/brazeai/agents).
 
 ## Voraussetzungen
 
 Bevor Sie beginnen, benötigen Sie Folgendes:
 
-- Zugriff auf die **Agentenkonsole** in Ihrem Workspace. Wenden Sie sich an Ihre Braze-Administratoren, wenn Sie diese Option nicht sehen.  
-- Berechtigung zum Erstellen und Bearbeiten angepasster KI-Agenten. 
-- Eine Idee, was Sie mit dem Agenten bezwecken möchten. Braze Agents können die folgenden Aktionen unterstützen:  
-   - **Messaging:** Generieren Sie Betreffzeilen, Überschriften, produktinterne Texte oder andere Inhalte.  
-   - **Entscheidungsfindung:** Leiten Sie Nutzer:innen in Canvas auf der Grundlage von Verhalten, Vorlieben oder angepassten Attributen weiter.  
-   - **Datenverwaltung:** Berechnen Sie Werte, reichern Sie Katalogeinträge an oder aktualisieren Sie Profilfelder.  
+- [Berechtigung]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) für den Zugriff auf die **Agent Console** in Ihrem Workspace. Wenden Sie sich an Ihre Braze-Administratoren, falls diese Option nicht angezeigt wird.  
+- Berechtigung zum Erstellen und Bearbeiten von angepassten KI-Agenten.
+- Einen [KI-Modellanbieter]({{site.baseurl}}/partners/ai_model_providers), der mit Braze integriert ist.
+- Eine Idee davon, was der Agent erreichen soll. Braze-Agenten können die folgenden Aktionen unterstützen:  
+   - **Messaging:** Generieren Sie Betreffzeilen, Überschriften, Produkttexte oder andere Inhalte.  
+   - **Entscheidungsfindung:** Leiten Sie Nutzer:innen in Canvas basierend auf Verhalten, Präferenzen oder angepassten Attributen weiter.  
+   - **Datenverwaltung:** Berechnen Sie Werte, ergänzen Sie Katalogeinträge oder aktualisieren Sie Profilfelder.  
 
 ## Funktionsweise
 
-Wenn Sie einen Agenten erstellen, definieren Sie seinen Zweck und setzen Leitplanken für sein Verhalten. Nach der Inbetriebnahme kann der Agent in Braze eingesetzt werden, um personalisierte Texte zu erstellen, Entscheidungen in Echtzeit zu treffen oder Katalogfelder zu aktualisieren. Sie können einen Agenten jederzeit über das Dashboard pausieren oder aktualisieren.
+Wenn Sie einen Agenten erstellen, definieren Sie dessen Zweck und legen Leitplanken für sein Verhalten fest. Nach der Live-Schaltung kann der Agent in Braze eingesetzt werden, um personalisierte Texte zu generieren, Entscheidungen in Realtime zu treffen oder Katalogfelder zu aktualisieren. Sie können einen Agenten jederzeit über das Dashboard pausieren oder aktualisieren.
 
-Die folgenden Anwendungsfälle zeigen einige Möglichkeiten, wie Sie angepasste Agenten nutzen können.
+Die folgenden Anwendungsfälle veranschaulichen einige Möglichkeiten, angepasste Agenten zu nutzen.
 
 | Anwendungsfall | Beschreibung |
 | --- | --- |
-| Umgang mit Kunden:in | Geben Sie das Feedback der Nutzer:innen an einen Agenten weiter, um die Stimmung zu analysieren und einfühlsame Nachrichten zu erstellen. Für hochwertige Nutzer:innen könnte der Agent die Antwort eskalieren oder Vergünstigungen anbieten. |
-| Inhalte lokalisieren | Übersetzen Sie den Katalogtext für globale Kampagnen in eine andere Sprache, oder passen Sie Ton und Länge für regionalspezifische Kanäle an. Übersetzen Sie zum Beispiel "Classic Clubmaster Sonnenbrille" ins Spanische als "Gafas de sol Classic Clubmaster" oder kürzen Sie Beschreibungen für SMS Kampagnen. |
-| Fassen Sie Bewertungen oder Feedback zusammen | Fassen Sie die Stimmung oder das Feedback in einem neuen Feld zusammen, indem Sie z.B. Stimmungswerte wie Positiv, Neutral oder Negativ vergeben oder eine kurze Textzusammenfassung wie "Die meisten Kund:in erwähnen die gute Passform, bemängeln aber den langsamen Versand." erstellen. |
+| Bearbeitung von Kundenfeedback | Leiten Sie das Feedback der Nutzer:innen an einen Agenten weiter, um die Stimmung zu analysieren und einfühlsame Follow-up-Nachrichten zu generieren. Bei besonders wertvollen Nutzer:innen kann der Agent die Antwort eskalieren oder Vergünstigungen hinzufügen. |
+| Inhalte lokalisieren | Übersetzen Sie Katalogtexte für globale Kampagnen in andere Sprachen oder passen Sie Tonfall und Länge für regionsspezifische Kanäle an. Übersetzen Sie beispielsweise „Classic Clubmaster Sunglasses" ins Spanische als „Gafas de sol Classic Clubmaster" oder kürzen Sie Beschreibungen für SMS-Kampagnen. |
+| Bewertungen oder Feedback zusammenfassen | Fassen Sie die Stimmung oder das Feedback in einem neuen Feld zusammen, beispielsweise durch die Vergabe von Stimmungsbewertungen wie „Positiv", „Neutral" oder „Negativ" oder durch die Erstellung einer kurzen Textzusammenfassung wie „Die meisten Kund:innen erwähnen die hervorragende Passform, bemerken jedoch den langsamen Versand." |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Einen Agenten erstellen
 
-### Schritt 1: Details einrichten
+### 1. Schritt: Agententyp auswählen
 
 Um Ihren angepassten Agenten zu erstellen:
 
-1. Gehen Sie im Braze-Dashboard zu **Agentenkonsole** > **Agent Management**.  
-2. Wählen Sie **Agent erstellen**.
-3. Geben Sie einen Namen und eine Beschreibung ein, damit Ihr Team seinen Zweck versteht.
-4. (optional) Fügen Sie Tags hinzu, um Ihren Agenten zu filtern.
-5. Wählen Sie den Interaktionsstandort aus, d.h. den Standort, an dem der Agent eingesetzt wird. Beachten Sie, dass die Interaktionsseite nicht mehr aktualisiert werden kann, nachdem ein Agent erstellt wurde.
-6. Wählen Sie das [Modell]({{site.baseurl}}/docs/user_guide/brazeai/agents/reference/#models), das Ihr Agent verwenden wird.
+1. Gehen Sie im Braze-Dashboard zu **Agent Console** > **Agent Management**.  
+2. Wählen Sie **Agent erstellen** aus.
+3. Wählen Sie, ob Sie einen Canvas-Agenten oder einen Katalog-Agenten erstellen möchten.
 
-![Schnittstelle der Agentenkonsole zur Erstellung eines angepassten Agenten in Braze. Der Bildschirm enthält Felder zur Eingabe des Agentennamens und der Beschreibung sowie zum Auswählen eines Modells.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:85%;"}
+### 2. Schritt: Details einrichten
 
-### Schritt 2: Schreiben Sie die Anweisungen
+Richten Sie anschließend die Details für Ihren Agenten ein:
 
-Geben Sie dem Agenten Anweisungen. Schauen Sie in der [Referenz des Agents]({{site.baseurl}}/user_guide/brazeai/agents/reference/) nach.
+1. Geben Sie einen Namen und eine Beschreibung ein, damit Ihr Team den Zweck versteht.
+2. (optional) Fügen Sie Tags hinzu, um Ihren Agenten zu filtern.
+3. Wählen Sie das [Modell]({{site.baseurl}}/user_guide/brazeai/agents/reference/#models) aus, das Ihr Agent verwenden soll.
+4. Wenn Sie nicht das **Braze Auto**-Modell verwenden, wählen Sie die [Denkstufe]({{site.baseurl}}/user_guide/brazeai/agents/reference/#thinking-levels) des Modells aus. Sie können zwischen minimal, niedrig, mittel oder hoch wählen. Wir empfehlen, mit **Minimal** zu beginnen, die Antworten Ihres Agenten zu testen und diese bei Bedarf anzupassen.
+5. Legen Sie ein tägliches Ausführungslimit fest. Standardmäßig ist dieser Wert auf 250.000 eingestellt, kann jedoch auf 1.000.000 erhöht werden. Wenn Sie das Limit über 1.000.000 hinaus erhöhen möchten, wenden Sie sich an Ihren Customer-Success-Manager, um mehr zu erfahren.
+
+![Agent-Console-Oberfläche zum Erstellen eines angepassten Agenten in Braze. Der Bildschirm zeigt Felder zur Eingabe des Agentennamens und der Beschreibung, zur Auswahl eines Modells und zur Festlegung eines täglichen Ausführungslimits.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:75%;"}
+
+### 3. Schritt: Anweisungen verfassen {#agent-instructions}
+
+Geben Sie dem Agenten Anweisungen. Wir empfehlen, Anweisungen dafür aufzunehmen, wie der Agent in unerwarteten oder unklaren Szenarien vorgehen soll. Dadurch wird das Risiko minimiert, dass Verwirrung beim Agenten zu Fehlern führt. Anstatt beispielsweise den Agenten nur nach „positiven" oder „negativen" Stimmungswerten zu fragen, bitten Sie ihn, „unsicher" zurückzugeben, wenn er sich nicht entscheiden kann.
+
+Lesen Sie den Abschnitt [Anweisungen verfassen]({{site.baseurl}}/user_guide/brazeai/agents/reference/#writing-instructions) für bewährte Verfahren und [Beispiele]({{site.baseurl}}/user_guide/brazeai/agents/reference/#examples) für Anregungen, wie Sie Ihren Agenten anweisen können.
 
 {% alert tip %}
-Sie können Liquid in Ihren Anweisungen verwenden, um Nutzer:innen-Attribute, wie z.B. ihren Vor- und Nachnamen, oder angepasste Attribute zu referenzieren.
+Für Canvas-Agenten können Sie Liquid in Ihren Anweisungen verwenden, um auf Nutzerattribute wie Vor- und Nachname oder angepasste Attribute zu referenzieren. Jede Liquid-Variable in den Agentenanweisungen wird automatisch an den Agentenschritt übergeben, wenn eine Nutzer:in den Schritt betritt.
 {% endalert %}
 
-#### Schritt 2.1: Kontext hinzufügen
+#### Schritt 3.1: Ressourcen hinzufügen
 
-Wählen Sie **Kontext hinzufügen**, um auszuwählen, was Ihr Agent referenzieren kann. Dies beinhaltet:
+Wählen Sie **Ressourcen hinzufügen** aus, um festzulegen, worauf Ihr Agent zugreifen kann. Dies beinhaltet:
 
-- [Katalogfelder]({{site.baseurl}}/user_guide/brazeai/agents/reference/#catalogs-and-fields): Stellen Sie Katalogfelder bereit, auf die der Agent referenzieren kann.
-- [Segmentzugehörigkeit]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Berücksichtigen Sie bei der Personalisierung von Nachrichten die Mitgliedschaft eines Nutzers:innen in einem Segment. Sie können bis zu drei Segmente auswählen.
-- [Markenrichtlinien]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines): Referenzieren Sie die Markenstimme und die Stilrichtlinien, die der Agent befolgen muss. Wenn Sie beispielsweise möchten, dass Ihr Agent SMS-Texte erstellt, um Nutzer:innen zur Registrierung für eine Mitgliedschaft im Fitnessstudio zu ermutigen, können Sie in diesem Feld Ihre vordefinierte fettgedruckte, motivierende Richtlinie referenzieren.
-- [Canvas-Kontextvariablen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): Analysieren Sie alle Canvas-Kontextvariablen für einen Nutzer:innen, wenn dieser Agent aufgerufen wird.
+- [Katalogfelder]({{site.baseurl}}/user_guide/brazeai/agents/reference/#catalogs-and-fields): Gewähren Sie dem Agenten Zugriff auf Ihre Katalogdaten für genauere Antworten.
+- [Segmentzugehörigkeit]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Ermöglichen Sie dem Agenten, Antworten basierend auf der Segmentzugehörigkeit der Nutzer:innen zu personalisieren. Sie können bis zu fünf Segmente auswählen.
+- [Markenrichtlinien]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines): Referenzieren Sie die Richtlinien zur Markenstimme und zum Stil, die der Agent befolgen soll. Wenn Sie beispielsweise möchten, dass Ihr Agent SMS-Texte erstellt, um Nutzer:innen zur Anmeldung für eine Fitnessstudio-Mitgliedschaft zu motivieren, können Sie dieses Feld verwenden, um Ihre vordefinierte, motivierende Richtlinie zu referenzieren.
+- [Gesamter Canvas-Kontext]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): Analysieren Sie alle Canvas-Kontextdaten für eine Nutzer:in, wenn dieser Agent aufgerufen wird, einschließlich aller Variablen, die nicht im Abschnitt **Anweisungen** referenziert werden.
 
-#### Schritt 2.2: Optionale Einstellungen hinzufügen
+#### Schritt 3.2: Optionale Einstellungen hinzufügen
 
-In den **optionalen Einstellungen** können Sie die [Temperatur]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature) der vom Agenten erstellten Kopie anpassen. Eine höhere Temperatur erlaubt es dem Agenten, die bereitgestellten Informationen kreativer zu nutzen.
+In den **optionalen Einstellungen** können Sie die [Temperatur]({{site.baseurl}}/user_guide/brazeai/agents/reference/#temperature) der vom Agenten generierten Texte anpassen. Eine höhere Temperatur ermöglicht es dem Agenten, die bereitgestellten Informationen kreativer zu nutzen.
 
-Sie können auch das tägliche Ausführungslimit für Ihren Agenten festlegen. Standardmäßig ist dieser Wert auf 50.000 eingestellt, kann aber auf 100.000 erhöht werden. Wenn Sie daran interessiert sind, das Limit über 100.000 zu erhöhen, wenden Sie sich an Ihren Customer-Success-Manager, um mehr zu erfahren.
+### 4. Schritt: Ausgabe auswählen {#select-output}
 
-### Schritt 3: Wählen Sie die Ausgabe aus
+Im Abschnitt **Ausgabe** können Sie die Ausgabe des Agenten anhand von Basisschemata oder erweiterten Schemata organisieren und definieren.
 
-Im Bereich **Ausgabe** können Sie die Ausgabe des Agenten nach Basisschemata oder vorgebrachten Schemata organisieren und definieren.
+Um optimale Ergebnisse zu erzielen, stellen Sie sicher, dass die Angaben im Abschnitt **Ausgabe** mit den Agentenanweisungen übereinstimmen, die Sie in [Schritt 3](#agent-instructions) eingegeben haben. Wenn Sie beispielsweise in den Agentenanweisungen angegeben haben, dass Sie ein Objekt mit zwei Strings wünschen, stellen Sie sicher, dass Sie im Abschnitt **Ausgabe** ein Objekt mit zwei Strings angeben. Wenn Ihre Agentenanweisungen nicht mit der festgelegten Ausgabe übereinstimmen, kann der Agent verwirrt werden, eine Zeitüberschreitung verursachen oder unerwünschte Ausgaben generieren.
 
 #### Grundlegende Schemata
 
-Basisschemata sind eine einfache Ausgabe, die ein Agent zurückgibt. Dies kann ein String, eine Zahl, ein Boolean, ein String-Array oder ein Zahlen-Array sein.
+Basisschemata sind eine einfache Ausgabe, die ein Agent zurückgibt. Dies kann ein String, eine Zahl, ein Boolescher Wert, ein String-Array oder ein Array von Zahlen sein.
 
-Nehmen wir an, Sie möchten Nutzer:innen in einer einfachen Umfrage nach ihrer Zufriedenheit mit einem Produkt befragen. Sie können **Nummer** als Basisschema auswählen, um das Ausgabeformat zu strukturieren.
+Wenn Sie beispielsweise anhand einer einfachen Feedback-Umfrage die Zufriedenheit Ihrer Kund:innen nach Erhalt eines Produkts ermitteln möchten, können Sie **Zahl** als Basisschema auswählen, um das Ausgabeformat zu strukturieren.
 
 {% alert important %}
 Arrays sind nur für Canvas-Agenten verfügbar, nicht für Katalog-Agenten.
 {% endalert %}
 
-![Agentenkonsole mit ausgewählter Nummer als Basisschema.]({% image_buster /assets/img/ai_agent/basic_schema.png %}){: style="max-width:85%;"}
+![Agent Console mit ausgewählter Zahl als grundlegendem Schema.]({% image_buster /assets/img/ai_agent/basic_schema.png %}){: style="max-width:85%;"}
 
-#### Fortgeschrittene Schemata
+#### Erweiterte Schemata
 
-Zu den vorgebrachten Schemaoptionen gehören die manuelle Strukturierung von Feldern oder die Verwendung von JSON.
+Zu den erweiterten Schemaoptionen gehören die manuelle Strukturierung von Feldern oder die Verwendung von JSON.
 
-- **Felder:** Ein Code-freier Weg, um eine Agentenausgabe zu erzwingen, die Sie konsistent verwenden können. 
-- **JSON:** Ein Code-Ansatz zur Erstellung eines präzisen Ausgabeformats, bei dem Sie Variablen und Objekte innerhalb des JSON-Schemas verschachteln können.
+- **Felder:** Eine No-Code-Methode zur Durchsetzung einer Agentenausgabe, die Sie konsistent verwenden können.
+- **JSON:** Ein Code-Ansatz zur Erstellung eines präzisen Ausgabeformats, bei dem Sie Variablen und Objekte innerhalb des JSON-Schemas verschachteln können. Nur für Canvas-Agenten verfügbar, nicht für Katalog-Agenten.
+
+Wir empfehlen die Verwendung erweiterter Schemata, wenn der Agent eine Datenstruktur mit mehreren strukturiert definierten Werten zurückgeben soll, anstatt eine Ausgabe mit einem einzelnen Wert. Dadurch kann die Ausgabe besser als konsistente Kontextvariable formatiert werden.
+
+Beispielsweise können Sie innerhalb eines Agenten ein Ausgabeformat verwenden, das dazu dient, für eine Nutzer:in auf Grundlage eines eingereichten Formulars einen Musterreiseplan zu erstellen. Das Ausgabeformat ermöglicht es Ihnen festzulegen, dass jede Antwort des Agenten mit Werten für `tripStartDate`, `tripEndDate` und `destination` zurückkommen soll. Jeder dieser Werte kann aus Kontextvariablen extrahiert und zur Personalisierung mithilfe von Liquid in einen Nachrichtenschritt eingefügt werden.
 
 {% tabs %}
 {% tab Fields %}
 
-Nehmen wir an, Sie möchten die Antworten auf eine einfache Umfrage formatieren, um festzustellen, wie wahrscheinlich es ist, dass die Befragten die neueste Eissorte Ihres Restaurants weiterempfehlen. Sie können die folgenden Felder einrichten, um das Ausgabeformat zu strukturieren:
+Wenn Sie die Antworten einer einfachen Feedback-Umfrage formatieren möchten, um zu ermitteln, wie wahrscheinlich es ist, dass die Befragten die neueste Eissorte Ihres Restaurants weiterempfehlen, können Sie die folgenden Felder einrichten, um das Ausgabeformat zu strukturieren:
 
-| Feldname | Wert
+| Feldname | Wert |
 | --- | --- |
 | **likelihood_score** | Zahl |
-| **Erklärung** | Text |
+| **explanation** | String |
 | **confidence_score** | Zahl |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![Agentenkonsole mit drei Ausgabefeldern für Wahrscheinlichkeitswert, Erklärung und Vertrauenswert.]({% image_buster /assets/img/ai_agent/output_format_fields.png %}){: style="max-width:85%;"}
+![Agent Console mit drei Ausgabefeldern für Wahrscheinlichkeitswert, Erklärung und Konfidenzwert.]({% image_buster /assets/img/ai_agent/output_format_fields.png %}){: style="max-width:85%;"}
 
 {% endtab %}
 {% tab JSON schema %}
 
-Nehmen wir an, Sie möchten das Feedback der Nutzer:innen zu ihrem letzten Restaurantbesuch in Ihrer Restaurantkette sammeln. Sie könnten **JSON Schema** als Ausgabeformat auswählen und das folgende JSON einfügen, um ein Datenobjekt zurückzugeben, das eine Sentiment-Variable und eine Argumentationsvariable enthält.
+Wenn Sie Nutzerfeedback zu den jüngsten Erfahrungen in Ihrer Restaurantkette sammeln möchten, können Sie **JSON Schema** als Ausgabeformat auswählen und das folgende JSON einfügen, um ein Datenobjekt zurückzugeben, das eine Stimmungsvariable und eine Begründungsvariable enthält.
 
 ```json
 {
@@ -139,32 +149,36 @@ Nehmen wir an, Sie möchten das Feedback der Nutzer:innen zu ihrem letzten Resta
 {% endtab %}
 {% endtabs %}
 
-### Schritt 4: Testen und erstellen Sie den Agenten
+### 5. Schritt: Agenten testen und erstellen
 
-Das **Vorschau-Fenster** ist eine Instanz des Agenten, die in der Konfigurationsumgebung als Panel nebeneinander angezeigt wird. Damit können Sie den Agenten testen, während Sie ihn erstellen oder Updates vornehmen, um ihn ähnlich wie die Nutzer:innen zu erleben. Dieser Schritt hilft Ihnen zu bestätigen, dass sich das System so verhält, wie Sie es erwarten, und gibt Ihnen die Möglichkeit zur Feinabstimmung, bevor es live geht.
+Der **Vorschaubereich** ist eine Instanz des Agenten, die als nebeneinander angeordnetes Panel innerhalb der Konfiguration angezeigt wird. Sie können ihn verwenden, um den Agenten zu testen, während Sie ihn erstellen oder aktualisieren, und ihn auf ähnliche Weise wie Endnutzer:innen zu erleben. Dieser Schritt hilft Ihnen zu bestätigen, dass er sich wie erwartet verhält, und gibt Ihnen die Möglichkeit, vor der Live-Schaltung Feinabstimmungen vorzunehmen.
 
-1. Geben Sie in das Feld **Testen Sie Ihren Agenten** Beispiel-Kundendaten oder Kundenantworten ein - alles, was reale Szenarien widerspiegelt, die Ihr Agent bearbeiten wird.
-2. Vorschau auf die Antwort des Agenten für einen zufälligen, bestehenden oder angepassten Nutzer:innen.
-3. Wählen Sie **Antwort simulieren**. Der Agent wird auf der Grundlage Ihrer Konfiguration ausgeführt und zeigt seine Antwort an. Testläufe werden auf Ihr tägliches Ausführungslimit angerechnet.
+1. Geben Sie im Feld **Agent testen** Beispielkundendaten oder Kundenantworten ein – alles, was reale Szenarien widerspiegelt, mit denen Ihr Agent konfrontiert sein wird.
+2. Zeigen Sie eine Vorschau der Antwort des Agenten für eine zufällige Nutzer:in, eine bestehende Nutzer:in oder eine angepasste Nutzer:in an.
+3. Wählen Sie **Antwort simulieren** aus. Der Agent führt die Konfiguration aus und zeigt seine Antwort an.
 
-![Agenten-Konsole mit dem Vorschau-Fenster zum Testen eines angepassten Agenten. Die Schnittstelle zeigt ein Beispieleingabefeld mit beispielhaften Kundendaten, einen Button Test ausführen und einen Antwortbereich, in dem die Ausgabe des Agenten erscheint.]({% image_buster /assets/img/ai_agent/custom_agent_test.png %})
+{% alert note %}
+Testläufe werden auf Ihr tägliches Ausführungslimit angerechnet.
+{% endalert %}
 
-Prüfen Sie die Ausgabe mit einem kritischen Auge. Überlegen Sie sich die folgenden Fragen:
+![Agent Console mit dem Vorschaubereich zum Testen eines angepassten Agenten. Die Oberfläche zeigt ein Feld für Beispieleingaben mit Beispielkundendaten, einen Button „Test ausführen" und einen Antwortbereich, in dem die Ausgabe des Agenten angezeigt wird.]({% image_buster /assets/img/ai_agent/custom_agent_test.png %})
 
-- Ist der Text markengerecht?
-- Leitet die Entscheidungslogik die Kund:in wie vorgesehen weiter?
+Überprüfen Sie die Ausgabe mit kritischem Blick. Berücksichtigen Sie die folgenden Fragen:
+
+- Entspricht der Text dem Markenimage?
+- Leitet die Entscheidungslogik die Kund:innen wie beabsichtigt weiter?
 - Sind die berechneten Werte korrekt?
 
-Wenn Sie das Gefühl haben, dass etwas nicht stimmt, aktualisieren Sie die Konfiguration des Agenten und testen Sie erneut. Führen Sie einige verschiedene Eingaben durch, um zu sehen, wie sich der Agent an verschiedene Szenarien anpasst, insbesondere an Grenzfälle wie keine Daten oder ungültige Antworten.
+Wenn etwas nicht stimmt, aktualisieren Sie die Konfiguration des Agenten und testen Sie erneut. Führen Sie einige unterschiedliche Eingaben durch, um zu beobachten, wie sich der Agent an verschiedene Szenarien anpasst, insbesondere an Randfälle wie fehlende Daten oder ungültige Antworten.
 
-### Schritt 5: Verwenden und überwachen Sie Ihren Agenten
+{% alert tip %}
+Vermeiden Sie es, dem Agenten genau mitzuteilen, was er nicht tun soll. LLMs können diesen Inhalt dennoch generieren, wenn Sie ihn in den Anweisungen erwähnen.
+{% endalert %}
 
-Ihr Agent ist jetzt einsatzbereit! Einzelheiten finden Sie unter [Agenten bereitstellen]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/).
+### 6. Schritt: Ihren Agenten verwenden
 
-Im Tab **Protokolle** Ihres Agenten können Sie die tatsächlichen Agentenaufrufe überwachen, die in Ihren Canvase und Katalogen erfolgen. Sie können nach Informationen wie dem Datumsbereich, dem Ergebnis (Erfolg oder Misserfolg) oder dem Standort des Anrufers filtern.
+Ihr Agent ist nun einsatzbereit! Weitere Informationen finden Sie unter [Agenten bereitstellen]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/).
 
-![Protokolle für einen Agenten Story Teller, aus denen hervorgeht, wann und wo der Agent angerufen wurde.]({% image_buster /assets/img/ai_agent/agent_activity_logs.png %})
+## Verwandte Artikel  
 
-Wählen Sie **Ansicht** für einen bestimmten Agentenaufruf, um die Eingabe, die Ausgabe und die Nutzer:innen zu sehen.
-
-![Protokolle für einen Agenten Story Teller. Das Panel "Details" zeigt die Eingabeaufforderung, die Ausgabeantwort und die zugehörige Nutzer:in an.]({% image_buster /assets/img/ai_agent/agent_logs.png %})
+- [Referenz für Agenten]({{site.baseurl}}/user_guide/brazeai/agents/reference/)

@@ -16,10 +16,6 @@ description: "Este artigo traz informações sobre sobre o endpoint \"Duplicar c
 
 > Use esse ponto de extremidade para duplicar campanhas. Esse endpoint da API é semelhante à [duplicação de campanhas no dashboard do Braze][1].
 
-{% alert important %}
-A duplicação de uma campanha usando a API está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
-
 ## Pré-requisitos
 
 Para usar esse endpoint, você precisará gerar uma chave de API com a permissão `campaigns.duplicate`.
@@ -55,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Resposta
 
-Esse endpoint retornará um código de status `202` e a criação da campanha ocorrerá de forma assíncrona. É possível usar o [download do evento de segurança][2] para ver os registros de quando as campanhas foram duplicadas e por qual chave de API.
+Esse endpoint retornará um código de status `202` e a criação da campanha ocorrerá de forma assíncrona. Você pode usar o [evento de segurança baixar][2] para ver registros de quando as campanhas foram duplicadas e por qual chave de API.
 
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns#duplicating-segments-campaigns-and-canvases

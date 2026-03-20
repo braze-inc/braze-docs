@@ -14,7 +14,7 @@ guide_menu_list:
 
 guide_menu_title2: "Content Cards"
 guide_menu_list2:
-  - name: Einen Posteingang mit Content-Cards erstellen
+  - name: Erstellen eines Posteingangs mit Content-Cards
     link: /docs/developer_guide/content_cards/content_card_inbox
     image: /assets/img/braze_icons/brush-02.svg
 

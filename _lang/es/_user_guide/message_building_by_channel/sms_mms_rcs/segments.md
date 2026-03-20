@@ -1,8 +1,8 @@
 ---
 nav_title: Calculadora de facturación
-article_title: Calculadoras de facturación SMS y RCS
+article_title: Calculadoras de facturación de SMS y RCS
 page_order: 5
-description: "Este artículo de referencia trata sobre qué es un segmento de SMS, cómo se contabilizan para la facturación, así como las cosas que hay que tener en cuenta al crear mensajes SMS y RCS."
+description: "Este artículo de referencia explica qué es un segmento SMS, cómo se contabilizan para la facturación y qué hay que tener en cuenta al crear mensajes SMS y RCS."
 page_type: reference
 alias: /sms_rcs_billing_calculators/
 tool:
@@ -14,13 +14,13 @@ channel:
 
 ---
 
-# Calculadoras de facturación SMS y RCS
+# Calculadoras de facturación de SMS y RCS
 
-> En Braze, los mensajes SMS se cobran por segmento del mensaje, mientras que los mensajes RCS se cobran por mensaje. Entender qué define un segmento SMS y los distintos tipos de facturación RCS te ayudará a comprender cómo se te facturará y a evitar excedentes accidentales.
+> En Braze, los mensajes SMS se cobran por segmento del mensaje, mientras que los mensajes RCS se cobran por mensaje. Comprender qué define un segmento SMS y los diferentes tipos de facturación RCS te ayudará a entender cómo se te facturará y evitará excedentes accidentales.
 
-## Calculadora de copias y segmentos de mensajes SMS
+## Cálculo de copias y segmentos de mensajes SMS
 
-Los mensajes SMS se cobran por segmento del mensaje. Comprender cómo se dividen los mensajes SMS es clave para entender tu facturación.
+Los mensajes SMS se cobran por segmento del mensaje. Comprender cómo se dividen los mensajes SMS es fundamental para entender tu facturación.
 
 ### ¿Qué es un segmento SMS?
 
@@ -93,60 +93,60 @@ Independientemente del tipo de codificación, cada mensaje SMS enviado por Braze
 ### Calculadora de segmentos SMS {#segment-calculator}
 ---
 
-{% include alerts/tip_alerts.md alert='SMS segment calculator' %}
+{% multi_lang_include alerts/tip_alerts.md alert='SMS segment calculator' %}
 
 ## Facturación de mensajes RCS
 
-Los mensajes RCS se facturan en función de su contenido y del país en el que se entrega el mensaje. Para calcular los costes con precisión, es esencial comprender los distintos tipos de mensajes y cómo se facturan.
+Los mensajes RCS se facturan en función de su contenido y del país en el que se entregan. Para calcular los costes con precisión, es fundamental comprender los diferentes tipos de mensajes y cómo se facturan.
 
 ### Tipos de facturación RCS
 
-Nuestra plataforma admite dos modelos principales de facturación: un modelo global y un modelo para Estados Unidos.
+Nuestra plataforma admite dos modelos de facturación principales: un modelo global y un modelo para Estados Unidos.
 
-#### Modelo global (mercados no estadounidenses)
+#### Modelo global (mercados fuera de EE. UU.)
 
-Los mensajes se facturan por mensaje y se clasifican como Básicos o Únicos.
+Los mensajes se facturan por mensaje y se clasifican como básicos o únicos.
 
 {% tabs local %}
 {% tab Basic %}
 
-Los mensajes RCS básicos son mensajes de sólo texto de hasta 160 caracteres y se facturan como un único mensaje.
+Los mensajes RCS básicos son mensajes de solo texto de hasta 160 caracteres y se facturan como un solo mensaje.
 
 {% alert note %}
-Si añades botones o cualquier elemento enriquecido, el tipo de mensaje cambiará a Mensaje RCS único.
+Al añadir botones o cualquier elemento enriquecido, el tipo de mensaje cambiará a un mensaje RCS único.
 {% endalert %}
 
 {% endtab %}
 {% tab Single %}
 
-Los mensajes RCS simples son mensajes que tienen más de 160 caracteres O incluyen elementos enriquecidos como botones o medios. Se facturan como un único mensaje, independientemente de la longitud del mensaje.
+Los mensajes RCS individuales son mensajes que superan los 160 caracteres O incluyen elementos enriquecidos, como botones o archivos multimedia. Se facturan como un único mensaje, independientemente de la longitud del mensaje.
 
 {% alert note %}
-Enviar un mensaje de texto y un archivo multimedia por separado se sigue considerando como dos mensajes distintos.
+El envío de un mensaje de texto y un archivo multimedia independiente se sigue facturando como dos mensajes distintos.
 {% endalert %}
 
 {% endtab %}
 {% endtabs %}
 
-#### Modelo de Estados Unidos
+#### Modelo estadounidense
 
-Los mensajes se clasifican en Rich o Rich Media.
+Los mensajes se clasifican como «Rich» o «Rich Media».
 
 {% tabs local %}
 {% tab Rich messages %}
 
-Los mensajes enriquecidos son mensajes de sólo texto con o sin botones. Se facturan por segmento, con cada segmento limitado a 160 bytes UTF-8, lo que significa que **el número de caracteres por segmento no es fijo**. Un mensaje con sólo 160 caracteres en inglés es un segmento, pero un mensaje con texto más largo y emojis podría ser varios segmentos.
+Los mensajes enriquecidos son mensajes de solo texto con o sin botones. Se facturan por segmento, con un límite de 160 bytes UTF-8 por segmento, lo que significa que **el número de caracteres por segmento no es fijo**. Un mensaje con solo 160 caracteres en inglés sencillo es un segmento, pero un mensaje con texto más largo y emojis podría ser varios segmentos.
 
 {% endtab %}
 {% tab Rich media messages %}
 
-Los mensajes multimedia enriquecidos incluyen un archivo multimedia (imagen, video) o una tarjeta enriquecida y se facturan como un único mensaje.
+Los mensajes multimedia enriquecidos incluyen un archivo multimedia (imagen, video) o una tarjeta enriquecida y se facturan como un solo mensaje.
 
 {% endtab %}
 {% endtabs %}
 
-### Creador de mensajes y panel de uso de mensajes
+### Creador de mensajes y panel de control de uso de mensajes
 
-Mientras creas tu mensaje, el creador de mensajes mostrará el tipo de facturación en tiempo real a través de una etiqueta (RCS Básico, RCS Único, Rich o Rich Media), ayudándote a hacer un seguimiento de los costes antes de enviarlo.
+A medida que creas tu mensaje, el creador de mensajes mostrará el tipo de facturación en tiempo real mediante una etiqueta (RCS básico, RCS único, enriquecido o multimedia enriquecido), lo que te ayudará al seguimiento de los costes antes de enviarlo.
 
-Tu [panel de uso de mensajes]({{site.baseurl}}/message_usage_dashboard/) reflejará estos tipos de facturación y proporcionará el número de segmentos utilizados para los mensajes de EE.UU., proporcionando una visión transparente de tu consumo de crédito de mensajes.
+Tu [panel de control de uso de mensajes]({{site.baseurl}}/message_usage_dashboard/) reflejará estos tipos de facturación y proporcionará el número de segmentos utilizados para los mensajes en EE. UU., lo que te ofrecerá una visión transparente de tu consumo de créditos de mensajes.

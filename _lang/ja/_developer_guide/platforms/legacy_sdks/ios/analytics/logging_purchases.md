@@ -1,6 +1,6 @@
 ---
-nav_title: ログ購入
-article_title: iOSのログ購入
+nav_title: 購入記録
+article_title: iOS向け購入履歴
 platform: iOS
 page_order: 4
 description: "このリファレンス記事では、アプリ内購入と売上をトラッキングし、iOS アプリケーションで購入プロパティを割り当てる方法を説明します。"
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# iOSのログ購入
+# iOS向けの購入記録
 
 アプリ内での購入を記録して、売上を経時的にトラッキングしたり、売上源を横断してトラッキングしたりできます。また、ユーザーを生涯価値でセグメント化することもできます。
 
