@@ -17,7 +17,7 @@ Delays can make your Canvas look cleaner. You can also use this component to del
 
 ## Create a delay
 
-To create a delay, add a step to your Canvas. Drag and drop the Delay component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Delay**.
+To create a delay, add a step to your Canvas. Drag and drop the Delay component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and then choose **Delay**.
 
 #### Extended delays
 
