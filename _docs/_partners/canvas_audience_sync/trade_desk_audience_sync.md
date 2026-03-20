@@ -25,7 +25,7 @@ Make sure you have the following items created, completed, or accepted before se
 | Requirement | Origin | Description |
 | --- | --- | --- |
 | API token | [The Trade Desk](https://partner.thetradedesk.com/v3/portal/api/doc/Authentication#ui-method-create) | A standard API token created in The Trade Desk platform. We recommend setting the API token lifetime to up to one year to avoid minimal disruption to your Canvases with The Trade Desk Audience Sync. |
-| The Trade Desk Terms & Policies | The Trade Desk | You must agree to a UID2/CRM participation policy before being enabled to send data to The Trade Desk. Contact your representative at The Trade Desk to confirm you have the appropriate signature to enable data delivery to The Trade Desk.<br><br> {::nomarkdown}<ul><li>Confirm that CRM Data Management Access is enabled on your account&#8212your representative at The Trade Desk can help with this. You will need your advertiser ID.</li><li>Have your standard API token ready. You can follow the instructions on this page to generate one.</li></ul>{:/} |
+| The Trade Desk Terms & Policies | The Trade Desk | You must agree to a UID2/CRM participation policy before being enabled to send data to The Trade Desk. Contact your representative at The Trade Desk to confirm you have the appropriate signature to enable data delivery to The Trade Desk.<br><br> {::nomarkdown}<ul><li>Confirm that CRM Data Management Access is enabled on your account&#8212your representative at The Trade Desk can help with this. You must have your advertiser ID.</li><li>Have your standard API token ready. You can follow the instructions on this page to generate one.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Integration
