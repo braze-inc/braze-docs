@@ -85,6 +85,7 @@ Refer to the following resources by ESP partners on how to configure certain CDN
 - Refer to [Configuring custom domains to handle open and click tracking](https://docs.aws.amazon.com/ses/latest/dg/configure-custom-open-click-domains.html) and specify the AWS tracking domain by region based on your Braze cluster:
     - **Braze US clusters:** `r.us-east-1.awstrack.me`
     - **Braze EU clusters:** `r.eu-central-1.awstrack.me`
+- [AWS Cloudfront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-https.html)
 - [CloudFlare](https://community.cloudflare.com/t/cloudflare-cdn-for-custom-domains-on-aws-ses/432141)
 
 {% alert important %}
