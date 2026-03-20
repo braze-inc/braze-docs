@@ -36,7 +36,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 - **SMS fallback:** Braze strongly recommends that every subscription group that contains an RCS sender also includes at least one SMS code for fallback. This is important for deliverability in cases RCS messages fail to deliver. Some reasons for this may include user device incompatibility and incomplete carrier coverage in a given country or region. By enabling SMS fallback, your RCS message can still deliver through SMS when RCS cannot, so you don't miss that opportunity to connect with them.
 
 {% alert note %}
-MMS fallback currently isn't supported.
+MMS fallback isn't supported.
 {% endalert %}
 
 {: start="7"}
