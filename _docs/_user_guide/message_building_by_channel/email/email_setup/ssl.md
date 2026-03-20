@@ -86,7 +86,11 @@ Refer to the following resources by ESP partners on how to configure certain CDN
     - **Braze US clusters:** `r.us-east-1.awstrack.me`
     - **Braze EU clusters:** `r.eu-central-1.awstrack.me`
 - [AWS Cloudfront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-https.html)
-- [CloudFlare](https://community.cloudflare.com/t/cloudflare-cdn-for-custom-domains-on-aws-ses/432141)
+- [CloudFlare](https://developers.cloudflare.com/ssl/get-started/)
+- [Fastly](https://www.fastly.com/documentation/guides/getting-started/domains/securing-domains/setting-up-tls-with-certificates-fastly-manages/)
+- [KeyCDN](https://www.keycdn.com/support/how-to-setup-custom-ssl)
+- [Google Cloud](https://docs.cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs)
+
 
 {% alert important %}
 When you configure your CDN's click-tracking domain, enable the `X-Forwarded-Host` header to prevent potential security issues such as host header attacks. Refer to CDN documentation or your support team for steps.
