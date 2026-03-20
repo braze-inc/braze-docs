@@ -20,7 +20,7 @@ page_order: 7
 
 ## Prerequisites 
 
-Make sure you have the following items created, completed, or accepted before setting up your The Trade Desk Audience Step in Canvas.
+Make sure you have the following items created, completed, or accepted before setting up the Audience Sync step with The Trade Desk in Canvas.
 
 | Requirement | Origin | Description |
 | --- | --- | --- |
