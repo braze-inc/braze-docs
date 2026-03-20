@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "date"
 require "open3"
 require "pathname"
 require "set"
@@ -16,6 +17,8 @@ module Jekyll
       \s*-?\%\}
     !mx.freeze
 
+    MARKDOWN_EXTS = %w[.md .markdown .mkd].freeze
+
     class << self
       attr_accessor :git_log_cache, :deps_cache
     end
@@ -24,14 +27,15 @@ module Jekyll
     self.deps_cache = {}
 
     def generate(site)
+      # Disable all last_modified_at computation (no meta tags / visible line from this plugin).
       return if ENV["JEKYLL_GIT_LAST_MODIFIED"] == "false"
 
       @site = site
       @source = File.expand_path(site.source)
+      @use_git = git_repo?
 
-      unless git_repo?
-        Jekyll.logger.warn "GitLastModified:", "Not a Git repo or git missing; leaving last_modified_at unset"
-        return
+      unless @use_git
+        Jekyll.logger.info "GitLastModified:", "Git unavailable; using filesystem mtimes for last_modified_at"
       end
 
       (site.documents + site.pages).each { |item| apply_last_modified!(item) }
@@ -41,15 +45,53 @@ module Jekyll
 
     def apply_last_modified!(item)
       return unless processable?(item)
+      return if item.data["last_modified_at"]
 
       abs = content_markdown_abs(item)
+      if abs.nil? || !File.file?(abs)
+        rel = path_relative_to_source(item)
+        if rel && !rel.empty?
+          fa = File.join(@source, rel)
+          abs = fa if File.file?(fa)
+        end
+      end
       return if abs.nil? || !File.file?(abs)
 
-      dep_abs = dependency_files_for(abs)
-      rel_paths = dep_abs.filter_map { |p| relative_to_source(p) }.uniq
-
-      ts = latest_timestamp_for(rel_paths, dep_abs)
+      dep_abs, rel_paths = dependency_and_rel_paths_for(abs)
+      ts = latest_timestamp_for(rel_paths, dep_abs, use_git: @use_git)
+      ts ||= date_from_frontmatter(item)
       item.data["last_modified_at"] = ts if ts
+    end
+
+    def dependency_and_rel_paths_for(abs)
+      if markdown_file?(abs)
+        dep_abs = dependency_files_for(abs)
+        rel_paths = dep_abs.filter_map { |p| relative_to_source(p) }.uniq
+        [dep_abs, rel_paths]
+      else
+        dep_abs = [abs]
+        rel_paths = [relative_to_source(abs)].compact
+        [dep_abs, rel_paths]
+      end
+    end
+
+    def markdown_file?(path)
+      MARKDOWN_EXTS.include?(File.extname(path).downcase)
+    end
+
+    def date_from_frontmatter(item)
+      d = item.data["date"]
+      return nil if d.nil?
+
+      case d
+      when Time then d.utc
+      when Date then Time.utc(d.year, d.month, d.day)
+      when String then Time.parse(d).utc
+      else
+        nil
+      end
+    rescue ArgumentError
+      nil
     end
 
     def processable?(item)
@@ -165,12 +207,21 @@ module Jekyll
       status.success?
     end
 
-    def latest_timestamp_for(rel_paths, abs_paths)
-      key = rel_paths.sort.join("\0")
+    def cache_key_for(rel_paths, abs_paths)
+      if rel_paths.any?
+        "r:#{rel_paths.sort.join("\0")}"
+      else
+        files = abs_paths.select { |p| File.file?(p) }.map { |p| File.expand_path(p) }.sort
+        "a:#{files.join("\0")}"
+      end
+    end
+
+    def latest_timestamp_for(rel_paths, abs_paths, use_git:)
+      key = cache_key_for(rel_paths, abs_paths)
       return self.class.git_log_cache[key] if self.class.git_log_cache.key?(key)
 
       iso = nil
-      if rel_paths.any?
+      if use_git && rel_paths.any?
         cmd = ["git", "-C", @source, "log", "-1", "--format=%cI", "--", *rel_paths]
         iso, s = Open3.capture2(*cmd, err: File::NULL)
         iso = iso.to_s.strip

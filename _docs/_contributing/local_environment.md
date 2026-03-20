@@ -188,6 +188,10 @@ rake pt_br
 
 To stop your server, reopen the terminal and press **Control+C**.
 
+### Last modified timestamps at build time
+
+During `jekyll build`, a generator sets each page’s `last_modified_at` from **Git commit time** when the repo is a Git checkout, using the page’s Markdown file and any `_includes` partials the generator discovers from that file. If Git is not available, it falls back to **filesystem modification times** on those same files. Set `JEKYLL_GIT_LAST_MODIFIED=false` in the environment to disable this generator entirely (no automatic last-modified value). You can override a page by setting `last_modified_at` in that page’s YAML front matter.
+
 ## Next steps
 
 If you're new to Git or docs-as-code, start with our tutorial: [Your first contribution]({{site.baseurl}}/contributing/your_first_contribution/). Otherwise, check out one of the following.
