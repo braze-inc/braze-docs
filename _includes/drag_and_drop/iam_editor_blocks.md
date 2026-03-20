@@ -1,4 +1,4 @@
-## Using editor blocks in in-app messages
+## Using in-app message editor blocks
 
 Editor blocks are located under the **Build** section for in-app messages. To use them, drag an editor block inside a column. It will auto-adjust to the column width. Each editor block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.
 
