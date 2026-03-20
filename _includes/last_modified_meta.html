@@ -1,0 +1,4 @@
+{%- if page.last_modified_at -%}
+<meta name="braze-documentation-last-modified" content="{{ page.last_modified_at | date: '%s' }}">
+<meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}">
+{%- endif -%}

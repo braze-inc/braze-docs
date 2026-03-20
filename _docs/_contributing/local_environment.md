@@ -190,7 +190,13 @@ To stop your server, reopen the terminal and press **Control+C**.
 
 ### Last modified timestamps at build time
 
-During `jekyll build`, a generator sets each page’s `last_modified_at` from **Git commit time** when the repo is a Git checkout, using the page’s Markdown file and any `_includes` partials the generator discovers from that file. If Git is not available, it falls back to **filesystem modification times** on those same files. Set `JEKYLL_GIT_LAST_MODIFIED=false` in the environment to disable this generator entirely (no automatic last-modified value). You can override a page by setting `last_modified_at` in that page’s YAML front matter. Each locale’s `sitemap.xml` uses the same values for `<lastmod>` (as a `YYYY-MM-DD` date): `last_modified_at`, then front matter `date`, then the build date.
+During `jekyll build`, a generator sets each page’s `last_modified_at` from **Git commit time** when the repo is a Git checkout, using the page’s Markdown file and any partials it discovers by scanning that file. It follows the built-in Liquid **include** tag (files under `_includes/` only) and the **multi_lang_include** tag, which matches the live site: for non-English builds it prefers `_lang/<locale>/_includes/` when that file exists, then falls back to `_includes/`. Dynamic include paths (Liquid variables in the tag) are skipped. If Git is not available, or history is too shallow for `git log` to see past commits to those paths, it falls back to **filesystem modification times** on the same files.
+
+Set `JEKYLL_GIT_LAST_MODIFIED=false` in the environment to disable this generator entirely (no automatic last-modified value). You can override a page by setting `last_modified_at` in that page’s YAML front matter.
+
+On localized sites, the visible “Last updated” line uses a translated label, but the **date still uses English month names** (and the same Liquid date pattern as English) unless you change the template.
+
+Each locale’s `sitemap.xml` uses the same values for `<lastmod>` (as a `YYYY-MM-DD` date): `last_modified_at`, then front matter `date`, then the build date.
 
 ## Next steps
 

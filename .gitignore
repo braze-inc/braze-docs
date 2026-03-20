@@ -12,6 +12,9 @@ jekyll-algolia-*
 .vscode
 .jekyll-metadata
 
+# Cursor local debug logs
+.cursor/*.log
+
 # Jetbrains IDEs
 .idea/
 braze-docs.iml

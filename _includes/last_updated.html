@@ -1,5 +1,22 @@
 {%- if page.last_modified_at -%}
+{%- assign _lu = site.language | default: 'en' -%}
+{%- case _lu -%}
+{%- when 'de' -%}
+  {%- assign last_updated_label = 'Zuletzt aktualisiert:' -%}
+{%- when 'es' -%}
+  {%- assign last_updated_label = 'Última actualización:' -%}
+{%- when 'fr' -%}
+  {%- assign last_updated_label = 'Dernière mise à jour :' -%}
+{%- when 'ja' -%}
+  {%- assign last_updated_label = '最終更新：' -%}
+{%- when 'ko' -%}
+  {%- assign last_updated_label = '마지막 업데이트:' -%}
+{%- when 'pt-br' -%}
+  {%- assign last_updated_label = 'Última atualização:' -%}
+{%- else -%}
+  {%- assign last_updated_label = 'Last updated:' -%}
+{%- endcase -%}
 <p class="doc-last-updated text-muted small mt-4 mb-0" lang="{{ site.language | default: 'en' }}">
-  Last updated: {{ page.last_modified_at | date: "%B %-d, %Y" }}
+  {{ last_updated_label }} {{ page.last_modified_at | date: "%B %-d, %Y" }}
 </p>
 {%- endif -%}

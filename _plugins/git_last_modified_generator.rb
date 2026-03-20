@@ -19,6 +19,12 @@ module Jekyll
 
     MARKDOWN_EXTS = %w[.md .markdown .mkd].freeze
 
+    # Directory names under _lang/ — keep in sync with multi_lang_include.rb (IncludeAbsoluteTag::LANGUAGE_MAP).
+    MULTI_LANG_LANGUAGE_MAP = {
+      "fr" => "fr_fr",
+      "pt-br" => "pt_br",
+    }.freeze
+
     class << self
       attr_accessor :git_log_cache, :deps_cache
     end
@@ -30,8 +36,12 @@ module Jekyll
       # Disable all last_modified_at computation (no meta tags / visible line from this plugin).
       return if ENV["JEKYLL_GIT_LAST_MODIFIED"] == "false"
 
+      self.class.git_log_cache.clear
+      self.class.deps_cache.clear
+
       @site = site
       @source = File.expand_path(site.source)
+      @resolved_lang = resolve_site_lang
       @use_git = git_repo?
 
       unless @use_git
@@ -42,6 +52,25 @@ module Jekyll
     end
 
     private
+
+    def resolve_site_lang
+      cfg = (@site.config["language"] || "en").to_s
+      MULTI_LANG_LANGUAGE_MAP[cfg] || cfg
+    end
+
+    # Match multi_lang_include: prefer _lang/<lang>/_includes/<file>, then _includes/<file>.
+    # Jekyll's built-in {% include %} always resolves under _includes/ (no locale prefix).
+    def resolve_include_abs(inc)
+      if @resolved_lang != "en"
+        lang_abs = File.join(@source, "_lang", @resolved_lang, "_includes", inc)
+        return lang_abs if File.file?(lang_abs)
+      end
+      File.join(@source, "_includes", inc)
+    end
+
+    def include_abs_for_tag(tag_name, inc)
+      tag_name == "include" ? File.join(@source, "_includes", inc) : resolve_include_abs(inc)
+    end
 
     def apply_last_modified!(item)
       return unless processable?(item)
@@ -101,16 +130,11 @@ module Jekyll
       true
     end
 
-    # Prefer English canonical under _docs/ for localized paths; else use the page's own source file.
+    # Resolve the Markdown file whose Git history and {% include %} graph define last_modified_at.
+    # Paths under _lang/<locale>/... use that locale file; English articles stay under _docs/ as before.
     def content_markdown_abs(item)
       raw = path_relative_to_source(item)
       return nil if raw.nil? || raw.empty?
-
-      if (m = raw.match(%r{\A_lang/[^/]+/(.+)\z}))
-        candidate = "_docs/#{m[1]}"
-        cand_abs = File.join(@source, candidate)
-        return cand_abs if File.file?(cand_abs)
-      end
 
       return File.join(@source, raw) if raw.start_with?("_docs/") && File.file?(File.join(@source, raw))
 
@@ -141,10 +165,10 @@ module Jekyll
       Pathname.new(abs_path).relative_path_from(Pathname.new(@source)).to_s.tr("\\", "/")
     end
 
-    def dependency_files_for(canonical_md_abs)
-      self.class.deps_cache[canonical_md_abs] ||= begin
+    def dependency_files_for(markdown_abs)
+      self.class.deps_cache[markdown_abs] ||= begin
         set = Set.new
-        walk_includes(canonical_md_abs, set, 0)
+        walk_includes(markdown_abs, set, 0)
         set.to_a
       end
     end
@@ -161,8 +185,8 @@ module Jekyll
       set.add(abs_path)
 
       content = read_utf8(abs_path)
-      include_refs(content).each do |inc|
-        inc_abs = File.join(@source, "_includes", inc)
+      include_refs(content).each do |tag_name, inc|
+        inc_abs = include_abs_for_tag(tag_name, inc)
         walk_includes(inc_abs, set, depth + 1) if File.file?(inc_abs)
       end
     end
@@ -173,10 +197,11 @@ module Jekyll
       File.read(path, mode: "rb").force_encoding("UTF-8")
     end
 
-    # Yields include paths relative to _includes/ (English canonical — matches multi_lang_include for :en).
+    # Returns [tag_name, path] pairs. Path is relative to _includes/ for resolution (see include_abs_for_tag).
+    # mdexp_multi_lang_include uses a separate export-time resolver in markdown_copy_llm.rb; not mirrored here.
     def include_refs(content)
       refs = []
-      content.scan(TAG_BODY) do |_tag, inner|
+      content.scan(TAG_BODY) do |tag_name, inner|
         rest = inner.to_s.strip
         next if rest.lstrip.start_with?("{{")
 
@@ -185,7 +210,7 @@ module Jekyll
         next if path_token.include?("{{") || path_token.include?("}}")
         next unless safe_include_path?(path_token)
 
-        refs << path_token.tr("\\", "/")
+        refs << [tag_name, path_token.tr("\\", "/")]
       end
       refs.uniq
     end
@@ -199,7 +224,11 @@ module Jekyll
     end
 
     def safe_include_path?(file)
-      !file.include?("..") && !file.match?(%r{/{2,}})
+      f = file.to_s.tr("\\", "/")
+      return false if f.empty?
+      return false if f.start_with?("/")
+      return false if f.include?(":")
+      !f.include?("..") && !f.match?(%r{/{2,}})
     end
 
     def git_repo?
