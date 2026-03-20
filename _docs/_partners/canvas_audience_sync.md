@@ -38,7 +38,7 @@ guide_menu_list:
   - name: Snapchat Audience Sync
     link: /docs/audience_sync_snapchat/
     image: /assets/img/braze_icons/snapchat.svg
-  - name: Trade Desk Audience Sync
+  - name: The Trade Desk Audience Sync
     link: /docs/trade_desk_audience_sync/
     image: /assets/img/braze_icons/the_trade_desk.svg
   - name: TikTok Audience Sync
