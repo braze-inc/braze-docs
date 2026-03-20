@@ -292,6 +292,7 @@ $(document).ready(function() {
     {%- endunless -%}
 
     <h1> {{ page.partner_top_header | markdownify }} </h1>
+    {% include last_updated.html %}
 
     <fieldset class="partner_text">
       <legend>  {{ page.partner_top_text }} </legend>
@@ -331,7 +332,6 @@ $(document).ready(function() {
       </ul>
     </div>
     <div id="results_msg"></div>
-
 
   </div>
     {%- unless hide_bottom_nav -%}

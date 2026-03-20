@@ -1,0 +1,5 @@
+{%- if page.last_modified_at -%}
+<p class="doc-last-updated text-muted small mb-3" lang="{{ site.language | default: 'en' }}">
+  Last updated: {{ page.last_modified_at | date: "%B %-d, %Y" }}
+</p>
+{%- endif -%}

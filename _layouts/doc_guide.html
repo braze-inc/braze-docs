@@ -50,6 +50,7 @@ hide_breadcrumb: true
       </div>
       {%- endunless -%}
       <h2 class="doc_menu_title"> {{ page.doc_top_header }} </h2>
+      {% include last_updated.html %}
       <p>  {{ page.doc_top_text | markdownify }} </p>
 
 

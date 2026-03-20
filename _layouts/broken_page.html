@@ -158,6 +158,7 @@ $(document).ready(function(k){
         <div id="broken_banner_img"><img src="{{ page.broken_image | multi_lang }}" alt="Broken Image" /></div>
         <div id="broken_banner_info" class="broken_info">
           <div id="content_start"></div>
+          {% include last_updated.html %}
           <div id="broken_banner_text">
             {{ page.broken_text }}
           </div>

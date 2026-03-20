@@ -266,6 +266,7 @@ $(document).ready(function() {
 
     {% include ai_translation_banner.html %}
     <h1> {{ page.glossary_top_header }} </h1>
+    {% include last_updated.html %}
     <p class="glossary_text">  {{ page.glossary_top_text | markdownify }} </p>
     <div id="guide_featured_list">
 
@@ -322,7 +323,6 @@ $(document).ready(function() {
         {%- endfor -%}
     </div>
     <div id="results_msg"></div>
-
 
   </div>
     {%- unless hide_bottom_nav -%}
