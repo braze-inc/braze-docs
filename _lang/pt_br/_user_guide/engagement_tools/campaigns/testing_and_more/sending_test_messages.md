@@ -5,13 +5,13 @@ page_order: 0
 tool: 
   - Campaigns
 page_type: reference
-description: "Este artigo de referência aborda como enviar mensagens de teste pelos diferentes canais do Braze e como incorporar propriedades de eventos personalizados ou atributos de usuário."
+description: "Este artigo de referência aborda como enviar mensagens de teste pelos diferentes canais da Braze e como incorporar propriedades de eventos personalizados ou atributos de usuário."
 
 ---
 
 # Envio de mensagens de teste
 
-> Antes de enviar uma campanha de mensagens para os usuários, como prática recomendada, recomendamos que sejam feitos testes para garantir que a campanha tenha a aparência correta e funcione como pretendido. É possível criar e enviar mensagens de teste para dispositivos ou membros da equipe selecionados usando as ferramentas do dashboard do Braze.
+> Antes de enviar uma campanha de mensagens para os usuários, como prática recomendada, recomendamos que sejam feitos testes para garantir que a campanha tenha a aparência correta e funcione como pretendido. É possível criar e enviar mensagens de teste para dispositivos ou membros da equipe selecionados usando as ferramentas do dashboard da Braze.
 
 {% alert important %}
 Certifique-se de salvar o rascunho da campanha após o teste para evitar a exclusão da campanha. Você pode enviar mensagens de teste sem salvar a mensagem como rascunho.
@@ -33,18 +33,18 @@ Para saber as etapas de envio de mensagens de teste, consulte a seção a seguir
 {% tab Banners %}
 
 {% alert important %}
-Antes de testar o envio de mensagens de banner no Braze, você precisará criar uma campanha de banner no Braze. Além disso, verifique se o posicionamento que deseja testar já está [colocado em seu app ou site]({{site.baseurl}}/developer_guide/banners/placements).
+Antes de testar o envio de mensagens de banner na Braze, você precisará criar uma campanha de banner na Braze. Além disso, verifique se o posicionamento que deseja testar já está [colocado em seu app ou site]({{site.baseurl}}/developer_guide/banners/placements).
 {% endalert %}
 
-Depois de criar sua mensagem de Banner, você pode fazer uma prévia do Banner ou enviar uma mensagem de teste.
+Depois de criar sua mensagem de banner, você pode fazer uma prévia do banner ou enviar uma mensagem de teste.
 
 1. Elabore sua mensagem de banner.
-2. Selecione **Preview** para fazer uma prévia de seu banner ou enviar uma mensagem de teste.
+2. Selecione **Preview** para fazer uma prévia do seu banner ou enviar uma mensagem de teste.
 3. Para enviar uma mensagem de teste, adicione um grupo de teste de conteúdo ou um ou mais usuários individuais como **Destinatários de teste** e, em seguida, selecione **Enviar teste**. 
 
 Você poderá visualizar sua mensagem de teste no dispositivo por até 5 minutos.
 
-![Guia Pré-visualização do criador do banner.]({% image_buster /assets/img/banners/preview_banner.png %})
+![Guia Prévia do criador do banner.]({% image_buster /assets/img/banners/preview_banner.png %})
 
 {% alert note %}
 Lembre-se de que a prévia pode não ser idêntica à renderização final no dispositivo do usuário devido às diferenças entre os hardwares.
@@ -55,48 +55,55 @@ Lembre-se de que a prévia pode não ser idêntica à renderização final no di
 - Sua campanha de banner está atribuída a um posicionamento?
 - As imagens e a mídia são exibidas e funcionam conforme o esperado nos tipos de dispositivos e tamanhos de tela direcionados?
 - Seus links e botões direcionam o usuário para onde ele deve acessar?
-- O Liquid funciona conforme o esperado? Você considerou um valor de atribuição padrão no caso de o Liquid não retornar nenhuma informação?
+- O Liquid funciona conforme o esperado? Você considerou um valor de atributo padrão no caso de o Liquid não retornar nenhuma informação?
 - Seu texto é claro, conciso e correto?
 
 {% endtab %}
 {% tab Content Card %}
 
 {% alert warning %}
-Para enviar um teste para [grupos de teste de conteúdo]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) ou usuários individuais, o push deve estar ativado nos dispositivos de teste com tokens por push válidos registrados para o usuário teste antes do envio. Para usuários de iOS, é necessário tocar na notificação por push enviada pelo Braze para visualizar o cartão de conteúdo do teste. Esse comportamento só se aplica a cartões de conteúdo de teste.
+Para enviar um teste para [grupos de teste de conteúdo]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) ou usuários individuais, o push deve estar ativado nos dispositivos de teste com tokens por push válidos registrados para o usuário teste antes do envio. Para usuários de iOS, é necessário tocar na notificação por push enviada pela Braze para visualizar o cartão de conteúdo do teste. Esse comportamento só se aplica a cartões de conteúdo de teste.
 {% endalert %}
+
+Os cartões de conteúdo de teste são entregues por meio de uma notificação por push. O cartão é empacotado na carga útil do push, e o SDK o extrai e armazena em cache localmente quando o push é recebido.
+
+Esse processo ignora o sistema normal de entrega de cartões, e é por isso que o push deve estar ativado mesmo quando você está testando um cartão de conteúdo.
+
+Os cartões de conteúdo de teste expiram aproximadamente cinco minutos após o envio.
 
 Depois de criar seu cartão de conteúdo, você pode enviar um cartão de conteúdo de teste para seu app para ver como ele ficará em tempo real.
 
 1. Elabore seu cartão de conteúdo.
-2. Selecione a guia **Test (Teste** ) e selecione pelo menos um Content Test Group (Grupo de teste de conteúdo) ou um usuário individual para receber essa mensagem de teste. 
+2. Selecione a guia **Teste** e selecione pelo menos um grupo de teste de conteúdo ou um usuário individual para receber essa mensagem de teste. 
 3. Selecione **Enviar teste** para enviar o cartão de conteúdo para seu app.
 
 ![Cartão de conteúdo do teste]({% image_buster /assets/img/contentcard_test.png %})
 
 ### Prévia
 
-Você pode fazer uma prévia do cartão à medida que o cria na guia **Preview (Pré-visualização** ). Isso deve ajudá-lo a visualizar como será a mensagem final do ponto de vista do usuário.
+Você pode fazer uma prévia do cartão à medida que o cria na guia **Prévia**. Isso deve ajudá-lo a visualizar como será a mensagem final do ponto de vista do usuário.
 
 {% alert note %}
-Na guia **Pré-visualização** do seu criador, a visualização da sua mensagem pode não ser idêntica à renderização real no dispositivo do usuário. Recomendamos sempre enviar uma mensagem de teste para um dispositivo para garantir que a mídia, o texto, a personalização e os atributos personalizados sejam gerados corretamente.
+Na guia **Prévia** do seu criador, a visualização da sua mensagem pode não ser idêntica à renderização real no dispositivo do usuário. Recomendamos sempre enviar uma mensagem de teste para um dispositivo para garantir que a mídia, o texto, a personalização e os atributos personalizados sejam gerados corretamente.
 {% endalert %}
 
 ### Lista de verificação de teste
 
+- Seu usuário teste aceitou receber push com um token por push válido?
 - As imagens e a mídia aparecem e funcionam conforme o esperado?
-- O Liquid funciona conforme o esperado? Você considerou um [valor de atribuição padrão]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) se o Liquid não retornar nenhuma informação?
+- O Liquid funciona conforme o esperado? Você considerou um [valor de atributo padrão]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) se o Liquid não retornar nenhuma informação?
 - Seu texto é claro, conciso e correto?
 - Seus links direcionam o usuário para onde ele deve acessar?
 
 ### Depurar
 
-Depois que os cartões de conteúdo forem enviados, você poderá analisar ou depurar quaisquer problemas no [registro de usuários de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) no console do desenvolvedor. 
+Depois que os cartões de conteúdo forem enviados, você poderá analisar ou depurar quaisquer problemas no [registro de usuários de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) no console de desenvolvedor. 
 
-Um caso de uso comum é tentar depurar por que um usuário não consegue ver um determinado cartão de conteúdo. Para isso, é possível procurar nos **registros de usuários de eventos** os cartões de conteúdo entregues ao SDK no início da sessão, mas antes de uma impressão, e rastreá-los até uma campanha específica:
+Um caso de uso comum é tentar depurar por que um usuário não consegue ver um determinado cartão de conteúdo. Para isso, é possível procurar nos **Registros de usuários de eventos** os cartões de conteúdo entregues ao SDK no início da sessão, mas antes de uma impressão, e rastreá-los até uma campanha específica:
 
-1. Acesse **Configurações** > Registro de usuários de eventos.
-2. Localize e expanda a Solicitação de SDK para seu usuário teste.
-3. Clique em **Raw Data (Dados brutos**).
+1. Acesse **Configurações** > **Registro de usuários de eventos**.
+2. Localize e expanda a solicitação de SDK para seu usuário teste.
+3. Clique em **Raw Data**.
 4. Encontre o `id` para sua sessão. A seguir, um exemplo de trecho:
 
     ```json
@@ -115,15 +122,15 @@ Um caso de uso comum é tentar depurar por que um usuário não consegue ver um 
     ```
     
 {: start="5"}
-5\. Use uma ferramenta de decodificação como [Base64 Decode and Encode](https://www.base64decode.org/) para decodificar o `id` do formato Base64 e encontrar o `campaign_id` associado. Em nosso exemplo, isso resulta no seguinte:
+5. Use uma ferramenta de decodificação como [Base64 Decode and Encode](https://www.base64decode.org/) para decodificar o `id` do formato Base64 e encontrar o `campaign_id` associado. Em nosso exemplo, isso resulta no seguinte:
 
     ```
     4861692e-6fce-4215-bd05-3254fb9e9057_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
     ```
 
-    Where `4861692e-6fce-4215-bd05-3254fb9e9057` is the `campaign_id`.<br><br>
+    Onde `4861692e-6fce-4215-bd05-3254fb9e9057` é o `campaign_id`.<br><br>
 
-6. Acesse a página **Campanhas** e pesquise o endereço `campaign_id`.
+6. Acesse a página **Campanhas** e pesquise o `campaign_id`.
 
 ![Pesquise por campaign_id na página Campanhas]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
 
@@ -133,8 +140,8 @@ A partir daí, é possível revisar as configurações e o conteúdo das mensage
 {% tab Email %}
 
 1. Rascunhe sua mensagem de e-mail.
-2. Selecione **Pré-visualização e teste**.
-3. Selecione a guia **Test Send (Envio de teste** ) e adicione seu endereço de e-mail ou ID de usuário no campo **Add individual users (Adicionar usuários individuais** ). 
+2. Selecione **Prévia e teste**.
+3. Selecione a guia **Envio de teste** e adicione seu endereço de e-mail ou ID de usuário no campo **Adicionar usuários individuais**. 
 4. Selecione **Enviar teste** para enviar o e-mail rascunhado para sua caixa de entrada.
 
 ![Envio de e-mail de teste]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
@@ -145,29 +152,29 @@ A partir daí, é possível revisar as configurações e o conteúdo das mensage
 {% alert warning %}
 Para enviar um teste para [grupos de teste de conteúdo]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) ou usuários individuais, o push deve ser ativado nos dispositivos de teste antes do envio. Por exemplo, é necessário ter o push ativado em seu dispositivo iOS para tocar na notificação antes da exibição da mensagem de teste. {% endalert %}
 
-Se você tiver notificações por push configuradas em seu aplicativo e no dispositivo de teste, poderá enviar mensagens no app para ver como ele se parece em tempo real. 
+Se você tiver notificações por push configuradas em seu app e no dispositivo de teste, poderá enviar mensagens no app de teste para ver como ficam em tempo real. 
 
 1. Redija sua mensagem no app.
-2. Selecione a guia **Test (Teste** ) e adicione seu endereço de e-mail ou ID de usuário ao campo **Add Individual Users (Adicionar usuários individuais** ). 
-3. Selecione **Send Test (Enviar teste)** para enviar sua mensagem push para o dispositivo.
+2. Selecione a guia **Teste** e adicione seu endereço de e-mail ou ID de usuário ao campo **Adicionar usuários individuais**. 
+3. Selecione **Enviar teste** para enviar sua mensagem push para o dispositivo.
 
 Uma mensagem de push de teste será exibida na parte superior da tela do dispositivo.
 
-![Teste no aplicativo]({% image_buster /assets/img_archive/test-in-app.png %})
+![Teste no app]({% image_buster /assets/img_archive/test-in-app.png %})
 
 {% alert important %}
-Os envios de teste podem resultar no envio de mais de uma mensagem no app para cada destinatário.
+Os envios de teste podem resultar no envio de mais de uma mensagem no app para cada destinatário. 
 {% endalert %}
 
 Ao clicar diretamente e abrir a mensagem push, você será direcionado para o app, onde poderá visualizar o teste da mensagem no app. Note que esse recurso de teste de mensagem no app depende de o usuário clicar em uma notificação por push de teste para disparar a mensagem no app. Dessa forma, o usuário deve ser elegível para receber notificações por push no app relevante para a entrega bem-sucedida da notificação por push de teste.
 
 ### Prévia
 
-Você pode fazer uma prévia da sua mensagem no app à medida que a cria na guia **Preview (Pré-visualização** ). Isso deve ajudá-lo a visualizar como será a mensagem final do ponto de vista do usuário. É possível fazer uma prévia da aparência da mensagem para um usuário aleatório, um usuário específico ou um usuário personalizado. Também é possível fazer a prévia das mensagens em dispositivos móveis ou tablets.
+Você pode fazer uma prévia da sua mensagem no app à medida que a cria na guia **Prévia**. Isso deve ajudá-lo a visualizar como será a mensagem final do ponto de vista do usuário. É possível fazer uma prévia da aparência da mensagem para um usuário aleatório, um usuário específico ou um usuário personalizado. Também é possível fazer a prévia das mensagens em dispositivos móveis ou tablets.
 
 ![Guia "Criar" ao criar uma mensagem no app mostrando a prévia de como será a mensagem. Um usuário não é selecionado, portanto, o Liquid adicionado na seção do corpo é exibido como está.]({% image_buster /assets/img/in-app-message-preview.png %})
 
-O Braze tem três gerações de mensagens no app disponíveis. Você pode ajustar para quais dispositivos suas mensagens devem ser enviadas, com base na geração que eles suportam.
+A Braze tem três gerações de mensagens no app disponíveis. Você pode ajustar para quais dispositivos suas mensagens devem ser enviadas, com base na geração que eles suportam.
 
 ![Alternância entre gerações ao visualizar uma mensagem no app.]({% image_buster /assets/img/iam-generations.gif %}){: height="50%" width="50%"}
 
@@ -178,23 +185,23 @@ Na **Prévia**, a visualização da sua mensagem pode não ser idêntica à rend
 ### Lista de verificação de teste
 
 - As imagens e a mídia aparecem e funcionam conforme o esperado?
-- O Liquid funciona conforme o esperado? Você considerou um [valor de atribuição padrão]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) se o Liquid não retornar nenhuma informação?
+- O Liquid funciona conforme o esperado? Você considerou um [valor de atributo padrão]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) se o Liquid não retornar nenhuma informação?
 - Seu texto é claro, conciso e correto?
 - Seus botões direcionam o usuário para onde ele deve acessar?
 
 ### Scanner de acessibilidade
 
-Para dar suporte às práticas recomendadas de acessibilidade, o Braze verifica automaticamente o conteúdo das mensagens no app criadas usando o editor de HTML tradicional em relação aos padrões de acessibilidade. Esse scanner ajuda a identificar o conteúdo que pode não atender aos padrões[das WCAG (](https://www.w3.org/WAI/standards-guidelines/wcag/)Web Content Accessibility Guidelines). As WCAG são um conjunto de padrões técnicos reconhecidos internacionalmente e desenvolvidos pelo World Wide Web Consortium (W3C) para tornar o conteúdo da Web mais acessível a pessoas com deficiências.
+Para dar suporte às práticas recomendadas de acessibilidade, a Braze verifica automaticamente o conteúdo das mensagens no app criadas usando o editor de HTML tradicional em relação aos padrões de acessibilidade. Esse scanner ajuda a identificar o conteúdo que pode não atender aos padrões das [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) (Web Content Accessibility Guidelines). As WCAG são um conjunto de padrões técnicos reconhecidos internacionalmente e desenvolvidos pelo World Wide Web Consortium (W3C) para tornar o conteúdo da web mais acessível a pessoas com deficiências.
 
 ![Resultados da varredura de acessibilidade]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
 
 {% alert note %}
-O verificador de acessibilidade de mensagens no app só funciona em mensagens criadas com HTML personalizado.
+O verificador de acessibilidade de mensagens no app só funciona em mensagens criadas com HTML personalizado. 
 {% endalert %}
 
-#### Como funciona?
+#### Como funciona
 
-O scanner é executado automaticamente em mensagens HTML personalizadas e avalia toda a sua mensagem HTML em relação ao [conjunto](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1&currentsidebar=%23col_customize&levels=aaa) completo [de regras WCAG 2.1 AA](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1&currentsidebar=%23col_customize&levels=aaa). Para cada problema sinalizado, ele mostra:
+O scanner é executado automaticamente em mensagens HTML personalizadas e avalia toda a sua mensagem HTML em relação ao [conjunto completo de regras WCAG 2.1 AA](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1&currentsidebar=%23col_customize&levels=aaa). Para cada problema sinalizado, ele mostra:
 
 - O elemento HTML específico envolvido
 - Uma descrição do problema de acessibilidade
@@ -208,8 +215,8 @@ O scanner é executado automaticamente em mensagens HTML personalizadas e avalia
 {% tab LINE %}
 
 1. Crie sua mensagem LINE.
-2. Selecione a guia **Test (Teste** ) e selecione pelo menos um Content Test Group (Grupo de teste de conteúdo) ou um usuário individual para receber essa mensagem de teste.
-3. Selecione **Send Test (Enviar teste** ) para enviar sua mensagem.
+2. Selecione a guia **Teste** e selecione pelo menos um grupo de teste de conteúdo ou um usuário individual para receber essa mensagem de teste.
+3. Selecione **Enviar teste** para enviar sua mensagem.
 
 ![Mensagem LINE de teste.]({% image_buster /assets/img/line/test_preview.png %})
 
@@ -219,21 +226,21 @@ O scanner é executado automaticamente em mensagens HTML personalizadas e avalia
 #### Push móvel
 
 1. Elabore seu push móvel.
-2. Selecione a guia **Test (Teste** ) e adicione seu endereço de e-mail ou ID de usuário no campo **Add Individual Users (Adicionar usuários individuais** ).
+2. Selecione a guia **Teste** e adicione seu endereço de e-mail ou ID de usuário no campo **Adicionar usuários individuais**.
 3. Selecione **Enviar teste** para enviar a mensagem rascunhada para o dispositivo.
 
 ![Teste push]({% image_buster /assets/img_archive/testpush.png %})
 
-#### Web push
+#### Push para a web
 
-1. Crie seu web push.
+1. Crie seu push para a web.
 2. Selecione a guia **Teste**. 
-3. Selecione **Send Test to Myself (Enviar teste para mim mesmo**).
-4. Selecione **Send Test (Enviar teste** ) para enviar seu web push para o navegador da Web.
+3. Selecione **Enviar teste para mim mesmo**.
+4. Selecione **Enviar teste** para enviar seu push para a web ao navegador.
 
-![Teste o web push]({% image_buster /assets/img_archive/testwebpush.png %})
+![Teste o push para a web]({% image_buster /assets/img_archive/testwebpush.png %})
 
-Se já tiver aceitado mensagens push do dashboard do Braze, o push aparecerá no canto da tela. Caso contrário, clique em **Permitir** quando solicitado, e a mensagem será exibida.
+Se já tiver aceitado mensagens push do dashboard da Braze, o push aparecerá no canto da tela. Caso contrário, clique em **Permitir** quando solicitado, e a mensagem será exibida.
 
 {% endtab %}
 {% tab SMS/MMS and RCS %}
@@ -241,8 +248,8 @@ Se já tiver aceitado mensagens push do dashboard do Braze, o push aparecerá no
 Depois de criar sua mensagem SMS, MMS ou RCS, você pode enviar uma mensagem de teste para o seu telefone para ver como ela ficará em tempo real. 
 
 1. Rascunhe sua mensagem SMS, MMS ou RCS.
-2. Selecione a guia **Test (Teste** ) e selecione pelo menos um Content Test Group (Grupo de teste de conteúdo) ou um usuário individual para receber essa mensagem de teste. 
-3. Selecione **Send Test (Enviar teste** ) para enviar sua mensagem de teste.
+2. Selecione a guia **Teste** e selecione pelo menos um grupo de teste de conteúdo ou um usuário individual para receber essa mensagem de teste. 
+3. Selecione **Enviar teste** para enviar sua mensagem de teste.
 
 ![Cartão de conteúdo do teste]({% image_buster /assets/img/sms_test.png %})
 
@@ -257,9 +264,9 @@ Depois de criar seu webhook, você pode fazer um envio de teste para verificar a
 {% tab WhatsApp %}
 
 1. Crie sua mensagem do WhatsApp.
-2. Selecione a guia **Test (Teste** ) e selecione pelo menos um Content Test Group (Grupo de teste de conteúdo) ou um usuário individual para receber essa mensagem de teste.
+2. Selecione a guia **Teste** e selecione pelo menos um grupo de teste de conteúdo ou um usuário individual para receber essa mensagem de teste.
 3. Inicie uma janela de conversa enviando uma mensagem do WhatsApp para o número de telefone associado ao grupo de inscrições que está usando para essa mensagem. O número de telefone associado é listado no alerta na guia **Teste**.
-4. Selecione **Send Test (Enviar teste** ) para enviar sua mensagem.
+4. Selecione **Enviar teste** para enviar sua mensagem.
 
 ![Teste o envio de mensagens do WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp_test.png %})
 
@@ -270,17 +277,17 @@ Depois de criar seu webhook, você pode fazer um envio de teste para verificar a
 
 Se estiver testando campanhas que preenchem dados de usuários ou usam propriedades de eventos personalizados, precisará realizar etapas adicionais ou diferentes.
 
-### Teste de campanhas personalizadas com atribuições do usuário
+### Teste de campanhas personalizadas com atributos de usuário
 
-Se estiver usando [a personalização]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/) em sua mensagem, precisará realizar etapas adicionais para fazer uma prévia adequada de sua campanha e verificar se os dados de usuários estão preenchendo adequadamente o conteúdo.
+Se estiver usando [personalização]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/) em sua mensagem, precisará realizar etapas adicionais para fazer uma prévia adequada de sua campanha e verificar se os dados de usuários estão preenchendo adequadamente o conteúdo.
 
-Ao enviar uma mensagem de teste, certifique-se de escolher a opção **Selecionar usuário existente** ou prévia como **usuário personalizado**.
+Ao enviar uma mensagem de teste, certifique-se de escolher a opção **Selecionar usuário existente** ou prévia como **Usuário personalizado**.
 
 ![Teste de uma mensagem personalizada]({% image_buster /assets/img_archive/personalized_testing.png %}){: style="max-width:70%;" }
 
 #### Seleção de um usuário existente
 
-Se estiver selecionando um usuário existente, digite o ID do usuário específico ou o e-mail no campo de pesquisa. Em seguida, use a prévia do dashboard para ver como sua mensagem apareceria para esse usuário e envie uma mensagem de teste para seu dispositivo que reflita o que esse usuário veria.
+Se estiver selecionando um usuário existente, digite o ID de usuário específico ou o e-mail no campo de pesquisa. Em seguida, use a prévia do dashboard para ver como sua mensagem apareceria para esse usuário e envie uma mensagem de teste para seu dispositivo que reflita o que esse usuário veria.
 
 ![Selecione um usuário]({% image_buster /assets/img_archive/personalized_testing_select.png %})
 
@@ -292,9 +299,9 @@ Se a prévia for feita como um usuário personalizado, insira o texto de vários
 
 #### Personalização de um usuário existente
 
-É possível editar campos individuais de um usuário aleatório ou existente para ajudar a testar o conteúdo dinâmico da sua mensagem. Selecione **Edit (Editar** ) para converter o usuário selecionado em um usuário personalizado que possa ser modificado.
+É possível editar campos individuais de um usuário aleatório ou existente para ajudar a testar o conteúdo dinâmico da sua mensagem. Selecione **Editar** para converter o usuário selecionado em um usuário personalizado que possa ser modificado.
 
-![A guia "Pré-visualização como usuário" com um botão "Editar".]({% image_buster /assets/img_archive/edit_user_preview.png %}){: style="max-width:50%;"}
+![A guia "Prévia como usuário" com um botão "Editar".]({% image_buster /assets/img_archive/edit_user_preview.png %}){: style="max-width:50%;"}
 
 ### Teste de campanhas personalizadas com propriedades de eventos personalizados
 
@@ -307,26 +314,26 @@ O teste de campanhas personalizadas com [propriedades de eventos personalizados]
 
 Você mesmo pode disparar a campanha como uma forma robusta de testar campanhas personalizadas usando propriedades de eventos personalizados:
 
-1. Escreva a cópia envolvendo a propriedade do evento. 
+1. Escreva o texto envolvendo a propriedade do evento. 
 
 ![Criador de mensagem de teste com propriedades]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
 
 {: start="2"}
-2\. Use [a entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) para entregar a campanha quando o evento ocorrer.
+2. Use [a entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) para entregar a campanha quando o evento ocorrer.
 
 {% alert note %}
-Se estiver testando uma campanha push para iOS, defina a postergação para um minuto para ter tempo de sair do app, pois o iOS não fornece notificações por push para o app aberto no momento. Outros tipos de campanhas podem ser definidos para entrega imediata.
+Se estiver testando uma campanha push para iOS, defina a postergação para um minuto para ter tempo de sair do app, pois o iOS não entrega notificações por push para o app aberto no momento. Outros tipos de campanhas podem ser definidos para entrega imediata.
 {% endalert %}
 
 ![Entrega de mensagens de teste]({% image_buster /assets/img_archive/testeventproperties-delivery.png %})
 
 {: start="3"}
-3\. Direcione os usuários como faria para testes, usando um filtro de teste ou direcionando seu próprio endereço de e-mail, e termine de criar a campanha. 
+3. Direcione os usuários como faria para testes, usando um filtro de teste ou direcionando seu próprio endereço de e-mail, e termine de criar a campanha. 
 
 ![Direcionamento de mensagem de teste]({% image_buster /assets/img_archive/testeventproperties-target.png %})
 
 {: start="4"}
-4\. Acesse seu app e conclua o evento personalizado.
+4. Acesse seu app e conclua o evento personalizado.
 
 A campanha será disparada e mostrará a mensagem personalizada com a propriedade de evento.
 
@@ -354,19 +361,19 @@ Como alternativa, se estiver salvando IDs de usuário personalizados, também po
 Você pode testar as propriedades de eventos personalizados inserindo valores manualmente com o Liquid. 
 
 1. No editor de mensagens, insira os valores das propriedades de seus eventos personalizados.
-2. Selecione a guia **Pré-visualização como usuário** para verificar se a mensagem correta é exibida.
+2. Selecione a guia **Prévia como usuário** para verificar se a mensagem correta é exibida.
 
 {% endtab %}
 {% endtabs %}
 
 ## Solução de problemas
 
-### Mensagem no app
+### Mensagens no app
 
-Se a sua campanha de mensagens no app não for disparada por uma campanha push, verifique a segmentação da campanha in-app para confirmar se o usuário atende ao público-alvo **antes de** receber a mensagem push.
+Se a sua campanha de mensagens no app não for disparada por uma campanha push, verifique a segmentação da campanha no app para confirmar se o usuário atende ao público-alvo **antes de** receber a mensagem push.
 
 Para envios de teste no Android e no iOS, as mensagens no app que usam o comportamento ao clicar em **Solicitar permissão push** podem não ser exibidas em alguns dispositivos. Como solução alternativa:
 - **Android:** Os dispositivos devem estar usando o Android 13 e nosso Android SDK versão 21.0.0. Outro motivo pode ser o fato de o dispositivo em que a mensagem no app é exibida já ter um prompt no nível do sistema. Talvez você tenha selecionado **Não perguntar novamente**, portanto, talvez seja necessário reinstalar o app para redefinir as permissões de notificação antes de testar novamente.
 - **iOS:** Recomendamos que sua equipe de desenvolvedores revise a implementação de notificações por push para seu app e remova manualmente qualquer código que solicite permissões por push. Para saber mais, consulte [Mensagens no app do push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 
-Para que uma campanha de mensagens no app baseada em ação seja entregue, é necessário o registro de usuários de eventos personalizados por meio do Braze SDK, e não de APIs REST, para que os usuários possam receber mensagens no app elegíveis diretamente em seus dispositivos. Os usuários receberão a mensagem no app se realizarem o evento durante a sessão.
+Para que uma campanha de mensagens no app baseada em ação seja entregue, é necessário o registro de eventos personalizados por meio do Braze SDK, e não de APIs REST, para que os usuários possam receber mensagens no app elegíveis diretamente em seus dispositivos. Os usuários receberão a mensagem no app se realizarem o evento durante a sessão.
