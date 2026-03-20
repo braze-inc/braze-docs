@@ -55,7 +55,7 @@ Next, configure your sync details:
 1. Select an ad account.
 2. Choose an existing audience or create a new audience.
 
-![Audience Sync setup with an audience field containing the name "valentines2025".]({% image_buster /assets/img/audience_sync_trade_desk/choose_audience.png %}){: style="max-width:90%;"}
+![Audience Sync setup with an audience field containing the name "valentines2025".]({% image_buster /assets/img/audience_sync/trade_desk/choose_audience.png %}){: style="max-width:90%;"}
 
 {: start="3"}
 3. Select an action to either **Add Users to Audience** or **Remove Users from Audience**.
