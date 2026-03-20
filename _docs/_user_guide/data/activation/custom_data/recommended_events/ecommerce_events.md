@@ -156,7 +156,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
 {% endtab %}
 {% tab ecommerce.cart_updated %}
 
-You can use the cart updated event to track when products are added, removed, or updated in the cart. The `ecommerce.cart_updated` event verifies the following information before triggering:
+You can use the **Perform Cart Updated Event** trigger to track when products are added, removed, or updated in the cart. This event verifies the following information before triggering:
 
 - The event time is greater than the `updated_at` time for the user's specific cart.
 - The cart hasn't proceeded to the checkout process.

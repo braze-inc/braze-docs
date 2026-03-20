@@ -161,6 +161,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 }'
 ```
 
+### Case sensitivity
+
+The `alias_name` field is case-sensitive. A request that returns a `201` status code only confirms the request syntax was valid—it does not confirm the alias was matched. If the capitalization of `alias_name` in your request doesn't exactly match the alias stored on the user profile, the operation will silently fail and the `external_id` won't be assigned. For example, if the stored alias is `JimJones@example.com`, a request with `jimjones@example.com` will return success but produce no result.
+
 {% alert tip %}
 For more information on `alias_name` and `alias_label`, check out our [user aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) documentation.
 {% endalert %}

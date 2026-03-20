@@ -45,6 +45,11 @@ When making an API call with the recipient object, **if there exists a duplicate
 
 For example, if you use the same `external_user_id`, then the user receives only one message. Consider making multiple API calls if you need a workaround for this behavior.
 
+When the same `external_user_id` appears multiple times in the recipients array, Braze sends only one message and uses 
+the trigger properties from the last occurrence in the array. This behavior is deterministic and based on array order.
+
+In the following example, `userid1` receives one message using `"name": "Beth Test 2"` because that entry appears last in the array.
+
 ```json
 {"campaign_id":"#####","recipients":[
 {"external_user_id":"userid1","trigger_properties":{"name":"Beth Test 1"}},

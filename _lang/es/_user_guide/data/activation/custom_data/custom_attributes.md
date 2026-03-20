@@ -7,7 +7,7 @@ description: "Esta página describe los atributos personalizados y explica los d
 search_rank: 1
 ---
 
-# [![](https://learning.braze.com/custom-events-and-attributes)C[urso]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} [de Braze Learning](https://learning.braze.com/custom-events-and-attributes) Atributos personalizados
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Atributos personalizados
 
 > Esta página trata de los atributos personalizados, que son una colección de los rasgos únicos de tus usuarios. Los atributos personalizados son los mejores para almacenar atributos sobre sus usuarios, o información sobre acciones de poco valor dentro de su aplicación. 
 
