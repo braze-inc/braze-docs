@@ -4,11 +4,11 @@ article_title: Canais e extensões adicionais
 page_order: 11
 
 page_type: landing
-description: "Esta página lista os parceiros Braze (Alloys) que prestam serviços para canais e extensões."
+description: "Esta página lista os parceiros da Braze (Alloys) que prestam serviços para canais e extensões."
 layout: partner_page
 search_tag: Partner
 
-partner_top_header: "Additional Channels & Extensions"
+partner_top_header: "Canais e extensões adicionais"
 
 valid_partner_list:
 - name: LiveRamp
@@ -17,25 +17,27 @@ valid_partner_list:
   url: /docs/partners/inkit/
 - name: Lob
   url: /docs/partners/lob/
-- name: Optilyz
+- name: optilyz
   url: /docs/partners/optilyz/
 - name: Dixa
   url: /docs/partners/dixa/
-- name: Frente
+- name: Front
   url: /docs/partners/front/
 - name: Messenger
   url: /docs/partners/messenger/
 - name: Pypestream
   url: /docs/partners/pypestream/
 - name: Regal
-  url: /docs/partners/pypestream/
+  url: /docs/partners/regal/
 - name: Sendbird
   url: /docs/partners/sendbird/
+- name: Shopgate
+  url: /docs/partners/shopgate/
 - name: Zendesk
   url: /docs/partners/zendesk/
 - name: PassKit
   url: /docs/partners/passkit/
-- name: Hino Futuro
+- name: Future Anthem
   url: /docs/partners/future_anthem/
 - name: Komo
   url: /docs/partners/komo/
@@ -45,7 +47,7 @@ valid_partner_list:
   url: /docs/partners/digioh/
 - name: Knak
   url: /docs/partners/knak/
-- name: EduMe
+- name: eduMe
   url: /docs/partners/edume/
 - name: Nift
   url: /docs/partners/nift/
