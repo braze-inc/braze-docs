@@ -18,7 +18,9 @@ Workspace messaging rate limits are rolling out gradually. You may not see these
 ## How it works
 
 Workspace messaging rate limits apply to the aggregate of messages sent in your workspace. By setting and optimizing a rate limit at the workspace level, you can better control the outgoing traffic of your Braze messages, preventing any potential spikes in demand that could affect server performance.
-
+{% alert note %}
+Keep in mind that messages sent using API messaging endpoints like `/messages/send` and `/messages/schedule/create` are also counted and impacted by workspace messaging rate limits.
+{% endalert %}
 The total count of messages sent per minute will not exceed the configured workspace rate limits. There is no particular ordering of which campaigns will dispatch within the first few minutes as opposed to the later minutes.
 
 For example, let’s say you have a workspace messaging rate limit of 100,000 messages per minute, and the following messages are all processing at 12 pm:
