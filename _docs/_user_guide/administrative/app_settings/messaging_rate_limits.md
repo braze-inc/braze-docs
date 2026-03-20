@@ -1,3 +1,11 @@
+---
+nav_title: Workspace messaging rate limits
+article_title: Workspace messaging rate limits
+alias: /workspace_messaging_rate_limits/
+page_type: reference
+description: "This reference article describes workspace messaging rate limits and how they work with your messages."
+page_order: 10
+---
 
 # Workspace messaging rate limits
 
