@@ -34,7 +34,7 @@ Make sure you have the following items created, completed, or accepted before se
 
 To get started, go to **Partner Integrations** > **Technology Partners** > **The Trade Desk**. Provide the following details from your Trade Desk account:
 
-- **API key**
+- **API token**
 - **Advertiser ID name** (this optional name identifies the advertiser account to reference in the Audience Sync Canvas step)
 - **Advertiser ID** 
 
