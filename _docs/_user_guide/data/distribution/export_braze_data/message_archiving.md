@@ -16,11 +16,11 @@ Message archiving is available as an add-on feature. To get started with message
 
 ## How it works
 
-When this feature is turned on, if you have connected a cloud storage bucket to Braze and marked it as the default data export destination, Braze will write a gzipped JSON file to your cloud storage bucket for each message sent to a user through your selected channels (email, SMS/MMS, or push). 
+When this feature is turned on, Braze writes a gzipped JSON file for each message sent to a user through your selected channels (email, SMS/MMS, or push). Braze writes these files to your default data export destination. This includes all campaign types for each channel, such as transactional email campaigns sent through the [Transactional Email API]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign).
 
 This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (for example, {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This allows you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements.
 
-If you set up credentials for multiple cloud storage providers, message archiving will only export to the one explicitly marked as the default data export destination. If no explicit default is provided and an AWS S3 bucket is connected, message archiving will upload to that bucket.
+If you set up credentials for multiple cloud storage providers, message archiving only exports to the one marked as the default data export destination. If you don't set an explicit default and an AWS S3 bucket is connected, message archiving uploads to that bucket.
 
 {% alert important %}
 Turning on this feature will impact the delivery speed of your messages, as the file upload is performed immediately before the message is sent to maintain accuracy. The latency introduced by message archiving will depend on the cloud storage provider and the throughput and size of the saved documents.

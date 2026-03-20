@@ -1,20 +1,20 @@
 ---
-nav_title: "OBTER: Listar centros de preferência"
-article_title: "OBTER: Listar Centros de Preferência"
+nav_title: "GET: Listar Centrais de Preferências"
+article_title: "GET: Listar Centrais de Preferências"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "Este artigo traz informações sobre o endpoint da Braze \"Listar centrais de preferência\"."
+description: "Este artigo traz informações sobre o endpoint da Braze \"Listar Centrais de Preferências\"."
 
 ---
 {% api %}
-# Listar centros de preferência
+# Listar Centrais de Preferências
 {% apimethod get %}
 /preference_center/v1/list
 {% endapimethod %}
 
-> Use este endpoint para listar seus centros de preferência disponíveis.
+> Use este endpoint para listar suas Centrais de Preferências disponíveis.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dd8f6667-5eba-4e19-a29e-ba74644c0b8e {% endapiref %}
 
@@ -24,11 +24,11 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Limite de taxa
 
-Este endpoint tem um limite de frequência de 1.000 solicitações por minuto, por espaço de trabalho.
+{% multi_lang_include rate_limits.md endpoint='get preference center' %}
 
-## jornada e parâmetros de solicitação
+## Parâmetros de jornada e de solicitação
 
-Não há parâmetros de jornada ou solicitação para esse endpoint.
+Não há parâmetros de jornada ou de solicitação para esse endpoint.
 
 ## Exemplo de solicitação
 

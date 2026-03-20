@@ -5,22 +5,20 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "이 문서에서는 중복 캔버스 엔드포인트에 대한 세부 정보를 설명합니다."
+description: "이 문서에서는 캔버스 복제 엔드포인트에 대한 세부 정보를 설명합니다."
 ---
 
 {% api %}
-# API를 사용한 중복 캔버스
+# API를 사용한 캔버스 복제
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/duplicate
 {% endapimethod %}
 
 > 이 엔드포인트를 사용하여 캔버스를 복제합니다. 이 API 엔드포인트는 [Braze 대시보드에서 캔버스를 복제하는 것][1]과 유사합니다.
 
-{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
+## 필수 조건
 
-## Prerequisites
-
-이 엔드포인트를 사용하려면 `canvas.duplicate` 권한으로 API 키를 생성해야 합니다.
+이 엔드포인트를 사용하려면 `canvas.duplicate` 권한이 있는 API 키를 생성해야 합니다.
 
 ## 사용량 제한
 
@@ -46,10 +44,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`| Required | 문자열 | [캔버스 식별자](https://www.braze.com/docs/api/identifier_types/)를 참조하세요. |
-|`name`| Required | 문자열 | 결과 캔버스의 이름입니다. |
-|`description`| Optional | 문자열 | 결과 캔버스에 대한 설명 필드입니다. |
-|`tag_names` | Optional | 문자열 | 결과 캔버스에 대한 태그입니다. 기존 태그여야 합니다. 요청에 새 태그를 추가하면 원래 캔버스에 있던 모든 태그를 덮어쓰게 됩니다. |
+|`canvas_id`| 필수 | 문자열 | [캔버스 식별자](https://www.braze.com/docs/api/identifier_types/)를 참조하세요. |
+|`name`| 필수 | 문자열 | 결과 캔버스의 이름입니다. |
+|`description`| 선택 사항 | 문자열 | 결과 캔버스의 설명 필드입니다. |
+|`tag_names` | 선택 사항 | 문자열 | 결과 캔버스의 태그입니다. 기존에 존재하는 태그여야 합니다. 요청에 새 태그를 추가하면 원래 캔버스에 있던 모든 태그를 덮어쓰게 됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 응답

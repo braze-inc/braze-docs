@@ -5,7 +5,7 @@ description: "このオンボーディングリファレンス記事には、Bra
 page_order: 0
 ---
 
-# [![](https://learning.braze.com/path/developer/sdk-integration-basics)開発者向け[Braze学習]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}[コース](https://learning.braze.com/path/developer/sdk-integration-basics)：SDK概要
+# [![Braze学習コース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}開発者向けSDK概要
 
 > Braze SDK の統合を開始する前に、正確に何を構築および統合するのかを疑問に思うかもしれません。また、ニーズに応じて SDK をより詳細にカスタマイズする方法に興味があるかもしれません。この記事は、SDK に関するすべての疑問を解決するのに役立ちます。 
 

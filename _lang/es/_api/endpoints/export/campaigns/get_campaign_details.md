@@ -5,7 +5,7 @@ search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles del punto final Exportar detalles de campaña de Braze."
+description: "En este artículo se describen los detalles del punto de conexión Exportar detalles de campaña de Braze."
 
 ---
 {% api %}
@@ -14,15 +14,15 @@ description: "En este artículo se describen los detalles del punto final Export
 /campaigns/details
 {% endapimethod %}
 
-> Utiliza este punto final para recuperar información relevante sobre una campaña especificada, que puede identificarse mediante `campaign_id`.
+> Utiliza este punto de conexión para recuperar información relevante sobre una campaña especificada, que puede identificarse mediante `campaign_id`.
 
-Si quieres recuperar datos del Canvas, consulta el punto final [Exportar detalles del Canvas]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
+Si quieres recuperar datos de Canvas, consulta el punto de conexión [Exportar detalles de Canvas]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
 ## Requisitos previos
 
-Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}/api/basics#rest-api-key/) con el permiso `campaigns.details`.
+Para utilizar este punto de conexión, necesitarás una [clave de API]({{site.baseurl}}/api/basics#rest-api-key/) con el permiso `campaigns.details`.
 
 ## Límite de velocidad
 
@@ -32,8 +32,9 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | Obligatoria | Cadena | Ver [identificador API de campaña]({{site.baseurl}}/api/identifier_types/).<br><br> Puedes encontrar la dirección `campaign_id` para las campañas API en la página [Claves de API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) y en la página **Detalles de campaña** dentro de tu panel; o puedes utilizar el [punto final Exportar lista de campañas](#campaign-list-endpoint). |
-| `post_launch_draft_version` | Opcional | Booleano | Para los mensajes que tienen un borrador posterior al lanzamiento, al configurar esto en`true`  se mostrarán los cambios disponibles en el borrador. Predeterminado `false` |
+| `campaign_id` | Obligatoria | Cadena | Ver [identificador de API de campaña]({{site.baseurl}}/api/identifier_types/).<br><br> Puedes encontrar el `campaign_id` para las campañas de API en la página [Claves de API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) y en la página **Detalles de campaña** dentro de tu dashboard; o puedes utilizar el [punto de conexión Exportar lista de campañas](#campaign-list-endpoint). |
+| `post_launch_draft_version` | Opcional | Booleano | Para los mensajes que tienen un borrador posterior al lanzamiento, configurar esto en `true` mostrará los cambios disponibles en el borrador. Predeterminado: `false`. |
+| `include_has_translatable_content` | Opcional | Booleano | Cuando se establece en `true`, la respuesta de la API incluye un campo `has_translatable_content` para cada mensaje. Predeterminado: `false`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
@@ -65,8 +66,9 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
     "teams" : (array) the names of the Teams associated with the campaign,
     "messages": {
         "message_variation_id": (string) { // <=This is the actual id
-            "channel": (string) the channel type of the message, must be either email, ios_push, webhook, content_cards, trigger_in_app_message, or sms,
-            "name": (string) the name of the message in the dashboard (eg., "Variation 1")
+            "channel": (string) the channel type of the message, must be either email, ios_push, webhook, content_card, in-app_message, or sms,
+            "name": (string) the name of the message in the dashboard (for example, "Variation 1"),
+            "has_translatable_content": (boolean) whether the message has translatable content (only present if `include_has_translatable_content` is true); `true` if locales are configured and the message contains at least one translation tag; `false` if no locales are configured or no translation tags detected; `null` if detection could not be completed,
             ... channel-specific fields for this message, see the following messages section ...
         }
     },
@@ -76,7 +78,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 
 ### Mensajes por canal
 
-La respuesta `messages` contendrá información sobre cada mensaje. A continuación se incluyen ejemplos de respuestas a mensajes para cada canal:
+La respuesta `messages` contendrá información sobre cada mensaje. A continuación se incluyen ejemplos de respuestas de mensajes para cada canal:
 
 {% tabs %}
 {% tab Content Cards %}
@@ -114,6 +116,8 @@ La respuesta `messages` contendrá información sobre cada mensaje. A continuaci
 {% endtab %}
 {% tab In-app messages %}
 
+El formato de la respuesta depende del tipo de mensaje dentro de la aplicación. Los mensajes dentro de la aplicación de tipo cuestionario devuelven los campos `type` y `data`. Otros tipos de mensajes dentro de la aplicación (deslizamiento hacia arriba, modal y pantalla completa) devuelven los campos `name`, `message` y `extras`.
+
 #### Cuestionarios
 
 ```json
@@ -142,7 +146,7 @@ La respuesta `messages` contendrá información sobre cada mensaje. A continuaci
 }
 ```
 
-#### Mensajes de deslizamiento hacia arriba, modales y a pantalla completa dentro de la aplicación.
+#### Mensajes de deslizamiento hacia arriba, modales y a pantalla completa dentro de la aplicación
 
 ```json
 {
@@ -244,7 +248,7 @@ La respuesta `messages` contendrá información sobre cada mensaje. A continuaci
 
 ### Comportamientos de conversión
 
-La`conversion_behaviors`matriz contiene información sobre cada conjunto de comportamientos de eventos de conversión establecidos para la campaña. Estos comportamientos están en el orden establecido por la campaña. Por ejemplo, el evento de conversión A es el primer elemento de la matriz, el evento de conversión B es el segundo, y así sucesivamente. A continuación se enumeran ejemplos de respuestas de comportamiento ante eventos de conversión:
+La matriz `conversion_behaviors` contiene información sobre cada comportamiento de evento de conversión establecido para la campaña. Estos comportamientos están en el orden definido por la campaña. Por ejemplo, el evento de conversión A es el primer elemento de la matriz, el evento de conversión B es el segundo, y así sucesivamente. A continuación se muestran ejemplos de respuestas de comportamiento de eventos de conversión:
 
 
 {% tabs %}
@@ -325,7 +329,7 @@ La`conversion_behaviors`matriz contiene información sobre cada conjunto de comp
 {% endtabs %}
 
 {% alert tip %}
-Para obtener ayuda con las exportaciones CSV y API, visita [Solución de problemas de exportación]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
+Para obtener ayuda con las exportaciones CSV y de API, visita [Solución de problemas de exportación]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

@@ -408,4 +408,6 @@ valid_partner_list:
   url: /docs/partners/canva/
 - name: Figma
   url: /docs/partners/figma/
+- name: Poq
+  url: /docs/partners/poq/
 ---
