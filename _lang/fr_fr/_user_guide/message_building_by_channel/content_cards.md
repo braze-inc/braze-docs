@@ -31,7 +31,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 ---
 
-## [![Cours d'apprentissage]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} [Braze](https://learning.braze.com/content-cards) Avantages de l'utilisation des cartes de contenu
+## [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} Avantages de l'utilisation des cartes de contenu
 
 Voici quelques avantages liés à l'utilisation des cartes de contenu par rapport à la création de contenu dans votre application par vos développeurs :
 

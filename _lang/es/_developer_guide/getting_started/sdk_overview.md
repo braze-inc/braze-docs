@@ -5,7 +5,7 @@ description: "Este artículo de referencia sobre la incorporación proporciona u
 page_order: 0
 ---
 
-# [![Curso](https://learning.braze.com/path/developer/sdk-integration-basics) de [Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}: Resumen del SDK para desarrolladores
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} Resumen del SDK para desarrolladores
 
 > Antes de empezar a integrar los SDK de Braze, puede que te preguntes qué estás construyendo e integrando exactamente. Quizá tengas curiosidad por saber cómo puedes personalizar el SDK para adaptarlo aún más a tus necesidades. Este artículo puede ayudarte a responder a todas tus preguntas sobre el SDK. 
 

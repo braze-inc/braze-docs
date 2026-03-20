@@ -67,9 +67,23 @@ By default, the time data type is in UTC. If you use a string data type to store
 
 For example, if you're sending a message to a user the day before their birthday, you would save the context variable as a time data type because there's Liquid logic associated with sending the day before. However, if you're sending a holiday message on Christmas Day (December 25), you wouldn't need to reference the time as a dynamic variable, so using a string data type would be preferable.
 
+For object data types, you can use dot notation to specify a path through the data. For example, if your Context step defines a context variable `order_summary` with this structure:
+
+```json
+{
+  "shipping": {
+    "carrier": "overnight"
+  }
+}
+```
+
+In an [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) or [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) filter, enter the path as the context variable name using dot notation (for example, `order_summary.shipping.carrier`). When the filter is evaluated, Braze resolves that path to the value `overnight`.
+
+In Liquid (such as in a [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step), use {% raw %}`{{context.${order_summary}.shipping.carrier}}`{% endraw %} instead.
+
 ## Using context variables
 
-You can use context variables anywhere you use Liquid in a Canvas, such as in [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) and [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update) steps, by selecting **Add Personalization**.
+You can use context variables anywhere you use Liquid in a Canvas, such as in [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) and [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update) steps, by selecting **Add Personalization**. For in-app messages and Banners in Message steps, you can select context variables to determine when the message should expire.
 
 For example, let's say you want to notify passengers about their VIP lounge access before their upcoming flight. This message should only be sent to passengers who purchased a first-class ticket. A context variable is a flexible way to track this information.
 
@@ -144,6 +158,16 @@ The exit criteria state that at any point in a user’s journey in the Canvas, t
 
 {% endtab %}
 {% endtabs %}
+
+### Set an expiration
+
+For [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/) and [in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) in a Canvas [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) step, select **A duration after the step is available** for expiration, then turn on **Personalize duration** to drive the availability window from a context variable—for example, to match a promotion or booking duration from a Context step.
+
+**Personalize duration** applies to that duration-based expiration option. If you choose **On a specific date and time** instead, set the expiration using the date and time controls.
+
+### Action Path delays
+
+In an [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) step, under **Evaluation Window**, turn on **Personalize delay** to set how long users are held in the step from a context variable. Use this when the wait period should differ per user based on details such as tier or region.
 
 ### Context variable filters
 
