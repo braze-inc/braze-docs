@@ -101,6 +101,23 @@ If links in your push notifications are opening in the app unexpectedly, it migh
 3. **Verify iOS push registration:** For iOS, revisit step 1 of the push integration guide on [registering push notifications with APNs]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-1-register-for-push-notifications-with-apns). Ensure your delegate object is assigned synchronously before the app finishes launching. This step should be completed in the `application:didFinishLaunchingWithOptions:` method.
 4. **Test your integration:** After making adjustments, test the push notification behavior on both iOS and Android devices to confirm the issue is resolved.
 
+## Push title is cut off on iOS but displays correctly on Android
+
+If your push notification title contains Liquid personalization and appears complete on Android but truncated on iOS, this is caused by how each platform handles newline characters (`\n`) in the title string.
+
+Android automatically strips whitespace, tabs, and newlines from push title strings. iOS does not, so if a Liquid variable resolves to a value that contains a trailing newline, iOS treats the newline as the end of the title and cuts off the remaining text.
+
+For example, a title like `Regarding your flight from {% raw %}{{${city_from}}}{% endraw %} to {% raw %}{{${city_to}}}{% endraw %}` might display `Regarding your flight from` on iOS if the `city_from` variable includes a trailing newline.
+
+To fix this, apply the `strip_newlines` Liquid filter and wrap the entire title in a `capture` block:
+
+{% raw %}
+```liquid
+{% capture title %}Regarding your flight from {{${city_from}}} to {{${city_to}}}{% endcapture %}
+{{ title | strip_newlines }}
+```
+{% endraw %}
+
 ## Web push notifications aren't behaving as expected
 
 If you're experiencing issues with push notifications in your browser, you may need to reset your site's notification permissions and clear your site's storage. Refer to these steps for help.
@@ -190,6 +207,10 @@ Your push permissions are now reset. Open a new tab to your site and try it out.
 
 {% endtab %}
 {% endtabs %}
+
+## Push error messages
+
+For detailed information about common push error messages (such as `DEVICE_UNREGISTERED`, `Unregistered`, `NotRegistered`, and others), refer to [Common push error messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/).
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 

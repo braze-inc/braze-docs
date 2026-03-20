@@ -78,7 +78,7 @@ collections:
   user_guide:
     title: User Guide
     output: true
-    default_nav_url: introduction/
+    default_nav_url: home/
     page_order: 2
   developer_guide:
     title: Developer Guide

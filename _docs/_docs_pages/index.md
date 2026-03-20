@@ -7,7 +7,7 @@ hidden: true
 layout: doc_guide
 custom_collection: home
 nav_title: "Documentation"
-description: "This is the Braze documentation site landing page. Here, you can find links to the user guide, developer guide, API guide, technology partners documentation, and help articles. You can also find quick links to helpful links and popular articles."
+description: "This is the Braze documentation site landing page. Here, you can find links to the user guide, developer guide, API guide, technology partners documentation, and help articles. You can also find quick links and popular articles."
 
 doc_top_header: "Braze Documentation"
 doc_top_text: ""
@@ -71,6 +71,4 @@ helpful_resources_list:
     link: /docs/api/data_retention/
   - name: Data Protection Technical Assistance
     link: /docs/dp-technical-assistance/
-  - name: Contributing to Braze Docs
-    link: /docs/contributing/home/
 ---

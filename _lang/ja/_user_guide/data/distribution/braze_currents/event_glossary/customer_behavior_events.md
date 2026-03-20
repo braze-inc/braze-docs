@@ -47,7 +47,7 @@ search_rank: 7
 ## ランダムバケット番号更新イベント {#random-bucket-number-update-events}
 
 {% apitags %}
-ランダムバケット番号
+Random Bucket Number
 {% endapitags %}
 
 このユーザーイベントは、ワークスペース内で新規ユーザーが作成されるたびに発生します。このイベントでは、各新規ユーザーにランダムバケット番号が割り当てられ、これを使用してランダムユーザーの均一に分散されたセグメントを作成できます。これを使用して、ランダムバケット番号の値の範囲をグループ化し、キャンペーンとキャンペーンバリアント間でパフォーマンスを比較します。
@@ -81,7 +81,7 @@ search_rank: 7
 ## カスタムイベント {#custom-events}
 
 {% apitags %}
-カスタムイベント
+Custom Events
 {% endapitags %}
 
 このイベントは、特定のカスタムイベントがトリガーされたときに発生します。これを使用して、ユーザーがアプリケーションでカスタムイベントを実行したタイミングを追跡します。
@@ -208,7 +208,7 @@ search_rank: 7
 ## インストールアトリビューションイベントを設定する {#install-attribution-events}
 
 {% apitags %}
-アトリビューション
+Attribution
 {% endapitags %}
 
 このイベントは、アプリのインストールがソースに起因する場合に発生します。これを使用して、アプリのインストール元を追跡します。
@@ -299,7 +299,7 @@ search_rank: 7
 ## 位置情報イベント {#location-events}
 
 {% apitags %}
-位置情報
+Locations
 {% endapitags %}
 
 このイベントは、ユーザーが特定のロケーションに移動したときにトリガーされます。これを使用して、アプリ内でロケーションイベントをトリガーするユーザーを追跡します。
@@ -441,7 +441,7 @@ search_rank: 7
 ## 購入イベント {#purchase-events}
 
 {% apitags %}
-購入
+Purchases
 {% endapitags %}
 
 このイベントは、ユーザーが購入を行ったときに発生します。このデータを使用して、ユーザーがアプリケーションで何かを購入したタイミングを追跡します。
@@ -581,7 +581,7 @@ search_rank: 7
 ## 第一回セッションのイベント {#first-session-events}
 
 {% apitags %}
-セッション
+Sessions
 {% endapitags %}
 
 このイベントは、ユーザーがアプリケーション内で最初のセッションを開始したときに発生します。このデータを使用して、ユーザーがいつセッションを開始したかを追跡します。
@@ -698,7 +698,7 @@ search_rank: 7
 ## セッション終了イベント {#session-end-events}
 
 {% apitags %}
-セッション
+Sessions
 {% endapitags %}
 
 これは、ユーザーがアプリケーションを離脱したとき、つまり現在のセッションを終了したときに発生します。このデータを使用して、セッションの終了時点をを追跡し、対応するセッション開始イベントとあわせてセッション時間の長さを計算します。
@@ -810,7 +810,7 @@ search_rank: 7
 ## セッション開始イベント {#session-start-events}
 
 {% apitags %}
-セッション
+Sessions
 {% endapitags %}
 
 このイベントは、ユーザーがセッションを開始したときに発生します。このデータを使用して、ユーザーがいつセッションを開始したかを追跡します。
@@ -922,7 +922,7 @@ search_rank: 7
 ## ライブアクティビティのプッシュトークン変更イベント {#live-activity-push-to-start-token-change-events}
 
 {% apitags %}
-ライブアクティビティ, プッシュ開始トークン
+Live Activity, Push To Start Token
 {% endapitags %}
 
 このイベントは、Brazeがライブアクティビティのプッシュトークンをユーザーと同期する際に発生する。
@@ -1031,7 +1031,7 @@ search_rank: 7
 ## ライブアクティビティ更新トークン変更イベント {#live-activity-update-token-change-events}
 
 {% apitags %}
-ライブアクティビティ, トークン更新
+Live Activity, Update Token
 {% endapitags %}
 
 このイベントは、Braze がライブアクティビティ更新トークンをユーザと同期するときに発生します
@@ -1140,7 +1140,7 @@ search_rank: 7
 ## プッシュ通知トークンの状態変更イベント {#push-notification-token-state-change-events}
 
 {% apitags %}
-プッシュ, トークン状態変更
+Push, Token State Change
 {% endapitags %}
 
 このイベントは、プッシュトークンが挿入、更新、または削除されたときに発生する。プッシュトークンの状態を追跡するために使用します。

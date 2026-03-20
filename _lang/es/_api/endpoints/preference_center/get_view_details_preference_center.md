@@ -1,11 +1,11 @@
 ---
 nav_title: "GET: Ver detalles del centro de preferencias"
-article_title: "GET: Ver detalles de Centro de Preferencia"
+article_title: "GET: Ver detalles del centro de preferencias"
 search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles del punto final Ver detalles del centro de preferencias de Braze."
+description: "En este artículo se describen los detalles del punto de conexión Ver detalles del centro de preferencias de Braze."
 
 ---
 {% api %}
@@ -14,28 +14,28 @@ description: "En este artículo se describen los detalles del punto final Ver de
 /preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
-> Utiliza este punto final para ver los detalles de tus centros de preferencias, incluyendo cuándo se crearon y actualizaron.
+> Utiliza este punto de conexión para ver los detalles de tus centros de preferencias, incluyendo cuándo se crearon y actualizaron.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6a47fd7c-2997-4832-aedb-d101a2dd03a5 {% endapiref %}
 
 ## Requisitos previos
 
-Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}/api/basics#rest-api-key/) con el permiso `preference_center.get`.
+Para utilizar este punto de conexión, necesitarás una [clave de API]({{site.baseurl}}/api/basics#rest-api-key/) con el permiso `preference_center.get`.
 
 ## Límite de velocidad
 
-Este punto final tiene un límite de velocidad de 1000 solicitudes por minuto, por espacio de trabajo.
+{% multi_lang_include rate_limits.md endpoint='get preference center' %}
 
-## Parámetros de la ruta
+## Parámetros de ruta
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| Obligatoria | Cadena | El ID de su centro de preferencias. |
+|`preferenceCenterExternalID`| Obligatoria | Cadena | El ID de tu centro de preferencias. |
 {: role="presentation" }
 
-## Parámetros de la solicitud
+## Parámetros de solicitud
 
-No hay parámetros de solicitud para este punto final.
+No hay parámetros de solicitud para este punto de conexión.
 
 ## Ejemplo de solicitud
 
