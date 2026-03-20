@@ -1,6 +1,6 @@
 ---
-nav_title: "OBTER: Exibir detalhes da Central de Preferências"
-article_title: "OBTER: Exibir detalhes da Central de Preferências"
+nav_title: "GET: Exibir detalhes da Central de Preferências"
+article_title: "GET: Exibir detalhes da Central de Preferências"
 search_tag: Endpoint
 page_order: 3
 layout: api_page
@@ -14,7 +14,7 @@ description: "Este artigo descreve detalhes sobre o endpoint \"Exibir detalhes d
 /preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
-> Use esse endpoint para visualizar os detalhes de suas Centrais de Preferências, inclusive quando foram criadas e atualizadas.
+> Use esse endpoint para visualizar os detalhes das suas Centrais de Preferências, inclusive quando foram criadas e atualizadas.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6a47fd7c-2997-4832-aedb-d101a2dd03a5 {% endapiref %}
 
@@ -24,13 +24,13 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Limite de taxa
 
-Esse endpoint tem um limite de frequência de 1.000 solicitações por minuto, por espaço de trabalho.
+{% multi_lang_include rate_limits.md endpoint='get preference center' %}
 
-## Parâmetros da jornada
+## Parâmetros de path
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| Obrigatória | String | A ID de sua central de preferências. |
+|`preferenceCenterExternalID`| Obrigatória | String | O ID da sua Central de Preferências. |
 {: role="presentation" }
 
 ## Parâmetros de solicitação

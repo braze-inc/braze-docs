@@ -1,7 +1,7 @@
 ---
 nav_title: Catalogs
 article_title: Catalogs
-page_order: 3
+page_order: 6
 layout: dev_guide
 
 guide_top_header: "Catalogs"
@@ -11,28 +11,28 @@ description: "This landing page is home to catalogs. Use catalogs and filtered s
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: Create a catalog
-  link: /docs/user_guide/data/activation/catalogs/create
+- name: Create a Catalog
+  link: /docs/user_guide/data/activation/catalogs/create/
   image: /assets/img/braze_icons/users-01.svg
-- name: Using catalogs
-  link: /docs/user_guide/data/activation/catalogs/use
+- name: Using Catalogs
+  link: /docs/user_guide/data/activation/catalogs/use/
   image: /assets/img/braze_icons/users-01.svg
-- name: Back-in-stock notifications
-  link: /docs/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications
+- name: Back-In-Stock Notifications
+  link: /docs/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications/
   image: /assets/img/braze_icons/shopping-cart-03.svg
-- name: Price drop notifications
+- name: Price Drop Notifications
   link: /docs/price_drop_notifications/
   image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Selections
-  link: /docs/user_guide/data/activation/catalogs/selections
+  link: /docs/user_guide/data/activation/catalogs/selections/
   image: /assets/img/braze_icons/list.svg
 
 guide_menu_title: "Other articles"
 guide_menu_list:
-- name: Catalogs API endpoints
+- name: Catalogs API Endpoints
   link: /docs/api/endpoints/catalogs/
   image: /assets/img/braze_icons/server-01.svg
-- name: Drag-and-drop product blocks
+- name: Drag-and-Drop Product Blocks
   link: /docs/dnd_product_blocks/
   image: /assets/img/braze_icons/columns-01.svg
 ---
@@ -64,9 +64,9 @@ You can bring in any type of data into a catalog. Typically, the data is metadat
 
 ## How catalogs and Liquid work together
 
-Catalogs are a data storage feature. They contain large sets of data that can be referenced in your messages for personalization. To actually reference the data, you'll use [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/) as the templating language. In other words, catalogs is storage where the data is held, and Liquid is the language that pulls the relevant data from the storage.
+Catalogs are a data storage feature. They contain large sets of data that can be referenced in your messages for personalization. To actually reference the data, you'll use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) as the templating language. In other words, catalogs is storage where the data is held, and Liquid is the language that pulls the relevant data from the storage.
 
-For examples of how you can use Liquid to pull catalog information, see the additional use cases in [Creating a catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/create#additional-use-cases/).
+For examples of how you can use Liquid to pull catalog information, see the additional use cases in [Creating a catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/#additional-use-cases/).
 
 #### Data storage limitations
 

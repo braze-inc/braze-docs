@@ -77,7 +77,7 @@ Open your device settings and locate Braze Pilot. Then, update the settings to a
 {% endtab %}
 {% tab Launch a push primer message %}
 
-You can use a Braze in-app message to request push permissions for the app, just like you would for your own consumers. To learn how to build this type of message in Braze, see [Push primer in-app messages]({{site.baseurl}}/user_guide/channels/push/best_practices/push_primer_messages#push-primer-in-app-messages).
+You can use a Braze in-app message to request push permissions for the app, just like you would for your own consumers. To learn how to build this type of message in Braze, see [Push primer in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages#push-primer-in-app-messages).
 
 <div class="imgDiv">
 <img src="{% image_buster /assets/img/braze_pilot/push_primer1.png %}" style="max-width:40%">
@@ -91,4 +91,4 @@ You can use a Braze in-app message to request push permissions for the app, just
 
 Now you’re ready to start receiving campaigns and Canvases from your Braze dashboard as a user of Braze Pilot! Visit any of the launched campaigns in your demo workspace for a quick demo of Braze use cases, then head to your live workspace to get started sending your own.
 
-For more on how to set up campaigns and Canvases in Braze, see [Getting Started: Campaigns and Canvases]({{site.baseurl}}/user_guide/get_started/campaigns_and_canvases/).
+For more on how to set up campaigns and Canvases in Braze, see [Getting Started: Campaigns and Canvases]({{site.baseurl}}/user_guide/getting_started/campaigns_canvases).

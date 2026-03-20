@@ -1,0 +1,110 @@
+---
+nav_title: FAQ
+article_title: Email FAQ
+page_order: 15
+description: "This page provides answers to frequently asked questions about email messaging."
+channel: email
+
+---
+
+# Frequently asked questions
+
+> This article provides answers to some frequently asked questions about emails.
+
+### What happens when an email is sent out, and multiple profiles have the same email address?
+
+If multiple users with matching email addresses are in a segment to receive a campaign, a random user profile with that email address is selected at send time. This way, the email is sent only once and deduplicated, ensuring it doesn't reach the same email address multiple times.
+
+Note that this deduplication occurs when the targeted users are included in the same dispatch. Triggered campaigns may result in multiple sends to the same email address (even within a period when users could be excluded due to re-eligibility) if different users with matching email addresses log the trigger event at different times. Users are not deduped by email on Canvas entry, so they may not be deduped beyond the first step of a Canvas if they progress at slightly different times due to rate-limited entry. When a user associated with a given email address opens or clicks an email, all user profiles that share that email address are marked as having opened or clicked the campaign.
+
+#### Exception: API-triggered campaigns
+
+API-triggered campaigns will deduplicate or send deduplicates depending on where the audience is defined. Duplicate emails must be targeted separately in the API call using distinct `user_ids` to receive multiple details. Here are three possible scenarios for API-triggered campaigns:
+
+- **Scenario 1: Duplicate emails in target segment:** If the same email appears in multiple user profiles that are grouped in the dashboard's audience filters for an API-triggered campaign, only one of the profiles receives the email.
+- **Scenario 2: Duplicate emails in different `user_ids` within recipients object:** If the same email appears within multiple `external_user_id` values referenced by the `recipients` object, the email is sent twice.
+- **Scenario 3: Duplicate emails due to duplicate `user_ids` within the recipients object:** If you try to add the same user profile twice, only one of the profiles receives the email.
+
+### Will updates to my outbound email settings apply retroactively?
+
+No. Updates made to the outbound email settings do not retroactively affect existing sends. For example, changing your default display name in the email settings will not automatically replace the existing default display name in your active campaigns or Canvases. 
+
+### What is a "good" email delivery rate?
+
+Typically, the "magic number" is around 98% of messages delivered with a bounce rate no higher than 3%. If your delivery dips below that, there is usually cause for concern.
+
+However, a rate above 98% can still have deliverability issues. For example, if all your bounces come from a single domain, that is a clear signal of a reputation issue with that provider.
+
+Additionally, messages may be getting delivered and ending up in Spam, indicating potentially serious reputation issues. It's important to monitor not just the number of messages being delivered, but also open and click rates to determine whether users are actually seeing the messages in their inboxes. Because providers usually don't report every spam instance, a spam rate of even 1% could be cause for concern and further analysis.
+
+Finally, your business and the types of emails you send may also affect delivery. For example, someone sending mostly [transactional emails]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign) should expect to see a better rate than someone sending many marketing messages.
+
+### Why are my email delivery metrics not adding up to 100%?
+
+Email delivery metrics (deliveries, bounces, and spam rate) may not add up to 100% because of emails that are soft bounced and then not delivered after the retry period of up to 72 hours.
+
+Soft bounces are emails that bounce due to a temporary or transient issue, such as "mailbox full," "server temporarily not available," and more. If a soft bounced email is still not delivered after 72 hours, this email will not be accounted for in the campaign delivery metrics.
+
+### What are open tracking pixels?
+
+[Open tracking pixels]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#changing-location-of-tracking-pixel) leverage a sender's email click tracking domain to track email open events. The pixel is an image tag appended to the email's HTML. It is most commonly the last HTML element within the body tag. When a user loads their email, a request is made to populate the image from the branded tracking domain, which logs an open event.
+
+### What happens when an email campaign or Canvas is stopped?
+
+Users will be prevented from entering the Canvas, and no further messages will be sent out. For email campaigns and Canvases, the stop button does not immediately stop the send. This is because when the send requests are sent, they cannot be stopped from being delivered to the user.
+
+### Why am I seeing more email clicks than opens?
+
+You may be seeing more clicks than opens for any of the following reasons:
+- Users are performing multiple clicks on the body of the email within a single open.
+- Users click on some email links within the preview pane of their phones. In this case, Braze logs this email as being clicked but not opened.
+- Users reopen an email that they previewed earlier.
+
+### Why am I seeing zero email opens and clicks?
+
+You may see no email opens or clicks if there's a misconfiguration in your tracking domain. This can be due to any of the following reasons:
+- There is an SSL issue where tracking URLs are `http` instead of `https`.
+- There is an issue with your CDN where the user agent string on the open events, click events, or both aren't populating.
+
+### What are the potential risks of triggering server clicks?
+
+Certain elements of an email message, such as overly long messages or too many exclamation marks, can trigger email security responses. These responses can affect reporting and IP reputation and lead users to unsubscribe.
+
+For best practices on how to handle these responses, refer to [Handling increases in click rates]({{site.baseurl}}/help/help_articles/email/open_rates/).
+
+### Can Braze track unsubscribe links counted toward the "Unsubscribe" metric?
+
+Braze tracks unsubscribe links if the following Liquid is used within emails: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}
+
+### Can I add a "view this email in a browser" link to my emails?
+
+No. Braze does not offer this functionality. This is because a growing majority of email is opened on mobile devices and in modern email clients, which render images and content without issues.
+
+**Workaround:** To achieve this same result, you can host the content of your email on an external landing page (such as your website), which can then be linked to from the email campaign you are building using the **Link** tool when editing the email body.
+
+### Why are my users being auto-unsubscribed by email security software?
+
+Some corporate email security tools (such as Barracuda, Proofpoint, and similar services) pre-fetch or scan all URLs in incoming emails, including unsubscribe links. This can cause unintended unsubscribes when the security tool follows the one-click list-unsubscribe link.
+
+To mitigate this:
+
+- **Recommend recipients allowlist your sending domain:** Work with the affected recipients' IT teams to add your sending domain and Braze tracking domains to their email security allow list.
+- **Use a preference center:** Instead of a direct unsubscribe link, use a [preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) that requires user interaction to confirm the unsubscribe action. Security scanners typically won't complete multi-step forms.
+- **Review unsubscribe logs:** Check the `User-Agent` header and IP address in your Currents unsubscribe event data to identify patterns consistent with automated scanning (such as consistent `User-Agent` headers across multiple unsubscribes).
+
+For more details on how server-side scanning can affect email metrics, refer to [Handling increases in click rates]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/#handling-increases-in-click-rates).
+
+### Why has my machine open rate changed unexpectedly?
+
+[Machine opens]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/#machine-opens) are triggered by email security features such as Apple Mail Privacy Protection (MPP), which pre-loads email content (including the tracking pixel) without the user physically opening the email. Machine open rates can fluctuate based on:
+
+- Changes in the proportion of your audience using Apple Mail or other privacy-enabled email clients.
+- Updates to email provider privacy features or bot detection behaviors.
+- Changes in your audience segmentation or targeting.
+
+Machine open percentages are not a reliable measure of actual engagement. For a more accurate view of email performance, focus on *Other Opens* (non-machine opens) and *Unique Clicks*. You can also compare these metrics over time using the [Email Performance Dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/email_performance_dashboard/).
+
+### Does the *Unique Opens* metric include *Machine Opens*?
+
+Yes. *Unique Opens* include *Machine Opens*. In the **Campaign Analytics** page and **Report Builder**, you can view both metrics.
+

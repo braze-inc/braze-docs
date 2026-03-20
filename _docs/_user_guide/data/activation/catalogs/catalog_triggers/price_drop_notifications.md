@@ -90,7 +90,7 @@ After setting up the price drop notifications in a catalog, follow these steps t
 1. Set up an action-based Canvas.
 2. Select **Perform Price Drop Event** as the trigger.
 3. Select the name of the catalog with the price drop notifications.
-4. Continue [setting up]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/) your Canvas as you would.
+4. Continue [setting up]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) your Canvas as you would.
 
 Now, your customers will be notified when an item's price drops.
 

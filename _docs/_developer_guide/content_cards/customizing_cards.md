@@ -15,7 +15,7 @@ guide_featured_list:
 - name: Customizing Card Behavior
   link: /docs/developer_guide/content_cards/customizing_cards/behavior/
   image: /assets/img/braze_icons/sliders-01.svg
-- name: Customizing Card Feed
+- name: Customizing the Default Feed
   link: /docs/developer_guide/content_cards/customizing_cards/feed/
   image: /assets/img/braze_icons/layout-grid-01.svg
 ---

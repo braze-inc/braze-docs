@@ -120,7 +120,7 @@ If you implement `BrazeDelegate.braze(_:shouldOpenURL:)`, verify it handles link
 
 ### Enable verbose logging
 
-[Enable verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging/) and reproduce the issue. Look for the `Opening` log entry:
+[Enable verbose logging]({{site.baseurl}}/developer_guide/verbose_logging) and reproduce the issue. Look for the `Opening` log entry:
 
 ```
 Opening '<URL>':
@@ -178,9 +178,9 @@ Verify the Branch domain in your `BrazeDelegate` matches your actual Branch link
 
 To diagnose where the link breaks in the chain:
 
-1. Enable [Braze verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging/) — look for `Opening '<URL>':` entries to verify the SDK received the link.
+1. Enable [Braze verbose logging]({{site.baseurl}}/developer_guide/verbose_logging) — look for `Opening '<URL>':` entries to verify the SDK received the link.
 2. Enable [Branch test mode](https://help.branch.io/developers-hub/docs/ios-basic-integration#test-deep-linking) — check the Branch dashboard for link click events.
-1. Enable [Braze verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging/). Look for `Opening '<URL>':` entries to verify the SDK received the link.
+1. Enable [Braze verbose logging]({{site.baseurl}}/developer_guide/verbose_logging). Look for `Opening '<URL>':` entries to verify the SDK received the link.
 2. Enable [Branch test mode](https://help.branch.io/developers-hub/docs/ios-basic-integration#test-deep-linking). Check the Branch dashboard for link click events.
 3. If Braze logs the link, but Branch doesn't see a click, the `BrazeDelegate` routing logic is the likely issue.
 
@@ -203,7 +203,7 @@ Test the Branch link outside of Braze to isolate the issue:
 
 ### Use verbose logging
 
-[Enable verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging/) to see exactly how the SDK processes links. Key entries to look for:
+[Enable verbose logging]({{site.baseurl}}/developer_guide/verbose_logging) to see exactly how the SDK processes links. Key entries to look for:
 
 | Log entry | What it means |
 |---|---|
@@ -214,7 +214,7 @@ Test the Branch link outside of Braze to isolate the issue:
 | `isUniversalLink: true` | SDK identified the URL as a universal link |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For more details on reading these logs, see [Reading verbose logs]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging/).
+For more details on reading these logs, see [Reading verbose logs]({{site.baseurl}}/developer_guide/verbose_logging).
 
 ### Test links in isolation
 
