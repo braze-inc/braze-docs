@@ -71,7 +71,7 @@ If you're syncing to an audience in The Trade Desk with a region set to the EU, 
 
 ### Step 4: Launch your Canvas
 
-After you have configured your Audience Sync to The Trade Desk, you're ready to launch the Canvas! The new audience will be created, and users who flow through the Audience Sync step will be passed into this audience on The Trade Desk. If your Canvas contains subsequent components, your users will advance to the next step in their user journey.
+After you configure your Audience Sync to The Trade Desk, you're ready to launch the Canvas! The new audience is created, and users who flow through the Audience Sync step are passed into this audience on The Trade Desk. If your Canvas contains subsequent components, your users advance to the next step in their user journey.
 
 ## Frequently asked questions
 
