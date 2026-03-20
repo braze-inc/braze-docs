@@ -16,9 +16,9 @@ search_tag: Partner
 **Interested in having access to Snowflake-level data without the need for a Snowflake account?**<br>Check out [Snowflake Reader Accounts]({{site.baseurl}}/user_guide/data/braze_currents/how_braze_uses_currents/#snowflake-reader-accounts). With Reader Accounts, Braze will create and share your data into an account and provide you credentials to log in and access your data. This will result in all data sharing and usage billing being handled entirely by Braze.
 {% endalert %}
 
-## About Data Sharing
+## About Secure Data Sharing
 
-With data sharing, no actual data is copied or transferred between accounts. All sharing is accomplished through Snowflake's unique services layer and metadata store. This is an important concept because shared data does not take up any storage in a consumer account and, therefore, does not contribute to the consumer's monthly data storage charges. The **only** charges to consumers are for the computing resources (such as virtual warehouses) used to query the shared data.
+With data sharing, no actual data is copied or transferred between accounts. All sharing is accomplished through Snowflake's unique services layer and metadata store. This is an important concept because shared data does not take up any storage in your account and, therefore, does not contribute to your monthly data storage charges. The **only** charges are for the computing resources (such as virtual warehouses) used to query the shared data.
 
 Additionally, using Snowflake's built-in roles and permissions capabilities, access to data shared from Braze can be controlled and governed using the access controls already in place for your Snowflake account and the data therein. Access can be restricted and monitored the same way as your own data.
 
@@ -63,7 +63,7 @@ If you have multiple workspaces sharing data to the same Snowflake account, see 
 
 ## Usage and visualization
 
-After the data share is provisioned, you will need to create a database from the incoming data share, making all the tables shared appear in your Snowflake instance and be queryable just like any other data you're storing in your instance. However, keep in mind that the shared data is read-only and can only be queried but not modified or deleted in any way.
+After the data share is provisioned, create a database from the incoming data share, making all the tables shared appear in your Snowflake instance and be queryable just like any other data you're storing in your instance. However, keep in mind that the shared data is read-only and can only be queried but not modified or deleted in any way.
 
 Similar to Currents, you can use your Snowflake Secure Data Sharing to:
 
@@ -108,7 +108,14 @@ When possible, breaking changes will be preceded by an announcement and a migrat
 
 ### Snowflake regions
 
-Braze currently hosts all user-level data in the Snowflake AWS US East-1, EU-Central (Frankfurt), AP-Southeast-2 (Sydney) and AP-Southeast-3 (Jakarta) regions. For users outside of those regions, Braze can provide data sharing to joint customers who are hosting their Snowflake infrastructure across any AWS, Azure, or GCP region.
+Braze currently hosts all user-level data in these Snowflake AWS regions:
+
+ - US East-1
+ - EU-Central (Frankfurt)
+ - AP-Southeast-2 (Sydney)
+ - AP-Southeast-3 (Jakarta)
+ 
+For users outside those regions, Braze can provide data sharing to joint customers who are hosting their Snowflake infrastructure across any AWS, Azure, or GCP region.
 
 ### Data retention
 
@@ -130,4 +137,6 @@ The archive of historical event data in Snowflake goes back to April 2019. In th
 
 The speed, performance, and cost of any query run on top of the data are determined by the warehouse size you use to query the data. In some cases, depending on how much data you're accessing for analytics, you may find that you need to use a larger warehouse size for the query to be successful. Snowflake has excellent resources available about how to best determine which size to use including [Overview of warehouses](https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html) and [Warehouse considerations](https://docs.snowflake.net/manuals/user-guide/warehouses-considerations.html)
 
-> For a set of example queries to reference when setting up Snowflake, check out our [sample queries]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/sample_queries/) and [ETL event pipeline setup]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/etl_pipline_setup/) examples.
+{% alert tip %}
+For a set of example queries to reference when setting up Snowflake, check out our [sample queries]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/sample_queries/) and [ETL event pipeline setup]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/etl_pipline_setup/) examples.
+{% endalert %}
