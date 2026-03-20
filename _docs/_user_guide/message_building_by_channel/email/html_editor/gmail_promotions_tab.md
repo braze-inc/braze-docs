@@ -127,7 +127,7 @@ While you can use Liquid within this script, we strongly suggest that you test y
 
 ### Preview your annotation
 
-Use the [preview tool](https://developers.google.com/workspace/gmail/promotab/preview) to preview your annotation. Note that sending yourself a test email won’t work for annotations, as your annotation only renders if the email has to be sent to a significant number of recipients. Make sure the image URLs in the final email are sent to at least 100 Gmail recipients.
+Use the [preview tool](https://developers.google.com/workspace/gmail/promotab/preview) to preview your annotation. Note that sending yourself a test email won’t work for annotations, as your annotation only renders if the email has to be sent to a significant number of recipients. Make sure you send the final email (with its image URLs) to at least 100 Gmail recipients.
 
 Do not use Google Workspace to send emails with annotations. Only use allowlisted email domains to send annotations to a large group of recipients.
 
