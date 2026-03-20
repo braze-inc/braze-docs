@@ -39,7 +39,11 @@ Use the following rules when sending messages:
 
 5. **Ensure SHAFT compliance in the US and other relevant regions.** Sending SMS, MMS, or RCS messages that contain language around sex, hate, alcohol, firearms, and tobacco (SHAFT) is generally considered to be illegal in the US and some other regions.<br><br>
 
-6. **Double-check everything**. Work with your legal team to ensure that your SMS, MMS, or RCS program is fully compliant with all applicable rules and regulations for the regions your brand operates in.<br><br>
+6. **Honor "reasonable revocation" for US messages.** For customers sending messages in the US, the Telephone Consumer Protection Act (TCPA) requires that any message that can be reasonably interpreted as an opt-out must be honored. This means unsubscribe triggers are no longer limited to specific keywords (like "STOP").
+- **Intent-based opt-outs:** Phrases like "no more," "please don't text me anymore," and "stoppp" must be processed as legal opt-outs.
+- **No clarification messages:** You cannot send a message to clarify a user's intent to unsubscribe (for example, "Did you mean to opt out? If so, replay STOP") before processing the request.<br><br>
+
+7. **Double-check everything**. Work with your legal team to ensure that your SMS, MMS, or RCS program is fully compliant with all applicable rules and regulations for the regions your brand operates in.<br><br>
 
 ## RCS compliance best practices
 
@@ -78,6 +82,13 @@ The Telephone Consumer Protection Act ([TCPA](https://en.wikipedia.org/wiki/Tele
 Remember to comply with the [National Do Not Call Registry](https://www.donotcall.gov/).
 
 Braze uses [Subscription Groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/) to manage groups of users based on their level of consent.
+
+#### Compliance through fuzzy opt-out
+
+To help automate the recognition of non-standard opt-out requests, you can enable fuzzy opt-out in your subscription group settings if you're a US customer.
+
+- **Immediate configuration:** By default, fuzzy opt-out sends a clarification message. To enact an immediate opt-out instead of a clarification, you can configure your workspace by following the instructions in the **Fuzzy Opt-Out** section. 
+- **Manual keyword additions:** We recommend manually adding high-risk words to your **Opt-Out** keyword category, such as "REMOVE", "END", "HALT", "CEASE", "DISCONTINUE", and "UNSUBSCRIBE", in addition to the default keywords already provided.
 
 ### Spam and cadence
 
