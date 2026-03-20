@@ -4,7 +4,7 @@ article_title: Attributs personnalisés imbriqués
 alias: "/nested_custom_attribute_support/"
 page_order: 1
 page_type: reference
-description: "Cet article de référence explique comment utiliser les attributs personnalisés imbriqués en tant que type de données pour des attributs personnalisés, avec les limitations et des exemples d’utilisation."
+description: "Cet article de référence explique comment utiliser les attributs personnalisés imbriqués en tant que type de données pour des attributs personnalisés, avec les limitations et des exemples d'utilisation."
 ---
 
 # Attributs personnalisés imbriqués
@@ -18,10 +18,10 @@ description: "Cet article de référence explique comment utiliser les attributs
 ## Restrictions
 
 - Les attributs personnalisés imbriqués sont destinés aux attributs personnalisés envoyés via le SDK ou l'API de Braze. 
-- Les objets ont une taille maximale de 100 Ko.
-- Les noms clés et les valeurs de chaîne de caractères ont une limite de taille de 255 caractères.
-- Les noms de clé ne peuvent pas contenir d’espaces.
-- Les points (`.`) et les signes de dollar (`$`) ne sont pas des caractères pris en charge dans une charge utile API si vous tentez d'envoyer un attribut personnalisé imbriqué à un profil utilisateur.
+- Les objets ont une taille maximale de 100&nbsp;Ko.
+- Les noms de clé et les valeurs de chaîne de caractères ont une limite de taille de 255 caractères.
+- Les noms de clé ne peuvent pas contenir d'espaces.
+- Les points (`.`) et les signes de dollar (`$`) ne sont pas des caractères pris en charge dans un PAYLOAD API si vous tentez d'envoyer un attribut personnalisé imbriqué à un profil utilisateur.
 - Tous les partenaires Braze ne prennent pas en charge les attributs personnalisés imbriqués. Reportez-vous à la [documentation du partenaire]({{site.baseurl}}/partners/home) pour savoir si les intégrations spécifiques du partenaire prennent en charge cette fonctionnalité.
 - Les attributs personnalisés imbriqués ne peuvent pas être utilisés comme filtre lors d'un appel à l'API Connected Audience.
 
@@ -29,7 +29,7 @@ description: "Cet article de référence explique comment utiliser les attributs
 
 {% tabs local %}
 {% tab Create %}
-Voici un `/users/track` exemple avec un objet « Chanson la plus jouée ». Pour capturer les propriétés de la chanson, nous enverrons une demande API qui répertorie `most_played_song` en tant qu’objet, avec un ensemble de propriétés.
+Voici un exemple `/users/track` avec un objet « Chanson la plus jouée ». Pour capturer les propriétés de la chanson, nous enverrons une requête API qui répertorie `most_played_song` en tant qu'objet, accompagné d'un ensemble de propriétés.
 
 ```json
 {
@@ -53,7 +53,7 @@ Voici un `/users/track` exemple avec un objet « Chanson la plus jouée ». Po
 
 {% endtab %}
 {% tab Update %}
-Pour mettre à jour un objet existant, envoyez un message POST à `users/track` avec le paramètre `_merge_objects` dans la demande. Cela va fusionner en profondeur (deep merge) votre mise à jour avec les données d’objet existantes. Le deep merge (ou fusion profonde) garantit que tous les niveaux d’un objet sont fusionnés dans un autre objet, et pas juste le premier niveau. Dans cet exemple, nous avons déjà un objet `most_played_song` dans Braze, et maintenant nous ajoutons un nouveau champ `year_released`, à l’objet `most_played_song`.
+Pour mettre à jour un objet existant, envoyez un POST à `users/track` avec le paramètre `_merge_objects` dans la requête. Cela effectuera une fusion profonde (deep merge) de votre mise à jour avec les données d'objet existantes. La fusion profonde garantit que tous les niveaux d'un objet sont fusionnés dans un autre objet, et pas seulement le premier niveau. Dans cet exemple, nous avons déjà un objet `most_played_song` dans Braze, et nous ajoutons maintenant un nouveau champ, `year_released`, à l'objet `most_played_song`.
 
 ```json
 {
@@ -69,7 +69,7 @@ Pour mettre à jour un objet existant, envoyez un message POST à `users/track` 
 }
 ```
 
-Une fois cette demande reçue, l’objet Attribut personnalisé ressemblera à ça :
+Une fois cette requête reçue, l'objet d'attribut personnalisé ressemblera à ceci :
 
 ```json
 {"most_played_song": {
@@ -86,12 +86,12 @@ Une fois cette demande reçue, l’objet Attribut personnalisé ressemblera à �
 ```
 
 {% alert warning %}
-Vous devez définir `_merge_objects` comme `true`, sinon vos objets seront écrasés. `_merge_objects` est `false` par défaut.
+Vous devez définir `_merge_objects` sur `true`, sinon vos objets seront écrasés. `_merge_objects` est `false` par défaut.
 {% endalert %}
 
 {% endtab %}
 {% tab Delete %}
-Pour supprimer un objet d’attribut personnalisé, envoyez un message POST à `users/track` avec l’objet Attribut personnalisé défini sur `null`.
+Pour supprimer un objet d'attribut personnalisé, envoyez un POST à `users/track` avec l'objet d'attribut personnalisé défini sur `null`.
 
 ```json
 {
@@ -225,12 +225,12 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 {% endtab %}
 {% endtabs %}
 
-## Capturer des dates en tant que propriétés d’objet
+## Capturer des dates en tant que propriétés d'objet
 
-Pour capturer des dates en tant que propriétés d’objet, vous devez utiliser la clé `$time`. Dans l’exemple suivant, un objet « Dates importantes » est utilisé pour capturer l’ensemble des propriétés d’objet, `birthday` et `wedding_anniversary`. La valeur de ces dates est un objet avec une clé `$time`, qui ne peut pas être une valeur nulle.
+Pour capturer des dates en tant que propriétés d'objet, vous devez utiliser la clé `$time`. Dans l'exemple suivant, un objet « Dates importantes » est utilisé pour capturer l'ensemble des propriétés d'objet, `birthday` et `wedding_anniversary`. La valeur de ces dates est un objet avec une clé `$time`, qui ne peut pas être une valeur nulle.
 
 {% alert note %}
-Si vous n'avez pas capturé les dates en tant que propriétés de l'objet au départ, nous vous recommandons de renvoyer ces données à l'aide de la clé `$time` pour tous les utilisateurs. Dans le cas contraire, l'utilisation de l'attribut `$time` peut donner lieu à des segments incomplets. Toutefois, si la valeur de `$time` dans un attribut personnalisé imbriqué n'est pas formatée correctement, l'ensemble de l'attribut personnalisé imbriqué ne sera pas mis à jour.
+Si vous n'avez pas capturé les dates en tant que propriétés d'objet au départ, nous vous recommandons de renvoyer ces données à l'aide de la clé `$time` pour tous les utilisateurs. Dans le cas contraire, l'utilisation de l'attribut `$time` peut donner lieu à des segments incomplets. Toutefois, si la valeur de `$time` dans un attribut personnalisé imbriqué n'est pas formatée correctement, l'ensemble de l'attribut personnalisé imbriqué ne sera pas mis à jour.
 {% endalert %}
 
 ```json
@@ -253,49 +253,49 @@ Pour les attributs personnalisés imbriqués, si l'année est inférieure à 0 o
 
 ## Modèles Liquid
 
-Les exemples de templating Liquid suivants montrent comment référencer les propriétés d’objet d’attribut personnalisées de la requête API précédente pour les utiliser dans vos communications Liquid.
+Les exemples de modèles Liquid suivants montrent comment référencer les propriétés d'objet d'attribut personnalisé enregistrées à partir de la requête API précédente et les utiliser dans vos messages.
 
-Utilisez la balise de personnalisation `custom_attribute` et la notation par points pour accéder aux propriétés sur un objet. Spécifiez le nom de l’objet (et la position dans le tableau si vous référencez un tableau d’objets), suivi d’un point (période), suivi du nom de la propriété.
+Utilisez la balise de personnalisation `custom_attribute` et la notation par points pour accéder aux propriétés d'un objet. Spécifiez le nom de l'objet (et la position dans le tableau si vous référencez un tableau d'objets), suivi d'un point, suivi du nom de la propriété.
 
 {% raw %}
-`{{custom_attribute.${most_played_song}[0].artist_name}}` - Miles Davis
-<br> `{{custom_attribute.${most_played_song}[0].song_name}}` - Solea
-<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` - "1000"
+`{{custom_attribute.${most_played_song}[0].artist_name}}` — "Miles Davis"
+<br> `{{custom_attribute.${most_played_song}[0].song_name}}` — "Solea"
+<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "1000"
 {% endraw %}
 
-![Utiliser Liquid pour utiliser dans un message le nom du morceau et le nombre de fois que l’utilisateur l’a écouté ]({% image_buster /assets/img_archive/nca_liquid_2.png %})
+![Utiliser Liquid pour insérer dans un message le nom du morceau et le nombre de fois que l'utilisateur l'a écouté]({% image_buster /assets/img_archive/nca_liquid_2.png %})
 
 ## Segmentation
 
-Vous pouvez créer des segments basés sur des attributs personnalisés imbriqués pour cibler encore plus précisément vos utilisateurs. Pour ce faire, filtrez votre segment en fonction de l’objet Attribut personnalisé, puis spécifiez le chemin vers le nom de propriété et la valeur associée que vous souhaitez segmenter. Si vous ne savez pas à quoi ressemble ce chemin, vous pouvez [générer un schéma](#generate-schema) et utiliser l'explorateur d'objets imbriqués pour demander à Braze de remplir ce chemin pour vous.
+Vous pouvez créer des segments basés sur des attributs personnalisés imbriqués pour cibler encore plus précisément vos utilisateurs. Pour ce faire, filtrez votre segment en fonction de l'objet d'attribut personnalisé, puis spécifiez le chemin vers le nom de la propriété et la valeur associée sur lesquels vous souhaitez segmenter. Si vous ne savez pas à quoi ressemble ce chemin, vous pouvez [générer un schéma](#generate-schema) et utiliser l'explorateur d'objets imbriqués pour que Braze remplisse ce chemin pour vous.
 
-Après avoir ajouté un chemin d'accès à votre propriété, sélectionnez **Valider** pour vérifier que la valeur du champ chemin d'accès est valide.
+Après avoir ajouté un chemin vers votre propriété, sélectionnez **Valider** pour vérifier que la valeur du champ chemin est valide.
 
-![Filtrage basé sur un attribut personnalisé de la chanson la plus jouée, où un auditeur a écouté une chanson plus d’un nombre de fois spécifié]({% image_buster /assets/img_archive/nca_segmentation_2.png %})
+![Filtrage basé sur un attribut personnalisé de la chanson la plus jouée, où un auditeur a écouté une chanson plus d'un nombre de fois spécifié]({% image_buster /assets/img_archive/nca_segmentation_2.png %})
 
 Pour segmenter avec des attributs personnalisés imbriqués, sélectionnez le filtre **Attributs personnalisés imbriqués** pour afficher une liste déroulante dans laquelle vous pouvez sélectionner un attribut personnalisé imbriqué spécifique.
 
 ![]({% image_buster /assets/img_archive/nested_custom_attributes.png %}){: style="max-width:70%;"}
 
-Quand vous travaillez sur la segmentation d’attributs personnalisés imbriqués, vous avez accès à un nouveau comparateur regroupé par type de données. Par exemple, comme `play_analytics.count` est un nombre, vous pouvez sélectionner un comparateur dans la catégorie **Nombre.** 
+Lorsque vous travaillez avec la segmentation d'attributs personnalisés imbriqués, vous avez accès à un nouveau comparateur regroupé par type de données. Par exemple, comme `play_analytics.count` est un nombre, vous pouvez sélectionner un comparateur dans la catégorie **Nombre**.
 
-![Un utilisateur choisissant un opérateur basé sur le type de données pour l’attribut personnalisé imbriqué]({% image_buster /assets/img_archive/nca_comparator.png %})
+![Un utilisateur choisissant un opérateur basé sur le type de données pour l'attribut personnalisé imbriqué]({% image_buster /assets/img_archive/nca_comparator.png %})
 
 ### Filtrage des types de données temporelles
 
 Lorsque vous filtrez un attribut personnalisé temporel imbriqué, vous pouvez choisir de filtrer avec des opérateurs dans les catégories **Jour de l'année** ou **Heure** lors de la comparaison de la valeur de la date. 
 
-Si vous sélectionnez un opérateur dans la catégorie **Jour de l'année**, seuls le mois et le jour seront vérifiés pour comparaison au lieu de l'horodatage complet de la valeur de l'attribut personnalisé imbriqué. La sélection d'un opérateur dans la catégorie **Temps** permet de comparer l'horodatage complet, y compris l'année.
+Si vous sélectionnez un opérateur dans la catégorie **Jour de l'année**, seuls le mois et le jour seront vérifiés pour la comparaison, au lieu de l'horodatage complet de la valeur de l'attribut personnalisé imbriqué. La sélection d'un opérateur dans la catégorie **Heure** permet de comparer l'horodatage complet, y compris l'année.
 
-### Segmentation sur plusieurs critères
+### Segmentation multicritères
 
-Utilisez la **segmentation multicritères** pour créer un segment correspondant à plusieurs critères au sein d'un même objet. L’utilisateur est qualifié pour le segment s’il a au moins un tableau d’objets correspondant à tous les critères définis. Par exemple, les utilisateurs ne correspondront à ce segment que si leur clé n’est pas vide et que leur nombre est supérieur à 0.
+Utilisez la **segmentation multicritères** pour créer un segment correspondant à plusieurs critères au sein d'un même objet. L'utilisateur est qualifié pour le segment s'il possède au moins un tableau d'objets correspondant à tous les critères définis. Par exemple, les utilisateurs ne correspondront à ce segment que si leur clé n'est pas vide et que leur nombre est supérieur à 0.
 
-Vous pouvez également utiliser la fonctionnalité **Copier le liquide pour le segment** pour générer un code liquide pour ce segment et l'utiliser dans un message. Par exemple, supposons que vous ayez un tableau d’objets de compte et un segment qui cible les clients avec des comptes imposables actifs. Pour que les clients contribuent à l’objectif du compte associé à l’un de leurs comptes actifs et imposables, vous devrez créer un message pour les encourager. 
+Vous pouvez également utiliser la fonctionnalité **Copier le Liquid pour le segment** pour générer du code Liquid pour ce segment et l'utiliser dans un message. Par exemple, supposons que vous ayez un tableau d'objets de comptes et un segment qui cible les clients avec des comptes imposables actifs. Pour inciter les clients à contribuer à l'objectif du compte associé à l'un de leurs comptes actifs et imposables, vous devrez créer un message pour les encourager. 
 
-![Un exemple de segment avec la case pour la segmentation sur plusieurs critères sélectionnée.]({% image_buster /assets/img_archive/nca_multi_criteria.png %})
+![Un exemple de segment avec la case pour la segmentation multicritères sélectionnée.]({% image_buster /assets/img_archive/nca_multi_criteria.png %})
 
-Lorsque vous sélectionnez **Copier Liquid pour le segment**, Braze génère automatiquement un code Liquid qui renvoie un tableau d'objets ne contenant que des comptes actifs et imposables.
+Lorsque vous sélectionnez **Copier le Liquid pour le segment**, Braze génère automatiquement du code Liquid qui renvoie un tableau d'objets ne contenant que des comptes actifs et imposables.
 
 {% raw %}
 
@@ -309,7 +309,7 @@ Lorsque vous sélectionnez **Copier Liquid pour le segment**, Braze génère aut
 {% endfor %}
 ```
 
-À partir de là, vous pouvez utiliser les `segmented_nested_objects` et personnaliser votre message. Dans cet exemple, nous voulons prendre un objectif du premier compte taxable actif et le personnaliser :
+À partir de là, vous pouvez utiliser `segmented_nested_objects` et personnaliser votre message. Dans cet exemple, nous voulons récupérer un objectif du premier compte imposable actif et le personnaliser :
 
 ```
 Get to your {{segmented_nested_objects[0].goal}} goal faster, make a deposit using our new fast deposit feature!
@@ -317,15 +317,15 @@ Get to your {{segmented_nested_objects[0].goal}} goal faster, make a deposit usi
 
 {% endraw %}
 
-Ceci renvoie le message suivant à votre client : « Atteignez votre objectif de retraite plus rapidement, effectuez un dépôt à l’aide de notre nouvelle fonctionnalité de dépôt rapide ! »
+Ceci renvoie le message suivant à votre client : « Atteignez votre objectif de retraite plus rapidement, effectuez un dépôt grâce à notre nouvelle fonctionnalité de dépôt rapide ! »
 
-### Générer un schéma à l’aide de l’explorateur d’objets imbriqué {#generate-schema}
+### Générer un schéma à l'aide de l'explorateur d'objets imbriqués {#generate-schema}
 
-Vous pouvez générer un schéma pour vos objets afin de créer des filtres de segment sans avoir besoin de mémoriser les chemins des objets imbriqués. Pour cela, suivez ces étapes.
+Vous pouvez générer un schéma pour vos objets afin de créer des filtres de segment sans avoir besoin de mémoriser les chemins des objets imbriqués. Pour cela, suivez les étapes ci-dessous.
 
-#### Étape 1 : Générez un schéma
+#### Étape 1 : Générer un schéma
 
-Dans cet exemple, supposons que nous avons `accounts` un tableau d’objets que nous venons de transmettre à Braze :
+Dans cet exemple, supposons que nous avons un tableau d'objets `accounts` que nous venons d'envoyer à Braze :
 
 ```json
 {"accounts": [
@@ -340,7 +340,7 @@ Dans cet exemple, supposons que nous avons `accounts` un tableau d’objets que 
 
 Dans le tableau de bord de Braze, accédez à **Paramètres des données** > **Attributs personnalisés**.
 
-Recherchez votre objet ou votre tableau d'objets. Dans la colonne **Nom de l'attribut**, sélectionnez **Générer un schéma.**
+Recherchez votre objet ou votre tableau d'objets. Dans la colonne **Nom de l'attribut**, sélectionnez **Générer un schéma**.
 
 ![]({% image_buster /assets/img_archive/nca_generate_schema.png %})
 
@@ -348,82 +348,106 @@ Recherchez votre objet ou votre tableau d'objets. Dans la colonne **Nom de l'att
 La génération du schéma peut prendre quelques minutes, en fonction de la quantité de données que vous nous avez envoyées.
 {% endalert %}
 
-Une fois le schéma généré, un nouveau bouton <i class="fas fa-plus"></i> plus apparaît à la place du bouton **Générer le schéma**. Vous pouvez cliquer dessus pour voir ce que Braze sait sur cet attribut personnalisé imbriqué. 
+Une fois le schéma généré, un nouveau bouton <i class="fas fa-plus"></i> plus apparaît à la place du bouton **Générer un schéma**. Vous pouvez cliquer dessus pour voir ce que Braze sait sur cet attribut personnalisé imbriqué. 
 
-Pendant la génération du schéma, Braze examine les données envoyées précédemment et crée une représentation idéale de vos données pour cet attribut. Braze analyse également vos valeurs imbriquées et leur attribue un type de données. Pour ce faire, les données précédemment envoyées à Braze pour l'attribut imbriqué donné sont échantillonnées.
+Pendant la génération du schéma, Braze examine les données envoyées précédemment et crée une représentation idéale de vos données pour cet attribut. Braze analyse également vos valeurs imbriquées et leur attribue un type de données, en échantillonnant les données précédemment envoyées pour l'attribut imbriqué donné.
 
-Pour notre tableau d’objets `accounts`, vous pouvez voir que dans le tableau d’objets, un objet contient ce qui suit :
+Pour notre tableau d'objets `accounts`, vous pouvez voir que dans le tableau d'objets, un objet contient les éléments suivants :
 
-- Type booléen avec une clé de `active` (indépendamment du fait que le compte soit actif ou non)
-- Un type de numéro avec une clé `balance` (solde du compte)
-- Un type de chaîne avec une clé `type` (compte imposable ou non imposable)
+- Une valeur booléenne avec une clé `active` (indépendamment du fait que le compte soit actif ou non)
+- Un type nombre avec une clé `balance` (solde du compte)
+- Un type chaîne de caractères avec une clé `type` (compte imposable ou non imposable)
 
 ![]({% image_buster /assets/img_archive/nca_schema.png %}){: style="max-width:50%" }
 
 Maintenant que nous avons analysé et créé une représentation des données, créons un segment.
 
-#### Étape 2 : Créer un segment
+#### Étape 2 : Créer un segment
 
-Ciblons les clients qui ont un solde inférieur à 100 pour leur envoyer un message et les encourager à regarnir leur compte.
+Ciblons les clients qui ont un solde inférieur à 100 pour leur envoyer un message les encourageant à effectuer un dépôt.
 
-Créer un segment et ajouter le filtre `Nested Custom Attribute`, puis recherchez et sélectionnez votre objet ou votre tableau d’objets. Ici, nous avons ajouté le tableau d’objets `accounts`. 
+Créez un segment et ajoutez le filtre `Nested Custom Attribute`, puis recherchez et sélectionnez votre objet ou votre tableau d'objets. Ici, nous avons ajouté le tableau d'objets `accounts`. 
 
 ![]({% image_buster /assets/img_archive/nca_segment_schema.png %})
 
-Sélectionnez le bouton <i class="fas fa-plus"></i> plus dans le champ du chemin d'accès. Cela affichera une représentation de votre objet ou de votre tableau d’objets. Vous pouvez sélectionner un ou plusieurs des éléments répertoriés et Braze les insérera dans le champ de chemin pour vous. Dans cet exemple, nous devons obtenir le solde. Sélectionnez le solde et le chemin (dans ce cas, `[].balance`) est automatiquement renseigné dans le champ du chemin.
+Sélectionnez le bouton <i class="fas fa-plus"></i> plus dans le champ du chemin. Cela affichera une représentation de votre objet ou de votre tableau d'objets. Vous pouvez sélectionner n'importe lequel des éléments répertoriés et Braze les insérera dans le champ du chemin pour vous. Dans cet exemple, nous devons obtenir le solde. Sélectionnez le solde et le chemin (dans ce cas, `[].balance`) est automatiquement renseigné dans le champ du chemin.
 
 ![]({% image_buster /assets/img_archive/nca_segment_schema2.png %}){: style="max-width:70%" }
 
-Vous pouvez sélectionner **Valider** pour vérifier que le contenu du champ chemin d'accès est valide, puis créer le reste du filtre si nécessaire. Nous avons indiqué que le solde doit être inférieur à 100.
+Vous pouvez sélectionner **Valider** pour vérifier que le contenu du champ chemin est valide, puis créer le reste du filtre selon vos besoins. Ici, nous avons indiqué que le solde doit être inférieur à 100.
 
 ![]({% image_buster /assets/img_archive/nca_segment_schema_3.png %})
 
-Et voilà ! Vous venez de créer un segment à l’aide d’un attribut personnalisé imbriqué, sans avoir besoin de savoir comment les données sont structurées. L'explorateur d'objets imbriqués de Braze a généré une représentation visuelle de vos données et vous a permis d'explorer et de sélectionner exactement ce dont vous aviez besoin pour créer un segment.
+Et voilà ! Vous venez de créer un segment à l'aide d'un attribut personnalisé imbriqué, sans avoir besoin de connaître la structure des données. L'explorateur d'objets imbriqués de Braze a généré une représentation visuelle de vos données et vous a permis d'explorer et de sélectionner exactement ce dont vous aviez besoin pour créer un segment.
 
-### Déclencher les modifications d’attributs personnalisés imbriqués
+### Déclencher des modifications d'attributs personnalisés imbriqués
 
-Vous pouvez déclencher lorsqu’un objet d’attribut personnalisé imbriqué est modifié. Cette option n'est pas disponible pour les modifications apportées aux tableaux d'objets. Si vous ne voyez pas l’option pour afficher l’explorateur de chemin, vérifiez que vous avez généré un schéma. 
+Vous pouvez déclencher une action lorsqu'un objet d'attribut personnalisé imbriqué est modifié. Cette option n'est pas disponible pour les modifications apportées aux tableaux d'objets. Si vous ne voyez pas l'option pour afficher l'explorateur de chemin, vérifiez que vous avez généré un schéma. 
 
 ![]({% image_buster /assets/img_archive/nca_triggered_changes2.png %})
 
-Par exemple, dans la campagne par action suivante, vous pouvez ajouter une nouvelle action de déclenchement pour **Modifier la valeur de l'attribut personnalisé** afin de cibler les utilisateurs qui ont modifié leurs préférences en matière de bureau de quartier. 
+Par exemple, dans la campagne par action suivante, vous pouvez ajouter une nouvelle action de déclenchement pour **Modifier la valeur de l'attribut personnalisé** afin de cibler les utilisateurs qui ont modifié leurs préférences de bureau de quartier. 
 
 ![]({% image_buster /assets/img_archive/nca_triggered_changes.png %})
 
 ### Personnalisation
 
-Grâce à la fenêtre modale/boîte de **personnalisation**, vous pouvez également insérer des attributs personnalisés imbriqués dans votre envoi de messages. Sélectionnez **Attributs personnalisés imbriqués** comme type de personnalisation. Ensuite, sélectionnez l’attribut de niveau supérieur et la clé d’attribut. 
+Grâce à la fenêtre modale **Ajouter une personnalisation**, vous pouvez également insérer des attributs personnalisés imbriqués dans vos messages. Sélectionnez **Attributs personnalisés imbriqués** comme type de personnalisation. Ensuite, sélectionnez l'attribut de niveau supérieur et la clé d'attribut. 
 
-Par exemple, dans le modal de personnalisation ci-dessous, cela insère l’attribut personnalisé imbriqué d’un bureau de quartier local basé sur les préférences d’un utilisateur.
+Par exemple, dans la fenêtre modale de personnalisation ci-dessous, cela insère l'attribut personnalisé imbriqué d'un bureau de quartier local basé sur les préférences d'un utilisateur.
 
 ![]({% image_buster /assets/img_archive/nca_personalization.png %}){: style="max-width:70%" }
 
 {% alert tip %}
-Vérifiez qu’un schéma a été généré si vous ne voyez pas l’option d’insérer des attributs personnalisés imbriqués.
+Vérifiez qu'un schéma a été généré si vous ne voyez pas l'option d'insérer des attributs personnalisés imbriqués.
 {% endalert %}
 
-### Régénérez un schéma {#regenerate-schema}
+### Régénérer un schéma {#regenerate-schema}
 
-Après qu’un schéma a été généré, il peut l’être à nouveau toutes les 24 heures. Cette section décrit comment régénérer votre schéma. Pour plus d'informations sur les schémas, reportez-vous à la section de cet article consacrée à la [génération d'un schéma](#generate-schema).
+Après qu'un schéma a été généré, il peut être régénéré toutes les 24 heures. Cette section décrit comment régénérer votre schéma. Pour plus d'informations sur les schémas, reportez-vous à la section de cet article consacrée à la [génération d'un schéma](#generate-schema).
 
 Pour régénérer le schéma de votre attribut personnalisé imbriqué :
 
-1. Sélectionnez **Paramètres des données** > **Attributs personnalisés**.
+1. Accédez à **Paramètres des données** > **Attributs personnalisés**.
 2. Recherchez votre attribut personnalisé imbriqué.
-3. Dans la colonne **Nom de** l'attribut, sélectionnez <i class="fas fa-plus"></i> pour gérer le schéma.
+3. Dans la colonne **Nom de l'attribut**, sélectionnez <i class="fas fa-plus"></i> pour gérer le schéma.
 4. Une fenêtre modale apparaît. Sélectionnez **Régénérer le schéma**.
 
-L'option de régénération du schéma sera désactivée s'il s'est écoulé moins de 24 heures depuis la dernière régénération du schéma. La régénération du schéma ne détectera que les nouveaux objets et ne supprimera pas les objets qui existent déjà dans le schéma.
+L'option de régénération du schéma sera désactivée s'il s'est écoulé moins de 24 heures depuis la dernière régénération. La régénération du schéma ne détectera que les nouveaux objets et ne supprimera pas les objets qui existent déjà dans le schéma.
 
 {% alert important %}
 Pour réinitialiser le schéma d'un tableau d'objets avec un objet existant, vous devez créer un nouvel attribut personnalisé. La régénération du schéma ne supprime pas les objets existants.
 {% endalert %}
 
-Si les données n'apparaissent pas comme prévu après la régénération du schéma, il se peut que l'attribut ne soit pas ingéré assez souvent. Les données de l'utilisateur sont échantillonnées sur les données précédentes envoyées à Braze pour l'attribut imbriqué donné. Si l'attribut n'est pas suffisamment ingéré, il ne sera pas pris en compte dans le schéma.
+Si les données n'apparaissent pas comme prévu après la régénération du schéma, il se peut que l'attribut ne soit pas ingéré assez souvent. Les données utilisateur sont échantillonnées à partir des données précédemment envoyées à Braze pour l'attribut imbriqué donné. Si l'attribut n'est pas suffisamment ingéré, il ne sera pas pris en compte dans le schéma.
+
+## Comportement de la segmentation avec les tableaux d'objets
+
+Lorsque vous utilisez plusieurs filtres `Nested Custom Attribute` avec une logique ET pour segmenter sur un tableau d'objets, chaque filtre est évalué indépendamment sur l'ensemble des éléments du tableau. Un utilisateur est qualifié pour le segment si _n'importe quel_ élément du tableau satisfait chaque filtre individuel — les filtres n'ont pas besoin de correspondre au _même_ élément.
+
+Par exemple, supposons qu'un utilisateur possède le tableau suivant :
+
+```json
+{
+  "orders": [
+    {"product": "Shoes", "price": 80},
+    {"product": "Hat", "price": 25}
+  ]
+}
+```
+
+Un segment avec les filtres ET suivants :
+
+- `orders[].price` est supérieur à 50
+- `orders[].price` est inférieur à 30
+
+Cet utilisateur serait qualifié car le premier filtre correspond à l'élément « Shoes » (80 > 50) et le second filtre correspond à l'élément « Hat » (25 < 30). Même si aucun élément unique ne satisfait les deux conditions, l'utilisateur entre tout de même dans le segment.
+
+Si vous avez besoin que toutes les conditions correspondent au même élément dans un tableau, utilisez la [segmentation multicritères](#multi-criteria-segmentation) sur le même chemin, ou restructurez vos données pour éviter la correspondance inter-éléments.
 
 ## Points de données
 
-Toute clé envoyée consomme un point de données. Par exemple, cet objet initialisé dans le profil utilisateur consomme sept (7) points de données :
+Toute clé envoyée consomme un point de donnée. Par exemple, cet objet initialisé dans le profil utilisateur consomme sept (7) points de données :
 
 ```json
 {
@@ -447,6 +471,5 @@ Toute clé envoyée consomme un point de données. Par exemple, cet objet initia
 ```
 
 {% alert note %}
-La mise à jour d’un objet d’attribut personnalisé vers `null` consomme également un point de données.
+La mise à jour d'un objet d'attribut personnalisé vers `null` consomme également un point de donnée.
 {% endalert %}
-
