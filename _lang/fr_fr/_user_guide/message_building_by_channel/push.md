@@ -61,7 +61,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [![C](https://learning.braze.com/path/push-fundamentals)ours[]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"} [Braze Learning](https://learning.braze.com/path/push-fundamentals) Cas d'utilisation
+## [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"} Cas d'utilisation
 
 ![Exemple de message de notification push pour des produits Apple.]({% image_buster /assets/img/red-dress.gif %}){: height="400px"}  ![Exemple de message de notification push de Stopwatch sur un écran d’accueil iPhone qui affiche : « Bonjour ! Ceci est une notification push iOS ».]({% image_buster /assets/img/ios_push.png %}){: height="400px"}
 

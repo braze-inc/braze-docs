@@ -6,7 +6,7 @@ description: "Le filtre de canal intelligent sélectionne la partie de votre aud
 search_rank: 11
 ---
 
-# [![Cours Braze ]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}[LearningFiltre](https://learning.braze.com/most-engaged-channel) de canal intelligent
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"} Filtre de canal intelligent
 
 > Le filtre `Intelligent Channel` (précédemment `Most Engaged`) sélectionne la partie de votre audience pour laquelle le canal d'envoi de messages sélectionné est leur "meilleur" canal. 
 

@@ -7,7 +7,7 @@ description: "Cet article décrit les événements/ propriétés personnalisés,
 search_rank: 2
 ---
 
-# [![](https://learning.braze.com/custom-events-and-attributes)C[ours]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} [Braze Learning](https://learning.braze.com/custom-events-and-attributes) Événements personnalisés
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Événements personnalisés
 
 > Cet article décrit les événements/ propriétés personnalisés, les filtres de segmentation associés, les propriétés d'entrée dans Canvas, les analyses pertinentes, etc. Pour en savoir plus sur les événements de Braze en général, consultez la rubrique [Événements.]({{site.baseurl}}/user_guide/data/custom_data/events/)
 

@@ -8,7 +8,7 @@ tool: Segments
 search_rank: 3
 ---
 
-# [![](https://learning.braze.com/segmentation-course)C[urso]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} [de Braze Learning:](https://learning.braze.com/segmentation-course) Crear un segmento
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Crear un segmento
 
 > La segmentación le permite dirigirse a los usuarios en función de sus características y acciones demográficas, de comportamiento o técnicas. El uso creativo e inteligente de la segmentación y la automatización de la mensajería le permite hacer que sus usuarios pasen sin problemas del primer contacto al cliente a largo plazo. Los segmentos se actualizan en tiempo real a medida que cambian los datos, y usted puede crear tantos segmentos como necesite para sus fines de segmentación y mensajería.
 

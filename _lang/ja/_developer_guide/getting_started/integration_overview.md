@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}[学習](https://learning.braze.com/sdk-integration-basics)コースはじめに：統合の概要
+# [![Braze学習コース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}はじめに：統合の概要
 
 > この記事では、オンボーディング・プロセスの基本的な概要を説明する。
 

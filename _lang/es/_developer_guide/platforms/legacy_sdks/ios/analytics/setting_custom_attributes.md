@@ -12,7 +12,7 @@ noindex: true
 
 # Establecer atributos personalizados para iOS
 
-Braze proporciona métodos para asignar atributos a los usuarios. Podrás filtrar y segmentar a tus usuarios según estos atributos en el panel.
+Braze proporciona métodos para asignar atributos a los usuarios. Podrás filtrar y segmentar a tus usuarios según estos atributos en el dashboard.
 
 Antes de la implementación, asegúrate de revisar los ejemplos de las opciones de segmentación que ofrecen los eventos personalizados, los atributos personalizados y los eventos de compra en nuestras [mejores prácticas]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection), así como nuestras notas sobre [las convenciones de denominación de eventos]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/).
 
@@ -136,7 +136,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 
 ### Atributo personalizado con un valor de fecha
 
-Las fechas pasadas a Braze con este método deben estar en el formato [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) (e.g `2013-07-16T19:20:30+01:00`) o en el formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ` (`2016-12-14T13:32:31.601-0800`).
+Las fechas pasadas a Braze con este método deben estar en el formato [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) (p. ej., `2013-07-16T19:20:30+01:00`) o en el formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ` (`2016-12-14T13:32:31.601-0800`).
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -157,7 +157,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 
 ### Atributo personalizado con un valor de matriz
 
-El número máximo de elementos de [las matrices de atributos personalizadas]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) está predeterminado en 25. Las matrices que superan la cantidad máxima de elementos se truncan para contener la cantidad máxima de elementos. El máximo para matrices individuales se puede aumentar hasta 500. Para aumentar este límite por encima de 500, ponte en contacto con tu administrador del éxito del cliente de Braze.
+La cantidad predeterminada y máxima de elementos en una matriz es de 500. Puedes actualizar la cantidad máxima de elementos de las matrices en el dashboard de Braze, en **Configuración de datos** > **Atributos personalizados**. Las matrices que superan la cantidad máxima de elementos se truncan para contener la cantidad máxima de elementos.
 
 
 {% tabs %}
@@ -231,7 +231,7 @@ Appboy.sharedInstance()?.user.incrementCustomUserAttribute("your_attribute_key",
 {% endtab %}
 {% endtabs %}
 
-### Configuración de un atributo personalizado a través de la API REST
+### Configurar un atributo personalizado a través de la API REST
 
 También puedes utilizar nuestra API REST para establecer atributos de usuario. Consulta la [documentación de la API de usuario]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) para más detalles.
 
@@ -241,8 +241,8 @@ Los valores de atributos personalizados tienen una longitud máxima de 255 carac
 
 #### Información adicional
 
-- Puedes encontrar más detalles en el [archivo`ABKUser.h` ](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h).
-- Consulta la [documentación de`ABKUser` ](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html) para obtener más información.
+- Puedes encontrar más detalles en el [archivo `ABKUser.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h).
+- Consulta la [documentación de `ABKUser`](http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html) para obtener más información.
 
 ## Configuración de las suscripciones de los usuarios
 
@@ -252,10 +252,10 @@ Para configurar una suscripción para tus usuarios (por correo electrónico o pu
 | ------------------- | ---------- |
 | `ABKOptedin` | Suscrito y con adhesión voluntaria explícita |
 | `ABKSubscribed` | Suscrito, pero sin adhesión voluntaria explícita |
-| `ABKUnsubscribed` | No suscrito y/o sin adhesión voluntaria explícita |
+| `ABKUnsubscribed` | No suscrito y/o con exclusión voluntaria explícita |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Los usuarios que conceden permiso para que una aplicación les envíe notificaciones push están predeterminados al estado de `ABKOptedin`, ya que iOS requiere una adhesión voluntaria explícita.
+Los usuarios que conceden permiso para que una aplicación les envíe notificaciones push tienen de forma predeterminada el estado `ABKOptedin`, ya que iOS requiere una adhesión voluntaria explícita.
 
 Los usuarios se configurarán en `ABKSubscribed` automáticamente al recibir una dirección de correo electrónico válida; sin embargo, te sugerimos que establezcas un proceso de adhesión voluntaria explícito y configures este valor en `OptedIn` al recibir el consentimiento explícito de tu usuario. Consulta la sección [Gestión de las suscripciones de los usuarios]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) para obtener más detalles.
 
@@ -298,4 +298,3 @@ Appboy.sharedInstance()?.user.setPushNotificationSubscriptionType(ABKNotificatio
 {% endtabs %}
 
 Consulta la sección [Gestión de las suscripciones de los usuarios]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) para obtener más detalles.
-

@@ -1,20 +1,20 @@
 ---
-nav_title: AIモデル・プロバイダー
-article_title: AIモデル・プロバイダー
+nav_title: AIモデルプロバイダー
+article_title: AIモデルプロバイダー
 page_order: 11
 
 page_type: landing
-description: "このランディングページには、カスタムAIエージェントで使用するためにBrazeと統合できるAIモデルプロバイダーがリストアップされている。"
+description: "このランディングページでは、カスタムAIエージェントで使用するためにBrazeと統合できるAIモデルプロバイダーを紹介しています。"
 layout: partner_page
 search_tag: Partner
 
-partner_top_header: "AI Model Providers"
+partner_top_header: "AIモデルプロバイダー"
 
 valid_partner_list:
-- name: オープンAI
+- name: OpenAI
   url: /docs/partners/openai/
-- name: グーグル双子座
-  url: /docs/partners/google_gemini/
-- name: アンソロピック
+- name: Google Gemini
+  url: /docs/partners/gemini/
+- name: Anthropic
   url: /docs/partners/anthropic/
 ---

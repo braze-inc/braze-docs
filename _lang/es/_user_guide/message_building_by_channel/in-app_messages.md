@@ -9,7 +9,7 @@ channel:
 search_rank: 5
 ---
 
-# [![Curso de Braze ]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"}[Learning](https://learning.braze.com/messaging-channels-in-app-in-browser) Mensajes dentro de la aplicación
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} Mensajes dentro de la aplicación
 
 > Los mensajes dentro de la aplicación te ayudan a entregar contenido a tus usuarios sin interrumpir su día con una notificación push, ya que estos mensajes no se entregan fuera de la aplicación del usuario y no invaden tu pantalla de inicio. 
 
