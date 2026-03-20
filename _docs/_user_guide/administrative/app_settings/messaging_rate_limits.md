@@ -21,7 +21,7 @@ Workspace messaging rate limits apply to the aggregate of messages sent in your 
 {% alert note %}
 Keep in mind that messages sent using API messaging endpoints like `/messages/send` and `/messages/schedule/create` are also counted and impacted by workspace messaging rate limits.
 {% endalert %}
-The total count of messages sent per minute will not exceed the configured workspace rate limits. There is no particular ordering of which campaigns will dispatch within the first few minutes as opposed to the later minutes.
+The total count of messages sent per minute do not exceed the configured workspace rate limits. There is no particular ordering of which campaigns dispatch within the first few minutes as opposed to the later minutes.
 
 For example, let’s say you have a workspace messaging rate limit of 100,000 messages per minute, and the following messages are all processing at 12 pm:
 
@@ -32,9 +32,9 @@ For example, let’s say you have a workspace messaging rate limit of 100,000 me
 | Campaign 3 | 100,000            | 12 pm     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-The messages will be dispatched over a 3-minute interval.
+The messages are dispatched over a 3-minute interval.
 
-Messages are processed in parallel. When processed, messages are scheduled out to respect the workspace messaging rate limit on a first-come, first-served basis. This means that in the example above, the messages sent out each minute will be a varying mix from Campaigns 1, 2, and 3 that add up to 100,000.
+Messages are processed in parallel. When processed, messages are scheduled out to respect the workspace messaging rate limit on a first-come, first-served basis. This means that in the example above, the messages sent out each minute are a varying mix from Campaigns 1, 2, and 3 that add up to 100,000.
 
 ![Example of how messages are dispatched for the three campaigns.]({% image_buster /assets/img/workspace_messaging_rate_limits2.png %})
 
@@ -54,7 +54,7 @@ The following is the expected dispatch schedule and messages sent per minute:
 ![Example of how messages are dispatched per minute for the two campaigns.]({% image_buster /assets/img/workspace_messaging_rate_limits1.png %})
 
 {% alert note %}
-After you set the workspace messaging rate limit, you can increase it. However, every message already processed before the increase will use the previously set limit. 
+After you set the workspace messaging rate limit, you can increase it. However, every message already processed before the increase uses the previously set limit. 
 {% endalert %}
 
 ## Setting your workspace messaging rate limit
@@ -66,16 +66,16 @@ After you set the workspace messaging rate limit, you can increase it. However, 
 
 ## Things to know
 
-The rate limit is applied to the dispatch, meaning the start of the message send attempt. When there are fluctuations in the time it takes for the send to complete, the number of completed sends may slightly exceed the rate limit in some minutes. Over time, the number of sends per minute will average out to no more than the rate limit.
+The rate limit is applied to the dispatch, meaning the start of the message send attempt. When there are fluctuations in the time it takes for the send to complete, the number of completed sends may slightly exceed the rate limit in some minutes. Over time, the number of sends per minute average out to no more than the rate limit.
 
-When a campaign or Canvas has its own rate limit set and a workspace-level rate limit that applies, both are applied. For example, if a campaign has a rate limit of 500,000 but, due to workspace rate limits, it can only send 100,000 messages per minute at this time, then the workspace rate limit will take effect.
+When a campaign or Canvas has its own rate limit set and a workspace-level rate limit that applies, both are applied. For example, if a campaign has a rate limit of 500,000 but, due to workspace rate limits, it can only send 100,000 messages per minute at this time, then the workspace rate limit takes effect.
 
-Braze will try to evenly distribute the message dispatches throughout the minute, but can’t guarantee this. For example, if you have a campaign with a rate limit of 500,000 messages per minute, we’ll try to distribute the 500,000 messages evenly through the minute (about 8,400 messages per second), but there may be some variation in the per-second rate.
+Braze tries to evenly distribute the message dispatches throughout the minute, but can’t guarantee this. For example, if you have a campaign with a rate limit of 500,000 messages per minute, we’ll try to distribute the 500,000 messages evenly through the minute (about 8,400 messages per second), but there may be some variation in the per-second rate.
 
 Note that you can still set individual rate limits in your campaigns and Canvases. These are applied independently of workspace messaging rate limits.
 
 ### Messages not included in the workspace messaging rate limits
 
-- Messages sent using [Transactional Email campaigns]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign) are not included in the workspace messaging rate limits. This means they will not be rate-limited and will not be counted towards any set workspace messaging rate limits.
-- Messages to [Seed Groups]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab#seed-groups) and [test sends]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages) are not included in the workspace messaging rate limits. This means they will not be rate-limited and will not be counted towards any set workspace messaging rate limits.
-- SMS auto-responses are not included in the workspace messaging rate limits. This means they will not be rate-limited and will not be counted towards any set workspace messaging rate limits.
+- Messages sent using [Transactional Email campaigns]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign) are not included in the workspace messaging rate limits. This means they are rate-limited and are not counted toward any set workspace messaging rate limits.
+- Messages to [Seed Groups]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab#seed-groups) and [test sends]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages) are not included in the workspace messaging rate limits. This means they are not be rate-limited and are not counted toward any set workspace messaging rate limits.
+- SMS auto-responses are not included in the workspace messaging rate limits. This means they are not rate-limited and are not counted toward any set workspace messaging rate limits.
