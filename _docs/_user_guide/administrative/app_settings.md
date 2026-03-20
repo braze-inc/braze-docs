@@ -47,6 +47,9 @@ guide_menu_list:
   - name: Brand Guidelines
     link: /docs/user_guide/administrative/app_settings/brand_guidelines/
     image: /assets/img/braze_icons/edit-05.svg
+  - name: Messaging Rate Limits
+    link: /docs/user_guide/administrative/app_settings/messaging_rate_limits/
+    image: /assets/img/braze_icons/mail-01.svg
 
 guide_menu_title2: "Company settings"
 guide_menu_list2:
