@@ -1,11 +1,11 @@
 ---
 nav_title: "GET: URL für das Einstellungszentrum generieren"
-article_title: "GET: URL des Präferenzzentrums generieren"
+article_title: "GET: URL für das Einstellungszentrum generieren"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Endpunkts Generate preference center URL Braze."
+description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts „URL für das Einstellungszentrum generieren"."
 
 ---
 {% api %}
@@ -16,7 +16,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Generate prefe
 
 > Verwenden Sie diesen Endpunkt, um eine URL für ein Einstellungszentrum zu generieren.
 
-Die URL der Einstellungszentrale ist für jeden Nutzer:innen eindeutig.
+Jede URL des Einstellungszentrums ist für jede:n Nutzer:in eindeutig.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bc750ff-068e-4391-897e-6eddca2561cd {% endapiref %}
 
@@ -26,25 +26,25 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 ## Rate-Limit
 
-Für diesen Endpunkt gilt ein Rate-Limits von 1.000 Anfragen pro Minute und Workspace.
+{% multi_lang_include rate_limits.md endpoint='get preference center' %} Dieses Rate-Limit ist fest und nicht konfigurierbar.
 
 ## Pfad-Parameter
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| Erforderlich | String | Die ID für Ihr Präferenzzentrum. |
-|`userID`| Erforderlich | String | Die Nutzer:innen ID. |
+|`preferenceCenterExternalID`| Erforderlich | String | Die ID für Ihr Einstellungszentrum. |
+|`userID`| Erforderlich | String | Die Nutzer-ID. |
 {:  role="presentation" }
 
-## Parameter der Anfrage
+## Anfrage-Parameter
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-|`preference_center_api_id`| Erforderlich | String | Die ID für Ihr Präferenzzentrum. |
-|`external_id`| Erforderlich | String | Die externe ID für einen Nutzer:in. |
+|`preference_center_api_id`| Erforderlich | String | Die ID für Ihr Einstellungszentrum. |
+|`external_id`| Erforderlich | String | Die externe ID für eine:n Nutzer:in. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## Beispiel Anfrage
+## Beispielanfrage
 
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/preference_center/v1/$preference_center_external_id/url/$user_external_id' \
