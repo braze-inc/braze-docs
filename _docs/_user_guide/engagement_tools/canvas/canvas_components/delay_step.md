@@ -13,16 +13,11 @@ tool: Canvas
 
 > Delay components allow you to add a stand-alone delay to a Canvas. You can add a delay to your Canvas without needing to add an associated message. 
 
-Delays can make your Canvas look cleaner. You can also use this component to delay a different step until an exact date, until a specific day, or until a specific day of the week. <br> ![A Delay step with a 1-day delay as the first step of a Canvas.]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+Delays can make your Canvas look cleaner. You can also use this component to delay a different step until an exact date, until a specific day, or until a specific day of the week. A Delay component can only connect to one next step. <br> ![A Delay step with a 1-day delay as the first step of a Canvas.]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
-## Creating a delay
+## Create a delay
 
-To create a delay, add a step to your Canvas. Drag and drop the Delay component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Delay**.
-
-There are several details to consider when creating a delay in your Canvas journey.
-
-- The delay limit is 30 days.
-- A Delay component can only connect to one next step.
+To create a delay, add a step to your Canvas. Drag and drop the Delay component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Delay**.
 
 #### Extended delays
 
