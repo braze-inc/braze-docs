@@ -252,10 +252,11 @@ $(document).ready(function() {
     </div>
 
     <div id="api_list" class="flex mx-auto api_div">
-      {% capture _last_updated_markup %}{% include last_updated.html %}{% endcapture %}
-      {{ content | insert_after_first_h1: _last_updated_markup }}
+      {{ content }}
     </div>
     <div id="results_msg"></div>
+
+    {% include last_updated.html %}
 
   </div>
     {%- unless hide_bottom_nav -%}

@@ -46,7 +46,6 @@ layout: default
     {%- endunless -%}
 
     <h1> {{ page.guide_top_header }} </h1>
-    {% include last_updated.html %}
     <p>  {{ page.guide_top_text | markdownify }} </p>
 
 
@@ -77,6 +76,8 @@ layout: default
     </div>
 
     {{ content }}
+
+    {% include last_updated.html %}
 
   </div>
 

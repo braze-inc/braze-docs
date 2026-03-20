@@ -34,55 +34,55 @@ module Jekyll
         return
       end
 
-      site.documents.each do |doc|
-        next unless process_document?(doc)
-
-        canonical_rel = canonical_english_relative_path(doc)
-        next if canonical_rel.nil? || canonical_rel.empty?
-
-        canonical_abs = File.join(@source, canonical_rel)
-        next unless File.file?(canonical_abs)
-
-        dep_abs = dependency_files_for(canonical_abs)
-        rel_paths = dep_abs.filter_map { |p| relative_to_source(p) }.uniq
-
-        ts = latest_timestamp_for(rel_paths, dep_abs)
-        doc.data["last_modified_at"] = ts if ts
-      end
+      (site.documents + site.pages).each { |item| apply_last_modified!(item) }
     end
 
     private
 
-    def process_document?(doc)
-      return false if doc.output == false
+    def apply_last_modified!(item)
+      return unless processable?(item)
 
-      layout = doc.data["layout"]
-      return false if %w[redirect blank_config].include?(layout.to_s)
+      abs = content_markdown_abs(item)
+      return if abs.nil? || !File.file?(abs)
+
+      dep_abs = dependency_files_for(abs)
+      rel_paths = dep_abs.filter_map { |p| relative_to_source(p) }.uniq
+
+      ts = latest_timestamp_for(rel_paths, dep_abs)
+      item.data["last_modified_at"] = ts if ts
+    end
+
+    def processable?(item)
+      return false if item.respond_to?(:output) && item.output == false
+      return false if item.data && item.data["output"] == false
 
       true
     end
 
-    # English canonical path relative to site source (POSIX slashes).
-    def canonical_english_relative_path(doc)
-      raw = path_relative_to_source(doc)
+    # Prefer English canonical under _docs/ for localized paths; else use the page's own source file.
+    def content_markdown_abs(item)
+      raw = path_relative_to_source(item)
+      return nil if raw.nil? || raw.empty?
+
       if (m = raw.match(%r{\A_lang/[^/]+/(.+)\z}))
         candidate = "_docs/#{m[1]}"
-        return candidate if File.file?(File.join(@source, candidate))
+        cand_abs = File.join(@source, candidate)
+        return cand_abs if File.file?(cand_abs)
+      end
 
-        Jekyll.logger.debug "GitLastModified:", "No English source at #{candidate} for #{raw}, skipping"
-        return nil
-      end
-      return raw if raw.start_with?("_docs/")
-      # Fallback: path may omit _docs prefix on some Jekyll versions
-      if File.file?(File.join(@source, "_docs", raw))
-        File.join("_docs", raw).tr("\\", "/")
-      else
-        raw
-      end
+      return File.join(@source, raw) if raw.start_with?("_docs/") && File.file?(File.join(@source, raw))
+
+      under_docs = File.join(@source, "_docs", raw)
+      return under_docs if File.file?(under_docs)
+
+      fallback = File.join(@source, raw)
+      return fallback if File.file?(fallback)
+
+      nil
     end
 
-    def path_relative_to_source(doc)
-      p = doc.path.to_s
+    def path_relative_to_source(item)
+      p = item.path.to_s
       pathname = Pathname.new(p)
       rel = if pathname.absolute?
               pathname.relative_path_from(Pathname.new(@source))
@@ -134,7 +134,7 @@ module Jekyll
     # Yields include paths relative to _includes/ (English canonical — matches multi_lang_include for :en).
     def include_refs(content)
       refs = []
-      content.scan(TAG_BODY) do |tag, inner|
+      content.scan(TAG_BODY) do |_tag, inner|
         rest = inner.to_s.strip
         next if rest.lstrip.start_with?("{{")
 

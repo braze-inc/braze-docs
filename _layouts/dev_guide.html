@@ -49,7 +49,6 @@ hide_breadcrumb: false
     {%- endunless -%}
 
     <h1> {{ page.guide_top_header }} </h1>
-    {% include last_updated.html %}
     <p>  {{ page.guide_top_text | markdownify }} </p>
     <p>  {{ page.guide_top_text2 | markdownify }} </p>
     <p>  {{ page.guide_top_text3 | markdownify }} </p>
@@ -349,6 +348,8 @@ hide_breadcrumb: false
     <div style="clear: left;margin-top: 5rem;"></div>
     {%- if page.guide_footer_header and page.guide_footer_header != "" and page.guide_footer_header != " " -%}<h1> {{ page.guide_footer_header }} </h1>{%- endif -%}
     <p>  {{ page.guide_footer_text }} </p>
+
+    {% include last_updated.html %}
 
   </div>
 

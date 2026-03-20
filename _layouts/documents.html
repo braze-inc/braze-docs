@@ -56,8 +56,8 @@ hide_binary_feedback: false
 
     {% include ai_translation_banner.html %}
 
-    {% capture _last_updated_markup %}{% include last_updated.html %}{% endcapture %}
-    {{ content | insert_after_first_h1: _last_updated_markup }}
+    {{ content }}
+    {% include last_updated.html %}
 
     </div>
 

@@ -8,6 +8,10 @@
     <script tyle="text/javascript">window.location="{{ site.baseurl }}/"</script>
     <meta http-equiv="refresh" content="0; url={{ site.baseurl}}/">
     <meta name="robots" content="noindex">
+    {%- if page.last_modified_at -%}
+    <meta name="braze-documentation-last-modified" content="{{ page.last_modified_at | date: '%s' }}">
+    <meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}">
+    {%- endif -%}
 </head>
 <body>
 

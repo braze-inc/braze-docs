@@ -45,7 +45,6 @@ hide_breadcrumb: false
     </div>
     {%- endunless -%}
     <h1> {{ page.help_top_header }} </h1>
-    {% include last_updated.html %}
     <p>  {{ page.user_top_text | markdownify }} </p>
 
     <div id="user-main">
@@ -119,6 +118,8 @@ hide_breadcrumb: false
 
         </div>
     </div>
+
+    {% include last_updated.html %}
 
   </div>
 </div>
