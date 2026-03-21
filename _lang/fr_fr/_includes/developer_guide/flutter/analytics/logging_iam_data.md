@@ -2,13 +2,13 @@
 
 ## Enregistrement des données des messages
 
-Pour enregistrer les analyses à l’aide de votre `BrazeInAppMessage`, passez l’instance dans la fonction d’analyses souhaitée :
+Pour enregistrer les analyses à l'aide de votre `BrazeInAppMessage`, passez l'instance dans la fonction d'analyse souhaitée :
 
 - `logInAppMessageClicked`
 - `logInAppMessageImpression`
-- `logInAppMessageButtonClicked` (avec l’index des boutons)
+- `logInAppMessageButtonClicked` (avec l'index du bouton)
 
-Par exemple :
+Par exemple :
 
 ```dart
 // Log a click
@@ -21,13 +21,13 @@ braze.logInAppMessageButtonClicked(inAppMessage, 0);
 
 ## Accès aux données des messages
 
-Pour accéder aux données des messages in-app dans votre application Flutter, le`BrazePlugin`  prend en charge l'envoi de données de messages in-app à l'aide de [Dart Streams](https://dart.dev/tutorials/language/streams).
+Pour accéder aux données des messages in-app dans votre application Flutter, le `BrazePlugin` prend en charge l'envoi de données de messages in-app à l'aide de [Dart Streams](https://dart.dev/tutorials/language/streams).
 
-L’objet `BrazeInAppMessage` prend en charge un sous-ensemble de champs disponibles dans les objets du modèle natif, y compris `uri`, `message`, `header`, `buttons`, `extras` et plus encore.
+L'objet `BrazeInAppMessage` prend en charge un sous-ensemble de champs disponibles dans les objets du modèle natif, notamment `uri`, `message`, `header`, `buttons`, `extras`, et d'autres.
 
-### Étape 1 : Écouter les données des messages in-app dans la couche Dart
+### Écouter les données des messages in-app dans la couche Dart
 
-Pour recevoir les données des messages in-app dans la couche Dart, utilisez le code ci-dessous pour créer un `StreamSubscription` et appeler `braze.subscribeToInAppMessages()`. N’oubliez pas de `cancel()` l’abonnement au flux lorsqu’il n’est plus nécessaire.
+Pour recevoir les données des messages in-app dans la couche Dart, utilisez le code ci-dessous pour créer un `StreamSubscription` et appeler `braze.subscribeToInAppMessages()`. N'oubliez pas d'appeler `cancel()` sur l'abonnement au flux lorsqu'il n'est plus nécessaire.
 
 ```dart
 // Create stream subscription
@@ -41,37 +41,31 @@ inAppMessageStreamSubscription = braze.subscribeToInAppMessages((BrazeInAppMessa
 inAppMessageStreamSubscription.cancel();
 ```
 
-Consultez [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart) dans notre exemple d'application.
+Consultez [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart) dans l'exemple d'application du SDK Flutter de Braze.
 
-### Étape 2 : Transmettre les données des messages in-app à partir de la couche native
-
-Pour recevoir les données dans la couche Dart de l'étape 1, ajoutez le code suivant pour envoyer les données du message in-app à partir des couches natives.
+### Transmettre les données des messages in-app depuis la couche native
 
 {% tabs %}
-{% tab Android %}
+{% tab Flutter SDK 18.0.0+ %}
 
-Les données des messages in-app sont automatiquement transmises par la couche Android.
+Les données des messages in-app sont automatiquement transmises depuis les couches natives Android et iOS. Aucune configuration supplémentaire n'est requise.
 
 {% endtab %}
-{% tab iOS %}
+{% tab Flutter SDK 17.1.0 and earlier %}
+
+Si vous utilisez le SDK Flutter 17.1.0 ou une version antérieure, la transmission des données des messages in-app depuis la couche native iOS nécessite une configuration manuelle. Votre application contient probablement l'un des éléments suivants. Pour migrer vers le SDK Flutter 18.0.0, supprimez l'appel à `BrazePlugin.processInAppMessage(_:)` — la transmission des données est désormais gérée automatiquement.
+
 {% subtabs %}
-
-Vous pouvez transférer les données des messages in-app de deux manières différentes :
-
 {% subtab UI Delegate %}
 
-1. Implémentez le délégué `BrazeInAppMessageUIDelegate` comme décrit dans notre article iOS sur le [délégué de message in-app de base](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
+Supprimez l'appel à `BrazePlugin.processInAppMessage(_:)` de votre [implémentation du délégué `willPresent`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:willpresent:view:)-4pzvv).
 
-2. Mettez à jour votre [implémentation de délégué `willPresent`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:willpresent:view:)-4pzvv) pour qu’elle appelle `BrazePlugin.process(inAppMessage)`.
 {% endsubtab %}
 
-{% subtab custom presenter %}
-1. Assurez-vous d'avoir activé l'interface utilisateur de l'envoi message in-app et définissez l'adresse `inAppMessagePresenter` sur votre présentateur personnalisé.
-```swift
-    let inAppMessageUI = CustomInAppMessagePresenter()
-    braze.inAppMessagePresenter = inAppMessageUI
-```
-2. Créez votre classe de présentateur personnalisée et appelez `BrazePlugin.process(inAppMessage)` à l'intérieur de [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/present(message:)-f2ra).
+{% subtab Custom presenter %}
+
+Supprimez l'appel à `BrazePlugin.processInAppMessage(message)` de l'implémentation [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/present(message:)-f2ra) de votre présentateur personnalisé :
+
 ```swift
 class CustomInAppMessagePresenter: BrazeInAppMessageUI {
   override func present(message: Braze.InAppMessage) {
@@ -83,14 +77,16 @@ class CustomInAppMessagePresenter: BrazeInAppMessageUI {
   }
 }
 ```
+
 {% endsubtab %}
 {% endsubtabs %}
+
 {% endtab %}
 {% endtabs %}
 
-### Étape 3 : Répéter le rappel pour les messages in-app (facultatif)
+### Rejouer le rappel pour les messages in-app (facultatif)
 
-Pour stocker tous les messages in-app déclenchés avant que le rappel ne soit disponible et les rejouer une fois qu'il est défini, ajoutez l'entrée suivante au mappage `customConfigs` lors de l'initialisation de l'application `BrazePlugin`:
+Pour stocker tous les messages in-app déclenchés avant que le rappel ne soit disponible et les rejouer une fois celui-ci défini, ajoutez l'entrée suivante au mappage `customConfigs` lors de l'initialisation du `BrazePlugin` :
 ```dart
 BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```
