@@ -28,7 +28,7 @@ A maioria das tabelas está disponível nas três ferramentas. As tabelas marcad
 Essas tabelas SQL correspondem aos eventos documentados no [glossário de eventos do Currents]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). Por exemplo, a tabela SQL `USERS_MESSAGES_EMAIL_SEND_SHARED` corresponde ao evento do Currents `users.messages.email.Send`. Se você precisar de esquemas de eventos JSON ou formatos específicos de parceiros (Amplitude, Mixpanel, Segment), consulte o glossário do Currents.
 {% endalert %}
 
-## Índice
+## Sumário
 
 Tabela | Descrição
 ------|------------
@@ -37,7 +37,7 @@ Tabela | Descrição
 [CATALOGS_ITEMS_SHARED](#CATALOGS_ITEMS_SHARED) | Itens de catálogo não excluídos
 [CHANGELOGS_CAMPAIGN_SHARED](#CHANGELOGS_CAMPAIGN_SHARED) | Quando uma campanha é alterada (**somente Snowflake Data Sharing**)
 [CHANGELOGS_CANVAS_SHARED](#CHANGELOGS_CANVAS_SHARED) | Quando um Canvas é alterado (**somente Snowflake Data Sharing**)
-[CHANGELOGS_GLOBALCONTROLGROUP_SHARED](#CHANGELOGS_GLOBALCONTROLGROUP_SHARED) | Quando o Grupo de Controle Global é alterado
+[CHANGELOGS_GLOBALCONTROLGROUP_SHARED](#CHANGELOGS_GLOBALCONTROLGROUP_SHARED) | Quando o grupo de controle global é alterado
 [USERS_BEHAVIORS_CUSTOMEVENT_SHARED](#USERS_BEHAVIORS_CUSTOMEVENT_SHARED) | Quando um usuário realiza um evento personalizado
 [USERS_BEHAVIORS_INSTALLATTRIBUTION_SHARED](#USERS_BEHAVIORS_INSTALLATTRIBUTION_SHARED) | Quando um usuário instala um app e a instalação é atribuída a um parceiro
 [USERS_BEHAVIORS_LOCATION_SHARED](#USERS_BEHAVIORS_LOCATION_SHARED) | Quando um usuário registra um local
@@ -48,8 +48,8 @@ Tabela | Descrição
 [USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED](#USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED) | Quando um usuário visualiza o News Feed
 [USERS_BEHAVIORS_APP_SESSIONEND_SHARED](#USERS_BEHAVIORS_APP_SESSIONEND_SHARED) | Quando um usuário encerra uma sessão em um app
 [USERS_BEHAVIORS_APP_SESSIONSTART_SHARED](#USERS_BEHAVIORS_APP_SESSIONSTART_SHARED) | Quando um usuário inicia uma sessão em um app
-[USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | Quando um usuário aciona uma área de geofence (por exemplo, quando entra ou sai de uma geofence). Esse evento foi agrupado com outros eventos e recebido pelo endpoint de eventos padrão, portanto pode não ter sido recebido pelo endpoint em tempo real.
-[USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED) | Quando um usuário aciona uma área de geofence (por exemplo, quando entra ou sai de uma geofence). Esse evento foi recebido pelo endpoint dedicado de geofence e, portanto, é recebido em tempo real assim que o dispositivo do usuário detecta que acionou uma geofence. <br><br>Além disso, devido ao limite de taxa no endpoint de geofence, é possível que alguns eventos de geofence não sejam refletidos como RecordEvent. No entanto, todos os eventos de geofence são representados por DataEvent (mas potencialmente com algum atraso devido ao agrupamento).
+[USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | Quando um usuário aciona uma área de geofence (por exemplo, ao entrar ou sair de uma geofence). Esse evento foi agrupado com outros eventos e recebido pelo endpoint padrão de eventos, portanto pode não ter sido recebido pelo endpoint em tempo real.
+[USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED) | Quando um usuário aciona uma área de geofence (por exemplo, ao entrar ou sair de uma geofence). Esse evento foi recebido pelo endpoint dedicado de geofence e, portanto, é recebido em tempo real assim que o dispositivo do usuário detecta que acionou uma geofence. <br><br>Além disso, devido ao limite de taxa no endpoint de geofence, é possível que alguns eventos de geofence não sejam refletidos como RecordEvent. No entanto, todos os eventos de geofence são representados por DataEvent (mas potencialmente com algum atraso devido ao agrupamento).
 [USERS_BEHAVIORS_LIVEACTIVITY_PUSHTOSTARTTOKENCHANGE_SHARED](#USERS_BEHAVIORS_LIVEACTIVITY_PUSHTOSTARTTOKENCHANGE_SHARED) | Quando um token push-to-start de Live Activity é alterado
 [USERS_BEHAVIORS_LIVEACTIVITY_UPDATETOKENCHANGE_SHARED](#USERS_BEHAVIORS_LIVEACTIVITY_UPDATETOKENCHANGE_SHARED) | Quando um token de atualização de Live Activity é alterado
 [USERS_BEHAVIORS_PUSHNOTIFICATION_TOKENSTATECHANGE_SHARED](#USERS_BEHAVIORS_PUSHNOTIFICATION_TOKENSTATECHANGE_SHARED) | Quando o estado de um token de notificação por push é alterado
@@ -62,22 +62,22 @@ Tabela | Descrição
 [USERS_CANVASSTEP_PROGRESSION_SHARED](#USERS_CANVASSTEP_PROGRESSION_SHARED) | Quando um usuário avança para uma etapa do Canvas
 [USERS_CANVAS_CONVERSION_SHARED](#USERS_CANVAS_CONVERSION_SHARED) | Quando um usuário converte em um evento de conversão do Canvas
 [USERS_CANVAS_ENTRY_SHARED](#USERS_CANVAS_ENTRY_SHARED) | Quando um usuário entra em um Canvas
-[USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED](#USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED) | Quando um usuário sai de um Canvas porque corresponde aos critérios de saída de público
+[USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED](#USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED) | Quando um usuário sai de um Canvas porque corresponde aos critérios de saída do público
 [USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED](#USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED) | Quando um usuário sai de um Canvas porque realizou um evento de exceção
 [USERS_CANVAS_EXPERIMENTSTEP_CONVERSION_SHARED](#USERS_CANVAS_EXPERIMENTSTEP_CONVERSION_SHARED) | Quando um usuário converte em uma etapa de Experimento do Canvas
 [USERS_CANVAS_EXPERIMENTSTEP_SPLITENTRY_SHARED](#USERS_CANVAS_EXPERIMENTSTEP_SPLITENTRY_SHARED) | Quando um usuário entra em uma jornada de etapa de Experimento
 [USERS_CANVAS_FREQUENCYCAP_SHARED](#USERS_CANVAS_FREQUENCYCAP_SHARED) | Quando um usuário atinge o limite de frequência de uma etapa do Canvas
 [USERS_CANVAS_REVENUE_SHARED](#USERS_CANVAS_REVENUE_SHARED) | Quando um usuário gera receita dentro do período do evento de conversão primária
-[USERS_MESSAGES_BANNER_ABORT_SHARED](#USERS_MESSAGES_BANNER_ABORT_SHARED) | Uma mensagem de banner originalmente agendada foi cancelada por algum motivo
+[USERS_MESSAGES_BANNER_ABORT_SHARED](#USERS_MESSAGES_BANNER_ABORT_SHARED) | Uma mensagem de banner originalmente programada foi cancelada por algum motivo
 [USERS_MESSAGES_BANNER_CLICK_SHARED](#USERS_MESSAGES_BANNER_CLICK_SHARED) | Quando um usuário clica em um banner
 [USERS_MESSAGES_BANNER_IMPRESSION_SHARED](#USERS_MESSAGES_BANNER_IMPRESSION_SHARED) | Quando um usuário visualiza um banner
-[USERS_MESSAGES_CONTENTCARD_ABORT_SHARED](#USERS_MESSAGES_CONTENTCARD_ABORT_SHARED) | Uma mensagem de Content Card originalmente agendada foi cancelada por algum motivo.
+[USERS_MESSAGES_CONTENTCARD_ABORT_SHARED](#USERS_MESSAGES_CONTENTCARD_ABORT_SHARED) | Uma mensagem de Content Card originalmente programada foi cancelada por algum motivo.
 [USERS_MESSAGES_CONTENTCARD_CLICK_SHARED](#USERS_MESSAGES_CONTENTCARD_CLICK_SHARED) | Quando um usuário clica em um Content Card
 [USERS_MESSAGES_CONTENTCARD_DISMISS_SHARED](#USERS_MESSAGES_CONTENTCARD_DISMISS_SHARED) | Quando um usuário descarta um Content Card
 [USERS_MESSAGES_CONTENTCARD_IMPRESSION_SHARED](#USERS_MESSAGES_CONTENTCARD_IMPRESSION_SHARED) | Quando um usuário visualiza um Content Card
 [USERS_MESSAGES_CONTENTCARD_SEND_SHARED](#USERS_MESSAGES_CONTENTCARD_SEND_SHARED) | Quando enviamos um Content Card para um usuário
-[USERS_MESSAGES_EMAIL_ABORT_SHARED](#USERS_MESSAGES_EMAIL_ABORT_SHARED) | Uma mensagem de e-mail originalmente agendada foi cancelada por algum motivo.
-[USERS_MESSAGES_EMAIL_BOUNCE_SHARED](#USERS_MESSAGES_EMAIL_BOUNCE_SHARED) | Um provedor de serviço de e-mail retornou um hard bounce. Um hard bounce indica uma falha permanente de entregabilidade.
+[USERS_MESSAGES_EMAIL_ABORT_SHARED](#USERS_MESSAGES_EMAIL_ABORT_SHARED) | Uma mensagem de e-mail originalmente programada foi cancelada por algum motivo.
+[USERS_MESSAGES_EMAIL_BOUNCE_SHARED](#USERS_MESSAGES_EMAIL_BOUNCE_SHARED) | Um prestador de serviço de e-mail retornou um hard bounce. Um hard bounce indica uma falha permanente de entregabilidade.
 [USERS_MESSAGES_EMAIL_CLICK_SHARED](#USERS_MESSAGES_EMAIL_CLICK_SHARED) | Quando um usuário clica em um link em um e-mail
 [USERS_MESSAGES_EMAIL_DEFERRAL_SHARED](#USERS_MESSAGES_EMAIL_DEFERRAL_SHARED) | Quando um e-mail é adiado
 [USERS_MESSAGES_EMAIL_DELIVERY_SHARED](#USERS_MESSAGES_EMAIL_DELIVERY_SHARED) | Quando um e-mail é entregue
@@ -88,20 +88,20 @@ Tabela | Descrição
 [USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED](#USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED) | Quando um usuário cancela a inscrição de e-mail
 [USERS_MESSAGES_EMAIL_RETRY_SHARED](#USERS_MESSAGES_EMAIL_RETRY_SHARED) | Quando uma mensagem de e-mail é reenviada após ser despriorizada ou ter atingido o limite de frequência (**somente Snowflake Data Sharing**)
 [USERS_MESSAGES_FEATUREFLAG_IMPRESSION_SHARED](#USERS_MESSAGES_FEATUREFLAG_IMPRESSION_SHARED) | Quando um usuário visualiza uma Feature Flag
-[USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED](#USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED) | Uma mensagem no app originalmente agendada foi cancelada por algum motivo.
+[USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED](#USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED) | Uma mensagem no app originalmente programada foi cancelada por algum motivo.
 [USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED](#USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED) | Quando um usuário clica em uma mensagem no app
 [USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED](#USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED) | Quando um usuário visualiza uma mensagem no app
-[USERS_MESSAGES_LINE_ABORT_SHARED](#USERS_MESSAGES_LINE_ABORT_SHARED) | Quando uma mensagem LINE agendada não pode ser entregue, antes do envio ao LINE
+[USERS_MESSAGES_LINE_ABORT_SHARED](#USERS_MESSAGES_LINE_ABORT_SHARED) | Quando uma mensagem LINE programada não pode ser entregue, antes do envio ao LINE
 [USERS_MESSAGES_LINE_CLICK_SHARED](#USERS_MESSAGES_LINE_CLICK_SHARED) | Quando um usuário clica em um link em uma mensagem LINE
 [USERS_MESSAGES_LINE_INBOUNDRECEIVE_SHARED](#USERS_MESSAGES_LINE_INBOUNDRECEIVE_SHARED) | Quando uma mensagem LINE é recebida de um usuário
 [USERS_MESSAGES_LINE_SEND_SHARED](#USERS_MESSAGES_LINE_SEND_SHARED) | Quando uma mensagem LINE é enviada ao LINE
 [USERS_MESSAGES_LINE_RETRY_SHARED](#USERS_MESSAGES_LINE_RETRY_SHARED) | Quando uma mensagem LINE é reenviada após ser despriorizada ou ter atingido o limite de frequência (**somente Snowflake Data Sharing**)
 [USERS_MESSAGES_LIVEACTIVITY_OUTCOME_SHARED](#USERS_MESSAGES_LIVEACTIVITY_OUTCOME_SHARED) | Quando uma Live Activity tem um evento de resultado
 [USERS_MESSAGES_LIVEACTIVITY_SEND_SHARED](#USERS_MESSAGES_LIVEACTIVITY_SEND_SHARED) | Quando uma mensagem de Live Activity é enviada
-[USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED) | Uma mensagem de cartão do News Feed originalmente agendada foi cancelada por algum motivo
+[USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED) | Um cartão do News Feed originalmente programado foi cancelado por algum motivo
 [USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED) | Quando um usuário clica em um cartão do News Feed
 [USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED) | Quando um usuário visualiza um cartão do News Feed
-[USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED) | Uma mensagem de notificação por push originalmente agendada foi cancelada por algum motivo.
+[USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED) | Uma notificação por push originalmente programada foi cancelada por algum motivo.
 [USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED) | Quando uma notificação por push sofre bounce
 [USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED) | Quando um usuário abre o app após receber uma notificação sem clicar nela
 [USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED) | Quando um usuário recebe uma notificação por push enquanto o app está aberto. <br><br>Esse evento não é compatível com o [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) e está descontinuado no [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk).
@@ -114,7 +114,7 @@ Tabela | Descrição
 [USERS_MESSAGES_RCS_READ_SHARED](#USERS_MESSAGES_RCS_READ_SHARED) | Quando o usuário final abre uma mensagem RCS em seu dispositivo
 [USERS_MESSAGES_RCS_REJECTION_SHARED](#USERS_MESSAGES_RCS_REJECTION_SHARED) | Quando uma mensagem RCS não é entregue devido a intervenção da operadora
 [USERS_MESSAGES_RCS_SEND_SHARED](#USERS_MESSAGES_RCS_SEND_SHARED) | Quando uma mensagem RCS é enviada dos sistemas da Braze para os parceiros de entrega final
-[USERS_MESSAGES_SMS_ABORT_SHARED](#USERS_MESSAGES_SMS_ABORT_SHARED) | Uma mensagem SMS originalmente agendada foi cancelada por algum motivo.
+[USERS_MESSAGES_SMS_ABORT_SHARED](#USERS_MESSAGES_SMS_ABORT_SHARED) | Uma mensagem SMS originalmente programada foi cancelada por algum motivo.
 [USERS_MESSAGES_SMS_CARRIERSEND_SHARED](#USERS_MESSAGES_SMS_CARRIERSEND_SHARED) | Quando uma mensagem SMS é enviada para a operadora
 [USERS_MESSAGES_SMS_DELIVERY_SHARED](#USERS_MESSAGES_SMS_DELIVERY_SHARED) | Quando uma mensagem SMS é entregue
 [USERS_MESSAGES_SMS_DELIVERYFAILURE_SHARED](#USERS_MESSAGES_SMS_DELIVERYFAILURE_SHARED) | Quando a Braze não consegue entregar a mensagem SMS ao prestador de serviço de SMS
@@ -123,11 +123,11 @@ Tabela | Descrição
 [USERS_MESSAGES_SMS_SEND_SHARED](#USERS_MESSAGES_SMS_SEND_SHARED) | Quando uma mensagem SMS é enviada
 [USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED](#USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED) | Quando um usuário clica em uma URL encurtada da Braze incluída em uma mensagem SMS
 [USERS_MESSAGES_SMS_RETRY_SHARED](#USERS_MESSAGES_SMS_RETRY_SHARED) | Quando uma mensagem SMS é reenviada após ser despriorizada ou ter atingido o limite de frequência (**somente Snowflake Data Sharing**)
-[USERS_MESSAGES_WEBHOOK_ABORT_SHARED](#USERS_MESSAGES_WEBHOOK_ABORT_SHARED) | Uma mensagem de webhook originalmente agendada foi cancelada por algum motivo
+[USERS_MESSAGES_WEBHOOK_ABORT_SHARED](#USERS_MESSAGES_WEBHOOK_ABORT_SHARED) | Uma mensagem de webhook originalmente programada foi cancelada por algum motivo
 [USERS_MESSAGES_WEBHOOK_FAILURE_SHARED](#USERS_MESSAGES_WEBHOOK_FAILURE_SHARED) | Quando uma mensagem de webhook é entregue, mas falha com uma resposta de erro do endpoint
 [USERS_MESSAGES_WEBHOOK_SEND_SHARED](#USERS_MESSAGES_WEBHOOK_SEND_SHARED) | Quando enviamos um webhook para um usuário
 [USERS_MESSAGES_WEBHOOK_RETRY_SHARED](#USERS_MESSAGES_WEBHOOK_RETRY_SHARED) | Quando uma mensagem de webhook é reenviada após ser despriorizada ou ter atingido o limite de frequência (**somente Snowflake Data Sharing**)
-[USERS_MESSAGES_WHATSAPP_ABORT_SHARED](#USERS_MESSAGES_WHATSAPP_ABORT_SHARED) | Uma mensagem de WhatsApp originalmente agendada foi cancelada por algum motivo
+[USERS_MESSAGES_WHATSAPP_ABORT_SHARED](#USERS_MESSAGES_WHATSAPP_ABORT_SHARED) | Uma mensagem de WhatsApp originalmente programada foi cancelada por algum motivo
 [USERS_MESSAGES_WHATSAPP_CLICK_SHARED](#USERS_MESSAGES_WHATSAPP_CLICK_SHARED) | Quando um usuário clica em um link ou botão em uma mensagem de WhatsApp
 [USERS_MESSAGES_WHATSAPP_DELIVERY_SHARED](#USERS_MESSAGES_WHATSAPP_DELIVERY_SHARED) | Quando uma mensagem de WhatsApp é entregue
 [USERS_MESSAGES_WHATSAPP_FAILURE_SHARED](#USERS_MESSAGES_WHATSAPP_FAILURE_SHARED) | Quando uma mensagem de WhatsApp não é entregue a um usuário
@@ -346,7 +346,7 @@ Campo | Tipo | Descrição
 Campo | Tipo | Descrição
 ------|------|------------
 `id` | `string` | ID globalmente exclusivo para esse evento
-`user_id` | `string` | ID da Braze do usuário que fez uma compra
+`user_id` | `string` | ID da Braze do usuário que fez a compra
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `app_api_id` | `null,`&nbsp;`string` | ID da API do app no qual a compra ocorreu
@@ -397,7 +397,7 @@ Campo | Tipo | Descrição
 `platform` | `null,`&nbsp;`string` | Plataforma do dispositivo
 `os_version` | `null,`&nbsp;`string` | Versão do sistema operacional do dispositivo
 `device_model` | `null,`&nbsp;`string` | Modelo do dispositivo
-`old_app_version` | `null,`&nbsp;`string` | Versão antiga do app
+`old_app_version` | `null,`&nbsp;`string` | Versão anterior do app
 `new_app_version` | `null,`&nbsp;`string` | Nova versão do app
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
 `sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
@@ -625,7 +625,7 @@ Campo | Tipo | Descrição
 `canvas_api_id` | `null,`&nbsp;`string` | ID da API do Canvas ao qual este evento pertence
 `canvas_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação do Canvas ao qual este evento pertence
 `canvas_step_api_id` | `null,`&nbsp;`string` | ID da API da etapa do Canvas ao qual este evento pertence
-`send_id` | `null,`&nbsp;`string` | ID de envio da mensagem que originou esta ação de mudança de estado de inscrição
+`send_id` | `null,`&nbsp;`string` | ID de envio da mensagem que originou esta ação de mudança de estado da inscrição
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
 `channel_identifier` | `null,`&nbsp;`string` | [IPI] O identificador do usuário no canal ao qual o evento se refere.
 `sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
@@ -655,10 +655,10 @@ Campo | Tipo | Descrição
 `subscription_status` | `string` | Status da inscrição: 'Subscribed', 'Unsubscribed' ou 'Opted In'
 `time` | `int` | Timestamp Unix em que o estado da inscrição foi alterado
 `timezone` | `null,`&nbsp;`string` | Fuso horário do usuário
-`send_id` | `null,`&nbsp;`string` | ID de envio da mensagem que originou esta ação de mudança de estado de inscrição
+`send_id` | `null,`&nbsp;`string` | ID de envio da mensagem que originou esta ação de mudança de estado da inscrição
 `state_change_source` | `null,`&nbsp;`string` | Origem da mudança de estado (REST, SDK, Dashboard, etc.)
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`dispatch_id` | `null,`&nbsp;`string` | ID do dispatch ao qual esta mensagem pertence
+`dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
 `channel_identifier` | `null,`&nbsp;`string` | [IPI] O identificador do usuário no canal ao qual o evento se refere.
 `sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -672,13 +672,13 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para esse evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `app_api_id` | `null,`&nbsp;`string` | ID da API do app no qual este evento ocorreu
-`dispatch_id` | `null,`&nbsp;`string` | ID do dispatch ao qual esta mensagem pertence
+`dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
 `send_id` | `null,`&nbsp;`string` | ID de envio da mensagem à qual esta mensagem pertence
-`campaign_id` | `string` | ID interno da Braze da campanha à qual este evento pertence
+`campaign_id` | `string` | ID da Braze para uso interno da campanha à qual este evento pertence
 `campaign_api_id` | `null,`&nbsp;`string` | ID da API da campanha à qual este evento pertence
 `message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem que este usuário recebeu
 `conversion_behavior_index` | `null, int` | Índice do comportamento de conversão
@@ -697,13 +697,13 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para esse evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `app_api_id` | `null,`&nbsp;`string` | ID da API do app no qual este evento ocorreu
-`dispatch_id` | `null,`&nbsp;`string` | ID do dispatch ao qual esta mensagem pertence
+`dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
 `send_id` | `null,`&nbsp;`string` | ID de envio da mensagem à qual esta mensagem pertence
-`campaign_id` | `string` | ID interno da Braze da campanha à qual este evento pertence
+`campaign_id` | `string` | ID da Braze para uso interno da campanha à qual este evento pertence
 `campaign_api_id` | `null,`&nbsp;`string` | ID da API da campanha à qual este evento pertence
 `message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem que este usuário recebeu
 `gender` | `null,`&nbsp;`string` | [IPI] Gênero do usuário
@@ -721,12 +721,12 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para esse evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
-`dispatch_id` | `null,`&nbsp;`string` | ID do dispatch ao qual esta mensagem pertence
+`dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
 `send_id` | `null,`&nbsp;`string` | ID de envio da mensagem à qual esta mensagem pertence
-`campaign_id` | `string` | ID interno da Braze da campanha à qual este evento pertence
+`campaign_id` | `string` | ID da Braze para uso interno da campanha à qual este evento pertence
 `campaign_api_id` | `null,`&nbsp;`string` | ID da API da campanha à qual este evento pertence
 `message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem que este usuário recebeu
 `channel` | `null,`&nbsp;`string` | Canal ao qual este evento pertence
@@ -745,20 +745,20 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para esse evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `app_api_id` | `null,`&nbsp;`string` | ID da API do app no qual este evento ocorreu
-`dispatch_id` | `null,`&nbsp;`string` | ID do dispatch ao qual esta mensagem pertence
+`dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
 `send_id` | `null,`&nbsp;`string` | ID de envio da mensagem à qual esta mensagem pertence
-`campaign_id` | `string` | ID interno da Braze da campanha à qual este evento pertence
+`campaign_id` | `string` | ID da Braze para uso interno da campanha à qual este evento pertence
 `campaign_api_id` | `null,`&nbsp;`string` | ID da API da campanha à qual este evento pertence
 `message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem que este usuário recebeu
 `gender` | `null,`&nbsp;`string` | [IPI] Gênero do usuário
 `country` | `null,`&nbsp;`string` | [IPI] País do usuário
 `timezone` | `null,`&nbsp;`string` | Fuso horário do usuário
 `language` | `null,`&nbsp;`string` | [IPI] Idioma do usuário
-`revenue` | `long` | O valor da receita em USD gerada em centavos
+`revenue` | `long` | Valor da receita em USD gerada, em centavos
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
 `sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -996,7 +996,7 @@ Campo | Tipo | Descrição
 `abort_type` | `null,`&nbsp;`string` | Tipo de cancelamento, um entre ['liquid_abort_message', 'quiet_hours', 'rate_limit']
 `abort_log` | `null,`&nbsp;`string` | [IPI] Mensagem de registro descrevendo os detalhes do cancelamento (até 128 caracteres)
 `banner_placement_id` | `null,`&nbsp;`string` | ID de posicionamento do banner especificado pelo cliente
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -1031,7 +1031,7 @@ Campo | Tipo | Descrição
 `ad_id_type` | `null,`&nbsp;`string` | Um entre ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']
 `ad_tracking_enabled` | `null, boolean` | Se o rastreamento de publicidade está ativado para o dispositivo
 `banner_placement_id` | `null,`&nbsp;`string` | ID de posicionamento do banner especificado pelo cliente
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -1065,7 +1065,7 @@ Campo | Tipo | Descrição
 `ad_id_type` | `null,`&nbsp;`string` | Um entre ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']
 `ad_tracking_enabled` | `null, boolean` | Se o rastreamento de publicidade está ativado para o dispositivo
 `banner_placement_id` | `null,`&nbsp;`string` | ID de posicionamento do banner especificado pelo cliente
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_CONTENTCARD_ABORT_SHARED {#USERS_MESSAGES_CONTENTCARD_ABORT_SHARED}
@@ -1075,7 +1075,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -1095,7 +1095,7 @@ Campo | Tipo | Descrição
 `abort_type` | `null,`&nbsp;`string` | Tipo de cancelamento, um entre ['liquid_abort_message', 'quiet_hours', 'rate_limit']
 `abort_log` | `null,`&nbsp;`string` | [IPI] Mensagem de registro descrevendo os detalhes do cancelamento (máximo de 2.000 caracteres)
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_CONTENTCARD_CLICK_SHARED {#USERS_MESSAGES_CONTENTCARD_CLICK_SHARED}
@@ -1135,7 +1135,7 @@ Campo | Tipo | Descrição
 `ad_id_type` | `null,`&nbsp;`string` | Um entre `ios_idfa`, `google_ad_id`, `windows_ad_id` OU `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | Se o rastreamento de publicidade está ativado para o dispositivo
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_CONTENTCARD_DISMISS_SHARED {#USERS_MESSAGES_CONTENTCARD_DISMISS_SHARED}
@@ -1175,7 +1175,7 @@ Campo | Tipo | Descrição
 `ad_id_type` | `null,`&nbsp;`string` | Um entre `ios_idfa`, `google_ad_id`, `windows_ad_id` OU `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | Se o rastreamento de publicidade está ativado para o dispositivo
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_CONTENTCARD_IMPRESSION_SHARED {#USERS_MESSAGES_CONTENTCARD_IMPRESSION_SHARED}
@@ -1215,7 +1215,7 @@ Campo | Tipo | Descrição
 `ad_id_type` | `null,`&nbsp;`string` | Um entre `ios_idfa`, `google_ad_id`, `windows_ad_id` OU `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | Se o rastreamento de publicidade está ativado para o dispositivo
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_CONTENTCARD_SEND_SHARED {#USERS_MESSAGES_CONTENTCARD_SEND_SHARED}
@@ -1225,7 +1225,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -1245,7 +1245,7 @@ Campo | Tipo | Descrição
 `content_card_id` | `string` | ID do cartão que gerou este evento
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
 `message_extras` | `null,`&nbsp;`string` | [IPI] Uma string JSON dos pares chave-valor marcados durante a renderização Liquid
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_EMAIL_ABORT_SHARED {#USERS_MESSAGES_EMAIL_ABORT_SHARED}
@@ -1255,7 +1255,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -1277,7 +1277,7 @@ Campo | Tipo | Descrição
 `abort_type` | `null,`&nbsp;`string` | Tipo de cancelamento, um entre ['liquid_abort_message', 'quiet_hours', 'rate_limit']
 `abort_log` | `null,`&nbsp;`string` | [IPI] Mensagem de registro descrevendo os detalhes do cancelamento (máximo de 2.000 caracteres)
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_EMAIL_BOUNCE_SHARED {#USERS_MESSAGES_EMAIL_BOUNCE_SHARED}
@@ -1287,7 +1287,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -1307,12 +1307,12 @@ Campo | Tipo | Descrição
 `email_address` | `string` | [IPI] Endereço de e-mail do usuário
 `sending_ip` | `null,`&nbsp;`string` | Endereço IP a partir do qual o envio de e-mail foi feito
 `ip_pool` | `null,`&nbsp;`string` | Pool de IP a partir do qual o envio de e-mail foi feito
-`bounce_reason` | `null,`&nbsp;`string` | [IPI] O código de motivo SMTP e a mensagem amigável recebidos para este evento de bounce
+`bounce_reason` | `null,`&nbsp;`string` | [IPI] O código de razão SMTP e a mensagem amigável recebida para este evento de bounce
 `esp` | `null,`&nbsp;`string` | ESP relacionado ao evento (SparkPost, SendGrid ou Amazon SES)
 `from_domain` | `null,`&nbsp;`string` | Domínio de envio do e-mail
 `is_drop` | `null, boolean` | Indica que este evento conta como um evento de descarte
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_EMAIL_CLICK_SHARED {#USERS_MESSAGES_EMAIL_CLICK_SHARED}
@@ -1322,7 +1322,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -1343,7 +1343,7 @@ Campo | Tipo | Descrição
 `url` | `null,`&nbsp;`string` | URL em que o usuário clicou
 `user_agent` | `null,`&nbsp;`string` | User agent no qual o clique ocorreu
 `ip_pool` | `null,`&nbsp;`string` | Pool de IP a partir do qual o envio de e-mail foi feito
-`link_id` | `null,`&nbsp;`string` | ID exclusivo do link clicado, conforme criado pela Braze
+`link_id` | `null,`&nbsp;`string` | ID exclusivo do link clicado, criado pela Braze
 `link_alias` | `null,`&nbsp;`string` | Alias associado a este ID de link
 `esp` | `null,`&nbsp;`string` | ESP relacionado ao evento (SparkPost, SendGrid ou Amazon SES)
 `from_domain` | `null,`&nbsp;`string` | Domínio de envio do e-mail
@@ -1351,7 +1351,7 @@ Campo | Tipo | Descrição
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
 `is_suspected_bot_click` | `null, boolean` | Se este evento foi processado como um evento de bot
 `suspected_bot_click_reason` | `null, object` | Por que este evento foi classificado como bot
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -1382,9 +1382,9 @@ Campo | Tipo | Descrição
 `ip_pool` | `null,`&nbsp;`string` | Pool de IP a partir do qual o envio de e-mail foi feito
 `sending_ip` | `null,`&nbsp;`string` | Endereço IP a partir do qual o envio de e-mail foi feito
 `timezone` | `null,`&nbsp;`string` | Fuso horário do usuário
-`deferral_reason` | `null,`&nbsp;`string` | [IPI] O código de motivo SMTP e a mensagem amigável recebidos para este evento de adiamento
+`deferral_reason` | `null,`&nbsp;`string` | [IPI] O código de razão SMTP e a mensagem amigável recebida para este evento de adiamento
 `attempt_count` | `null, int` | Número de tentativas feitas para enviar a mensagem
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_EMAIL_DELIVERY_SHARED {#USERS_MESSAGES_EMAIL_DELIVERY_SHARED}
@@ -1394,7 +1394,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -1417,7 +1417,7 @@ Campo | Tipo | Descrição
 `esp` | `null,`&nbsp;`string` | ESP relacionado ao evento (SparkPost, SendGrid ou Amazon SES)
 `from_domain` | `null,`&nbsp;`string` | Domínio de envio do e-mail
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_EMAIL_MARKASSPAM_SHARED {#USERS_MESSAGES_EMAIL_MARKASSPAM_SHARED}
@@ -1427,7 +1427,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -1450,7 +1450,7 @@ Campo | Tipo | Descrição
 `esp` | `null,`&nbsp;`string` | ESP relacionado ao evento (SparkPost, SendGrid ou Amazon SES)
 `from_domain` | `null,`&nbsp;`string` | Domínio de envio do e-mail
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_EMAIL_OPEN_SHARED {#USERS_MESSAGES_EMAIL_OPEN_SHARED}
@@ -1460,7 +1460,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -1480,12 +1480,12 @@ Campo | Tipo | Descrição
 `email_address` | `string` | [IPI] Endereço de e-mail do usuário
 `user_agent` | `null,`&nbsp;`string` | User agent no qual a abertura ocorreu
 `ip_pool` | `null,`&nbsp;`string` | Pool de IP a partir do qual o envio de e-mail foi feito
-`machine_open` | `null,`&nbsp;`string` | Preenchido com 'true' se o evento de abertura for acionado sem interação do usuário, por exemplo, por um dispositivo Apple com a proteção de privacidade de e-mail ativada. O valor pode mudar ao longo do tempo para fornecer mais granularidade.
+`machine_open` | `null,`&nbsp;`string` | Preenchido com 'true' se o evento de abertura for disparado sem interação do usuário, por exemplo, por um dispositivo Apple com a proteção de privacidade de e-mail ativada. O valor pode mudar ao longo do tempo para fornecer mais granularidade.
 `esp` | `null,`&nbsp;`string` | ESP relacionado ao evento (SparkPost, SendGrid ou Amazon SES)
 `from_domain` | `null,`&nbsp;`string` | Domínio de envio do e-mail
 `is_amp` | `null, boolean` | Indica que este é um evento AMP
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_EMAIL_SEND_SHARED {#USERS_MESSAGES_EMAIL_SEND_SHARED}
@@ -1495,7 +1495,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -1517,7 +1517,7 @@ Campo | Tipo | Descrição
 `message_extras` | `null,`&nbsp;`string` | [IPI] Uma string JSON dos pares chave-valor marcados durante a renderização Liquid
 `esp` | `null,`&nbsp;`string` | ESP relacionado ao evento (SparkPost, SendGrid ou Amazon SES)
 `from_domain` | `null,`&nbsp;`string` | Domínio de envio do e-mail
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1528,7 +1528,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -1548,11 +1548,11 @@ Campo | Tipo | Descrição
 `email_address` | `string` | [IPI] Endereço de e-mail do usuário
 `sending_ip` | `null,`&nbsp;`string` | Endereço IP a partir do qual o envio de e-mail foi feito
 `ip_pool` | `null,`&nbsp;`string` | Pool de IP a partir do qual o envio de e-mail foi feito
-`bounce_reason` | `null,`&nbsp;`string` | [IPI] O código de motivo SMTP e a mensagem amigável recebidos para este evento de bounce
+`bounce_reason` | `null,`&nbsp;`string` | [IPI] O código de razão SMTP e a mensagem amigável recebida para este evento de bounce
 `esp` | `null,`&nbsp;`string` | ESP relacionado ao evento (SparkPost, SendGrid ou Amazon SES)
 `from_domain` | `null,`&nbsp;`string` | Domínio de envio do e-mail
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED {#USERS_MESSAGES_EMAIL_UNSUBSCRIBE_SHARED}
@@ -1562,7 +1562,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -1582,7 +1582,7 @@ Campo | Tipo | Descrição
 `email_address` | `string` | [IPI] Endereço de e-mail do usuário
 `ip_pool` | `null,`&nbsp;`string` | Pool de IP a partir do qual o envio de e-mail foi feito
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_EMAIL_RETRY_SHARED {#USERS_MESSAGES_EMAIL_RETRY_SHARED}
@@ -1620,7 +1620,7 @@ Campo | Tipo | Descrição
 `email_address` | `null,`&nbsp;`string` | [IPI] Endereço de e-mail do usuário
 `ip_pool` | `null,`&nbsp;`string` | Pool de IP a partir do qual o envio de e-mail foi feito
 `device_id` | `null,`&nbsp;`string` | ID do dispositivo no qual o evento ocorreu
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_FEATUREFLAG_IMPRESSION_SHARED {#USERS_MESSAGES_FEATUREFLAG_IMPRESSION_SHARED}
@@ -1655,7 +1655,7 @@ Campo | Tipo | Descrição
 `sdk_version` | `null,`&nbsp;`string` | Versão do SDK da Braze em uso durante o evento
 `timezone` | `null,`&nbsp;`string` | Fuso horário do usuário
 `user_id` | `string` | ID do usuário na Braze que realizou este evento
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED {#USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED}
@@ -1698,7 +1698,7 @@ Campo | Tipo | Descrição
 `abort_type` | `null,`&nbsp;`string` | Tipo de cancelamento, um entre ['liquid_abort_message', 'quiet_hours', 'rate_limit']
 `abort_log` | `null,`&nbsp;`string` | [IPI] Mensagem de registro descrevendo os detalhes do cancelamento (máximo de 2.000 caracteres)
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED {#USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED}
@@ -1739,7 +1739,7 @@ Campo | Tipo | Descrição
 `ad_id_type` | `null,`&nbsp;`string` | Um entre `ios_idfa`, `google_ad_id`, `windows_ad_id` OU `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | Se o rastreamento de publicidade está ativado para o dispositivo
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED {#USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED}
@@ -1781,7 +1781,7 @@ Campo | Tipo | Descrição
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
 `message_extras` | `null,`&nbsp;`string` | [IPI] Uma string JSON dos pares chave-valor marcados durante a renderização Liquid
 `locale_key` | `null,`&nbsp;`string` | [IPI] A chave correspondente às traduções (por exemplo, 'en-us') usada para compor esta mensagem (null para padrão).
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -1805,7 +1805,7 @@ Campo | Tipo | Descrição
 `line_channel_id` | `null,`&nbsp;`string` | O ID do canal LINE para o qual a mensagem foi enviada ou do qual foi recebida
 `line_channel_name` | `null,`&nbsp;`string` | O nome do canal LINE para o qual a mensagem foi enviada ou do qual foi recebida
 `message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem que este usuário recebeu
-`native_line_id` | `null,`&nbsp;`string` | [IPI] O ID do LINE do usuário a partir do qual a mensagem foi enviada ou recebida
+`native_line_id` | `null,`&nbsp;`string` | [IPI] O ID LINE do usuário a partir do qual a mensagem foi enviada ou recebida
 `send_id` | `null,`&nbsp;`string` | ID de envio da mensagem à qual esta mensagem pertence
 `subscription_group_api_id` | `string` | ID da API do grupo de inscrições
 `timezone` | `null,`&nbsp;`string` | Fuso horário do usuário
@@ -1813,7 +1813,7 @@ Campo | Tipo | Descrição
 `canvas_step_name` | `null,`&nbsp;`string` | Nome da etapa do Canvas
 `canvas_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação do Canvas à qual este evento pertence
 `canvas_api_id` | `null,`&nbsp;`string` | ID da API do Canvas ao qual este evento pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -1828,7 +1828,7 @@ Campo | Tipo | Descrição
 `time` | `int` | Timestamp UNIX em que o evento ocorreu
 `user_id` | `string` | ID do usuário na Braze que realizou este evento
 `timezone` | `null,`&nbsp;`string` | Fuso horário do usuário
-`native_line_id` | `null,`&nbsp;`string` | [IPI] O ID do LINE do usuário a partir do qual a mensagem foi enviada ou recebida
+`native_line_id` | `null,`&nbsp;`string` | [IPI] O ID LINE do usuário a partir do qual a mensagem foi enviada ou recebida
 `line_channel_id` | `null,`&nbsp;`string` | O ID do canal LINE para o qual a mensagem foi enviada ou do qual foi recebida
 `line_channel_name` | `null,`&nbsp;`string` | O nome do canal LINE para o qual a mensagem foi enviada ou do qual foi recebida
 `subscription_group_api_id` | `string` | ID da API do grupo de inscrições
@@ -1847,7 +1847,7 @@ Campo | Tipo | Descrição
 `short_url` | `null,`&nbsp;`string` | URL encurtada que foi clicada
 `url` | `null,`&nbsp;`string` | URL em que o usuário clicou
 `user_agent` | `null,`&nbsp;`string` | User agent no qual o relatório de spam ocorreu
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -1875,11 +1875,11 @@ Campo | Tipo | Descrição
 `media_id` | `null,`&nbsp;`string` | O ID gerado pelo LINE que pode ser usado para recuperar mídia de entrada do LINE
 `message_body` | `null,`&nbsp;`string` | Resposta digitada pelo usuário
 `message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem que este usuário recebeu
-`native_line_id` | `null,`&nbsp;`string` | [IPI] O ID do LINE do usuário a partir do qual a mensagem foi enviada ou recebida
+`native_line_id` | `null,`&nbsp;`string` | [IPI] O ID LINE do usuário a partir do qual a mensagem foi enviada ou recebida
 `send_id` | `null,`&nbsp;`string` | ID de envio da mensagem à qual esta mensagem pertence
 `subscription_group_api_id` | `string` | ID da API do grupo de inscrições
 `timezone` | `null,`&nbsp;`string` | Fuso horário do usuário
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -1906,11 +1906,11 @@ Campo | Tipo | Descrição
 `line_channel_name` | `null,`&nbsp;`string` | O nome do canal LINE para o qual a mensagem foi enviada ou do qual foi recebida
 `message_extras` | `null,`&nbsp;`string` | [IPI] Uma string JSON dos pares chave-valor marcados durante a renderização Liquid
 `message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem que este usuário recebeu
-`native_line_id` | `null,`&nbsp;`string` | [IPI] O ID do LINE do usuário a partir do qual a mensagem foi enviada ou recebida
+`native_line_id` | `null,`&nbsp;`string` | [IPI] O ID LINE do usuário a partir do qual a mensagem foi enviada ou recebida
 `send_id` | `null,`&nbsp;`string` | ID de envio da mensagem à qual esta mensagem pertence
 `subscription_group_api_id` | `string` | ID da API do grupo de inscrições
 `timezone` | `null,`&nbsp;`string` | Fuso horário do usuário
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_LINE_RETRY_SHARED {#USERS_MESSAGES_LINE_RETRY_SHARED}
@@ -1944,10 +1944,10 @@ Campo | Tipo | Descrição
 `device_id` | `null,`&nbsp;`string` | ID do dispositivo no qual o evento ocorreu
 `line_channel_id` | `null,`&nbsp;`string` | O ID do canal LINE para o qual a mensagem foi enviada ou do qual foi recebida
 `line_channel_name` | `null,`&nbsp;`string` | O nome do canal LINE para o qual a mensagem foi enviada ou do qual foi recebida
-`native_line_id` | `null,`&nbsp;`string` | [IPI] O ID do LINE do usuário a partir do qual a mensagem foi enviada ou recebida
+`native_line_id` | `null,`&nbsp;`string` | [IPI] O ID LINE do usuário a partir do qual a mensagem foi enviada ou recebida
 `subscription_group_api_id` | `null,`&nbsp;`string` | ID da API do grupo de inscrições
 `timezone` | `null,`&nbsp;`string` | Fuso horário do usuário
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -1968,7 +1968,7 @@ Campo | Tipo | Descrição
 `live_activity_event_outcome` | `null,`&nbsp;`string` | Resultado do evento da Live Activity
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do grupo de app ao qual este usuário pertence
 `app_api_id` | `null,`&nbsp;`string` | ID da API do app no qual este evento ocorreu
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -1988,7 +1988,7 @@ Campo | Tipo | Descrição
 `live_activity_event_type` | `null,`&nbsp;`string` | Tipo de evento da Live Activity. Um entre ['start', 'update', 'end']
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do grupo de app ao qual este usuário pertence
 `app_api_id` | `null,`&nbsp;`string` | ID da API do app no qual este evento ocorreu
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -2018,7 +2018,7 @@ Campo | Tipo | Descrição
 `browser` | `null,`&nbsp;`string` | Navegador do dispositivo - extraído do user_agent - no qual a abertura ocorreu
 `abort_type` | `null,`&nbsp;`string` | Tipo de cancelamento, um entre ['liquid_abort_message', 'quiet_hours', 'rate_limit']
 `abort_log` | `null,`&nbsp;`string` | [IPI] Mensagem de registro descrevendo os detalhes do cancelamento (até 128 caracteres)
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -2046,7 +2046,7 @@ Campo | Tipo | Descrição
 `resolution` | `null,`&nbsp;`string` | Resolução do dispositivo
 `carrier` | `null,`&nbsp;`string` | Operadora do dispositivo
 `browser` | `null,`&nbsp;`string` | Navegador do dispositivo - extraído do user_agent - no qual a abertura ocorreu
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -2074,7 +2074,7 @@ Campo | Tipo | Descrição
 `resolution` | `null,`&nbsp;`string` | Resolução do dispositivo
 `carrier` | `null,`&nbsp;`string` | Operadora do dispositivo
 `browser` | `null,`&nbsp;`string` | Navegador do dispositivo - extraído do user_agent - no qual a abertura ocorreu
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED {#USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED}
@@ -2106,7 +2106,7 @@ Campo | Tipo | Descrição
 `abort_type` | `null,`&nbsp;`string` | Tipo de cancelamento, um entre ['liquid_abort_message', 'quiet_hours', 'rate_limit']
 `abort_log` | `null,`&nbsp;`string` | [IPI] Mensagem de registro descrevendo os detalhes do cancelamento (máximo de 2.000 caracteres)
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED {#USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED}
@@ -2140,7 +2140,7 @@ Campo | Tipo | Descrição
 `ad_id_type` | `null,`&nbsp;`string` | Tipo do ID de publicidade
 `ad_tracking_enabled` | `null, boolean` | Se o rastreamento de publicidade está ativado ou não
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED {#USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED}
@@ -2176,7 +2176,7 @@ Campo | Tipo | Descrição
 `carrier` | `null,`&nbsp;`string` | Operadora do dispositivo
 `browser` | `null,`&nbsp;`string` | Navegador do dispositivo
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED {#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED}
@@ -2219,7 +2219,7 @@ Campo | Tipo | Descrição
 `ad_id_type` | `null,`&nbsp;`string` | Tipo do ID de publicidade
 `ad_tracking_enabled` | `null, boolean` | Se o rastreamento de publicidade está ativado ou não
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED {#USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED}
@@ -2262,7 +2262,7 @@ Campo | Tipo | Descrição
 `ad_id_type` | `null,`&nbsp;`string` | Tipo do ID de publicidade
 `ad_tracking_enabled` | `null, boolean` | Se o rastreamento de publicidade está ativado ou não
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED {#USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED}
@@ -2299,7 +2299,7 @@ Campo | Tipo | Descrição
 `message_extras` | `null,`&nbsp;`string` | [IPI] Uma string JSON dos pares chave-valor marcados durante a renderização Liquid
 `is_sampled` | `null,`&nbsp;`string` | Indica se o envio push foi amostrado e se era esperado um evento de entrega
 `locale_key` | `null,`&nbsp;`string` | [IPI] A chave correspondente às traduções (por exemplo, 'en-us') usada para compor esta mensagem (null para padrão).
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -2327,7 +2327,7 @@ Campo | Tipo | Descrição
 `canvas_step_api_id` | `null,`&nbsp;`string` | ID da API da etapa do Canvas à qual este evento pertence
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem da etapa do Canvas que este usuário recebeu
 `campaign_api_id` | `null,`&nbsp;`string` | ID da API da campanha à qual este evento pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -2364,7 +2364,7 @@ Campo | Tipo | Descrição
 `url` | `null,`&nbsp;`string` | URL em que o usuário clicou
 `subscription_group_api_id` | `string` | ID da API do grupo de inscrições
 `canvas_variation_name` | `null,`&nbsp;`string` | Nome da variação do Canvas que este usuário recebeu
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -2395,7 +2395,7 @@ Campo | Tipo | Descrição
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem da etapa do Canvas que este usuário recebeu
 `campaign_api_id` | `null,`&nbsp;`string` | ID da API da campanha à qual este evento pertence
 `from_rcs_sender` | `null,`&nbsp;`string` | O ID do remetente RCS ou nome do agente usado para enviar a mensagem
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -2427,7 +2427,7 @@ Campo | Tipo | Descrição
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem da etapa do Canvas que este usuário recebeu
 `campaign_api_id` | `null,`&nbsp;`string` | ID da API da campanha à qual este evento pertence
 `campaign_id` | `null,`&nbsp;`string` | ID BSON da campanha à qual este evento pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -2453,7 +2453,7 @@ Campo | Tipo | Descrição
 `canvas_step_api_id` | `null,`&nbsp;`string` | ID da API da etapa do Canvas à qual este evento pertence
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem da etapa do Canvas que este usuário recebeu
 `campaign_api_id` | `null,`&nbsp;`string` | ID da API da campanha à qual este evento pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -2487,7 +2487,7 @@ Campo | Tipo | Descrição
 `to_phone_number` | `null,`&nbsp;`string` | [IPI] Número de telefone do usuário que recebe a mensagem no formato e.164 (por exemplo, +14155552671)
 `campaign_api_id` | `null,`&nbsp;`string` | ID da API da campanha à qual este evento pertence
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem da etapa do Canvas que este usuário recebeu
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -2520,7 +2520,7 @@ Campo | Tipo | Descrição
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem da etapa do Canvas que este usuário recebeu
 `canvas_step_api_id` | `null,`&nbsp;`string` | ID da API da etapa do Canvas à qual este evento pertence
 `campaign_api_id` | `null,`&nbsp;`string` | ID da API da campanha à qual este evento pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_SMS_ABORT_SHARED {#USERS_MESSAGES_SMS_ABORT_SHARED}
@@ -2544,7 +2544,7 @@ Campo | Tipo | Descrição
 `abort_type` | `null,`&nbsp;`string` | Tipo de cancelamento, um entre ['liquid_abort_message', 'quiet_hours', 'rate_limit']
 `abort_log` | `null,`&nbsp;`string` | [IPI] Mensagem de registro descrevendo os detalhes do cancelamento (máximo de 2.000 caracteres)
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_SMS_CARRIERSEND_SHARED {#USERS_MESSAGES_SMS_CARRIERSEND_SHARED}
@@ -2554,7 +2554,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -2575,7 +2575,7 @@ Campo | Tipo | Descrição
 `from_phone_number` | `null,`&nbsp;`string` | Número de telefone a partir do qual a mensagem SMS foi enviada
 `subscription_group_api_id` | `null,`&nbsp;`string` | ID externo do grupo de inscrições
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_SMS_DELIVERY_SHARED {#USERS_MESSAGES_SMS_DELIVERY_SHARED}
@@ -2585,7 +2585,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -2607,7 +2607,7 @@ Campo | Tipo | Descrição
 `subscription_group_api_id` | `null,`&nbsp;`string` | ID externo do grupo de inscrições
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
 `is_sms_fallback` | `null, boolean` | Indica se o fallback por SMS foi tentado para esta mensagem RCS rejeitada. Está vinculado/pareado ao evento de entrega de SMS
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_SMS_DELIVERYFAILURE_SHARED {#USERS_MESSAGES_SMS_DELIVERYFAILURE_SHARED}
@@ -2617,7 +2617,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -2637,10 +2637,10 @@ Campo | Tipo | Descrição
 `to_phone_number` | `null,`&nbsp;`string` | [IPI] Número de telefone do destinatário
 `subscription_group_api_id` | `null,`&nbsp;`string` | ID externo do grupo de inscrições
 `error` | `null,`&nbsp;`string` | Nome do erro
-`provider_error_code` | `null,`&nbsp;`string` | Código de erro do provedor de serviço SMS
+`provider_error_code` | `null,`&nbsp;`string` | Código de erro do prestador de serviço de SMS
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
 `is_sms_fallback` | `null, boolean` | Indica se o fallback por SMS foi tentado para esta mensagem RCS rejeitada. Está vinculado/pareado ao evento de entrega de SMS
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED {#USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED}
@@ -2668,7 +2668,7 @@ Campo | Tipo | Descrição
 `canvas_step_api_id` | `null,`&nbsp;`string` | ID da API da etapa do Canvas à qual este evento pertence
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem da etapa do Canvas à qual este evento pertence
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_SMS_REJECTION_SHARED {#USERS_MESSAGES_SMS_REJECTION_SHARED}
@@ -2678,7 +2678,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -2699,10 +2699,10 @@ Campo | Tipo | Descrição
 `from_phone_number` | `null,`&nbsp;`string` | Número de telefone a partir do qual a mensagem SMS foi enviada
 `subscription_group_api_id` | `null,`&nbsp;`string` | ID externo do grupo de inscrições
 `error` | `null,`&nbsp;`string` | Nome do erro
-`provider_error_code` | `null,`&nbsp;`string` | Código de erro do provedor de serviço SMS
+`provider_error_code` | `null,`&nbsp;`string` | Código de erro do prestador de serviço de SMS
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
 `is_sms_fallback` | `null, boolean` | Indica se o fallback por SMS foi tentado para esta mensagem RCS rejeitada. Está vinculado/pareado ao evento de entrega de SMS
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_SMS_SEND_SHARED {#USERS_MESSAGES_SMS_SEND_SHARED}
@@ -2712,7 +2712,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -2734,7 +2734,7 @@ Campo | Tipo | Descrição
 `category` | `null,`&nbsp;`string` | Nome da categoria de palavra-chave, preenchido apenas para mensagens de resposta automática: 'Opt-in', 'Opt-out', 'Help' ou valor personalizado
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
 `message_extras` | `null,`&nbsp;`string` | [IPI] Uma string JSON dos pares chave-valor marcados durante a renderização Liquid
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED {#USERS_MESSAGES_SMS_SHORTLINKCLICK_SHARED}
@@ -2763,7 +2763,7 @@ Campo | Tipo | Descrição
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
 `is_suspected_bot_click` | `null, boolean` | Se este evento foi processado como um evento de bot
 `suspected_bot_click_reason` | `null, object` | Por que este evento foi classificado como bot
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_SMS_RETRY_SHARED {#USERS_MESSAGES_SMS_RETRY_SHARED}
@@ -2793,7 +2793,7 @@ Campo | Tipo | Descrição
 `subscription_group_api_id` | `null,`&nbsp;`string` | ID da API do grupo de inscrições
 `retry_type` | `null,`&nbsp;`string` | Tipo de reenvio
 `retry_log` | `null,`&nbsp;`string` | Mensagem de registro descrevendo os detalhes do reenvio
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_WEBHOOK_ABORT_SHARED {#USERS_MESSAGES_WEBHOOK_ABORT_SHARED}
@@ -2803,7 +2803,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -2823,7 +2823,7 @@ Campo | Tipo | Descrição
 `abort_type` | `null,`&nbsp;`string` | Tipo de cancelamento, um entre ['liquid_abort_message', 'quiet_hours', 'rate_limit']
 `abort_log` | `null,`&nbsp;`string` | [IPI] Mensagem de registro descrevendo os detalhes do cancelamento (máximo de 2.000 caracteres)
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -2857,7 +2857,7 @@ Campo | Tipo | Descrição
 `webhook_duration` | `null, int` | Duração total desta requisição em milissegundos
 `webhook_failure_source` | `null,`&nbsp;`string` | Para indicar se um erro foi criado pela Braze ou pelo próprio endpoint. O campo de origem pode ser External Endpoint, Treat no status code to host unreachable
 `is_terminal` | `null, boolean` | Se este evento foi a tentativa final em um envio
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_WEBHOOK_SEND_SHARED {#USERS_MESSAGES_WEBHOOK_SEND_SHARED}
@@ -2867,7 +2867,7 @@ Campo | Tipo | Descrição
 `id` | `string` | ID globalmente exclusivo para este evento
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
 `time` | `int` | Timestamp Unix em que o evento ocorreu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
@@ -2891,7 +2891,7 @@ Campo | Tipo | Descrição
 `language` | `null,`&nbsp;`string` | [IPI] Idioma do usuário
 `app_group_id` | `null,`&nbsp;`string` | ID BSON do grupo de app ao qual este usuário pertence
 `message_extras` | `null,`&nbsp;`string` | [IPI] Uma string JSON dos pares chave-valor marcados durante a renderização Liquid
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_WEBHOOK_RETRY_SHARED {#USERS_MESSAGES_WEBHOOK_RETRY_SHARED}
@@ -2927,7 +2927,7 @@ Campo | Tipo | Descrição
 `language` | `null,`&nbsp;`string` | [IPI] Idioma do usuário
 `retry_type` | `null,`&nbsp;`string` | Tipo de reenvio
 `retry_log` | `null,`&nbsp;`string` | Mensagem de registro descrevendo os detalhes do reenvio
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_WHATSAPP_ABORT_SHARED {#USERS_MESSAGES_WHATSAPP_ABORT_SHARED}
@@ -2939,7 +2939,7 @@ Campo | Tipo | Descrição
 `to_phone_number` | 	`null,`&nbsp;`string` | [IPI] Número de telefone do destinatário
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `timezone` | `null,`&nbsp;`string` | Fuso horário do usuário
 `app_group_id` | `null,`&nbsp;`string` | ID do espaço de trabalho ao qual este usuário pertence
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
@@ -2955,7 +2955,7 @@ Campo | Tipo | Descrição
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
 `abort_type` | `null,`&nbsp;`string` | Tipo de cancelamento, um entre ['liquid_abort_message', 'quiet_hours', 'rate_limit']
 `abort_log` | `null,`&nbsp;`string` | [IPI] Mensagem de registro descrevendo os detalhes do cancelamento (máximo de 2.000 caracteres)
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe      
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe      
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
@@ -2983,7 +2983,7 @@ Campo | Tipo | Descrição
 `short_url` | `null,`&nbsp;`string` | URL encurtada que foi clicada
 `user_agent` | `null,`&nbsp;`string` | User agent no qual o relatório de spam ocorreu
 `user_phone_number` | `null,`&nbsp;`string` | [IPI] O número de telefone do usuário a partir do qual a mensagem foi recebida
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_WHATSAPP_DELIVERY_SHARED {#USERS_MESSAGES_WHATSAPP_DELIVERY_SHARED}
@@ -2995,7 +2995,7 @@ Campo | Tipo | Descrição
 `to_phone_number` | `null,`&nbsp;`string` | [IPI] Número de telefone do destinatário
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `timezone` | `null,`&nbsp;`string` | Fuso horário do usuário
 `from_phone_number` | `null,`&nbsp;`string` | Número de telefone a partir do qual a mensagem do WhatsApp foi enviada
 `app_group_id` | `null,`&nbsp;`string` | ID do espaço de trabalho ao qual este usuário pertence
@@ -3010,7 +3010,7 @@ Campo | Tipo | Descrição
 `canvas_step_api_id` | `null,`&nbsp;`string` | ID da API da etapa do Canvas à qual este evento pertence
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem da etapa do Canvas que este usuário recebeu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe      
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe      
 `send_id` | `null,`&nbsp;`string` | ID de envio da mensagem à qual esta mensagem pertence
 `flow_id` | `null,`&nbsp;`string` | O ID exclusivo do Flow no WhatsApp Manager. Presente se o usuário estiver respondendo a um WhatsApp Flow.
 `template_name` | `null,`&nbsp;`string` | [IPI] Nome do modelo no WhatsApp Manager. Presente se estiver enviando uma mensagem de modelo
@@ -3026,7 +3026,7 @@ Campo | Tipo | Descrição
 `to_phone_number` | `null,`&nbsp;`string` | [IPI] Número de telefone do destinatário
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `timezone` | `null,`&nbsp;`string` | Fuso horário do usuário
 `from_phone_number` | `null,`&nbsp;`string` | Número de telefone a partir do qual a mensagem do WhatsApp foi enviada
 `app_group_id` | `null,`&nbsp;`string` | ID do espaço de trabalho ao qual este usuário pertence
@@ -3043,7 +3043,7 @@ Campo | Tipo | Descrição
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
 `provider_error_code` | `null,`&nbsp;`string` | Código de erro do WhatsApp
 `provider_error_title` | `null, `&nbsp;`string` | Título do erro do WhatsApp
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe      
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe      
 `send_id` | `null,`&nbsp;`string` | ID de envio da mensagem à qual esta mensagem pertence
 `message_id` | `null,`&nbsp;`string` | O ID exclusivo gerado pela Meta para esta mensagem
 `template_name` | `null,`&nbsp;`string` | [IPI] Nome do modelo no WhatsApp Manager. Presente se estiver enviando uma mensagem de modelo
@@ -3060,7 +3060,7 @@ Campo | Tipo | Descrição
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
 `inbound_phone_number` | `string` | O número de entrada para o qual a mensagem foi enviada
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `timezone` | `null,`&nbsp;`string` | Fuso horário do usuário
 `app_group_id` | `null,`&nbsp;`string` | ID do espaço de trabalho ao qual este usuário pertence
 `app_group_api_id` | `null,`&nbsp;`string` | ID da API do espaço de trabalho ao qual este usuário pertence
@@ -3077,8 +3077,8 @@ Campo | Tipo | Descrição
 `quick_reply_text` | `string` | Texto do botão pressionado pelo usuário
 `media_urls` | `null, {"type"=>"array", "items"=>["null", "string"]}` | URLs de mídia do usuário
 `action` | `string` | Ação tomada em resposta a esta mensagem. Por exemplo, `Subscribed`, `Unsubscribed` ou `None`.
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe      
-`catalog_id` | `null,`&nbsp;`string` | ID do catálogo de um produto, se um produto for referenciado na mensagem de entrada. Caso contrário, vazio.
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe      
+`catalog_id` | `null,`&nbsp;`string` | ID do catálogo de um produto se um produto for referenciado na mensagem de entrada. Caso contrário, vazio.
 `product_id` | `null,`&nbsp;`string` | ID do produto comprado
 `flow_id` | `null,`&nbsp;`string` | O ID exclusivo do Flow no WhatsApp Manager. Presente se o usuário estiver respondendo a um WhatsApp Flow.
 `flow_response_json` | `null,`&nbsp;`string` | [IPI] Os valores do formulário com os quais o usuário respondeu. Presente se o usuário estiver respondendo a um WhatsApp Flow.
@@ -3095,7 +3095,7 @@ Campo | Tipo | Descrição
 `to_phone_number` | `null,`&nbsp;`string` | [IPI] Número de telefone do destinatário
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `timezone` | `null,`&nbsp;`string` | Fuso horário do usuário
 `from_phone_number` | `null,`&nbsp;`string` | Número de telefone a partir do qual a mensagem do WhatsApp foi enviada
 `app_group_id` | `null,`&nbsp;`string` | ID do espaço de trabalho ao qual este usuário pertence
@@ -3110,7 +3110,7 @@ Campo | Tipo | Descrição
 `canvas_step_api_id` | `null,`&nbsp;`string` | ID da API da etapa do Canvas à qual este evento pertence
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem da etapa do Canvas que este usuário recebeu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe      
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe      
 `send_id` | `null,`&nbsp;`string` | ID de envio da mensagem à qual esta mensagem pertence
 `template_name` | `null,`&nbsp;`string` | [IPI] Nome do modelo no WhatsApp Manager. Presente se estiver enviando uma mensagem de modelo
 `message_id` | `null,`&nbsp;`string` | O ID exclusivo gerado pela Meta para esta mensagem
@@ -3126,7 +3126,7 @@ Campo | Tipo | Descrição
 `to_phone_number` | `null,`&nbsp;`string`	| [IPI] Número de telefone do destinatário
 `user_id` | `string` | ID da Braze do usuário que realizou este evento
 `external_user_id` | `null,`&nbsp;`string` | [IPI] ID externo do usuário
-`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário, se o usuário for anônimo
+`device_id` | `null,`&nbsp;`string` | `device_id` vinculado a este usuário se o usuário for anônimo
 `timezone` | `null,`&nbsp;`string` | Fuso horário do usuário
 `from_phone_number` | `null,`&nbsp;`string` | Número de telefone a partir do qual a mensagem do WhatsApp foi enviada
 `app_group_id` | `null,`&nbsp;`string` | ID do espaço de trabalho ao qual este usuário pertence
@@ -3142,7 +3142,7 @@ Campo | Tipo | Descrição
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | ID da API da variação de mensagem da etapa do Canvas que este usuário recebeu
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
 `message_extras` | `null,`&nbsp;`string` | [IPI] Uma string JSON dos pares chave-valor marcados durante a renderização Liquid
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe      
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe      
 `send_id` | `null,`&nbsp;`string` | ID de envio da mensagem à qual esta mensagem pertence
 `flow_id` | `null,`&nbsp;`string` | O ID exclusivo do Flow no WhatsApp Manager. Presente se o usuário estiver respondendo a um WhatsApp Flow.
 `template_name` | `null,`&nbsp;`string` | [IPI] Nome do modelo no WhatsApp Manager. Presente se estiver enviando uma mensagem de modelo
@@ -3180,7 +3180,7 @@ Campo | Tipo | Descrição
 `dispatch_id` | `null,`&nbsp;`string` | ID do despacho ao qual esta mensagem pertence
 `retry_type` | `null,`&nbsp;`string` | Tipo de reenvio
 `retry_log` | `null,`&nbsp;`string` | Mensagem de registro descrevendo os detalhes do reenvio
-`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe
+`sf_created_at` | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Usuários
@@ -3197,7 +3197,7 @@ Campo | Tipo | Descrição
 | `time`                      | `int`,&nbsp;`null`       | Registro de data/hora Unix em que o evento ocorreu         |
 | `random_bucket_number`      | `int`,&nbsp;`null`       | Número de bucket aleatório atual atribuído ao usuário  |
 | `prev_random_bucket_number` | `int`,&nbsp;`null`       | Número de bucket aleatório anterior atribuído ao usuário |
-| `sf_created_at`             | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe      |
+| `sf_created_at`             | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe      |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_USERDELETEREQUEST_SHARED {#USERS_USERDELETEREQUEST_SHARED}
@@ -3209,7 +3209,7 @@ Campo | Tipo | Descrição
 | `app_group_id`     | `string`,&nbsp;`null`    | ID da Braze do espaço de trabalho ao qual este usuário pertence                 |
 | `app_group_api_id` | `string`,&nbsp;`null`    | ID da API do espaço de trabalho ao qual este usuário pertence                  |
 | `time`             | `int`,&nbsp;`null`       | Registro de data/hora Unix em que a solicitação de exclusão do usuário foi processada |
-| `sf_created_at`    | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe                 |
+| `sf_created_at`    | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_USERORPHAN_SHARED {#USERS_USERORPHAN_SHARED}
@@ -3225,7 +3225,7 @@ Campo | Tipo | Descrição
 | `app_api_id`       | `string`,&nbsp;`null`    | ID da API do app ao qual o usuário órfão pertencia                               |
 | `time`             | `int`,&nbsp;`null`       | Registro de data/hora Unix em que o usuário se tornou órfão                                 |
 | `orphaned_by_id`   | `string`,&nbsp;`null`    | ID da Braze do usuário cujo perfil foi mesclado com o perfil do usuário órfão |
-| `sf_created_at`    | `timestamp`,&nbsp;`null` | Quando este evento foi captado pelo Snowpipe                                 |
+| `sf_created_at`    | `timestamp`,&nbsp;`null` | Quando este evento foi capturado pelo Snowpipe                                 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Snapshots {#snapshots}
