@@ -160,7 +160,7 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | View PII                                        | View PII |
 | View User Profiles (PII Redacted)               | Access user search and view user profiles with redacted PII |
 | View Usage Data                                 | View usage data |
-| Merge Duplicate Users                           | Merge duplicate users into one user. Duplicates are removed after merging. |
+| Merge Duplicate Users                           | Preview and combine duplicate users into one user. Duplicates are removed after merging. |
 | View Canvas Templates                           | View Canvas templates |
 | Archive Canvas Templates                        | Move Canvas templates to archive |
 | Launch Content Blocks                           | Launch Content Blocks |
