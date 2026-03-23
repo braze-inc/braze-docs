@@ -58,6 +58,10 @@ glossaries:
     description: "Segmente les utilisateurs en fonction de la date de création de leur profil utilisateur. Si un utilisateur a été ajouté par CSV ou API, ce filtre reflète la date à laquelle il a été ajouté. Si l'utilisateur n'a pas été ajouté par CSV ou API et que sa première session est suivie par le SDK, ce filtre reflète la date de cette première session."
     tags:
       - Other Filters
+  - name: Créé depuis
+    description: "Segmente les utilisateurs en fonction de l'origine de la création de leur profil utilisateur.<br><br>Les valeurs suivantes sont prises en charge :<br>- SDK (<code>sdk</code>) : profil utilisateur créé via le SDK Braze.<br>- API REST (<code>rest</code>) : profil utilisateur créé via l'API REST Braze.<br>- Importation de jeton de notification push (<code>pti</code>) : profil utilisateur créé via l'importation de jetons de notification push.<br>- CSV (<code>csv</code>) : profil utilisateur créé via l'importation CSV.<br>- Démo (<code>demo</code>) : profil utilisateur créé via des données de démonstration.<br>- SMS (<code>sms</code>) : profil utilisateur créé via SMS.<br>- Shopify (<code>shopify</code>) : profil utilisateur créé via Shopify.<br>- WhatsApp (<code>whats_app</code>) : profil utilisateur créé via WhatsApp.<br>- Événement fournisseur (<code>provider_event</code>) : profil utilisateur créé via un événement fournisseur.<br>- Synchronisation fournisseur (<code>provider_sync</code>) : profil utilisateur créé via une synchronisation fournisseur.<br>- Page d'accueil (<code>landing_page</code>) : profil utilisateur créé via une page d'accueil."
+    tags:
+      - Other Filters
   - name: Attributs personnalisés imbriqués
     description: "Les attributs qui sont les propriétés des attributs personnalisés.<br><br>Lors du filtrage d'un attribut personnalisé de temps imbriqué, vous pouvez choisir de filtrer en fonction du « Jour de l'année » ou de l'« Heure ». « Jour de l'année » vérifie uniquement le mois et le jour à des fins de comparaison. « Heure » compare l'horodatage complet, y compris l'année."
     tags:

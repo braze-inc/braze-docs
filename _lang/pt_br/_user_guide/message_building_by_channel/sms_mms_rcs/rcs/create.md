@@ -51,7 +51,7 @@ Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conte
 {% endtab %}
 {% tab Canvas %}
 1. [Crie seu Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) usando o criador do Canvas.
-2. Depois de configurar seu Canvas, adicione uma etapa de Mensagem **SMS/MMS/RCS** no construtor de Canvas. 
+2. Depois de configurar seu Canvas, adicione uma etapa de mensagem **SMS/MMS/RCS** no construtor de Canvas. 
 3. Dê um nome claro e significativo à sua etapa.
 4. Selecione um [grupo de inscrições]({{site.baseurl}}/sms_rcs_subscription_groups/) habilitado para RCS. Ao selecionar um grupo de inscrições, a Braze adicionará automaticamente um filtro de segmentação, garantindo que apenas os usuários inscritos recebam a campanha. Apenas códigos longos e códigos curtos que pertencem a esse grupo de inscrições serão usados para direcionar usuários.
 - **Fallback SMS**: a Braze recomenda fortemente que todo grupo de inscrições que contém um remetente RCS também inclua pelo menos um código SMS para fallback. Isso é importante para a entregabilidade nos casos em que mensagens RCS falham ao serem entregues. Algumas razões para isso podem incluir incompatibilidade do dispositivo do usuário e cobertura incompleta da operadora em um determinado país ou região. Ao ativar o fallback SMS, sua mensagem ainda será entregue ao seu usuário e você nunca perderá essa oportunidade de se conectar com eles.
@@ -76,12 +76,12 @@ Como o nome sugere, mensagens de texto RCS focam no texto como meio. Se você di
 
 #### Recursos
 
-- Os tipos de mensagens de texto incluem todos os recursos de SMS. Apenas o Rastreamento Avançado é possível para rastreamento de cliques em URL, proporcionando granularidade de relatórios em nível de usuário. 
-- Além disso, agora você tem a opção de incluir **Respostas Sugeridas** e **Ações Sugeridas** envolventes que impulsionam ações de alta interação do usuário, como visitar uma landing page ou fazer um pedido. 
-    - **Respostas Sugeridas** são botões contendo respostas sugeridas para os usuários clicarem e preencherem automaticamente em sua entrada de texto, removendo a dificuldade de pensar em uma resposta ao fornecer um conjunto restrito de opções para eles. 
-    - **Ações Sugeridas** são botões que iniciam uma ação no dispositivo do usuário. Eles geralmente consistem em uma ou duas palavras descritivas e um ícone visual para ajudar o usuário a entender o que o botão faz. A Braze atualmente suporta Ações Sugeridas OpenURL. Isso funciona de maneira semelhante a uma URL, onde os usuários que selecionam o botão são redirecionados para uma página da web ou outro local identificado por URL. 
+- Os tipos de mensagens de texto incluem todos os recursos de SMS. Apenas o rastreamento avançado é possível para rastreamento de cliques em URL, proporcionando granularidade de relatórios em nível de usuário. 
+- Além disso, agora você tem a opção de incluir **Respostas sugeridas** e **Ações sugeridas** envolventes que impulsionam ações de alta interação do usuário, como visitar uma landing page ou fazer um pedido. 
+    - **Respostas sugeridas** são botões contendo respostas sugeridas para os usuários clicarem e preencherem automaticamente em sua entrada de texto, removendo a dificuldade de pensar em uma resposta ao fornecer um conjunto restrito de opções para eles. 
+    - **Ações sugeridas** são botões que iniciam uma ação no dispositivo do usuário. Eles geralmente consistem em uma ou duas palavras descritivas e um ícone visual para ajudar o usuário a entender o que o botão faz. A Braze atualmente suporta Ações sugeridas OpenURL. Isso funciona de maneira semelhante a uma URL, onde os usuários que selecionam o botão são redirecionados para uma página da web ou outro local identificado por URL. 
 
-![Um GIF de três Ações Sugeridas para uma mensagem RCS promovendo estilos de moda em alta: "Realeza de conto de fadas", "Academia ousada" e "Mostre-me seus outros estilos".]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
+![Um GIF de três Ações sugeridas para uma mensagem RCS promovendo estilos de moda em alta: "Realeza de conto de fadas", "Academia ousada" e "Mostre-me seus outros estilos".]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
 
 #### Considerações
 
@@ -166,7 +166,7 @@ A Braze permite que você acompanhe com que frequência os usuários realizam a�
 
 Os eventos de conversão ajudam a medir o sucesso da sua campanha. Por exemplo:
 - Se você estiver usando geotargeting para disparar uma mensagem RCS que tem como objetivo final o usuário fazer uma compra, defina o evento de conversão para **Compra**.
-- Se você estiver tentando levar o usuário ao seu app, defina o evento de conversão para **Inicia Sessão**.
+- Se você estiver tentando levar o usuário ao seu app, defina o evento de conversão para **Inicia sessão**.
 
 Também é possível definir eventos personalizados de conversão com base no seu caso de uso específico. Seja criativo com a forma como você realmente deseja medir o sucesso da sua campanha.
 
@@ -174,7 +174,7 @@ Também é possível definir eventos personalizados de conversão com base no se
 
 Depois de terminar de construir sua campanha ou Canvas, revise os detalhes, teste e envie!
 
-Em seguida, consulte [Relatório para SMS, MMS e RCS]({{site.baseurl}}/sms_mms_rcs_reporting/) para saber como acessar os resultados das suas campanhas RCS.
+Em seguida, consulte [Relatórios para SMS, MMS e RCS]({{site.baseurl}}/sms_mms_rcs_reporting/) para saber como acessar os resultados das suas campanhas RCS.
 
 ## Dicas
 
@@ -184,9 +184,9 @@ Se você planeja usar Liquid, certifique-se de incluir um valor padrão para a p
 
 ### Gere textos com IA
 
-Precisa de ajuda para criar textos envolventes? Tente usar o [Assistente de Copywriting de IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Insira um nome ou descrição do produto, e a IA gerará textos de marketing semelhantes aos humanos para uso no seu envio de mensagens.
+Precisa de ajuda para criar textos envolventes? Tente usar o [Assistente de Copywriting com IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Insira um nome ou descrição do produto, e a IA gerará textos de marketing semelhantes aos humanos para uso no seu envio de mensagens.
 
-![Criador de mensagens com um ícone para abrir o assistente de copywriting de IA.]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
+![Criador de mensagens com um ícone para abrir o assistente de copywriting com IA.]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
 
 ### Crie fluxos de mensagens conversacionais
 

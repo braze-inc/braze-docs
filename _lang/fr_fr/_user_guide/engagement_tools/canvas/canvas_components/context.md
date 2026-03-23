@@ -23,7 +23,7 @@ Les étapes Contexte vous permettent de créer et d'utiliser des données tempor
 Les variables de contexte n'existent que pour ce parcours Canvas spécifique. Elles ne modifient pas de manière permanente le profil de l'utilisateur et n'apparaissent pas dans d'autres Canvas. Elles sont donc idéales pour les informations temporaires qui ne concernent qu'une campagne ou un flux de travail spécifique.
 
 {% alert tip %}
-Pour obtenir des informations complètes sur les variables de contexte, y compris les types de données, leur utilisation et les bonnes pratiques, consultez la [référence des variables de contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
+Pour obtenir des informations complètes sur les variables de contexte, y compris les types de données, leur utilisation et les bonnes pratiques, consultez l'[article de référence sur les variables de contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 {% endalert %}
 
 Dans une étape Contexte, vous pouvez définir ou mettre à jour jusqu'à 10 variables de contexte. Ces variables peuvent servir à personnaliser les délais, segmenter dynamiquement les utilisateurs et enrichir l'envoi de messages dans l'ensemble du Canvas. Par exemple, vous pourriez créer une variable de contexte pour l'heure de vol prévue d'un utilisateur, puis l'utiliser pour définir des délais personnalisés et envoyer des rappels.
@@ -33,7 +33,7 @@ Vous pouvez définir des variables de contexte de deux manières :
 - **À l'entrée du Canvas :** Les données provenant de l'événement ou du déclencheur API peuvent automatiquement remplir les variables de contexte.
 - **Dans une étape Contexte :** Définissez ou mettez à jour manuellement les variables de contexte en ajoutant une étape Contexte.
 
-Chaque variable de contexte nécessite un nom, un type de données et une valeur (définie à l'aide de Liquid ou de l'outil Ajouter une personnalisation). Une fois définies, vous pouvez référencer les variables de contexte dans tout le Canvas à l'aide de Liquid, par exemple {% raw %}`{{context.${flight_time}}}`{% endraw %}. Dans le champ **Nom de la variable de contexte**, vous pouvez également saisir le nom de la variable de contexte ou le sélectionner dans le menu déroulant de l'éditeur d'étape. Pour plus de détails, consultez la [référence des variables de contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
+Chaque variable de contexte nécessite un nom, un type de données et une valeur (définie à l'aide de Liquid ou de l'outil Ajouter une personnalisation). Une fois définies, vous pouvez référencer les variables de contexte dans tout le Canvas à l'aide de Liquid, par exemple {% raw %}`{{context.${flight_time}}}`{% endraw %}. Dans le champ **Nom de la variable de contexte**, vous pouvez également saisir le nom de la variable de contexte ou le sélectionner dans le menu déroulant de l'éditeur d'étape. Pour plus de détails, consultez l'[article de référence sur les variables de contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
 Chaque entrée dans le Canvas redéfinit les variables de contexte en fonction des dernières données d'entrée et de la configuration du Canvas, ce qui permet aux utilisateurs d'avoir plusieurs parcours actifs avec leur propre contexte. Par exemple, si un client a deux vols à venir, il aura deux états de parcours distincts fonctionnant simultanément, chacun avec ses propres variables de contexte spécifiques au vol, comme l'heure de départ et la destination. Cela vous permet d'envoyer des rappels personnalisés concernant son vol de 14 h à destination de New York, tout en envoyant des informations différentes concernant son vol de 8 h à destination de Los Angeles le lendemain, de sorte que chaque message reste pertinent par rapport à la réservation concernée.
 
@@ -58,7 +58,7 @@ Sans contenu connecté, les étapes Contexte s'exécutent beaucoup plus rapideme
 - La taille totale de toutes les variables d'une étape ne doit pas dépasser 50 Ko.
 - Les variables transmises via des déclencheurs API partagent le même espace de noms que celles créées dans les étapes Contexte ; redéfinir une variable dans une étape Contexte remplace la valeur provenant de l'API.
 
-Pour plus de détails et une utilisation avancée, consultez la [référence des variables de contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
+Pour plus de détails et une utilisation avancée, consultez l'[article de référence sur les variables de contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
 ## Créer une étape Contexte
 
@@ -83,7 +83,7 @@ Pour définir une variable de contexte :
 5. (Facultatif) Pour ajouter des variables supplémentaires, sélectionnez **Ajouter une variable de contexte** et répétez les étapes 1 à 4.
 6. Lorsque vous avez terminé, sélectionnez **Terminé**.
 
-Vous pouvez désormais utiliser votre variable de contexte partout où vous utilisez Liquid, par exemple dans les étapes Message et Mise à jour utilisateur, en sélectionnant **Ajouter une personnalisation**. Dans le champ **Nom de la variable de contexte**, vous pouvez également saisir le nom de la variable de contexte ou le sélectionner dans le menu déroulant de l'éditeur d'étape. Pour des instructions détaillées, consultez la [référence des variables de contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
+Vous pouvez désormais utiliser votre variable de contexte partout où vous utilisez Liquid, par exemple dans les étapes Message et Mise à jour utilisateur, en sélectionnant **Ajouter une personnalisation**. Dans le champ **Nom de la variable de contexte**, vous pouvez également saisir le nom de la variable de contexte ou le sélectionner dans le menu déroulant de l'éditeur d'étape. Pour des instructions détaillées, consultez l'[article de référence sur les variables de contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
 {% alert important %}
 Lorsque vous faites référence à des variables de contexte, utilisez toujours le format {% raw %}`{{context.${variable_name}}}`{% endraw %}.
@@ -91,7 +91,7 @@ Lorsque vous faites référence à des variables de contexte, utilisez toujours 
 
 ### Filtres de variables de contexte
 
-Vous pouvez créer des filtres à l'aide de variables de contexte dans les étapes [Parcours d'audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) et [Arbre décisionnel]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split). Pour la configuration des filtres, la logique de comparaison et des exemples avancés, consultez la [référence des variables de contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#context-variable-filters).
+Vous pouvez créer des filtres à l'aide de variables de contexte dans les étapes [Parcours d'audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) et [Arbre décisionnel]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split). Pour la configuration des filtres, la logique de comparaison et des exemples avancés, consultez l'[article de référence sur les variables de contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#context-variable-filters).
 
 {% multi_lang_include alerts/important_alerts.md alert='time filter types' %}
 
@@ -100,7 +100,7 @@ Vous pouvez créer des filtres à l'aide de variables de contexte dans les étap
 Nous vous recommandons de tester et de [prévisualiser vos parcours utilisateur]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) afin de vous assurer que vos messages sont envoyés à la bonne audience et que les variables de contexte produisent les résultats attendus.
 
 {% alert note %}
-Si vous prévisualisez votre Canvas dans la section **Prévisualisation & Envoi test** de l'éditeur, l'horodatage dans l'aperçu du message test **n'est pas** normalisé en UTC, car ce panneau génère les aperçus sous forme de chaînes de caractères. Cela signifie que si un Canvas est configuré pour accepter un objet `time`, l'aperçu du message ne reflète pas fidèlement ce qui se produit lorsque le Canvas est en production. Pour tester votre Canvas de manière plus précise, nous vous recommandons de prévisualiser les parcours utilisateur.
+Si vous prévisualisez votre Canvas dans la section **Prévisualisation et envoi test** de l'éditeur, l'horodatage dans l'aperçu du message test **n'est pas** normalisé en UTC, car ce panneau génère les aperçus sous forme de chaînes de caractères. Cela signifie que si un Canvas est configuré pour accepter un objet `time`, l'aperçu du message ne reflète pas fidèlement ce qui se produit lorsque le Canvas est en production. Pour tester votre Canvas de manière plus précise, nous vous recommandons de prévisualiser les parcours utilisateur.
 {% endalert %}
 
 Veillez à prendre en compte tous les scénarios courants susceptibles de générer des variables de contexte non valides. Lorsque vous prévisualisez votre parcours utilisateur, vous pouvez visualiser les résultats des étapes de délai personnalisées utilisant des variables de contexte, ainsi que toutes les comparaisons d'audience ou d'arbre décisionnel qui associent les utilisateurs à des variables de contexte.
@@ -127,7 +127,7 @@ Une variable de contexte est considérée comme non valide lorsque :
 - L'appel à un contenu connecté intégré échoue.
 - Au moment de l'exécution, l'expression Liquid renvoie une valeur qui ne correspond pas au type de données attendu ou qui est vide (null).
 
-Par exemple, si le type de données de la variable de contexte est **Number** mais que l'expression Liquid renvoie une chaîne de caractères, la variable est non valide.
+Par exemple, si le type de données de la variable de contexte est **Nombre** mais que l'expression Liquid renvoie une chaîne de caractères, la variable est non valide.
 
 Dans ce cas :
 - L'utilisateur passe à l'étape suivante.
@@ -156,7 +156,7 @@ Si votre endpoint de contenu connecté est soumis à des limites de débit, note
 
 ## Normalisation des fuseaux horaires
 
-Bien que la plupart des propriétés d'événement utilisant le type horodatage soient déjà en UTC dans Canvas, il existe quelques exceptions. Avec l'ajout de Canvas Context, toutes les propriétés d'événement d'horodatage par défaut dans les Canvas basés sur les actions sont désormais en UTC. Ce changement s'inscrit dans une initiative plus large visant à garantir une expérience plus prévisible et cohérente lors de la modification des étapes du Canvas et des messages. Notez que cette modification affecte tous les Canvas basés sur des actions, que le Canvas en question utilise ou non une étape Contexte.
+Avec la disponibilité générale de Canvas Context, toutes les propriétés d'événement d'horodatage par défaut dans les Canvas basés sur les actions sont désormais en UTC. Ce changement s'inscrit dans une initiative plus large visant à garantir une expérience plus prévisible et cohérente lors de la modification des étapes du Canvas et des messages. Notez que cette modification affecte tous les Canvas basés sur des actions, que le Canvas en question utilise ou non une étape Contexte.
 
 {% alert important %}
 Dans tous les cas, nous recommandons fortement d'utiliser les [filtres Liquid time_zone]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) pour que les horodatages soient représentés dans le fuseau horaire souhaité. Consultez cette [question fréquente](#faq-example) pour un exemple.
@@ -181,7 +181,7 @@ Non.
 
 #### Ce changement affecte-t-il les propriétés d'entrée du Canvas ?
 
-Oui, cela a une incidence sur `canvas_entry_properties` si le `canvas_entry_property` est utilisé dans un Canvas basé sur les actions et que le type de propriété est `time`. Dans tous les cas, nous recommandons d'utiliser les filtres Liquid `time_zone` pour que les horodatages soient représentés dans le fuseau horaire souhaité.
+Oui, cela a une incidence sur `canvas_entry_properties` si la `canvas_entry_property` est utilisée dans un Canvas basé sur les actions et que le type de propriété est `time`. Dans tous les cas, nous recommandons d'utiliser les filtres Liquid `time_zone` pour que les horodatages soient représentés dans le fuseau horaire souhaité.
 
 Voici un exemple illustrant comment procéder :
 

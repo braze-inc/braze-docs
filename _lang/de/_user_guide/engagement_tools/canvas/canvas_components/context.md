@@ -20,7 +20,7 @@ tool: Canvas
 
 Mit Kontext-Schritten können Sie temporäre Daten erstellen und verwenden, während Nutzer:innen eine bestimmte Canvas-Journey durchlaufen. Diese Daten existieren nur innerhalb dieser Canvas-Journey und bleiben nicht über verschiedene Canvase hinweg oder außerhalb der Sitzung bestehen.
 
-Kontextvariablen existieren nur für diese spezifische Canvas-Journey. Sie ändern das Profil der Nutzer:innen nicht dauerhaft und werden nicht in anderen Canvasen angezeigt. Dadurch eignen sie sich ideal für temporäre Informationen, die nur für eine bestimmte Kampagne oder einen bestimmten Arbeitsablauf relevant sind.
+Kontextvariablen existieren nur für diese spezifische Canvas-Journey. Sie ändern das Profil der Nutzer:innen nicht dauerhaft und werden nicht in anderen Canvasen angezeigt. Dadurch eignen sie sich ideal für temporäre Informationen, die nur für eine bestimmte Kampagne oder einen bestimmten Workflow relevant sind.
 
 {% alert tip %}
 Eine vollständige Referenz zu Kontextvariablen, einschließlich Datentypen, Verwendung und Best Practices, finden Sie in der [Referenz zu Kontextvariablen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
@@ -86,7 +86,7 @@ So definieren Sie eine Kontextvariable:
 Jetzt können Sie Ihre Kontextvariable überall dort verwenden, wo Sie Liquid einsetzen, z. B. in den Schritten „Nachricht" und „Nutzer:innen-Update", indem Sie **Personalisierung hinzufügen** auswählen. Im Feld **Name der Kontextvariablen** können Sie auch den Namen der Kontextvariablen eingeben oder ihn aus dem Dropdown im Schritt-Editor auswählen. Eine vollständige Anleitung finden Sie in der [Referenz zu Kontextvariablen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
 {% alert important %}
-Bei der Referenzierung von Kontextvariablen ist stets das Format {% raw %}`{{context.${variable_name}}}`{% endraw %} zu verwenden.
+Verwenden Sie beim Referenzieren von Kontextvariablen immer das Format {% raw %}`{{context.${variable_name}}}`{% endraw %}.
 {% endalert %}
 
 ### Filter für Kontextvariablen
@@ -156,7 +156,7 @@ Wenn Ihr Connected-Content-Endpunkt Rate-Limits aufweist, beachten Sie, dass Kon
 
 ## Standardisierung der Zeitzonenkonsistenz
 
-Während die meisten Event-Eigenschaften mit dem Zeitstempeltyp in Canvas bereits in UTC vorliegen, gibt es einige Ausnahmen. Mit der Einführung von Canvas Context werden alle Standard-Zeitstempel-Event-Eigenschaften in aktionsbasierten Canvasen in UTC angegeben. Diese Änderung ist Teil einer umfassenderen Maßnahme, um eine vorhersehbarere und konsistentere Erfahrung bei der Bearbeitung von Canvas-Schritten und -Nachrichten zu gewährleisten. Bitte beachten Sie, dass diese Änderung alle aktionsbasierten Canvase betrifft, unabhängig davon, ob das jeweilige Canvas einen Kontext-Schritt verwendet oder nicht.
+Mit der allgemeinen Verfügbarkeit von Canvas Context sind alle Standard-Zeitstempel-Event-Eigenschaften in aktionsbasierten Canvasen in UTC angegeben. Diese Änderung ist Teil einer umfassenderen Maßnahme, um eine vorhersehbarere und konsistentere Erfahrung bei der Bearbeitung von Canvas-Schritten und -Nachrichten zu gewährleisten. Bitte beachten Sie, dass diese Änderung alle aktionsbasierten Canvase betrifft, unabhängig davon, ob das jeweilige Canvas einen Kontext-Schritt verwendet oder nicht.
 
 {% alert important %}
 Unter allen Umständen empfehlen wir dringend, [Liquid-`time_zone`-Filter]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) für Zeitstempel zu verwenden, die in der gewünschten Zeitzone dargestellt werden sollen. Ein Beispiel finden Sie in dieser [häufig gestellten Frage](#faq-example).
@@ -237,7 +237,7 @@ Die bevorzugte Zeitzone kann auch in der Event-Eigenschaften-Payload übermittel
 
 ### Wie unterscheiden sich Kontextvariablen von Canvas-Eingangs-Eigenschaften?
 
-Canvas-Eingangs-Eigenschaften sind als Canvas-Kontextvariablen enthalten. Das bedeutet, dass Sie Canvas-Eingangs-Eigenschaften über die Braze API senden und in anderen Schritten referenzieren können, ähnlich wie bei der Verwendung einer Kontextvariablen mit dem Liquid-Snippet.
+Canvas-Eingangs-Eigenschaften sind als Canvas-Kontextvariablen enthalten. Das bedeutet, dass Sie Canvas-Eingangs-Eigenschaften über die Braze-API senden und in anderen Schritten referenzieren können, ähnlich wie bei der Verwendung einer Kontextvariablen mit dem Liquid-Snippet.
 
 ### Können sich Variablen in einem einzelnen Kontext-Schritt gegenseitig referenzieren?
 

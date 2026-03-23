@@ -59,7 +59,7 @@ Sie können die folgenden Attribute für das zuletzt verwendete Gerät der Nutze
 |Tag | Beschreibung |
 |---|---|
 |`{{most_recently_used_device.${browser}}}` | Der zuletzt verwendete Browser auf dem Gerät der Nutzer:in. Beispiele sind „Chrome" und „Safari". |
-|`{{most_recently_used_device.${id}}}` | Der Braze-Gerätebezeichner. Unter iOS kann dies der Apple Identifier for Vendor (IDFV) oder eine UUID sein. Bei Android und anderen Plattformen handelt es sich um eine zufällig generierte UUID. |
+|`{{most_recently_used_device.${id}}}` | Der Braze-Gerätebezeichner. Unter iOS kann dies der Apple Identifier for Vendors (IDFV) oder eine UUID sein. Bei Android und anderen Plattformen handelt es sich um eine zufällig generierte UUID. |
 | `{{most_recently_used_device.${carrier}}}` | Der Mobilfunkanbieter des zuletzt verwendeten Geräts, falls verfügbar. Beispiele sind „Verizon" und „Orange". |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | Ob auf dem Gerät Ad-Tracking aktiviert ist oder nicht. Dies ist ein boolescher Wert (`true` oder `false`). |
 | `{{most_recently_used_device.${idfa}}}` | Bei iOS-Geräten ist dieser Wert der Identifier for Advertisers (IDFA), wenn Ihre Anwendung mit unserer [optionalen IDFA-Erfassung]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/) konfiguriert ist. Bei Nicht-iOS-Geräten ist dieser Wert null. |
@@ -99,7 +99,7 @@ Für Push-Benachrichtigungen, In-App-Nachrichten und Banner können Sie die folg
 
 |Tag | Beschreibung |
 |------------------|---|
-| `{{targeted_device.${id}}}` | Dies ist der Braze-Gerätebezeichner. Unter iOS kann dies der Apple Identifier for Vendor (IDFV) oder eine UUID sein. Bei Android und anderen Plattformen handelt es sich um eine zufällig generierte UUID. Wenn eine Nutzer:in zum Beispiel fünf Geräte hat, wird ein Sendeversuch für alle fünf Geräte unternommen, wobei jeweils der entsprechende Gerätebezeichner verwendet wird. Wenn eine Nachricht so konfiguriert ist, dass sie an das zuletzt verwendete Gerät gesendet wird, erfolgt nur ein Sendeversuch an das über Braze identifizierte zuletzt verwendete Gerät. |
+| `{{targeted_device.${id}}}` | Dies ist der Braze-Gerätebezeichner. Unter iOS kann dies der Apple Identifier for Vendors (IDFV) oder eine UUID sein. Bei Android und anderen Plattformen handelt es sich um eine zufällig generierte UUID. Wenn eine Nutzer:in zum Beispiel fünf Geräte hat, wird ein Sendeversuch für alle fünf Geräte unternommen, wobei jeweils der entsprechende Gerätebezeichner verwendet wird. Wenn eine Nachricht so konfiguriert ist, dass sie an das zuletzt verwendete Gerät gesendet wird, erfolgt nur ein Sendeversuch an das über Braze identifizierte zuletzt verwendete Gerät. |
 | `{{targeted_device.${carrier}}}` | Der Mobilfunkanbieter des zuletzt verwendeten Geräts, falls verfügbar. Beispiele sind „Verizon" und „Orange". |
 | `{{targeted_device.${idfa}}}` | Bei iOS-Geräten ist dieser Wert der Identifier for Advertisers (IDFA), wenn Ihre Anwendung mit unserer [optionalen IDFA-Erfassung]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/) konfiguriert ist. Bei Nicht-iOS-Geräten ist dieser Wert null. |
 | `{{targeted_device.${google_ad_id}}}` | Bei Android-Geräten entspricht dieser Wert dem Google Play Advertising Identifier, wenn Ihre Anwendung mit unserer [optionalen Google Play Advertising ID-Erfassung] konfiguriert ist. Bei Nicht-Android-Geräten ist dieser Wert null. |
