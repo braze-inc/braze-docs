@@ -12,7 +12,10 @@ Before you start this tutorial, verify that your Braze Web SDK meets the minimum
 /* Standard code blocks: light mode, no line numbers */
 .highlight {
   background: #ffffff !important;
-  border-color: #e2e8f0 !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06) !important;
+  overflow: hidden !important;
 }
 .highlight pre,
 .highlight .rouge-code,
@@ -248,18 +251,18 @@ Before you start this tutorial, verify that your Braze Web SDK meets the minimum
 </div>
 
 <div class="braze-learn-box">
-  <h4>You will learn</h4>
+  <h4>You will learn how to</h4>
   <ul>
-    <li>How to initialize the Braze Web SDK for banners</li>
-    <li>How to add a banner container to your HTML</li>
-    <li>How to subscribe to banner updates</li>
-    <li>How to get and display a banner by placement ID</li>
-    <li>How to handle control groups</li>
-    <li>How to refresh banners on demand</li>
+    <li>Initialize the Braze Web SDK for banners</li>
+    <li>Add a banner container to your HTML</li>
+    <li>Subscribe to banner updates</li>
+    <li>Get and display a banner by placement ID</li>
+    <li>Handle control groups</li>
+    <li>Refresh banners on demand</li>
   </ul>
 </div>
 
-### Initialize the SDK
+### Step 1: Initialize the SDK
 
 The first step is to import and initialize the Braze Web SDK. Call `braze.initialize()` with your API key and SDK endpoint:
 
@@ -282,7 +285,7 @@ braze.openSession();
 
 The SDK needs an active session before it can fetch banner data from the Braze servers.
 
-### Create a banner container
+### Step 2: Create a banner container
 
 In your HTML, add a `<div>` element where you want the banner to appear. Give it a unique `id` so the SDK can find it, and set a width and height:
 
@@ -320,14 +323,14 @@ Have a look at the result:
     </div>
     <div class="braze-tutorial-preview">
       <div class="braze-tutorial-preview-bar">Result</div>
-      <iframe id="braze-preview-container" class="braze-tutorial-iframe" title="Banner container preview"></iframe>
+      <iframe id="braze-preview-web-container" class="braze-tutorial-iframe" title="Banner container preview"></iframe>
     </div>
   </div>
 </div>
 
 The `<div>` is an empty placeholder for now. The Braze SDK will inject banner content into it after you subscribe to updates and request a refresh.
 
-### Subscribe to banner updates
+### Step 3: Subscribe to banner updates
 
 Register a callback function that runs whenever banner data changes. Call `subscribeToBannersUpdates()` to set up the listener:
 
@@ -339,7 +342,7 @@ braze.subscribeToBannersUpdates((banners) => {
 
 The SDK calls this function when banners are first loaded and whenever they change during a session. Register your subscription **before** requesting banners so you don't miss the initial response.
 
-### Get a banner by placement ID
+### Step 4: Get a banner by placement ID
 
 Inside your subscription callback, call `getBanner()` with a placement ID to retrieve a specific banner. If the user didn't qualify for any banner at that placement, it returns `null`:
 
@@ -353,7 +356,7 @@ if (!globalBanner) {
 
 The placement ID (like `"global_banner"`) is the string identifier you set when creating the placement in the Braze dashboard.
 
-### Insert the banner
+### Step 5: Insert the banner
 
 Pass the banner object and a DOM container element to `insertBanner()` to render the banner's HTML content:
 
@@ -368,11 +371,11 @@ Here's the subscribe, get, and insert flow wired together. The preview shows wha
 
 <div class="braze-tutorial-sandbox">
   <div class="braze-tutorial-sandbox-top">
-    <button class="braze-tutorial-tab active" role="tab" aria-selected="true" data-tab-index="0" data-sandbox="sandbox-insert">index.js</button>
-    <button class="braze-tutorial-tab" role="tab" aria-selected="false" data-tab-index="1" data-sandbox="sandbox-insert">index.html</button>
+    <button class="braze-tutorial-tab active" role="tab" aria-selected="true" data-tab-index="0" data-sandbox="sandbox-web-insert">index.js</button>
+    <button class="braze-tutorial-tab" role="tab" aria-selected="false" data-tab-index="1" data-sandbox="sandbox-web-insert">index.html</button>
   </div>
   <div class="braze-tutorial-sandbox-body">
-    <div class="braze-tutorial-editor" id="sandbox-insert">
+    <div class="braze-tutorial-editor" id="sandbox-web-insert">
       <div class="braze-tutorial-panel active">
         <pre><code class="language-javascript">import * as braze from "@braze/web-sdk";
 
@@ -418,14 +421,14 @@ braze.requestBannersRefresh(["global_banner"]);</code></pre>
     </div>
     <div class="braze-tutorial-preview">
       <div class="braze-tutorial-preview-bar">Result</div>
-      <iframe id="braze-preview-insert" class="braze-tutorial-iframe" title="Banner insert preview"></iframe>
+      <iframe id="braze-preview-web-insert" class="braze-tutorial-iframe" title="Banner insert preview"></iframe>
     </div>
   </div>
 </div>
 
 Notice that `subscribeToBannersUpdates()` is called before `requestBannersRefresh()`. This ordering matters because the refresh triggers an immediate network request, and the subscription callback needs to be registered before the response arrives.
 
-### Handle control groups
+### Step 6: Handle control groups
 
 Some users may be assigned to a control group for A/B testing. When a user is in a control group, the banner's `isControl` property is `true`. Hide or collapse the container so no visual space is occupied:
 
@@ -437,7 +440,7 @@ if (globalBanner.isControl) {
 
 Call `insertBanner()` even for control banners before hiding the container. This ensures impressions are tracked correctly for the control group, which is needed for accurate A/B test results.
 
-### Refresh banners
+### Step 7: Refresh banners
 
 After registering your subscription, call `requestBannersRefresh()` with an array of placement IDs to fetch the latest banners:
 
@@ -455,11 +458,11 @@ Here's the complete implementation with initialization, subscription, banner ren
 
 <div class="braze-tutorial-sandbox">
   <div class="braze-tutorial-sandbox-top">
-    <button class="braze-tutorial-tab active" role="tab" aria-selected="true" data-tab-index="0" data-sandbox="sandbox-full">index.js</button>
-    <button class="braze-tutorial-tab" role="tab" aria-selected="false" data-tab-index="1" data-sandbox="sandbox-full">index.html</button>
+    <button class="braze-tutorial-tab active" role="tab" aria-selected="true" data-tab-index="0" data-sandbox="sandbox-web-full">index.js</button>
+    <button class="braze-tutorial-tab" role="tab" aria-selected="false" data-tab-index="1" data-sandbox="sandbox-web-full">index.html</button>
   </div>
   <div class="braze-tutorial-sandbox-body">
-    <div class="braze-tutorial-editor" id="sandbox-full">
+    <div class="braze-tutorial-editor" id="sandbox-web-full">
       <div class="braze-tutorial-panel active">
         <pre><code class="language-javascript">import * as braze from "@braze/web-sdk";
 
@@ -530,7 +533,7 @@ braze.requestBannersRefresh([
     </div>
     <div class="braze-tutorial-preview">
       <div class="braze-tutorial-preview-bar">Result</div>
-      <iframe id="braze-preview-full" class="braze-tutorial-iframe" title="Full banner implementation preview"></iframe>
+      <iframe id="braze-preview-web-full" class="braze-tutorial-iframe" title="Full banner implementation preview"></iframe>
     </div>
   </div>
 </div>
@@ -592,7 +595,7 @@ Now that you can display banners by placement ID, explore these topics for more 
     var navBar = '<div class="app-nav">' +
       '<span class="app-nav-brand">MyApp</span>' +
       '<nav class="app-nav-links">' +
-      '<a href="https://www.braze.com" target="_blank" rel="noopener noreferrer">Home</a><a href="https://www.braze.com" target="_blank" rel="noopener noreferrer">Products</a><a href="https://www.braze.com" target="_blank" rel="noopener noreferrer">About</a>' +
+      '<a href="javascript:void(0)">Home</a><a href="javascript:void(0)">Products</a><a href="javascript:void(0)">About</a>' +
       '</nav></div>';
 
     var bannerHtml =
@@ -600,7 +603,7 @@ Now that you can display banners by placement ID, explore these topics for more 
       '<div style="font-size: 10px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; margin-bottom: 8px;">Limited Time Offer</div>' +
       '<h3 style="margin: 0 0 6px; font-size: 20px; font-weight: 700;">Spring Sale: 25% Off</h3>' +
       '<p style="margin: 0 0 14px; opacity: 0.9; font-size: 13px; line-height: 1.5;">Use code SPRING25 at checkout.</p>' +
-      '<a href="https://www.braze.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #00B3E6; color: #fff; border: none; padding: 9px 22px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; cursor: pointer;">Shop Now</a>' +
+      '<a href="javascript:void(0)" style="display: inline-block; background: #00B3E6; color: #fff; border: none; padding: 9px 22px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; cursor: pointer;">Shop Now</a>' +
       '</div>';
 
     var containerPreview = '<!DOCTYPE html><html><head><style>' + sharedStyles +
@@ -645,9 +648,9 @@ Now that you can display banners by placement ID, explore these topics for more 
       '</div></div></body></html>';
 
     var previews = {
-      'braze-preview-container': containerPreview,
-      'braze-preview-insert': insertPreview,
-      'braze-preview-full': fullPreview
+      'braze-preview-web-container': containerPreview,
+      'braze-preview-web-insert': insertPreview,
+      'braze-preview-web-full': fullPreview
     };
 
     Object.keys(previews).forEach(function(id) {
