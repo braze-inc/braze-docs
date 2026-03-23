@@ -23,7 +23,7 @@ description: "This article provides steps on how to use locales in your messages
 
 | Feature | Required user permissions |
 | --- | --- |
-| Message types | You need these permissions to add locales and translations to campaigns and Canvases:<br><br> {::nomarkdown}Granular permissions <ul><li>Edit Campaigns</li><li>Edit Canvases</li></ul> Legacy permissions<ul><li>Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers</li></ul>{:/} |
+| Message types | You need these permissions to add locales and translations to campaigns and Canvases:<br><br> {::nomarkdown}Granular permissions: <ul><li>Edit Campaigns</li><li>Edit Canvases</li></ul> Legacy permissions: <ul><li>Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -31,7 +31,7 @@ description: "This article provides steps on how to use locales in your messages
 
 | Feature | Required user permissions |
 | --- | --- |
-| Templates | You need these permissions for the template type you want to add locales and translations to:<br><br> {::nomarkdown}Granular permissions <ul><li>Edit Email Templates</li><li>Edit IAM Templates</li><li>Edit Content Block Templates</li></ul> Legacy permissions<ul><li>Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers</li></ul>{:/} |
+| Templates | You need these permissions for the template type you want to add locales and translations to:<br><br> {::nomarkdown}Granular permissions: <ul><li>Edit Email Templates</li><li>Edit IAM Templates</li><li>Edit Content Block Templates</li></ul> Legacy permissions: <ul><li>Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -50,7 +50,7 @@ Wrap text you want to translate with the Liquid translation tags {% raw %}`{% tr
 Here is an example message marked for translation: {% raw %}`{% translation greeting %}Hello!{% endtranslation %}`{% endraw %}
 
 {% alert tip %}
-Highlight the text you want to translate and use the keyboard shortcut **Cmd + Alt + L** (MacOS) or **Ctl + Alt + L** (windows) to wrap in translation tags.<br><br> This shortcut works in all channels that support multi-language messaging except for the drag-and-drop editors for email and Content Blocks. For those, use the **Add personalization** button in the left sidebar to add translation tags.
+Highlight the text you want to translate and use the keyboard shortcut **Cmd + Alt + L** (macOS) or **Ctrl + Alt + L** (Windows) to wrap in translation tags.<br><br> This shortcut works in all channels that support multi-language messaging except for the drag-and-drop editors for email and Content Blocks. For those, use the **Add personalization** button in the left sidebar to add translation tags.
 {% endalert %}
 
 #### Localize URLs
@@ -65,7 +65,7 @@ Static URLs are entered manually in the editor (for example, `https://example.co
 | --- | --- |
 | Keep the protocol (`https://`) outside of translation tags. Wrap only the domain and path (for example, `example.com/en`). | Translators may accidentally alter or remove special characters, causing broken links. |
 | Do not include query parameters inside translation tags (for example, `?utm_source=promo`). | Translators may accidentally alter or remove special characters, resulting in broken links. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation }
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 An standard URL that follows both recommendations is:
 
@@ -113,7 +113,7 @@ This text is **incorrectly** wrapped:
 
 After adding translation tags to your message, select **Manage languages** in the editor (**Languages** in the drag-and-drop editors for email and Content Blocks) and select at least one locale you want to add translations for.
 
-![The "Add locale" dropdown with options to select the default locale or custom attributes.]({% image_buster /assets/img/multi-language_support/select_locale_type.png %}){: style="max-width:70%;"}
+![The Add locale dropdown with options to select the default locale or custom attributes.]({% image_buster /assets/img/multi-language_support/select_locale_type.png %}){: style="max-width:70%;"}
 
 #### Content Blocks containing translation
 
@@ -121,7 +121,7 @@ If your message contains Content Blocks that already have translations saved, yo
 
 In the **Manage languages** modal, Content Blocks with saved translations will appear in the list, alongside the locales they support. This allows you to see which parts of your message are already localized before adding new translations.
 
-!["Manage languages" section with a list of Content Blocks that have saved translations.]({% image_buster /assets/img/multi-language_support/content_blocks_translations.png %}){: style="max-width:70%;"}
+![The Manage languages section with a list of Content Blocks that have saved translations.]({% image_buster /assets/img/multi-language_support/content_blocks_translations.png %}){: style="max-width:70%;"}
 
 {% alert important %}
 Make sure each Content Block includes translations for every locale added to your message. If a Content Block is missing translations for one of the locales you've added, it will be shown in its original language for users in that locale.
@@ -131,7 +131,7 @@ Make sure each Content Block includes translations for every locale added to you
 
 After selecting locales, add translations to your message using one of the following methods:
 
-!["Add translations" tab with options to upload translations by CSV or by connecting to translation partners.]({% image_buster /assets/img/multi-language_support/add_translations.png %}){: style="max-width:70%;"}
+![The Add translations tab with options to upload translations by CSV or by connecting to translation partners.]({% image_buster /assets/img/multi-language_support/add_translations.png %}){: style="max-width:70%;"}
 
 {% tabs %}
 {% tab Upload CSV template %}
@@ -200,7 +200,7 @@ URLs use two special characters to control how this works:
   - `&` adds additional tracking if a `?` is already present in the URL. A URL can only contain one `?`.
 
 | URL | Contains `?` | Description | Example |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | Standard URL | No | Add `?` after the closing translation tag if the URL does not already contain one. | {% raw %}```<a href="https://{% translation id_1 %}example.com{% endtranslation %}?">Shop Now</a>```{% endraw %} |
 | Standard URL | Yes | Use `&` at the end of the URL (after the closing translation tag) if it already contains `?`. | {% raw %}```<a href="https://{% translation id_1 %}example.com{% endtranslation %}?ref=4&">Shop Now</a>```{% endraw %} |
 | Liquid generated | No | Use `?` after the closing translation tags if the generated URL does not already contain one. | {% raw %}```<a href="{% translation id_1 %}{{ product_url }}{% endtranslation %}?">Shop Now</a>``` {% endraw %} |

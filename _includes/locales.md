@@ -2,7 +2,7 @@
 
 | Feature | Required user permissions |
 | --- | --- |
-| Multi-language locales | You need these permissions to create and manage multi-language locales:<br><br> {::nomarkdown}Granular permissions: <ul><li>Create Multi-Language Locale Settings</li></ul> Legacy permissions<ul><li> Manage Multi Language Settings</li></ul>{:/} |
+| Multi-language locales | You need these permissions to create and manage multi-language locales:<br><br> {::nomarkdown}Granular permissions: <ul><li>Edit Localization Settings</li><li>Delete Localization Settings</li></ul> Legacy permissions: <ul><li> Manage Multi Language Settings</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endif %}
