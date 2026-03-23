@@ -420,21 +420,13 @@ When files are uploaded to the source bucket but not in the source folder, CDI w
   - Folder path (optional, must be unique across syncs in a workspace)
   - Region
 
-![Example security credentials as displayed in S3 to create a new import sync.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
-
 {: start="3"}
 3. Name your integration, and select the data type for this integration. 
-
-![Setting up sync details for "cdi-s3-as-source-integration" with user attributes as the data type.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})
 
 {: start="4"}
 4. Add a contact email for notifications if the sync breaks because of access or permissions issues. Optionally, turn on notifications for user-level errors and sync successes. 
 
-![Setting up notification preferences for sync error notifications.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})
-
 {: start="5"}
 5. Finally, select **Test connection** to confirm Braze can access your bucket and list the files available to ingest (not the data inside those files). Then, save the sync. 
-
-![An option to test the connection with a data preview.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
 
 {% enddetails %}
