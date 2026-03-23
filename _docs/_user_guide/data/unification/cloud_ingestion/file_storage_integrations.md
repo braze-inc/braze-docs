@@ -11,6 +11,8 @@ page_type: reference
 
 > This page covers how to set up Cloud Data Ingestion support and sync relevant data from S3 to Braze.
 
+This page shows the sync and source steps that are currently in Early Access (EA). For steps and images for the generally available experience, see [General availability experience](#general-availability-experience).
+
 ## How it works
 
 You can use Cloud Data Ingestion (CDI) for S3 to directly integrate one or more S3 buckets in your AWS account with Braze. When new files are published to S3, a message is posted to SQS, and Braze Cloud Data Ingestion takes in those new files. 
@@ -186,10 +188,6 @@ Give the role a name and a description, and select **Create Role**.
 7. Take note of the ARN of the role you created and the external ID you generated, because you need them to create the Cloud Data Ingestion integration.
 
 ## Setting up Cloud Data Ingestion in Braze
-
-{% alert important %}
-Customers onboarding in February 2026 or later may have early access to a new CDI UI, where sources and syncs are configured separately. In this new UI, create an S3 source first with your credentials, bucket, and region. Then, create a sync with your SQS URL and folder path (optional).
-{% endalert %}
 
 1. First, create a new source in the Braze dashboard. Go to **Data Settings** > **Cloud Data Ingestion** > **Sources**, select **Add data source**, and then select **Amazon S3**.
 2. Choose a name for your source and input the information from the AWS setup process to create a new source. Specify the following:
@@ -407,3 +405,36 @@ You can use existing files to validate that Braze can access your bucket and det
 If you're observing a high number of errors or failed files, you may have another process adding files to the S3 bucket in a folder other than the target folder for CDI.
 
 When files are uploaded to the source bucket but not in the source folder, CDI will process the SQS notification, but it does not take any action on the file, so this may appear as an error.
+
+{% details General availability experience %}
+
+## Setting up Cloud Data Ingestion in Braze
+
+1. To create a new integration, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import** from the file sources section. 
+2. Input the information from the AWS setup process to create a new sync. Specify the following:
+
+  - Role ARN
+  - External ID
+  - SQS URL (must be unique for each new integration)
+  - Bucket name
+  - Folder path (optional, must be unique across syncs in a workspace)
+  - Region
+
+![Example security credentials as displayed in S3 to create a new import sync.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
+
+{: start="3"}
+3. Name your integration, and select the data type for this integration. 
+
+![Setting up sync details for "cdi-s3-as-source-integration" with user attributes as the data type.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})
+
+{: start="4"}
+4. Add a contact email for notifications if the sync breaks because of access or permissions issues. Optionally, turn on notifications for user-level errors and sync successes. 
+
+![Setting up notification preferences for sync error notifications.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})
+
+{: start="5"}
+5. Finally, select **Test connection** to confirm Braze can access your bucket and list the files available to ingest (not the data inside those files). Then, save the sync. 
+
+![An option to test the connection with a data preview.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
+
+{% enddetails %}
