@@ -1,14 +1,7 @@
----
-nav_title: Your first contribution
-article_title: Your first contribution
-description: "If you're new to docs-as-code or Braze Docs, start with this step-by-step tutorial."
-page_order: 1
-noindex: true
----
 
 # Your first contribution
 
-> If you're new to docs-as-code or Braze Docs, start with this step-by-step tutorial. If you're an experienced contributor, see [About content management]({{site.baseurl}}/contributing/content_management/) instead.
+> If you're new to docs-as-code or Braze Docs, start with this step-by-step tutorial. If you're an experienced contributor, see [About content management](content_management.md) instead.
 
 When you're finished with this tutorial, you'll be able to:
 
@@ -18,7 +11,7 @@ When you're finished with this tutorial, you'll be able to:
 - Preview your changes in a test site
 - Request a review from the Braze Docs team
 
-{% multi_lang_include contributing/prerequisites.md %}
+*Included in the site build from [`_includes/contributing/prerequisites.md`](../../_includes/contributing/prerequisites.md).*
 
 ## Making your first contribution
 
@@ -26,41 +19,41 @@ When you're finished with this tutorial, you'll be able to:
 
 The [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs) hosts the source files for Braze Docs. Take a few minutes to explore the repository, even if you don't understand everything yet. Over time, you'll become more familiar.
 
-![The Braze Docs GitHub repository homepage.]({% image_buster /assets/img/contributing/github/home_page.png %})
+![The Braze Docs GitHub repository homepage.](../../assets/img/contributing/github/home_page.png)
 
 ### Step 2: Make a change
 
-Now that you're a little familiar with the docs repository, you're ready to start making changes. First, open [Braze Docs]({{site.baseurl}}) and find a simple change you'd like to make.
+Now that you're a little familiar with the docs repository, you're ready to start making changes. First, open [Braze Docs](https://www.braze.com/docs) and find a simple change you'd like to make.
 
-You'll make your change using the [same method you chose previously]({{site.baseurl}}/contributing/home#step-4-choose-how-to-contribute):
+You'll make your change using the [same method you chose previously](README.md#step-4-choose-how-to-contribute):
 
 |Method           |Use Case                              |Additional Requirements                                                                                              |
 |-----------------|--------------------------------------|--------------------------------------------------------------------------------------------------------------------|
 |GitHub website   |For small, single-document changes.   |No additional requirements needed. With this method, you're ready to start contributing!|
-|Local environment|For complex or multi-document changes.|Before you can use this method, you'll need to [set up your local environment]({{site.baseurl}}/contributing/local_environment).|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+|Local environment|For complex or multi-document changes.|Before you can use this method, you'll need to [set up your local environment](local_environment.md).|
 
-{% tabs %}
-{% tab github %}
+
+### github
+
 #### Step 2.1: Find the page on GitHub
 
 In the [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs), select `_docs`.
 
-![The Braze Docs GitHub repository homepage with the '_docs' folder highlighted in the file tree.]({% image_buster /assets/img/contributing/github/select_docs_directory.png %})
+![The Braze Docs GitHub repository homepage with the '_docs' folder highlighted in the file tree.](../../assets/img/contributing/github/select_docs_directory.png)
 
-Each page's URL on Braze Docs reflects the repository's directory structure. Use your page's URL to find its corresponding Markdown file in the `_docs` directory. For example, the Markdown file for `braze.com/contributing/home` can be found in `_docs` > `_contributing` > `home.md`.
+Each page's URL on Braze Docs reflects the repository's directory structure. Use your page's URL to find its corresponding Markdown file under `_docs`. This contributing handbook lives separately under `docs/contributing/` (start at [`README.md`](../README.md)).
 
-![The home page for the "Contributing" section on Braze Docs.]({% image_buster /assets/img/contributing/github/example_file_path.png %})
+![The home page for the "Contributing" section on Braze Docs.](../../assets/img/contributing/github/example_file_path.png)
 
 #### Step 2.2: Edit the file
 
 Select **Edit this file**, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/).
 
-![An example page on Braze Docs showing "Edit this file".]({% image_buster /assets/img/contributing/github/edit_from_directory.png %})
+![An example page on Braze Docs showing "Edit this file".](../../assets/img/contributing/github/edit_from_directory.png)
 
 When you're finished, select **Commit changes**.
 
-![The Braze Docs GitHub repository showing "Commit changes" after editing a file.]({% image_buster /assets/img/contributing/github/commit_changes.png %})
+![The Braze Docs GitHub repository showing "Commit changes" after editing a file.](../../assets/img/contributing/github/commit_changes.png)
 
 #### Step 2.3: Propose your changes
 
@@ -68,31 +61,31 @@ In the next window, choose **Create a new branch for this commit and start a pul
 
 After confirming, select **Propose changes**.
 
-![The "Propose changes" window after selecting "Commit changes" in GitHub.]({% image_buster /assets/img/contributing/github/propose_changes.png %}){: style="max-width:65%;"}
+![The "Propose changes" window after selecting "Commit changes" in GitHub.](../../assets/img/contributing/github/propose_changes.png)In the next window, select **compare across forks**.
 
-In the next window, select **compare across forks**.
-
-![The "Comparing changes" window with "compare across forks" highlighted.]({% image_buster /assets/img/contributing/github/compare_across_forks.png %})
+![The "Comparing changes" window with "compare across forks" highlighted.](../../assets/img/contributing/github/compare_across_forks.png)
 
 From the base repository dropdown, choose **braze-inc/braze-docs**, then select **Create pull request**. You'll learn how to fill out the draft in the next step.
 
-![The "Comparing changes" window with "braze-inc/braze-docs" highlighted in the base repository dropdown list.]({% image_buster /assets/img/contributing/github/choose_base_repository.png %})
+![The "Comparing changes" window with "braze-inc/braze-docs" highlighted in the base repository dropdown list.](../../assets/img/contributing/github/choose_base_repository.png)
 
-{% alert important %}
-If `braze-inc/braze-docs` is missing from the list of available base branches, there may be an issue with the origin of your forked repository. For detailed information, see [Troubleshooting]({{site.baseurl}}/contributing/troubleshooting/#missing-base-repository).
-{% endalert %}
-{% endtab %}
+> **Important:**
+> If `braze-inc/braze-docs` is missing from the list of available base branches, there may be an issue with the origin of your forked repository. For detailed information, see [Troubleshooting](troubleshooting.md#missing-base-repository).
 
-{% tab local environment %}
+---
+
+### local environment
+
 #### Step 2.1: Get the latest changes
 
 Most modern text editors (such as [VS Code](https://code.visualstudio.com/Download) and [Intellij IDEA](https://www.jetbrains.com/idea/download/)) offer an in-app terminal for running commands and interacting with your project files. Open your text editor, then open your text editor's in-app terminal.
 
-![Intellij IDEA with the in-app terminal open.]({% image_buster /assets/img/contributing/text_editor_with_terminal.png %})
+![Intellij IDEA with the in-app terminal open.](../../assets/img/contributing/text_editor_with_terminal.png)
 
-{% alert tip %}
-If you're having trouble, you can use a stand-alone terminal instead.
-{% endalert %}
+> **Tip:**
+> If you're having trouble, you can use a stand-alone terminal instead.
+
+
 
 In the terminal, open the `braze-docs` directory.
 
@@ -100,7 +93,7 @@ In the terminal, open the `braze-docs` directory.
 cd ~/PATH_TO_REPOSITORY
 ```
 
-Replace `PATH_TO_REPOSITORY` with the location you saved the `braze-docs` repository when you [set up your environment]({{site.baseurl}}/contributing/home/#step-2-set-up-your-environment). Your command should be similar to the following:
+Replace `PATH_TO_REPOSITORY` with the location you saved the `braze-docs` repository when you [set up your environment](README.md#step-2-set-up-your-environment). Your command should be similar to the following:
 
 ```bash
 cd ~/braze/braze-docs
@@ -113,9 +106,10 @@ pwd
 git status
 ```
 
-{% alert tip %}
-`git status` displays the current status of your Git directory. If you're new to Git, you can run this command after every step to help visualize the Git workflow. For more information, see [`git status`](https://git-scm.com/docs/git-status).
-{% endalert %}
+> **Tip:**
+> `git status` displays the current status of your Git directory. If you're new to Git, you can run this command after every step to help visualize the Git workflow. For more information, see [`git status`](https://git-scm.com/docs/git-status).
+
+
 
 #### Step 2.2: Create a new branch
 
@@ -143,7 +137,7 @@ Switched to a new branch 'fixing-typo-in-metadata'
 
 In your text editor, open the document you want to change, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/).
 
-{% multi_lang_include contributing/alerts/tip_locating_a_file.md %}
+*Included in the site build from [`_includes/contributing/alerts/tip_locating_a_file.md`](../../_includes/contributing/alerts/tip_locating_a_file.md).*
 
 When you're finished, save your changes, then select the terminal and check your Git status. The output is similar to the following:
 
@@ -204,9 +198,9 @@ branch 'fixing-typo-in-recommended-software' set up to track 'origin/fixing-typo
 
 Go back to the [repository homepage](https://github.com/braze-inc/braze-docs) and select **Compare & pull request**. You'll learn how to fill out the draft in the next step.
 
-![The Braze Docs GitHub repository homepage showing "Open pull request".]({% image_buster /assets/img/contributing/github/compare_and_pull_request.png %})
-{% endtab %}
-{% endtabs %}
+![The Braze Docs GitHub repository homepage showing "Open pull request".](../../assets/img/contributing/github/compare_and_pull_request.png)
+
+
 
 ### Step 3: Fill out your pull request (PR)
 
@@ -218,29 +212,24 @@ In the PR description, you'll see Markdown comments similar to the following:
 
 These comments will guide you through your PR description. When you're finished, select the pull request dropdown, then select **Draft pull request**.
 
-![An example pull request showing "Draft pull request".]({% image_buster /assets/img/contributing/github/draft_pull_request.png %}){: style="max-width:65%;"}
+![An example pull request showing "Draft pull request".](../../assets/img/contributing/github/draft_pull_request.png)Finally, check **Allow edits and access to secrets from maintainers**. This will let the Braze Docs team make style or formatting changes to your content during their review later.
 
-Finally, check **Allow edits and access to secrets from maintainers**. This will let the Braze Docs team make style or formatting changes to your content during their review later.
+![A Pull Request showing the allow edits from maintainers checkbox.](../../assets/img/contributing/github/allow_maintainers_to_edit.png)### Step 4: Review your work
 
-![A Pull Request showing the allow edits from maintainers checkbox.]({% image_buster /assets/img/contributing/github/allow_maintainers_to_edit.png %}){: style="max-width:50%;"}
+Create your content by following the [Braze Docs Style Guide](style_guide.md) and reviewing your work in a site preview. If you need to make additional changes, see [Make additional changes](#step-6-make-additional-changes-optional). Otherwise, you can [request a review](#step-5-request-a-review) from the Braze Docs team.
 
-### Step 4: Review your work
+### github
 
-Create your content by following the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/) and reviewing your work in a site preview. If you need to make additional changes, see [Make additional changes](#step-6-make-additional-changes-optional). Otherwise, you can [request a review](#step-5-request-a-review) from the Braze Docs team.
-
-{% tabs %}
-{% tab github %}
 In a PR comment, tag `@braze-inc/docs-team` to request a site preview.
 
-![An example comment tagging the Braze Docs team to request a site preview.]({% image_buster /assets/img/contributing/github/tag_docs_team_in_comment.png %}){: style="max-width:83%;"}
+![An example comment tagging the Braze Docs team to request a site preview.](../../assets/img/contributing/github/tag_docs_team_in_comment.png)To open the site preview, select **View deployment**.
 
-To open the site preview, select **View deployment**.
+![An example pull request showing the "View deployment" button generated by the Vercel bot.](../../assets/img/contributing/github/view_deployment.png)
 
-![An example pull request showing the "View deployment" button generated by the Vercel bot.]({% image_buster /assets/img/contributing/github/view_deployment.png %})
+---
 
-{% endtab %}
+### local environment
 
-{% tab local environment %}
 In the terminal, use the `rake` command start a local server.
 
 ```bash
@@ -264,27 +253,22 @@ Puma starting in single mode...
 
 By default, your site preview will be generated on localhost [`http://127.0.0.1:4000`](http://127.0.0.1:4000). To open your site preview, open the link in your web browser.
 
-![An example site preview running in a web browser.]({% image_buster /assets/img/contributing/styling_examples/home.png %})
+![An example site preview running in a web browser.](../../assets/img/contributing/styling_examples/home.png)
 
 To stop your local server, reopen the terminal and press <kbd>Control</kbd> + <kbd>C</kbd>.
 
-{% alert tip %}
-For a full walkthrough, see [Generating a preview]({{site.baseurl}}/contributing/generating_a_preview/)
-{% endalert %}
-{% endtab %}
-{% endtabs %}
+> **Tip:**
+> For a full walkthrough, see [Generating a preview](generating_a_preview.md)
+
+
 
 ### Step 5: Request a review
 
 If you're ready for a member of the Braze Docs team to review your work, select **Ready for review**.
 
-![An example pull request showing "Ready for review".]({% image_buster /assets/img/contributing/github/ready_for_review.png %}){: style="max-width:75%;"}
+![An example pull request showing "Ready for review".](../../assets/img/contributing/github/ready_for_review.png)In the **Reviewers** field, type `braze-inc/docs-team`. Select the team name and press <kbd>Esc</kbd> or click out of the dropdown to confirm your selection.
 
-In the **Reviewers** field, type `braze-inc/docs-team`. Select the team name and press <kbd>Esc</kbd> or click out of the dropdown to confirm your selection.
-
-![An example pull request with "docs-team" added as the reviewer.]({% image_buster /assets/img/contributing/github/add_docs_team_as_reviewers.png %}){: style="max-width:55%;"}
-
-If the docs team requests additional changes after their review, you'll be notified per your [GitHub notification settings](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications). Otherwise, the docs team will approve and merge your changes.
+![An example pull request with "docs-team" added as the reviewer.](../../assets/img/contributing/github/add_docs_team_as_reviewers.png)If the docs team requests additional changes after their review, you'll be notified per your [GitHub notification settings](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications). Otherwise, the docs team will approve and merge your changes.
 
 Approved contributions will be deployed on the next Tuesday or Thursday. Be sure to check out Braze Docs to see your hard work. Thanks for contributing!
 
@@ -292,27 +276,27 @@ Approved contributions will be deployed on the next Tuesday or Thursday. Be sure
 
 After you or a member of the Braze Docs team reviews your work, you may need to make additional changes to your PR. You can do so using your local environment or GitHub.
 
-{% tabs %}
-{% tab github %}
+### github
+
 In your PR, select **Files changed**, then locate the file you'd like to update and select <i class="fa-solid fa-ellipsis"></i> **Show options** > **Edit file**.
 
-![The "Files changed" section in an example pull request showing "Edit file".]({% image_buster /assets/img/contributing/github/edit_from_pr.png %})
+![The "Files changed" section in an example pull request showing "Edit file".](../../assets/img/contributing/github/edit_from_pr.png)
 
 When you're finished, select **Commit changes**.
 
-![A file from an example pull request showing "Commit changes" after editing.]({% image_buster /assets/img/contributing/github/commit_changes.png %})
+![A file from an example pull request showing "Commit changes" after editing.](../../assets/img/contributing/github/commit_changes.png)
 
 Select **Commit directly to the BRANCH_NAME branch** > **Commit changes**, where `BRANCH_NAME` is the name of your branch.
 
-![The "Commit changes" option after choosing "Commit directly to BRANCH_NAME branch.]({% image_buster /assets/img/contributing/github/confirm_committed_changes.png %}){: style="max-width:65%;"}
+![The "Commit changes" option after choosing "Commit directly to BRANCH_NAME branch.](../../assets/img/contributing/github/confirm_committed_changes.png)When you're finished, [request a review](#step-5-request-a-review).
 
-When you're finished, [request a review](#step-5-request-a-review).
-{% endtab %}
+---
 
-{% tab local environment %}
+### local environment
+
 In your PR, select <i class="fa-regular fa-clone"></i> **Copy** next to your branch name.
 
-![An example pull request with the "Copy" icon shown next to the branch name.]({% image_buster /assets/img/contributing/github/clone_the_fork.png %})
+![An example pull request with the "Copy" icon shown next to the branch name.](../../assets/img/contributing/github/clone_the_fork.png)
 
 In your text editor's terminal, checkout your branch and pull the latest updates from the remote branch in GitHub.
 
@@ -329,5 +313,5 @@ Your branch is up to date with 'origin/fixing-typo-in-metadata'.
 ```
 
 In your text editor, open the document you want to change, then repeat the repeat the steps you completed earlier during [Step 2: Make a change](#step-2-make-a-change).
-{% endtab %}
-{% endtabs %}
+
+

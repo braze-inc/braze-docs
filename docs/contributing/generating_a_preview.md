@@ -1,16 +1,9 @@
----
-nav_title: Generate a preview
-article_title: Generate a preview
-description: "Learn how to generate a local site preview, so you can see how your work would look on Braze Docs."
-page_order: 5 
-noindex: true
----
 
 # Generate a preview
 
 > Learn how to generate a local site preview, so you can see how your work would look on Braze Docs.
 
-{% multi_lang_include contributing/prerequisites.md %}
+*Included in the site build from [`_includes/contributing/prerequisites.md`](../../_includes/contributing/prerequisites.md).*
 
 ## Generating the preview
 
@@ -55,9 +48,10 @@ MARKDOWN_API=true PARTNER_API=true rake
 ```
 {% endraw %}
 
-{% alert note %}
-Prepending `MARKDOWN_API=true` to your rake command let's you preview content within a `{% markdown_embed %}` tag, such as the content on the [Developer Guide: Changelogs]({{site.baseurl}}/developer_guide/changelogs/) page. Prepending `PARTNER_API=true` let's you render the tiles on a partner landing page, such as [Technology Partners]({{site.baseurl}}/partners/home/).
-{% endalert %}
+> **Note:**
+> Prepending `MARKDOWN_API=true` to your rake command let's you preview content within a `{% markdown_embed %}` tag, such as the content on the [Developer Guide: Changelogs](https://www.braze.com/docs/developer_guide/changelogs/) page. Prepending `PARTNER_API=true` let's you render the tiles on a partner landing page, such as [Technology Partners](https://www.braze.com/docs/partners/home/).
+
+
 
 The output will be similar to the following:
 
@@ -77,7 +71,7 @@ Puma starting in single mode...
 
 By default, your site preview will be generated on localhost [`http://127.0.0.1:4000`](http://127.0.0.1:4000). To open your site preview, open the link in your web browser.
 
-![An example site preview running in a web browser.]({% image_buster /assets/img/contributing/styling_examples/home.png %})
+![An example site preview running in a web browser.](../../assets/img/contributing/styling_examples/home.png)
 
 ### Step 4: Stop your local server
 
@@ -95,9 +89,10 @@ Asset Pipeline: Saved 'global-128fd02b54e35ea79fcb21ea460fac06.js' to '/Users/al
 
 To see these updates in your browser, refresh the page.
 
-{% alert tip %}
-You can refresh the page in your browser by pressing <kbd>Command</kbd> + <kbd>R</kbd> on macOS, or <kbd>Control</kbd> + <kbd>R</kbd> on Windows.
-{% endalert %}
+> **Tip:**
+> You can refresh the page in your browser by pressing <kbd>Command</kbd> + <kbd>R</kbd> on macOS, or <kbd>Control</kbd> + <kbd>R</kbd> on Windows.
+
+
 
 However, there are cases when your site preview will **not** be automatically updated, such as when:
 

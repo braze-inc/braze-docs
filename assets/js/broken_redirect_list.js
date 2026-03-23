@@ -1149,12 +1149,12 @@ validurls['/docs/partners/data_and_infrastructure_agility/workflow_automation/fl
 
 validurls['/docs/campaign_data_retention/'] = '/docs/messaging_interaction_data/';
 
-validurls['/docs/home/metadata/'] = '/docs/contributing/yaml_front_matter/metadata/';
-validurls['/docs/home/styling_test_page/'] = '/docs/contributing/styling_examples/';
-validurls['/docs/help/help_articles/docs/contribution'] = '/docs/contributing/home/';
-validurls['/docs/hidden/wip_partnerships/wip_guidelines'] = '/docs/contributing/home/';
-validurls['/docs/hidden/wip_partnerships/partnership_template'] = '/docs/contributing/templates/#technology-partner';
-validurls['/docs/contributing/templates/'] = '/docs/contributing/content_types/';
+validurls['/docs/home/metadata/'] = '/docs/feedback/';
+validurls['/docs/home/styling_test_page/'] = '/docs/feedback/';
+validurls['/docs/help/help_articles/docs/contribution'] = '/docs/feedback/';
+validurls['/docs/hidden/wip_partnerships/wip_guidelines'] = '/docs/feedback/';
+validurls['/docs/hidden/wip_partnerships/partnership_template'] = '/docs/feedback/';
+validurls['/docs/contributing/templates/'] = '/docs/feedback/';
 
 validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/deleting_users_from_your_account/#deleting-braze-account-users'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#deleting-braze-users';
 
@@ -1168,7 +1168,7 @@ validurls['/docs/developer_guide/platform_integration_guides/cordova/cordova_int
 validurls['/docs/list-unsubscribe/'] = '/docs/user_guide/administrative/app_settings/email_settings/#list-unsubscribe-header';
 validurls['/docs/user_guide/data_and_analytics/cloud_ingestion/file_integrations/'] = '/docs/user_guide/data_and_analytics/cloud_ingestion/file_storage_integrations/';
 
-validurls['/docs/home/templates/tutorial'] = '/docs/contributing/templates/';
+validurls['/docs/home/templates/tutorial'] = '/docs/feedback/';
 validurls['/docs/user_guide/data_and_analytics/your_reports/report_builder'] = '/docs/user_guide/data_and_analytics/reporting/report_builder/';
 validurls['/docs/recommendations'] = '/docs/user_guide/brazeai/recommendations';
 validurls['/docs/api/endpoints/scim/post_update_existing_user_account'] = '/docs/api/endpoints/scim/put_update_existing_user_account/';
@@ -2655,8 +2655,8 @@ validurls['/docs/user_guide/engagement_tools/locations_and_geofences/faqs/#locat
 validurls['/docs/user_guide/engagement_tools/locations_and_geofences/faqs/#geofences'] = '/docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences';
 
 validurls['/docs/help/accessibility'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/accessibility';
-validurls['/docs/home/templates/reference/'] = '/docs/contributing/content_types/#references';
-validurls['/docs/home/templates/reference_video/'] = '/docs/contributing/content_types/#references';
+validurls['/docs/home/templates/reference/'] = '/docs/feedback/';
+validurls['/docs/home/templates/reference_video/'] = '/docs/feedback/';
 validurls['/docs/user_guide/brazeai/recommendations/types_and_use_cases/'] = '/docs/user_guide/brazeai/item_recommendations/';
 validurls['/docs/user_guide/brazeai/generative_ai/ai_images/'] = '/docs/user_guide/brazeai/generative_ai/images/';
 
@@ -3000,7 +3000,7 @@ validurls['/docs/user_guide/message_building_by_channel/banners/testing/'] = '/d
 validurls['/docs/user_guide/message_building_by_channel/content_cards/testing/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/testing/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/';
 validurls['/docs/user_guide/data/unification/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/';
-validurls['/docs/contributing/content_management/language_translations'] = '/docs/contributing/content_management';
+validurls['/docs/contributing/content_management/language_translations'] = '/docs/feedback/';
 
 validurls['/docs/developer_guide/sdk_integration/?sdktab=xamarin'] = '/docs/developer_guide/sdk_integration/?sdktab=.net%20maui';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/faq/#what-are-templated-in-app-messages'] = '/docs/user_guide/message_building_by_channel/in-app_messages/#templated-in-app-messages';
@@ -3010,13 +3010,13 @@ validurls['/docs/help/help_articles/campaigns_and_canvas/not_triggering/'] = '/d
 validurls['/docs/user_guide/administrative/access_braze/navigation/#navigating-braze'] = '/docs/user_guide/administrative/access_braze/navigation/#navigate-braze';
 validurls['/docs/user_guide/administrative/access_braze/accessing_your_account/#accessing-your-account'] = '/docs/user_guide/administrative/access_braze/accessing_your_account/#access-your-account';
 
-// Contributing
-validurls['/docs/contributing/content_management/images/#managing-images'] = '/docs/contributing/content_management/images/#manage-images';
-validurls['/docs/contributing/content_management/redirecting_urls/#redirecting-urls'] = '/docs/contributing/content_management/redirecting_urls/#redirect-urls';
-validurls['/docs/contributing/generating_a_preview/#generating-a-preview'] = '/docs/contributing/generating_a_preview/#generate-a-preview';
-validurls['/docs/contributing/content_management/pages/#managing-pages'] = '/docs/contributing/content_management/pages/#manage-pages';
-validurls['/docs/contributing/content_management/sections/#managing-sections'] = '/docs/contributing/content_management/sections/#manage-sections';
-validurls['/docs/contributing/local_environment/#setting-up-your-local-environment'] = '/docs/contributing/local_environment/#set-up-your-local-environment';
+// Contributing (handbook moved off public site; send to feedback)
+validurls['/docs/contributing/content_management/images/#managing-images'] = '/docs/feedback/';
+validurls['/docs/contributing/content_management/redirecting_urls/#redirecting-urls'] = '/docs/feedback/';
+validurls['/docs/contributing/generating_a_preview/#generating-a-preview'] = '/docs/feedback/';
+validurls['/docs/contributing/content_management/pages/#managing-pages'] = '/docs/feedback/';
+validurls['/docs/contributing/content_management/sections/#managing-sections'] = '/docs/feedback/';
+validurls['/docs/contributing/local_environment/#setting-up-your-local-environment'] = '/docs/feedback/';
 
 // Developer Guide - SDK Integration & Analytics
 validurls['/docs/developer_guide/sdk_integration/#integrating-the-braze-sdk'] = '/docs/developer_guide/sdk_integration/#integrate-the-braze-sdk';

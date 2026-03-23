@@ -1,11 +1,3 @@
----
-nav_title: Mermaid diagrams
-article_title: Contributing Mermaid Diagrams
-description: "Learn how to create and contribute Mermaid diagrams to Braze Docs."
-page_order: 7
-noindex: true
-search_tag: Contributing
----
 
 # Contributing Mermaid diagrams
 
@@ -25,7 +17,7 @@ search_tag: Contributing
 Before creating Mermaid diagrams for Braze Docs, you should:
 
 - Have a basic understanding of Markdown syntax.
-- Be familiar with the [contribution workflow]({{site.baseurl}}/contributing/your_first_contribution/).
+- Be familiar with the [contribution workflow](your_first_contribution.md).
 - Review the [Mermaid documentation](https://mermaid.js.org/) for syntax reference.
 
 ## Create a Mermaid diagram
@@ -44,26 +36,9 @@ For a complete list of supported diagrams, refer to [Mermaid's diagram syntax](h
 
 Create a diagram in Markdown by wrapping your [Mermaid diagram syntax](https://mermaid.js.org/syntax/flowchart.html) in code fences (````). The following snippet displays an example of how you can use Mermaid to create a flowchart. You can reference how the flowchart renders in the **RENDERED** tab. This shows the visual representation of the Mermaid diagram syntax. 
 
-{% tabs %}
-{% tab Code %}
-````
-```mermaid
----
-config:
-  theme: neutral
----
-flowchart TD
-    A[API request received] --> B{Valid campaign ID?}
-    B -->|Yes| C[Evaluate audience criteria]
-    B -->|No| D[Return 400 error]
-    C --> E{User matches segment?}
-    E -->|Yes| F[Send message]
-    E -->|No| G[Skip user]
-```
-````
-{% endtab %}
+### Code
 
-{% tab Rendered %}
+````
 ```mermaid
 ---
 config:
@@ -77,8 +52,27 @@ flowchart TD
     E -->|Yes| F[Send message]
     E -->|No| G[Skip user]
 ```
-{% endtab %}
-{% endtabs %}
+````
+
+---
+
+### Rendered
+
+```mermaid
+---
+config:
+  theme: neutral
+---
+flowchart TD
+    A[API request received] --> B{Valid campaign ID?}
+    B -->|Yes| C[Evaluate audience criteria]
+    B -->|No| D[Return 400 error]
+    C --> E{User matches segment?}
+    E -->|Yes| F[Send message]
+    E -->|No| G[Skip user]
+```
+
+
 
 #### Diagram components
 
@@ -93,7 +87,7 @@ Reference the following list for more information on the components of the Merma
 
 Before submitting your contribution:
 
-1. Preview your diagram locally by [setting up your local environment]({{site.baseurl}}/contributing/local_environment/).
+1. Preview your diagram locally by [setting up your local environment](local_environment.md).
 2. Verify the diagram renders correctly.
 3. Check that the styling matches existing Braze Docs diagrams.
 4. Ensure all text is readable and the flow is easy to follow.
@@ -132,6 +126,6 @@ Ensure your diagrams are accessible to all users:
 
 Now that you know how to create Mermaid diagrams, you're ready to contribute to Braze Docs! For more information on the contribution process, refer to:
 
-- [Your first contribution]({{site.baseurl}}/contributing/your_first_contribution/)
-- [Generating a preview]({{site.baseurl}}/contributing/generating_a_preview/)
-- [Content management]({{site.baseurl}}/contributing/content_management/)
+- [Your first contribution](your_first_contribution.md)
+- [Generating a preview](generating_a_preview.md)
+- [Content management](content_management.md)

@@ -1,19 +1,14 @@
----
-nav_title: Jekyll collections
-article_title: Jekyll Collections
-description: "Learn how to create a Jekyll collection so you can add a new primary section on Braze Docs."
-page_order: 6.2
----
 
 # Jekyll collections
 
 > Learn how to create a Jekyll collection to add a new primary section on Braze Docs. For more information, see [Jekyll Collections](https://jekyllrb.com/docs/collections/).
 
-{% alert important %}
-It's unlikely you'll need to create a new Jekyll collection for your content. If you're unsure where you should store your content, [create a GitHub issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=).
-{% endalert %}
+> **Important:**
+> It's unlikely you'll need to create a new Jekyll collection for your content. If you're unsure where you should store your content, [create a GitHub issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=).
 
-{% multi_lang_include contributing/prerequisites.md %}
+
+
+*Included in the site build from [`_includes/contributing/prerequisites.md`](../../../_includes/contributing/prerequisites.md).*
 
 ## Creating a Jekyll collection
 
@@ -36,7 +31,7 @@ Replace the following:
 | `COLLECTION_KEY`  | A single, unique word that represents your collection's name. Use lowercase letters only. |
 | `COLLECTION_TITLE`| The name of your collection in title case.        |
 | `COLLECTION_URL`  | The default URL for your collections landing page.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
 
 Your new collection should be similar to the following:
 
@@ -93,13 +88,14 @@ braze-docs
         └── home.md
 ```
 
-{% alert important %}
-The directory name for a collection must start with an underscore.
-{% endalert %}
+> **Important:**
+> The directory name for a collection must start with an underscore.
+
+
 
 ### Step 4: Add additional content (optional)
 
-Add additional sections and subsections for your new collection. For a full walkthrough, see [Creating a section]({{site.baseurl}}/contributing/content_management/sections/#creating-a-section).
+Add additional sections and subsections for your new collection. For a full walkthrough, see [Creating a section](sections.md#creating-a-section).
 
 ```plaintext
 braze-docs

@@ -1,10 +1,3 @@
----
-nav_title: Braze Docs style guide
-article_title: Braze Docs style guide
-description: "Writing style guide for Braze Docs."
-page_order: 0
-noindex: true
----
 
 # Braze Docs style guide
 
@@ -37,7 +30,7 @@ Clearly structure your writing and make it easy for people to find the informati
 ###### Guidelines
 
 ✅ Use visuals to help clarify complex subjects. <br> 
-**Example:** The user profile lifecycle image in the [User Profile Lifecycle article]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) helps to illustrate a tricky concept.
+**Example:** The user profile lifecycle image in the [User Profile Lifecycle article](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) helps to illustrate a tricky concept.
 
 ✅ Create a clear information hierarchy. <br>
 **Example:** "This is an overview for how content is managed on Braze Docs. To learn more about a specific topic, choose the dedicated topic page in the navigation."
@@ -160,7 +153,7 @@ If you’re representing an age group, be descriptive and specific like “Gener
 
 Avoid including color terms in your writing unless absolutely necessary, and if necessary, include explanatory text. 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -171,7 +164,7 @@ Avoid including color terms in your writing unless absolutely necessary, and if 
 <tr><td style="width: 50%;">Press the green icon.</td><td style="width: 50%;"></td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Don’t rely on color to be the only indicator for interactive elements. For example, underline links on hover, or mark a required field with an asterisk.
 
@@ -201,7 +194,7 @@ When referring to company users and their consumers, use the following terms acc
 
 Capitalize the names of departments or teams. Do not capitalize “team” or “department.”
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -211,7 +204,7 @@ Capitalize the names of departments or teams. Do not capitalize “team” or �
 <tr><td style="width: 50%;">Revenue department</td><td style="width: 50%;">Revenue Department</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Disability
 
@@ -223,7 +216,7 @@ Ableist language includes words or phrases such as “crazy”, “insane”, �
 
 When describing an illness, avoid words like “suffer,” “struggle,” or “victim.” Aim to be neutral and matter-of-fact. 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 100%;">Do</th></tr>
@@ -234,7 +227,7 @@ When describing an illness, avoid words like “suffer,” “struggle,” or �
 <tr><td style="width: 100%;">He recovered from his stroke.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 
 ##### Inclusivity in content
@@ -251,7 +244,7 @@ Capitalize formal job titles when they come before or after a person’s name. W
 
 1. **[Formal Title]** at **[Company Name]** + **[Full Name]**
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -260,12 +253,12 @@ Capitalize formal job titles when they come before or after a person’s name. W
 <tr><td style="width: 50%;">Creative Director at PantsLabyrinth David Bowie</td><td style="width: 50%;">creative director at PantsLabyrinth David Bowie</td></tr>
 </tbody>
 </table>
-{:/}
 
-{: start="2"}
+
+
 2. **[Full Name]** + comma + **[Formal Title]** at **[Company Name]** 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -274,12 +267,12 @@ Capitalize formal job titles when they come before or after a person’s name. W
 <tr><td style="width: 50%;">David Bowie, Creative Director at PantsLabyrinth</td><td style="width: 50%;">David Bowie, creative director at PantsLabyrinth</td></tr>
 </tbody>
 </table>
-{:/}
 
-{: start="3"}
+
+
 3. **[Company Name]** + **[Formal Title]** + **[Full Name]** 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -288,7 +281,7 @@ Capitalize formal job titles when they come before or after a person’s name. W
 <tr><td style="width: 50%;">PantsLabyrinth Creative Director David Bowie</td><td style="width: 50%;">PantsLabyrinth creative director David Bowie</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ###### Job title without company name
 
@@ -296,7 +289,7 @@ When referring to a specific person by formal title, capitalize their formal tit
 
 1. **[Formal Title]** + **[Full Name]**
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -305,12 +298,12 @@ When referring to a specific person by formal title, capitalize their formal tit
 <tr><td style="width: 50%;">CEO Robin Fenty</td><td style="width: 50%;">Chief executive officer Robyn Fenty</td></tr>
 </tbody>
 </table>
-{:/}
 
-{: start="2"}
+
+
 2. **[Formal Title]** + comma + **[Full Name]**
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -319,13 +312,13 @@ When referring to a specific person by formal title, capitalize their formal tit
 <tr><td style="width: 50%;">SVP, Product, Robin Fenty</td><td style="width: 50%;">senior vice president, product, Robyn Fenty</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ###### Other
 
 Formal titles are “at [COMPANY].” Founders and Cofounders are “of [COMPANY].” Formal titles and occupations on their own do not need to be capitalized.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -336,11 +329,11 @@ Formal titles are “at [COMPANY].” Founders and Cofounders are “of [COMPANY
 <tr><td style="width: 50%;">Contact your Braze account manager.</td><td style="width: 50%;">I wrote to their Chief Data Officer Contact your Braze Account Manager.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Adhere to gender-neutral job titles unless gender has been already established.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -349,7 +342,7 @@ Adhere to gender-neutral job titles unless gender has been already established.
 <tr><td style="width: 50%;">salesperson</td><td style="width: 50%;">salesman/saleswoman</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Abbreviate titles where appropriate, such as VP or SVP, if this is how the person refers to their title. In the event of limited text space, standard abbreviations (VP, SVP, Sr., or Jr.) are acceptable. 
 
@@ -381,7 +374,7 @@ Don’t refer to a person’s race, religion, or ethnicity unless it’s relevan
 
 Don’t use a hyphen to indicate dual heritage or religion. Instead, use a space.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -391,11 +384,11 @@ Don’t use a hyphen to indicate dual heritage or religion. Instead, use a space
 <tr><td style="width: 50%;">Cuban American</td><td style="width: 50%;">Cuban-american</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Capitalize the proper names of ethnicities, nationalities, peoples, and tribes.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -405,11 +398,11 @@ Capitalize the proper names of ethnicities, nationalities, peoples, and tribes.
 <tr><td style="width: 50%;">Black Americans</td><td style="width: 50%;">black Americans</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Capitalize the names of religions or religious terms.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -419,7 +412,7 @@ Capitalize the names of religions or religious terms.
 <tr><td style="width: 50%;">Buddhist</td><td style="width: 50%;">buddhist</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Don’t co-opt words or turns of phrase that belong to African American Vernacular English (on fleek, bae, lit, woke). 
 
@@ -443,7 +436,7 @@ Although some abbreviations are widely understood, others aren't well known or a
 
 If an abbreviation isn’t well known, spell it out on the first mention, followed by the abbreviation in parentheses. For all subsequent mentions of the term, use the abbreviation.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Spell out uncommon abbreviations at the first mention</em></th><th style="width: 50%;">Don't: <em>Spell out common abbreviations</em></th></tr>
@@ -453,12 +446,12 @@ If an abbreviation isn’t well known, spell it out on the first mention, follow
 <tr><td style="width: 50%;">Universally unique identifier (UUID)</td><td style="width: 50%;">Universal Serial Bus (USB)</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 
 Treat abbreviations as regular words when making them plural, and don't add an apostrophe—for example, APIs and SDKs. The same goes for which article (a or an) you use—look at how you pronounce the abbreviation. When an abbreviation begins with a vowel sound, use “an”; for consonant sounds, use “a”. 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 100%;">Do: <em>Use articles depending on how the abbreviation is pronounced, not spelled</em></th></tr>
@@ -470,7 +463,7 @@ Treat abbreviations as regular words when making them plural, and don't add an a
 <tr><td style="width: 100%;">a CSV file</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Active voice {#active-voice}
 
@@ -478,7 +471,7 @@ We use the active voice at Braze when possible. Active voice is our gold standar
 
 To see if your sentence is in a passive voice, insert “by somebody” after the verb. If the sentence makes sense—it’s most likely in the passive voice.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Use active voice</em></th><th style="width: 50%;">Don't: <em>Use passive voice, if possible</em></th></tr>
@@ -489,7 +482,7 @@ To see if your sentence is in a passive voice, insert “by somebody” after th
 <tr><td style="width: 50%;">Company administrators can configure authentication requirements for signing into Braze.</td><td style="width: 50%;">Authentication requirements for signing into Braze can be configured by company administrators.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Exceptions
 
@@ -507,7 +500,7 @@ Use the articles “a”, “an”, and “the” to make your writing clear and
 
 To determine if you should use “a” or “an”, look at the pronunciation of the word that follows it. Use “a” before a consonant sound, and use “an” before a vowel sound. The same guidelines apply to [Abbreviations](#abbreviations).
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 100%;">Do: <em>Use articles depending on how the anteceding word is pronounced.</em></th></tr>
@@ -519,7 +512,7 @@ To determine if you should use “a” or “an”, look at the pronunciation of
 <tr><td style="width: 100%;">a LAB course</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Pronouns {#pronouns}
 
@@ -545,7 +538,7 @@ Only use gendered pronouns (he/she, him/her, his/hers) if the person you’re re
 
 Pronouns substitute for nouns. The word a pronoun refers to is called its antecedent. When writing instructions or learning material, be sure to make clear references between a pronoun and its antecedent. This may require repeating subjects to make the meaning clear.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Ensure a pronoun clearly references its antecedent</em></th><th style="width: 50%;">Don't: <em>Use ambiguous pronoun references</em></th></tr>
@@ -556,13 +549,13 @@ Pronouns substitute for nouns. The word a pronoun refers to is called its antece
 <tr><td style="width: 50%;">You can’t edit an archived campaign. Unarchive a campaign to edit it.</td><td style="width: 50%;">You can't edit an archived campaign. Unarchive it to edit it.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Optional pronouns
 
 To add additional clarity to your writing and to aid in localization, use pronouns such as “that”, “which”, and “who”.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Use "that", "which", and "who" to add additional clarity.</em></th><th style="width: 50%;">Don't</th></tr>
@@ -572,13 +565,13 @@ To add additional clarity to your writing and to aid in localization, use pronou
 <tr><td style="width: 50%;">From here, you can choose which Tinyclues cohort that you want to include.</td><td style="width: 50%;">From here, you can choose a Tinyclues cohort you want to include.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Capitalization {#capitalization}
 
 Avoid unnecessary capitalization. In most instances, use sentence case. Title case should only be used for proper nouns or feature names.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Use lowercase for writing out website URLs and email addresses</em></th><th style="width: 50%;">Don't</th></tr>
@@ -588,9 +581,9 @@ Avoid unnecessary capitalization. In most instances, use sentence case. Title ca
 <tr><td style="width: 50%;">sample@email.com</td><td style="width: 50%;">SAMPLE@EMAIL.COM</td></tr>
 </tbody>
 </table>
-{:/}
 
-{::nomarkdown}
+
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Use lowercase directionals</em></th><th style="width: 50%;">Don't</th></tr>
@@ -599,9 +592,9 @@ Avoid unnecessary capitalization. In most instances, use sentence case. Title ca
 <tr><td style="width: 50%;">north, south, east, west</td><td style="width: 50%;">North, South, East, West</td></tr>
 </tbody>
 </table>
-{:/}
 
-{::nomarkdown}
+
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Capitalize specific regions, and use all capitals for abbreviated regions</em></th><th style="width: 50%;">Don't</th></tr>
@@ -613,7 +606,7 @@ Avoid unnecessary capitalization. In most instances, use sentence case. Title ca
 <tr><td style="width: 50%;">APAC, EMEA</td><td style="width: 50%;">Apac, emea</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Brands and products
 
@@ -625,7 +618,7 @@ For intercaps, always refer to the usage preferred by the brand in print (OkCupi
 
 If you want to tell the reader to do something in a specific circumstance, try to mention the circumstance before you provide the instruction. This lets the reader skip the instruction if the circumstance doesn't apply.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -635,7 +628,7 @@ If you want to tell the reader to do something in a specific circumstance, try t
 <tr><td style="width: 50%;">To archive your campaign, click the gear icon and select Archive.</td><td style="width: 50%;">Click the gear icon and select Archive to archive your campaign.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Combining forms {#combining-forms}
 
@@ -647,7 +640,7 @@ If you want to tell the reader to do something in a specific circumstance, try t
 
 A contraction is a shortened version of a word or phrase. Use contractions to keep an approachable and informal tone. However, do not use noun and verb contractions or double contractions, or a combination of two contractions. These can disrupt the flow and coherency of the sentence.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Use contractions</em></th><th style="width: 50%;">Don't: <em>Use noun and verb contractions</em></th></tr>
@@ -657,7 +650,7 @@ A contraction is a shortened version of a word or phrase. Use contractions to ke
 <tr><td style="width: 50%;">You can’t edit an archived campaign.</td><td style="width: 50%;">You mightn’t’ve seen the restricted upload size.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Dangling and misplaced modifiers {#dangling-and-misplaced-modifiers}
 
@@ -665,7 +658,7 @@ Modifiers are words of phrases that modify other words or phrases. A dangling mo
 
 Writing with an active voice helps prevent the use of dangling and misplaced modifiers. Be sure to use a modifier that clearly modifies. 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Keep sentence short and concise. Use active voice.</em></th><th style="width: 50%;">Don't: <em>Use lengthy sentences with modifiers that can cause confusion</em></th></tr>
@@ -675,13 +668,13 @@ Writing with an active voice helps prevent the use of dangling and misplaced mod
 <tr><td style="width: 50%;">Make sure to save your campaign drafts.</td><td style="width: 50%;">On the way home, Sarah found a gold man’s stopwatch.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Prepositions {#prepositions}
 
 There’s nothing wrong with ending a sentence in a preposition when it improves readability. Place a preposition or prepositional phrase where it makes the most sense in a sentence. If you’re having difficulty, read the sentence out loud and see if it sounds natural.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -691,13 +684,13 @@ There’s nothing wrong with ending a sentence in a preposition when it improves
 <tr><td style="width: 50%;">For details, see the SDK documentation for the platform you’re working with.</td><td style="width: 50%;">For details, see the SDK documentation for the platform with which you’re working.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Present tense {#present-tense}
 
 Use present tense instead of future tense. Present tense conveys immediacy and demonstrates confidence. Avoid using “will” or hypothetical “would”, especially when referring to the result of user action.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -707,7 +700,7 @@ Use present tense instead of future tense. Present tense conveys immediacy and d
 <tr><td style="width: 50%;">Using a short code is the most reliable number type for including links.</td><td style="width: 50%;">Using a short code would be the most reliable number type for including links.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Only use future tense when you’re actually talking about the future. Avoid predicting [future features](#describing-limitations). 
 
@@ -719,7 +712,7 @@ Keep it PG. This has less to do with morality than the fact profanity can be div
 
 Do not use plurals in parentheses. Instead, use the plural or singular form of the word.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -728,7 +721,7 @@ Do not use plurals in parentheses. Instead, use the plural or singular form of t
 <tr><td style="width: 50%;">Customize your campaign with the following filters.</td><td style="width: 50%;">Customize your campaign with the following filter(s).</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Second person and first person {#second-person-and-first-person}
 
@@ -736,7 +729,7 @@ Use second person in your instructions instead of first person—”you” rathe
 
 Refer to the reader as the one doing the action. Strike a conversational tone—most readers are coming to documentation when they don’t have immediate access to a support agent. Make it feel as if the article is talking to them instead. 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -745,11 +738,11 @@ Refer to the reader as the one doing the action. Strike a conversational tone—
 <tr><td style="width: 50%;">If you want to add a variant...</td><td style="width: 50%;">If we want to add a variant...</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 If you’re telling the reader to do something, then you can omit the “you” and use the imperative.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -759,7 +752,7 @@ If you’re telling the reader to do something, then you can omit the “you” 
 <tr><td style="width: 50%;">Select Submit.</td><td style="width: 50%;">You’ll need to select Submit.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 When using second person, make sure you know who the audience of the document is, and to be consistent about who you’re talking to.
 
@@ -779,7 +772,7 @@ For words that are accented or contain special characters, make sure to correctl
 
 Don’t use an ampersand (&) in place of “and” in text or headings unless you are referring directly to the user interface.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -789,7 +782,7 @@ Don’t use an ampersand (&) in place of “and” in text or headings unless yo
 <tr><td style="width: 50%;">SMS and MMS</td><td style="width: 50%;">SMS & MMS</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Apostrophes {#apostrophes}
 
@@ -804,7 +797,7 @@ We use an apostrophe most often to make a noun possessive.
 
 Use colons at the end of an introductory phrase that precedes a list or example. Your introductory sentence should be able to stand alone as a complete sentence. This is for both accessibility and localization purposes, as it’s difficult to translate sentence fragments.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -813,11 +806,11 @@ Use colons at the end of an introductory phrase that precedes a list or example.
 <tr><td style="width: 50%;">The general structure is as follows:</td><td style="width: 50%;">The general structure is:</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 If the text preceding the colon is bold, bold the colon as well.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -826,11 +819,11 @@ If the text preceding the colon is bold, bold the colon as well.
 <tr><td style="width: 50%;"><strong>Scheduled:</strong> Time-based entry.</td><td style="width: 50%;"><strong>Scheduled</strong>: Time-based entry.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 If the text preceding the colon is code text, don’t include the colon in the code text unless it is part of the code element.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -839,11 +832,11 @@ If the text preceding the colon is code text, don’t include the colon in the c
 <tr><td style="width: 50%;"><code>user_alias_label</code>: A common label to group user aliases with.</td><td style="width: 50%;"><code>user_alias_label:</code> A common label to group user aliases with.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 You can also use a colon to join two related phrases in a sentence. However, use colons for this sparingly. Two sentences are generally more readable. 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 100%;">Do</th></tr>
@@ -852,7 +845,7 @@ You can also use a colon to join two related phrases in a sentence. However, use
 <tr><td style="width: 100%;">Coming up next week: we're going on a tour of the West Village.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 
 #### Commas {#commas}
@@ -872,7 +865,7 @@ The sentence when using a coordinating conjunction “but” is “All fields ar
 
 If an independent clause and a dependent clause are used in the same sentence, do not use a comma to separate them. Only use a comma in this scenario if the sentence can be misinterpreted without the comma placement.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -881,7 +874,7 @@ If an independent clause and a dependent clause are used in the same sentence, d
 <tr><td style="width: 50%;">Push subscriptions states are filters and can allow users to edit notification preferences.</td><td style="width: 50%;">Push subscriptions states are filters, and can allow users to edit notification preferences.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Dashes {#dashes}
 
@@ -898,7 +891,7 @@ Refer to your operating system for how to type an em dash:
 
 Use an en dash (–) to indicate a range of numbers, as a minus sign, or to indicate negative numbers. Don’t put any spaces before or after the en dash except for when it’s used as a minus sign. Don’t use a hyphen (-). 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Use an en dash for a range of numbers</em></th><th style="width: 50%;">Don't: <em>Use a hyphen</em></th></tr>
@@ -907,11 +900,11 @@ Use an en dash (–) to indicate a range of numbers, as a minus sign, or to indi
 <tr><td style="width: 50%;">2018–2021</td><td style="width: 50%;">2018-2021</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Don’t use an en dash for ranges of time. For more details, refer to the section [Dates and Times](#dates-and-times).
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Use an en dash for a minus sign and include spaces surrounding the en dash</em></th><th style="width: 50%;">Don't: <em>Use a hyphen</em></th></tr>
@@ -920,9 +913,9 @@ Don’t use an en dash for ranges of time. For more details, refer to the sectio
 <tr><td style="width: 50%;">15 – 5 = 10</td><td style="width: 50%;">15-5=10</td></tr>
 </tbody>
 </table>
-{:/}
 
-{::nomarkdown}
+
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Use an en dash for negative numbers</em></th><th style="width: 50%;">Don't: <em>Use a hyphen</em></th></tr>
@@ -931,7 +924,7 @@ Don’t use an en dash for ranges of time. For more details, refer to the sectio
 <tr><td style="width: 50%;">–30</td><td style="width: 50%;">-30</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Refer to your operating system for how to type an en dash:
 
@@ -946,7 +939,7 @@ An ellipsis is a series of three periods (...) that indicates an omission of one
 
 An exclamation point can be used sparingly for an informal tone. However, avoid overly using exclamation points throughout text. Instead, consider using [Alerts](#callouts-and-alerts).
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Use exclamation points for an informal tone for reminders and introductions</em></th><th style="width: 50%;">Don't: <em>Use exclamation points for indicating warning or caution to readers</em></th></tr>
@@ -955,7 +948,7 @@ An exclamation point can be used sparingly for an informal tone. However, avoid 
 <tr><td style="width: 50%;">Be sure to save your changes before leaving the page!</td><td style="width: 50%;">Users must receive one or more messages from a step to be counted as a unique recipient!</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Hyphens {#hyphens}
 
@@ -963,7 +956,7 @@ Hyphens can help the reader gain more clarity in a sentence by linking words in 
 
 Use hyphens for compound modifiers that help the reader understand the subject more clearly.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 100%;">Do</th></tr>
@@ -972,11 +965,11 @@ Use hyphens for compound modifiers that help the reader understand the subject m
 <tr><td style="width: 100%;">real-time data streaming</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Use hyphens to link a phrase, with a space between the modifier and subject. 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 100%;">Do</th></tr>
@@ -985,11 +978,11 @@ Use hyphens to link a phrase, with a space between the modifier and subject.
 <tr><td style="width: 100%;">All-in-one solutions</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Use hyphens for a phrase that modifies a subject. There’s no need to use a hyphen if the phrase is the subject.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -998,11 +991,11 @@ Use hyphens for a phrase that modifies a subject. There’s no need to use a hyp
 <tr><td style="width: 50%;">It was a well-known fact.</td><td style="width: 50%;">That fact is well-known</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Don’t use hyphens in place of an em dash to create a pause in a sentence.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1011,11 +1004,11 @@ Don’t use hyphens in place of an em dash to create a pause in a sentence.
 <tr><td style="width: 50%;">...third-party integrations—such as Slack—and automate...</td><td style="width: 50%;">...third-party integrations-such as Slack-and automate...</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Don’t use a hyphen after an adverb. Keep the words separate.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1024,7 +1017,7 @@ Don’t use a hyphen after an adverb. Keep the words separate.
 <tr><td style="width: 50%;">Hastily made</td><td style="width: 50%;">Hastily-made</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Parentheses {#parentheses}
 
@@ -1046,7 +1039,7 @@ For guidelines on when to use periods with list items, refer to [Lists](#lists).
 
 Semicolons are great for breaking up a longer, more complicated sentence. Use a semicolon to separate two independent clauses that are closely related in topic. 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 100%;">Do: <em>Use a semicolon to break up a sentence with two related independent clauses</em></th></tr>
@@ -1055,11 +1048,11 @@ Semicolons are great for breaking up a longer, more complicated sentence. Use a 
 <tr><td style="width: 100%;">The cat slept through the storm; the dog cowered under the bed.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Semicolons can be used to separate list items if one (or more) of the list items contains a comma.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 100%;">Do: <em>Use a semicolon to break up a longer sentence</em></th></tr>
@@ -1068,7 +1061,7 @@ Semicolons can be used to separate list items if one (or more) of the list items
 <tr><td style="width: 100%;">Jane Lang, our moderator; Simon Mayer, CEO and Cofounder of PantsLabyrinth; and Kara Seberg, CMO of Yachtr.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Slashes {#slashes}
 
@@ -1076,7 +1069,7 @@ There are two types of slashes: backward (\\) and forward (/). Do not use slashe
 
 Use slashes as needed in file paths and URLs.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Use a slash for file paths</em></th><th style="width: 50%;">Don't: <em>Use a slash to separate alternatives</em></th></tr>
@@ -1085,19 +1078,18 @@ Use slashes as needed in file paths and URLs.
 <tr><td style="width: 50%;"><code>/campaigns/data_series</code></td><td style="width: 50%;">you/your customers</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Quotation marks {#quotation-marks}
 
 There are two types of quotation marks: straight (" ") and curly (“ ”). Periods and commas go inside the quotation marks. An exception is when the quotation marks include exact information such as a string. Use quotation marks when directing users to input a specific string of text into a text field.
 
-{% alert note %}
+> **Note:**
+> When describing search syntax, quotation marks are often used to signify searching for exact text. In this case, use brackets around the string of text and quotation marks as required by the search syntax. For example: <br><br>
+> 
+> *Put quotes around any word or phrase, such as [“test segment”], and we show results that contain only those exact words or phrases.*
 
-When describing search syntax, quotation marks are often used to signify searching for exact text. In this case, use brackets around the string of text and quotation marks as required by the search syntax. For example: <br><br>
 
-*Put quotes around any word or phrase, such as [“test segment”], and we show results that contain only those exact words or phrases.* 
-
-{% endalert %}
 
 Code examples must use straight quotation marks. For more information about formatting code in text, refer to [Code in Text](#code-in-text).
 
@@ -1105,7 +1097,7 @@ Code examples must use straight quotation marks. For more information about form
 
 #### API endpoints {#api-endpoints}
 
-In general, documentation for API endpoints should follow the guidelines in this style guide. However, there are niche topics that may require different content guidelines listed in this document. For more information on how to format and reference endpoints, refer to [API endpoint documentation guidelines]({{site.baseurl}}/contributing/style_guide/api_endpoint_guidelines/). 
+In general, documentation for API endpoints should follow the guidelines in this style guide. However, there are niche topics that may require different content guidelines listed in this document. For more information on how to format and reference endpoints, refer to [API endpoint documentation guidelines](api_endpoint_guidelines.md). 
 
 #### Avoid guarantees {#avoid-guarantees}
 
@@ -1119,7 +1111,7 @@ When instructing a reader to interact with the UI, bold the UI element they are 
 
 For guidance on what verbs to use when describing interactions with the UI, refer to the following table:
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <colgroup>
 <col style="width: 20%;">
@@ -1143,7 +1135,7 @@ For guidance on what verbs to use when describing interactions with the UI, refe
 <tr><td>Enter</td><td>Typing a value.</td><td><ul><li>In the text field, enter the name of your custom attribute.</li><li>Enter "Braze" as the source name.</li></ul></td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Describing limitations {#describing-limitations}
 
@@ -1195,7 +1187,7 @@ Don't use phrases that might incite fear, uncertainty, or doubt with readers. Pr
 
 As a best practice, write articles that discuss functionality in a generally applicable way. If more detail is needed for specific cases or exceptions, create a separate section (or separate article if the content is web article length, ~500 words) that outlines this outlier. Create cross-references from the general article to the specific to help users connect these concepts.
 
-Avoid creating duplicated or repetitious content for different channels or features. If repetition is needed, use `includes` files and other [reusable content best practices]({{site.baseurl}}/contributing/content_management/reusing_content).
+Avoid creating duplicated or repetitious content for different channels or features. If repetition is needed, use `includes` files and other [reusable content best practices](../content_management/reusing_content.md).
 
 **As an example:** A common use case for Braze customers is to retarget users who have previously interacted with their messaging. Retargeting users can be done through many engagement tools, including campaigns, Canvases, landing pages, and segments. Retargeting users can be done through many channels: WhatsApp, SMS, Content Cards, email, push notifications, and more. Often, customers try to reengage a user through a separate channel than one previously used.  
 Instead of creating one article for each engagement tool and each channel, create a single article that discusses strategies for retargeting users and outlines all the options available. If there are special considerations for specific channels/tools, create a separate article that outlines those considerations and house it within that documentation section. Create cross-references between the general article and the specific article.
@@ -1210,7 +1202,7 @@ When naming articles and filenames, make sure to describe the general topic in t
 
 For filenames, keep the name brief and avoid using articles (a, an, the). Separate each word with an underscore (_).
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 100%;">Do</th></tr>
@@ -1223,7 +1215,7 @@ For filenames, keep the name brief and avoid using articles (a, an, the). Separa
 <tr><td style="width: 100%;">push_notification_test.png</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 In general, for articles and image files, use the same spelling and capitalization as the referenced article and files. For guidelines on article title styling, refer to [Headings and Titles](#headings-and-titles).
 
@@ -1278,7 +1270,7 @@ To display a full address, use the numeral, followed by the street name, followe
 
 Button labels should be clear and predictable—the user should know what action occurs upon selecting the button. Use sentence case for button labels, and lead with a strong verb. If it may be unclear what the verb is referring to, use the format [verb] + [noun]. 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1290,7 +1282,7 @@ Button labels should be clear and predictable—the user should know what action
 <tr><td style="width: 50%;">Learn more</td><td style="width: 50%;">More</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Omit unnecessary words and articles, such as “a”, “an,” or “the”.
 
@@ -1303,7 +1295,7 @@ Alerts, also known as callouts, are used to draw attention to information that i
 * Tip  
 * Warning
 
-Use alerts sparingly throughout articles. For more information, refer to [Alerts best practices]({{site.baseurl}}/contributing/style_guide/alerts/).
+Use alerts sparingly throughout articles. For more information, refer to [Alerts best practices](alerts.md).
 
 #### Code in text {#code-in-text}
 
@@ -1342,7 +1334,7 @@ Spell out the month and days of the week. Avoid abbreviations when possible. For
 
 Use a [comma](#commas) to separate the date from the year. If a day of the week is used with the date, add it before the month.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 100%;">Do: <em>Use the preferred date format.</em></th></tr>
@@ -1353,11 +1345,11 @@ Use a [comma](#commas) to separate the date from the year. If a day of the week 
 <tr><td style="width: 100%;">Wednesday, September 15, 2021</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 For date ranges, use an [en dash](#en-dash).
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 100%;">Do</th></tr>
@@ -1366,13 +1358,13 @@ For date ranges, use an [en dash](#en-dash).
 <tr><td style="width: 100%;">2010–2021</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Use an en dash for date ranges.
 
 Use numerals with am or pm, followed by a space, followed by the time of day (am or pm). Remove the minutes from on-the-hour time.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Use numerals with am or pm.</em></th><th style="width: 50%;">Don't: <em>Use minutes for on-the-hour time (unless it's a range).</em></th></tr>
@@ -1381,11 +1373,11 @@ Use numerals with am or pm, followed by a space, followed by the time of day (am
 <tr><td style="width: 50%;">12 pm</td><td style="width: 50%;">12:00 P.M.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 For ranges of time, use an en dash to separate. Do not add spaces before or after the en dash.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 100%;">Do: <em>Use an en dash for range of time.</em></th></tr>
@@ -1394,9 +1386,9 @@ For ranges of time, use an en dash to separate. Do not add spaces before or afte
 <tr><td style="width: 100%;">12:45–2:30 pm</td></tr>
 </tbody>
 </table>
-{:/}
 
-{::nomarkdown}
+
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 100%;">Do: <em>Use minutes for ranges of time.</em></th></tr>
@@ -1405,7 +1397,7 @@ For ranges of time, use an en dash to separate. Do not add spaces before or afte
 <tr><td style="width: 100%;">8:00 am–2:30 pm</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 For reference in instances where parties from other time zones are included (like webinars, meetings, or events), indicate the time zone as noted below:
 
@@ -1446,7 +1438,7 @@ Use the format “name@example.com” for generic email addresses. Replace “na
 
 #### Figures and other images {#figures-and-other-images}
 
-When creating figures and images, refer to the [Image copy style guide]({{site.baseurl}}/contributing/style_guide/image_style_guide/). Never include personally identifiable information (PII) in figures or images.
+When creating figures and images, refer to the [Image copy style guide](image_style_guide.md). Never include personally identifiable information (PII) in figures or images.
 
 ##### Alt text {#alt-text}
 
@@ -1459,7 +1451,7 @@ Use the following guidelines when writing alt text:
 * Don’t include “image of” or “picture of”. It’s already understood that you are referring to an image.   
 * Don’t include special characters. For example, instead of ampersands (&), use the word “and” written out.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1468,7 +1460,7 @@ Use the following guidelines when writing alt text:
 <tr><td style="width: 50%;">Custom Events settings page in the Braze dashboard with Add Report highlighted.</td><td style="width: 50%;">A screenshot of the Manage Settings > Custom Events page in the Braze dashboard with the option to add a report highlighted.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Leave alt tags explicitly blank (alt="") if the image is adding a redundant visual component to what is explained in the text. 
 
@@ -1482,7 +1474,7 @@ If possible, take screenshots from [dashboard-06](https://dashboard-06.braze.com
 
 When you’re referring to a file type, use the standard name of the type. If the file type is an acronym, refer to the file type in all caps. 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Use the standard name of the file type</em></th><th style="width: 50%;">Don't: <em>Use the file extension</em></th></tr>
@@ -1503,7 +1495,7 @@ When you’re referring to a file type, use the standard name of the type. If th
 <tr><td style="width: 50%;">ZIP</td><td style="width: 50%;">.zip</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 When you’re referring to the name of a file, format the filename as code text. For more information, see the section [Code in Text](#code-in-text).
 
@@ -1543,7 +1535,7 @@ When referring to a button, use bold text for the button label. In most cases, m
 
 To refer to a button, use only the button’s label. Do not refer to a button as “the [label] button”.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1552,11 +1544,11 @@ To refer to a button, use only the button’s label. Do not refer to a button as
 <tr><td style="width: 50%;">Select <strong>Add Languages</strong>.</td><td style="width: 50%;">Select the <strong>Add Language</strong>s button. <br><br> Select “Add Languages”.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 If the label ends with a colon or ellipsis, omit the ending punctuation. 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1565,11 +1557,11 @@ If the label ends with a colon or ellipsis, omit the ending punctuation.
 <tr><td style="width: 50%;">Select <strong>Save as</strong></td><td style="width: 50%;">Select <strong>Save as…</strong></td></tr>
 </tbody>
 </table>
-{:/}
+
 
 If a button is an icon, include the name of the button as shown in the tooltip. If a button with an icon doesn't include a tooltip, submit a request that a tooltip be added.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1578,13 +1570,13 @@ If a button is an icon, include the name of the button as shown in the tooltip. 
 <tr><td style="width: 50%;">Select ➕ <strong>Add</strong>.</td><td style="width: 50%;">Select the ➕ icon.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Checkboxes {#checkboxes}
 
 When referring to a checkbox, use bold text for the checkbox label. Don’t include the word “checkbox” unless clarity is needed. Prefer the terms “select/clear” versus “check/uncheck”.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1594,7 +1586,7 @@ When referring to a checkbox, use bold text for the checkbox label. Don’t incl
 <tr><td style="width: 50%;">Clear the <strong>Exit</strong> checkbox.</td><td style="width: 50%;">Uncheck the <strong>Exit</strong> checkbox.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Command-line commands and options {#command-line-commands-and-options}
 
@@ -1604,7 +1596,7 @@ When referring to command-line commands or options, use code formatting. Match c
 
 Avoid referring to dialog boxes by name unless clarity is needed. Instead, describe what the reader needs to do. If you refer to a dialog box, use bold text for the name of the dialog box and match the capitalization of the UI.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1613,13 +1605,13 @@ Avoid referring to dialog boxes by name unless clarity is needed. Instead, descr
 <tr><td style="width: 50%;">Select <strong>Upload</strong> then select a file to upload.</td><td style="width: 50%;">Select <strong>Upload</strong> and use the <strong>File Upload</strong> dialog box to select a file to upload.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Error messages {#error-messages}
 
 When referring to error messages that a reader may encounter, encapsulate the error message in quotation marks. For longer error messages, use a block quote.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1628,13 +1620,13 @@ When referring to error messages that a reader may encounter, encapsulate the er
 <tr><td style="width: 50%;">“Push Bounced: MismatchSenderId”</td><td style="width: 50%;"><em>Push Bounced: MismatchSenderID</em><br><br><code>Push Bounced: MismatchSenderID</code></td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Filter and operator names {#filter-and-operator-names}
 
 When referring to the names of filters and operators for segments or other areas of the dashboard, use code text. Match the case of the UI, including elements that are in all caps such as `OR` and `AND` operators. 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1644,13 +1636,13 @@ When referring to the names of filters and operators for segments or other areas
 <tr><td style="width: 50%;">Combine filters with the <code>OR</code> operator.</td><td style="width: 50%;">Combine filters with the “OR” operator.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Folder and filenames {#folder-and-filenames}
 
 When referring to folder names and filenames, use code text. 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1659,7 +1651,7 @@ When referring to folder names and filenames, use code text.
 <tr><td style="width: 50%;">Open the <code>braze.xml</code> file.</td><td style="width: 50%;">Open the <strong>braze.xml</strong> file.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Key names and combinations {#key-names-and-combinations}
 
@@ -1667,7 +1659,7 @@ When referring to key names or key combinations, use the [HTML `<kbd>` tag](http
 
 Spell out the names of keys such as Command, Control, Option, and Shift. Don't use symbols for those keys.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1676,11 +1668,11 @@ Spell out the names of keys such as Command, Control, Option, and Shift. Don't u
 <tr><td style="width: 50%;">Press <strong>Option</strong>.</td><td style="width: 50%;">Press ⌥.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 For key combinations, use a plus (+) sign between keys, but omit the plus from any special formatting. 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1689,7 +1681,7 @@ For key combinations, use a plus (+) sign between keys, but omit the plus from a
 <tr><td style="width: 50%;">Press <strong>Option + F12</strong>.</td><td style="width: 50%;">Press ⌥ + F12.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 For example, this is how keyboard tags appear in Braze documentation:  
 To stop the command, press **Control + C**.
@@ -1702,7 +1694,7 @@ When referring to a metric in a table or glossary entry, use initial caps with n
 
 Use the term page when referring to a web page in general, or a specific page on the Braze dashboard. When referring to a page name, use the format “the [label] page” and bold the name of the page.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1711,23 +1703,22 @@ Use the term page when referring to a web page in general, or a specific page on
 <tr><td style="width: 50%;">Go to the Segments page.</td><td style="width: 50%;">Go to the “Segments” page.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Permission names {#permission-names}
 
 When referring to names of user permissions within the dashboard, enclose the permission name in quotes.
 
-{% alert note %}
+> **Note:**
+> Currently we are using title case to match the formatting of the dashboard. There is a plan to update the permission names within the UI to sentence case to match our standards.
 
-Currently we are using title case to match the formatting of the dashboard. There is a plan to update the permission names within the UI to sentence case to match our standards. 
 
-{% endalert %}
 
 ##### Tabs {#tabs-1}
 
 When referring to a tab, use the format “the [label] tab” and bold the name of the tab.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1736,13 +1727,13 @@ When referring to a tab, use the format “the [label] tab” and bold the name 
 <tr><td style="width: 50%;">Go to the <strong>Manage Settings</strong> page and select the <strong>Tags</strong> tab.</td><td style="width: 50%;">Go to the “Manage Settings” page and select the “Tags” tab.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Text input {#text-input}
 
 When instructing a reader to type a specific string of text, enclose the text in quotes.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1751,7 +1742,7 @@ When instructing a reader to type a specific string of text, enclose the text in
 <tr><td style="width: 50%;">In the <strong>Name</strong> field, enter “Lapsing Users”</td><td style="width: 50%;">In the <strong>Name</strong> field, enter <code>Lapsing Users</code>.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Frequently asked questions (FAQs) {#frequently-asked-questions-faqs}
 
@@ -1772,7 +1763,7 @@ For well-known cities like London or Tokyo, it’s fine to introduce them withou
 
 For cities or towns that may be unfamiliar to your audience, include the state, province, or country.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 100%;">Do</th></tr>
@@ -1783,7 +1774,7 @@ For cities or towns that may be unfamiliar to your audience, include the state, 
 <tr><td style="width: 100%;">Antwerp, Belgium</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Countries
 
@@ -1794,7 +1785,7 @@ Capitalize the names of all countries. To abbreviate a country name, spell the f
 		  
 Don’t place periods between abbreviated country names.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1804,7 +1795,7 @@ Don’t place periods between abbreviated country names.
 <tr><td style="width: 50%;">Washington, DC</td><td style="width: 50%;">Washington, D.C.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Regions
 
@@ -1830,13 +1821,13 @@ For article titles, when possible, avoid gerunds (verbs ending in *-ing*) in fav
 
 For article headings, be concise and consistent across heading titles. For example, if the article’s Heading 1 style defines each step (ex. **Step 1: Create a new push campaign**), then keep this format across the article headings for consistency.
 
-For styling help in Braze Docs, refer to the Contributing page for [Styling examples]({{site.baseurl}}/contributing/styling_examples/?tab=markdown). 
+For styling help in Braze Docs, refer to the Contributing page for [Styling examples](../styling_examples.md). 
 
 ##### Numeric subtasks
 
 For headers that describe ordered steps, use numerals in the subtask headers.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1845,7 +1836,7 @@ For headers that describe ordered steps, use numerals in the subtask headers.
 <tr><td style="width: 50%;">Step 2: Create an SMS campaign <br><br> Step 2.1: Compose your message <br><br> Step 2.2: Schedule the delivery</td><td style="width: 50%;">Step 2: Create an SMS campaign <br><br> Step 2a: Compose your message <br><br> Step 2b: Schedule the delivery</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Introductions {#introductions}
 
@@ -1868,7 +1859,7 @@ Include an overview of the partner and a brief company description. Also, includ
 
 ##### API
 
-Include only the "Use this endpoint..." sentence in the intro. We want to keep the API endpoints as easy to navigate as possible. For more on API endpoint structure and formatting, see the [API endpoint documentation guidelines]({{site.baseurl}}/contributing/style_guide/api_endpoint_guidelines/).
+Include only the "Use this endpoint..." sentence in the intro. We want to keep the API endpoints as easy to navigate as possible. For more on API endpoint structure and formatting, see the [API endpoint documentation guidelines](api_endpoint_guidelines.md).
 
 ##### User guide and developer guide
 
@@ -1902,10 +1893,10 @@ For list item capitalization, start each list item with a capital letter. For li
 
 #### Media formatting {#media-formatting}
 
-This section includes general guidelines for formatting images and GIFs in your content. For more information, including example screenshots, refer to the [Image copy style guide]({{site.baseurl}}/contributing/style_guide/image_style_guide/).
+This section includes general guidelines for formatting images and GIFs in your content. For more information, including example screenshots, refer to the [Image copy style guide](image_style_guide.md).
 
-| **Do** | {::nomarkdown}<ul><li>Do tightly crop to the feature or component of mention.</li><li>Do take high-quality screenshots, preferably on a retina monitor (MacBook display).</li><li>Do create a GIF of an interaction or workflow.</li><li>Keep in mind that users cannot pause or scrub through a GIF to see details.</li><li>Do run images through an optimizer to reduce file size (ImageOptim, TinyPNG, or Ezgif).</li><li>Do aim for high contrast between elements for accessibility.</li><li>Do resize images by height percentages rather than distinct pixel values.</li></ul>{:/} |
-| **Don't** | {::nomarkdown}<ul><li>Don't include the header or sidebar of the dashboard, as these can be explained in a simple sentence.</li><li>Don't include the entire dashboard.</li><li>Don't include Personally Identifiable Information (unless blurred, or that of a demo user).</li><li>Don't include the browser frame (URL field, bookmarks, tabs, and so on.).</li><li>Don't include dashboards of Technology Partners.</li><li>Don't add a border or drop shadow to images.</li></ul>{:/} |
+| **Do** | <ul><li>Do tightly crop to the feature or component of mention.</li><li>Do take high-quality screenshots, preferably on a retina monitor (MacBook display).</li><li>Do create a GIF of an interaction or workflow.</li><li>Keep in mind that users cannot pause or scrub through a GIF to see details.</li><li>Do run images through an optimizer to reduce file size (ImageOptim, TinyPNG, or Ezgif).</li><li>Do aim for high contrast between elements for accessibility.</li><li>Do resize images by height percentages rather than distinct pixel values.</li></ul> |
+| **Don't** | <ul><li>Don't include the header or sidebar of the dashboard, as these can be explained in a simple sentence.</li><li>Don't include the entire dashboard.</li><li>Don't include Personally Identifiable Information (unless blurred, or that of a demo user).</li><li>Don't include the browser frame (URL field, bookmarks, tabs, and so on.).</li><li>Don't include dashboards of Technology Partners.</li><li>Don't add a border or drop shadow to images.</li></ul> |
 
 #### Numbers {#numbers}
 
@@ -1913,7 +1904,7 @@ Never start a sentence with a numeral. The exception is when referring to a year
 
 Spell out numerals up to nine. For units of measurement or numbers 10 or higher, use the numeral. For numbers over three digits, use a comma. Write out larger numbers. 
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1926,7 +1917,7 @@ Spell out numerals up to nine. For units of measurement or numbers 10 or higher,
 <tr><td style="width: 50%;">5 MB</td><td style="width: 50%;">five MB</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Currency
 
@@ -1934,7 +1925,7 @@ Always indicate what currency you’re referring to by using the currency symbol
 
 Use the decimal for amounts where the number of cents is greater than zero. For sums greater than three digits, use a comma. Don’t include “.00” in sums of money.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1943,7 +1934,7 @@ Use the decimal for amounts where the number of cents is greater than zero. For 
 <tr><td style="width: 50%;">US $20</td><td style="width: 50%;">$20</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Telephone numbers
 
@@ -1953,7 +1944,7 @@ When formatting phone numbers with a country code, use a plus sign (+) before th
 
 Provide a number with a country code like so: +1 (504) 327-7269
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1963,7 +1954,7 @@ Provide a number with a country code like so: +1 (504) 327-7269
 <tr><td style="width: 50%;">+1 (123) 456-7890</td><td style="width: 50%;">1 234-567-9012</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Fractions
 
@@ -1973,7 +1964,7 @@ In some cases when expressing a fraction as a decimal is necessary, add a zero b
 
 When expressing rating systems using fractions, use numerals to spell out the ranking.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -1984,13 +1975,13 @@ When expressing rating systems using fractions, use numerals to spell out the ra
 <tr><td style="width: 50%;">9 out of 10</td><td style="width: 50%;">nine out of ten</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Percentages
 
 Use numerals and a percent sign (%) without a space in between them. However, if the percent starts the sentence, then spell out the entire percentage (number and percent).
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -2000,7 +1991,7 @@ Use numerals and a percent sign (%) without a space in between them. However, if
 <tr><td style="width: 50%;">Twenty percent of company users are...</td><td style="width: 50%;">20% of company users are...</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ##### Ranges
 
@@ -2008,7 +1999,7 @@ Use a hyphen to indicate a range of numbers. Do not use an en dash to separate n
 
 For ranges of numbers with units, repeat the unit of measurement after the number. This does not include repeating nouns. Use the word “to” between the numbers in the range to avoid confusion.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -2018,7 +2009,7 @@ For ranges of numbers with units, repeat the unit of measurement after the numbe
 <tr><td style="width: 50%;">-10°C to 50°C</td><td style="width: 50%;">-10°C-50°C Don't</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Placeholder text  {#placeholder-text}
 
@@ -2042,8 +2033,8 @@ When introducing or explaining a placeholder, refer to the following guidelines:
 
 | Guideline | Example |
 | :---- | :---- |
-| Call out placeholders immediately after the placeholder. | Replace `<YOUR_APP_IDENTIFIER_API_KEY>` with your [App Identifier API Key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key), which you can find on the **Settings** page. |
-| To call out two or more placeholders at once, use a bulleted list. List each placeholder in the order they appear in the code. | Replace the following: {::nomarkdown}<ul><li><code>PLACEHOLDER_VARIABLE</code>: a description of what the placeholder represents</li><li><code>PLACEHOLDER_VARIABLE</code>: a description of what the placeholder represents</li></ul>{:/} |
+| Call out placeholders immediately after the placeholder. | Replace `<YOUR_APP_IDENTIFIER_API_KEY>` with your [App Identifier API Key](https://www.braze.com/docs/api/api_key/#the-app-identifier-api-key), which you can find on the **Settings** page. |
+| To call out two or more placeholders at once, use a bulleted list. List each placeholder in the order they appear in the code. | Replace the following: <ul><li><code>PLACEHOLDER_VARIABLE</code>: a description of what the placeholder represents</li><li><code>PLACEHOLDER_VARIABLE</code>: a description of what the placeholder represents</li></ul> |
 | Refer to the placeholder in the same formatting that it’s shown in the text or code. | `target <YOUR_APP_TARGET> do pod 'Appboy-iOS-SDK' end` <br><br> Replace `<YOUR_APP_TARGET>` with the name of your target app. |
 
 #### Products {#products}
@@ -2059,7 +2050,7 @@ Never use product or feature names as verbs.
 
 Never use an apostrophe after Braze (example:“Braze’s.”) It sounds awkward. Instead, form possessives using a preposition (“to, of, from”) followed by the company name.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -2069,7 +2060,7 @@ Never use an apostrophe after Braze (example:“Braze’s.”) It sounds awkward
 <tr><td style="width: 50%;">That’s one of the defining features of Braze.</td><td style="width: 50%;">That’s one of Braze’s defining features</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 Refer to “Braze” as “we/our/ours.” Never “it/its/they/their.”
 
@@ -2091,7 +2082,7 @@ For ranges of numbers with units, repeat the unit for each number. Similarly, fo
 
 #### Cross-reference links {#cross-reference-links}
 
-Use cross-references to guide users to additional resources. In Braze documentation, use site-root-relative URLs to link to other Braze docs (replace “www.braze.com/docs” with “{{site.baseurl}}”).
+Use cross-references to guide users to additional resources. In Braze documentation, use site-root-relative URLs to link to other Braze docs (replace “www.braze.com/docs” with “https://www.braze.com/docs”).
 
 Avoid adding multiple links to the same document within a given page, as this can cause link fatigue. Duplicate links are fine in moderation if you’re linking to a specific section on another page, or if the page you’re linking from is long.
 
@@ -2099,7 +2090,7 @@ Avoid adding multiple links to the same document within a given page, as this ca
 
 Similar to images, use videos to create variety in your learning materials. Most people learn best with a combination of mediums, so make sure that any content you include in a video is also covered in the article or lesson.
 
-To embed a video in Braze documentation, refer to [Embedded Video Test]({{site.baseurl}}/home/styling_test_page/#embedded-video-test).
+To embed a video in Braze documentation, refer to [Embedded Video Test](https://www.braze.com/docs/home/styling_test_page/#embedded-video-test).
 
 #### Headings as link targets {#headings-as-link-targets}
 
@@ -2108,7 +2099,7 @@ In Braze documentation, anchors are automatically created for headings. However,
 * Your auto-generated anchor is very long.  
 * Your heading may be frequently linked to. Adding a custom anchor reduces the likelihood of breaking links if the heading text is changed later.
 
-To add an anchor to a heading in Braze documentation, refer to [Custom Anchors]({{site.baseurl}}/home/styling_test_page/#custom-header-anchor).
+To add an anchor to a heading in Braze documentation, refer to [Custom Anchors](https://www.braze.com/docs/home/styling_test_page/#custom-header-anchor).
 
 #### Link text {#link-text}
 
@@ -2121,17 +2112,17 @@ Use one of the following formats when writing links:
 * Match the link text to the title or heading of the link destination.  
 * Use a description of the link destination as the link text.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Match the link text to the title or heading of the link destination.</em></th><th style="width: 50%;">Do: <em>Use a description of the link destination as the link text.</em></th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">Get started with the Braze <a href="{{site.baseurl}}/user_guide/getting_started/web_sdk/">Web SDK</a>.</td><td style="width: 50%;">To find out your specific cluster or endpoint, <a href="{{site.baseurl}}/braze_support/">contact Support</a>.</td></tr>
-<tr><td style="width: 50%;">For more information, see <a href="{{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/">Aborting Liquid Messages</a>.</td><td style="width: 50%;">When in doubt, you can always <a href="{{site.baseurl}}/user_guide/administrative/access_braze/accessing_your_account/#resetting-your-password">reset your password</a>.</td></tr>
+<tr><td style="width: 50%;">Get started with the Braze <a href="https://www.braze.com/docs/user_guide/getting_started/web_sdk/">Web SDK</a>.</td><td style="width: 50%;">To find out your specific cluster or endpoint, <a href="https://www.braze.com/docs/braze_support/">contact Support</a>.</td></tr>
+<tr><td style="width: 50%;">For more information, see <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/">Aborting Liquid Messages</a>.</td><td style="width: 50%;">When in doubt, you can always <a href="https://www.braze.com/docs/user_guide/administrative/access_braze/accessing_your_account/#resetting-your-password">reset your password</a>.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 You may need to rephrase a sentence to make good link text.
 
@@ -2157,52 +2148,52 @@ Apply the following guidelines when writing link text:
  * this document
  * this article
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Make sure the link text makes sense without the surrounding text</em></th><th style="width: 50%;">Don't: <em>Use vague or non-descriptive link text</em></th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">For more information on importing customer data, see <a href="{{site.baseurl}}">User Import</a>.</td><td style="width: 50%;">For more information, <a href="{{site.baseurl}}">click here</a>.</td></tr>
-<tr><td style="width: 50%;">This feature connects to the <a href="{{site.baseurl}}">Track users</a> endpoint.</td><td style="width: 50%;">See <a href="{{site.baseurl}}">this article</a>.</td></tr>
-<tr><td style="width: 50%;">Learn more about <a href="{{site.baseurl}}">what’s new in Android SDK 16.0.0</a>.</td><td style="width: 50%;">Follow the instructions <a href="{{site.baseurl}}">here</a>.</td></tr>
-<tr><td style="width: 50%;">Learn more about the <a href="https://www.braze.com/product">Braze platform</a>.</td><td style="width: 50%;">For steps, refer to <a href="{{site.baseurl}}">this document</a>. <a href="{{site.baseurl}}">Learn more</a>.</td></tr>
-<tr><td style="width: 50%;">Storefront API keys are unique per Hydrogen storefront, but their permission scopes are shared by all Hydrogen storefronts. Learn more about <a href="{{site.baseurl}}">Storefront API tokens.</a></td><td style="width: 50%;"><a href="{{site.baseurl}}">Storefront API tokens</a> are unique per <a href="{{site.baseurl}}">Hydrogen storefront</a>, but their <a href="{{site.baseurl}}">permission scopes</a> are shared across all Hydrogen storefronts.</td></tr>
+<tr><td style="width: 50%;">For more information on importing customer data, see <a href="https://www.braze.com/docs">User Import</a>.</td><td style="width: 50%;">For more information, <a href="https://www.braze.com/docs">click here</a>.</td></tr>
+<tr><td style="width: 50%;">This feature connects to the <a href="https://www.braze.com/docs">Track users</a> endpoint.</td><td style="width: 50%;">See <a href="https://www.braze.com/docs">this article</a>.</td></tr>
+<tr><td style="width: 50%;">Learn more about <a href="https://www.braze.com/docs">what’s new in Android SDK 16.0.0</a>.</td><td style="width: 50%;">Follow the instructions <a href="https://www.braze.com/docs">here</a>.</td></tr>
+<tr><td style="width: 50%;">Learn more about the <a href="https://www.braze.com/product">Braze platform</a>.</td><td style="width: 50%;">For steps, refer to <a href="https://www.braze.com/docs">this document</a>. <a href="https://www.braze.com/docs">Learn more</a>.</td></tr>
+<tr><td style="width: 50%;">Storefront API keys are unique per Hydrogen storefront, but their permission scopes are shared by all Hydrogen storefronts. Learn more about <a href="https://www.braze.com/docs">Storefront API tokens.</a></td><td style="width: 50%;"><a href="https://www.braze.com/docs">Storefront API tokens</a> are unique per <a href="https://www.braze.com/docs">Hydrogen storefront</a>, but their <a href="https://www.braze.com/docs">permission scopes</a> are shared across all Hydrogen storefronts.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Links for endpoints {#links-for-endpoints}
 
 When referencing endpoint articles, be sure to use [meaningful link text](https://docs.google.com/document/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.79ujl0qtumog) that can make sense out of context. If you’re using the endpoint’s path as a link, be sure to provide details in the surrounding text as the path may not clearly communicate the endpoint’s function.    
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">Delete user profiles using the Braze <a href="{{site.baseurl}}/api/endpoints/user_data/post_user_delete/">Delete user endpoint</a>.</td><td style="width: 50%;">Delete user profiles using the Braze <a href="{{site.baseurl}}/api/endpoints/user_data/post_user_delete/">Delete user</a> endpoint.</td></tr>
-<tr><td style="width: 50%;"><a href="{{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/"><code>/users/export/id</code> endpoint</a></td><td style="width: 50%;"><a href="{{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/"><code>/users/export/id</code></a> endpoint</td></tr>
+<tr><td style="width: 50%;">Delete user profiles using the Braze <a href="https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/">Delete user endpoint</a>.</td><td style="width: 50%;">Delete user profiles using the Braze <a href="https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/">Delete user</a> endpoint.</td></tr>
+<tr><td style="width: 50%;"><a href="https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/"><code>/users/export/id</code> endpoint</a></td><td style="width: 50%;"><a href="https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/"><code>/users/export/id</code></a> endpoint</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Links for file download {#links-for-file-download}
 
 If a link downloads a file, then make that clear in the link text, and mention the file type.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do: <em>Make sure the link text communicates that selecting it downloads a file</em></th><th style="width: 50%;">Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">For tips, download the <a href="{{site.baseurl}}">Regex Cheat Sheet PDF</a>.</td><td style="width: 50%;">Check out our <a href="{{site.baseurl}}">RegEx Cheat Sheet</a>.</td></tr>
-<tr><td style="width: 50%;">For more information, download the <a href="{{site.baseurl}}">Success and Support Services Handbook PDF</a>.</td><td style="width: 50%;"><a href="{{site.baseurl}}">Success and Support Services Handbook</a></td></tr>
+<tr><td style="width: 50%;">For tips, download the <a href="https://www.braze.com/docs">Regex Cheat Sheet PDF</a>.</td><td style="width: 50%;">Check out our <a href="https://www.braze.com/docs">RegEx Cheat Sheet</a>.</td></tr>
+<tr><td style="width: 50%;">For more information, download the <a href="https://www.braze.com/docs">Success and Support Services Handbook PDF</a>.</td><td style="width: 50%;"><a href="https://www.braze.com/docs">Success and Support Services Handbook</a></td></tr>
 </tbody>
 </table>
-{:/}
+
 
 #### Links to other sites {#links-to-other-sites}
 

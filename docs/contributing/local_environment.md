@@ -1,16 +1,9 @@
----
-nav_title: Set up environment
-article_title: Set up your local Braze Docs environment
-description: "Learn how to set up your local Braze Docs environment, so you can make complex or multi-page changes."
-page_order: 0.1 
-noindex: true
----
 
 # Set up your local environment
 
 > Learn how to set up your local Braze Docs environment, so you can make complex or multi-page changes.
 
-{% multi_lang_include contributing/prerequisites.md %}
+*Included in the site build from [`_includes/contributing/prerequisites.md`](../../_includes/contributing/prerequisites.md).*
 
 ## Setting up your local environment
 
@@ -85,11 +78,12 @@ table td {
     </tr>
 </tbody>
 </table>
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% alert note %}
-As of writing, all software is free of cost. If you find that a product is no longer free, [please let us know](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=).
-{% endalert %}
+
+> **Note:**
+> As of writing, all software is free of cost. If you find that a product is no longer free, [please let us know](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=).
+
+
 
 ### Step 2: Create an SSH key
 
@@ -97,15 +91,14 @@ Next, [create an SSH key](https://docs.github.com/en/enterprise-cloud@latest/aut
 
 ### Step 3: Clone your forked repository
 
-{% alert important %}
-Double-check that you [forked the repository]({{site.baseurl}}/contributing/home/#step-3-fork-the-repository), before trying to clone it locally.
-{% endalert %}
+> **Important:**
+> Double-check that you [forked the repository](README.md#step-3-fork-the-repository), before trying to clone it locally.
+
+
 
 In GitHub, open your forked repository, then select **Code** > **SSH** > <i class="fa-regular fa-clone"></i> **Copy**.
 
-![An example forked repository with the "Code" dropdown open showing the "Copy" option.]({% image_buster /assets/img/contributing/github/clone_the_fork.png %}){: style="max-width:50%;"}
-
-In your terminal, open your home directory, then clone the Braze Docs repository.
+![An example forked repository with the "Code" dropdown open showing the "Copy" option.](../../assets/img/contributing/github/clone_the_fork.png)In your terminal, open your home directory, then clone the Braze Docs repository.
 
 ```bash
 cd ~
@@ -133,7 +126,7 @@ upstream  git@github.com:braze-inc/braze-docs.git (push)
 
 ### Step 5: Install Ruby
 
-To [generate a local site preview]({{site.baseurl}}/contributing/generating_a_preview/), you'll need Ruby version `3.3.0` installed. In the terminal, open `braze-docs` and check for Ruby version `3.3.0`.
+To [generate a local site preview](generating_a_preview.md), you'll need Ruby version `3.3.0` installed. In the terminal, open `braze-docs` and check for Ruby version `3.3.0`.
 
 ```bash
 cd ~/braze-docs
@@ -190,9 +183,9 @@ To stop your server, reopen the terminal and press **Control+C**.
 
 ## Next steps
 
-If you're new to Git or docs-as-code, start with our tutorial: [Your first contribution]({{site.baseurl}}/contributing/your_first_contribution/). Otherwise, check out one of the following.
+If you're new to Git or docs-as-code, start with our tutorial: [Your first contribution](your_first_contribution.md). Otherwise, check out one of the following.
 
-- [Content management]({{site.baseurl}}/contributing/content_management/)
-- [YAML metadata]({{site.baseurl}}/contributing/yaml_front_matter/metadata/)
-- [Generating a preview]({{site.baseurl}}/contributing/generating_a_preview/)
-- [Style guides]({{site.baseurl}}/contributing/style_guide)
+- [Content management](content_management.md)
+- [YAML metadata](yaml_front_matter/metadata.md)
+- [Generating a preview](generating_a_preview.md)
+- [Style guides](style_guide.md)

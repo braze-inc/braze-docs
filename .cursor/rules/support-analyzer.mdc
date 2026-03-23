@@ -92,7 +92,7 @@ Before moving to Step 5, prompt the user to review and acknowledge that they wan
 For each docs update:
 
 1. **Prefer refining existing content over adding new elements** — After identifying the relevant file(s), read the surrounding content carefully. Look for opportunities to clarify, restructure, or expand language that's already there. Adjusting existing prose is almost always better than appending a new alert, callout, or FAQ entry.
-2. Draft changes following conventions in the codebase based on the style guides in `_docs/_contributing/style_guide/*`
+2. Draft changes following conventions in the codebase based on the style guides in `docs/contributing/style_guide/*`
 3. Keep additions concise and scannable (bullets, tables, code blocks)
 4. **Use alerts and FAQ entries as a last resort** — Only add a new alert, callout, or FAQ entry when the information genuinely cannot be worked into existing prose. These elements contribute to doc bloat and should be reserved for content that doesn't fit naturally elsewhere.
 

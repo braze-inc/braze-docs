@@ -57,14 +57,6 @@ hide_toc: true
   <div id="feedback_msg">
   </div>
 
-  <hr style="border: 1px solid #CDCDCF;margin-top:48px;"/>
-
-  <h3> Help us make these docs great</h3>
-
-  Braze Docs is an open source project that everyone is welcome to contribute to. Join 288+ contributors and submit your first pull request today. <br /><br />
-
-  <button type="submit" onclick="location.href='{{site.baseurl}}/contributing/home'" value="Contributing" class="btn btn-white">Start contributing</button>
-
 </div>
 </fieldset>
 

@@ -17,7 +17,7 @@ guide_featured_list:
 
 This is a test page for testing `ulinks`. When adding "bad links", the syntax needs to match the syntax on this page:
 
-https://www.braze.com/docs/contributing/content_management/cross_referencing
+https://www.braze.com/docs/feedback/
 
 i.e. no `/docs` should be found in the `site.baseurl`.
 

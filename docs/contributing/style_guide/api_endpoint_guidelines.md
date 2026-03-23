@@ -1,10 +1,3 @@
----
-nav_title: API endpoint documentation guidelines
-article_title: API endpoint documentation guidelines
-description: "Guidelines for documenting Braze API endpoints."
-page_order: 3
-noindex: true
----
 
 # API endpoint documentation guidelines
 
@@ -16,7 +9,7 @@ noindex: true
 }
 </style>
 
-> In general, documentation for API endpoints should follow the guidelines indicated in the [General guidelines]({{site.baseurl}}/contributing/style_guide/writing_style_guide/#general-guidelines). However, there are niche topics that may require different content guidelines listed in this document. 
+> In general, documentation for API endpoints should follow the guidelines indicated in the [General guidelines](writing_style_guide.md#general-guidelines). However, there are niche topics that may require different content guidelines listed in this document. 
 
 Braze supports the following REST API methods:
 
@@ -28,7 +21,7 @@ Braze supports the following REST API methods:
 
 ## Creating a new endpoint article
 
-When creating a new endpoint article, be sure to also add this endpoint into the [Braze API guide]({{site.baseurl}}/api/home) so that the endpoint is searchable. Navigate to  **`_docs`** folder  **`> _api`** folder **`> home.md`** file to add the endpoint by its path and a one-sentence description.
+When creating a new endpoint article, be sure to also add this endpoint into the [Braze API guide](https://www.braze.com/docs/api/home) so that the endpoint is searchable. Navigate to  **`_docs`** folder  **`> _api`** folder **`> home.md`** file to add the endpoint by its path and a one-sentence description.
 
 ## Referencing endpoints
 
@@ -44,7 +37,7 @@ There are instances where an endpoint is referred to as an API. For example, thi
 
 Don't put quotation marks around the endpoint name. Don't use plain text when referring to the path.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -54,23 +47,23 @@ Don't put quotation marks around the endpoint name. Don't use plain text when re
 <tr><td style="width: 50%;">Use the <code>/users/track</code> endpoint.</td><td style="width: 50%;">Use the "Users Track" API endpoint.</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ### Linking to endpoint articles
 
-When referencing endpoint articles, be sure to use [meaningful link text]({{site.baseurl}}/contributing/style_guide/writing_style_guide/#writing-links) that can make sense out of context. If you're using the endpoint's path as a link, be sure to provide details in the surrounding text as the path may not clearly communicate the endpoint's function.    
+When referencing endpoint articles, be sure to use [meaningful link text](writing_style_guide.md#writing-links) that can make sense out of context. If you're using the endpoint's path as a link, be sure to provide details in the surrounding text as the path may not clearly communicate the endpoint's function.    
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">Delete user profiles using the Braze <a href="{{site.baseurl}}/api/endpoints/user_data/post_user_delete/">Delete user endpoint</a>.</td><td style="width: 50%;">Delete user profiles using the Braze <a href="{{site.baseurl}}/api/endpoints/user_data/post_user_delete/">Delete user</a> endpoint.</td></tr>
-<tr><td style="width: 50%;"><a href="{{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/"><code>/users/export/id</code> endpoint</a></td><td style="width: 50%;"><a href="{{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/"><code>/users/export/id</code></a> endpoint</td></tr>
+<tr><td style="width: 50%;">Delete user profiles using the Braze <a href="https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/">Delete user endpoint</a>.</td><td style="width: 50%;">Delete user profiles using the Braze <a href="https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/">Delete user</a> endpoint.</td></tr>
+<tr><td style="width: 50%;"><a href="https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/"><code>/users/export/id</code> endpoint</a></td><td style="width: 50%;"><a href="https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/"><code>/users/export/id</code></a> endpoint</td></tr>
 </tbody>
 </table>
-{:/}
+
 
 ## Headings
 
@@ -92,7 +85,7 @@ Use this checklist to ensure that the proper headings (and content) are included
 * Example response  
 * Troubleshooting (if applicable)
 
-Refer to [Headings and titles]({{site.baseurl}}/contributing/style_guide/writing_style_guide/#headings-and-titles) for formatting guidelines. 
+Refer to [Headings and titles](writing_style_guide.md#headings-and-titles) for formatting guidelines. 
 
 ### Path parameters
 
@@ -103,14 +96,14 @@ If there are no path parameters for the endpoint, include a Path parameters head
 If there are no path or request parameters for the endpoint, merge the caveat into the same section as shown below.
 
 {% raw %}
-{::nomarkdown}
+
 <div style="margin-left: 2em;">
 <code>
 ## Path and request parameters <br>
 There are no path or request parameters for this endpoint.
 </code>
 </div>
-{:/}
+
 {% endraw %}
 
 ## Naming conventions
@@ -119,7 +112,7 @@ Start each endpoint name with an active verb after its method. This lets users k
 
 Don't use the API method as the leading verb for the endpoint name.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -129,9 +122,9 @@ Don't use the API method as the leading verb for the endpoint name.
 <tr><td style="width: 50%;">GET: Look up an existing dashboard user account</td><td style="width: 50%;">GET: Existing dashboard user account</td></tr>
 </tbody>
 </table>
-{:/}
 
-Exceptions to this naming convention are the endpoints in the [Export section]({{site.baseurl}}/api/endpoints/export) as the section name is a verb that indicates that the listed information can be exported.
+
+Exceptions to this naming convention are the endpoints in the [Export section](https://www.braze.com/docs/api/endpoints/export) as the section name is a verb that indicates that the listed information can be exported.
 
 ## API key permissions
 
@@ -170,7 +163,7 @@ For placeholder text, use curly brackets with a brief description of what the us
 
 For API key placeholders, use `YOUR_REST_API_KEY`, not `YOUR-REST-API-KEY`.
 
-{::nomarkdown}
+
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
@@ -180,7 +173,7 @@ For API key placeholders, use `YOUR_REST_API_KEY`, not `YOUR-REST-API-KEY`.
 <tr><td style="width: 50%;"><code>/scim/v2/Users/{userId}</code></td><td style="width: 50%;"><code>/url/[userId]/scim/v2/Users/userID</code></td></tr>
 </tbody>
 </table>
-{:/}
+
 
 For API key placeholders, use `YOUR_REST_API_KEY` (with underscores), not `YOUR-REST-API-KEY` (with hyphens).
 
@@ -192,7 +185,7 @@ An API request includes the header and request parameters. The request parameter
 parameter": (required/optional, data type) A brief description
 ```
 
-Here's an example of a request body for the [Create new user alias endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_alias/):
+Here's an example of a request body for the [Create new user alias endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_alias/):
 
 ```bash
 Content-Type: application/json
@@ -204,7 +197,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 Use double straight quotation marks (" ") to identify parameters that are strings or arrays in an example request. Ensure that all open brackets and parentheses are closed.
 
-An API response includes the response body, headers, and the HTTP status code. Always include an example response. This example must include a simple text example that describes the parameter. Here's an example response for the [Update user alias endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/#example-request).
+An API response includes the response body, headers, and the HTTP status code. Always include an example response. This example must include a simple text example that describes the parameter. Here's an example response for the [Update user alias endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_users_alias_update/#example-request).
 
 ```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/update' \
@@ -225,7 +218,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/update
 
 Status codes indicate whether a user's specific request has been successfully completed. It can be helpful to include the status codes for users to know what's considered a success. For example, 400 and 404 can be indicators of an error response for the endpoint.
 
-If your endpoint documentation requires listing out error codes, link out to the [API Error and Responses]({{site.baseurl}}/api/errors/) article instead at **_docs** folder  **> _api** folder **> errors.md** file
+If your endpoint documentation requires listing out error codes, link out to the [API Error and Responses](https://www.braze.com/docs/api/errors/) article instead at **_docs** folder  **> _api** folder **> errors.md** file
 
 ## Sample code
 

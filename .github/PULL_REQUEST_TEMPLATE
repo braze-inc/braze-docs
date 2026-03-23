@@ -1,6 +1,5 @@
 <!--
-Thank you for contributing to Braze Docs! Read comments like this one for help filling out your Pull Request (PR). For more information about contributing to Braze Docs, see:
-braze.com/docs/contributing/.
+Thank you for contributing to Braze Docs! Read comments like this one for help filling out your Pull Request (PR). For more information about contributing to Braze Docs, see [CONTRIBUTING.md](https://github.com/braze-inc/braze-docs/blob/develop/CONTRIBUTING.md) and the [in-repo handbook](https://github.com/braze-inc/braze-docs/tree/develop/docs/contributing).
 -->
 
 ### Why are you making this change? (required)
@@ -26,8 +25,8 @@ For Jira tickets, add the ticket number and a link to the ticket, like:
     - My style and voice follow the [Braze Style Guide](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub).
     - My content contains correct spelling and grammar.
     - All links are working correctly.
-    - If I renamed or moved a file or directory, I set up [URL redirects](https://www.braze.com/docs/contributing/content_management/redirecting_urls) for each file.
-    - If I updated or replaced an image, I did not remove the original image file from the repository. (For more information, see [Updating an image](https://www.braze.com/docs/contributing/content_management/images/#updating-an-image)).
+    - If I renamed or moved a file or directory, I set up [URL redirects](https://github.com/braze-inc/braze-docs/blob/develop/docs/contributing/content_management/redirecting_urls.md) for each file.
+    - If I updated or replaced an image, I did not remove the original image file from the repository. (For more information, see [Updating an image](https://github.com/braze-inc/braze-docs/blob/develop/docs/contributing/content_management/images.md).)
     - If my PR is related to a paid SKU, third party, SMS, AI, or privacy, I have received written approval from Braze Legal.
 
 ### Submitting for review

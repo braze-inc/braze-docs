@@ -1,4 +1,4 @@
-You can use this template to create any page or section for Braze Docs. For an example, see [Generating a preview]({{site.baseurl}}/contributing/generating_a_preview/). For guidelines on the documentation types used within the article, see [Page types]({{site.baseurl}}/contributing/page_types/).
+You can use this template to create any page or section for Braze Docs. For environment setup, previews, and content types, contributors with repository access should follow the handbook under `docs/contributing/` (for example `generating_a_preview.md` and `content_types.md`). Everyone else can use [Documentation feedback]({{site.baseurl}}/feedback/) to reach the docs team.
 
 {% details Show template %}
 {% raw %}
