@@ -1,7 +1,7 @@
 {% if include.alert == 'Content Cards frequency capping' %}
 
 {% alert note %}
-A limitação de frequência não se aplica aos Cartões de Conteúdo.
+A limitação de frequência não se aplica aos Cartões de conteúdo.
 {% endalert %}
 
 {% endif %}
@@ -17,7 +17,7 @@ Uma string de data como "12-1-2021" ou "12/1/2021" será convertida em um objeto
 {% if include.alert == 'Manage custom data storage' %}
 
 {% alert note %}
-Todos os dados do perfil do usuário (eventos personalizados, atributos personalizados, dados personalizados) são armazenados enquanto esses perfis estiverem ativos.
+Todos os dados do perfil de usuário (eventos personalizados, atributos personalizados, dados personalizados) são armazenados enquanto esses perfis estiverem ativos.
 {% endalert %}
 
 {% endif %}
@@ -25,7 +25,15 @@ Todos os dados do perfil do usuário (eventos personalizados, atributos personal
 {% if include.alert == 'Segment profiles first app use' %}
 
 {% alert note %}
-O Braze não gera perfis para os usuários até que eles tenham usado o aplicativo pela primeira vez, portanto, não é possível fazer o direcionamento para usuários que ainda não abriram o aplicativo.
+A Braze não gera perfis para os usuários até que eles tenham usado o app pela primeira vez, portanto, não é possível fazer o direcionamento para usuários que ainda não abriram o app.
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Shopify attributes REST API' %}
+
+{% alert note %}
+Todos os atributos são originados da API REST da Braze.
 {% endalert %}
 
 {% endif %}

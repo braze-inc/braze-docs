@@ -1,11 +1,11 @@
 ---
 nav_title: "GET: Exportar análisis de resumen de datos de Canvas"
 article_title: "GET: Exportar análisis de resumen de datos de Canvas"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Este artículo describe el punto final Braze Exportar análisis de resumen de datos Canvas."
+description: "Este artículo describe el punto final de Braze para exportar el resumen de análisis de los datos de Canvas."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "Este artículo describe el punto final Braze Exportar análisis de
 /canvas/data_summary
 {% endapimethod %}
 
-> Utiliza este endpoint para exportar rollups de datos de series temporales para un Canvas, proporcionando un resumen conciso de los resultados del Canvas.
+> Utiliza este punto final para exportar resúmenes de datos de series temporales para un Canvas, lo que proporciona un resumen conciso de los resultados del Canvas.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1eb1b760-6b00-4c03-bcfb-12646f2ba6da {% endapiref %}
 
@@ -31,16 +31,16 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Obligatoria | Cadena | Ver [identificador de API de Canvas]({{site.baseurl}}/api/identifier_types/). |
-| `ending_at` | Obligatoria | Fecha y hora <br>(cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Fecha de finalización de la exportación de datos. Predetermina la hora de la solicitud. |
+| `ending_at` | Obligatoria | Fecha y hora <br>(cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Fecha de finalización de la exportación de datos. Predeterminada la hora de la solicitud. |
 | `starting_at` | Opcional\*. | Fecha y hora <br>(cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Fecha de inicio de la exportación de datos. <br><br>\* Se requiere `length` o `starting_at`. |
-| `length` | Opcional\*. | Cadena | Número máximo de días antes de `ending_at` incluidos en la serie devuelta. Debe estar comprendido entre 1 y 14 (ambos inclusive). <br><br>\* Se requiere `length` o `starting_at`. |
-| `include_variant_breakdown` | Opcional | Booleano | Si se incluyen estadísticas de variantes (predeterminado a `false`).  |
-| `include_step_breakdown` | Opcional | Booleano | Si se incluyen estadísticas de pasos (predeterminado a `false`). |
-| `include_deleted_step_data` | Opcional | Booleano | Si se incluyen las estadísticas de los pasos eliminados (predeterminado a `false`). |
+| `length` | Opcional\*. | Cadena | Número máximo de días antes de`ending_at`ser incluido en la serie devuelta. Debe estar comprendido entre 1 y 14 (ambos inclusive). <br><br>\* Se requiere `length` o `starting_at`. |
+| `include_variant_breakdown` | Opcional | Booleano | Si se deben incluir estadísticas variantes (el valor predeterminado es `false`).  |
+| `include_step_breakdown` | Opcional | Booleano | Si se deben incluir estadísticas de pasos (el valor predeterminado es `false`). |
+| `include_deleted_step_data` | Opcional | Booleano | Si se deben incluir estadísticas de pasos para los pasos eliminados (el valor predeterminado es `false`). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
-**Alineación de zonas horarias:** Los análisis del panel de Braze se agregan diariamente en la zona horaria configurada de tu empresa en el panel. Asegúrate de que tus marcas de tiempo coinciden con la zona horaria de tu empresa para que tus estadísticas coincidan con las del panel. Por ejemplo, si la hora de tu empresa es UTC+2, la marca de tiempo debe ser 12AM UTC+2.
+**Alineación de zonas horarias:** Los análisis del panel de Braze se agregan diariamente en la zona horaria configurada por tu empresa en el panel de Braze. Asegúrate de que tus marcas de tiempo coincidan con la zona horaria de tu empresa para que tus estadísticas coincidan con el panel. Por ejemplo, si la hora de tu empresa es UTC+2, la marca de tiempo debería ser 12:00 a. m. UTC+2.
 {% endalert %}
 
 ## Ejemplo de solicitud
@@ -99,7 +99,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 ```
 
 {% alert important %}
-**`influenced_opens` campo:** En la respuesta de la API, el campo `influenced_opens` representa el número total de aperturas (tanto aperturas directas como influenciadas combinadas). En el panel de Braze, "influenced opens" se refiere sólo a los influenced opens, excluyendo los direct opens. Esto se debe a una convención de nomenclatura heredada de la API.
+**`influenced_opens` campo:** En la respuesta de la API, el`influenced_opens`campo representa el número total de aperturas (tanto directas como Influenced Opens combinadas). En el panel de Braze, «Influenced Opens» se refiere únicamente a las aperturas influenciadas, excluyendo las aperturas directas. Esto se debe a una convención de nomenclatura heredada en la API.
 {% endalert %}
 
 {% alert tip %}

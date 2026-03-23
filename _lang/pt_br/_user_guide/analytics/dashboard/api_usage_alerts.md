@@ -1,37 +1,37 @@
 ---
-nav_title: Alertas de uso da API
+nav_title: alertas de uso da API
 article_title: Alertas de uso da API
-description: "Este artigo fornece uma visão geral dos alertas de uso da API, o que lhe permite detectar proativamente o tráfego inesperado."
+description: "Este artigo fornece uma visão geral dos alertas de uso da API, que permitem detectar proativamente tráfego inesperado."
 page_order: 3.6
 ---
 
-# Alertas de uso da API
+# alertas de uso da API
 
-> Os alertas de uso da API fornecem visibilidade crítica do uso da API, permitindo que você detecte proativamente o tráfego inesperado. Ao configurar esses alertas para rastrear os volumes de solicitações da chave de API, você pode receber notificações em tempo real e resolver problemas antes que eles afetem suas campanhas de marketing.
+> Os alertas de uso da API fornecem visibilidade crítica sobre o uso da sua API, permitindo que você detecte proativamente tráfego inesperado. Ao configurar esses alertas para monitorar volumes de solicitações da API, você pode receber notificações em tempo real e resolver problemas antes que eles impactem suas campanhas de marketing.
 
 ## Sobre os alertas de uso da API
 
-Você pode usar os alertas de uso da API para monitorar os volumes de solicitação das seguintes categorias:
+Você pode usar alertas de uso da API para monitorar volumes de solicitações para as seguintes categorias:
 
-| Categoria API | Informações |
+| Categoria da API | Informações |
 |--------------|---------|
-| Pontos de extremidade da API REST | Rastreia o uso de todas as chamadas à API REST feitas ao backend do Braze, como envio de mensagens, criação de campanhas ou exportação de usuários. |
-| Solicitações de API do SDK | Rastreia solicitações de API feitas a partir de SDKs Braze em aplicativos clientes, como o disparo de mensagens no app ou a sincronização de dados de usuários.<br><br>_\*Disponível apenas para clientes que adquiriram o Monthly Active Users - CY 24-25._ |
+| Endpoints da API REST | Monitora o uso de todas as chamadas da API REST feitas para o backend da Braze, como enviar mensagens, criar campanhas ou exportar usuários. |
+| Solicitações da API SDK | Monitora as solicitações da API feitas a partir dos SDKs da Braze em aplicativos clientes, como acionar mensagens no aplicativo ou sincronizar dados de usuários.<br><br>_\*Disponível apenas para clientes que adquiriram Usuários Ativos Mensais – CY 24-25._ |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Criação de um alerta de uso da API
+## Criando um alerta de uso da API
 
 Para criar um alerta de uso da API:
 
-1. Acesse **Configurações** > **APIs e identificadores** > **Alertas de uso de API** e crie um novo alerta.
-2. Digite um nome para o alerta e escolha os pontos de extremidade da API REST e as chaves de API para os quais você gostaria de ser alertado.
-3. Defina seus critérios de alerta escolhendo um ou mais códigos de resposta e especificando os [limites de alerta](#api-usage-alert-thresholds).
-4. Quando terminar, ative a **capacitação do Alerta**.
-    ![Um exemplo de alerta de uso da API que envia notificações quando o ponto de extremidade Rastrear usuários aumenta em 100% em uma hora.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts1.png %})
+1. Acesse **Configurações** > **APIs e Identificadores** > **Alertas de Uso da API**, e então crie um novo alerta.
+2. Digite um nome para o seu alerta e escolha os endpoints da API REST e as chaves da API para as quais você gostaria de ser alertado.
+3. Defina os critérios do seu alerta escolhendo um ou mais códigos de resposta e especificando os [limites de alerta](#api-usage-alert-thresholds).
+4. Quando terminar, ative **Alerta habilitado**.
+    ![Um exemplo de um alerta de uso da API que envia notificações quando o endpoint de Rastrear usuários aumenta em 100 por cento dentro de uma hora.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts1.png %})
 
 ## Limites de alerta {#api-usage-alert-thresholds}
 
-Ao definir seus critérios de alerta, você pode ajustar os seguintes limites:
+Quando você define seus critérios de alerta, pode ajustar os seguintes limites:
 
 <table>
   <thead>
@@ -44,11 +44,11 @@ Ao definir seus critérios de alerta, você pode ajustar os seguintes limites:
     <tr>
       <td>Condição de limite</td>
       <td>
-        Define as condições que levam ao volume limite sobre o qual você gostaria de ser alertado. Há suporte para os seguintes itens:<br><br>
+        Define as condições que levam ao volume de limite que você gostaria de ser alertado. Os seguintes são suportados:<br><br>
         <ul>
-          <li><strong>Aumentado por</strong> ou <strong>Diminuído por</strong>: Compara as solicitações com a janela de tempo anterior.</li>
-          <li><strong>Aumentado em porcentagem</strong> ou <strong>Diminuído em porcentagem</strong>: Compara a variação percentual das solicitações com a janela de tempo anterior.</li>
-          <li><strong>Maior que ou igual</strong>, ou <strong>menor que ou igual</strong>: Contabiliza as solicitações em uma janela de tempo.</li>
+          <li><strong>Aumentado em</strong> ou <strong>Diminuído em</strong>: Compara solicitações em relação à janela de tempo anterior.</li>
+          <li><strong>Aumentado em porcentagem</strong> ou <strong>Diminuído em porcentagem</strong>: Compara a mudança percentual nas solicitações em relação à janela de tempo anterior.</li>
+          <li><strong>Maior ou igual a</strong>, ou <strong>menor ou igual a</strong>: Conta solicitações em uma janela de tempo.</li>
         </ul>
       </td>
     </tr>
@@ -58,21 +58,21 @@ Ao definir seus critérios de alerta, você pode ajustar os seguintes limites:
     </tr>
     <tr>
       <td>Entre</td>
-      <td>A janela de tempo para avaliação do alerta.</td>
+      <td>A janela de tempo para avaliação de alerta.</td>
     </tr>
   </tbody>
 </table>
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Configuração de notificações de alerta
+## Configurando notificações de alerta
 
-Você pode configurar um alerta de e-mail, um alerta de webhook ou ambos. Os alertas de webhook podem ser muito úteis para casos de uso, como o envio de um alerta para plataformas externas, como um canal do Slack. Para obter um exemplo, consulte nossa [documentação](https://www.braze.com/docs/user_guide/administrative/app_settings/company_settings/notification_preferences#slack-incoming-webhook-integration) sobre a integração de alertas com o Slack para ver nossas preferências de notificação.
+Você pode configurar um alerta de e-mail, um alerta de webhook ou ambos. Alertas de Webhook podem ser muito úteis para casos de uso, como enviar um alerta para plataformas externas, como um canal do Slack. Para um exemplo, veja nossa [documentação](https://www.braze.com/docs/user_guide/administrative/app_settings/company_settings/notification_preferences#slack-incoming-webhook-integration) sobre como integrar alertas com o Slack para nossas preferências de notificação.
 
-![Um e-mail será enviado para o e-mail selecionado quando os critérios do alerta forem atingidos.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
+![Um e-mail será enviado para o e-mail selecionado quando os critérios para o alerta forem atingidos.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
 
-### Carga útil da amostra {#payload}
+### Carga útil de exemplo {#payload}
 
-A seguir, um exemplo de carga útil para o corpo de um webhook de alerta de uso da API.
+O seguinte é uma carga útil de exemplo para o corpo de um alerta de uso da API via webhook.
 
 ```json
 {
@@ -96,22 +96,22 @@ A seguir, um exemplo de carga útil para o corpo de um webhook de alerta de uso 
 }
 ```
 
-### Exemplo de alertas
+### Exemplos de alertas
 
-Aqui estão algumas maneiras de definir suas configurações de alerta de uso da API para ser notificado nos seguintes cenários.
+Aqui estão algumas maneiras de configurar suas configurações de alerta de uso da API para ser notificado nas seguintes situações.
 
 {% tabs local %}
 {% tab api health %}
-Você pode configurar alertas para monitorar a integridade geral da sua API. Por exemplo, você pode configurar esses alertas quando os erros de API aumentarem drasticamente, como 20% em relação à hora anterior.
+Você pode configurar alertas para monitorar a integridade geral da sua API. Por exemplo, você pode configurar esses alertas quando os erros da API aumentarem drasticamente, como 20% em relação à hora anterior.
 
 | Endpoint | Chave de API | Código da resposta | Condição de limite | Volume de limite | Entre |
 | --- | --- | --- | --- | --- | --- |
-| Todos os endpoints | Todas as chaves de API | `4XX` e `5XX` | Aumento de 10% | 10 | 1 hora |
+| Todos os endpoints | Todas as chaves de API | `4XX` e `5XX` | Aumentado em 10% | 10 | 1 hora |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
 {% endtab %}
 
 {% tab endpoint rate limit %}
-Receba um alerta quando seu espaço de trabalho atingir o limite de frequência para o endpoint `/users/track`. Você também pode aplicar essa configuração a outros endpoints do Braze.
+Fique alerta quando seu espaço de trabalho atingir seu limite de frequência para o endpoint `/users/track`. Você também pode aplicar essa configuração para outros endpoints do Braze.
 
 | Endpoint | Chave de API | Código da resposta | Condição de limite | Volume de limite | Entre |
 | --- | --- | --- | --- | --- | --- |
@@ -120,7 +120,7 @@ Receba um alerta quando seu espaço de trabalho atingir o limite de frequência 
 {% endtab %}
 
 {% tab API-triggered campaigns %}
-Essa configuração de alerta o notifica quando ocorrem erros nas campanhas e Canvas disparados pela API, alguns dos quais podem ser de alta prioridade.
+Essa configuração de alerta notifica você quando ocorrem erros em campanhas acionadas pela API e canvases, algumas das quais podem ser de alta prioridade.
 
 | Endpoint | Chave de API | Código da resposta | Condição de limite | Volume de limite | Entre |
 | --- | --- | --- | --- | --- | --- |
@@ -129,7 +129,7 @@ Essa configuração de alerta o notifica quando ocorrem erros nas campanhas e Ca
 {% endtab %}
 
 {% tab partner integrations %}
-Use a seguinte configuração de alerta para ser alertado quando uma integração com parceiros parar de enviar dados para o Braze.
+Use a seguinte configuração de alerta para ser notificado quando uma integração com parceiros parar de enviar dados para o Braze.
 
 | Endpoint | Chave de API | Código da resposta | Condição de limite | Volume de limite | Entre |
 | --- | --- | --- | --- | --- | --- |
@@ -140,5 +140,5 @@ Use a seguinte configuração de alerta para ser alertado quando uma integraçã
 
 ## Considerações
 
-- Cada alerta ativo só enviará uma notificação por e-mail ou webhook uma vez a cada 8 horas. Isso serve para evitar o excesso de notificações de um único alerta. Se o seu alerta estiver notificando-o prematuramente, considere editar os critérios de alerta para que correspondam melhor ao seu caso de uso.
+- Cada alerta ativo enviará apenas um e-mail ou notificação de webhook uma vez a cada 8 horas. Isso é para evitar muitas notificações de um único alerta. Se seu alerta estiver notificando você prematuramente, considere editar os critérios do alerta para melhor corresponder ao seu caso de uso.
 - Você pode ter até 10 alertas por espaço de trabalho.

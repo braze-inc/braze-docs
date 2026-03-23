@@ -1,7 +1,7 @@
 ---
 nav_title: "GET: Integrationen auflisten"
 article_title: "GET: Listen-Integrationen"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 1
 alias: /api/cdi/get_integration_list/
 layout: api_page
@@ -81,8 +81,8 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
       "warehouse_type": (string) data warehouse type,
       "last_job_start_time": (string) timestamp of the last sync run in ISO 8601,
       "last_job_status": (string) status of the last sync run,
-      "next_scheduled_run": (string) timestamp of the next scheduled sync in ISO 8601,
-    },
+      "next_scheduled_run": (string) timestamp of the next scheduled sync in ISO 8601
+    }
   ],
   "message": "success"
 }
@@ -97,6 +97,6 @@ In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehle
 | `400 Invalid cursor` | Prüfen Sie, ob Ihre `cursor` gültig ist. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Weitere Statuscodes und zugehörige Nachrichten finden Sie unter [Schwerwiegende Fehler & Antworten]({{site.baseurl}}/api/errors/#fatal-errors).
+Weitere Statuscodes und zugehörige Fehlermeldungen finden Sie unter [„Fatal errors&responses“ (Antworten]({{site.baseurl}}/api/errors/#fatal-errors) auf schwerwiegende Fehler).
 
 {% endapi %}

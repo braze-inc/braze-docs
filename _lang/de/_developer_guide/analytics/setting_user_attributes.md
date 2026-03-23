@@ -1,6 +1,6 @@
 ---
 nav_title: "Nutzer:in-Attribute festlegen"
-article_title: "Setzen Sie Nutzer:innen-Attribute über das Braze SDK"
+article_title: Legen Sie Benutzerattribute über das Braze SDK fest.
 page_order: 1.2
 description: "Lernen Sie, wie Sie Nutzer:innen-Attribute mit dem Braze SDK festlegen können."
 ---
@@ -36,6 +36,10 @@ Für Wrapper-SDKs, die nicht aufgeführt sind, verwenden Sie stattdessen die ent
 
 {% sdktab unity %}
 {% multi_lang_include developer_guide/unity/analytics/setting_user_attributes.md %}
+{% endsdktab %}
+
+{% sdktab react native %}
+{% multi_lang_include developer_guide/react_native/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
 {% endsdktabs %}

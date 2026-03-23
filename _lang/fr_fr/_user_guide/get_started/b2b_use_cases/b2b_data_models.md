@@ -28,7 +28,7 @@ Il y a quatre objets principaux B2B dont vous avez besoin pour exécuter des cam
 
 Dans Braze, ces quatre objets sont combinés et réduits en deux objets : les profils utilisateurs et les objets métiers.
 
-| Braze objet B2B | Description | Objets B2B originaux  |
+| Objet B2B Braze | Description | Objets B2B originaux  |
 | --- | --- | --- |
 | Profils utilisateur | Ceux-ci mappent directement les pistes et les contacts dans votre système CRM de vente. Parce que les leads sont capturés par Braze, ils sont automatiquement créés en tant que leads dans votre système CRM de vente. Au fur et à mesure qu'ils sont convertis en contacts, les ID et les détails des contacts sont synchronisés avec Braze. |Prospects<br> Contacts |
 | Objets de gestion | Ceux-ci mappent tous les objets non-utilisateurs de votre système CRM de vente. Cela inclut vos objets spécifiques aux ventes, tels que les objets de compte et les objets d'opportunité. | Comptes<br> Opportunités |
@@ -96,7 +96,7 @@ Dans ce cas d'utilisation, Salesforce est l'exemple de système CRM. Vous pouvez
 
 ##### Exemple de tableau des champs de compte mappés
 
-![Tableau des comptes Salesforce avec les informations correspondantes, telles que l'adresse de facturation et le propriétaire du compte.]({% image_buster /assets/img/b2b/sf_accounts.png %})
+![Tableau des comptes Salesforce avec les informations correspondantes, telles que l'adresse de facturation et le titulaire du compte.]({% image_buster /assets/img/b2b/sf_accounts.png %})
 
 {% endsubtab %}
 {% subtab Opportunity catalog %}
@@ -144,7 +144,7 @@ Dans ce cas d'utilisation, Salesforce est l'exemple de système CRM. Vous pouvez
 
 ### Option 2 : Utiliser des sources connectées pour les comptes et les opportunités
 
-Les sources connectées sont des tables de données que vous hébergez dans votre propre entrepôt de données et qui sont interrogées par les [CDI Segment Extensions de Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Contrairement aux catalogues, au lieu de dupliquer vos objets commerciaux (comptes et opportunités) dans Braze, vous les conserverez dans votre entrepôt de données et utiliserez ce dernier comme source de vérité.
+Les sources connectées sont des tableaux de données hébergés par vos soins dans votre propre entrepôt de données et interrogés par [les extensions de segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) Braze [CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Contrairement aux catalogues, au lieu de dupliquer vos objets commerciaux (comptes et opportunités) dans Braze, vous les conserverez dans votre entrepôt de données et utiliserez ce dernier comme source de vérité.
 
 Pour configurer les sources connectées, reportez-vous à la section [Intégration des sources connectées]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources).
 

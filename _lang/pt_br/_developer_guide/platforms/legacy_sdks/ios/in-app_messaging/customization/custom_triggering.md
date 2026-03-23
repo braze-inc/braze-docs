@@ -1,6 +1,6 @@
 ---
 nav_title: Disparo personalizado
-article_title: Personalize o envio de mensagens no app para iOS
+article_title: Personalize o disparo de mensagens no app para iOS
 platform: iOS
 page_order: 7
 description: "Este artigo de referência cobre o acionamento de envio de mensagens personalizadas no app para seu aplicativo iOS."
@@ -54,11 +54,11 @@ Quando o push silencioso é recebido, um evento registrado pelo SDK "disparar me
 
 Crie uma campanha de push silenciosa que é acionada via o evento enviado pelo servidor. Para saber como criar uma campanha de push silenciosa, consulte [notificações por push silenciosas]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/silent_push_notifications/).
 
-![Uma campanha de mensagens no app com entrega baseada em ação que será entregue aos usuários que realizarem o evento personalizado "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
+![Uma campanha de mensagem no app baseada em ação que será entregue a usuários que realizarem o evento personalizado "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 
 A campanha de push precisa incluir extras de pares chave-valor, que indicam que esta campanha de push é enviada para registrar um evento personalizado do SDK. Este evento será usado para disparar a mensagem no app:
 
-![Uma campanha de mensagens no app com entrega baseada em ação que tem dois pares de valores-chave. "CAMPAIGN_NAME" definido como "Exemplo de nome de mensagem no app" e "IS_SERVER_EVENT" definido como "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
+![Uma campanha de mensagem no app baseada em ação que possui dois pares chave-valor. "CAMPAIGN_NAME" definido como "exemplo de nome de mensagem no app", e "IS_SERVER_EVENT" definido como "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 O código dentro do método `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` verifica a chave `IS_SERVER_EVENT` e registra um evento personalizado do SDK se estiver presente.
 
@@ -70,7 +70,7 @@ Crie sua campanha de mensagem no app visível para o usuário no dashboard da Br
 
 No exemplo a seguir, a mensagem no app específica a ser acionada foi configurada enviando a propriedade do evento como parte do push silencioso inicial.
 
-![Uma campanha de mensagens in-app com entrega baseada em ação que será entregue aos usuários que realizarem o evento personalizado "Disparo de mensagem in-app", em que "campaign_name" é igual a "Exemplo de nome de mensagem in-app".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
+![Uma campanha de mensagem no app baseada em ação que será entregue a usuários que realizarem o evento personalizado "disparo de mensagem no app" onde "campaign_name" é igual a "exemplo de nome de mensagem no app".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 Devido a uma push message ser usada para registrar um evento personalizado registrado pelo SDK, a Braze precisará armazenar um token por push para cada usuário para ativar essa solução. Para iOS e Android, a Braze só armazenará um token a partir do momento em que um usuário tiver recebido o prompt de push do sistema operacional. Antes disso, o usuário não estará acessível usando push, e a solução anterior não será possível.
 

@@ -9,16 +9,53 @@
 
 ## Ativação de mensagens no app
 
+{% tabs %}
+{% tab Flutter SDK 18.0.0+ %}
+
+O SDK Flutter da Braze configura automaticamente o apresentador padrão de mensagens no app tanto no Android quanto no iOS. As mensagens no app são exibidas e encaminhadas para a camada Dart sem configuração adicional.
+
+### Personalizando o apresentador de mensagens no app no iOS
+
+Para substituir o apresentador padrão de mensagens no app no iOS, use o closure `postInitialization` em `BrazePlugin.configure(_:postInitialization:)`. Seu apresentador personalizado deve chamar `BrazePlugin.processInAppMessage(message)` para encaminhar os dados da mensagem no app para a camada Dart.
+
+```swift
+import BrazeUI
+
+BrazePlugin.configure(
+  { configuration in
+    // Set non-API-key configurations here.
+  },
+  postInitialization: { braze in
+    let customPresenter = CustomInAppMessagePresenter()
+    braze.inAppMessagePresenter = customPresenter
+  }
+)
+```
+
+Na classe do apresentador personalizado, chame `BrazePlugin.processInAppMessage(message)` e `super.present(message: message)` para encaminhar os dados para o Dart e exibir a UI padrão.
+
+```swift
+class CustomInAppMessagePresenter: BrazeInAppMessageUI {
+  override func present(message: Braze.InAppMessage) {
+    BrazePlugin.processInAppMessage(message)
+    super.present(message: message)
+  }
+}
+```
+
+{% endtab %}
+{% tab Flutter SDK 17.1.0 and earlier %}
+
 {% alert note %}
 Esta etapa é apenas para iOS. A implementação padrão para mensagens no app já está configurada no Android.
 {% endalert %}
 
-Para configurar o apresentador padrão para mensagens no app no iOS, crie uma implementação do protocolo `BrazeInAppMessagePresenter` e atribua-a ao `inAppMessagePresenter` opcional na sua instância do Braze. Você também pode usar o apresentador padrão do Braze UI instanciando um objeto `BrazeInAppMessageUI`.
+Para configurar o apresentador padrão para mensagens no app no iOS, crie uma implementação do protocolo `BrazeInAppMessagePresenter` e atribua-o ao `inAppMessagePresenter` opcional na sua instância da Braze. Você também pode usar o apresentador padrão da Braze UI instanciando um objeto `BrazeInAppMessageUI`.
 
 Você deve importar a biblioteca `BrazeUI` para acessar a classe `BrazeInAppMessageUI`.
 
-{% tabs %}
-{% tab swift %}
+{% subtabs %}
+{% subtab swift %}
 
 ```swift
 import BrazeUI
@@ -31,7 +68,6 @@ override func application(
 
   let braze = BrazePlugin.initBraze(configuration)
 
-  // Initialize and assign the default `BrazeInAppMessageUI` class to the in-app message presenter.
   braze.inAppMessagePresenter = BrazeInAppMessageUI()
   AppDelegate.braze = braze
 
@@ -39,8 +75,8 @@ override func application(
 }
 ```
 
-{% endtab %}
-{% tab OBJECTIVE-C %}
+{% endsubtab %}
+{% subtab OBJECTIVE-C %}
 
 ```objc
 @import BrazeUI;
@@ -51,7 +87,6 @@ override func application(
 
   Braze *braze = [BrazePlugin initBraze:configuration];
 
-  // Initialize and assign the default `BrazeInAppMessageUI` class to the in-app message presenter.
   braze.inAppMessagePresenter = [[BrazeInAppMessageUI alloc] init];
   AppDelegate.braze = braze;
 
@@ -59,7 +94,11 @@ override func application(
   return YES;
 }
 ```
+
+{% endsubtab %}
+{% endsubtabs %}
+
 {% endtab %}
 {% endtabs %}
 
-Para personalizar ainda mais sua implementação, consulte [Registro de dados de mensagens no app]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter).
+Para saber mais sobre como acessar dados de mensagens no app, consulte [Registro de dados de mensagens no app]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter).

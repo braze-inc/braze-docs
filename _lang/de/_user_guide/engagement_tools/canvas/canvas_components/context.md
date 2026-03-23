@@ -5,77 +5,73 @@ alias: /context/
 page_order: 6
 page_type: reference
 toc_headers: "h2"
-description: "Dieser referenzierte Artikel beschreibt, wie Sie Kontext-Schritte in Ihrem Canvas erstellen und verwenden."
+description: "Dieser Referenzartikel beschreibt, wie Sie Kontext-Schritte in Ihrem Canvas erstellen und verwenden."
 tool: Canvas
 
 ---
 
 # Kontext
 
-> Mit Kontextschritten können Sie eine oder mehrere Variablen für einen Nutzer:innen erstellen und aktualisieren, während er sich durch ein Canvas bewegt. Wenn Sie zum Beispiel ein Canvas haben, das saisonale Rabatte verwaltet, können Sie eine Kontextvariable verwenden, um jedes Mal, wenn ein Nutzer:in das Canvas eintritt, einen anderen Rabattcode zu speichern.
-
-{% alert important %}
-Context Steps befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Braze-Konto Manager:in, wenn Sie an der Teilnahme an diesem frühen Zugang interessiert sind.<br><br>Beachten Sie, dass das Opt-in für den frühen Zugriff auf den Canvas-Kontext-Schritt die Handhabung von Zeitstempeln für alle Ihre Canvase aktualisiert. Mehr dazu erfahren Sie unter [Standardisierung der Zeitzonenkonsistenz](#time-zone-consistency-standardization).
-{% endalert %}
+> Mit Kontext-Schritten können Sie eine oder mehrere Variablen für Nutzer:innen erstellen und aktualisieren, während diese sich durch ein Canvas bewegen. Wenn Sie zum Beispiel ein Canvas haben, das saisonale Rabatte verwaltet, können Sie eine Kontextvariable verwenden, um jedes Mal einen anderen Rabattcode zu speichern, wenn Nutzer:innen das Canvas betreten.
 
 ## Funktionsweise
 
-![Ein Context-Schritt als erster Schritt eines Canvas.]({% image_buster /assets/img/context_step3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Ein Kontext-Schritt als erster Schritt eines Canvas.]({% image_buster /assets/img/context_step3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-Mit Kontextschritten können Sie temporäre Daten während der Reise eines Nutzers:innen durch einen bestimmten Canvas erstellen und verwenden. Diese Daten existieren nur innerhalb dieser Canvas-Reise und bleiben nicht über verschiedene Canvase oder außerhalb der Sitzung bestehen.
+Mit Kontext-Schritten können Sie temporäre Daten erstellen und verwenden, während Nutzer:innen eine bestimmte Canvas-Journey durchlaufen. Diese Daten existieren nur innerhalb dieser Canvas-Journey und bleiben nicht über verschiedene Canvase hinweg oder außerhalb der Sitzung bestehen.
 
-Kontextvariablen existieren nur für diese spezielle Canvas-Reise. Sie verändern das Profil des Nutzers:in nicht dauerhaft und erscheinen nicht in anderen Canvase. Das macht sie ideal für temporäre Informationen, die nur für eine bestimmte Kampagne oder einen bestimmten Arbeitsablauf relevant sind.
+Kontextvariablen existieren nur für diese spezifische Canvas-Journey. Sie ändern das Profil der Nutzer:innen nicht dauerhaft und werden nicht in anderen Canvasen angezeigt. Dadurch eignen sie sich ideal für temporäre Informationen, die nur für eine bestimmte Kampagne oder einen bestimmten Arbeitsablauf relevant sind.
 
 {% alert tip %}
-Eine vollständige Referenz zu Kontextvariablen, einschließlich Datentypen, Verwendung und bewährter Verfahren, finden Sie in der [Referenz zu Kontextvariablen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
+Eine vollständige Referenz zu Kontextvariablen, einschließlich Datentypen, Verwendung und Best Practices, finden Sie in der [Referenz zu Kontextvariablen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 {% endalert %}
 
-Innerhalb eines Kontextschritts können Sie bis zu 10 Kontextvariablen definieren oder aktualisieren. Diese Variablen können verwendet werden, um Verzögerungen zu personalisieren, Nutzer:innen dynamisch zu segmentieren und das Messaging im gesamten Canvas anzureichern. Sie könnten zum Beispiel eine Kontextvariable für die geplante Flugzeit eines Nutzers:innen erstellen und diese dann verwenden, um personalisierte Verspätungen festzulegen und Erinnerungen zu versenden.
+Innerhalb eines Kontext-Schritts können Sie bis zu 10 Kontextvariablen definieren oder aktualisieren. Diese Variablen können verwendet werden, um Verzögerungen zu personalisieren, Nutzer:innen dynamisch zu segmentieren und das Messaging im gesamten Canvas zu bereichern. Beispielsweise könnten Sie eine Kontextvariable für die geplante Flugzeit von Nutzer:innen erstellen und diese dann verwenden, um personalisierte Verzögerungen festzulegen und Erinnerungen zu versenden.
 
 Sie können Kontextvariablen auf zwei Arten setzen:
 
-- **Am Eingang von Canvas:** Daten aus dem Ereignis oder dem API-Trigger können automatisch Kontextvariablen auffüllen.
-- **In einem Context-Schritt:** Definieren oder aktualisieren Sie Kontextvariablen manuell, indem Sie einen Kontextschritt hinzufügen.
+- **Beim Canvas-Eintritt:** Daten aus dem Ereignis oder dem API-Trigger können automatisch Kontextvariablen befüllen.
+- **In einem Kontext-Schritt:** Definieren oder aktualisieren Sie Kontextvariablen manuell, indem Sie einen Kontext-Schritt hinzufügen.
 
-Jede Kontextvariable benötigt einen Namen, einen Datentyp und einen Wert (der mit Liquid oder dem Tool Personalisierung hinzufügen festgelegt wird). Wenn sie definiert sind, können Sie mit Liquid im gesamten Canvas auf Kontextvariablen referenzieren, z. B. {% raw %}`{{context.${flight_time}}}`{% endraw %}.
+Jede Kontextvariable erfordert einen Namen, einen Datentyp und einen Wert (festgelegt mit Liquid oder dem Tool „Personalisierung hinzufügen"). Nach der Definition können Sie Kontextvariablen im gesamten Canvas mithilfe von Liquid referenzieren, beispielsweise {% raw %}`{{context.${flight_time}}}`{% endraw %}. Im Feld **Name der Kontextvariablen** können Sie auch den Namen der Kontextvariablen eingeben oder ihn aus dem Dropdown im Schritt-Editor auswählen. Weitere Details finden Sie in der [Referenz zu Kontextvariablen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
-Jeder Canvas-Eingang definiert die Kontextvariablen auf der Grundlage der neuesten Daten und der Canvas-Einstellungen neu, was es Nutzern:innen erlaubt, mehrere aktive Reisen mit eigenem Kontext zu haben. Wenn eine Kund:in beispielsweise zwei Flüge ansteht, hat sie zwei verschiedene Reisezustände, die gleichzeitig ablaufen - jeder mit seinen eigenen flugspezifischen Kontextvariablen wie Abflugzeit und Ziel. So ist es zulässig, personalisierte Erinnerungen an den 14-Uhr-Flug nach New York zu senden und gleichzeitig verschiedene Updates für den morgigen 8-Uhr-Flug nach Los Angeles zu verschicken, so dass jede Nachricht für die jeweilige Buchung relevant bleibt.
+Jeder Canvas-Eintritt definiert Kontextvariablen auf Grundlage der neuesten Eintrittsdaten und der Canvas-Einstellungen neu, sodass Nutzer:innen mehrere aktive Journeys mit eigenem Kontext haben können. Wenn Kund:innen beispielsweise zwei bevorstehende Flüge haben, gibt es zwei separate Journey-Zustände, die gleichzeitig ablaufen – jeder mit seinen eigenen flugspezifischen Kontextvariablen wie Abflugzeit und Ziel. Auf diese Weise können Sie personalisierte Erinnerungen für den Flug um 14 Uhr nach New York versenden und gleichzeitig andere Updates für den Flug um 8 Uhr nach Los Angeles am nächsten Tag bereitstellen, sodass jede Nachricht für die jeweilige Buchung relevant bleibt.
 
-### Nutzer:in und Stapelverarbeitung
+### Verarbeitung und Stapelverarbeitung von Nutzer:innen
 
-Kontextschritte verarbeiten Nutzer:innen in Stapeln, um die Performance zu optimieren. Wenn Nutzer:innen einen Kontextschritt eingeben, verarbeitet Braze sie standardmäßig in Stapeln von 1.000 Nutzer:innen. Diese Stapel werden parallel verarbeitet, aber innerhalb jedes Stapels werden die Nutzer:innen nacheinander verarbeitet.
+Kontext-Schritte verarbeiten Nutzer:innen in Stapeln, um die Performance zu optimieren. Wenn Nutzer:innen einen Kontext-Schritt betreten, verarbeitet Braze diese standardmäßig in Gruppen von 1.000 Nutzer:innen. Diese Stapel werden parallel verarbeitet, jedoch werden die Nutzer:innen innerhalb jedes Stapels sequenziell verarbeitet.
 
 Dies bedeutet:
 
-**Beispiel**: Wenn 3.500 Nutzer:innen einen Context-Schritt mit Connected-Content eingeben, dauert das 650 ms pro Nutzer:in:
-- Braze erstellt 4 Stapel von Nutzer:innen (1.000, 1.000, 1.000 und 500 Nutzer:innen in diesem Beispiel).
-- Jeder Stapel verarbeitet Nutzer:innen nacheinander, so dass ein Stapel von 1.000 Nutzer:innen etwa 10,8 Minuten (650 Sekunden; 1.000 × 650ms) dauert.
-- Die Batches werden zu unterschiedlichen Zeiten abgeschlossen, so dass die Nutzer:innen nach und nach in den nächsten Schritt übergehen, sobald ihr Batch abgeschlossen ist.
-- Die ersten Nutzer:innen erreichen den nächsten Schritt möglicherweise mehrere Minuten vor den letzten Nutzer:innen, je nach Stapelgröße und Connected-Content-Antwortzeiten.
+**Beispiel**: Wenn 3.500 Nutzer:innen einen Kontext-Schritt mit Connected-Content betreten, der pro Nutzer:in 650 ms dauert:
+- Braze erstellt 4 Gruppen von Nutzer:innen (in diesem Beispiel 1.000, 1.000, 1.000 und 500 Nutzer:innen).
+- Jeder Stapel verarbeitet die Nutzer:innen nacheinander, sodass ein Stapel von 1.000 Nutzer:innen etwa 10,8 Minuten (650 Sekunden; 1.000 × 650 ms) benötigt.
+- Die Stapel werden zu unterschiedlichen Zeitpunkten abgeschlossen, sodass die Nutzer:innen nach Abschluss ihres Stapels zum nächsten Schritt übergehen.
+- Die ersten Nutzer:innen können den nächsten Schritt einige Minuten vor den letzten Nutzer:innen erreichen, abhängig von der Stapelgröße und den Antwortzeiten von Connected-Content.
 
-Ohne Connected-Content laufen die Kontextschritte viel schneller ab, da keine externen API-Aufrufe abgewartet werden müssen.
+Ohne Connected-Content werden Kontext-Schritte wesentlich schneller verarbeitet, da keine externen API-Aufrufe abgewartet werden müssen.
 
 ## Überlegungen
 
-- Sie können bis zu 10 Kontextvariablen pro Context-Schritt definieren.
-- Jede Variable benötigt einen eindeutigen Namen (nur Buchstaben, Zahlen, Unterstriche, bis zu 100 Zeichen).
+- Sie können bis zu 10 Kontextvariablen pro Kontext-Schritt definieren.
+- Jede Variable benötigt einen eindeutigen Namen (nur Buchstaben, Zahlen und Unterstriche, maximal 100 Zeichen).
 - Die Gesamtgröße aller Variablen in einem Schritt darf 50 KB nicht überschreiten.
-- Variablen, die mit Hilfe von API-Triggern übergeben werden, teilen sich denselben Namensraum wie die in Kontextschritten erstellten Variablen; die Neudefinition einer Variablen in einem Kontextschritt setzt den API-Wert außer Kraft.
+- Variablen, die über API-Trigger übergeben werden, verwenden denselben Namespace wie die in Kontext-Schritten erstellten Variablen. Wenn eine Variable in einem Kontext-Schritt neu definiert wird, überschreibt dies den API-Wert.
 
-Weitere Einzelheiten und die fortgeschrittene Verwendung finden Sie unter [Kontextvariablen referenzieren]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
+Weitere Informationen und erweiterte Anwendungsmöglichkeiten finden Sie in der [Referenz zu Kontextvariablen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
-## Erstellen eines Kontextschritts
+## Erstellen eines Kontext-Schritts
 
 {% multi_lang_include alerts/tip_alerts.md alert='Reference properties from triggering event' %}
 
-### Schritt 1: Einen Schritt hinzufügen
+### 1. Schritt: Einen Schritt hinzufügen
 
 Fügen Sie Ihrem Canvas einen Schritt hinzu, und ziehen Sie die Komponente per Drag-and-Drop aus der Seitenleiste, oder wählen Sie die Plus-Schaltfläche <i class="fas fa-plus-circle"></i> und dann **Kontext**.
 
-### Schritt 2: Definieren Sie die Variablen
+### 2. Schritt: Variablen definieren
 
 {% alert note %}
-Sie können bis zu 10 Kontextvariablen für jeden Context-Schritt definieren.
+Sie können bis zu 10 Kontextvariablen für jeden Kontext-Schritt definieren.
 {% endalert %}
 
 So definieren Sie eine Kontextvariable:
@@ -84,36 +80,36 @@ So definieren Sie eine Kontextvariable:
 2. Wählen Sie einen [Datentyp]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#data-types) aus.
 3. Schreiben Sie einen Liquid-Ausdruck manuell oder verwenden Sie **Personalisierung hinzufügen**, um ein Liquid-Snippet aus bereits vorhandenen Attributen zu erstellen.
 4. Wählen Sie **Vorschau**, um den Wert Ihrer Kontextvariablen zu überprüfen.
-5. (Optional) Um weitere Variablen hinzuzufügen, wählen Sie **Kontextvariable hinzufügen** und wiederholen Sie die Schritte 1-4.
+5. (Optional) Um weitere Variablen hinzuzufügen, wählen Sie **Kontextvariable hinzufügen** und wiederholen Sie die Schritte 1–4.
 6. Wenn Sie fertig sind, wählen Sie **Fertig**.
 
-Jetzt können Sie Ihre Kontextvariable überall dort verwenden, wo Sie Liquid einsetzen, z.B. in den Schritten Nachrichten und Nutzer:innen Update, indem Sie **Personalisierung hinzufügen** auswählen. Eine vollständige Beschreibung finden Sie unter [Kontextvariablen referenzieren]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
+Jetzt können Sie Ihre Kontextvariable überall dort verwenden, wo Sie Liquid einsetzen, z. B. in den Schritten „Nachricht" und „Nutzer:innen-Update", indem Sie **Personalisierung hinzufügen** auswählen. Im Feld **Name der Kontextvariablen** können Sie auch den Namen der Kontextvariablen eingeben oder ihn aus dem Dropdown im Schritt-Editor auswählen. Eine vollständige Anleitung finden Sie in der [Referenz zu Kontextvariablen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
 {% alert important %}
-Wenn Sie auf Kontextvariablen verweisen, verwenden Sie immer das Format {% raw %}`{{context.${variable_name}}}`{% endraw %}.
+Bei der Referenzierung von Kontextvariablen ist stets das Format {% raw %}`{{context.${variable_name}}}`{% endraw %} zu verwenden.
 {% endalert %}
 
-### Kontextabhängige Filter
+### Filter für Kontextvariablen
 
-Sie können in [Zielgruppen-Pfaden]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) und [Decision-Split-Schritten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) Filter mit Hilfe von Kontextvariablen erstellen. Für die Einrichtung des Filters, die Vergleichslogik und die vorgebrachten Beispiele lesen Sie bitte die [Referenz der Kontextvariablen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#context-variable-filters).
+Sie können Filter mithilfe von Kontextvariablen in den Schritten [Zielgruppenpfade]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) und [Decision-Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) erstellen. Informationen zur Filtereinrichtung, Vergleichslogik und fortgeschrittenen Beispielen finden Sie in der [Referenz zu Kontextvariablen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#context-variable-filters).
 
 {% multi_lang_include alerts/important_alerts.md alert='time filter types' %}
 
-## Vorschau der Nutzer:innen Pfade
+## Vorschau der Nutzerpfade
 
-Wir empfehlen Ihnen, [Ihre Nutzer:innen-Pfade]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) zu testen und [eine Vorschau zu erstellen]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths), um sicherzustellen, dass Ihre Nachrichten an die richtige Zielgruppe gesendet und die Kontextvariablen entsprechend den erwarteten Ergebnissen ausgewertet werden.
+Wir empfehlen, Ihre [Nutzerpfade]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) zu testen und in der Vorschau anzuzeigen, um sicherzustellen, dass Ihre Nachrichten an die richtige Zielgruppe gesendet werden und die Kontextvariablen zu den erwarteten Ergebnissen führen.
 
 {% alert note %}
-Wenn Sie eine Vorschau Ihres Canvas im Bereich **Vorschau & Testversand** des Editors anzeigen, wird der Zeitstempel in der Vorschau der Testnachricht **nicht** auf UTC standardisiert, da dieses Panel Vorschauen als Strings generiert. Wenn ein Canvas so eingerichtet ist, dass er ein `time` Objekt akzeptiert, bedeutet dies, dass die Vorschau der Nachricht nicht genau das zeigt, was passiert, wenn das Canvas live ist. Um Ihr Canvas möglichst genau zu testen, empfehlen wir stattdessen eine Vorschau der Nutzer:innen.
+Wenn Sie Ihr Canvas im Abschnitt **Vorschau & Testversand** des Editors in der Vorschau anzeigen, wird der Zeitstempel in der Testnachrichtenvorschau **nicht** auf UTC standardisiert, da dieses Panel Vorschauen als Strings generiert. Das bedeutet: Wenn ein Canvas so eingerichtet ist, dass es ein `time`-Objekt akzeptiert, gibt die Nachrichtenvorschau nicht genau wieder, was passiert, wenn das Canvas live ist. Um Ihr Canvas möglichst genau zu testen, empfehlen wir Ihnen, stattdessen eine Vorschau der Nutzerpfade anzuzeigen.
 {% endalert %}
 
-Achten Sie auf häufige Szenarien, die ungültige Kontextvariablen erzeugen. Bei der Vorschau Ihres Nutzer-Pfads können Sie die Ergebnisse der personalisierten Verzögerungsschritte unter Verwendung von Kontextvariablen sowie alle Zielgruppen- oder Entscheidungsschrittvergleiche, die Nutzer:innen mit Kontextvariablen abgleichen, einsehen.
+Achten Sie auf alle gängigen Szenarien, die zu ungültigen Kontextvariablen führen können. Bei der Vorschau Ihres Nutzerpfads können Sie die Ergebnisse personalisierter Verzögerungsschritte mithilfe von Kontextvariablen sowie alle Zielgruppen- oder Entscheidungsschrittvergleiche anzeigen, die Nutzer:innen mit Kontextvariablen abgleichen.
 
-Wenn die Kontextvariable gültig ist, können Sie die Variable in Ihrem gesamten Canvas referenzieren. Wenn die Kontextvariable jedoch nicht korrekt erstellt wurde, werden auch zukünftige Schritte in Ihrem Canvas nicht korrekt ausgeführt. Wenn Sie z.B. einen Kontextschritt erstellen, um Nutzern:innen einen Termin zuzuweisen, und den Wert des Termins auf ein vergangenes Datum setzen, wird die Erinnerungs-E-Mail in Ihrem Schritt Nachricht nicht gesendet.
+Wenn die Kontextvariable gültig ist, können Sie die Variable in Ihrem gesamten Canvas referenzieren. Wenn die Kontextvariable jedoch nicht korrekt erstellt wurde, werden auch die nachfolgenden Canvas-Schritte nicht ordnungsgemäß ausgeführt. Wenn Sie beispielsweise einen Kontext-Schritt erstellen, um Nutzer:innen einen Termin zuzuweisen, und den Wert des Termins auf ein Datum in der Vergangenheit festlegen, wird die Erinnerungs-E-Mail in Ihrem Nachrichten-Schritt nicht versendet.
 
 ## Connected-Content-Strings in JSON umwandeln
 
-Bei einem [Connected-Content-Aufruf]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) in einem Context-Schritt wird das vom Aufruf zurückgegebene JSON aus Gründen der Konsistenz und Fehlervermeidung als String-Datentyp ausgewertet. Wenn Sie diesen String in JSON umwandeln möchten, konvertieren Sie ihn mit `as_json_string`. Zum Beispiel:
+Bei einem [Connected-Content-Aufruf]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) in einem Kontext-Schritt wird das vom Aufruf zurückgegebene JSON aus Gründen der Konsistenz und Fehlervermeidung als String-Datentyp ausgewertet. Wenn Sie diesen String in JSON umwandeln möchten, verwenden Sie `as_json_string`. Zum Beispiel:
 
 {%raw%}
 ```liquid
@@ -122,88 +118,83 @@ Bei einem [Connected-Content-Aufruf]({{site.baseurl}}/user_guide/personalization
 ```
 {%endraw%}
 
-## Fehlersuche
+## Fehlerbehebung
 
 ### Ungültige Kontextvariablen
 
 Eine Kontextvariable wird als ungültig betrachtet, wenn:
 
-- Ein Aufruf eines eingebetteten Connected-Content schlägt fehl.
-- Der Liquid-Ausdruck gibt zur Laufzeit einen Wert zurück, der nicht mit dem Datentyp übereinstimmt oder leer ist (null).
+- Ein Aufruf eines eingebetteten Connected-Content fehlschlägt.
+- Der Liquid-Ausdruck zur Laufzeit einen Wert zurückgibt, der nicht mit dem Datentyp übereinstimmt oder leer ist (null).
 
-Wenn zum Beispiel der Datentyp der Kontextvariablen **Number** ist, der Liquid-Ausdruck aber einen String zurückgibt, ist er ungültig.
+Wenn zum Beispiel der Datentyp der Kontextvariablen **Number** ist, der Liquid-Ausdruck aber einen String zurückgibt, ist die Variable ungültig.
 
 Unter diesen Umständen:
-- Der Nutzer:in bringt den nächsten Schritt voran.
-- Die Analytics des Canvas-Schritts zählen dies als _Nicht aktualisiert_.
+- Werden die Nutzer:innen zum nächsten Schritt weitergeleitet.
+- Zählt die Canvas-Schritt-Analytics dies als _Nicht aktualisiert_.
 
 Überwachen Sie bei der Fehlerbehebung die Metrik _Nicht aktualisiert_, um zu prüfen, ob Ihre Kontextvariable korrekt aktualisiert wird. Wenn die Kontextvariable ungültig ist, können Ihre Nutzer:innen nach dem Kontext-Schritt in Ihrem Canvas weitermachen, sich aber möglicherweise nicht für spätere Schritte qualifizieren.
 
-Unter [Datentypen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#data-types) finden Sie die Beispiel-Setups für jeden Datentyp.
+Die Beispiele für die Konfiguration der einzelnen Datentypen finden Sie unter [Datentypen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#data-types).
 
 ### Verzögerungen beim Senden mit Connected-Content
 
-Alle Nutzer:innen eines Stapels werden verarbeitet, bevor sie einen Fortschritt machen. Nach Abschluss der Stapelverarbeitung gehen erfolgreiche Nutzer:innen zum nächsten Schritt über, während fehlgeschlagene Nutzer:innen separat erneut versucht werden. Erfolgreiche Nutzer:innen warten nicht auf erfolgreiche Wiederholungsversuche, bevor sie vorwärts gebracht werden.
+Alle Nutzer:innen in einem Stapel werden verarbeitet, bevor Nutzer:innen weitergeführt werden. Nach Abschluss der Stapelverarbeitung werden erfolgreiche Nutzer:innen zum nächsten Schritt weitergeleitet, während fehlgeschlagene Nutzer:innen separat erneut verarbeitet werden – erfolgreiche Nutzer:innen warten nicht auf erfolgreiche Wiederholungsversuche, bevor sie weitergeführt werden.
 
-**Verhalten bei Wiederholung**: Context-Schritte (und alle Canvas-Schritte) verwenden Canvas-spezifische Wiederholungsmechanismen und nicht das standardmäßige Wiederholungsverhalten von Connected-Content. Wenn ein Connected-Content-Aufruf fehlschlägt, wiederholt Braze den Schritt etwa 13 Mal mit exponentiellem Backoff. Wenn alle Wiederholungsversuche fehlschlagen, verlässt der Nutzer:innen den Canvas.
+**Wiederholungsverhalten**: Kontext-Schritte (und alle Canvas-Schritte) verwenden Canvas-spezifische Wiederholungsmechanismen und nicht das standardmäßige Wiederholungsverhalten von Connected-Content. Sollte ein Connected-Content-Aufruf fehlschlagen, wiederholt Braze den Schritt etwa 13 Mal mit exponentiellem Backoff. Sollten alle Wiederholungsversuche fehlschlagen, verlassen die Nutzer:innen das Canvas.
 
 {% alert note %}
-Der Tag `:retry`, der in standardmäßigen Connected-Content verwendet wird, gilt nicht für Connected-Content-Aufrufe, die innerhalb von Canvas-Schritten erfolgen. Canvas-Schritte haben ihre eigene Wiederholungslogik, die für Canvas-Workflows optimiert ist.
+Der `:retry`-Tag, der in Standard-Connected-Content verwendet wird, gilt nicht für Connected-Content-Aufrufe innerhalb von Canvas-Schritten. Canvas-Schritte verfügen über eine eigene Wiederholungslogik, die für Canvas-Workflows optimiert ist.
 {% endalert %}
 
-**Bearbeitungszeit**: Die Zeit, die benötigt wird, um alle Nutzer:innen durch einen Kontextschritt zu führen, hängt ab von:
+**Bearbeitungszeit**: Die Zeit, die benötigt wird, um alle Nutzer:innen durch einen Kontext-Schritt zu verarbeiten, hängt von folgenden Faktoren ab:
 - Die Anzahl der Nutzer:innen, die den Schritt betreten
-- Ob Connected-Content verwendet wird (und seine Reaktionszeit)
-- Die Stapelgröße (Standard 1.000 Nutzer:innen pro Stapel)
+- Ob Connected-Content verwendet wird (und dessen Antwortzeit)
+- Die Stapelgröße (Standardwert: 1.000 Nutzer:innen pro Stapel)
 
-Wenn Ihr Connected-Content Endpunkt Rate-Limits hat, sollten Sie bedenken, dass Context-Steps die Nutzer:innen innerhalb jedes Stapels nacheinander verarbeiten, wodurch Rate-Limits auf natürliche Weise eingehalten werden können. Mehrere Stapel werden jedoch parallel verarbeitet. Stellen Sie also sicher, dass Ihr Endpunkt Anfragen aus mehreren Stapeln gleichzeitig bearbeiten kann.
+Wenn Ihr Connected-Content-Endpunkt Rate-Limits aufweist, beachten Sie, dass Kontext-Schritte Nutzer:innen innerhalb jedes Stapels sequenziell verarbeiten, was dazu beiträgt, Rate-Limits auf natürliche Weise einzuhalten. Da jedoch mehrere Stapel parallel verarbeitet werden, stellen Sie sicher, dass Ihr Endpunkt gleichzeitige Anfragen von mehreren Stapeln verarbeiten kann.
 
 ## Standardisierung der Zeitzonenkonsistenz
 
-Während die meisten Event-Eigenschaften, die den Typ Zeitstempel verwenden, in Canvas bereits in UTC vorliegen, gibt es einige Ausnahmen. Mit der Hinzufügung von Canvas Context sind alle Standard Zeitstempel Event-Eigenschaften in aktionsbasierten Canvase in UTC. Diese Änderung ist Teil umfassenderer Bemühungen, die Bearbeitung von Canvas-Schritten und Nachrichten berechenbarer und konsistenter zu gestalten. Beachten Sie, dass sich diese Änderung auf alle aktionsbasierten Canvase auswirkt, unabhängig davon, ob das jeweilige Canvas einen Kontext-Schritt verwendet oder nicht.
+Während die meisten Event-Eigenschaften mit dem Zeitstempeltyp in Canvas bereits in UTC vorliegen, gibt es einige Ausnahmen. Mit der Einführung von Canvas Context werden alle Standard-Zeitstempel-Event-Eigenschaften in aktionsbasierten Canvasen in UTC angegeben. Diese Änderung ist Teil einer umfassenderen Maßnahme, um eine vorhersehbarere und konsistentere Erfahrung bei der Bearbeitung von Canvas-Schritten und -Nachrichten zu gewährleisten. Bitte beachten Sie, dass diese Änderung alle aktionsbasierten Canvase betrifft, unabhängig davon, ob das jeweilige Canvas einen Kontext-Schritt verwendet oder nicht.
 
 {% alert important %}
-In jedem Fall empfehlen wir dringend die Verwendung von [Liquid time_zone Filtern]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know), damit die Zeitstempel in der gewünschten Zeitzone dargestellt werden. Als Beispiel können Sie auf diese [häufig gestellte Frage](#faq-example) referenzieren.
+Unter allen Umständen empfehlen wir dringend, [Liquid-`time_zone`-Filter]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) für Zeitstempel zu verwenden, die in der gewünschten Zeitzone dargestellt werden sollen. Ein Beispiel finden Sie in dieser [häufig gestellten Frage](#faq-example).
 {% endalert %}
 
 ## Häufig gestellte Fragen
 
-### Was ändert sich, wenn Canvas Context allgemein verfügbar wird?
+### Was hat sich geändert, seit Canvas Context allgemein verfügbar ist?
 
-Wenn Canvas Context allgemein verfügbar wird, gelten die folgenden Details:
+Da Canvas Context nun allgemein verfügbar ist, gelten die folgenden Details:
 
-- Alle Zeitstempel vom [Typ datetime]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) aus [Event-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in aktionsbasierten Canvase sind in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). 
-- Diese Änderung wirkt sich auf alle aktionsbasierten Canvase aus, unabhängig davon, ob der jeweilige Canvas einen Kontext-Schritt verwendet oder nicht.
+- Alle Zeitstempel mit einem [Datums-/Zeittyp]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) aus [Trigger-Event-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in aktionsbasierten Canvasen sind in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) angegeben.
+- Diese Änderung betrifft alle aktionsbasierten Canvase, unabhängig davon, ob das jeweilige Canvas einen Kontext-Schritt verwendet oder nicht.
 
 #### Was ist der Grund für diese Änderung?
 
-Diese Änderung ist Teil umfassenderer Bemühungen, die Bearbeitung von Canvas-Schritten und Nachrichten berechenbarer und konsistenter zu gestalten.
-
-#### Wann tritt diese Änderung in Kraft?
-
-- Wenn Sie am Canvas Context Frühzugang teilnehmen, wurde diese Änderung bereits vorgenommen. 
-- Wenn Sie nicht am frühen Zugang zu Canvas Context teilnehmen, gilt diese Änderung, wenn Sie dem frühen Zugang beitreten oder wenn Canvas Context allgemein verfügbar wird.
+Diese Änderung ist Teil einer umfassenderen Maßnahme, um eine vorhersehbarere und konsistentere Erfahrung bei der Bearbeitung von Canvas-Schritten und -Nachrichten zu schaffen.
 
 #### Sind API-getriggerte oder geplante Canvase von dieser Änderung betroffen?
 
 Nein.
 
-#### Wirkt sich diese Änderung auf die Eigenschaften von Canvas-Eingängen aus?
+#### Hat diese Änderung Auswirkungen auf die Canvas-Eingangs-Eigenschaften?
 
-Ja, dies wirkt sich auf `canvas_entry_properties` aus, wenn die `canvas_entry_property` in einem aktionsbasierten Canvas verwendet wird und die Eigenschaft `time` ist. Wir empfehlen in jedem Fall die Verwendung von Liquid `time_zone` Filtern, damit die Zeitstempel in der gewünschten Zeitzone dargestellt werden.
+Ja, dies hat Auswirkungen auf `canvas_entry_properties`, wenn `canvas_entry_property` in einem aktionsbasierten Canvas verwendet wird und der Eigenschaftstyp `time` ist. Unter allen Umständen empfehlen wir die Verwendung von Liquid-`time_zone`-Filtern, damit Zeitstempel in der gewünschten Zeitzone dargestellt werden.
 
-Hier ist ein Beispiel dafür, wie Sie dies tun können:
+Hier ist ein Beispiel, wie Sie dies umsetzen können:
 
-| Liquid im Schritt Nachrichten | Ausgabe | Ist das die richtige Art, Zeitzonen in Liquid darzustellen? |
+| Liquid im Nachrichten-Schritt | Ausgabe | Ist dies die korrekte Methode, um Zeitzonen in Liquid darzustellen? |
 |---|---|---|
-| {% raw %}```{{canvas_entry_properties.${timestamp_property}}}```{% endraw %} | `2025-08-05T08:15:30:250-0800` | Kein:e |
-| {% raw %}```{{canvas_entry_properties.${timestamp_property} | date: "%Y-%m-%d %l:%M %p"}}```{% endraw %} | `2025-08-05 4:15pm` | Kein:e
+| {% raw %}```{{canvas_entry_properties.${timestamp_property}}}```{% endraw %} | `2025-08-05T08:15:30:250-0800` | Nein |
+| {% raw %}```{{canvas_entry_properties.${timestamp_property} | date: "%Y-%m-%d %l:%M %p"}}```{% endraw %} | `2025-08-05 4:15pm` | Nein
 | {% raw %}```{{canvas_entry_properties.${timestamp_property} | time_zone: "America/Los_Angeles" | date: "%Y-%m-%d %l:%M %p"}}```{% endraw %} | `2025-08-05 8:15am` | Ja |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 #### Was ist ein praktisches Beispiel dafür, wie sich das neue Zeitstempelverhalten auf meine Nachrichten auswirken könnte? {#faq-example}
 
-Nehmen wir an, wir haben ein aktionsbasiertes Canvas, das in einem Messaging-Schritt den folgenden Inhalt hat:
+Angenommen, wir haben ein aktionsbasiertes Canvas, das in einem Nachrichten-Schritt den folgenden Inhalt aufweist:
 
 {% raw %}
 ```
@@ -211,15 +202,15 @@ Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} 
 ```
 {% endraw %}
 
-Das Ergebnis ist die folgende Nachricht: 
+Dies führt zu folgender Nachricht: 
 
 ```
 Your appointment is scheduled for 2025-08-05 4:15pm, we’ll see you then!
 ```
 
-Da in Liquid keine Zeitzone angegeben ist, ist der Zeitstempel hier in UTC. 
+Da mit Liquid keine Zeitzone angegeben wird, ist der Zeitstempel hier in UTC angegeben. 
 
-Um eine Zeitzone eindeutig anzugeben, können wir Liquid `time_zone` Filter wie diesen verwenden: 
+Um eine Zeitzone eindeutig anzugeben, können wir Liquid-`time_zone`-Filter wie folgt verwenden: 
 
 {% raw %}
 ```
@@ -227,15 +218,15 @@ Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} 
 ```
 {% endraw %}
 
-Das Ergebnis ist die folgende Nachricht: 
+Dies führt zu folgender Nachricht: 
 
 ```
 Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!
 ```
 
-Da die Zeitzone Amerika/Los Angeles mit Liquid angegeben wird, ist der Zeitstempel hier in PST.
+Da die Zeitzone „America/Los_Angeles" mit Liquid angegeben wird, ist der Zeitstempel hier in PST angegeben.
 
-Die bevorzugte Zeitzone kann auch in der Nutzlast der Event-Eigenschaften gesendet und in der Liquid-Logik verwendet werden:
+Die bevorzugte Zeitzone kann auch in der Event-Eigenschaften-Payload übermittelt und in der Liquid-Logik verwendet werden:
 
 ```
 {
@@ -244,25 +235,26 @@ Die bevorzugte Zeitzone kann auch in der Nutzlast der Event-Eigenschaften gesend
 }
 ```
 
-### Wie unterscheiden sich die Kontextvariablen von den Eigenschaften der Canvas-Eingänge?
+### Wie unterscheiden sich Kontextvariablen von Canvas-Eingangs-Eigenschaften?
 
-Wenn Sie am Context-Schritt Early Access teilnehmen, sind die Eingangs-Eigenschaften von Canvas jetzt als Canvas-Kontextvariablen enthalten. Das bedeutet, dass Sie die Eingangs-Eigenschaften von Canvas über die Braze API senden und in anderen Schritten referenzieren können, ähnlich wie bei der Verwendung einer Kontextvariablen mit dem Liquid-Snippet.
+Canvas-Eingangs-Eigenschaften sind als Canvas-Kontextvariablen enthalten. Das bedeutet, dass Sie Canvas-Eingangs-Eigenschaften über die Braze API senden und in anderen Schritten referenzieren können, ähnlich wie bei der Verwendung einer Kontextvariablen mit dem Liquid-Snippet.
 
-### Können sich Variablen in einem Singular Context Schritt gegenseitig referenzieren?
+### Können sich Variablen in einem einzelnen Kontext-Schritt gegenseitig referenzieren?
 
-Ja Alle Variablen in einem Context-Schritt werden nacheinander ausgewertet, d.h. Sie könnten die folgenden Context-Variablen eingerichtet haben:
+Ja. Alle Variablen in einem Kontext-Schritt werden nacheinander ausgewertet, d. h. Sie könnten die folgenden Kontextvariablen einrichten:
 
 | Kontextvariable | Wert | Beschreibung |
 |---|---|---|
-|`favorite_cuisine`| {% raw %}`{{custom_attribute.${Favorite Cuisine}}}`{% endraw %} | Die Lieblingsküche eines Nutzers:in. |
-|`promo_code`| {% raw %}`EATFRESH`{% endraw %} | Der verfügbare Rabattcode für einen Nutzer:innen. |
-|`personalized_message`|  {% raw %}`"Enjoy a discount of" {{context.${promo_code}}} "on delivery from your favorite" {{context.${favorite_cuisine}}} restaurants!"`{% endraw %} | Eine personalisierte Nachricht, die die vorherigen Variablen kombiniert. In einem Messaging-Schritt könnten Sie das Liquid Snippet {% raw %}`{{context.${personalized_message}}}`{% endraw %} verwenden, um die Kontextvariable zu referenzieren und jedem Nutzer:in eine personalisierte Nachricht zu liefern. Sie können auch einen Context-Schritt verwenden, um den Wert des [Promo-Codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) zu speichern und ihn als Template in anderen Schritten eines Canvas zu verwenden. |
+|`favorite_cuisine`| {% raw %}`{{custom_attribute.${Favorite Cuisine}}}`{% endraw %} | Die Lieblingsküche der Nutzer:innen. |
+|`promo_code`| {% raw %}`EATFRESH`{% endraw %} | Der verfügbare Rabattcode für Nutzer:innen. |
+|`personalized_message`|  {% raw %}`"Enjoy a discount of" {{context.${promo_code}}} "on delivery from your favorite" {{context.${favorite_cuisine}}} restaurants!"`{% endraw %} | Eine personalisierte Nachricht, die die vorherigen Variablen kombiniert. In einem Nachrichten-Schritt könnten Sie das Liquid-Snippet {% raw %}`{{context.${personalized_message}}}`{% endraw %} verwenden, um die Kontextvariable zu referenzieren und jeder Nutzer:in eine personalisierte Nachricht zu liefern. Sie können auch einen Kontext-Schritt verwenden, um den Wert des [Aktionscodes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) zu speichern und ihn in anderen Schritten innerhalb eines Canvas als Template zu verwenden. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Dies gilt auch für mehrere Context-Schritte. Stellen Sie sich zum Beispiel diese Sequenz vor:
-1. Ein anfänglicher Context-Schritt erstellt eine Variable namens `JobInfo` mit dem Wert `job_title`.
-2. Der Schritt Nachricht referenziert {% raw %}`{{context.${JobInfo}}}`{% endraw %} und zeigt dem Nutzer:innen `job_title` an.
-3. Später aktualisiert ein Context-Schritt die Kontextvariable und ändert den Wert von `JobInfo` in `job_description`.
-4. Alle nachfolgenden Schritte, die auf `JobInfo` referenzieren, verwenden nun den aktualisierten Wert `job_description`.
+Dies gilt auch für mehrere Kontext-Schritte. Stellen Sie sich zum Beispiel diese Sequenz vor:
 
-Kontextvariablen verwenden im gesamten Canvas ihren neuesten Wert, wobei sich jedes Update auf alle folgenden Schritte auswirkt, die auf diese Variable referenzieren.
+1. Ein anfänglicher Kontext-Schritt erstellt eine Variable namens `JobInfo` mit dem Wert `job_title`.
+2. Ein Nachrichten-Schritt referenziert {% raw %}`{{context.${JobInfo}}}`{% endraw %} und zeigt den Nutzer:innen `job_title` an.
+3. Später aktualisiert ein Kontext-Schritt die Kontextvariable und ändert den Wert von `JobInfo` in `job_description`.
+4. Alle nachfolgenden Schritte, die `JobInfo` referenzieren, verwenden nun den aktualisierten Wert `job_description`.
+
+Kontextvariablen verwenden im gesamten Canvas ihren neuesten Wert, wobei sich jedes Update auf alle folgenden Schritte auswirkt, die diese Variable referenzieren.

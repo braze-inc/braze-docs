@@ -66,7 +66,7 @@ A continuación se enumeran todos los elementos clave que se configuran dentro d
 
 - [Instancias de la aplicación](#app-instances)
 - [Equipos](#teams)
-- [Permisos de usuario](#company-user-permissions) de empresa (pero no usuarios de empresa)
+- [Permisos de usuario de la empresa](#company-user-permissions) (pero no usuarios de la empresa)
 - [Conectores de corriente](#currents-connectors)
 - [Perfiles de usuario](#user-profiles) y datos de usuario asociados
 - [Segmentos, campañas y lienzos](#segments-campaigns-and-canvases)
@@ -178,7 +178,7 @@ En la tabla siguiente se describen las ventajas e inconvenientes de estos dos en
         <td>Se garantiza que los atributos y eventos personalizados son específicos de una instancia de aplicación.</td>
         <td>No se puede realizar un seguimiento del comportamiento de los usuarios en los distintos espacios de trabajo.<br><br><b>Consejo:</b> Para ello, puede utilizar varios conectores Currents.</td>
         <td>Puede realizar un seguimiento del comportamiento del usuario en todas las instancias de la aplicación en el espacio de trabajo.</td>
-        <td>Los atributos y eventos personalizados se aplicarían a todas las instancias de la aplicación, lo que podría dificultar saber qué datos de un perfil de usuario son relevantes para qué instancia de la aplicación. Por ejemplo, ¿es "date_of_parking" relevante para la Aplicación 1 o para la Aplicación 2? Para evitarlo, asegúrate de utilizar convenciones de nomenclatura bien estructuradas.</td>
+        <td>Los atributos y eventos personalizados se aplicarían a todas las instancias de la aplicación, lo que podría dificultar saber qué datos de un perfil de usuario son relevantes para qué instancia de la aplicación. Por ejemplo, ¿es"date_of_parking"relevante para la aplicación 1 o la aplicación 2? Para evitarlo, asegúrate de utilizar convenciones de nomenclatura bien estructuradas.</td>
     </tr>
     <tr>
         <td>Limitación de frecuencia</td>
@@ -205,7 +205,7 @@ En la tabla siguiente se describen las ventajas e inconvenientes de estos dos en
         <td>Duplicación de contenidos</td>
         <td>N/A</td>
         <td>No se pueden duplicar segmentos, campañas push o de tarjeta de contenido, ni lienzos entre espacios de trabajo.</td>
-        <td>Puedes <a href='{{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'>duplicar campañas entre espacios de trabajo</a> para los siguientes canales compatibles: SMS, mensajes dentro de la aplicación, correo electrónico, plantillas de correo electrónico y bloques de contenido. <br><br>Puede duplicar segmentos, campañas y lienzos para reutilizar el contenido de una aplicación a otra.</td>
+        <td>Puede <a href='{{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'>duplicar campañas en todos los espacios de trabajo</a> para los siguientes canales compatibles: SMS, mensajes dentro de la aplicación, correo electrónico, plantillas de correo electrónico y bloques de contenido. <br><br>Puede duplicar segmentos, campañas y lienzos para reutilizar el contenido de una aplicación a otra.</td>
         <td>N/A</td>
     </tr>
     <tr>
@@ -240,5 +240,5 @@ Debe tener más de un usuario Braze con permisos de administrador para un mismo 
 
 ## Próximos pasos
 
-Una vez que hayas determinado tu plan de espacio de trabajo, es hora de crear tu espacio de trabajo y añadir instancias de aplicaciones. Para conocer los pasos, consulta [Crear y administrar espacios de trabajo]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
+Una vez que hayas determinado tu plan de espacio de trabajo, es hora de crear tu espacio de trabajo y añadir instancias de aplicaciones. Para conocer los pasos a seguir, consulta [Crear y administrar espacios de trabajo]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
 

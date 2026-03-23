@@ -1,7 +1,7 @@
 ---
 nav_title: "PUT: Update der Übersetzungen für ein E-Mail Template"
 article_title: "PUT: Übersetzungen für ein E-Mail Template aktualisieren"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 
 layout: api_page
@@ -12,14 +12,12 @@ description: "Dieser Artikel beschreibt die Details des Updates von Übersetzung
 {% api %}
 # Update der Übersetzungen für ein E-Mail Template
 {% apimethod put %}
-/templates/email/translations/
+/Templates/E-Mail/Übersetzungen/
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um Übersetzungen für ein [E-Mail Template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) zu aktualisieren. Weitere Informationen zu den Features für die Übersetzung finden Sie unter [Lokalisierung in Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/).
+> Verwenden Sie diesen Endpunkt, um Übersetzungen für ein [E-Mail Template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) zu aktualisieren. Weitere Informationen zu den Übersetzungsfeatures finden Sie unter [„Locales in Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)“.
 
-{% alert important %}
-Dieser Endpunkt befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Voraussetzungen
 
@@ -43,7 +41,7 @@ Für diesen Endpunkt gibt es keine Pfadparameter.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Alle Übersetzungs-IDs werden als universelle eindeutige Bezeichner (UUIDs) betrachtet, die in der Antwort des GET-Endpunkts zu finden sind.
+Alle Übersetzungs-IDs gelten als universelle eindeutige Bezeichner (UUIDs), die in der Antwort des GET-Endpunkts zu finden sind.
 {% endalert %}
 
 ## Beispiel Anfrage

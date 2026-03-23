@@ -1,14 +1,14 @@
 ---
 page_order: 0.1
-nav_title: Personalização de mensagens
-article_title: Personalize as notificações por push para o SDK do Braze
+nav_title: Personalize mensagens
+article_title: Personalize notificações por push para o SDK Braze
 channel:
   - push notifications
 ---
 
-# Personalize as notificações por push
+# Personalize notificações por push
 
-> Saiba como personalizar as notificações por push para o SDK do Braze.
+> Aprenda a personalizar notificações por push para o SDK Braze.
 
 {% sdktabs %}
 {% sdktab android %}
@@ -21,5 +21,9 @@ channel:
 
 {% sdktab fireos %}
 {% multi_lang_include developer_guide/fireos/push_notifications/customization.md %}
+{% endsdktab %}
+
+{% sdktab React Native %}
+{% multi_lang_include developer_guide/react_native/push_notifications/customization.md %}
 {% endsdktab %}
 {% endsdktabs %}

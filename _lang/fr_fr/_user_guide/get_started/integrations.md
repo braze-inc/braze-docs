@@ -46,8 +46,8 @@ Assurez-vous de dire à vos développeurs quels canaux vous souhaitez utiliser p
 | in-app Messages | Nécessite la mise en œuvre du SDK ainsi que les étapes spécifiques à chaque canal. |
 | Notification push | Nécessite une mise en œuvre de SDK pour assurer une manipulation adéquate autour des informations d’identification de messagerie et des jetons de notifications push. |
 | E-mail | Il s’agit d’un processus entièrement différent. Consultez la section [Configuration de l'e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/) pour plus de détails sur l'intégration. |
-| Cartes de contenu | Pour commencer à utiliser les [cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/), contactez votre gestionnaire satisfaction client Braze. |
-| SMS & MMS | Consultez la section [Configuration du SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/) pour plus de détails sur l'intégration. |
+| Cartes de contenu | Pour commencer à utiliser [les cartes de]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) [contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/), veuillez contacter votre gestionnaire de la satisfaction client Braze. |
+| SMS&  MMS | Consultez la section [Configuration du SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/) pour plus de détails sur l'intégration. |
 | Webhooks | Nécessite la mise en œuvre du SDK ainsi que des étapes spécifiques à chaque canal. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Verfügbare API-Funktionen
-article_title: Verfügbare API-Funktionen auf dem Braze MCP Server
-description: "Liste der schreibgeschützten Braze API-Funktionen, die über den MCP Server zugänglich sind."
+article_title: Verfügbare API-Funktionen im Braze MCP-Server
+description: "Liste der schreibgeschützten Braze-API-Funktionen, auf die über den MCP-Server zugegriffen werden kann."
 page_order: 1.5
 noindex: true
 ---

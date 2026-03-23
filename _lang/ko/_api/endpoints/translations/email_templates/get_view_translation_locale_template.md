@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: 이메일 템플릿의 특정 번역 및 로캘 보기"
+nav_title: "GET: 이메일 템플릿에 대한 특정 번역 및 로케일 보기"
 article_title: "GET: 이메일 템플릿의 특정 번역 및 로캘 보기"
 search_tag: Endpoint
 page_order: 2
@@ -12,14 +12,12 @@ description: "이 문서에서는 이메일 템플릿 엔드포인트의 특정 
 {% api %}
 # 이메일 템플릿 엔드포인트의 특정 번역 및 로캘 보기
 {% apimethod get %}
-/템플릿/번역/이메일
+/templates/translations/email
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 [이메일 템플릿의]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) 특정 번역 및 로캘을 볼 수 있습니다. 번역 기능에 대한 자세한 내용은 [메시징의 로캘을]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) 참조하세요.
+> 이 엔드포인트를 사용하여 특정 번역 및 로케일을 [이메일 템플릿]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates)에 대해 봅니다. 번역 기능에 대한 자세한 내용은 [메시지의 로케일]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)를 참조하십시오.
 
-{% alert important %}
-이 엔드포인트는 현재 얼리 액세스 중입니다. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## Prerequisites
 
@@ -34,11 +32,11 @@ description: "이 문서에서는 이메일 템플릿 엔드포인트의 특정 
 | 매개변수     | 필수 | 데이터 유형 | 설명                     |
 |---------------|----------|-----------|---------------------------------|
 | `template_id` | Required | 문자열    | 이메일 템플릿의 ID입니다. |
-| `locale_id`   | Optional | 문자열    | 로캘의 ID(UUID)입니다.           |
+| `locale_id`   | Optional | 문자열    | 로케일의 ID (UUID).           |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-모든 번역 ID는 GET 엔드포인트의 응답에서 찾을 수 있는 UUID(범용 고유 식별자)로 간주됩니다.
+모든 번역 ID는 보편적인 고유 식별자 (UUID)로 간주되며, GET 엔드포인트의 응답에서 찾을 수 있습니다.
 {% endalert %}
 
 ## 예시 요청

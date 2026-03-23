@@ -4,7 +4,7 @@ article_title: e コマースパートナー
 page_order: 10
 
 page_type: landing
-description: "このランディングページには、e コマースプラットプラットフォームを統合できる Braze パートナー (Alloys) が一覧表示されています。"
+description: "このランディングページには、e コマースプラットフォームとの統合を可能にする Braze パートナー (Alloys) が一覧表示されています。"
 
 layout: partner_page
 search_tag: Partner
@@ -16,7 +16,7 @@ valid_partner_list:
   url: /docs/partners/lexer/
 - name: Peak
   url: /docs/partners/peak/
-- name: パーソナライズ
+- name: Personalize
   url: /docs/partners/personalize/
 - name: Tangerine
   url: /docs/partners/tangerine/
@@ -52,8 +52,14 @@ valid_partner_list:
   url: /docs/partners/shopify/
 - name: Stripe
   url: /docs/partners/stripe/
-- name: 桶剣道
+- name: Okendo
   url: /docs/partners/okendo/
-- name: スウィム
+- name: Swym
   url: /docs/partners/swym/
+- name: Algolia
+  url: /docs/partners/algolia/
+- name: Tapcart
+  url: /docs/partners/tapcart/
+- name: Poq
+  url: /docs/partners/poq/
 ---

@@ -1,14 +1,14 @@
 ---
-nav_title: Seguimiento de desinstalaciones
-article_title: Seguimiento de las desinstalaciones a través del SDK Braze
+nav_title: Seguir las desinstalaciones
+article_title: Realiza el seguimiento de las desinstalaciones a través del SDK de Braze.
 page_order: 3.5
-description: "Aprende a hacer un seguimiento de las desinstalaciones a través del SDK de Braze."
+description: "Aprende a realizar el seguimiento de las desinstalaciones a través del SDK de Braze."
 
 ---
 
-# Seguimiento de desinstalaciones
+# Seguir las desinstalaciones
 
-> Aprende a configurar el seguimiento de desinstalaciones a través del SDK de Braze. Para obtener información general, consulta la Guía del usuario [: Desinstalar Tracking]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking).
+> Aprende a configurar el seguimiento de Uninstall Tracking a través del SDK de Braze. Para obtener información general, consulta la Guía[ del usuario: Uninstall Tracking]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking).
 
 {% sdktabs %}
 {% sdktab android %}

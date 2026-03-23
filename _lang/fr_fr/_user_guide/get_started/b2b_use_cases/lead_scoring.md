@@ -1,12 +1,12 @@
 ---
-nav_title: Evaluation des prospects
-article_title: "Créez un flux de travail pour l'évaluation des prospects"
+nav_title: Évaluation des prospects
+article_title: Créer un workflow de notation des prospects
 page_order: 1
 page_type: reference
 description: "Apprenez à utiliser Braze pour réaliser des évaluations simples de prospects, des évaluations externes de prospects et des transferts de prospects."
 ---
 
-# Créez un flux de travail pour l'évaluation des prospects
+# Créer un workflow de notation des prospects
 
 > Ce cas d'utilisation montre comment vous pouvez utiliser Braze pour mettre à jour les scores des leads des utilisateurs en temps réel et transmettre automatiquement les leads à vos équipes de vente.
 
@@ -83,7 +83,7 @@ Ajoutez les groupes suivants à votre parcours d'action :
 - **Groupe 3 :** Tous les événements qui comptent pour un décrément de 1 point.
 - **Tous les autres :** Les parcours d'action vous permettent de définir la fenêtre d'attente pour voir si un utilisateur entreprend une action, avant de le placer dans un groupe "tous les autres". Pour la notation des prospects, c'est l'occasion d’abaisser le score pour « inactivité ».
 
-![Parcours d'action contenant des groupes d'action pour l'ajout d'un point, de cinq points et de dix points ; la soustraction d'un point et de dix points ; et "Tous les autres".]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %}){: style="max-width:20%;"}
+![Parcours d’action contenant des groupes d’actions pour ajouter un point, cinq points et dix points ; soustraire un point et dix points ; et « Tous les autres ».]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %}){: style="max-width:20%;"}
 
 #### Étape 4c : Configurez chaque groupe pour y inclure les événements pertinents
 
@@ -182,7 +182,7 @@ Pour mettre à jour l'enregistrement du prospect dans Salesforce avec le statut 
 
 | En-tête | Contenu |
 | --- | --- |
-| Autorisation | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Pour récupérer un jeton, [configurez une appli connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) pour le flux d’identifiants du client OAuth 2.0, puis utilisez le contenu connecté pour récupérer le porteur dans Salesforce : <br><br>{% raw %}<code>{% connected_content <mem_a9b7665e-539e-4820-8222-cc24e8727045/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorisation | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Pour récupérer un jeton, [configurez une appli connectée](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) pour le flux d’identifiants du client OAuth 2.0, puis utilisez le contenu connecté pour récupérer le porteur dans Salesforce : <br><br>{% raw %}<code>{% connected_content <mem_575732fc-b6a9-4ed6-9627-c6e0396cdd0f/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
@@ -200,7 +200,7 @@ Dans l'étape **Planifier la réception/distribution**, sélectionnez les élém
 
 Dans l'étape **Audiences cibles**, incluez un filtre qui exclut les utilisateurs dont le statut de prospect est déjà au niveau MQL ou au-delà, par exemple « `lead_status` `is none of` `MQL` ».
 
-![Les options de ciblage du webhook avec le filtre de “lead_status” n'est pas "MQL".]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
+![Options de ciblage webhook avec le filtre «“lead_status”n'est pas « MQL ».]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
 
 ### Étape 3 : Lancez la campagne
 

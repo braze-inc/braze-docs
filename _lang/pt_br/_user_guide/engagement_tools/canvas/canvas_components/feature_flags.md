@@ -17,7 +17,7 @@ Está procurando mais informações sobre os feature flags e como eles podem ser
 
 ## Criação de um Feature Flag
 
-![Um exemplo de etapa do Feature Flag para o recurso Botão de bate-papo ao vivo.]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Um exemplo de etapa de Feature Flag para o recurso do botão de chat ao vivo.]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Para criar um componente Feature Flag, primeiro adicione uma etapa do canva. Arraste e solte o componente da barra lateral ou clique no botão de adição <i class="fas fa-plus-circle"></i> na parte inferior de uma etapa e selecione **Feature Flag**. Em seguida, selecione o sinalizador de recurso no menu suspenso, que contém todos os sinalizadores de recurso que não estão arquivados.
 
@@ -33,7 +33,7 @@ As propriedades em uma etapa do Canva podem ser alteradas após o lançamento e 
 
 Ao criar um sinalizador de recurso, você especifica as propriedades padrão. Ao configurar uma etapa do Canva do sinalizador de recurso, é possível manter os valores padrão ou substituir os valores para os usuários que entrarem nessa etapa.
 
-![Um sinalizador de recurso "Central de Preferências" com "String" como propriedade, "url" como chave de propriedade e um valor.]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
+![Uma feature flag "Central de Preferências" com "string" como a propriedade, "url" como a chave da propriedade e um valor.]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
 
 Acesse **Envio de mensagens** > **Feature Flags** para editar, adicionar ou remover propriedades adicionais.
 

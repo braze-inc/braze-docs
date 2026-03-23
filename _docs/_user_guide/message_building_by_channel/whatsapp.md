@@ -31,6 +31,9 @@ guide_featured_list:
 - name: "WhatsApp Message and Media Specifications"
   link: /docs/whatsapp_media_specifications/
   image: /assets/img/braze_icons/image-03.svg
+- name: "WhatsApp Template Builder"
+  link: /docs/whatsapp_template_builder/
+  image: /assets/img/braze_icons/layout-alt-04.svg
 - name: "User Retargeting"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/user_retargeting/
   image: /assets/img/braze_icons/users-01.svg

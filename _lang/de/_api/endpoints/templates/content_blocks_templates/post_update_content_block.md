@@ -1,7 +1,7 @@
 ---
-nav_title: "POST: Content-Block aktualisieren"
+nav_title: "POST: Content-Block-Update"
 article_title: "POST: Content-Block aktualisieren"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 layout: api_page
 page_type: reference
@@ -56,7 +56,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/update' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -90,7 +90,7 @@ In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehle
 | `Content cannot be blank` |
 | `Content must be a string` | Achten Sie darauf, dass Ihr Inhalt in Anführungszeichen (`""`) eingeschlossen ist. |
 | `Content must be smaller than 50kb` | Der Inhalt Ihres Content-Blocks muss insgesamt weniger als 50 KB groß sein. |
-| `Content contains malformed liquid` | Das angegebene Liquid ist ungültig oder nicht parsbar. Versuchen Sie es erneut mit einem gültigen Liquid oder kontaktieren Sie den Support. |
+| `Content contains malformed liquid` | Das angegebene Liquid ist ungültig oder nicht parsbar. Bitte versuchen Sie es erneut mit gültigem Liquid oder wenden Sie sich an den Support. |
 | `Content Block cannot be referenced within itself` |
 | `Content Block description cannot be blank` |
 | `Content Block description must be a string` | Achten Sie darauf, dass die Beschreibung Ihres Content-Blocks in Anführungszeichen (`""`) eingeschlossen ist. |

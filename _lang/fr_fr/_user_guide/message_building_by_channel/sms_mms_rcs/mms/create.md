@@ -40,7 +40,7 @@ Pour créer un message MMS, votre groupe d'abonnement doit être configuré pour
 
 {% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
-![L'onglet "Composer" pour rédiger votre message.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
+![L'onglet « Rédiger » pour rédiger votre message.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
 
 ### Spécifications des images
 
@@ -58,4 +58,4 @@ Braze fournit un aperçu de l'image que vous avez téléchargée dans le panneau
 L’ordre des ressources SMS/MMS ne peut pas être personnalisé. L’ordre dépend du téléphone qui reçoit ce message.
 {% endalert %}
 
-![Exemple de message : "Prêt à faire de la gym... à la maison ?". L'aperçu montre le message et l'image envoyés sous forme de textes.]({% image_buster /assets/img/sms/mms_preview.png %})
+![Exemple de message : « Êtes-vous prêt à vous rendre à la salle de sport... chez vous ? ». L'aperçu affiche le message et l'image envoyés sous forme de texte.]({% image_buster /assets/img/sms/mms_preview.png %})

@@ -1,7 +1,7 @@
 ---
 page_order: 6
-nav_title: Soft Push Aufforderungen
-article_title: Einrichten von Soft-Push-Eingabeaufforderungen für das Braze SDK
+nav_title: Sanfte Push-Aufforderungen
+article_title: Richten Sie Soft-Push-Aufforderungen für das Braze SDK ein.
 channel:
   - push notifications
 ---

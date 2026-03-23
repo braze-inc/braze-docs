@@ -1,4 +1,4 @@
 ---
-nav_title: Analyse/analytique du commerce électronique (si utilisé comme adjectif)
+nav_title: Analytique et workflows e-commerce
 config_only: true
 ---

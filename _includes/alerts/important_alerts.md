@@ -141,6 +141,12 @@ The [Braze media library]({{site.baseurl}}/media_library/) supports images and v
 
 {% alert important %}
 Meta has a known issue that can prevent some MP4 videos from playing on Android devices due to specific encoding or container settings. Until a permanent fix is available, reformatting the MP4 file resolves the issue for most senders. Test all videos on Android devices to confirm correct deliverability. <br><br>You can reformat the MP4 file by MP4 using a web tool, such as [CloudConvert](https://cloudconvert.com/mp4-converter). Upload your MP4 file into the tool, convert it to MP4 again, and then download the converted file.
+{% if include.alert == 'Shopify cart token alias' %}
+
+{% alert important %}
+For this integration, the user alias must use the following format so that Braze can match webhooks to the correct user profile:<br><br>
+- `alias_label`: `shopify_cart_${cartToken}`
+- `alias_name`: `shopify_cart_token`
 {% endalert %}
 
 {% endif %}

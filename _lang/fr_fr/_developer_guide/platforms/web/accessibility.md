@@ -4,52 +4,52 @@ article_title: Accessibilité
 platform: Web
 page_order: 22
 page_type: reference
-description: "Cet article décrit comment Braze prend en charge l'accessibilité."
+description: "Cet article explique comment Braze favorise l'accessibilité."
 
 ---
 
 # Accessibilité
 
-> Cet article donne un aperçu de la manière dont Braze prend en charge l'accessibilité au sein de votre intégration.
+> Cet article présente un aperçu de la manière dont Braze favorise l'accessibilité au sein de votre intégration.
 
-Le Braze Web SDK prend en charge les normes fournies par les [directives d'accessibilité au contenu Web (WCAG 2.1).](https://www.w3.org/TR/WCAG21/) Nous maintenons un [score phare de 100/100](https://developer.chrome.com/docs/lighthouse/accessibility/scoring) pour les cartes de contenu et les messages in-app sur tous nos nouveaux projets afin de respecter notre norme d'accessibilité.
+Le SDK Web Braze est conforme aux normes définies par les [directives d'accessibilité du contenu Web (WCAG 2.1)](https://www.w3.org/TR/WCAG21/). Nous maintenons un [score Lighthouse de 100/100](https://developer.chrome.com/docs/lighthouse/accessibility/scoring) pour les cartes de contenu et les messages in-app sur toutes nos nouvelles versions afin de respecter notre norme d'accessibilité.
 
 ## Conditions préalables
 
-La version minimale du SDK qui satisfait aux WCAG 2.1 est proche de la v3.4.0. Toutefois, nous vous recommandons de passer au moins à la version 6.0.0 pour bénéficier des principales corrections apportées aux étiquettes d'images.
+La version minimale du SDK conforme à la norme WCAG 2.1 est proche de la version 3.4.0. Cependant, nous recommandons de procéder à une mise à niveau vers la version 6.0.0 au minimum afin de bénéficier des corrections majeures apportées aux étiquettes d'image.
 
 ### Corrections notables en matière d'accessibilité
 
 | Version | Type | Principaux changements |
 |---------|------|-------------|
-| **6.0.0** | **Principale** | Images en tant qu'étiquettes `<img>`, champs `imageAltText` ou `language`, améliorations générales de l'accessibilité de l'interface utilisateur |
-| **3.5.0** | Mineur | Amélioration de l'accessibilité du texte défilant |
-| **3.4.0** | Correctif | Cartes de contenu `article` Correction du rôle |
-| **3.2.0** | Mineur | Cibles de ciblage minimales de 45x45px pour les boutons |
-| **3.1.2** | Mineur | Texte alt par défaut pour les images |
-| **2.4.1** | **Principale** | HTML sémantique (`h1` ou `button`), attributs ARIA, navigation au clavier, gestion du focus |
+| **6.0.0** | **Major** | Images en tant que`<img>`tags ou`language`champs`imageAltText`, améliorations générales de l'accessibilité de l'interface utilisateur |
+| **3.5.0** | Mineur | Améliorations apportées à l'accessibilité du texte défilable |
+| **3.4.0** | Correctif | Carte de contenu  `article`Correction de rôle |
+| **3.2.0** | Mineur | Cibles tactiles minimales de 45 x 45 pixels pour les boutons |
+| **3.1.2** | Mineur | Texte alternatif par défaut pour les images |
+| **2.4.1** | **Major** | HTML sémantique (`h1`ou `button`), attributs ARIA, navigation au clavier, gestion du focus |
 | **2.0.5** | Mineur | Gestion du focus, navigation au clavier, étiquettes |
 {: .reset-td-br-1, .reset-td-br-2 role="presentation" }
 
 ## Fonctionnalités d'accessibilité prises en charge
 
-Nous prenons en charge ces fonctionnalités pour les cartes de contenu et les messages in-app :
+Nous prenons en charge les fonctionnalités suivantes pour les cartes de contenu et les messages in-app :
 
-- Rôles et labels ARIA
+- Rôles et étiquettes ARIA
 - Prise en charge de la navigation au clavier
-- Gestion de l'attention
-- Annonces concernant les lecteurs d'écran
-- Prise en charge du texte Alt pour les images
+- Gestion de la concentration
+- Annonces du lecteur d'écran
+- Prise en charge du texte alternatif pour les images
 
-## Lignes directrices en matière d'accessibilité pour les intégrations SDK
+## Directives d'accessibilité pour les intégrations SDK
 
-Reportez-vous à la section [Créer des messages accessibles dans Braze]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/accessibility) pour connaître les directives générales en matière d'accessibilité. Ce guide fournit des conseils et des bonnes pratiques pour une accessibilité maximale lors de l'intégration du SDK Braze Web dans votre application web.
+Veuillez vous référer à [la section Création de messages accessibles dans Braze]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/accessibility) pour obtenir des directives générales en matière d'accessibilité. Ce guide fournit des conseils et des bonnes pratiques pour optimiser l'accessibilité lors de l'intégration du SDK Web Braze dans votre application Web.
 
 ### Cartes de contenu
 
-#### Fixer une hauteur maximale
+#### Définition d'une hauteur maximale
 
-Pour éviter que les cartes de contenu n'occupent trop d'espace vertical et améliorer l'accessibilité, vous pouvez fixer une hauteur maximale au conteneur de flux, comme dans cet exemple :
+Afin d'éviter que les cartes de contenu n'occupent trop d'espace vertical et d'améliorer l'accessibilité, vous pouvez définir une hauteur maximale pour le conteneur du flux, comme dans l'exemple suivant :
 
 {% raw %}
 ```css
@@ -67,9 +67,9 @@ Pour éviter que les cartes de contenu n'occupent trop d'espace vertical et amé
 ```
 {% endraw %}
 
-#### Considérations sur la fenêtre de visualisation
+#### Considérations relatives à la fenêtre d'affichage
 
-Pour les cartes de contenu affichées en ligne, tenez compte des contraintes de visualisation, comme dans cet exemple.
+Pour les cartes de contenu affichées en ligne, veuillez tenir compte des contraintes de la fenêtre d'affichage, comme dans cet exemple.
 
 {% raw %}
 ```css
@@ -85,14 +85,14 @@ Pour les cartes de contenu affichées en ligne, tenez compte des contraintes de 
 ### in-app Messages
 
 {% alert warning %}
-Ne mettez pas d'informations importantes dans les messages in-app, car ils ne sont pas accessibles aux lecteurs d'écran.
+Veuillez éviter d'inclure des informations importantes dans les messages in-app, car ils ne sont pas accessibles aux lecteurs d'écran.
 {% endalert %}
 
-### Considérations sur le mobile
+### Considérations relatives aux appareils mobiles
 
-#### Conception adaptée
+#### Conception réactive
 
-Le SDK comprend des points d'arrêt réactifs. Confirmez que vos personnalisations fonctionnent sur toutes les tailles d'écran, comme dans cet exemple :
+Le SDK comprend des points d'arrêt réactifs. Veuillez vérifier que vos personnalisations s'adaptent à toutes les tailles d'écran, comme dans l'exemple suivant :
 
 {% raw %}
 ```css
@@ -111,28 +111,28 @@ Le SDK comprend des points d'arrêt réactifs. Confirmez que vos personnalisatio
 ```
 {% endraw %}
 
-### Test d'accessibilité
+### Évaluation de l'accessibilité
 
-#### Liste de contrôle des tests manuels
+#### Liste de contrôle pour les tests manuels
 
-Testez manuellement votre accessibilité en effectuant les tâches suivantes :
+Veuillez vérifier manuellement l'accessibilité en effectuant les tâches suivantes :
 
-- Naviguer dans les cartes de contenu et les messages in-app avec le clavier uniquement (onglet, entrée, espace).
-- Test avec un lecteur d'écran (NVDA, JAWS, VoiceOver)
-- Vérifiez que toutes les images comportent un texte alt
+- Naviguez dans les cartes de contenu et les messages in-app à l'aide du clavier uniquement (Tabulation, Entrée, Espace)
+- Veuillez tester avec un lecteur d'écran (NVDA, JAWS, VoiceOver).
+- Veuillez vérifier que toutes les images disposent d'un texte alternatif.
 - Vérifiez les rapports de contraste des couleurs (utilisez des outils tels que WebAIM Contrast Checker).
-- Test sur des appareils mobiles tactiles
-- Vérifier que les indicateurs de focalisation sont visibles
-- Test de l'envoi de messages modaux en mode dialogue, etc.
-- Vérifiez que tous les éléments interactifs sont accessibles au moyen d'un clavier.
+- Veuillez tester sur les appareils mobiles dotés d'un écran tactile.
+- Veuillez vérifier que les indicateurs de mise au point sont bien visibles.
+- Test du piégeage du focus des messages dans les fenêtres modales/boîtes de dialogue modales, etc.
+- Veuillez vérifier que tous les éléments interactifs sont accessibles à l'aide d'un clavier.
 
 ### Problèmes courants d'accessibilité
 
-Pour éviter les problèmes d'accessibilité les plus courants, procédez comme suit :
+Pour éviter les problèmes courants d'accessibilité, veuillez suivre les instructions suivantes :
 
-1. **Gardez le cap sur les styles :** Les indicateurs de mise au point du SDK sont essentiels pour les utilisateurs de clavier.
-2. **N'utilisez `display: none` que pour les éléments non interactifs :** Utilisez `visibility: hidden` ou `opacity: 0` pour masquer les éléments interactifs.
-3. **Ne remplacez pas les attributs ARIA :** Le SDK définit les rôles et les étiquettes ARIA appropriés.
-4. **Utilisez les attributs `tabindex`:** Ils contrôlent l'ordre de navigation du clavier.
-5. **Fournissez un défilement si vous définissez `overflow: hidden`:** Confirmez que le contenu défilant reste accessible.
-6. **N'interférez pas avec les gestionnaires de clavier intégrés :** Confirmez que la navigation au clavier existante fonctionne.
+1. **Conserver les styles de mise au point :** Les indicateurs de focus du SDK sont essentiels pour les utilisateurs de clavier.
+2. **Veuillez utiliser uniquement`display: none` sur des éléments non interactifs :** Veuillez utiliser`visibility: hidden`  ou`opacity: 0`  pour masquer les éléments interactifs.
+3. **Veuillez ne pas remplacer les attributs ARIA :** Le SDK définit les rôles et les étiquettes ARIA appropriés.
+4. **Utilisez`tabindex`les attributs :** Ces touches contrôlent l'ordre de navigation au clavier.
+5. **Veuillez fournir un défilement si vous définissez `overflow: hidden`:** Veuillez vérifier que le contenu déroulant reste accessible.
+6. **Veuillez ne pas interférer avec les gestionnaires de clavier intégrés :** Veuillez vérifier que la navigation au clavier fonctionne correctement.

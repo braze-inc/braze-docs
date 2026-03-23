@@ -14,10 +14,10 @@ tool:
 
 ## Funktionsweise
 
-Lokalisierungsinformationen werden im Profil eines Nutzers auf der Grundlage von Daten gespeichert, die Sie mit einem [Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/) (automatisch) oder [REST API]({{ site.baseurl }}/api/endpoints/user_data/post_user_track)] erfassen. Das Gebietsschema enthält die Sprache und einen Bezeichner für die Region. Diese Informationen sind im Braze Segmentierungstool unter **Land** und **Sprache** verfügbar.
+Lokalisierungsinformationen werden im Nutzerprofil gespeichert, basierend auf Daten, die Sie mithilfe eines [Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/) (automatisch) oder einer REST API erfassen]({{ site.baseurl }}/api/endpoints/user_data/post_user_track). Das Gebietsschema enthält die Sprache und einen Bezeichner für die Region. Diese Informationen sind im Braze Segmentierungstool unter **Land** und **Sprache** verfügbar.
 
 {% alert tip %}
-Technische Details dazu, wie die Lokalisierung von unseren SDKs erfasst wird, finden Sie in der offiziellen Dokumentation [für iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html), [Android](http://developer.android.com/reference/java/util/Locale.html) und das [Internet](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language).
+Technische Details zur Erfassung der Ländereinstellung durch unsere SDKs finden Sie in der offiziellen [iOS-](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html), [Android-](http://developer.android.com/reference/java/util/Locale.html) und [Internet](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language)-Dokumentation.
 {% endalert %}
 
 ## Übersetzungsmanagement
@@ -82,13 +82,13 @@ Nach dem Versand bietet das Dashboard dynamische Analytics pro Land und innerhal
 
 ## Versenden von übersetzten Nachrichten
 
-Um personalisierte Nachrichten auf der Grundlage der Sprache, des Gebietsschemas oder angepasster Attribute eines Nutzers zu versenden, verwenden Sie eine der folgenden Methoden.
+Um personalisierte Nachrichten basierend auf der Sprache, den Ländereinstellungen oder den angepassten Attributen eines Nutzers zu versenden, verwenden Sie bitte eine der folgenden Methoden.
 
 ### Übersetzung Liquid-Tags (empfohlen) {#translation-liquid-tag}
 
-Braze unterstützt einen {% raw %}`{% translation salutation %}Hello!{% endtranslation %}`{% endraw %} Liquid-Tag, um Nutzer:innen in verschiedenen Sprachen mit einer einzigen Nachricht zu targetieren. 
+Braze unterstützt {% raw %}`{% translation salutation %}Hello!{% endtranslation %}`{% endraw %}Liquid-Tags, um Zielgruppen in verschiedenen Sprachen mit einer einzigen Nachricht anzusprechen. 
 
-Eine ausführliche Anleitung finden Sie in der [Anleitung zur Verwendung von Tags für die Übersetzung]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales).
+Eine vollständige Anleitung wird im [Leitfaden zur Verwendung von Übersetzungstags]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) referenziert.
   
 ### Alternative Ansätze
 
@@ -283,7 +283,7 @@ Diese Option bietet eine alternative Methode zur Transformation von Google-Tabel
 
 Die Struktur der Tabellenkalkulation folgt den Schritten in Option 4, aber SheetDB bietet auch [zusätzliche Filter](https://docs.sheetdb.io/#sheetdb-api) zur Abfrage der Objekte.
 
-Einige Nutzer:innen ziehen es vielleicht vor, SheetDB mit weniger Liquid- und Connected Block-Abhängigkeiten zu implementieren, indem sie die [Suchmethode](https://docs.sheetdb.io/#get-search-in-document) von SheetDB in GET-Anfragen implementieren, um die JSON-Objekte auf der Grundlage des {% raw %}`{{${language}}}`{% endraw %} Liquid-Tags zu filtern und automatisch die Ergebnisse für eine einzelne Sprache zu liefern, anstatt große bedingte Blöcke zu erstellen.
+Einige Nutzer:innen ziehen es möglicherweise vor, SheetDB mit weniger Liquid- und Connected Block-Abhängigkeiten zu implementieren, indem sie [die Suchmethode](https://docs.sheetdb.io/#get-search-in-document) von SheetDB in GET-Anfragen implementieren, um die JSON-Objekte basierend auf{% raw %}`{{${language}}}`{% endraw %}dem Liquid-Tag zu filtern und automatisch die Ergebnisse für eine einzelne Sprache zurückzugeben, anstatt große bedingte Blöcke zu erstellen.
 
 #### Schritt 1: Google-Tabelle formatieren
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Modelos de dados
-article_title: Criar um modelo de dados B2B
+article_title: Criar um Modelo de Dados B2B
 page_order: 0
 page_type: reference
 description: "Saiba como usar as ferramentas de dados do Braze para criar modelos B2B."
@@ -144,7 +144,7 @@ Nesse caso de uso, o Salesforce é o sistema de CRM de exemplo. Você pode mapea
 
 ### Opção 2: Usar fontes conectadas para contas e oportunidades
 
-Fontes conectadas são tabelas de dados hospedadas por você em seu próprio data warehouse e consultadas pelas [extensões de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) do Braze [CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Ao contrário dos catálogos, em vez de duplicar seus objetos de negócios (contas e oportunidades) no Braze, você os manteria em seu data warehouse e os usaria como a fonte da verdade.
+Fontes conectadas são tabelas de dados que estão hospedadas por você em seu próprio data warehouse e consultadas pelo Braze [Extensões de Segmento CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Ao contrário dos catálogos, em vez de duplicar seus objetos de negócios (contas e oportunidades) no Braze, você os manteria em seu data warehouse e os usaria como a fonte da verdade.
 
 Para configurar fontes conectadas, consulte [Integração de fontes conectadas]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources).
 
