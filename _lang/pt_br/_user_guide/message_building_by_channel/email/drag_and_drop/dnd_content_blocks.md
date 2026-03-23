@@ -35,11 +35,11 @@ Há duas maneiras de adicionar o bloco de conteúdo ao seu e-mail: usando o edit
 
 Para adicionar um bloco de conteúdo no editor, faça o seguinte:
 
-1. Acesse a guia **Rows (Linhas)** no editor e selecione **Content Blocks (Blocos de conteúdo**). 
+1. Acesse a guia **Rows** no editor e selecione **Blocos de Conteúdo**. 
 2. Arraste e solte seu bloco de conteúdo no editor de e-mail. 
-3. (Opcional) Ajuste a largura de seu bloco de conteúdo selecionando o botão no menu de navegação. A largura padrão é 100% quando não especificada nas configurações globais de estilo de seu e-mail; caso contrário, as configurações globais serão respeitadas. <br><br>![Uma seta de dois lados com uma opção para editar a largura.]({% image_buster /assets/img_archive/content_block_width_updated.png %}){: style="max-width:30%;" }<br><br>
+3. (Opcional) Ajuste a largura de seu bloco de conteúdo selecionando o botão no menu de navegação. A largura padrão é 100% quando não especificada nas configurações de estilo global do seu e-mail; caso contrário, as configurações globais serão respeitadas. <br><br>![Uma seta de dois lados com uma opção para editar a largura.]({% image_buster /assets/img_archive/content_block_width_updated.png %}){: style="max-width:30%;" }<br><br>
 
-Depois de adicionar o bloco de conteúdo ao editor de e-mail, é possível fazer edições no bloco de conteúdo que não afetarão o bloco de conteúdo original criado em **Modelos & Media**. Isso ocorre porque os blocos de conteúdo adicionados por arrastar e soltar não estão vinculados ao bloco de conteúdo original. Para visualizar as alterações feitas no bloco de conteúdo original, arraste-o para o editor de e-mail novamente. 
+Após adicionar o Bloco de Conteúdo ao editor de e-mail, você pode fazer edições no Bloco de Conteúdo que não afetarão o Bloco de Conteúdo original que você criou em **Templates & Media**. Isso ocorre porque os blocos de conteúdo adicionados por arrastar e soltar não estão vinculados ao bloco de conteúdo original. Para visualizar as alterações feitas no bloco de conteúdo original, arraste-o para o editor de e-mail novamente. 
 
 O desalinhamento no editor de arrastar e soltar pode ocorrer quando vários blocos de conteúdo são adicionados a um único bloco de linha. Tente usar blocos de linhas separados para manter o alinhamento de seu conteúdo no nível da linha.
 
@@ -48,15 +48,15 @@ O desalinhamento no editor de arrastar e soltar pode ocorrer quando vários bloc
 Para adicionar um bloco de conteúdo usando o Liquid, faça o seguinte:
 
 1. Acesse sua campanha de e-mail e selecione **Editar corpo do e-mail**. 
-2. Clique em <i class="fas fa-plus"></i> **Personalization**.
+2. Selecione <i class="fas fa-plus"></i> **Personalização**.
 3. Localize a guia **Add Personalization (Adicionar personalização** ) e selecione **Content Blocks (Blocos de conteúdo** ) no menu suspenso **Personalization Type (Tipo de personalização** ).
 4. Selecione o nome de seu bloco de conteúdo no campo **Atribuição**. O campo Snippet Liquid será preenchido com a Liquid tag do bloco de conteúdo. 
 5. Copie e cole o snippet Liquid em um bloco do editor de texto. <br>![A guia Add Personalization com opções.]({% image_buster /assets/img_archive/dnd_content_block_personalization.png %}){: style="max-width:30%;"}
 
-Ao fazer a prévia do envio de mensagens por e-mail, o snippet do Liquid será exibido como o bloco de conteúdo do editor de arrastar e soltar. 
+Ao fazer a prévia do envio de mensagens por e-mail, o snippet do Liquid será exibido como o bloco de conteúdo do editor de arrastar e soltar. Observe que o estilo móvel (como alinhamento e tamanho do texto) não é suportado quando um Bloco de Conteúdo é incluído como um snippet Liquid.
 
 {% alert important %}
-Quando um bloco de conteúdo é adicionado ao editor de e-mail com o Liquid, esse bloco de conteúdo é vinculado ao bloco de conteúdo original criado em **Modelos & mídias**. Isso significa que o bloco de conteúdo será atualizado para refletir quaisquer alterações no modelo original do bloco de conteúdo.
+Quando um Bloco de Conteúdo é adicionado ao editor de e-mail com Liquid, este Bloco de Conteúdo está vinculado ao Bloco de Conteúdo original criado em **Templates & Media**. Isso significa que o bloco de conteúdo será atualizado para refletir quaisquer alterações no modelo original do bloco de conteúdo.
 {% endalert %}
 
 ## Atualização de blocos de conteúdo

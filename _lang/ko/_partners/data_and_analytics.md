@@ -1,14 +1,14 @@
 ---
 nav_title: "데이터 및 분석"
-article_title: Data &amp; Analytics Partners
+article_title: 데이터 및 분석 파트너
 page_order: 5
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who allow you to send, store, and otherwise coordinate your data across different tools and providers."
+description: "이 페이지에서는 다양한 도구와 제공업체 간에 데이터를 전송, 저장 및 조정할 수 있도록 지원하는 Braze 파트너(Alloys)를 소개합니다."
 layout: partner_page
 search_tag: Partner
 
-partner_top_header: "Data & Analytics"
+partner_top_header: "데이터 및 분석"
 
 valid_partner_list:
 - name: Optimizely
@@ -55,7 +55,7 @@ valid_partner_list:
   url: /docs/partners/saleswings/
 - name: Inbox Monster
   url: /docs/partners/inbox_monster/
-- name: 킥박스
+- name: Kickbox
   url: /docs/partners/kickbox/
 - name: Amazon S3
   url: /docs/partners/amazon_s3/
@@ -139,6 +139,8 @@ valid_partner_list:
   url: /docs/partners/wyng/
 - name: Antavo
   url: /docs/partners/antavo/
+- name: Talon.One
+  url: /docs/partners/talonone/
 - name: FriendBuy
   url: /docs/partners/friendbuy/
 - name: Kognitiv Inspire

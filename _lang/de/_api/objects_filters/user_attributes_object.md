@@ -1,17 +1,17 @@
 ---
-nav_title: "Nutzer:innen Attribute Objekt"
-article_title: "API Nutzer:innen Attribute Objekt"
+nav_title: "Nutzer:innen-Attribute-Objekt"
+article_title: "API-Nutzer:innen-Attribute-Objekt"
 page_order: 11
 page_type: reference
-description: "Dieser referenzierte Artikel erläutert die verschiedenen Komponenten des Objekts Nutzer:in."
+description: "Dieser Referenzartikel erläutert die verschiedenen Komponenten des Nutzer:innen-Attribute-Objekts."
 
 ---
 
-# Nutzer:innen Attribute Objekt
+# Nutzer:innen-Attribute-Objekt
 
-> Eine API-Anfrage mit einem beliebigen Feld im Attribute-Objekt erstellt oder aktualisiert ein Attribut dieses Namens mit dem angegebenen Wert im angegebenen Nutzerprofil.
+> Eine API-Anfrage mit beliebigen Feldern im Attributobjekt erstellt oder aktualisiert ein Attribut mit diesem Namen und dem angegebenen Wert im angegebenen Nutzerprofil.
 
-Verwenden Sie die Feldnamen des Braze-Benutzerprofils (wie nachfolgend aufgelistet oder alle im Abschnitt für [Braze-Benutzerprofilfelder](#braze-user-profile-fields) aufgelisteten), um diese speziellen Werte im Benutzerprofil im Dashboard zu aktualisieren, oder fügen Sie Ihre eigenen angepassten Attributdaten für den Benutzer hinzu.
+Verwenden Sie die Feldnamen des Braze-Nutzerprofils (wie nachfolgend aufgelistet oder alle im Abschnitt für [Braze-Nutzerprofilfelder](#braze-user-profile-fields) aufgelisteten), um diese speziellen Werte im Nutzerprofil im Dashboard zu aktualisieren, oder fügen Sie Ihre eigenen angepassten Attributdaten für die Nutzer:innen hinzu.
 
 ## Objektkörper
 
@@ -42,59 +42,72 @@ Verwenden Sie die Feldnamen des Braze-Benutzerprofils (wie nachfolgend aufgelist
 }
 ```
 
-- [Externe Benutzer-ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
+- [Externe Nutzer-ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [Nutzer-Aliasse]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 
-Um ein Attribut des Profils zu entfernen, setzen Sie es auf `null`. Einige Felder, wie `external_id` und `user_alias` können nicht mehr entfernt werden, nachdem sie einem Nutzerprofil hinzugefügt wurden.
+Um ein Profilattribut zu entfernen, setzen Sie es auf `null`. Einige Felder, wie `external_id` und `user_alias`, können nicht mehr entfernt werden, nachdem sie einem Nutzerprofil hinzugefügt wurden.
+
+#### Bezeichner-Auflösung
+
+Sofern Sie keinen [anonymen Push-Token-Import](#push-token-import) durchführen, muss jedes Nutzer:innen-Attribute-Objekt mindestens einen Bezeichner enthalten: `external_id`, `user_alias`, `braze_id`, `email` oder `phone`. Fügen Sie nach Möglichkeit nur einen Bezeichner pro Objekt hinzu, um Unklarheiten darüber zu vermeiden, welches Nutzerprofil aktualisiert oder erstellt wird.
+
+Beachten Sie bei der Verwendung von Bezeichnern Folgendes:
+
+- **`external_id` und `user_alias` schließen sich gegenseitig aus.** Wenn beide in dasselbe Nutzer:innen-Attribute-Objekt aufgenommen werden, wird ein Fehler zurückgegeben. Um einer Nutzer:in, die bereits über eine `external_id` verfügt, einen Alias hinzuzufügen, verwenden Sie den [`/users/alias/new`-Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_alias/).
+- **`email` hat Vorrang vor `phone`.** Wenn sowohl `email` als auch `phone` im selben Objekt enthalten sind, verwendet Braze `email` als Bezeichner. Das bedeutet, dass die Attribute auf das mit dieser E-Mail-Adresse verknüpfte Nutzerprofil angewendet werden, auch wenn die Telefonnummer zu einem anderen Profil gehört.
+
+{% alert important %}
+Um unerwartetes Verhalten zu vermeiden, verwenden Sie einen einzelnen Bezeichner pro Nutzer:innen-Attribute-Objekt. Die Angabe mehrerer Bezeichner, die auf unterschiedliche Nutzerprofile verweisen, kann dazu führen, dass Attribute auf das falsche Profil angewendet werden.
+{% endalert %}
 
 #### Nur bestehende Profile aktualisieren
 
-Wenn Sie nur bestehende Nutzerprofile in Braze aktualisieren möchten, sollten Sie den Schlüssel `_update_existing_only` mit dem Wert `true` im Hauptteil Ihrer Anfrage übergeben. Wenn dieser Wert weggelassen wird, erstellt Braze ein neues Nutzerprofil, wenn das `external_id` nicht bereits existiert.
+Wenn Sie nur bestehende Nutzerprofile in Braze aktualisieren möchten, sollten Sie den Schlüssel `_update_existing_only` mit dem Wert `true` im Hauptteil Ihrer Anfrage übergeben. Wenn dieser Wert weggelassen wird, erstellt Braze ein neues Nutzerprofil, sofern die `external_id` noch nicht vorhanden ist.
 
 {% alert note %}
-Wenn Sie über den Endpunkt `/users/track` ein Nutzerprofil erstellen, das nur aus Aliasen besteht, müssen Sie `_update_existing_only` auf `false` setzen. Wenn Sie diesen Wert weglassen, erstellt Braze das Profil, das nur einen Alias enthält, nicht.
+Wenn Sie ein Nutzerprofil nur mit Alias über den `/users/track`-Endpunkt erstellen, müssen Sie `_update_existing_only` auf `false` setzen. Wenn Sie diesen Wert weglassen, erstellt Braze kein Profil, das nur aus einem Alias besteht.
 {% endalert %}
 
 #### Push-Token importieren
 
-Bevor Sie Push-Tokens nach Braze importieren, überprüfen Sie, ob Sie das müssen. Wenn die SDKs von Braze eingerichtet sind, verarbeiten sie Push-Tokens automatisch, ohne dass sie über die API hochgeladen werden müssen.
+Bevor Sie Push-Tokens nach Braze importieren, überprüfen Sie, ob dies wirklich erforderlich ist. Wenn die Braze SDKs eingerichtet sind, verarbeiten sie Push-Tokens automatisch, ohne dass sie über die API hochgeladen werden müssen.
 
-Wenn Sie sie über die API hochladen müssen, können sie entweder für identifizierte Nutzer:innen oder anonyme Nutzer:innen hochgeladen werden. Das bedeutet, dass entweder ein `external_id` vorhanden sein muss, oder die anonymen Nutzer:innen müssen das `push_token_import` Flag auf `true` gesetzt haben.
+Wenn Sie sie über die API hochladen müssen, können sie entweder für identifizierte Nutzer:innen oder anonyme Nutzer:innen hochgeladen werden. Das bedeutet, dass entweder eine `external_id` vorhanden sein muss, oder die anonymen Nutzer:innen müssen das `push_token_import`-Flag auf `true` gesetzt haben.
 
 {% alert note %}
-Beim Importieren von Push-Tokens aus anderen Systemen ist nicht immer eine `external_id` verfügbar. Um die Kommunikation mit diesen Nutzern während der Umstellung auf Braze aufrechtzuerhalten, können Sie die Legacy-Token für anonyme Nutzer:innen importieren, ohne `external_id` anzugeben, indem Sie `push_token_import` als `true` angeben.
+Beim Importieren von Push-Tokens aus anderen Systemen ist nicht immer eine `external_id` verfügbar. Um die Kommunikation mit diesen Nutzer:innen während der Umstellung auf Braze aufrechtzuerhalten, können Sie die Legacy-Tokens für anonyme Nutzer:innen importieren, ohne `external_id` anzugeben, indem Sie `push_token_import` als `true` angeben.
 {% endalert %}
 
 Wenn Sie `push_token_import` als `true` angeben:
 
-* `external_id` und `braze_id` sollten **nicht** angegeben werden.
+* `external_id` und `braze_id` sollten **nicht** angegeben werden
 * Das Attribut-Objekt **muss** ein Push-Token enthalten
-* Wenn das Token bereits in Braze vorhanden ist, wird die Anfrage ignoriert. Andernfalls erstellt Braze ein temporäres, anonymes Nutzerprofil für jedes Token, damit Sie diesen Personen weiterhin Nachrichten schicken können.
+* Wenn das Token bereits in Braze vorhanden ist, wird die Anfrage ignoriert. Andernfalls erstellt Braze für jedes Token ein temporäres, anonymes Nutzerprofil, damit Sie diesen Personen weiterhin Nachrichten senden können.
 
-Nach dem Import, wenn jeder Nutzer die Braze-fähige Version Ihrer App startet, verschiebt Braze das importierte Push-Token automatisch in sein Braze-Nutzerprofil und bereinigt das temporäre Profil.
+Nach dem Import verschiebt Braze automatisch das importierte Push-Token in das Braze-Nutzerprofil, sobald die jeweilige Nutzer:in die Braze-fähige Version Ihrer App startet, und bereinigt das temporäre Profil.
 
-Braze sucht einmal im Monat nach anonymen Profilen mit dem Kennzeichen `push_token_import`, die kein Push-Token haben. Wenn das anonyme Profil keinen Push-Token mehr hat, löscht Braze das Profil. Wenn das anonyme Profil jedoch noch einen Push-Token hat, was darauf hindeutet, dass der tatsächliche Nutzer sich noch nicht mit diesem Push-Token am Gerät angemeldet hat, unternimmt Braze nichts.
+Braze überprüft einmal im Monat, ob es anonyme Profile mit dem `push_token_import`-Flag gibt, die keinen Push-Token haben. Wenn das anonyme Profil keinen Push-Token mehr aufweist, wird das Profil von Braze gelöscht. Wenn das anonyme Profil jedoch weiterhin über einen Push-Token verfügt – was darauf hindeutet, dass sich die tatsächliche Nutzer:in noch nicht mit diesem Push-Token beim Gerät angemeldet hat –, unternimmt Braze keine Maßnahmen.
 
 Weitere Informationen finden Sie unter [Migration von Push-Tokens](#migrating-push-tokens).
 
-#### Angepasste Attribut-Datenarten
+#### Angepasste Attribut-Datentypen
 
-Die folgenden Datenarten können als angepasstes Attribut gespeichert werden:
+Die folgenden Datentypen können als angepasstes Attribut gespeichert werden:
 
 | Datentyp | Anmerkungen |
 | --- | --- |
-| Arrays | Angepasste Attribut-Arrays werden unterstützt. Wenn Sie ein Element zu einem angepassten Attribut-Array hinzufügen, wird das Element an das Ende des Arrays angehängt, es sei denn, es ist bereits vorhanden. In diesem Fall wird es von seiner aktuellen Position an das Ende des Arrays verschoben.<br><br>Wenn zum Beispiel das Array `['hotdog','hotdog','hotdog','pizza']` importiert wurde, wird es im Attribut Array als `['hotdog', 'pizza']` angezeigt, da nur eindeutige Werte unterstützt werden.<br><br>Sie können nicht nur die Werte eines Arrays setzen, indem Sie etwas wie `"my_array_custom_attribute":[ "Value1", "Value2" ]` sagen, sondern auch Werte zu bestehenden Arrays hinzufügen, indem Sie etwas wie `"my_array_custom_attribute" : { "add" : ["Value3"] },` tun, oder Werte aus einem Array entfernen, indem Sie etwas wie `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br><br>Die Höchstzahl an Elementen in angepassten Attribut-Arrays ist standardmäßig auf 25 festgelegt, kann aber für ein einzelnes Array auf bis zu 100 erhöht werden. Weitere Informationen finden Sie unter [Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays). |
-| Array von Objekten | Array of Objects ermöglicht es Ihnen, eine Liste von Objekten zu definieren, wobei jedes Objekt eine Reihe von Attributen enthält. Dies kann nützlich sein, wenn Sie mehrere Datensätze mit verwandten Daten für einen Nutzer:innen speichern müssen, z.B. Hotelaufenthalte, Kaufverläufe oder Vorlieben. <br><br> Sie können zum Beispiel ein angepasstes Attribut für ein Nutzerprofil mit dem Namen `hotel_stays` definieren. Dieses angepasste Attribut kann als Array definiert werden, in dem jedes Objekt einen separaten Aufenthalt darstellt, mit Attributen wie `hotel_name`, `check_in_date`, `nights_stayed`. Weitere Einzelheiten finden Sie in [diesem Beispiel](#array-of-objects-example). |
+| Arrays | Angepasste Attribut-Arrays werden unterstützt. Wenn Sie ein Element hinzufügen, wird es an das Ende des Arrays angehängt. Wenn das Element bereits vorhanden ist, wird es von seiner aktuellen Position an das Ende verschoben.<br><br>Es werden nur eindeutige Werte gespeichert. Beispielsweise führt der Import von `['hotdog','hotdog','hotdog','pizza']` zu `['hotdog', 'pizza']`.<br><br>Sie können ein Array direkt festlegen (zum Beispiel `"my_array_custom_attribute":[ "Value1", "Value2" ]`), einem bestehenden Array mit `"my_array_custom_attribute" : { "add" : ["Value3"] }` etwas hinzufügen oder Werte mit `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}` entfernen.<br><br>Die Standard- und Höchstzahl an Elementen in einem Array beträgt 500. Sie können die Höchstzahl an Elementen im Braze-Dashboard unter **Dateneinstellungen** > **Angepasste Attribute** aktualisieren. Weitere Informationen finden Sie unter [Arrays]({{site.baseurl}}/developer_guide/analytics/#arrays). |
+| Array von Objekten | Verwenden Sie ein Objekt-Array, um eine Liste von Objekten zu definieren, wobei jedes Objekt eine Reihe von Attributen enthält. Verwenden Sie diesen Typ, um mehrere Sätze verwandter Daten für eine Nutzer:in zu speichern, wie beispielsweise Hotelaufenthalte, Kaufhistorie oder Präferenzen. <br><br>Definieren Sie beispielsweise ein angepasstes Attribut mit dem Namen `hotel_stays` in einem Nutzerprofil als Array, wobei jedes Objekt einen separaten Aufenthalt darstellt, mit Attributen wie `hotel_name`, `check_in_date` und `nights_stayed`. Weitere Informationen finden Sie unter [Beispiel für ein Objekt-Array](#array-of-objects-example). |
 | Boolesche Werte | `true` oder `false` |
-| Daten | Muss im Format [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) oder in einem der folgenden Formate gespeichert werden: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Beachten Sie, dass "T" ein Zeitbezeichner und kein Platzhalter ist und nicht geändert oder entfernt werden sollte. <br><br>Zeitattribute ohne Zeitzone sind standardmäßig auf Mitternacht UTC eingestellt (und werden auf dem Dashboard als das Äquivalent zu Mitternacht UTC in der Zeitzone des Unternehmens formatiert). <br><br> Bei Ereignissen mit Zeitstempeln in der Zukunft wird standardmäßig die aktuelle Zeit verwendet. <br><br> Bei regulären angepassten Attributen speichert Braze, wenn das Jahr kleiner als 0 oder größer als 3000 ist, diese Werte als Strings auf den Nutzer:innen. |
+| Daten | Speichern Sie Datumsangaben im [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)-Format oder in einem der folgenden Formate: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Beachten Sie, dass „T" ein Zeitbezeichner und kein Platzhalter ist und nicht geändert oder entfernt werden sollte. <br><br>Zeitattribute ohne Zeitzone werden standardmäßig auf Mitternacht UTC gesetzt (und im Dashboard als Entsprechung von Mitternacht UTC in der Zeitzone des Unternehmens formatiert). <br><br>Events mit Zeitstempeln in der Zukunft werden standardmäßig auf die aktuelle Zeit gesetzt. <br><br>Bei regulären angepassten Attributen speichert Braze den Wert als String im Nutzerprofil, wenn das Jahr kleiner als 0 oder größer als 3000 ist. |
 | Gleitkommazahlen | Gleitkommazahlen für angepasste Attribute sind positive oder negative Zahlen mit einem Dezimalpunkt. Sie können beispielsweise Gleitkommazahlen verwenden, um Kontostände oder Nutzer:innen-Bewertungen für Produkte oder Dienste zu speichern. |
-| Ganze Zahlen | Ganzzahlige angepasste Attribute können um positive oder negative ganze Zahlen erhöht werden, indem Sie ihnen ein Objekt mit dem Feld "inc" und dem Wert, um den sie erhöht werden sollen, zuweisen. <br><br>Beispiel: `"my_custom_attribute_2" : {"inc" : int_value},`|
-| Verschachtelte angepasste Attribute | Verschachtelte angepasste Attribute definieren eine Gruppe von Attributen als Eigenschaft eines anderen Attributs. Wenn Sie ein angepasstes Attribut-Objekt definieren, legen Sie eine Reihe von zusätzlichen Attributen für dieses Objekt fest. Weitere Informationen finden Sie unter [Verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/). |
-| Strings | Angepasste String Attribute sind Zeichenfolgen, die zum Speichern von Textdaten verwendet werden. Sie können zum Beispiel Strings verwenden, um Vor- und Nachnamen, E-Mail-Adressen oder Präferenzen zu speichern. |
+| Ganzzahlen | Sie können ganzzahlige angepasste Attribute erhöhen, indem Sie ein Objekt mit dem Feld „inc" und dem hinzuzufügenden Wert zuweisen. <br><br>Beispiel: `"my_custom_attribute_2" : {"inc" : int_value},`|
+| Verschachtelte angepasste Attribute | Verschachtelte angepasste Attribute definieren eine Gruppe von Attributen als Eigenschaft eines anderen Attributs. Wenn Sie ein angepasstes Attributobjekt definieren, fügen Sie diesem Objekt eine Reihe von Attributen hinzu. Weitere Informationen finden Sie unter [Verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/). |
+| Strings | Angepasste String-Attribute sind Zeichenfolgen, die zum Speichern von Textdaten verwendet werden. Sie können zum Beispiel Strings verwenden, um Vor- und Nachnamen, E-Mail-Adressen oder Präferenzen zu speichern. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Informationen darüber, wann Sie ein angepasstes Event und wann Sie ein angepasstes Attribut verwenden sollten, finden Sie in unserer Dokumentation zu [angepassten Events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) und [angepassten Attributen]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/).
+Informationen dazu, wann ein angepasstes Event und wann ein angepasstes Attribut verwendet werden sollte, finden Sie unter [Angepasste Events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) und [Angepasste Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/).
 {% endalert %}
 
 ##### Beispiel für ein Objekt-Array
@@ -102,55 +115,55 @@ Informationen darüber, wann Sie ein angepasstes Event und wann Sie ein angepass
 Mit diesem Array von Objekten können Sie Segmente auf der Grundlage bestimmter Kriterien innerhalb der Aufenthalte erstellen und Ihre Nachrichten anhand der Daten der einzelnen Aufenthalte mit Liquid-Templates personalisieren.
 
 ```json
-"hotel_stays": [
+{"hotel_stays": [
   { "hotel_name": "Ocean View Resort", "check_in_date": "2023-06-15", "nights_stayed": 5 },
   { "hotel_name": "Mountain Lodge", "check_in_date": "2023-09-10", "nights_stayed": 3 }
-  ]
+]}
 ```
 
-#### Felder des Nutzerprofils von Braze {#braze-user-profile-fields}
+#### Braze-Nutzerprofilfelder {#braze-user-profile-fields}
 
 {% alert important %}
-Bei den folgenden Feldern des Nutzerprofils wird zwischen Groß- und Kleinschreibung unterschieden. Achten Sie also darauf, dass Sie diese Felder in Kleinbuchstaben referenzieren.
+Bei den folgenden Nutzerprofilfeldern wird zwischen Groß- und Kleinschreibung unterschieden. Achten Sie daher darauf, diese Felder in Kleinbuchstaben zu referenzieren.
 {% endalert %}
 
-| Feld Nutzer:in | Spezifikation des Datentyps |
+| Nutzerprofilfeld | Datentyp-Spezifikation |
 | ---| --- |
 | alias_name | (String) |
 | alias_label | (String) |
-| braze_id | (String, optional) Wenn ein Nutzerprofil vom SDK erkannt wird, wird ein anonyme Nutzer:in-Profil mit einem zugehörigen `braze_id` erstellt. Die `braze_id` wird von Braze automatisch zugewiesen, kann nicht bearbeitet werden und ist gerätespezifisch. |
-| Land | (String) Wir verlangen, dass die Ländercodes im [ISO-3166-1 alpha-2 Standard](http://en.wikipedia.org/wiki/ISO_3166-1) an Braze übergeben werden. Unsere API ist bestrebt, die in verschiedenen Formaten empfangenen Länder abzubilden. Zum Beispiel kann "Australien" auf "AU" abgebildet werden. Wenn die Eingabe jedoch nicht mit einem bestimmten [ISO-3166-1 alpha-2 Standard](http://en.wikipedia.org/wiki/ISO_3166-1) übereinstimmt, wird der Länderwert auf `NULL` gesetzt. <br><br>Wenn Sie `country` für einen Nutzer:innen per CSV-Import oder API einstellen, verhindert Braze, dass diese Informationen automatisch über das SDK erfasst werden. |
-| current_location | (object) Der Form {"longitude": -73.991443, "latitude": 40.753824} |
-| date_of_first_session | (Datum, an dem der Nutzer:innen die App zum ersten Mal benutzt hat) String im Format ISO 8601 oder in einem der folgenden Formate: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
-| date_of_last_session | (Datum, an dem der Nutzer:innen die App zuletzt benutzt hat) String im Format ISO 8601 oder in einem der folgenden Formate: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY`  |
-| Geburtsdatum | (Geburtsdatum) String im Format "JJJJ-MM-TT", zum Beispiel 1980-12-21. |
-| E-Mail | (String) |
-| email_subscribe | (String) Verfügbare Werte sind "opted_in" (explizit für den Erhalt von E-Mail-Nachrichten registriert), "abgemeldet" (explizit gegen E-Mail-Nachrichten) und "abonniert" (weder Opt-in noch Opt-out).  |
-| email_open_tracking_disabled |(boolesch) `true` oder `false` akzeptiert. Setzen Sie diese Option auf `true`, um zu verhindern, dass das Tracking-Pixel für die Öffnung zu allen zukünftigen E-Mails hinzugefügt wird, die an diese Nutzer:innen gesendet werden. Nur für SparkPost und SendGrid verfügbar.|
-| email_click_tracking_disabled |(boolesch) `true` oder `false` akzeptiert. Setzen Sie diese Option auf `true`, um das Tracking von Klicks für alle Links in einer zukünftigen E-Mail an diesen Nutzer:innen zu deaktivieren. Nur für SparkPost und SendGrid verfügbar.|
-| external_id | (String) Ein eindeutiger Bezeichner für ein Nutzerprofil. Nach der Zuweisung eines `external_id` identifiziert Braze das Nutzerprofil auf allen Geräten eines Nutzers:innen. Bei der ersten Instanz, in der einem unbekannten Nutzerprofil eine external_id zugewiesen wird, migriert Braze alle vorhandenen Nutzerdaten in das neue Nutzerprofil. |
-| Facebook | Hash mit einem der folgenden Werte: `id` (String), `likes` (String-Array), `num_friends` (Ganzzahl). |
+| braze_id | (String, optional) Wenn ein Nutzerprofil vom SDK erkannt wird, wird ein anonymes Nutzerprofil mit einer zugehörigen `braze_id` erstellt. Die `braze_id` wird von Braze automatisch zugewiesen, kann nicht bearbeitet werden und ist gerätespezifisch. |
+| country | (String) Wir verlangen, dass Ländercodes im [ISO-3166-1 alpha-2 Standard](http://en.wikipedia.org/wiki/ISO_3166-1) an Braze übergeben werden. Unsere API bemüht sich nach besten Kräften, Länder, die in unterschiedlichen Formaten empfangen werden, zuzuordnen. Zum Beispiel kann „Australia" auf „AU" abgebildet werden. Wenn die Eingabe jedoch nicht dem [ISO-3166-1 alpha-2 Standard](http://en.wikipedia.org/wiki/ISO_3166-1) entspricht, wird der Länderwert auf `NULL` gesetzt. <br><br>Durch das Festlegen von `country` bei einer Nutzer:in per CSV-Import oder API wird verhindert, dass Braze diese Informationen automatisch über das SDK erfasst. |
+| current_location | (Objekt) In der Form {"longitude": -73.991443, "latitude": 40.753824} |
+| date_of_first_session | (Datum, an dem die Nutzer:in die App zum ersten Mal verwendet hat) String im ISO-8601-Format oder in einem der folgenden Formate: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
+| date_of_last_session | (Datum, an dem die Nutzer:in die App zuletzt verwendet hat) String im ISO-8601-Format oder in einem der folgenden Formate: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY`  |
+| dob | (Geburtsdatum) String im Format „YYYY-MM-DD", zum Beispiel 1980-12-21. |
+| email | (String) |
+| email_subscribe | (String) Verfügbare Werte sind „opted_in" (ausdrücklich für den Empfang von E-Mail-Nachrichten registriert), „unsubscribed" (ausdrücklich vom Empfang von E-Mail-Nachrichten abgemeldet) und „subscribed" (weder angemeldet noch abgemeldet).  |
+| email_open_tracking_disabled | (Boolescher Wert) `true` oder `false` akzeptiert. Setzen Sie diese Option auf `true`, um zu verhindern, dass das Tracking-Pixel für die Öffnung zu allen zukünftigen E-Mails hinzugefügt wird, die an diese Nutzer:in gesendet werden. Nur für SparkPost und SendGrid verfügbar.|
+| email_click_tracking_disabled | (Boolescher Wert) `true` oder `false` akzeptiert. Setzen Sie diese Option auf `true`, um das Klick-Tracking für alle Links in zukünftigen E-Mails an diese Nutzer:in zu deaktivieren. Nur für SparkPost und SendGrid verfügbar.|
+| external_id | (String) Ein eindeutiger Bezeichner für ein Nutzerprofil. Nach der Zuweisung einer `external_id` identifiziert Braze das Nutzerprofil auf allen Geräten der Nutzer:in. Bei der erstmaligen Zuweisung einer external_id zu einem unbekannten Nutzerprofil migriert Braze alle vorhandenen Nutzerprofildaten in das neue Nutzerprofil. |
+| facebook | Hash mit einem der folgenden Werte: `id` (String), `likes` (String-Array), `num_friends` (Ganzzahl). |
 | first_name | (String) |
-| Geschlecht | (String) "M", "F", "O" (andere), "N" (nicht zutreffend), "P" (lieber nicht sagen) oder nil (unbekannt). |
+| gender | (String) „M", „F", „O" (andere), „N" (nicht zutreffend), „P" (lieber nicht sagen) oder nil (unbekannt). |
 | home_city | (String) |
-| Sprache | (String) verlangen wir, dass die Sprache im [ISO-639-1-Standard](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) an Braze übergeben wird. Die unterstützten Sprachen finden Sie in unserer [Liste der akzeptierten Sprachen]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/).<br><br>Wenn Sie `language` für einen Nutzer:innen per CSV-Import oder API einstellen, verhindert Braze, dass diese Informationen automatisch über das SDK erfasst werden. |
+| language | (String) Wir verlangen, dass die Sprache im [ISO-639-1 Standard](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) an Braze übergeben wird. Die unterstützten Sprachen finden Sie in unserer [Liste der akzeptierten Sprachen]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/).<br><br>Durch das Festlegen von `language` bei einer Nutzer:in per CSV-Import oder API wird verhindert, dass Braze diese Informationen automatisch über das SDK erfasst. |
 | last_name | (String) |
-| marked_email_as_spam_at | (String) Datum, an dem die E-Mail des Nutzers:in als Spam markiert wurde. Erscheint im Format ISO 8601 oder in einem der folgenden Formate: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
-| Telefon | (String) Wir empfehlen die Angabe von Telefonnummern im [E.164](https://en.wikipedia.org/wiki/E.164) Format anzugeben. Weitere Informationen finden Sie unter [Nutzer:innen Telefonnummern]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#formatting).|
-| push_subscribe | (String) Verfügbare Werte sind "opted_in" (explizit für den Empfang von Push-Nachrichten registriert), "abgemeldet" (explizit von Push-Nachrichten abgemeldet) und "abonniert" (weder Opt-in noch abgemeldet).  |
-| push_tokens | Array von Objekten mit `app_id` und `token` String. Sie können optional eine `device_id` für das Gerät angeben, mit dem dieses Token verbunden ist, z.B. `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. Wenn keine `device_id` angegeben wird, wird eine zufällig generiert. |
-| subscription_groups| Array von Objekten mit `subscription_group_id` und `subscription_state` String, zum Beispiel `[{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed"}]`. Verfügbare Werte für `subscription_state` sind "Abonnent:in" und "abgemeldet".|
-| time_zone | (String) Der Name der Zeitzone aus der [IANA-Zeitzonendatenbank](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (zum Beispiel "America/New_York" oder "Eastern Time (US & Canada)"). Es werden nur gültige Zeitzonenwerte eingestellt. |
-| Twitter | Hash mit einem der folgenden Werte: `id` (Ganzzahl), `screen_name` (String, X (ehemals Twitter) Handle), `followers_count` (Ganzzahl), `friends_count` (Ganzzahl), `statuses_count` (Ganzzahl). |
+| marked_email_as_spam_at | (String) Datum, an dem die E-Mail der Nutzer:in als Spam markiert wurde. Erscheint im ISO-8601-Format oder in einem der folgenden Formate: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
+| phone | (String) Wir empfehlen die Angabe von Telefonnummern im [E.164](https://en.wikipedia.org/wiki/E.164)-Format. Weitere Informationen finden Sie unter [Nutzer:innen-Telefonnummern]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#formatting).|
+| push_subscribe | (String) Verfügbare Werte sind „opted_in" (ausdrücklich für den Empfang von Push-Nachrichten registriert), „unsubscribed" (ausdrücklich vom Empfang von Push-Nachrichten abgemeldet) und „subscribed" (weder angemeldet noch abgemeldet).  |
+| push_tokens | Array von Objekten mit `app_id` und `token` String. Sie können optional eine `device_id` für das Gerät angeben, mit dem dieses Token verknüpft ist, z. B. `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. Wenn keine `device_id` angegeben wird, wird eine zufällig generiert. |
+| subscription_groups| Array von Objekten mit `subscription_group_id` und `subscription_state` String, zum Beispiel `[{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed"}]`. Verfügbare Werte für `subscription_state` sind „subscribed" und „unsubscribed".|
+| time_zone | (String) Name der Zeitzone aus der [IANA-Zeitzonendatenbank](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (zum Beispiel „America/New_York" oder „Eastern Time (US & Canada)"). Es werden nur gültige Zeitzonenwerte festgelegt. |
+| twitter | Hash mit einem der folgenden Werte: `id` (Ganzzahl), `screen_name` (String, X (ehemals Twitter) Handle), `followers_count` (Ganzzahl), `friends_count` (Ganzzahl), `statuses_count` (Ganzzahl). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Sprachwerte, die explizit über diese API festgelegt werden, haben Vorrang vor den Gebietsschema-Informationen, die Braze automatisch vom Gerät erhält.
+Sprachwerte, die explizit über diese API festgelegt werden, haben Vorrang vor den Gebietsschemainformationen, die Braze automatisch vom Gerät erhält.
 
-####  Beispiel für eine Anfrage zum Attribut Nutzer:in
+####  Beispiel für eine Nutzer:innen-Attribut-Anfrage
 
-Dieses Beispiel enthält vier Attribut-Objekte für Nutzer:innen, von insgesamt 75 zulässigen Attribut-Objekten pro API-Aufruf.
+Dieses Beispiel enthält vier Nutzer:innen-Attribute-Objekte, von insgesamt 75 zulässigen Attribut-Objekten pro API-Aufruf.
 
-```json
+```http
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -185,31 +198,31 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Migration von Push-Tokens
 
-Wenn Sie vor der Integration von Braze bereits Push-Benachrichtigungen versendet haben, entweder selbst oder über einen anderen Anbieter, ist es mit der Push-Token Migration zulässig, weiterhin Push-Benachrichtigungen an Ihre Nutzer:innen mit registrierten Push-Token zu senden.
+Wenn Sie vor der Integration von Braze bereits Push-Benachrichtigungen versendet haben – entweder selbst oder über einen anderen Anbieter –, ermöglicht Ihnen die Push-Token-Migration, weiterhin Push-Benachrichtigungen an Ihre Nutzer:innen mit registrierten Push-Tokens zu senden.
 
 ### Automatische Migration über SDK
 
-Nach der [Integration des Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/) werden die Push-Token für Ihre Opt-in Nutzer:innen automatisch migriert, wenn sie Ihre App das nächste Mal öffnen. Bis dahin können Sie diesen Nutzer:innen keine Push-Benachrichtigungen über Braze zukommen lassen.
+Nach der [Integration des Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/) werden die Push-Tokens für Ihre Opt-in-Nutzer:innen automatisch migriert, sobald diese Ihre App das nächste Mal öffnen. Bis dahin können Sie diesen Nutzer:innen keine Push-Benachrichtigungen über Braze senden.
 
-Alternativ können Sie [Ihre Push-Token auch manuell migrieren](#manual-migration-via-api), was eine schnellere erneute Interaktion mit Ihren Nutzer:innen zulässt.
+Alternativ können Sie [Ihre Push-Tokens auch manuell migrieren](#manual-migration-via-api), was eine schnellere erneute Interaktion mit Ihren Nutzer:innen ermöglicht.
 
-#### Überlegungen zum Internet Token
+#### Überlegungen zu Web-Tokens
 
-Aufgrund der Natur von Web-Push-Tokens sollten Sie bei der Implementierung von Push für das Internet Folgendes beachten:
+Aufgrund der Natur von Web-Push-Tokens sollten Sie bei der Implementierung von Push für das Web Folgendes beachten:
 
-|Betrachtung|Details|
+|Überlegung|Details|
 |----------------------|------------|
-| **Service-Teammitglieder**  | Standardmäßig sucht das Internet SDK unter `./service-worker` nach einem Service-Teammitglied, es sei denn, es wird eine andere Option angegeben, wie `manageServiceWorkerExternally` oder `serviceWorkerLocation`. Wenn Ihr Service-Teammitglied nicht richtig eingerichtet ist, kann dies dazu führen, dass Push-Token für Ihre Nutzer:innen ablaufen. |
-| **Abgelaufene Token**   | Wenn ein Nutzer:innen innerhalb von 60 Tagen keine Internetsitzung gestartet hat, verfällt sein Push-Token. Da Braze abgelaufene Push-Token nicht migrieren kann, müssen Sie einen [Push-Primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages) senden, um sie erneut zu engagieren. |
+| **Service Worker**  | Standardmäßig sucht das Web SDK nach einem Service Worker unter `./service-worker`, sofern keine andere Option angegeben ist, wie beispielsweise `manageServiceWorkerExternally` oder `serviceWorkerLocation`. Wenn Ihr Service Worker nicht richtig eingerichtet ist, kann dies dazu führen, dass Push-Tokens für Ihre Nutzer:innen ablaufen. |
+| **Abgelaufene Tokens**   | Wenn eine Nutzer:in innerhalb von 60 Tagen keine Web-Sitzung gestartet hat, verfällt ihr Push-Token. Da Braze abgelaufene Push-Tokens nicht migrieren kann, müssen Sie einen [Push-Primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages) senden, um erneut mit ihnen in Interaktion zu treten. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-### Manuelle Migration über APIs
+### Manuelle Migration über API
 
-Bei der manuellen Push-Token Migration werden diese zuvor erstellten Schlüssel über die API in Ihre Braze Plattform importiert.
+Bei der manuellen Push-Token-Migration werden diese zuvor erstellten Schlüssel über die API in Ihre Braze-Plattform importiert.
 
-Programmatische Migration von iOS- (APNs) und Android- (FCM) Token auf Ihre Plattform mit Hilfe des [Endpunkts`users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Sie können sowohl identifizierte Nutzer:in (Nutzer mit einer zugehörigen externen ID) als auch anonyme Nutzer:innen (Nutzer ohne externe ID) migrieren.
+Migrieren Sie iOS- (APNs) und Android- (FCM) Tokens programmatisch auf Ihre Plattform mithilfe des [`users/track`-Endpunkts]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Sie können sowohl identifizierte Nutzer:innen (Nutzer:innen mit einer zugehörigen externen ID) als auch anonyme Nutzer:innen (Nutzer:innen ohne externe ID) migrieren.
 
-Geben Sie während der Push-Token Migration die `app_id` Ihrer App an, um das entsprechende Push-Token mit der entsprechenden App zu verknüpfen. Jede App (iOS, Android, etc.) hat ihre eigene `app_id`, die Sie im Abschnitt **Identifikation** auf der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) finden. Achten Sie darauf, dass Sie die richtige Plattform `app_id` verwenden.
+Geben Sie während der Push-Token-Migration die `app_id` Ihrer App an, um das entsprechende Push-Token mit der entsprechenden App zu verknüpfen. Jede App (iOS, Android usw.) hat ihre eigene `app_id`, die Sie im Abschnitt **Identifikation** auf der Seite [API-Schlüssel]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) finden. Achten Sie darauf, dass Sie die richtige `app_id` der jeweiligen Plattform verwenden.
 
 {% alert important %}
 Es ist nicht möglich, Web-Push-Tokens über die API zu migrieren. Das liegt daran, dass Web-Push-Tokens nicht demselben Schema entsprechen wie andere Plattformen.
@@ -217,16 +230,16 @@ Es ist nicht möglich, Web-Push-Tokens über die API zu migrieren. Das liegt dar
 <br>Wenn Sie versuchen, Web-Push-Tokens programmatisch zu migrieren, wird möglicherweise eine Fehlermeldung wie die folgende angezeigt: `Received '400: Invalid subscription auth' sending to 'https://fcm.googleapis.com/fcm/send`
 
 <br>
-Als Alternative zur API-Migration empfehlen wir Ihnen, das SDK zu integrieren und zuzulassen, dass sich Ihre Token-Basis auf natürliche Weise neu füllt.
+Als Alternative zur API-Migration empfehlen wir Ihnen, das SDK zu integrieren und Ihre Token-Basis auf natürliche Weise neu aufbauen zu lassen.
 {% endalert %}
 
 {% tabs local %}
 {% tab External ID present %}
-Für identifizierte Nutzer:innen setzen Sie das Kennzeichen `push_token_import` auf `false` (oder lassen den Parameter weg) und geben die Werte `external_id`, `app_id` und `token` im Objekt `attributes` des Nutzers an.
+Für identifizierte Nutzer:innen setzen Sie das Kennzeichen `push_token_import` auf `false` (oder lassen den Parameter weg) und geben die Werte `external_id`, `app_id` und `token` im `attributes`-Objekt der Nutzer:in an.
 
 Zum Beispiel:
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
@@ -248,11 +261,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 {% endtab %}
 
 {% tab External ID missing %}
-Beim Importieren von Push-Tokens aus anderen Systemen ist nicht immer eine `external_id` verfügbar. In diesem Fall setzen Sie das Kennzeichen `push_token_import` auf `true` und geben die Werte `app_id` und `token` an. Braze erstellt für jedes Token ein temporäres, anonymes Nutzerprofil, damit Sie diesen Personen weiterhin Nachrichten schicken können. Wenn das Token bereits in Braze existiert, wird die Anfrage ignoriert.
+Beim Importieren von Push-Tokens aus anderen Systemen ist nicht immer eine `external_id` verfügbar. In diesem Fall setzen Sie das Kennzeichen `push_token_import` auf `true` und geben die Werte `app_id` und `token` an. Braze erstellt für jedes Token ein temporäres, anonymes Nutzerprofil, damit Sie weiterhin Nachrichten an diese Personen senden können. Wenn das Token bereits in Braze existiert, wird die Anfrage ignoriert.
 
 Zum Beispiel:
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
@@ -284,22 +297,22 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 }'
 ```
 
-Wenn der anonyme Nutzer:in nach dem Import die Braze-fähige Version Ihrer App startet, verschiebt Braze das importierte Push-Token automatisch in sein Nutzerprofil und bereinigt das temporäre Profil.
+Nach dem Import verschiebt Braze automatisch das importierte Push-Token in das Braze-Nutzerprofil, sobald die anonyme Nutzer:in die Braze-fähige Version Ihrer App startet, und bereinigt das temporäre Profil.
 
-Braze sucht einmal im Monat nach anonymen Profilen mit dem Kennzeichen `push_token_import`, die kein Push-Token haben. Wenn das anonyme Profil keinen Push-Token mehr hat, löscht Braze das Profil. Wenn das anonyme Profil jedoch immer noch ein Push-Token hat, was darauf hindeutet, dass der tatsächliche Nutzer sich noch nicht mit diesem Push-Token am Gerät angemeldet hat, unternimmt Braze nichts.
+Braze überprüft einmal im Monat, ob es anonyme Profile mit dem `push_token_import`-Flag gibt, die keinen Push-Token haben. Wenn das anonyme Profil keinen Push-Token mehr aufweist, wird das Profil von Braze gelöscht. Wenn das anonyme Profil jedoch weiterhin über einen Push-Token verfügt – was darauf hindeutet, dass sich die tatsächliche Nutzer:in noch nicht mit diesem Push-Token beim Gerät angemeldet hat –, unternimmt Braze keine Maßnahmen.
 {% endtab %}
 {% endtabs %}
 
-### Importieren von Android Push-Tokens
+### Importieren von Android-Push-Tokens
 
 {% alert important %}
-Die folgenden Überlegungen gelten nur für Android-Apps. iOS-Apps benötigen diese Schritte nicht, da diese Plattform nur ein Framework für die Anzeige von Push hat und Push-Benachrichtigungen sofort gerendert werden, solange Braze über die erforderlichen Push-Token und Zertifikate verfügt.
+Die folgenden Überlegungen gelten nur für Android-Apps. iOS-Apps erfordern diese Schritte nicht, da diese Plattform nur über ein Framework für die Anzeige von Push-Benachrichtigungen verfügt und Push-Benachrichtigungen sofort gerendert werden, solange Braze über die erforderlichen Push-Tokens und Zertifikate verfügt.
 {% endalert %}
 
-Wenn Sie Android Push-Benachrichtigungen an Ihre Nutzer:innen senden müssen, bevor die Braze SDK-Integration abgeschlossen ist, verwenden Sie Schlüssel-Wert-Paare, um Push-Benachrichtigungen zu validieren.
+Wenn Sie Android-Push-Benachrichtigungen an Ihre Nutzer:innen senden müssen, bevor die Braze-SDK-Integration abgeschlossen ist, verwenden Sie Schlüssel-Wert-Paare, um Push-Benachrichtigungen zu validieren.
 
-Sie müssen über einen Empfänger verfügen, der Push-Nutzdaten verarbeiten und anzeigen kann. Um den Empfänger der Push-Nutzdaten zu benachrichtigen, fügen Sie der Kampagne die erforderlichen Schlüssel-Wert-Paare hinzu. Die Werte dieser Paare hängen von dem Push-Partner ab, den Sie vor Braze verwendet haben.
+Sie müssen über einen Empfänger verfügen, der Push-Nutzdaten verarbeiten und anzeigen kann. Um den Empfänger über die Push-Nutzdaten zu benachrichtigen, fügen Sie der Push-Kampagne die erforderlichen Schlüssel-Wert-Paare hinzu. Die Werte dieser Paare hängen von dem Push-Partner ab, den Sie vor Braze verwendet haben.
 
 {% alert note %}
-Bei einigen Anbietern von Push-Benachrichtigungen muss Braze die Schlüssel-Wert-Paare glätten, damit sie richtig interpretiert werden können. Um Schlüssel-Wert-Paare für eine bestimmte Android App zu reduzieren, wenden Sie sich an Ihren Customer-Success-Manager:in.
+Bei einigen Anbietern von Push-Benachrichtigungen muss Braze die Schlüssel-Wert-Paare vereinfachen, damit sie korrekt interpretiert werden können. Um Schlüssel-Wert-Paare für eine bestimmte Android-App zu vereinfachen, wenden Sie sich bitte an Ihren Customer-Success-Manager.
 {% endalert %}

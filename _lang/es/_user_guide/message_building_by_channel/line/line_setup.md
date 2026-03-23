@@ -3,7 +3,7 @@ nav_title: Configuración LINE
 article_title: Configuración de LÍNEA
 description: "Este artículo explica cómo configurar el canal Braze LINE, incluidos los requisitos previos y los siguientes pasos sugeridos."
 page_type: partner
-search_tag: Partner
+search_tag: Socio
 page_order: 0
 channel:
  - LINE
@@ -25,10 +25,10 @@ Necesitarás lo siguiente para integrar LINE con Braze:
 - [Cuenta de desarrolladores de LINE](https://developers.line.biz/en/docs/line-developers-console/login-account/)
 - [Canal API de mensajería LINE](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
 
-Para enviar mensajes de LINE desde Braze se utilizan los Créditos de Mensajes de tu cuenta.
+El envío de mensajes LINE desde Braze se deduce de los créditos de mensajes de tu cuenta.
 
 {% alert note %}
-**Configuración de `native_line_id`**: Puedes configurar `native_line_id` enviando actualizaciones de usuario a Braze (por ejemplo, con el punto final de [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) punto final, [importación CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) o [ingestión de datos en la nube]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). Si tu SDK del lado del cliente no tiene un campo dedicado para `native_line_id`, envíalo en las actualizaciones de usuario del lado del servidor utilizando uno de estos métodos.
+**Configuración`native_line_id`**: Puedes configurarlo`native_line_id`enviando actualizaciones de usuarios a Braze (por ejemplo, con el[`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)punto final, [la importación CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) o [la ingesta de datos en la nube]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). Si tu SDK del lado del cliente no tiene un campo dedicado para `native_line_id`, envíalo en las actualizaciones de usuario del lado del servidor utilizando uno de estos métodos.
 {% endalert %}
 
 ## Tipos de cuentas LINE
@@ -66,7 +66,7 @@ Para configurar actualizaciones de usuario coherentes, traslada los ID de LINE d
 5. [(Opcional) Fusionar perfiles de usuario](#step-5-merge-profiles-optional)
 
 {% alert note %}
-Sólo puedes tener una cuenta LINE en un mismo espacio de trabajo. Si tienes varias cuentas de LINE, te recomendamos que utilices cada una en un espacio de trabajo diferente.
+Solo puedes tener una cuenta de LINE en un único espacio de trabajo. Si tienes varias cuentas de LINE, te recomendamos que utilices cada una de ellas en un espacio de trabajo diferente.
 {% endalert %}
 
 ## Paso 1: Importar o actualizar usuarios existentes de LINE
@@ -97,7 +97,7 @@ Una vez completado el proceso de integración, Braze incorporará automáticamen
 | --- | --- |
 | ID del proveedor | Seleccione su proveedor y vaya a **\*Configuración** > **Información básica** |
 | ID del canal | Seleccione su proveedor y vaya a **Canales** > su canal > **Ajustes básicos** |
-| Secreto del canal | Selecciona tu proveedor y luego ve a **Canales** > tu canal > **Configuración básica**. |
+| Secreto del canal | Selecciona tu proveedor y, a continuación, ve a **Canales** > tu canal > **Configuración básica**. |
 | Token de acceso al canal | Seleccione su proveedor y, a continuación, vaya a **Canales** > su canal > **API de mensajería**. Si no hay un token de acceso al canal, selecciona **Emitir**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -117,10 +117,10 @@ Una vez completado el proceso de integración, Braze incorporará automáticamen
    - Secreto del canal
    - Token de acceso al canal
 
-Si quieres añadir una lista blanca de IP en tu cuenta de LINE, añade a tu lista de permitidas todas las direcciones IP que aparecen para tu clúster en la [lista de permitidas de IP]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-allowlisting).
+Si deseas añadir una lista blanca de direcciones IP en tu cuenta de LINE, añade todas las direcciones IP que figuran para tu clúster en [la lista blanca de direcciones IP]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-allowlisting) a tu lista blanca.
 
 {% alert important %}
-Durante la integración, asegúrate de que el secreto de tu canal es correcto. Si es incorrecto, puede haber incoherencias en el estado de la suscripción.
+Durante la integración, asegúrate de que el secreto de tu canal sea correcto. Si es incorrecto, puede haber inconsistencias en el estado de la suscripción.
 {% endalert %}
 
 ![Página de integración de mensajería LINE con la sección de integración LINE.]({% image_buster /assets/img/line/integration.png %}){: style="max-width:80%;"}
@@ -182,7 +182,7 @@ Aquí tienes un ejemplo de carga útil para `/users/track` que actualiza un perf
 
 ## Paso 5: Fusionar perfiles (opcional)
 
-Como se ha descrito anteriormente, existe la posibilidad de que existan varios perfiles de usuario con el mismo `native_line_id`. Si tus métodos de actualización crean perfiles de usuario duplicados, puedes fusionar perfiles de usuario no identificados con perfiles de usuario identificados con el punto final `/user/merge`. 
+Como se ha descrito anteriormente, existe la posibilidad de que haya varios perfiles de usuario con el mismo `native_line_id`. Si tus métodos de actualización crean perfiles de usuario duplicados, puedes fusionar perfiles de usuario no identificados con perfiles de usuario identificados con el punto final `/user/merge`. 
 
 He aquí un ejemplo de carga útil para `/users/merge` que se dirige a un perfil de usuario no identificado por el alias de usuario `line_id`:
 
@@ -328,7 +328,7 @@ Para obtener el ID de LINE correcto para cada usuario, inicia sesión en LINE co
 
 Este método permite a los usuarios vincular su cuenta de LINE a la cuenta de usuario de tu aplicación. A continuación, puedes utilizar Liquid en Braze, como {% raw %}`{{line_id}}`{% endraw %}, para crear una URL personalizada para el usuario que devuelva el ID de LINE del usuario a tu sitio web o aplicación, que podrá asociarse a un usuario conocido.
 
-1. Crea un Canvas basado en acciones que se base en un cambio de estado de suscripción y se desencadene cuando un usuario se suscriba a tu canal de LINE.<br>![Canvas que se desencadena cuando un usuario se suscribe al canal LINE.]({% image_buster /assets/img/line/account_link_1.png %})
+1. Crea un Canvas basado en acciones que se base en un cambio de estado de suscripción y se desencadene cuando un usuario se suscriba a tu canal de LINE.<br>![Canvas que se desencadena cuando un usuario se convierte en suscriptor del canal de LINE.]({% image_buster /assets/img/line/account_link_1.png %})
 2. Crea un mensaje que incentive a los usuarios a iniciar sesión en tu sitio web o aplicación, pasando el ID de LINE del usuario como parámetro de consulta (a través de Liquid), como por ejemplo
 
 ```

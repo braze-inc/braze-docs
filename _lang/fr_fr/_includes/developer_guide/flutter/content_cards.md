@@ -1,30 +1,30 @@
-## À propos des cartes de contenu de Flutter
+## À propos des cartes de contenu Flutter
 
-Le SDK Braze comprend un flux de cartes par défaut pour vous permettre de vous lancer dans les cartes de contenu. Pour afficher le flux de carte, vous pouvez utiliser la méthode `braze.launchContentCards()`. Le flux de cartes par défaut inclus avec le SDK Braze traitera tous les suivis, les masquages et le rendu des cartes de contenu d’un utilisateur.
+Le SDK Braze comprend un flux de cartes par défaut pour vous permettre de démarrer avec les cartes de contenu. Pour afficher ce flux, utilisez la méthode `braze.launchContentCards()`. Le flux de cartes par défaut inclus avec le SDK Braze gère l'ensemble du suivi analytique, des masquages et du rendu des cartes de contenu d'un utilisateur.
 
 {% multi_lang_include developer_guide/prerequisites/flutter.md %}
 
 ## Méthodes de carte
 
-Vous pouvez utiliser ces méthodes supplémentaires pour créer un flux de cartes de contenu personnalisé dans votre application en utilisant les méthodes suivantes disponibles sur l'[interface publique du plugin](https://github.com/braze-inc/braze-flutter-sdk/blob/master/lib/braze_plugin.dart):
+Vous pouvez utiliser ces méthodes supplémentaires pour créer un flux de cartes de contenu personnalisé dans votre application, disponibles sur l'[interface publique du plugin](https://github.com/braze-inc/braze-flutter-sdk/blob/master/lib/braze_plugin.dart) :
 
 | Méthode                                         | Description                                                                                            |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `braze.requestContentCardsRefresh()`     | Demande les dernières cartes de contenu au serveur Braze SDK.                                           |
-| `braze.logContentCardClicked(contentCard)`    | Enregistre un clic pour l’objet de carte de contenu donné.                                                            |
-| `braze.logContentCardImpression(contentCard)` | Enregistre une impression pour l’objet de carte de contenu donné.                                                      |
-| `braze.logContentCardDismissed(contentCard)`  | Enregistre un abandon pour l’objet de carte de contenu donné.                                                        |
+| `braze.requestContentCardsRefresh()`     | Demande les dernières cartes de contenu au serveur du SDK Braze.                                           |
+| `braze.logContentCardClicked(contentCard)`    | Enregistre un clic pour l'objet de carte de contenu donné.                                                            |
+| `braze.logContentCardImpression(contentCard)` | Enregistre une impression pour l'objet de carte de contenu donné.                                                      |
+| `braze.logContentCardDismissed(contentCard)`  | Enregistre un masquage pour l'objet de carte de contenu donné.                                                        |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Réception des données de cartes de contenu
 
-Pour recevoir des données de cartes de contenu dans votre application Flutter, le `BrazePlugin` prend en charge l'envoi de données de cartes de contenu à l’aide de [Dart Streams](https://dart.dev/tutorials/language/streams).
+Pour recevoir des données de cartes de contenu dans votre application Flutter, le `BrazePlugin` prend en charge l'envoi de données de cartes de contenu à l'aide de [Dart Streams](https://dart.dev/tutorials/language/streams).
 
-L’[objet](https://pub.dev/documentation/braze_plugin/latest/braze_plugin/BrazeContentCard-class.html) `BrazeContentCard` prend en charge un sous-ensemble de champs disponibles dans les objets du modèle natif, y compris `description`, `title`, `image`, `url`, `extras` et plus encore.
+L'[objet](https://pub.dev/documentation/braze_plugin/latest/braze_plugin/BrazeContentCard-class.html) `BrazeContentCard` prend en charge un sous-ensemble de champs disponibles dans les objets du modèle natif, notamment `description`, `title`, `image`, `url`, `extras`, et plus encore.
 
-### Étape 1 : Écoutez les données de la carte de contenu dans la couche Dart
+### Écouter les données de cartes de contenu dans la couche Dart
 
-Pour recevoir les données de cartes de contenu dans la couche Dart, utilisez le code ci-dessous pour créer un `StreamSubscription` et appeler `braze.subscribeToContentCards()`. N’oubliez pas de `cancel()` l’abonnement au flux lorsqu’il n’est plus nécessaire.
+Pour recevoir les données de cartes de contenu dans la couche Dart, utilisez le code ci-dessous pour créer un `StreamSubscription` et appeler `braze.subscribeToContentCards()`. N'oubliez pas d'appeler `cancel()` sur l'abonnement au flux lorsqu'il n'est plus nécessaire.
 
 ```dart
 // Create stream subscription
@@ -38,25 +38,28 @@ contentCardsStreamSubscription = braze.subscribeToContentCards((List<BrazeConten
 contentCardsStreamSubscription.cancel();
 ```
 
-Consultez [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart) dans notre exemple d'application.
+Pour un exemple, consultez [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart) dans l'application exemple du SDK Flutter de Braze.
 
-### Étape 2 : Transférer les données de la carte de contenu depuis la couche native
+### Transférer les données de cartes de contenu depuis la couche native iOS
 
-{% alert note %}
-Cette étape est réservée à iOS. Les données de la carte de contenu sont automatiquement transférées depuis la couche Android.
-{% endalert %}
+{% tabs %}
+{% tab Flutter SDK 18.0.0+ %}
 
-Pour recevoir les données dans la couche Dart de l'étape 1, ajoutez le code suivant pour transmettre les données de la carte de contenu depuis la couche native iOS.
+Les données de cartes de contenu sont automatiquement transférées depuis les couches natives Android et iOS. Aucune configuration supplémentaire n'est requise.
 
-1. Implémentez `contentCards.subscribeToUpdates` pour vous abonner aux mises à jour des cartes de contenu comme décrit dans la documentation [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)).
+{% endtab %}
+{% tab Flutter SDK 17.1.0 and earlier %}
 
-2. Votre implémentation de fonction de rappel `contentCards.subscribeToUpdates` doit appeler `BrazePlugin.processContentCards(contentCards)`.
+Si vous utilisez le SDK Flutter 17.1.0 ou une version antérieure, le transfert des données de cartes de contenu depuis la couche native iOS nécessite une configuration manuelle. Votre application contient probablement un rappel `contentCards.subscribeToUpdates` qui appelle `BrazePlugin.processContentCards(contentCards)`. Pour migrer vers le SDK Flutter 18.0.0, supprimez l'appel à `BrazePlugin.processContentCards(_:)` — le transfert des données est désormais géré automatiquement.
 
-Consultez [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) dans notre exemple d'application.
+Pour un exemple, consultez [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) dans l'application exemple du SDK Flutter de Braze.
 
-#### Rejouer la fonction de rappel pour les cartes de contenu
+{% endtab %}
+{% endtabs %}
 
-Pour enregistrer n’importe quelle carte de contenu déclenchée avant que la fonction de rappel soit disponible et la rejouer une fois qu’elle est définie, ajoutez l’entrée suivante à la map `customConfigs` lors de l’initialisation du `BrazePlugin` :
+#### Rejouer le rappel pour les cartes de contenu
+
+Pour stocker les cartes de contenu déclenchées avant que le rappel soit disponible et les rejouer une fois celui-ci défini, ajoutez l'entrée suivante à la map `customConfigs` lors de l'initialisation du `BrazePlugin` :
 ```dart
 BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```

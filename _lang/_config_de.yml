@@ -34,6 +34,11 @@ collections:
     default_nav_url: basics/
   partners:
     title: Technologiepartner
+  releases:
+    title: Neuigkeiten
+    output: true
+    default_nav_url: home/
+    page_order: 6
   help:
     title: Hilfe
   hidden: # Hidden pages not directly linked via navigation

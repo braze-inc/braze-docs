@@ -1,25 +1,23 @@
 ---
 nav_title: "取得:キャンペーン翻訳タグのデフォルトソース値を表示する"
 article_title: "取得:キャンペーン翻訳タグのデフォルトソース値を表示する"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 3
 
 layout: api_page
 page_type: reference
-description: "この記事では、キャンペーン翻訳ソースエンドポイントの詳細について概説する。"
+description: "この記事は、キャンペーン翻訳ソースエンドポイントに関する詳細を説明する。"
 ---
 
 {% api %}
 # キャンペーンの翻訳タグのデフォルトソース値を表示する
 {% apimethod get %}
-/キャンペーン/翻訳/ソース
+キャンペーン／翻訳／原文
 {% endapimethod %}
 
-> キャンペーンの翻訳タグのデフォルト翻訳ソースをすべて表示するには、このエンドポイントを使用する。これらは{% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %} 内の値である。翻訳機能の詳細については、[メッセージのローカライゼーションを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照のこと。
+> このエンドポイントを使って、キャンペーンの翻訳タグに対するすべてのデフォルト翻訳ソースを表示する。これらは.内の値である{% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}。ローカライゼーション機能の詳細については、[メッセージ内のロケールを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照せよ。
 
-{% alert important %}
-このエンドポイントは現在早期アクセス中である。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## 前提条件
 
@@ -31,16 +29,16 @@ description: "この記事では、キャンペーン翻訳ソースエンドポ
 
 ## クエリーパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメータ | 必須かどうか | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`| 必須 | 文字列 | キャンペーンのID。 |
-|`message_variation_id`| 必須 | string | メッセージバリエーションの ID。 |
-|`locale_id`| オプション | string | レスポンスをフィルターするためのロケール UUID。 |
-|`post_launch_draft_version`| オプション | ブール値 | `true` 、最新のライブ公開バージョンではなく、最新の下書きバージョンが返される。デフォルトは`false` 、最新のライブバージョンを返す。|
+|`campaign_id`| 必須かどうか | 文字列 | キャンペーンのID。 |
+|`message_variation_id`| 必須かどうか | string | メッセージバリエーションの ID。 |
+|`locale_id`| オプション | string | 応答をフィルタリングするためのロケール固有のUUID。 |
+|`post_launch_draft_version`| オプション | ブール値 | returns `true`は最新の公開済みバージョンではなく、最新の下書き版を返す。デフォルトでは最新のライブ`false`バージョンを返す。|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、GETエンドポイントのレスポンスで見つけることができる。
+すべての翻訳識別子はユニバーサル一意識別子（UUID）と見なされ、GETエンドポイントの応答で確認できる。
 {% endalert %}
 
 ## 例のリクエスト

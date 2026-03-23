@@ -3,138 +3,150 @@ nav_title: Design your agent
 article_title: "Conception d'agents décisionnels"
 page_order: 1
 page_type: reference
-description: "Cet article de référence couvre les concepts clés et les meilleures pratiques pour concevoir et configurer votre agent décisionnel."
+description: "Cet article de référence présente les concepts clés et les bonnes pratiques pour concevoir et configurer votre agent décisionnel."
 ---
 
 # Conception d'agents décisionnels
 
-> Cet article de référence couvre les concepts clés et les meilleures pratiques pour concevoir et configurer votre agent décisionnel.
+> Cet article de référence présente les concepts clés et les bonnes pratiques pour concevoir et configurer votre agent décisionnel.
 
 ## À propos des agents décisionnels
 
-La conception de votre agent décisionnel est la première étape de l'installation de Decisioning Studio. Pour que l'agent décisionnel puisse prendre des décisions, vous devez définir le résultat que vous souhaitez maximiser et les actions que l'agent peut entreprendre pour y parvenir.
+La conception de votre agent décisionnel constitue la première étape de la mise en place de Decisioning Studio. Pour que l'agent décisionnel puisse prendre des décisions, vous devez définir le résultat que vous souhaitez maximiser, ainsi que les actions que l'agent peut entreprendre pour y parvenir.
 
 ### Concepts clés
 
-Les termes suivants sont référencés dans le guide Decisioning Studio.
+Les termes suivants sont utilisés tout au long du guide Decisioning Studio.
 
 | Terme | Définition |
 | --- | --- |
-| **Agent décisionnaire** | Un agent décisionnel est une configuration personnalisée pour BrazeAI Decisioning Studio™, conçue sur mesure pour répondre à un objectif métier spécifique. Celle-ci est définie par l'indicateur de réussite, les indicateurs et les options que vous choisissez. |
-| **Indicateurs de réussite** | Le chiffre d'affaires, les conversions ou le revenu moyen par utilisateur (ARPU). Il s'agit de l'indicateur que l'agent décisionnaire cherchera à maximiser par ses actions. |
-| **Dimensions** | Les dimensions peuvent être considérées comme les *types de leviers* que l'agent décisionnaire peut actionner pour maximiser l'indicateur de réussite. Les dimensions typiques sont l'offre, la ligne d'objet, la création, le canal ou l'heure d'envoi. |
-| **Banque d'action** | La banque d'actions définit les *options spécifiques* auxquelles l'agent décisionnaire a accès pour chaque dimension "levier". Par instance, pour une dimension de canal, vous définirez les canaux spécifiques auxquels l'agent décisionnel a accès. Pour une dimension d'offre, vous définissez les offres spécifiques que l'agent décisionnaire peut tester. 
-| **Contraintes** | En général, l'agent décisionnaire peut prendre n'importe quelle combinaison d'actions que vous avez placées dans la banque d'actions. Cependant, vous pouvez également définir des contraintes pour limiter les actions de l'agent décisionnel afin de respecter les règles métier essentielles. Il peut s'agir, par exemple, d'empêcher qu'une offre spécifique soit sélectionnée pour les clients d'une zone géographique non éligible, ou de fixer un budget maximum à dépenser par l'agent décisionnaire. 
+| **Agent décisionnel** | Un agent décisionnel est une configuration personnalisée de BrazeAI Decisioning Studio™, conçue sur mesure pour répondre à un objectif métier spécifique. Il est défini par l'indicateur de réussite, les dimensions et les options que vous choisissez. |
+| **Indicateur de réussite** | L'indicateur métier spécifique que vous souhaitez optimiser, tel que le chiffre d'affaires, les conversions ou le revenu moyen par utilisateur (ARPU). C'est l'indicateur que l'agent décisionnel cherchera à maximiser par ses actions. |
+| **Dimensions** | Les dimensions représentent les *types de leviers* que l'agent décisionnel peut actionner pour maximiser l'indicateur de réussite. Les dimensions courantes incluent l'offre, la ligne d'objet, le visuel, le canal ou l'heure d'envoi. |
+| **Banque d'actions** | La banque d'actions définit les *options spécifiques* auxquelles l'agent décisionnel a accès pour chaque « levier » dimensionnel. Par exemple, pour une dimension de canal, vous définiriez les canaux spécifiques auxquels l'agent décisionnel a accès. Pour une dimension d'offre, vous définiriez les offres spécifiques que l'agent décisionnel peut tester. |
+| **Contraintes** | Par défaut, l'agent décisionnel peut utiliser n'importe quelle combinaison d'actions présentes dans la banque d'actions. Toutefois, vous pouvez définir des contraintes pour limiter ses actions et garantir le respect des règles métier essentielles. Par exemple, vous pouvez empêcher la sélection d'une offre spécifique pour des clients situés dans une zone géographique non éligible, ou fixer un budget maximal que l'agent décisionnel est autorisé à dépenser. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Un aperçu de haut niveau d'un agent décisionnel]({% image_buster /assets/img/decisioning_studio/decisioning_studio_high_level_agent.png %})
+![Aperçu général d'un agent décisionnel]({% image_buster /assets/img/decisioning_studio/decisioning_studio_high_level_agent.png %})
 
 {% alert important %}
-L'agent décisionnel ne peut entreprendre que les actions que *vous* configurez et ajoutez à la banque d'actions. Cela signifie que toutes les actions possibles sont définies par les combinaisons de ce que vous mettez dans la banque d'actions.
+L'agent décisionnel ne peut exécuter que les actions que *vous* configurez et ajoutez à la banque d'actions. Autrement dit, toutes les actions possibles sont déterminées par les combinaisons de ce que vous avez défini dans la banque d'actions.
 {% endalert %}
 
-## Comment concevoir votre agent de décision
+## Comment concevoir votre agent décisionnel
 
-Lors de la mise en place d'un agent décisionnel, vous devrez réfléchir à quatre éléments de conception principaux :
+Lors de la configuration d'un agent décisionnel, vous devez réfléchir à quatre éléments de conception principaux :
 
-### Le "but" : Définissez vos indicateurs de réussite
+### L'objectif : définissez votre indicateur de réussite
 
-> Quel résultat voulez-vous que l'agent maximise ?
+> Quel résultat souhaitez-vous que l'agent maximise ?
 
-Votre indicateur de réussite est le résultat commercial que l'agent optimisera. Cela doit correspondre directement à vos objectifs commerciaux, et non à des indicateurs de substitution tels que les clics ou les ouvertures, mais à des résultats commerciaux réels tels que le chiffre d'affaires, les conversions, l'ARPU ou la valeur vie client.
+Votre indicateur de réussite correspond au résultat métier que l'agent cherchera à optimiser. Il doit être directement aligné sur vos objectifs métier — non pas des indicateurs indirects comme les clics ou les ouvertures, mais de véritables résultats commerciaux tels que le chiffre d'affaires, les conversions, l'ARPU ou la valeur vie client.
 
+<<<<<<< HEAD:_lang/fr_fr/_user_guide/brazeai/decisioning_studio/designing_decisioning_agents.md
 ### Le « qui » : Sélectionnez votre audience
+=======
+### Le « qui » : sélectionnez votre audience
+>>>>>>> develop:_lang/fr_fr/_user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents.md
 
-> Qui l'agent décisionnaire engagera-t-il ?
+> À qui l'agent décisionnel s'adressera-t-il ?
 
-Définissez l'audience de votre agent. Il peut s'agir de tous les clients, d'un segment spécifique (comme les membres d'un programme de fidélisation) ou de clients à un stade particulier de leur cycle de vie (comme les acheteurs récents ou les abonnés à risque).
+Définissez l'audience que votre agent servira. Il peut s'agir de l'ensemble des clients, d'un segment spécifique (comme les membres d'un programme de fidélité) ou de clients à un stade particulier de leur cycle de vie (comme les acheteurs récents ou les utilisateurs abonnés à risque).
 
+<<<<<<< HEAD:_lang/fr_fr/_user_guide/brazeai/decisioning_studio/designing_decisioning_agents.md
 ### Le « quoi » : Configurez votre banque d'actions
+=======
+### Le « quoi » : configurez votre banque d'actions
+>>>>>>> develop:_lang/fr_fr/_user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents.md
 
-> Quelles sont les options que l'agent peut choisir pour déterminer le résultat ?
+> Parmi quelles options l'agent peut-il choisir pour influencer le résultat ?
 
-La banque d'actions définit tous les leviers que l'agent peut actionner - les dimensions (comme le canal, l'offre, le moment et la fréquence) et les options spécifiques à l'intérieur de chaque dimension. L'agent expérimente différentes combinaisons de ces options pour trouver ce qui fonctionne le mieux pour chaque client.
+La banque d'actions définit tous les leviers que l'agent peut actionner : les dimensions (telles que le canal, l'offre, le timing et la fréquence) et les options spécifiques au sein de chaque dimension. L'agent expérimente différentes combinaisons de ces options pour déterminer ce qui fonctionne le mieux pour chaque client.
 
+<<<<<<< HEAD:_lang/fr_fr/_user_guide/brazeai/decisioning_studio/designing_decisioning_agents.md
 ### Le « comment » : Configurez vos contraintes
+=======
+### Le « comment » : configurez vos contraintes
+>>>>>>> develop:_lang/fr_fr/_user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents.md
 
-> Quelles sont les règles à respecter par l'agent ?
+> Quelles règles l'agent doit-il respecter ?
 
-Les contraintes sont les règles que l'agent doit respecter. Il peut s'agir d'empêcher qu'une offre spécifique soit sélectionnée pour des clients situés dans une zone géographique non éligible, ou de fixer un budget maximum à dépenser par l'agent décisionnaire.
+Les contraintes sont les règles que l'agent doit suivre. Par exemple, empêcher la sélection d'une offre spécifique pour des clients situés dans une zone géographique non éligible, ou fixer un budget maximal que l'agent décisionnel est autorisé à dépenser.
 
 ## Bonnes pratiques et exemples
 
-Pour maximiser l'impact de votre agent de décision, vous devez.. :
+Pour maximiser l'impact de votre agent décisionnel, nous vous recommandons de :
 
-- Choisissez un indicateur de réussite qui s'aligne étroitement sur les buts et objectifs de votre métier, comme le chiffre d'affaires, les conversions ou l'ARPU.
-- Concentrez-vous sur les dimensions, ou "leviers" à tester, tels que l'offre, la ligne d'objet, la création, le canal ou l'heure d'envoi, qui sont les plus susceptibles d'avoir un impact significatif sur l'indicateur de réussite.
-- Sélectionnez les options pour chaque dimension, par exemple e-mail ou SMS, ou fréquence quotidienne ou hebdomadaire, qui sont les plus susceptibles d'avoir un impact significatif sur l'indicateur de réussite.
+- Choisir un indicateur de réussite étroitement aligné sur vos objectifs métier, comme le chiffre d'affaires, les conversions ou l'ARPU.
+- Vous concentrer sur les dimensions, ou « leviers » à tester — offre, ligne d'objet, visuel, canal ou heure d'envoi — les plus susceptibles d'avoir un impact significatif sur l'indicateur de réussite.
+- Sélectionner les options pour chaque dimension — par exemple e-mail versus SMS, ou fréquence quotidienne versus hebdomadaire — les plus susceptibles d'influencer significativement l'indicateur de réussite.
 
 Voici quelques exemples d'agents décisionnels que vous pourriez créer :
 
 {% tabs %}
 {% tab Repeat purchase agent %}
-Vous pourriez créer un agent d'achat répété pour augmenter les conversions de suivi après une vente initiale :
+Vous pourriez créer un agent de réachat pour augmenter les conversions de suivi après une première vente :
 
-- Définir l'audience et le message en Braze
-- Decisioning Studio lance automatiquement des expériences quotidiennes, en testant différentes combinaisons d'offres de produits, de moments et de fréquences d'envoi des messages pour chaque client.
-- Au fil du temps, BrazeAI™ apprend ce qui fonctionne le mieux pour chaque client
-- Orchestrer des envois personnalisés par le biais de Braze pour maximiser les taux de réachat.
+- Définissez l'audience et le message dans Braze
+- Decisioning Studio lance automatiquement des expériences quotidiennes, testant différentes combinaisons d'offres produit, de timing et de fréquence des messages pour chaque client
+- Au fil du temps, BrazeAI<sup>TM</sup> identifie ce qui fonctionne le mieux pour chaque client
+- Les envois personnalisés sont orchestrés via Braze pour maximiser les taux de réachat
 {% endtab %}
 {% tab Cross-sell or upsell agent %}
-Vous pourriez créer un agent de vente croisée ou de vente incitative pour maximiser le chiffre d'affaires moyen par utilisateur (ARPU) des abonnements à l'internet :
+Vous pourriez créer un agent de vente croisée ou incitative pour maximiser le revenu moyen par utilisateur (ARPU) sur les abonnements Internet :
 
-- Définir l'audience et le message en Braze
-- Decisioning Studio effectue automatiquement des expériences quotidiennes, en testant différentes combinaisons de messages, d'heures d'envoi, de remises et d'offres de plan pour chaque client
-- BrazeAI™ apprend quels clients sont susceptibles de bénéficier d'offres de saute-mouton et lesquels ont besoin de remises ou d'autres incitations pour se mettre à niveau.
-- Orchestration des envois personnalisés par l'intermédiaire de Braze pour maximiser l'ARPU.
+- Définissez l'audience et le message dans Braze
+- Decisioning Studio lance automatiquement des expériences quotidiennes, testant différentes combinaisons de messages, d'heures d'envoi, de remises et d'offres de forfaits pour chaque client
+- BrazeAI<sup>TM</sup> identifie les clients réceptifs aux offres premium et ceux qui ont besoin de remises ou d'autres incitations pour monter en gamme
+- Les envois personnalisés sont orchestrés via Braze pour maximiser l'ARPU
 {% endtab %}
 {% tab Renewal and retention agent %}
-Vous pourriez créer un agent de renouvellement et de fidélisation pour garantir le renouvellement des contrats, en maximisant à la fois la durée des contrats et la valeur actuelle nette (VAN) :
+Vous pourriez créer un agent de renouvellement et de rétention pour sécuriser les renouvellements de contrats, en maximisant à la fois la durée des contrats et la valeur actuelle nette (VAN) :
 
-- Définir l'audience et le message en Braze
-- Decisioning Studio exécute automatiquement des expériences quotidiennes, en testant différentes offres de renouvellement pour chaque client
-- BrazeAI™ identifie les clients qui sont moins sensibles aux prix et qui ont besoin de remises moins importantes pour se renouveler.
-- Orchestrer des envois personnalisés via Braze pour maximiser les renouvellements de contrats et la VAN.
+- Définissez l'audience et le message dans Braze
+- Decisioning Studio lance automatiquement des expériences quotidiennes, testant différentes offres de renouvellement pour chaque client
+- BrazeAI<sup>TM</sup> identifie les clients moins sensibles au prix, qui n'ont pas besoin de remises importantes pour renouveler
+- Les envois personnalisés sont orchestrés via Braze pour maximiser les renouvellements de contrats et la VAN
 {% endtab %}
 {% tab Winback agent %}
-Vous pourriez créer un agent de reconquête pour augmenter la réactivation en encourageant les anciens abonnés à se réabonner :
+Vous pourriez créer un agent de reconquête pour augmenter la réactivation en encourageant d'anciens utilisateurs abonnés à se réabonner :
 
-- Définir l'audience et le message en Braze
-- Decisioning Studio exécute automatiquement des expériences quotidiennes, testant des milliers de variables à la fois, y compris la création, le message, le canal et la cadence.
-- BrazeAI™ découvre la meilleure combinaison pour chaque client individuel.
-- Orchestrer des envois personnalisés via Braze pour maximiser les taux de réactivation.
+- Définissez l'audience et le message dans Braze
+- Decisioning Studio lance automatiquement des expériences quotidiennes, testant simultanément des milliers de variables : visuel, message, canal et cadence
+- BrazeAI<sup>TM</sup> découvre la combinaison optimale pour chaque client
+- Les envois personnalisés sont orchestrés via Braze pour maximiser les taux de réactivation
 {% endtab %}
 {% tab Referral agent %}
-Vous pourriez créer un agent de recommandation pour maximiser l'ouverture de nouveaux comptes par le biais de recommandations de cartes de crédit professionnelles de la part de clients existants :
+Vous pourriez créer un agent de recommandation pour maximiser le nombre de nouveaux comptes ouverts grâce aux recommandations de cartes de crédit professionnelles par vos clients existants :
 
-- Définir l'audience et le message en Braze
-- Decisioning Studio effectue automatiquement des expériences quotidiennes, en testant différents e-mails, créations, heures d'envoi et offres de carte de crédit pour chaque client
-- BrazeAI™ détermine la combinaison idéale pour des clients personnalisés.
-- Orchestrer des envois personnalisés par le biais de Braze pour maximiser les conversions de recommandations.
+- Définissez l'audience et le message dans Braze
+- Decisioning Studio lance automatiquement des expériences quotidiennes, testant différents e-mails, visuels, heures d'envoi et offres de cartes de crédit pour chaque client
+- BrazeAI<sup>TM</sup> détermine la combinaison idéale pour chaque client
+- Les envois personnalisés sont orchestrés via Braze pour maximiser les conversions par recommandation
 {% endtab %}
 {% tab Lead nurturing and conversion agent %}
-Vous pourriez créer un agent de maturation des prospects et de conversion pour générer des chiffres d'affaires supplémentaires et payer le bon montant pour chaque client :
+Vous pourriez créer un agent de nurturing et de conversion des prospects pour générer du chiffre d'affaires incrémental tout en optimisant le coût d'acquisition par client :
 
-- Définir l'audience et le message en Braze
-- Decisioning Studio exécute automatiquement des expériences quotidiennes, en testant différents segments de clientèle, la méthodologie d'enchère, les niveaux d'enchère et les créations
-- BrazeAI™ exploite des données first-party robustes pour optimiser les performances des publicités payantes à mesure que les politiques de confidentialité évoluent.
-- Orchestrer des envois personnalisés via Braze pour maximiser les chiffres d'affaires tout en optimisant le coût par client.
+- Définissez l'audience et le message dans Braze
+- Decisioning Studio lance automatiquement des expériences quotidiennes, testant différents segments de clientèle, méthodologies d'enchères, niveaux d'enchères et visuels
+- BrazeAI<sup>TM</sup> exploite des données first-party fiables pour optimiser les performances des publicités payantes à mesure que les politiques de confidentialité évoluent
+- Les envois personnalisés sont orchestrés via Braze pour maximiser le chiffre d'affaires tout en optimisant le coût par client
 {% endtab %}
 {% tab Loyalty and engagement agent %}
-Vous pourriez créer un agent de fidélisation et d'engagement pour maximiser les achats des nouveaux inscrits à un programme d'engagement client :
+Vous pourriez créer un agent de fidélisation et d'engagement pour maximiser les achats des nouveaux inscrits à un programme de fidélité :
 
-- Définir l'audience et le message en Braze
-- Decisioning Studio effectue automatiquement des expériences quotidiennes, en testant différentes offres d'e-mail, heures d'envoi et fréquences pour chaque client.
-- BrazeAI™ apprend ce qui fonctionne le mieux pour chaque nouvel inscrit au programme de fidélité.
-- Orchestrer des envois personnalisés par l'intermédiaire de Braze pour maximiser les taux d'achat et de réachat.
+- Définissez l'audience et le message dans Braze
+- Decisioning Studio lance automatiquement des expériences quotidiennes, testant différentes offres par e-mail, heures d'envoi et fréquences pour chaque client
+- BrazeAI<sup>TM</sup> identifie ce qui fonctionne le mieux pour chaque nouveau membre du programme de fidélité
+- Les envois personnalisés sont orchestrés via Braze pour maximiser les taux d'achat et de réachat
 {% endtab %}
 {% endtabs %}
 
 ## Étapes suivantes
 
-Prêt à créer votre propre agent décisionnel ? Suivez les étapes suivantes pour votre niveau de Decisioning Studio :
+Prêt à créer votre propre agent décisionnel ? Suivez les étapes correspondant à votre niveau Decisioning Studio :
 
-- **Décision Studio Go**: [Mise en place de Decisioning Studio Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/)
-- **Decisioning Studio Pro :** [Installer Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/)
+- **Decisioning Studio Go** : [Configurer Decisioning Studio Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/)
+- **Decisioning Studio Pro** : [Configurer Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/)
 
 Ces guides vous accompagnent dans la connexion des sources de données, la configuration de l'orchestration, la conception de votre agent et le lancement en production.

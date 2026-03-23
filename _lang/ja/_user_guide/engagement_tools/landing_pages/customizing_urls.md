@@ -9,7 +9,7 @@ page_order: 1
 
 > ドメインをBrazeワークスペースに接続することで、ランディングページのURLを企業ブランドに合わせてカスタマイズする方法を学習。
 
-## CDI の仕組み
+## 仕組み
 
 [Brazeにドメインを接続](#connecting-your-domain-to-braze)すると、そのドメインがすべてのランディングページのデフォルトドメインとして使用される。例えばサブドメイン `forms.example.com` を接続すると、ランディングページ URL は `forms.example.com/holiday-sale` のようになります。
 

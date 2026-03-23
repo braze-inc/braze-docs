@@ -230,8 +230,8 @@ erDiagram
     GROUP_6 ||--o{ EVENT : joins
 ```
 
-- `PK` = 主キー
-- `FK` = 外部キー
+- `PK` 主キー
+- `FK` 外部キー
 
 ## リレーションシップテーブル
 

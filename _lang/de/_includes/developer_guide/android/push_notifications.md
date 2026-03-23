@@ -214,17 +214,17 @@ dependencies {
 
 Wählen Sie in Google Cloud das Projekt aus, das Ihre Android-App verwendet, und aktivieren Sie dann die [Firebase Cloud Messaging API](https://console.cloud.google.com/apis/library/fcm.googleapis.com).
 
-![Enablement der Firebase Cloud Messaging API]({% image_buster /assets/img/android/push_integration/create_a_service_account/firebase-cloud-messaging-api-enabled.png %}){: style="max-width:80%;"}
+![Firebase Cloud Messaging API aktiviert]({% image_buster /assets/img/android/push_integration/create_a_service_account/firebase-cloud-messaging-api-enabled.png %}){: style="max-width:80%;"}
 
 ### Schritt 4: Ein Dienst-Konto erstellen {#service-account}
 
 Als nächstes erstellen Sie ein neues Dienst-Konto, damit Braze bei der Registrierung von FCM-Tokens autorisierte API-Aufrufe tätigen kann. Gehen Sie in Google Cloud zu **Servicekonten** und wählen Sie dann Ihr Projekt aus. Auf der Seite **Serviceleistungen; Dienste** wählen Sie **Servicekonto erstellen**.
 
-![Die Startseite des Dienstkontos eines Projekts mit der Markierung "Dienstkonto erstellen".]({% image_buster /assets/img/android/push_integration/create_a_service_account/select-create-service-account.png %})
+![Die Startseite des Dienstkontos eines Projekts, auf der „Dienstkonto erstellen“ hervorgehoben ist.]({% image_buster /assets/img/android/push_integration/create_a_service_account/select-create-service-account.png %})
 
 Geben Sie einen Namen, eine ID und eine Beschreibung für das Dienstkonto ein und wählen Sie **Erstellen und fortfahren**.
 
-![Das Formular für "Details zum Dienstkonto".]({% image_buster /assets/img/android/push_integration/create_a_service_account/enter-service-account-details.png %})
+![Das Formular für „Details zum Dienstkonto“.]({% image_buster /assets/img/android/push_integration/create_a_service_account/enter-service-account-details.png %})
 
 Suchen Sie im Feld **Rolle** nach **Firebase Cloud Messaging API Admin** und wählen Sie es in der Liste der Rollen aus. Für einen restriktiveren Zugriff erstellen Sie eine [angepasste Rolle](https://cloud.google.com/iam/docs/creating-custom-roles) mit der Berechtigung `cloudmessaging.messages.create` und wählen diese dann aus der Liste aus. Wenn Sie fertig sind, wählen Sie **Fertig**.
 
@@ -232,23 +232,23 @@ Suchen Sie im Feld **Rolle** nach **Firebase Cloud Messaging API Admin** und wä
 Stellen Sie sicher, dass Sie **Firebase Cloud Messaging _API_ Admin** auswählen, nicht **Firebase Cloud Messaging Admin**.
 {% endalert %}
 
-![Das Formular für "Diesem Dienstkonto Zugriff auf das Projekt gewähren", wobei als Rolle "Firebase Cloud Messaging API Admin" ausgewählt ist.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
+![Das Formular „Diesem Dienstkonto Zugriff auf das Projekt gewähren“ mit der ausgewählten Rolle „Firebase Cloud Messaging API Admin“.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 
 ### Schritt 5: JSON-Zugangsdaten generieren {#json}
 
-Als nächstes generieren Sie JSON-Zugangsdaten für Ihr FCM Dienst-Konto. Gehen Sie auf Google Cloud IAM & Admin zu **Serviceleistungen; Dienste** und wählen Sie dann Ihr Projekt. Suchen Sie das FCM Dienst-Konto [, das Sie zuvor erstellt haben](#android_service-account), und wählen Sie dann <i class="fa-solid fa-ellipsis-vertical"></i> **Aktionen** > Schlüssel verwalten.
+Als nächstes generieren Sie JSON-Zugangsdaten für Ihr FCM Dienst-Konto. Bitte gehen Sie in Google Cloud IAM&Admin zu **„Service Accounts**“ und wählen Sie Ihr Projekt aus. Suchen Sie das FCM Dienst-Konto [, das Sie zuvor erstellt haben](#android_service-account), und wählen Sie dann <i class="fa-solid fa-ellipsis-vertical"></i> **Aktionen** > Schlüssel verwalten.
 
-![Die Startseite des Dienstkontos des Projekts mit geöffnetem Menü "Aktionen".]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-manage-keys.png %})
+![Die Startseite des Dienstkontos des Projekts mit der Öffnung des Menüs „Aktionen“.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-manage-keys.png %})
 
 Wählen Sie **Schlüssel hinzufügen** > **Neuen Schlüssel erstellen**.
 
-![Das ausgewählte Dienstkonto mit dem Menü "Schlüssel hinzufügen" ist geöffnet.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create-new-key.png %})
+![Das ausgewählte Dienstkonto mit dem geöffneten Menü „Schlüssel hinzufügen“.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create-new-key.png %})
 
 Wählen Sie **JSON** und wählen Sie dann **Erstellen**. Wenn Sie Ihr Dienstkonto mit einer anderen Google Cloud Projekt ID als Ihrer FCM Projekt ID erstellt haben, müssen Sie den der `project_id` zugewiesenen Wert in Ihrer JSON-Datei manuell aktualisieren.
 
 Merken Sie sich, wo Sie den Schlüssel heruntergeladen haben - Sie brauchen ihn im nächsten Schritt.
 
-![Das Formular zum Erstellen eines Private Key mit ausgewähltem "JSON".]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create.png %}){: style="max-width:65%;"}
+![Das Formular zum Erstellen eines Private Keys mit ausgewählter Option „JSON”.]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create.png %}){: style="max-width:65%;"}
 
 {% alert warning %}
 Private Keys können ein Sicherheitsrisiko darstellen, wenn sie kompromittiert werden. Speichern Sie Ihre JSON-Zugangsdaten vorerst an einem sicheren Standort - Sie werden Ihren Schlüssel löschen, nachdem Sie ihn auf Braze hochgeladen haben.
@@ -258,11 +258,11 @@ Private Keys können ein Sicherheitsrisiko darstellen, wenn sie kompromittiert w
 
 Als nächstes laden Sie Ihre JSON-Zugangsdaten auf Ihr Braze-Dashboard hoch. Wählen Sie in Braze <i class="fa-solid fa-gear"></i> **Einstellungen** > **App-Einstellungen**.
 
-![Das Menü "Einstellungen" wird in Braze geöffnet und "App-Einstellungen" hervorgehoben.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
+![Die Öffnung des Menüs „Einstellungen“ erfolgt in Braze, wobei „App-Einstellungen“ markiert sind.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
 
 Wählen Sie in den **Einstellungen für Push-Benachrichtigungen** Ihrer Android App **Firebase** aus, wählen Sie dann **JSON-Datei hochladen** und laden Sie die Zugangsdaten hoch, [die Sie zuvor generiert haben](#android_json). Wenn Sie fertig sind, wählen Sie **Speichern**.
 
-![Das Formular für "Einstellungen für Push-Benachrichtigungen", wobei "Firebase" als Push-Anbieter ausgewählt ist.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/upload-json-file.png %})
+![Das Formular für „Push-Benachrichtigungseinstellungen“ mit „Firebase“ als ausgewähltem Push-Anbieter.]({% image_buster /assets/img/android/push_integration/upload_json_credentials/upload-json-file.png %})
 
 {% alert warning %}
 Private Keys können ein Sicherheitsrisiko darstellen, wenn sie kompromittiert werden. Jetzt, nachdem Ihr Schlüssel auf Braze hochgeladen wurde, löschen Sie die Datei, [die Sie zuvor erzeugt haben](#android_json).
@@ -274,11 +274,11 @@ Wenn einer Ihrer Nutzer:innen für Push-Benachrichtigungen opt-in ist, muss Ihre
 
 Gehen Sie zunächst zur Firebase-Konsole, öffnen Sie Ihr Projekt und wählen Sie dann <i class="fa-solid fa-gear"></i> **Einstellungen** > **Projekteinstellungen**.
 
-![Das Firebase-Projekt mit geöffnetem Menü "Einstellungen".]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
+![Das Firebase-Projekt mit Öffnung des Menüs „Einstellungen“.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
 
 Wählen Sie **Cloud Messaging** und kopieren Sie dann unter **Firebase Cloud Messaging API (V1)** die Nummer in das Feld **Absender-ID**.
 
-![Die Seite "Cloud Messaging" des Firebase-Projekts mit hervorgehobener "Sender ID".]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
+![Die Seite „Cloud Messaging“ des Firebase-Projekts mit hervorgehobener „Sender-ID“.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
 Als nächstes öffnen Sie Ihr Android Studio Projekt und verwenden Ihre Firebase Sender ID, um die automatische Registrierung von FCM Token in Ihrem `braze.xml` oder `BrazeConfig` zu aktivieren.
 
@@ -489,7 +489,7 @@ Ein häufiges Symptom für ein ungeeignetes Asset ist das kleine Benachrichtigun
 
 Die nachfolgend abgebildeten großen und kleinen Symbole sind Beispiele für richtig gestaltete Symbole:
 
-![Ein kleines Symbol, das in der unteren Ecke eines großen Symbols neben einer Nachricht erscheint, auf der steht: "Hey, ich bin auf dem Weg in die Bar, aber..."]({% image_buster /assets/img_archive/large_and_small_notification_icon.png %} "Large and Small Notification Icon")
+![Ein kleines Symbol, das in der unteren Ecke eines großen Symbols neben einer Nachricht mit dem Text „Ich bin auf dem Weg zur Bar, aber ...“ erscheint.]({% image_buster /assets/img_archive/large_and_small_notification_icon.png %} "Large and Small Notification Icon")
 
 ### Schritt 3: Benachrichtigungssymbole konfigurieren {#configure-icons}
 
@@ -557,13 +557,13 @@ Braze.configure(this, brazeConfig)
 
 Wenn Sie Deeplinks anpassen möchten, müssen Sie einen Push-Callback erstellen, der auf empfangene Push-Nachrichten und geöffnete Absichten von Braze wartet. Weitere Informationen finden Sie unter [Verwendung eines Callbacks für Push-Ereignisse]({{site.baseurl}}/developer_guide/push_notifications/customization#android_using-a-callback-for-push-events).
 
-## Umgang mit Benachrichtigungen im Vordergrund
+## Behandlung von Vordergrundbenachrichtigungen
 
-Wenn eine Push-Benachrichtigung eintrifft, während Ihre App auf Android im Vordergrund ist, wird sie standardmäßig automatisch angezeigt. Damit Braze die Nutzdaten der Push-Benachrichtigung (für Analytics Tracking, Deeplinks und angepasste Verarbeitung) verarbeiten kann, leiten Sie die eingehenden Push-Daten innerhalb Ihrer `FirebaseMessagingService.onMessageReceived` Methode an Braze weiter.
+Standardmäßig wird eine Push-Benachrichtigung, die eingeht, während sich Ihre App auf Android im Vordergrund befindet, vom System automatisch angezeigt. Um die Push-Benachrichtigungsdaten von Braze verarbeiten zu lassen (für Analytics-Tracking, Deeplinks und benutzerdefinierte Verarbeitung), leiten Sie die eingehenden Push-Daten innerhalb Ihrer`FirebaseMessagingService.onMessageReceived`Methode an Braze weiter.
 
 ### Funktionsweise
 
-Wenn Sie `BrazeFirebaseMessagingService.handleBrazeRemoteMessage` aufrufen, stellt Braze fest, ob es sich bei der Nutzlast um eine Push-Benachrichtigung von Braze handelt, und wenn ja, wird die Benachrichtigung mit der Methode `NotificationManagerCompat` erstellt und angezeigt. Im Gegensatz zu iOS zeigt Android Benachrichtigungen unabhängig davon an, ob sich die App im Vorder- oder Hintergrund befindet.
+Wenn Sie anrufen`BrazeFirebaseMessagingService.handleBrazeRemoteMessage`, ermittelt Braze, ob es sich bei der Nutzlast um eine Braze-Push-Benachrichtigung handelt. Ist dies der Fall, wird die Benachrichtigung mit der`NotificationManagerCompat`Methode erstellt und angezeigt. Im Gegensatz zu iOS zeigt Android Benachrichtigungen unabhängig davon an, ob sich die App im Vordergrund oder im Hintergrund befindet.
 
 {% tabs %}
 {% tab JAVA %}
@@ -614,14 +614,14 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 {% endtab %}
 {% endtabs %}
 
-Weitere Informationen finden Sie im [Beispiel für die Integration von Firebase](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseMessagingService.kt) im Braze Android SDK Repository.
+Weitere Informationen finden Sie im [Firebase-Integrationsbeispiel](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseMessagingService.kt) im Braze Android SDK-Repository.
 
-### Anpassen des Verhaltens im Vordergrund
+### Anpassen des Vordergrundverhaltens
 
-Wenn Sie ein angepasstes Verhalten im Vordergrund wünschen, z. B. die Unterdrückung der Systembenachrichtigung oder die Anzeige einer In-App UI, können Sie dies tun:
+Wenn Sie ein angepasstes Vordergrundverhalten wünschen, wie beispielsweise das Unterdrücken der Systembenachrichtigung oder das Anzeigen einer In-App-UI, können Sie Folgendes tun:
 
-- Verwenden Sie `subscribeToPushNotificationEvents`, um auf Push-Ereignisse zu reagieren und Deeplinks mit der Methode `BrazeNotificationUtils.routeUserWithNotificationOpenedIntent` zu behandeln. Weitere Informationen finden Sie im [Firebase Push-Beispiel](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseApplication.kt).
-- Erstellen und versenden Sie Ihre eigene Benachrichtigung mit einem angepassten `IBrazeNotificationFactory`, oder unterdrücken Sie die Benachrichtigung, indem Sie `notificationManager.notify` nicht in Ihrem Bearbeitungspfad aufrufen.
+- Verwenden Sie die`BrazeNotificationUtils.routeUserWithNotificationOpenedIntent`Methode, um `subscribeToPushNotificationEvents`auf Push-Ereignisse zu reagieren und Deeplinks zu verarbeiten. Weitere Informationen finden Sie im [Firebase-Push-Beispiel](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseApplication.kt).
+- Erstellen und veröffentlichen Sie Ihre eigene Benachrichtigung mithilfe einer angepassten `IBrazeNotificationFactory`Funktion oder unterdrücken Sie die Benachrichtigung, indem Sie`notificationManager.notify`in Ihrem Handling-Pfad nicht aufrufen.
 
 Weitere Informationen zum Anpassen von Benachrichtigungen finden Sie unter [Benutzerdefinierte Benachrichtigungsfabrik]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#custom-notification-factory).
 
@@ -633,7 +633,7 @@ Befolgen Sie die Anweisungen in der [Dokumentation für Android-Entwickler](http
 
 Das Braze-Dashboard unterstützt das Setzen von Deeplinks oder Internet-URLs in Push-Benachrichtigungs-Kampagnen und Canvase, die geöffnet werden, wenn die Benachrichtigung angeklickt wird.
 
-![Die Einstellung 'On Click Behavior' im Braze-Dashboard mit 'Deeplinks in die Anwendung' aus dem Dropdown-Menü ausgewählt.]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action")
+![Die Einstellung „On Click Behavior“ im Braze-Dashboard, wobei „Deeplink Into Application“ aus dem Dropdown-Menü ausgewählt wurde.]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action")
 
 #### Anpassen des Back-Stack-Verhaltens
 
@@ -675,7 +675,7 @@ Sehen Sie sich die entsprechende Konfiguration für Ihr `braze.xml` an. Beachten
 
 ### Schritt 5: Benachrichtigungskanäle definieren
 
-Das Braze Android SDK unterstützt [Android-Benachrichtigungskanäle](https://developer.android.com/preview/features/notification-channels.html). Wenn eine Braze-Benachrichtigung keine ID für einen Benachrichtigungskanal enthält oder eine Braze-Benachrichtigung eine ungültige ID für den Kanal enthält, zeigt Braze die Benachrichtigung mit dem im SDK definierten Standard-Benachrichtigungskanal an. Nutzer:innen von Braze verwenden [Android Benachrichtigungskanäle]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/) innerhalb der Plattform, um Benachrichtigungen zu gruppieren.
+Das Braze Android SDK unterstützt [Android-Benachrichtigungskanäle](https://developer.android.com/preview/features/notification-channels.html). Wenn eine Braze-Benachrichtigung keine ID für einen Benachrichtigungskanal enthält oder eine Braze-Benachrichtigung eine ungültige ID für den Kanal enthält, zeigt Braze die Benachrichtigung mit dem im SDK definierten Standard-Benachrichtigungskanal an. Unternehmensnutzer:innen verwenden [Android-Benachrichtigungskanäle]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/) innerhalb der Plattform, um Benachrichtigungen zu gruppieren.
 
 Um den Nutzernamen des standardmäßigen Braze-Benachrichtigungskanals festzulegen, verwenden Sie [`BrazeConfig.setDefaultNotificationChannelName()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html).
 
@@ -698,7 +698,7 @@ Der Standard-Name und die Beschreibung des Kanals können auch unter `braze.xml`
 
 Jetzt sollten Sie die von Braze gesendeten Benachrichtigungen sehen können. Um dies zu testen, gehen Sie auf die Seite **Kampagnen** in Ihrem Braze-Dashboard und erstellen Sie eine Kampagne **mit Push-Benachrichtigung**. Wählen Sie **Android Push** und gestalten Sie Ihre Nachricht. Klicken Sie dann auf das Augensymbol im Composer, um den Test-Sender zu erhalten. Geben Sie die ID oder die E-Mail Adresse Ihres aktuellen Nutzers ein und klicken Sie auf **Test senden**. Der Push sollte auf Ihrem Gerät angezeigt werden.
 
-![Der Tab 'Test' einer Push-Benachrichtigung Kampagne im Braze-Dashboard.]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
+![Die Registerkarte „Test“ einer Push-Benachrichtigungskampagne im Braze-Dashboard.]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
 
 Für Probleme im Zusammenhang mit der Push-Anzeige lesen Sie bitte unsere [Anleitung zur Fehlerbehebung]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=android).
 
@@ -751,7 +751,7 @@ Dieses Feature ist nur über die Braze REST API verfügbar. Weitere Informatione
 
 Wenn Ihr Limit für Firebase Cloud Messaging (FCM) überschritten wird, gibt Google die Fehlermeldung "Quote überschritten" aus. Der Standardgrenzwert für FCM liegt bei 600.000 Anfragen pro Minute. Braze wiederholt den Versand gemäß den von Google empfohlenen Best Practices. Eine große Anzahl dieser Fehler kann jedoch die Sendezeit um mehrere Minuten verlängern. Um mögliche Auswirkungen abzumildern, sendet Braze Ihnen eine Warnung, dass das Rate-Limits überschritten wird und welche Schritte Sie unternehmen können, um die Fehler zu vermeiden.
 
-Um Ihr aktuelles Limit zu überprüfen, gehen Sie zu Ihrer **Google Cloud Console** > **APIs & Dienste** > **Firebase Cloud Messaging API** > **Quoten & Systemlimits** oder besuchen Sie die [Seite FCM API Quotas](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
+Um Ihr aktuelles Limit zu überprüfen, gehen Sie bitte zu Ihrer **Google Cloud Console** > **APIs&Services** > **Firebase FCM API** > **Quotas&System Limits** oder besuchen Sie die [Seite FCM API Quotas](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
 
 ### Bewährte Praktiken
 

@@ -52,7 +52,7 @@ Une application ou un site Internet ne peuvent avoir qu’un seul abonnement aux
 Étant donné que les fournisseurs de notifications push (APN/FCM) n’ont aucun moyen de faire la différence entre plusieurs utilisateurs sur un même appareil, nous transmettons le jeton de notification push au dernier utilisateur qui s’est connecté pour déterminer quel utilisateur cibler sur l’appareil pour les notifications push.
 
 {% alert tip %}
-Si vous voyez un message d'erreur dans **Contact Settings** > **Push Changelog**, reportez-vous à [Common push error messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/) pour obtenir des explications et connaître les étapes suivantes.
+Si un message d'erreur s'affiche dans **Paramètres de contact** > **Journal des modifications Push**, veuillez consulter la section [Messages d'erreur Push courants]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/) pour obtenir des explications et connaître les étapes à suivre.
 {% endalert %}
 
 ## Inscription au jeton de notification push
@@ -80,7 +80,7 @@ iOS ne génère pas automatiquement des jetons push pour une app lorsqu'elle est
 | Version                         | Autorisation provisoire ? | Détails                                                                                                                                                     |
 |------------------------------------|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **iOS 12**      | Oui                         | Lorsqu'un utilisateur s'abonne aux notifications push, vous recevez une autorisation standard qui vous permet d'envoyer des [notifications push au premier plan](#foreground-vs-background). Toutefois, vous pouvez également demander une [autorisation provisoire]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push), qui vous permet d'envoyer des [notifications push silencieuses](#foreground-vs-background) en arrière-plan directement au centre de notification. |
-| **iOS 11 ou antérieur** | Non                          | Tous les utilisateurs doivent s’abonner explicitement pour recevoir des notifications push. Un jeton de poussée n'est généré qu'une fois l'autorisation accordée.                                     |
+| **iOS 11 ou version antérieure** | Non                          | Tous les utilisateurs doivent s’abonner explicitement pour recevoir des notifications push. Un jeton de poussée n'est généré qu'une fois l'autorisation accordée.                                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}

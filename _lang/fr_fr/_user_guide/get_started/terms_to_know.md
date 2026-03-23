@@ -5,7 +5,7 @@ article_title: Termes de Braze à connaître
 
 layout: glossary_page
 glossary_top_header: "Termes à connaître"
-glossary_top_text: "Ces termes devraient vous aider à entamer votre parcours vers de meilleurs liens avec les clients et les utilisateurs de Braze. Veuillez lire ce document avant de commencer votre onboarding."
+glossary_top_text: "Ces conditions devraient vous aider à renforcer vos relations avec vos clients et vos utilisateurs grâce à Braze. Veuillez lire ce document avant de commencer votre onboarding."
 page_type: glossary
 description: "Ce glossaire couvre les termes importants à connaître lorsque vous suivez le processus d’onboarding de Braze."
 

@@ -335,6 +335,7 @@
   "Hightouch": "Hightouch",
   "HIPAA": "HIPAA",
   "horizon media": "Horizon Media",
+  "How it works": "仕組み",
   "HTML": "HTML",
   "idea": "アイデア",
   "identifier": "識別子",
@@ -756,5 +757,7 @@
   "Your message": "メッセージ",
   "Zapier": "Zapier",
   "Zeotap": "Zeotap",
-  "Feature Flags": "フィーチャーフラグ"
+  "Feature Flags": "フィーチャーフラグ",
+  "BrazeAI Operator": "BrazeAI Operator",
+  "BrazeAI Decisioning Studio": "BrazeAI Decisioning Studio"
 }

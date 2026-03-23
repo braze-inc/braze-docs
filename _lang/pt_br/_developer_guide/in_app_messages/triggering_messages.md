@@ -1,8 +1,8 @@
 ---
 nav_title: Mensagens de gatilho
-article_title: Acione mensagens no app através do SDK Braze
+article_title: Dispare mensagens no app através do SDK da Braze
 page_order: 0.2
-description: "Aprenda como acionar mensagens no app através do SDK Braze."
+description: "Aprenda como disparar mensagens no app através do SDK da Braze."
 platform: 
   - Android
   - FireOS
@@ -10,23 +10,23 @@ platform:
   - Web
 ---
 
-# Acione mensagens no app
+# Dispare mensagens no app
 
-> Aprenda como acionar mensagens no app através do SDK Braze.
+> Aprenda como disparar mensagens no app através do SDK da Braze.
 
-## Gatilhos e entrega de mensagens
+## Gatilhos de mensagem e entrega
 
-As mensagens no app são acionadas quando o SDK registra um dos seguintes tipos de eventos personalizados: `Session Start`, `Push Click`, `Any Purchase`, `Specific Purchase` e `Custom Event` (os dois últimos contendo filtros de propriedade robustos).
+As mensagens no app são disparadas quando o SDK registra um dos seguintes tipos de eventos personalizados: `Session Start`, `Push Click`, `Any Purchase`, `Specific Purchase` e `Custom Event` (os dois últimos contendo filtros de propriedade robustos).
 
-No início da sessão de um usuário, o Braze entregará todas as mensagens no app elegíveis para seu dispositivo, enquanto simultaneamente pré-carrega ativos para minimizar a latência de exibição. Se o evento de gatilho tiver mais de uma mensagem no app elegível, apenas a mensagem com a maior prioridade será entregue. Para mais informações, veja [Lifecycle da Sessão]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/#about-the-session-lifecycle).
+No início da sessão de um usuário, a Braze entregará todas as mensagens no app elegíveis para seu dispositivo, enquanto simultaneamente pré-carrega ativos para minimizar a latência de exibição. Se o evento de gatilho tiver mais de uma mensagem no app elegível, apenas a mensagem com a maior prioridade será entregue. Para saber mais, veja [O Ciclo de Vida da Sessão]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/#about-the-session-lifecycle).
 
 {% alert note %}
-Mensagens no app não podem ser acionadas através da API ou por eventos da API—apenas eventos personalizados registrados pelo SDK. Para saber mais sobre registro, veja [Registro de Eventos Personalizados]({{site.baseurl}}/developer_guide/analytics/logging_events/).
+Mensagens no app não podem ser disparadas através da API ou por eventos da API—apenas eventos personalizados registrados pelo SDK. Para saber mais sobre registro, veja [Registro de Eventos Personalizados]({{site.baseurl}}/developer_guide/analytics/logging_events/).
 {% endalert %}
 
 ## Pares de valores chave
 
-Quando você cria uma campanha no Braze, pode definir pares chave-valor como `extras`, que o objeto de mensagens no app pode usar para enviar dados para seu app.
+Quando você cria uma campanha na Braze, pode definir pares chave-valor como `extras`, que o objeto de mensagens no app pode usar para enviar dados para seu app.
 
 {% tabs %}
 {% tab web %}
@@ -69,7 +69,7 @@ extras: Map<String, String>
 {% endsubtabs %}
 
 {% alert tip %}
-Para mais informações, consulte o [Documentação K](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html#1498425856%2FProperties%2F-1725759721).
+Para saber mais, consulte o [Documentação K](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html#1498425856%2FProperties%2F-1725759721).
 {% endalert %}
 {% endtab %}
 
@@ -103,7 +103,7 @@ if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
 
 ## Desabilitando gatilhos automáticos
 
-Por padrão, as mensagens no app são acionadas automaticamente. Para desabilitar isso:
+Por padrão, as mensagens no app são disparadas automaticamente. Para desabilitar isso:
 
 {% tabs %}
 
@@ -134,25 +134,25 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 Se você chamar `braze.showInAppMessage` sem remover `braze.automaticallyShowInAppMessages()`, as mensagens podem ser exibidas duas vezes.
 {% endalert %}
 
-Para um controle mais avançado sobre o tempo das mensagens, incluindo adiamento e restauração de mensagens acionadas, consulte nosso [Tutorial: Adiar e restaurar mensagens disparadas]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
+Para um controle mais avançado sobre o tempo das mensagens, incluindo adiamento e restauração de mensagens disparadas, consulte nosso [Tutorial: Adiar e restaurar mensagens disparadas]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
 {% endtab %}
 
 {% tab android %}
 1. Implemente o [`IInAppMessageManagerListener`](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?sdktab=android&tab=global%20listener#android_step-1-implement-the-custom-manager-listener) para definir um ouvinte personalizado.
 2. Atualize seu método [`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html) para retornar [`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html).
 
-Para um controle mais avançado sobre o tempo das mensagens, incluindo exibição posterior e reencaminhamento, consulte nossa página [Personalizando Mensagens](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?tab=global%20listener&subtab=kotlin#android_step-2-instruct-braze-to-use-the-custom-manager-listener).
+Para um controle mais avançado sobre o tempo das mensagens, incluindo exibições posteriores e reencaminhamentos, consulte nossa página [Personalizando Mensagens](https://www.braze.com/docs/developer_guide/in_app_messages/customization/?tab=global%20listener&subtab=kotlin#android_step-2-instruct-braze-to-use-the-custom-manager-listener).
 {% endtab %}
 
 {% tab swift %}
 1. Implemente o delegado `BrazeInAppMessageUIDelegate` em seu app. Para um guia completo, consulte [Tutorial: UI de Mensagem no App](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 2. Atualize seu método delegado `inAppMessage(_:displayChoiceForMessage:)` para retornar `.discard`.
 
-Para um controle mais avançado sobre o tempo das mensagens, incluindo adiamento e restauração de mensagens acionadas, consulte nosso [Tutorial: Adiar e restaurar mensagens disparadas]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
+Para um controle mais avançado sobre o tempo das mensagens, incluindo adiamento e restauração de mensagens disparadas, consulte nosso [Tutorial: Adiar e restaurar mensagens disparadas]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
 {% endtab %}
 
 {% tab flutter %}
-1. Verifique se você está usando o inicializador de integração automática, que é habilitado por padrão nas versões `2.2.0` e posteriores.
+1. Verifique se você está usando o inicializador de integração automática, que está habilitado por padrão nas versões `2.2.0` e posteriores.
 2. Defina o padrão da operação de mensagem no app como `DISCARD` adicionando a seguinte linha ao seu arquivo `braze.xml`.
     ```xml
     <string name="com_braze_flutter_automatic_integration_iam_operation">DISCARD</string>
@@ -162,15 +162,15 @@ Para um controle mais avançado sobre o tempo das mensagens, incluindo adiamento
 {% tab unity %}
 {% subtabs %}
 {% subtab Android %}
-Para Android, desmarque **Exibir Automaticamente Mensagens no App** no editor de configuração do Braze. Alternativamente, você pode definir `com_braze_inapp_show_inapp_messages_automatically` para `false` no `braze.xml` do seu projeto Unity.
+Para Android, desmarque **Exibir Mensagens no App Automaticamente** no editor de configuração do Braze. Alternativamente, você pode definir `com_braze_inapp_show_inapp_messages_automatically` para `false` no `braze.xml` do seu projeto Unity.
 
-A operação inicial de exibição de mensagem no app pode ser configurada no Braze usando a "Operação Inicial de Exibição do Gerenciador de Mensagens no App".
+A operação inicial de exibição de mensagens no app pode ser configurada no Braze usando a "Operação Inicial de Exibição do Gerenciador de Mensagens no App".
 {% endsubtab %}
 
 {% subtab iOS %}
 Para iOS, defina ouvintes de objetos de jogo no editor de configuração do Braze e certifique-se de que **Braze Exibe Mensagens no App** não esteja selecionado.
 
-A operação inicial de exibição de mensagem no app pode ser configurada no Braze usando a "Operação Inicial de Exibição do Gerenciador de Mensagens no App".
+A operação inicial de exibição de mensagens no app pode ser configurada no Braze usando a "Operação Inicial de Exibição do Gerenciador de Mensagens no App".
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -178,7 +178,7 @@ A operação inicial de exibição de mensagem no app pode ser configurada no Br
 
 ## Substituindo o limite de frequência padrão
 
-Por padrão, você pode enviar uma mensagem no app uma vez a cada 30 segundos. Para substituir isso, adicione a seguinte propriedade ao seu arquivo de configuração antes que a instância do Braze seja inicializada. Este valor será usado como o novo limite de frequência em segundos.
+Por padrão, você pode enviar uma mensagem no app a cada 30 segundos. Para substituir isso, adicione a seguinte propriedade ao seu arquivo de configuração antes que a instância do Braze seja inicializada. Esse valor será usado como o novo limite de frequência em segundos.
 
 {% tabs %}
 {% tab web %}
@@ -235,7 +235,7 @@ Neste momento, o SDK Web Braze não suporta a ativação manual de mensagens usa
 {% endtab %}
 
 {% tab android %}
-Para disparar uma mensagem no app usando um evento enviado pelo servidor, envie uma notificação por push silenciosa para o dispositivo, o que permite que um retorno de chamada personalizado registre um evento baseado no SDK. Esse evento então disparará a mensagem no app voltada para o usuário.
+Para disparar uma mensagem no app usando um evento enviado pelo servidor, envie uma notificação push silenciosa para o dispositivo, que permite um retorno de chamada personalizado para registrar um evento baseado no SDK. Esse evento então disparará a mensagem no app voltada para o usuário.
 
 #### Etapa 1: Crie um retorno de chamada push para receber o push silencioso
 
@@ -347,7 +347,7 @@ Devido a uma mensagem por push ser usada para registrar um evento personalizado 
 
 Crie uma [campanha de push silenciosa]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift), que é disparada pelo evento enviado pelo servidor. 
 
-![Uma campanha de mensagem no app baseada em ação que será entregue aos usuários cujos perfis de usuário têm o evento personalizado "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
+![Uma campanha de mensagem no app baseada em ação que será entregue a usuários cujos perfis de usuário têm o evento personalizado "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 
 A campanha de push precisa incluir extras de pares chave-valor, que indicam que esta campanha de push é enviada para registrar um evento personalizado do SDK. Este evento será usado para disparar a mensagem no app.
 
@@ -363,7 +363,7 @@ Crie sua campanha de mensagem no app visível para o usuário no dashboard da Br
 
 No exemplo a seguir, a mensagem no app específica a ser acionada foi configurada enviando a propriedade do evento como parte do push silencioso inicial.
 
-![Uma campanha de mensagem no app baseada em ação que será entregue aos usuários que realizam o evento personalizado "Disparar mensagem no app" onde "campaign_name" é igual a "Exemplo de Nome da Campanha IAM".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
+![Uma campanha de mensagem no app baseada em ação que será entregue a usuários que realizam o evento personalizado "Disparar mensagem no app" onde "campaign_name" é igual a "Exemplo de Nome da Campanha IAM".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 {% alert note %}
 Note que essas mensagens no app só serão disparadas se o push silencioso for recebido enquanto o aplicativo estiver em primeiro plano.
@@ -377,9 +377,7 @@ Para exibir manualmente uma mensagem no app pré-definida, use o seguinte métod
 
 {% tabs %}
 {% tab web %}
-```javascript
-braze.requestInAppMessageDisplay();
-```
+Para o SDK Web, use `braze.showInAppMessage(inAppMessage)` para exibir qualquer mensagem no app. Para detalhes e um exemplo, veja [Exibindo uma mensagem em tempo real](#displaying-a-message-in-real-time).
 {% endtab %}
 
 {% tab android %}
@@ -452,7 +450,7 @@ Não exiba mensagens no app quando o teclado virtual estiver exibido na tela, po
 {% endtab %}
 
 {% tab swift %}
-Chame manualmente o método [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/present(message:)) em seu `inAppMessagePresenter`. Por exemplo:
+Chame manualmente o método [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/present(message:)) no seu `inAppMessagePresenter`. Por exemplo:
 
 {% subtabs %}
 {% subtab swift %}
@@ -500,7 +498,7 @@ Appboy.AppboyBinding.DisplayNextInAppMessage();
 
 Mensagens de intenção de saída são mensagens no app não disruptivas usadas para comunicar informações importantes aos visitantes antes que eles deixem seu site.
 
-Para configurar disparadores para esses tipos de mensagem no Web SDK, implemente uma biblioteca de intenção de saída em seu site (como [a biblioteca de código aberto do ouibounce](https://github.com/carlsednaoui/ouibounce)), e então use o seguinte código para registrar `'exit intent'` como um evento personalizado no Braze. Agora suas futuras campanhas de mensagens no app podem usar esse tipo de mensagem como um disparador de evento personalizado.
+Para configurar disparadores para esses tipos de mensagens no Web SDK, implemente uma biblioteca de intenção de saída em seu site (como [a biblioteca de código aberto do ouibounce](https://github.com/carlsednaoui/ouibounce)), e então use o seguinte código para registrar `'exit intent'` como um evento personalizado no Braze. Agora suas futuras campanhas de mensagens no app podem usar esse tipo de mensagem como um disparador de evento personalizado.
 
 ```javascript
   var _ouibounce = ouibounce(false, {

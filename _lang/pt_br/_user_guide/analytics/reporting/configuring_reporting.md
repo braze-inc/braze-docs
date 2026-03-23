@@ -3,14 +3,14 @@ nav_title: Configurar relatórios
 article_title: Configurar relatórios
 page_order: 1.1
 page_type: reference
-description: "Esta página descreve o relatório de análise de dados gerado automaticamente fornecido pelo Braze."
+description: "Esta página descreve o relatório de análise de dados gerado automaticamente fornecido pela Braze."
 tool: Reporting
 
 ---
 
 # Configurar relatórios
 
-> O Braze gera automaticamente um relatório semanal por e-mail para ajudá-lo a entender a performance de seus aplicativos e campanhas de mensagens. 
+> A Braze gera automaticamente um relatório semanal por e-mail para ajudar você a entender a performance dos seus apps e campanhas de mensagens. 
 
 ## Assinatura de relatórios
 

@@ -7,7 +7,7 @@ description: "Este artigo fornece uma visão geral dos usuários e segmentos, de
 
 ---
 
-# Comece agora: Usuários e segmentos
+# Comece: Usuários e segmentos
 
 Compreender seus usuários e efetivamente direcioná-los é crucial para enviar campanhas de marketing personalizadas e direcionadas. Este artigo fornece uma visão geral dos usuários e segmentos, destacando sua importância e como eles podem ser aproveitados para engajar seu público.
 

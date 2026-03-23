@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Este artigo descreve o endpoint Export Canvas data summary analytics Braze."
+description: "Este artigo descreve o endpoint de análise de resumo de dados de exportação do Canvas do Braze."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "Este artigo descreve o endpoint Export Canvas data summary analyti
 /canvas/data_summary
 {% endapimethod %}
 
-> Use esse ponto de extremidade para exportar rollups de dados de séries temporais para um Canvas, fornecendo um resumo conciso dos resultados do Canvas.
+> Use este endpoint para exportar resumos de dados de séries temporais para um Canvas, fornecendo um resumo conciso dos resultados do Canvas.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1eb1b760-6b00-4c03-bcfb-12646f2ba6da {% endapiref %}
 
@@ -31,16 +31,16 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | Obrigatória | String | Veja [identificador da API canva]({{site.baseurl}}/api/identifier_types/). |
-| `ending_at` | Obrigatória | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Data de ponta para a exportação de dados. O padrão é a hora da solicitação. |
-| `starting_at` | Opcional* | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Data de início da exportação de dados. <br><br>\* Ou `length` ou `starting_at` é necessário. |
+| `ending_at` | Obrigatória | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Data final para a exportação de dados. Padrão para o momento da solicitação. |
+| `starting_at` | Opcional* | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Data de início para a exportação de dados. <br><br>\* Ou `length` ou `starting_at` é necessário. |
 | `length` | Opcional* | String | Número máximo de dias antes de `ending_at` incluídos na série retornada. Deve estar entre 1 e 14 (inclusive). <br><br>\* Ou `length` ou `starting_at` é necessário. |
-| `include_variant_breakdown` | Opcional | Booleano | Se deve incluir estatísticas de variantes (o padrão é `false`).  |
-| `include_step_breakdown` | Opcional | Booleano | Se deve incluir estatísticas de etapas (o padrão é `false`). |
-| `include_deleted_step_data` | Opcional | Booleano | Se deve incluir estatísticas de etapas excluídas (o padrão é `false`). |
+| `include_variant_breakdown` | Opcional | Booleano | Se deve incluir estatísticas de variantes (padrão para `false`).  |
+| `include_step_breakdown` | Opcional | Booleano | Se deve incluir estatísticas de etapas (padrão para `false`). |
+| `include_deleted_step_data` | Opcional | Booleano | Se deve incluir estatísticas de etapas para etapas deletadas (padrão para `false`). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
-**Alinhamento do fuso horário:** As análises de dados do Braze Dashboard são agregadas diariamente no fuso horário configurado por sua empresa no dashboard. Certifique-se de que seus registros de data e hora estejam alinhados com o fuso horário de sua empresa para que suas estatísticas correspondam ao dashboard. Por exemplo, se o horário de sua empresa for UTC+2, o carimbo de data/hora deverá ser 12AM UTC+2.
+**Alinhamento de fuso horário:** As análises do painel do Braze são agregadas diariamente no fuso horário configurado da sua empresa no painel. Certifique-se de que seus timestamps estejam alinhados com o fuso horário da sua empresa para que suas estatísticas correspondam ao painel. Por exemplo, se o horário da sua empresa é UTC+2, então o timestamp deve ser 12AM UTC+2.
 {% endalert %}
 
 ## Exemplo de solicitação
@@ -99,7 +99,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 ```
 
 {% alert important %}
-**`influenced_opens` campo:** Na resposta da API, o campo `influenced_opens` representa o número total de aberturas (aberturas diretas e aberturas por influência combinadas). No dashboard do Braze, "aberturas por influência" refere-se apenas a aberturas influenciadas, excluindo aberturas diretas. Isso se deve a uma convenção de nomenclatura herdada na API.
+**`influenced_opens` campo:** Na resposta da API, o campo `influenced_opens` representa o número total de aberturas (tanto aberturas diretas quanto aberturas por influência combinadas). No painel do Braze, 'aberturas por influência' refere-se apenas a aberturas por influência, excluindo aberturas diretas. Isso se deve a uma convenção de nomenclatura legada na API.
 {% endalert %}
 
 {% alert tip %}

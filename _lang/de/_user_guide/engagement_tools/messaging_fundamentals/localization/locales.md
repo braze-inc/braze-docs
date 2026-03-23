@@ -1,35 +1,35 @@
 ---
 nav_title: Lokalisierungen in Nachrichten
-article_title: Lokalisierung übersetzen
+article_title: Lokalisierungen übersetzen
 alias: /locales_in_messages/
 page_order: 0
 page_type: reference
-description: "In diesem Artikel erfahren Sie, wie Sie in Ihren Nachrichten Gebietsschemata verwenden können."
+description: "Dieser Artikel enthält Anweisungen zur Verwendung von Locales in Ihren Nachrichten."
 ---
 
-# Lokalisierung übersetzen
+# Lokalisierungen übersetzen
 
-> Nachdem Sie Ihrem Workspace Lokalisierungen hinzugefügt haben, können Sie Nutzer:innen in verschiedenen Sprachen mit einer einzigen Push-, E-Mail-, Banner- oder In-App-Nachricht zusammenstellen.
+> Nachdem Sie Ihrem Workspace Sprachversionen hinzugefügt haben, können Sie Nutzer:innen in verschiedenen Sprachen mit einem einzigen Push, einer E-Mail, einem Banner, einer In-App-Nachricht oder einem Content-Block ansprechen.
 
 {% multi_lang_include locales.md section="Prerequisites" %}
 
-## Verwendung von Gebietsschemata
+## Verwendung von Locales
 
-### Schritt 1: Lokalisierung in Ihrem Workspace einrichten {#workspace-setup}
+### 1. Schritt: Locales in Ihrem Workspace einrichten {#workspace-setup}
 
-Bevor Sie Lokalisierungen und Tags für die Übersetzung verwenden können, müssen Sie [Ihrem Workspace]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings) zunächst [Lokalisierungen hinzufügen]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings).
+Bevor Sie Locales und Übersetzungs-Tags verwenden können, müssen Sie zunächst [Locales zu Ihrem Workspace hinzufügen]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings).
 
-### Schritt 2: Fügen Sie Ihrer Nachricht Liquid-Tags für die Übersetzung hinzu {#add-translation-tags}
+### 2. Schritt: Liquid-Übersetzungs-Tags zu Ihrer Nachricht hinzufügen {#add-translation-tags}
 
-Fügen Sie die Übersetzungstags {% raw %}`{% translation your_id_here %}` und `{% endtranslation %}`{% endraw %} hinzu, um alle Text-, Bild- oder Link-URLs, die Sie übersetzen werden, zu umschließen.
+Fügen Sie die Übersetzungs-Tags {% raw %}`{% translation your_id_here %}` und `{% endtranslation %}`{% endraw %} hinzu, um den gesamten Text, alle Bilder oder Link-URLs, die Sie übersetzen möchten, einzuschließen.
 
-Jede Übersetzung sollte eine eindeutige `id` haben. Wenn Sie zum Beispiel eine einfache Begrüßung übersetzen, können Sie die ID "Begrüßung" nennen:
+Jede Übersetzung sollte eine eindeutige `id` aufweisen. Wenn Sie beispielsweise eine einfache Begrüßung übersetzen, können Sie die ID „greeting" nennen:
 
-{% raw %}`{% translation greeting %}Hello!{% endtranslation}`{% endraw %}
+{% raw %}`{% translation greeting %}Hello!{% endtranslation %}`{% endraw %}
 
 #### Lokalisierung von HTML-Blöcken
 
-Ein komplizierterer Absatz kann mehrere Übersetzungstags haben ("offer_text" und "offer_amount"):
+Ein komplexerer Absatz kann mehrere Übersetzungs-Tags enthalten („offer_text" und „offer_amount"):
 
 {% raw %}
 ```
@@ -39,12 +39,12 @@ Ein komplizierterer Absatz kann mehrere Übersetzungstags haben ("offer_text" un
 {% endraw %}
 
 {% alert important %}
-Wenn Sie große HTML-Blöcke in Übersetzungstags einpacken, kann dies zu Problemen mit Stylesheets oder Styling führen. Bringen Sie die kleinstmöglichen Textabschnitte unter.
+Das Einschließen großer HTML-Blöcke in Übersetzungs-Tags kann zu Problemen mit Stylesheets oder der Formatierung führen. Fassen Sie die Textabschnitte so kurz wie möglich.
 {% endalert %}
 
 #### Lokalisierung von Links
 
-Achten Sie bei der Lokalisierung von Anker-Tag-Links darauf, dass Sie **nur die sprachspezifischen Teile** und nicht das gesamte Attribut `href` URL einschließen. Wenn Sie die gesamte URL umbrechen, funktioniert das Link-Template möglicherweise nicht richtig.
+Um Anker-Tag-Links zu lokalisieren, stellen Sie sicher, dass Sie **nur die sprachspezifischen Teile** umschließen und nicht das gesamte `href`-URL-Attribut. Wenn Sie die gesamte URL einschließen, funktioniert das Link-Templating möglicherweise nicht korrekt.
 
 ##### Korrekte Verwendung
 
@@ -62,66 +62,77 @@ Achten Sie bei der Lokalisierung von Anker-Tag-Links darauf, dass Sie **nur die 
 ```
 {% endraw %}
 
-### Schritt 3: Wählen Sie die Lokalisierung für Nachrichten {#choose-locales}
+### 3. Schritt: Nachrichten-Locales auswählen {#choose-locales}
 
-Nachdem Sie Ihre Tags in die Nachricht eingefügt haben, wählen Sie in den Einstellungen für die Mehrsprachigkeit der Nachricht eine oder mehrere Lokalisierungen aus, die für diese Nachricht übersetzt werden sollen.
+Nachdem Sie die Übersetzungs-Tags in die Nachricht eingefügt haben, gehen Sie zu den Mehrsprachigkeitseinstellungen der Nachricht und wählen Sie eine oder mehrere Locales aus, in die diese Nachricht übersetzt werden soll.
 
-![Mehrsprachige Einstellungen mit einem Dropdown-Feld zum Auswählen von Lokalisierungen.]({% image_buster /assets/img/multi-language_support/manage_language_dropdown.png %}){: style="max-width:80%;"}
+![Mehrsprachige Einstellungen mit einem Dropdown-Feld zur Auswahl der Locales.]({% image_buster /assets/img/multi-language_support/manage_language_dropdown.png %}){: style="max-width:80%;"}
 
 {% tabs %}
 {% tab Email %}
-Wählen Sie bei der Bearbeitung Ihrer Nachricht im Menü Contentful die Option **Multi-Language** aus.
+Wählen Sie beim Bearbeiten Ihrer Nachricht im Menü „Inhalt" die Option **Mehrsprachig** aus.
 
 ![Mehrsprachige Einstellungen für E-Mails.]({% image_buster /assets/img/multi-language_support/email_multi_language.png %}){: style="max-width:45%;"}
 
 {% endtab %}
 
 {% tab Push %}
-Wählen Sie **Sprachen verwalten**, wenn Sie Ihre Nachricht bearbeiten.
+Wählen Sie beim Bearbeiten Ihrer Nachricht die Option **Sprachen verwalten** aus.
 
-![Mehrsprachige Einstellungen für Push.]({% image_buster /assets/img/multi-language_support/push_manage_languages.png %})
+![Mehrsprachige Einstellungen für Push-Benachrichtigungen.]({% image_buster /assets/img/multi-language_support/push_manage_languages.png %})
 
 {% endtab %}
 
 {% tab In-app message %}
 {% subtabs %}
 {% subtab Drag-and-Drop Editor %}
-Wählen Sie **Sprachen verwalten** am Ende des Abschnitts **Build**.
+Wählen Sie **Sprachen verwalten** unten im Abschnitt **Build** aus.
 
-![Mehrsprachige Einstellungen für In-App-Nachrichten per Drag-and-Drop.]({% image_buster /assets/img/multi-language_support/iam_dnd_manage_languages.png %}){: style="max-width:45%;"}
+![Mehrsprachige Einstellungen für Drag-and-Drop-In-App-Nachrichten.]({% image_buster /assets/img/multi-language_support/iam_dnd_manage_languages.png %}){: style="max-width:45%;"}
 
 {% endsubtab %}
 {% subtab Traditional editor %}
 
-Wählen Sie **Sprachen verwalten**, wenn Sie Ihre Nachricht bearbeiten.
+Wählen Sie beim Bearbeiten Ihrer Nachricht die Option **Sprachen verwalten** aus.
 
-![Mehrsprachige Einstellungen für In-App-Nachrichten im HTML-Format.]({% image_buster /assets/img/multi-language_support/iam_html_manage_languages.png %})
+![Mehrsprachige Einstellungen für HTML-In-App-Nachrichten.]({% image_buster /assets/img/multi-language_support/iam_html_manage_languages.png %})
 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 
 {% tab Banner %}
-Wählen Sie **Sprachen verwalten**, wenn Sie Ihre Nachricht bearbeiten.
+Wählen Sie beim Bearbeiten Ihrer Nachricht die Option **Sprachen verwalten** aus.
 
-![Mehrsprachige Einstellungen für Werbebanner.]({% image_buster /assets/img/multi-language_support/banner_manage_languages.png %})
+![Mehrsprachige Einstellungen für Banner.]({% image_buster /assets/img/multi-language_support/banner_manage_languages.png %})
+
+{% endtab %}
+
+{% tab Content Block %}
+Wählen Sie beim Bearbeiten Ihres Content-Blocks die Option **Sprachen verwalten** aus.
+
+{% alert important %}
+Content-Blöcke, für die Übersetzungen hochgeladen wurden, können nicht durch eine einzelne Kampagne oder Canvas-Nachricht überschrieben werden.
+{% endalert %}
+
+![Mehrsprachige Einstellungen für Content-Blöcke.]({% image_buster /assets/img/multi-language_support/content_block_manage_languages.png %})
 
 {% endtab %}
 {% endtabs %}
 
-### Schritt 4: CSV-Vorlage herunterladen {#download-csv}
+### 4. Schritt: CSV-Template herunterladen {#download-csv}
 
-Nachdem Sie Ihre Lokalisierungen ausgewählt haben, wählen Sie **Vorlage herunterladen**, um eine CSV-Vorlage mit einer Matrix Ihrer ausgewählten Übersetzungs-IDs und Lokalisierungen herunterzuladen.
+Nachdem Sie Ihre Locales ausgewählt haben, klicken Sie auf **Template herunterladen**, um ein CSV-Template herunterzuladen, das eine Matrix Ihrer ausgewählten Übersetzungs-IDs und Locales enthält.
 
-![Beispiel-CSV für die Lokalisierungen en, fr, und es.]({% image_buster /assets/img/multi-language_support/example_translation_csv.png %}){: style="max-width:70%;"}
+![Beispiel-CSV für die Locales en, fr und es.]({% image_buster /assets/img/multi-language_support/example_translation_csv.png %}){: style="max-width:70%;"}
 
-### Schritt 5: Eine ausgefüllte CSV hochladen {#upload-csv}
+### 5. Schritt: Ausgefüllte CSV-Datei hochladen {#upload-csv}
 
 {% alert important %}
-Alle Änderungen an den IDs oder Lokalisierungen in der CSV-Datei werden nicht automatisch in Ihrer Nachricht aktualisiert. Um die Übersetzungen zu aktualisieren, aktualisieren Sie die CSV-Datei und laden Sie die Datei erneut hoch.
+Änderungen an den IDs oder Locales in der CSV-Datei werden nicht automatisch in Ihrer Nachricht aktualisiert. Um die Übersetzungen zu aktualisieren, bearbeiten Sie die CSV-Datei und laden Sie sie erneut hoch.
 {% endalert %}
 
-Hier ist das Format für ein Beispiel für eine ausgefüllte CSV-Datei:
+Nachfolgend finden Sie das Format für eine vollständig ausgefüllte CSV-Datei:
 
 ```
 Variant1,,,,
@@ -132,19 +143,19 @@ offer_amount,10% Off,10% Off,10% de Descuento,10 % de réduction
 cta,CHECK OUT NOW,CHECK OUT NOW,VERIFICAR AHORA,VÉRIFIER MAINTENANT
 ```
 
-### Schritt 6: Vorschau der Lokalisierungen {#preview-locales}
+### 6. Schritt: Vorschau der Locales {#preview-locales}
 
-Wählen Sie bei der Vorschau Ihrer Nachricht die Option **Mehrsprachiger Nutzer:innen** aus dem Dropdown-Menü **Vorschau als Nutzer**:innen. Damit können Sie zwischen verschiedenen Lokalisierungen wechseln, um eine Vorschau auf alle Übersetzungen Ihrer Nachricht zu erhalten.
+Wählen Sie bei der Vorschau Ihrer Nachricht die Option **Mehrsprachige:r Nutzer:in** aus dem Dropdown-Menü **Vorschau als Nutzer:in** aus. So können Sie zwischen verschiedenen Locale-Definitionen wechseln, um eine Vorschau aller Übersetzungen Ihrer Nachricht anzuzeigen.
 
-![Lokalisierungs-Vorschauen]({% image_buster /assets/img/multi-language_support/multi_language_user_preview.png %})
+![Vorschau der Locales]({% image_buster /assets/img/multi-language_support/multi_language_user_preview.png %})
 
 {% alert tip %}
-Sehen Sie sich unsere [Translation API]({{site.baseurl}}/api/endpoints/translations) an, um Übersetzungen in Ihren Kampagnen und Canvase zu verwalten und zu aktualisieren.
+Sehen Sie sich unsere [Translation API]({{site.baseurl}}/api/endpoints/translations) an, um Übersetzungen in Ihren Kampagnen und Canvasen zu verwalten und zu aktualisieren.
 {% endalert %}
 
 ## Nachrichten von rechts nach links
 
-Wenn Sie die Übersetzungsdatei für Sprachen ausfüllen, die von rechts nach links geschrieben werden (wie Arabisch), umschließen Sie die Übersetzung mit `span`, damit sie richtig formatiert ist:
+Beim Ausfüllen der Übersetzungsdatei für Sprachen, die von rechts nach links geschrieben werden (wie Arabisch), umschließen Sie die Übersetzung mit `span`, damit sie korrekt formatiert wird:
 
 {% raw %}
 ```
@@ -156,44 +167,44 @@ Wenn Sie die Übersetzungsdatei für Sprachen ausfüllen, die von rechts nach li
 
 ### Bearbeitung von Übersetzungen für gestartete Kampagnen und Canvase
 
-Nachdem eine Kampagne oder ein Canvas gestartet wurde, können Sie auch im Entwurfsmodus noch Übersetzungen ändern. Dies gilt unabhängig davon, ob Sie die Übersetzungen direkt im Composer, per CSV-Upload oder über die API bearbeiten. 
+Nachdem eine Kampagne oder ein Canvas gestartet wurde, können Sie im Entwurfsmodus weiterhin Übersetzungen ändern. Dies gilt unabhängig davon, ob Sie die Übersetzungen direkt im Composer, per CSV-Upload oder über die API bearbeiten. 
 
-Weitere Einzelheiten zur Verwaltung von Kampagnen und Canvase nach dem Einführen finden Sie unter [Bearbeiten von gestarteten Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) und [Canvas-Entwürfen und Bearbeiten nach dem Einführen]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/).
+Weitere Einzelheiten zur Verwaltung von Kampagnen und Canvasen nach dem Start finden Sie unter [Gestartete Kampagnen bearbeiten]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) und [Canvas-Entwürfe und Bearbeitung nach dem Start]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/).
 
 ### Duplizieren von Canvas-Schritten oder Kampagnen und Übersetzungen
 
-Übersetzungen werden zusammen mit einem Canvas-Schritt, einer Kampagne oder einer Kampagnenvariante kopiert. Dies gilt auch für das Kopieren zwischen Workspaces, sofern die Lokalisierungen in dem Ziel-Workspace definiert sind. Achten Sie darauf, die Übersetzungen zu überprüfen und entsprechend zu aktualisieren, wenn Sie Änderungen an Ihrem Canvas oder Ihrer Kampagne vornehmen.
+Übersetzungen werden zusammen mit einem Canvas-Schritt, einer Kampagne oder einer Kampagnenvariante kopiert. Dies gilt auch beim Kopieren zwischen Workspaces, sofern die Locales im Ziel-Workspace definiert sind. Überprüfen und aktualisieren Sie die Übersetzungen entsprechend, wenn Sie Änderungen an Ihrem Canvas oder Ihrer Kampagne vornehmen.
 
-### Verwendung der Multi-Language API mit Canvase
+### Verwendung der Multi-Language-API mit Canvases
 
-Um die [Multi-Language API mit Canvase]({{site.baseurl}}/api/endpoints/translations/) zu verwenden, müssen Sie die `workflow_id`, `step_id` und `message_variation_id` in die Parameterliste aufnehmen.
+Um die [Multi-Language-API mit Canvases]({{site.baseurl}}/api/endpoints/translations/) zu verwenden, müssen Sie die Parameter `workflow_id`, `step_id` und `message_variation_id` in die Parameterliste aufnehmen.
 
-#### Canvas-Schritte zu Entwürfen nach der Markteinführung hinzugefügt
+#### Canvas-Schritte, die zu Entwürfen nach dem Start hinzugefügt wurden
 
-Wenn Sie die Multi-Language API mit Canvas-Schritten verwenden, die nach dem Start des Canvas erstellt wurden, ist die `message_variation_id`, die Sie an die API übergeben, leer oder leer.
+Bei der Verwendung der Multi-Language-API mit Canvas-Schritten, die nach dem Start des Canvas erstellt wurden, ist die `message_variation_id`, die Sie an die API übergeben, leer.
 
 ## Häufig gestellte Fragen
 
-#### Kann ich eine Änderung an der übersetzten Kopie in einer meiner Lokalisationen vornehmen?
-Ja Nehmen Sie zunächst die Bearbeitung in der CSV-Datei vor und laden Sie die Datei dann erneut hoch, um eine Änderung an der übersetzten Kopie vorzunehmen.
+#### Kann ich eine Änderung am übersetzten Text in einer meiner Locales vornehmen?
+Ja. Nehmen Sie zunächst die Bearbeitung in der CSV-Datei vor und laden Sie die Datei dann erneut hoch, um die Änderung zu übernehmen.
 
 #### Lassen sich Übersetzungs-Tags verschachteln?
 Nein.
 
-#### Unterstützen die Übersetzungen HTML für das Styling?
+#### Unterstützen Übersetzungen HTML für die Formatierung?
 Ja, aber achten Sie darauf, dass das HTML-Styling nicht mit dem Inhalt übersetzt wird.
 
-#### Kann ich ganze HTML-Nachrichten in einen Tag zur Übersetzung einpacken?
-Nein, Ihre Tags zur Übersetzung sollten so klein wie möglich sein, um Performance- oder Größenbeschränkungen zu vermeiden.
+#### Ist es möglich, vollständige HTML-Nachrichten in einen Übersetzungs-Tag einzuschließen?
+Nein, Ihre Übersetzungs-Tags sollten so klein wie möglich sein, um Performance- oder Größenbeschränkungen zu vermeiden.
 
 #### Welche Validierungen oder zusätzlichen Prüfungen führt Braze durch?
 
 | Szenario                                                                                                                                                 | Validierung in Braze                                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| In einer Übersetzungsdatei fehlen die mit der jeweiligen Nachricht verbundenen Gebietsschemata.                                                                               | Diese Übersetzungsdatei wird nicht hochgeladen.                                                                       |
-| In einer Übersetzungsdatei fehlen Textblöcke etwa aus Liquid-Übersetzungs-Tags aus der jeweiligen E-Mail.                                | Diese Übersetzungsdatei wird nicht hochgeladen.                                                                       |
-| Die Übersetzungsdatei enthält den Standardtext, der nicht mit den Textblöcken der jeweiligen E-Mail übereinstimmt.                                          | Diese Übersetzungsdatei wird nicht hochgeladen. Korrigieren Sie den Fehler in der CSV-Datei, bevor Sie den Upload erneut versuchen.               |
-| Die Übersetzungsdatei enthält Gebietsschemata, die in den **Mehrsprachigkeitseinstellungen** nicht vorkommen.                                                           | Diese Gebietsschemata werden nicht in Braze gespeichert.                                                                      |
-| Die Übersetzungsdatei enthält Textblöcke, die in der aktuellen Nachricht nicht vorkommen (wie den Entwurfsstand beim Upload der Übersetzungen). | Textblöcke, die in der Nachricht fehlen, werden nicht aus der Übersetzungsdatei übernommen und in Braze gespeichert. |
-| Ein Gebietsschema wird aus einer Nachricht entfernt, nachdem es als Teil der Übersetzungsdatei in die Nachricht übernommen worden ist.                           | Wenn Sie das Gebietsschema entfernen, werden alle damit verbundenen Übersetzungen in der Nachricht entfernt.                   |
+| In einer Übersetzungsdatei fehlen die mit der jeweiligen Nachricht verbundenen Locales.                                                                               | Diese Übersetzungsdatei wird nicht hochgeladen.                                                                       |
+| In einer Übersetzungsdatei fehlen Textblöcke, etwa Text innerhalb von Liquid-Übersetzungs-Tags, aus der jeweiligen E-Mail-Nachricht.                                | Diese Übersetzungsdatei wird nicht hochgeladen.                                                                       |
+| Die Übersetzungsdatei enthält Standardtext, der nicht mit den Textblöcken der jeweiligen E-Mail-Nachricht übereinstimmt.                                          | Diese Übersetzungsdatei wird nicht hochgeladen. Korrigieren Sie den Fehler in der CSV-Datei, bevor Sie den Upload erneut versuchen.               |
+| Die Übersetzungsdatei enthält Locales, die in den **Mehrsprachigkeitseinstellungen** nicht vorhanden sind.                                                       | Diese Locales werden nicht in Braze gespeichert.                                                                      |
+| Die Übersetzungsdatei enthält Textblöcke, die in der aktuellen Nachricht nicht vorhanden sind (z. B. der aktuelle Entwurfsstand zum Zeitpunkt des Übersetzungs-Uploads). | Textblöcke, die in der aktuellen Nachricht nicht vorhanden sind, werden nicht aus der Übersetzungsdatei in Braze gespeichert. |
+| Ein Locale wird aus einer Nachricht entfernt, nachdem es als Teil der Übersetzungsdatei in die Nachricht hochgeladen wurde.                           | Wenn Sie das Locale entfernen, werden alle damit verbundenen Übersetzungen in der Nachricht gelöscht.                   |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

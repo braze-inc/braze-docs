@@ -6,7 +6,7 @@
 
 이 서비스를 생성하는 다른 이점은 다음과 같습니다:
 - 전송된 메시지는 전체 추적 및 보고 기능을 갖습니다.
-- 비기술적인 Braze 사용자는 메시지 내용을 업데이트할 수 있습니다.
+- 비기술적인 회사 사용자는 메시지 내용을 업데이트할 수 있습니다.
 - 메시지는 캠페인 구성에 따라 사용자 프로필의 옵트인 및 옵트아웃 상태를 준수합니다.
 - 예약 데이터와 메시지 상호작용 데이터를 모두 사용하여 사용자를 세그먼트화하고 추가 메시지를 타겟팅할 수 있습니다. 예를 들어, 초기 알림 메시지를 열지 않은 사용자에게 약속 전에 추가 알림으로 리타겟할 수 있습니다.
 
@@ -17,7 +17,7 @@
 
 ## 1단계: Braze 사용자 프로필에 다가오는 예약 데이터를 작성하십시오 {#step-1}
 
-예약이 발생할 때마다 Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 엔드포인트를 사용하여 사용자 프로필에 [중첩 고객 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/)을 작성하십시오. 중첩 고객 속성에 알림 메시지를 전송하고 개인화하는 데 필요한 모든 정보가 포함되어 있는지 확인하세요. 이 사용 사례에서는 중첩 고객 속성의 이름을 "여행"으로 지정합니다.
+예약이 발생할 때마다 Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 엔드포인트를 사용하여 사용자 프로필에 [중첩 고객 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/)을 작성하십시오. 중첩 고객 속성이 알림 메시지를 전송하고 개인화하는 데 필요한 모든 정보를 포함하고 있는지 확인하세요. 이 사용 사례에서는 중첩 고객 속성의 이름을 "여행"으로 지정합니다.
 
 ### 예약 추가
 

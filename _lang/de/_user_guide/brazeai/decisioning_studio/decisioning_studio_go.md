@@ -1,11 +1,11 @@
 ---
-nav_title: Entscheidungsfindung Studio Go
+nav_title: Entscheidungsstudio Go
 article_title: BrazeAI Decisioning Studio Go
-page_order: 7
-description: "Erfahren Sie, wie Sie BrazeAI Decisioning <sup>StudioTM</sup> Go einrichten und in Braze integrieren."
+page_order: 1
+description: "Erfahren Sie, wie Sie BrazeAI Decisioning Studio<sup>TM</sup> einrichten und integrieren. Bitte gehen Sie zu Braze."
 ---
 
-# BrazeAI Decisioning Studio™ Go
+# BrazeAI Decisioning Studio
 
 {% alert important %}
 Note: We are currently building a new version of Decisioning Studio Go that will launch self-serve from the Braze Dashboard.
@@ -15,16 +15,16 @@ The following documentation applies to the legacy version, which will be depreca
 
 ## Über Decisioning Studio Go
 
-Decisioning Studio Go umfasst eine selbständige kreative Konfiguration mit einer begrenzten Aktionsbank, ausschließlich auf Customer-Engagement basierende Features, Optimierung auf Klicks und ist nur mit den folgenden zwei Customer-Engagement-Plattformen (CEPs) kompatibel:
+Decisioning Studio Go umfasst eine selbstständige kreative Konfiguration mit einer begrenzten Aktionsbank, ausschließlich engagementbasierte Kunden-Features, Optimierung anhand von Klicks und ist nur mit den folgenden drei Customer-Engagement-Plattformen kompatibel:
 
 * Braze
 * Salesforce Marketing Cloud
 
-Um mehr über die Unterschiede zwischen Decisioning Studio Go und Decisioning Studio Pro zu erfahren, lesen Sie bitte [Decisioning Studio Go versus Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/#decisioning-studio-go-vs-decisioning-studio-pro).
+Weitere Informationen zu den Unterschieden zwischen Decisioning Studio Go und Decisioning Studio Pro finden Sie unter [Decisioning Studio Go im Vergleich zu Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/#decisioning-studio-go-vs-decisioning-studio-pro).
 
 ## Nächste Schritte
 
-Folgen Sie diesen Schritten, um Decisioning Studio Go einzurichten:
+Bitte befolgen Sie die folgenden Schritte, um Decisioning Studio Go einzurichten:
 
 1. [Datenquellen verbinden]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/)
 2. [Orchestrierung einrichten]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/)

@@ -8,7 +8,7 @@ description: "Dieser Referenzartikel behandelt die Grundlagen des Braze SDK."
 
 # SDK-Übersicht 
 
-> Das Braze SDK sammelt Sitzungsdaten, identifiziert Nutzer:innen und zeichnet Käufe und angepasste Events über Ihre Website oder App auf. Sie können das SDK auch nutzen, um Nutzer:innen zu engagieren, indem Sie In-App-Nachrichten und Push-Benachrichtigungen direkt über das Braze-Dashboard versenden.
+> Das Braze SDK erfasst Sitzungsdaten, identifiziert Nutzer:innen und zeichnet Käufe und angepasste Events über Ihre Website oder App auf. Sie können das SDK auch nutzen, um das Engagement mit Nutzern:innen zu fördern, indem Sie In-App-Nachrichten und Push-Benachrichtigungen direkt über das Braze-Dashboard versenden.
 
 Kurz gesagt, das Braze SDK:
 * Sammelt und synchronisiert Benutzerdaten in einem konsolidierten Benutzerprofil
@@ -28,11 +28,11 @@ Um Zeit zu sparen und eine reibungslose Integration zu gewährleisten, empfehlen
 
 ## Datenaggregation
 
-Das Braze SDK erfasst automatisch Daten auf Benutzerebene und liefert Ihnen wichtige Metriken für Ihre App und Ihre Nutzer:innen-Basis. Gruppieren Sie ähnliche Apps in einem einzigen Workspace (z.B. iOS- und Android-Versionen zusammen), um gesammelte Daten plattformübergreifend zu betrachten und ein vollständiges Bild der Nutzer:in zu erstellen. Weitere Informationen finden Sie in dem Artikel auf der [Startseite]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/).
+Das Braze SDK erfasst automatisch Daten auf Benutzerebene und liefert Ihnen wichtige Metriken für Ihre App und Ihre Nutzerbasis. Gruppieren Sie ähnliche Apps in einem einzigen Workspace (z. B. iOS- und Android-Versionen zusammen), um die gesammelten Daten plattformübergreifend anzuzeigen und ein vollständiges Bild der Benutzeraktivitäten zu erhalten. Weitere Informationen finden Sie in dem Artikel auf der [Startseite]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/).
 
 ## In-App-Nachrichten
 
-Verwenden Sie das SDK, um In-App-Nachrichten direkt zu verfassen und zu versenden. Je nach Strategie Ihrer Kampagne können Sie zwischen Slideup-, Modal- oder Fullscreen-Nachrichten wählen. Einzelheiten zur Zusammensetzung finden Sie unter [Erstellen einer In-App-Nachricht]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
+Verwenden Sie das SDK, um In-App-Nachrichten direkt zu verfassen und zu versenden. Sie können je nach Ihrer Kampagnenstrategie zwischen Slideup-, Modal- oder Vollbild-Nachrichten wählen. Einzelheiten zur Erstellung finden Sie unter [Erstellen einer In-App-Nachricht]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
 
 ![Push-Benachrichtigung in einem Webbrowser]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
@@ -48,10 +48,10 @@ Eine Kampagne, die In-App-Nachrichten enthält, wird standardmäßig an alle Ver
 
 Sie können ein Segment Ihrer Internet-Nutzer erstellen, indem Sie **Apps und Websites mit Targeting** auf **Nutzer:innen bestimmter Apps** zusammenstellen, und dann nur Ihre Website für die **spezifischen Apps** auswählen.
 
-![Segment Details Seite mit Web App im Fokus]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
+![Segmentdetails-Seite mit Fokus auf der Web-App]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
 
 Dies ermöglicht es Ihnen, Nutzer:innen auf der Grundlage ihres Verhaltens auf intelligente Weise anzusprechen. Wenn Sie Webnutzer:innen ansprechen möchten, um sie zum Herunterladen Ihrer mobilen App zu bewegen, würden Sie dieses Segment als Ihre Zielgruppe erstellen. Wenn Sie eine Nachrichtenkampagne versenden möchten, die eine mobile In-App-Nachricht, aber keine Web-Nachricht enthält, deaktivieren Sie das Symbol für Ihre Website in Ihrem Segment.
 
 ## Unterstützte Plattformen
 
-Braze bietet SDKs für mehrere Plattformen, wie Internet, Android und Swift. Die vollständige Liste finden Sie im [Braze Entwickler:in]({{site.baseurl}}/developer_guide/home).
+Braze stellt SDKs für verschiedene Plattformen bereit, darunter Internet, Android und SWIFT. Die vollständige Liste finden Sie im [Braze-Entwickler:innen-Guide]({{site.baseurl}}/developer_guide/home).
