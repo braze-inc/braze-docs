@@ -37,7 +37,9 @@ The _Opt-In_ and _Opt-Out_ statistics in the **SMS/MMS/RCS Performance** panel r
 
 ### Track SMS campaign opt-outs
 
-Track SMS opt-outs at the campaign level by using the inbound receive table instead of the subscription group state change table. For example, in [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) or your data warehouse, you can run a query like:
+Track SMS opt-outs at the campaign level by using the inbound receive table instead of the subscription group state change table. For example, in [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) or your data warehouse, you can run a query that references the `USERS_MESSAGES_SMS_INBOUNDRECEIVE` or [`USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED`]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/sql_segments/sql_segments_tables/#USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED) table.
+
+This example query references the `USERS_MESSAGES_SMS_INBOUNDRECEIVE` table:
 
 ```sql
 SELECT *
@@ -52,13 +54,13 @@ This returns users who opted out of SMS communications for the given workspace a
 
 ## Charges applied to SMS sending outcomes
 
-| Outcome | Definition | Charge |
+This table reflects Braze billing, not your provider's billing. Outcomes that are not charged by Braze may be charged by your provider.
+
+| Outcome | Definition | Charged by Braze |
 |--------|------------|--------|
 | Sent | A campaign or Canvas step has launched or triggered, and an SMS payload has been sent to the SMS provider. | No charge |
 | Delivery Failed | The SMS payload couldn't be sent to the SMS provider. This can occur due to overflowing queues, suspended accounts, or media errors (in the case of MMS). | No charge |
 | Delivered | The SMS provider received confirmation of message delivery from the upstream carrier (and, where available, from the destination device). | Charge |
 | Rejected | The SMS provider received a rejected receipt indicating that the message wasn't delivered. This can happen for several reasons, including carrier content filtering or availability of the destination device. | Charge |
-| Sent to Carrier | The SMS provider received the SMS payload from Braze and attempted to send it to the carriers. This statistic includes delivered messages, rejected messages, and sends where delivery or rejection was not confirmed. | Charges may apply based on individual message sending outcomes |
+| Sent to Carrier | {% multi_lang_include analytics/metrics.md metric='Sends to Carrier' %} | Charges may apply based on individual message sending outcomes |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-
