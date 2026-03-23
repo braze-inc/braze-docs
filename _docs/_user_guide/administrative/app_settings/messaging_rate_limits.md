@@ -79,4 +79,4 @@ Note that you can still set individual rate limits in your campaigns and Canvase
 - Messages sent using [Transactional Email campaigns]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign) are not included in the workspace messaging rate limits. This means they are rate-limited and are not counted toward any set workspace messaging rate limits.
 - Messages to [Seed Groups]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab#seed-groups) and [test sends]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages) are not included in the workspace messaging rate limits. This means they are not be rate-limited and are not counted toward any set workspace messaging rate limits.
 - SMS auto-responses are not included in the workspace messaging rate limits. This means they are not rate-limited and are not counted toward any set workspace messaging rate limits.
-- Delivery rate speed limits aren't supported for In-app messages, Feature flags, and Banners
+- Delivery rate speed limits aren't supported for in-app messages, feature flags, and Banners.
