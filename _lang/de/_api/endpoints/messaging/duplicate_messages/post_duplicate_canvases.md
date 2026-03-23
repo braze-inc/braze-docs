@@ -5,24 +5,22 @@ search_tag: Endpunkt
 page_order: 5
 layout: api_page
 page_type: reference
-description: "Dieser Artikel enthält Einzelheiten zum Endpunkt Duplicate Canvase."
+description: "Dieser Artikel enthält Einzelheiten zum Endpunkt „Canvase duplizieren"."
 ---
 
 {% api %}
 # Canvase über die API duplizieren
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints  %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/duplicate
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um Canvase zu duplizieren. Dieser API Endpunkt ist vergleichbar mit der [Duplizierung von Canvase im Braze-Dashboard][1].
-
-{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
+> Verwenden Sie diesen Endpunkt, um Canvase zu duplizieren. Dieser API-Endpunkt ist vergleichbar mit dem [Duplizieren von Canvasen im Braze-Dashboard][1].
 
 ## Voraussetzungen
 
-Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berechtigung `canvas.duplicate` erstellen.
+Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berechtigung `canvas.duplicate` generieren.
 
-## Rate-Limit
+## Rate-Limits
 
 Dieser Endpunkt ist auf 100 API-Aufrufe pro Minute beschränkt.
 
@@ -42,19 +40,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Parameter der Anfrage
+## Anfrageparameter
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`| Erforderlich | String | Siehe [Canvas Bezeichner](https://www.braze.com/docs/api/identifier_types/). |
-|`name`| Erforderlich | String | Der Name des entstehenden Canvas. |
-|`description`| Optional | String | Das Beschreibungsfeld für das entstehende Canvas. |
+|`canvas_id`| Erforderlich | String | Siehe [Canvas-Bezeichner](https://www.braze.com/docs/api/identifier_types/). |
+|`name`| Erforderlich | String | Der Name des resultierenden Canvas. |
+|`description`| Optional | String | Das Beschreibungsfeld für das resultierende Canvas. |
 |`tag_names` | Optional | String | Die Tags für das resultierende Canvas. Es muss sich um bestehende Tags handeln. Wenn Sie in der Anfrage neue Tags hinzufügen, überschreiben diese alle Tags, die sich auf dem ursprünglichen Canvas befanden. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Antwort
 
-Dieser Endpunkt gibt einen `202` Status Code zurück, und die Erstellung des Canvas erfolgt asynchron. Sie können den [Download der Sicherheitsereignisse][2] verwenden, um Aufzeichnungen darüber zu sehen, wann Canvase dupliziert wurden und mit welchem API-Schlüssel.
+Dieser Endpunkt gibt einen Statuscode `202` zurück, und die Erstellung des Canvas erfolgt asynchron. Sie können den [Download der Sicherheitsereignisse][2] verwenden, um Aufzeichnungen darüber einzusehen, wann Canvase dupliziert wurden und mit welchem API-Schlüssel.
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/duplicating
 [2]: {{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings

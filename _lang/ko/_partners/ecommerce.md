@@ -1,10 +1,10 @@
 ---
 nav_title: eCommerce
-article_title: eCommerce Partners
+article_title: eCommerce 파트너
 page_order: 10
 
 page_type: landing
-description: "This landing page lists Braze partners (Alloys) who allow you to integrate with their eCommerce platform."
+description: "이 랜딩 페이지에는 eCommerce 플랫폼과 통합할 수 있도록 지원하는 Braze 파트너(Alloys)가 나열되어 있습니다."
 
 layout: partner_page
 search_tag: Partner
@@ -52,8 +52,14 @@ valid_partner_list:
   url: /docs/partners/shopify/
 - name: Stripe
   url: /docs/partners/stripe/
-- name: 오켄도
+- name: Okendo
   url: /docs/partners/okendo/
 - name: Swym
   url: /docs/partners/swym/
+- name: Algolia
+  url: /docs/partners/algolia/
+- name: Tapcart
+  url: /docs/partners/tapcart/
+- name: Poq
+  url: /docs/partners/poq/
 ---

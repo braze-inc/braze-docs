@@ -1,9 +1,9 @@
 ---
 nav_title: Indicadores de lido e não lido
-article_title: Indicadores de Leitura e Não Lida do cartão de conteúdo para iOS
+article_title: Indicadores de lido e não lido do cartão de conteúdo para iOS
 platform: iOS
 page_order: 4
-description: "Este artigo de referência cobre os indicadores de leitura e não leitura do iOS e como implementá-los em seus Cartões de Conteúdo."
+description: "Este artigo de referência cobre os indicadores de lido e não lido do iOS e como implementá-los nos seus Cartões de conteúdo."
 channel:
   - content cards
 
@@ -12,19 +12,19 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Indicadores de leitura e não leitura
+# Indicadores de lido e não lido
 
-## Desativando o indicador não visualizado
+## Desativando o indicador de não visualizado
 
 ![Dois cartões de conteúdo exibidos lado a lado. O cartão à esquerda tem uma linha azul na parte inferior, indicando que não foi visto. O cartão à direita não tem uma linha azul, indicando que já foi visto.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
 
 Você pode optar por desativar a linha azul na parte inferior do cartão, que indica se o cartão foi visualizado ou não, configurando a propriedade `disableUnviewedIndicator` em `ABKContentCardsTableViewController` para `YES`.
 
-## Personalizando o indicador não visualizado
+## Personalizando o indicador de não visualizado
 
-O indicador não visualizado pode ser acessado através da propriedade `unviewedLineView` da classe `ABKBaseContentCardCell`. Se você usar implementações de `UITableViewCell`, acesse a propriedade antes que a célula seja desenhada.
+O indicador de não visualizado pode ser acessado através da propriedade `unviewedLineView` da classe `ABKBaseContentCardCell`. Se você usar implementações de `UITableViewCell`, acesse a propriedade antes que a célula seja desenhada.
 
-Por exemplo, para definir a cor do indicador não visualizado para vermelho:
+Por exemplo, para definir a cor do indicador de não visualizado como vermelho:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

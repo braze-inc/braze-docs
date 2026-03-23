@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Endpunkts Update a preference center Braze."
+description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts „Update a preference center"."
 
 ---
 {% api %}
@@ -22,15 +22,15 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Update a prefe
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `preference_center.update`.
 
-## Rate-Limit
+## Rate-Limits
 
-Für diesen Endpunkt gilt ein Rate-Limits von 10 Anfragen pro Minute und Workspace.
+{% multi_lang_include rate_limits.md endpoint='post or put preference center' %}
 
 ## Pfad-Parameter
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| Erforderlich | String | Die ID für Ihr Präferenzzentrum. |
+|`preferenceCenterExternalID`| Erforderlich | String | Die ID für Ihr Einstellungszentrum. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
@@ -64,18 +64,18 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Parameter der Anfrage
+## Anfrage-Parameter
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
 |`preference_center_page_html`| Erforderlich | String | Der HTML-Code für die Seite des Einstellungszentrums. |
-|`preference_center_title`| Optional | String | Der Titel für das Einstellungscenter und die Bestätigungsseiten. Wenn kein Titel angegeben wird, lautet der Titel der Seiten standardmäßig "Einstellungscenter". |
+|`preference_center_title`| Optional | String | Der Titel für das Einstellungszentrum und die Bestätigungsseiten. Wenn kein Titel angegeben wird, lautet der Standardtitel der Seiten „Preference Center". |
 |`confirmation_page_html`| Erforderlich | String | Der HTML-Code für die Bestätigungsseite. |
 |`state` | Optional | String | Wählen Sie `active` oder `draft`.|
-|`options` | Optional | Objekt | Attribute: <br>`meta-viewport-content`: Wenn vorhanden, wird der Seite ein `viewport` Meta-Tag mit `content= <value of attribute>` hinzugefügt.<br><br> `link-tags`: Legen Sie ein Favicon für die Seite fest. Wenn diese Option aktiviert ist, wird der Seite ein `<link>` Tag mit einem rel-Attribut hinzugefügt.  |
+|`options` | Optional | Objekt | Attribute: <br>`meta-viewport-content`: Wenn vorhanden, wird der Seite ein `viewport`-Meta-Tag mit `content= <value of attribute>` hinzugefügt.<br><br> `link-tags`: Legen Sie ein Favicon für die Seite fest. Wenn diese Option gesetzt ist, wird der Seite ein `<link>`-Tag mit einem rel-Attribut hinzugefügt.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## Beispiel Anfrage
+## Beispielanfrage
 
 {% raw %}
 ```
@@ -93,7 +93,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/
 ```
 {% endraw %}
 
-## Beispielhafte Antwort
+## Beispielantwort
 {% raw %}
 ```
 {

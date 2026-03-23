@@ -164,6 +164,10 @@ If no existing user profile exists for your provided `external_id`, it will be a
 
 You can update LINE users that are known in your application through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint by passing their external identifiers and `native_line_id`. If an unidentified user profile already exists for a user and the same `native_line_id` is added to a different user profile through `/users/track`, it will inherit all the subscription states of the unidentified user profile. However, duplicate user profiles will exist with the same `native_line_id`. Any subsequent subscription updates from event updates will update all profiles accordingly. 
 
+{% alert note %}
+LINE subscription states are tracked by `native_line_id`, not `external_id`. For example, if User B's user profile is created with the same `native_line_id` as User A, but not the same `external_id`, User B inherits User A's LINE subscription status.
+{% endalert %}
+
 Here is an example payload to `/users/track` that updates a user profile by the external user ID to add a `native_line_id`: 
 
 {% raw %}

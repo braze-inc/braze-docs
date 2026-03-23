@@ -1,46 +1,46 @@
-# Crear feature flags
+# Crear conmutadores de características
 
-> Las banderas de características te permiten habilitar o deshabilitar a distancia la funcionalidad para una selección de usuarios. Crea una nueva bandera de característica dentro del panel de Braze. Proporciona un nombre y un `ID`, una audiencia objetivo y un porcentaje de usuarios para los que habilitar esta característica. Luego, utilizando ese mismo `ID` en el código de tu aplicación o sitio web, puedes ejecutar condicionalmente determinadas partes de tu lógica empresarial. Para saber más sobre los indicadores de características y cómo puedes utilizarlos en Braze, consulta [Acerca de los indicadores de características]({{site.baseurl}}/developer_guide/feature_flags/).
+> Los conmutadores de características te permiten habilitar o deshabilitar a distancia la funcionalidad para una selección de usuarios. Crea un nuevo conmutador de características dentro del panel de Braze. Proporciona un nombre y un `ID`, una audiencia objetivo y un porcentaje de usuarios para los que habilitar esta característica. Luego, utilizando ese mismo `ID` en el código de tu aplicación o sitio web, puedes ejecutar condicionalmente determinadas partes de tu lógica empresarial. Para saber más sobre los conmutadores de características y cómo puedes utilizarlos en Braze, consulta [Acerca de los conmutadores de características]({{site.baseurl}}/developer_guide/feature_flags/).
 
 ## Requisitos previos
 
 ### Versión del SDK
 
-Para utilizar las feature flags, asegúrate de que tus SDK están actualizados al menos con estas versiones mínimas:
+Para utilizar los conmutadores de características, asegúrate de que tus SDK están actualizados al menos con estas versiones mínimas:
 
 {% sdk_min_versions swift:5.9.0 android:24.2.0 web:4.6.0 unity:4.1.0 cordova:5.0.0 reactnative:4.1.0 flutter:6.0.0 roku:1.0.0 %}
 
-### Permisos Braze
+### Permisos de Braze
 
-Para gestionar las banderas de características en el panel, necesitarás ser administrador o tener los siguientes [permisos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/):
+Para gestionar los conmutadores de características en el dashboard, necesitarás ser administrador o tener los siguientes [permisos]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/):
 
 | Permiso                                                                    | Qué puedes hacer                           |
 |-------------------------------------------------------------------------------|-------------------------------------------|
-| **Administrar conmutadores de características**                                                      | Ver, crear y editar feature flags.     |
-| **Campañas de acceso, Lienzos, Tarjetas, Banderas de características, Segmentos, Mediateca** | Ver la lista de banderas de características disponibles. |
+| **Administrar conmutadores de características**                                                      | Ver, crear y editar conmutadores de características.     |
+| **Acceso a Campaigns, Canvas, tarjetas, conmutadores de características, Segments, mediateca** | Ver la lista de conmutadores de características disponibles. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-## Crear una bandera de característica
+## Crear un conmutador de características
 
-### Paso 1: Crear una nueva bandera de característica
+### Paso 1: Crear un nuevo conmutador de características
 
-Ve a **Mensajería** > **Indicadores de características** y, a continuación, selecciona **Crear indicador de características**.
+Ve a **Mensajería** > **Conmutadores de características** y, a continuación, selecciona **Crear conmutador de características**.
 
-![Una tabla de datos que muestra una característica existente y cómo crear una nueva.]({% image_buster /assets/img/feature_flags/create_ff.png %}){: style="max-width:75%"}
+![Una tabla de datos que muestra un conmutador de características existente y cómo crear uno nuevo.]({% image_buster /assets/img/feature_flags/create_ff.png %}){: style="max-width:75%"}
 
-### Paso 2: Rellena los datos
+### Paso 2: Rellena los detalles
 
-En **Detalles de la característica**, introduce un nombre, un ID y una descripción para tu característica.
+En **Detalles del conmutador de características**, introduce un nombre, un ID y una descripción para tu conmutador de características.
 
-![Un formulario que muestra que puedes añadir un nombre, un ID, una descripción y propiedades a una característica.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
+![Un formulario que muestra que puedes añadir un nombre, un ID, una descripción y propiedades a un conmutador de características.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
 
 
 | Campo        | Descripción                                                                |
 |--------------|----------------------------------------------------------------------------|
-| Apellidos         | Un título legible para tus especialistas en marketing y administradores.              |
-| ID           | El ID único que utilizarás en tu código para comprobar si esta característica está [habilitada para un usuario](#enabled). Este ID no se puede cambiar más tarde, así que revisa nuestras [mejores prácticas de denominación de ID](#naming-conventions) antes de continuar. |
-| Descripción  | Una descripción opcional que da algo de contexto sobre tu bandera de característica.   |
-| Propiedades   | Propiedades opcionales que configuran de forma remota tu indicador de característica. Se pueden sobrescribir en los pasos en Canvas o en los experimentos con indicadores de características. |
+| Nombre         | Un título legible para tus especialistas en marketing y administradores.              |
+| ID           | El ID único que utilizarás en tu código para comprobar si esta característica está [habilitada para un usuario](#enabled). Este ID no se puede cambiar más tarde, así que revisa las [mejores prácticas de nomenclatura de ID](#naming-conventions) antes de continuar. |
+| Descripción  | Una descripción opcional que da algo de contexto sobre tu conmutador de características.   |
+| Propiedades   | Propiedades opcionales que configuran de forma remota tu conmutador de características. Se pueden sobrescribir en los pasos en Canvas o en los experimentos con conmutadores de características. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Paso 2a: Crear propiedades personalizadas
@@ -49,7 +49,7 @@ En **Propiedades**, puedes crear opcionalmente propiedades personalizadas a las 
 
 {% tabs local %}
 {% tab example %}
-En el siguiente ejemplo, la característica muestra un banner de agotamiento de existencias para una tienda de comercio electrónico utilizando las propiedades personalizadas enumeradas: 
+En el siguiente ejemplo, el conmutador de características muestra un banner de agotamiento de existencias para una tienda de comercio electrónico utilizando las propiedades personalizadas enumeradas: 
 
 |Nombre de la propiedad|Tipo|Valor|
 |--|--|--|
@@ -62,78 +62,78 @@ En el siguiente ejemplo, la característica muestra un banner de agotamiento de 
 |`footer_settings`|`JSON`|`{ "colors": [ "red", "blue", "green" ], "placement": 123 }`|
 
 {% alert tip %}
-No hay límite en el número de propiedades que puedes añadir. Sin embargo, las propiedades de una característica de función están limitadas a un total de 10 KB. Tanto los valores de propiedad como las claves tienen una longitud máxima de 255 caracteres.
+No hay límite en el número de propiedades que puedes añadir. Sin embargo, las propiedades de un conmutador de características están limitadas a un total de 10 KB. Tanto los valores de propiedad como las claves tienen una longitud máxima de 255 caracteres.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
 
 ### Paso 4: Elige segmentos a los que dirigirte
 
-Antes de desplegar una bandera de características, tienes que elegir un [segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/) de usuarios al que dirigirte. Selecciona **Añadir regla** en tu bandera recién creada y, a continuación, utiliza los menús desplegables de grupo de filtros y segmento para filtrar a los usuarios de tu audiencia objetivo. Añade varios filtros para reducir aún más tu audiencia.
+Antes de desplegar un conmutador de características, tienes que elegir un [segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/) de usuarios al que dirigirte. Selecciona **Añadir regla** en tu conmutador recién creado y, a continuación, utiliza los menús desplegables de grupo de filtros y segmento para filtrar a los usuarios de tu audiencia objetivo. Añade varios filtros para reducir aún más tu audiencia.
 
 ![Un cuadro de texto denominado «Tráfico de implementación» con la posibilidad de añadir segmentos y filtros.]({% image_buster /assets/img/feature_flags/segmentation_ff.png %}){: style="max-width:75%;"}
 
 ### Paso 5: Configura el tráfico de despliegue {#rollout}
 
-De forma predeterminada, los indicadores de características siempre están inactivos, lo que te permite separar la fecha de lanzamiento de la característica de la activación total de los usuarios. Para comenzar la implementación, utiliza la sección **Tráfico de implementación** para introducir un porcentaje en el cuadro de texto. Esto seleccionará el porcentaje de usuarios aleatorios de tu segmento seleccionado que recibirán esta nueva característica.
+De forma predeterminada, los conmutadores de características siempre están inactivos, lo que te permite separar la fecha de lanzamiento de la característica de la activación total de los usuarios. Para comenzar la implementación, utiliza la sección **Tráfico de implementación** para introducir un porcentaje en el cuadro de texto. Esto seleccionará el porcentaje de usuarios aleatorios de tu segmento seleccionado que recibirán esta nueva característica.
 
 {% alert important %}
-No configures el tráfico de despliegue por encima del 0 % hasta que estés listo para que tu nueva característica se active en vivo. Cuando definas inicialmente tu feature flag en el panel, deja esta configuración en 0 %.
+No configures el tráfico de despliegue por encima del 0 % hasta que estés listo para que tu nueva característica entre en vivo. Cuando definas inicialmente tu conmutador de características en el dashboard, deja esta configuración en 0 %.
 {% endalert %}
 
 {% alert important %}
-Para implementar una bandera con una sola regla o para una audiencia específica, añade tu primera regla con los criterios de segmentación y los porcentajes de implementación seleccionados. Por último, confirma que la regla **«Todos los demás»** esté alternada y guarda tu marca.
+Para implementar un conmutador con una sola regla o para una audiencia específica, añade tu primera regla con los criterios de segmentación y los porcentajes de implementación seleccionados. Por último, confirma que la regla **El resto** esté desactivada y guarda tu conmutador. 
 {% endalert %}
 
-## Implementación de características con múltiples reglas
+## Implementación de conmutadores de características con múltiples reglas
 
-Utiliza implementaciones de indicadores de características con múltiples reglas para definir una secuencia de reglas para evaluar a los usuarios, lo que permite una segmentación precisa y lanzamientos de características controlados. Este método es ideal para implementar la misma característica en audiencias diversas. 
+Utiliza implementaciones de conmutadores de características con múltiples reglas para definir una secuencia de reglas para evaluar a los usuarios, lo que permite una segmentación precisa y lanzamientos de características controlados. Este método es ideal para implementar la misma característica en audiencias diversas. 
 
 ### Orden de evaluación
 
-Las reglas de las características de función se evalúan de arriba abajo, en el orden en que aparecen enumeradas. Un usuario cumple los requisitos de la primera regla que satisfaga. Si un usuario no cumple ninguna regla, su elegibilidad se determina mediante la regla predeterminada «Todos los demás».
+Las reglas de los conmutadores de características se evalúan de arriba abajo, en el orden en que aparecen enumeradas. Un usuario cumple los requisitos de la primera regla que satisfaga. Si un usuario no cumple ninguna regla, su elegibilidad se determina mediante la regla predeterminada «El resto».
 
 ### Calificación del usuario
 
-- Si un usuario cumple los criterios de la primera regla, inmediatamente pasa a ser elegible para recibir la bandera de característica.
+- Si un usuario cumple los criterios de la primera regla, inmediatamente pasa a ser elegible para recibir el conmutador de características.
 - Si un usuario no cumple la primera regla, se evalúa según la segunda regla, y así sucesivamente.
 
-La evaluación secuencial continúa hasta que un usuario cumple los requisitos de una regla o llega a la regla «Todos los demás» al final de la lista.
+La evaluación secuencial continúa hasta que un usuario cumple los requisitos de una regla o llega a la regla «El resto» al final de la lista.
 
-### Regla de «todos los demás»
+### Regla de «El resto»
 
-La regla «Todos los demás» actúa como regla predeterminada. Si un usuario no cumple ninguno de los requisitos anteriores, su elegibilidad para la bandera de característica se determinará mediante la configuración de la regla «Todos los demás». Por ejemplo, si la regla «Todos los demás» se alterna «Desactivada», en el estado predeterminado, un usuario que no cumpla los criterios de ninguna otra regla no recibirá la característica al iniciar su sesión.
+La regla «El resto» actúa como regla predeterminada. Si un usuario no cumple ninguno de los requisitos anteriores, su elegibilidad para el conmutador de características se determinará mediante la configuración de la regla «El resto». Por ejemplo, si la regla «El resto» está desactivada, en el estado predeterminado, un usuario que no cumpla los criterios de ninguna otra regla no recibirá el conmutador de características al iniciar su sesión.
 
-### Reglas para reordenar
+### Reordenar reglas
 
-De forma predeterminada, las reglas se ordenan en la secuencia en la que se crean, pero puedes reordenarlas arrastrándolas y soltándolas en el panel.
+De forma predeterminada, las reglas se ordenan en la secuencia en la que se crean, pero puedes reordenarlas arrastrándolas y soltándolas en el dashboard.
 
-![Imagen que muestra que un usuario puede añadir una regla a una característica.]({% image_buster /assets/img/feature_flags/add_rule.png %}){: style="max-width:80%;"}
+![Imagen que muestra que un usuario puede añadir una regla a un conmutador de características.]({% image_buster /assets/img/feature_flags/add_rule.png %}){: style="max-width:80%;"}
 
-![Imagen que muestra un resumen de una bandera de característica con varias reglas añadidas y una regla para todos los demás.]({% image_buster /assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:80%;"}
+![Imagen que muestra un resumen de un conmutador de características con varias reglas añadidas y una regla para el resto.]({% image_buster /assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:80%;"}
 
-### Casos de uso de indicadores de características con múltiples reglas
+### Casos de uso de conmutadores de características con múltiples reglas
 
 #### Libera gradualmente una página de pago
 
-Supongamos que trabajas para una marca de comercio electrónico y tienes una nueva página de pago que deseas implementar en diferentes zonas geográficas para garantizar la estabilidad. Mediante el uso de características de función multirregla, puedes configurar lo siguiente:
+Supongamos que trabajas para una marca de comercio electrónico y tienes una nueva página de pago que deseas implementar en diferentes zonas geográficas para garantizar la estabilidad. Mediante el uso de conmutadores de características con múltiples reglas, puedes configurar lo siguiente:
 
 - **Regla 1:** Tu segmento de EE. UU. está configurado al 100 %.
 - **Regla 2:** Tu segmento está configurado para el 50 % de tus usuarios brasileños, por lo que no todos recibirán el flujo al mismo tiempo. 
-- **Regla 3 (El resto):** Para el resto de usuarios, alterna la regla «Todos los demás» y configúrala al 15 %, de modo que una parte de todos los usuarios puedan realizar el pago con el nuevo flujo.
+- **Regla 3 (El resto):** Para el resto de usuarios, activa la regla «El resto» y configúrala al 15 %, de modo que una parte de todos los usuarios puedan realizar el pago con el nuevo flujo.
 
-#### Comunícate primero con los evaluadores internos.
+#### Comunícate primero con los evaluadores internos
 
-Supongamos que eres un administrador de productos y quieres asegurarte de que tus probadores internos siempre reciban la bandera de característica cuando lances un nuevo producto. Puedes añadir el segmento de tus probadores internos a tu primera regla y establecerlo en el 100 %, de modo que tus probadores internos sean elegibles durante cada lanzamiento de características.
+Supongamos que eres un administrador de productos y quieres asegurarte de que tus probadores internos siempre reciban el conmutador de características cuando lances un nuevo producto. Puedes añadir el segmento de tus probadores internos a tu primera regla y establecerlo en el 100 %, de modo que tus probadores internos sean elegibles durante cada lanzamiento de características.
 
-## Utilizar el campo "habilitación" para las banderas de tus características {#enabled}
+## Utilizar el campo "habilitado" para tus conmutadores de características {#enabled}
 
-Una vez definida la característica, configura tu aplicación o sitio web para comprobar si está habilitada para un usuario concreto. Cuando esté habilitada, establecerás alguna acción o harás referencia a las propiedades variables del indicador de características en función de tu caso de uso. El SDK de Braze proporciona métodos para obtener el estado de tu feature flag y sus propiedades en tu aplicación. 
+Una vez definido tu conmutador de características, configura tu aplicación o sitio web para comprobar si está habilitado para un usuario concreto. Cuando esté habilitado, establecerás alguna acción o harás referencia a las propiedades variables del conmutador de características en función de tu caso de uso. El SDK de Braze proporciona métodos getter para obtener el estado de tu conmutador de características y sus propiedades en tu aplicación. 
 
-Las banderas de las características se actualizan automáticamente al inicio de la sesión, para que puedas mostrar la versión más actualizada de tu característica al iniciarla. El SDK almacena en caché estos valores para poder utilizarlos mientras no estés conectado. 
+Los conmutadores de características se actualizan automáticamente al inicio de la sesión, para que puedas mostrar la versión más actualizada de tu característica en el momento del lanzamiento. El SDK almacena en caché estos valores para poder utilizarlos sin conexión. 
 
 {% alert note %}
-Asegúrate de registrar [las impresiones de la bandera de características](#impressions).
+Asegúrate de registrar [las impresiones del conmutador de características](#impressions). 
 {% endalert %}
 
 Supongamos que vas a lanzar un nuevo tipo de perfil de usuario para tu aplicación. Puedes configurar `ID` como `expanded_user_profile`. A continuación, harías que tu aplicación comprobara si debe mostrar este nuevo perfil de usuario a un usuario concreto. Por ejemplo:
@@ -245,11 +245,11 @@ end if
 {% endtab %}
 {% endtabs %}
 
-### Registro de la impresión de una bandera de característica {#impressions}
+### Registro de la impresión de un conmutador de características {#impressions}
 
-Realiza un seguimiento de la impresión de una bandera de característica siempre que un usuario haya tenido la oportunidad de interactuar con tu nueva característica, o cuando __podría__ haber interactuado si la característica está desactivada (en el caso de un grupo de control en una prueba A/B). Las impresiones de la bandera de características sólo se registran una vez por sesión. 
+Realiza un seguimiento de la impresión de un conmutador de características siempre que un usuario haya tenido la oportunidad de interactuar con tu nueva característica, o cuando __podría__ haber interactuado si la característica está desactivada (en el caso de un grupo de control en una prueba A/B). Las impresiones del conmutador de características solo se registran una vez por sesión. 
 
-Normalmente, puedes poner esta línea de código directamente debajo de donde haces referencia a tu bandera de característica en tu aplicación:
+Normalmente, puedes poner esta línea de código directamente debajo de donde haces referencia a tu conmutador de características en tu aplicación:
 
 {% tabs %}
 {% tab Web %}
@@ -317,9 +317,9 @@ m.Braze.logFeatureFlagImpression("expanded_user_profile");
 
 ### Acceder a las propiedades {#accessing-properties}
 
-Para acceder a las propiedades de una bandera de característica, utiliza uno de los métodos siguientes, según el tipo que hayas definido en el panel.
+Para acceder a las propiedades de un conmutador de características, utiliza uno de los métodos siguientes, según el tipo que hayas definido en el dashboard.
 
-Si no existe ninguna propiedad de este tipo para la clave que has proporcionado, estos métodos devolverán `null`.
+Si no existe ninguna propiedad del tipo correspondiente para la clave que proporcionaste, estos métodos devolverán `null`.
 
 {% tabs %}
 {% tab Web %}
@@ -556,7 +556,7 @@ footer_settings = featureFlag.getJSONProperty("footer_settings")
 {% endtab %}
 {% endtabs %}
 
-### Obtener una lista de todas las feature flags {#get-list-of-flags}
+### Obtener una lista de todos los conmutadores de características {#get-list-of-flags}
 
 {% tabs %}
 {% tab Web %}
@@ -649,12 +649,12 @@ end for
 {% endtab %}
 {% endtabs %}
 
-### Actualizar las feature flags {#refreshing}
+### Actualizar los conmutadores de características {#refreshing}
 
-Puedes actualizar las banderas de características del usuario actual en mitad de la sesión para obtener los últimos valores de Braze.
+Puedes actualizar los conmutadores de características del usuario actual en mitad de la sesión para obtener los últimos valores de Braze.
 
 {% alert tip %}
-La actualización se produce automáticamente al iniciar la sesión. Actualizar sólo es necesario antes de acciones importantes del usuario, como antes de cargar una página de pago, o si sabes que se hará referencia a una bandera de característica.
+La actualización se produce automáticamente al iniciar la sesión. Solo es necesario actualizar antes de acciones importantes del usuario, como antes de cargar una página de pago, o si sabes que se hará referencia a un conmutador de características.
 {% endalert %}
 
 {% tabs %}
@@ -734,9 +734,9 @@ m.Braze.refreshFeatureFlags()
 
 ### Escuchar los cambios {#updates}
 
-Puedes configurar el SDK de Braze para que escuche y actualice tu aplicación cuando el SDK actualice cualquier indicador de característica.
+Puedes configurar el SDK de Braze para que escuche y actualice tu aplicación cuando el SDK actualice cualquier conmutador de características.
 
-Esto es útil si quieres actualizar tu aplicación si un usuario ya no es elegible para una característica. Por ejemplo, establecer algún estado en tu aplicación en función de si una característica está habilitada o no, o de uno de sus valores de propiedad.
+Esto es útil si quieres actualizar tu aplicación cuando un usuario ya no es elegible para una característica. Por ejemplo, establecer algún estado en tu aplicación en función de si una característica está habilitada o no, o de uno de sus valores de propiedad.
 
 {% tabs %}
 {% tab Web %}
@@ -804,7 +804,7 @@ Braze.addListener(braze.Events.FEATURE_FLAGS_UPDATED, (featureFlags) => {
 {% endtab %}
 {% tab Unity %}
 
-Para escuchar los cambios, ajusta los valores de **Nombre del objeto del juego** y **Nombre del método de devolución de llamada** en **Configuración de Braze** > **Banderas de características** a los valores correspondientes de tu aplicación.
+Para escuchar los cambios, ajusta los valores de **Game Object Name** y **Callback Method Name** en **Braze Configuration** > **Feature Flags** a los valores correspondientes de tu aplicación.
 
 {% endtab %}
 {% tab Cordova %}
@@ -831,13 +831,20 @@ featureFlagsStreamSubscription = braze.subscribeToFeatureFlags((featureFlags) {
 featureFlagsStreamSubscription.cancel();
 ```
 
-A continuación, realiza estos cambios también en la capa nativa de iOS. Ten en cuenta que no son necesarios pasos adicionales en la capa de Android.
+{% subtabs %}
+{% subtab Flutter SDK 18.0.0+ %}
 
-1. Implementa `featureFlags.subscribeToUpdates` para suscribirte a las actualizaciones de las banderas de características como se describe en la documentación [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/featureflags-swift.class/subscribetoupdates(_:)).
+Los datos de los conmutadores de características se reenvían automáticamente desde las capas nativas de Android e iOS. No se requiere configuración adicional.
 
-2. Tu implementación de devolución de llamada a `featureFlags.subscribeToUpdates` debe llamar a `BrazePlugin.processFeatureFlags(featureFlags)`.
+{% endsubtab %}
+{% subtab Flutter SDK 17.1.0 and earlier %}
 
-Para ver un ejemplo, consulta [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) en nuestra aplicación de ejemplo.
+Si estás usando Flutter SDK 17.1.0 o anterior, el reenvío de datos de conmutadores de características desde la capa nativa de iOS requiere configuración manual. Es probable que tu aplicación contenga una devolución de llamada `featureFlags.subscribeToUpdates` que llame a `BrazePlugin.processFeatureFlags(featureFlags)`. Para migrar a Flutter SDK 18.0.0, elimina la llamada a `BrazePlugin.processFeatureFlags(_:)` — el reenvío de datos ahora se gestiona automáticamente.
+
+Para ver un ejemplo, consulta [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) en la aplicación de ejemplo del SDK de Braze para Flutter.
+
+{% endsubtab %}
+{% endsubtabs %}
 
 {% endtab %}
 {% tab Roku %}
@@ -879,41 +886,41 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 
 ## Comprobación de la elegibilidad de los usuarios
 
-Para comprobar a qué características tiene derecho un usuario en Braze, ve a **Audiencia** > **Buscar usuarios**, luego busca y selecciona un usuario.
+Para comprobar a qué conmutadores de características tiene derecho un usuario en Braze, ve a **Audiencia** > **Buscar usuarios**, luego busca y selecciona un usuario.
 
-En la pestaña **Elegibilidad de indicadores de características**, puedes filtrar la lista de indicadores de características elegibles por plataforma, aplicación o dispositivo. También puedes obtener una vista previa de la carga útil que se devolverá al usuario seleccionando<i class="fa-solid fa-eye"></i>  junto a una bandera de característica.
+En la pestaña **Elegibilidad de conmutadores de características**, puedes filtrar la lista de conmutadores de características elegibles por plataforma, aplicación o dispositivo. También puedes obtener una vista previa de la carga útil que se devolverá al usuario seleccionando <i class="fa-solid fa-eye"></i> junto a un conmutador de características.
 
-![Imagen que muestra la tabla de características elegibles para los usuarios.]({% image_buster /assets/img/feature_flags/eligibility.png %}){: style="max-width:85%;"}
+![Imagen que muestra la tabla de conmutadores de características para los que un usuario es elegible.]({% image_buster /assets/img/feature_flags/eligibility.png %}){: style="max-width:85%;"}
 
 ## Ver el registro de cambios
 
-Para ver el registro de cambios de una feature flag, abre esta última y selecciona **Registro de cambios**.
+Para ver el registro de cambios de un conmutador de características, abre el conmutador y selecciona **Registro de cambios**.
 
-![Página «Editar» de una característica, con el botón «Registro de cambios» resaltado.]({% image_buster /assets/img/feature_flags/changelog/open_changelog.png %}){: style="max-width:60%;"}
+![Página «Editar» de un conmutador de características, con el botón «Registro de cambios» resaltado.]({% image_buster /assets/img/feature_flags/changelog/open_changelog.png %}){: style="max-width:60%;"}
 
 Aquí puedes revisar cuándo se produjo un cambio, quién lo realizó, a qué categoría pertenece y mucho más.
 
-![El registro de cambios de la característica seleccionada.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
+![El registro de cambios del conmutador de características seleccionado.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
 
-## Segmentación con indicadores de características {#segmentation}
+## Segmentación con conmutadores de características {#segmentation}
 
-Braze hace un seguimiento automático de los usuarios que tienen habilitada una característica. Puedes crear un segmento o un objetivo de mensajería utilizando el [filtro **Feature flags**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). Para más información sobre cómo filtrar por segmentos, consulta [Crear un segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
+Braze hace un seguimiento automático de los usuarios que tienen habilitado un conmutador de características. Puedes crear un segmento o dirigir mensajería utilizando el [filtro **Conmutador de características**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). Para más información sobre cómo filtrar por segmentos, consulta [Crear un segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
 ![La sección «Filtros» con «Feature Flag» escrito en la barra de búsqueda del filtro.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
 
 {% alert note %}
-Para evitar segmentos recursivos, no es posible crear un segmento que haga referencia a otras banderas de características.
+Para evitar segmentos recursivos, no es posible crear un segmento que haga referencia a otros conmutadores de características.
 {% endalert %}
 
 ## Buenas prácticas
 
-### No combines rollouts con Lienzos o experimentos
+### No combines despliegues con Canvas o experimentos
 
-Para evitar que los usuarios sean habilitados y deshabilitados por diferentes puntos de entrada, debes establecer el control deslizante de despliegue en un valor superior a cero O habilitar la bandera de característica en un Canvas o experimento. Como práctica recomendada, si piensas utilizar una bandera de característica en un Canvas o experimento, mantén el porcentaje de despliegue a cero.
+Para evitar que los usuarios sean habilitados y deshabilitados por diferentes puntos de entrada, debes establecer el control deslizante de despliegue en un valor superior a cero O habilitar el conmutador de características en un Canvas o experimento. Como práctica recomendada, si piensas utilizar un conmutador de características en un Canvas o experimento, mantén el porcentaje de despliegue en cero.
 
-### Convenciones de denominación
+### Convenciones de nomenclatura
 
-Para que tu código sea claro y coherente, considera la posibilidad de utilizar el siguiente formato al nombrar el ID de la bandera de tu característica:
+Para que tu código sea claro y coherente, considera la posibilidad de utilizar el siguiente formato al nombrar el ID de tu conmutador de características:
 
 ```plaintext
 BEHAVIOR_PRODUCT_FEATURE
@@ -923,12 +930,12 @@ Sustituye lo siguiente:
 
 | Marcador de posición | Descripción                                                                                                               |
 |-------------|---------------------------------------------------------------------------------------------------------------------------|
-| `BEHAVIOR`  | El comportamiento de la característica. En tu código, asegúrate de que el comportamiento está desactivado por defecto y evita utilizar frases como `disabled` en el nombre del indicador de característica. |
+| `BEHAVIOR`  | El comportamiento de la característica. En tu código, asegúrate de que el comportamiento está desactivado de forma predeterminada y evita utilizar frases como `disabled` en el nombre del conmutador de características. |
 | `PRODUCT`   | El producto al que pertenece la característica.                                                                                       |
 | `FEATURE`    | El nombre de la característica.                                                                                                  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-He aquí un ejemplo de indicador de característica en el que `show` es el comportamiento, `animation_profile` es el producto y `driver` es la característica:
+He aquí un ejemplo de conmutador de características en el que `show` es el comportamiento, `animation_profile` es el producto y `driver` es la característica:
 
 ```plaintext
 show_animation_profile_driver
@@ -936,20 +943,19 @@ show_animation_profile_driver
 
 ### Planificar con antelación
 
-Ve siempre a lo seguro. A la hora de considerar nuevas características que puedan requerir un interruptor de apagado, es mejor liberar código nuevo con una bandera de característica y no necesitarla que darse cuenta de que es necesaria una nueva actualización de la aplicación.
+Ve siempre a lo seguro. A la hora de considerar nuevas características que puedan requerir un interruptor de apagado, es mejor liberar código nuevo con un conmutador de características y no necesitarlo que darse cuenta de que es necesaria una nueva actualización de la aplicación.
 
 ### Sé descriptivo
 
-Añade una descripción a la bandera de tu característica. Aunque se trata de un campo opcional en Braze, puede ayudar a responder preguntas que otros puedan tener al examinar las banderas de características disponibles.
+Añade una descripción a tu conmutador de características. Aunque se trata de un campo opcional en Braze, puede ayudar a responder preguntas que otros puedan tener al examinar los conmutadores de características disponibles.
 
-- Datos de contacto del responsable de la habilitación y comportamiento de esta bandera
-- Cuándo se debe desactivar esta flag
-- Enlaces a documentación o notas sobre la nueva característica que controla esta bandera
+- Datos de contacto del responsable de la habilitación y comportamiento de este conmutador
+- Cuándo se debe desactivar este conmutador
+- Enlaces a documentación o notas sobre la nueva característica que controla este conmutador
 - Cualquier dependencia o nota sobre cómo utilizar la característica
 
-### Limpiar antiguas banderas de características
+### Limpiar conmutadores de características antiguos
 
-Todos somos culpables de dejar características activadas al 100 % durante más tiempo del necesario.
+Todos somos culpables de dejar características activadas al 100 % durante más tiempo del necesario.
 
-Para ayudar a mantener limpio tu código (y el panel de Braze), elimina las feature flags permanentes de tu base de código una vez que todos los usuarios se hayan actualizado y ya no necesites la opción de desactivar la característica. Esto ayuda a reducir la complejidad de tu entorno de desarrollo, pero también a mantener ordenada tu lista de banderas de características.
-
+Para ayudar a mantener limpio tu código (y el dashboard de Braze), elimina los conmutadores de características permanentes de tu base de código una vez que todos los usuarios se hayan actualizado y ya no necesites la opción de desactivar la característica. Esto ayuda a reducir la complejidad de tu entorno de desarrollo, pero también a mantener ordenada tu lista de conmutadores de características.
