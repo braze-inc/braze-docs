@@ -47,7 +47,7 @@
 |---|---|
 |`parentNode` | コンテンツカードをレンダリングする HTML ノード。親ノードがすでに直系の子孫として Braze コンテンツカードビューを持っている場合、既存のコンテンツカードは置き換えられます。たとえば、`document.querySelector(".my-container")` を渡します。|
 |`filterFunction` | このビューに表示されるカードのフィルターまたはソート関数。`Card` オブジェクトの配列で呼び出され、`{pinned, date}` でソートされます。このユーザーにレンダリングするソート済みの `Card` オブジェクトの配列を返す必要があります。省略した場合は、すべてのカードが表示されます。 |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br_2 role="presentation" }
 
 コンテンツカードの切り替えに関する詳細は、[SDK リファレンスドキュメント](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards)を参照してください。
 
@@ -320,7 +320,7 @@ body .ab-feed {
 
 Braze Web SDK の最新バージョンにアップグレードするには、Google Tag Manager ダッシュボードで次の3つのステップを実行します。
 
-1. **タグテンプレートを更新する**<br>ワークスペース内の **Templates** ページに移動します。更新が利用可能であることを示すアイコンが表示されます。<br><br>![更新が利用可能であることを示すテンプレートページ]({% image_buster /assets/img/web-gtm/gtm-update-available.png %})<br><br>そのアイコンをクリックし、変更を確認した後、**Accept Update** をクリックします。<br><br>![新旧のタグテンプレートを比較した画面と「Accept Update」ボタン]({% image_buster /assets/img/web-gtm/gtm-accept-update.png %})<br><br>
+1. **タグテンプレートを更新する**<br>ワークスペース内の**テンプレート**ページに移動します。更新が利用可能であることを示すアイコンが表示されます。<br><br>![更新が利用可能であることを示すテンプレートページ]({% image_buster /assets/img/web-gtm/gtm-update-available.png %})<br><br>そのアイコンをクリックし、変更を確認した後、**Accept Update** をクリックします。<br><br>![新旧のタグテンプレートを比較した画面と「Accept Update」ボタン]({% image_buster /assets/img/web-gtm/gtm-accept-update.png %})<br><br>
 2. **バージョン番号を更新する**<br>タグテンプレートが更新されたら、Braze 初期化タグを編集し、SDK バージョンを最新の `major.minor` バージョンに更新します。たとえば、最新バージョンが `4.1.2` の場合、`4.1` と入力します。SDK のバージョン一覧は[変更ログ](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)で確認できます。<br><br>![SDK バージョンを変更するための入力フィールドを持つ Braze 初期化テンプレート]({% image_buster /assets/img/web-gtm/gtm-version-number.png %})<br><br>
 3. **QA および公開**<br>Google Tag Manager の[デバッグツール](https://support.google.com/tagmanager/answer/6107056?hl=en)を使用して、新しい SDK バージョンが動作していることを確認してから、タグコンテナーに更新を公開します。
 

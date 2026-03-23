@@ -76,7 +76,7 @@
 
 |등록정보|설명|
 |---|---|
-| `expiresAt` | 카드 만료 시간의 Unix 타임스탬프입니다.|
+| `expiresAt` | 카드 만료 시간의 UNIX 타임스탬프입니다.|
 | `extras`| (선택 사항) 값 문자열이 포함된 문자열 오브젝트로 형식이 지정된 키-값 페어 데이터입니다. |
 | `id` | (선택 사항) 카드의 ID입니다. 분석 목적으로 이벤트와 함께 Braze에 다시 보고됩니다. |
 | `pinned` | 이 등록정보는 대시보드에서 카드가 '고정됨'으로 설정되었는지 여부를 반영합니다.|
@@ -175,7 +175,7 @@ Braze 기본 피드 UI를 사용하여 콘텐츠 카드를 표시할 때 다음 
 |[`dismissCard`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html#dismisscard)| 프로그래밍 방식으로 카드를 해제하여 사용자의 피드에서 제거합니다. 커스텀 UI에서 사용자가 카드를 해제할 수 있도록 하려면 이 메서드를 사용합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-자세한 내용은 [SDK 참조 문서](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)를 참조하세요.
+자세한 내용은 [SDK 참조 설명서](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)를 참조하세요.
 
 ## 모범 사례
 

@@ -4,8 +4,8 @@ article_title: キャンバスオーディエンスの同期
 page_order: 8
 
 guide_top_header: "キャンバスオーディエンスの同期"
-guide_top_text: "Brazeのオーディエンスシンク機能は、キャンペーンのリーチを多くのトップソーシャルテクノロジーや広告テクノロジーに拡大する。このランディングページでは、開発者やマーケターが、利用可能なキャンバス同期パートナーに関するリソースを見つけることができます。"
-description: "このランディングページでは、開発者やマーケターが、利用可能なキャンバス同期パートナーに関するリソースを見つけることができます。"
+guide_top_text: "Braze のオーディエンスシンク機能は、キャンペーンのリーチを多くのトップソーシャルテクノロジーや広告テクノロジーに拡大します。このランディングページでは、開発者やマーケターが利用可能なキャンバス同期パートナーに関するリソースを見つけることができます。"
+description: "このランディングページでは、開発者やマーケターが利用可能なキャンバス同期パートナーに関するリソースを見つけることができます。"
 
 layout: dev_guide
 
@@ -18,32 +18,35 @@ guide_featured_list:
     link: /docs/partners/audience_sync_faq/
     image: /assets/img/braze_icons/annotation-question.svg
 
-guide_menu_title: "Available sync partners"
+guide_menu_title: "利用可能な同期パートナー"
 guide_menu_list:
   - name: Criteo オーディエンスの同期
     link: /docs/audience_sync_criteo/
     image: /assets/img/braze_icons/lightning-01.svg
-  - name: Facebookオーディエンス同期
+  - name: Facebook オーディエンスの同期
     link: /docs/audience_sync_facebook/
     image: /assets/img/braze_icons/facebook.svg
   - name: Google オーディエンスの同期
     link: /docs/google_audience_sync/
     image: /assets/img/braze_icons/google.svg
-  - name: LinkedIn オーディエンス同期
+  - name: LinkedIn オーディエンスの同期
     link: /docs/linkedin_audience_sync/
     image: /assets/img/braze_icons/linkedin.svg
-  - name: Pinterestオーディエンス同期
+  - name: Pinterest オーディエンスの同期
     link: /docs/audience_sync_pinterest/
     image: /assets/img/braze_icons/pinterest.svg
-  - name: Snapchatオーディエンス・シンク
+  - name: Snapchat オーディエンスの同期
     link: /docs/audience_sync_snapchat/
     image: /assets/img/braze_icons/snapchat.svg
-  - name: TikTokオーディエンス・シンク
+  - name: The Trade Desk オーディエンスの同期
+    link: /docs/trade_desk_audience_sync/
+    image: /assets/img/braze_icons/the_trade_desk.svg
+  - name: TikTok オーディエンスの同期
     link: /docs/tiktok_audience_sync/
     image: /assets/img/braze_icons/tiktok.svg
 
 ---
 
 {% alert important %}
-Criteo、Pinterest、Snapchat、TikTokへのオーディエンスシンクが可能かどうかは、Brazeのパッケージによって異なる。まずはアカウントマネージャーまたはカスタマーサクセスマネージャーにご相談を。
+Criteo、Pinterest、Snapchat、TikTok への Braze オーディエンスシンクが利用可能かどうかは、お客様の Braze パッケージによって異なります。ご利用を開始するには、アカウントマネージャーまたはカスタマーサクセスマネージャーにお問い合わせください。
 {% endalert %}

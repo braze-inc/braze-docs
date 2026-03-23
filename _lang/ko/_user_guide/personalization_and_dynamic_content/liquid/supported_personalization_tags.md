@@ -46,7 +46,7 @@ search_rank: 1
 
 다음 태그의 동작은 캔버스와 캠페인 간에 다릅니다:
 {% raw %}
-- `dispatch_id` 동작이 다른 이유는 Braze가 캔버스 단계를 '예약된' 경우에도 트리거된 이벤트로 취급하기 때문입니다(예약 가능한 진입 단계 제외). 자세히 알아보려면 [디스패치 ID 동작]({{site.baseurl}}/help/help_articles/data/dispatch_id/)을 참조하세요.
+- `dispatch_id` 동작이 다른 이유는 Braze가 캔버스 단계를 '스케줄'된 경우에도 트리거된 이벤트로 취급하기 때문입니다(스케줄 가능한 진입 단계 제외). 자세히 알아보려면 [디스패치 ID 동작]({{site.baseurl}}/help/help_articles/data/dispatch_id/)을 참조하세요.
 - 캔버스에서 `{{campaign.${name}}}` 태그를 사용하면 캔버스 구성요소 이름이 표시됩니다. 이 태그를 캠페인에서 사용하면 캠페인 이름이 표시됩니다.
 {% endraw %}
 

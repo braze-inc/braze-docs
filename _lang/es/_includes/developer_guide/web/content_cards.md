@@ -8,7 +8,7 @@ Antes de poder utilizar las Tarjetas de contenido, tendrás que [integrar el SDK
 
 Para utilizar la interfaz de usuario de las Tarjetas de contenido incluida, tendrás que especificar dónde mostrar la fuente en tu sitio web. 
 
-En este ejemplo, tenemos un `<div id="feed"></div>` en el que queremos colocar la fuente de Content Cards. Utilizaremos tres botones para ocultar, mostrar o alternar (ocultar o mostrar en función de su estado actual) la fuente.
+En este ejemplo, tenemos un `<div id="feed"></div>` en el que queremos colocar la fuente de Tarjetas de contenido. Utilizaremos tres botones para ocultar, mostrar o alternar (ocultar o mostrar en función de su estado actual) la fuente.
 
 ```html
 
@@ -41,19 +41,19 @@ En este ejemplo, tenemos un `<div id="feed"></div>` en el que queremos colocar l
 </script>
 ```
 
-Al utilizar los métodos `toggleContentCards(parentNode, filterFunction)` y `showContentCards(parentNode, filterFunction)`, si no se proporcionan argumentos, todas las Content Cards se mostrarán en una barra lateral de posición fija en la parte derecha de la página. De lo contrario, la fuente se colocará en la opción `parentNode` especificada.
+Al utilizar los métodos `toggleContentCards(parentNode, filterFunction)` y `showContentCards(parentNode, filterFunction)`, si no se proporcionan argumentos, todas las Tarjetas de contenido se mostrarán en una barra lateral de posición fija en la parte derecha de la página. De lo contrario, la fuente se colocará en la opción `parentNode` especificada.
 
 |Parámetros | Descripción |
 |---|---|
-|`parentNode` | El nodo HTML en el que se renderizarán las Content Cards. Si el nodo padre ya tiene una vista de Content Cards de Braze como descendiente directo, se sustituirán las Content Cards existentes. Por ejemplo, debes pasar `document.querySelector(".my-container")`.|
+|`parentNode` | El nodo HTML en el que se renderizarán las Tarjetas de contenido. Si el nodo padre ya tiene una vista de Tarjetas de contenido de Braze como descendiente directo, se sustituirán las Tarjetas de contenido existentes. Por ejemplo, debes pasar `document.querySelector(".my-container")`.|
 |`filterFunction` | Una función para filtrar u ordenar las tarjetas mostradas en esta vista. Se invoca con la matriz de objetos `Card`, ordenados por `{pinned, date}`. Se espera que devuelva una matriz de objetos `Card` ordenados para renderizar para este usuario. Si se omite, se mostrarán todas las tarjetas. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-[Consulta la documentación de referencia del SDK](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards) para obtener más información sobre cómo alternar las Content Cards.
+[Consulta la documentación de referencia del SDK](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards) para obtener más información sobre cómo alternar las Tarjetas de contenido.
 
-## Probar Content Cards en la web
+## Probar Tarjetas de contenido en la web
 
-Puedes probar tu integración de Content Cards utilizando las herramientas de desarrollador de tu navegador.
+Puedes probar tu integración de Tarjetas de contenido utilizando las herramientas de desarrollador de tu navegador.
 
 1. Crea una campaña de tarjeta de contenido y dirígela a tu usuario de prueba.
 2. Inicia sesión en el sitio web que tiene tu integración del SDK Web.
@@ -64,15 +64,15 @@ Puedes probar tu integración de Content Cards utilizando las herramientas de de
 
 ## Tipos de tarjeta y propiedades
 
-El modelo de datos de las Content Cards está disponible en el SDK Web y ofrece los siguientes tipos de tarjetas de contenido: [ImageOnly](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html), [CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html) y [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html). Cada tipo hereda propiedades comunes de un modelo base [Card](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html) y tiene las siguientes propiedades adicionales.
+El modelo de datos de las Tarjetas de contenido está disponible en el SDK Web y ofrece los siguientes tipos de tarjetas de contenido: [ImageOnly](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.imageonly.html), [CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.captionedimage.html) y [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html). Cada tipo hereda propiedades comunes de un modelo base [Card](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html) y tiene las siguientes propiedades adicionales.
 
 {% alert tip %}
-Para registrar los datos de las Content Cards, consulta [Registrar análisis]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/).
+Para registrar los datos de las Tarjetas de contenido, consulta [Registrar análisis]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/).
 {% endalert %}
 
 ### Modelo de tarjeta base
 
-Todas las Content Cards tienen estas propiedades compartidas:
+Todas las Tarjetas de contenido tienen estas propiedades compartidas:
 
 |Propiedad|Descripción|
 |---|---|
@@ -141,9 +141,9 @@ El modelo [ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/classes/braz
 
 ## Grupo de control
 
-Si utilizas la fuente predeterminada de Content Cards, las impresiones y los clics se rastrearán automáticamente.
+Si utilizas la fuente predeterminada de Tarjetas de contenido, las impresiones y los clics se rastrearán automáticamente.
 
-Si utilizas una integración personalizada para Content Cards, necesitas [registrar las impresiones]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) cuando se hubiera visto una tarjeta de control. Como parte de este esfuerzo, asegúrate de gestionar las tarjetas de control al registrar las impresiones en una prueba A/B. Estas tarjetas están en blanco y, aunque no las vean los usuarios, debes registrar las impresiones para comparar su rendimiento con el de las tarjetas que no son de control.
+Si utilizas una integración personalizada para Tarjetas de contenido, necesitas [registrar las impresiones]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) cuando se hubiera visto una tarjeta de control. Como parte de este esfuerzo, asegúrate de gestionar las tarjetas de control al registrar las impresiones en una prueba A/B. Estas tarjetas están en blanco y, aunque no las vean los usuarios, debes registrar las impresiones para comparar su rendimiento con el de las tarjetas que no son de control.
 
 Para determinar si una tarjeta de contenido está en el grupo de control de una prueba A/B, comprueba la propiedad `card.isControl` (Web SDK v4.5.0+) o comprueba si la tarjeta es una instancia de `ControlCard` (`card instanceof braze.ControlCard`).
 
@@ -151,24 +151,24 @@ Para determinar si una tarjeta de contenido está en el grupo de control de una 
 
 ### Métodos de fuente predeterminada
 
-Usa estos métodos cuando muestres Content Cards utilizando la interfaz de usuario predeterminada de Braze:
+Usa estos métodos cuando muestres Tarjetas de contenido utilizando la interfaz de usuario predeterminada de Braze:
 
 |Método | Descripción |
 |---|---|
-|[`showContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)| Muestra la fuente predeterminada de Content Cards. Renderiza las tarjetas en un elemento HTML `parentNode` proporcionado, o como una barra lateral de posición fija en el lado derecho de la página si no se proporciona ningún elemento. Acepta una `filterFunction` opcional para ordenar o filtrar las tarjetas antes de mostrarlas. |
-|[`hideContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#hidecontentcards)| Oculta la fuente predeterminada de Content Cards si se está mostrando actualmente. |
-|[`toggleContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards)| Muestra la fuente predeterminada de Content Cards si está oculta, o la oculta si está visible. Si necesitas mostrar varias fuentes de Content Cards simultáneamente, usa `showContentCards` y `hideContentCards` en su lugar. |
+|[`showContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)| Muestra la fuente predeterminada de Tarjetas de contenido. Renderiza las tarjetas en un elemento HTML `parentNode` proporcionado, o como una barra lateral de posición fija en el lado derecho de la página si no se proporciona ningún elemento. Acepta una `filterFunction` opcional para ordenar o filtrar las tarjetas antes de mostrarlas. |
+|[`hideContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#hidecontentcards)| Oculta la fuente predeterminada de Tarjetas de contenido si se está mostrando actualmente. |
+|[`toggleContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#togglecontentcards)| Muestra la fuente predeterminada de Tarjetas de contenido si está oculta, o la oculta si está visible. Si necesitas mostrar varias fuentes de Tarjetas de contenido simultáneamente, usa `showContentCards` y `hideContentCards` en su lugar. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Métodos de fuente personalizada
 
-Usa estos métodos cuando construyas tu propia interfaz de usuario de Content Cards:
+Usa estos métodos cuando construyas tu propia interfaz de usuario de Tarjetas de contenido:
 
 |Método | Descripción |
 |---|---|
-|[`subscribeToContentCardsUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsupdates)| Registra una función de devolución de llamada que se invoca cada vez que se actualizan las Content Cards para el usuario actual, como al inicio de sesión. Usa esto como la forma principal de recibir datos de tarjetas para tu fuente personalizada. Debe llamarse antes de `openSession()` para recibir actualizaciones en la sesión inicial. |
-|[`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards)| Devuelve todas las tarjetas actualmente disponibles de la última actualización de Content Cards. Usa esto para mostrar tarjetas inmediatamente al cargar la página sin esperar una nueva solicitud al servidor, como cuando el usuario vuelve a una página durante una sesión activa. |
-|[`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh)| Solicita una actualización inmediata de Content Cards desde los servidores de Braze. De forma predeterminada, las tarjetas se actualizan al inicio de sesión y cuando se reabre la fuente predeterminada. Usa esto para forzar una actualización en otros momentos, como después de una acción específica del usuario. Ten en cuenta los [límites de velocidad]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/#rate-limit). |
+|[`subscribeToContentCardsUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetocontentcardsupdates)| Registra una función de devolución de llamada que se invoca cada vez que se actualizan las Tarjetas de contenido para el usuario actual, como al inicio de sesión. Usa esto como la forma principal de recibir datos de tarjetas para tu fuente personalizada. Debe llamarse antes de `openSession()` para recibir actualizaciones en la sesión inicial. |
+|[`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards)| Devuelve todas las tarjetas actualmente disponibles de la última actualización de Tarjetas de contenido. Usa esto para mostrar tarjetas inmediatamente al cargar la página sin esperar una nueva solicitud al servidor, como cuando el usuario vuelve a una página durante una sesión activa. |
+|[`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh)| Solicita una actualización inmediata de Tarjetas de contenido desde los servidores de Braze. De forma predeterminada, las tarjetas se actualizan al inicio de sesión y cuando se reabre la fuente predeterminada. Usa esto para forzar una actualización en otros momentos, como después de una acción específica del usuario. Ten en cuenta los [límites de velocidad]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/#rate-limit). |
 |[`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions)| Registra eventos de impresión para una matriz de tarjetas. Llama a esto cuando las tarjetas se renderizan y son visibles para el usuario. Es necesario para informes de campaña precisos cuando se usa una interfaz personalizada, ya que las impresiones no se rastrean automáticamente fuera de la fuente predeterminada. |
 |[`logContentCardClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick)| Registra un evento de clic para una sola tarjeta. Llama a esto cuando un usuario interactúa con una tarjeta en tu interfaz personalizada. Es necesario para informes de campaña precisos, ya que los clics no se rastrean automáticamente fuera de la fuente predeterminada. |
 |[`handleBrazeAction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#handlebrazeaction)| Procesa la URL de una tarjeta y ejecuta la acción de clic configurada, incluyendo acciones de Braze (URLs `brazeActions://`) y navegación URL estándar. Llama a esto en tu controlador de clic de tarjeta para asegurar que los comportamientos de clic configurados en el dashboard de Braze se ejecuten. |
@@ -181,7 +181,7 @@ Para más detalles, consulta la [documentación de referencia del SDK](https://j
 
 ### Llama a los métodos en el orden correcto
 
-Para fuentes personalizadas, las Content Cards solo se actualizan al inicio de sesión si `subscribeToContentCardsUpdates()` se llama antes de `openSession()`. Llama a tus métodos de Braze en este orden:
+Para fuentes personalizadas, las Tarjetas de contenido solo se actualizan al inicio de sesión si `subscribeToContentCardsUpdates()` se llama antes de `openSession()`. Llama a tus métodos de Braze en este orden:
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -276,13 +276,13 @@ El argumento pasado a `logContentCardClick()` debe ser un objeto `Card` original
 
 ## Uso de Google Tag Manager
 
-Google Tag Manager funciona inyectando la [CDN de Braze]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#install-cdn) (una versión de nuestro SDK Web) directamente en el código de tu sitio web, lo que significa que todos los métodos del SDK están disponibles igual que si hubieras integrado el SDK sin Google Tag Manager, excepto al implementar Content Cards.
+Google Tag Manager funciona inyectando la [CDN de Braze]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#install-cdn) (una versión de nuestro SDK Web) directamente en el código de tu sitio web, lo que significa que todos los métodos del SDK están disponibles igual que si hubieras integrado el SDK sin Google Tag Manager, excepto al implementar Tarjetas de contenido.
 
-### Configuración de las Content Cards
+### Configuración de las Tarjetas de contenido
 
 {% tabs local %}
 {% tab google tag manager %}
-Para una integración estándar de la fuente de Content Cards, puedes utilizar una etiqueta **HTML personalizada** en Google Tag Manager. Añade lo siguiente a tu etiqueta HTML personalizada, que activará la fuente estándar de Content Cards:
+Para una integración estándar de la fuente de Tarjetas de contenido, puedes utilizar una etiqueta **HTML personalizada** en Google Tag Manager. Añade lo siguiente a tu etiqueta HTML personalizada, que activará la fuente estándar de Tarjetas de contenido:
 
 ```html
 <script>
@@ -290,11 +290,11 @@ Para una integración estándar de la fuente de Content Cards, puedes utilizar u
 </script>
 ```
 
-![Configuración en Google Tag Manager de una etiqueta HTML personalizada que muestra la fuente de Content Cards.]({% image_buster /assets/img/web-gtm/gtm_content_cards.png %})
+![Configuración en Google Tag Manager de una etiqueta HTML personalizada que muestra la fuente de Tarjetas de contenido.]({% image_buster /assets/img/web-gtm/gtm_content_cards.png %})
 {% endtab %}
 
 {% tab manual %}
-Para tener más libertad a la hora de personalizar el aspecto de las Content Cards y su fuente, puedes integrar directamente las Content Cards en tu sitio web nativo. Puedes hacerlo de dos formas: utilizando la interfaz de usuario estándar o creando una interfaz de usuario personalizada.
+Para tener más libertad a la hora de personalizar el aspecto de las Tarjetas de contenido y su fuente, puedes integrar directamente las Tarjetas de contenido en tu sitio web nativo. Puedes hacerlo de dos formas: utilizando la interfaz de usuario estándar o creando una interfaz de usuario personalizada.
 
 {% subtabs local %}
 {% subtab standard feed %}
@@ -302,7 +302,7 @@ Al implementar la [IU de fuente estándar]({{site.baseurl}}/developer_guide/plat
 {% endsubtab %}
 
 {% subtab custom feed %}
-Para el estilo [personalizado de la fuente]({{site.baseurl}}/developer_guide/content_cards/creating_cards/), los pasos son los mismos que si hubieras integrado el SDK sin GTM. Por ejemplo, si quieres personalizar la anchura de la fuente de Content Cards, puedes pegar lo siguiente en tu archivo CSS:
+Para el estilo [personalizado de la fuente]({{site.baseurl}}/developer_guide/content_cards/creating_cards/), los pasos son los mismos que si hubieras integrado el SDK sin GTM. Por ejemplo, si quieres personalizar la anchura de la fuente de Tarjetas de contenido, puedes pegar lo siguiente en tu archivo CSS:
 
 {% raw %}
 ```css
