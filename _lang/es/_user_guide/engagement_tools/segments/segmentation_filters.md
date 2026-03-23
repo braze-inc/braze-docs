@@ -58,6 +58,10 @@ glossaries:
     description: "Segmenta a los usuarios en función de cuándo se creó su perfil de usuario. Si un usuario se añadió por CSV o API, este filtro refleja la fecha en que se añadió. Si el usuario no fue añadido por CSV o API y tiene su primera sesión rastreada por el SDK, entonces este filtro refleja la fecha de esa primera sesión."
     tags:
       - Other Filters
+  - name: Creado desde
+    description: "Segmenta a los usuarios en función de dónde se creó su perfil de usuario.<br><br>Se admiten los siguientes valores:<br>- SDK (<code>sdk</code>): perfil de usuario creado a través del SDK de Braze.<br>- API REST (<code>rest</code>): perfil de usuario creado a través de la API REST de Braze.<br>- Importación de token de notificaciones push (<code>pti</code>): perfil de usuario creado a través de la importación de tokens de notificaciones push.<br>- CSV (<code>csv</code>): perfil de usuario creado a través de la importación de CSV.<br>- Demo (<code>demo</code>): perfil de usuario creado a través de datos de demostración.<br>- SMS (<code>sms</code>): perfil de usuario creado a través de SMS.<br>- Shopify (<code>shopify</code>): perfil de usuario creado a través de Shopify.<br>- WhatsApp (<code>whats_app</code>): perfil de usuario creado a través de WhatsApp.<br>- Evento de proveedor (<code>provider_event</code>): perfil de usuario creado a través de un evento de proveedor.<br>- Sincronización de proveedor (<code>provider_sync</code>): perfil de usuario creado a través de una sincronización de proveedor.<br>- Página de inicio (<code>landing_page</code>): perfil de usuario creado a través de una página de inicio."
+    tags:
+      - Other Filters
   - name: Atributos personalizados anidados
     description: "Atributos que son las propiedades de los atributos personalizados.<br><br>Al filtrar un atributo personalizado de hora anidado, puedes elegir filtrar en función del \"Día del año\" o de la \"Hora\". \"Día del año\" solo comprueba el mes y el día para la comparación. \"Hora\" compara la marca de tiempo completa, incluido el año."
     tags:

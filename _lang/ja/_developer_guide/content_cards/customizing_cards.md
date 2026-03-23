@@ -1,11 +1,11 @@
 ---
 page_order: 0.1
 nav_title: カードをカスタマイズする
-description: "Braze SDK向けコンテンツカードのカスタマイズについて学ぶ。"
+description: "Braze SDK向けコンテンツカードのカスタマイズについて学びます。"
 layout: dev_guide
 
 guide_top_header: "コンテンツカードのカスタマイズ"
-guide_top_text: "Braze SDK向けコンテンツカードのカスタマイズについて学ぶ。"
+guide_top_text: "> Braze SDK向けコンテンツカードのカスタマイズについて学びます。"
 
 guide_featured_title: "このセクションの記事"
 guide_featured_list:
@@ -15,7 +15,7 @@ guide_featured_list:
 - name: カードの動作のカスタマイズ
   link: /docs/developer_guide/content_cards/customizing_cards/behavior/
   image: /assets/img/braze_icons/sliders-01.svg
-- name: カードフィードのカスタマイズ
+- name: デフォルトフィードのカスタマイズ
   link: /docs/developer_guide/content_cards/customizing_cards/feed/
   image: /assets/img/braze_icons/layout-grid-01.svg
 ---

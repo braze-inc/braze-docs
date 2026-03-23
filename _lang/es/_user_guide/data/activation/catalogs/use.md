@@ -135,7 +135,7 @@ Por ejemplo, para añadir el `image_link` de nuestro catálogo de Games a nuestr
 
 ![Compositor de tarjetas de contenido con la etiqueta de Liquid del catálogo utilizada en el campo de imagen.]({% image_buster /assets/img_archive/catalog_image_link1.png %})
 
-Esto es lo que se ve cuando se renderiza el Liquid:
+Así es como se ve cuando se renderiza el Liquid:
 
 ![Ejemplo de tarjeta de contenido con etiquetas de Liquid del catálogo renderizadas.]({% image_buster /assets/img_archive/catalog_image_link2.png %}){: style="max-width:50%" }
 
@@ -186,7 +186,7 @@ Puedes cargar un CSV de nuevos elementos de catálogo para añadir o elementos d
 
 ### Utilizar Liquid
 
-También puedes crear catálogos manualmente con lógica de Liquid. Sin embargo, ten en cuenta que si escribes un ID que no existe, Braze seguirá devolviendo una matriz de elementos sin objetos. Te recomendamos que incluyas gestión de errores, como la comprobación del tamaño de la matriz y el uso de una sentencia `if` para tener en cuenta un caso de matriz vacía.
+También puedes crear catálogos manualmente con lógica de Liquid. Sin embargo, ten en cuenta que si escribes un ID que no existe, Braze seguirá devolviendo una matriz de elementos sin objetos. Te recomendamos que incluyas gestión de errores, como la comprobación del tamaño de la matriz y el uso de una sentencia `if` para tener en cuenta el caso de una matriz vacía.
 
 #### Elementos del catálogo con plantillas que incluyen Liquid
 
@@ -223,6 +223,31 @@ Welcome to our store, Peter!
 Las etiquetas de Liquid de catálogos no pueden utilizarse recursivamente dentro de los catálogos.
 {% endalert %}
 
+## Estructurar los datos de tu catálogo
+
+Al planificar cómo estructurar los datos de tu catálogo, parte del caso de uso previsto y diseña el catálogo en torno a él. Cada fila del catálogo representa un elemento (con un `id` único). Las columnas deben contener los atributos de ese elemento, como URLs, texto descriptivo, URLs de imágenes, precio, valoración, talla o color.
+
+### Cuándo usar llamadas estándar de catálogo
+
+Con las llamadas estándar de catálogo, haces coincidir un valor con la columna `id`. Al insertar un atributo personalizado o una propiedad del evento (como cadena de ID) en la etiqueta de Liquid del catálogo, puedes extraer múltiples atributos de un solo elemento en tu mensaje. Los casos de uso más comunes incluyen:
+
+- Producto o servicio visto recientemente
+- Elementos de la lista de deseos
+- Ofertas por ubicación
+- Producto comprado
+- Contenido por etapa del ciclo de vida
+- Producto o servicio buscado más recientemente
+
+### Cuándo usar selecciones de catálogo
+
+Las [selecciones de catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) te permiten filtrar por cualquier columna de tu catálogo y devolver hasta 50 elementos coincidentes. Al insertar atributos personalizados o propiedades del evento en los filtros de selección, los resultados se personalizan para cada usuario. Los casos de uso más comunes incluyen:
+
+- Elementos cuya categoría coincide con la preferencia del usuario
+- Elementos que coinciden con la marca, cocina o talla preferida del usuario
+- Contenido por tipo de suscripción o nivel de fidelización
+- Productos dentro del rango de valor medio de pedido del usuario
+
+La diferencia clave es que las llamadas estándar de catálogo buscan un solo elemento conocido por `id`, mientras que las selecciones de catálogo consultan todo el catálogo y devuelven múltiples elementos que coinciden con tus criterios de filtro.
 
 [1]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [2]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}

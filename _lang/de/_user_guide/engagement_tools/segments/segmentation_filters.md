@@ -58,6 +58,10 @@ glossaries:
     description: "Segmentiert Nutzer:innen danach, wann ihr Nutzerprofil erstellt wurde. Wenn ein:e Nutzer:in per CSV oder API hinzugefügt wurde, zeigt dieser Filter das Datum an, an dem sie hinzugefügt wurden. Wenn der oder die Nutzer:in nicht per CSV oder API hinzugefügt wurde und die erste Sitzung durch das SDK getrackt wurde, spiegelt dieser Filter das Datum dieser ersten Sitzung wider."
     tags:
       - Other Filters
+  - name: Erstellt über
+    description: "Segmentiert Nutzer:innen danach, wo ihr Nutzerprofil erstellt wurde.<br><br>Die folgenden Werte werden unterstützt:<br>- SDK (<code>sdk</code>): Nutzerprofil über das Braze SDK erstellt.<br>- REST API (<code>rest</code>): Nutzerprofil über die Braze REST API erstellt.<br>- Push-Token-Import (<code>pti</code>): Nutzerprofil über Push-Token-Import erstellt.<br>- CSV (<code>csv</code>): Nutzerprofil über CSV-Import erstellt.<br>- Demo (<code>demo</code>): Nutzerprofil über Demodaten erstellt.<br>- SMS (<code>sms</code>): Nutzerprofil über SMS erstellt.<br>- Shopify (<code>shopify</code>): Nutzerprofil über Shopify erstellt.<br>- WhatsApp (<code>whats_app</code>): Nutzerprofil über WhatsApp erstellt.<br>- Provider-Event (<code>provider_event</code>): Nutzerprofil über ein Provider-Event erstellt.<br>- Provider-Sync (<code>provider_sync</code>): Nutzerprofil über einen Provider-Sync erstellt.<br>- Landing-Page (<code>landing_page</code>): Nutzerprofil über eine Landing-Page erstellt."
+    tags:
+      - Other Filters
   - name: Verschachtelte angepasste Attribute
     description: "Attribute, die die Eigenschaften von angepassten Attributen sind.<br><br>Wenn Sie ein verschachteltes angepasstes Zeitattribut filtern, können Sie wählen, ob Sie nach „Tag des Jahres" oder „Zeit" filtern möchten. „Tag des Jahres" überprüft lediglich den Monat und den Tag zum Vergleich. „Zeit" vergleicht den vollständigen Zeitstempel, einschließlich des Jahres."
     tags:
@@ -127,7 +131,7 @@ glossaries:
     tags:
       - Sessions
   - name: Mediane Sitzungsdauer
-    description: "Segmentiert Ihre Nutzer:innen nach der durchschnittlichen Länge ihrer Sitzungen in Ihrer App."
+    description: "Segmentiert Ihre Nutzer:innen nach der medianen Länge ihrer Sitzungen in Ihrer App."
     tags:
       - Sessions
   - name: Hat Nachricht aus Kampagne empfangen
@@ -182,7 +186,7 @@ glossaries:
     description: "Segmentiert Ihre Nutzer:innen nach dem letzten Zeitpunkt, an dem Braze einen Webhook für diese Nutzer:innen gesendet hat. (24-Stunden-Zeitraum)<br><br>Zeitzone:<br>Zeitzone des Unternehmens"
     tags:
       - Retargeting
-  - name: Letzte empfangene WhatsApp
+  - name: Letzte empfangene WhatsApp-Nachricht
     description: "Segmentiert Ihre Nutzer:innen nach dem letzten Zeitpunkt, an dem sie eine WhatsApp-Nachricht erhalten haben. Dies ist der Zeitpunkt, an dem die letzte Nachrichten-API-Anfrage an WhatsApp gesendet wird, nicht der Zeitpunkt, an dem die Nachricht an das Gerät der Nutzer:innen zugestellt wird. (24-Stunden-Zeitraum)<br><br>Zeitzone:<br>Zeitzone des Unternehmens"
     tags:
       - Retargeting
@@ -230,7 +234,7 @@ glossaries:
     description: "Segmentiert Ihre Nutzer:innen danach, ob ihre Telefonnummer ungültig ist oder nicht."
     tags:
       - Retargeting
-  - name: Keyword-Kategorie der letzten gesendeten SMS
+  - name: Keyword-Kategorie der letzten gesendeten eingehenden SMS
     description: "Segmentiert Ihre Nutzer:innen danach, wann sie zuletzt eine SMS an eine bestimmte Abo-Gruppe innerhalb einer bestimmten Keyword-Kategorie gesendet haben."
     tags:
       - Retargeting
@@ -239,7 +243,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Von Canvas konvertiert
-    description: "Segmentiert Ihre Nutzer:innen danach, ob sie auf einem bestimmten Canvas konvertiert haben oder nicht. Dieser Filter schließt Nutzer:innen, die sich in der Kontrollgruppe befinden, nicht ein."
+    description: "Segmentiert Ihre Nutzer:innen danach, ob sie bei einem bestimmten Canvas konvertiert haben oder nicht. Dieser Filter schließt Nutzer:innen, die sich in der Kontrollgruppe befinden, nicht ein."
     tags:
       - Retargeting
   - name: In Kampagnen-Kontrollgruppe
@@ -295,7 +299,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Foreground-Push aktiviert
-    description: "Segmentiert Ihre Nutzer:innen, die über eine vorläufige Push-Autorisierung verfügen oder für Push im Vordergrund aktiviert sind. Diese Zählung umfasst insbesondere:<br>1. iOS-Nutzer:innen, die vorläufig für Push autorisiert sind. <br>2. Nutzer:innen, die Push-Benachrichtigungen im Vordergrund aktiviert haben und deren Push-Abo-Status für eine Ihrer Apps nicht abgemeldet ist. Für diese Nutzer:innen umfasst diese Zählung nur den Push im Vordergrund.<br><br>„Foreground Push aktiviert" schließt Nutzer:innen, die sich abgemeldet haben, nicht ein. <br><br>Nach der Segmentierung mit diesem Filter können Sie im unteren Panel unter <em>Erreichbare Nutzer:innen</em> eine Aufschlüsselung der Personen in diesem Segment für Android, iOS und Web einsehen."
+    description: "Segmentiert Ihre Nutzer:innen, die über eine vorläufige Push-Autorisierung verfügen oder für Push im Vordergrund aktiviert sind. Diese Zählung umfasst insbesondere:<br>1. iOS-Nutzer:innen, die vorläufig für Push autorisiert sind. <br>2. Nutzer:innen, die Push-Benachrichtigungen im Vordergrund aktiviert haben und deren Push-Abo-Status für eine Ihrer Apps nicht abgemeldet ist. Für diese Nutzer:innen umfasst diese Zählung nur den Push im Vordergrund.<br><br>„Foreground-Push aktiviert" schließt Nutzer:innen, die sich abgemeldet haben, nicht ein. <br><br>Nach der Segmentierung mit diesem Filter können Sie im unteren Panel unter <em>Erreichbare Nutzer:innen</em> eine Aufschlüsselung der Personen in diesem Segment für Android, iOS und Web einsehen."
     tags:
       - Channel subscription behavior
   - name: Push im Vordergrund für App aktiviert
@@ -343,7 +347,7 @@ glossaries:
     tags:
       - Purchase behavior
   - name: Erster Kauf für App
-    description: "Segmentiert Ihre Nutzer:innen nach dem frühesten Zeitpunkt, an dem ein:e Nutzer:in einen Kauf in Ihrer App getätigt hat."
+    description: "Segmentiert Ihre Nutzer:innen nach dem frühesten Zeitpunkt, an dem ein:e Nutzer:in einen Kauf über Ihre App getätigt hat."
     tags:
       - Purchase behavior
   - name: Letzter Kauf erfolgt
