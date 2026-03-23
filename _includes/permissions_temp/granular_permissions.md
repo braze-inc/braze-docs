@@ -355,4 +355,5 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | Transformations | Edit Data Transformation | Create and update data transformations |
 | Transformations | View Data Transformation | View data transformations |
 | User Deletion Records | View User Deletion Records | View user deletion records |
+| Support Tickets | Create Support Ticket | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
