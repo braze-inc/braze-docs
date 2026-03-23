@@ -1,23 +1,14 @@
 ---
 nav_title: 시작하기
-<<<<<<< HEAD
-article_title: 의사 결정 스튜디오 시작하기
-layout: dev_guide_content_first
-guide_top_header: "의사 결정 스튜디오 시작하기"
-guide_top_text: ""
-=======
 article_title: 디시전 스튜디오 시작하기
 layout: dev_guide
 guide_top_header: "디시전 스튜디오 시작하기"
 guide_top_text: "결정 에이전트를 생성하기 전에, Decisioning Studio에 대한 계획 수립과 이해를 돕기 위해 다음 문서들을 참고하십시오."
->>>>>>> develop
 page_order: 0
 search_rank: 2
 page_type: landing
 description: "이 섹션에서는 Decisioning Studio에 대한 소개와, 이를 활용하여 어떤 측정기준이든 최적화하는 의사결정 에이전트를 설계하고 배포하는 방법을 설명합니다."
 
-<<<<<<< HEAD
-=======
 guide_featured_title: "섹션 기사"
 guide_featured_list:
   - name: Overview
@@ -34,7 +25,6 @@ guide_featured_list:
     image: /assets/img/braze_icons/settings-01.svg
 
 guide_menu_title: "Additional resources"
->>>>>>> develop
 guide_menu_list:
   - name: 디시전닝 스튜디오에 관하여
     link: /docs/user_guide/brazeai/decisioning_studio/about/

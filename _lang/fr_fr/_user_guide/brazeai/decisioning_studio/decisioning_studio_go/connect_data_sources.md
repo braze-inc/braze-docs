@@ -60,20 +60,6 @@ Pour les intégrations Salesforce Marketing Cloud, Decisioning Studio Go requier
 Les extensions de données et les requêtes SQL sont configurées dans le cadre de la [configuration de l'orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/).
 
 {% endtab %}
-<<<<<<< HEAD
-=======
-{% tab Klaviyo %}
-
-### Exigences relatives aux données Klaviyo
-
-Pour les intégrations Klaviyo, Decisioning Studio Go requiert :
-
-1. **Accès au segment** : Votre audience doit être définie comme un segment Klaviyo auquel la clé API peut accéder.
-2. **Données du profil** : La clé API doit disposer d'un accès complet aux profils pour pouvoir lire les attributs des clients.
-3. **Accès aux indicateurs** : La clé API doit disposer d'un accès complet aux indicateurs et aux événements pour pouvoir collecter les données d'engagement.
-
-{% endtab %}
->>>>>>> develop
 {% endtabs %}
 
 ## Bonnes pratiques

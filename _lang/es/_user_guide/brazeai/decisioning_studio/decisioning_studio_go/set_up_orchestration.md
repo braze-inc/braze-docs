@@ -16,14 +16,9 @@ Decisioning Studio Go es compatible con las siguientes plataformas de interacci�
 
 | CEP | Tipo de integración | Características principales |
 |-----|-----------------|--------------|
-<<<<<<< HEAD
-| **Braze** | Campañas activadas por API | Integración nativa, desencadenar en tiempo real |
-| **Salesforce Marketing Cloud** | Constructor de Viajes con Eventos API | Automatización de consultas SQL, extensiones de datos |
-=======
 | **Braze** | Campañas activadas por API | Integración nativa, desencadenamiento en tiempo real |
 | **Salesforce Marketing Cloud** | Journey Builder con eventos API | Automatización de consultas SQL, extensiones de datos |
 | **Klaviyo** | Flujos con desencadenantes métricos | Basado en plantillas, divisiones por desencadenadores |
->>>>>>> develop
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 Selecciona tu CEP a continuación para comenzar con la configuración de la integración.
@@ -49,8 +44,8 @@ Para integrar Decisioning Studio Go con Braze, deberás crear una clave de API, 
     - **Plantillas:** seleccionar todos los permisos enumerados
 
 {: start="5"}
-5\. Selecciona **Crear clave de API**.
-6\. Copia la clave de API y pégala en tu portal BrazeAI Decisioning Studio™ Go.
+5. Selecciona **Crear clave de API**.
+6. Copia la clave de API y pégala en tu portal BrazeAI Decisioning Studio™ Go.
 
 ### Paso 2: Busca tu nombre de usuario de correo electrónico.
 
@@ -85,18 +80,18 @@ Braze ofrece ID de aplicaciones (denominadas claves de API en el panel de Braze)
 ![Una campaña API denominada «Decisioning Studio Go Email».]({% image_buster /assets/img/decisioning_studio_go/api_campaign_name.png %})
 
 {: start="5"}
-5\. Para tu canal de mensajería, selecciona **Correo electrónico**.
+5. Para tu canal de mensajería, selecciona **Correo electrónico**.
 
 ![Opción para seleccionar tu canal de mensajería para la campaña API.]({% image_buster /assets/img/decisioning_studio_go/select_api_campaign.png %})
 
 {: start="6"}
-6\. En **Opciones adicionales**, selecciona la casilla **Permitir que los usuarios vuelvan a ser elegibles para recibir campañas**.
-7\. Para volver a ser elegible, introduce **1** y selecciona **Horas** en el menú desplegable.
+6. En **Opciones adicionales**, selecciona la casilla **Permitir que los usuarios vuelvan a ser elegibles para recibir campañas**.
+7. Para volver a ser elegible, introduce **1** y selecciona **Horas** en el menú desplegable.
 
 ![Reelegibilidad para la campaña API seleccionada.]({% image_buster /assets/img/decisioning_studio_go/additional_options.png %})
 
 {: start="8"}
-8\. Selecciona **Guardar campaña**.
+8. Selecciona **Guardar campaña**.
 
 ### Paso 5: Copia los ID de tu campaña y mensaje.
 
@@ -105,7 +100,7 @@ Braze ofrece ID de aplicaciones (denominadas claves de API en el panel de Braze)
 ![Un ejemplo de ID de variación de mensaje para copiar y pegar.]({% image_buster /assets/img/decisioning_studio_go/campaign_id.png %})
 
 {: start="2"}
-2\. Copia el **ID de variación del mensaje**. A continuación, ve al portal BrazeAI Decisioning Studio™ Go y pega el **ID de variación del mensaje**.
+2. Copia el **ID de variación del mensaje**. A continuación, ve al portal BrazeAI Decisioning Studio™ Go y pega el **ID de variación del mensaje**.
 
 ### Paso 6: Busca un ID de usuario de prueba.
 
@@ -135,10 +130,10 @@ Para integrar Decisioning Studio Go con Salesforce Marketing Cloud, deberás con
 ![Un paquete de aplicaciones con el nombre «Experimentador 1 - Prueba 5».]({% image_buster /assets/img/decisioning_studio_go/sfmc_app_package1.png %})
 
 {: start="6"}
-6\. Selecciona **Añadir componente**.
-7\. En **Tipo** de **componente**, selecciona **Integración API**. A continuación, selecciona **Siguiente**.
-8\. Para el **tipo de integración**, selecciona **De servidor a servidor**. A continuación, selecciona **Siguiente**.
-9\. Selecciona los siguientes ámbitos recomendados solo para tu paquete de aplicaciones:
+6. Selecciona **Añadir componente**.
+7. En **Tipo** de **componente**, selecciona **Integración API**. A continuación, selecciona **Siguiente**.
+8. Para el **tipo de integración**, selecciona **De servidor a servidor**. A continuación, selecciona **Siguiente**.
+9. Selecciona los siguientes ámbitos recomendados solo para tu paquete de aplicaciones:
     \- Canales > Correo electrónico > Leer, escribir, enviar
     \- Canales > OTT > Leer
     \- Canales > Push > Leer
@@ -167,8 +162,8 @@ Para integrar Decisioning Studio Go con Salesforce Marketing Cloud, deberás con
 {% enddetails %}
 
 {: start="10"}
-10\. Seleccione **Guardar**.
-11\. Copia y pega los siguientes campos en el portal BrazeAI Decisioning Studio™ Go: **ID de cliente**, **secreto de cliente**, **URI base de autenticación**, **URI base REST**, **URI base SOAP**.
+10. Seleccione **Guardar**.
+11. Copia y pega los siguientes campos en el portal BrazeAI Decisioning Studio™ Go: **ID de cliente**, **secreto de cliente**, **URI base de autenticación**, **URI base REST**, **URI base SOAP**.
 
 ### Parte 2: Configurar la automatización de consultas de datos
 
@@ -179,20 +174,20 @@ Para integrar Decisioning Studio Go con Salesforce Marketing Cloud, deberás con
 ![Opción de automatización Studio en la navegación de Journey Builder.]({% image_buster /assets/img/decisioning_studio_go/query13.png %})
 
 {: start="2"}
-2\. Selecciona **Nueva automatización**.
-3\. Arrastrar y soltar un nodo **Programación** como **Origen** **inicial**.
+2. Selecciona **Nueva automatización**.
+3. Arrastrar y soltar un nodo **Programación** como **Origen** **inicial**.
 
 ![«Calendario» como origen inicial de un viaje.]({% image_buster /assets/img/decisioning_studio_go/query14.png %})
 
 {: start="4"}
-4\. En el nodo **Programación**, selecciona **Configurar**.
-5\. Configura lo siguiente para el programa:
+4. En el nodo **Programación**, selecciona **Configurar**.
+5. Configura lo siguiente para el programa:
     - **Fecha de inicio:** El día de mañana en el calendario
     - **Hora:** **12:00 A. M.**
     - **Zona horaria:** **(GMT-05:00) Este (EE. UU.&  Canadá)**
-6\. Para **Repetir**, selecciona **Diario**.
-7\. Configura este programa para que nunca termine.
-8\. Selecciona **Hecho** para guardar la programación.
+6. Para **Repetir**, selecciona **Diario**.
+7. Configura este programa para que nunca termine.
+8. Selecciona **Hecho** para guardar la programación.
 
 ![Un ejemplo de programación definida para el 25 de enero de 2024 a las 12 a. m. ET, que se repetirá todos los días.]({% image_buster /assets/img/decisioning_studio_go/query12.png %})
 
@@ -210,24 +205,24 @@ A continuación, crea dos consultas SQL: una consulta de suscriptores y una cons
 ![Un ejemplo"OFE_Subscribers_query_Test5"  y la clave externa.]({% image_buster /assets/img/decisioning_studio_go/query11.png %})
 
 {: start="5"}
-5\. Seleccione **Siguiente**.
-6\. En tu portal BrazeAI Decisioning Studio™ Go, la ubicación de la consulta SQL de datos del sistema en **Recursos de consulta de suscriptores** es **Recursos de consulta** de suscriptores.
-7\. Copia y pega la consulta en el cuadro de texto y selecciona **Siguiente**.
+5. Seleccione **Siguiente**.
+6. En tu portal BrazeAI Decisioning Studio™ Go, la ubicación de la consulta SQL de datos del sistema en **Recursos de consulta de suscriptores** es **Recursos de consulta** de suscriptores.
+7. Copia y pega la consulta en el cuadro de texto y selecciona **Siguiente**.
 
 ![Un ejemplo de consulta en la sección Consulta SQL.]({% image_buster /assets/img/decisioning_studio_go/query10.png %})
 
 {: start="8"}
-8\. En el portal BrazeAI Decisioning Studio™ Go, en la sección **Recursos para usar**, ubica la clave externa de la extensión de datos de destino. A continuación, pégalo en la barra de búsqueda para realizar la búsqueda.
+8. En el portal BrazeAI Decisioning Studio™ Go, en la sección **Recursos para usar**, ubica la clave externa de la extensión de datos de destino. A continuación, pégalo en la barra de búsqueda para realizar la búsqueda.
 
 ![Una clave externa pegada en la barra de búsqueda.]({% image_buster /assets/img/decisioning_studio_go/query9.png %})
 
 {: start="9"}
-9\. Selecciona la extensión de datos que coincida con la clave externa que has buscado. El nombre de la extensión de datos de destino también se proporciona en tu portal BrazeAI Decisioning Studio™ Go para que puedas consultarlo. La **extensión de datos** para la consulta del suscriptor debe terminar en un`BASE_AUDIENCE_DATA`sufijo.
+9. Selecciona la extensión de datos que coincida con la clave externa que has buscado. El nombre de la extensión de datos de destino también se proporciona en tu portal BrazeAI Decisioning Studio™ Go para que puedas consultarlo. La **extensión de datos** para la consulta del suscriptor debe terminar en un`BASE_AUDIENCE_DATA`sufijo.
 
 ![El nombre de la extensión de datos que coincide con la clave externa del ejemplo.]({% image_buster /assets/img/decisioning_studio_go/query8.png %})
 
 {: start="10"}
-10\. Selecciona **Sobrescribir** y, a continuación**, Siguiente**.
+10. Selecciona **Sobrescribir** y, a continuación**, Siguiente**.
 
 **Consulta de interacción:**
 
@@ -236,28 +231,28 @@ A continuación, crea dos consultas SQL: una consulta de suscriptores y una cons
 ![Se ha añadido «Consulta SQL» como actividad en el recorrido.]({% image_buster /assets/img/decisioning_studio_go/query7.png %})
 
 {: start="2"}
-2\. Selecciona **Elegir**.
-3\. Selecciona **Crear nueva actividad de consulta**.
-4\. Asigna un nombre y una clave externa a la consulta. Recomendamos utilizar el nombre y la clave externa sugeridos para la consulta de interacción que se proporcionan en tu portal BrazeAI Decisioning Studio™ Go.
+2. Selecciona **Elegir**.
+3. Selecciona **Crear nueva actividad de consulta**.
+4. Asigna un nombre y una clave externa a la consulta. Recomendamos utilizar el nombre y la clave externa sugeridos para la consulta de interacción que se proporcionan en tu portal BrazeAI Decisioning Studio™ Go.
 
 ![Un ejemplo"OFE_Engagement_query"  y la clave externa.]({% image_buster /assets/img/decisioning_studio_go/query6.png %})
 
 {: start="5"}
-5\. Seleccione **Siguiente**.
-6\. En tu portal BrazeAI Decisioning Studio™ Go, la ubicación de la consulta SQL de datos del sistema en **Recursos de consultas de interacción** es **Recursos de consultas de interacción**.
-7\. Copia y pega la consulta en el cuadro de texto y selecciona **Siguiente**.
+5. Seleccione **Siguiente**.
+6. En tu portal BrazeAI Decisioning Studio™ Go, la ubicación de la consulta SQL de datos del sistema en **Recursos de consultas de interacción** es **Recursos de consultas de interacción**.
+7. Copia y pega la consulta en el cuadro de texto y selecciona **Siguiente**.
 
 ![Un ejemplo de consulta en la sección Consulta SQL.]({% image_buster /assets/img/decisioning_studio_go/query5.png %})
 
 {: start="8"}
-8\. Localiza y selecciona la extensión de datos de destino para la consulta de interacción especificada en tu portal BrazeAI Decisioning Studio™ Go.
+8. Localiza y selecciona la extensión de datos de destino para la consulta de interacción especificada en tu portal BrazeAI Decisioning Studio™ Go.
 
 {% alert tip %}
 El nombre de la extensión de datos de destino también se proporciona en tu portal BrazeAI Decisioning Studio™ Go para que puedas consultarlo. Asegúrate de que estás viendo la extensión de datos de destino para la consulta de interacción. La **extensión de datos** para la consulta de interacción debe terminar con elENGAGEMENT_DATAsufijo .
 {% endalert %}
 
 {: start="9"}
-9\. Selecciona **Sobrescribir** y, a continuación**, Siguiente**.
+9. Selecciona **Sobrescribir** y, a continuación**, Siguiente**.
 
 ![El nombre de la extensión de datos que coincide con la clave externa del ejemplo.]({% image_buster /assets/img/decisioning_studio_go/query4.png %})
 
@@ -268,13 +263,13 @@ El nombre de la extensión de datos de destino también se proporciona en tu por
 ![Un ejemplo de automatización « OFE_Experimenter_Test5_Automation ».]({% image_buster /assets/img/decisioning_studio_go/query3.png %})
 
 {: start="2"}
-2\. A continuación, selecciona **Ejecutar una vez** para confirmar que todo funciona según lo previsto.
-3\. Selecciona ambas consultas y selecciona **Ejecutar**.
+2. A continuación, selecciona **Ejecutar una vez** para confirmar que todo funciona según lo previsto.
+3. Selecciona ambas consultas y selecciona **Ejecutar**.
 
 ![Una automatización"OFE_Experimenter_Test5_Automation"con una lista de actividades de consultas SQL seleccionadas para ejecutar.]({% image_buster /assets/img/decisioning_studio_go/query2.png %})
 
 {: start="4"}
-4\. Selecciona **Ejecutar ahora**.
+4. Selecciona **Ejecutar ahora**.
 
 ![Una actividad de consulta SQL seleccionada.]({% image_buster /assets/img/decisioning_studio_go/query1.png %})
 
@@ -299,14 +294,14 @@ Ahora puedes comprobar que la automatización se está ejecutando correctamente.
 ![«API Event» seleccionado como fuente de entrada.]({% image_buster /assets/img/decisioning_studio_go/journey2.png %})
 
 {: start="2"}
-2\. En el **evento API**, selecciona **Crear un evento**.
+2. En el **evento API**, selecciona **Crear un evento**.
 
 ![La opción «crear un evento» en la API Event.]({% image_buster /assets/img/decisioning_studio_go/journey3.png %})
 
 {: start="3"}
-3\. Selecciona **Extensión de datos**. Localiza y selecciona la ubicación de la extensión de datos en la que BrazeAI Decisioning Studio™ Go escribirá las recomendaciones.
-4\. Selecciona **Resumen** para guardar los cambios.
-5\. Selecciona **Hecho** para guardar el evento API.
+3. Selecciona **Extensión de datos**. Localiza y selecciona la ubicación de la extensión de datos en la que BrazeAI Decisioning Studio™ Go escribirá las recomendaciones.
+4. Selecciona **Resumen** para guardar los cambios.
+5. Selecciona **Hecho** para guardar el evento API.
 
 ![Resumen del evento API.]({% image_buster /assets/img/decisioning_studio_go/journey4.png %}){: style="max-width:80%;"}
 
@@ -318,20 +313,20 @@ Ahora puedes comprobar que la automatización se está ejecutando correctamente.
 ![Detalles de la división de decisiones con el botón «Editar».]({% image_buster /assets/img/decisioning_studio_go/journey5.png %})
 
 {: start="3"}
-3\. Actualiza la **división de decisiones** para utilizar el ID de plantilla pasado por la extensión de datos de recomendaciones. Ubica el campo correspondiente en **«Datos del viaje**».
+3. Actualiza la **división de decisiones** para utilizar el ID de plantilla pasado por la extensión de datos de recomendaciones. Ubica el campo correspondiente en **«Datos del viaje**».
 
 ![La sección Datos del viaje en la ruta 1 de la división de decisiones.]({% image_buster /assets/img/decisioning_studio_go/journey6.png %})
 
 {: start="4"}
-4\. Selecciona tu evento de entrada y localiza el campo ID de plantilla deseado, luego arrástralo al espacio de trabajo.
+4. Selecciona tu evento de entrada y localiza el campo ID de plantilla deseado, luego arrástralo al espacio de trabajo.
 
 ![El ID de la plantilla de correo electrónico que se va a incluir.]({% image_buster /assets/img/decisioning_studio_go/journey7.png %})
 
 {: start="5"}
-5\. Introduce el ID de la plantilla de tu primer correo electrónico y, a continuación, selecciona **Hecho**.
-6\. Selecciona **Resumen** para guardar esta ruta.
-7\. Añade una ruta para cada una de tus plantillas de correo electrónico y, a continuación, repite los pasos 4 a 6 anteriores para establecer los criterios de filtrado de modo que el ID de la plantilla coincida con el valor de ID de cada plantilla.
-8\. Selecciona **Hecho** para guardar el nodo **de división de decisiones**.
+5. Introduce el ID de la plantilla de tu primer correo electrónico y, a continuación, selecciona **Hecho**.
+6. Selecciona **Resumen** para guardar esta ruta.
+7. Añade una ruta para cada una de tus plantillas de correo electrónico y, a continuación, repite los pasos 4 a 6 anteriores para establecer los criterios de filtrado de modo que el ID de la plantilla coincida con el valor de ID de cada plantilla.
+8. Selecciona **Hecho** para guardar el nodo **de división de decisiones**.
 
 ![Dos rutas en una división de decisiones para cada ID de plantilla de correo electrónico.]({% image_buster /assets/img/decisioning_studio_go/journey10.png %}){: style="max-width:65%;"}
 
@@ -363,20 +358,18 @@ El portal BrazeAI Decisioning Studio™ Go te muestra la automatización de SFMC
 ![El viaje completado para activar.]({% image_buster /assets/img/decisioning_studio_go/activate3.png %})
 
 {: start="5"}
-5\. A continuación, revisa los resultados de la validación y selecciona **Activar**.
+5. A continuación, revisa los resultados de la validación y selecciona **Activar**.
 
 ![Recomendaciones enumeradas en la sección Reglas de validación.]({% image_buster /assets/img/decisioning_studio_go/activate1.png %}){: style="max-width:60%;"}
 
 {: start="6"}
-6\. En el resumen **Activar viaje**, selecciona **Activar** de nuevo.
+6. En el resumen **Activar viaje**, selecciona **Activar** de nuevo.
 
 ![Resumen del viaje.]({% image_buster /assets/img/decisioning_studio_go/activate2.png %}){: style="max-width:85%;"}
 
 ¡Ya está todo listo! Ahora puedes empezar a desencadear envíos a través de BrazeAI Decisioning Studio™ Go.
 
 {% endtab %}
-<<<<<<< HEAD
-=======
 {% tab Klaviyo %}
 
 ## Configuración de la integración con Klaviyo
@@ -404,8 +397,8 @@ Para integrar Decisioning Studio Go con Klaviyo, deberás configurar una clave d
 ![Una clave de API de Klaviyo con los permisos seleccionados.]({% image_buster /assets/img/decisioning_studio_go/klaviyo_api_key.png %})
 
 {: start="5"}
-5\. Seleccione **Crear**.
-6\. Copia esta clave de API y pégala en el portal BrazeAI Decisioning Studio™ Go cuando se te solicite.
+5. Seleccione **Crear**.
+6. Copia esta clave de API y pégala en el portal BrazeAI Decisioning Studio™ Go cuando se te solicite.
 
 ### Parte 2: Crea una plantilla de marcador de posición en Klaviyo.
 
@@ -424,8 +417,8 @@ El propósito de este marcador de posición es importar el contenido deseado a B
 ![Un flujo denominado «Flujo marcador de posición OFE».]({% image_buster /assets/img/decisioning_studio_go/create_flow.png %})
 
 {: start="4"}
-4\. Selecciona cualquier activador y guarda el flujo.
-5\. Selecciona **Confirmar y guardar**.
+4. Selecciona cualquier activador y guarda el flujo.
+5. Selecciona **Confirmar y guardar**.
 
 **Paso 2: Crear la plantilla de marcador de posición**
 
@@ -434,11 +427,11 @@ El propósito de este marcador de posición es importar el contenido deseado a B
 ![Un flujo con un nodo Desencadenante seguido de un nodo de correo electrónico.]({% image_buster /assets/img/decisioning_studio_go/set_up_email_node.png %})
 
 {: start="2"}
-2\. En el nodo **de correo electrónico**, selecciona **Seleccionar plantilla**.
-3\. A continuación, elige la plantilla que deseas utilizar y selecciona **Usar plantilla**.
-4\. Selecciona **Guardar** > **Hecho**.
-5\. (Opcional) Para añadir más plantillas que se utilizarán en BrazeAI Decisioning Studio™ Go, añade otro nodo **de correo electrónico** y repite los pasos 2 a 4.
-6\. Deja todos los correos electrónicos en modo **Borrador** y sal del Flujo.
+2. En el nodo **de correo electrónico**, selecciona **Seleccionar plantilla**.
+3. A continuación, elige la plantilla que deseas utilizar y selecciona **Usar plantilla**.
+4. Selecciona **Guardar** > **Hecho**.
+5. (Opcional) Para añadir más plantillas que se utilizarán en BrazeAI Decisioning Studio™ Go, añade otro nodo **de correo electrónico** y repite los pasos 2 a 4.
+6. Deja todos los correos electrónicos en modo **Borrador** y sal del Flujo.
 
 En el portal BrazeAI Decisioning Studio™ Go, tus plantillas deben poder seleccionarse en tu flujo de marcadores de posición.
 
@@ -464,13 +457,13 @@ Antes de crear un flujo en Klaviyo, debes disponer de los siguientes datos de tu
 ![La opción «Crear manualmente» seleccionada para un flujo de ejemplo.]({% image_buster /assets/img/decisioning_studio_go/flow1.png %}){: style="max-width:50%;"}
 
 {: start="4"}
-4\. Selecciona el disparador.
-5\. Empareja el nombre de la métrica con el nombre del evento que desencadena tu portal BrazeAI Decisioning Studio™ Go.
+4. Selecciona el disparador.
+5. Empareja el nombre de la métrica con el nombre del evento que desencadena tu portal BrazeAI Decisioning Studio™ Go.
 
 ![Un ejemplo de nombre de métrica que coincide con el nombre del evento « OFE_TEST_CASE_API_EVENT_TRIGGER » (desencadenante).]({% image_buster /assets/img/decisioning_studio_go/flow2.png %})
 
 {: start="6"}
-6\. Seleccione **Guardar**.
+6. Seleccione **Guardar**.
 
 {% alert note %}
 Si tu experimentador tiene una plantilla base, pasa al paso 2. Si tu experimentador tiene dos o más plantillas base, pasa al [paso 3: Añade una división de activación a tu flujo](#step-3-add-a-trigger-split-to-your-flow).
@@ -484,21 +477,21 @@ Si tu experimentador tiene una plantilla base, pasa al paso 2. Si tu experimenta
 ![Opción «Seleccionar plantilla» en la sección «Detalles del correo electrónico».]({% image_buster /assets/img/decisioning_studio_go/flow3.png %})
 
 {: start="3"}
-3\. Busca y selecciona tu plantilla base. Puedes buscar tu plantilla por su nombre en la sección **Recursos para usar** del portal BrazeAI Decisioning Studio™ Go.
+3. Busca y selecciona tu plantilla base. Puedes buscar tu plantilla por su nombre en la sección **Recursos para usar** del portal BrazeAI Decisioning Studio™ Go.
 
 ![Una plantilla base de ejemplo en Klaviyo.]({% image_buster /assets/img/decisioning_studio_go/flow4.png %})
 
 {: start="4"}
-4\. Selecciona **Usar plantilla** > **Guardar**.
-5\. En la **línea del asunto**, escribe {% raw %}`{{event.SubjectLine}}`{% endraw %}.
-6\. En los campos **Nombre del remitente** y **Dirección de correo electrónico del remitente**, introduce los datos que desees utilizar.
+4. Selecciona **Usar plantilla** > **Guardar**.
+5. En la **línea del asunto**, escribe {% raw %}`{{event.SubjectLine}}`{% endraw %}.
+6. En los campos **Nombre del remitente** y **Dirección de correo electrónico del remitente**, introduce los datos que desees utilizar.
 
 ![Ejemplo de línea del asunto, nombre del remitente y dirección de correo electrónico del remitente para el «Correo electrónico 1».]({% image_buster /assets/img/decisioning_studio_go/flow5.png %})
 
 {: start="7"}
-7\. Selecciona **Hecho**.
-8\. Desmarca la casilla **Omitir perfiles enviados recientemente por correo electrónico** y, a continuación, selecciona **Guardar**.
-9\. En el nodo del correo electrónico, actualiza el modo de **Borrador** a **En vivo**.
+7. Selecciona **Hecho**.
+8. Desmarca la casilla **Omitir perfiles enviados recientemente por correo electrónico** y, a continuación, selecciona **Guardar**.
+9. En el nodo del correo electrónico, actualiza el modo de **Borrador** a **En vivo**.
 
 ![El editor de flujos de Klaviyo muestra un nodo de activación conectado a un nodo de correo electrónico.]({% image_buster /assets/img/decisioning_studio_go/flow6.png %})
 
@@ -519,18 +512,18 @@ Si tu experimentador tiene una plantilla base, pasa al paso 2. Si tu experimenta
 ![Un flujo de Klaviyo con un nodo de división de activación, que tiene una rama «Sí» que conduce a un nodo de correo electrónico y una rama «No» que se conecta a otra división de activación.]({% image_buster /assets/img/decisioning_studio_go/flow8.png %})
 
 {: start="3"}
-3\. En los **detalles del correo electrónico**, selecciona **Seleccionar plantilla**.
-4\. Busca y selecciona tu plantilla base. Puedes buscar tu plantilla por el nombre de la plantilla base en la sección **Recursos para usar** del portal BrazeAI Decisioning Studio™ Go.
-5\. Selecciona **Usar plantilla** > **Guardar**.
-6\. En la **línea del asunto**, escribe {% raw %}`{{event.SubjectLine}}`{% endraw %}.
-7\. En los campos **Nombre del remitente** y **Dirección de correo electrónico del remitente**, introduce los datos que desees utilizar.
+3. En los **detalles del correo electrónico**, selecciona **Seleccionar plantilla**.
+4. Busca y selecciona tu plantilla base. Puedes buscar tu plantilla por el nombre de la plantilla base en la sección **Recursos para usar** del portal BrazeAI Decisioning Studio™ Go.
+5. Selecciona **Usar plantilla** > **Guardar**.
+6. En la **línea del asunto**, escribe {% raw %}`{{event.SubjectLine}}`{% endraw %}.
+7. En los campos **Nombre del remitente** y **Dirección de correo electrónico del remitente**, introduce los datos que desees utilizar.
 
 ![Una plantilla de correo electrónico seleccionada y campos para la línea del asunto, el nombre del remitente y la dirección de correo electrónico del remitente.]({% image_buster /assets/img/decisioning_studio_go/flow5.png %})
 
 {: start="8"}
-8\. Selecciona **Hecho**.
-9\. Desmarca la casilla **Omitir perfiles enviados recientemente por correo electrónico** y, a continuación, selecciona **Guardar**.
-10\. En el nodo del correo electrónico, actualiza el modo de **Borrador** a **En vivo**.
+8. Selecciona **Hecho**.
+9. Desmarca la casilla **Omitir perfiles enviados recientemente por correo electrónico** y, a continuación, selecciona **Guardar**.
+10. En el nodo del correo electrónico, actualiza el modo de **Borrador** a **En vivo**.
 
 **Añade una nueva división de activación para cada plantilla adicional:**
 
@@ -541,22 +534,21 @@ Si tu experimentador tiene una plantilla base, pasa al paso 2. Si tu experimenta
 ![Diagrama de un editor de flujos de Klaviyo que muestra un nodo de desencadenamiento que conduce a una división de desencadenamiento. La división del desencadenador tiene una rama «Sí» que conduce a un nodo «Correo electrónico» y una rama «No» que se conecta a otra división del desencadenador que conduce a nodos «Correo electrónico» adicionales.]({% image_buster /assets/img/decisioning_studio_go/flow9.png %})
 
 {: start="4"}
-4\. Arrastre y suelte un nodo **de correo electrónico** en la rama **Sí** de su nueva división de desencadenantes.
-5\. Repite los pasos de configuración de la plantilla de correo electrónico anteriores para seleccionar la plantilla correspondiente.
-6\. Establece la **línea del asunto** en {% raw %}`{{event.SubjectLine}}`{% endraw %}y desmarca la casilla **Omitir perfiles enviados recientemente por correo electrónico**.
-7\. Repite este proceso hasta que tengas un nodo **de división de activadores** y un nodo **de correo electrónico** para cada plantilla base que utilice tu experimentador. Tu última división de desencadenamiento no debería tener nada en la rama «No».
+4. Arrastre y suelte un nodo **de correo electrónico** en la rama **Sí** de su nueva división de desencadenantes.
+5. Repite los pasos de configuración de la plantilla de correo electrónico anteriores para seleccionar la plantilla correspondiente.
+6. Establece la **línea del asunto** en {% raw %}`{{event.SubjectLine}}`{% endraw %}y desmarca la casilla **Omitir perfiles enviados recientemente por correo electrónico**.
+7. Repite este proceso hasta que tengas un nodo **de división de activadores** y un nodo **de correo electrónico** para cada plantilla base que utilice tu experimentador. Tu última división de desencadenamiento no debería tener nada en la rama «No».
 
 ![Un flujo de Klaviyo con múltiples nodos de división de activadores que se ramifican en múltiples nodos de correo electrónico.]({% image_buster /assets/img/decisioning_studio_go/flow10.png %})
 
 {: start="8"}
-8\. En cada uno de tus nodos **de correo electrónico**, actualiza el modo de **Borrador** a **En vivo**.
+8. En cada uno de tus nodos **de correo electrónico**, actualiza el modo de **Borrador** a **En vivo**.
 
 ![La opción de actualizar el estado del nodo a «En vivo».]({% image_buster /assets/img/decisioning_studio_go/flow11.png %})
 
 ¡Ya está todo listo! Ahora puedes desencadear activaciones a través de BrazeAI Decisioning Studio™ Go.
 
 {% endtab %}
->>>>>>> develop
 {% endtabs %}
 
 ## Próximos pasos

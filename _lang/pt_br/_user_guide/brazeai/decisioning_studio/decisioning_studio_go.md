@@ -1,33 +1,12 @@
 ---
-<<<<<<< HEAD
-nav_title: Acessar o Decisioning Studio
-article_title: Acessar o BrazeAI Decisioning Studio
-page_order: 7
-description: "Saiba como configurar e integrar o BrazeAI Decisioning <sup>StudioTM</sup> Acessar o Braze."
-=======
 nav_title: Estúdio de Decisão Go
 article_title: BrazeAI Decisioning Studio Go
 page_order: 1
 description: "Aprenda a configurar e integrar o BrazeAI Decisioning Studio<sup>TM</sup> Acesse o Braze."
->>>>>>> develop
 ---
 
 # BrazeAI Decisioning Studio™ Go
 
-<<<<<<< HEAD
-{% alert important %}
-Note: We are currently building a new version of Decisioning Studio Go that will launch self-serve from the Braze Dashboard.
-
-The following documentation applies to the legacy version, which will be deprecated in 1H2026.
-{% endalert %}
-
-## Sobre o Decisioning Studio Acessar
-
-O Decisioning Studio Acessar inclui a configuração de criativos de autoatendimento com um banco de ações limitado, apenas recursos de clientes baseados em engajamento, otimização de cliques e é compatível apenas com as duas plataformas de engajamento com clientes (CEPs) a seguir:
-
-* Braze
-* Salesforce Marketing Cloud
-=======
 ## Sobre o Decisioning Studio Go
 
 O Decisioning Studio Go inclui configuração criativa self-service com um banco de ações limitado, apenas recursos de engajamento do cliente, otimização de cliques e é compatível apenas com as três plataformas de engajamento com clientes (CEPs) a seguir:
@@ -35,7 +14,6 @@ O Decisioning Studio Go inclui configuração criativa self-service com um banco
 * Braze
 * Nuvem de Marketing da Salesforce para profissionais de marketing
 * Klaviyo
->>>>>>> develop
 
 Para saber mais sobre as diferenças entre o Decisioning Studio Go e o Decisioning Studio Pro, consulte [Decisioning Studio Go versus Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/#decisioning-studio-go-vs-decisioning-studio-pro).
 

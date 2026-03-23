@@ -3,18 +3,12 @@ nav_title: Erste Schritte
 article_title: Erste Schritte mit Decisioning Studio
 layout: dev_guide_content_first
 guide_top_header: "Erste Schritte mit Decisioning Studio"
-<<<<<<< HEAD
-guide_top_text: ""
-=======
 guide_top_text: "Bevor Sie einen Entscheidungsagenten erstellen, nutzen Sie bitte diese Artikel als Leitfaden für Ihre Planung und zum Verständnis von Decisioning Studio."
->>>>>>> develop
 page_order: 0
 search_rank: 2
 page_type: landing
 description: "Dieser Abschnitt enthält eine Einführung in Decisioning Studio und erläutert, wie Sie damit Entscheidungsagenten entwerfen und bereitstellen können, die beliebige Geschäftsmetriken optimieren."
 
-<<<<<<< HEAD
-=======
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
   - name: Übersicht
@@ -31,7 +25,6 @@ guide_featured_list:
     image: /assets/img/braze_icons/settings-01.svg
 
 guide_menu_title: "Additional resources"
->>>>>>> develop
 guide_menu_list:
   - name: Über Decisioning Studio
     link: /docs/user_guide/brazeai/decisioning_studio/about/

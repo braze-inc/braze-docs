@@ -1,15 +1,8 @@
 ---
-<<<<<<< HEAD
-nav_title: Décisions Studio Go
-article_title: BrazeAI Decisioning Studio Go
-page_order: 7
-description: "Découvrez comment configurer et intégrer BrazeAI Decisioning <sup>StudioTM</sup> Go dans Braze."
-=======
 nav_title: Studio de prise de décision Go
 article_title: Studio de prise de décision BrazeAI
 page_order: 1
 description: "Découvrez comment configurer et réaliser l'intégration de BrazeAI Decisioning Studio<sup>TM.</sup> Accédez à Braze."
->>>>>>> develop
 ---
 
 # BrazeAI Decisioning Studio™ Go
@@ -22,11 +15,7 @@ La documentation suivante s’applique à la version héritée, qui sera mise ho
 
 ## À propos de Decisioning Studio Go
 
-<<<<<<< HEAD
-Decisioning Studio Go comprend une configuration créative en libre-service avec une banque d'actions limitée, des fonctionnalités client basées sur l'engagement uniquement, une optimisation sur les clics, et n'est compatible qu'avec les deux plateformes d'engagement client (CEP) suivantes :
-=======
 Decisioning Studio Go comprend une configuration créative en libre-service avec une banque d'actions limitée, des fonctionnalités client basées uniquement sur l'engagement, une optimisation des clics, et n'est compatible qu'avec les trois plateformes d'engagement client (CEP) suivantes :
->>>>>>> develop
 
 * Braze
 * Salesforce Marketing Cloud

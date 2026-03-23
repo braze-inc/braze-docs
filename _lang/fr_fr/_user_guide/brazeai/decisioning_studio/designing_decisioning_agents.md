@@ -43,31 +43,19 @@ Lors de la configuration d'un agent décisionnel, vous devez réfléchir à quat
 
 Votre indicateur de réussite correspond au résultat métier que l'agent cherchera à optimiser. Il doit être directement aligné sur vos objectifs métier — non pas des indicateurs indirects comme les clics ou les ouvertures, mais de véritables résultats commerciaux tels que le chiffre d'affaires, les conversions, l'ARPU ou la valeur vie client.
 
-<<<<<<< HEAD:_lang/fr_fr/_user_guide/brazeai/decisioning_studio/designing_decisioning_agents.md
 ### Le « qui » : Sélectionnez votre audience
-=======
-### Le « qui » : sélectionnez votre audience
->>>>>>> develop:_lang/fr_fr/_user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents.md
 
 > À qui l'agent décisionnel s'adressera-t-il ?
 
 Définissez l'audience que votre agent servira. Il peut s'agir de l'ensemble des clients, d'un segment spécifique (comme les membres d'un programme de fidélité) ou de clients à un stade particulier de leur cycle de vie (comme les acheteurs récents ou les utilisateurs abonnés à risque).
 
-<<<<<<< HEAD:_lang/fr_fr/_user_guide/brazeai/decisioning_studio/designing_decisioning_agents.md
-### Le « quoi » : Configurez votre banque d'actions
-=======
 ### Le « quoi » : configurez votre banque d'actions
->>>>>>> develop:_lang/fr_fr/_user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents.md
 
 > Parmi quelles options l'agent peut-il choisir pour influencer le résultat ?
 
 La banque d'actions définit tous les leviers que l'agent peut actionner : les dimensions (telles que le canal, l'offre, le timing et la fréquence) et les options spécifiques au sein de chaque dimension. L'agent expérimente différentes combinaisons de ces options pour déterminer ce qui fonctionne le mieux pour chaque client.
 
-<<<<<<< HEAD:_lang/fr_fr/_user_guide/brazeai/decisioning_studio/designing_decisioning_agents.md
 ### Le « comment » : Configurez vos contraintes
-=======
-### Le « comment » : configurez vos contraintes
->>>>>>> develop:_lang/fr_fr/_user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents.md
 
 > Quelles règles l'agent doit-il respecter ?
 

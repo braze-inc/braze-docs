@@ -54,12 +54,7 @@ Después de validar el diseño de tu experimento, recopila los siguientes datos 
 | CEP | Tipos aceptados |
 |-----|---------------|
 | **Braze** | Campañas y Canvas |
-<<<<<<< HEAD
 | **Salesforce Marketing Cloud** | Sólo viajes |
-=======
-| **Salesforce Marketing Cloud** | Solo viajes |
-| **Klaviyo** | Solo flujos |
->>>>>>> develop
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 **ID de audiencia de tu CEP:**

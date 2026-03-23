@@ -6,15 +6,9 @@ Decisioning Studio propose deux niveaux : Veuillez vous rendre sur Pro. Chaque n
 
 Go est idéal pour les équipes qui se lancent dans la prise de décision basée sur l'intelligence artificielle. Il comprend :
 
-<<<<<<< HEAD
-- Configuration créative en libre-service avec un agent décisionnel préconçu
-- Mesure du succès axée sur les indicateurs de clics
-- Compatibilité avec deux plateformes d'engagement client (CEP) : Braze et Salesforce Marketing Cloud
-=======
 - Configuration créative en libre-service avec un agent de décision prédéfini
 - Indice de succès axé sur les clics
 - Compatibilité avec trois plateformes d'engagement client (CEP) : Braze, Salesforce Marketing Cloud et Klaviyo
->>>>>>> develop
 
 ### Studio de prise de décision Pro
 

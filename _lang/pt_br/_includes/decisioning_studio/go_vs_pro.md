@@ -8,11 +8,7 @@ Go é ideal para equipes que estão começando com a tomada de decisão em IA. I
 
 - Configuração criativa autoatendida com um agente de decisão pré-projetado
 - Métrica de sucesso focada em cliques
-<<<<<<< HEAD
-- Compatibilidade com duas plataformas de engajamento com clientes (CEPs): Braze e Salesforce Marketing Cloud
-=======
 - Compatibilidade com três Plataformas de Engajamento de Clientes (CEPs): Braze, Salesforce Marketing Cloud e Klaviyo
->>>>>>> develop
 
 ### Decisioning Studio Pro
 

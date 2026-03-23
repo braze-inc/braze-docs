@@ -1,13 +1,7 @@
 ---
-<<<<<<< HEAD:_lang/es/_user_guide/brazeai/decisioning_studio/designing_decisioning_agents.md
-nav_title: Design your agent
-article_title: Diseñar agentes decisores
-page_order: 1
-=======
 nav_title: Diseño de agentes de toma de decisiones
 article_title: Diseño de agentes de toma de decisiones
 page_order: 4
->>>>>>> develop:_lang/es/_user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents.md
 page_type: reference
 description: "Este artículo de referencia abarca conceptos clave y prácticas recomendadas para diseñar y configurar tu agente de toma de decisiones."
 ---
@@ -140,11 +134,7 @@ Podrías crear un agente de fidelización e interacción para maximizar las comp
 
 ¿Estás listo para crear tu propio agente de toma de decisiones? Sigue los siguientes pasos según tu nivel de Decisioning Studio:
 
-<<<<<<< HEAD:_lang/es/_user_guide/brazeai/decisioning_studio/designing_decisioning_agents.md
-- **Estudio de decisión Go**: [Configurar Decisioning Studio Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/)
-=======
 - **Decisioning Studio Go**: [Configurar Decisioning Studio Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/)
 - **Decisioning Studio Pro**: [Configurar Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/)
->>>>>>> develop:_lang/es/_user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents.md
 
 Estas guías te explican cómo conectar orígenes de datos, configurar la orquestación, diseñar tu agente y ponerlo en producción.

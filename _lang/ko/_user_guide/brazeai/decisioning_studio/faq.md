@@ -1,12 +1,7 @@
 ---
 nav_title: FAQ
-<<<<<<< HEAD
-article_title: 의사 결정 스튜디오 FAQ
-page_order: 8
-=======
 article_title: 결정 스튜디오 FAQ
 page_order: 10
->>>>>>> develop
 page_type: FAQ
 description: "이 페이지는 결정 스튜디오에 대한 자주 묻는 질문에 대한 답변을 제공합니다."
 ---

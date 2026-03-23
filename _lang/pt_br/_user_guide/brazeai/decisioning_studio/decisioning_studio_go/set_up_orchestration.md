@@ -17,12 +17,8 @@ O Decisioning Studio Go suporta as seguintes plataformas de engajamento com clie
 | CEP | Tipo de integração | Principais recursos |
 |-----|-----------------|--------------|
 | **Braze** | Campanhas disparadas por API | Integração nativa, disparo em tempo real |
-<<<<<<< HEAD
-| **Salesforce Marketing Cloud** | Journey Builder com eventos de API | Automação de consultas de SQL, extensões de dados |
-=======
 | **Salesforce Marketing Cloud** | Journey Builder com eventos de API | Automação de consulta SQL, extensões de dados |
 | **Klaviyo** | Fluxos com disparadores de métricas | Baseado em modelo, divisões de disparo |
->>>>>>> develop
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 Selecione sua CEP abaixo para começar a configuração da integração.
@@ -48,8 +44,8 @@ Para integrar o Decisioning Studio Go com o Braze, você criará uma chave de AP
     - **Modelos:** selecione todas as permissões listadas
 
 {: start="5"}
-5\. Selecione **Criar chave de API**.
-6\. Copie a chave de API e cole-a no seu portal BrazeAI Decisioning Studio™ Go.
+5. Selecione **Criar chave de API**.
+6. Copie a chave de API e cole-a no seu portal BrazeAI Decisioning Studio™ Go.
 
 ### Etapa 2: Localize seu nome de exibição de e-mail
 
@@ -84,18 +80,18 @@ O Braze oferece IDs de app (referidos como chaves de API no painel do Braze) que
 ![Uma campanha de API chamada "Decisioning Studio Go Email".]({% image_buster /assets/img/decisioning_studio_go/api_campaign_name.png %})
 
 {: start="5"}
-5\. Para seu canal de envio de mensagens, selecione **e-mail**.
+5. Para seu canal de envio de mensagens, selecione **e-mail**.
 
 ![Opção para selecionar seu canal de envio de mensagens para a campanha de API.]({% image_buster /assets/img/decisioning_studio_go/select_api_campaign.png %})
 
 {: start="6"}
-6\. Em **Opções Adicionais**, selecione a caixa de seleção **Permitir que os usuários se tornem re-elegíveis para receber a campanha**.
-7\. Para o tempo para se tornar re-elegível, insira **1** e selecione **Horas** no menu suspenso.
+6. Em **Opções Adicionais**, selecione a caixa de seleção **Permitir que os usuários se tornem re-elegíveis para receber a campanha**.
+7. Para o tempo para se tornar re-elegível, insira **1** e selecione **Horas** no menu suspenso.
 
 ![Re-elegibilidade para a campanha de API selecionada.]({% image_buster /assets/img/decisioning_studio_go/additional_options.png %})
 
 {: start="8"}
-8\. Selecione **Salvar Campanha**.
+8. Selecione **Salvar Campanha**.
 
 ### Etapa 5: Copie seus IDs de campanha e mensagem
 
@@ -104,7 +100,7 @@ O Braze oferece IDs de app (referidos como chaves de API no painel do Braze) que
 ![Um exemplo de ID de variação de mensagem para ser copiado e colado.]({% image_buster /assets/img/decisioning_studio_go/campaign_id.png %})
 
 {: start="2"}
-2\. Copie o **ID de Variação de Mensagem**. Em seguida, acesse o portal BrazeAI Decisioning Studio™ Go e cole o **ID de Variação de Mensagem**.
+2. Copie o **ID de Variação de Mensagem**. Em seguida, acesse o portal BrazeAI Decisioning Studio™ Go e cole o **ID de Variação de Mensagem**.
 
 ### Etapa 6: Localize um ID de usuário teste
 
@@ -134,10 +130,10 @@ Para integrar o Decisioning Studio Go com o Salesforce Marketing Cloud, você co
 ![Um pacote de app com o nome "Experimentador 1 - Teste 5".]({% image_buster /assets/img/decisioning_studio_go/sfmc_app_package1.png %})
 
 {: start="6"}
-6\. Selecione **Adicionar Componente**.
-7\. Para o **Tipo de Componente**, selecione **Integração de API**. Em seguida, selecione **Próximo**.
-8\. Para o **Tipo de Integração**, selecione **Servidor para servidor**. Em seguida, selecione **Próximo**.
-9\. Selecione os seguintes escopos recomendados apenas para o seu pacote de app:
+6. Selecione **Adicionar Componente**.
+7. Para o **Tipo de Componente**, selecione **Integração de API**. Em seguida, selecione **Próximo**.
+8. Para o **Tipo de Integração**, selecione **Servidor para servidor**. Em seguida, selecione **Próximo**.
+9. Selecione os seguintes escopos recomendados apenas para o seu pacote de app:
     \- Canais > E-mail > Ler, Escrever, Enviar
     \- Canais > OTT > Ler
     \- Canais > Push > Ler
@@ -166,8 +162,8 @@ Para integrar o Decisioning Studio Go com o Salesforce Marketing Cloud, você co
 {% enddetails %}
 
 {: start="10"}
-10\. Selecione **Salvar**.
-11\. Copie e cole os seguintes campos no portal BrazeAI Decisioning Studio™ Go: **Id do Cliente**, **Segredo do Cliente**, **URI Base de Autenticação**, **URI Base REST**, **URI Base SOAP**.
+10. Selecione **Salvar**.
+11. Copie e cole os seguintes campos no portal BrazeAI Decisioning Studio™ Go: **Id do Cliente**, **Segredo do Cliente**, **URI Base de Autenticação**, **URI Base REST**, **URI Base SOAP**.
 
 ### Parte 2: Configure uma automação de consulta de dados
 
@@ -178,20 +174,20 @@ Para integrar o Decisioning Studio Go com o Salesforce Marketing Cloud, você co
 ![Opção Automation Studio na navegação do Journey Builder.]({% image_buster /assets/img/decisioning_studio_go/query13.png %})
 
 {: start="2"}
-2\. Selecione **Nova Automação**.
-3\. Arraste e solte um nó **Agendar** como a **Fonte Inicial**.
+2. Selecione **Nova Automação**.
+3. Arraste e solte um nó **Agendar** como a **Fonte Inicial**.
 
 !["Agendar" como a fonte inicial de uma Jornada.]({% image_buster /assets/img/decisioning_studio_go/query14.png %})
 
 {: start="4"}
-4\. No nó **Agendar**, selecione **Configurar**.
-5\. Defina o seguinte para o agendamento:
+4. No nó **Agendar**, selecione **Configurar**.
+5. Defina o seguinte para o agendamento:
     - **Data de Início:** Dia do calendário de amanhã
     - **Hora:** **12:00 AM**
     - **Fuso Horário:** **(GMT-05:00) Leste (EUA & Canadá)**
-6\. Para **Repetir**, selecione **Diariamente**.
-7\. Defina este cronograma para nunca terminar.
-8\. Selecione **Concluído** para salvar o cronograma.
+6. Para **Repetir**, selecione **Diariamente**.
+7. Defina este cronograma para nunca terminar.
+8. Selecione **Concluído** para salvar o cronograma.
 
 ![Um cronograma de exemplo definido para 25 de janeiro de 2024 às 12h ET, para repetir todos os dias.]({% image_buster /assets/img/decisioning_studio_go/query12.png %})
 
@@ -209,24 +205,24 @@ Em seguida, crie 2 consultas de SQL: uma consulta de assinantes e uma consulta d
 ![Um exemplo "OFE_Subscribers_query_Test5" e a chave externa.]({% image_buster /assets/img/decisioning_studio_go/query11.png %})
 
 {: start="5"}
-5\. Selecione **Próximo**.
-6\. Em seu portal BrazeAI Decisioning Studio™ Acesse, localize a consulta SQL de dados do Sistema em **Recursos de Consulta de Assinantes**.
-7\. Copie e cole a consulta na caixa de texto e selecione **Próximo**.
+5. Selecione **Próximo**.
+6. Em seu portal BrazeAI Decisioning Studio™ Acesse, localize a consulta SQL de dados do Sistema em **Recursos de Consulta de Assinantes**.
+7. Copie e cole a consulta na caixa de texto e selecione **Próximo**.
 
 ![Um exemplo de consulta na seção de Consulta SQL.]({% image_buster /assets/img/decisioning_studio_go/query10.png %})
 
 {: start="8"}
-8\. No seu portal BrazeAI Decisioning Studio™ Go, na seção **Recursos a usar**, localize a chave externa da extensão de dados alvo. Em seguida, cole-a na barra de pesquisa para buscar.
+8. No seu portal BrazeAI Decisioning Studio™ Go, na seção **Recursos a usar**, localize a chave externa da extensão de dados alvo. Em seguida, cole-a na barra de pesquisa para buscar.
 
 ![Uma chave externa colada na barra de pesquisa]({% image_buster /assets/img/decisioning_studio_go/query9.png %})
 
 {: start="9"}
-9\. Selecione a extensão de dados que corresponde à chave externa que você pesquisou. O nome da extensão de dados alvo também é fornecido no seu portal BrazeAI Decisioning Studio™ Go para referência cruzada. A **Extensão de Dados** para a consulta de assinantes deve terminar com um sufixo `BASE_AUDIENCE_DATA`.
+9. Selecione a extensão de dados que corresponde à chave externa que você pesquisou. O nome da extensão de dados alvo também é fornecido no seu portal BrazeAI Decisioning Studio™ Go para referência cruzada. A **Extensão de Dados** para a consulta de assinantes deve terminar com um sufixo `BASE_AUDIENCE_DATA`.
 
 ![O nome da extensão de dados que corresponde à chave externa do exemplo.]({% image_buster /assets/img/decisioning_studio_go/query8.png %})
 
 {: start="10"}
-10\. Selecione **Substituir** e depois **Próximo**.
+10. Selecione **Substituir** e depois **Próximo**.
 
 **Consulta de engajamento:**
 
@@ -235,28 +231,28 @@ Em seguida, crie 2 consultas de SQL: uma consulta de assinantes e uma consulta d
 !["Consulta SQL" adicionada como uma atividade na Jornada.]({% image_buster /assets/img/decisioning_studio_go/query7.png %})
 
 {: start="2"}
-2\. Selecione **Escolher**.
-3\. Selecione **Criar Nova Atividade de Consulta**.
-4\. Dê um nome e uma chave externa à consulta. Recomendamos usar o nome sugerido e a chave externa para a consulta de engajamento fornecida no seu portal BrazeAI Decisioning Studio™ Go.
+2. Selecione **Escolher**.
+3. Selecione **Criar Nova Atividade de Consulta**.
+4. Dê um nome e uma chave externa à consulta. Recomendamos usar o nome sugerido e a chave externa para a consulta de engajamento fornecida no seu portal BrazeAI Decisioning Studio™ Go.
 
 ![Um exemplo "OFE_Engagement_query" e a chave externa.]({% image_buster /assets/img/decisioning_studio_go/query6.png %})
 
 {: start="5"}
-5\. Selecione **Próximo**.
-6\. No seu portal BrazeAI Decisioning Studio™ Go, localize a consulta SQL de dados do sistema em **Recursos de Consulta de Engajamento**.
-7\. Copie e cole a consulta na caixa de texto e selecione **Próximo**.
+5. Selecione **Próximo**.
+6. No seu portal BrazeAI Decisioning Studio™ Go, localize a consulta SQL de dados do sistema em **Recursos de Consulta de Engajamento**.
+7. Copie e cole a consulta na caixa de texto e selecione **Próximo**.
 
 ![Um exemplo de consulta na seção de Consulta SQL.]({% image_buster /assets/img/decisioning_studio_go/query5.png %})
 
 {: start="8"}
-8\. Localize e selecione a Extensão de Dados alvo para a Consulta de Engajamento especificada no seu portal BrazeAI Decisioning Studio™ Go.
+8. Localize e selecione a Extensão de Dados alvo para a Consulta de Engajamento especificada no seu portal BrazeAI Decisioning Studio™ Go.
 
 {% alert tip %}
 O nome da extensão de dados alvo também é fornecido no seu portal BrazeAI Decisioning Studio™ Go para referência cruzada. Certifique-se de que você está olhando para a Extensão de Dados alvo para a Consulta de Engajamento. A **Extensão de Dados** para a consulta de engajamento deve terminar com um sufixo ENGAGEMENT_DATA.
 {% endalert %}
 
 {: start="9"}
-9\. Selecione **Substituir** e depois **Próximo**.
+9. Selecione **Substituir** e depois **Próximo**.
 
 ![O nome da extensão de dados que corresponde à chave externa do exemplo.]({% image_buster /assets/img/decisioning_studio_go/query4.png %})
 
@@ -267,13 +263,13 @@ O nome da extensão de dados alvo também é fornecido no seu portal BrazeAI Dec
 ![Uma automação de exemplo "OFE_Experimenter_Test5_Automation".]({% image_buster /assets/img/decisioning_studio_go/query3.png %})
 
 {: start="2"}
-2\. Em seguida, selecione **Executar Uma Vez** para confirmar que tudo está funcionando como esperado.
-3\. Selecione ambas as consultas e clique em **Executar**.
+2. Em seguida, selecione **Executar Uma Vez** para confirmar que tudo está funcionando como esperado.
+3. Selecione ambas as consultas e clique em **Executar**.
 
 ![Uma automação "OFE_Experimenter_Test5_Automation" com uma lista de atividades de consulta SQL selecionadas para executar.]({% image_buster /assets/img/decisioning_studio_go/query2.png %})
 
 {: start="4"}
-4\. Selecione **Executar Agora**.
+4. Selecione **Executar Agora**.
 
 ![Uma atividade de Consulta SQL selecionada.]({% image_buster /assets/img/decisioning_studio_go/query1.png %})
 
@@ -298,14 +294,14 @@ Agora, você pode verificar se a automação está sendo executada com sucesso. 
 !["Evento API" selecionado como a fonte de entrada.]({% image_buster /assets/img/decisioning_studio_go/journey2.png %})
 
 {: start="2"}
-2\. No **Evento API**, selecione **Criar um evento**.
+2. No **Evento API**, selecione **Criar um evento**.
 
 ![A opção "criar um evento" no Evento API.]({% image_buster /assets/img/decisioning_studio_go/journey3.png %})
 
 {: start="3"}
-3\. Selecione **Selecionar Extensão de Dados**. Localize e selecione a extensão de dados que o BrazeAI Decisioning Studio™ Go usará para escrever recomendações.
-4\. Selecione **Resumo** para salvar suas alterações.
-5\. Selecione **Concluído** para salvar o evento da API.
+3. Selecione **Selecionar Extensão de Dados**. Localize e selecione a extensão de dados que o BrazeAI Decisioning Studio™ Go usará para escrever recomendações.
+4. Selecione **Resumo** para salvar suas alterações.
+5. Selecione **Concluído** para salvar o evento da API.
 
 ![Resumo do evento da API.]({% image_buster /assets/img/decisioning_studio_go/journey4.png %}){: style="max-width:80%;"}
 
@@ -317,20 +313,20 @@ Agora, você pode verificar se a automação está sendo executada com sucesso. 
 ![Detalhes da Divisão de Decisão com o botão "Editar".]({% image_buster /assets/img/decisioning_studio_go/journey5.png %})
 
 {: start="3"}
-3\. Atualize a **Divisão de Decisão** para usar o ID do modelo passado pela extensão de dados de recomendações. Localize o campo apropriado em **Dados da Jornada**.
+3. Atualize a **Divisão de Decisão** para usar o ID do modelo passado pela extensão de dados de recomendações. Localize o campo apropriado em **Dados da Jornada**.
 
 ![A seção de Dados da Jornada no Caminho 1 da Divisão de Decisão.]({% image_buster /assets/img/decisioning_studio_go/journey6.png %})
 
 {: start="4"}
-4\. Selecione seu evento de entrada e localize o campo de ID do modelo desejado, em seguida, arraste-o para o espaço de trabalho.
+4. Selecione seu evento de entrada e localize o campo de ID do modelo desejado, em seguida, arraste-o para o espaço de trabalho.
 
 ![O ID do modelo de e-mail a incluir.]({% image_buster /assets/img/decisioning_studio_go/journey7.png %})
 
 {: start="5"}
-5\. Insira o ID do modelo do seu primeiro modelo de e-mail, em seguida, selecione **Concluído**.
-6\. Selecione **Resumo** para salvar este caminho.
-7\. Adicione um caminho para cada um dos seus modelos de e-mail, em seguida, repita os passos 4-6 acima para definir os critérios de filtro para que o ID do modelo corresponda ao valor de ID de cada modelo.
-8\. Selecione **Concluído** para salvar o nó da **Divisão de Decisão**.
+5. Insira o ID do modelo do seu primeiro modelo de e-mail, em seguida, selecione **Concluído**.
+6. Selecione **Resumo** para salvar este caminho.
+7. Adicione um caminho para cada um dos seus modelos de e-mail, em seguida, repita os passos 4-6 acima para definir os critérios de filtro para que o ID do modelo corresponda ao valor de ID de cada modelo.
+8. Selecione **Concluído** para salvar o nó da **Divisão de Decisão**.
 
 ![Dois caminhos em uma Divisão de Decisão para cada ID de modelo de e-mail.]({% image_buster /assets/img/decisioning_studio_go/journey10.png %}){: style="max-width:65%;"}
 
@@ -362,20 +358,18 @@ O portal do BrazeAI Decisioning Studio™ Go mostra a automação do SFMC que fo
 ![A jornada concluída para ativar.]({% image_buster /assets/img/decisioning_studio_go/activate3.png %})
 
 {: start="5"}
-5\. Em seguida, revise os resultados da validação e selecione **Ativar**.
+5. Em seguida, revise os resultados da validação e selecione **Ativar**.
 
 ![Recomendações listadas na seção de Regras de Validação.]({% image_buster /assets/img/decisioning_studio_go/activate1.png %}){: style="max-width:60%;"}
 
 {: start="6"}
-6\. No resumo de **Ativar Jornada**, selecione **Ativar** novamente.
+6. No resumo de **Ativar Jornada**, selecione **Ativar** novamente.
 
 ![Resumo para a jornada.]({% image_buster /assets/img/decisioning_studio_go/activate2.png %}){: style="max-width:85%;"}
 
 Você está pronto! Agora você pode começar a acionar envios através do BrazeAI Decisioning Studio™ Go.
 
 {% endtab %}
-<<<<<<< HEAD
-=======
 {% tab Klaviyo %}
 
 ## Configurando a integração com o Klaviyo
@@ -403,8 +397,8 @@ Para integrar o Decisioning Studio Go com o Klaviyo, você configurará uma chav
 ![Uma chave de API do Klaviyo com permissões selecionadas.]({% image_buster /assets/img/decisioning_studio_go/klaviyo_api_key.png %})
 
 {: start="5"}
-5\. Selecione **Criar**.
-6\. Copie esta chave de API e cole-a no portal do BrazeAI Decisioning Studio™ Go onde solicitado.
+5. Selecione **Criar**.
+6. Copie esta chave de API e cole-a no portal do BrazeAI Decisioning Studio™ Go onde solicitado.
 
 ### Parte 2: Crie um modelo de espaço reservado no Klaviyo
 
@@ -423,8 +417,8 @@ O objetivo deste fluxo de espaço reservado é importar o conteúdo desejado par
 ![Um fluxo chamado "Fluxo de espaço reservado OFE".]({% image_buster /assets/img/decisioning_studio_go/create_flow.png %})
 
 {: start="4"}
-4\. Selecione qualquer disparador, então salve o fluxo.
-5\. Selecione **Confirmar e salvar**.
+4. Selecione qualquer disparador, então salve o fluxo.
+5. Selecione **Confirmar e salvar**.
 
 **Etapa 2: Crie o modelo de espaço reservado**
 
@@ -433,11 +427,11 @@ O objetivo deste fluxo de espaço reservado é importar o conteúdo desejado par
 ![Um fluxo com um nó de disparador seguido por um nó de e-mail.]({% image_buster /assets/img/decisioning_studio_go/set_up_email_node.png %})
 
 {: start="2"}
-2\. No nó **e-mail**, selecione **Selecionar modelo**.
-3\. Então, escolha o modelo a ser usado e selecione **Usar modelo**.
-4\. Selecione **Salvar** > **Concluído**.
-5\. (Opcional) Para adicionar mais modelos a serem usados no BrazeAI Decisioning Studio™ Go, adicione outro **e-mail** e repita os passos 2–4.
-6\. Deixe todos os e-mails em modo **Rascunho** e saia do Fluxo.
+2. No nó **e-mail**, selecione **Selecionar modelo**.
+3. Então, escolha o modelo a ser usado e selecione **Usar modelo**.
+4. Selecione **Salvar** > **Concluído**.
+5. (Opcional) Para adicionar mais modelos a serem usados no BrazeAI Decisioning Studio™ Go, adicione outro **e-mail** e repita os passos 2–4.
+6. Deixe todos os e-mails em modo **Rascunho** e saia do Fluxo.
 
 No portal BrazeAI Decisioning Studio™ Go, seus modelos devem ser selecionáveis sob seu fluxo de espaço reservado.
 
@@ -463,13 +457,13 @@ Antes de criar um fluxo no Klaviyo, você deve ter os seguintes detalhes do seu 
 ![A opção "Criar manualmente" selecionada para um fluxo de exemplo.]({% image_buster /assets/img/decisioning_studio_go/flow1.png %}){: style="max-width:50%;"}
 
 {: start="4"}
-4\. Selecione o gatilho.
-5\. Combine o nome da métrica com o nome do evento de gatilho do seu portal BrazeAI Decisioning Studio™ Go.
+4. Selecione o gatilho.
+5. Combine o nome da métrica com o nome do evento de gatilho do seu portal BrazeAI Decisioning Studio™ Go.
 
 ![Um exemplo de nome de métrica que corresponde ao nome do evento de gatilho "OFE_TEST_CASE_API_EVENT_TRIGGER".]({% image_buster /assets/img/decisioning_studio_go/flow2.png %})
 
 {: start="6"}
-6\. Selecione **Salvar**.
+6. Selecione **Salvar**.
 
 {% alert note %}
 Se seu experimentador tiver um modelo base, prossiga para a Etapa 2. Se seu experimentador tiver dois ou mais modelos base, pule para [Etapa 3: Adicione uma divisão de disparo ao seu fluxo](#step-3-add-a-trigger-split-to-your-flow).
@@ -483,21 +477,21 @@ Se seu experimentador tiver um modelo base, prossiga para a Etapa 2. Se seu expe
 ![Opção "Selecionar modelo" na seção "Detalhes do E-mail".]({% image_buster /assets/img/decisioning_studio_go/flow3.png %})
 
 {: start="3"}
-3\. Encontre e selecione seu modelo base. Você pode procurar seu modelo pelo nome do modelo na seção **Recursos para usar** do portal BrazeAI Decisioning Studio™ Go.
+3. Encontre e selecione seu modelo base. Você pode procurar seu modelo pelo nome do modelo na seção **Recursos para usar** do portal BrazeAI Decisioning Studio™ Go.
 
 ![Um exemplo de modelo base no Klaviyo.]({% image_buster /assets/img/decisioning_studio_go/flow4.png %})
 
 {: start="4"}
-4\. Selecione **Usar modelo** > **Salvar**.
-5\. Para a **Linha de assunto**, insira {% raw %}`{{event.SubjectLine}}`{% endraw %}.
-6\. Para **Nome do remetente** e **Endereço de e-mail do remetente**, insira os detalhes que você gostaria de usar.
+4. Selecione **Usar modelo** > **Salvar**.
+5. Para a **Linha de assunto**, insira {% raw %}`{{event.SubjectLine}}`{% endraw %}.
+6. Para **Nome do remetente** e **Endereço de e-mail do remetente**, insira os detalhes que você gostaria de usar.
 
 ![Um exemplo de linha de assunto, nome do remetente e endereço de e-mail do remetente para "E-mail 1".]({% image_buster /assets/img/decisioning_studio_go/flow5.png %})
 
 {: start="7"}
-7\. Selecione **Concluído**.
-8\. Desmarque a caixa **Pular perfis recentemente enviados**, depois selecione **Salvar**.
-9\. No nó de e-mail, atualize o modo de **Rascunho** para **Ao vivo**.
+7. Selecione **Concluído**.
+8. Desmarque a caixa **Pular perfis recentemente enviados**, depois selecione **Salvar**.
+9. No nó de e-mail, atualize o modo de **Rascunho** para **Ao vivo**.
 
 ![O editor de fluxo do Klaviyo mostrando um nó de Disparo conectado a um nó de E-mail.]({% image_buster /assets/img/decisioning_studio_go/flow6.png %})
 
@@ -518,18 +512,18 @@ Você está pronto! Agora você pode disparar ativações através do BrazeAI De
 ![Um fluxo Klaviyo com um nó de divisor de Disparador, que tem um ramo Sim levando a um nó de E-mail e um ramo Não conectando a outro divisor de Disparador.]({% image_buster /assets/img/decisioning_studio_go/flow8.png %})
 
 {: start="3"}
-3\. Na **detalhes do E-mail**, selecione **Selecionar modelo**.
-4\. Encontre e selecione seu modelo base. Você pode procurar seu modelo pelo nome do modelo base na seção **Recursos a usar** do portal BrazeAI Decisioning Studio™ Go.
-5\. Selecione **Usar modelo** > **Salvar**.
-6\. Para a **linha de assunto**, insira {% raw %}`{{event.SubjectLine}}`{% endraw %}.
-7\. Para **Nome do remetente** e **Endereço de e-mail do remetente**, insira os detalhes que você gostaria de usar.
+3. Na **detalhes do E-mail**, selecione **Selecionar modelo**.
+4. Encontre e selecione seu modelo base. Você pode procurar seu modelo pelo nome do modelo base na seção **Recursos a usar** do portal BrazeAI Decisioning Studio™ Go.
+5. Selecione **Usar modelo** > **Salvar**.
+6. Para a **linha de assunto**, insira {% raw %}`{{event.SubjectLine}}`{% endraw %}.
+7. Para **Nome do remetente** e **Endereço de e-mail do remetente**, insira os detalhes que você gostaria de usar.
 
 ![Um modelo de e-mail selecionado e campos para a linha de assunto, nome do remetente e endereço de e-mail do remetente.]({% image_buster /assets/img/decisioning_studio_go/flow5.png %})
 
 {: start="8"}
-8\. Selecione **Concluído**.
-9\. Desmarque a caixa de seleção **Pular perfis recentemente enviados**, depois selecione **Salvar**.
-10\. No nó de e-mail, atualize o modo de **Rascunho** para **Ao vivo**.
+8. Selecione **Concluído**.
+9. Desmarque a caixa de seleção **Pular perfis recentemente enviados**, depois selecione **Salvar**.
+10. No nó de e-mail, atualize o modo de **Rascunho** para **Ao vivo**.
 
 **Adicione uma nova divisão de disparo para cada modelo adicional:**
 
@@ -540,22 +534,21 @@ Você está pronto! Agora você pode disparar ativações através do BrazeAI De
 ![Diagrama de um editor de fluxo Klaviyo mostrando um nó de Disparo levando a uma divisão de Disparo. A divisão de Disparo tem uma ramificação Sim que leva a um nó de E-mail e uma ramificação Não que se conecta a outra divisão de Disparo que leva a nós de E-mail adicionais.]({% image_buster /assets/img/decisioning_studio_go/flow9.png %})
 
 {: start="4"}
-4\. Arraste e solte um nó **E-mail** na ramificação **Sim** da sua nova divisão de disparo.
-5\. Repita as etapas de configuração do modelo de e-mail acima para selecionar o modelo correspondente.
-6\. Defina a **Linha de assunto** para {% raw %}`{{event.SubjectLine}}`{% endraw %}, e desmarque a caixa de seleção **Pular perfis recentemente enviados**.
-7\. Repita esse processo até que você tenha um nó **Divisão de disparo** e um nó **E-mail** para cada modelo base que seu experimentador está usando. Sua última divisão de disparo não deve ter nada na ramificação "Não".
+4. Arraste e solte um nó **E-mail** na ramificação **Sim** da sua nova divisão de disparo.
+5. Repita as etapas de configuração do modelo de e-mail acima para selecionar o modelo correspondente.
+6. Defina a **Linha de assunto** para {% raw %}`{{event.SubjectLine}}`{% endraw %}, e desmarque a caixa de seleção **Pular perfis recentemente enviados**.
+7. Repita esse processo até que você tenha um nó **Divisão de disparo** e um nó **E-mail** para cada modelo base que seu experimentador está usando. Sua última divisão de disparo não deve ter nada na ramificação "Não".
 
 ![Um fluxo Klaviyo com múltiplos nós de divisão de disparo que ramificam para múltiplos nós de E-mail.]({% image_buster /assets/img/decisioning_studio_go/flow10.png %})
 
 {: start="8"}
-8\. Em cada um dos seus nós **E-mail**, atualize o modo de **Rascunho** para **Ao vivo**.
+8. Em cada um dos seus nós **E-mail**, atualize o modo de **Rascunho** para **Ao vivo**.
 
 ![A opção de atualizar o status do nó para "Ao vivo".]({% image_buster /assets/img/decisioning_studio_go/flow11.png %})
 
 Você está pronto! Agora você pode acionar ativações através do BrazeAI Decisioning Studio™ Go.
 
 {% endtab %}
->>>>>>> develop
 {% endtabs %}
 
 ## Próximos passos

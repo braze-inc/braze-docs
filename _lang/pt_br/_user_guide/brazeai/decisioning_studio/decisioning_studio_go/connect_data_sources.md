@@ -13,15 +13,9 @@ description: "Saiba como o BrazeAI Decisioning Studio Go se conecta aos seus dad
 
 Diferente do Decisioning Studio Pro, que suporta integrações diretas de dados com várias fontes, o Decisioning Studio Go acessa os dados de cliente através do seu CEP. Isso significa:
 
-<<<<<<< HEAD
-- **Os dados do público** são extraídos diretamente de segmentos ou listas definidas em seu CEP (Braze ou Salesforce Marketing Cloud) e só podem incluir determinadas atribuições predefinidas (não dados 1P)
-- **Os dados de engajamento** (aberturas, cliques, envios) são capturados por meio de consultas automatizadas ou integrações nativas com seu CEP
-- **Não** é necessária **nenhuma configuração adicional de pipeline de dados** além do que você configura em seu CEP
-=======
 - **Os dados do público** são extraídos diretamente de segmentos ou listas definidos no seu CEP (Braze, Salesforce Marketing Cloud ou Klaviyo) e podem incluir apenas certos atributos pré-definidos (não dados 1P)
 - **Os dados de engajamento** (aberturas, cliques, envios) são capturados através de consultas automatizadas ou integrações nativas com seu CEP
 - **Nenhuma configuração adicional de pipeline de dados** é necessária além do que você configura no seu CEP
->>>>>>> develop
 
 ## Padrões de integração suportados
 
@@ -29,14 +23,9 @@ O Decisioning Studio Go suporta os seguintes CEPs para acesso a dados:
 
 | CEP | Fonte de Público | Dados de engajamento |
 |-----|-----------------|-----------------|
-<<<<<<< HEAD
-| **Braze** | Segmentos | Exportação de Braze Currents |
-| **Salesforce Marketing Cloud** | Extensões de dados | Automação de consultas de SQL |
-=======
 | **Braze** | Segmentos | Exportação do Braze Currents |
 | **Salesforce Marketing Cloud** | Extensões de Dados | Automação de Consulta SQL |
 | **Klaviyo** | Segmentos | Integração nativa de API |
->>>>>>> develop
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ## Requisitos de dados por CEP
@@ -71,8 +60,6 @@ Para integrações do Salesforce Marketing Cloud, o Decisioning Studio Go requer
 As extensões de dados e consultas de SQL são configuradas como parte da [configuração de orquestração]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/).
 
 {% endtab %}
-<<<<<<< HEAD
-=======
 {% tab Klaviyo %}
 
 ### requisitos de dados do Klaviyo
@@ -84,7 +71,6 @@ Para integrações do Klaviyo, o Decisioning Studio Go requer:
 3. **Acesso a métricas**: A chave de API deve ter Acesso Total a Métricas e Eventos para capturar dados de engajamento.
 
 {% endtab %}
->>>>>>> develop
 {% endtabs %}
 
 ## Melhores práticas

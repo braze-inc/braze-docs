@@ -9,11 +9,7 @@ description: "Aprenda a projetar um agente Go do BrazeAI Decisioning Studio, inc
 
 > Este artigo aborda como projetar seu agente Decisioning Studio Go, incluindo a definição do seu público, a seleção de dimensões e a compreensão dos recursos e limitações específicos do Go.
 
-<<<<<<< HEAD
-Para conhecer os conceitos básicos sobre agentes de decisão - incluindo métricas de sucesso, dimensões, bancos de ações e restrições - consulte [Projetando agentes de decisão]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/).
-=======
 Para conceitos básicos sobre agentes de decisão — incluindo métricas de sucesso, dimensões, bancos de ações e restrições — consulte [Projetando agentes de decisão]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/).
->>>>>>> develop
 
 ## Recursos Go versus Pro
 
@@ -21,17 +17,10 @@ O Decisioning Studio Go é uma plataforma self-service com recursos simplificado
 
 | Capacidade | Estúdio de Decisão Go | Decisioning Studio Pro |
 |-----------|----------------------|------------------------|
-<<<<<<< HEAD
-| **Métrica de sucesso** | Somente cliques | Qualquer métrica de negócios (receita, conversões ou ARPU) |
-| **Dimensões** | Banco de ações limitado | Dimensões ilimitadas |
-| **CEPs apoiados** | Braze, SFMC | Qualquer CEP (nativo e personalizado) |
-| **Dados de cliente** | Somente engajamento | Todos os dados 1P |
-=======
 | **Métrica de sucesso** | Apenas cliques | Qualquer métrica de negócios (receita, conversões ou ARPU) |
 | **Dimensões** | Banco de ação limitada | Dimensões ilimitadas |
 | **CEPs suportados** | Braze, SFMC, Klaviyo | Qualquer CEP (nativo e personalizado) |
 | **Dados de cliente** | Apenas engajamento | Todos os dados 1P |
->>>>>>> develop
 | **Configuração** | Autoatendimento | Suporte aos serviços de tomada de decisão por IA |
 | **Grupos experimentais** | Ir + Controle aleatório + BAU opcional | Totalmente personalizável |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
@@ -66,8 +55,6 @@ Considere criar um segmento dedicado para o seu experimentador do Decisioning St
 3. Faça referência a esta extensão de dados no portal Decisioning Studio Go ao configurar seu experimentador.
 
 {% endtab %}
-<<<<<<< HEAD
-=======
 {% tab Klaviyo %}
 
 **Definindo o público no Klaviyo:**
@@ -76,7 +63,6 @@ Considere criar um segmento dedicado para o seu experimentador do Decisioning St
 2. Ao configurar seu experimentador no portal Decisioning Studio Go, selecione este segmento.
 
 {% endtab %}
->>>>>>> develop
 {% endtabs %}
 
 ### Etapa 2: Selecione suas dimensões
@@ -114,15 +100,9 @@ Para uma comparação precisa, certifique-se de que nenhum cliente possa pertenc
 
 Ao projetar seu agente Go, tenha em mente estas limitações:
 
-<<<<<<< HEAD
-- **Somente cliques**: O Acessar otimiza as taxas de cliques. Se você precisar otimizar a receita, as conversões ou outras métricas de negócios, considere o Decisioning Studio Pro.
-- **Dimensões limitadas**: O Acessar oferece suporte a um conjunto predefinido de dimensões. Para dimensões personalizadas ou personalização complexa, considere o Decisioning Studio Pro.
-- **Dois CEPs**: O Acessar só se integra ao Braze e ao Salesforce Marketing Cloud. Para outras plataformas, considere o Decisioning Studio Pro.
-=======
 - **Apenas cliques**: O Go otimiza as taxas de cliques. Se você precisa otimizar receitas, conversões ou outras métricas de negócios, considere o Decisioning Studio Pro.
 - **Dimensões limitadas**: O Go suporta um conjunto predefinido de dimensões. Para dimensões personalizadas ou personalizações complexas, considere o Decisioning Studio Pro.
 - **Três CEPs**: O Go integra-se apenas com o Braze, o Salesforce Marketing Cloud e o Klaviyo. Para outras plataformas, considere o Decisioning Studio Pro.
->>>>>>> develop
 
 ## Melhores práticas
 

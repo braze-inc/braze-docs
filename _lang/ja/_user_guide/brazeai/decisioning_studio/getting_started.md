@@ -1,23 +1,14 @@
 ---
 nav_title: はじめに
-<<<<<<< HEAD
-article_title: Decisioning Studioを使い始める
-layout: dev_guide_content_first
-guide_top_header: "Decisioning Studioを使い始める"
-guide_top_text: ""
-=======
 article_title: Decisioning Studio の始め方
 layout: dev_guide
 guide_top_header: "Decisioning Studio の始め方"
 guide_top_text: "意思決定エージェントを作成する前に、これらの記事を活用して、Decisioning Studioの計画立案と理解を深めること。"
->>>>>>> develop
 page_order: 0
 search_rank: 2
 page_type: landing
 description: "このセクションでは、Decisioning Studioの概要と、あらゆるビジネス指標を最適化する意思決定エージェントを設計・展開する方法について説明する。"
 
-<<<<<<< HEAD
-=======
 guide_featured_title: "セクションの記事"
 guide_featured_list:
   - name: 概要
@@ -34,7 +25,6 @@ guide_featured_list:
     image: /assets/img/braze_icons/settings-01.svg
 
 guide_menu_title: "Additional resources"
->>>>>>> develop
 guide_menu_list:
   - name: Decisioning Studioについて
     link: /docs/user_guide/brazeai/decisioning_studio/about/
