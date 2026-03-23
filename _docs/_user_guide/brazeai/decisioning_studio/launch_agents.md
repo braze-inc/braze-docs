@@ -31,7 +31,7 @@ Once launched, your agent needs feedback data to learn and improve. This include
 For detailed requirements on preparing these critical feedback data assets, see [Preparing your data sources]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/prepare_data/).
 
 {% alert note %}
-If the agent is natively integrated with the customer engagement platform (such as Braze, SFMC, or Klaviyo), there may not be additional configuration steps necessary for feedback data, since these may be sent automatically with the customer data.
+If the agent is natively integrated with the customer engagement platform (such as Braze or Salesforce Marketing Cloud), there may not be additional configuration steps necessary for feedback data, since these may be sent automatically with the customer data.
 {% endalert %}
 
 ## Monitoring your agent

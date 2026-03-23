@@ -19,7 +19,7 @@ Every data asset—customer profiles, activations, engagements, conversions—mu
 | A single, unique customer identifier must be present in every asset | If different assets use different ID systems (for example, a warehouse ID for features but a platform ID for activations), the Decisioning Studio engine cannot reliably join them. This breaks the feedback loop and degrades both model training and reporting accuracy. If the mapping between the two ID systems turns out to be many-to-many rather than one-to-many, the resulting data integrity failures can be severe. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-See [Using Braze External ID]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data/using_braze_external_id/) for guidance on which identifier to use.
+See [Using Braze External ID]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/prepare_data/braze_external_id/) for guidance on which identifier to use.
 
 ## Event data must be passed as an incremental stream, not as a snapshot
 
@@ -30,7 +30,7 @@ Events—such as conversions, engagements, and activations—represent discrete 
 | Event data must be structured as individual, timestamped records and delivered incrementally | When event data is aggregated into a snapshot (for example, storing a "last send time" attribute rather than individual send records), you lose the precise timing of each event. This makes it impossible to accurately attribute outcomes to specific decisions, breaking the feedback loop that the model needs to learn. Without precise event timestamps, you cannot know exactly when a conversion happened or which recommendation triggered it. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-See [Snapshots versus event streams]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data/snapshots_versus_event_streams/) for a full explanation of the distinction and examples of correct and incorrect patterns.
+See [Snapshots versus event streams]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/prepare_data/data_streams/) for a full explanation of the distinction and examples of correct and incorrect patterns.
 
 ## Snapshot data must be updated on a regular, time-driven schedule
 
@@ -54,7 +54,7 @@ For event stream data specifically, each record must include at minimum:
 
 **Required fields:**
 - Customer identifier
-- Timestamp of when the event occurred (not when the record was created in your system—these are different; see [Snapshots versus event streams]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data/snapshots_versus_event_streams/) for why this matters)
+- Timestamp of when the event occurred (not when the record was created in your system—these are different; see [Snapshots versus event streams]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/prepare_data/data_streams/) for why this matters)
 - Timestamp of when the record was created in your system (used for reliably slicing incremental exports)
 - Event type
 - Fields sufficient to filter down to the specific events you care about

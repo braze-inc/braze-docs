@@ -30,7 +30,6 @@ The first step is to choose which CEP to use with Decisioning Studio. Your choic
 |-----|-----------------|------------------|
 | **Braze** | Native API integration (recommended) | Low |
 | **Salesforce Marketing Cloud** | API events + Journey Builder | Medium |
-| **Klaviyo** | API events + Flows | Medium |
 | **Other CEPs** | Custom (recommendation file) | High |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
@@ -68,20 +67,9 @@ Before setting up orchestration, gather the following items based on your chosen
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endtab %}
-{% tab Klaviyo %}
-
-| Requirement | Description |
-|------|-------------|
-| **Private API key** | A new API key with full access permissions for events, flows, lists, metrics, profiles, and templates. |
-| **Email templates** | The templates you want Decisioning Studio to use. Templates must be associated with a flow (you can create a placeholder flow for this purpose). |
-| **Sender information** | The sender name and email address to use for your campaigns. |
-| **Flow access** | Access to create and activate flows with metric triggers. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
-
-{% endtab %}
 {% tab Other CEPs %}
 
-If you're using a CEP other than Braze, SFMC, or Klaviyo, Decisioning Studio can integrate through a recommendation file approach:
+If you're using a CEP other than Braze or Salesforce Marketing Cloud, Decisioning Studio can integrate through a recommendation file approach:
 
 | Item | Description |
 |------|-------------|
@@ -93,7 +81,7 @@ If you're using a CEP other than Braze, SFMC, or Klaviyo, Decisioning Studio can
 {% endtab %}
 {% endtabs %}
 
-## Planning your campaigns
+## Plan your campaigns
 
 Before setting up orchestration, consider the following details:
 
@@ -209,15 +197,6 @@ Decisioning Studio supports native integration with Salesforce Marketing Cloud. 
 For detailed steps to configure the SFMC integration, follow the [SFMC instructions]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/) in the Decisioning Studio Go documentation.
 
 {% endtab %}
-{% tab Klaviyo %}
-
-## Setting up Klaviyo integration
-
-Decisioning Studio supports native integration with Klaviyo. Decisioning Studio triggers API events into a flow with data required to populate dynamic elements.
-
-For detailed steps to configure the Klaviyo integration, follow the [Klaviyo instructions]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/) in the Decisioning Studio Go documentation.
-
-{% endtab %}
 {% tab Other CEPs %}
 
 ## Setting up other CEP integrations
@@ -245,10 +224,10 @@ Keep these best practices in mind as you prepare for orchestration:
 2. **Test thoroughly.** Before launching, test your integration with a small set of users to verify that dynamic content populates correctly.
 3. **Document your setup.** Keep track of campaign IDs, template IDs, API keys, and other identifiers. You'll need to reference these in the Decisioning Studio portal.
 4. **Coordinate with your team.** Orchestration setup may involve marketing, engineering, and data teams. Ensure everyone understands their role in the process.
-5. **Plan for feedback data.** Orchestration isn't just about sending messages—it's also about collecting the engagement and conversion data that helps your agent learn. See [Preparing your data]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data/) for more details.
+5. **Plan for feedback data.** Orchestration isn't just about sending messages—it's also about collecting the engagement and conversion data that helps your agent learn. See [Prepare your data]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/prepare_data/) for more details.
 
 ## Next steps
 
 After setting up orchestration, proceed to design your agent:
 
-- [Designing Decisioning Agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/)
+- [Design decisioning agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/design_agents/)

@@ -13,7 +13,7 @@ description: "This reference article covers how to construct effective customer 
 If you have internal data science or data engineering teams, they are best positioned to construct and curate features, since they have the most context about which signals in your data are meaningful.
 
 {% alert note %}
-For Braze customers, customer features are typically passed to Decisioning Studio through Custom Attributes on user profiles. For details on Custom Attributes versus Custom Events and their respective update strategies, see [Snapshots versus event streams]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data/snapshots_versus_event_streams/).
+For Braze customers, customer features are typically passed to Decisioning Studio through Custom Attributes on user profiles. For details on Custom Attributes versus Custom Events and their respective update strategies, see [Snapshots versus event streams]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/prepare_data/data_streams/).
 {% endalert %}
 
 ## Types of customer features
@@ -35,8 +35,8 @@ Together, these feature types give the model the information it needs to identif
 Keep the following in mind when selecting and constructing features:
 
 - **Coverage:** Features should cover all customers in your target audience. A feature that is missing or null for a large portion of your audience gives the model less to work with for those customers.
-- **Granularity:** All features should be aggregated to the customer level. See [Using Braze External ID]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data/using_braze_external_id/) for guidance on what "customer level" means in practice.
-- **Freshness:** Features should be updated on a time-driven schedule, not an event-driven one. See [Snapshots versus event streams]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/preparing_your_data/snapshots_versus_event_streams/) for why this matters.
+- **Granularity:** All features should be aggregated to the customer level. See [Using Braze External ID]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/prepare_data/braze_external_id/) for guidance on what "customer level" means in practice.
+- **Freshness:** Features should be updated on a time-driven schedule, not an event-driven one. See [Snapshots versus event streams]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/prepare_data/data_streams/) for why this matters.
 - **Validity:** Feature values should fall within ranges that make sense given the definition. A feature for "purchases in the last 30 days" should never be negative.
 - **Sparsity:** Avoid features that are zero or null for the vast majority of customers, unless there is a clear business reason. Sparse features add noise without adding signal.
 - **Correlation:** Avoid including features that are highly correlated with each other. Redundant features can introduce bias and slow down training without improving predictions.

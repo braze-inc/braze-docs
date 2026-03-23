@@ -18,7 +18,6 @@ Decisioning Studio Go supports the following Customer Engagement Platforms:
 |-----|-----------------|--------------|
 | **Braze** | API-triggered campaigns | Native integration, real-time triggering |
 | **Salesforce Marketing Cloud** | Journey Builder with API Events | SQL query automation, data extensions |
-| **Klaviyo** | Flows with metric triggers | Template-based, trigger splits |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 Select your CEP below to get started with the integration setup.

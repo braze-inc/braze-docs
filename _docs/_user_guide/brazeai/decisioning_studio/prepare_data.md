@@ -11,24 +11,24 @@ description: "This landing page covers how to prepare your data for BrazeAI Deci
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: General principles
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/general_principles/
+    link: /docs/user_guide/brazeai/decisioning_studio/prepare_data/data_principles/
     image: /assets/img/braze_icons/list.svg
   - name: Connect your data
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/connecting_your_data/
+    link: /docs/user_guide/brazeai/decisioning_studio/prepare_data/connect_data_sources/
     image: /assets/img/braze_icons/link-03.svg
   - name: Critical data assets
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/critical_data_assets/
+    link: /docs/user_guide/brazeai/decisioning_studio/prepare_data/data_assets/
     image: /assets/img/braze_icons/database-01.svg
   - name: Snapshots versus event streams
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/snapshots_versus_event_streams/
+    link: /docs/user_guide/brazeai/decisioning_studio/prepare_data/data_streams/
     image: /assets/img/braze_icons/dataflow-04.svg
-  - name: Using Braze External ID
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/using_braze_external_id/
+  - name: Use Braze External ID
+    link: /docs/user_guide/brazeai/decisioning_studio/prepare_data/braze_external_id/
     image: /assets/img/braze_icons/user-01.svg
-  - name: Choosing good features
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/choosing_good_features/
+  - name: Choose your features
+    link: /docs/user_guide/brazeai/decisioning_studio/prepare_data/choose_features/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Backfilling best practices
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/backfilling_best_practices/
+    link: /docs/user_guide/brazeai/decisioning_studio/prepare_data/backfill_best_practices/
     image: /assets/img/braze_icons/refresh-ccw-01.svg
 ---

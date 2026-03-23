@@ -12,22 +12,22 @@ description: "This section provides an introduction to Decisioning Studio, and h
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Design Your Agent
-    link: /docs/user_guide/brazeai/decisioning_studio/designing_decisioning_agents/
+    link: /docs/user_guide/brazeai/decisioning_studio/design_agents/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Prepare Your Data
-    link: /docs/user_guide/brazeai/decisioning_studio/preparing_your_data/
+    link: /docs/user_guide/brazeai/decisioning_studio/prepare_data/
     image: /assets/img/braze_icons/database-01.svg
   - name: Define Your Audience
-    link: /docs/user_guide/brazeai/decisioning_studio/define_your_audience/
+    link: /docs/user_guide/brazeai/decisioning_studio/audience/
     image: /assets/img/braze_icons/users-01.svg
   - name: Set Up Orchestration
-    link: /docs/user_guide/brazeai/decisioning_studio/set_up_orchestration/
+    link: /docs/user_guide/brazeai/decisioning_studio/orchestration_setup/
     image: /assets/img/braze_icons/dataflow-04.svg
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: About Decisioning Studio
-    link: /docs/user_guide/brazeai/decisioning_studio/about/
+    link: /docs/user_guide/brazeai/decisioning_studio/
     image: /assets/img/braze_icons/info-circle.svg
   - name: Decisioning Studio FAQ
     link: /docs/user_guide/brazeai/decisioning_studio/faq/
@@ -40,7 +40,7 @@ This reference gives an overview of the steps involved in setting up Decisioning
 
 ## Key design decisions
 
-Working with the AI Decisioning Services team, you'll make the following decisions:
+Work with the AI Decisioning Services team to make the following decisions:
 
 | Decision | Description | Examples |
 |----------|-------------|----------|
@@ -62,7 +62,7 @@ Each of these decisions has implications for how much incremental uplift the age
 |------------|---------|
 | **Any success metric** | Optimize for revenue, conversions, ARPU, LTV, or any business KPI |
 | **Unlimited dimensions** | Personalize across offer, channel, timing, frequency, creative, and more |
-| **Any CEP** | Native integrations with Braze, SFMC, Klaviyo + custom integrations for any platform |
+| **Any CEP** | Native integrations with Braze, Salesforce Marketing Cloud, or custom integrations for any platform |
 | **AI Decisioning Services** | Dedicated support from Braze's data science team |
 | **Advanced experiment design** | Fully customizable treatment groups and holdouts |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
@@ -71,6 +71,6 @@ Each of these decisions has implications for how much incremental uplift the age
 
 A few best practices for designing Decisioning Studio agents:
 
-1. **Maximize data richness**: The more information agents have about your customers, the better they will perform.
-2. **Diversify actions**: The more diverse the set of actions the agent can take, the more it can personalize its strategy for each user.
-3. **Minimize constraints**: The fewer constraints on your agents, the better. Constraints should be designed to respect business rules while freeing agent-led experimentation as much as possible.
+- **Maximize data richness**: The more information agents have about your customers, the better they will perform.
+- **Diversify actions**: The more diverse the set of actions the agent can take, the more it can personalize its strategy for each user.
+- **Minimize constraints**: The fewer constraints on your agents, the better. Constraints should be designed to respect business rules while freeing agent-led experimentation as much as possible.

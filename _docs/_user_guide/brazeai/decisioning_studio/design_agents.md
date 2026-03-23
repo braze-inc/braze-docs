@@ -132,4 +132,4 @@ You could build a loyalty and engagement agent to maximize purchases by new enro
 
 ## Next steps
 
-Ready to build your own decisioning agent? See [Getting Started with Decisioning Studio]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/) for a guide that walks you through connecting data sources, setting up orchestration, designing your agent, and launching to production.
+Ready to build your own decisioning agent? See [Get Started with Decisioning Studio]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/get_started/) for a guide that walks you through connecting data sources, setting up orchestration, designing your agent, and launching to production.
