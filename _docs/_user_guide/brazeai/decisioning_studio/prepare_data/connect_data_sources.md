@@ -1,13 +1,13 @@
 ---
-nav_title: Connect data sources
-article_title: Connect data sources
-page_order: 1
-description: "Learn how to connect customer data sources to BrazeAI Decisioning Studio Pro for personalized AI decisioning."
+nav_title: Connecting your data
+article_title: Connecting your data
+page_order: 6
+description: "Learn how to connect customer data sources to BrazeAI Decisioning Studio for personalized AI decisioning."
 ---
 
-# Connect data sources
+# Connecting your data
 
-> BrazeAI Decisioning Studio™ Pro agents need to fully understand customer context in order to make effective decisions. This article explains how to connect customer data sources to Decisioning Studio Pro.
+> BrazeAI Decisioning Studio™ agents need to fully understand customer context in order to make effective decisions. This article explains how to connect customer data sources to Decisioning Studio.
 
 {% alert tip %}
 Your AI Decisioning Services team will support you in configuring data connections for optimal performance.
@@ -15,7 +15,7 @@ Your AI Decisioning Services team will support you in configuring data connectio
 
 ## Supported integration patterns
 
-Decisioning Studio Pro supports multiple integration patterns for connecting customer data:
+Decisioning Studio supports multiple integration patterns for connecting customer data:
 
 | Integration pattern | Best for | Setup complexity |
 |---------------------|----------|------------------|
@@ -139,5 +139,4 @@ This guide explains the most common integration patterns. Information Security w
 
 After connecting your data sources, proceed to set up orchestration:
 
-- [Set up orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration/)
-
+- [Set up orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/set_up_orchestration/)
