@@ -220,6 +220,28 @@ Give the role a name and a description, and select **Create Role**.
 8. Add contact email(s) for notifications if the sync breaks because of access or permissions issues. Optionally, turn on notifications for user-level errors and sync successes.
 9. Create the sync.
 
+{% details General availability experience %}
+
+1. To create a new integration, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import** from the file sources section. 
+2. Input the information from the AWS setup process to create a new sync. Specify the following:
+
+  - Role ARN
+  - External ID
+  - SQS URL (must be unique for each new integration)
+  - Bucket name
+  - Folder path (optional, must be unique across syncs in a workspace)
+  - Region
+
+{: start="3"}
+3. Name your integration, and select the data type for this integration. 
+
+{: start="4"}
+4. Add a contact email for notifications if the sync breaks because of access or permissions issues. Optionally, turn on notifications for user-level errors and sync successes. 
+
+{: start="5"}
+5. Finally, select **Test connection** to confirm Braze can access your bucket and list the files available to ingest (not the data inside those files). Then, save the sync. 
+
+{% enddetails %}
 
 ## Required file formats
 
@@ -405,28 +427,3 @@ You can use existing files to validate that Braze can access your bucket and det
 If you're observing a high number of errors or failed files, you may have another process adding files to the S3 bucket in a folder other than the target folder for CDI.
 
 When files are uploaded to the source bucket but not in the source folder, CDI will process the SQS notification, but it does not take any action on the file, so this may appear as an error.
-
-{% details General availability experience %}
-
-## Setting up Cloud Data Ingestion in Braze
-
-1. To create a new integration, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import** from the file sources section. 
-2. Input the information from the AWS setup process to create a new sync. Specify the following:
-
-  - Role ARN
-  - External ID
-  - SQS URL (must be unique for each new integration)
-  - Bucket name
-  - Folder path (optional, must be unique across syncs in a workspace)
-  - Region
-
-{: start="3"}
-3. Name your integration, and select the data type for this integration. 
-
-{: start="4"}
-4. Add a contact email for notifications if the sync breaks because of access or permissions issues. Optionally, turn on notifications for user-level errors and sync successes. 
-
-{: start="5"}
-5. Finally, select **Test connection** to confirm Braze can access your bucket and list the files available to ingest (not the data inside those files). Then, save the sync. 
-
-{% enddetails %}
