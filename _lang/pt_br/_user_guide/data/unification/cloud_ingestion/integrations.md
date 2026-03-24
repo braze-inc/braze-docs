@@ -12,7 +12,7 @@ page_type: reference
 
 > Esta página aborda como usar a Ingestão de Dados na Nuvem (CDI) da Braze para sincronizar dados relevantes com sua integração do Snowflake, Redshift, BigQuery e Databricks.
 
-Esta página mostra as etapas de sincronização e origem que estão atualmente em Acesso Antecipado (EA). Para etapas e imagens da experiência geralmente disponível, consulte [Experiência de disponibilidade geral](#experincia-de-disponibilidade-geral).
+Esta página mostra as etapas de sincronização e origem que estão atualmente em Acesso Antecipado (EA). Para as etapas e imagens da experiência geralmente disponível, expanda **Experiência de disponibilidade geral** abaixo.
 
 ## Configuração de integrações de data warehouse
 

@@ -11,7 +11,7 @@ page_type: reference
 
 > Auf dieser Seite erfahren Sie, wie Sie die Unterstützung für die Cloud-Datenaufnahme einrichten und relevante Daten von S3 mit Braze synchronisieren.
 
-Diese Seite zeigt die Synchronisierungs- und Quellschritte, die sich derzeit im Early Access (EA) befinden. Die Schritte für die allgemein verfügbare Version finden Sie unter [Allgemein verfügbare Version](#allgemein-verfgbare-version).
+Diese Seite zeigt die Synchronisierungs- und Quellschritte, die sich derzeit im Early Access (EA) befinden. Für die Schritte der allgemein verfügbaren Version erweitern Sie unten **Allgemein verfügbare Version**.
 
 ## Funktionsweise
 

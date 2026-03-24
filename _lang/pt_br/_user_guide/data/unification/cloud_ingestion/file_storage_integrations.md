@@ -11,7 +11,7 @@ page_type: reference
 
 > Esta página aborda como configurar o suporte da Ingestão de Dados na Nuvem e sincronizar dados relevantes do S3 para a Braze.
 
-Esta página mostra as etapas de sincronização e origem que estão atualmente em Acesso Antecipado (EA). Para as etapas da experiência geralmente disponível, consulte [Experiência de disponibilidade geral](#experincia-de-disponibilidade-geral).
+Esta página mostra as etapas de sincronização e origem que estão atualmente em Acesso Antecipado (EA). Para as etapas da experiência geralmente disponível, expanda **Experiência de disponibilidade geral** abaixo.
 
 ## Como funciona
 
