@@ -19,6 +19,10 @@ def folder_patterns(directory)
   ALLOWED_FOLDERS.map { |f| "'#{directory}/#{f}/**/*.md'" }.join(' ')
 end
 
+def format_git_date(raw)
+  Time.parse(raw).utc.strftime('%Y-%m-%dT%H:%M:%S+00:00')
+end
+
 # Full scan: get last-commit date for every tracked .md file in one pass.
 def get_all_git_dates(directory)
   puts "Getting git history for all files..."
@@ -36,7 +40,7 @@ def get_all_git_dates(directory)
     next unless parts.length == 2
 
     begin
-      git_dates[parts[0]] = Time.parse(parts[1]).strftime('%Y-%m-%dT%H:%M:%S')
+      git_dates[parts[0]] = format_git_date(parts[1])
     rescue => e
       puts "Warning: Could not parse date for #{parts[0]}: #{e.message}"
     end
@@ -47,7 +51,7 @@ def get_all_git_dates(directory)
 end
 
 # Incremental: single git-log call to get files changed recently and their
-# most-recent commit date. Returns { full_path => formatted_date }.
+# most-recent commit date.
 def get_recent_git_dates(directory)
   puts "Getting files changed since #{INCREMENTAL_SINCE}..."
 
@@ -67,7 +71,7 @@ def get_recent_git_dates(directory)
     elsif current_date && line.end_with?('.md')
       unless git_dates.key?(line)
         begin
-          git_dates[line] = Time.parse(current_date).strftime('%Y-%m-%dT%H:%M:%S')
+          git_dates[line] = format_git_date(current_date)
         rescue => e
           puts "Warning: Could not parse date: #{e.message}"
         end
@@ -79,10 +83,25 @@ def get_recent_git_dates(directory)
   git_dates
 end
 
+def today_timestamp
+  Time.now.utc.strftime('%Y-%m-%dT%H:%M:%S+00:00')
+end
+
+def get_single_file_date(path)
+  date_str = `git log -1 --format='%cI' -- '#{path}'`.strip
+  return today_timestamp if date_str.empty?
+
+  format_git_date(date_str)
+rescue => e
+  puts "Warning: Could not parse date for #{path}: #{e.message}"
+  today_timestamp
+end
+
 def load_existing_data(output_file)
   return {} unless File.exist?(output_file)
 
   data = JSON.parse(File.read(output_file))
+  data.transform_values! { |v| v.length <= 10 ? "#{v}T00:00:00+00:00" : v }
   puts "Loaded #{data.length} existing entries from #{output_file}"
   data
 rescue JSON::ParserError => e
@@ -106,6 +125,7 @@ def generate_file_listing(directory, output_file, full: false)
               end
 
   file_data = existing_data.dup
+  missing_files = []
 
   ALLOWED_FOLDERS.each do |folder|
     folder_path = File.join(directory, folder)
@@ -119,9 +139,19 @@ def generate_file_listing(directory, output_file, full: false)
 
       if git_dates[path]
         file_data[relative_path] = git_dates[path]
+      elsif incremental && !existing_data.key?(relative_path)
+        missing_files << path
       elsif !incremental && !git_dates.key?(path)
-        puts "Warning: File #{relative_path} not found in git history, skipping"
+        file_data[relative_path] = today_timestamp
       end
+    end
+  end
+
+  unless missing_files.empty?
+    puts "Backfilling #{missing_files.length} new files not in existing data..."
+    missing_files.each do |path|
+      relative_path = path.sub(/^#{Regexp.escape(directory)}\//, '')
+      file_data[relative_path] = get_single_file_date(path)
     end
   end
 
@@ -149,7 +179,7 @@ end
 
 full_mode = ARGV.delete('--full')
 
-if ARGV.length > 2 || ARGV.include?('--help') || ARGV.include?('-h')
+if ARGV.length > 2
   puts "Usage: ruby #{$0} [locale] [output_file] [--full]"
   puts ""
   puts "Options:"
