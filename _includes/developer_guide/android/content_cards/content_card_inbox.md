@@ -513,11 +513,11 @@ import com.braze.models.cards.*
 @Composable
 fun ContentCardInboxScreen() {
     val context = LocalContext.current
-    var cards by remember { mutableStateOf<List<Card>>(emptyList()) }
-    val loggedImpressions = remember { mutableSetOf<String>() }
+    var cards by remember { mutableStateOf&lt;List&lt;Card&gt;&gt;(emptyList()) }
+    val loggedImpressions = remember { mutableSetOf&lt;String&gt;() }
 
     DisposableEffect(Unit) {
-        val subscriber = IEventSubscriber<ContentCardsUpdatedEvent> { event ->
+        val subscriber = IEventSubscriber&lt;ContentCardsUpdatedEvent&gt; { event ->
             cards = event.allCards.filter { !it.isControl }
         }
 
@@ -821,8 +821,8 @@ import com.braze.events.IEventSubscriber
 import com.braze.models.cards.*
 
 class ContentCardsActivity : ComponentActivity() {
-    private val cards = mutableListOf<Card>()
-    private var subscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
+    private val cards = mutableListOf&lt;Card&gt;()
+    private var subscriber: IEventSubscriber&lt;ContentCardsUpdatedEvent&gt;? = null
     private lateinit var recyclerView: RecyclerView
     private val adapter = ContentCardAdapter()
 
@@ -861,7 +861,7 @@ class ContentCardsActivity : ComponentActivity() {
     }
 
     inner class ContentCardAdapter :
-        RecyclerView.Adapter<ContentCardAdapter.CardViewHolder>() {
+        RecyclerView.Adapter&lt;ContentCardAdapter.CardViewHolder&gt;() {
 
         inner class CardViewHolder(v: View) : RecyclerView.ViewHolder(v) {
             val title: TextView = v.findViewById(android.R.id.text1)
@@ -1019,33 +1019,49 @@ class ContentCardsActivity : ComponentActivity() {
       'braze-preview-android-rv-full': inboxPreview
     };
 
-    function populatePreviews() {
-      Object.keys(previews).forEach(function(id) {
-        var iframe = document.getElementById(id);
-        if (iframe && !iframe.srcdoc) {
-          iframe.srcdoc = previews[id];
-        }
-      });
-    }
-
     function forcePopulatePreviews() {
+      var allPopulated = true;
       Object.keys(previews).forEach(function(id) {
         var iframe = document.getElementById(id);
         if (iframe) {
           iframe.srcdoc = previews[id];
+        } else {
+          allPopulated = false;
         }
       });
+      return allPopulated;
     }
 
     forcePopulatePreviews();
-    setTimeout(forcePopulatePreviews, 300);
-    setTimeout(forcePopulatePreviews, 1000);
 
-    document.querySelectorAll('.tab_toggle, .sdk-tab_toggle').forEach(function(toggle) {
-      toggle.addEventListener('click', function() {
-        setTimeout(forcePopulatePreviews, 150);
-      });
-    });
+    var pollCount = 0;
+    var pollInterval = setInterval(function() {
+      forcePopulatePreviews();
+      pollCount++;
+      if (pollCount >= 30) {
+        clearInterval(pollInterval);
+      }
+    }, 500);
+
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      if (!(target instanceof Element) && target && target.parentElement) {
+        target = target.parentElement;
+      }
+      if (!(target instanceof Element)) {
+        return;
+      }
+      if (target.classList.contains('tab_toggle') ||
+          target.classList.contains('sdk-tab_toggle') ||
+          target.classList.contains('sdk-tab_toggle_only') ||
+          target.closest('.ab-nav-tabs') ||
+          target.closest('.sdk-ab-nav-tabs') ||
+          target.closest('.braze-tutorial-tab')) {
+        setTimeout(forcePopulatePreviews, 100);
+        setTimeout(forcePopulatePreviews, 300);
+        setTimeout(forcePopulatePreviews, 600);
+      }
+    }, true);
   }
 
   if (document.readyState === 'loading') {
