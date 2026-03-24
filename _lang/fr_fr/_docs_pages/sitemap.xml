@@ -2,9 +2,13 @@
 permalink: /sitemap.xml
 layout: bare
 ---
-{%- assign sitemap_modified = site.data.sitemap_en_modified -%}
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- assign cd_prefix = site.collections_dir | append: "/" -%}
+{%- assign lang_sitemap_key = "sitemap_" | append: site.language -%}
+{%- assign lang_sitemap = site.data[lang_sitemap_key] -%}
+{%- assign en_sitemap = site.data.sitemap_en -%}
+{%- assign default_lastmod = site.time | date: "%Y-%m-%dT%H:%M:%S" -%}
 {%- for page in site.documents -%}
   {%- assign hide_url = page.hidden -%}
   {%- if page.collection == 'site_pages' -%}
@@ -17,10 +21,16 @@ layout: bare
     {%- endif -%}
   {%- endif -%}
   {% unless hide_url or page.layout == 'redirect' or page.layout == 'blank_config' or page.noindex == true or page.config_only == true %}
-  {%- assign lastmod_date = sitemap_modified[page.path] | default: "now" -%}
+  {%- assign sitemap_key = page.relative_path | remove_first: cd_prefix -%}
   <url>
     <loc>{{site.homeurl}}{{site.baseurl}}{{ page.url }}</loc>
-    <lastmod>{{lastmod_date | date: "%Y-%m-%d" }}</lastmod>
+    {%- if lang_sitemap and lang_sitemap[sitemap_key] %}
+    <lastmod>{{ lang_sitemap[sitemap_key] }}</lastmod>
+    {%- elsif en_sitemap and en_sitemap[sitemap_key] %}
+    <lastmod>{{ en_sitemap[sitemap_key] }}</lastmod>
+    {%- else %}
+    <lastmod>{{ default_lastmod }}</lastmod>
+    {%- endif %}
   </url>
   {%- endunless -%}
 {%- endfor -%}
