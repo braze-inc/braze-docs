@@ -35,11 +35,15 @@ For example, to show a special Banner only to users who have completed a `purcha
 When the user starts a new session or refreshes Banners after performing the action, Braze evaluates their eligibility. If they match the "Purchase" segment, the high-priority Banner will be displayed.
 
 
-## Can users manually dismiss a Banner?
+## Can users dismiss a Banner?
 
-No. Users cannot manually dismiss Banners. However, you can control Banner visibility by managing user segment eligibility. When a user no longer meets the targeting criteria for a Banner campaign, they won't see it again on their next session.
+Yes. On the Web SDK (version 6.6.0 and later), you can programmatically dismiss a Banner on behalf of the user by calling `logBannerDismissal`. Once dismissed, the Banner is suppressed for that user until a new campaign or creative is assigned to that placement.
 
-For example, if you display a promotional Banner until a user makes a purchase, logging an event such as `purchase_completed` can remove that user from the targeted segment, effectively hiding the Banner in subsequent sessions.
+For Banners that use the **Custom Code** editor block, you can trigger the same dismissal behavior directly from within the Banner's HTML using `brazeBridge.closeMessage()`.
+
+For all other platforms, you can control Banner visibility by managing user segment eligibility. When a user no longer meets the targeting criteria for a Banner campaign, they won't see it again on their next session. For example, if you display a promotional Banner until a user makes a purchase, logging an event such as `purchase_completed` can remove that user from the targeted segment, effectively hiding the Banner in subsequent sessions.
+
+For full integration details, see [Log dismissals]({{site.baseurl}}/developer_guide/banners/placements/#log-dismissals).
 
 ## Can I export Banners campaign analytics using the Braze API?
 
