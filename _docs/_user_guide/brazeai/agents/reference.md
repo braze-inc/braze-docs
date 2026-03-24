@@ -364,7 +364,7 @@ For more details on prompting best practices, refer to guides from the following
 
 ### Basic schemas
 
-Basic schemas are a simple output that an agent returns. This can be a string, a number, a boolean, an array of strings, or array of numbers.
+Basic schemas are a simple output that an agent returns. This can be a string, a number, a boolean, an array of strings, or an array of numbers.
 
 For example, if you want to collect user sentiment scores from a simple feedback survey to determine how satisfied your customers are after receiving a product, you can select **Number** as a basic schema to structure the output format.
 
