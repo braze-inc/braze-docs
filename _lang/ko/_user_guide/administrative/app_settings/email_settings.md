@@ -33,7 +33,7 @@ toc_headers: h2
 
 #### Liquid로 개인화하기
 
-또한 [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)를 **발신 표시 이름**, **로컬 부분** 및 **도메인** 필드에서 사용하여 커스텀 속성에 따라 발송 이메일을 동적으로 템플릿화할 수 있습니다. 예를 들어, 조건 로직을 사용하여 다른 브랜드나 지역에서 보낼 수 있습니다:
+또한 [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)를 **발신 표시 이름** 및 **로컬 부분** 필드에서 사용하여 커스텀 속성에 따라 발송 이메일을 동적으로 템플릿화할 수 있습니다. 예를 들어, 조건 로직을 사용하여 다른 브랜드나 지역에서 보낼 수 있습니다:
 
 {% raw %}
 ```liquid

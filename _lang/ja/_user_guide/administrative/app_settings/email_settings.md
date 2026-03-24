@@ -33,7 +33,7 @@ toc_headers: h2
 
 #### Liquidによるパーソナライゼーション
 
-**送信者名**、**ローカル部分**、および**ドメイン**フィールドでも[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)を使用できる。これによりカスタム属性に基づいて送信メールをダイナミックにテンプレート化できる。例えば、条件分岐を使って異なるブランドや地域から送信できる：
+**送信者名**と**ローカル部分**フィールドでも[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)を使用できる。これによりカスタム属性に基づいて送信メールをダイナミックにテンプレート化できる。例えば、条件分岐を使って異なるブランドや地域から送信できる：
 
 {% raw %}
 ```liquid
