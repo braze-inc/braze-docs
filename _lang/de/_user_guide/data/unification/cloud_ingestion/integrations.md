@@ -785,7 +785,7 @@ Nach der Aktivierung wird Ihre Synchronisierung nach dem bei der Einrichtung kon
 
 {% endtabs %}
 
-{% details Allgemein verfügbare Oberfläche %}
+{% details General availability experience %}
 
 ## Einrichten von Data Warehouse-Integrationen
 

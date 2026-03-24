@@ -785,7 +785,7 @@ Une fois activée, votre synchronisation s'exécute selon la planification confi
 
 {% endtabs %}
 
-{% details Expérience en disponibilité générale %}
+{% details General availability experience %}
 
 ## Mise en place des intégrations d'entrepôts de données
 

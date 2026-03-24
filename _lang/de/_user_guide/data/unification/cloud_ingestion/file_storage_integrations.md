@@ -176,7 +176,7 @@ Um die Einrichtung in AWS abzuschließen, erstellen Sie eine IAM-Rolle und häng
 ![Die S3-Seite „Create Role". Diese Seite enthält Felder für den Rollennamen, die Rollenbeschreibung, vertrauenswürdige Entitäten, Richtlinien und die Berechtigungsgrenze.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
 {: start="7"}
-6. Hängen Sie die in Schritt 4 erstellte Richtlinie an die Rolle an. Suchen Sie die Richtlinie in der Suchleiste und setzen Sie ein Häkchen neben der Richtlinie, um sie anzuhängen. Wählen Sie anschließend **Next**.
+6. Hängen Sie die in Schritt 5 erstellte Richtlinie an die Rolle an. Suchen Sie die Richtlinie in der Suchleiste und setzen Sie ein Häkchen neben der Richtlinie, um sie anzuhängen. Wählen Sie anschließend **Next**.
 
 ![Rollen-ARN mit der ausgewählten Richtlinie „new-policy-name".]({% image_buster /assets/img/create_role_3_attach.png %})
 
@@ -220,7 +220,7 @@ Geben Sie der Rolle einen Namen und eine Beschreibung und wählen Sie **Create R
 8. Fügen Sie Kontakt-E-Mail(s) für Benachrichtigungen hinzu, falls die Synchronisierung aufgrund von Zugriffs- oder Berechtigungsproblemen unterbrochen wird. Aktivieren Sie optional Benachrichtigungen für Fehler auf Nutzer:innen-Ebene und erfolgreiche Synchronisierungen.
 9. Erstellen Sie die Synchronisierung.
 
-{% details Allgemein verfügbare Version %}
+{% details General availability experience %}
 
 1. Um eine neue Integration zu erstellen, gehen Sie zu **Data Settings** > **Cloud Data Ingestion**, wählen Sie **Create New Data Sync** und dann **S3 Import** im Abschnitt Dateiquellen. 
 2. Geben Sie die Informationen aus dem AWS-Einrichtungsprozess ein, um eine neue Synchronisierung zu erstellen. Geben Sie Folgendes an:

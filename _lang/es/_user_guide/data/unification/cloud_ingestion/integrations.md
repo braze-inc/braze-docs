@@ -785,7 +785,7 @@ Una vez activada, la sincronización se ejecuta según la planificación configu
 
 {% endtabs %}
 
-{% details Experiencia de disponibilidad general %}
+{% details General availability experience %}
 
 ## Configuración de integraciones de almacenes de datos
 

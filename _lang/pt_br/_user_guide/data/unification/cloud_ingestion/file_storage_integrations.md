@@ -176,7 +176,7 @@ Para concluir a configuração na AWS, crie uma função de IAM e anexe a ela a 
 ![A página "Create Role" do S3. Essa página tem campos para nome da função, descrição da função, entidades confiáveis, políticas e limite de permissões.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
 {: start="7"}
-6. Anexe a política criada na etapa 4 à função. Procure a política na barra de pesquisa e marque a caixa de seleção ao lado da política para anexá-la. Selecione **Next** quando terminar.
+6. Anexe a política criada na etapa 5 à função. Procure a política na barra de pesquisa e marque a caixa de seleção ao lado da política para anexá-la. Selecione **Next** quando terminar.
 
 ![ARN da função com a nova política selecionada.]({% image_buster /assets/img/create_role_3_attach.png %})
 
@@ -220,7 +220,7 @@ Dê um nome e uma descrição à função e selecione **Create Role**.
 8. Adicione e-mail(s) de contato para notificações se a sincronização for interrompida devido a problemas de acesso ou permissões. Opcionalmente, ative as notificações para erros no nível do usuário e sucessos de sincronização.
 9. Crie a sincronização.
 
-{% details Experiência de disponibilidade geral %}
+{% details General availability experience %}
 
 1. Para criar uma nova integração, acesse **Data Settings** > **Cloud Data Ingestion**, selecione **Create New Data Sync** e selecione **S3 Import** na seção de fontes de arquivo. 
 2. Insira as informações do processo de configuração da AWS para criar uma nova sincronização. Especifique o seguinte:
