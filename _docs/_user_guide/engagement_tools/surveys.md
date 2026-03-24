@@ -117,7 +117,17 @@ During beta, you can:
 
 Limitations during beta:
 
-- You can't segment users by long text responses.
+- You can't segment users by long-form text responses.
 - Question-and-answer triggering that does not rely on logged user attributes is not available.
 
 _Image placeholder: Trigger setup and segmentation filters for survey follow-up._
+
+## Future considerations
+
+After beta, Braze plans to support retargeting based on question-and-answer combinations that are not stored as user attributes. This can help you build follow-up journeys faster and reduce the number of logged user attributes.
+
+Planned enhancements include:
+
+- Standalone NPS form block
+- Standalone CSAT form block
+- Retargeting for non-attribute survey responses
