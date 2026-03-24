@@ -14,9 +14,8 @@ These abort types can occur on any messaging channel.
 | --- | --- |
 | `liquid_abort_message` | The [abort_message]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/) Liquid tag was called, so the send was canceled. |
 | `template_parse_error` | The message template could not be parsed due to a syntax or rendering error, so the send was canceled. |
-| `quiet_hours` | The message was suppressed because it fell within [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours) with the fallback set to abort. |
+| `quiet_hours` | The message was suppressed because it fell within [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours) with the fallback set to abort. This abort type is not logged in Currents. |
 | `rate_limit` | The message was aborted because it exceeded the configured [rate limit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/). |
-| `no_longer_in_availability_window` | The message could not be sent within the configured availability window, so it was aborted. |
 | `campaign_disabled` | The campaign was disabled before the message could be sent. |
 | `campaign_does_not_exist` | The campaign associated with this message no longer exists. |
 | `campaign_action_does_not_exist` | The campaign action associated with this message no longer exists. |
@@ -24,9 +23,6 @@ These abort types can occur on any messaging channel.
 | `user_not_in_segment` | The user is not in the target segment, so the message was not sent. |
 | `trigger_event_blacklisted` | The trigger event is blocklisted, so the message was not sent. |
 | `exhausted_retries` | The message could not be sent after the maximum number of retry attempts. |
-| `connected_content_not_supported` | [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) is not supported in this context, so the message was aborted. |
-| `promo_codes_not_supported` | Promotion codes are not supported in this context, so the message was aborted. |
-| `catalog_items_rerender_not_supported` | Catalog item re-rendering is not supported in this context, so the message was aborted. |
 | `frequency_capped` | The user already received the maximum number of messages allowed by your workspace's [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#about-frequency-capping) rules. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -37,11 +33,13 @@ These abort types can occur on any messaging channel.
 | `abort_type` value | Description |
 | --- | --- |
 | `exhausted_cc_retries` | Connected Content failed after the maximum number of retries, so the message was aborted. |
+| `connected_content_not_supported` | [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) is not supported in this context, so the message was aborted. |
+| `promo_codes_not_supported` | Promotion codes are not supported in this context, so the message was aborted. |
+| `catalog_items_rerender_not_supported` | Catalog item re-rendering is not supported in this context, so the message was aborted. |
 {% if ch == "all" or ch == "email" or ch == "push" or ch == "inappmessage" or ch == "contentcard" or ch == "webhook" or ch == "banner" %}
 | `blacklisted_media_url` | The media URL is blocklisted and cannot be used in messages. |
 | `blocked_media_url` | The media URL was blocked by security policies. |
-| `invalid_media_url` | The media URL is not valid or could not be resolved. |
-{% endif %}
+| `invalid_media_url` | The media URL is not valid or could not be resolved. |{% endif %}
 {% if ch == "all" or ch == "email" or ch == "webhook" %}
 | `ssl_error` | An SSL error occurred while making a request. |
 | `invalid_http_status` | An HTTP request returned a non-successful status code. |
@@ -59,10 +57,10 @@ These abort types can occur on any messaging channel.
 | `abort_type` value | Description |
 | --- | --- |
 | `exhausted_link_shortening_retries` | Link shortening failed after the maximum number of retries. |
-| `no_email_body_content` | The email body is empty and cannot be sent. |
+| `no_email_body_content` | The email body is empty and cannot be sent. This abort type is not logged in Currents. |
 | `missing_email` | The user does not have an email address on their profile. |
 | `invalid_domain` | The email address has an invalid domain. |
-| `invalid_email_address_after_decryption` | The email address was invalid after being decrypted. |
+| `invalid_email_address_after_decryption` | The email address was invalid after being decrypted. This abort type is not logged in Currents. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endif %}
@@ -153,6 +151,7 @@ These abort types can occur on any messaging channel.
 
 | `abort_type` value | Description |
 | --- | --- |
+| `no_longer_in_availability_window` | The message could not be sent within the configured availability window, so it was aborted. |
 | `maximum_impressions_reached` | The in-app message has already reached its maximum number of impressions. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
