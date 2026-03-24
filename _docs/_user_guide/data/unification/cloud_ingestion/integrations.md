@@ -658,7 +658,7 @@ Choose a name for your sync. Then, select from any active source and input your 
 Once successful, a preview of the data appears. Select **Next: Notifications** to continue. If the connection fails, an error message appears to help troubleshoot the issue.
 
 {% alert note %}
-You must successfully test a sync before progressing to next steps. If you need to close out of the sync creation page, click Save as draft to keep your work in progress.
+You must successfully test a sync before progressing to next steps. If you need to close out of the sync creation page, click **Save as draft** to keep your work in progress.
 {% endalert %}
 
 #### Step 3.2: Add notification preferences
