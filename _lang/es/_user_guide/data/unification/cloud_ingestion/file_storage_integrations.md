@@ -11,7 +11,7 @@ page_type: reference
 
 > Esta página explica cómo configurar la ingesta de datos en la nube y sincronizar los datos relevantes de S3 con Braze.
 
-Esta página muestra los pasos de sincronización y fuente que actualmente se encuentran en acceso anticipado (EA). Para los pasos de la experiencia de disponibilidad general, consulta [Experiencia de disponibilidad general](#general-availability-experience).
+Esta página muestra los pasos de sincronización y fuente que actualmente se encuentran en acceso anticipado (EA). Para los pasos de la experiencia de disponibilidad general, consulta [Experiencia de disponibilidad general](#experiencia-de-disponibilidad-general).
 
 ## Cómo funciona
 

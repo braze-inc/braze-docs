@@ -12,7 +12,7 @@ page_type: reference
 
 > Auf dieser Seite erfahren Sie, wie Sie Braze Cloud Data Ingestion (CDI) verwenden, um relevante Daten mit Ihrer Snowflake-, Redshift-, BigQuery- und Databricks-Integration zu synchronisieren.
 
-Diese Seite zeigt die Synchronisierungs- und Quellschritte, die sich derzeit im Early Access (EA) befinden. Für Schritte und Bilder der allgemein verfügbaren Oberfläche siehe [Allgemein verfügbare Oberfläche](#general-availability-experience).
+Diese Seite zeigt die Synchronisierungs- und Quellschritte, die sich derzeit im Early Access (EA) befinden. Für Schritte und Bilder der allgemein verfügbaren Oberfläche siehe [Allgemein verfügbare Oberfläche](#allgemein-verfgbare-oberflche).
 
 ## Einrichten von Data Warehouse-Integrationen
 

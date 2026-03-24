@@ -11,7 +11,7 @@ page_type: reference
 
 > Cette page explique comment configurer la prise en charge de l'ingestion de données dans le cloud et synchroniser les données pertinentes de S3 vers Braze.
 
-Cette page présente les étapes de synchronisation et de source qui sont actuellement en accès anticipé (EA). Pour les étapes de l'expérience en disponibilité générale, consultez [Expérience en disponibilité générale](#general-availability-experience).
+Cette page présente les étapes de synchronisation et de source qui sont actuellement en accès anticipé (EA). Pour les étapes de l'expérience en disponibilité générale, consultez [Expérience en disponibilité générale](#exprience-en-disponibilit-gnrale).
 
 ## Fonctionnement
 
