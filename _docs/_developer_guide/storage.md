@@ -143,7 +143,7 @@ By default, Braze cookies expire after 400 days. To override this, use the `cook
 import * as braze from"@braze/web-sdk";
 braze.initialize("API-KEY", {
     baseUrl: "BASE-URL",
-    cookieExpiryInDays: 30 // 30 days expiration
+    cookieExpiryInDays: 30 // expires after 30 days
 });
 ```
 
