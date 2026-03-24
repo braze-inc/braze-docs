@@ -88,7 +88,7 @@ These abort types can occur on any messaging channel.
 | `sms_gateway_domain_not_allowed` | The SMS gateway domain is not on the allowlist. |
 | `blocked_recipient_country` | The recipient's phone number is in a country that is blocked by your [geographic permissions]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_geographic_permissions/). |
 | `mms_not_supported` | MMS is not supported for this recipient or sending number. |
-| `No current Messaging Service` | No active messaging service is configured for this subscription group. |
+| `no_current_messaging_service` | No active messaging service is configured for this subscription group. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endif %}
