@@ -657,7 +657,7 @@ Banner dismissals allow you to programmatically remove a Banner from a placement
 
 These are the minimum SDK versions required to log Banner dismissals:
 
-{% sdk_min_versions web:6.6.0 %}
+{% sdk_min_versions web:6.7.0 %}
 
 ### Standard and Headless Banner integrations
 
