@@ -55,7 +55,11 @@ def sh!(*cmd)
 end
 
 def normalize_url_for_compare(url)
-  u = url.to_s.strip.downcase.gsub(%r{//+}, "/")
+  # Use a negative lookbehind so the repeated-slash collapse does not destroy
+  # the "//" in an absolute URL scheme (e.g. "https://…" stays "https://…").
+  # Lowercasing is intentionally omitted: case-only URL changes are real and
+  # should be caught as mismatches rather than silently normalised away.
+  u = url.to_s.strip.gsub(%r{(?<!:)//+}, "/")
   # Ruby: "".split("#", 2) => [] — always use indexed parts
   parts = u.split("#", 2)
   path = parts[0] || ""
@@ -193,7 +197,10 @@ def validate!(options)
     FileUtils.remove_entry(tmp_parent, true)
   end
 
-  diff_rows = git_diff_name_status(base_ref)
+  # Use resolve_ref (the exact SHA) so the diff is guaranteed to be based on
+  # the same commit that was checked out for the base URL map, even if base_ref
+  # is a mutable ref (branch or remote-tracking branch) that could advance.
+  diff_rows = git_diff_name_status(resolve_ref)
   needed, stats = required_redirects(map_base, map_head, diff_rows)
 
   redirect_path = File.join(REPO_ROOT, REDIRECT_REL)
