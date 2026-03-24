@@ -89,7 +89,6 @@ This table shows how each legacy permission maps to the granular permissions. Re
 | Workspace | Archive Placements | Archive Placements |
 | Workspace | New | View Merge Users |
 | Workspace | New | View User Deletion Records |
-| Workspace | New | Delete Users |
 | Workspace | New | View Banner Templates |
 | Workspace | New | Edit Banner Templates |
 | Workspace | New | Archive Banner Templates |
