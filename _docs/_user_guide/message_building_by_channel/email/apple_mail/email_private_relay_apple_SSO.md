@@ -68,7 +68,7 @@ To avoid SPF failures, you must create the MX and TXT records and have them prop
 {% tab Amazon SES %}
 
 ## Sending emails for Amazon SES
-To set up Apple Private Relay for SES, you must have a custom Mail From address before you follow these steps:
+To set up Apple Private Relay for Amazon Simple Email Service (Amazon SES), you must have a custom Mail From address before you follow these steps:
 
 1. Sign in with Apple.
 2. Follow [Apple's documentation](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service) to register the email domains.
