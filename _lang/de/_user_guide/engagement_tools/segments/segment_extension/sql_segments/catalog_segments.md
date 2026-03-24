@@ -10,7 +10,7 @@ tool: Segments
 
 # Katalog-Segmente
 
-> Katalogsegmente sind eine Art von SQL-Segmenterweiterung, die durch die Kombination von Katalogdaten mit Daten aus angepassten Events oder Käufen erstellt wird. Sie können in einem Segment referenziert und dann durch Kampagnen und Canvase gezielt angesprochen werden. 
+> Katalogsegmente sind eine Art von SQL-Segmenterweiterung, die durch die Kombination von Katalogdaten mit Daten aus angepassten Events oder Käufen erstellt wird. Sie können in einem Segment referenziert und dann durch Kampagnen und Canvases gezielt angesprochen werden. 
 
 Katalogsegmente führen Daten aus Katalogen und angepassten Events oder Käufen per SQL zusammen. Dazu benötigen Sie ein einheitliches Bezeichnerfeld in Katalogen und angepassten Events oder Käufen. Zum Beispiel muss der Wert einer Artikel-ID in einem Katalog mit dem Wert einer Eigenschaft in einem angepassten Event übereinstimmen.
 

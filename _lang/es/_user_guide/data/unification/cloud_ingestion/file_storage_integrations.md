@@ -11,7 +11,7 @@ page_type: reference
 
 > Esta página explica cómo configurar la ingesta de datos en la nube y sincronizar los datos relevantes de S3 con Braze.
 
-Esta página muestra los pasos de sincronización y fuente que actualmente se encuentran en acceso anticipado (EA). Para los pasos de la experiencia de disponibilidad general, consulta [Experiencia de disponibilidad general](#general-availability-experience).
+Esta página muestra los pasos de sincronización y fuente que actualmente se encuentran en acceso anticipado (EA). Para los pasos de la experiencia de disponibilidad general, despliega **Experiencia de disponibilidad general** a continuación.
 
 ## Cómo funciona
 
@@ -176,7 +176,7 @@ Para completar la configuración en AWS, crea un rol IAM y adjúntale la políti
 ![La página S3 «Create Role». Esta página tiene campos para el nombre del rol, la descripción del rol, las entidades de confianza, las políticas y el límite de permisos.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
 {: start="7"}
-6. Adjunta al rol la política creada en el paso 4. Busca la política en la barra de búsqueda y selecciona la marca de verificación junto a la política para adjuntarla. Selecciona **Next** cuando hayas terminado.
+6. Adjunta al rol la política creada en el paso 5. Busca la política en la barra de búsqueda y selecciona la marca de verificación junto a la política para adjuntarla. Selecciona **Next** cuando hayas terminado.
 
 ![ARN de rol con el nombre de la nueva política seleccionado.]({% image_buster /assets/img/create_role_3_attach.png %})
 

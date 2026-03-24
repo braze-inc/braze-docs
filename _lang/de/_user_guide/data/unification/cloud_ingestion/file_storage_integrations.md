@@ -11,7 +11,7 @@ page_type: reference
 
 > Auf dieser Seite erfahren Sie, wie Sie die Unterstützung für die Cloud-Datenaufnahme einrichten und relevante Daten von S3 mit Braze synchronisieren.
 
-Diese Seite zeigt die Synchronisierungs- und Quellschritte, die sich derzeit im Early Access (EA) befinden. Die Schritte für die allgemein verfügbare Version finden Sie unter [Allgemein verfügbare Version](#general-availability-experience).
+Diese Seite zeigt die Synchronisierungs- und Quellschritte, die sich derzeit im Early Access (EA) befinden. Für die Schritte der allgemein verfügbaren Version erweitern Sie unten **Allgemein verfügbare Version**.
 
 ## Funktionsweise
 
@@ -176,7 +176,7 @@ Um die Einrichtung in AWS abzuschließen, erstellen Sie eine IAM-Rolle und häng
 ![Die S3-Seite „Create Role". Diese Seite enthält Felder für den Rollennamen, die Rollenbeschreibung, vertrauenswürdige Entitäten, Richtlinien und die Berechtigungsgrenze.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
 {: start="7"}
-6. Hängen Sie die in Schritt 4 erstellte Richtlinie an die Rolle an. Suchen Sie die Richtlinie in der Suchleiste und setzen Sie ein Häkchen neben der Richtlinie, um sie anzuhängen. Wählen Sie anschließend **Next**.
+6. Hängen Sie die in Schritt 5 erstellte Richtlinie an die Rolle an. Suchen Sie die Richtlinie in der Suchleiste und setzen Sie ein Häkchen neben der Richtlinie, um sie anzuhängen. Wählen Sie anschließend **Next**.
 
 ![Rollen-ARN mit der ausgewählten Richtlinie „new-policy-name".]({% image_buster /assets/img/create_role_3_attach.png %})
 

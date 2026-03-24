@@ -12,7 +12,7 @@ page_type: reference
 
 > Esta página explica cómo utilizar la ingesta de datos en la nube (CDI) de Braze para sincronizar datos relevantes con tu integración de Snowflake, Redshift, BigQuery y Databricks.
 
-Esta página muestra los pasos de sincronización y origen que actualmente están en acceso anticipado (EA). Para los pasos e imágenes de la experiencia de disponibilidad general, consulta [Experiencia de disponibilidad general](#general-availability-experience).
+Esta página muestra los pasos de sincronización y origen que actualmente están en acceso anticipado (EA). Para los pasos e imágenes de la experiencia de disponibilidad general, despliega **Experiencia de disponibilidad general** a continuación.
 
 ## Configuración de integraciones de almacenes de datos
 

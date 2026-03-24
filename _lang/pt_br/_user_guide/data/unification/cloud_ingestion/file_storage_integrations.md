@@ -11,7 +11,7 @@ page_type: reference
 
 > Esta página aborda como configurar o suporte da Ingestão de Dados na Nuvem e sincronizar dados relevantes do S3 para a Braze.
 
-Esta página mostra as etapas de sincronização e origem que estão atualmente em Acesso Antecipado (EA). Para as etapas da experiência geralmente disponível, consulte [Experiência de disponibilidade geral](#general-availability-experience).
+Esta página mostra as etapas de sincronização e origem que estão atualmente em Acesso Antecipado (EA). Para as etapas da experiência geralmente disponível, expanda **Experiência de disponibilidade geral** abaixo.
 
 ## Como funciona
 
@@ -176,7 +176,7 @@ Para concluir a configuração na AWS, crie uma função de IAM e anexe a ela a 
 ![A página "Create Role" do S3. Essa página tem campos para nome da função, descrição da função, entidades confiáveis, políticas e limite de permissões.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
 {: start="7"}
-6. Anexe a política criada na etapa 4 à função. Procure a política na barra de pesquisa e marque a caixa de seleção ao lado da política para anexá-la. Selecione **Next** quando terminar.
+6. Anexe a política criada na etapa 5 à função. Procure a política na barra de pesquisa e marque a caixa de seleção ao lado da política para anexá-la. Selecione **Next** quando terminar.
 
 ![ARN da função com a nova política selecionada.]({% image_buster /assets/img/create_role_3_attach.png %})
 

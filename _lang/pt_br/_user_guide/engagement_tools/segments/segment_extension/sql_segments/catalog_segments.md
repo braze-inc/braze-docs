@@ -10,7 +10,7 @@ tool: Segments
 
 # Segmentos do catálogo
 
-> Os segmentos de catálogo são um tipo de extensão de segmento SQL criado pela combinação de dados de catálogo com dados de eventos personalizados ou compras. Eles podem ser referenciados em um segmento e, em seguida, direcionados por campanhas e canvas. 
+> Os segmentos de catálogo são um tipo de extensão de segmento SQL criado pela combinação de dados de catálogo com dados de eventos personalizados ou compras. Eles podem ser referenciados em um segmento e, em seguida, direcionados por campanhas e Canvas. 
 
 Os segmentos de catálogo usam SQL para unir dados de catálogos e dados de eventos personalizados ou compras. Para isso, você deve ter um campo identificador comum em seus catálogos e em seus eventos personalizados ou compras. Por exemplo, o valor de um ID de item em um catálogo deve corresponder ao valor de uma propriedade em um evento personalizado.
 
