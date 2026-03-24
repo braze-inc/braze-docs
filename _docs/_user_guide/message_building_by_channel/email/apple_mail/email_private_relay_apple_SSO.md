@@ -72,7 +72,6 @@ To avoid SPF failures, you must create the MX and TXT records and have them prop
 ### Prerequisites
 To set up Apple Private Relay for Amazon SES, you must first configure a custom MAIL FROM domain in SES. For more details, see [AWS's documentation](https://docs.aws.amazon.com/ses/latest/dg/mail-from.html).
 
-
 ### Steps
 
 1. Sign in with Apple.
