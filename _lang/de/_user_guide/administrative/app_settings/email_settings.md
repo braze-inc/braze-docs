@@ -33,7 +33,7 @@ In diesem Abschnitt können Sie die Namen und E-Mail-Adressen hinzufügen, die v
 
 #### Personalisierung mit Liquid
 
-Sie können [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) auch in den Feldern **„Anzeigename“** und **„Lokaler Teil“** verwenden, um die zu versendende E-Mail basierend auf angepassten Attributen dynamisch zu gestalten. Beispielsweise können Sie bedingte Logik verwenden, um Nachrichten von verschiedenen Marken oder Regionen zu versenden:
+Sie können [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) auch in den Feldern **„Anzeigename“**, **„Lokaler Teil“** und **„Domain“** verwenden, um die zu versendende E-Mail basierend auf angepassten Attributen dynamisch zu gestalten. Beispielsweise können Sie bedingte Logik verwenden, um Nachrichten von verschiedenen Marken oder Regionen zu versenden:
 
 {% raw %}
 ```liquid

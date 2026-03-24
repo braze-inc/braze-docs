@@ -33,7 +33,7 @@ Seção !["Configurações de E-mail de Saída" com campos para diferentes nomes
 
 #### Personalizando com Liquid
 
-Você também pode usar [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) nos campos **Nome de Exibição do Remetente** e **Parte Local** para modelar dinamicamente o e-mail de envio com base em atributos personalizados. Por exemplo, você pode usar lógica condicional para enviar de diferentes marcas ou regiões:
+Você também pode usar [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) nos campos **Nome de Exibição do Remetente**, **Parte Local** e **Domínio** para modelar dinamicamente o e-mail de envio com base em atributos personalizados. Por exemplo, você pode usar lógica condicional para enviar de diferentes marcas ou regiões:
 
 {% raw %}
 ```liquid

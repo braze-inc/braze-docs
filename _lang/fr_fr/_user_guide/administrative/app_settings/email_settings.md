@@ -33,7 +33,7 @@ Dans cette section, vous pouvez ajouter les noms et adresses e-mail que vous pou
 
 #### Personnalisation avec Liquid
 
-Vous pouvez également utiliser [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) dans les champs **« From Display Name » (Nom d'affichage** de l'expéditeur) et **« Local Part** » (Partie locale) pour créer dynamiquement un modèle d'e-mail d'envoi basé sur des attributs personnalisés. Par exemple, vous pouvez utiliser la logique conditionnelle pour envoyer des messages provenant de différentes marques ou régions :
+Vous pouvez également utiliser [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) dans les champs **« From Display Name » (Nom d'affichage** de l'expéditeur), **« Local Part** » (Partie locale) et **« Domain »** (Domaine) pour créer dynamiquement un modèle d'e-mail d'envoi basé sur des attributs personnalisés. Par exemple, vous pouvez utiliser la logique conditionnelle pour envoyer des messages provenant de différentes marques ou régions :
 
 {% raw %}
 ```liquid

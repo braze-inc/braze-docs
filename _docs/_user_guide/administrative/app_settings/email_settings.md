@@ -33,7 +33,7 @@ In this section, you can add the names and email addresses you can use when Braz
 
 #### Personalizing with Liquid
 
-You can also use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in the **From Display Name** and **Local Part** fields to dynamically template the sending email based on custom attributes. For example, you can use conditional logic to send from different brands or regions:
+You can also use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in the **From Display Name**, **Local Part**, and **Domain** fields to dynamically template the sending email based on custom attributes. For example, you can use conditional logic to send from different brands or regions:
 
 {% raw %}
 ```liquid

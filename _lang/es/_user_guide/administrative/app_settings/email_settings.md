@@ -33,7 +33,7 @@ En esta sección, puedes añadir los nombres y las direcciones de correo electr�
 
 #### Personalización con Liquid
 
-También puedes utilizar [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) en los campos **«De: Nombre para mostrar»** y **«Parte local»** para crear plantillas dinámicas del correo electrónico de envío basadas en atributos personalizados. Por ejemplo, puedes utilizar la lógica condicional para enviar desde diferentes marcas o regiones:
+También puedes utilizar [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) en los campos **«De: Nombre para mostrar»**, **«Parte local»** y **«Dominio»** para crear plantillas dinámicas del correo electrónico de envío basadas en atributos personalizados. Por ejemplo, puedes utilizar la lógica condicional para enviar desde diferentes marcas o regiones:
 
 {% raw %}
 ```liquid
