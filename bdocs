@@ -34,6 +34,7 @@ export SYNTAX="$PROJECT_ROOT/scripts/print_unique_syntax.sh"
 
 # Utility scripts that are not directly used in bdocs:
 export MRD="$PROJECT_ROOT/scripts/utils/merge_redirect_descendants.py"
+export CHECK_REDIRECTS="$PROJECT_ROOT/scripts/validate_doc_redirects.rb"
 export TEMP_DIR="$PROJECT_ROOT/scripts/temp"
 
 # Displays usage for bdocs
@@ -51,6 +52,7 @@ OPTIONS:
   rlinks         Remove unused reference links on 1 or more pages
   ulinks         Update old links using newest redirect on 1 or more pages
   mredirects     Make redirects for all renamed files in this branch
+  check_redirects   Validate redirects vs Jekyll URLs (develop...HEAD) for doc moves
   lredirects     Test new redirects by listing old URLs in this branch
   fblinks        Finds broken links throughout the docs site
   clangs         Clean language directories by deleting orphaned files
@@ -209,6 +211,10 @@ case $1 in
         ;;
     mredirects)
         "$MREDIRECTS"
+        ;;
+    check_redirects)
+        shift
+        bundle exec ruby "$CHECK_REDIRECTS" "$@"
         ;;
     lredirects)
         require_git_fetch
