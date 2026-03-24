@@ -224,7 +224,7 @@ Content Card impressions, clicks, and dismissals are not automatically logged in
 To test your Content Card:
 
 1. Set an active user in your application by calling the [`changeUser()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) method.
-2. In Braze, go to **Campaigns**, then [create a new Content Card campaign]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create).
+2. In Braze, go to **Campaigns**, then [create a new Content Card campaign]({{site.baseurl}}/user_guide/channels/content_cards/create_a_content_card/).
 3. In your campaign, select **Test**, then enter the test user's `user-id`. When you're ready, select **Send Test**. You'll be able to launch a Content Card on your device shortly.
 
 ![A Braze Content Card campaign showing you can add your own user ID as a test recipient to test your Content Card.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
