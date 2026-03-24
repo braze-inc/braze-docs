@@ -130,7 +130,8 @@ event_documentation:
       - Abort
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
-      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
+      - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule.
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 WhatsApp messages every 1 week`"
   users.messages.whatsapp.InboundReceive:
     description: This event occurs when one of your users sends a WhatsApp message to a phone number in one of your Braze WhatsApp subscription groups.
@@ -144,6 +145,7 @@ event_documentation:
       - Content Cards
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 Content Card messages every 1 week`"
   users.messages.email.Abort:
@@ -153,6 +155,7 @@ event_documentation:
       - Email
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 email messages every 1 week`"
   users.messages.pushnotification.Abort:
@@ -162,6 +165,7 @@ event_documentation:
       - Push
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 push messages every 1 week`"
   users.messages.sms.Abort:
@@ -170,6 +174,7 @@ event_documentation:
       - Abort
       - SMS
     property_details:
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 SMS messages every 1 week`"
   users.messages.webhook.Abort:
@@ -179,6 +184,7 @@ event_documentation:
       - Webhooks
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 webhook messages every 1 week`"
   users.messages.webhook.Failure:
@@ -347,6 +353,7 @@ event_documentation:
       - In-App Messages
       - Abort
     property_details:
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 in-app messages every 1 week`"
   users.messages.inappmessage.Click:
@@ -547,6 +554,7 @@ event_documentation:
       - Banner
       - Abort
     property_details:
+      -  "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 Banner messages every 1 week`"
   users.messages.banner.Click:
@@ -571,6 +579,7 @@ event_documentation:
       - Abort
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 LINE messages every 1 week`"
   users.messages.line.Send:
@@ -624,6 +633,7 @@ event_documentation:
       - RCS
       - Abort
     property_details:
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 RCS messages every 1 week`"
   users.messages.email.Retry:
