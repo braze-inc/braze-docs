@@ -14,7 +14,9 @@ channel:
 
 > O MMS e o SMS estão vinculados ao canal Braze SMS. O acesso ao MMS em sua conta requer a compra de SMS para aqueles que ainda não compraram o acesso. Os clientes de SMS existentes podem acessar o MMS depois de comprá-lo. 
 
-Atualmente, o MMS é compatível com códigos curtos dos EUA (números de 5 a 6 dígitos), códigos longos dos EUA e Canadá (números de 10 dígitos) e números de clientes dos EUA e Canadá. O envio de MMS para números fora dos EUA/Canadá é possível, mas as mensagens MMS serão convertidas em uma mensagem SMS com um link para o ativo de mídia. Para saber mais, consulte [Códigos curtos e longos]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes/).
+Atualmente, o MMS é compatível com códigos curtos dos EUA (números de 5 a 6 dígitos), códigos longos dos EUA e Canadá (números de 10 dígitos) e números de clientes dos EUA e Canadá. O MMS é suportado para números gratuitos por determinados prestadores de serviço. 
+
+O envio de mensagens MMS para números fora dos EUA e do Canadá é possível, mas as mensagens MMS serão convertidas em uma mensagem SMS com um link para o ativo de mídia. Para saber mais, consulte [Códigos curtos e longos]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes/).
 
 ## Códigos curtos de MMS
 

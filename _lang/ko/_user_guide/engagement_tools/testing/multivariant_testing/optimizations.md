@@ -1,12 +1,12 @@
 ---
 nav_title: 최적화
-article_title: 승리한 배리언트 또는 개인화된 배리언트로 A/B 테스트 최적화
+article_title: 성공적인 배리언트 또는 개인화된 배리언트로 A/B 테스트 최적화하기
 page_order: 1
 page_type: reference
 description: "다변량 및 A/B 테스트를 만들 때 위닝 배리언트 또는 개인화된 변수를 사용하는 방법을 알아보세요."
 ---
 
-# 승리한 배리언트 또는 개인화된 배리언트로 A/B 테스트 최적화
+# 우승 배리언트 또는 개인화된 배리언트로 A/B 테스트 최적화하기
 
 When [creating an A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/) for email, push, webhook, SMS, and WhatsApp campaigns scheduled to send once, you can select an optimization. 최적화 옵션은 두 가지가 있습니다: **배리언트 위닝** 및 **개인화된 배리언트**.
 

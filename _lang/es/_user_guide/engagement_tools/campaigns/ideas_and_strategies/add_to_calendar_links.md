@@ -14,21 +14,21 @@ channel: email
 
 Para ello, redacte su correo electrónico y determine dónde quiere que estén sus enlaces. A continuación, añade dos opciones: una para Google Calendar y otra para otros calendarios (como iCal o Outlook). Por ejemplo, "Añadir a Google Calendar" y "Añadir a iCal o Outlook".
 
-![Diálogo de enlace al añadir un enlace en el panel. Se selecciona la pestaña "Información del enlace" y se establece el texto "Añadir a Google Calendar".]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
+![Diálogo de enlace al añadir un enlace en el panel. Se selecciona la pestaña "Información del enlace" y el texto se establece en "Añadir a Google Calendar".]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
 
 ## Formato URL
 
 Añada la siguiente URL a sus enlaces, sustituyendo los marcadores de posición. La única diferencia entre estas dos URL es que Google Calendar necesita un parámetro adicional: `&format=gcal`.
 
 {% tabs %}
-{% tab Calendario de Google %}
+{% tab Google Calendar %}
 
 ```
 https://ics.agical.io/?subject=EVENT_SUBJECT&location=EVENT_LOCATION&dtstart=START_TIME&dtend=END_TIME&description=EVENT_DESCRIPTION&format=gcal
 ```
 
 {% endtab %}
-{% tab iCal o Outlook %}
+{% tab iCal or Outlook %}
 
 ```
 https://ics.agical.io/?subject=EVENT_SUBJECT&location=EVENT_LOCATION&dtstart=START_TIME&dtend=END_TIME&description=EVENT_DESCRIPTION

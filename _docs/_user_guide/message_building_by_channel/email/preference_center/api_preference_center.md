@@ -53,18 +53,18 @@ To place a link to the preference center in your emails, use the following Liqui
 ```
 {%endraw%}
 
-You can also use a combination of HTML that includes Liquid. For example, you can paste the following as the URL in either the HTML editor or drag-and-drop editor. This will show the basic preference center layout that lists all of the email subscription groups automatically. 
+You can also use a combination of HTML that includes Liquid. For example, you can paste the following as the URL in either the HTML editor or drag-and-drop editor. This will show the basic preference center layout that lists all of the email subscription groups automatically. If you use [link aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/), add a trailing question mark (`?`) after the Liquid tag so Braze can append tracking parameters.
 
 {% raw %}
 ```html
-<a href="{{preference_center.${kitchenerie_preference_center_example}}}">Edit your preferences</a>
+<a href="{{preference_center.${kitchenerie_preference_center_example}}}?">Edit your preferences</a>
 ```
 {%endraw%}
 
 The preference center has a checkbox that will allow your users to unsubscribe from all emails. Note that you will not be able to save these preferences if sent as a test message.
 
 {% alert important %}
-The above Liquid tag will only work when launching a campaign or Canvas. Sending a test email will not generate a valid link.
+The above Liquid tag will only work when launching a campaign or Canvas. Sending a test email will not generate a valid link. To verify the preference center link, launch the message in a campaign targeting only your test profile.
 {% endalert %}
 
 #### Editing a preference center
@@ -106,7 +106,7 @@ This approach does not require query string value-pairs embedded in the URL as t
 {
     "user_id": "1234567890",
     "name": "John Doe",
-    "category": offers
+    "category": "offers"
 }
 ```
 
@@ -140,3 +140,39 @@ Then, through Currents, you could identify which users speak Spanish and how man
 ### Are both unsubscribe links and email preference centers required for sending?
 
 No. If you see the message "Your Email Body does not include an unsubscribe link" when composing an email campaign, this warning is expected if your unsubscribe link is in a Content Block.
+
+### How do I update the default browser icon?
+
+By default, the icon next to the browser tab name (favicon) uses the Braze logo. To add a custom favicon, you set it via the `links-tags` attribute in your Create or Update [Preference Center API call]({{site.baseurl}}/api/endpoints/preference_center). Braze then injects the {% raw %}`<link rel="icon" ...>`{% endraw %} tag into the hosted page for you.
+
+{% raw %}
+```
+{
+  "name": "MyPreferenceCenter",
+  "preference_center_title": "Email Preferences",
+  "preference_center_page_html": "<!doctype html> ...",
+  "confirmation_page_html": "<!doctype html> ...",
+  "state": "active",
+  "options": {
+    "links-tags": [
+      {
+        "rel": "icon",
+        "type": "image/png",
+        "sizes": "32x32",
+        "href": "https://yourcdn.com/path/to/favicon-32x32.png"
+      },
+      {
+        "rel": "shortcut icon",
+        "type": "image/x-icon",
+        "href": "https://yourcdn.com/path/to/favicon.ico"
+      },
+      {
+        "rel": "apple-touch-icon",
+        "sizes": "180x180",
+        "href": "https://yourcdn.com/path/to/apple-touch-icon.png"
+      }
+    ]
+  }
+}
+```
+{% endraw %}

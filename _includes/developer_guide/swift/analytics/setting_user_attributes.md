@@ -160,7 +160,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourD
 {% endtab %}
 
 {% tab array %}
-The maximum number of elements in [custom attribute arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) defaults to 25. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, reach out to your customer service manager.
+The default and maximum number of elements in an array is 500. You can update the maximum number of arrays in the Braze dashboard, under **Data Settings** > **Custom Attributes**. Arrays exceeding the maximum number of elements are truncated to contain the maximum number of elements.
 
 To set a custom attribute with an `array` value:
 

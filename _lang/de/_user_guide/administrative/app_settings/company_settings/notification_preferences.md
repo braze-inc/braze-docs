@@ -3,69 +3,61 @@ nav_title: Präferenzen für Benachrichtigungen
 article_title: Präferenzen für Benachrichtigungen
 page_order: 1
 page_type: reference
-description: "Dieser Referenzartikel behandelt Ihre verfügbaren Optionen zur Überwachung von Nachrichten und Aktivitäten in Ihrem Unternehmenskonto."
+description: "Dieser Referenzartikel behandelt Ihre verfügbaren Optionen zur Überwachung von Messaging und Aktivitäten in Ihrem Unternehmenskonto."
 
 ---
 
 # Präferenzen für Benachrichtigungen
 
-> Wenn Sie die Nachrichten und Aktivitäten in Ihrem Unternehmenskonto überwachen möchten, können Sie bestimmte Benachrichtigungen einrichten und auswählen, wohin diese gehen sollen.
+> Wenn Sie das Messaging und die Aktivitäten in Ihrem Unternehmenskonto überwachen möchten, können Sie bestimmte Benachrichtigungen einrichten und festlegen, wohin diese gesendet werden sollen.
 
-Auf der Seite **Benachrichtigungseinstellungen** können Sie festlegen, wer (wenn überhaupt) Benachrichtigungen über Ihr Unternehmen erhält. Sie können festlegen, wer Benachrichtigungen über die Zustellung von Kampagnen oder technische Fehler erhalten soll. Sie können auch Empfänger für den wöchentlichen Analysebericht angeben. Für die meisten Benachrichtigungen unterstützt Braze E-Mail- und Webhook-Kanäle.
+Auf der Seite **Benachrichtigungseinstellungen** können Sie konfigurieren, wer (wenn überhaupt) Benachrichtigungen über Ihr Unternehmen erhält. Sie können festlegen, wer Benachrichtigungen über die Zustellung von Kampagnen oder technische Fehler erhalten soll. Außerdem können Sie Empfänger:innen für den wöchentlichen Analytics-Bericht angeben. Für die meisten Benachrichtigungen unterstützt Braze E-Mail- und Webhook-Kanäle.
 
-![Seite "Benachrichtigungseinstellungen" im Braze Dashboard][61]
+![Seite "Benachrichtigungseinstellungen" im Braze-Dashboard]({% image_buster /assets/img_archive/notification_preferences.png %})
 
 Um auf diese Seite zuzugreifen, gehen Sie zu **Einstellungen** > **Admin-Einstellungen** > **Benachrichtigungseinstellungen**.
 
+{% alert tip %}
+Sie können auch eine Integration mit Slack einrichten, um Benachrichtigungen zu erhalten. Weitere Informationen finden Sie unter [Nachrichten über eingehende Webhooks senden](https://api.slack.com/incoming-webhooks).
+{% endalert %}
+
 ## Verfügbare Benachrichtigungen
 
-In der folgenden Tabelle sind die verfügbaren Benachrichtigungen aufgeführt:
+Die folgende Tabelle beschreibt die verfügbaren Benachrichtigungen und die Kanäle, über die sie zugestellt werden.
+
+{% alert note %}
+Wenn Sie den Standardwert **Empfänger:innen** von **Alle Dashboard-Nutzer:innen** löschen und ihn wieder hinzufügen möchten, können Sie ihn manuell in das Dropdown-Feld eingeben.
+{% endalert %}
 
 | Benachrichtigung | Beschreibung | Verfügbare Benachrichtigungskanäle |
 |--------------|-------------|-----------------|
-| AWS-Zugangsdaten fehlerhaft | Benachrichtigt die Empfänger:innen, wenn Braze bei der Verwendung Ihrer Amazon Web Services-Zugangsdaten für einen Datenexport einen Fehler erhält. Dazu gehören auch Benachrichtigungen über Zugangsdaten-Fehler für Google Cloud Serviceleistungen; Dienste und Azure (Microsoft Cloud Serviceleistungen; Dienste). | E-Mail, Webhook |
-| Kampagne automatisch angehalten | Benachrichtigt die Empfänger:innen, wenn Braze eine Kampagne angehalten hat. | E-Mail |
-| Ablauf der Kampagnen-Interaktion | Benachrichtigt die Empfänger über alle Kampagnen, deren Interaktionsdaten ablaufen, sowie über alle Informationen zu Segmenten, Kampagnen oder Canvases, die in einem Retargeting-Filter darauf verweisen und in den letzten 30 Tagen zum Senden einer Nachricht verwendet wurden. | E-Mail |
-| Kampagne/Canvas aktualisiert | Benachrichtigt Empfänger:in, wenn eine aktive Kampagne oder ein Canvas aktualisiert oder deaktiviert wird, sowie wenn eine inaktive Kampagne oder ein Canvas reaktiviert wird oder Entwürfe gestartet werden. | E-Mail |
-| Kampagne/Canvas Volumengrenze erreicht | Benachrichtigt Empfänger:in, wenn eine Kampagne oder ein Canvas seine Volumengrenze erreicht. | E-Mail | 
-| Ablauf der Canvas-Interaktion | Benachrichtigt Empfänger über alle Canvas, deren Interaktionsdaten ablaufen, sowie über alle Informationen zu Segmenten, Kampagnen oder Canvases, die in einem Retargeting-Filter darauf verweisen und in den letzten 30 Tagen zum Senden einer Nachricht verwendet wurden. | E-Mail |
-| News Feed Karte Veröffentlicht/Live | Benachrichtigt die Empfänger, wenn News Feed-Karten geplant oder veröffentlicht werden. | E-Mail, Webhook |
-| Fehler bei Push-Zugangsdaten | Benachrichtigt Empfänger, wenn die Push-Anmeldeinformationen einer App ungültig sind und wenn die Push-Anmeldeinformationen einer App bald ablaufen. | E-Mail, Webhook |
-| Geplante Kampagne gesendet/nicht gesendet | Benachrichtigt Empfänger:innen, wenn geplante Kampagnen mit dem Versand beginnen oder wenn geplante Kampagnen versuchen, etwas zu versenden, aber keine berechtigten Nutzer:innen zum Versenden vorhanden sind. | E-Mail, Webhook |
-| Limit von geplanter Kampagne erreicht | Benachrichtigt die Empfänger:innen, wenn das Limit für eine wiederkehrende geplante Kampagne erreicht wurde. | E-Mail, Webhook |
-| Versand von geplanter Kampagne beendet | Benachrichtigt die Empfänger:innen, wenn der Versand einer geplanten Kampagne beendet ist. | E-Mail, Webhook |
-| Analytics-Wochenbericht | Sendet jeden Montag eine Zusammenfassung der Arbeitsbereichsaktivitäten der vergangenen Woche an die Empfänger. Empfänger:innen erhalten für jeden Workspace, dem sie angehören, eine Zusammenfassung. | E-Mail |
-| Tägliches Canvas/Kampagneneingang Volumenlimits | Sendet jedes Mal eine Benachrichtigung, wenn ein Sendelimit erreicht wird. | E-Mail |
+| API-Nutzungswarnungen | Wenn Sie diese Option auswählen, gelangen Sie zum **API-Nutzungs-Dashboard**, wo Sie dann zum Tab [**API-Nutzungswarnungen**]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_alerts/) navigieren und Warnungen einrichten können, um wichtige API-Anfragevolumen zu überwachen. | E-Mail, Webhook |
+| AWS-Zugangsdaten-Fehler | Benachrichtigt Empfänger:innen, wenn Braze bei der Verwendung Ihrer Amazon Web Services-Zugangsdaten für einen Datenexport einen Fehler erhält. Dies umfasst auch Zugangsdaten-Fehler-Benachrichtigungen für Google Cloud Dienste und Azure (Microsoft Cloud Dienste). | E-Mail, Webhook |
+| Kampagne automatisch angehalten | Benachrichtigt Empfänger:innen, wenn Braze eine Kampagne angehalten hat. | E-Mail |
+| Canvas automatisch angehalten | Benachrichtigt Empfänger:innen, wenn Braze ein Canvas angehalten hat. | E-Mail |
+| Ablauf der Kampagnen-Interaktionsdaten | Benachrichtigt Empfänger:innen über alle Kampagnen, deren Interaktionsdaten ablaufen, sowie über alle Informationen zu Segmenten, Kampagnen oder Canvasen, die in einem Retargeting-Filter darauf referenzieren und in den letzten 30 Tagen zum Senden einer Nachricht verwendet wurden. | E-Mail |
+| Kampagne/Canvas aktualisiert | Benachrichtigt Empfänger:innen, wenn eine aktive Kampagne oder ein aktives Canvas aktualisiert oder deaktiviert wird, sowie wenn eine inaktive Kampagne oder ein inaktives Canvas reaktiviert wird oder Entwürfe gestartet werden. | E-Mail |
+| Kampagne/Canvas-Volumengrenze erreicht | Benachrichtigt Empfänger:innen, wenn eine Kampagne oder ein Canvas seine Volumengrenze erreicht. | E-Mail | 
+| Ablauf der Canvas-Interaktionsdaten | Benachrichtigt Empfänger:innen über alle Canvase, deren Interaktionsdaten ablaufen, sowie über alle Informationen zu Segmenten, Kampagnen oder Canvasen, die in einem Retargeting-Filter darauf referenzieren und in den letzten 30 Tagen zum Senden einer Nachricht verwendet wurden. | E-Mail |
+| Kommentare in Canvasen | Benachrichtigt Empfänger:innen, wenn ein Canvas neue Kommentare enthält. | E-Mail |
+| Connected-Content-Fehler | Benachrichtigt Empfänger:innen, wenn ein Connected-Content-Endpunkt Fehler aufweist. | E-Mail |
+| Push-Fehler | Benachrichtigt Empfänger:innen, wenn ein Push-Endpunkt Fehler aufweist. | E-Mail, Webhook |
+| Limit geplanter Kampagne erreicht | Benachrichtigt Empfänger:innen, wenn das Limit für eine wiederkehrende geplante Kampagne erreicht wurde. | E-Mail, Webhook |
+| Versand geplanter Kampagne abgeschlossen | Benachrichtigt Empfänger:innen, wenn der Versand einer geplanten Kampagne abgeschlossen ist. | E-Mail, Webhook |
+| Webhook-Fehler | Benachrichtigt Empfänger:innen, wenn ein Webhook-Endpunkt Fehler aufweist. | E-Mail |
+| Analytics-Wochenbericht | Sendet jeden Montag eine Zusammenfassung der Workspace-Aktivitäten der vergangenen Woche an die Empfänger:innen. Empfänger:innen erhalten für jeden Workspace, dem sie angehören, eine Zusammenfassung. | E-Mail |
+| Tägliche Canvas-/Kampagnen-Eingangs-Volumenlimits | Sendet jedes Mal eine Benachrichtigung, wenn ein Sendelimit erreicht wird. | E-Mail |
+| Agents Console-Fehler | Benachrichtigt Empfänger:innen, wenn ein [Agents Console-Agent]({{site.baseurl}}/user_guide/brazeai/agents) sein Ausführungslimit mit der aktuellen Funktionalität erreicht hat. | E-Mail |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-## Wöchentliche analytische Berichte
+{% alert note %}
+[Gesperrte Nutzer:innen]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/#suspending-company-users) können weiterhin Benachrichtigungen von Braze erhalten.
+{% endalert %}
 
-Braze sendet optional jeden Montag um 5 Uhr EST einen wöchentlichen Bericht per E-Mail an die von Ihnen benannten Personen in Ihrem Unternehmen. Sie können die benutzerdefinierten Ereignisse, die in den Wochenbericht aufgenommen werden sollen, unter **Dateneinstellungen** > **Benutzerdefinierte Ereignisse** auswählen.
+## Wöchentlicher Analytics-Bericht
+
+Braze sendet optional jeden Montag um 5 Uhr EST einen wöchentlichen Bericht per E-Mail an die von Ihnen benannten Personen in Ihrem Unternehmen. Sie können die angepassten Events, die in den Wochenbericht aufgenommen werden sollen, unter **Dateneinstellungen** > **Angepasste Events** auswählen.
 
 Sie können bis zu fünf Events auswählen, die in Ihren Wochenbericht aufgenommen werden sollen:
 
-![Events auswählen, die in den Analysebericht aufgenommen werden sollen][22]
-
-## Integration von Slacks eingehendem Webhook
-
-Slack verfügt über eine [eingehende Webhook-App][67], mit der Nachrichten aus externen Quellen in Slack gepostet werden können. Um loszulegen, öffnen Sie die App für eingehende Webhooks.
-
-1. Wählen Sie den Slack-Kanal aus, an den die Benachrichtigungen gehen sollen, und klicken Sie auf **Eingehende Webhooks-Integration hinzufügen**.<br><br>
-    ![Integration eingehender Webhooks in Slack hinzufügen][63]<br><br>
-  Slack generiert eine URL, die Sie in Braze für die Benachrichtigungen eingeben müssen, die Sie erhalten möchten.<br><br>
-2. Kopieren Sie die **Webhook-URL**.<br><br>
-    ![Webhook-URL kopieren][64]<br><br>
-3. Navigieren Sie zur Registerkarte **Benachrichtigungseinstellungen** in den **Unternehmenseinstellungen**.<br><br>
-4. Wählen Sie die Benachrichtigung aus, die Sie für Slack aktivieren möchten. Wenn Sie mehrere Benachrichtigungen haben, die Sie an diesen Slack-Kanal senden möchten, können Sie den Webhook mithilfe von **Masseneintrag** zu mehreren Benachrichtigungen hinzufügen.<br><br>
-    ![Wählen Sie die zu aktivierenden Slack-Benachrichtigungen aus][65]{: style="max-width:60%;"}<br><br>
-5. Geben Sie die URL ein, die Slack für Sie generiert hat.
-
-Das war's! Sie sollten ab sofort Benachrichtigungen über Ihr Unternehmen in diesem Slack-Kanal erhalten. Sie können auch den Hilfeartikel von Slack zu diesem Thema lesen: [Senden von Nachrichten über eingehende Webhooks][62].
-
-[22]: {% image_buster /assets/img_archive/company_analytics_report_new.png %}
-[63]: {% image_buster /assets/img_archive/slack_f.png %}
-[64]: {% image_buster /assets/img_archive/copy_url.png %}
-[65]: {% image_buster /assets/img_archive/click_edit_f.png %}
-[67]: https://my.slack.com/services/new/incoming-webhook/
-[61]: {% image_buster /assets/img_archive/notification_preferences.png %}
-[62]: https://api.slack.com/incoming-webhooks
+![Events auswählen, die in den Analytics-Bericht aufgenommen werden sollen]({% image_buster /assets/img_archive/company_analytics_report_new.png %})

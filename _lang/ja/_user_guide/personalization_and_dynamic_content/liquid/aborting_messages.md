@@ -1,12 +1,12 @@
 ---
 nav_title: メッセージの中止
-article_title: Liquid メッセージの中止
+article_title: Liquidメッセージを中止する
 page_order: 7
 description: "このリファレンス記事では、リキッドメッセージの中止といくつかのサンプルユースケースs について説明します。"
 
 ---
 
-# メッセージの中止
+# メッセージを中止する
 
 > オプションで、条件内で`abort_message("optional reason for aborting")` Liquid メッセージタグを使用して、ユーザーへのメッセージ送信を中止できます。この記事では、この機能をマーケティングキャンペーンで使用する方法の例をいくつか紹介します。
 
@@ -59,11 +59,23 @@ Send this message in English!
 ```
 {% endraw %}
 
-![「language was nil」という中止メッセージが表示されている開発者コンソールのメッセージエラーログ]({% image_buster /assets/img_archive/developer_console.png %})
+![「language was nil」という中止メッセージのある開発者コンソールのメッセージエラーログ]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## アボートメッセージのクエリ
 
 Braze に接続されている場合は、[Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) または独自のデータウェアハウスを使用して、Liquid ロジックがメッセージをアボートさせたときにトリガーされる特定のアボートメッセージをクエリーできます。
+
+## アボートロジックが評価される時
+
+アボートロジックの評価タイミングはメッセージチャネルに依存する。
+
+### プッシュ通知、メール、SMS、Webhook、コンテンツカード
+
+アボートロジックは送信時に評価される。つまり、Brazeがメッセージを配信処理する際に評価される。
+
+### アプリ内メッセージ
+
+中止ロジックは、アプリ内メッセージがトリガーされた時点（例えば、ユーザーがトリガーイベントを実行した時やセッションを開始した時）に評価される。メッセージが最初にデバイスに送信された時点ではない。アプリ内メッセージはセッション開始時にSDKに配信され、ローカルにキャッシュされる。トリガー条件が満たされた時点で、Liquid（呼び出し`abort_message()`を含む）が実行される。
 
 ## 考慮事項
 

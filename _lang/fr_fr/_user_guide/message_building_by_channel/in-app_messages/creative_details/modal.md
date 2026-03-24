@@ -24,7 +24,7 @@ description: "Le présent article de référence aborde les exigences de concept
 
 Sur une tablette ou un navigateur de bureau, un message in-app modal s’affiche toujours au centre de l’écran de l’application, comme illustré dans la capture d’écran suivante.
 
-![Message in-app modal tel qu’il apparaîtrait sur un grand écran. Comme pour les écrans de téléphone, le message est placé au centre de l'écran.]({% image_buster /assets/img/modal-large-viewport.png %}){: style="max-width: 800px; border: none;"}
+![Message in-app modal tel qu’il apparaîtrait sur un grand écran. Comme sur les écrans de téléphone, le message se trouve au centre de l'écran.]({% image_buster /assets/img/modal-large-viewport.png %}){: style="max-width: 800px; border: none;"}
 
 
 

@@ -1,6 +1,6 @@
 ---
-nav_title: Managing placements
-article_title: Managing Banner placements for the Braze SDK
+nav_title: Manage placements
+article_title: Manage Banner placements for the Braze SDK
 description: "Learn how to create and manage Banner placements in the Braze SDK, including accessing their unique properties and logging impressions."
 page_order: 2
 platform:
@@ -11,7 +11,7 @@ platform:
   - React Native
 ---
 
-# Managing Banner placements
+# Manage Banner placements
 
 > Learn how to create and manage Banner placements in the Braze SDK, including accessing their unique properties and logging impressions. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
 
@@ -19,13 +19,13 @@ platform:
 
 {% multi_lang_include banners/placement_requests.md %}
 
-## Creating a placement
+## Create a placement
 
 ### Prerequisites
 
 These are the minimum SDK versions needed to create Banner placements:
 
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
+{% multi_lang_include sdk_versions.md feature='banners' %}
 
 {% multi_lang_include banners/creating_placements.md section="developer" %}
 
@@ -121,7 +121,7 @@ If you insert Banners using the SDK methods in this guide, all analytics events 
 {% tabs %}
 {% tab Web %}
 {% subtabs %}
-{% subtab Javascript %}
+{% subtab JavaScript %}
 If you're using vanilla JavaScript with the Web Braze SDK, use [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) to listen for placement updates and then call [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) to fetch them.
 
 ```javascript
@@ -498,15 +498,156 @@ This feature is not currently supported on Roku.
 
 ### Step 5: Send a test Banner (optional) {#handling-test-cards}
 
-Before you launch a Banner campaign, you can [send a test Banner]({{site.baseurl}}/user_guide/message_building_by_channel/banners/testing/) to verify your integration. Test Banners will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test.
+Before you launch a Banner campaign, you can [send a test Banner]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) to verify your integration. Test Banners will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test.
 
 {% alert note %}
 Test Banners are like any other banners, except they're removed at the next app session.
 {% endalert %}
 
-## Logging impressions
+## Log impressions
 
 Braze automatically logs impressions for Banners that are in view when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually.
+
+## Logging clicks
+
+The method used to log Banner clicks depends on how your Banner is rendered and where your click handler is located.
+
+### Standard Banner content (automatic)
+
+If you're using default, out-of-the-box SDK methods to insert Banners, and your Banner uses standard editor components (images, buttons, text), clicks are tracked automatically. The SDK attaches click listeners to these elements, and no additional code is needed.
+
+### Custom Code Blocks
+
+If your Banner uses the **Custom Code** editor block in the Braze dashboard, you must use `brazeBridge.logClick()` to log clicks from within that custom HTML. This applies even when using SDK methods to render the Banner, because the SDK cannot automatically attach listeners to elements inside your custom code.
+
+```html
+<button onclick="brazeBridge.logClick()">
+  Click me
+</button>
+```
+
+For the full reference, see [Custom code and JavaScript bridge for Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/custom_code/#javascript-bridge). The `brazeBridge` provides a communication layer between the Banner's internal HTML and the parent Braze SDK.
+
+### Custom UI implementations (headless)
+
+If you're building a fully custom UI using the Banner's [custom properties](#custom-properties) rather than rendering the Banner HTML, you must manually log clicks and impressions from your application code. Because the SDK is not rendering the Banner, it has no way to automatically track interactions with your custom UI elements.
+
+For method signatures and full details, see the [Braze SDK reference documentation]({{site.baseurl}}/developer_guide/references).
+
+#### Logging impressions
+
+Call the platform's Banner impression method when your custom UI considers the Banner "viewed." Build robust logic for what counts as an impression to avoid duplicate events—for example, log only when the Banner enters the viewport (or equivalent), and do not log again when the same Banner is scrolled back into view or when your component re-renders without a new view event.
+
+{% tabs %}
+{% tab Web %}
+```javascript
+import * as braze from "@braze/web-sdk";
+
+// Log impression when your custom UI considers the banner viewed (for example, once when it enters viewport)
+const banner = braze.getBanner("placement_id_homepage_top");
+if (banner) {
+  braze.logBannerImpressions([banner]);
+}
+```
+[Web SDK reference](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logbannerimpressions)
+{% endtab %}
+{% tab Android %}
+{% subtabs %}
+{% subtab Kotlin %}
+```kotlin
+// Log impression when your custom UI considers the banner viewed (for example, once when it enters viewport)
+Braze.getInstance(context).logBannerImpression("placement_id_homepage_top")
+```
+{% endsubtab %}
+{% subtab Java %}
+```java
+// Log impression when your custom UI considers the banner viewed (for example, once when it enters viewport)
+Braze.getInstance(context).logBannerImpression("placement_id_homepage_top");
+```
+{% endsubtab %}
+{% endsubtabs %}
+[Android SDK reference](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-banner-impression.html)
+{% endtab %}
+{% tab Swift %}
+```swift
+// Retrieve a banner and log an impression on it (for example, once when it enters viewport)
+braze.banners.getBanner(for: "placement_id_homepage_top") { banner in
+ banner?.logImpression(using: braze)
+}
+```
+[Swift SDK reference](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/banner)
+{% endtab %}
+{% tab React Native %}
+```javascript
+// Log impression when your custom UI considers the banner viewed (for example, once when it enters viewport)
+Braze.logBannerImpression("placement_id_homepage_top");
+```
+See the [React Native SDK repository](https://github.com/braze-inc/braze-react-native-sdk) for the latest method signatures.
+{% endtab %}
+{% tab Flutter %}
+```dart
+// Log impression when your custom UI considers the banner viewed (for example, once when it enters viewport)
+braze.logBannerImpression("placement_id_homepage_top");
+```
+[Flutter SDK reference](https://pub.dev/documentation/braze_plugin/latest/braze_plugin/BrazePlugin/logBannerImpression.html)
+{% endtab %}
+{% endtabs %}
+
+#### Logging clicks
+
+Call the platform's Banner click method when the user taps your custom Banner (or a specific button). Pass the optional `buttonId` when the click is on a specific button so analytics can attribute the click correctly.
+
+{% tabs %}
+{% tab Web %}
+```javascript
+import * as braze from "@braze/web-sdk";
+
+// Log click
+braze.logBannerClick("placement_id_homepage_top", buttonId);  // buttonID is optional
+```
+[Web SDK reference](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logbannerclick)
+{% endtab %}
+{% tab Android %}
+{% subtabs %}
+{% subtab Kotlin %}
+```kotlin
+// Log click
+Braze.getInstance(context).logBannerClick("placement_id_homepage_top", buttonId)  // buttonID parameter can be null
+```
+{% endsubtab %}
+{% subtab Java %}
+```java
+// Log click
+Braze.getInstance(context).logBannerClick("placement_id_homepage_top", buttonId);  // buttonID parameter can be null
+```
+{% endsubtab %}
+{% endsubtabs %}
+[Android SDK reference](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-banner-click.html)
+{% endtab %}
+{% tab Swift %}
+```swift
+// Retrieve a banner and log a click on it
+braze.banners.getBanner(for: "placement_id_homepage_top") { banner in
+ banner?.logClick(buttonId: buttonId, using: braze)  // buttonID is optional
+}
+```
+[Swift SDK reference](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/banner)
+{% endtab %}
+{% tab React Native %}
+```javascript
+// Log click
+Braze.logBannerClick("placement_id_homepage_top", buttonId);  // buttonID is optional
+```
+See the [React Native SDK repository](https://github.com/braze-inc/braze-react-native-sdk) for the latest method signatures.
+{% endtab %}
+{% tab Flutter %}
+```dart
+// Log click
+braze.logBannerClicked("placement_id_homepage_top", buttonId);  // buttonID parameter can be null
+```
+[Flutter SDK reference](https://pub.dev/documentation/braze_plugin/latest/braze_plugin/BrazePlugin/logBannerClicked.html)
+{% endtab %}
+{% endtabs %}
 
 ## Dimensions and sizing
 
@@ -526,11 +667,11 @@ You can use custom properties from your Banner campaign to retrieve key–value 
 
 ### Prerequisites
 
-You'll need to [add custom properties]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#custom-properties) to your Banner campaign. Additionally, these are the minimum SDK versions required to access custom properties:
+You'll need to [add custom properties]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#custom-properties) to your Banner campaign. Additionally, these are the minimum SDK versions required to access custom properties:
 
 {% sdk_min_versions swift:13.1.0 android:38.0.0 web:6.1.0 reactnative:17.0.0 flutter:15.1.0 %}
 
-### Accessing custom properties
+### Access custom properties
 
 To access a banner's custom properties, use one of the following methods based on the property's type defined in the dashboard. If the key doesn't match a property of that type or does not exist, the method returns `null`.
 

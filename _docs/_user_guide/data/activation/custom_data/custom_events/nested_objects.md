@@ -23,7 +23,7 @@ You can use nested objects—objects that are inside of another object—to send
 
 The following SDK versions support nested objects:
 
-{% sdk_min_versions swift:5.0.0 android:1.0.0 web:3.3.0 %}
+{% sdk_min_versions swift:5.0.0 android:20.0.0 web:3.3.0 %}
 
 ## Step 1: Generate a schema
 
@@ -84,14 +84,14 @@ The following is a `/users/track` example with a "Created Playlist" custom event
 {% tab Restaurant Example%}
 
 The following is a `/users/track` example with an "Ordered" custom event. After an order has been completed, capture properties of that order by sending:
-- An API request that lists "r_details" as a property
+- An API request that lists `r_details` as a property
 - The nested properties of that order
 
 ```
 ...
 "properties": {
   "r_details": {
-    "name": "McDonalds",
+    "name": "SandwichEmperor",
     "identifier": "12345678",
     "location" : {
       "city": "Montclair",
@@ -154,9 +154,9 @@ The **does not equal** filter only matches if none of the properties in your arr
 
 Triggering a campaign with nested properties from the "Ordered" event:
 
-![A user adding the property filter r_details.name is McDonalds for a custom event.]({% image_buster /assets/img/nested_object1.png %})
+![A user adding the property filter r_details.name is SandwichEmperor for a custom event.]({% image_buster /assets/img/nested_object1.png %})
 
-`r_details.name`: "Mcdonalds"<br>
+`r_details.name`: "SandwichEmperor"<br>
 `r_details.location.city`: "Montclair"
 {% endtab %}
 {% endtabs %}
@@ -180,6 +180,25 @@ To edit or create Segment Extensions, you'll need "Edit Segments" permission.
 Using the **Add Personalization** modal, select **Advanced Event Properties** as the personalization type. This allows the option to add a nested event properties after a schema has been generated.
 
 ![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
+
+## Testing nested objects in messages
+
+The dashboard's **Preview & Test** tool doesn't support adding mock data for nested objects or nested custom attributes. To test messages that reference nested data through Liquid, you can preview messages with nested attributes as an existing user with that nested attribute, or preview messages with custom event properties by launching a live campaign to test users.
+
+### Nested custom attributes
+
+1. Import the nested attributes to the test user profile through the API.
+2. In your campaign or Canvas, go to **Preview & Test**.
+3. Select **Preview as user** and search for the test user. The Liquid will resolve using the actual nested attributes on that user's profile.
+
+### Nested event properties
+
+Nested event properties can't be previewed in the dashboard because they require a live event trigger. To test:
+
+1. Create a campaign or Canvas step that targets only your test users and is triggered by (or references) the custom event with nested properties.
+2. Launch the campaign to your test audience.
+3. Log the custom event with the nested object payload to your test user's profile (using the API or SDK).
+4. Verify that the message renders correctly with the nested property values.
 
 ## Frequently asked questions
 

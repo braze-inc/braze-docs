@@ -1,25 +1,32 @@
 ## Acerca del SDK de Web Braze
 
-El SDK de Web Braze te permite recopilar análisis y mostrar mensajes dentro de la aplicación, push y mensajes de tarjeta de contenido a tus usuarios de la Web. Para más información, consulta la [documentación de referencia de JavaScript de ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html "BrazeJSDocs").
+El SDK de Web Braze te permite recopilar datos de análisis y mostrar mensajes enriquecidos dentro de la aplicación, mensajes push y mensajes de tarjetas de contenido a tus usuarios web. Para obtener más información, consulta [la documentación de referencia de Braze JavaScript](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html).
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
-## Integración del SDK de la Web
+## Integrar el SDK Web
 
-{% alert tip %}
-¿No estás seguro de si el método de integración estándar es el adecuado para ti? Consulta nuestros [otros métodos de integración](#web_other-integration-methods) antes de continuar.
-{% endalert %}
+Puedes realizar la integración del SDK de Web Braze utilizando los siguientes métodos. Para ver opciones adicionales, consulta [otros métodos de integración](#web_other-integration-methods).
 
-### Paso 1: Instala la biblioteca Braze
-
-Puedes instalar la biblioteca Braze utilizando uno de los siguientes métodos. Si tu sitio web utiliza `Content-Security-Policy`, consulta nuestra [Guía de cabeceras de la política de seguridad de contenidos]({{site.baseurl}}/developer_guide/platforms/web/content_security_policy/) antes de instalar la biblioteca.
+- **Integración basada en código:** Integra el SDK de Web Braze directamente en tu código base utilizando tu administrador de paquetes preferido o el CDN de Braze. Esto te permite controlar totalmente cómo se carga y configura el SDK.
+- **Google Tag Manager:** Una solución sin código que te permite realizar la integración del SDK de Web Braze sin modificar el código de tu sitio web. Para obtener más información, consulta [Google Tag Manager con el SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration/google_tag_manager/).
 
 {% alert important %}
-Aunque la mayoría de los bloqueadores de anuncios no bloquearán el SDK de la Web de Braze, se sabe que algunos bloqueadores de anuncios más restrictivos causan problemas.
+Recomendamos utilizar el [método de integración NPM]({{site.baseurl}}/developer_guide/sdk_integration/?subtab=package%20manager&sdktab=web). Las ventajas incluyen el almacenamiento local de bibliotecas SDK en tu sitio web, la inmunidad frente a las extensiones de bloqueo de anuncios y la contribución a tiempos de carga más rápidos como parte de la compatibilidad con el empaquetador.
 {% endalert %}
 
 {% tabs local %}
-{% tab administrador de paquetes %}
+{% tab code-based integration %}
+### Paso 1: Instala la biblioteca Braze
+
+Puedes instalar la biblioteca Braze utilizando uno de los siguientes métodos. Sin embargo, si tu sitio web utiliza un `Content-Security-Policy`, revisa la [Política de seguridad de contenidos]({{site.baseurl}}/developer_guide/platforms/web/content_security_policy/) antes de continuar.
+
+{% alert important %}
+Aunque la mayoría de los bloqueadores de anuncios no bloquean el SDK Web de Braze, se sabe que algunos bloqueadores de anuncios más restrictivos causan problemas.
+{% endalert %}
+
+{% subtabs %}
+{% subtab package manager %}
 Si tu sitio utiliza los administradores de paquetes NPM o Yarn, puedes añadir el [paquete NPM de Braze](https://www.npmjs.com/package/@braze/web-sdk) como dependencia.
 
 A partir de la versión 3.0.0, se incluyen definiciones tipográficas. Para obtener notas sobre la actualización de 2.x a 3.x, consulta nuestro [registro de cambios](https://github.com/braze-inc/braze-web-sdk/blob/master/UPGRADE_GUIDE.md).
@@ -37,37 +44,38 @@ import * as braze from "@braze/web-sdk";
 // or, using `require`
 const braze = require("@braze/web-sdk");
 ```
-{% endtab %}
+{% endsubtab %}
 
-{% tab Google Tag Manager %}
-El SDK de Braze Web puede instalarse desde la biblioteca de plantillas de Google Tag Manager. Se admiten dos etiquetas:
-
-1. Etiqueta de inicialización: carga el SDK Web en tu sitio web y, opcionalmente, establece el ID de usuario externo.
-2. Etiqueta de acciones: se utiliza para desencadenar eventos personalizados, compras, cambiar ID de usuario o alternar el seguimiento del SDK.
-
-Visita la [guía de integración de Google Tag Manager]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web#web_google-tag-manager) para obtener más información.
-{% endtab %}
-
-{% tab braze cdn %}
+{% subtab braze cdn %}
 Añade el SDK Braze Web directamente a tu HTML haciendo referencia a nuestro script alojado en CDN, que carga la biblioteca de forma asíncrona.
 
 <script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Floading-snippet.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
-{% endtab %}
-{% endtabs %}
 
-### Paso 2: Inicializar el SDK (opcional)
+{% alert important %}
+La configuración predeterminada **«Prevenir el seguimiento entre sitios»** en Safari puede impedir que se muestren tipos de mensajes dentro de la aplicación, como banners y tarjetas de contenido de banner, cuando utilizas el método de integración CDN. Para evitar este problema, utiliza el método de integración NPM, de modo que Safari no clasifique estos mensajes como tráfico entre sitios y tus usuarios web puedan verlos en todos los navegadores compatibles.
+{% endalert %}
 
-Si has configurado las opciones de inicialización de Braze en un administrador de etiquetas, puedes omitir este paso.
+{% endsubtab %}
+{% endsubtabs %}
 
-De lo contrario, después de añadir el SDK Braze Web a tu sitio web, inicializa la biblioteca con la clave de API y la [URL del punto final SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) que se encuentran en **Configuración** > **Configuración de la aplicación** dentro de tu panel Braze. Para obtener una lista completa de las opciones de `braze.initialize()`, junto con nuestros otros métodos de JavaScript, consulta la [documentación de JavaScript de Braze](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
+### Paso 2: Inicializar el SDK
+
+Una vez añadido Braze Web SDK a tu sitio web, inicializa la biblioteca con la clave de API y [la URL del punto final SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) que se encuentran en **Configuración** > **Configuración de la aplicación** dentro de tu panel de Braze. Para obtener una lista completa`braze.initialize()` de opciones, junto con nuestros otros métodos JavaScript, consulta [la documentación de Braze JavaScript](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize).
+
+{% alert note %}
+**No se admiten dominios personalizados para solicitudes de Web SDK**: El SDK Web`baseUrl` debe ser un punto final SDK de Braze (por ejemplo, `sdk.iad-05.braze.com`). Braze no admite el enrutamiento del tráfico del SDK Web a través de un dominio propiedad del cliente mediante registros CNAME. Si necesitas que las solicitudes del SDK Web se originen desde tu propio dominio, ponte en contacto con el soporte de Braze.
+{% endalert %}
 
 ```javascript
 // initialize the SDK
 braze.initialize('YOUR-API-KEY-HERE', {
-    baseUrl: "YOUR-SDK-ENDPOINT-HERE"
+    baseUrl: "YOUR-SDK-ENDPOINT-HERE",
+    enableLogging: false, // set to `true` for debugging
+    allowUserSuppliedJavascript: false, // set to `true` to support custom HTML messages
 });
 
-// optionally show all in-app messages without custom handling
+// Enable automatic display of in-app messages
+// Required if you want in-app messages to display automatically when triggered
 braze.automaticallyShowInAppMessages();
 
 // if you use Content Cards
@@ -86,20 +94,96 @@ braze.openSession();
 ```
 
 {% alert important %}
+**Visualización de mensajes dentro de la aplicación**: Para mostrar automáticamente los mensajes dentro de la aplicación cuando se desencadenan, debes llamar a `braze.automaticallyShowInAppMessages()`. Sin esta llamada, los mensajes dentro de la aplicación no se muestran automáticamente. Si deseas administrar manualmente la visualización de mensajes, elimina esta llamada y utiliza`braze.subscribeToInAppMessage()`  en su lugar. Para obtener más información, consulta [Entrega de mensajes dentro de la aplicación]({{site.baseurl}}/developer_guide/in_app_messages/delivery/).
+{% endalert %}
+
+#### Solución de problemas relacionados con sesiones perdidas para usuarios anónimos
+
+Si observas un comportamiento de «sesión perdida» o no puedes realizar el seguimiento de la sesión de los usuarios anónimos en la Web, asegúrate de que tu integración realiza llamadas`braze.openSession()`  durante la inicialización.
+
+- **Escenario:** Los usuarios anónimos pueden devolver un ID de Braze, pero los datos de la sesión están en blanco o faltan.
+- **Causa:** La implementación no llama a`braze.openSession()` .
+- **Resolución:** Siempre llama`braze.openSession()`  después de la inicialización (y después de`braze.changeUser()`  si estableces un ID externo).
+
+Para obtener más información, consulta [el Paso 2: Inicializa el SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web&tab=code-based%20integration#step-2-initialize-the-sdk).
+
+{% alert important %}
 Los usuarios anónimos en dispositivos móviles o Web pueden contabilizarse en tu [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). Como resultado, puede que quieras cargar o inicializar condicionalmente el SDK para excluir a estos usuarios de tu recuento de MAU.
 {% endalert %}
+{% endtab %}
+
+{% tab Google Tag Manager %}
+{% multi_lang_include developer_guide/web/google_tag_manager/initialization_tag.md %}
+{% endtab %}
+{% endtabs %}
+
+## Filtrado del tráfico de bots {#bot-filtering}
+
+Los MAU pueden incluir un porcentaje de usuarios bot, lo que infla tu recuento de usuarios activos al mes. Aunque el SDK web de Braze incluye detección integrada para algunos rastreadores web comunes (como los bots de motores de búsqueda y los bots de vista previa de redes sociales), es especialmente importante mantenerse proactivo con soluciones robustas para detectar bots, ya que las actualizaciones del SDK por sí solas no pueden detectar de forma consistente todos los bots nuevos.
+
+### Limitaciones de la detección de bots por parte del SDK
+
+El SDK Web incluye una detección básica de bots basada en agentes de usuario que filtra los rastreadores conocidos. Sin embargo, este enfoque tiene limitaciones:
+
+- **Constantemente surgen nuevos bots**: Las empresas de IA y otros actores crean regularmente nuevos bots que pueden camuflarse para evitar ser detectados.
+- **Suplantación de identidad del usuario**: Los bots sofisticados pueden imitar a los agentes de usuario legítimos de los navegadores.
+- **Bots personalizados**: Los usuarios sin conocimientos técnicos ahora pueden crear fácilmente bots utilizando modelos de lenguaje grandes (LLM), lo que hace que el comportamiento de los bots sea impredecible.
+
+### Implementación del filtrado de bots
+
+{% alert important %}
+Las soluciones que se describen a continuación son sugerencias generales. Adapta la lógica para filtrar bots a tu entorno y patrones de tráfico únicos.
+{% endalert %}
+
+La solución más sólida es implementar tu propia lógica para filtrar bots antes de inicializar el SDK de Braze. Los enfoques comunes incluyen:
+
+#### Requiere interacción del usuario
+
+Considera la posibilidad de retrasar la inicialización del SDK hasta que el usuario realice una interacción significativa, como aceptar un banner de consentimiento de cookies, desplazarse por la página o hacer clic. Este enfoque suele ser más fácil de implementar y puede resultar muy eficaz para filtrar el tráfico de bots.
+
+{% alert important %}
+Retrasar la inicialización del SDK hasta que se produzca la interacción del usuario puede provocar que los banners y las tarjetas de contenido tampoco se muestren hasta que se produzca dicha interacción.
+{% endalert %}
+
+#### Detección personalizada de bots
+
+Implementa una detección personalizada basada en tus patrones específicos de tráfico de bots, tales como:
+
+- Analizar las cadenas de agente de usuario en busca de patrones que hayas identificado en tu tráfico.
+- Comprobación de indicadores de navegador sin interfaz gráfica
+- Uso de servicios de detección de bots de terceros
+- Supervisión de señales de comportamiento específicas de tu sitio web
+
+**Ejemplo de inicialización condicional:**
+
+```javascript
+// Only initialize Braze if your custom bot detection determines this is not a bot
+if (!isLikelyBot()) {
+  braze.initialize('YOUR-API-KEY-HERE', {
+    baseUrl: "YOUR-SDK-ENDPOINT-HERE"
+  });
+  braze.automaticallyShowInAppMessages();
+  braze.openSession();
+}
+```
+
+### Buenas prácticas
+
+- Analiza periódicamente tus datos de usuarios activos mensuales (MAU) y los patrones de tráfico Web para identificar nuevos comportamientos de bots.
+- Realiza pruebas exhaustivas para asegurarte de que tu filtro de bots no impida el seguimiento de usuarios legítimos.
+- Actualiza tu lógica para filtrar basándote en los patrones de tráfico de bots que observes en tu entorno.
 
 ## Configuraciones opcionales
 
 ### Registro
 
-Para habilitar rápidamente el registro, puedes añadir `?brazeLogging=true` como parámetro a la URL de tu sitio web. También puedes habilitar el registro [básico](#web_basic-logging) o [personalizado](#web_custom-logging).
+Para habilitar rápidamente el registro, puedes añadir `?brazeLogging=true` como parámetro a la URL de tu sitio web. También puedes habilitar el registro [básico](#web_basic-logging) o [personalizado](#web_custom-logging). Para obtener un resumen centralizado de todas las plataformas, consulta [Registro detallado]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging).
 
 #### Registro básico
 
 {% tabs local %}
-{% tab antes de la inicialización %}
-Utiliza `enableLogging` para registrar mensajes básicos de depuración en la consola de JavaScript antes de que se inicialice el SDK.
+{% tab before initialization %}
+Utiliza`enableLogging`  para registrar mensajes básicos de depuración en la consola de JavaScript antes de que se inicialice el SDK.
 
 ```javascript
 enableLogging: true
@@ -116,8 +200,8 @@ braze.openSession();
 ```
 {% endtab %}
 
-{% tab después de la inicialización %}
-Utiliza `braze.toggleLogging()` para registrar mensajes básicos de depuración en la consola de JavaScript después de inicializar el SDK. Tu método debe ser similar al siguiente
+{% tab after initialization %}
+Utiliza`braze.toggleLogging()`  para registrar mensajes básicos de depuración en la consola JavaScript después de inicializar el SDK. Tu método debe ser similar al siguiente
 
 ```javascript
 braze.initialize('API-KEY', {
@@ -136,7 +220,7 @@ Los registros básicos son visibles para todos los usuarios, así que considera 
 
 #### Registro personalizado
 
-Utiliza `setLogger` para registrar mensajes de depuración personalizados en la consola de JavaScript. A diferencia de los registros básicos, estos registros no son visibles para los usuarios.
+Utiliza`setLogger`  para registrar mensajes de depuración personalizados en la consola de JavaScript. A diferencia de los registros básicos, estos registros no son visibles para los usuarios.
 
 ```javascript
 setLogger(loggerFunction: (message: STRING) => void): void
@@ -156,56 +240,21 @@ braze.openSession();
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
-Cuando hagas referencia al SDK de Braze Web desde nuestra red de entrega de contenidos, por ejemplo, `https://js.appboycdn.com/web-sdk/a.a/braze.min.js` (como recomiendan nuestras instrucciones de integración predeterminadas), tus usuarios recibirán actualizaciones menores (correcciones de errores y características compatibles con versiones anteriores, versiones `a.a.a` a `a.a.z` en los ejemplos anteriores) automáticamente cuando actualicen tu sitio.
+Cuando haces referencia al SDK web de Braze desde nuestra red de entrega de contenidos, por ejemplo,`https://js.appboycdn.com/web-sdk/a.a/braze.min.js`  (tal y como recomiendan nuestras instrucciones de integración predeterminadas), tus usuarios reciben actualizaciones menores (correcciones de errores y características compatibles con versiones anteriores, versiones`a.a.a`  hasta`a.a.z`  en los ejemplos anteriores) automáticamente cuando actualizan tu sitio.
 
-Sin embargo, cuando publicamos cambios importantes, te pedimos que actualices el SDK Braze Web manualmente para asegurarte de que nada en tu integración se verá afectado por los cambios de última hora. Además, si descargas nuestro SDK y lo alojas tú mismo, no recibirás ninguna actualización de versión automáticamente y deberás actualizarlo manualmente para recibir las últimas características y correcciones de errores.
+Sin embargo, cuando lanzamos cambios importantes, es necesario que actualices manualmente el SDK Web de Braze para garantizar que los cambios significativos no afecten a tu integración. Además, si descargas nuestro SDK y lo alojas tú mismo, no recibirás ninguna actualización de versión automáticamente y deberás actualizarlo manualmente para disfrutar de las últimas características y correcciones de errores.
 
 Puedes mantenerte al día de nuestra última versión [siguiendo nuestra fuente de versiones](https://github.com/braze-inc/braze-web-sdk/tags.atom) con el lector RSS o el servicio que prefieras, y consultar [nuestro registro de cambios](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) para conocer el historial completo de versiones de nuestro SDK para la Web. Para actualizar el SDK Web de Braze:
 
 - Actualiza la versión de la biblioteca Braze cambiando el número de versión de `https://js.appboycdn.com/web-sdk/[OLD VERSION NUMBER]/braze.min.js`, o en las dependencias de tu administrador de paquetes.
 - Si tienes integrado el push web, actualiza el archivo del prestador de servicios en tu sitio: por defecto, se encuentra en `/service-worker.js`, en el directorio raíz de tu sitio, pero la ubicación puede estar personalizada en algunas integraciones. Debes acceder al directorio raíz para alojar un archivo de prestador de servicios.
 
-Estos dos archivos deben actualizarse coordinadamente para que funcionen correctamente.
-
-## Google Tag Manager {#google-tag-manager}
-
-[Google Tag Manager (GTM](https://support.google.com/tagmanager/answer/6103696) ) te permite añadir, eliminar y editar etiquetas de forma remota en tu sitio web sin necesidad de liberar código de producción ni recursos de ingeniería. Braze ofrece las siguientes plantillas GTM:
-
-|Tipo de etiqueta|Casos de uso|
-|--------|--------|
-| **Etiqueta de inicialización:** | La etiqueta de inicialización puede utilizarse para [inicializar el SDK de Web Braze]({{site.baseurl}}/developer_guide/sdk_integration/initialization/?sdktabs=web).|
-| **Etiqueta de acción:** | La etiqueta de acción puede utilizarse para [gestionar tarjetas de contenido]({{site.baseurl}}/docs/developer_guide/content_cards/?sdktab=web#web_using-google-tag-manager) y [registrar análisis]({{site.baseurl}}/docs/developer_guide/analytics/).|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
-
-Ambas etiquetas pueden añadirse a tu espacio de trabajo desde [la galería de la comunidad de Google](https://tagmanager.google.com/gallery/#/?filter=braze) o buscando Braze al añadir una nueva etiqueta desde las plantillas de la comunidad.
-
-![imagen de búsqueda de la galería]({% image_buster /assets/img/web-gtm/gtm-community-gallery-search.png %})
-
-### Política de consentimiento del usuario de la UE actualizada de Google
-
-{% alert important %}
-Google está actualizando su [Política de Consentimiento de Usuario de la UE](https://www.google.com/about/company/user-consent-policy/) en respuesta a los cambios en la [Ley de Mercados Digitales (DMA)](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), que entrará en vigor el 6 de marzo de 2024. Este nuevo cambio obliga a los anunciantes a revelar determinada información a sus usuarios finales del EEE y del Reino Unido, así como a obtener de ellos los consentimientos necesarios. Consulte la siguiente documentación para obtener más información.
-{% endalert %}
-
-Como parte de la Política de consentimiento del usuario de la UE de Google, los siguientes atributos personalizados booleanos deben registrarse en los perfiles de usuario:
-
-- `$google_ad_user_data`
-- `$google_ad_personalization`
-
-Si los configuras a través de la integración GTM, los atributos personalizados requieren la creación de una etiqueta HTML personalizada. A continuación se muestra un ejemplo de cómo registrar estos valores como tipos de datos booleanos (no como cadenas):
-
-```js
-<script>
-window.braze.getUser().setCustomUserAttribute("$google_ad_personalization", true);
-</script>
-```
-
-Para más información, consulta [Sincronización de audiencias con Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/).
+Debes actualizar estos dos archivos de forma coordinada para que funcionen correctamente.
 
 ## Otros métodos de integración
 
 ### Páginas móviles aceleradas (AMP)
-{% details Ver más %}
+{% details See more %}
 #### Paso 1: Incluir script de notificación push web AMP
 
 Añade la siguiente etiqueta de script asíncrono a tu cabecera:
@@ -216,7 +265,7 @@ Añade la siguiente etiqueta de script asíncrono a tu cabecera:
 
 #### Paso 2: Añadir widgets de suscripción
 
-Añade un widget al cuerpo de tu HTML que permita a los usuarios suscribirse y cancelar suscripción desde push.
+Añade un widget al cuerpo de tu HTML que permita a los usuarios suscribirse y cancelar la suscripción a las notificaciones push.
 
 ```js
 <!-- A subscription widget -->
@@ -230,22 +279,22 @@ Añade un widget al cuerpo de tu HTML que permita a los usuarios suscribirse y c
 </amp-web-push-widget>
 ```
 
-#### Paso 3: Añade `helper-iframe` y `permission-dialog`
+#### Paso 3: Añadir`helper-iframe`  y `permission-dialog`
 
-El componente AMP Web Push crea una ventana emergente para gestionar las suscripciones push, por lo que tendrás que añadir los siguientes archivos de ayuda a tu proyecto para habilitar esta característica:
+El componente AMP de notificación push web crea una ventana emergente para gestionar las suscripciones push, por lo que debes añadir los siguientes archivos auxiliares a tu proyecto para habilitar esta característica:
 
 - [`helper-iframe.html`](https://cdn.ampproject.org/v0/amp-web-push-helper-frame.html)
 - [`permission-dialog.html`](https://cdn.ampproject.org/v0/amp-web-push-permission-dialog.html)
 
 #### Paso 4: Crear un archivo de prestador de servicios
 
-Crea un archivo `service-worker.js` en el directorio raíz de tu sitio web y añade el siguiente fragmento de código:
+Crea un`service-worker.js`archivo en el directorio raíz de tu sitio web y añade el siguiente fragmento de código:
 
 <script src="{{site.baseurl}}/assets/js/embed.js?target=https://github.com/braze-inc/braze-web-sdk/blob/master/sample-builds/cdn/service-worker.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 #### Paso 5: Configurar el elemento HTML de notificación push web de AMP
 
-Añade el siguiente elemento HTML `amp-web-push` al cuerpo de tu HTML. Ten en cuenta que tienes que añadir tus [`apiKey` y `baseUrl`](https://documenter.getpostman.com/view/4689407/SVYrsdsG) como parámetros de consulta a `service-worker-URL`.
+Añade el siguiente elemento`amp-web-push` HTML al cuerpo de tu HTML. Ten en cuenta que debes añadir  [y`baseUrl``apiKey` ](https://documenter.getpostman.com/view/4689407/SVYrsdsG) como parámetros de consulta a `service-worker-URL`.
 
 ```js
 <amp-web-push
@@ -258,19 +307,22 @@ service-worker-url="FILE_PATH_TO_YOUR_SERVICE_WORKER?apiKey={YOUR_API_KEY}&baseU
 ```
 {% enddetails %}
 
-### AMD: Desactivar soporte
+### Definición de módulo asíncrono (AMD)
 
-Si tu sitio utiliza RequireJS u otro cargador de módulos AMD, pero prefieres cargar el SDK de la Web de Braze a través de una de las otras opciones de esta lista, puedes cargar una versión de la biblioteca que no incluya compatibilidad con AMD. Esta versión de la biblioteca puede cargarse desde la siguiente ubicación CDN:
+#### Desactivar soporte técnico
+
+Si tu sitio utiliza RequireJS u otro cargador de módulos AMD, pero prefieres cargar el SDK Web de Braze a través de una de las otras opciones de esta lista, puedes cargar una versión de la biblioteca que no incluya compatibilidad con AMD. Esta versión de la biblioteca puede cargarse desde la siguiente ubicación CDN:
 
 <script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fno-amd-library.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
-### AMD: Cargador de módulos
+#### Cargador de módulos
 
 Si utilizas RequireJS u otros cargadores de módulos AMD, te recomendamos que autoalojes una copia de nuestra biblioteca y la referencies como harías con otros recursos:
 
 ```javascript
 require(['path/to/braze.min.js'], function(braze) {
   braze.initialize('YOUR-API-KEY-HERE', { baseUrl: 'YOUR-SDK-ENDPOINT' });
+  // Required if you want in-app messages to display automatically
   braze.automaticallyShowInAppMessages();
   braze.openSession();
 });
@@ -294,7 +346,7 @@ Al utilizar Jest, es posible que aparezca un error similar a `SyntaxError: Unexp
 
 ### Marcos SSR {#ssr}
 
-Si utilizas un marco de renderizado del lado del servidor (SSR) como Next.js, puedes encontrar errores porque el SDK está pensado para ejecutarse en un entorno de navegador. Puedes resolver estos problemas importando dinámicamente el SDK.
+Si utilizas un marco de trabajo de renderizado del lado del servidor (SSR), como Next.js, es posible que encuentres errores, ya que el SDK está diseñado para ejecutarse en un entorno de navegador. Puedes resolver estos problemas importando dinámicamente el SDK.
 
 Puedes conservar las ventajas de la arborescencia al hacerlo exportando las partes del SDK que necesites en un archivo aparte y luego importando dinámicamente ese archivo en tu componente.
 
@@ -338,7 +390,7 @@ useEffect(() => {
 
 Tealium iQ ofrece una integración básica de Braze llave en mano. Para configurar la integración, busca Braze en la interfaz de gestión de etiquetas de Tealium y proporciona la clave de API de SDK Web desde tu panel.
 
-Para obtener más información o ayuda detallada sobre la configuración de Tealium, consulta nuestra [documentación sobre integración]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) o ponte en contacto con tu director de cuentas de Tealium.
+Para obtener más detalles o asistencia detallada sobre la configuración de Tealium, consulta nuestra [documentación sobre integración]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) o ponte en contacto con tu director de cuentas de Tealium.
 
 ### Vite {#vite}
 

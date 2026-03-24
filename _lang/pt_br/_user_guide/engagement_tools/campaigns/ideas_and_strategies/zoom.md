@@ -1,5 +1,5 @@
 ---
-nav_title: Automatizar o registro do Zoom
+nav_title: Automatize o registro no Zoom
 article_title: Automatizar o registro do Zoom
 page_order: 1
 page_type: tutorial
@@ -27,13 +27,13 @@ POST: `/meetings/{webinarId}/registrants`
 Para saber mais, consulte o [Adicionar endpoint registrante de webinar do Zoom](https://developers.zoom.us/docs/api/rest/reference/zoom-api/methods/#operation/webinarRegistrantCreate).<br><br>
 
 {% tabs %}
-{% tab E-mail %}
+{% tab Email %}
 
 Crie uma campanha de e-mail com um botão de chamada para ação no corpo da mensagem. Quando um usuário clicar no botão, redirecione-o para a landing page do webinar (com os parâmetros apropriados incluídos no link de redirecionamento). 
 
 Usando os parâmetros no URL para passar dados de usuários, crie uma chamada de API para disparar quando a página for carregada para adicionar o usuário ao webinar.
 
-![Mensagem de e-mail com modelo Liquid usado para incluir nome, sobrenome, endereço de e-mail e cidade.]({% image_buster /assets/img/zoom/zoom1.png %})
+![Mensagem de e-mail com a utilização de Liquid para incluir o nome, sobrenome, endereço de e-mail e cidade.]({% image_buster /assets/img/zoom/zoom1.png %})
 
 Os usuários agora estão registrados para o webinar com os detalhes que já existem em seu perfil da Braze.
 
@@ -44,7 +44,7 @@ Os usuários agora estão registrados para o webinar com os detalhes que já exi
 
 	Defina o comportamento ao clicar no botão para criar um link para a landing page do webinar.<br>
 
-	![Link para o webinar quando um botão é clicado.]({% image_buster /assets/img/zoom/zoom2.png %})<br><br>
+	![Linkando para o webinar quando um botão é clicado.]({% image_buster /assets/img/zoom/zoom2.png %})<br><br>
 
 	Um exemplo simples de landing page para usuários que se inscrevem por meio de um clique no botão de um push. Informe ao usuário para o que ele se inscreveu e confirme seu registro:<br>
 
@@ -54,11 +54,11 @@ Os usuários agora estão registrados para o webinar com os detalhes que já exi
 2. Crie uma campanha de webhook disparada pela mensagem no app ou pelo clique no botão.<br><br>
  	Usando os dados de usuários existentes em seus perfis na Braze, inscreva-se no webinar.<br>
 
-	![Uma campanha baseada em ações que será enviada aos usuários que clicaram em um botão para uma campanha específica.]({% image_buster /assets/img/zoom/zoom6.png %})<br><br>
+	![Uma campanha baseada em ações que será enviada para usuários que clicaram em um botão para uma campanha específica.]({% image_buster /assets/img/zoom/zoom6.png %})<br><br>
 
 	Exemplo de chamada de webhook para o ponto de extremidade do Zoom.<br>
 	{% raw %}
-	```json
+	```http
 	POST https://api.zoom.com/meetings/{webinarId}/registrants
 
 	{
@@ -75,13 +75,13 @@ Os usuários agora estão registrados para o webinar com os detalhes que já exi
 3. Os usuários agora estão registrados para o webinar com os detalhes que já existem em seu perfil da Braze.
 
 {% endtab %}
-{% tab Mensagem no app %}
+{% tab In-app message %}
 
 1. Crie uma campanha de mensagens no app<br><br>
 
 	Defina o comportamento ao clicar no botão para criar um link para a landing page do webinar<br>
 
-	![Link para o webinar quando um botão é clicado.]({% image_buster /assets/img/zoom/zoom3.png %})<br><br>
+	![Linkando para o webinar quando um botão é clicado.]({% image_buster /assets/img/zoom/zoom3.png %})<br><br>
 
 	Um exemplo simples de landing page para usuários que se inscrevem por meio de um clique no botão de uma mensagem no app. Informe ao usuário para o que ele se inscreveu e confirme seu registro:<br>
 
@@ -90,11 +90,11 @@ Os usuários agora estão registrados para o webinar com os detalhes que já exi
 2. Crie uma campanha de webhook disparada pela mensagem no app ou pelo clique no botão.<br><br>
 	Usando os dados de usuários existentes em seus perfis na Braze, inscreva-se no webinar.<br>
 
-	![Uma campanha baseada em ação que será enviada aos usuários que clicaram em um botão para uma campanha específica.]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
+	![Uma campanha baseada em ações que será enviada para usuários que clicaram em um botão para uma campanha específica.]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
 
 	Exemplo de chamada de webhook para o ponto de extremidade do Zoom.<br>
 	{% raw %}
-	```json
+	```http
 	POST https://api.zoom.com/meetings/{webinarId}/registrants
 
 	{

@@ -4,7 +4,7 @@ article_title: Detalles creativos
 page_order: 3.5
 layout: dev_guide
 guide_top_header: "Detalles creativos"
-guide_top_text: "Antes de dar rienda suelta a tu creatividad con nuestros mensajes in-app, debes conocer algunas de las directrices. Todas las plantillas de mensajes in-app están diseñadas para mostrar texto de distinta longitud e imágenes de distintos tamaños en los dispositivos modernos. Para asegurarte de que tu mensaje se muestra bien en todos los teléfonos, tabletas y ordenadores, te recomendamos que sigas estas directrices y que <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>pruebes siempre tus mensajes</a> antes de lanzarlos."
+guide_top_text: "Antes de dar rienda suelta a tu creatividad con nuestros mensajes in-app, debes conocer algunas de las directrices. Todas las plantillas de mensajes in-app están diseñadas para mostrar texto de distinta longitud e imágenes de distintos tamaños en los dispositivos modernos. Para asegurarte de que tu mensaje se muestra bien en todos los teléfonos, tabletas y ordenadores, te recomendamos que sigas estas directrices y que <a href='/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/'>pruebes siempre tus mensajes</a> antes de lanzarlos."
 description: "Este landing hub cubre los requisitos de diseño y contenido para los tres tipos de mensajes in-app: modal, slideup y fullscreen."
 
 channel:
@@ -46,11 +46,11 @@ En general, Braze recomienda utilizar imágenes que quepan en una pantalla de 16
 - Recomendamos alojar imágenes en la [biblioteca multimedia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) para permitir que el SDK de Braze descargue activos de nuestra CDN para la visualización de mensajes sin conexión.
 - Para los mensajes a pantalla completa, sigue nuestras directrices para la [zona segura de imágenes]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
 
-{% alert tip %} ¡Crea activos con confianza! Nuestras plantillas de imágenes de mensajes in-app y superposiciones de zonas seguras están diseñadas para adaptarse a dispositivos de todos los tamaños. [Descargar plantillas de diseño ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+{% alert tip %} ¡Crea activos con confianza! Nuestras plantillas de imágenes de mensajes dentro de la aplicación y superposiciones de zonas seguras están diseñadas para adaptarse a dispositivos de todos los tamaños. [Descargar plantillas de diseño ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
-{% tabs %}{% tab Pantalla completa %}
+{% tabs %}{% tab Fullscreen %}
 
-![Mensaje en pantalla completa que ocupa la pantalla de una aplicación. El mensaje a pantalla completa incluye una imagen grande, la cabecera, el cuerpo del mensaje y dos botones.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![Mensaje en pantalla completa que ocupa la pantalla de una aplicación. El mensaje a pantalla completa incluye una imagen grande, una cabecera, el cuerpo del mensaje y dos botones.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 | Diseño | Tamaño de los activos | Notas |
 |--- | --- | --- |
@@ -75,9 +75,9 @@ En general, Braze recomienda utilizar imágenes que quepan en una pantalla de 16
 [Más detalles sobre los modales]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/modal)
 
 {% endtab %}
-{% tab Deslizamiento hacia arriba %}
+{% tab Slideup %}
 
-![Mensaje deslizamiento hacia arriba dentro de la aplicación que aparece desde la parte inferior de la pantalla de la aplicación. El slideup incluye una imagen de icono y un breve mensaje.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Mensaje deslizamiento hacia arriba dentro de la aplicación que aparece desde la parte inferior de la pantalla de la aplicación. El deslizamiento hacia arriba incluye una imagen de icono y un mensaje breve.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 | Diseño | Tamaño de los activos | Notas |
 |--- | --- | --- |

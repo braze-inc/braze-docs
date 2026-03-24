@@ -1,5 +1,5 @@
 ---
-nav_title: Anleitung zum Upgrade für iOS 15
+nav_title: iOS 15 upgraden Anleitung
 article_title: Upgrade-Leitfaden für das iOS 15 SDK
 page_order: 7
 platform: iOS
@@ -70,7 +70,7 @@ Laut Apple wird für Nutzer:innen, die den Zugriff auf den Standort im Hintergru
 
 ## Apple Mail {#mail}
 
-In diesem Jahr hat Apple zahlreiche Updates zum Tracking von E-Mails und zum Datenschutz angekündigt. Weitere Informationen finden Sie in unserem [Blogbeitrag](https://www.braze.com/resources/articles/9-ways-email-marketers-can-respond-to-apples-mail-privacy-protection-feature).
+In diesem Jahr hat Apple zahlreiche Updates in Bezug auf E-Mail-Tracking und Datenschutz angekündigt. Weitere Informationen finden Sie in unserem [Blogbeitrag](https://www.braze.com/resources/articles/9-ways-email-marketers-can-respond-to-apples-mail-privacy-protection-feature).
 
 ## Standort der Safari IP-Adresse
 

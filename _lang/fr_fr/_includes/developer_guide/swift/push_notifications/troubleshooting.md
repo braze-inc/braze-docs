@@ -27,16 +27,16 @@ Lorsque les utilisateurs ouvrent votre application, ils sont invités à accepte
 
 #### Considérations relatives à la génération de jetons push
 
-- Si les utilisateurs installent votre app sur un autre appareil, un autre jeton sera créé et capturé de la même manière. 
-- Si les utilisateurs réinstallent votre app, un nouveau jeton sera généré et transmis à Braze. Cependant, le jeton d'origine peut toujours être considéré comme valide par les APN et Braze.
-- Si les utilisateurs désinstallent votre application, Braze n'en est pas immédiatement informé et le jeton apparaîtra toujours comme valide jusqu'à ce qu'il soit retiré par les APN. 
-- À un moment donné, les APN retireront les anciens jetons. Braze n'en a ni le contrôle ni la visibilité. 
+- Si les utilisateurs installent votre application sur un autre appareil, un autre jeton sera généré et capturé de la même manière. 
+- Si les utilisateurs réinstallent votre application, un nouveau jeton sera généré et transmis à Braze. Cependant, le jeton d'origine peut toujours être enregistré comme valide par APN et Braze.
+- Si les utilisateurs désinstallent votre application, Braze n'en est pas immédiatement informé et le jeton continuera d'apparaître comme valide jusqu'à ce qu'il soit retiré par APN. 
+- À un moment donné, les APN retireront les anciens jetons. Braze n'a aucun contrôle ni aucune visibilité sur ce point. 
 
 ### Étape 3 : Lancer une campagne de notifications push Braze
 
-Lorsqu’une campagne de notifications push est lancée, Braze effectuera des demandes aux APN pour délivrer votre message. Plus précisément, les demandes sont transmises aux APN pour chaque jeton de poussée en cours de validité, sauf si l'option **Envoyer à l'appareil le plus récent de l'utilisateur** est sélectionnée. Une fois que Braze a reçu une réponse positive des APN, nous enregistrons une réception/distribution réussie dans le profil de l'utilisateur, bien que l'utilisateur puisse ne pas avoir reçu le message pour diverses raisons :
-- Leur appareil est hors tension.
-- Leur appareil n'est pas connecté à l'internet (Wi-Fi ou cellulaire).
+Lorsqu’une campagne de notifications push est lancée, Braze effectuera des demandes aux APN pour délivrer votre message. Plus précisément, les demandes sont transmises à APN pour chaque jeton push valide actuel, sauf si **l'option Envoyer à l'appareil le plus récent de l'utilisateur** est sélectionnée. Une fois que Braze a reçu une réponse positive de la part d'APN, nous enregistrons une réception/distribution réussie dans le profil utilisateur, même si celui-ci n'a pas reçu le message pour diverses raisons, notamment :
+- Leur appareil est éteint.
+- Leur appareil n'est pas connecté à Internet (Wi-Fi ou réseau cellulaire).
 - Ils ont récemment désinstallé l'application.
 
 Braze utilisera le certificat push SSL téléchargé dans le tableau de bord pour authentifier et vérifier que nous sommes autorisés à envoyer des notifications push aux jetons de notification push fournis. Si un appareil est en ligne, la notification devrait être reçue peu de temps après l’envoi de la campagne. Notez que Braze fixe à 30 jours la [date d'expiration](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns#2947607) par défaut des APN pour les notifications.
@@ -46,14 +46,14 @@ Braze utilisera le certificat push SSL téléchargé dans le tableau de bord pou
 Si l ['APN](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) nous informe que l'un des jetons push auxquels nous avons tenté d'envoyer un message n'est pas valide, nous supprimons ces jetons des profils utilisateurs auxquels ils étaient associés.
 
 {% alert note %}
-Il est normal que les APN renvoient initialement un statut de réussite même si un jeton n'est plus enregistré, car les APN ne signalent pas immédiatement les événements d'invalidation des jetons. Les APN retardent intentionnellement le renvoi de l'état `410` pour les jetons non valides selon une planification aléatoire, conçue pour protéger la vie privée des utilisateurs et empêcher le suivi des désinstallations d'applications. Vous pouvez continuer à envoyer des notifications à un jeton non enregistré jusqu'à ce que l'APN renvoie le statut `410`.
+Il est courant que les APN renvoient initialement un statut de réussite même si un jeton n'est plus enregistré, car les APN ne signalent pas immédiatement les événements d'invalidation des jetons. Les APN retardent intentionnellement le renvoi d'un`410`statut pour les jetons non valides selon une planification aléatoire, afin de protéger la confidentialité des utilisateurs et d'empêcher le suivi des désinstallations d'applications. Vous pouvez continuer à envoyer des notifications à un jeton non enregistré en toute sécurité jusqu'à ce qu'APN renvoie un`410`statut.
 {% endalert %}
 
 ## Utilisation des journaux d'erreurs de push
 
 Le [journal d'activité des messages]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) vous donne la possibilité de voir tous les messages (en particulier les messages d'erreur) associés à vos campagnes et à vos envois, y compris les erreurs de notification push. Ce journal d’erreurs fournit de nombreux avertissements qui peuvent être très utiles pour identifier les raisons pour lesquelles vos campagnes ne fonctionnent pas comme prévu. Cliquer sur un message d’erreur vous redirigera vers la documentation pertinente pour vous aider à résoudre un incident particulier.
 
-![Les journaux d'erreurs en mode push affichent l'heure à laquelle l'erreur s'est produite, le nom de l'application, le canal, le type d'erreur et le message d'erreur.]({% image_buster /assets/img_archive/message_activity_log.png %})
+![Les journaux d’erreur Push affichent l’heure à laquelle l’erreur s’est produite, le nom de l’application, le canal, le type d’erreur et le message d’erreur.]({% image_buster /assets/img_archive/message_activity_log.png %})
 
 Les erreurs courantes que vous pouvez voir ici comprennent des notifications spécifiques à l'utilisateur, telles que ["Received Unregistered Sending to Push Token".](#swift_received-unregistered-sending)
 
@@ -139,7 +139,7 @@ Vérifiez le profil utilisateur de l’utilisateur auquel vous essayez d’envoy
 
 Ce qui suit indiquerait un problème avec l’inscription aux notifications push ou que le jeton de l’utilisateur a été renvoyé à Braze comme invalide par les APN après avoir été envoyé :
 
-![Profil utilisateur affichant les paramètres de contact d’un utilisateur. Sous Push, "No Apps" s'affiche.]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
+![Profil utilisateur affichant les paramètres de contact d’un utilisateur. Sous Notification push, «Pas d’application » s'affiche.]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
 
 ## Les clics de notification push ne sont pas enregistrés {#push-clicks-not-logged}
 
@@ -148,13 +148,15 @@ Ce qui suit indiquerait un problème avec l’inscription aux notifications push
 
 ## Les liens profonds ne fonctionnent pas
 
+Pour une résolution des problèmes complète sur tous les canaux, y compris les liens universels, les schémas personnalisés, les e-mails et les fournisseurs tiers tels que Branch, veuillez consulter [la section Création de liens profonds]({{site.baseurl}}/developer_guide/push_notifications/deep_linking_troubleshooting).
+
 ### Les liens Web des clics sur les notifications push ne s’ouvrent pas
 
-Les liens dans les notifications push doivent être conformes à la norme ATS pour être ouverts dans des vues web. Assurez-vous que vos liens Web utilisent HTTPS. Pour plus d'informations, veuillez vous référer à la [conformité ATS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#app-transport-security-ats).
+Les liens dans les notifications push doivent être conformes à la norme ATS pour être ouverts dans des vues web. Assurez-vous que vos liens Web utilisent HTTPS. Pour plus d'informations, veuillez vous référer à [la conformité ATS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#app-transport-security-ats).
 
 ### Les liens profonds à partir des clics sur les notifications push ne s’ouvrent pas
 
-La plupart du code qui gère les liens profonds gère également les ouvertures push. Tout d’abord, assurez-vous que les ouvertures de notification push sont enregistrées. Si ce n'est pas le cas, corrigez ce problème (car la correction corrige souvent la gestion des liens).
+La plupart du code qui gère les liens profonds gère également les ouvertures push. Tout d’abord, assurez-vous que les ouvertures de notification push sont enregistrées. Si ce n'est pas le cas, veuillez résoudre ce problème (car la correction permet souvent de résoudre la gestion des liens).
 
 Si les ouvertures sont enregistrées, vérifiez s’il s’agit d’un problème avec le lien profond en général ou avec la gestion des clics sur les notifications push du lien profond. Pour ce faire, testez si un lien profond d’un message in-app fonctionne.
 

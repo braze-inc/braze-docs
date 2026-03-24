@@ -2,7 +2,7 @@
 nav_title: Kickbox
 article_title: Kickbox
 alias: /partners/kickbox/
-description: "This reference article outlines the partnership between Braze and Kickbox. Kickbox makes it easy to verify your email lists, or integrate email verification into your application."
+description: "This reference article outlines the partnership between Braze and Kickbox, an email verification platform used to validate email lists or integrate verification into your application."
 page_type: partner
 search_tag: Partner
 ---

@@ -1,5 +1,5 @@
 ---
-nav_title: 아이디어 및 전략
+nav_title: 아이디어와 전략
 article_title: 아이디어 및 전략
 layout: dev_guide
 guide_top_header: "아이디어 및 전략"

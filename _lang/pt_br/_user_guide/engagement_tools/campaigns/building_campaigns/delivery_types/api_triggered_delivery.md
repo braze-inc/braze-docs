@@ -1,5 +1,5 @@
 ---
-nav_title: Entrega disparada por API
+nav_title: Entrega acionada por API
 article_title: Entrega disparada por API
 page_order: 2
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: Usuarios duplicados
+nav_title: Duplicar usuarios
 article_title: Usuarios duplicados
 description: "Aprenda a encontrar y fusionar usuarios duplicados en su panel Braze."
 page_order: 0
@@ -21,17 +21,17 @@ Si una búsqueda de usuarios devuelve perfiles duplicados, puede fusionar cada p
 
 En Braze, seleccione **Audiencia** > **Búsqueda de usuarios**.
 
-![Azulejo "Búsqueda de usuarios" resaltado en el menú de navegación.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:60%;"}
+![El azulejo "Búsqueda de usuarios" aparece resaltado en el menú de navegación.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:60%;"}
 
 Introduzca un identificador único, como una dirección de correo electrónico o un número de teléfono, para el perfil duplicado y, a continuación, seleccione **Buscar**.
 
-![La página de "Búsqueda de usuarios" en el panel de Braze.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:60%;"}
+![La página "Búsqueda de usuarios" en el panel de Braze.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:60%;"}
 
 ### Paso 2: Fusionar duplicados
 
 Para iniciar el proceso de fusión, selecciona **Fusionar duplicados**.
 
-![Uno de los perfiles del usuario duplicado.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:50%;"}
+![Uno de los perfiles de usuario duplicados.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:50%;"}
 
 Elija qué perfil de usuario desea conservar y cuál fusionar y, a continuación, seleccione **Fusionar perfiles**. Repita este proceso hasta que haya fusionado todos los perfiles duplicados.
 
@@ -49,7 +49,7 @@ Al fusionar usuarios duplicados de forma masiva, Braze busca perfiles con identi
 
 En el panel de control de Braze, seleccione **Audiencia** > **Gestionar audiencia**.
 
-![El mosaico "Gestionar audiencia" aparece resaltado en el menú de navegación.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:60%;"}
+![El azulejo "Gestionar audiencia" aparece resaltado en el menú de navegación.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:60%;"}
 
 ### Paso 2: Vista previa de los resultados (opcional)
 
@@ -64,7 +64,7 @@ Braze generará su vista previa y se la enviará a su dirección de correo elect
 En el siguiente ejemplo, Braze utiliza el ID externo del usuario para marcar perfiles duplicados e identificar cuál conservar. Si estos perfiles se fusionan de forma masiva, Braze utilizará el perfil con un ID externo como nuevo perfil principal del usuario.
 
 {% tabs local %}
-{% tab ejemplo de fichero csv %}
+{% tab example csv file %}
 | Dirección de correo electrónico | ID externo | Número de teléfono | ID de Braze | Identificador para la regla | Perfil para conservar | Perfil para fusionar |
 | ---------------- | ----------- | -------------- | --------------------- | ------------------- | --------------- | ---------------- |
 | alex@company.com | A8i3mkd99 | (555) 123-4567 | 65fcaa547f470494d1370 | correo electrónico | TRUE | FALSE |
@@ -100,7 +100,7 @@ Puede utilizar reglas para controlar cómo se resuelven los perfiles duplicados 
 - **Resuelve los empates utilizando**: Fecha de creación, Fecha de actualización, Última sesión
 - **Priorización**: Más reciente, Más antiguo
 
-![El panel "Editar reglas" con secciones para seleccionar opciones de "Perfil a mantener" y "Resolver vínculos".]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %}){: style="max-width:40%;"}
+![El panel "Editar reglas" con secciones para seleccionar opciones de "Perfil a conservar" y "Resolver vínculos".]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %}){: style="max-width:40%;"}
 
 Por ejemplo, podrías conservar el perfil que tiene un número de teléfono. Si varios usuarios tienen el mismo número de teléfono, podría resolver los empates utilizando el campo **Fecha de actualización** y dar prioridad al usuario actualizado más recientemente.
 

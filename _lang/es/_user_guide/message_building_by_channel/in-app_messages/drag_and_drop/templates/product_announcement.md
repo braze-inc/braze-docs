@@ -1,5 +1,5 @@
 ---
-nav_title: Anuncio de productos
+nav_title: Anuncio del producto
 article_title: Anuncio de productos
 alias: "/product_announcement/"
 page_order: 7
@@ -10,7 +10,7 @@ description: "Esta página explica cómo utilizar el editor de arrastrar y solta
 
 > Utiliza el editor de arrastrar y soltar mensajes dentro de la aplicación para dar a conocer el lanzamiento de nuevos productos.
 
-{% multi_lang_include drag_and_drop/templates.md section='Requisitos SDK' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## Crear un anuncio de producto
 
@@ -22,7 +22,7 @@ Cuando crees un mensaje dentro de la aplicación arrastrando y soltando, selecci
 
 ### Paso 2: Configura tus estilos de mensaje
 
-{% multi_lang_include drag_and_drop/templates.md section='estilo del mensaje' %}
+{% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ### Paso 3: Personaliza tu componente botón
 
@@ -38,6 +38,6 @@ Personaliza el aspecto del anuncio de tu producto utilizando los [componentes de
 
 ## Analizar los resultados
 
-{% multi_lang_include drag_and_drop/templates.md section='informes' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
 

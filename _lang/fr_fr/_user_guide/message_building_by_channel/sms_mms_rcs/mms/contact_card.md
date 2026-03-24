@@ -1,5 +1,5 @@
 ---
-nav_title: Cartes de visite
+nav_title: Cartes de contact
 article_title: Cartes de visite
 page_order: 3
 description: "Cet article de référence explique comment créer une carte de contact à inclure dans vos envois MMS et SMS."
@@ -12,7 +12,11 @@ channel:
 
 # Cartes de contact 
 
-> Les cartes de contact (parfois appelées vCard ou Virtual Contact Files (VCF)) sont un format de fichier standardisé pour l'envoi d'informations professionnelles et de contacts qui peuvent être facilement importées dans des carnets d'adresses ou des carnets de contacts. 
+> Les cartes de contact (parfois appelées vCard ou fichiers de contact virtuels (VCF)) sont un format de fichier standardisé permettant d'envoyer des informations professionnelles et de contact que vous pouvez facilement importer dans des carnets d'adresses ou des répertoires de contacts. 
+
+{% alert note %}
+L'envoi d'une carte de contact est facturé comme un MMS. Veuillez vérifier le volume de MMS prévu et l'utilisation de votre crédit de message lorsque vous créez des fiches de contact, et confirmer les coûts sur votre [page de facturation]({{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/) Braze.
+{% endalert %}
 
 Les cartes de contact peuvent être créées de [manière programmatique](https://www.twilio.com/blog/send-vcard-twilio-sms) et téléchargées dans la [bibliothèque multimédia de]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) Braze ou créées via notre générateur de cartes de contact intégré. Ces cartes peuvent recevoir des propriétés communes, telles que le nom de votre entreprise, le numéro de téléphone, l’adresse, l’e-mail et une petite photo. Pour commencer à créer des cartes de contact, assurez-vous d'abord que vous êtes configuré pour utiliser les MMS dans Braze.
 
@@ -24,7 +28,7 @@ Des cartes de contact peuvent être créées à partir du compositeur de SMS et 
 
 Vous serez ensuite invité à saisir le nom ou surnom de votre entreprise. Il s’agit du nom que vos utilisateurs verront lorsqu’ils enregistrent la carte. Une limite de 20 caractères est imposée pour garantir que l'utilisateur puisse voir le nom complet de votre entreprise ou alias dans ses contacts et son application de messagerie. 
 
-![L'onglet du générateur de cartes de contact.]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
+![L'onglet Générateur de cartes de contact.]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
 
 ### Étape 2 : Attribuer un numéro de téléphone
 
@@ -34,7 +38,7 @@ Notez que les codes alphanumériques ne sont pas compatibles avec l'envoi de mes
 
 ### Étape 3 : Champs facultatifs
 
-![Champs facultatifs pour le générateur de cartes de contact.]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![Champs facultatifs pour le générateur de carte de contact.]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 #### Télécharger la carte de contact photo de contact
 

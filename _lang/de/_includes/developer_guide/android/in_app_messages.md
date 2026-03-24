@@ -1,9 +1,9 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} Sie müssen auch In-App-Nachrichten aktivieren.
+{% multi_lang_include developer_guide/prerequisites/android.md %} Bitte beachten Sie, dass Sie auch In-App-Nachrichten aktivieren müssen.
 
 ## Nachrichtentypen
 
 {% tabs %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/android.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/android.md %}
 {% endtabs %}
 
 ## Aktivieren von In-App-Nachrichten
@@ -13,11 +13,11 @@
 Die Anzeige von In-App-Nachrichten wird von der Klasse [`BrazeInAppMessageManager`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html) verwaltet. Jede Aktivität in Ihrer App muss bei `BrazeInAppMessageManager` registriert sein, damit sie In-App-Nachricht-Ansichten zur Ansichtshierarchie hinzufügen kann. Es gibt zwei Möglichkeiten, dies zu erreichen:
 
 {% tabs local %}
-{% tab automatisch %}
-Die [Callback-Integration für den Aktivitätslebenszyklus]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/#android_step-3-enable-user-session-tracking) verarbeitet die Registrierung von In-App-Nachrichten automatisch; eine zusätzliche Integration ist nicht erforderlich. Dies ist die empfohlene Methode für die Registrierung von In-App-Nachrichten.
+{% tab automatically %}
+Die [Callback-Integration für den Aktivitätslebenszyklus]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking) verarbeitet die Registrierung von In-App-Nachrichten automatisch; eine zusätzliche Integration ist nicht erforderlich. Dies ist die empfohlene Methode für die Registrierung von In-App-Nachrichten.
 {% endtab %}
 
-{% tab manuell %}
+{% tab manually %}
 {% alert warning %}
 Wenn Sie den Activity Lifecycle Callback für die automatische Registrierung verwenden, brauchen Sie diesen Schritt nicht auszuführen.
 {% endalert %}
@@ -103,7 +103,7 @@ public override fun onPause() {
 
 ### Schritt 2: Update der Blockliste des Managers (optional)
 
-In Ihrer Integration können Sie festlegen, dass bestimmte Aktivitäten in Ihrer App keine In-App-Nachrichten anzeigen sollen. Die [Integration von Callbacks in den Aktivitätslebenszyklus]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/#android_step-3-enable-user-session-tracking) bietet eine einfache Möglichkeit, dies zu erreichen.
+In Ihrer Integration können Sie festlegen, dass bestimmte Aktivitäten in Ihrer App keine In-App-Nachrichten anzeigen sollen. Die [Integration von Callbacks in den Aktivitätslebenszyklus]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking) bietet eine einfache Möglichkeit, dies zu erreichen.
 
 Der folgende Code fügt der Blockliste für die Registrierung von In-App-Nachrichten zwei Aktivitäten hinzu: `SplashActivity` und `SettingsActivity`:
 

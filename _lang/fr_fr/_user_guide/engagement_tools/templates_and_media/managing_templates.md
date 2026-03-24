@@ -1,5 +1,5 @@
 ---
-nav_title: Gestion des modèles
+nav_title: Gérer les modèles
 article_title: Gestion des modèles
 page_order: 3
 
@@ -11,7 +11,7 @@ tool:
 
 ---
 
-# Gestion des modèles
+# Gérer les modèles
 
 > L'archivage ou la duplication des modèles peut permettre de mieux les organiser et les gérer. Cet article de référence explique comment archiver et dupliquer des modèles dans la section **Modèles** du tableau de bord de Braze.
 
@@ -38,11 +38,11 @@ Les modèles dupliqués peuvent être trouvés en triant la colonne **Dernière 
 
 {% endraw %}
 
-![Trois modèles classés en fonction de l'heure à laquelle ils ont été modifiés pour la dernière fois, le modèle copié figurant en tête de liste.]({% image_buster /assets/img/duplicate_multiple_template.gif %})
+![Trois modèles triés en fonction de l'heure à laquelle ils ont été modifiés pour la dernière fois, un modèle copié figurant en tête de liste.]({% image_buster /assets/img/duplicate_multiple_template.gif %})
 
 ## Modèles d'archivage
 
-![Menu déroulant des paramètres étendus qui affiche trois options : "Archiver", "Dupliquer" et "Copier dans l'espace de travail" avec l'option "Archiver" en surbrillance.]({% image_buster /assets/img/template_archive_cog.png %}){: style="float:right;max-width:20%;margin-left:15px;"}
+![Menu déroulant des paramètres étendus qui affiche trois options : "Archiver", "Dupliquer" et "Copier dans l'espace de travail", l'option "Archiver" étant mise en évidence.]({% image_buster /assets/img/template_archive_cog.png %}){: style="float:right;max-width:20%;margin-left:15px;"}
 
 Pour archiver un modèle individuel, sélectionnez l'icône des paramètres dans l'écran de la grille des modèles et sélectionnez **Archiver**. Lorsqu'un modèle est archivé, notez les différents scénarios suivants :
 
@@ -52,7 +52,7 @@ Pour archiver un modèle individuel, sélectionnez l'icône des paramètres dans
 
 Pour archiver plusieurs modèles, cochez la case à côté de chaque modèle que vous souhaitez archiver. Après avoir sélectionné plusieurs modèles, sélectionnez **Archiver**. Vous pouvez retrouver vos modèles archivés en sélectionnant **Archivé** sous **Afficher** dans la grille des modèles.
 
-![Section "Drop & Drop Email Templates" enregistrée qui montre deux modèles sélectionnés et une barre d'outils avec l'option d'archivage.]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
+![Saved Drop & Drop Email Templates section that shows two selected templates and toolbar with the option to archive.]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
 
 {% alert important %}
 L'archivage n'est pas disponible actuellement pour les [modèles de liens]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).

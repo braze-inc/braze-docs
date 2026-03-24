@@ -1,6 +1,6 @@
 ---
-nav_title: Mensajería de usuarios
-article_title: Mensajería de usuarios
+nav_title: Usuarios de mensajería
+article_title: Usuarios de mensajería
 description: "Este artículo de referencia explica cómo Braze gestionará los mensajes de los usuarios."
 page_type: reference
 channel:
@@ -25,7 +25,7 @@ Asegúrese de que su palabra desencadenante coincide con lo que espera de los us
 - Si no se especifica ninguna palabra desencadenante en el desencadenador basado en la acción del programa de entrada, la campaña o Canvas se ejecutará para TODOS los mensajes de WhatsApp entrantes. Esto incluye los mensajes que tengan frases coincidentes en campañas activas y Lienzos, en cuyo caso el usuario recibirá dos mensajes de WhatsApp.
 
 {% tabs %}
-{% tab Campaña %}
+{% tab Campaign %}
 
 ![Opciones de programación de campañas basadas en acciones.]({% image_buster /assets/img/whatsapp/whatsapp27.png %})
 
@@ -45,7 +45,7 @@ Le recomendamos que incluya una opción para las respuestas no reconocidas en lo
 
 ## Respuestas rápidas 
 
-![La pantalla del teléfono que muestra un botón de llamada a la acción responderá al texto del botón pulsado.]({% image_buster /assets/img/whatsapp/whatsapp11.png %}){: style="float:right;max-width:25%;margin-left:15px;border: 0;"}
+![La pantalla del teléfono que muestre un botón de llamada a la acción responderá al texto del botón pulsado.]({% image_buster /assets/img/whatsapp/whatsapp11.png %}){: style="float:right;max-width:25%;margin-left:15px;border: 0;"}
 
 Las respuestas rápidas aparecen como opciones de botón en las que se puede hacer clic dentro de la conversación, pero actúan como si el usuario respondiera con texto. A continuación, Braze los procesa como mensajes entrantes y puede enviar respuestas configuradas en función del botón en el que se haya hecho clic. Utilice el paso "Acción de mensaje entrante de WhatsApp" al crear y filtrar respuestas de sus usuarios.
 
@@ -57,7 +57,7 @@ Las respuestas rápidas aparecen como opciones de botón en las que se puede hac
 
 En primer lugar, crea tus CTA de respuesta rápida en el [Gestor de plantillas de mensajes de WhatsApp](https://business.facebook.com/wa/manage/message-templates/) dentro de una plantilla de mensaje. 
 
-![La interfaz de usuario del administrador de plantillas de mensajes de WhatsApp muestra cómo crear un botón CTA, proporcionando el tipo de botón (personalizado) y el texto del botón.]({% image_buster /assets/img/whatsapp/whatsapp12.png %}){: style="max-width:80%;"}
+![La interfaz de usuario del gestor de plantillas de mensajes de WhatsApp muestra cómo crear un botón CTA, proporcionando el tipo de botón (personalizado) y el texto del botón.]({% image_buster /assets/img/whatsapp/whatsapp12.png %}){: style="max-width:80%;"}
 
 Una vez que su plantilla haya sido enviada y aprobada por WhatsApp, podrá utilizarla para crear un Canvas dentro de Braze. 
 
@@ -73,11 +73,11 @@ A continuación, construye un Canvas con un paso de mensaje que incluya tu plant
 
 Cree un paso de acción que siga al paso del mensaje. Cree un grupo por cada opción de respuesta rápida en este paso de acción.
 
-![Un Canvas en el que la acción de evaluación es "enviar un mensaje entrante de whatsapp".]({% image_buster /assets/img/whatsapp/whatsapp15.png %})
+![Un Canvas donde la acción de evaluación es "enviar un mensaje entrante de whatsapp".]({% image_buster /assets/img/whatsapp/whatsapp15.png %})
 
 Para cada grupo de opciones de respuesta rápida, especifique el texto exacto del botón con el que está emparejando. Tenga en cuenta que las palabras clave deben estar en mayúsculas. 
 
-![Un paso en Canvas en el que la acción "enviar un mensaje entrante de whatsapp" se configura para que se envíe cuando se reciba el cuerpo de un mensaje específico.]({% image_buster /assets/img/whatsapp/whatsapp16.png %})
+![Un paso de Canvas en el que la acción "enviar un mensaje entrante de whatsapp" se configura para enviarse cuando se recibe un cuerpo de mensaje específico.]({% image_buster /assets/img/whatsapp/whatsapp16.png %})
 
 Si desea una respuesta predeterminada para los usuarios que respondan al mensaje con texto en lugar de respuestas rápidas, cree un grupo adicional sin cuerpo de mensaje coincidente.
 
@@ -87,11 +87,11 @@ Continúa construyendo el Canvas como lo harías a partir de este momento.
 
 Lo más probable es que quiera un mensaje de respuesta para cada respuesta. Recomendamos disponer de una opción general para las respuestas fuera de los límites de las respuestas rápidas (por ejemplo, para los clientes que responden con un mensaje general en lugar de un aviso predeterminado). Por ejemplo: "Lo sentimos, no reconocimos su respuesta. Para cuestiones de asistencia, envíe un mensaje a <support channel>."
 
-![Un Canvas construido mostrando las respuestas para cada botón de llamada a la acción.]({% image_buster /assets/img/whatsapp/whatsapp18.png %})
+![Se ha creado un lienzo que muestra las respuestas de cada botón de llamada a la acción.]({% image_buster /assets/img/whatsapp/whatsapp18.png %})
 
 Tenga en cuenta que puede utilizar cualquier acción posterior que ofrezca Braze Canvas, como mensajes en respuesta, actualizaciones de perfil de usuario o webhooks Braze-to-Braze. 
 
-## Listar mensajes
+## Mensajes de la lista
 
 Los mensajes de lista aparecen como un cuerpo de mensaje con una lista de opciones en las que se puede hacer clic. Cada lista puede tener varias secciones, y cada lista puede tener hasta 10 filas.
 
@@ -115,7 +115,7 @@ Añade un nombre de **botón de Lista** que los usuarios seleccionarán para mos
 - **Fila:** Añade hasta 10 filas, o elementos de lista, en todas las secciones.
 - **Descripción de la fila (opcional):** Añade una descripción opcional a todas las filas (elementos de la lista).
 
-![La sección "Contenido de la lista" rellenada con dos secciones, y varias filas y descripciones de filas.]({% image_buster /assets/img/whatsapp/list_content.png %}){: style="max-width:60%;"}
+![La sección "Contenido de la lista" se rellenó con dos secciones y varias filas y descripciones de filas.]({% image_buster /assets/img/whatsapp/list_content.png %}){: style="max-width:60%;"}
 
 Cambia el orden de las secciones y filas seleccionando y arrastrando el icono situado junto a sus nombres.
 
@@ -135,7 +135,7 @@ Sigue construyendo tu Canvas.
 
 Si tienes descripciones de filas, debes utilizar **Matches regex** para especificar una fila. Por ejemplo, si quieres especificar una fila con la descripción "Nuestro nuevo estilo que se adapta a tu par favorito de botines", podrías utilizar [regex]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/) con "botines".
 
-![Un desencadenador de WhatsApp que utiliza el filtro de "Matches regex" para capturar mensajes de respuesta con "botines".]({% image_buster /assets/img/whatsapp/regex_list_message.png %})
+![Un desencadenador de WhatsApp que utiliza el filtro de "Coincidencias regex" para capturar mensajes de respuesta con "botines".]({% image_buster /assets/img/whatsapp/regex_list_message.png %})
 
 ## Consideraciones sobre los mensajes de respuesta
 

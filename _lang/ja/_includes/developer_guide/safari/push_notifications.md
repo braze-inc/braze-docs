@@ -1,8 +1,8 @@
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Swift SDK用に[プッシュ通知]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)を設定する必要もあります。プッシュ通知は、[Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) 以降を使用しているiOS およびiPadOS ユーザーにのみ送信できます。
+{% multi_lang_include developer_guide/prerequisites/web.md %} Web SDK用の[プッシュ通知]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web)も[設定]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web)する必要がある。iOSおよびiPadOSユーザーにプッシュ通知を送信できるのは、[Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes)以降を使用している場合に限られることに注意せよ。
 
-## モバイル用のSafari プッシュの設定
+## モバイル向けSafariプッシュ通知の設定
 
-### ステップ1:マニフェスト・ファイルを作成する {#manifest}
+### ステップ 1: マニフェスト・ファイルを作成する {#manifest}
 
 [ウェブ・アプリケーション・マニフェストは](https://developer.mozilla.org/en-US/docs/Web/Manifest)、ユーザーのホーム画面にインストールされたときに、ウェブサイトがどのように表示されるかを制御するJSONファイルである。
 
@@ -38,20 +38,20 @@
 
 ### ステップ4: ホーム画面に追加する {#add-to-homescreen}
 
-一般的なブラウザ(Safari、Chrome、FireFox、Edge など) は、すべて後のバージョンでWeb プッシュ通知をサポートします。iOS またはiPadOS でプッシュ許可を要求するには、**Share To** > **ホーム画面に追加**を選択して、ユーザーのホーム画面にウェブサイトを追加する必要があります。[Homescreen](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc)に追加すると、ユーザはウェブサイトをブックマークし、貴重なホーム画面の不動産にアイコンを追加できます。
+主要なブラウザ（Safari、Chrome、FireFox、Edgeなど）は、いずれも最新版でWeb プッシュ通知をサポートしている。iOSまたはiPadOSでプッシュ通知の権限を求めるには、ユーザーが**「共有」**＞「ホーム画面**に追加**」を選択して、あなたのWeb サイトをホーム画面に追加する必要がある。[ホーム画面に追加機能は](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc)、ユーザーがあなたの Web サイトをブックマークできるようにする。これにより、あなたのアイコンがユーザーの貴重なホーム画面スペースに追加されるのだ。
 
-![ウェブサイトをブックマークし、ホーム画面に保存するためのオプションを示すiPhone ]({% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}){: style="max-width:40%"}
+![ウェブサイトをブックマークし、ホーム画面に保存するオプションを表示するiPhone]({% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}){: style="max-width:40%"}
 
-### ステップ5: ネイティブのプッシュプロンプトを表示する {#push-prompt}
-アプリがホーム画面に追加された後、ユーザがアクション(ボタンのクリックなど) を実行したときにプッシュ権限を要求できるようになりました。これを行うには、[`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) メソッドを使用するか、[コードなしのプッシュプライマーのアプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)を使用します。
+### ステップ5:ネイティブのプッシュプロンプトを表示する {#push-prompt}
+アプリがホーム画面に追加された後、ユーザーがアクション（ボタンをクリックするなど）を行った際にプッシュ通知の権限をリクエストできるようになる。これを行うには、[`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) メソッドを使用するか、[コードなしのプッシュプライマーのアプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)を使用します。
 
 {% alert note %}
-プロンプトを承諾または拒否した後、プロンプトを再度表示できるようにするには、ウェブサイトを削除してホーム画面に再インストールする必要があります。
+プロンプトを受け入れるか拒否した後、再度プロンプトを表示するには、Web サイトをホーム画面から削除し、再インストールする必要がある。
 {% endalert %}
 
-![通知を「許可する」か「許可しない」かを尋ねるプッシュプロンプト]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
+![通知を「許可する」か「許可しない」かを尋ねるプッシュ・プロンプトが表示される。]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
 
-以下に例を示します。
+以下はその例です。
 
 ```typescript
 import { requestPushPermission } from "@braze/web-sdk";

@@ -1,34 +1,34 @@
 ---
-nav_title: "GET: Lista Centros de Preferencia"
-article_title: "GET: Lista Centros de Preferencia"
+nav_title: "GET: Listar centros de preferencia"
+article_title: "GET: Listar centros de preferencia"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles del punto final Enumerar los centros de preferencias de Braze."
+description: "En este artículo se describen los detalles del punto de conexión Listar centros de preferencia de Braze."
 
 ---
 {% api %}
-# Lista centros de preferencia
+# Listar centros de preferencia
 {% apimethod get %}
 /preference_center/v1/list
 {% endapimethod %}
 
-> Utiliza este punto final para listar tus centros de preferencia disponibles.
+> Utiliza este punto de conexión para listar tus centros de preferencia disponibles.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dd8f6667-5eba-4e19-a29e-ba74644c0b8e {% endapiref %}
 
 ## Requisitos previos
 
-Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}/api/basics#rest-api-key/) con el permiso `preference_center.list`.
+Para utilizar este punto de conexión, necesitarás una [clave de API]({{site.baseurl}}/api/basics#rest-api-key/) con el permiso `preference_center.list`.
 
 ## Límite de velocidad
 
-Este punto final tiene un límite de velocidad de 1000 solicitudes por minuto, por espacio de trabajo.
+{% multi_lang_include rate_limits.md endpoint='get preference center' %}
 
 ## Ruta y parámetros de la solicitud
 
-No hay parámetros de ruta o solicitud para este punto final.
+No hay parámetros de ruta o solicitud para este punto de conexión.
 
 ## Ejemplo de solicitud
 

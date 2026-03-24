@@ -22,7 +22,7 @@ Un ID de notification est un identifiant unique pour une catégorie de message d
 
 Pour attribuer un ID de notification, accédez à la page de composition du push auquel vous souhaitez ajouter l'ID et sélectionnez l'onglet **Paramètres.**  Saisissez un nombre entier dans la section **ID de la notification.** Pour mettre à jour cette notification après l'avoir émise, envoyez une autre notification avec le même ID que celui utilisé précédemment.
 
-![Champ d'ID de notification.]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:60%;" }
+![ID de notification.]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:60%;" }
 
 ## TTL (Durée de vie) {#ttl}
 
@@ -34,14 +34,14 @@ Les valeurs par défaut de la durée de vue sont définies par votre administrat
 
 Par exemple, supposons que votre application organise un concours hebdomadaire de jeux-questionnaires. Vous envoyez une notification push une heure avant qu'elle ne commence. En fixant le TTL à 1 heure, vous vous assurez que les utilisateurs qui ouvrent l'application après le début du concours ne recevront pas de notification concernant un événement qui a déjà commencé.
 
-{% details Meilleures pratiques %}
+{% details Best practices %}
 
 #### Quand utiliser un TTL plus court ?
 
 Des TTL plus courts permettent de s'assurer que les utilisateurs reçoivent des notifications en temps voulu pour des événements ou des promotions qui perdent rapidement de leur pertinence. Par exemple :
 
-- **Vente au détail :** Envoi d'une notification push pour une vente flash qui se termine dans 2 heures (TTL : 1-2 heures)
-- **Réception/distribution de nourriture :** Notifier les utilisateurs lorsque leur commande est proche (TTL : 10-15 minutes)
+- **Vente au détail :** Envoi d'une notification push pour une vente flash qui se termine dans 2 heures (TTL : 1 à 2 heures)
+- **Réception/distribution de nourriture :** Notifier les utilisateurs lorsque leur commande est proche (TTL : 10 à 15 minutes)
 - **Applications de transport :** Partage de mises à jour sur l'arrivée des véhicules (TTL : quelques minutes)
 - **Rappels d'événements :** Notifier les utilisateurs lorsqu'un webinaire commence bientôt (TTL : moins d'une heure)
 
@@ -74,25 +74,23 @@ Pour des informations plus détaillées sur la gestion des messages et la hiéra
 
 Le texte récapitulatif vous permet de définir un texte supplémentaire dans la vue de notification étendue. Il sert également de légende pour les notifications avec des images.
 
-![Un message Android avec le titre "Ceci est le titre de la notification" et le texte résumé "Ceci est le texte résumé de la notification".]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
+![Un message Android avec le titre « Ceci est le titre de la notification » et le texte de résumé « Ceci est le texte de résumé de la notification ».]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
 Le texte récapitulatif s’affiche sous le corps du message dans la vue étendue. 
 
-![Un message Android avec le titre "Ceci est le titre de la notification" et le texte résumé "Ceci est le texte résumé de la notification".]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
+![Un message Android avec le titre « Ceci est le titre de la notification » et le texte de résumé « Ceci est le texte de résumé de la notification ».]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 Pour les notifications push qui incluent des images, le texte du message s’affiche dans la vue réduite tandis que le texte récapitulatif s’affiche comme légende d’image lorsque la notification est étendue. 
 
 ## URI personnalisés
 
-La fonctionnalité **URI personnalisé** vous permet de spécifier une URL Web ou une ressource Android vers laquelle naviguer lorsque l'on clique sur la notification. Si aucun URI personnalisé n’est spécifié, cliquer sur la notification amène les utilisateurs dans votre application. Vous pouvez utiliser l’URI personnalisé pour créer un lien profond à l’intérieur de votre application ainsi que diriger les utilisateurs vers des ressources qui existent également en dehors de votre application. Vous pouvez le spécifier via notre [API Messages]({{site.baseurl}}/api/endpoints/messaging/) ou dans l'onglet **Composer** du compositeur de messages push.
+La fonctionnalité **URI personnalisé** vous permet de spécifier une URL Web ou une ressource Android vers laquelle naviguer lorsque l'on clique sur la notification. Si aucun URI personnalisé n’est spécifié, cliquer sur la notification amène les utilisateurs dans votre application. Vous pouvez utiliser l’URI personnalisé pour créer un lien profond à l’intérieur de votre application ainsi que diriger les utilisateurs vers des ressources qui existent également en dehors de votre application. Ceci peut être spécifié via notre [API d'envoi de messages]({{site.baseurl}}/api/endpoints/messaging/) ou dans l'onglet **« Composer »** de l'éditeur de notifications push.
 
 ![Champ URI personnalisé.]({% image_buster /assets/img_archive/deep_link.png %}){: style="max-width:60%;"}
 
 ## Priorité d’affichage de la notification
 
-{% alert important %}
-Le paramètre de priorité d’affichage de notification n’est plus utilisé sur les appareils exécutant Android O ou plus récents. Pour les appareils plus récents, définissez la priorité par le biais de la [configuration du canal de notification.](https://developer.android.com/training/notify-user/channels#importance)
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='Android notification priority' %}
 
 Le niveau de priorité d’une notification push affecte la manière dont votre notification est affichée dans la barre de notification par rapport à d’autres notifications. Il peut également affecter la vitesse et la manière de livrer, car les messages normaux et moins prioritaires peuvent être envoyés avec une latence légèrement plus élevée ou groupés pour préserver la durée de vie de la batterie, alors que les messages haute priorité sont toujours envoyés immédiatement.
 
@@ -154,7 +152,7 @@ Les notifications push Android fournissent un champ facultatif pour déterminer 
 
 De plus, les utilisateurs d’Android peuvent modifier la façon dont les notifications push apparaissent sur leur écran de verrouillage en changeant le paramètre de confidentialité des notifications sur leur appareil. Ce paramètre remplacera la visibilité de la notification push.
 
-![Emplacement/localisation prioritaire du tableau de bord avec l'option Définir la visibilité activée et définie sur Privé.]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Emplacement de la priorité de la notification push sur le tableau de bord avec l’option Définir la visibilité activée et définie sur Privé.]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Quelle que soit la visibilité, toutes les notifications seront affichées sur l'écran de verrouillage de l'utilisateur si le paramètre de confidentialité des notifications sur son appareil est **Afficher tout le contenu** (paramètre par défaut). De même, les notifications ne s'afficheront pas sur l'écran de verrouillage si la confidentialité des notifications est réglée sur **Ne pas afficher les notifications.** La visibilité n'a d'effet que si la confidentialité des notifications est réglée sur **Masquer les contenus sensibles**.
 
@@ -170,7 +168,7 @@ Pour les appareils fonctionnant dans des versions d’Android antérieures à An
 
 Si vous sélectionnez **Défaut** dans ce champ, le son de notification par défaut de l'appareil sera diffusé. Cela peut être spécifié via notre [API de messages]({{site.baseurl}}/api/endpoints/messaging/) ou dans les **paramètres** du compositeur de push.
 
-![Le champ "Son".]({% image_buster /assets/img_archive/sound_android.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Le champ « Son ».]({% image_buster /assets/img_archive/sound_android.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Ensuite, saisissez l'URI complet de la ressource sonore (par exemple, `android.resource://com.mycompany.myapp/raw/mysound`) dans l'invite du tableau de bord.
 

@@ -1,6 +1,6 @@
 ---
-nav_title: Pares Chave-Valor
-article_title: Pares Chave-Valor
+nav_title: Pares de valores chave
+article_title: Pares de chave-valor
 page_order: 4
 description: "Este artigo de referência cobre pares chave-valor e como usá-los para enviar cargas úteis de dados extras para dispositivos dos usuários."
 channel:
@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Pares chave-valor
+# Pares de valores chave
 
 > Esta página cobre como usar pares de chave-valor para enviar cargas úteis de dados extras para dispositivos de usuários. Este recurso está disponível nos canais de envio de mensagens push, in-app, e-mail e cartão de conteúdo.
 
@@ -127,7 +127,7 @@ Se você estiver usando a API do provedor HTTP/2, qualquer carga útil individua
 
 ###### campanhas acionadas por API
 
-A Braze permite que você envie pares de chave-valor de string definidos pelo usuário, conhecidos como `extras`. Para acessar seus extras em campanhas acionadas por API e campanhas acionadas por API agendadas, no dashboard defina uma chave como "example_key" e um valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Isso resultará em um console de desenvolvedor de saída de `"extras": { "test": { "foo": 1, "bar": 1 }`
+A Braze permite que você envie pares de chave-valor de string definidos pelo usuário, conhecidos como `extras`. Para acessar seus extras em campanhas acionadas por API e programadas, no dashboard defina uma chave como "example_key", e um valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Isso resultará em um console de desenvolvedor de saída de `"extras": { "test": { "foo": 1, "bar": 1 }`
 
 ### Android
 
@@ -145,7 +145,7 @@ O backend do seu app deve ser capaz de processar pares chave-valor personalizado
 
 ###### campanhas acionadas por API
 
-A Braze permite que você envie pares de chave-valor de string definidos pelo usuário, conhecidos como `extras`. Para acessar seus extras em campanhas acionadas por API e campanhas acionadas por API agendadas, no dashboard defina uma chave como "example_key" e um valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Isso resultará em um console de desenvolvedor de saída de `"extras": { "test": { "foo": 1, "bar": 1 }`
+A Braze permite que você envie pares de chave-valor de string definidos pelo usuário, conhecidos como `extras`. Para acessar seus extras em campanhas acionadas por API e programadas, no dashboard defina uma chave como "example_key", e um valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Isso resultará em um console de desenvolvedor de saída de `"extras": { "test": { "foo": 1, "bar": 1 }`
 
 ##### Opções de envio de mensagens do FCM
 
@@ -167,13 +167,16 @@ O sistema operacional iOS pode [bloquear notificações]({{site.baseurl}}/develo
 
 ## Mensagem no app
 
-Para adicionar um par de chave-valor a uma mensagem no app, selecione a guia **Configurações** no criador de mensagem, selecione **Adicionar novo par** e especifique seus pares de chave-valor.
+Você pode adicionar um par chave-valor a uma mensagem no app no [editor tradicional]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/) selecionando a guia **Configurações**, selecionando **Adicionar Novo Par** e, em seguida, especificando seus pares chave-valor.
 
+{% alert note %}
+Pares chave-valor não podem ser definidos através do editor de arrastar e soltar para mensagens no app.
+{% endalert %}
 ![]({% image_buster /assets/img_archive/keyvalue_iam.png %})
 
-#### campanhas acionadas por API
+#### Campanhas disparadas por API
 
-A Braze permite que você envie pares de chave-valor de string definidos pelo usuário, conhecidos como `extras`. Para acessar seus extras em campanhas acionadas por API e campanhas acionadas por API agendadas, no dashboard defina uma chave como "example_key" e um valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Isso resultará em um console de desenvolvedor de saída de `"extras": { "test": { "foo": 1, "bar": 1 }`
+A Braze permite que você envie pares de chave-valor de string definidos pelo usuário, conhecidos como `extras`. Para acessar seus extras em campanhas acionadas por API e programadas, no dashboard defina uma chave como "example_key", e um valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Isso resultará em um console de desenvolvedor de saída de `"extras": { "test": { "foo": 1, "bar": 1 }`
 
 ## E-mails
 
@@ -183,7 +186,7 @@ Tanto o SparkPost quanto o SendGrid aceitas pares de chave/valor em e-mails. Se 
 E-mails devolvidos não entregarão pares chave-valor para SparkPost ou SendGrid.
 {% endalert %}
 
-![Enviando a guia de informações do criador de mensagem de e-mail no Braze.]({% image_buster /assets/img_archive/keyvalue_email.png %})
+![Guia Informações de envio do criador de mensagem de e-mail na Braze.]({% image_buster /assets/img_archive/keyvalue_email.png %})
 
 ## Cartões de conteúdo
 

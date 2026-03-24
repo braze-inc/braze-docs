@@ -1,5 +1,5 @@
 ---
-nav_title: Entrega desencadenada por API
+nav_title: Entrega activada por API
 article_title: Entrega desencadenada por API
 page_order: 2
 page_type: reference
@@ -30,7 +30,7 @@ A continuación, configure la copia y las notificaciones del mismo modo que lo h
 Además de desencadenar el mensaje, también puedes incluir contenido con la solicitud de la API para que forme parte de la plantilla del mensaje dentro del objeto `trigger_properties`. Se puede hacer referencia a este contenido en el cuerpo del mensaje. Por ejemplo, puede incluir:
 ``{% raw %} {{ api_trigger_properties.${ some_value_included_with_request }}} {% endraw %}``. Consulte el siguiente ejemplo de notificación social para obtener más información:
 
-![La mencionada propiedad desencadenante incluida en el mensaje para autorellenar el nombre del usuario seguido del texto: "¡Me ha gustado tu foto! Haz clic aquí para ver lo que han estado haciendo".]({% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}){: style="max-width:70%;"}
+![La mencionada propiedad desencadenante incluida en el mensaje para autorellenar el nombre del usuario seguido del texto: "¡Me ha gustado tu foto! Haga clic aquí para ver lo que han estado haciendo".]({% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}){: style="max-width:70%;"}
 
 ## Reelegibilidad con campañas desencadenadas por la API
 

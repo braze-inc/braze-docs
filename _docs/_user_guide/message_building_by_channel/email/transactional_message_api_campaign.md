@@ -17,7 +17,7 @@ alias: "/api/api_campaigns/transactional_campaigns"
 > Braze Transactional Emails are sent to facilitate an agreed-upon transaction between a sender and the recipient. This reference article covers how to create a transactional email campaign in the Braze dashboard and generate a `campaign_id` to include in your API calls for our [`/transactional/v1/campaigns/{campaign_id}/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
 
 {% alert important %}
-Braze Transactional Email is only available as part of select Braze packages. Reach out to your Braze customer success manager or open a [support ticket]({{site.baseurl}}/braze_support/) for more details.
+Braze Transactional Email is only available as part of select Braze packages. Contact your Braze customer success manager or open a [support ticket]({{site.baseurl}}/braze_support/) for more details.
 {% endalert %}
 
 The transactional email campaign type is purpose-built for sending automated, non-promotional email messages to facilitate an agreed-upon transaction between you and your customers. This includes information such as:
@@ -31,6 +31,10 @@ In short, you can use transactional emails to send business-critical notificatio
 
 {% alert important %}
 Transactional emails differ from transactional campaigns, which can be used to target your users without additional costs. Transactional campaigns, for instance, can include messages sent after a user adds an item to their cart. Check out [audience targeting options]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) for more information. 
+{% endalert %}
+
+{% alert note %}
+Transactional Email API sends support Message Archiving. If message archiving is enabled for email in your workspace, Braze saves a rendered copy of each transactional email send. For more information, see [Message archiving]({{site.baseurl}}/user_guide/data/distribution/export_braze_data/message_archiving/).
 {% endalert %}
 
 ## Step 1: Create a new campaign

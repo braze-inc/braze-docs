@@ -16,7 +16,7 @@ $ sudo gem install cocoapods
 
 **Nota**: Si se te pide que sobrescribas el ejecutable de `rake`, consulta las [Instrucciones de inicio en CocoaPods.org](http://guides.cocoapods.org/using/getting-started.html) para más detalles.
 
-**Nota**: Si tienes problemas relacionados con [CocoaPods](http://guides.cocoapods.org/using/troubleshooting.html), consulta la [Guía de solución de problemas de CocoaPods](http://guides.cocoapods.org/using/troubleshooting.html).
+**Nota**: Si tienes algún problema con CocoaPods, consulta la [Guía de solución de problemas](http://guides.cocoapods.org/using/troubleshooting.html) de [CocoaPods](http://guides.cocoapods.org/using/troubleshooting.html).
 
 ### Paso 2: Construir el archivo de bibliotecas
 
@@ -81,7 +81,7 @@ En `AppDelegate.swift`, añade el siguiente fragmento de código a tu `applicati
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions)
 ```
 
-**Nota**: El singleton de Braze `sharedInstance` será nulo antes de llamar a `startWithApiKey:`, ya que es un requisito previo para utilizar cualquier funcionalidad de Braze.
+**Nota**: El singleton`sharedInstance` de Braze será nulo antes de que`startWithApiKey:`se llame a , ya que ese es un requisito previo para utilizar cualquier funcionalidad de Braze.
 
 {% endtab %}
 {% endtabs %}
@@ -104,12 +104,12 @@ Ten en cuenta que, a partir de diciembre de 2019, ya no se entregarán puntos fi
 Tu representante de Braze ya debería haberte informado del [punto final correcto]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 #### Configuración del punto final en tiempo de compilación (recomendado)
-Si se te da un punto final personalizado preexistente...
+Si se te proporciona un punto final personalizado preexistente...
 - A partir de la versión 3.0.2 del SDK iOS de Braze, puedes establecer un punto final personalizado utilizando el archivo `Info.plist`. Añade el diccionario `Appboy` a tu archivo Info.plist. Dentro del diccionario `Appboy`, añade la subentrada de cadena `Endpoint` y establece el valor en la autoridad de la url de tu punto final personalizado (por ejemplo, `sdk.iad-01.braze.com`, no `https://sdk.iad-01.braze.com`).
 
 #### Configuración del punto final en tiempo de ejecución
 
-Si se te da un punto final personalizado preexistente...
+Si se te proporciona un punto final personalizado preexistente...
 - A partir de la versión 3.17.0 del SDK iOS de Braze, puedes anular la configuración de tu punto final a través de `ABKEndpointKey` dentro del parámetro `appboyOptions` pasado a `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Establece el valor de la autoridad de tu url personalizada (por ejemplo, `sdk.iad-01.braze.com`, no `https://sdk.iad-01.braze.com`).
 
 {% alert note %}
@@ -117,7 +117,7 @@ Se ha eliminado el soporte del SDK versión 3.17.0 del iOS de Braze para la conf
 {% endalert %}
 
 {% alert important %}
-Para conocer tu clúster específico, pregunta a tu administrador del éxito del cliente o ponte en contacto con nuestro equipo de soporte.
+Para averiguar cuál es tu clúster específico, pregunta a tu administrador del éxito del cliente o ponte en contacto con nuestro equipo de soporte.
 {% endalert %}
 
 ### Integración de SDK completa

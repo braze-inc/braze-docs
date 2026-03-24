@@ -12,10 +12,10 @@ page_type: tutorial
 
 これらのチュートリアルを終了すると、次のことが可能になります。
 
-- 一般的なユースケースのためのリキッドコードの記述
-- 文字列の組み合わせユーザーデータに基づいてメッセージをパーソナライズするための流動的な条件付きロジック
+- 一般的なユースケースのためのLiquidコードの記述
+- 文字列の組み合わせユーザーデータに基づいてメッセージをパーソナライズするためのLiquid条件付きロジック
 - 変数とフィルタを使用して、属性の値を使用する方程式を記述します
-- リキッドコードの基本的なコマンドを認識し、コードの動作についての一般的な理解を形成します
+- LIquidコードの基本的なコマンドを認識し、コードの動作についての一般的な理解を形成します
 
 | チュートリアル | 学習目標 |
 | --- | --- |
@@ -69,7 +69,7 @@ Thanks for traveling with us! Enjoy your unique discount code: SUMMRTRVLS240.
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Happy summer, {{${first_name} | default: "traveler"}}!
@@ -88,7 +88,7 @@ Thanks for traveling with us! Enjoy your unique discount code: SUMMRTRVLS240.
 
 パーソナライズされたメッセージを送信して、ユーザーにカートに残されたアイテムを思い出させましょう。さらにカートに入っている商品の数に基づいて、送信するメッセージをカスタマイズします。商品が3つ以下の場合は、すべての商品を一覧表示します。3つ以上の商品があれば、もっと簡潔なメッセージを送ります。
 
-1. オペレータ`!=` で液体条件付きロジックを開き、ユーザのカートが空かどうかを確認してみましょう。これは"not equal" を意味します。この場合、空白値に等しくないカスタム属性`cart_items` に条件を設定します。
+1. オペレータ`!=` でLiquid条件付きロジックを開き、ユーザのカートが空かどうかを確認してみましょう。これは"not equal" を意味します。この場合、空白値に等しくないカスタム属性`cart_items` に条件を設定します。
 
 {% raw %}
 ```liquid
@@ -136,7 +136,7 @@ Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase!
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${cart_items}}} != blank %}
@@ -200,7 +200,7 @@ Get ready! Our Anniversary Sale is in {{ difference_days }} days!
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign sale_date = {{custom_attribute.${anniversary_date}}} | date: "%s" %}
@@ -270,7 +270,7 @@ We heard {{this_month}} is a special month! Enjoy a 50% discount on your purchas
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign this_month = 'now' | date: "%B" %}
@@ -397,7 +397,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${favorite_product}}} == blank or {{custom_attribute.${last_purchase_date}}} == blank %}

@@ -9,6 +9,10 @@ description: "This landing page is where developers can find all the integration
 
 guide_featured_title: "Featured integrations"
 guide_featured_list:
+- name: Web
+  link: /docs/developer_guide/sdk_integration/?sdktab=web
+  image: /assets/img/braze_icons/globe-02.svg
+  nav_link: web
 - name: Android
   image: /assets/img/braze_icons/android.svg
   link: /docs/developer_guide/sdk_integration/?sdktab=android
@@ -16,10 +20,6 @@ guide_featured_list:
 - name: Swift
   link: /docs/developer_guide/sdk_integration/?sdktab=swift
   image: /assets/img/braze_icons/swift.svg
-- name: Web
-  link: /docs/developer_guide/sdk_integration/?sdktab=web
-  image: /assets/img/braze_icons/globe-02.svg
-  nav_link: web
 
 guide_menu_title: "All integrations"
 guide_menu_list:
@@ -47,12 +47,8 @@ guide_menu_list:
     link: /docs/developer_guide/sdk_integration/?sdktab=unity
     image: /assets/img/unity.png
     nav_link: unity
-  - name: Unreal Engine
-    link: /docs/developer_guide/sdk_integration/?sdktab=unreal%20engine
-    image: /assets/img/unreal.png
-    nav_link: unreal_engine
-  - name: Xamarin
-    link: /docs/developer_guide/sdk_integration/?sdktab=xamarin
+  - name: .NET MAUI (Xamarin)
+    link: /docs/developer_guide/sdk_integration/?sdktab=.net%20maui%20(xamarin)
     image: /assets/img/xamarin.png
     nav_link: xamarin
   - name: TV & OTT

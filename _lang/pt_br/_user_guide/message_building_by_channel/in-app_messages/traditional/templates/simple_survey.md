@@ -16,7 +16,7 @@ tool:
 
 Por exemplo, pergunte aos usuários como eles gostariam de usar seu app, saiba mais sobre suas preferências pessoais ou até mesmo pergunte sobre a satisfação deles com um recurso específico.
 
-![Três mensagens de pesquisa simples: preferências de notificação, preferências alimentares e uma pesquisa de satisfação do cliente. As opções selecionadas nas pesquisas correspondem a atributos personalizados que serão registrados para aquele usuário.]({% image_buster /assets/img/iam/iam-survey.png %})
+![Três mensagens de pesquisa simples: preferências de notificação, preferências alimentares e uma pesquisa de satisfação do cliente. As opções selecionadas nas pesquisas correspondem a atributos personalizados que serão registrados para esse usuário.]({% image_buster /assets/img/iam/iam-survey.png %})
 
 ## Requisitos do SDK {#supported-sdk-versions}
 
@@ -38,32 +38,32 @@ Este modelo de pesquisa é compatível com aplicativos móveis e navegadores da 
 
 Para começar a construir sua pesquisa, adicione sua pergunta ao campo **Header** da pesquisa. Se desejar, você pode adicionar uma mensagem opcional **Body** que aparecerá sob sua pergunta da pesquisa.
 
-![Guia de composição do editor de pesquisa simples, com campos para um cabeçalho, corpo opcional e texto auxiliar opcional.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
+![A guia de composição do editor de pesquisa simples, com campos para um cabeçalho, corpo opcional e texto auxiliar opcional.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
 
 {% alert tip %}
 Esses campos podem incluir tanto Liquid quanto emojis, então seja criativo!
 {% endalert %}
 
-### Etapa 2: Configurar opções {#single-multiple-choice}
+### Etapa 2: Configurar escolhas {#single-multiple-choice}
 
 Você pode adicionar até 12 opções em uma pesquisa.
 
-Selecione **Seleção de escolha única** ou **Seleção de escolha múltipla**. O **texto do Helper** será atualizado automaticamente quando você alternar entre as duas opções para informar aos usuários quantas opções eles podem selecionar. 
+Selecione **Seleção única** ou **Seleção múltipla**. O **Texto auxiliar** será atualizado automaticamente quando você alternar entre as duas opções para informar aos usuários quantas escolhas eles podem selecionar. 
 
-Em seguida, determine se [coletará](#custom-attributes) [apenas](#no-attributes) [atributos personalizados](#custom-attributes) ou [respostas de registro](#no-attributes).
+Em seguida, determine se você irá [coletar atributos personalizados](#custom-attributes) ou [registrar apenas respostas](#no-attributes).
 
-![Opções suspensas com "registro de atributos ao enviar" selecionado.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
+![Dropdown de escolhas com "Registrar atributos ao enviar" selecionado.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
 
 #### Coletar atributos personalizados {#custom-attributes}
 
-Selecione **atributos de registro na submissão** para coletar atributos com base na submissão do usuário. Você pode usar esta opção para criar novos segmentos e campanhas de redirecionamento. Por exemplo, em uma [pesquisa de satisfação](#user-satisfaction), é possível enviar um e-mail de acompanhamento para todos os usuários que não ficaram satisfeitos.
+Selecione **atributos de registro na submissão** para coletar atributos com base na submissão do usuário. Você pode usar esta opção para criar novos segmentos e campanhas de redirecionamento. Por exemplo, em uma [pesquisa de satisfação](#user-satisfaction), você poderia enviar um e-mail de acompanhamento para todos os usuários que não estavam satisfeitos.
 
-Para adicionar um atributo personalizado a cada escolha, selecione um nome de atributo personalizado no menu suspenso (ou crie um novo) e, em seguida, insira o valor a ser definido quando essa escolha for enviada. Você também pode criar um novo atributo personalizado em sua [página de configurações]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/).
+Para adicionar um atributo personalizado a cada escolha, selecione um nome de atributo personalizado no menu suspenso (ou crie um novo) e, em seguida, insira o valor a ser definido quando essa escolha for enviada. Você também pode criar um novo atributo personalizado na sua [Página de Configurações]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/).
 
 O tipo de dado dos seus atributos personalizados importa dependendo de como você configurou sua pesquisa.
 
 - **Seleção de múltipla escolha:** O tipo de dado do atributo personalizado deve ser um array. Se o atributo personalizado estiver definido para um tipo de dado diferente, as respostas não serão registradas.
-- **Seleção de escolha única:** O tipo de dado do atributo personalizado _não deve_ ser um array. As respostas não serão registradas se o atributo for um array.
+- **Seleção de escolha única:** O tipo de dado do atributo personalizado deve ser uma string. Atributos personalizados que não são do tipo string não aparecerão no dropdown, e as respostas não serão registradas.
 
 {% alert important %}
 Quando a coleta de atributo personalizado está ativada, as escolhas que compartilham o mesmo nome de atributo personalizado serão combinadas em um array.
@@ -71,11 +71,11 @@ Quando a coleta de atributo personalizado está ativada, as escolhas que compart
 
 ##### Exemplo 
 
-Por exemplo, em uma [pesquisa de preferências de notificação](#notification-preferences), você pode fazer de cada escolha um atributo booleano (verdadeiro/falso) para permitir que os usuários selecionem os tópicos nos quais estão interessados. Se um usuário marcar a opção "Promoções", isso atualizará seu [perfil de usuário]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) com o atributo personalizado `Promotions Topic` definido como `true`. Se eles deixarem a escolha desmarcada, esse mesmo atributo permanecerá inalterado.
+Por exemplo, em uma [pesquisa de preferências de notificação](#notification-preferences), você pode fazer com que cada escolha seja um atributo booleano (verdadeiro/falso) para permitir que os usuários selecionem quais tópicos eles estão interessados. Se um usuário marcar a opção "Promoções", isso atualizará seu [perfil de usuário]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) com o atributo personalizado `Promotions Topic` definido como `true`. Se eles deixarem a escolha desmarcada, esse mesmo atributo permanecerá inalterado.
 
-Em seguida, é possível usar o filtro `Custom Attribute` para criar um segmento para usuários com o atributo personalizado `Promotions Topic` `is` `true` para garantir que somente os usuários interessados em suas promoções recebam as campanhas relevantes.
+Você pode então usar o `Custom Attribute` filtro para criar um segmento para usuários com o atributo personalizado `Promotions Topic` `is` `true` para garantir que apenas usuários interessados em suas promoções receberão as campanhas relevantes.
 
-#### Registro de respostas apenas {#no-attributes}
+#### Registrando apenas respostas {#no-attributes}
 
 Alternativamente, você pode optar por **registrar apenas as respostas (sem atributos)**. Quando esta opção é selecionada, as respostas da pesquisa são registradas como cliques de botão, mas os atributos personalizados não são registrados no perfil do usuário. Isso significa que você ainda pode ver as métricas de cliques para cada opção de pesquisa (veja [análise de dados](#analytics)), mas essa escolha não será refletida no perfil do usuário.
 
@@ -85,7 +85,7 @@ Essas métricas de cliques não estão disponíveis para redirecionamento.
 
 Depois que um usuário enviar sua resposta, você pode opcionalmente mostrar uma página de confirmação ou simplesmente fechar a mensagem.
 
-Uma página de confirmação é um ótimo lugar para agradecer aos usuários pelo seu tempo ou fornecer informações adicionais. É possível personalizar a chamada para ação nessa página para orientar os usuários para outra página do seu app ou site.
+Uma página de confirmação é um ótimo lugar para agradecer aos usuários pelo seu tempo ou fornecer informações adicionais. Você pode personalizar a chamada para ação nesta página para guiar os usuários para outra página do seu app ou site.
 
 Edite o texto do seu botão e o comportamento ao clicar na seção **Botão de Enviar** na parte inferior da guia **Pesquisa**:
 
@@ -101,7 +101,7 @@ Se você deseja guiar os usuários para outra página do seu app ou site, altere
 
 Você pode personalizar a cor da fonte e a cor de destaque da mensagem usando o seletor de **tema de cores**.
 
-![Guia de composição do editor de pesquisa simples com o seletor de tema de cores expandido após um usuário ter clicado na paleta de cores.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
+![A guia de composição do editor de pesquisa simples com o seletor de tema de cor expandido após um usuário clicar na paleta de cores.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
 ## Analisar resultados {#analytics}
 
@@ -111,11 +111,11 @@ Depois que sua campanha for lançada, você poderá analisar os resultados em te
 As escolhas de pesquisa excluídas ainda aparecerão na análise de dados, mas não serão mostradas como uma escolha para novos usuários.
 {% endalert %}
 
-É possível encontrar as métricas de desempenho do questionário expandindo o menu suspenso **Resultados** para uma variante específica na seção **Desempenho de mensagens no app** da análise de dados. Aqui está um resumo do que você verá:
+Você pode encontrar suas métricas de desempenho da pesquisa expandindo o **Resultados** dropdown para uma variante específica na seção **Desempenho de Mensagem no App** da análise de dados. Aqui está uma visão geral do que você verá:
 
-- **O engajamento com o questionário** mostra como os usuários interagiram com o questionário em geral, incluindo o total de envios, descartes e cliques no corpo da mensagem.
-- **Os resultados da pesquisa** exibem um detalhamento de quantos usuários selecionaram cada opção de resposta, juntamente com a porcentagem do total de envios que cada opção representa.
-- **As métricas da página de confirmação** (se ativadas) incluem quantos usuários visualizaram a tela de confirmação, clicaram em seu botão ou a descartaram sem interagir.
+- **O engajamento da pesquisa** mostra como os usuários interagiram com a pesquisa de forma geral, incluindo total de envios, rejeições e cliques dentro do corpo da mensagem.
+- **Os resultados da pesquisa** exibem uma divisão de quantos usuários selecionaram cada opção de resposta, junto com a porcentagem do total de envios que cada escolha representa.
+- **Métricas da página de confirmação** (se habilitado) incluem quantos usuários visualizaram a tela de confirmação, clicaram em seu botão ou a rejeitaram sem interagir.
 
 Para definições de métricas de pesquisa, consulte o [Glossário de Métricas de Relatório]({{site.baseurl}}/user_guide/data/report_metrics/) e filtre por "mensagem no app".
 
@@ -127,60 +127,72 @@ As escolhas selecionadas serão automaticamente transferidas para Currents, no c
 
 ## Casos de uso
 
+{% tabs %}
+{% tab User satisfaction %}
+
 ### Satisfação do usuário
 
 **Objetivo:** Meça a satisfação do cliente e envie campanhas de recuperar para usuários que deixaram baixas pontuações.
 
-Para configurar isso, use uma pesquisa de seleção de escolha única com cinco opções que variam de "😡 Muito insatisfeito" a "😍 Muito satisfeito". Cada escolha é mapeada para o atributo personalizado `customer_satisfaction`, com um valor numérico de 1 a 5, em que 1 indica o menos satisfeito e 5 o mais satisfeito.
+Para configurar isso, use uma pesquisa de seleção de escolha única com cinco opções que variam de “😡 Muito Insatisfeito” a “😍 Muito Satisfeito.” Cada escolha é mapeada para o atributo personalizado `customer_satisfaction`, com um valor numérico de 1 a 5—onde 1 indica o menos satisfeito e 5 o mais satisfeito. Nota que esses valores numéricos são armazenados como strings, pois atributos personalizados do tipo string são necessários para seleção de escolha única.
 
 | Escolha                                | Atributo              | Valor |
 |---------------------------------------|------------------------|-------|
-| Muito insatisfeito                  | `customer_satisfaction` | 1     |
-| Insatisfeito                       | `customer_satisfaction` | 2     |
-| 🙂 Nem satisfeito nem insatisfeito | `customer_satisfaction` | 3     |
+| 😡 Muito Insatisfeito                  | `customer_satisfaction` | 1     |
+| 😟 Insatisfeito                       | `customer_satisfaction` | 2     |
+| 🙂 Nem Satisfeito nem Insatisfeito | `customer_satisfaction` | 3     |
 | 😊 Satisfeito                          | `customer_satisfaction` | 4     |
-| Muito satisfeito                     | `customer_satisfaction` | 5     |
+| 😍 Muito Satisfeito                     | `customer_satisfaction` | 5     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Quando um usuário envia a pesquisa, o valor selecionado é registrado como um atributo personalizado. Em seguida, você pode criar campanhas de acompanhamento usando filtros de público. Por exemplo, direcione mensagens de recuperação para usuários cujo atributo `customer_satisfaction` seja 1 ou 2.
+Quando um usuário envia a pesquisa, seu valor selecionado é registrado como um atributo personalizado. Você pode então construir campanhas de acompanhamento usando filtros de público. Por exemplo, direcione mensagens de recuperação para usuários cujo atributo `customer_satisfaction` é "1" ou "2".
+
+{% endtab %}
+{% tab Notification preferences %}
 
 ### Preferências de notificação
 
-**Objetivo:** Permita que os usuários aceitem tipos específicos de notificações.
+**Objetivo:** Deixe os usuários optarem por tipos específicos de notificações.
 
-Para configurar isso, use uma pesquisa de seleção de múltipla escolha em que cada opção represente um tópico de notificação. Em vez de atribuir o mesmo atributo com valores diferentes, cada escolha é mapeada para um atributo booleano distinto que reflete o interesse do usuário nesse tópico. Se um usuário selecionar uma opção, a atribuição correspondente será definida como `true`. Se não for selecionado, a atribuição permanecerá inalterada.
+Para configurar isso, use uma pesquisa de seleção de múltiplas escolhas onde cada escolha representa um tópico de notificação. Em vez de atribuir o mesmo atributo com valores diferentes, cada escolha mapeia para um atributo booleano distinto que reflete o interesse do usuário naquele tópico. Se um usuário selecionar uma escolha, o atributo correspondente é definido como `true`. Se não for selecionado, o atributo permanece inalterado.
 
 | Escolha             | Atributo              | Valor  |
 |--------------------|------------------------|--------|
-| Atualizações de produtos    | `wants_product_updates`| `true` |
+| Atualizações de Produto    | `wants_product_updates`| `true` |
 | Promoções         | `wants_promotions`     | `true` |
-| Convites para eventos      | `wants_event_invites`  | `true` |
-| Pesquisas e feedback | `wants_surveys`        | `true` |
-| Dicas e tutoriais   | `wants_tips`           | `true` |
+| Convites para Eventos      | `wants_event_invites`  | `true` |
+| Pesquisas & Feedback | `wants_surveys`        | `true` |
+| Dicas & Tutoriais   | `wants_tips`           | `true` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endtab %}
+{% tab Identify customer goals %}
 
 ### Identificar metas do cliente
 
 **Objetivo:** Identifique os principais motivos pelos quais os usuários visitam seu app.
 
-Para configurar isso, use um questionário de seleção de escolha única com cada opção representando uma meta ou intenção comum. Cada escolha é mapeada para o atributo personalizado `product_goal` com um valor correspondente à intenção do usuário selecionada.
+Para configurar isso, use uma pesquisa de seleção de escolha única com cada opção representando um objetivo ou intenção comum. Cada escolha é mapeada para o atributo personalizado `product_goal` com um valor correspondente à intenção do usuário selecionada.
 
 | Escolha                     | Atributo       | Valor     |
 |----------------------------|------------------|-----------|
-| Verificação de status            | `product_goal`   | `status`  |
-| Fazendo upgrade de minha conta       | `product_goal`   | `upgrade` |
-| Agendamento de um compromisso  | `product_goal`   | `schedule`|
+| Verificando status            | `product_goal`   | `status`  |
+| Atualizando minha conta       | `product_goal`   | `upgrade` |
+| Agendando uma consulta  | `product_goal`   | `schedule`|
 | Suporte ao cliente           | `product_goal`   | `support` |
 | Apenas navegando              | `product_goal`   | `browse`  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Quando um usuário envia a pesquisa, o valor selecionado é registrado como um atributo personalizado em seu perfil. Em seguida, é possível usar esses dados para personalizar experiências futuras ou segmentar usuários com base em seu objetivo principal.
+Quando um usuário envia a pesquisa, o valor selecionado é registrado como um atributo personalizado em seu perfil. Você pode então usar esses dados para personalizar experiências futuras ou segmentar usuários com base em seu objetivo principal.
+
+{% endtab %}
+{% tab Improve conversion rates %}
 
 ### Melhore as taxas de conversão
 
-**Objetivo:** Entenda por que os clientes não estão fazendo upgrade ou comprando.
+**Objetivo:** Entenda por que os clientes não estão atualizando ou comprando.
 
-Para configurar isso, use uma pesquisa de seleção de escolha única com cada opção representando uma barreira comum para fazer upgrade. Cada escolha é mapeada para o atributo personalizado `upgrade_reason` com um valor correspondente que reflete a seleção do usuário.
+Para configurar isso, use uma pesquisa de seleção de escolha única com cada opção representando uma barreira comum à atualização. Cada escolha é mapeada para o atributo personalizado `upgrade_reason` com um valor correspondente que reflete a seleção do usuário.
 
 | Escolha              | Atributo        | Valor       |
 |---------------------|------------------|-------------|
@@ -188,29 +200,32 @@ Para configurar isso, use uma pesquisa de seleção de escolha única com cada o
 | Não valioso        | `upgrade_reason` | `value`     |
 | Difícil de usar    | `upgrade_reason` | `difficult` |
 | Usando um concorrente  | `upgrade_reason` | `competitor`|
-| Outro motivo        | `upgrade_reason` | `other`     |
+| Outro Motivo        | `upgrade_reason` | `other`     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Quando um usuário envia a pesquisa, o valor selecionado é salvo em seu perfil. Em seguida, é possível direcionar esses usuários com campanhas adaptadas às suas objeções específicas, como ofertas de desconto ou melhorias de usabilidade.
+Quando um usuário envia a pesquisa, o valor selecionado é salvo em seu perfil. Você pode então direcionar esses usuários com campanhas adaptadas à sua objeção específica, como ofertas de desconto ou melhorias de usabilidade.
+
+{% endtab %}
+{% tab Favorite features %}
 
 ### Recursos favoritos
 
 **Objetivo:** Compreenda quais recursos os clientes gostam de usar.
 
-Para configurar isso, use uma pesquisa de seleção de múltipla escolha em que cada opção represente um recurso do seu app. Cada escolha é mapeada para o atributo personalizado `favorite_features` e, quando o usuário envia a pesquisa, o atributo é definido como uma matriz dos valores selecionados.
+Para configurar isso, use uma pesquisa de seleção de múltipla escolha onde cada opção representa um recurso do seu app. Cada escolha é mapeada para o atributo personalizado `favorite_features`, e quando o usuário envia a pesquisa, o atributo é definido como um array dos valores selecionados.
 
 | Escolha            | Atributo          | Valor        |
 |-------------------|--------------------|--------------|
 | Marcadores         | `favorite_features`| `bookmarks`  |
-| Aplicativo móvel        | `favorite_features`| `mobile`     |
-| Compartilhamento de publicações     | `favorite_features`| `sharing`    |
-| Suporte ao cliente  | `favorite_features`| `support`    |
+| App Móvel        | `favorite_features`| `mobile`     |
+| Compartilhando Postagens     | `favorite_features`| `sharing`    |
+| Suporte ao Cliente  | `favorite_features`| `support`    |
 | Personalização     | `favorite_features`| `custom`     |
 | Preço / Valor     | `favorite_features`| `value`      |
 | Comunidade         | `favorite_features`| `community`  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Como essa pesquisa usa seleção de múltipla escolha, o perfil do usuário será atualizado com uma lista de todos os valores de recursos selecionados.
+Porque esta pesquisa usa seleção de múltipla escolha, o perfil do usuário será atualizado com uma lista de todos os valores de recurso selecionados.
 
-
-
+{% endtab %}
+{% endtabs %}

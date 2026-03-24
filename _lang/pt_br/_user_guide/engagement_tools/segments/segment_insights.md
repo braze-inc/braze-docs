@@ -9,7 +9,7 @@ tool:
 description: "Este artigo explica como usar, interpretar e compartilhar Insights de segmento."
 ---
 
-# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Insights de segmentos
+# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Insights de segmento
 
 > Saiba como usar, interpretar e compartilhar insights de segmento. 
 
@@ -19,7 +19,7 @@ O Segment Insights mostra como está a performance de um segmento em comparaçã
 
 Acesse a página **Segment Insights (Insights de segmento** ) de seu dashboard, em **Análise de dados**, e visualize até 10 segmentos diferentes comparados com uma linha de base.
 
-![Dashboard do Segment Insights comparando três segmentos, "Usuários do Reino Unido", "Usuários da França" e "Usuários da Califórnia", com um segmento de linha de base, "Todos os usuários".]({% image_buster /assets/img_archive/segment_insights.png %})
+![Dashboard do Segment Insights de segmento comparando três segmentos, "Usuários do Reino Unido", "Usuários da França" e "Usuários da Califórnia", com um segmento de linha de base, "Todos os usuários".]({% image_buster /assets/img_archive/segment_insights.png %})
 
 O segmento de linha de base pode ser um segmento específico selecionado por você ou um segmento que contenha todos os seus usuários. Você pode comparar as seguintes estatísticas usando o Segment Insights:
 
@@ -64,9 +64,9 @@ Para melhorar as conversões entre falantes de outros idiomas que não o inglês
 
 ### Compreensão dos indicadores de maior receita
 
-Fazer com que os usuários se convertam em compradores pode ser difícil, e tentar empurrar usuários novos, inativos ou desengajados diretamente para a compra pode levar o usuário a desinstalar seu app. O Segment Insights pode ajudá-lo a descobrir ações que levam os usuários mais adiante no funil de compras sem exigir que eles comprem ainda, por exemplo, assinar seu boletim informativo, compartilhar nas redes sociais ou inscrever-se para receber mensagens promocionais. Por exemplo, é possível mapear o impacto em diferentes comportamentos de compra em um app de comércio eletrônico.
+Fazer com que os usuários se convertam em compradores pode ser difícil, e tentar empurrar usuários novos, inativos ou desengajados diretamente para a compra pode levar o usuário a desinstalar seu app. Os insights de segmento podem ajudá-lo a descobrir ações que levam os usuários mais adiante no funil de compras sem exigir que eles comprem ainda, por exemplo, assinando seu boletim informativo, compartilhando nas redes sociais ou inscrevendo-se para receber mensagens promocionais. Por exemplo, é possível mapear o impacto em diferentes comportamentos de compra em um app de comércio eletrônico.
 
-![Detalhamento de insights de segmento para usuários que compartilharam em redes sociais, inscreveram-se em promoções e assinaram o boletim informativo.]({% image_buster /assets/img_archive/Segment_Insights_Events1.png %})
+![Detalhamento dos insights de segmento para usuários que compartilharam nas redes sociais, inscreveram-se em promoções e assinaram o boletim informativo.]({% image_buster /assets/img_archive/Segment_Insights_Events1.png %})
 
 Nesse caso, relativamente poucos usuários estão inscritos no momento para receber mensagens promocionais e não estão tão ativos, mas esses usuários geram uma receita vitalícia maior. Para aumentar a receita, pode ser uma boa ideia incluir um convite para inscrever-se para receber mensagens promocionais nas campanhas de mensagens de integração. Para reengajar os usuários inativos, um bom plano seria enviar uma [campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) típica [de usuários inativos]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) e direcionar [os usuários que converteram]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#converted-from-campaign-filter) com uma campanha subsequente para inscrever-se para receber mensagens promocionais.
 

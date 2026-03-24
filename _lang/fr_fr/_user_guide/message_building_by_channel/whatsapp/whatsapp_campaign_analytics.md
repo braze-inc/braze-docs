@@ -15,6 +15,6 @@ channel:
 
 > Le présent article de référence couvre les indicateurs WhatsApp utilisés chez Braze, ainsi que la façon de les afficher dans vos campagnes WhatsApp.
 
-{% multi_lang_include campaign_analytics.md channel="whatsapp" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="whatsapp" %}
 
 

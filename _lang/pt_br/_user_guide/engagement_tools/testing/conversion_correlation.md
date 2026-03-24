@@ -1,5 +1,5 @@
 ---
-nav_title: Correlação da conversão
+nav_title: Correlação de conversão
 article_title: Correlação da conversão
 alias: /conversion_correlation/
 page_order: 3
@@ -21,7 +21,7 @@ Para cada campanha, o Braze verifica uma lista de atribuições e comportamentos
 
 Para executar uma análise de correlação de conversão, selecione o evento de conversão de interesse no menu suspenso.
 
-![Painel Correlação de conversão que mostra um exemplo com "Selecionar um evento de conversão" definido como "Evento de conversão primária - A" com a configuração de evento como "Compra efetuada em 12 horas (qualquer produto)".]({% image_buster /assets/img/convcorr.png %})
+![Painel Conversion Correlation (Correlação de conversão) que mostra um exemplo com "Select a conversion event" (Selecionar um evento de conversão) definido como "Primary Conversion Event - A" (Evento de conversão primária - A) com a configuração de evento como "Made Purchase within 12 hours (Any product)" (Compra efetuada em 12 horas (Qualquer produto)).]({% image_buster /assets/img/convcorr.png %})
 
 ## O que é verificado?
 

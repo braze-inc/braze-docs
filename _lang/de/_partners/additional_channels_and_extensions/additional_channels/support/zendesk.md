@@ -21,7 +21,7 @@ Die Server-zu-Server Integration von Braze und Zendesk erlaubt Ihnen die Nutzung
 | Anforderung | Beschreibung |
 |---|---|
 | Zendesk-Konto | Um die Vorteile dieser Partnerschaft zu nutzen, benötigen Sie ein [Zendesk-Administratorkonto](https://`<your-zendesk-instance>`.zendesk.com/agent/admin). |
-| Zendesk API-Token | Ein Zendesk [API-Token](https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-) ist erforderlich, um Anfragen von Braze an den Zendesk-Ticket-Endpunkt zu senden. |
+| Zendesk API-Token | Ein Zendesk [API-Token](https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-) ist erforderlich, um Anfragen von Braze an den Zendesk Ticket Endpunkt zu senden. |
 | Gemeinsamer Bezeichner (empfohlen) | Ein [gemeinsamer Bezeichner](#common-identifier) zwischen Braze und Zendesk wird empfohlen. |
 | Braze API-Schlüssel | Ein Braze API-Schlüssel ist erforderlich, um Anfragen von Zendesk an einen Braze Endpunkt zu senden. Vergewissern Sie sich, dass der von Ihnen verwendete API-Schlüssel die richtigen Berechtigungen für den Braze-Endpunkt hat, den Ihr Zendesk-Webhook verwendet. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -43,7 +43,7 @@ Weitere Anwendungsfälle können über [Zendesk support APIs](https://developer.
 
 #### Anfrage-Header und Methode
 
-Zendesk benötigt einen HTTP-Header für die Autorisierung und eine HTTP-Methode. Ersetzen Sie auf dem Tab **Einstellungen** die <email_address> durch Ihre Zendesk Admin E-Mail und <api_token> durch Ihr Zendesk API Token.
+Zendesk benötigt einen HTTP-Header für die Autorisierung und eine HTTP-Methode. Ersetzen Sie auf dem Tab **Einstellungen** <email_address> durch Ihre Zendesk Admin-E-Mail und <api_token> durch Ihr Zendesk API-Token.
 
 - **HTTP-Methode**: POST
 - **Anfrage-Header**:

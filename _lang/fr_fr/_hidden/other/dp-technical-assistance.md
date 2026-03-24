@@ -1,8 +1,8 @@
 ---
 nav_title: Assistance technique en matière de protection des données
-article_title: Assistance technique en matière de protection des données
+article_title: Assistance technique en matière de protection des données dans les services de Braze
 page_order: 1
-description: "Cette page fournit des instructions techniques pour vous permettre de gérer, par le biais de la plateforme Braze, les demandes des personnes concernées en rapport avec leurs droits en matière de données à caractère personnel."
+description: "Cette page fournit des instructions techniques pour vous permettre de gérer, par le biais des services Braze, les demandes des personnes en ce qui concerne leurs droits en matière de données à caractère personnel."
 alias: /help/dp-technical-assistance/
 permalink: /dp-technical-assistance/
 hide_toc: true
@@ -12,11 +12,15 @@ hide_toc: true
 Warning! Don't make any changes to this document without approval from the legal department.
 -->
 
-# Assistance technique en matière de protection des données
+# Assistance technique en matière de protection des données dans les services de Braze
 
 Il existe une gamme de lois sur la protection des données qui régissent ce que les organisations peuvent faire avec les données personnelles (« Lois sur la protection des données »), y compris le Règlement général sur la protection des données de l'UE et du Royaume-Uni (« RGPD »), la California Consumer Privacy Act (« CCPA ») et la Health Insurance Portability and Accountability Act (« HIPAA »). Il existe d’autres lois et réglementations sur la protection des données au niveau national, régional et sectoriel qui peuvent s’appliquer à votre entreprise.
 
-Ces lois sur la protection des données accordent aux individus des « droits à la vie privée » sur leurs données personnelles. Les organisations sont tenues de recevoir et de répondre aux demandes des individus qui exercent leurs droits à la vie privée. La plateforme Braze peut vous aider à vous conformer à ces lois sur la protection des données en fournissant des fonctionnalités pour faciliter certaines actions requises par ces lois. Ce document fournit des instructions techniques pour utiliser ces fonctionnalités afin de gérer les demandes de droits de confidentialité. Il vous appartient de déterminer quelles lois sur la protection des données s'appliquent à votre entreprise et d'agir en conformité avec elles.
+Ces lois sur la protection des données accordent aux individus des « droits à la vie privée » sur leurs données personnelles. Les organisations sont tenues de recevoir et de répondre aux demandes des individus qui exercent leurs droits à la vie privée. Les services Braze peuvent vous aider à vous conformer à ces lois sur la protection des données en fournissant des fonctionnalités qui facilitent certaines actions requises par ces lois. Ce document fournit des instructions techniques pour utiliser ces fonctionnalités afin de gérer les demandes de droits de confidentialité. Il vous appartient de déterminer quelles lois sur la protection des données s'appliquent à votre entreprise et d'agir en conformité avec elles.
+
+{% alert important %}
+Les recommandations de Braze figurant sur cette page ne s'appliquent pas à BrazeAI Decisioning Studio™. Pour gérer toute demande de droit à la confidentialité des données personnelles dans BrazeAI Decisioning Studio™, contactez votre gestionnaire de compte.
+{% endalert %}
 
 ## Avis juridique
 
@@ -34,11 +38,11 @@ La plupart des lois sur la confidentialité définissent trois principales parti
 - Un responsable du traitement des données est une entité qui détermine les finalités et les moyens du traitement des données personnelles
 - Un processeur de données est une entité qui traite les données personnelles pour le compte et selon les instructions du responsable du traitement des données
 
-En relation avec la plateforme Braze :
+En ce qui concerne les services de Braze :
 
-- Les personnes concernées sont par exemple les utilisateurs finaux de votre application client (e.g, vos clients) ou vos employés qui sont des utilisateurs du tableau de bord dans votre instance de la plateforme Braze.
-- Vous, le client de Braze, êtes le responsable du traitement des données qui décide comment et pourquoi les données personnelles des personnes concernées seront collectées et traitées au sein de la plateforme Braze.
-- Braze est un processeur de données qui traite les données personnelles sur la plateforme Braze en votre nom et conformément aux instructions que nous recevons de votre part.
+- Les personnes concernées sont, par exemple, les utilisateurs finaux de votre application client (e.g., vos clients) ou vos employés qui sont des utilisateurs de l'entreprise dans votre instance des services Braze.
+- Vous, le client de Braze, êtes le responsable du traitement des données qui décide comment et pourquoi les Données à caractère personnel des personnes concernées seront collectées et traitées dans le cadre des Services de Braze.
+- Braze est un sous-traitant de données qui traite les données à caractère personnel dans les services de Braze en votre nom et conformément aux instructions que nous recevons de votre part.
 
 Les termes ci-dessus sont ceux du RGPD, mais, par exemple, les termes comparables dans le cadre du CCPA sont :
 
@@ -46,7 +50,7 @@ Les termes ci-dessus sont ceux du RGPD, mais, par exemple, les termes comparable
 - « entreprises » pour les responsables du traitement des données.
 - « fournisseurs de services » pour les processeurs de données.
 
-Vous trouverez ci-dessous des informations pertinentes sur les demandes de droits à la vie privée les plus courantes des personnes concernées, y compris comment vous pouvez y répondre grâce aux fonctionnalités techniques de la plateforme Braze.
+Vous trouverez ci-dessous des informations pertinentes sur les demandes de droits à la confidentialité des données les plus courantes émanant des personnes concernées, y compris la manière dont vous pouvez y répondre par le biais des fonctionnalités techniques du service Braze.
 
 ## Le droit d’être informé
 
@@ -84,10 +88,10 @@ Le droit à l’effacement est également connu sous le nom de « droit à l’
 
 #### Suppression standard 
 
-Une fois que vous avez arrêté la collecte de données, vous pouvez utiliser [le point de terminaison de l'API REST de suppression d'utilisateur de Braze](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/) pour supprimer un utilisateur final, ce qui supprimera tous les enregistrements de cet utilisateur final des services de Braze :
+Une fois que vous avez arrêté la collecte des données, vous pouvez utiliser [le point de terminaison de l'API REST de suppression d'utilisateur de](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/) Braze pour supprimer un utilisateur final, ce qui supprimera tous les enregistrements de cet utilisateur final dans les services de Braze :
 
-- Pour les utilisateurs finaux qui ont un identifiant externe dans les Services, vous pouvez utiliser cet identifiant pour supprimer les données de cet utilisateur final.
-- Pour les utilisateurs finaux anonymes qui n'ont pas d'identifiant_externe dans les Services, vous pouvez récupérer l'identifiant de l'appareil de cet utilisateur final en utilisant le SDK Braze et utiliser l'identifiant de l'appareil pour trouver le profil de l'utilisateur final associé à cet appareil. Vous pouvez ensuite utiliser l'API de suppression d'utilisateurs pour supprimer le profil associé à cet utilisateur final.
+- Pour les utilisateurs finaux qui disposent d'un external_id au sein des services Braze, vous pouvez utiliser cet ID pour supprimer les données de cet utilisateur final.
+- Pour les utilisateurs finaux anonymes qui n'ont pas de external_id dans les services Braze, vous pouvez récupérer l'identifiant de l'appareil de cet utilisateur final à l'aide du SDK Braze et utiliser l'identifiant de l'appareil pour trouver le profil de l'utilisateur final associé à cet appareil. Vous pouvez ensuite utiliser l'API de suppression d'utilisateurs pour supprimer le profil associé à cet utilisateur final.
 
 La suppression d'un utilisateur final des services Braze supprimera définitivement le profil utilisateur centralisé de Braze pour cet utilisateur final tel que défini par le `external_id` fourni. Cela inclut les informations de profil structurées que Braze a collectées par défaut ou que vous avez configuré les services Braze pour collecter, telles que les informations sur l'appareil, le pays, la langue et l'adresse e-mail.
 
@@ -110,16 +114,16 @@ Notez que l'adresse e-mail ou le numéro de téléphone associé au profil de l'
         <p>Les clients peuvent créer des champs personnalisés pour les propriétés des événements et les extras des messages. Ces champs ne sont pas destinés aux données personnelles, par conséquent, ces champs ne sont pas inclus dans le processus de suppression par défaut décrit ci-dessus. Si, cependant, vous utilisez Braze pour saisir ou collecter des données personnelles via les propriétés d'événement et les suppléments de message, vous pouvez configurer le processus de suppression déclenché par l’endpoint d'API REST de suppression d'utilisateurs pour inclure également ces champs, afin que les données contenues dans ces champs soient également supprimées.</p>
         <p>Les paramètres par défaut sont appliqués au niveau de l'entreprise, mais vous pouvez choisir de supprimer les champs suivants lorsque le processus de suppression s'exécute, au niveau du groupe d'applications/espace de travail :</p>
     <ul>
-        <li>PROPRIÉTÉS pour UTILISATEURS_COMPORTEMENTS_ÉVÉNEMENTPERSONNALISÉ</li>
+        <li>PROPRIÉTÉS pour USERS_BEHAVIORS_CUSTOMEVENT</li>
         <li>PROPRIÉTÉS pour USERS_BEHAVIORS_PURCHASE</li>
-        <li>MESSAGE_EXTRAS pour:</li>
+        <li>MESSAGE_EXTRAS pour :</li>
             <ul>
-            <li>CONTENU DE LA CARTE DES MESSAGES DES UTILISATEURS</li>
+            <li>USERS_MESSAGES_CONTENTCARD</li>
             <li>USERS_MESSAGES_EMAIL_SEND</li>
             <li>USERS_MESSAGES_PUSHNOTIFICATION_SEND</li>
             <li>USERS_MESSAGES_PUSHNOTIFICATION_RETRYSEND_SHARED</li>
-            <li>ENVOYER_MESSAGES_UTILISATEURS_WEBHOOK</li>
-            <li>UTILISATEURS_MESSAGES_SMS_ENVOYER</li>
+            <li>USERS_MESSAGES_WEBHOOK_SEND</li>
+            <li>USERS_MESSAGES_SMS_SEND</li>
             <li>Événements d'envoi de messages futurs</li>
             </ul>
     </ul>
@@ -176,7 +180,7 @@ Certaines lois sur la protection des données empêchent, ou permettent aux pers
 
 ### Recommandation de Braze
 
-Braze ne réalise aucune action de profilage ou de prise de décision automatisée ayant des conséquences juridiques ou équivalentes pour les personnes concernées. Si vous pensez que votre propre utilisation de la plateforme Braze aura des impacts juridiques ou équivalents et que vous avez reçu une objection à ce sujet, vous pouvez choisir de supprimer le profil utilisateur de la même manière que dans le cadre du « droit à l'effacement ».
+Braze ne réalise aucune action de profilage ou de prise de décision automatisée ayant des conséquences juridiques ou équivalentes pour les personnes concernées. Si vous estimez que votre propre utilisation des services de Braze aura des répercussions juridiques ou équivalentes et que vous avez reçu une objection à ce sujet, vous pouvez choisir de supprimer le profil utilisateur de la même manière que dans le cadre du "Droit à l'effacement".
 
 ## Publicité ciblée
 

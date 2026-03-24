@@ -1,5 +1,5 @@
 ---
-nav_title: Uso de las API públicas
+nav_title: Utilizar API públicas
 article_title: API públicas para contenidos conectados
 page_order: 10
 description: "En estos artículos se cubre una lista de API disponibles públicamente que pueden utilizarse con el Contenido conectado."

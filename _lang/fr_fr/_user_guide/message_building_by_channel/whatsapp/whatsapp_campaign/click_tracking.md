@@ -1,7 +1,7 @@
 ---
 nav_title: Suivi des clics
 article_title: Suivi des clics
-page_order: 2
+page_order: 3
 description: "Cet article de référence explique comment activer le suivi des clics dans vos messages WhatsApp, tester les liens raccourcis, utiliser votre domaine personnalisé dans les liens suivis, et plus encore."
 page_type: reference
 alias: "/whatsapp_click_tracking/"
@@ -19,6 +19,10 @@ Le suivi des clics vous permet de mesurer quand quelqu'un tape sur un lien dans 
 
 Vous pouvez activer le suivi des clics dans les messages de réponse et les messages types. Il fonctionne avec des liens dans les boutons et le corps du texte, et prend en charge les URL personnalisées et les domaines personnalisés. Une fois qu'il est activé, vous verrez les données relatives aux clics dans vos rapports de performance WhatsApp et pourrez segmenter les utilisateurs en fonction de qui a cliqué sur quoi.
 
+{% alert note %}
+Le suivi des clics ne fonctionne pas avec les liens profonds. Vous pouvez raccourcir les liens universels à partir de fournisseurs tels que Branch ou Appsflyer, mais Braze n'est pas en mesure de résoudre les problèmes qui peuvent survenir lors de cette opération (comme la rupture de l'attribution ou la cause d'une redirection).
+{% endalert %}
+
 ## Fonctionnement
 
 ### Messages de réponse 
@@ -31,7 +35,7 @@ Le lien sera raccourci au domaine Braze, ou au domaine personnalisé spécifié 
 
 Tous les URL statiques commençant par `http://` ou `https://` seront raccourcis. Les URL raccourcis qui contiennent une personnalisation liquide (comme le ciblage de suivi au niveau de l'utilisateur) seront valables pendant deux mois.
 
-![Compositeur d'envois de messages WhatsApp avec un corps de contenu et un bouton.]({% image_buster /assets/img/whatsapp/click_tracking/message_composer.png %})
+![Éditeur de messages WhatsApp avec corps du message et bouton.]({% image_buster /assets/img/whatsapp/click_tracking/message_composer.png %})
 
 ### Messages types 
 
@@ -49,7 +53,7 @@ Pour les messages des modèles, l'URL de base doit être soumise correctement lo
 
 Lors de la composition, Braze détectera automatiquement les modèles dont les domaines URL sont compatibles, tant dans le corps du texte que pour les boutons CTA. Le statut s'affiche au bas du modèle. 
 
-![La section "Statut du lien" montre un statut actif pour le suivi des clics.]({% image_buster /assets/img/whatsapp/click_tracking/link_status.png %}){: style="max-width:70%;"}
+![Section « État du lien » indiquant un état actif pour le suivi des clics.]({% image_buster /assets/img/whatsapp/click_tracking/link_status.png %}){: style="max-width:70%;"}
 
 - **Liens pris en charge :** Le suivi des clics sera activé pour les liens soumis avec l'URL de base correspondante.
 - **Liens partiellement soutenus :** Si certains liens d'un modèle sont soumis en tant qu'URL complètes, le suivi des clics **ne sera pas** appliqué à ces liens.
@@ -57,11 +61,17 @@ Lors de la composition, Braze détectera automatiquement les modèles dont les d
 
 L'URL de destination devra être fournie pour tout lien dont l'URL de base correspond à `brz.ai` ou à votre domaine personnalisé. 
 
-![Section "Boutons" avec des champs pour le nom du bouton, l'URL du site web et l'URL de suivi des clics.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
+![Section « Boutons » avec des champs pour le nom du bouton, l'URL du site Web et l'URL de suivi des clics.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
 
-{% multi_lang_include click_tracking.md section='Domaines personnalisés' %}
+{% alert important %}
+**Envoi de messages types via l'API** : Le suivi des clics WhatsApp (à`brz.ai`l'aide d'un domaine de suivi personnalisé et du champ **URL de suivi des clics** dans l'éditeur de messages) n'est pas pris en charge lors de l'envoi de messages modèles WhatsApp via [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)l'[endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/).
 
-## La personnalisation Liquid dans les URL
+Si vous envoyez un message modèle via l'API, vous pouvez remplir les variables URL CTA (à l'aide de `button_variables`), mais Braze ne génère pas d'URL de suivi des clics ni de lien de redirection dans le flux de requêtes API. Pour utiliser le suivi des clics, veuillez envoyer le modèle depuis le tableau de bord de Braze ou via un déclencheur de campagne Braze.
+{% endalert %}
+
+{% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
+
+## La personnalisation liquide dans les URL
 
 Vous pouvez construire dynamiquement votre URL directement dans le compositeur Braze, ce qui vous permet d'ajouter des paramètres UTM dynamiques à vos URL ou d'envoyer aux utilisateurs des liens uniques (comme diriger les utilisateurs vers leur panier abandonné ou vers un produit spécifique qui est de nouveau en stock).
 Les URL peuvent être générés dynamiquement par l'utilisation de n'importe quelle étiquette Liquid de personnalisation prise en charge.
@@ -99,27 +109,23 @@ Si un brouillon est créé dans un Canvas actif, l'URL raccourcie ne sera pas g�
 
 Lorsque le suivi des clics est activé ou utilisé avec des modèles pris en charge, le tableau des performances de WhatsApp comprend la colonne **Nombre total de clics** qui indique le nombre d'événements de clics par variante et le taux de clics associé. Pour plus de détails sur les indicateurs de WhatsApp, reportez-vous à la section [Performances des messages WhatsApp.]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics)
 
-![Étape du canvas du message WhatsApp.]({% image_buster /assets/img/whatsapp/click_tracking/canvas_step.png %}){: style="max-width:30%;"}
+![Étape du canvas « WhatsApp Message ».]({% image_buster /assets/img/whatsapp/click_tracking/canvas_step.png %}){: style="max-width:30%;"}
 
 Les données relatives aux clics seront automatiquement reportées dans le tableau de bord analytique.
 
-![Tableau de performance des messages WhatsApp.]({% image_buster /assets/img/whatsapp/click_tracking/message_performance.png %})
+![Tableau des performances des messages WhatsApp.]({% image_buster /assets/img/whatsapp/click_tracking/message_performance.png %})
 
 ## Reciblage des utilisateurs 
 
 Vous pouvez utiliser le filtre `Clicked/Opened Step` et l'interaction `clicked tracked WhatsApp link` pour segmenter les utilisateurs en fonction de leurs interactions avec les liens.
 
-![Groupe interne avec un filtre pour "clicked tracked WhatsApp link".]({% image_buster /assets/img/whatsapp/click_tracking/filter_group.png %})
+![Groupe de filtres avec un filtre pour « lien WhatsApp cliqué et suivi ».]({% image_buster /assets/img/whatsapp/click_tracking/filter_group.png %})
 
-{% multi_lang_include click_tracking.md section='Foire aux questions' %}
+{% multi_lang_include analytics/click_tracking.md section='Frequently Asked Questions' %}
 
 ### Est-il possible de savoir quels utilisateurs cliquent sur une URL ?
 
 Oui. Lorsque le suivi des clics est activé (ou activé en fonction de la configuration du modèle), vous pouvez recibler les utilisateurs qui ont cliqué sur des URL en exploitant les filtres de reciblage WhatsApp ou les événements de clics WhatsApp (`users.messages.whatsapp.Click`) envoyés par Currents.
-
-### Le suivi des clics fonctionne-t-il avec les liens profonds ou les liens universels ?
-
-Le suivi des clics ne fonctionne pas avec les liens profonds. Vous pouvez raccourcir les liens universels à partir de fournisseurs tels que Branch ou Appsflyer, mais Braze n'est pas en mesure de résoudre les problèmes qui peuvent survenir lors de cette opération (comme la rupture de l'attribution ou la cause d'une redirection).
 
 ### Les prévisualisations sur l'appareil WhatsApp comptent-elles comme des clics ? 
 

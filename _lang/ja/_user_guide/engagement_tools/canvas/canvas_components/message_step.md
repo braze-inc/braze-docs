@@ -2,7 +2,7 @@
 nav_title: メッセージ 
 article_title: メッセージ 
 alias: "/message_step/"
-page_order: 5
+page_order: 11
 page_type: reference
 description: "このリファレンス記事では、メッセージステップを使用してスタンドアロンメッセージを作成する方法について説明します。"
 tool: Canvas
@@ -11,29 +11,30 @@ tool: Canvas
 
 # メッセージ 
 
-> メッセージステップでは、キャンバスフロー内の目的の場所にスタンドアロンメッセージを追加できます。
+> メッセージステップを使えば、キャンバスの任意の場所に独立したメッセージを追加できる。
 
-![プッシュチャネルを使用した「Lunch promo」というメッセージステップ]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+![「ランチプロモ」という名前のメッセージステップで、プッシュチャネルを使用している。]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
-## メッセージの作成
+## メッセージを作成する
 
 メッセージコンポーネントを作成するには、まずキャンバスにステップを追加します。サイドバーからコンポーネントをドラッグ＆ドロップするか、ステップの一番下にある <i class="fas fa-plus-circle"></i> プラスのボタンを選択し、[**メッセージ**] を選択します。 
 
 ### ステップ 1: メッセージングチャネルの選択
 
 次のメッセージングチャネルを選択できます。 
+- バナー（早期アクセス中）
 - コンテンツカードによって促進された
 - メール
 - LINE
 - プッシュ通知
 - SMS/MMS/RCS
-- アプリ内メッセージ 
+- アプリ内メッセージ
 - Webhook
 - WhatsApp
 
-![メッセージステップで選択可能なメッセージングチャネルのリスト。]({% image_buster /assets/img/canvas_components/message_step2.png %})
+![メッセージステップで選択可能な利用可能なメッセージングチャネルの一覧。]({% image_buster /assets/img/canvas_components/message_step2.png %})
 
-### ステップ2: 配信設定を編集する
+### ステップ 2:配信設定を編集する
 
 次に、インテリジェントデリバリー、サイレント時間のオーバーライド、配信検証の設定を編集できます。
 
@@ -62,20 +63,22 @@ tool: Canvas
 アクションベースのキャンバスがインバウンド SMS メッセージによってトリガーされた場合、最初のステップ (メッセージステップ) またはアクションパスステップの下にネストされているメッセージステップで、SMS プロパティを参照できます。たとえば、メッセージステップでは、`{{sms.${inbound_message_body}}}` または `{{sms.${inbound_media_urls}}}` を使用できます。
 {% endraw %}
 
-## キャンバスエントリーのプロパティの参照
+## コンテキストプロパティを参照する
 
-キャンバスエントリのプロパティは、キャンバスの作成の**エントリスケジュール**ステップで設定され、キャンバスにユーザーを入れるトリガーを指定します。これらのプロパティは、API トリガーキャンバスのエントリペイロードのプロパティにもアクセスできます。`canvas_entry_properties` オブジェクトのサイズ上限は 50 KB であることに注意してください。 
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
-すべてのメッセージステップで、エントリプロパティを Liquid で使用できます。これらのエントリプロパティを参照する場合は、{% raw %}``canvas_entry_properties${property_name}``{% endraw %} という Liquid を使用します。このように使用するには、イベントがカスタムイベントまたは購入イベントでなければなりません。
+エントリのプロパティは、キャンバス作成時の「**エントリスケジュール」**ステップで設定される。これはユーザーをキャンバスに誘導するトリガーを示すものである。これらのプロパティは、API トリガーキャンバスのエントリペイロードのプロパティにもアクセスできます。`context` オブジェクトのサイズ上限は 50 KB であることに注意してください。
+
+すべてのメッセージステップで、エントリプロパティを Liquid で使用できます。これらのエントリプロパティを参照する場合は、{% raw %}``{context.${property_name}}``{% endraw %} という Liquid を使用します。このように使用するには、イベントがカスタムイベントまたは購入イベントでなければなりません。
 
 {% alert note %}
-特にアプリ内メッセージチャネルでは、`canvas_entry_properties` はキャンバス内でのみ参照できます。
+特にアプリ内メッセージチャネルでは、`context` はキャンバス内でのみ参照できます。
 {% endalert %}
 
-これらのエントリプロパティを参照する場合は、{% raw %}``canvas_entry_properties${property_name}``{% endraw %} という Liquid を使用します。このように使用するには、イベントがカスタムイベントまたは購入イベントでなければならないことに注意してください。
+これらのエントリプロパティを参照する場合は、{% raw %}``context.${property_name}``{% endraw %} という Liquid を使用します。このように使用するには、イベントがカスタムイベントまたは購入イベントでなければならないことに注意してください。
 
 {% raw %}
-例えば、`\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` というリクエストを考えてみます。`{{canvas_entry_properties.${product_name}}}` という Liquid でメッセージに「靴」という単語を追加できます。
+例えば、`\"context\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` というリクエストを考えてみます。`{{context.${product_name}}}` という Liquid でメッセージに「靴」という単語を追加できます。
 {% endraw %}
 
 また、任意のメッセージステップで[永続エントリプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/)を利用して、キャンバスワークフロー全体を通じてパーソナライズされたステップにユーザーを誘導することもできます。
@@ -93,16 +96,16 @@ tool: Canvas
 アクションパスに続く最初のメッセージステップでは、そのアクションパスで参照されるイベントに関連する `event_properties` を使用できます。このアクションパスステップとメッセージステップの間に、他のステップ (別のアクションパスやメッセージステップではない) があってもかまいません。なお、`event_properties` にアクセスできるのは、メッセージステップが、アクションパスステップの「その他のユーザー」以外のパスに遡ることができる場合のみです。
 
 {% alert important %}
-`event_properties` は先頭のメッセージステップで使用できません。代わりに、`canvas_entry_properties` を使用するか、`event_properties` を含むメッセージステップの前に、対応するイベントを持つアクションパスステップを追加する必要があります。
+`event_properties` は先頭のメッセージステップで使用できません。代わりに、`context` を使用するか、`event_properties` を含むメッセージステップの前に、対応するイベントを持つアクションパスステップを追加する必要があります。
 {% endalert %}
 
-{% details 元のキャンバスエディターの拡張 %}
+{% details Expand for original Canvas editor %}
 
-2023 年 2 月 28 日以降、元のエディターを使用したキャンバスの作成や複製はできなくなりました。このセクションは参照のみを目的としています。
+元のエディターを使用したキャンバスの作成や複製はできなくなりました。このセクションは参照のみを目的としています。
 
 - `event_properties` はスケジュールされたフルステップでは使用できません。ただし、アクションベースのキャンバスの最初のフルステップでは、フルステップがスケジュールされている場合でも `event_properties` を使用できます。
-- キャンバスの最初のフルステップでのみ `canvas_entry_properties` を参照できます。
-- 特にアプリ内メッセージチャネルでは、以前の早期アクセスの一環として永続的なエントリプロパティを有効にしている場合、元のキャンバスエディターで `canvas_entry_properties` を参照できます。
+- キャンバスの最初のフルステップでのみ `context` を参照できます。
+- 特にアプリ内メッセージチャネルでは、以前の早期アクセスの一環として永続的なエントリプロパティを有効にしている場合、元のキャンバスエディターで `context` を参照できます。
 
 {% enddetails %}
 

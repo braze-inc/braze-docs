@@ -1,13 +1,13 @@
 ---
 nav_title: Einstellungen
-article_title: Einstellungen (vorher Entwicklerkonsole)
+article_title: Einstellungen (vorher Entwicklungskonsole)
 page_order: 3
 layout: dev_guide
 guide_top_header: "Einstellungen"
-guide_top_text: "Hier finden Sie Themen zu den globalen Einstellungen für Ihren Arbeitsbereich."
+guide_top_text: "Hier finden Sie Themen zu den globalen Einstellungen für Ihren Workspace."
 
 page_type: landing
-description: "Auf dieser Landing Page finden Sie Themen zu den Einstellungen von Apps und Arbeitsbereichen."
+description: "Auf dieser Landing-Page finden Sie Themen zu den Einstellungen von Apps und Workspaces."
 
 guide_featured_title: "Einrichten und Testen"
 guide_featured_list:
@@ -20,26 +20,26 @@ guide_featured_list:
   - name: Nachrichten-Aktivitätsprotokoll
     link: /docs/user_guide/administrative/app_settings/message_activity_log_tab/
     image: /assets/img/braze_icons/list.svg
-  - name: Event-Nutzerprotokoll
+  - name: Event-Benutzerprotokoll
     link: /docs/user_guide/administrative/app_settings/event_user_log_tab/
     image: /assets/img/braze_icons/list.svg
   - name: Interne Gruppen
     link: /docs/user_guide/administrative/app_settings/internal_groups_tab/
     image: /assets/img/braze_icons/users-01.svg
   - name: Verschlüsselung auf Bezeichner-Feldebene
-    link: /docs/user_guide/analytics/field_level_encryption/
+    link: /docs/user_guide/data/field_level_encryption/
     image: /assets/img/braze_icons/mail-01.svg
 
-guide_menu_title: "Workspace settings"
+guide_menu_title: "Workspace-Einstellungen"
 guide_menu_list:
   - name: Tags
     link: /docs/user_guide/administrative/app_settings/tags/
     image: /assets/img/braze_icons/tag-01.svg
-  - name: E-Mail-Präferenzen
+  - name: E-Mail-Einstellungen
     link: /docs/user_guide/administrative/app_settings/email_settings/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: Push TTL-Einstellungen
-    link: /docs/user_guide/administrative/app_settings/push_ttl_settings/
+  - name: Push-Einstellungen
+    link: /docs/user_guide/administrative/app_settings/push_settings/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Mehrsprachige Einstellungen
     link: /docs/multi_language_support/
@@ -47,8 +47,11 @@ guide_menu_list:
   - name: Markenrichtlinien
     link: /docs/user_guide/administrative/app_settings/brand_guidelines/
     image: /assets/img/braze_icons/edit-05.svg
+  - name: Messaging-Rate-Limits
+    link: /docs/user_guide/administrative/app_settings/messaging_rate_limits/
+    image: /assets/img/braze_icons/mail-01.svg
 
-guide_menu_title2: "Company settings"
+guide_menu_title2: "Unternehmenseinstellungen"
 guide_menu_list2:
   - name: Admin-Einstellungen
     link: /docs/user_guide/administrative/app_settings/company_settings/
@@ -60,9 +63,9 @@ guide_menu_list2:
     link: /docs/user_guide/administrative/app_settings/subscription_and_usage/
     image: /assets/img/braze_icons/bank-note-02.svg
     
-guide_menu_title3: "Data settings"
+guide_menu_title3: "Dateneinstellungen"
 guide_menu_list3:
-  - name: Benutzerdefinierte Daten
+  - name: Angepasste Daten
     link: /docs/user_guide/data/custom_data/managing_custom_data/
     image: /assets/img/braze_icons/database-01.svg
   - name: Exportprotokolle

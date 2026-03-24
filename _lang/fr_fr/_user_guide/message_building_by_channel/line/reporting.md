@@ -39,7 +39,7 @@ Pour mesurer l'impact d'un message LINE individuel, vous pouvez ajouter un [grou
 
 Le tableau de bord **LINE Performance** indique le niveau de performance de votre message en fonction de différents critères. Les indicateurs de ce volet varient en fonction de votre canal de communication choisi, et selon que vous exécutez ou non un test multivarié. Vous pouvez cliquer sur l'icône <i class="fa fa-eye preview-icon"></i> **Preview** pour visualiser votre message pour chaque variante ou canal de communication.
 
-![Le panneau "LINE Performance" montre les indicateurs pour deux variantes.]({% image_buster /assets/img/line/line_performance.png %})
+![Le panneau "LINE Performance" présente des indicateurs pour deux variantes.]({% image_buster /assets/img/line/line_performance.png %})
 
 Si vous souhaitez simplifier votre vue, sélectionnez **\+ Ajouter/Supprimer des colonnes** et effacez les indicateurs souhaités. Par défaut, tous les indicateurs sont affichés.
 

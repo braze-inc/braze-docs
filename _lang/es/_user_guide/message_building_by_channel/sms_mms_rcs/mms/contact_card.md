@@ -12,7 +12,11 @@ channel:
 
 # Tarjetas de contacto 
 
-> Las tarjetas de contacto (a veces conocidas como vCard o Archivos Virtuales de Contacto (VCF)) son un formato de archivo estandarizado para enviar información empresarial y de contacto que puede importarse fácilmente a libretas de direcciones o de contactos. 
+> Las tarjetas de contacto (también conocidas como vCard o archivos de contacto virtuales (VCF)) son un formato de archivo estandarizado para enviar información comercial y de contacto que puedes importar fácilmente a libretas de direcciones o agendas de contactos. 
+
+{% alert note %}
+El envío de una tarjeta de contacto se cobra como un MMS. Revisa el volumen de MMS previsto y el uso del crédito de mensajes cuando crees tarjetas de contacto, y confirma los costes en tu [página de facturación]({{site.baseurl}}/user_guide/administrative/app_settings/subscription_and_usage/) de Braze.
+{% endalert %}
 
 Las tarjetas de contacto pueden crearse [mediante programación](https://www.twilio.com/blog/send-vcard-twilio-sms) y cargarse en la [biblioteca multimedia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) de Braze o crearse a través de nuestro generador de tarjetas de contacto integrado. A estas tarjetas se les pueden asignar propiedades comunes como el nombre de su empresa, el número de teléfono, la dirección, el correo electrónico y una pequeña foto. Para empezar a crear tarjetas de contacto, primero asegúrate de que estás configurado para utilizar MMS en Braze.
 
@@ -24,7 +28,7 @@ Se pueden crear tarjetas de contacto a partir del compositor de SMS y MMS. Selec
 
 A continuación, se le pedirá que introduzca el nombre o apodo de su empresa. Este es el nombre que sus usuarios verán cuando guarden la tarjeta. Se impone un límite de 20 caracteres para garantizar que el usuario pueda ver el nombre completo de tu empresa o alias en sus contactos y aplicación de mensajería. 
 
-![La pestaña del generador de tarjetas de contacto.]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
+![La pestaña Generador de tarjetas de contacto.]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
 
 ### Paso 2: Asignar número de teléfono
 

@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: Excluir estado da inscrição por endereço de e-mail ou número de telefone"
+nav_title: "DELETE: Excluir o estado da inscrição por endereço de e-mail ou número de telefone"
 article_title: "DELETE: Excluir estado da inscrição por endereço de e-mail ou número de telefone"
 search_tag: Endpoint
 page_order: 0
@@ -28,7 +28,7 @@ description: "Este artigo descreve os detalhes sobre o endpoint da Braze \"Exclu
 
 ## Exemplo de solicitação
 
-```json
+```http
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
 {

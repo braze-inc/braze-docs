@@ -22,6 +22,10 @@ O Braze tem um sistema de detecção que emprega várias entradas para identific
 
 ## Métricas afetadas por cliques de bots
 
+{% alert note %}
+A filtragem de bots bloqueia ativamente cliques automatizados suspeitos para melhorar a precisão de suas métricas de engajamento. No entanto, os scanners e bots evoluem continuamente com o tempo, de modo que o Braze não pode garantir a remoção de todas as interações não humanas.
+{% endalert %}
+
 As seguintes métricas do Braze podem ser afetadas por cliques de bots:
 
 - Total da taxa de cliques

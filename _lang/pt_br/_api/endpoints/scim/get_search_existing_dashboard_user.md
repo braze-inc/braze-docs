@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Pesquisar conta de usuário existente do dashboard por e-mail"
+nav_title: "OBTER: Pesquise a conta de usuário existente do dashboard por e-mail"
 article_title: "OBTER: Pesquisar conta de usuário existente do dashboard por e-mail"
 alias: /get_search_existing_dashboard_user_email/
 search_tag: Endpoint
@@ -15,7 +15,7 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Pesquis
 scim/v2/Users?filter=userName%20eq%20"user%40test.com"
 {% endapimethod %}
 
-> Use esse ponto de extremidade para procurar uma conta de usuário existente no dashboard especificando seu e-mail no parâmetro de consulta do filtro. 
+> Use esse ponto de extremidade para procurar uma conta de usuário existente no dashboard especificando seu e-mail no parâmetro de consulta do filtro.
 
 Observe que, quando o parâmetro de consulta estiver codificado em URL, ele terá a seguinte leitura:
 
@@ -40,14 +40,14 @@ Para usar esse endpoint, você precisará de um token SCIM. Você usará a orige
 
 ## Parâmetros de solicitação
 
-```json
+```http
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ## Exemplo de solicitação
-```json
+```bash
 curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
@@ -79,11 +79,11 @@ curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?fil
                         "team": [
                             {
                                 "teamId": "241adcd25789fabcded",
-                                "teamName": "Test Team",                  
+                                "teamName": "Test Team",
                                 "teamPermissions": ["admin"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         }

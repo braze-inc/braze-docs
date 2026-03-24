@@ -12,42 +12,45 @@ description: "Dieser Artikel enthält Antworten auf häufig gestellte Fragen zur
 
 > Auf dieser Seite finden Sie Antworten auf häufig gestellte Fragen zur Medienbibliothek in Braze.
 
-### Gibt es Speicherplatzbeschränkungen für Bilder in der Mediathek?
+### Gibt es Speicherplatzbeschränkungen für Bilder in der Medienbibliothek?
 
 Nein, es gibt keine Speicherlimits für Assets in der Medienbibliothek. Es gibt jedoch Größenbeschränkungen für Assets (maximal 5 MB).
 
 ### Gibt es Verfallsdaten für hochgeladene Assets?
 
-Nein, die in die Mediathek hochgeladenen Assets bleiben während der gesamten Dauer Ihres Vertrags mit Braze erhalten.
+Nein, die in die Medienbibliothek hochgeladenen Assets bleiben während der gesamten Dauer Ihres Vertrags mit Braze erhalten.
 
-### Kann ich Videoinhalte hochladen?
+### Kann ich Video-Assets hochladen?
 
-Nein, die Mediathek unterstützt keine Videodateien. Wir empfehlen Ihnen, diese extern zu hosten, oder auf einer Plattform wie YouTube.
+Nein, die Medienbibliothek unterstützt keine Videodateien. Wir empfehlen, diese extern oder auf einer Plattform wie YouTube zu hosten.
 
 ### Kann ich alle Bildtypen zuschneiden?
 
-Nein, die Mediathek unterstützt das Zuschneiden von GIF-Bildern nicht.
+Nein, die Medienbibliothek unterstützt das Zuschneiden von GIF-Bildern nicht.
 
 ### Wie kann ich ein vorhandenes Bild zuschneiden?
 
-Sie können ein vorhandenes Bild zuschneiden, indem Sie das Bild in der Mediathek auswählen und auf **Neues Bild zuschneiden & speichern** klicken. 
+Sie können ein vorhandenes Bild zuschneiden, indem Sie das Bild aus der Medienbibliothek auswählen und auf **Crop & Save New Image** klicken. 
 
-![][2]{: height="75%" width="75%"}
+![Vorschau eines Bildes in der Medienbibliothek.]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
 
-Sie werden dann zu einem Zuschneide-Composer weitergeleitet, in dem Sie den Verhältnis-Typ auswählen und den Namen des neuen Bildes bearbeiten können. Wenn Sie auf **Speichern** klicken, kann Ihr neues Bild verwendet werden.
+Sie werden dann zu einem Zuschneide-Composer weitergeleitet, in dem Sie den Verhältnistyp auswählen und den Namen des neuen Bildes bearbeiten können. Wenn Sie **Save** auswählen, kann Ihr neues Bild verwendet werden.
 
-![][3]{: height="75%" width="75%"}
+![Fenster zum Zuschneiden und Speichern von Bildern der Medienbibliothek.]({% image_buster /assets/img_archive/media_library_crop2.png %}){: height="75%" width="75%"}
 
-### Mein Bild wird beim Hochladen immer wieder unterbrochen. Was kann ich dagegen tun?
+### Beim Hochladen meines Bildes kommt es immer wieder zu einem Timeout. Was kann ich dagegen tun?
 
-Das kann aus verschiedenen Gründen passieren, aber eine gängige Lösung ist, dass Sie sicherstellen, dass Ihr Bild optimiert ist, bevor Sie es hochladen. Das bedeutet, dass Sie Ihr Bild durch einen Bildoptimierer wie [ImageOptim][5] laufen lassen.
+Das kann aus verschiedenen Gründen passieren, aber eine gängige Lösung besteht darin, Ihr Bild vor dem Hochladen zu optimieren. Das bedeutet, dass Sie Ihr Bild durch einen Bildoptimierer wie [ImageOptim](https://imageoptim.com/mac) laufen lassen.
 
-Wenn Ihr Bild in Photoshop (oder einer ähnlichen Software) erstellt wurde und viele Ebenen hat, kann das Zusammenführen und Reduzieren der Anzahl der Ebenen ebenfalls helfen.
+Wenn Ihr Bild in Photoshop (oder einer ähnlichen Software) erstellt wurde und viele Ebenen hat, kann das Zusammenführen und Reduzieren der Ebenenanzahl ebenfalls helfen.
+
+### Ich sehe einen „Unerwarteten Fehler" beim Hochladen eines Bildes, obwohl es unter 5 MB groß ist und ein unterstütztes Format hat. Was ist das Problem?
+
+Das kann hauptsächlich zwei Gründe haben:
+
+1. **Ungültige Metadaten in der Datei:** Die Software, die Braze zur Bildverarbeitung verwendet, kann Dateien mit ungültigen oder inkompatiblen Metadaten ablehnen. In einigen Fällen kann die Datei auch so verarbeitet werden, dass sie das 5-MB-Limit überschreitet. Versuchen Sie, ein anderes Bild zu verwenden (z. B. das Bild aus Ihrem Bildbearbeitungsprogramm erneut exportieren oder speichern) oder ein Bild aus einer anderen Quelle.
+2. **Sonderzeichen im Dateinamen:** Dateinamen, die Sonderzeichen enthalten (wie `&` oder `%`), können dazu führen, dass der Upload fehlschlägt. Benennen Sie die Datei so um, dass sie nur Buchstaben, Zahlen, Bindestriche oder Unterstriche enthält, und versuchen Sie dann erneut, sie hochzuladen.
 
 ### Warum kann ich nicht jedes beliebige Bild in die Push-Composer hochladen?
 
-Das liegt daran, dass die meisten Composer Beschränkungen für die zulässige Größe des Bildverhältnisses haben.
-
-[2]: {% image_buster /assets/img_archive/media_library_crop1.png %}
-[3]: {% image_buster /assets/img_archive/media_library_crop2.png %}
-[5]: https://imageoptim.com/mac
+Das liegt daran, dass die meisten Composer Beschränkungen für das zulässige Bildseitenverhältnis haben.

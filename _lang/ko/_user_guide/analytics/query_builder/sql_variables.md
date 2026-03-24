@@ -31,9 +31,9 @@ SQL 변수를 사용하면 다음과 같은 이점이 있습니다:
 ```
 {% endraw %}
 
-다음을 교체합니다:
+Replace the following:
 
-| 입력 안내      | 설명                                                                                                                              |
+| Placeholder      | Description                                                                                                                              |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | `variable_type`   | 사용하려는 미리 정의된 변수 유형(예: `campaign` 또는 `catalog_fields`). 전체 목록은 [지원되는 변수 유형을](#variable-types) 참조하세요. |
 | `custom_label` | 쿼리 빌더의 **변수** 탭에서 변수를 식별하는 데 사용되는 레이블입니다. |
@@ -57,7 +57,7 @@ WHERE campaign_id = '{{campaign.${Campaign}}}'
 
 다음 예에서는 2025년 6월의 첫날과 마지막 날과 함께 '여름 기능 출시' 캠페인이 값으로 할당되어 있습니다.
 
-![쿼리 빌더의 '변수' 탭에 주어진 예가 표시되어 있습니다.]({% image_buster /assets/img/query_builder_example.png %})
+![쿼리 빌더의 '변수' 탭에 주어진 예제가 표시되어 있습니다.]({% image_buster /assets/img/query_builder_example.png %})
 
 ## 일반 변수 유형 {#variable-types}
 
@@ -66,7 +66,7 @@ WHERE campaign_id = '{{campaign.${Campaign}}}'
 `number` 는 문자열이 아닌 다른 변수와 함께 사용할 수 있습니다. `5.5` 과 같은 10진수를 포함한 모든 양수 또는 음수를 허용합니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 {% raw %}
 ```sql
 some_number_column < {{number.${custom_label}}}
@@ -80,7 +80,7 @@ some_number_column < {{number.${custom_label}}}
 보고서 실행 간 반복적인 문자열 값을 변경하기 위해. 이 변수를 사용하여 SQL에서 값을 여러 번 하드코딩하는 것을 피하십시오.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 {% raw %}
 ```sql
 '{{string.${add a string here.}}}'
@@ -94,7 +94,7 @@ some_number_column < {{number.${custom_label}}}
 옵션 목록에서 선택하기 위해.
 
 {% tabs local %}
-{% tab 하나 선택 %}
+{% tab choose one %}
 {% subtabs %}
 {% subtab usage %}
 {% raw %}
@@ -106,7 +106,7 @@ some_number_column < {{number.${custom_label}}}
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 여러 개 선택 %}
+{% tab choose multiple %}
 {% subtabs %}
 {% subtab usage %}
 {% raw %}
@@ -124,35 +124,35 @@ some_number_column < {{number.${custom_label}}}
 **변수** 탭에서 드롭다운을 선택하는 대신 라디오 버튼으로 옵션을 표시합니다. 이 기능은 단독으로 사용할 수 없으며 [목록과](#list) 함께 사용해야 합니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 ```sql
 is_radio_button: 'true'
 ```
 {% endtab %}
 {% endtabs %}
 
-![Braze에서 렌더링된 라디오 버튼 예시.]({% image_buster /assets/img_archive/sql_variables_campaigns.png %}){: style="max-width:50%;"}
+![Braze에서 렌더링된 라디오 버튼 예시입니다.]({% image_buster /assets/img_archive/sql_variables_campaigns.png %}){: style="max-width:50%;"}
 
 #### 다중 선택
 
 선택 드롭다운이 단일 선택 또는 다중 선택을 허용하는지 여부에 따라 다릅니다. 이 기능은 단독으로 사용할 수 없으며 [목록과](#list) 함께 사용해야 합니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 ```sql
 is_multi_select: 'true'
 ```
 {% endtab %}
 {% endtabs %}
 
-![Braze에서 렌더링된 다중 선택 목록의 예.]({% image_buster /assets/img_archive/sql_variables_productname.png %}){: style="max-width:50%;"}
+![Braze에서 렌더링된 다중 선택 목록 예시입니다.]({% image_buster /assets/img_archive/sql_variables_productname.png %}){: style="max-width:50%;"}
 
 #### 옵션 
 
 레이블과 값의 형태로 선택 가능한 옵션 목록을 제공하기 위해. 레이블은 표시되는 것이고 값은 옵션이 선택될 때 변수로 대체되는 것입니다. 이 기능은 단독으로 사용할 수 없으며 [목록과](#list) 함께 사용해야 합니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 ```sql
 options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'
 ```
@@ -166,7 +166,7 @@ options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value":
 날짜를 선택할 수 있는 캘린더를 표시합니다. `start_date` 및 `end_date` 을 UTC로 지정된 날짜의 초 단위 유닉스 타임스탬프(예: `1696517353`)로 바꿉니다. 선택적으로 `start_date` 또는 `end_date` 만 설정하여 캘린더에 단일 날짜만 표시할 수 있습니다. `start_date` 과 `end_date` 의 레이블이 일치하지 않으면 날짜 범위가 아닌 두 개의 개별 날짜로 취급됩니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 {% raw %}
 ```
 time > {{start_date.${custom_label}}} AND time < {{end_date.${custom_label}}}
@@ -187,12 +187,12 @@ time > {{start_date.${custom_label}}} AND time < {{end_date.${custom_label}}}
 
 Liquid는 지정된 날짜 범위 내에서 달력을 표시하는 데 사용됩니다:
 
-![Braze에서 렌더링된 달력 예시.]({% image_buster /assets/img_archive/query_builder_time_range.png %}){: style="max-width:50%;"}
+![Braze로 렌더링된 캘린더 예시입니다.]({% image_buster /assets/img_archive/query_builder_time_range.png %}){: style="max-width:50%;"}
 
 ### 캠페인
 
 {% tabs local %}
-{% tab 하나의 캠페인 %}
+{% tab one campaign %}
 하나의 캠페인을 선택하기 위해. 캔버스와 동일한 레이블을 공유하면 **변수** 탭에 캔버스 또는 캠페인을 선택할 수 있는 라디오 버튼이 표시됩니다.
 
 {% subtabs %}
@@ -206,7 +206,7 @@ campaign_id = '{{campaign.${custom_label}}}'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 여러 캠페인 %}
+{% tab multiple campaigns %}
 캠페인을 다중 선택하기 위해. 캔버스와 동일한 레이블을 공유하면 **변수** 탭에 캔버스 또는 캠페인을 선택할 수 있는 라디오 버튼이 표시됩니다.
 
 - **대체 값:** 캠페인 BSON ID
@@ -222,7 +222,7 @@ campaign_id IN ({{campaigns.${custom_label}}})
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 캠페인 변형 %}
+{% tab campaign variants %}
 선택한 캠페인에 속하는 캠페인 변형을 선택하기 위해. 캠페인 또는 캠페인 변수와 함께 사용해야 합니다.
 
 - **대체 값:** 캠페인 변형 API ID, 쉼표로 구분된 문자열 예: `api-id1, api-id2`.
@@ -246,7 +246,7 @@ message_variation_api_id IN ({{campaign_variants.${custom_label}}})
 ### 캔버스
 
 {% tabs local %}
-{% tab 하나의 캔버스 %}
+{% tab one canvas %}
 하나의 캔버스를 선택하기 위해서. 캠페인과 동일한 레이블을 공유하면 **변수** 탭에 캔버스 또는 캠페인을 선택할 수 있는 라디오 버튼이 표시됩니다.
 
 - **대체 값:** 캔버스 BSON ID
@@ -262,7 +262,7 @@ canvas_id = '{{canvas.${custom_label}}}'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 여러 캔버스 %}
+{% tab multiple canvases %}
 여러 캔버스를 선택하려면. 캠페인과 동일한 레이블을 공유하면 **변수** 탭에 캔버스 또는 캠페인을 선택할 수 있는 라디오 버튼이 표시됩니다.
 
 - **대체 값:** 캔버스 BSON ID
@@ -278,7 +278,7 @@ canvas_id IN ({{canvases.${custom_label}}})
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 캔버스 변형 %}
+{% tab canvas variants %}
 선택한 캔버스에 속하는 캔버스 변형을 선택하기 위해. 캔버스 또는 캔버스 변수를 사용해야 합니다. `api-id1, api-id2` 와 같이 쉼표로 구분된 문자열로 하나 이상의 캔버스 변형 API ID로 설정합니다.
 
 {% subtabs %}
@@ -292,7 +292,7 @@ canvas_variation_api_id IN ({{canvas_variants.${custom_label}}})
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 하나의 캔버스 단계 %}
+{% tab one canvas step %}
 선택한 캔버스에 속하는 캔버스 단계를 선택하기 위해서. 캔버스 변수와 함께 사용해야 합니다.
 
 {% subtabs %}
@@ -306,7 +306,7 @@ canvas_step_api_id = '{{canvas_step.${custom_label}}}'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 여러 캔버스 단계 %}
+{% tab multiple canvas steps %}
 선택한 캔버스에 속하는 캔버스 단계를 선택하기 위해. 캔버스 또는 캔버스 변수를 사용해야 합니다.
 
 {% subtabs %}
@@ -330,7 +330,7 @@ canvas_step_api_id IN ({{canvas_steps.${custom_label}}})
 `products` 는 Braze 대시보드에서 하나 이상의 제품을 선택하는 데 사용됩니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 {% raw %}
 ```sql
 ({{products.${custom_label}}})
@@ -338,7 +338,7 @@ canvas_step_api_id IN ({{canvas_steps.${custom_label}}})
 {% endraw %}
 {% endtab %}
 
-{% tab 예제 %}
+{% tab example %}
 {% raw %}
 ```sql
 SELECT product_name
@@ -354,7 +354,7 @@ WHERE product_id IN ({{products.${Games with DLC}}});
 목록에서 하나 이상의 사용자 지정 이벤트 또는 사용자 지정 이벤트 속성을 선택합니다.
 
 {% tabs local %}
-{% tab 이벤트 %}
+{% tab event %}
 `custom_events` 는 Braze 대시보드에서 하나 이상의 사용자 지정 이벤트를 선택하는 데 사용됩니다.
 
 {% subtabs %}
@@ -371,14 +371,14 @@ WHERE product_id IN ({{products.${Games with DLC}}});
 ```sql
 SELECT event_name
 FROM CUSTOM_EVENTS_TABLE
-WHERE event_name = '{{custom_events.${Purchased Game}}}';
+WHERE event_name IN ({{custom_events.${Purchased Game}}}); 
 ```
 {% endraw %}
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 속성 %}
+{% tab properties %}
 `custom_event_properties` 는 현재 선택된 사용자 지정 이벤트에서 하나 이상의 속성을 선택하는 데 사용됩니다.  `custom_events` 변수를 설정해야 합니다.
 
 {% subtabs %}
@@ -398,7 +398,7 @@ name = '{{custom_event_properties.${property names)}}}'
 `workspace` 는 Braze 대시보드에서 단일 워크스페이스를 선택하는 데 사용됩니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 {% raw %}
 ```sql
 workspace_id = '{{workspace.${app_group_id}}}'
@@ -412,7 +412,7 @@ workspace_id = '{{workspace.${app_group_id}}}'
 목록에서 하나 이상의 카탈로그 또는 카탈로그 필드를 선택합니다.
 
 {% tabs local %}
-{% tab 카탈로그 %}
+{% tab catalogs %}
 `catalogs` 는 Braze 대시보드에서 하나 이상의 카탈로그를 선택하는 데 사용됩니다.
 
 {% subtabs %}
@@ -426,7 +426,7 @@ catalog_id = '{{catalogs.${catalog}}}'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 카탈로그 필드 %}
+{% tab catalog fields %}
 `catalog_fields` 는 현재 선택된 카탈로그에서 하나 이상의 필드를 설정하는 데 사용됩니다. `catalogs` 변수를 설정해야 합니다.
 
 {% subtabs %}
@@ -446,7 +446,7 @@ field_name = '{{catalog_fields.${custom_label}}}'
 세그먼트를 선택하려면 [분석 추적]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/)이(가) 켜져 있어야 합니다. 이 열을 사용할 수 있는 테이블의 `user_segment_membership_ids` 열에 저장된 ID에 해당하는 세그먼트 분석 ID로 설정합니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 {% raw %}
 ```sql
 {{segments.${analytics_segments}}}
@@ -460,7 +460,7 @@ field_name = '{{catalog_fields.${custom_label}}}'
 캠페인 및 캔버스를 위한 태그 선택. 선택한 태그와 연결된 작은따옴표로 쉼표로 구분된 BSON ID가 있는 캠페인 및 캔버스로 설정합니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 {% raw %}
 ```sql
 {{tags.${some tags}}}
@@ -474,7 +474,7 @@ field_name = '{{catalog_fields.${custom_label}}}'
 변수 레이블 뒤에 파이프( | ) 문자를 추가하여 메타데이터를 변수에 첨부하여 변수의 동작을 변경할 수 있습니다. 메타데이터의 순서는 중요하지 않으며 원하는 수만큼 추가할 수 있습니다. 또한 모든 유형의 메타데이터는 특정 변수에만 해당하는 특수 메타데이터를 제외하고는 모든 변수에 사용할 수 있습니다(이 경우에는 해당 사항이 표시됩니다). 모든 메타데이터의 사용은 선택 사항이며 기본값의 가변 동작을 변경하는 데 사용됩니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 {% raw %}
 ```sql
 {{string.${my var}| is_required: 'false' | description: 'My optional string var'}}
@@ -488,7 +488,7 @@ field_name = '{{catalog_fields.${custom_label}}}'
 변수 값이 채워졌는지 여부를 알 수 있습니다. 이는 변수 값이 채워지지 않은 경우 조건을 단락시키려는 선택적 변수에 유용합니다. 다른 변수의 값에 따라 `true` 또는 `false` 로 설정할 수 있습니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 {% raw %}
 ```sql
 {{string.${type_name_has_no_value} | visible: 'false'}} or {{string.${type_name_has_value} | visible: 'false'}}
@@ -512,7 +512,7 @@ field_name = '{{catalog_fields.${custom_label}}}'
 다른 변수가 값을 가지고 있는지 여부와 같은 다른 변수에 따라 값이 달라지는 여러 특수 변수가 있습니다. 이 특수 변수는 표시되지 않도록 표시되어 **변수** 탭에 표시되지 않습니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 ```sql
 visible: 'false'
 ```
@@ -524,7 +524,7 @@ visible: 'false'
 변수가 기본값으로 필요한지 여부에 대해. 변수의 값이 비어 있으면 일반적으로 잘못된 쿼리가 발생합니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 ```sql
 required: 'false'
 ```
@@ -536,7 +536,7 @@ required: 'false'
 **변수** 탭에서 변수의 위치를 선택합니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 ```sql
 order: '1'
 ```
@@ -546,7 +546,7 @@ order: '1'
 ### 따옴표 포함
 
 {% tabs local %}
-{% tab 작은따옴표 %}
+{% tab single quotes %}
 변수의 값을 작은따옴표로 둘러싸기 위해서입니다.
 
 {% subtabs %}
@@ -558,7 +558,7 @@ include_quotes: 'true'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 큰따옴표 %}
+{% tab double quotes %}
 변수의 값을 큰따옴표로 둘러싸기 위해서입니다.
 
 {% subtabs %}
@@ -576,7 +576,7 @@ include_double_quotes: 'true'
 변수의 입력 필드에 표시되는 플레이스홀더 텍스트를 지정합니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 ```sql
 placeholder: 'enter some value'
 ```
@@ -588,7 +588,7 @@ placeholder: 'enter some value'
 변수의 입력 필드 아래에 표시되는 설명 텍스트를 지정합니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 ```sql
 description: 'some description'
 ```
@@ -600,7 +600,7 @@ description: 'some description'
 변수에 값이 지정되지 않았을 때 기본값을 지정하기 위해서입니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 ```sql
 default_value: '5'
 ```
@@ -612,7 +612,7 @@ default_value: '5'
 변수의 레이블을 숨기는 데 사용합니다.
 
 {% tabs %}
-{% tab 사용법 %}
+{% tab usage %}
 ```sql
 hide_label: 'true'
 ```

@@ -35,7 +35,7 @@ tool: Canvas
 
 - **방법 1:** 복제된 캔버스에서 캔버스 빌더의 **참가 대상** 부분을 편집하여 테스트 사용자만 캔버스를 사용할 수 있도록 합니다. **이메일 주소** 테스트 필터를 추가하여 자신의 이메일 주소를 테스트 사용자로 입력할 수도 있습니다. 아래 예시에서는 앱을 처음 사용한 지 3일이 채 되지 않은 두 명의 테스트 사용자로 캔버스를 제한했습니다.
 
-![A Canvas with an entry audience of "First used these apps less than 3 days ago" and the email addresses of two test users.]({% image_buster /assets/img_archive/canvas_test2.png %}){: style="max-width:90%;"}
+!["이 앱을 처음 사용한 지 3일 미만"이라는 오디언스와 테스트 사용자 2명의 이메일 주소가 있는 캔버스입니다.]({% image_buster /assets/img_archive/canvas_test2.png %}){: style="max-width:90%;"}
 
 - **방법 2:** 캔버스 빌더의 바닥글에서 **캔버스 테스트** 버튼을 선택하여 [사용자 경로를 미리 봅니다]({{site.baseurl}}/preview_user_paths/).
 

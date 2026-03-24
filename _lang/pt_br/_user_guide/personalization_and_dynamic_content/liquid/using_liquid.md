@@ -8,7 +8,7 @@ search_rank: 2
 
 # [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Usando Liquid
 
-> Este artigo mostrará como usar uma variedade de atribuições do usuário para inserir dinamicamente informações pessoais no envio de mensagens.
+> Este artigo mostra como você pode usar uma variedade de atributos de usuário para inserir dinamicamente informações pessoais em seu envio de mensagens.
 
 O Liquid é uma linguagem de modelo de código aberto desenvolvida pela Shopify e escrita em Ruby. Você pode usá-lo no Braze para extrair dados do perfil do usuário para suas mensagens e personalizar esses dados. Por exemplo, é possível usar Liquid tags para criar mensagens condicionais, como o envio de ofertas diferentes com base na data de aniversário da inscrição de um usuário. Além disso, os filtros podem manipular dados, como formatar a data de registro de um usuário a partir de um carimbo de data/hora em um formato mais legível, como "15 de janeiro de 2022". Para obter mais detalhes sobre a sintaxe do Liquid e seus recursos, consulte [Tags de personalização compatíveis]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
@@ -35,6 +35,10 @@ Ou...
 ```
 Hi Valued User, thanks for using the App!
 ```
+
+{% alert important %}
+Comentários HTML (`<!-- -->`) são removidos antes que qualquer Liquid seja lido, então as tags Liquid dentro de comentários HTML **não** são renderizadas em sua mensagem. Para uma renderização adequada, certifique-se de que todas as tags Liquid que você deseja usar estejam fora dos comentários HTML.
+{% endalert %}
 
 ## Valores suportados para substituição
 
@@ -64,6 +68,103 @@ O Liquid segue uma estrutura específica, ou sintaxe, que você precisará ter e
 1. **Use aspas retas no Braze:** Há uma diferença entre aspas curvas ('**')** e aspas retas ('**')**. Use aspas retas ('**')** em seu Liquid na Braze. Você pode ver aspas curvas ao copiar e colar de determinados editores de texto, o que pode causar problemas em seu Liquid. Se estiver inserindo cotações diretamente no dashboard do Braze, não haverá problema!
 2. **As chaves vêm em pares:** Abra e feche chaves, **{ }**. Não deixe de usar chaves!
 3. **Se as declarações vierem em pares:** Para cada `if`, você precisa de um `endif` para indicar que a declaração `if` terminou.
+4. **Nomes de variáveis devem usar caracteres ASCII:** Nomes de variáveis Liquid (criados com `assign` ou `capture`) suportam apenas letras ASCII, dígitos e sublinhados. Nomes de atributos de personalização do Braze (dentro de `custom_attribute.${...}` ou `event_properties.${...}`) podem incluir caracteres não ASCII.
+
+#### Onde usar operadores e filtros
+
+Operadores (como `==`, `!=`, `>`, `and`, `or`) e filtros (como `| size`, `| plus`) podem ser usados apenas em contextos Liquid específicos.
+
+| Contexto | Operadores | Filtros |
+|-----------|-----------|---------|
+| `assign` | Não suportado | Com suporte |
+| `if`, `elsif`, `unless` | Com suporte | Não suportado |
+| `case`, `when` | Não suportado | Não suportado |
+| `for` | Não suportado | Não suportado |
+| Acesso a array (`[ ]`) | Não suportado | Não suportado |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+Quando você precisa de um valor filtrado em um contexto que não suporta filtros, atribua o resultado a uma variável primeiro.
+
+{% raw %}
+
+##### Use um resultado de filtro em uma condição
+
+Você não pode usar um filtro diretamente em uma declaração condicional. Isto está incorreto:
+
+```liquid
+{% if my_array | size > 3 %}
+You have more than 3 items!
+{% endif %}
+```
+
+Em vez disso, atribua o resultado do filtro a uma variável:
+
+```liquid
+{% assign array_size = my_array | size %}
+{% if array_size > 3 %}
+You have more than 3 items!
+{% endif %}
+```
+
+##### Use um resultado de filtro em um loop for
+
+Você não pode aplicar um filtro ao iterável em um loop `for`. Isto está incorreto:
+
+```liquid
+{% for item in my_array | reverse %}
+{{ item }}
+{% endfor %}
+```
+
+Em vez disso, atribua o valor filtrado a uma variável:
+
+```liquid
+{% assign reversed = my_array | reverse %}
+{% for item in reversed %}
+{{ item }}
+{% endfor %}
+```
+
+##### Use um resultado de filtro para acesso a array
+
+Você não pode usar um filtro dentro de colchetes. Isto está incorreto:
+
+```liquid
+{{ my_array[my_var | minus: 1] }}
+```
+
+Em vez disso, atribua o valor filtrado primeiro:
+
+```liquid
+{% assign adjusted_index = my_var | minus: 1 %}
+{{ my_array[adjusted_index] }}
+```
+
+##### Armazene um resultado de comparação em uma variável
+
+Você não pode usar um operador em uma declaração `assign`. Isto está incorreto:
+
+```liquid
+{% assign is_vip = total_spend > 100 %}
+{% if is_vip %}
+Welcome to the VIP lounge!
+{% endif %}
+```
+
+Em vez disso, use uma condicional para definir a variável:
+
+```liquid
+{% assign is_vip = false %}
+{% if total_spend > 100 %}
+{% assign is_vip = true %}
+{% endif %}
+
+{% if is_vip %}
+Welcome to the VIP lounge!
+{% endif %}
+```
+
+{% endraw %}
 
 #### Atributos padrão e atributos personalizados
 
@@ -71,13 +172,27 @@ O Liquid segue uma estrutura específica, ou sintaxe, que você precisará ter e
 
 Se você incluir o seguinte texto em sua mensagem: `{{${first_name}}}`, o nome do usuário (extraído do perfil do usuário) será substituído quando a mensagem for enviada. É possível usar o mesmo formato com outras atribuições padrão do usuário.
 
-Se quiser usar o valor de um atributo personalizado, você deverá adicionar o namespace "custom_attribute" à variável. Por exemplo, para usar um atributo personalizado chamado "zip code" (CEP), você deve incluir `{{custom_attribute.${zip code}}}` em sua mensagem.
+Se você gostaria de usar o valor de um atributo personalizado, deve adicionar o namespace "custom_attribute" à variável. Por exemplo, para usar um atributo personalizado chamado "zip code" (CEP), você deve incluir `{{custom_attribute.${zip code}}}` em sua mensagem.
 
 ### Inserção de tags
 
 Você pode inserir tags digitando duas chaves abertas `{{` em qualquer mensagem, o que disparará um recurso de preenchimento automático que continuará a ser atualizado à medida que você digitar. Você pode até mesmo selecionar uma variável nas opções que aparecem à medida que você digita.
 
 Se estiver usando uma tag personalizada, poderá copiar e colar a tag em qualquer mensagem que desejar.
+
+#### Exceções para colchetes duplos
+
+Se usar uma tag dentro de outra tag Liquid, como `{% assign %}` ou `{% if %}`, você pode usar colchetes duplos ou nenhum colchete. É somente quando a tag está sozinha que ela deve ser envolvida em colchetes duplos. Para simplicidade, você pode sempre usar colchetes duplos. 
+
+As seguintes tags estão todas corretas:
+
+```liquid
+{% if custom_attribute.${Number_Game_Attended} == 1 %}
+{% if {{custom_attribute.${Number_Game_Attended}}} == 1 %}
+
+{% assign value_one = {{custom_attribute.${one}}} %}
+{% assign value_one = custom_attribute.${one} %}
+```
 
 {% endraw %}
 
@@ -92,13 +207,13 @@ Se usar o Liquid em seus envios de e-mail, certifique-se de usá-lo:
 
 ### Inserção de variáveis pré-formatadas
 
-Você pode inserir variáveis pré-formatadas com padrões por meio do modal **Add Personalization**, localizado próximo a qualquer campo de texto de modelo.
+Você pode inserir variáveis pré-formatadas com padrões através do modal **Add Personalization** localizado perto de qualquer campo de texto template.
 
-![O modal Add Personalization que aparece após a seleção de inserir personalização. O modal tem campos para o tipo de personalização, atribuição, valor padrão opcional e exibe uma prévia da sintaxe do Liquid.]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
+![O modal Add Personalization que aparece após a seleção de inserir personalização. O modal tem campos para tipo de personalização, atributo, valor padrão opcional e exibe uma prévia da sintaxe Liquid.]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
 
-O modal inserirá o Liquid com o valor padrão especificado no ponto em que o cursor estava. O ponto de inserção também é especificado pela caixa de prévia, que tem o texto antes e depois. Se um bloco de texto for destacado, o texto destacado será substituído.
+O modal irá inserir Liquid com o valor padrão especificado no ponto onde seu cursor estava. O ponto de inserção também é especificado pela caixa de prévia, que tem o texto antes e depois. Se um bloco de texto for destacado, o texto destacado será substituído.
 
-![Um GIF do modal Add Personalization que mostra o usuário inserindo "fellow traveler" como um valor padrão e o modal substituindo o texto destacado "name" no criador pelo snippet Liquid.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
+![Um GIF do modal Adicionar Personalização que mostra o usuário inserindo "companheiro de viagem" como um valor padrão, e o modal substituindo o texto destacado "nome" no criador com o trecho Liquid.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
 
 ### Atribuindo variáveis
 

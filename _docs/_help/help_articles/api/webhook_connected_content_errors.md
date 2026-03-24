@@ -1,19 +1,19 @@
 ---
-nav_title: Troubleshooting webhook and connected content requests
-article_title: Troubleshooting Webhook and Connected Content Requests
+nav_title: Troubleshooting webhook and Connected Content requests
+article_title: Troubleshoot Webhook and Connected Content Requests
 page_order: 3
 channel:
   - webhooks
 description: "This article covers how to troubleshoot webhook and Connected Content error codes, including what the errors are and steps to resolve them."
 ---
 
-# Troubleshooting webhook and Connected Content requests
+# Troubleshoot webhook and Connected Content requests
 
 > This article covers how to troubleshoot common error codes for webhooks and Connected Content, and provides further explanations on how these errors can occur in your requests.
 
 ## 4XX errors
 
-`4XX` errors indicate that there's an issue with the request sent to the endpoint. These errors are typically caused by erroneous requests, including malformed parameters, missing authentication headers, or incorrect URLs.
+`4XX` errors indicate that there's an issue with the request sent to the endpoint. These errors are typically caused by erroneous requests, including malformed parameters, missing authentication headers, or incorrect URLs. Note that these errors also apply to the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder).
 
 Refer to the following table for error code details and steps to resolve:
 
@@ -40,6 +40,7 @@ table td {
           <li>Check the request payload for any syntax errors.</li>
           <li>Confirm that all required fields are included and correctly formatted.</li>
           <li>If you're sending a JSON payload, validate the JSON structure.</li>
+          <li>If you're using Liquid to template in personalization tags in the webhook request, verify that the Liquid does not resolve to a blank value or produce JSON-breaking characters (such as unescaped quotes). Preview the message for a test user to confirm the rendered output is valid.</li>
         </ul>
       </td>
     </tr>
@@ -159,7 +160,7 @@ If you believe the unhealthy host detection may be causing issues, contact [Braz
 
 ### Setting up automated emails
 
-If you experience more than 100,000 webhook or Connected Content endpoint errors (including retries) in a workspace in a 24-hour period, you will receive an email that includes the following information on how to resolve the errors. 
+If you experience more than 100,000 webhook or Connected Content endpoint errors (including retries) in a workspace in a 24-hour period, you will receive an email that includes the following information on how to resolve the errors.
 
 - Name of the workspace
 - A link to the Canvas or campaign
@@ -186,7 +187,7 @@ To sign up to receive these emails, do the following:
 
 ### Message Activity Log entries
 
-There will be at least one entry in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) related to the error that triggered the automated email.
+If a failure occurs, there will be at least one entry in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) related to it. If the request is retried and eventually succeeds, those details will be available in Currents and Snowflake Data Share. Note that even if a request eventually succeeds after a retry, the errors can still trigger the automated email.
 
 ### Additional failure insights in Braze Currents
 

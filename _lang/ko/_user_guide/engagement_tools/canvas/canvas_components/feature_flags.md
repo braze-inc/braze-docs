@@ -1,6 +1,6 @@
 ---
-nav_title: 피처 플래그
-article_title: 피처 플래그
+nav_title: 기능 플래그
+article_title: Feature Flags
 page_order: 8
 page_type: reference
 description: "이 참조 문서에서는 캔버스에서 기능 플래그를 사용하는 방법에 대해 설명합니다."
@@ -17,7 +17,7 @@ local_redirect:
 
 ## 기능 플래그 만들기
 
-![An example Feature Flag step for the Live Chat Button feature.]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![라이브 채팅 버튼 기능을 위한 예제 기능 플래그 단계입니다.]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 기능 플래그 컴포넌트를 만들려면 먼저 캔버스에 스텝을 추가합니다. 사이드바에서 구성 요소를 끌어다 놓거나 단계 하단에 있는 <i class="fas fa-plus-circle"></i> 더하기 버튼을 클릭하고 **기능 플래그**를 선택합니다. 그런 다음 드롭다운에서 보관되지 않은 기능 플래그가 포함된 기능 플래그를 선택합니다.
 
@@ -27,11 +27,13 @@ local_redirect:
 
 캔버스 단계의 속성은 실행 후, 그리고 사용자가 단계를 진행한 후에도 변경할 수 있습니다. 사용자는 이전에 저장된 이전 버전 대신 항상 실시간 동적 버전의 기능 플래그를 받게 됩니다.
 
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
+
 ## 속성 덮어쓰기
 
 기능 플래그를 만들 때 기본 속성을 지정합니다. 기능 플래그 캔버스 단계를 설정할 때 기본값을 유지하거나 이 단계를 입력하는 사용자의 값을 덮어쓸 수 있습니다.
 
-![A feature flag "Preference Center" with "String" as the property, "url" as the property key, and a value.]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
+!["문자열"을 속성으로 하고, "url"을 속성 키로 하며, 값을 가진 "선호 센터" 기능 플래그입니다.]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
 
 **메시징** > **기능 플래그**로 이동하여 추가 속성을 편집, 추가 또는 제거합니다.
 
@@ -40,4 +42,3 @@ local_redirect:
 캔버스와 기능 플래그 롤아웃(슬라이더 드래그)은 서로 독립적으로 작동할 수 있습니다. 중요한 주의 사항은 캔버스 단계에 들어가면 기본 롤아웃 구성을 덮어쓴다는 점입니다. 즉, 사용자가 기능 플래그를 사용할 자격이 없는 경우 캔버스 단계에서 해당 사용자에 대해 기능을 활성화할 수 있습니다.
 
 마찬가지로 사용자가 특정 속성을 가진 기능 플래그 롤아웃 자격이 있는 경우 캔버스 단계에도 입력하면 해당 캔버스 단계의 덮어쓰기된 값을 받게 됩니다.
-

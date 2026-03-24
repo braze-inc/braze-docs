@@ -8,15 +8,82 @@ layout: scrolly
 
 # Tutorial: Exibindo mensagens no app condicionalmente
 
-> Siga o código de exemplo neste tutorial para exibir mensagens no app condicionalmente usando o SDK do Braze.
+> Siga o exemplo de código neste tutorial para exibir mensagens no app condicionalmente usando o SDK do Braze.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/prerequisites/web.md %} No entanto, nenhuma configuração adicional é necessária.
+
+## Exibindo mensagens no app condicionalmente para Web
+
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Conditionally Displaying Messages Web" %}
+
+{% scrolly %}
+
+```js file=index.js
+import * as braze from "@braze/web-sdk";
+// Remove any calls to `braze.automaticallyShowInAppMessages()`
+
+braze.initialize("YOUR-API-KEY", {
+  baseUrl: "YOUR-ENDPOINT",
+  enableLogging: true,
+});
+
+braze.subscribeToInAppMessage(function (message) {
+  if (
+    location.pathname === "/checkout" ||
+    document.getElementById("#checkout")
+  ) {
+    // do not show the message
+  } else {
+    braze.showInAppMessage(message);
+  }
+});
+```
+
+!!etapa
+linhas-index.js=2
+
+#### 1\. Remover chamadas para `automaticallyShowInAppMessages()`
+
+Remova qualquer chamada para [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages), pois elas substituirão qualquer lógica personalizada que você implemente depois.
+
+!!etapa
+linhas-index.js=6
+
+#### 2\. Ativar depuração (opcional)
+
+Para facilitar a solução de problemas durante o desenvolvimento, considere ativar a depuração.
+
+!!etapa
+linhas-index.js=9-18
+
+#### 3\. Inscreva-se para atualizações de mensagens no app
+
+Registre um retorno de chamada com [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) para receber um `message` sempre que uma mensagem no app for acionada.
+
+!!etapa
+linhas-index.js=10-13
+
+#### 4\. Criar lógica condicional
+
+Crie lógica personalizada para controlar quando as mensagens são exibidas. Neste exemplo, a lógica verifica se a URL contém `"checkout"` ou se um elemento `#checkout` existe na página.
+
+!!etapa
+linhas-index.js=16
+
+#### 5\. Exibir mensagens com `showInAppMessage`
+
+Para exibir a mensagem, chame [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage). Se omitido, a mensagem será ignorada.
+
+{% endscrolly %}
+{% endsdktab %}
 {% sdktab android %}
 {% multi_lang_include developer_guide/prerequisites/android.md %} Você também precisará [ativar mensagens no app para Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
-## Exibindo mensagens no app condicionalmente para Android
+## Exibição condicional de mensagens no app para Android
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Conditionally Displaying Messages Android" %}
 
 {% scrolly %}
 
@@ -81,19 +148,19 @@ linhas-MainApplication.kt=26-28
 
 #### 2\. Registrar retornos de chamada do ciclo de vida da atividade
 
-Registre o ouvinte padrão do Braze para gerenciar o ciclo de vida da mensagem no app.
+Registre o listener padrão do Braze para gerenciar o ciclo de vida da mensagem no app.
 
 !!etapa
 linhas-MainApplication.kt=30-44
 
-#### 3\. Configure um ouvinte de mensagem no app
+#### 3\. Configure um listener de mensagem no app
 
-Use `BrazeInAppMessageManager` para definir um ouvinte personalizado que intercepta mensagens antes de serem exibidas.
+Use `BrazeInAppMessageManager` para definir um listener personalizado que intercepta mensagens antes de serem exibidas.
 
 !!etapa
 linhas-MainApplication.kt=34-42
 
-#### 4\. Crie lógica condicional
+#### 4\. Criar lógica condicional
 
 Use lógica personalizada para controlar o tempo de exibição da mensagem. Neste exemplo, a lógica personalizada verifica se o extra `should_display_message` está definido como `"true"`.
 
@@ -107,11 +174,11 @@ Retorne um `InAppMessageOperation` com `DISPLAY_NOW` para exibir a mensagem, ou 
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab swift %}
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Você também precisará [ativar mensagens in-app para SWIFT]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Você também precisará [ativar mensagens no app para Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
 
-## Exibindo condicionalmente mensagens in-app para SWIFT
+## Exibição condicional de mensagens no app para Swift
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Conditionally Displaying Messages Swift" %}
 
 {% scrolly %}
 
@@ -186,7 +253,7 @@ linhas-AppDelegate.swift=19-21
 
 #### 3\. Configure sua interface Braze e delegado
 
-`BrazeInAppMessageUI()` renderiza mensagens in-app por padrão. Ao atribuir `self` como seu delegado, você pode interceptar e manipular mensagens antes que sejam exibidas.
+`BrazeInAppMessageUI()` renderiza mensagens no aplicativo por padrão. Ao atribuir `self` como seu delegado, você pode interceptar e manipular mensagens antes que sejam exibidas.
 
 !!etapa
 linhas-AppDelegate.swift=26-33
@@ -194,73 +261,6 @@ linhas-AppDelegate.swift=26-33
 #### 4\. Substitua `DisplayChoice` com lógica condicional
 
 Substitua [`inAppMessage(_:displayChoiceForMessage:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) para decidir se uma mensagem deve ser exibida. Retorne `.now` para exibir a mensagem ou `.discard` para suprimir.
-
-{% endscrolly %}
-{% endsdktab %}
-{% sdktab web %}
-{% multi_lang_include developer_guide/prerequisites/web.md %} No entanto, nenhuma configuração adicional é necessária.
-
-## Exibindo condicionalmente mensagens in-app para Web
-
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
-
-{% scrolly %}
-
-```js file=index.js
-import * as braze from "@braze/web-sdk";
-// Remove any calls to `braze.automaticallyShowInAppMessages()`
-
-braze.initialize("YOUR-API-KEY", {
-  baseUrl: "YOUR-ENDPOINT",
-  enableLogging: true,
-});
-
-braze.subscribeToInAppMessage(function (message) {
-  if (
-    location.pathname === "/checkout" ||
-    document.getElementById("#checkout")
-  ) {
-    // do not show the message
-  } else {
-    braze.showInAppMessage(message);
-  }
-});
-```
-
-!!etapa
-linhas-index.js=2
-
-#### 1\. Remova chamadas para `automaticallyShowInAppMessages()`
-
-Remova quaisquer chamadas para [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages), pois elas substituirão qualquer lógica personalizada que você implemente mais tarde.
-
-!!etapa
-linhas-index.js=6
-
-#### 2\. Ativar depuração (opcional)
-
-Para facilitar a solução de problemas durante o desenvolvimento, considere ativar a depuração.
-
-!!etapa
-linhas-index.js=9-18
-
-#### 3\. Inscreva-se para atualizações de mensagens no app
-
-Registre um retorno de chamada com [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) para receber um `message` sempre que uma mensagem no app for acionada.
-
-!!etapa
-linhas-index.js=10-13
-
-#### 4\. Crie lógica condicional
-
-Crie lógica personalizada para controlar quando as mensagens são exibidas. Neste exemplo, a lógica verifica se a URL contém `"checkout"` ou se um elemento `#checkout` existe na página.
-
-!!etapa
-linhas-index.js=16
-
-#### 5\. Exiba mensagens com `showInAppMessage`
-
-Para exibir a mensagem, chame [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage). Se omitido, a mensagem será ignorada.
 
 {% endscrolly %}
 {% endsdktab %}

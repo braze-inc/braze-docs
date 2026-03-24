@@ -36,7 +36,7 @@ Las notificaciones push enviadas mediante Push Max sólo se entregarán a dispos
 ## Utilizar Push Max
 
 {% tabs %}
-{% tab Campañas %}
+{% tab Campaigns %}
 
 Para utilizar Push Max en tu campaña:
 
@@ -45,7 +45,7 @@ Para utilizar Push Max en tu campaña:
 3. Ve al paso **Programar la entrega**.
 4. Seleccione **Enviar usando Push Max**.
 
-![Sección Capacidad de entrega push de Android del paso Programar la entrega con la opción "Enviar usando Push Max".]({% image_buster /assets/img_archive/push_max_campaigns.png %})
+![Sección Android Push Deliverability del paso Programar entrega con la opción "Enviar utilizando Push Max".]({% image_buster /assets/img_archive/push_max_campaigns.png %})
 
 {% endtab %}
 {% tab Canvas %}
@@ -57,7 +57,7 @@ Para utilizar Push Max en su lienzo:
 3. Vaya a la pestaña **Configuración de la entrega**.
 4. Seleccione **Enviar usando Push Max**.
 
-![Pestaña de configuración de entrega de un paso de mensaje push de Android con la opción "Enviar usando Push Max".]({% image_buster /assets/img_archive/push_max_canvas.png %})
+![Pestaña de configuración de entrega de un paso de Mensajes Push de Android con la opción "Enviar usando Push Max".]({% image_buster /assets/img_archive/push_max_canvas.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -72,9 +72,9 @@ Push Max funciona mejor cuando [la sincronización inteligente]({{site.baseurl}}
 
 Time to Live (TTL) puede rastrear notificaciones push fallidas a Firebase Cloud Messaging (FCM) y reintentar la notificación cuando es probable que el usuario la reciba.
 
-Por defecto, el tiempo de vida está fijado en 28 días, que es el máximo. Puede reducir el TTL predeterminado para todos los nuevos mensajes push de Android desde **Configuración** > **Configuración del área de trabajo** > **Tiempo de vida (TTL) de push**, o puede configurar el número de días por mensaje en la pestaña **Configuración** al redactar una notificación push de Android.
+Por defecto, el tiempo de vida está fijado en 28 días, que es el máximo. Puedes disminuir el TTL predeterminado para todos los nuevos mensajes push de Android desde **Configuración** > **Configuración del espacio de trabajo** > **Configuración push**, o puedes configurar el número de días en función de cada mensaje en la pestaña **Configuración** al redactar una notificación push de Android.
 
-![Campo Tiempo de vida configurado a 28 días.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
+![Campo Tiempo de vida ajustado a 28 días.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
 
 ## Lo que hay que saber
 

@@ -14,7 +14,7 @@ guide_featured_list:
 - name: Crear una plantilla de correo electrónico
   link: /docs/user_guide/message_building_by_channel/email/templates/email_template/
   image: /assets/img/braze_icons/brush-02.svg
-- name: Cargar una plantilla de correo electrónico
+- name: Subir una plantilla de correo electrónico
   link: /docs/user_guide/message_building_by_channel/email/templates/html_email_template/
   image: /assets/img/braze_icons/upload-01-alt.svg
 - name: Aliasing de enlaces

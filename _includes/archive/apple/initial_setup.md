@@ -117,7 +117,7 @@ Support for setting endpoints at runtime using `ABKAppboyEndpointDelegate` has b
 {% endalert %}
 
 {% alert important %}
-To find out your specific cluster, please ask your Customer Success Manager or reach out to our support team.
+To find out your specific cluster, ask your Customer Success Manager or contact our support team.
 {% endalert %}
 
 ### SDK integration complete

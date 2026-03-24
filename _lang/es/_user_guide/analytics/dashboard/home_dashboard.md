@@ -15,7 +15,7 @@ tool:
 
 La página de **inicio** tiene dos secciones principales:
 - [Continuar donde lo dejaste](#pick-up-where-you-left-off)
-- [Resumen del rendimiento](#peformance-overview)
+- [Resumen del rendimiento](#performance-overview)
 
 ![Panel de inicio en Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
 
@@ -25,13 +25,17 @@ Puedes continuar donde lo dejaste en el panel de Braze, con acceso directo a los
 
 Puedes volver a visitar campañas, lienzos y segmentos editados o creados recientemente. Cada tarjeta está emparejada con etiquetas que indican el tipo de contenido (campaña, Canvas, segmento) y el estado (activo, borrador, archivado, detenido).
 
+{% alert note %}
+La sección **Continuar donde lo dejaste** aparece después de haber editado o creado una campaña, un Canvas o un segmento.
+{% endalert %}
+
 ![Un borrador de Canvas, un segmento activo y un borrador de campaña en la sección "Continúa donde lo dejaste".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
 ## Resumen del rendimiento
 
 Por defecto, la sección **Resumen de rendimiento** muestra los datos de los últimos 30 días de todas las aplicaciones y sitios. Todas las métricas se calculan en función del intervalo de fechas seleccionado.
 
-![Intervalo de fechas y campos de aplicación en el panel de Inicio.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
+![Campos de intervalo de fechas y aplicación en el panel de inicio.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 Los porcentajes se calculan basándose en el intervalo de fechas actual en comparación con el intervalo de fechas anterior, con la excepción de *los Usuarios Activos Mensuales* (MAU), que utiliza el último día del periodo anterior en lugar de un intervalo. 
 
@@ -43,7 +47,39 @@ Por ejemplo, si establece el intervalo de fechas en **los últimos 7 días** y *
 
 Selecciona **Mostrar desglose** en cada fila de las estadísticas del resumen de rendimiento para ver el valor de cada estadística por día para el intervalo de fechas especificado.
 
-![Expande]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
+![Expand]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
+
+### Rendimiento a lo largo del tiempo
+
+El gráfico **Rendimiento a lo largo del tiempo** muestra el valor de cada estadística durante el intervalo de fechas especificado para las aplicaciones especificadas.
+
+![El gráfico Rendimiento a lo largo del tiempo muestra estadísticas de los nuevos usuarios durante 30 días.]({% image_buster /assets/img/dashboards/performance_over_time.png %})
+
+Puedes crear gráficos estadísticos para:
+- Banners
+- Tarjetas de contenido
+- Usuarios activos diarios
+  - (Opcional) Desglose por segmento
+- Correo electrónico
+- Mensajes dentro de la aplicación
+- Fórmulas de KPI
+  - Selecciona **Administrador de fórmulas de KPI** para crear una fórmula o editar una fórmula existente.
+- LINE
+- Usuarios activos mensuales (MAU)
+- Nuevos usuarios
+- Push
+  - (Opcional) Desglose por segmento
+- Sesiones
+  - (Opcional) Desglose por segmento o versión de la aplicación.
+- Sesiones por hora
+- Sesiones por MAU
+- SMS
+- Adherencia de los usuarios
+- Desinstalaciones
+  - (Opcional) Desglose por segmento
+- Usuarios
+- Webhooks
+- WhatsApp
 
 ## Estadísticas disponibles
 
@@ -53,7 +89,7 @@ A continuación encontrarás las definiciones de tus estadísticas disponibles, 
 
 *Usuarios* es el número total de usuarios creados en ese espacio de trabajo. Esto incluye a todos los usuarios que registramos utilizando tu aplicación o sitio web en cualquier momento, y a aquellos que podrían no estar asociados a una aplicación o sitio web específico. Este número es el porcentaje de cuántos de tus usuarios de toda la vida están representados como *usuarios activos al mes* (MAU), lo que resulta útil para ver la retención de usuarios durante un largo periodo de tiempo.
 
-Un ratio MAU-usuario bajo puede indicar que necesitas diversificar tus canales de mensajería o aumentar tus esfuerzos para llegar a los usuarios rezagados. Para más información, consulta nuestra guía rápida sobre la [captura de usuarios caducados]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users). En general, la proporción entre MAU y tiempo de vida disminuirá inevitablemente con el tiempo debido al abandono de usuarios, pero las herramientas de Braze pueden ayudarte a minimizar este efecto manteniendo a los usuarios comprometidos durante más tiempo.
+Un ratio MAU-usuario bajo puede indicar que necesitas diversificar tus canales de mensajería o aumentar tus esfuerzos para llegar a los usuarios rezagados. Consulta nuestra guía rápida para [recuperar usuarios inactivos]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) para obtener más información. En general, la proporción entre MAU y tiempo de vida disminuirá inevitablemente con el tiempo debido al abandono de usuarios, pero las herramientas de Braze pueden ayudarte a minimizar este efecto manteniendo a los usuarios comprometidos durante más tiempo.
 
 ### Sesiones por ciclo de vida
 
@@ -68,9 +104,34 @@ El porcentaje junto al recuento de MAU muestra el cambio en MAU para este period
 
 $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of day before start date}}{\text{MAU of day before start date}}$$
 
+#### Reglas para el cálculo de MAU
+
+Los cálculos de MAU siguen reglas específicas para garantizar una facturación precisa y coherente:
+
+- **Momento del cálculo**: Se calcula una vez al día a las 12:05 UTC como una instantánea de 30 días; los recuentos nunca cambian de forma retroactiva.
+- **Perfiles anónimos**: Contar **solo** cuando se haya registrado al menos una sesión.
+- **Perfiles identificados**: Contar automáticamente una vez que existan.
+- **Perfiles huérfanos**: Los duplicados fusionados con otro usuario **no** se cuentan.
+- **Cargas CSV**: Los usuarios cargados mediante CSV solo se contabilizan cuando se `date_of_last_session`proporciona`date_of_first_session`  o  , o cuando inician sesión posteriormente.
+- **Eliminaciones de API**: Eliminar un usuario a través de la API no actualiza inmediatamente el MAU; el recuento se corrige automáticamente en el siguiente ciclo mensual.
+
 {% alert note %}
 Los usuarios anónimos también cuentan para tu MAU. En el caso de los dispositivos móviles, los usuarios anónimos dependen del dispositivo. En el caso de los internautas, los usuarios anónimos dependen de la caché del navegador.
 {% endalert %}
+
+#### Ejemplo de cálculo de MAU
+
+El siguiente ejemplo muestra cómo funcionan los cálculos de MAU a través de diferentes acciones de los usuarios:
+
+| Paso | Acción | Cambio inmediato en los usuarios activos mensuales (MAU) | Total resultante |
+|------|--------|----------------------|-----------------|
+| 1 | Crea **el usuario anónimo 1** e inicia una sesión. | +1 | 1 |
+| 2 | Identificar **al usuario anónimo 1** (el perfil se convierte en identificado) | 0 | 1 |
+| 3 | Crea **un usuario anónimo 2** e inicia una sesión. | +1 | 2 |
+| 4 | Identificar **al usuario anónimo 2** como la **misma persona** que el usuario 1 (el usuario 2 queda huérfano). | –1 | 1 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+Las instantáneas de MAU se calculan una vez al día y nunca cambian de forma retroactiva. En este ejemplo, el recuento de MAU para el día posterior al paso 3 permanece permanentemente en 2, aunque el usuario 2 se quede huérfano más adelante. Sin embargo, el recuento de MAU para los días posteriores solo refleja los usuarios no huérfanos. En cualquier periodo de 30 días, este flujo consume finalmente 1 MAU, ya que solo queda un usuario distinto y no huérfano.
 
 ### Usuarios activos diarios
 
@@ -82,6 +143,10 @@ Los usuarios anónimos también cuentan para tu MAU. En el caso de los dispositi
 
 {% alert note %}
 Cuando realices la integración inicial de Braze, todos los usuarios parecerán nuevos porque Braze nunca ha registrado una sesión para ellos.
+{% endalert %}
+
+{% alert important %}
+Los usuarios asociados a más de una aplicación se cuentan por separado para cada aplicación. Esto significa que un solo usuario puede contribuir al recuento de *nuevos usuarios* varias veces si inicia sesiones en diferentes aplicaciones de tu espacio de trabajo.
 {% endalert %}
 
 ### Adherencia de los usuarios

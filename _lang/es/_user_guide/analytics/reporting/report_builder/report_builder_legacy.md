@@ -1,5 +1,5 @@
 ---
-nav_title: Generador de informes (heredado)
+nav_title: Generador de informes (legado)
 article_title: Generador de informes (heredado)
 alias: /report_builder_legacy/
 page_order: 0
@@ -14,7 +14,7 @@ tool:
 
 > El generador de informes le permite comparar los resultados de varias campañas o lienzos en una sola vista para que pueda determinar fácilmente qué estrategias de participación han tenido un mayor impacto en sus métricas clave. Tanto para las campañas como para los Lienzos, puedes exportar tus datos y guardar tu informe para consultarlo en el futuro.<br><br>Para obtener una lista descriptiva de las métricas que encontrarás en tus informes, consulta el [Glosario de métricas de los informes]({{site.baseurl}}/user_guide/data/report_metrics/).
 
-![Ejemplo de comparación de campaña]({% image_buster /assets/img/campaign_comparison/campaign_main.png %}){: style="max-width:80%;"}
+![Ejemplo de comparación de campañas]({% image_buster /assets/img/campaign_comparison/campaign_main.png %}){: style="max-width:80%;"}
 
 Utilice este informe para responder a preguntas clave de compromiso, por ejemplo:
 
@@ -72,7 +72,7 @@ También puede alternar los cálculos para la **Media** de cualquier tasa o mét
 
 Puede seleccionar un periodo de tiempo específico para ver los datos de su informe. Si una determinada campaña, Canvas, variante en Canvas o componente de Canvas no tiene datos para el periodo de tiempo seleccionado, los resultados de esa fila estarán en blanco. 
 
-![Campaña métrica numérica]({% image_buster /assets/img/campaign_comparison/metric.png %}){: style="max-width:60%;"}
+![Métrica numérica de la campaña]({% image_buster /assets/img/campaign_comparison/metric.png %}){: style="max-width:60%;"}
 
 ### Paso 4: Asigne un nombre a su informe y guárdelo
 
@@ -141,7 +141,7 @@ Si su informe contiene alguna campaña multivariante, su exportación incluirá 
 
 El archivo que contiene las métricas de variantes tendrá `variant_` añadido al principio de su nombre. La primera vez que exporte un informe automatizado, aparecerá una ventana emergente pidiéndole permiso para descargar varios archivos: haga clic en **Permitir**.
 
-![Campaña Descarga]({% image_buster /assets/img/campaign_comparison/download.png %}){: style="max-width:60%;"}
+![Descarga de la campaña]({% image_buster /assets/img/campaign_comparison/download.png %}){: style="max-width:60%;"}
 
 ### Exportación de informes de comparación de lienzos
 
@@ -156,7 +156,7 @@ Si descarga un informe Canvas de desglose de variantes, recibirá dos archivos C
 
 Utilice gráficos para visualizar una métrica seleccionada en su informe. Los gráficos están disponibles para los informes que incluyen campañas y tienen al menos una métrica añadida a sus columnas.
 
-![Gráfico de rendimiento de la campaña con métrica Mensaje enviado seleccionado]({% image_buster /assets/img/campaign_comparison/report_builder_charts.png %})
+![Gráfico de rendimiento de la campaña con la métrica Mensaje enviado seleccionada]({% image_buster /assets/img/campaign_comparison/report_builder_charts.png %})
 
 Por defecto, el gráfico de cada informe mostrará la métrica en la primera columna del informe. Para seleccionar una métrica diferente para el gráfico, elija su métrica en el menú desplegable. Cualquier métrica de la tabla del informe podrá mostrarse en el gráfico.
 

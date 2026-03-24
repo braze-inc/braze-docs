@@ -1,5 +1,5 @@
 ---
-nav_title: Lien profond au contenu d’application
+nav_title: Lien profond vers le contenu in-app
 article_title: Lien profond au contenu d’application
 page_order: 3
 description: "Cet article de référence explique comment ajouter un lien profond dans le contenu de vos messages in-app."
@@ -7,6 +7,10 @@ description: "Cet article de référence explique comment ajouter un lien profon
 ---
 
 # Lien profond vers le contenu in-app
+
+{% alert tip %}
+**À l'attention des développeurs :** Pour obtenir des conseils sur le choix entre les schémas personnalisés, les liens universels et d'autres options, notamment lorsque vous avez besoin d'un fichier AASA, quelles méthodes déléguées d'application mettre en œuvre et comment résoudre les problèmes, veuillez consulter [le guide sur la création de liens profonds iOS]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide) et [la résolution des problèmes de création de liens profonds]({{site.baseurl}}/developer_guide/push_notifications/deep_linking_troubleshooting).
+{% endalert %}
 
 ## Qu’est-ce qu’un lien profond ?
 
@@ -23,7 +27,7 @@ Les liens profonds sont des URIs personnalisés qui sont liés à une partie sp�
 Tout ce qui se trouve après la virgule dans un lien profond, est un texte libre. C'est à vous de définir sa structure et son interprétation ; cependant, une convention courante consiste à s'inspirer des URL `http:`, en incluant un `//` initial et des paramètres de requête (par exemple, `?foo=1&bar=2`). Pour l'exemple précédent, `twitter://user?screen_name=[id]` serait utilisé pour lancer un profil spécifique dans l'application.
 
 {% alert important %}
-Braze ne permet pas d'utiliser un wrapper comme Flutter pour envoyer des liens profonds. Pour utiliser cette fonctionnalité, vous devez configurer les liens profonds au niveau de la couche native.
+Pour les applications créées à l'aide de frameworks wrapper (par exemple, Flutter ou Cordova), Braze ne fournit pas de prise en charge spécifique pour la création de liens profonds wrapper. Il est nécessaire de configurer les liens profonds au niveau des couches natives iOS et Android. Pour Cordova, veuillez vous référer à [la section Création de liens profonds dans les notifications push]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=cordova).
 {% endalert %}
 
 ## Balises UTM et attribution de campagne
@@ -46,11 +50,11 @@ Si vous souhaitez utiliser des balises UTM avec des liens HTTP (web) ordinaires 
 
 Pour utiliser les balises UTM dans les liens profonds vers votre appli, celle-ci doit avoir le [SDK Google Analytics](https://developers.google.com/analytics/devguides/collection/) correspondant intégré et correctement configuré pour gérer les liens profonds. Vérifiez auprès de vos développeurs si vous avez des questions.
 
-Une fois le SDK Analytics intégré et configuré, les balises UTM peuvent être utilisées avec les liens profonds dans les campagnes Braze. Pour implémenter des balises UTM pour votre campagne, incluez les étiquettes UTM nécessaires dans l'URL de destination ou les liens profonds. Les exemples suivants montrent comment utiliser les balises UTM dans les notifications push et les messages in-app.
+Une fois le SDK Analytics intégré et configuré, les balises UTM peuvent être utilisées avec des liens profonds dans les campagnes Braze. Pour configurer les balises UTM pour votre campagne, veuillez inclure les balises UTM nécessaires dans l'URL de destination ou les liens profonds. Les exemples suivants montrent comment utiliser les balises UTM dans les notifications push et les messages in-app.
 
 #### L’attribution de la notification push s’ouvre avec les balises UTM
 
-Pour inclure des balises UTM dans vos liens profonds pour les notifications push, définissez le comportement au clic du message push comme étant un lien profond, puis écrivez l'adresse du lien profond et incluez les balises UTM souhaitées de la manière suivante :
+Pour inclure des balises UTM dans vos liens profonds pour les notifications push, définissez le comportement au clic du message push comme un lien profond, puis rédigez l'adresse du lien profond et incluez les balises UTM souhaitées de la manière suivante :
 
 ```
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spring2016giftcards&utm_content=ios_deeplink
@@ -60,7 +64,7 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spr
 
 #### Attribution de messages dans l’application avec des balises UTM
 
-Pour inclure des balises UTM dans les liens profonds de vos messages in-app, procédez comme suit :
+Pour inclure des balises UTM dans les liens profonds de vos messages in-app, veuillez utiliser ce qui suit :
 
 ```
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spring2021giftcards&utm_content=web_link

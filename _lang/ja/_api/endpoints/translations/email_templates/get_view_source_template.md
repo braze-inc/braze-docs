@@ -1,7 +1,7 @@
 ---
-nav_title: "取得:メールテンプレートのソース翻訳を表示"
+nav_title: "取得:メールテンプレートの翻訳元を表示する"
 article_title: "取得:メールテンプレートのソース翻訳を表示"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 1
 
 layout: api_page
@@ -12,14 +12,12 @@ description: "この記事では、「メールテンプレートのソース翻
 {% api %}
 # メールテンプレートのソース翻訳を表示
 {% apimethod get %}
-/templates/email/translations/source
+/テンプレート/メール/翻訳/source
 {% endapimethod %}
 
-> [メールテンプレートの]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates)ソース翻訳を表示するには、このエンドポイントを使用します。
+> [メールテンプレートの]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates)ソース翻訳を表示するには、このエンドポイントを使用します。ローカライゼーション機能の詳細については、[メッセージ内のロケールを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照せよ。
 
-{% alert important %}
-このエンドポイントは現在早期アクセス中である。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## 前提条件
 
@@ -31,20 +29,19 @@ description: "この記事では、「メールテンプレートのソース翻
 
 ## クエリーパラメーター
 
-| パラメータ     | required | データ型 | 説明                     |
+| パラメータ     | 必須かどうか | データ型 | 説明                     |
 |---------------|----------|-----------|---------------------------------|
-| `template_id` | 必須 | string    | メールテンプレートの ID。 |
-| `locale_id`   | 必須 | 文字列    | ロケールのID。           |
+| `template_id` | 必須かどうか | string    | メールテンプレートの ID。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、**多言語サポート**設定またはリクエストレスポンスで見つけることができる。
-
-## リクエスト例
+## 例のリクエスト
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/source' \
+curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/source?template_id={template_id}'
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
+--Request Body
+---template_id: "6ad1507f-ca10-44c4-95bf-aj39fm10fm1ps"
 ```
 
 ## 応答
@@ -56,8 +53,6 @@ curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/tra
 ステータスコード `200` は、次の応答ヘッダーと本文を返す可能性があります。
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": {
         "translation_map": {
@@ -82,17 +77,5 @@ Authorization: Bearer YOUR-REST-API-KEY
     ]
 }
 ```
-
-## トラブルシューティング
-
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
-
-| エラーメッセージ                           | トラブルシューティング                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_LOCALE_ID`                     | メッセージ翻訳にロケール ID が存在することを確認します。                         |
-| `LOCALE_NOT_FOUND`                      | 多言語設定にロケールが存在することを確認します。                         |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | ワークスペースの多言語設定がオンになっていない。                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | 翻訳できるのは、メールテンプレートとメール、プッシュ、アプリ内メッセージキャンペーン、またはメール付きキャンバスメッセージのみです。             |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

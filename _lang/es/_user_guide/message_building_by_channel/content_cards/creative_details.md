@@ -16,7 +16,7 @@ tool: Media
 ## Tipos de tarjetas de contenido
 
 {% tabs %}
-{% tab Clásico %}
+{% tab Classic %}
 
 La tarjeta clásica es ideal para mensajes y notificaciones estándar o incluso para categorizar visualmente los mensajes con iconos. La imagen es opcional, pero debe tener una proporción de 1:1.
 
@@ -31,11 +31,11 @@ La tarjeta clásica es ideal para mensajes y notificaciones estándar o incluso 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Imagen subtitulada %}
+{% tab Captioned Image %}
 
 La tarjeta de imagen con pie de foto es una forma estupenda de mostrar y llamar la atención sobre contenido importante, como una gran venta o una nueva función de la aplicación.
 
-![Imagen de una tarjeta de Imagen Subtitulada con los detalles recomendados y un ejemplo de tarjeta de Imagen Subtitulada]({% image_buster /assets/img/content_card_captioned.png %}){: style="max-width:90%;border:0;"}
+![Imagen de una tarjeta de Imagen subtitulada con detalles recomendados y un ejemplo de tarjeta de Imagen subtitulada]({% image_buster /assets/img/content_card_captioned.png %}){: style="max-width:90%;border:0;"}
 
 | Capacidad de la tarjeta | Detalles |
 | --- | ---|
@@ -46,11 +46,11 @@ La tarjeta de imagen con pie de foto es una forma estupenda de mostrar y llamar 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Sólo imagen %}
+{% tab Image-only %}
 
 Si quieres más control creativo, la tarjeta de sólo imagen es para ti. Crea tu imagen utilizando cualquier herramienta que te guste y cárgala en este tipo de tarjeta.
 
-![Imagen de una tarjeta de contenido de sólo imagen con detalles recomendados y un ejemplo de sólo imagen]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
+![Imagen de una tarjeta de contenido sólo imagen con detalles recomendados y un ejemplo sólo imagen]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
 
 | Capacidad de la tarjeta | Detalles |
 | --- | ---|
@@ -69,7 +69,7 @@ Las tarjetas de contenido vienen con una gran funcionalidad desde el principio. 
 
 Para que un usuario descarte una tarjeta, puede retirarla en el móvil o utilizar la función `close X`, como se muestra en la siguiente captura de pantalla. El `x` aparecerá al pasar el ratón solo para el SDK Web.
 
-![Imagen que muestra los comportamientos de deslizar o cerrar el descarte de tarjeta]({% image_buster /assets/img/dismissal-cc.png %})
+![Imagen que muestra los comportamientos de deslizamiento o cierre de una tarjeta]({% image_buster /assets/img/dismissal-cc.png %})
 
 Si un usuario ha descartado todas sus tarjetas o usted no ha enviado ninguna actualización, el feed del usuario tendrá normalmente este aspecto:
 

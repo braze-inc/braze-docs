@@ -1,7 +1,7 @@
 ---
 nav_title: Reciblage utilisateur
 article_title: Reciblage utilisateur
-page_order: 3
+page_order: 4
 description: "Cet article de référence traite de la manière dont les utilisateurs peuvent recibler leurs messages en fonction des interactions WhatsApp des utilisateurs."
 page_type: reference
 channel:

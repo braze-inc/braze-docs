@@ -71,7 +71,12 @@ To prevent experiment contamination, if your Canvas has an active or in-progress
 
 From the **Canvas Analytics** page, select the Experiment Path to open a [detailed table]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) identical to the **Analyze Variants** tab to compare detailed performance and conversion statistics across paths. You can also export the table via CSV and compare percent changes for metrics of interest relative to the path or control you select.
 
-Each step in each path will display statistics in the [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) view, just like any Canvas step. However, keep in mind that the analytics of individual steps do **not** take into account the structure of the experiment. The analytics in the Experiment Step should be used to compare across paths.
+Each step in each path displays statistics in the [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) view, just like any Canvas step. However, keep in mind that individual step analytics and Experiment Path analytics measure conversions differently:
+
+- **Experiment Path analytics** track conversions starting from when the user enters the Experiment Path step. This is the recommended view for comparing performance across paths because all paths share the same starting point.
+- **Individual step analytics** (such as Message step analytics) track conversions starting from when the user receives that specific step (for example, when the message sends).
+
+Because these conversion windows have different starting points, they can show different conversion rates for the same path—especially when there are delays between the experiment step and a downstream message. For the most reliable comparison across paths, use the Experiment Path analytics.
 
 ### Winning Path and Personalized Paths performance
 
@@ -82,5 +87,10 @@ Take advantage of Winning Paths to track performance over a period of time and t
 
 ### Additional settings
 
-Experiment Paths will record users who enter each step and convert while in the assigned path. This will track all conversion events specified in the Canvas setup. On the **Additional Settings** tab, enter how many days (between 1 and 30) you'd like this experiment to track conversions. The time window you specify here will determine how long conversion events (chosen in the Canvas setup) will be tracked for the experiment. The per-event conversion windows specified in the Canvas setup will not apply to this step's tracking and will be replaced by this conversion window.
+Experiment Paths record users who enter each step and convert while in the assigned path. This tracks all conversion events specified in the Canvas setup. On the **Additional Settings** tab, enter how many days (between 1 and 30) you want this experiment to track conversions. The time window you specify here determines how long conversion events (chosen in the Canvas setup) are tracked for the experiment. The per-event conversion windows specified in the Canvas setup don't apply to this step's tracking and are replaced by this conversion window.
 
+The conversion window starts when the user enters the Experiment Path step, not when a downstream message sends. If a path includes delays—such as a Delay step or [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)—those delays consume part of the conversion window.
+
+{% alert important %}
+If you're using Intelligent Timing on a Message step within an experiment path, the time between experiment entry and the actual message send reduces the effective conversion window for that path. For example, if your experiment has a 5-day conversion window and Intelligent Timing delays the message by 2 days, users on that path only have 3 days after receiving the message to convert within the experiment window—even though the Message step's own analytics track conversions from the time of message send.<br><br>For cleaner experiment analytics, place any delays (such as Delay steps) **before** the Experiment Path step rather than within an experiment path. This way, all paths start from the same point and delays don't consume any of the conversion window.
+{% endalert %}

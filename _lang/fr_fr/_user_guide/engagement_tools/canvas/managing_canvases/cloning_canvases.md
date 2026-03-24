@@ -1,19 +1,19 @@
 ---
 nav_title: Clonage des Canvas
-article_title: Clonage des Canvas
+article_title: Toiles clonées
 page_order: 3
 alias: "/cloning_canvases/"
 description: "Cet article de référence décrit comment cloner un Canvas depuis l’éditeur Canvas d’origine vers le flux de travail Canvas Flow."
 tool: Canvas
 ---
 
-# Clonage des Canvas vers Canvas Flow
+# Cloner des toiles dans Canvas Flow
 
 {% alert important %}
-Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas d’origine. Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow.
+Vous ne pouvez plus créer ou dupliquer des toiles en utilisant l'expérience Canvas originale. Braze recommande aux clients qui utilisent l'expérience Canvas originale de passer à Canvas Flow, l'expérience Canvas actuelle.
 {% endalert %}
 
-> Si vous disposez d’un Canvas de l’éditeur d’origine, vous pouvez le cloner pour créer une copie dans Canvas Flow. En adoptant le flux de travail Canvas Flow, vous avez accès à des [composants Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) légers, à des [propriétés d'entrées persistantes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) et à des [modifications a posteriori]({{site.baseurl}}/post-launch_edits). Votre Canvas d’origine ne sera ni altéré ni supprimé.
+> Si vous disposez d’un Canvas de l’éditeur d’origine, vous pouvez le cloner pour créer une copie dans Canvas Flow. En passant au flux de travail Canvas actuel, vous avez accès à des [composants Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) légers, à des [propriétés d'entrées persistantes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) et à la [modification après le lancement]({{site.baseurl}}/post-launch_edits). Votre Canvas d’origine ne sera ni altéré ni supprimé.
 
 Pour cloner votre Canvas, procédez comme suit :
 
@@ -36,7 +36,7 @@ Auparavant, certaines toiles comportant des ramifications ne pouvaient pas être
 Si vous clonez un canvas actif, Braze continuera à envoyer les utilisateurs via le canvas d'origine. Nous vous recommandons d’arrêter un Canvas avant de le cloner pour éviter d’envoyer des messages en double aux utilisateurs depuis les deux Canvas.
 {% endalert %}
 
-![Tableau de bord de Canvas avec deux Canvas répertoriés : Copie V2 de Canvas V1 et Canvas V1. La copie V2 de Canvas V1 comporte une icône indiquant qu'elle utilise le flux de travail Canvas Flow.]({% image_buster /assets/img_archive/clone_to_v2_dashboard.png %})
+![Tableau de bord de Canvas avec deux Canvas répertoriés : Copie V2 de Canvas V1 et Canvas V1. La copie V2 du Canvas V1 comporte une icône qui indique qu’elle utilise le flux de travail Canvas Flow.]({% image_buster /assets/img_archive/clone_to_v2_dashboard.png %})
 
 Vous avez terminé de cloner votre Canvas dans le flux de travail Canvas Flow. Vous pouvez désormais continuer à générer vos Canvas avec cette mise à jour !
 
@@ -46,7 +46,7 @@ Pour permettre aux utilisateurs existants de poursuivre leur parcours utilisateu
 
 Si la rééligibilité est désactivée, ajoutez le filtre « Entrés dans une variante du Canvas ». Si la rééligibilité est activée, voici les méthodes possibles à envisager pour s'assurer que les utilisateurs n'entrent pas deux fois dans la même toile :
 - Mettez à jour le Canvas existant pour inclure une balise unique. Pour le nouveau Canvas, ajoutez un filtre « Dernier message reçu de la campagne ou Canvas avec balise ». Cela empêche les utilisateurs d'entrer deux fois dans le Canvas après une date d'entrée spécifique (nombre total de jours après l'envoi du dernier message depuis le Canvas d'origine plus la fenêtre de conversion). 
-- **La méthode suivante consommera des points de données.** Mettez à jour le Canvas d’origine pour inclure un webhook Braze à Braze qui déclenche un horodatage d’attribut personnalisé à la saisie. Cet attribut peut être utilisé pour empêcher les utilisateurs d’accéder à un nouveau Canvas après la date d’entrée spécifiée (nombre total de jours après l’envoi du dernier message à partir du Canvas d’origine plus la fenêtre de conversion).
+- **La méthode suivante permet d'enregistrer des points de données.** Mettez à jour le Canvas d’origine pour inclure un webhook Braze à Braze qui déclenche un horodatage d’attribut personnalisé à la saisie. Cet attribut peut être utilisé pour empêcher les utilisateurs d’accéder à un nouveau Canvas après la date d’entrée spécifiée (nombre total de jours après l’envoi du dernier message à partir du Canvas d’origine plus la fenêtre de conversion).
 
 Pour les Canvas déclenchés par l'API, coordonnez-vous avec votre équipe d'ingénieurs pour vous assurer que ces Canvas utilisent le nouvel ID de Canvas lorsque les nouveaux Canvas sont prêts à être lancés.
 

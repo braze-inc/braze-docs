@@ -1,6 +1,6 @@
 ---
 nav_title: Usuários de envio de mensagens
-article_title: Envio de mensagens aos usuários do LINE
+article_title: Usuários do LINE de mensagens
 page_order: 2
 description: "Este artigo de referência aborda como conversar com os usuários usando modelos de campanhas e Canvas."
 page_type: reference
@@ -23,13 +23,13 @@ Há vários métodos para conversar com os usuários pelo LINE, como o uso de pa
 
 Defina suas palavras de disparo ao programar uma campanha de entrega baseada em ação.
 
-![Disparador baseado em ação de "Enviar esta campanha para usuários que enviaram LINE de entrada para o grupo de inscrições onde o corpo da mensagem é" e um campo em branco.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
+![Disparo baseado em ação de "Enviar esta campanha aos usuários que enviaram LINE de entrada para o grupo de inscrições onde está o corpo da mensagem" e um campo em branco.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
 
 ### Canva
 
 Defina suas palavras-gatilho em [jornadas de ação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) em seu Canva.
 
-![Caminho de ação com um disparador de "Enviar esta campanha para usuários que enviaram LINE de entrada para o grupo de inscrições onde o corpo da mensagem é" e um campo em branco.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
+![Jornada de ação com um disparo de "Enviar esta campanha para usuários que definirem um LINE de entrada para o grupo de inscrição em que o corpo da mensagem seja" e um campo em branco.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
 
 ### Solicitações
 

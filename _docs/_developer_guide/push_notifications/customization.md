@@ -1,12 +1,12 @@
 ---
 page_order: 0.1
-nav_title: Customizing messages
-article_title: Customizing push notifications for the Braze SDK
+nav_title: Customize messages
+article_title: Customize push notifications for the Braze SDK
 channel:
   - push notifications
 ---
 
-# Customizing push notifications
+# Customize push notifications
 
 > Learn how to customize push notifications for the Braze SDK.
 
@@ -21,5 +21,9 @@ channel:
 
 {% sdktab fireos %}
 {% multi_lang_include developer_guide/fireos/push_notifications/customization.md %}
+{% endsdktab %}
+
+{% sdktab React Native %}
+{% multi_lang_include developer_guide/react_native/push_notifications/customization.md %}
 {% endsdktab %}
 {% endsdktabs %}

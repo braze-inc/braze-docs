@@ -1,7 +1,7 @@
 ---
 nav_title: Reorientación de usuarios
 article_title: Reorientación de usuarios
-page_order: 3
+page_order: 4
 description: "Este artículo de referencia cubre cómo los usuarios pueden reorientar sus mensajes por las interacciones de WhatsApp de los usuarios."
 page_type: reference
 channel:
@@ -49,5 +49,5 @@ Vuelva a dirigirse a los usuarios que hayan leído o no una campaña de WhatsApp
 **Filtrar por campaña o atribución Canvas**<br>
 Filtro para usuarios que han abierto/leído una campaña de WhatsApp o un componente o etiqueta de Canvas específicos.
 
-![Filtrar para abrir un mensaje concreto de WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp19.png %}){: style="max-width:75%"}
+![Filtrar para abrir un mensaje de WhatsApp concreto.]({% image_buster /assets/img/whatsapp/whatsapp19.png %}){: style="max-width:75%"}
 

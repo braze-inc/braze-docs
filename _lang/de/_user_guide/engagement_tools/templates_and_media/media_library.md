@@ -3,49 +3,53 @@ nav_title: Medienbibliothek
 article_title: Medienbibliothek
 page_order: 0
 page_type: reference
-description: "Dieser Referenzartikel behandelt die Mediathek. Hier erfahren Sie, wie Sie Ihre Assets an einem einzigen, zentralen Ort verwalten, Bilder mithilfe von KI generieren und auf Medien in Ihrem Message Composer zugreifen können."
+description: "Dieser Referenzartikel behandelt die Medienbibliothek. Hier erfahren Sie, wie Sie Ihre Assets an einem einzigen, zentralen Ort verwalten, Bilder mithilfe von KI generieren und auf Medien in Ihrem Nachrichten-Editor zugreifen können."
 tool: Media
 
 ---
 
 # Medienbibliothek
 
-> Mit der Mediathek können Sie Ihre Assets an einem einzigen, zentralisierten Ort verwalten. 
+> Mit der Medienbibliothek können Sie Ihre Assets an einem einzigen, zentralen Ort verwalten. 
 
-Sie finden die **Medienbibliothek** unter **Vorlagen**.
+## Medienbibliothek im Vergleich zu CDN
 
-Sie können die **Mediathek** verwenden, um:
+Die Verwendung der Medienbibliothek anstelle eines Content Delivery Network (CDN) bietet besseres Caching und eine bessere Performance für In-App-Nachrichten. Alle Medienbibliothek-Assets, die in einer In-App-Nachricht enthalten sind, werden für eine schnellere Anzeige vorab zwischengespeichert und stehen für die Offline-Anzeige zur Verfügung. Darüber hinaus ist die Medienbibliothek in die Braze-Editoren integriert, sodass Marketer Bilder auswählen oder taggen können, anstatt Bild-URLs zu kopieren und einzufügen.
+
+## Zugriff auf die Medienbibliothek
+
+In der Medienbibliothek sehen Sie den Asset-Typ, die Größe, die Abmessungen, die URL, das Datum, an dem es der Bibliothek hinzugefügt wurde, und weitere Informationen. Um auf Ihre Braze-Medienbibliothek zuzugreifen, gehen Sie zu **Templates** > **Medienbibliothek**. Hier können Sie:
 
 * Mehrere Bilder auf einmal hochladen
 * Virtuelle Kontaktdateien (.vcf) hochladen
-* Hochladen von Videodateien zur Verwendung in WhatsApp Nachrichten
-* Laden Sie einen Ordner mit Ihren Bildern hoch (maximal 50 Bilder)
-* [Generieren Sie ein Bild mit Hilfe von KI](#generate-ai) und speichern Sie es in der Medienbibliothek
-* Schneiden Sie ein vorhandenes Bild zu, um das richtige Verhältnis für Ihre Nachrichten zu schaffen.
-* Fügen Sie Tags oder Teams hinzu, um Ihre Bilder besser zu organisieren.
-* Suche nach Tags oder Teams in der Medienbibliothek
-* Ziehen Sie die hochzuladenden Bilder oder Ordner per Drag & Drop.
+* Videodateien zur Verwendung in WhatsApp-Nachrichten hochladen
+* Einen Ordner mit Ihren Bildern hochladen (maximal 50 Bilder)
+* [Ein Bild mit Hilfe von KI generieren](#generate-ai) und es in der Medienbibliothek speichern
+* Ein vorhandenes Bild zuschneiden, um das richtige Verhältnis für Ihre Nachrichten zu erstellen
+* Tags oder Teams hinzufügen, um Ihre Bilder besser zu organisieren
+* Nach Tags oder Teams im Raster der Medienbibliothek suchen
+* Bilder oder Ordner per Drag-and-Drop hochladen
 * Bilder löschen
 
-![Die Seite "Medienbibliothek" enthält einen Bereich "In die Bibliothek hochladen", in den Sie Dateien per Drag & Drop ziehen oder hochladen können. Es gibt auch eine Liste der hochgeladenen Inhalte in der Medienbibliothek.][1]
+![Die Seite „Medienbibliothek" enthält einen Bereich „In die Bibliothek hochladen", in den Sie Dateien per Drag-and-Drop ziehen oder hochladen können. Es gibt auch eine Liste der hochgeladenen Inhalte in der Medienbibliothek.]({% image_buster /assets/img_archive/media_library_main.png %})
 
-{% alert tip %} Weitere Hilfe zur Mediathek finden Sie in unseren [FAQ zu Vorlagen und Medien]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
+Später, beim Verfassen einer Nachricht in Braze, können Sie Ihre Bilder aus der Medienbibliothek einfügen.
 
-## Bild-Details
+![Je nach Nachrichten-Editor gibt es zwei gängige Möglichkeiten für den Zugriff auf die Medienbibliothek. Eine zeigt den E-Mail-Drag-and-Drop-Editor mit dem Titel „Bilder und GIFs" und einem Button „Aus der Medienbibliothek hinzufügen". Die andere zeigt die Standard-Editoren, wie Push- und In-App-Nachrichten, mit dem Titel „Medien" und einem Button zum Hinzufügen eines Bildes.]({% image_buster /assets/img_archive/media_library_composers.png %}){: style="border:none"}
 
-In der Bibliothek sehen Sie den Asset-Typ, die Größe, die Abmessungen, die URL, das Datum, an dem es der Bibliothek hinzugefügt wurde, und weitere Informationen. 
+{% alert tip %} Weitere Informationen zur Medienbibliothek finden Sie in den [häufig gestellten Fragen zu Templates und Medien]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
 
-### Verwendung der Mediathek im Vergleich zu einem CDN
+## Bildspezifikationen
 
-Die Verwendung der Medienbibliothek bietet eine bessere Zwischenspeicherung und Performance für In-App-Nachrichten. Alle Mediathek-Assets, die Sie in einer In-App-Nachricht finden, werden für eine schnellere Anzeige zwischengespeichert und stehen für die Offline-Anzeige zur Verfügung. Darüber hinaus ist die Medienbibliothek mit Braze Composers integriert, was es Marketern erlaubt, Bilder auszuwählen oder zu taggen, anstatt Bild-URLs zu kopieren und einzufügen.
+Alle Bilder, die in die Medienbibliothek hochgeladen werden, müssen kleiner als 5&nbsp;MB sein. Unterstützte Dateiformate sind PNG, JPEG, GIF, SVG und WebP. Spezielle Bildempfehlungen für die einzelnen Messaging-Kanäle finden Sie in den folgenden Abschnitten.
 
-## Bild-Spezifikationen
-
-Alle Bilder, die in die Medienbibliothek hochgeladen werden, müssen kleiner als 5 MB sein. Unterstützte Dateitypen sind PNG, JPEG, GIF und SVG. Spezielle Bildempfehlungen für die einzelnen Nachrichtenkanäle finden Sie in den folgenden Abschnitten.
+{% alert important %}
+GIFs mit sehr langgestreckten Formen (z. B. 3000 x 2 Pixel) oder 300 oder mehr Frames können möglicherweise nicht hochgeladen werden, selbst wenn die Gesamtdateigröße gering ist.
+{% endalert %}
 
 ### Content-Cards
 
-{% multi_lang_include image_specs.md variable_name='Inhaltskarten' %}
+{% multi_lang_include image_specs.md variable_name='content cards' %}
 
 ### E-Mail
 
@@ -53,52 +57,104 @@ Alle Bilder, die in die Medienbibliothek hochgeladen werden, müssen kleiner als
 
 ### In-App-Nachrichten
 
-{% multi_lang_include image_specs.md variable_name="In-App-Nachrichten"  %}
+{% multi_lang_include image_specs.md variable_name="in-app messages"  %}
 
 Weitere Informationen finden Sie unter [Details zur Gestaltung von In-App-Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/).
 
 ### Push
 
-{% multi_lang_include image_specs.md variable_name="Push-Benachrichtigungen"  %}
+{% multi_lang_include image_specs.md variable_name="push notifications"  %}
 
-##### Mehr Ressourcen
+#### Empfohlene Nachrichtenlängen
 
-- [Push-Spezifikationen für Bild und Text]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
+Für optimale Ergebnisse beachten Sie die folgenden Richtlinien zur Nachrichtenlänge beim Verfassen von Push-Nachrichten. Je nach Vorhandensein eines Bildes, dem Benachrichtigungsstatus (iOS) und der Anzeigeeinstellung des Geräts sowie der Gerätegröße kann es zu Abweichungen kommen.
+
+| Nachrichtentyp | Empfohlene Länge (nur Text) | Empfohlene Länge (Rich) |
+| --- | --- | --- |
+| iOS-Sperrbildschirm | 160 Zeichen | 130 Zeichen |
+| iOS Notification Center | 160 Zeichen | 130 Zeichen |
+| iOS-Bannerbenachrichtigung | 80 Zeichen | 65 Zeichen |
+| Android-Sperrbildschirm | 49 Zeichen | N/A |
+| Android-Benachrichtigungsleiste | 597 Zeichen | N/A |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
+
+Weitere Informationen zu iOS-Zeichenanzahlen finden Sie unter [Richtlinien zur iOS-Zeichenanzahl]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count).
+
+#### Web-Push
+
+{% tabs %}
+{% tab Bilder %}
+
+| Browser | Empfohlene Symbolgröße |
+| --- | --- |
+| Chrome | 192 x 192 px oder größer |
+| Firefox | 192 x 192 px oder größer |
+| Safari | 192 x 192 px oder größer (pro Kampagne konfigurierbar mit Safari 16 auf macOS 13+) |
+| Opera | 192 x 192 px oder größer |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+| Browser | Plattform | Große Bildgröße |
+| --- | --- | --- |
+| Chrome | Android | 2:1 Seitenverhältnis |
+| Firefox | Android | N/A |
+| Chrome | Windows | 2:1 Seitenverhältnis |
+| Edge | Windows | 2:1 Seitenverhältnis |
+| Firefox | Windows | N/A |
+| Opera | Windows | 2:1 Seitenverhältnis |
+| Chrome | macOS | N/A |
+| Safari | macOS | N/A |
+| Firefox | macOS | N/A |
+| Opera | macOS | N/A |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endtab %}
+{% tab Text %}
+
+| Browser | Plattform | Maximale Titellänge | Maximale Textlänge |
+| --- | --- | --- | --- |
+| Chrome | Android | 35 | 50 |
+| Firefox | Android | 35 | 50 |
+| Chrome | Windows | 50 | 120 |
+| Edge | Windows | 50 | 120 |
+| Firefox | Windows | 54 | 200 |
+| Opera | Windows | 50 | 120 |
+| Chrome | macOS | 35 | 50 |
+| Safari | macOS | 38 | 84 |
+| Firefox | macOS | 38 | 42 |
+| Opera | macOS | 38 | 42 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+{% endtab %}
+{% endtabs %}
+
+#### Beispiele für Push-Benachrichtigungen
+
+{% tabs %}
+{% tab iOS %}
+
+![iOS-Push-Benachrichtigung mit dem Text: „Hi! Dies ist ein iOS-Push mit einem Bild" und einem Emoji. Neben dem Text befindet sich ein kleines Bild.]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
+![iOS-Push-Benachrichtigung als Hard Push mit demselben Text wie die vorherige Nachricht und einem erweiterten Bild vor dem Text.]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
+
+{% endtab %}
+{% tab Android %}
+
+![Android-Push-Benachrichtigung mit einem großen Bild unter dem Nachrichtentext.]({% image_buster /assets/img_archive/android_push_img2.png %})
+
+{% alert note %}
+Benachrichtigungen mit großen Bildern werden am besten mit einem Bild von mindestens 600 x 300 Pixeln angezeigt.
+{% endalert %}
+
+{% endtab %}
+{% endtabs %}
 
 ### Video
 
-Videos, die in die Mediathek hochgeladen werden, können vorerst nur in WhatsApp Nachrichten verwendet werden. Weitere Informationen finden Sie unter [Erstellen einer Whatsapp Nachricht]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
+In die Medienbibliothek hochgeladene Videos können ausschließlich in WhatsApp-Nachrichten verwendet werden. Weitere Informationen finden Sie unter [Erstellen einer WhatsApp-Nachricht]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
+
+## Bilder mit BrazeAI<sup>TM</sup> generieren {#generate-ai}
+
+{% multi_lang_include brazeai/generative_ai/about_images.md %}
 
 {% alert important %}
-Das Hinzufügen von Videos zu WhatsApp Nachrichten befindet sich derzeit in der Early Access Phase. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
+Bevor Sie dieses Feature nutzen, lesen Sie bitte nach, [wie Ihre Daten verwendet und an OpenAI gesendet werden]({{site.baseurl}}/user_guide/brazeai/generative_ai/images/#ai-policy).
 {% endalert %}
-
-## Zugriff auf die Medienbibliothek von einem Nachrichten-Editor aus
-
-Die Medienbibliothek fungiert als zentraler Standort Ihres Dashboards, da alle Bilder direkt in sie hochgeladen werden. So können Sie Bilder in verschiedenen Nachrichten wiederverwenden.
-
-![Je nach Nachrichten-Editor gibt es zwei gängige Möglichkeiten für den Zugriff auf die Medienbibliothek. Eine zeigt den E-Mail-Drag-and-Drop-Editor mit dem Titel "Bilder und GIFs" und einem Button "Aus der Medien-Bibliothek hinzufügen". Die andere zeigt die Standard-Editoren, wie Push- und In-App-Nachrichten, mit dem Titel "Medien" und einem Button "Bild hinzufügen".][1.5]{: style="border:none"}
-
-## Ein Bild mit KI generieren {#generate-ai}
-
-Sie können mit [DALL·E 3](https://openai.com/index/dall-e-3/), einem KI-System von OpenAI, einem Drittanbieter von Braze, Bilder für Ihre Medienbibliothek generieren. Dieses System kann realistische Bilder und Kunstwerke aus einer Beschreibung in natürlicher Sprache erstellen. Jede Anfrage generiert vier Variationen Ihres Prompts, und Ihr Unternehmen kann 10 Mal pro Tag Bilder generieren. Diese Summe gilt für alle Benutzer in Ihrem Unternehmen.
-
-1. Wählen Sie in der Medienbibliothek <i class="fas fa-wand-magic-sparkles"></i> **AI Image Generator**.
-2. Geben Sie eine Beschreibung des Bildes ein, das Sie generieren möchten (bis zu 300 Zeichen). Je detaillierter die Beschreibung ist, desto besser ist Ihr Ergebnis. Dieses Feature unterstützt nur Texteingaben - das Hochladen eines Bildes als Referenzieren ist nicht möglich.
-3. Wählen Sie **Bilder generieren**. Es kann etwa eine Minute dauern, bis die Bilder generiert sind.
-4. Wählen Sie <i class="fas fa-download" title="Bild zur Mediathek hinzufügen"></i> auf die Bilder, die Sie zu Ihrer Mediathek hinzufügen möchten.
-
-![KI-Bildgenerator Modal in der Medienbibliothek.][6]{: style="max-width:75%"}
-
-Zwischen Ihnen und Braze sind alle mit DALL·E 3 generierten Bilder Ihr geistiges Eigentum. Braze erhebt keinen Anspruch auf das Urheberrecht an solchen Bildern und übernimmt keinerlei Garantie in Bezug auf KI-generierte Inhalte oder Bilder.
-
-Um Bilder zu erzeugen, sendet Braze Ihre Anfrage an die API-Plattform von OpenAI. Alle Abfragen, die von Braze an OpenAI gesendet werden, sind anonymisiert. Das bedeutet, dass OpenAI nicht in der Lage ist, festzustellen, von wem die Abfrage gesendet wurde, es sei denn, Sie geben eindeutig identifizierbare Informationen in die von Ihnen bereitgestellten Eingaben ein. Wie in den [API Platform Commitments von OpenAI](https://openai.com/policies/api-data-usage-policies) beschrieben, werden Daten, die über Braze an die API von OpenAI gesendet werden, nicht zum Trainieren oder Verbessern ihrer Modelle verwendet und nach 30 Tagen gelöscht. Bitte stellen Sie sicher, dass Sie die für Sie relevanten Richtlinien von OpenAI einhalten, die unter anderem die [Nutzungsrichtlinie](https://openai.com/policies/usage-policies) und der [Richtlinie zur gemeinsamen Nutzung und Veröffentlichung](https://openai.com/policies/sharing-publication-policy) umfassen können. Braze übernimmt keinerlei Garantie in Bezug auf KI-generierte Inhalte. 
-
-
-[1]: {% image_buster /assets/img_archive/media_library_main.png %}
-[1.5]: {% image_buster /assets/img_archive/media_library_composers.png %}
-[2]: {% image_buster /assets/img_archive/media_library_crop1.png %}
-[3]: {% image_buster /assets/img_archive/media_library_crop2.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
-[5]: https://imageoptim.com/mac
-[6]: {% image_buster /assets/img_archive/media_library_dalle.png %}

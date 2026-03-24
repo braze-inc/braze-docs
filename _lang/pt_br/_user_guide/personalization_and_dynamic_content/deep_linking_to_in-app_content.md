@@ -1,5 +1,5 @@
 ---
-nav_title: Deep linking para conteúdo no aplicativo
+nav_title: Deep linking para conteúdo no app
 article_title: Deep linking para conteúdo no aplicativo
 page_order: 3
 description: "Este artigo de referência aborda orientações sobre como adicionar deep linking ao conteúdo de suas mensagens no app."
@@ -7,6 +7,10 @@ description: "Este artigo de referência aborda orientações sobre como adicion
 ---
 
 # Deep linking para conteúdo no app
+
+{% alert tip %}
+**Para desenvolvedores:** Para um guia sobre como escolher entre esquemas personalizados, links universais e outras opções — incluindo quando você precisa de um arquivo AASA, quais métodos do delegado do app implementar e como depurar problemas — veja [guia de deep linking para iOS]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide) e [solução de problemas de deep linking]({{site.baseurl}}/developer_guide/push_notifications/deep_linking_troubleshooting).
+{% endalert %}
 
 ## O que é deep linking?
 
@@ -23,7 +27,7 @@ Os deep links são URIs personalizados que vinculam a uma parte específica do a
 Tudo após os dois pontos em um deep linking é texto livre. Cabe a você definir sua estrutura e interpretação; no entanto, uma convenção comum é modelá-la de acordo com os URLs `http:`, incluindo um `//` inicial e parâmetros de consulta (por exemplo, `?foo=1&bar=2`). No exemplo anterior, `twitter://user?screen_name=[id]` seria usado para iniciar um perfil específico no app.
 
 {% alert important %}
-O Braze não oferece suporte ao uso de um wrapper como o Flutter para enviar deep linkings. Para usar esse recurso, você deve configurar os deep links na camada nativa.
+Para apps construídos com frameworks wrapper (por exemplo, Flutter ou Cordova), a Braze não fornece suporte específico para deep linking em wrappers. Você deve configurar deep links nas camadas nativas do iOS e Android. Para Cordova, veja [Deep linking em notificações por push]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=cordova).
 {% endalert %}
 
 ## Tags UTM e atribuição de campanhas

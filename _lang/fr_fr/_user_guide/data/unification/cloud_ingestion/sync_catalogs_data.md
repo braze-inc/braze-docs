@@ -1,0 +1,310 @@
+---
+nav_title: Synchronisation et suppression des données du catalogue
+article_title: Synchronisation et suppression des données du catalogue
+page_order: 4
+page_type: reference
+description: "Cette page donne un aperçu de la manière de synchroniser les données du catalogue."
+
+---
+
+# Synchronisation et suppression des données du catalogue
+
+> Cette page explique comment synchroniser les données du catalogue.
+ 
+## Étape 1 : Créer un nouveau catalogue
+
+Avant de créer une nouvelle intégration CDI (Cloud Data Ingestion) pour les [catalogues]({{site.baseurl}}/user_guide/data/activation/catalogs/), vous devez créer un nouveau catalogue ou identifier un catalogue existant que vous souhaitez utiliser pour l'intégration. Il existe plusieurs façons de créer un nouveau catalogue, et chacune d'entre elles fonctionnera pour l'intégration CDI :
+- Télécharger un [fichier CSV]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/#method-1-upload-csv)
+- Créer un catalogue dans le [tableau de bord de Braze]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/#method-2-create-in-browser) ou lors de la configuration du CDI.
+- Créer un catalogue à l'aide de l'[endpoint Créer un catalogue]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/)
+
+Toute modification du schéma du catalogue (par exemple, l'ajout de nouveaux champs ou la modification du type de champ) doit être effectuée via le tableau de bord du catalogue avant que les données mises à jour ne soient synchronisées via CDI. Nous vous recommandons d'effectuer ces mises à jour lorsque la synchronisation est en pause ou n'est pas planifiée afin d'éviter les conflits entre les données de votre entrepôt de données et le schéma dans Braze.
+
+## Étape 2 : Intégrer Cloud Data Ingestion avec les données du catalogue
+La configuration d'une synchronisation de catalogue suit de près le processus des [intégrations CDI de données utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup). 
+
+{% tabs %}
+{% tab Snowflake %}
+
+1. Créez une table source dans Snowflake. Vous pouvez utiliser les noms de l'exemple suivant ou choisir vos propres noms de base de données, de schéma et de table. Vous pouvez également utiliser une vue ou une vue matérialisée au lieu d'une table.
+  ```sql
+    CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
+    CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
+    CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC (
+         UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT SYSDATE(),
+         --ID of the catalog item to be created or updated
+         ID VARCHAR(16777216) NOT NULL,
+         --Catalog fields and values that should be added or updated
+         PAYLOAD VARCHAR(16777216) NOT NULL,
+         --The catalog item associated with this ID should be deleted
+         DELETED BOOLEAN
+    );
+    ```
+2. Configurez un rôle, un entrepôt et un utilisateur, puis accordez les autorisations appropriées. Si vous disposez déjà d'informations d'identification provenant d'une synchronisation existante, vous pouvez les réutiliser, mais veillez à étendre l'accès à la table source du catalogue.
+    ```sql
+    CREATE ROLE BRAZE_INGESTION_ROLE;
+
+    GRANT USAGE ON DATABASE BRAZE_CLOUD_PRODUCTION TO ROLE BRAZE_INGESTION_ROLE;
+    GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION TO ROLE BRAZE_INGESTION_ROLE;
+    GRANT SELECT ON TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC TO ROLE BRAZE_INGESTION_ROLE;
+
+    CREATE WAREHOUSE BRAZE_INGESTION_WAREHOUSE;
+    GRANT USAGE ON WAREHOUSE BRAZE_INGESTION_WAREHOUSE TO ROLE BRAZE_INGESTION_ROLE;
+
+    CREATE USER BRAZE_INGESTION_USER;
+    GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
+    ```
+3. Si votre compte Snowflake dispose de politiques réseau, ajoutez les adresses IP de Braze à la liste d'autorisation afin que le service CDI puisse se connecter. Pour obtenir la liste des adresses IP, reportez-vous à la page [Ingestion de données cloud]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+4. Dans le tableau de bord de Braze, accédez à **Partenaires technologiques** > **Snowflake** et créez une nouvelle synchronisation.
+5. Saisissez les détails de connexion (ou réutilisez des informations d'identification existantes) et la table source.
+6. Passez à l'étape 2 du flux de configuration, sélectionnez le type de synchronisation « Catalogues » et saisissez le nom de l'intégration ainsi que la planification. Notez que le nom de l'intégration doit **correspondre exactement** au nom du catalogue que vous avez précédemment créé.
+7. Choisissez une fréquence de synchronisation et passez à l'étape suivante.
+8. Ajoutez la clé publique affichée sur le tableau de bord à l'utilisateur que vous avez créé pour que Braze puisse se connecter à Snowflake. Pour effectuer cette étape, vous aurez besoin d'une personne disposant d'un accès `SECURITYADMIN` ou supérieur dans Snowflake. 
+9. Sélectionnez **Tester la connexion** pour vérifier que tout fonctionne comme prévu. 
+10. Enregistrez la synchronisation et utilisez les données de catalogue synchronisées pour tous vos cas d'utilisation de personnalisation. 
+{% endtab %}
+{% tab Redshift %}
+
+1. Créez une table source dans Redshift. Vous pouvez utiliser les noms de l'exemple suivant ou choisir vos propres noms de base de données, de schéma et de table. Vous pouvez également utiliser une vue ou une vue matérialisée au lieu d'une table.
+    ```sql
+    CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
+    CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
+    CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC (
+       updated_at timestamptz default sysdate not null,
+       --ID of the catalog item to be created or updated
+       id varchar not null,
+       --Catalog fields and values that should be added or updated
+       payload varchar(max),
+       --The catalog item associated with this ID should be deleted
+       deleted boolean
+    )
+    ```
+2. Créez un utilisateur et accordez-lui les autorisations nécessaires. Si vous disposez déjà d'informations d'identification provenant d'une synchronisation existante, vous pouvez les réutiliser, mais veillez à étendre l'accès à la table source du catalogue.
+    {% raw %}
+    ```sql 
+    CREATE USER braze_user PASSWORD '{password}';
+    GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
+    GRANT SELECT ON TABLE CATALOGS_SYNC TO braze_user;
+    ```
+    {% endraw %}
+3. Si vous disposez d'un pare-feu ou d'autres politiques réseau, vous devez donner à Braze un accès réseau à votre instance Redshift. Autorisez l'accès depuis les adresses IP ci-dessous correspondant à la région de votre tableau de bord de Braze. Pour obtenir la liste des adresses IP, reportez-vous à la page [Ingestion de données cloud]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+
+{% endtab %}
+{% tab BigQuery %}
+
+1. Vous pouvez éventuellement créer un nouveau projet ou jeu de données pour héberger votre table source. 
+
+```sql
+CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
+```
+
+Créez une ou plusieurs tables à utiliser pour votre intégration CDI avec les champs suivants :
+
+```sql
+CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
+(
+  updated_at TIMESTAMP DEFAULT current_timestamp,
+  id STRING,
+  payload JSON,
+  deleted BOOLEAN
+);
+```
+
+| NOM DU CHAMP | TYPE | MODE |
+| --- | --- | --- |
+| UPDATED_AT | TIMESTAMP | REQUIS |
+| PAYLOAD | JSON | REQUIS |
+| ID | STRING | REQUIS |
+| DELETED | BOOLEAN | FACULTATIF |
+
+{:start="2"}
+
+2. Créez un utilisateur et accordez-lui les autorisations nécessaires. Si vous disposez déjà d'informations d'identification provenant d'une synchronisation existante, vous pouvez les réutiliser, mais veillez à étendre l'accès à la table source du catalogue. 
+Le compte de service doit disposer des autorisations suivantes :
+- BigQuery Connection User : permet à Braze d'établir des connexions.
+- BigQuery User : permet à Braze d'exécuter des requêtes, de lire les métadonnées des jeux de données et de lister les tables.
+- BigQuery Data Viewer : permet à Braze de visualiser les jeux de données et leur contenu.
+- BigQuery Job User : permet à Braze d'exécuter des tâches.<br><br>Après avoir créé le compte de service et accordé les autorisations, générez une clé JSON. Pour plus d'informations, reportez-vous à la section [Création et suppression de clés](https://cloud.google.com/iam/docs/keys-create-delete). Vous l'importerez dans le tableau de bord de Braze ultérieurement.
+
+{:start="3"}
+3. Si vous avez mis en place des politiques réseau, vous devez donner à Braze un accès réseau à votre instance BigQuery. Pour obtenir la liste des adresses IP, reportez-vous à la page [Ingestion de données cloud]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+
+{% endtab %}
+{% tab Databricks %}
+
+1. Créez une table source dans Databricks. Vous pouvez utiliser les noms de l'exemple suivant ou choisir vos propres noms de catalogue, de schéma et de table. Vous pouvez également utiliser une vue ou une vue matérialisée au lieu d'une table.
+
+```sql
+CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
+```
+
+```sql
+CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CATALOGS_SYNC`
+(
+  updated_at TIMESTAMP DEFAULT current_timestamp(),
+  id STRING,
+  deleted BOOLEAN,
+  payload STRING, STRUCT, or MAP
+);
+```
+
+| NOM DU CHAMP | TYPE | MODE |
+| --- | --- | --- |
+| UPDATED_AT | TIMESTAMP | REQUIS |
+| PAYLOAD | STRING, STRUCT ou MAP | REQUIS |
+| ID | STRING | REQUIS |
+| DELETED | BOOLEAN | NULLABLE |
+
+{:start="2"}
+
+2. Créez un jeton d'accès personnel dans votre espace de travail Databricks.
+
+- a. Sélectionnez votre nom d'utilisateur Databricks, puis sélectionnez **Paramètres utilisateur** dans le menu déroulant.
+- b. Dans l'onglet **Jetons d'accès**, sélectionnez **Générer un nouveau jeton**.
+- c. Saisissez un commentaire qui vous aide à identifier ce jeton, par exemple « CDI Braze ». 
+- d. Définissez la durée de vie du jeton sur illimitée en laissant vide la case **Durée de vie (jours)**. Sélectionnez **Générer**.
+- e. Copiez le jeton affiché, puis sélectionnez **Terminé**. 
+- f. Conservez le jeton en lieu sûr jusqu'à ce que vous ayez besoin de le saisir lors de l'étape de création des identifiants dans le tableau de bord de Braze.
+
+{:start="3"}
+3. Si vous avez mis en place des politiques réseau, vous devez donner à Braze un accès réseau à votre instance Databricks. Pour obtenir la liste des adresses IP, consultez la page [Ingestion de données cloud]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+
+{% endtab %}
+{% tab Microsoft Fabric %}
+
+Créez une ou plusieurs tables à utiliser pour votre intégration CDI avec les champs suivants :
+
+```sql
+CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
+(
+  UPDATED_AT DATETIME2(6) NOT NULL,
+  PAYLOAD VARCHAR NOT NULL,
+  ID VARCHAR NOT NULL,
+  DELETED BIT
+)
+GO
+```
+
+{:start="2"}
+
+2. Mettez en place un principal de service et accordez les autorisations appropriées. Si vous disposez déjà d'informations d'identification provenant d'une synchronisation existante, vous pouvez les réutiliser, mais veillez à étendre l'accès à la table source du catalogue. Pour en savoir plus sur la création d'un nouveau principal de service et d'informations d'identification, consultez la page [Ingestion de données cloud]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views). 
+
+{:start="3"}
+3. Si vous avez mis en place des politiques réseau, vous devez donner à Braze un accès réseau à votre instance Microsoft Fabric. Pour obtenir la liste des adresses IP, consultez la page [Ingestion de données cloud]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+
+{% endtab %}
+{% tab S3 %}
+Configurez vos fichiers source dans S3 en fournissant des fichiers JSON ou CSV. Gardez à l'esprit les points suivants :
+
+- Les fichiers ne peuvent pas contenir de colonne `UPDATED_AT`.  
+- Vous pouvez inclure un champ facultatif `DELETED` pour marquer les éléments à supprimer. 
+
+{% subtabs %}
+{% subtab JSON %}
+```jsonl
+{"id":"85","payload":"{\"product_name\":\"Product 85\",\"price\":85.85}"}
+{"id":"1","payload":"{\"product_name\":\"Product 1\",\"price\":1.01}","deleted":true}
+```
+{% endsubtab %}
+
+{% subtab CSV %}
+```plaintext
+ID,PAYLOAD,DELETED
+85,"{""product_name"": ""Product 85"", ""price"": 85.85}",false
+1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+Pour plus d'informations sur la configuration, consultez [Intégrations de stockage de fichiers]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
+
+{% endtab %}
+{% endtabs %}
+
+## Comment fonctionne l'intégration
+
+À chaque exécution de la synchronisation, Braze récupère toutes les lignes dont la valeur `UPDATED_AT` est postérieure à la dernière valeur synchronisée. Les lignes situées exactement à l'horodatage limite peuvent être re-synchronisées si de nouvelles lignes partagent le même horodatage. Nous vous recommandons de créer une vue dans votre entrepôt de données à partir de vos données de catalogue afin de mettre en place une table source qui sera entièrement actualisée à chaque exécution de la synchronisation. Avec les vues, vous n'aurez pas besoin de réécrire la requête à chaque fois.
+
+Par exemple, si vous avez une table de données produit (`product_catalog_1`) avec `product_id` et trois attributs supplémentaires, vous pouvez synchroniser la vue ci-dessous :
+
+{% tabs %}
+{% tab Snowflake %}
+```sql
+CREATE VIEW BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS 
+SELECT
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    product_id as id,
+    TO_JSON(
+        OBJECT_CONSTRUCT (
+            'attribute_1',
+            attribute_1,
+            'attribute_2',
+            attribute_2,
+            'attribute_3',
+            attribute_3)
+    )as PAYLOAD FROM "product_catalog_1";
+```
+{% endtab %}
+{% tab Redshift %}
+```sql
+CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS
+SELECT
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    Product_id as id,
+    JSON_SERIALIZE(
+        OBJECT (
+            'attribute_1',
+            attribute_1,
+            'attribute_2',
+            attribute_2,
+            'attribute_3',
+            attribute_3)
+    ) as PAYLOAD FROM "product_catalog_1";
+```
+{% endtab %}
+{% tab BigQuery %}
+```sql
+CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SELECT
+    last_updated as UPDATED_AT,
+    product_id as ID,
+    TO_JSON(
+      STRUCT(
+      attribute_1,
+      attribute_2,
+      attribute_3,
+      )
+    ) as PAYLOAD 
+  FROM `BRAZE_CLOUD_PRODUCTION.INGESTION.product_catalog_1`);
+```
+{% endtab %}
+{% tab Databricks %}
+```sql
+CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.CATALOGS_SYNC AS (SELECT
+    last_updated as UPDATED_AT,
+    product_id as ID,
+    TO_JSON(
+      STRUCT(
+      attribute_1,
+      attribute_2,
+      attribute_3,
+      )
+    ) as PAYLOAD 
+  FROM `BRAZE_CLOUD_PRODUCTION.INGESTION.product_catalog_1`);
+```
+{% endtab %}
+{% tab Microsoft Fabric %}
+```sql
+CREATE VIEW [braze].[user_update_example]
+AS SELECT 
+    id as ID,
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    JSON_OBJECT('attribute_1':attribute_1, 'attribute_2':attribute_2, 'attribute_3':attribute_3, 'attribute_4':attribute_4) as PAYLOAD
+
+FROM [braze].[product_catalog] ;
+```
+{% endtab %}
+{% endtabs %}
+
+- Les données extraites de l'intégration seront utilisées pour créer ou mettre à jour des éléments dans le catalogue cible en fonction de l'`id` fourni.
+- Si DELETED est défini sur `true`, l'élément de catalogue correspondant sera supprimé.
+- La synchronisation ne consomme pas de points de donnée, mais toutes les données synchronisées sont comptabilisées dans l'utilisation totale de votre catalogue. Cette utilisation est mesurée en fonction du volume total de données stockées : vous n'avez donc pas besoin de vous limiter à la synchronisation des seules données modifiées.

@@ -72,7 +72,7 @@ To update an existing object, send a POST to `users/track` with the `_merge_obje
 After this request is received, the custom attribute object will now look like the following:
 
 ```json
-"most_played_song": {
+{"most_played_song": {
   "song_name": "Solea",
   "artist_name" : "Miles Davis",
   "album_name": "Sketches of Spain",
@@ -82,7 +82,7 @@ After this request is received, the custom attribute object will now look like t
      "count": 1000,
      "top_10_listeners": true
   }
-}
+}}
 ```
 
 {% alert warning %}
@@ -328,14 +328,14 @@ You can generate a schema for your objects to build segment filters without need
 For this example, suppose we have an `accounts` object array that we've just sent to Braze:
 
 ```json
-"accounts": [
+{"accounts": [
   {"type": "taxable",
   "balance": 22500,
   "active": true},
   {"type": "non-taxable",
   "balance": 0,
-  "active": true},
- ]
+  "active": true}
+]}
 ```
 
 In the Braze dashboard, go to **Data Settings** > **Custom Attributes**.
@@ -420,6 +420,30 @@ To reset the schema for an object array with an existing object, you need to cre
 {% endalert %}
 
 If data doesn't appear as expected after regenerating the schema, the attribute may not be ingested often enough. User data is sampled on previous data sent to Braze for the given nested attribute. If the attribute isn't ingested enough, it won't be picked up for the schema.
+
+## Segmentation behavior with arrays of objects
+
+When you use multiple `Nested Custom Attribute` filters with AND logic to segment on an array of objects, each filter is evaluated independently across all items in the array. A user qualifies for the segment if _any_ item in the array satisfies each individual filter—the filters don't have to match the _same_ item.
+
+For example, suppose a user has the following array:
+
+```json
+{
+  "orders": [
+    {"product": "Shoes", "price": 80},
+    {"product": "Hat", "price": 25}
+  ]
+}
+```
+
+A segment with the following AND filters:
+
+- `orders[].price` is greater than 50
+- `orders[].price` is less than 30
+
+This user would qualify because the first filter matches the "Shoes" item (80 > 50) and the second filter matches the "Hat" item (25 < 30). Even though no single item satisfies both conditions, the user still enters the segment.
+
+If you need all conditions to match the same item within an array, use [multi-criteria segmentation](#multi-criteria-segmentation) on the same path, or restructure your data to avoid cross-item matching.
 
 ## Data points
 

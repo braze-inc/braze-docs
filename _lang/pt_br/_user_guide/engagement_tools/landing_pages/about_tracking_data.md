@@ -1,5 +1,5 @@
 ---
-nav_title: Sobre o rastreamento de dados
+nav_title: Sobre dados de rastreamento
 article_title: Sobre os dados de rastreamento da landing page
 description: "Saiba mais sobre rastreamento e dados anônimos para landing pages no Braze."
 page_order: 10
@@ -14,7 +14,9 @@ alias: /landing_pages/data_tracking/
 
 ### SDK da Web
 
-O SDK do Braze Web é inicializado somente quando um usuário envia um formulário na landing page. Antes do envio do formulário, nenhum dado pessoal é coletado e o SDK não faz o rastreamento ativo dos usuários. Após a conclusão da inicialização, o SDK não armazena nenhum dado no navegador (como cookies, armazenamento local ou outros).
+O SDK web da Braze é inicializado quando um usuário envia um formulário em uma landing page. Antes do envio do formulário, nenhum dado pessoal é coletado e o SDK não faz o rastreamento ativo dos usuários. Após a conclusão da inicialização, o SDK não armazena nenhum dado no navegador (como cookies, armazenamento local ou outros). 
+
+O SDK web da Braze é inicializado imediatamente quando um usuário navega para a landing page através de um link gerado por uma {% raw %}`{% landing_page_url %}`{% endraw %} Liquid tag em uma mensagem da Braze.
 
 Quando um formulário for enviado, o SDK coletará os seguintes dados:
 
@@ -29,4 +31,13 @@ Quando um formulário for enviado, o SDK coletará os seguintes dados:
 Antes de um usuário enviar um formulário, os dados rastreados em uma landing page consistem apenas em informações anônimas e não identificáveis. Isso consiste em métricas agregadas padrão do site, como o número de visualizações de página (impressões) e cliques que uma landing page recebe.
 
 Como esses dados não estão vinculados a usuários identificáveis, eles não podem ser usados para redirecionar ou rastrear o comportamento individual do usuário.
+
+## Mesclagem de perfis de usuário duplicados
+
+A Braze não mescla automaticamente usuários com base em atributos, como e-mail ou telefone, quando um formulário de landing page é enviado. Se um formulário for enviado com um e-mail ou número de telefone que corresponda a um perfil de usuário existente, a Braze cria um perfil de usuário separado.
+
+Para mesclar perfis de usuário duplicados, você pode:
+
+- Disparar o [`/users/merge` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) quando um formulário de landing page for enviado para mesclar o novo perfil com um perfil existente.
+- Agendar [mesclagem em massa]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#bulk-merging) para mesclar periodicamente perfis duplicados com base em identificadores correspondentes.
 

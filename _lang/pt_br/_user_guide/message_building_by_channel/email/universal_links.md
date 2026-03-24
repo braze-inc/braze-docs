@@ -1,6 +1,6 @@
 ---
 nav_title: Links universais e links de aplicativos
-article_title: Links universais e links de aplicativos
+article_title: Links Universais e Links de App
 page_order: 6.4
 page_type: reference
 description: "Este artigo de ajuda o orienta sobre como configurar os links universais da Apple e os app links do Android."
@@ -9,7 +9,11 @@ channel: email
 
 # Links universais e links de aplicativos
 
-Os links universais da Apple e os links de aplicativos Android são mecanismos criados para fornecer uma transição perfeita entre o conteúdo da Web e os aplicativos móveis. Embora os links universais sejam específicos para iOS, os links de app Android servem ao mesmo propósito para aplicativos Android.
+{% alert tip %}
+Para uma comparação dos tipos de links em todos os canais de envio de mensagens e orientações sobre quando você precisa de um arquivo AASA, consulte [guia de deep linking para iOS]({{site.baseurl}}/developer_guide/push_notifications/ios_deep_linking_guide).
+{% endalert %}
+
+Os links universais da Apple e os links de app do Android são mecanismos criados para proporcionar uma transição perfeita entre o conteúdo da web e os aplicativos móveis. Embora os links universais sejam específicos para iOS, os links de app Android servem ao mesmo propósito para aplicativos Android.
 
 ## Como funcionam os links universais e os App Links
 
@@ -55,7 +59,7 @@ Para que os aplicativos suportem links universais ou App Links, tanto o iOS quan
 
 Além desse arquivo de permissões, há definições codificadas de quais domínios de links o app tem permissão para abrir, que são configuradas dentro do app:
 
-- **iOS:** Definir como "Domínios associados" no Xcode
+- **iOS:** Defina como "Domínios Associados" no Xcode
 - **Android:** Definido no arquivo `AndroidManifest.xml` do app
 
 Essa associação domínio-app de duas partes é necessária para que um link universal ou App Link funcione e evita que qualquer aplicativo sequestre links de um domínio específico ou que qualquer domínio abra um aplicativo específico.
@@ -75,7 +79,7 @@ Estas etapas foram adaptadas da documentação do desenvolvedor da Apple. Para s
 #### Etapa 1a: Registre seu app {#step-1a}
 
 1. Acesse developer.apple.com e faça o registro.
-2. Clique em **Certificates, Identifiers & Profiles (Certificados, Identificadores e Perfis**).
+2. Clique em **Certificados, Identificadores & Perfis**.
 3. Clique em **Identificadores**.
 4. Se ainda não tiver um identificador de app registrado, clique em + para criar um.
    a. Digite um **nome**. Pode ser o que você quiser.
@@ -127,7 +131,7 @@ O arquivo AASA contém um objeto JSON com uma lista de apps e as jornadas de URL
     "apps": [],
     "details": [
       {
-        "appID": “JHGFJHHYX.com.facebook.ios",
+        "appID": "JHGFJHHYX.com.facebook.ios",
         "paths": [
           "*"
         ]
@@ -138,7 +142,7 @@ O arquivo AASA contém um objeto JSON com uma lista de apps e as jornadas de URL
 ```
 
 - `appID`: Criado combinando o **ID** da **equipe** do seu app (acesse `https://developer.apple.com/account/#/membership/` para obter o ID da equipe) e o **identificador do pacote**. No exemplo acima, "JHGFJHHYX" é o ID da equipe e "com.facebook.ios" é o ID do pacote.
-- `paths`: Matriz de strings que especificam quais jornadas são incluídas ou excluídas da associação. Você pode usar `NOT` antes do caminho para desativar as jornadas. Neste exemplo, todos os links nessa jornada acessarão a Web em vez de abrir o app. Você pode usar `*` como um curinga para ativar todas as jornadas em um diretório e `?` para corresponder a um único caractere (como /archives/201?/ para corresponder a todos os números de 2010-2019).
+- `paths`: Matriz de strings que especificam quais jornadas são incluídas ou excluídas da associação. Você pode usar `NOT` antes do caminho para desativar as jornadas. Neste exemplo, todos os links nessa jornada acessarão a Web em vez de abrir o app. Você pode usar `*` como um caractere curinga para ativar todos os caminhos em um diretório e `?` para corresponder a um único caractere (como /archives/201?/ para corresponder a todos os números de 2010-2019).
 
 {% alert note %}
 Essas strings diferenciam maiúsculas de minúsculas, e as strings de consulta e os identificadores de fragmento são ignorados.
@@ -200,7 +204,7 @@ Você precisa associar seu app ao seu site. Isso pode ser feito com a criação 
 
 ### Etapa 3: Atualize o arquivo de manifesto do app
 
-Em seu arquivo `AndroidManifest.xml`, adicione um elemento de metadados dentro do elemento do aplicativo. O elemento de metadados deve ter uma atribuição `android:name` de "asset_statements" e uma atribuição `android:resource` que aponte para um arquivo de recursos com uma matriz de strings que inclua o URL de seu site.
+Em seu arquivo `AndroidManifest.xml`, adicione um elemento de metadados dentro do elemento do aplicativo. O elemento de meta-dados deve ter um atributo `android:name` de "asset_statements" e um atributo `android:resource` que aponte para um arquivo de recurso com um array de strings que inclua a URL do seu site.
 
 ### Etapa 4: Prepare seu app para lidar com deep linkings
 
@@ -216,7 +220,7 @@ Por fim, você pode testar seus deep linkings. Enviar um link para si mesmo por 
 ## Links universais, links de apps e rastreamento de cliques
 
 {% alert note %}
-Os links de rastreamento de cliques geralmente são configurados como parte de sua integração para envio de e-mail. Se isso não tiver sido concluído durante a integração do cliente, entre em contato com seu gerente de conta para obter ajuda.
+Os links de rastreamento de cliques geralmente são configurados como parte de sua integração para envio de e-mail. Se isso não foi concluído durante a integração do cliente, entre em contato com seu gerente de conta para obter ajuda.
 {% endalert %}
 
 Nossos parceiros de envio de e-mail, SendGrid e SparkPost, usam domínios de rastreamento de cliques para envolver todos os links e incluir parâmetros de URL para rastreamento de cliques nos e-mails do Braze.
@@ -263,13 +267,13 @@ Por exemplo:
 
 Em seguida, confira se seu app está configurado para lidar corretamente com a jornada personalizada. Consulte o artigo do SparkPost sobre [como usar o rastreamento de cliques do SparkPost em deep links](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#preferred-solution-using-sparkpost-click-tracking-on-deep-links). Este artigo contém um código de exemplo para [iOS](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#ios-swift-forwarding-clicks-to-sparkpost) e [Android](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#forwarding-clicks-from-android-to-sparkpost).
 
-### Desativar o rastreamento de cliques em uma base de link a link
+### Desativando o rastreamento de cliques em uma base de link para link
 
-É possível desativar o rastreamento de cliques para links específicos adicionando código HTML à mensagem de e-mail para o editor de HTML ou a um bloco HTML para o editor de arrastar e soltar.
+Você pode desativar o rastreamento de cliques para links específicos adicionando código HTML à sua mensagem de e-mail para o editor de HTML ou a um bloco HTML para o editor de arrastar e soltar.
 
 #### SendGrid
 
-Se o seu provedor de e-mail for o SendGrid, use o código HTML `clicktracking=off` desta forma:
+Se o seu prestador de serviço de e-mail for SendGrid, use o código HTML `clicktracking=off` assim:
 
 ```HTML
 <a clicktracking=off href="[INSERT https LINK HERE]">click here</a>
@@ -277,7 +281,7 @@ Se o seu provedor de e-mail for o SendGrid, use o código HTML `clicktracking=of
 
 #### SparkPost 
 
-Se o seu provedor de serviço de e-mail for o SparkPost, use o código HTML `data-msys-clicktrack="0"` desta forma:
+Se o seu prestador de serviço de e-mail for SparkPost, use o código HTML `data-msys-clicktrack="0"` assim:
 
 ```HTML
 <a data-msys-clicktrack="0" href="[INSERT https LINK HERE]">click here</a>
@@ -285,7 +289,7 @@ Se o seu provedor de serviço de e-mail for o SparkPost, use o código HTML `dat
 
 #### Amazon SES
 
-Se o seu provedor de serviço de e-mail for o Amazon SES, use o código HTML `ses:no-track` desta forma:
+Se o seu prestador de serviço de e-mail for Amazon SES, use o código HTML `ses:no-track` assim:
 
 ```HTML
 <a ses:no-track href="[INSERT https LINK HERE]">click here</a>
@@ -293,7 +297,7 @@ Se o seu provedor de serviço de e-mail for o Amazon SES, use o código HTML `se
 
 #### Editor de arrastar e soltar
 
-Ao usar o editor de arrastar e soltar de e-mail, insira seu código HTML como um atributo personalizado se o link estiver anexado ao texto, a um botão ou a uma imagem.
+Ao usar o editor de e-mail de arrastar e soltar, insira seu código HTML como um atributo personalizado se seu link estiver anexado a texto, um botão ou uma imagem.
 
 ##### Atributo personalizado para um link de texto
 

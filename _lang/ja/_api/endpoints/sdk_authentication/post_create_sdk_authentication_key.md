@@ -1,7 +1,7 @@
 ---
-nav_title: "POST:SDK 認証キーを作成"
+nav_title: "POST:SDK認証キーを作成する"
 article_title: "POST:SDK 認証キーを作成"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 0
 layout: api_page
 page_type: reference
@@ -32,8 +32,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "app_id": "App API identifier",
-  "rsa_public_key_str": "RSA public key string", 
-  "description": "description", 
+  "rsa_public_key_str": "RSA public key string",
+  "description": "description",
   "make_primary": false
 }
 ```
@@ -42,22 +42,22 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | パラメーター | 必須 | データタイプ | 説明 |
 | --------- | -------- | --------- | ----------- |
-| `app_id` | 必須 | string | アプリの API 識別子。 |
-| `rsa_public_key_str` | 必須 | string | RSA 公開キーの文字列。有効な RSA 公開キーでなければならず、そうでない場合はエラーを返します。 |
-| `description` | 必須 | string | SDK 認証キーの説明。 |
+| `app_id` | 必須かどうか | string | アプリの API 識別子。 |
+| `rsa_public_key_str` | 必須かどうか | string | RSA 公開キーの文字列。有効な RSA 公開キーでなければならず、そうでない場合はエラーを返します。 |
+| `description` | 必須かどうか | string | SDK 認証キーの説明。 |
 | `make_primary` | オプション | ブール値 | `true` に設定すると、作成時にこのキーをプライマリ SDK 認証キーとします。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_authentication/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "app_id": "01234567-89ab-cdef-0123-456789abcdef",
-  "rsa_public_key_str": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvvD+fgA0YuCUd/v35htn...\n-----END PUBLIC KEY-----", 
-  "description": "SDK Authentication Key for iOS App", 
+  "rsa_public_key_str": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvvD+fgA0YuCUd/v35htn...\n-----END PUBLIC KEY-----",
+  "description": "SDK Authentication Key for iOS App",
   "make_primary": false
 }'
 ```

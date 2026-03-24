@@ -1,8 +1,8 @@
 ---
 nav_title: Campanhas de teste
-article_title: Campanhas de teste
+article_title: Campanhas de Teste
 layout: dev_guide
-guide_top_header: "Campanhas de teste"
+guide_top_header: "Campanhas de Teste"
 guide_top_text: "Antes de enviar suas campanhas, você deve sempre testar suas mensagens. Depois, você deve sempre analisar os resultados para garantir que sua campanha foi bem-sucedida e afetará positivamente suas campanhas futuras.<br><br> Aqui, você pode encontrar recursos sobre campanhas de testes, como o envio de mensagens de teste e a realização de testes A/B."
 page_order: 4
 
@@ -14,10 +14,10 @@ description: "Essa landing page contém dicas e testes de campanha. Aqui, você 
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
-  - name: Envio de mensagens de teste
-    link: /docs/developer_guide/in_app_messages/sending_test_messages/
+  - name: Enviar Mensagens de Teste
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: Campanhas baseadas em ação e disparadas por API
+  - name: Campanhas acionadas por API e baseadas em ações
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/
     image: /assets/img/braze_icons/columns-01.svg
   - name: Testes multivariantes e A/B

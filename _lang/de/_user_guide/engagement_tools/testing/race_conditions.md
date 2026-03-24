@@ -1,11 +1,11 @@
 ---
-nav_title: Rennbedingungen
+nav_title: Race-Conditions
 article_title: Rennbedingungen
 alias: /race_conditions/
 page_order: 9
 page_type: reference
 description: "Dieser Artikel beschreibt bewährte Praktiken, um zu vermeiden, dass Race-Conditions Ihre Messaging-Kampagnen beeinträchtigen."
-
+toc_headers: h2
 ---
 
 # Race-Conditions
@@ -33,7 +33,7 @@ In Braze tritt eine der häufigsten Race-Conditions bei Nachrichten auf, die sic
 1. Ein Benutzer wird erstellt;
 2. Derselbe Nutzer:in wird sofort für eine Nachricht angesprochen, führt ein angepasstes Event durch oder protokolliert ein angepasstes Attribut.
 
-In manchen Fällen wird jedoch das zweite Ereignis zuerst ausgelöst. Dies bedeutet, dass eine Nachricht an einen Nutzer:innen gesendet werden soll, der noch nicht existiert. Infolgedessen erhält der Nutzer:in sie nie. Dies gilt auch für Ereignisse oder Attribute, bei denen versucht wird, das Ereignis oder Attribut in einem Nutzerprofil zu protokollieren, das noch nicht erstellt wurde.
+In einigen Fällen triggert das zweite Ereignis jedoch zuerst. Dies bedeutet, dass eine Nachricht an einen Nutzer:innen gesendet werden soll, der noch nicht existiert. Infolgedessen erhält der Nutzer:in sie nie. Dies gilt auch für Ereignisse oder Attribute, bei denen versucht wird, das Ereignis oder Attribut in einem Nutzerprofil zu protokollieren, das noch nicht erstellt wurde.
 
 ### Bewährte Praktiken
 
@@ -47,15 +47,19 @@ Sie können diese Verzögerung auch im [Braze SDK]({{site.baseurl}}/developer_gu
 
 ## Szenario 2: Mehrere API-Endpunkte verwenden
 
+{% alert important %}
+Wir nutzen asynchrone Verarbeitung, um Geschwindigkeit und Flexibilität zu maximieren. Dies bedeutet, dass wir bei separat an uns gesendeten API-Aufrufen nicht garantieren können, dass diese in der Reihenfolge ihrer Übermittlung verarbeitet werden.
+{% endalert %}
+
 Es gibt ein paar Szenarien, in denen mehrere API Endpunkte ebenfalls zu dieser Race-Condition führen können, z. B. wenn:
 
 - Verwendung separater API-Endpunkte zum Erstellen von Benutzern und Auslösen von Canvases oder Kampagnen
 - Mehrere separate Aufrufe des Endpunkts `/users/track`, um angepasste Attribute, Events oder Käufe zu aktualisieren
 
-Wenn Nutzer:innen Informationen über den [Endpunkt`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track) an Braze senden, kann es gelegentlich ein paar Sekunden dauern, bis sie verarbeitet werden. Das bedeutet, dass es bei gleichzeitigen Anfragen an die Endpunkte `/users/track` und Messaging wie `/campaign/trigger/send` keine Garantie dafür gibt, dass die Nutzer:innen aktualisiert werden, bevor eine Nachricht gesendet wird.
+Wenn Nutzer:innen Informationen über den [Endpunkt`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track) an Braze senden, kann es gelegentlich ein paar Sekunden dauern, bis sie verarbeitet werden. Dies bedeutet, dass bei gleichzeitigen Anfragen an die Endpunkte`/users/track` und Messaging wie`/campaign/trigger/send` nicht garantiert werden kann, dass die Informationen der Nutzer:innen vor dem Senden einer Nachricht aktualisiert werden.
 
 {% alert note %}
-Wenn Nutzerattribute und Events in derselben Anfrage gesendet werden (entweder von `/users/track` oder vom SDK), dann verarbeitet Braze die Attribute vor den Events oder vor dem Versuch, eine Nachricht zu senden.
+Wenn Nutzerattribute und Ereignisse in derselben Anfrage gesendet werden (entweder von`/users/track`  oder vom SDK), verarbeitet Braze die Attribute vor den Ereignissen oder dem Versuch, eine Nachricht zu senden.
 {% endalert %}
 
 ### Bewährte Praktiken
@@ -70,15 +74,13 @@ Wenn Sie eine API-Anfrage für geplante Nachrichten senden, müssen diese Anfrag
 
 Anstatt mehrere Endpunkte zu verwenden, können Sie die [Nutzer:innen-Attribute]({{site.baseurl}}/api/objects_filters/user_attributes_object#object-body) und [triggernden Eigenschaften]({{site.baseurl}}/api/objects_filters/trigger_properties_object) in einem einzigen API-Aufruf unter Verwendung des [Endpunkts`campaign/trigger/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns) zusammenfassen. 
 
-Wenn diese Objekte in den Trigger aufgenommen werden, werden die Attribute zuerst verarbeitet, bevor die Nachricht getriggert wird, wodurch mögliche Race-Conditions vermieden werden. Beachten Sie, dass triggernde Eigenschaften das Nutzerprofil nicht aktualisieren, sondern nur im Zusammenhang mit der Nachricht verwendet werden.
+Wenn diese Objekte im Trigger enthalten sind, werden die Attribute zuerst verarbeitet, bevor die Nachricht ausgelöst wird, wodurch potenzielle Race-Conditions vermieden werden. Beachten Sie, dass triggernde Eigenschaften das Nutzerprofil nicht aktualisieren, sondern nur im Zusammenhang mit der Nachricht verwendet werden.
 
-#### Verwenden Sie die POST: Tracking von Nutzer:innen (Bulk) Endpunkt
+#### Verwenden Sie die POST: Tracking von Nutzer:innen (Sync) Endpunkt
 
 Verwenden Sie den [Endpunkt`/users/track/sync/` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous), um angepasste Events und Käufe aufzuzeichnen und die Attribute des Nutzerprofils synchron zu aktualisieren. Wenn Sie diesen Endpunkt verwenden, um Nutzerprofile gleichzeitig und in einem einzigen Aufruf zu aktualisieren, können Sie mögliche Race-Conditions verhindern.
 
-{% alert important %}
-Dieser Endpunkt befindet sich derzeit in der Beta-Phase. Wenden Sie sich an Ihren Braze-Konto Manager:in, wenn Sie an einer Teilnahme an der Beta interessiert sind.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' type='beta' %}
 
 ## Szenario 3: Abgleich von aktionsbasierten Triggern und Zielgruppenfiltern
 
@@ -100,7 +102,7 @@ Wenn der Trigger Ihrer Kampagne beispielsweise "Hat einen Kauf getätigt" lautet
 
 #### Vermeiden Sie Zielgruppen-Filter, die davon ausgehen, dass das auslösende Ereignis aktualisiert wurde.
 
-Diese bewährte Methode ähnelt der Vermeidung von redundanten Filtern mit dem Trigger-Ereignis. Normalerweise schlägt ein Filter, der davon ausgeht, dass das triggernde Ereignis im Nutzerprofil aktualisiert wurde, fehl.
+Diese bewährte Methode ähnelt der Vermeidung von redundanten Filtern mit dem Trigger-Ereignis. In der Regel schlägt ein Filter fehl, der davon ausgeht, dass das auslösende Ereignis im Nutzerprofil aktualisiert wird.
 
 #### Liquid verwenden Abbrüche (nur Attribute)
 
@@ -117,8 +119,10 @@ In diesem Fall können Sie eine Trigger-Verzögerung in einer Kampagne implement
 ```
 {% endraw %}
 
+#### Bitte bestätigen Sie, wie Nutzerdaten verwaltet werden.
 
-[1]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-[3]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
-[4]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
+Sollte es während der Auswertung des Canvas-Eintrags zu einer Race-Condition kommen, besteht die Möglichkeit, dass Nutzer:innen einen Canvas betreten, der nicht für sie vorgesehen ist. Beispielsweise könnte das Nutzerprofil so eingestellt werden, dass es in die Zielgruppe aufgenommen und anschließend ein Update erhalten wird, nachdem Canvas die Nutzer:innen in die Warteschlange gestellt hat, sodass sie nicht mehr für die Zielgruppe in Frage kommen. 
+
+Wenn eine Nutzer:in das Canvas-Eintrittsereignis innerhalb derselben Sekunde mehrmals triggert, ist es bei Braze nur zulässig, einen Eintrag für diese Sekunde zu erstellen (auch wenn die erneute Eingabe aktiviert ist). Dadurch werden doppelte Einträge vermieden, sodass die Gesamtzahl der Canvas-Einträge unter Umständen geringer ist als die Gesamtzahl der Ereignisse, die die Canvas-Einträge auslösen.
+
+Wir empfehlen, zu überprüfen, wie Nutzerdaten verwaltet und aktualisiert werden, insbesondere wann und wie bestimmte Attribute aktualisiert werden, beispielsweise durch SDK, API, Batch-API und andere Methoden. Dies kann dabei helfen, zu identifizieren und zu klären, warum eine Nutzer:in eine Kampagne oder Canvas eingegeben hat, im Gegensatz dazu, wann das Profil einer Nutzer:in aktualisiert wurde.

@@ -1,5 +1,5 @@
 ---
-nav_title: Écueils de livrabilité et pièges à spam
+nav_title: Pièges de la livrabilité et pièges à spam
 article_title: Écueils de livrabilité et pièges à spam
 page_order: 7
 page_type: reference
@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"}Écueils de livrabilité et pièges à spam
+# [![Braze cours d'apprentissage]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"} Pièges de la livrabilité et pièges du spam
 
 Votre livrabilité par e-mail peut être affectée par l’un des pièges indésirables suivants :
 
@@ -32,3 +32,9 @@ Ces pièges peuvent être évités si vous configurez un processus d’abonnemen
 {% alert tip %}
 Les équipes de service de support et de livrabilité de Braze peuvent vous aider à suivre les bonnes pratiques pour maximiser la livrabilité dans le monde entier.
 {% endalert %}
+
+## Suppression d'une adresse e-mail de votre liste de rebond ou de spam
+
+Vous pouvez supprimer les e-mails rebondis et les e-mails de votre liste de spam Braze avec les endpoints suivants :
+- [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_hard_bounces)
+- [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam)

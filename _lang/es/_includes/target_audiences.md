@@ -1,0 +1,3 @@
+{% alert important %}
+Tu mensaje solo se enviará a los usuarios que ya cumplan las condiciones que hayas establecido en el paso **«Audiencia objetivo**». Después de eso, aún deben cumplir con el requisito que definas en el paso **Programar entrega**. Piensa en la audiencia objetivo como una sala de espera: solo las personas que ya están dentro pueden avanzar cuando se produce la siguiente acción.
+{% endalert %}

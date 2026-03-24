@@ -16,8 +16,8 @@ Estos son algunos consejos rápidos que debes tener en cuenta al elaborar tu con
 
 - Cuando formatees tu correo electrónico, utiliza hojas de estilo en línea como CSS.
 - Para utilizar una plantilla de correo electrónico para las versiones móvil y de escritorio, mantenga la anchura por debajo de 500 píxeles.
-- Las imágenes cargadas en la plantilla de correo electrónico deben ocupar menos de 5 MB. Los formatos admitidos son PNG, JPEG y GIF.
-- No establezcas alturas y anchuras para las imágenes, ya que esto provocará espacios en blanco innecesarios en un correo electrónico degradado.
+- Las imágenes deben tener menos de 5 MB. Recomendamos utilizar PNG, JPEG o GIF para obtener la máxima compatibilidad. Evita los formatos SVG y WebP, ya que muchos de los principales clientes de correo electrónico aún no los admiten.
+- No establezcas alturas y anchuras para las imágenes, ya que esto puede provocar espacios en blanco innecesarios en un correo electrónico degradado.
 - No se deberían usar etiquetas `div` ya que la mayoría de los clientes de correo electrónico no admiten su uso. En su lugar, utilice tablas anidadas.
 - Evita utilizar JavaScript porque no funciona con ningún ESP.
 - Braze mejora los tiempos de carga utilizando una CDN global para alojar todas las imágenes de correo electrónico.
@@ -32,36 +32,18 @@ Dado que los filtros de spam buscan tanto una versión HTML como una versión en
 La validación se utiliza para las direcciones de correo electrónico del panel de control, las direcciones de correo electrónico de los usuarios finales (sus clientes) y las direcciones de remitente y destinatario de respuesta de un mensaje de correo electrónico.
 {% endalert %}
 
-La validación del correo electrónico se realiza cuando la dirección de correo electrónico de un usuario se ha actualizado o se está importando en Braze a través de la API, la carga CSV, el SDK o se ha modificado en el panel de control. Tenga en cuenta que sus direcciones de correo electrónico no pueden incluir espacios en blanco, y si se envían utilizando la API, los espacios en blanco darán lugar a un error 400.
+La validación del correo electrónico se produce cuando la dirección de correo electrónico de un usuario se actualiza o se importa a Braze mediante la API, la carga de CSV, el SDK o se modifica en el panel. Ten en cuenta que tus direcciones de correo electrónico no pueden incluir espacios en blanco y, si se envían mediante la API, los espacios en blanco pueden provocar un`400`error.
 
 Las direcciones de correo electrónico dirigidas a través de los servidores Braze deben ser validadas según las normas [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822), Braze no acepta ciertos caracteres y los reconoce como no válidos. Si un correo electrónico es rebotado, Braze marca el correo electrónico como no válido y el estado de la suscripción no se modifica. 
 
-{% details Caracteres no aceptados fuera de las normas RFC %}
-- *
-- /
-- ?
-- ¡!
-- $
-- #
-- %
-- ^
-- &
-- (
-- )
-- {
-- }
-- [
-- ]
-- ~
-- ,
-{% enddetails %}
+Para obtener información sobre los caracteres no permitidos y las reglas de validación de correo electrónico, consulta [Validación de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/#how-it-works).
 
 ### Establecer direcciones de origen y de respuesta
 
 Cuando configure sus direcciones "de", asegúrese de que su dominio de correo electrónico "de" coincide con su dominio de envío (como `marketing.yourdomain.com`). Si no lo hace, puede producirse una desalineación entre SPF y DKIM. Todos los correos electrónicos de respuesta se pueden configurar en tu dominio raíz.
 
 {% alert note %}
-No se admite la codificación Unicode en las direcciones "de".
+La codificación Unicode no es compatible con las direcciones «de».
 {% endalert %}
 
 ### Comprobación de los detalles HTML
@@ -69,7 +51,7 @@ No se admite la codificación Unicode en las direcciones "de".
 Tenga en cuenta que algunas etiquetas y atributos HTML no están permitidos, ya que pueden permitir la ejecución de código malicioso en el navegador.
 
 Consulte las siguientes listas de etiquetas y atributos HTML que no están permitidos en sus mensajes de correo electrónico:
-{% details Ampliar para etiquetas HTML no permitidas %}
+{% details Expand for disallowed HTML tags %}
 - `<!doctype>`
 - `<applet>`
 - `<bgsound>`
@@ -87,7 +69,7 @@ Consulte las siguientes listas de etiquetas y atributos HTML que no están permi
 - `<svg>`
 {% enddetails %}
 
-{% details Ampliar para atributos HTML no permitidos %}
+{% details Expand for disallowed HTML attributes %}
 - `<animationend>`
 - `<animationiteration>`
 - `<animationstart>`

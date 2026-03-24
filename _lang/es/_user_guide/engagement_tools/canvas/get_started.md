@@ -1,5 +1,5 @@
 ---
-nav_title: Guía de inicio
+nav_title: Cómo empezar
 article_title: Primeros pasos con Canvas
 page_order: 0
 layout: dev_guide

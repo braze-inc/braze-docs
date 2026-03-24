@@ -14,7 +14,7 @@ search_tag: Partner
 
 _This integration is maintained by optilyz._
 
-## About the integration
+## 통합 정보
 
 Use the optilyz and Braze webhook integration to send your customers direct mail such as letters, postcards, and self-mailers.
 
@@ -57,9 +57,9 @@ optilyz also requires an HTTP Header for authorization and an HTTP method. The f
   - **Authorization**: {% raw %} `{{ '<OPTILYZ_API_KEY>:' | base64_encode }}` {% endraw %}
   - **Content-Type**: application/json
 
-![The request headers and HTTP method shown in the Braze webhook builder.]({% image_buster /assets/img/optilyz/optilyz_settings.png %}){: style="max-width:50%"}
+![Braze 웹훅 빌더에 표시되는 요청 헤더와 HTTP 메서드입니다.]({% image_buster /assets/img/optilyz/optilyz_settings.png %}){: style="max-width:50%"}
 
-#### Request body
+#### 요청 본문
 
 In the following request body, you can use any Liquid personalization tags and build a custom request template according to optilyz' [API documentation](https://www.optilyz.com/doc/api/).
 
@@ -84,13 +84,13 @@ The `variation` field is optional and can define which design inside the automat
 ```
 {% endraw %}
 
-![An image of the request body code and webhook URL shown in the Braze webhook builder compose tab.]({% image_buster /assets/img/optilyz/optilyz_compose.png %})
+![Braze 웹훅 빌더 작성 탭에 표시되는 요청 본문 코드 및 웹훅 URL 이미지입니다.]({% image_buster /assets/img/optilyz/optilyz_compose.png %})
 
-### Step 2: Preview your request
+### 2단계: Preview your request
 
-Next, preview your request in the **Preview** panel or navigate to the **Test** tab, where you can select a random user, an existing user, or customize your own to test your webhook. Remember to save your template before leaving the page!
+Next, preview your request in the **Preview** panel or navigate to the **Test** tab, where you can select a random user, an existing user, or customize your own to test your webhook. 페이지에서 나가기 전에 템플릿을 저장하는 것을 잊지 마세요!
 
-![Different testing fields available in the test tab of the Braze webhook builder.]({% image_buster /assets/img/optilyz/optilyz_testing.png %})
+![Braze 웹훅 빌더의 테스트 탭에서 사용 가능한 여러 테스트 필드.]({% image_buster /assets/img/optilyz/optilyz_testing.png %})
 
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).

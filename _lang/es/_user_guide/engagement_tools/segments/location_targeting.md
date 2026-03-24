@@ -26,17 +26,26 @@ Cuando hayas creado tu segmento, añade un filtro de **ubicación más reciente*
 
 ![Filtrar por una ubicación más reciente dentro de un círculo.]({% image_buster /assets/img_archive/filter_recent_location.png %})
 
+{% tabs %}
+{% tab Circular %}
+
 ### Regiones circulares
 
 Para las regiones circulares, puede mover el origen y ajustar el radio de ubicación para su segmentación.
 
 ![Un contorno circular de ciudades entre Nueva Jersey y Nueva York.]({% image_buster /assets/img_archive/location_circle.png %}){: style="max-width:70%;"}
 
+{% endtab %}
+{% tab Polygonal %}
+
 ### Regiones poligonales
 
 Para las regiones poligonales, puede designar más específicamente qué áreas desea incluir en su segmento.
 
 ![Un contorno del estado de Nueva York como región poligonal seleccionada.]({% image_buster /assets/img_archive/create_polygon.png %}){: style="max-width:70%;"}
+
+{% endtab %}
+{% endtabs %}
 
 ## Apoyo a la asociación para beacon y geovallas
 

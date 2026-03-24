@@ -1,6 +1,6 @@
 ---
 nav_title: Reorientación de campañas
-article_title: Reorientación de campañas
+article_title: Campañas de reorientación
 page_order: 2
 page_type: reference
 description: "Este artículo de referencia repasa cómo y por qué debe considerar las campañas de retargeting basadas en los mensajes que reciben sus usuarios."
@@ -9,7 +9,7 @@ tool:
   
 ---
 
-# Reorientación de campañas
+# Reorientar campañas
 
 > Al reorientar las campañas en función de las acciones anteriores del usuario, como si abrió o no un correo electrónico, puede ayudar a reclasificar a sus usuarios, abriendo la puerta a un enfoque de marketing eficaz y basado en datos.
 
@@ -17,7 +17,7 @@ Braze permite reorientar a los usuarios en función de los mensajes que han reci
 
 Cada uno de estos filtros de retargeting le ofrece varias opciones después de añadirlos. Para obtener más información sobre la segmentación de usuarios, consulte nuestro [curso Braze Learning](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) sobre configuración de campañas.
 
-![Sección Detalles del segmento con el menú desplegable para los filtros disponibles.]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
+![Sección Detalles del segmento con el menú desplegable de los filtros disponibles.]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
 
 ## Filtros de reorientación
 

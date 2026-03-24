@@ -10,7 +10,7 @@ description: "Esta página explica cómo dar la bienvenida a los nuevos usuarios
 
 > Utiliza la plantilla de mensajes dentro de la aplicación **del flujo de incorporación** para recopilar atributos, información y preferencias de los usuarios que impulsen tu estrategia de campaña. 
 
-{% multi_lang_include drag_and_drop/templates.md section='Requisitos SDK' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## Crear un flujo de incorporación
 
@@ -22,7 +22,7 @@ Cuando crees un mensaje dentro de la aplicación arrastrando y soltando, selecci
 
 ### Paso 2: Configura tus estilos de mensaje
 
-{% multi_lang_include drag_and_drop/templates.md section='estilo del mensaje' %}
+{% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ### Paso 3: Personaliza el orden de tu flujo de incorporación
 
@@ -36,6 +36,6 @@ Personaliza el aspecto de tu flujo de incorporación utilizando los [componentes
 
 ## Analizar los resultados
 
-{% multi_lang_include drag_and_drop/templates.md section='informes' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
 

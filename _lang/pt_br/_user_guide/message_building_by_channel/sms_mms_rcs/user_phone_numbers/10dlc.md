@@ -27,7 +27,7 @@ O 10DLC ajuda a aliviar esses problemas, oferecendo:
 - **Conformidade aprimorada**: O uso de um código longo local para envio de mensagens de texto comerciais é contra as diretrizes [da CTIA](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf). Os números 10DLC foram designados para envio de mensagens em massa e permitem que as marcas cumpram as regulamentações do setor sem depender de códigos curtos.
 - **Econômico**: O 10DLC é uma ótima opção para empresas que desejam começar a enviar SMS ou enviar SMS em pequenos volumes. Para marcas que enviam grandes volumes de mensagens, acima de 100.000 mensagens por dia, recomendamos o uso de um código curto. 
 
-Desde 2019, as operadoras começaram a adotar o 10DLC para envio de mensagens comerciais, com a Verizon e a AT&T atualmente oferecendo suporte ao 10DLC, e esperamos que todas as principais operadoras o sigam em breve. Embora isso possa causar inconvenientes a curto prazo, a longo prazo, os clientes desfrutarão de melhores taxas de entregabilidade e, ao mesmo tempo, protegerão seus consumidores de mensagens indesejadas. 
+Desde 2019, as operadoras começaram a adotar o 10DLC para envio de mensagens comerciais, com a Verizon e o AT&T atualmente oferecendo suporte ao 10DLC, e esperamos que todas as principais operadoras o sigam em breve. Embora isso possa causar inconvenientes a curto prazo, a longo prazo, os clientes desfrutarão de melhores taxas de entregabilidade e, ao mesmo tempo, protegerão seus consumidores de mensagens indesejadas. 
 
 ## O que você precisa saber
 
@@ -82,7 +82,7 @@ Dependendo do seu caso de uso, a pontuação de confiança necessária para atin
 | Marketing | Conteúdo promocional, como vendas e ofertas por tempo limitado. |
 | Misturado | Campanha que abrange vários casos de uso, como o Atendimento ao Cliente. | 
 | Ensino superior | Campanhas para instituições de ensino superior. |
-| Pesquisa de opinião e votação | Pesquisas e votações não políticas, como pesquisas com clientes. |
+| Pesquisas eleitorais & Votação | Pesquisas e votações não políticas, como pesquisas com clientes. |
 | PSA | PSAs para aumentar a conscientização sobre um determinado tópico. |
 | Atendimento ao cliente | Suporte, gerenciamento de contas e outras interações com o cliente. |
 | Notificações de entrega | Status das mensagens de entrega. |
@@ -93,7 +93,7 @@ Dependendo do seu caso de uso, a pontuação de confiança necessária para atin
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% tabs %}
-{% tab Caso de uso declarado %}
+{% tab Declared Use Case %}
 Um caso de uso declarado significa que você escolheu um caso de uso específico não relacionado a marketing (por exemplo, 2FA ou Notificações de conta).
 
 | Índice de confiança | Taxa de transferência total para as principais redes dos EUA | AT&T | T-Mobile | Verizon |
@@ -104,7 +104,7 @@ Um caso de uso declarado significa que você escolheu um caso de uso específico
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endtab %}
-{% tab Caso de Uso de Marketing Misturado %}
+{% tab Mixed Marketing Use Case %}
 
 Casos de uso de marketing misto podem ser registrados para clientes que desejam enviar mensagens para múltiplos casos de uso a partir do mesmo conjunto de números ou para marketing.
 
@@ -122,4 +122,4 @@ Acesse o artigo do Twilio 10DLC para conferir as [estimativas de rendimento](htt
 
 ## Próximas etapas
 
-Os clientes que ainda não se registraram no 10DLC devem trabalhar com seu gerente de sucesso do cliente para registrar seus códigos longos. **Se os clientes não registrarem seus códigos longos, a partir de 1º de outubro de 2021, qualquer remetente A2P que use códigos longos sofrerá uma filtragem pesada de todas as mensagens.** Entre em contato com o gerente de sucesso do cliente para iniciar o registro no 10DLC. 
+Os clientes que ainda não se registraram no 10DLC devem trabalhar com seu gerente de sucesso do cliente para registrar seus códigos longos. **Se os clientes não registrarem seus códigos longos, a partir de 1º de outubro de 2021, qualquer remetente A2P que use códigos longos sofrerá uma filtragem pesada de todas as mensagens.** Entre em contato com o gerente de sucesso do cliente para iniciar o registro do 10DLC.

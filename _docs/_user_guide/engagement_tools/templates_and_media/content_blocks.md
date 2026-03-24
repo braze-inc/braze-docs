@@ -45,7 +45,7 @@ There are two types of editors used to create a Content Block—classic and drag
 | Name | Required field with a maximum of 100 characters. It cannot be renamed after the Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
 | Description | (optional) Maximum of 250 characters. Describe the Content Block so that other Braze users know what it's for and where it's used. |
 | Content Size | Maximum of 50 KB. |
-| Placement | Content Blocks cannot be used within an email footer. |
+| Placement | Content Blocks cannot be used within an email footer, but you can [create a Content Block that includes a footer](#email-footers) for use in your emails. |
 | Creation | HTML editor or drag-and-drop editor. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -88,9 +88,9 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 
 After adding a Content Block in an active campaign or Canvas, you can preview this Content Block from the Content Blocks Library by hovering over the Content Block and selecting the <i class="fa fa-eye preview-icon"></i> **Preview** icon. 
 
-This preview includes information about the Content Block such as who created it, tags, creation date, last edited date, description, editor type, inclusion count with details, and an actual preview of the Content Block.
+This preview includes information about the Content Block such as who created it, tags, creation date, last edited date, description, editor type, inclusion count with details (a clickable list of messages or Content Blocks that use the Content Block), and an actual preview of the Content Block.
 
-![A preview of a Content Block "Workout_Promo" for cycling and dancing that has six inclusions.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
+![A preview of a Content Block "Workout_Promo" for cycling and dancing that has one inclusion.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
 
 ### Nesting Content Blocks
 
@@ -100,7 +100,15 @@ Content Blocks can be nested, but only once. You can nest Content Block A into C
 Nothing will prevent you from nesting a third level of Content Block, but you will not see the content expand in nests beyond the second. The content and the Liquid snippet are removed from the message.
 {% endalert %}
 
-Additionally, Content Blocks cannot be used within an email footer, though email footers can be used within Content Blocks.
+### Using email footers in Content Blocks {#email-footers}
+
+Content Blocks cannot be used within an email footer, but you can create a Content Block that includes footer content for use in your emails. To do so, follow these steps:
+
+1. Go to **Settings** > **Email Preferences** > **Custom Footer** and create the footer.
+2. Add the footer to a Content Block in the **Content Blocks Library**.
+3. Add that Content Block to your email templates or messages.
+
+Now you can use the same footer across multiple messages!
 
 ### Archiving Content Blocks
 
@@ -112,7 +120,7 @@ Once you have finished using a Content Block, you can archive it from the [Templ
 
 - When your block is only used in a few emails, we recommend archiving the outdated block and updating your live messages with a newer block that has not been archived.
 - When your block only has a typo or needs a minor change, we do not recommend archiving the block. Instead, update the block and get sending!
-- When your block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing all content from the block and archiving it. This will ensure no outdated information is included in any newly sent emails.
+- When your block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing all content from the block. This prevents the inclusion of outdated information in any messages.
 - If you accidentally archive a Content Block, you can unarchive it.
 
 ![Saved Content Blocks panel where the settings dropdown menu for "Test_32" is expanded to show three options: Unarchive, Duplicate, and Copy to workspace]({% image_buster /assets/img/unarchive-content-block.png %})

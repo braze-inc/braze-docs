@@ -22,9 +22,9 @@ To receive Content Card data in your Flutter app, the `BrazePlugin` supports sen
 
 The `BrazeContentCard` [object](https://pub.dev/documentation/braze_plugin/latest/braze_plugin/BrazeContentCard-class.html) supports a subset of fields available in the native model objects, including `description`, `title`, `image`, `url`, `extras`, and more.
 
-### Step 1: Listen for Content Card data in the Dart layer
+### Listen for Content Card data in the Dart layer
 
-To receive to the content card data in the Dart layer, use the code below to create a `StreamSubscription` and call `braze.subscribeToContentCards()`. Remember to `cancel()` the stream subscription when it is no longer needed.
+To receive Content Card data in the Dart layer, use the code below to create a `StreamSubscription` and call `braze.subscribeToContentCards()`. Remember to `cancel()` the stream subscription when it is no longer needed.
 
 ```dart
 // Create stream subscription
@@ -38,25 +38,21 @@ contentCardsStreamSubscription = braze.subscribeToContentCards((List<BrazeConten
 contentCardsStreamSubscription.cancel();
 ```
 
-For an example, see [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart) in our sample app.
+For an example, see [main.dart](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart) in the Braze Flutter SDK sample application.
 
-### Step 2: Forward Content Card data from the native layer
-
-To receive the data in the Dart layer from step 1, add the following code to forward the Content Card data from the native layers.
+### Forward Content Card data from the native iOS layer
 
 {% tabs %}
-{% tab Android %}
+{% tab Flutter SDK 18.0.0+ %}
 
-The Content Card data is automatically forwarded from the Android layer.
+Content Card data is automatically forwarded from both the Android and iOS native layers. No additional setup is required.
 
 {% endtab %}
-{% tab iOS %}
+{% tab Flutter SDK 17.1.0 and earlier %}
 
-1. Implement `contentCards.subscribeToUpdates` to subscribe to content cards updates as described in the [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)) documentation.
+If you're using Flutter SDK 17.1.0 or earlier, Content Card data forwarding from the iOS native layer requires manual setup. Your application likely contains a `contentCards.subscribeToUpdates` callback that calls `BrazePlugin.processContentCards(contentCards)`. To migrate to Flutter SDK 18.0.0, remove the `BrazePlugin.processContentCards(_:)` call—data forwarding is now handled automatically.
 
-2. Your `contentCards.subscribeToUpdates` callback implementation must call `BrazePlugin.processContentCards(contentCards)`.
-
-For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
+For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in the Braze Flutter SDK sample application.
 
 {% endtab %}
 {% endtabs %}

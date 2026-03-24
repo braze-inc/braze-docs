@@ -1,7 +1,7 @@
 ---
 nav_title: Localisation
 article_title: Localisation
-page_order: 7
+page_order: 8
 description: "Cet article de référence couvre les bases de la localisation, énumère les avantages des différentes approches d'orchestration entre les campagnes et les Canevas, et énumère les différentes façons dont les utilisateurs peuvent gérer la personnalisation dans leurs messages."
 tool:
     - Campaigns
@@ -14,10 +14,10 @@ tool:
 
 ## Fonctionnement
 
-Une fois que vous avez [intégré le SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration/), les informations locales des appareils des utilisateurs sont automatiquement collectées. L’emplacement contient l’identifiant de langue et de région. Cette information est disponible dans l'outil de segmentation de Braze sous **Pays** et **langue**.
+Les informations locales sont stockées dans le profil utilisateur à partir des données que vous collectez à l'aide d'un [SDK Braze]({{site.baseurl}}/developer_guide/sdk_integration/) (automatiquement) ou de l'API REST]({{ site.baseurl }}/api/endpoints/user_data/post_user_track). L’emplacement contient l’identifiant de langue et de région. Cette information est disponible dans l'outil de segmentation de Braze sous **Pays** et **langue**.
 
 {% alert tip %}
-Pour plus de détails techniques sur la façon dont les paramètres régionaux sont reçus, consultez la documentation officielle d'[iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html) et d'[Android](http://developer.android.com/reference/java/util/Locale.html).
+Pour obtenir des informations techniques sur la manière dont nos SDK collectent les données locales, veuillez consulter la documentation officielle [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html), [Android](http://developer.android.com/reference/java/util/Locale.html) et [Web](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language).
 {% endalert %}
 
 ## Gestion de la traduction
@@ -25,7 +25,7 @@ Pour plus de détails techniques sur la façon dont les paramètres régionaux s
 Envisagez les approches suivantes pour gérer vos traductions.
 
 {% tabs local %}
-{% tab campagne %}
+{% tab campaign %}
 ### Un modèle unique pour tous
 
 Dans cette approche, la localisation est appliquée à un seul modèle dans Braze à l'aide de [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). Après l'envoi, le tableau de bord fournit des analyses de campagne agrégées. L'engagement au niveau de l'utilisateur peut être mesuré à l'aide d'entonnoirs de segmentation personnalisés, par exemple en combinant les filtres **Pays** et **Campagne reçue.**
@@ -82,10 +82,18 @@ Une fois envoyé, le tableau de bord fournit des analyses/analytiques dynamiques
 
 ## Envoi de messages traduits
 
-Pour envoyer des messages personnalisés en fonction de la langue ou du lieu de résidence de l'utilisateur, utilisez l'une des méthodes suivantes :
+Pour envoyer des messages personnalisés en fonction de la langue, des paramètres régionaux ou des attributs personnalisés d'un utilisateur, veuillez utiliser l'une des méthodes suivantes.
+
+### Étiquettes Liquid de traduction (recommandées) {#translation-liquid-tag}
+
+Braze prend en charge une étiquette{% raw %}`{% translation salutation %}Hello!{% endtranslation %}`{% endraw %} Liquid pour cibler les utilisateurs dans différentes langues avec un seul message. 
+
+Pour obtenir des instructions détaillées, veuillez consulter le [guide sur l'utilisation des tags de traduction]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales).
+  
+### Approches alternatives
 
 {% tabs local %}
-{% tab Manuellement %}
+{% tab Custom Liquid %}
 Vous pouvez coller manuellement votre contenu dans le corps de votre message et utiliser [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) pour afficher [conditionnellement]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) la bonne langue au destinataire. Pour ce faire :
 
 1. Composez votre message, puis sélectionnez **Langue** pour générer une logique conditionnelle liquide pour chacune des langues sélectionnées.
@@ -113,7 +121,7 @@ Nous recommandons toujours d'inclure une déclaration {% raw %}`{% else %}`{% en
 {% endalert %}
 {% endtab %}
 
-{% tab Blocs de contenu %}
+{% tab Content Blocks %}
 Les [blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) Braze sont des blocs de contenu réutilisables. Lorsqu'un bloc est modifié, toutes les références à ce bloc sont modifiées. Par exemple, les mises à jour de l'en-tête ou du pied de page d'un e-mail seront répercutées dans tous les e-mails ou dans les traductions en interne. Ces blocs peuvent également être [créés]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/#create-content-block) et [mis à jour]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) à l'aide de l'API REST, et les utilisateurs peuvent charger des traductions par programmation. 
 
 Lors de la création d’une campagne dans le tableau de bord, les blocs de contenu peuvent être référencés à l’aide d’une balise {% raw %}`{{content_blocks.${name_of_content_block}}}`{% endraw %} Ces blocs peuvent contenir toutes les traductions logées dans une logique conditionnelle pour chaque langue, comme indiqué dans l'option 1, ou un bloc séparé pour chaque langue peut être utilisé.
@@ -126,14 +134,14 @@ Les blocs de contenu peuvent également être utilisés comme processus de gesti
 5. Votre service utilise l'[endpoint `/content_block/update`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) pour mettre à jour le contenu traduit et l'étiquette avec la mention « Traduction terminée ».
 {% endtab %}
 
-{% tab Catalogues %}
-[Les catalogues]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) vous permettent d'accéder aux données des objets JSON importés via l'API et les fichiers CSV afin d'enrichir vos messages, de manière similaire aux attributs personnalisés ou aux propriétés d'événements personnalisés via Liquid. Par exemple :
+{% tab Catalogs %}
+[Les catalogues]({{site.baseurl}}/user_guide/data/activation/catalogs/) vous permettent d'accéder aux données des objets JSON importés via l'API et les fichiers CSV afin d'enrichir vos messages, de manière similaire aux attributs personnalisés ou aux propriétés d'événements personnalisés via Liquid. Par exemple :
 
 {% subtabs local %}
 {% subtab API %}
 
 Créez un catalogue à l’aide de l’appel API suivant :
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -167,7 +175,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs' \
 
 Ajoutez des éléments à l’aide de l’appel API suivant :
 
-```json
+```bash
 curl --location --request POST 'https://your_api_endpoint/catalogs/translations/items' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -222,7 +230,7 @@ Créez un fichier CSV au format suivant :
 {% endsubtab %}
 {% endsubtabs %}
 
-Ces éléments du catalogue peuvent ensuite être référencés à l'aide de la [personnalisation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#using-catalogs-in-a-message), illustrée ci-dessous, ou de [sélections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections) qui vous permettent de créer des groupes de données. 
+Ces éléments du catalogue peuvent ensuite être référencés à l'aide de la [personnalisation]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/#using-catalogs-in-a-message), illustrée ci-dessous, ou de [sélections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections) qui vous permettent de créer des groupes de données. 
 
 {% raw %}
 ```liquid
@@ -233,15 +241,7 @@ Ces éléments du catalogue peuvent ensuite être référencés à l'aide de la 
 {% endraw %}
 {% endtab %}
 
-{% tab Messages sur les langues locales %}
-Ajoutez et utilisez des locales dans votre message pour cibler des utilisateurs dans différentes langues, le tout au sein d'une même campagne ou d'un même Canvas pour les canaux e-mail ou push. Pour une présentation complète, reportez-vous à [Locales dans les messages e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/) ou [Locales dans les messages push]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/).
-
-{% alert important %}
-Cette fonctionnalité est actuellement disponible en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-{% endtab %}
-
-{% tab Partenaires de Braze %}
+{% tab Braze partners %}
 De nombreux partenaires de Braze proposent des solutions de localisation, notamment [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#about-transifex) et [Crowdin](https://crowdin.com/). Généralement, les utilisateurs se servent de la plateforme aux côtés d’une équipe interne et d’une agence de traduction. Ces traductions y sont ensuite téléchargées et deviennent accessibles via l’API REST. Ces services s'appuient également souvent sur le [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), ce qui permet aux utilisateurs de récupérer les traductions via l'API.
 
 Par exemple, les appels de contenu connecté suivants font appel à Transifex et Crowdin pour récupérer une traduction, en s'appuyant sur {% raw %}`{{${language}}}`{% endraw %} afin d’identifier la bonne traduction pour un utilisateur donné. Cette traduction est ensuite enregistrée dans le bloc JSON « chaînes » et référencée.
@@ -266,7 +266,7 @@ Par exemple, les appels de contenu connecté suivants font appel à Transifex et
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Feuilles de calcul %}
+{% tab Spreadsheets %}
 Hébergez les traductions dans une feuille de calcul, puis utilisez l'une des méthodes suivantes pour envoyer votre message dans la langue concernée.
 
 {% subtabs local %}
@@ -283,7 +283,7 @@ Cette option offre une méthode alternative pour transformer Google Sheets en ob
 
 La structure de la feuille de calcul suit les étapes de l'option 4, mais SheetDB fournit également des [filtres supplémentaires](https://docs.sheetdb.io/#sheetdb-api) pour interroger les objets.
 
-Certains utilisateurs préféreront peut-être mettre en œuvre SheetDB avec moins de dépendances Liquid et Connected Block en implémentant la [méthode de recherche de](https://docs.sheetdb.io/#get-search-in-document) SheetDB dans les appels de requête GET pour filtrer les objets JSON sur la base de l'étiquette Liquid {% raw %}`{{${language}}}`{% endraw %} afin de renvoyer automatiquement les résultats pour une seule langue plutôt que de créer de grands blocs conditionnels.
+Certains utilisateurs pourraient préférer implémenter SheetDB avec moins de dépendances Liquid et Connected Block en implémentant [la méthode de recherche](https://docs.sheetdb.io/#get-search-in-document) de SheetDB dans les appels de requête GET afin de filtrer les objets JSON en fonction de l'étiquette{% raw %}`{{${language}}}`{% endraw %} Liquid pour renvoyer automatiquement les résultats pour une seule langue plutôt que de créer de grands blocs conditionnels.
 
 #### Étape 1 : Formater la Google Sheet
 

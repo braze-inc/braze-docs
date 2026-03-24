@@ -1,5 +1,5 @@
 ---
-nav_title: Notions de base des campagnes
+nav_title: Les bases de la campagne
 article_title: Notions de base des campagnes
 page_order: 1
 page_type: reference

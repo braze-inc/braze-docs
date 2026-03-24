@@ -14,7 +14,7 @@ guide_featured_list:
 - name: 이메일 템플릿 만들기
   link: /docs/user_guide/message_building_by_channel/email/templates/email_template/
   image: /assets/img/braze_icons/brush-02.svg
-- name: 이메일 템플릿 업로드 중
+- name: 이메일 템플릿 업로드
   link: /docs/user_guide/message_building_by_channel/email/templates/html_email_template/
   image: /assets/img/braze_icons/upload-01-alt.svg
 - name: 링크 별칭 지정

@@ -18,7 +18,7 @@ channel: email
 
 Esse método confirma que seu endereço IP de envio de e-mail do Braze está autorizado a enviar e-mails em seu nome. O SPF é a autenticação básica e é realizado por meio da publicação dos registros de texto nas configurações de DNS. O servidor receptor verificará os registros DNS e determinará se eles são autênticos. Esse método foi criado para validar o remetente do e-mail.
 
-Seu registro SPF será configurado quando o Braze configurar seus IPs e domínios - além de adicionar os registros DNS que lhe fornecemos, nenhuma outra ação é necessária.
+A Braze configura seu registro SPF quando configuramos seus IPs e domínios. Além de adicionar os registros DNS que fornecemos, você não precisa tomar mais nenhuma ação.
 
 ### Domain Keys Identified Mail (DKIM)
 
@@ -26,13 +26,13 @@ Esse método confirma que seu domínio de envio de e-mail do Braze está autoriz
 
 A Braze faz o login no e-mail com sua chave privada secreta. Os provedores de acesso à internet verificam a assinatura em relação à sua chave pública, que está armazenada no seu registro DNS personalizado. Não há duas assinaturas exatamente iguais, e somente a sua chave pública pode verificar com êxito a assinatura da sua chave privada.
 
-Seu registro DKIM será configurado quando o Braze configurar seus IPs e domínios - além de adicionar os registros DNS que lhe fornecemos, nenhuma outra ação é necessária.
+A Braze configura seu registro DKIM quando configuramos seus IPs e domínios. Além de adicionar os registros DNS que fornecemos, você não precisa tomar mais nenhuma ação.
 
 ### Autenticação, relatório e conformidade de mensagens baseadas em domínio (DMARC)
 
-[DMARC (Domain-based Message Authentication, Reporting & Conformance)](https://dmarc.org/) é um protocolo de autenticação de e-mail para que os remetentes de e-mail comprovem a legitimidade de seus e-mails, o que ativa a confiança do destinatário da caixa de correio e incentiva a aceitação do e-mail. O DMARC permite que os remetentes de e-mail especifiquem como lidar com os e-mails que não foram autenticados usando o Sender Policy Framework (SPF) ou o Domain Keys Identified Mail (DKIM). Isso é feito verificando se as verificações SPF e DKIM foram aprovadas. 
+[Autenticação de Mensagens Baseada em Domínio, Relatórios & Conformidade (DMARC)](https://dmarc.org/) é um protocolo de autenticação de e-mail para remetentes de e-mail provarem a legitimidade de seu correio, o que permite confiança do receptor da caixa de entrada e incentiva a aceitação do correio. O DMARC permite que os remetentes de e-mail especifiquem como lidar com os e-mails que não foram autenticados usando o Sender Policy Framework (SPF) ou o Domain Keys Identified Mail (DKIM). Isso é feito verificando se as verificações SPF e DKIM foram aprovadas. 
 
-Os remetentes podem instruir os provedores de caixa de e-mail sobre como devem tratar os e-mails que falharam em suas verificações de assinatura ou autenticação. As falhas podem indicar que outras pessoas estão tentando imitar você ou seu e-mail. Os remetentes podem dizer aos provedores de caixa de e-mail para rejeitar ou colocar em quarentena os e-mails e até mesmo enviar relatórios automatizados sobre e-mails que não passam nas verificações. Com isso, os provedores de caixa de e-mail podem identificar melhor os remetentes de spam e impedir que e-mails mal-intencionados invadam as caixas de entrada, minimizando os falsos positivos e fornecendo melhores relatórios de autenticação para maior transparência no mercado.
+Os remetentes instruem os provedores de caixa de entrada sobre como lidar com correios que falham em verificações de assinatura ou autenticação. Falhas podem indicar falsificação. Você pode instruir os provedores a rejeitar ou colocar em quarentena correios que falham e enviar relatórios automatizados. Isso ajuda os provedores a identificar spammers, bloquear e-mails maliciosos, minimizar falsos positivos e melhorar a transparência dos relatórios de autenticação.
 
 #### Como funciona?
 
@@ -40,7 +40,7 @@ Para implementar o DMARC, é necessário publicar um registro DMARC no DNS (Doma
 
 Um registro DMARC também diz aos servidores de e-mail para enviar relatórios XML de volta ao endereço de e-mail de relatório listado no registro DMARC. Esses relatórios fornecem insight sobre como seu e-mail está se movendo pelo ecossistema e permitem identificar tudo o que está tentando usar seu domínio de e-mail para enviar comunicações por e-mail.
 
-A política contida no seu registro DMARC dirá ao servidor de e-mail do destinatário participante o que fazer com o e-mail que não for aprovado no SPF e no DKIM, mas que alega ser do seu domínio. A Braze recomenda definir uma política DMARC no domínio raiz, que será aplicada a todos os subdomínios. Isso significa que não será necessária nenhuma configuração adicional em nenhum subdomínio atual ou novo no futuro. Há três tipos de políticas que você pode definir:
+Defina uma política DMARC no domínio raiz para que se aplique a todos os subdomínios. Isso evita configurações adicionais em subdomínios atuais e futuros. Você pode definir uma das seguintes políticas:
 
 | Política | Impacto |
 | --- | --- |

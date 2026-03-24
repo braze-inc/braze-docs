@@ -1,5 +1,5 @@
 ---
-nav_title: Informes de participación
+nav_title: Informes de compromiso
 article_title: Informes de participación
 page_order: 3
 local_redirect:

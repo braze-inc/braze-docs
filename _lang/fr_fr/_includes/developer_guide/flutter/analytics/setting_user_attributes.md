@@ -2,11 +2,7 @@
 
 ## Attributs par défaut de l’utilisateur
 
-Pour définir les attributs utilisateur collectés automatiquement par Braze, vous pouvez utiliser les méthodes setter fournies avec le SDK.
-
-```dart
-braze.setFirstName('Name');
-```
+### Attributs pris en charge
 
 Les attributs suivants sont pris en charge :
 
@@ -24,6 +20,14 @@ Les attributs suivants sont pris en charge :
 Toutes les valeurs de chaîne de caractères telles que le prénom, le nom de famille, le pays et la ville d’origine sont limitées à 255 caractères.
 {% endalert %}
 
+### Définition des attributs par défaut 
+
+Pour définir les attributs utilisateur collectés automatiquement par Braze, vous pouvez utiliser les méthodes setter incluses dans le SDK.
+
+```dart
+braze.setFirstName('Name');
+```
+
 ## Attributs utilisateur personnalisés
 
 ### Définition des attributs personnalisés
@@ -31,7 +35,7 @@ Toutes les valeurs de chaîne de caractères telles que le prénom, le nom de fa
 Outre les attributs par défaut, Braze vous permet de définir des attributs personnalisés à l'aide de différents types de données :
 
 {% tabs %}
-{% tab Chaîne de caractères %}
+{% tab String %}
 Pour définir un attribut personnalisé avec une valeur `string`:
 
 ```dart
@@ -39,7 +43,7 @@ braze.setStringCustomUserAttribute("custom string attribute", "string custom att
 ```
 
 {% endtab %}
-{% tab Entier %}
+{% tab Integer %}
 Pour définir un attribut personnalisé avec une valeur `integer`:
 
 ```dart
@@ -58,7 +62,7 @@ braze.setDoubleCustomUserAttribute("custom double attribute key", double);
 ```
 
 {% endtab %}
-{% tab Booléen %}
+{% tab Boolean %}
 Pour définir un attribut personnalisé avec une valeur `boolean`:
 
 ```dart
@@ -73,7 +77,7 @@ Pour définir un attribut personnalisé avec une valeur `date`:
 braze.setDateCustomUserAttribute("custom date attribute key", date);
 ```
 {% endtab %}
-{% tab Réseau %}
+{% tab Array %}
 Pour définir un attribut personnalisé avec une valeur `array`:
 
 ```dart
@@ -89,7 +93,9 @@ braze.removeFromCustomAttributeArray("key", "attribute");
 Les valeurs d’attribut personnalisé ont une longueur maximale de 255 caractères ; les valeurs plus longues seront tronquées.
 {% endalert %}
 
-### Enlever la configuration d’un attribut personnalisé
+### Désactivation des attributs personnalisés
+
+Pour désactiver un attribut personnalisé, transmettez la clé de l'attribut concerné à la méthode `unsetCustomUserAttribute`.
 
 ```dart
 braze.unsetCustomUserAttribute('attribute_key');

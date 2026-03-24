@@ -1,5 +1,5 @@
 ---
-nav_title: Políticas de Puesta de Sol
+nav_title: Políticas de extinción
 article_title: Normas de expiración para el correo electrónico
 page_order: 8
 page_type: reference
@@ -30,7 +30,7 @@ Para configurar estos segmentos, elige los filtros `Has Marked You As Spam` y `L
 
 Cuando aplique el filtro `Last Engaged With Message`, especifique el tipo de mensajería (push, correo electrónico o notificación dentro de la aplicación) con la que el usuario ha interactuado o no, así como el número de días que han pasado desde la última vez que el usuario interactuó. Después de crear un segmento, elija dirigirse a este segmento con cualquier [canal de mensajería]({{site.baseurl}}/user_guide/message_building_by_channel/).
 
-![Página de detalles del segmento con el filtro "Última interacción con el mensaje" seleccionado.]({% image_buster /assets/img_archive/email_sunset_policies_new.png %})
+![Página de detalles del segmento con el filtro "Último comprometido con mensaje" seleccionado.]({% image_buster /assets/img_archive/email_sunset_policies_new.png %})
 
 Aunque Braze detiene automáticamente el envío de correos electrónicos a los usuarios que te han marcado como spam, el filtro `Has Marked You As Spam` te permite también enviar a estos usuarios mensajes push dirigidos y notificaciones dentro de la aplicación. Este filtro es útil para [campañas de reorientación]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns). Por ejemplo, puede enviar mensajes a los usuarios que no participan para recordarles las funciones y ofertas que se pierden por no abrir sus correos electrónicos.
 

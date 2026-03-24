@@ -25,12 +25,12 @@ Para ejecutar estos informes, haga lo siguiente:
 - Compras e ingresos por variantes o pasos, por segmento
 - Rendimiento de notificaciones push por segmento
 
-![La página de desglose de segmentos contiene un editor SQL, un panel lateral con pestañas para Variables, Tablas de datos disponibles, Historial de consultas y el Generador de consultas AI, y una sección de resultados.]({% image_buster /assets/img_archive/segment_breakdown.png %})
+![La página Desglose de segmentos contiene un editor SQL, un panel lateral con pestañas para Variables, Tablas de datos disponibles, Historial de consultas y el Generador de consultas AI, y una sección de resultados.]({% image_buster /assets/img_archive/segment_breakdown.png %})
 
 ## Plantillas de informes
 
 {% tabs %}
-{% tab Métricas de compromiso del correo electrónico por segmento %}
+{% tab Email engagement metrics by segment %}
 
 ### Visualización de las métricas de las campañas o los lienzos {#campaign-canvas-email}
 
@@ -75,7 +75,7 @@ Los resultados mostrarán las métricas de participación del correo electrónic
 
 {% endtab %}
 
-{% tab Compras e ingresos por segmento %}
+{% tab Purchases and revenue by segment %}
 ### Visualización de las métricas de las campañas o los lienzos
 
 Para ver las métricas de compra e ingresos desglosadas por segmento para una campaña o Canvas específicos, utilice la pestaña [Variables](#variables) para especificar lo siguiente:
@@ -105,7 +105,7 @@ Todas las métricas de tasa utilizan destinatarios únicos de correo electrónic
 
 Por ejemplo, supongamos que un segmento contiene 10 usuarios y cinco de ellos realizaron una compra después de recibir su correo electrónico. Si uno de esos cinco hiciera una compra después de hacer clic en tu correo electrónico, tu "Tasa de compras únicas al recibirlo" sería del 50% y tu "Tasa de compras únicas al hacer clic" sería del 10%.
 
-![El informe muestra las métricas de correo electrónico, incluidas las compras únicas al recibir, los ingresos al recibir, las compras únicas al hacer clic, los ingresos al hacer clic, los destinatarios únicos y los clics únicos en el correo electrónico.]({% image_buster /assets/img_archive/segment_breakdown_results.png %})
+![El informe muestra métricas de correo electrónico que incluyen compras únicas al recibir, ingresos al recibir, compras únicas al hacer clic, ingresos al hacer clic, destinatarios únicos y clics únicos en el correo electrónico.]({% image_buster /assets/img_archive/segment_breakdown_results.png %})
 
 #### Resultados
 
@@ -133,7 +133,7 @@ Sus resultados mostrarán las métricas de compra por segmento para las variante
 - **Columnas:** Métricas de compra
 
 {% endtab %}
-{% tab Mensajería superior o inferior para la interacción por correo electrónico %}
+{% tab Top or bottom messaging for email engagement %}
 
 ### Visualización de las métricas de los mejores o peores resultados
 
@@ -167,7 +167,7 @@ Para ver este informe, debe especificar las siguientes variables en la pestaña 
 Los resultados mostrarán las campañas, los lienzos o los pasos del lienzo que haya seleccionado. Por ejemplo, si ha seleccionado las 10 mejores campañas por porcentaje de clics, los resultados mostrarán las 10 mejores campañas ordenadas de mayor a menor porcentaje de clics. Sus columnas mostrarán todas las métricas de participación de correo electrónico para cada fila (campañas, lienzos o pasos de mensajes).
 
 {% endtab %}
-{% tab Mensajería superior o inferior para las compras %}
+{% tab Top or bottom messaging for purchases %}
 
 ### Visualización de las métricas de los mejores o peores resultados
 
@@ -204,7 +204,7 @@ Por ejemplo, supongamos que un segmento contiene 10 usuarios y cinco de ellos re
 Los resultados mostrarán las campañas, los lienzos o los pasos del lienzo que haya seleccionado. Por ejemplo, si ha seleccionado las 10 campañas principales para "ingresos por clic", los resultados mostrarán las 10 campañas principales ordenadas de mayor a menor "ingresos por clic". Sus columnas mostrarán todas las métricas de compra para cada fila (campañas, Canvases o pasos de Mensaje).
 
 {% endtab %}
-{% tab Rendimiento push por segmento %}
+{% tab Push performance by segment %}
 
 ### Visualización de las métricas push de los segmentos
 

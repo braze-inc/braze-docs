@@ -44,7 +44,7 @@ No [Fivetran Dashboard](https://fivetran.com/dashboard), selecione **\+ Connecto
 
 Abra o [Console do Amazon IAM](https://console.aws.amazon.com/iam/home#home) e navegue até **Políticas > Criar política**.
 
-![Console do Amazon IAM com lista de políticas.]({% image_buster /assets/img/fivetran_as3_iam.png %})
+![Console do Amazon IAM com a lista de políticas.]({% image_buster /assets/img/fivetran_as3_iam.png %})
 
 Em seguida, abra a guia **JSON** e cole a seguinte política. Substitua `{your-bucket-name}` pelo nome de seu bucket S3.
 
@@ -114,7 +114,7 @@ No Fivetran, selecione **\+ Connector** e, em seguida, selecione o conector **Br
 Certifique-se de que **o Amazon S3** esteja selecionado como a opção de **armazenamento em nuvem**.
 {% endalert %}
 
-Por fim, selecione **Save & Test (Salvar e testar**), e o Fivetran fará o resto, sincronizando com os dados de sua conta Braze!
+Por fim, selecione **Salvar & Test** e o Fivetran fará o resto, sincronizando com os dados de sua conta Braze!
 
 ### Configuração do Braze Currents para o Google Cloud Storage
 
@@ -147,5 +147,5 @@ No Fivetran, selecione **\+ Connector** e, em seguida, selecione o conector **Br
 Certifique-se de que **o Google Cloud Storage** esteja selecionado como a opção de **armazenamento na nuvem**.
 {% endalert %}
 
-Por fim, selecione **Save & Test (Salvar e testar**), e o Fivetran fará o resto, sincronizando com os dados de sua conta Braze!
+Por fim, selecione **Salvar & Test** e o Fivetran fará o resto, sincronizando com os dados de sua conta Braze!
 

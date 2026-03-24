@@ -1,5 +1,5 @@
 ---
-nav_title: Aliasing de enlaces
+nav_title: Alias de enlace
 article_title: Aliasing de enlaces
 alias: /link_aliasing/
 page_order: 3
@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"}Aliasing de enlaces
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"} Aliasing de enlaces
  
 > Utilice alias de enlaces para crear nombres reconocibles, generados por el usuario, para identificar los enlaces enviados en mensajes de correo electrónico desde Braze. Estos enlaces están disponibles para reorientar la segmentación, desencadenar acciones y realizar análisis de enlaces.
 
@@ -27,6 +27,8 @@ Con el aliasing de enlaces, puedes:
 
 Braze identifica de forma única los enlaces dentro de los correos electrónicos añadiendo un parámetro extra llamado `lid` (también conocido como identificador de enlace) a cada URL de enlace. Este valor de `lid` permite a Braze seguir, controlar y agregar las interacciones de los usuarios con el enlace aunque el resto de los parámetros de la URL puedan diferir. Esto ayuda a obtener información sobre cómo interactúan los usuarios con el contenido de tus campañas de correo electrónico.
 
+Los identificadores de enlace también se actualizarán si se duplica una campaña de correo electrónico, un Canvas con un mensaje de correo electrónico o un bloque de contenido.
+
 ## Creación de un alias de enlace
 
 Para crear un alias de enlace, siga estos pasos: 
@@ -38,7 +40,7 @@ Para crear un alias de enlace, siga estos pasos:
 
 También puede establecer un alias que se utilizará para hacer referencia a un enlace específico cuando se trate de informes o segmentación. 
 
-![Página de administración de enlaces con cuatro aliasing de enlaces.]({% image_buster /assets/img/link_aliasing_composer.png %})
+![Página de gestión de enlaces con cuatro aliasing de enlaces.]({% image_buster /assets/img/link_aliasing_composer.png %})
 
 {% alert note %}
 El alias de enlace sólo se admite en los atributos `href` dentro de las etiquetas de anclaje HTML, donde es seguro añadir un parámetro de consulta. Es una buena práctica incluir un signo de interrogación (?) al final de tu enlace para que Braze pueda añadir fácilmente el valor `lid`. Sin añadir el valor `lid`, Braze no reconocerá la URL para el alias de enlace.
@@ -57,7 +59,7 @@ Si utiliza la [navegación anterior]({{site.baseurl}}/user_guide/administrative/
 
 Aquí puedes ordenar, buscar y desactivar el seguimiento de aliasing de enlaces.
 
-![Página de aliasing de enlaces con seguimiento que muestra dos aliasing de enlaces llamados "TechPartners" y "Help" que están asociados a una campaña llamada "Email_Survey".]({% image_buster /assets/img/tracked_aliases.png %})
+![Página de alias de enlaces rastreados que muestra los alias de enlaces activos e inactivos asociados a diversas campañas.]({% image_buster /assets/img/tracked_aliases.png %})
 
 {% alert tip %}
 Utiliza el [alias de enlace de lista para campaña]({{site.baseurl}}/get_campaign_link_alias/) y el [ alias de enlace de lista para puntos finales de Canvas]({{site.baseurl}}/get_canvas_link_alias/) para extraer el conjunto `alias` en cada variante de mensaje de una campaña o de un componente Canvas específico de correo electrónico.
@@ -75,25 +77,25 @@ Las tablas siguientes proporcionan ejemplos de enlaces en el cuerpo de un correo
 
 **Lógica:** Braze inserta un signo de interrogación (?) y añade el primer parámetro de consulta en la URL.
 
-| Enlace en el cuerpo del correo electrónico    | Enlace con Aliasing                     |
+| Enlace en el cuerpo del correo electrónico    | Aliasing de enlaces                     |
 |-----------------------|----------------------------------------|
-| https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk |
+| `https://www.braze.com` | `https://www.braze.com?lid=slfdldtqdhdk` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Enlace con más parámetros de consulta
 
 **Lógica:** Braze detecta otros parámetros de consulta y añade `lid=` al final de la URL.
 
-| Enlace en el cuerpo del correo electrónico                                            | Enlace con Aliasing                                                             |
+| Enlace en el cuerpo del correo electrónico                                            | Aliasing de enlaces                                                             |
 |---------------------------------------------------------------|--------------------------------------------------------------------------------|
-| https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz |
+| `https://www.braze.com?utm_campaign=retention&utm_source=email` | `https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Enlace HTML
 
 **Lógica:** Braze reconoce que un enlace es una URL y ya tiene un signo de interrogación (?), por lo que el parámetro de consulta `lid` se añade después del signo de interrogación.
 
-| Enlace en el cuerpo del correo electrónico                                                | Enlace con Aliasing                                                                |
+| Enlace en el cuerpo del correo electrónico                                                | Aliasing de enlaces                                                                |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | {%raw%}`<a href="{{custom_attribute.{product_url}}}?">`{%endraw%} | {%raw%}`<a href="{{custom_attribute.{product_url}}}?lid=ac7a548g5kl7">`{%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -102,18 +104,18 @@ Las tablas siguientes proporcionan ejemplos de enlaces en el cuerpo de un correo
 
 **Lógica:** Braze espera que la URL utilice una estructura estándar en la que haya anclas (#) después de un signo de interrogación (?). Como Braze lee de izquierda a derecha, el signo de interrogación y el valor `lid` se añaden antes del ancla.
 
-| Enlace en el cuerpo del correo electrónico                               | Enlace con Aliasing                                                |
+| Enlace en el cuerpo del correo electrónico                               | Aliasing de enlaces                                                |
 |--------------------------------------------------|-------------------------------------------------------------------|
-| https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email |
+| `https://www.braze.com#bookmark1?utm_source=email` | `https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Enlace con ancla y etiqueta de captura
 
-**Lógica:** Al utilizar el aliasing de enlaces con URL que contienen anclas (#), Braze espera que el ancla se coloque después de los parámetros de consulta. Esto significa que el valor `lid` debe añadirse antes del ancla para que el seguimiento sea correcto, y como Braze lee la URL de izquierda a derecha, el signo de interrogación (?) y `lid` deben ir antes del ancla.
+**Lógica:** Al utilizar el aliasing de enlaces con URL que contienen anclas (#), Braze espera que el ancla se coloque después de los parámetros de consulta. Esto significa que el`lid`valor debe añadirse **antes** del ancla para un seguimiento adecuado y, dado que Braze lee la URL de izquierda a derecha, el signo de interrogación (?) y`lid`el valor deben ir antes del ancla.
 
-| Enlace en el cuerpo del correo electrónico                                                                        | Enlace con Aliasing                                                                                           |
+| Enlace en el cuerpo del correo electrónico                                                                        | Aliasing de enlaces                                                                                           |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions#special-offer?lid={{link_alias}}">Check out our special offer!</a>` {%endraw%} |
+| {%raw%}`<a href="https://www.braze.com/promotions#special-offer">Check out our special offer!</a>`{%endraw%}  | {%raw%}`<a href="https://www.braze.com/promotions?lid={{link_alias}}#special-offer">Check out our special offer!</a>` {%endraw%} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Seguimiento de aliasing de enlaces
@@ -121,23 +123,12 @@ Las tablas siguientes proporcionan ejemplos de enlaces en el cuerpo de un correo
 En la pestaña **Gestión de enlaces**, seleccione los alias que desea que se "rastreen" a efectos de segmentación y que estén presentes en los filtros de segmentación. Tenga en cuenta que los alias rastreados son sólo para fines de segmentación y no tendrán ningún impacto en el seguimiento de su enlace a efectos de informes.
 
 {% alert tip %}
-Para realizar un seguimiento de las métricas de compromiso del enlace, asegúrese de que su enlace precede con HTTP o HTTPS. Para desactivar el seguimiento de clics de enlaces específicos, consulta [Enlaces universales y Enlaces de aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/#turning-off-click-tracking-on-a-link-to-link-basis).
+Para realizar un seguimiento de las métricas de compromiso del enlace, asegúrese de que su enlace precede con HTTP o HTTPS. Para desactivar el seguimiento de clics para enlaces específicos, consulta [Enlaces universales y Enlaces de aplicaciones]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/#turning-off-click-tracking-on-a-link-to-link-basis).
 {% endalert %}
 
 Braze le permite seleccionar un número ilimitado de enlaces a los que realizar el seguimiento, aunque sólo podrá reorientar a los usuarios a los enlaces más recientes que hayan abierto. Los perfiles de los usuarios incluyen los 100 enlaces en los que se ha hecho clic más recientemente. Por ejemplo, si realiza un seguimiento de 500 enlaces y un usuario hace clic en los 500, puede volver a segmentar o crear segmentos basados en los 100 enlaces en los que se ha hecho clic más recientemente.
 
-{% tabs local %}
-{% tab Editor de arrastrar y soltar %}
-
-![Pestaña de gestión de enlaces del editor de correo electrónico de arrastrar y soltar.]({% image_buster /assets/img/link_management_dnd.png %})
-
-{% endtab %}
-{% tab Editor HTML %}
-
-![Pestaña de gestión de enlaces del editor de correo electrónico HTML.]({% image_buster /assets/img/link_management_html.png %})
-
-{% endtab %}
-{% endtabs %}
+![La pestaña Gestión de enlaces con dos enlaces seleccionados.]({% image_buster /assets/img/link_management_dnd.png %})
 
 {% alert note %}
 Braze sólo rastrea hasta los últimos 100 alias de enlaces en los que se ha hecho clic a nivel de perfil.
@@ -145,7 +136,7 @@ Braze sólo rastrea hasta los últimos 100 alias de enlaces en los que se ha hec
 
 ### Filtros basados en acciones
  
-Puedes crear mensajes basados en acciones dirigidos a cualquier enlace (con o sin seguimiento) o reorientar a los usuarios en función de si han hecho clic en un alias a través de cualquier campaña de correo electrónico o componente de Canvas.
+Puedes crear mensajes basados en acciones dirigidos a cualquier enlace (rastreado o no rastreado) o reorientar a los usuarios en función de si han hecho clic en un alias de usuario en cualquier campaña de correo electrónico o componente de Canvas.
 
 ![Opciones basadas en acciones para dirigirse a usuarios que han hecho clic en un alias de un componente Canvas o han interactuado con una campaña.]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
 
@@ -153,11 +144,11 @@ Puedes crear mensajes basados en acciones dirigidos a cualquier enlace (con o si
 
 En Braze, si tienes un alias de enlace en tu correo electrónico y un usuario hace clic en él, el evento se registra en el perfil del usuario con el alias.
 
-Si utilizas el filtro de segmentación "Alias de clic en cualquier campaña o paso en Canvas" y más tarde decides cambiar el nombre de este alias de enlace, los datos de clic anteriores del perfil de usuario **no** se actualizarán, lo que significa que seguirá mostrándose como el alias de enlace anterior. Por tanto, si te diriges a los usuarios basándote en el nuevo alias de enlace, no incluirá los datos del alias de enlace anterior.
+Si utilizas el filtro de segmentación "Alias de clic en cualquier campaña o paso en Canvas" y más tarde decides cambiar el nombre de este alias de enlace, los datos de clic anteriores del perfil de usuario **no** se actualizarán, lo que significa que seguirá mostrándose como el alias de enlace anterior. Por lo tanto, si te diriges a los usuarios basándote en el nuevo alias de enlace, no se incluirán los datos del alias de enlace anterior.
 
 Si utilizas el filtro de segmentación "Alias clicado en campaña" o "Alias clicado en Canvas", filtrarás a tus usuarios en función de si han hecho clic en un alias específico en una campaña o Canvas concretos. Si varios usuarios comparten la misma dirección de correo electrónico y se hace clic en el enlace alias, todos los demás usuarios que compartan la dirección de correo electrónico verán actualizados sus perfiles de usuario. 
 
-Los siguientes filtros de segmentación se aplican a los eventos de clic que son objeto de seguimiento en el momento en que se procesa el evento. Esto significa que los enlaces sin seguimiento no eliminarán los datos existentes y que el seguimiento de un enlace no rellenará los datos. Para más detalles, consulta [Filtros de segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+Los siguientes filtros de segmentación se aplican a los eventos de clic que son objeto de seguimiento en el momento en que se procesa el evento. Esto significa que los enlaces no rastreados no eliminarán los datos existentes y que el seguimiento de un enlace no rellenará los datos. Para más detalles, consulta [Filtros de segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 
 #### Enlaces no rastreables
 
@@ -165,7 +156,9 @@ Al eliminar el seguimiento de un enlace no se reasignarán los segmentos existen
 
 Los enlaces de los mensajes archivados se anulan automáticamente. Sin embargo, si los mensajes archivados se desarchivan, será necesario volver a rastrear los enlaces. Cuando se rastrean los alias de enlaces, los informes de enlaces se indexan por el alias en lugar de por los dominios de nivel superior o las URL completas.
 
-![Pestaña de análisis de campaña que muestra tres aliasing de enlaces y sus clics totales.]({% image_buster /assets/img/link_aliasing_click_table.png %})
+Para ver todos los enlaces de tu campaña de correo electrónico y el total de clics respectivos, ve a **Análisis de mensajes** > **Rendimiento del correo electrónico** > **Vista previa&del mapa de calor** y alterna la opción **Mostrar mapa de calor**.
+
+![Panel «Tabla de enlaces por clics totales» con alias de enlaces y sus clics totales.]({% image_buster /assets/img/link_alias_total_clicks.png %}){: style="max-width:60%;"}
 
 ### Evento de clics de correo electrónico
 
@@ -220,11 +213,11 @@ Para los Bloques de contenido, Braze recomienda crear copias de los Bloques de c
 
 ## aliasing de enlaces para URL generadas por Liquid
 
-Para las URL generadas por Liquid, como las declaraciones `assign` en el HTML o desde un bloque de contenido, debes añadir un signo de interrogación (`?`) a la etiqueta de Liquid. Esto permite a Braze añadir parámetros de consulta (`lid = somevalue`) para que el aliasing de enlaces funcione correctamente. Sin identificar dónde añadir los parámetros de consulta, el aliasing de enlaces no reconocerá estas URL y no se aplicarán las plantillas de enlaces.
+Para las URL generadas por Liquid, como`assign`las declaraciones en HTML o desde un bloque de contenido, debes añadir un signo de interrogación (`?`) a la etiqueta de Liquid. Esto permite a Braze añadir parámetros de consulta (`lid = somevalue`) para que el aliasing de enlaces funcione correctamente. Sin identificar dónde añadir los parámetros de consulta, el aliasing de enlaces no reconocerá estas URL y no se aplicarán las plantillas de enlaces.
 
 ### Ejemplo
 
-Consulta este ejemplo de aliasing de enlaces para ver el formato recomendado para el enlace:
+Echa un vistazo a este ejemplo de aliasing de enlaces para ver el formato recomendado para los enlaces:
 
 {% raw %}
 ```liquid

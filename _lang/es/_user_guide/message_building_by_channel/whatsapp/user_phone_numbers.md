@@ -1,5 +1,5 @@
 ---
-nav_title: "Números de teléfono de usuario"
+nav_title: "Números de teléfono de los usuarios"
 article_title: Números de teléfono de usuarios de WhatsApp
 page_order: 1.5
 description: "Este artículo de referencia trata sobre el formato de los números de teléfono de WhatsApp, cómo importar números de teléfono y cómo añadir usuarios a los grupos de suscripción de WhatsApp."

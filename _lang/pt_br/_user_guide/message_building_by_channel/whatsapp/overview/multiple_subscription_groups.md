@@ -1,7 +1,7 @@
 ---
-nav_title: Várias contas comerciais 
+nav_title: Várias contas comerciais
 article_title: Várias contas e números de telefone do WhatsApp Business
-page_order: 2
+page_order: 3
 description: "Este artigo de referência aborda as etapas para adicionar contas e números de telefone do WhatsApp Business."
 page_type: reference
 channel:
@@ -18,15 +18,15 @@ Ter várias contas do WhatsApp Business é útil se você quiser enviar mensagen
 
 As contas comerciais aninhadas no mesmo Meta Business Manager também compartilharão o gerenciamento de permissões de acesso do usuário e os catálogos (ainda não suportados da Braze).
 
-![Diagrama do ecossistema Braze e WhatsApp, mostrando como os espaços de trabalho e contas do WhatsApp Business se conectam: você pode conectar um grupo de inscrições a um número de telefone, várias contas do WhatsApp Business a um espaço de trabalho e um espaço de trabalho a vários Portfólios de Negócios da Meta.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
+![Diagrama do ecossistema do Braze e do WhatsApp, mostrando como os espaços de trabalho e as contas do WhatsApp Business se conectam entre si: você pode conectar um grupo de inscrições a um número de telefone, várias contas do WhatsApp Business a um espaço de trabalho e um espaço de trabalho a vários portfólios do Meta Business.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
 
 ### Como adicionar uma conta do WhatsApp Business
 
-Você pode adicionar até 10 contas do WhatsApp Business por espaço de trabalho. As contas comerciais podem ser aninhadas em diferentes Gerenciadores de Negócios da Meta. Para adicionar uma conta:
+Você pode adicionar até 10 contas do WhatsApp Business por espaço de trabalho. As contas comerciais podem ser aninhadas em diferentes Meta Business Managers. Para adicionar uma conta:
 
-1. Acessar **Parceiros de Tecnologia** > **WhatsApp** e selecionar **Adicionar Conta do WhatsApp Business**. 
+1. Acesse **Technology Partners** > **WhatsApp** e selecione **Add WhatsApp Business Account**. 
 
-![Seção de Integração de Mensagens do WhatsApp com opções para adicionar uma conta comercial ou adicionar um grupo de inscrições e número.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+![Seção Integração de envio de mensagens do WhatsApp com opções para adicionar uma conta comercial ou adicionar um grupo de inscrições e um número.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
 
 {: start="2"}
 2\. Acesse o fluxo de trabalho de inscrição. Para obter um passo a passo detalhado, consulte a [inscrição incorporada no WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).
@@ -49,9 +49,9 @@ Cada número de telefone do WhatsApp aparecerá como um bate-papo separado do Wh
 
 É possível adicionar até 20 grupos de inscrições (e enviar números de telefone) por conta do WhatsApp Business. Para adicionar um grupo de inscrições e um número de telefone:
 
-1. Acessar **Parceiros de Tecnologia** > **WhatsApp** e selecionar **Adicionar Grupo de Inscrições e Número**.
+1. Acesse **Technology Partners** > **WhatsApp** e selecione **Add Subscription Group and Number (Adicionar grupo de inscrições e número**).
 
-![Seção de Integração de Mensagens do WhatsApp com opções para adicionar uma conta comercial ou adicionar um grupo de inscrições e número.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+![Seção Integração de envio de mensagens do WhatsApp com opções para adicionar uma conta comercial ou adicionar um grupo de inscrições e um número.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
 
 {: start="2"}
 2\. Acesse o fluxo de trabalho de inscrição. <br><br> Na etapa **Select your WhatsApp Business Account (Selecione sua conta do** WhatsApp Business), selecione sua conta existente do WhatsApp Business e adicione um novo número de telefone. Esse número deve atender a todos os requisitos de qualquer número de telefone do WhatsApp, inclusive não estar registrado em nenhuma outra conta do WhatsApp.

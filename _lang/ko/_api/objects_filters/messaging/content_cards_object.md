@@ -1,5 +1,5 @@
 ---
-nav_title: "콘텐츠 카드 객체"
+nav_title: "콘텐츠 카드 개체"
 article_title: 콘텐츠 카드 메시징 개체
 page_order: 4
 page_type: reference

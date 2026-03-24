@@ -1,14 +1,14 @@
 ---
-nav_title: Setting user IDs
-article_title: Setting user IDs through the Braze SDK
+nav_title: Set user IDs
+article_title: Set user IDs through the Braze SDK
 page_order: 1.1
 description: "Learn how to set user IDs through the Braze SDK."
 
 ---
 
-# Setting user IDs
+# Set user IDs
 
-> Learn how to set user IDs through the Braze SDK. These are unique identifiers that let you track users across devices and platforms, import their data through the [user data API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data), and send targeted messages through the [messaging API]({{site.baseurl}}/api/endpoints/messaging/). If you don't assign a unique ID to a user, Braze will assign them an anonymous ID instead&#8212;however, you won't be able to use these features until you do.
+> Learn how to set user IDs through the Braze SDK. These are unique identifiers that let you track users across devices and platforms, import their data through the [user data API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data), and send targeted messages through the [messaging API]({{site.baseurl}}/api/endpoints/messaging/). If you don't assign a unique ID to a user, Braze assigns them an anonymous ID instead; however, you can't use these features until you do.
 
 {% alert note %}
 For wrapper SDKs not listed, use the relevant native Android or Swift method instead.
@@ -18,13 +18,35 @@ For wrapper SDKs not listed, use the relevant native Android or Swift method ins
 
 {% multi_lang_include anonymous_users/about_anonymous_users.md %}
 
+### Preventing anonymous user tracking
+
+If your use case requires that no data is collected before a user is identified, you can delay initializing the Braze SDK until the user logs in and an `external_id` is available. Set a flag in your code that flips to `true` when the user signs in, and only initialize the SDK when that flag is set.
+
+{% alert warning %}
+Only delay initialization the **first time** a user downloads your app (before an `external_id` is set). If you prevent the SDK from initializing every time a user signs out or starts a new session, it will interfere with prefetching in-app message and Content Card assets, which can lead to deliverability errors for those campaigns.
+{% endalert %}
+
 ## Setting a user ID
 
-To set a user ID, call the `changeUser()` method after the user initially log ins. IDs should be unique and follow our [naming best practices](#naming-best-practices).
+To set a user ID, call the `changeUser()` method after the user initially logs in. IDs should be unique and follow our [naming best practices](#naming-best-practices).
 
 If you're hashing a unique identifier instead, be sure to normalize the input of your hashing function. For example, when hashing an email address, remove any leading or trailing spaces and account for localization.
 
 {% tabs local %}
+{% tab WEB %}
+For a standard Web SDK implementation, you can use the following method:
+
+```javascript
+braze.changeUser(YOUR_USER_ID_STRING);
+```
+
+If you'd like to use Google Tag Manager instead, you can use the **Change User** tag type to call the [`changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser). Use it whenever a user logs in or is otherwise identified with their unique `external_id` identifier.
+
+Be sure to enter the current user's unique ID in the **External User ID** field, typically populated using a data layer variable sent by your website.
+
+![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type" and "external user ID".]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
+{% endtab %}
+
 {% tab ANDROID %}
 {% subtabs %}
 {% subtab JAVA %}
@@ -55,20 +77,6 @@ AppDelegate.braze?.changeUser(userId: "YOUR_USER_ID")
 {% endsubtabs %}
 {% endtab %}
 
-{% tab WEB %}
-For a standard Web SDK implementation, you can use the following method:
-
-```javascript
-braze.changeUser(YOUR_USER_ID_STRING);
-```
-
-If you'd like to use Google Tag Manager instead, you can use the **Change User** tag type to call the [`changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser). Use it whenever a user logs in or is otherwise identified with their unique `external_id` identifier.
-
-Be sure to enter the current user's unique ID in the **External User ID** field, typically populated using a data layer variable sent by your website.
-
-![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type" and "external user ID".]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
-{% endtab %}
-
 {% tab CORDOVA %}
 ```javascript
 BrazePlugin.changeUser("YOUR_USER_ID");
@@ -87,15 +95,28 @@ AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
 ```
 {% endtab %}
 
-{% tab UNREAL ENGINE %}
-```cpp
-UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
+{% tab REACT NATIVE %}
+```javascript
+Braze.changeUser("YOUR_USER_ID_STRING");
 ```
 {% endtab %}
 {% endtabs %}
 
+### How `changeUser()` works
+
+When you call `changeUser()`, the following behaviors apply:
+
+- Calling `changeUser()` with the **same** user ID that's already set has no effect on session count.
+- Calling `changeUser()` with a **different** user ID automatically ends the current session and starts a new one.
+- When an anonymous user calls `changeUser()` with a **new** user ID (one that doesn't exist in Braze yet), the anonymous profile's data is merged into the new identified profile.
+- When an anonymous user calls `changeUser()` with an **existing** user ID, the anonymous profile's data is not merged into the identified profile.
+
+{% alert note %}
+Calling `changeUser()` triggers a data flush as part of closing the current user's session. The SDK automatically flushes any pending data for the previous user before switching to the new user, so you don't need to manually request a data flush before calling `changeUser()`.
+{% endalert %}
+
 {% alert warning %}
-**Do not assign a static default ID or call `changeUser()` when a user logs out.** Doing so will prevent you from re-engaging any previously logged-in users on shared devices. Instead, keep track of all user IDs separately and ensure your app's logout process allows for switching back to a previously logged-in user. When a new session starts, Braze will automatically refresh the data for the newly-active profile.
+Do not assign a single, shared user ID (for example, a static default external ID) or call `changeUser()` when a user logs out. Doing so prevents you from re-engaging any previously logged-in users on shared devices and causes all data to be logged against a single user ID, which can cause other features to not behave as expected. Instead, keep track of all user IDs separately and ensure your app's logout process allows for switching back to a previously logged-in user. When a new session starts, Braze automatically refreshes the data for the newly-active profile.
 {% endalert %}
 
 ## User aliases
@@ -109,6 +130,12 @@ UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 A user alias consists of two parts: a name and a label. The name refers to the identifier itself, while the label refers to the type of identifier it belongs to. For example, if you have a user in a third-party customer support platform with the external ID `987654`, you can assign them an alias in Braze with the name `987654` and the label `support_id`, so you can track them across platforms.
 
 {% tabs local %}
+{% tab web %}
+```javascript
+braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
+```
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab java %}
@@ -141,12 +168,6 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 {% endsubtabs %}
 {% endtab %}
 
-{% tab web %}
-```javascript
-braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
-```
-{% endtab %}
-
 {% tab rest api %}
 ```json
 {
@@ -155,24 +176,35 @@ braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
 }
 ```
 {% endtab %}
+
+{% tab react native %}
+```javascript
+Braze.addAlias("ALIAS_NAME", "ALIAS_LABEL");
+```
+{% endtab %}
 {% endtabs %}
 
 ## ID Naming best practices {#naming-best-practices}
 
 We recommend that you create user IDs using the [Universally Unique Identifier (UUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier) standard, meaning they are 128-bit strings that are random and well distributed.
 
-Alternatively, you can hash an existing unique identifier (such as a name or email address) to generate your user IDs instead. If you do so, be sure to implement [SDK authentication]({{site.baseurl}}/developer_guide/authentication/), so you can prevent user impersonation.
+Alternatively, you can hash an existing unique identifier (such as a name or email address) to generate your user IDs instead. If you do so, be sure to implement [SDK authentication]({{site.baseurl}}/developer_guide/sdk_integration/authentication/), so you can prevent user impersonation.
+
+{% alert warning %}
+Do not use a guessable value or incrementing number for your user ID. This may expose your organization to malicious attacks or data exfiltration.
+
+For added security, use [SDK Authentication]({{site.baseurl}}/developer_guide/sdk_integration/authentication/).
+{% endalert %}
 
 While it's essential that you correctly name your user IDs from the start, you can always rename them in the future using the [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) endpoint.
 
-| Recommended | Not Recommended |
+| ID types not recommended | Example not recommended |
 | ------------ | ----------- |
-| 123e4567-e89b-12d3-a456-836199333115 | JonDoe829525552 |
-| 8c0b3728-7fa7-4c68-a32e-12de1d3ed2d5 | Anna@email.com |
-| f0a9b506-3c5b-4d86-b16a-94fc4fc3f7b0 | CompanyName-1-2-19 |
-| 2d9e96a1-8f15-4eaf-bf7b-eb8c34e25962 | jon-doe-1-2-19 |
+| User's visible profile ID or username | JonDoe829525552 |
+| Email Address | Anna@email.com |
+| Auto-incrementing user ID | 123 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert warning %}
-Avoid sharing details about how you create user IDs, as this may expose your organization to malicious attacks or data removal.
+Avoid sharing details about how you create user IDs, as this may expose your organization to malicious attacks or data exfiltration.
 {% endalert %}

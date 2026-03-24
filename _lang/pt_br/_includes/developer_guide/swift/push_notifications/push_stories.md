@@ -1,10 +1,10 @@
-{% multi_lang_include developer_guide/prerequisites/cordova.md %} Você também precisará [configurar notificações por push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift), o que inclui implementar o `UNNotification` framework.
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Você também precisará [configurar notificações por push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift), o que inclui a implementação da`UNNotification`estrutura.
 
-As seguintes versões do SDK são necessárias para receber Push Stories:
+É necessária a seguinte versão mínima do SDK para receber stories por push:
 
 {% sdk_min_versions swift:5.0.0 %}
 
-## Configurando Push Stories
+## Configurando stories por push
 
 ### Etapa 1: Adicionando o alvo de Extensão de Conteúdo de Notificação {#notification-content-extension}
 
@@ -19,13 +19,13 @@ O Xcode deve gerar um novo alvo e criar arquivos automaticamente para você, inc
 
 ### Etapa 2: Ativar capacidades {#enable-capabilities}
 
-No Xcode, adicione a capacidade de Modos de Fundo usando o painel **Assinatura e Capacidades** ao alvo principal do app. Selecione as caixas de seleção **Busca em segundo plano** e **Notificações remotas**.
+No Xcode, adicione o recurso Modos de fundo usando o painel **Recursos de &assinatura** ao destino principal do app. Selecione as caixas de seleção **Busca em segundo plano** e **Notificações remotas**.
 
 ![]({% image_buster /assets/img/swift/push_story/enable_background_mode.png %})
 
 #### Adicionando um grupo de app
 
-Além disso, no painel **Assinatura e Capacidades** no Xcode, adicione a capacidade Grupos de app ao seu alvo principal do app, bem como aos alvos da Extensão de Conteúdo de Notificação. Em seguida, clique no botão **+**. Use o ID do pacote do seu app para criar o grupo de app. Por exemplo, se o ID do pacote do seu app for `com.company.appname`, você pode nomear seu grupo de app `group.com.company.appname.xyz`.
+Além disso, no painel **Capacidades &de assinatura** no Xcode, adicione a capacidade Grupos de app ao seu destino principal do app, bem como aos destinos da Extensão de conteúdo de notificação. Em seguida, clique no botão **+**. Use o ID do pacote do seu app para criar o grupo de app. Por exemplo, se o ID do pacote do seu app for `com.company.appname`, você pode nomear seu grupo de app `group.com.company.appname.xyz`.
 
 {% alert important %}
 Grupos de app neste contexto referem-se à [App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) da Apple e não ao seu ID de espaço de trabalho Braze (anteriormente grupo de app).
@@ -35,12 +35,12 @@ Se você não adicionar seu app a um grupo de app, seu app pode falhar em preenc
 
 ### Etapa 3: Adicionando o framework de story por push ao seu app {#enable-capabilities}
 
-{% tabs localização %}
+{% tabs local %}
 {% tab Swift Package Manager %}
 
 Depois de seguir o [guia de integração do Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager/), adicione `BrazePushStory` ao seu `Notification Content Extension`:
 
-![No Xcode, em frameworks e bibliotecas, selecione o ícone "+" para adicionar um framework.]({% image_buster /assets/img/swift/push_story/spm1.png %})
+![No Xcode, em frameworks e bibliotecas, selecione o ícone “+” para adicionar um framework.]({% image_buster /assets/img/swift/push_story/spm1.png %})
 
 ![]({% image_buster /assets/img/swift/push_story/spm2.png %})
 
@@ -134,6 +134,12 @@ Abra o `Info.plist` arquivo do `Notification Content Extension`, depois adicione
 | `UNNotificationExtensionDefaultContentHidden`    | Booleano | `YES`                  |
 | `UNNotificationExtensionInitialContentSizeRatio` | Número  | `0.6`                  |
 | `UNNotificationExtensionUserInteractionEnabled`  | Booleano | `YES`                  |
+
+Além disso, adicione o seguinte dicionário`Braze` de nível superior ao mesmo`Info.plist`arquivo, substituindo`REPLACE_WITH_APPGROUP`por o grupo de app que você criou na [Etapa 2](#enable-capabilities):
+
+| Chave              | Tipo   | Valor                    |
+|------------------|--------|--------------------------|
+| `Braze.AppGroup` | String | `REPLACE_WITH_APPGROUP`  |
 
 Seu `Info.plist` arquivo deve corresponder à seguinte imagem:
 

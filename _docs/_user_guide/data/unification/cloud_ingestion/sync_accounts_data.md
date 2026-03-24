@@ -1,18 +1,18 @@
 ---
 nav_title: Sync and delete account data
-article_title: Syncing account data using CDI
+article_title: Sync account data using CDI
 page_order: 4
 page_type: reference
 description: "Learn how to sync your Braze account data using CDI."
 
 ---
 
-# Syncing account data using CDI
+# Sync account data using CDI
 
 > Learn how to sync your Braze account data using CDI.
 
 {% alert important %}
-[Account objects](https://braze.com/unlisted_docs/account_opportunity_object/) are currently in beta, which is required to use this feature. Contact your Braze account manager if you’re interested in participating in the beta.
+[Account objects](https://braze.com/unlisted_docs/account_opportunity_object/) are in beta and are required to use this feature. Contact your Braze account manager if you’re interested in participating in the beta.
 {% endalert %}
 
 ## Prerequisites
@@ -25,13 +25,14 @@ Only make updates to your account schema when the sync is paused or not schedule
 
 ## How syncing works
 
-- Each sync imports rows where `UPDATED_AT` is later than the last synced timestamp.
+- Each sync imports rows where `UPDATED_AT` is later than the last synced timestamp. Rows at the exact boundary timestamp may be re-synced if new rows share that same timestamp. For more information, see [Avoid resyncing rows with duplicate timestamps]({{site.baseurl}}/user_guide/data/cloud_ingestion/best_practices/#avoid-resyncing-rows-with-duplicate-timestamps).
 - Data from the integration creates or updates accounts based on the provided `id`.
 - If `DELETED` is `true`, the account is deleted.
 - Syncing doesn’t log data points, but all synced data counts toward your total accounts usage, measured by total stored data—there’s no need to limit to only changed data.
 - Fields not in your accounts schema are dropped; update the schema before syncing new fields.
+- You can refresh, resume, or pause a sync by hovering over the sync name and selecting the relevant action.
 
-## Syncing your account data
+## Sync your account data
 
 You can sync your account data using CDI through a data warehouse or a file storage.
 
@@ -43,7 +44,7 @@ To integrate your data source with your data warehouse:
 {% subtab Snowflake %}
 
 1. Create a source table in Snowflake. Use the names in the example or choose your own database, schema, and table names. You can also use a view or materialized view instead of a table.
-  ```json
+  ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
     CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC (
@@ -58,8 +59,8 @@ To integrate your data source with your data warehouse:
          DELETED BOOLEAN
     );
     ```
-2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
-    ```json
+2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
+    ```sql
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
     GRANT USAGE ON DATABASE BRAZE_CLOUD_PRODUCTION TO ROLE BRAZE_INGESTION_ROLE;
@@ -85,7 +86,7 @@ To integrate your data source with your data warehouse:
 {% subtab Redshift %}
 
 1. Create a source table in Redshift. Use the names in the example or choose your own database, schema, and table names. You can also use a view or materialized view instead of a table.
-    ```json
+    ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
     CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC (
@@ -100,9 +101,9 @@ To integrate your data source with your data warehouse:
        deleted boolean
     )
     ```
-2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     {% raw %}
-    ```json 
+    ```sql 
     CREATE USER braze_user PASSWORD '{password}';
     GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
     GRANT SELECT ON TABLE ACCOUNTS_SYNC TO braze_user;
@@ -114,12 +115,12 @@ To integrate your data source with your data warehouse:
 {% subtab BigQuery %}
 
 1. (Optional) Create a new project or dataset for your source table.  
-    ```json
+    ```sql
     CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
     ```
 
 2. Create the source table for your CDI integration:  
-    ```json
+    ```sql
     CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
     (
       updated_at TIMESTAMP DEFAULT current_timestamp,
@@ -161,12 +162,12 @@ To integrate your data source with your data warehouse:
 {% subtab Databricks %}
 
 1. Create a catalog or schema for your source table.  
-    ```json
+    ```sql
     CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
     ```
 
 2. Create the source table for your CDI integration:  
-    ```json
+    ```sql
     CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
     (
       updated_at TIMESTAMP DEFAULT current_timestamp(),
@@ -203,7 +204,7 @@ To integrate your data source with your data warehouse:
 {% subtab Microsoft Fabric %}
 
 1. Create one or more tables for your CDI integration with these fields:
-    ```json
+    ```sql
     CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
     (
       UPDATED_AT DATETIME2(6) NOT NULL,
@@ -216,7 +217,7 @@ To integrate your data source with your data warehouse:
     ```
 
 {:start="2"}
-2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
 
 {:start="3"}
 3. If you use network policies, allow Braze IPs to access your Microsoft Fabric instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
@@ -245,7 +246,7 @@ The following examples show valid JSON and CSV formats for syncing account data 
 
 {% subtabs %}
 {% subtab JSON Accounts %}
-```json  
+```jsonl  
 {"id":"s3-qa-0","name":"account0","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}"}
 {"id":"s3-qa-1","name":"account1","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}","deleted":true}
 {"id":"s3-qa-2","name":"account2","payload":"{\"attribute_0\": \"GT896\", \"attribute_1\": 74, \"attribute_2\": true, \"retention\": {\"previous_purchases\": 21, \"vip\": false}, \"last_visit\": \"2023-08-08T16:03:26.600803\"}","deleted":false}
@@ -274,7 +275,7 @@ ID,NAME,PAYLOAD
 {% endtab %}
 {% endtabs %}
 
-## Creating a sync view
+## Create a sync view
 
 Creating a sync view in your data warehouse lets the source refresh automatically without needing to rewrite additional queries.
 
@@ -282,7 +283,7 @@ For example, if you have a table of account data called `account_details_1` with
 
 {% tabs %}
 {% tab Snowflake %}
-```json
+```sql
 CREATE VIEW BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS 
 SELECT
     CURRENT_TIMESTAMP as UPDATED_AT,
@@ -300,7 +301,7 @@ SELECT
 ```
 {% endtab %}
 {% tab Redshift %}
-```json
+```sql
 CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS
 SELECT
     CURRENT_TIMESTAMP as UPDATED_AT,
@@ -318,7 +319,7 @@ SELECT
 ```
 {% endtab %}
 {% tab BigQuery %}
-```json
+```sql
 CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SELECT
     last_updated as UPDATED_AT,
     account_id as ID,
@@ -334,7 +335,7 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SEL
 ```
 {% endtab %}
 {% tab Databricks %}
-```json
+```sql
 CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SELECT
     last_updated as UPDATED_AT,
     account_id as ID,
@@ -350,7 +351,7 @@ CREATE view IF NOT EXISTS BRAZE_CLOUD_PRODUCTION.INGESTION.ACCOUNTS_SYNC AS (SEL
 ```
 {% endtab %}
 {% tab Microsoft Fabric %}
-```json
+```sql
 CREATE VIEW [BRAZE_CLOUD_PRODUCTION].[INGESTION].[ACCOUNTS_SYNC]
 AS SELECT 
     account_id as ID,

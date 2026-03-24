@@ -21,7 +21,14 @@ Sim. Acesse a seção **Preview and Test (Prévia e teste** ) do editor de arras
 
 ### Como posso alterar o preenchimento do e-mail no celular sem atualizar o preenchimento na visualização da Web?
 
-Não é possível editar o preenchimento para visualizações móveis e da Web exclusivamente, portanto, quaisquer edições serão refletidas em ambas as visualizações. Como solução alternativa, você pode adicionar lógica CSS que define o preenchimento com base em diferentes tamanhos de tela. No entanto, isso não pode ser feito usando o editor de arrastar e soltar. Portanto, sugerimos exportar o arquivo HTML e usar o editor de HTML.
+Você não pode editar o preenchimento para visualizações móveis e da web exclusivamente, então quaisquer edições são refletidas em ambas as visualizações. No entanto, você pode adicionar lógica CSS no editor de HTML que define o preenchimento com base em diferentes tamanhos de tela. Isso não é suportado no editor de arrastar e soltar, então você pode exportar o arquivo HTML e usar o editor de HTML em vez disso.
+
+### Como posso otimizar uma linha de botões para permanecer horizontal no desktop e no mobile?
+
+Ao criar um e-mail usando o editor de arrastar e soltar, se você criar uma linha horizontal de botões de chamada para ação, pode descobrir que os botões são alterados para uma orientação vertical no mobile. 
+
+Para manter o mesmo formato em tamanhos de dispositivos, recomendamos criar uma linha separada com botões de CTA que tenham preenchimento otimizado para mobile e que estejam configurados para ocultar a linha em um dispositivo desktop. Ter duas linhas separadas significa que você pode definir o preenchimento desejado para a melhor renderização de texto em dispositivos desktop e mobile.
+
 
 ### Posso ajustar a altura da linha no editor de arrastar e soltar?
 
@@ -36,8 +43,8 @@ Atualmente, o editor de arrastar e soltar é compatível com duas camadas. Você
 
 ### Posso salvar meu e-mail de arrastar e soltar como um modelo depois de criá-lo em minha campanha ou no Canvas?
 
-Não, você precisa recriar o e-mail em **Modelos de e-mail** para salvá-lo.
+Não, você deve recriar o e-mail em **Email Templates** para salvá-lo.
 
 ### Posso adicionar anexos de e-mail ao editor de arrastar e soltar?
 
-Não, o editor de arrastar e soltar não suporta atualmente a funcionalidade de adicionar anexos aos seus e-mails.
+Não, o editor de arrastar e soltar não suporta a adição de anexos aos seus e-mails.

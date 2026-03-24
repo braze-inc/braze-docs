@@ -13,11 +13,19 @@ tool:
 
 # Números de contenedor aleatorio
 
-> Un número de cubo aleatorio es un atributo de usuario que puede utilizarse para crear segmentos de usuarios aleatorios distribuidos uniformemente. Cuando se crea un perfil de usuario en Braze, a ese usuario se le asigna automáticamente un número de cubo aleatorio entre 0 y 9999 (ambos inclusive). Puedes utilizar estos segmentos para probar la eficacia de varias campañas o Canvases en grupos de usuarios a lo largo del tiempo.
+> Un número de cubo aleatorio es un atributo de usuario que puede utilizarse para crear segmentos de usuarios aleatorios distribuidos uniformemente. 
 
 ## Resumen
 
-Los números de contenedor aleatorios se utilizan en tu grupo de control global: un grupo de usuarios que no reciben campañas ni Canvases. Braze selecciona aleatoriamente múltiples rangos de números de cubos aleatorios e incluye usuarios de esos cubos seleccionados. 
+Cuando se crea un perfil de usuario en Braze, a ese usuario se le asigna automáticamente un número de cubo aleatorio entre 0 y 9999 (ambos inclusive). Puedes utilizar estos segmentos para probar la eficacia de varias campañas o Canvases en grupos de usuarios a lo largo del tiempo.
+
+### Uso del grupo de control global
+
+Los números de contenedor aleatorios se utilizan en tu grupo de control global: un grupo de usuarios que no reciben campañas ni Canvases. Braze selecciona aleatoriamente múltiples rangos de números de cubos aleatorios e incluye usuarios de esos cubos seleccionados. Los números de contenedor aleatorios se asignan sin ponderación ni consideración de los números asignados recientemente. 
+
+{% alert note %}
+Cuando se elimina y se vuelve a crear un usuario, se te asigna un número de contenedor aleatorio diferente, ya que se te considera un usuario nuevo.
+{% endalert %}
 
 Si tienes configurado un grupo de control global y quieres utilizar números de contenedor aleatorios para otros casos de uso, consulta [Cosas que debes tener en cuenta]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for).
 
@@ -33,7 +41,7 @@ Si quieres segmentar a los usuarios para realizar pruebas dentro de una sola cam
 
 Al [crear un segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), añade el filtro "N.º de contenedor aleatorio". A continuación, especifica un número o rango de números para incluirlos en tu segmento.
 
-![Un filtro de segmento para números de contenedor aleatorios no superiores a "3000".]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
+![Un filtro de segmento para números de contenedor aleatorios que no superen «3000».]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
 
 Puede utilizar este tipo de segmentos si desea realizar una prueba de tres variantes diferentes e incluir también un grupo de control. Considere el siguiente ejemplo de plan para crear segmentos de igual tamaño para tres variantes y un grupo de control:
 
@@ -45,6 +53,10 @@ Puede utilizar este tipo de segmentos si desea realizar una prueba de tres varia
 Dependiendo del número de segmentos que desee y de la distribución de los usuarios dentro de cada segmento, su plan puede ser diferente.
 
 Para cada uno de tus segmentos de número de contenedor aleatorio, incluido el grupo de control, activa el [seguimiento de análisis]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/). Al evaluar el éxito de las variantes en relación con el grupo de control, puedes ir a tu página de [eventos personalizados]({{site.baseurl}}/user_guide/data/export_braze_data/export_custom_event_data/) y ver con qué frecuencia cada segmento ha completado determinados eventos personalizados.
+
+{% alert tip %}
+Cuando utilices segmentos de números de contenedor aleatorios en un Canvas, por ejemplo, como filtro en un paso [para la división de decisiones]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/), asegúrate de que los [criterios de salida]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/) del Canvas, los filtros de audiencia y los pasos previos no se dirijan a segmentos que se superpongan con uno de tus rangos de números. Si lo hacéis, los usuarios de ese rango pueden ser eliminados de forma desproporcionada antes de llegar a la división, lo que provocaría una distribución desigual entre las rutas.
+{% endalert %}
 
 ### Reentrada aleatoria de la audiencia mediante números de contenedor aleatorios
 

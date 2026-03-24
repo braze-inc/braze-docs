@@ -3,7 +3,7 @@ nav_title: Panel de rendimiento del canal
 article_title: Panel de rendimiento del canal
 page_order: 2
 page_type: reference
-description: "Este artículo de referencia cubre el Panel de Rendimiento de Canales, que le permite ver las métricas de rendimiento de canales enteros tanto en campañas como en Canvases."
+description: "Este artículo de referencia cubre el panel de rendimiento del canal, que te permite ver las métricas de rendimiento de canales enteros tanto en campañas como en Canvases."
 tool: 
   - Reports
 
@@ -13,7 +13,7 @@ tool:
 
 > Los paneles de rendimiento del canal muestran métricas de rendimiento agregadas de todo un canal, tanto de campañas como de Canvases. Estos paneles están actualmente disponibles para correo electrónico y SMS.
 
-![Panel de rendimiento del correo electrónico que muestra la interacción del canal de correo electrónico en los últimos treinta días.]({% image_buster /assets/img_archive/email_performance_dashboard_1.png %})
+![Panel de rendimiento del correo electrónico que muestra la participación en el canal de correo electrónico de los últimos treinta días.]({% image_buster /assets/img_archive/email_performance_dashboard_1.png %})
 
 Puedes ver los siguientes paneles:
 - [Panel de rendimiento del correo electrónico](#email-performance-dashboard)
@@ -26,11 +26,11 @@ Para ver tu panel de rendimiento del correo electrónico, ve a **Análisis** > *
 
 ### Cómo se calculan las métricas
 
-![]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![Un ejemplo de campaña de correo electrónico con 335.630 envíos, con una media de 11.187,667 al día.]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
 Los cálculos para las diferentes métricas en el panel de rendimiento del correo electrónico son los mismos que los que se realizan a nivel de mensaje individual (como los análisis de campaña). En este panel, las métricas se agregan a todas las campañas y Canvases para el intervalo de fechas que haya seleccionado. Para saber más sobre estas definiciones, consulta [Métricas del correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
 
-Cada mosaico muestra primero la métrica de tasa, seguida de la métrica de recuento (con la excepción de *Envíos*, que muestra la métrica de recuento seguida de la media por día). Por ejemplo, el mosaico de clics únicos contiene la *tasa de clics únicos* del período de tiempo seleccionado y el recuento del número total de clics únicos de ese periodo de tiempo. Cada mosaico muestra también la [comparación con el último periodo](#comparison-to-last-period-change-in-totals-or-rates).
+Cada mosaico muestra primero la métrica de tasa, seguida de la métrica de recuento (con la excepción de *Envíos*, que muestra la métrica de recuento seguida de la media por día). Por ejemplo, el mosaico de clics únicos contiene la *tasa de clics únicos* del período de tiempo seleccionado y el recuento del número total de clics únicos de ese periodo de tiempo. Cada mosaico muestra también la [comparación con el último periodo](#comparing-time-periods).
 
 | Métrica | Tipo | Cálculo |
 | --- | --- | ---- |
@@ -60,32 +60,32 @@ La categoría "Otros" incluye cualquier cadena de usuario que no pueda identific
 
 Para comprender mejor lo que hay en esta categoría "Otros", puedes extraer los agentes de usuario utilizando cualquiera de estas opciones:
 
-1. [Currents]({{site.baseurl}}/user_guide/data/braze_currents) te enviará la cadena exacta del agente de usuario que se recuperó de los dispositivos de tus usuarios.
+1. [Currents]({{site.baseurl}}/user_guide/data/braze_currents) te enviará la cadena exacta del agente de usuario que se obtuvo de los dispositivos de tus usuarios.
 2. Aprovecha nuestro [Constructor de consultas]({{site.baseurl}}/user_guide/analytics/query_builder) para utilizar SQL o nuestro [Constructor de consultas AI]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) para ver los agentes de usuario.
 
-![Informe de interacción por dispositivo que muestra el número de clics para móvil, escritorio, tableta y otros. El mayor número de clics se produce en dispositivos móviles.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
+![Informe de interacción por dispositivo que muestra el número de clics para móvil, ordenador de sobremesa, tableta y otros dispositivos. El mayor número de clics se produce en dispositivos móviles.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 
-Para las aperturas de correo electrónico, Braze separará Google Image Proxy, Apple Image Proxy y Yahoo Mail Proxy. Estos servicios almacenan en caché y cargan todas las imágenes incrustadas en un correo electrónico antes de entregarlo al destinatario. Como resultado, esto activará una apertura de correo electrónico desde los servidores del proveedor de buzones en lugar de desde el servidor del destinatario, lo que puede llevar a aperturas de correo electrónico infladas. Estos servicios están pensados para mejorar la privacidad, la seguridad, el rendimiento y la eficacia a la hora de cargar imágenes. Esto también puede contener aperturas reales de destinatarios, ya que estos servicios proxy enmascaran el agente de usuario, y nosotros categorizamos los datos proxy utilizando el agente de usuario.
+Para las aperturas de correo electrónico, Braze separará Google Image Proxy, Apple Image Proxy y Yahoo Mail Proxy. Estos servicios almacenan en caché y cargan todas las imágenes incrustadas en un correo electrónico antes de entregarlo al destinatario. Como resultado, esto activará una apertura de correo electrónico desde los servidores del proveedor de buzones en lugar de desde el servidor del destinatario, lo que puede llevar a aperturas de correo electrónico infladas. Estos servicios están pensados para mejorar la privacidad, la seguridad, el rendimiento y la eficacia a la hora de cargar imágenes. Esto también puede contener aperturas reales de destinatarios, ya que estos servicios proxy enmascaran el agente de usuario, y nosotros categorizamos los datos de proxy utilizando el agente de usuario.
 
-![Informe de compromiso por dispositivo que muestra el número de clics para móvil, escritorio, tableta, proxy de privacidad de Apple, proxy de imagen de Google, proxy de correo de Yahoo y otros. El mayor número de aperturas se produce en dispositivos móviles.]({% image_buster /assets/img/engagement_by_device_type_proxy.png %}){: style="max-width:70%;"}
+![Informe de interacción por dispositivo que muestra el número de clics para móvil, ordenador de sobremesa, tableta, proxy de privacidad de Apple, proxy de imagen de Google, proxy de correo de Yahoo y otros. El mayor número de aperturas se produce en dispositivos móviles.]({% image_buster /assets/img/engagement_by_device_type_proxy.png %}){: style="max-width:70%;"}
 
 ### Compromiso por proveedor de buzones
 
-El informe **Compromiso por proveedor de buzón** muestra los principales proveedores de buzones que contribuyen a sus clics o aperturas. Puedes hacer clic en proveedores de buzones premier específicos para profundizar en dominios receptores concretos. Por ejemplo, si Microsoft aparece en este informe como uno de sus principales proveedores de buzones de correo métricos, puedes ver más detalles de sus dominios de recepción como "outlook.com", "hotmail.com", "live.com", y más.
+El informe **Compromiso por proveedor de buzón** muestra los principales proveedores de buzones que contribuyen a sus clics o aperturas. Puedes hacer clic en proveedores de buzones premier específicos para profundizar en dominios receptores concretos. Por ejemplo, si Microsoft aparece en este informe como una de las métricas principales de tu proveedor de dominios, puedes ver más detalles de sus dominios receptores, como "outlook.com", "hotmail.com", "live.com", y más.
 
-![]({% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}){: style="max-width:70%;"}
+![Un ejemplo de informe de interacción por proveedor de buzón con Google, Apple iCloud, Yahoo, Microsoft y Mail.Ru Group y su correspondiente número de clics.]({% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}){: style="max-width:70%;"}
 
 ### Hora de participación
 
 El informe **Tiempo de interacción** muestra datos sobre el momento en que los usuarios interactúan con sus mensajes de correo electrónico. Esto puede ayudar a responder preguntas como qué día de la semana o a qué hora se produce la mayor participación de sus clientes. Con esta información, puede experimentar con el mejor día u hora para enviar sus mensajes y conseguir una mayor participación. Ten en cuenta que estas horas se basan en la zona horaria de tu empresa.
 
-El informe de interacción **del Día de la** semana desglosa las aperturas o los clics por día de la semana. 
+El informe de interacción **del Día de la** semana desglosa las aperturas o clics por día de la semana. 
 
-![]({% image_buster /assets/img_archive/time_engagement.png %})
+![Un ejemplo de informe de interacción del día de la semana con el mayor número de clics el lunes y el miércoles.]({% image_buster /assets/img_archive/time_engagement.png %})
 
 El informe de interacción **Hora del día** desglosa las aperturas o clics por cada hora en una ventana de tiempo de 24 horas.
 
-![]({% image_buster /assets/img_archive/time_engagement_day.png %})
+![Un ejemplo de informe de interacción de la hora del día con las aperturas o clics desde las 12 de la mañana hasta las 11 de la noche.]({% image_buster /assets/img_archive/time_engagement_day.png %})
 
 Para obtener más información sobre el análisis de sus mensajes de correo electrónico, consulte [Informes de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
@@ -95,7 +95,7 @@ Para utilizar tu panel de rendimiento de SMS, ve a **Análisis** > **Rendimiento
 
 ### Cómo se calculan las métricas
 
-![]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![Un ejemplo de campaña SMS con 335.630 envíos, con una media de 11.187,667 al día.]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
 Los cálculos para las diferentes métricas en el panel de rendimiento de SMS son los mismos que los que se realizan a nivel de mensaje individual (como los análisis de campaña). En este panel, las métricas se agregan a todas las campañas y Canvases para el intervalo de fechas que haya seleccionado. Para saber más sobre estas definiciones, consulta las [métricas SMS]({{site.baseurl}}/sms_mms_rcs_reporting/).
 
@@ -120,11 +120,11 @@ Puedes filtrar los datos de tu panel utilizando las siguientes opciones de filtr
 - **Canvas:** Elija hasta 10 lienzos. Cuando se aplique, el panel de control mostrará las métricas sólo de los lienzos seleccionados. Si selecciona primero un filtro de etiqueta, las opciones de filtros de lienzo sólo incluirán los lienzos que tengan la etiqueta seleccionada.
 - **Campaña:** Elija hasta 10 campañas. Cuando se aplique, el panel de control mostrará las métricas sólo de las campañas seleccionadas. Si selecciona primero un filtro de etiqueta, las opciones de filtros de campaña sólo incluirán las campañas que tengan la etiqueta seleccionada.
 
-![Opciones de filtrado en el panel de rendimiento del canal, donde puedes seleccionar una etiqueta y una lista de Lienzos por los que filtrar.]({% image_buster /assets/img_archive/dashboard_filters.png %})
+![Opciones de filtrado en el panel de rendimiento del canal, donde puede seleccionar una etiqueta y una lista de lienzos por los que filtrar.]({% image_buster /assets/img_archive/dashboard_filters.png %})
 
 ## Comparar periodos de tiempo
 
-El panel de rendimiento del canal compara automáticamente el periodo de tiempo que ha seleccionado en el intervalo de fechas con el periodo de tiempo anterior que totaliza el mismo número de días. Por ejemplo, si elige "Últimos 7 días" como intervalo de fechas en el cuadro de mandos, la comparación con el último período comparará las métricas de los últimos siete días con las de los siete días anteriores. Si selecciona un intervalo de fechas personalizado (por ejemplo, del 10 al 15 de mayo, que son seis días de datos), el panel comparará las métricas de esos días con las métricas del 4 al 9 de mayo.
+El panel de rendimiento del canal compara automáticamente el periodo de tiempo que has seleccionado en el intervalo de fechas con el periodo de tiempo anterior, totalizando el mismo número de días. Por ejemplo, si elige "Últimos 7 días" como intervalo de fechas en el cuadro de mandos, la comparación con el último período comparará las métricas de los últimos siete días con las de los siete días anteriores. Si selecciona un intervalo de fechas personalizado (por ejemplo, del 10 al 15 de mayo, que son seis días de datos), el panel comparará las métricas de esos días con las métricas del 4 al 9 de mayo.
 
 La comparación es el cambio porcentual entre el último periodo y el actual, calculado tomando la diferencia entre los dos periodos y dividiéndola por la métrica del último periodo.
 

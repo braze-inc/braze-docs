@@ -1,12 +1,12 @@
 ---
-nav_title: Configuration des valeurs par défaut
-article_title: Configuration des valeurs par défaut de Liquid
+nav_title: Définir les valeurs par défaut
+article_title: Définir les valeurs par défaut des liquides
 page_order: 5
 description: "Cet article de référence explique comment définir les valeurs de secours par défaut pour tout attribut de personnalisation que vous utilisez dans vos messages."
 
 ---
 
-# Configuration des valeurs par défaut
+# Définir les valeurs par défaut
 
 {% raw %}
 
@@ -42,7 +42,7 @@ Hi Valued User, thanks for using the App!
 {% endraw %}
 
 {% alert important %}
-La valeur par défaut s'affiche pour les valeurs vides, mais pas pour les valeurs en blanc. Une valeur vide ne contient rien, tandis qu'une valeur vierge contient des caractères d'espacement (tels que des espaces) et aucun autre caractère. Par exemple, une chaîne vide peut ressembler à `""` et une chaîne vierge à `" "`.
+La valeur par défaut sera affichée pour les valeurs vides, mais pas pour les valeurs vides. Une valeur vide ne contient rien, tandis qu'une valeur vierge contient des caractères d'espacement (tels que des espaces) et aucun autre caractère. Par exemple, une chaîne vide peut ressembler à `""` et une chaîne vierge à `" "`.
 {% endalert %}
 
 ## Définition de valeurs par défaut pour différents types de données
@@ -78,7 +78,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign is_premium_user = {{custom_attribute.${premium_user}}} | default: false %}
@@ -144,7 +144,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Hi {{${first_name} | default: 'valued user'}}
@@ -191,7 +191,7 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${upcoming_trips}}} == blank %}

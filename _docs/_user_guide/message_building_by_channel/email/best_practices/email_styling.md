@@ -20,7 +20,7 @@ The "From" field should clearly show who the sender is. Try not to use a person'
 
 ### No-reply addresses
 
-No-reply email addresses are generally not recommended for multiple reasons as they disengage your readers. Many recipients reply to the email to unsubscribe, so if they are not allowed to do that, the next course of action is more often than not marking the email as spam.
+No-reply email addresses are generally not recommended for multiple reasons, as they disengage your readers. Many recipients reply to the email to unsubscribe, so if they are not allowed to do that, the next course of action is more often than not marking the email as spam.
 
 Getting out-of-office replies can actually provide valuable information, increasing open rates and decreasing spam reports (by removing those who don't want to be emailed). On a personal level, a no-reply can appear impersonal to recipients and may turn them away from receiving further emails from your company.
 
@@ -32,6 +32,10 @@ The preheader text in an email communicates the main point of the message effici
 
 The amount of visible preheader text is dependent on the user's email client and the length of the email's subject line. Generally, we suggest email preheaders to be between 50 and 100 characters.
 
+{% alert note %}
+The preheader can reference Liquid in the email body, and the email body can reference Liquid in the preheader. This is because the preheader text is part of the email body when you send messages to recipients.
+{% endalert %}
+
 Here are some best practices to keep in mind when writing your preheaders:
 
 1. Calls to action come into play after readers have opened your email.
@@ -39,13 +43,13 @@ Here are some best practices to keep in mind when writing your preheaders:
   - Use strong words so that the reader knows exactly what you are asking of them, but make sure it reflects your company's brand voice and that every call to action exhibits some sort of value to the consumer.
   - Preheader should be no more than 85 characters and have some sort of descriptive call to action that supports the subject line.
 
-2. Email and landing sites to which you direct your users to should be mobile optimized:
+2. Email and landing sites to which you direct your users should be mobile-optimized:
   - No interstitial boxes
   - Large form-fields
   - Easy navigation
   - Large text
   - Generous white space
-  - Short concise body copy
+  - Short, concise body copy
   - Clear calls to action
 
 ### Preheader character limits
@@ -86,6 +90,10 @@ Make sure to limit your email size. Email bodies larger than 102&nbsp;KB are not
 | 25&nbsp;KB maximum |   60&nbsp;KB maximum   | 600 pixels maximum |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
+{% alert note %}
+To save your email campaign or template, make sure your email body does not exceed 400&nbsp;KB.
+{% endalert %}
+
 ## Text length
 
 Refer to the following table for recommended text lengths.
@@ -108,7 +116,6 @@ Refer to the following table for recommended image sizes. Smaller, high-quality 
 
 ## Deep linking
 
-A high percentage of emails are read on mobile devices. Using [deep linking]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) is a great practice for engaging with these mobile email recipients. With push notifications and in-app messages, a deep link takes the user directly to a specified destination within an app. 
+With push notifications and in-app messages, a [deep link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) takes users directly to a specified destination within an app. However, deep links require the app to be installed, and emails don't provide a way to know whether recipients have the app. This means deep links in emails can result in errors for recipients who don't have the app installed.
 
-However, emails don't provide the clarity of knowing whether recipients have the app installed. So, avoiding deep linking helps prevent error messages for these email recipients who do not have the app.
-
+Instead, use [universal links and App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links), which function as standard URLs. You can configure them to open the app or direct users to a specific page. They can also redirect to the app store or fall back to a webpage when the app is not installed.

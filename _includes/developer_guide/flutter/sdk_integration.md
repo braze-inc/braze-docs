@@ -11,7 +11,7 @@ Before you integrate the Braze Flutter SDK, you'll need to complete the followin
 | Prerequisite | Description |
 | --- | --- |
 | Braze API app identifier | To locate your app's identifier, go to **Settings** > **APIs and Identifiers** > **App Identifiers**. For more information see, [API Identifier Types]({{site.baseurl}}/api/identifier_types/#app-identifier).|
-| Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints).|
+| Braze SDK endpoint | Your SDK endpoint URL (for example, `sdk.<cluster>.braze.com`). Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints).|
 | Flutter SDK | Install the official [Flutter SDK](https://docs.flutter.dev/get-started/install) and ensure it meets the Braze Flutter SDK's [minimum supported version](https://github.com/braze-inc/braze-flutter-sdk#requirements). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -26,7 +26,121 @@ flutter pub add braze_plugin
 ### Step 2: Complete native SDK setup
 
 {% tabs %}
-{% tab Android %}
+{% tab Flutter SDK 18.0.0+ %}
+
+#### 2.1 Set up Android
+
+##### Provide credentials at compile time
+
+Create a `braze.xml` file in your project's `android/res/values` folder. The API key and endpoint are provided at runtime from Dart, so they are not required in this file. To enable delayed initialization, add `com_braze_enable_delayed_initialization` to the file:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <bool name="com_braze_enable_delayed_initialization">true</bool>
+  <!-- API key and endpoint are not required here. They are set at runtime via Dart. -->
+</resources>
+```
+
+##### Provide credentials at runtime
+
+Alternatively, you can enable delayed initialization programmatically in your `MainActivity.kt`:
+
+```kotlin
+import com.braze.Braze
+
+class MainActivity : FlutterActivity() {
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    Braze.enableDelayedInitialization(context = this)
+  }
+}
+```
+
+Add the required permissions to your `AndroidManifest.xml` file:
+
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+
+#### 2.2 Set up iOS
+
+Within your existing `application(_:didFinishLaunchingWithOptions:)` method, add a call to `BrazePlugin.configure(_:postInitialization:)` to store your configuration. The Braze instance is created later when `initialize()` is called from Dart. The API key and endpoint are not set here.
+
+{% subtabs %}
+{% subtab SWIFT %}
+
+Add the following code to your `AppDelegate.swift`:
+
+```swift
+import BrazeKit
+import braze_plugin
+
+// ...
+
+override func application(
+  _ application: UIApplication,
+  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
+) -> Bool {
+  // ... your existing didFinishLaunchingWithOptions setup ...
+
+  BrazePlugin.configure(
+    { configuration in
+      configuration.logger.level = .info
+      // Set other non-API-key configurations here, such as:
+      // configuration.push.automation = true
+      // configuration.sessionTimeout = 60
+    },
+    postInitialization: { braze in
+      // Optional: Customize the Braze instance after creation.
+      // For example, set a custom in-app message presenter:
+      // let customPresenter = CustomInAppMessagePresenter()
+      // braze.inAppMessagePresenter = customPresenter
+    }
+  )
+
+  return true
+}
+```
+
+{% endsubtab %}
+{% subtab OBJECTIVE-C %}
+
+Add the following code to your `AppDelegate.m`:
+
+```objc
+@import BrazeKit;
+@import braze_plugin;
+
+// ...
+
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [BrazePlugin configure:^(BRZConfiguration *configuration) {
+    configuration.logger.level = BRZLoggerLevelInfo;
+    // Set other non-API-key configurations here, such as:
+    // configuration.push.automation = ...
+    // configuration.sessionTimeout = 60;
+  } postInitialization:^(Braze *braze) {
+    // Optional: customize the Braze instance after creation.
+  }];
+
+  return YES;
+}
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+
+{% alert important %}
+`BrazePlugin.configure()` only stores your configuration. No Braze instance exists until `initialize()` is called from Dart, so do not call any Braze SDK methods in the AppDelegate after `configure()`.
+{% endalert %}
+
+{% endtab %}
+{% tab Flutter SDK 17.1.0 and earlier %}
+
+#### 2.1 Set up Android
 
 To connect to Braze servers, create a `braze.xml` file in your project's `android/res/values` folder. Paste the following code and replace the API identifier key and endpoint with your values:
 
@@ -45,11 +159,11 @@ Add the required permissions to your `AndroidManifest.xml` file:
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-{% endtab %}
-{% tab iOS %}
-{% subtabs global %}
+#### 2.2 Set up iOS
+
+{% subtabs %}
 {% subtab SWIFT %}
-Add Braze SDK import at the top of the `AppDelegate.swift` file:
+Add the Braze SDK imports at the top of the `AppDelegate.swift` file:
 ```swift
 import BrazeKit
 import braze_plugin
@@ -60,7 +174,7 @@ In the same file, create the Braze configuration object in the `application(_:di
 ```swift
 static var braze: Braze? = nil
 
-func application(
+override func application(
   _ application: UIApplication,
   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 ) -> Bool {
@@ -79,9 +193,10 @@ func application(
 ```
 {% endsubtab %}
 {% subtab OBJECTIVE-C %}
-Import `BrazeKit` at the top of the `AppDelegate.m` file:
+Import the Braze SDK at the top of the `AppDelegate.m` file:
 ```objc
 @import BrazeKit;
+@import braze_plugin;
 ```
 
 In the same file, create the Braze configuration object in the `application:didFinishLaunchingWithOptions:` method and replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
@@ -122,6 +237,71 @@ static Braze *_braze = nil;
 
 ### Step 3: Set up the plugin
 
+{% tabs %}
+{% tab Flutter SDK 18.0.0+ %}
+
+Import the plugin and create a single instance of `BrazePlugin`:
+
+```dart
+import 'package:braze_plugin/braze_plugin.dart';
+
+final BrazePlugin braze = BrazePlugin();
+```
+
+Then call `initialize()` with your app identifier API key and SDK endpoint to create the Braze instance. See the options below for where to call this method in your app.
+
+#### Standard initialization
+
+To initialize the SDK when your app starts, call `initialize()` in `initState()`:
+
+```dart
+@override
+void initState() {
+  super.initState();
+  braze.initialize("<BRAZE_API_KEY>", "<BRAZE_ENDPOINT>");
+}
+```
+
+#### Delayed initialization
+
+To defer SDK initialization until a later point in the session — for example, after the user grants consent or completes login — call `initialize()` when you're ready:
+
+```dart
+// ...
+void onUserConsent() {
+  braze.initialize("<BRAZE_API_KEY>", "<BRAZE_ENDPOINT>");
+}
+```
+
+{% alert warning %}
+Push notifications and deep links received before `initialize()` is called are not processed on iOS. On Android, deep links from push notifications do not resolve while the SDK is waiting to be initialized. If your app relies on push or deep links at launch, use [standard initialization](#standard-initialization) instead.
+{% endalert %}
+
+#### Platform-specific API keys
+
+Since your Android and iOS apps use different API keys, use platform detection:
+
+```dart
+import 'dart:io' show Platform;
+
+if (Platform.isAndroid) {
+  braze.initialize("<ANDROID_API_KEY>", "<BRAZE_ENDPOINT>");
+} else if (Platform.isIOS) {
+  braze.initialize("<IOS_API_KEY>", "<BRAZE_ENDPOINT>");
+}
+```
+
+#### Re-initialization
+
+You can call `initialize()` multiple times to re-initialize the SDK with a different API key and endpoint mid-session. Each call tears down the previous Braze instance and creates a new one.
+
+{% alert important %}
+To avoid undefined behaviors, only allocate and use a single instance of the `BrazePlugin` in your Dart code. All SDK method calls made before `initialize()` are ignored on iOS, so call `initialize()` before using any other Braze methods.
+{% endalert %}
+
+{% endtab %}
+{% tab Flutter SDK 17.1.0 and earlier %}
+
 To import the plugin into your Dart code, use the following:
 
 ```dart
@@ -134,16 +314,33 @@ Then, initialize an instance of the Braze plugin by calling `new BrazePlugin()` 
 To avoid undefined behaviors, only allocate and use a single instance of the `BrazePlugin` in your Dart code.
 {% endalert %}
 
-## Testing the integration
+{% endtab %}
+{% endtabs %}
 
-You can verify that the SDK is integrated by checking session statistics in the dashboard. If you run your application on either platform, you should see a new session in dashboard (in the **Overview** section).
+## Testing the integration
+You can verify that the SDK is integrated by checking session statistics in the dashboard. If you run your application on either platform, you should see a new session in the dashboard (in the **Overview** section).
 
 Open a session for a particular user by calling the following code in your app.
+
+{% tabs %}
+{% tab Flutter SDK 18.0.0+ %}
+
+```dart
+BrazePlugin braze = BrazePlugin();
+braze.initialize("<BRAZE_API_KEY>", "<BRAZE_ENDPOINT>");
+braze.changeUser("{some-user-id}");
+```
+
+{% endtab %}
+{% tab Flutter SDK 17.1.0 and earlier %}
 
 ```dart
 BrazePlugin braze = BrazePlugin();
 braze.changeUser("{some-user-id}");
 ```
+
+{% endtab %}
+{% endtabs %}
 
 Search for the user with `{some-user-id}` in the dashboard under **Audience** > **Search Users**. There, you can verify that session and device data have been logged.
 

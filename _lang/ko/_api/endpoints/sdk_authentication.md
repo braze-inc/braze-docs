@@ -1,5 +1,5 @@
 ---
-nav_title: "SDK 인증"
+nav_title: "소프트웨어 개발 키트 인증"
 article_title: SDK 인증 엔드포인트
 search_tag: Endpoint
 page_order: 5.5

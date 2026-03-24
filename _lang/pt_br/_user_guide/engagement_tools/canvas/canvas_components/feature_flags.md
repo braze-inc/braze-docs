@@ -1,5 +1,5 @@
 ---
-nav_title: Feature Flags
+nav_title: Feature Flag
 article_title: Feature Flags
 page_order: 8
 page_type: reference
@@ -17,7 +17,7 @@ Está procurando mais informações sobre os feature flags e como eles podem ser
 
 ## Criação de um Feature Flag
 
-![Um exemplo de etapa do Feature Flag para o recurso Botão de bate-papo ao vivo.]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Um exemplo de etapa de Feature Flag para o recurso do botão de chat ao vivo.]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Para criar um componente Feature Flag, primeiro adicione uma etapa do canva. Arraste e solte o componente da barra lateral ou clique no botão de adição <i class="fas fa-plus-circle"></i> na parte inferior de uma etapa e selecione **Feature Flag**. Em seguida, selecione o sinalizador de recurso no menu suspenso, que contém todos os sinalizadores de recurso que não estão arquivados.
 
@@ -27,11 +27,13 @@ Quando um Canva é interrompido, arquivado ou uma etapa é removida, qualquer us
 
 As propriedades em uma etapa do Canva podem ser alteradas após o lançamento e mesmo depois que o usuário passar pela etapa. Os usuários sempre receberão uma versão dinâmica e em tempo real do sinalizador de recurso, em vez da versão antiga, salva anteriormente.
 
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
+
 ## Sobregravação de propriedades
 
 Ao criar um sinalizador de recurso, você especifica as propriedades padrão. Ao configurar uma etapa do Canva do sinalizador de recurso, é possível manter os valores padrão ou substituir os valores para os usuários que entrarem nessa etapa.
 
-![Um sinalizador de recurso "Central de Preferências" com "String" como a propriedade, "url" como a chave da propriedade e um valor.]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
+![Uma feature flag "Central de Preferências" com "string" como a propriedade, "url" como a chave da propriedade e um valor.]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
 
 Acesse **Envio de mensagens** > **Feature Flags** para editar, adicionar ou remover propriedades adicionais.
 
@@ -40,4 +42,3 @@ Acesse **Envio de mensagens** > **Feature Flags** para editar, adicionar ou remo
 O canva e a rolagem do Feature Flag (arrastar o controle deslizante) podem funcionar independentemente uma da outra. Uma advertência importante é que a entrada em uma etapa do Canva substituirá qualquer configuração de distribuição padrão. Isso significa que, se um usuário não se qualificar para um sinalizador de recurso, uma etapa do Canva poderá ativar o recurso para esse usuário.
 
 Da mesma forma, se um usuário se qualificar para a implementação de um sinalizador de recurso com determinadas propriedades, se ele também entrar na etapa do Canva, receberá todos os valores substituídos dessa etapa do Canvas.
-

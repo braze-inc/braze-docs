@@ -24,7 +24,7 @@ Pour connecter un domaine à votre compte Braze, demandez à un administrateur d
 3. Copiez et collez les enregistrements **TXT** et **CNAME** dans les paramètres DNS de votre fournisseur de domaine.
 4. Retournez au tableau de bord de Braze pour vérifier la connexion.
 
-![Page de configuration de la page d'atterrissage avec un enregistrement TXT et deux enregistrements CNAME répertoriés avec leurs noms et valeurs respectifs.]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
+![Page des paramètres de la page d'atterrissage avec un enregistrement TXT et deux enregistrements CNAME répertoriés avec leurs noms et valeurs respectifs.]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
 
 {% alert note %}
 Selon votre fournisseur de domaine, la connexion peut prendre jusqu'à 48 heures. Une fois le processus terminé, nous commencerons à utiliser votre domaine personnalisé pour vos pages de destination dans le tableau de bord de Braze.
@@ -46,16 +46,7 @@ Lorsque vous supprimez un domaine personnalisé, cette URL n'est plus valide. To
 
 ## Ressources DNS
 
-Vous trouverez ci-dessous des ressources pour créer et gérer des enregistrements DNS avec les fournisseurs de domaines les plus courants. Si vous utilisez un autre fournisseur, reportez-vous à sa documentation ou contactez son équipe d'assistance pour obtenir des informations.
-
-| Fournisseur de domaine | Ressources |
-| --- | --- |
-| Bluehost | [Les enregistrements DNS expliqués](https://my.bluehost.com/hosting/help/508)<br> [Gestion DNS Ajouter, modifier ou supprimer des entrées DNS](https://my.bluehost.com/hosting/help/559) |
-| Dreamhost | [Comment ajouter des enregistrements DNS personnalisés ?](https://help.dreamhost.com/hc/en-us/articles/360035516812) |
-| GoDaddy | [Ajouter un enregistrement CNAME](https://www.godaddy.com/help/add-a-cname-record-19236?) |
-| Cloudflare | [Gérer les enregistrements DNS](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/) |
-| Squarespace | [Ajout de paramètres DNS personnalisés](https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain) |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{% multi_lang_include dns_records.md %}
 
 ## Résolution des problèmes 
 
@@ -72,4 +63,28 @@ Non, vous ne pouvez actuellement connecter qu'un seul sous-domaine à un espace 
 ### Puis-je utiliser le même sous-domaine que celui que j'utilise actuellement pour mon site web principal ou mon domaine d'envoi ?
 
 Non, vous ne pouvez pas utiliser des sous-domaines déjà utilisés. Bien que ces sous-domaines soient valides, ils ne peuvent pas être utilisés pour les pages de destination s'ils sont déjà affectés à d'autres fins ou s'ils ont des enregistrements DNS qui entrent en conflit avec les enregistrements CNAME requis.
+
+### Pourquoi mon domaine personnalisé est-il bloqué sur "Connexion" malgré des enregistrements DNS valides ?
+
+Si votre domaine personnalisé indique que tous les enregistrements DNS sont " connectés ", mais que le statut du domaine reste sur " connexion " pendant plus de quatre heures, il se peut que votre organisation utilise des enregistrements CAA (Certificate Authority Authorization) ou des mises en attente de zone Cloudflare qui empêchent Braze de sécuriser votre page.
+
+#### Dossiers CAA
+
+Les enregistrements CAA limitent les autorités de certification qui peuvent émettre des certificats SSL pour votre domaine. Si vos enregistrements CAA n'incluent pas LetsEncrypt, Braze (par l'intermédiaire de Cloudflare) ne peut pas émettre le certificat SSL requis.
+
+Pour résoudre ce problème, demandez à votre équipe informatique d'ajouter un enregistrement CAA à votre sous-domaine avec les valeurs suivantes :
+- **Type d'enregistrement :** CAA
+- **Valeur :** `0 issue "letsencrypt.org"`
+
+Pour plus d'informations, consultez la [documentation CAA de LetsEncrypt](https://letsencrypt.org/docs/caa/).
+
+#### La zone Cloudflare est maintenue
+
+Si votre organisation utilise Cloudflare, il se peut qu'une fonctionnalité de sécurité de maintien de zone empêche Braze de créer votre domaine personnalisé.
+
+Pour résoudre ce problème, demandez à votre équipe informatique de libérer temporairement la mise en attente de la zone. Pour plus d'informations, consultez la [documentation de Cloudflare sur le maintien de la zone.](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/#release-zone-holds)
+
+#### Redémarrer le processus de validation
+
+Après avoir résolu l'un ou l'autre problème, supprimez et recréez votre domaine personnalisé dans le tableau de bord de Braze pour redémarrer le processus de validation.
 

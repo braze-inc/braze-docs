@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:過去30 日間の月次アクティブユーザーのエクスポート"
+nav_title: "取得:過去30日間のアクティブユーザーの月次エクスポート"
 article_title: "取得:過去30 日間の月次アクティブユーザーのエクスポート"
 search_tag: Endpoint
 page_order: 4
@@ -28,9 +28,9 @@ description: "この記事では、「アクティブユーザーの月次エク
 
 ## リクエストパラメーター
 
-| パラメーター| required | データ型 | 説明 |
+| パラメーター| 必須かどうか | データ型 | 説明 |
 | -------- | -------- | --------- | ----------- |
-| `length` | 必須 | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
+| `length` | 必須かどうか | 整数 | 返されるシリーズに `ending_at` が含まれるまでの最大日数。1以上100以下でなければなりません。 |
 | `ending_at` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | データシリーズが終了する日付。リクエストの時刻にデフォルト設定されます。 |
 | `app_id` | オプション | 文字列 | [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページから取得したアプリAPI識別子。除外した場合、ワークスペース内のすべてのアプリの結果が返される。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -46,8 +46,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/mau/data_ser
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

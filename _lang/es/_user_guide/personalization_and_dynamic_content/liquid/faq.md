@@ -32,7 +32,7 @@ Consulte [Etiquetas de personalización compatibles]({{site.baseurl}}/user_guide
 
 Puede crear y asignar variables utilizando la etiqueta `assign`. Esto crea una variable en el compositor del mensaje a la que también se puede hacer referencia en todo el mensaje.
 
-### ¿El uso de Liquid consume puntos de datos?
+### ¿El uso de Liquid registra puntos de datos?
 
 No.
 
@@ -72,9 +72,9 @@ La lógica de abortar permite detener el envío de un mensaje si se cumplen las 
 
 Los bucles For también se conocen como [etiquetas de iteración](https://shopify.github.io/liquid/tags/iteration/). El uso de la lógica de bucle for en sus fragmentos de Liquid le permite recorrer bloques de Liquid hasta que se cumpla una condición. 
 
-En Braze, esto podría utilizarse para comprobar elementos en un atributo personalizado de matriz, o una lista de valores y objetos devueltos por una respuesta de [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), [selección]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) o llamada a [contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). En concreto, puede utilizar la lógica del bucle for como parte de su mensajería para comprobar si un producto está en stock, o si un producto tiene una valoración mínima. 
+En Braze, esto podría utilizarse para comprobar elementos en un atributo personalizado de matriz, o una lista de valores y objetos devueltos por una respuesta de [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), [selección]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) o llamada a [contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). En concreto, puede utilizar la lógica del bucle for como parte de su mensajería para comprobar si un producto está en stock, o si un producto tiene una valoración mínima. 
 
-Por ejemplo, supongamos que tienes un catálogo llamado "Juegos" que tiene una selección llamada "juegos_baratos". Para obtener los títulos de los juegos de "cheap_games", puedes utilizar este fragmento de código Liquid:
+Por ejemplo, supongamos que tienes un catálogo llamado «Juegos» que contiene una selección llamada"cheap_games".  Para extraer los títulos de los juegos,"cheap_games",  puedes utilizar este fragmento de código de Liquid:
 
 {% raw %}
 ```liquid
@@ -86,3 +86,35 @@ Por ejemplo, supongamos que tienes un catálogo llamado "Juegos" que tiene una s
 {% endraw %}
 
 Una vez cumplidas las condiciones establecidas, su mensaje puede continuar. Utilizar esta lógica es una forma útil de ahorrar tiempo, en lugar de repetir bloques Líquidos para diferentes condiciones.
+
+### ¿Por qué hay un espacio adicional en los mensajes que utilizan bloques de contenido?
+
+Si observas un espaciado adicional en los mensajes enviados que utilizan bloques de contenido con Liquid, es posible que haya saltos de párrafo o de línea innecesarios dentro de tus declaraciones condicionales. Escribe tus sentencias condicionales en una sola línea en lugar de en varias líneas.
+
+#### Ejemplo
+
+{% raw %}
+```liquid
+{% if {{custom_attribute.${has_discount}}} == true %}Discounted Item{% elsif {{custom_attribute.${is_new_arrival}}} == true %}New Arrival{% else %}Regular Item{% endif %}
+{% endraw %}
+
+### When should I use `assign` versus `capture`?
+
+Both `assign` and `capture` create Liquid variables, but they serve different purposes:
+
+- `assign` is for simple variables that store a single value, such as a boolean, number, or simple string. You can also apply a single filter in the same line.
+- `capture` is for storing a block of text that may include multiple variables, strings, or complex expressions. Use `capture` when the value is too complex for a single `assign` statement, such as URLs that utilize other Liquid variables or custom attributes as parameters. `capture` is also preferred when implementing Liquid variables in the body of Connected Content calls.
+
+#### Examples
+
+{% raw %}
+```liquid
+{% comment %} Valid assign usage {% endcomment %}
+{% assign name = {{custom_attribute.${first_name}}} %}
+{% assign price = {{custom_attribute.${price}}} | plus: 0 %}
+
+{% comment %} Use capture for complex strings {% endcomment %}
+{% capture greeting %}Hello, {{custom_attribute.${first_name}}}! Your order #{{custom_attribute.${order_id}}} is ready.{% endcapture %}
+{{ greeting }}
+```
+{% endraw %}

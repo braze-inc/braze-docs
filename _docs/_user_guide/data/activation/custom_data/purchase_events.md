@@ -24,7 +24,7 @@ The following lists methods across various platforms that are used to log purcha
 - [Web]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
 - [Unity]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=unity)
-- [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
+- [.NET MAUI (formerly Xamarin)]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
 - [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
 ## Viewing purchase data
@@ -69,7 +69,7 @@ To segment on the number of times a specific purchase has occurred, record that 
 
 Like any other type of data you collect from your users, you can use purchase data to personalize your messaging through Liquid. For example, you can send a personalized email to a user recommending products similar to ones they just purchased.
 
-Let's say you have a purchase event property called `last_purchased_product` that stores the name of the last product a user purchased. You could use this property to personalize an email message like this:
+Suppose you have a purchase event property called `last_purchased_product` that stores the name of the last product a user purchased. You can use this property to personalize an email message like this:
 
 {% raw %}
 
@@ -85,7 +85,7 @@ Let's say you have a purchase event property called `last_purchased_product` tha
 
 {% endraw %}
 
-In this example, the message is personalized based on the `last_purchased_product` property. If the last product the user purchased was "Running Shoes", they receive a message recommending running shorts and water bottles. If the last product was a "Yoga Mat", they receive a message recommending yoga blocks and straps. If the `last_purchased_product` is anything else, they receive a generic thank you message.
+In this example, the message is personalized based on the `last_purchased_product` property. If the last product the user purchased was "Running Shoes", they receive a message recommending running shorts and water bottles. If the last product was "Yoga Mat", they receive a message recommending yoga blocks and straps. If the `last_purchased_product` is anything else, they receive a generic thank you message.
 
 ### Trigger messages
 
@@ -148,6 +148,10 @@ You can find this data on the [Revenue Report]({{site.baseurl}}/user_guide/data_
     </tbody>
 </table>
 
+#### Currency conversion
+
+When purchase events are logged in a non-USD currency, Braze converts the amount to USD using exchange rates from [Open Exchange Rates](http://openexchangerates.org). These rates are refreshed once every 24 hours. Because the exchange rates are cached, there may be slight differences from the real-time market rate, particularly for currencies experiencing rapid fluctuation.
+
 #### Lifetime revenue calculation
 
 Braze uses purchase events to calculate the lifetime revenue (also called lifetime value or LTV) of a user, which is a prediction of the net profit attributed to the entire future relationship with a customer. This can help you make informed decisions about customer acquisition and retention strategies.
@@ -175,6 +179,10 @@ While Sam would have two purchase events on their profile, in reality, they only
 
 With purchase event properties, you can set properties on purchases that can be used to further qualify trigger conditions, increase personalization in messaging, and generate more sophisticated analytics through raw data export. Property value types (string, numeric, boolean, date) vary per platform and are often assigned as key-value pairs.
 
+{% alert warning %}
+The following keys are reserved and cannot be used as purchase event property names: `time`, `product_id`, `quantity`, `event_name`, `price`, and `currency`. Using a reserved key in the `properties` object will return the error "Invalid 'properties' field".
+{% endalert %}
+
 For example, if you have an eCommerce application and want to message a user after making a purchase, you could additionally improve your target audience and allow for increased campaign personalization by adding a purchase event property of `brand_name`.
 
 **Example of triggering based on purchase event properties:**
@@ -185,9 +193,9 @@ Refer to [purchase properties object]({{site.baseurl}}/api/objects_filters/purch
 
 ### Event property segmentation
 
-Event property segmentation allows you to target users based on not just custom events taken, but also on the properties associated with those events. This feature adds additional filtering options when segmenting purchase and custom events.
+Event property segmentation lets you target users based not only on custom events taken, but also on the properties associated with those events. This adds additional filtering options when segmenting purchase and custom events.
 
-![]({% image_buster /assets/img/nested_object3.png %}){: style="max-width:80%;margin-left:15px;"}
+![Segmentation filters for purchase event properties, displaying options to filter users based on specific purchase event property values, such as filtering for users who purchased a product with a certain property within a set timeframe.]({% image_buster /assets/img/purchase_event_property.png %}){: style="max-width:80%;margin-left:15px;"}
 
 These segmentation filters include:
 - Has done the custom event with property Y with value V X times in the last Y days
@@ -210,7 +218,7 @@ To log purchases at the order level instead of the product level, use the order 
 
 At Braze, we offer some general naming conventions for the purchase object `product_id`. When choosing `product_id`, Braze suggests using simplistic names such as the product name or product category (instead of SKUs) with the intention of grouping all logged items by this `product_id`.
 
-This helps make products easy to identify for segmentation and triggering. 
+This makes products straightforward to identify for segmentation and triggering. 
 
 ## Blocklisting purchase events
 

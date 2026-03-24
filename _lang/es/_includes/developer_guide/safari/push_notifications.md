@@ -1,6 +1,6 @@
-{% multi_lang_include developer_guide/prerequisites/swift.md %} También tendrás que [configurar las notificaciones push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) para el SDK de Swift. Ten en cuenta que sólo puedes enviar notificaciones push a usuarios de iOS y iPadOS que utilicen [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) o posterior.
+{% multi_lang_include developer_guide/prerequisites/web.md %} También tendrás que [configurar las notificaciones push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web) para el SDK web. Ten en cuenta que solo puedes enviar notificaciones push a usuarios de iOS y iPadOS que utilicen [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) o posterior.
 
-## Configuración de Safari push para móviles
+## Configuración de Safari Push para dispositivos móviles
 
 ### Paso 1: Crear un archivo de manifiesto {#manifest}
 
@@ -38,18 +38,18 @@ Tu sitio web debe tener un archivo de prestador de servicios que importe la bibl
 
 ### Paso 4: Añadir a la pantalla de inicio {#add-to-homescreen}
 
-Los navegadores más populares (como Safari, Chrome, FireFox y Edge) admiten notificaciones push web en sus versiones posteriores. Para solicitar permiso push en iOS o iPadOS, tu sitio web debe añadirse a la pantalla **de** inicio del usuario seleccionando **Compartir en** > **Añadir a pantalla de inicio**. [Añadir a la](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) pantalla de [inicio](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) permite a los usuarios marcar tu sitio web, añadiendo tu icono a su valioso espacio en la pantalla de inicio.
+Los navegadores web más populares (como Safari, Chrome, Firefox y Edge) admiten notificaciones push web en sus últimas versiones. Para solicitar permiso push en iOS o iPadOS, tu sitio web debe añadirse a la pantalla de inicio del usuario seleccionando **Compartir en** > **Añadir a la pantalla de inicio**. [La opción «Añadir a la pantalla de inicio»](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) permite a los usuarios marcar tu sitio web como favorito, añadiendo tu icono a su valiosa pantalla de inicio.
 
-![Un iPhone mostrando opciones para marcar un sitio web y guardarlo en la pantalla de inicio]({% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}){: style="max-width:40%"}
+![Un iPhone que muestra opciones para marcar un sitio web y guardarlo en la pantalla de inicio]({% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}){: style="max-width:40%"}
 
 ### Paso 5: Mostrar el mensaje push nativo {#push-prompt}
-Una vez añadida la aplicación a tu pantalla de inicio, ahora puedes solicitar permiso push cuando el usuario realice una acción (como hacer clic en un botón). Esto puede hacerse utilizando el método [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) o con un [mensaje dentro de la aplicación como push primer sin código]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
+Una vez que la aplicación se haya añadido a tu pantalla de inicio, podrás solicitar permiso para enviar notificaciones push cuando el usuario realice una acción (como hacer clic en un botón). Esto puede hacerse utilizando el método [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) o con un [mensaje dentro de la aplicación como push primer sin código]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 
 {% alert note %}
-Después de aceptar o rechazar el aviso, tienes que borrar y volver a instalar el sitio web en tu pantalla de inicio para poder volver a mostrar el aviso.
+Después de aceptar o rechazar el mensaje, debes eliminar y volver a instalar el sitio web en tu pantalla de inicio para poder volver a mostrar el mensaje.
 {% endalert %}
 
-![Un aviso push preguntando "permitir" o "no permitir" Notificaciones]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
+![Una notificación push pidiendo "permitir" o "no permitir" Notificaciones]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
 
 Por ejemplo:
 

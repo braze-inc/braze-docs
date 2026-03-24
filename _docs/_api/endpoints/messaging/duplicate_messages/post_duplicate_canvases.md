@@ -10,19 +10,15 @@ description: "This article outlines details about the Duplicate Canvases endpoin
 
 {% api %}
 # Duplicate Canvases using the API
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/duplicate
 {% endapimethod %}
 
 > Use this endpoint to duplicate Canvases. This API endpoint is similar to [duplicating Canvases in the Braze dashboard][1].
 
-{% alert important %}
-This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 ## Prerequisites
 
-To use this endpoint, you'll need to generate an API key with the `canvas.duplicate` permission.
+To use this endpoint, you must generate an API key with the `canvas.duplicate` permission.
 
 ## Rate limit
 

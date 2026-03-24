@@ -1,5 +1,5 @@
 ---
-nav_title: Zeitplan-Nachrichten
+nav_title: Zeitplan für Nachrichten
 config_only: true
 noindex: true
 ---

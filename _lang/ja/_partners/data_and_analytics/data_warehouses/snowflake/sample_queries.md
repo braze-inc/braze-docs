@@ -13,7 +13,7 @@ search_tag: Partner
 > このパートナーページでは、クエリを設定する際に参照するための考えられるユースケースのサンプルクエリを紹介します。
 
 {% tabs %}
-{% tab 時間でのフィルタリング%}
+{% tab Filter By Time%}
 
 一般的なクエリは、時間でイベントをフィルターすることです。
 
@@ -38,7 +38,7 @@ LIMIT 10;
 {% endalert %}
 {% endtab %}
 
-{% tab 変更ログのクエリ%}
+{% tab Querying Changelogs%}
   
 キャンペーン名とキャンバス名はイベント自体には存在しません。代わりに、それらは変更ログテーブルに公開されます。 
 
@@ -73,7 +73,7 @@ LEFT JOIN CHANGELOGS_CANVAS_SHARED AS Canvas ON canvas.id = campaign_join.canvas
 qualify row_number() over (partition by campaign_join.event_id ORDER BY canvas.time DESC) = 1;
 ```
 {% endtab %}
-{% tab プッシュファネル %}
+{% tab Push Funnel %}
 
 このプッシュファネルクエリを使用して、プッシュ送信の生イベントデータ、配信の生イベントデータ、開封の生イベントデータの順に集約できます。通常、生イベントごとに個別のテーブルがあるため、このクエリはすべてのテーブルを結合する方法を示します。
 
@@ -102,7 +102,7 @@ LIMIT 500;
 ```
 
 {% endtab %}
-{% tab メールケイデンス %}
+{% tab Email Cadence %}
 日次メールメッセージングケイデンスクエリを使用して、ユーザーのメール受信間隔の時間を分析できます。
 
 例えば、ユーザーが1日に2通のメールを受信した場合、それは`0 "days since last received"`に該当します。月曜日と火曜日にそれぞれメールを1通ずつ受信したユーザーは、`1 "days since last received"` コホートに分類されます。
@@ -145,7 +145,7 @@ ORDER BY 1
 LIMIT 500;
 ```
 {% endtab %}
-{% tab ユニークなメールクリック数 %}
+{% tab Unique Email Clicks %}
 
 このユニークなメールクリック数のクエリを使用して、指定された時間枠内でのユニークなメールクリックを分析できます。これを計算するアルゴリズムは次のとおりです:
   1. キー (`app_group_id`、`message_variation_id`、`dispatch_id`、`email_address`) でイベントを分割します。

@@ -14,5 +14,5 @@ channel:
 
 > En este artículo se describen los distintos componentes de los informes de correo electrónico y su ubicación en el panel de control.
 
-{% multi_lang_include campaign_analytics.md channel="email" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="email" %}
 

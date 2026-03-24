@@ -1,7 +1,8 @@
 ---
 nav_title: Mensajes de derecha a izquierda
-article_title: Creación de mensajes de derecha a izquierda
+article_title: Crear mensajes de derecha a izquierda
 page_order: 1
+alias: /right_to_left_messages/
 page_type: reference
 description: "En esta página se describen las mejores prácticas para elaborar mensajes en Braze que se lean de derecha a izquierda."
 ---
@@ -40,7 +41,7 @@ Para crear tu mensaje de derecha a izquierda en Braze:
 
 El método de copiar y pegar para mensajes push puede ser difícil de usar con notificaciones push más largas, porque el contenido más largo puede aparecer en varias líneas en un dispositivo móvil. Si copias el texto de tu mensaje desde fuera de Braze (como un documento de Word) y lo pegas directamente en Braze, la alineación de las frases y la colocación de las palabras pueden cambiar. Para evitarlo, copia y pega por partes y añade un salto de línea. Por ejemplo, copia y pega las cinco primeras palabras, añade un salto de línea, copia las cinco palabras siguientes, añade un salto de línea, etc.
 
-Las funciones de vista previa y de prueba están diseñadas para mensajes de izquierda a derecha, por lo que los mensajes de derecha a izquierda no se mostrarán correctamente en la sección de **vista previa y de prueba**, pero se mostrarán correctamente en los dispositivos de usuario si sus ajustes están configurados para ello. Te sugerimos que te envíes mensajes a ti mismo en un entorno en vivo para confirmar que se muestran correctamente en función de la configuración del dispositivo.
+Las funciones de vista previa y de prueba están diseñadas para mensajes de izquierda a derecha, por lo que los mensajes de derecha a izquierda no se mostrarán correctamente en la sección de **prueba de la vista previa & **, pero se mostrarán correctamente en los dispositivos de usuario si sus ajustes están configurados para ello. Te sugerimos que te envíes mensajes a ti mismo en un entorno en vivo para confirmar que se muestran correctamente en función de la configuración del dispositivo.
 
 ### Texto bidireccional
 

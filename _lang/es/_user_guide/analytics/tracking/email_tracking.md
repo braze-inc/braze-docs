@@ -13,12 +13,12 @@ description: "Este artículo de referencia explica cómo implementar el seguimie
 
 ## Activar el píxel de apertura o el seguimiento de clics
 
-Al importar o actualizar un perfil de usuario a través de [API]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields) o [CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv), hay dos campos disponibles para modificar:
+Al importar o actualizar un perfil de usuario a través de [API]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields), [CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv) o [la ingesta de datos (CDI)]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/), hay dos campos que puedes modificar:
 
-- `email_open_tracking_disabled`: Acepta `true` o `false`. Seleccione `false` para añadir el píxel de seguimiento de apertura a todos los correos electrónicos futuros enviados a este usuario. Disponible sólo para SparkPost y SendGrid.
-- `email_click_tracking_disabled`: Acepta `true` o `false`. Seleccione `false` para añadir el seguimiento de clics a todos los enlaces de un futuro correo electrónico enviado a este usuario. Disponible sólo para SparkPost y SendGrid.
+- `email_open_tracking_disabled`: Acepta `true` o `false`. Seleccione `false` para añadir el píxel de seguimiento de apertura a todos los correos electrónicos futuros enviados a este usuario. Disponible solo para SparkPost y SendGrid.
+- `email_click_tracking_disabled`: Acepta `true` o `false`. Seleccione `false` para añadir el seguimiento de clics a todos los enlaces de un futuro correo electrónico enviado a este usuario. Disponible solo para SparkPost y SendGrid.
 
 Como referencia, esta información se refleja en el perfil del usuario en el correo electrónico **Configuración del contacto**, situado en la pestaña **Compromiso**.
 
-![Campos del píxel de apertura de correo electrónico y seguimiento de clics en la pestaña de interacción del perfil de un usuario]({% image_buster /assets/img_archive/open_click_user_profile.png %}){: style="max-width:60%;"}
+![Campos de píxel de seguimiento de clics y apertura de correo electrónico en la pestaña Compromiso del perfil de un usuario.]({% image_buster /assets/img_archive/open_click_user_profile.png %}){: style="max-width:60%;"}
 

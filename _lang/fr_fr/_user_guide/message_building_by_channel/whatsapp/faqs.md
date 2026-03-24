@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: FAQ WhatsApp
-page_order: 80
+page_order: 11
 description: "Cet article aborde certaines des questions les plus fréquemment posées lors de la configuration des campagnes WhatsApp."
 page_type: FAQ
 channel:
@@ -36,7 +36,7 @@ Après avoir complété le flux d'inscription intégré, vous pouvez accéder à
 #### Puis-je connecter plusieurs WABAs à Braze ? 
 Oui, vous pouvez ajouter jusqu'à 10 comptes WhatsApp Business par espace de travail, et chaque compte business peut être imbriqué sous un gestionnaire de compte Meta Business différent.
 
-![Diagramme de l'écosystème Braze et WhatsApp, montrant comment les espaces de travail et les comptes WhatsApp Business se connectent les uns aux autres : vous pouvez connecter un groupe d'abonnement à un numéro de téléphone, plusieurs comptes WhatsApp Business à un espace de travail, et un espace de travail à plusieurs portefeuilles Meta Business.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}). 
+![Schéma de l'écosystème Braze et WhatsApp, montrant comment les espaces de travail et les comptes WhatsApp Business se connectent les uns aux autres : vous pouvez connecter un groupe d'abonnement à un numéro de téléphone, plusieurs comptes WhatsApp Business à un espace de travail, et un espace de travail à plusieurs portefeuilles Meta Business.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
 
 ### Numéros de téléphone du compte professionnel WhatsApp 
 

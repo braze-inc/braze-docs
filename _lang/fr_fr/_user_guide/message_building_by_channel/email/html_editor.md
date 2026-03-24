@@ -21,5 +21,8 @@ guide_featured_list:
   - name: "Onglet Promotions Gmail"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
     image: /assets/img/braze_icons/message-check-circle.svg
+  - name: Résolution des problèmes
+    link: /docs/user_guide/message_building_by_channel/email/html_editor/troubleshooting/
+    image: /assets/img/braze_icons/annotation-question.svg
 
 ---

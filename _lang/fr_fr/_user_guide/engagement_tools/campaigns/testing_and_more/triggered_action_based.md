@@ -1,6 +1,6 @@
 ---
 nav_title: Campagnes déclenchées par API et par événement
-article_title: Tester des campagnes déclenchées par API et par événement
+article_title: "Testez les campagnes déclenchées par l'API et basées sur l'action"
 page_order: 2
 page_type: reference
 description: "Cet article de référence explique comment tester des campagnes déclenchées par API et par événement."

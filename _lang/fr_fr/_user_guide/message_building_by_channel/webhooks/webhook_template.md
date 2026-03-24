@@ -14,11 +14,11 @@ description: "Cet article de référence décrit comment créer et personnaliser
 
 > Au fur et à mesure que vous créez et personnalisez vos webhooks, vous pouvez créer et exploiter des modèles de webhooks pour une utilisation ultérieure au sein de la plateforme Braze. De cette façon, vous pouvez créer de manière cohérente une variété de webhooks à travers vos différentes campagnes.
 
-## Étape 1 : Accédez à l'éditeur de modèles de webhook
+## Étape 1 : Accédez à l'éditeur de modèles de webhook
 
 Dans le tableau de bord de Braze, allez dans **Modèles** > **Modèles de webhook**.
 
-![La page "Modèles de webhook" contient des modèles de webhook prédéfinis et enregistrés.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
+![La page "Modèles de webhook" contient des modèles de webhook préconçus et enregistrés.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
 
 ## Étape 2 : Choisissez votre modèle
 

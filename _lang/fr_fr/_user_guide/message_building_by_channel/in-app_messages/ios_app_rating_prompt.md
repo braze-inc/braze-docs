@@ -14,7 +14,7 @@ channel:
 
 Apple propose une invitation native, mise en place avec iOS 10.3, qui permet aux utilisateurs d’évaluer l’application depuis l’application elle-même. Si vous souhaitez demander des évaluations d'applications aux utilisateurs via un message intégré à l'application sur iOS, vous devez utiliser l'invite native, car Apple interdit les invites de révision personnalisées (voir [Directives de révision de l'App Store](https://developer.apple.com/app-store/review/guidelines/#code-of-conduct), section 5.6.1).
 
-Conformément aux directives d'Apple, les invites de révision d'application peuvent être affichées à un utilisateur jusqu'à trois fois par an, de sorte que toute campagne de révision d'application devrait tirer parti de [la limitation du taux]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/). Les utilisateurs peuvent également se désabonner des invitations à l’évaluation de l’application directement dans leurs paramètres d’application. Pour plus d'informations sur les évaluations de l'App Store, consultez l'article d'Apple sur les [évaluations, avis et réponses](https://developer.apple.com/app-store/ratings-and-reviews/).
+Conformément aux directives d'Apple, les invites de révision d'application peuvent être affichées à un utilisateur jusqu'à trois fois par an, de sorte que toute campagne de révision d'application devrait tirer parti de [la limitation du taux]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/). Les utilisateurs peuvent également choisir de ne pas voir les demandes d'abonnement dans les paramètres de l'application. Pour plus d'informations sur les évaluations de l'App Store, consultez l'article d'Apple sur les [évaluations, avis et réponses](https://developer.apple.com/app-store/ratings-and-reviews/).
 
 ## Utiliser Braze pour demander une évaluation de l’application aux utilisateurs
 
@@ -24,7 +24,7 @@ Même si Apple exige que vous utilisiez l’invite native, vous pouvez cependant
 
 Avec cette approche, vous voulez encourager les utilisateurs à se rendre sur l’App Store pour ajouter un commentaire. Pour ce faire, créez une campagne de messages in-app qui inclut un [lien profond]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) vers l'App Store.
 
-![Deux écrans de mobile côte à côte. Le premier est un message in-app demandant à l’utilisateur d’évaluer l’application sur l’App Store. La seconde est la page de l'App Store iOS pour cette application.]({% image_buster /assets/img_archive/app_store_app_review.png %})
+![Deux écrans de mobile côte à côte. Le premier est un message in-app demandant à l’utilisateur d’évaluer l’application sur l’App Store. Le second est la page iOS de l’App Store pour cette application.]({% image_buster /assets/img_archive/app_store_app_review.png %})
 
 ### Deuxième approche : Sensibilisation douce
 
@@ -32,7 +32,7 @@ Si vous ne voulez pas que vos utilisateurs quittent votre application, vous deve
 
 Pour connaître les étapes détaillées, consultez la section [Invite personnalisée d’évaluation dans l’App Store]({{site.baseurl}}/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt).
 
-![Deux messages in-app côte à côte. Le premier sensibilise l’utilisateur à l’évaluation de l’application en leur demandant s’ils ont le temps d’évaluer l’application. Le second est le message d'évaluation natif de l'App Store d'iOS, affichant une échelle de cinq étoiles que l'utilisateur peut sélectionner pour évaluer l'application.]({% image_buster /assets/img_archive/prime_app_review.png %}).
+![Deux messages in-app côte à côte. Le premier sensibilise l’utilisateur à l’évaluation de l’application en leur demandant s’ils ont le temps d’évaluer l’application. Le deuxième est le message natif iOS d’évaluation dans l’App Store, affichant une échelle de cinq étoiles que l’utilisateur peut sélectionner pour évaluer l’application.]({% image_buster /assets/img_archive/prime_app_review.png %})
 
 Les utilisateurs soumettront l’évaluation à l’aide de l’invite à l’évaluation dans l’App Store native et peuvent écrire et soumettre une évaluation sans quitter l’application.
 

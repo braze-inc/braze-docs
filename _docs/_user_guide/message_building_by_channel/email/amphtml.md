@@ -243,12 +243,12 @@ For your AMP email to be delivered to any Gmail account, the email must meet the
 - The email should include the AMP MIME part before the HTML MIME part.
 - The AMP MIME part must be smaller than 100&nbsp;KB.
 
-If none of these conditions are causing the error, reach out to [Support]({{site.baseurl}}/support_contact/).
+If none of these conditions are causing the error, contact [Support]({{site.baseurl}}/support_contact/).
 
 ### Frequently asked questions
 
 #### Should I segment with AMP emails?
 
-We advocate not segmenting to send to all different types of users. This is because we send AMP messages in multipart, having different versions included in the original email. If a user can't see the AMP version, it will default back to HTML. 
+We advocate not segmenting to send to all different types of users. This is because we send AMP messages in multipart, having different versions included in the original email. If a user can't see the AMP version, it will default back to HTML.
 
 

@@ -1,6 +1,6 @@
 ---
-nav_title: Écrire aux utilisateurs
-article_title: Écrire aux utilisateurs
+nav_title: "Utilisateurs de l'envoi de messages"
+article_title: Utilisateurs de messages
 description: "Cet article de référence explique comment Braze va gérer les messages des utilisateurs."
 page_type: reference
 channel:
@@ -25,9 +25,9 @@ Assurez-vous que votre mot déclencheur correspond à ce que vous attendez des u
 - Si aucun mot déclencheur n'est spécifié sur le déclencheur basé sur l'action du calendrier d'entrée, la campagne ou Canvas s'exécutera pour TOUS les messages WhatsApp entrants. Cela inclut les messages qui ont des phrases correspondantes dans les campagnes actives et les Canvases, auquel cas l'utilisateur recevra deux messages WhatsApp.
 
 {% tabs %}
-{% tab Campagne %}
+{% tab Campaign %}
 
-![Options de planification de campagnes basées sur l'action.]({% image_buster /assets/img/whatsapp/whatsapp27.png %})
+![Options de planification des campagnes basées sur des actions.]({% image_buster /assets/img/whatsapp/whatsapp27.png %})
 
 {% endtab %}
 {% tab Canvas %}
@@ -45,11 +45,11 @@ Nous vous recommandons d'inclure une option pour les réponses non reconnues sur
 
 ## Réponses rapides 
 
-![L'écran de téléphone affichant un bouton d'appel à l'action répondra au texte du bouton cliqué.]({% image_buster /assets/img/whatsapp/whatsapp11.png %}){: style="float:right;max-width:25%;margin-left:15px;border: 0;"}
+![L’écran du téléphone affichant un bouton d’appel à l’action qui renverra le texte du bouton cliqué.]({% image_buster /assets/img/whatsapp/whatsapp11.png %}){: style="float:right;max-width:25%;margin-left:15px;border: 0;"}
 
 Les réponses rapides apparaissent sous forme d’options de bouton cliquable dans la conversation, mais agissent comme si un utilisateur avait répondu par du texte. Braze traite ensuite ceux-ci comme des messages entrants et peut renvoyer des réponses prédéfinies en fonction du bouton cliqué. Utilisez l'étape "Action de message entrant WhatsApp" lors de la création et du filtrage des réponses de vos utilisateurs.
 
-![Un message WhatsApp comportant du texte et trois boutons d'appel à l'action.]({% image_buster /assets/img/whatsapp/whatsapp13.png %}){: style="max-width:50%;"}
+![Un message WhatsApp affichant du texte et trois boutons d'appel à l'action.]({% image_buster /assets/img/whatsapp/whatsapp13.png %}){: style="max-width:50%;"}
 
 ### Configurer l'expérience de réponse rapide dans Canvas
 
@@ -57,7 +57,7 @@ Les réponses rapides apparaissent sous forme d’options de bouton cliquable da
 
 Tout d'abord, créez vos CTA de réponse rapide dans le [Gestionnaire de Modèles de Messages WhatsApp](https://business.facebook.com/wa/manage/message-templates/) au sein d'un modèle de message. 
 
-![L'interface utilisateur du gestionnaire de modèles de messages WhatsApp montre comment créer un bouton CTA, en indiquant le type de bouton (personnalisé) et le texte du bouton.]({% image_buster /assets/img/whatsapp/whatsapp12.png %}){: style="max-width:80%;"}
+![L’interface utilisateur du gestionnaire de modèles de messages WhatsApp montrant comment créer un bouton CTA, en fournissant le type de bouton (personnalisé) et le texte du bouton.]({% image_buster /assets/img/whatsapp/whatsapp12.png %}){: style="max-width:80%;"}
 
 Une fois que votre modèle a été soumis et approuvé par WhatsApp, vous pouvez l’utiliser pour créer un Canvas dans Braze. 
 
@@ -69,15 +69,15 @@ Vous pouvez créer le Canvas avant de recevoir l’approbation de votre modèle 
 
 Ensuite, créez un Canvas avec une étape de message qui inclut votre modèle créé. 
 
-![Compositeur d'envois de messages par étapes sur WhatsApp avec un modèle de réponse rapide rempli.]({% image_buster /assets/img/whatsapp/whatsapp14.png %})
+![Compositeur de messages par étapes WhatsApp avec un modèle de réponse rapide renseigné.]({% image_buster /assets/img/whatsapp/whatsapp14.png %})
 
 Créez une étape d’action qui suit l’étape du message. Créez un groupe par option de réponse rapide dans cette étape d’action.
 
-![Un canvas dont l'action d'évaluation est "envoyer un message entrant whatsapp".]({% image_buster /assets/img/whatsapp/whatsapp15.png %})
+![Un Canvas où l’action d’évaluation est « envoyer un message entrant WhatsApp ».]({% image_buster /assets/img/whatsapp/whatsapp15.png %})
 
 Pour chaque groupe d’options de réponse rapide, spécifiez le texte exact en tant que bouton que vous faites correspondre. Notez que les mots-clés doivent être en majuscules. 
 
-![Une étape du canvas où l'action "envoyer un message whatsapp entrant" est définie pour être envoyée lorsqu'un corps de message spécifique est reçu.]({% image_buster /assets/img/whatsapp/whatsapp16.png %})
+![Une étape Canvas où l’action « envoyer un message entrant WhatsApp » est définie pour être envoyée lorsqu’un corps de message spécifique est reçu.]({% image_buster /assets/img/whatsapp/whatsapp16.png %})
 
 Si vous souhaitez une réponse par défaut pour les utilisateurs qui répondent au message avec du texte au lieu de réponses rapides, créez un groupe supplémentaire sans corps de message correspondant.
 
@@ -87,7 +87,7 @@ Depuis ce point, continuez à créer le Canvas comme vous le feriez habituelleme
 
 Vous désirerez probablement un message de réponse pour chaque réponse. Nous vous recommandons d’avoir une option « fourre-tout » pour les réponses qui ne sont pas dans les limites des réponses rapides (par exemple, pour les clients qui répondent par un message général plutôt qu’une invite prédéterminée). Par exemple, « Nous sommes désolés, nous n’avons pas reconnu votre réponse. Pour les problèmes d’assistance, veuillez envoyer un message à <support channel>. »
 
-![Un canvas créé montre les réponses pour chaque bouton d'action.]({% image_buster /assets/img/whatsapp/whatsapp18.png %})
+![Un Canvas créé montrant les réponses pour chaque bouton d’appel à l’action.]({% image_buster /assets/img/whatsapp/whatsapp18.png %})
 
 Notez que vous pouvez utiliser toutes les actions suivantes proposées par Braze Canvas, telles que des messages en réponse, des mises à jour du profil utilisateur ou des webhooks Braze à Braze. 
 
@@ -95,7 +95,7 @@ Notez que vous pouvez utiliser toutes les actions suivantes proposées par Braze
 
 Les messages de liste apparaissent sous la forme d'un corps de message avec une liste d'options cliquables. Chaque liste peut comporter plusieurs sections et chaque liste peut comporter jusqu'à 10 lignes.
 
-![Exemple d'un message WhatsApp avec des lignes correspondant à différents styles de mode.]({% image_buster /assets/img/whatsapp/list_message_example.png %}){: style="max-width:40%;"}
+![Exemple d'un message WhatsApp sous forme de liste avec des lignes pour différents styles de mode.]({% image_buster /assets/img/whatsapp/list_message_example.png %}){: style="max-width:40%;"}
 
 ### Configurer l'expérience message de la liste dans Canvas
 
@@ -103,11 +103,11 @@ Les messages de liste apparaissent sous la forme d'un corps de message avec une 
 
 Vous ne pouvez ajouter des messages de la liste WhatsApp aux canevas que s'ils sont basés sur une action, car ils doivent être en réponse à un message de l'utilisateur.
 
-#### Étape 2 : Créer une étape de l'envoi des messages WhatsApp
+#### Étape 2 : Créer une étape de l'envoi des messages WhatsApp
 
 Ajoutez une [étape de message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) WhatsApp, puis sélectionnez la présentation du message de réponse de **Message de liste.**
 
-![Une collection sélectionnable des différents types d'envois de messages de réponse WhatsApp que vous pouvez créer, y compris "Message de liste".]({% image_buster /assets/img/whatsapp/list_message_option.png %}){: style="max-width:70%;"}
+![Une collection sélectionnable des différents types d'envois de messages de réponse WhatsApp que vous pouvez créer, y compris le "Message de liste".]({% image_buster /assets/img/whatsapp/list_message_option.png %}){: style="max-width:70%;"}
 
 Ajoutez un nom de **bouton Liste** que les utilisateurs sélectionneront pour afficher votre liste. Ensuite, utilisez les champs du **contenu de la liste** pour créer votre liste :
 
@@ -115,7 +115,7 @@ Ajoutez un nom de **bouton Liste** que les utilisateurs sélectionneront pour af
 - **Rangée :** Ajoutez jusqu'à 10 lignes, ou éléments de liste, dans toutes les sections.
 - **Description de la ligne (facultatif) :** Ajoutez une description facultative à toutes les lignes (éléments de la liste).
 
-![La section "Contenu de la liste" a été complétée par deux sections et plusieurs lignes et descriptions de lignes.]({% image_buster /assets/img/whatsapp/list_content.png %}){: style="max-width:60%;"}
+![La section "Contenu de la liste" a été remplie avec deux sections et plusieurs lignes et descriptions de lignes.]({% image_buster /assets/img/whatsapp/list_content.png %}){: style="max-width:60%;"}
 
 Modifiez l'ordre des sections et des lignes en sélectionnant et en faisant glisser l'icône située à côté de leur nom.
 
@@ -135,7 +135,7 @@ Continuez à créer votre Canvas.
 
 Si vous avez des descriptions de ligne, vous devez utiliser l'**expression régulière Matches** pour spécifier une ligne. Par exemple, si vous souhaitez spécifier une ligne avec la description "Notre nouveau style qui s'adapte à votre paire de bottines préférée", vous pouvez utiliser l'[expression régulière]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/) avec "bottines".
 
-![Un déclencheur WhatsApp utilisant le filtre pour "Matches expression régulière" pour capturer les messages de réponse avec "ankle boots".]({% image_buster /assets/img/whatsapp/regex_list_message.png %})
+![Un déclencheur WhatsApp utilisant le filtre pour "Matches regex" pour capturer les messages de réponse avec "ankle boots".]({% image_buster /assets/img/whatsapp/regex_list_message.png %})
 
 ## Considérations relatives aux messages de réponse
 

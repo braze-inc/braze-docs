@@ -1,6 +1,6 @@
 ---
-nav_title: Búsqueda de campañas
-article_title: Búsqueda de campañas
+nav_title: Buscar campañas
+article_title: Buscar campañas
 page_order: 10
 page_type: reference
 description: "Este artículo describe las distintas formas en que puedes buscar campañas en la página de la lista de campañas."
@@ -9,7 +9,7 @@ tool:
 
 ---
 
-# Búsqueda de campañas
+# Buscar campañas
 
 > A medida que construyas más campañas en tu espacio de trabajo, puedes ajustar los filtros y columnas de la lista de campañas para clasificar y organizar estas campañas. Utilizar una combinación de estos métodos de búsqueda puede ayudarte a acotar los resultados, especialmente a medida que crece tu lista de campañas.
 

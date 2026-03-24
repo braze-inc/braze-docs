@@ -28,10 +28,10 @@ Modale In-App-Nachrichten sind so konzipiert, dass sie sich bestmöglich und mit
 
 Es gibt zwar keine Beschränkungen für die Anzahl der Textzeichen, die Sie in einer In-App-Nachricht (sowie in Buttons, in der Überschrift, im Hauptteil und in anderen Teilen) verwenden können, aber wir begrenzen die Anzahl der Textzeichen, die Sie verwenden. Zu viel Text führt dazu, dass die Nutzer die Nachricht erweitern und scrollen müssen.
 
-Alle In-App-Nachrichten haben eine empfohlene Bildgröße von 500 KB, eine maximale Bildgröße von 5 MB und unterstützen die Dateitypen PNG, JPEG und GIF.
+Alle In-App-Nachrichten haben eine empfohlene Bildgröße von 500 KB, eine maximale Bildgröße von 5 MB und unterstützen die Dateitypen PNG, JPEG und GIF. WebP-Bilder werden nicht von allen Geräten oder Browsern unterstützt. Wir empfehlen, WebP-Bilder in das PNG- oder JPEG-Format zu konvertieren, bevor Sie sie zu In-App-Nachrichten hinzufügen.
 
 {% tabs %}
-{% tab Porträt %}
+{% tab Portrait %}
 
 | Typ | Seitenverhältnis | Bildqualität | Anmerkungen |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ Alle In-App-Nachrichten haben eine empfohlene Bildgröße von 500 KB, eine maxim
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
 {% endtab %}
-{% tab Landschaft %}
+{% tab Landscape %}
 
 | Typ | Seitenverhältnis | Bildqualität | Anmerkungen |
 | --- | --- | --- | --- |
@@ -61,7 +61,7 @@ Alle In-App-Nachrichten haben eine empfohlene Bildgröße von 500 KB, eine maxim
 
 | Typ | Seitenverhältnis | Bildqualität | Anmerkungen |
 | --- | --- | --- | --- |
-| Modal (nur Bild) | 1:1 | Hohe Auflösung 1200 x 2000 px <br> Mindestauflösung 600 x 600 px | Die Nachricht passt sich an die meisten Bildformate an. |
+| Modal (nur Bild) | 1:1 | Empfohlene maximale Auflösung: 1200 x 2000 Pixel <br> Mindestauflösung: 600 x 600 Pixel | Die Nachricht passt sich an die meisten Bildformate an. Die empfohlene maximale Auflösung hat ein Seitenverhältnis von 3:5, was möglicherweise nicht zu optimalen Ergebnissen führt. Größere Bilder sind zwar verwendbar, können jedoch zu längeren Zeiten zum Laden führen. <br> Das ideale Seitenverhältnis für Bilder ist 1:1\. Wird dieses Verhältnis nicht eingehalten, kann dies während des Hochladens eine Warnung triggern. Diese Warnung ist ein Vorschlag für optimale Ergebnisse und verhindert nicht das Hochladen größerer Bilder. |
 | Modal mit Text | 29:10 | Hohe Auflösung 1450 x 500 px <br> Mindestauflösung 600 x 205 px | Große Bilder werden verkleinert und horizontal zentriert. Breite Bilder werden am linken und rechten Rand abgeschnitten. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
@@ -152,7 +152,7 @@ table td {
 | --- | --- | 
 | Größe | 5 MB |
 | Breite | Überschrift: 600 px<br>Text: 480 px |
-| Dateitypen | PNG, JPEG, GIF |
+| Dateitypen | PNG, JPEG, GIF<br><br> Die Unterstützung für WebP-Bilder variiert je nach Client für E-Mail. Um eine zuverlässige Darstellung zu gewährleisten, konvertieren Sie WebP-Bilder bitte in das PNG- oder JPEG-Format, bevor Sie sie zu E-Mail-Nachrichten hinzufügen. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Text Spezifikationen | Empfohlene maximale Eigenschaften |

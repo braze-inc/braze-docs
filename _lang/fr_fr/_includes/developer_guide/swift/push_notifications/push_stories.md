@@ -1,12 +1,12 @@
-{% multi_lang_include developer_guide/prerequisites/cordova.md %} Vous devrez également mettre en place [les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift), ce qui implique l'implémentation du framework `UNNotification`.
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Vous devrez également [configurer les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift), ce qui implique la mise en œuvre du`UNNotification`framework.
 
-Les versions SDK suivantes sont nécessaires pour recevoir des Push Stories :
+La version minimale suivante du SDK est requise pour recevoir le contenu push :
 
 {% sdk_min_versions swift:5.0.0 %}
 
-## Mise en place des contenus push
+## Configuration du contenu push
 
-### Étape 1 : Ajout de la cible d'extension de contenu de notification {#notification-content-extension}
+### Étape 1 : Ajout de la cible d'extension de contenu de notification {#notification-content-extension}
 
 Dans votre projet d'application, sélectionnez **Fichier > Nouveau > Cible**, ajoutez une nouvelle cible `Notification Content Extension` et activez-la.
 
@@ -19,13 +19,13 @@ Xcode doit générer une nouvelle cible pour vous et créer des fichiers automat
 
 ### Étape 2 : Activation des capacités {#enable-capabilities}
 
-Dans Xcode, ajoutez la capacité Modes d'arrière-plan en utilisant le volet **Signature et capacités** pour la cible principale de l'application. Sélectionnez les cases à cocher **Récupération en arrière-plan** et **Notifications à distance**.
+Dans Xcode, veuillez ajouter la fonctionnalité « Background Modes » à la cible principale de l'application à l'aide du volet **« Signing&Capabilities** ». Sélectionnez les cases à cocher **Récupération en arrière-plan** et **Notifications à distance**.
 
 ![]({% image_buster /assets/img/swift/push_story/enable_background_mode.png %})
 
 #### Ajouter un groupe d'applications
 
-De plus, depuis le volet **Signature et capacités** dans Xcode, ajoutez la capacité Groupes d’applications à votre cible d'application principale ainsi qu'aux cibles d'extension de contenu de notification. Ensuite, cliquez sur le bouton **+**. Utilisez l’ID de l’ensemble de votre application pour créer le groupe d'applications. Par exemple, si l’ID de l’ensemble de votre application est `com.company.appname`, vous pouvez nommer votre groupe d'applications `group.com.company.appname.xyz`.
+De plus, à partir du volet **Signing&Capabilities** (Capacités de signature) dans Xcode, veuillez ajouter la capacité App Groups (Groupe d'applications) à votre cible d'application principale ainsi qu'aux cibles Notification Content Extension (Extension de contenu de notification). Ensuite, cliquez sur le bouton **+**. Utilisez l’ID de l’ensemble de votre application pour créer le groupe d'applications. Par exemple, si l’ID de l’ensemble de votre application est `com.company.appname`, vous pouvez nommer votre groupe d'applications `group.com.company.appname.xyz`.
 
 {% alert important %}
 Les groupes d'applications dans ce contexte font référence à l'[App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) d'Apple et non à votre identifiant de l'espace de travail Braze (anciennement groupe d'applications).
@@ -36,11 +36,11 @@ Si vous n'ajoutez pas votre application à un groupe d'applications, votre appli
 ### Étape 3 : Ajout du framework Push Story à votre application {#enable-capabilities}
 
 {% tabs local %}
-{% tab Gestionnaire de paquets Swift %}
+{% tab Swift Package Manager %}
 
 Après avoir suivi le [Guide d’intégration du gestionnaire de paquets Swift]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager/), ajoutez `BrazePushStory` à votre `Notification Content Extension` :
 
-![Dans Xcode, sous Infrastructures et bibliothèques, sélectionnez l’icône « + » pour ajouter un framework.]({% image_buster /assets/img/swift/push_story/spm1.png %})
+![Dans Xcode, sous infrastructures et bibliothèques, sélectionnez l’icône « + » pour ajouter une infrastructure.]({% image_buster /assets/img/swift/push_story/spm1.png %})
 
 ![]({% image_buster /assets/img/swift/push_story/spm2.png %})
 
@@ -73,7 +73,7 @@ Pour savoir comment implémenter des notifications push riches, consultez [Notif
 Après avoir mis à jour le Podfile, naviguez jusqu’au répertoire de votre projet d’application Xcode dans votre terminal et exécutez `pod install`.
 
 {% endtab %}
-{% tab Manual (Manuel) %}
+{% tab Manual %}
 
 Téléchargez le dernier `BrazePushStory.zip` depuis la [page GitHub](https://github.com/braze-inc/braze-swift-sdk/releases), extrayez-le et ajoutez le `BrazePushStory.xcframework` à l’`Notification Content Extension` de votre projet.
 
@@ -134,6 +134,12 @@ Ouvrez le fichier `Info.plist` de l’`Notification Content Extension`, puis ajo
 | `UNNotificationExtensionDefaultContentHidden`    | Valeur booléenne | `YES`                  |
 | `UNNotificationExtensionInitialContentSizeRatio` | Nombre  | `0.6`                  |
 | `UNNotificationExtensionUserInteractionEnabled`  | Valeur booléenne | `YES`                  |
+
+Veuillez également ajouter le dictionnaire de `Braze`niveau supérieur suivant au même`Info.plist`fichier, en remplaçant`REPLACE_WITH_APPGROUP`par le groupe d'applications que vous avez créé à [l'étape 2](#enable-capabilities) :
+
+| Clé              | Type   | Valeur                    |
+|------------------|--------|--------------------------|
+| `Braze.AppGroup` | Chaîne de caractères | `REPLACE_WITH_APPGROUP`  |
 
 Votre fichier `Info.plist` doit correspondre à l'image suivante :
 

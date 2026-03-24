@@ -1,6 +1,6 @@
 ---
 nav_title: Innovationserklärung
-article_title: Innovationserklärung
+article_title: Innovation Erklärung
 description: "In diesem Referenzartikel finden Sie die Innovationserklärung von Braze."
 noindex: true
 page_order: 9
@@ -34,8 +34,8 @@ _Zuletzt aktualisiert am 2\. Juni 2025._
 
 Braze entwickelt ständig neue Features, Funktionen, Produkte und Dienste. Zu diesem Zweck holt Braze nicht nur das Feedback seiner Kund:innen ein, sondern bemüht sich auch, die Bedürfnisse seiner Kund:innen zu antizipieren.
 
-Im Rahmen seiner Innovationsstrategie analysiert Braze die in den Diensten enthaltenen Informationen und die Art und Weise, wie die Dienste genutzt werden (e.g., Analyse der Klicks von Dashboard-Benutzern und der Bewegungen auf dem Dashboard), um seinen Kunden im Allgemeinen beratende und analytische Informationen zur Verfügung zu stellen und um die Dienste oder damit verbundene Dienste aufzubauen, bereitzustellen oder zu verbessern, vorausgesetzt, dass diese Nutzung nicht die Erstellung oder Änderung von Endbenutzerprofilen zur Verwendung bei der Bereitstellung von Diensten für einen anderen Kunden oder die Korrektur oder Erweiterung von Daten, die Braze aus einer anderen Quelle erworben hat, umfasst.
-Braze kommuniziert auch mit Nutzer:innen des Dashboards, um sie über Möglichkeiten zur Optimierung ihrer Nutzung der Serviceleistungen; Dienste aufzuklären und zu informieren und um sie über die Innovationsbemühungen von Braze zu informieren. Braze kann E-Mails an Nutzer:innen des Dashboards senden oder mit ihnen über die Dienste kommunizieren. Kunden:in können auch die GitHub-Repositories von Braze abonnieren, um Benachrichtigungen über neue Versionen zu erhalten.
+Im Rahmen seiner Innovationsstrategie analysiert Braze die in den Serviceleistungen enthaltenen Informationen und die Art und Weise, wie die Serviceleistungen genutzt werden (e.gz. B. Analyse der Klicks und Bewegungen der Nutzer:innen im Dashboard), um seinen Kunden allgemein beratende und analytische Informationen zur Verfügung zu stellen und um die Serviceleistungen oder damit verbundene Serviceleistungen aufzubauen, bereitzustellen oder zu verbessern, vorausgesetzt, dass diese Nutzung nicht die Erstellung oder Änderung von Kundenprofilen zur Bereitstellung von Serviceleistungen für einen anderen Kunden oder die Korrektur oder Ergänzung von Daten umfasst, die Braze aus einer anderen Quelle bezogen hat.
+Braze kommuniziert auch mit Nutzer:innen des Unternehmens, um sie über Möglichkeiten zur Optimierung der Nutzung der Serviceleistungen zu informieren und sie über die Innovationsbemühungen von Braze auf dem Laufenden zu halten. Braze behält sich vor, E-Mails an Unternehmensnutzer:innen zu senden oder über die Serviceleistungen mit ihnen zu kommunizieren. Kunden:in können auch die GitHub-Repositories von Braze abonnieren, um Benachrichtigungen über neue Versionen zu erhalten.
 
 Braze besitzt alle Rechte, Titel und Interessen an allen Materialien, die aus seinen Innovationsaktivitäten resultieren.
 

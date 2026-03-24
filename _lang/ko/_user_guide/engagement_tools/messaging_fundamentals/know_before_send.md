@@ -1,9 +1,9 @@
 ---
-nav_title: 보내기 전에 알아두어야 할 사항
+nav_title: 보내기 전에 알아두세요
 article_title: 보내기 전에 알아두어야 할 사항
 description: "사전 출시 가이드를 방문한 후, 콘텐츠 카드, 이메일, 인앱 메시지, 푸시 및 SMS에 대한 최종 확인 목록 또는 '주의 사항'을 참조하세요."
 alias: /know_before_send/
-page_order: 10
+page_order: 7
 tool:
     - Campaigns
     - Canvas
@@ -20,7 +20,7 @@ tool:
 ## 일반
 
 #### 확인할 사항
-- [**API 속도 제한**](https://braze.com/resources/articles/whats-rate-limiting): 워크스페이스에서 오류가 발생하지 않도록 Braze API [사용량 제한]({{site.baseurl}}/api/api_limits/)을 검토하세요. 요청을 일괄 처리하고 있는 경우 사용량 제한을 늘리고 싶다면 고객 성공 매니저에게 문의하세요. 이 과정에는 리드 타임이 필요하므로 이에 따라 계획을 세우십시오.
+- [**API 속도 제한**](https://braze.com/resources/articles/whats-rate-limiting): 워크스페이스에서 오류가 발생하지 않도록 Braze API [사용량 제한]({{site.baseurl}}/api/api_limits/)을 검토하세요. 요율 제한을 늘리려는 경우(이미 요청을 배치하고 있는 경우) 고객 성공 매니저에게 문의하세요. 이 과정에는 리드 타임이 필요하므로 이에 따라 계획을 세우십시오.
 - [**필요한 최대 게재빈도 설정 재정의**]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping): 일부 캠페인, 예를 들어 트랜잭션 메시지와 같은 경우, 사용자의 빈도 제한에 도달했더라도 항상 사용자에게 도달하기를 원할 것입니다(예: 전달 알림). 특정 캠페인이 최대 게재빈도 설정 규칙을 무시하도록 하려면, 해당 캠페인의 전달을 예약할 때 Braze 대시보드에서 최대 게재빈도 설정을 끔으로 설정할 수 있습니다.
 
 #### 알아야 할 사항
@@ -83,13 +83,13 @@ tool:
 - **우선순위:** 여러 배너를 출시하는 경우 각 배너가 표시되는 우선순위를 수동으로 설정할 수 있습니다.
 
 #### 알아두어야 할 사항
-- **액체 개인화:** 액체 개인화는 매 세션 시작 시 새로 고쳐집니다.
-- **배치 및 배너 비율:** 각 배너 배치는 작업 공간에서 최대 10개의 캠페인에 사용할 수 있습니다.  
+- **액체 개인화:** Liquid 개인화는 모든 새로고침 요청마다 새로 고쳐집니다.
+- **배치 및 배너 비율:** 각 배너 배치는 작업 공간에서 최대 25개의 메시지에 사용할 수 있습니다.  
 - **클릭 및 노출:** 배너의 클릭 및 노출은 SDK를 통해 자동으로 추적됩니다.
-- **제한 사항:**  현재 다음 기능은 지원되지 않습니다: 캔버스 통합, API 트리거 및 작업 기반 캠페인, 커런츠, 연결된 콘텐츠, 프로모션 코드, 사용자 제어 해제 및 `catalog_items` [`:rerender` 태그]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid) 사용.
+- **제한 사항:**  현재 다음 기능은 지원되지 않습니다: 캔버스 통합, API 트리거 및 작업 기반 캠페인, 연결된 콘텐츠, 프로모션 코드, 사용자 제어 해제 및 `catalog_items` [`:rerender` 태그]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid) 사용.
 - **테스트:** 테스트 배너를 표시하려면 사용 중인 기기가 포그라운드 푸시 알림을 받을 수 있어야 합니다.
 - **사용자 정의 HTML:** 사용자 정의 HTML을 사용하여 클릭 작업(링크 및 버튼 등)을 정의할 때 클릭을 기록하기 위해 [JS 브리지]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge)를 활용하세요. 클릭 작업은 드래그 앤 드롭 편집기에서 미리 구축된 구성 요소를 사용할 때만 자동으로 기록됩니다.
-- **배치 요청:** 세션당 SDK에 최대 10개의 배치가 반환될 수 있습니다. 각 배치는 사용자가 자격이 있는 가장 높은 우선 순위의 배너를 포함합니다.
+- **배치 요청:** 단일 새로 고침 요청에서 최대 10개의 배치를 SDK에 반환할 수 있습니다. 각 배치는 사용자가 자격이 있는 가장 높은 우선 순위의 배너를 포함합니다.
 
 ## 콘텐츠 카드
 
@@ -103,7 +103,8 @@ tool:
 - **콘텐츠 카드 새로고침**: 기본값으로, Braze는 콘텐츠 카드 요청을 세션 시작 시, 피드 아래로 스와이프할 때(모바일), 그리고 마지막 새로고침이 1분 이상 지났을 때 카드 보기를 열 때 동기화합니다.
 - **캐싱 콘텐츠 카드**: 콘텐츠 카드 캐싱 옵션은 저희 [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android) 및 [웹](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards) 문서에서 찾을 수 있습니다. 
 - **최대 게재빈도 설정**: 최대 게재빈도 설정은 콘텐츠 카드에 적용되지 않습니다.
-- **노출 횟수**: 노출 횟수는 일반적으로 카드가 보일 때 기록됩니다. 예를 들어, 받은편지함에 콘텐츠 카드가 가득 차 있는 경우 사용자가 특정 콘텐츠 카드로 스크롤할 때까지 노출 횟수가 기록되지 않습니다. 웹, Android 및 iOS 플랫폼 간에는 몇 가지 미묘한 차이가 있습니다.  
+- **노출 횟수**: 노출 횟수는 일반적으로 카드가 보일 때 기록됩니다. 예를 들어, 받은편지함에 콘텐츠 카드가 가득 차 있는 경우 사용자가 특정 콘텐츠 카드로 스크롤할 때까지 노출 횟수가 기록되지 않습니다. 웹, Android 및 iOS 플랫폼 간에는 몇 가지 미묘한 차이가 있습니다.
+- **SDK 세션 및 카드 생성**: SDK 세션이 없는 사용자에게는 콘텐츠 카드가 생성되지 않으며, 해당 사용자가 세그먼트 기준을 충족하더라도 마찬가지입니다. 그러나 사용자가 이미 Android 세션을 가지고 있는 경우, iOS 전용 클릭 작업이 있는 콘텐츠 카드가 여전히 생성되며, 사용자는 iOS에서 세션이 있을 때 해당 콘텐츠 카드를 볼 수 있습니다. 카드 생성에 대한 자세한 내용은 [카드 생성]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/)를 참조하세요.  
 
 ## 인앱 메시지
 
@@ -112,4 +113,4 @@ tool:
 - **전송 대 노출 횟수**: 인앱 메시지의 경우, "발송됨"의 개념은 다른 사용 가능한 채널과 다릅니다. 인앱 메시지를 보려면 사용자가 세션을 시작하고, 해당 오디언스에 속하며, 트리거를 수행해야 합니다. 이 때문에 우리는 "노출 횟수"를 더 명확하게 추적합니다.
 - **트리거**: 기본값으로, 인앱 메시지는 SDK에 의해 기록된 이벤트에 의해 트리거됩니다. 서버에서 보낸 이벤트로 인해 인앱 메시지를 트리거하려면 [iOS]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=swift) 및 [Android]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android)에 대한 이러한 가이드를 통해서도 이를 달성할 수 있습니다.
 - [캔버스 인앱 메시지]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/#advancement-behavior-options): 이 메시지는 사용자가 앱을 처음 열 때(세션 시작 시 트리거됨) 캔버스 구성 요소에서 예약된 메시지가 전송된 후에 나타납니다.
-- **연결된 콘텐츠 호출**: 연결된 콘텐츠를 사용하면 메시지에 동적 콘텐츠를 보낼 수 있습니다. 인앱 메시지와 같은 채널을 통해 메시지를 보낼 때, 이는 사용자 장치에 더 많은 동시 연결을 생성할 수 있습니다(메시지는 일괄 처리 대신 하나씩 전송됩니다). 이를 관리하기 위해, 메시지의 [비율 제한]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting)을 권장합니다.
+- **연결된 콘텐츠 호출**: 커넥티드 콘텐츠를 사용하면 메시지에서 동적 콘텐츠를 보낼 수 있습니다. 인앱 메시지와 같은 채널을 통해 메시지를 보내면 사용자의 디바이스에 더 많은 동시 접속자가 생길 수 있습니다(메시지는 일괄적으로 전송되지 않고 하나씩 전송됨). 이를 관리하려면 메시지 [속도 제한을]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting) 사용하는 것이 좋습니다.

@@ -71,6 +71,10 @@ Você tem a opção de incluir uma declaração `{% else %}` em sua lógica cond
 
 A tag `{% endif %}` indica que você terminou sua lógica condicional. Você deve incluir a tag `{% endif %}` em qualquer mensagem com lógica condicional. Se você não incluir uma tag `{% endif %}` em sua lógica condicional, receberá um erro, pois o Braze não conseguirá analisar sua mensagem.
 
+{% alert note %}
+Tags condicionais (`if`, `elsif`, `unless`) suportam operadores, mas não filtros. Para avaliar um valor filtrado em uma condicional, atribua o resultado do filtro a uma variável primeiro, depois faça referência a essa variável. Para mais detalhes, veja [Onde usar operadores e filtros]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+{% endalert %}
+
 ### Tutorial: Entregar conteúdo baseado em localização
 
 Quando você terminar este tutorial, poderá usar tags com "if", "elsif" e "else" para entregar conteúdo com base na localização do usuário.
@@ -121,7 +125,7 @@ Quando você terminar este tutorial, poderá usar tags com "if", "elsif" e "else
 
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 
 {% raw %}
 ```liquid
@@ -165,7 +169,7 @@ A tag a seguir permite especificar uma mensagem para usuários com a atribuiçã
 ```
 {% endraw %} 
 
-![Uma mensagem de exemplo no dashboard do Braze, usando um atributo 'nome' nulo.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
+![Uma mensagem de exemplo no dashboard Braze, usando um atributo 'nome' nulo.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
 
 {% raw %}
 ```liquid
@@ -230,7 +234,7 @@ Strings e matrizes exigem apóstrofos retos ao redor delas, enquanto booleanos e
 
 {% endraw %}
 
-Você também pode usar outros [operadores básicos](https://shopify.dev/docs/themes/liquid/reference/basics/operators), como menor que (<) ou maior que (>) para números inteiros:
+Você também pode usar outros [operadores básicos](https://shopify.dev/docs/themes/liquid/reference/basics/operators) como menor que (<) ou maior que (>) para inteiros:
 
 {% raw %}
 
@@ -242,7 +246,7 @@ Você também pode usar outros [operadores básicos](https://shopify.dev/docs/th
 
 #### String
 
-Uma [string]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings) é composta por caracteres alfanuméricos e armazena um pedaço de dados sobre seu usuário. Por exemplo, você pode ter `favorite_color: red` ou `phone_number: 3025981329`. Os valores de string devem ter apóstrofos ao redor.
+Uma [string]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings) é composta por caracteres alfanuméricos e armazena uma peça de dados sobre seu usuário. Por exemplo, você pode ter `favorite_color: red` ou `phone_number: 3025981329`. Os valores de string devem ter apóstrofos ao redor.
 
 {% raw %}
 
@@ -270,7 +274,7 @@ Para matrizes, você deve usar "contains" e não pode usar "==".
 
 #### Horário
 
-Um carimbo de data/hora de quando um evento ocorreu. [Valores de Tempo]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) devem ter um [filtro matemático]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters) aplicado a eles para serem usados em lógica condicional.
+Um carimbo de data/hora de quando um evento ocorreu. Valores de [Tempo]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) devem ter um [filtro matemático]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters) aplicado a eles para serem usados na lógica condicional.
 
 {% raw %}
 

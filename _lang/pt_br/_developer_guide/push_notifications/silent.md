@@ -1,14 +1,14 @@
 ---
 page_order: 2
-nav_title: Notificações Silenciosas
-article_title: Configurando notificações push silenciosas para o SDK Braze
+nav_title: Notificações silenciosas
+article_title: Configure notificações por push silenciosas para o SDK Braze
 channel:
   - push notifications
 ---
 
 # Notificações por push silenciosas
 
-> Aprenda como configurar notificações push silenciosas para o SDK Braze.
+> Aprenda como configurar notificações por push silenciosas para o SDK Braze.
 
 {% sdktabs %}
 {% sdktab android %}

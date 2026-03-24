@@ -1,75 +1,89 @@
 ---
-nav_title: Gestion des segments
-article_title: Gestion des segments
+nav_title: Gérer les segments
+article_title: Gérer les segments
 page_order: 1
 page_type: tutorial
 tool: Segments
-description: "Cet article couvre les actions que vous pouvez entreprendre pour gérer vos segments, telles que filtrer une liste de segments, créer des segments et modifier des segments."
+description: "Cet article présente les actions disponibles pour gérer vos segments : filtrer une liste de segments, créer des segments et modifier des segments."
 
 ---
 
-# Gestion des segments
+# Gérer les segments
 
-> La section Segments vous permet d'afficher une liste complète de vos segments existants, de créer de nouveaux segments et de modifier des segments existants. Vous pouvez affiner la liste des segmentations en sélectionnant divers filtres et colonnes afin de n'afficher que les informations les plus pertinentes pour vous.
+> La section Segments vous permet de consulter la liste complète de vos segments existants, d'en créer de nouveaux et de modifier ceux qui existent déjà. Vous pouvez affiner cette liste en sélectionnant divers filtres et colonnes afin de n'afficher que les informations les plus pertinentes pour vous.
 
 ![La section Segments affiche une liste des segments actifs.]({% image_buster /assets/img/segment/segments_page.png %})
 
 ## Personnaliser votre vue
 
-Personnalisez votre vue de la liste des segments en utilisant des filtres et en modifiant les colonnes que vous souhaitez voir apparaître. Lorsque vous quittez la section **Segments** et que vous y revenez, la liste revient à l'affichage par défaut, ce qui efface tous les filtres que vous avez sélectionnés précédemment.
+Adaptez votre vue de la liste des segments en utilisant des filtres et en choisissant les colonnes à afficher. Lorsque vous quittez la section **Segments** puis y revenez, la liste revient à l'affichage par défaut et tous les filtres précédemment sélectionnés sont effacés.
 
 ### Filtre d'état
 
-Vous pouvez réduire la liste pour n'afficher que les segments actifs ou archivés. Tout segment non archivé est considéré comme actif.
+Vous pouvez restreindre la liste pour n'afficher que les segments actifs ou archivés. Tout segment non archivé est considéré comme actif.
 
 ### Filtres
 
-Triez les segments de la liste en définissant les filtres suivants :
-- **Dernière modification par :** L'utilisateur qui a modifié les segments pour la dernière fois
+Triez les segments de la liste en ajustant les filtres suivants :
+- **Dernière modification par :** L'utilisateur qui a modifié les segments en dernier
 - **Dernière modification :** Période au cours de laquelle les segments ont été modifiés pour la dernière fois
-- **Taille estimée :** Nombre approximatif d'utilisateurs dans les segments
-- **Tags :** Tags associés aux segments
-- **Teams :** Teams associés aux segments
-- **Segments de suivi avancés uniquement :** Affichez uniquement les segments pour lesquels le [suivi des analyses]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) est activé.
+- **Taille estimée :** Fourchette approximative du nombre d'utilisateurs dans les segments
+- **Étiquettes :** Étiquettes associées aux segments
+- **Équipes :** Équipes associées aux segments
+- **Segments avec suivi avancé uniquement :** Affichez uniquement les segments pour lesquels le [suivi analytique]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) est activé.
 
 ### Colonnes
 
-Il s'agit des colonnes d'informations que vous pouvez sélectionner pour les afficher dans la liste des segments :
-- **Filtres :** Nombre de filtres dans la segmentation
-- **Dernière modification :** Date à laquelle le segment a été modifié pour la dernière fois
-- **Dernière modification par :** L'utilisateur qui a modifié le segment pour la dernière fois
-- **Tags :** Tags associés au segmentation
-- **Teams :** Teams associés au segmentation
+Voici les colonnes d'informations que vous pouvez choisir d'afficher dans la liste des segments :
+- **Filtres :** Nombre de filtres dans le segment
+- **Dernière modification :** Date de la dernière modification du segment
+- **Dernière modification par :** L'utilisateur qui a modifié le segment en dernier
+- **Étiquettes :** Étiquettes associées au segment
+- **Équipes :** Équipes associées au segment
 - **Taille estimée :** Estimation du nombre d'utilisateurs dans le segment
-- **Canvas :** Nombre de toiles qui utilisent le segment
-- **Campagnes :** Nombre de campagnes utilisant le segment
+- **Canvas :** Nombre de Canvas qui utilisent le segment
+- **Campagnes :** Nombre de campagnes qui utilisent le segment
 
-### Afficher uniquement les étoilés
+### Afficher uniquement les favoris
 
-En sélectionnant **Afficher uniquement les** segments marqués d'un astérisque, vous réduisez votre affichage aux segments que vous avez marqués d'un astérisque.
+En sélectionnant **Afficher uniquement les étoilés**, vous limitez l'affichage aux segments que vous avez marqués d'une étoile.
+
+## Consulter l'utilisation d'un segment dans l'envoi de messages {#messaging-use}
+
+Accédez à la section **Utilisation des messages** d'un segment pour obtenir un aperçu des endroits où ce segment est utilisé, par exemple dans d'autres segments, des campagnes ou des Canvas.
+
+{% alert note %}
+Pour éviter les boucles de segments se référençant mutuellement, les segments qui utilisent le filtre **Appartenance à un segment** ne peuvent pas être référencés par d'autres segments. Pour en savoir plus, consultez la section [Filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+{% endalert %}
 
 ## Gérer des segments spécifiques
 
-![Le menu de modification d'un segment présente les options "Modifier", "Dupliquer", "Archiver" et "Ajouter à la liste".]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}
+![Menu de modification d'un segment avec les options Modifier, Dupliquer, Archiver et Ajouter aux favoris.]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}
 
-Pour gérer un segment spécifique, survolez-le et sélectionnez l'icône de menu au bout de la ligne pour faire apparaître les options suivantes :
-- **Modifier :** Modifiez les filtres de votre segmentation.
-- **Dupliquer :** Faites une copie de votre segmentation.
-- **Archiver :** Archivez le segment. Notez que cela archivera également toutes les campagnes ou Canvases qui utilisent ce segment.
-- **Ajouter aux segments étoilés :** Étoilez le segment, ce qui vous permet d'y accéder rapidement en cochant la case Afficher uniquement les étoiles dans la section des segments.
+Pour gérer un segment spécifique, survolez-le et sélectionnez l'icône de menu en fin de ligne pour afficher les options suivantes :
+- **Modifier :** Modifiez les filtres de votre segment.
+- **Dupliquer :** Créez une copie de votre segment.
+- **Archiver :** Archivez le segment. Notez que cela archivera également toutes les campagnes ou tous les Canvas qui utilisent ce segment.
+- **Ajouter aux favoris :** Marquez le segment d'une étoile pour y accéder rapidement en cochant la case Afficher uniquement les étoilés dans la section des segments.
  
-Vous pouvez également effectuer des actions en masse, notamment l'archivage et le tagging en masse, en cochant les cases situées à côté de plusieurs noms de segments.
+Vous pouvez également effectuer des actions groupées (archivage et étiquetage en masse, notamment) en cochant les cases situées à côté de plusieurs noms de segments.
 
-![Plusieurs segments sélectionnés avec "CRM" dans le champ déroulant "Tag As".]({% image_buster /assets/img/segment/segments_bulk_action.png %}){: style="max-width:45%;"}
+![Plusieurs segments sélectionnés avec « CRM » sélectionné dans le champ déroulant « Étiqueter en tant que ».]({% image_buster /assets/img/segment/segments_bulk_action.png %}){: style="max-width:45%;"}
 
-### modifications depuis la dernière consultation
+### Modifications depuis la dernière consultation
 
-Le nombre de mises à jour des segments par d'autres membres de votre équipe est suivi par l'indicateur *Changements depuis le dernier affichage* sur la page d'aperçu du segment. Sélectionnez **Changements depuis la dernière consultation** pour afficher un journal des modifications apportées au nom, à la description et à l'audience cible du segment. Pour chaque mise à jour, vous pouvez voir qui a effectué la mise à jour et quand. Vous pouvez utiliser ce journal des modifications pour auditer les modifications apportées à votre segmentation.
+Le nombre de mises à jour apportées aux segments par d'autres membres de votre équipe est suivi grâce à l'indicateur *Modifications depuis la dernière consultation* sur la page d'aperçu du segment. Sélectionnez **Modifications depuis la dernière consultation** pour afficher un journal des modifications portant sur le nom, la description et l'audience cible du segment. Pour chaque mise à jour, vous pouvez voir qui a effectué la modification et quand. Ce journal des modifications vous permet d'auditer les changements apportés à votre segment.
 
-## Recherche de segments
-Recherchez des noms de segmentation en saisissant des termes dans le champ de recherche. 
+## Rechercher des segments
 
-Tous les termes et chaînes de caractères saisis dans ce champ feront l'objet d'une recherche. Par exemple, la recherche de « segment d'essai 1 » renverra les segments dont le nom contient « essai », « segment » ou « 1 ». Pour rechercher une chaîne de caractères exacte, ajoutez des guillemets avant et après votre terme de recherche. En recherchant ["segment d'essai 1"], vous obtiendrez tous les segments dont le nom contient l'expression exacte "segment d'essai 1".
+Recherchez des segments par leur nom en saisissant des termes dans le champ de recherche. 
 
-![Les résultats de la recherche d'utilisateurs sont les suivants : "Tous les utilisateurs (Test)", "Tous les utilisateurs", "Tous les utilisateurs 15".]({% image_buster /assets/img/segment/segments_search.png %})
+Tous les termes et chaînes de caractères saisis dans ce champ font l'objet d'une recherche. Par exemple, la recherche de « segment d'essai 1 » renverra les segments dont le nom contient « essai », « segment » ou « 1 ». Pour rechercher une chaîne de caractères exacte, encadrez votre terme de recherche avec des guillemets. En recherchant ["segment d'essai 1"], vous obtiendrez tous les segments dont le nom contient l'expression exacte « segment d'essai 1 ».
 
+![Lorsque vous saisissez « all users » dans le champ de recherche, les résultats incluent « All Users (Test) », « All Users » et « All Users 15 ».]({% image_buster /assets/img/segment/segments_search.png %})
+
+### Segments dans les Canvas
+
+Pour rechercher toutes les références à un segment, y compris celles présentes dans d'autres segments, campagnes ou Canvas, accédez à la section [Utilisation des messages](#messaging-use) du segment. Le filtre **Segment cible** sur la page **Canvas** ne recherche que les segments d'audience Canvas.
+
+![Filtre Segment cible sur la page Canvas.]({% image_buster /assets/img/segment/target_segment.png %}){: style="max-width:45%;"}

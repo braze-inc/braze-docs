@@ -1,5 +1,5 @@
 ---
-nav_title: "RCS の設定"
+nav_title: "RCSのセットアップ"
 article_title: RCS の設定
 page_order: 1
 alias: /rcs_setup/
@@ -38,9 +38,9 @@ Braze で RCS を送信できるようになるには、、ビジネスが次の
 
 RCSメッセージを送信する前に、RCS検証済み送信者を登録する必要があります。これは、ブランド名、ロゴ、検証バッジ、およびオプションのタグラインを含む、ユーザーがモバイルデバイスに表示するブランドの表現です。RCS 検証済み送信者は、顧客の信頼を強化し、メッセージが認証済みの送信元からのメッセージであることを確認します。 
 
-![「Cat Failz Cafe」という RCS メッセージの RCS 検証済み送信者の例。]({% image_buster /assets/img/rcs/rcs_sender.png %}){: style="max-width:60%;"}
+![Cat Failz Cafe "というRCSメッセージのRCS検証済み送信者の例。]({% image_buster /assets/img/rcs/rcs_sender.png %}){: style="max-width:60%;"}
 
-注文フォームに RCS SKU を追加すると、Braze に対してこのことが通知され、Braze が RCS 送信者登録情報をお知らせします。これらの形式は、RCSメッセージを送信する国によって異なります。 
+注文フォームにRCS SKUを追加すると、Brazeに通知され、RCS送信者登録情報が連絡される。これらの形式は、RCSメッセージを送信する国によって異なります。 
 
 記入済みのフォームをBrazeに提出したら、あなたに代わって登録手続きを完了します。 
 

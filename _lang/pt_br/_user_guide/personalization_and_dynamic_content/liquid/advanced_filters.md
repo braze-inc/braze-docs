@@ -30,7 +30,7 @@ description: "Este artigo de referência lista filtros avançados, exemplos e co
 | nome do filtro | descrição do filtro | exemplo de entrada | exemplo de saída |
 |---|---|---|---|
 | `url_escape` | Identifica todos os caracteres em uma string que não são permitidos em URLS e substitui os caracteres por suas variantes com escape | `{{'hey<>hi' | url_escape}}` | ei%3C%3Ehi |
-| `url_param_escape` | Substitui todos os caracteres em uma string que não são permitidos em URLs por suas variantes com escape, incluindo o E comercial (&) | `{{'hey<&>hi' | url_param_escape}` | ei%3C%26%3Ehi |
+| `url_param_escape` | Substitui todos os caracteres em uma string que não são permitidos em URLs por suas variantes escapadas, incluindo o ampersand (&) | `{{'hey<&>hi' | url_param_escape}}` | ei%3C%26%3Ehi |
 | `url_encode` | Codifica uma string que é compatível com o URL | `{{ 'google search' | url_encode }}` | google+search |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -83,7 +83,7 @@ Não há como instanciar um hash como uma variável (como uma expressão) no Liq
 
 Esse filtro deve ser sempre usado ao personalizar uma string em um dicionário JSON e é útil principalmente para webhooks.
 
-## filtros de formatação JSON
+## Filtros de formatação JSON
 
 | nome do filtro | descrição do filtro |
 |---|---|
@@ -93,7 +93,7 @@ Esse filtro deve ser sempre usado ao personalizar uma string em um dicionário J
 
 {% endraw %}
 
-{% details exemplo de entrada e saída json_parse %}
+{% details json_parse example input and output %}
 
 ### Entrada 
 
@@ -115,7 +115,7 @@ Item Name: {{ item.store_name }}
 
 {% enddetails %}
 
-{% details exemplo de entrada e saída as_json_string %}
+{% details as_json_string example input and output %}
 
 ### Entrada
 

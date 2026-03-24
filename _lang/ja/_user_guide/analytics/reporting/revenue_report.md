@@ -39,6 +39,10 @@ tool: Reports
 
 ## 収益計算の理解
 
+{% alert note %}
+為替レートなしで通貨の収益を記録すると、Braze はそれを0.00 米ドルの購入として記録します。
+{% endalert %}
+
 <style>
     .no-split {
         word-break: keep-all;
@@ -55,23 +59,23 @@ tool: Reports
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">生涯収益</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Revenue' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">ユーザーあたりの生涯価値</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ユーザあたりの寿命値' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Value Per User' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">平均日割り売上</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='平均日割り売上' %}</td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">平均日次収益</a></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Average Daily Revenue' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-purchases">日割り購入数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='日割り購入数' %}</td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-purchases">日々の購入</a></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Purchases' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">ユーザーあたりの日割り収益</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='ユーザーあたりの日次収益' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Revenue Per User' %}</td>
         </tr>
     </tbody>
 </table>
@@ -80,6 +84,6 @@ tool: Reports
 
 選択した日付範囲内で購入された製品のリスト、各製品の購入数、および各製品で生成された収益の量については、**Product Breakdown**テーブルを参照してください。
 
-![「製品名」、「購入数」、「収益」の各列を示す [製品の内訳] のテーブル。]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
+![「製品名」、「購入数」、「収益」の各列を示す [製品の内訳] のテーブル]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
 
 

@@ -1,9 +1,9 @@
 ---
 nav_title: Saiba antes de enviar
-article_title: Saiba antes de enviar
+article_title: Saiba Antes de Enviar
 description: "Depois de visitar nosso guia de pré-lançamento, consulte esta lista final de verificações ou \"pegadinhas\" para cartões de conteúdo, e-mail, mensagens no app, push e SMS."
 alias: /know_before_send/
-page_order: 10
+page_order: 7
 tool:
     - Campaigns
     - Canvas
@@ -20,7 +20,7 @@ Embora forneçamos uma extensa lista de recursos para consulta antes do envio, c
 ## Geral
 
 #### Coisas a verificar
-- [**Limites de frequência da API**](https://braze.com/resources/articles/whats-rate-limiting): Revise os [limites de frequência]({{site.baseurl}}/api/api_limits/) da API do Braze para seus espaços de trabalho para evitar erros. Se quiser aumentar seus limites de frequência (e já estiver agrupando solicitações), entre em contato com seu gerente de sucesso do cliente. Lembre-se de que esse processo requer tempo de espera, portanto, planeje-se adequadamente.
+- [**Limites de frequência da API**](https://braze.com/resources/articles/whats-rate-limiting): Revise os [limites de frequência]({{site.baseurl}}/api/api_limits/) da API do Braze para seus espaços de trabalho para evitar erros. Se você está procurando aumentar seus limites de taxa (e já está agrupando solicitações), entre em contato com seu gerente de sucesso do cliente. Lembre-se de que esse processo requer tempo de espera, portanto, planeje-se adequadamente.
 - [**Substituições necessárias do limite de frequência**]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping): Há algumas campanhas, como as mensagens transacionais, que você desejará que sempre cheguem ao usuário, mesmo que já tenha atingido o limite de frequência (por exemplo, uma notificação de entrega). Se quiser que uma campanha específica substitua as regras de limite de frequência, você poderá configurar isso no dashboard do Braze ao programar a entrega dessa campanha, desativando o limite de frequência.
 
 #### Coisas para saber
@@ -46,7 +46,7 @@ Para obter mais assistência com a solução de problemas do Canva e da campanha
 - **Envio de fatores de volume**: Alguns fatores que determinam os volumes de envio capazes para um IP incluem:
   - Caixas de correio: Os grandes provedores de e-mail provavelmente podem lidar com milhões por dia a partir de um único IP, enquanto um provedor de caixa de e-mail regional menor ou com uma infraestrutura menor talvez não consiga lidar com essa quantidade.
   - Reputação do remetente: Talvez seja possível enviar um volume maior por dia a partir de um único IP se o remetente estiver preparado para esse volume e se a reputação do remetente for forte o suficiente em cada caixa de correio ou domínio para o qual está enviando.
-- **Práticas recomendadas**: Analise [as práticas recomendadas de envio de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) da Braze e entre em contato com a equipe da sua conta Braze se quiser saber mais sobre os serviços de entregabilidade.
+- **Práticas recomendadas**: Revise as [melhores práticas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) da Braze e entre em contato com sua equipe de contas da Braze se você quiser saber mais sobre os serviços de entregabilidade.
 
 ## Push
 
@@ -79,17 +79,17 @@ Para obter mais assistência com a solução de problemas do Canva e da campanha
 ## Banners
 
 #### Coisas a verificar
-- **Dimensões do banner:** Crie seus Banners usando um elemento de dimensão fixa e teste-os no editor.
-- **Prioridade:** Se estiver lançando vários Banners, você poderá definir manualmente a prioridade de exibição de cada banner.
+- **Dimensões do Banner:** Crie seus Banners usando um elemento de dimensão fixa e teste-os no editor.
+- **Prioridade:** Se você estiver lançando vários Banners, pode definir manualmente a prioridade de como cada banner é exibido.
 
 #### Coisas para saber
-- **Personalização Liquid:** A personalização Liquid é atualizada a cada início de sessão.
-- **Proporção de posicionamento e banner:** Cada posicionamento de banner pode ser usado em até 10 campanhas em um espaço de trabalho.  
-- **Cliques e impressões:** Os cliques e impressões de banners são rastreados automaticamente com o SDK.
-- **Limitações:**  Atualmente, não há suporte para os seguintes recursos: Integração com o Canva, campanhas baseadas em ações e disparadas pela API, Currents, Connected Content, códigos promocionais, demissões controladas pelo usuário e `catalog_items` usando a [tag`:rerender` ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid).
-- **Testes:** Para exibir o banner de teste, o dispositivo que estiver usando deve ser capaz de receber notificações por push em primeiro plano.
-- **HTML personalizado:** Aproveite a [ponte JS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) para registrar cliques ao usar HTML personalizado para definir ações de clique, como links e botões. As ações de clique só são registradas automaticamente ao usar os componentes pré-construídos no editor de arrastar e soltar.
-- **Solicitação de colocações:** Até 10 posicionamentos podem ser retornados ao SDK por sessão. Cada colocação incluirá o banner de prioridade mais alta para o qual o usuário é elegível.
+- **Personalização Liquid:** A personalização Liquid é atualizada a cada solicitação de atualização.
+- **Colocação e proporção de Banner:** Cada colocação de Banner pode ser usada em até 25 mensagens em um espaço de trabalho.  
+- **Cliques e impressões:** Cliques e impressões para Banners são rastreados automaticamente com o SDK.
+- **Limitações:**  Atualmente, os seguintes recursos não são suportados: Integração de Canvas, campanhas acionadas por API e baseadas em ações, Conteúdo Conectado, códigos de promoção, dispensas controladas pelo usuário e `catalog_items` usando a [tag]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid).
+- **Teste:** Para exibir o Banner de teste, o dispositivo que você está usando deve ser capaz de receber notificações por push em primeiro plano.
+- **HTML personalizado:** Aproveite o [JS bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) para registrar cliques ao usar HTML personalizado para definir ações de clique, como links e botões. As ações de clique são registradas automaticamente apenas ao usar os componentes pré-construídos no editor de arrastar e soltar.
+- **Solicitando Colocações:** Até 10 colocações podem ser retornadas ao SDK em uma única solicitação de atualização. Cada colocação incluirá o Banner de maior prioridade para o qual um usuário é elegível.
 
 ## Cartões de conteúdo
 
@@ -103,7 +103,8 @@ Para obter mais assistência com a solução de problemas do Canva e da campanha
 - **Atualização do cartão de conteúdo**: Por padrão, o Braze atualiza as solicitações do cartão de conteúdo à medida que elas são sincronizadas no início da sessão, ao deslizar o feed para baixo (celular) e quando a visualização dos cartões é aberta se a última atualização tiver ocorrido há mais de um minuto.
 - **Armazenamento em cache de cartões de conteúdo**: As opções de cache do cartão de conteúdo podem ser encontradas em nossos documentos para [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android) e [Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards). 
 - **Limite de frequência**: O limite de frequência não se aplica aos cartões de conteúdo.
-- **Impressões**: As impressões são geralmente registradas quando um cartão é visto. Por exemplo, se você tiver uma caixa de entrada cheia de cartões de conteúdo, uma impressão não será registrada até que o usuário role até o cartão de conteúdo específico. Há algumas nuances entre as plataformas Web, Android e iOS.  
+- **Impressões**: As impressões são geralmente registradas quando um cartão é visto. Por exemplo, se você tiver uma caixa de entrada cheia de cartões de conteúdo, uma impressão não será registrada até que o usuário role até o cartão de conteúdo específico. Há algumas nuances entre as plataformas Web, Android e iOS.
+- **Sessões do SDK e criação de cartões**: Os Cartões de Conteúdo não são criados para usuários sem sessões do SDK, mesmo que esses usuários atendam aos critérios do segmento. No entanto, se um usuário já tiver uma sessão Android, os Cartões de Conteúdo com ações de clique específicas para iOS ainda serão criados, e o usuário poderá visualizar esses Cartões de Conteúdo no iOS assim que tiver uma sessão lá. Consulte [Criação de cartões]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) para saber mais sobre quando os cartões são criados.  
 
 ## Mensagem no app
 
@@ -111,5 +112,5 @@ Para obter mais assistência com a solução de problemas do Canva e da campanha
 - **Envio de mensagens no app**: No início da sessão, o SDK solicita que todas as mensagens no app elegíveis sejam enviadas ao dispositivo junto com seus disparadores, de modo que, se o evento for realizado durante a sessão, ele poderá receber a mensagem no app de forma rápida e confiável.
 - **Enviadas versus impressões**: Para mensagens no app, o conceito de "enviado" é diferente dos outros canais disponíveis. Para ver uma mensagem no app, o usuário precisa iniciar uma sessão, estar no público elegível e disparar a mensagem. Por isso, rastreamos as "impressões", pois elas são mais claras.
 - **Disparando**: Por padrão, as mensagens no app são disparadas por eventos registrados pelo SDK. Se quiser disparar mensagens no app por meio de eventos enviados pelo servidor, você também pode fazer isso por meio destes guias para [iOS]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=swift) e [Android]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android).
-- [Mensagens no app do Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/#advancement-behavior-options): Essas mensagens aparecem na primeira vez em que o usuário abre o app (disparado pela sessão inicial) depois que a mensagem programada no componente Canva foi enviada a ele.
-- **Chamadas de conteúdo conectado**: O uso do Connected Content permite que você envie conteúdo dinâmico em mensagens. Quando você envia mensagens por meio de um canal como o de mensagens no app, isso pode criar mais conexões simultâneas com os dispositivos dos seus usuários (as mensagens são enviadas uma a uma, em vez de em lotes). Para gerenciar isso, recomendamos [limitar a frequência de]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting) suas mensagens.
+- [Mensagens in-app do Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/#advancement-behavior-options): Essas mensagens aparecem na primeira vez em que o usuário abre o app (disparado pela sessão inicial) depois que a mensagem programada no componente Canva foi enviada a ele.
+- **Chamadas de Conteúdo Conectado**: Usar Conteúdo Conectado permite enviar conteúdo dinâmico em mensagens. Quando você envia mensagens através de um canal como mensagens in-app, isso pode criar mais conexões simultâneas com os dispositivos dos seus usuários (as mensagens são enviadas uma a uma, em vez de em lotes). Para gerenciar isso, recomendamos [limitação de taxa]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting) para suas mensagens.

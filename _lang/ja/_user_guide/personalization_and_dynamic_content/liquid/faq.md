@@ -32,7 +32,7 @@ Braze コネクテッドコンテンツは Liquid タグの一例です。これ
 
 `assign`タグを使用して変数を作成および割り当てることができます。これにより、メッセージ作成画面で変数が作成され、メッセージ全体で参照できるようになります。
 
-### Liquidを使用するとデータポイントが消費されますか？
+### Liquidはログデータポイントを使用するのか？
 
 いいえ。
 
@@ -72,9 +72,9 @@ API トリガーイベントのプロパティにアクセスするには、`api
 
 For loops are also known as [反復タグ](https://shopify.github.io/liquid/tags/iteration/).Liquid スニペットで for ループロジックを使用すると、条件が満たされるまで Liquid のブロックを反復実行できます。 
 
-Braze では、これは配列のカスタム属性、または[カタログ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs)、[セレクション]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/)、または[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)の呼び出し応答によって返される値やオブジェクトのリストをチェックするために使用できます。具体的には、メッセージングの一環としてforループロジックを使用して、製品が在庫にあるかどうか、または製品が最低評価を持っているかどうかを確認できます。 
+Braze では、これは配列のカスタム属性、または[カタログ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs)、[セレクション]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/)、または[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)の呼び出し応答によって返される値やオブジェクトのリストをチェックするために使用できます。具体的には、メッセージングの一環としてforループロジックを使用して、製品が在庫にあるかどうか、または製品が最低評価を持っているかどうかを確認できます。 
 
-たとえば、"Games"という名前のカタログがあり、"cheap_games"という名前の選択肢があるとします。"cheap_games" でゲームのタイトルをプルするには、次のLiquid スニペットを使用します。
+例えば、「ゲーム」というカタログがあり、その中に「ゲームタイトル」という選択項目があると"cheap_games".しよう。このカタログ内のゲームタイトルを取得するには、次のLiquidスニペットを使うことができる"cheap_games",：
 
 {% raw %}
 ```liquid
@@ -86,3 +86,35 @@ Braze では、これは配列のカスタム属性、または[カタログ]({{
 {% endraw %}
 
 設定された条件が満たされると、メッセージを進めることができます。さまざまな条件で Liquid ブロックを繰り返す代わりに、このロジックを使用すると、時間を節約できて便利です。
+
+### コンテンツブロックを使ったメッセージに余分なスペースが入るのはなぜだ？
+
+送信したメッセージに、Liquidを使用したコンテンツブロックで余分なスペースが生じている場合、条件分岐文内に不要な段落や改行が含まれている可能性がある。条件文は複数行にまたがらず、1行で記述せよ。
+
+#### 例
+
+{% raw %}
+```liquid
+{% if {{custom_attribute.${has_discount}}} == true %}Discounted Item{% elsif {{custom_attribute.${is_new_arrival}}} == true %}New Arrival{% else %}Regular Item{% endif %}
+{% endraw %}
+
+### When should I use `assign` versus `capture`?
+
+Both `assign` and `capture` create Liquid variables, but they serve different purposes:
+
+- `assign` is for simple variables that store a single value, such as a boolean, number, or simple string. You can also apply a single filter in the same line.
+- `capture` is for storing a block of text that may include multiple variables, strings, or complex expressions. Use `capture` when the value is too complex for a single `assign` statement, such as URLs that utilize other Liquid variables or custom attributes as parameters. `capture` is also preferred when implementing Liquid variables in the body of Connected Content calls.
+
+#### Examples
+
+{% raw %}
+```liquid
+{% comment %} Valid assign usage {% endcomment %}
+{% assign name = {{custom_attribute.${first_name}}} %}
+{% assign price = {{custom_attribute.${price}}} | plus: 0 %}
+
+{% comment %} Use capture for complex strings {% endcomment %}
+{% capture greeting %}Hello, {{custom_attribute.${first_name}}}! Your order #{{custom_attribute.${order_id}}} is ready.{% endcapture %}
+{{ greeting }}
+```
+{% endraw %}

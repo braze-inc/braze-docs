@@ -32,7 +32,7 @@ description: "この記事では、「キャンバスリストのエクスポー
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
 | `page` | オプション | 整数 | 返すキャンバスのページ、デフォルトは`0` （最大100枚までの最初のセットを返す） |
 | `include_archived` | オプション | ブール値 | アーカイブされたキャンバスを含めるかどうか。デフォルトは`false` 。 |
@@ -50,8 +50,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/list?page
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{

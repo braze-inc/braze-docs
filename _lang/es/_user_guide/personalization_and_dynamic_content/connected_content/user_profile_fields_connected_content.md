@@ -1,12 +1,12 @@
 ---
-nav_title: Obtención de datos de perfil de usuario
-article_title: Obtención de datos de perfil de usuario en llamadas de contenido conectado
+nav_title: Obtención de datos del perfil del usuario
+article_title: Extraer datos de perfil de usuario en llamadas de contenido conectado
 page_order: 3
 description: "En este artículo se explica cómo incluir perfiles de usuario en las llamadas a Connected Content, así como las mejores prácticas en relación con las plantillas Liquid."
 toc_headers: h2
 ---
 
-# Obtención de datos del perfil del usuario
+# Extraer datos de perfil de usuario
 
 > Esta página explica cómo introducir perfiles de usuario en tus llamadas de contenido conectado y las mejores prácticas de plantillas Liquid. 
 

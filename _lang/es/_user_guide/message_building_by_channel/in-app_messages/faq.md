@@ -45,23 +45,6 @@ La elegibilidad para un mensaje dentro de la aplicación se calcula en el moment
 
 Una vez que se muestre el mensaje dentro de la aplicación, la elegibilidad dependerá de cuándo se descargue y desencadene el mensaje dentro de la aplicación.
 
-### ¿Qué son las plantillas de mensajes in-app?
-
-Los mensajes in-app se entregarán como mensajes in-app con plantilla cuando se seleccione **Reevaluar elegibilidad de campaña antes de mostrar** o si alguna de las siguientes etiquetas Liquid existe en el mensaje:
-
-- `canvas_entry_properties`
-- `connected_content`
-- Variables SMS como {% raw %}`{sms.${*}}`{% endraw %}
-- `catalog_items`
-- `catalog_selection_items`
-- `event_properties`
-
-Esto significa que durante el inicio de sesión, el dispositivo recibirá el desencadenante de ese mensaje in-app en lugar del mensaje completo. Cuando el usuario activa el mensaje in-app, el dispositivo del usuario hará una petición de red para obtener el mensaje real.
-
-{% alert note %}
-El mensaje no se enviará si el dispositivo no tiene acceso a Internet. El mensaje podría no entregarse si la lógica de Liquid tarda demasiado en resolverse.
-{% endalert %}
-
 ### ¿Por qué mi campaña archivada de mensajes in-app sigue proporcionando impresiones de mensajes in-app?
 
 Esto puede ocurrir para usuarios que cumplían los criterios del segmento cuando la campaña de mensajes in-app estaba activa.

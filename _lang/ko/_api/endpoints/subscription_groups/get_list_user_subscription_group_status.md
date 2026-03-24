@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: 사용자의 구독 그룹 상태 나열"
+nav_title: "GET: 사용자의 구독 그룹 상태 목록"
 article_title: "GET: 사용자의 구독 그룹 상태 나열"
 search_tag: Endpoint
 page_order: 4
@@ -30,7 +30,7 @@ description: "이 문서에서는 사용자의 구독 그룹 상태 Braze 엔드
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557 {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `subscription.status.get` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
@@ -54,17 +54,17 @@ description: "이 문서에서는 사용자의 구독 그룹 상태 Braze 엔드
 - SMS 및 WhatsApp 구독 그룹의 경우 `external_id` 또는 `phone` 이 필요합니다.  둘 다 제출하면 `external_id` 만 쿼리에 사용되며 해당 사용자에게 전화 번호가 적용됩니다.
 - 이메일 구독 그룹의 경우 `external_id` 또는 `email` 이 필요합니다.  둘 다 제출하면 `external_id` 만 쿼리에 사용되며 해당 사용자에게 이메일 주소가 적용됩니다.
 
-## 요청 예시 
+## 예시 요청
 
 {% tabs %}
-{% tab 여러 사용자 %}
+{% tab Multiple Users %}
 {% raw %}
 ```
 https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&external_id[]=1&external_id[]=2
 ```
 {% endraw %}
 {% endtab %}
-{% tab SMS 및 WhatsApp %}
+{% tab SMS and WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&phone=+11112223333' \
@@ -72,7 +72,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 {% endtab %}
-{% tab 이메일 %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&email=example@braze.com' \
@@ -82,13 +82,11 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 {% endtab %}
 {% endtabs %}
 
-## 응답
+## Response
 
 모든 성공적인 응답은 구독 그룹의 상태 및 사용자 기록에 따라 `Subscribed`, `Unsubscribed` 또는 `Unknown` 로 반환됩니다.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "status": {
     "1": "Unsubscribed",
@@ -97,5 +95,9 @@ Authorization: Bearer YOUR-REST-API-KEY
   "message": "success"
 }
 ```
+
+{% alert important %}
+이 엔드포인트는 사용자의 글로벌 구독 상태와 무관하게 구독 그룹 상태를 독립적으로 반환합니다. 사용자가 전역적으로 탈퇴한 경우, Braze 대시보드에서는 해당 사용자가 각 구독 그룹에서 탈퇴한 상태로 표시됩니다. 그러나 이 엔드포인트는 여전히 마지막으로 저장된 구독 그룹 상태(예: `Subscribed`)를 반환합니다. 글로벌 구독 상태가 개별 구독 그룹을 덮어쓰지 않으면서도 이를 우선시하기 때문입니다.<br><br>Braze는 개별 구독 그룹 상태를 보존하므로, 사용자가 전체적으로 재구독할 경우 각 구독 그룹은 이전에 저장된 상태로 복원됩니다. 사용자의 유효한 구독 상태를 확인하려면, 해당 사용자의 글로벌 구독 상태와 본 엔드포인트에서 반환된 구독 그룹 상태를 모두 확인하십시오.
+{% endalert %}
 
 {% endapi %}

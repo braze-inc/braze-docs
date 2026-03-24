@@ -1,7 +1,7 @@
 ---
 nav_title: "PUT:キャンバス内の翻訳を更新"
 article_title: "PUT:キャンバス内の翻訳を更新"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 1
 
 layout: api_page
@@ -15,13 +15,11 @@ description: "この記事では、「キャンバス内の翻訳を更新」エ
 /canvas/translations
 {% endapimethod %}
 
-> このエンドポイントを使用して、キャンバスの複数の翻訳を更新します。
+> このエンドポイントを使用して、キャンバスの複数の翻訳を更新します。ローカライゼーション機能の詳細については、[メッセージ内のロケールを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照せよ。
 
 キャンバスを開始した後に翻訳を更新したい場合は、まず[メッセージを下書きとして保存]({{site.baseurl}}/post-launch_edits/)する必要があります。
 
-{% alert important %}
-このエンドポイントは現在早期アクセス中である。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 
 ## 前提条件
 
@@ -37,27 +35,26 @@ description: "この記事では、「キャンバス内の翻訳を更新」エ
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`step_id`| 必須 | 文字列 | キャンバスのステップのID。 |
-|`message_variation_id`| 必須 | string | メッセージバリエーションの ID。 |
-|`locale_name`| 必須 | string | ロケールの名前。 |
-|`workflow_id` | 必須 | string | キャンバスの ID。 |
+|`workflow_id` | 必須かどうか | string | キャンバスの ID。 |
+|`step_id`| 必須かどうか | 文字列 | キャンバスのステップのID。 |
+|`message_variation_id`| 必須かどうか | string | メッセージバリエーションの ID。 |
+|`locale_id`| 必須かどうか | string | ロケールの識別子（UUID）。 |
+|`translation_map` | 必須 | オブジェクト | 新しい翻訳を含むオブジェクト。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、**多言語サポート**設定またはリクエストレスポンスで見つけることができる。
+すべての翻訳識別子はユニバーサル一意識別子（UUID）と見なされ、GETエンドポイントの応答で確認できる。
 {% endalert %}
 
 ## 例のリクエスト
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
-    "workflow_id": "a74404b3-3626-4de0-bdec-06935f3aa0ad", // CANVAS ONLY
-    "step_id": "a74404b3-3626-4de0-bdec-06935f3aa0ac", // CANVAS ONLY
-    "message_variation_id": "f14404b3-3626-4de0-bdec-06935f3aa0ad",
+    "workflow_id": "a74404b3-3626-4de0-bdec-06935f3aa0ad",
+    "step_id": "a74404b3-3626-4de0-bdec-06935f3aa0ac",
+    "message_variation_id": "a74404b3-3626-4de0-bdec-06935f3aa0ac",
     "locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
     "translation_map": {
         "id_3": "Ein Absatz ohne Formatierung"
@@ -90,19 +87,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 	]
 }
 ```
-
-## トラブルシューティング
-
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
-
-| エラーメッセージ  | トラブルシューティング |
-|----|----------|
-| `The provided translations yielded errors when parsing. Please contact Braze for more information.` | サードパーティの翻訳者が、Liquid エラーを発生させる例外を含む翻訳を提供した場合に発生します。Braze サポートにお問い合わせください。 |
-| `The provided translations are missing 'id_1', 'id_2'` | 翻訳IDが一致しないか、翻訳されたテキストが制限を超えています。例えば、これはペイロードの形状が翻訳オブジェクトのフィールドを欠いていることを意味します。すべてのメッセージ（多言語イネーブルメントの場合）は、ID が関連づけられた「翻訳ブロック」を特定の数だけ持つ必要があります。提供されたペイロードに ID のいずれかが欠けている場合、これは不完全なオブジェクトとみなされ、エラーとなります。 |
-| `The provided locale code does not exist.` | サードパーティの翻訳者のペイロードに、Braze には存在しないロケールコードが含まれています。 |
-| `The provided translations have exceeded the maximum of 20MB.` | 提供されたペイロードがサイズ制限を超えました。 |
-| `You have exceeded the maximum number of requests. Please try again later.` | すべての Braze API にはレート制限が組み込まれており、この認証トークンに割り当てられたレートを超えた場合、このエラーが自動的に返されます。 |
-| `This message does not support multi-language.` | これは、メッセージ ID がまだ多言語メッセージをサポートしていない場合に発生する可能性があります。翻訳できるのは、次のチャネルのメッセージのみです：プッシュ、アプリ内メッセージ、メール。 |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

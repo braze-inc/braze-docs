@@ -20,11 +20,11 @@ Lorsque vous créez un message in-app par glisser-déposer, sélectionnez **Insc
 
 ![L'éditeur de messages in-app avec le modèle de formulaire de capture d'e-mail.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_template1.png %})
 
-### Étape 2 : Définissez les styles de vos messages
+### Étape 2 : Définissez les styles de vos messages
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
-### Étape 3 : Personnalisez votre composant d'inscription à l'e-mail
+### Étape 3 : Personnalisez votre composant d'inscription à l'e-mail
 
 Pour commencer à créer votre formulaire d'inscription par e-mail, sélectionnez l'élément de capture d'e-mail dans l'éditeur. Par défaut, les adresses e-mail collectées auront le groupe d'abonnement global **Abonné**. Pour abonner des utilisateurs à des groupes d'abonnement spécifiques, reportez-vous à la section [Mise à jour des états d'abonnement à l'e-mail.]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#updating-email-subscription-states)
 
@@ -34,7 +34,7 @@ Vous pouvez personnaliser le texte substitutif et le texte de l'étiquette de l'
 
 #### Validation de l’e-mail
 
-Si l'utilisateur saisit une adresse e-mail contenant des caractères spéciaux non acceptés, il verra apparaître un indicateur d'erreur générique et ne pourra pas soumettre le formulaire. Ce message d'erreur n'est pas personnalisable. Vous pouvez visualiser le comportement de l'erreur dans l'onglet **Prévisualisation et test** et sur votre appareil de test. Pour en savoir plus sur la manière dont Braze formate les adresses e-mail, consultez la rubrique [Validation de l'e-mail.]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/)
+Si l'utilisateur saisit une adresse e-mail contenant des caractères spéciaux non acceptés, il verra apparaître un indicateur d'erreur générique et ne pourra pas soumettre le formulaire. Ce message d'erreur n'est pas personnalisable. Vous pouvez visualiser le comportement de l'erreur dans l'onglet **Preview & Test** et sur votre appareil de test. Pour en savoir plus sur la manière dont Braze formate les adresses e-mail, consultez la rubrique [Validation de l'e-mail.]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/)
 
 ### Étape 4 : Ajouter une clause de non-responsabilité (facultatif)
 

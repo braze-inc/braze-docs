@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT : Mettre à jour le compte utilisateur de tableau de bord"
+nav_title: "PUT : Mettre à jour un compte utilisateur de tableau de bord"
 article_title: "PUT : Mettre à jour le compte utilisateur de tableau de bord"
 alias: /post_update_existing_user_account/
 search_tag: Endpoint
@@ -47,7 +47,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 ```json
 {
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
-    "name": {"name": {
+    "name": {
         "givenName": "Test",
         "familyName": "User"
     },
@@ -70,7 +70,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
                     {
                          "teamName": "Test Team",
                          "teamPermissions": ["admin"]
-                    } 
+                    }
                 ]
             },
             {
@@ -80,7 +80,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
                         "appGroupPermissionSetName":  "Test Permission Set"
                     }
                 ]
-            } 
+            }
         ]
    }
 }
@@ -98,7 +98,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 
 
 ## Exemple de demande
-```json
+```bash
 curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
@@ -126,11 +126,11 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                 "appGroupPermissions": ["basic_access","send_campaign_canvases"],
                 "team": [
                     {
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["admin"]
                     }
                 ]
-            } 
+            }
         ]
     }
 }
@@ -153,7 +153,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
         "roles": [
             {
                 "roleName": "Test Role",
-                "roleId": "519dafcdba23dfaae7,
+                "roleId": "519dafcdba23dfaae7",
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25789fabcded",
@@ -162,16 +162,16 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                         "team": [
                             {
                                 "teamId": "2519dafcdba238ae7",
-                                "teamName": "Some Team",                  
+                                "teamName": "Some Team",
                                 "teamPermissions": ["export_user_data"]
                             }
                         ]
-                    } 
+                    }
                 ]
             },
             {
                 "roleName": "Another Test Role",
-                "roleId": "23125dad23dfaae7,
+                "roleId": "23125dad23dfaae7",
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25adfabcded",
@@ -183,7 +183,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                                 "permissions": ["basic_access","publish_cards"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         ],
@@ -195,11 +195,11 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                 "team": [
                     {
                          "teamId": "2519dafcdba238ae7",
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["admin"]
                     }
                 ]
-            } 
+            }
         ]
     }
 }
@@ -208,7 +208,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
 ### États relatifs aux d’erreur
 Si un utilisateur avec cet ID n’existe pas dans Braze, l’endpoint répondra avec :
 
-```json
+```http
 HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8
 

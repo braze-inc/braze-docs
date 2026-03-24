@@ -10,7 +10,7 @@ description: "This reference page notes the operators that Liquid supports, as w
 
 > Liquid supports many [operators](https://docs.shopify.com/themes/liquid/basics/operators) that can be used in your conditional statements. This page covers the operators that Liquid supports and provides use cases of how you can use them in your messages.
 
-This table lists the operators that are supported. Note that parentheses are invalid characters in Liquid and prevents your tags from working.
+This table lists the operators that are supported. Note that parentheses are invalid characters in Liquid and prevent your tags from working.
 
 |   Syntax| Operator Description|
 |---------|-----------|
@@ -25,11 +25,36 @@ This table lists the operators that are supported. Note that parentheses are inv
 | contains | checks to see if a string or string array contains a string|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+{% alert note %}
+Operators can be used in conditional statements (`if`, `elsif`, `unless`) but not in `assign` statements, `for` loops, `case`/`when` statements, or array access brackets. For a full breakdown, see [Where to use operators and filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+{% endalert %}
+
+### Grouping conditions without parentheses
+
+Liquid doesn't support parentheses for grouping expressions. To evaluate complex boolean logic such as `(a and b) or c`, use nested `if` statements or intermediate variables.
+
+For example, to check whether a value satisfies a compound condition, assign an intermediate variable:
+
+{% raw %}
+```liquid
+{% assign qualifies = false %}
+{% if points > 100 %}
+{% assign qualifies = true %}
+{% elsif points == 100 and member_level == 'gold' %}
+{% assign qualifies = true %}
+{% endif %}
+
+{% if qualifies %}
+You qualify for a reward!
+{% endif %}
+```
+{% endraw %}
+
 ## Tutorials
 
 Let's go through a few tutorials to learn how to use these operators for your marketing campaigns:
 
-### Choose message with an integer custom attribute
+### Choose a message with an integer custom attribute
 
 Let's send push notifications with personalized promotional discounts to users who have or haven't made purchases. The push notification will use an integer custom attribute called `total_spend` to check a user's total spend.
 
@@ -75,7 +100,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 {% endraw %}
 {% enddetails %}
 
-Now if a user's "Total Spend" custom attribute is greater than `0`, they will get the message:
+Now, if a user's "Total Spend" custom attribute is greater than `0`, they will get the message:
 
 ```
 Surprise! We added a 15% discount code to your account that automatically applies to your next order.
@@ -86,7 +111,7 @@ If a user's "Total Spend" custom attribute does not exist or is equal to `0`, th
 Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
 ```
 
-### Choose message with a string custom attribute
+### Choose a message with a string custom attribute
 
 Let's send push notifications to users, and personalize the message based on each user's most recently played game. This will use a string custom attribute called `recent_game` to check which game a user has last played.
 
@@ -110,11 +135,11 @@ Your fleet awaits your next orders. Log on when you're ready to rejoin the war f
 {% endraw %}
 
 {: start="3"}
-3. Use the `elsif` tag with the does not equal (`!=`) and "and" (`&&`) operators to check if the user has a recent game (meaning the value isn't blank), and that the game isn't *Awkward Dinner Party* or *Proxy War 3: War of Thirst*. Then, create a message to send to those users.
+3. Use the `elsif` tag with the "does not equal" (`!=`) and "and" (`and`) operators to check if the user has a recent game (meaning the value isn't blank), and that the game isn't *Awkward Dinner Party* or *Proxy War 3: War of Thirst*. Then, create a message to send to those users.
 
 {% raw %}
 ```liquid
-{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != blank and {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' and {{custom_attribute.${recent_game}}} != 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 ```
 {% endraw %}
@@ -145,7 +170,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
 {% elsif {{custom_attribute.${recent_game}}} == 'Proxy War 3: War of Thirst' %}
 Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
-{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != blank and {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' and {{custom_attribute.${recent_game}}} != 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 {% else %}
 Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
@@ -220,4 +245,28 @@ Stream now!
 
 You can also [abort messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) based on Connected Content.
 
+## Troubleshooting
 
+### Preview may incorrectly coerce property types 
+
+When previewing a message in the dashboard, most variables (such as custom attributes) are coerced to the correct type. However, some variables don't have a defined type that the preview can look up:
+
+- `api_trigger_properties`
+- `canvas_entry_properties`
+- `context`
+
+For these properties, the preview attempts to infer the type from the value. This means that a value you intend to be a **string** could be wrongly interpreted as a **number**. For example, if a property value is a string `"3"`, the preview may coerce it to the integer `3`, which can cause unexpected behavior in string operations like `contains` or `split`.
+
+If you see unexpected preview results when using these property types, keep in mind that the preview's type inference may not match what happens at send time. At send time, the actual data types from the triggering event or API call are preserved.
+
+To force a specific type in the preview, you can explicitly cast the value:
+
+{% raw %}
+```liquid
+{% comment %} Force a value to be treated as a number {% endcomment %}
+{% assign orders = {{canvas_entry_properties.${number_of_orders}}} | plus: 0 %}
+
+{% comment %} Force a value to be treated as a string {% endcomment %}
+{% assign code = {{api_trigger_properties.${promo_code}}} | append: "" %}
+```
+{% endraw %}

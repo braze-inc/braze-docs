@@ -1,6 +1,6 @@
 ---
-nav_title: Développement de Canvas
-article_title: Développement de Canvas
+nav_title: Créer des toiles
+article_title: Créer des toiles
 page_order: 1
 layout: dev_guide
 guide_top_header: "Développement de Canvas"
@@ -12,13 +12,13 @@ tool: Canvas
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: Création d’un Canvas
+  - name: Créer un Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/palette.svg
   - name: Commenter dans Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_comments/
     image: /assets/img/braze_icons/message-circle-01.svg
-  - name: "Création d'un modèle de canvas"
+  - name: Créer un modèle de canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Limitation du débit
@@ -39,9 +39,6 @@ guide_featured_list:
   - name: Messages in-app de Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/
     image: /assets/img/braze_icons/phone-02.svg
-  - name: Comportements d’avancement
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
-    image: /assets/img/braze_icons/users-01.svg
  
 guide_menu_title: "Additional resources"
 guide_menu_list:

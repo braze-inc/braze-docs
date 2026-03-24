@@ -1,7 +1,7 @@
 ---
-nav_title: "取得:利用可能なコンテンツブロックのリスト"
+nav_title: "取得:利用可能なコンテンツブロックの一覧"
 article_title: "取得:利用可能なコンテンツブロックのリスト"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 4
 layout: api_page
 page_type: reference
@@ -27,7 +27,7 @@ description: "この記事では、「利用可能なコンテンツブロック
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
 | `modified_after`  | オプション | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)形式の文字列 | 指定した時刻以降に更新されたコンテンツブロックのみを取得します。 |
 | `modified_before`  |  オプション | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)形式の文字列 | 指定された時刻以前に更新されたコンテンツブロックのみを取得します。 |
@@ -44,8 +44,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "count": "integer",
   "content_blocks": [
@@ -57,7 +55,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       "inclusion_count" : (integer) the inclusion count,
       "created_at": (string) The time the Content Block was created in ISO 8601,
       "last_edited": (string) The time the Content Block was last edited in ISO 8601,
-      "tags": (array) An array of tags formatted as strings,
+      "tags": (array) An array of tags formatted as strings
     }
   ]
 }

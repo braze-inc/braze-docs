@@ -1,6 +1,6 @@
 ---
-nav_title: Criação de consultas
-article_title: Uso do Query Builder
+nav_title: Criar consultas
+article_title: Usar o Construtor de Consultas
 page_order: 0
 page_type: reference
 description: "Este artigo de referência descreve como criar relatórios usando dados da Braze do Snowflake no Query Builder."

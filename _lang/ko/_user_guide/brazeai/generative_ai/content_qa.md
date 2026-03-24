@@ -5,7 +5,7 @@ page_order: 4
 description: "이 참조 문서는 메시지 작성기에서 AI를 사용하여 메시지 콘텐츠에 대한 품질 보증을 수행하는 방법을 다룹니다."
 ---
 
-# BrazeAI<sup>TM</sup>와 함께하는 콘텐츠 QA
+# BrazeAI와 함께하는 콘텐츠 QA
 
 > BrazeAI<sup>TM</sup>와 함께 콘텐츠를 QA하는 방법을 배우세요. 이를 통해 발음 오류, 문법 문제, 부적절한 어조 또는 공격적인 언어를 보내기 전에 잡을 수 있습니다.
 
@@ -25,14 +25,14 @@ description: "이 참조 문서는 메시지 작성기에서 AI를 사용하여 
 ## 콘텐츠 QA를 위해 BrazeAI<sup>TM</sup> 사용하기
 
 {% alert note %}
-현재 이 기능은 SMS, Android 푸시 및 iOS 푸시 채널에서만 사용할 수 있습니다.
+이 기능은 현재 SMS, Android 푸시, iOS 푸시 및 전통적인 인앱 메시지에서만 사용할 수 있습니다.
 {% endalert %}
 
-1. 모바일 푸시 또는 SMS 메시지를 작성한 후, **테스트** 탭으로 이동합니다.
+1. 모바일 푸시, SMS 또는 전통적인 인앱 메시지를 작성한 후, **테스트** 탭으로 이동합니다.
 2. **AI를 통한 콘텐츠 QA** 섹션을 찾으세요.
 3. **콘텐츠 테스트**를 클릭합니다.
 
-![테스트 탭의 AI와 함께하는 콘텐츠 QA 섹션.]({% image_buster /assets/img/content_qa_ai.png %})
+![테스트 탭의 AI 섹션에서 콘텐츠 QA를 진행합니다.]({% image_buster /assets/img/content_qa_ai.png %})
 
 ## Best practices
 

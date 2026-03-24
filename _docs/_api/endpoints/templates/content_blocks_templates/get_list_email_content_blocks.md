@@ -44,8 +44,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "count": "integer",
   "content_blocks": [
@@ -57,7 +55,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       "inclusion_count" : (integer) the inclusion count,
       "created_at": (string) The time the Content Block was created in ISO 8601,
       "last_edited": (string) The time the Content Block was last edited in ISO 8601,
-      "tags": (array) An array of tags formatted as strings,
+      "tags": (array) An array of tags formatted as strings
     }
   ]
 }

@@ -1,5 +1,5 @@
 ---
-nav_title: Manuseio de palavras-chave personalizadas
+nav_title: Tratamento personalizado de palavras-chave
 article_title: Manuseio de palavras-chave personalizadas
 page_order: 3
 description: "Este artigo de referência aborda como o Braze lida com envios bidirecionais de mensagens SMS, MMS e RCS e respostas automáticas. Isso inclui explicações sobre como funciona o disparo de palavras-chave, bem como categorias de palavras-chave personalizadas e suporte a vários idiomas."
@@ -24,7 +24,7 @@ O envio de mensagens bidirecionais permite que você envie mensagens e processe 
 SMS, MMS e RCS com o Braze lhe dão a opção de criar disparadores de palavras-chave, respostas personalizadas, definir conjuntos de palavras-chave para vários idiomas e estabelecer categorias de palavras-chave personalizadas. 
 
 {% tabs %}
-{% tab Adicionar disparadores de palavras-chave %}
+{% tab Add Keyword Triggers %}
 
 #### Adicionar disparadores de palavras-chave
 
@@ -32,9 +32,9 @@ Além das palavras-chave padrão de aceitação e exclusão, você também pode 
 
 Para definir suas próprias palavras-chave, faça o seguinte:
 
-1. No dashboard do Braze, acesse **Público** > **Grupos de inscrições** e selecione seu grupo de inscrições.<br><br>
-2. Em **Global Keywords (Palavras-chave globais**), selecione o ícone de lápis ao lado da categoria de palavra-chave à qual você deseja adicionar uma palavra-chave. ![]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br>
-3. Na guia que se abre, adicione uma palavra-chave que deseja disparar essa categoria de palavra-chave. Observe que as palavras-chave não diferenciam maiúsculas de minúsculas e que as palavras-chave universais como `START`, `YES` e `UNSTOP` não podem ser alteradas. ![Edição de palavras-chave para a categoria "Aceitação". As palavras-chave adicionadas são "START" (iniciar), "UNSTOP" (parar) e "YES" (sim). O campo da mensagem de resposta diz: "Sua inscrição para receber mensagens deste número foi cancelada. Responder HELP para obter ajuda. Responda STOP para cancelar a inscrição. Podem ser aplicadas taxas de mensagens e dados."]({% image_buster /assets/img/sms/keyword_edit2.png %})
+1. No dashboard do Braze, acesse **Público** > **Gerenciamento de grupos de inscrições** e selecione um grupo de inscrições **SMS/MMS/RCS**.<br><br>
+2. Em **Global Keywords (Palavras-chave globais**), selecione o ícone de lápis ao lado da categoria de palavra-chave à qual você deseja adicionar uma palavra-chave. ![Palavras-chave de aceitação com a exibição do ícone de lápis.]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br>
+3. Na guia que se abre, adicione uma palavra-chave que deseja disparar essa categoria de palavra-chave. Observe que as palavras-chave não diferenciam maiúsculas de minúsculas e que as palavras-chave universais como `START`, `YES` e `UNSTOP` não podem ser alteradas. ![Edição de palavras-chave para a categoria "Aceitação". As palavras-chave adicionadas são "START" (iniciar), "UNSTOP" (parar) e "YES" (sim). O campo da mensagem de resposta diz: "Sua inscrição para receber mensagens deste número foi cancelada. Responder HELP para obter ajuda. Responda STOP para cancelar a inscrição. Taxas de mensagens e dados podem ser aplicadas."]({% image_buster /assets/img/sms/keyword_edit2.png %})
 
 As regras a seguir se aplicam a palavras-chave e respostas a palavras-chave:
 
@@ -48,16 +48,16 @@ Interessado em ver como essas palavras-chave podem ser usadas em suas campanhas 
 {% endalert %}
 {% endtab %}
 
-{% tab Gerenciar respostas %}
+{% tab Manage responses %}
 
 #### Gerenciar respostas
 
 Você pode gerenciar suas próprias respostas que são enviadas aos usuários depois que eles digitam uma palavra-chave para uma categoria de palavra-chave específica.
 
-1. No dashboard do Braze, acesse **Público** > **Grupos de inscrições** e selecione um **SMS/MMS/RCS** grupo de inscrições. <br><br>
-2. Em **Palavras-chave globais**, selecione uma categoria de palavra-chave para editar uma resposta selecionando o ícone de lápis. ![]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br> 
-3. Na guia que se abre, edite sua resposta. Lembre-se de nossas [seis regras para obter a conformidade correta]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) ao criar sua resposta e leia as regras a seguir que se aplicam a palavras-chave e respostas com palavras-chave. ![Respostas]({% image_buster /assets/img/sms/keyword_home.png %})<br><br>
-4. Para encurtar automaticamente URLs estáticos em sua resposta, selecione o botão de alternância **Link Shortening**. O contador de caracteres será atualizado para mostrar o tamanho esperado do URL encurtado. ![Um GIF mostrando a atualização do contador de caracteres quando o botão "Link Shortening" está ativado.]({% image_buster /assets/img/sms/link_shortening.gif %}){: style="max-width:50%;"}
+1. No dashboard do Braze, acesse **Público** > **Gerenciamento de grupos de inscrições** e selecione um grupo de inscrições **SMS/MMS/RCS**. <br><br>
+2. Em **Palavras-chave globais**, selecione uma categoria de palavra-chave para editar uma resposta selecionando o ícone de lápis. ![Palavras-chave de aceitação com a exibição do ícone de lápis.]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br> 
+3. Na guia que se abre, edite sua resposta. Lembre-se de nossas [seis regras para obter a conformidade correta]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) ao criar sua resposta e leia as regras a seguir que se aplicam a palavras-chave e respostas com palavras-chave. ![Respostas]({% image_buster /assets/img/sms/keyword_home.png %}){: style="max-width:70%;"}<br><br>
+4. Para encurtar automaticamente URLs estáticos em sua resposta, selecione o botão de alternância **Link Shortening**. O contador de caracteres será atualizado para mostrar o tamanho esperado do URL encurtado. ![Um GIF mostrando a atualização do contador de caracteres quando a opção "Link Shortening" está ativada.]({% image_buster /assets/img/sms/link_shortening.gif %}){: style="max-width:60%;"}
 
 ##### Considerações
 
@@ -75,8 +75,8 @@ Se um Canvas baseado em ação for disparado por uma mensagem SMS, MMS ou RCS re
 
 ## Suporte multilíngue
 
-Ao enviar para determinados países, pode ser necessário que o remetente ofereça suporte a palavras-chave de entrada e respostas de saída em um idioma local. Para dar suporte a isso, a Braze permite que você crie uma configuração de palavra-chave específica do idioma.
-![]({% image_buster /assets/img/sms/multi-language.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
+Ao enviar para determinados países, pode ser necessário que o remetente ofereça suporte a palavras-chave de entrada e respostas de saída em um idioma local. Para dar suporte a isso, a Braze permite que você crie uma configuração de palavra-chave específica do idioma. Quando criadas, as configurações de palavras-chave específicas do idioma serão aplicadas a todos os números de envio dentro do grupo de inscrições.
+![Menu suspenso que exibe os idiomas a serem adicionados como uma configuração de palavra-chave.]({% image_buster /assets/img/sms/multi-language.png %}){: style="float:right;max-width:50%;margin-left:10px;"}
 
 ### Criação de palavras-chave específicas do idioma
 
@@ -88,7 +88,7 @@ Os idiomas que não são o inglês não vêm com palavras-chave e respostas pred
 
 Se você precisar excluir um idioma, selecione o botão **Excluir idioma** no canto inferior direito.
 
-![Página Global Keywords (Palavras-chave globais) com a guia "French" (Francês) selecionada. Existem guias adicionais para cada idioma adicionado.]({% image_buster /assets/img/sms/multi-language2.png %})
+![Página Global Keywords (Palavras-chave globais) com a guia "Italian" (Italiano) selecionada. Existem guias adicionais para cada idioma adicionado.]({% image_buster /assets/img/sms/multi-language2.png %})
 
 ## Categorias de palavras-chave personalizadas
 
@@ -96,14 +96,14 @@ Além das três categorias de palavras-chave padrão (Aceitação, Desaceitaçã
 
 Essas palavras-chave personalizadas operam em uma capacidade "sempre ativa", o que significa que qualquer usuário inscrito no seu serviço de mensagens pode enviar mensagens de texto com palavras-chave e receber uma resposta a qualquer momento. Além desse comportamento, você também tem a opção de definir palavras-chave específicas que só podem ser enviadas em [determinados pontos]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#lifecycle-specific-keywords) do ciclo de vida do usuário. 
 
-![Palavras-chave para uma categoria "Doubleoptin". Se um usuário enviar a mensagem "Y", ele receberá a mensagem "Thank you for confirming your enrollment in Hair Cuttery SMS."]({% image_buster /assets/img/sms/sms_custom_keyword.png %})
+![Palavras-chave para uma categoria "Promo". Se um usuário enviar a mensagem de texto "YO", ele receberá a mensagem com um código promocional.]({% image_buster /assets/img/sms/sms_custom_keyword.png %})
 
 ### Criação de uma categoria personalizada
 
 Para criar uma categoria de palavra-chave personalizada, faça o seguinte:
 
 1. Edite o grupo de inscrições apropriado.
-2. Selecione **Adicionar palavra-chave personalizada**. ![]({% image_buster /assets/img/sms/sms_custom_step.png %}){: style="max-width:90%;"}
+2. Selecione **Adicionar palavra-chave personalizada**. ![Campos para adicionar novas palavras-chave.]({% image_buster /assets/img/sms/sms_custom_step.png %}){: style="max-width:90%;"}
 3. Forneça um nome de categoria de palavra-chave e defina quais palavras-chave um usuário pode digitar para receber a mensagem de resposta.
 
 Depois que essa categoria de palavra-chave for criada, ela estará disponível para ser [filtrada e disparada]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) em suas campanhas e Canvas.
@@ -118,7 +118,7 @@ Esse disparador oferece suporte à filtragem da mensagem de entrada específica 
 
 #### Canva
 
-![Etapa do canva baseada em ação com o disparo Enviar SMS de entrada para o grupo de inscrições "Serviço de mensagens" dentro da categoria de palavra-chave "Outro", em que o corpo da mensagem corresponde à expressão regular "caret symbol skip."]({% image_buster /assets/img/sms/canvas_trigger.png %}){: style="max-width:90%;"}
+![Etapa do canva baseada em ação com o disparo Enviar SMS de entrada para o grupo de inscrições "Serviço de mensagens" dentro da categoria de palavra-chave "Outro", em que o corpo da mensagem corresponde à expressão regular "pular símbolo de acento circunflexo".]({% image_buster /assets/img/sms/canvas_trigger.png %}){: style="max-width:90%;"}
 
 #### Campanha interrompida
 
@@ -130,7 +130,7 @@ Embora não seja obrigatório, recomendamos fortemente a configuração de uma r
 
 Isso pode ser feito com a criação de uma campanha de SMS, MMS ou RCS com uma mensagem como "Sorry! Não reconhecemos essa palavra-chave, enviamos a mensagem STOP para parar ou HELP para ajudar." Em seguida, na etapa de entrega, selecione **Entrega baseada em ação** e use o disparo **Enviar SMS de entrada para o grupo de inscrições dentro da categoria de palavras-chave OUTROS**.
 
-![]({% image_buster /assets/img/sms/sms_other.png %})
+![Envio baseado em ação para uma campanha com o disparo de "Enviou SMS de entrada para o grupo de inscrições dentro da categoria de palavra-chave "Outros".]({% image_buster /assets/img/sms/sms_other.png %})
 
 {% alert tip %}
 Interessado em ver como essas palavras-chave e categorias de palavras-chave podem ser usadas em suas campanhas e Canvas para redirecionar e disparar mensagens? Visite [Redirecionamento]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) para obter mais informações.

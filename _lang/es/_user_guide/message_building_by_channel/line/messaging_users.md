@@ -1,6 +1,6 @@
 ---
-nav_title: Mensajería de usuarios
-article_title: Mensajería de usuarios de LINE
+nav_title: Usuarios de mensajería
+article_title: Mensaje Usuarios de LINE
 page_order: 2
 description: "Este artículo de referencia explica cómo chatear con los usuarios utilizando campañas con plantillas y Canvases."
 page_type: reference
@@ -23,13 +23,13 @@ Puede crear campañas y lienzos que comiencen, se ramifiquen y tengan cambios a 
 
 Configura tus palabras desencadenantes al programar una campaña de entrega basada en acciones.
 
-![Acción desencadenante de "Enviar esta campaña a los usuarios que enviaron LÍNEA de entrada al grupo de suscripción donde está el cuerpo del mensaje" y un campo en blanco.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
+![Activador basado en acción de "Enviar esta campaña a los usuarios que enviaron LÍNEA entrante al grupo de suscripción donde está el cuerpo del mensaje" y un campo en blanco.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
 
 ### Canvas
 
 Establezca sus palabras desencadenantes dentro de [rutas de acción]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) en su Canvas.
 
-![Ruta de acción con un desencadenante de "Enviar esta campaña a los usuarios que enviaron LÍNEA de entrada al grupo de suscripción donde está el cuerpo del mensaje" y un campo en blanco.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
+![Ruta de acción con un disparador de "Enviar esta campaña a los usuarios que enviaron LÍNEA de entrada al grupo de suscripción donde está el cuerpo del mensaje" y un campo en blanco.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
 
 ### Requisitos
 

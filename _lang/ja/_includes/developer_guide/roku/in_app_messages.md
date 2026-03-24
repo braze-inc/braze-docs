@@ -1,17 +1,17 @@
-{% multi_lang_include developer_guide/prerequisites/roku.md %} さらに、アプリ内メッセージは、サポートされている最小のSDK バージョンを実行しているRoku デバイスにのみ送信されます。
+{% multi_lang_include developer_guide/prerequisites/roku.md %} また、アプリ内メッセージは、最低限サポートされているSDKバージョンを実行しているRokuデバイスにのみ送信される：
 
 {% sdk_min_versions roku:0.1.2 %}
 
 ## メッセージの種類
 
 {% tabs %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/android.md %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/swift.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/android.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/swift.md %}
 {% endtabs %}
 
 ## アプリ内メッセージを有効にする
 
-### ステップ1:オブザーバーを追加する
+### ステップ 1: オブザーバーを追加する
 
 アプリ内メッセージを処理するため、`BrazeTask.BrazeInAppMessage` でオブザーバーを追加できます。
 
@@ -19,7 +19,7 @@
 m.BrazeTask.observeField("BrazeInAppMessage", "onInAppMessageReceived")
 ```
 
-### ステップ2:トリガーされたメッセージへのアクセス
+### ステップ 2:トリガーメッセージにアクセスする
 
 次に、ハンドラ内で、キャンペーンでトリガーされた最上位のアプリ内メッセージにアクセスできます。
 
@@ -32,7 +32,7 @@ end sub
 
 ## メッセージフィールド
 
-### 取扱い
+### ハンドリング
 
 以下は、アプリ内メッセージを処理するために必要なフィールドのリストです。
 

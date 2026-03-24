@@ -1,5 +1,5 @@
 ---
-nav_title: "Leyes y Reglamentos"
+nav_title: "Leyes y normativas"
 article_title: "Leyes y normativas para SMS, MMS y RCS"
 page_order: 0
 description: "Este artículo de referencia cubre las leyes y normativas en torno a los SMS, MMS y RCS."
@@ -23,17 +23,17 @@ Este artículo no pretende ofrecer asesoramiento jurídico ni debe considerarse 
 
 En general, te animamos a que uses tu buen juicio cuando envíes mensajes SMS, MMS o RCS. Braze, así como nuestros socios remitentes, disponen de controles que evitan la mayoría de los abusos de SMS, MMS y RCS.
 
-Estas son las seis reglas que debes seguir:
+Utiliza las siguientes reglas al enviar mensajes:
 
 1. **Obtén el consentimiento explícito de los usuarios antes de enviarles SMS, MMS o RCS.** Siempre que los usuarios den su consentimiento, es responsabilidad suya registrar, actualizar y mantener esa información en una base de datos de usuarios que cumpla las normas. Según las directrices jurídicas básicas, la información más importante que debe conservar en relación con el consentimiento es:
   - La fecha y hora en que el usuario dio su consentimiento
-  - El tipo de mensajería SMS, MMS o RCS que han consentido
+  - El tipo de mensajería SMS, MMS o RCS que consintieron
   - El número de teléfono de los usuarios
   - El idioma en el que aceptaron la adhesión voluntaria<br><br>
 
 2. **Comunica claramente los tipos de SMS, MMS o RCS que vas a enviar**. Los usuarios deben saber qué mensajes esperar de su marca en este canal y el tipo de información u ofertas que recibirán. Indique explícitamente el objetivo de sus futuras campañas, la frecuencia de los mensajes y recuerde a los usuarios que se aplican tarifas por mensajes/datos.<br><br>
 
-3. **Mantenga actualizada y visible la información esencial**. Asegúrate de que la versión más actualizada de los Términos y Condiciones de tu marca y tu Política de Privacidad de SMS/MMS/RCS marketing estén claramente visibles y sean fácilmente accesibles desde tu página de adhesión voluntaria.<br><br>
+3. **Mantenga actualizada y visible la información esencial**. Asegúrate de que la versión más actualizada de los Términos y Condiciones de tu marca y tu Política de Privacidad de Marketing por SMS/MMS/RCS estén claramente visibles y sean fácilmente accesibles desde tu página de adhesión voluntaria.<br><br>
 
 4. **Sólo envía SMS, MMS o RCS a números de teléfono obtenidos legalmente y con adhesión voluntaria**. Como parte de la planificación de la migración técnica, asegúrese de que su equipo comprende el mecanismo para vincular los estados de suscripción a todos y cada uno de los perfiles de usuario de su plataforma de captación de clientes.<br><br>
 
@@ -47,9 +47,9 @@ Estas son las seis reglas que debes seguir:
 El RCS es un espacio emergente y en evolución. Los Estados, países y otros organismos reguladores pueden introducir legislación o normativas nuevas o diferentes. La siguiente información tiene carácter orientativo y educativo. Las marcas deben consultar siempre a su equipo jurídico antes de enviar mensajes RCS.
 {% endalert %}
 
-- **Comprender el solapamiento normativo:** Dado que el RCS y el SMS comparten muchas similitudes, se aplican las mismas leyes, normativas y políticas de los operadores. Esto incluye las normas de la TCPA para recabar la adhesión voluntaria y las directrices de la CTIA (como SHAFT).
-- **Transferencia de consentimiento:** La orientación del sector es que el consentimiento se transfiere entre SMS y RCS **para el mismo tipo de mensajería (como promocional o transaccional)**, si el usuario ya ha dado su adhesión voluntaria para recibir ese tipo de mensajería. Por el contrario, si el usuario no optó por recibir SMS promocionales, no deberías empezar a enviar RCS promocionales sin recoger la adhesión voluntaria para ese tipo de mensajería.
-- **Actualiza las políticas y las cláusulas de exención de responsabilidad:** Se recomienda actualizar las Condiciones de servicio y la Política de privacidad de tu móvil para incluir referencias a RCS. También se recomienda que tus campañas de adhesión voluntaria incluyan lenguaje sobre RCS, además de SMS.
+- **Comprende el solapamiento normativo:** Dado que el RCS y el SMS comparten muchas similitudes, se aplican las mismas leyes, normativas y políticas de los operadores. Esto incluye las normas de la TCPA para recabar la adhesión voluntaria y las directrices de la CTIA (como SHAFT).
+- **Consentimientos:** Trabaja con tu equipo jurídico para evaluar si necesitas recabar consentimientos adicionales para enviar RCS a tus actuales usuarios de SMS.
+- **Actualiza las políticas y las cláusulas de exención de responsabilidad:** Se recomienda actualizar las Condiciones de servicio de tu móvil & Política de privacidad para incluir referencias a RCS. También se recomienda que tus campañas de adhesión voluntaria incluyan lenguaje sobre RCS, además de SMS.
 
 ## Recursos
 
@@ -81,7 +81,7 @@ Braze utiliza [Grupos de suscripción]({{site.baseurl}}/user_guide/message_build
 
 ### Spam y cadencia
 
-Al igual que ocurre con el correo electrónico, sus usuarios o clientes pueden sufrir el agotamiento de la bandeja de entrada. Pero ésta es sólo una de las razones para no enviar mensajes incesantes a sus clientes. Deberías consultar específicamente [el artículo 5 de la Ley FTC](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf) para asegurarte de su cumplimiento (en la dirección U.S.).
+Al igual que ocurre con el correo electrónico, tus usuarios o clientes pueden sufrir el agotamiento de la bandeja de entrada. Pero ésta es sólo una de las razones para no enviar mensajes incesantes a sus clientes. Deberías consultar específicamente [el artículo 5 de la Ley FTC](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf) para asegurarte de su cumplimiento (en la dirección U.S.).
 
 Algunas consideraciones sobre spam están integradas en las capacidades de SMS en general (límites de envío de códigos largos y cortos), así como en los límites de tarifa Braze. Sin embargo, debes tener en cuenta las leyes de cumplimiento al planificar tus campañas.
 

@@ -18,13 +18,13 @@ alias: /geographic_permissions/
 
 Si eres administrador, puedes configurar los países que están en la lista de permitidos. La lista de países permitidos se configura a nivel de [grupo de suscripción]({{site.baseurl}}/sms_rcs_subscription_groups/). Puedes acceder a ella yendo a **Audiencia** > **Suscripciones** y seleccionando un grupo de suscripción SMS, MMS o RCS. La lista de permisos está en **Permisos geográficos**.
 
-![La sección editable SMS Permisos geográficos para un administrador con varios países seleccionados en la "Lista de países permitidos".]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
+![La sección editable Permisos geográficos SMS para un administrador con varios países seleccionados en la "Lista de países permitidos".]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
 
 ### Seleccionar países
 
 Añada países a la lista de permitidos con el desplegable. Los países más comunes de SMS y RCS se muestran en la parte superior, y otros se muestran a continuación. También puede buscar países escribiendo en el campo de texto.
 
-![El desplegable "Lista de países permitidos" con los países más comunes mostrados en la parte superior.]({% image_buster /assets/img/sms/allowlist_dropdown.png %}){: style="max-width:80%;"}
+![El desplegable "Lista de países permitidos" con los países más comunes en la parte superior.]({% image_buster /assets/img/sms/allowlist_dropdown.png %}){: style="max-width:80%;"}
 
 Elimine los países seleccionados anteriormente desmarcando las casillas correspondientes situadas junto a ellos.
 
@@ -52,5 +52,5 @@ Los intentos de envío a países que no estén en tu lista de permitidos serán 
 
 Los mensajes abortados causados por envíos bloqueados se muestran como **Errores de mensaje abortado** y tienen el mensaje "El número de teléfono del destinatario se encuentra en un país bloqueado".
 
-![Registro abortado que muestra varios envíos de SMS bloqueados porque el número de teléfono está en un país bloqueado.]({% image_buster /assets/img/sms/abort_log.png %}){: style="max-width:80%;"}
+![Registro de abortos que muestra varios envíos de SMS bloqueados porque el número de teléfono está en un país bloqueado.]({% image_buster /assets/img/sms/abort_log.png %}){: style="max-width:80%;"}
 

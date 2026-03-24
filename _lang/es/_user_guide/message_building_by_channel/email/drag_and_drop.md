@@ -12,14 +12,14 @@ tool: Media
 
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
-- name: Crear un correo electrónico de arrastrar y soltar
+- name: Crear un correo electrónico arrastrando y soltando
   link: /docs/dnd/overview/
   image: /assets/img/braze_icons/brush-02.svg
 - name: Crear una plantilla de correo electrónico
   link: /docs/dnd/email_template/
   image: /assets/img/braze_icons/table.svg
 - name: Bloques de edición
-  link: /docs/dnd/editor_blocks/
+  link: /docs/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=email
   image: /assets/img/braze_icons/align-left.svg
 - name: Configuración de estilo global
   link: /docs/dnd/global_style_settings/

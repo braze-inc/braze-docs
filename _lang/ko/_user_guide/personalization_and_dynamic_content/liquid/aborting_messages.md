@@ -1,12 +1,12 @@
 ---
 nav_title: 메시지 중단하기
-article_title: 리퀴드 메시지 중단하기
+article_title: 액체 메시지 중단
 page_order: 7
 description: "이 참고 문서에서는 Liquid 메시지 중단과 몇 가지 사용 사례에 대해 설명합니다."
 
 ---
 
-# 메시지 중단하기
+# 메시지 중단
 
 > 선택적으로 조건부 내에 `abort_message("optional reason for aborting")` Liquid 메시지 태그를 사용하여 사용자에게 메시지를 보내지 않도록 할 수 있습니다. 이 참고 문서에는 마케팅 캠페인에서 이 기능을 사용할 수 있는 몇 가지 예가 나와 있습니다.
 
@@ -59,11 +59,23 @@ Send this message in English!
 ```
 {% endraw %}
 
-![개발자 콘솔에 "언어가 없음"이라는 중단 메시지가 포함된 메시지 오류 로그가 표시됩니다.]({% image_buster /assets/img_archive/developer_console.png %})
+!["언어가 없음"이라는 중단 메시지와 함께 개발자 콘솔에 메시지 오류 로그가 표시됩니다.]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## 중단 메시지 쿼리
 
 [쿼리 빌더]({{site.baseurl}}/user_guide/analytics/query_builder/) 또는 자체 데이터 웨어하우스(Braze에 연결된 경우)를 사용하여 Liquid 로직으로 인해 메시지가 중단될 때 트리거되는 특정 중단 메시지를 쿼리할 수 있습니다.
+
+## 중단 로직이 평가될 때
+
+중단 로직 평가의 타이밍은 메시지 채널에 따라 다릅니다.
+
+### 푸시, 이메일, SMS, 웹훅 및 콘텐츠 카드
+
+중단 로직은 브레이즈가 메시지를 전달하기 위해 처리할 때 전송 시점에 평가됩니다.
+
+### 인앱 메시지
+
+중단 로직은 인앱 메시지가 트리거될 때(예: 사용자가 트리거 이벤트를 수행하거나 세션을 시작할 때) 평가되며, 메시지가 처음으로 기기로 전송될 때는 평가되지 않습니다. 인앱 메시지는 세션 시작 시 SDK에 전달되고 로컬에 캐시됩니다. 트리거 조건이 충족되면 Liquid(모든 `abort_message()` 호출 포함)가 실행됩니다.
 
 ## 고려 사항
 

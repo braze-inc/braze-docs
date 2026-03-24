@@ -10,17 +10,17 @@ description: "This reference article covers message archiving, a feature that al
 
 # Message archiving
 
-> Message archiving lets you save a copy of messages sent to users for archival or compliance purposes to your AWS S3 bucket, Azure Blob Storage container or Google Cloud Storage bucket. <br><br> This article covers how to set up message archiving, JSON payloads references, and frequently asked questions.
+> Message archiving lets you save a copy of messages sent to users for archival or compliance purposes to your AWS S3 bucket, Azure Blob Storage container, or Google Cloud Storage bucket. <br><br> This article covers how to set up message archiving, JSON payload references, and frequently asked questions.
 
-Message archiving is available as an add-on feature. To get started with message archiving, reach out to your Braze customer success manager.
+Message archiving is available as an add-on feature. To get started with message archiving, contact your Braze customer success manager.
 
 ## How it works
 
-When this feature is turned on, if you have connected a cloud storage bucket to Braze and marked it as the default data export destination, Braze will write a gzipped JSON file to your cloud storage bucket for each message sent to a user through your selected channels (email, SMS/MMS, or push). 
+When this feature is turned on, Braze writes a gzipped JSON file for each message sent to a user through your selected channels (email, SMS/MMS, or push). Braze writes these files to your default data export destination. This includes all campaign types for each channel, such as transactional email campaigns sent through the [Transactional Email API]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign).
 
 This file will contain the fields defined under [File references](#file-references) and reflect the final templated messages sent to the user. Any templated values defined in your campaign (for example, {% raw %}`{{${first_name}}}`{% endraw %}) will show the final value that the user received based on their profile information. This allows you to retain a copy of the message sent to satisfy compliance, audit, or customer support requirements.
 
-If you set up credentials for multiple cloud storage providers, message archiving will only export to the one explicitly marked as the default data export destination. If no explicit default is provided and an AWS S3 bucket is connected, message archiving will upload to that bucket.
+If you set up credentials for multiple cloud storage providers, message archiving only exports to the one marked as the default data export destination. If you don't set an explicit default and an AWS S3 bucket is connected, message archiving uploads to that bucket.
 
 {% alert important %}
 Turning on this feature will impact the delivery speed of your messages, as the file upload is performed immediately before the message is sent to maintain accuracy. The latency introduced by message archiving will depend on the cloud storage provider and the throughput and size of the saved documents.
@@ -51,6 +51,10 @@ This section guides you through setting up message archiving for your workspace.
 
 If you haven't done so already, connect a cloud storage bucket to Braze. For steps, refer to our partner documentation on [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/), [Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/) or [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/).
 
+{% alert note %}
+You don't need to set up Currents for message archiving, so you can skip that prerequisite in the partner documentation.
+{% endalert %}
+
 ### Step 2: Select channels for message archiving
 
 The **Message Archiving** settings page controls which channels will save a copy of sent messages to your cloud storage bucket.
@@ -69,14 +73,14 @@ If you don't see **Message Archiving** in **Settings**, confirm that your compan
 
 ## File references
 
-The following are references of the JSON payload delivered to your cloud storage bucket each time a message is sent. Refer to our code example repository for [message archive sample files](https://github.com/braze-inc/braze-examples/tree/main/message-archiving).
+The following are references to the JSON payload delivered to your cloud storage bucket each time a message is sent. Refer to our code example repository for [message archive sample files](https://github.com/braze-inc/braze-examples/tree/main/message-archiving).
 
 {% tabs %}
 {% tab Email %}
 
 ```json
 {
-  "version" : 1, //numerical version of the json structure
+  "version": 1, //numerical version of the JSON structure
   "to": ToAddress, ("customer@example.com")
   "subject": SubjectLine ("20% off coupon inside!"),
   "from_name": DisplayName ("Braze"),
@@ -84,7 +88,7 @@ The following are references of the JSON payload delivered to your cloud storage
   "html_body": HtmlBody,
   "plaintext_body": PlainTextBody,
   "amp_body": AMPEmailBody,
-  "extras": Extra hash—for SendGrid users, this will be passed to SendGrid as Unique Arguments,
+  "extras": Hash of key-value pairs from Email Extras configured in the email editor,
   "headers": HashOfHeaders,
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
@@ -96,13 +100,13 @@ The following are references of the JSON payload delivered to your cloud storage
   "attachments": Array of JSON Objects containing 'bytes' and 'file_name', // may not be available
   "user_id": String,
   "campaign_name": String, // will only be available if the message is from a campaign
-  "canvas_name": String, // will only be available if the message is a from Canvas
+  "canvas_name": String, // will only be available if the message is from Canvas
   "canvas_step_name": String, // will only be available if the message is from a Canvas
   "external_id": String
 }
 ```
 
-The `extras` field referred to in this payload is from the key-value pairs added in the **Email Extras** field when composing an email. For sending data back to Currents, refer to [Message extras]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
+The `extras` field contains the key-value pairs configured in the **Email Extras** field when composing an email in the HTML editor. Email extras work for all email service providers (including SendGrid and Sparkpost) and are included in archived messages regardless of which provider is used. For more information on configuring email extras, see [Creating an email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#adding-email-extras). For sending data back to Currents, refer to [Message extras]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
 
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
@@ -111,7 +115,7 @@ The `extras` field referred to in this payload is from the key-value pairs added
 
 ```json
 {
-  "version" : 1 //numerical version of the json structure
+  "version": 1 //numerical version of the JSON structure
   "to": PhoneNumber, ("+15555555555"),
   "body": Body ("Hi there!"),
   "subscription_group": SubscriptionGroupExternalId,
@@ -126,7 +130,7 @@ The `extras` field referred to in this payload is from the key-value pairs added
   "message_variation_id": MessagVariationApiId, // may not be available
   "user_id": String,
   "campaign_name": String, // will only be available if the message is from a campaign
-  "canvas_name": String, // will only be available if the message is a from Canvas
+  "canvas_name": String, // will only be available if the message is from Canvas
   "canvas_step_name": String, // will only be available if the message is from a Canvas
   "external_id": String
 }
@@ -137,7 +141,7 @@ The `extras` field referred to in this payload is from the key-value pairs added
 
 ```json
 {
-  "version" : 1, //numerical version of the json structure
+  "version": 1, //numerical version of the JSON structure
   "to": PushToken,
   "payload": JsonOfEntirePushPayload,
   "platform": one of "android_push" | "ios_push" | "kindle_push" | "web_push",
@@ -157,6 +161,33 @@ The `extras` field referred to in this payload is from the key-value pairs added
 }
 ```
 
+### Push payload structure variations
+
+{% alert important %}
+The top-level `payload` field in push notification archives contains the entire provider payload as sent to the device. Within this JSON, keys such as `aps` (for APNs) or `notification` and `data` (for FCM) can vary significantly depending on the message type, platform, and configuration.
+{% endalert %}
+
+Message archiving captures the message payload itself, but does not include delivery metadata that is sent to FCM or APNs. Delivery metadata includes:
+
+- Device tokens
+- Priority settings
+- Time-to-live (TTL)
+- Collapse IDs
+- APNs headers
+- Expiration timestamps
+- Other delivery configuration fields
+
+These fields act as delivery instructions to the push provider. They are typically not considered part of the message content.
+
+For example:
+
+- **iOS push notifications** may have different structures for rich notifications (where `aps.alert` is an object containing fields such as `title` and `body`) versus simple notifications (where `aps.alert` is a string).
+- **Android push notifications** (for example, FCM) use data messages with custom keys. The payload structure may include different optional fields depending on the message configuration, such as push buttons, carousels, or additional metadata.
+
+Additionally, test sends from the dashboard may produce different payload structures than production messages.
+
+The JSON payload format can vary between messages and may change over time. When parsing archived push payloads, don't assume a fixed structure or expect the same fields to always be present. Implement flexible parsing logic that handles various payload formats.
+
 {% endtab %}
 {% endtabs %}
 
@@ -172,7 +203,7 @@ When a message is sent outside of a campaign or Canvas, the campaign ID in the f
 
 ### How do I find more information about this send?
 
-You can use either the `external_id` or `dispatch_id` in conjunction with the `user_id` to cross-reference the templated message with our Currents data to find more information like the timestamp it was delivered, whether the user opened or clicked the message, and more.
+You can use either the `external_id` or `dispatch_id` in conjunction with the `user_id` to cross-reference the templated message with our Currents data to find more information, like the timestamp it was delivered, whether the user opened or clicked the message, and more.
 
 ### How are retries handled?
 
@@ -180,7 +211,7 @@ If your cloud storage bucket is unreachable, Braze will retry up to three times 
 
 ### What happens if my credentials are invalid?
 
-If your cloud storage credentials become invalid at any point, Braze won't be able to save any messages to your cloud storage bucket, and those messages will be lost. We recommend configuring your [notification preferences]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/notification_preferences/) for Amazon Web Services, Google Cloud Services, or Azure (Microsoft Cloud Services) so you'll receive alerts for any credentials issues.
+If your cloud storage credentials become invalid at any point, Braze won't be able to save any messages to your cloud storage bucket, and those messages will be lost. We recommend configuring your [notification preferences]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/notification_preferences/) for Amazon Web Services, Google Cloud Services, or Azure (Microsoft Cloud Services) so you'll receive alerts for any credential issues.
 
 ### Why does my archive file's `sent_at` timestamp differ slightly from the sent timestamp in Currents?
 
@@ -194,3 +225,6 @@ No. If you're interested in creating these specific buckets, submit [product fee
 
 The data is written to a `sent_messages` section of the bucket. Refer to [How it works](#how-it-works) for more details.
 
+### Can I use message archiving to group files into different workspaces?
+
+No. Message archiving doesn't support grouping files based on workspaces. Instead, you can determine which workspace the campaign or Canvas step API ID belongs to, and then group them based on that information.

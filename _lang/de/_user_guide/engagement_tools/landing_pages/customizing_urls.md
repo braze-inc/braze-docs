@@ -1,17 +1,19 @@
 ---
-nav_title: Anpassen der URL
-article_title: Anpassen der URLs von Zielseiten
+nav_title: Passen Sie die URL an
+article_title: Anpassen von Landing Page URLs
 description: "Erfahren Sie, wie Sie die URLs Ihrer Landing Page an die Marke Ihres Unternehmens anpassen können, indem Sie Ihre Domain mit Ihrem Braze Workspace verbinden."
 page_order: 1
 ---
 
-# Anpassen der URLs von Zielseiten
+# Anpassen von Landing Page URLs
 
 > Erfahren Sie, wie Sie die URLs Ihrer Landing Page an die Marke Ihres Unternehmens anpassen können, indem Sie Ihre Domain mit Ihrem Braze Workspace verbinden.
 
 ## Funktionsweise
 
 Wenn Sie [Ihre Domain mit Braze verbinden](#connecting-your-domain-to-braze), wird sie als Standard Domain für alle Landing Pages verwendet. Wenn Sie beispielsweise die Subdomain `forms.example.com` einbinden, würden Ihre Landing Page URLs nun `forms.example.com/holiday-sale` lauten.
+
+Die Anzahl der angepassten Domains, die Sie mit Ihrem Braze-Konto verbinden können, hängt von Ihrer [Tarifstufe]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers) ab. Um Ihr Limit zu erhöhen, wenden Sie sich an Ihren Braze-Konto Manager:in.
 
 ## Ihre Domain mit Braze verbinden
 
@@ -22,7 +24,7 @@ Um eine Domain mit Ihrem Braze-Konto zu verbinden, lassen Sie einen Administrato
 3. Kopieren Sie die **TXT-** und **CNAME-Einträge** und fügen Sie sie in die DNS-Einstellungen Ihres Domain-Providers ein.
 4. Kehren Sie zum Braze-Dashboard zurück, um die Verbindung zu überprüfen.
 
-![Seite „Startseiteneinstellungen“ mit einem TXT- und zwei CNAME-Einträgen, die mit ihren jeweiligen Namen und Werten aufgeführt sind.][1]
+![Seite „Startseiteneinstellungen“ mit einem TXT- und zwei CNAME-Einträgen, die mit ihren jeweiligen Namen und Werten aufgeführt sind.]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
 
 {% alert note %}
 Je nach Ihrem Domainanbieter kann die Verbindung bis zu 48 Stunden dauern. Wenn der Prozess abgeschlossen ist, verwenden wir Ihre benutzerdefinierte Domain für Ihre Landing Pages im Braze Dashboard.
@@ -44,16 +46,7 @@ Wenn Sie eine angepasste Domain entfernen, wird diese URL nicht mehr gültig sei
 
 ## DNS-Ressourcen
 
-Nachfolgend finden Sie Ressourcen für die Erstellung und Verwaltung von DNS-Einträgen bei häufig verwendeten Domain-Providern. Wenn Sie einen anderen Anbieter verwenden, schlagen Sie in der Dokumentation dieses Anbieters nach oder wenden Sie sich an dessen Support-Team.
-
-| Domain-Anbieter | Ressourcen |
-| --- | --- |
-| Bluehost | [DNS-Einträge erklärt](https://my.bluehost.com/hosting/help/508)<br> [DNS-Verwaltung Hinzufügen Bearbeiten oder Löschen von DNS-Einträgen](https://my.bluehost.com/hosting/help/559) |
-| Dreamhost | [Wie kann ich benutzerdefinierte DNS-Einträge hinzufügen?](https://help.dreamhost.com/hc/en-us/articles/360035516812) |
-| GoDaddy | [CNAME-Eintrag hinzufügen](https://www.godaddy.com/help/add-a-cname-record-19236?) |
-| Cloudflare | [DNS-Einträge verwalten](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/) |
-| Squarespace | [Hinzufügen benutzerdefinierter DNS-Einstellungen](https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain) |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{% multi_lang_include dns_records.md %}
 
 ## Fehlersuche 
 
@@ -71,4 +64,27 @@ Nein, Sie können derzeit nur eine Subdomain mit einem Arbeitsbereich verbinden.
 
 Nein, Sie können keine Subdomains verwenden, die bereits in Gebrauch sind. Diese Subdomains sind zwar gültig, können aber nicht für Landing Pages verwendet werden, wenn sie bereits anderen Zwecken zugewiesen sind oder DNS-Einträge haben, die mit den erforderlichen CNAME-Einträgen in Konflikt stehen.
 
-[1]: {% image_buster /assets/img/landing_pages/connect_subdomain.png %}
+### Warum bleibt meine angepasste Domain trotz gültiger DNS-Einträge auf "Verbinden" stehen?
+
+Wenn Ihre angepasste Domain alle DNS-Einträge als "Verbunden" anzeigt, der Domain-Status jedoch länger als vier Stunden auf "Verbunden" bleibt, verwendet Ihr Unternehmen möglicherweise CAA-Einträge (Certificate Authority Authorization) oder Cloudflare-Zonen-Holds, die Braze daran hindern, Ihre Seite zu sichern.
+
+#### CAA Aufzeichnungen
+
+CAA-Einträge schränken ein, welche Zertifizierungsstellen SSL-Zertifikate für Ihre Domain ausstellen können. Wenn Ihre CAA-Einträge LetsEncrypt nicht enthalten, kann Braze (über Cloudflare) das erforderliche SSL-Zertifikat nicht ausstellen.
+
+Bitten Sie Ihr IT-Team, Ihrer Subdomain einen CAA-Eintrag mit den folgenden Werten hinzuzufügen, um dieses Problem zu lösen:
+- **Datensatztyp:** CAA
+- **Wert:** `0 issue "letsencrypt.org"`
+
+Weitere Informationen finden Sie in der [CAA-Dokumentation von LetsEncrypt](https://letsencrypt.org/docs/caa/).
+
+#### Cloudflare-Zone hält
+
+Wenn Ihr Unternehmen Cloudflare verwendet, verhindert möglicherweise ein Sicherheitsfeature für Zonen, dass Braze Ihre angepasste Domain erstellt.
+
+Um dieses Problem zu lösen, bitten Sie Ihr IT Team, die Sperrung der Zone vorübergehend aufzuheben. Weitere Informationen finden Sie in [der Dokumentation von Cloudflare zur Zonenhaltung](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/#release-zone-holds).
+
+#### Neustart des Validierungsprozesses
+
+Nachdem Sie eines der beiden Probleme gelöst haben, löschen Sie Ihre angepasste Domain im Braze-Dashboard und erstellen Sie sie neu, um den Validierungsprozess neu zu starten.
+

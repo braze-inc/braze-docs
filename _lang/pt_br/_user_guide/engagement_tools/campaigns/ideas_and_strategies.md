@@ -15,7 +15,7 @@ guide_featured_list:
   - name: Campanhas de Usuários Ativos
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Links de Adicionar ao Calendário
+  - name: Links para adicionar ao calendário
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/add_to_calendar_links/
     image: /assets/img/braze_icons/calendar-date.svg
   - name: Práticas recomendadas

@@ -19,7 +19,7 @@ Si vous n'activez pas le suivi analytique pour un segment, vous pouvez toujours 
 
 Dans la section **Informations relatives au segment** de la page d'un segment, activez le **suivi des analyses**.
 
-![Basculer le suivi analytique d'un segment]({% image_buster /assets/img_archive/A_Tracking_2.png %})
+![Basculer le suivi des analyses sur un segment]({% image_buster /assets/img_archive/A_Tracking_2.png %})
 
 Le suivi peut être activé pour 25 segments maximum dans une application. Braze recommande de suivre les segments qui sont importants pour vous permettre d’analyser les effets de vos campagnes sur les sessions, les revenus et les achats.
 
@@ -27,7 +27,7 @@ Le suivi peut être activé pour 25 segments maximum dans une application. Braz
 
 Allez dans **Analyse/analytique** > **Rapport sur les recettes** pour consulter les données sur les [recettes et les achats au fil du temps pour ce segment]({{site.baseurl}}/user_guide/data/export_braze_data/exporting_revenue_data/).
 
-![Données sur les chiffres d'affaires par segment]({% image_buster /assets/img_archive/Revenue.png %})
+![Données de revenus par segment]({% image_buster /assets/img_archive/Revenue.png %})
 
 Pour comparer visuellement les données de segment pour une période personnalisée, ajoutez ou supprimez des segments du graphique. Sélectionnez **Par segment** dans le menu déroulant **Répartition**, puis sélectionnez vos segments dans **Valeurs de répartition**.
 

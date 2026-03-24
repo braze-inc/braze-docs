@@ -14,11 +14,11 @@ description: "Cette page explique comment utiliser l'éditeur glisser-déposer d
 
 ## Créer un formulaire d'inscription par e-mail avec une offre spéciale
 
-### Étape 1 : Choisissez votre modèle
+### Étape 1 : Choisissez votre modèle
 
 Lorsque vous créez un message in-app par glisser-déposer, sélectionnez **Inscription par e-mail avec offre spéciale** pour votre modèle, puis sélectionnez **Créer un message.** Ce modèle est pris en charge à la fois pour les applications mobiles et les navigateurs web.
 
-![L'éditeur de messages in-app avec le modèle d'un formulaire d'inscription par e-mail à une offre spéciale.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_offer.png %})
+![L'éditeur de messages in-app avec le modèle d'un formulaire d'inscription par e-mail avec une offre spéciale.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_offer.png %})
 
 ### Étape 2 : Définissez les styles de vos messages
 

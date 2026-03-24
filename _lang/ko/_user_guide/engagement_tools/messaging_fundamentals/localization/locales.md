@@ -1,0 +1,210 @@
+---
+nav_title: 메시지의 로캘
+article_title: 로캘 번역
+alias: /locales_in_messages/
+page_order: 0
+page_type: reference
+description: "이 문서에서는 메시지에서 로캘을 사용하는 방법에 대한 단계를 제공합니다."
+---
+
+# 로캘 번역
+
+> 워크스페이스에 로캘을 추가한 후, 단일 푸시, 이메일, 배너, 인앱 메시지 또는 콘텐츠 블록 내에서 다양한 언어로 사용자를 타겟팅할 수 있습니다.
+
+{% multi_lang_include locales.md section="Prerequisites" %}
+
+## 로캘 사용
+
+### 1단계: 워크스페이스에 로캘 설정 {#workspace-setup}
+
+로캘 및 번역 태그를 사용하기 전에 먼저 [워크스페이스에 로캘을 추가해야 합니다]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings).
+
+### 2단계: 메시지에 번역 Liquid 태그 추가 {#add-translation-tags}
+
+번역할 모든 텍스트, 이미지 또는 링크 URL을 감싸기 위해 {% raw %}`{% translation your_id_here %}` 및 `{% endtranslation %}`{% endraw %} 번역 태그를 추가하세요.
+
+각 번역은 고유한 `id`를 가져야 합니다. 예를 들어, 간단한 인사를 번역할 때 ID를 "greeting"으로 지정할 수 있습니다:
+
+{% raw %}`{% translation greeting %}Hello!{% endtranslation %}`{% endraw %}
+
+#### HTML 블록 현지화
+
+더 복잡한 단락은 여러 개의 번역 태그("offer_text" 및 "offer_amount")를 가질 수 있습니다:
+
+{% raw %}
+```
+{% translation offer_text %}Sign up now to save{% endtranslation %}
+<b>{% translation offer_amount %}50% Off{% endtranslation %}</b>
+```
+{% endraw %}
+
+{% alert important %}
+큰 HTML 블록을 번역 태그로 감싸면 스타일시트 또는 스타일 문제가 발생할 수 있습니다. 가능한 한 작은 텍스트 섹션만 감싸세요.
+{% endalert %}
+
+#### 링크 현지화
+
+앵커 태그 링크를 현지화하려면 **언어별 부분만** 감싸고 전체 `href` URL 속성은 감싸지 마세요. 전체 URL을 감싸면 링크 템플릿이 올바르게 작동하지 않을 수 있습니다.
+
+##### 올바른 사용법
+
+{% raw %}
+```
+<a href="https://www.braze.com/{% translation link_href %}en{% endtranslation %}/page"></a>
+```
+{% endraw %}
+
+##### 잘못된 사용법
+
+{% raw %}
+```
+<a href="{% translation link_href %}https://www.braze.com/en/page{% endtranslation %}"></a>
+```
+{% endraw %}
+
+### 3단계: 메시지 로캘 선택 {#choose-locales}
+
+번역 태그가 메시지에 포함된 후, 메시지의 다국어 설정으로 이동하여 이 메시지에 대해 번역할 하나 이상의 로캘을 선택하세요.
+
+![로캘을 선택할 수 있는 드롭다운 필드가 있는 다국어 설정.]({% image_buster /assets/img/multi-language_support/manage_language_dropdown.png %}){: style="max-width:80%;"}
+
+{% tabs %}
+{% tab Email %}
+메시지를 편집할 때 콘텐츠 메뉴에서 **다국어**를 선택합니다.
+
+![이메일에 대한 다국어 설정.]({% image_buster /assets/img/multi-language_support/email_multi_language.png %}){: style="max-width:45%;"}
+
+{% endtab %}
+
+{% tab Push %}
+메시지를 편집할 때 **언어 관리**를 선택합니다.
+
+![푸시에 대한 다국어 설정.]({% image_buster /assets/img/multi-language_support/push_manage_languages.png %})
+
+{% endtab %}
+
+{% tab In-app message %}
+{% subtabs %}
+{% subtab Drag-and-Drop Editor %}
+**구축** 섹션 하단에서 **언어 관리**를 선택합니다.
+
+![인앱 드래그 앤 드롭 메시지에 대한 다국어 설정.]({% image_buster /assets/img/multi-language_support/iam_dnd_manage_languages.png %}){: style="max-width:45%;"}
+
+{% endsubtab %}
+{% subtab Traditional editor %}
+
+메시지를 편집할 때 **언어 관리**를 선택합니다.
+
+![인앱 HTML 메시지에 대한 다국어 설정.]({% image_buster /assets/img/multi-language_support/iam_html_manage_languages.png %})
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab Banner %}
+메시지를 편집할 때 **언어 관리**를 선택합니다.
+
+![배너에 대한 다국어 설정.]({% image_buster /assets/img/multi-language_support/banner_manage_languages.png %})
+
+{% endtab %}
+
+{% tab Content Block %}
+콘텐츠 블록을 편집할 때 **언어 관리**를 선택합니다.
+
+{% alert important %}
+연관된 번역이 업로드된 콘텐츠 블록은 개별 캠페인이나 캔버스 메시지로 덮어쓸 수 없습니다.
+{% endalert %}
+
+![콘텐츠 블록에 대한 다국어 설정.]({% image_buster /assets/img/multi-language_support/content_block_manage_languages.png %})
+
+{% endtab %}
+{% endtabs %}
+
+### 4단계: CSV 템플릿 다운로드 {#download-csv}
+
+로캘을 선택한 후, **템플릿 다운로드**를 선택하여 선택한 번역 ID와 로캘의 매트릭스가 포함된 CSV 템플릿을 다운로드합니다.
+
+![en, fr, es 로캘에 대한 예제 CSV.]({% image_buster /assets/img/multi-language_support/example_translation_csv.png %}){: style="max-width:70%;"}
+
+### 5단계: 완료된 CSV 업로드 {#upload-csv}
+
+{% alert important %}
+CSV 파일의 ID 또는 로캘에 대한 변경 사항은 메시지에 자동으로 업데이트되지 않습니다. 번역을 업데이트하려면 CSV 파일을 수정한 후 다시 업로드하세요.
+{% endalert %}
+
+완료된 CSV의 형식 예시는 다음과 같습니다:
+
+```
+Variant1,,,,
+,Translation tags,en,es,fr
+title,We noticed you've left something behind,We noticed you've left something behind,Notamos que has dejado algo atrás,Nous avons remarqué que vous avez oublié quelque chose derrière vous
+offer_text,Check out now and receive,Check out now and receive,Paga ahora y recibe,Payez maintenant et recevez
+offer_amount,10% Off,10% Off,10% de Descuento,10 % de réduction
+cta,CHECK OUT NOW,CHECK OUT NOW,VERIFICAR AHORA,VÉRIFIER MAINTENANT
+```
+
+### 6단계: 로캘 미리보기 {#preview-locales}
+
+메시지를 미리 볼 때, **사용자로 미리보기** 드롭다운에서 **다국어 사용자** 옵션을 선택합니다. 이 기능을 사용하면 서로 다른 로캘 정의 간에 전환하여 메시지의 모든 번역을 미리 볼 수 있습니다.
+
+![로캘 미리보기]({% image_buster /assets/img/multi-language_support/multi_language_user_preview.png %})
+
+{% alert tip %}
+[번역 API]({{site.baseurl}}/api/endpoints/translations)를 확인하여 캠페인과 캔버스에서 번역을 관리하고 업데이트하세요.
+{% endalert %}
+
+## 오른쪽에서 왼쪽으로 읽는 메시지
+
+오른쪽에서 왼쪽으로 쓰는 언어(예: 아랍어)의 번역 파일을 작성할 때는 번역을 `span`으로 감싸서 올바르게 서식이 지정되도록 해야 합니다:
+
+{% raw %}
+```
+{% translation your_id_here %}<span dir='rtl'>default text</span>{% endtranslation %}
+```
+{% endraw %}
+
+## 번역 관리
+
+### 시작된 캠페인 및 캔버스의 번역 편집
+
+캠페인이나 캔버스가 시작된 후에도 초안 모드에서는 번역을 수정할 수 있습니다. 이는 컴포저에서 직접 편집하든, CSV 업로드를 통해 편집하든, API를 통해 편집하든 모두 적용됩니다.
+
+시작 후 캠페인 및 캔버스 관리에 대한 자세한 내용은 [시작된 캠페인 편집]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) 및 [캔버스 초안 및 시작 후 편집]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts/)을 참조하세요.
+
+### 캔버스 단계 또는 캠페인과 번역 복제
+
+번역은 캔버스 단계, 캠페인 또는 캠페인 변형과 함께 복사됩니다. 워크스페이스 간에 복사할 때도 마찬가지이며, 대상 워크스페이스에 로캘이 정의되어 있어야 합니다. 캔버스 또는 캠페인을 수정할 때는 번역을 검토하고 그에 맞게 업데이트하세요.
+
+### 캔버스에서 다국어 API 사용
+
+[캔버스에서 다국어 API]({{site.baseurl}}/api/endpoints/translations/)를 사용하려면 매개변수 목록에 `workflow_id`, `step_id` 및 `message_variation_id`를 포함해야 합니다.
+
+#### 시작 후 초안에 추가된 캔버스 단계
+
+캔버스가 시작된 후 생성된 캔버스 단계에서 다국어 API를 사용할 때, API에 전달하는 `message_variation_id`는 비어 있거나 공백이 됩니다.
+
+## 자주 묻는 질문
+
+#### 내 로캘 중 하나에서 번역된 텍스트를 변경할 수 있나요?
+예. 먼저 CSV에서 편집한 다음 파일을 다시 업로드하여 번역된 텍스트를 변경하세요.
+
+#### 번역 태그를 중첩할 수 있나요?
+아니요.
+
+#### 번역에서 스타일링을 위한 HTML을 지원하나요?
+예. 하지만 HTML 스타일이 콘텐츠와 함께 번역되지 않았는지 확인하세요.
+
+#### 전체 HTML 메시지를 번역 태그로 감쌀 수 있나요?
+아니요, 성능이나 크기 제한을 피하기 위해 번역 태그는 가능한 한 작게 유지해야 합니다.
+
+#### Braze는 어떤 유효성 검사 또는 추가 확인을 수행하나요?
+
+| 시나리오                                                                                                                                                 | Braze의 유효성 검사                                                                                            |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| 현재 메시지와 연관된 로캘이 번역 파일에 누락되어 있습니다.                                                                               | 이 번역 파일은 업로드되지 않습니다.                                                                       |
+| 현재 이메일 메시지의 Liquid 번역 태그 내 텍스트와 같은 텍스트 블록이 번역 파일에 누락되어 있습니다.                                | 이 번역 파일은 업로드되지 않습니다.                                                                       |
+| 번역 파일에 현재 이메일 메시지의 텍스트 블록과 일치하지 않는 기본값 텍스트가 포함되어 있습니다.                                          | 이 번역 파일은 업로드되지 않습니다. 다시 업로드를 시도하기 전에 CSV에서 이 문제를 수정하세요.               |
+| 번역 파일에 **다국어 지원** 설정에 없는 로캘이 포함되어 있습니다.                                                       | 해당 로캘은 Braze에 저장되지 않습니다.                                                                      |
+| 번역 파일에 현재 메시지에 존재하지 않는 텍스트 블록(예: 번역이 업로드되는 시점의 현재 초안)이 포함되어 있습니다. | 현재 메시지에 존재하지 않는 텍스트 블록은 번역 파일에서 Braze로 저장되지 않습니다. |
+| 번역 파일의 일부로 이미 메시지에 업로드된 로캘을 메시지에서 제거합니다.                           | 로캘을 제거하면 해당 로캘과 연관된 모든 번역이 메시지에서 제거됩니다.                   |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

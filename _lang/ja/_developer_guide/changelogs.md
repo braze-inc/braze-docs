@@ -12,8 +12,7 @@ platform:
   - React Native
   - Roku
   - Unity
-  - Unreal Engine
-  - Xamarin
+  - .NET MAUI
 ---
 
 # Braze SDKの変更履歴
@@ -21,6 +20,14 @@ platform:
 > このリファレンスページには、各 Braze SDK の変更履歴と、公開 GitHub リポジトリの変更履歴へのリンクが含まれています。リソースの全リストは、[リファレンス、リポジトリ、サンプルアプリを]({{site.baseurl}}/developer_guide/references/)参照のこと。
 
 {% sdktabs %}
+{% sdktab web %}
+{% alert tip %}
+[GitHub で Web Braze SDK の変更ログ](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)のコピーを見つけることもできます。
+{% endalert %}
+
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-web-sdk/master/CHANGELOG.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% alert tip %}
 [GitHub で Android の Braze SDK 変更ログ](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)のコピーを見つけることもできます。
@@ -35,14 +42,6 @@ platform:
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-swift-sdk/main/CHANGELOG.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% alert tip %}
-[GitHub で Web Braze SDK の変更ログ](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)のコピーを見つけることもできます。
-{% endalert %}
-
-{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-web-sdk/master/CHANGELOG.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
@@ -85,17 +84,9 @@ platform:
 {% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-unity-sdk/master/CHANGELOG.md %}
 {% endsdktab %}
 
-{% sdktab unreal engine %}
+{% sdktab .NET MAUI (Xamarin) %}
 {% alert tip %}
-[GitHub で Unreal Engine Braze SDK の変更ログ](https://github.com/braze-inc/braze-unreal-sdk/blob/master/CHANGELOG.md)のコピーを見つけることもできます。
-{% endalert %}
-
-{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-unreal-sdk/master/CHANGELOG.md %}
-{% endsdktab %}
-
-{% sdktab xamarin %}
-{% alert tip %}
-[GitHub で Xamarin の Braze SDK 変更ログ](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md)のコピーを見つけることもできます。
+[.NET MAUI Braze SDK](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md)の[変更履歴はGitHubでも](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md)確認できる。
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-xamarin-sdk/master/CHANGELOG.md %}

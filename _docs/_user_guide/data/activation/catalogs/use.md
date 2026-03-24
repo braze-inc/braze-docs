@@ -1,6 +1,6 @@
 ---
 nav_title: Using catalogs
-article_title: Using Catalogs
+article_title: Use Catalogs
 page_order: 1.5
 description: "This reference article covers how to use catalogs to reference non-user data in your Braze campaigns through Liquid."
 ---
@@ -13,7 +13,7 @@ description: "This reference article covers how to use catalogs to reference non
 
 ### Step 1: Add personalization type {#step-one-personalization}
 
-In the message composer of your choice, select the <i class="fas fa-plus-circle"></i> plus icon to open the **Add Personalization** modal and select **Catalogs Items** for the **Personalization Type**. Then, select your **Catalog Name**. Using our previous example, we'll select the "Games" catalog.
+In the message composer of your choice, select the <i class="fas fa-plus-circle"></i> plus icon to open the **Add Personalization** modal and select **Catalog Items** for the **Personalization type**. Then, select your catalog name. Using our previous example, we'll select the "Games" catalog.
 
 ![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
 
@@ -56,7 +56,7 @@ You'll receive an email to download the CSV file after initiating the export. Yo
 
 ### Multiple items
 
-You aren't limited to just one item in a single message. You can use the **Add Personalization** modal to add up to three catalog items at a time. To add more items to your message, select **Add Personalization** in the message composer and select the additional catalog items and information to display.
+You aren't limited to one item in a message. Use the **Add Personalization** modal to add up to three catalog items at a time. To add more, select **Add Personalization** again in the composer and select additional catalog items and information to display.
 
 Check out this example where we add the `id` of three games, Tales, Teslagrad, and Acaratus, for **Catalog Items** and select `title` for **Information to Display**.
 
@@ -66,7 +66,7 @@ We can further personalize our message by adding some text around our Liquid:
 
 {% raw %}
 ```liquid
-Get the ultimate trio {% catalog_items games 1234 1235 1236 %}
+Get the ultimate trio {% catalog_items Games 1234 1235 1236 %}
 {{ items[0].title }}, {{ items[1].title }}, and {{ items[2].title }} today!
 ```
 {% endraw %}
@@ -81,26 +81,43 @@ Check out [selections]({{site.baseurl}}/user_guide/data/activation/catalogs/sele
 
 ### Using Liquid `if` statements
 
-You can use catalog items to create conditional statements. For example, you can trigger a certain message to display when a specific item is selected in your campaign.
+You can use catalog items to create conditional statements. For example, you can trigger a certain message to display when a specific item is selected in your campaign. You must declare the catalog (and, if applicable, the selection) before referencing `items` in an `if` statement.
 
-To do this, you'll use a Liquid `if` statement, such as in this example:
+#### With catalog items
+
+{% raw %}
+```liquid
+{% catalog_items Games 1234 %}
+{% if items[0].on_sale == true %}
+  {{ items[0].title }} is on sale! Get it for {{ items[0].price }}.
+{% else %}
+  Check out {{ items[0].title }} at full price.
+{% endif %}
+```
+{% endraw %}
+
+In this example, the `catalog_items` tag fetches item `1234` from the `Games` catalog, and then the `if` statement checks the `on_sale` field to display different messages.
+
+#### With catalog selections
 
 {% raw %}
 ```liquid
 {% catalog_selection_items item-list selections %} 
 {% if items[0].venue_name.size > 10 %}
 Message if the venue name's size is more than 10 characters. 
-{% elsif items[0].venue_name.size < 10 %}
-Message if the venue name's size is less than 10 characters. 
+{% elsif items[0].venue_name.size <= 10 %}
+Message if the venue name's size is 10 characters or fewer. 
 {% else %} 
-{% abort_message(no venue_name) %} 
+{% abort_message('no venue_name') %} 
 {% endif %}
 ```
 {% endraw %}
 
-In this example, different messages will display if the custom attribute `venue_name` has more than 10 characters or less than 10 characters. If `venue_name` is `blank`, nothing will display. 
+In this example, different messages display based on whether the `venue_name` field has more or fewer than 10 characters. If `venue_name` is blank, the message is aborted.
 
-Note that you must declare the catalog list and, if applicable, the selection before using `if` statements. In the example, `item-list` is the catalog list, and `selections` is the selection name.
+{% alert tip %}
+To avoid Liquid syntax errors, select the **+** plus button in the message composer to insert catalog Liquid tags automatically.
+{% endalert %}
 
 ### Using images {#using-images}
 
@@ -154,12 +171,12 @@ For example, to let a user know that Tales (an item in our catalog that they've 
 {% assign wishlist = {{custom_attribute.${wishlist}}}%}
 {% catalog_items Games {{ wishlist[0] }} %}
 
-Get {{ items[0].title }} now, for just {{ items[0].price }}!
+Get {{ items[0].title }} now for {{ items[0].price }}!
 ```
 {% endraw %}
 
 Which will display as the following:
-> Get Tales now, for just 7.49!
+> Get Tales now for just 7.49!
 
 With templating, you can render a different catalog item for each user based on their individual custom attributes, event properties, or any other templatable field.
 
@@ -170,10 +187,6 @@ You can upload a CSV of new catalog items to add or catalog items to update. To 
 ### Using Liquid
 
 You can also manually piece together catalogs with Liquid logic. However, note that if you type in an ID that doesn't exist, Braze will still return an items array without objects. We recommend that you include error handling, such as checking the size of the array and using an `if` statement to account for an empty array case.
-
-{% alert note %}
-Liquid currently can't be used inside catalogs. If Liquid personalization is listed inside a cell in your catalog, the dynamic value won't render and only the actual Liquid will display.
-{% endalert %}
 
 #### Templating catalog items including Liquid
 
@@ -189,7 +202,7 @@ To render the following Liquid content:
 
 {% raw %}
 ```liquid
-Hi ${first_name}
+Hi ${first_name},
 
 {% catalog_items Messages greet_msg :rerender %}
 {{ items[0].Welcome_Message }}
@@ -210,6 +223,31 @@ Welcome to our store, Peter!
 Catalog Liquid tags can't be used recursively inside catalogs.
 {% endalert %}
 
+## Structuring your catalog data
+
+When planning how to structure your catalog data, start from your intended use case and design the catalog around it. Each row in the catalog represents an item (with a unique `id`). The columns should contain the attributes for that item, such as URLs, description copy, image URLs, price, rating, size, or color.
+
+### When to use standard catalog calls
+
+With standard catalog calls, you match a value against the `id` column. By inserting a custom attribute or event property (as an ID string) into the catalog Liquid tag, you can pull multiple attributes for a single item into your message. Common use cases include:
+
+- Recently viewed product or service
+- Wishlist items
+- Deals by location
+- Product purchased
+- Lifecycle stage content
+- Most recently searched product or service
+
+### When to use catalog selections
+
+[Catalog selections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) let you filter across any column in your catalog and return up to 50 matching items. By inserting custom attributes or event properties into the selection filters, the results are personalized for each user. Common use cases include:
+
+- Items where category equals a user's preference
+- Items matching a user's preferred brand, cuisine, or size
+- Subscription type or loyalty tier content
+- Products within a user's average order value range
+
+The key difference is that standard catalog calls look up a single known item by `id`, while catalog selections query across the catalog and return multiple items that match your filter criteria.
 
 [1]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [2]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}

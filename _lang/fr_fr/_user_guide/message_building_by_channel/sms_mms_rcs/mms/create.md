@@ -1,6 +1,6 @@
 ---
-nav_title: Créer une campagne par MMS
-article_title: Créer une campagne par MMS
+nav_title: Créer une campagne MMS
+article_title: Créer une campagne MMS
 page_order: 2
 description: "Cet article de référence couvre les étapes impliquées dans la création, l’envoi et la prévisualisation d’un message MMS."
 page_type: reference
@@ -38,7 +38,9 @@ Les cartes de contact (parfois appelées vCard ou Virtual Contact Files (vcf)) s
 
 Pour créer un message MMS, votre groupe d'abonnement doit être configuré pour l'envoi de MMS. Pour le savoir, consultez la balise MMS lors de la sélection d’un groupe d’abonnement. Lorsque vous sélectionnez un groupe d'abonnement compatible MMS, vous avez la possibilité de télécharger une image, de faire référence à l'URL d'une image ou d'inclure une carte de contact.
 
-![L'onglet "Composer" pour rédiger votre message.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
+![L'onglet « Rédiger » pour rédiger votre message.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
 
 ### Spécifications des images
 
@@ -56,4 +58,4 @@ Braze fournit un aperçu de l'image que vous avez téléchargée dans le panneau
 L’ordre des ressources SMS/MMS ne peut pas être personnalisé. L’ordre dépend du téléphone qui reçoit ce message.
 {% endalert %}
 
-![Exemple de message : "Prêt pour la maison gym...at?". L'aperçu montre le message et l'image envoyés en tant que textes.]({% image_buster /assets/img/sms/mms_preview.png %})
+![Exemple de message : « Êtes-vous prêt à vous rendre à la salle de sport... chez vous ? ». L'aperçu affiche le message et l'image envoyés sous forme de texte.]({% image_buster /assets/img/sms/mms_preview.png %})

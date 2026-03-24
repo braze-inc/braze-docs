@@ -21,7 +21,14 @@ Oui. Accédez à la section **Aperçu et test** de l'éditeur par glisser-dépos
 
 ### Comment puis-je modifier la marge intérieure des e-mails sur l’affichage mobile sans mettre à jour la marge intérieure dans l’affichage Web ?
 
-Il n’est pas possible de modifier la marge intérieure des affichages mobiles et Web exclusivement. Toutes les modifications apportées sont reflétées dans les deux vues. Pour contourner le problème, vous pouvez ajouter une logique CSS qui définit la marge intérieure en fonction des différentes tailles d’écran. Cependant, cela ne peut pas être réalisé à l’aide de l’éditeur par glisser-déposer. Nous vous conseillons donc d’exporter le fichier HTML et d’utiliser l’éditeur HTML.
+Il n'est pas possible de modifier le remplissage exclusivement pour les vues mobile et Web. Par conséquent, toute modification sera appliquée aux deux vues. Cependant, vous pouvez intégrer une logique CSS dans l'éditeur HTML qui définit le remplissage en fonction des différentes tailles d'écran. Cette fonctionnalité n'est pas prise en charge dans l'éditeur par glisser-déposer. Par conséquent, nous vous recommandons d'exporter le fichier HTML et d'utiliser l'éditeur HTML à la place.
+
+### Comment puis-je optimiser une rangée de boutons afin qu'elle reste horizontale sur ordinateur et sur mobile ?
+
+Lorsque vous créez un e-mail à l'aide de l'éditeur par glisser-déposer, si vous créez une rangée horizontale de boutons d'appel à l'action, vous constaterez peut-être que les boutons sont réorientés verticalement sur les appareils mobiles. 
+
+Afin de conserver le même format sur toutes les tailles d'appareils, nous vous recommandons de créer une ligne distincte avec des boutons CTA dont le remplissage est optimisé pour les appareils mobiles et qui sont configurés pour masquer la ligne sur un appareil de bureau. Le fait d'avoir deux lignes distinctes vous permet de définir le remplissage souhaité pour un rendu optimal du texte sur les ordinateurs de bureau et les appareils mobiles.
+
 
 ### Puis-je ajuster la hauteur des lignes dans l'éditeur par glisser-déposer ?
 
@@ -36,8 +43,8 @@ L'éditeur par glisser-déposer prend actuellement en charge deux couches. Vous 
 
 ### Puis-je enregistrer mon e-mail glissé-déposé en tant que modèle après l'avoir créé dans ma campagne ou mon Canvas ?
 
-Non, vous devez recréer l'e-mail dans **Modèles d'e-mail** pour l'enregistrer.
+Non, il est nécessaire de recréer l'e-mail dans **les modèles d'e-mail** afin de l'enregistrer.
 
 ### Puis-je ajouter des pièces jointes aux e-mails dans l'éditeur par glisser-déposer ?
 
-Non, l'éditeur par glisser-déposer ne permet pas actuellement d'ajouter des pièces jointes à vos e-mails.
+Non, l'éditeur par glisser-déposer ne permet pas d'ajouter des pièces jointes à vos e-mails.

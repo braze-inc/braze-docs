@@ -1,5 +1,5 @@
 ---
-nav_title: Crear un mensaje dentro de la aplicación
+nav_title: Crear un mensaje en la aplicación
 article_title: Crear un mensaje dentro de la aplicación
 page_order: 1
 description: "Este artículo de referencia explica cómo crear un mensaje in-app con la plataforma Braze utilizando campañas o Canvas."
@@ -11,16 +11,16 @@ search_rank: 4.8
 toc_headers: h2
 ---
 
-# Crear un mensaje in-app
+# Crear un mensaje en la aplicación
 
 > Puedes crear un mensaje dentro de la aplicación o un mensaje en el explorador utilizando la plataforma Braze mediante campañas, Canvas o como campaña API. Te recomendamos encarecidamente que planifiques tus mensajes y prepares todos los materiales con antelación utilizando nuestra práctica [guía de preparación de mensajes en la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
 
 ## Paso 1: Elige dónde construir tu mensaje {#create-new-campaign-in-app}
 
-¿No estás seguro de si tu mensaje debe enviarse mediante una campaña o un Canvas? Las campañas son mejores para mensajes sencillos y únicos, mientras que los lienzos son mejores para recorridos de usuario de varios pasos.
+¿No estás seguro de si tu mensaje debe enviarse mediante una campaña o un Canvas? Las campañas son más adecuadas para campañas de mensajería única y específica, mientras que los lienzos son más adecuados para recorridos de usuarios de varios pasos.
 
 {% tabs %}
-{% tab Campaña %}
+{% tab Campaign %}
 
 1. Vaya a **Mensajería** > **Campañas** y seleccione **Crear campaña**.
 2. Seleccione **Mensaje en la aplicación**. Tenga en cuenta que los mensajes in-app no están disponibles en las campañas multicanal.
@@ -58,20 +58,20 @@ Empiece por elegir qué plataformas deben recibir el mensaje. Utilice esta selec
 
 | Plataforma                        | Envío de mensajes        |
 |---------------------------------|-------------------------|
-| Aplicaciones móviles                     | SDK para iOS y Android      |
+| Aplicaciones móviles                     | iOS  SDK &para Android      |
 | Navegadores web                    | SDK Web                 |
-| Tanto aplicaciones móviles como navegadores web | SDK para iOS, Android y Web |
+| Tanto aplicaciones móviles como &navegadores web | iOS, Android&  Web SDKs |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Paso 3: Especifique sus tipos de mensajes
 
 Una vez que hayas seleccionado una plataforma de envío, explora los tipos de mensaje, diseños y otras opciones asociadas a ella. Obtenga más información sobre el comportamiento esperado y el aspecto de cada uno de estos mensajes en nuestra página [Detalles creativos]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/), o haciendo clic en los tipos de mensaje vinculados en las tablas siguientes.
 
-Cuando decidas qué tipo de mensaje utilizar, ten en cuenta cuánto espacio ocupará tu mensaje y lo perturbador que puede resultar para la experiencia del usuario.
+A la hora de decidir qué tipo de mensaje utilizar, ten en cuenta el espacio que ocupará tu mensaje y en qué medida puede perturbar la experiencia del usuario.
 
-- Los mensajes de **deslizamiento hacia arriba** son los menos intrusivos, ya que aparecen sutilmente sin bloquear el contenido.
-- Los mensajes **modales** se sitúan en el centro, lo suficientemente prominentes como para captar la atención sin ocupar toda la pantalla.
-- Los mensajes **a pantalla completa** son los que más llaman la atención y los mejores para anuncios críticos o promociones.
+- Los mensajes **de deslizamiento hacia arriba** son los menos intrusivos, ya que aparecen de forma sutil sin bloquear el contenido.
+- Los mensajes **modales** se sitúan en el centro, lo suficientemente visibles como para llamar la atención sin ocupar toda la pantalla.
+- Los mensajes **a pantalla completa** son los que más llaman la atención y los más adecuados para anuncios importantes o promociones.
 
 Cuanto más complejo sea tu contenido, más espacio necesitarás y más probable será que tu mensaje interrumpa el flujo del usuario.
 
@@ -191,7 +191,9 @@ Selecciona **Añadir idiomas** y selecciona los idiomas que desees de la lista p
 
 ### Imagen
 
-Dependiendo del tipo de mensaje, puedes **subir una imagen**, **elegir una insignia** o utilizar **Font Awesome**. Para cargar una imagen, haga clic en **Añadir imagen** o proporcione una URL de imagen. Al hacer clic en **Añadir imagen** se abre la **Biblioteca multimedia**, donde puede seleccionar una imagen cargada previamente o añadir una nueva. Cada tipo de mensaje y plataforma puede tener sus propias proporciones y requisitos; asegúrate de comprobarlos antes de encargar o crear una imagen desde cero.
+Dependiendo del tipo de mensaje, puedes **subir una imagen**, **elegir una insignia** o utilizar **Font Awesome**. Para subir una imagen, selecciona **Añadir imagen** o proporciona una URL de imagen. Al seleccionar **Añadir imagen** se abre la **biblioteca multimedia**, donde puedes seleccionar una imagen cargada previamente o añadir una nueva. Cada tipo de mensaje y plataforma puede tener sus propias proporciones y requisitos recomendados; asegúrate de verificarlos antes de encargar o crear una imagen desde cero.
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 ### Cabecera y cuerpo
 
@@ -205,7 +207,7 @@ Algunos tipos de mensaje no necesitan cabeceras y, por tanto, no las solicitan.
 
 ¿Necesitas ayuda para crear textos impactantes? Prueba a utilizar el [asistente de redacción de IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Introduzca el nombre o la descripción de un producto y la IA generará un texto de marketing similar al humano para utilizarlo en sus mensajes.
 
-![Inicia el botón de redactor de IA, situado en el campo Mensaje del compositor de SMS.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
+![Abre el botón AI Copywriter, ubicado en el campo Mensaje del creador de mensajes dentro de la aplicación.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
 
 ##### Crear mensajes de derecha a izquierda
 
@@ -223,7 +225,7 @@ Si decide dar formato a estos botones con sus propios colores, le recomendamos q
 
 En otras palabras, si quiere que su usuario haga clic en un botón más que en otro, asegúrese de que está a la derecha. El botón derecho suele tener más posibilidades de que se haga clic en él, sobre todo si tiene un color que contraste o destaque del resto del mensaje. Esto solo se acentúa cuando el botón de la izquierda se funde más visualmente con el mensaje.
 
-![Botones primario y secundario en un mensaje dentro de la aplicación]({% image_buster /assets/img/primary-secondary-buttons.png %})
+![Botones principales y secundarios en un mensaje dentro de la aplicación]({% image_buster /assets/img/primary-secondary-buttons.png %})
 
 ### Comportamiento al hacer clic {#button-actions}
 
@@ -274,7 +276,7 @@ El contenido de la pestaña **Estilo** varía en función de las opciones de men
 
 | Formato | Entrada de datos | Descripción |
 |---|---|---|
-|[Perfil del color]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css) | Aplícalo desde la galería de plantillas de mensajes de la aplicación. | Selecciona **Aplicar plantilla** y elige de la galería. A continuación, selecciona **Guardar**. |
+|[Perfil del color]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css) | Aplícalo desde la galería de plantillas de mensajes de la aplicación. | Selecciona **Aplicar plantilla** y elige una de la galería. A continuación, selecciona **Guardar**. |
 |Alineación de texto | Izquierda, centro o derecha.  | Sólo disponible para las nuevas versiones de Braze SDK. |
 |Encabezado | Código de color HEX. | Aparecerá el color HEX que desee. También podrás elegir la opacidad del color.  |
 |Texto | Código de color HEX. | Aparecerá el color HEX que desee. También podrás elegir la opacidad del color. |
@@ -285,7 +287,7 @@ El contenido de la pestaña **Estilo** varía en función de las opciones de men
 |Chevron u otra opción de mensaje de cierre | Código de color HEX. | Aparecerá el color HEX que desee. También podrás elegir la opacidad del color. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[Previsualice y pruebe]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) siempre su mensaje antes de enviarlo.
+[Previsualice y pruebe]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) siempre su mensaje antes de enviarlo.
 
 {% alert important %}
 Algunos tipos de mensajes dentro de la aplicación no tienen la opción de estilo personalizado más allá de subir HTML (o CSS o JavaScript) y activos personalizados utilizando un archivo ZIP. [Web Modal con CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) le permite cargar o escribir CSS personalizado para crear mensajes hermosos y con estilo personalizado.
@@ -300,7 +302,7 @@ Puedes añadir [pares clave-valor]({{site.baseurl}}/user_guide/personalization_a
 ## Paso 7: Construye el resto de tu campaña o Canvas
 
 {% tabs %}
-{% tab Campaña %}
+{% tab Campaign %}
 
 Construya el resto de su campaña; consulte las siguientes secciones para obtener más orientación sobre cómo utilizar mejor nuestras herramientas para construir mensajes in-app.
 
@@ -312,7 +314,7 @@ Seleccione la acción a partir de la cual desea activar su mensaje, así como la
 Ten en cuenta que si pretendes desencadenar tu mensaje dentro de la aplicación basándote en un evento personalizado, ese evento personalizado debe enviarse utilizando el SDK.
 {% endalert %}
 
-![Campaña basada en acciones con la acción desencadenante establecida en "Iniciar sesión".]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
+![Campaña basada en acciones con la acción desencadenante configurada en «Iniciar sesión».]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
 
 La entrega de mensajes en la aplicación se basa totalmente en los siguientes desencadenantes de acciones:
 
@@ -341,17 +343,22 @@ Por último, una vez seleccionada la acción que desencadenará el mensaje dentr
 
 Puede elegir entre las siguientes prioridades de mensajes:
 
-- Baja prioridad (se muestra después de otros mensajes)
-- Prioridad media
 - Alta prioridad (se muestra antes que otros mensajes)
+- Prioridad media (predeterminada)
+- Baja prioridad (se muestra después de otros mensajes)
 
-Las opciones alta, media y baja para las prioridades de los mensajes activados son cubos y, como tales, varios mensajes podrían tener la misma prioridad seleccionada. Para establecer prioridades dentro de estos cubos, haga clic en **Establecer prioridad exacta**, y podrá arrastrar y soltar campañas para ordenarlas con la prioridad correcta.
+Las opciones alta, media y baja para las prioridades de los mensajes desencadenados son contenedores, por lo que varios mensajes pueden tener la misma prioridad seleccionada. Cuando varios mensajes comparten la misma prioridad, el mensaje creado o asignado más recientemente tiene prioridad y se muestra en primer lugar:
 
-![Un ejemplo de cómo se establece la prioridad para una campaña de mensajería dentro de la aplicación y Canvas.]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
+- **Contenedor de prioridad predeterminada:** Cuando dos campañas comparten el mismo desencadenante y utilizan la prioridad predeterminada (media), la campaña que se ha creado en último lugar recibe el desencadenante.
+- **Contenedor prioritario específico:** Cuando varias campañas comparten el mismo desencadenante y se asignan a un contenedor de prioridad específico, la campaña asignada más recientemente a ese contenedor recibe el desencadenante.
+
+Para establecer prioridades dentro de estos contenedores, haz clic en **Establecer prioridad exacta** y arrastra y suelta las campañas para ordenarlas con la prioridad correcta.
+
+![Un ejemplo de cómo se establece la prioridad para una campaña de mensajes dentro de la aplicación y Canvas.]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
 
 #### Elige los usuarios a los que dirigirte
 
-A continuación, tienes que [dirigirte a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) eligiendo segmentos o filtros para reducir tu audiencia. Automáticamente obtendrá una instantánea de cómo es la población de ese segmento aproximado en este momento. Tenga en cuenta que la pertenencia exacta a un segmento siempre se calcula justo antes de enviar el mensaje.
+A continuación, debes [dirigirte a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) seleccionando segmentos o filtros para reducir tu audiencia. Recibirás automáticamente una instantánea de cómo es aproximadamente la población de ese segmento. Ten en cuenta que la pertenencia exacta al segmento siempre se calcula antes de enviar el mensaje.
 
 {% alert note %}
 Si hay un retraso en el paso del mensaje dentro de la aplicación, la pertenencia a un segmento se evaluará después del retraso. Si el usuario cumple los requisitos, el mensaje in-app se sincronizará en la siguiente sesión disponible.
@@ -361,14 +368,14 @@ Si hay un retraso en el paso del mensaje dentro de la aplicación, la pertenenci
 
 En algunos casos, es posible que desee volver a evaluar la elegibilidad de un usuario a medida que activan un mensaje en la aplicación para mostrar. Algunos ejemplos son las campañas dirigidas a un atributo personalizado que cambia con frecuencia o los mensajes que deben reflejar cualquier cambio de perfil de última hora.
 
-![Casilla de verificación de "Reevaluar la elegibilidad de la campaña antes de mostrarla" seleccionada.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
+![Casilla de verificación «Reevaluar la elegibilidad de la campaña antes de mostrarla» seleccionada.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
 
 Al seleccionar **Reevaluar elegibilidad de campaña antes de mostrar**, se realizará una solicitud adicional a Braze para confirmar que el usuario sigue siendo elegible para este mensaje antes de enviarlo. Además, cualquier variable [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) o [Contenido Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) será templado en ese momento antes de que se muestre el mensaje.
 
 Esto evita que se envíen mensajes in-app a usuarios dentro de campañas caducadas o archivadas. Si no reevalúa la elegibilidad de un usuario, el usuario recibirá el mensaje in-app incluso después de que la campaña haya caducado o se haya archivado porque el mensaje está en su SDK y esperando a que los usuarios lo activen.
 
 {% alert note %}
-Al activar esta opción se producirá un ligero retraso (< 100 ms) entre el momento en que un usuario activa un mensaje in-app y el momento en que se muestra el mensaje, debido a la elegibilidad añadida y a la solicitud de plantillas.
+Al habilitar esta opción, se producirá un ligero retraso ((<100 ms) entre el momento en que el usuario desencadena un mensaje dentro de la aplicación y el momento en que se muestra el mensaje, debido a la solicitud adicional de elegibilidad y plantilla.
 <br><br>
 No utilice esta opción para mensajes que puedan activarse mientras un usuario está desconectado o cuando no se requiera la reevaluación de la elegibilidad y el líquido.
 {% endalert %}
@@ -389,7 +396,7 @@ Para obtener información sobre las opciones de mensajería dentro de la aplicac
 
 ## Paso 8: Revisar y desplegar
 
-Cuando hayas terminado de crear lo último de tu campaña o Canvas, revisa sus detalles, [pruébala]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) y ¡envíala!
+Cuando hayas terminado de crear lo último de tu campaña o Canvas, revisa sus detalles, [pruébala]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) y ¡envíala!
 
 A continuación, consulta [los informes de mensajes en la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/) para saber cómo puedes acceder a los resultados de tus campañas de mensajería.
 
@@ -397,7 +404,7 @@ A continuación, consulta [los informes de mensajes en la aplicación]({{site.ba
 
 ### Límites de las campañas activas de mensajes in-app
 
-Braze valora la fiabilidad y la rapidez. Al igual que te sugerimos que envíes a Braze sólo los datos que necesites, también te recomendamos que desactives las campañas que ya no aporten ningún valor a tu marca.
+Braze valora la fiabilidad y la rapidez. Te recomendamos que envíes solo los datos que necesites a Braze y desactives cualquier campaña que ya no aporte valor a tu marca.
 
 El procesamiento de campañas de mensajes in-app basadas en acciones que siguen en estado activo pero que ya no envían mensajes o que ya no son necesarias ralentiza el rendimiento general de los servicios Braze para usted y otros clientes. Este tiempo adicional necesario para procesar este gran número de campañas inactivas significa que cualquier mensaje in-app tardará más en aparecer en los dispositivos de los usuarios finales, lo que repercute en su experiencia.
 
@@ -407,4 +414,17 @@ Puedes tener hasta 200 campañas de mensajería dentro de la aplicación activas
 
 El recuento de 200 incluye las campañas de mensajes in-app activas que aún no han llegado a su hora de finalización y las que no tienen hora de finalización. No se contabilizarán las campañas de mensajería dentro de la aplicación que hayan finalizado. El cliente medio de Braze tiene un total de 26 campañas activas a la vez, por lo que es poco probable que esta limitación le afecte.
 
+### Evaluación de la entrega según la zona horaria local
 
+Cuando se programa una campaña de mensajes dentro de la aplicación utilizando la zona horaria local del usuario, la evaluación de la hora de inicio y finalización de la campaña se gestiona en el propio dispositivo.
+
+Las campañas de mensajes dentro de la aplicación suelen enviarse al dispositivo del usuario cuando se inicia o se actualiza la sesión de la aplicación. En ese momento:
+
+1. El SDK evalúa si tú cumples los requisitos para recibir mensajes dentro de la aplicación basados en desencadenantes.
+2. El dispositivo comprueba si el evento desencadenante del usuario se produjo dentro del horario de inicio y finalización de la campaña (según lo definido por la zona horaria local del usuario).
+3. Si se cumplen ambas condiciones, el mensaje dentro de la aplicación es elegible para mostrarse.
+
+#### Consideraciones
+
+- Si un usuario desencadena un evento (como pulsar un botón) poco después de que se entregue el mensaje dentro de la aplicación, es posible que el mensaje no aparezca hasta la siguiente actualización de la sesión, siempre que se sigan cumpliendo todos los criterios de elegibilidad.
+- Al igual que con otros tipos de canales, lo ideal es lanzar las campañas de mensajes dentro de la aplicación con 24-48 horas de antelación. Este búfer da a los usuarios tiempo suficiente para cumplir los requisitos elegibles y comenzar una sesión para que el mensaje sea evaluado y mostrado.

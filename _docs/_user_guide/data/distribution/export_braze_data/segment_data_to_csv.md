@@ -7,7 +7,7 @@ description: "This reference article covers how to export segment data to CSV."
 
 ---
 
-# Exporting segment data to CSV
+# Export segment data to CSV
 
 > This page covers how to request a CSV export of user data from a segment, and the data included in the export.
 
@@ -44,6 +44,7 @@ The following is included in your export depending on your selection.
 | Appboy ID                   | Internal ID (cannot be changed)                           |
 | country                     | Country                                    |
 | created_at                  | Date and time when the user profile was created                   |
+| created_from                | Method used to create the user profile (for example, REST API, SDK, or CSV import)         |
 | devices                     | Device information                           |
 | date_of_birth               | Date of birth                                            |
 | email                       | Email address                                            |

@@ -10,11 +10,11 @@ tool:
 - Canvas
 ---
 
-# 드래그 앤 드롭으로 이메일 만들기
+# 드래그 앤 드롭으로 이메일을 작성하세요
 
-> 드래그 앤 드롭 편집기를 사용하여 캠페인이나 캔버스를 위해 완전히 커스텀화되고 개인화된 이메일 메시지를 만들 수 있으며, 이메일 본문을 구축하기 위해 HTML을 사용할 필요가 없습니다.
+> 드래그 앤 드롭 편집기를 사용하면 HTML을 사용하지 않고도 이메일 본문을 구성하여 캠페인이나 캔버스용으로 완전히 커스텀화된 개인화된 이메일 메시지를 생성할 수 있습니다.
 
-## 편집자에 대하여
+## 편집자에 관하여
 
 드래그 앤 드롭 편집기는 [콘텐츠와](#content) [행을](#rows) 두 가지 핵심 구성 요소로 사용하여 HTML을 추가로 사용하지 않고도 워크플로우를 간소화합니다.
 
@@ -71,11 +71,11 @@ tool:
 
 **Cards Style** is a row property that lets you add spacing between columns and round their corners. With card-style formatting, you can create more visually engaging layouts to help highlight your most important content, such as new product features, testimonials, special offers, news updates, and more.
 
-## 드래그 앤 드롭 편집기를 사용하여
+## 드래그 앤 드롭 편집기 사용하기
 
-이메일 메시지를 캠페인으로 보내야 할지 캔버스로 보내야 할지 잘 모르시겠어요? 캠페인은 단일의 간단한 메시징 캠페인에 적합하며, 캔버스는 여러 단계의 사용자 여정에 적합합니다.
+이메일 메시지를 캠페인으로 보내야 할지 캔버스로 보내야 할지 잘 모르시겠어요? 캠페인은 단일하고 타겟팅된 메시징 캠페인에 더 적합한 반면, 캔버스는 다단계 사용자 여정에 더 적합합니다.
 
-메시지를 구축할 위치를 선택한 후, 드래그 앤 드롭 이메일을 만드는 단계로 들어가 보겠습니다.
+메시지를 구축할 위치를 선택한 후, 드래그 앤 드롭 이메일 생성 단계를 살펴보겠습니다.
 
 ### 1단계: 템플릿 선택
 
@@ -86,7 +86,7 @@ tool:
 - 저장된 끌어서 놓기 이메일 템플릿을 사용합니다.
 
 {% alert note %}
-기존의 커스텀 HTML 템플릿이나 제3자가 만든 템플릿을 사용하려면, **템플릿**  >** 이메일 템플릿으로** 이동하여 **드래그 앤  드롭 편집기를 **편집 경험으로 선택하여 템플릿을 재생성해야 합니다.
+기존의 커스텀 HTML 템플릿이나 제3자가 만든 템플릿을 사용하려면, **템플릿** > **이메일 템플릿**으로 이동하여 **드래그 앤 드롭 편집기**를 편집 경험으로 선택하여 템플릿을 재생성해야 합니다.
 {% endalert %}
 
 **템플릿** 섹션에서 모든 템플릿에 액세스할 수도 있습니다.
@@ -99,9 +99,9 @@ Then, select **Edit Email Body** to begin designing the email structure in the d
 
 ### 2단계: 이메일 작성
 
-드래그 앤 드롭 편집 환경은 세 가지 섹션으로 나뉩니다: **보내기 설정**, **콘텐츠**, **미리보기 및 테스트**. 이메일 본문 작성의 마법은 **콘텐츠** 섹션에서 이루어집니다. 이메일을 작성하기 전에 이메일 작성 환경을 안내하는 주요 구성 요소를 이해하는 것이 중요합니다. If you need to review, see [About the editor](#about-the-editor).
+드래그 앤 드롭 편집 환경은 세 가지 섹션으로 나뉩니다: **설정**, **콘텐츠** 및 **미리보기** **전송****& 테스트**. 이메일 본문 작성의 마법은 **콘텐츠** 섹션에서 이루어집니다. 이메일을 작성하기 전에 이메일 작성 환경을 안내하는 주요 구성 요소를 이해하는 것이 중요합니다. If you need to review, see [About the editor](#about-the-editor).
 
-준비가 되면 드래그 앤 드롭 콘텐츠 블록을 사용하여 이메일을 구축하세요.
+준비가 되셨다면, 드래그 앤 드롭 방식의 콘텐츠 블록을 사용하여 이메일을 구축하세요.
 
 1. **행** 패널을 선택합니다. 행 구성을 기본 편집기로 끌어다 놓습니다. 이렇게 하면 이메일 콘텐츠의 레이아웃이 매핑됩니다.
 - 새 구성은 기존 섹션의 상단 또는 하단으로 드래그해야 한다는 점에 유의하세요.
@@ -115,9 +115,9 @@ Then, select **Edit Email Body** to begin designing the email structure in the d
 이메일을 작성할 때 데스크톱 보기와 모바일 보기를 전환하여 사용자 그룹에 대한 이메일 메시지가 어떻게 표시되는지 미리 볼 수 있습니다. 이렇게 하면 콘텐츠가 반응형인지 확인하고 필요한 경우 조정할 수 있습니다.
 
 {% alert tip %}
-멋진 카피를 만드는 데 도움이 필요하신가요? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Input a product name or description, and the AI will generate human-like marketing copy for use in your messaging.
+멋진 카피를 만드는 데 도움이 필요하신가요? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). 제품 이름이나 설명을 입력하면 AI가 메시지에 사용할 수 있도록 사람과 유사한 마케팅 문구를 생성합니다.
 
-![드래그 앤 드롭 편집기의 스타일 설정 옆 콘텐츠 패널에 있는 카피라이터 버튼.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
+![드래그 앤 드롭 편집기의 스타일 설정 옆 콘텐츠 패널에 위치한 카피라이터 버튼.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
 
 ### 3단계: 전송 정보 추가
@@ -129,9 +129,11 @@ Then, select **Edit Email Body** to begin designing the email structure in the d
 3. 다음으로, 이메일을 **BCC 주소**로 선택하여 이 주소에 이메일을 표시합니다.
 4. 이메일에 제목을 추가합니다. 선택 사항으로 프리헤더와 프리헤더 뒤에 공백을 추가할 수도 있습니다.
 
+{% multi_lang_include alerts/tip_alerts.md alert='Liquid email display name and reply-to address' %}
+
 오른쪽 패널의 미리보기가 추가한 전송 정보로 채워집니다. 이 정보는 **설정** > **이메일 환경설정** > **보내기 구성으로** 이동하여 업데이트할 수도 있습니다.
 
-#### 개인화된 이메일 헤더 (고급)
+#### 이메일 헤더 개인화 (고급)
 
 **전송 설정**에서 이메일 헤더 및 이메일 추가 정보에 대한 개인 설정을 추가하여 다른 이메일 서비스 제공업체에 추가 데이터를 다시 보낼 수 있습니다. 받는 사람의 이름을 포함하는 등 이메일 헤더를 커스텀하는 것도 이메일이 열릴 가능성을 높이는 데 도움이 될 수 있습니다.
 
@@ -157,7 +159,7 @@ Then, select **Edit Email Body** to begin designing the email structure in the d
 
 - **무작위 사용자:** Braze는 데이터베이스에서 무작위로 사용자를 선택하고 해당 사용자의 속성 또는 이벤트 정보를 기반으로 이메일을 미리 봅니다.
 - **사용자 선택:** 이메일 주소 또는 외부 ID를 기준으로 특정 사용자를 선택할 수 있습니다. The email will be previewed based on that user's attributes and event information
-- **사용자 지정 사용자:** 사용자를 사용자 정의할 수 있습니다. Braze는 사용 가능한 모든 속성과 이벤트에 대한 입력을 제공합니다. 미리보기 이메일에 보고 싶은 정보를 입력할 수 있습니다.
+- **커스텀 사용자:** 사용자를 사용자 정의할 수 있습니다. Braze는 사용 가능한 모든 속성과 이벤트에 대한 입력을 제공합니다. 미리보기 이메일에 보고 싶은 정보를 입력할 수 있습니다.
 
 {% alert note %}
 무작위 사용자는 세분화 기준에 포함될 수도 있고 포함되지 않을 수도 있습니다. 세분화는 나중에 선택되므로 현재로서는 Braze가 타겟 오디언스를 인식하지 못합니다.
@@ -167,11 +169,11 @@ You can also select **Copy preview link** to generate and copy a shareable previ
 
 Note that any edits made to an email template won't reflect in a previously generated link. You'll need to generate a new link preview to see any edits.
 
-![Email preview with a button to "Copy preview link" and copy the generated link.]({% image_buster /assets/img/dnd_email_link_preview.png %})
+![이메일 미리보기 화면에 "미리보기 링크 복사" 버튼이 표시되며, 생성된 링크를 복사할 수 있습니다.]({% image_buster /assets/img/dnd_email_link_preview.png %})
 
 #### Inbox Vision 사용
 
-받은편지함 비전을 사용하면 이메일 클라이언트 및 모바일 기기의 관점에서 이메일 캠페인을 볼 수 있습니다. 받은편지함 비전을 사용하여 이메일 메시지를 테스트하려면 **미리 보기 및 테스트** 섹션에서 **받은편지함** 비전을 선택하고 **받은편지함 비전 실행**을 클릭합니다.
+받은편지함 비전을 사용하면 이메일 클라이언트 및 모바일 기기의 관점에서 이메일 캠페인을 볼 수 있습니다. Inbox Vision을 사용하여 이메일 메시지를 테스트하려면 **미리보기&테스트** 섹션에서 **Inbox Vision을** 선택한 후 **Inbox Vision 실행을** 선택하십시오.
 
 {% alert tip %}
 이메일 메시지의 배경 이미지로 인해 이미지 사이에 흰색 선이나 끊김 현상이 나타날 수 있으므로 이메일 메시지의 세부적인 내용을 테스트하고 확인하는 것이 중요합니다.
@@ -179,7 +181,7 @@ Note that any edits made to an email template won't reflect in a previously gene
 
 After using the drag-and-drop editor to design and create your email message, continue to [build]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) the remainder of your campaign or Canvas.
 
-{% details 업데이트된 HTML 엔진 정보 %}
+{% details About the updated HTML engine %}
 드래그 앤 드롭 편집기에서 HTML을 생성하는 기본 엔진이 최적화 및 업데이트되어 HTML 파일 압축 및 렌더링과 관련된 이점이 있습니다.
 
 내보낸 평균 HTML 데이터 공간 크기가 줄어들어 로딩 및 렌더링 속도가 빨라지고 모바일 클리핑이 감소하며 대역폭 소비가 줄어듭니다.
@@ -191,7 +193,7 @@ After using the drag-and-drop editor to design and create your email message, co
 - 투명 디바이더는 자동으로 콘텐츠 패딩으로 변환됩니다.
 {% enddetails %}
 
-## 기타 사용자 정의
+## 기타 커스텀 사용자 지정
 
 드래그 앤 드롭 이메일을 계속 작성하면서 이러한 창의적인 세부 정보를 조합하여 각 이메일 본문을 추가로 사용자 지정하여 잠재 고객의 관심과 메시지를 사로잡을 수 있습니다.
 
@@ -203,17 +205,17 @@ After using the drag-and-drop editor to design and create your email message, co
 
 이메일에 추가된 이미지는 **자동 너비**로 자동 설정됩니다. 이 설정을 조정하려면 **자동 너비** 설정을 끄고 필요에 따라 너비 비율을 조정합니다.
 
-![Auto width option in the Content tab of the drag-and-drop editor.]({% image_buster /assets/img/dnd/dnd1.png %})
+![드래그 앤 드롭 편집기의 콘텐츠 탭에서 자동 너비 옵션을 선택합니다.]({% image_buster /assets/img/dnd/dnd1.png %})
 
 ### 색상 레이어링
 
 색상 레이어링을 사용하여 이메일 배경, 콘텐츠 영역 및 다양한 콘텐츠 구성 요소의 색상을 변경할 수 있습니다. 색상 순서는 콘텐츠 구성 요소 색상, 콘텐츠 영역 배경색, 배경색 순으로 앞뒤로 정렬됩니다.
 
-![Example of the color layering in the drag-and-drop editor.]({% image_buster /assets/img/dnd/dnd2.png %})
+![드래그 앤 드롭 편집기에서 색상 레이어링의 예입니다.]({% image_buster /assets/img/dnd/dnd2.png %})
 
 ### 콘텐츠 패딩
 
-![Block Options for the drag-and-drop editor.]({% image_buster /assets/img/dnd/dnd3.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+![끌어서 놓기 편집기의 블록 옵션.]({% image_buster /assets/img/dnd/dnd3.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 패딩을 조정하려면 아래로 스크롤하여 **차단 옵션으로** 이동한 후 **추가 옵션을** 선택합니다. 패딩을 미세 조정하여 이메일이 보기 좋게 보이도록 할 수 있습니다.
 
@@ -221,9 +223,15 @@ After using the drag-and-drop editor to design and create your email message, co
 
 행 구성에 배경 이미지를 추가하여 이메일 캠페인에 더 많은 디자인 및 시각적 콘텐츠를 포함할 수 있습니다.
 
-### 개인화 추가
+### 언어 속성
 
-![Options for adding personalization for the drag-and-drop editor.]({% image_buster /assets/img/dnd/dnd4.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+You can set the language attribute by going to the **Settings** tab and selecting the desired language. You can also target the user attribute {%raw%} `{{${language}}}` {%endraw%} if the message is intended for users with dynamic language values.
+
+![이메일의 "언어" 값 설정.]({% image_buster /assets/img/dnd/language_setting_dnd.png %}){: style="max-width:70%;"}
+
+### 개인화
+
+![끌어서 놓기 편집기에 개인 설정을 추가하는 옵션입니다.]({% image_buster /assets/img/dnd/dnd4.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 기본 Liquid는 드래그 앤 드롭 이메일 편집기에서 지원됩니다. 이메일에 개인화 설정을 추가하려면
 
@@ -236,9 +244,13 @@ After using the drag-and-drop editor to design and create your email message, co
 
 #### 동적 이미지
 
-이미지 소스 속성에 Liquid를 포함하여 이메일 메시지에 동적 이미지를 포함하도록 선택할 수 있습니다. 예를 들어 정적 이미지 대신 {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %}를 이미지 URL로 삽입하여 이미지에 사용자의 이름을 포함할 수 있습니다. 이렇게 하면 각 사용자에게 맞춤화된 이메일을 보낼 수 있습니다.
+이메일 메시징에 동적 이미지를 포함하려면 이미지 소스 속성에 [연결된 콘텐츠]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) 또는 [Liquid를]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) 포함하도록 선택할 수 있습니다. 예를 들어 정적 이미지 대신 {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %}를 이미지 URL로 삽입하여 이미지에 사용자의 이름을 포함할 수 있습니다. 이렇게 하면 각 사용자에게 맞춤화된 이메일을 보낼 수 있습니다.
 
-### Change text direction
+{% alert important %}
+이미지 URL은 반드시 .`https://`로 시작해야 합니다. 사용하면 앱이`http://` 충돌합니다.
+{% endalert %}
+
+### 텍스트 방향
 
 When composing your message, you can toggle the text direction between left-to-right to right-to-left by selecting the respective **Text direction** button. You might use this option when creating messages in languages like Arabic and Hebrew.
 
@@ -246,9 +258,11 @@ When composing your message, you can toggle the text direction between left-to-r
 
 The final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
-### 링크에 HTML 속성 추가
+### HTML
 
-![The "Attributes" section with the attribute "clicktracking" turned off for a link.]({% image_buster /assets/img/dnd_custom_attributes.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+#### 링크에 대한 HTML 속성
+
+![링크에 대해 "클릭 추적" 속성이 꺼진 "속성" 섹션.]({% image_buster /assets/img/dnd_custom_attributes.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 끌어서 놓기 편집기에서 링크, 버튼, 이미지 및 동영상을 사용하는 경우 **콘텐츠** 섹션의 **속성에서** **새 속성 추가를** 선택하여 이메일의 HTML 태그에 추가 정보를 추가할 수 있습니다. 이는 메시지 개인화, 세분화 및 스타일링에 특히 유용할 수 있습니다.
 
@@ -268,9 +282,41 @@ Alternatively, you can integrate with one of our attribution partners, such as [
 
 Lastly, predefined attributes are available to help make your message accessible. Learn more at our dedicated [Building accessible messages in Braze]({{site.baseurl}}/help/accessibility) article.
 
-### Setting a language for email
+#### 커스텀 헤드 태그
 
-You can set the language attribute by going to the **Settings** tab and selecting the desired language. You can also target the user attribute {%raw%} `{{${language}}}` {%endraw%} if the message is intended for users with dynamic language values.
+태그를`<head>` 사용하여 이메일 메시지에 CSS 및 메타데이터를 추가하세요. 예를 들어, 이러한 태그를 사용하여 스타일시트나 파비콘을 추가할 수 있습니다. 태그 `<head>`내에서 Liquid가 지원됩니다.
 
-![Setting the "Language" value for an email.]({% image_buster /assets/img/dnd/language_setting_dnd.png %})
+태그 `<head>`외부에서 추가된 모든 내용은 이메일에서  태그`<body>` 뒤에 추가됩니다. 이는 추가된 콘텐츠가 이메일에 표시됨을 의미합니다.
 
+##### 태그별 허용되는 태그 및 속성
+
+| 태그 이름 | 설명 | 예시 |
+| --- | --- | --- |
+| `base` | 메시지 내 모든 상대 경로에 대한 기본 URL을 지정합니다. | `<base href="https://example.com" target="_blank">` |
+| `link`| 메시지와 외부 리소스 간의 관계를 정의합니다. | `<link href="styles.css" rel="stylesheet" type="text/css">` |
+| `meta` | 페이지 설명이나 키워드와 같은 메타데이터를 제공합니다. | `<meta name="description" content="Free Web tutorials">` |
+| `style` | 내부 CSS 스타일을 임베드합니다. | `<style type="text/css" media="screen">body { font-size: 16px; }</style>` |
+| `title` | 브라우저 탭에 표시되는 문서의 제목을 설정합니다. | `<title>StyleRyde</title>` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+| 태그 | 속성 | 설명 | 예시 |
+| --- | --- | --- | --- |
+| `base` | `href` | 상대 URL에 사용할 기본 URL. | ```<base href="https://braze.com">``` |
+| `base` | `target`| 모든 하이퍼링크 및 양식에 대한 기본값 대상. | ```<base target="_blank">``` |
+| `link` | `href` | 외부 리소스의 URL. | ```<link href="style.css">``` |
+| `link` | `rel` | 현재 메시지와 연결된 메시지 간의 관계를 정의합니다. | ```<link rel="stylesheet">``` |
+| `link` | `type` | 연결된 리소스의 유형. | ```<link type="text/css">``` |
+| `link` | `sizes` | 아이콘의 크기를 지정합니다. | ```<link rel="icon" sizes="32x32" href="favicon-32.png">``` |
+| `link` | `media` | 스타일이 적용되는 미디어 또는 기기를 지정합니다. | ```<link rel="stylesheet" media="screen" href="style.css">``` |
+| `meta` | `name` | 브라우저 탭에 표시되는 문서의 제목을 설정합니다. | ```<meta name="viewport" content="width=device-width, initial-scale=1">``` |
+| `meta` | `content` | 브라우저 탭에 표시되는 문서의 제목을 설정합니다. | ```<meta name="description" content="Page about our newest products">``` |
+| `meta` | `charset` | 문자 인코딩을 선언합니다. | ```<meta charset="UTF-8">``` |
+| `meta` | `property` | 브라우저 탭에 표시되는 문서의 제목을 설정합니다. | ```<meta property="og:title" content="Website title">``` |
+| `style` | `type` | 스타일 콘텐츠의 MIME 유형. | {% raw %}```<style type="text/css">p { color: red; }</style>```{% endraw %} |
+| `style` | `media` | 스타일이 적용되는 미디어 또는 기기를 지정합니다. | ```<style media="print">body { font-size: 12pt; }</style>``` |
+| `title` | 속성 없음 | 태그는`title` 어떤 속성도 허용하지 않습니다. | ```<title>Kitchenerie</title>``` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+{% alert note %}
+링크 이름은 최대 63바이트까지 가능하며, 한도를 초과할 경우 자동으로 잘립니다.
+{% endalert %}

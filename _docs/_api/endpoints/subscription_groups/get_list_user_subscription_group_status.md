@@ -54,7 +54,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 - For SMS and WhatsApp subscription groups, either `external_id` or `phone` is required.  When both are submitted, only the `external_id` is used for querying and the phone number is applied to that user.
 - For email subscription groups, either `external_id` or `email` is required.  When both are submitted, only the `external_id` is used for the query and the email address is applied to that user.
 
-## Example request 
+## Example request
 
 {% tabs %}
 {% tab Multiple Users %}
@@ -87,8 +87,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 All successful responses will return `Subscribed`, `Unsubscribed`, or `Unknown` depending on status and user history with the subscription group.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "status": {
     "1": "Unsubscribed",
@@ -97,5 +95,9 @@ Authorization: Bearer YOUR-REST-API-KEY
   "message": "success"
 }
 ```
+
+{% alert important %}
+This endpoint returns the subscription group status independently of the user's global subscription state. If a user is globally unsubscribed, the Braze dashboard shows them as unsubscribed from each subscription group. However, this endpoint still returns the last saved subscription group status (for example, `Subscribed`) because the global subscription state supersedes individual subscription groups without overwriting them.<br><br>Braze preserves individual subscription group states so that if the user globally resubscribes, each subscription group reverts to its previously saved status. To determine a user's effective subscription state, check both their global subscription status and the subscription group status returned by this endpoint.
+{% endalert %}
 
 {% endapi %}

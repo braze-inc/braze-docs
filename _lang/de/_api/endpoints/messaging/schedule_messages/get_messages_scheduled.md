@@ -1,7 +1,7 @@
 ---
-nav_title: "GET: Liste geplanter Kampagnen und Canvase"
+nav_title: "GET: Liste der anstehenden geplanten Kampagnen und Canvase"
 article_title: "GET: Liste geplanter Kampagnen und Canvase"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 0
 layout: api_page
 page_type: reference
@@ -11,7 +11,7 @@ description: "Dieser Artikel enthält Einzelheiten über den Endpunkt Liste der 
 {% api %}
 # Liste der anstehenden geplanten Kampagnen und Canvase
 {% apimethod get %}
-/nachrichten/geplante_ausstrahlungen
+/messages/scheduled_broadcasts
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um eine JSON-Liste mit Informationen über geplante Kampagnen und Eingänge Canvase zwischen jetzt und einem in der Anfrage angegebenen `end_time` zurückzugeben.
@@ -44,8 +44,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "scheduled_broadcasts": [
     {
@@ -54,8 +52,8 @@ Authorization: Bearer YOUR-REST-API-KEY
       "type": (string) the broadcast type either Canvas or Campaign,
       "tags": (array) an array of tag names formatted as strings,
       "next_send_time": (string) The next send time formatted in ISO 8601, may also include time zone if not local/intelligent delivery,
-      "schedule_type": (string) The schedule type, either local_time_zones, intelligent_delivery or the name of your company's time zone,
-    },
+      "schedule_type": (string) The schedule type, either local_time_zones, intelligent_delivery or the name of your company's time zone
+    }
   ]
 }
 ```

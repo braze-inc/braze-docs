@@ -1,5 +1,5 @@
 ---
-nav_title: Configurações de administrador
+nav_title: Configurações do administrador
 article_title: Configurações de administrador
 page_order: 20
 layout: dev_guide
@@ -20,7 +20,10 @@ guide_featured_list:
 - name: Configurações de segurança
   link: /docs/user_guide/administrative/app_settings/company_settings/security_settings/
   image: /assets/img/braze_icons/shield-01.svg
-- name: Provisionamento Automático de Usuários
+- name: Fusos horários do espaço de trabalho
+  link: /docs/user_guide/administrative/app_settings/company_settings/workspace_time_zone/
+  image: /assets/img/braze_icons/user-circle.svg
+- name: Provisionamento automatizado de usuários
   link: /docs/user_guide/administrative/app_settings/company_settings/automated_user_provisioning/
   image: /assets/img/braze_icons/user-plus-01.svg
 ---

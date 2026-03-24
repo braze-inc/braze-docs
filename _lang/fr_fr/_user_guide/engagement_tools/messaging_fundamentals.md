@@ -1,5 +1,5 @@
 ---
-nav_title: Principes de base de l’envoi de messages (Messaging Fundamentals)
+nav_title: "Principes de base de l'envoi de messages"
 article_title: Principes de base de l’envoi de messages (Messaging Fundamentals)
 layout: dev_guide
 page_order: 0
@@ -30,6 +30,9 @@ guide_featured_list:
   - name: Types de livraison
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: Blocs éditeur
+    link: /docs/dnd/editor_blocks/
+    image: /assets/img/braze_icons/align-left.svg
   - name: Localisation
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
     image: /assets/img/braze_icons/globe-02.svg

@@ -1,6 +1,6 @@
 ---
-nav_title: 캠페인 관리
-article_title: 캠페인 관리
+nav_title: 캠페인 관리하기
+article_title: 캠페인 관리하기
 layout: dev_guide
 guide_top_header: "캠페인 관리"
 guide_top_text: "캠페인을 시작했으면 이제 편안히 앉아 데이터의 흐름을 지켜볼 차례입니다. 캠페인을 변경하거나, 알림을 설정하거나, 캠페인을 보관해야 하는 경우 다음 도움말 문서를 참조하세요."

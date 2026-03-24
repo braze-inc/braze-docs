@@ -27,5 +27,11 @@ guide_featured_list:
   - name: Dashboard de uso de API
     link: /docs/user_guide/analytics/dashboard/api_usage_dashboard/
     image: /assets/img/braze_icons/trend-up-01.svg
+  - name: Panel de control de ingresos del comercio electrónico
+    link: /docs/ecommerce_revenue_dashboard/
+    image: /assets/img/braze_icons/line-chart-up-04.svg  
+  - name: Panel de diagnóstico de mensajería
+    link: /docs/user_guide/analytics/dashboard/diagnostics_dashboard/
+    image: /assets/img/braze_icons/pie-chart-01.svg
 ---
 <br><br>

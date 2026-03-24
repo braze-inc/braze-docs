@@ -10,11 +10,11 @@ tool:
   
 ---
 
-# [![Cours d'apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Expressions régulières
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Expressions régulières
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
-> Une expression régulière, connue sous le nom de « regex » en anglais, est une séquence de caractères qui définit un modèle de recherche. Les expressions régulières vous permettent de valider des groupements de texte et d’effectuer des recherches et des remplacements. Chez Braze, nous exploitons des expressions régulières pour vous proposer une solution de correspondance de chaîne de caractères plus flexible afin de vous aider à filtrer vos segments et campagnes pour votre audience cible.<br><br>Cette page traite des expressions régulières (regex), de leur utilisation, des questions fréquemment posées et propose un débogueur regex pour tester les expressions régulières.
+> Une expression régulière, connue sous le nom de « regex » en anglais, est une séquence de caractères qui définit un modèle de recherche. Les expressions régulières vous permettent de valider des groupements de texte et d’effectuer des recherches et des remplacements. Chez Braze, nous exploitons des expressions régulières pour vous proposer une solution de correspondance de chaîne de caractères plus flexible afin de vous aider à filtrer vos segments et campagnes pour votre audience cible.<br><br>Cette page traite des expressions régulières (regex), de leur utilisation, des questions fréquemment posées et fournit un débogueur regex pour tester les expressions régulières.
 
 Dans le cours d'apprentissage de Braze lié, nous vous montrons comment les expressions régulières peuvent être utilisées et testées sur [Regex101\.](https://regex101.com/) Nous proposons également un [testeur d’expression régulière interne](#regex-debugger), une page de références utiles, des données d’échantillon référencées dans la vidéo d’apprentissage de Braze sur les expressions régulières, ainsi que des réponses à certaines questions fréquemment posées.
 
@@ -29,11 +29,11 @@ Dans le cours d'apprentissage de Braze lié, nous vous montrons comment les expr
 {% alert important %}
 Cet outil est uniquement fourni à titre de référence et ne garantit pas que l’expression régulière corresponde à 100 % à la plateforme Braze. Les expressions régulières de Braze utilisées pour la segmentation et les filtres ajoutent automatiquement le modificateur `/gi`. Le [modificateur gi](https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm) est utilisé pour effectuer une recherche qui ne respecte pas la casse de toutes les occurrences d’une expression régulière dans une chaîne de caractères.  
 <br>
-Les expressions régulières pour les propriétés d'événements personnalisés d'un déclencheur et les filtres de déclencheurs utilisent le modificateur `/g` (sensible à la casse, voir le [modificateur g](https://www.w3schools.com/jsref/jsref_regexp_g.asp)) et n'utilisent pas le modificateur `/i`. Pour que les propriétés d'un déclencheur d'événement personnalisé et les filtres de déclencheur ne soient pas sensibles à la casse, utilisez plutôt `(?i)`. Par exemple, `Matches regex (?i)STOP(?-i)` attrape toute utilisation de "STOP" dans tous les cas (tels que "stop", "veuillez arrêter" et "n'arrêtez jamais de m'envoyer des messages").
+Les expressions régulières pour les propriétés de déclenchement d'événements personnalisés et les filtres de déclenchement utilisent le`/g`modificateur (sensible à la casse, voir [le modificateur g](https://www.w3schools.com/jsref/jsref_regexp_g.asp)) et n'utilisent pas le`/i`modificateur. Pour ignorer la casse dans les propriétés de déclencheur d'événements personnalisés et les filtres de déclencheur, veuillez utiliser`(?i)`à la place. Par exemple,`Matches regex (?i)STOP(?-i)`détecte toute utilisation du mot « STOP » dans tous les cas (comme « stop », « veuillez arrêter » et « cessez d'envoyer des messages à mon adresse »).
 {% endalert %}
 
 {% tabs %}
-{% tab Débogueur d'expressions régulières %}
+{% tab Regex Debugger %}
 <div>
 Ce formulaire permet d’effectuer des validations et des tests de base des expressions régulières.
 ​
@@ -164,7 +164,7 @@ Cette expression régulière peut être divisée en trois parties :
 
 Supposons que vous souhaitiez filtrer les e-mails se terminant par "@braze.com". Vous devez utiliser le filtre d'adresses e-mail, le définir sur `matches regex`, et saisir "@braze.com" dans le champ de l'expression régulière. Il en va de même pour tout autre domaine e-mail.
 
-![Filtre pour une adresse e-mail qui correspond à l'expression régulière "@braze.com".]({% image_buster /assets/img/regex/regeximg1.png %})
+![Veuillez filtrer les adresses e-mail qui correspondent à l'expression régulière « @ braze.com».]({% image_buster /assets/img/regex/regeximg1.png %})
 
 #### Comment utiliser les chaînes de numéros de filtre pour les valeurs ≥ x et ≤ x ?
 
@@ -190,7 +190,7 @@ Utilisez l’accent circonflexe (`^`) pour indiquer ce par quoi la chaîne de ca
 
 Par exemple, si vous essayez de cibler des utilisateurs qui vivent dans des villes commençant par « San », votre expression régulière sera `^San \w`. Cette expression régulière vous permettra de cibler des utilisateurs dans de villes telles que San Francisco, San Diego, San Jose, etc.
 
-![Filtre pour une ville qui correspond à l'expression régulière de "^San \\w".]({% image_buster /assets/img/regex/regeximg2.png %})
+![Filtrez les villes qui correspondent à l'expression régulière « ^San \\w ».]({% image_buster /assets/img/regex/regeximg2.png %})
 
 #### Comment filtrer des numéros de téléphone spécifiques ?
 
@@ -198,7 +198,7 @@ Avant d'utiliser une expression régulière pour filtrer les numéros de télép
 
 En supposant que vous recherchez des numéros de téléphone aux États-Unis, utilisez le format d’expression régulière `1?\d\d\d\d\d\d\d\d\d\d`, dans lequel chaque répétition de `\d` est un chiffre que vous souhaitez spécifier. Les trois premiers chiffres correspondent à l’indicatif régional.
 
-De même, le format des numéros de téléphone britanniques est `^\+4\d\d\d\d\d\d\d\d\d\d\d`. Pour tout autre pays, utilisez l’indicatif national suivi du nombre de répétitions de `\d` nécessaire pour chaque chiffre restant. Ainsi, dans le cas de la Lituanie, dont l’indicatif national est « 3 », l’expression régulière serait `^\+3\d\d\d\d\d\d\d\d\d\d`.
+De même, le format des numéros de téléphone britanniques est `^\+4\d\d\d\d\d\d\d\d\d\d\d`. Pour tout autre pays, il convient d'utiliser le code du pays concerné, suivi du nombre de`\d`répétitions nécessaires pour chaque chiffre restant. Ainsi, dans le cas de la Lituanie, dont l’indicatif national est « 3 », l’expression régulière serait `^\+3\d\d\d\d\d\d\d\d\d\d`.
 
 Supposons par exemple que vous souhaitiez filtrer les utilisateurs par numéro de téléphone avec l’indicatif régional « 718 ». Utilisez le filtre de numéro de téléphone, définissez-le sur `matches regex` et entrez l’expression régulière ci-dessous :
 
@@ -206,6 +206,6 @@ Supposons par exemple que vous souhaitiez filtrer les utilisateurs par numéro d
 ^1?718\d\d\d\d\d\d\d
 ```
 
-![Filtre pour un numéro de téléphone qui correspond à l'expression régulière "^1?718d\\d\\d\\d\\d\\d".]({% image_buster /assets/img/regex/regeximg3.png %})
+![Filtrez les numéros de téléphone qui correspondent à l'expression régulière « ^1?718\\d\\d\\d\\d\\d\\d\\d ».]({% image_buster /assets/img/regex/regeximg3.png %})
 
 

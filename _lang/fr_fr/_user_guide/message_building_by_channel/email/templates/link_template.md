@@ -15,7 +15,7 @@ channel:
 > Avec les modèles de liens, vous pouvez créer des liens dynamiques et réutilisables pour vos campagnes d'e-mail en ajoutant des paramètres ou des URL. Cela permet d'assurer la cohérence des URL dans l'ensemble de vos campagnes et de vos messages. 
 
 {% alert note %}
-Les modèles de liens sont une fonctionnalité facultative. Si l'option **Modèles de liens e-mail** n'apparaît pas dans la section **Modèles**, contactez votre gestionnaire de compte pour activer cette fonctionnalité.
+Les modèles de liens sont une fonctionnalité facultative. Si l'option **Modèles de liens e-mail** ne figure pas dans la section **Modèles**, contactez votre gestionnaire de compte pour activer cette fonctionnalité.
 {% endalert %}
 
 ## Fonctionnement
@@ -54,7 +54,7 @@ Pour ajouter une chaîne de caractères ou une URL avant les liens dans votre me
 
 L'**aperçu du** modèle est fourni pour vous donner un exemple de la façon dont le modèle de lien sera inséré avant une URL.
 
-![Champs Position du modèle, Ajout avant l’URL et Aperçu du modèle pour le processus d’insertion du modèle de lien avant une URL.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
+![Les champs Position du modèle, Prédire l'URL et Aperçu du modèle pour le processus d'insertion du modèle de lien avant une URL.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 
 ### Ajouter : Créer un modèle de lien qui s’insère après une URL {#append-link-template}
 
@@ -64,7 +64,7 @@ Si vous souhaitez ajouter des paramètres de requête après une URL dans votre 
 2. Définissez la **position du modèle** sur **Après l'URL**. 
 3. Saisissez les paramètres de requête (`value=example`) à la fin de chaque URL. Vous pouvez avoir plusieurs paramètres ajoutés à la fin d’une URL.
 
-![Les champs Position du modèle, Paramètres de la requête et Aperçu du modèle pour le processus d'insertion du modèle de lien après un URL.]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
+![Les champs Position du modèle, Paramètres de la requête et Aperçu du modèle pour le processus d'insertion du modèle de lien après une URL.]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
 
 ## Utilisation de modèles de liens dans les campagnes d'e-mailing
 
@@ -88,7 +88,7 @@ Lorsque vous ajoutez des modèles de liens dans l'onglet **Gestion des liens**, 
 
 ## Gestion des modèles de lien
 
-Vous pouvez également [dupliquer les]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modèles de liens. Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la rubrique [Modèles et médias.]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
+Vous pouvez également [dupliquer les]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modèles de liens. Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la rubrique [Modèles et médias à l'adresse & ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 {% alert important %}
 L'archivage des modèles n'est pas disponible actuellement pour les modèles de liens.

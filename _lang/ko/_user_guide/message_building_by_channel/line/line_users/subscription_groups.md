@@ -1,5 +1,5 @@
 ---
-nav_title: 구독 그룹
+nav_title: Subscription groups
 article_title: 구독 그룹
 page_order: 1
 description: "이 문서에서는 LINE 메시지 구독 그룹에 대해 설명합니다."

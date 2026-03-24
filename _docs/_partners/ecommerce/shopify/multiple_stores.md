@@ -6,7 +6,7 @@ page_order: 6
 description: "This reference article covers how to connect and configure multiple Shopify stores to a single workspace."
 ---
 
-# Connecting multiple Shopify stores
+# Connect multiple Shopify stores
 
 > Connect multiple Shopify store domains to a single workspace to have a holistic view of your customers across all markets. Build and launch automation programs and journeys in a single workspace without duplicating efforts across regional stores.  
 
@@ -18,7 +18,6 @@ This feature doesn't support Shopify Markets or Markets Pro. If you would like t
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Enable multiple stores | Contact your customer success manager to enable Shopify multiple store support. |
 | Set up a Shopify store | Be sure that you've already [set up at least one Shopify store with Braze]({{site.baseurl}}/shopify_overview/). |
 | Unique Shopify storefront domains for each region | Multiple store support is intended for use with unique Shopify store domains for different regional storefronts. <br><br>If you want to connect multiple sub-brands to Braze, we recommend creating separate workspaces for each sub-brand. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -69,7 +68,7 @@ When a user profile is synced, the following fields will be merged. For full det
 - Custom event and purchase data
 - Custom event properties for segmentation (for example, “X times in Y days” where X ≤ 50 and Y ≤ 30)
 - Event count (combined from both profiles)
-- Dates of first and last events (Braze selects the earliest and latest dates)
+- Dates of first and last events (Braze selects the earliest and most recent dates)
 - Campaign interaction data (most recent date fields)
 - Workflow summaries (most recent date fields)
 - Message and engagement history
@@ -153,7 +152,7 @@ For a complete overview of all event payloads, refer to [Shopify data features](
 
 When you connect and configure each Shopify store in Braze, you can optionally enable the Shopify product sync as part of the integration.
 
-If you activate the product sync for each store, Braze will include the name of your Shopify store in the catalog name. This helps you distinguish products from different stores.
+If you activate the product sync for each store, Braze includes the name of your Shopify store in the catalog name. This distinguishes products from different stores.
 
 ![Shopify catalogs with their Shopify store in their name.]({% image_buster /assets/img/Shopify/catalog_store_name.png %})
 

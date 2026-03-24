@@ -24,7 +24,7 @@ Clique em **Save Color Profile (Salvar perfil de cor** ) quando terminar.
 
 ### Gerenciamento de perfis de cores
 
-Você também pode [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) e [arquivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modelos! Saiba mais sobre como criar e gerenciar modelos e conteúdo criativo em [Modelos e mídias.]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
+Você também pode [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) e [arquivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modelos! Saiba mais sobre como criar e gerenciar modelos e conteúdo criativo em [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Modelo CSS {#in-app-message-templates}
 
@@ -84,7 +84,7 @@ Como você pode ver, é possível editar tudo, desde a cor do plano de fundo at�
 
 ### Gerenciamento de modelos CSS
 
-Você também pode [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) e [arquivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modelos! Saiba mais sobre como criar e gerenciar modelos e conteúdo criativo em [Modelos e mídias.]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
+Você também pode [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) e [arquivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modelos! Saiba mais sobre como criar e gerenciar modelos e conteúdo criativo em [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Modal com CSS (somente na Web) {#web-modal-css}
 

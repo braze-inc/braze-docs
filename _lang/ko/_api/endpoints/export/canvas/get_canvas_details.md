@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "이 기사는 Export Canvas 세부정보 Braze 엔드포인트에 대한 세부정보를 설명합니다."
+description: "이 문서에서는 캔버스 세부 정보 내보내기 Braze 엔드포인트에 대해 설명합니다."
 
 ---
 {% api %}
@@ -18,7 +18,7 @@ description: "이 기사는 Export Canvas 세부정보 Braze 엔드포인트에 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
-## 필수 구성 요소
+## 필수 조건
 
 이 엔드포인트를 사용하려면 `canvas.details` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
@@ -32,6 +32,7 @@ description: "이 기사는 Export Canvas 세부정보 Braze 엔드포인트에 
 | --------- | -------- | --------- | ----------- |
 | `canvas_id` | 필수 | 문자열 | [캔버스 API 식별자]({{site.baseurl}}/api/identifier_types/) 참조 |
 | `post_launch_draft_version` | 선택 사항 | 부울 | 출시 후 초안이 있는 캔버스의 경우, 이를 `true`로 설정하면 사용 가능한 초안 변경 사항이 표시됩니다. 기본값은 `false`입니다. |
+| `include_has_translatable_content` | 선택 사항 | 부울 | `true`로 설정하면 API 응답에 각 메시지에 대한 `has_translatable_content` 필드가 포함됩니다. 기본값은 `false`입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
@@ -46,12 +47,10 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## 응답
 
 {% alert note %}
-모든 캔버스 단계에는 `next_paths` 필드가 있으며, 이는 `{name, next_step_id}` 데이터의 배열입니다. 전체 단계 및 메시지 단계의 경우 `next_step_ids` 필드가 존재하지만 다른 캔버스 흐름 단계에 대한 데이터는 포함되지 않습니다.
+모든 캔버스 단계에는 `next_paths` 필드가 있으며, 이는 `{name, next_step_id}` 데이터의 배열입니다. 메시지 단계에서는 `next_step_ids` 필드가 존재하지만 다른 캔버스 단계에 대한 데이터는 포함되지 않습니다.
 {% endalert %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "created_at": (string) the date created as ISO 8601 date,
   "updated_at": (string) the date updated as ISO 8601 date,
@@ -94,6 +93,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "messages": {
           "message_variation_id": (string) {  // <=This is the actual id
               "channel": (string) the channel type of the message (for example, "email"),
+              "has_translatable_content": (boolean) whether the message has translatable content (only present if `include_has_translatable_content` is true); `true` if locales are configured and the message contains at least one translation tag; `false` if no locales are configured or no translation tags detected; `null` if detection could not be completed,
               // channel-specific fields for this message, see Campaign Details endpoint API Response for example message responses
           }
       }
@@ -215,12 +215,12 @@ Authorization: Bearer YOUR-REST-API-KEY
         }
       }
     }
-  ],
+  ]
 }
 ```
 
 {% alert tip %}
-CSV 및 API 내보내기 문제 해결에 대한 도움은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)를 방문하세요.
+CSV 및 API 내보내기에 대한 도움이 필요하면 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)을 참조하세요.
 {% endalert %}
 
 {% endapi %}

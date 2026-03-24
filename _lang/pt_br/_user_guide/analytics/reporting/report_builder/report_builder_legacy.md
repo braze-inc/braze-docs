@@ -1,10 +1,10 @@
 ---
-nav_title: Criador de relatórios (antigo)
+nav_title: Construtor de Relatórios (legado)
 article_title: Criador de relatórios (antigo)
 alias: /report_builder_legacy/
 page_order: 0
 page_type: reference
-description: "Esta página aborda como executar um relatório usando o criador de relatórios herdado, incluindo campanhas e canvas, criando relatórios de comparação e criando relatórios e gráficos."
+description: "Esta página cobre como executar um relatório usando o construtor de relatórios legado, incluindo campanhas e a criação de relatórios de comparação do canva, além de construir relatórios e gráficos."
 tool: 
   - Reports
 

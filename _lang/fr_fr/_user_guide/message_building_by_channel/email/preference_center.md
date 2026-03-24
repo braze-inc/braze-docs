@@ -11,8 +11,8 @@ channel:
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-- name: Aperçu
-  link: /docs/user_guide/message_building_by_channel/email/preference_center/overview/
+- name: "Centre de préférences pour les e-mails de l'API"
+  link: /docs/user_guide/message_building_by_channel/email/preference_center/api_preference_center/
   image: /assets/img/braze_icons/list.svg
 - name: Centre de préférences glisser-déposer
   link: /docs/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/

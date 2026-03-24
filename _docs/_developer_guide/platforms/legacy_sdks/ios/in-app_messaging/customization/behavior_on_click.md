@@ -1,6 +1,6 @@
 ---
 nav_title: Custom on-click behavior
-article_title: Customizing In-App Message On-Click Behavior for iOS
+article_title: Customize In-App Message On-Click Behavior for iOS
 platform: iOS
 page_order: 5
 description: "This reference article covers custom in-app messaging on-click behavior for your iOS application."
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Customizing in-app message behavior on click
+# Customize in-app message behavior on click
 
 The `inAppMessageClickActionType` property on the `ABKInAppMessage` defines the action behavior after the in-app message is clicked. This property is read-only. If you want to change the in-app message's click behavior, you can call the following method on `ABKInAppMessage`:
 

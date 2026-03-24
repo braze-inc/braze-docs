@@ -22,13 +22,13 @@ Wir empfehlen Ihnen dringend, das SDK über einen Paketmanager wie [Swift-Paketm
 
 1. Laden Sie `Appboy_iOS_SDK.xcframework.zip` von der [Release-Seite](https://github.com/appboy/appboy-ios-sdk/releases) herunter und extrahieren Sie die Datei.
 2. In Xcode ziehen Sie dieses `.xcframework` in Ihr Projekt und  legen es ab.
-3. Wählen Sie auf dem Tab **Allgemein** des Projekts **Einbetten & Signieren** für `Appboy_iOS_SDK.xcframework` aus.
+3. Wählen Sie auf dem Tab **Allgemein** des Projekts ** & Zeichen** für `Appboy_iOS_SDK.xcframework` auswählen.
 
 ### Option 2: Statisches XCFramework für statische Integration
 
 1. Laden Sie `Appboy_iOS_SDK.zip` von der [Release-Seite](https://github.com/appboy/appboy-ios-sdk/releases) herunter.<br><br>
 2. Wählen Sie in Xcode im Projektnavigator das Zielprojekt oder die Zielgruppe für Braze aus.<br><br>
-3. Navigieren Sie zu **Datei > Dateien hinzufügen > Projekt_Name**.<br><br>
+3. Navigieren Sie zu **Datei > Dateien hinzufügen > Project_Name**.<br><br>
 4. Fügen Sie die Ordner `AppboyKit` und `AppboyUI` als Gruppe zu Ihrem Projekt hinzu.
 	- Vergewissern Sie sich, dass die Option **Artikel in den Ordner der Zielgruppe kopieren** ausgewählt ist, wenn Sie die Integration zum ersten Mal vornehmen. Erweitern Sie **Optionen** in der Dateiauswahl und wählen Sie **Artikel bei Bedarf kopieren** und **Gruppen erstellen**.
 	- Löschen Sie die Verzeichnisse `AppboyKit/include` und `AppboyUI/include`.<br><br>

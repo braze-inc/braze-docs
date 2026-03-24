@@ -1,6 +1,6 @@
 ---
-nav_title: Erstellen einer Webhook-Vorlage
-article_title: Erstellen einer Webhook-Vorlage
+nav_title: Erstellen Sie ein Webhook Template
+article_title: Ein Webhook Template erstellen
 page_order: 2
 tool:
   - Templates
@@ -10,7 +10,7 @@ description: "In diesem Referenzartikel erfahren Sie, wie Sie Webhook-Templates 
 
 ---
 
-# Erstellen einer Webhook-Vorlage
+# Erstellen Sie ein Webhook Template
 
 > Während Sie Ihre Webhooks erstellen und anpassen, können Sie Webhook-Vorlagen für die spätere Verwendung innerhalb der Braze-Plattform erstellen und nutzen. Auf diese Weise können Sie konsequent eine Vielzahl von Webhooks für Ihre verschiedenen Kampagnen erstellen.
 
@@ -18,7 +18,7 @@ description: "In diesem Referenzartikel erfahren Sie, wie Sie Webhook-Templates 
 
 Gehen Sie im Dashboard von Braze zu **Vorlagen** > **Webhook-Vorlagen**.
 
-![Die Seite "Webhook-Vorlagen" mit vordefinierten und gespeicherten Webhook-Vorlagen.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
+![Die Seite "Webhook-Vorlagen" mit vorgefertigten und gespeicherten Webhook-Templates.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
 
 ## Schritt 2: Wählen Sie Ihre Vorlage
 

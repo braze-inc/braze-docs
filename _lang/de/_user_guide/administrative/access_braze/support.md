@@ -1,21 +1,22 @@
 ---
 nav_title: Braze-Support
 article_title: Support
+page_order: 7
 description: "Auf dieser Seite finden Sie das Braze Support-Portal, über das Sie Feedback zu den Produkten von Braze abgeben können. Diese Seite ist nur für Braze Kund:innen zugänglich."
 alias: /braze_support/
 page_type: reference
 search_rank: 7
 ---
 
-# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}Braze Support
+# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"} Braze Support
 
 ## Zugriff auf das Support-Portal
 
 Um das Braze Support Team zu kontaktieren, navigieren Sie zum Braze-Dashboard. Wählen Sie auf dem Dashboard **Support** > **Hilfe holen**.
 
-![Das Dropdown-Menü "Support" mit der Option, Hilfe zu erhalten.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
+![Das Dropdown-Menü „Support“ mit der Option, Hilfe zu erhalten.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
-Je nach Ihren Braze-Berechtigungen und wenn Sie ein ausgewiesener Support-Kontakt (Premium) sind, werden Sie entweder zum Braze-Supportportal weitergeleitet, wo Sie Fälle einreichen und tracken können, oder zu unserem Standard-Supportformular. Wenn Sie sich nicht sicher sind, ob Sie ein Braze-Supportkontakt sind, wenden Sie sich an den Braze-Administrator, den Braze Success Manager oder den Account Manager:in Ihres Unternehmens.
+Abhängig von Ihren Braze-Berechtigungen und davon, ob Sie als Support-Ansprechpartner benannt sind, werden Sie entweder zum Braze-Support-Portal weitergeleitet, wo Sie Fälle einreichen und Tracking durchführen können, oder zu unserem Standard-Support-Formular. Sollten Sie sich nicht sicher sein, ob Sie ein Braze-Support-Ansprechpartner sind, wenden Sie sich bitte an den Braze-Administrator, den Braze-Success-Manager oder den Kontoinhaber Ihres Unternehmens.
 
 ## Hinzufügen von Ansprechpartnern für den Support
 
@@ -26,9 +27,7 @@ Bestimmte Support-Kontakte können auf alle Support-Fälle für Ihr Unternehmen 
 3. Wählen Sie im Menü **Bearbeiten** aus, um zur Seite **Nutzer:innen bearbeiten** weitergeleitet zu werden.
 4. Aktivieren Sie das Kontrollkästchen für **Diesen Nutzer:innen als designierten Support-Kontakt für das Braze Support-Portal festlegen**.
 
-![Das Kontrollkästchen zum Festlegen eines Nutzers:innen als Kontaktperson für den Support.]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
-
-Die Anzahl der festgelegten Support-Kontakte, die Sie festlegen können, hängt von Ihrem Kontaktlimit ab. Kontaktieren Sie Ihren Customer-Success-Manager:in für weitere Informationen.
+![Das Kontrollkästchen zum Festlegen einer Nutzer:in als designierten Support-Kontakt.]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
 
 ### Zugang erhalten
 
@@ -64,13 +63,13 @@ Teilen Sie eine Stichprobe von Nutzer:innen und nicht das gesamte betroffene Seg
 
 ### Netzwerkprotokolle anhängen (HAR-Protokolle)
 
-Wenn Sie sich an den Support wenden, ist es hilfreich, wenn der betroffene Nutzer:innen die Netzwerkprotokolle (HAR-Protokolle) seines Browsers sammelt, während das Problem auftritt. Dies zeigt die Netzwerkanfragen zwischen dem Browser und dem Server für die einzelnen Komponenten einer Webseite und das Braze-Dashboard, das der Nutzer:innen zu öffnen versucht.
+Wenn Sie sich an den Support wenden, ist es hilfreich, wenn der betroffene Nutzer:innen die Netzwerkprotokolle (HAR-Protokolle) seines Browsers sammelt, während das Problem auftritt. Hier werden die Netzwerkanfragen zwischen dem Browser und dem Server für die einzelnen Komponenten einer Webseite sowie das Braze-Dashboard angezeigt, das der Nutzer:innen zu öffnen versucht.
 
 Lassen Sie die betroffenen Nutzer:innen Folgendes tun:
 
 1. Öffnen Sie ihre Entwickler:in-Tools. Wenn Sie Chrome verwenden, können Sie dies mit dem Tastaturkürzel `option` + `⌘` + `J` (auf macOS) tun. Wenn Sie Windows oder Linux verwenden, können Sie dies mit dem Shortcut `shift` + `CTRL` + `J` tun.
 2. Wählen Sie **Netzwerk** > **Fetch/XHR** oder **XHR**.
-3. Nehmen Sie eine Bildschirmaufnahme oder einen Screenshot auf, auf dem **Name**, **Status**, **Größe** und **Zeit** der Elemente zu sehen sind.<br><br>![Der Tab "Fetch/XHR" in einem Chrome-Browser.][1]{: style="max-width:60%;"}
+3. Nehmen Sie eine Bildschirmaufnahme oder einen Screenshot auf, auf dem **Name**, **Status**, **Größe** und **Zeit** der Elemente zu sehen sind.<br><br>![Der Tab "Fetch/XHR" in einem Chrome-Browser.]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
 
 Hängen Sie dann die Aufnahme oder den Screenshot des Nutzers:innen an das Support-Ticket an. Diese Informationen können die Ermittlungen von Support unterstützen.
 
@@ -90,4 +89,6 @@ Wählen Sie den entsprechenden Schweregrad aus, damit wir die richtigen Ressourc
 Wenn Sie ein Problem als "kritisch" markieren, bedeutet dies, dass Ihre Produktionsinstanz ausgefallen ist und alle Arbeiten innerhalb von Braze eingestellt wurden.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/network_xhr.png %}
+## Fehlerbehebung beim Zugriff
+
+Sollten Sie bei der Anmeldung im Braze Support Portal eine Fehlermeldung erhalten, stellen Sie `Check your entry`bitte sicher, dass Sie dem Link in Ihrer Willkommens-E-Mail gefolgt sind, um ein Passwort für das Portal festzulegen. Wenn Sie dies bereits getan haben oder sich zuvor im Portal anmelden konnten, erstellen Sie bitte ein Support-Ticket.

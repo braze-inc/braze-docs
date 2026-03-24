@@ -89,14 +89,14 @@ Lob ポストカードエンドポイントのリクエスト本文の例を次�
 ページを離れる前にテンプレートを保存することを忘れないこと！<br>更新されたWebhookテンプレートは、新しい[Webhookキャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)作成するときに、**保存されたWebhookテンプレート**リストで見つけることができる。
 {% endalert %}
 
-![時間、アプリ名、チャンネル、エラーメッセージを示すメッセージエラーログ。エラーメッセージには、メッセージアラートとステータスコードが含まれます。]({% image_buster /assets/img_archive/error_log.png %})
+![時間、アプリ名、チャンネル、エラーメッセージを示すメッセージエラーログ。エラーメッセージには、メッセージアラートとステータスコードが含まれる。]({% image_buster /assets/img_archive/error_log.png %})
 
 ## Lob ウェブフックを使用したイベントの共有 
 
 [Braze Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview) を使用すると、外部プラットフォームから Braze へのデータフローを自動化するための webhook を構築および管理できます。各変換には、他のプラットフォームが Webhook の宛先に使用できる一意のエンドポイントが割り当てられます。
 
 {% alert important %}
-Lob のデータ変換テンプレートは、Braze のデータポイントを消費する[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track)を使用してイベントを送信します。Lob Webhook 設定でレート制限を設定することをお勧めします。これにより、データの過剰な消費を回避できます。
+Lobのデータ変換テンプレートは、[`/users/track` のエンドポイントを]({{site.baseurl}}/api/endpoints/user_data/post_user_track)使用してイベントを送信し、データポイントをログに記録する。LobのWebhook設定でレート制限を設定し、データのオーバーログを避けることをお勧めする。
 {% endalert %}
 
 ### ステップ 1: Braze で変換を作成する

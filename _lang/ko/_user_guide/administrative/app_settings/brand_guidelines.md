@@ -1,5 +1,5 @@
 ---
-nav_title: Brand Guidelines
+nav_title: 브랜드 가이드라인
 article_title: Brand Guidelines
 page_order: 1
 page_type: reference
@@ -36,7 +36,7 @@ description: "이 참조 문서에서는 AI 카피라이팅 도우미를 통해 
 
 **제외사항**의 경우, 귀하의 브랜드와 맞지 않는 언어나 스타일을 나열하세요. 예를 들어, "비꼬는 것," "부정적인 태도," 또는 "거만한" 어조를 피하고 싶을 수 있습니다.
 
-![이름, 설명, 성격, 제외 사항, 어조를 입력할 수 있는 필드가 있는 '브랜드 가이드라인 만들기' 창이 표시됩니다.]({% image_buster /assets/img/guidelines_create.png %})
+![이름, 설명, 성격, 제외 사항, 톤을 입력할 수 있는 필드가 있는 '브랜드 가이드라인 만들기' 창이 나타납니다.]({% image_buster /assets/img/guidelines_create.png %})
 
 ### 4단계: 가이드라인 테스트
 
@@ -60,6 +60,6 @@ description: "이 참조 문서에서는 AI 카피라이팅 도우미를 통해 
 
 메시지를 작성할 때 [AI 카피라이팅 도우미를]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/) 열고 **브랜드 가이드라인 적용** 드롭다운에서 브랜드 가이드라인을 선택합니다. 특정 브랜드 가이드라인을 기본값으로 지정하면 드롭다운에서 해당 가이드라인이 자동으로 선택되지만 다른 가이드라인을 선택할 수도 있습니다. 
 
-!["중요 알림!!"을 브랜드 가이드라인으로 선정한 인공지능 카피라이팅 도우미]({% image_buster /assets/img/guidelines_ai_assistant.png %})
+!["중요 알림!!"을 브랜드 가이드라인으로 선택한 AI 카피라이팅 도우미.]({% image_buster /assets/img/guidelines_ai_assistant.png %})
 
 {% multi_lang_include brazeai/generative_ai/policy.md %}

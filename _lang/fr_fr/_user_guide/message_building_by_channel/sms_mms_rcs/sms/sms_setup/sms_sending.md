@@ -1,5 +1,5 @@
 ---
-nav_title: "Envoi de message SMS"
+nav_title: Envoi de messages SMS
 article_title: Aperçu Envoi message SMS
 page_order: 4
 alias: /sms_message_sending/
@@ -44,7 +44,7 @@ Certaines marques peuvent souhaiter envoyer des messages à un groupe d’utilis
 
 Pour pallier cette limitation, lors de la [configuration des]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process) groupes d'abonnement, les groupes peuvent être configurés pour contenir des codes longs et courts de plusieurs pays différents. Une fois cette opération terminée, les numéros de téléphone d'envoi ayant le même code pays que le numéro de téléphone de l'utilisateur cible seront automatiquement utilisés lors du lancement d'une campagne. Vous n’aurez pas à créer de campagnes distinctes pour les utilisateurs ayant des numéros de téléphone avec des codes pays différents, ce qui vous permet de lancer une campagne ou d’utiliser un composant de Canvas pour cibler les utilisateurs concernés.
 
-![Les charges utiles SMS sont envoyées en utilisant le même code de pays que le numéro de téléphone de l'utilisateur cible]({% image_buster /assets/img/sms/multi_country_subgroups.png %})
+![Les charges utiles SMS sont envoyées en utilisant le même code pays que le numéro de téléphone de l’utilisateur cible]({% image_buster /assets/img/sms/multi_country_subgroups.png %})
 
 #### Bonnes pratiques
 

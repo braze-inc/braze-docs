@@ -9,11 +9,11 @@ description: "This article outlines details about the Update user's subscription
 ---
 {% api %}
 # Update user's subscription group status
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /subscription/status/set
 {% endapimethod %}
 
-> Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard. 
+> Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard.
 
 You can access a subscription group's `subscription_group_id` by navigating to the **Subscription Group** page.
 
@@ -28,6 +28,10 @@ If you want to see examples or test this endpoint for **SMS and RCS Subscription
 ## Prerequisites
 
 To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `subscription.status.set` permission.
+
+{% alert note %}
+If you're interested in using this endpoint with [LINE subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), contact your customer success manager.
+{% endalert %}
 
 ## Rate limit
 
@@ -48,10 +52,11 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
-   // SMS and RCS subscription group - one of external_id or phone is required
+   "use_double_opt_in_logic": (optional, boolean) defaults to `false`; when `subscription_state` is "subscribed", set to `true` to enter the user into the SMS double opt-in workflow,
+   // SMS and RCS subscription group - you must include one of external_id or phone
  }
 ```
-\* SMS and RCS subscription groups: Only `external_id` or `phone` is accepted.
+\* SMS and RCS subscription groups: Braze accepts only `external_id` or `phone`.
 
 {% endtab %}
 {% tab Email %}
@@ -66,18 +71,20 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "email": (required*, array of strings) the email address of the user (must include at least one email and at most 50 emails),
-   // Email subscription group - one of external_id or email is required
-   // Note that sending an email address that is linked to multiple profiles will update all relevant profiles
+   // Email subscription group - you must include one of external_id or email
+   // Note that sending an email address that is linked to multiple profiles updates all relevant profiles
  }
 ```
-\* Email subscription groups: Either `email` or `external_id` is required.
+\* Email subscription groups: You must include either `email` or `external_id`.
 {% endtab %}
 {% endtabs %}
 
 This property should not be used for updating a user's profile information. Use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
 
 {% alert tip %}
-When creating new users using the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.
+**Adding existing users to a subscription group:** This endpoint is the recommended way to backfill or bulk-update subscription group membership for existing users. You can pass up to 50 `external_id`s, email addresses, or phone numbers per request. Users can also update their own subscription status through an [email preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) link.
+
+**Creating new users with a subscription group:** When creating new users using the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.
 {% endalert %}
 
 ## Request parameters
@@ -87,8 +94,9 @@ When creating new users using the [/users/track]({{site.baseurl}}/api/endpoints/
 | [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids) | Required | String | The `id` of your subscription group. |
 | `subscription_state` | Required | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). |
 | `external_id` | Required* | Array of strings | The `external_id` of the user or users, may include up to 50 `id`s. |
-| `email` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a maximum of 50). <br><br>If multiple users (`external_id`) in the same workspace share the same email address, then all users that share the email address are updated with the subscription group changes. |
-| `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (up to 50). <br><br>If multiple users (`external_id`) in the same workspace share the same phone number, then all users that share the phone number are updated with the same subscription group changes. |
+| `email` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a maximum of 50). <br><br>If multiple users (`external_id`) in the same workspace share the same email address, then Braze updates all users that share the email address with the subscription group changes. |
+| `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (up to 50). <br><br>If multiple users (`external_id`) in the same workspace share the same phone number, then Braze updates all users that share the phone number with the same subscription group changes. |
+| `use_double_opt_in_logic` | Optional | Boolean | Applies only to SMS subscription groups; ignored for email and other subscription group types. Defaults to `false` if omitted. For SMS subscription groups, set to `true` to enter the user into the [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) workflow when their subscription status is set to `subscribed`. If this parameter is omitted or set to `false`, users are subscribed without entering the double opt-in workflow. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example requests
@@ -134,7 +142,7 @@ The status code `201` could return the following response body.
 ```
 
 {% alert important %}
-The endpoint only accepts the `email` or `phone` value, not both. If given both, you will receive this response: `{"message":"Either an email address or a phone number should be provided, but not both."}`
+The endpoint accepts only the `email` or `phone` value, not both. If you provide both, you receive this response: `{"message":"Either an email address or a phone number should be provided, but not both."}`
 {% endalert %}
 
 {% endapi %}

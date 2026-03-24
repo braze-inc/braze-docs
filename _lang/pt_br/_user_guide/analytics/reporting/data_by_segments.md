@@ -25,12 +25,12 @@ Para executar esses relatórios, faça o seguinte:
 - Compras e receita de variantes ou etapas por segmento
 - Performance de push por segmento
 
-![A página de detalhamento do segmento contém um editor de SQL, um painel lateral com guias para Variáveis, Tabelas de dados disponíveis, Histórico de consultas e o Criador de consultas de segmentos e uma seção de resultados.]({% image_buster /assets/img_archive/segment_breakdown.png %})
+![A página de detalhamento do segmento contém um editor de SQL, um painel lateral com guias para Variáveis, Tabelas de dados disponíveis, Histórico de consultas e o Criador de consultas IA, além de uma seção de resultados.]({% image_buster /assets/img_archive/segment_breakdown.png %})
 
 ## Modelos de relatórios
 
 {% tabs %}
-{% tab Métricas de engajamento de e-mail por segmento %}
+{% tab Email engagement metrics by segment %}
 
 ### Visualização de métricas para campanhas ou telas {#campaign-canvas-email}
 
@@ -75,7 +75,7 @@ Seus resultados mostrarão as métricas de engajamento de e-mail por segmento pa
 
 {% endtab %}
 
-{% tab Compras e receita por segmento %}
+{% tab Purchases and revenue by segment %}
 ### Visualização de métricas para campanhas ou telas
 
 Para visualizar as métricas de compra e receita divididas por segmento para uma campanha ou Canva específico, use a guia [Variables (Variáveis)](#variables) para especificar o seguinte:
@@ -105,7 +105,7 @@ Todas as métricas de taxa usam destinatários de e-mail exclusivos como denomin
 
 Por exemplo, digamos que um segmento contenha 10 usuários e cinco deles tenham feito uma compra depois de receber seu e-mail. Se um desses cinco fizesse uma compra depois de clicar em seu e-mail, sua "Taxa de compras únicas após o recebimento" seria de 50% e sua "Taxa de compras únicas após o clique" seria de 10%.
 
-![O relatório mostra métricas de e-mail, incluindo compras únicas no recebimento, receita no recebimento, compras únicas no clique, receita no clique, destinatários únicos e cliques únicos no e-mail.]({% image_buster /assets/img_archive/segment_breakdown_results.png %})
+![O relatório mostra métricas de e-mail, incluindo compras exclusivas no recebimento, receita no recebimento, compras exclusivas no clique, receita no clique, destinatários exclusivos e cliques exclusivos no e-mail.]({% image_buster /assets/img_archive/segment_breakdown_results.png %})
 
 #### Resultados
 
@@ -133,7 +133,7 @@ Seus resultados mostrarão as métricas de compra por segmento para as variantes
 - **Colunas:** Métricas de compra
 
 {% endtab %}
-{% tab Envio de mensagens de topo ou fundo para engajamento de e-mail %}
+{% tab Top or bottom messaging for email engagement %}
 
 ### Visualização de métricas para as melhores ou piores performances
 
@@ -167,7 +167,7 @@ Para visualizar esse relatório, você deve especificar as seguintes variáveis 
 Seus resultados mostrarão as campanhas, Canvases ou etapas do Canva principais (ou inferiores) que você selecionou. Por exemplo, se você selecionou as 10 principais campanhas para taxa de cliques, seus resultados mostrarão as 10 principais campanhas ordenadas da maior para a menor taxa de cliques. Suas colunas exibirão todas as métricas de engajamento com e-mail para cada linha (campanhas, Canvas ou etapas de mensagens).
 
 {% endtab %}
-{% tab Envio de mensagens para compras em cima ou embaixo %}
+{% tab Top or bottom messaging for purchases %}
 
 ### Visualização de métricas para as melhores ou piores performances
 
@@ -204,7 +204,7 @@ Por exemplo, digamos que um segmento contenha 10 usuários e cinco deles tenham 
 Seus resultados mostrarão as campanhas, Canvases ou etapas do Canva principais (ou inferiores) que você selecionou. Por exemplo, se você selecionou as 10 principais campanhas para "receita após o clique", seus resultados mostrarão as 10 principais campanhas ordenadas da maior para a menor "receita após o clique". Suas colunas exibirão todas as métricas de compra de cada linha (campanhas, Canvas ou etapas de mensagens).
 
 {% endtab %}
-{% tab Performance do push por segmento %}
+{% tab Push performance by segment %}
 
 ### Exibição de métricas push para segmentos
 

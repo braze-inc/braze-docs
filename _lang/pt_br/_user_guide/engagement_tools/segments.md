@@ -13,13 +13,13 @@ description: "Essa landing page aborda artigos sobre segmentação em campanhas 
 
 guide_featured_title: "Artigos populares"
 guide_featured_list:
-  - name: Criação de um segmento
+  - name: Criar um segmento
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
     image: /assets/img/braze_icons/pie-chart-01.svg
-  - name: Gerenciamento de segmentos
+  - name: Gerenciar segmentos
     link: /docs/user_guide/engagement_tools/segments/managing_segments/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Filtros de segmentação
+  - name: Filtros de Segmentação
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
     image: /assets/img/braze_icons/flag-02.svg
   - name: Dados do segmento
@@ -91,5 +91,5 @@ Confira os casos de uso abaixo para ter uma prévia de como os segmentos do Braz
 - **Eventos e interações de mensagens:** Segmente os usuários de acordo com o fato de terem feito uma compra nos últimos trinta dias e também interagido com uma mensagem específica no app.
 - **Dados da consulta:** 
   - **Consulta do Snowflake:** Segmente os usuários com dados combinados do Braze e de fontes externas, como um CRM ou um data warehouse, usando [as extensões de segmento do SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) para consultar o Snowflake.
-  - **Sincronização do data warehouse:** Segmente os usuários com dados sincronizados diretamente do seu data warehouse ou sistema de armazenamento de arquivos para o Braze usando [segmentos CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
+  - **Sincronização do data warehouse:** Segmente os usuários com dados sincronizados diretamente do seu data warehouse ou sistema de armazenamento de arquivos para o Braze usando [as extensões de segmento CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 

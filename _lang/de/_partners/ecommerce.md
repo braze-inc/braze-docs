@@ -1,10 +1,10 @@
 ---
 nav_title: E-Commerce
-article_title: E-Commerce Partner
+article_title: E-Commerce-Partner
 page_order: 10
 
 page_type: landing
-description: "Diese Landing Page listet Braze-Partner (Technologie-Partner) auf, die Ihnen die Integration in ihre E-Commerce-Plattform erlauben."
+description: "Diese Landing-Page listet Braze-Partner (Technologie-Partner) auf, die Ihnen die Integration in ihre E-Commerce-Plattform ermöglichen."
 
 layout: partner_page
 search_tag: Partner
@@ -44,7 +44,7 @@ valid_partner_list:
   url: /docs/partners/revenuecat
 - name: Transcend
   url: /docs/partners/transcend/
-- name: Konstrukteur
+- name: Constructor
   url: /docs/partners/constructor/
 - name: Stylitics
   url: /docs/partners/stylitics/
@@ -52,4 +52,14 @@ valid_partner_list:
   url: /docs/partners/shopify/
 - name: Stripe
   url: /docs/partners/stripe/
+- name: Okendo
+  url: /docs/partners/okendo/
+- name: Swym
+  url: /docs/partners/swym/
+- name: Algolia
+  url: /docs/partners/algolia/
+- name: Tapcart
+  url: /docs/partners/tapcart/
+- name: Poq
+  url: /docs/partners/poq/
 ---

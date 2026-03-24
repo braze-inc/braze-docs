@@ -1,6 +1,6 @@
 ---
 nav_title: "DELETE: Remover chave de autenticação do SDK"
-article_title: "DELETE: Remover chave de autenticação do SDK"
+article_title: "DELETE: Remover Chave de Autenticação do SDK"
 search_tag: Endpoint
 page_order: 3
 layout: api_page
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Exemplo de solicitação
 
-```json
+```bash
 curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_authentication/delete' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
@@ -79,7 +79,7 @@ curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_au
 
 | Parâmetro | Tipo de dados | Descrição |
 | --------- | --------- | ----------- |
-| `keys` | Vetor | Array de objetos de chave de autenticação do SDK restantes. |
+| `keys` | Vetor | Array de objetos de chaves de autenticação do SDK restantes. |
 | `keys[].id` | String | O ID da chave de autenticação do SDK. |
 | `keys[].rsa_public_key` | String | A string da chave pública RSA. |
 | `keys[].description` | String | Descrição da chave de autenticação do SDK. |

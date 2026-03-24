@@ -1,6 +1,6 @@
 ---
 nav_title: Campañas activadas por API y basadas en acciones
-article_title: Probar campañas activadas por API y basadas en acciones
+article_title: Probar campañas desencadenadas por API y basadas en acciones
 page_order: 2
 page_type: reference
 description: "Este artículo de referencia explica cómo probar campañas activadas por API y basadas en acciones."

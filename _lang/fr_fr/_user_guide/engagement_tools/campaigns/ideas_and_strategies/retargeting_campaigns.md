@@ -17,7 +17,7 @@ Braze fournit un support pour recibler les utilisateurs sur la base des messages
 
 Chacun de ces filtres de reciblage vous fournit plusieurs options après les avoir ajoutés. Pour en savoir plus sur le ciblage des utilisateurs, consultez notre [cours d'apprentissage Braze](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) sur la configuration des campagnes !
 
-![Section Détails du segment avec le menu déroulant des filtres disponibles.]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
+![La section Détails du segment avec le menu déroulant pour les filtres disponibles.]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
 
 ## Filtres de reciblage
 

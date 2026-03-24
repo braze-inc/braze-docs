@@ -1,5 +1,5 @@
 ---
-nav_title: Directives de marque
+nav_title: Lignes directrices de la marque
 article_title: Directives de marque
 page_order: 1
 page_type: reference
@@ -36,7 +36,7 @@ Pour la **personnalité de la marque**, réfléchissez à ce qui rend votre marq
 
 Pour les **exclusions**, énumérez tout langage ou style qui ne correspond pas à votre marque. Par exemple, vous voudrez peut-être éviter le « sarcasme », les « attitudes négatives » ou le ton « condescendant ».
 
-![La fenêtre "Créer une ligne directrice de marque" contient des champs pour saisir le nom, la description, la personnalité, les exclusions et le ton.]({% image_buster /assets/img/guidelines_create.png %})
+![La fenêtre "Créer une ligne directrice de marque" avec des champs pour saisir le nom, la description, la personnalité, les exclusions et le ton.]({% image_buster /assets/img/guidelines_create.png %})
 
 ### Étape 4 : Tester vos directives
 
@@ -54,12 +54,12 @@ Vous pouvez changer la langue de sortie quelle que soit la langue de votre copie
 
 Vous pouvez modifier les directives de marque en les sélectionnant sur la page **Directives de marque.**  Archivez une directive de marque pour la rendre inactive et la supprimer de l'assistant de rédaction de l'intelligence artificielle. Pour la rendre à nouveau active et sélectionnable, vous pouvez filtrer les directives de marque archivées et les désarchiver.
 
-![La page "Directives de la marque" a filtré les directives de la marque archivées.]({% image_buster /assets/img/unarchive_brand_guideline.png %})
+![La page "Lignes directrices de la marque" a filtré les lignes directrices de la marque archivées.]({% image_buster /assets/img/unarchive_brand_guideline.png %})
 
 ## Utiliser les lignes directrices de la marque
 
 Lors de la rédaction d'un message, ouvrez l'[assistant de rédaction de l'intelligence artificielle]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/) et sélectionnez votre directive de marque dans le menu déroulant **Appliquer la directive de marque**. Si vous désignez une ligne directrice spécifique comme ligne par défaut, elle sera automatiquement sélectionnée dans la liste déroulante, mais vous pouvez choisir une autre ligne directrice. 
 
-![" Intelligence artificielle copywriting assistant with " Important Alerts ! !! " selected as the brand guideline.]({% image_buster /assets/img/guidelines_ai_assistant.png %}).
+![" Assistant de rédaction d'intelligence artificielle avec " Alertes importantes ! !! " sélectionné comme ligne directrice de la marque.]({% image_buster /assets/img/guidelines_ai_assistant.png %})
 
 {% multi_lang_include brazeai/generative_ai/policy.md %}

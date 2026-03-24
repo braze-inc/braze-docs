@@ -38,7 +38,7 @@ Para el Canvas Flow, un usuario saldrá del Canvas después de entrar y recibir 
 
 Las métricas también incluyen impresiones, destinatarios únicos, recuento de conversiones e ingresos generados. Puede hacer clic en un componente para desglosar más los datos y ver el rendimiento específico de cada canal.
 
-![Dos ejemplos de detalles de rendimiento de los componentes de Canvas. A la izquierda se muestran los detalles de rendimiento de una ruta de usuario con un componente Canvas. A la derecha se muestran los detalles de rendimiento de un componente Canvas ampliado y un paso anidado que muestra el recuento de impresiones de mensajes dentro de la aplicación.]({% image_buster /assets/img_archive/Journey_6.png %})
+![Dos ejemplos de detalles de rendimiento de los componentes de Canvas. A la izquierda se muestran los detalles de rendimiento de una ruta de usuario con un componente Canvas. A la derecha se muestran los detalles de rendimiento de un componente Canvas expandido y un paso anidado que muestra el recuento de impresiones de mensajes in-app.]({% image_buster /assets/img_archive/Journey_6.png %})
 
 ## Desglose del rendimiento por variante
 
@@ -74,6 +74,26 @@ Además, puede ver un desglose más explícito de los [eventos de conversión]({
 - Totales y tasas de conversión para cada evento de conversión
 - Elevación frente a la variante de control
 - Confianza estadística para cada evento de conversión
+
+### Cómo se realiza el seguimiento de las conversiones 
+
+Un usuario sólo puede convertir una vez por evento de conversión por entrada en Canvas. Las conversiones se asignan al mensaje más reciente recibido por el usuario para esa entrada. El resumen de Canvas refleja todas las conversiones realizadas por los usuarios en esa ruta y si recibieron o no un mensaje. Cada paso posterior solo mostrará las conversiones que se produjeron mientras ese era el paso más reciente recibido por el usuario. 
+
+Considera el siguiente ejemplo: un Canvas tiene 10 notificaciones push y el evento de conversión es "Abre aplicación" (o "Inicio de sesión").
+- El usuario A abre la aplicación después de entrar pero antes de recibir el primer mensaje.
+- El usuario B abre la aplicación después de cada notificación push.
+
+El resumen de Canvas mostrará dos conversiones, mientras que los pasos individuales mostrarán una conversión en el primer paso y ninguna en todos los pasos siguientes. Si las horas tranquilas están activas cuando se produce el evento de conversión, se aplicarán las mismas reglas. 
+
+Supongamos que tenemos un Canvas con Horas tranquilas y se producen los siguientes eventos:
+
+1. El usuario A entra en un Canvas.
+2. El primer paso es un Retraso dentro de las Horas tranquilas establecidas, por lo que el mensaje se suprime.
+3. El usuario A realiza el evento de conversión.
+
+El usuario A contará como convertido en la variante en Canvas general, pero no el paso, ya que no recibió el paso.
+
+Para nuestro último ejemplo, digamos que tenemos un Canvas con la reelegibilidad activada. Si un usuario que vuelve a ser elegible realiza el evento de conversión en la primera entrada y en la segunda, se contarán dos conversiones.
 
 ### Informe de embudo
 

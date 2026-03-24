@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Looker](https://looker.com/), a business intelligence and big-data analytics platform, enables you to explore, analyze, and share real-time business analytics seamlessly.
 
-The Braze and Looker integration allows Braze users to leverage first-party [Looker Blocks](#looker-blocks) and [Looker Actions](#looker-actions) user flagging via the REST API. These flagged users can be added to segments to [target](#segment-users) future Braze campaigns or Canvases. To use Looker with Braze, we recommend sending your Braze data to a [data warehouse using Braze currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/), then use Braze Looker Blocks to quickly model and visualize your Braze data in Looker.
+The Braze and Looker integration allows company users to leverage first-party [Looker Blocks](#looker-blocks) and [Looker Actions](#looker-actions) user flagging via the REST API. These flagged users can be added to segments to [target](#segment-users) future Braze campaigns or Canvases. To use Looker with Braze, we recommend sending your Braze data to a [data warehouse using Braze currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/), then use Braze Looker Blocks to quickly model and visualize your Braze data in Looker.
 
 ## Prerequisites
 
@@ -77,7 +77,7 @@ Set up a Braze Looker Action with your Braze REST API key and REST endpoint.
 Within Looker Develop, select the appropriate views. Add `braze_id` to the dimensions tag and commit the changes.
 This `braze_id` tag is use to determine which field is the unique key.
 
-```json
+```lookml
 dimension: external_id {
     type: string
     primary_key: yes

@@ -49,7 +49,7 @@ Braze と Sendbird Notifications の統合により、顧客エンゲージメ�
 
 ![]({% image_buster /assets/img/sendbird/sendbird-dashboard-template.png %})
 
-### ステップ2: Sendbird ダッシュボードで Braze 統合を設定する
+### ステップ 2:Sendbird ダッシュボードで Braze 統合を設定する
 
 **Sendbird Dashboard**から、アプリのライケーションを選択し、**Notifications > Integrations**に移動し、**Add**を**Braze**セクションでクリックします。ここでは、Braze REST API キーと Braze REST エンドポイントが必要です。
 
@@ -71,7 +71,7 @@ Sendbird ユーザー IDは、使用するインテグレーションの[カス�
 
 ### ステップ 5: Webhook テンプレートのセットアップ
 
-Brazeでは、**Templates & Media**から**Webフックテンプレート**に進み、**Sendbird Webフックテンプレート**を選択します。このテンプレートは、Sendbird Notification Builder 拡張がインストールされている場合にのみ使用できます。
+Brazeの**Templates& Mediaから** **Webhook Templatesに**進み、**Sendbird Webhook Templateを**選択する。このテンプレートは、Sendbird Notification Builder 拡張がインストールされている場合にのみ使用できます。
 
 {% raw %}
 1. テンプレートの名前を入力し、必要に応じてチームとタグを追加します。

@@ -1,14 +1,14 @@
 ---
 nav_title: Nachrichten abbrechen
-article_title: Abbrechen von Liquid Messages
+article_title: Flüssige Nachrichten abbrechen
 page_order: 7
 description: "Dieser Referenzartikel behandelt den Abbruch von Liquid-Nachrichten und einige Anwendungsbeispiele."
 
 ---
 
-# Nachrichten abbrechen
+# Abbrechen-Nachrichten
 
-> Optional können Sie Liquid-Nachrichten innerhalb von Bedingungen abbrechen. In diesem Referenzartikel finden Sie einige Beispiele dafür, wie diese Funktion in Marketingkampagnen eingesetzt werden kann.
+> Optionally, you can use the `abort_message("optional reason for aborting")` Liquid message tag within conditionals to prevent sending a message to a user. In diesem Referenzartikel finden Sie einige Beispiele dafür, wie diese Funktion in Marketingkampagnen eingesetzt werden kann.
 
 {% alert note %}
 Wenn ein Nachrichtenschritt in einem Canvas abgebrochen wird, verlässt die:der Nutzer:in den Canvas **nicht** und **fährt** mit dem nächsten Schritt fort.
@@ -59,15 +59,24 @@ Sie können die abgebrochene Nachricht auch in Ihrem Nachrichten-Aktivitätsprot
 ```
 {% endraw %}
 
-![Fehlerprotokoll in der Entwicklungskonsole mit der Abbruchmeldung "Sprache war null".][26]
+![Fehlerprotokoll in der Entwicklungskonsole mit der Abbruchmeldung "Sprache war null".]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## Abfrage für abgebrochene Nachrichten
 
 Sie können den [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) oder Ihr eigenes Data Warehouse, sofern es mit Braze verbunden ist, verwenden, um nach bestimmten Abbruchmeldungen zu suchen, die ausgelöst werden, wenn die Liquid-Logik den Abbruch einer Meldung verursacht.
 
-[15]: {% image_buster /assets/img_archive/liquid_abort.png %}
-[26]: {% image_buster /assets/img_archive/developer_console.png %}
-[31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
-[32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+## Wenn die Abbruchlogik ausgewertet wird
+
+Der Zeitpunkt der Auswertung der Abbruchlogik hängt vom Messaging-Kanal ab.
+
+### Push-Benachrichtigungen, E-Mail, SMS, Webhooks und Content-Cards
+
+Die Abbruchlogik wird zum Zeitpunkt des Versands ausgewertet, wenn Braze die Nachricht für die Zustellung verarbeitet.
+
+### In-App-Nachrichten
+
+Die Abbruchlogik wird zu dem Zeitpunkt ausgewertet, zu dem die In-App-Nachricht ausgelöst wird (beispielsweise wenn der Nutzer:in das auslösende Ereignis ausführt oder eine Sitzung startet), und nicht, wenn die Nachricht ursprünglich an das Gerät gesendet wird. In-App-Nachrichten werden zu Beginn der Sitzung an das SDK zugestellt und lokal zwischengespeichert. Das Liquid – einschließlich aller`abort_message()`Aufrufe – wird ausgeführt, sobald die Auslösebedingung erfüllt ist.
+
+## Überlegungen
+
+The `abort_message()` Liquid message tag prevents messages from sending to users, meaning the message won't display on user profiles, and won't count toward deliveries or frequency capping.

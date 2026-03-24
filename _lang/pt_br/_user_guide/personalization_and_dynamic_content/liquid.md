@@ -3,6 +3,7 @@ nav_title: Liquid
 article_title: Liquid
 page_order: 0
 layout: dev_guide
+alias: /liquid/
 search_rank: 3
 guide_top_header: "Personalização Usando Liquid Tags"
 guide_top_text: "Braze pode substituir automaticamente valores de um determinado usuário em suas mensagens. Coloque sua expressão dentro de dois conjuntos de chaves para notificar a Braze que você usará um valor interpolado. Dentro destes colchetes, quaisquer valores de usuário que você queira substituir devem ser cercados por um conjunto adicional de colchetes com um cifrão na frente deles.<br><br>Para mais informações sobre Liquid, confira nossa jornada guiada <b><a href='https://learning.braze.com/path/dynamic-personalization-with-liquid'>Personalização Dinâmica com Liquid</a></b> no Braze Learning!"
@@ -90,7 +91,7 @@ Você também pode aproveitar a previsão do Liquid para atributos personalizado
 
 ![]({% image_buster /assets/img/liquid_auto_complete.gif %}){: style="max-width:70%;"}
 
-## Termos a saber
+## Termos a conhecer
 
 Estes termos são reinterpretados a partir da [**documentação da Shopify**](https://shopify.github.io/liquid/basics/introduction/) com base no nosso nível de suporte.
 

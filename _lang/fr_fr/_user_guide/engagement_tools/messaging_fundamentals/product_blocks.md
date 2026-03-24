@@ -1,7 +1,7 @@
 ---
-nav_title: Blocs de produits
+nav_title: Bloc de produits
 article_title: Blocs de produits à glisser-déposer
-page_order: 7
+page_order: 9
 description: "Cet article de référence traite des blocs de produits à glisser-déposer, qui permettent aux utilisateurs d'ajouter et de configurer rapidement des vitrines dynamiques ou statiques d'articles de catalogue."
 tool:
     - Campaigns
@@ -23,7 +23,8 @@ La fonctionnalité de glisser-déposer des blocs de produits est en accès antic
 | --- | --- |
 | Événements recommandés pour le commerce électronique | Les [événements recommandés pour le commerce électronique]({{site.baseurl}}/ecommerce_events/) fournissent des schémas de données normalisés pour les événements comportementaux clés qui se produisent avant et après la passation d'une commande. Ces événements remplaceront à terme l'ancien événement d'achat de Braze et deviendront la norme pour le suivi des comportements liés au commerce. <br><br> Les événements recommandés par eCommerce sont nécessaires pour les blocs de produits dynamiques.<br><br> Les événements recommandés pour le commerce électronique sont actuellement en accès anticipé. Contactez votre gestionnaire satisfaction client Braze si vous souhaitez participer à cet accès anticipé. |
 | Modèles de canevas pour le commerce électronique | Les événements recommandés pour le commerce électronique prennent en charge des modèles préconstruits, notamment des modèles eCommerce Canvas conçus pour des cas d'utilisation essentiels tels que la navigation abandonnée, les paniers abandonnés et les confirmations de commande. <br><br>Si vous envisagez de mettre en œuvre l'un de ces cas d'utilisation essentiels du commerce électronique à l'aide des [modèles eCommerce Canvas]({{site.baseurl}}/ecommerce_use_cases/), vous devez utiliser ou suivre le modèle Canvas fourni. |
-| Catalogue Braze | Vous devez créer un catalogue Braze comprenant les champs suivants, qui seront utilisés dans la configuration de votre bloc produit :{::nomarkdown}<code><ul><li>product_title</li><li>product_url</li><li>variant_image_url</li></ul></code>{:/} |
+| Catalogue Braze | Vous devez créer un catalogue Braze comprenant les champs suivants, que vous utiliserez dans la configuration de votre bloc de produits :{::nomarkdown}<code><ul><li>product_title</li><li>product_url</li><li>variant_image_url</li></ul></code>{:/} |
+| Sélection du catalogue | Pour les blocs de produits statiques, il est nécessaire de créer une [sélection de catalogue]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) afin de spécifier les produits à inclure dans votre bloc de produits. |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
 ## Types de blocs de produits glisser-déposer
@@ -31,7 +32,7 @@ La fonctionnalité de glisser-déposer des blocs de produits est en accès antic
 | Bloc de produits | Objectif | Cas d’utilisation | Disponibilité |
 | --- | --- | --- | --- |
 | Dynamique | Personnalisez vos messages avec une vitrine de produits basée sur les interactions avec les clients en utilisant des [événements et des catalogues recommandés pour le commerce électronique]({{site.baseurl}}/ecommerce_events/) dans nos [modèles eCommerce Canvas]({{site.baseurl}}/ecommerce_use_cases/). | {::nomarkdown}<ul><li>Parcourir Abandonné</li><li>Panier abandonné</li><li>Paiement abandonné</li><li>Les confirmations de commande</li></ul>{:/} | Disponible uniquement en canvas. |
-| Statique | Personnalisez les produits en utilisant uniquement les données stockées dans un catalogue ou une [sélection de catalogue de]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) Braze. | Parfait pour présenter le lancement de nouveaux produits ou des offres spécifiques à une catégorie.| |
+| Statique | Effectuez la personnalisation des produits à l'aide des données stockées dans un catalogue Braze. Il est nécessaire d'utiliser une [sélection de catalogue]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) pour indiquer les produits à inclure. | Parfait pour présenter le lancement de nouveaux produits ou des offres spécifiques à une catégorie.| |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role=”presentation” }
 
 ## Configuration du bloc de contenu du produit
@@ -53,7 +54,7 @@ Dans la section **Champs de produits**, sélectionnez votre type de bloc de prod
 | Quantité | eCommerce Propriétés d'événement recommandées| 
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
-![Champs de produit pour un bloc de produit dynamique, qui sont divisés en données de catalogue et en données d'événement]({% image_buster /assets/img/product_blocks/dynamic_fields.png %}){: style="max-width:50%;"}
+![Champs de produit pour un bloc de produits dynamique, qui sont divisés en données de catalogue et données d'événement]({% image_buster /assets/img/product_blocks/dynamic_fields.png %}){: style="max-width:50%;"}
 
 #### Bloc de produits statiques
 
@@ -79,7 +80,7 @@ Utilisez les options de mise en page pour personnaliser l'affichage de vos produ
 | Espacement des produits | Définissez l'espacement entre les produits. |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
-![Options de mise en page pour l'orientation des produits, l'alignement, le nombre maximum de produits par ligne et l'espacement des produits.]({% image_buster /assets/img/product_blocks/layout_options.png %}){: style="max-width:50%;"}
+![Options de disposition pour l'orientation des produits, l'alignement, le nombre maximal de produits par rangée et l'espacement entre les produits.]({% image_buster /assets/img/product_blocks/layout_options.png %}){: style="max-width:50%;"}
 
 ### Paramètres globaux du style d'e-mail 
 
@@ -87,7 +88,7 @@ Les [paramètres globaux de style d'e-mail]({{site.baseurl}}/user_guide/message_
 
 #### Comment les paramètres globaux de style d'e-mail fonctionnent-ils avec les blocs de produits ?
 
-Les styles existants pour les paragraphes et les boutons s'appliqueront automatiquement aux éléments de texte et de bouton dans le bloc produit. Cela signifie que tout formatage que vous avez défini pour les paragraphes et les boutons sera utilisé de manière cohérente dans votre bloc de produits, ce qui permet de conserver un aspect homogène dans l'ensemble de votre e-mail.
+Les styles existants pour les paragraphes et les boutons s'appliquent automatiquement aux éléments de texte et aux boutons dans le bloc du produit. Cela signifie que votre bloc de produit utilise systématiquement la mise en forme que vous avez définie pour les paragraphes et les boutons, ce qui permet de conserver une apparence cohérente dans l'ensemble de votre e-mail.
 
 ## Mise en place de blocs de produits
 
@@ -97,7 +98,7 @@ Les styles existants pour les paragraphes et les boutons s'appliqueront automati
 Si vous utilisez l'intégration entre Braze et Shopify pour la [synchronisation des produits]({{site.baseurl}}/shopify_catalogs/), vous n'avez pas besoin de prendre des mesures supplémentaires pour utiliser les blocs de produits à glisser-déposer.<br><br> Si vous ne disposez pas d'informations sur la variante du produit, vous devez dupliquer les informations sur le produit de premier niveau dans les champs du produit et de la variante du produit dans les charges utiles et les catalogues d'événements. Cela signifie que vous devez fournir les mêmes détails sur le produit pour les deux identifiants afin de maintenir la cohérence pour que le bloc produit fonctionne correctement.
 {% endalert %}
 
-Pour utiliser les blocs de produits glisser-déposer, vous devez configurer un catalogue Braze qui inclut des valeurs de champs spécifiques. Ces champs seront utilisés dans la configuration de votre bloc produit. Assurez-vous que votre catalogue comprend les champs suivants :
+Pour utiliser les blocs de produits glisser-déposer, vous devez configurer un catalogue Braze qui inclut des valeurs de champs spécifiques. Veuillez utiliser ces champs dans la configuration de votre bloc produit. Assurez-vous que votre catalogue comprend les champs suivants :
 
 | Champ | Description |
 | --- | --- |
@@ -107,7 +108,15 @@ Pour utiliser les blocs de produits glisser-déposer, vous devez configurer un c
 
 Commencez par travailler à partir de cet [exemple de catalogue de produits]({{site.baseurl}}/assets/download_file/ecommerce_product_catalog_sample.csv), qui comprend les champs obligatoires. 
 
-![Un exemple de fichier CSV avec les champs obligatoires et d'autres.]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
+![Un exemple de fichier CSV contenant les champs obligatoires ainsi que d'autres champs.]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
+
+#### Mappage aux champs du catalogue
+
+Dans l'onglet **Paramètres** de votre catalogue, vous pouvez basculer sur l'option **Blocs de produits** pour effectuer le mappage de champs et d'informations spécifiques de votre catalogue. Cela vous permet de sélectionner les champs à utiliser comme titre du produit, URL du produit et URL de l'image. Veuillez noter que le mappage des champs du catalogue Shopify est effectué par défaut et ne peut pas être modifié.
+
+{% alert note %}
+Si vous n'utilisez pas Shopify, veuillez contacter votre gestionnaire de compte pour activer le mappage des champs, ce qui vous permettra de connecter n'importe quel catalogue à des blocs de produits et de mapper ses champs aux champs `product_title`,`product_url` , et `variant_image_url`.
+{% endalert %}
 
 ## Création de blocs de produits
 
@@ -136,7 +145,7 @@ Créez une campagne e-mail par glisser-déposer, un Canvas basé sur l'action ou
 ### Étape 2 : Ajouter un bloc produit
 
 {% tabs %}
-{% tab Bloc de produits dynamiques %}
+{% tab Dynamic product block %}
 
 Dans l'étape message, créez un e-mail ou modifiez le modèle existant à l'aide du compositeur d'e-mails par glisser-déposer.
 Faites glisser un bloc produit dans votre message e-mail.
@@ -144,15 +153,15 @@ Confirmez que le type de bloc dynamique est sélectionné.
 Sélectionnez le catalogue de produits que vous souhaitez utiliser pour la personnalisation. Assurez-vous qu'il s'aligne sur les produits des événements entrants que vous ciblez.
 
 {% endtab %}
-{% tab Bloc de produits statiques %}
+{% tab Static product block %}
 
 Faites glisser un bloc produit dans votre message e-mail et sélectionnez le type de bloc statique.
-Sélectionnez le catalogue que vous souhaitez utiliser pour votre bloc produit. Si votre catalogue comporte une sélection, vous devez la sélectionner pour restreindre davantage les produits qui s'affichent dans votre bloc de produits.
+Sélectionnez le catalogue que vous souhaitez utiliser pour votre bloc produit. Veuillez sélectionner un catalogue afin de déterminer les produits qui s'afficheront dans votre bloc de produits.
 
 {% endtab %}
 {% endtabs %}
 
-![L'onglet "Contenu" contient des blocs éditeurs, tels que des blocs produits.]({% image_buster /assets/img/product_blocks/product_block.png %}){: style="max-width:40%;"}
+![L'onglet « Contenu » qui contient les blocs éditeurs, tels que les blocs de produits.]({% image_buster /assets/img/product_blocks/product_block.png %}){: style="max-width:40%;"}
 
 ### Étape 3 : Configurer les champs du produit
 
@@ -160,7 +169,7 @@ Sélectionnez les [champs du produit](#product-fields) qui doivent être affich�
 
 Vous pouvez également personnaliser le texte précédant vos étiquettes Liquid. Par exemple, vous pouvez ajouter un signe de dollar ($) pour le prix d'un article ou mettre à jour le terme de la quantité en le remplaçant par "montant" ou un autre libellé préféré.
 
-![Bloc de produits dont le prix est précédé d'un dollar.]({% image_buster /assets/img/product_blocks/liquid.png %}){: style="max-width:45%;"}
+![Bloc de produit avec le prix de l'article précédé du symbole du dollar.]({% image_buster /assets/img/product_blocks/liquid.png %}){: style="max-width:45%;"}
 
 ### Étape 4 : Configurer les paramètres de mise en page
 
@@ -169,20 +178,20 @@ Modifiez les [options de mise en page](#layout-options) pour actualiser la faço
 ### Étape 5 : Prévisualiser et tester votre message
 
 {% tabs %}
-{% tab Bloc de produits dynamiques %}
+{% tab Dynamic product block %}
 
-1. Dans la section **Prévisualisation et test**, prévisualisez le message en tant qu'utilisateur personnalisé.
+1. Dans la section **Test de &prévisualisation**, veuillez prévisualiser le message en tant qu'utilisateur personnalisé.
 2. Indiquez le nombre d'éléments que vous souhaitez afficher dans l'aperçu.
 3. Confirmez que le nombre correct d'éléments apparaît et que vos options de mise en page sont appliquées correctement. Notez que les éléments qui apparaissent sont sélectionnés de manière aléatoire.
 
-![Onglet "Aperçu en tant qu'utilisateur" avec une section déroulante "Bloc de produits dynamiques" qui spécifie l'affichage de 4 éléments.]({% image_buster /assets/img/product_blocks/preview_as_a_user.png %}){: style="max-width:40%;"}
+![Onglet « Aperçu en tant qu'utilisateur » avec une section déroulante « Bloc de produits dynamiques » qui spécifie d'afficher 4 articles.]({% image_buster /assets/img/product_blocks/preview_as_a_user.png %}){: style="max-width:40%;"}
 
 {% endtab %}
-{% tab Bloc de produits statiques %}
+{% tab Static product block %}
 
 Un aperçu sera généré dans le compositeur par glisser-déposer lorsque vous appliquerez des modifications à votre bloc produit. 
 
-![Compositeur d'e-mail par glisser-déposer montrant un bloc de produit généré avec différentes tuiles d'articles.]({% image_buster /assets/img/product_blocks/static_block_preview.png %})
+![Éditeur d'e-mails par glisser-déposer affichant un bloc de produits générés avec différentes vignettes d'articles.]({% image_buster /assets/img/product_blocks/static_block_preview.png %})
 
 {% endtab %}
 {% endtabs %}

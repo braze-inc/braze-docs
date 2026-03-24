@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: Remover conta de usuário do dashboard"
+nav_title: "DELETE: Remova a conta de usuário do dashboard"
 article_title: "DELETE: Remover conta de usuário do dashboard"
 alias: /delete_existing_dashboard_user/
 search_tag: Endpoint
@@ -15,7 +15,7 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Remover
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Use esse endpoint para excluir permanentemente um usuário do dashboard existente, especificando o recurso `id` retornado pelo método SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/). 
+> Use esse endpoint para excluir permanentemente um usuário do dashboard existente, especificando o recurso `id` retornado pelo método SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/).
 
 Isso é semelhante à exclusão de um usuário na seção **Company Users (Usuários da empresa** ) do dashboard do Braze.
 
@@ -38,14 +38,14 @@ Para usar esse endpoint, você precisará de um token SCIM. Você usará a orige
 
 ## Corpo da solicitação
 
-```json
+```http
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ## Exemplo de solicitação
-```json
+```bash
 curl --location --request DELETE 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
@@ -56,13 +56,13 @@ curl --location --request DELETE 'https://rest.iad-01.braze.com/scim/v2/Users/df
 
 ### Exemplo de resposta de erro
 
-```json
+```http
 HTTP/1.1 204 Not Found
 Content-Type: text/html; charset=UTF-8
 ```
 
 Se um desenvolvedor com essa ID não existir na Braze, o endpoint responderá com:
-```json
+```http
 HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8
 

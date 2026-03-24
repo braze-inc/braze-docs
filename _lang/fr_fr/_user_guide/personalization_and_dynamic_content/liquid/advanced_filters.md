@@ -8,7 +8,7 @@ description: "Le présent article de référence répertorie les filtres avancé
 
 # Filtres avancés
 
-> Cet article de référence donne un aperçu des filtres avancés dans Liquid et de la manière dont ils peuvent être utilisés.
+> Cet article de référence fournit un aperçu des filtres avancés dans Liquid et de leur utilisation.
 
 ## Codage des filtres
 
@@ -30,7 +30,7 @@ description: "Le présent article de référence répertorie les filtres avancé
 | nom du filtre | description du filtre | exemple d’entrée | exemple de sortie |
 |---|---|---|---|
 | `url_escape` | Identifie tous les caractères dans une chaîne de caractères qui ne sont pas autorisés dans les URL, et remplace les caractères par leurs variantes échues | `{{'hey<>hi' | url_escape}}` | Bonjour %3C %3Ehi |
-| `url_param_escape` | Remplace tous les caractères d'une chaîne de caractères qui ne sont pas autorisés dans les URL par leurs variantes échappées, y compris l'esperluette (&) | `{{'hey<&>hi' | url_param_escape}` | hey%3C %26 %3Ehi |
+| `url_param_escape` | Remplace tous les caractères d'une chaîne de caractères qui ne sont pas autorisés dans les URL par leurs variantes échappées, y compris l'esperluette. (&) | `{{'hey<&>hi' | url_param_escape}}` | hey%3C %26 %3Ehi |
 | `url_encode` | Code une chaîne de caractères qui fonctionne pour les URL | `{{ 'google search' | url_encode }}` | google+recherche |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -93,7 +93,7 @@ Ce filtre doit toujours être utilisé lors de la personnalisation d’une chaî
 
 {% endraw %}
 
-{% details Exemple d'entrée et de sortie de json_parse %}
+{% details json_parse example input and output %}
 
 ### Entrée 
 
@@ -115,7 +115,7 @@ Item Name: {{ item.store_name }}
 
 {% enddetails %}
 
-{% details as_json_string exemple d'entrée et de sortie %}
+{% details as_json_string example input and output %}
 
 ### Entrée
 

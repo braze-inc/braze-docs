@@ -43,8 +43,12 @@ Pour savoir comment configurer des événements personnalisés pour une platefor
 ```
 
 - [ID utilisateur externe]({{site.baseurl}}/api/basics/#user-ids)
-- [Identifiant d’application]({{site.baseurl}}/api/identifier_types/)
+- [Identifiant de l'application]({{site.baseurl}}/api/identifier_types/)
 - [Code temporel ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+
+{% alert note %}
+Certaines paires d'identifiants ne peuvent pas être utilisées conjointement dans une même requête. Lorsque les deux`email`paramètres`phone`sont fournis,`email`le paramètre a priorité sur le `phone`paramètre. Pour plus de détails, veuillez vous référer à [la section Résolution des identifiants]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution).
+{% endalert %}
 
 #### Mettre à jour les profils existants uniquement
 
@@ -62,7 +66,7 @@ Les valeurs de propriété peuvent être l’un des types de données suivants 
 
 | Type de données | Description |
 | --- | --- |
-| Chiffres | Sous forme d'[entiers](https://en.wikipedia.org/wiki/Integer) ou de [float](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
+| Chiffres | Peuvent être des [nombres entiers](https://en.wikipedia.org/wiki/Integer) ou des [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
 | Booléens | `true` ou `false` |
 | Datetimes | Doit être formaté sous forme de chaînes de caractères dans le format [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) ou dans l'un des formats suivants : <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Non pris en charge dans les tableaux. <br><br>Notez que le « T » est un indicateur de temps, et non une marque substitutive. Il ne doit pas être modifié ou supprimé. <br><br>Les attributs temporels sans fuseau horaire seront par défaut à minuit UTC (et seront formatés sur le tableau de bord comme l'équivalent de minuit UTC dans le fuseau horaire de l'entreprise). <br><br> Les événements avec des horodatages dans le futur seront par défaut à l’heure actuelle.  |
 | Chaînes de caractères | 255 caractères ou moins. |
@@ -72,13 +76,24 @@ Les valeurs de propriété peuvent être l’un des types de données suivants 
 
 Les objets de propriété d'événement qui contiennent des valeurs de tableau ou d'objet peuvent avoir une charge utile de propriété d'événement allant jusqu'à 100 Ko.
 
+### Clés réservées
+
+Les clés suivantes sont réservées et ne peuvent pas être utilisées comme propriétés d’événement personnalisé :
+
+- `time`
+- `event_name`
+
+{% alert important %}
+L'utilisation de clés réservées comme noms de propriétés d'événements personnalisés entraînera des erreurs d'API lors de l'envoi de requêtes à `/users/track`l'endpoint.
+{% endalert %}
+
 ### Persistance des propriétés de l’événement
 
 Les propriétés de l’événement sont conçues pour filtrer et personnaliser avec Liquid les messages déclenchés par leurs événements parents. Par défaut, elles ne sont pas persistantes sur le profil utilisateur Braze. Pour utiliser les valeurs des propriétés d'événement dans la segmentation, reportez-vous aux [événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/), qui détaillent les différentes approches de stockage à long terme des valeurs des propriétés d'événement.
 
 #### Demande d’exemple d’événement
 
-```json
+```http
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY

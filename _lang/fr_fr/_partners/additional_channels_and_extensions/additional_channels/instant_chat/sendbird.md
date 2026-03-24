@@ -71,7 +71,7 @@ Un ID utilisateur Sendbird doit être ajouté au profil utilisateur Braze en tan
 
 ### Étape 5 : Configurez votre modèle de webhook
 
-Dans Braze, à partir de **Modèles et médias**, allez dans **Modèles de webhook** et choisissez le **modèle de webhook Sendbird.** Notez que ce modèle ne sera disponible que si vous avez installé l'extension Sendbird Notification Builder.
+Dans Braze, à partir des **modèles et médias & **, allez à **Webhook Templates** et choisissez le **modèle de webhook Sendbird**. Notez que ce modèle ne sera disponible que si vous avez installé l'extension Sendbird Notification Builder.
 
 {% raw %}
 1. Donnez un nom au modèle et ajoutez des équipes et des étiquettes si nécessaire.

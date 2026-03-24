@@ -9,9 +9,13 @@ description: "Erfahren Sie, wie Sie den Braze SDK-Debugger verwenden, damit Sie 
 
 > Lernen Sie, wie Sie den integrierten Debugger des Braze SDK verwenden, damit Sie Fehlerbehebungen für Ihre SDK-gestützten Kanäle durchführen können, ohne die ausführliche Protokollierung in Ihrer App aktivieren zu müssen.
 
+{% alert tip %}
+Für eine eingehendere Untersuchung können Sie auch [die ausführliche Protokollierung aktivieren]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging), um detaillierte SDK-Ausgaben zu erfassen und [zu erfahren, wie Sie ausführliche Protokolle]({{site.baseurl}}/developer_guide/sdk_integration/reading_verbose_logs) für bestimmte Kanäle [lesen können]({{site.baseurl}}/developer_guide/sdk_integration/reading_verbose_logs).
+{% endalert %}
+
 ## Voraussetzungen
 
-Um den Braze SDK Debugger zu verwenden, benötigen Sie die Berechtigungen `View PII` und `View User Profiles PII Compliant`. Außerdem muss Ihr Braze SDK die folgenden Mindestversionen erfüllen oder auf diese verweisen: 
+Um den Braze SDK-Debugger nutzen zu können, benötigen Sie die Berechtigungen „PII anzeigen“ und „Nutzerprofile PII-konform anzeigen“. Um Ihre Debugging-Sitzungsprotokolle herunterzuladen, benötigen Sie außerdem die Berechtigung „Nutzerdaten exportieren“. Außerdem muss Ihr Braze SDK die folgenden Mindestversionen erfüllen oder auf diese verweisen: 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
@@ -29,17 +33,17 @@ Bevor Sie mit der Fehlersuche beginnen, schließen Sie die App, bei der gerade e
 
 Gehen Sie in Braze zu **Einstellungen** und wählen Sie dann unter **Einrichtung und Testen** **SDK Debugger** aus.
 
-![Der Abschnitt "Einrichten und Tests" mit "SDK Debugger" hervorgehoben.]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
+![Der Abschnitt „Einrichtung und Testen“ mit hervorgehobenem „SDK-Debugger“.]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
 
 Wählen Sie **Debugging-Sitzung erstellen**.
 
-![Die Seite "SDK Debugger".]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
+![Die Seite „SDK-Debugger“.]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
 
 ### Schritt 3: Wählen Sie einen Nutzer aus
 
 Suchen Sie nach einem Nutzer über die E-Mail Adresse, `external_id`, Nutzer-Alias oder Push-Token. Wenn Sie bereit sind, Ihre Sitzung zu starten, wählen Sie **Nutzer auswählen**.
 
-![Die Debugging-Seite für den ausgewählten Nutzer:innen.]({% image_buster /assets/img/sdk_debugger/search_and_select_user.png %}){: style="max-width:85%;"}
+![Die Debugging-Seite für die ausgewählte Nutzer:in.]({% image_buster /assets/img/sdk_debugger/search_and_select_user.png %}){: style="max-width:85%;"}
 
 ### Schritt 4: App neu starten
 
@@ -57,7 +61,7 @@ Achten Sie bei der Reproduktion des Fehlers darauf, dass Sie die Reproduktionssc
 
 Wenn Sie mit Ihren Reproduktionsschritten fertig sind, wählen Sie **Sitzung beenden** > **Schließen**.
 
-![Die Debugging-Sitzung zeigt den Button "Sitzung beenden" an.]({% image_buster /assets/img/sdk_debugger/close_debugging_session.png %}){: style="max-width:85%;"}
+![Die Debugging-Sitzung mit dem Button „Sitzung beenden“.]({% image_buster /assets/img/sdk_debugger/close_debugging_session.png %}){: style="max-width:85%;"}
 
 {% alert note %}
 Es kann einige Minuten dauern, bis die Protokolle erstellt sind, je nach Länge der Sitzung und der Qualität der Netzwerkverbindung.
@@ -67,4 +71,4 @@ Es kann einige Minuten dauern, bis die Protokolle erstellt sind, je nach Länge 
 
 Nach der Sitzung können Sie Ihre Sitzungsprotokolle als CSV-Datei exportieren. Außerdem können andere Personen Ihre **Sitzungs-ID** verwenden, um nach Ihrer Debug-Sitzung zu suchen, sodass Sie ihnen Ihre Protokolle nicht direkt schicken müssen.
 
-![Die Debugging-Seite mit "Protokolle exportieren" und "Sitzungs-ID kopieren" wird nach der Sitzung angezeigt.]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})
+![Die Debugging-Seite mit den Optionen „Protokolle exportieren“ und „Sitzungs-ID kopieren“, die nach der Sitzung angezeigt wird.]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})

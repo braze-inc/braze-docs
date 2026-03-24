@@ -7,25 +7,25 @@ description: "Este glossário lista os diferentes tipos de notificações por pu
 channel: push
 
 layout: glossary_page
-glossary_top_header: "Types of push notifications"
-glossary_top_text: "There are many types of push notifications you can use to interact with your customers. These can be narrowed by channel and used to meet the needs of many different users. You can configure most of these settings in your Push campaigns, but there are notes in the following descriptions that will indicate whether any backend configurations are needed and what those might be."
+glossary_top_header: "Tipos de notificações por push"
+glossary_top_text: "Existem muitos tipos de notificações por push que você pode usar para interagir com seus clientes. Essas podem ser restringidas por canal e usadas para atender às necessidades de muitos usuários diferentes. Você pode configurar a maioria dessas configurações em suas campanhas de Push, mas há notas nas descrições a seguir que indicarão se alguma configuração de backend é necessária e quais podem ser."
 
 glossary_tag_name: Channels
 glossary_filter_text: "Select any of the following channels to narrow Push Type options."
 
 # category to icon/fa or image mapping
 glossary_tags:
-  - name: iOS
-  - name: Android
   - name: Web
+  - name: Android
+  - name: iOS
 
 glossaries:
   - name: "Push regular"
     description: "A mensagem Push abrangente. Elas aparecem no dispositivo do usuário com um som de notificação e uma mensagem que desliza ou aparece em uma barra ou pilha de notificações."
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "Push para a web"
     description: "Essas mensagens no navegador são exibidas em Web Apps ou navegadores. Eles ainda precisam de permissão para entrar em contato com o cliente. Note que o web push não funciona se o usuário estiver usando um navegador oculto."
     tags:
@@ -33,9 +33,9 @@ glossaries:
   - name: "Campanhas Push Primer"
     description: "Campanhas de mensagens no app usadas para obter sinais explícitos de aceitação ou não dos usuários. Por meio do primer, é possível evitar o envio de notificações para usuários que provavelmente desativarão o push nas configurações do dispositivo. Para o iOS, as campanhas push são relevantes, pois as notificações push em primeiro plano (como as notificações que despertam o dispositivo) não são ativadas até que o usuário faça a aceitação explícita do pedido de aceitação do push nativo do iOS."
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "Stories por push"
     description: "As \"Push Stories\" são mensagens imersivas que levam o usuário a uma jornada visual na forma de um carrossel. Elas estão disponíveis apenas para dispositivos móveis."
     tags:
@@ -44,21 +44,16 @@ glossaries:
   - name: "Botões de ação por push"
     description: "Os botões de ação por push são mensagens que permitem fornecer opções aos seus usuários e oferecer várias chamadas para ação."
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "Notificações por push avançadas"
     description: "As notificações por push Rich são notificações com imagens envolventes e conteúdo criativo que podem ir além de um simples ícone e texto de chamada para ação."
     tags:
       - iOS
       - Android
-  - name: "Notificações por push silenciosas"
-    description: "Uma notificação por push que não acorda o dispositivo ao ser renderizada no dispositivo. Em vez disso, a notificação será armazenada na bandeja de notificações do dispositivo."
-    tags:
-      - iOS
-      - Android
   - name: "Notificações por push provisórias para iOS"
-    description: "Introduzida pela Apple no iOS 12, a autorização provisória ocorre automaticamente na instalação de apps para iOS, permitindo que as marcas enviem notificações silenciosas sem exibir um prompt por push aos usuários. Quando o push silencioso for enviado e visualizado na bandeja de notificações do dispositivo, os usuários terão a opção de permitir ou descontinuar as notificações por push."
+    description: "Introduzida pela Apple no iOS 12, a autorização provisória ocorre automaticamente na instalação de aplicativos iOS, permitindo que as marcas enviem notificações sem exibir um aviso de push para os usuários. Essas notificações são entregues silenciosamente na central de notificações, onde os usuários podem escolher permitir ou descontinuar as notificações por push."
     tags:
       - iOS
   - name: "Notificações por push em HTML"
@@ -70,12 +65,12 @@ glossaries:
     tags:
       - iOS
       - Android
-  - name: "Notificações por push em segundo plano"
-    description: "Notificações por push que não são renderizadas para o dispositivo. Normalmente usado para enviar pacotes de informações para o app para processos em segundo plano e rastreamento de desinstalação. É necessário um token por push ativado em segundo plano para que o push em segundo plano seja enviado."
+  - name: "Notificações por Push em Segundo Plano (Push Silencioso)"
+    description: "Uma notificação por push que não é visível para o usuário final, tipicamente usada internamente para lidar com recursos como rastreamento de desinstalação, geofences e sincronização de dados. Push em segundo plano e push silencioso referem-se ao mesmo conceito. Um token por push habilitado para segundo plano é necessário. Para saber mais, veja <a href=\"/docs/developer_guide/push_notifications/silent\">Notificações push silenciosas</a>."
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "Notificações por push vestíveis"
     description: "Essas notificações por push permitem que as marcas enviem mensagens diretamente para dispositivos vestíveis, como o Apple Watch."
     tags:

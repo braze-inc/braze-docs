@@ -28,13 +28,13 @@ Avant de créer le Canvas, nous avons configuré l'intégration Braze [Audience 
 
 Pour accéder au modèle d'intention abandonnée, lorsque vous créez une nouvelle toile, sélectionnez **Utiliser un modèle de toile** > **Modèles de Braze**. Ensuite, en regard de l'**intention abandonnée**, sélectionnez **Appliquer le modèle.** Nous pouvons maintenant parcourir le modèle pour l'adapter à nos besoins.
 
-### Étape 1 : Régler les détails
+### Étape 1 : Régler les détails
 
 Ajustons les détails du Canvas pour refléter notre objectif.
 
 1. Sélectionnez **Modifier** à côté du nom du modèle.
 
-![Titre et description actuels de la toile.]({% image_buster /assets/img/canvas_templates/abandoned_intent_old_name_description.png %}){: style="max-width:60%;"}
+![Le titre et la description actuels de la toile.]({% image_buster /assets/img/canvas_templates/abandoned_intent_old_name_description.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. Mettez à jour le nom du canvas pour spécifier que le canvas est destiné au ciblage des utilisateurs dont les paniers ont été abandonnés.
@@ -62,13 +62,13 @@ Bien que la planification d'entrée de ce modèle soit définie sur **API-Trigge
 3. Pour la fenêtre de saisie, sélectionnez la date de début.
 4. Sélectionnez l'option permettant aux utilisateurs d'entrer leur fuseau horaire local. Cela permet de conserver la pertinence de nos messages et d'augmenter l'engagement si les messages sont envoyés à des moments optimaux.
 
-![Un canvas basé sur l'action qui cible les utilisateurs qui ont abandonné leur panier, avec la fenêtre d'entrée 15 octobre 2024 15h20 au fuseau horaire local des utilisateurs.]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %}).
+![Un Canvas basé sur l'action qui cible les utilisateurs qui ont abandonné leur panier, avec la fenêtre d'entrée 15 octobre 2024 15h20 au fuseau horaire local des utilisateurs.]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
 
 ### Étape 4 : Déterminer qui entre dans le Canvas
 
 Ensuite, définissons notre audience cible comme les utilisateurs qui ont effectué des achats exclusivement en ligne chez nous au cours des 90 derniers jours. Cela nous permet de restreindre notre audience aux utilisateurs dont nous savons qu'ils s'intéressent à nos produits. 
 
-!["Segment des acheteurs en ligne - 90 jours" comme segment d'utilisateurs à cibler pour ce canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
+!["Segment des acheteurs en ligne - 90 jours" comme segment d'utilisateurs à cibler pour ce Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
 
 Nous laisserons les contrôles d'entrée tels quels, de sorte que les utilisateurs ne soient pas autorisés à entrer à nouveau dans ce canvas et qu'il n'y ait pas de limite au nombre de personnes qui peuvent potentiellement entrer dans ce canvas.
 
@@ -94,7 +94,7 @@ Nous allons maintenant créer notre canvas en personnalisant les étapes du cane
 4\. Conservez l'étape du délai telle qu'elle est.
 5\. Dans les étapes Message qui suivent l'étape Parcours d'audience, nous personnaliserons l'e-mail et le message SMS que nos utilisateurs recevront. C'est ici que nous voulons encourager nos utilisateurs à acheter des produits grâce à des messages personnalisés.
 
-![Un aperçu du message SMS que les utilisateurs recevront : "Bonjour, vous avez oublié l'énorme assiette en carton dans votre panier ! Complétez votre achat maintenant et améliorez votre jeu d'hébergement. Utilisez le code MYPLATE à la caisse pour obtenir 20 % de réduction sur votre commande"]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
+![Un aperçu du message SMS que les utilisateurs recevront : "Bonjour, vous avez oublié l'énorme assiette en carton dans votre panier ! Complétez votre achat maintenant et améliorez votre jeu d'hébergement. Utilisez le code MYPLATE à la caisse pour 20 % de réduction sur votre commande !"]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
 
 {: start="6"}
 6\. Dans l'étape suivante des parcours d'action, sélectionnez le groupe d'actions **Achat**. Ensuite, sélectionnez **Faire un achat spécifique** et choisissez **Enormous Paper Plate** comme produit. Cette étape reflétera la première étape des parcours d'action en excluant les utilisateurs qui ont acheté notre produit afin qu'ils ne reçoivent plus d'envoi de messages.

@@ -6,17 +6,20 @@ layout: dev_guide
 channel:
   - WhatsApp
 guide_top_header: "WhatsApp"
-guide_top_text: "WhatsApp は、企業向けの対話ベースのメッセージングを提供する、世界中で使用されている人気のピアツーピアメッセージング プラットフォームです。WhatsApp メッセージングチャネルは、WhatsApp プラットフォーム上のユーザーと顧客に直接リーチする方法を提供します。<br><br>** WhatsApp アクセスは、一部の Braze パッケージでのみ使用できます。使い始める場合は、アカウントマネージャーまたはカスタマーサクセスマネージャーにお問い合わせください。**"
-description: "このランディングページは、WhatsApp キャンペーンの作成方法、オプトインとオプトアウト、クイック返信、レポートなど、WhatsApp のすべての機能のホームページです。"
+guide_top_text: "WhatsApp は、企業向けの対話ベースのメッセージングを提供する、世界中で使用されている人気のピアツーピアメッセージングプラットフォームです。WhatsApp メッセージングチャネルは、WhatsApp プラットフォーム上のユーザーと顧客に直接リーチする方法を提供します。<br><br>**WhatsApp の利用可否は、ご契約の Braze パッケージによって異なります。ご利用を開始するには、アカウントマネージャーまたはカスタマーサクセスマネージャーにお問い合わせください。**"
+description: "このランディングページは、WhatsApp キャンペーンの作成方法、オプトインとオプトアウト、クイック返信、レポートなど、WhatsApp に関するすべての情報のホームページです。"
 search_rank: 3
 alias: /whatsapp/
 
 guide_featured_title: "WhatsApp"
 guide_featured_list:
-- name: "WhatsApp設定"
+- name: "WhatsApp セットアップ"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
   image: /assets/img/braze_icons/whatsapp.svg
-- name: "WhatsAppサブスクリプショングループ"
+- name: "WhatsApp コネクタの持ち込み"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/overview/byo_connector/
+  image: /assets/img/braze_icons/whatsapp.svg
+- name: "WhatsApp サブスクリプショングループ"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
   image: /assets/img/braze_icons/table.svg
 - name: "ユーザーの電話番号"
@@ -25,7 +28,10 @@ guide_featured_list:
 - name: "WhatsApp キャンペーンの作成"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/
   image: /assets/img/braze_icons/phone-02.svg
-- name: "ユーザーのリターゲット"
+- name: "WhatsApp テンプレートビルダー"
+  link: /docs/whatsapp_template_builder/
+  image: /assets/img/braze_icons/layout-alt-04.svg
+- name: "ユーザーのリターゲティング"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/user_retargeting/
   image: /assets/img/braze_icons/users-01.svg
 - name: "オプトインとオプトアウト"
@@ -36,22 +42,25 @@ guide_featured_list:
   image: /assets/img/braze_icons/message-chat-circle.svg
 - name: "不明な電話番号の処理"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/handling_unknown_numbers/
-- name: "WhatsApp販売試験"
+- name: "WhatsApp マーケティング実験"
   link: /docs/user_guide/message_building_by_channel/whatsapp/meta_resources/#faq
   image: /assets/img/braze_icons/beaker-02.svg
-- name: "WhatsApp報告"
+- name: "WhatsApp レポート"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
   image: /assets/img/braze_icons/file-06.svg
 - name: "メッセージ利用ダッシュボード"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/message_usage/
   image: /assets/img/braze_icons/file-07.svg
-- name: "WhatsAppのベストプラクティス"
+- name: "WhatsApp のベストプラクティス"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices/
   image: /assets/img/braze_icons/check-square-broken.svg
 - name: "カスタムドメイン"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/custom_domains/
   image: /assets/img/braze_icons/link-03.svg
-- name: "WhatsAppに関するよくある質問"
+- name: "WhatsApp ユースケース"
+  link: /docs/whatsapp_use_cases/
+  image: /assets/img/braze_icons/phone-02.svg
+- name: "WhatsApp に関するよくある質問"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
   image: /assets/img/braze_icons/annotation-question.svg
 

@@ -24,7 +24,7 @@ Gehen Sie zunächst zur Firebase-Konsole, öffnen Sie Ihr Projekt und wählen Si
 
 Wählen Sie **Cloud Messaging** und kopieren Sie dann unter **Firebase Cloud Messaging API (V1)** die **Absender-ID** in Ihre Zwischenablage.
 
-![Die Seite "Cloud Messaging" des Firebase-Projekts mit hervorgehobener "Sender-ID".]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
+![Die Seite "Cloud Messaging" des Firebase-Projekts mit hervorgehobener "Sender ID".]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
 #### Schritt 1.3: Aktualisieren Sie Ihr `braze.xml`
 

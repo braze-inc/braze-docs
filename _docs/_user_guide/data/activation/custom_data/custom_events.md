@@ -72,7 +72,7 @@ Custom events require additional setup. Refer to the list below for documentatio
 - [Web]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
 - [Unity]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=unity)
-- [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
+- [.NET MAUI (formerly Xamarin)]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
 - [Roku]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=roku)
 
 {% enddetails %}
@@ -103,7 +103,7 @@ The following table shows the filters available for segmenting users by custom e
 
 Braze notes the number of times custom events have occurred and the last time they were performed by each user for segmentation. View these analytics by going to **Analytics** > **Custom Events Report**.
 
-On the **Custom Events Report** page in the dashboard, you can view in aggregate how often each custom event occurs. The gray lines overlayed on the time series indicate the last time a campaign was sent, which is useful for viewing how your campaigns affected custom event activity.
+On the **Custom Events Report** page in the dashboard, you can view in aggregate how often each custom event occurs. The gray lines overlaid on the time series indicate the last time a campaign was sent, which is useful for viewing how your campaigns affected custom event activity.
 
 ![Custom event counts graph on the Custom Events page in the dashboard showing trends for a custom event]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
@@ -147,7 +147,24 @@ Property values can be any of the following data types:
 
 Event property objects that contain array or object values can have an event property payload up to 100&nbsp;KB.
 
+Property value data types are detected and processed similarly to [custom attribute]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/) values, with two key differences:
+
+- **String-to-time conversion:** String values that match a recognized time format are automatically converted to a datetime type. This means some string values cannot be stored as-is in event properties.
+- **No type coercion:** There is no automatic type coercion for event properties. If a trigger filter expects a numeric value of `5`, a string value of `"5"` will not match. The same applies to Liquid templating and Currents event data.
+
+These behaviors also apply to [purchase event properties]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#purchase-properties).
+
 You can change the data type of your custom event property, but be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
+
+#### Reserved keys
+
+You cannot use reserved keys as event property names. Using a reserved key in the `properties` object will return the error "Invalid 'properties' field".
+
+| Property | Reserved Key |
+| --- | --- |
+| Custom events | `time` and `event_name` | 
+| Purchase events |`time`, `product_id`, `quantity`, `event_name`, `price`, `currency` | 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Using custom event properties
 
@@ -200,7 +217,9 @@ Event properties for custom events are updated in real-time for any segment that
 
 ##### Adding event properties for segmentation
 
-You'll need "Manage Custom Event Property Segmentation" [user permissions]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) to create segments based on event property recency and frequency.
+You need the "Edit Custom Event Property Segmentation" [user permission]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) to create segments based on event property recency and frequency.
+
+{% multi_lang_include deprecations/user_permissions.md %}
 
 By default, you can have 20 segmentable event properties per workspace. Contact your Braze account manager to increase this limit.
 
@@ -215,9 +234,9 @@ The event property segmentation filters include:
 - Has made any purchases with property A with value B, X times in the last Y days.
 - Adds the ability to segment within 1 to 30 days.
 
-![A filter group that has 'Abandoned Cart' with property 'number of itmes' and value 2 more than 1 time in the last 30 calendar days.]({% image_buster /assets/img/nested_object3.png %})
+![A filter group that has 'Abandoned Cart' with property 'number of items' and value 2 more than 1 time in the last 30 calendar days.]({% image_buster /assets/img/nested_object3.png %})
 
-Data is only logged for a given event property after it has been enabled by your customer success manager, and event properties are only available from that date moving forward.
+Data is logged only for a given event property after you enable it, and event properties are available only from that date moving forward.
 
 ##### Data points
 
@@ -240,10 +259,11 @@ To learn more, refer to our dedicated page on [Nested objects]({{site.baseurl}}/
 
 Custom event properties are designed to help you increase targeting precision and make messages feel even more personalized. Custom event properties can be stored within Braze in both the short and long term.
 
-You can segment based on the values of event properties in two ways:
+You can segment based on the values of event properties in the following ways:
 
-1. **Within 30 days:** Braze support personnel can enable event property segmentation based on the frequency and recency of specific event property values within Braze segments. If you'd like to leverage event properties within segments, contact your Braze account executive or customer success manager. This option will impact data usage.<br><br>
-2. **Within and beyond 30 days:** To cover both short-term and long-term event property segmentation, you can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). This feature segments users based on custom events and event properties tracked within the past two years. This option won't impact data usage.
+- **Within 30 days:** You can use event property segmentation based on the frequency and recency of specific event property values within Braze segments. This option impacts data usage.<br><br>
+- **Within and beyond 30 days:** To cover both short-term and long-term event property segmentation, you can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). This feature segments users based on custom events and event properties tracked within the past two years. This option does not impact data usage.<br><br>
+- **Canvas with custom attribute arrays:** Build and launch a Canvas that gets triggered on the custom event. Configure a **User Update** step that uses **Add Item** to add the event property to a custom attribute array on the user profile, then segment users using filters on that custom attribute array rather than event property filters. This option impacts data usage because each update to the custom attribute array consumes data points. For implementation details, refer to [User Update steps in Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) and [custom attribute arrays]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/#arrays).
 
 Contact your Braze customer success manager for recommendations on the best approach depending on your specific needs.
 

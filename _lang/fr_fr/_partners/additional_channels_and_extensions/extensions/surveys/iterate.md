@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Iterate
 
-> [Iterate](https://iteratehq.com) facilite l'apprentissage auprès de vos clients, en proposant des outils de recherche intelligents et conviviaux, à l'image de votre marque.
+> [Iterate](https://iteratehq.com) fournit des outils d'enquête et de feedback pour vous aider à apprendre de vos clients, en offrant des expériences de recherche conviviales qui correspondent à votre marque.
 
 _Cette intégration est maintenue par Iterate._
 
@@ -67,7 +67,7 @@ Vous verrez alors les options de configuration pour envoyer des réponses à Bra
 
 Votre enquête peut être partagée de deux manières : en intégrant la première question dans votre message ou en incluant un lien direct vers l'enquête sur la plateforme Iterate.
 
-![Iterate link options]({% image_buster /assets/img/iterate.png %})
+![Options de liens Iterate]({% image_buster /assets/img/iterate.png %})
 
 - **Intégrer le code**
   - Copiez l'extrait de code sous **Code d'intégration de l'e-mail** dans la section d'intégration de Braze de l'onglet **Envoyer le sondage**. Insérez le code dans le code HTML de votre e-mail Braze à l'endroit où vous souhaitez que le début de l'enquête apparaisse. 

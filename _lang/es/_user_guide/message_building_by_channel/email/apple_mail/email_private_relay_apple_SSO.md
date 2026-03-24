@@ -1,6 +1,6 @@
 ---
-nav_title: Envío de correos electrónicos a Apple Private Relay
-article_title: Envío de correos electrónicos a Apple Private Relay
+nav_title: Enviar correos electrónicos a Apple Private Relay
+article_title: Enviar correos electrónicos a la retransmisión privada de Apple
 alias: /email_relay/
 page_order: 0
 description: "Este artículo cubre el proceso de envío de correos electrónicos al sistema de Relay privado de Apple."
@@ -9,7 +9,7 @@ channel:
   
 ---
 
-# Envío de correos electrónicos a Apple Private Relay
+# Enviar correos electrónicos a Apple Private Relay
 
 > La característica de inicio de sesión único (SSO) de Apple permite a sus usuarios compartir sus direcciones de correo electrónico (`example@icloud.com`) u ocultar sus direcciones de correo electrónico enmascarando lo que se proporciona a las marcas (`tq1234snin@privaterelay.appleid.com`) en lugar de su dirección de correo electrónico personal. Apple reenviará los mensajes enviados a las direcciones de retransmisión a la dirección de correo electrónico real del usuario. 
 
@@ -22,7 +22,7 @@ Si un usuario decide desactivar el reenvío de correo electrónico al correo ele
 Si utiliza SendGrid como proveedor de correo electrónico, puede enviar correos electrónicos a Apple sin realizar cambios en los DNS. 
 
 1. Entra en el [Portal del Desarrollador de Apple](https://developer.apple.com/)
-2. Ve a la página **Certificados, identificadores y perfiles**.
+2. Ve a la página de **Certificados, Identificadores & Perfiles**.
 3. Selecciona **Servicios** > **Iniciar sesión con Apple para comunicación por correo electrónico**.
 4. En la sección **Fuentes de correo electrónico**, añade los dominios y subdominios.
 - La dirección debe tener el formato : `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>` (un ejemplo es: `bounces+1234567@braze.online.docs.com`). 

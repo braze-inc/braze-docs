@@ -2,7 +2,9 @@
 
 ## Standard-Nutzerattribute
 
-Die Attribute der Nutzer:innen werden dem gerade aktiven Nutzer zugewiesen. Die folgenden Standardfelder können eingestellt werden:
+### Vordefinierte Methoden
+
+Braze bietet vordefinierte Methoden zum Einstellen der folgenden Nutzer:innen-Attribute unter Verwendung des `m.Braze` Objekts.
 
 - `FirstName`
 - `LastName`
@@ -14,11 +16,57 @@ Die Attribute der Nutzer:innen werden dem gerade aktiven Nutzer zugewiesen. Die 
 - `HomeCity`
 - `PhoneNumber`
 
-Sie können einen Vornamen zum Beispiel wie folgt einrichten:
+### Einstellung von Standardattributen
 
+Um ein Standardattribut festzulegen, rufen Sie die entsprechende Methode für das Objekt `m.Braze` auf.
+
+{% tabs local %}
+{% tab First name %}
 ```brightscript
 m.Braze.setFirstName("Alex")
 ```
+{% endtab %}
+{% tab Last name %}
+```brightscript
+m.Braze.setLastName("Smith")
+```
+{% endtab %}
+{% tab Email %}
+```brightscript
+m.Braze.setEmail("alex@example.com")
+```
+{% endtab %}
+{% tab Gender %}
+```brightscript
+m.Braze.setGender("m") ' Accepts: "m", "f", "o", "n", "u", "p"
+```
+{% endtab %}
+{% tab Birth date %}
+```brightscript
+m.Braze.setDateOfBirth(1990, 5, 15) ' Year, month, day
+```
+{% endtab %}
+{% tab Country %}
+```brightscript
+m.Braze.setCountry("United States")
+```
+{% endtab %}
+{% tab Language %}
+```brightscript
+m.Braze.setLanguage("en")
+```
+{% endtab %}
+{% tab Home city %}
+```brightscript
+m.Braze.setHomeCity("New York")
+```
+{% endtab %}
+{% tab Phone number %}
+```brightscript
+m.Braze.setPhoneNumber("+1234567890")
+```
+{% endtab %}
+{% endtabs %}
 
 ## Angepasste Nutzerattribute
 
@@ -43,7 +91,7 @@ m.Braze.setCustomAttribute("intAttribute", 5)
 ```
 {% endtab %}
 
-{% tab Gleitkommazahlen %}
+{% tab Floating-points %}
 Braze behandelt die Werte von `float` und `double` genau gleich. So legen Sie ein angepasstes Attribut mit einem der beiden Werte fest:
 
 ```brightscript
@@ -51,7 +99,7 @@ m.Braze.setCustomAttribute("floatAttribute", 3.5)
 ```
 {% endtab %}
 
-{% tab Boolesch %}
+{% tab Boolean %}
 So legen Sie ein angepasstes Attribut mit einem `boolean` Wert fest:
 
 ```brightscript
@@ -59,7 +107,7 @@ m.Braze.setCustomAttribute("boolAttribute", true)
 ```
 {% endtab %}
 
-{% tab Datum %}
+{% tab Date %}
 So legen Sie ein angepasstes Attribut mit einem `date` Wert fest:
 
 ```brightscript
@@ -96,7 +144,7 @@ m.Braze.incrementCustomUserAttribute("intAttribute", 3)
 
 ### Angepasste Attribute nicht anpassen
 
-Benutzerdefinierte Attribute können auch mit der folgenden Methode deaktiviert werden:
+Um ein angepasstes Attribut wieder freizugeben, übergeben Sie den entsprechenden Attributschlüssel an die Methode `unsetCustomAttribute`.
 
 ```brightscript
 m.Braze.unsetCustomAttribute("attributeName")

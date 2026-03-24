@@ -56,7 +56,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/update' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -73,8 +73,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/upd
 ## Resposta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "content_block_id": (string) Your newly generated block id,
   "liquid_tag": (string) The generated block tag from the Content Block name,
@@ -91,8 +89,8 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | --- | --- |
 | `Content cannot be blank` |
 | `Content must be a string` | Certifique-se de que seu conteúdo esteja encapsulado entre aspas (`""`). |
-| `Content must be smaller than 50kb` | O conteúdo no seu bloco de conteúdo deve ser inferior a 50 KB no total. |
-| `Content contains malformed liquid` | O Liquid fornecido não é válido ou não pode ser analisado. Tente novamente com um Liquid válido ou entre em contato com o suporte. |
+| `Content must be smaller than 50kb` | O conteúdo do seu bloco de conteúdo deve ser menor que 50 KB no total. |
+| `Content contains malformed liquid` | O Liquid fornecido não é válido ou não pode ser analisado. Tente novamente com Liquid válido ou entre em contato com o suporte. |
 | `Content Block cannot be referenced within itself` |
 | `Content Block description cannot be blank` |
 | `Content Block description must be a string` | Certifique-se de que a descrição do bloco de conteúdo esteja encapsulada entre aspas (`""`). |

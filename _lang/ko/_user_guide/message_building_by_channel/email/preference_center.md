@@ -1,5 +1,5 @@
 ---
-nav_title: 환경설정 센터
+nav_title: 환경 설정 센터
 article_title: 환경설정 센터
 page_order: 8
 layout: dev_guide
@@ -11,8 +11,8 @@ channel:
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
-- name: 개요
-  link: /docs/user_guide/message_building_by_channel/email/preference_center/overview/
+- name: API 이메일 기본 설정 센터
+  link: /docs/user_guide/message_building_by_channel/email/preference_center/api_preference_center/
   image: /assets/img/braze_icons/list.svg
 - name: 드래그 앤 드롭 환경 설정 센터
   link: /docs/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/

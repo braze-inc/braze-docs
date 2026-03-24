@@ -1,5 +1,5 @@
 ---
-nav_title: クエリの作成
+nav_title: クエリを作成する
 article_title: クエリビルダーの使用
 page_order: 0
 page_type: reference

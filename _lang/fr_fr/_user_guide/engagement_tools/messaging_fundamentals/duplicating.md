@@ -1,7 +1,7 @@
 ---
 nav_title: Duplication
 article_title: Duplication
-page_order: 5
+page_order: 5.5
 page_type: reference
 description: "Cet article de référence explique comment dupliquer vos campagnes et vos canevas."
 tool:
@@ -22,7 +22,7 @@ Vous pouvez également [copier votre campagne]({{site.baseurl}}/user_guide/engag
 {% endalert %}
 
 {% tabs %}
-{% tab campagne %}
+{% tab campaign %}
 Pour dupliquer une campagne :
 
 1. Sélectionnez **Envoi de messages** > **Campagnes**.
@@ -37,12 +37,5 @@ Pour dupliquer une toile :
 2. Passez la souris sur la ligne Canvas et sélectionnez <i class="fas fa-ellipsis-vertical"></i> **More actions.**
 3. Sélectionnez **Dupliquer**.
 
-{% details Editeur de canevas original %}
-
-Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas d’origine. 
-
-Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos toiles dans Canvas Flow.]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)
-
-{% enddetails %}
 {% endtab %}
 {% endtabs %}

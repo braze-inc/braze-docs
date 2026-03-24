@@ -357,7 +357,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures' %}
 
-Reach out to <a href="/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
+Contact <a href="/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
 
 <span class="calculation-line">Calculation: (Sends) - (Sends to Carrier)</span>
 
@@ -373,7 +373,7 @@ RCS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures RCS' %}
 
-Reach out to <a href="/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
+Contact <a href="/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
 
 <span class="calculation-line">Calculation: (Sends) - (Sends to Carrier)</span>
 
@@ -389,7 +389,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Failed Delivery Rate' %}
 
-Reach out to <a href="/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
+Contact <a href="/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
 
 <span class="calculation-line">Calculation: (Delivery Failures) / (Sends)</span>
 

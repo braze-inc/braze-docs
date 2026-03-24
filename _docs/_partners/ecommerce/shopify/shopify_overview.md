@@ -12,7 +12,7 @@ page_order: 0
 
 > [Shopify](https://www.shopify.com/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a business of any size. Shopify makes commerce better for everyone with a platform and services engineered for reliability while delivering a better shopping experience for consumers everywhere.
 
-The Braze integration with Shopify provides a powerful solution for ecommerce businesses looking to enhance their customer engagement and drive personalized marketing efforts. This integration seamlessly connects Shopify's robust ecommerce capabilities with our advanced customer engagement platform, enabling you to deliver targeted, relevant, and timely messages to your users based on real-time shopping behaviors and transactional data.
+The Braze integration with Shopify provides a powerful solution for eCommerce businesses looking to enhance their customer engagement and drive personalized marketing efforts. This integration seamlessly connects Shopify's robust eCommerce capabilities with our advanced customer engagement platform, enabling you to deliver targeted, relevant, and timely messages to your users based on real-time shopping behaviors and transactional data.
 
 ## Requirements
 
@@ -63,7 +63,7 @@ Braze uses the Shopify integration to support multiple identifiers that track yo
 | --- | --- |
 | Braze `device_id` | A randomly generated ID stored in the browser that tracks anonymous user activity through Braze SDKs. |
 | Cart token user alias | An alias that Braze creates to track cart update events. This token is created by using Shopify cart token. |
-| Checkout token user alias | An alias that Braze creates when the user starts the checkout process. This token is created by using the Shopify checkout token. |
+| Checkout token user alias | An alias that Braze creates when the user starts the checkout process. This token is created by using the Shopify checkout token.<br><br> If a customer uses Shop Pay as an accelerated checkout option, Shopify may bypass certain standard checkout events and prevent Braze from receiving the data needed to add the checkout token alias. |
 | Shopify customer ID alias | The Shopify customer ID is assigned as an alias when the external ID is assigned during account login or when an order is placed. |
 | Braze `external_id` | A unique identifier that helps track customers across devices and platforms. This maintains a consistent user experience and improves analytics by preventing multiple profiles when users switch devices or reinstall the app.<br><br>The Shopify integration supports the following `external_id` types: <br><br>{::nomarkdown}<ul><li>Shopify customer ID (default)</li><li>Custom external ID</li><li>Hashed email (SHA-256)</li><li>Hashed email (SHA-1)</li><li>Hashed email (MD5)</li><li>Email</li></ul>{:/}Braze assigns an `external_id` to your users by calling the changeUser method within the SDKs when: <br><br>{::nomarkdown}<ul><li>A user logs in or creates an account</li><li>An order is placed</li></ul>{:/}<br> For more information on what happens when you assign an `external_id` to an anonymous profile, refer to [User profile lifecycle]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle#what-happens-when-you-identify-anonymous-users).<br><br>Braze will also leverage the `external_id` to attribute downstream eCommerce behavioral data from Shopify webhooks.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -130,7 +130,7 @@ When you use these sign-up form templates, Braze automatically updates the globa
 
 {% alert note %}
 - Make sure to include entry criteria in your campaign or Canvas that includes both the global email subscription status and the subscription group that are connected to your Shopify store. This will help ensure that you are targeting the right audience. 
-- Braze collects visitor information, such as email addresses and phone numbers, through in-browser messages. This information is then sent to Shopify. This data helps merchants recognize visitors to their store and create a more personalized shopping experience. For more details, refer to [Visitor API](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
+- Braze collects visitor information, such as email addresses and phone numbers, through in-browser messages. This information is then sent to the Shopify Visitor API but doesn't create a customer profile in Shopify. For more details, refer to [Visitor API](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
 {% endalert %}
 
 #### Third-party sign-up forms 

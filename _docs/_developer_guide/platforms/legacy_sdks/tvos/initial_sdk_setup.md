@@ -123,7 +123,7 @@ If given a pre-existing custom endpoint:
 - Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the `Appboy` dictionary to your Info.plist file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint URLs authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
 #### Runtime endpoint configuration
-If given a pre-exisiting custom endpoint:
+If given a pre-existing custom endpoint:
 - Starting with Braze iOS SDK v3.17.0+, you can override set your endpoint via the `ABKEndpointKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the value to your custom endpoint URL authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
 {% alert note %}

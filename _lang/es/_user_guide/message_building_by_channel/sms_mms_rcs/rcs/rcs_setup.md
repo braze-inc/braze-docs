@@ -9,7 +9,7 @@ channel:
   - RCS
 ---
 
-# Configuración de RCS
+# Configurar RCS
 
 > Este artículo cubre los requisitos necesarios para poner en marcha tu canal RCS.
 
@@ -40,7 +40,7 @@ Antes de poder enviar mensajes RCS, debes registrar un remitente verificado por 
 
 ![Un ejemplo de remitente verificado por RCS en un mensaje RCS llamado "Cat Failz Cafe".]({% image_buster /assets/img/rcs/rcs_sender.png %}){: style="max-width:60%;"}
 
-Cuando hayas añadido las SKU de RCS a tu formulario de pedido, Braze recibirá una notificación y se pondrá en contacto contigo para facilitarte la información de registro del remitente de RCS. Su formato dependerá de los países a los que desees enviar mensajes RCS. 
+Una vez que hayas añadido las SKU de RCS a tu formulario de pedido, Braze recibirá una notificación y se pondrá en contacto contigo para facilitarte la información de registro del remitente de RCS. Su formato dependerá de los países a los que desees enviar mensajes RCS. 
 
 Cuando hayas enviado tus formularios cumplimentados a Braze, completaremos el proceso de inscripción en tu nombre. 
 

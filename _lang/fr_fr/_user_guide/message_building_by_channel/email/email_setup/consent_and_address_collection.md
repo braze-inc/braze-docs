@@ -1,5 +1,5 @@
 ---
-nav_title: Consentement et collecte d’adresses
+nav_title: "Consentement et collecte d'adresses"
 article_title: Consentement et collecte d’adresses
 page_order: 6
 page_type: reference

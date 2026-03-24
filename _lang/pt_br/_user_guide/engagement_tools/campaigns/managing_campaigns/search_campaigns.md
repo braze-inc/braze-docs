@@ -1,6 +1,6 @@
 ---
-nav_title: Pesquisa de campanhas
-article_title: Pesquisa de campanhas
+nav_title: Pesquisar campanhas
+article_title: Pesquisar Campanhas
 page_order: 10
 page_type: reference
 description: "Este artigo descreve as várias maneiras pelas quais você pode pesquisar campanhas na página de listagem de campanhas."
@@ -9,7 +9,7 @@ tool:
 
 ---
 
-# Busca de campanhas
+# Pesquisar campanhas
 
 > À medida que você cria mais campanhas em seu espaço de trabalho, é possível ajustar os filtros e as colunas na lista de campanhas para classificar e organizar essas campanhas. O uso de uma combinação desses métodos de pesquisa pode ajudar a restringir seus resultados, especialmente à medida que sua lista de campanhas aumenta.
 
@@ -22,7 +22,7 @@ Há várias maneiras de pesquisar campanhas na página da lista de campanhas, se
 
 Você pode usar a barra de pesquisa para inserir palavras-chave e frases relacionadas ao nome da sua campanha. Para fazer uma pesquisa exata, use aspas ("") ao redor da frase de pesquisa. Por exemplo, para pesquisar especificamente campanhas de teste de webhook, digite `"webhook test"` na barra de pesquisa.
 
-![A página da lista de campanhas com três campanhas listadas. A página é organizada para mostrar as campanhas ativas. As colunas são Name, Status, Stop date, Campaign type e Sent para organizar a visualização.]({% image_buster /assets/img/campaign_list_example.png %})
+![A página da lista de campanhas com três campanhas listadas. A página é organizada para mostrar as campanhas ativas. As colunas são Nome, Status, Data de parada, Tipo de campanha e Enviado para organizar a visualização.]({% image_buster /assets/img/campaign_list_example.png %})
 
 ### Seleção de um status
 

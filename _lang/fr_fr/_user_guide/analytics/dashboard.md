@@ -1,5 +1,5 @@
 ---
-nav_title: "Vos tableaux de bord d'analyse"
+nav_title: Vos tableaux de bord analytiques
 article_title: "Vos tableaux de bord d'analyse"
 page_order: 6.5
 layout: dev_guide
@@ -27,5 +27,11 @@ guide_featured_list:
   - name: Tableau de bord d’utilisation de l’API
     link: /docs/user_guide/analytics/dashboard/api_usage_dashboard/
     image: /assets/img/braze_icons/trend-up-01.svg
+  - name: "Tableau de bord du chiffre d'affaires du commerce électronique"
+    link: /docs/ecommerce_revenue_dashboard/
+    image: /assets/img/braze_icons/line-chart-up-04.svg  
+  - name: "Tableau de bord de diagnostic de l'envoi de messages"
+    link: /docs/user_guide/analytics/dashboard/diagnostics_dashboard/
+    image: /assets/img/braze_icons/pie-chart-01.svg
 ---
 <br><br>

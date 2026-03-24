@@ -1,6 +1,6 @@
 ---
 nav_title: Campanhas de usuários ativos
-article_title: Campanhas de usuários ativos
+article_title: Campanhas de Usuários Ativos
 page_order: 0.5
 page_type: tutorial
 description: "Este artigo de instruções descreve os benefícios das campanhas de usuários ativos no dashboard do Braze e as etapas para criar e configurar uma."
@@ -29,7 +29,7 @@ Se você definir IDs de usuário para identificar usuários, quando um novo usu�
 
 Usando a nossa seleção de filtros, crie um segmento de usuários que, na sua opinião, engloba a sua base de usuários mais fiel e consistente. O segmento de amostra a seguir define os principais usuários.
 
-![]({% image_buster /assets/img_archive/define_top_users.png %} "Defina seus principais usuários")
+![]({% image_buster /assets/img_archive/define_top_users.png %} "Define your top users")
 
 Além disso, não será necessário continuar atualizando esse segmento, pois os usuários que entrarem ou saírem das restrições da campanha serão direcionados ou descartados de forma correspondente.
 

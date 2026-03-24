@@ -9,35 +9,35 @@ description: "This landing page lists the Braze translation endpoints."
 page_type: landing
 
 guide_top_header: "Translation Endpoints"
-guide_top_text: "Use the Braze translation endpoints to manage and update translations in your campaigns and Canvases."
+guide_top_text: "Use the Braze translation endpoints to manage and update translations in your campaigns, Canvases, and Content Blocks."
 
 guide_featured_title: "Campaign endpoints"
 guide_featured_list:
   - name: "GET: View Translation for a Campaign"
     link: /docs/api/endpoints/translations/campaigns/get_translation_campaign/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "GET: View All Translations for a Campaign"
-    link: /docs/api/endpoints/translations/campaigns/get_bulk_translations_campaigns/
-    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT: Update Translation in a Campaign"
     link: /docs/api/endpoints/translations/campaigns/put_update_translation_campaign/
     image: /assets/img/braze_icons/target-04.svg
+  - name: "GET: View Campaign Default Source Translations"
+    link: /docs/api/endpoints/translations/campaigns/get_source_campaign/
+    image: /assets/img/braze_icons/message-plus-square.svg
 
 guide_menu_title: "Canvas endpoints"
 guide_menu_list:
   - name: "GET: View Translation for a Canvas"
     link: /docs/api/endpoints/translations/canvas/get_translation_canvas/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "GET: View All Translations for a Canvas"
-    link: /docs/api/endpoints/translations/canvas/get_bulk_translations_canvases/
-    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT: Update Translation in a Canvas"
     link: /docs/api/endpoints/translations/canvas/put_update_translation_canvas/
     image: /assets/img/braze_icons/target-04.svg
-  
+  - name: "GET: View Canvas Default Source Translations"
+    link: /docs/api/endpoints/translations/canvas/get_source_canvas/
+    image: /assets/img/braze_icons/message-plus-square.svg
+
 guide_menu_title2: "Email template endpoints"
 guide_menu_list2:
-  - name: "GET: View Source Translation"
+  - name: "GET: View Email Template Default Source Translations"
     link: /docs/api/endpoints/translations/email_templates/get_view_source_template/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: "GET: View Specific Translation and Locale"
@@ -50,11 +50,18 @@ guide_menu_list2:
     link: /docs/api/endpoints/translations/email_templates/put_update_template/
     image: /assets/img/braze_icons/target-04.svg
 
+guide_menu_title3: "Content Block endpoints"
+guide_menu_list3:
+  - name: "GET: View All Translations for a Content Block"
+    link: /docs/api/endpoints/translations/content_blocks/get_translation_content_block/
+    image: /assets/img/braze_icons/message-plus-square.svg
+  - name: "PUT: Update Translation in a Content Block"
+    link: /docs/api/endpoints/translations/content_blocks/put_update_translation_content_block/
+    image: /assets/img/braze_icons/target-04.svg
+
 ---
 
-{% alert important %}
-The Braze translation endpoints are currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='Access to the Braze translation endpoints' %}
 
 ## How our translation endpoints work
 
@@ -66,7 +73,7 @@ Before using these endpoints, you must [add your locales]({{site.baseurl}}/user_
 
 ### How to test your translations
 
-There are two ways you can validate translation support using the API and the Braze dashboard across campaigns, Canvases (including individual steps), and email templates:
+There are two ways you can validate translation support using the API and the Braze dashboard across campaigns, Canvases (including individual steps), Content Blocks, and email templates:
 
 - During composition (before launch)
 - After launch (using post-launch drafts)

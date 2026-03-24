@@ -21,7 +21,14 @@ Yes. Go to the **Preview and Test** section of the drag-and-drop editor and turn
 
 ### How can I change the email padding on mobile without updating the padding in the web view?
 
-It is not possible to edit the padding for mobile and web views exclusively, so any edits will be reflected in both views. As a workaround, you can add CSS logic that sets the padding based on different screen sizes. However, this cannot be accomplished using the drag-and-drop editor. So, we suggest exporting the HTML file and using the HTML editor instead.
+You cannot edit the padding for mobile and web views exclusively, so any edits are reflected in both views. However, you can add CSS logic in the HTML editor that sets the padding based on different screen sizes. This isn't supported in the drag-and-drop editor, so you can export the HTML file and use the HTML editor instead.
+
+### How can I optimize a row of buttons to remain horizontal on desktop and mobile?
+
+When building an email using the drag-and-drop editor, if you create a horizontal row of call-to-action buttons, you may find that the buttons are changed to a vertical orientation on mobile. 
+
+To retain the same format across device sizes, we recommend creating a separate row with CTA buttons that have padding optimized for mobile and are set to hide the row on a desktop device. Having two separate rows means that you can set the desired padding for the best text rendering on desktop and mobile devices.
+
 
 ### Can I adjust the row height in the drag-and-drop editor?
 
@@ -36,8 +43,8 @@ The drag-and-drop editor currently supports two layers. You can set a row backgr
 
 ### Can I save my drag-and-drop email as a template after I build it within my campaign or Canvas?
 
-No, you have to recreate the email in **Email Templates** in order to save.
+No, you must recreate the email in **Email Templates** to save it.
 
 ### Can I add email attachments to the drag-and-drop editor?
 
-No, the drag-and-drop editor does not currently support functionality to add attachments to your emails.
+No, the drag-and-drop editor does not support adding attachments to your emails.

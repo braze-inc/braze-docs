@@ -1,8 +1,8 @@
 ---
-nav_title: Divisão de decisão 
+nav_title: Divisão de decisão
 article_title: Divisão de decisão 
 alias: /decision_split/
-page_order: 2
+page_order: 7
 page_type: reference
 description: "Este artigo de referência cobre como criar e usar divisões de decisão no seu canva."
 tool: Canvas
@@ -11,24 +11,24 @@ tool: Canvas
 
 # Divisão de decisão 
 
-> O componente de divisão de decisão no canva permite que você ofereça experiências personalizadas e em tempo real para seus usuários.
+> O componente de divisão de decisão no Canva permite que você ofereça experiências personalizadas e em tempo real para seus usuários.
 
-![Uma etapa de divisão de decisão chamada "Push enabled?" para usuários que não estão habilitados para push e usuários que estão habilitados para push.]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
+![Uma etapa de Divisão de Decisão chamada "Push habilitado?" para usuários que não estão habilitados para push e usuários que estão habilitados para push.]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 
 Este componente pode ser usado para criar ramificações de canva com base em se um usuário corresponde a uma consulta.
 
 ## Criar uma divisão de decisão 
 
-Para criar uma divisão de decisão em seu fluxo de trabalho, adicione uma etapa do canva. Em seguida, arraste e solte o componente da barra lateral ou selecione o botão de adição <i class="fas fa-plus-circle"></i> na parte inferior de uma etapa e selecione **Divisão de decisão**.
+Para criar uma divisão de decisão em seu fluxo de trabalho, adicione uma etapa ao seu Canva. Em seguida, arraste e solte o componente da barra lateral, ou selecione o botão <i class="fas fa-plus-circle"></i> de mais na parte inferior de uma etapa e selecione **Divisão de Decisão**.
 
 ### Defina sua divisão
 
-Como você quer dividir seus usuários? Você pode usar [segmentos]({{site.baseurl}}/user_guide/engagement_tools/segments/) e filtros para desenhar a linha. Essencialmente, você está criando uma `true` ou `false` consulta que avaliará seus usuários e, em seguida, os direcionará para uma etapa ou outra. Você deve usar pelo menos um segmento ou um filtro. Você não precisa usar ambos, um segmento e um filtro.
+Como você quer dividir seus usuários? Você pode usar [segmentos]({{site.baseurl}}/user_guide/engagement_tools/segments/) e filtros para traçar a linha. Essencialmente, você está criando uma `true` ou `false` consulta que avaliará seus usuários e, em seguida, os direcionará para uma etapa ou outra. Você deve usar pelo menos um segmento ou um filtro. Você não precisa usar ambos, um segmento e um filtro.
 
-![Uma etapa de divisão de decisão com o filtro "Capacitação ativada é verdadeira" selecionado.]({% image_buster /assets/img/define-split-2.png %}){: style="max-width:90%;"}
+![Uma etapa de Divisão de Decisão com o filtro "Push Habilitado em Primeiro Plano é verdadeiro" selecionado.]({% image_buster /assets/img/define-split-2.png %})
 
 {% alert note %}
-Por padrão, os segmentos e filtros de uma etapa de divisão de decisão são verificados logo após o recebimento de uma etapa anterior, a menos que você adicione uma postergação.
+Por padrão, segmentos e filtros para uma etapa de Divisão de Decisão são verificados logo após receber uma etapa anterior, a menos que você adicione uma postergação.
 {% endalert %} 
 
 ## Use sua divisão
@@ -39,7 +39,7 @@ Digamos que você está criando um fluxo de integração. Você pode começar co
 
 Se não houver uma etapa seguindo uma das jornadas, os usuários que seguirem essa jornada sairão do canva. 
 
-![Uma etapa de divisão de decisão chamada "Push enabled?" para usuários que não estão habilitados para capacitação e para aqueles que estão. Os usuários que não estiverem ativados para push terão uma postergação de três dias e receberão uma mensagem de e-mail. Os usuários que estiverem habilitados para push terão um atraso de 1 dia, receberão uma notificação por push seguida de uma postergação de 2 dias e, em seguida, receberão o mesmo envio de e-mail que os usuários que não estiverem habilitados para push.]({% image_buster /assets/img/use-split-onboarding-3.png %}){: style="max-width:60%"}
+![Uma etapa de Divisão de Decisão chamada "Push habilitado?" para usuários que não estão habilitados para push e aqueles que estão. Para usuários que não estão habilitados para push, eles experimentarão uma postergação de 3 dias e depois receberão uma mensagem de e-mail. Para usuários que estão habilitados para push, eles experimentarão uma postergação de 1 dia, receberão uma notificação por push seguida de uma postergação de 2 dias, e então receberão a mesma mensagem de e-mail que os usuários que não estão habilitados para push.]({% image_buster /assets/img/use-split-onboarding-3.png %}){: style="max-width:60%"}
 
 ## Análise de dados
 

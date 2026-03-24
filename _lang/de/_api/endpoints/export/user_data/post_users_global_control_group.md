@@ -1,7 +1,7 @@
 ---
 nav_title: "POST: Nutzerprofil nach globaler Kontrollgruppe exportieren"
 article_title: "POST: Nutzerprofil nach globaler Kontrollgruppe exportieren"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 6
 layout: api_page
 page_type: reference
@@ -18,21 +18,25 @@ description: "Dieser Artikel beschreibt den Endpunkt Nutzer:innen exportieren in
 
 Nutzerdaten werden als mehrere Dateien mit Nutzer:innen JSON-Objekten exportiert, die durch neue Zeilen getrennt sind (z.B. ein JSON-Objekt pro Zeile). Alle Nutzer:innen einer globalen Kontrollgruppe werden bei jeder Generierung der Dateien berücksichtigt. Braze speichert keinen Verlauf darüber, wann Nutzer:innen zu einer globalen Kontrollgruppe hinzugefügt oder aus ihr entfernt werden.
 
+Um den Bezeichner der Segmentkennung Ihrer globalen Kontrollgruppe zu ermitteln, referenzieren Sie bitte [die API-Kennungstypen]({{site.baseurl}}/api/identifier_types/?tab=segments#segment-identifier).
+
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2 {% endapiref %}
 
 ## Voraussetzungen
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `users.export.global_control_group`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Auf Zugangsdaten basierende Antwortdetails
 
-Wenn Sie Ihre [S3-][1] oder [Azure-Zugangsdaten][2] zu Braze hinzugefügt haben, wird jede Datei in Ihrem Bucket als ZIP-Datei mit einem Schlüsselformat hochgeladen, das wie `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip` aussieht. Wenn Sie Azure verwenden, vergewissern Sie sich, dass Sie auf der Übersichtsseite für Azure Partner in Braze das Kontrollkästchen **Dies zum Standardziel für den Datenexport machen** aktiviert haben. In der Regel erstellen wir 1 Datei pro 5.000 Nutzer:innen, um die Verarbeitung zu optimieren. Das Exportieren kleinerer Segmente innerhalb eines großen Workspace kann zu mehreren Dateien führen. Sie können dann die Dateien extrahieren und bei Bedarf alle `json` Dateien zu einer einzigen Datei zusammenfügen. Wenn Sie eine `output_format` von `gzip` angeben, lautet die Dateierweiterung `.gz` statt `.zip`.
+Wenn Sie Ihre [S3-]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3) oder [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/)-Zugangsdaten über die entsprechende **Technologie**-Partnerseite zu Braze hinzugefügt haben, wird jede Datei in Ihrem Bucket als ZIP-Datei mit dem folgenden Schlüsselformat hochgeladen:`segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip` . Wenn Sie Azure verwenden, vergewissern Sie sich, dass Sie auf der Übersichtsseite für Azure Partner in Braze das Kontrollkästchen **Dies zum Standardziel für den Datenexport machen** aktiviert haben.
 
-{% details Aufschlüsselung des Exportpfads für ZIP %}
+Im Allgemeinen erstellen wir eine Datei pro 5.000 Nutzer:innen, um die Verarbeitung zu optimieren. Das Exportieren kleinerer Segmente innerhalb eines großen Workspace kann zu mehreren Dateien führen. Sie können dann die Dateien extrahieren und bei Bedarf alle `json` Dateien zu einer einzigen Datei zusammenfügen. Wenn Sie eine Dateiendung`output_format`von angeben`gzip`, wird die Dateiendung anstelle`.gz` von verwendet`.zip`.
+
+{% details Export pathing breakdown for ZIP %}
 **ZIP-Format:**
 `bucket-name/segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`
 
@@ -52,11 +56,15 @@ Wenn Sie Ihre [S3-][1] oder [Azure-Zugangsdaten][2] zu Braze hinzugefügt haben,
 
 {% enddetails %}
 
-Wir empfehlen dringend, Ihre eigenen S3- oder Azure-Zugangsdaten einzurichten, wenn Sie diesen Endpunkt verwenden, um Ihre eigenen Bucket-Richtlinien für den Export durchzusetzen. Wenn Sie Ihre Zugangsdaten für den Cloud-Speicher nicht zur Verfügung stellen können, finden Sie in der Antwort auf die Anfrage die URL, unter der Sie ein ZIP mit allen Nutzer:innen-Dateien herunterladen können. Die URL wird erst dann zu einem gültigen Standort, wenn der Export abgeschlossen ist.
+Wir empfehlen Ihnen dringend, Ihre eigenen S3- oder Azure-Zugangsdaten einzurichten (unter **„Partnerintegrationen“** > **„Technologiepartner“** > „Technologie-Partnerseite“), wenn Sie diesen Endpunkt verwenden, um Ihre eigenen Bucket-Richtlinien für den Export durchzusetzen.
+
+![Die Technologie-Partnerseite für Azure mit einem Tab für Amazon S3.]({% image_buster /assets/img/technology_partners_page.png %})
+
+Wenn Sie Ihre Zugangsdaten für den Cloud-Speicher nicht zur Verfügung stellen können, finden Sie in der Antwort auf die Anfrage die URL, unter der Sie ein ZIP mit allen Nutzer:innen-Dateien herunterladen können. Die URL wird erst nach Abschluss des Exports zu einem gültigen Standort.
 
 Beachten Sie, dass die Menge der Daten, die Sie von diesem Endpunkt exportieren können, begrenzt ist, wenn Sie Ihre Zugangsdaten für den Cloud-Speicher nicht angeben. Je nach den Feldern, die Sie exportieren, und der Anzahl der Nutzer:innen kann die Dateiübertragung fehlschlagen, wenn sie zu groß ist. Am besten legen Sie fest, welche Felder Sie exportieren möchten, indem Sie `fields_to_export` verwenden und nur die Felder angeben, die Sie benötigen, um die Größe der Übertragung gering zu halten. Wenn Sie bei der Generierung der Datei Fehler erhalten, sollten Sie Ihre Nutzer:innen auf der Grundlage einer zufälligen Bucket-Nummer in mehrere Segmente aufteilen (z.B. ein Segment erstellen, bei dem die zufällige Bucket-Nummer kleiner als 1.000 oder zwischen 1.000 und 2.000 ist).
 
-In beiden Szenarien können Sie optional eine `callback_endpoint` angeben, um benachrichtigt zu werden, wenn der Export fertig ist. Wenn Sie die Adresse `callback_endpoint` angeben, senden wir Ihnen eine Anfrage per Post an die angegebene Adresse, sobald der Download fertig ist. Der Text der Nachricht lautet "Erfolg":true. Wenn Sie Ihre Zugangsdaten für den Cloud-Speicher nicht zu Braze hinzugefügt haben, enthält der Body des Beitrags zusätzlich das Attribut `url` mit der Download-URL als Wert.
+In beiden Szenarien können Sie optional eine `callback_endpoint` angeben, um benachrichtigt zu werden, wenn der Export fertig ist. Wenn die URL angegeben`callback_endpoint` ist, senden wir eine POST-Anfrage an die angegebene Adresse, sobald der Download bereitsteht. Der Text des Beitrags lautet`"success":true`: Falls Sie Ihre Cloud-Speicher-Zugangsdaten noch nicht zu Braze hinzugefügt haben, enthält der Text des Beitrags zusätzlich das Attribut`url`mit der Download-URL als Wert.
 
 Größere Nutzer:innen haben längere Exportzeiten zur Folge. Eine App mit 20 Millionen Nutzer:innen könnte zum Beispiel eine Stunde oder länger dauern.
 
@@ -76,7 +84,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert warning %}
-Individuelle angepasste Attribute können nicht exportiert werden. Es können jedoch alle angepassten Attribute exportiert werden, indem Sie custom_attributes in das fields_to_export-Array aufnehmen (z.B. `['first_name', 'email', 'custom_attributes']`).
+Individuelle angepasste Attribute können nicht exportiert werden. Allerdings können alle angepassten Attribute exportiert werden, indem siecustom_attributesin dasfields_to_exportArray aufgenommen werden (zum Beispiel )`['first_name', 'email', 'custom_attributes']`.
 {% endalert %}
 
 ## Parameter der Anfrage
@@ -138,23 +146,21 @@ Im Folgenden finden Sie eine Liste der gültigen `fields_to_export`. Die Verwend
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, for example,'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
+    "object_prefix": (required, string) the filename prefix that is used for the JSON file produced by this export, for example,'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
     "url" : (optional, string) the URL where the segment export data can be downloaded if you do not have your own S3 credentials
 }
 ```
 
-Nachdem die URL zur Verfügung gestellt wurde, ist sie nur für einige Stunden gültig. Wir empfehlen Ihnen daher dringend, Ihre eigenen S3-Anmeldedaten zu Braze hinzuzufügen.
+Nachdem die URL bereitgestellt wurde, ist sie nur für einige Stunden gültig. Wir empfehlen Ihnen daher dringend, Ihre eigenen S3-Anmeldedaten zu Braze hinzuzufügen.
 
 ### Beispiel für die Ausgabe der Nutzer:innen-Exportdatei
 
-Nutzer:in (wir nehmen so wenig Daten wie möglich auf - wenn ein Feld im Objekt fehlt, wird angenommen, dass es null oder leer ist):
+Benutzerexportobjekt (wir geben so wenig Daten wie möglich an – wenn ein Feld im Objekt fehlt, sollte davon ausgegangen werden, dass es null oder leer ist):
 
 {% tabs %}
-{% tab Alle Felder %}
+{% tab All fields %}
 
 ```json
 {
@@ -225,12 +231,12 @@ Nutzer:in (wir nehmen so wenig Daten wie möglich auf - wenn ein Feld im Objekt 
         "last_used" : (string) date
       },
       ...
-    ],
+    ]
 }
 ```
 
 {% endtab %}
-{% tab Beispielhafte Ausgabe %}
+{% tab Sample output %}
 
 ```json
 {
@@ -304,14 +310,11 @@ Nutzer:in (wir nehmen so wenig Daten wie möglich auf - wenn ein Feld im Objekt 
         "last_used": "2021-11-11T00:25:19.201Z"
       },
       ...
-    ],
+    ]
 }
 ```
 
 {% endtab %}
 {% endtabs %}
-
-[1]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3
-[2]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/
 
 {% endapi %}

@@ -35,7 +35,7 @@ Los MMS y los SMS tienen costes diferentes y se cobran por separado en función 
 No. MMS se incluye ahora en nuestro proceso de incorporación de SMS. Los clientes existentes que ya hayan pasado por la fase de incorporación pueden empezar a enviar campañas MMS tras completar los siguientes pasos:
 
 1. Compra MMS.
-2. Ponte en contacto con el equipo de incorporación de Braze para solicitar la activación de la función MMS. Esto habilitará MMS y se creará o actualizará un grupo de Suscripción SMS/MMS para usted.
+2. Ponte en contacto con el equipo de incorporación de Braze para solicitar que se active la característica MMS. Esto habilitará MMS y se creará o actualizará un grupo de Suscripción SMS/MMS para usted.
 
 A continuación, el equipo de incorporación de Braze se asegurará de que tus códigos cortos y largos estén habilitados (en EE.UU. y Canadá) para MMS. También actualizarán tus grupos de suscripción para mostrar los números actuales que se han añadido o habilitado para MMS. Una vez completados estos pasos, podrás enviar mensajes MMS inmediatamente desde nuestro compositor nativo de SMS.
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Envoi déclenché par API
+nav_title: Livraison déclenchée par API
 article_title: Envoi déclenché par API
 page_order: 2
 page_type: reference

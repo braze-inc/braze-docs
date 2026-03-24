@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
-## Crear un delegado universal
+## Creación de un delegado universal
 
 El SDK de Android ofrece la posibilidad de establecer un único objeto delegado para gestionar de forma personalizada todos los vínculos profundos abiertos por Braze a través de tarjetas de contenido, mensajes dentro de la aplicación y notificaciones push.
 
@@ -14,11 +14,6 @@ A continuación se muestra un ejemplo de anulación del comportamiento predeterm
 ```java
 public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
   private static final String TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler.class);
-
-  @Override
-  public void gotoNewsFeed(Context context, NewsfeedAction newsfeedAction) {
-    newsfeedAction.execute(context);
-  }
 
   @Override
   public void gotoUri(Context context, UriAction uriAction) {
@@ -57,10 +52,6 @@ public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
 
 ```kotlin
 class CustomDeeplinkHandler : IBrazeDeeplinkHandler {
-
-  override fun gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {
-    newsfeedAction.execute(context)
-  }
 
   override fun gotoUri(context: Context, uriAction: UriAction) {
     val uri = uriAction.uri.toString()
@@ -121,9 +112,6 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(new IBrazeDeeplinkHandler() {
       context.startActivity(intent);
     }
   }
-
-  @Override
-  public void gotoNewsFeed(Context context, NewsfeedAction newsfeedAction) {}
 });
 ```
 
@@ -148,34 +136,30 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
       context.startActivity(intent)
     }
   }
-
-  override fun gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {}
 })
 ```
 
 {% endtab %}
 {% endtabs %}
 
-## Establecimiento de vínculos profundos con el canal de noticias {#Android_Deep_Advance}
+## Personalización de la actividad WebView {#Custom_Webview_Activity}
 
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
+Cuando Braze abre enlaces profundos de sitios web dentro de la aplicación, los enlaces profundos son gestionados por [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html).
 
-Para establecer un vínculo profundo con el canal de noticias de Braze desde una notificación push, [crea un vínculo profundo personalizado]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-add-deep-links) para tu actividad en el canal de noticias.
+{% alert note %}
+En el caso de los mensajes HTML personalizados dentro de la aplicación, los enlaces configurados con`target="_blank"`  se abren en el navegador web predeterminado del dispositivo y no son gestionados por `BrazeWebViewActivity`.
+{% endalert %}
 
-A continuación, cuando configures tu campaña de notificaciones push (ya sea a través del [panel]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message) o de [la API]({{site.baseurl}}/api/endpoints/messaging/)), configura la notificación para que navegue hasta el vínculo profundo de tu fuente de noticias.
+Para cambiar esto:
 
-## Personalizar la actividad WebView {#Custom_Webview_Activity}
-
-De forma predeterminada, cuando Braze abre vínculos profundos a sitios web dentro de la aplicación, los gestiona [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html). Para cambiar esto:
-
-1. Crea una nueva Actividad que maneje la URL de destino de `Intent.getExtras()` con la clave `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. Para ver un ejemplo, consulta [`BrazeWebViewActivity.java`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt).
+1. Crea una nueva Actividad que maneje la URL de destino de `Intent.getExtras()` con la clave `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. Por ejemplo, véase [`BrazeWebViewActivity.kt`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt).
 2. Añade esa actividad a `AndroidManifest.xml` y establece `exported` en `false`.
     ```xml
     <activity
         android:name=".MyCustomWebViewActivity"
         android:exported="false" />
     ```
-3. Configura tu Actividad personalizada en un [objeto constructor de](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html) `BrazeConfig`. Construye el constructor y pásalo a [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/index.html#-1864418529%2FFunctions%2F-1725759721) en tu [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()).
+3. Configura tu Actividad personalizada en un [objeto constructor de](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html) `BrazeConfig`. Crea el constructor y pásalo a[`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html)  en tu [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()).
 {% tabs %}
 {% tab JAVA %}
 
@@ -201,11 +185,11 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-## Usar Jetpack Compose
+## Uso de Jetpack Compose
 
-Para gestionar los enlaces profundos al utilizar Jetpack Compose con NavHost:
+Para gestionar enlaces profundos cuando usas Jetpack Compose con NavHost:
 
-1. Asegúrate de que la actividad que gestiona tu enlace profundo está registrada en el Manifiesto de Android.
+1. Asegúrate de que la actividad que gestiona tu enlace profundo esté registrada en el registro del manifiesto de Android.
     ```xml
     <activity
       ...
@@ -239,7 +223,7 @@ Para gestionar los enlaces profundos al utilizar Jetpack Compose con NavHost:
         )
     }
     ```
-3. Dependiendo de la arquitectura de tu aplicación, puede que tengas que gestionar también la nueva intención que se envía a tu actividad actual.
+3. Dependiendo de la arquitectura de tu aplicación, es posible que también tengas que gestionar la nueva intención que se envía a tu actividad actual.
     ```kotlin
     DisposableEffect(Unit) {
         val listener = Consumer<Intent> {

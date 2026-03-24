@@ -25,12 +25,12 @@ Tras la configuración, se le pedirá que proporcione una URL de inicio de sesi�
 
 ### Paso 1: Configurar la aplicación Braze
 
-1. Inicie sesión en [OneLogin](https://app.onelogin.com/login). Haga clic en **Administración**.![Página de administración de OneLogin.]({% image_buster /assets/img/onelogin_1.jpg %})<br><br>
-2. Vaya a **Aplicaciones** > **Añadir aplicaciones** en la barra de navegación superior. Busque "Braze" y seleccione la aplicación Braze.![Resultados de la búsqueda de Braze en OneLogin.]({% image_buster /assets/img/onelogin_2.jpg %})<br><br>
-3. Guarda la aplicación Braze en tu empresa.![]({% image_buster /assets/img/onelogin_3.jpg %})<br><br>
-4. Una vez guardado, vaya a **Configuración** y añada su **dominio Braze** y su clave API **RelayState**.![Pestaña de configuración de OneLogin para la aplicación Braze.]({% image_buster /assets/img/onelogin_4.png %})<br><br>
-5. Braze espera las aserciones SAML en un [formato específico]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#configure-your-identity-provider). En **Parámetros**, los atributos soportados por Braze deberían estar precargados. Compruebe que son correctos.![Parámetros SAML de Braze en OneLogin.]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
-6. Copia el **certificado** y el **punto final SAML 2.0 (HTTP)** necesarios para configurar el panel de Braze desde la pestaña **SSO**.![Certificados para copiar desde la pestaña SSO de la aplicación Braze en OneLogin.]({% image_buster /assets/img/onelogin_6.jpg %})
+1. Inicie sesión en [OneLogin](https://app.onelogin.com/login). Haz clic en **Administración**.![Página de Administración de OneLogin.]({% image_buster /assets/img/onelogin_1.jpg %})<br><br>
+2. Vaya a **Aplicaciones** > **Añadir aplicaciones** en la barra de navegación superior. Busca "Braze" y selecciona la aplicación Braze.![Resultados de la búsqueda de Braze en OneLogin.]({% image_buster /assets/img/onelogin_2.jpg %})<br><br>
+3. Guarda la aplicación Braze en tu Empresa.![]({% image_buster /assets/img/onelogin_3.jpg %})<br><br>
+4. Cuando se haya guardado, ve a **Configuración** y añade tu **dominio Braze** y tu clave de API **RelayState**.![Pestaña Configuración de OneLogin para la aplicación Braze.]({% image_buster /assets/img/onelogin_4.png %})<br><br>
+5. Braze espera las aserciones SAML en un [formato específico]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#configure-your-identity-provider). En **Parámetros**, los atributos soportados por Braze deberían estar precargados. Comprueba que son correctos.![Parámetros SAML de Braze en OneLogin.]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
+6. Copia el **certificado** y el **punto final SAML 2.0 (HTTP)** necesarios para configurar el panel Braze desde la pestaña **SSO**.![Certificados para copiar desde la pestaña SSO de la aplicación Braze en OneLogin.]({% image_buster /assets/img/onelogin_6.jpg %})
 
 ### Paso 2: Configurar OneLogin en Braze
 

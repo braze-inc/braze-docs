@@ -1,5 +1,5 @@
 ---
-nav_title: LINEユーザー
+nav_title: 回線ユーザー
 config_only: true
 noindex: true
 layout: blank_config

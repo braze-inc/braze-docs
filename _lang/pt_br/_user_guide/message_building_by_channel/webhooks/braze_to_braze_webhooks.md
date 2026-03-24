@@ -1,141 +1,108 @@
 ---
-nav_title: Como criar um webhook Braze-to-Braze
-article_title: Como criar um webhook Braze-to-Braze
+nav_title: Crie um webhook Braze para Braze
+article_title: Crie um Webhook Braze para Braze
 page_order: 3
 channel:
   - webhooks
-description: "Este artigo aborda como criar um webhook Braze-para-Braze para casos de uso chave."
+description: "Este artigo de referência cobre quando usar Atualização de Usuário versus webhooks Braze para Braze e como criar um webhook Braze para Braze."
 
 ---
 
-# Criação de um webhook Braze-to-Braze
+# Crie um webhook Braze para Braze
 
-> Você pode usar webhooks para se comunicar com a [API]({{site.baseurl}}/api/basics/) Braze [REST]({{site.baseurl}}/api/basics/), essencialmente fazendo qualquer coisa que nossa API permita que você faça. Nós nos referimos a isso como um webhook Braze-to-Braze—um webhook que está se comunicando de Braze para Braze. Os casos de uso nesta página pressupõem que você esteja familiarizado com o [funcionamento dos]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) [webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) e com a [criação de um webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) no Braze.
+> Webhooks Braze para Braze permitem que você chame a [Braze REST API]({{site.baseurl}}/api/basics/) de dentro do Braze usando um [Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) em uma [Campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) ou [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/). Use isso para tarefas de orquestração, como acionar um [Canvas acionado por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/). Para atualizar [Atributos de usuário]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/), [Eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) ou [Compras]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) do Canvas, use [Atualização de Usuário]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) em vez disso. É projetado para mudanças no perfil do usuário e processa atualizações de forma mais eficiente.
+
+Para aproveitar ao máximo este artigo, você deve estar familiarizado com [como os webhooks funcionam]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) e como [criar um webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) no Braze.
+
+## Use Atualização de Usuário para mudanças nos dados do usuário
+
+Para atualizar perfis de usuário de dentro de um Canvas, incluindo modificar [Atributos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/), registrar [Eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) ou registrar [Compras]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/), use [Atualização de Usuário]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) em vez de um webhook Braze para Braze. 
+
+A Atualização de Usuário agrupa várias mudanças e as envia em lotes, tornando-a mais rápida do que webhooks. É mais fácil de configurar do que um webhook e suporta atualizações complexas através de seu [composer JSON avançado]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/#advanced-json-composer). Por exemplo, para contar quantas vezes um usuário viu uma mensagem, use o [recurso de incremento e decremento]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/#increasing-and-decreasing-values) da Atualização de Usuário em vez de um webhook Braze para Braze.
+
+{% alert tip %}
+Adicione [Atualização de Usuário]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) ao seu Canvas para atualizar os atributos, eventos e compras de um usuário usando um composer JSON.
+{% endalert %}
+
+## Quando usar um webhook Braze para Braze
+
+A Atualização de Usuário pode lidar com quase todas as mesmas tarefas que um webhook Braze para Braze para atualizar perfis de usuário. Para atualizações complexas além de atributos personalizados simples, você pode usar o [composer JSON avançado]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/#advanced-json-composer).
+
+Você pode usar um webhook Braze para Braze quando precisar chamar a [REST API]({{site.baseurl}}/api/basics/) do Braze de dentro do Braze para cenários além de atualizações diretas de usuários a partir de etapas do Canvas. Exemplos comuns incluem:
+
+- Acionar um [Canvas acionado por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) de outro Canvas
+- Chamando outros [endereços de envio de mensagens]({{site.baseurl}}/api/endpoints/messaging/) para padrões de orquestração onde um fluxo de trabalho no Braze precisa invocar uma API que não possui um componente Canvas dedicado
+
+Para atualizações de usuários dentro do Canvas, o método recomendado é usar [Atualização de Usuário]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/).
 
 ## Pré-requisitos
 
-Para criar um webhook Braze-to-Braze, você precisará de uma [chave de API]({{site.baseurl}}/api/api_key/) com permissões para o endpoint que deseja acessar.
+Para criar um webhook Braze-para-Braze, você precisa de uma [chave de API]({{site.baseurl}}/api/api_key/) com permissões para o endpoint que deseja alcançar. Por exemplo, para disparar um Canvas acionado por API, você precisa de uma chave de API com a permissão `canvas.trigger.send`.
 
 ## Configuração de seu webhook Braze-to-Braze
 
-Embora os detalhes da sua solicitação de webhook variem de caso para caso, o fluxo de trabalho geral para criar um webhook Braze-para-Braze permanece o mesmo.
+O fluxo de trabalho geral para criar um webhook Braze-para-Braze segue estas etapas:
 
-1. [Crie um webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) como uma campanha ou componente do Canva. 
+1. [Criar um webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) como uma campanha ou componente Canvas. 
 2. Escolha **Modelo em Branco**.
-3. Na **guia** Compose, especifique a **URL do Webhook** e o **Corpo da Solicitação** conforme observado para seu caso de uso.
-4. Na guia **Configurações**, especifique seu **Método HTTP** e **Headers de Solicitação** conforme observado para seu caso de uso.
-5. Continue a construir o restante do seu webhook conforme necessário. Alguns casos de uso exigem configurações de entrega específicas, como acionar a campanha ou canva a partir de um evento personalizado.
+3. Na aba **Compor**, especifique a **URL do Webhook** e o **Corpo da Solicitação** para seu caso de uso da API.
+4. Na aba **Configurações**, especifique seu **Método HTTP** e **Headers da Solicitação** conforme exigido pelo endpoint.
+5. Configure quaisquer configurações de entrega adicionais (por exemplo, disparar a partir de um evento personalizado) e construa o restante de sua campanha ou Canvas.
 
-## Casos de uso
+## Disparar uma segunda canva a partir de uma canva inicial
 
-Embora haja muito o que fazer com os webhooks Braze-to-Braze, aqui estão alguns casos de uso para você começar:
+Neste caso de uso, você cria dois Canvases e usa um webhook Braze-para-Braze para disparar o segundo Canvas a partir do primeiro. Isso age como um gatilho de entrada para quando um usuário atinge um certo ponto em outro canva.
 
-- Incremente um atributo personalizado de inteiro para um contador quando um usuário receber uma mensagem.
-- Disparar um segundo canva a partir de um canva inicial.
-
-{% alert tip %}
-Adicione uma [etapa de Atualização do Usuário]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) ao seu canva para rastrear os atributos, eventos e compras de um usuário em um criador de JSON. Dessa forma, essas atualizações são agrupadas para que a Braze possa processá-las de maneira mais eficiente do que um webhook Braze-para-Braze.
-{% endalert %}
-
-### Caso de uso: Incrementar um atributo personalizado de inteiro para um contador
-
-Este caso de uso envolve a criação de um atributo personalizado e o uso de Liquid para contar o número de vezes que uma ação específica ocorreu. 
-
-Por exemplo, você pode querer contar quantas vezes um usuário viu uma campanha ativa de mensagem no app e impedi-lo de receber a campanha novamente depois de tê-la visto três vezes. Para mais ideias sobre o que você pode fazer com a lógica Liquid no Braze, confira nossa [biblioteca de casos de uso do Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases).
-
-Siga as etapas gerais para criar um webhook Braze-para-Braze e consulte o seguinte ao configurar seu webhook:
-
-- **URL do Webhook:** Seu [URL do endpoint REST]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) seguido por `/users/track`. Por exemplo, para a instância `US-06`, o URL seria `https://rest.iad-06.braze.com/users/track`.
-- **Corpo da Solicitação:** Texto bruto
-
-#### Cabeçalhos e método da solicitação
-
-A Braze requer um cabeçalho HTTP para autorização que inclua sua chave de API e outro que declare seu `content-type`.
-
-- **Cabeçalho da solicitação:**
-  - **Autorização:** Portador {YOUR_API_KEY}
-  - **Content-Type:** application/json
-- **Método HTTP:** POST
-
-Substitua `YOUR_API_KEY` por uma chave de API da Braze com permissões `users.track`. Você pode criar uma chave de API no dashboard do Braze em **Configurações** > **Chaves de API**.
-
-![Os cabeçalhos de solicitação para o webhook.]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
-
-#### Corpo da solicitação
-
-Adicione sua solicitação de faixa de usuário no corpo da solicitação e o Liquid para atribuir uma variável de contador. Para obter mais detalhes, consulte o [ponto de extremidade`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
-
-A seguir, um exemplo do Liquid necessário e do corpo da solicitação para esse endpoint, em que `your_attribute_count` é a atribuição que você está usando para contar quantas vezes um usuário viu uma mensagem:
-
-{% raw %}
-```json
-{% assign new_number = {{custom_attribute.${your_attribute_count}}} | plus: 1 %}
-{
-    "attributes": [
-        {
-        "external_id": "{{${user_id}}}",
-        "your_attribute_count": "{{new_number}}"
-        }
-    ]
-}
-```
-{% endraw %}
-
-{% alert note %}
-Cada vez que um contador de atributo personalizado é atualizado (incrementado ou decrementado), ele consumirá um [ponto de dados]({{site.baseurl}}/user_guide/data/data_points/), que conta para o seu consumo geral.
-{% endalert %}
-
-### Caso de uso: Disparar uma segunda canva a partir de uma canva inicial
-
-Para este caso de uso, você criará dois canvas e usará um webhook para disparar o segundo canva a partir do primeiro canva. Isso age como um gatilho de entrada para quando um usuário atinge um certo ponto em outro canva.
-
-1. Comece criando sua segunda canva—a canva que deve ser acionada pela sua canva inicial. 
+1. Comece criando sua segunda canva—a canva que deve ser acionada pela sua canva inicial.
 2. Para o canva **Programação de Entrada**, selecione **Disparado por API**.
 3. Faça uma nota do seu **canva ID**. Você precisará disso em uma etapa posterior.
 4. Continue construindo as etapas do seu segundo canva, depois salve o canva.
-5. Finalmente, crie sua primeira canva. Encontre a etapa onde você deseja disparar o segundo canva e crie uma nova etapa com um webhook. 
+5. Finalmente, crie sua primeira canva. Encontre a etapa onde você deseja disparar o segundo canva e crie uma nova etapa com um webhook.
 
 Consulte o seguinte ao configurar seu webhook:
 
-- **URL do Webhook:** Seu [URL do endpoint REST]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) seguido por `canvas/trigger/send`. Por exemplo, para a instância US-06, o URL seria `https://rest.iad-06.braze.com/canvas/trigger/send`.
+- **URL do Webhook:** Sua [URL do endpoint REST]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) seguida de `/canvas/trigger/send`. Por exemplo, para a instância `US-06`, o URL seria `https://rest.iad-06.braze.com/canvas/trigger/send`.
 - **Corpo da Solicitação:** Texto bruto
 
 #### Cabeçalhos e método da solicitação
 
-A Braze requer um cabeçalho HTTP para autorização que inclua sua chave de API e outro que declare seu `content-type`.
+O Braze requer um cabeçalho HTTP para autorização que inclua sua chave de API e outro que declare seu tipo de conteúdo.
 
-- **Cabeçalho da solicitação:**
-  - **Autorização:** Portador `YOUR_API_KEY`
-  - **Content-Type:** application/json
-- **Método HTTP:** POST
+- **Cabeçalhos de solicitação:**
+  - **Autorização:** `Bearer YOUR_API_KEY`
+  - **Tipo de Conteúdo:** `application/json`
+- **Método HTTP:** `POST`
 
-Substitua `YOUR_API_KEY` por uma chave de API da Braze com permissões `canvas.trigger.send`. Você pode criar uma chave de API no dashboard do Braze em **Configurações** > **Chaves de API**.
+Substitua `YOUR_API_KEY` por uma chave de API do Braze que tenha permissões `canvas.trigger.send`. Você pode criar uma chave de API no painel do Braze acessando **Configurações** > **Chaves de API**.
 
-![Os cabeçalhos de solicitação para o webhook.]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
+![Headers da solicitação para o webhook mostrando os campos de Autorização e Tipo de Conteúdo no painel do Braze.]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
 
 #### Corpo da solicitação
 
-Adicione seu `canvas/trigger/send` pedido no campo de texto. Para obter mais detalhes, consulte [Envio de mensagens do Canva via entrega disparada por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/). O seguinte é um exemplo do corpo da solicitação para este endpoint, onde `your_canvas_id` é o ID do canva do seu segundo canva: 
+Adicione seu `/canvas/trigger/send` pedido no campo de texto. Para detalhes, veja [Enviando mensagens do Canvas via entrega acionada por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/). O seguinte é um exemplo do corpo da solicitação para este endpoint, onde `your_canvas_id` é o ID do canva do seu segundo canva:
 
 {% raw %}
 ```json
 {
-      "canvas_id": "your_canvas_id",
-      "recipients": [
-        {
-          "external_user_id": "{{${user_id}}}"
-         }
-      ]
+  "canvas_id": "your_canvas_id",
+  "recipients": [
+    {
+      "external_user_id": "{{${user_id}}}"
+    }
+  ]
 }
 ```
 {% endraw %}
 
-## Coisas para saber
+Quando um usuário atinge esta etapa do webhook no primeiro canva, o Braze aciona o segundo canva para esse usuário via API.
 
-- Os webhooks de Braze para Braze estão sujeitos a[limites de taxa]({{site.baseurl}}/api/api_limits/) de endpoints.
-- As atualizações no perfil do usuário incorrerão em [pontos de dados extras]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#consumption-count), enquanto disparar outra mensagem através dos endpoints de envio de mensagens não incorrerá.
-- Se você quiser direcionar [usuários anônimos]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#anonymous-user-profiles), pode usar `braze_id` em vez de `external_id` no corpo da solicitação do seu webhook.
-- Você pode salvar seu webhook Braze-to-Braze como um [modelo]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/) para ser usado novamente.
+## Considerações
+
+- **Atualizações do usuário:** Para atualizar perfis de usuários a partir do canva (atributos, eventos, compras), use [Atualização de Usuário]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) em vez de webhooks Braze-to-Braze para melhor eficiência e custo-benefício.
+- Webhooks Braze-to-Braze estão sujeitos a [Limites de taxa]({{site.baseurl}}/api/api_limits/) do endpoint.
+- Atualizações no perfil do usuário incorrerão em [Pontos de dados]({{site.baseurl}}/user_guide/data/data_points/) que contam para o seu consumo total, enquanto acionar outra mensagem através dos endpoints de envio de mensagens não conta.
+- Para segmentar [Usuários anônimos]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#anonymous-user-profiles), use `braze_id` em vez de `external_id` no corpo da solicitação do seu webhook.
+- Você pode salvar seu webhook Braze-to-Braze como um [Modelo de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/) para reutilização.
 - Você pode verificar o [Registro de Atividade de Mensagens]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) para visualizar e solucionar falhas de webhook.
 
 

@@ -1,7 +1,7 @@
 ---
 nav_title: "Catalog segments"
 article_title: Catalog Segments
-page_order: 1
+page_order: 0
 page_type: reference
 alias: "/catalog_segments/"
 description: "This article describes how to create catalog segments, which use catalog data in SQL Segment Extensions to build audiences of users."
@@ -12,15 +12,11 @@ tool: Segments
 
 > Catalog segments are a type of SQL Segment Extension that is created by combining catalog data with data from custom events or purchases. They can be referenced in a segment and then targeted by campaigns and Canvases. 
 
-{% alert important %}
-Catalog segments are currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
-
 Catalog segments use SQL to join data from catalogs and data from custom events or purchases. To do so, you must have a common identifier field across your catalogs and your custom events or purchases. For example, the value of an item ID in a catalog must match the value of a property in a custom event.
 
 ## Creating a catalog segment
 
-1. Go to **Segment Extensions** > **Create New Extension** > **Start With Template** and select a template. <br>![Modal with the option to create a catalog segment for events or purchases.]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
+1. Go to **Segment Extensions** > **Create New Extension** > **Start With Template** and select a template. <br>![Modal with the option to create a catalog segment for events, purchases, or RFM segments.]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
 
 {: start="2"}
 2. The SQL editor automatically populates with a template. <br>![SQL editor with a pregenerated template.]({% image_buster /assets/img/catalog-segments-editor.png %}){: style="max-width:80%" }<br>This template joins user event data with catalog data to segment users who engaged with certain catalog items.
@@ -141,5 +137,5 @@ Yes. In the same way SQL Segment Extensions count toward your Segment Extension 
 
 ### I have a catalog segment use case that the current template doesn't serve. How should I set that up?
 
-Reach out to your customer support manager or [Braze Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/) for additional guidance.
+Contact your customer support manager or [Braze Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/) for additional guidance.
 

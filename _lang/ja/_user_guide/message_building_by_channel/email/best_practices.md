@@ -1,5 +1,5 @@
 ---
-page_order: 13
+page_order: 14
 nav_title: ベストプラクティス
 article_title: 電子メールのベストプラクティス
 layout: dev_guide
@@ -21,7 +21,7 @@ guide_featured_list:
   - name: "ユースケース"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/use_cases/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: "メールサブスクリプションの管理"
+  - name: "サブスクリプションを管理する"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/duplicate_emails/
     image: /assets/img/braze_icons/list.svg
   - name: "メールサービス"

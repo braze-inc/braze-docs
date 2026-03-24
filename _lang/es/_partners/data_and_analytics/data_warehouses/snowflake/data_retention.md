@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Retención de datos de Snowflake
 
-> Braze anonimiza -elimina la información de identificación personal (PII)- todos los datos de eventos almacenados en Snowflake que tengan más de dos años. Si utilizas el uso compartido de datos de Snowflake, puedes optar por conservar los datos completos de los eventos en tu entorno almacenando una copia en tu cuenta de Snowflake antes de que se aplique la política de retención.
+> Braze anonimiza (elimina la información de identificación personal, o PII) de la mayoría de los datos de eventos almacenados en Snowflake que tienen más de dos años. Ciertos eventos se conservan hasta que se elimina un usuario, como se indica más adelante en esta página. Si utilizas el uso compartido de datos de Snowflake, puedes optar por conservar los datos completos de los eventos en tu entorno almacenando una copia en tu cuenta de Snowflake antes de que se aplique la política de retención.
 
 Esta página presenta dos formas de conservar los datos no anonimizados: 
 
@@ -19,6 +19,15 @@ Esta página presenta dos formas de conservar los datos no anonimizados:
 {% alert warning %}
 Braze anonimiza automáticamente los datos de eventos de los usuarios que se borran de Braze, tal y como se describe en [la Asistencia Técnica de Protección de Datos]({{site.baseurl}}/dp-technical-assistance/). Los datos copiados fuera de la base de datos compartida no se incluirán en este proceso, puesto que Braze ya no los administra.
 {% endalert %}
+
+## Eventos exentos de la política de retención de dos años
+Braze conserva los eventos relacionados con el ciclo de vida del usuario, el estado de la suscripción y la mensajería entrante hasta que se elimina un usuario. Los siguientes eventos están exentos de la política estándar de retención de dos años:
+- `users.UserOrphan`
+- `users.UserDeleteRequest`
+- `users.behaviors.subscription.GlobalStateChange`
+- `users.behaviors.subscriptiongroup.StateChange`
+- `users.messages.sms.InboundReceive`
+- `users.messages.whatsapp.InboundReceive`
 
 ## Copiar todos los datos a otra base de datos Snowflake
 
@@ -126,7 +135,7 @@ $$;
 2\. Ejecuta uno de los siguientes comandos en tu cuenta Snowflake para ejecutar el procedimiento.
 
 {% tabs %}
-{% tab Predeterminado %}
+{% tab Default %}
 
 Por defecto, el procedimiento hará una copia de seguridad de los datos de más de dos años para todos los tipos de eventos de `USERS_*`. 
 
@@ -139,7 +148,7 @@ CALL COPY_BRAZE_SHARE('SOURCE_DB', 'SOURCE_SCHEMA', 'DEST_DB', 'DEST_SCHEMA')
 ```
 {% endraw %}
 {% endtab %}
-{% tab Filtrado %}
+{% tab Filtered %}
 
 Especifica un filtro para elegir de qué datos de edad hacer copia de seguridad, y especifica un filtro de nombre de tabla para hacer copia de seguridad sólo de las tablas de eventos seleccionadas. 
 
@@ -238,7 +247,7 @@ $$;
 2\. Ejecuta uno de los siguientes comandos para ejecutar el procedimiento. 
 
 {% tabs %}
-{% tab Predeterminado %}
+{% tab Default %}
 
 Por defecto, el procedimiento copiará todas las tablas con el prefijo `USERS_`.
 
@@ -257,7 +266,7 @@ LIST @MY_EXPORT_STAGE;
 ```
 {% endraw %}
 {% endtab %}
-{% tab Filtrado %}
+{% tab Filtered %}
 
 Especifica un filtro en el procedimiento para descargar sólo las tablas especificadas.
 

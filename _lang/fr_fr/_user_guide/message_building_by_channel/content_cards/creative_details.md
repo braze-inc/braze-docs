@@ -16,7 +16,7 @@ tool: Media
 ## Types de carte de contenu
 
 {% tabs %}
-{% tab Classique %}
+{% tab Classic %}
 
 La carte classique est idéale pour les communications et les notifications standard, ou même pour catégoriser visuellement les messages avec des icônes. L’image est facultative, mais elle doit être au rapport 1 :1.
 
@@ -31,11 +31,11 @@ La carte classique est idéale pour les communications et les notifications stan
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Image avec légende %}
+{% tab Captioned Image %}
 
 La carte de type image légendée est un excellent moyen de mettre en valeur et d'attirer l'attention sur un contenu important, comme une grande vente ou une nouvelle fonctionnalité de l'application.
 
-![Image d'une carte d'image légendée avec les détails recommandés et un exemple de carte d'image légendée]({% image_buster /assets/img/content_card_captioned.png %}){: style="max-width:90%;border:0;"}
+![Image d'une carte d'image sous-titrée avec les détails recommandés et un exemple de carte d'image sous-titrée]({% image_buster /assets/img/content_card_captioned.png %}){: style="max-width:90%;border:0;"}
 
 | Capacité de la carte | Détails |
 | --- | ---|
@@ -46,7 +46,7 @@ La carte de type image légendée est un excellent moyen de mettre en valeur et 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Image seulement %}
+{% tab Image-only %}
 
 Si vous souhaitez un contrôle plus créatif, la carte image seule est faite pour vous. Créez votre image à l'aide de l'outil de votre choix et téléchargez-la sur ce type de carte.
 
@@ -69,11 +69,11 @@ Les cartes de contenu sont dotées dès le départ d’excellentes fonctionnalit
 
 Pour refuser une carte, l’utilisateur peut faire un swipe (balayage) sur son mobile ou utiliser une fonction `close X` comme illustré dans la capture d’écran suivante. Le `x` apparaîtra sur le curseur avec le SDK Web uniquement.
 
-![Image montrant les comportements de fermeture de la carte de contenu]({% image_buster /assets/img/dismissal-cc.png %})
+![Image montrant le swipe ou la fermeture d’une carte pour la refuser]({% image_buster /assets/img/dismissal-cc.png %})
 
 Si un utilisateur a fermé toutes ses cartes ou si vous n’avez pas envoyé de mises à jour, le flux de l’utilisateur ressemblera généralement à ceci :
 
-![Image d'une carte de contenu vide]({% image_buster /assets/img/empty-cc.png %}){: style="max-width:45%"}
+![Image d'un flux de cartes de contenu vide]({% image_buster /assets/img/empty-cc.png %}){: style="max-width:45%"}
 
 {% alert tip %}
 Veillez à la pertinence des cartes de contenu en les configurant pour qu'elles soient fermées lorsque l'utilisateur effectue des actions pertinentes. Par exemple, configurez les cartes de contenu promotionnelles pour qu'elles soient fermées dès que les utilisateurs effectuent un achat, afin qu'ils ne continuent pas à voir une offre pour quelque chose qu'ils ont déjà acheté.

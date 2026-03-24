@@ -14,7 +14,7 @@ tool: Canvas
 
 ![]({% image_buster /assets/img_archive/canvas_comments.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
-## 혜택
+## Benefits
 
 캔버스에 댓글을 다는 몇 가지 이점은 다음과 같습니다:
 - 캔버스 내에서 캔버스에 대한 모든 세부 사항과 논의를 유지

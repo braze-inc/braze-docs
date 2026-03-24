@@ -20,7 +20,7 @@ Sua exibição de análise de dados variará dependendo da seleção de uma [oti
 
 Se você selecionou **Sem otimização** ao configurar sua campanha, sua exibição de análise de dados permanecerá a mesma. A página **Análise de dados** da sua campanha mostrará a performance das suas variantes em relação ao grupo de controle, caso tenha incluído um.
 
-![Seção Performance da análise de dados da campanha para uma campanha de e-mail com várias variantes. A tabela lista várias métricas de performance para cada variante, como destinatários, bounces, cliques e conversões.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
+![Seção Performance da análise de dados da campanha para uma campanha de e-mail com várias variantes. A tabela lista várias métricas de desempenho para cada variante, como destinatários, rejeições, cliques e conversões.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
 
 Para obter mais informações, consulte o artigo sobre [análise de dados da campanha]({{site.baseurl}}/user_guide/analytics/reporting/campaign_analytics/) para seu canal de envio de mensagens.
 
@@ -31,7 +31,7 @@ Se tiver selecionado a **Variante vencedora** para sua otimização ao configura
 O **resultado dos Testes A/B** é dividido em duas guias: **Teste inicial** e **variante vencedora**.
 
 {% tabs local %}
-{% tab Teste inicial %}
+{% tab Initial Test %}
 
 A guia **Teste inicial** mostra as métricas de cada variante do teste A/B inicial enviado a uma parte de seu segmento de direcionamento. Você pode ver um resumo de como foi a performance de todas as variantes e se houve ou não um vencedor durante o teste.
 
@@ -39,22 +39,22 @@ Se uma variante superou todas as outras com mais de 95% de [confiança]({{site.b
 
 Se nenhuma variante superar todas as outras com 95% de confiança e você optar por enviar a variante de melhor performance mesmo assim, a variante de melhor performance ainda será enviada e indicada com o rótulo "Winner" (Vencedor).
 
-![Resultados de um teste inicial enviado para determinar a Variante Vencedora, em que nenhuma variante teve desempenho melhor do que as outras com confiança suficiente para atingir o limite de confiança de 95% para significância estatística.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
+![Resultados de um teste inicial enviado para determinar a Variante Vencedora, onde nenhuma variante teve desempenho melhor do que as outras com confiança suficiente para atender ao limite de 95 por cento de confiança para significância estatística.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
 
 #### Como a variante vencedora é selecionada
 
-O Braze testa todas as variantes umas contra as outras com os [testes de qui-quadrado de Pearson](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). Isso mede se uma variante supera ou não estatisticamente todas as outras em um nível de significância de p < 0,05, ou o que chamamos de significância de 95%. Em caso afirmativo, a variante vencedora é indicada com o rótulo "Winner" (Vencedor).
+O Braze testa todas as variantes umas contra as outras com os [testes de qui-quadrado de Pearson](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). Isso mede se uma variante supera estatisticamente todas as outras em um nível de significância de p < 0,05, ou o que chamamos de 95% de significância. Em caso afirmativo, a variante vencedora é indicada com o rótulo "Winner" (Vencedor).
 
 Esse é um teste separado da pontuação de confiança, que descreve apenas a performance de uma variante em comparação com o controle com um valor numérico entre 0 e 100%.
 
 Uma variante pode se sair melhor do que o grupo de controle, mas o teste do qui-quadrado verifica se uma variante é melhor do que todas as outras. [Testes de acompanhamento](#recommended-follow-ups) podem fornecer mais detalhes.
 
 {% endtab %}
-{% tab Variante vencedora %}
+{% tab Winning Variant %}
 
 A guia **Winning Variant (Variante vencedora** ) mostra os resultados do segundo envio, em que cada usuário restante recebeu a variante de melhor desempenho do teste inicial. Sua **% de público** será adicionada à porcentagem do segmento de direcionamento que você reservou para o grupo da Variante vencedora.
 
-![Resultados da variante vencedora enviados ao grupo da variante vencedora.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
+![Resultados da Variante Vencedora enviados para o grupo da Variante Vencedora.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -66,11 +66,11 @@ Se você quiser ver a performance da Variante vencedora durante toda a campanha,
 Se você selecionou **Variante personalizada** para sua otimização ao configurar sua campanha, o **Resultado de Testes A/B** é dividido em duas guias: **Teste inicial** e **variante personalizada**.
 
 {% tabs local %}
-{% tab Teste inicial %}
+{% tab Initial Test %}
 
 A guia **Teste inicial** mostra as métricas de cada variante do teste A/B inicial enviado a uma parte de seu segmento de direcionamento.
 
-![Resultados de um teste inicial enviado para determinar a variante de melhor desempenho para cada usuário. Uma tabela mostra o desempenho de cada variante com base em várias métricas para o canal de direcionamento.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
+![Resultados de um teste inicial enviado para determinar a variante de melhor desempenho para cada usuário. Uma tabela mostra o desempenho de cada variante com base em várias métricas para o canal alvo.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
 
 Por padrão, o teste procura associações entre os eventos personalizados do usuário e suas preferências de variantes de mensagens. Essa análise detecta se os eventos personalizados aumentam ou diminuem a probabilidade de resposta a uma determinada variante de mensagem. Essas relações são então usadas para determinar quais usuários recebem qual variante de mensagem no envio final.
 
@@ -78,9 +78,9 @@ As relações entre os eventos personalizados e as preferências de mensagens s�
 
 ![]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
 
-Se o teste não conseguir encontrar uma relação significativa entre os eventos personalizados e as preferências de variantes, o teste voltará a um método de análise baseado em sessão.
+Se o teste não conseguir encontrar uma relação significativa entre eventos personalizados e preferências de jornada, o teste recorre a um método de análise baseado em sessões, e nenhuma tabela de dados de eventos personalizados é exibida.
 
-{% details Método de análise de fallback %}
+{% details Fallback analysis method %}
 
 **Método de análise baseado em sessão**<br>
 Se o método fallback for usado para determinar as variantes personalizadas, a guia **Initial Test (Teste inicial** ) mostrará um detalhamento das variantes preferidas dos usuários com base em uma combinação de determinadas características. 
@@ -91,9 +91,9 @@ Essas características são:
 - **Frequência:** Com que frequência eles têm sessões
 - **Posse:** Há quanto tempo é usuário
 
-Por exemplo, o teste pode descobrir que a maioria dos usuários prefere a Variante A, mas os usuários que tiveram uma sessão há cerca de 3-12 dias, têm entre 1-12 dias entre as sessões e foram criados nos últimos 67-577 dias tendem a preferir a Variante B. Portanto, os usuários dessa subpopulação receberam a Variante B no segundo envio, enquanto o restante recebeu a Variante A.
+Por exemplo, o teste pode descobrir que a maioria dos usuários prefere a Variante A, mas usuários que tiveram uma sessão há cerca de 3-12 dias, têm entre 1-12 dias entre sessões e foram criados nos últimos 67-577 dias tendem a preferir a Variante B. Portanto, usuários nessa subpopulação receberam a Variante B no segundo envio, enquanto o restante recebeu a Variante A.
 
-![A tabela de Características do Usuário, que mostra quais usuários têm previsão de preferir a Variante A e a Variante B com base nos três grupos em que se enquadram em termos de recência, frequência e permanência.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
+![A tabela de Características do Usuário, que mostra quais usuários são previstos para preferir a Variante A e a Variante B com base nos três grupos em que se enquadram para recência, frequência e tempo de uso.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
 
 **Como as variantes personalizadas são selecionadas**<br>
 Com esse método, a mensagem recomendada de um usuário individual é a soma dos efeitos de sua recenticidade, frequência e permanência específicas. A recência, a frequência e a permanência são divididas em grupos, conforme ilustrado na tabela **Características do usuário**. O intervalo de tempo de cada intervalo é determinado pelos dados de usuários em cada campanha individual e mudará de campanha para campanha. 
@@ -103,7 +103,7 @@ Cada bucket pode ter uma contribuição ou "push" diferente para cada variante d
 {% enddetails %}
 
 {% endtab %}
-{% tab Variante personalizada %}
+{% tab Personalized Variant %}
 
 A guia **Personalized Variant (Variante personalizada** ) mostra os resultados do segundo envio, em que cada usuário restante recebeu a variante com a qual tinha maior probabilidade de engajamento.
 
@@ -113,7 +113,7 @@ Os três cartões nesta página mostram sua elevação projetada, os resultados 
 - **Resultados gerais:** Os resultados do segundo envio com base na métrica de otimização escolhida*(aberturas exclusivas*, *cliques exclusivos* ou *evento de conversão primária*).
 - **Resultados projetados:** Os resultados projetados do segundo envio com base na métrica de otimização escolhida, caso você tivesse enviado apenas a Variante vencedora. 
 
-![Guia Variante personalizada para uma campanha otimizada para aberturas exclusivas. Os cartões mostram a elevação projetada, as aberturas exclusivas gerais (com variante personalizada) e as aberturas exclusivas projetadas (com variante vencedora).]({% image_buster /assets/img_archive/ab_analytics_pv_1.png %})
+![Guia Variante personalizada para uma campanha otimizada para aberturas exclusivas. Os cartões mostram o Aumento Projetado, Aberturas Únicas Gerais (com Variante Personalizada) e Aberturas Únicas Projetadas (com Variante Vencedora).]({% image_buster /assets/img_archive/ab_analytics_pv_1.png %})
 
 A tabela nesta página mostra as métricas de cada variante do envio de variantes personalizadas. Sua **% de público** corresponde à porcentagem do segmento de direcionamento que você reservou para o grupo variante personalizada
 
@@ -148,6 +148,20 @@ Um teste que não tenha uma confiança de 95% ainda pode conter insights importa
 - Embora os testes sejam úteis para descobrir que tipo de mensagem gera mais respostas de seu público, também é importante entender quais alterações no envio de mensagens têm apenas um efeito insignificante. Isso permite que você continue testando outra alternativa mais eficaz ou economize o tempo que poderia ter sido gasto para decidir entre duas mensagens alternativas.
 
 Independentemente de seu teste ter ou não um vencedor claro, pode ser útil executar um [teste de acompanhamento](#recommended-follow-ups) para confirmar seus resultados ou aplicar suas descobertas a um cenário ligeiramente diferente.
+
+## Discrepâncias entre o grupo de controle e a variante
+
+Em campanhas de mensagem no app, a forma como os usuários são rastreados e como as impressões são registradas pode causar discrepâncias na divisão esperada entre o grupo de controle e a variante. Isso ocorre porque as impressões reais registradas podem não refletir essa divisão, e a Braze, em última análise, não tem controle sobre o comportamento individual do usuário que realizará o gatilho.
+
+Por exemplo, digamos que uma campanha tenha um público-alvo de 200 usuários no lançamento, com 100 usuários no grupo de controle e 100 usuários na variante.
+
+Os 100 usuários na variante recebem a carga útil da mensagem no app, e 50 deles realizam a ação-gatilho e veem a mensagem no app. Os 100 usuários no grupo de controle são rastreados apenas se realizarem a ação-gatilho da campanha, e 75 deles realizam a ação-gatilho e registram uma impressão, mas não veem a mensagem no app.
+
+Apesar da divisão inicial de 50/50, as impressões únicas registradas não estão equilibradas. O grupo da variante tem 50 impressões, enquanto o grupo de controle tem 75 impressões.
+
+### Atrasos na mensagem no app 
+
+Para campanhas de mensagem no app acionadas que incluem exibições atrasadas, as impressões do grupo de controle serão registradas quando o usuário final originalmente teria recebido a mensagem no app. Por exemplo, se uma campanha estiver configurada para atrasar a exibição em uma hora, as impressões do grupo de controle não serão registradas até que o atraso de uma hora tenha passado. Isso ajuda no rastreamento preciso das impressões relacionadas ao momento pretendido da entrega da mensagem.
 
 ## Acompanhamentos recomendados {#recommended-follow-ups}
 

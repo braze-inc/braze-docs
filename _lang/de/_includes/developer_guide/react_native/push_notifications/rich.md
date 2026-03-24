@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/react_native.md %} Sie müssen auch [Push-Benachrichtigungen einrichten]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
+{% multi_lang_include developer_guide/prerequisites/react_native.md %} Bitte [richten]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native) Sie auch [Push-Benachrichtigungen ein]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
 
 ## Verwendung von Expo zur Aktivierung von Rich-Push-Benachrichtigungen
 
@@ -22,4 +22,4 @@ Um Rich-Push-Benachrichtigungen unter iOS mit Expo zu aktivieren, legen Sie die 
 }
 ```
 
-Fügen Sie dann den Bundle-Bezeichner für diese App-Erweiterung zur Konfiguration der Zugangsdaten Ihres Projekts hinzu: `<your-app-bundle-id>.BrazeExpoRichPush`.
+Fügen Sie dann den Bundle-Bezeichner für diese App-Erweiterung zur Konfiguration der Zugangsdaten Ihres Projekts hinzu: `<your-app-bundle-id>.BrazeExpoRichPush`. Weitere Einzelheiten zu diesem Vorgang finden Sie unter [Verwendung von App-Erweiterungen mit Expo Application Services]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native#reactnative_app-extensions).

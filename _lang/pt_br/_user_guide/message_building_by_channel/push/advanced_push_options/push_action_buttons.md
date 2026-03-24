@@ -1,5 +1,5 @@
 ---
-nav_title: "botões de ação por push"
+nav_title: "Botões de ação por push"
 article_title: botões de ação por push
 page_order: 1
 page_type: reference
@@ -11,7 +11,7 @@ channel:
 
 # botões de ação por push
 
-![Uma notificação por push do iOS com dois botões de ação por push: Aceitar e recusar.]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![Uma notificação por push do iOS com dois botões de ação por push: Aceitar e Recusar.]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > botões de ação por push permitem que você defina conteúdo e ações para botões ao usar notificações por push do Braze iOS e Android. Com botões de ação, seus usuários podem interagir diretamente com seu app a partir de uma notificação sem precisar clicar em uma experiência de app.
 
@@ -28,7 +28,7 @@ Cada botão interativo pode vincular a uma página da web ou a um deep link ou a
 
 Para usar botões de ação em suas mensagens push do iOS, faça o seguinte:
 
-1. Ative os botões de ação na guia **Compose** para uma campanha padrão ou na guia **Settings** para um push rápido.
+1. Ative os botões de ação na guia **Compose (Escrever** ) para uma campanha padrão ou na guia **Settings (Configurações** ) para um push rápido.
 2. Selecione sua **Categoria de Notificação do iOS** a partir das seguintes combinações de botões disponíveis:
  - Aceitar/recusar
  - Sim/Não
@@ -36,7 +36,7 @@ Para usar botões de ação em suas mensagens push do iOS, faça o seguinte:
  - Mais
  - Categoria iOS personalizada pré-registrada
 
-![Menu suspenso de Categoria de notificação do iOS.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
+![Menu suspenso Categoria de notificação do iOS.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
 {% alert note %}
 Devido ao manuseio de botões pelo iOS, você precisa realizar etapas adicionais de integração ao configurar botões de ação por push, que estão descritas em nossa [documentação para desenvolvedores]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories). Em particular, você precisa configurar Categorias do iOS ou selecionar entre certas opções de botões padrão. Para integrações com Android, esses botões funcionarão automaticamente.
@@ -47,7 +47,7 @@ Devido ao manuseio de botões pelo iOS, você precisa realizar etapas adicionais
 
 Para usar botões de ação em suas mensagens push do Android, faça o seguinte:
 
-1. Ative os botões de ação na guia **Compose** para uma campanha padrão ou na guia **Settings** para um push rápido.
+1. Ative os botões de ação na guia **Compose (Escrever** ) para uma campanha padrão ou na guia **Settings (Configurações** ) para um push rápido.
 2. Selecione <i class="fas fa-plus-circle"></i> **Add Button** e especifique o texto do botão e **o comportamento ao clicar**. Você pode selecionar entre as seguintes ações disponíveis:
   - Abrir app
   - Redirecionar para URL da web
@@ -61,7 +61,7 @@ Você pode adicionar até três botões no seu push.
 
 Ao contrário dos botões do iOS, que são empilhados, os botões do Android são exibidos lado a lado em uma linha. Isso significa que quanto mais botões você adicionar (até três), menos espaço você terá para o texto do botão. 
 
-![botões de ação por push do Android com texto truncado.]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%"}
+![Botões de ação por push do Android com texto truncado.]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%"}
 
 A tabela a seguir descreve quantos caracteres você pode adicionar antes que a cópia do seu botão seja truncada, dependendo de quantos botões você tem:
 

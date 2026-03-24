@@ -1,5 +1,5 @@
 ---
-nav_title: Fundamentos de la mensajería (Messaging Fundamentals)
+nav_title: Fundamentos de la mensajería
 article_title: Fundamentos de la mensajería (Messaging Fundamentals)
 layout: dev_guide
 page_order: 0
@@ -30,6 +30,9 @@ guide_featured_list:
   - name: Tipos de entrega
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: Bloques de edición
+    link: /docs/dnd/editor_blocks/
+    image: /assets/img/braze_icons/align-left.svg
   - name: Localización
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
     image: /assets/img/braze_icons/globe-02.svg

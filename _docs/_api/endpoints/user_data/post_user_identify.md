@@ -21,15 +21,15 @@ description: "This article outlines details about the Identify users Braze endpo
 
 ## How it works
 
-Calling `/users/identify` combines a user profile that is identified by an alias (alias-only profile), email address (email-only profile), or phone number (phone number-only profile) with a user profile that has an `external_id` (identified profile), then removes the alias-only profile. 
+Calling `/users/identify` combines a user profile that is identified by an alias (alias-only profile), email address (email-only profile), or phone number (phone number-only profile) with a user profile that has an `external_id` (identified profile), then removes the alias-only profile.
 
 Identifying a user requires an `external_id` to be included in the following objects:
 
 - `aliases_to_identify`
-- `emails_to_identify` 
+- `emails_to_identify`
 - `phone_numbers_to_identify`
 
-If there isn't a user with that `external_id`, the `external_id` will be added to the aliased user's record, and the user will be considered identified. Users can only have one alias for a specific label. If a user already exists with the `external_id` and has an existing alias with the same label as the alias-only profile, then the user profiles will not be combined.
+If there isn't a user with that `external_id`, the `external_id` is added to the aliased user's record, and the user is considered identified. Users can have only one alias for a specific label. If a user already exists with the `external_id` and has an existing alias with the same label as the alias-only profile, then the user profiles are not combined.
 
 {% alert tip %}
 To prevent unexpected loss of data when identifying users, we highly recommend that you first refer to [data collection best practices]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) to learn about capturing user data when alias-only user information is already present.
@@ -37,7 +37,7 @@ To prevent unexpected loss of data when identifying users, we highly recommend t
 
 ### Merging behavior
 
-By default, this endpoint will merge the following list of fields found **exclusively** on the anonymous user to the identified user.
+By default, this endpoint merges the following list of fields found **exclusively** on the anonymous user to the identified user.
 
 {% details List of fields that are merged %}
 - First name
@@ -51,28 +51,28 @@ By default, this endpoint will merge the following list of fields found **exclus
 - Country
 - Language
 - Session count (the sum of sessions from both profiles)
-- Date of first session (Braze will pick the earlier date of the two dates)
-- Date of last session (Braze will pick the later date of the two dates)
+- Date of first session (Braze picks the earlier date of the two dates)
+- Date of last session (Braze picks the later date of the two dates)
 - Custom attributes
 - Custom event and purchase event data
 - Custom event and purchase event properties for "X times in Y days" segmentation (where X<=50 and Y<=30)
 - Segmentable custom events summary
   - Event count (the sum from both profiles)
-  - Event first occurred (Braze will pick the earlier date of the two dates)
-  - Event last occurred (Braze will pick the later date of the two dates)
+  - Event first occurred (Braze picks the earlier date of the two dates)
+  - Event last occurred (Braze picks the later date of the two dates)
 - In-app purchase total in cents (the sum from both profiles)
 - Total number of purchases (the sum from both profiles)
-- Date of first purchase (Braze will pick the earlier date of the two dates)
-- Date of last purchase (Braze will pick the later date of the two dates)
+- Date of first purchase (Braze picks the earlier date of the two dates)
+- Date of last purchase (Braze picks the later date of the two dates)
 - App summaries
-- Last_X_at fields (Braze will update the fields if the orphaned profile fields are more recent)
-- Campaign summaries (Braze will pick the most recent date fields)
-- Workflow summaries (Braze will pick the most recent date fields)
+- Last_X_at fields (Braze updates the fields if the orphaned profile fields are more recent)
+- Campaign summaries (Braze picks the most recent date fields)
+- Workflow summaries (Braze picks the most recent date fields)
 - Message and message engagement history
-- Custom event and purchase event count and first date and last date timestamps 
-  - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
+- Custom event and purchase event count and first date and last date timestamps
+  - These merged fields update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 - Session data if the app exists on both user profiles
-  - For example, if our target user doesn't have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge.
+  - For example, if our target user doesn't have an app summary for "ABCApp" but our original user does, the target user has the "ABCApp" app summary on their profile after the merge.
 {% enddetails %}
 
 ## Prerequisites
@@ -117,7 +117,7 @@ One of the following is required: `aliases_to_identify`, `emails_to_identify`, o
 
 If an email address or phone number is specified as an identifier, you must also include `prioritization` in the identifier.
 
-The `prioritization` must be an array specifying which user to merge if there are multiple users found. `prioritization` is an ordered array, meaning if more than one user matches from a prioritization, then merging will not occur.
+The `prioritization` must be an array specifying which user to merge if there are multiple users found. `prioritization` is an ordered array, meaning if more than one user matches from a prioritization, then merging does not occur.
 
 The allowed values for the array are:
 
@@ -131,7 +131,9 @@ Only one of the following options may exist in the prioritization array at a tim
 - `identified` refers to prioritizing a user with an `external_id`
 - `unidentified` refers to prioritizing a user without an `external_id`
 
-If you specify `identified` in the array, this would mean the user **must** have an `external_id` to be entered into the Canvas. If you want users with email addresses to enter the message, regardless of whether they're identified or not, only use the `most_recently_updated` or `least_recently_updated` parameter instead.
+{% alert note %}
+A merge does not occur if the email address or phone number matches multiple users. This includes cases where one of those users has the same `external_id` as the one specified in the request. In these cases, the endpoint returns `"message": "success"`, but the user profiles are not combined. To avoid this, verify that the email address or phone number is associated only with unidentified users before calling this endpoint.
+{% endalert %}
 
 ## Request example
 
@@ -159,6 +161,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 }'
 ```
 
+### Case sensitivity
+
+The `alias_name` field is case-sensitive. A request that returns a `201` status code only confirms the request syntax was valid—it does not confirm the alias was matched. If the capitalization of `alias_name` in your request doesn't exactly match the alias stored on the user profile, the operation will silently fail and the `external_id` won't be assigned. For example, if the stored alias is `JimJones@example.com`, a request with `jimjones@example.com` will return success but produce no result.
+
 {% alert tip %}
 For more information on `alias_name` and `alias_label`, check out our [user aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) documentation.
 {% endalert %}
@@ -166,8 +172,6 @@ For more information on `alias_name` and `alias_label`, check out our [user alia
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
     "aliases_processed": 1,
     "message": "success"

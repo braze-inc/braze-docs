@@ -1,21 +1,25 @@
 ---
-nav_title: Shopify Data Features
-article_title: "Shopify Data Features"
-description: "This reference article covers Shopify data features."
+nav_title: Shopify 데이터 기능
+article_title: "Shopify 데이터 기능"
+description: "이 참조 문서에서는 Shopify 데이터 기능을 다룹니다."
 page_type: partner
 search_tag: Partner
 alias: /shopify_data_features/
-page_order: 3
+page_order: 4
 ---
 
-# Shopify data features
+# Shopify 데이터 기능
 
-> This article provides an overview of our Shopify features, including what Shopify data is tracked and example payloads, historical backfill, and product syncs.
+> 이 문서에서는 추적되는 Shopify 데이터와 예시 페이로드, 과거 데이터 백필, 제품 동기화를 포함한 Shopify 기능에 대한 개요를 제공합니다.
 
-## Tracked Shopify events
+## 추적되는 Shopify 이벤트
+
+Shopify 통합은 [전자상거래 추천 이벤트]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/)를 사용하여 주요 쇼핑 동작을 캡처합니다. 이러한 이벤트를 활용한 구현 사례 및 마케팅 전략은 [이커머스 활용 사례]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/)를 참조하세요.
+
+{% multi_lang_include alerts/important_alerts.md alert='Shopify customer create' %}
 
 {% tabs %}
-{% tab Example Payload %}
+{% tab 예시 페이로드 %}
 {% subtabs global %}
 {% subtab Product viewed %}
 ```json
@@ -313,7 +317,7 @@ page_order: 3
        "price": "80.00",
        "fulfillment_status": null
      }
-   ],
+   ]
  }
 }
 ```
@@ -387,32 +391,33 @@ page_order: 3
 {% subtab Account login %}
 ```json
 {
-	name: "shopify_account_login",
-	properties: {
-	source: "braze-mock-storefront.myshopify.com"
+	"name": "shopify_account_login",
+	"properties": {
+	"source": "braze-mock-storefront.myshopify.com"
   }
 }
 ```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Shopify events %}
+{% tab Shopify 이벤트 %}
 {% subtabs global %}
 {% subtab Product viewed %}
-**Event**: `ecommerce.product_viewed`<br>
-**Type**: Recommended event<br>
-**Triggered**: When a customer views a product page<br>
-**Use Case**: Browse abandonment
+**이벤트**: `ecommerce.product_viewed`<br>
+**유형**: 추천 이벤트<br>
+**트리거 조건**: 고객이 제품 페이지를 조회할 때<br>
+**데이터 소스**: Braze SDK<br>
+**활용 사례**: 탐색 이탈
 
 {% raw %}
-| Variable | Liquid templating |
+| 변수 | Liquid 템플릿 |
 | --- | --- |
-\|------------------|-----------------------------------------------------|
+|------------------|-----------------------------------------------------|
 | `product_id`       | `{{event_properties.${product_id}}}`                |
 | `product_name `    | `{{event_properties.${product_name}}}`              |
 | `variant_id`       | `{{event_properties.${variant_id}}}`                |
 | `image_url `       | `{{event_properties.${image_url}}}`                 |
-| `product_url`      | `<your-store.myshopify.com>{{event_properties.${product_url}}}` <br><br>Add your Shopify site domain before the URL. |
+| `product_url`      | `<your-store.myshopify.com>{{event_properties.${product_url}}}` <br><br>URL 앞에 Shopify 사이트 도메인을 추가하세요. |
 | `price`            | `{{event_properties.${price}}}`                     |
 | `currency`         | `{{event_properties.${currency}}}`                  |
 | `source`           | `{{event_properties.${source}}}`                    |
@@ -423,12 +428,13 @@ page_order: 3
 
 {% endsubtab %}
 {% subtab Cart updated %}
-**Event**: `ecommerce.cart_updated`<br>
-**Type**: Recommended event<br>
-**Triggered**: When a customer adds, removes, or updates their shopping cart<br>
-**Use Case**: Cart abandonment
+**이벤트**: `ecommerce.cart_updated`<br>
+**유형**: 추천 이벤트<br>
+**트리거 조건**: 고객이 장바구니에 상품을 추가, 제거 또는 업데이트할 때<br>
+**데이터 소스**: Braze SDK<br>
+**활용 사례**: 장바구니 유기
 
-For Abandoned Cart Canvases, you first need to add the initial shopping cart Liquid tag to gain context of the shopping cart in your message. 
+유기한 장바구니 캔버스의 경우, 먼저 메시지에서 장바구니 컨텍스트를 얻기 위해 초기 장바구니 Liquid 태그를 추가해야 합니다.
 
 {% raw %}
 ```liquid
@@ -436,11 +442,11 @@ For Abandoned Cart Canvases, you first need to add the initial shopping cart Liq
 ```
 {% endraw %}
 
-Then you can add the following shopping cart Liquid tags into your message.
+그런 다음 메시지에 다음 장바구니 Liquid 태그를 추가할 수 있습니다.
 
 {% raw %}
-| Variable         | Liquid templating                                   |
-\|------------------|-----------------------------------------------------|
+| 변수         | Liquid 템플릿                                   |
+|------------------|-----------------------------------------------------|
 | `cart_id`          | `{{ shopping_cart.cart_id }}`                       |
 | `currency`         | `{{ shopping_cart.currency }}`                      |
 | `total_value`      | `{{ shopping_cart.total_value }}`                   |
@@ -458,17 +464,22 @@ Then you can add the following shopping cart Liquid tags into your message.
 {% endraw %}
 
 {% alert tip %}
-For more information on how to build out a Liquid `for` loop to dynamically add all products into your email, refer to [Abandoned Cart product personalization for emails]({{site.baseurl}}/ecommerce_use_cases/#abandoned-cart).
+Liquid `for` 루프를 구축하여 이메일에 모든 제품을 동적으로 추가하는 방법에 대한 자세한 내용은 [이메일용 유기한 장바구니 제품 개인화]({{site.baseurl}}/ecommerce_use_cases/#abandoned-cart)를 참조하세요. 
 {% endalert %}
 
 {% endsubtab %}
 {% subtab Checkout started %}
-**Event**: `ecommerce.checkout_started`<br>
-**Type**: Recommended event<br>
-**Triggered**: When a customer adds, removes, or updates their shopping cart<br>
-**Use Case**: Checkout abandonment
+**이벤트**: `ecommerce.checkout_started`<br>
+**유형**: 추천 이벤트<br>
+**트리거 조건**: 사용자가 결제 페이지로 이동할 때<br>
+**데이터 소스**: Braze REST API<br>
+**활용 사례**: 결제 이탈
 
-For Abandoned Checkout Canvases, you first need to use the following Liquid tag:
+{% alert important %}
+고객이 Shop Pay를 빠른 결제 옵션으로 사용하는 경우, Shopify가 특정 표준 결제 이벤트(예: Shopify 결제 시작 웹훅)를 건너뛸 수 있습니다. 이 경우 Braze가 결제 토큰 별칭을 추가하는 데 필요한 데이터를 수신하지 못할 수 있으며, 결제 이탈 추적 및 고객 프로필 조정에 영향을 줄 수 있습니다.
+{% endalert %}
+
+결제 이탈 캔버스의 경우, 먼저 다음 Liquid 태그를 사용해야 합니다:
 
 {% raw %}
 ```liquid
@@ -477,11 +488,11 @@ For Abandoned Checkout Canvases, you first need to use the following Liquid tag:
 ```
 {% endraw %}
 
-Then you can add the following Liquid tags into your message to reference the products within your cart at the point of checkout.
+그런 다음 메시지에 다음 Liquid 태그를 추가하여 결제 시점의 장바구니 내 제품을 참조할 수 있습니다.
 
 {% raw %}
-| Variable         | Liquid templating                                   |
-\|------------------|-----------------------------------------------------|
+| 변수         | Liquid 템플릿                                   |
+|------------------|-----------------------------------------------------|
 | `cart_id`          | `{{ shopping_cart.cart_id }}`                       |
 | `currency`         | `{{ shopping_cart.currency }}`                      |
 | `total_value`      | `{{ shopping_cart.total_value }}`                   |
@@ -500,14 +511,15 @@ Then you can add the following Liquid tags into your message to reference the pr
 
 {% endsubtab %}
 {% subtab Order placed %}
-**Event**: `ecommerce.order_placed`<br>
-**Type**: Recommended event<br>
-**Triggered**: When a user successfully completes the checkout process and places an order<br>
-**Use Case**: Order confirmation, post-purchase retargeting, upsells or cross-sells 
+**이벤트**: `ecommerce.order_placed`<br>
+**유형**: 추천 이벤트<br>
+**트리거 조건**: 사용자가 결제 프로세스를 성공적으로 완료하고 주문할 때<br>
+**데이터 소스**: Braze REST API<br>
+**활용 사례**: 주문 확인, 구매 후 리타겟팅, 업셀 또는 크로스셀 
 
 {% raw %}
-| Variable                | Liquid templating                                   |
-\|-------------------------|-----------------------------------------------------|
+| 변수                | Liquid 템플릿                                   |
+|-------------------------|-----------------------------------------------------|
 | cart_id                 | `{{event_properties.${cart_id}}}`                   |
 | currency                | `{{event_properties.${currency}}}`                  |
 | discounts               | `{{event_properties.${discounts}}}`                 |
@@ -527,18 +539,19 @@ Then you can add the following Liquid tags into your message to reference the pr
 {% endraw %}
 
 {% alert tip %}
-Shopify’s checkout completed webhook doesn't contain product URLs or image URLs. As a result, you need to use Catalogs Liquid personalization as mentioned in [Abandoned Cart product personalization for emails]({{site.baseurl}}/ecommerce_use_cases/#order-confirmation-and-feedback-survey).
+Shopify의 결제 완료 웹훅에는 제품 URL이나 이미지 URL이 포함되지 않습니다. 따라서 [이메일용 주문 확인 및 피드백 설문조사]({{site.baseurl}}/ecommerce_use_cases/#order-confirmation-and-feedback-survey)에서 언급된 카탈로그 Liquid 개인화를 사용해야 합니다. 
 {% endalert %}
 
 {% endsubtab %}
 {% subtab Fulfilled order %}
-**Event**: `shopify_fulfilled_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
-**Triggered**: When a user’s order is fulfilled and ready for shipping<br>
-**Use Case**: (Transactional) Fulfillment update 
+**이벤트**: `shopify_fulfilled_order`<br>
+**유형**: [커스텀 이벤트]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
+**트리거 조건**: 사용자의 주문이 이행되어 배송 준비가 완료될 때<br>
+**데이터 소스**: Braze REST API<br>
+**활용 사례**: (트랜잭션) 이행 업데이트 
 
 {% raw %}
-| Variable | Liquid templating |
+| 변수 | Liquid 템플릿 |
 | --- | --- |
 | Order ID | `{{event_properties.${order_id}}}` |
 | Total Price | `{{event_properties.${total_price}}}` |
@@ -574,7 +587,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 | Fulfillment Shipping | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | Fulfillment SKU | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
 | Fulfillment Title | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
-| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor}}` |
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
@@ -582,13 +595,14 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 
 {% endsubtab %}
 {% subtab Partially fulfilled order %}
-**Event**: `shopify_partially_fulfilled_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
-**Triggered**: When part of a user’s order is fulfilled and ready for shipping<br> 
-**Use Case**: (Transactional) Fulfillment update 
+**이벤트**: `shopify_partially_fulfilled_order`<br>
+**유형**: [커스텀 이벤트]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
+**트리거 조건**: 사용자 주문의 일부가 이행되어 배송 준비가 완료될 때<br> 
+**데이터 소스**: Braze REST API<br>
+**활용 사례**: (트랜잭션) 이행 업데이트 
 
 {% raw %}
-| Variable | Liquid templating |
+| 변수 | Liquid 템플릿 |
 | --- | --- |
 | Order ID | `{{event_properties.${order_id}}}` |
 | Total Price | `{{event_properties.${total_price}}}` |
@@ -624,7 +638,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 | Fulfillment Shipping | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
 | Fulfillment SKU | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
 | Fulfillment Title | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
-| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor` |
+| Fulfillment Vendor | `{{event_properties.${fulfillments}[0].line_items[0].vendor}}` |
 | Variant ID | `{{event_properties.${line_items}[0].variant_id}}` |
 | Variant Title | `{{event_properties.${line_items}[0].variant_title}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
@@ -632,13 +646,14 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 
 {% endsubtab %}
 {% subtab Paid order %}
-**Event**: `shopify_paid_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
-**Triggered**: When a user’s order is marked as paid within Shopify<br>  
-**Use Case**: (Transactional) Payment confirmation
+**이벤트**: `shopify_paid_order`<br>
+**유형**: [커스텀 이벤트]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
+**트리거 조건**: Shopify에서 사용자의 주문이 결제 완료로 표시될 때<br>
+**데이터 소스**: Braze REST API<br>
+**활용 사례**: (트랜잭션) 결제 확인
 
 {% raw %}
-| Variable | Liquid templating |
+| 변수 | Liquid 템플릿 |
 | --- | --- |
 | Order ID | `{{event_properties.${order_id}}}` |
 | Confirmed Status | `{{event_properties.${confirmed}}}` |
@@ -665,13 +680,14 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 
 {% endsubtab %}
 {% subtab Order cancelled %}
-**Event**: `shopify_cancelled_order`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
-**Triggered**: When a user’s order is cancelled<br> 
-**Use Case**: (Transactional) Order cancellation confirmation
+**이벤트**: `shopify_cancelled_order`<br>
+**유형**: [커스텀 이벤트]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
+**트리거 조건**: 사용자의 주문이 취소될 때<br> 
+**데이터 소스**: Braze REST API<br>
+**활용 사례**: (트랜잭션) 주문 취소 확인
 
 {% raw %}
-| Variable | Liquid templating |
+| 변수 | Liquid 템플릿 |
 | --- | --- |
 | Order ID | `{{event_properties.${order_id}}}` |
 | Total Price | `{{event_properties.${total_price}}}` |
@@ -700,13 +716,14 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 {% endraw %}
 {% endsubtab %}
 {% subtab Order refunded %}
-**Event**: `shopify_order_refunded`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
-**Triggered**: When a user’s order is refunded<br>
-**Use Case**: (Transactional) Refund confirmation
+**이벤트**: `shopify_order_refunded`<br>
+**유형**: [커스텀 이벤트]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
+**트리거 조건**: 사용자의 주문이 환불될 때<br>
+**데이터 소스**: Braze REST API<br>
+**활용 사례**: (트랜잭션) 환불 확인
 
 {% raw %}
-| Variable | Liquid templating |
+| 변수 | Liquid 템플릿 |
 | --- | --- |
 | Order ID | `{{event_properties.${order_id}}}` |
 | Order Note | `{event_properties.${note}}}` |
@@ -726,20 +743,21 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 {% endsubtab %}
 {% subtab Account login %}
 
-**Event**: `shopify_account_login`<br>
-**Type**: [Custom Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
-**Triggered**: When a user logs into their account<br>
-**Use Case**: Welcome series
+**이벤트**: `shopify_account_login`<br>
+**유형**: [커스텀 이벤트]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
+**트리거 조건**: 사용자가 계정에 로그인할 때<br>
+**데이터 소스**: Braze REST API<br>
+**활용 사례**: 웰컴 시리즈
 
 {% raw %}
-| Variable | Liquid templating |
+| 변수 | Liquid 템플릿 |
 | --- | --- |
 | `source` | {{event_properties.${source}}} |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
 {% endraw %}
 
 {% alert note %}
-The Shopify integration currently doesn't support populating the Braze [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events). As a result, purchase filters, Liquid tags, action-based triggers, and analytics should use the ecommerce.order_placed event.
+Shopify 통합은 현재 Braze [구매 이벤트]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events) 채우기를 지원하지 않습니다. 따라서 구매 필터, Liquid 태그, 액션 기반 트리거 및 분석에는 `ecommerce.order_placed` 이벤트를 사용해야 합니다. 
 {% endalert %}
 
 {% endsubtab %}
@@ -747,9 +765,12 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 {% endtab %}
 {% endtabs %}
 
-## Supported Shopify custom attributes
+## 지원되는 Shopify 커스텀 속성
+
+{% multi_lang_include alerts/note_alerts.md alert='Shopify attributes REST API' %}
+
 {% tabs local %}
-{% tab Example Payload %}
+{% tab 예시 페이로드 %}
 {% subtabs %}
 {% subtab Shopify Tags %}
 ```json
@@ -770,30 +791,41 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Shopify Custom Attributes %}
-| Attribute Name | Description |
+{% tab Shopify 커스텀 속성 %}
+| 속성 이름 | 설명 |
 | --- | --- |
-| `shopify_total_spent` | The total amount of money that the customer has spent across their order history. |
-| `shopify_order_count` | The number of orders associated with this customer. Test and archived orders aren't counted. |
-| `shopify_last_order_id` | The ID of the customer's last order. |
-| `shopify_last_order_name` | The name of the customer's last order. This is directly related to the `name` field on the order resource. |
-| `shopify_zipcode` | The customer's zipcode from their default address. |
-| `shopify_province` | The customer's province from their default address. |
+| `shopify_total_spent` | 고객이 주문 내역 전체에서 지출한 총 금액입니다. |
+| `shopify_order_count` | 이 고객과 연결된 주문 수입니다. 테스트 및 아카이브된 주문은 포함되지 않습니다. |
+| `shopify_last_order_id` | 고객의 마지막 주문 ID입니다. |
+| `shopify_last_order_name` | 고객의 마지막 주문 이름입니다. 이는 주문 리소스의 `name` 필드와 직접 관련됩니다. |
+| `shopify_zipcode` | 고객의 기본 주소에 있는 우편번호입니다. |
+| `shopify_province` | 고객의 기본 주소에 있는 시/도입니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-### Liquid personalization
+{% alert important %}
+현재 Shopify API 버전의 알려진 문제로 인해 `shopify_last_order_name` 사용자 속성이 올바르게 채워지지 않습니다. 사용자에게 미치는 영향은 다음과 같습니다:<br><br>
 
-To add Liquid personalization for your Shopify custom attributes, select **\+ Personalization**. Then select **Custom Attributes** as your personalization type.
+- **기존 사용자:** 이미 `shopify_last_order_name` 값이 있는 사용자의 경우 해당 값은 유지되지만 후속 주문에 의해 업데이트되지 않습니다.
+- **신규 사용자:** 새 사용자의 경우 필드가 채워지지 않고 비어 있거나 null로 유지됩니다.
 
-![The "Add Personalization" section with the "Attribute" dropdown extended.]({% image_buster /assets/img/Shopify/add_personalization_2.png %}){: style="max-width:40%;"}
+이 페이지는 Shopify에서 이 문제를 해결한 후에 업데이트됩니다.
+{% endalert %}
 
-After selecting your custom attribute, input a default value and copy the Liquid snippet into your message.
+### Liquid 개인화
 
-![Pasting a Liquid snippet into a message.]({% image_buster /assets/img/Shopify/copy_liquid_snippet.png %})
+Shopify 커스텀 속성에 대한 Liquid 개인화를 추가하려면 **+ Personalization**을 선택합니다. 그런 다음 개인화 유형으로 **Custom Attributes**를 선택합니다.
+
+!['속성' 드롭다운이 확장된 '개인화 추가' 섹션.]({% image_buster /assets/img/Shopify/add_personalization_2.png %}){: style="max-width:40%;"}
+
+커스텀 속성을 선택한 후 기본값을 입력하고 Liquid 스니펫을 메시지에 복사합니다.
+
+![Liquid 스니펫을 메시지에 붙여넣기.]({% image_buster /assets/img/Shopify/copy_liquid_snippet.png %})
 {% endtab %}
 {% endtabs %}
 
-## Supported Shopify standard attributes
+## 지원되는 Shopify 표준 속성
+
+{% multi_lang_include alerts/note_alerts.md alert='Shopify attributes REST API' %}
 
 - Email
 - First Name
@@ -803,33 +835,35 @@ After selecting your custom attribute, input a default value and copy the Liquid
 - Country
 
 {% alert note %}
-Braze will only update supported Shopify custom attributes and Braze standard attributes if there is a difference in data from the existing user profile. For example, if the inbound Shopify data contains a first name of Bob and Bob already exists as a first name on the Braze user profile, Braze will not trigger an update, and you will not be charged a data point.
+Braze는 기존 고객 프로필의 데이터와 차이가 있는 경우에만 지원되는 Shopify 커스텀 속성 및 Braze 표준 속성을 업데이트합니다. 예를 들어, 수신된 Shopify 데이터에 이름이 Bob으로 포함되어 있고 Braze 고객 프로필에 이미 Bob이 이름으로 존재하는 경우, Braze는 업데이트를 트리거하지 않으며 데이터 포인트가 차감되지 않습니다.
 {% endalert %}
 
-## SDK data collection 
+## SDK 데이터 수집 
 
-For more information on what data is collected by the Braze SDKs, see [SDK data collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). 
+Braze SDK가 수집하는 데이터에 대한 자세한 내용은 [SDK 데이터 수집]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/)을 참조하세요. 
 
-## Historical backfill
+## 과거 데이터 백필
 
-During your Shopify store onboarding, you can initiate an initial data sync through historical backfill to immediately engage with your customers. As part of this backfill, Braze will run an initial data sync of all customers and order placed from the last 90 days prior to your Shopify integration connection. When Braze imports your Shopify customers, we will assign the `external_id` type that you chose in your configuration settings.
+Shopify 스토어 온보딩 중에 과거 데이터 백필을 통해 초기 데이터 동기화를 시작하여 고객과 즉시 소통할 수 있습니다. 이 백필의 일환으로 Braze는 Shopify 통합 연결 이전 최근 90일간의 모든 고객 및 주문 완료 이벤트에 대한 초기 데이터 동기화를 실행합니다. Braze가 Shopify 고객을 가져올 때 구성 설정에서 선택한 `external_id` 유형을 할당합니다.
 
 {% alert note %}
-If you plan to integrate with a custom external ID (for either the [standard integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_standard_integration/#step-4-configure-how-you-manage-users) or the [custom integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_custom_integration/#step-6-configure-how-you-manage-users-optional)), you will be required to add your custom external ID as a Shopify customer metafield to all existing Shopify customer profiles and then perform the historical backfill.
+커스텀 외부 ID로 통합할 계획인 경우([표준 통합]({{site.baseurl}}/partners/ecommerce/shopify/shopify_standard_integration/#step-4-configure-how-you-manage-users) 또는 [커스텀 통합]({{site.baseurl}}/partners/ecommerce/shopify/shopify_custom_integration/#step-6-configure-how-you-manage-users-optional) 모두 해당), 모든 기존 Shopify 고객 프로필에 커스텀 외부 ID를 Shopify 고객 메타필드로 추가한 후 과거 데이터 백필을 수행해야 합니다. 
 {% endalert %}
 
-### Setting up Shopify historical backfill
+동기화된 주문 이벤트 데이터는 세분화에 사용할 수 있지만, 매출 데이터 자체는 고객 프로필이나 [매출 - 라스트 터치 기여도 대시보드]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/#revenue---last-touch-attribution)에 채워지지 않습니다.
 
-1. Turn on historical backfill in the **Track Shopify data** step.
+### Shopify 과거 데이터 백필 설정
 
-![The "Track Shopify data" step of the Shopify integration showing historical backfill selected.]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
+1. **Shopify 데이터 추적** 단계에서 과거 데이터 백필을 켭니다.
+
+![과거 데이터 백필이 선택된 Shopify 통합의 "Shopify 데이터 추적" 단계.]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
 
 {: start="2"}
 
-2. After you complete your integration setup, Braze will begin the initial data sync. You can monitor progress on the **Shopify Data** tab of your integration settings. 
+2. 통합 설정을 완료하면 Braze가 초기 데이터 동기화를 시작합니다. 통합 설정의 **Shopify Data** 탭에서 진행 상황을 모니터링할 수 있습니다. 
 
-![The Shopify Integration Settings page with a spinner showing that events are actively syncing.]({% image_buster /assets/img/Shopify/historical_data_backfill_syncing.png %})
+![이벤트가 활발하게 동기화 중임을 나타내는 스피너가 있는 Shopify 통합 설정 페이지.]({% image_buster /assets/img/Shopify/historical_data_backfill_syncing.png %})
 
-### Synced data 
+### 동기화된 데이터 
 
-For the initial data sync, Braze will import customers and order placed from the last 90 days prior to your Shopify integration connection. When Braze imports your Shopify customers, it will assign the `external_id` type that you chose in your configuration settings.
+초기 데이터 동기화에서 Braze는 Shopify 통합 연결 이전 최근 90일간의 고객 및 주문 완료 데이터를 가져옵니다. Braze가 Shopify 고객을 가져올 때 구성 설정에서 선택한 `external_id` 유형을 할당합니다.

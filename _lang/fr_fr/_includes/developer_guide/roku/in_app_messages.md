@@ -1,17 +1,17 @@
-{% multi_lang_include developer_guide/prerequisites/roku.md %} En outre, les messages in-app ne seront envoyés qu'aux appareils Roku fonctionnant avec la version minimale du SDK prise en charge :
+{% multi_lang_include developer_guide/prerequisites/roku.md %} En outre, les messages in-app ne seront envoyés qu'aux appareils Roku exécutant la version minimale du SDK prise en charge :
 
 {% sdk_min_versions roku:0.1.2 %}
 
 ## Types de messages
 
 {% tabs %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/android.md %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/swift.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/android.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/swift.md %}
 {% endtabs %}
 
 ## Activation des messages in-app
 
-### Étape 1 : Ajouter un observateur
+### Étape 1 : Ajouter un observateur
 
 Pour traiter les messages in-app, vous pouvez ajouter un observateur à `BrazeTask.BrazeInAppMessage` :
 

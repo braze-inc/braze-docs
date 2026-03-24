@@ -1,5 +1,5 @@
 ---
-nav_title: Ihre Analytics Dashboards
+nav_title: Ihre Analytics-Dashboards
 article_title: Ihre Analytics Dashboards
 page_order: 6.5
 layout: dev_guide
@@ -24,8 +24,14 @@ guide_featured_list:
   - name: Zustellbarkeitszentrum
     link: /docs/user_guide/analytics/dashboard/deliverability_center/
     image: /assets/img/braze_icons/navigation-pointer-01.svg
-  - name: Dashboard für die API-Nutzung
+  - name: Dashboard zur API-Nutzung
     link: /docs/user_guide/analytics/dashboard/api_usage_dashboard/
     image: /assets/img/braze_icons/trend-up-01.svg
+  - name: E-Commerce-Umsatz-Dashboard
+    link: /docs/ecommerce_revenue_dashboard/
+    image: /assets/img/braze_icons/line-chart-up-04.svg  
+  - name: Diagnose-Dashboard für Messaging
+    link: /docs/user_guide/analytics/dashboard/diagnostics_dashboard/
+    image: /assets/img/braze_icons/pie-chart-01.svg
 ---
 <br><br>

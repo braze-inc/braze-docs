@@ -1,5 +1,5 @@
 ---
-nav_title: Configuración de estilo
+nav_title: Configuración del estilo
 article_title: "Configuración del estilo de los mensajes en la aplicación"
 description: "Este artículo de referencia cubre las opciones de estilo disponibles al crear un mensaje in-app con el editor de arrastrar y soltar."
 page_order: 3
@@ -7,15 +7,15 @@ page_order: 3
 
 # Configuración del estilo de los mensajes de la aplicación
 
-> La experiencia de edición mediante arrastrar y soltar se divide en dos secciones: **Construir** y **Vista previa y prueba**. Este artículo cubre lo que necesitas saber para trabajar dentro de la pestaña **Construir** del editor y asume que ya has [creado un mensaje in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/).
+> La experiencia de edición mediante arrastrar y soltar se divide en dos secciones: **Compilación** y **vista previa & Prueba**. Este artículo cubre lo que necesitas saber para trabajar dentro de la pestaña **Construir** del editor y asume que ya has [creado un mensaje in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/).
 
-!["Estilos de mensajes" pestaña.]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
+![Pestaña "Estilos de mensajes".]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
 
 ## Estilos de mensaje
 
 En la pestaña **Estilos de mensaje** puedes definir determinados estilos que se aplicarán a todos los bloques relevantes de tu mensaje in-app. Por ejemplo, puede que desee personalizar el tipo de letra de todo el texto o el color de todos los enlaces de su mensaje.
 
-Los estilos de esta sección se utilizan en todas las partes del mensaje, excepto cuando se anulan para un bloque específico. Si su mensaje tiene [varias páginas]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), también puede anular los estilos a nivel de mensaje para páginas individuales, excepto para el tipo de visualización y el ancho máximo. Si intentas aplicar estilos a nivel de página y a nivel de mensaje, el estilo a nivel de página prevalecerá sobre el estilo a nivel de mensaje.
+Los estilos de esta sección se utilizan en todas las partes del mensaje, excepto cuando se anulan para un bloque específico. Si su mensaje tiene [varias páginas]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), también puede anular los estilos a nivel de mensaje para páginas individuales, excepto para el tipo de visualización y el ancho máximo.
 
 Para facilitar el diseño, recomendamos configurar los estilos a nivel de mensaje antes de personalizar los estilos a nivel de bloque.
 
@@ -46,6 +46,20 @@ La fuente a nivel de mensaje sólo se aplicará al mensaje actual y a cualquier 
 
 El editor de arrastrar y soltar utiliza dos componentes clave para componer mensajes in-app: **filas** y **bloques**. Todos los bloques deben colocarse en fila.
 
+### Cerrar botón x
+
+Para los mensajes dentro de la aplicación Modal y Pantalla completa, puedes personalizar el botón de cierre que se muestra como <i class="fa-solid fa-xmark"></i> en la esquina superior derecha de tu mensaje. Las opciones de personalización incluyen la posición del botón, el tamaño, el color de relleno, el color de fondo, el estilo del borde y el radio del borde.
+
+![Opciones para personalizar el botón cerrar x en los mensajes dentro de la aplicación, incluyendo el tamaño del botón, el color de relleno, el color de fondo, el estilo del borde y el radio del borde.]({% image_buster /assets/img_archive/close_x_button.png %}){: style="max-width:40%"}
+
+### Estilo Span
+
+Añadir un estilo personalizado al texto de los mensajes dentro de la aplicación habilita el uso de diferentes colores, fuentes y tamaños de texto. El estilo Span proporciona a tus usuarios una experiencia más atractiva y visualmente más atractiva, llamando su atención sobre la información clave y mejorando la claridad general del mensaje.
+
+![Opción que se muestra al resaltar texto en un mensaje dentro de la aplicación. Un pequeño icono de pincel muestra que puedes envolver con palmo para darle estilo.]({% image_buster /assets/img_archive/span_1.png %}){: style="max-width:40%"}
+
+![Panel lateral para "Propiedades de Span" que permite al usuario final personalizar la familia de fuentes, el peso de la fuente, el tamaño de la fuente, el espaciado entre letras y el color del texto.]({% image_buster /assets/img_archive/span_2.png %}){: style="max-width:40%"}
+
 ### Filas
 
 Las filas son unidades estructurales que definen la composición horizontal de una sección del mensaje mediante celdas.
@@ -56,9 +70,15 @@ Cuando se selecciona una fila, puede añadir o eliminar el número de columnas q
 
 También puede deslizar para ajustar el tamaño de las columnas existentes.
 
-![Ajustar las columnas desde la sección "Personalización de columnas".]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
+![Ajusta las columnas desde la sección "Personalización de columnas".]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
 
 Como práctica recomendada, formatee las propiedades de las filas y columnas antes de formatear los bloques de las filas. Hay muchos lugares donde se puede ajustar el espaciado y la alineación, por lo que empezar desde la base facilita la edición sobre la marcha.
+
+#### Imagen de fondo
+
+Puedes añadir una imagen de fondo a una fila en el panel de **propiedades de la fila**. Alterna entre **Imagen de fondo** y, a continuación, proporciona una URL de imagen o selecciona una imagen de la [biblioteca multimedia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). Por último, configura el texto alternativo, el tamaño, la posición y si la imagen se repite para crear patrones en toda la fila.
+
+![Una imagen de fondo en fila de una pizza que tiene un patrón de repetición horizontal.]({% image_buster /assets/img_archive/background_row.png %})
 
 ### Bloques
 
@@ -70,13 +90,9 @@ Antes de añadir bloques, configura [estilos a nivel de](#set-message-level-styl
 
 ![Arrastra y suelta cuadros para seleccionar.]({% image_buster /assets/img_archive/dnd_iam_editor_blocks.png %}){: style="max-width:40%"}
 
-Cada bloque tiene sus ajustes, como el control granular del relleno. El panel de la derecha cambia automáticamente a un panel de estilos para el elemento de contenido seleccionado. Para más información, consulta [Propiedades del bloque de editor]({{site.baseurl}}/editor_blocks_dnd_iam/).
+Cada bloque tiene sus ajustes, como el control granular del relleno. El panel de la derecha cambia automáticamente a un panel de estilos para el elemento de contenido seleccionado. Para más información, consulta [Propiedades del bloque de editor]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=in-app%20messages#inappmessages_properties).
 
 A medida que construyes tu mensaje in-app, puedes seleccionar una vista de móvil, tableta o escritorio en la barra de herramientas para previsualizar cómo se verá tu mensaje in-app para tus grupos de usuarios. De este modo se asegurará de que su contenido es receptivo y podrá realizar los ajustes necesarios sobre la marcha.
-
-#### Extender texto
-
-{% multi_lang_include span_text.md %}
 
 ## Detalles creativos
 
@@ -104,7 +120,7 @@ Si tienes problemas para seleccionar un bloque determinado, puedes utilizar la f
 
 Para añadir [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) a tu mensaje in-app, selecciona <i class="fa-solid fa-circle-plus"></i> **Añadir personalización** en la barra de herramientas del editor. Aquí puede añadir varios tipos de personalización, como atributos predeterminados, atributos de dispositivo, atributos personalizados, etc.
 
-A continuación, tome el fragmento de Liquid generado e insértelo en el mensaje. Después de diseñar y crear tu mensaje in-app, ve a **Vista previa y prueba** para previsualizar tu mensaje.
+A continuación, tome el fragmento de Liquid generado e insértelo en el mensaje. Después de diseñar y crear tu mensaje dentro de la aplicación, ve a **Vista previa & Prueba** para previsualizar tu mensaje.
 
 ### Utilizar el redactor de IA
 
@@ -114,7 +130,7 @@ Cuando seleccione un bloque de texto en su mensaje in-app, haga clic en <i class
 Puede ahorrarse algunos clics resaltando el texto dentro del bloque antes de hacer clic en el icono. El texto resaltado se añadirá a la herramienta y se generará una copia inmediatamente.
 {% endalert %}
 
-![GIF del redactor de AI.]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
+![GIF de la AI redactora.]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
 
 ### Restablecer los estilos al ajuste predeterminado
 

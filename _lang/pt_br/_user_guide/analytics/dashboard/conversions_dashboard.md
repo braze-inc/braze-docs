@@ -1,5 +1,5 @@
 ---
-nav_title: Dashboard de conversões
+nav_title: Painel de controle de conversões
 article_title: Dashboard de conversões
 alias: "/conversions_dashboard_v2/"
 description: "O dashboard de conversões permite que você analise as conversões em campanhas, Canvas e canais, usando diferentes métodos de atribuição."
@@ -22,8 +22,8 @@ Para configurar seu relatório do dashboard de conversões:
 3. Selecione as campanhas ou as Canvas (ou ambas) a serem analisadas. 
    - (opcional) Filtre campanhas e telas selecionando uma tag.  
 4. Selecione o(s) **canal(is)** a ser(em) analisado(s) para suas mensagens.
-5. Selecione uma **divisão por** camada para visualizar diferentes dimensões de dados, como por variante, etapa do canva, país ou idioma.
-6. (Opcional) Se você quiser calcular as conversões de um evento que não foi configurado como um evento de conversão na campanha ou no Canva, ative [Usar eventos personalizados](#using-custom-events).
+5. Selecione uma **Quebra por** camada para visualizar diferentes dimensões de dados, como por variante, etapa do canva, país ou idioma.
+6. (Opcional) Se você quiser calcular conversões de um evento que não foi configurado como um evento de conversão na campanha ou no Canvas, ative [Usar eventos personalizados](#using-custom-events).
 7. Selecione um [método de atribuição](#attribution-methods) para analisar as mensagens selecionadas.
 
 {% alert note %}
@@ -49,6 +49,20 @@ Para calcular as conversões de um evento que não foi configurado como um event
 Se você selecionar um evento personalizado, não verá o menu suspenso **Evento de conversão** na página e terá que executar novamente o relatório para visualizar as conversões de diferentes eventos personalizados.
 {% endalert %}
 
+### Considerações
+
+Para que um usuário seja contado no relatório, ele deve atender aos seguintes critérios dentro do intervalo de datas selecionado:
+1. Digite o Canvas ou a campanha.
+2. Registre um [método de atribuição]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#attribution-methods).
+3. Realize o evento de conversão.
+
+Por exemplo, digamos que um usuário faça o seguinte:
+1. Entre no Canvas em 30 de setembro.
+2. Registre um método de atribuição em 1º de outubro.
+3. Realize o evento de conversão em 2 de outubro.
+
+Esse usuário **não** aparecerá em um relatório com um intervalo de datas de 1º a 7 de outubro. Isso ocorre porque o usuário entrou no Canvas antes do período de relatório, mesmo que o evento de conversão tenha ocorrido dentro do intervalo de datas definido. Para que o usuário apareça em um relatório, o intervalo de datas deve incluir 30 de setembro.
+
 ## Compreensão de seu relatório
 
 Seu relatório é dividido em três seções:
@@ -61,7 +75,7 @@ Seu relatório é dividido em três seções:
 
 A tabela de detalhes da conversão sempre mostra uma coluna para *Destinatários* e outra para *Conversões* (taxa e total). As duas colunas restantes da tabela que aparecem dependem das opções que você selecionou ao configurar o relatório. 
 
-![Tabela de detalhes da conversão mostrando o Touches como método de atribuição para as colunas três e quatro.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
+![Tabela de detalhes de conversão mostrando Toques como o método de atribuição para as colunas três e quatro.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
 
 A tabela a seguir descreve as métricas possíveis.
 
@@ -87,7 +101,7 @@ Para baixar os dados da série temporal, selecione uma opção de download: PNG,
 Esse gráfico mostra apenas os dados de um único canal de cada vez. Use o menu suspenso **Canal** no gráfico para selecionar um único canal.
 {% endalert %}
 
-![Gráfico de barras do funil de conversões para duas campanhas de e-mail mostrando resultados semelhantes para e-mails entregues, e-mails abertos, e-mails clicados e conversões.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
+![Gráfico de barras do funil de conversões para duas campanhas de e-mail mostrando resultados semelhantes para E-mail Entregue, E-mail Aberto, E-mail Clicado e Conversões.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
 
 ### Conversões ao longo do tempo
 
@@ -95,7 +109,7 @@ Esse gráfico de série temporal inclui uma representação das conversões por 
 
 Para baixar os dados da série temporal, selecione <i class="fas fa-bars"></i> e, em seguida, selecione a opção de download. As opções disponíveis são PNG, JPEG, PDF, SVG ou CSV.
 
-![Gráfico de série temporal de conversões ao longo do tempo para duas campanhas de e-mail, mostrando as conversões por dia.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
+![Gráfico de séries temporais de conversões ao longo do tempo para duas campanhas de e-mail, mostrando conversões por dia.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
 
 ### Métodos de atribuição
 
@@ -115,3 +129,21 @@ Para baixar os dados da série temporal, selecione <i class="fas fa-bars"></i> e
 | --- | --- |
 | Toque | Uma interação física ou ponto de contato com uma mensagem.<br><br>Os toques podem incluir:<br>{::nomarkdown}<ul><li>Clique no e-mail</li><li>Abertura de push</li><li>Clique no cartão de conteúdo</li><li>Clique em mensagem no app</li><li>Clique em SMS</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+## Solução de problemas
+
+### Por que tenho baixas conversões na campanha ou no Canvas?
+
+Suas conversões podem não ser tão altas quanto você espera quando comparadas a campanhas anteriores ou às suas expectativas. As conversões são um negócio complicado, mas dependem de algumas funções simples em nossa plataforma: rastreamento de eventos e prazos de conversão.
+
+Para solucionar o motivo disso, recomendamos verificar seu rastreamento de eventos e prazos de conversão.
+
+#### Rastreamento de eventos
+
+Quando uma campanha aciona um início de sessão ou um evento personalizado, é preciso garantir que esse evento ou sessão esteja ocorrendo com frequência suficiente para disparar a mensagem. Verifique o [painel inicial]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) para dados de sessão, ou seu relatório de [eventos personalizados]({{site.baseurl}}/user_guide/analytics/reporting/configuring_reporting/).
+
+#### Prazos de conversão
+
+Para cada evento de conversão que você selecionar por campanha, você define o [prazo]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#creating-a-campaign-with-conversion-tracking). Isso significa que você está definindo um limite de tempo dentro do qual uma conversão deve ocorrer para que seja contabilizada em cada campanha respectiva.
+
+Verifique se você revisou as informações sobre [regras de rastreamento de conversão]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#conversion-tracking-rules) para entender as métricas da sua campanha. Para obter informações sobre conversões de usuários no Canvas, consulte [as Perguntas frequentes sobre o Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 

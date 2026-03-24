@@ -1,5 +1,5 @@
 ---
-nav_title: Outils d’engagement
+nav_title: "Outils d'engagement"
 article_title: Outils d’engagement
 page_order: 4
 layout: dev_guide
@@ -28,4 +28,7 @@ guide_menu_list:
   - name: Position et géorepérages 
     link: /docs/user_guide/engagement_tools/locations_and_geofences/
     image: /assets/img/braze_icons/marker-pin-06.svg
+  - name: Indicateurs de fonctionnalité
+    link: /docs/user_guide/engagement_tools/feature_flags/
+    image: /assets/img/braze_icons/flag-02.svg
 ---

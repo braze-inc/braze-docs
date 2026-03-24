@@ -1,5 +1,5 @@
 ---
-nav_title: "Modelos e Mídia"
+nav_title: "Modelos e mídias"
 article_title: Modelos e Mídia
 page_order: 5
 layout: dev_guide
@@ -23,7 +23,7 @@ guide_featured_list:
   - name: Modelos de canva
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates
     image: /assets/img/braze_icons/palette.svg
-  - name: Gerenciamento de modelos
+  - name: Gerenciar modelos
     link: /docs/user_guide/engagement_tools/templates_and_media/managing_templates/
     image: /assets/img/braze_icons/archive.svg
   - name: Perguntas frequentes

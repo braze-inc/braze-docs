@@ -1,6 +1,6 @@
 ---
-nav_title: Utilisation des gabarits de Braze
-article_title: Utilisation des gabarits de Braze
+nav_title: Utilisation des modèles de Braze
+article_title: Utiliser des modèles de Braze
 page_order: 2
 layout: dev_guide
 guide_top_header: "Utilisation des gabarits de Braze"

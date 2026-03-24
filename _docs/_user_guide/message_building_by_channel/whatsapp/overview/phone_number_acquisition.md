@@ -1,7 +1,7 @@
 ---
 nav_title: Phone number acquisition
 article_title: Phone Number Acquisition
-page_order: 3
+page_order: 4
 description: "This reference article covers how to acquire a phone number from Twilio and Infobip."
 page_type: reference
 channel:
@@ -38,13 +38,20 @@ Your phone number must meet these WhatsApp API requirements:
 
 ### Step 2: Configure your phone number
 
-Follow Twilio's instructions to [set up your Twilio phone number to receive the verification code via email using Twilio Voice Only](https://www.twilio.com/docs/whatsapp/self-sign-up#verify-your-whatsapp-sender). **Do not follow the instructions in any other step, as that will connect your phone number to Twilio, not Braze.**
+Follow Twilio’s instructions to set up your Twilio phone number to receive the verification code through email using **only** [Twilio Voice](https://www.twilio.com/docs/whatsapp/self-sign-up#add-your-whatsapp-phone-number). **Do not follow the instructions in other steps.**
 
 {% alert warning %}
-**Only follow Twilio's instructions to receive a verification code.**
-
-If you follow the next steps in Twilio's instructions, you'll connect your phone number to Twilio. That means you can't connect that number to Braze unless you do a migration or purchase a different number.
+Only follow Twilio’s instructions to receive a verification code.
+If you follow the next steps, you connect your phone number to Twilio, which means you can’t connect that number to Braze unless you do a migration or purchase a different number.
 {% endalert %}
+
+1. In the Twilio console, go to the [Active Numbers page](https://www.twilio.com/console/phone-numbers/incoming) and select the phone number you purchased.
+2. Go to the **Voice Configuration** section and in the **Configure with** dropdown, select **Webhook, TwiML Bin, Function, Studio Flow, Proxy Service**.
+3. In the **A call comes in** row, select **Webhook** and set the URL to `https://twimlets.com/voicemail?Email=YOUR_EMAIL_ADDRESS`, replacing `YOUR_EMAIL_ADDRESS` with your email address.
+4. In the Twilio console, go to **2. Link WhatsApp Business Account with your number** > **2. Copy the phone number you register**, and select **Copy** next to the phone number.
+5. In the **Self Sign-up** window, on the **Add your WhatsApp phone number** page, select **Add a new phone number** and paste the phone number.
+6. Select **Phone call** as the verification method, then select **Next**.
+7. You receive the verification code in your email within 10 minutes.
 
 ### Step 3: Complete the embedded sign up workflow
 
@@ -62,7 +69,7 @@ If you follow the next steps in Twilio's instructions, you'll connect your phone
 
 4. Select the available offer, then proceed through the rest of the steps and wait for your request to be processed. You can check the status by going to **Numbers** > **My Request**. <br><br>![An offer with information including fees and coverage.]({% image_buster /assets/img/whatsapp/infoblip_offer.png %}){: style="max-width:70%;"}<br><br>
 
-5. Depending on your selected country, wait for the Infobip team to reach out for registration details (such as for 10DLC in the US).<br><br>
+5. Depending on your selected country, wait for the Infobip team to contact you for registration details (such as for 10DLC in the US).<br><br>
 
 6. When your phone number is ready in Infobip, go to your Braze dashboard > **Technology Partners** > **WhatsApp** and select **Begin integration** or **Add WhatsApp Business Account**, whichever shows up, to trigger the [embedded sign up workflow]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).<br><br> In the **Add a phone number for WhatsApp** step, select **Text message** for how you'd like to verify your phone number.<br><br>![Section with the options to verify your phone number through text message or a phone call.]({% image_buster /assets/img/whatsapp/infoblip_verify.png %})<br><br>
 

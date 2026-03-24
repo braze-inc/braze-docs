@@ -3,6 +3,8 @@ layout: default
 hide_toc: true
 hide_bottom_nav: false
 hide_breadcrumb: false
+hide_feedback: true
+hide_binary_feedback: false
 ---
 
 
@@ -99,7 +101,7 @@ $(document).ready(function() {
         str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
     }
 
-    str = str.replace(/[\(\)]/g, '') // remove parenthsis
+  str = str.replace(/[\(\)]/g, '') // remove parenthesis
         .replace(/[^a-z0-9 -]/g, '-') // remove invalid chars
         .replace(/\s+/g, '-') // collapse whitespace and replace by -
         .replace(/-+/g, '-');  // collapse dashes
@@ -235,10 +237,11 @@ $(document).ready(function() {
   $('#glossary_search').on('keyup',function(e){
     generate_glossarys(glossary_hash);
   });
-  if (location.hash && $(location.hash.replace('%20','-').replace('+','-')).offset()) {
+  var location_hash = (location.hash || "").replace('%20','-').replace('+','-').replace(/[^a-zA-Z0-9_-]+/g, '');
+  if (location_hash && $(location_hash).offset()) {
     // Scroll to generated hash
     $('html, body').animate({
-      scrollTop: $(location.hash).offset().top
+      scrollTop: $(location_hash).offset().top
     });
   }
 });
@@ -261,6 +264,7 @@ $(document).ready(function() {
     </div>
     {%- endunless -%}
 
+    {% include ai_translation_banner.html %}
     <h1> {{ page.glossary_top_header }} </h1>
     <p class="glossary_text">  {{ page.glossary_top_text | markdownify }} </p>
     <div id="guide_featured_list">
@@ -288,7 +292,7 @@ $(document).ready(function() {
     </div>
     <fieldset id="glossary_filter">
         <legend class="glossary_text">  {{ page.glossary_mid_text }} </legend>
-        <label for="glossary_search" id="glossary_label">&#8205;<input id="glossary_search" type="search" placeholder="Search" aria-label="Glassary Search" /></label>
+        <label for="glossary_search" id="glossary_label"><span class="sr-only">Search glossary</span><input id="glossary_search" type="search" placeholder="Search" /></label>
         <div id="glossary_filter_titlev2">{{ page.glossary_filter_text }}</div>
         {%- for tag in page.glossary_tags -%}
         <div class="glossary_filter_div">
@@ -337,8 +341,11 @@ $(document).ready(function() {
 
     {% include footer.html class="footer_glossary" %}
 </div>
-{%- unless hide_toc -%}
 <div class="d-none d-lg-block col-lg-2 d-print-none" id="toc_col">
+  {%- unless hide_toc -%}
   <div id="toc" ></div>
+  {%- endunless -%}
+  {% unless hide_binary_feedback -%}
+  {% include binary_feedback.html  %}
+  {% endunless -%}
 </div>
-{%- endunless -%}

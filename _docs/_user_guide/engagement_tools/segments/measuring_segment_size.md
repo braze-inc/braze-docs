@@ -1,6 +1,6 @@
 ---
-nav_title: Measuring segment size
-article_title: Measuring Segment Size
+nav_title: Measure segment size
+article_title: Measure Segment Size
 page_order: 5
 page_type: reference
 tool: 
@@ -8,7 +8,7 @@ tool:
 description: "This page covers how you can monitor your segment’s membership and size."
 ---
 
-# Measuring segment size
+# Measure segment size
 
 > This page covers how you can monitor your segment’s membership and size.
 
@@ -25,8 +25,8 @@ It is possible that the number of total users is different than the number of us
 ![A table displaying total reachable users broken down by users reachable by email, iOS push, Android push, web push, and Kindle push.]({% image_buster /assets/img_archive/segmenter_reachable_users.png %})
 
 For a user to be listed as reachable through a certain channel, the user must have both:
-* A valid email address or push token associated with their profile; and
-* Opted in or subscribed to your app.
+* A valid email address or push token associated with their profile, and
+* Opted-in or subscribed to your app.
 
 A single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. The gap between the total reachable users and the sum of the different channels are the number of users who qualified for the segment but they are not reachable through those communication channels.
 
@@ -40,7 +40,7 @@ Braze provides the following statistics on segment size.
 
 For each filter group, you can view estimated reachable users. Select **Expand extra funnel statistics** to see a breakdown across channels.
 
-![A filter group with a filter for users who had exactly one session count.]({% image_buster /assets/img_archive/segment_filter_stats.png %}){: style="max-width:80%;"}
+![A filter group with a filter for users who had exactly one session count.]({% image_buster /assets/img_archive/segment_filter_stats.png %})
 
 ## Reachable users estimate
 
@@ -57,7 +57,7 @@ If you have a large user population in your workspace, you may see more variatio
 
 Very small segments will have an estimated range that includes 0, meaning the percentage of total users may round to 0. In these cases, **Calculate exact stats** will help you see an accurate count of your segment size, which may not actually be 0.
 
-![The "Reachable users" side panel.]({% image_buster /assets/img_archive/reachable_users_panel.png %})
+![The "Reachable users" side panel showing an exact user count of "31".]({% image_buster /assets/img_archive/reachable_users_panel.png %})
 
 ### Reachable users by channel
 
@@ -75,6 +75,17 @@ For a user to be listed as reachable through a certain channel, the user must ha
 - A valid email address or push token associated with their profile, and
 - Opted-in or subscribed to your app.
 
+#### Applied filters for channel-specific reachable users
+
+The following filters are applied for each channel when determining reachable users.
+
+| Channel | Filter |
+| --- | --- |
+| Email | **Email Available** is true. |
+| Push | **Foreground Push Enabled** is true. |
+| SMS | **Subscription Group** is any SMS subscription group. **Invalid Phone Number** is false. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 ## Calculating exact statistics 
 
 To view an accurate count of the number of users in your segment, select **Calculate exact stats** in the **Reachable users** pane.
@@ -83,7 +94,11 @@ To update the stats for a calculation you've previously run, select **Refresh ex
 
 Note that a calculation's accuracy is only 99.999% or greater. So for large segments, you may notice slight variations&#8212;even when calculating exact statistics&#8212;which is normal behavior. In addition, exact statistics results are cached for 24 hours unless you make edits to your segment, in which case you can re-calculate the exact statistics.
 
-![The "Reachable users" panel with an option to show the breakdown.]({% image_buster /assets/img_archive/reachable_users_breakdown.png %})
+{% alert note %}
+Segments divided evenly by [random bucket numbers]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) won't be the same size. For example, if you create one segment with the filter **Random Bucket # less than 5000** and one segment with the filter **Random Bucket # at least 5000**, it is possible and expected for the segment sizes to vary by up to a few percentage points. This is because of situations such as inactive users getting deleted and users being unreachable.
+{% endalert %}
+
+![Screenshot of the Reachable users panel showing exact statistics and an expanded breakdown menu.]({% image_buster /assets/img_archive/reachable_users_breakdown.png %})
 
 The statistics on a per-filter level will always be estimated, even if you calculate exact stats. **Calculate exact stats** only calculates the exact statistics at the segment level, not at the filter or filter group level. This calculation may take a few minutes to run. Larger workspaces in particular may require longer periods to complete calculations. You can track your progress on the progress bar in the **Reachable users** panel. When a calculation is expected to run more than five minutes, Braze will email you the results. 
 
@@ -93,7 +108,7 @@ Braze prioritizes one calculation at a time per workspace, so running multiple c
 
 You can cancel an exact statistics calculation by selecting **Cancel**. This can be beneficial if there are multiple calculations in the queue and you want to prioritize another calculation first. 
 
-![An active calculation with the option to cancel]({% image_buster /assets/img_archive/cancel_calculation.png %}){: style="max-width:25%"}
+![An active calculation with the option to cancel]({% image_buster /assets/img_archive/cancel_calculation.png %}){: style="max-width:35%"}
 
 ## Viewing historical segment membership size
 

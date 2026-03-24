@@ -7,25 +7,25 @@ description: "Dieses Glossar listet die verschiedenen Arten von Push-Benachricht
 channel: push
 
 layout: glossary_page
-glossary_top_header: "Types of push notifications"
-glossary_top_text: "There are many types of push notifications you can use to interact with your customers. These can be narrowed by channel and used to meet the needs of many different users. You can configure most of these settings in your Push campaigns, but there are notes in the following descriptions that will indicate whether any backend configurations are needed and what those might be."
+glossary_top_header: "Arten von Push-Benachrichtigungen"
+glossary_top_text: "Es gibt verschiedene Arten von Push-Benachrichtigungen, die Sie zur Interaktion mit Ihren Kund:innen nutzen können. Diese können nach Kanälen gefiltert und für die Anforderungen vieler verschiedener Nutzer:innen eingesetzt werden. Die meisten dieser Einstellungen können Sie in Ihren Push-Kampagnen konfigurieren. In den folgenden Beschreibungen finden Sie jedoch Hinweise darauf, ob Backend-Konfigurationen erforderlich sind und um welche es sich dabei handeln könnte."
 
 glossary_tag_name: Channels
 glossary_filter_text: "Select any of the following channels to narrow Push Type options."
 
 # category to icon/fa or image mapping
 glossary_tags:
-  - name: iOS
-  - name: Android
   - name: Internet
+  - name: Android
+  - name: iOS
 
 glossaries:
   - name: "Regulärer Push"
     description: "Die allumfassende Push-Nachricht. Diese erscheinen auf dem Gerät der Nutzerin oder des Nutzers mit einem Benachrichtigungston und einer Nachricht, die in einer Benachrichtigungsleiste oder einem Stack angezeigt wird."
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "Web-Push"
     description: "Diese Push-Nachrichten erscheinen in Web Apps oder Browsern. Sie benötigen immer noch die Erlaubnis, die Kund:in zu erreichen. Beachten Sie, dass Web-Push nicht funktioniert, wenn die:der Nutzer:in einen ausgeblendeten Browser verwendet."
     tags:
@@ -33,9 +33,9 @@ glossaries:
   - name: "Push-Primer-Kampagnen"
     description: "In-App-Nachrichten Kampagnen, die dazu dienen, explizite Push-Opt-in oder -Opt-out-Signale von Nutzer:innen zu erhalten. Durch den Primer können Sie vermeiden, Push-Benachrichtigungen an Nutzer:innen zu senden, die Push über die Geräteeinstellungen deaktivieren. Für iOS sind Push-Kampagnen relevant, da Push-Benachrichtigungen im Vordergrund (z. B. Benachrichtigungen, die das Gerät aufwecken) erst dann aktiviert werden, wenn ein:e Nutzer:in sich ausdrücklich für die iOS-eigene Push-Abfrage entscheidet."
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "Push-Storys"
     description: "Push Stories sind immersive Nachrichten, die den Benutzer durch eine visuelle Reise in Form eines Karussells führen. Diese sind nur für mobile Geräte verfügbar."
     tags:
@@ -44,21 +44,16 @@ glossaries:
   - name: "Push mit Aktions-Buttons"
     description: "Aktionsschaltflächen sind Nachrichten, die es Ihnen ermöglichen, Ihren Nutzern Optionen zu bieten und mehrere Aufrufe zum Handeln anzubieten."
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "Reichhaltige Push-Benachrichtigungen"
     description: "Rich Push Notifications sind Benachrichtigungen mit eindrucksvollen Bildern und kreativen Inhalten, die über ein einfaches Symbol und einen Aufruf zum Handeln hinausgehen können."
     tags:
       - iOS
       - Android
-  - name: "Stille Push-Benachrichtigung"
-    description: "Eine Push-Benachrichtigung, die das Gerät nicht aufweckt, wenn sie auf dem Gerät wiedergegeben wird. Stattdessen wird die Benachrichtigung in der Benachrichtigungsleiste des Geräts gespeichert."
-    tags:
-      - iOS
-      - Android
   - name: "Vorläufige Push-Benachrichtigungen für iOS"
-    description: "Die von Apple in iOS 12 eingeführte provisorische Autorisierung erfolgt automatisch bei der Installation von iOS-Apps und ermöglicht es Marken, stille Benachrichtigungen zu senden, ohne den Nutzern eine Push-Anfrage zu zeigen. Wenn die stille Push-Benachrichtigung gesendet und in der Benachrichtigungsleiste des Geräts angezeigt wird, erhalten die Benutzer die Möglichkeit, Push-Benachrichtigungen zuzulassen oder abzubrechen."
+    description: "Die von Apple in iOS 12 eingeführte vorläufige Autorisierung erfolgt automatisch bei der Installation von iOS-Apps und macht es Marken möglich, Benachrichtigungen zu versenden, ohne dass den Nutzer:innen eine Push-Aufforderung angezeigt wird. Diese Benachrichtigungen werden unauffällig an das Benachrichtigungscenter zugestellt, wo die Nutzer:innen die Möglichkeit haben, Push-Benachrichtigungen zuzulassen oder zu unterbinden."
     tags:
       - iOS
   - name: "HTML-Push-Benachrichtigungen"
@@ -70,12 +65,12 @@ glossaries:
     tags:
       - iOS
       - Android
-  - name: "Push-Benachrichtigungen im Hintergrund"
-    description: "Push-Benachrichtigungen, die nicht für das Gerät gerendert werden. Wird in der Regel verwendet, um Informationspakete für Hintergrundprozesse und Deinstallationsverfolgung an die App zu senden. Ein Push-Token mit Background Enablement ist erforderlich, damit Push im Hintergrund gesendet werden kann."
+  - name: "Push-Benachrichtigungen im Hintergrund (stille Push-Benachrichtigungen)"
+    description: "Eine Push-Benachrichtigung, die für den Endnutzer:in nicht sichtbar ist und in der Regel intern verwendet wird, um Features wie Uninstall-Tracking, Geofences und die Datensynchronisierung zu verwalten. Hintergrund-Push und stiller Push referenzieren dasselbe Konzept. Ein Push-Token mit Enablement ist erforderlich. Weitere Informationen finden Sie unter <a href=\"/docs/developer_guide/push_notifications/silent\">Stille Push-Benachrichtigungen</a>."
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "Wearable Push-Benachrichtigungen"
     description: "Diese Push-Benachrichtigungen ermöglichen es Marken, Nachrichten direkt an tragbare Geräte wie die Apple Watch zu senden."
     tags:

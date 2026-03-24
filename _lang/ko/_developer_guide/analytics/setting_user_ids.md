@@ -1,31 +1,53 @@
 ---
 nav_title: 사용자 ID 설정
-article_title: Braze SDK를 통해 사용자 ID 설정하기
-page_order: 1.2
+article_title: Braze SDK를 통해 사용자 ID 설정
+page_order: 1.1
 description: "Braze SDK를 통해 사용자 ID를 설정하는 방법을 알아보세요."
 
 ---
 
 # 사용자 ID 설정
 
-> Braze SDK를 통해 사용자 ID를 설정하는 방법을 알아보세요. 이는 여러 디바이스와 플랫폼에서 사용자를 추적하고, [사용자 데이터 API를]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) 통해 데이터를 가져오고, [메시징 API를]({{site.baseurl}}/api/endpoints/messaging/) 통해 타겟팅된 메시지를 보낼 수 있는 고유 식별자입니다. 사용자에게 고유 ID를 할당하지 않으면 Braze에서 익명 ID를 대신 할당하지만, 할당할 때까지는 이러한 기능을 사용할 수 없습니다.
+> Braze SDK를 통해 사용자 ID를 설정하는 방법을 알아보세요. 이는 여러 기기와 플랫폼에서 사용자를 추적하고, [사용자 데이터 API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)를 통해 데이터를 가져오고, [메시징 API]({{site.baseurl}}/api/endpoints/messaging/)를 통해 타겟팅된 메시지를 보낼 수 있는 고유 식별자입니다. 사용자에게 고유 ID를 할당하지 않으면 Braze에서 익명 ID를 대신 할당하지만, 할당할 때까지는 이러한 기능을 사용할 수 없습니다.
 
 {% alert note %}
-목록에 없는 래퍼 SDK의 경우 관련 네이티브 Android 또는 Swift 메서드를 대신 사용하세요.
+목록에 없는 래퍼 SDK의 경우 관련 네이티브 Android 또는 Swift 방법을 대신 사용하세요.
 {% endalert %}
 
 ## 익명 사용자 정보
 
 {% multi_lang_include anonymous_users/about_anonymous_users.md %}
 
+### 익명 사용자 추적 방지
+
+사용자가 식별되기 전에 데이터를 수집하지 않아야 하는 사용 사례의 경우, 사용자가 로그인하고 `external_id`를 사용할 수 있을 때까지 Braze SDK 초기화를 지연할 수 있습니다. 코드에서 사용자가 로그인하면 `true`로 전환되는 플래그를 설정하고, 해당 플래그가 설정된 경우에만 SDK를 초기화하세요.
+
+{% alert warning %}
+사용자가 앱을 **처음 다운로드할 때**(`external_id`가 설정되기 전)에만 초기화를 지연하세요. 사용자가 로그아웃하거나 새 세션을 시작할 때마다 SDK 초기화를 방지하면 인앱 메시지 및 콘텐츠 카드 자산의 프리페칭에 간섭이 발생하여 해당 캠페인에 전달 가능성 오류가 발생할 수 있습니다.
+{% endalert %}
+
 ## 사용자 ID 설정
 
-사용자 ID를 설정하려면 사용자가 처음 로그인한 후 `changeUser()` 메서드를 호출합니다. 아이디는 고유해야 하며 [명명 모범 사례를](#naming-best-practices) 따라야 합니다.
+사용자 ID를 설정하려면 사용자가 처음 로그인한 후 `changeUser()` 방법을 호출합니다. ID는 고유해야 하며 [명명 모범 사례](#naming-best-practices)를 따라야 합니다.
 
-대신 고유 식별자를 해싱하는 경우 해싱 함수의 입력을 정규화해야 합니다. 예를 들어 이메일 주소를 해시할 때는 앞뒤 공백을 모두 제거하고 현지화를 고려하세요.
+고유 식별자를 해싱하는 경우 해싱 함수의 입력을 정규화해야 합니다. 예를 들어 이메일 주소를 해시할 때는 앞뒤 공백을 모두 제거하고 현지화를 고려하세요.
 
 {% tabs local %}
-{% tab 안드로이드 %}
+{% tab WEB %}
+표준 웹 SDK 구현의 경우 다음 방법을 사용할 수 있습니다:
+
+```javascript
+braze.changeUser(YOUR_USER_ID_STRING);
+```
+
+대신 Google Tag Manager를 사용하려면 **사용자 변경** 태그 유형을 사용하여 [`changeUser` 방법](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser)을 호출할 수 있습니다. 사용자가 로그인하거나 고유한 `external_id` 식별자로 식별될 때마다 사용합니다.
+
+일반적으로 웹사이트에서 전송한 데이터 레이어 변수를 사용하여 채워지는 **외부 사용자 ID** 필드에 현재 사용자의 고유 ID를 입력해야 합니다.
+
+![Braze 액션 태그 구성 설정을 보여주는 대화상자. 포함된 설정은 "태그 유형" 및 "외부 사용자 ID"입니다.]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
+{% endtab %}
+
+{% tab ANDROID %}
 {% subtabs %}
 {% subtab JAVA %}
 ```java
@@ -55,20 +77,6 @@ AppDelegate.braze?.changeUser(userId: "YOUR_USER_ID")
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 웹 %}
-표준 웹 SDK 구현의 경우 다음 방법을 사용할 수 있습니다:
-
-```javascript
-braze.changeUser(YOUR_USER_ID_STRING);
-```
-
-대신 Google 태그 관리자를 사용하려면 **사용자** 태그 유형 **변경을** 사용하여 [`changeUser` 메서드를](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) 호출할 수 있습니다. 사용자가 로그인하거나 고유한 `external_id` 식별자로 식별될 때마다 사용합니다.
-
-일반적으로 웹사이트에서 전송한 데이터 레이어 변수를 사용하여 채워지는 **외부 사용자 ID** 필드에 현재 사용자의 고유 ID를 입력해야 합니다.
-
-![Braze 작업 태그 구성 설정을 보여주는 대화상자. 포함된 설정은 '태그 유형'과 '외부 사용자 ID'입니다.]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
-{% endtab %}
-
 {% tab CORDOVA %}
 ```javascript
 BrazePlugin.changeUser("YOUR_USER_ID");
@@ -87,15 +95,28 @@ AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
 ```
 {% endtab %}
 
-{% tab 언리얼 엔진 %}
-```cpp
-UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
+{% tab REACT NATIVE %}
+```javascript
+Braze.changeUser("YOUR_USER_ID_STRING");
 ```
 {% endtab %}
 {% endtabs %}
 
+### `changeUser()` 작동 방식
+
+`changeUser()`를 호출하면 다음과 같은 동작이 적용됩니다:
+
+- 이미 설정된 것과 **동일한** 사용자 ID로 `changeUser()`를 호출하면 세션 수에 영향을 미치지 않습니다.
+- **다른** 사용자 ID로 `changeUser()`를 호출하면 현재 세션이 자동으로 종료되고 새 세션이 시작됩니다.
+- 익명 사용자가 **새로운** 사용자 ID(Braze에 아직 존재하지 않는 ID)로 `changeUser()`를 호출하면 익명 프로필의 데이터가 새로 식별된 프로필에 병합됩니다.
+- 익명 사용자가 **기존** 사용자 ID로 `changeUser()`를 호출하면 익명 프로필의 데이터가 식별된 프로필에 병합되지 않습니다.
+
+{% alert note %}
+`changeUser()`를 호출하면 현재 사용자의 세션을 종료하는 과정에서 데이터 플러시가 발생합니다. SDK는 새 사용자로 전환하기 전에 이전 사용자의 보류 중인 데이터를 자동으로 플러시하므로 `changeUser()`를 호출하기 전에 수동으로 데이터 플러시를 요청할 필요가 없습니다.
+{% endalert %}
+
 {% alert warning %}
-**사용자가 로그아웃할 때 정적 기본 ID를 할당하거나 `changeUser()` 으로 전화하지 마세요.** 이렇게 하면 공유 디바이스에서 이전에 로그인한 사용자를 다시 참여시킬 수 없습니다. 대신 모든 사용자 ID를 개별적으로 추적하고 앱의 로그아웃 프로세스에서 이전에 로그인한 사용자로 다시 전환할 수 있도록 하세요. 새 세션이 시작되면 Braze는 새로 활성화된 프로필의 데이터를 자동으로 새로 고칩니다.
+단일 공유 사용자 ID(예: 정적 기본값 외부 ID)를 할당하거나 사용자가 로그아웃할 때 `changeUser()`를 호출하지 마세요. 이렇게 하면 공유 기기에서 이전에 로그인한 사용자를 다시 참여시킬 수 없으며, 모든 데이터가 단일 사용자 ID에 기록되어 다른 기능이 예상대로 작동하지 않을 수 있습니다. 대신 모든 사용자 ID를 개별적으로 추적하고 앱의 로그아웃 프로세스에서 이전에 로그인한 사용자로 다시 전환할 수 있도록 하세요. 새 세션이 시작되면 Braze는 새로 활성화된 프로필의 데이터를 자동으로 새로고침합니다.
 {% endalert %}
 
 ## 사용자 별칭
@@ -106,10 +127,16 @@ UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 
 ### 사용자 별칭 설정
 
-사용자 별칭은 이름과 레이블의 두 부분으로 구성됩니다. 이름은 식별자 자체를 가리키고 레이블은 식별자가 속한 식별자 유형을 가리킵니다. 예를 들어 타사 고객 지원 플랫폼에 외부 ID `987654` 를 가진 사용자가 있는 경우, Braze에서 이름 `987654` 과 레이블 `support_id` 을 사용하여 별칭을 할당하면 여러 플랫폼에서 해당 사용자를 추적할 수 있습니다.
+사용자 별칭은 이름과 레이블의 두 부분으로 구성됩니다. 이름은 식별자 자체를 가리키고, 레이블은 식별자가 속한 유형을 가리킵니다. 예를 들어 타사 고객지원 플랫폼에 외부 ID `987654`를 가진 사용자가 있는 경우, Braze에서 이름 `987654`와 레이블 `support_id`로 별칭을 할당하면 여러 플랫폼에서 해당 사용자를 추적할 수 있습니다.
 
 {% tabs local %}
-{% tab Android %}
+{% tab web %}
+```javascript
+braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
+```
+{% endtab %}
+
+{% tab android %}
 {% subtabs %}
 {% subtab java %}
 ```java
@@ -141,13 +168,7 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 웹 %}
-```javascript
-braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
-```
-{% endtab %}
-
-{% tab rest API %}
+{% tab rest api %}
 ```json
 {
   "alias_name" : (required, string),
@@ -155,24 +176,35 @@ braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
 }
 ```
 {% endtab %}
+
+{% tab react native %}
+```javascript
+Braze.addAlias("ALIAS_NAME", "ALIAS_LABEL");
+```
+{% endtab %}
 {% endtabs %}
 
-## ID 이름 지정 모범 사례 {#naming-best-practices}
+## ID 명명 모범 사례 {#naming-best-practices}
 
 무작위로 잘 분산된 128비트 문자열인 [UUID(범용 고유 식별자)](https://en.wikipedia.org/wiki/Universally_unique_identifier) 표준을 사용하여 사용자 ID를 생성하는 것이 좋습니다.
 
-또는 기존 고유 식별자(예: 이름 또는 이메일 주소)를 해시하여 사용자 ID를 대신 생성할 수도 있습니다. 이 경우 사용자 사칭을 방지할 수 있도록 [SDK 인증을]({{site.baseurl}}/developer_guide/authentication/) 구현해야 합니다.
+또는 기존 고유 식별자(예: 이름 또는 이메일 주소)를 해시하여 사용자 ID를 대신 생성할 수도 있습니다. 이 경우 사용자 가장을 방지할 수 있도록 [SDK 인증]({{site.baseurl}}/developer_guide/sdk_integration/authentication/)을 구현해야 합니다.
 
-처음부터 사용자 ID의 이름을 올바르게 지정하는 것이 중요하지만, 나중에 언제든지 [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) 엔드포인트를 사용하여 언제든지 이름을 변경할 수 있습니다.
+{% alert warning %}
+사용자 ID에 추측 가능한 값이나 증가하는 숫자를 사용하지 마세요. 이로 인해 조직이 악의적인 공격이나 데이터 유출에 노출될 수 있습니다.
 
-| 추천 | 권장하지 않음 |
+추가 보안을 위해 [SDK 인증]({{site.baseurl}}/developer_guide/sdk_integration/authentication/)을 사용하세요.
+{% endalert %}
+
+처음부터 사용자 ID의 이름을 올바르게 지정하는 것이 중요하지만, 나중에 언제든지 [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) 엔드포인트를 사용하여 이름을 변경할 수 있습니다.
+
+| 권장되지 않는 ID 유형 | 권장되지 않는 예 |
 | ------------ | ----------- |
-| 123e4567-e89b-12d3-a456-836199333115 | JonDoe829525552 |
-| 8c0b3728-7fa7-4c68-a32e-12de1d3ed2d5 | Anna@email.com |
-| f0a9b506-3c5b-4d86-b16a-94fc4fc3f7b0 | CompanyName-1-2-19 |
-| 2d9e96a1-8f15-4eaf-bf7b-eb8c34e25962 | jon-doe-1-2-19 |
+| 사용자가 볼 수 있는 프로필 ID 또는 사용자 이름 | JonDoe829525552 |
+| 이메일 주소 | Anna@email.com |
+| 자동 증가하는 사용자 ID | 123 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert warning %}
-사용자 아이디를 만드는 방법에 대한 세부 정보를 공유하면 조직이 악의적인 공격이나 데이터 삭제에 노출될 수 있으므로 공유하지 마세요.
+사용자 ID를 생성하는 방법에 대한 세부 정보를 공유하지 마세요. 이로 인해 조직이 악의적인 공격이나 데이터 유출에 노출될 수 있습니다.
 {% endalert %}

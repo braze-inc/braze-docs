@@ -36,7 +36,7 @@ Vous pouvez exécuter à nouveau le rapport pour obtenir des statistiques actual
 
 Dans votre compte tableau de bord, accédez à **Analyse/analytique** > **Rapports d'**engagement (si vous utilisez un tableau de bord). Sélectionnez **\+ Créer un nouveau rapport**.
 
-### Étape 2 : Ajouter des messages
+### Étape 2 : Ajouter des messages
 
 Ajoutez les campagnes et les messages Canvas que vous souhaitez compiler dans votre rapport. Vous pouvez sélectionner vos messages de deux manières :
 

@@ -32,13 +32,13 @@ table td {
 </style>
 
 {% tabs %}
-{% tab Crawl (ramper) %}
+{% tab Crawl %}
 
-![Exemple d'application financière montrant des cartes de contenu de type image légendée et de type image seule]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Exemple d'application financière présentant des cartes de contenu de type image légendée et des cartes de contenu avec image uniquement]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 L'approche Crawl (ramper) permet aux marketeurs de prendre le contrôle direct de la personnalisation. Bien qu'un petit travail de développement soit nécessaire en amont pour intégrer les canaux de communication Braze à votre application ou à votre site, cette approche vous permet d'être opérationnel plus rapidement. 
 
-Les marketeurs déterminent le contenu, l'audience et le calendrier des messages à partir du tableau de bord. Les options de style sont toutefois limitées. Cette approche convient mieux aux équipes dont les ressources en développeurs sont limitées ou qui souhaitent partager rapidement un contenu simple. 
+Les marketeurs déterminent le contenu, l'audience et le moment de diffusion des messages via le tableau de bord. Les options de style sont toutefois limitées. Cette approche convient mieux aux équipes dont les ressources en développeurs sont limitées ou qui souhaitent partager rapidement un contenu simple. 
 
 <table>
 <thead>
@@ -76,9 +76,9 @@ Les marketeurs déterminent le contenu, l'audience et le calendrier des messages
 </table>
 
 {% endtab %}
-{% tab Walk (marcher) %}
+{% tab Walk %}
 
-![Exemple d'application financière montrant des cartes de contenu avec personnalisation]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Exemple d'application financière présentant des cartes de contenu personnalisables]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 L’approche « Walk (marcher) » est une approche hybride dans laquelle le service marketing et les équipes de développement collaborent pour les faire correspondre à l’image de marque de votre appli ou site. 
 
@@ -122,9 +122,9 @@ Les marketeurs conservent le contrôle de l’audience, de contenu, du comportem
 </table>
 
 {% endtab %}
-{% tab Run (courir) %}
+{% tab Run %}
 
-![Exemple d'application financière montrant des cartes de contenu personnalisées avec capture d'e-mail]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Exemple d'application financière présentant des cartes de contenu personnalisées avec capture d'e-mail]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 Avec l’approche Run, les développeurs ont un contrôle total sur l’expérience des utilisateurs. Le code personnalisé dicte l'aspect des messages, leur comportement et leur interaction avec d'autres canaux d'envoi de messages (par exemple, le déclenchement d'une carte de contenu sur la base d'une notification push).
 

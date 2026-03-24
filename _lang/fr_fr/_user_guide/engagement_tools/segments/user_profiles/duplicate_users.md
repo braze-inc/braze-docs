@@ -21,13 +21,13 @@ Si une recherche d'utilisateurs renvoie des profils en double, vous pouvez fusio
 
 Dans Braze, sélectionnez **Audience** > **Recherche d'utilisateurs.**
 
-![Vignette « Recherche d'utilisateurs » mise en évidence dans le menu de navigation.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:60%;"}
+![La tuile "Recherche d'utilisateurs" est mise en évidence dans le menu de navigation.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:60%;"}
 
 Saisissez un identifiant unique, tel qu'une adresse e-mail ou un numéro de téléphone, pour le profil dupliqué, puis sélectionnez **Rechercher**.
 
 ![La page "Recherche d'utilisateurs" du tableau de bord de Braze.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:60%;"}
 
-### Étape 2 : Fusionner les doublons
+### Étape 2 : Fusionner les doublons
 
 Pour lancer le processus de fusion, sélectionnez **Fusionner les doublons**.
 
@@ -49,22 +49,22 @@ Lorsque vous fusionnez en masse des utilisateurs dupliqués, Braze trouve les pr
 
 Dans le tableau de bord de Braze, sélectionnez **Audience** > **Gérer l'audience**.
 
-![Vignette « Gérer l'audience » mise en évidence dans le menu de navigation.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:60%;"}
+![La tuile "Gérer l'audience" est mise en évidence dans le menu de navigation.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:60%;"}
 
-### Étape 2 : Prévisualiser les résultats (facultatif)
+### Étape 2 : Prévisualiser les résultats (facultatif)
 
 Pour prévisualiser vos résultats avant de fusionner vos doublons, sélectionnez **Générer une liste de doublons**.
 
-![Page « Gérer l'audience » avec l'option « Générer la liste des profils dupliqués » en surbrillance.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_generate_list.png %})
+![La page "Gérer l'audience" avec l'option "Générer une liste de doublons" en surbrillance.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_generate_list.png %})
 
 Braze génère votre aperçu et l'envoie à votre adresse e-mail sous la forme d'un fichier CSV.
 
-![Un e-mail de Braze contenant un lien vers le fichier CSV généré.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/example_email.png %}){: style="max-width:60%;"}
+![Un e-mail de Braze avec un lien vers le fichier CSV généré.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/example_email.png %}){: style="max-width:60%;"}
 
 Dans l'exemple suivant, Braze utilise l'ID externe de l'utilisateur pour signaler les profils en double et identifier celui à conserver. Si ces profils sont fusionnés en bloc, Braze utilisera le profil avec un ID externe comme nouveau profil principal de l'utilisateur.
 
 {% tabs local %}
-{% tab exemple de fichier CSV %}
+{% tab example csv file %}
 | Adresse e-mail | ID externe | Numéro de téléphone | ID Braze | Identifiant de la règle | Profil à conserver | Profil à fusionner | Profil à supprimer
 | ---------------- | ----------- | -------------- | --------------------- | ------------------- | --------------- | ---------------- |
 | alex@company.com | A8i3mkd99 | (555) 123-4567 | 65fcaa547f470494d1370 | e-mail | VRAI | FAUX
@@ -86,7 +86,7 @@ Si vous êtes satisfait des résultats de votre aperçu, sélectionnez **Fusionn
 Les profils utilisateurs dupliqués ne peuvent pas être récupérés après la fusion.
 {% endalert %}
 
-![Page « Gérer l’audience » avec l'option « Fusionner tous les profils dupliqués » en surbrillance.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_merge_profiles.png %}){: style="max-width:70%;"}
+![La page "Gérer l'audience" avec l'option "Fusionner tous les doublons" en surbrillance.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_merge_profiles.png %}){: style="max-width:70%;"}
 
 ## Fusion basée sur des règles
 
@@ -120,7 +120,7 @@ Les profils utilisateurs dupliqués ne peuvent pas être récupérés après la 
 
 Similaire à la fusion basée sur des règles, la fusion planifiée vous permet d'automatiser la fusion des profils utilisateurs sur une base quotidienne à l'aide de règles préconfigurées.
 
-![La page "Gestion de l'audience" avec le bouton "planification".]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %})
+![La page "Gérer l'audience" avec le bouton "planification".]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %})
 
 Une fois la fonctionnalité activée, Braze attribue automatiquement un créneau horaire pour effectuer le processus de fusion tous les jours vers 12 heures dans le fuseau horaire de l'entreprise de l'utilisateur. Vous pouvez désactiver la fusion planifiée à tout moment. Braze informera les administrateurs de votre espace de travail 24 heures avant la fusion planifiée, afin de leur rappeler et de leur donner le temps de revoir la configuration.
 

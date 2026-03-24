@@ -14,4 +14,4 @@ tool:
 
 > Conozca las diferentes métricas de informes de webhook y las opciones de análisis que ofrece el panel de control de Braze.
 
-{% multi_lang_include campaign_analytics.md channel="webhook" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="webhook" %}

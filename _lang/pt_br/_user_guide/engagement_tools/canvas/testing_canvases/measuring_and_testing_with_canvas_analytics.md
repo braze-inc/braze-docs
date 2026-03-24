@@ -38,7 +38,7 @@ Para o Canvas Flow, um usuário sairá do Canvas depois de entrar e receber a ca
 
 As métricas também incluem impressões, destinatários únicos, contagem de conversões e receita gerada. Você pode clicar em um componente para detalhar melhor seus dados e ver a performance específica do canal.
 
-![Dois exemplos de detalhes de performance para componentes do canva. À esquerda, são mostrados os detalhes de performance de uma jornada de usuário com um componente do canva. À direita, são mostrados os detalhes de performance de um componente Canva expandido e uma etapa aninhada que mostra a contagem de impressões de mensagens no app.]({% image_buster /assets/img_archive/Journey_6.png %})
+![Dois exemplos de detalhes de performance para componentes do canva. À esquerda, são mostrados os detalhes de performance de uma jornada de usuário com um componente do canva. À direita, os detalhes de performance de um componente do canva expandido e uma etapa do canva que mostra a contagem de impressões de mensagens no app.]({% image_buster /assets/img_archive/Journey_6.png %})
 
 ## Detalhamento da performance por variante
 
@@ -74,6 +74,26 @@ Além disso, você pode ver um detalhamento mais explícito dos [eventos de conv
 - Totais de conversão e taxas de conversão para cada evento de conversão
 - Elevação em relação à variante de controle
 - Confiança estatística para cada evento de conversão
+
+### Como as conversões são rastreadas 
+
+Um usuário só pode converter uma vez por evento de conversão e por entrada no Canva. As conversões são atribuídas à mensagem mais recente recebida pelo usuário para essa entrada. O resumo do Canva reflete todas as conversões realizadas pelos usuários nessa jornada e se eles receberam ou não uma mensagem. Cada etapa subsequente mostrará apenas as conversões que ocorreram enquanto essa era a etapa mais recente que o usuário recebeu. 
+
+Considere o seguinte exemplo: um Canva tem 10 notificações por push e o evento de conversão é "Opens App" (ou "Session Start").
+- O usuário A abre o app após entrar, mas antes de receber a primeira mensagem.
+- O usuário B abre o app após cada notificação por push.
+
+O resumo do Canva mostrará duas conversões, enquanto as etapas individuais mostrarão uma conversão na primeira etapa e nenhuma em todas as etapas subsequentes. Se o Horário de silêncio estiver ativo quando o evento de conversão ocorrer, as mesmas regras serão aplicadas. 
+
+Agora, digamos que temos uma tela com Horário de silêncio e os seguintes eventos ocorrem:
+
+1. O usuário A entra em um Canva.
+2. A primeira etapa é uma etapa de postergação dentro do horário de silêncio definido, portanto, a mensagem é suprimida.
+3. O usuário A realiza o evento de conversão.
+
+O usuário A será contado como convertido na variante geral do Canva, mas não na etapa, pois não recebeu a etapa.
+
+Em nosso último exemplo, digamos que temos um Canva com a reelegibilidade ativada. Se um usuário elegível realizar o evento de conversão na primeira e na segunda entrada, serão contadas duas conversões.
 
 ### Relatório de funil
 

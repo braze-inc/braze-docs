@@ -6,7 +6,7 @@ O Braze fornece métodos para atribuir atribuições aos usuários. Você poder�
 
 ### Atribuições padrão do usuário
 
-Para definir as atribuições do usuário coletadas automaticamente pelo Braze, você pode usar os métodos setter fornecidos com o SDK.
+Para definir atributos de usuário coletados automaticamente pelo Braze, você pode usar métodos de configuração que vêm com o SDK.
 
 ```javascript
 Braze.setFirstName("Name");
@@ -36,7 +36,7 @@ Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
 });
 ```
 
-#### Desativação de um atributo personalizado
+#### Removendo atributos personalizados
 
 ```javascript
 Braze.unsetCustomUserAttribute("attribute_key", function(){
@@ -48,7 +48,7 @@ Braze.unsetCustomUserAttribute("attribute_key", function(){
 
 ```javascript
 
-// Adds a string to a custom atttribute string array, or creates that array if one doesn't exist.
+// Adds a string to a custom attribute string array, or creates that array if one doesn't exist.
 Braze.addToCustomUserAttributeArray("my-attribute-array", "new or existing value", optionalCallback);
 
 // Removes a string from a custom attribute string array.

@@ -1,5 +1,5 @@
 ---
-nav_title: Nouvelles tentatives de contenu connecté
+nav_title: Tentatives de contenu connecté
 article_title: Nouvelles tentatives de contenu connecté
 page_order: 5
 description: "Cet article de référence explique comment gérer les tentatives de contenu connecté."

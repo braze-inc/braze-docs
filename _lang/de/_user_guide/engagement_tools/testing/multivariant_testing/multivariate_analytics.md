@@ -20,7 +20,7 @@ Ihre Analyseansicht variiert, je nachdem, ob Sie bei der Ersteinrichtung eine [O
 
 Wenn Sie beim Einrichten Ihrer Kampagne die Option **Keine Optimierung** gewählt haben, bleibt Ihre Analyseansicht unverändert. Auf der Seite **Kampagnenanalyse** Ihrer Kampagne sehen Sie die Leistung Ihrer Varianten im Vergleich zu Ihrer Kontrollgruppe, falls Sie eine enthalten haben.
 
-![Performance-Abschnitt der Campaign Analytics für eine E-Mail-Kampagne mit mehreren Varianten. In der Tabelle sind verschiedene Performance-Metriken für jede Variante aufgeführt, wie Empfänger:innen, Bounces, Klicks und Konversionen.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
+![Performance-Abschnitt der Campaign Analytics für eine E-Mail-Kampagne mit mehreren Varianten. Die Tabelle listet verschiedene Metriken für jede Variante auf, wie beispielsweise Empfänger:innen, Bounces, Klicks und Konversionen.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
 
 Weitere Einzelheiten finden Sie in dem Artikel [Campaign Analytics]({{site.baseurl}}/user_guide/analytics/reporting/campaign_analytics/) für Ihren Messaging-Kanal.
 
@@ -31,7 +31,7 @@ Wenn Sie bei der Einrichtung Ihrer Kampagne die **Gewinnvariante** für Ihre Opt
 Das **A/B-Test-Ergebnis** ist in zwei Registerkarten unterteilt: **Erster Test** und **Gewinnvariante**.
 
 {% tabs local %}
-{% tab Erster Test %}
+{% tab Initial Test %}
 
 Die Registerkarte **Erster Test** zeigt die Metriken für jede Variante des ersten A/B-Tests, der an einen Teil Ihres Zielsegments gesendet wurde. Sie können eine Zusammenfassung sehen, wie alle Varianten abgeschnitten haben und ob es einen Gewinner im Test gab oder nicht.
 
@@ -39,22 +39,22 @@ Wenn eine Variante alle anderen mit mehr als 95%iger [Sicherheit]({{site.baseurl
 
 Wenn keine Variante alle anderen mit 95%iger Sicherheit schlägt und Sie sich trotzdem dafür entscheiden, die leistungsstärkste Variante zu versenden, wird die leistungsstärkste Variante trotzdem versandt und mit der Bezeichnung "Gewinner" versehen.
 
-![Ergebnisse eines ersten Tests zur Ermittlung der Gewinner-Variante, bei dem keine Variante mit ausreichender Sicherheit besser abschnitt als die anderen, um die 95-Prozent-Konfidenzschwelle für statistische Signifikanz zu erreichen.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
+![Ergebnisse eines ersten Tests, der durchgeführt wurde, um die Gewinnervariante zu ermitteln, wobei keine Variante mit ausreichender Sicherheit besser abschnitt als die anderen, um die 95-Prozent-Konfidenzschwelle für statistische Signifikanz zu erreichen.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
 
 #### Wie die Gewinnvariante ausgewählt wird
 
-Braze testet alle Varianten gegeneinander mit [Pearson's Chi-Quadrat-Tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). Damit wird gemessen, ob eine Variante statistisch gesehen alle anderen bei einem Signifikanzniveau von p < 0,05 übertrifft oder nicht, was wir als 95 %ige Signifikanz bezeichnen. Ist dies der Fall, wird die gewinnende Variante mit dem Label "Gewinner" gekennzeichnet.
+Braze testet alle Varianten gegeneinander mit [Pearson's Chi-Quadrat-Tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). Dies misst, ob eine Variante alle anderen bei einem Signifikanzniveau von p <0,05, oder was wir als 95 %-Signifikanz bezeichnen, statistisch übertrifft. Ist dies der Fall, wird die gewinnende Variante mit dem Label "Gewinner" gekennzeichnet.
 
 Dies ist ein anderer Test als der Konfidenzwert, der nur die Leistung einer Variante im Vergleich zur Kontrolle mit einem numerischen Wert zwischen 0 und 100% beschreibt.
 
 Eine Variante kann besser abschneiden als die Kontrollgruppe, aber der Chi-Quadrat-Test prüft, ob eine Variante besser ist als alle anderen. [Nachfolgende Tests](#recommended-follow-ups) können weitere Details liefern.
 
 {% endtab %}
-{% tab Gewinnende Variante %}
+{% tab Winning Variant %}
 
 Die Registerkarte **Gewinnende Variante** zeigt die Ergebnisse des zweiten Versands, bei dem jedem verbleibenden Benutzer die Variante mit der besten Leistung aus dem ersten Test zugesandt wurde. **Zielgruppe %** entspricht dem Prozentsatz des Zielsegments, das Sie für die Gruppe der Gewinnvariante reserviert haben.
 
-![Die Ergebnisse der Gewinnvariante werden an die Gruppe der Gewinnvariante gesendet.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
+![Die Ergebnisse der Gewinnervariante wurden an die Gewinnervariantengruppe übermittelt.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -66,11 +66,11 @@ Wenn Sie die Leistung der Gewinner-Variante während der gesamten Kampagne, eins
 Wenn Sie bei der Einrichtung Ihrer Kampagne die Option **Personalisierte Variante** für Ihre Optimierung gewählt haben, ist das **A/B-Test-Ergebnis** in zwei Registerkarten unterteilt: **Erster Test** und **personalisierte Variante**.
 
 {% tabs local %}
-{% tab Erster Test %}
+{% tab Initial Test %}
 
 Die Registerkarte **Erster Test** zeigt die Metriken für jede Variante des ersten A/B-Tests, der an einen Teil Ihres Zielsegments gesendet wurde.
 
-![Ergebnisse eines ersten Tests zur Ermittlung der performantesten Variante für je:den Nutzer:in. Eine Tabelle zeigt die Performance der einzelnen Varianten auf der Grundlage verschiedener Metriken für den Zielkanal.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
+![Ergebnisse eines ersten Tests zur Ermittlung der performantesten Variante für je:den Nutzer:in. Eine Tabelle zeigt die Performance jeder Variante basierend auf verschiedenen Metriken für den Zielkanal.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
 
 Standardmäßig sucht der Test nach Assoziationen zwischen den benutzerdefinierten Ereignissen des Benutzers und seinen Einstellungen für die Nachrichtenvariante. Diese Analyse stellt fest, ob benutzerdefinierte Ereignisse die Wahrscheinlichkeit, auf eine bestimmte Nachrichtenvariante zu reagieren, erhöhen oder verringern. Diese Beziehungen werden dann verwendet, um zu bestimmen, welche Nutzer:innen welche Variante der Nachricht in der endgültigen Sendung erhalten.
 
@@ -78,9 +78,9 @@ Die Beziehungen zwischen benutzerdefinierten Ereignissen und Nachrichteneinstell
 
 ![]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
 
-Wenn der Test keine sinnvolle Beziehung zwischen angepassten Events und Variantenpräferenzen finden kann, greift er auf eine sitzungsbasierte Analysemethode zurück.
+Wenn der Test keine signifikante Beziehung zwischen angepassten Events und Pfadpräferenzen feststellen kann, greift er auf eine sitzungsbasierte Analysemethode zurück, und es werden keine angepassten Event-Datentabellen angezeigt.
 
-{% details Fallback-Analyse-Methode %}
+{% details Fallback analysis method %}
 
 **Sitzungsbasierte Analyse-Methode**<br>
 Wenn die Fallback-Methode für die Bestimmung der personalisierten Varianten verwendet wird, zeigt die Registerkarte **Erster Test** eine Aufschlüsselung der bevorzugten Varianten der Benutzer auf der Grundlage einer Kombination bestimmter Merkmale. 
@@ -91,9 +91,9 @@ Diese Merkmale sind:
 - **Frequenz:** Wie oft sie Sitzungen abhalten
 - **Amtszeit:** Wie lange sie bereits Nutzer:in sind
 
-Der Test könnte beispielsweise ergeben, dass die meisten Benutzer Variante A bevorzugen, aber Benutzer, die vor 3-12 Tagen eine Sitzung hatten, zwischen 1-12 Tagen zwischen den Sitzungen liegen und in den letzten 67-577 Tagen erstellt wurden, bevorzugen eher Variante B. Daher erhielten die Benutzer in dieser Teilpopulation beim zweiten Senden Variante B, während der Rest Variante A erhielt.
+Der Test könnte beispielsweise ergeben, dass die meisten Nutzer:innen Variante A bevorzugen, während Nutzer:innen, die vor etwa 3 bis 12 Tagen eine Sitzung hatten, zwischen 1 und 12 Tagen zwischen den Sitzungen liegen und in den letzten 67 bis 577 Tagen erstellt wurden, eher Variante B bevorzugen. Daher erhielten die Nutzer:innen dieser Teilpopulation bei der zweiten Versendung Variante B, während die übrigen Nutzer:innen Variante A erhielten.
 
-![Die Tabelle mit den Nutzereigenschaften, die zeigt, welche Nutzer:innen auf der Grundlage der drei Buckets für Häufigkeit, Häufigkeit und Dauer der Nutzung prognostiziert werden, Variante A und Variante B zu bevorzugen.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
+![Die Tabelle „Benutzermerkmale“ zeigt, welche Nutzer:innen voraussichtlich Variante A und Variante B bevorzugen, basierend auf den drei Buckets, in die sie hinsichtlich Aktualität, Häufigkeit und Dauer fallen.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
 
 **Wie personalisierte Varianten ausgewählt werden**<br>
 Bei dieser Methode ist die empfohlene Nachricht eines einzelnen Nutzers oder einer einzelnen Nutzerin die Summe der Effekte seiner spezifischen Häufigkeit, Häufigkeit und Dauer. Häufigkeit, Häufigkeit und Dauer der Nutzung werden in Buckets unterteilt, wie in der Tabelle **Nutzer:innen zu** sehen ist. Der Zeitbereich der einzelnen Buckets wird durch die Daten der Nutzer in jeder einzelnen Kampagne bestimmt und ändert sich von Kampagne zu Kampagne. 
@@ -103,7 +103,7 @@ Jeder Bucket kann einen unterschiedlichen Beitrag oder "Push" zu jeder Variante 
 {% enddetails %}
 
 {% endtab %}
-{% tab Personalisierte Variante %}
+{% tab Personalized Variant %}
 
 Die Registerkarte **Personalisierte Variante** zeigt die Ergebnisse des zweiten Versands, bei dem jedem verbleibenden Nutzer die Variante zugesandt wurde, mit der er sich am ehesten beschäftigen würde.
 
@@ -113,7 +113,7 @@ Die drei Karten auf dieser Seite zeigen Ihren voraussichtlichen Gewinn, das Gesa
 - **Gesamtergebnisse:** Die Ergebnisse des zweiten Versands auf der Grundlage der von Ihnen gewählten Optimierungsmetrik*(Unique Opens*, *Unique Clicks* oder *Primary Conversion Event*).
 - **Prognostizierte Ergebnisse:** Die voraussichtlichen Ergebnisse des zweiten Versands auf der Grundlage der von Ihnen gewählten Optimierungsmetrik, wenn Sie stattdessen nur die Gewinnvariante versendet hätten. 
 
-![Personalisierter Tab für eine Variante einer Kampagne, die für eindeutige Öffnungen optimiert ist. Die Karten zeigen den voraussichtlichen Aufschwung, die einmaligen Gesamtöffnungen (mit personalisierter Variante) und die voraussichtlichen einmaligen Öffnungen (mit Gewinnvariante).]({% image_buster /assets/img_archive/ab_analytics_pv_1.png %})
+![Personalisierter Tab für eine Variante einer Kampagne, die für eindeutige Öffnungen optimiert ist. Die Karten zeigen den prognostizierten Lift, die Gesamtzahl der eindeutigen Öffnungen (mit personalisierter Variante) und die prognostizierten eindeutigen Öffnungen (mit der erfolgreichen Variante).]({% image_buster /assets/img_archive/ab_analytics_pv_1.png %})
 
 Die Tabelle auf dieser Seite zeigt die Metriken für jede Variante aus dem personalisierten Variantenversand. **Zielgruppe %** entspricht dem Prozentsatz des Zielsegments, das Sie für die Gruppe der personalisierten Varianten reserviert haben.
 
@@ -148,6 +148,20 @@ Ein Test, der keine 95%ige Sicherheit bietet, kann dennoch wichtige Insights lie
 - Tests sind zwar nützlich, um herauszufinden, welche Art von Botschaft die meisten Reaktionen bei Ihrem Publikum hervorruft, aber es ist auch wichtig zu verstehen, welche Änderungen in der Botschaft nur eine vernachlässigbare Wirkung haben. Auf diese Weise können Sie entweder den Test für eine andere, effektivere Alternative fortsetzen oder die Zeit einsparen, die Sie vielleicht für die Entscheidung zwischen zwei alternativen Nachrichten gebraucht hätten.
 
 Unabhängig davon, ob Ihr Test einen klaren Gewinner hat oder nicht, kann es hilfreich sein, einen [Folgetest](#recommended-follow-ups) durchzuführen, um Ihre Ergebnisse zu bestätigen oder Ihre Erkenntnisse auf ein etwas anderes Szenario anzuwenden.
+
+## Unterschiede zwischen der Kontrollgruppe und der Variante
+
+Bei In-App-Nachrichten-Kampagnen können die Art und Weise, wie Nutzer:innen verfolgt werden, und die Protokollierung von Impressionen zu Abweichungen bei der erwarteten Aufteilung zwischen der Kontrollgruppe und der Variante führen. Dies liegt daran, dass die tatsächlich protokollierten Impressionen diese Aufteilung möglicherweise nicht widerspiegeln und Braze letztendlich keine Kontrolle über das individuelle Nutzerverhalten derjenigen hat, die den Trigger triggern.
+
+Nehmen wir beispielsweise an, eine Kampagne hat bei ihrem Start eine Zielgruppe von 200 Nutzern, wobei 100 Nutzer:innen zur Kontrollgruppe und 100 Nutzer:innen zur Variante gehören.
+
+Die 100 Nutzer:innen in der Variante erhalten die In-App-Nachricht, und 50 von ihnen triggern die Aktion und sehen die In-App-Nachricht. Die 100 Nutzer in der Kontrollgruppe werden nur dann erfasst, wenn sie die Aktion der Kampagne triggern. 75 von ihnen triggern die Aktion und protokollieren eine Impression, sehen jedoch die In-App-Nachricht nicht.
+
+Trotz der anfänglichen 50/50-Aufteilung sind die registrierten eindeutigen Impressionen nicht ausgewogen. Die Variante hat 50 Impressionen, während die Kontrollgruppe 75 Impressionen aufweist.
+
+### Verzögerungen bei In-App-Nachrichten 
+
+Bei ausgelösten In-App-Nachrichten-Kampagnen, die verzögerte Anzeigen enthalten, werden die Impressionen der Kontrollgruppe erfasst, wenn der Endnutzer die In-App-Nachricht ursprünglich erhalten hätte. Wenn beispielsweise eine Kampagne so eingestellt ist, dass die Anzeige um eine Stunde verzögert wird, werden die Impressionen der Kontrollgruppe erst nach Ablauf der einstündigen Verzögerung protokolliert. Dies unterstützt das genaue Tracking der Impressionen in Bezug auf den beabsichtigten Zeitpunkt der Zustellung der Nachrichten.
 
 ## Empfohlene Folgemaßnahmen {#recommended-follow-ups}
 

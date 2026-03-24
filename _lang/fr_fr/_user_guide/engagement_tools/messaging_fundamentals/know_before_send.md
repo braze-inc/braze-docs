@@ -1,9 +1,9 @@
 ---
-nav_title: À savoir avant l’envoi
+nav_title: "Veuillez vous informer avant d'envoyer"
 article_title: À savoir avant l’envoi
 description: "Après avoir consulté notre Guide de prélancement, consultez la liste finale des vérifications (les « pièges ») pour les cartes de contenu, les e-mails, les messages in-app, les notifications push et les SMS."
 alias: /know_before_send/
-page_order: 10
+page_order: 7
 tool:
     - Campaigns
     - Canvas
@@ -20,7 +20,7 @@ Bien que nous fournissions une liste exhaustive de ressources à consulter avant
 ## Généralités
 
 #### Choses à vérifier
-- [**Limites de taux d'API**](https://braze.com/resources/articles/whats-rate-limiting): Examinez les [limites de taux]({{site.baseurl}}/api/api_limits/) de l'API Braze pour vos espaces de travail afin d'éviter les erreurs. Si vous cherchez à augmenter vos limites de taux (et que vous faites déjà des requêtes en lots), contactez votre gestionnaire du succès des clients. Gardez à l’esprit que ce processus peut prendre un certain temps, alors prévoyez en conséquence.
+- [**Limites de taux d'API**](https://braze.com/resources/articles/whats-rate-limiting): Examinez les [limites de taux]({{site.baseurl}}/api/api_limits/) de l'API Braze pour vos espaces de travail afin d'éviter les erreurs. Si vous souhaitez augmenter vos limites de débit (et que vous regroupez déjà les requêtes), veuillez contacter votre gestionnaire de la satisfaction client. Gardez à l’esprit que ce processus peut prendre un certain temps, alors prévoyez en conséquence.
 - [**Remplacements nécessaires de la limitation de fréquence**]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping): Il vaut mieux que certaines campagnes (de messages transactionnels par exemple) arrivent systématiquement chez l’utilisateur même si vous avez déjà sa limite de fréquence (par exemple, notification de livraison d’un produit). Si vous souhaitez qu’une campagne particulière ignore les règles de limite de fréquence, vous pouvez configurer cela dans le tableau de bord de Braze lors de la planification de la livraison de cette campagne en cliquant sur le bouton Frequency Cap.
 
 #### Choses à savoir
@@ -46,7 +46,7 @@ Pour toute assistance supplémentaire avec Canvas et le dépannage des campagnes
 - **Envoi des facteurs de volume**: Certains facteurs qui déterminent les volumes d’envoi d’une IP sont les suivants :
   - Boîtes de réception : Les grands fournisseurs mondiaux d’e-mails peuvent accepter des millions de personnes par jour à partir d’une seule IP, alors qu’un fournisseur de messagerie national avec une infrastructure plus modeste ne sera peut-être pas en mesure de gérer un tel volume.
   - Réputation de l’expéditeur : Vous pouvez envoyer un volume plus important par jour à partir d’une seule IP si l’émetteur est capable de gérer un tel volume et si sa réputation d’expéditeur est suffisamment forte dans chaque boîte de réception ou domaine qu’il envoie.
-- **Meilleures pratiques**: Passez en revue les [meilleures pratiques de messagerie]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) de Braze et contactez votre équipe de compte Braze si vous souhaitez en savoir plus sur les services de délivrabilité.
+- **Meilleures pratiques**: Veuillez consulter [les meilleures pratiques en matière d'e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) Braze et contacter votre équipe de compte Braze si vous souhaitez en savoir plus sur les services de livrabilité.
 
 ## Notification push
 
@@ -83,13 +83,13 @@ Pour toute assistance supplémentaire avec Canvas et le dépannage des campagnes
 - **Priorité :** Si vous lancez plusieurs bannières, vous pouvez définir manuellement la priorité d'affichage de chaque bannière.
 
 #### Choses à savoir
-- **Personnalisation liquide :** La personnalisation liquide s'actualise à chaque début de session.
-- **Placement et taux de bannière :** Chaque placement de bannière peut être utilisé dans un maximum de 10 campagnes dans un espace de travail.  
+- **Personnalisation liquide :** La personnalisation liquide actualise chaque demande de rafraîchissement.
+- **Placement et taux de bannière :** Chaque emplacement de bannière peut être utilisé dans un maximum de 25 messages dans un espace de travail.  
 - **Clics et impressions :** Les clics et les impressions pour les bannières sont suivis automatiquement avec le SDK.
-- **Limites :**  Actuellement, les fonctionnalités suivantes ne sont pas prises en charge : Intégration de Canvas, campagnes déclenchées par l'API et basées sur des actions, Currents, contenu connecté, codes de promotion, licenciements contrôlés par l'utilisateur et `catalog_items` à l'aide de l'[étiquette`:rerender` ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid).
+- **Limites :**  Actuellement, les fonctionnalités suivantes ne sont pas prises en charge : Intégration Canvas, campagnes déclenchées par API et basées sur des actions, contenu connecté, codes de promotion, rejets contrôlés par l'utilisateur et`catalog_items`utilisation de[`:rerender`]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid)[l'étiquette]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid).
 - **Test :** Pour afficher la bannière de test, l'appareil que vous utilisez doit pouvoir recevoir des notifications push au premier plan.
 - **HTML personnalisé :** Exploitez le [pont JS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) pour enregistrer les clics lorsque vous utilisez du HTML personnalisé pour définir les actions de clic, comme les liens et les boutons. Les actions de clic ne sont enregistrées automatiquement que lorsque vous utilisez les composants préconstruits dans l'éditeur par glisser-déposer.
-- **Demande de placement :** Jusqu'à 10 placements peuvent être renvoyés au SDK par session. Chaque placement comprendra la bannière la plus prioritaire à laquelle l'utilisateur peut prétendre.
+- **Demande de placement :** Jusqu'à 10 emplacements peuvent être renvoyés au SDK dans une seule requête pour actualiser. Chaque placement comprendra la bannière la plus prioritaire à laquelle l'utilisateur peut prétendre.
 
 ## Cartes de contenu
 
@@ -103,7 +103,8 @@ Pour toute assistance supplémentaire avec Canvas et le dépannage des campagnes
 - **Actualisation de la carte de contenu**: Par défaut, Braze actualise les demandes de cartes de contenu lorsqu'elles se synchronisent au démarrage de la session, lors du balayage vers le bas du flux (mobile) et lorsque la vue des cartes est ouverte si la dernière actualisation remonte à plus d'une minute.
 - **Mettre en cache les cartes de contenu**: Les options de mise en cache des cartes de contenu se trouvent dans nos documents [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android) et [Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards). 
 - **Plafonnement de la fréquence**: Le plafonnement de fréquence ne s’applique pas aux cartes de contenu.
-- **Impressions**: Les impressions sont généralement enregistrées lorsqu'une carte est vue. Par exemple, si vous avez une boîte de réception pleine de cartes de contenu, une impression ne sera pas enregistrée tant que l’utilisateur ne sera pas allé sur la carte de contenu spécifique. Il y a certaines nuances entre les plateformes Web, Android et iOS.  
+- **Impressions**: Les impressions sont généralement enregistrées lorsqu'une carte est vue. Par exemple, si vous avez une boîte de réception pleine de cartes de contenu, une impression ne sera pas enregistrée tant que l’utilisateur ne sera pas allé sur la carte de contenu spécifique. Il y a certaines nuances entre les plateformes Web, Android et iOS.
+- **Sessions SDK et création de cartes** : Les cartes de contenu ne sont pas créées pour les utilisateurs sans session SDK, même si ces utilisateurs répondent aux critères du segment. Toutefois, si un utilisateur dispose déjà d'une session Android, les cartes de contenu avec des actions cliquables spécifiques à iOS seront tout de même créées, et l'utilisateur pourra visualiser ces cartes de contenu sur iOS une fois qu'il aura une session sur ce système. Veuillez vous référer à [la section Création de cartes]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) pour plus d'informations sur le moment où les cartes sont créées.  
 
 ## in-app Messages
 

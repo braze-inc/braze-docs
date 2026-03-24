@@ -22,7 +22,7 @@ To create and manage custom attributes in the dashboard, go to **Data Settings**
 The **Last updated** column lists the last time the custom attribute was edited, such as when it was last set to blocklist or active.
 
 {% alert important %}
-For proper message targeting, be sure that your custom attribute data type matches the actual custom attribute.
+For proper message targeting, be sure that your custom attribute data type matches the actual custom attribute. <br><br>For example, if `newsletter_subscribed` is defined as a string, your Liquid syntax should look like {% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == 'true' %}```{% endraw %}. If `newsletter_subscribed` is defined as a Boolean, the Liquid syntax shouldn't have single-quotation marks: {% raw %}```{% if {{custom_attribute.${newsletter_subscribed}}} == true %}```{% endraw %}.
 {% endalert %}
 
 From this page, you can view, manage, create, or blocklist existing custom attributes. Select the menu next to a custom attribute for the following actions:
@@ -50,15 +50,21 @@ There are two ways you can remove custom attributes from user profiles:
 * Select the custom attribute name to be removed in a [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/#removing-custom-attributes).
 * Set the `null` value in your API request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track).
 
-### Viewing usage reports
+### Exporting data
+
+To export the list of custom attributes as a CSV file, select **Export all** at the top of the page. The CSV file will be generated, and a download link will be emailed to you.
+
+## Viewing usage reports
 
 The usage report lists all the Canvases, campaigns, and segments using a specific custom attribute. This list doesn't include uses of Liquid. 
 
 You can view up to 100 usage reports at a time by selecting the checkboxes next to the respective custom attributes and then selecting **View usage report**.
 
-### Exporting data
+### Values tab
 
-To export the list of custom attributes as a CSV file, select **Export all** at the top of the page. The CSV file will be generated, and a download link will be emailed to you.
+When viewing a usage report, select the **Values** tab to view the top values of the selected custom attributes based on a sample of approximately 250,000 users. Note that because the results are sampled from a subset of users, the sample won't include all existing values. This means the **Values** tab shouldn't be used for troubleshooting or for use cases that require incorporating data from all users.
+
+![Usage report for selected custom attributes with an opened "Values" tab showing a pie chart of country attribute values, such as "US" and "PR".]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
 
 ## Setting custom attributes
 
@@ -71,7 +77,7 @@ The following lists methods across various platforms that are used to set custom
 - [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
 - [Unity]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=unity)
-- [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
+- [.NET MAUI (formerly Xamarin)]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
 - [Roku]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/)
 
 {% enddetails %}
@@ -140,10 +146,8 @@ Note that if you input any values with spaces in between, before, or after words
 
 | Segmentation options | Dropdown filter | Input options | Examples |
 | ---------------------| --------------- | ------------- | -------- |
-| Check if the string attribute **exactly matches** an inputted string| **EQUALS** | **STRING**<br>Case sensitive | If this filter specifies `book` and a user profile has a string attribute for `last_item_purchased` that contains `book`, the user will match this filter. |
 | Check if the string attribute **partially matches** an inputted string **OR** Regular Expression | **MATCHES REGEX** | **STRING** **OR** **REGULAR EXPRESSION** <br>Not case sensitive; maximum of 32,764 characters | 
 | Check if the string attribute **does not partially match** an inputted string **OR** Regular Expression | **DOES NOT MATCH REGEX** * | **STRING** **OR** **REGULAR EXPRESSION**<br>Not case sensitive; maximum of 32,764 characters |
-| Check if the string attribute **does not match** an inputted string| **DOES NOT EQUAL** | **STRING**<br>Not case sensitive  | If this filter specifies `book` and a user profile has a string attribute for `last_item_purchased` that doesn't contain `book`, the user will match this filter.|
 | Check if the string attribute **exists** on a user's profile and is not an empty string | **IS NOT BLANK** | **N/A** | If this filter specifies `favorite_genre` and a user profile has the attribute `favorite_genre`, the user will match this filter regardless of their attribute value. For example, the user can have `sci-fi`, `romance`, or another value.|
 | Check if the string attribute **does not exist** on a user's profile | **BLANK** | **N/A** | If this filter specifies `favorite_genre` and a user profile doesn't have the attribute `favorite_genre`, the user will match this filter.|
 | Check if the string exactly matches **any** of the inputted strings | **IS ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed (256 maximum) | If this filter specifies `book`, `bookmark`, and `reading light`, and a user profile has at least one of those strings, the user will match this filter. |
@@ -152,9 +156,7 @@ Note that if you input any values with spaces in between, before, or after words
 | Check if the string attribute **does not partially match any** of the inputted strings | **DOESN'T CONTAIN ANY OF** | **STRING**<br>Case sensitive; multiple strings allowed (256 maximum) | If this filter specifies `gold` and a user profile doesn't contain `gold` in any string, the user will match this filter.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-A date string such as "12-1-2021" or "12/1/2021" will be converted to a datetime object and treated as a [time attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time).
-{% endalert %}
+{% multi_lang_include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
 
 {% alert important %}
 When segmenting using the **DOES NOT MATCH REGEX** filter, you must already have a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank to ensure users are being targeted properly.
@@ -164,7 +166,7 @@ When segmenting using the **DOES NOT MATCH REGEX** filter, you must already have
 
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
 
-By default, the length of an array for an attribute is up to 500 items. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 500, when a user watches a 501st movie, the first movie will be removed from the array, and the most recent movie will be added.
+Arrays have a maximum size of 100&nbsp;KB. The default length for an attribute is up to 500 items. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 500, when a user watches a 501st movie, the first movie will be removed from the array, and the most recent movie will be added. 
 
 Note that if you input any values with spaces in between, before, or after words, Braze will also check for the same spaces.
 

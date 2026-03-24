@@ -68,7 +68,7 @@ Geben Sie in der Eingabeaufforderung **Auftrag konfigurieren** eine Bezeichnung 
 Wählen Sie schließlich die gewünschte Option für das Kontrollkästchen **Bestehende Nutzer:innen**. Wenn Sie dieses Kästchen aktiviert lassen, werden Nutzer:innen hinzugefügt, die bereits in der ausgewählten Lytics Zielgruppe vorhanden sind. Wenn diese Option nicht markiert ist, werden Nutzer:innen nur dann nach Braze exportiert, wenn sie die Zielgruppe nach Beginn des Workflows betreten oder verlassen.
 
 {% alert note %}
-Wenn Sie dieses Kästchen markieren, werden alle vorhandenen Nutzer:innen der ausgewählten Zielgruppe in Braze gepusht. Dies führt dazu, dass bei der ersten Synchronisierung ein Datenpunkt pro Nutzer:innen und Zielgruppen anfällt.
+Wenn Sie dieses Kästchen markieren, werden alle vorhandenen Nutzer:innen der ausgewählten Zielgruppe in Braze gepusht. Wenn Ihre Braze-Preise Datenpunkte enthalten, überwachen Sie die Datenpunkt-Nutzung entsprechend.
 {% endalert %}
 
 Klicken Sie abschließend auf **Fertig stellen**, um den Export zu starten und zu speichern.

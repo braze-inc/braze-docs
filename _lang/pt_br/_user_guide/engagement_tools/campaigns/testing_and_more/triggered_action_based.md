@@ -1,6 +1,6 @@
 ---
 nav_title: Campanhas acionadas por API e baseadas em ações
-article_title: Testando campanhas acionadas por API e baseadas em ações
+article_title: Teste campanhas baseadas em ação e disparadas por API
 page_order: 2
 page_type: reference
 description: "Este artigo de referência explica como testar campanhas acionadas por API e baseadas em ações."

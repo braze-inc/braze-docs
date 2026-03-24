@@ -9,8 +9,8 @@ channel:
   - RCS
 search_rank: 3
 guide_top_header: "SMS, MMS y RCS"
-guide_top_text: "Los servicios de mensajería SMS (Short Messaging Service), MMS (Multimedia Messaging Service) y RCS (Rich Communication Services) ofrecen una forma más directa de llegar a tus usuarios que la mayoría de los demás canales de mensajería, ya que utilizan su número de teléfono, lo que te permite llegar a ellos en tiempo real. ¡Echa un vistazo a los siguientes temas para empezar a utilizar Braze SMS, MMS o RCS!<br><br>¿No está preparado para ninguno de los siguientes temas? Dirígete a nuestra colección de <a href='/docs/sms_setup/'>configuraciones de SMS</a> para conocer los SMS en Braze. <br><br>**SMS, MMS y RCS sólo están disponibles en determinados paquetes Braze. Ponte en contacto con tu director de cuentas o administrador del éxito del cliente de Braze para empezar.**"
-description: "Esta página de inicio es el hogar de SMS (Servicio de mensajes cortos), MMS (Servicio de mensajes multimedia) y RCS (Servicios de comunicación enriquecidos). Estos servicios ofrecen una forma más directa de llegar a sus usuarios que la mayoría de los demás canales de mensajería, ya que utilizan su número de teléfono, lo que le permite llegar a ellos en tiempo real."
+guide_top_text: "Los servicios de mensajería SMS (Short Messaging Service), MMS (Multimedia Messaging Service) y RCS (Rich Communication Services) ofrecen una forma más directa de llegar a tus usuarios que la mayoría de los demás canales de mensajería, ya que utilizan su número de teléfono, lo que te permite llegar a ellos en tiempo real. ¡Echa un vistazo a los siguientes temas para empezar a utilizar Braze SMS, MMS o RCS!<br><br>¿No está preparado para ninguno de los siguientes temas? Dirígete a nuestra colección de <a href='/docs/about_sms/'>configuraciones de SMS</a> para conocer los SMS en Braze. <br><br>**La disponibilidad de SMS, MMS y RCS depende de tu paquete Braze. Ponte en contacto con tu director de cuentas o administrador del éxito del cliente para empezar.**"
+description: "Esta página de inicio es el hogar de SMS (servicio de mensajes cortos), MMS (servicio de mensajes multimedia) y RCS (servicios de comunicación enriquecidos). Estos servicios ofrecen una forma más directa de llegar a sus usuarios que la mayoría de los demás canales de mensajería, ya que utilizan su número de teléfono, lo que le permite llegar a ellos en tiempo real."
 
 guide_featured_title: "Artículos generales"
 guide_featured_list:
@@ -41,6 +41,9 @@ guide_featured_list:
 - name: "Informe"
   link: /docs/sms_mms_rcs_reporting/
   image: /assets/img/braze_icons/phone-02.svg
+- name: "Filtrado de clics de SMS y RCS Bot"
+  link: /docs/sms_rcs_bot_click_filtering/
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Calculadoras de facturación"
   link: /docs/sms_rcs_billing_calculators/
   image: /assets/img/braze_icons/calculator.svg
@@ -53,8 +56,11 @@ guide_menu_list:
 - name: "Acerca de SMS"
   link: /docs/about_sms/
   image: /assets/img/braze_icons/check-square-broken.svg
-- name: "Configuración de SMS"
-  link: /docs/sms_setup/
+- name: "Términos SMS que debes conocer"
+  link: /docs/sms_terms_to_know/
+  image: /assets/img/braze_icons/book-closed.svg
+- name: "Envío de mensajes SMS"
+  link: /docs/sms_message_sending/
   image: /assets/img/braze_icons/phone-02.svg
 - name: "Crear un mensaje SMS"
   link: /docs/create_sms_message/

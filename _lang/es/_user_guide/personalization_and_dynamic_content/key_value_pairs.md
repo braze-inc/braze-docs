@@ -127,7 +127,7 @@ Si utilizas la API del proveedor HTTP/2, cualquier carga útil individual que en
 
 ###### Campañas activadas por API
 
-Braze permite enviar pares clave-valor de cadena definidos a medida, conocidos como `extras`. Para acceder a sus extras en campañas activadas por API y campañas programadas activadas por API, en el panel de control establezca una clave como "example_key", y un valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Esto dará lugar a una salida de consola de desarrollador de `"extras": { "test": { "foo": 1, "bar": 1 }`
+Braze permite enviar pares clave-valor de cadena definidos a medida, conocidos como `extras`. Para acceder a tus extras en campañas desencadenadas por API y campañas desencadenadas por API programadas, en el panel establece una clave como"example_key",  y un valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Esto dará lugar a una salida de consola de desarrollador de `"extras": { "test": { "foo": 1, "bar": 1 }`
 
 ### Android
 
@@ -145,7 +145,7 @@ El backend de su aplicación debe ser capaz de procesar pares clave-valor person
 
 ###### Campañas activadas por API
 
-Braze permite enviar pares clave-valor de cadena definidos a medida, conocidos como `extras`. Para acceder a sus extras en campañas activadas por API y campañas programadas activadas por API, en el panel de control establezca una clave como "example_key", y un valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Esto dará lugar a una salida de la consola de desarrollador de `"extras": { "test": { "foo": 1, "bar": 1 }`.
+Braze permite enviar pares clave-valor de cadena definidos a medida, conocidos como `extras`. Para acceder a tus extras en campañas desencadenadas por API y campañas desencadenadas por API programadas, en el panel establece una clave como"example_key",  y un valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Esto dará lugar a una salida de la consola de desarrollador de `"extras": { "test": { "foo": 1, "bar": 1 }`.
 
 ##### Opciones de mensajería del FCM
 
@@ -167,13 +167,16 @@ El sistema operativo iOS puede [bloquear las notificaciones]({{site.baseurl}}/de
 
 ## Mensajes dentro de la aplicación
 
-Para añadir un par clave-valor a un mensaje dentro de la aplicación, selecciona la pestaña **Configuración** en el creador de mensajes, selecciona **Añadir nuevo par** y especifica tus pares clave-valor.
+Puedes añadir un par clave-valor a un mensaje dentro de la aplicación en el [editor tradicional]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/) seleccionando la pestaña **Configuración**, seleccionando **Añadir nuevo par** y, a continuación, especificando tus pares clave-valor.
 
+{% alert note %}
+Los pares clave-valor no se pueden configurar mediante el editor de arrastrar y soltar para los mensajes dentro de la aplicación.
+{% endalert %}
 ![]({% image_buster /assets/img_archive/keyvalue_iam.png %})
 
 #### Campañas activadas por API
 
-Braze permite enviar pares clave-valor de cadena definidos a medida, conocidos como `extras`. Para acceder a sus extras en campañas activadas por API y campañas programadas activadas por API, en el panel de control establezca una clave como "example_key", y un valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Esto dará lugar a una salida de la consola de desarrollador de `"extras": { "test": { "foo": 1, "bar": 1 }`.
+Braze permite enviar pares clave-valor de cadena definidos a medida, conocidos como `extras`. Para acceder a tus extras en campañas desencadenadas por API y campañas desencadenadas por API programadas, en el panel establece una clave como"example_key",  y un valor como {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %}. Esto dará lugar a una salida de la consola de desarrollador de `"extras": { "test": { "foo": 1, "bar": 1 }`.
 
 ## Correos electrónicos
 
@@ -183,12 +186,12 @@ Tanto SparkPost como SendGrid admiten pares clave-valor en los correos electrón
 Los correos electrónicos devueltos no entregarán pares clave-valor a SparkPost o SendGrid.
 {% endalert %}
 
-![Pestaña de información de envío del creador de mensajes de correo electrónico en Braze.]({% image_buster /assets/img_archive/keyvalue_email.png %})
+![Pestaña Información de envío del compositor de mensajes de correo electrónico en Braze.]({% image_buster /assets/img_archive/keyvalue_email.png %})
 
 ## Tarjetas de contenido
 
 Para añadir un par clave-valor a una tarjeta de contenido, ve a la pestaña **Configuración** del creador de mensajes Braze y selecciona **Añadir nuevo par**.
 
-![Añade un par clave-valor a la tarjeta de contenido]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
+![Añadir par clave-valor a la tarjeta de contenido]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
 
 

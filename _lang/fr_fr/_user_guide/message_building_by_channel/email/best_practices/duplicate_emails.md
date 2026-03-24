@@ -10,17 +10,17 @@ channel: email
 
 # Doublons d’e-mail
 
-> Pour les e-mails en double, si un e-mail se désabonne, d'autres profils (jusqu'à 100 profils) avec cette adresse e-mail sont mis à jour pour refléter le même état d'abonnement. Cela s'applique aux désabonnements et à d'autres modifications de l'état de l'abonnement, telles que l'état global de l'abonnement par e-mail et les statuts des groupes d'abonnement individuels.
+> Si plusieurs profils partagent une adresse e-mail et qu'un profil se désabonne, Braze met à jour les autres profils (jusqu'à 100) associés à cette adresse afin qu'ils aient le même statut d'abonnement. Ceci s'applique aux désabonnements et autres modifications telles que l'état global des abonnements et le statut des groupes d'abonnement individuels.
 
 ## Mises à jour de l'abonnement par e-mail
 
-Braze vérifie automatiquement et supprime les adresses e-mail en double lors de l’envoi d’une campagne e-mail. De cette façon, un e-mail n'est envoyé qu'une seule fois et est "dédupliqué", ce qui vérifie qu'il ne touche pas la même adresse e-mail plusieurs fois, même si plusieurs profils d'utilisateurs partagent une adresse commune.
+Braze vérifie et supprime automatiquement les adresses e-mail en double lors de l'envoi d'une campagne par e-mail. Cela empêche Braze d'envoyer l'e-mail plus d'une fois, même si plusieurs profils utilisateurs partagent une même adresse.
 
 {% alert tip %}
 Assurez-vous de bien connaître les outils que Braze fournit pour [gérer les abonnements aux e-mails des utilisateurs]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) et cibler les campagnes sur les utilisateurs ayant des états d'abonnement particuliers. Ces outils sont essentiels pour se conformer aux [lois anti-spam]({{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations).
 {% endalert %}
 
-Si les utilisateurs partagent une adresse e-mail, la mise à jour de l'un de ces utilisateurs propagera les modifications d'abonnement à ces utilisateurs (jusqu'à 100 utilisateurs).
+Si les utilisateurs partagent une adresse e-mail et que vous mettez à jour un profil utilisateur, Braze propage les modifications d'abonnement à tous ces utilisateurs (jusqu'à 100).
 
 ## Comportement d'envoi de message
 

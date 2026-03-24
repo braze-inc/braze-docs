@@ -1,11 +1,11 @@
 ---
 nav_title: Suivi des utilisateurs
-article_title: "Suivi des utilisateurs par le biais d'un formulaire"
+article_title: Suivre les utilisateurs à travers un formulaire
 description: "Découvrez comment identifier les utilisateurs qui soumettent un formulaire via votre page de destination en ajoutant une étiquette Liquid à vos messages."
 page_order: 2
 ---
 
-# Suivi des utilisateurs par le biais d'un formulaire
+# Suivre les utilisateurs à travers un formulaire
 
 > Découvrez comment suivre les utilisateurs qui soumettent un formulaire via votre page d'atterrissage en ajoutant une étiquette Liquid de page d'atterrissage à vos messages. Cette étiquette Liquid est prise en charge sur tous les canaux d'envoi de messages de Braze, y compris les e-mails, les SMS, les messages in-app, et plus encore. Pour en savoir plus sur les données de suivi, voir [À propos des données de suivi des pages d'atterrissage]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/about_tracking_data).
 
@@ -15,7 +15,7 @@ Vous pouvez ajouter une étiquette Liquid {% raw %}`{% landing_page_url %}`{% en
 
 {% raw %}
 ```html
-<a href=" {% landing_page_url customer-survey %}" class="button">Take the Survey!</a>
+<a href="{% landing_page_url customer-survey %}" class="button">Take the Survey!</a>
 ```
 {% endraw %}
 
@@ -37,7 +37,7 @@ Braze utilisera l'URL de votre page de destination pour générer son étiquette
 Si vous modifiez l'URL de la page après l'envoi de votre message, tout utilisateur qui tente de visiter votre page d'atterrissage à l'aide de l'ancienne URL sera envoyé sur une page `404`.
 {% endalert %}
 
-![Exemple d'URL d'une page d'atterrissage en Braze.]({% image_buster /assets/img/landing_pages/url-handle-example.png %}){: style="max-width:80%;"}
+![Un exemple d'URL de page pour une page d'atterrissage dans Braze.]({% image_buster /assets/img/landing_pages/url-handle-example.png %}){: style="max-width:80%;"}
 
 ### Étape 2 : Générer l'étiquette Liquid
 
@@ -53,7 +53,7 @@ Braze génère automatiquement une étiquette Liquid à l'aide de [l'URL de votr
 
 Pour ajouter l'étiquette Liquid à votre message, vous pouvez soit sélectionner **Insérer**, soit copier l'extrait de code dans votre presse-papiers et l'ajouter manuellement.
 
-![Une étiquette Liquid générée automatiquement pour la page d'atterrissage sélectionnée.]({% image_buster /assets/img/landing_pages/get-snippet.png %}){: style="max-width:40%;"}
+![Une étiquette Liquid générée automatiquement pour la page de destination sélectionnée.]({% image_buster /assets/img/landing_pages/get-snippet.png %}){: style="max-width:40%;"}
 
 Votre extrait de code sera similaire à ce qui suit :
 

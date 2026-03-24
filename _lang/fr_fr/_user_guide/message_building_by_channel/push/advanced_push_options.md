@@ -1,5 +1,5 @@
 ---
-nav_title: "Options avancées de notification push"
+nav_title: "Options avancées de poussée"
 article_title: Options avancées de notification push
 page_order: 5
 layout: dev_guide

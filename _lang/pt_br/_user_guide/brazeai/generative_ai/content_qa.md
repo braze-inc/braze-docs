@@ -5,9 +5,9 @@ page_order: 4
 description: "Este artigo de referência aborda como realizar a garantia de qualidade do conteúdo de sua mensagem com IA diretamente do criador de mensagens."
 ---
 
-# QA de Conteúdo com BrazeAI<sup>TM</sup>
+# QA de Conteúdo com BrazeAI
 
-> Aprenda a fazer QA do seu conteúdo com BrazeAI<sup>TM</sup>, para que você possa identificar erros de ortografia, problemas gramaticais, tom inadequado ou linguagem ofensiva—antes de enviar.
+> Aprenda como fazer QA do seu conteúdo com BrazeAI<sup>TM</sup>, para que você possa identificar erros de ortografia, problemas gramaticais, tom inadequado ou linguagem ofensiva—antes de enviar.
 
 ## Recursos suportados
 
@@ -19,20 +19,20 @@ Os seguintes recursos são suportados para ajudar a melhorar a qualidade do seu 
 | Análise de tom              | Avalia o tom da mensagem para identificar possíveis problemas. Isso ajuda a garantir que o tom pretendido se alinhe ao estilo de comunicação desejado e ajuda a evitar mal-entendidos ou ofensas não intencionais. |
 | Detecção de linguagem ofensiva | Examina sua mensagem em busca de qualquer linguagem potencialmente ofensiva ou inadequada, permitindo que você revise seu conteúdo e mantenha uma comunicação respeitosa. |
 | Verificação de conteúdo acidental   | Detecta qualquer inclusão de código, linguagem de marcação ou mensagens de teste que possam ter sido adicionadas involuntariamente, incluindo qualquer código Liquid que não foi renderizado para um usuário teste. |
-| Suporte multilíngue     | Embora não seja oficialmente suportado pela OpenAI, o GPT pode entender [várias línguas](https://openai.com/research/gpt-4#:~:text=GPT%2D4%203%2Dshot%20accuracy%20on%20MMLU%20across%20languages). Tenha em mente que o Braze não passa nenhuma informação sobre o idioma ou localidade do seu texto quando é enviado para a OpenAI, então seus resultados podem variar dependendo do idioma que você está escrevendo. |
+| Suporte multilíngue     | Embora não seja oficialmente suportado pela OpenAI, o GPT pode entender [várias línguas](https://openai.com/research/gpt-4#:~:text=GPT%2D4%203%2Dshot%20accuracy%20on%20MMLU%20across%20languages). Tenha em mente que a Braze não passa nenhuma informação sobre o idioma ou localidade do seu texto quando é enviado para a OpenAI, então seus resultados podem variar dependendo do idioma que você está escrevendo. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Usando BrazeAI<sup>TM</sup> para QA de conteúdo
 
 {% alert note %}
-Este recurso está disponível apenas para canais de SMS, push Android e push iOS neste momento.
+Este recurso está disponível apenas para SMS, push Android, push iOS e mensagens tradicionais no app neste momento.
 {% endalert %}
 
-1. Após compor uma mensagem de push móvel ou SMS, navegue até a aba **Teste**.
+1. Após compor um push móvel, SMS ou mensagem tradicional no app, navegue até a guia **Teste**.
 2. Localize a seção **Controle de qualidade do conteúdo com IA**.
 3. Clique em **Test Content (Testar conteúdo**).
 
-![QA de Conteúdo com a seção de IA da aba Teste.]({% image_buster /assets/img/content_qa_ai.png %})
+![Seção de QA de Conteúdo com IA da guia Teste.]({% image_buster /assets/img/content_qa_ai.png %})
 
 ## Melhores práticas
 

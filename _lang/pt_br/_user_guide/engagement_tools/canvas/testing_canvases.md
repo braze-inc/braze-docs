@@ -1,8 +1,8 @@
 ---
-nav_title: Testando canvas
-article_title: Testando canvas
+nav_title: Telas de teste
+article_title: Telas de teste
 layout: dev_guide
-guide_top_header: "Testando canvas"
+guide_top_header: "Telas de teste"
 guide_top_text: "Depois de enviar sua canva, você deve sempre olhar os resultados para garantir que sua canva foi bem e afetará positivamente seu envio de mensagens futuro.<br><br> Aqui, você encontrará recursos sobre análise de dados do canva e outros relatórios para ajudá-lo a medir a eficácia do seu envio de mensagens para seus usuários."
 page_order: 4
 
@@ -17,7 +17,7 @@ guide_featured_list:
   - name: Prévia das jornadas do usuário
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths/
     image: /assets/img/braze_icons/target-04.svg
-  - name: Enviando canvas de teste
+  - name: Enviar telas de teste
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     image: /assets/img/braze_icons/user-check-01.svg
   - name: Análise de dados do Canva

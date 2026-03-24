@@ -20,19 +20,18 @@ As a convenience, a summary of supported personalization tags are provided. For 
 | -------------  | ---- |
 | Standard (Default) Attributes | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` <br> `{{subscribed_state.${email_global}}}` <br> `{{subscribed_state.${subscription_group_id}}}` |
 | Device Attributes | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
-| [Email List Attributes]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) | `{{${set_user_to_unsubscribed_url}}}` <br>This tag replaces the previous `{{${unsubscribe_url}}}` tag. While the older tag will still work in previously created emails, we recommend that you use the newer tag instead. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
-| [SMS Attributes]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword) | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
-| [WhatsApp Attributes]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/) | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` |
-| Campaign Attributes | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
+| <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions'>Email List Attributes</a> | `{{${set_user_to_unsubscribed_url}}}` <br>This tag replaces the previous `{{${unsubscribe_url}}}` tag. While the older tag will still work in previously created emails, we recommend that you use the newer tag instead. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
+| <a href='/docs/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/#trigger-messages'>SMS Attributes</a> | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
+| <a href='/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/'>WhatsApp Attributes</a> | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` <br> `{{whats_app.${inbound_flow_response}}}` <br> `{{whats_app.${inbound_product_id}}}` <br> `{{whats_app.${inbound_catalog_id}}}` |
+| Campaign Attributes and Canvas Step Attributes | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
 | Canvas Attributes | `{{canvas.${name}}}` <br> `{{canvas.${api_id}}}` <br> `{{canvas.${variant_name}}}` <br> `{{canvas.${variant_api_id}}}` |
-| Canvas Step Attributes | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
 | Card Attributes | `{{card.${api_id}}}` <br> `{{card.${name}}}` |
 | Geofencing Events | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
 | Event Properties <br> (These are custom to your workspace.)| `{{event_properties.${your_custom_event_property}}}` |
 | Canvas Context Variables | `{{context}}` |
 | Custom Attributes <br> (These are custom to your workspace.) | `{{custom_attribute.${your_custom_attribute}}}` |
-| [API trigger Properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) |`{{api_trigger_properties}}` |
-| Canvas Entry Properties | `{{canvas_entry_properties.${property_name}}}` |
+| <a href='/docs/api/objects_filters/trigger_properties_object/'>API Trigger Properties</a> |`{{api_trigger_properties}}` |
+| Canvas Entry Properties | `{{context.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
@@ -96,7 +95,7 @@ User is in list of apps
 
 ## Targeted device information
 
-For push notifications and in-app message channels, you can template in the following attributes for the device to which a message is being sent. That is, a push notification or in-app message can include device attributes of the device on which the message is being read. Note that these attributes won't work for Content Cards. 
+For push notifications, in-app messages, and Banners, you can template in the following attributes for the device that receives the message. A push notification, in-app message, or Banner can include attributes of the device on which the user reads the message. These attributes don't work for Content Cards or emails. For emails, messages are rendered before sending, so the device the user opens the email on is unknown at that time.
 
 |Tag | Description |
 |------------------|---|
@@ -241,7 +240,7 @@ You can utilize the HTTP status from a [Connected Content]({{site.baseurl}}/user
 This key will only be automatically added to the Connected Content object if the endpoint returns a JSON object. If the endpoint returns an array or other type, then that key can't be set automatically in the response.
 {% endalert %}
 
-## Sending messages based on language, most recent locale, and time zone
+## Send messages based on language, most recent locale, and time zone
 
 In some situations, you may wish to send messages that are specific to particular locales. For example, Brazilian Portuguese is typically different than European Portuguese.
 
@@ -293,6 +292,34 @@ It is between 2:00:00 pm and 2:59:59 pm PT!
 ```
 
 {% endraw %}
+
+## Send messages with a random number
+
+{% raw %}
+The `{% random %}` tag returns a random number. You can use it for A/B-style logic, sampling, or varying message content.
+
+| Tag | Description |
+|-------|--------------|
+| `{% random %}` | A float between 0 and 1 (inclusive of 0, exclusive of 1). |
+| `{% random 10 %}` (integer argument) | An integer ranging from 0 up to, but not including, the specified integer. For example, `{% random 10 %}` returns an integer from 0 to 9. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% endraw %}
+
+### Use case: Send users random variants
+
+{% raw %}
+```liquid
+{% capture roll_str %}{% random %}{% endcapture %}
+{% assign roll = roll_str | plus: 0 %}
+{% if roll < 0.5 %}
+Show variant A
+{% else %}
+Show variant B
+{% endif %}
+```
+{% endraw %}
+
 
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags

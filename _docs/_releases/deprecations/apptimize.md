@@ -17,7 +17,7 @@ If you are currently using Apptimize with Braze, you will not experience a disru
 
 <br>
 
-Reach out to your Braze or Apptimize representative if you have any further questions.
+Contact your Braze or Apptimize representative if you have any further questions.
 {% endalert %}
 
 
@@ -30,8 +30,7 @@ data across both platforms.
 
 ## Use cases
 
-With Braze and Apptimize together, you can leverage both platforms in conjunction
-to create powerful end-to-end experiences:
+With Braze and Apptimize together, you can use both platforms to create powerful end-to-end experiences:
 
 * Synchronize the in-app and CRM marketing experiences for a custom promotion.
 * Test a new onboarding experience in Apptimize, and use Braze to nurture users throughout the new flow.

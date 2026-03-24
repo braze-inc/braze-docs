@@ -3,7 +3,7 @@ nav_title: Dashboard de performance do canal
 article_title: Dashboard de performance do canal
 page_order: 2
 page_type: reference
-description: "Esse artigo de referência aborda o Channel Performance Dashboard (Painel de desempenho do canal), que permite visualizar as métricas de performance de canais inteiros em campanhas e Canvas."
+description: "Este artigo de referência cobre o painel de desempenho do canal, que permite visualizar métricas de desempenho para canais inteiros em campanhas e Canvases."
 tool: 
   - Reports
 
@@ -13,7 +13,7 @@ tool:
 
 > Os dashboards de desempenho do canal mostram métricas de desempenho agregadas para um canal inteiro, tanto de campanhas quanto de Canvas. Atualmente, esses dashboards estão disponíveis para envio de e-mail e SMS.
 
-![Dashboard de performance de e-mail exibindo o engajamento do canal de e-mail nos últimos trinta dias.]({% image_buster /assets/img_archive/email_performance_dashboard_1.png %})
+![Dashboard de performance de e-mail que exibe o engajamento do canal de e-mail dos últimos trinta dias.]({% image_buster /assets/img_archive/email_performance_dashboard_1.png %})
 
 Você pode visualizar os seguintes dashboards:
 - [Painel de desempenho de e-mail](#email-performance-dashboard)
@@ -26,18 +26,18 @@ Visualize seu dashboard de desempenho de e-mail acessando **Análise de** dados 
 
 ### Como as métricas são calculadas
 
-![]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![Uma campanha de e-mail de exemplo com 335.630 envios, com uma média de 11.187,667 por dia.]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
 Os cálculos para diferentes métricas no dashboard de desempenho de e-mail são os mesmos que aqueles em um nível de mensagem individual (como a análise de dados da campanha). Nesse dashboard, as métricas são agregadas em todas as campanhas e Canvas para o intervalo de datas que você selecionou. Para saber mais sobre essas definições, consulte [Métricas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
 
-Cada bloco mostra primeiro a métrica de taxa, seguida pela métrica de contagem (com exceção de *Envios*, que exibe a métrica de contagem seguida pela média por dia). Por exemplo, o bloco de cliques exclusivos contém a *taxa de cliques exclusivos* do período de tempo selecionado e a contagem do número total de cliques exclusivos desse período de tempo. Cada bloco também mostra a [comparação com o último período](#comparison-to-last-period-change-in-totals-or-rates).
+Cada bloco mostra primeiro a métrica de taxa, seguida pela métrica de contagem (com exceção de *Envios*, que exibe a métrica de contagem seguida pela média por dia). Por exemplo, o bloco de cliques exclusivos contém a *taxa de cliques exclusivos* do período de tempo selecionado e a contagem do número total de cliques exclusivos desse período de tempo. Cada bloco também mostra a [comparação com o último período](#comparing-time-periods).
 
 | Métrico | Tipo | Cálculo |
 | --- | --- | ---- |
 | Envios | Contagem | Número total de envios em cada dia no intervalo de datas |
 | Taxa de entrega | Taxa | (Número total de entregas em cada dia do intervalo de datas) / (Número total de envios em cada dia do intervalo de datas) |
 | Taxa de bounce | Taxa | (Número total de bounces em cada dia do intervalo de datas) / (Número total de envios em cada dia do intervalo de datas) |
-| Taxa de cancelamento de inscrição | Taxa | (Número total de cancelamentos de inscrição exclusivos em cada dia no intervalo de datas) / (Número total de entregas em um intervalo de datas)<br><br>Isso usa cancelamentos de inscrição exclusivos, que também são usados em Análise de dados da campanha, Visão geral e Criador de relatórios. Esses cancelamentos de inscrição são registrados em todas as fontes (como SDK, API REST, importações de CSV, e-mails e cancelamentos de inscrição em listas). As taxas de cancelamento de inscrição na análise do Campaign e do Canvas são cancelamentos de inscrição que ocorrem como resultado de um clique de cancelamento em um e-mail enviado pelo Braze.  |
+| Taxa de cancelamento de inscrição | Taxa | (Número total de cancelamentos de inscrição exclusivos em cada dia no intervalo de datas) / (Número total de entregas em um intervalo de datas)<br><br>Isso usa cancelamentos de inscrição exclusivos, que também são usados em Análise de dados da campanha, Visão geral e Criador de relatórios. Essas cancelamentos de inscrição são registrados em todas as fontes (como SDK, API REST, importações CSV, e-mails e cancelamentos de inscrição em listas). As taxas de cancelamento de inscrição nas análises de Campanha e Canvas são cancelamentos que ocorrem como resultado de um clique de cancelamento de inscrição em um e-mail enviado pelo Braze.  |
 | Taxa de aberturas únicas | Taxa | (Número total de aberturas exclusivas em cada dia no intervalo de datas) / (Número total de entregas em um intervalo de datas) |
 | Outra taxa de abertura | Taxa | (Número total de outras aberturas em cada dia no intervalo de datas) / (Número total de entregas no intervalo de datas)<br><br>Outras aberturas incluem e-mails que não foram identificados como aberturas de máquina, como quando um usuário abre um e-mail. Essa métrica não é exclusiva e é uma submétrica do total de aberturas.  |
 | Taxa de cliques únicos | Taxa | (Número total de cliques exclusivos em cada dia no intervalo de datas) / (Número total de entregas em um intervalo de datas) |
@@ -60,32 +60,32 @@ A categoria "Outros" inclui qualquer string de usuário que não possa ser ident
 
 Para entender melhor o que está nessa categoria "Outros", você pode extrair os agentes de usuário usando uma dessas opções:
 
-1. O [Currents]({{site.baseurl}}/user_guide/data/braze_currents) enviará a string exata do agente do usuário que foi recuperada dos dispositivos dos seus usuários.
+1. [Currents]({{site.baseurl}}/user_guide/data/braze_currents) enviará a você a string exata do agente do usuário que foi recuperada dos dispositivos dos seus usuários.
 2. Aproveite nosso [Criador de consultas]({{site.baseurl}}/user_guide/analytics/query_builder) para usar SQL ou nosso [Criador de consultas com IA]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) para visualizar os agentes de usuário.
 
-![Relatório Engajamento por dispositivo, que mostra o número de cliques para celular, desktop, tablet e outros. O maior número de cliques ocorre em dispositivos móveis.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
+![Relatório de Engajamento por Dispositivo que mostra o número de cliques para dispositivos móveis, desktop, tablet e outros dispositivos. O maior número de cliques ocorre em dispositivos móveis.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 
-Para abertura de e-mails, a Braze separará o Google Image Proxy, o Apple Image Proxy e o Yahoo Mail Proxy. Esses serviços armazenam em cache e carregam todas as imagens incorporadas em um e-mail antes que ele seja entregue ao destinatário. Como resultado, isso disparará uma abertura de e-mail dos servidores do provedor de caixa de e-mail em vez do servidor do destinatário, o que pode levar a aberturas de e-mail inflacionadas. Esses serviços têm como objetivo melhorar a privacidade, a segurança, a performance e a eficiência no carregamento de imagens. Isso também pode conter aberturas reais de destinatários, pois esses serviços de proxy mascaram o agente do usuário, e categorizamos os dados de usuários usando o agente do usuário.
+Para abertura de e-mails, a Braze separará o Google Image Proxy, o Apple Image Proxy e o Yahoo Mail Proxy. Esses serviços armazenam em cache e carregam todas as imagens incorporadas em um e-mail antes que ele seja entregue ao destinatário. Como resultado, isso disparará uma abertura de e-mail dos servidores do provedor de caixa de e-mail em vez do servidor do destinatário, o que pode levar a aberturas de e-mail inflacionadas. Esses serviços têm como objetivo melhorar a privacidade, a segurança, a performance e a eficiência no carregamento de imagens. Isso também pode conter aberturas reais de destinatários, já que esses serviços proxy mascaram o agente do usuário, e categorizamos os dados proxy usando o agente do usuário.
 
-![Relatório "Engajamento por dispositivo" que mostra o número de cliques para celular, desktop, tablet, Apple Privacy Proxy, Google Image Proxy, Yahoo Mail Proxy e outros. O maior número de aberturas ocorre em dispositivos móveis.]({% image_buster /assets/img/engagement_by_device_type_proxy.png %}){: style="max-width:70%;"}
+![Relatório de Engajamento por Dispositivo que mostra o número de cliques para Móvel, Desktop, Tablet, Apple Privacy Proxy, Google Image Proxy, Yahoo Mail Proxy e Outros. O maior número de aberturas ocorre em dispositivos móveis.]({% image_buster /assets/img/engagement_by_device_type_proxy.png %}){: style="max-width:70%;"}
 
 ### Engajamento por provedor de caixa de e-mail
 
-O relatório de **engajamento por provedor de caixa de e-mail** exibe os principais provedores de caixa de e-mail que contribuem para seus cliques ou aberturas. Você pode clicar em provedores de caixa de e-mail principais específicos para se aprofundar em domínios de recebimento específicos. Por exemplo, se a Microsoft estiver listada nesse relatório como um dos principais provedores de caixa de e-mail, você poderá visualizar detalhes dos domínios de recebimento, como "outlook.com", "hotmail.com", "live.com" e outros.
+O relatório de **engajamento por provedor de caixa de e-mail** exibe os principais provedores de caixa de e-mail que contribuem para seus cliques ou aberturas. Você pode clicar em provedores de caixa de e-mail principais específicos para se aprofundar em domínios de recebimento específicos. Por exemplo, se a Microsoft estiver listada neste relatório como uma das suas principais métricas de provedor de caixa de e-mail, você pode visualizar mais detalhes para seus domínios de recebimento, como “outlook.com”, “hotmail.com”, “live.com” e mais.
 
-![]({% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}){: style="max-width:70%;"}
+![Um exemplo de relatório de Engajamento por Provedor de Caixa de E-mail com Google, Apple iCloud, Yahoo, Microsoft e Mail.Ru Grupo e seu número correspondente de cliques.]({% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}){: style="max-width:70%;"}
 
 ### Horário do engajamento
 
-O relatório **Time of Engagement (Tempo de engajamento** ) exibe dados de usuários que se engajam com seus e-mails. Isso pode ajudar a responder perguntas como, por exemplo, em que dia da semana ou em que horário há o maior engajamento de seus clientes. Com esses insights, você pode experimentar o melhor dia ou horário para enviar suas mensagens para aumentar o engajamento. Note que esses horários são baseados no fuso horário de sua empresa.
+O relatório **Time of Engagement (Tempo de engajamento** ) exibe dados de usuários que se engajam com seus e-mails. Isso pode ajudar a responder perguntas como, por exemplo, em que dia da semana ou em que horário há o maior engajamento de seus clientes. Com esses insights, você pode experimentar o melhor dia ou horário para enviar suas mensagens para aumentar o engajamento. Observe que esses horários são baseados no fuso horário da sua empresa.
 
-O relatório de engajamento **do dia da semana** divide as aberturas ou os cliques por dia da semana. 
+O relatório de engajamento **Dia da semana** detalha aberturas ou cliques por dia da semana. 
 
-![]({% image_buster /assets/img_archive/time_engagement.png %})
+![Um exemplo de relatório de engajamento Dia da semana com o maior número de cliques na segunda e na quarta.]({% image_buster /assets/img_archive/time_engagement.png %})
 
-O relatório de engajamento **Hora do dia** divide as aberturas ou os cliques por hora em uma janela de 24 horas.
+O relatório de engajamento **Hora do dia** detalha aberturas ou cliques por cada hora em uma janela de 24 horas.
 
-![]({% image_buster /assets/img_archive/time_engagement_day.png %})
+![Um exemplo de relatório de engajamento Hora do dia com as aberturas ou cliques das 12h às 23h.]({% image_buster /assets/img_archive/time_engagement_day.png %})
 
 Para saber mais sobre a análise de dados de seus e-mails, consulte [Relatórios de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
@@ -95,7 +95,7 @@ Para usar seu dashboard de desempenho de SMS, acesse **Análise de dados** > **D
 
 ### Como as métricas são calculadas
 
-![]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![Uma campanha de SMS de exemplo com 335.630 envios, com uma média de 11.187,667 por dia.]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
 Os cálculos para diferentes métricas no dashboard de performance de SMS são os mesmos que aqueles em um nível de mensagem individual (como análise de dados de campanha). Nesse dashboard, as métricas são agregadas em todas as campanhas e Canvas para o intervalo de datas que você selecionou. Para saber mais sobre essas definições, consulte [Métricas de SMS]({{site.baseurl}}/sms_mms_rcs_reporting/).
 
@@ -120,11 +120,11 @@ Você pode filtrar os dados em seu dashboard usando as seguintes opções de fil
 - **Canvas:** Escolha até 10 telas. Quando aplicado, seu dashboard mostrará métricas apenas para os canvas selecionados. Se você selecionar um filtro de tag primeiro, suas opções de filtros de Canvas incluirão apenas Canvas que tenham a tag selecionada.
 - **Campanha:** Escolha até 10 campanhas. Quando aplicado, seu dashboard mostrará métricas apenas para as campanhas selecionadas. Se você selecionar um filtro de tag primeiro, suas opções de filtros de campanha incluirão apenas campanhas que tenham a tag selecionada.
 
-![Opções de filtro no dashboard de performance do canal, onde você pode selecionar uma tag e uma lista de telas para filtrar.]({% image_buster /assets/img_archive/dashboard_filters.png %})
+![Opções de filtro no Channel Performance Dashboard, onde você pode selecionar uma tag e uma lista de Canvas para filtrar.]({% image_buster /assets/img_archive/dashboard_filters.png %})
 
 ## Comparação de períodos de tempo
 
-O dashboard de performance do canal compara automaticamente o período de tempo que você selecionou no intervalo de datas com o período de tempo anterior, totalizando o mesmo número de dias. Por exemplo, se você escolher "Last 7 Days" (Últimos 7 dias) como seu intervalo de datas no dashboard, a comparação com o último período comparará as métricas dos últimos sete dias com as dos sete dias anteriores. Se você selecionar um intervalo de datas personalizado - digamos, de 10 a 15 de maio, o que corresponde a seis dias de dados -, o dashboard comparará as métricas desses dias com as métricas de 4 a 9 de maio.
+O painel de desempenho do canal compara automaticamente o período de tempo que você selecionou no intervalo de datas em relação ao período de tempo anterior, totalizando o mesmo número de dias. Por exemplo, se você escolher "Last 7 Days" (Últimos 7 dias) como seu intervalo de datas no dashboard, a comparação com o último período comparará as métricas dos últimos sete dias com as dos sete dias anteriores. Se você selecionar um intervalo de datas personalizado - digamos, de 10 a 15 de maio, o que corresponde a seis dias de dados -, o dashboard comparará as métricas desses dias com as métricas de 4 a 9 de maio.
 
 A comparação é a mudança percentual entre o último período e o atual, calculada pela diferença entre os dois períodos e dividida pela métrica do último período.
 
@@ -132,7 +132,7 @@ A comparação é a mudança percentual entre o último período e o atual, calc
 
 Você pode alternar entre **Show Change in Totals (Mostrar alteração nos totais) - que**compara as contagens totais (como o número de e-mails entregues) entre os dois períodos - e **Show Change in Rates (Mostrar alteração nas taxas) - que**compara as taxas (como a taxa de entrega).
 
-![Botões de rádio para alternar entre mostrar a alteração nos totais ou a alteração nas taxas do dashboard de performance do canal.]({% image_buster /assets/img_archive/email_performance_dashboard_3.png %}){: style="max-width:60%"}
+![Botões de opção para alternar entre mostrar a mudança nos totais ou a mudança nas taxas para o Painel de Desempenho do Canal.]({% image_buster /assets/img_archive/email_performance_dashboard_3.png %}){: style="max-width:60%"}
 
 ## Perguntas frequentes
 

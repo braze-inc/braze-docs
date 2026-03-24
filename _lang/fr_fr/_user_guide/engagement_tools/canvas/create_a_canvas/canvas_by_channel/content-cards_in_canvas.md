@@ -15,7 +15,7 @@ channel: content cards
 
 Comme pour d’autres canaux de communication Canvas, les cartes de contenu seront envoyées sur l’appareil d’un utilisateur, lorsqu’elles répondent aux critères d’audience et de ciblage indiqués pour son étape. Une fois la carte de contenu envoyée, elle sera disponible dans le flux de chaque utilisateur éligible à la prochaine mise à jour du flux de cartes.
 
-![Cartes de contenu sélectionnées comme canal d'envoi de messages pour une étape de message.]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
+![Cartes de contenu sélectionnées comme canal de communication pour une étape de message.]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
 
 L'[expiration](#content-card-expiration) et la [suppression de](#removal) la carte de contenu sont deux options qui modifient l'interaction de l'étape du canvas.
 
@@ -51,13 +51,13 @@ Lorsqu'une carte de contenu expire, elle est automatiquement supprimée du flux 
 
 Les cartes de contenu peuvent être supprimées lorsque les utilisateurs effectuent un achat ou un événement personnalisé. Vous pouvez sélectionner l'un des événements suivants comme événement de suppression : **Réaliser un événement personnalisé** et **effectuer un achat**. Sélectionnez ensuite **Ajouter un événement**.
 
-!["Retirer les cartes lorsque les utilisateurs effectuent un achat ou un événement personnalisé" sélectionné avec le déclencheur pour retirer les cartes pour les utilisateurs qui effectuent un achat spécifique pour "Bracelet".]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
+!["Retirer les cartes lorsque les utilisateurs effectuent un achat ou réalisent un événement personnalisé" sélectionné avec le déclencheur pour retirer les cartes pour les utilisateurs qui effectuent un achat spécifique pour "Bracelet".]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
 
 ## Reporting et analyses
 
 Après le lancement d’une étape Cartes de contenu dans Canvas, vous pouvez commencer à analyser plusieurs indicateurs différents pour cette étape. Ces indicateurs contiennent le nombre de messages envoyés, les destinataires uniques, les taux de conversion, le revenu total et bien plus.
 
-![Analyse/analytique d'une étape de message avec la carte de contenu message performance.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
+![Analyse/analytique pour une étape de message avec la carte de contenu adjective.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
 
 Pour plus d'informations sur les indicateurs disponibles et leurs définitions, consultez notre [glossaire des indicateurs de rapport.]({{site.baseurl}}/user_guide/data/report_metrics/)
 

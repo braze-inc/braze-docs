@@ -1,6 +1,6 @@
 ---
 nav_title: Administrador de campañas
-article_title: Administrador de campañas
+article_title: Administrar campañas
 layout: dev_guide
 guide_top_header: "Administrador de campañas"
 guide_top_text: "Una vez lanzada la campaña, es hora de sentarse y ver cómo llegan los datos. Si necesita realizar algún cambio en su campaña, configurar alertas o archivar su campaña, consulte los siguientes artículos para obtener ayuda."

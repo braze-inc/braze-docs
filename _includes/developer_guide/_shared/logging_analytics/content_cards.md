@@ -1,6 +1,6 @@
 > When building a custom UI for Content Cards, you must manually log analytics like impressions, clicks, and dismissals, as this is only handled automatically for default card models. Logging these events is a standard part of a Content Card integration and is essential for accurate campaign reporting and billing. To do this, populate your custom UI with data from the Braze data models and then manually log the events. Once you understand how to log analytics, you can see common ways Braze customers [create custom Content Cards]({{site.baseurl}}/developer_guide/content_cards/creating_cards/). 
 
-## Listening for card updates
+## Logging analytics
 
 When implementing your custom Content Cards, you can parse the Content Card objects and extract their payload data such as `title`, `cardDescription`, and `imageUrl`. Then, you can use the resulting model data to populate your custom UI. 
 
@@ -13,6 +13,37 @@ All properties outside of `id` and `extras` are optional to parse for custom Con
 
 
 {% tabs %}
+{% tab web %}
+
+Register a callback function to subscribe for updates when cards are refreshed.
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.subscribeToContentCardsUpdates((updates) => {
+  const cards = updates.cards;
+// For example:
+  cards.forEach(card => {
+    if (card.isControl) {
+      // Do not display the control card, but remember to call `logContentCardImpressions([card])`
+    }
+    else if (card instanceof braze.ClassicCard || card instanceof braze.CaptionedImage) {
+      // Use `card.title`, `card.imageUrl`, etc.
+    }
+    else if (card instanceof braze.ImageOnly) {
+      // Use `card.imageUrl`, etc.
+    }
+  })
+});
+
+braze.openSession();
+```
+
+{% alert note %}
+Content Cards will only refresh on session start if a subscribe request is called before `openSession()`. You can always choose to [manually refresh the feed]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/) as well.
+{% endalert %}
+
+{% endtab %}
 {% tab android %}
 {% subtabs local %}
 {% subtab Java %}
@@ -71,14 +102,14 @@ Next, add the following code to subscribe to Content Card updates from Braze, ty
 
 ```kotlin
 // Remove the previous subscriber before rebuilding a new one with our new activity.
-Braze.getInstance(context).subscribeToContentCardsUpdates(contentCardsUpdatedSubscriber)
-Braze.getInstance(context).requestContentCardsRefresh()
+Braze.getInstance(context).removeSingleSubscription(contentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+contentCardsUpdatedSubscriber = IEventSubscriber { event ->
   // List of all Content Cards
   val allCards = event.allCards
 
   // Your logic below
 }
-Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
+Braze.getInstance(context).subscribeToContentCardsUpdates(contentCardsUpdatedSubscriber)
 Braze.getInstance(context).requestContentCardsRefresh(true)
 ```
 
@@ -144,35 +175,43 @@ BRZCancellable *cancellable = [self.braze.contentCards subscribeToUpdates:^(NSAr
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab web %}
 
-Register a callback function to subscribe for updates when cards are refreshed.
+{% tab react native %}
+
+To get the Content Card data, use the `getContentCards` method:
 
 ```javascript
-import * as braze from "@braze/web-sdk";
+import Braze from "@braze/react-native-sdk";
 
-braze.subscribeToContentCardsUpdates((updates) => {
-  const cards = updates.cards;
-// For example:
-  cards.forEach(card => {
-    if (card.isControl) {
-      // Do not display the control card, but remember to call `logContentCardImpressions([card])`
-    }
-    else if (card instanceof braze.ClassicCard || card instanceof braze.CaptionedImage) {
-      // Use `card.title`, `card.imageUrl`, etc.
-    }
-    else if (card instanceof braze.ImageOnly) {
-      // Use `card.imageUrl`, etc.
-    }
-  })
-});
-
-braze.openSession();
+const cards = await Braze.getContentCards();
 ```
 
-{% alert note %}
-Content Cards will only refresh on session start if a subscribe request is called before `openSession()`. You can always choose to [manually refresh the feed]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/) as well.
-{% endalert %}
+To listen for updates, subscribe to Content Card update events:
+
+```javascript
+const subscription = Braze.addListener(Braze.Events.CONTENT_CARDS_UPDATED, (update) => {
+  const cards = update.cards;
+  cards.forEach(card => {
+    if (card.isControl) {
+      // Do not display the control card, but remember to log an impression
+    } else {
+      // Use card.title, card.cardDescription, card.image, etc.
+    }
+  });
+});
+```
+
+To request a manual refresh of Content Cards from Braze servers:
+
+```javascript
+Braze.requestContentCardsRefresh();
+```
+
+To get cached Content Cards without a network request:
+
+```javascript
+const cachedCards = await Braze.getCachedContentCards();
+```
 
 {% endtab %}
 {% endtabs %}
@@ -182,6 +221,25 @@ Content Cards will only refresh on session start if a subscribe request is calle
 Logging valuable metrics like impressions, clicks, and dismissals is quick and simple. Set a custom click listener to manually handle these analytics.
 
 {% tabs %}
+{% tab web %}
+
+Log impression events when cards are viewed by users using [`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions):
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.logContentCardImpressions([card1, card2, card3]);
+```
+
+Log card click events when users interact with a card using [`logContentCardClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick):
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.logContentCardClick(card);
+```
+
+{% endtab %}
 {% tab android %}
 
 The [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt) can reference Braze SDK dependencies such as the Content Card objects array list to get the [`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) to call the Braze logging methods. Use the `ContentCardable` base class to easily reference and provide data to the `BrazeManager`. 
@@ -235,6 +293,7 @@ BrazeContentCardsManager.getInstance().contentCardsActionListener = object : ICo
 To handle control variant Content Cards in your custom UI, pass in your [`com.braze.models.cards.Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) object, then call the `logImpression` method as you would with any other Content Card type. The object will implicitly log a control impression to inform our analytics of when a user would have seen the control card.{% endalert %}
 
 {% endtab %}
+
 {% tab swift %}
 
 Implement the [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) protocol and set your delegate object as the `delegate` property of your `BrazeContentCardUI.ViewController`. This delegate will handle passing the data of your custom object back to Braze to be logged. For an example, see [Content Cards UI tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/).
@@ -280,23 +339,70 @@ To handle control variant Content Cards in your custom UI, pass in your [`Braze.
 {% endalert %}
 {% endtab %}
 
+{% tab react native %}
+
+Log impression events when cards are viewed by users:
+
+```javascript
+Braze.logContentCardImpression(card.id);
+```
+
+Log card click events when users interact with a card:
+
+```javascript
+Braze.logContentCardClicked(card.id);
+```
+
+Log dismissal events when a user dismisses a card:
+
+```javascript
+Braze.logContentCardDismissed(card.id);
+```
+
+{% endtab %}
+{% endtabs %}
+
+## Handling on-click behavior
+
+{% tabs %}
 {% tab web %}
 
-Log impression events when cards are viewed by users using [`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions):
+When a user clicks a Content Card in a custom feed, the on-click behavior (such as navigating to a URL, deep linking, or logging a custom event) is not handled automatically. Use [`handleBrazeAction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#handlebrazeaction) to process the card's URL and execute the configured on-click action, including Braze actions (`brazeActions://` URLs).
 
 ```javascript
 import * as braze from "@braze/web-sdk";
 
-braze.logContentCardImpressions([card1, card2, card3]);
+// In your card click handler
+function onCardClick(card) {
+  // Log the click
+  braze.logContentCardClick(card);
+
+  // Handle the on-click behavior
+  if (card.url) {
+    braze.handleBrazeAction(card.url);
+  }
+}
 ```
 
-Log card click events when users interact with a card using [`logContentCardClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick):
+| Parameter | Description |
+|---|---|
+| `url` | A valid URL, or a valid Braze action URL with the scheme `brazeActions://`. |
+| `openLinkInNewTab` | (Optional) Whether the URL should open in a new tab. Defaults to `false`. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-```javascript
-import * as braze from "@braze/web-sdk";
+{% alert important %}
+If you don't call `handleBrazeAction()`, on-click behaviors configured in the Braze dashboard (such as "Log Custom Event" or "Navigate to URL") won't execute for cards displayed in a custom feed.
+{% endalert %}
 
-braze.logContentCardClick(card);
-```
+{% endtab %}
+{% tab android %}
+
+On-click behavior is handled automatically by the default Content Cards UI. For custom implementations, use the [`IContentCardsActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html) interface described in the [Logging analytics](#logging-analytics) section above.
+
+{% endtab %}
+{% tab swift %}
+
+On-click behavior is handled automatically by the default Content Cards UI. For custom implementations, use the [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) protocol described in the [Logging analytics](#logging-analytics) section above.
 
 {% endtab %}
 {% endtabs %}

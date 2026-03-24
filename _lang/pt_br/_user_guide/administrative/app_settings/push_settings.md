@@ -53,7 +53,7 @@ As opções de prioridade da FCM incluem:
 Para definir a prioridade padrão do FCM:
 
 1. Acesse **Configurações** > **Gerenciar configurações** > Configurações **push**.
-2. Na seção FCM Priority (Prioridade do FCM), selecione "Normal" ou "High" como a configuração padrão.
+2. Na seção FCM Priority (Prioridade do FCM), selecione "Normal" ou "High" (Alta) como a configuração padrão.
 3. Selecione **Salvar** para aplicar suas alterações.
 
 ![Configurações de prioridade de entrega do Android.]({% image_buster /assets/img/push_fcm_priority_settings.png %})

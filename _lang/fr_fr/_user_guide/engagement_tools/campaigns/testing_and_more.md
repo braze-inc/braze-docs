@@ -1,8 +1,8 @@
 ---
-nav_title: Tester les campagnes
-article_title: Tester les campagnes
+nav_title: "Campagnes d'essai"
+article_title: "Campagnes d'essai"
 layout: dev_guide
-guide_top_header: "Tester les campagnes"
+guide_top_header: "Campagnes d'essai"
 guide_top_text: "Avant d’envoyer vos campagnes, vous devez toujours tester vos messages. Ensuite, vous devez toujours examiner les résultats pour vous assurer que votre campagne fonctionne bien et aura un impact positif sur vos campagnes futures.<br><br> Vous trouverez ici des ressources pour tester les campagnes, telles que l’envoi de messages de test et l’exécution de tests A/B."
 page_order: 4
 
@@ -14,8 +14,8 @@ description: "Cette page d’accueil présente des tests et des conseils pour le
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: Envoyer des messages de test
-    link: /docs/developer_guide/in_app_messages/sending_test_messages/
+  - name: Envoi de messages de test
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg
   - name: Campagnes déclenchées par API et par événement
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/

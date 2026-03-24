@@ -1,12 +1,12 @@
 ---
-nav_title: Abandon des messages
-article_title: Abandon des messages Liquid
+nav_title: Abandonner des messages
+article_title: Interrompre les messages liquides
 page_order: 7
 description: "Cet article de référence présente l’abandon des messages Liquid et quelques exemples de cas d’utilisation."
 
 ---
 
-# Abandonner des messages
+# Messages d'interruption
 
 > En option, vous pouvez utiliser l'étiquette Liquid message `abort_message("optional reason for aborting")` dans les conditionnels pour empêcher l'envoi d'un message à un utilisateur. Cet article de référence répertorie quelques exemples de la manière dont cette fonctionnalité peut être utilisée dans les campagnes marketing.
 
@@ -59,11 +59,23 @@ Vous pouvez également faire en sorte que le message d'abandon enregistre quelqu
 ```
 {% endraw %}
 
-![Message d'erreur dans la console de développement avec un message d'abandon "language was nil".]({% image_buster /assets/img_archive/developer_console.png %})
+![Le journal des erreurs de message dans la console de développement avec un message d’abandon de « langue était nulle ».]({% image_buster /assets/img_archive/developer_console.png %})
 
-## Demande d'envoi de messages d'annulation
+## Requête pour les messages d'interruption
 
-Vous pouvez utiliser [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) ou votre propre entrepôt de données, s'il est connecté à Braze, pour rechercher des messages d'abandon spécifiques qui sont déclenchés lorsque la logique Liquid entraîne l'abandon d'un message.
+Vous pouvez utiliser [le générateur de requêtes]({{site.baseurl}}/user_guide/analytics/query_builder/) ou votre propre entrepôt de données, s'il est connecté à Braze, pour rechercher des messages d'interruption spécifiques qui sont déclenchés lorsque la logique Liquid provoque l'interruption d'un message.
+
+## Lorsque la logique d'interruption est évaluée
+
+Le moment choisi pour l'évaluation de la logique d'interruption dépend du canal de communication.
+
+### Push, e-mail, SMS, webhook et cartes de contenu
+
+La logique d'interruption est évaluée au moment de l'envoi, lorsque Braze traite le message en vue de sa réception/distribution.
+
+### in-app Messages
+
+La logique d'interruption est évaluée au moment où le message in-app est déclenché (par exemple, lorsque l'utilisateur effectue l'événement déclencheur ou démarre une session), et non lorsque le message est initialement envoyé à l'appareil. Les messages in-app sont transmis au SDK au début de la session et mis en cache localement ; le Liquid, y compris les`abort_message()`appels éventuels, est exécuté lorsque le déclencheur est rempli.
 
 ## Considérations
 

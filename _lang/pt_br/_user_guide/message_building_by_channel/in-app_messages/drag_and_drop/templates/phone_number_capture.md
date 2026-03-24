@@ -18,9 +18,9 @@ description: "Esta página aborda como criar um formulário de inscrição para 
 
 ### Etapa 1: Escolha seu modelo
 
-Ao criar uma mensagem no app com o recurso de arrastar e soltar, selecione o **registro de SMS** (isso acomoda o registro de RCS) ou o **registro de WhatsApp** para seu modelo e, em seguida, selecione **Criar mensagem**. Esses modelos são compatíveis tanto com apps móveis quanto com navegadores da Web.
+Ao criar uma mensagem no app com o recurso de arrastar e soltar, selecione **o registro de SMS** (isso acomoda o registro de RCS) ou o **registro de WhatsApp** para o modelo e, em seguida, selecione **Criar mensagem**. Esses modelos são compatíveis tanto com apps móveis quanto com navegadores da Web.
 
-![Modal para selecionar o registro de SMS ou o registro de WhatsApp como modelo ao criar uma mensagem no app.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}){: style="max-width:80%"}
+![Modal para selecionar o registro de SMS ou o registro do WhatsApp como modelo ao criar uma mensagem no app.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}){: style="max-width:80%"}
 
 ### Etapa 2: Configure seus estilos de mensagens
 
@@ -36,11 +36,11 @@ Para começar a criar seu formulário de inscrição, selecione o componente de 
 
 No menu lateral, especifique para qual grupo de inscrições esse modelo coletará números de telefone. Para aderir às práticas recomendadas de conformidade, você só pode coletar o consentimento para um grupo de inscrições por formulário de inscrição de número de telefone. No entanto, se desejar, você pode usar vários formulários para coletar o consentimento de outros grupos de inscrições.
 
-![Menu suspenso de grupo de inscrições com um grupo de inscrições selecionado.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_subscription.png %}){: style="max-width:40%"}
+![Menu suspenso do grupo de inscrições com um grupo de inscrições selecionado.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_subscription.png %}){: style="max-width:40%"}
 
 Por padrão, coletamos números globalmente, mas você pode limitar o número de países para coletar números. Isso é útil se você pretende enviar mensagens apenas para usuários que tenham números de telefone em países específicos e pode ajudar na limpeza da lista. Para fazer isso, desative a opção **Coletar números de todos os países** e use o menu suspenso para selecionar países específicos. Seus usuários só poderão selecionar os países que você adicionou explicitamente.
 
-![Lista suspensa de países para selecionar os países dos quais você deseja coletar números.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_countries.png %}){: style="max-width:40%"}
+![Países para selecionar os países dos quais você deseja coletar números.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_countries.png %}){: style="max-width:40%"}
 
 #### Números de telefone inválidos
 
@@ -53,7 +53,7 @@ Para formulários de inscrição de SMS e RCS, é importante comunicar clarament
 - Descrição dos tipos de mensagens SMS e RCS que seus clientes podem esperar (lembretes de carrinho, promoções e ofertas, lembretes de compromissos, etc.). Não é necessário listar todos os casos de uso, mas você deve fornecer uma descrição dos tipos de mensagens que sua marca enviará.
 - Note que o consentimento não é uma condição para qualquer compra (se aplicável).
 - Frequência de mensagens e lembrete de que se aplicam taxas de mensagens e dados. Se não souber a frequência exata das mensagens, você pode dizer que a frequência pode variar.
-- Links para seus Termos e Condições e para a Política de Privacidade de SMS e RCS.
+- Links para seus Termos & Condições e Política de Privacidade de SMS e RCS.
 - Lembrete de ajuda e palavras-chave de aceitação (HELP para ajuda; STOP para cancelar).
 
 Fornecemos um aviso de isenção de responsabilidade no modelo apenas como exemplo - ele não constitui aconselhamento jurídico e não deve ser considerado para fins de conformidade. É importante trabalhar com sua equipe jurídica para desenvolver uma linguagem adaptada à sua marca específica.

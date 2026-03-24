@@ -19,7 +19,7 @@ If you don't turn analytics tracking on for a segment, you can still access [rea
 
 세그먼트 페이지의 **세그먼트 세부 정보** 섹션에서 **애널리틱스 추적을** 켭니다.
 
-![Analytics tracking toggle for a segment]({% image_buster /assets/img_archive/A_Tracking_2.png %})
+![세그먼트에 대한 애널리틱스 추적 토글]({% image_buster /assets/img_archive/A_Tracking_2.png %})
 
 앱은 최대 25개의 세그먼트에 대해 추적을 설정할 수 있습니다. Braze는 캠페인이 세션, 매출, 구매에 미치는 영향을 파악할 때 분석해야 할 중요한 세그먼트를 추적할 것을 권장합니다.
 
@@ -27,19 +27,19 @@ If you don't turn analytics tracking on for a segment, you can still access [rea
 
 Go to **Analytics** > **Revenue Report** to view data on [revenue and purchases over time for this segment]({{site.baseurl}}/user_guide/data/export_braze_data/exporting_revenue_data/).
 
-![Revenue data by segment]({% image_buster /assets/img_archive/Revenue.png %})
+![세그먼트별 매출 데이터]({% image_buster /assets/img_archive/Revenue.png %})
 
 사용자 지정 시간 범위에 대한 세그먼트 데이터를 시각적으로 비교하려면 그래프에서 세그먼트를 추가하거나 제거합니다. **분석** 드롭다운에서 **세그먼트별**을 선택한 다음 **분석 값**에서 세그먼트를 선택합니다.
 
 그래프 위의 세그먼트 이름을 선택하여 해당 세그먼트의 지표에 대한 표시 여부를 설정하거나 해제할 수 있습니다.
 
-![Revenue for multiple segments]({% image_buster /assets/img_archive/segment_revenue_multiple.png %})
+![여러 세그먼트에 대한 수익]({% image_buster /assets/img_archive/segment_revenue_multiple.png %})
 
 ## 시간별 세션
 
 Similarly, you can find data on [sessions over time for this particular segment]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data) on the **Home** page.
 
-![Session data by segment]({% image_buster /assets/img_archive/events_over_time2.png %})
+![세그먼트별 세션 데이터]({% image_buster /assets/img_archive/events_over_time2.png %})
 
 ## 시간 경과에 따른 사용자 지정 이벤트 보기
 

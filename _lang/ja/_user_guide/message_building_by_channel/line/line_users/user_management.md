@@ -1,5 +1,5 @@
 ---
-nav_title: ユーザーマネージャー
+nav_title: ユーザー管理
 article_title: LINEユーザーマネージャー
 page_order: 0
 description: "この記事では、LINEのユーザーIDとその設定方法について解説する。"
@@ -21,7 +21,7 @@ Brazeを通じてLINEメッセージを送信する際、Brazeは`native_line_id
 LINEのユーザーIDは、LINEの提供元によって区別されている。特定のユーザーは、フォローしているプロバイダーごとに異なるLINEユーザーIDを持つことになる。ユーザーIDはフォローするブランドごとに変わるため、（メールや電話番号と違って）ユーザーが自分のLINE IDを知っている可能性は低い。
 {% endalert %}
 
-## `native_line_id` 属性の設定
+## `native_line_id` 属性を設定する。
 
 ユーザープロファイルに`native_line_id` が設定されるシナリオはいくつかあるが、その概要は以下の通り。
 
@@ -29,7 +29,7 @@ LINEのユーザーIDは、LINEの提供元によって区別されている。�
 | --- | --- | --- |
 |ユーザーがLINEチャネルをフォローする | いいえ| 匿名ユーザープロファイルが作成される (マージが必要)：<br> -`native_line_id` にユーザーの LINE ID が設定されます <br>-`line_id` ユーザーエイリアスはユーザーのLINE IDに設定される。<br>\- ユーザーがチャネルの Braze 購読グループに購読登録されている |
 |ユーザーがLINEチャネルをフォローする| はい | `native_line_id` を持つすべてのユーザープロファイル：<br>\- チャネルの Braze 購読グループに購読登録済みです|
-|会社は n`ative_line_id` 列を持つユーザーの CSV アップロードを使用します| いいえ| 指定された`external_id` またはユーザーエイリアスのユーザープロファイルが存在しない場合：<br>-`native_line_id` が指定された値に設定されます<br> \- CSVで指定されたその他の属性はすべてユーザープロファイルに設定される|
+|同社はユーザーCSVアップロードを`native_line_id` 列で使用している。| いいえ| 指定された`external_id` またはユーザーエイリアスのユーザープロファイルが存在しない場合：<br>-`native_line_id` が指定された値に設定されます<br> \- CSVで指定されたその他の属性はすべてユーザープロファイルに設定される|
 |同社はユーザーCSVアップロードを`native_line_id` 列で使用している。 | はい | 指定した `external_id` またはユーザーエイリアスのユーザープロファイルが存在する場合：<br>-`native_line_id` が指定された値に設定されます<br>\- CSVで指定されたその他の属性はすべてユーザープロファイルに設定される<br>\- 複数のプロファイルに同じ `native_line_id` があります |
 | 会社は `/users/track` エンドポイントを使用し、`native_line_id` 属性を指定します | いいえ | 指定したユーザー ([`external_id`、`user_alias`、`braze_id`、`email` で指定]({{site.baseurl}}/api/objects_filters/user_attributes_object/)) のユーザープロファイルが存在しない場合:<br>-`native_line_id` が指定された値に設定されます<br>\- リクエストで指定された他のすべての属性がユーザープロファイルに設定されます |
 | 会社は `/users/track` エンドポイントを使用し、`native_line_id` 属性を指定します | はい | 指定したユーザー ([`external_id`、`user_alias`、`braze_id`、`email` で指定]({{site.baseurl}}/api/objects_filters/user_attributes_object/)) のユーザープロファイルが存在する場合:<br>-`native_line_id` が指定された値に設定されます<br>\- リクエストで指定された他のすべての属性がユーザープロファイルに設定されます<br>\- 複数のプロファイルに同じ `native_line_id` があります |
@@ -41,7 +41,7 @@ LINEのユーザーIDは、LINEの提供元によって区別されている。�
 
 Braze ダッシュボードでユーザープロファイルを表示する際、`native_line_id` 属性が設定されているかどうかは、**エンゲージメントタブ**>**コンタクト設定**セクション >**LINE**セクションで確認できる。
 
-`native_line_id` が設定されている場合は、**LINE ユーザー ID** の下に表示されます。そうでなければ表示されない。
+`native_line_id` が設定されていれば、**LINEユーザーIDの**下に表示される。そうでなければ表示されない。
 
-![エンゲージメント] タブの LINE 連絡先の設定。]({% image_buster /assets/img/line/line_contact_settings.png %}){: style="max-width:50%;"}
+![エンゲージメント・タブのライン・コンタクト設定。]({% image_buster /assets/img/line/line_contact_settings.png %}){: style="max-width:50%;"}
 

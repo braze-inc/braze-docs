@@ -2,7 +2,27 @@
 
 ## デフォルトのユーザー属性
 
-ユーザーにデフォルト属性を設定するには、Brazeインスタンスで`getCurrentUser()` メソッドを呼び出し、アプリの現在のユーザーへの参照を取得する。そして、ユーザー属性を設定するメソッドを呼び出すことができる。
+### 事前定義されたメソッド
+
+Brazeは、[`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)クラス内で以下のユーザー属性を設定するための事前定義されたメソッドを提供しています。メソッド仕様については、[KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)を参照してください。
+
+- 名
+- 姓
+- 国
+- 言語
+- 生年月日
+- メールアドレス
+- 性別
+- 市区町村
+- 電話番号
+
+{% alert note %}
+姓、名、国、市区町村などの文字列値はすべて255文字に制限されています。
+{% endalert %}
+
+### デフォルト属性の設定
+
+ユーザーにデフォルト属性を設定するには、Brazeインスタンスの`getCurrentUser()`メソッドを呼び出して、アプリの現在のユーザーへの参照を取得します。その後、メソッドを呼び出してユーザー属性を設定できます。
 
 {% tabs %}
 {% tab JAVA %}
@@ -28,31 +48,43 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-Brazeは、[BrazeUser クラス](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)内で以下のユーザー属性を設定するための定義済みメソッドを提供しています。メソッドの仕様については、[KDocを](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)参照のこと。
+### デフォルト属性の解除
 
-- 名
-- 姓
-- 国
-- 言語
-- 生年月日
-- メールアドレス
-- 性別
-- 市区町村
-- 電話番号
+ユーザー属性を解除するには、該当するメソッドに`null`を渡します。
 
-{% alert note %}
-姓、名、国、市区町村などの文字列値はすべて255文字に制限されています。
-{% endalert %}
+{% tabs %}
+{% tab JAVA %}
+
+```java
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setFirstName(null);
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setFirstName(null)
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## カスタムユーザー属性
 
-デフォルトのユーザー属性に加え、Brazeではいくつかのデータタイプを使用してカスタム属性を定義することができる。各属性のセグメンテーションオプションの詳細については、[ユーザーデータ収集を]({{site.baseurl}}/developer_guide/analytics)参照のこと。
+デフォルトのユーザー属性に加えて、Brazeでは複数の異なるデータタイプを使用してカスタム属性を定義することもできます。各属性のセグメンテーションオプションの詳細については、[データ収集]({{site.baseurl}}/developer_guide/analytics)を参照してください。
 
 ### カスタム属性の設定
 
 {% tabs local %}
 {% tab String %}
-`string` 、カスタム属性を設定する：
+カスタム属性を`string`値で設定するには：
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -78,8 +110,8 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab 整数 %}
-`int` 、カスタム属性を設定する：
+{% tab Integers %}
+カスタム属性を`int`値で設定するには：
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -111,7 +143,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 
-`long` 、整数値でカスタム属性を設定する：
+カスタム属性を`long`整数値で設定するには：
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -137,8 +169,8 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab 浮動小数点 %}
-`float` 、カスタム属性を設定する：
+{% tab Floating-points %}
+カスタム属性を`float`値で設定するには：
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -164,7 +196,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 
-`double` 、カスタム属性を設定する：
+カスタム属性を`double`値で設定するには：
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -192,7 +224,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 
 {% tab Boolean %}
-`boolean` 、カスタム属性を設定する：
+カスタム属性を`boolean`値で設定するには：
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -219,7 +251,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 日付 %}
+{% tab Date %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -253,13 +285,13 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 
 {% alert warning %}
-この方法でBrazeに渡される日付は、[ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)形式（e.g `2013-07-16T19:20:30+01:00`）または`yyyy-MM-dd'T'HH:mm:ss:SSSZ`形式（e.g `2016-12-14T13:32:31.601-0800`）のいずれかでなければなりません。
+このメソッドでBrazeに渡される日付は、[ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)形式（例：`2013-07-16T19:20:30+01:00`）または`yyyy-MM-dd'T'HH:mm:ss:SSSZ`形式（例：`2016-12-14T13:32:31.601-0800`）のいずれかである必要があります。
 {% endalert %}
 
 {% endtab %}
-{% tab 配列 %}
+{% tab Array %}
 
-カスタム属性配列内の要素の最大数は、25にデフォルト設定されています。個々の配列の最大値は、Braze ダッシュボードの [**データ設定**] > [**カスタム属性**] で100まで増やすことができます。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。カスタム属性配列とその動作の詳細については、[配列に関する]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)ドキュメントを参照してください。
+配列内の要素のデフォルトおよび最大数は500です。最大数はBrazeダッシュボードの**データ設定** > **カスタム属性**で更新できます。要素数が最大値を超える配列は、最大要素数に切り詰められます。カスタム属性配列とその動作の詳細については、[配列]({{site.baseurl}}/developer_guide/analytics/#arrays)を参照してください。
 
 {% subtabs global %}
 {% subtab JAVA %}
@@ -298,7 +330,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ### カスタム属性の設定解除
 
-カスタム属性は、次のメソッドを使用して設定を解除することもできます。
+カスタム属性を解除するには、該当する属性キーを`unsetCustomUserAttribute`メソッドに渡します。
 
 {% tabs %}
 {% tab JAVA %}
@@ -324,23 +356,60 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### REST APIを使う
+### 階層化カスタム属性
 
-また、REST APIを使用して、ユーザー属性を設定または解除することもできる。詳しくは[ユーザーデータエンドポイントを]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)参照のこと。
+カスタム属性内にプロパティをネストすることもできます。次の例では、ネストされたプロパティを持つ`favorite_book`オブジェクトが、ユーザープロファイルのカスタム属性として設定されます。詳細については、[階層化カスタム属性]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)を参照してください。
+
+{% tabs %}
+{% tab JAVA %}
+```java
+JSONObject favoriteBook = new JSONObject();
+try {
+  favoriteBook.put("title", "The Hobbit");
+  favoriteBook.put("author", "J.R.R. Tolkien");
+  favoriteBook.put("publishing_date", "1937");
+} catch (JSONException e) {
+  e.printStackTrace();
+}
+
+braze.getCurrentUser(user -> {
+  user.setCustomUserAttribute("favorite_book", favoriteBook);
+  return null;
+});
+```
+{% endtab %}
+
+{% tab KOTLIN %}
+```kotlin
+val favoriteBook = JSONObject()
+  .put("title", "The Hobbit")
+  .put("author", "J.R.R. Tolkien")
+  .put("publishing_date", "1937")
+
+braze.getCurrentUser { user ->
+  user.setCustomUserAttribute("favorite_book", favoriteBook)
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### REST APIの使用
+
+ユーザー属性の設定や解除には、REST APIも使用できます。詳細については、[ユーザーデータエンドポイント]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)を参照してください。
 
 ## ユーザーサブスクリプションの設定
 
-ユーザーのサブスクリプション (メールまたはプッシュ) を設定するには、それぞれ関数 `setEmailNotificationSubscriptionType()` または `setPushNotificationSubscriptionType()` を呼び出します。これらの関数では、いずれも引数として列挙型 `NotificationSubscriptionType` が使用されます。この型には、次の 3 つの状態があります。
+ユーザーのサブスクリプション（メールまたはプッシュ）を設定するには、それぞれ`setEmailNotificationSubscriptionType()`関数または`setPushNotificationSubscriptionType()`関数を呼び出します。これらの関数はいずれも引数として列挙型`NotificationSubscriptionType`を受け取ります。この型には、次の3つの状態があります。
 
 | サブスクリプションステータス | 定義 |
 | ------------------- | ---------- |
 | `OPTED_IN` | 配信登録済み、かつ明示的にオプトイン済み |
-| `SUBSCRIBED` | 購読済み、ただし明示的に選択されていない |
+| `SUBSCRIBED` | 購読中、ただし明示的にオプトインしていない |
 | `UNSUBSCRIBED` | 配信停止済みまたは明示的にオプトアウト済み、あるいはその両方 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-Android では、ユーザーにプッシュ通知を送る際に明示的なオプトインは必要ありません。ユーザーがプッシュ登録されると、デフォルトで`OPTED_IN`ではなく`SUBSCRIBED`に設定されます。サブスクリプションと明示的オプトインの実装の詳細については、[ユーザーサブスクリプションの管理]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions)を参照してください。
+Androidでは、ユーザーにプッシュ通知を送信する際に明示的なオプトインは必要ありません。ユーザーがプッシュ登録されると、デフォルトで`OPTED_IN`ではなく`SUBSCRIBED`に設定されます。サブスクリプションと明示的オプトインの実装の詳細については、[ユーザーサブスクリプションの管理]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions)を参照してください。
 {% endalert %}
 
 ### メールサブスクリプションの設定
@@ -394,4 +463,3 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 {% endtab %}
 {% endtabs %}
-

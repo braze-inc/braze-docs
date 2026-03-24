@@ -1,6 +1,6 @@
 ---
-nav_title: Configuración de IP y dominios
-article_title: Configuración de IP y dominios
+nav_title: Configurar direcciones IP y dominios
+article_title: Configurar direcciones IP y dominios
 page_order: 0
 page_type: tutorial
 channel: email
@@ -8,7 +8,7 @@ description: "Este artículo le mostrará cómo configurar sus IPs y Dominios pa
 
 ---
 
-# Configuración de IP y dominios
+# Configurar direcciones IP y dominios
 
 {% multi_lang_include video.html id="iTm3yQkJ0UU" align="right"  %}
 
@@ -32,6 +32,10 @@ Tras recibir tu correo electrónico, nos pondremos manos a la obra para configur
 
 Una vez configurados sus IP, dominios, subdominios y grupos de IP, le enviaremos una lista de registros DNS. Pida a sus ingenieros y desarrolladores que añadan estos registros DNS cuando sea necesario y, una vez añadidos, informe al equipo de Braze Onboarding.
 
+{% multi_lang_include dns_records.md %}
+
+Una vez que Braze te haya proporcionado tus registros de DNS, añádelos tan pronto como tu equipo de DNS o de TI pueda hacerlo. La verificación del dominio tiene un plazo límite y, si los registros se añaden demasiado tarde, la verificación puede fallar incluso si los registros de DNS se resuelven correctamente más adelante. Si tus registros de DNS parecen correctos pero la verificación falla, ponte en contacto con el equipo de incorporación o el equipo de soporte de Braze para reiniciar la verificación.
+
 ### Próximos pasos
 
 Comprobaremos su configuración y validaremos toda la información en nuestros sistemas internos. El equipo de Braze Onboarding le avisará cuando esté listo para empezar o si hay problemas con sus registros DNS que deba tratar con su equipo de ingeniería.
@@ -40,21 +44,20 @@ Comprobaremos su configuración y validaremos toda la información en nuestros s
 
 Este método establecerá un dominio de envío, un dominio de seguimiento y una IP en total para una empresa. Si tienes pensado configurar más, consulta con el equipo de incorporación de Braze (método 1).
 
-{% alert important %}
-Esta función de autoservicio para configurar el correo electrónico está actualmente en fase beta. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en la versión beta.<br>Si utiliza la función de configuración de correo electrónico de autoservicio, asegúrese de consultar también con el equipo Braze Onboarding.
-{% endalert %}
+{% multi_lang_include early_access_beta_alert.md feature='This self-service email setup feature' type='beta' %}
+<br>Si utiliza la función de configuración de correo electrónico de autoservicio, asegúrese de consultar también con el equipo Braze Onboarding.
 
 ### Requisitos previos
 
 Para utilizar el autoservicio de configuración de correo electrónico, debe cumplir los siguientes requisitos previos:
 
 1. Usted es un nuevo cliente en proceso de incorporación.
-2. Tiene el permiso a nivel de empresa "Puede gestionar la configuración de la empresa".
+2. Tienes el permiso a nivel de empresa «Gestionar la configuración de la empresa».
 
 ### Paso 1: Comenzar la configuración
 
 1. Vaya a **Configuración** > **Configuración de administración** en **Configuración de la empresa**. 
-2. A continuación, seleccione la pestaña **Verificación del remitente**. Para ver esta pestaña, debes tener el permiso de nivel de empresa "Puede administrar configuración de empresa".
+2. A continuación, seleccione la pestaña **Verificación del remitente**. Para ver esta pestaña, debes tener el permiso de nivel de empresa «Administrar la configuración de la empresa».
 3. Haga clic en el botón **Iniciar configuración**.
 
 ### Paso 2: Añadir y verificar un dominio de envío
@@ -64,6 +67,8 @@ Un dominio de envío se utiliza en la dirección "de" al enviar un correo electr
 A continuación, añada los registros TXT y CNAME de la parte inferior de la página a su proveedor de DNS. A continuación, vuelva al panel de control de Braze y haga clic en **Verificar**.
 
 ![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
+
+Si la verificación falla y crees que tus registros de DNS son correctos, ponte en contacto con el soporte de Braze para obtener ayuda.
 
 {% alert important %}
 El dominio de envío debe estar subordinado a un dominio de su propiedad. Por ejemplo, si eres propietario de "example.com", un subdominio podría ser "mail.example.com", lo que te permitiría utilizar la dirección de envío "@mail.example.com".

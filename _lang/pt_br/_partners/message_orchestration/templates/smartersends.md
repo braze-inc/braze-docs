@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [O SmarterSends](https://smartersends.com) impulsiona a personalização com campanhas de marketing que as empresas podem criar, programar e implementar para reforçar a conformidade legal e da marca com controle sobre o conteúdo e os dados usados. 
 
-Esta integração é mantida pela SmarterSends.
+_Essa integração é mantida pelo SmarterSends._
 
 ## Sobre a integração
 

@@ -6,7 +6,7 @@ layout: dev_guide
 channel:
   - WhatsApp
 guide_top_header: "WhatsApp"
-guide_top_text: "WhatsApp is a popular peer-to-peer messaging platform used across the world offering conversation-based messaging for businesses. The WhatsApp messaging channel offers a direct way to reach users and customers on the WhatsApp platform. <br><br>**WhatsApp access is only available in select Braze packages. Reach out to your account manager or customer success manager to get started.**"
+guide_top_text: "WhatsApp is a popular peer-to-peer messaging platform used across the world offering conversation-based messaging for businesses. The WhatsApp messaging channel offers a direct way to reach users and customers on the WhatsApp platform. <br><br>**WhatsApp availability depends on your Braze package. Contact your account manager or customer success manager to get started.**"
 description: "This landing page is home to all things WhatsApp including how to create a WhatsApp campaign, opt-ins and ops-outs, quick replies, reporting, and more."
 search_rank: 3
 alias: /whatsapp/
@@ -15,6 +15,9 @@ guide_featured_title: "WhatsApp"
 guide_featured_list:
 - name: "WhatsApp Setup"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
+  image: /assets/img/braze_icons/whatsapp.svg
+- name: "Bring Your Own WhatsApp Connector"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/overview/byo_connector/
   image: /assets/img/braze_icons/whatsapp.svg
 - name: "WhatsApp Subscription Group"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
@@ -25,6 +28,9 @@ guide_featured_list:
 - name: "Create a WhatsApp Campaign"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/
   image: /assets/img/braze_icons/phone-02.svg
+- name: "WhatsApp Template Builder"
+  link: /docs/whatsapp_template_builder/
+  image: /assets/img/braze_icons/layout-alt-04.svg
 - name: "User Retargeting"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/user_retargeting/
   image: /assets/img/braze_icons/users-01.svg

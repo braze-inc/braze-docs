@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"}Armadilhas da entregabilidade e armadilhas de spam
+# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"} Armadilhas da entregabilidade e armadilhas de spam
 
 A entregabilidade de seu e-mail pode ser afetada por qualquer uma das seguintes armadilhas de spam:
 
@@ -32,3 +32,9 @@ Essas armadilhas podem ser evitadas se você configurar um processo de aceitaç�
 {% alert tip %}
 As equipes de sucesso do cliente e de entregabilidade do Braze podem ajudar a garantir que você esteja seguindo as práticas recomendadas para maximizar a entregabilidade em todo o mundo.
 {% endalert %}
+
+## Remoção de um endereço de e-mail de sua lista de bounce ou spam
+
+Você pode remover e-mails devolvidos e e-mails em sua lista de spam do Braze com os seguintes pontos de extremidade:
+- [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_hard_bounces)
+- [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam)

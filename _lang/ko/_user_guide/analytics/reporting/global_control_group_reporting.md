@@ -1,5 +1,5 @@
 ---
-nav_title: 전역 대조군 
+nav_title: 글로벌 컨트롤 그룹
 article_title: 글로벌 제어 그룹 보고
 page_type: reference
 description: "이 페이지에서는 대시보드의 글로벌 관리 그룹 보고 페이지에 있는 보고 메트릭에 대해 설명합니다."

@@ -1,9 +1,9 @@
 ---
-nav_title: Aceitação e exclusão
+nav_title: Opt-ins e opt-outs
 article_title: Aceitação e exclusão do WhatsApp
 description: "Este artigo de referência aborda diferentes métodos de aceitação e exclusão do WhatsApp."
 page_type: partner
-search_tag: Partner
+search_tag: Parceiro
 page_order: 5
 channel:
   - WhatsApp
@@ -67,7 +67,7 @@ Isso pode ser configurado como um Canva ou uma campanha, dependendo se você des
 2. Crie uma campanha de webhook. Para ver um exemplo de webhook, consulte [Grupos de inscrições]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#update-subscription-status).
 
 {% alert tip %}
-Observe que você pode criar um URL ou código QR para entrar em um canal do [WhatsApp](https://business.facebook.com/wa/manage/phone-numbers/) no gerenciador do WhatsApp em **Número de telefone** > **Links de mensagens**.<br>![Criador do código QR do WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp115.png %}){: style="max-width:55%;"}
+Observe que você pode criar um URL ou código QR para entrar em um canal do [WhatsApp](https://business.facebook.com/wa/manage/phone-numbers/) no gerenciador do WhatsApp em **Número de telefone** > **Links de mensagens**.<br>![Criador do QR code do WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp115.png %}){: style="max-width:55%;"}
 {% endalert %}
 
 ### Métodos de aceitação com base no Braze 
@@ -98,11 +98,11 @@ Use o modelo de [formulário de captura de número de telefone]({{site.baseurl}}
 
 #### Etapa 1: Crie um canva com um disparo de "Mensagem de entrada do WhatsApp"
  
-![Etapa de entrada do Canva baseada em ação que insere os usuários que enviam uma mensagem de entrada do WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
+![Etapa de entrada do Canvas baseada em ação que insere usuários que enviam uma mensagem de entrada do WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
 
 Ao selecionar disparadores de palavras-chave, inclua palavras como "Parar" ou "Nenhuma mensagem". Se você escolher esse método, certifique-se de que seus clientes conheçam as palavras de aceitação. Por exemplo, depois de receber a aceitação inicial, inclua uma resposta de acompanhamento como "Para optar por não receber essas mensagens, envie a mensagem "Parar" a qualquer momento". 
 
-![Etapa da mensagem para enviar uma mensagem de entrada do WhatsApp em que o corpo da mensagem é "STOP" ou "NO MESSAGE".]({% image_buster /assets/img/whatsapp/whatsapp117.png %}){: style="max-width:85%;"}
+![Etapa de mensagem para enviar uma mensagem de entrada do WhatsApp onde o corpo da mensagem é "PARAR" ou "SEM MENSAGEM".]({% image_buster /assets/img/whatsapp/whatsapp117.png %}){: style="max-width:85%;"}
 
 #### Etapa 2: Atualizar o perfil do usuário
 
@@ -112,7 +112,7 @@ Atualize o perfil do usuário usando um dos métodos descritos em [Grupos de ins
 
 No criador de modelos de mensagens do WhatsApp, você pode incluir a opção "aceitação de marketing". Sempre que incluir isso, certifique-se de que o modelo seja usado em um Canva com uma etapa subsequente para uma alteração no grupo de inscrições. 
 
-1. Crie um modelo de mensagem com a resposta rápida "aceitação de marketing".<br>![Modelo de mensagem com uma opção de rodapé de "Aceitação de marketing"]({% image_buster /assets/img/whatsapp/whatsapp121.png %})<br><br>![Seção para configurar um botão de opt-out de marketing.]({% image_buster /assets/img/whatsapp/whatsapp122.png %})<br><br>
+1. Crie um modelo de mensagem com a resposta rápida "aceitação de marketing".<br>![Modelo de mensagem com uma opção de rodapé de "Aceitação de marketing"]({% image_buster /assets/img/whatsapp/whatsapp121.png %})<br><br>![Seção para configurar um botão de saída de marketing.]({% image_buster /assets/img/whatsapp/whatsapp122.png %})<br><br>
 2. Crie um Canva que use esse modelo de mensagem.<br><br>
 3. Siga as etapas do exemplo anterior, mas com o texto do disparador "STOP PROMOTIONS".<br><br>
 4. Atualize o status da inscrição do usuário usando um dos métodos descritos em [Grupos de inscrições]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status).
@@ -176,12 +176,12 @@ Não é necessário usar esse método para mensagens STOP. A mensagem de confirm
 
 1. Crie uma campanha ou um Canva com uma etapa baseada em ação **Envie uma mensagem de entrada do WhatsApp**. Selecione **Onde o corpo da mensagem** e digite "START" para **Is**.
 
-![Etapa do envio de mensagens do WhatsApp em que o corpo da mensagem é "START".]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:85%;"}
+![Etapa da mensagem do WhatsApp em que o corpo da mensagem é "INICIAR".]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:85%;"}
 
 {: start="2"}
 2\. Na campanha ou no Canva, crie uma etapa do Webhook Message e altere o **Request Body (Corpo da solicitação)** para **Raw Text (Texto bruto)**.
 
-![Etapa da mensagem para um webhook.]({% image_buster /assets/img/whatsapp/webhook_step.png %}){: style="max-width:85%;"}
+![Etapa de mensagem para um webhook.]({% image_buster /assets/img/whatsapp/webhook_step.png %}){: style="max-width:85%;"}
 
 {: start="3"}
 3\. Digite o [URL do endpoint]({{site.baseurl}}/api/basics/) do cliente no **URL do Webhook**, seguido pelo link do endpoint `campaigns/trigger/send`. Por exemplo, `https://dashboard-02.braze.eu/campaigns/trigger/send`.
@@ -227,7 +227,7 @@ Nesta tabela, `STOP` é usado como um exemplo de palavra disparadora para demons
 | Modificador | Palavra disparadora | Ação |
 | --- | --- | --- |
 | `Is` | `STOP` | Captura qualquer uso de palavra inteira de "stop", independentemente do caso. Por exemplo, isso captura "stop", mas não "please stop". |
-| `Matches regex` | `STOP` | Captura qualquer uso de "STOP" nesse caso. Por exemplo, isso captura "stop" (pare), mas não "PLEASE STOP" (por favor, pare). |
+| `Matches regex` | `STOP` | Captura qualquer uso de "PARAR" exatamente assim. Por exemplo, isso captura "PARAR" e "POR FAVOR, PARAR" mas não "parar". |
 | `Matches regex` | `(?i)STOP(?-i)` | Captura qualquer uso de "STOP" em qualquer caso. Por exemplo, isso captura "stop" (pare), "please stop" (por favor, pare) e "never stop sending me messages" (nunca pare de me enviar mensagens). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 

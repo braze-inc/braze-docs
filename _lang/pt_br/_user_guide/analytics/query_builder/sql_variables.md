@@ -1,19 +1,19 @@
 ---
-nav_title: Variáveis SQL
-article_title: Consultas de SQL do Query Builder
+nav_title: variáveis SQL
+article_title: Variáveis do Construtor de Consultas SQL
 page_order: 2
 page_type: reference
-description: "Aprenda a usar variáveis no Query Builder, para que possa reutilizar suas consultas e evitar a codificação de dados em seu código."
+description: "Aprenda a usar variáveis no Construtor de Consultas, para que você possa reutilizar suas consultas e evitar codificar dados diretamente em seu código."
 tool: Reports
 ---
 
-# Consultas de SQL do Query Builder
+# Variáveis do Construtor de Consultas SQL
 
-> Aprenda a usar consultas de SQL no Query Builder, para que possa reutilizar suas consultas e evitar a codificação de dados em seu código.
+> Aprenda a usar variáveis SQL no Construtor de Consultas, para que você possa reutilizar suas consultas e evitar codificar dados diretamente em seu código.
 
 ## Por que usar variáveis SQL?
 
-Os benefícios do uso de variáveis SQL incluem:
+Os benefícios de usar variáveis SQL incluem:
 
 - Economize tempo criando uma variável de campanha para selecionar em uma lista ao criar seu relatório, em vez de colar os IDs de campanha.
 - Troque os valores adicionando variáveis que lhe permitam reutilizar o relatório para casos de uso ligeiramente diferentes no futuro (como um evento personalizado diferente).
@@ -35,8 +35,8 @@ Substitua o seguinte:
 
 | Espaço reservado      | Descrição                                                                                                                              |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| `variable_type`   | O tipo de variável predefinida que você gostaria de usar, como `campaign` ou `catalog_fields`. Para obter a lista completa, consulte [Tipos de variáveis compatíveis](#variable-types). |
-| `custom_label` | O rótulo usado para identificar a variável na guia **Variables (Variáveis** ) do Query Builder. |
+| `variable_type`   | O tipo de variável pré-definido que você gostaria de usar, como `campaign` ou `catalog_fields`. Para a lista completa, veja [Tipos de variáveis suportados](#variable-types). |
+| `custom_label` | O rótulo usado para identificar a variável na aba **Variáveis** do seu Construtor de Consultas. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 No exemplo a seguir, o número total de usuários entre o primeiro e o último dia de um mês é consultado para uma campanha. Cada variável será atribuída a um valor na próxima etapa.
@@ -53,20 +53,20 @@ WHERE campaign_id = '{{campaign.${Campaign}}}'
 
 ### Etapa 2: Atribuir um valor
 
-Por padrão, a guia **Variables (Variáveis** ) não é exibida no Query Builder. Ele só aparece depois de adicionar sua primeira variável à consulta. Lá, você poderá atribuir um valor a ele. Os valores específicos que você pode escolher dependerão do [tipo](#variable-types) da variável específica.
+Por padrão, a aba **Variáveis** não é exibida no Construtor de Consultas. Ela só aparece após adicionar sua primeira variável à consulta. Lá, você poderá atribuir um valor a ela. Os valores específicos que você pode escolher dependerão do [tipo](#variable-types) dessa variável específica.
 
-No exemplo a seguir, a campanha "Summer Feature Launch" é atribuída como um valor, juntamente com o primeiro e o último dias de junho de 2025.
+No exemplo a seguir, a campanha "Lançamento de Recursos de Verão" é atribuída como um valor, junto com os primeiros e últimos dias de junho de 2025.
 
-![A guia "Variable" (Variável) no Query Builder mostra o exemplo dado.]({% image_buster /assets/img/query_builder_example.png %})
+![A aba "Variável" no Construtor de Consultas mostrando o exemplo dado.]({% image_buster /assets/img/query_builder_example.png %})
 
 ## Tipos de variáveis gerais {#variable-types}
 
 ### Número
 
-`number` pode ser usado em combinação com outras variáveis não string. Aceita qualquer número positivo ou negativo, inclusive números decimais, como `5.5`.
+`number` pode ser usado em combinação com outras variáveis que não são string. Aceita qualquer número positivo ou negativo, incluindo números decimais, como `5.5`.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 {% raw %}
 ```sql
 some_number_column < {{number.${custom_label}}}
@@ -80,7 +80,7 @@ some_number_column < {{number.${custom_label}}}
 Para alterar os valores repetitivos da string entre as execuções do relatório. Use essa variável para evitar a codificação de um valor várias vezes em seu SQL.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 {% raw %}
 ```sql
 '{{string.${add a string here.}}}'
@@ -94,7 +94,7 @@ Para alterar os valores repetitivos da string entre as execuções do relatório
 Para selecionar em uma lista de opções.
 
 {% tabs local %}
-{% tab escolha uma %}
+{% tab choose one %}
 {% subtabs %}
 {% subtab usage %}
 {% raw %}
@@ -106,7 +106,7 @@ Para selecionar em uma lista de opções.
 {% endsubtabs %}
 {% endtab %}
 
-{% tab escolha múltipla %}
+{% tab choose multiple %}
 {% subtabs %}
 {% subtab usage %}
 {% raw %}
@@ -121,52 +121,52 @@ Para selecionar em uma lista de opções.
 
 #### Botão de rádio
 
-Para mostrar opções como botões de rádio em vez de um menu suspenso de seleção na guia **Variables (Variáveis** ). Isso não pode ser usado isoladamente - deve ser usado em combinação com uma [lista](#list).
+Para mostrar opções como botões de rádio em vez de um menu suspenso de seleção na guia **Variables (Variáveis** ). Isso não pode ser usado sozinho—deve ser usado em combinação com uma [lista](#list).
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 ```sql
 is_radio_button: 'true'
 ```
 {% endtab %}
 {% endtabs %}
 
-![Um exemplo de botão de rádio renderizado no Braze.]({% image_buster /assets/img_archive/sql_variables_campaigns.png %}){: style="max-width:50%;"}
+![Um exemplo de botão de opção renderizado no Braze.]({% image_buster /assets/img_archive/sql_variables_campaigns.png %}){: style="max-width:50%;"}
 
 #### Seleção múltipla
 
-Para saber se o menu suspenso de seleção permite uma seleção única ou múltipla. Isso não pode ser usado isoladamente - deve ser usado em combinação com uma [lista](#list).
+Para saber se o menu suspenso de seleção permite uma seleção única ou múltipla. Isso não pode ser usado sozinho—deve ser usado em combinação com uma [lista](#list).
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 ```sql
 is_multi_select: 'true'
 ```
 {% endtab %}
 {% endtabs %}
 
-![Um exemplo de lista de seleção múltipla renderizada no Braze.]({% image_buster /assets/img_archive/sql_variables_productname.png %}){: style="max-width:50%;"}
+![Um exemplo de lista de múltipla seleção renderizada no Braze.]({% image_buster /assets/img_archive/sql_variables_productname.png %}){: style="max-width:50%;"}
 
 #### Opções 
 
-Para fornecer a lista de opções selecionáveis na forma de um rótulo e valor. O rótulo é o que é exibido e o valor é o que substitui a variável quando a opção é selecionada. Isso não pode ser usado isoladamente - deve ser usado em combinação com uma [lista](#list).
+Para fornecer a lista de opções selecionáveis na forma de um rótulo e valor. O rótulo é o que é exibido e o valor é o que substitui a variável quando a opção é selecionada. Isso não pode ser usado sozinho—deve ser usado em combinação com uma [lista](#list).
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 ```sql
 options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'
 ```
 {% endtab %}
 {% endtabs %}
 
-## Tipos de variáveis específicas do Braze
+## Tipos de variáveis específicos do Braze
 
 ### Período
 
-Para exibir um calendário para selecionar datas. Substitua `start_date` e `end_date` por um carimbo de data/hora Unix em segundos para uma data especificada em UTC, como `1696517353`. Opcionalmente, você pode definir apenas um `start_date` ou `end_date` para exibir apenas uma única data no calendário. Se os rótulos dos sites `start_date` e `end_date` não coincidirem, eles serão tratados como duas datas separadas, em vez de um intervalo de datas.
+Para exibir um calendário para selecionar datas. Substitua `start_date` e `end_date` por um timestamp Unix em segundos para uma data especificada em UTC, como `1696517353`. Opcionalmente, você pode definir apenas um `start_date` ou `end_date` para exibir apenas uma única data no calendário. Se os rótulos do seu `start_date` e `end_date` não corresponderem, eles serão tratados como duas datas separadas, em vez de um intervalo de datas.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 {% raw %}
 ```
 time > {{start_date.${custom_label}}} AND time < {{end_date.${custom_label}}}
@@ -175,7 +175,7 @@ time > {{start_date.${custom_label}}} AND time < {{end_date.${custom_label}}}
 {% endtab %}
 {% endtabs %}
 
-Você pode definir o intervalo de datas para qualquer uma das seguintes opções. Se ambos `start_date` e `end_date` forem usados e compartilharem o mesmo rótulo, todas as opções serão mostradas. Caso contrário, se apenas uma for usada, somente a opção especificada será exibida.
+Você pode definir o intervalo de datas para qualquer uma das seguintes opções. Se ambos `start_date` e `end_date` forem usados e compartilharem o mesmo rótulo, todas as opções serão exibidas. Caso contrário, se apenas um for usado, então apenas a opção especificada será exibida.
 
 | Opção | Descrição | Valores necessários |
 | --- | --- | --- |
@@ -185,15 +185,15 @@ Você pode definir o intervalo de datas para qualquer uma das seguintes opções
 | Período | Especifica uma data inicial e uma data final | Requer os sites `start_date` e `end_date` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Seu Liquid será usado para exibir um calendário dentro do intervalo de datas fornecido:
+Seu Liquid será usado para exibir um calendário dentro do intervalo de datas dado:
 
-![Um exemplo de calendário renderizado em Braze.]({% image_buster /assets/img_archive/query_builder_time_range.png %}){: style="max-width:50%;"}
+![Um exemplo de calendário renderizado no Braze.]({% image_buster /assets/img_archive/query_builder_time_range.png %}){: style="max-width:50%;"}
 
 ### Campanhas
 
 {% tabs local %}
-{% tab uma campanha %}
-Para selecionar uma campanha. Compartilhar o mesmo rótulo com um Canvas resultará em um botão de opção na guia **Variables (Variáveis** ) para selecionar Canvas ou campanha.
+{% tab one campaign %}
+Para selecionar uma campanha. Compartilhar o mesmo rótulo com um Canvas resultará em um botão de opção dentro da aba **Variáveis** para selecionar entre Canvas ou campanha.
 
 {% subtabs %}
 {% subtab usage %}
@@ -206,8 +206,8 @@ campaign_id = '{{campaign.${custom_label}}}'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab várias campanhas %}
-Para campanhas de seleção múltipla. Compartilhar o mesmo rótulo com um Canvas resultará em um botão de opção na guia **Variables (Variáveis** ) para selecionar Canvas ou campanha.
+{% tab multiple campaigns %}
+Para campanhas de seleção múltipla. Compartilhar o mesmo rótulo com um Canvas resultará em um botão de opção dentro da aba **Variáveis** para selecionar entre Canvas ou campanha.
 
 - **Valor de substituição:** IDs BSON de campanhas
 
@@ -222,7 +222,7 @@ campaign_id IN ({{campaigns.${custom_label}}})
 {% endsubtabs %}
 {% endtab %}
 
-{% tab variantes de campanha %}
+{% tab campaign variants %}
 Para selecionar variantes de campanha que pertencem à campanha selecionada. Ele deve ser usado em conjunto com uma variável de campanha ou de campanhas.
 
 - **Valor de substituição:** IDs da API de variantes de campanha, strings delimitadas por vírgulas, como `api-id1, api-id2`.
@@ -240,14 +240,14 @@ message_variation_api_id IN ({{campaign_variants.${custom_label}}})
 {% endtabs %}
 
 {% alert important %}
-Todas as variáveis da campanha e do Canva devem usar os mesmos identificadores para sincronizar os estados em um único grupo.
+Todas as variáveis de campanha e Canvas devem usar os mesmos identificadores para sincronizar estados dentro de um único grupo.
 {% endalert %}
 
 ### Canvas
 
 {% tabs local %}
-{% tab uma canva %}
-Para selecionar um Canva. O compartilhamento do mesmo rótulo com uma campanha resultará em um botão de opção na guia **Variables (Variáveis** ) que permite selecionar o Canva ou a campanha.
+{% tab one canvas %}
+Para selecionar um Canva. Compartilhar o mesmo rótulo com uma campanha resultará em um botão de opção dentro da aba **Variáveis** para selecionar Canvas ou campanha.
 
 - **Valor de substituição:** ID do BSON da tela
 
@@ -262,8 +262,8 @@ canvas_id = '{{canvas.${custom_label}}}'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab várias telas %}
-Para selecionar várias telas. Compartilhar o mesmo rótulo com uma campanha resultará em um botão de opção na guia **Variables (Variáveis** ) para selecionar Canva ou campanha.
+{% tab multiple canvases %}
+Para selecionar várias telas. Compartilhar o mesmo rótulo com uma campanha resultará em um botão de opção dentro da aba **Variáveis** para selecionar Canvas ou campanha.
 
 - **Valor de substituição:** Canvas IDs BSON
 
@@ -278,8 +278,8 @@ canvas_id IN ({{canvases.${custom_label}}})
 {% endsubtabs %}
 {% endtab %}
 
-{% tab variantes de canvas %}
-Para selecionar as variantes do Canvas que pertencem a um Canvas escolhido. Ele deve ser usado com uma variável Canvas ou Canvases. Defina uma ou mais IDs da API de variantes do Canvas, como uma string separada por vírgulas, como em `api-id1, api-id2`.
+{% tab canvas variants %}
+Para selecionar as variantes do Canvas que pertencem a um Canvas escolhido. Ele deve ser usado com uma variável Canvas ou Canvases. Defina para um ou mais IDs de API de variantes Canvas, como uma string separada por vírgulas, como em `api-id1, api-id2`.
 
 {% subtabs %}
 {% subtab usage %}
@@ -292,7 +292,7 @@ canvas_variation_api_id IN ({{canvas_variants.${custom_label}}})
 {% endsubtabs %}
 {% endtab %}
 
-{% tab uma etapa do canva %}
+{% tab one canvas step %}
 Para selecionar uma etapa do Canva que pertença a um Canvas escolhido. Ele deve ser usado com uma variável Canva.
 
 {% subtabs %}
@@ -306,7 +306,7 @@ canvas_step_api_id = '{{canvas_step.${custom_label}}}'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab várias etapas do canva %}
+{% tab multiple canvas steps %}
 Para selecionar as etapas do Canvas que pertencem aos Canvases escolhidos. Ele deve ser usado com uma variável Canvas ou Canvases.
 
 {% subtabs %}
@@ -322,15 +322,15 @@ canvas_step_api_id IN ({{canvas_steps.${custom_label}}})
 {% endtabs %}
 
 {% alert important %}
-Todas as variáveis da campanha e do Canva devem usar os mesmos identificadores para sincronizar os estados em um único grupo.
+Todas as variáveis de campanha e Canvas devem usar os mesmos identificadores para sincronizar estados dentro de um único grupo.
 {% endalert %}
 
 ### Produtos
 
-`products` é usado para selecionar um ou mais produtos no dashboard do Braze.
+`products` é usado para selecionar um ou mais produtos do painel do Braze.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 {% raw %}
 ```sql
 ({{products.${custom_label}}})
@@ -338,7 +338,7 @@ Todas as variáveis da campanha e do Canva devem usar os mesmos identificadores 
 {% endraw %}
 {% endtab %}
 
-{% tab exemplo %}
+{% tab example %}
 {% raw %}
 ```sql
 SELECT product_name
@@ -351,11 +351,11 @@ WHERE product_id IN ({{products.${Games with DLC}}});
 
 ### Eventos personalizados
 
-Selecione um ou mais eventos personalizados ou propriedades de eventos personalizados em uma lista.
+Selecione um ou mais eventos personalizados ou propriedades de eventos personalizados de uma lista.
 
 {% tabs local %}
-{% tab evento %}
-`custom_events` é usado para selecionar um ou mais eventos personalizados do dashboard do Braze.
+{% tab event %}
+`custom_events` é usado para selecionar um ou mais eventos personalizados do painel do Braze.
 
 {% subtabs %}
 {% subtab usage %}
@@ -371,15 +371,15 @@ Selecione um ou mais eventos personalizados ou propriedades de eventos personali
 ```sql
 SELECT event_name
 FROM CUSTOM_EVENTS_TABLE
-WHERE event_name = '{{custom_events.${Purchased Game}}}';
+WHERE event_name IN ({{custom_events.${Purchased Game}}}); 
 ```
 {% endraw %}
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 
-{% tab propriedades %}
-`custom_event_properties` é usado para selecionar uma ou mais propriedades do evento personalizado atualmente selecionado.  Requer um conjunto de variáveis `custom_events`.
+{% tab properties %}
+`custom_event_properties` é usado para selecionar uma ou mais propriedades do evento personalizado atualmente selecionado.  Requer uma variável `custom_events` definida.
 
 {% subtabs %}
 {% subtab usage %}
@@ -395,10 +395,10 @@ name = '{{custom_event_properties.${property names)}}}'
 
 ### Espaço de trabalho
 
-`workspace` é usado para selecionar um único espaço de trabalho no dashboard do Braze.
+`workspace` é usado para selecionar um único espaço de trabalho do painel do Braze.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 {% raw %}
 ```sql
 workspace_id = '{{workspace.${app_group_id}}}'
@@ -409,11 +409,11 @@ workspace_id = '{{workspace.${app_group_id}}}'
 
 ### Catálogos
 
-Selecione um ou mais catálogos ou campos de catálogos em uma lista.
+Selecione um ou mais catálogos ou campos de catálogo de uma lista.
 
 {% tabs local %}
-{% tab catálogos %}
-`catalogs` é usado para selecionar um ou mais catálogos no dashboard do Braze.
+{% tab catalogs %}
+`catalogs` é usado para selecionar um ou mais catálogos do painel do Braze.
 
 {% subtabs %}
 {% subtab usage %}
@@ -426,8 +426,8 @@ catalog_id = '{{catalogs.${catalog}}}'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab campos de catálogos %}
-`catalog_fields` é usado para definir um ou mais campos do catálogo atualmente selecionado. Requer um conjunto de variáveis `catalogs`.
+{% tab catalog fields %}
+`catalog_fields` é usado para definir um ou mais campos do catálogo atualmente selecionado. Requer uma variável `catalogs` definida.
 
 {% subtabs %}
 {% subtab usage %}
@@ -443,10 +443,10 @@ field_name = '{{catalog_fields.${custom_label}}}'
 
 ### Segmentos
 
-Para selecionar segmentos que tenham [a análise de dados]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) ativada. Defina isso como a ID de análise de dados do segmento, que corresponde às IDs armazenadas na coluna `user_segment_membership_ids` nas tabelas em que essa coluna está disponível.
+Para selecionar segmentos que tenham [a análise de dados]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) ativada. Defina isso para o ID de análise de segmento, que corresponde aos IDs armazenados na coluna `user_segment_membership_ids` nas tabelas onde essa coluna está disponível.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 {% raw %}
 ```sql
 {{segments.${analytics_segments}}}
@@ -457,10 +457,10 @@ Para selecionar segmentos que tenham [a análise de dados]({{site.baseurl}}/user
 
 ### Tags
 
-Para selecionar tags para campanhas e telas. Defina Campanhas e Canvas com IDs BSON separados por vírgula e entre aspas simples que estejam associados às tags selecionadas.
+Para selecionar tags para campanhas e telas. Defina para Campanhas e Canvases com IDs BSON separados por vírgulas entre aspas simples que estão associados às tags selecionadas.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 {% raw %}
 ```sql
 {{tags.${some tags}}}
@@ -471,10 +471,10 @@ Para selecionar tags para campanhas e telas. Defina Campanhas e Canvas com IDs B
 
 ## Metadados variáveis
 
-Os metadados podem ser anexados a uma variável para alterar seu comportamento, anexando os metadados com um caractere pipe ( | ) após o rótulo da variável. A ordem dos metadados não importa e você pode anexar qualquer número deles. Além disso, todos os tipos de metadados podem ser usados para qualquer variável, exceto os metadados especiais que são específicos para determinadas variáveis (isso será indicado nesses casos). O uso de todos os metadados é opcional e é usado para alterar o comportamento da variável padrão.
+Metadados podem ser anexados a uma variável para alterar seu comportamento, adicionando os metadados com um caractere pipe ( | ) após o rótulo da variável. A ordem dos metadados não importa e você pode anexar qualquer número deles. Além disso, todos os tipos de metadados podem ser usados para qualquer variável, exceto os metadados especiais que são específicos para determinadas variáveis (isso será indicado nesses casos). O uso de todos os metadados é opcional e é usado para alterar o comportamento padrão da variável.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 {% raw %}
 ```sql
 {{string.${my var}| is_required: 'false' | description: 'My optional string var'}}
@@ -485,10 +485,10 @@ Os metadados podem ser anexados a uma variável para alterar seu comportamento, 
 
 ### Booleano
 
-Para saber se o valor de uma variável está preenchido. Isso é útil para variáveis opcionais em que você deseja interromper uma condição se o valor de uma variável não for preenchido. Pode ser definido como `true` ou `false`, dependendo do valor da outra variável.
+Para saber se o valor de uma variável está preenchido. Isso é útil para variáveis opcionais onde você deseja interromper uma condição se o valor de uma variável não estiver preenchido. Pode ser definido como `true` ou `false` dependendo do valor da outra variável.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 {% raw %}
 ```sql
 {{string.${type_name_has_no_value} | visible: 'false'}} or {{string.${type_name_has_value} | visible: 'false'}}
@@ -497,7 +497,7 @@ Para saber se o valor de uma variável está preenchido. Isso é útil para vari
 {% endtab %}
 {% endtabs %}
 
-`type` e `name` referem-se à variável referenciada. Por exemplo, para causar curto-circuito na seguinte variável opcional: {% raw %}`{{campaigns.${messaging}}`{% endraw %}:
+`type` e `name` referem-se à variável referenciada. Por exemplo, para interromper a seguinte variável opcional: {% raw %}`{{campaigns.${messaging}}`{% endraw %}:
 
 {% raw %}
 ```sql
@@ -512,7 +512,7 @@ Para saber se as variáveis estão visíveis. Todas as variáveis são visíveis
 Há diversas variáveis especiais cujo valor depende de outra variável, como, por exemplo, se outra variável tem um valor. Essas variáveis especiais são marcadas como não visíveis para que não sejam exibidas na guia **Variáveis**.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 ```sql
 visible: 'false'
 ```
@@ -524,7 +524,7 @@ visible: 'false'
 Para saber se as variáveis são obrigatórias por padrão. Um valor vazio para uma variável geralmente leva a uma consulta incorreta.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 ```sql
 required: 'false'
 ```
@@ -536,17 +536,17 @@ required: 'false'
 Para selecionar a posição da variável na guia **Variáveis**.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 ```sql
 order: '1'
 ```
 {% endtab %}
 {% endtabs %}
 
-### Incluir cotações
+### Incluir aspas
 
 {% tabs local %}
-{% tab aspas simples %}
+{% tab single quotes %}
 Para cercar os valores de uma variável com aspas simples.
 
 {% subtabs %}
@@ -558,7 +558,7 @@ include_quotes: 'true'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab aspas duplas %}
+{% tab double quotes %}
 Para envolver os valores de uma variável com aspas duplas.
 
 {% subtabs %}
@@ -573,10 +573,10 @@ include_double_quotes: 'true'
 
 ### Espaço reservado
 
-Para especificar o texto do espaço reservado mostrado no campo de entrada da variável.
+Para especificar o texto de espaço reservado mostrado no campo de entrada da variável.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 ```sql
 placeholder: 'enter some value'
 ```
@@ -585,10 +585,10 @@ placeholder: 'enter some value'
 
 ### Descrição
 
-Para especificar o texto de descrição mostrado no campo de entrada da variável.
+Para especificar o texto de descrição mostrado abaixo do campo de entrada da variável.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 ```sql
 description: 'some description'
 ```
@@ -600,7 +600,7 @@ description: 'some description'
 Para especificar o valor padrão da variável quando nenhum valor for especificado.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 ```sql
 default_value: '5'
 ```
@@ -612,7 +612,7 @@ default_value: '5'
 Para ocultar o rótulo da variável.
 
 {% tabs %}
-{% tab uso %}
+{% tab usage %}
 ```sql
 hide_label: 'true'
 ```

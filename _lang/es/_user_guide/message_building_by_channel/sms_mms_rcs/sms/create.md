@@ -18,10 +18,10 @@ search_rank: 1
 
 ## Paso 1: Elige dónde construir tu mensaje
 
-¿No estás seguro de si tu mensaje debe enviarse mediante una campaña o un Canvas? Las campañas son mejores para mensajes sencillos y únicos, mientras que los lienzos son mejores para recorridos de usuario de varios pasos.
+¿No estás seguro de si tu mensaje debe enviarse mediante una campaña o un Canvas? Las campañas son mejores para campañas de mensajería únicas y específicas, mientras que los lienzos son mejores para recorridos de usuario de varios pasos.
 
 {% tabs %}
-{% tab Campaña %}
+{% tab Campaign %}
 
 **Pasos:**
 
@@ -60,11 +60,11 @@ Escribe tu mensaje utilizando los idiomas y la personalización (Liquid, Connect
 Antes de continuar, lea nuestras directrices sobre [segmentos de mensajes SMS y límites de copia]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/). Los segmentos de mensajes SMS son los lotes de caracteres que las compañías telefónicas utilizan para medir los mensajes de texto. Los mensajes se cobran por segmento de mensaje, por lo que conviene entender los matices de cómo se dividirán los mensajes.
 {% endalert %}
 
-![Compositor de SMS en Braze con el mensaje "Hola, first_name, ¡agradecemos tu apoyo! ¿Por qué no te pasas por una de nuestras tiendas y les enseñas este SMS para obtener un descuento exclusivo? Responda STOP para dejar de recibir mensajes nuestros".]({% image_buster /assets/img/sms_campaign_compose.png %})
+![Compositor de SMS en Braze con el mensaje "¡Hola first_name, agradecemos tu apoyo! ¿Por qué no te pasas por una de nuestras tiendas y les enseñas este SMS para obtener un descuento exclusivo? Responde STOP para dejar de recibir mensajes nuestros".]({% image_buster /assets/img/sms_campaign_compose.png %})
 
 ### Añadir una tarjeta de contacto
 
-Puedes añadir una tarjeta de contacto a tu mensaje SMS para que a tus clientes les resulte más fácil añadir tu empresa e información de contacto a sus contactos. Puede asignar propiedades comunes a estas tarjetas, como el nombre de su empresa, el número de teléfono, la dirección, el correo electrónico y una pequeña foto. Consulta [las tarjetas de contacto]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/) para saber más.
+Puedes añadir una tarjeta de contacto a tu mensaje SMS para que los clientes puedan añadir tu empresa e información de contacto a los contactos de sus dispositivos. Puedes asignar propiedades como el nombre de la empresa, el número de teléfono, la dirección, el correo electrónico y una pequeña foto. Consulta [las tarjetas de contacto]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/) para más detalles.
 
 ### Consejos
 
@@ -78,7 +78,7 @@ Si piensa utilizar Liquid, asegúrese de incluir un valor predeterminado para la
 
 ¿Necesitas ayuda para crear textos impactantes? Prueba a utilizar el [asistente de redacción de IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Introduzca el nombre o la descripción de un producto y la IA generará un texto de marketing similar al humano para utilizarlo en sus mensajes.
 
-![Inicia el botón de redactor de IA, situado en el campo Mensaje del compositor de SMS.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
+![Inicia el botón AI Copywriter, situado en el campo Mensaje del compositor de SMS.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
 #### Crear mensajes de derecha a izquierda
 
@@ -88,7 +88,7 @@ El aspecto final de los mensajes de derecha a izquierda depende en gran medida d
 
 Braze recomienda siempre previsualizar y probar el mensaje antes de enviarlo. Cambia a la pestaña **Prueba** para enviar un SMS de prueba a [grupos de prueba de contenido]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) o a usuarios individuales, o previsualiza el mensaje como usuario directamente en Braze.
 
-![Vista previa de la copia del SMS desde la pestaña Prueba del compositor. En la sección de perfil, el campo Nombre está configurado como "James". En la sección de previsualización, el SMS ahora dice "Hola, James, ¡agradecemos tu apoyo!"]({% image_buster /assets/img/sms_campaign_test.png %})
+![Vista previa de la copia del SMS desde la pestaña Prueba del compositor. En la sección de perfil, el campo Nombre está configurado como "James". En la vista previa, el SMS dice ahora "Hola James, ¡agradecemos tu apoyo!".]({% image_buster /assets/img/sms_campaign_test.png %})
 
 {% alert tip %}
 Si quieres comprobar en cuántos segmentos se puede dividir tu SMS, prueba la longitud de tu texto con nuestra [calculadora de segmentos SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
@@ -97,7 +97,7 @@ Si quieres comprobar en cuántos segmentos se puede dividir tu SMS, prueba la lo
 ## Paso 4: Construye el resto de tu campaña o Canvas
 
 {% tabs %}
-{% tab Campaña %}
+{% tab Campaign %}
 
 A continuación, ¡construye el resto de tu campaña! En las secciones siguientes encontrarás más información sobre cómo utilizar mejor nuestras herramientas para crear mensajes SMS.
 
@@ -111,7 +111,11 @@ En este paso también puede especificar controles de entrega, como permitir que 
 
 #### Elige los usuarios a los que dirigirte
 
-A continuación, tienes que [dirigirte a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) eligiendo segmentos o filtros para reducir tu audiencia. Ya deberías haber elegido el grupo de suscripción, que restringe a los usuarios según el nivel o categoría de comunicación que desean tener contigo. En este paso, seleccionará la audiencia más amplia de sus segmentos, y reducirá aún más ese segmento con nuestros Filtros, si así lo desea. Automáticamente obtendrá una instantánea de cómo es la población de ese segmento aproximado en este momento. Tenga en cuenta que la pertenencia exacta a un segmento siempre se calcula justo antes de enviar el mensaje.
+A continuación, tienes que [dirigirte a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) eligiendo segmentos o filtros para reducir tu audiencia. Ya deberías haber elegido el grupo de suscripción, que restringe a los usuarios según el nivel o categoría de comunicación que desean tener contigo. 
+
+{% multi_lang_include target_audiences.md %}
+
+En este paso, seleccionas la audiencia más amplia de tus segmentos, y acotas aún más ese segmento con nuestros filtros, si así lo deseas. Automáticamente recibirás una vista previa del aspecto aproximado de la población de ese segmento. Ten en cuenta que la pertenencia exacta a un segmento siempre se calcula antes de enviar el mensaje.
 
 {% alert tip %}
 ¿Te interesa la reorientación por SMS? Visita nuestro [artículo sobre reorientación]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) por SMS para saber más.

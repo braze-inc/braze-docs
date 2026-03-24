@@ -1,5 +1,5 @@
 ---
-nav_title: Capturar usuarios rezagados
+nav_title: Capturar usuarios caducados
 article_title: Capturar usuarios rezagados
 page_order: 1
 page_type: tutorial
@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# Capturar usuarios rezagados
+# Capturar usuarios caducados
 
 > Si tu audiencia está disminuyendo, es crucial que intentes atraerla de nuevo. Con Braze, puedes configurar campañas de reactivación de la interacción recurrentes y automatizadas para captar a los usuarios rezagados. Puedes elegir el plazo de reactivación de la interacción y la recurrencia que mejor se adapten a tu aplicación, pero para demostrarlo, empezaremos con un plan de reactivación de 14 días.
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Diretrizes para envio de e-mail
+nav_title: Diretrizes para o envio de e-mail
 article_title: Diretrizes para envio de e-mail
 page_order: 1
 page_type: reference
@@ -16,8 +16,8 @@ Aqui estão algumas dicas rápidas que você deve ter em mente ao criar seu cont
 
 - Ao formatar seu e-mail, use folhas de estilo inline como CSS.
 - Para usar um modelo de e-mail para as versões móvel e desktop, mantenha a largura abaixo de 500 pixels.
-- As imagens carregadas para o modelo de e-mail devem ter menos de 5 MB. Os formatos compatíveis incluem PNG, JPEG e GIF.
-- Não defina alturas e larguras para imagens, pois isso causará espaço em branco desnecessário em um e-mail degradado.
+- As imagens devem ter menos de 5 MB. Recomendamos usar PNG, JPEG ou GIF para máxima compatibilidade. Evite SVG e WebP, pois muitos clientes de e-mail ainda não os suportam.
+- Não defina alturas e larguras para as imagens, pois isso pode causar espaços em branco desnecessários em um e-mail degradado.
 - `div` não devem ser usadas, pois a maioria dos clientes de e-mail não aceita seu uso. Em vez disso, use tabelas aninhadas.
 - Evite usar JavaScript porque ele não funciona com nenhum ESP.
 - A Braze melhora o tempo de carregamento usando um CDN global para hospedar todas as imagens de e-mail.
@@ -32,36 +32,18 @@ Como os filtros de spam procuram tanto uma versão em HTML quanto em texto simpl
 A validação é usada para endereços de e-mail do dashboard, endereços de e-mail do usuário final (seus clientes) e endereços de origem e de resposta de uma mensagem de e-mail.
 {% endalert %}
 
-A validação de e-mail é feita quando o endereço de e-mail de um usuário foi atualizado ou está sendo importado para o Braze via API, upload de CSV, SDK ou modificado no dashboard. Note que seus endereços de e-mail não podem incluir espaços em branco e, se forem enviados usando a API, os espaços em branco resultarão em um erro 400.
+A validação de e-mail ocorre quando o endereço de e-mail de um usuário é atualizado ou está sendo importado para o Braze pela API, upload de CSV, SDK ou modificado no dashboard. Observe que seus endereços de e-mail não podem incluir espaços em branco, e se enviados usando a API, espaços em branco podem resultar em um erro `400`.
 
-Os endereços de e-mail direcionados por meio dos servidores Braze devem ser validados de acordo com os padrões [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822). O Braze não aceita determinados caracteres e os reconhece como inválidos. Se um e-mail for devolvido, a Braze o marcará como inválido e o status da inscrição não será alterado. 
+Os endereços de e-mail direcionados por meio dos servidores Braze devem ser validados de acordo com os padrões [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822). O Braze não aceita determinados caracteres e os reconhece como inválidos. Se um e-mail for devolvido, a Braze marcará o e-mail como inválido e o status da inscrição não será alterado. 
 
-{% details Caracteres não aceitos fora dos padrões RFC %}
-- *
-- /
-- ?
-- !
-- $
-- #
-- %
-- ^
-- &
-- (
-- )
-- {
-- }
-- [
-- ]
-- ~
-- ,
-{% enddetails %}
+Para informações sobre caracteres não permitidos e regras de validação de e-mail, veja [Email validation]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/#how-it-works).
 
 ### Configuração dos endereços de origem e de resposta
 
 Ao definir seus endereços no campo "de", confira se o domínio de e-mail do campo "de" corresponde ao domínio de envio (como `marketing.yourdomain.com`). Não fazer isso pode resultar em desalinhamento de SPF e DKIM. Todos os e-mails de resposta podem ser definidos para seu domínio raiz.
 
 {% alert note %}
-A codificação Unicode não é compatível com os endereços "from".
+A codificação Unicode não é suportada em endereços "de".
 {% endalert %}
 
 ### Verificação de detalhes HTML
@@ -69,7 +51,7 @@ A codificação Unicode não é compatível com os endereços "from".
 Lembre-se de que algumas tags e atribuições HTML não são permitidas, pois podem permitir a execução de códigos maliciosos no navegador.
 
 Confira as seguintes listas de tags e atribuições HTML que não são permitidas em seus e-mails:
-{% details Expandir para tags HTML não permitidas %}
+{% details Expand for disallowed HTML tags %}
 - `<!doctype>`
 - `<applet>`
 - `<bgsound>`
@@ -87,7 +69,7 @@ Confira as seguintes listas de tags e atribuições HTML que não são permitida
 - `<svg>`
 {% enddetails %}
 
-{% details Expandir para atribuições HTML não permitidas %}
+{% details Expand for disallowed HTML attributes %}
 - `<animationend>`
 - `<animationiteration>`
 - `<animationstart>`

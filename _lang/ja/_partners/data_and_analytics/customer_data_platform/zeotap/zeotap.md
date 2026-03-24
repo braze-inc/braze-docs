@@ -18,7 +18,7 @@ ZeotapとBrazeの統合により、Zeotapの顧客セグメントを同期して
 | --- | --- |
 |Zeotap アカウント | このパートナーシップを活用するには、[Zeotap アカウント](https://zeotap.com/)が必要です。 |
 | Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| Braze RESTエンドポイント  | RESTエンドポイントのURL。エンドポイントは、インスタンスの Braze URL]{% image_buster /assets/img/zeotap/zeotap1.png %} によって異なります。| |
+| Braze RESTエンドポイント  | RESTエンドポイントのURL。エンドポイントは[インスタンスの Braze URL]({% image_buster /assets/img/zeotap/zeotap1.png %}) に応じて異なります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 統合
@@ -30,7 +30,7 @@ ZeotapとBrazeの統合により、Zeotapの顧客セグメントを同期して
 3. 表示されるプロンプトで、宛先に名前を付け、Braze アカウントに関連付けられたクライアント名と Braze REST API キーを指定します。
 4. 最後に、ドロップダウンからBraze RESTエンドポイントインスタンスを選択し、保存先を指定する。<br><br>![]({% image_buster /assets/img/zeotap/zeotap1.png %})
 
-### ステップ2: Zeotapセグメントを作成して目的地にリンクする 
+### ステップ 2:Zeotapセグメントを作成して目的地にリンクする 
  
 1. Zeotap Unityプラットフォームから**CONNECT**アプリケーションに移動する。
 2. セグメントを作成し、ステップ1で作成したBrazeデスティネーションを選択する。
@@ -54,7 +54,7 @@ Zeotapでセグメントの作成、プッシュ、処理に成功すると、Br
 次に、Braze 内でこのセグメントを作成して定義する必要があります。
 1. Braze ダッシュボードから [**セグメント**] を選択し、次に [**セグメントを作成**] を選択します。
 2. 次に、セグメントに名前を付け、Zeotapで作成したカスタム属性セグメントを選択する。
-3. 変更を保存します。 
+3. 変更を保存する。 
 
 ![Braze セグメントビルダーでインポートされたセグメントがカスタム属性として設定されていることがわかる。]({% image_buster /assets/img/zeotap/zeotap3.png %})
 

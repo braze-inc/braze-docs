@@ -16,14 +16,14 @@ tool:
 > ¡Los mensajes a pantalla completa ocupan toda la pantalla del dispositivo! Este tipo de mensaje es ideal cuando realmente necesitas la atención de tu usuario, como en el caso de las actualizaciones obligatorias de la aplicación.
 
 {% tabs %}
-{% tab Retrato %}
+{% tab Portrait %}
 
-![Dos mensajes a pantalla completa en la aplicación, uno al lado del otro en orientación vertical, detallando las recomendaciones de imagen y texto. Consulte las secciones siguientes para obtener más información.]({% image_buster /assets/img/full-screen-spec.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
+![Dos mensajes a pantalla completa en la aplicación, uno al lado del otro en orientación vertical, detallando las recomendaciones de imagen y texto. Para más detalles, consulta las secciones siguientes.]({% image_buster /assets/img/full-screen-spec.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
-{% tab Horizontal %}
+{% tab Landscape %}
 
-![Dos mensajes a pantalla completa en la aplicación, uno al lado del otro en orientación horizontal, detallando las recomendaciones de imagen y texto. Consulte las secciones siguientes para obtener más información.]({% image_buster /assets/img/full-screen-spec-landscape.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
+![Dos mensajes a pantalla completa en la aplicación, uno al lado del otro en orientación horizontal, detallando las recomendaciones de imagen y texto. Para más detalles, consulta las secciones siguientes.]({% image_buster /assets/img/full-screen-spec-landscape.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
 {% endtabs %}
@@ -36,7 +36,7 @@ Los mensajes in-app a pantalla completa ocuparán toda la altura de un dispositi
 - Sólo aceptamos los tipos de archivo PNG, JPEG y [GIF]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs#gifs).
 - Recomendamos que sus imágenes sean de 500 KB.
 
-{% alert tip %} ¡Crea activos con confianza! Nuestras plantillas de imágenes de mensajes in-app y superposiciones de zonas seguras están diseñadas para adaptarse a dispositivos de todos los tamaños. [Descargar plantillas de diseño ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+{% alert tip %} ¡Crea activos con confianza! Nuestras plantillas de imágenes de mensajes dentro de la aplicación y superposiciones de zonas seguras están diseñadas para adaptarse a dispositivos de todos los tamaños. [Descargar plantillas de diseño ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
 ### Vertical
 
@@ -56,7 +56,7 @@ Los mensajes in-app a pantalla completa ocuparán toda la altura de un dispositi
 
 ### Zona segura de imágenes
 
-Al previsualizar un mensaje de la aplicación a pantalla completa en la plataforma Braze, puedes habilitar la zona segura de imagen en el área del mensaje que está a salvo de recortes cuando se muestra en otros dispositivos. Además de probar la zona segura de la imagen en el panel de vista previa, le recomendamos que [pruebe su mensaje]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) como siempre.
+Al previsualizar un mensaje de la aplicación a pantalla completa en la plataforma Braze, puedes habilitar la zona segura de imagen en el área del mensaje que está a salvo de recortes cuando se muestra en otros dispositivos. Además de probar la zona segura de la imagen en el panel de vista previa, le recomendamos que [pruebe su mensaje]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) como siempre.
 
 ![Vista previa de un mensaje in-app en Braze con la opción "Mostrar zona segura de imágenes" activada. La zona segura de la imagen es una superposición sobre la imagen que visualiza qué partes de la imagen estarán a salvo del recorte.]({% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %})
 
@@ -65,14 +65,14 @@ Al previsualizar un mensaje de la aplicación a pantalla completa en la platafor
 En una tableta o en un navegador de escritorio, aparecerá un mensaje a pantalla completa en el centro de la pantalla de la aplicación, como se muestra en la siguiente captura de pantalla.
 
 {% tabs %}
-{% tab Retrato %}
+{% tab Portrait %}
 
-![Mensaje in-app a pantalla completa tal y como aparecería en una pantalla grande en orientación vertical. El mensaje aparece como un modal grande que se sitúa en el centro de la pantalla.]({% image_buster /assets/img/full-screen-large-viewport.png %}){: style="border:none;display:block;margin-left:auto;margin-right:auto"}
+![Mensaje in-app a pantalla completa tal y como aparecería en una pantalla grande en orientación vertical. El mensaje aparece como un gran modal que se sitúa en el centro de la pantalla.]({% image_buster /assets/img/full-screen-large-viewport.png %}){: style="border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
-{% tab Horizontal %}
+{% tab Landscape %}
 
-![Mensaje in-app a pantalla completa tal y como aparecería en una pantalla grande en orientación horizontal. El mensaje aparece como un modal grande que se sitúa en el centro de la pantalla.]({% image_buster /assets/img/full-screen-large-viewport-landscape.png %}){: style="max-width:80%;border:none;display:block;margin-left:auto;margin-right:auto"}
+![Mensaje in-app a pantalla completa tal y como aparecería en una pantalla grande en orientación horizontal. El mensaje aparece como un gran modal que se sitúa en el centro de la pantalla.]({% image_buster /assets/img/full-screen-large-viewport-landscape.png %}){: style="max-width:80%;border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
 {% endtabs %}

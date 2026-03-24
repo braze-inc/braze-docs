@@ -1,6 +1,6 @@
 ---
-nav_title: Removing users via API
-article_title: Removing Users via API
+nav_title: Remove users via API
+article_title: Remove Users via API
 page_order: 0
 
 page_type: reference
@@ -9,7 +9,7 @@ tool: Dashboard
 platform: API
 ---
 
-# Removing users via API
+# Remove users via API
 
 When you [remove a user via the Braze REST API]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/), the following data is deleted (nulled):
 - Any attributes that the user had

@@ -22,6 +22,6 @@ In Braze, go to **Settings** > **API Keys**, then create a new key with the foll
 
 ### Step 3: Contact your BrazeAI Decisioning Studio™ customer success manager
 
-Reach out to your BrazeAI Decisioning Studio™ customer success manager and ask them to enable BrazeAI Decisioning Studio™. They'll use your Braze API key and endpoint URL to finish setting up your integration.
+Contact your BrazeAI Decisioning Studio™ customer success manager and ask them to enable BrazeAI Decisioning Studio™. They'll use your Braze API key and endpoint URL to finish setting up your integration.
 
 When it's complete, you'll work alongside the AI Expert Services team to [start building agents for your product]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/building_agents). Each agent is tailor-made to a specific business goal, so you'll work together to design an implementation that's right for you.

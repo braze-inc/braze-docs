@@ -35,7 +35,7 @@ Tras acceder a tu cuenta de la línea de productos YOUBORA, ve a la página Inte
 Una vez que hayas accedido a la página de Integración, desplázate hacia abajo hasta que encuentres
 la opción de integración de **Braze**. Tras hacer clic en esta opción, se ampliará y ofrecerá una serie de parámetros necesarios para rellenar:
 
-![Integración de NPAW]({% image_buster /assets/img/npaw_integration.png %})
+![Integración NPAW]({% image_buster /assets/img/npaw_integration.png %})
 
 Rellene los datos con la información adecuada reunida a partir de la sección de requisitos previos, en la cual:
 * **El nombre del conector** es una cadena **alfanumérica** que se utilizará para referirse a esta integración en el futuro. Este valor puede ser cualquier cosa, siempre que contenga **solamente** letras y números.
@@ -51,6 +51,6 @@ Una vez que hayas terminado de configurar tu integración con Braze, navega hast
 
 Después de crear una muestra en el **administrador de muestras**, podrás hacer clic en el icono de tres puntos de la derecha para enviar todos los usuarios de tu muestra a Braze.
 
-![Administrador de muestras de NPAW]({% image_buster /assets/img/npaw_sample_manager.png %})
+![Administrador de muestras NPAW]({% image_buster /assets/img/npaw_sample_manager.png %})
 
 Ahora, una vez enviados tus usuarios a Braze, puedes actuar y centrar las campañas en segmentos de usuarios para volver a captar a los usuarios inactivos, ponerte en contacto con tus usuarios más fidelizados o realizar cualquier acción en cualquier segmento de usuarios.

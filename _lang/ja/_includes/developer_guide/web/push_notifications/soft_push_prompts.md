@@ -1,10 +1,10 @@
-{% multi_lang_include developer_guide/prerequisites/web.md %} [プッシュ通知の設定]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web)も必要です。
+{% multi_lang_include developer_guide/prerequisites/web.md %} [プッシュ通知の設定]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web)も必要だ。
 
 ## ソフトプッシュプロンプトについて
 
 多くの場合、サイトでは「ソフト」プッシュプロンプトを実装することをお勧めします。このプロンプトでは、プッシュ許可を要求する前に、ユーザーを「プライム」し、プッシュ通知を送る理由を説明します。これは、ユーザーに直接プロンプトを表示する頻度がブラウザーによって調整され、ユーザーがアクセス許可を拒否した場合は二度とユーザーに求めることができないため便利です。
 
-または、標準の[Web push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration) で説明されているように、`requestPushPermission()` を直接呼び出す代わりに、特別なカスタム処理を含める場合は、[トリガされたアプリ内メッセージ]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web) を使用します。
+あるいは、特別なカスタム処理を含めたい場合は、標準[のWeb プッシュ統合]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration)で説明されているようにを`requestPushPermission()`直接呼び出す代わりに、[トリガーされたアプリ内メッセージ]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web)を使用する。
 
 {% alert tip %}
 これは、新しい[ノーコードプッシュプライマー]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)を使用して、SDK のカスタマイズなしで行うことができます。
@@ -14,7 +14,7 @@
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
-### ステップ 1:プッシュ・プライマー・キャンペーンを作成する
+### ステップ 1: プッシュ・プライマー・キャンペーンを作成する
 
 まず、Braze ダッシュボードで「Prime for Push」アプリ内メッセージングキャンペーンを作成する必要があります。
 
@@ -29,7 +29,7 @@ Braze SDK 統合で、読み込みスニペット内から `automaticallyShowInA
 
 ### ステップ 3:アップデートの統合
 
-最後に、削除したコールを以下のスニペットで置き換える：
+最後に、削除した呼び出しを次のスニペットで置き換える。電話`subscribeToInAppMessage()`をかける前に電話をかけろ`openSession()`。これにより、アプリ内メッセージリスナーがプッシュプライマーメッセージを受信する前に登録されることが保証される。
 
 ```javascript
 import * as braze from "@braze/web-sdk";

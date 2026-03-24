@@ -1,5 +1,5 @@
 ---
-nav_title: Relatório de receitas
+nav_title: Relatório de receita
 article_title: Relatório de receitas
 page_type: reference
 description: "Esta página descreve como usar a página Relatório de receita para visualizar dados sobre a receita em períodos específicos de tempo, a receita de um produto específico e a receita total do app."
@@ -39,6 +39,10 @@ Você pode visualizar os seguintes dados no **gráfico Performance Over Time**:
 
 ## Compreensão dos cálculos de receita
 
+{% alert note %}
+Quando você registra a receita de uma moeda sem uma taxa de câmbio, o Braze a registra como uma compra de US$ 0,00.
+{% endalert %}
+
 <style>
     .no-split {
         word-break: keep-all;
@@ -55,23 +59,23 @@ Você pode visualizar os seguintes dados no **gráfico Performance Over Time**:
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">Receitas por tempo de vida</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Revenue' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">Valor de tempo de vida por usuário</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Value Per User' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Value Per User' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">Receita média diária</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Average Daily Revenue' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Average Daily Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-purchases">Compras diárias</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Purchases' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Purchases' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">Receitas diárias por usuário</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Revenue Per User' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Revenue Per User' %}</td>
         </tr>
     </tbody>
 </table>
@@ -80,6 +84,6 @@ Você pode visualizar os seguintes dados no **gráfico Performance Over Time**:
 
 Consulte a tabela **Detalhamento de produtos** para obter uma lista dos produtos comprados durante o intervalo de datas selecionado, quantos de cada produto foram comprados e a receita gerada por cada produto.
 
-![A tabela "Product Breakdown" (Detalhamento do produto) mostra as colunas "Product Name" (Nome do produto), "Purchased" (Comprado) e "Revenue" (Receita).]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
+![A tabela "Product Breakdown" mostra as colunas "Product Name" (Nome do produto), "Purchased" (Comprado) e "Revenue" (Receita).]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
 
 

@@ -41,7 +41,7 @@ Vamos a ajustar los detalles del Canvas para reflejar nuestro objetivo.
 3\. Actualiza la descripción para especificar que el Canvas sirve para animar a los usuarios a completar las compras del último lanzamiento de menaje de temporada.
 4\. Añade la etiqueta **Abandonar carrito** para que podamos filtrarla en la página de inicio de Canvas.
 
-![El nuevo nombre, descripción y etiqueta para el Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent_new_name_description.png %}){: style="max-width:60%;"}
+![El nuevo nombre, descripción y etiqueta del Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent_new_name_description.png %}){: style="max-width:60%;"}
 
 ### Paso 2: Asigna tus eventos de conversión
 
@@ -51,7 +51,7 @@ A continuación, vamos a asignar nuestro evento de conversión. Como nos centram
 2. Selecciona **Hacer una compra específica**. Esto nos permite seleccionar un nombre de producto concreto.
 3. Selecciona **Plato de Papel Enorme**.
 
-![Evento de conversión primaria - A con el tipo de conversión "Realiza compra" con el nombre de producto "Enorme plato de papel". Hay un plazo de 3 días para la conversión.]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
+![Evento de conversión primaria - A con el tipo de conversión "Realiza compra" con el nombre de producto "Enorme plato de papel". Hay un plazo de conversión de 3 días.]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
 
 ### Paso 3: Establecer un horario de entrada
 
@@ -68,13 +68,13 @@ Aunque el programa de entrada de esta plantilla está configurado como **Activad
 
 A continuación, definamos nuestra audiencia objetivo como usuarios que han comprado exclusivamente en línea con nosotros en los últimos 90 días. Esto nos ayuda a limitar nuestra audiencia a los usuarios que sabemos que tienen interacción con nuestros productos. 
 
-!["Segmento de compradores online - 90 días" como segmento de usuarios al que dirigirnos para este Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
+!["Segmento de compradores online - 90 días" como segmento de usuarios al que dirigirse para este Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
 
 Dejaremos los controles de entrada como están, para que los usuarios no puedan volver a entrar en este Canvas y no haya límite en el número de personas que potencialmente pueden entrar en este Canvas.
 
 Para los criterios de salida, los usuarios saldrán del Canvas si han comprado el "Plato de Papel Enorme". De este modo, no recibirán más mensajes sobre un artículo que ya han comprado.
 
-![Criterio de salida que determina que los usuarios que realizan una compra específica para el enorme plato de papel saldrán del Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent4.png %})
+![Criterios de salida que determinan que los usuarios que realicen una compra específica para el enorme plato de papel saldrán del Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent4.png %})
 
 ### Paso 5: Selecciona tu configuración de envío
 

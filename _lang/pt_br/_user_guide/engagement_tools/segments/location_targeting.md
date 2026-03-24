@@ -1,5 +1,5 @@
 ---
-nav_title: Direcionamento por local
+nav_title: Direcionamento do local
 article_title: Direcionamento por local
 page_order: 10
 page_type: tutorial
@@ -16,7 +16,7 @@ description: "Este artigo explica como configurar o direcionamento por local, pe
 
 ## Etapa 1: Crie seu segmento
 
-Navegue até a página **Segments (Segmentos** ), em **Audience (Público**), para visualizar todos os segmentos de usuários atuais. Nessa página, você pode criar e nomear novos segmentos. Para começar, selecione **Create Segment (Criar segmento** ) e dê um nome ao seu segmento.
+Navegue até a página **Segments (Segmentos** ), em **Audience (Público**), para visualizar todos os segmentos de usuários atuais. Nesta página, você pode criar e nomear novos segmentos. Para começar, selecione **Create Segment (Criar segmento** ) e dê um nome ao seu segmento.
 
 ![Modal para criar um segmento.]({% image_buster /assets/img_archive/createsegment2.png %}){: style="max-width:70%;"}
 
@@ -24,7 +24,10 @@ Navegue até a página **Segments (Segmentos** ), em **Audience (Público**), pa
 
 Depois de criar seu segmento, adicione um filtro **Most Recent Location (Local mais recente** ) para direcionar os usuários pelo último local em que usaram seu app. Você tem a opção de destacar os usuários dentro ou fora de uma região circular padrão ou de uma região poligonal personalizável.
 
-![Filtrar para um local mais recente em um círculo.]({% image_buster /assets/img_archive/filter_recent_location.png %})
+![Filtre o local mais recente em um círculo.]({% image_buster /assets/img_archive/filter_recent_location.png %})
+
+{% tabs %}
+{% tab Circular %}
 
 ### Regiões circulares
 
@@ -32,11 +35,17 @@ Para regiões circulares, você pode mover a origem e ajustar o raio do local pa
 
 ![Um contorno circular de cidades entre Nova Jersey e Nova York.]({% image_buster /assets/img_archive/location_circle.png %}){: style="max-width:70%;"}
 
+{% endtab %}
+{% tab Polygonal %}
+
 ### Regiões poligonais
 
 Para regiões poligonais, você pode designar mais especificamente quais áreas deseja incluir no seu segmento.
 
-![Um esboço do estado de Nova York como a região poligonal selecionada.]({% image_buster /assets/img_archive/create_polygon.png %}){: style="max-width:70%;"}
+![Um contorno do estado de Nova York como a região poligonal selecionada.]({% image_buster /assets/img_archive/create_polygon.png %}){: style="max-width:70%;"}
+
+{% endtab %}
+{% endtabs %}
 
 ## Suporte de parceria para beacon e geofence
 

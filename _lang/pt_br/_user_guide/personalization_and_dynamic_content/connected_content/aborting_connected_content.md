@@ -1,11 +1,11 @@
 ---
-nav_title: Abortando Conteúdo Conectado
-article_title: Abortando Conteúdo Conectado
+nav_title: Abortar conteúdo conectado
+article_title: Abortar conteúdo conectado
 page_order: 2
 description: "Este artigo de referência cobre algumas das melhores práticas de interrupção de mensagens para conteúdo conectado."
 ---
 
-# Abortando conteúdo conectado {#aborting-connected-content}
+# Abortar conteúdo conectado {#aborting-connected-content}
 
 > Ao usar o modelo Liquid, você tem a opção de abortar mensagens com lógica condicional. Esta página aborda as práticas recomendadas para fazer isso.
 

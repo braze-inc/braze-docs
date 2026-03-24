@@ -13,8 +13,7 @@ platform:
   - React Native
   - Roku
   - Unity
-  - Unreal Engine
-  - Xamarin
+  - .NET MAUI
 ---
 
 # Analytics
@@ -74,7 +73,7 @@ Custom event properties can also be used for personalization within the messagin
 {% raw %}
 ```liquid
 {% if {{event_properties.${time_spent}}} < 600 %}
-Congratulations on beating that level so fast! Check out our online portal where you can play against top players fromm around the world!
+Congratulations on beating that level so fast! Check out our online portal where you can play against top players from around the world!
 {% elsif {{event_properties.${time_spent}}} < 1800 %}
 Don't forget to visit the town store between levels to upgrade your tools.
 {% else %}
@@ -83,7 +82,7 @@ Talk to villagers for essential tips on how to beat levels!
 ```
 {% endraw %}
 
-Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, reach out to your customer success manager or our Support team.
+Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, contact your customer success manager or our Support team.
 
 ## Custom attributes
 
@@ -99,7 +98,7 @@ The following data types may be stored as custom attributes:
 
 #### Strings (alphanumeric characters)
 
-String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 255 characters long.
+String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes are subject to the [length constraints](#length-constraints) for custom data (479 bytes; approximately 479 single-byte characters or approximately 160 characters for multi-byte scripts such as Japanese).
 
 The following table describes available segmentation options for string attributes.
 
@@ -143,7 +142,7 @@ abUser.addToCustomAttributeArray('favorite_foods', 'pizza'); // => ['wings', 'pa
 abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta', 'fries', 'pizza', 'ice cream']
 ```
 
-The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze dashboard, under **Data Settings** > **Custom Attributes**. If you would like this maximum increased, reach out to your customer service manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
+The default and maximum number of elements in an array is 500. You can update the maximum number of arrays in the Braze dashboard, under **Data Settings** > **Custom Attributes**. Arrays exceeding the maximum number of elements are truncated to contain the maximum number of elements.
 
 The following table describes available segmentation options for array attributes.
 
@@ -349,7 +348,7 @@ Be mindful of the following limitations and constraints when implementing custom
 
 #### Length constraints
 
-All custom events, custom attribute names (keys), and custom event string values of 255 characters or longer will be truncated. Ideally, these should be as short as possible to improve network and battery performance for your app. If possible limit them to 50 characters.
+Braze enforces a length limit in bytes (479 bytes) for custom event names, custom attribute names (keys), and custom event string values. Values that exceed this limit are truncated. When expressed in characters, this is approximately 479 single-byte characters (for example, ASCII), or approximately 160 characters for multi-byte scripts such as Japanese (assuming about 3 bytes per character in UTF-8). Ideally, keep names and values as short as possible to improve network and battery performance for your app—if possible, limit them to 50 characters.
 
 #### Content constraints
 The following content will be trimmed programmatically from your attributes and events. Take care not to use the following:

@@ -23,11 +23,11 @@ The **Billing** page includes the following tabs:
 
 ## Subscriptions and Usage
 
-The **Subscriptions and Usage** tab includes usage graphs and your contract details.
+The **Subscriptions and Usage** tab includes usage graphs and your contract details. Data on this page is updated daily at 10:00 PM Eastern Time (ET). It does not reflect real-time activity.
 
 ### Usage graphs
 
-Here, you'll find usage graphs that apply to your workspaces. You may find your own dashboard shows different usage metrics based on the products you have purchased. 
+Here, you find usage graphs that apply to your workspaces. You may find your own dashboard shows different usage metrics based on the products you have purchased. 
 
 ![Usage graph showing Monthly Unique Visitors]({% image_buster /assets/img/subscription_and_billing4.png %}){: style="max-width:90%;"}
 
@@ -36,6 +36,10 @@ These graphs can show monthly active users, monthly unique visitors, and email s
 ### Contract details
 
 Contract details list the start and end date of your current contract with Braze.
+
+#### Considerations
+
+If your contract uses Monthly Unique Visitors (MUV) and you change to a contract that uses only Monthly Active Users (MAU), your historical data still appears in the MUV graph and your new data appears only in the MAU graph. For example, if your contract ends in October, the MUV graph shows data up until the end of September.
 
 ## Most used events and attributes by app
 
@@ -53,11 +57,15 @@ Data breakdowns like these can help you understand what specific data points are
 
 The **Total Data Points Usage** tab provides an in-depth look at your data point usage. You can view all data in this section aggregated by either weeks or months.
 
+{% alert note %}
+Data points information is cached every 24 hours.
+{% endalert %}
+
 ![Filtering Data Point Usage by weeks]({% image_buster /assets/img/subscription_and_billing2.png %})
 
 ### Contract details
 
-Here, you'll find information on when your current Braze contract starts and ends, as well as allotted data points and a sum of all data points that have been used thus far in your current contract.
+Here, you find information on when your current Braze contract starts and ends, as well as allotted data points and a sum of all data points that have been used thus far in your current contract.
 
 The fields in this section are defined as follows:
 
