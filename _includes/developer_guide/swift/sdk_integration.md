@@ -410,9 +410,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-{% alert note %}
 The SDK requires your application to retain a strong reference to the Braze instance throughout its usage. To prevent any unexpected side effects, ensure that you have fully captured that reference before accessing or modifying any properties or methods on the Braze instance.
-{% endalert %}
 
 Finally, in `AppDelegate.swift`, add the following snippet to your `application:didFinishLaunchingWithOptions:` method:
 
