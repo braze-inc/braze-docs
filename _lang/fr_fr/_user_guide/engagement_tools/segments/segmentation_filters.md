@@ -4,126 +4,130 @@ nav_title: Filtres de segmentation
 article_title: Filtres de segmentation
 layout: glossary_page
 glossary_top_header: "Filtres de segmentation"
-glossary_top_text: "Le SDK Braze vous offre un ensemble complet de filtres pour segmenter et cibler vos utilisateurs en fonction de fonctionnalités et d'attributs spécifiques. Vous pouvez rechercher ou affiner ces filtres par catégorie de filtre.<br><br>Pour en savoir plus sur les différents types de données d'attributs personnalisés que vous pouvez utiliser pour segmenter les utilisateurs, veuillez consulter <a href=\"/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types\">la section Types de données d'attributs personnalisés.</a>"
+glossary_top_text: "Le SDK Braze vous offre un ensemble complet de filtres pour segmenter et cibler vos utilisateurs en fonction de fonctionnalités et d'attributs spécifiques. Vous pouvez rechercher ou affiner ces filtres par catégorie.<br><br>Pour en savoir plus sur les différents types de données d'attributs personnalisés que vous pouvez utiliser pour segmenter les utilisateurs, consultez <a href=\"/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types\">Types de données d'attributs personnalisés</a>."
 
 page_type: glossary
 tool: Segments
 description: "Ce glossaire répertorie les filtres disponibles pour segmenter et cibler vos utilisateurs."
 search_rank: 2
-glossary_tag_name: Filter Category
-glossary_filter_text: "Select a category to narrow the glossary:"
+glossary_tag_name: Catégorie de filtre
+glossary_filter_text: "Sélectionnez une catégorie pour affiner le glossaire :"
 
 # channel to icon/fa or image mapping
-# NOTE: glossary_tags names must match the "tags" under each glossary entry exactly (filter/checkbox logic).
+# NOTE: glossary_tags names must match the "tags" under each glossary entry exactly (filter/checkbox logic). Do not translate.
 glossary_tags:
-  - name: Appartenance à un segment ou un fichier CSV
-  - name: Attribut personnalisé
-  - name: Événements personnalisés
+  - name: Segment or CSV membership
+  - name: Custom attribute
+  - name: Custom events
   - name: Sessions
-  - name: Reciblage
-  - name: Comportement d’abonnement aux canaux
-  - name: Comportement d’achat
-  - name: E-commerce
-  - name: Attributs démographiques
-  - name: Application
-  - name: Désinstallation
-  - name: Appareils
-  - name: Localisation
-  - name: Appartenance à une cohorte
-  - name: Attribution d’installation
-  - name: Informations et prévisions
-  - name: Activité sociale
-  - name: Autres filtres
-  - name: Cas d'usage publicitaire
-  - name: Attributs utilisateur
+  - name: Retargeting
+  - name: Channel subscription behavior
+  - name: Purchase behavior
+  - name: eCommerce
+  - name: Demographic attributes
+  - name: App
+  - name: Uninstall
+  - name: Devices
+  - name: Location
+  - name: Cohort membership
+  - name: Install attribution
+  - name: Intelligence and predictive
+  - name: Social activity
+  - name: Other Filters
+  - name: Advertising use cases
+  - name: User Attributes
 
 glossaries:
   - name: Appartenance à un segment
-    description: "Vous permet de filtrer en fonction de l'appartenance à un segment partout où des filtres sont utilisés (comme les segments, les campagnes et d'autres) et de cibler plusieurs segments différents au sein d'une même campagne. <br><br>Notez que les segments utilisant déjà ce filtre ne peuvent pas être inclus ou imbriqués dans d'autres segments, car cela pourrait créer un cycle dans lequel le segment A inclurait le segment B, qui essaierait à son tour d'inclure le segment A. Dans ce cas, la segmentation ne cesserait de se référer à elle-même, ce qui rendrait impossible le calcul de la personne qui en fait partie. En outre, l'imbrication de segments de ce type ajoute de la complexité et peut ralentir les choses. Au lieu de cela, recréez le segment que vous essayez d'inclure en utilisant les mêmes filtres."
+    description: "Vous permet de filtrer en fonction de l'appartenance à un segment partout où des filtres sont utilisés (segments, campagnes, etc.) et de cibler plusieurs segments différents au sein d'une même campagne. <br><br>Notez que les segments utilisant déjà ce filtre ne peuvent pas être inclus ou imbriqués dans d'autres segments, car cela pourrait créer un cycle dans lequel le segment A inclurait le segment B, qui essaierait à son tour d'inclure le segment A. Le segment ne cesserait alors de se référencer lui-même, rendant impossible le calcul des utilisateurs qui en font réellement partie. De plus, l'imbrication de segments ajoute de la complexité et peut ralentir les performances. Recréez plutôt le segment que vous souhaitez inclure en utilisant les mêmes filtres."
     tags:
-      - Appartenance à un segment ou un fichier CSV
-  - name: Extension de segment Braze
-    description: "Après avoir créé une Segment Extension dans le tableau de bord de Braze, vous pouvez choisir d’inclure ou d’exclure ces extensions de votre segment."
+      - Segment or CSV membership
+  - name: Extensions de segments Braze
+    description: "Après avoir créé une extension de segment dans le tableau de bord de Braze, vous pouvez choisir d'inclure ou d'exclure ces extensions de votre segment."
     tags:
-      - Appartenance à un segment ou un fichier CSV
-  - name: Mis à jour/importés depuis un fichier CSV
-    description: Segmente vos utilisateurs selon s’ils font partie d’un téléchargement CSV ou non.
+      - Segment or CSV membership
+  - name: Mis à jour/importé depuis un fichier CSV
+    description: Segmente vos utilisateurs selon qu'ils faisaient partie d'un téléchargement CSV ou non.
     tags:
-      - Appartenance à un segment ou un fichier CSV
+      - Segment or CSV membership
   - name: Attributs personnalisés
-    description: "Détermine si un utilisateur correspond ou non à une valeur d'attribut enregistrée personnalisée. <br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: "Détermine si un utilisateur correspond ou non à une valeur d'attribut personnalisé enregistrée. <br><br>Fuseau horaire :<br>Fuseau horaire de l'entreprise"
     tags:
-      - Attribut personnalisé
-  - name: Créé à
-    description: "Segmentation des utilisateurs en fonction de la date de création de leur profil utilisateur. Si un utilisateur a été ajouté par CSV ou API, ce filtre reflète la date à laquelle il a été ajouté. Si l'utilisateur n'est pas ajouté par CSV ou API et que sa première session est suivie par le SDK, ce filtre reflète la date de cette première session."
+      - Custom attribute
+  - name: Créé le
+    description: "Segmente les utilisateurs en fonction de la date de création de leur profil utilisateur. Si un utilisateur a été ajouté par CSV ou API, ce filtre reflète la date à laquelle il a été ajouté. Si l'utilisateur n'a pas été ajouté par CSV ou API et que sa première session est suivie par le SDK, ce filtre reflète la date de cette première session."
     tags:
-      - Autres filtres
+      - Other Filters
+  - name: Créé depuis
+    description: "Segmente les utilisateurs en fonction de l'origine de la création de leur profil utilisateur.<br><br>Les valeurs suivantes sont prises en charge :<br>- SDK (<code>sdk</code>) : profil utilisateur créé via le SDK Braze.<br>- API REST (<code>rest</code>) : profil utilisateur créé via l'API REST Braze.<br>- Importation de jeton de notification push (<code>pti</code>) : profil utilisateur créé via l'importation de jetons de notification push.<br>- CSV (<code>csv</code>) : profil utilisateur créé via l'importation CSV.<br>- Démo (<code>demo</code>) : profil utilisateur créé via des données de démonstration.<br>- SMS (<code>sms</code>) : profil utilisateur créé via SMS.<br>- Shopify (<code>shopify</code>) : profil utilisateur créé via Shopify.<br>- WhatsApp (<code>whats_app</code>) : profil utilisateur créé via WhatsApp.<br>- Événement fournisseur (<code>provider_event</code>) : profil utilisateur créé via un événement fournisseur.<br>- Synchronisation fournisseur (<code>provider_sync</code>) : profil utilisateur créé via une synchronisation fournisseur.<br>- Page d'accueil (<code>landing_page</code>) : profil utilisateur créé via une page d'accueil."
+    tags:
+      - Other Filters
   - name: Attributs personnalisés imbriqués
-    description: "Les attributs qui sont les propriétés des attributs personnalisés.<br><br>Lors du filtrage d'un attribut personnalisé de temps imbriqué, vous pouvez choisir de filtrer en fonction du \"Jour de l'année\" ou de l'\"Heure\". La fonction « Jour de l'année » vérifie uniquement le mois et le jour à des fins de comparaison. « Time » compare l'horodatage complet, y compris l'année."
+    description: "Les attributs qui sont les propriétés des attributs personnalisés.<br><br>Lors du filtrage d'un attribut personnalisé de temps imbriqué, vous pouvez choisir de filtrer en fonction du « Jour de l'année » ou de l'« Heure ». « Jour de l'année » vérifie uniquement le mois et le jour à des fins de comparaison. « Heure » compare l'horodatage complet, y compris l'année."
     tags:
-      - Attribut personnalisé
-  - name: Jour de l’événement récurrent
-    description: "Ce filtre examine le mois et le jour de l’attribut personnalisé avec le type de données « date », mais ne prend pas l’année en compte. Ce filtre est utile pour les événements annuels.<br><br>Fuseau horaire :<br>Ce filtre s'adapte au fuseau horaire de l'utilisateur, à condition que le message soit envoyé à l'aide de l'option de planification horaire locale ; dans le cas contraire, ce filtre utilise le fuseau horaire de votre entreprise."
+      - Custom attribute
+  - name: Jour de l'événement récurrent
+    description: "Ce filtre examine le mois et le jour de l'attribut personnalisé avec le type de données « date », mais ne prend pas l'année en compte. Ce filtre est utile pour les événements annuels.<br><br>Fuseau horaire&#58;<br>Ce filtre s'adapte au fuseau horaire de l'utilisateur, à condition que le message soit envoyé avec l'option de planification horaire locale ; dans le cas contraire, il utilise le fuseau horaire de votre entreprise."
     tags:
-      - Attribut personnalisé
+      - Custom attribute
   - name: Événement personnalisé
-    description: "Détermine si un utilisateur a effectué un événement spécialement enregistré.<br><br> Exemple :<br>Activité terminée avec la propriété activity_name.<br><br>Fuseau horaire :<br>UTC - Jour du calendrier = 1 jour du calendrier examine 24 à 48 heures de l'historique de l'utilisateur."
+    description: "Détermine si un utilisateur a effectué ou non un événement spécialement enregistré.<br><br> Exemple :<br>Activité terminée avec la propriété activity_name.<br><br>Fuseau horaire :<br>UTC - Jour du calendrier = 1 jour du calendrier examine 24 à 48 heures de l'historique de l'utilisateur"
     tags:
-      - Événements personnalisés
+      - Custom events
   - name: Premier événement personnalisé
-    description: "Détermine la première fois qu’un utilisateur a effectué un événement spécialement enregistré. (période de 24 heures) <br><br>Exemple :<br> Premier panier abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: "Détermine la première fois qu'un utilisateur a effectué un événement spécialement enregistré. (période de 24 heures) <br><br>Exemple :<br> Premier panier abandonné il y a moins d'un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l'entreprise"
     tags:
-      - Événements personnalisés
-  - name: Dernier événement personnalisé 
-    description: "Détermine l'heure la plus récente à laquelle un utilisateur a effectué un événement enregistré spécialement. Ce filtre prend en charge les décimales, telles que 0,25 heure. (période de 24 heures) <br><br>Exemple :<br> Dernier panier d’achats abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+      - Custom events
+  - name: Dernier événement personnalisé
+    description: "Détermine la date la plus récente à laquelle un utilisateur a effectué un événement spécialement enregistré. Ce filtre prend en charge les décimales, par exemple 0,25 heure. (période de 24 heures) <br><br>Exemple :<br> Dernier panier abandonné il y a moins d'un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l'entreprise"
     tags:
-      - Événements personnalisés
+      - Custom events
   - name: X événements personnalisés en Y jours
-    description: "Détermine si un utilisateur a effectué un événement spécialement enregistré entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, c’est-à-dire entre 1 et 30. (Jour du calendrier = 1 jour du calendrier correspond à 24 à 48 heures d'historique utilisateur)<br> <a href=\"/docs/x-in-y-behavior/\"> En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Exemple :<br>Le panier a été abandonné exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Afin de prendre en compte tous les fuseaux horaires, un jour civil correspond à 24-48 heures d'historique utilisateur, en fonction de l'heure à laquelle le segment est évalué ; deux jours civils correspondent à 48-72 heures d'historique utilisateur, et ainsi de suite."
+    description: "Détermine si un utilisateur a effectué un événement spécialement enregistré entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. (Jour du calendrier = 1 jour du calendrier correspond à 24 à 48 heures d'historique utilisateur)<br> <a href=\"/docs/x-in-y-behavior/\"> En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Exemple :<br>Le panier a été abandonné exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Afin de prendre en compte tous les fuseaux horaires, un jour civil correspond à 24-48 heures d'historique utilisateur, en fonction de l'heure à laquelle le segment est évalué ; deux jours civils correspondent à 48-72 heures d'historique utilisateur, et ainsi de suite."
     tags:
-      - Événements personnalisés
-  - name: X propriétés d’événement personnalisé en Y jours
-    description: "Détermine si un utilisateur a effectué un événement spécialement enregistré en relation avec la propriété spécifique entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. (Jour du calendrier = 1 jour du calendrier correspond à 24 à 48 heures d'historique utilisateur)<br><a href=\"/docs/x-in-y-behavior/\">En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Exemple :<br> Ajouté aux favoris avec la propriété « event_name » exactement 0 fois au cours du dernier jour calendaire<br><br>Fuseau horaire :<br>UTC - Afin de prendre en compte tous les fuseaux horaires, un jour civil correspond à 24-48 heures d'historique utilisateur, en fonction de l'heure à laquelle le segment est évalué ; deux jours civils correspondent à 48-72 heures d'historique utilisateur, et ainsi de suite."
+      - Custom events
+  - name: X propriétés d'événement personnalisé en Y jours
+    description: "Détermine si un utilisateur a effectué un événement spécialement enregistré en relation avec une propriété spécifique entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. (Jour du calendrier = 1 jour du calendrier correspond à 24 à 48 heures d'historique utilisateur)<br><a href=\"/docs/x-in-y-behavior/\">En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Exemple :<br> Ajouté aux favoris avec la propriété « event_name » exactement 0 fois au cours du dernier jour calendaire<br><br>Fuseau horaire :<br>UTC - Afin de prendre en compte tous les fuseaux horaires, un jour civil correspond à 24-48 heures d'historique utilisateur, en fonction de l'heure à laquelle le segment est évalué ; deux jours civils correspondent à 48-72 heures d'historique utilisateur, et ainsi de suite."
     tags:
-      - Événements personnalisés
-  - name: Adresse e-mail 
-    description: "Ce filtre vous permet de désigner les destinataires de votre campagne en fonction de leur adresse e-mail individuelle pour mener des tests. Cette fonction peut également être utilisée pour envoyer des e-mails transactionnels à tous vos utilisateurs (y compris ceux qui se sont désabonnés) en utilisant le spécificateur \"L'adresse e-mail n'est pas vide\" dans le filtre, afin de maximiser la réception/distribution des e-mails quel que soit le statut de l'abonnement. <br><br>Ce filtre vérifie uniquement si les profils utilisateurs ont une adresse e-mail, alors que le filtre <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-available\">Email disponible</a> vérifie des critères supplémentaires."
+      - Custom events
+  - name: Adresse e-mail
+    description: "Vous permet de désigner les destinataires de votre campagne en fonction de leur adresse e-mail individuelle à des fins de test. Ce filtre peut également être utilisé pour envoyer des e-mails transactionnels à tous vos utilisateurs (y compris ceux qui se sont désabonnés) en utilisant le spécificateur « L'adresse e-mail n'est pas vide » dans le filtre, afin de maximiser la réception des e-mails quel que soit le statut d'abonnement. <br><br>Ce filtre vérifie uniquement si les profils utilisateurs ont une adresse e-mail, alors que le filtre <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-available\">E-mail disponible</a> vérifie des critères supplémentaires."
     tags:
-      - Autres filtres
+      - Other Filters
   - name: ID utilisateur externe
-    description: Ce filtre vous permet de désigner les destinataires de votre campagne en fonction de leurs ID individuels pour mener des tests.
+    description: Vous permet de désigner les destinataires de votre campagne en fonction de leurs ID utilisateur individuels à des fins de test.
     tags:
-      - Autres filtres
+      - Other Filters
   - name: "N° de compartiment aléatoire"
-    description: Segmente vos utilisateurs en utilisant un nombre attribué de manière aléatoire (compris entre 0 et 9 999). Ce filtre permet de créer des segments d’utilisateurs réellement aléatoires et distribués de manière uniforme pour les tests A/B et les tests multivariés.
+    description: Segmente vos utilisateurs à l'aide d'un nombre attribué de manière aléatoire (compris entre 0 et 9 999). Ce filtre permet de créer des segments d'utilisateurs réellement aléatoires et distribués de manière uniforme pour les tests A/B et les tests multivariés.
     tags:
-      - Autres filtres
+      - Other Filters
   - name: Nombre de sessions
-    description: "Segmentez vos utilisateurs par le nombre de sessions qu'ils ont eues dans l'une de vos applications au sein de votre espace de travail."
+    description: "Segmente vos utilisateurs en fonction du nombre de sessions qu'ils ont eues dans l'une de vos applications au sein de votre espace de travail."
     tags:
       - Sessions
-  - name: Nombre de sessions pour l’application
-    description: Segmente vos utilisateurs en fonction du nombre de sessions qu’ils ont eus dans une application désignée.
+  - name: Nombre de sessions pour l'application
+    description: Segmente vos utilisateurs en fonction du nombre de sessions qu'ils ont eues dans une application désignée.
     tags:
       - Sessions
-  - name: X Sessions In Last Y Days
-    description: "Segmente vos utilisateurs en fonction du nombre de sessions (entre 0 et 50) qu’ils ont initiés dans votre application dans le dernier nombre de jours civils indiqué, compris entre 1 et 30. <br> <a href=\"/docs/x-in-y-behavior/\">En savoir plus sur le comportement « X dans Y » ici.</a>"
-    tags:
-      - Sessions
-  - name: Première application utilisée
-    description: "Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont ouvert votre application. <em>Cela enregistre la première session qu'ils effectuent à l'aide d'une version de votre application ayant une intégration SDK Braze.</em> (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+  - name: X sessions au cours des Y derniers jours
+    description: "Segmente vos utilisateurs en fonction du nombre de sessions (entre 0 et 50) qu'ils ont eues dans votre application au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. <br> <a href=\"/docs/x-in-y-behavior/\">En savoir plus sur le comportement « X dans Y » ici.</a>"
     tags:
       - Sessions
   - name: Première application utilisée
-    description: "Segmentez vos utilisateurs par le premier moment enregistré où ils ont ouvert l'une de vos applications dans votre espace de travail. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: "Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont ouvert votre application. <em>Cela correspond à la première session effectuée avec une version de votre application intégrant le SDK Braze.</em> (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l'entreprise"
+    tags:
+      - Sessions
+  - name: Première application spécifique utilisée
+    description: "Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont ouvert l'une de vos applications dans votre espace de travail. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l'entreprise"
     tags:
       - Sessions
   - name: Dernière application utilisée
-    description: "Segmentez vos utilisateurs par le moment le plus récent où ils ont ouvert votre application. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: "Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont ouvert votre application. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l'entreprise"
     tags:
       - Sessions
-  - name: Dernière application utilisée
-    description: "Segmentez vos utilisateurs par le moment le plus récent où ils ont ouvert une application spécifique et désignée. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+  - name: Dernière application spécifique utilisée
+    description: "Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont ouvert une application spécifique et désignée. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l'entreprise"
     tags:
       - Sessions
   - name: Durée médiane des sessions
@@ -131,487 +135,487 @@ glossaries:
     tags:
       - Sessions
   - name: Message reçu de la campagne
-    description: "Segmente vos utilisateurs selon s’ils ont reçu ou non une campagne donnée. Ce filtre ne capture que les utilisateurs auxquels le message a été explicitement envoyé, et non les autres utilisateurs ayant la même adresse e-mail ou le même numéro de téléphone qui ont reçu des messages en double. Pour identifier les utilisateurs en double, veuillez utiliser <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">la fonction « Message reçu de la campagne » ou « Canvas avec étiquette</a> ».<br><br> Pour les cartes de contenu, les bannières et les messages in-app, il s'agit du moment où un utilisateur enregistre une impression, et non du moment où la carte ou le message in-app est envoyé.<br><br>Pour les notifications push et les webhooks, ceci correspond au moment où le message est envoyé à l'utilisateur.<br><br> Pour WhatsApp, c'est lorsque la dernière demande d'API de message est envoyée à WhatsApp, et non lorsque le message est livré sur l'appareil de l'utilisateur. <br><br>Pour les e-mails, c'est lorsque une demande d'e-mail est envoyée au fournisseur de service de messagerie (peu importe si elle est effectivement livrée).<br><br>Pour les SMS, ceci correspond au moment où le dernier message a été livré au fournisseur de SMS. Cela ne garantit pas que le message a été livré à l'appareil de l'utilisateur."
+    description: "Segmente vos utilisateurs selon qu'ils ont reçu ou non une campagne donnée. Ce filtre ne capture que les utilisateurs auxquels le message a été explicitement envoyé, et non les autres utilisateurs ayant la même adresse e-mail ou le même numéro de téléphone qui ont reçu des messages en double. Pour identifier les utilisateurs en double, utilisez <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">Message reçu d'une campagne ou d'un Canvas avec étiquette</a>.<br><br> Pour les cartes de contenu, les bannières et les messages in-app, il s'agit du moment où un utilisateur enregistre une impression, et non du moment où la carte ou le message in-app est envoyé.<br><br>Pour les notifications push et les webhooks, cela correspond au moment où le message est envoyé à l'utilisateur.<br><br> Pour WhatsApp, c'est lorsque la dernière demande d'API de message est envoyée à WhatsApp, et non lorsque le message est livré sur l'appareil de l'utilisateur. <br><br>Pour les e-mails, c'est lorsqu'une demande d'e-mail est envoyée au fournisseur de services d'e-mailing (que l'e-mail soit effectivement livré ou non).<br><br>Pour les SMS, cela correspond au moment où le dernier message a été livré au fournisseur de SMS. Cela ne garantit pas que le message a été livré à l'appareil de l'utilisateur."
     tags:
-      - Reciblage
+      - Retargeting
   - name: Variante de campagne reçue
-    description: "Segmente vos utilisateurs en fonction de la variante de campagne multivariée qu’ils ont reçue. Ce filtre ne capture que les utilisateurs auxquels le message a été explicitement envoyé, et non les autres utilisateurs ayant la même adresse e-mail ou le même numéro de téléphone qui ont reçu des messages en double. Pour identifier les utilisateurs en double, veuillez utiliser <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">la fonction « Message reçu de la campagne » ou « Canvas avec étiquette</a> ».<br><br> Pour les cartes de contenu, les bannières et les messages in-app, il s'agit du moment où un utilisateur enregistre une impression, et non du moment où la carte ou le message in-app est envoyé.<br><br>Pour les notifications push et les webhooks, ceci correspond au moment où le message est envoyé à l'utilisateur.<br><br> Pour WhatsApp, c'est lorsque la dernière demande d'API de message est envoyée à WhatsApp, et non lorsque le message est livré sur l'appareil de l'utilisateur. <br><br>Pour les e-mails, c'est lorsque une demande d'e-mail est envoyée au fournisseur de service de messagerie (peu importe si elle est effectivement livrée).<br><br>Pour les SMS, ceci correspond au moment où le dernier message a été livré au fournisseur de SMS. Cela ne garantit pas que le message a été livré à l'appareil de l'utilisateur."
+    description: "Segmente vos utilisateurs en fonction de la variante de campagne multivariée qu'ils ont reçue. Ce filtre ne capture que les utilisateurs auxquels le message a été explicitement envoyé, et non les autres utilisateurs ayant la même adresse e-mail ou le même numéro de téléphone qui ont reçu des messages en double. Pour identifier les utilisateurs en double, utilisez <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">Message reçu d'une campagne ou d'un Canvas avec étiquette</a>.<br><br> Pour les cartes de contenu, les bannières et les messages in-app, il s'agit du moment où un utilisateur enregistre une impression, et non du moment où la carte ou le message in-app est envoyé.<br><br>Pour les notifications push et les webhooks, cela correspond au moment où le message est envoyé à l'utilisateur.<br><br> Pour WhatsApp, c'est lorsque la dernière demande d'API de message est envoyée à WhatsApp, et non lorsque le message est livré sur l'appareil de l'utilisateur. <br><br>Pour les e-mails, c'est lorsqu'une demande d'e-mail est envoyée au fournisseur de services d'e-mailing (que l'e-mail soit effectivement livré ou non).<br><br>Pour les SMS, cela correspond au moment où le dernier message a été livré au fournisseur de SMS. Cela ne garantit pas que le message a été livré à l'appareil de l'utilisateur."
     tags:
-      - Reciblage
-  - name: A reçu un message de l’étape du canvas
-    description: "Segmente vos utilisateurs selon s’ils ont reçu ou non un composant Canvas donné. Ce filtre ne capture que les utilisateurs auxquels le message a été explicitement envoyé, et non les autres utilisateurs ayant la même adresse e-mail ou le même numéro de téléphone qui ont reçu des messages en double. Pour identifier les utilisateurs en double, veuillez utiliser <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">la fonction « Message reçu de la campagne » ou « Canvas avec étiquette</a> ».<br><br> Pour les cartes de contenu et les messages intégrés, c'est lorsque l'utilisateur enregistre une impression, et non lorsque la carte ou le message intégré est envoyé.<br><br>Pour les notifications push et les webhooks, ceci correspond au moment où le message est envoyé à l'utilisateur.<br><br> Pour WhatsApp, c'est lorsque la dernière demande d'API de message est envoyée à WhatsApp, et non lorsque le message est livré sur l'appareil de l'utilisateur. <br><br>Pour les e-mails, c'est lorsque une demande d'e-mail est envoyée au fournisseur de service de messagerie (peu importe si elle est effectivement livrée).<br><br>Pour les SMS, ceci correspond au moment où le dernier message a été livré au fournisseur de SMS. Cela ne garantit pas que le message a été livré à l'appareil de l'utilisateur."
+      - Retargeting
+  - name: Message reçu de l'étape du canvas
+    description: "Segmente vos utilisateurs selon qu'ils ont reçu ou non un composant Canvas donné. Ce filtre ne capture que les utilisateurs auxquels le message a été explicitement envoyé, et non les autres utilisateurs ayant la même adresse e-mail ou le même numéro de téléphone qui ont reçu des messages en double. Pour identifier les utilisateurs en double, utilisez <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">Message reçu d'une campagne ou d'un Canvas avec étiquette</a>.<br><br> Pour les cartes de contenu et les messages in-app, il s'agit du moment où un utilisateur enregistre une impression, et non du moment où la carte ou le message in-app est envoyé.<br><br>Pour les notifications push et les webhooks, cela correspond au moment où le message est envoyé à l'utilisateur.<br><br> Pour WhatsApp, c'est lorsque la dernière demande d'API de message est envoyée à WhatsApp, et non lorsque le message est livré sur l'appareil de l'utilisateur. <br><br>Pour les e-mails, c'est lorsqu'une demande d'e-mail est envoyée au fournisseur de services d'e-mailing (que l'e-mail soit effectivement livré ou non).<br><br>Pour les SMS, cela correspond au moment où le dernier message a été livré au fournisseur de SMS. Cela ne garantit pas que le message a été livré à l'appareil de l'utilisateur."
     tags:
-      - Reciblage
-  - name: Dernier message reçu de l’étape du canvas donnée
-    description: "Segmentez vos utilisateurs en fonction du moment où ils ont reçu un composant Canvas spécifique. Ce filtre ne capture que les utilisateurs auxquels le message a été explicitement envoyé, et non les autres utilisateurs ayant la même adresse e-mail ou le même numéro de téléphone qui ont reçu des messages en double. Pour capturer les utilisateurs en double, veuillez utiliser <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">« Message reçu de la campagne » ou « Canvas avec étiquette</a> ». Ce filtre ne tient pas compte du fait que les utilisateurs ont reçu d'autres composants de Canvas."
+      - Retargeting
+  - name: Dernier message reçu d'une étape de canvas spécifique
+    description: "Segmente vos utilisateurs en fonction du moment où ils ont reçu un composant Canvas spécifique. Ce filtre ne capture que les utilisateurs auxquels le message a été explicitement envoyé, et non les autres utilisateurs ayant la même adresse e-mail ou le même numéro de téléphone qui ont reçu des messages en double ; pour identifier les utilisateurs en double, utilisez <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">Message reçu d'une campagne ou d'un Canvas avec étiquette</a>. Ce filtre ne tient pas compte du moment où les utilisateurs ont reçu d'autres composants Canvas."
     tags:
-      - Reciblage
-  - name: Dernier message reçu d’une campagne donnée
-    description: "Segmente vos utilisateurs selon s’ils ont reçu ou non une campagne donnée. Ce filtre ne capture que les utilisateurs auxquels le message a été explicitement envoyé, et non les autres utilisateurs ayant la même adresse e-mail ou le même numéro de téléphone qui ont reçu des messages en double. Pour capturer les utilisateurs en double, veuillez utiliser <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">« Message reçu de la campagne » ou « Canvas avec étiquette</a> ». Ce filtre ne tient pas compte du moment où les utilisateurs ont reçu d'autres campagnes."
+      - Retargeting
+  - name: Dernier message reçu d'une campagne spécifique
+    description: "Segmente vos utilisateurs selon qu'ils ont reçu ou non une campagne donnée. Ce filtre ne capture que les utilisateurs auxquels le message a été explicitement envoyé, et non les autres utilisateurs ayant la même adresse e-mail ou le même numéro de téléphone qui ont reçu des messages en double ; pour identifier les utilisateurs en double, utilisez <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag\">Message reçu d'une campagne ou d'un Canvas avec étiquette</a>. Ce filtre ne tient pas compte du moment où les utilisateurs ont reçu d'autres campagnes."
     tags:
-      - Reciblage
-  - name: A reçu un message d’une campagne ou d’un canvas avec une balise
-    description: "Segmente vos utilisateurs selon s’ils ont reçu ou non une campagne ou un Canvas spécifique avec une balise spécifique. Contrairement aux filtres « Message reçu de la campagne » et « Message reçu de l'étape du canvas », ce filtre identifie tous les utilisateurs ayant le même e-mail ou numéro de téléphone qui ont reçu des messages en double.<br><br> Pour les cartes de contenu, les bannières (campagnes uniquement) et les messages in-app, il s'agit du moment où un utilisateur enregistre une impression, et non du moment où la carte ou le message in-app est envoyé.<br><br>Pour les notifications push et les webhooks, ceci correspond au moment où le message est envoyé à l'utilisateur.<br><br> Pour WhatsApp, c'est lorsque la dernière demande d'API de message est envoyée à WhatsApp, et non lorsque le message est livré sur l'appareil de l'utilisateur. <br><br>Pour les e-mails, c'est lorsque une demande d'e-mail est envoyée au fournisseur de service de messagerie (peu importe si elle est effectivement livrée). Lorsque plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lors de l'envoi initial, seul le profil de l'utilisateur ciblé spécifique est mis à jour. <br>- Lorsque l'e-mail est envoyé, ou si l'utilisateur ouvre l'e-mail ou un lien contenu dans l'e-mail, tous les utilisateurs partageant cette adresse e-mail semblent avoir reçu le message.<br><br>Pour les SMS, ceci correspond au moment où le dernier message a été livré au fournisseur de SMS. Cela ne garantit pas que le message a été livré à l'appareil de l'utilisateur."
+      - Retargeting
+  - name: Message reçu d'une campagne ou d'un Canvas avec étiquette
+    description: "Segmente vos utilisateurs selon qu'ils ont reçu ou non une campagne ou un Canvas spécifique avec une étiquette spécifique. Contrairement aux filtres « Message reçu de la campagne » et « Message reçu de l'étape du canvas », ce filtre identifie tous les utilisateurs ayant la même adresse e-mail ou le même numéro de téléphone qui ont reçu des messages en double.<br><br> Pour les cartes de contenu, les bannières (campagnes uniquement) et les messages in-app, il s'agit du moment où un utilisateur enregistre une impression, et non du moment où la carte ou le message in-app est envoyé.<br><br>Pour les notifications push et les webhooks, cela correspond au moment où le message est envoyé à l'utilisateur.<br><br> Pour WhatsApp, c'est lorsque la dernière demande d'API de message est envoyée à WhatsApp, et non lorsque le message est livré sur l'appareil de l'utilisateur. <br><br>Pour les e-mails, c'est lorsqu'une demande d'e-mail est envoyée au fournisseur de services d'e-mailing (que l'e-mail soit effectivement livré ou non). Lorsque plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lors de l'envoi initial, seul le profil de l'utilisateur ciblé est mis à jour. <br>- Lorsque l'e-mail est livré, ou si l'utilisateur ouvre l'e-mail ou un lien contenu dans l'e-mail, tous les utilisateurs partageant cette adresse e-mail semblent avoir reçu le message.<br><br>Pour les SMS, cela correspond au moment où le dernier message a été livré au fournisseur de SMS. Cela ne garantit pas que le message a été livré à l'appareil de l'utilisateur."
     tags:
-      - Reciblage
-  - name: A reçu un message pour la dernière fois d’une campagne ou d’un canvas avec une balise
-    description: "Segmentez vos utilisateurs en fonction du moment où ils ont reçu une campagne ou un Canvas spécifique avec une étiquette spécifique. Ce filtre ne tient pas compte du fait que les utilisateurs ont reçu d'autres campagnes ou canevas. (période de 24 heures)"
+      - Retargeting
+  - name: Dernier message reçu d'une campagne ou d'un Canvas avec étiquette
+    description: "Segmente vos utilisateurs en fonction du moment où ils ont reçu une campagne ou un Canvas spécifique avec une étiquette spécifique. Ce filtre ne tient pas compte du moment où les utilisateurs ont reçu d'autres campagnes ou Canvas. (période de 24 heures)"
     tags:
-      - Reciblage
-  - name: N’a jamais reçu un message issu d’une campagne ou d’une étape de canvas
-    description: Segmente vos utilisateurs selon s’ils ont ou non reçu une campagne ou un composant Canvas.
+      - Retargeting
+  - name: N'a jamais reçu de message d'une campagne ou d'une étape de canvas
+    description: Segmente vos utilisateurs selon qu'ils ont reçu ou non une campagne ou un composant Canvas.
     tags:
-      - Reciblage
+      - Retargeting
   - name: Dernier e-mail reçu
-    description: "Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu l’un de vos messages par e-mail. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: "Segmente vos utilisateurs en fonction de la dernière fois qu'ils ont reçu l'un de vos e-mails. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l'entreprise"
     tags:
-      - Reciblage
+      - Retargeting
   - name: Dernière notification push reçue
-    description: "Segmentez vos utilisateurs par la dernière fois qu'ils ont reçu l'une de vos notifications push. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: "Segmente vos utilisateurs en fonction de la dernière fois qu'ils ont reçu l'une de vos notifications push. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l'entreprise"
     tags:
-      - Reciblage
-  - name: Dernière impression des messages in-app
-    description: "Segmentez vos utilisateurs par la dernière fois qu'ils ont vu un message intégré."
+      - Retargeting
+  - name: Dernière impression de message in-app
+    description: "Segmente vos utilisateurs en fonction de la dernière fois qu'ils ont vu un message in-app."
     tags:
-      - Reciblage
+      - Retargeting
   - name: Dernier SMS reçu
-    description: "Segmentez vos utilisateurs en fonction du moment où le dernier message a été livré au fournisseur de SMS. Cela ne garantit pas que le message a été livré à l'appareil de l'utilisateur. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: "Segmente vos utilisateurs en fonction du moment où le dernier message a été livré au fournisseur de SMS. Cela ne garantit pas que le message a été livré à l'appareil de l'utilisateur. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l'entreprise"
     tags:
-      - Reciblage
+      - Retargeting
   - name: Dernier webhook reçu
-    description: "Segmentez vos utilisateurs par la dernière fois que Braze a envoyé un webhook pour cet utilisateur. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: "Segmente vos utilisateurs en fonction de la dernière fois que Braze a envoyé un webhook pour cet utilisateur. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l'entreprise"
     tags:
-      - Reciblage
-  - name: Dernière réception WhatsApp
-    description: "Segmentez vos utilisateurs par la dernière fois qu'ils ont reçu un message WhatsApp. C'est lorsque la dernière demande d'API de message est envoyée à WhatsApp, et non lorsque le message est livré sur l'appareil de l'utilisateur. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+      - Retargeting
+  - name: Dernier WhatsApp reçu
+    description: "Segmente vos utilisateurs en fonction de la dernière fois qu'ils ont reçu un message WhatsApp. C'est lorsque la dernière demande d'API de message est envoyée à WhatsApp, et non lorsque le message est livré sur l'appareil de l'utilisateur. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l'entreprise"
     tags:
-      - Reciblage
-  - name: "Activités en ligne/en production/instantanées : activation de la fonction « Push to Start » enregistrée pour l'application"
-    description: "Segmentez vos utilisateurs selon qu'ils sont enregistrés ou non pour démarrer une activité en ligne via les notifications push iOS pour une application spécifique."
+      - Retargeting
+  - name: Live Activities Push to Start enregistré pour l'application
+    description: "Segmente vos utilisateurs selon qu'ils sont enregistrés ou non pour démarrer une Live Activity via les notifications push iOS pour une application spécifique."
     tags:
-      - Appareils
+      - Devices
   - name: Campagne cliquée/ouverte
-    description: "Filtrer par interaction avec une campagne spécifique. Pour les envois de messages e-mail, l'événement d'ouverture comprend à la fois les ouvertures machine et les ouvertures non machine.<br><br> Pour les e-mails, vous avez également la possibilité de filtrer par \"a ouvert n'importe quel e-mail (ouverture par la machine)\" et \"a ouvert n'importe quel e-mail (autres ouvertures)\". Les clics sur les liens de désabonnement et les centres de préférences ne sont pas pris en compte dans ce filtre. Si plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lorsque l'e-mail est ouvert ou cliqué, tous les autres utilisateurs ayant la même adresse e-mail voient également leur profil mis à jour. <br>- Si l'utilisateur original change son adresse e-mail après l'envoi du message et avant l'ouverture ou le clic, l'ouverture ou le clic est appliqué à tous les utilisateurs restants avec cette adresse e-mail au lieu de l'utilisateur original.<br><br>Pour les SMS, une interaction est définie comme :<br>- L'utilisateur a envoyé un SMS de réponse correspondant à une catégorie de mots-clés donnée pour la dernière fois. Ceci est attribué à la campagne la plus récente reçue par tous les utilisateurs avec ce numéro de téléphone. La campagne doit avoir été reçue au cours des quatre dernières heures.<br>L'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message SMS avec le suivi des clics activé, provenant d'une campagne donnée."
+    description: "Filtre par interaction avec une campagne spécifique. Pour les e-mails, l'événement d'ouverture comprend à la fois les ouvertures machine et les ouvertures non machine.<br><br> Pour les e-mails, vous avez également la possibilité de filtrer par « a ouvert n'importe quel e-mail (ouverture par la machine) » et « a ouvert n'importe quel e-mail (autres ouvertures) ». Les clics sur les liens de désabonnement et les centres de préférences ne sont pas pris en compte dans ce filtre. Si plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lorsque l'e-mail est ouvert ou cliqué, tous les autres utilisateurs ayant la même adresse e-mail voient également leur profil mis à jour. <br>- Si l'utilisateur d'origine change son adresse e-mail après l'envoi du message et avant l'ouverture ou le clic, l'ouverture ou le clic est appliqué à tous les utilisateurs restants avec cette adresse e-mail au lieu de l'utilisateur d'origine.<br><br>Pour les SMS, une interaction est définie comme :<br>- L'utilisateur a envoyé un SMS de réponse correspondant à une catégorie de mots-clés donnée pour la dernière fois. Ceci est attribué à la campagne la plus récente reçue par tous les utilisateurs avec ce numéro de téléphone. La campagne doit avoir été reçue au cours des quatre dernières heures.<br>- L'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message SMS avec le suivi des clics activé, provenant d'une campagne donnée."
     tags:
-      - Reciblage
-  - name: Campagne ou Canvas avec balise cliqué(e)/ouvert(e)
-    description: "Filtrer par interaction avec une campagne spécifique qui a une étiquette spécifique. Pour les envois de messages e-mail, l'événement d'ouverture comprend à la fois les ouvertures machine et les ouvertures non machine.<br><br> Pour les e-mails, vous avez la possibilité de filtrer par \"a ouvert n'importe quel e-mail (ouverture par la machine)\" et \"a ouvert n'importe quel e-mail (autres ouvertures)\". Si plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lorsque l'e-mail est ouvert ou cliqué, tous les autres utilisateurs ayant la même adresse e-mail voient également leur profil mis à jour. <br>- Si l'utilisateur original change son adresse e-mail après l'envoi du message et avant l'ouverture ou le clic, l'ouverture ou le clic est appliqué à tous les utilisateurs restants avec cette adresse e-mail au lieu de l'utilisateur original.<br><br>Pour les SMS, une interaction est définie comme :<br>- L'utilisateur a envoyé un SMS de réponse correspondant à une catégorie de mots-clés donnée pour la dernière fois. Ceci est attribué à la campagne la plus récente reçue par tous les utilisateurs avec ce numéro de téléphone. La campagne doit avoir été reçue au cours des quatre dernières heures.<br>Lorsque l'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message SMS avec le suivi des clics activé, à partir d'une campagne ou d'une étape de Canvas donnée avec une balise."
+      - Retargeting
+  - name: Campagne ou Canvas avec étiquette cliqué(e)/ouvert(e)
+    description: "Filtre par interaction avec une campagne spécifique ayant une étiquette spécifique. Pour les e-mails, l'événement d'ouverture comprend à la fois les ouvertures machine et les ouvertures non machine.<br><br> Pour les e-mails, vous avez la possibilité de filtrer par « a ouvert n'importe quel e-mail (ouverture par la machine) » et « a ouvert n'importe quel e-mail (autres ouvertures) ». Si plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lorsque l'e-mail est ouvert ou cliqué, tous les autres utilisateurs ayant la même adresse e-mail voient également leur profil mis à jour. <br>- Si l'utilisateur d'origine change son adresse e-mail après l'envoi du message et avant l'ouverture ou le clic, l'ouverture ou le clic est appliqué à tous les utilisateurs restants avec cette adresse e-mail au lieu de l'utilisateur d'origine.<br><br>Pour les SMS, une interaction est définie comme :<br>- L'utilisateur a envoyé un SMS de réponse correspondant à une catégorie de mots-clés donnée pour la dernière fois. Ceci est attribué à la campagne la plus récente reçue par tous les utilisateurs avec ce numéro de téléphone. La campagne doit avoir été reçue au cours des quatre dernières heures.<br>- L'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message SMS avec le suivi des clics activé, à partir d'une campagne ou d'une étape de canvas donnée avec une étiquette."
     tags:
-      - Reciblage
+      - Retargeting
   - name: Étape cliquée/ouverte
-    description: "Filtrer par interaction avec un composant Canvas spécifique. Pour les envois de messages e-mail, l'événement d'ouverture comprend à la fois les ouvertures machine et les ouvertures non machine.<br><br>Pour les e-mails, vous avez la possibilité de filtrer par \"a ouvert n'importe quel e-mail (ouverture par la machine)\" et \"a ouvert n'importe quel e-mail (autres ouvertures)\".<br><br>Pour les SMS, une interaction est définie comme :<br>- L'utilisateur a envoyé un SMS de réponse correspondant à une catégorie de mots-clés donnée pour la dernière fois. Ceci est attribué à la campagne la plus récente reçue par tous les utilisateurs avec ce numéro de téléphone. La campagne doit avoir été reçue au cours des quatre dernières heures. <br>- L'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message SMS avec le suivi des clics activé, à partir d'une étape de canvas donnée."
+    description: "Filtre par interaction avec un composant Canvas spécifique. Pour les e-mails, l'événement d'ouverture comprend à la fois les ouvertures machine et les ouvertures non machine.<br><br>Pour les e-mails, vous avez la possibilité de filtrer par « a ouvert n'importe quel e-mail (ouverture par la machine) » et « a ouvert n'importe quel e-mail (autres ouvertures) ».<br><br>Pour les SMS, une interaction est définie comme :<br>- L'utilisateur a envoyé un SMS de réponse correspondant à une catégorie de mots-clés donnée pour la dernière fois. Ceci est attribué à la campagne la plus récente reçue par tous les utilisateurs avec ce numéro de téléphone. La campagne doit avoir été reçue au cours des quatre dernières heures. <br>- L'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message SMS avec le suivi des clics activé, à partir d'une étape de canvas donnée."
     tags:
-      - Reciblage
+      - Retargeting
   - name: Alias cliqué dans la campagne
-    description: "Filtrez vos utilisateurs en fonction de savoir s'ils ont cliqué sur un alias spécifique dans une campagne spécifique. Ceci s'applique uniquement aux e-mails. <br><br> Si plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lorsque l'e-mail est ouvert ou cliqué, tous les autres utilisateurs ayant la même adresse e-mail voient également leur profil mis à jour. <br>- Si l'utilisateur original change son adresse e-mail après l'envoi du message et avant l'ouverture ou le clic, l'ouverture ou le clic est appliqué à tous les utilisateurs restants avec cette adresse e-mail au lieu de l'utilisateur original."
+    description: "Filtre vos utilisateurs selon qu'ils ont cliqué sur un alias spécifique dans une campagne spécifique. Ceci s'applique uniquement aux e-mails. <br><br> Si plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lorsque l'e-mail est ouvert ou cliqué, tous les autres utilisateurs ayant la même adresse e-mail voient également leur profil mis à jour. <br>- Si l'utilisateur d'origine change son adresse e-mail après l'envoi du message et avant l'ouverture ou le clic, l'ouverture ou le clic est appliqué à tous les utilisateurs restants avec cette adresse e-mail au lieu de l'utilisateur d'origine."
     tags:
-      - Reciblage
-  - name: "Alias cliqué dans l'étape de Canvas"
-    description: "Filtrez vos utilisateurs en fonction de leur clic sur un alias spécifique dans un Canvas spécifique. Ceci s'applique uniquement aux e-mails. <br><br> Si plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lorsque l'e-mail est ouvert ou cliqué, tous les autres utilisateurs ayant la même adresse e-mail voient également leur profil mis à jour. <br>- Si l'utilisateur original change son adresse e-mail après l'envoi du message et avant l'ouverture ou le clic, l'ouverture ou le clic est appliqué à tous les utilisateurs restants avec cette adresse e-mail au lieu de l'utilisateur original."
+      - Retargeting
+  - name: Alias cliqué dans l'étape de canvas
+    description: "Filtre vos utilisateurs selon qu'ils ont cliqué sur un alias spécifique dans un Canvas spécifique. Ceci s'applique uniquement aux e-mails. <br><br> Si plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lorsque l'e-mail est ouvert ou cliqué, tous les autres utilisateurs ayant la même adresse e-mail voient également leur profil mis à jour. <br>- Si l'utilisateur d'origine change son adresse e-mail après l'envoi du message et avant l'ouverture ou le clic, l'ouverture ou le clic est appliqué à tous les utilisateurs restants avec cette adresse e-mail au lieu de l'utilisateur d'origine."
     tags:
-      - Reciblage
-  - name: "Alias cliqué dans n'importe quelle campagne ou étape de canvas"
-    description: "Filtrez vos utilisateurs en fonction de leur clic sur un alias spécifique dans une campagne ou un Canvas. Ceci s'applique uniquement aux e-mails. <br><br> Si plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lorsque l'e-mail est ouvert ou cliqué, tous les autres utilisateurs ayant la même adresse e-mail voient également leur profil mis à jour. <br>- Si l'utilisateur original change son adresse e-mail après l'envoi du message et avant l'ouverture ou le clic, l'ouverture ou le clic est appliqué à tous les utilisateurs restants avec cette adresse e-mail au lieu de l'utilisateur original."
+      - Retargeting
+  - name: Alias cliqué dans n'importe quelle campagne ou étape de canvas
+    description: "Filtre vos utilisateurs selon qu'ils ont cliqué sur un alias spécifique dans une campagne ou un Canvas. Ceci s'applique uniquement aux e-mails. <br><br> Si plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lorsque l'e-mail est ouvert ou cliqué, tous les autres utilisateurs ayant la même adresse e-mail voient également leur profil mis à jour. <br>- Si l'utilisateur d'origine change son adresse e-mail après l'envoi du message et avant l'ouverture ou le clic, l'ouverture ou le clic est appliqué à tous les utilisateurs restants avec cette adresse e-mail au lieu de l'utilisateur d'origine."
     tags:
-      - Reciblage
-  - name: "Échec d'envoi définitif"
-    description: "Segmente vos utilisateurs selon que leur adresse e-mail a subi ou non un échec d’envoi définitif (par exemple, adresse e-mail non valide)."
+      - Retargeting
+  - name: Échec d'envoi définitif
+    description: "Segmente vos utilisateurs selon que leur adresse e-mail a subi ou non un échec d'envoi définitif (par exemple, adresse e-mail non valide)."
     tags:
-      - Reciblage
-  - name: "Échec provisoire d'envoi"
-    description: "Segmentez vos utilisateurs en fonction du nombre d'échecs provisoires d'envoi X fois en Y jours. Les filtres Segment ne peuvent remonter que 30 jours en arrière, mais vous pouvez remonter plus loin grâce aux extensions de segments.<br><br>Ce filtre fonctionne différemment d'un échec provisoire d'envoi dans Currents. Le filtre de segment Soft Bounced comptabilise un échec provisoire d'envoi s'il n'y a pas eu de réception/distribution réussie pendant la période de réessai de 72 heures. Dans Currents, chaque tentative infructueuse est envoyée sous la forme d'un échec provisoire d'envoi." 
+      - Retargeting
+  - name: Échec provisoire d'envoi
+    description: "Segmente vos utilisateurs selon qu'ils ont subi un échec provisoire d'envoi X fois en Y jours. Les filtres de segment ne peuvent remonter que 30 jours en arrière, mais vous pouvez remonter plus loin grâce aux extensions de segments.<br><br>Ce filtre fonctionne différemment d'un événement d'échec provisoire d'envoi dans Currents. Le filtre de segment Échec provisoire d'envoi comptabilise un échec provisoire s'il n'y a pas eu de livraison réussie pendant la période de réessai de 72 heures. Dans Currents, chaque tentative infructueuse est envoyée sous la forme d'un événement d'échec provisoire d'envoi."
     tags:
-      - Reciblage
+      - Retargeting
   - name: Vous a marqué comme spam
-    description: Segmente vos utilisateurs selon s’ils ont marqué vos messages comme spam.
+    description: Segmente vos utilisateurs selon qu'ils ont marqué vos messages comme spam ou non.
     tags:
-      - Reciblage
-  - name: Numéro de téléphone non valide 
-    description: Segmente vos utilisateurs selon si leur numéro de téléphone est valide ou non valide.
+      - Retargeting
+  - name: Numéro de téléphone non valide
+    description: Segmente vos utilisateurs selon que leur numéro de téléphone est valide ou non.
     tags:
-      - Reciblage
-  - name: Dernier envoi SMS spécifique Entrant Catégorie de mot-clé
-    description: "Segmentez vos utilisateurs en fonction du moment où ils ont envoyé un SMS pour la dernière fois à un groupe d'abonnement spécifique dans une catégorie de mots-clés spécifique." 
+      - Retargeting
+  - name: Dernier envoi de catégorie de mot-clé SMS entrant spécifique
+    description: "Segmente vos utilisateurs en fonction du moment où ils ont envoyé un SMS pour la dernière fois à un groupe d'abonnement spécifique dans une catégorie de mots-clés spécifique."
     tags:
-      - Reciblage
-  - name: Convertis par la campagne
-    description: Segmente vos utilisateurs selon s’ils ont été convertis ou non grâce à une campagne donnée. Ce filtre n’inclut pas les utilisateurs du groupe de contrôle.
+      - Retargeting
+  - name: Converti par la campagne
+    description: Segmente vos utilisateurs selon qu'ils ont été convertis ou non grâce à une campagne donnée. Ce filtre n'inclut pas les utilisateurs du groupe de contrôle.
     tags:
-      - Reciblage
-  - name: Convertis par le Canvas
-    description: Segmente vos utilisateurs selon s’ils ont été convertis ou non grâce à un Canvas donné. Ce filtre n’inclut pas les utilisateurs du groupe de contrôle.
+      - Retargeting
+  - name: Converti par le Canvas
+    description: Segmente vos utilisateurs selon qu'ils ont été convertis ou non grâce à un Canvas donné. Ce filtre n'inclut pas les utilisateurs du groupe de contrôle.
     tags:
-      - Reciblage
+      - Retargeting
   - name: Dans le groupe de contrôle de campagne
-    description: Segmente vos utilisateurs selon s’ils faisaient ou non partie du groupe de contrôle d’une campagne multivariée donnée.
+    description: Segmente vos utilisateurs selon qu'ils faisaient ou non partie du groupe de contrôle d'une campagne multivariée donnée.
     tags:
-      - Reciblage
+      - Retargeting
   - name: Dans le groupe de contrôle de Canvas
-    description: "Segmente vos utilisateurs selon s’ils faisaient ou non partie du groupe de contrôle d’un Canvas donné. Ce filtre évalue uniquement les utilisateurs qui ont accédé au canvas, de sorte que les utilisateurs qui n'y ont jamais accédé sont entièrement exclus des résultats.<br><br>Par exemple, si vous filtrez les utilisateurs qui ne font pas partie du groupe de contrôle d'un canvas, vous n'obtiendrez que les utilisateurs qui ont accédé au canvas et qui ont été affectés à une variante non de contrôle. Les utilisateurs qui n'ont jamais accédé au canvas ne seront pas inclus. Pour inclure tous les utilisateurs, quelle que soit leur inscription sur canvas, veuillez utiliser le <code>Entered Canvas Variation</code> filtrez à la place."
+    description: "Segmente vos utilisateurs selon qu'ils faisaient ou non partie du groupe de contrôle d'un Canvas donné. Ce filtre évalue uniquement les utilisateurs qui sont entrés dans le Canvas ; ceux qui n'y sont jamais entrés sont entièrement exclus des résultats.<br><br>Par exemple, si vous filtrez les utilisateurs qui ne font pas partie du groupe de contrôle d'un Canvas, vous n'obtiendrez que les utilisateurs qui sont entrés dans le Canvas et qui ont été affectés à une variante non de contrôle — les utilisateurs qui ne sont jamais entrés dans le Canvas ne sont pas inclus. Pour inclure tous les utilisateurs indépendamment de leur entrée dans le Canvas, utilisez plutôt le filtre <code>Entered Canvas Variation</code>."
     tags:
-      - Reciblage
+      - Retargeting
   - name: Dernière inscription dans un groupe de contrôle
-    description: "Segmentez vos utilisateurs par la dernière fois qu'ils sont tombés dans le groupe de contrôle d'une campagne. <br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: "Segmente vos utilisateurs en fonction de la dernière fois qu'ils sont tombés dans le groupe de contrôle d'une campagne. <br><br>Fuseau horaire :<br>Fuseau horaire de l'entreprise"
     tags:
-      - Reciblage
-  - name: Entrés dans une variante du Canvas
-    description: "Segmente vos utilisateurs selon s’ils sont ou non rentrés dans une variante d’un Canvas donné. Ce filtre évalue tous les utilisateurs.<br><br>Par exemple, si vous filtrez les utilisateurs qui n'ont pas rejoint un groupe de contrôle de variation Canvas, vous obtiendrez tous les utilisateurs qui ne font pas partie du groupe de contrôle, qu'ils aient rejoint Canvas ou non."
+      - Retargeting
+  - name: Entré dans une variante du Canvas
+    description: "Segmente vos utilisateurs selon qu'ils sont ou non entrés dans une variante d'un Canvas donné. Ce filtre évalue tous les utilisateurs.<br><br>Par exemple, si vous filtrez les utilisateurs qui ne sont pas entrés dans un groupe de contrôle de variante Canvas, vous obtiendrez tous les utilisateurs qui ne font pas partie du groupe de contrôle, qu'ils soient entrés dans le Canvas ou non."
     tags:
-      - Reciblage
+      - Retargeting
   - name: Dernier message reçu
-    description: "Segmentez vos utilisateurs en déterminant le dernier message reçu. (période de 24 heures)<br><br> Pour les cartes de contenu, les bannières et les messages in-app, il s'agit de la date à laquelle un utilisateur a enregistré une impression pour la dernière fois, et non de la date à laquelle la carte ou le message in-app a été envoyé pour la dernière fois.<br><br>Pour les notifications push et les webhooks, c'est lorsque tout message a été envoyé à l'utilisateur.<br><br> Pour WhatsApp, c'est lorsque la dernière demande d'API de message a été envoyée à WhatsApp, et non lorsque le message a été livré sur l'appareil de l'utilisateur. <br><br>Pour les e-mails, c'est lorsque une demande d'e-mail est envoyée au fournisseur de service de messagerie (peu importe si elle est effectivement livrée). Lorsque plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lors de l'envoi initial, seul le profil de l'utilisateur ciblé spécifique est mis à jour. <br>- Lorsque l'e-mail est envoyé, ou si l'utilisateur ouvre l'e-mail ou un lien contenu dans l'e-mail, tous les utilisateurs partageant cette adresse e-mail semblent avoir reçu le message.<br><br>Pour les SMS, ceci correspond au moment où le dernier message a été livré au fournisseur de SMS. Cela ne garantit pas que le message a été livré à l'appareil de l'utilisateur.<br><br>Exemple :<br>Dernier message reçu il y a moins de 1 jour = il y a moins de 24 heures<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: "Segmente vos utilisateurs en déterminant le dernier message reçu. (période de 24 heures)<br><br> Pour les cartes de contenu, les bannières et les messages in-app, il s'agit de la date à laquelle un utilisateur a enregistré une impression pour la dernière fois, et non de la date à laquelle la carte ou le message in-app a été envoyé pour la dernière fois.<br><br>Pour les notifications push et les webhooks, c'est lorsqu'un message a été envoyé à l'utilisateur.<br><br> Pour WhatsApp, c'est lorsque la dernière demande d'API de message a été envoyée à WhatsApp, et non lorsque le message a été livré sur l'appareil de l'utilisateur. <br><br>Pour les e-mails, c'est lorsqu'une demande d'e-mail est envoyée au fournisseur de services d'e-mailing (que l'e-mail soit effectivement livré ou non). Lorsque plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lors de l'envoi initial, seul le profil de l'utilisateur ciblé est mis à jour. <br>- Lorsque l'e-mail est livré, ou si l'utilisateur ouvre l'e-mail ou un lien contenu dans l'e-mail, tous les utilisateurs partageant cette adresse e-mail semblent avoir reçu le message.<br><br>Pour les SMS, cela correspond au moment où le dernier message a été livré au fournisseur de SMS. Cela ne garantit pas que le message a été livré à l'appareil de l'utilisateur.<br><br>Exemple :<br>Dernier message reçu il y a moins de 1 jour = il y a moins de 24 heures<br><br>Fuseau horaire :<br>Fuseau horaire de l'entreprise"
     tags:
-      - Reciblage
+      - Retargeting
   - name: Dernière interaction avec un message
-    description: "Segmente vos utilisateurs en fonction de la dernière fois qu'ils ont cliqué ou ouvert l'un de vos canaux d'envoi de messages (Bannières, carte de contenu, e-mail, in-app, SMS, push, WhatsApp). Pour les envois de messages e-mail, l'événement d'ouverture comprend à la fois les ouvertures machine et les ouvertures non machine. (période de 24 heures)<br><br>Pour les e-mails, c'est lorsque une demande d'e-mail est envoyée au fournisseur de service de messagerie (peu importe si elle est effectivement livrée). Vous avez également la possibilité de filtrer par \"a ouvert n'importe quel e-mail (ouverture par la machine)\" et \"a ouvert n'importe quel e-mail (autres ouvertures)\". Lorsque plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lors de l'envoi initial, seul le profil de l'utilisateur ciblé spécifique est mis à jour. <br>- Lorsque l'e-mail est envoyé, ou si l'utilisateur ouvre l'e-mail ou un lien contenu dans l'e-mail, tous les utilisateurs partageant cette adresse e-mail semblent avoir reçu le message.<br><br>Pour les SMS, c'est lorsque l'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message avec le suivi des clics activé.<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: "Segmente vos utilisateurs en fonction de la dernière fois qu'ils ont cliqué ou ouvert l'un de vos canaux de communication (bannières, cartes de contenu, e-mail, in-app, SMS, push, WhatsApp). Pour les e-mails, l'événement d'ouverture comprend à la fois les ouvertures machine et les ouvertures non machine. (période de 24 heures)<br><br>Pour les e-mails, c'est lorsqu'une demande d'e-mail est envoyée au fournisseur de services d'e-mailing (que l'e-mail soit effectivement livré ou non). Vous avez également la possibilité de filtrer par « a ouvert n'importe quel e-mail (ouverture par la machine) » et « a ouvert n'importe quel e-mail (autres ouvertures) ». Lorsque plusieurs utilisateurs partagent la même adresse e-mail :<br>- Lors de l'envoi initial, seul le profil de l'utilisateur ciblé est mis à jour. <br>- Lorsque l'e-mail est livré, ou si l'utilisateur ouvre l'e-mail ou un lien contenu dans l'e-mail, tous les utilisateurs partageant cette adresse e-mail semblent avoir reçu le message.<br><br>Pour les SMS, c'est lorsque l'utilisateur a sélectionné pour la dernière fois un lien raccourci dans un message avec le suivi des clics activé.<br><br>Fuseau horaire :<br>Fuseau horaire de l'entreprise"
     tags:
-      - Reciblage
-  - name: Carte cliquée 
-    description: "Segmente vos utilisateurs selon qu’ils aient cliqué ou non sur une carte de contenu donnée. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte »."
+      - Retargeting
+  - name: Carte cliquée
+    description: "Segmente vos utilisateurs selon qu'ils ont cliqué ou non sur une carte de contenu donnée. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec étiquette cliqué(e)/ouvert(e) » et « Étape cliquée/ouverte »."
     tags:
-      - Reciblage
+      - Retargeting
   - name: Indicateurs de fonctionnalité
-    description: "Le segment de vos utilisateurs qui ont actuellement activé un <a href=\"/docs/developer_guide/feature_flags/\">flag de fonctionnalité</a> particulier."
+    description: "Le segment de vos utilisateurs qui ont actuellement activé un <a href=\"/docs/developer_guide/feature_flags/\">indicateur de fonctionnalité</a> particulier."
     tags:
-      - Reciblage
-  - name: Groupe d’abonnement
-    description: "Segmentez vos utilisateurs par leur groupe d'abonnement pour l'e-mail, le SMS/MMS ou WhatsApp. Les groupes archivés n'apparaissent pas et ne peuvent pas être utilisés."
+      - Retargeting
+  - name: Groupe d'abonnement
+    description: "Segmente vos utilisateurs en fonction de leur groupe d'abonnement pour l'e-mail, le SMS/MMS ou WhatsApp. Les groupes archivés n'apparaissent pas et ne peuvent pas être utilisés."
     tags:
-      - Comportement d’abonnement aux canaux
-  - name: Adresse e-mail disponible
-    description: "Segmentez vos utilisateurs selon qu'ils disposent d'une adresse e-mail valide et qu'ils sont abonnés ou ont accepté de recevoir des e-mails. Ce filtre vérifie trois critères : si l'utilisateur s'est désabonné des e-mails, si Braze a reçu un échec définitif et si l'e-mail a été marqué comme spam. Si l'un de ces critères est rempli, ou si l'e-mail d'un utilisateur n'existe pas, cet utilisateur n'est pas inclus.<br><br>Les utilisateurs dont l'adresse e-mail est disponible sont les suivants : <code>false</code> sont exclus de l'audience de la campagne et ne reçoivent pas l'e-mail, même si vos paramètres d'envoi sont configurés pour envoyer à tous les utilisateurs (y compris ceux qui se sont désabonnés).<br><br>Pour les e-mails où le statut d'abonnement est important, veuillez utiliser « E-mail disponible » au lieu de <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address\">« Adresse e-mail</a> ». Les critères supplémentaires vous permettent de réaliser le ciblage des utilisateurs éligibles pour recevoir des e-mails."
+      - Channel subscription behavior
+  - name: E-mail disponible
+    description: "Segmente vos utilisateurs selon qu'ils disposent d'une adresse e-mail valide et qu'ils sont abonnés ou ont accepté de recevoir des e-mails. Ce filtre vérifie trois critères&#58; si l'utilisateur s'est désabonné des e-mails, si Braze a reçu un échec d'envoi définitif et si l'e-mail a été marqué comme spam. Si l'un de ces critères est rempli, ou si aucune adresse e-mail n'existe pour un utilisateur, celui-ci n'est pas inclus.<br><br>Les utilisateurs dont la valeur E-mail disponible est <code>false</code> sont exclus de l'audience de la campagne et ne reçoivent pas l'e-mail, même si vos paramètres d'envoi sont configurés pour envoyer à tous les utilisateurs (y compris ceux qui se sont désabonnés).<br><br>Pour les e-mails où le statut d'abonnement est important, utilisez E-mail disponible au lieu de <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address\">Adresse e-mail</a>. Les critères supplémentaires vous permettent de cibler les utilisateurs éligibles pour recevoir des e-mails."
     tags:
-      - Comportement d’abonnement aux canaux
-  - name: Date d’abonnement aux e-mails
-    description: Segmente vos utilisateurs en fonction de la date à laquelle ils se sont abonnés aux communications par e-mail.
+      - Channel subscription behavior
+  - name: Date d'abonnement aux e-mails
+    description: Segmente vos utilisateurs en fonction de la date à laquelle ils se sont abonnés aux e-mails.
     tags:
-      - Comportement d’abonnement aux canaux
-  - name: État d’abonnement aux e-mails
-    description: Segmente vos utilisateurs en fonction du statut de leur abonnement aux communications par e-mail.
+      - Channel subscription behavior
+  - name: Statut d'abonnement aux e-mails
+    description: Segmente vos utilisateurs en fonction de leur statut d'abonnement aux e-mails.
     tags:
-      - Comportement d’abonnement aux canaux
-  - name: Date de désinscription aux e-mails 
-    description: Segmente vos utilisateurs en fonction de la date à laquelle ils se sont désabonnés des futures communications par e-mail.
+      - Channel subscription behavior
+  - name: Date de désabonnement aux e-mails
+    description: Segmente vos utilisateurs en fonction de la date à laquelle ils se sont désabonnés des futurs e-mails.
     tags:
-      - Comportement d’abonnement aux canaux
+      - Channel subscription behavior
   - name: Notification push au premier plan activée
-    description: "Segmentez vos utilisateurs qui ont une autorisation de push provisoire ou qui sont activés pour le push au premier plan. Ce décompte inclut plus précisément :<br>1. Les utilisateurs d'iOS qui sont provisoirement autorisés pour les notifications push. <br>2. Les utilisateurs qui ont activé la notification push en avant-plan et dont le statut d'abonnement aux notifications push n'est pas désactivé, pour l'une de vos applications. Pour ces utilisateurs, ce décompte inclut uniquement les notifications push au premier plan.<br><br>La fonctionnalité « Foreground Push Enabled » n'inclut pas les utilisateurs qui se sont désabonnés. <br><br>Après avoir effectué la segmentation à l'aide de ce filtre, vous pouvez consulter la répartition des utilisateurs appartenant à ce segment pour Android, iOS et le Web dans le panneau inférieur, intitulé <em>« Utilisateurs accessibles</em> »."
+    description: "Segmente vos utilisateurs qui ont une autorisation de push provisoire ou qui sont activés pour le push au premier plan. Ce décompte inclut plus précisément :<br>1. Les utilisateurs iOS qui sont provisoirement autorisés pour les notifications push. <br>2. Les utilisateurs qui ont activé la notification push au premier plan et dont le statut d'abonnement aux notifications push n'est pas désabonné, pour l'une de vos applications. Pour ces utilisateurs, ce décompte inclut uniquement les notifications push au premier plan.<br><br>La fonctionnalité Notification push au premier plan activée n'inclut pas les utilisateurs qui se sont désabonnés. <br><br>Après avoir effectué la segmentation à l'aide de ce filtre, vous pouvez consulter la répartition des utilisateurs appartenant à ce segment pour Android, iOS et le Web dans le panneau inférieur, intitulé <em>Utilisateurs accessibles</em>."
     tags:
-      - Comportement d’abonnement aux canaux
-  - name: Notifications push en avant-plan activées pour l’application
-    description: "Segments par le fait que les utilisateurs ont activé les notifications push pour votre application sur leur appareil. Utilisateurs pour lesquels la fonctionnalité de notification en avant-plan est activée pour une application. Cela ne tient pas compte du statut de l'abonnement push. Ce décompte inclut les utilisateurs qui ont provisoirement autorisé les jetons de notification push en premier plan et en arrière-plan."
+      - Channel subscription behavior
+  - name: Notification push au premier plan activée pour l'application
+    description: "Segmente selon que les utilisateurs ont activé les notifications push pour votre application sur leur appareil. Utilisateurs pour lesquels la notification push au premier plan est activée pour une application. Cela ne tient pas compte du statut d'abonnement push. Ce décompte inclut les utilisateurs qui ont provisoirement autorisé les jetons de notification push au premier plan et en arrière-plan."
     tags:
-      - Comportement d’abonnement aux canaux
-  - name: "Notifications push d'arrière-plan ou d'avant-plan activées"
-    description: "Segmentation selon que les utilisateurs ont un jeton de poussée et ne se sont pas désabonnés. Les utilisateurs qui ont activé la fonctionnalité de notification push en arrière-plan ou au premier plan pour l'une de vos applications."
+      - Channel subscription behavior
+  - name: Notification push d'arrière-plan ou de premier plan activée
+    description: "Segmente selon que les utilisateurs ont un jeton de notification push et ne se sont pas désabonnés. Utilisateurs qui ont activé la notification push en arrière-plan ou au premier plan pour l'une de vos applications."
     tags:
-      - Comportement d’abonnement aux canaux
-  - name: Date d’abonnement aux notifications push
+      - Channel subscription behavior
+  - name: Date d'abonnement aux notifications push
     description: Segmente vos utilisateurs en fonction de la date à laquelle ils ont activé les notifications push.
     tags:
-      - Comportement d’abonnement aux canaux
-  - name: État d’abonnement aux notifications push
-    description: "Segmente vos utilisateurs en fonction de leur <a href=\"/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-state\">statut de leur inscription</a> aux notifications push."
+      - Channel subscription behavior
+  - name: Statut d'abonnement aux notifications push
+    description: "Segmente vos utilisateurs en fonction de leur <a href=\"/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-state\">statut d'abonnement</a> aux notifications push."
     tags:
-      - Comportement d’abonnement aux canaux
-  - name: Date de désinscription aux notifications push
-    description: Segmente vos utilisateurs en fonction de la date à laquelle ils se sont désinscrits des notifications push.
+      - Channel subscription behavior
+  - name: Date de désabonnement aux notifications push
+    description: Segmente vos utilisateurs en fonction de la date à laquelle ils se sont désabonnés des futures notifications push.
     tags:
-      - Comportement d’abonnement aux canaux
+      - Channel subscription behavior
   - name: Produit acheté
-    description: Segmente vos utilisateurs en fonction des produits qu’ils ont achetés dans votre application.
+    description: Segmente vos utilisateurs en fonction des produits achetés dans votre application.
     tags:
-      - Comportement d’achat
-  - name: Nombre total d’achats
-    description: Segmente vos utilisateurs en fonction du nombre d’achats qu’ils ont effectués dans votre application.
+      - Purchase behavior
+  - name: Nombre total d'achats
+    description: Segmente vos utilisateurs en fonction du nombre d'achats qu'ils ont effectués dans votre application.
     tags:
-      - Comportement d’achat
+      - Purchase behavior
   - name: X produits achetés au cours des Y derniers jours
-    description: "Filtrer les utilisateurs par le nombre de fois qu'un produit spécifique a été acheté."
+    description: "Filtre les utilisateurs en fonction du nombre de fois qu'un produit spécifique a été acheté."
     tags:
-      - Comportement d’achat
-  - name: X achats dans les Y derniers jours
-    description: "Segmente vos utilisateurs en fonction du nombre de fois (entre 0 et 50) qu’ils ont effectué un achat dans le dernier nombre de jours civils indiqué, compris entre 1 et 30. <br> <a href=\"/docs/x-in-y-behavior/\">En savoir plus sur le comportement « X dans Y » ici.</a>"
+      - Purchase behavior
+  - name: X achats au cours des Y derniers jours
+    description: "Segmente vos utilisateurs en fonction du nombre de fois (entre 0 et 50) qu'ils ont effectué un achat au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. <br> <a href=\"/docs/x-in-y-behavior/\">En savoir plus sur le comportement « X dans Y » ici.</a>"
     tags:
-      - Comportement d’achat
-  - name: X propriétés d’achat en Y jours
-    description: "Segmente vos utilisateurs en fonction du nombre de fois où un achat a été effectué par rapport à une certaine propriété d’achat dans le dernier nombre de jours civils indiqué, compris entre 1 et 30. <br> <a href=\"/docs/x-in-y-behavior/\">En savoir plus sur le comportement « X dans Y » ici.</a>"
+      - Purchase behavior
+  - name: X propriétés d'achat en Y jours
+    description: "Segmente vos utilisateurs en fonction du nombre de fois où un achat a été effectué par rapport à une certaine propriété d'achat au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. <br> <a href=\"/docs/x-in-y-behavior/\">En savoir plus sur le comportement « X dans Y » ici.</a>"
     tags:
-      - Comportement d’achat
-  - name: Premier achat
-    description: Segmentez vos utilisateurs par le premier moment où un utilisateur a effectué un achat dans votre application.
+      - Purchase behavior
+  - name: Premier achat effectué
+    description: Segmente vos utilisateurs en fonction de la première fois qu'un utilisateur a effectué un achat dans votre application.
     tags:
-      - Comportement d’achat
-  - name: "Premier achat pour l'application"
-    description: Segmentez vos utilisateurs par le premier moment où un utilisateur a effectué un achat depuis votre application.
+      - Purchase behavior
+  - name: Premier achat pour l'application
+    description: Segmente vos utilisateurs en fonction de la première fois qu'un utilisateur a effectué un achat depuis votre application.
     tags:
-      - Comportement d’achat
+      - Purchase behavior
   - name: Dernier achat effectué
-    description: "Filtrer les utilisateurs par la dernière fois qu'ils ont effectué un achat."
-    tags: 
-      - Comportement d’achat
+    description: "Filtre les utilisateurs en fonction de la dernière fois qu'ils ont effectué un achat."
+    tags:
+      - Purchase behavior
   - name: Dernier produit acheté
-    description: Filtrer les utilisateurs en fonction de la date à laquelle ils ont acheté un produit spécifique pour la dernière fois.
+    description: Filtre les utilisateurs en fonction de la date à laquelle ils ont acheté un produit spécifique pour la dernière fois.
     tags:
-      - Comportement d’achat
+      - Purchase behavior
   - name: Argent dépensé
-    description: Segmente vos utilisateurs en fonction du montant qu’ils ont dépensé dans votre application.
+    description: Segmente vos utilisateurs en fonction du montant qu'ils ont dépensé dans votre application.
     tags:
-      - Comportement d’achat
+      - Purchase behavior
   - name: X argent dépensé en Y jours
-    description: "Segmente vos utilisateurs en fonction du montant dépensé dans votre application au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. Ce montant ne comprend que la somme des 50 derniers achats. <br> <a href=\"/docs/x-in-y-behavior/\">En savoir plus sur le comportement « X dans Y » ici.</a>"
+    description: "Segmente vos utilisateurs en fonction du montant dépensé dans votre application au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. Ce montant ne comprend que la somme des 50 derniers achats. <br> <a href=\"/docs/x-in-y-behavior/\">En savoir plus sur le comportement « X dans Y » ici.</a>"
     tags:
-      - Comportement d’achat
-  - name: Dernière commande passée (730 derniers jours)
-    description: "Segmentez vos utilisateurs en fonction de la date de leur dernière commande, sur la base de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé par</a> <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">eCommerce</a> pour les commandes passées (les espaces de travail qui ne suivent pas les événements eCommerce ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre une fois par jour, et la période de référence maximale est de deux ans.<br><br>Ce filtre est actuellement en version bêta. Veuillez contacter votre gestionnaire de compte Braze si vous souhaitez utiliser ce filtre."
+      - Purchase behavior
+  - name: Dernière commande passée (730 derniers jours)
+    description: "Segmente vos utilisateurs en fonction de la date de leur dernière commande, sur la base de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé eCommerce</a> pour les commandes passées (les espaces de travail qui ne suivent pas les événements eCommerce ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre une fois par jour, et la période de référence maximale est de deux ans.<br><br>Ce filtre est en version bêta. Contactez votre Account Manager Braze si vous souhaitez l'utiliser."
     tags:
-      - E-commerce
-  - name: Nombre total de commandes (730 derniers jours)
-    description: "Segmente vos utilisateurs en fonction du nombre total de commandes passées par un utilisateur au cours des deux dernières années, sur la base de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé par le</a> <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">commerce électronique</a> pour les commandes passées (les espaces de travail qui ne suivent pas les événements de commerce électronique ne disposent pas de données pour ce filtre). Ce décompte exclut les commandes annulées, qui doivent être suivies à l'aide de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé par eCommerce</a> pour les commandes annulées. Les utilisateurs sont évalués pour ce filtre une fois par jour.<br><br>Ce filtre est actuellement en version bêta. Veuillez contacter votre gestionnaire de compte Braze si vous souhaitez utiliser ce filtre."
+      - eCommerce
+  - name: Nombre total de commandes (730 derniers jours)
+    description: "Segmente vos utilisateurs en fonction du nombre total de commandes passées par un utilisateur au cours des deux dernières années, sur la base de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé eCommerce</a> pour les commandes passées (les espaces de travail qui ne suivent pas les événements eCommerce ne disposent pas de données pour ce filtre). Ce décompte exclut les commandes annulées, qui doivent être suivies à l'aide de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé eCommerce</a> pour les commandes annulées. Les utilisateurs sont évalués pour ce filtre une fois par jour.<br><br>Ce filtre est en version bêta. Contactez votre Account Manager Braze si vous souhaitez l'utiliser."
     tags:
-      - E-commerce
+      - eCommerce
   - name: Nombre total de commandes
-    description: "Segmente vos utilisateurs en fonction du nombre total de commandes passées par un utilisateur au cours de sa vie, sur la base de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé par le</a> <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">commerce électronique</a> pour les commandes passées (les espaces de travail qui ne suivent pas les événements de commerce électronique ne disposent pas de données pour ce filtre). Ce décompte exclut les commandes annulées, qui doivent être suivies à l'aide de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé par eCommerce</a> pour les commandes annulées. Les utilisateurs sont évalués pour ce filtre en temps réel.<br><br>Ce filtre est actuellement en version bêta. Veuillez contacter votre gestionnaire de compte Braze si vous souhaitez utiliser ce filtre."
+    description: "Segmente vos utilisateurs en fonction du nombre total de commandes passées par un utilisateur au cours de sa durée de vie, sur la base de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé eCommerce</a> pour les commandes passées (les espaces de travail qui ne suivent pas les événements eCommerce ne disposent pas de données pour ce filtre). Ce décompte exclut les commandes annulées, qui doivent être suivies à l'aide de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé eCommerce</a> pour les commandes annulées. Les utilisateurs sont évalués pour ce filtre en temps réel.<br><br>Ce filtre est en version bêta. Contactez votre Account Manager Braze si vous souhaitez l'utiliser."
     tags:
-      - E-commerce
-  - name: Nombre total de commandes annulées (au cours des 730 derniers jours)
-    description: "Segmente vos utilisateurs en fonction du nombre total de commandes annulées au cours des deux dernières années, sur la base de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé par</a> <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">eCommerce</a> pour les commandes passées (les espaces de travail qui ne suivent pas les événements eCommerce ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre une fois par jour.<br><br>Ce filtre est actuellement en version bêta. Veuillez contacter votre gestionnaire de compte Braze si vous souhaitez utiliser ce filtre."
+      - eCommerce
+  - name: Nombre total de commandes annulées (730 derniers jours)
+    description: "Segmente vos utilisateurs en fonction du nombre total de commandes annulées par un utilisateur au cours des deux dernières années, sur la base de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé eCommerce</a> pour les commandes passées (les espaces de travail qui ne suivent pas les événements eCommerce ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre une fois par jour.<br><br>Ce filtre est en version bêta. Contactez votre Account Manager Braze si vous souhaitez l'utiliser."
     tags:
-      - E-commerce
-  - name: Valeur vie client (730 derniers jours)
-    description: "Segmentez vos utilisateurs en fonction du chiffre d'affaires total qu'un utilisateur est susceptible de générer au cours de son historique d'achats auprès de votre marque. Le calcul prend en compte les 730 derniers jours et multiplie la valeur moyenne des commandes (AOV) par le nombre total de commandes passées, puis tient compte de la durée d'activité d'achat de l'utilisateur (la période entre sa première commande et sa dernière commande). Ce filtre utilise les données suivies dans <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">le</a>s <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement</a>s <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">recommandés pour le commerce électronique</a> (les espaces de travail qui ne suivent pas les événements de commerce électronique ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre une fois par jour.<br><br>Ce filtre est actuellement en version bêta. Veuillez contacter votre gestionnaire de compte Braze si vous souhaitez utiliser ce filtre."
+      - eCommerce
+  - name: Valeur vie client (730 derniers jours)
+    description: "Segmente vos utilisateurs en fonction du chiffre d'affaires total qu'un utilisateur est susceptible de générer au cours de son historique d'achats auprès de votre marque. Le calcul prend en compte les 730 derniers jours et multiplie la valeur moyenne des commandes (AOV) par le nombre total de commandes passées, puis tient compte de la durée d'activité d'achat de l'utilisateur (la période entre sa première commande et sa commande la plus récente). Ce filtre utilise les données suivies dans les <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événements recommandés eCommerce</a> (les espaces de travail qui ne suivent pas les événements eCommerce ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre une fois par jour.<br><br>Ce filtre est en version bêta. Contactez votre Account Manager Braze si vous souhaitez l'utiliser."
     tags:
-      - E-commerce
-  - name: Valeur totale des remboursements (730 derniers jours)
-    description: "Segmentez vos utilisateurs en fonction de la valeur des remboursements accordés à un utilisateur au cours des deux dernières années, sur la base de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé par</a> <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">eCommerce</a> pour les commandes remboursées (les espaces de travail qui ne suivent pas les événements eCommerce ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre une fois par jour.<br><br>Ce filtre est actuellement en version bêta. Veuillez contacter votre gestionnaire de compte Braze si vous souhaitez utiliser ce filtre."
+      - eCommerce
+  - name: Valeur totale des remboursements (730 derniers jours)
+    description: "Segmente vos utilisateurs en fonction de la valeur des remboursements accordés à un utilisateur au cours des deux dernières années, sur la base de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé eCommerce</a> pour les commandes remboursées (les espaces de travail qui ne suivent pas les événements eCommerce ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre une fois par jour.<br><br>Ce filtre est en version bêta. Contactez votre Account Manager Braze si vous souhaitez l'utiliser."
     tags:
-      - E-commerce
-  - name: Valeur totale du remboursement
-    description: "Segmentez vos utilisateurs en fonction de la valeur totale des remboursements accordés à un utilisateur au cours de sa vie, sur la base de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé par</a> <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">eCommerce</a> pour les commandes remboursées (les espaces de travail qui ne suivent pas les événements eCommerce ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre en temps réel.<br><br>Ce filtre est actuellement en version bêta. Veuillez contacter votre gestionnaire de compte Braze si vous souhaitez utiliser ce filtre."
+      - eCommerce
+  - name: Valeur totale des remboursements
+    description: "Segmente vos utilisateurs en fonction de la valeur totale des remboursements accordés à un utilisateur au cours de sa durée de vie, sur la base de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé eCommerce</a> pour les commandes remboursées (les espaces de travail qui ne suivent pas les événements eCommerce ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre en temps réel.<br><br>Ce filtre est en version bêta. Contactez votre Account Manager Braze si vous souhaitez l'utiliser."
     tags:
-      - E-commerce
-  - name: "Chiffre d'affaires total (730 derniers jours)"
-    description: "Segmente vos utilisateurs en fonction du chiffre d'affaires total généré par les commandes d'un utilisateur au cours des deux dernières années, calculé en soustrayant le chiffre d'affaires associé à l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé par</a> <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">le commerce électronique</a> pour les commandes remboursées du chiffre d'affaires associé à l'événement de commerce électronique pour les commandes passées (les espaces de travail qui ne suivent pas les événements de commerce électronique ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre une fois par jour.<br><br>Ce filtre est actuellement en version bêta. Veuillez contacter votre gestionnaire de compte Braze si vous souhaitez utiliser ce filtre."
+      - eCommerce
+  - name: Chiffre d'affaires total (730 derniers jours)
+    description: "Segmente vos utilisateurs en fonction du chiffre d'affaires total généré par les commandes d'un utilisateur au cours des deux dernières années, calculé en soustrayant le chiffre d'affaires associé à l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé eCommerce</a> pour les commandes remboursées du chiffre d'affaires associé à l'événement eCommerce pour les commandes passées (les espaces de travail qui ne suivent pas les événements eCommerce ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre une fois par jour.<br><br>Ce filtre est en version bêta. Contactez votre Account Manager Braze si vous souhaitez l'utiliser."
     tags:
-      - E-commerce
-  - name: Total des revenus
-    description: "Segmente vos utilisateurs en fonction du chiffre d'affaires total généré par les commandes d'un utilisateur tout au long de sa durée de vie, calculé en soustrayant le chiffre d'affaires associé à l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé par</a> <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">le commerce électronique</a> pour les commandes remboursées du chiffre d'affaires associé à l'événement de commerce électronique pour les commandes passées (les espaces de travail qui ne suivent pas les événements de commerce électronique ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre en temps réel.<br><br>Ce filtre est actuellement en version bêta. Veuillez contacter votre gestionnaire de compte Braze si vous souhaitez utiliser ce filtre."
+      - eCommerce
+  - name: Chiffre d'affaires total
+    description: "Segmente vos utilisateurs en fonction du chiffre d'affaires total généré par les commandes d'un utilisateur tout au long de sa durée de vie, calculé en soustrayant le chiffre d'affaires associé à l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé eCommerce</a> pour les commandes remboursées du chiffre d'affaires associé à l'événement eCommerce pour les commandes passées (les espaces de travail qui ne suivent pas les événements eCommerce ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre en temps réel.<br><br>Ce filtre est en version bêta. Contactez votre Account Manager Braze si vous souhaitez l'utiliser."
     tags:
-      - E-commerce
-  - name: Valeur moyenne des commandes (730 derniers jours)
-    description: "Segmente vos utilisateurs en fonction de la valeur moyenne des commandes passées au cours des deux dernières années, sur la base de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé par</a> <a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">eCommerce</a> pour les commandes passées (les espaces de travail qui ne suivent pas les événements eCommerce ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre une fois par jour.<br><br>Ce filtre est actuellement en version bêta. Veuillez contacter votre gestionnaire de compte Braze si vous souhaitez utiliser ce filtre."
+      - eCommerce
+  - name: Valeur moyenne des commandes (730 derniers jours)
+    description: "Segmente vos utilisateurs en fonction de la valeur moyenne des commandes d'un utilisateur au cours des deux dernières années, sur la base de l'<a href=\"/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events\">événement recommandé eCommerce</a> pour les commandes passées (les espaces de travail qui ne suivent pas les événements eCommerce ne disposent pas de données pour ce filtre). Les utilisateurs sont évalués pour ce filtre une fois par jour.<br><br>Ce filtre est en version bêta. Contactez votre Account Manager Braze si vous souhaitez l'utiliser."
     tags:
-      - E-commerce
+      - eCommerce
   - name: Pays
     description: Segmente vos utilisateurs en fonction de leur dernier pays indiqué.
     tags:
-      - Attributs démographiques
+      - Demographic attributes
   - name: Ville
     description: Segmente vos utilisateurs en fonction de leur dernière ville indiquée.
     tags:
-      - Attributs démographiques
+      - Demographic attributes
   - name: Langue
     description: Segmente vos utilisateurs en fonction de leur langue préférée.
     tags:
-      - Attributs démographiques
+      - Demographic attributes
   - name: Âge
-    description: "Segmente vos utilisateurs en fonction de leur âge, comme indiqué dans votre application."
+    description: "Segmente vos utilisateurs en fonction de leur âge, tel qu'indiqué dans votre application."
     tags:
-      - Attributs démographiques
+      - Demographic attributes
   - name: Anniversaire
-    description: "Segmente vos utilisateurs en fonction de leur date d’anniversaire, comme indiqué dans votre application. <br> Les utilisateurs dont l'anniversaire est le 29 février sont inclus dans les segments comprenant le 1er mars.<br><br>Pour cibler les anniversaires de décembre ou de janvier, insérez uniquement la logique de filtrage dans la période de 12 mois de l'année que vous ciblez. En d'autres termes, ne pas insérer de logique qui se réfère au mois de décembre de l'année civile précédente ou à janvier de l'année suivante. Par exemple, pour cibler les anniversaires de décembre, vous pouvez filtrer sur « le 31 décembre », « avant le 31 décembre » ou « après le 30 novembre »."
+    description: "Segmente vos utilisateurs en fonction de leur date d'anniversaire, telle qu'indiquée dans votre application. <br> Les utilisateurs dont l'anniversaire est le 29 février sont inclus dans les segments comprenant le 1er mars.<br><br>Pour cibler les anniversaires de décembre ou de janvier, insérez uniquement la logique de filtrage dans la période de 12 mois de l'année que vous ciblez. Autrement dit, n'insérez pas de logique qui se réfère au mois de décembre de l'année civile précédente ou au mois de janvier de l'année suivante. Par exemple, pour cibler les anniversaires de décembre, vous pouvez filtrer sur « le 31 décembre », « avant le 31 décembre » ou « après le 30 novembre »."
     tags:
-      - Attributs démographiques
+      - Demographic attributes
   - name: Genre
-    description: "Segmente vos utilisateurs en fonction de leur sexe, comme indiqué dans votre application."
+    description: "Segmente vos utilisateurs en fonction de leur genre, tel qu'indiqué dans votre application."
     tags:
-      - Attributs démographiques
+      - Demographic attributes
   - name: Numéro de téléphone non formaté
     description: "Segmente vos utilisateurs en fonction de leur numéro de téléphone non formaté. Ne comprend pas de parenthèses, de tirets ou d'autres symboles."
     tags:
-      - Attributs démographiques
+      - Demographic attributes
   - name: Prénom
-    description: "Segmente vos utilisateurs en fonction de leur prénom, comme indiqué dans votre application."
+    description: "Segmente vos utilisateurs en fonction de leur prénom, tel qu'indiqué dans votre application."
     tags:
-      - Attributs démographiques
-  - name: Nom
-    description: "Segmente vos utilisateurs en fonction de leur nom de famille, comme indiqué dans votre application."
+      - Demographic attributes
+  - name: Nom de famille
+    description: "Segmente vos utilisateurs en fonction de leur nom de famille, tel qu'indiqué dans votre application."
     tags:
-      - Attributs démographiques
+      - Demographic attributes
   - name: A une application
-    description: "Segmente vos utilisateurs selon s’ils ont installé ou non votre application à un moment donné. Cela inclut les utilisateurs qui ont actuellement installé votre application et ceux qui l'ont désinstallée par le passé. Cela exige généralement que les utilisateurs ouvrent l’application (démarrer une session) à inclure dans ce filtre. Cependant, il existe certaines exceptions, comme si un utilisateur a été importé dans Braze et associé manuellement à votre application."
+    description: "Segmente selon qu'un utilisateur a installé ou non votre application à un moment donné. Cela inclut les utilisateurs qui ont actuellement votre application installée et ceux qui l'ont désinstallée par le passé. En général, les utilisateurs doivent ouvrir l'application (démarrer une session) pour être inclus dans ce filtre. Cependant, il existe certaines exceptions, par exemple si un utilisateur a été importé dans Braze et associé manuellement à votre application."
     tags:
-      - Application
-  - name: Nom de la version la plus récente de l’application
-    description: "Segments par le nom récent de l'application de l'utilisateur.<br><br>Lorsque vous utilisez « inférieur à » ou « inférieur ou égal à », si la version principale de l'application n'existe pas, ce filtre renvoie « true » car l'utilisateur est plus ancien que la version de l'application. Cela signifie que si la dernière version principale de l'application de l'utilisateur n'existe pas, il correspond automatiquement au filtre."
+      - App
+  - name: Nom de la version la plus récente de l'application
+    description: "Segmente en fonction du nom récent de l'application de l'utilisateur.<br><br>Lorsque vous utilisez « inférieur à » ou « inférieur ou égal à », si la version principale de l'application n'existe pas, ce filtre renvoie `true` car l'utilisateur est plus ancien que la version de l'application. Cela signifie que si la dernière version principale de l'application de l'utilisateur n'existe pas, il correspond automatiquement au filtre."
     tags:
-      - Application
-  - name: Numéro de version de l’application la plus récente
-    description: "Segments par le numéro de version récente de l'application de l'utilisateur.<br><br>Lorsque vous utilisez « inférieur à » ou « inférieur ou égal à », si la version principale de l'application n'existe pas, ce filtre renvoie « true » car l'utilisateur est plus ancien que la version de l'application. Cela signifie que si la dernière version principale de l'application de l'utilisateur n'existe pas, il correspond automatiquement au filtre.<br><br>Le chargement des versions actuelles de l'application peut prendre un certain temps. La version de l'application sur le profil utilisateur est mise à jour lorsque les informations sont capturées par le SDK, ce qui dépend du moment où les utilisateurs ouvrent leurs applications. Si l'utilisateur n'ouvre pas l'application, la version actuelle ne sera pas mise à jour. Ces filtres ne s'appliqueront pas non plus rétroactivement. Il est recommandé d'utiliser « supérieur à » ou « égal à » pour les versions actuelles et futures, mais l'utilisation de filtres de versions antérieures peut entraîner des comportements imprévus."
+      - App
+  - name: Numéro de version de l'application la plus récente
+    description: "Segmente en fonction du numéro de version récent de l'application de l'utilisateur.<br><br>Lorsque vous utilisez « inférieur à » ou « inférieur ou égal à », si la version principale de l'application n'existe pas, ce filtre renvoie `true` car l'utilisateur est plus ancien que la version de l'application. Cela signifie que si la dernière version principale de l'application de l'utilisateur n'existe pas, il correspond automatiquement au filtre.<br><br>Le chargement des versions actuelles de l'application peut prendre un certain temps. La version de l'application sur le profil utilisateur est mise à jour lorsque les informations sont capturées par le SDK, ce qui dépend du moment où les utilisateurs ouvrent leurs applications. Si l'utilisateur n'ouvre pas l'application, la version actuelle ne sera pas mise à jour. Ces filtres ne s'appliquent pas non plus rétroactivement. Il est recommandé d'utiliser « supérieur à » ou « égal à » pour les versions actuelles et futures, mais l'utilisation de filtres de versions antérieures peut entraîner des comportements imprévus."
     tags:
-      - Application
+      - App
   - name: Application désinstallée
-    description: Segmente vos utilisateurs selon s’ils ont désinstallé votre application sans l’avoir réinstallée.
+    description: Segmente vos utilisateurs selon qu'ils ont désinstallé votre application sans l'avoir réinstallée.
     tags:
-      - Désinstallation
+      - Uninstall
   - name: Opérateur mobile
     description: Segmente vos utilisateurs en fonction de leur opérateur mobile.
     tags:
-      - Appareils
-  - name: Nombre d’appareils
-    description: Segmente vos utilisateurs en fonction du nombre d’appareils avec lequel ils ont consulté votre application.
+      - Devices
+  - name: Nombre d'appareils
+    description: Segmente vos utilisateurs en fonction du nombre d'appareils avec lesquels ils ont utilisé votre application.
     tags:
-      - Appareils
-  - name: Modèle de l’appareil
-    description: Segmente vos utilisateurs en fonction de la version du modèle de leur smartphone.
+      - Devices
+  - name: Modèle de l'appareil
+    description: Segmente vos utilisateurs en fonction de la version du modèle de leur téléphone mobile.
     tags:
-      - Appareils
-  - name: Système d’exploitation de l’appareil
-    description: "Segmente vos utilisateurs qui ont un appareil ou plus comportant le système d’exploitation donné. Pour réaliser la segmentation des utilisateurs en fonction d'une gamme de systèmes d'exploitation, veuillez utiliser le filtre <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#device-os-version-number\">Numéro de version du système d'exploitation de l'appareil</a>."
+      - Devices
+  - name: Système d'exploitation de l'appareil
+    description: "Segmente vos utilisateurs qui possèdent un ou plusieurs appareils avec le système d'exploitation spécifié. Pour segmenter les utilisateurs en fonction d'une plage de systèmes d'exploitation, utilisez le filtre <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#device-os-version-number\">Numéro de version du système d'exploitation de l'appareil</a>."
     tags:
-      - Appareils
-  - name: "Numéro de version du système d'exploitation de l’appareil"
-    description: "Segmentez vos utilisateurs qui possèdent un ou plusieurs appareils dont la version du système d'exploitation se situe dans une plage spécifiée. Par exemple, vous pouvez effectuer le ciblage des utilisateurs qui possèdent une version du système d'exploitation iOS supérieure ou égale à 26.0."
+      - Devices
+  - name: Numéro de version du système d'exploitation de l'appareil
+    description: "Segmente vos utilisateurs qui possèdent un ou plusieurs appareils dont la version du système d'exploitation se situe dans une plage spécifiée. Par exemple, vous pouvez cibler les utilisateurs qui possèdent une version du système d'exploitation iOS supérieure ou égale à 26.0."
     tags:
-      - Appareils
-  - name: Emplacement le plus récent de l’appareil
-    description: "Segmente vos utilisateurs en fonction de l’<a href=\"/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/\">information de localisation</a> à partir de l’appareil utilisé le plus récemment."
+      - Devices
+  - name: Paramètres régionaux les plus récents de l'appareil
+    description: "Segmente vos utilisateurs en fonction des <a href=\"/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/\">informations de localisation</a> de l'appareil utilisé le plus récemment."
     tags:
-      - Devices      
+      - Devices
   - name: Modèle de montre le plus récent
     description: Segmente vos utilisateurs en fonction du modèle le plus récent de leur montre connectée.
     tags:
-      - Devices    
-  - name: Autorisés provisoirement sur iOS
-    description: Ce filtre vous permet de trouver des utilisateurs qui sont provisoirement autorisés sur iOS 12 pour une application donnée.
+      - Devices
+  - name: Autorisé provisoirement sur iOS
+    description: Vous permet de trouver des utilisateurs qui sont provisoirement autorisés sur iOS 12 pour une application donnée.
     tags:
-      - Appareils
-  - name: Navigateur Web
-    description: Segmente vos utilisateurs en fonction du navigateur Web qu’ils utilisent pour accéder à votre site Internet.
+      - Devices
+  - name: Navigateur web
+    description: Segmente vos utilisateurs en fonction du navigateur web qu'ils utilisent pour accéder à votre site Internet.
     tags:
-      - Appareils
-  - name: IDFA de l’appareil
-    description: Ce filtre vous permet de désigner les destinataires de votre campagne par IDFA pour mener des tests.
+      - Devices
+  - name: IDFA de l'appareil
+    description: Vous permet de désigner les destinataires de votre campagne par IDFA à des fins de test.
     tags:
-      - Cas d'usage publicitaire
-  - name: IDFV de l’appareil
-    description: Ce filtre vous permet de désigner les destinataires de votre campagne par IDFV pour mener des tests.
+      - Advertising use cases
+  - name: IDFV de l'appareil
+    description: Vous permet de désigner les destinataires de votre campagne par IDFV à des fins de test.
     tags:
-      - Cas d'usage publicitaire
-  - name: ID publicitaire Google de l’appareil
-    description: "Segmentez vos utilisateurs par l'identifiant publicitaire Google."
+      - Advertising use cases
+  - name: ID publicitaire Google de l'appareil
+    description: Segmente vos utilisateurs en fonction de l'identifiant publicitaire Google.
     tags:
-      - Cas d'usage publicitaire
-  - name: ID publicitaire Roku de l’appareil
-    description: "Segmentez vos utilisateurs par l'ID publicitaire Roku."
+      - Advertising use cases
+  - name: ID publicitaire Roku de l'appareil
+    description: Segmente vos utilisateurs en fonction de l'ID publicitaire Roku.
     tags:
-      - Cas d'usage publicitaire
-  - name: ID publicitaire Windows de l’appareil
-    description: "Segmentez vos utilisateurs par l'ID publicitaire Windows."
+      - Advertising use cases
+  - name: ID publicitaire Windows de l'appareil
+    description: Segmente vos utilisateurs en fonction de l'ID publicitaire Windows.
     tags:
-      - Cas d'usage publicitaire
-  - name: Suivi des campagnes publicitaires activé
-    description: "Vous permet de filtrer en fonction de si vos utilisateurs ont choisi de participer au suivi publicitaire. Le suivi des campagnes publicitaires est lié à l’IDFA (Identifier For Advertisers, ou identifiant pour les annonceurs) attribué par Apple pour identifier les appareils des utilisateurs d’iOS, ce qui peut être défini par les SDK. Cet identifiant permet aux annonceurs de suivre les utilisateurs et de leur envoyer des publicités ciblées."
+      - Advertising use cases
+  - name: Suivi publicitaire activé
+    description: "Vous permet de filtrer en fonction de si vos utilisateurs ont choisi de participer au suivi publicitaire. Le suivi publicitaire est lié à l'IDFA (Identifier For Advertisers, ou identifiant pour les annonceurs) attribué par Apple à tous les appareils iOS, qui peut être défini par les SDK. Cet identifiant permet aux annonceurs de suivre les utilisateurs et de leur envoyer des publicités ciblées."
     tags:
-      - Cas d'usage publicitaire
-  - name: La localisation la plus récente
+      - Advertising use cases
+  - name: Localisation la plus récente
     description: Segmente vos utilisateurs en fonction du dernier emplacement enregistré depuis lequel ils ont utilisé votre application.
     tags:
-      - Localisation
+      - Location
   - name: Localisation disponible
-    description: "Segmente vos utilisateurs selon s’ils ont indiqué ou non leur localisation. Pour utiliser ce filtre, votre application doit <a href=\"/docs/search/?query=location%20tracking\">inclure une fonction de géolocalisation.</a>"
+    description: "Segmente vos utilisateurs selon qu'ils ont indiqué ou non leur localisation. Pour utiliser ce filtre, votre application doit <a href=\"/docs/search/?query=location%20tracking\">intégrer le suivi de localisation.</a>"
     tags:
-      - Localisation
+      - Location
   - name: Cohortes Amplitude
     description: Les clients utilisant Amplitude peuvent enrichir leurs segments en choisissant et en important leurs cohortes dans Amplitude.
     tags:
-      - Appartenance à une cohorte
-  - name: Cohortes du census
-    description: Les clients qui utilisent Census peuvent compléter leurs segments en choisissant et en important leurs cohortes dans Census.
+      - Cohort membership
+  - name: Cohortes Census
+    description: Les clients utilisant Census peuvent enrichir leurs segments en choisissant et en important leurs cohortes dans Census.
     tags:
-      - Appartenance à une cohorte
+      - Cohort membership
   - name: Cohortes Heap
-    description: Les clients qui utilisent Heap peuvent compléter leurs segments en choisissant et en important leurs cohortes dans Heap.
+    description: Les clients utilisant Heap peuvent enrichir leurs segments en choisissant et en important leurs cohortes dans Heap.
     tags:
-      - Appartenance à une cohorte
+      - Cohort membership
   - name: Cohortes Hightouch
-    description: Les clients qui utilisent Hightouch peuvent compléter leurs segments en choisissant et en important leurs cohortes dans Hightouch.
+    description: Les clients utilisant Hightouch peuvent enrichir leurs segments en choisissant et en important leurs cohortes dans Hightouch.
     tags:
-      - Appartenance à une cohorte
+      - Cohort membership
   - name: Cohortes Kubit
-    description: Les clients qui utilisent Kubit peuvent compléter leurs segments en choisissant et en important leurs cohortes dans Kubit.
+    description: Les clients utilisant Kubit peuvent enrichir leurs segments en choisissant et en important leurs cohortes dans Kubit.
     tags:
-      - Appartenance à une cohorte
+      - Cohort membership
   - name: Cohortes Mixpanel
-    description: Les clients qui utilisent Mixpanel peuvent compléter leurs segments en choisissant et en important leurs cohortes dans Mixpanel.
+    description: Les clients utilisant Mixpanel peuvent enrichir leurs segments en choisissant et en important leurs cohortes dans Mixpanel.
     tags:
-      - Appartenance à une cohorte
-  - name: Cohortes du segment
-    description: Les clients qui utilisent Segment peuvent compléter leurs segments en choisissant et en important leurs cohortes dans Segment.
+      - Cohort membership
+  - name: Cohortes Segment
+    description: Les clients utilisant Segment peuvent enrichir leurs segments en choisissant et en important leurs cohortes dans Segment.
     tags:
-      - Appartenance à une cohorte
+      - Cohort membership
   - name: Cohortes Tinyclues
-    description: Les clients qui utilisent Tinyclues peuvent compléter leurs segments en choisissant et en important leurs cohortes dans Tinyclues.
+    description: Les clients utilisant Tinyclues peuvent enrichir leurs segments en choisissant et en important leurs cohortes dans Tinyclues.
     tags:
-      - Appartenance à une cohorte
-  - name: Annonce d’attribution d’installation
-    description: Segmente vos utilisateurs en fonction de l’annonce à laquelle leur installation a été attribuée.
+      - Cohort membership
+  - name: Annonce d'attribution d'installation
+    description: Segmente vos utilisateurs en fonction de l'annonce à laquelle leur installation a été attribuée.
     tags:
-      - Attributs utilisateur
-  - name: Groupe d’annonces d’attribution d’installation
-    description: "Segmentez vos utilisateurs par le groupe d'annonces auquel leur installation a été attribuée."
+      - User Attributes
+  - name: Groupe d'annonces d'attribution d'installation
+    description: "Segmente vos utilisateurs en fonction du groupe d'annonces auquel leur installation a été attribuée."
     tags:
-      - Attribution d’installation
-  - name: Campagne d’attribution d’installation
+      - Install attribution
+  - name: Campagne d'attribution d'installation
     description: Segmente vos utilisateurs en fonction de la campagne publicitaire à laquelle leur installation a été attribuée.
     tags:
-      - Attribution d’installation
-  - name: Source d’attribution d’installation
+      - Install attribution
+  - name: Source d'attribution d'installation
     description: Segmente vos utilisateurs en fonction de la source à laquelle leur installation a été attribuée.
     tags:
-      - Attribution d’installation
-  - name: Catégorie de risque d’attrition
-    description:  Segmentez vos utilisateurs par catégorie de risque de désabonnement selon une prédiction spécifique.
+      - Install attribution
+  - name: Catégorie de risque d'attrition
+    description: Segmente vos utilisateurs par catégorie de risque d'attrition selon une prédiction spécifique.
     tags:
-      - Informations et prévisions
-  - name: Score du risque d’attrition
-    description: Segmentez vos utilisateurs par score de risque de désabonnement selon une prédiction spécifique.
+      - Intelligence and predictive
+  - name: Score de risque d'attrition
+    description: Segmente vos utilisateurs par score de risque d'attrition selon une prédiction spécifique.
     tags:
-      - Informations et prévisions
-  - name: Catégorie de probabilité d’événement
-    description: "Segmentez vos utilisateurs en fonction de la probabilité qu'ils effectuent un événement selon une prédiction spécifique."
+      - Intelligence and predictive
+  - name: Catégorie de probabilité d'événement
+    description: "Segmente vos utilisateurs en fonction de la probabilité qu'ils effectuent un événement selon une prédiction spécifique."
     tags:
-      - Informations et prévisions
-  - name: Score de probabilité d’événement
-    description: "Segmentez vos utilisateurs en fonction de la probabilité qu'ils effectuent un événement selon une prédiction spécifique."
+      - Intelligence and predictive
+  - name: Score de probabilité d'événement
+    description: "Segmente vos utilisateurs en fonction de la probabilité qu'ils effectuent un événement selon une prédiction spécifique."
     tags:
-      - Informations et prévisions
+      - Intelligence and predictive
   - name: Canal intelligent
-    description: Segmentez vos utilisateurs par leur canal le plus actif au cours des trois derniers mois.
+    description: Segmente vos utilisateurs en fonction de leur canal le plus actif au cours des trois derniers mois.
     tags:
-      - Informations et prévisions
-  - name: Probabilité d’ouverture des messages
-    description: "Filtre vos utilisateurs en fonction de leur <a href=\"/docs/user_guide/brazeai/intelligence/intelligent_channel/#individual-channels\">probabilité d'ouvrir un message sur un canal de communication spécifié,</a> sur une échelle de 0 à 100 %. Les utilisateurs sans données suffisantes pour mesurer une probabilité pour une chaîne peuvent être sélectionnés en utilisant \"est vide.\"<br><br>Pour les e-mails, les ouvertures automatiques sont exclues du calcul de probabilité."
+      - Intelligence and predictive
+  - name: Probabilité d'ouverture des messages
+    description: "Filtre vos utilisateurs en fonction de leur <a href=\"/docs/user_guide/brazeai/intelligence/intelligent_channel/#individual-channels\">probabilité d'ouvrir un message sur un canal spécifié</a>, sur une échelle de 0 à 100 %. Les utilisateurs sans données suffisantes pour mesurer une probabilité pour un canal peuvent être sélectionnés en utilisant « est vide ».<br><br>Pour les e-mails, les ouvertures automatiques sont exclues du calcul de probabilité."
     tags:
-      - Informations et prévisions
-  - name: Nombre d’amis Facebook utilisant l’application
-    description: "Segmentez vos utilisateurs en fonction du nombre d'amis Facebook qu'ils ont qui utilisent la même application."
+      - Intelligence and predictive
+  - name: Nombre d'amis Facebook utilisant l'application
+    description: "Segmente vos utilisateurs en fonction du nombre d'amis Facebook qu'ils ont qui utilisent la même application."
     tags:
-      - Activité sociale
-  - name: Connectés à Facebook
-    description: Segmentez vos utilisateurs en fonction de leur connexion de votre application à Facebook.
+      - Social activity
+  - name: Connecté à Facebook
+    description: Segmente vos utilisateurs selon qu'ils ont connecté votre application à Facebook.
     tags:
-      - Activité sociale
-  - name: Connectés à Twitter
-    description: Segmentez vos utilisateurs en fonction de leur connexion de votre application à X (anciennement Twitter).
+      - Social activity
+  - name: Connecté à Twitter
+    description: Segmente vos utilisateurs selon qu'ils ont connecté votre application à X (anciennement Twitter).
     tags:
-      - Activité sociale
+      - Social activity
   - name: Nombre de followers sur Twitter
-    description: "Segmentez vos utilisateurs en fonction du nombre de followers qu'ils ont sur X (anciennement Twitter)."
+    description: "Segmente vos utilisateurs en fonction du nombre de followers qu'ils ont sur X (anciennement Twitter)."
     tags:
-      - Activité sociale
+      - Social activity
   - name: Numéro de téléphone
-    description: "Segmente vos utilisateurs en fonction du champ du numéro de téléphone au format E.164.<br><br> Lorsqu'un numéro de téléphone est envoyé à Braze, Braze tente de le convertir au <a href=\"/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers\">format</a> <a href=\"/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers\">e.164</a> utilisé pour l'envoi de SMS et de messages WhatsApp. Le processus de coercition peut échouer si le numéro n'est pas formaté correctement, ce qui fait que le profil utilisateur a un numéro de téléphone non formaté mais pas de numéro de téléphone d'envoi. Ce filtre de segmentation renvoie les utilisateurs en fonction de leur numéro de téléphone au format e.164 (lorsqu'il est disponible).<br><br>Cas d'utilisation :<br> - Utilisez ce filtre pour comprendre la taille de l'audience cible la plus précise lors de l'envoi de SMS ou de messages WhatsApp.  <br>- Veuillez utiliser des expressions régulières (regex) avec ce filtre pour réaliser la segmentation des numéros de téléphone comportant un code pays spécifique. <br>- Veuillez utiliser ce filtre pour réaliser la segmentation des utilisateurs en fonction des numéros de téléphone qui n'ont pas réussi le processus de coercition e.164."
+    description: "Segmente vos utilisateurs en fonction du champ du numéro de téléphone au format E.164.<br><br> Lorsqu'un numéro de téléphone est envoyé à Braze, Braze tente de le convertir au <a href=\"/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers\">format e.164</a> utilisé pour l'envoi de SMS et de messages WhatsApp. Le processus de conversion peut échouer si le numéro n'est pas formaté correctement, ce qui fait que le profil utilisateur a un numéro de téléphone non formaté mais pas de numéro de téléphone d'envoi. Ce filtre de segmentation renvoie les utilisateurs en fonction de leur numéro de téléphone au format e.164 (lorsqu'il est disponible).<br><br>Cas d'utilisation :<br> - Utilisez ce filtre pour évaluer précisément la taille de l'audience cible lors de l'envoi de SMS ou de messages WhatsApp.  <br>- Utilisez des expressions régulières (regex) avec ce filtre pour segmenter les numéros de téléphone comportant un code pays spécifique. <br>- Utilisez ce filtre pour segmenter les utilisateurs dont les numéros de téléphone n'ont pas réussi le processus de conversion e.164."
     tags:
-      - Autres filtres
+      - Other Filters
 ---

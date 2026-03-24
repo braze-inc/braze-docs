@@ -1,23 +1,23 @@
 ---
 page_order: 2.0
 nav_title: Limites de taxa
-article_title: Limites de taxa do SDK Braze
-description: "Saiba mais sobre a limitação de taxa inteligente e do lado do cliente do SDK Braze que otimiza a vida útil da bateria, reduz o uso de largura de banda e garante a entrega confiável de dados."
+article_title: Limites de taxa do SDK da Braze
+description: "Saiba mais sobre a limitação de taxa inteligente e do lado do cliente do SDK da Braze que otimiza a vida útil da bateria, reduz o uso de largura de banda e garante a entrega confiável de dados."
 ---
 
-# Limites de taxa do SDK Braze
+# Limites de taxa do SDK da Braze
 
-> Saiba mais sobre a limitação de taxa inteligente e do lado do cliente do SDK Braze que otimiza a vida útil da bateria, reduz o uso de largura de banda e garante a entrega confiável de dados.
+> Saiba mais sobre a limitação de taxa inteligente e do lado do cliente do SDK da Braze que otimiza a vida útil da bateria, reduz o uso de largura de banda e garante a entrega confiável de dados.
 
 ## Entendendo os limites de taxa do SDK
 
-A limitação de taxa do SDK Braze utiliza os seguintes recursos para otimizar o desempenho, minimizar o consumo de bateria, reduzir o uso de dados e garantir a entrega confiável de dados:
+A limitação de taxa do SDK da Braze utiliza os seguintes recursos para otimizar a performance, minimizar o consumo de bateria, reduzir o uso de dados e garantir a entrega confiável de dados:
 
 ### Processamento assíncrono
 
-O SDK Braze usa um algoritmo de balde de tokens para limitação de taxa. Essa abordagem permite picos de atividade enquanto mantém o controle de taxa a longo prazo. Em vez de processar solicitações em uma fila rígida, o balde de tokens opera de forma assíncrona:
+O SDK da Braze usa um algoritmo de token bucket para limitação de taxa. Essa abordagem permite picos de atividade enquanto mantém o controle de taxa a longo prazo. Em vez de processar solicitações em uma fila rígida, o token bucket opera de forma assíncrona:
 
-- **Geração de tokens**: Os tokens são reabastecidos a uma taxa constante no balde.
+- **Geração de tokens**: Os tokens são reabastecidos a uma taxa constante no bucket.
 - **Tratamento de solicitações**: Qualquer chamada do SDK que chega quando um token está disponível prossegue imediatamente, independentemente de quando outras chamadas chegaram.
 - **Sem ordenação rígida**: As solicitações não esperam na fila; várias chamadas podem competir pelo próximo token disponível.
 - **Tratamento de picos**: Picos curtos de atividade são permitidos se houver tokens suficientes disponíveis no momento das solicitações.
@@ -27,10 +27,10 @@ Esse fluxo assíncrono ajuda o SDK a responder rapidamente à capacidade de rede
 
 ### Limitação de taxa adaptativa
 
-O SDK Braze pode ajustar os limites de taxa em tempo real para proteger a infraestrutura da rede e manter um desempenho ideal. Essa abordagem:
+O SDK da Braze pode ajustar os limites de taxa em tempo real para proteger a infraestrutura da rede e manter uma performance ideal. Essa abordagem:
 
 - **Previne sobrecarga**: Ajusta limites para evitar congestionamento na rede.
-- **Otimizando o desempenho**: Mantém a operação suave do SDK sob condições variadas.
+- **Otimiza a performance**: Mantém a operação suave do SDK sob condições variadas.
 - **Responde às condições**: Adapta-se com base nos padrões atuais de rede e uso.
 
 {% alert note %}
@@ -39,17 +39,17 @@ Como os limites se adaptam em tempo real, tamanhos exatos de buckets e valores e
 
 ### Otimizações de rede
 
-O SDK Braze inclui vários comportamentos integrados para melhorar a eficiência, reduzir o uso da bateria e lidar com condições de rede variadas:
+O SDK da Braze inclui vários comportamentos integrados para melhorar a eficiência, reduzir o uso da bateria e lidar com condições de rede variadas:
 
-- **Processamento automático**: Coloca eventos em fila e os envia em lotes eficientes.
+- **Agrupamento automático**: Coloca eventos em fila e os envia em lotes eficientes.
 - **Comportamento ciente da rede**: Ajusta as taxas de envio com base na qualidade da conectividade.
 - **Otimização da bateria**: Minimiza ativações do rádio e chamadas de rede.
 - **Degradação suave**: Mantém a funcionalidade durante condições de rede ruins.
-- **Consciência de fundo/frente**: Otimize o comportamento à medida que o ciclo de vida do app muda.
+- **Consciência de segundo plano/primeiro plano**: Otimiza o comportamento à medida que o ciclo de vida do app muda.
 
 ## Melhores práticas
 
-Siga estas melhores práticas para ajudar a evitar problemas de limite de frequência:
+Siga estas melhores práticas para ajudar a evitar problemas de limite de taxa:
 
 | Faça isso | Não faça isso |
 | --- | --- |
@@ -61,7 +61,7 @@ Siga estas melhores práticas para ajudar a evitar problemas de limite de frequ�
 
 ## Obtendo ajuda
 
-Se você está enfrentando problemas de limite de frequência do SDK, revise os seguintes métodos de rede:
+Se você está enfrentando problemas de limite de taxa do SDK, revise os seguintes métodos de rede:
 
 - `requestImmediateDataFlush()`
 - `requestContentCardsRefresh()`
@@ -69,7 +69,7 @@ Se você está enfrentando problemas de limite de frequência do SDK, revise os 
 - `logCustomEvent()`
 - `logPurchase()`
 
-Ao entrar em contato com [support@braze.com](mailto:support@braze.com), inclua os seguintes detalhes para cada um dos métodos de SDK de rede que você usa:
+Ao entrar em contato com o [suporte da Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support), inclua os seguintes detalhes para cada um dos métodos de rede do SDK que você usa:
 
 ```plaintext
 Method name:

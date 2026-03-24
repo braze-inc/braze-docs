@@ -9,24 +9,28 @@ tool: Currents
 search_rank: 7
 ---
 
-その他のイベントの種類にアクセスする必要がある場合は、Braze の担当者に問い合わせるか、[サポートチケット]({{site.baseurl}}/braze_support/)を開いてください。このページで必要なものが見つからない場合は、[メッセージ・エンゲージメント・イベント・ライブラリーや]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) [Currentsのサンプルデータ例を](https://github.com/Appboy/currents-examples/tree/master/sample-data)ご覧いただきたい。
+{% alert tip %}
+これらのイベントは、[クエリビルダー]({{site.baseurl}}/user_guide/analytics/query_builder/)、[SQL セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)、および [Snowflake データシェアリング]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/)の SQL テーブルとしても利用できます。SQL テーブルスキーマとカラムの詳細については、[SQL テーブルリファレンス]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/sql_segments/sql_segments_tables/)を参照してください。
+{% endalert %}
 
-{% details Explanation of customer behavior and user event structure and platform values %}
+その他のイベントの種類にアクセスする必要がある場合は、Braze の担当者に問い合わせるか、[サポートチケット]({{site.baseurl}}/braze_support/)を開いてください。このページで必要なものが見つからない場合は、[メッセージエンゲージメントイベントライブラリー]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)や [Currents のサンプルデータ例](https://github.com/Appboy/currents-examples/tree/master/sample-data)をご覧ください。
+
+{% details 顧客行動とユーザーイベントの構造およびプラットフォーム値の説明 %}
 
 ### イベントの構造
 
 この顧客行動とユーザーイベントの内訳は、一般的に顧客行動やユーザーイベントに含まれる情報のタイプを示します。開発者とビジネスインテリジェンス戦略チームは、情報の構成要素をしっかり理解したうえで、受信した Currents イベントデータを使用して、データドリブン型のレポートやグラフを作成したり、その他の貴重なデータ指標を活用したりすることができます。
 
-![ユーザーイベントの内訳。購入イベントを示し、リストされたプロパティはユーザー固有のプロパティ、行動固有のプロパティ、デバイス固有のプロパティごとにグループ分けされている。]({% image_buster /assets/img/customer_engagement_event.png %})
+![ユーザーイベントの内訳。購入イベントを示し、リストされたプロパティはユーザー固有のプロパティ、動作固有のプロパティ、デバイス固有のプロパティごとにグループ分けされている。]({% image_buster /assets/img/customer_engagement_event.png %})
 
-顧客行動およびユーザーイベントは、**ユーザー固有**のプロパティ、**行動固有**のプロパティ、および**デバイス固有**のプロパティで構成されます。
+顧客行動およびユーザーイベントは、**ユーザー固有**のプロパティ、**動作固有**のプロパティ、および**デバイス固有**のプロパティで構成されます。
 
 ### プラットフォームの値
 
 特定のイベントは、ユーザーのデバイスのプラットフォームを示す `platform` 値を返します。
 <br>次の表に、返される可能性のある値の詳細を示します。
 
-| ユーザー デバイス | プラットフォーム値 |
+| ユーザーデバイス | プラットフォーム値 |
 | --- | --- |
 | iOS | `ios` |
 | Android | `android` |
@@ -40,7 +44,7 @@ search_rank: 7
 {% enddetails %}
 
 {% alert important %}
-ストレージスキーマは、データウェアハウスのストレージパートナー（Google Cloud Storage、Amazon S3、Microsoft Azure Blob Storageなど）に送信するフラットファイルのイベントデータに適用される。ここにリストされているいくつかのイベントと宛先の組み合わせは、まだ一般的には利用できません。さまざまなパートナーがサポートするイベントの情報については、[利用可能なパートナー]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/)のリストを参照し、それぞれのページを確認してください。<br><br>さらに、Currents は 900 KB 超の過度に大きいペイロードを持つイベントをドロップすることに注意してください。
+ストレージスキーマは、データウェアハウスのストレージパートナー（Google Cloud Storage、Amazon S3、Microsoft Azure Blob Storage など）に送信するフラットファイルのイベントデータに適用されます。ここにリストされているいくつかのイベントと送信先の組み合わせは、まだ一般提供されていません。さまざまなパートナーがサポートするイベントの情報については、[利用可能なパートナー]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/)のリストを参照し、それぞれのページを確認してください。<br><br>さらに、Currents は 900&nbsp;KB 超の過度に大きいペイロードを持つイベントをドロップすることに注意してください。
 {% endalert %}
 
 {% api %}
@@ -53,7 +57,7 @@ Random Bucket Number
 このユーザーイベントは、ワークスペース内で新規ユーザーが作成されるたびに発生します。このイベントでは、各新規ユーザーにランダムバケット番号が割り当てられ、これを使用してランダムユーザーの均一に分散されたセグメントを作成できます。これを使用して、ランダムバケット番号の値の範囲をグループ化し、キャンペーンとキャンペーンバリアント間でパフォーマンスを比較します。
 
 {% alert important %}
-この Currents イベントは「すべてのイベントコネクター」を購入した場合にのみ利用でき、ストレージイベントコネクター (Amazon S3、Microsoft Azure、Google Cloud Storage など) についてのみ利用できます。
+この Currents イベントは「すべてのイベントコネクター」を購入した顧客にのみ利用でき、ストレージイベントコネクター（Amazon S3、Microsoft Azure、Google Cloud Storage など）でのみ利用できます。
 <br><br>このイベントを有効にして、ワークスペース内の既存ユーザーのランダムバケット番号の埋め戻しをスケジュールする方法については、カスタマーサクセスマネージャーにお問い合わせください。
 {% endalert %}
 
@@ -199,13 +203,13 @@ Custom Events
 
 #### プロパティの詳細
 
-- カスタムイベントの場合、ペイロードには、イベントに関連付けられている任意の[カスタムイベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/custom_events#custom-event-properties) も入力されます。
-- `ad_id`、`ad_id_type`、および`ad_tracking_enabled` の場合、ネイティブSDK を介してiOS IDFA およびAndroid Google アドID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift)、[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の詳細については、リンク先を参照してください。
-- Kafkaを使って[Currents]({{site.baseurl}}/user_guide/data/braze_currents/)データをインジェストしている場合、.`ad_id`送信用の機能フリッパーのイネーブルメントを行うには、カスタマーサクセスマネージャーまたはアカウントマネージャーに連絡すること。
+- カスタムイベントの場合、ペイロードには、イベントに関連付けられている任意の[カスタムイベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/custom_events#custom-event-properties)も含まれます。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` の場合、ネイティブ SDK を介して iOS IDFA および Android Google アド ID を明示的に収集する必要があります。詳細については、[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift)、[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) のリンク先を参照してください。
+- Kafka を使って [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データをインジェストしている場合、`ad_id` 送信用の機能フリッパーを有効にするには、カスタマーサクセスマネージャーまたはアカウントマネージャーにお問い合わせください。
 {% endapi %}
 
 {% api %}
-## インストールアトリビューションイベントを設定する {#install-attribution-events}
+## インストールアトリビューションイベント {#install-attribution-events}
 
 {% apitags %}
 Attribution
@@ -302,7 +306,7 @@ Attribution
 Locations
 {% endapitags %}
 
-このイベントは、ユーザーが特定のロケーションに移動したときにトリガーされます。これを使用して、アプリ内でロケーションイベントをトリガーするユーザーを追跡します。
+このイベントは、ユーザーが特定のロケーションを訪問したときにトリガーされます。これを使用して、アプリ内でロケーションイベントをトリガーするユーザーを追跡します。
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -433,8 +437,8 @@ Locations
 
 #### プロパティの詳細
 
-- `ad_id`、`ad_id_type`、および`ad_tracking_enabled` の場合、ネイティブSDK を介してiOS IDFA およびAndroid Google アドID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift)、[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の詳細については、リンク先を参照してください。
-- Kafkaを使って[Currents]({{site.baseurl}}/user_guide/data/braze_currents/)データをインジェストしている場合、.`ad_id`送信用の機能フリッパーのイネーブルメントを行うには、カスタマーサクセスマネージャーまたはアカウントマネージャーに連絡すること。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` の場合、ネイティブ SDK を介して iOS IDFA および Android Google アド ID を明示的に収集する必要があります。詳細については、[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift)、[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) のリンク先を参照してください。
+- Kafka を使って [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データをインジェストしている場合、`ad_id` 送信用の機能フリッパーを有効にするには、カスタマーサクセスマネージャーまたはアカウントマネージャーにお問い合わせください。
 {% endapi %}
 
 {% api %}
@@ -572,13 +576,13 @@ Purchases
 
 #### プロパティの詳細
 
-- 購入イベントの場合、ペイロードには、イベントに関連付けられている[購入イベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#purchase-properties) も入力されます。
-- `ad_id`、`ad_id_type`、および`ad_tracking_enabled` の場合、ネイティブSDK を介してiOS IDFA およびAndroid Google アドID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift)、[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の詳細については、リンク先を参照してください。
-- Kafkaを使って[Currents]({{site.baseurl}}/user_guide/data/braze_currents/)データをインジェストしている場合、.`ad_id`送信用の機能フリッパーのイネーブルメントを行うには、カスタマーサクセスマネージャーまたはアカウントマネージャーに連絡すること。
+- 購入イベントの場合、ペイロードには、イベントに関連付けられている[購入イベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#purchase-properties)も含まれます。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` の場合、ネイティブ SDK を介して iOS IDFA および Android Google アド ID を明示的に収集する必要があります。詳細については、[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift)、[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) のリンク先を参照してください。
+- Kafka を使って [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データをインジェストしている場合、`ad_id` 送信用の機能フリッパーを有効にするには、カスタマーサクセスマネージャーまたはアカウントマネージャーにお問い合わせください。
 {% endapi %}
 
 {% api %}
-## 第一回セッションのイベント {#first-session-events}
+## 初回セッションイベント {#first-session-events}
 
 {% apitags %}
 Sessions
@@ -701,7 +705,7 @@ Sessions
 Sessions
 {% endapitags %}
 
-これは、ユーザーがアプリケーションを離脱したとき、つまり現在のセッションを終了したときに発生します。このデータを使用して、セッションの終了時点をを追跡し、対応するセッション開始イベントとあわせてセッション時間の長さを計算します。
+これは、ユーザーがアプリケーションを離脱したとき、つまり現在のセッションを終了したときに発生します。このデータを使用して、セッションの終了時点を追跡し、対応するセッション開始イベントとあわせてセッション時間の長さを計算します。
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -919,13 +923,13 @@ Sessions
 {% endapi %}
 
 {% api %}
-## ライブアクティビティのプッシュトークン変更イベント {#live-activity-push-to-start-token-change-events}
+## ライブアクティビティの Push To Start トークン変更イベント {#live-activity-push-to-start-token-change-events}
 
 {% apitags %}
 Live Activity, Push To Start Token
 {% endapitags %}
 
-このイベントは、Brazeがライブアクティビティのプッシュトークンをユーザーと同期する際に発生する。
+このイベントは、Braze がライブアクティビティの Push To Start トークンをユーザーと同期する際に発生します。
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -1034,7 +1038,7 @@ Live Activity, Push To Start Token
 Live Activity, Update Token
 {% endapitags %}
 
-このイベントは、Braze がライブアクティビティ更新トークンをユーザと同期するときに発生します
+このイベントは、Braze がライブアクティビティ更新トークンをユーザーと同期するときに発生します。
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -1143,7 +1147,7 @@ Live Activity, Update Token
 Push, Token State Change
 {% endapitags %}
 
-このイベントは、プッシュトークンが挿入、更新、または削除されたときに発生する。プッシュトークンの状態を追跡するために使用します。
+このイベントは、プッシュトークンが挿入、更新、または削除されたときに発生します。プッシュトークンの状態を追跡するために使用します。
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -1276,62 +1280,62 @@ Push, Token State Change
 
 #### プロパティの詳細
 
-- この`push_token_foreground_push_disabled`フィールドは、プッシュトークンがフォアグラウンドまたはバックグラウンドのプッシュを受信できるかどうかを示す。
-  - ユーザーがデバイス上でプッシュ通知の権限を明示的に認めた場合、これは有効となり`false`、トークンはフォアグラウンドプッシュ通知を受信できる。
-  - ユーザーがデバイス上で明示的にプッシュ通知の権限を拒否した場合、これは無効となり`true`、トークンはバックグラウンドプッシュ通知でのみ許可される。
-  - プッシュ権限が不明な場合、これは空になる。デフォルトでは、Brazeはトークンに対してフォアグラウンドのプッシュ通知を送信しようとする。
-- この`push_token_provisionally_opted_in`フィールドはiOSプッシュトークンにのみ適用される。
-  - [仮承認]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push)を設定している場合、仮トークンはこのフィールドが に設定される`true`。その他のプッシュトークンはすべて`false`。
-- この`sdk_version`フィールドは、SDKによってトークンの状態変更が開始された場合にのみ値が設定される。
-  - SDK`changeUser`イベントがトリガーとなり、トークンがユーザー間で移動される場合、その`sdk_version`フィールドは値が設定される。
-  - プッシュバウンス（例えばアンインストールによるもの）が発生した場合、この`sdk_version`フィールドは空白となる。
-- プッシュトークンがBrazeに入ると、そのライフサイクルイベントが記録される。フィールド`push_token_state_change_type`には3種類のトークン変更イベント（「追加」、「更新」、「削除」）が記録される。
+- `push_token_foreground_push_disabled` フィールドは、プッシュトークンがフォアグラウンドまたはバックグラウンドのプッシュを受信できるかどうかを示します。
+  - ユーザーがデバイス上でプッシュ通知の権限を明示的に許可した場合、この値は `false` となり、トークンはフォアグラウンドプッシュ通知を受信できます。
+  - ユーザーがデバイス上で明示的にプッシュ通知の権限を拒否した場合、この値は `true` となり、トークンはバックグラウンドプッシュ通知でのみ許可されます。
+  - プッシュ権限が不明な場合、この値は空になります。デフォルトでは、Braze はトークンに対してフォアグラウンドのプッシュ通知を送信しようとします。
+- `push_token_provisionally_opted_in` フィールドは iOS プッシュトークンにのみ適用されます。
+  - [仮承認]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push)を設定している場合、仮トークンはこのフィールドが `true` に設定されます。その他のプッシュトークンはすべて `false` です。
+- `sdk_version` フィールドは、SDK によってトークンの状態変更が開始された場合にのみ値が設定されます。
+  - SDK の `changeUser` イベントがトリガーとなり、トークンがユーザー間で移動される場合、`sdk_version` フィールドに値が設定されます。
+  - プッシュバウンス（例えばアンインストールによるもの）が発生した場合、`sdk_version` フィールドは空白となります。
+- プッシュトークンが Braze に入ると、そのライフサイクルイベントが記録されます。`push_token_state_change_type` フィールドには3種類のトークン変更イベント（「add」、「update」、「remove」）が記録されます。
 
 #### イベントの種類
 
 ##### 追加
 
-新しいトークンが登録されると、「追加」イベントが取り込まれる。これは、ユーザーが新しい端末で初めてアプリを開封した時、または以前にトークンを持たなかったユーザー`push_tokens`に対して、エンド[`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)ポイントを通じてトークンが設定された時に発生する。
+新しいトークンが登録されると、「add」イベントが取り込まれます。これは、ユーザーが新しいデバイスで初めてアプリを開いたとき、または以前にトークンを持たなかったユーザーに対して [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) エンドポイントを通じて `push_tokens` でトークンが設定されたときに発生します。
 
 ##### 更新
 
-既存のトークンのプロパティが変更された場合、トークン文字列自体が変更されなくても「更新」イベントが取り込まれる。トークンは同じ文字列、同じユーザー、同じアプリを持つが、以下のフィールドの1つ以上が変更された：`foreground_push_disabled`APNゲートウェイ、Web プッシュキー、`provisionally_opted_in`または`device_id`。
+既存のトークンのプロパティが変更された場合、トークン文字列自体が変更されなくても「update」イベントが取り込まれます。トークンは同じ文字列、同じユーザー、同じアプリを持ちますが、以下のフィールドの1つ以上が変更されています：`foreground_push_disabled`、APN ゲートウェイ、Web プッシュキー、`provisionally_opted_in`、または `device_id`。
 
 {% alert note %}
-ほとんどの場合、アプリの再インストールやバックアップからの復元は、新しい`push_token`  と新しい  を持つ新たな「追加」`device_id`イベントを引き起こす（SDKが新しい  を生成`device_id`し、OSが新しいプッシュトークン文字列を提供するからである）。これにより、ユーザープロファイル上に2つの別々のトークンとデバイスのエントリが生成される。古いエントリは後ほど、アンインストール追跡やキャンペーン送信を通じてクリーンアップされる。
+ほとんどの場合、アプリの再インストールやバックアップからの復元は、新しい `push_token` と新しい `device_id` を持つ新たな「add」イベントを引き起こします（SDK が新しい `device_id` を生成し、OS が新しいプッシュトークン文字列を提供するためです）。これにより、ユーザープロファイル上に2つの別々のトークンとデバイスのエントリが作成されます。古いエントリは後ほど、アンインストール追跡やキャンペーン送信を通じてクリーンアップされます。
 
-トークンだけが`device_id`変更され、OSが再インストール後に同じトークン文字列を`push_token`返さない場合、それは極めて稀である。
+`push_token` が変更されずに `device_id` だけが変更されることは極めて稀です（これは OS が再インストール後に同じトークン文字列を返す必要があるためです）。
 {% endalert %}
 
 ##### 削除
 
-Brazeがトークンを削除すると、独立した「削除」イベントが取り込まれる。これにはいくつかの理由が考えられます。
+Braze がトークンを削除すると、独立した「remove」イベントが取り込まれます。これにはいくつかの理由が考えられます：
 
-- プッシュバウンス（APN、FCM、またはHMSがトークンを無効または期限切れとしてレポートする）
+- プッシュバウンス（APN、FCM、または HMS がトークンを無効または期限切れとしてレポートする）
 - サイレントプッシュによるアンインストール検知
-- トークンはREST APIまたはAPNフィードバックサービスを通じて削除された
+- REST API または APN フィードバックサービスを通じてトークンが削除された
 
-##### ペアを追加し、削除する
+##### 追加と削除のペア
 
-ペアの追加と削除は二つのカテゴリーに分類される：
+追加と削除のペアは2つのカテゴリーに分類されます：
 
-**トークン文字列の更新（同一ユーザー）：**OSは同じデバイス上でトークン文字列をローテーションする（例：APNやFCMのトークンローテーション）。「追加」イベント（新しいトークン）と「削除」イベント（古いトークン）は、`user_id`同じ、同じ`device_id`、異なる`push_token`、そして同一の特性を`time_ms`有する。
+**トークン文字列の更新（同一ユーザー）：** OS は同じデバイス上でトークン文字列をローテーションします（例：APN や FCM のトークンローテーション）。「add」イベント（新しいトークン）と「remove」イベント（古いトークン）は、同じ `user_id`、同じ `device_id`、異なる `push_token`、そして同一の `time_ms` を持ちます。
 
-**トークンはユーザー間で移動する。**トークンはユーザーから別のユーザーへと移動する。「追加」イベント（新規ユーザー）と「削除」イベント（既存ユーザー）は、`user_id`異なる、同じ`device_id`、同じ`push_token`、異なる`time_ms`（通常は100ミリ秒未満の間隔）である。以下のいずれかによってトリガーされる：
+**トークンがユーザー間で移動する：** トークンがあるユーザーから別のユーザーへ移動します。「add」イベント（新規ユーザー）と「remove」イベント（既存ユーザー）は、異なる `user_id`、同じ `device_id`、同じ `push_token`、異なる `time_ms`（通常は100ミリ秒未満の間隔）を持ちます。以下のいずれかによってトリガーされます：
 
-- SDKは匿名プロファイルから識別`changeUser`されたプロファイルへ呼び出す。「remove」イベントは空の`external_user_id`.を持つ。
-- SDKは、識別子を持つプロファイルから別の`changeUser`プロファイルへ呼び出す。両方のイベントは空ではない`external_user_id`。
-- エンド[`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/)ポイントまたは重複ユーザーのクリーンアップは、孤立したユーザーのトークンを存続するユーザーに移行する。
+- SDK が匿名プロファイルから識別済みプロファイルへ `changeUser` を呼び出す。「remove」イベントは空の `external_user_id` を持ちます。
+- SDK が識別済みプロファイルから別の識別済みプロファイルへ `changeUser` を呼び出す。両方のイベントは空ではない `external_user_id` を持ちます。
+- [`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) エンドポイントまたは重複ユーザーのクリーンアップが、孤立したユーザーのトークンを存続するユーザーに移行する。
 
 {% alert note %}
-エンド[`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/)ポイントを通じて匿名プロファイルが識別子で識別された場合、トークンの状態`user_id`は変化せず、トークン状態変更イベントも発行されない。
+[`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) エンドポイントを通じて匿名プロファイルが識別された場合、`user_id` は変化せず、トークン状態変更イベントも発行されません。
 {% endalert %}
 
 #### 最新のアクティブなトークン状態を問い合わせる
 
-各ユーザーの現在のプッシュトークン状態を判定するには、トークン状態変更イベントを`push_token`、`user_id`、およびで分割し、降順`time_ms``app_id`で並べ替え、「remove」イベントを除外する。内部的には、トークンはそのトークン文字列によってキー付けされ、`app_id`ユーザーごとに一意である。をパーティションキーとして`device_id`使用することは推奨されない。なぜならは変更可能な`device_id`属性であり、これによるパーティショニングは単一のトークンのライフサイクルを複数のパーティションに分割する可能性があるからだ。
+各ユーザーの現在のプッシュトークン状態を判定するには、トークン状態変更イベントを `push_token`、`user_id`、および `app_id` で分割し、`time_ms` の降順で並べ替え、「remove」イベントを除外します。内部的には、トークンはそのトークン文字列と `app_id` によってユーザーごとにキー付けされます。`device_id` をパーティションキーとして使用することは推奨されません。`device_id` は変更可能な属性であり、これによるパーティショニングは単一のトークンのライフサイクルを複数のパーティションに分割する可能性があるためです。
 
-以下のSQLクエリは、Snowflake内のユーザーごとに最新のアクティブトークン状態を返す：
+以下の SQL クエリは、Snowflake 内のユーザーごとに最新のアクティブトークン状態を返します：
 
 ```sql
 WITH latest_token_state AS (
