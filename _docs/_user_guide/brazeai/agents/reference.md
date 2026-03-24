@@ -45,7 +45,7 @@ When you use a Braze-provided LLM, the providers of such a model will be acting 
 
 Each LLM provider has a slightly different mix of model capabilities, costs, and thinking levels. Here are some general guidelines and best practices:
 
-- For cost efficiency, prioritize testing lower token cost models over higher cost models. Adjust to higher cost models only if lower cost models are struggling with the use case / generating inconsistent or inaccurate outputs.
+- For cost efficiency, prioritize testing lower token cost models over higher cost models. Adjust to higher cost models only if lower cost models are struggling with the use case or generate inconsistent or inaccurate outputs.
 - For speed and performance efficiency, prioritize testing lower model thinking levels over higher thinking levels. Adjust to higher thinking level models only if lower thinking levels are struggling with the use case or generating inconsistent or inaccurate outputs.
 - If lower cost models or model thinking levels are struggling with the use case or generating inconsistent or inaccurate outputs, consider adjusting to higher cost models or thinking level models.
 - During testing, make sure to balance the reliability and accuracy with token usage and invocation duration.
