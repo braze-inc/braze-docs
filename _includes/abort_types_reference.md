@@ -30,7 +30,7 @@ These abort types can occur on any messaging channel.
 | `frequency_capped` | The user already received the maximum number of messages allowed by your workspace's [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#about-frequency-capping) rules. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% unless ch == "banner" or ch == "newsfeedcard" or ch == "rcs" %}
+{% unless ch == "newsfeedcard" or ch == "rcs" %}
 
 ### Content and rendering
 
