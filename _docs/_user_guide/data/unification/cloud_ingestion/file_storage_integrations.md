@@ -157,7 +157,7 @@ Create an IAM policy to allow Braze to interact with your source bucket. To get 
 
 ### Step 6: Create an IAM role
 
-To complete the setup on AWS, create an IAM role and attach the IAM policy from step 4 to it. 
+To complete the setup on AWS, create an IAM role and attach the IAM policy from step 5 to it. 
 
 1. Within the same IAM section of the console where you created the IAM policy, go to **Roles** > **Create Role**. 
 
