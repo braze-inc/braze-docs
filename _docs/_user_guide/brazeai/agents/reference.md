@@ -41,6 +41,16 @@ Then, you can return to your agent and select your model.
 
 When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.
 
+### Determine which model to use
+
+Each LLM provider has a slightly different mix of model capabilities, costs, and thinking levels. Here are some general guidelines and best practices:
+
+- For cost efficiency, prioritize testing lower token cost models over higher cost models. Adjust to higher cost models only if lower cost models are struggling with the use case / generating inconsistent or inaccurate outputs.
+- For speed and performance efficiency, prioritize testing lower model thinking levels over higher thinking levels. Adjust to higher thinking level models only if lower thinking levels are struggling with the use case or generating inconsistent or inaccurate outputs.
+- If lower cost models or model thinking levels are struggling with the use case or generating inconsistent or inaccurate outputs, consider adjusting to higher cost models or thinking level models.
+- During testing, make sure to balance the reliability and accuracy with token usage and invocation duration.
+- Each use case may have a different optimal model and thinking level. We recommend thoroughly testing to check for consistent quality without timeouts.
+
 #### Thinking levels
 
 Some LLM providers may allow you to adjust a selected model's thinking level. Thinking levels define the range of thought the model uses before answering—from quick, direct responses to longer chains of reasoning. This affects response quality, latency, and token usage.
@@ -349,6 +359,71 @@ For more details on prompting best practices, refer to guides from the following
 - [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)
 - [Anthropic](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview)
 - [Gemini](https://support.google.com/a/users/answer/14200040?hl=en)
+
+## Outputs
+
+### Basic schemas
+
+Basic schemas are a simple output that an agent returns. This can be a string, a number, a boolean, an array of strings, or array of numbers.
+
+For example, if you want to collect user sentiment scores from a simple feedback survey to determine how satisfied your customers are after receiving a product, you can select **Number** as a basic schema to structure the output format.
+
+{% alert important %}
+Arrays are only available for Canvas agents, not catalog agents.
+{% endalert %}
+
+![Agent Console with number selected as a basic schema.]({% image_buster /assets/img/ai_agent/basic_schema.png %}){: style="max-width:85%;"}
+
+### Advanced schemas
+
+Advanced schema options include manually structuring fields or using JSON.
+
+- **Fields:** A no-code way to enforce an agent output that you can use consistently.
+- **JSON:** A code approach to creating a precise output format, where you can nest variables and objects within the JSON schema. Only available for Canvas agents, not catalog agents.
+
+We recommend using advanced schemas when you want the agent to return a data structure with multiple values defined in a structured manner, rather than a single-value output. This allows the output to be better formatted as a consistent context variable.
+
+For example, you may use an output format within an agent that is intended to create a sample travel itinerary for a user based on a form they submitted. The output format allows you to define that every agent response should come back with values for `tripStartDate`, `tripEndDate`, and `destination` values. Each of these values can be extracted from context variables and placed in a Message step for personalization using Liquid.
+
+{% tabs %}
+{% tab Fields %}
+
+If you want to format responses to a simple feedback survey to determine how likely respondents are to recommend your restaurant's newest ice cream flavor, you can set up the following fields to structure the output format:
+
+| Field name | Value |
+| --- | --- |
+| **likelihood_score** | Number |
+| **explanation** | String |
+| **confidence_score** | Number |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+![Agent Console showing three output fields for likelihood score, explanation, and confidence score.]({% image_buster /assets/img/ai_agent/output_format_fields.png %}){: style="max-width:85%;"}
+
+{% endtab %}
+{% tab JSON schema %}
+
+If you want to collect user feedback for their most recent dining experience at your restaurant chain, you can select **JSON Schema** as the output format and insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "sentiment": {
+      "type": "string"
+    },
+    "reasoning": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "sentiment",
+    "reasoning"
+  ]
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Catalogs and fields
 
