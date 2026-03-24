@@ -12,10 +12,6 @@ tool: Segments
 
 > Catalog segments are a type of SQL Segment Extension that is created by combining catalog data with data from custom events or purchases. They can be referenced in a segment and then targeted by campaigns and Canvases. 
 
-{% alert important %}
-Catalog segments are currently in early access. Contact your customer success manager if you're interested in participating in this early access.
-{% endalert %}
-
 Catalog segments use SQL to join data from catalogs and data from custom events or purchases. To do so, you must have a common identifier field across your catalogs and your custom events or purchases. For example, the value of an item ID in a catalog must match the value of a property in a custom event.
 
 ## Creating a catalog segment

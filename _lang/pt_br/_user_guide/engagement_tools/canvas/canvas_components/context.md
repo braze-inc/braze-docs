@@ -139,12 +139,12 @@ Consulte [Tipos de dados]({{site.baseurl}}/user_guide/engagement_tools/canvas/cr
 
 ### Atrasos no envio com Conteúdo conectado
 
-Todos os usuários em um lote são processados antes que qualquer usuário avance. Após a conclusão do processamento em lote, os usuários bem-sucedidos avançam para a próxima etapa, enquanto os usuários com falha são tentados novamente separadamente — os usuários bem-sucedidos não esperam que as tentativas de reexecução sejam bem-sucedidas antes de avançar.
+Todos os usuários em um lote são processados antes que qualquer usuário avance. Após a conclusão do processamento em lote, os usuários bem-sucedidos avançam para a próxima etapa, enquanto os usuários com falha são tentados novamente separadamente — os usuários bem-sucedidos não esperam que as novas tentativas sejam bem-sucedidas antes de avançar.
 
-**Comportamento de reexecução**: As etapas de Contexto (e todas as etapas do canva) usam mecanismos de reexecução específicos do canva, não o comportamento padrão de reexecução do Conteúdo conectado. Se uma chamada de Conteúdo conectado falhar, a Braze tenta novamente a etapa aproximadamente 13 vezes com retrocesso exponencial. Se todas as tentativas falharem, o usuário sai do canva.
+**Comportamento de nova tentativa**: As etapas de Contexto (e todas as etapas do canva) usam mecanismos de nova tentativa específicos do canva, não o comportamento padrão de nova tentativa do Conteúdo conectado. Se uma chamada de Conteúdo conectado falhar, a Braze tenta novamente a etapa aproximadamente 13 vezes com retrocesso exponencial. Se todas as tentativas falharem, o usuário sai do canva.
 
 {% alert note %}
-A tag `:retry` usada no Conteúdo conectado padrão não se aplica às chamadas de Conteúdo conectado feitas dentro das etapas do canva. As etapas do canva têm sua própria lógica de reexecução otimizada para fluxos de trabalho do canva.
+A tag `:retry` usada no Conteúdo conectado padrão não se aplica às chamadas de Conteúdo conectado feitas dentro das etapas do canva. As etapas do canva têm sua própria lógica de nova tentativa otimizada para fluxos de trabalho do canva.
 {% endalert %}
 
 **Tempo de processamento**: O tempo necessário para processar todos os usuários em uma etapa de Contexto depende de:
@@ -156,7 +156,7 @@ Se seu endpoint de Conteúdo conectado tem limites de taxa, considere que as eta
 
 ## Padronização de consistência de fuso horário
 
-Embora a maioria das propriedades de evento que usam o tipo timestamp já estejam em UTC no Canvas, há algumas exceções. Com a adição do Contexto do Canvas, todas as propriedades de evento de timestamp padrão em canvas baseados em ação estão em UTC. Essa mudança faz parte de um esforço mais amplo para garantir uma experiência mais previsível e consistente ao editar etapas e mensagens do canva. Observe que essa mudança impacta todos os canvas baseados em ação, independentemente de o canva específico estar usando uma etapa de Contexto ou não.
+Com o Contexto do Canvas disponível para todos, todas as propriedades de evento de timestamp padrão em canvas baseados em ação estão em UTC. Essa mudança faz parte de um esforço mais amplo para garantir uma experiência mais previsível e consistente ao editar etapas e mensagens do canva. Observe que essa mudança impacta todos os canvas baseados em ação, independentemente de o canva específico estar usando uma etapa de Contexto ou não.
 
 {% alert important %}
 Em todas as circunstâncias, recomendamos fortemente o uso de [filtros Liquid time_zone]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) para que os timestamps sejam representados no fuso horário desejado. Você pode consultar esta [pergunta frequente](#faq-example) para ver um exemplo.

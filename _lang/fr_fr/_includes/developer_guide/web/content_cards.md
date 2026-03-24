@@ -78,7 +78,7 @@ Toutes les cartes de contenu partagent ces propriétés :
 |---|---|
 | `expiresAt` | L'horodatage UNIX du moment d'expiration de la carte.|
 | `extras`| (Facultatif) Données de paires clé-valeur formatées en tant qu'objet chaîne de caractères avec une valeur chaîne de caractères. |
-| `id` | (Facultatif) L'ID de la carte. Celui-ci sera transmis à Braze avec les événements à des fins d'analytique. |
+| `id` | (Facultatif) L'ID de la carte. Celui-ci sera transmis à Braze avec les événements à des fins analytiques. |
 | `pinned` | Cette propriété indique si la carte a été définie comme « épinglée » dans le tableau de bord.|
 | `updated` | L'horodatage UNIX de la dernière modification de cette carte. |
 | `viewed` | Cette propriété indique si l'utilisateur a vu la carte ou non.|

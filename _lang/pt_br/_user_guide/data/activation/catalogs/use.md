@@ -141,7 +141,7 @@ Veja como isso se parece quando o Liquid é renderizado:
 
 ### Usando templates em itens de catálogo
 
-Você também pode usar templates para extrair dinamicamente itens do catálogo com base em atributos personalizados. Por exemplo, digamos que um usuário tenha o atributo personalizado `wishlist`, que contém uma matriz de IDs de jogos do seu catálogo.
+Você também pode usar templates para extrair dinamicamente itens do catálogo com base em atributos personalizados. Por exemplo, digamos que um usuário tenha o atributo personalizado `wishlist`, que contém um array de IDs de jogos do seu catálogo.
 
 ```json
 {
@@ -161,7 +161,7 @@ Os objetos JSON nos catálogos só são ingeridos por meio da API. Não é poss�
 Usando templates Liquid, você pode extrair dinamicamente os IDs da lista de desejos e usá-los em sua mensagem. Para fazer isso, [atribua uma variável]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) ao seu atributo personalizado, depois use o modal **Adicionar Personalização** para puxar um item específico do array. Variáveis referenciadas como o ID do item do catálogo devem estar envolvidas em chaves para serem referenciadas corretamente, como `{{result}}`.
 
 {% alert tip %}
-Lembre-se de que as matrizes começam em `0`, e não em `1`.
+Lembre-se de que os arrays começam em `0`, e não em `1`.
 {% endalert %}
 
 Por exemplo, para informar a um usuário que o Tales (um item do nosso catálogo que ele desejou) está em promoção, podemos adicionar o seguinte ao nosso criador de mensagens:
@@ -186,7 +186,7 @@ Você pode fazer upload de um CSV de novos itens de catálogo a serem adicionado
 
 ### Usando Liquid
 
-Você também pode montar catálogos manualmente com lógica Liquid. No entanto, note que se você digitar um ID que não existe, a Braze ainda retornará um vetor de itens sem objetos. Recomendamos que você inclua o tratamento de erros, como a verificação do tamanho da matriz e o uso de uma instrução `if` para considerar o caso de uma matriz vazia.
+Você também pode montar catálogos manualmente com lógica Liquid. No entanto, note que se você digitar um ID que não existe, a Braze ainda retornará um array de itens sem objetos. Recomendamos que você inclua o tratamento de erros, como a verificação do tamanho do array e o uso de uma instrução `if` para considerar o caso de um array vazio.
 
 #### Usando templates em itens de catálogo com Liquid
 
@@ -223,6 +223,31 @@ Welcome to our store, Peter!
 As Liquid tags do catálogo não podem ser usadas recursivamente dentro de catálogos.
 {% endalert %}
 
+## Estruturando os dados do seu catálogo
+
+Ao planejar como estruturar os dados do seu catálogo, comece pelo caso de uso pretendido e projete o catálogo em torno dele. Cada linha no catálogo representa um item (com um `id` único). As colunas devem conter os atributos desse item, como URLs, texto de descrição, URLs de imagens, preço, avaliação, tamanho ou cor.
+
+### Quando usar chamadas padrão de catálogo
+
+Com chamadas padrão de catálogo, você faz a correspondência de um valor com a coluna `id`. Ao inserir um atributo personalizado ou propriedade de evento (como uma string de ID) na Liquid tag do catálogo, você pode puxar múltiplos atributos de um único item para sua mensagem. Casos de uso comuns incluem:
+
+- Produto ou serviço visualizado recentemente
+- Itens da lista de desejos
+- Ofertas por localização
+- Produto comprado
+- Conteúdo por estágio do ciclo de vida
+- Produto ou serviço pesquisado mais recentemente
+
+### Quando usar seleções de catálogo
+
+As [seleções de catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) permitem filtrar por qualquer coluna do seu catálogo e retornar até 50 itens correspondentes. Ao inserir atributos personalizados ou propriedades de eventos nos filtros de seleção, os resultados são personalizados para cada usuário. Casos de uso comuns incluem:
+
+- Itens cuja categoria corresponde à preferência do usuário
+- Itens que correspondem à marca, culinária ou tamanho preferido do usuário
+- Conteúdo por tipo de inscrição ou nível de fidelidade
+- Produtos dentro da faixa de valor médio de pedido do usuário
+
+A principal diferença é que as chamadas padrão de catálogo buscam um único item conhecido pelo `id`, enquanto as seleções de catálogo consultam todo o catálogo e retornam múltiplos itens que correspondem aos seus critérios de filtro.
 
 [1]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}
 [2]: {% image_buster /assets/img_archive/catalog_multiple_items.png %}
