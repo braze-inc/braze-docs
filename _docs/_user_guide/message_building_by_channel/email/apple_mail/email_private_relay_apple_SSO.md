@@ -1,12 +1,12 @@
 ---
 nav_title: Send emails to Apple Private Relay
-article_title: Send Emails to Apple Private Relay
+article_title: Send emails to Apple Private Relay
 alias: /email_relay/
 page_order: 0
 description: "This article covers the process of sending emails to Apple Private Relay."
 channel:
   - email
-  
+toc_headers: h2
 ---
 
 # Send emails to Apple Private Relay
@@ -20,7 +20,7 @@ If a user decides to disable the email forwarding to your app's relay email, Bra
 {% tabs %}
 {% tab SendGrid %}
 
-## Sending emails for SendGrid
+## Configure SendGrid 
 
 If you use SendGrid as an email provider, you can send emails to Apple without making DNS changes. 
 
@@ -35,7 +35,7 @@ If your desired "From" address is an `abmail` address, include that in your subd
 {% endtab %}
 {% tab SparkPost %}
 
-## Sending emails for SparkPost
+## Configure SparkPost 
 
 To set up Apple Private Relay for SparkPost, follow these steps: 
 
@@ -43,7 +43,7 @@ To set up Apple Private Relay for SparkPost, follow these steps:
 2. Follow [Apple's documentation](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service) to register the email domains.
 3. Apple will automatically check the domains, show which ones are verified, and provide the option to reverify or delete the domains.
 
-### Considerations
+### When the sending domain is also the bounce domain
 
 If a sending domain is also used as a bounce domain, you won't be able to store any records and will need to follow these additional steps:
 
@@ -67,12 +67,13 @@ To avoid SPF failures, you must create the MX and TXT records and have them prop
 {% endtab %}
 {% tab Amazon SES %}
 
-## Sending emails for Amazon SES
+## Configure Amazon SES
 
-### Prerequisites
-To set up Apple Private Relay for Amazon SES, you must first configure a custom MAIL FROM domain in SES. For more details, see [AWS's documentation](https://docs.aws.amazon.com/ses/latest/dg/mail-from.html).
+### Configure a custom MAIL FROM domain
 
-### Steps
+To set up Apple Private Relay for Amazon Simple Email Service (SES), you must first configure a custom MAIL FROM domain in SES. For more details, see [AWS's documentation](https://docs.aws.amazon.com/ses/latest/dg/mail-from.html).
+
+### Register domains with Apple
 
 1. Sign in with Apple.
 2. Follow [Apple's documentation](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service) to register the email domains.
