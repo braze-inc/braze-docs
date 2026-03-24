@@ -17,7 +17,6 @@ To send emails to Apple's private email relay, register your sending domains wit
 
 If a user decides to disable the email forwarding to your app's relay email, Braze will receive email bounce information as usual. These users can manage apps that use sign-in with Apple from their Apple ID settings page (see [Apple's documentation](https://support.apple.com/en-us/HT210426)).
 
-
 {% tabs %}
 {% tab SendGrid %}
 
