@@ -11,11 +11,14 @@ channel:
 
 # Send emails to Apple Private Relay
 
-> Apple's single sign-on (SSO) feature allows their users to share their email addresses (`example@icloud.com`) or to hide their email addresses by masking what's provided to brands (`tq1234snin@privaterelay.appleid.com`) instead of their personal email address. Apple will then forward messages sent to the relay addresses to the user's actual email address. 
+> Apple's single sign-on (SSO) feature allows its users to share their email addresses (`example@icloud.com`) or to hide their email addresses by masking what's provided to brands (`tq1234snin@privaterelay.appleid.com`) instead of their personal email address. Apple will then forward messages sent to the relay addresses to the user's actual email address. 
 
 To send emails to Apple's private email relay, register your sending domains with Apple. If you don't configure your domains with Apple, emails sent to relay addresses will result in bounces.
 
 If a user decides to disable the email forwarding to your app's relay email, Braze will receive email bounce information as usual. These users can manage apps that use sign-in with Apple from their Apple ID settings page (see [Apple's documentation](https://support.apple.com/en-us/HT210426)).
+
+{% tabs %}
+{% tab SendGrid %}
 
 ## Sending emails for SendGrid
 
@@ -28,6 +31,9 @@ If you use SendGrid as an email provider, you can send emails to Apple without m
 - The address should be formatted as: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>` (an example is: `bounces+1234567@braze.online.docs.com`). 
 
 If your desired "From" address is an `abmail` address, include that in your subdomain. For example, use `abmail.docs.braze.com` instead of `docs.braze.com`.
+
+{% endtab %}
+{% tab SparkPost %}
 
 ## Sending emails for SparkPost
 
@@ -57,5 +63,17 @@ To avoid SPF failures, you must create the MX and TXT records and have them prop
 2. Delete the CNAME record.
 3. Replace it with the MX and TXT records for proper routing.
 4. Create your A record to point to your CDN or file hosting.
+
+{% endtab %}
+{% tab Amazon SES %}
+
+To set up Apple Private Relay for SES, you must have a custom Mail From address before you follow these steps:
+
+1. Sign in with Apple.
+2. Follow [Apple's documentation](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service) to register the email domains.
+3. Apple will automatically check the domains, show which ones are verified, and provide the option to reverify or delete the domains.
+
+{% endtab %}
+{% endtabs %}
 
 If you have any further questions, open a [support ticket]({{site.baseurl}}/braze_support/).
