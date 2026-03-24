@@ -71,7 +71,9 @@ def normalize_url_for_compare(url)
     q = pq[1] ? "?#{pq[1]}" : nil
   end
   path = path.chomp("/")
-  path += "/" unless path.empty? || path.end_with?(".html") || path.end_with?(".json")
+  file_segment = File.basename(path)
+  has_extension = !file_segment.empty? && file_segment.match?(/\.[A-Za-z0-9]{2,}$/)
+  path += "/" unless path.empty? || has_extension
   "#{path}#{q}#{frag}"
 end
 
@@ -129,9 +131,7 @@ end
 
 def required_redirects(url_map_base, url_map_head, diff_rows)
   needed = {} # old_url_norm => new_url_norm
-  md_paths = lambda do |p|
-    p.end_with?(".md")
-  end
+  md_paths = lambda { |p| p.end_with?(".md") }
 
   renames = diff_rows.select { |r| r[0] == :rename }
   deleted = diff_rows.select { |r| r[0] == :d }.map { |r| r[1] }.select(&md_paths)
@@ -140,6 +140,7 @@ def required_redirects(url_map_base, url_map_head, diff_rows)
 
   renamed_sources = renames.map { |(_, old_p, _)| old_p }.to_set
 
+  # Process renames: use git's rename detection to pair old→new paths.
   renames.each do |(_, old_p, new_p)|
     next unless md_paths.call(old_p) && md_paths.call(new_p)
 
@@ -151,16 +152,28 @@ def required_redirects(url_map_base, url_map_head, diff_rows)
     needed[normalize_url_for_compare(old_u)] = normalize_url_for_compare(new_u)
   end
 
-  modified.each do |p|
-    old_u = url_map_base[p]
-    new_u = url_map_head[p]
-    next if old_u.nil? || new_u.nil?
-    next if normalize_url_for_compare(old_u) == normalize_url_for_compare(new_u)
+  # Detect URL changes for all paths shared between base and HEAD. Comparing
+  # URL maps directly (rather than relying solely on the _docs/ git diff) catches
+  # permalink re-URLs driven by _config.yml or _plugins/ changes, where doc files
+  # themselves are not modified.
+  head_keys = url_map_head.keys.to_set
+  url_map_base.each_key do |p|
+    next unless md_paths.call(p)
+    next unless head_keys.include?(p)
+    next if renamed_sources.include?(p)
 
-    needed[normalize_url_for_compare(old_u)] = normalize_url_for_compare(new_u)
+    old_u = normalize_url_for_compare(url_map_base[p])
+    new_u = normalize_url_for_compare(url_map_head[p])
+    next if old_u == new_u
+
+    needed[old_u] = new_u
   end
 
-  deleted.each do |p|
+  # Deleted pages: paths present in the base URL map but absent from HEAD's map
+  # (and not the source of a rename) need a manual redirect to a replacement URL.
+  url_map_base.each_key do |p|
+    next unless md_paths.call(p)
+    next if head_keys.include?(p)
     next if renamed_sources.include?(p)
 
     old_u = url_map_base[p]
@@ -168,8 +181,6 @@ def required_redirects(url_map_base, url_map_head, diff_rows)
 
     needed[normalize_url_for_compare(old_u)] = :deleted_no_target
   end
-
-  # New paths that might be rename targets without similarity (copy/add): no automatic old URL.
 
   [needed, { renames: renames.size, modified: modified.size, deleted: deleted.size, added: added.size }]
 end
