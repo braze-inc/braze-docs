@@ -39,18 +39,6 @@ To set up Apple Private Relay for SparkPost, follow these steps:
 2. Follow [Apple's documentation](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service) to register the email domains.
 3. Apple will automatically check the domains, show which ones are verified, and provide the option to reverify or delete the domains.
 
-{% endtab %}
-{% tab Amazon SES %}
-
-To set up Apple Private Relay for SES, you must have a custom Mail From address before you follow these steps:
-
-1. Sign in with Apple.
-2. Follow [Apple's documentation](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service) to register the email domains.
-3. Apple will automatically check the domains, show which ones are verified, and provide the option to reverify or delete the domains.
-
-{% endtab %}
-{% endtabs %}
-
 ## Considerations
 
 If a sending domain is also used as a bounce domain, you won't be able to store any records and will need to follow these additional steps:
@@ -71,5 +59,17 @@ To avoid SPF failures, you must create the MX and TXT records and have them prop
 2. Delete the CNAME record.
 3. Replace it with the MX and TXT records for proper routing.
 4. Create your A record to point to your CDN or file hosting.
+
+{% endtab %}
+{% tab Amazon SES %}
+
+To set up Apple Private Relay for SES, you must have a custom Mail From address before you follow these steps:
+
+1. Sign in with Apple.
+2. Follow [Apple's documentation](https://developer.apple.com/help/account/configure-app-capabilities/configure-private-email-relay-service) to register the email domains.
+3. Apple will automatically check the domains, show which ones are verified, and provide the option to reverify or delete the domains.
+
+{% endtab %}
+{% endtabs %}
 
 If you have any further questions, open a [support ticket]({{site.baseurl}}/braze_support/).
