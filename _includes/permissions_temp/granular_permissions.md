@@ -344,7 +344,7 @@ To download a list of your users and their permissions, go to **Settings** > **C
 | Media Library Assets | Edit Media Library Assets | Create and update media library assets |
 | Messaging Rate Limits | View Messaging Rate Limits | |
 | Messaging Rate Limits | Edit Messaging Rate Limits | Allow users to configure and edit workspace-level messaging rate limits. |
-| Operator | Use BrazeAI Operator<sup>TM</sup> |  |
+| Operator | Use BrazeAI Operator<sup>TM</sup> | Access and use Braze Operator to answer questions, navigate setup, troubleshoot issues, and brainstorm ideas. |
 | Placements | View Placements | View Banner placement |
 | Placements | Archive Placements | Move Banner placements to archive |
 | Placements | Edit Placements | View Banner placements without making changes |
