@@ -15,7 +15,7 @@ description: "This article outlines details about the View all translations for 
 /content_blocks/translations
 {% endapimethod %}
 
-> Use this endpoint to view all the translations for a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/). See [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) for more information about translation features.
+> Use this endpoint to view all the translations for a [Content Block]({{site.baseurl}}/user_guide/messaging/design_and_edit/content_blocks/). See [Locales in messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/) for more information about translation features.
 
 {% include early_access_beta_alert.md feature='This endpoint' %}
 

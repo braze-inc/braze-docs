@@ -14,14 +14,14 @@ Braze had two (you read that right - **two**) product release cycles this month!
 
 ## SAML/SSO
 
-[Single sign-on]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/) (SSO) provides companies a secure and centralized way of controlling access to the Braze dashboard. In short, a single set of credentials can be use to access different applications, including Braze.
+[Single sign-on]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/) (SSO) provides companies a secure and centralized way of controlling access to the Braze dashboard. In short, a single set of credentials can be use to access different applications, including Braze.
 
-In addition to [Google Sign-In using OAuth 2.0 support](https://developers.google.com/identity/protocols/OAuth2), companies would like SSO with Security Assertion Markup Language (SAML) support. This enables them to seamlessly integrate with large identity providers (IdPs), including [Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/entra/) and [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/), which support the latest industry standards (SAML 2.0).
+In addition to [Google Sign-In using OAuth 2.0 support](https://developers.google.com/identity/protocols/OAuth2), companies would like SSO with Security Assertion Markup Language (SAML) support. This enables them to seamlessly integrate with large identity providers (IdPs), including [Azure Active Directory]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/microsoft_entra_sso/) and [Okta]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/okta/), which support the latest industry standards (SAML 2.0).
 
 Braze supports:
-- [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/)
-- [Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/entra/)
-- [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)
+- [OneLogin]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/onelogin/)
+- [Azure Active Directory]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/microsoft_entra_sso/)
+- [Okta]({{site.baseurl}}/user_guide/administer/global/saml_single_sign_on/okta/)
 
 ## Adjust event API key shows
 
@@ -44,11 +44,11 @@ The "Only Show Mine" check filter on the **Campaigns** page has proven to be wil
 
 ### Advancement behavior
 
-You can now choose [when a user advances]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) from one Canvas step to the next. These options include "Message Sent" and "Entire Audience After Delay".
+You can now choose [when a user advances]({{site.baseurl}}/user_guide/messaging/canvas/managing_canvases/cloning_canvases/) from one Canvas step to the next. These options include "Message Sent" and "Entire Audience After Delay".
 
 ### In-app messages in Canvas
 
-[In-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/) are now available in Canvas! Add a Canvas step and browse the available channels to add an in-app message.
+[In-app messages]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/) are now available in Canvas! Add a Canvas step and browse the available channels to add an in-app message.
 
 # Earlier this month
 
@@ -58,7 +58,7 @@ We are removing the user profile pictures displayed in Braze user profiles and u
 
 ## Connected Content in Content Cards
 
-You can now use [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) strings and functionality in [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/).
+You can now use [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) strings and functionality in [Content Cards]({{site.baseurl}}/user_guide/channels/content_cards/).
 
 Connected Content calls to external servers will happen when a Card is actually sent, not when the Card is viewed by the User. Similar to Email, dynamic content will be calculated and determined at sending time, rather than when a Card is actually viewed.
 
@@ -78,7 +78,7 @@ Look at [multiple campaigns at one time to compare their relative performance]({
 Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [`dispatch_id` behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/) in Canvases and campaigns.
 {% endalert %}
 
-If you want to track the dispatch of a message from within the message (in a URL, for example), you can template in the `dispatch_id`. You can find the formatting for this in our list of supported personalization tags, under [Canvas Attributes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
+If you want to track the dispatch of a message from within the message (in a URL, for example), you can template in the `dispatch_id`. You can find the formatting for this in our list of supported personalization tags, under [Canvas Attributes]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/).
 
 This behaves just like `api_id`, in that since the `api_id` isn't available at campaign creation, it is templated in as a placeholder and will preview as `dispatch_id_for_unsent_campaign`. The ID is generated before the message is sent, and will be included in as send time.
 
@@ -92,4 +92,4 @@ The "Show Only Mine" filter on the campaign grid will remain on any time you vis
 
 ## A/B testing updates
 
-You can send a one-time [A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) with up to eight variants (and optional control) to a user-specified percentage of a campaign's audience, and then send the best variant to the remaining audience at a pre-scheduled time.
+You can send a one-time [A/B test]({{site.baseurl}}/user_guide/messaging/ab_testing/) with up to eight variants (and optional control) to a user-specified percentage of a campaign's audience, and then send the best variant to the remaining audience at a pre-scheduled time.

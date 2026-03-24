@@ -11,7 +11,7 @@ Tool:
 
 # About Audience Sync
 
-> The Braze Audience Sync feature helps you extend the reach of your campaigns to many of the top social and advertising technologies. Through [Braze Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas), brands can dynamically and securely sync first-party user data into the advertising ecosystem to drive marketing and operational efficiencies.
+> The Braze Audience Sync feature helps you extend the reach of your campaigns to many of the top social and advertising technologies. Through [Braze Canvas]({{site.baseurl}}/user_guide/messaging/canvas/), brands can dynamically and securely sync first-party user data into the advertising ecosystem to drive marketing and operational efficiencies.
 
 ## Feature availability
 

@@ -48,6 +48,6 @@ By default, the Current will include certain PII attributes like email and addre
 
 Contact your Jacquard account team for the required code snippets.
 
-These snippets use [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) and, after they're placed in your emails, will dynamically pull in language and a tracking pixel so Jacquard can optimize your language in real-time using Jacquard X.
+These snippets use [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/) and, after they're placed in your emails, will dynamically pull in language and a tracking pixel so Jacquard can optimize your language in real-time using Jacquard X.
 
 

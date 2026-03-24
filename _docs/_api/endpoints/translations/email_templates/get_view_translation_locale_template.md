@@ -15,7 +15,7 @@ description: "This article outlines details about the View specific translation 
 /templates/translations/email
 {% endapimethod %}
 
-> Use this endpoint to view a specific translation and locale for an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). See [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) for more information about translation features.
+> Use this endpoint to view a specific translation and locale for an [email template]({{site.baseurl}}/user_guide/messaging/templates/email_templates/). See [Locales in messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/) for more information about translation features.
 
 {% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 

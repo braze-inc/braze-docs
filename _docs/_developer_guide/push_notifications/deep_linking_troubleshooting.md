@@ -100,7 +100,7 @@ Email links go through your ESP's click-tracking system, which wraps links in a 
 2. Host the AASA file at `https://your-click-tracking-domain/.well-known/apple-app-site-association`.
 3. Ensure the AASA file on the click-tracking domain includes the same `appID` and valid path patterns.
 
-For ESP-specific setup instructions, see [Universal links and App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
+For ESP-specific setup instructions, see [Universal links and App Links]({{site.baseurl}}/user_guide/channels/email/customize/universal_links_and_app_links/).
 
 ### Check the redirect chain
 

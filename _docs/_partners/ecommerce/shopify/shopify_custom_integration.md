@@ -16,7 +16,7 @@ This guide uses Shopify’s Hydrogen framework as an example. However, you can f
 
 To integrate your Shopify headless store with Braze, you need to complete these two goals:
 
-1. **Initialize and load the Braze Web SDK to enable onsite tracking**<br><br> Manually add code into your Shopify website to enable Braze onsite tracking. By implementing the Braze SDK on your Shopify headless store, you can track onsite activities, including sessions, anonymous user behavior, pre-checkout shopper actions, and any [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) or [custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) you choose to include with your development team. You can also add any channels supported by the SDKs, such as in-app messages or Content Cards. 
+1. **Initialize and load the Braze Web SDK to enable onsite tracking**<br><br> Manually add code into your Shopify website to enable Braze onsite tracking. By implementing the Braze SDK on your Shopify headless store, you can track onsite activities, including sessions, anonymous user behavior, pre-checkout shopper actions, and any [custom events]({{site.baseurl}}/user_guide/data/activation/events/custom_events/) or [custom attributes]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes/) you choose to include with your development team. You can also add any channels supported by the SDKs, such as in-app messages or Content Cards. 
 
 {: start="2"}
 2. **Install the Braze Shopify integration**<br><br> After you connect your Shopify store to Braze, you'll gain access to customer, checkout, order, and product data through Shopify webhooks.

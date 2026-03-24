@@ -89,7 +89,7 @@ This option opens a web page inside a modal WebView within your app. It's handle
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-If you send emails through Braze, your ESP (SendGrid, SparkPost, or Amazon SES) wraps links in a click-tracking domain. You must host the AASA file on your click-tracking domain as well, not only on your primary domain. For complete setup, see [Universal links and App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
+If you send emails through Braze, your ESP (SendGrid, SparkPost, or Amazon SES) wraps links in a click-tracking domain. You must host the AASA file on your click-tracking domain as well, not only on your primary domain. For complete setup, see [Universal links and App Links]({{site.baseurl}}/user_guide/channels/email/customize/universal_links_and_app_links/).
 {% endalert %}
 
 ### "Open Web URL Inside App"

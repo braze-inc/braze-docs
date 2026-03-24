@@ -13,7 +13,7 @@ description: "This article covers how to troubleshoot webhook and Connected Cont
 
 ## 4XX errors
 
-`4XX` errors indicate that there's an issue with the request sent to the endpoint. These errors are typically caused by erroneous requests, including malformed parameters, missing authentication headers, or incorrect URLs. Note that these errors also apply to the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder).
+`4XX` errors indicate that there's an issue with the request sent to the endpoint. These errors are typically caused by erroneous requests, including malformed parameters, missing authentication headers, or incorrect URLs. Note that these errors also apply to the [Report Builder]({{site.baseurl}}/user_guide/analytics/reports/report_builder/).
 
 Refer to the following table for error code details and steps to resolve:
 
@@ -152,7 +152,7 @@ The following error codes contribute to the unhealthy host detector failure coun
 
 For webhooks, Braze will automatically retry HTTP requests that were halted by the unhealthy host detector. This automatic retry uses exponential backoff and will retry only a few times before failing. For more information on webhook errors, refer to [Errors, retry logic, and timeouts]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook#errors-retry-logic-and-timeouts).
 
-For Connected Content, if requests to the target host are halted by the unhealthy host detector, Braze will continue to render messages and follow your Liquid logic as if it received an error response code. If you want to ensure these Connected Content requests are retried when they're halted by the unhealthy host detector, use the `:retry` option. For more information on the `:retry` option, see [Connected Content retries]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
+For Connected Content, if requests to the target host are halted by the unhealthy host detector, Braze will continue to render messages and follow your Liquid logic as if it received an error response code. If you want to ensure these Connected Content requests are retried when they're halted by the unhealthy host detector, use the `:retry` option. For more information on the `:retry` option, see [Connected Content retries]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/connected_content_retries/).
 
 If you believe the unhealthy host detection may be causing issues, contact [Braze Support]({{site.baseurl}}/support_contact/).
 
@@ -187,7 +187,7 @@ To sign up to receive these emails, do the following:
 
 ### Message Activity Log entries
 
-If a failure occurs, there will be at least one entry in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) related to it. If the request is retried and eventually succeeds, those details will be available in Currents and Snowflake Data Share. Note that even if a request eventually succeeds after a retry, the errors can still trigger the automated email.
+If a failure occurs, there will be at least one entry in the [Message Activity Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/message_activity_log/) related to it. If the request is retried and eventually succeeds, those details will be available in Currents and Snowflake Data Share. Note that even if a request eventually succeeds after a retry, the errors can still trigger the automated email.
 
 ### Additional failure insights in Braze Currents
 
@@ -197,4 +197,4 @@ To increase transparency into webhook-related issues, Braze streams detailed web
 Connected Content requests are not included in these webhook failure events.
 {% endalert %}
 
-For more information, refer to the [Message engagement events glossary]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
+For more information, refer to the [Message engagement events glossary]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/).

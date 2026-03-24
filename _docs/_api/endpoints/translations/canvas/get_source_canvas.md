@@ -15,7 +15,7 @@ description: "This article outlines details about the Canvas translation source 
 /canvas/translations/source
 {% endapimethod %}
 
-> Use this endpoint to view all the default translation sources for a canvas's translation tags. These are the values with the {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}. See [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) for more information about translation features.
+> Use this endpoint to view all the default translation sources for a canvas's translation tags. These are the values with the {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}. See [Locales in messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/) for more information about translation features.
 
 {% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 

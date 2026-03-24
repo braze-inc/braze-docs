@@ -26,7 +26,7 @@ During your Braze implementation, be sure to discuss marketing goals with your t
 
 ## Automatically collected data
 
-Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and end, all other automatically tracked data does not count toward your data point usage.
+Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/user_guide/data/unification/user_data/sdk_data_collection/). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and end, all other automatically tracked data does not count toward your data point usage.
 
 See our [SDK primer]({{site.baseurl}}/developer_guide/getting_started/sdk_overview/) article to allowlist processes that block the default collection of certain data items.
 
@@ -68,7 +68,7 @@ For example, if an eCommerce application wanted to send a message to a user when
 
 ![A custom event example that will send a campaign to a user who has abandoned their cart and left the cart value at more than 100 and less than 200.]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
-Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/). The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
+Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/) with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/conditional_logic/). The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 {% raw %}
 ```liquid
@@ -120,7 +120,7 @@ When segmenting using the **DOES NOT MATCH REGEX** filter, it is required that t
 For more on how to use our regular expressions filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
 <br>
 More resources on regex:
-- [Regex with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
+- [Regex with Braze]({{site.baseurl}}/user_guide/audience/segments/regex/)
 - [Regex Debugger and Tester](https://regex101.com/)
 - [Regex Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
@@ -287,7 +287,7 @@ Adding these attributes would afford you the ability to send campaigns to users,
 
 1. Remind users who haven't logged on in seven days but who have a promotional credit that their credit exists and they should come back to the app to use it!
 2. Message users who give low driver ratings to get direct customer feedback to see why they didn't enjoy their rides.
-3. Use our [message templating and personalization features]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) to drag the unique promotion code attribute into messaging directed at users.
+3. Use our [message templating and personalization features]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/) to drag the unique promotion code attribute into messaging directed at users.
 
 ## Best practices
 

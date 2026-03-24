@@ -175,7 +175,7 @@ Consider the following when making API calls to send Canvas messages using API-t
 
 ## Attributes object for Canvas
 
-Use the messaging object `attributes` to add, create, or update attributes and values for a user before sending them an API-triggered Canvas using the `canvas/trigger/send` endpoint. This API call processes the user attributes object before it processes and sends the Canvas. This helps minimize the risk of issues caused by [race conditions]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/). However, by default, subscription groups cannot be updated this way.
+Use the messaging object `attributes` to add, create, or update attributes and values for a user before sending them an API-triggered Canvas using the `canvas/trigger/send` endpoint. This API call processes the user attributes object before it processes and sends the Canvas. This helps minimize the risk of issues caused by [race conditions]({{site.baseurl}}/user_guide/messaging/ab_testing/concepts/race_conditions/). However, by default, subscription groups cannot be updated this way.
 
 {% alert note %}
 Looking for the campaign version of this endpoint? Check out [Sending campaign messages using API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).

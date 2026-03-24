@@ -10,11 +10,11 @@ description: "This article contains release notes for July 2021."
 
 ## Simple survey in-app message
 
-Use the [simple survey in-app message template]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/) to collect user attributes, insights, and preferences that power your campaign strategy. For example, you can ask users how they'd like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature. This survey template is supported for both mobile apps and web browsers.
+Use the [simple survey in-app message template]({{site.baseurl}}/user_guide/channels/in_app_messages/message_types/simple_survey/) to collect user attributes, insights, and preferences that power your campaign strategy. For example, you can ask users how they'd like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature. This survey template is supported for both mobile apps and web browsers.
 
 ## Liquid use case library
 
-Wondering how to do that one thing with Liquid? Just looking for inspiration? Check out our [Liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/) for a collection of use cases ranging from anniversaries and birthdays to platform targeting and more.
+Wondering how to do that one thing with Liquid? Just looking for inspiration? Check out our [Liquid use case library]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/liquid_use_cases/) for a collection of use cases ranging from anniversaries and birthdays to platform targeting and more.
 
 ## Email tracking
 
@@ -22,11 +22,11 @@ Open pixel tracking and click tracking can now be disabled per user profile. Thi
 
 ## SDK data collection options
 
-Learn more about how the Braze SDK can be integrated to allow for flexible data collection in our new documentation on [SDK data collection options]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/).
+Learn more about how the Braze SDK can be integrated to allow for flexible data collection in our new documentation on [SDK data collection options]({{site.baseurl}}/user_guide/data/unification/user_data/sdk_data_collection/).
 
 ## SSL overview
 
-Learn more about SSL at Braze, why SSL is important, and how you can acquire an SSL certificate in our new [SSL Overview]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl/) article.
+Learn more about SSL at Braze, why SSL is important, and how you can acquire an SSL certificate in our new [SSL Overview]({{site.baseurl}}/user_guide/channels/email/email_setup/ssl/) article.
 
 ## Amplitude user profile API endpoints
 

@@ -56,7 +56,7 @@ layout: dev_guide
 
 ### `featured`
 
-The `featured` layout is used to apply the featured page format. In the following example, this format is applied to the [Predictive Events]({{site.baseurl}}/user_guide/brazeai/predictive_events/) page.
+The `featured` layout is used to apply the featured page format. In the following example, this format is applied to the [Predictive Events]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/) page.
 
 ```markdown
 ---
@@ -72,7 +72,7 @@ layout: featured
 
 ### `glossary_page`
 
-The `glossary_page` layout is used to apply the glossary page format. In the following example, this format is applied to the [Types of push notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/types) page.
+The `glossary_page` layout is used to apply the glossary page format. In the following example, this format is applied to the [Types of push notifications]({{site.baseurl}}/user_guide/channels/push/types/) page.
 
 ```markdown
 ---

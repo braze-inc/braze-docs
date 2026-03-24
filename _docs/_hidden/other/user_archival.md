@@ -75,7 +75,7 @@ Braze blocks individual users with over 5 million sessions ("dummy users"), and 
 
 To find your dashboard's dummy users, perform the following steps:
 
-1. Create a [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
+1. Create a [segment]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/).
 2. Select the filter `Session Count` and set it to `more than 5,000,000`.
 3. Export the segment via CSV.
 

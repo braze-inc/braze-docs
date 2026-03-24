@@ -9,7 +9,7 @@ description: "This article contains release notes for January 2021."
 
 ## Canvas Report Builder
 
-The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. Read more about the [Canvas Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/).
+The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. Read more about the [Canvas Report Builder]({{site.baseurl}}/user_guide/analytics/reports/report_builder/).
 
 ## In-app message iOS implementation guide
 
@@ -17,7 +17,7 @@ This detailed guide covers how to leverage subclassing to create custom slideup 
 
 ## SMS custom keyword categories and retargeting options
 
-Braze has expanded our native SMS capabilities to include the ability to add custom keywords for two-way messaging, custom categories for keywords, multi-language support, and keyword retargeting and filtering options. To read more about SMS keyword processing, visit our [SMS documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/). 
+Braze has expanded our native SMS capabilities to include the ability to add custom keywords for two-way messaging, custom categories for keywords, multi-language support, and keyword retargeting and filtering options. To read more about SMS keyword processing, visit our [SMS documentation]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/keyword_handling/). 
 
 ## Playable partnership is live
 

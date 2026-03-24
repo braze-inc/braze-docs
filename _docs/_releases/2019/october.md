@@ -14,7 +14,7 @@ Canvas has new and improved analytics to view the performance of each of your va
 
 ## SMS
 
-Braze now provides SMS with campaigns, Canvas, and [currents]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)! Check out our [set up guide]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/) to get started and our [SMS sending guide]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/) to learn more!
+Braze now provides SMS with campaigns, Canvas, and [currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/)! Check out our [set up guide]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/) to get started and our [SMS sending guide]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/) to learn more!
 
 ## Content Block improvements
 

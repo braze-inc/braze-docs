@@ -14,7 +14,7 @@ search_tag: Partner
 
 The incoming webhook from Front will contain a payload that includes the message sent by the live agent. The request will need to be reformatted before it can be accepted by Braze endpoints. The Front Data Transformation template will reformat the payload and write a custom event to the user profile titled **Outbound SMS Sent,** with the message body being passed as an event property.
 
-Before setting up a new transformation in Braze, we recommend reviewing the support matrix for each tier in our [Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview/) documentation. Our Free and Pro tiers offer a different number of active transformations and incoming requests per month. Confirm the current plan you’re on can support your use case.
+Before setting up a new transformation in Braze, we recommend reviewing the support matrix for each tier in our [Data Transformation]({{site.baseurl}}/user_guide/data/unification/data_transformation/) documentation. Our Free and Pro tiers offer a different number of active transformations and incoming requests per month. Confirm the current plan you’re on can support your use case.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Before you start, you'll need the following:
 | Requirements             | Description                                                               |
 |---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | A Front account            | A Front account is required to take advantage of this partnership.|
-| Braze Data Transformation Webhook URL | [Braze Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview/) will be used to reformat the incoming webhook from Front so it can be accepted by the Braze /users/track endpoint.|
+| Braze Data Transformation Webhook URL | [Braze Data Transformation]({{site.baseurl}}/user_guide/data/unification/data_transformation/) will be used to reformat the incoming webhook from Front so it can be accepted by the Braze /users/track endpoint.|
 | A Front REST API Key         | A Front REST API key will be used to make an outbound webhook request from Braze to Front. |
 
 ## Use cases
@@ -35,7 +35,7 @@ Before you start, you'll need the following:
 
 ### Step 1: Create a data transformation
 
-First, you'll create a new data transformation in Braze. The following steps are simplified; for a full walkthrough, see [Creating a transformation]({{site.baseurl}}/user_guide/data/data_transformation/creating_a_transformation/).
+First, you'll create a new data transformation in Braze. The following steps are simplified; for a full walkthrough, see [Creating a transformation]({{site.baseurl}}/user_guide/data/unification/data_transformation/creating_a_transformation/).
 
 1. In Braze, go to **Data Settings** > **Data Transformations**, then select **Create Transformation** .
 2. Under **Editing Experience**, select **Start from scratch**.
@@ -77,7 +77,7 @@ First, you'll create a new data transformation in Braze. The following steps are
     ![An example data transformation.]({% image_buster /assets/img/front/data_transformation.png %})
 
 {% alert tip %}
-You can modify this template to meet your specific needs. For example, you can customize the pre-set custom event name. For more information, see [Data transformation overview]({{site.baseurl}}/user_guide/data/data_transformation/overview/). 
+You can modify this template to meet your specific needs. For example, you can customize the pre-set custom event name. For more information, see [Data transformation overview]({{site.baseurl}}/user_guide/data/unification/data_transformation/). 
 {% endalert %}
 
 ### Step 2: Create an outbound SMS campaign
@@ -218,7 +218,7 @@ Then configure your filter:
 
 ### Billable Segments
 
-- SMS messages at Braze are charged per message segment. Understanding what defines a segment and how these messages will be split is key in understanding how you will be billed for messages. See more information in our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
+- SMS messages at Braze are charged per message segment. Understanding what defines a segment and how these messages will be split is key in understanding how you will be billed for messages. See more information in our [documentation]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/billing_calculator/).
 - Long agent responses will consume more billable segments.
 
 ### Logging data points

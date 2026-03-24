@@ -85,7 +85,7 @@ After you set up Context7, include `use context7` in your prompts to signal your
 
 ### React Native SDK
 
-These prompts demonstrate common integration tasks for the [Braze React Native SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/).
+These prompts demonstrate common integration tasks for the [Braze React Native SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=react%20native).
 
 #### Initializing the SDK
 
@@ -122,7 +122,7 @@ programmatically. Use context7.
 
 ### Web SDK
 
-These prompts demonstrate common integration tasks for the [Braze Web SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/).
+These prompts demonstrate common integration tasks for the [Braze Web SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web).
 
 #### Initializing the SDK
 

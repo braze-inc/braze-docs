@@ -61,7 +61,7 @@ Recurly uses an account's `account_code` as the `external_id` in Braze. Because 
 
 ### Custom events
 
-For effective customer engagement, you must [configure custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) in Braze to receive events triggered by Recurly. Ensure to include each event from Recurly for thorough data integration. These events can also be tracked within [Braze analytics]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#analytics). Once configured, these custom events can be used to segment users or personalize messaging. 
+For effective customer engagement, you must [configure custom events]({{site.baseurl}}/user_guide/data/activation/events/custom_events/) in Braze to receive events triggered by Recurly. Ensure to include each event from Recurly for thorough data integration. These events can also be tracked within [Braze analytics]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#analytics). Once configured, these custom events can be used to segment users or personalize messaging. 
 
 | Braze Custom Event| Recurly Event |
 | ----------- | ----------- |

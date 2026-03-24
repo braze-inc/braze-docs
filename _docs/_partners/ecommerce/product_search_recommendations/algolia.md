@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Algolia](https://www.algolia.com/) is a search and discovery platform that helps developers build fast, relevant, and scalable search experiences. With a powerful API-first approach, Algolia combines advanced ranking algorithms with AI-driven insights for seamless site search, navigation, and personalized content discovery.
 
-The Algolia and Braze integration uses [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) to populate Algolia-powered search results and product recommendations in your Braze messages. By querying Algolia's API at send time, you can deliver personalized content that drives users to high-conversion product detail or landing pages.
+The Algolia and Braze integration uses [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/) to populate Algolia-powered search results and product recommendations in your Braze messages. By querying Algolia's API at send time, you can deliver personalized content that drives users to high-conversion product detail or landing pages.
 
 ## Use cases
 
@@ -102,7 +102,7 @@ If your recommendations rely on user-specific attributes or objectIDs, be mindfu
 
 ### Step 2: Implement Braze Connected Content
 
-Use Braze's Connected Content feature to make API calls to Algolia endpoints and dynamically inject the response into a message. For more information about configuration, request formatting, and best practices, refer to [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content).
+Use Braze's Connected Content feature to make API calls to Algolia endpoints and dynamically inject the response into a message. For more information about configuration, request formatting, and best practices, refer to [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/).
 
 {% tabs local %}
 {% tab Search API %}
@@ -216,4 +216,4 @@ Be mindful of the Algolia rate limits defined in your contract. Avoid making use
 
 ### Caching Connected Content results
 
-Cache Connected Content results using `cache_max_age` to minimize API requests to Algolia and improve performance. For more information, refer to [Caching responses]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/caching_responses).
+Cache Connected Content results using `cache_max_age` to minimize API requests to Algolia and improve performance. For more information, refer to [Caching responses]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/caching_responses/).

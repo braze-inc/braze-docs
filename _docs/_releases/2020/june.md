@@ -9,7 +9,7 @@ description: "This article contains release notes for June 2020."
 
 ## Retention Reports
 
-Retention Reports now offer Range Retention for [campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/) and [Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/). Range Retention measures how many users come back and perform a selected retention event during specific intervals of time. 
+Retention Reports now offer Range Retention for [campaigns]({{site.baseurl}}/user_guide/messaging/campaigns/test_campaigns/retention_reports/) and [Canvases]({{site.baseurl}}/user_guide/analytics/reports/retention_reports/). Range Retention measures how many users come back and perform a selected retention event during specific intervals of time. 
 
 ## User track API updates
 

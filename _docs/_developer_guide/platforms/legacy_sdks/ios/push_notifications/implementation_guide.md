@@ -28,7 +28,7 @@ Push notifications while seemingly standard across different platforms, offer im
 
 Push notifications can be expanded in three different ways: <br>- A long press on the push banner<br>- Swiping down on the push banner<br>- Swiping the banner to the left and selecting "View" 
 
-These custom views offer smart ways to engage customers allowing you to display many distinct types of content including interactive notifications, notifications populated with user data, and even push messages that can capture information like phone numbers and email. While implementing push in this way may be unfamiliar to some, one of our well-known features at Braze, [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), are a prime example of what a custom view for a notification content app extension can look like!
+These custom views offer smart ways to engage customers allowing you to display many distinct types of content including interactive notifications, notifications populated with user data, and even push messages that can capture information like phone numbers and email. While implementing push in this way may be unfamiliar to some, one of our well-known features at Braze, [Push Stories]({{site.baseurl}}/user_guide/channels/push/create_a_push_message/push_stories/), are a prime example of what a custom view for a notification content app extension can look like!
 
 #### Requirements
 ![]({% image_buster /assets/img/push_implementation_guide/push15.png %}){: style="float:right;max-width:50%;margin-left:10px; border:0;margin-top:10px"}

@@ -71,7 +71,7 @@ If you have multiple video campaigns with Seen, repeat the process to connect Br
 
 ### Step 1: Create a webhook campaign to send data to Seen
 
-Create a new [Webhook Campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks) in Braze.
+Create a new [Webhook Campaign]({{site.baseurl}}/user_guide/channels/webhooks/) in Braze.
 
 Configure the webhook as follows:
 

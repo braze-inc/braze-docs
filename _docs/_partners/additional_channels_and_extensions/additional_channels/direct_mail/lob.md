@@ -86,14 +86,14 @@ The following is an example request body for the Lob postcards endpoint. While t
 At this point, your campaign should be ready to test and send. Check the Lob dashboard and the Braze developer console error message logs if you run into errors. For example, the following error was caused by an incorrectly formatted authentication header. 
 
 {% alert important %}
-Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/channels/webhooks/create_a_webhook/). 
 {% endalert %}
 
 ![A message error log showing the time, app name, channel, and error message. The error message includes the message alert and the status code.]({% image_buster /assets/img_archive/error_log.png %})
 
 ## Sharing events using Lob webhooks 
 
-[Braze Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview) lets you build and manage webhooks for automating data flow from external platforms into Braze. Each transformation is given a unique endpoint, which other platforms can use for their webhook's destination.
+[Braze Data Transformation]({{site.baseurl}}/user_guide/data/unification/data_transformation/) lets you build and manage webhooks for automating data flow from external platforms into Braze. Each transformation is given a unique endpoint, which other platforms can use for their webhook's destination.
 
 {% alert important %}
 Lob's Data Transformation template sends events using your [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track), which logs data points. We recommend setting a rate limit in your Lob webhook settings to avoid over-logging data.

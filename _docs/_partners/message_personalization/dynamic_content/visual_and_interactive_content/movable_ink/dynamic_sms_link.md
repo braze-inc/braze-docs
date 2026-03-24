@@ -17,7 +17,7 @@ search_tag: Partner
 | Movable Ink account | A Movable Ink account is required to take advantage of this partnership. |
 | Data source | You need to connect a data source to Movable Ink. This can be done through CSV, website import, or API. |
 | MMS sending capabilities | Confirm that you're set up for MMS through Braze.
-| [Link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/) | Confirm that link shortening is turned on. | 
+| [Link shortening]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening/) | Confirm that link shortening is turned on. | 
 | Contact card | Your brand (the sender) must be saved as a contact on the user's phone for link preview to work with iOS. This can be done with a contact card or another method. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -47,7 +47,7 @@ After users save your brand as a contact, either through a [contact card]({{site
     - Add your Movable Ink link **last**, after all other text in the message body. <br><br>![2]{: style="max-width:50%;"}
 
 {% alert tip %}
-Check out [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) for a refresher on Liquid personalization.  
+Check out [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid/) for a refresher on Liquid personalization.  
 {% endalert %}
 
 {: start="4"}

@@ -84,7 +84,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 - The recipients array may contain up to 50 objects, with each object containing a single `external_user_id` string and a `trigger_properties` object.
 - When `send_to_existing_only` is `true` (the default), Braze sends the message only to existing users. If the `external_user_id` doesn't match any existing user, the API still returns a `201` success response, but the send is canceled internally with an outcome of `Unknown External User ID` and no Currents event is generated. When set to `false` and an attributes object is provided, Braze creates a new user if one doesn't exist. Note that setting `send_to_existing_only` to `false` is not supported for user aliases&#8212;new alias-only users cannot be created through this endpoint. To send to an alias-only user, the user must already exist in Braze.
 
-A user's subscription group status can be updated using the inclusion of a `subscription_groups` parameter within the `attributes` object. For more details, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
+A user's subscription group status can be updated using the inclusion of a `subscription_groups` parameter within the `attributes` object. For more details, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/#migrating-push-tokens).
 
 {% alert note %}
 The `segment_id` parameter is not supported for this endpoint. To target a segment, configure the segment in the campaign's target audience settings in the Braze dashboard and use `"broadcast": true`, or use the `audience` parameter with [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) filters.
@@ -178,7 +178,7 @@ If your request encounters a fatal error, refer to [Errors and responses]({{site
 
 ## Attributes object for campaigns
 
-Braze has a messaging object called `attributes` that lets you add, create, or update attributes and values for a user before you send them an API-triggered campaign. Using the `campaign/trigger/send` endpoint as this API call processes the user attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/).
+Braze has a messaging object called `attributes` that lets you add, create, or update attributes and values for a user before you send them an API-triggered campaign. Using the `campaign/trigger/send` endpoint as this API call processes the user attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/user_guide/messaging/ab_testing/concepts/race_conditions/).
 
 {% alert tip %}
 Looking for the Canvas version of this endpoint? Check out [Sending Canvas messages using API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).

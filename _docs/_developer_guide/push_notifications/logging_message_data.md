@@ -131,7 +131,7 @@ For more code samples, see the [Braze Web SDK repository](https://github.com/bra
 
 Use this section when you need to log additional data from push payload key-value pairs, such as custom events or attributes tied to your business logic.
 
-For more information about custom events, see [Custom events]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/). To log custom events through SDK methods, see [Logging custom events]({{site.baseurl}}/developer_guide/analytics/logging_events/).
+For more information about custom events, see [Custom events]({{site.baseurl}}/user_guide/data/activation/events/custom_events/). To log custom events through SDK methods, see [Logging custom events]({{site.baseurl}}/developer_guide/analytics/logging_events/).
 
 ### Option A: Log with the `/users/track` endpoint
 
@@ -165,8 +165,8 @@ In Xcode, add the `App Groups` capability to your main app target. Turn on **App
 
 Before you implement the snippets, choose which analytics category you want to log:
 
-- **Custom events:** Actions users take (for example, completing a flow or tapping a specific UI element). Use custom events for action-based triggers, segmentation, and event analytics. For more information, see [Custom events]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/) and [Logging custom events]({{site.baseurl}}/developer_guide/analytics/logging_events/).
-- **Custom attributes:** Profile fields you define (for example, `plan_tier` or `preferred_language`) and update over time. For more information, see [Custom attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/) and [Setting user attributes]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/).
+- **Custom events:** Actions users take (for example, completing a flow or tapping a specific UI element). Use custom events for action-based triggers, segmentation, and event analytics. For more information, see [Custom events]({{site.baseurl}}/user_guide/data/activation/events/custom_events/) and [Logging custom events]({{site.baseurl}}/developer_guide/analytics/logging_events/).
+- **Custom attributes:** Profile fields you define (for example, `plan_tier` or `preferred_language`) and update over time. For more information, see [Custom attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/) and [Setting user attributes]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/).
 - **User attributes:** Standard profile fields (for example, email, first name, and phone number). In the sample code, these are represented by a typed `UserAttribute` model and then mapped to Braze user fields.
 
 The helper files in this section (`RemoteStorage`, `UserAttribute`, and `EventName Dictionary`) are local utility files used by this sample implementation. They are not built-in SDK classes. They store payload-derived data in `UserDefaults`, define a typed model for pending user updates, and standardize event payload construction. For more information about local data storage behavior, see [Storage]({{site.baseurl}}/developer_guide/storage/?tab=swift).
@@ -801,17 +801,17 @@ Use the reporting surface that matches the analytics category:
 
 | Analytics category | Where to view in Braze |
 | --- | --- |
-| Native push analytics | To view campaign-level push open metrics, navigate to your push campaign's **Campaign Analytics** page. For metric definitions, see [Influenced opens]({{site.baseurl}}/user_guide/analytics/tracking/influenced_opens/). To build custom analytics views, navigate to **Analytics** > **Report Builder (New)**. For navigation steps, see [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/). For warehouse-level event schemas, see [Message engagement events]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/). |
-| Custom events and attributes | To view custom event trends, navigate to **Analytics** > **Custom Events Report**. For details, see [Custom events]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/). To inspect user-level values, navigate to the **Search Users** page and open a profile. For steps, see [User profiles]({{site.baseurl}}/user_guide/audience/manage_audience/user_profiles/). To filter audiences by these values, navigate to **Audience** > **Segments**. For navigation steps, see [Create a segment]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/) and filter options in [Segmentation filters]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters/). |
+| Native push analytics | To view campaign-level push open metrics, navigate to your push campaign's **Campaign Analytics** page. For metric definitions, see [Influenced opens]({{site.baseurl}}/user_guide/analytics/tracking/influenced_opens/). To build custom analytics views, navigate to **Analytics** > **Report Builder (New)**. For navigation steps, see [Report Builder]({{site.baseurl}}/user_guide/analytics/reports/report_builder/). For warehouse-level event schemas, see [Message engagement events]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/). |
+| Custom events and attributes | To view custom event trends, navigate to **Analytics** > **Custom Events Report**. For details, see [Custom events]({{site.baseurl}}/user_guide/data/activation/events/custom_events/). To inspect user-level values, navigate to the **Search Users** page and open a profile. For steps, see [User profiles]({{site.baseurl}}/user_guide/audience/manage_audience/user_profiles/). To filter audiences by these values, navigate to **Audience** > **Segments**. For navigation steps, see [Create a segment]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/) and filter options in [Segmentation filters]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters/). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For custom report creation, see [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/).
+For custom report creation, see [Report Builder]({{site.baseurl}}/user_guide/analytics/reports/report_builder/).
 
 ## Related references
 
 - [Push notifications]({{site.baseurl}}/developer_guide/push_notifications/)
 - [Logging custom events]({{site.baseurl}}/developer_guide/analytics/logging_events/)
-- [Custom events]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/)
+- [Custom events]({{site.baseurl}}/user_guide/data/activation/events/custom_events/)
 - [Track users endpoint (`/users/track`)]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
 - [Braze Android SDK repository](https://github.com/braze-inc/braze-android-sdk)
 - [Braze Swift SDK repository](https://github.com/braze-inc/braze-swift-sdk)

@@ -59,7 +59,7 @@ To create the event forwarder:
 
 When configuring the forwarder, you can choose which Snowplow events to forward and map them to Braze object types:
 
-1. **[User attributes]({{site.baseurl}}/api/objects_filters/user_attributes_object)**: Update user profile data and custom user properties.
+1. **[User attributes]({{site.baseurl}}/api/objects_filters/user_attributes_object/#migrating-push-tokens)**: Update user profile data and custom user properties.
 2. **[Custom events]({{site.baseurl}}/api/objects_filters/event_object)**: Send user actions and behaviors.
 3. **[Purchases]({{site.baseurl}}/api/objects_filters/purchase_object)**: Send transaction data with product details.
 

@@ -205,6 +205,9 @@ def validate!(options)
 
   needed.each do |from_norm, to_norm|
     if to_norm == :deleted_no_target
+      # Git reports D for removed files; a global redirect may already cover the old URL.
+      next if redirects[from_norm]
+
       deleted_warn << { old_url: from_norm, note: "Page removed; add redirect manually to a replacement URL." }
       next
     end

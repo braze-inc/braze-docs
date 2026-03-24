@@ -12,31 +12,31 @@ description: "This landing page is home to help articles that can help you solve
 guide_featured_title: "Topics"
 guide_featured_list:
   - name: Account
-    link: /docs/user_guide/administrative/access_braze/troubleshooting/
+    link: /docs/user_guide/administer/personal/accessing_your_account/
     image: /assets/img/braze_icons/user-circle.svg
   - name: API
     link: /docs/help/help_articles/api/
     image: /assets/img/braze_icons/terminal-square.svg
   - name: Campaigns and Canvas
-    link: /docs/help/help_articles/campaigns_and_canvas/
+    link: /docs/user_guide/messaging/
     image: /assets/img/braze_icons/annotation.svg
   - name: Content Cards
-    link: /docs/help/help_articles/content_cards/
+    link: /docs/user_guide/channels/content_cards/
     image: /assets/img/braze_icons/sticker-square.svg
   - name: Data
     link: /docs/help/help_articles/data/
     image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Docs
-    link: /docs/help/help_articles/docs/
+    link: /docs/user_guide/
     image: /assets/img/braze_icons/file-06.svg
   - name: Email
-    link: /docs/help/help_articles/email/
+    link: /docs/user_guide/channels/email/
     image: /assets/img/braze_icons/mail-01.svg
   - name: Push
-    link: /docs/help/help_articles/push/
+    link: /docs/user_guide/channels/push/
     image: /assets/img/braze_icons/message-square-02.svg
   - name: Segments
-    link: /docs/help/help_articles/segments/
+    link: /docs/user_guide/audience/segments/
     image: /assets/img/braze_icons/users-01.svg
 ---
 

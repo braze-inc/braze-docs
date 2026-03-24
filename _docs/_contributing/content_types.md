@@ -40,7 +40,7 @@ There are two kinds of how-tos: generic and technology partner. Only use the tec
 
 {% tabs local %}
 {% tab generic %}
-How-to guides are action-based, chronological steps that show users how to complete a specific task. For an example, see [Creating a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/).
+How-to guides are action-based, chronological steps that show users how to complete a specific task. For an example, see [Creating a Content Card]({{site.baseurl}}/user_guide/channels/content_cards/create_a_content_card/).
 
 {% multi_lang_include contributing/templates/how_to_guide.md %}
 {% endtab %}
@@ -57,7 +57,7 @@ How-to guides are action-based, chronological steps that show users how to compl
 - Cover only what the user needs to know to take action. 
 - Only cover the best or recommended way to complete the task. Do not give document alternative methods.
 - Only include [reference material](#references) that's vital to the end-user's goal, such as a list of options a user can select during a step.
-- Link out to references that are longer than reasonable to include in the same article, such as [Segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+- Link out to references that are longer than reasonable to include in the same article, such as [Segmentation filters]({{site.baseurl}}/user_guide/audience/segments/segmentation_filters/).
 - Avoid providing troubleshooting steps. Instead, you can include this information in a another section on this page or a separate article.
 
 #### Header syntax
@@ -133,7 +133,7 @@ Each use of the words "Use case" in a header should have a description following
 {% endtab %}
 
 {% tab generic %}
-Generic tutorials are learning-oriented practical lessons. They focus on what the user learns, such as becoming familiar with terminology, how things interact, how to use commands, and similar. For an example, see [Rules-based recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/rules_based_recommendations/):
+Generic tutorials are learning-oriented practical lessons. They focus on what the user learns, such as becoming familiar with terminology, how things interact, how to use commands, and similar. For an example, see [Rules-based recommendations]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/rules_based/):
 
 {% subtabs local %}
 {% subtab tutorial template %}
@@ -160,7 +160,7 @@ The title header should be prepended with `Tutorial:` and generally describe wha
 
 ### References
 
-References are information-oriented content. They focus on providing the user with objective, authoritative, and technical knowledge. For an example, see [Message engagement events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) (events glossary).
+References are information-oriented content. They focus on providing the user with objective, authoritative, and technical knowledge. For an example, see [Message engagement events]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/) (events glossary).
 
 {% subtabs local %}
 {% subtab reference template %}
@@ -179,13 +179,13 @@ References are information-oriented content. They focus on providing the user wi
 
 ##### Header syntax
 
-Topmost should be nouns. For example, [Editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/) has the following names for its references:
+Topmost should be nouns. For example, [Editor blocks]({{site.baseurl}}/dnd/editor_blocks/) has the following names for its references:
 
 ![Screenshot of the in-page table of contents for the "Editor Blocks" page. Headings include: Types (H2), Properties (H2), Title (H3), Paragraph (H3), List (H3), Button (H3), Divider (H3), Spacer (H3), Image (H3), Video (H3), Social (H3), Icons (H3), HTML (H3), Menu (H3).]({% image_buster /assets/img/contributing/content_types/explanation_header_syntax_example.png %}){: style="max-width:25%;"}
 
 ### Explanations
 
-Explanations are understanding-oriented content. They focus on improving the user’s conceptual understanding. For an example, see [Getting started: Braze overview]({{site.baseurl}}/user_guide/getting_started/overview/).
+Explanations are understanding-oriented content. They focus on improving the user’s conceptual understanding. For an example, see [Getting started: Braze overview]({{site.baseurl}}/user_guide/get_started/).
 
 {% tabs local %}
 {% tab explanation template %}
@@ -200,7 +200,7 @@ Explanations are understanding-oriented content. They focus on improving the use
 - Create textual or visual descriptions of concepts, such as how data travels between features, third-party partners, tools, and similar.
 - Discuss how features and techniques can benefit users.
 - Place explanations in the most relevant article. For example, a basic feature article might have an explanation called "How it works" that describes that feature's workflow. 
-- Consider placing explanations that are too broad to fit into only one article onto a landing page for a general topic, such as [Campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns).
+- Consider placing explanations that are too broad to fit into only one article onto a landing page for a general topic, such as [Campaigns]({{site.baseurl}}/user_guide/messaging/campaigns/).
 
 {% alert tip %}
 Even though explanations aren't telling users what to do to achieve a specific outcome, you can broadly describe chronological steps to achieve a general goal (such as using A/B testing to improve your messaging). Don't go into the same detail you would for a [how-to guide](#how-to-guides) or [tutorial](#tutorials).
@@ -230,7 +230,7 @@ Release notes are a monthly compilation of product updates in Braze. Each update
 | SDK updates            | Lists new SDKs or updates, including breaking changes and new features. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-You can use this template to create release notes for Braze Docs. For an example, see [January 9, 2024 release]({{site.baseurl}}/help/release_notes/2024/1_9_24/).
+You can use this template to create release notes for Braze Docs. For an example, see [January 9, 2024 release]({{site.baseurl}}/releases/2024/1_9_24/).
 
 {% tabs local %}
 {% tab release note template %}

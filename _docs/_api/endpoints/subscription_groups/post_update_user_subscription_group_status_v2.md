@@ -37,7 +37,7 @@ To see examples or test this endpoint for **WhatsApp Groups**:
 To use this endpoint, you need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `subscription.status.set` permission.
 
 {% alert note %}
-If you're interested in using this endpoint with [LINE subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), contact your customer success manager.
+If you're interested in using this endpoint with [LINE subscription groups]({{site.baseurl}}/user_guide/channels/line/message_users/subscription_groups/), contact your customer success manager.
 {% endalert %}
 
 ## Differences from V1
@@ -91,7 +91,7 @@ When creating new users using the [`/users/track` endpoint]({{site.baseurl}}/api
 | `external_ids` | Required* | Array of strings | The `external_id` of the user or users,  may include up to 50 `id`s. |
 | `emails` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a maximum of 50). <br><br>If multiple users (`external_id`) in the same workspace share the same email address, all users that share the email address are updated with the subscription group changes. |
 | `phones` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | You can pass user phone numbers as an array of strings. Must include at least one phone number (up to 50). Phone numbers must be in E.164 format (for example, `+12223334444`). <br><br>If multiple users (`external_id`) in the same workspace share the same phone number, then all users that share the phone number are updated with the same subscription group changes.|
-| `use_double_opt_in_logic` | Optional | Boolean | Defaults to `false` if omitted. For SMS subscription groups, set to `true` to enter the user into the [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) workflow when their subscription status is set to `subscribed`. If this parameter is omitted or set to `false`, users are subscribed without entering the double opt-in workflow. This parameter is not applicable to email subscription groups. |
+| `use_double_opt_in_logic` | Optional | Boolean | Defaults to `false` if omitted. For SMS subscription groups, set to `true` to enter the user into the [SMS double opt-in]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in/) workflow when their subscription status is set to `subscribed`. If this parameter is omitted or set to `false`, users are subscribed without entering the double opt-in workflow. This parameter is not applicable to email subscription groups. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert important %}

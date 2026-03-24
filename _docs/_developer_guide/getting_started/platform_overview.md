@@ -27,7 +27,7 @@ Check out our free [Developer Learning Path](https://learning.braze.com/path/dev
 
 Braze is a customer engagement platform. It ingests user data, surfaces user actions and behaviors, and lets you act on them. The platform has three primary components: the SDK, the dashboard, and the REST API.
 
-If you're a marketer looking for a more general overview of Braze, check out the [Getting Started section for marketers]({{site.baseurl}}/user_guide/getting_started/overview/), instead.
+If you're a marketer looking for a more general overview of Braze, check out the [Getting Started section for marketers]({{site.baseurl}}/user_guide/get_started/), instead.
 
 ![Braze has different layers. In total, it consists of the SDK, the API, the dashboard, and partner integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, and an action layer. The action layer has various channels, including push, in-app messages, Connected Catalog, webhook, SMS, and email.]({% image_buster /assets/img/getting-started/getting-started-vertically-integrated-stack.png %}){: style="max-width:55%;float:right;margin-left:15px;"}
 
@@ -50,7 +50,7 @@ In brief, when fully integrated, the SDK:
 
 The dashboard is the UI that controls all of the data and interactions at the heart of the Braze platform. Marketers will use the dashboard to do their job and create content. Developers use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials.
 
-If you're just getting started, your team administrator should add you (and all other team members who need access to Braze) as [users on your dashboard]({{site.baseurl}}/user_guide/administrative/access_braze).
+If you're just getting started, your team administrator should add you (and all other team members who need access to Braze) as [users on your dashboard]({{site.baseurl}}/user_guide/administer/personal/).
 
 ### REST API
 
@@ -84,14 +84,14 @@ After you have defined a segment, Braze messaging tools allow you to engage with
 
 | Channel                                                                                              | Description                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)* | Send highly-targeted and dynamic in-app notifications without interrupting the customer. |
-| [Email]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/) | Send rich HTML messages by building your email using the rich-text editor, our drag-and-drop editor, or by uploading one of your existing HTML templates. |
-| [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) | Send unobtrusive in-app notifications using the Braze custom-built native user interface. |
-| [Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) | Automatically trigger push notifications from messaging campaigns or news items using the Apple Push Notification Service (APNs) for iOS or Firebase Cloud Messaging (FCM) for Android. |
-| [SMS, MMS, and RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs)* | Use SMS, MMS, or RCS to send transactional notifications, share promotions, send reminders, and more. |
-| [Web push]({{site.baseurl}}/user_guide/message_building_by_channel/push/web) | Send web browser notifications, even if your users aren't currently active on your site. |
-| [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Use webhooks to trigger non-app actions, providing other systems and applications with real-time data. |
-| [WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)* | Directly connect with your users and customers by leveraging the popular peer-to-peer messaging platform: WhatsApp. |
+| [Content Cards]({{site.baseurl}}/user_guide/channels/content_cards/)* | Send highly-targeted and dynamic in-app notifications without interrupting the customer. |
+| [Email]({{site.baseurl}}/user_guide/channels/email/) | Send rich HTML messages by building your email using the rich-text editor, our drag-and-drop editor, or by uploading one of your existing HTML templates. |
+| [In-app messages]({{site.baseurl}}/in-app_messages/) | Send unobtrusive in-app notifications using the Braze custom-built native user interface. |
+| [Push]({{site.baseurl}}/user_guide/channels/push/) | Automatically trigger push notifications from messaging campaigns or news items using the Apple Push Notification Service (APNs) for iOS or Firebase Cloud Messaging (FCM) for Android. |
+| [SMS, MMS, and RCS]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/)* | Use SMS, MMS, or RCS to send transactional notifications, share promotions, send reminders, and more. |
+| [Web push]({{site.baseurl}}/user_guide/channels/push/platform_specific_resources/web/) | Send web browser notifications, even if your users aren't currently active on your site. |
+| [Webhooks]({{site.baseurl}}/about_webhooks/) | Use webhooks to trigger non-app actions, providing other systems and applications with real-time data. |
+| [WhatsApp]({{site.baseurl}}/user_guide/channels/whatsapp/whatsapp_setup/)* | Directly connect with your users and customers by leveraging the popular peer-to-peer messaging platform: WhatsApp. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <sup>**Available as an add-on feature.*</sup>
@@ -113,7 +113,7 @@ Braze is designed for rapid integration. The average time-to-value is six weeks 
 
 ## Resources to bookmark
 
-As a technical resource, you'll be involved in a lot of the nuts and bolts of Braze. Here are good resources to bookmark outside of our documentation. As you're going forward, keep our [Terms to Know]({{site.baseurl}}/user_guide/getting_started/terms_to_know/) glossary handy in case you have questions on Braze terms.
+As a technical resource, you'll be involved in a lot of the nuts and bolts of Braze. Here are good resources to bookmark outside of our documentation. As you're going forward, keep our [Terms to Know]({{site.baseurl}}/user_guide/get_started/terms_to_know/) glossary handy in case you have questions on Braze terms.
 
 | Resource | What You'll Learn|
 |---|---|

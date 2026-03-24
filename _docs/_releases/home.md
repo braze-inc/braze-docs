@@ -24,7 +24,7 @@ For more information on any of the updates listed on this page, contact your acc
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-Braze has launched a new [data center]({{site.baseurl}}/user_guide/data/data_centers/): JP-01. You can sign up for region-specific data centers when setting up your Braze account.
+Braze has launched a new [data center]({{site.baseurl}}/user_guide/data/infrastructure/data_centers/): JP-01. You can sign up for region-specific data centers when setting up your Braze account.
 
 #### Context variables
 
@@ -66,13 +66,13 @@ Braze has launched a new [data center]({{site.baseurl}}/user_guide/data/data_cen
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-[CSV user imports]({{site.baseurl}}/user_guide/data/user_data_collection/user_import) now support pre-import validation and detailed error reporting. Before importing, select **Validate file before importing** on the **Import Users** page—Braze will scan your file and generate a report identifying rows that will fail entirely (errors) and rows that will succeed with some values skipped (warnings). You can download the report, fix your CSV, and re-upload, or proceed as-is. After the import completes, a downloadable report of any rows that failed is also available, with the exact reason for each issue.
+[CSV user imports]({{site.baseurl}}/user_guide/audience/manage_audience/import_users/) now support pre-import validation and detailed error reporting. Before importing, select **Validate file before importing** on the **Import Users** page—Braze will scan your file and generate a report identifying rows that will fail entirely (errors) and rows that will succeed with some values skipped (warnings). You can download the report, fix your CSV, and re-upload, or proceed as-is. After the import completes, a downloadable report of any rows that failed is also available, with the exact reason for each issue.
 
 #### Messaging diagnostics dashboard
 
 {% multi_lang_include release_type.md release="Early access" %}
 
-The [Messaging Diagnostics dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/diagnostics_dashboard) provides a high-level breakdown of message sending outcomes, allowing you to spot trends and diagnose potential issues in your messaging setup. This dashboard can help you understand why messages from your campaigns or Canvases may not have been sent as expected.
+The [Messaging Diagnostics dashboard]({{site.baseurl}}/user_guide/analytics/dashboards/dashboard_builder/diagnostics_dashboard/) provides a high-level breakdown of message sending outcomes, allowing you to spot trends and diagnose potential issues in your messaging setup. This dashboard can help you understand why messages from your campaigns or Canvases may not have been sent as expected.
 
 ### BrazeAI<sup>TM</sup>
 
@@ -529,11 +529,11 @@ You can [edit individual fields from a random or existing user]({{site.baseurl}}
 
 #### BrazeAI Decisioning Studio™ Go
 
-You can now set up your integration with [BrazeAI Decisioning Studio™ Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/go) by referencing these configuration articles for:
+You can now set up your integration with [BrazeAI Decisioning Studio™ Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/) by referencing these configuration articles for:
 
-- [Braze]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/go/configuring_braze)
-- [Klaviyo]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/go/configuring_klaviyo)
-- [Salesforce Marketing Cloud]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/go/configuring_sfmc)
+- [Braze]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/)
+- [Klaviyo]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/)
+- [Salesforce Marketing Cloud]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/)
 
 #### New features for Braze Agents
 
@@ -650,7 +650,7 @@ These new fields were added to the following Currents events:
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-[Suppression lists]({{site.baseurl}}/user_guide/audience/segments/suppression_lists) are groups of users who automatically do not receive any campaigns or Canvases. Suppression lists are defined by segment filters, and users enter and exit suppression lists as they meet filter criteria.
+[Suppression lists]({{site.baseurl}}/user_guide/audience/suppression_lists/) are groups of users who automatically do not receive any campaigns or Canvases. Suppression lists are defined by segment filters, and users enter and exit suppression lists as they meet filter criteria.
 
 #### Zero-copy personalization
 
@@ -672,7 +672,7 @@ Use [Deal Cards]({{site.baseurl}}/user_guide/channels/email/html_editor/gmail_pr
 
 #### Templates for Banners
 
-When you [compose your Banner]({{site.baseurl}}/user_guide/channels/banners/create), you can now start with a blank template, use a Braze template, or select a saved Banner template.
+When you [compose your Banner]({{site.baseurl}}/user_guide/channels/banners/create_a_banner/), you can now start with a blank template, use a Braze template, or select a saved Banner template.
 
 ### Robust channels
 
@@ -680,7 +680,7 @@ When you [compose your Banner]({{site.baseurl}}/user_guide/channels/banners/crea
 
 {% multi_lang_include release_type.md release="General availability" %}
  
-[Suppression lists]({{site.baseurl}}/user_guide/audience/segments/suppression_lists/) specify groups of users who will never receive messages. Admins can create suppression lists with segment filters to narrow down a user group the same way you would for segmentation.
+[Suppression lists]({{site.baseurl}}/user_guide/audience/suppression_lists/) specify groups of users who will never receive messages. Admins can create suppression lists with segment filters to narrow down a user group the same way you would for segmentation.
 
 #### LINE click tracking
 
@@ -692,7 +692,7 @@ When [LINE click tracking]({{site.baseurl}}/line/click_tracking/) is turned on, 
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-[SMS and RCS bot click filtering]({{site.baseurl}}/user_guide/channels/sms_mms_rcs/bot_click_filtering/) enhances campaign analytics and workflows by excluding suspected bot clicks. A “bot click” refers to automated clicks on shortened links in SMS and RCS messages, such as those from web crawlers, Android and iOS link previews, or CPaaS security software. This feature facilitates accurate reporting, segmentation, and orchestration to engage real users.
+[SMS and RCS bot click filtering]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/bot_click_filtering/) enhances campaign analytics and workflows by excluding suspected bot clicks. A “bot click” refers to automated clicks on shortened links in SMS and RCS messages, such as those from web crawlers, Android and iOS link previews, or CPaaS security software. This feature facilitates accurate reporting, segmentation, and orchestration to engage real users.
 
 #### Transfer WhatsApp phone numbers
 
@@ -795,7 +795,7 @@ You can save promotion codes to a user’s profile through a User Update step. F
 
 #### Braze Pilot
 
-[Braze Pilot]({{site.baseurl}}/user_guide/getting_started/braze_pilot) is a publicly available app for Android and iOS that allows you to launch messages from your Braze dashboard to your phone. Check out [Getting started with Braze Pilot]({{site.baseurl}}/user_guide/getting_started/braze_pilot/getting_started) for a walkthrough of downloading the app, initializing the connection to your Braze dashboard, and completing the setup.
+[Braze Pilot]({{site.baseurl}}/user_guide/get_started/braze_pilot/) is a publicly available app for Android and iOS that allows you to launch messages from your Braze dashboard to your phone. Check out [Getting started with Braze Pilot]({{site.baseurl}}/user_guide/get_started/braze_pilot/getting_started/) for a walkthrough of downloading the app, initializing the connection to your Braze dashboard, and completing the setup.
 
 ### New Braze partnerships
 
@@ -837,7 +837,7 @@ If you're participating in the [Canvas Context step early access]({{site.baseurl
 
 {% multi_lang_include release_type.md release="General access" %}
 
-[Self-serve custom domains]({{site.baseurl}}/user_guide/channels/sms_mms_rcs/link_shortening/custom_domains/) empower you to configure and manage your own custom domains for SMS, RCS, and WhatsApp—directly from your Braze dashboard. You can easily add, monitor, and manage up to 10 custom domains in one place.
+[Self-serve custom domains]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/link_shortening/custom_domains/) empower you to configure and manage your own custom domains for SMS, RCS, and WhatsApp—directly from your Braze dashboard. You can easily add, monitor, and manage up to 10 custom domains in one place.
 
 #### Segment funnel statistics
 
@@ -890,8 +890,8 @@ Additionally, Braze extracts the product ID and catalog ID from these questions,
 
 We’ve added new use case articles to help you get the most out of BrazeAI™. These guides highlight practical ways to apply AI to your engagement strategies, including:
 
-- [Predictive Churn]({{site.baseurl}}/user_guide/brazeai/predictive_churn/use_case): Identify customers at risk of churning and take action early.
-- [Predictive Events]({{site.baseurl}}/user_guide/brazeai/predictive_events/use_case): Anticipate key user actions and shape experiences in real time.
+- [Predictive Churn]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/use_case/): Identify customers at risk of churning and take action early.
+- [Predictive Events]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/use_case/): Anticipate key user actions and shape experiences in real time.
 - [Recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/use_case ): Deliver more relevant content and products based on customer behavior.
 
 #### MCP server
@@ -945,7 +945,7 @@ You can automatically [export Security Events to Amazon S3]({{site.baseurl}}/use
 
 {% multi_lang_include release_type.md release="General availability" %}
 
-You can use CSV import to record and update user attributes and custom events in Braze like `first_name`, `last_destination_searched`, and `trip_booked`. To get started, see [CSV Import]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/csv_import).
+You can use CSV import to record and update user attributes and custom events in Braze like `first_name`, `last_destination_searched`, and `trip_booked`. To get started, see [CSV Import]({{site.baseurl}}/user_guide/audience/manage_audience/import_users/csv_import/).
 
 #### API usage alerts
 
@@ -969,7 +969,7 @@ These new events were added to the Currents glossary:
 
 #### Default time range for campaign analytics
 
-By default, the time range for [**Campaign Analytics**]({{site.baseurl}}/user_guide/analytics/reporting/campaign_analytics/) will display the last 90 days from the current time. This means that if the campaign was launched more than 90 days ago, the analytics will display as "0" for the given time range. To view all analytics for older campaigns, adjust the reporting time range.
+By default, the time range for [**Campaign Analytics**]({{site.baseurl}}/user_guide/analytics/reports/campaign_analytics/) will display the last 90 days from the current time. This means that if the campaign was launched more than 90 days ago, the analytics will display as "0" for the given time range. To view all analytics for older campaigns, adjust the reporting time range.
 
 #### Updated behavior for Canvas Experiment Paths step
 

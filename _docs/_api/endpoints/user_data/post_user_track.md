@@ -17,7 +17,7 @@ toc_headers: h2
 > Use this endpoint to record custom events and purchases and update user profile attributes.
 
 {% alert note %}
-Braze processes the data passed through the API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point logging. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data/data_points/).
+Braze processes the data passed through the API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point logging. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data/infrastructure/data_points/).
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -55,7 +55,7 @@ For each request component listed in the following table, you must include one o
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-| `attributes` | Optional | Array of attributes objects | See [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
+| `attributes` | Optional | Array of attributes objects | See [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/#migrating-push-tokens) |
 | `events` | Optional | Array of event objects | See [events object]({{site.baseurl}}/api/objects_filters/event_object/) |
 | `purchases` | Optional | Array of purchase objects | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -217,7 +217,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 
 {% alert note %}
-For SMS subscription groups, when you set a group's `subscription_state` to `subscribed`, you can include the optional `use_double_opt_in_logic` parameter set to `true` within that subscription group object to enter the user into the [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) workflow. If this parameter is omitted or set to `false` when `subscription_state` is `subscribed`, the user is subscribed without entering the double opt-in workflow. This parameter is not applied when `subscription_state` is set to other values, such as `unsubscribed`.
+For SMS subscription groups, when you set a group's `subscription_state` to `subscribed`, you can include the optional `use_double_opt_in_logic` parameter set to `true` within that subscription group object to enter the user into the [SMS double opt-in]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in/) workflow. If this parameter is omitted or set to `false` when `subscription_state` is `subscribed`, the user is subscribed without entering the double opt-in workflow. This parameter is not applied when `subscription_state` is set to other values, such as `unsubscribed`.
 {% endalert %}
 
 ### Example request to create an alias-only user

@@ -133,5 +133,5 @@ Verify that the response path mappings are correctly configured and that the API
 ## Additional resources
 
 - [Contentful Content Delivery API documentation](https://www.contentful.com/developers/docs/references/content-delivery-api/)
-- [Braze Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)
-- [Braze Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
+- [Braze Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/)
+- [Braze Content Blocks]({{site.baseurl}}/user_guide/messaging/design_and_edit/content_blocks/)

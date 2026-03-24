@@ -34,7 +34,7 @@ Connect Braze to Lytics to [import](#importing-data-from-braze-to-lytics) email,
 | Lytics account number | A Lytics account number is necessary for configuring the webhook endpoint URL. |
 | Lytics API Token | A Lytics REST API Token with Data Manager permissions. <br><br> This can be created within the Lytics dashboard from **Account Settings Console** > **Access Tokens** > **Create New Token**. |
 | Braze REST API key | A Braze REST API key with `users.track` permission. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze instance | Your [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints). Contact your Braze onboarding manager for this information if you aren't sure. |
+| Braze instance | Your [Braze instance]({{site.baseurl}}/user_guide/administer/personal/sdk_endpoints/). Contact your Braze onboarding manager for this information if you aren't sure. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
@@ -141,7 +141,7 @@ Replace `<ACCOUNT-NUMBER>` with your account number and `<LYTICS-API-TOKEN>` wit
 
 #### Step 3: Create a Webhook on Braze 
 
-In Braze, create a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). Add the Lytics webhook URL in the **Webhook URL** field.
+In Braze, create a new [webhook campaign]({{site.baseurl}}/user_guide/channels/webhooks/create_a_webhook/). Add the Lytics webhook URL in the **Webhook URL** field.
 
 After defining the request type (HTTP `POST` method) and configuring the rest of the webhook details, your webhook is ready for testing and deployment. Here is a sample body of the POST request after configuring the webhook in Braze:
 
@@ -184,7 +184,7 @@ In the **Configure Authorization** prompt that appears, provide a label and a de
 
 #### Step 2: Export your segment data to CSV
 
-In Braze, navigate to **Audience** > **Segments**. Locate the segment you want to export, then select <i class="fas fa-gear" aria-label="Settings"></i> and then **CSV Export User Data**. You can export up to 500,000 users in a segment. For details, refer to [Exporting segment data to CSV]({{site.baseurl}}/user_guide/data/export_braze_data/segment_data_to_csv/).
+In Braze, navigate to **Audience** > **Segments**. Locate the segment you want to export, then select <i class="fas fa-gear" aria-label="Settings"></i> and then **CSV Export User Data**. You can export up to 500,000 users in a segment. For details, refer to [Exporting segment data to CSV]({{site.baseurl}}/user_guide/data/distribution/export_braze_data/segment_data_to_csv/).
 
 #### Step 3: Configure a CSV Import Job
 

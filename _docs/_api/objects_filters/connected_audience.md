@@ -15,7 +15,7 @@ Instead of pre-building a segment for every possible audience combination, you p
 
 ## How it works
 
-1. Define your message by either creating an API-triggered campaign or Canvas in the Braze dashboard, or define message content entirely inline using the [messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects) in your API request. Use [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) or [Canvas context]({{site.baseurl}}/api/objects_filters/context_object/) for dynamic personalization.
+1. Define your message by either creating an API-triggered campaign or Canvas in the Braze dashboard, or define message content entirely inline using the [messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects) in your API request. Use [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) or [Canvas context]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/context/) for dynamic personalization.
 2. Call a supported endpoint and include the `audience` parameter with your filter criteria. You can filter on custom attributes, push subscription status, email subscription status, and last-used-app time.
 3. Braze evaluates the filters at send time, delivering the message only to users who match your criteria.
 

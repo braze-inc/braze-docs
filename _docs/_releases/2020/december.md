@@ -9,15 +9,15 @@ description: "This article contains release notes for December 2020."
 
 ## Updates to Currents messaging event properties
 
-Within Currents email messaging engagement events, the tracking property `ip_pool` has been added. The tracking properties `bounce_reason` and `bounce_code` have also been added to `users.messages.email.Bounce` and `users.messages.email.SoftBounce` events. <br>For the full list, check out the [message engagement events glossary]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
+Within Currents email messaging engagement events, the tracking property `ip_pool` has been added. The tracking properties `bounce_reason` and `bounce_code` have also been added to `users.messages.email.Bounce` and `users.messages.email.SoftBounce` events. <br>For the full list, check out the [message engagement events glossary]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/).
 
 ## Predictive Churn FAQ
 
-A frequently asked questions article has been added to the existing Predictive Churn documentation. To read more about these potential errors, timing clarifications, and data considerations, check out our [Predictive Churn FAQ]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/prediction_faq/).
+A frequently asked questions article has been added to the existing Predictive Churn documentation. To read more about these potential errors, timing clarifications, and data considerations, check out our [Predictive Churn FAQ]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/troubleshooting/).
 
 ## CSV and API exports troubleshooting doc
 
-A troubleshooting doc detailing common CSV and API errors has been added to the Braze documentation. To read more about these errors as well as some frequently asked questions, check out our CSV and API export [troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/) documentation. 
+A troubleshooting doc detailing common CSV and API errors has been added to the Braze documentation. To read more about these errors as well as some frequently asked questions, check out our CSV and API export [troubleshooting]({{site.baseurl}}/user_guide/data/distribution/export_braze_data/export_troubleshooting/) documentation. 
 
 ## EduMe partnership
 

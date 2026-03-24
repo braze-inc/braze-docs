@@ -22,7 +22,7 @@ Predictive Purchases give marketers a powerful tool for identifying and messagin
 
 ## Drag-and-drop editor
 
-With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvases using our new [drag-and-drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/). Users can now drag editor blocks into their emails, allowing more intuitive customization. 
+With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvases using our new [drag-and-drop editing experience]({{site.baseurl}}/user_guide/channels/email/drag_and_drop/). Users can now drag editor blocks into their emails, allowing more intuitive customization. 
 
 ## User alias import
 
@@ -58,7 +58,7 @@ The Braze and [Transcend]({{site.baseurl}}/partners/ecommerce/payments/transcend
 
 ### Tinyclues - Cohort Import
 
-[Tinyclues]({{site.baseurl}}/partners/data_and_analytics/cohort_import/tinyclues/) is an audience-building feature that offers the capability to increase the number of campaigns and revenue without harming customer experience, and analytics to track the performance of CRM campaigns both online and offline. Together, the Braze and Tinyclues integration offers users a path to better CRM planning and strategy, allowing users to send more targeting campaigns, find new product opportunities, and elevate revenue using an incredibly user-friendly UI.
+[Tinyclues]({{site.baseurl}}/partners/splio/) is an audience-building feature that offers the capability to increase the number of campaigns and revenue without harming customer experience, and analytics to track the performance of CRM campaigns both online and offline. Together, the Braze and Tinyclues integration offers users a path to better CRM planning and strategy, allowing users to send more targeting campaigns, find new product opportunities, and elevate revenue using an incredibly user-friendly UI.
 
 ### optilyz - Direct Mail
 

@@ -77,7 +77,7 @@ Support for Factual has been discontinued as of June 2020. Factual was recently 
 
 **Support withdrawn**: January 2020
 
-Support for the [Twilio webhook integration]({{site.baseurl}}/partners/twilio/) has been discontinued as of January 31, 2020. If you wish to still access SMS services with Braze, see our [SMS documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/).
+Support for the [Twilio webhook integration]({{site.baseurl}}/partners/twilio/) has been discontinued as of January 31, 2020. If you wish to still access SMS services with Braze, see our [SMS documentation]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/).
 
 ### Apptimize partnership
 
@@ -88,7 +88,7 @@ If you are currently using [Apptimize with Braze]({{site.baseurl}}/releases/depr
 ### Original in-app messages
 
 **Support withdrawn:** February 2019<br>
-**Replaced by**: [In-App Messaging]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)
+**Replaced by**: [In-App Messaging]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/)
 
 Braze has improved the look and feel of in-app messages to adhere to the latest UX and UI best practices and no longer supports the original in-app messages.
 
@@ -128,9 +128,9 @@ If you need assistance with your Eclipse integration prior to migration, contact
 ### The Raw Event Stream (RES)
 
 **Support withdrawn**: July 2018<br>
-**Replaced by**: [Currents]({{site.baseurl}}/user_guide/data/braze_currents/)
+**Replaced by**: [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/)
 
-The Raw Event Stream was the predecessor to [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) and was deprecated to make room for the future of Braze data.
+The Raw Event Stream was the predecessor to [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/) and was deprecated to make room for the future of Braze data.
 
 ### Delay while idle - GCM feature
 

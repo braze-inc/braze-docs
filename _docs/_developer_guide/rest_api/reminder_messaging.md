@@ -8,7 +8,7 @@ description: "This reference article walks through how to use Braze landing page
 
 # User-selected reminder messaging
 
-> Use Braze [landing pages]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/), custom attributes, and campaigns to let users choose when they want to receive reminder messages about upcoming events or appointments. This approach lets non-technical Braze users create and edit the content for reminder sign-up pages, while the preferences users select can drive segmentation, targeting, and personalization across all of your Braze-powered messaging.
+> Use Braze [landing pages]({{site.baseurl}}/user_guide/messaging/landing_pages/create_landing_pages/), custom attributes, and campaigns to let users choose when they want to receive reminder messages about upcoming events or appointments. This approach lets non-technical Braze users create and edit the content for reminder sign-up pages, while the preferences users select can drive segmentation, targeting, and personalization across all of your Braze-powered messaging.
 
 With this approach, you can:
 
@@ -23,14 +23,14 @@ To complete this guide, you need:
 
 | Requirement | Description |
 | --- | --- |
-| Landing page access | Access and permissions to create [landing pages]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/) in Braze. |
+| Landing page access | Access and permissions to create [landing pages]({{site.baseurl}}/user_guide/messaging/landing_pages/create_landing_pages/) in Braze. |
 | HTML and JavaScript knowledge | Basic familiarity with HTML and JavaScript to customize your landing page. Required for [Option B](#option-b-personal-dates-custom-code-block) only. |
-| Liquid knowledge | Basic familiarity with [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) for templating personalized variables. |
+| Liquid knowledge | Basic familiarity with [Liquid]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/) for templating personalized variables. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Step 1: Create a landing page and link to it from a message
 
-First, [create a Braze landing page]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/). Then, create a message (such as an email) that links users to the landing page.
+First, [create a Braze landing page]({{site.baseurl}}/user_guide/messaging/landing_pages/create_landing_pages/). Then, create a message (such as an email) that links users to the landing page.
 
 {% raw %}
 To automatically associate landing page activity with the recipient's user profile, use the `{% landing_page_url %}` Liquid tag when linking to the page from a Braze message. For example:
@@ -40,7 +40,7 @@ To automatically associate landing page activity with the recipient's user profi
 ```
 {% endraw %}
 
-When a user clicks this link, Braze automatically identifies them, so any preferences they submit are written to their existing profile — no manual URL parameters needed. For a full walkthrough, see [Track users through a form]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/).
+When a user clicks this link, Braze automatically identifies them, so any preferences they submit are written to their existing profile — no manual URL parameters needed. For a full walkthrough, see [Track users through a form]({{site.baseurl}}/user_guide/messaging/landing_pages/tracking_users/).
 
 ## Step 2: Capture preferences on the landing page
 
@@ -56,11 +56,11 @@ For example, add a checkbox labeled "Super Bowl 2026 reminder" that maps to the 
 super_bowl_2026_reminder = true
 ```
 
-These boolean attributes can then be used directly in [segment filters]({{site.baseurl}}/user_guide/engagement_tools/segments/) to build your target audience.
+These boolean attributes can then be used directly in [segment filters]({{site.baseurl}}/user_guide/audience/segments/) to build your target audience.
 
 ### Option B: Personal dates (custom code block)
 
-For dates unique to each user (such as birthdays or anniversaries), use a [**Custom Code** block]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/#basic-blocks) on your landing page to capture the date and write it to Braze using the `lpBridge` API. This approach gives you a date input (or picker) and lets you store preferences in a [nested custom attribute array of objects]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/array_of_objects/), which the drag-and-drop form blocks don't support.
+For dates unique to each user (such as birthdays or anniversaries), use a [**Custom Code** block]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/#basic-blocks) on your landing page to capture the date and write it to Braze using the `lpBridge` API. This approach gives you a date input (or picker) and lets you store preferences in a [nested custom attribute array of objects]({{site.baseurl}}/user_guide/data/activation/attributes/array_of_objects/), which the drag-and-drop form blocks don't support.
 
 When users arrive through the {% raw %}`{% landing_page_url %}`{% endraw %} Liquid tag, Braze already knows who they are, so your script only needs to:
 
@@ -139,7 +139,7 @@ After completing the setup, verify your integration:
 
 ## Considerations
 
-- For a detailed example of how to send messages based on date-based custom attributes, see the email use case in the [REST API messaging guide]({{site.baseurl}}/developer_guide/rest_api/messaging/).
+- For a detailed example of how to send messages based on date-based custom attributes, see the email use case in the [REST API messaging guide]({{site.baseurl}}/api/endpoints/messaging/).
 - If you duplicate a landing page or replace any fields, the component IDs change. Update your custom code block to reflect the new IDs.
 - Nested custom attributes consume [data points]({{site.baseurl}}/user_guide/data/infrastructure/data_points/) for each key in the array of objects. Updating a custom attribute object to null also consumes a data point.
 - The code presented in this guide is intended as an illustrative example. Thoroughly test all code and components within your environment before deploying to production.

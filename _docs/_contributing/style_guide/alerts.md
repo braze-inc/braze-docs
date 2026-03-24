@@ -80,13 +80,13 @@ Refer to the following examples for how and why each alert type is used in our d
 
 {% multi_lang_include alerts/important_alerts.md alert='Web push private browsing' %}
 
-* **Article:** [Push for Web]({{site.baseurl}}/user_guide/message_building_by_channel/push/web/)
+* **Article:** [Push for Web]({{site.baseurl}}/user_guide/channels/push/platform_specific_resources/web/)
 * **Use case:** Includes essential feature caveat that the reader should know as they set up their web push.
 * **Alert reasoning:** Use an Important alert as opposed to a Note alert because the content's importance is greater for a reader to know as they set up their web push.
 
 {% multi_lang_include alerts/important_alerts.md alert='BCC address billable emails' %}
 
-* **Article:** [Email Settings]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/)
+* **Article:** [Email Settings]({{site.baseurl}}/user_guide/administer/global/workspace_settings/email_preferences/)
 * **Use case:**
   - Provides important feature caveat about the possibility of doubling billable emails
   - Redirects reader to contact their customer success manager as needed
@@ -102,13 +102,13 @@ Refer to the following examples for how and why each alert type is used in our d
 
 {% multi_lang_include alerts/note_alerts.md alert='Content Cards frequency capping' %}
 
-* **Article:** [Create a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/)
+* **Article:** [Create a Content Card]({{site.baseurl}}/user_guide/channels/content_cards/create_a_content_card/)
 * **Use case:** Includes additional information that a reader should be aware of as they learn more about Content Cards.
 * **Alert reasoning:** This Note alert provides background information on how Braze cycles older Content Cards for users. This is helpful, supplemental information for the reader to be aware of and does not require the use of an Important or Tip alert.
 
 {% multi_lang_include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
 
-* **Article:** [Custom Attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/)
+* **Article:** [Custom Attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/data_types/)
 * **Use case:** Includes general information that a reader should be aware of. Provides an article to learn more about related content (time attributes).
 * **Alert reasoning:** This information is best relayed using a Note alert as opposed to an Important alert because the content is directed to provide general information. Disregarding this information would not impact the ease of use for this feature.
 
@@ -122,7 +122,7 @@ Refer to the following examples for how and why each alert type is used in our d
 
 {% multi_lang_include alerts/tip_alerts.md alert='SMS segment calculator' %}
 
-* **Article:** [SMS and RCS Billing Calculators]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/)
+* **Article:** [SMS and RCS Billing Calculators]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/billing_calculator/)
 * **Use case:** Includes tool for the reader to understand their message length and SMS segment count. Provides information that may be helpful for the reader in their understanding of copy limits.
 * **Alert reasoning:** This is a lengthy Tip alert because it provides a space for entering the copy to see how many segments a message dispatches. The Tip alert is the best option here because this is a helpful generator for the reader to use in the process of setting up their SMS messages.
 

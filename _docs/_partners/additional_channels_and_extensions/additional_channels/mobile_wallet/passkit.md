@@ -260,12 +260,12 @@ Your raw text will automatically highlight if it is an applicable Braze tag.
 Preview your request in the **Preview** panel or navigate to the **Test** tab, where you can select a random user, an existing user, or customize your own to test your webhook.
 
 {% alert important %}
-Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/channels/webhooks/create_a_webhook/). 
 {% endalert %}
 
 ## Retrieve pass details via Connected Content
 
-In addition to creating and updating passes, you can also retrieve your users' pass metadata via Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to incorporate personalized pass details within your messaging campaigns.
+In addition to creating and updating passes, you can also retrieve your users' pass metadata via Braze [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call/) to incorporate personalized pass details within your messaging campaigns.
 
 **PassKit Connected Content call**
 

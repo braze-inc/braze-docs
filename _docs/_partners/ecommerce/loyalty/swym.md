@@ -87,7 +87,7 @@ From your Wishlist Plus app, go to the **Marketing** tab and find the **Automati
 
 ### Step 3: Create a Braze campaign or Canvas
 
-To automate the delivery of personalized messages for your shoppers, you must create a separate campaign or Canvas in Braze for each event you subscribed to. Each campaign or Canvas should be configured to trigger based on the specific event and use the corresponding event properties to populate dynamic content in your messages. For step-by-step guidance, you can refer to [Getting Started: Campaigns and Canvases]({{site.baseurl}}/user_guide/getting_started/campaigns_canvases/).
+To automate the delivery of personalized messages for your shoppers, you must create a separate campaign or Canvas in Braze for each event you subscribed to. Each campaign or Canvas should be configured to trigger based on the specific event and use the corresponding event properties to populate dynamic content in your messages. For step-by-step guidance, you can refer to [Getting Started: Campaigns and Canvases]({{site.baseurl}}/user_guide/get_started/campaigns_and_canvases/).
 
 ![An action-based event.]({% image_buster /assets/img/swym/braze-canvas-setup.png %})
 

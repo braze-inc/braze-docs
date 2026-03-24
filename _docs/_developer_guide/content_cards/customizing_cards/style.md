@@ -23,7 +23,7 @@ The default Content Cards UI is imported from the UI layer of the Braze SDK. Fro
 ![Two content cards, one with the default font and square corners, and one with rounded corners and a curly font]({% image_buster/assets/img/content_cards/content-card-customization-attributes.png %})
 
 {% alert note %}
-Content Card properties such as `title`, `cardDescription`, `imageUrl`, etc., are directly editable through the [dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details), which is the preferred method for changing these details.
+Content Card properties such as `title`, `cardDescription`, `imageUrl`, etc., are directly editable through the [dashboard]({{site.baseurl}}/user_guide/channels/content_cards/creative_details/), which is the preferred method for changing these details.
 {% endalert %}
 
 
@@ -531,7 +531,7 @@ if (isDarkMode && darkModeImage) {
 {% endtab %}
 {% endtabs %}
 
-This pattern works for any appearance-dependent content, including text, colors, or layouts. Upload your dark mode image assets to the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library), then reference them in a key-value pair.
+This pattern works for any appearance-dependent content, including text, colors, or layouts. Upload your dark mode image assets to the [media library]({{site.baseurl}}/user_guide/messaging/design_and_edit/media_library/image_specifications/), then reference them in a key-value pair.
 
 ### Disabling unread indicator
 

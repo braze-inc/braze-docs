@@ -12,11 +12,11 @@ description: "This article contains release notes for September 2021."
 
 ### Apple Mail Privacy Protection 
 
-Apple's Mail Privacy Protection (MPP) is a privacy update that will be available for users of the Apple Mail app on iOS 15, iPadOS 15, macOS Monterey, and watchOS 8, released in mid-September. For users who opt-in to MPP, emails will now be preloaded using proxy servers, caching images and hindering the ability to leverage tracking pixels for metrics like [open tracking]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#open-tracking-pixel). To learn more about MPP and issues regarding email deliverability metrics and issues with pre-existing campaigns and Canvases that trigger based on these metrics, visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/apple_mail/mpp/).
+Apple's Mail Privacy Protection (MPP) is a privacy update that will be available for users of the Apple Mail app on iOS 15, iPadOS 15, macOS Monterey, and watchOS 8, released in mid-September. For users who opt-in to MPP, emails will now be preloaded using proxy servers, caching images and hindering the ability to leverage tracking pixels for metrics like [open tracking]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#open-tracking-pixel). To learn more about MPP and issues regarding email deliverability metrics and issues with pre-existing campaigns and Canvases that trigger based on these metrics, visit our [documentation]({{site.baseurl}}/user_guide/channels/email/best_practices/apple_mail/mpp/).
 
 ### Push features
 
-iOS 15 introduced new notification features to help users stay focused and avoid frequent interruptions throughout the day. We're excited to offer support for these new features, including [Interruption Levels and Relevance Scores]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/).
+iOS 15 introduced new notification features to help users stay focused and avoid frequent interruptions throughout the day. We're excited to offer support for these new features, including [Interruption Levels and Relevance Scores]({{site.baseurl}}/user_guide/channels/push/platform_specific_resources/ios/notification_options/).
 
 ## Contact Cards
 
@@ -36,4 +36,4 @@ Android and FireOS developer guides have merged into one location. Dedicated Fir
 
 ## Updates to Funnel and Retention Reports
 
-[Funnel Reports]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) and [Retention Reports]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/) are now available for SMS campaigns.
+[Funnel Reports]({{site.baseurl}}/user_guide/analytics/reports/funnel_reports/) and [Retention Reports]({{site.baseurl}}/user_guide/analytics/reports/retention_reports/) are now available for SMS campaigns.

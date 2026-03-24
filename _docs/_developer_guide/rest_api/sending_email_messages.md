@@ -20,7 +20,7 @@ With this approach, you can:
 - Track analytics alongside all of your marketing-owned campaigns and Canvases, including opens, clicks, and bounces.
 - Use message interaction data to trigger subsequent messages, such as follow-up retargeting.
 - Extend the use case with additional Braze features, such as message delays and A/B testing.
-- Optionally, switch to [API-triggered delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) to define your email templates in the Braze dashboard while still triggering sends from your backend.
+- Optionally, switch to [API-triggered delivery]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery/) to define your email templates in the Braze dashboard while still triggering sends from your backend.
 
 To send an email through the REST API, you need to set up an API campaign in the Braze dashboard, then use the [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) endpoint to send the message.
 
@@ -81,7 +81,7 @@ Replace `YOUR_REST_ENDPOINT` with the [REST endpoint URL]({{site.baseurl}}/api/b
 ```
 {% endraw %}
 
-Replace the placeholder values with your actual IDs. The `from` field must use the format `"Display Name <email@address.com>"`. The `body` field accepts valid HTML and supports [Liquid personalization]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), so you can tailor the email content to each recipient. For the full list of parameters supported by the email messaging object, see [Email object]({{site.baseurl}}/api/objects_filters/messaging/email_object/).
+Replace the placeholder values with your actual IDs. The `from` field must use the format `"Display Name <email@address.com>"`. The `body` field accepts valid HTML and supports [Liquid personalization]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/), so you can tailor the email content to each recipient. For the full list of parameters supported by the email messaging object, see [Email object]({{site.baseurl}}/api/objects_filters/messaging/email_object/).
 
 After constructing the request, send the POST request from your backend service to the Braze REST API.
 
@@ -96,6 +96,6 @@ After completing the setup, verify your integration:
 
 ## Considerations
 
-- Confirm that your email campaigns comply with relevant regulations, such as GDPR and CAN-SPAM, by including necessary opt-out options and privacy notices. For more information, see [Managing user subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) and [Email best practices]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/).
-- Use Braze [personalization features]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) to tailor email content to individual consumers, including dynamic content and user-specific data.
+- Confirm that your email campaigns comply with relevant regulations, such as GDPR and CAN-SPAM, by including necessary opt-out options and privacy notices. For more information, see [Managing user subscriptions]({{site.baseurl}}/user_guide/channels/email/subscriptions/) and [Email best practices]({{site.baseurl}}/user_guide/channels/email/best_practices/).
+- Use Braze [personalization features]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/) to tailor email content to individual consumers, including dynamic content and user-specific data.
 - The Braze REST API offers additional [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging/) for scheduling messages, triggering campaigns, and more.

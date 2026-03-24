@@ -67,7 +67,7 @@ Once the extension is installed, click the Sendbird icon in your browser's toolb
 
 ### Step 4: Map Sendbird user ID to Braze user ID
 
-A Sendbird user ID must be added to a Braze user profile as a [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) for the integration to be used. You can upload and update user profiles via CSV files from the [User import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv) page. Alternatively, you can use the Braze user ID as the Sendbird user ID.
+A Sendbird user ID must be added to a Braze user profile as a [custom attribute]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes/) for the integration to be used. You can upload and update user profiles via CSV files from the [User import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv) page. Alternatively, you can use the Braze user ID as the Sendbird user ID.
 
 ### Step 5: Set up your webhook template
 

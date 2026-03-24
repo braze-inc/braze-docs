@@ -37,7 +37,7 @@ This all works together to create successful interactions between your user base
 Braze is built on a streaming data architecture leveraging Snowflake, Kafka, MongoDB, and Redis. Data from many sources can be loaded into Braze through SDK and API. The platform can handle any data in real time, regardless of how it’s nested or structured. Data in Braze is stored on the user profile. 
 
 {% alert tip %}
-Braze can track data for a user throughout their journey with you, from the time that they're anonymous to the time they're logged in to your app and known. User IDs, called `external_id`s in Braze, should be set for each of your users. These should be unchanging and accessible when a user opens the app, allowing you to track your users across devices and platforms. See the [User lifecycle article]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) for best practices.
+Braze can track data for a user throughout their journey with you, from the time that they're anonymous to the time they're logged in to your app and known. User IDs, called `external_id`s in Braze, should be set for each of your users. These should be unchanging and accessible when a user opens the app, allowing you to track your users across devices and platforms. See the [User lifecycle article]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/) for best practices.
 {% endalert %}
 
 ![Braze imports backend data sources from the API, frontend data sources from the SDK, data warehouse data from Braze Cloud Data Ingestion, and from partner integrations. This data is exported through the Braze API ]({% image_buster /assets/img/getting-started/import-export.png %}){: style="display:block;margin:auto;" }
@@ -59,9 +59,9 @@ Braze uses different data storage systems for various features. Understanding wh
 
 #### Snowflake-powered features
 - [SQL Segment Extensions]({{site.baseurl}}/user_guide/audience/segments/segment_extension/sql_segments/)
-- [Prediction Suite]({{site.baseurl}}/user_guide/brazeai/predictive_suite/)
-- [Personalized Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/) and [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant)
-- [AI Personalized Item Recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/)
+- [Prediction Suite]({{site.baseurl}}/user_guide/brazeai/)
+- [Personalized Paths]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/experiment_step/personalized_paths/) and [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant)
+- [AI Personalized Item Recommendations]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/ai/)
 - [Estimated Real Open Rate]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#estimated-real-open-rate) (does not use custom events)
 
 {% alert important %}
@@ -72,18 +72,18 @@ Braze uses different data storage systems for various features. Understanding wh
 Braze can pull data from user databases, offline transactions, and data warehouses through our [REST API]({{site.baseurl}}/api/endpoints/user_data). 
 
 ### Frontend data sources through Braze SDK
-Braze automatically captures first-party data from frontend data sources, such as users' devices, by way of the [Braze SDK]({{site.baseurl}}/user_guide/getting_started/web_sdk/). The SDK handles new (anonymous) users and manages data on their user profile throughout their lifecycle. 
+Braze automatically captures first-party data from frontend data sources, such as users' devices, by way of the [Braze SDK]({{site.baseurl}}/user_guide/get_started/sdk_overview/). The SDK handles new (anonymous) users and manages data on their user profile throughout their lifecycle. 
 
 ### Partner integrations
 Braze has over 150 technology partners, which we call "Alloys." You can supplement your data feeds through a meaningfully robust network of [interoperable technologies and data APIs.]({{site.baseurl}}/partners/home) 
 
 ### Direct warehouse connection through Braze Cloud Data Ingestion
-You can stream customer data from your data warehouse into the platform through [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/) in just a few minutes, allowing you to sync relevant user attributes, events, and purchases. The Cloud Data Ingestion integration supports complex data structures including nested JSON and arrays of objects.
+You can stream customer data from your data warehouse into the platform through [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/) in just a few minutes, allowing you to sync relevant user attributes, events, and purchases. The Cloud Data Ingestion integration supports complex data structures including nested JSON and arrays of objects.
 
 Cloud Data Ingestion can sync data from Snowflake, Amazon Redshift, Databricks, and Google BigQuery.
 
 ## Classification {#classification}
-The classification layer enables your team to dynamically classify and build audiences, called [segments]({{site.baseurl}}/user_guide/engagement_tools/segments), based on data passing through Braze. 
+The classification layer enables your team to dynamically classify and build audiences, called [segments]({{site.baseurl}}/user_guide/audience/segments/), based on data passing through Braze. 
 
 {% alert note %}
 The classification, orchestration, and personalization layers are where your marketing team will do much of their work. They interface with these layers most often through the Braze dashboard, our web interface. Developers have a role in setting up and customizing these layers.
@@ -105,7 +105,7 @@ API-triggered campaigns are ideal for more advanced transactional use-cases. The
 Braze allows you to remotely enable or disable functionality for a selection of users through [feature flags]({{site.baseurl}}/developer_guide/feature_flags/). This lets your marketers target the correct segment of your user base with messaging for features you haven't yet rolled out to your entire audience. But more than that, feature flags can be used to turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence.
 
 ## Personalization {#personalization}
-The personalization layer represents the ability to deliver dynamic content in your messages. By using Liquid, a widely-used personalization language, your team can dynamically pull in existing data to display the message tailored to each recipient. Additionally, you can insert any information accessible on your webserver or through API directly into the messages you're sending, such as push notifications or emails, by using [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). Connected Content builds on top of Liquid and uses familiar syntax.
+The personalization layer represents the ability to deliver dynamic content in your messages. By using Liquid, a widely-used personalization language, your team can dynamically pull in existing data to display the message tailored to each recipient. Additionally, you can insert any information accessible on your webserver or through API directly into the messages you're sending, such as push notifications or emails, by using [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/). Connected Content builds on top of Liquid and uses familiar syntax.
 
 And because this dynamic content is programmable, marketers can include computed values, responses from other calls, or product catalog items. After you've set these systems up during implementation, your marketing team can do this with little to no support from technical teams. 
 
@@ -115,7 +115,7 @@ The action layer enables your actual messaging to your users. The purpose of the
 ### Messaging channels
 Braze was designed to handle an evolving technological landscape with its channel-agnostic, user-centric data model. The dashboard manages message delivery and transactional triggers. For example, your marketers can trigger an SMS message offering a coupon for one of your newly-opened storefronts when a user enters the geofence set near this location, or send a user an email to let them know their favorite show has a new season.
 
-The [Braze SDK]({{site.baseurl}}/user_guide/getting_started/web_sdk/) powers additional messaging channels: push, in-app messages, and Content Cards. You integrate the SDK with your app or site to allow your marketing team to use the Braze dashboard to coordinate their campaigns across all supported messaging channels.
+The [Braze SDK]({{site.baseurl}}/user_guide/get_started/sdk_overview/) powers additional messaging channels: push, in-app messages, and Content Cards. You integrate the SDK with your app or site to allow your marketing team to use the Braze dashboard to coordinate their campaigns across all supported messaging channels.
 
 ![]({% image_buster /assets/img/getting_started/channels.png %})
 
@@ -123,7 +123,7 @@ The [Braze SDK]({{site.baseurl}}/user_guide/getting_started/web_sdk/) powers add
 Critically, all end-user interactions with Braze are tracked so you can measure your engagement and outreach. And after Braze has aggregated your data from all these sources, it can be exported back to your tech stack using a variety of tools, closing the loop.
 
 ### Currents
-[Currents]({{site.baseurl}}/user_guide/data/braze_currents/) is an optional Braze add-on that provides a granular streaming export that continuously feeds other destinations of your stack. Currents is a per user per event raw data feed that exports data every five minutes, or every 15,000 events, whichever comes first. Examples of some downstream destinations for Currents would be Segment, S3, Redshift and Mixpanel, among others. 
+[Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/) is an optional Braze add-on that provides a granular streaming export that continuously feeds other destinations of your stack. Currents is a per user per event raw data feed that exports data every five minutes, or every 15,000 events, whichever comes first. Examples of some downstream destinations for Currents would be Segment, S3, Redshift and Mixpanel, among others. 
 
 ### Snowflake data sharing
 Snowflake’s [Secure Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/) functionality allows Braze to give you secure access to data on our Snowflake portal without worrying about workflow friction, failure points, and unnecessary costs that come with typical data provider relationships. All sharing is accomplished through Snowflake’s unique services layer and metadata store: no data is actually copied or transferred between accounts. This is an important concept because shared data does not take up any storage in a consumer account and, therefore, does not contribute to your monthly data storage charges. The only charges to consumers are for the computing resources (that is, virtual warehouses) used to query the shared data.
@@ -132,7 +132,7 @@ Snowflake’s [Secure Data Sharing]({{site.baseurl}}/partners/data_and_analytics
 The Braze API provides [endpoints]({{site.baseurl}}/api/endpoints/export) that allow you to programmatically export aggregate analytics, as well as to export individual user data. This data can be exported for audiences and segments of any size. 
 
 ### CSVs
-Lastly, there is an option to download your aggregate-level data directly from the dashboard as a [CSV]({{site.baseurl}}/user_guide/data/export_braze_data/). The CSV option easily allows your team members to export data from Braze.
+Lastly, there is an option to download your aggregate-level data directly from the dashboard as a [CSV]({{site.baseurl}}/user_guide/data/distribution/export_braze_data/). The CSV option easily allows your team members to export data from Braze.
 
 {% alert tip %}
 While the CSV export has a base limit of 500,000 rows, the APIs do not have a limit in this regard.

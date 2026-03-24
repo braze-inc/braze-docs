@@ -85,7 +85,7 @@ The Shopify marketing opt-in status for email and SMS marketing can be updated i
 - **Checkout process:** If a user updates their opt-in status during checkout.
 
 {% alert note %}
-The email marketing opt-in status from Shopify will not change a user’s [global email subscription state]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) in Braze. The default subscription state when a user profile is created is “subscribed.” Remember to use the subscription group as part of your campaign or Canvas entry criteria.
+The email marketing opt-in status from Shopify will not change a user’s [global email subscription state]({{site.baseurl}}/user_guide/channels/email/subscriptions/) in Braze. The default subscription state when a user profile is created is “subscribed.” Remember to use the subscription group as part of your campaign or Canvas entry criteria.
 {% endalert %}
 
 This table shows which Shopify marketing opt-in states correlate with the statuses within your Braze subscription group. 
@@ -113,7 +113,7 @@ Users who enter their email address into the Shopify newsletter footer will expe
 3. The Braze SDK updates the anonymous profile with the email address.
 
 {% alert note %}
-This might result in a duplicate profile until the user identifies themselves by creating their account, logging into their account, or placing an order. Braze offers bulk merging tools to help you automate the reconciliation of duplicate profiles. Refer to [Duplicate users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/) for more details.
+This might result in a duplicate profile until the user identifies themselves by creating their account, logging into their account, or placing an order. Braze offers bulk merging tools to help you automate the reconciliation of duplicate profiles. Refer to [Duplicate users]({{site.baseurl}}/user_guide/audience/manage_audience/merge_duplicate_users/) for more details.
 {% endalert %}
 
 ##### Users who have already logged into their account
@@ -123,8 +123,8 @@ Braze will create a user profile containing the email address and Shopify custom
 #### Braze sign-up forms
 
 Braze provides two types of sign-up form templates:
-- **[Email sign-up forms]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_capture/):** Create these using the drag-and-drop editor.
-- **[Traditional editor email capture form]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form/):** A more straightforward form for capturing email addresses.
+- **[Email sign-up forms]({{site.baseurl}}/user_guide/messaging/templates/in_app_message_templates/email_capture/):** Create these using the drag-and-drop editor.
+- **[Traditional editor email capture form]({{site.baseurl}}/user_guide/channels/in_app_messages/message_types/email_capture_form/):** A more straightforward form for capturing email addresses.
 
 When you use these sign-up form templates, Braze automatically updates the global email subscription status on the user profile. For more details on how the global email subscription state is handled, including information on on email validation, refer to documentation for each form template type.
 

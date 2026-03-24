@@ -10,7 +10,7 @@ search_tag: Partner
 
 # AppsFlyer Audiences
 
-> This article describes how to import user cohorts from AppsFlyer to Braze by using the [AppsFlyer Audiences](https://www.appsflyer.com/product/audiences/) integration. For more information on integrating AppsFlyer and its other functionalities, such as mobile attribution see the main [AppsFlyer article]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/).
+> This article describes how to import user cohorts from AppsFlyer to Braze by using the [AppsFlyer Audiences](https://www.appsflyer.com/product/audiences/) integration. For more information on integrating AppsFlyer and its other functionalities, such as mobile attribution see the main [AppsFlyer article]({{site.baseurl}}/partners/message_orchestration/deeplinking/appsflyer/appsflyer/).
 
 ## Prerequisites
 

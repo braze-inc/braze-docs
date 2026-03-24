@@ -60,7 +60,7 @@ This endpoint merges the following fields if they're not found on the target use
 
 - First name
 - Last name
-- Email addresses (unless they are [encrypted]({{site.baseurl}}/user_guide/data/field_level_encryption/))
+- Email addresses (unless they are [encrypted]({{site.baseurl}}/user_guide/data/infrastructure/field_level_encryption/))
 - Gender
 - Date of birth
 - Phone number
