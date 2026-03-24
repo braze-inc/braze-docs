@@ -11,6 +11,8 @@ page_type: reference
 
 > Auf dieser Seite erfahren Sie, wie Sie die Unterstützung für die Cloud-Datenaufnahme einrichten und relevante Daten von S3 mit Braze synchronisieren.
 
+Diese Seite zeigt die Synchronisierungs- und Quellschritte, die sich derzeit im Early Access (EA) befinden. Die Schritte für die allgemein verfügbare Version finden Sie unter [Allgemein verfügbare Version](#general-availability-experience).
+
 ## Funktionsweise
 
 Sie können Cloud Data Ingestion (CDI) für S3 verwenden, um einen oder mehrere S3-Buckets in Ihrem AWS-Konto direkt in Braze zu integrieren. Wenn neue Dateien in S3 veröffentlicht werden, wird eine Nachricht an SQS gesendet, und Braze Cloud Data Ingestion nimmt diese neuen Dateien auf. 
@@ -67,13 +69,13 @@ Eine SQS-Warteschlange muss global eindeutig sein (z. B. kann nur eine für eine
 Stellen Sie sicher, dass Sie diese SQS in derselben Region anlegen, in der Sie auch den Bucket erstellt haben.
 {% endalert %}
 
-Notieren Sie sich unbedingt den ARN und die URL der SQS, da Sie diese während der Konfiguration häufig benötigen werden.
+Notieren Sie sich unbedingt den ARN und die URL der SQS-Warteschlange, da Sie diese während der Konfiguration häufig benötigen werden.
 
-![Auswählen von „Erweitert" mit einem Beispiel-JSON-Objekt, um festzulegen, wer auf eine Warteschlange zugreifen darf.]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
+![Auswählen von „Advanced" mit einem Beispiel-JSON-Objekt, um festzulegen, wer auf eine Warteschlange zugreifen darf.]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
 
 ### 3. Schritt: Zugriffsrichtlinie einrichten
 
-Um die Zugriffsrichtlinie einzurichten, wählen Sie **Erweiterte Optionen**. 
+Um die Zugriffsrichtlinie einzurichten, wählen Sie **Advanced options**. 
 
 Fügen Sie die folgende Anweisung an die Zugriffsrichtlinie der Warteschlange an. Achten Sie darauf, `YOUR-BUCKET-NAME-HERE` durch Ihren Bucket-Namen, `YOUR-SQS-ARN` durch den ARN Ihrer SQS-Warteschlange und `YOUR-AWS-ACCOUNT-ID` durch Ihre AWS-Konto-ID zu ersetzen: 
 
@@ -155,27 +157,26 @@ Erstellen Sie eine IAM-Richtlinie, um Braze die Interaktion mit Ihrem Quell-Buck
 
 ### 6. Schritt: IAM-Rolle erstellen
 
-Um die Einrichtung in AWS abzuschließen, erstellen Sie eine IAM-Rolle und hängen die IAM-Richtlinie aus Schritt 4 an. 
+Um die Einrichtung in AWS abzuschließen, erstellen Sie eine IAM-Rolle und hängen die IAM-Richtlinie aus Schritt 5 an. 
 
 1. Gehen Sie in demselben IAM-Bereich der Konsole, in dem Sie die IAM-Richtlinie erstellt haben, zu **Roles** > **Create Role**. 
 
 ![Der Button „Create Role".]({% image_buster /assets/img/create_role_1_list.png %})
 
 {: start="2"}
-2. Kopieren Sie die Braze-AWS-Konto-ID aus Ihrem Braze-Dashboard. Gehen Sie zu **Cloud Data Ingestion**, wählen Sie **Create New Data Sync** und dann **S3 Import**.
-3. Wählen Sie in AWS **Another AWS Account** als Typ für vertrauenswürdige Entitäten aus. Geben Sie Ihre Braze-Konto-ID an. Aktivieren Sie das Kontrollkästchen **Require external ID**.
-4. Gehen Sie in Braze zu **Data Settings** > **Cloud Data Ingestion**, wählen Sie **Create New Data Sync** und anschließend **S3 Import** im Abschnitt Dateiquellen.
-5. Kopieren Sie die automatisch generierte **Braze Account ID**. 
+2. Wählen Sie in AWS **Another AWS Account** als Typ für vertrauenswürdige Entitäten aus. Geben Sie Ihre Braze-Konto-ID an. Aktivieren Sie das Kontrollkästchen **Require external ID**.
+3. Gehen Sie in Braze zu **Data Settings** > **Cloud Data Ingestion** > **Sources**, wählen Sie **Add data source** und dann **Amazon S3** im Abschnitt Dateiquellen.
+4. Kopieren Sie die automatisch generierte **Braze Account ID**. 
 
-![Abschnitt „Zugangsdaten" mit dem Feld „Braze Account ID".]({% image_buster /assets/img/braze_account_id.png %})
+![Die Seite „Add New Source" mit den Abschnitten „Source Name" und „S3 Connection Details".]({% image_buster /assets/img/braze_account_id.png %})
 
 {: start="6"}
-6. Fügen Sie in AWS die Konto-ID ein und wählen Sie anschließend **Next**.
+5. Fügen Sie in AWS die Konto-ID ein und wählen Sie anschließend **Next**.
 
 ![Die S3-Seite „Create Role". Diese Seite enthält Felder für den Rollennamen, die Rollenbeschreibung, vertrauenswürdige Entitäten, Richtlinien und die Berechtigungsgrenze.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
 {: start="7"}
-7. Hängen Sie die in Schritt 4 erstellte Richtlinie an die Rolle an. Suchen Sie die Richtlinie in der Suchleiste und setzen Sie ein Häkchen neben der Richtlinie, um sie anzuhängen. Wählen Sie anschließend **Next**.
+6. Hängen Sie die in Schritt 4 erstellte Richtlinie an die Rolle an. Suchen Sie die Richtlinie in der Suchleiste und setzen Sie ein Häkchen neben der Richtlinie, um sie anzuhängen. Wählen Sie anschließend **Next**.
 
 ![Rollen-ARN mit der ausgewählten Richtlinie „new-policy-name".]({% image_buster /assets/img/create_role_3_attach.png %})
 
@@ -184,13 +185,42 @@ Geben Sie der Rolle einen Namen und eine Beschreibung und wählen Sie **Create R
 ![Eine Beispielrolle mit dem Namen „new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})
 
 {: start="8"}
-8. Notieren Sie sich den ARN der erstellten Rolle und die generierte externe ID, da Sie diese für die Erstellung der Cloud-Datenaufnahme-Integration benötigen.
+7. Notieren Sie sich den ARN der erstellten Rolle und die generierte externe ID, da Sie diese für die Erstellung der Cloud-Datenaufnahme-Integration benötigen.
 
 ## Cloud-Datenaufnahme in Braze einrichten
 
-{% alert important %}
-Kund:innen, die ab Februar 2026 oder später mit dem Onboarding beginnen, erhalten möglicherweise frühzeitig Zugriff auf eine neue CDI-UI, in der Quellen und Synchronisierungen separat konfiguriert werden. Erstellen Sie in dieser neuen UI zunächst eine S3-Quelle mit Ihren Zugangsdaten, Ihrem Bucket und Ihrer Region. Erstellen Sie anschließend eine Synchronisierung mit Ihrer SQS-URL und Ihrem Ordnerpfad (optional).
-{% endalert %}
+1. Erstellen Sie zunächst eine neue Quelle im Braze-Dashboard. Gehen Sie zu **Data Settings** > **Cloud Data Ingestion** > **Sources**, wählen Sie **Add data source** und dann **Amazon S3**.
+2. Wählen Sie einen Namen für Ihre Quelle und geben Sie die Informationen aus dem AWS-Einrichtungsprozess ein, um eine neue Quelle zu erstellen. Geben Sie Folgendes an:
+
+  - Rollen-ARN
+  - Externe ID
+  - Bucket-Name
+  - Region
+
+![Der Abschnitt „S3 Connection Details" mit den Feldern für Zugangsdaten (AWS-Einrichtung und Braze-Einrichtung) und Konfiguration.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
+
+{: start="3"}
+3. Wählen Sie **Test connection**, um zu bestätigen, dass Braze auf Ihren Bucket zugreifen kann. Nach einem erfolgreichen Test wählen Sie **Connect to Source**. Falls die Verbindung fehlschlägt, wird eine Fehlermeldung angezeigt, die bei der Fehlerbehebung hilft.
+
+{: start="4"}
+4. Erstellen Sie als Nächstes eine neue Synchronisierung. Gehen Sie zu **Data Settings** > **Cloud Data Ingestion** > **Syncs** und wählen Sie **Create data sync**.
+
+![Die Seite „Create New Sync" mit der Konfiguration für Synchronisierungsname und Datenquelle.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})
+
+{: start="5"}
+5. Wählen Sie einen Namen für Ihre Synchronisierung. Wählen Sie dann eine aktive S3-Quelle aus und geben Sie Ihre Quelltabelle für die Synchronisierung ein. Wählen Sie einen Datentyp und wählen Sie **Test Connection**.
+
+![Eine Option zum Testen der Verbindung mit einer Datenvorschau.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
+
+6. Geben Sie die restlichen Informationen aus dem AWS-Einrichtungsprozess ein. Geben Sie Folgendes an:
+- SQS-URL (muss für jede neue Integration eindeutig sein)
+- Ordnerpfad (optional, muss bei allen Synchronisierungen in einem Workspace eindeutig sein)
+
+7. Wählen Sie einen Datentyp und wählen Sie **Test Connection**, um zu bestätigen, dass Braze die verfügbaren Dateien auflisten kann (nicht die Daten in diesen Dateien). Nach Erfolg wählen Sie **Next: Notifications**.
+8. Fügen Sie Kontakt-E-Mail(s) für Benachrichtigungen hinzu, falls die Synchronisierung aufgrund von Zugriffs- oder Berechtigungsproblemen unterbrochen wird. Aktivieren Sie optional Benachrichtigungen für Fehler auf Nutzer:innen-Ebene und erfolgreiche Synchronisierungen.
+9. Erstellen Sie die Synchronisierung.
+
+{% details Allgemein verfügbare Version %}
 
 1. Um eine neue Integration zu erstellen, gehen Sie zu **Data Settings** > **Cloud Data Ingestion**, wählen Sie **Create New Data Sync** und dann **S3 Import** im Abschnitt Dateiquellen. 
 2. Geben Sie die Informationen aus dem AWS-Einrichtungsprozess ein, um eine neue Synchronisierung zu erstellen. Geben Sie Folgendes an:
@@ -202,26 +232,20 @@ Kund:innen, die ab Februar 2026 oder später mit dem Onboarding beginnen, erhalt
   - Ordnerpfad (optional, muss bei allen Synchronisierungen in einem Workspace eindeutig sein)
   - Region
 
-![Beispiel für Sicherheitszugangsdaten, wie sie in S3 angezeigt werden, um eine neue Import-Synchronisierung zu erstellen.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
-
 {: start="3"}
 3. Benennen Sie Ihre Integration und wählen Sie den Datentyp für diese Integration aus. 
-
-![Einrichtung der Synchronisierungsdetails für „cdi-s3-as-source-integration" mit Nutzerattributen als Datentyp.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})
 
 {: start="4"}
 4. Fügen Sie eine Kontakt-E-Mail für Benachrichtigungen hinzu, falls die Synchronisierung aufgrund von Zugriffs- oder Berechtigungsproblemen unterbrochen wird. Aktivieren Sie optional Benachrichtigungen für Fehler auf Nutzer:innen-Ebene und erfolgreiche Synchronisierungen. 
 
-![Einrichten der Benachrichtigungseinstellungen für Synchronisierungsfehler.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})
-
 {: start="5"}
 5. Wählen Sie abschließend **Test connection**, um zu bestätigen, dass Braze auf Ihren Bucket zugreifen und die verfügbaren Dateien auflisten kann (nicht die Daten in diesen Dateien). Speichern Sie anschließend die Synchronisierung. 
 
-![Eine Option zum Testen der Verbindung mit einer Datenvorschau.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
+{% enddetails %}
 
 ## Erforderliche Dateiformate
 
-Cloud Data Ingestion unterstützt JSON-, CSV- und Parquet-Dateien. Die erforderlichen Spalten hängen vom Datentyp ab:
+Cloud Data Ingestion unterstützt JSON-, CSV- und Parquet-Dateien. Die erforderlichen Spalten hängen vom Datentyp ab: 
 
 - Nutzerdaten (Attribute, angepasste Events, Kauf-Events) verwenden Nutzer:innen-Bezeichner und eine Nutzlast
 - Katalogdaten verwenden Katalog-Bezeichner
@@ -239,7 +263,7 @@ Für Nutzerdaten-Synchronisierungen (Attribute, angepasste Events, Kauf-Events) 
 | `EXTERNAL_ID` | Identifiziert die Nutzer:in, die Sie aktualisieren möchten. Dieser Wert sollte dem in Braze verwendeten `external_id` entsprechen. |
 | `ALIAS_NAME` und `ALIAS_LABEL` | Diese beiden Spalten erstellen ein Nutzer-Alias-Objekt. `alias_name` sollte ein eindeutiger Bezeichner sein, und `alias_label` gibt den Typ des Alias an. Nutzer:innen können mehrere Aliase mit unterschiedlichen Labels haben, aber nur einen `alias_name` pro `alias_label`. |
 | `BRAZE_ID` | Der Braze-Nutzer:innen-Bezeichner. Dieser wird vom Braze SDK generiert, und neue Nutzer:innen können nicht mit einer Braze-ID über Cloud Data Ingestion erstellt werden. Um neue Nutzer:innen anzulegen, geben Sie eine externe Nutzer-ID oder einen Nutzer-Alias an. |
-| `EMAIL` | Die E-Mail-Adresse der Nutzer:in. Wenn mehrere Profile mit derselben E-Mail-Adresse vorhanden sind, wird das zuletzt aktualisierte Profil bei Updates bevorzugt. Wenn Sie sowohl E-Mail als auch Telefonnummer angeben, wird die E-Mail als primärer Bezeichner verwendet. |
+| `EMAIL` | Die E-Mail-Adresse der Nutzer:in. Wenn mehrere Profile mit derselben E-Mail-Adresse vorhanden sind, wird das zuletzt aktualisierte Profil bei Updates bevorzugt. Wenn Sie sowohl E-Mail als auch Telefonnummer angeben, verwendet Braze die E-Mail als primären Bezeichner. |
 | `PHONE` | Die Telefonnummer der Nutzer:in. Wenn mehrere Profile mit derselben Telefonnummer vorhanden sind, wird das zuletzt aktualisierte Profil bei Updates bevorzugt. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
