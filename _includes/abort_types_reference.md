@@ -14,7 +14,6 @@ These abort types can occur on any messaging channel.
 | --- | --- |
 | `liquid_abort_message` | The [abort_message]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/) Liquid tag was called, so the send was canceled. |
 | `template_parse_error` | The message template could not be parsed due to a syntax or rendering error, so the send was canceled. |
-| `quiet_hours` | The message was suppressed because it fell within [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours) with the fallback set to abort. This abort type is not logged in Currents. |
 | `rate_limit` | The message was aborted because it exceeded the configured [rate limit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/). |
 | `campaign_disabled` | The campaign was disabled before the message could be sent. |
 | `campaign_does_not_exist` | The campaign associated with this message no longer exists. |
@@ -54,10 +53,8 @@ These abort types can occur on any messaging channel.
 | `abort_type` value | Description |
 | --- | --- |
 | `exhausted_link_shortening_retries` | Link shortening failed after the maximum number of retries. |
-| `no_email_body_content` | The email body is empty and cannot be sent. This abort type is not logged in Currents. |
 | `missing_email` | The user does not have an email address on their profile. |
 | `invalid_domain` | The email address has an invalid domain. |
-| `invalid_email_address_after_decryption` | The email address was invalid after being decrypted. This abort type is not logged in Currents. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endif %}
