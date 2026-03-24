@@ -11,7 +11,7 @@ channel:
 
 # Send emails to Apple Private Relay
 
-> Apple's single sign-on (SSO) feature allows its users to share their email addresses (`example@icloud.com`) or to hide their email addresses by masking what's provided to brands (`tq1234snin@privaterelay.appleid.com`) instead of their personal email address. Apple will then forward messages sent to the relay addresses to the user's actual email address. 
+> Apple's single sign-on (SSO) feature allows its users to share their email addresses (`example@icloud.com`) or to hide their email addresses by masking what's provided to brands (`tq1234snin@privaterelay.appleid.com`) instead of their personal email address. Apple will then forward messages sent to the relay addresses to the user's actual email address.
 
 To send emails to Apple's private email relay, register your sending domains with Apple. If you don't configure your domains with Apple, emails sent to relay addresses will result in bounces.
 
