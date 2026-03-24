@@ -521,7 +521,7 @@ Choose a name for your source and input your Databricks credentials and configur
 
 #### Step 2.2: Test connection and connect to source
 
-Next, select **Test connection**. Once successful, finalize reamining settings and click **Connect to Source**. If the connection fails, an error message appears to help troubleshoot the issue.
+Next, select **Test connection**. Once successful, finalize remaining settings and click **Connect to Source**. If the connection fails, an error message appears to help troubleshoot the issue.
 
 {% alert note %}
 You must successfully test a source before it can be created. If you close the creation page, your source is not saved.
