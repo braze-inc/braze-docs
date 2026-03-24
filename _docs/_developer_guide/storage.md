@@ -137,7 +137,7 @@ The following cookies are stored:
 
 ### Changing cookie expiry {#cookie-expiry}
 
-By default, Braze cookies expire after 400 days. To override this, use the `cookieExpiryInDays` option when initializing the Web SDK. Values must be greater than 0; if the option is omitted or set to 0 or less, the 400-day default applies. (Requires Web SDK v6.6.0+)
+By default, Braze cookies expire after 400 days. To override this, use the `cookieExpiryInDays` option when initializing the Web SDK. Values must be greater than 0; if the option is omitted or set to 0 or less, the 400-day default applies. This option requires Web SDK 6.6.0 or later.
 
 ```javascript
 import * as braze from"@braze/web-sdk";
