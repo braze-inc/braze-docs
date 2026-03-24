@@ -4,10 +4,10 @@ article_title: Hilfeartikel
 page_order: 1
 layout: dev_guide
 guide_top_header: "Hilfeartikel"
-guide_top_text: "Wir haben eine Vielzahl von Hilfeartikeln, die Ihnen helfen können, Probleme zu lösen und Abhängigkeiten in Ihren Kampagnen aufzudecken. Wenn Sie einen Vorschlag für einen neuen Hilfeartikel haben, hinterlassen Sie bitte ein Feedback am Ende dieser oder einer anderen Hilfeartikelseite. Sie können auch lernen, wie Sie selbst einen Artikel schreiben können, indem Sie den <a href='https://www.braze.com/docs/contributing/home'>Braze Contributor Guide</a> besuchen. <br> <br>Wählen Sie aus den folgenden beliebten Themen oder sehen Sie sich die anderen Artikel im Navigationspanel an."
+guide_top_text: "Wir haben eine Vielzahl von Hilfeartikeln, die Ihnen helfen können, Probleme zu lösen und Abhängigkeiten in Ihren Kampagnen aufzudecken. Wenn Sie einen Vorschlag für einen neuen Hilfeartikel haben, hinterlassen Sie bitte Feedback am Ende dieser oder einer anderen Hilfeartikelseite. <br> <br>Wählen Sie aus den folgenden beliebten Themen oder sehen Sie sich die anderen Artikel im Navigations-Panel an."
 
 page_type: landing
-description: "Auf dieser Landing Page finden Sie Hilfeartikel, die Ihnen bei der Lösung von Problemen und der Aufdeckung von Abhängigkeiten bei der Verwendung von Braze helfen können."
+description: "Auf dieser Landing-Page finden Sie Hilfeartikel, die Ihnen bei der Lösung von Problemen und der Aufdeckung von Abhängigkeiten bei der Verwendung von Braze helfen können."
 
 guide_featured_title: "Themen"
 guide_featured_list:
@@ -39,4 +39,3 @@ guide_featured_list:
     link: /docs/help/help_articles/segments/
     image: /assets/img/braze_icons/users-01.svg
 ---
-

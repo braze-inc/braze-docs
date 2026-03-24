@@ -9,16 +9,53 @@
 
 ## アプリ内メッセージを有効にする
 
+{% tabs %}
+{% tab Flutter SDK 18.0.0+ %}
+
+Braze Flutter SDK は、Android と iOS の両方でデフォルトのアプリ内メッセージプレゼンターを自動的に設定します。アプリ内メッセージは、追加の設定なしで表示され、Dart レイヤーに転送されます。
+
+### iOS でのアプリ内メッセージプレゼンターのカスタマイズ
+
+iOS でデフォルトのアプリ内メッセージプレゼンターをオーバーライドするには、`BrazePlugin.configure(_:postInitialization:)` の `postInitialization` クロージャを使用します。カスタムプレゼンターは、アプリ内メッセージデータを Dart レイヤーに転送するために `BrazePlugin.processInAppMessage(message)` を呼び出す必要があります。
+
+```swift
+import BrazeUI
+
+BrazePlugin.configure(
+  { configuration in
+    // Set non-API-key configurations here.
+  },
+  postInitialization: { braze in
+    let customPresenter = CustomInAppMessagePresenter()
+    braze.inAppMessagePresenter = customPresenter
+  }
+)
+```
+
+カスタムプレゼンタークラスでは、`BrazePlugin.processInAppMessage(message)` と `super.present(message: message)` を呼び出して、データを Dart に転送し、デフォルトの UI を表示します。
+
+```swift
+class CustomInAppMessagePresenter: BrazeInAppMessageUI {
+  override func present(message: Braze.InAppMessage) {
+    BrazePlugin.processInAppMessage(message)
+    super.present(message: message)
+  }
+}
+```
+
+{% endtab %}
+{% tab Flutter SDK 17.1.0 and earlier %}
+
 {% alert note %}
-このステップはiOS専用だ。Androidでは、アプリ内メッセージのデフォルト実装は既に設定済みだ。
+このステップは iOS 専用です。Android では、アプリ内メッセージのデフォルト実装は既に設定済みです。
 {% endalert %}
 
-iOSアプリ内メッセージのデフォルトプレゼンターを設定するには、プロトコ`BrazeInAppMessagePresenter`ルの実装を作成し、それをBrazeインスタンスの`inAppMessagePresenter`オプションに割り当てる。`BrazeInAppMessageUI` オブジェクトをインスタンス化することで、デフォルトの Braze UI プレゼンターを使用することもできます。
+iOS でアプリ内メッセージのデフォルトプレゼンターを設定するには、`BrazeInAppMessagePresenter` プロトコルの実装を作成し、それを Braze インスタンスのオプションの `inAppMessagePresenter` に割り当てます。`BrazeInAppMessageUI` オブジェクトをインスタンス化することで、デフォルトの Braze UI プレゼンターを使用することもできます。
 
-その`BrazeInAppMessageUI`クラスにアクセスするには、その`BrazeUI`ライブラリーをインポートしなければならない。
+`BrazeInAppMessageUI` クラスにアクセスするには、`BrazeUI` ライブラリーをインポートする必要があります。
 
-{% tabs %}
-{% tab swift %}
+{% subtabs %}
+{% subtab swift %}
 
 ```swift
 import BrazeUI
@@ -31,7 +68,6 @@ override func application(
 
   let braze = BrazePlugin.initBraze(configuration)
 
-  // Initialize and assign the default `BrazeInAppMessageUI` class to the in-app message presenter.
   braze.inAppMessagePresenter = BrazeInAppMessageUI()
   AppDelegate.braze = braze
 
@@ -39,8 +75,8 @@ override func application(
 }
 ```
 
-{% endtab %}
-{% tab OBJECTIVE-C %}
+{% endsubtab %}
+{% subtab OBJECTIVE-C %}
 
 ```objc
 @import BrazeUI;
@@ -51,7 +87,6 @@ override func application(
 
   Braze *braze = [BrazePlugin initBraze:configuration];
 
-  // Initialize and assign the default `BrazeInAppMessageUI` class to the in-app message presenter.
   braze.inAppMessagePresenter = [[BrazeInAppMessageUI alloc] init];
   AppDelegate.braze = braze;
 
@@ -59,7 +94,11 @@ override func application(
   return YES;
 }
 ```
+
+{% endsubtab %}
+{% endsubtabs %}
+
 {% endtab %}
 {% endtabs %}
 
-実装をさらにカスタマイズするには、[アプリ内メッセージデータのログ記録]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter)を参照せよ。
+アプリ内メッセージデータへのアクセスの詳細については、[アプリ内メッセージデータのログ記録]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter)を参照してください。

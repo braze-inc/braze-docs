@@ -1,8 +1,8 @@
 {% multi_lang_include developer_guide/prerequisites/swift.md %}
 
-## Atribuições padrão do usuário
+## Atributos padrão do usuário
 
-### Atribuições suportadas
+### Atributos suportados
 
 Os seguintes atributos devem ser definidos no objeto `Braze.User`:
 
@@ -60,10 +60,10 @@ AppDelegate.braze?.user.set(firstName: nil)
 
 ## Atributos personalizados do usuário
 
-Além dos atributos de usuário padrão, o Braze também permite que você defina atributos personalizados usando vários tipos de dados diferentes. Para mais informações sobre as opções de segmentação de cada atributo, veja [Coleta de dados de usuários]({{site.baseurl}}/developer_guide/analytics/).
+Além dos atributos de usuário padrão, a Braze também permite que você defina atributos personalizados usando vários tipos de dados diferentes. Para saber mais sobre as opções de segmentação de cada atributo, consulte [Coleta de dados de usuários]({{site.baseurl}}/developer_guide/analytics/).
 
 {% alert important %}
-Os valores de atributos personalizados têm um comprimento máximo de 255 caracteres; valores mais longos serão truncados. Para mais informações, consulte [`Braze.User`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class).
+Os valores de atributos personalizados têm um comprimento máximo de 255 caracteres; valores mais longos serão truncados. Para saber mais, consulte [`Braze.User`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class).
 {% endalert %}
 
 ### Definindo atributos personalizados
@@ -106,7 +106,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endtab %}
 
 {% tab floating-points %}
-Braze trata os valores `float` e `double` da mesma forma em nosso banco de dados. Para definir um atributo personalizado com um valor duplo:
+A Braze trata os valores `float` e `double` da mesma forma em nosso banco de dados. Para definir um atributo personalizado com um valor double:
 
 {% subtabs %}
 {% subtab swift %}
@@ -124,7 +124,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endtab %}
 
 {% tab boolean %}
-Para definir um atributo personalizado com um valor `boolean`:
+Para definir um atributo personalizado com um valor booleano:
 
 {% subtabs %}
 {% subtab swift %}
@@ -160,7 +160,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourD
 {% endtab %}
 
 {% tab array %}
-O número máximo de elementos em [arrays de atributos personalizados]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) é 25 por padrão. As matrizes que excederem o número máximo de elementos serão truncadas para conter o número máximo de elementos. O máximo para arrays individuais pode ser aumentado para até 500. Para aumentar esse limite acima de 500, entre em contato com seu gerente de sucesso do cliente do Braze.
+O número máximo de elementos padrão em um array é 500. Você pode atualizar o número máximo de elementos de arrays no dashboard da Braze, em **Data Settings** > **Custom Attributes**. Arrays que excederem o número máximo de elementos serão truncados para conter o número máximo de elementos.
 
 Para definir um atributo personalizado com um valor `array`:
 
@@ -194,7 +194,7 @@ AppDelegate.braze?.user.removeFromCustomAttributeArray(key: "array_name", value:
 
 ### Incrementando ou decrementando atributos personalizados
 
-Este código é um exemplo de um atributo personalizado incrementando. Você pode incrementar o valor de um atributo personalizado por qualquer valor `integer` ou `long`:
+Este código é um exemplo de um atributo personalizado sendo incrementado. Você pode incrementar o valor de um atributo personalizado por qualquer valor `integer` ou `long`:
 
 {% tabs %}
 {% tab swift %}
@@ -236,7 +236,7 @@ Para remover um atributo personalizado, passe a chave do atributo relevante para
 
 ### Aninhando atributos personalizados
 
-Você também pode aninhar propriedades dentro de atributos personalizados. No exemplo a seguir, um objeto `favorite_book` com propriedades aninhadas é definido como um atributo personalizado no perfil do usuário. Para mais detalhes, consulte [Nested Custom Attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+Você também pode aninhar propriedades dentro de atributos personalizados. No exemplo a seguir, um objeto `favorite_book` com propriedades aninhadas é definido como um atributo personalizado no perfil do usuário. Para mais detalhes, consulte [Atributos personalizados aninhados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
 
 {% tabs %}
 {% tab swift %}
@@ -266,24 +266,24 @@ NSDictionary *favoriteBook = @{
 
 ### Usando a API REST
 
-Você também pode usar nossa API REST para definir ou remover atributos de usuários. Para saber mais, consulte [User Data Endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
+Você também pode usar nossa API REST para definir ou remover atributos de usuários. Para saber mais, consulte [Endpoints de dados de usuários]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
 
-## Definindo assinaturas de usuários
+## Definindo inscrições de usuários
 
-Para configurar uma inscrição para seus usuários (envio de e-mail ou push), chame as funções `set(emailSubscriptionState:)` ou `set(pushNotificationSubscriptionState:)`, respectivamente. Ambas as funções usam o tipo de enum `Braze.User.SubscriptionState` como argumentos. Esse tipo tem três estados diferentes:
+Para configurar uma inscrição para seus usuários (e-mail ou push), chame as funções `set(emailSubscriptionState:)` ou `set(pushNotificationSubscriptionState:)`, respectivamente. Ambas as funções usam o tipo de enum `Braze.User.SubscriptionState` como argumentos. Esse tipo tem três estados diferentes:
 
 | Status da inscrição | Definição |
 | ------------------- | ---------- |
-| `optedIn` | Inscrição e aceitação explícita |
-| `subscribed` | Inscrição feita, mas sem aceitação explícita |
-| `unsubscribed` | Cancelamento da inscrição e/ou aceitação explícita |
+| `optedIn` | Inscrito, com aceitação explícita |
+| `subscribed` | Inscrito, mas sem aceitação explícita |
+| `unsubscribed` | Inscrição cancelada e/ou recusa explícita |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Os usuários que concedem permissão para um app enviar notificações por push têm o status padrão de `optedIn`, pois o iOS exige uma aceitação explícita.
 
-Os usuários serão configurados para `subscribed` automaticamente após o recebimento de um endereço de e-mail válido; no entanto, sugerimos que você estabeleça um processo de aceitação explícita e defina este valor para `optedIn` após o recebimento do consentimento explícito do seu usuário. Para saber mais, consulte [Gerenciar inscrições de usuários]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/).
+Os usuários serão configurados como `subscribed` automaticamente após o recebimento de um endereço de e-mail válido; no entanto, sugerimos que você estabeleça um processo de aceitação explícita e defina este valor para `optedIn` após o recebimento do consentimento explícito do seu usuário. Para saber mais, consulte [Gerenciar inscrições de usuários]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/).
 
-### Configuração de envios de e-mail
+### Configuração de inscrições de e-mail
 
 {% tabs %}
 {% tab swift %}

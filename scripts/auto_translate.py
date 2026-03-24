@@ -40,10 +40,10 @@ LANGUAGES = {
 }
 
 MODEL = os.environ.get("TRANSLATION_MODEL", "claude-opus-4-6")
-MAX_TOKENS = int(os.environ.get("TRANSLATION_MAX_TOKENS", "65536"))
+MAX_TOKENS = int(os.environ.get("TRANSLATION_MAX_TOKENS", "128000"))
 MAX_FILE_KB = int(os.environ.get("TRANSLATION_MAX_FILE_KB", "130"))
-CHUNK_TARGET_KB = int(os.environ.get("TRANSLATION_CHUNK_KB", "80"))
-MAX_WORKERS = int(os.environ.get("TRANSLATION_WORKERS", "6"))
+CHUNK_TARGET_KB = int(os.environ.get("TRANSLATION_CHUNK_KB", "50"))
+MAX_WORKERS = int(os.environ.get("TRANSLATION_WORKERS", "12"))
 REPO_ROOT = Path(os.environ.get("GITHUB_WORKSPACE", Path.cwd()))
 RESULTS_FILE = REPO_ROOT / "translation_results.json"
 GLOSSARY_DIR = REPO_ROOT / "scripts" / "glossaries"

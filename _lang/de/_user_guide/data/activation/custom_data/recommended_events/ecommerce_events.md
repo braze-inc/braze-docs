@@ -1,48 +1,48 @@
 ---
-nav_title: E-Commerce empfohlene Veranstaltungen
-article_title: E-Commerce Empfohlene Veranstaltungen
+nav_title: Empfohlene E-Commerce-Events
+article_title: Empfohlene E-Commerce-Events
 page_type: reference
 alias: /ecommerce_events/
 toc_headers: h2
-description: "Dieser referenzierte Artikel beschreibt die im E-Commerce empfohlenen Ereignisse und Eigenschaften, ihre Verwendung, Segmentierung, wo Sie die relevanten Analytics einsehen können und vieles mehr."
+description: "Dieser Referenzartikel beschreibt empfohlene E-Commerce-Events und -Eigenschaften, deren Verwendung, Segmentierung, wo Sie die relevanten Analytics einsehen können und mehr."
 ---
 
-# E-Commerce empfohlene Veranstaltungen
+# Empfohlene E-Commerce-Events
 
-> Diese Seite behandelt die im E-Commerce empfohlenen Ereignisse und Eigenschaften. Diese Ereignisse werden erstellt, um wichtige Einkaufsverhaltensweisen zu erfassen, die Marketer benötigen, um effektives Messaging zu triggern, wie z.B. das Targeting von abgebrochenen Warenkörben.
+> Diese Seite behandelt empfohlene E-Commerce-Events und -Eigenschaften. Diese Events werden erstellt, um wichtige Einkaufsverhaltensweisen zu erfassen, die Marketer benötigen, um effektives Messaging zu triggern – beispielsweise das Targeting von Warenkorb-Abbrüchen.
 
 {% alert important %}
-E-Commerce empfohlene Veranstaltungen sind derzeit im frühen Zugriff. Wenden Sie sich an Ihren Customer-Success-Manager:in von Braze, wenn Sie an diesem frühzeitigen Zugang teilnehmen möchten. <br><br>Wenn Sie den neuen [Shopify-Konnektor]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector) verwenden, werden diese empfohlenen Ereignisse automatisch über die Integration verfügbar sein.
+Empfohlene E-Commerce-Events befinden sich derzeit im Early Access. Wenden Sie sich an Ihren Customer-Success-Manager bei Braze, wenn Sie an diesem Early Access teilnehmen möchten. <br><br>Wenn Sie den neuen [Shopify-Konnektor]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector) verwenden, stehen diese empfohlenen Events automatisch über die Integration zur Verfügung.
 {% endalert %}
 
-Braze weiß, dass die Planung von Daten Zeit braucht. Wir ermutigen unsere Kund:in, ihre Entwickler:in-Teams damit vertraut zu machen und jetzt mit dem Versand dieser Events zu beginnen. Auch wenn einige Features bei den empfohlenen E-Commerce-Ereignissen nicht sofort verfügbar sind, können Sie sich auf die Einführung neuer Produkte im Laufe des Jahres 2025 freuen, die Ihre E-Commerce-Funktionen verbessern werden.
+Braze weiß, dass die Planung von Daten Zeit braucht. Wir ermutigen unsere Kund:innen, ihre Entwickler:innen-Teams damit vertraut zu machen und jetzt mit dem Versand dieser Events zu beginnen. Auch wenn einige Features bei den empfohlenen E-Commerce-Events nicht sofort verfügbar sind, können Sie sich auf die Einführung neuer Produkte im Laufe des Jahres 2025 freuen, die Ihre E-Commerce-Funktionen erweitern werden.
 
-## Empfohlene Arten von E-Commerce-Veranstaltungen
+## Arten empfohlener E-Commerce-Events
 
 {% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
 
-Alle gemeldeten Nicht-USD-Währungen werden in Braze auf Basis des Wechselkurses am Tag der Meldung in USD angezeigt. Um eine Konversion zu vermeiden, legen Sie die Währung fest auf USD fest.
+Alle gemeldeten Nicht-USD-Währungen werden in Braze auf Basis des Wechselkurses am Tag der Meldung in USD angezeigt. Um eine Währungskonversion zu vermeiden, legen Sie die Währung fest auf USD fest.
 
 {% tabs %}
 {% tab ecommerce.product_viewed %}
 
-Sie können das Ereignis "Produkt angesehen" verwenden, um zu triggern, wenn ein Kund:in eine Produktdetailseite blickt.
+Sie können das Event „Produkt angesehen" verwenden, um zu triggern, wenn eine Kund:in eine Produktdetailseite aufruft.
 
 #### Eigenschaften
 
 | Eigenschaftsname | Erforderlich | Datentyp | Beschreibung | 
 |---|---|---|---|
-| `product_id` | Ja | String | Ein eindeutiger Bezeichner für das Produkt, das angesehen wurde. <br> Für Kunden:in, die nicht Shopify sind, ist dies der Wert, den Sie für Katalogartikel-IDs wie SKUs festlegen. |
-| `product_name` | Ja | String | Der Name des Produkts, das angesehen wurde. | 
-| `variant_id` | Ja | String | Ein eindeutiger Bezeichner für die Variante des Produkts. Ein Beispiel ist `shirt_medium_blue` |
-| `image_url` | Kein:e | String | URL des Bildes des Produkts. |
-| `product_url` | Kein:e | String | URL zur Produktseite für weitere Details. |
-| `price` | Ja | Gleitkommazahl | Der Stückpreis der Variante des Produkts zum Zeitpunkt der Betrachtung. |
-| `currency` | Ja | String | Die Währung, in der der Preis des Produkts angegeben ist (z.B. "USD" oder "EUR"), im [Format ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). |
-| `source` | Ja | String | Quelle, aus der das Ereignis stammt. (Bei Shopify ist dies die Storefront). |
-| `metadata` | Kein:e | Objekt | |
-| `type` | Kein:e | Objekt | Funktioniert mit [Benachrichtigungen über wieder verfügbare Artikel]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications) und [Preissenkungen]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications). |
-| `sku` | Kein:e | String | (nur Shopify) Shopify SKU. Dies kann als Feld für die Katalog ID konfiguriert werden. |
+| `product_id` | Ja | String | Ein eindeutiger Bezeichner für das angesehene Produkt. <br> Für Kund:innen, die nicht Shopify nutzen, ist dies der Wert, den Sie für Katalogartikel-IDs wie SKUs festlegen. |
+| `product_name` | Ja | String | Der Name des angesehenen Produkts. | 
+| `variant_id` | Ja | String | Ein eindeutiger Bezeichner für die Produktvariante. Ein Beispiel ist `shirt_medium_blue`. |
+| `image_url` | Nein | String | URL des Produktbilds. |
+| `product_url` | Nein | String | URL zur Produktseite für weitere Details. |
+| `price` | Ja | Gleitkommazahl | Der Stückpreis der Produktvariante zum Zeitpunkt der Betrachtung. |
+| `currency` | Ja | String | Die Währung, in der der Produktpreis angegeben ist (z. B. „USD" oder „EUR"), im [ISO-4217-Format](https://www.iso.org/iso-4217-currency-codes.html). |
+| `source` | Ja | String | Quelle, aus der das Event stammt. (Bei Shopify ist dies die Storefront). |
+| `metadata` | Nein | Objekt | |
+| `type` | Nein | Objekt | Funktioniert mit [Wieder-verfügbar-Benachrichtigungen]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications) und [Preissenkungsbenachrichtigungen]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications). |
+| `sku` | Nein | String | (Nur Shopify) Shopify SKU. Dies kann als Katalog-ID-Feld konfiguriert werden. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### Beispielobjekte
@@ -156,15 +156,15 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
 {% endtab %}
 {% tab ecommerce.cart_updated %}
 
-Sie können das Ereignis "Warenkorb aktualisiert" verwenden, um zu verfolgen, wann Produkte im Warenkorb hinzugefügt, entfernt oder aktualisiert werden. Das Ereignis `ecommerce.cart_updated` überprüft die folgenden Informationen, bevor es ausgelöst wird:
+Sie können den Trigger **Warenkorb-Aktualisierung durchführen** verwenden, um zu verfolgen, wann Produkte im Warenkorb hinzugefügt, entfernt oder aktualisiert werden. Dieses Event überprüft die folgenden Informationen, bevor es ausgelöst wird:
 
-- Die Ereigniszeit ist größer als die `updated_at` Zeit für den spezifischen Warenkorb des Nutzers:in.
-- Der Warenkorb ist noch nicht zur Kasse gegangen.
-- Das Array `products` ist nicht leer.
+- Die Event-Zeit ist größer als die `updated_at`-Zeit für den spezifischen Warenkorb der Nutzer:in.
+- Der Warenkorb ist noch nicht zum Checkout-Prozess übergegangen.
+- Das `products`-Array ist nicht leer.
 
-#### Warenkorb Abbildung Objekt
+#### Warenkorb-Abbildungsobjekt
 
-Das Ereignis `ecommerce.cart_updated` verfügt über ein Objekt zur Abbildung von Warenkörben. Dieses Objekt wird für das Nutzerprofil erstellt, das eine Abbildung der Warenkörbe enthält, die alle Produkte im Warenkorb des Käufers enthalten. Sie können über den Liquid-Tag auf die Produkte in ihrem Warenkorb zugreifen: 
+Das `ecommerce.cart_updated`-Event verfügt über ein Warenkorb-Abbildungsobjekt. Dieses Objekt wird für das Nutzerprofil erstellt und enthält eine Abbildung der Warenkörbe mit allen Produkten im Warenkorb der Käufer:in. Sie können über den Liquid-Tag auf die Produkte im Warenkorb zugreifen: 
 
 {%raw%}
 ```liquid
@@ -174,35 +174,35 @@ Das Ereignis `ecommerce.cart_updated` verfügt über ein Objekt zur Abbildung vo
 ```
 {%endraw%}
 
-Wenn ein Warenkorb innerhalb von 10 Tagen nicht aktualisiert und zu einem Bestellvorgang weitergeleitet wurde, löschen wir den Warenkorb und die zugehörigen Produkte.
+Wenn ein Warenkorb innerhalb von 10 Tagen nicht aktualisiert wurde und nicht zu einem Bestellungs-Event übergegangen ist, löschen wir den Warenkorb und die zugehörigen Produkte.
 
 {% alert note %}
-Produkte pro Warenkorb sind auf Braze nicht begrenzt. Das Limit von Shopify liegt jedoch bei 500.
+Produkte pro Warenkorb sind bei Braze nicht begrenzt. Das Limit von Shopify liegt jedoch bei 500.
 {% endalert %}
 
-#### Verhalten des Warenkorbs beim Zusammenführen von Nutzerprofilen
+#### Warenkorb-Verhalten beim Zusammenführen von Nutzerprofilen
 
-Wenn es zwei Warenkörbe gibt, fügen Sie beide dem zusammengeführten Nutzer:in hinzu. Stellen Sie das Canvas erneut in die Warteschlange, wenn es sich um denselben oder einen anderen Warenkorb handelt, um eine Nachricht mit den neuesten Warenkorb-Informationen zu senden. Das Ereignis `ecommerce.cart_updated` enthält die ID des letzten Warenkorbs und die Produkte, die sich im Warenkorb befinden.
+Wenn es zwei Warenkörbe gibt, werden beide der zusammengeführten Nutzer:in hinzugefügt. Stellen Sie den Canvas erneut in die Warteschlange – unabhängig davon, ob es sich um denselben oder einen anderen Warenkorb handelt –, um eine Nachricht mit den aktuellsten Warenkorb-Informationen zu senden. Das `ecommerce.cart_updated`-Event enthält die letzte Warenkorb-ID und die letzten Produkte im Warenkorb.
 
 #### Eigenschaften
 
 | Eigenschaftsname | Erforderlich | Datentyp | Beschreibung | 
 |---|---|---|---|
-| `cart_id` | Ja | String | Falls Sie keine Drittanbieterplattform verwenden, die`cart_id` eine Session-ID bereitstellt, können Sie die [Braze-Session-ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions) verwenden. |
-| `total_value` | Ja | Gleitkommazahl | Gesamtwert des Warenkorbs. | 
-| `currency` | Ja | String | Die Währung, in der der Preis des Produkts angegeben ist (z.B. "USD" oder "EUR"), im [Format ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). |
+| `cart_id` | Ja | String | Falls Sie keine Drittanbieterplattform verwenden, die eine `cart_id` bereitstellt, können Sie die [Braze-Session-ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions) verwenden. |
+| `total_value` | Ja | Gleitkommazahl | Gesamter Geldwert des Warenkorbs. | 
+| `currency` | Ja | String | Die Währung, in der der Produktpreis angegeben ist (z. B. „USD" oder „EUR"), im [ISO-4217-Format](https://www.iso.org/iso-4217-currency-codes.html). |
 | `products` | Ja | Array |  |
-| `product_id` | Ja | String | Ein eindeutiger Bezeichner für das Produkt, das angesehen wurde. <br> Dieser Wert kann die ID oder SKU des Produkts sein. |
-| `product_name` | Ja | String | Der Name des Produkts, das angesehen wurde. |
-| `variant_id` | Ja | String | Ein eindeutiger Bezeichner für die Variante des Produkts. Ein Beispiel ist `shirt_medium_blue` |
-| `image_url` | Kein:e | String | URL des Bildes des Produkts. |
-| `product_url` | Kein:e | String | URL zur Produktseite für weitere Details. |
+| `product_id` | Ja | String | Ein eindeutiger Bezeichner für das angesehene Produkt. <br> Dieser Wert kann die Produkt-ID oder SKU sein. |
+| `product_name` | Ja | String | Der Name des angesehenen Produkts. |
+| `variant_id` | Ja | String | Ein eindeutiger Bezeichner für die Produktvariante. Ein Beispiel ist `shirt_medium_blue`. |
+| `image_url` | Nein | String | URL des Produktbilds. |
+| `product_url` | Nein | String | URL zur Produktseite für weitere Details. |
 | `quantity` | Ja | Integer | Anzahl der Einheiten des Produkts im Warenkorb. |
-| `price` | Ja | Gleitkommazahl | Der Stückpreis der Variante des Produkts zum Zeitpunkt der Betrachtung. |
-| `metadata` | Kein:e | Objekt | Zusätzliches Metadatenfeld über das Produkt, das der Kund:in für seine Anwendungsfälle hinzufügen möchte. Für Shopify werden wir SKU hinzufügen. <br> Das Limit basiert auf unserem allgemeinen Limit für Event-Eigenschaften von 50kb. |
-| `sku` | Kein:e | String | (nur Shopify) Shopify SKU. Dies kann als Feld für die Katalog ID konfiguriert werden. |
-| `source` | Ja | String | Quelle, aus der das Ereignis stammt. (Bei Shopify ist dies die Storefront). |
-| `metadata` | Kein:e | Objekt | Zusätzliches Metadatenfeld über das Produkt, das der Kund:in für seine Anwendungsfälle hinzufügen möchte. Für Shopify werden wir SKU hinzufügen. <br> Das Limit basiert auf unserem allgemeinen Limit für Event-Eigenschaften von 50kb. |
+| `price` | Ja | Gleitkommazahl | Der Stückpreis der Produktvariante zum Zeitpunkt der Betrachtung. |
+| `metadata` | Nein | Objekt | Zusätzliches Metadatenfeld über das Produkt, das die Kund:in für ihre Anwendungsfälle hinzufügen möchte. Für Shopify wird SKU hinzugefügt. <br> Das Limit basiert auf unserem allgemeinen Limit für Event-Eigenschaften von 50 KB. |
+| `sku` | Nein | String | (Nur Shopify) Shopify SKU. Dies kann als Katalog-ID-Feld konfiguriert werden. |
+| `source` | Ja | String | Quelle, aus der das Event stammt. (Bei Shopify ist dies die Storefront). |
+| `metadata` | Nein | Objekt | Zusätzliches Metadatenfeld über das Produkt, das die Kund:in für ihre Anwendungsfälle hinzufügen möchte. Für Shopify wird SKU hinzugefügt. <br> Das Limit basiert auf unserem allgemeinen Limit für Event-Eigenschaften von 50 KB. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### Beispielobjekte
@@ -347,9 +347,9 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.cart_updated", properties: pr
 {% endtab %}
 {% tab ecommerce.checkout_started %}
 
-Sie können das Ereignis "Checkout started" verwenden, um Kunden:in zu retargeten, die den Checkout-Prozess begonnen, aber noch keine Bestellung aufgegeben haben.
+Sie können das Event „Checkout gestartet" verwenden, um Kund:innen zu retargeten, die den Checkout-Prozess begonnen, aber noch keine Bestellung aufgegeben haben.
 
-Ähnlich wie das Ereignis `ecommerce.cart_updated` erlaubt Ihnen dieses Ereignis, den Liquid-Tag des Warenkorbs zu nutzen, um auf alle Produkte in ihrem Warenkorb zuzugreifen, um Nachrichten über abgebrochene Einkäufe zu erhalten:
+Ähnlich wie das `ecommerce.cart_updated`-Event ermöglicht Ihnen dieses Event, den Warenkorb-Liquid-Tag zu nutzen, um auf alle Produkte im Warenkorb für Nachrichten bei abgebrochenem Checkout zuzugreifen:
 
 {%raw%}
 ```liquid
@@ -364,22 +364,22 @@ Sie können das Ereignis "Checkout started" verwenden, um Kunden:in zu retargete
 | Eigenschaftsname | Erforderlich | Datentyp | Beschreibung | 
 |---|---|---|---|
 | `checkout_id` | Ja | String | Eindeutiger Bezeichner für den Checkout. |
-| `cart_id` | Kein:e | String | Falls Sie keine Drittanbieterplattform verwenden, die`cart_id` eine Session-ID bereitstellt, können Sie die [Braze-Session-ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions) verwenden. | 
-| `total_value` | Ja | Gleitkommazahl | Gesamtwert des Warenkorbs. |
+| `cart_id` | Nein | String | Falls Sie keine Drittanbieterplattform verwenden, die eine `cart_id` bereitstellt, können Sie die [Braze-Session-ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions) verwenden. | 
+| `total_value` | Ja | Gleitkommazahl | Gesamter Geldwert des Warenkorbs. |
 | `currency` | Ja | String | Währung, in der der Warenkorb bewertet wird. |
 | `products` | Ja | Array von Objekten |  |
-| `product_id` | Ja | String | Ein eindeutiger Bezeichner für das Produkt, das angesehen wurde. Dieser Wert könnte zum Beispiel die ID oder SKU des Produkts sein. |
-| `product_name` | Ja | String | Der Name des Produkts, das angesehen wurde.  |
-| `variant_id` | Ja | String | Ein eindeutiger Bezeichner für die Variante des Produkts. Ein Beispiel ist `shirt_medium_blue` |
-| `image_url` | Kein:e | String | URL des Bildes des Produkts. |
-| `product_url` | Kein:e | String | URL zur Produktseite für weitere Details. |
+| `product_id` | Ja | String | Ein eindeutiger Bezeichner für das angesehene Produkt. Dieser Wert könnte z. B. die Produkt-ID oder SKU sein. |
+| `product_name` | Ja | String | Der Name des angesehenen Produkts.  |
+| `variant_id` | Ja | String | Ein eindeutiger Bezeichner für die Produktvariante. Ein Beispiel ist `shirt_medium_blue`. |
+| `image_url` | Nein | String | URL des Produktbilds. |
+| `product_url` | Nein | String | URL zur Produktseite für weitere Details. |
 | `quantity` | Ja | Integer | Anzahl der Einheiten des Produkts im Warenkorb. |
-| `price` | Ja | Gleitkommazahl | Der Stückpreis der Variante des Produkts zum Zeitpunkt der Betrachtung. |
-| `metadata` | Kein:e | Objekt | Zusätzliches Metadatenfeld über das Produkt, das der Kund:in für seine Anwendungsfälle hinzufügen möchte. Für Shopify werden wir SKU hinzufügen. <br> Das Limit basiert auf unserem allgemeinen Limit für Event-Eigenschaften von 50kb. |
-| `sku` | Kein:e | String | (nur Shopify) Shopify SKU. Dies kann als Feld für die Katalog ID konfiguriert werden. |
-| `source` | Ja | String | Quelle, aus der das Ereignis stammt. (Bei Shopify ist dies die Storefront). |
-| `metadata` | Kein:e | Objekt |  |
-| `checkout_url` | Kein:e | String | URL für die Kassenseite. |
+| `price` | Ja | Gleitkommazahl | Der Stückpreis der Produktvariante zum Zeitpunkt der Betrachtung. |
+| `metadata` | Nein | Objekt | Zusätzliches Metadatenfeld über das Produkt, das die Kund:in für ihre Anwendungsfälle hinzufügen möchte. Für Shopify wird SKU hinzugefügt. <br> Das Limit basiert auf unserem allgemeinen Limit für Event-Eigenschaften von 50 KB. |
+| `sku` | Nein | String | (Nur Shopify) Shopify SKU. Dies kann als Katalog-ID-Feld konfiguriert werden. |
+| `source` | Ja | String | Quelle, aus der das Event stammt. (Bei Shopify ist dies die Storefront). |
+| `metadata` | Nein | Objekt |  |
+| `checkout_url` | Nein | String | URL für die Checkout-Seite. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### Beispielobjekte
@@ -523,34 +523,34 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.checkout_started", properties
 {% endtab %}
 {% tab ecommerce.order_placed %}
 
-Sie können das Ereignis "Bestellung aufgegeben" verwenden, um zu triggern, wenn ein Kund:in den Checkout-Prozess erfolgreich einsteigt und eine Bestellung aufgibt.
+Sie können das Event „Bestellung aufgegeben" verwenden, um zu triggern, wenn eine Kund:in den Checkout-Prozess erfolgreich abschließt und eine Bestellung aufgibt.
 
 #### Eigenschaften
 
 | Eigenschaftsname | Erforderlich | Datentyp | Beschreibung | 
 |---|---|---|---|
 | `order_id` | Ja | String | Eindeutiger Bezeichner für die aufgegebene Bestellung. |
-| `cart_id` | Kein:e | String | Falls Sie keine Drittanbieterplattform verwenden, die`cart_id` eine Session-ID bereitstellt, können Sie die [Braze-Session-ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions) verwenden. |
-| `total_value` | Ja | Gleitkommazahl | Gesamtwert des Warenkorbs. | 
+| `cart_id` | Nein | String | Falls Sie keine Drittanbieterplattform verwenden, die eine `cart_id` bereitstellt, können Sie die [Braze-Session-ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions) verwenden. |
+| `total_value` | Ja | Gleitkommazahl | Gesamter Geldwert des Warenkorbs. | 
 | `currency` | Ja | String | Währung, in der der Warenkorb bewertet wird. |
-| `total_discounts` | Kein:e | Gleitkommazahl | Gesamtbetrag der auf die Bestellung angewandten Rabatte. | 
-| `discounts`| Kein:e | Array von Objekten | Detaillierte Liste der auf die Bestellung angewandten Rabatte. |
+| `total_discounts` | Nein | Gleitkommazahl | Gesamtbetrag der auf die Bestellung angewandten Rabatte. | 
+| `discounts`| Nein | Array von Objekten | Detaillierte Liste der auf die Bestellung angewandten Rabatte. |
 | `products` | Ja | Array von Objekten |  |
-| `product_id` | Ja | String | Ein eindeutiger Bezeichner für das Produkt, das angesehen wurde. Dieser Wert kann die ID oder SKU des Produkts sein. |
-| `product_name` | Ja | String | Der Name des Produkts, das angesehen wurde. |
-| `variant_id` | Ja | String | Ein eindeutiger Bezeichner für die Variante des Produkts. Ein Beispiel ist `shirt_medium_blue` |
-| `image_url` | Kein:e | String | URL des Bildes des Produkts. |
-| `product_url` | Kein:e | String | URL zur Produktseite für weitere Details. |
+| `product_id` | Ja | String | Ein eindeutiger Bezeichner für das angesehene Produkt. Dieser Wert kann die Produkt-ID oder SKU sein. |
+| `product_name` | Ja | String | Der Name des angesehenen Produkts. |
+| `variant_id` | Ja | String | Ein eindeutiger Bezeichner für die Produktvariante. Ein Beispiel ist `shirt_medium_blue`. |
+| `image_url` | Nein | String | URL des Produktbilds. |
+| `product_url` | Nein | String | URL zur Produktseite für weitere Details. |
 | `quantity` | Ja | Integer | Anzahl der Einheiten des Produkts im Warenkorb. |
-| `price` | Ja | Gleitkommazahl | Der Stückpreis der Variante des Produkts zum Zeitpunkt der Betrachtung. |
-| `metadata` | Kein:e | Objekt | Zusätzliches Metadatenfeld über das Produkt, das der Kund:in für seine Anwendungsfälle hinzufügen möchte. Für Shopify werden wir SKU hinzufügen. <br> Das Limit basiert auf unserem allgemeinen Limit für Event-Eigenschaften von 50kb. |
-| `sku` | Kein:e | String | (nur Shopify) Shopify SKU. Dies kann als Feld für die Katalog ID konfiguriert werden. |
-| `source` | Ja | String | Quelle, aus der das Ereignis stammt. (Bei Shopify ist dies die Storefront). |
-| `order_status_url` | Kein:e | String | URL, um den Status der Bestellung einzusehen. |
-| `order_number` | Kein:e | String | (nur Shopify) Eindeutige Bestellnummer für die aufgegebene Bestellung. |
-| `tags` | Kein:e | Array | (nur Shopify) Tags für Bestellungen
-| `referring_site` | Kein:e | String | (nur Shopify) Die Website, von der die Bestellung stammt (z.B. Meta). |
-| `payment_gateway_names` | Kein:e | Array | (Nur Shopify) Quelle des Zahlungssystems (z. B. Point of Sale oder Mobilgerät). |
+| `price` | Ja | Gleitkommazahl | Der Stückpreis der Produktvariante zum Zeitpunkt der Betrachtung. |
+| `metadata` | Nein | Objekt | Zusätzliches Metadatenfeld über das Produkt, das die Kund:in für ihre Anwendungsfälle hinzufügen möchte. Für Shopify wird SKU hinzugefügt. <br> Das Limit basiert auf unserem allgemeinen Limit für Event-Eigenschaften von 50 KB. |
+| `sku` | Nein | String | (Nur Shopify) Shopify SKU. Dies kann als Katalog-ID-Feld konfiguriert werden. |
+| `source` | Ja | String | Quelle, aus der das Event stammt. (Bei Shopify ist dies die Storefront). |
+| `order_status_url` | Nein | String | URL, um den Status der Bestellung einzusehen. |
+| `order_number` | Nein | String | (Nur Shopify) Eindeutige Bestellnummer für die aufgegebene Bestellung. |
+| `tags` | Nein | Array | (Nur Shopify) Bestell-Tags.
+| `referring_site` | Nein | String | (Nur Shopify) Die Website, von der die Bestellung stammt (z. B. Meta). |
+| `payment_gateway_names` | Nein | Array | (Nur Shopify) Quelle des Zahlungssystems (z. B. Point of Sale oder Mobilgerät). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### Beispielobjekte
@@ -740,33 +740,33 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_placed", properties: pr
 {% endtab %}
 {% tab ecommerce.order_refunded %}
 
-Sie können das Ereignis Bestellung erstattet verwenden, um zu triggern, wenn eine Bestellung ganz oder teilweise erstattet wird.
+Sie können das Event „Bestellung erstattet" verwenden, um zu triggern, wenn eine Bestellung ganz oder teilweise erstattet wird.
 
 #### Eigenschaften
 
 | Eigenschaftsname       | Erforderlich | Datentyp | Beschreibung   |
 |---------------|---------|-----------|-------------------------|
 | `order_id`            | Ja      | String    | Eindeutiger Bezeichner für die aufgegebene Bestellung.        |
-| `total_value`         | Ja      | Gleitkommazahl     | Gesamtwert des Warenkorbs.    |
+| `total_value`         | Ja      | Gleitkommazahl     | Gesamter Geldwert des Warenkorbs.    |
 | `currency`            | Ja      | String    | Währung, in der der Warenkorb bewertet wird.    |
-| `total_discounts`     | Kein:e       | Gleitkommazahl     | Gesamtbetrag der auf die Bestellung angewandten Rabatte.   |
-| `discounts`           | Kein:e       | Array von Objekten     | Detaillierte Liste der auf die Bestellung angewandten Rabatte. |
+| `total_discounts`     | Nein       | Gleitkommazahl     | Gesamtbetrag der auf die Bestellung angewandten Rabatte.   |
+| `discounts`           | Nein       | Array von Objekten     | Detaillierte Liste der auf die Bestellung angewandten Rabatte. |
 | `products`            | Ja      | Array von Objekten     |  |
-| `product_id`       | Ja      | String    | Ein eindeutiger Bezeichner für das Produkt, das angesehen wurde. Dieser Wert kann die ID des Produkts, die SKU oder etwas Ähnliches sein. <br>Wenn eine Teilerstattung ausgestellt wird und der Erstattung keine `product_id` zugeordnet ist (z.B. eine Erstattung auf Auftragsebene), geben Sie eine allgemeine `product_id` an.             |
-| `product_name`     | Ja      | String    | Der Name des Produkts, das angesehen wurde.                                                                      |
-| `variant_id`       | Ja      | String    | Ein eindeutiger Bezeichner für die Variante des Produkts (z.B. `shirt_medium_blue`).                                         |
-| `image_url`        | Kein:e       | String    | URL des Bildes des Produkts.     |
-| `product_url`      | Kein:e       | String    | URL zur Produktseite für weitere Details.  |
+| `product_id`       | Ja      | String    | Ein eindeutiger Bezeichner für das angesehene Produkt. Dieser Wert kann die Produkt-ID, SKU oder Ähnliches sein. <br>Wenn eine Teilerstattung ausgestellt wird und der Erstattung keine `product_id` zugeordnet ist (z. B. eine Erstattung auf Bestellebene), geben Sie eine allgemeine `product_id` an.             |
+| `product_name`     | Ja      | String    | Der Name des angesehenen Produkts.                                                                      |
+| `variant_id`       | Ja      | String    | Ein eindeutiger Bezeichner für die Produktvariante (z. B. `shirt_medium_blue`).                                         |
+| `image_url`        | Nein       | String    | URL des Produktbilds.     |
+| `product_url`      | Nein       | String    | URL zur Produktseite für weitere Details.  |
 | `quantity`         | Ja      | Integer   | Anzahl der Einheiten des Produkts im Warenkorb.   |
-| `price`            | Ja      | Gleitkommazahl     | Der Stückpreis der Variante des Produkts zum Zeitpunkt der Betrachtung.  |
-| `metadata`         | Kein:e       | Objekt    | Zusätzliches Metadatenfeld über das Produkt, das der Kund:in für seine Anwendungsfälle hinzufügen möchte. Für Shopify werden wir SKU hinzufügen. Das Limit basiert auf unserem allgemeinen Limit für Event-Eigenschaften von 50kb. |
-| `sku`            | Kein:e       | String    | (nur Shopify) Shopify SKU. Dies kann als Feld für die Katalog ID konfiguriert werden.  |
-| `source`              | Ja      | String    | Quelle, aus der das Ereignis stammt. (Bei Shopify ist dies die Storefront).    |
-| `metadata`            | Kein:e       | Objekt    |                |
-| `order_status_url`  | Kein:e       | String    | URL, um den Status der Bestellung einzusehen.     |
-| `order_note`       | Kein:e       | String    | (nur Shopify) Notiz, die der Händler der Bestellung beifügt.    |
-| `order_number`     | Kein:e       | String    | (nur Shopify) Eindeutige Bestellnummer für die aufgegebene Bestellung.   |
-| `tags`             | Kein:e       | Array     | (nur Shopify) Tags bestellen.  |
+| `price`            | Ja      | Gleitkommazahl     | Der Stückpreis der Produktvariante zum Zeitpunkt der Betrachtung.  |
+| `metadata`         | Nein       | Objekt    | Zusätzliches Metadatenfeld über das Produkt, das die Kund:in für ihre Anwendungsfälle hinzufügen möchte. Für Shopify wird SKU hinzugefügt. Das Limit basiert auf unserem allgemeinen Limit für Event-Eigenschaften von 50 KB. |
+| `sku`            | Nein       | String    | (Nur Shopify) Shopify SKU. Dies kann als Katalog-ID-Feld konfiguriert werden.  |
+| `source`              | Ja      | String    | Quelle, aus der das Event stammt. (Bei Shopify ist dies die Storefront).    |
+| `metadata`            | Nein       | Objekt    |                |
+| `order_status_url`  | Nein       | String    | URL, um den Status der Bestellung einzusehen.     |
+| `order_note`       | Nein       | String    | (Nur Shopify) Notiz, die der Händler der Bestellung beigefügt hat.    |
+| `order_number`     | Nein       | String    | (Nur Shopify) Eindeutige Bestellnummer für die aufgegebene Bestellung.   |
+| `tags`             | Nein       | Array     | (Nur Shopify) Bestell-Tags.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### Beispielobjekte
@@ -948,7 +948,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_refunded", properties: 
 {% endtab %}
 {% tab ecommerce.order_cancelled %}
 
-Sie können das Ereignis Bestellung storniert verwenden, um zu triggern, wenn eine Kund:in eine Bestellung storniert.
+Sie können das Event „Bestellung storniert" verwenden, um zu triggern, wenn eine Kund:in eine Bestellung storniert.
 
 #### Eigenschaften
 
@@ -956,25 +956,25 @@ Sie können das Ereignis Bestellung storniert verwenden, um zu triggern, wenn ei
 |---------------------|----------|-----------|-------------------|
 | `order_id`            | Ja      | String    | Eindeutiger Bezeichner für die aufgegebene Bestellung.              |
 | `cancel_reason`       | Ja      | String    | Grund, warum die Bestellung storniert wurde.           |
-| `total_value`         | Ja      | Gleitkommazahl     | Gesamtwert des Warenkorbs.         |
+| `total_value`         | Ja      | Gleitkommazahl     | Gesamter Geldwert des Warenkorbs.         |
 | `currency`            | Ja      | String    | Währung, in der der Warenkorb bewertet wird.           |
-| `total_discounts`     | Kein:e       | Gleitkommazahl     | Gesamtbetrag der auf die Bestellung angewandten Rabatte.     |
-| `discounts`           | Kein:e       | Array von Objekten     | Detaillierte Liste der auf die Bestellung angewandten Rabatte.             |
+| `total_discounts`     | Nein       | Gleitkommazahl     | Gesamtbetrag der auf die Bestellung angewandten Rabatte.     |
+| `discounts`           | Nein       | Array von Objekten     | Detaillierte Liste der auf die Bestellung angewandten Rabatte.             |
 | `products`            | Ja      | Array von Objekten     |         |
-| `product_id`          | Ja      | String    | Ein eindeutiger Bezeichner für das Produkt, das angesehen wurde. Dieser Wert kann die ID des Produkts, die SKU oder etwas Ähnliches sein.             |
-| `product_name`        | Ja      | String    | Der Name des Produkts, das angesehen wurde.          |
-| `variant_id`          | Ja      | String    | Ein eindeutiger Bezeichner für die Variante des Produkts (z.B. `shirt_medium_blue`).        |
-| `image_url`           | Kein:e       | String    | URL des Bildes des Produkts.           |
-| `product_url`         | Kein:e       | String    | URL zur Produktseite für weitere Details.                                                                     |
+| `product_id`          | Ja      | String    | Ein eindeutiger Bezeichner für das angesehene Produkt. Dieser Wert kann die Produkt-ID, SKU oder Ähnliches sein.             |
+| `product_name`        | Ja      | String    | Der Name des angesehenen Produkts.          |
+| `variant_id`          | Ja      | String    | Ein eindeutiger Bezeichner für die Produktvariante (z. B. `shirt_medium_blue`).        |
+| `image_url`           | Nein       | String    | URL des Produktbilds.           |
+| `product_url`         | Nein       | String    | URL zur Produktseite für weitere Details.                                                                     |
 | `quantity`            | Ja      | Integer   | Anzahl der Einheiten des Produkts im Warenkorb.        |
-| `price`               | Ja      | Gleitkommazahl     | Der Stückpreis der Variante des Produkts zum Zeitpunkt der Betrachtung.     |
-| `metadata`            | Kein:e       | Objekt    | Zusätzliches Metadatenfeld über das Produkt, das der Kund:in für seine Anwendungsfälle hinzufügen möchte. Für Shopify werden wir SKU hinzufügen. Das Limit basiert auf unserem allgemeinen Limit für Event-Eigenschaften von 50kb. |
-| `sku`                 | Kein:e       | String    | (nur Shopify) Shopify SKU. Dies kann als Feld für die Katalog ID konfiguriert werden.        |
-| `source`              | Ja      | String    | Quelle, aus der das Ereignis stammt. (Bei Shopify ist dies die Storefront).    |
-| `metadata`            | Kein:e       | Objekt    |       |
-| `order_status_url`    | Kein:e       | String    | URL, um den Status der Bestellung einzusehen.                                                                          |
-| `order_number`        | Kein:e       | String    | (nur Shopify) Eindeutige Bestellnummer für die aufgegebene Bestellung.  |
-| `tags`                | Kein:e       | Array     | (nur Shopify) Tags bestellen.            |
+| `price`               | Ja      | Gleitkommazahl     | Der Stückpreis der Produktvariante zum Zeitpunkt der Betrachtung.     |
+| `metadata`            | Nein       | Objekt    | Zusätzliches Metadatenfeld über das Produkt, das die Kund:in für ihre Anwendungsfälle hinzufügen möchte. Für Shopify wird SKU hinzugefügt. Das Limit basiert auf unserem allgemeinen Limit für Event-Eigenschaften von 50 KB. |
+| `sku`                 | Nein       | String    | (Nur Shopify) Shopify SKU. Dies kann als Katalog-ID-Feld konfiguriert werden.        |
+| `source`              | Ja      | String    | Quelle, aus der das Event stammt. (Bei Shopify ist dies die Storefront).    |
+| `metadata`            | Nein       | Objekt    |       |
+| `order_status_url`    | Nein       | String    | URL, um den Status der Bestellung einzusehen.                                                                          |
+| `order_number`        | Nein       | String    | (Nur Shopify) Eindeutige Bestellnummer für die aufgegebene Bestellung.  |
+| `tags`                | Nein       | Array     | (Nur Shopify) Bestell-Tags.            |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### Beispielobjekte
@@ -1157,61 +1157,61 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_cancelled", properties:
 {% endtab %}
 {% endtabs %}
 
-## E-Commerce Canvas Templates
+## E-Commerce Canvas-Templates
 
-Braze hat speziell entwickelte Canvas-Templates entwickelt, die sich auf die im E-Commerce empfohlenen Events stützen, z. B. das Targeting von Kund:inen, die den Checkout-Prozess begonnen, aber vor der Bestellung verlassen haben. Sie können diese Ereignisse nutzen, um fundierte Entscheidungen zu treffen und Ihre Nutzer:innen durch Personalisierung von Nachrichten und Targeting mit bestimmten Zielgruppen zu erreichen.
+Braze hat vorgefertigte Canvas-Templates erstellt, die auf empfohlenen E-Commerce-Events basieren – z. B. das Targeting von Kund:innen, die den Checkout-Prozess begonnen, aber vor der Bestellung abgebrochen haben. Sie können diese Events nutzen, um fundierte Entscheidungen zu treffen und die User Journey durch personalisiertes Messaging und gezieltes Targeting bestimmter Zielgruppen zu verbessern.
 
-In unseren speziellen [Anwendungsfällen für E-Commerce]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases) finden Sie weitere Möglichkeiten, wie Sie diese Ereignisse mit Canvas Templates nutzen können.
+In unseren speziellen [E-Commerce-Anwendungsfällen]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases) finden Sie weitere Möglichkeiten, wie Sie diese Events mit Canvas-Templates nutzen können.
 
-## Nutzer:innen berechnete Felder
+## Berechnete Nutzerfelder
 
-Wir verwenden standardisierte Nutzer:innen Feldberechnungen für die folgenden Felder: 
+Wir verwenden standardisierte Berechnungen für die folgenden Nutzerfelder: 
 
-- **Gesamteinnahmen** = Summe des Gesamtwerts der erteilten Aufträge - Summe des Gesamtwerts der erstatteten Aufträge
-- **Gesamtzahl der Bestellungen** = Anzahl der eindeutigen Bestellungsereignisse - Anzahl der eindeutigen Stornierungen von Bestellungen
-- **Gesamterstattungswert** = Summe des gesamten erstatteten Auftragswerts 
+- **Gesamtumsatz** = Summe des Gesamtwerts aufgegebener Bestellungen - Summe des Gesamtwerts erstatteter Bestellungen
+- **Gesamtanzahl Bestellungen** = Anzahl eindeutiger Bestellungs-Events - Anzahl eindeutiger Stornierungen
+- **Gesamterstattungswert** = Summe des Gesamtwerts erstatteter Bestellungen 
 
-Diese Benutzerfeldberechnungen sind auch auf dem Tab **Transaktionen** der Nutzerprofile enthalten.
+Diese berechneten Nutzerfelder sind auch im Tab **Transaktionen** der Nutzerprofile enthalten.
 
-![Das Tab „Transaktionen“ mit benutzerdefinierten Feldern.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:70%;"}
+![Der Tab „Transaktionen" mit berechneten Nutzerfeldern.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:70%;"}
 
 ## Häufig gestellte Fragen
 
-### Wo kann ich die Kaufdaten auf Ebene der Produkte einsehen?
+### Wo kann ich Kaufdaten auf Produktebene einsehen?
 
-Die Registerkarte **„Transaktionen“** des Nutzerprofils zeigt hochrangige berechnete Felder (wie Gesamtumsatz und Gesamtzahl der Bestellungen). Um Produktdetails für eine bestimmte Nutzer:in anzuzeigen, verwenden Sie den [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/), um E-Commerce-Ereignisdaten abzufragen, oder exportieren Sie Ereignisdaten über [Currents]({{site.baseurl}}/user_guide/data/braze_currents/).
+Der Tab **Transaktionen** des Nutzerprofils zeigt übergeordnete berechnete Felder (wie Gesamtumsatz und Gesamtanzahl der Bestellungen). Um Produktdetails für eine bestimmte Nutzer:in anzuzeigen, verwenden Sie den [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/), um E-Commerce-Event-Daten abzufragen, oder exportieren Sie Event-Daten über [Currents]({{site.baseurl}}/user_guide/data/braze_currents/).
 
-Im Gegensatz zu herkömmlichen Kauf-Events speichern empfohlene E-Commerce-Events Produktdetails als verschachtelte Event-Eigenschaften innerhalb des`products`Arrays. Diese Eigenschaften sind im Messaging über Liquid und in der Segmentierung über [Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) verfügbar.
+Im Gegensatz zu herkömmlichen Kauf-Events speichern empfohlene E-Commerce-Events Produktdetails als verschachtelte Event-Eigenschaften innerhalb des `products`-Arrays. Diese Eigenschaften sind im Messaging über Liquid und in der Segmentierung über [Segmenterweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) verfügbar.
 
 ### Wie kann ich Nutzer:innen nach einem bestimmten Produkt segmentieren?
 
-Der Segmentierer ermöglicht es Ihnen, nach der Häufigkeit zu filtern, mit der ein Nutzer ein E-Commerce-Ereignis durchgeführt hat. Um nach bestimmten Produkteigenschaften (wie z. B.`product_id`  oder `product_name`) zu filtern, verwenden Sie [Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), die die Filterung nach verschachtelten Event-Eigenschaften unterstützen. Beispielsweise können Sie alle Nutzer:innen ermitteln, die in den letzten 90 Tagen das Produkt „SKU-123” erworben haben.
+Der Segmentierer ermöglicht es Ihnen, nach der Häufigkeit zu filtern, mit der eine Nutzer:in ein E-Commerce-Event durchgeführt hat. Um nach bestimmten Produkteigenschaften (wie `product_id` oder `product_name`) zu filtern, verwenden Sie [Segmenterweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), die die Filterung nach verschachtelten Event-Eigenschaften unterstützen. So können Sie beispielsweise alle Nutzer:innen finden, die in den letzten 90 Tagen das Produkt „SKU-123" gekauft haben.
 
 ### Was ist der Unterschied zwischen herkömmlichen Kauf-Events und empfohlenen E-Commerce-Events?
 
-Ältere Kauf-Events verwenden das Braze[-Kauf-Objekt]({{site.baseurl}}/api/objects_filters/purchase_object/) und erfassen einzelne Produktkäufe mit einem`product_id`  und `price`. Empfohlene E-Commerce-Events (wie z. B. `ecommerce.order_placed`) verwenden angepasste Event-Eigenschaften und erfassen den gesamten Bestellkontext, einschließlich mehrerer Produkte, Rabatte und Metadaten, in einem einzigen Ereignis.
+Herkömmliche Kauf-Events verwenden das Braze-[Kauf-Objekt]({{site.baseurl}}/api/objects_filters/purchase_object/) und erfassen einzelne Produktkäufe mit einer `product_id` und einem `price`. Empfohlene E-Commerce-Events (wie `ecommerce.order_placed`) verwenden angepasste Event-Eigenschaften und erfassen den gesamten Bestellkontext – einschließlich mehrerer Produkte, Rabatte und Metadaten – in einem einzigen Event.
 
-Mit der Einführung der empfohlenen E-Commerce-Ereignisse wird Braze das alte Kauf-Event in Zukunft auslaufen lassen. Sollten Sie derzeit Kauf-Events nutzen, werden Sie vorab darüber informiert. In der Zwischenzeit können Sie Kauf-Events bis zum offiziellen Auslaufdatum weiterhin verwenden. Weitere Informationen finden Sie in der [Übersicht der empfohlenen Veranstaltungen]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/).
+Mit der Einführung der empfohlenen E-Commerce-Events wird Braze das herkömmliche Kauf-Event in Zukunft auslaufen lassen. Wenn Sie derzeit Kauf-Events nutzen, werden Sie vorab darüber informiert. In der Zwischenzeit können Sie Kauf-Events bis zum offiziellen Auslaufdatum weiterhin verwenden. Weitere Informationen finden Sie in der [Übersicht der empfohlenen Events]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/).
 
-### Ist es möglich, benutzerdefinierte Eigenschaften zu den empfohlenen E-Commerce-Ereignissen hinzuzufügen?
+### Kann ich angepasste Eigenschaften zu empfohlenen E-Commerce-Events hinzufügen?
 
-Empfohlene E-Commerce-Veranstaltungen verfügen über ein definiertes Schema mit erforderlichen und optionalen Feldern. Sie können für jedes Ereignis zusätzliche benutzerdefinierte Daten in das`metadata`Objekt aufnehmen. Angepasste Tags auf Bestellebene oder proprietäre Felder (wie Kaufkanal oder Informationen zum Shop) werden jedoch nicht als Eigenschaften der obersten Ebene unterstützt. Sollten Sie diese Felder für die Segmentierung benötigen, senden Sie sie bitte weiterhin als separate angepasste Events zusammen mit Ihren E-Commerce-Ereignissen.
+Empfohlene E-Commerce-Events verfügen über ein definiertes Schema mit erforderlichen und optionalen Feldern. Sie können für jedes Event zusätzliche angepasste Daten im `metadata`-Objekt hinzufügen. Angepasste Tags auf Bestellebene oder proprietäre Felder (wie Kaufkanal oder Shop-Informationen) werden jedoch nicht als Eigenschaften der obersten Ebene unterstützt. Wenn Sie diese Felder für die Segmentierung benötigen, senden Sie sie weiterhin als separate angepasste Events zusammen mit Ihren E-Commerce-Events.
 
-### Muss ich beim Senden von external_idE-Commerce-Ereignissen  hinzufügen?
+### Muss ich `external_id` beim Senden von E-Commerce-Events angeben?
 
-Es hängt davon ab, wie Sie die Ereignisse senden:
+Das hängt davon ab, wie Sie die Events senden:
 
-- **Über das SDK**: Nein. Bei der Verwendung eines Braze SDK werden Ereignisse automatisch mit dem aktuellen Benutzerkontext des SDK (anonym oder mit Bezeichner:innen) verknüpft. Es ist nicht erforderlich, bei jedem Ereignisaufruf einen Bezeichner für die Nutzer:in zu übergeben. Stattdessen können Sie die Nutzer:in für diesen Kontext mithilfe von Methoden wie identifizieren`changeUser`.
-- **Über die REST API** (`/users/track`): Ja Jede API-Anfrage muss einen Bezeichner für den Nutzer:in enthalten, wie z. B.`external_id` `braze_id`, `user_alias`, `email`, oder `phone`, da die API keinen Kontext für den „aktuellen Nutzer:in“ hat.
+- **Über das SDK**: Nein. Bei der Verwendung eines Braze SDK werden Events automatisch mit dem aktuellen Nutzerkontext des SDK (anonym oder identifiziert) verknüpft. Sie müssen bei jedem Event-Aufruf keinen Nutzerbezeichner übergeben; stattdessen können Sie die Nutzer:in für diesen Kontext mit Methoden wie `changeUser` identifizieren.
+- **Über die REST API** (`/users/track`): Ja. Jede API-Anfrage muss einen Nutzerbezeichner enthalten, wie z. B. `external_id`, `braze_id`, `user_alias`, `email` oder `phone`, da die API keinen Kontext für die „aktuelle Nutzer:in" hat.
 
-### Warum werden verschachtelte Produkteigenschaften nicht im Dropdown-Menü „AI Recommendations“-Einstellungen angezeigt?
+### Warum werden verschachtelte Produkteigenschaften nicht im Dropdown-Menü der KI-Empfehlungen-Einrichtung angezeigt?
 
-Bei der Konfiguration von[ KI-Artikelempfehlungen]({{site.baseurl}}/user_guide/brazeai/recommendations/) werden im Dropdown-Menü **„Eigenschaftsname“** nur Event-Eigenschaften der obersten Ebene aufgeführt (z. B. `order_id`,`total_value` , und `currency`). Verschachtelte Eigenschaften innerhalb des`products`Arrays (z. B.`products.product_id`oder `products.variant_id`) werden möglicherweise nicht in dieser Liste angezeigt, können jedoch manuell mithilfe der Punktnotation in das Feld eingegeben werden. Für die meisten E-Commerce-Implementierungen empfiehlt Braze, als Bezeichner für`products.product_id` Artikel zu verwenden und diesen mit einem [Katalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) zu verknüpfen, dessen Artikel-IDs mit Ihren`product_id`oder`variant_id`Werten übereinstimmen.
+Bei der Konfiguration von [KI-Artikelempfehlungen]({{site.baseurl}}/user_guide/brazeai/recommendations/) werden im Dropdown-Menü **Eigenschaftsname** nur Event-Eigenschaften der obersten Ebene aufgeführt (wie `order_id`, `total_value` und `currency`). Verschachtelte Eigenschaften innerhalb des `products`-Arrays (z. B. `products.product_id` oder `products.variant_id`) werden möglicherweise nicht in dieser Liste angezeigt, können jedoch manuell mithilfe der Punktnotation in das Feld eingegeben werden. Für die meisten E-Commerce-Implementierungen empfiehlt Braze, `products.product_id` als Artikelbezeichner zu verwenden und diesen mit einem [Katalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) zu verknüpfen, dessen Artikel-IDs mit Ihren `product_id`- oder `variant_id`-Werten übereinstimmen.
 
-### Warum werden einige meiner E-Commerce-Ereignisse nicht in Braze angezeigt?
+### Warum werden einige meiner E-Commerce-Events nicht in Braze angezeigt?
 
-Sollten Ereignisse nicht in Nutzerprofilen oder Protokollen angezeigt werden, überprüfen Sie bitte Folgendes:
+Wenn Events nicht in Nutzerprofilen oder Protokollen angezeigt werden, überprüfen Sie Folgendes:
 
-- **Zeitpunkt der SDK-Datenbereinigung**: Das Braze SDK speichert Daten lokal im Cache und lädt sie regelmäßig hoch (in der Regel innerhalb von 10 bis 60 Sekunden). Bitte rufen Sie`requestImmediateDataFlush()`an, um einen `logCustomEvent()`sofortigen Upload zu veranlassen.
-- **Erforderliche Eigenschaften**: E-Commerce-Ereignisse verfügen über erforderliche Eigenschaften. Wenn eine erforderliche Eigenschaft fehlt oder einen ungültigen Datentyp aufweist, kann das Ereignis abgelehnt werden. Bitte überprüfen Sie, ob Ihre Ereignis-Nutzlast dem [erforderlichen Schema](#types-of-ecommerce-recommended-events) entspricht.
-- **Genauigkeit der Veranstaltungsbezeichnung**: Bei E-Commerce-Veranstaltungsbezeichnungen wird zwischen Groß- und Kleinschreibung unterschieden, und sie müssen exakt übereinstimmen (z. B. `ecommerce.checkout_started`, nicht `ecommerce.checkoutStarted`).
+- **Zeitpunkt der SDK-Datenübertragung**: Das Braze SDK speichert Daten lokal im Cache und lädt sie regelmäßig hoch (in der Regel innerhalb von 10–60 Sekunden). Rufen Sie `requestImmediateDataFlush()` nach `logCustomEvent()` auf, um einen sofortigen Upload zu erzwingen.
+- **Erforderliche Eigenschaften**: E-Commerce-Events haben erforderliche Eigenschaften. Wenn eine erforderliche Eigenschaft fehlt oder einen ungültigen Datentyp aufweist, kann das Event abgelehnt werden. Überprüfen Sie, ob Ihre Event-Payload dem [erforderlichen Schema](#types-of-ecommerce-recommended-events) entspricht.
+- **Genauigkeit der Event-Namen**: E-Commerce-Event-Namen unterscheiden zwischen Groß- und Kleinschreibung und müssen exakt übereinstimmen (z. B. `ecommerce.checkout_started`, nicht `ecommerce.checkoutStarted`).
