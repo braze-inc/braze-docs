@@ -33,7 +33,7 @@ In this section, you can add the names and email addresses you can use when Braz
 
 #### Personalizing with Liquid
 
-You can also use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in the **From Display Name** and **Local Part** fields to dynamically template the sending email based on custom attributes. When composing an email message, you can use Liquid in the **Domain** field by going to **Sending Settings** > **Sending Info** and selecting the **Customize from display name + address** checkbox. 
+You can also use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in the **From Display Name** and **Local Part** fields to dynamically template the sender name and email address based on custom attributes. When composing an email message, you can use Liquid in the **Domain** field by going to **Sending Settings** > **Sending Info** and selecting the **Customize from display name + address** checkbox. 
 
 ![Sending settings with fields for customizing the from display name, address, and domain.]({% image_buster /assets/img/email_settings/email_campaign_domain.png %})
 
