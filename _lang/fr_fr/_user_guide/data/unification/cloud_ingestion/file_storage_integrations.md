@@ -220,7 +220,7 @@ Donnez un nom et une description au rôle, puis sélectionnez **Create Role**.
 8. Ajoutez une ou plusieurs adresses e-mail de contact pour recevoir des notifications si la synchronisation est interrompue en raison de problèmes d'accès ou d'autorisations. Si vous le souhaitez, activez les notifications pour les erreurs au niveau de l'utilisateur et les synchronisations réussies.
 9. Créez la synchronisation.
 
-{% details General availability experience %}
+{% details Expérience en disponibilité générale %}
 
 1. Pour créer une nouvelle intégration, accédez à **Paramètres des données** > **Ingestion de données dans le cloud**, sélectionnez **Créer une nouvelle synchronisation de données**, puis sélectionnez **Importation S3** dans la section des sources de fichiers. 
 2. Saisissez les informations issues du processus de configuration AWS pour créer une nouvelle synchronisation. Précisez les éléments suivants :

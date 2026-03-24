@@ -785,7 +785,7 @@ Quando ativada, sua sincronização será executada de acordo com a programaçã
 
 {% endtabs %}
 
-{% details General availability experience %}
+{% details Experiência de disponibilidade geral %}
 
 ## Configuração de integrações de data warehouse
 
