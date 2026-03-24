@@ -2024,7 +2024,7 @@ When creating placeholder text, refer to the following guidelines:
 | Use uppercase letters and separate words with underscores (_). | `PLACEHOLDER_VARIABLE` |
 | ​​For inline placeholder text, use italics. | *`PLACEHOLDER_VARIABLE`* |
 | For API code block placeholder text (where you can’t use italics), enclose the placeholders in curly brackets ({}).  | `<string name="com_appboy_api_key">{YOUR_APP_IDENTIFIER_API_KEY}</string>` |
-| For Liquid code block placeholder text (where you can’t use italics), use uppercase letters. | `{% raw %}{%- connected_content YOUR-API-URL :save items -%}{% endraw %}`  |
+| For Liquid code block placeholder text (where you can’t use italics), use uppercase letters. | `{%- connected_content YOUR-API-URL :save items -%}` |
 | Don't sacrifice clarity for brevity. Use as many words as needed to represent a placeholder. | **Do:** `CAMPAIGN_NAME` <br> **Don't**: _`NAME`_|
 
 ##### Using placeholders

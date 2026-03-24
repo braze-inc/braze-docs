@@ -14,7 +14,7 @@ If you'd like to help improve the docs, you can:
 
 - [Report an issue](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=issue&projects=&template=report_an_issue.md&title=)
 - [Request a feature](https://github.com/braze-inc/braze-docs/issues/new?assignees=&labels=enhancement&projects=&template=request_a_feature.md&title=)
-- [Contribute](CONTRIBUTING.md) (see [docs/contributing/README.md](docs/contributing/README.md) for the full handbook)
+- [Contribute](.github/CONTRIBUTING.md) (see [docs/contributing/README.md](docs/contributing/README.md) for the full handbook)
 
 ## Quick start
 

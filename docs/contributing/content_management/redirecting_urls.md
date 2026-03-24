@@ -9,7 +9,10 @@ Page URLs always match the directory structure of the Braze Docs repository. Whe
 
 By setting up URL redirects, you'll help prevent user bookmarks from breaking.
 
-*Included in the site build from [`_includes/contributing/prerequisites.md`](../../../_includes/contributing/prerequisites.md).*
+## Prerequisites
+
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+
 
 ## Redirecting a page
 
@@ -50,7 +53,7 @@ braze-docs
 ```
 
 > **Tip:**
-> If you don't plan on moving or renaming the file, you can also set up the redirect directly in your file's YAML front matter with [`layout: redirect`]({{site.baseur}}/contributing/yaml_front_matter/page_layouts/#redirect), instead of creating a new one in the global redirect file.
+> If you don't plan on moving or renaming the file, you can also set up the redirect directly in your file's YAML front matter with [`layout: redirect`](../yaml_front_matter/page_layouts.md#redirect), instead of creating a new one in the global redirect file.
 
 
 
@@ -68,7 +71,9 @@ Replace the following:
 | `REDIRECT_TO`   | The URL you want to redirect _to_ with `https://www.braze.com/` removed from the URL string.   |
 
 
-*Included in the site build from [`_includes/contributing/alerts/warning_urls_must_be_lowercase.md`](../../../_includes/contributing/alerts/warning_urls_must_be_lowercase.md).*
+> **Warning:**
+> URL strings for redirects cannot contain uppercase characters—even if the corresponding filename is uppercase.
+
 
 Your redirect should be similar to the following:
 
@@ -95,7 +100,9 @@ Replace the following:
 | `NEW_HEADING_URL` | The new heading URL you want to redirect _to_ with `https://www.braze.com/` removed from the URL string.                                      |
 
 
-*Included in the site build from [`_includes/contributing/alerts/warning_urls_must_be_lowercase.md`](../../../_includes/contributing/alerts/warning_urls_must_be_lowercase.md).*
+> **Warning:**
+> URL strings for redirects cannot contain uppercase characters—even if the corresponding filename is uppercase.
+
 
 Your redirect should be similar to the following:
 
@@ -141,4 +148,16 @@ https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive
 
 ## Troubleshooting
 
-*Included in the site build from [`_includes/contributing/troubleshooting/redirects.md`](../../../_includes/contributing/troubleshooting/redirects.md).*
+If a [redirect you set up](https://github.com/braze-inc/braze-docs/blob/develop/docs/contributing/content_management/redirecting_urls.md) in the global redirect file (`assets/js/broken_redirect_list.js`) isn't working, double-check your URL string for any uppercase characters. If you find any, convert them to lowercase (even if the corresponding filename in the `_docs` directory contains uppercase characters).
+
+**Before (incorrect — uppercase in URL string):**
+
+```javascript
+validurls['/docs/hidden/WIP_Partnerships/WIP_Guidelines'] = '/docs/feedback/';
+```
+
+**After (correct — lowercase URL string):**
+
+```javascript
+validurls['/docs/hidden/wip_partnerships/wip_guidelines'] = '/docs/feedback/';
+```

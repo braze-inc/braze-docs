@@ -11,7 +11,10 @@ When you're finished with this tutorial, you'll be able to:
 - Preview your changes in a test site
 - Request a review from the Braze Docs team
 
-*Included in the site build from [`_includes/contributing/prerequisites.md`](../../_includes/contributing/prerequisites.md).*
+## Prerequisites
+
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+
 
 ## Making your first contribution
 
@@ -137,7 +140,9 @@ Switched to a new branch 'fixing-typo-in-metadata'
 
 In your text editor, open the document you want to change, then make your changes using [Markdown formatting](https://www.markdownguide.org/basic-syntax/).
 
-*Included in the site build from [`_includes/contributing/alerts/tip_locating_a_file.md`](../../_includes/contributing/alerts/tip_locating_a_file.md).*
+> **Tip:**
+> URLs on Braze Docs always match the directory structure within the docs repository. Reference the URL on Braze Docs to help find your way around.
+
 
 When you're finished, save your changes, then select the terminal and check your Git status. The output is similar to the following:
 

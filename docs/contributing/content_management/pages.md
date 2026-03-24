@@ -3,7 +3,10 @@
 
 > Learn how to create, modify, and remove pages on Braze Docs. To create or reorder a section instead, see [Sections](sections.md). For general information about pages, see [About content management](../content_management.md#pages).
 
-*Included in the site build from [`_includes/contributing/prerequisites.md`](../../../_includes/contributing/prerequisites.md).*
+## Prerequisites
+
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+
 
 ## Creating a page
 
@@ -20,7 +23,9 @@ Replace `PAGE_TITLE` with the title of your page, which should follow the [Braze
 - **Page title:** Setting up your development environment for C++
 - **File name:** `setting_up_your_development_environment_for_cpp.md`
 
-*Included in the site build from [`_includes/contributing/alerts/tip_locating_a_file.md`](../../../_includes/contributing/alerts/tip_locating_a_file.md).*
+> **Tip:**
+> URLs on Braze Docs always match the directory structure within the docs repository. Reference the URL on Braze Docs to help find your way around.
+
 
 ### Step 2: Add a template
 
@@ -48,21 +53,13 @@ Other than the Braze-specific syntax covered in this section, all content be wri
 ### Cross-referencing
 
 To reference a page hosted outside Braze Docs, use standard Markdown syntax.
-
-{% raw %}
 ```markdown
 [LINK_TEXT](FULL_URL)
 ```
-{% endraw %}
-
 To cross-reference a page hosted on Braze Docs, use the following Braze-specific syntax.
-
-{% raw %}
 ```markdown
 [LINK_TEXT](https://www.braze.com/docs/SHORT_URL)
 ```
-{% endraw %}
-
 > **Note:**
 > For a full walkthrough, see [Cross-referencing](cross_referencing.md).
 
@@ -71,13 +68,9 @@ To cross-reference a page hosted on Braze Docs, use the following Braze-specific
 ### Adding images
 
 To add images, place the image's PNG file inside the relevant location within `assets/img`, then use the following syntax.
-
-{% raw %}
 ```markdown
 ![ALT_TEXT.](../../../assets/img/DIRECTORY/IMAGE.png)
 ```
-{% endraw %}
-
 > **Note:**
 > For a full walkthrough, see [Adding a new image](images.md).
 

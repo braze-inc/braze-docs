@@ -8,7 +8,10 @@
 
 
 
-*Included in the site build from [`_includes/contributing/prerequisites.md`](../../_includes/contributing/prerequisites.md).*
+## Prerequisites
+
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+
 
 ## Getting the latest changes {#latest}
 

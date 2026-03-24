@@ -3,7 +3,10 @@
 
 > Learn how to add, modify, and remove images on Braze Docs. For general information about images, see [About content management](../content_management.md#images).
 
-*Included in the site build from [`_includes/contributing/prerequisites.md`](../../../_includes/contributing/prerequisites.md).*
+## Prerequisites
+
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+
 
 ## Adding a new image
 
@@ -40,18 +43,14 @@ braze-docs
 ### Step 2: Link to the image
 
 > **Important:**
-> Since Liquid's {% raw %}`{% tab %}`{% endraw %} tag does not support reference-style links, only in-line links are documented below. Existing reference links will continue to work, but are no longer recommended.
+> Since Liquid's `{% tab %}` tag does not support reference-style links, only in-line links are documented below. Existing reference links will continue to work, but are no longer recommended.
 
 
 
 In your Markdown file, link to your new image using the in-line syntax.
-
-{% raw %}
 ```markdown
 ![ALT_TEXT.](../../../assets/img/DIRECTORY/IMAGE.png)
 ```
-{% endraw %}
-
 Replace the following:
 
 | Placeholder | Description                                                                                                             |
@@ -61,42 +60,26 @@ Replace the following:
 
 
 Your in-line image should be similar to the following:
-
-{% raw %}
 ```markdown
 ![The form for creating a new pull request on GitHub.](../../../assets/img/contributing/getting_started/github_pull_request.png)
 ```
-{% endraw %}
-
 ### Step 3: Set the image's maximum width (optional)
 
 You can set the image's maximum width by appending the following Liquid code to your image link:
-
-{% raw %}
 ```markdown
 
 ```
-{% endraw %}
-
 Replace `NUMBER` with the maximum width you'd like to set as a percentage. Your image link should be similar to the following:
-
-{% raw %}
 ```markdown
 ![The form for creating a new pull request on GitHub.](../../../assets/img/contributing/getting_started/github_pull_request.png)```
-{% endraw %}
-
 ## Updating an image
 
 ### Step 1: Find the original reference
 
 Open the relevant Markdown file and look for the old [in-line](images.md#step-2-link-to-the-image) or [reference-style](images.md#step-2-link-to-the-image) image link, which will be similar the following.
-
-{% raw %}
 ```markdown
 ../../../assets/img/DIRECTORY/IMAGE.png
 ```
-{% endraw %}
-
 ### Step 2: Update the image
 
 When updating an existing image, you can either add a new image file or replace the existing image file. Be sure your new image follows the [Braze Docs Style Guide](../style_guide.md).

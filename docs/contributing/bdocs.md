@@ -3,7 +3,10 @@
 
 > [`bdocs`](https://github.com/braze-inc/braze-docs/blob/develop/bdocs) is a wrapper script located in the root of the Braze Docs repository that helps you replace links, generate redirect URLs, create deployment descriptions, and more.
 
-*Included in the site build from [`_includes/contributing/prerequisites.md`](../../_includes/contributing/prerequisites.md).*
+## Prerequisites
+
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+
 
 ## Using `bdocs`
 
@@ -90,7 +93,7 @@ $ ./bdocs release
 
 ### `tlinks`
 
-Reference-style links are not supported within Liquid `{% raw %}{% tab %}{% endraw %}` tags. `tlinks` (short for "transform links") transforms all the reference-style links on a file into [in-line links](content_management/cross_referencing.md)&#8212;whether it be a normal URL, a `{% raw %}https://www.braze.com/docs{% endraw %}`, an image, or other link. This command takes a single file or an entire directory as an argument.
+Reference-style links are not supported within Liquid `{% tab %}` tags. `tlinks` (short for "transform links") transforms all the reference-style links on a file into [in-line links](content_management/cross_referencing.md)&#8212;whether it be a normal URL, a `https://www.braze.com/docs` URL, an image, or other link. This command takes a single file or an entire directory as an argument.
 
 > **Note:**
 > After you run `tlinks`, [`rlinks`](#rlinks) will be automatically run against the same file or directory.
@@ -106,29 +109,19 @@ Reference-style links are not supported within Liquid `{% raw %}{% tab %}{% endr
 ```
 
 #### Example page: Before
-
-{% raw %}
 ```markdown
 Before continuing, [create your SSH token][2]. When you're finished, see [Step 2: Uploading your token][5].
 
 [2]: https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication/
 [5]: https://www.apple.com/swift#step-2-uploading-your-token
 ```
-{% endraw %}
-
 #### Example page: After
-
-{% raw %}
 ```markdown
 Before continuing, [create your SSH token](https://www.braze.com/docs/developer_guide/authentication/). When you're finished, see [Step 2: Uploading your token](https://www.apple.com/swift#step-2-uploading-your-token).
 
 [2]: https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication/
 [5]: https://www.apple.com/swift#step-2-uploading-your-token
 ```
-{% endraw %}
-
-
-
 ### `rlinks`
 
 `rlinks` (short for "remove links") removes any unused reference links from the bottom of a Markdown file. This command takes a single file or an entire directory as an argument.
@@ -147,30 +140,20 @@ Before continuing, [create your SSH token](https://www.braze.com/docs/developer_
 ```
 
 #### Example page: Before
-
-{% raw %}
 ```markdown
 Before continuing, [create your SSH token](https://www.braze.com/docs/developer_guide/authentication/). When you're finished, see [Step 2: Uploading your token](https://www.apple.com/swift#step-2-uploading-your-token).
 
 [2]: https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication/
 [5]: https://www.apple.com/swift#step-2-uploading-your-token
 ```
-{% endraw %}
-
 #### Example page: After
-
-{% raw %}
 ```markdown
 Before continuing, [create your SSH token](https://www.braze.com/docs/developer_guide/authentication/). When you're finished, see [Step 2: Uploading your token](https://www.apple.com/swift#step-2-uploading-your-token).
 
 ```
-{% endraw %}
-
-
-
 ### `ulinks`
 
-`ulinks` (short for "update links") takes a file or directory and updates any old links listed on [`broken_redirect_list.js`](https://github.com/braze-inc/braze-docs/blob/develop/assets/js/broken_redirect_list.js) with the newest possible link. For example, if link `one` redirects to link `two`, and link `two` redirects to link `three`, `ulinks` will replace both link `one` and link `two` with link `three`. This command only updates links starting with {% raw %}`https://www.braze.com/docs`{% endraw %}.
+`ulinks` (short for "update links") takes a file or directory and updates any old links listed on [`broken_redirect_list.js`](https://github.com/braze-inc/braze-docs/blob/develop/assets/js/broken_redirect_list.js) with the newest possible link. For example, if link `one` redirects to link `two`, and link `two` redirects to link `three`, `ulinks` will replace both link `one` and link `two` with link `three`. This command only updates links starting with `https://www.braze.com/docs`.
 
 ### usage example
 
@@ -183,23 +166,13 @@ Total replacements made: 1
 ```
 
 #### Example page: Before
-
-{% raw %}
 ```markdown
 Learn how to [log analytics](https://www.braze.com/docs/developer_guides/android/content_cards/logging_analytics/) for your custom Content Cards.
 ```
-{% endraw %}
-
 #### Example page: After
-
-{% raw %}
 ```markdown
 Learn how to [log analytics](https://www.braze.com/docs/developer_guides/content_cards/analytics/) for your custom Content Cards.
 ```
-{% endraw %}
-
-
-
 #### Why you should update old links
 
 Ideally, redirects added to [`assets/js/broken_redirect_list.js`](https://github.com/braze-inc/braze-docs/blob/develop/assets/js/broken_redirect_list.js) should only be used to:
@@ -324,8 +297,6 @@ https://braze-docs-gtcavota9-braze.vercel.app/docs/user_guide/sage_ai/predictive
 2. Even if you're offline, you can easily review the unique Braze Docs syntax&#8212;making it easier when working on airplane mode.
 
 ### usage example
-
-{% raw %}
 <pre style="font-family: 'Roboto Mono', monospace; font-size: 14px; line-height: 16px; background-color: #f4f4f7; color: #666666; padding: 10px; overflow-x: auto; white-space: pre; word-break: inherit; word-wrap: inherit; min-height: 36px;">
 $ ./bdocs syntax
 This is all of the unique Markdown syntax supported by Braze Docs.
@@ -366,6 +337,5 @@ SUBTABS
 TABLE WORD-BREAK
   
 </pre>
-{% endraw %}
 {% endtab %}
 {% endtabs %}

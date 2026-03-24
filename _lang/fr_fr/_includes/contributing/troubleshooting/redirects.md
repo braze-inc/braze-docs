@@ -3,13 +3,13 @@ Si une [redirection que vous avez définie]({{site.baseurl}}/contributing/conten
 {% tabs local %}
 {% tab before %}
 ```javascript
-validurls['/docs/hidden/WIP_Partnerships/WIP_Guidelines'] = '/docs/feedback/';
+validurls['/docs/hidden/WIP_Partnerships/WIP_Guidelines'] = '/docs/contributing/home/';
 ```
 {% endtab %}
 
 {% tab after %}
 ```javascript
-validurls['/docs/hidden/wip_partnerships/wip_guidelines'] = '/docs/feedback/';
+validurls['/docs/hidden/wip_partnerships/wip_guidelines'] = '/docs/contributing/home/';
 ```
 {% endtab %}
 {% endtabs %}

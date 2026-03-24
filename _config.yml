@@ -221,7 +221,6 @@ exclude:
     ".vscode",
     "system.properties",
     "CODE_OF_CONDUCT.md",
-    "CONTRIBUTING.md",
     "docs",
     "LICENSE.md",
     "_site",

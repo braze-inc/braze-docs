@@ -66,13 +66,9 @@ To add an anchor to a heading, add the following code to the end of the line tha
 ```
 
 You can link to headings with custom anchors by creating a standard link with a number sign `#` followed by the custom anchor.
-
-{% raw %}
 ```
 Here is my [link](#anchor-text)
 ```
-{% endraw %}
-
 ## Font Test
 
 ### Styling
@@ -265,8 +261,6 @@ https://www.braze.com/docs/assets/img/SOC2.png?6338040be8e98c4c9abe1f35b3e43e3a 
 ---
 
 ### Markdown
-
-{% raw %}
 ```
 {% gallery %}
 https://www.braze.com/docs/assets/img_archive/EBTH_Email.png?bf892368baf287cba5ab9a6e3b09431d  <br> This is a [link](https://www.braze.com).
@@ -276,10 +270,6 @@ https://www.braze.com/docs/assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_j
 https://www.braze.com/docs/assets/img/SOC2.png?6338040be8e98c4c9abe1f35b3e43e3a  <br> This is a regular comment.
 {% endgallery %}
 ```
-{% endraw %}
-
-
-
 ## Interactive Image Test
 ### Styling
 
@@ -399,8 +389,6 @@ class Foo:
 ---
 
 ### Markdown
-
-{% raw %}
 ```
 > **Tip:**
 > This is a tip
@@ -426,10 +414,6 @@ class Foo:
 This is a update
 {% endalert %}
 ```
-{% endraw %}
-
-
-
 ## Embedded Video Test
 ### Styling
 
@@ -461,43 +445,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectu
 ### Markdown
 
 You'll need the YouTube ID to embed a YouTube video. It appears after `v=` in the URL. For example, `https://www.youtube.com/watch?v=VR1qn1OBP7k` has an ID of `VR1qn1OBP7k`.
-
-{% raw %}
 ```html
 {% multi_lang_include video.html id="[youtube_id]" source="youtube" %}
 ```
-{% endraw %}
-
 To align right or left, and limit the maximum width to 50% use the `align` parameter = `left` or `right`:
-{% raw %}
 ```html
 {% multi_lang_include video.html id="[youtube_id]" align="left" source="youtube" %}
 
 {% multi_lang_include video.html id="[youtube_id]" align="right" source="youtube" %}
 ```
-{% endraw %}
-
 Loom Example:
-{% raw %}
 ```html
 {% multi_lang_include video.html id="[lid]" source="loom" %}
 ```
-{% endraw %}
-
-
-
 #### Featured Video Layout with Status Placement for Higher Resolution
 
 To use the featured video layout which places a static video on the left side for higher resolution display, add a `video_id` and a `video_type` (such as `youtube`) to the YAML header for the page. By default, `video_source` is set to `youtube`.
-
-{% raw %}
 ```yaml
 layout: featured_video
 video_id: [video_id]
 video_source: youtube
 ```
-{% endraw %}
-
 ## List Test
 ### Styling
 
@@ -571,17 +539,11 @@ print("hello world!")
 ---
 
 ### Markdown
-
-{% raw %}
 ```liquid
 {% details Click me to Expand %}
 ...
 {% enddetails %}
 ```
-{% endraw %}
-
-
-
 ## Tab Test
 
 #### Custom Tabs
@@ -623,19 +585,12 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 
 
 #### Usage
-{% raw %}
 Enclose **tabs** in a `` and ``
 Enclose individual **tab** with the Liquid code and name of the tab `{% tab [Tab name] %}` and `{% endtab %}`
-{% endraw %}
-
 > **Important:**
 > Note number of tabs on the page should be consistent, otherwise tab content might be hidden.
 >  For example, if one set of tabs has `C++`,`C-Sharp` and `JS`, and another set of tabs has `C-Sharp` and `JS`,
 > then when somebody clicks on `C++`, the other section will show nothing. See the following local tabs option for a workaround.
-
-
-
-{% raw %}
 ```liquid
 ### objective-c
 
@@ -649,22 +604,16 @@ Content of swift
 
 
 ```
-{% endraw %}
-
 #### Local Tabs
 For self-contained tabs, such as tabs that only change the tab content for the specific section, then use the local parameter in the parent tabs block.
-
-{% raw %}
 ```liquid
 
 ...
 
 ```
-{% endraw %}
-
 #### Subtabs
 For tabs within tabs, `subtabs` and `subtab` can be used. Default setting is `local`.
-For global `subtabs`, use the `global` option: {% raw %}`{% subtabs global %}`{% endraw %}
+For global `subtabs`, use the `global` option: `{% subtabs global %}`
 
 ### Tab 1
 
@@ -695,7 +644,6 @@ Subtab 2a content
 
 
 ##### Markdown
-{% raw %}
 ```
 ### Tab 1
 
@@ -725,6 +673,4 @@ Subtab 2a content
 
 
 ```
-{% endraw %}
-
 [1]: ../../assets/img_archive/code_snippet.png

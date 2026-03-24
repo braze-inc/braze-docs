@@ -3,13 +3,13 @@ Wenn eine [von Ihnen eingerichtete Weiterleitung]({{site.baseurl}}/contributing/
 {% tabs local %}
 {% tab before %}
 ```javascript
-validurls['/docs/hidden/WIP_Partnerships/WIP_Guidelines'] = '/docs/feedback/';
+validurls['/docs/hidden/WIP_Partnerships/WIP_Guidelines'] = '/docs/contributing/home/';
 ```
 {% endtab %}
 
 {% tab after %}
 ```javascript
-validurls['/docs/hidden/wip_partnerships/wip_guidelines'] = '/docs/feedback/';
+validurls['/docs/hidden/wip_partnerships/wip_guidelines'] = '/docs/contributing/home/';
 ```
 {% endtab %}
 {% endtabs %}

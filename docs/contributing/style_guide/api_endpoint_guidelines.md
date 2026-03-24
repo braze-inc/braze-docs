@@ -94,18 +94,12 @@ If there are path parameters for the endpoint, include a Path parameters header 
 If there are no path parameters for the endpoint, include a Path parameters header and the following callout: "There are no path parameters for this endpoint."
 
 If there are no path or request parameters for the endpoint, merge the caveat into the same section as shown below.
-
-{% raw %}
-
 <div style="margin-left: 2em;">
 <code>
 ## Path and request parameters <br>
 There are no path or request parameters for this endpoint.
 </code>
 </div>
-
-{% endraw %}
-
 ## Naming conventions
 
 Start each endpoint name with an active verb after its method. This lets users know the function of the endpoint immediately. 

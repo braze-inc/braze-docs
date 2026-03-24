@@ -3,7 +3,10 @@
 
 > Learn how to create and order sections on Braze Docs. To create, modify, or delete an individual page instead, see [Pages](pages.md). For general information about sections, see [About content management](../content_management.md#sections).
 
-*Included in the site build from [`_includes/contributing/prerequisites.md`](../../../_includes/contributing/prerequisites.md).*
+## Prerequisites
+
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+
 
 ## Creating a section
 

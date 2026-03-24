@@ -59,8 +59,6 @@ How-to guides are action-based, chronological steps that show users how to compl
 #### Header syntax
 
 H2 headers (`##` in Markdown) should be action-oriented and reflect the general goal for this step. If there's any optional steps, prepend `(Optional)` to the header. For example:
-
-{% raw %}
 ```
 ## Creating a page
 
@@ -69,11 +67,7 @@ H2 headers (`##` in Markdown) should be action-oriented and reflect the general 
 3. Use a filename that follows our [naming guidelines](#naming-guidelines).
 4. (Optional) You can generate a preview by running `rake` in your terminal.
 ```
-{% endraw %}
-
 For long or complicated steps, use nested headers to group related steps. If there's any optional steps, append `(optional)` to the header. For example:
-
-{% raw %}
 ``````markdown
 ## Creating a page
 
@@ -97,8 +91,6 @@ To generate a preview, open your terminal and run the following command:
 rake
 ```
 ``````
-{% endraw %}
-
 ### Tutorials
 
 There are two kinds of tutorials: use cases and generic. In most scenarios, you'll want to write a use case.

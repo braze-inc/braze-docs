@@ -5,7 +5,10 @@
 
 Content reuse in Jekyll is accomplished using includes. Includes are stored in the `_includes` directory as a regular Markdown file. Although, unlike the Markdown files in the `_docs` directory, these files don't need YAML front matter.
 
-*Included in the site build from [`_includes/contributing/prerequisites.md`](../../../_includes/contributing/prerequisites.md).*
+## Prerequisites
+
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+
 
 ## Creating an include
 
@@ -22,7 +25,6 @@ braze-docs
 
 Add content to your page, and be sure to follow the [Braze Docs Style Guide](../style_guide.md). If you plan on adding your include to a page that already has YAML front matter, do not add front matter to your include. Your content should be similar to the following:
 
-{% raw %}
 ```markdown
 ## Site generator 
 
@@ -39,7 +41,6 @@ As a contributor, you'll primarily work within the following directories.
 | [`assets`](https://github.com/braze-inc/braze-docs/tree/develop/assets)       | Contains all the images for Braze Docs. Any text file in the `_docs` or `_includes` directory can link to this directory to display an image on its page.                                                                                                                                                                         |
 
 ```
-{% endraw %}
 
 > **Tip:**
 > For a full walkthrough, see [Writing Content](pages.md#writing-content).
@@ -50,11 +51,9 @@ As a contributor, you'll primarily work within the following directories.
 
 To reference an include, use the following syntax within the relevant Markdown file:
 
-{% raw %}
 ```plaintext
 {% multi_lang_include PATH_TO_INCLUDE %}
 ```
-{% endraw %}
 
 Replace `PATH_TO_INCLUDE` with the relative path from inside the `_includes` directory. For example, given the following file tree:
 
@@ -64,22 +63,21 @@ braze-docs
     ├── alerts
     ├── archive
     └── contributing
-        └── prerequisites.md
+        └── templates
+            └── basic.md
 ```
 
 The reference would be similar to the following:
 
 ### example input
 
-{% raw %}
 ```markdown
 # Pages
 
 > Learn how to create, modify, and remove pages on Braze Docs.
 
-*Included in the site build from [`_includes/contributing/prerequisites.md`](../../../_includes/contributing/prerequisites.md).*
+{% multi_lang_include contributing/templates/basic.md %}
 ```
-{% endraw %}
 
 ---
 

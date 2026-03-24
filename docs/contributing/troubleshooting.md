@@ -5,7 +5,19 @@
 
 ## Redirect isn't working
 
-*Included in the site build from [`_includes/contributing/troubleshooting/redirects.md`](../../_includes/contributing/troubleshooting/redirects.md).*
+If a [redirect you set up](https://github.com/braze-inc/braze-docs/blob/develop/docs/contributing/content_management/redirecting_urls.md) in the global redirect file (`assets/js/broken_redirect_list.js`) isn't working, double-check your URL string for any uppercase characters. If you find any, convert them to lowercase (even if the corresponding filename in the `_docs` directory contains uppercase characters).
+
+**Before (incorrect — uppercase in URL string):**
+
+```javascript
+validurls['/docs/hidden/WIP_Partnerships/WIP_Guidelines'] = '/docs/feedback/';
+```
+
+**After (correct — lowercase URL string):**
+
+```javascript
+validurls['/docs/hidden/wip_partnerships/wip_guidelines'] = '/docs/feedback/';
+```
 
 ## Preview deployment returns a 404
 
@@ -56,11 +68,11 @@ Content for tab two.
 
 If you are documenting actual Liquid code in your Markdown file, ensure each code block is surrounded in [Liquid raw tags](https://shopify.dev/docs/api/liquid/tags/raw).
 
-Use `{% raw %}` and `{% endraw %}` so the build does not evaluate example Liquid. For HTML-encoded examples used on the live docs site, see the source of this page in Git history or `_includes` patterns.
+In `_docs` and other Jekyll-built pages, wrap example Liquid in `{% raw %}` … `{% endraw %}` so the build does not evaluate it. For HTML-encoded examples used on the live docs site, see the source of this page in Git history or `_includes` patterns.
 
 ## Cross-reference link returns a 404
 
-If a [cross-reference link](content_management/cross_referencing.md) on your page (such as `` `{% raw %}[Braze Developer Guide]({{site.baseurl}}/developer_guide/home){% endraw %}` ``) returns a 404 page, check the URL for the following string.
+If a [cross-reference link](content_management/cross_referencing.md) on your page (such as `[Braze Developer Guide](https://www.braze.com/docs/developer_guide/home)` with a mistaken path) returns a 404 page, check the URL for the following string.
 
 ```plaintext
 %7B%7Bsite.baseurl%7D%7D

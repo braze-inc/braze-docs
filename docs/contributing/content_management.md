@@ -84,13 +84,9 @@ search_tag: Contributing
 Images are stored as PNG files inside `assets/img`. The structure of the `img` directory does not need to match the structure of Braze Docs; however, it's best to group related images together into subdirectories.
 
 Each image can be linked to one or more pages using the following syntax.
-
-{% raw %}
 ```markdown
 ![ALT_TEXT.](../../assets/img/DIRECTORY/IMAGE.png)
 ```
-{% endraw %}
-
 Replace the following.
 
 | Placeholder | Description                                                                                                             |
@@ -100,13 +96,9 @@ Replace the following.
 
 
 Your in-line image should be similar to the following:
-
-{% raw %}
 ```markdown
 ![The form for creating a new pull request on GitHub.](../../assets/img/contributing/getting_started/github_pull_request.png)
 ```
-{% endraw %}
-
 > **Tip:**
 > For a full walkthrough, see [Adding a new image](content_management/images.md#adding-a-new-image).
 
@@ -289,13 +281,9 @@ page_order: 0
 ## Cross-references
 
 A cross-reference is when one page on Braze Docs links to another page on Braze Docs. Due to certain site requirements, Braze Docs doesn't support [standard Markdown syntax](https://www.markdownguide.org/basic-syntax/) for cross-reference links, so we created one using Liquid.
-
-{% raw %}
 ```markdown
 [LINK_TEXT](https://www.braze.com/docs/SHORT_URL)
 ```
-{% endraw %}
-
 Replace the following:
 
 | Placeholder | Description                                        |
@@ -305,13 +293,9 @@ Replace the following:
 
 
 Your cross-reference link should be similar to the following:
-
-{% raw %}
 ```markdown
 Before continuing, [create your SSH token](https://www.braze.com/docs/dev_guide/auth).
 ```
-{% endraw %}
-
 > **Tip:**
 > For a full walkthrough, see [Cross-referencing](content_management/cross_referencing.md).
 
@@ -322,7 +306,7 @@ Before continuing, [create your SSH token](https://www.braze.com/docs/dev_guide/
 Jekyll offers the ability to reuse written content across the docs using the `include` tag. Includes are located in the `_includes` directory and can be written in Markdown or HTML syntax.
 
 ```markdown
-{% raw %}{% multi_lang_include RELATIVE_PATH/FILE %}{% endraw %}
+{% multi_lang_include RELATIVE_PATH/FILE %}
 ```
 
 Replace the following:
@@ -335,15 +319,13 @@ Replace the following:
 
 ### example input
 
-{% raw %}
 ```markdown
 # Pages
 
 > Learn how to create, modify, and remove pages on Braze Docs.
 
-*Included in the site build from [`_includes/contributing/prerequisites.md`](../../_includes/contributing/prerequisites.md).*
+{% multi_lang_include contributing/templates/basic.md %}
 ```
-{% endraw %}
 
 ---
 

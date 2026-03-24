@@ -3,7 +3,10 @@
 
 > Learn how to generate a local site preview, so you can see how your work would look on Braze Docs.
 
-*Included in the site build from [`_includes/contributing/prerequisites.md`](../../_includes/contributing/prerequisites.md).*
+## Prerequisites
+
+If you haven't already, review [Documentation feedback](https://www.braze.com/docs/feedback/) for how to reach the docs team. Full authoring guides for contributors with repository access live under `docs/contributing/` in the braze-docs repo.
+
 
 ## Generating the preview
 
@@ -24,8 +27,6 @@ git checkout BD-2346-fixing-typo-swift
 ### Step 2: Start a local server
 
 When you start a local server, the files in your [current branch](#step-1-checkout-a-branch) are used to you build a local preview of Braze Docs. To start a local server using your current branch, run the following command in your `braze-docs` directory.
-
-{% raw %}
 ```bash
 # for 'en' language:
 rake
@@ -46,8 +47,6 @@ PARTNER_API=true rake
 # to render both APIs:
 MARKDOWN_API=true PARTNER_API=true rake
 ```
-{% endraw %}
-
 > **Note:**
 > Prepending `MARKDOWN_API=true` to your rake command let's you preview content within a `{% markdown_embed %}` tag, such as the content on the [Developer Guide: Changelogs](https://www.braze.com/docs/developer_guide/changelogs/) page. Prepending `PARTNER_API=true` let's you render the tiles on a partner landing page, such as [Technology Partners](https://www.braze.com/docs/partners/home/).
 
