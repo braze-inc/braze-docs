@@ -2,7 +2,7 @@
 nav_title: スタイル
 article_title: コンテンツカードのスタイルをカスタマイズする
 page_order: 1
-description: "この記事では、コンテンツ カードのスタイルオプションについて説明します。"
+description: "この記事では、コンテンツカードのスタイルオプションについて説明します。"
 channel:
   - content cards
 platform:
@@ -14,23 +14,23 @@ platform:
 
 # コンテンツカードのスタイルをカスタマイズする
 
-> Braze コンテンツ カードには、デフォルトのルック アンドフィールが含まれています。この記事では、ブランドアイデンティティに合わせるためのコンテンツ カードのスタイルオプションについて説明します。コンテンツカードタイプの完全なリストについては、[コンテンツカードについて]({{site.baseurl}}/developer_guide/content_cards/)を参照してください。
+> Braze コンテンツカードには、デフォルトのルックアンドフィールが含まれています。この記事では、ブランドアイデンティティに合わせるためのコンテンツカードのスタイルオプションについて説明します。コンテンツカードタイプの完全なリストについては、[コンテンツカードについて]({{site.baseurl}}/developer_guide/content_cards/)を参照してください。
 
 ## カスタムスタイルの作成
 
-デフォルトのコンテンツ カード UI は、Braze SDK の UI レイヤーからインポートされます。そこから、カードのスタイルの特定の部分、カードが表示される順序、フィードがユーザーに表示される方法を調整できます。
+デフォルトのコンテンツカード UI は、Braze SDK の UI レイヤーからインポートされます。そこから、カードのスタイルの特定の部分、カードが表示される順序、フィードがユーザーに表示される方法を調整できます。
 
-![2枚のコンテンツ・カード、1枚はデフォルトのフォントで角が四角いもの、もう1枚は角が丸くカーリーフォントのものである。]({% image_buster/assets/img/content_cards/content-card-customization-attributes.png %})
+![2枚のコンテンツカード。1枚はデフォルトのフォントで角が四角いもの、もう1枚は角が丸くカーリーフォントのもの]({% image_buster/assets/img/content_cards/content-card-customization-attributes.png %})
 
 {% alert note %}
-コンテンツ カードのプロパティ`title`、 `cardDescription`、`imageUrl`などは、[ダッシュボード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details)から直接編集できます。これは、詳細を変更するための推奨される方法です。
+コンテンツカードのプロパティ（`title`、`cardDescription`、`imageUrl` など）は、[ダッシュボード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details)から直接編集できます。これは、詳細を変更するための推奨される方法です。
 {% endalert %}
 
 
 {% tabs %}
 {% tab web %}
 
-Brazeのデフォルトスタイルは、Braze SDK内のCSSで定義されています。アプリケーションで選択したスタイルを上書きすることで、標準フィードを独自のバックグラウンド画像、フォントファミリー、スタイル、サイズ、アニメーションなどでカスタマイズできる。例えば、以下のオーバーライドはコンテンツカードを幅800ピクセルで表示させる例だ：
+Braze のデフォルトスタイルは、Braze SDK 内の CSS で定義されています。アプリケーションで選択したスタイルをオーバーライドすることで、標準フィードを独自のバックグラウンド画像、フォントファミリー、スタイル、サイズ、アニメーションなどでカスタマイズできます。例えば、以下のオーバーライドはコンテンツカードを幅800ピクセルで表示させる例です。
 
 ``` css
 body .ab-feed {
@@ -38,12 +38,12 @@ body .ab-feed {
 }
 ```
 
-変更可能なプロパティの完全な一覧については、[BrazeのSDK設定オプションを](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)参照せよ。
+変更可能なプロパティの完全な一覧については、[Braze の SDK 設定オプション](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)を参照してください。
 
 {% endtab %}
 {% tab android %}
 
-デフォルトでは、Android および FireOS SDK コンテンツカードは標準の Android UI ガイドラインに一致し、シームレスなエクスペリエンスを提供します。これらのデフォルトのスタイルは、Braze SDK ディストリビューション内の[`res/values/styles.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml)ファイルで確認できます。
+デフォルトでは、Android および FireOS SDK コンテンツカードは標準の Android UI ガイドラインに準拠し、シームレスなエクスペリエンスを提供します。これらのデフォルトのスタイルは、Braze SDK ディストリビューション内の [`res/values/styles.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml) ファイルで確認できます。
 
 ```xml
   <style name="Braze.ContentCards.CaptionedImage.Description">
@@ -59,7 +59,7 @@ body .ab-feed {
   </style>
 ```
 
-コンテンツカードのスタイルをカスタマイズするには、このデフォルトのスタイルを上書きします。スタイルを上書きするには、スタイル全体をプロジェクトの`styles.xml`ファイルにコピーし、変更を加えます。すべての属性が正しく設定されるようにするには、スタイル全体をローカルの`styles.xml`にコピーする必要があります。
+コンテンツカードのスタイルをカスタマイズするには、このデフォルトのスタイルをオーバーライドします。スタイルをオーバーライドするには、スタイル全体をプロジェクトの `styles.xml` ファイルにコピーし、変更を加えます。すべての属性が正しく設定されるようにするには、スタイル全体をローカルの `styles.xml` にコピーする必要があります。
 
 {% subtabs local %}
 {% subtab Correct style override %}
@@ -91,9 +91,9 @@ body .ab-feed {
 {% endtab %}
 {% tab Jetpack Compose %}
 
-デフォルトでは、Android および FireOS SDK コンテンツカードは標準の Android UI ガイドラインに一致し、シームレスなエクスペリエンスを提供します。
+デフォルトでは、Android および FireOS SDK コンテンツカードは標準の Android UI ガイドラインに準拠し、シームレスなエクスペリエンスを提供します。
 
-2つの方法のいずれかでスタイルを適用できます。まず、以下の例のように、[`ContentCardListStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-list-styling/index.html) および[`ContentCardStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html) を[`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html) に渡します。
+2つの方法のいずれかでスタイルを適用できます。1つ目は、以下の例のように、[`ContentCardListStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-list-styling/index.html) および [`ContentCardStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html) を [`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html) に渡す方法です。
 
 ```kotlin
 ContentCardsList(
@@ -111,7 +111,7 @@ ContentCardsList(
 )
 ```
 
-2 つ目は、[`BrazeStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose/-braze-style.html) を使用して、次の例のようにBraze コンポーネントのグローバルスタイルを作成します。
+2つ目は、以下の例のように、[`BrazeStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose/-braze-style.html) を使用して Braze コンポーネントのグローバルスタイルを作成する方法です。
 
 ```kotlin
 BrazeStyle(
@@ -133,18 +133,18 @@ BrazeStyle(
 {% endtab %}
 {% tab swift %}
 
-コンテンツカードビューコントローラーを使用すると、[`BrazeContentCardUI.ViewController.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct)構造体を介してすべてのセルの外観と動作をカスタマイズできます 。`Attributes`を使用したコンテンツカードの設定は簡単なオプションであり、最小限の設定でコンテンツカード UI を立ち上げることができます。 
+コンテンツカードビューコントローラーを使用すると、[`BrazeContentCardUI.ViewController.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct) 構造体を介してすべてのセルの外観と動作をカスタマイズできます。`Attributes` を使用したコンテンツカードの設定は簡単なオプションであり、最小限のセットアップでコンテンツカード UI を起動できます。 
 
 {% alert important %}
-`Attributes`によるカスタマイズは、Swift でのみ利用可能です。
+`Attributes` によるカスタマイズは、Swift でのみ利用可能です。
 {% endalert %}
 
 {% subtabs %}
 {% subtab Swift %}
 
-**`Attributes.default`の変更**
+**`Attributes.default` の変更**
 
-静的[`Attributes.defaults`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/defaults)変数を直接変更して、Braze コンテンツカード UI ビュー コントローラーのすべてのインスタンスのルックアンドフィールをカスタマイズします。 
+静的 [`Attributes.defaults`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/defaults) 変数を直接変更して、Braze コンテンツカード UI ビューコントローラーのすべてのインスタンスのルックアンドフィールをカスタマイズします。
 
 たとえば、すべてのセルのデフォルトの画像サイズと角の半径を変更するには、次のようにします。
 
@@ -153,11 +153,11 @@ BrazeContentCardUI.ViewController.Attributes.defaults.cellAttributes.cornerRadiu
 BrazeContentCardUI.ViewController.Attributes.defaults.cellAttributes.classicImageSize = CGSize(width: 65, height: 65)
 ```
 
-**属性を使用してビューコントローラーを初期化する**
+**Attributes を使用してビューコントローラーを初期化する**
 
-Braze コンテンツカード UI ビュー コントローラーの特定のインスタンスのみを変更する場合は、[`init(braze:attributes:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/init(braze:attributes:)/)初期化子を使用してカスタムの`Attributes`構造体をビューコントローラーに渡します。
+Braze コンテンツカード UI ビューコントローラーの特定のインスタンスのみを変更する場合は、[`init(braze:attributes:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/init(braze:attributes:)/) イニシャライザーを使用してカスタムの `Attributes` 構造体をビューコントローラーに渡します。
 
-たとえば、ビュー コントローラーの特定のインスタンスの画像サイズと角の半径を変更できます。
+たとえば、ビューコントローラーの特定のインスタンスの画像サイズと角の半径を変更できます。
 
 ```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
@@ -169,7 +169,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 
 **サブクラス化によるセルのカスタマイズ**
 
-また、必要なカードタイプごとにカスタムクラスを登録して、カスタムインターフェイスを作成することもできます。デフォルトのセルの代わりにサブクラスを使用するには、`Attributes`構造体の[`cells`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/cells)プロパティを変更します。以下に例を示します。
+また、必要なカードタイプごとにカスタムクラスを登録して、カスタムインターフェイスを作成することもできます。デフォルトのセルの代わりにサブクラスを使用するには、`Attributes` 構造体の [`cells`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/cells) プロパティを変更します。以下に例を示します。
 
 ```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
@@ -181,7 +181,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 
 **プログラムによるコンテンツカードの変更**
 
-構造`Attributes`体にクロージャ[`transform`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/transform)を割り当てることで、プログラム的にコンテンツカードを変更できる。以下の例では、互換性のあるカードの`title`と`description`を変更しています。
+`Attributes` 構造体に [`transform`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/transform) クロージャを割り当てることで、プログラムでコンテンツカードを変更できます。以下の例では、互換性のあるカードの `title` と `description` を変更しています。
 
 ```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
@@ -201,12 +201,12 @@ attributes.transform = { cards in
 let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze, attributes: attributes)
 ```
 
-完全な例については、[サンプルアプリの例](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift)を確認してください。
+完全な例については、[サンプルアプリの Examples](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift) を確認してください。
 
 {% endsubtab %}
 {% subtab Objective-C %}
 
-`Attributes`によるコンテンツカードのカスタマイズは、OBJECTIVE-C ではサポートされていません。
+`Attributes` によるコンテンツカードのカスタマイズは、Objective-C ではサポートされていません。
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -217,12 +217,12 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 
 ### カスタムフォント
 
-コンテンツカードで使用されるフォントをカスタマイズすると、ブランドアイデンティティを維持し、ユーザーにとって視覚的に魅力的なエクスペリエンスを作成できます。これらのレシピを使用して、すべてのコンテンツカードのフォントをプログラムで設定します。 
+コンテンツカードで使用されるフォントをカスタマイズすると、ブランドアイデンティティを維持し、ユーザーにとって視覚的に魅力的なエクスペリエンスを作成できます。以下のレシピを使用して、すべてのコンテンツカードのフォントをプログラムで設定します。 
 
 {% tabs %}
 {% tab web %}
 
-他の Web 要素と同様に、CSS を使用してコンテンツカードの外観を簡単にカスタマイズできます。CSS ファイルまたはインラインスタイルで、`font-family`プロパティを使用して、希望のフォント名またはフォントスタックを指定します。
+他の Web 要素と同様に、CSS を使用してコンテンツカードの外観を簡単にカスタマイズできます。CSS ファイルまたはインラインスタイルで、`font-family` プロパティを使用して、希望のフォント名またはフォントスタックを指定します。
 
 ```css
 /* CSS selector targeting the Content Card element */
@@ -234,11 +234,11 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 {% endtab %}
 {% tab android %}
 
-デフォルトのフォントをプログラムで変更するには、カードのスタイルを設定し、`fontFamily`属性を使用して、カスタムフォントファミリを使用するように Braze に指示します。
+デフォルトのフォントをプログラムで変更するには、カードのスタイルを設定し、`fontFamily` 属性を使用して、カスタムフォントファミリーを使用するように Braze に指示します。
 
-たとえば、キャプション付き画像カードのすべてのタイトルのフォントを更新するには、`Braze.ContentCards.CaptionedImage.Title`スタイルを設定し、カスタムフォントファミリを参照します。属性値は、`res/font`ディレクトリのフォントファミリを指す必要があります。
+たとえば、キャプション付き画像カードのすべてのタイトルのフォントを更新するには、`Braze.ContentCards.CaptionedImage.Title` スタイルをオーバーライドし、カスタムフォントファミリーを参照します。属性値は、`res/font` ディレクトリのフォントファミリーを指す必要があります。
 
-以下は、最後の行でカスタムフォントファミリ `my_custom_font_family` が参照されている部分的なコード例です。
+以下は、最後の行でカスタムフォントファミリー `my_custom_font_family` を参照している省略されたコード例です。
 
 ```xml
   <style name="Braze.ContentCards.CaptionedImage.Title">
@@ -249,12 +249,12 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
   </style>
 ```
 
-Android SDK でのフォントのカスタマイズの詳細については、[フォントファミリガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization)を参照してください。
+Android SDK でのフォントのカスタマイズの詳細については、[フォントファミリーガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization)を参照してください。
 {% endtab %}
 {% tab Jetpack Compose %}
-デフォルトのフォントをプログラムで変更するには、`ContentCardStyling` の[`titleTextStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#715371549%2FProperties%2F-1725759721) を設定します。
+デフォルトのフォントをプログラムで変更するには、`ContentCardStyling` の [`titleTextStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#715371549%2FProperties%2F-1725759721) を設定します。
 
-また、[`BrazeShortNewsContentCardStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-braze-short-news-content-card-styling/index.html)に設定し、[](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#8580250%2FProperties%2F-1725759721)`shortNewsContentCardStyle`の[`shortNewsContentCardStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#8580250%2FProperties%2F-1725759721)に渡すことで、特定のカードタイプに`titleTextStyle`を設定することもできます。
+また、[`BrazeShortNewsContentCardStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-braze-short-news-content-card-styling/index.html) に設定し、`ContentCardStyling` の [`shortNewsContentCardStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#8580250%2FProperties%2F-1725759721) に渡すことで、特定のカードタイプに `titleTextStyle` を設定することもできます。
 
 ```kotlin
 val fontFamily = FontFamily(
@@ -272,7 +272,7 @@ ContentCardStyling(
 {% subtabs %}
 {% subtab Swift %}
 
-[`cellAttributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/cellattributes/)インスタンスプロパティの`Attributes`をカスタマイズして、フォントをカスタマイズします。以下に例を示します。
+[`cellAttributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/cellattributes/) インスタンスプロパティの `Attributes` をカスタマイズして、フォントをカスタマイズします。以下に例を示します。
 
 ```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
@@ -286,9 +286,9 @@ let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attrib
 {% endsubtab %}
 {% subtab Objective-C %}
 
-`Attributes`によるフォントのカスタマイズは、OBJECTIVE-C ではサポートされていません。 
+`Attributes` によるフォントのカスタマイズは、Objective-C ではサポートされていません。 
 
-カスタムフォントを使用して独自の UI を構築する例については、[サンプルアプリの例](https://github.com/braze-inc/braze-swift-sdk/blob/main/Examples/ObjC/Sources/ContentCards-Custom-UI/CardsInfoViewController.m#L97)を確認してください。
+カスタムフォントを使用して独自の UI を構築する例については、[サンプルアプリの Examples](https://github.com/braze-inc/braze-swift-sdk/blob/main/Examples/ObjC/Sources/ContentCards-Custom-UI/CardsInfoViewController.m#L97) を確認してください。
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -297,9 +297,9 @@ let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attrib
 
 ### カスタムの固定アイコン
 
-コンテンツカードの作成時、マーケターはカードを固定するオプションを選択できます。固定されたカードはユーザーのフィードの上部に表示され、ユーザーはそれを非表示にできない。カードスタイルをカスタマイズする際に、ピン留めアイコンの見た目を変更できる。
+コンテンツカードの作成時、マーケターはカードを固定するオプションを選択できます。固定されたカードはユーザーのフィードの上部に表示され、ユーザーはそれを閉じることができません。カードスタイルをカスタマイズする際に、固定アイコンの見た目を変更できます。
 
-![Braze for MobileとBraze for Webのコンテンツカードプレビューを、「このカードをフィードの先頭にピン留めする」オプションを選択した状態で並べてみた。]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
+![Braze のモバイルおよび Web 向けコンテンツカードプレビューを、「このカードをフィードの先頭にピン留めする」オプションを選択した状態で並べて表示]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 {% tabs %}
 {% tab web %}
@@ -312,9 +312,9 @@ let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attrib
 </div>
 ```
 
-別のFontAwesomeアイコンを使いたいなら、要素`i`のクラス名を目的のアイコンのクラス名に置き換えればよい。 
+別の FontAwesome アイコンを使用したい場合は、`i` 要素のクラス名を目的のアイコンのクラス名に置き換えます。 
 
-アイコンを完全に切り替えたい場合は、要素`i`を削除し、カスタムアイコンをの子要素として追加`ab-pinned-indicator`する。アイコンを変更する方法はいくつかあるが、簡単な方法の一つは、要素`ab-pinned-indicator`に  `replaceChildren()`を使用することだ。
+アイコンを完全に切り替えたい場合は、`i` 要素を削除し、カスタムアイコンを `ab-pinned-indicator` の子要素として追加します。アイコンを変更する方法はいくつかありますが、簡単な方法の一つは、`ab-pinned-indicator` 要素に `replaceChildren()` を使用することです。
 
 以下に例を示します。
 
@@ -333,7 +333,7 @@ pinnedIndicator.replaceChildren(customIcon);
 {% endtab %}
 {% tab android %}
 
-カスタムの固定アイコンを設定するには、`Braze.ContentCards.PinnedIcon`スタイルを上書きします。カスタム画像アセットは、`android:src`要素で宣言される必要があります。以下に例を示します。
+カスタムの固定アイコンを設定するには、`Braze.ContentCards.PinnedIcon` スタイルをオーバーライドします。カスタム画像アセットは、`android:src` 要素で宣言する必要があります。以下に例を示します。
 
 ```xml
   <style name="Braze.ContentCards.PinnedIcon">
@@ -351,7 +351,7 @@ pinnedIndicator.replaceChildren(customIcon);
 {% endtab %}
 {% tab Jetpack Compose %}
 
-デフォルトの固定アイコンを変更するには、`ContentCardStyling`の[`pinnedResourceId`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#794044424%2FProperties%2F-1725759721)を設定します。 以下に例を示します。
+デフォルトの固定アイコンを変更するには、`ContentCardStyling` の [`pinnedResourceId`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#794044424%2FProperties%2F-1725759721) を設定します。以下に例を示します。
 
 ```kotlin
 ContentCardStyling(
@@ -360,7 +360,7 @@ ContentCardStyling(
 )
 ```
 
-`ContentCardStyling`の[`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721)にComposableを指定することもできます。が指定された`pinnedComposable`場合、の`pinnedResourceId`値を上書きする。
+`ContentCardStyling` の [`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721) に Composable を指定することもできます。`pinnedComposable` が指定された場合、`pinnedResourceId` の値がオーバーライドされます。
 
 ```kotlin
 ContentCardStyling(
@@ -381,7 +381,7 @@ ContentCardStyling(
 {% subtabs %}
 {% subtab Swift %}
 
-固定アイコンをカスタマイズするには、[`cellAttributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/cellattributes/)インスタンスプロパティの`pinIndicatorColor`と`pinIndicatorImage`のプロパティを変更します。以下に例を示します。
+固定アイコンをカスタマイズするには、[`cellAttributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/cellattributes/) インスタンスプロパティの `pinIndicatorColor` と `pinIndicatorImage` のプロパティを変更します。以下に例を示します。
 
 ```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
@@ -391,7 +391,7 @@ attributes.cellAttributes.pinIndicatorImage = UIImage(named: "my-image")
 let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attributes: attributes)
 ```
 
-サブクラス化を使用して、`BrazeContentCardUI.Cell`のカスタムバージョンを独自に作成することもできます。 これにはピンインジケーターが含まれます。以下に例を示します。 
+サブクラス化を使用して、ピンインジケーターを含む `BrazeContentCardUI.Cell` のカスタムバージョンを独自に作成することもできます。以下に例を示します。 
 
 ```swift
 var attributes = BrazeContentCardUI.ViewController.Attributes.defaults
@@ -403,7 +403,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 {% endsubtab %}
 {% subtab Objective-C %}
 
-`Attributes`によるピンインジケーターのカスタマイズは、OBJECTIVE-C ではサポートされていません。
+`Attributes` によるピンインジケーターのカスタマイズは、Objective-C ではサポートされていません。
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -414,12 +414,12 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 
 コンテンツカードの下部には、カードが閲覧されたかどうかを示す青い線が表示されます。 
 
-![2枚のコンテンツ・カードが並んで表示される。最初のカードの下部には青い線があり、それがまだ見られていないことを示している。2番目のカードには青い線がなく、すでに見られたことを示している。]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %})
+![2枚のコンテンツカードが並んで表示されている。最初のカードの下部には青い線があり、まだ閲覧されていないことを示している。2番目のカードには青い線がなく、すでに閲覧されたことを示している。]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %})
 
 {% tabs %}
 {% tab web %}
 
-カードの未読インジケーターの色を変更するには、Web ページにカスタム CSS を追加します。たとえば、未表示のインジケーターの色を緑に設定するには、次のようにします。
+カードの未読インジケーターの色を変更するには、Web ページにカスタム CSS を追加します。たとえば、未閲覧インジケーターの色を緑に設定するには、次のようにします。
 
 ```css
 .ab-unread-indicator { background-color: green; }
@@ -428,7 +428,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 {% endtab %}
 {% tab android %}
 
-未読インジケーターバーの色を変更するには、`colors.xml`ファイルの`com_braze_content_cards_unread_bar_color`の値を変更します。 
+未読インジケーターバーの色を変更するには、`colors.xml` ファイルの `com_braze_content_cards_unread_bar_color` の値を変更します。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -441,7 +441,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 {% endtab %}
 {% tab Jetpack Compose %}
 
-未読インジケータバーの色を変更するには、`ContentCardStyling` の[`unreadIndicatorColor`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-1669590042%2FProperties%2F-1725759721) の値を変更します。
+未読インジケーターバーの色を変更するには、`ContentCardStyling` の [`unreadIndicatorColor`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-1669590042%2FProperties%2F-1725759721) の値を変更します。
 
 ```kotlin
 ContentCardStyling(
@@ -455,14 +455,14 @@ ContentCardStyling(
 {% subtabs %}
 {% subtab Swift %}
 
-未読インジケーターバーの色を変更するには、`BrazeContentCardUI.ViewController`インスタンスの色合いに値を割り当てます。
+未読インジケーターバーの色を変更するには、`BrazeContentCardUI.ViewController` インスタンスのティントカラーに値を割り当てます。
 
 ```swift
 let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze)
 viewController.view.tintColor = .systemGreen
 ```
 
-ただし、未閲覧インジケーターのみを変更したい場合は、構造`BrazeContentCardUI.ViewController.Attributes`体のプロパティ`unviewedIndicatorColor`にアクセスすればよい。Braze`UITableViewCell`の実装を使用する場合、セルが描画される前にプロパティにアクセスせよ。
+ただし、未閲覧インジケーターのみを変更したい場合は、`BrazeContentCardUI.ViewController.Attributes` 構造体の `unviewedIndicatorColor` プロパティにアクセスします。Braze の `UITableViewCell` 実装を使用する場合、セルが描画される前にプロパティにアクセスしてください。
 
 たとえば、未閲覧インジケーターの色を赤に設定するには、次のようにします。
 
@@ -473,31 +473,72 @@ attributes.cellAttributes.unviewedIndicatorColor = .red
 let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze, attributes: attributes)
 ```
 
-完全な例については、[サンプルアプリの例](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift)を確認してください。
+完全な例については、[サンプルアプリの Examples](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift) を確認してください。
 
 {% endsubtab %}
 {% subtab Objective-C %}
 
-未読インジケーターバーの色を変更するには、`BRZContentCardUIViewController`の色合いに値を割り当てます。
+未読インジケーターバーの色を変更するには、`BRZContentCardUIViewController` のティントカラーに値を割り当てます。
 
 ```objc
 BRZContentCardUIViewController *viewController = [[BRZContentCardUIViewController alloc] initWithBraze:AppDelegate.braze];
 [viewController.view setTintColor:[UIColor systemGreenColor]];
 ```
 
-`Attributes`による未表示インジケーターのみのカスタマイズは、OBJECTIVE-C ではサポートされていません。
+`Attributes` による未閲覧インジケーターのみのカスタマイズは、Objective-C ではサポートされていません。
 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
+### ダークモード
+
+デバイスのダークモードまたはライトモードに基づいて異なる画像やスタイルを表示するには、コンテンツカードメッセージで[キーと値のペア]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details#key-value-pairs)を使用します。たとえば、`dark_mode_image` というキーと値のペアにダークモード画像アセットの URL を追加します。次に、アプリにカスタムロジックを追加して、デバイスの現在の外観モードを確認し、適切な画像を表示します。
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+if let darkImageUrl = card.extras["dark_mode_image"],
+   view.traitCollection.userInterfaceStyle == .dark {
+  // Use darkImageUrl for the image
+}
+```
+
+{% endtab %}
+{% tab android %}
+
+```kotlin
+val darkModeImage = card.extras["dark_mode_image"]
+val isDarkMode = (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
+if (isDarkMode && darkModeImage != null) {
+    // Use darkModeImage for the image
+}
+```
+
+{% endtab %}
+{% tab web %}
+
+```javascript
+const darkModeImage = card.extras?.dark_mode_image;
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (isDarkMode && darkModeImage) {
+  // Use darkModeImage for the image
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+このパターンは、テキスト、色、レイアウトなど、外観に依存するあらゆるコンテンツに使用できます。ダークモードの画像アセットを[メディアライブラリー]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library)にアップロードし、キーと値のペアで参照します。
+
 ### 未読インジケーターを無効にする
 
 {% tabs %}
 {% tab web %}
 
-未読インジケーターバーを非表示にするには、`css`に次のスタイルを追加します。
+未読インジケーターバーを非表示にするには、`css` に次のスタイルを追加します。
 
 ```css
 .ab-unread-indicator { display: none; }
@@ -507,7 +548,7 @@ BRZContentCardUIViewController *viewController = [[BRZContentCardUIViewControlle
 
 {% tab android %}
 
-未読インジケーターバーを非表示にするには、`ContentCardViewHolder`の[`setUnreadBarVisible`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/-content-card-view-holder/set-unread-bar-visible.html?query=fun%20setUnreadBarVisible(isVisible:%20Boolean))を`false`に設定します。 
+未読インジケーターバーを非表示にするには、`ContentCardViewHolder` の [`setUnreadBarVisible`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/-content-card-view-holder/set-unread-bar-visible.html?query=fun%20setUnreadBarVisible(isVisible:%20Boolean)) を `false` に設定します。 
 
 {% endtab %}
 
@@ -518,12 +559,12 @@ BRZContentCardUIViewController *viewController = [[BRZContentCardUIViewControlle
 {% subtabs %}
 {% subtab Swift %}
 
-未読インジケーターバーを非表示にするには、`Attributes`構造体の`attributes.cellAttributes.unviewedIndicatorColor`プロパティを`.clear`に設定します。 
+未読インジケーターバーを非表示にするには、`Attributes` 構造体の `attributes.cellAttributes.unviewedIndicatorColor` プロパティを `.clear` に設定します。 
 
 {% endsubtab %}
 {% subtab Objective-C %}
 
-`Attributes`による未表示インジケーターのみのカスタマイズは、OBJECTIVE-C ではサポートされていません。
+`Attributes` による未閲覧インジケーターのみのカスタマイズは、Objective-C ではサポートされていません。
 
 {% endsubtab %}
 {% endsubtabs %}

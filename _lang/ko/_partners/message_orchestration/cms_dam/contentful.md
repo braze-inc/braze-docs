@@ -1,7 +1,7 @@
 ---
 nav_title: Contentful
 article_title: Contentful
-description: "This reference article outlines the partnership between Braze and Contentful, a content management system that allows you to dynamically use Connected Content to pull content from Contentful into your Braze campaigns."
+description: "이 참조 문서에서는 Braze와 Contentful 간의 파트너십에 대해 설명합니다. Contentful은 콘텐츠 관리 시스템으로, 연결된 콘텐츠를 사용하여 Contentful에서 Braze 캠페인으로 콘텐츠를 동적으로 가져올 수 있습니다."
 alias: /partners/contentful/
 page_type: partner
 search_tag: Partner
@@ -9,36 +9,36 @@ search_tag: Partner
 
 # Contentful
 
->[Contentful](https://www.contentful.com/) is a headless content management system that lets you create, manage, and distribute content to any platform. Unlike a content management system (CMS), Contentful allows you to create your content model so you can decide which content you want to manage.<br><br>This page provides a step-by-step guide to configure Braze Connected Content to fetch data from Contentful's Content Delivery API. 
+>[Contentful](https://www.contentful.com/)은 모든 플랫폼에 콘텐츠를 생성, 관리 및 배포할 수 있는 헤드리스 콘텐츠 관리 시스템입니다. 기존 콘텐츠 관리 시스템(CMS)과 달리 Contentful에서는 콘텐츠 모델을 직접 만들어 관리할 콘텐츠를 결정할 수 있습니다.<br><br>이 페이지에서는 Contentful의 Content Delivery API에서 데이터를 가져오도록 Braze 연결된 콘텐츠를 구성하는 단계별 가이드를 제공합니다.
 
-After you're integrated, you can use Contentful's RESTful APIs to deliver your content across multiple channels, such as websites, mobile apps (iOS, Android, and Windows), or many other platforms. You can also dynamically pull content from Contentful for use in your Braze campaigns.
+통합이 완료되면 Contentful의 RESTful API를 사용하여 웹사이트, 모바일 앱(iOS, Android, Windows) 또는 기타 다양한 플랫폼 등 여러 채널에 콘텐츠를 전달할 수 있습니다. 또한 Contentful에서 콘텐츠를 동적으로 가져와 Braze 캠페인에 활용할 수도 있습니다.
 
-## Prerequisites
+## 필수 조건
 
-Before you start, you'll need the following:
+시작하기 전에 다음이 필요합니다:
 
-| Prerequisite          | Description                        |
+| 필수 조건          | 설명                        |
 |-----------------------|------------------------------------|
-| A Contentful account | You need a Contentful account with access to the Content Delivery API. |
-| A Braze account | You need a Braze account with access to the Connected Content feature. |
+| Contentful 계정 | Content Delivery API에 접근할 수 있는 Contentful 계정이 필요합니다. |
+| Braze 계정 | 연결된 콘텐츠 기능에 접근할 수 있는 Braze 계정이 필요합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Integration
+## 통합
 
-### Step 1: Get your Contentful API credentials
+### 1단계: Contentful API 자격 증명 가져오기
 
-1. [Log into Contentful](https://app.contentful.com/login) with your credentials.
-2. Create or retrieve API access tokens in the Contentful dashboard by going to **Settings** > **API keys**. If you don't already have an API key, create a new one:<br>2.1 Select **Add API key**.<br>2.2 Enter the required details and select the appropriate environment.<br>2.3 Select **Save** and note the **Space ID** and **Content Delivery API - access token**.
-3. Identify the content model you want to access through the Contentful API.
+1. 자격 증명을 사용하여 [Contentful에 로그인](https://app.contentful.com/login)합니다.
+2. Contentful 대시보드에서 **설정** > **API 키**로 이동하여 API 액세스 토큰을 생성하거나 가져옵니다. API 키가 아직 없는 경우 새로 생성합니다:<br>2.1 **Add API key**를 선택합니다.<br>2.2 필수 세부 정보를 입력하고 적절한 환경을 선택합니다.<br>2.3 **Save**를 선택하고 **Space ID**와 **Content Delivery API - access token**을 기록합니다.
+3. Contentful API를 통해 접근하려는 콘텐츠 모델을 확인합니다.
 
-### Step 2: Configure Braze Connected Content
+### 2단계: Braze 연결된 콘텐츠 구성
 
-1. [Log into Braze](https://dashboard.braze.com/sign_in) with your credentials.
-2. In the Braze dashboard, go to **Templates** > **Content Blocks** > **Create Content Block** > **HTML Content Block**.
-3. Create a Connected Content request to Contentful's [Contentful Content Delivery API URL](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/links). An example Contentful Content Delivery API URL is ```https://cdn.contentful.com/spaces/{space_id}/environments/{environment_id}/entries```.<br><br> Retrieving different assets requires including specific variables. The example Connected Content URL request targets Contentful's [Entry](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/entries/entry/get-a-single-entry/console) endpoint. This endpoint needs variables like `{space_id}` and `{environment_id}`, or `{entry_id}` and `{access_token}`. These can be taken from your Contentful instance. In this example Content Block, the variables must be replaced with your Contentful Space ID and Environment ID.<br><br>The example Content Delivery API URL uses only one of Contentful's available endpoints. Different use cases may be achieved by leveraging different URLs. For example, the [Image API](https://www.contentful.com/developers/docs/references/images-api/) can be used to capture images stored in Contentful. For more information, review [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/).
+1. 자격 증명을 사용하여 [Braze에 로그인](https://dashboard.braze.com/sign_in)합니다.
+2. Braze 대시보드에서 **템플릿** > **콘텐츠 블록** > **콘텐츠 블록 생성** > **HTML 코드 편집기**로 이동합니다.
+3. Contentful의 [Contentful Content Delivery API URL](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/links)에 대한 연결된 콘텐츠 요청을 생성합니다. Contentful Content Delivery API URL의 예시는 ```https://cdn.contentful.com/spaces/{space_id}/environments/{environment_id}/entries```입니다.<br><br> 다양한 자산을 가져오려면 특정 변수를 포함해야 합니다. 예시 연결된 콘텐츠 URL 요청은 Contentful의 [Entry](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/entries/entry/get-a-single-entry/console) 엔드포인트를 대상으로 합니다. 이 엔드포인트에는 `{space_id}` 및 `{environment_id}`, 또는 `{entry_id}` 및 `{access_token}`과 같은 변수가 필요합니다. 이러한 변수는 Contentful 인스턴스에서 가져올 수 있습니다. 이 예시 콘텐츠 블록에서 변수는 Contentful Space ID와 Environment ID로 교체해야 합니다.<br><br>예시 Content Delivery API URL은 Contentful에서 사용 가능한 엔드포인트 중 하나만 사용합니다. 다양한 URL을 활용하여 다양한 사용 사례를 구현할 수 있습니다. 예를 들어, [Image API](https://www.contentful.com/developers/docs/references/images-api/)를 사용하여 Contentful에 저장된 이미지를 캡처할 수 있습니다. 자세한 내용은 [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/)를 참조하세요.
 
 {% alert note %}
-Different endpoints may require new variables, for instance the Images API requires an `{asset_id}`, `{unique_id},` and `{name}`. For further guidance, contact Contentful.
+엔드포인트에 따라 새로운 변수가 필요할 수 있습니다. 예를 들어 Images API에는 `{asset_id}`, `{unique_id},` 및 `{name}`이 필요합니다. 추가 안내가 필요하면 Contentful에 문의하세요.
 {% endalert %}
 
 {% raw %}
@@ -58,15 +58,15 @@ Different endpoints may require new variables, for instance the Images API requi
 {% endraw %}
 
 {: start="4"}
-4\. Use "Test Endpoint" to test that Braze can successfully connect to the Contentful API and retrieve the desired data.
-5\. Select **Done** to save your Content Block.
-6\. Give your Content Block a descriptive name, such as "Contentful API", then select **Launch Content Block**.
+4. "Test Endpoint"를 사용하여 Braze가 Contentful API에 성공적으로 연결하고 원하는 데이터를 가져올 수 있는지 테스트합니다.
+5. **Done**을 선택하여 콘텐츠 블록을 저장합니다.
+6. 콘텐츠 블록에 "Contentful API"와 같은 설명적인 이름을 지정한 다음 **Launch Content Block**을 선택합니다.
 
-### Step 3: Use Connected Content in campaigns and Canvasses
+### 3단계: 캠페인 및 캔버스에서 연결된 콘텐츠 사용
 
-1. In Braze, create a new campaign or edit an existing one.
-2. Use the Connected Content block to insert data fetched from Contentful. Use the data paths you defined during the configuration to dynamically populate campaign content.<br><br>
-- **Response path:** After including the Content Block in a Braze Campaign or Canvas, the response becomes available when you insert the variable `{response}` into your message.<br><br>JSON dot notation allows you to specify what part of the response body from Contentful you want to include in your message. This will vary based on your use case. For example, you can use the title value ({% raw %}```liquid{{response.items[0].fields.title}}```{% endraw %}) from Contentful's Entry endpoint and receive a response like this:
+1. Braze에서 새 캠페인을 생성하거나 기존 캠페인을 편집합니다.
+2. 연결된 콘텐츠 블록을 사용하여 Contentful에서 가져온 데이터를 삽입합니다. 구성 중에 정의한 데이터 경로를 사용하여 캠페인 콘텐츠를 동적으로 채웁니다.<br><br>
+- **응답 경로:** Braze 캠페인 또는 Canvas에 콘텐츠 블록을 포함한 후, 메시지에 `{response}` 변수를 삽입하면 응답을 사용할 수 있습니다.<br><br>JSON 점 표기법을 사용하면 Contentful의 응답 본문에서 메시지에 포함할 부분을 지정할 수 있습니다. 이는 사용 사례에 따라 달라집니다. 예를 들어, Contentful의 Entry 엔드포인트에서 title 값({% raw %}```liquid{{response.items[0].fields.title}}```{% endraw %})을 사용하면 다음과 같은 응답을 받을 수 있습니다:
 
 {% raw %}
 ```json
@@ -117,21 +117,21 @@ Different endpoints may require new variables, for instance the Images API requi
 {% endraw %}
 
 {: start="3" }
-3\. Preview and test your campaign to confirm that the Connected Content data displays correctly.
-4\. After you're satisfied with the setup, launch your campaign.
+3. 캠페인을 미리보기하고 테스트하여 연결된 콘텐츠 데이터가 올바르게 표시되는지 확인합니다.
+4. 설정에 만족하면 캠페인을 시작합니다.
 
-## Troubleshooting
+## 문제 해결
 
-### API response
+### API 응답
 
-Make sure that your Contentful API credentials and endpoint URL are correct. Check for any error messages in Braze that might indicate issues with the API call.
+Contentful API 자격 증명과 엔드포인트 URL이 올바른지 확인하세요. Braze에서 API 호출 관련 문제를 나타낼 수 있는 오류 메시지가 있는지 확인하세요.
 
-### Data mapping
+### 데이터 매핑
 
-Verify that the response path mappings are correctly configured and that the API response structure matches your expectations.
+응답 경로 매핑이 올바르게 구성되어 있는지, API 응답 구조가 예상과 일치하는지 확인하세요.
 
-## Additional resources
+## 추가 리소스
 
-- [Contentful Content Delivery API documentation](https://www.contentful.com/developers/docs/references/content-delivery-api/)
-- [Braze Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)
-- [Braze Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
+- [Contentful Content Delivery API 설명서](https://www.contentful.com/developers/docs/references/content-delivery-api/)
+- [Braze 연결된 콘텐츠]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)
+- [Braze 콘텐츠 블록]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)

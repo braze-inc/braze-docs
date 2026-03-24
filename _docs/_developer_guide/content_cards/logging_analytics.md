@@ -2,7 +2,7 @@
 nav_title: Log analytics
 article_title: Log Analytics 
 page_order: 1
-description: "This article covers how to manually log clicks, events, and analytics for your customized Content Cards."
+description: "This article covers how to manually log impressions, clicks, dismissals, and handle on-click behavior for your customized Content Cards."
 toc_headers: "h2"
 
 ---

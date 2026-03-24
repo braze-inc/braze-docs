@@ -28,7 +28,7 @@ This feature allows users to control what specific first-party data is shared wi
 Braze Audience Sync to Snapchat is an Audience Sync Pro integration. For more information on this integration, contact your Braze account manager.
 {% endalert %}
 
-## Prerequisites
+## Prerequisites 
 
 You must ensure the following items are created, completed and/or accepted before setting up your Snapchat Audience Step in Canvas.
 

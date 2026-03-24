@@ -1,181 +1,181 @@
 ---
 nav_title: FAQs
-article_title: FAQs zur Datenaufnahme in der Cloud
+article_title: FAQs zur Cloud-Datenaufnahme
 page_order: 100
 page_type: FAQ
-description: "Diese Seite beantwortet häufig gestellte Fragen zur Datenaufnahme in der Cloud."
+description: "Diese Seite beantwortet häufig gestellte Fragen zur Cloud-Datenaufnahme."
 toc_headers: h2
 ---
 
 # Häufig gestellte Fragen
 
-> Auf dieser Seite finden Sie Antworten auf einige häufig gestellte Fragen zur Datenaufnahme in der Cloud.
+> Auf dieser Seite finden Sie Antworten auf einige häufig gestellte Fragen zur Cloud-Datenaufnahme.
 
-## Warum wurde ich gemailt: "Fehler in der CDI-Synchronisation"?
+## Warum habe ich eine E-Mail erhalten: „Fehler in der CDI-Synchronisation"?
 
 Diese Art von E-Mail bedeutet normalerweise, dass es ein Problem mit Ihrer CDI-Einrichtung gibt. Hier sind einige häufige Probleme und wie Sie sie beheben können:
 
 ### CDI kann mit Ihren Zugangsdaten nicht auf das Data Warehouse oder die Tabelle zugreifen
 
-Dies könnte bedeuten, dass die Zugangsdaten in CDI falsch sind oder im Data Warehouse falsch konfiguriert wurden. Weitere Informationen finden Sie unter [Data Warehouse Integrationen]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/).
+Dies könnte bedeuten, dass die Zugangsdaten in CDI falsch sind oder im Data Warehouse falsch konfiguriert wurden. Weitere Informationen finden Sie unter [Data-Warehouse-Integrationen]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/).
 
 ### Die Tabelle kann nicht gefunden werden
 
-Versuchen Sie, Ihre Integration mit der richtigen Datenbankkonfiguration zu aktualisieren, oder erstellen Sie passende Ressourcen im Data Warehouse, z.B. `database/table`.
+Versuchen Sie, Ihre Integration mit der richtigen Datenbankkonfiguration zu aktualisieren, oder erstellen Sie passende Ressourcen im Data Warehouse, z. B. `database/table`.
 
 ### Der Katalog kann nicht gefunden werden
 
 Der in der Integration eingerichtete Katalog ist im Braze-Katalog nicht vorhanden. Ein Katalog kann entfernt werden, nachdem die Integration eingerichtet wurde. Um das Problem zu beheben, aktualisieren Sie entweder die Integration, um einen anderen Katalog zu verwenden, oder erstellen Sie einen neuen Katalog, der dem Katalognamen in der Integration entspricht.
 
-## Warum wurde ich gemailt: "Zeilenfehler in Ihrer CDI-Synchronisation"?
+## Warum habe ich eine E-Mail erhalten: „Zeilenfehler in Ihrer CDI-Synchronisation"?
 
 Diese Art von E-Mail bedeutet, dass einige Ihrer Daten während der Synchronisierung nicht verarbeitet werden konnten. Um den spezifischen Fehler herauszufinden, können Sie die Protokolle in Braze einsehen, indem Sie zu **CDI** > **Sync Log** gehen.
 
-## Wie behebe ich Fehler bei Test Connection und Support E-Mails?
+## Wie behebe ich Fehler bei Test Connection und Support-E-Mails?
 
 {% tabs %}
 {% tab Snowflake %}
-### Test Verbindung läuft langsam
+### Test Connection läuft langsam
 
-Test Connection läuft auf Ihrem Data Warehouse, so dass eine Erhöhung der Data Warehouse-Kapazität dessen Geschwindigkeit verbessern kann. Die Verwendung einer serverlosen SQL-Instanz minimiert die Aufwärmzeit und verbessert den Abfragedurchsatz, kann aber zu etwas höheren Integrationskosten führen.
+Test Connection läuft auf Ihrem Data Warehouse, sodass eine Erhöhung der Data-Warehouse-Kapazität die Geschwindigkeit verbessern kann. Die Verwendung einer serverlosen SQL-Instanz minimiert die Aufwärmzeit und verbessert den Abfragedurchsatz, kann aber zu etwas höheren Integrationskosten führen.
 
-### Fehler bei der Verbindung zur Snowflake Instanz: Eingehende Anfrage mit IP ist für den Zugriff auf Snowflake nicht zulässig
+### Fehler bei der Verbindung zur Snowflake-Instanz: Eingehende Anfrage mit IP ist für den Zugriff auf Snowflake nicht zulässig
 
-Versuchen Sie, die offiziellen IPs von Braze zu Ihrer IP-Zulassungsliste hinzuzufügen. Weitere Informationen finden Sie unter [Data Warehouse Integrationen]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/), oder erlauben Sie die entsprechenden IPs:
+Versuchen Sie, die offiziellen Braze-IPs zu Ihrer IP-Zulassungsliste hinzuzufügen. Weitere Informationen finden Sie unter [Data-Warehouse-Integrationen]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/), oder erlauben Sie die entsprechenden IPs:
 
 {% multi_lang_include data_centers.md datacenters='ips' %}
 
-### Fehler bei der Ausführung von SQL aufgrund der Kund:in-Konfiguration: 002003 (42S02): SQL Kompilierungsfehler: existiert nicht oder ist nicht autorisiert
+### Fehler bei der Ausführung von SQL aufgrund der Kund:innen-Konfiguration: 002003 (42S02): SQL-Kompilierungsfehler: existiert nicht oder ist nicht autorisiert
 
-Wenn die Tabelle nicht existiert, erstellen Sie die Tabelle. Wenn die Tabelle existiert, überprüfen Sie, ob der Nutzer:in und die Rolle die Berechtigung haben, aus der Tabelle zu lesen.
+Wenn die Tabelle nicht existiert, erstellen Sie die Tabelle. Wenn die Tabelle existiert, überprüfen Sie, ob Nutzer:in und Rolle die Berechtigung haben, aus der Tabelle zu lesen.
 
-### Konnte Schema nicht verwenden
+### Schema konnte nicht verwendet werden
 
-Wenn Sie diesen Fehler erhalten, gewähren Sie dem angegebenen Nutzer:in oder der angegebenen Rolle Zugriff auf dieses Schema.
+Wenn Sie diesen Fehler erhalten, gewähren Sie der angegebenen Nutzer:in oder Rolle Zugriff auf dieses Schema.
 
-### Konnte Rolle nicht verwenden
+### Rolle konnte nicht verwendet werden
 
-Wenn Sie diese Fehlermeldung erhalten, erlauben Sie diesem Nutzer:in die angegebene Rolle zu wechseln.
+Wenn Sie diese Fehlermeldung erhalten, erlauben Sie der Nutzer:in, die angegebene Rolle zu verwenden.
 
-### Nutzer:in deaktiviert
+### Nutzer:innen-Zugriff deaktiviert
 
-Wenn Sie diesen Fehler erhalten, erlauben Sie diesem Nutzer:innen den Zugriff auf Ihr Snowflake-Konto.
+Wenn Sie diesen Fehler erhalten, erlauben Sie der Nutzer:in den Zugriff auf Ihr Snowflake-Konto.
 
-### Fehler bei der Verbindung zur Snowflake Instanz mit aktuellem und altem Schlüssel
+### Fehler bei der Verbindung zur Snowflake-Instanz mit aktuellem und altem Schlüssel
 
-Wenn Sie diese Fehlermeldung erhalten, vergewissern Sie sich, dass der Nutzer:innen den aktuellen öffentlichen Schlüssel verwendet, der in Ihrem Braze-Dashboard angezeigt wird.
+Wenn Sie diese Fehlermeldung erhalten, vergewissern Sie sich, dass die Nutzer:in den aktuellen Public Key verwendet, der in Ihrem Braze-Dashboard angezeigt wird.
 {% endtab %}
 
 {% tab Redshift %}
-### Test Verbindung läuft langsam
+### Test Connection läuft langsam
 
-Test Connection läuft auf Ihrem Data Warehouse, so dass eine Erhöhung der Data Warehouse-Kapazität dessen Geschwindigkeit verbessern kann. Die Verwendung einer serverlosen SQL-Instanz minimiert die Aufwärmzeit und verbessert den Abfragedurchsatz, kann aber zu etwas höheren Integrationskosten führen.
+Test Connection läuft auf Ihrem Data Warehouse, sodass eine Erhöhung der Data-Warehouse-Kapazität die Geschwindigkeit verbessern kann. Die Verwendung einer serverlosen SQL-Instanz minimiert die Aufwärmzeit und verbessert den Abfragedurchsatz, kann aber zu etwas höheren Integrationskosten führen.
 
-### Zugriff auf die Beziehung verweigert {table_name}
-
-Wenn Sie diesen Fehler erhalten:
-
-  - Erteilen Sie die Berechtigung `usage` für das Schema dieses Nutzers:in.
-  - Erteilen Sie dem Nutzer:in das Recht `select` für die Tabelle.
-
-### Verbindungsfehler erstellen
-
-Wenn Sie diese Fehlermeldung erhalten, überprüfen Sie, ob der Endpunkt und der Port von Redshift korrekt sind.
-
-### SSH-Tunnel erstellen Fehler
+### Zugriff auf die Relation verweigert {table_name}
 
 Wenn Sie diesen Fehler erhalten:
 
-  - Überprüfen Sie den Public Key auf Ihrem Braze-Dashboard auf dem für das SSH-Tunneling verwendeten ec2-Host.
+  - Erteilen Sie der Nutzer:in die Berechtigung `usage` für das Schema.
+  - Erteilen Sie der Nutzer:in die Berechtigung `select` für die Tabelle.
+
+### Fehler beim Erstellen der Verbindung
+
+Wenn Sie diese Fehlermeldung erhalten, überprüfen Sie, ob der Redshift-Endpunkt und der Port korrekt sind.
+
+### Fehler beim Erstellen des SSH-Tunnels
+
+Wenn Sie diesen Fehler erhalten:
+
+  - Überprüfen Sie, ob der Public Key in Ihrem Braze-Dashboard auf dem für das SSH-Tunneling verwendeten EC2-Host vorhanden ist.
   - Überprüfen Sie, ob Ihr Benutzername korrekt ist.
   - Überprüfen Sie, ob der SSH-Tunnel korrekt ist.
 {% endtab %}
 
 {% tab BigQuery %}
-### Test Verbindung läuft langsam
+### Test Connection läuft langsam
 
-Test Connection läuft auf Ihrem Data Warehouse, so dass eine Erhöhung der Data Warehouse-Kapazität dessen Geschwindigkeit verbessern kann. Die Verwendung einer serverlosen SQL-Instanz minimiert die Aufwärmzeit und verbessert den Abfragedurchsatz, kann aber zu etwas höheren Integrationskosten führen.
+Test Connection läuft auf Ihrem Data Warehouse, sodass eine Erhöhung der Data-Warehouse-Kapazität die Geschwindigkeit verbessern kann. Die Verwendung einer serverlosen SQL-Instanz minimiert die Aufwärmzeit und verbessert den Abfragedurchsatz, kann aber zu etwas höheren Integrationskosten führen.
 
 ### Nutzer:in hat keine Berechtigung, die Tabelle abzufragen
 
-Wenn Sie diesen Fehler erhalten, fügen Sie Nutzer:innen die Berechtigung zur Abfrage der Tabelle hinzu.
+Wenn Sie diesen Fehler erhalten, fügen Sie der Nutzer:in die Berechtigung zur Abfrage der Tabelle hinzu.
 
-### Ihre Nutzung hat die angepasste Quote überschritten
+### Ihre Nutzung hat das angepasste Kontingent überschritten
 
 Wenn Sie diese Fehlermeldung erhalten, muss Ihr Kontingent aktualisiert werden, damit Sie die Synchronisierung mit Ihrer aktuellen Rate fortsetzen können.
 
-### Tabelle wurde am Standort {region} nicht gefunden Standort
+### Tabelle wurde am Standort {region} nicht gefunden
 
 Wenn Sie diese Fehlermeldung erhalten, überprüfen Sie, ob sich Ihre Tabelle im richtigen Projekt und Datensatz befindet.
 
-### Ungültige JWT Signatur
+### Ungültige JWT-Signatur
 
-Wenn Sie diese Fehlermeldung erhalten, überprüfen Sie, ob der BigQuery API Dienst für Ihr Konto aktiviert ist.
+Wenn Sie diese Fehlermeldung erhalten, überprüfen Sie, ob der BigQuery-API-Dienst für Ihr Konto aktiviert ist.
 {% endtab %}
 
 {% tab Databricks %}
-### Test Verbindung läuft langsam
+### Test Connection läuft langsam
 
-Test Connection läuft auf Ihrem Data Warehouse, so dass eine Erhöhung der Data Warehouse-Kapazität dessen Geschwindigkeit verbessern kann. Bei Databricks kann es zu einer Aufwärmzeit von zwei bis fünf Minuten kommen, wenn Braze eine Verbindung zu Classic und Pro SQL-Instanzen herstellt, was zu Verzögerungen beim Verbindungsaufbau und beim Testen sowie zu Beginn geplanter Synchronisierungen führt. Die Verwendung einer serverlosen SQL-Instanz minimiert die Aufwärmzeit und verbessert den Abfragedurchsatz, kann aber zu etwas höheren Integrationskosten führen.
+Test Connection läuft auf Ihrem Data Warehouse, sodass eine Erhöhung der Data-Warehouse-Kapazität die Geschwindigkeit verbessern kann. Bei Databricks kann es zu einer Aufwärmzeit von zwei bis fünf Minuten kommen, wenn Braze eine Verbindung zu Classic- und Pro-SQL-Instanzen herstellt, was zu Verzögerungen beim Verbindungsaufbau und beim Testen sowie zu Beginn geplanter Synchronisierungen führt. Die Verwendung einer serverlosen SQL-Instanz minimiert die Aufwärmzeit und verbessert den Abfragedurchsatz, kann aber zu etwas höheren Integrationskosten führen.
 
-### Befehl fehlgeschlagen, da Lagerhaus gestoppt wurde
+### Befehl fehlgeschlagen, da das Warehouse gestoppt wurde
 
-Wenn Sie diese Fehlermeldung erhalten, stellen Sie sicher, dass Databricks Warehouse läuft.
+Wenn Sie diese Fehlermeldung erhalten, stellen Sie sicher, dass das Databricks-Warehouse läuft.
 
-### Dienste: Amazon S3; Status Code: 403; Fehlercode: 403 Verboten
+### Service: Amazon S3; Status Code: 403; Error Code: 403 Forbidden
 
-Wenn Sie diesen Fehler erhalten, lesen Sie [Databricks: Unzulässiger Fehler beim Zugriff auf S3 Daten](https://kb.databricks.com/security/forbidden-access-to-s3-data).
+Wenn Sie diesen Fehler erhalten, lesen Sie [Databricks: Forbidden-Fehler beim Zugriff auf S3-Daten](https://kb.databricks.com/security/forbidden-access-to-s3-data).
 {% endtab %}
 {% endtabs %}
 
 ## Wie aktualisiere ich meine E-Mail-Benachrichtigungseinstellungen für CDI-Integrationen?
 
-Jede Integration hat ihre eigene Benachrichtigungspräferenz. Gehen Sie auf die CDI-Seite und wählen Sie den Namen der Integration aus, die Sie aktualisieren möchten. Im Bereich **Benachrichtigungseinstellungen** können Sie aktualisieren, wie Sie Benachrichtigungen über die ausgewählte Integration erhalten.
+Jede Integration hat ihre eigene Benachrichtigungspräferenz. Gehen Sie auf die CDI-Seite und wählen Sie den Namen der Integration aus, die Sie aktualisieren möchten. Im Abschnitt **Benachrichtigungseinstellungen** können Sie festlegen, wie Sie Benachrichtigungen über die ausgewählte Integration erhalten.
 
-## Was geschieht, wenn eine Zukunft mit einer UPDATED_ATIntegration synchronisiert wird?
+## Was passiert, wenn ein zukünftiger UPDATED_AT-Wert mit einer Integration synchronisiert wird?
 
-CDI verwendet `UPDATED_AT`, um zu entscheiden, welche Daten neu sind. Nachdem ein zukünftiges `UPDATED_AT` synchronisiert wurde, werden Daten, die vor diesem zukünftigen Datum und Zeitpunkt liegen, nicht mehr verarbeitet. Um dies zu beheben:
+CDI verwendet `UPDATED_AT`, um zu entscheiden, welche Daten neu sind. Nachdem ein zukünftiger `UPDATED_AT`-Wert synchronisiert wurde, werden Daten, die vor diesem zukünftigen Datum und Zeitpunkt liegen, nicht mehr verarbeitet. Um dies zu beheben:
 
-1. Richtig `UPDATED_AT`.
+1. Korrigieren Sie `UPDATED_AT`.
 2. Entfernen Sie alle alten Daten, die bereits mit Braze synchronisiert wurden.
 3. Erstellen Sie eine neue Integration, um diese Tabelle erneut zu verarbeiten.
 
-## Warum stimmt "Synchronisierte Zeilen" nicht mit der Anzahl in meinem Lager überein?
+## Warum stimmt „Synchronisierte Zeilen" nicht mit der Anzahl in meinem Warehouse überein?
 
-CDI verwendet `UPDATED_AT`, um zu entscheiden, welche Datensätze bei einer Synchronisierung übernommen werden sollen. Sehen Sie sich [diese Illustration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) an, um zu sehen, wie es funktioniert. Zu Beginn eines Synchronisierungslaufs fragt CDI Ihr Lager ab, um alle Datensätze zu erhalten, deren`UPDATED_AT`Zeitstempel gleich oder später als der zuvor verarbeitete`UPDATED_AT`Zeitstempel ist. Jeder Datensatz, der zum Zeitpunkt der Ausführung der Abfrage erfasst wird, wird mit Braze synchronisiert. Hier sind die häufigsten Fälle, in denen ein Datensatz nicht synchronisiert werden kann:
+CDI verwendet `UPDATED_AT`, um zu entscheiden, welche Datensätze bei einer Synchronisierung übernommen werden sollen. Sehen Sie sich [diese Illustration]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/overview/#what-gets-synced) an, um zu verstehen, wie es funktioniert. Zu Beginn eines Synchronisierungslaufs fragt CDI Ihr Warehouse ab, um alle Datensätze zu erhalten, deren `UPDATED_AT`-Zeitstempel später als der zuvor verarbeitete `UPDATED_AT`-Wert ist. Datensätze an der exakten Grenz-Zeitstempel-Marke können ebenfalls erneut synchronisiert werden, wenn neue Zeilen denselben Zeitstempel haben. Jeder Datensatz, der zum Zeitpunkt der Abfrageausführung erfasst wird, wird mit Braze synchronisiert. Hier sind häufige Fälle, in denen ein Datensatz möglicherweise nicht synchronisiert wird:
 
-- Sie fügen der Tabelle Datensätze mit einem `UPDATED_AT` Wert hinzu, der bereits verarbeitet wurde.
-- Sie aktualisieren die Werte von Datensätzen, nachdem sie durch eine Synchronisierung verarbeitet wurden, lassen aber `UPDATED_AT` unverändert. 
-- Sie fügen Datensätze hinzu oder aktualisieren sie, während eine Synchronisierung läuft. Je nachdem, wann die CDI-Abfrage ausgeführt wird, kann es Race-Conditions geben, die dazu führen, dass Datensätze nicht abgeholt werden.
+- Sie fügen der Tabelle Datensätze mit einem `UPDATED_AT`-Wert hinzu, der bereits verarbeitet wurde.
+- Sie aktualisieren Datensatzwerte, nachdem sie durch eine Synchronisierung verarbeitet wurden, lassen aber `UPDATED_AT` unverändert. 
+- Sie fügen Datensätze hinzu oder aktualisieren sie, während eine Synchronisierung läuft. Je nachdem, wann die CDI-Abfrage ausgeführt wird, kann es zu Race-Conditions kommen, die dazu führen, dass Datensätze nicht erfasst werden.
 
 {% alert tip %}
-Um dieses Verhalten in Zukunft zu vermeiden, empfehlen wir, monoton ansteigende `UPDATED_AT` Werte zu verwenden und die Tabelle während Ihres Zeitplans nicht zu aktualisieren.
+Um dieses Verhalten in Zukunft zu vermeiden, empfehlen wir, monoton ansteigende `UPDATED_AT`-Werte zu verwenden und die Tabelle während Ihres geplanten Synchronisierungslaufs nicht zu aktualisieren.
 {% endalert %}
 
 ## Wird bei einer Synchronisierung die Reihenfolge beibehalten, wenn mehrere Datensätze dieselbe ID haben?
 
-Die Reihenfolge der Bearbeitung ist nicht 100%ig vorhersehbar. Wenn zum Beispiel während einer Synchronisierung mehrere Zeilen mit demselben `EXTERNAL_ID` in der Tabelle vorhanden sind, können wir nicht garantieren, welcher Wert im endgültigen Profil landet. Wenn Sie dasselbe `EXTERNAL_ID` mit verschiedenen Attributen in der Nutzlastspalte aktualisieren, werden alle Änderungen übernommen, wenn die Synchronisierung abgeschlossen ist.
+Die Verarbeitungsreihenfolge ist nicht zu 100 % vorhersehbar. Wenn zum Beispiel während einer Synchronisierung mehrere Zeilen mit derselben `EXTERNAL_ID` in der Tabelle vorhanden sind, können wir nicht garantieren, welcher Wert im endgültigen Profil landet. Wenn Sie dieselbe `EXTERNAL_ID` mit verschiedenen Attributen in der Nutzlastspalte aktualisieren, werden alle Änderungen übernommen, wenn die Synchronisierung abgeschlossen ist.
 
 ## Warum werden bei meiner CDI-Synchronisierung keine neuen Nutzer:innen angelegt?
 
-Wenn in Ihrer CDI-Integration die Option **„Nur vorhandene Nutzer:innen aktualisieren“** aktiviert ist, werden nur Nutzer:innen aktualisiert, die bereits in Braze vorhanden sind, und es werden keine neuen Nutzer:innen erstellt. Dies bedeutet, dass eine Zeile in Ihrer Synchronisierungstabelle, die einen`EXTERNAL_ID`Eintrag referenziert, der mit keinem vorhandenen Braze-Nutzer:in übereinstimmt, übersprungen wird.
+Wenn in Ihrer CDI-Integration die Option **Nur vorhandene Nutzer:innen aktualisieren** aktiviert ist, werden nur Nutzer:innen aktualisiert, die bereits in Braze vorhanden sind, und es werden keine neuen Nutzer:innen erstellt. Das bedeutet, dass eine Zeile in Ihrer Synchronisierungstabelle, die eine `EXTERNAL_ID` referenziert, die mit keiner vorhandenen Braze-Nutzer:in übereinstimmt, übersprungen wird.
 
-Um über CDI neue Nutzer:innen anzulegen, schalten Sie bitte die Option **„Nur vorhandene Nutzer:innen aktualisieren“** in Ihren Integrationseinstellungen um. Bitte gehen Sie zu **„Dateneinstellungen“** > **„Cloud-Datenaufnahme“** und wählen Sie eine Integration aus.
+Um über CDI neue Nutzer:innen anzulegen, deaktivieren Sie die Option **Nur vorhandene Nutzer:innen aktualisieren** in Ihren Integrationseinstellungen. Gehen Sie zu **Dateneinstellungen** > **Cloud-Datenaufnahme** und wählen Sie eine Integration aus.
 
 ## Welche Sicherheitsmaßnahmen gibt es für CDI?
 
 ### Unsere Maßnahmen
 
-Braze hat die folgenden Maßnahmen gegen CDI ergriffen:
+Braze hat die folgenden Maßnahmen für CDI implementiert:
 
-- Alle Zugangsdaten werden in unserer Datenbank verschlüsselt, und nur bestimmte Mitarbeiter haben authentifizierten Zugang zu ihnen.
-- Wir verwenden verschlüsselte Verbindungen, um Daten an Kund:in zu erhalten.
-- Wir stellen Anfragen an die API-Endpunkte von Braze mit denselben API-Schlüsseln und TLS-Verbindungen, die wir unseren Kund:innen zu verwenden empfehlen.
-- Wir aktualisieren unsere Bibliotheken regelmäßig und holen uns alle Sicherheits-Patches.
+- Alle Zugangsdaten werden in unserer Datenbank verschlüsselt, und nur bestimmte Mitarbeitende haben authentifizierten Zugang zu ihnen.
+- Wir verwenden verschlüsselte Verbindungen, um Daten aus Kund:innen-Warehouses abzurufen.
+- Wir stellen Anfragen an die Braze-API-Endpunkte mit denselben API-Schlüsseln und TLS-Verbindungen, die wir unseren Kund:innen empfehlen.
+- Wir aktualisieren unsere Bibliotheken regelmäßig und beziehen alle Sicherheits-Patches.
 
 ### Ihre Maßnahmen
 
 Wir empfehlen Ihnen und Ihrem Team, die folgenden Sicherheitsmaßnahmen auf Ihrer Seite einzurichten: 
 
-- Beschränken Sie den Zugriff auf Zugangsdaten auf das für den Betrieb von CDI erforderliche Minimum. Das liegt daran, dass wir in der Lage sein müssen, select (und count) auf den spezifischen Tabellen und Ansichten auszuführen.
-- Beschränken Sie die IPs, die auf die Tabellen zugreifen können, auf offiziell veröffentlichte [Braze IPs]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/.#step-1-set-up-tables-or-views).
+- Beschränken Sie den Zugriff auf Zugangsdaten auf das für den Betrieb von CDI erforderliche Minimum. Das liegt daran, dass wir in der Lage sein müssen, select (und count) auf den spezifischen Tabellen und Views auszuführen.
+- Beschränken Sie die IPs, die auf die Tabellen zugreifen können, auf offiziell veröffentlichte [Braze-IPs]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/.#step-1-set-up-tables-or-views).

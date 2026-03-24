@@ -59,7 +59,7 @@ Just Words works with Canvases and campaigns by using Connected Content. If you'
 {% tab Canvas %}
 
 1. In a Canvas, select **Add Variant** > **Add Variant** until you have your desired number of variants, and add steps to each variant (like an email Message step).
-2. Split the audience traffic as desired. For example, if you have two variants, you might give each one 50%. Or, you could have two variants with 40% each and a control group with 20%. For more information about A/B tests for Canvases, refer to [Creating a Canvas]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/).
+2. Split the audience traffic as desired. For example, if you have two variants, you might give each one 50%. Or, you could have two variants with 40% each and a control group with 20%. For more information about A/B tests for Canvases, refer to [Creating a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 3. In the composers for the Message steps that you want to use with Connected Content, paste in the Connected Content snippet from Just Words Console, such as the following snippet.
 
 {% raw %}

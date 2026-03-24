@@ -20,7 +20,7 @@ This page provides a step-by-step guide for:
 
 Before you start, you'll need the following:
 
-| Requirements | Description |
+| Prerequisite | Description |
 | --- | --- |
 | A Trustpilot account | You need a Trustpilot account with access to Trustpilot's API. |
 | A Trustpilot authentication key | You will need to set up an API key and request an access token. |
