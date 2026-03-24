@@ -11,7 +11,7 @@ page_type: reference
 
 > This page covers how to set up Cloud Data Ingestion support and sync relevant data from S3 to Braze.
 
-This page shows the sync and source steps that are currently in Early Access (EA). For steps and images for the generally available experience, see [General availability experience](#general-availability-experience).
+This page shows the sync and source steps that are currently in Early Access (EA). For steps for the generally available experience, see [General availability experience](#general-availability-experience).
 
 ## How it works
 
