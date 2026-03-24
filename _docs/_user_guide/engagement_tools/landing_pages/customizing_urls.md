@@ -7,7 +7,7 @@ page_order: 1
 
 # Customize landing page URLs
 
-> Learn how to customize your landing page URLs with your company's brand, by connecting your domain to your Braze workspace.
+> Learn how to customize your landing page URLs with your company's brand by connecting your domain to your Braze workspace.
 
 ## How it works
 
@@ -15,12 +15,12 @@ When you [connect your domain to Braze](#connecting-your-domain-to-braze), it wi
 
 The number of custom domains you can connect to your Braze account depends on your [plan tier]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers). To increase your limit, contact your Braze account manager.
 
-## Connecting your domain to Braze
+## Connect your domain to Braze
 
 To connect a domain to your Braze account, have an administrator follow the steps below.
 
 1. Go to **Settings** > **Landing Page Settings**.
-2. Enter the domain you want to connect and select **Submit**. For example, `forms.example.com`.
+2. Enter the domain you want to connect to and select **Submit**. For example, `forms.example.com`.
 3. Copy and paste the **TXT** and **CNAME** records into the DNS settings of your domain provider.
 4. Return to the Braze dashboard to verify the connection.
 
@@ -30,7 +30,7 @@ To connect a domain to your Braze account, have an administrator follow the step
 Depending on your domain provider, the connection can take up to 48 hours. When the process is complete, we’ll start using your custom domain for your landing pages in the Braze dashboard.
 {% endalert %}
 
-## Removing your domain
+## Remove your domain
 
 If you're a Braze administrator, you can remove a previously-configured domain by completing the following steps:
 
@@ -40,9 +40,16 @@ If you're a Braze administrator, you can remove a previously-configured domain b
 4. Remove the listed DNS records from your domain settings.
 
 {% alert important %}
-When you remove a custom domain, that URL will no longer be valid. Any landing pages that were using this domain will automatically revert back to the default domain set by Braze.
+When you remove a custom domain, that URL will no longer be valid. Any landing pages that were using this domain will automatically revert to the default domain set by Braze.
 {% endalert %}
 
+## Migrate your domain
+
+To migrate a custom domain to another workspace:
+
+1. Remove the custom domain.
+2. Create a new custom domain in the desired workspace.
+3. Reconfigure the custom domain with the new DNS records. Note that your subdomain will be unavailable during this process.
 
 ## DNS resources
 
@@ -56,7 +63,7 @@ Verify that your domain was entered correctly and that it matches what you submi
 
 ## Frequently asked questions
 
-### Can I connect multiple subdomains to my workspace or connect one subdomain to multiple workspaces?
+### Can I connect multiple subdomains to my workspace, or connect one subdomain to multiple workspaces?
 
 No, you currently can only connect one subdomain to a workspace.
 
@@ -87,4 +94,3 @@ To resolve this, ask your IT team to temporarily release the zone hold. For more
 #### Restarting the validation process
 
 After resolving either issue, delete and recreate your custom domain in the Braze dashboard to restart the validation process.
-
