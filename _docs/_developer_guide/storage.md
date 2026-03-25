@@ -122,7 +122,7 @@ To learn more about automatically-collected device properties, see [SDK Data Col
 
 ## Store cookies (web only) {#cookies}
 
-After [initializing the Web Braze SDK](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize), it creates and stores cookies with a 400-day expiration that automatically renews on new sessions.
+After you [initialize the Web Braze SDK](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize), the SDK creates and stores cookies with a 400-day expiration that automatically renews on new sessions.
 
 The following cookies are stored:
 
