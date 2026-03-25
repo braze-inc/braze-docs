@@ -75,7 +75,7 @@ Insert the **VideoSmart Content Block** in your email where you want the video c
 
 In most Braze setups, Content Blocks are referenced using the following pattern (replace **VideoSmart_Campaign** with the name of the Content Block in your account):
 
-`{{content_blocks.${VideoSmart_Campaign}}}`
+{% raw %}`{{content_blocks.${VideoSmart_Campaign}}}`{% endraw %}
 
 The Content Block name is case-sensitive and must match exactly what you have configured in Braze.
 
