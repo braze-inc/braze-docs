@@ -9,10 +9,10 @@ search_tag: Partner
 
 # VideoSmart
 
-> [VideoSmart](https://www.videosmart.com/) provides personalised, interactive video technology that enables brands to deliver data-driven, non-linear content at scale. Each video is dynamically generated using customer-level data, allowing for tailored messaging and user journeys within a single video experience.\
-> \
-> The VideoSmart integration with Braze allows marketers to embed personalised video content directly into email campaigns. This is achieved using Braze’s Connected Content and Liquid templating to request video assets from VideoSmart at send time.\
-> \
+> [VideoSmart](https://www.videosmart.com/) provides personalised, interactive video technology that enables brands to deliver data-driven, non-linear content at scale. Each video is dynamically generated using customer-level data, allowing for tailored messaging and user journeys within a single video experience.
+>
+> The VideoSmart integration with Braze allows marketers to embed personalised video content directly into email campaigns. This is achieved using Braze’s Connected Content and Liquid templating to request video assets from VideoSmart at send time.
+>
 > The integration is typically implemented via a reusable Content Block template within Braze, enabling consistent deployment across campaigns while allowing flexibility in campaign selection and personalisation logic.
 
 _This integration is developed and maintained by VideoSmart._
