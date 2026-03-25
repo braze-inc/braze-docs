@@ -1,16 +1,16 @@
 ---
-nav_title: Just Words
-article_title: Just Words
-description: "This reference article outlines the partnership between Braze and Just Words, an AI-based SaaS business platform that creates personalized versions of existing campaigns and optimizes subject lines, creative content, and HTML email layouts over time."
-alias: /partners/just_words/
+nav_title: JustAI
+article_title: JustAI
+description: "This reference article outlines the partnership between Braze and JustAI, an AI-based SaaS business platform that creates personalized versions of existing campaigns and optimizes subject lines, creative content, and HTML email layouts over time."
+alias: /partners/just_ai/
 page_type: partner
 ---
 
-# Just Words Integration Guide
+# JustAI Integration Guide
 
-> [Just Words](https://www.justwords.ai/) hyper-personalizes messaging at scale on lifecycle marketing channels, empowering you to dynamically test hundreds of variations and auto-refresh underperforming content.
+> [JustAI](https://www.getjust.ai/) hyper-personalizes messaging at scale on lifecycle marketing channels, empowering you to dynamically test hundreds of variations and auto-refresh underperforming content.
 
-When you use Just Words with Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) to personalize your existing Braze campaigns and Canvases, Just Words will use Braze Currents to optimize the content dynamically—so you don’t have to.
+When you use JustAI with Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) to personalize your existing Braze campaigns and Canvases, JustAI will use Braze Currents to optimize the content dynamically—so you don’t have to.
 
 ## What are the benefits?
 
@@ -21,33 +21,33 @@ After your integration is complete, you can leverage the Just Works platform to:
 - View performance insights
 
 {% alert note %}
-Questions? Contact Just Words on their [booking page](https://www.justwords.ai/book-demo) or through the shared Slack channel.
+Questions? Contact JustAI on their [booking page](https://www.getjust.ai/book-demo) or through the shared Slack channel.
 {% endalert %}
 
 ## Prerequisites
 
 | Requirement | Description |
 |---|---|
-| Just Words Account | A [Just Words](https://www.justwords.ai/) account is required to take advantage of this partnership. If you don’t have a Just Words account, [schedule a 30-minute onboarding call](https://www.justwords.ai/book-demo). |
+| JustAI Account | A [JustAI](https://www.getjust.ai/) account is required to take advantage of this partnership. If you don’t have a JustAI account, [schedule a 30-minute onboarding call](https://www.getjust.ai/book-demo). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Integrating Just Words with Braze
+## Integrating JustAI with Braze
 
-### Step 1: Create a Just Words template
+### Step 1: Create a JustAI template
 
-1. Go to your Just Words console and [create a new template](https://console.justwords.ai/new).
+1. Go to your JustAI console and [create a new template](https://console.getjust.ai/new).
 2. Choose an easy-to-remember ID that uses letters, numbers, and underscores only.
 3. Fill out basic campaign details.
 4. Use AI to generate personalized variations.
 
-![The Just Words template creation platform.]({% image_buster /assets/img/just_words/creation_interface.png %}){: style="max-width:80%;"}
+![The JustAI template creation platform.]({% image_buster /assets/img/just_words/creation_interface.png %}){: style="max-width:80%;"}
 
-### Step 2: Create a Just Words API key
+### Step 2: Create a JustAI API key
 
 1. Go to **Org Settings** > **API Keys** > **Generate API Key**.
 2. Copy and save the API key in a secure location.
 
-![The Just Words API key form.]({% image_buster /assets/img/just_words/api_key_form.png %}){: style="max-width:80%;"}
+![The JustAI API key form.]({% image_buster /assets/img/just_words/api_key_form.png %}){: style="max-width:80%;"}
 
 ### Step 3: Use Just Words in your Braze content
 
@@ -64,7 +64,7 @@ Just Words works with Canvases and campaigns by using Connected Content. If you'
 
 {% raw %}
 ```liquid
-{% connected_content https://worker.justwords.ai/api/generate/just-words?template_id=<test_id>&user_id={{${user_id}}}
+{% connected_content https://worker.getjust.ai/api/generate/just-words?template_id=<test_id>&user_id={{${user_id}}}
   :save jw
   :headers {
     "x-api-key": <jw_api_key>,
@@ -88,7 +88,7 @@ Just Words works with Canvases and campaigns by using Connected Content. If you'
 
 {% raw %}
 ```liquid
-{% connected_content https://worker.justwords.ai/api/generate/just-words?template_id=<test_id>&user_id={{${user_id}}}
+{% connected_content https://worker.getjust.ai/api/generate/just-words?template_id=<test_id>&user_id={{${user_id}}}
   :save jw
   :headers {
     "x-api-key": <jw_api_key>,
@@ -110,7 +110,7 @@ To personalize your messages with custom attributes (such as `industry`), use th
 
 {% raw %}
 ```liquid
-{% connected_content https://worker.justwords.ai/api/generate/just-words?template_id=<test_id>&user_id={{${user_id}}}&attrs.industry={{ custom_attribute.industry }}
+{% connected_content https://worker.getjust.ai/api/generate/just-words?template_id=<test_id>&user_id={{${user_id}}}&attrs.industry={{ custom_attribute.industry }}
   :save jw
   :headers {
     "x-api-key": <jw_api_key>,
