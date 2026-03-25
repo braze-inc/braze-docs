@@ -159,4 +159,4 @@ braze.initialize("API-KEY", {
 });
 ```
 
-To stop Braze tracking in general, or to clear all stored browser data, see the [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disableSDK) and [`wipeData`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#wipedata) SDK methods, respectively. These two methods can be useful should a user revoke consent or if you want to stop all Braze functionality after the SDK has already been initialized.
+To stop Braze tracking in general, or to clear all stored browser data, see the [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disableSDK) and [`wipeData`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#wipedata) SDK methods, respectively. These two methods can be useful if a user revokes consent or if you want to stop all Braze functionality after the SDK has already been initialized.
