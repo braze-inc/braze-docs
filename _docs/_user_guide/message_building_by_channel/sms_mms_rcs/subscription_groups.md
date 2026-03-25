@@ -155,7 +155,7 @@ Consider the following example with four subscription groups across two workspac
   - Marketing - DEV for SMS
   - Transactional - DEV for SMS
 
-### Clear naming conventions
+### Use clear naming conventions
 
 Choose descriptive and clear subscription group names so that the correct group is selected when creating SMS campaigns.
 
