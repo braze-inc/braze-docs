@@ -29,7 +29,7 @@ If you don't see **Braze Auto** as an option in the **Model** dropdown when crea
 
 With this option, you can connect your Braze account with providers like OpenAI, Anthropic, or Google Gemini. If you bring your own API key from an LLM provider, token costs are billed directly through your provider, not through Braze.
 
-We recommend routinely testing the most recent models, as legacy models may be discontinued or deprecated after a few months.
+We recommend routinely testing the most recent models, as legacy models may be discontinued or deprecated after a few months. You can also sign up for Agent Console notifications in [Notification Preferences]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/notification_preferences/) to be alerted when Braze detects a model is no longer available.
 
 To set this up:
 
@@ -40,16 +40,6 @@ To set this up:
 Then, you can return to your agent and select your model.
 
 When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.
-
-### Determine which model to use
-
-Each LLM provider has a slightly different mix of model capabilities, costs, and thinking levels. Here are some general guidelines and best practices:
-
-- For cost efficiency, prioritize testing lower token cost models over higher cost models. Adjust to higher cost models only if lower cost models are struggling with the use case or generate inconsistent or inaccurate outputs.
-- For speed and performance efficiency, prioritize testing lower model thinking levels over higher thinking levels. Adjust to higher thinking level models only if lower thinking levels are struggling with the use case or generating inconsistent or inaccurate outputs.
-- If lower cost models or model thinking levels are struggling with the use case or generating inconsistent or inaccurate outputs, consider adjusting to higher cost models or thinking level models.
-- During testing, make sure to balance the reliability and accuracy with token usage and invocation duration.
-- Each use case may have a different optimal model and thinking level. We recommend thoroughly testing to check for consistent quality without timeouts.
 
 #### Thinking levels
 
@@ -69,6 +59,16 @@ Braze uses the same IP ranges for outbound LLM calls as for Connected Content. T
 {% alert important %}
 When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.
 {% endalert %}
+
+#### Determine which model to use
+
+Each LLM provider has a slightly different mix of model capabilities, costs, and thinking levels. Here are some general guidelines and best practices:
+
+- For cost efficiency, prioritize testing lower token cost models over higher cost models. Adjust to higher cost models only if lower cost models are struggling with the use case or generate inconsistent or inaccurate outputs.
+- For speed and performance efficiency, prioritize testing lower model thinking levels over higher thinking levels. Adjust to higher thinking level models only if lower thinking levels are struggling with the use case or generating inconsistent or inaccurate outputs.
+- If lower cost models or model thinking levels are struggling with the use case or generating inconsistent or inaccurate outputs, consider adjusting to higher cost models or thinking level models.
+- During testing, make sure to balance the reliability and accuracy with token usage and invocation duration.
+- Each use case may have a different optimal model and thinking level. We recommend thoroughly testing to check for consistent quality without timeouts.
 
 ## Writing instructions
 
@@ -292,7 +292,7 @@ Rules:
 - Include "explanation": a short string that states how you applied the rules (for review or QA).
 
 Final Output Specification:
-You must return a JSON object with exactly two keys: "short_description" and "explanation".
+You must return an object with exactly two keys: "short_description" and "explanation".
 - short_description: Plain text for the catalog cell, maximum 150 characters. No markdown.
 - explanation: String. Brief note on how you combined Destination Name, Country, Primary Vibe, and Price Tier per the brand rules.
 Configure your agent's **Output** with **Fields** that match these key names (catalog agents do not use JSON Schema output in the Agent Console, but your instructions can still ask the model for this key-value shape).
@@ -343,7 +343,7 @@ Apply Category Guidelines:
 Fallback Logic: If the source text is empty, if you do not understand the translation, or if it is impossible to translate within the character limit, set localized_text to exactly ERROR_MANUAL_REVIEW_NEEDED and use explanation to describe why.
 
 Final Output Specification:
-You must return a JSON object with exactly two keys: "localized_text" and "explanation".
+You must return an object with exactly two keys: "localized_text" and "explanation".
 - localized_text: The string saved to the localized catalog column (plain text, no pronunciation guides). Must respect Max Characters when you return a translation.
 - explanation: String. Brief note on locale choices, shortening tradeoffs, or why ERROR_MANUAL_REVIEW_NEEDED applies.
 Configure your agent's **Output** with **Fields** that match these key names.
