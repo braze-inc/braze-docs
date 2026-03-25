@@ -8,7 +8,7 @@ description: "Learn how to correctly backfill historical data for BrazeAI Decisi
 
 # Backfill best practices
 
-> For various reasons, data may need to be backfilled, whether because of data errors, new information (such as new features), or reconciling data between two systems. When backfilling occurs, follow the principles in this article to ensure data quality and model performance.
+> For various reasons, data may need to be backfilled, whether because of data errors, new information (such as new features), or reconciling data between two systems. When backfilling occurs, follow the principles in this article to maintain data quality and model performance.
 
 ## When backfilling is needed
 
