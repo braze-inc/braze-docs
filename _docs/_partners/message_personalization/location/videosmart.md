@@ -50,6 +50,7 @@ Before you start, confirm you have the following:
 | Braze Connected Content credentials | A Connected Content Basic Authentication credential named **basic_credentials**, configured with VideoSmart-provided values |
 | VideoSmart Content Block template   | The VideoSmart Content Block template added in your Braze dashboard (provided by VideoSmart)                                |
 | A Braze email message               | A Braze Campaign email or Canvas email step where you will insert the VideoSmart Content Block                              |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integrating VideoSmart
 
