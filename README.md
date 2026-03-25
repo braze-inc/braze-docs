@@ -46,7 +46,7 @@ Next, install project dependencies.
 bundle install && asdf install
 ```
 
-To start your local docs server on localhost `http://127.0.0.1:5006`, run the following command. To stop your server, reopen the terminal and press **Control**+**C**.
+To start your local docs server on localhost `http://127.0.0.1:5006`, run the following command. To stop your server, reopen the terminal and press <kbd>Control</kbd> + <kbd>C</kbd>.
 
 ```bash
 # for 'en' language:
