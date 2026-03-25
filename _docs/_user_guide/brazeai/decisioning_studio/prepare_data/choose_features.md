@@ -1,7 +1,7 @@
 ---
 nav_title: Choosing good features
 article_title: Choosing good features for Decisioning Studio
-page_order: 6
+page_order: 7
 page_type: reference
 description: "This reference article covers how to construct effective customer features for BrazeAI Decisioning Studio, including feature types, general guidelines, behavioral feature construction, and the relationship between features and the action space."
 ---
