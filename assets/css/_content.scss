@@ -1235,3 +1235,21 @@ svg[id^="mermaid"] {
 .toc_container .heading-copy-btn {
 	display: none;
 }
+
+.page-last-updated {
+	font-size: 0.8em;
+	color: $grey-boulder;
+	margin-top: -0.25rem;
+	margin-bottom: 1.25rem;
+
+	&--bottom {
+		margin-top: 2rem;
+		margin-bottom: 0.75rem;
+
+		@media (min-width: $window-xlarge-px) {
+			max-width: $main_max_width;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

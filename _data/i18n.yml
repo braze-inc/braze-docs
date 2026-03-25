@@ -8,6 +8,7 @@ en:
   edit_github: Edit this page on GitHub
   page_nav_title: On this page
   helpful: "HOW HELPFUL WAS THIS PAGE?"
+  last_updated: "Last updated"
 fr:
   next: SUIVANTE
   previous: PRÉCÉDENTE
@@ -20,6 +21,7 @@ fr:
   helpful: "CETTE PAGE A-T-ELLE ÉTÉ UTILE?"
   translation_banner: "Cette page a été traduite automatiquement et peut contenir des inexactitudes. Pour signaler une erreur de traduction,"
   translation_banner_link: "ouvrez un ticket sur GitHub"
+  last_updated: "Dernière mise à jour"
 ja:
   next: 次へ
   previous: 前へ
@@ -32,6 +34,7 @@ ja:
   helpful: 「このページはどの程度役に立ちましたか?」
   translation_banner: "このページはAIにより自動翻訳されており、不正確な内容が含まれている可能性があります。翻訳の誤りを報告するには、"
   translation_banner_link: "GitHubでイシューを作成してください"
+  last_updated: "最終更新日"
 ko:
   next: 다음
   previous: 이전
@@ -44,6 +47,7 @@ ko:
   helpful: "이 페이지가 얼마나 도움이 되었나요?"
   translation_banner: "이 페이지는 AI로 자동 번역되었으며 부정확한 내용이 포함될 수 있습니다. 번역 오류를 신고하려면"
   translation_banner_link: "GitHub에서 이슈를 생성해 주세요"
+  last_updated: "최근 업데이트"
 pt-br:
   next: PRÓXIMO
   previous: ANTERIOR
@@ -56,6 +60,7 @@ pt-br:
   helpful: "QUÃO ÚTIL FOI ESTA PÁGINA?"
   translation_banner: "Esta página foi traduzida automaticamente e pode conter imprecisões. Para relatar um erro de tradução,"
   translation_banner_link: "abra um issue no GitHub"
+  last_updated: "Última atualização"
 es:
   next: SIGUIENTE
   previous: ANTERIOR
@@ -68,6 +73,7 @@ es:
   helpful: "¿QUÉ TAN ÚTIL FUE ESTA PÁGINA?"
   translation_banner: "Esta página fue traducida automáticamente y puede contener errores. Para reportar un error de traducción,"
   translation_banner_link: "abre un issue en GitHub"
+  last_updated: "Última actualización"
 de:
   next: NÄCHSTES
   previous: VORHERIGES
@@ -80,3 +86,4 @@ de:
   useful: "WIE HILFREICH WAR DIESE SEITE?"
   translation_banner: "Diese Seite wurde automatisch übersetzt und kann Ungenauigkeiten enthalten. Um einen Übersetzungsfehler zu melden,"
   translation_banner_link: "erstellen Sie ein Issue auf GitHub"
+  last_updated: "Zuletzt aktualisiert"

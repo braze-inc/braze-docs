@@ -266,6 +266,7 @@ $(document).ready(function() {
     {%- endunless -%}
     {% include ai_translation_banner.html %}
     <h1> {{ page.glossary_top_header }} </h1>
+    {% include last_updated.html %}
     <p class="glossary_text">  {{ page.glossary_top_text }} </p>
 
     <div id="glossary_filter">
