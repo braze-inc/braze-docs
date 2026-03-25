@@ -37,7 +37,7 @@ When the user starts a new session or refreshes Banners after performing the act
 
 ## Can users dismiss a Banner?
 
-Yes. On the Web SDK (version 6.6.0 and later), you can programmatically dismiss a Banner on behalf of the user by calling `logBannerDismissal`. Once dismissed, the Banner is suppressed for that user until a new campaign or creative is assigned to that placement.
+Banners are not manually dismissable by end user across all platforms. On the Web SDK (version 6.7.0 and later), you can programmatically dismiss a Banner on behalf of the user by calling `logBannerDismissal`. Once dismissed, the Banner is suppressed for that user until a new campaign or creative is assigned to that placement.
 
 For Banners that use the **Custom Code** editor block, you can trigger the same dismissal behavior directly from within the Banner's HTML using `brazeBridge.closeMessage()`.
 

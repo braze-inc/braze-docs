@@ -651,7 +651,7 @@ braze.logBannerClicked("placement_id_homepage_top", buttonId);  // buttonID para
 
 ## Log dismissals
 
-Banner dismissals allow you to programmatically remove a Banner from a placement when a user actively dismisses it. Once dismissed, the Banner is suppressed for that user until a new campaign or creative (identified by a new stable key) is assigned to that placement.
+Banner dismissals allow you to programmatically remove a Banner from a placement when a user actively dismisses it. Once dismissed, the Banner is suppressed for that user until a new campaign or banner creative is assigned to that placement.
 
 ### Prerequisites
 
@@ -701,7 +701,7 @@ braze.subscribeToBannersUpdates((banners) => {
   const globalBanner = braze.getBanner("global_banner");
   const container = document.getElementById("global-banner-container");
 
-  if (!globalBanner) {
+  if (!globalBanner && !!container) {
     // Banner was dismissed or the user is no longer eligible—hide the container.
     container.style.display = "none";
     return;
@@ -715,7 +715,11 @@ braze.subscribeToBannersUpdates((banners) => {
 
 ### Custom Code Blocks (Web)
 
-If your Banner uses the **Custom Code** editor block, you can trigger a dismissal directly from within the Banner's HTML using `brazeBridge.closeMessage()`. This calls the same underlying dismissal logic as `logBannerDismissal` and will also re-trigger any active `subscribeToBannersUpdates` subscribers.
+If your Banner uses the **Custom Code** editor block, you can trigger a dismissal directly from within the Banner's HTML using `brazeBridge.closeMessage()`. In a Banner context, this is equivalent to calling `logBannerDismissal`: it logs a Banner dismissal, removes the Banner from the UI, and suppresses the Banner for the user until a new campaign or banner creative is assigned. It also re-triggers any active `subscribeToBannersUpdates` subscribers.
+
+{% alert note %}
+`brazeBridge.closeMessage()` behaves differently depending on the channel. For in-app messages, it only closes the UI without logging a dismissal or causing any server-side suppression.
+{% endalert %}
 
 ```html
 <button onclick="brazeBridge.closeMessage()">
@@ -728,7 +732,7 @@ If your Banner uses the **Custom Code** editor block, you can trigger a dismissa
 Dismissals are stored locally as pending entries until they can be synced to the Braze server on the next `requestBannersRefresh` call.
 
 {% alert warning %}
-There is a cap on the number of pending dismissals that can be stored on the device. If this cap is exceeded the oldest pending dismissals are evicted. Evicted dismissals may cause previously-dismissed Banners to reappear until the next successful server sync completes. To minimize impact, call `requestBannersRefresh` whenever your app regains network connectivity.
+There is a cap on the number of pending dismissals that can be stored on the device. If this cap is exceeded, the oldest pending dismissals are evicted. Evicted dismissals may cause previously-dismissed Banners to reappear until the next successful server sync completes. To minimize impact, call `requestBannersRefresh` whenever your app regains network connectivity.
 {% endalert %}
 
 ## Dimensions and sizing
