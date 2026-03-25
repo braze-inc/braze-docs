@@ -113,11 +113,13 @@ After the Content Block runs, it can expose variables you can reference elsewher
 
 Common variables include:
 
+{% raw %}
 | Variable                          | Description                                           |
 | --------------------------------- | ----------------------------------------------------- |
 | `{{ video_url }}`                 | URL of the personalised video                         |
 | `{{ poster_url }}`                | URL of the poster image for the video                 |
 | `{{ output_data.VARIABLE_NAME }}` | Additional output fields exposed by the Content Block |
+{% endraw %}
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Rate limit
