@@ -62,6 +62,11 @@ We shorten URLs that are rendered by Liquid, even those included in API-trigger 
 
 Link shortening is also turned on for API-only messages through the [`/messages/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/). For a full list of request parameters, go to [request parameters]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/#request-parameters).
 
+| Parameter | Required | Data type | Description |
+| --------- | ---------| --------- | ----------- |
+|`link_shortening_enabled`| Yes | Boolean | Set `link_shortening_enabled` to `true` to turn on link shortening. To use tracking, a `campaign_id` and `message_variation_id` must be present.|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
 ## Testing
 
 Before launching your campaign or Canvas, it's best practice to preview and test your message first. To do so, go to the **Test** tab to preview and send an SMS or RCS message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups) or an individual user. 
