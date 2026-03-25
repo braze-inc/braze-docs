@@ -1,7 +1,7 @@
 ---
 nav_title: VideoSmart
 article_title: VideoSmart
-description: 'This reference article outlines the partnership between Braze and VideoSmart. A personalised, interactive video technology that enables brands to deliver data-driven, non-linear content at scale.'
+description: 'This reference article outlines the partnership between Braze and VideoSmart. A personalized, interactive video technology that enables brands to deliver data-driven, non-linear content at scale.'
 alias: /partners/videosmart/
 page_type: partner
 search_tag: Partner
@@ -9,21 +9,21 @@ search_tag: Partner
 
 # VideoSmart
 
-> [VideoSmart](https://www.videosmart.com/) provides personalised, interactive video technology that enables brands to deliver data-driven, non-linear content at scale. Each video is dynamically generated using customer-level data, allowing for tailored messaging and user journeys within a single video experience.
+> [VideoSmart](https://www.videosmart.com/) provides personalized, interactive video technology that enables brands to deliver data-driven, non-linear content at scale. Each video is dynamically generated using customer-level data, allowing for tailored messaging and user journeys within a single video experience.
 >
-> The VideoSmart integration with Braze allows marketers to embed personalised video content directly into email campaigns. This is achieved using Braze’s Connected Content and Liquid templating to request video assets from VideoSmart at send time.
+> The VideoSmart integration with Braze allows marketers to embed personalized video content directly into email campaigns. This is achieved using Braze’s Connected Content and Liquid templating to request video assets from VideoSmart at send time.
 >
-> The integration is typically implemented via a reusable Content Block template within Braze, enabling consistent deployment across campaigns while allowing flexibility in campaign selection and personalisation logic.
+> The integration is typically implemented via a reusable Content Block template within Braze, enabling consistent deployment across campaigns while allowing flexibility in campaign selection and personalization logic.
 
 _This integration is developed and maintained by VideoSmart._
 
 ## About this integration
 
-VideoSmart integrates with Braze to dynamically generate personalised video assets at send time, which are then embedded directly into your Braze campaign and Canvas email content.
+VideoSmart integrates with Braze to dynamically generate personalized video assets at send time, which are then embedded directly into your Braze campaign and Canvas email content.
 
-Within Braze, marketers select the relevant VideoSmart campaign and pass customer attributes (via Liquid templating) to VideoSmart at the point of send. These attributes are used to render a unique, personalised video experience for each recipient.
+Within Braze, marketers select the relevant VideoSmart campaign and pass customer attributes (via Liquid templating) to VideoSmart at the point of send. These attributes are used to render a unique, personalized video experience for each recipient.
 
-The integration leverages Braze’s Connected Content functionality to request video URLs or assets from VideoSmart’s API in real time, enabling scalable personalisation.
+The integration leverages Braze’s Connected Content functionality to request video URLs or assets from VideoSmart’s API in real time, enabling scalable personalization.
 
 This integration is designed for Braze email messages that support Liquid templating and Connected Content, and can be configured to work with standard Braze user profile attributes or custom data fields.
 
@@ -38,8 +38,8 @@ Common use cases include the following:
 - Annual statements and regulatory communications
 - Product awareness and cross-sell campaigns
 - Customer retention and re-engagement campaigns
-- Abandoned cart: When a customer adds products to their cart but doesn’t purchase, send an email with a personalised video that highlights the items they left behind.
-- Post-purchase follow-up: After a purchase, send a personalised thank you video and recommend related products.
+- Abandoned cart: When a customer adds products to their cart but doesn’t purchase, send an email with a personalized video that highlights the items they left behind.
+- Post-purchase follow-up: After a purchase, send a personalized thank you video and recommend related products.
 
 ## Prerequisites
 
@@ -79,7 +79,7 @@ In most Braze setups, Content Blocks are referenced using the following pattern 
 
 The Content Block name is case-sensitive and must match exactly what you have configured in Braze.
 
-### Step 4 (Optional): Override campaign and record data
+### Step 4 (optional): Override campaign and record data
 
 If your Content Block supports defaults, you can use it without setting any variables.
 
@@ -90,6 +90,7 @@ If you need to choose a specific VideoSmart campaign and/or pass custom personal
 
 Example (using Braze user attributes for first name and last name):
 
+{% raw %}
 ```
 {% assign vs_campaign_id = "CAMPAIGN_ID" %}
 
@@ -101,6 +102,7 @@ Example (using Braze user attributes for first name and last name):
 {% endcapture %}
 {% assign vs_record_data = vs_record_data | strip_newlines %}
 ```
+{% endraw %}
 
 Notes:
 
@@ -116,7 +118,7 @@ Common variables include:
 {% raw %}
 | Variable                          | Description                                           |
 | --------------------------------- | ----------------------------------------------------- |
-| `{{ video_url }}`                 | URL of the personalised video                         |
+| `{{ video_url }}`                 | URL of the personalized video                         |
 | `{{ poster_url }}`                | URL of the poster image for the video                 |
 | `{{ output_data.VARIABLE_NAME }}` | Additional output fields exposed by the Content Block |
 {% endraw %}
