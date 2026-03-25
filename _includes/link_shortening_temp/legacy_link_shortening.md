@@ -1,4 +1,4 @@
-Link shortening and click tracking allow you to automatically shorten URLs contained in SMS or RCS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your campaigns.
+Link shortening and click tracking allow you to automatically shorten URLs contained in SMS or RCS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how users are engaging with your campaigns.
 
 Link shortening and click tracking can be turned on at the [message variant-level]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) in both campaigns and Canvases. 
 
