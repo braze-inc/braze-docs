@@ -1,7 +1,3 @@
-{% alert important %}
-Braze is gradually rolling out [unified link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/?sdktab=unified), which consolidates all SMS and RCS shortened links into a single personalized link format (for example, `brz.ai/abcdefgh`). 
-{% endalert %}
-
 Link shortening and click tracking allow you to automatically shorten URLs contained in SMS or RCS messages and collect click-through-rate analytics, providing additional engagement metrics to help understand how your users are engaging with your campaigns.
 
 Link shortening and click tracking can be turned on at the [message variant-level]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign) in both campaigns and Canvases. 

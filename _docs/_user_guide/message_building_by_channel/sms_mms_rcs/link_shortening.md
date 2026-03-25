@@ -17,6 +17,10 @@ channel:
 
 > This page covers how to turn on link shortening in your SMS and RCS messages, test shortened links, use your custom domain in shortened links, and more.
 
+{% alert important %}
+Braze is gradually rolling out [unified link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/?sdktab=unified), which consolidates all SMS and RCS shortened links into a single personalized link format (for example, `brz.ai/abcdefgh`). 
+{% endalert %}
+
 {% sdktabs %}
 {% sdktab Legacy %}
 
