@@ -19,20 +19,15 @@ The Wunderkind Signals integration allows high-intent behavioral signals — suc
 | Wunderkind account | A Wunderkind account with Signals enabled is required. Contact your Wunderkind representative to confirm eligibility. |
 | Braze account | A Braze account with Canvas access is required. The Wunderkind team must be granted a seat in your account. See full details [here](https://support.wunderkind.co/hc/en-us/articles/47921719757339-Grant-Wunderkind-Access-to-Your-Braze-Account). |
 | Braze REST API key | You will create a dedicated API key with specific permissions during setup (see Step 1 below). |
-| Email-keyed user profiles | Wunderkind keys profiles by email address using a `user_alias` with `alias_label: "wknd_email_id"`. Your Braze workspace must support profile creation and upsert by email. |
+| Email-keyed user profiles | Wunderkind keys profiles by email address using a `user_alias` with `alias_label: "wknd_email_id"`. Your Braze workspace must support profile creation via update and insert by email. |
 
 ---
 
 ## How it works
 
-When Wunderkind identifies a high-intent anonymous user and resolves their identity, it initiates the following API sequence before triggering your Canvas:
+When Wunderkind identifies a high-intent anonymous user and resolves their identity, it sends a signal payload to Braze via `/canvas/trigger/send`, triggering the relevant Canvas journey for that user in real time.
 
-1. **Profile check** — Wunderkind calls `users/export/ids` to check whether each recipient already has a Braze `user_alias` keyed by `wknd_email_id`.
-2. **Alias creation (if needed)** — If no alias exists, Wunderkind calls `/users/alias/new` to create one, followed by a `/users/track` call to associate the alias with the user's email address.
-3. **Processing buffer** — A brief pause is introduced to allow Braze to fully process the user updates before the Canvas send is triggered.
-4. **Canvas send** — Wunderkind calls `/canvas/trigger/send` with the full signal payload, triggering the relevant Canvas journey for that user.
-
-This sequence ensures that every recipient is correctly profiled in Braze before a message is sent, preventing delivery failures due to missing user aliases.
+For a full technical overview, see the [Wunderkind Developer Portal](https://developer.wunderkind.co/docs/integration-overview).
 
 ---
 
@@ -406,7 +401,4 @@ The following metrics will be available soon in the Wunderkind reporting dashboa
 | Wunderkind Help Center — Signals for Braze Overview | [support.wunderkind.co](https://support.wunderkind.co/hc/en-us/articles/47156898436891-Signals-for-Braze-Overview) |
 | Wunderkind Developer Portal — Integration Overview | [developer.wunderkind.co](https://developer.wunderkind.co/docs/integration-overview) |
 | Braze API: Canvas trigger send | [braze.com/docs](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases) |
-| Braze API: User alias | [braze.com/docs](https://www.braze.com/docs/api/endpoints/user_data/post_user_alias) |
-| Braze API: User track | [braze.com/docs](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) |
-| Braze API: Export user by identifier | [braze.com/docs](https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier) |
 | Braze Currents documentation | [braze.com/docs](https://www.braze.com/docs/user_guide/data/distribution/braze_currents) |
