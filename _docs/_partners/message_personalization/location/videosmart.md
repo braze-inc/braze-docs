@@ -115,6 +115,15 @@ Common variables include:
 | `{{ poster_url }}`                | URL of the poster image for the video                 |
 | `{{ output_data.VARIABLE_NAME }}` | Additional output fields exposed by the Content Block |
 
+### Rate limit
+
+VideoSmart's API has a rate limit of 10000 requests per minute. If you exceed this limit, you may receive errors or experience delays in video generation.
+
+To reduce this risk, configure Braze campaign rate limiting so the message send rate stays below VideoSmart API capacity.
+
+Braze guidance for delivery speed and rate limiting:
+[Delivery speed and rate limiting](https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting)
+
 ## Considerations
 
 - Connected Content is executed when the message is rendered, so values can differ between preview and send if your defaults or attributes differ.
