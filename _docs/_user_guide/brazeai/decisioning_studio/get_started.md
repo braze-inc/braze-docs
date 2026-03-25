@@ -54,7 +54,7 @@ Work with the AI Decisioning Services team to make the following decisions:
 
 Each of these decisions has implications for how much incremental uplift the agent may be able to generate, and how quickly. Our AI Decisioning Services team will work with you to design an agent that generates maximum value while respecting all of your business rules.
 
-![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_pro_agent_design.png %})
+![Diagram showing how success metrics, audience, experiment groups, dimensions, options, and constraints feed into a Decisioning Studio agent design]({% image_buster /assets/img/decisioning_studio/decisioning_studio_pro_agent_design.png %})
 
 ## Decisioning Studio capabilities
 
