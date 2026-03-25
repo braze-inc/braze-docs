@@ -11,8 +11,6 @@ tool: Currents
 
 ### Changes for Storage:
 
-* Added new event type `users.profile.Update`.
-
 * Field changes to event type `users.messages.banner.Abort`:
     * Added new `string` field `canvas_name`: Name of the Canvas
     * Added new `string` field `canvas_step_name`: Name of the Canvas step
@@ -41,8 +39,6 @@ tool: Currents
     * Added new `string` field `canvas_variation_name`: Name of the Canvas variation this user received
 
 ### Changes for Data Sharing:
-
-* Added new event type `users.profile.Update`.
 
 * Field changes to event type `users.messages.banner.Abort`:
     * Added new `string` field `canvas_id`: BSON ID of the Canvas this event belongs to
