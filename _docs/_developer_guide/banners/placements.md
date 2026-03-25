@@ -715,7 +715,7 @@ braze.subscribeToBannersUpdates((banners) => {
 
 ### Custom Code Blocks (Web)
 
-If your Banner uses the **Custom Code** editor block, you can trigger a dismissal directly from within the Banner's HTML using `brazeBridge.closeMessage()`. This calls the same underlying dismissal logic as `logBannerDismissal` and will also re-trigger any active `subscribeToBannersUpdates` subscribers.
+If your Banner uses the **Custom Code** editor block, you can trigger a dismissal directly from within the Banner's HTML using `brazeBridge.closeMessage()`. This removes the Banner from the UI and calls `logBannerDismissal`, which invokes any active `subscribeToBannersUpdates` subscribers.
 
 {% alert note %}
 `brazeBridge.closeMessage()` behaves differently depending on the channel. For in-app messages, it only closes the UI without logging a dismissal or causing any server-side suppression.
