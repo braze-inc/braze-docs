@@ -55,7 +55,7 @@ Conversion data describes what happened to the customer after a recommendation w
 |-------------|--------|
 | Each record contains the customer identifier, consistent with all other assets | Decisioning Studio must be able to join conversions to the recommendations that preceded them. |
 | Each record has a timestamp for when the conversion event occurred | Accurate timing is essential for attribution. The model needs to know which recommendation a conversion can be attributed to. |
-| If using a non-binary success metric (for example, revenue rather than converted/not converted), the metric value must be included with each conversion record | Decisioning Studio uses the metric value to generate training experiences. Without the value, the model can only learn that a conversion happened, not how valuable it was. |
+| If using a non-binary success metric (for example, revenue rather than converted or not converted), the metric value must be included with each conversion record | Decisioning Studio uses the metric value to generate training experiences. Without the value, the model can only learn that a conversion happened, not how valuable it was. |
 | If conversions can be directly attributed to a specific communication (for example, coupon redemption), include the fields needed to match the conversion to the activation record | Direct attribution gives the model the clearest learning signal. If direct attribution is not possible, Decisioning Studio uses proximity-based attribution as a fallback. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
