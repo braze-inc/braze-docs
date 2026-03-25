@@ -17,7 +17,7 @@ Backfilling is the process of retroactively populating a dataset with historical
 | Scenario | Description | Example |
 |----------|-------------|---------|
 | **New features** | You've identified a new metric that is important for your model, and you have the raw historical logs to compute it. | You add "click-through rate" as a feature and need three months of history so the model has enough data to learn from. |
-| **Data recovery** | Your data pipeline failed on specific days, creating gaps in the data delivered to Decisioning Studio. | A pipeline outage on Tuesday left a gap. Once the fix is deployed, you backfill those missing records from the source system. |
+| **Data recovery** | Your data pipeline failed on specific days, creating gaps in the data delivered to Decisioning Studio. | A pipeline outage on Tuesday left a gap. After the fix is deployed, you backfill those missing records from the source system. |
 | **Logic changes** | You've updated the formula for a feature calculation or changed an event definition. | You redefined "active user" and need to re-export historical data so the model trains on the updated definition. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 

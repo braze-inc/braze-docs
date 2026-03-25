@@ -8,7 +8,7 @@ description: "This reference article covers how to construct effective customer 
 
 # Choose good features
 
-> Customer features are the inputs the Decisioning Studio model uses to make individualized recommendations. High-quality features that are well-matched to your decision space are one of the most impactful levers for improving model performance. This article covers the types of features you can provide, how to construct them well, and how to think about aligning features with the actions your agent will be choosing between.
+> The Decisioning Studio model uses customer features as inputs to make individualized recommendations. High-quality features that are well-matched to your decision space are one of the most impactful levers for improving model performance. This article covers the types of features you can provide, how to construct them well, and how to think about aligning features with the actions your agent will be choosing between.
 
 If you have internal data science or data engineering teams, they are best positioned to construct and curate features, since they have the most context about which signals in your data are meaningful.
 

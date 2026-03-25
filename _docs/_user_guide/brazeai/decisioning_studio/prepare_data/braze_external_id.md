@@ -39,7 +39,7 @@ Identity drift causes:
 
 #### Activation-ready by design
 
-Recommendations generated against a Braze external ID can be injected directly into messages via Liquid or Connected Content without any ID translation step. Eliminating the translation layer removes a significant source of operational complexity and failure.
+Recommendations generated against a Braze external ID can be injected directly into messages through Liquid or Connected Content without any ID translation step. Eliminating the translation layer removes a significant source of operational complexity and failure.
 
 #### Isolated from upstream changes
 
