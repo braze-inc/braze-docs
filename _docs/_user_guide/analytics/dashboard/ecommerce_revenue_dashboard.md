@@ -47,6 +47,10 @@ The **eCommerce Revenue - Last Touch Attribution** dashboard pulls in data from 
 - `ecommerce.order_refunded`
 - `ecommerce.order_cancelled`
 
+{% alert note %}
+For data to populate in the eCommerce revenue dashboard, the `total_value`, `product.price`, and `product.quantity` for the `ecommerce.order_placed` event must be "0" or higher.
+{% endalert %}
+
 Revenue and order counts use Braze standardized calculations.
 
 | Metric | Calculation |
