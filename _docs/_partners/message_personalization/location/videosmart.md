@@ -118,6 +118,7 @@ Common variables include:
 | `{{ video_url }}`                 | URL of the personalised video                         |
 | `{{ poster_url }}`                | URL of the poster image for the video                 |
 | `{{ output_data.VARIABLE_NAME }}` | Additional output fields exposed by the Content Block |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Rate limit
 
