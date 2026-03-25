@@ -10,9 +10,9 @@ description: "This reference article covers the required and optional data asset
 
 > Decisioning Studio requires certain data assets to function, and benefits from additional optional data. This article describes what each asset is, why it matters, and what fields are required.
 
-## Closing the AI decisioning loop
+## Close the AI decisioning loop
 
-The three required event assets—activations, engagements, and conversions—together form the feedback loop that allows Decisioning Studio to learn and improve over time.
+The three required event assets (activations, engagements, and conversions) together form the feedback loop that allows Decisioning Studio to learn and improve over time.
 
 - **Activations** tell the model what it decided to do
 - **Engagements** tell the model how customers responded to the message
@@ -41,7 +41,7 @@ Common profile attributes include:
 
 ### Activation and engagement data
 
-Activation data records what Decisioning Studio actually sent—which recommendation was delivered to which customer through which channel. Engagement data records what the customer did in response: whether they opened, clicked, or otherwise interacted with the message.
+Activation data records what Decisioning Studio actually sent: which recommendation was delivered to which customer through which channel. Engagement data records what the customer did in response: whether they opened, clicked, or otherwise interacted with the message.
 
 For native Braze integrations, activation and engagement data may be available automatically through Braze Currents. For other configurations, this data must be provided explicitly.
 
@@ -54,7 +54,7 @@ Conversion data describes what happened to the customer after a recommendation w
 | Requirement | Reason |
 |-------------|--------|
 | Each record contains the customer identifier, consistent with all other assets | Decisioning Studio must be able to join conversions to the recommendations that preceded them. |
-| Each record has a timestamp for when the conversion event occurred | Accurate timing is essential for attribution—the model needs to know which recommendation a conversion can be attributed to. |
+| Each record has a timestamp for when the conversion event occurred | Accurate timing is essential for attribution. The model needs to know which recommendation a conversion can be attributed to. |
 | If using a non-binary success metric (for example, revenue rather than converted/not converted), the metric value must be included with each conversion record | Decisioning Studio uses the metric value to generate training experiences. Without the value, the model can only learn that a conversion happened, not how valuable it was. |
 | If conversions can be directly attributed to a specific communication (for example, coupon redemption), include the fields needed to match the conversion to the activation record | Direct attribution gives the model the clearest learning signal. If direct attribution is not possible, Decisioning Studio uses proximity-based attribution as a fallback. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}

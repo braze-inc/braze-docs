@@ -25,7 +25,7 @@ Select your CEP below to get started with the integration setup.
 {% tabs %}
 {% tab Braze %}
 
-## Setting up Braze integration
+## Set up Braze integration
 
 To integrate Decisioning Studio Go with Braze, you'll create an API key, configure an API-triggered campaign, and provide the necessary identifiers to the Decisioning Studio Go portal.
 
@@ -114,7 +114,7 @@ To test your integration, you'll need a user ID:
 {% endtab %}
 {% tab Salesforce Marketing Cloud %}
 
-## Setting up SFMC integration
+## Set up SFMC integration
 
 To integrate Decisioning Studio Go with Salesforce Marketing Cloud, you'll set up an app package, create a data query automation, and build a Journey to handle triggered sends.
 

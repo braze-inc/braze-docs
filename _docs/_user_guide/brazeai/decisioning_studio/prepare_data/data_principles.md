@@ -12,18 +12,18 @@ description: "This reference article covers the general data principles that app
 
 ## One consistent customer identifier across all assets
 
-Every data asset—customer profiles, activations, engagements, conversions—must reference the same customer identifier. There should be exactly one primary identifier that uniquely and consistently identifies each customer across all assets.
+Every data asset (customer profiles, activations, engagements, conversions) must reference the same customer identifier. There should be exactly one primary identifier that uniquely and consistently identifies each customer across all assets.
 
 | Requirement | Implication if violated |
 |-------------|------------------------|
 | A single, unique customer identifier must be present in every asset | If different assets use different ID systems (for example, a warehouse ID for features but a platform ID for activations), the Decisioning Studio engine cannot reliably join them. This breaks the feedback loop and degrades both model training and reporting accuracy. If the mapping between the two ID systems turns out to be many-to-many rather than one-to-many, the resulting data integrity failures can be severe. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-See [Using Braze External ID]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/prepare_data/braze_external_id/) for guidance on which identifier to use.
+See [Use Braze external ID]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/prepare_data/braze_external_id/) for guidance on which identifier to use.
 
 ## Event data must be passed as an incremental stream, not as a snapshot
 
-Events—such as conversions, engagements, and activations—represent discrete things that happened at a specific point in time. They must be delivered to Decisioning Studio as an incremental (append-only) stream of individual records, not as an aggregated snapshot.
+Events, such as conversions, engagements, and activations, represent discrete things that happened at a specific point in time. They must be delivered to Decisioning Studio as an incremental (append-only) stream of individual records, not as an aggregated snapshot.
 
 | Requirement | Implication if violated |
 |-------------|------------------------|
@@ -54,7 +54,7 @@ For event stream data specifically, each record must include at minimum:
 
 **Required fields:**
 - Customer identifier
-- Timestamp of when the event occurred (not when the record was created in your system—these are different; see [Snapshots versus event streams]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/prepare_data/data_streams/) for why this matters)
+- Timestamp of when the event occurred (not when the record was created in your system; these are different; see [Snapshots versus event streams]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/prepare_data/data_streams/) for why this matters)
 - Timestamp of when the record was created in your system (used for reliably slicing incremental exports)
 - Event type
 - Fields sufficient to filter down to the specific events you care about

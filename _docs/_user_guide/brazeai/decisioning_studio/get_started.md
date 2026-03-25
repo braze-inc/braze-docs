@@ -71,6 +71,6 @@ Each of these decisions has implications for how much incremental uplift the age
 
 A few best practices for designing Decisioning Studio agents:
 
-- **Maximize data richness**: The more information agents have about your customers, the better they will perform.
-- **Diversify actions**: The more diverse the set of actions the agent can take, the more it can personalize its strategy for each user.
-- **Minimize constraints**: The fewer constraints on your agents, the better. Constraints should be designed to respect business rules while freeing agent-led experimentation as much as possible.
+- **Maximize data richness:** The more information agents have about your customers, the better they will perform.
+- **Diversify actions:** The more diverse the set of actions the agent can take, the more it can personalize its strategy for each user.
+- **Minimize constraints:** The fewer constraints on your agents, the better. Constraints should be designed to respect business rules while freeing agent-led experimentation as much as possible.

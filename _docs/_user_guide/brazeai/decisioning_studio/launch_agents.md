@@ -8,9 +8,9 @@ description: "Learn how to launch your Decisioning Studio agent and close the AI
 
 # Launch your agent
 
-> Once you've connected data sources, set up orchestration, and designed your agent, you're ready to launch. This article covers activating your agent and closing the AI decisioning loop so the agent can continuously learn and improve.
+> After you've connected data sources, set up orchestration, and designed your agent, you're ready to launch. This article covers activating your agent and closing the AI decisioning loop so the agent can continuously learn and improve.
 
-## Launching your agent
+## Launch steps
 
 After completing all configuration steps with your AI Decisioning Services team:
 
@@ -24,7 +24,7 @@ Once launched, your agent will:
 - Orchestrate actions through your configured CEP
 - Collect feedback data to learn and improve over time
 
-## Closing the AI decisioning loop
+## Close the AI decisioning loop
 
 Once launched, your agent needs feedback data to learn and improve. This includes conversions data, engagement data, and activations data that tell the agent what happened after customer engagement decisions were sent.
 
@@ -34,13 +34,13 @@ For detailed requirements on preparing these critical feedback data assets, see 
 If the agent is natively integrated with the customer engagement platform (such as Braze or Salesforce Marketing Cloud), there may not be additional configuration steps necessary for feedback data, since these may be sent automatically with the customer data.
 {% endalert %}
 
-## Monitoring your agent
+## Monitor your agent
 
 After launching, work with your AI Decisioning Services team to monitor performance:
 
-- **Performance metrics**: Track your success metric across experiment groups
-- **Learning progress**: Observe how the agent's recommendations evolve over time
-- **Insights**: Understand which dimensions and options are driving results for different customer segments
+- **Performance metrics:** Track your success metric across experiment groups
+- **Learning progress:** Observe how the agent's recommendations evolve over time
+- **Insights:** Understand which dimensions and options are driving results for different customer segments
 
 ## Ongoing optimization
 

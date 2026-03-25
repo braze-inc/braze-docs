@@ -25,7 +25,7 @@ description: "Learn how to define and configure the audience for your BrazeAI De
 {% tabs %}
 {% tab Braze %}
 
-1. Create a segment for your audience that you would like to target.
+1. Create a segment for the audience you want to target.
 2. Provide the Segment ID to your AI Decisioning Services team.
 
 {% alert note %}
@@ -35,11 +35,11 @@ For Braze, we can ingest multiple segments and combine them to create the audien
 {% endtab %}
 {% tab Salesforce Marketing Cloud %}
 
-1. Configure an SFMC Data Extension(s) for your audience and provide the data extension ID
+1. Configure an SFMC Data Extension for your audience and provide the data extension ID
 2. Set up SFMC Installed Package for API integration with the appropriate permissions required by Decisioning Studio
-3. Ensure that this data extension is refreshed daily, as Decisioning Studio will pull from the latest incremental data available
+3. Confirm this data extension is refreshed daily, as Decisioning Studio pulls from the latest incremental data available
 
-Provide the extension ID and API key to the Braze services team. They will assist with next steps in ingesting customer data.
+Provide the extension ID and API key to our AI Decisioning Services team, who will assist with next steps in ingesting customer data.
 
 {% endtab %}
 {% tab Other Platforms %}
@@ -48,9 +48,10 @@ Provide the extension ID and API key to the Braze services team. They will assis
 
 If the audience is not currently stored in Braze or Salesforce Marketing Cloud, then the next best step is to configure an automated export directly to a Braze-controlled Google Cloud Services bucket.
 
-To determine whether this is feasible, refer to the documentation for your Martech platform. For example, mParticle offers a [native integration with Google Cloud Storage](https://www.mparticle.com/integration/google-cloud-storage/). If this is the case, we can provide a GCS bucket to export audience data to.
+To determine whether this is feasible, refer to the documentation for your platform. For example, mParticle offers a [native integration with Google Cloud Storage](https://www.mparticle.com/integration/google-cloud-storage/). If this is the case, we can provide a GCS bucket to export audience data to.
 
-There are similar pages for:
+### Additional resources
+
 - [Twilio Segment](https://www.twilio.com/docs/segment/connections/storage/catalog/google-cloud-storage)
 - [Treasure Data](https://docs.treasuredata.com/int/google-cloud-storage-export-integration)
 - [ActionIQ](https://info.actioniq.com/hubfs/ActionIQ%20Industry%20Brief%20Solutions/ActionIQ_Integrations_Brief.pdf)

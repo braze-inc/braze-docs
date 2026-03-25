@@ -23,7 +23,7 @@ The following terms are referenced throughout the Decisioning Studio guide.
 | **Decisioning agent** | A decisioning agent is a custom configuration for BrazeAI Decisioning Studio™ that's tailor-made to meet a specific business goal. This is defined by the success metric, dimensions, and options you choose. |
 | **Success metric** | The specific business metric you want to optimize for, such as revenue, conversions, or average revenue per user (ARPU). This is the metric which the decisioning agent will aim to maximize through its actions. |
 | **Dimensions** | Dimensions can be thought of as the *types of levers* which the decisioning agent can pull to maximize the success metric. Typical dimensions include offer, subject line, creative, channel, or send time. |
-| **Action bank** | The action bank defines the *specific options* which the decisioning agent has access to for each dimension "lever". For instance, for a channel dimension, you would define the specific channels the decisioning agent has access to. For an offer dimension, you would define the specific offers the decisioning agent can test. |
+| **Action bank** | The action bank defines the *specific options* which the decisioning agent has access to for each dimension "lever". For instance, for a channel dimension, you define the specific channels the decisioning agent has access to. For an offer dimension, you define the specific offers the decisioning agent can test. |
 | **Constraints** | In general, the decisioning agent could take any combination of actions that you put in the action bank. However, you can also define constraints to limit the decisioning agent's actions to respect critical business rules. For example, this could be preventing a specific offer from being selected for customers in an ineligible geography, or setting a maximum budget for the decisioning agent to spend. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -41,7 +41,7 @@ When setting up a decisioning agent, you'll need to think through four main desi
 
 > What outcome do you want the agent to maximize?
 
-Your success metric is the business outcome the agent will optimize for. This should align directly with your business objectives—not proxy metrics like clicks or opens, but real business results like revenue, conversions, ARPU, or customer lifetime value.
+Your success metric is the business outcome the agent will optimize for. This should align directly with your business objectives, not proxy metrics like clicks or opens, but real business results like revenue, conversions, ARPU, or customer lifetime value.
 
 ### The "who": Select your audience
 
@@ -53,7 +53,7 @@ Define the audience that your agent will serve. This could be all customers, a s
 
 > What options can the agent choose from to drive the outcome?
 
-The action bank defines all the levers the agent can pull—the dimensions (like channel, offer, timing, and frequency) and the specific options within each dimension. The agent experiments with different combinations of these options to find what works best for each customer.
+The action bank defines all the levers the agent can pull: the dimensions (like channel, offer, timing, and frequency) and the specific options within each dimension. The agent experiments with different combinations of these options to find what works best for each customer.
 
 ### The "how": Configure your constraints
 

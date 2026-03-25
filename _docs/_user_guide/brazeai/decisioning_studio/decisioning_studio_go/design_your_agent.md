@@ -9,7 +9,7 @@ description: "Learn how to design a BrazeAI Decisioning Studio Go agent, includi
 
 > This article covers how to design your Decisioning Studio Go agent, including defining your audience, selecting dimensions, and understanding Go-specific capabilities and limitations.
 
-For foundational concepts about decisioning agents—including success metrics, dimensions, action banks, and constraints—see [Design decisioning agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/design_agents/).
+For foundational concepts about decisioning agents, including success metrics, dimensions, action banks, and constraints, see [Design decisioning agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/design_agents/).
 
 ## Go versus Pro capabilities
 
@@ -25,7 +25,7 @@ Decisioning Studio Go is a self-service platform with streamlined capabilities c
 | **Experiment groups** | Go + Random Control + optional BAU | Fully customizable |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-## Designing your Go agent
+## Design your Go agent
 
 When designing a Decisioning Studio Go agent, you'll make decisions in the following areas:
 
@@ -69,9 +69,9 @@ The specific dimensions available depend on your CEP and how your campaigns are 
 
 The action bank defines the specific options the agent can choose from for each dimension. For example:
 
-- **Email templates**: Select which templates the agent can use (these must be configured in your CEP first)
-- **Subject lines**: Define the subject line variants the agent can test
-- **Send times**: Specify the time windows the agent can choose from
+- **Email templates:** Select which templates the agent can use (these must be configured in your CEP first)
+- **Subject lines:** Define the subject line variants the agent can test
+- **Send times:** Specify the time windows the agent can choose from
 
 ### Step 4: Set up experiment groups
 
@@ -92,19 +92,19 @@ For an accurate comparison, ensure no customer can belong to more than one exper
 
 When designing your Go agent, keep these limitations in mind:
 
-- **Clicks only**: Go optimizes for click-through rates. If you need to optimize for revenue, conversions, or other business metrics, consider Decisioning Studio Pro.
-- **Limited dimensions**: Go supports a predefined set of dimensions. For custom dimensions or complex personalization, consider Decisioning Studio Pro.
-- **Limited CEP support**: Go only integrates with Braze and Salesforce Marketing Cloud. For other platforms, consider Decisioning Studio Pro.
+- **Clicks only:** Go optimizes for click-through rates. If you need to optimize for revenue, conversions, or other business metrics, consider Decisioning Studio Pro.
+- **Limited dimensions:** Go supports a predefined set of dimensions. For custom dimensions or complex personalization, consider Decisioning Studio Pro.
+- **Limited CEP support:** Go only integrates with Braze and Salesforce Marketing Cloud. For other platforms, consider Decisioning Studio Pro.
 
 ## Best practices
 
-- **Start simple**: Begin with 2-3 templates or subject line variants. This gives the agent enough options to learn while keeping the experiment manageable.
-- **Give it time**: The agent needs sufficient data to learn. Allow at least 2-4 weeks before drawing conclusions about performance.
-- **Keep content varied**: Ensure your options are meaningfully different. Testing minor variations may not yield significant insights.
-- **Monitor regularly**: Check the Decisioning Studio Go portal to monitor experiment progress and engagement metrics.
+- **Begin with a narrow scope:** Use two to three templates or subject line variants. This gives the agent enough options to learn while keeping the experiment manageable.
+- **Give it time:** The agent needs sufficient data to learn. Allow at least 2-4 weeks before drawing conclusions about performance.
+- **Keep content varied:** Ensure your options are meaningfully different. Testing minor variations may not yield significant insights.
+- **Monitor regularly:** Check the Decisioning Studio Go portal to monitor experiment progress and engagement metrics.
 
 ## Next steps
 
-Once you've designed your agent and configured it in the Decisioning Studio Go portal, you're ready to launch:
+After you've designed your agent and configured it in the Decisioning Studio Go portal, you're ready to launch:
 
 - [Launch your agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/launch_your_agent/)

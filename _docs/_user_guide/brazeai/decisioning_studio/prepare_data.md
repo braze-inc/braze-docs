@@ -22,13 +22,13 @@ guide_featured_list:
   - name: Snapshots versus event streams
     link: /docs/user_guide/brazeai/decisioning_studio/prepare_data/data_streams/
     image: /assets/img/braze_icons/dataflow-04.svg
-  - name: Use Braze External ID
+  - name: Use Braze external ID
     link: /docs/user_guide/brazeai/decisioning_studio/prepare_data/braze_external_id/
     image: /assets/img/braze_icons/user-01.svg
   - name: Choose your features
     link: /docs/user_guide/brazeai/decisioning_studio/prepare_data/choose_features/
     image: /assets/img/braze_icons/settings-01.svg
-  - name: Backfilling best practices
+  - name: Backfill best practices
     link: /docs/user_guide/brazeai/decisioning_studio/prepare_data/backfill_best_practices/
     image: /assets/img/braze_icons/refresh-ccw-01.svg
 ---

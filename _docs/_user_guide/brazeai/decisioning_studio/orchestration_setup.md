@@ -123,7 +123,7 @@ Select your CEP below to get started with the integration setup.
 {% tabs %}
 {% tab Braze %}
 
-## Setting up Braze integration
+## Set up Braze integration
 
 Follow these steps to integrate a Decisioning Studio agent with Braze's orchestration capabilities (Braze's services team will be available to help):
 
@@ -190,7 +190,7 @@ Resulting in the following message:
 {% endtab %}
 {% tab Salesforce Marketing Cloud %}
 
-## Setting up SFMC integration
+## Set up SFMC integration
 
 Decisioning Studio supports native integration with Salesforce Marketing Cloud. Decisioning Studio triggers API events into a journey with data required to populate dynamic elements.
 
@@ -199,7 +199,7 @@ For detailed steps to configure the SFMC integration, follow the [SFMC instructi
 {% endtab %}
 {% tab Other CEPs %}
 
-## Setting up other CEP integrations
+## Set up other CEP integrations
 
 Decisioning Studio can integrate with any customer engagement platform. However, this may require some custom engineering work from your team, since Decisioning Studio cannot trigger communications directly.
 
@@ -220,11 +220,11 @@ Might be used to optimize an email campaign that looks like the following:
 
 Keep these best practices in mind as you prepare for orchestration:
 
-1. **Start simple.** Begin with one channel and one or two templates. You can expand later as you learn what works.
+1. **Begin with a narrow scope.** Use one channel and one or two templates at first. You can expand later as you learn what works.
 2. **Test thoroughly.** Before launching, test your integration with a small set of users to verify that dynamic content populates correctly.
 3. **Document your setup.** Keep track of campaign IDs, template IDs, API keys, and other identifiers. You'll need to reference these in the Decisioning Studio portal.
 4. **Coordinate with your team.** Orchestration setup may involve marketing, engineering, and data teams. Ensure everyone understands their role in the process.
-5. **Plan for feedback data.** Orchestration isn't just about sending messages—it's also about collecting the engagement and conversion data that helps your agent learn. See [Prepare your data]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/prepare_data/) for more details.
+5. **Plan for feedback data.** Orchestration includes sending messages and collecting the engagement and conversion data that helps your agent learn. See [Prepare your data]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/prepare_data/) for more details.
 
 ## Next steps
 

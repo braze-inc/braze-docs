@@ -1,11 +1,11 @@
 ---
-nav_title: Connecting your data
-article_title: Connecting your data
+nav_title: Connect your data
+article_title: Connect your data
 page_order: 6
 description: "Learn how to connect customer data sources to BrazeAI Decisioning Studio for personalized AI decisioning."
 ---
 
-# Connecting your data
+# Connect your data
 
 > BrazeAI Decisioning Studio™ agents need to fully understand customer context in order to make effective decisions. This article explains how to connect customer data sources to Decisioning Studio.
 
@@ -41,7 +41,7 @@ The following customer data assets help agents personalize more effectively:
 The more information agents have about your customers, the better they will perform. Consider including data on any insights that would be particularly important to your business (for example, do you want to see how AI treats your loyalty customers differently? Make sure loyalty status is in the customer data).
 {% endalert %}
 
-## Connecting data by platform
+## Connect data by platform
 
 {% tabs %}
 {% tab Braze %}
@@ -122,10 +122,10 @@ If this is feasible, we can provide a GCS bucket to export customer data to that
 
 ## Best practices
 
-- **Descriptive column names**: Customer data should have clear, descriptive column names. Ideally, a data dictionary should be provided.
-- **Incremental updates**: Incremental files are preferable versus snapshots of the whole customer history every day
-- **Consistent identifiers**: Each record must contain a unique customer identifier that is consistent across all data assets
-- **Include timestamps**: Records should have associated timestamps for accurate attribution and agent training
+- **Descriptive column names:** Customer data should have clear, descriptive column names. Ideally, a data dictionary should be provided.
+- **Incremental updates:** Incremental files are preferable versus snapshots of the whole customer history every day
+- **Consistent identifiers:** Each record must contain a unique customer identifier that is consistent across all data assets
+- **Include timestamps:** Records should have associated timestamps for accurate attribution and agent training
 
 ## Custom integrations
 
