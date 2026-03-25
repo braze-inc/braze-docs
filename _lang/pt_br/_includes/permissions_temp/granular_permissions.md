@@ -23,9 +23,9 @@ As funções permitem mais estrutura ao agrupar suas permissões personalizadas 
 {% tab example roles %}
 | Nome da Função | Espaço de trabalho | Permissões  
 ----------- | ----------- | ---------
-| Profissional de Marketing - Marcas de Moda | {::nomarkdown}[DEV] Marca de Moda, [QA] Marca de Moda, [PROD] Marca de Moda {:/} | "Ver Campanhas", "Editar Campanhas", "Arquivar Campanhas", "Ver Canvas", "Editar Canvas", "Arquivar Canvas", "Ver Blocos de Conteúdo", "Editar Blocos de Conteúdo", "Arquivar Blocos de Conteúdo", "Lançar Blocos de Conteúdo", "Ver Feature Flags", "Editar Feature Flags", "Arquivar Feature Flags", "Ver Segmentos", "Editar Segmentos", "Ver Modelos de Banner", "Editar Modelos de Banner", "Ver Modelos de E-mail", "Editar Modelos de E-mail", "Ver Ativos da Biblioteca de Mídia", "Editar Ativos da Biblioteca de Mídia", "Excluir Ativos da Biblioteca de Mídia", "Ver Locais", "Editar Locais", "Arquivar Locais", "Ver Códigos de Promoção", "Editar Códigos de Promoção", "Exportar Códigos de Promoção", "Ver Centrais de Preferências", "Editar Centrais de Preferências". |
-| Profissional de Marketing - Marcas de Cuidados com a Pele | {::nomarkdown}[DEV] Marca de Cuidados com a Pele, [QA] Marca de Cuidados com a Pele, [PROD] Marca de Cuidados com a Pele {:/} |"Ver Campanhas", "Editar Campanhas", "Arquivar Campanhas", "Ver Canvas", "Editar Canvas", "Arquivar Canvas", "Ver Blocos de Conteúdo", "Editar Blocos de Conteúdo", "Arquivar Blocos de Conteúdo", "Lançar Blocos de Conteúdo", "Ver Feature Flags", "Editar Feature Flags", "Arquivar Feature Flags", "Ver Segmentos", "Editar Segmentos", "Ver Modelos de Banner", "Editar Modelos de Banner", "Ver Modelos de E-mail", "Editar Modelos de E-mail", "Ver Ativos da Biblioteca de Mídia", "Editar Ativos da Biblioteca de Mídia", "Excluir Ativos da Biblioteca de Mídia", "Ver Locais", "Editar Locais", "Arquivar Locais", "Ver Códigos de Promoção", "Editar Códigos de Promoção", "Exportar Códigos de Promoção", "Ver Centrais de Preferências", "Editar Centrais de Preferências".|
-| Gerenciamento de Usuários - Todas as Marcas | {::nomarkdown}[DEV] Marca de Moda, [QA] Marca de Moda, [PROD] Marca de Moda, [DEV] Marca de Cuidados com a Pele, [QA] Marca de Cuidados com a Pele, [PROD] Marca de Cuidados com a Pele {:/} | "Editar Usuários do Dashboard", "Ver Equipes", "Editar Equipes", "Arquivar Equipes"|
+| Profissional de Marketing - Marcas de Moda | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand {:/} | "Ver Campanhas", "Editar Campanhas", "Arquivar Campanhas", "Ver Canvas", "Editar Canvas", "Arquivar Canvas", "Ver Blocos de Conteúdo", "Editar Blocos de Conteúdo", "Arquivar Blocos de Conteúdo", "Lançar Blocos de Conteúdo", "Ver Feature Flags", "Editar Feature Flags", "Arquivar Feature Flags", "Ver Segmentos", "Editar Segmentos", "Ver Modelos de Banner", "Editar Modelos de Banner", "Ver Modelos de E-mail", "Editar Modelos de E-mail", "Ver Ativos da Biblioteca de Mídia", "Editar Ativos da Biblioteca de Mídia", "Excluir Ativos da Biblioteca de Mídia", "Ver Locais", "Editar Locais", "Arquivar Locais", "Ver Códigos de Promoção", "Editar Códigos de Promoção", "Exportar Códigos de Promoção", "Ver Centrais de Preferências", "Editar Centrais de Preferências". |
+| Profissional de Marketing - Marcas de Cuidados com a Pele | {::nomarkdown}[DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} |"Ver Campanhas", "Editar Campanhas", "Arquivar Campanhas", "Ver Canvas", "Editar Canvas", "Arquivar Canvas", "Ver Blocos de Conteúdo", "Editar Blocos de Conteúdo", "Arquivar Blocos de Conteúdo", "Lançar Blocos de Conteúdo", "Ver Feature Flags", "Editar Feature Flags", "Arquivar Feature Flags", "Ver Segmentos", "Editar Segmentos", "Ver Modelos de Banner", "Editar Modelos de Banner", "Ver Modelos de E-mail", "Editar Modelos de E-mail", "Ver Ativos da Biblioteca de Mídia", "Editar Ativos da Biblioteca de Mídia", "Excluir Ativos da Biblioteca de Mídia", "Ver Locais", "Editar Locais", "Arquivar Locais", "Ver Códigos de Promoção", "Editar Códigos de Promoção", "Exportar Códigos de Promoção", "Ver Centrais de Preferências", "Editar Centrais de Preferências".|
+| Gerenciamento de Usuários - Todas as Marcas | {::nomarkdown}[DEV] Fashion Brand, [QA] Fashion Brand, [PROD] Fashion Brand, [DEV] Skincare Brand, [QA] Skincare Brand, [PROD] Skincare Brand {:/} | "Editar Usuários do Dashboard", "Ver Equipes", "Editar Equipes", "Arquivar Equipes"|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
@@ -55,7 +55,7 @@ Usuários limitados têm permissões específicas que permitem gerenciar certos 
 
 | Tipo de usuário limitado | Descrição |
 | --- | --- |
-| Administrador do Espaço de Trabalho | Os Administradores do Espaço de Trabalho têm permissões específicas para gerenciar Espaços de Trabalho, mas não têm a mesma autoridade que os Administradores da Empresa. Usuários Limitados podem herdar permissões semelhantes às dos Administradores do Espaço de Trabalho se tiverem as permissões necessárias marcadas. |
+| Administrador do Espaço de Trabalho | Os Administradores do Espaço de Trabalho têm permissões específicas para gerenciar espaços de trabalho, mas não têm a mesma autoridade que os Administradores da Empresa. Usuários limitados podem herdar permissões semelhantes às dos Administradores do Espaço de Trabalho se tiverem as permissões necessárias marcadas. |
 | Administrador (Administrador da Empresa) | Os Administradores da Empresa têm permissões mais amplas, incluindo a capacidade de excluir usuários do dashboard. No entanto, eles não podem excluir suas próprias contas e devem entrar em contato com outro Administrador da Empresa para essa ação. |
 | Acesso somente para visualização | Para acessar partes do dashboard, como a página de Campanhas, os usuários devem ter permissões de visualização atribuídas a eles.
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -158,10 +158,9 @@ Para baixar uma lista dos seus usuários e suas permissões, acesse **Configura�
 | Ver informações de faturamento                            | Ver detalhes de cobrança |
 | Ver atributos personalizados marcados como IPI            | Ver atributos personalizados marcados como IPI |
 | Ver IPI                                        | Ver IPI |
-| Ver perfis de usuário em conformidade com IPI                | Acessar pesquisa de usuários e visualizar perfis de usuários com IPI ocultada |
+| Ver perfis de usuário (IPI ocultada)               | Acessar pesquisa de usuários e visualizar perfis de usuários com IPI ocultada |
 | Ver dados de uso                                 | Ver dados de uso |
-| Mesclar usuários duplicados                           | Combinar usuários duplicados em um único usuário. As duplicatas são removidas após a mesclagem. |
-| Prévia de usuários duplicados                         | Prévia dos perfis de usuário que são duplicatas |
+| Mesclar usuários duplicados                           | Visualizar prévia e combinar usuários duplicados em um único usuário. As duplicatas são removidas após a mesclagem. |
 | Ver modelos de Canvas                           | Ver modelos de Canvas |
 | Arquivar modelos de Canvas                        | Mover modelos de Canvas para o arquivo |
 | Lançar blocos de conteúdo                           | Lançar blocos de conteúdo |
@@ -284,8 +283,6 @@ Para baixar uma lista dos seus usuários e suas permissões, acesse **Configura�
 | Exportar dados de usuários                                | Baixar usuários do dashboard |
 | Editar dados de usuários                                  | Criar e atualizar dados de usuários |
 | Ver mesclagem de usuários                                | Ver uma lista de registros de mesclagem de usuários |
-| Ver registros de exclusão de usuários	            	  | Ver registros de exclusão de usuários |
-| Excluir usuários do dashboard	                  | Excluir permanentemente usuários do dashboard individualmente ou em massa. |      
 | Ver agentes de IA personalizados                           | Permite que os usuários vejam agentes de IA personalizados. |
 | Editar agentes de IA personalizados                           | Permite que os usuários criem e atualizem agentes de IA personalizados. |
 | Arquivar agentes de IA personalizados                        | Permite que os usuários arquivem agentes de IA personalizados. |

@@ -1,26 +1,26 @@
 ---
 nav_title: Personaliza la URL
 article_title: Personaliza las URL de las páginas de destino
-description: "Aprende a personalizar las URL de tus páginas de destino con la marca de tu empresa, conectando tu dominio a tu espacio de trabajo Braze."
+description: "Aprende a personalizar las URL de tus páginas de destino con la marca de tu empresa, conectando tu dominio a tu espacio de trabajo de Braze."
 page_order: 1
 ---
 
 # Personaliza las URL de las páginas de destino
 
-> Aprende a personalizar las URL de tus páginas de destino con la marca de tu empresa, conectando tu dominio a tu espacio de trabajo Braze.
+> Aprende a personalizar las URL de tus páginas de destino con la marca de tu empresa, conectando tu dominio a tu espacio de trabajo de Braze.
 
 ## Cómo funciona
 
-Cuando [conectes tu dominio a Braze](#connecting-your-domain-to-braze), se utilizará como dominio predeterminado para todas las páginas de destino. Por ejemplo, si conectas el subdominio `forms.example.com`, las URL de tu página de destino serían ahora `forms.example.com/holiday-sale`.
+Cuando [conectes tu dominio a Braze](#connect-your-domain-to-braze), se utilizará como dominio predeterminado para todas las páginas de destino. Por ejemplo, si conectas el subdominio `forms.example.com`, las URL de tu página de destino serían ahora `forms.example.com/holiday-sale`.
 
-El número de dominios personalizados que puedes conectar a tu cuenta Braze depende [del nivel de]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers) tu [plan]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers). Para aumentar tu límite, ponte en contacto con tu director de cuentas Braze.
+El número de dominios personalizados que puedes conectar a tu cuenta de Braze depende del [nivel de tu plan]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers). Para aumentar tu límite, ponte en contacto con tu director de cuentas de Braze.
 
 ## Conectar tu dominio a Braze
 
-Para conectar un dominio a tu cuenta Braze, haz que un administrador siga los pasos que se indican a continuación.
+Para conectar un dominio a tu cuenta de Braze, haz que un administrador siga los pasos que se indican a continuación.
 
 1. Ve a **Configuración** > **Configuración de la página de destino**.
-2. Introduce el dominio al que quieres conectarte y selecciona **Enviar**. Por ejemplo, `forms.example.com`.
+2. Introduce el dominio que quieres conectar y selecciona **Enviar**. Por ejemplo, `forms.example.com`.
 3. Copia y pega los registros **TXT** y **CNAME** en la configuración de DNS de tu proveedor de dominios.
 4. Vuelve al panel de Braze para verificar la conexión.
 
@@ -35,7 +35,7 @@ Dependiendo de tu proveedor de dominios, la conexión puede tardar hasta 48 hora
 Si eres administrador de Braze, puedes eliminar un dominio previamente configurado siguiendo los pasos siguientes:
 
 1. Ve a **Configuración** > **Configuración de la página de destino**.
-2. Selecciona **Eliminar dominio personalizado**
+2. Selecciona **Eliminar dominio personalizado**.
 3. Confirma la eliminación del dominio.
 4. Elimina los registros de DNS listados de la configuración de tu dominio.
 
@@ -43,14 +43,21 @@ Si eres administrador de Braze, puedes eliminar un dominio previamente configura
 Cuando elimines un dominio personalizado, esa URL dejará de ser válida. Todas las páginas de destino que estaban utilizando este dominio volverán automáticamente al dominio predeterminado establecido por Braze.
 {% endalert %}
 
+## Migrar tu dominio
 
-## Recursos DNS
+Para migrar un dominio personalizado a otro espacio de trabajo:
+
+1. Elimina el dominio personalizado.
+2. Crea un nuevo dominio personalizado en el espacio de trabajo deseado.
+3. Reconfigura el dominio personalizado con los nuevos registros de DNS. Ten en cuenta que tu subdominio no estará disponible durante este proceso.
+
+## Recursos de DNS
 
 {% multi_lang_include dns_records.md %}
 
 ## Solución de problemas 
 
-### Ha fallado la conexión a mi dominio
+### Ha fallado la conexión de mi dominio
 
 Comprueba que tu dominio se ha introducido correctamente y que coincide con el que enviaste a Braze desde tu cuenta de proveedor de dominios. Si es correcto y coincide, comprueba los registros TXT y CNAME proporcionados por Braze. Deben coincidir con los registros que introdujiste en tu cuenta de proveedor de dominios.
 
@@ -58,7 +65,7 @@ Comprueba que tu dominio se ha introducido correctamente y que coincide con el q
 
 ### ¿Puedo conectar varios subdominios a mi espacio de trabajo o conectar un subdominio a varios espacios de trabajo?
 
-No, actualmente sólo puedes conectar un subdominio a un espacio de trabajo.
+No, actualmente solo puedes conectar un subdominio a un espacio de trabajo.
 
 ### ¿Puedo utilizar el mismo subdominio que utilizo actualmente para mi sitio web principal o mi dominio de envío?
 
@@ -66,7 +73,7 @@ No, no puedes utilizar subdominios que ya estén en uso. Aunque estos subdominio
 
 ### ¿Por qué mi dominio personalizado está atascado en "Conectando" a pesar de que los registros de DNS son válidos?
 
-Si tu dominio personalizado muestra todos los registros de DNS como "Conectado", pero el estado del dominio permanece en "Conectando" durante más de cuatro horas, es posible que tu organización esté utilizando registros CAA (Autorización de Autoridad de Certificación) o retenciones de zona de Cloudflare que impiden que Braze proteja tu página.
+Si tu dominio personalizado muestra todos los registros de DNS como "Conectado", pero el estado del dominio permanece en "Conectando" durante más de cuatro horas, es posible que tu organización esté utilizando registros CAA (autorización de autoridad de certificación) o retenciones de zona de Cloudflare que impiden que Braze proteja tu página.
 
 #### Registros CAA
 
@@ -78,13 +85,12 @@ Para solucionarlo, pide a tu equipo de TI que añada un registro CAA a tu subdom
 
 Para más información, consulta [la documentación sobre CAA de LetsEncrypt](https://letsencrypt.org/docs/caa/).
 
-#### La zona Cloudflare retiene
+#### Retenciones de zona de Cloudflare
 
 Si tu organización utiliza Cloudflare, una característica de seguridad de retención de zona puede estar impidiendo que Braze cree tu dominio personalizado.
 
-Para solucionarlo, pide a tu equipo de TI que libere temporalmente la zona retenida. Para más información, consulta [la documentación sobre la retención de zonas de Cloudflare](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/#release-zone-holds).
+Para solucionarlo, pide a tu equipo de TI que libere temporalmente la retención de zona. Para más información, consulta [la documentación sobre retención de zonas de Cloudflare](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/#release-zone-holds).
 
 #### Reiniciar el proceso de validación
 
 Después de resolver cualquiera de los dos problemas, elimina y vuelve a crear tu dominio personalizado en el panel de Braze para reiniciar el proceso de validación.
-

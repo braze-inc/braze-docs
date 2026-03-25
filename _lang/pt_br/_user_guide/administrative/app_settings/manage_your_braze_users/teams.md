@@ -24,7 +24,7 @@ As Equipes não estão disponíveis em todos os contratos da Braze. Para acessar
 
 Acesse **Configurações** > **Equipes internas** e selecione <i class="fas fa-plus"></i> **Adicionar equipe**.
 
-![Janela para adicionar uma nova Equipe.]({% image_buster /assets/img_archive/adding_a_team.png %})
+![Período para adicionar uma nova Equipe.]({% image_buster /assets/img_archive/adding_a_team.png %})
 
 Digite o **Nome da equipe**. Se desejado, use o campo **Definir Equipe (Opcional)** para selecionar um atributo personalizado, local ou idioma para definir melhor quais dados de usuários a Equipe tem acesso. Por exemplo, um possível caso de uso é realizar [testes com Equipes](#test-with-teams) criando uma Equipe de desenvolvimento que só tem acesso a usuários teste, identificados por um atributo personalizado. Outro caso de uso é restringir a comunicação com usuários com base no produto.
 
@@ -86,7 +86,7 @@ A seguir estão todas as permissões disponíveis que você pode atribuir no ní
 - Lançar Campanhas
 - Lançar Canvas
 - Exportar Dados de Usuários
-- Ver Perfis de Usuário em Conformidade com IPI
+- Ver Perfis de Usuário (IPI Ocultada)
 - Editar Usuários do Dashboard
 - Aprovar Campanhas
 - Aprovar Canvas

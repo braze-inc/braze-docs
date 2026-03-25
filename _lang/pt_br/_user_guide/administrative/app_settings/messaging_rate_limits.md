@@ -49,12 +49,12 @@ Considere o próximo exemplo com um limite de taxa de envio de mensagens do espa
 A seguir está o cronograma de despacho esperado e as mensagens enviadas por minuto:
 
 - A Campanha 1 seria programada das 9h às 9h10, com 100.000 mensagens enviadas por minuto.
-- A Campanha 2 seria programada para despacho 5 minutos após o horário de despacho original, das 9h10 às 9h20, com 100.000 mensagens enviadas por minuto.
+- A Campanha 2 seria programada para despacho 5 minutos após o horário de despacho original, das 9h10 às 9h20, com 100.000 mensagens enviadas por minuto. 
 
 ![Exemplo de como as mensagens são despachadas por minuto para as duas campanhas.]({% image_buster /assets/img/workspace_messaging_rate_limits1.png %})
 
 {% alert note %}
-Depois de definir o limite de taxa de envio de mensagens do espaço de trabalho, você pode aumentá-lo. No entanto, todas as mensagens já processadas antes do aumento usam o limite definido anteriormente.
+Depois de definir o limite de taxa de envio de mensagens do espaço de trabalho, você pode aumentá-lo. No entanto, todas as mensagens já processadas antes do aumento usam o limite definido anteriormente. 
 {% endalert %}
 
 ## Definindo o limite de taxa de envio de mensagens do espaço de trabalho
@@ -72,10 +72,11 @@ Quando uma campanha ou Canvas tem seu próprio limite de taxa definido e um limi
 
 A Braze tenta distribuir uniformemente os despachos de mensagens ao longo do minuto, mas não pode garantir isso. Por exemplo, se você tem uma campanha com um limite de taxa de 500.000 mensagens por minuto, tentaremos distribuir as 500.000 mensagens uniformemente ao longo do minuto (cerca de 8.400 mensagens por segundo), mas pode haver alguma variação na taxa por segundo.
 
-Observe que você ainda pode definir limites de taxa individuais nas suas campanhas e Canvas. Eles são aplicados independentemente dos limites de taxa de envio de mensagens do espaço de trabalho.
+Observe que você ainda pode definir limites de taxa individuais nas suas campanhas e canvas. Eles são aplicados independentemente dos limites de taxa de envio de mensagens do espaço de trabalho.
 
 ### Mensagens não incluídas nos limites de taxa de envio de mensagens do espaço de trabalho
 
 - Mensagens enviadas usando [campanhas de e-mail de transação]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign) não são incluídas nos limites de taxa de envio de mensagens do espaço de trabalho. Isso significa que elas têm limite de taxa próprio e não são contabilizadas nos limites de taxa de envio de mensagens do espaço de trabalho definidos.
 - Mensagens para [grupos de teste]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab#seed-groups) e [envios de teste]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages) não são incluídas nos limites de taxa de envio de mensagens do espaço de trabalho. Isso significa que elas não têm limite de taxa e não são contabilizadas nos limites de taxa de envio de mensagens do espaço de trabalho definidos.
 - Respostas automáticas de SMS não são incluídas nos limites de taxa de envio de mensagens do espaço de trabalho. Isso significa que elas não têm limite de taxa e não são contabilizadas nos limites de taxa de envio de mensagens do espaço de trabalho definidos.
+- Os limites de taxa de envio de mensagens do espaço de trabalho não são compatíveis com mensagens no app, Feature Flags e Banners.
