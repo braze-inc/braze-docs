@@ -694,7 +694,7 @@ const handleDismiss = () => {
 {% endtabs %}
 
 {% alert important %}
-**`subscribeToBannersUpdates` integration pattern:** When `logBannerDismissal` is called, the dismissed Banner is immediately removed from the local cache and all active `subscribeToBannersUpdates` subscribers are re-invoked with the updated Banner map—without the dismissed placement. Make sure your subscriber handles the case where a previously-rendered Banner is no longer present; for example, by hiding or collapsing its container element.
+**`subscribeToBannersUpdates` integration pattern:** When `logBannerDismissal` is called, the dismissed Banner is immediately removed from the local cache and all active `subscribeToBannersUpdates` subscribers are re-invoked with the updated Banner info. Make sure your subscriber handles the case where a previously-rendered Banner is no longer present; for example, by hiding or collapsing its container element.
 
 ```javascript
 braze.subscribeToBannersUpdates((banners) => {
@@ -715,7 +715,7 @@ braze.subscribeToBannersUpdates((banners) => {
 
 ### Custom Code Blocks (Web)
 
-If your Banner uses the **Custom Code** editor block, you can trigger a dismissal directly from within the Banner's HTML using `brazeBridge.closeMessage()`. In a Banner context, this is equivalent to calling `logBannerDismissal`: it logs a Banner dismissal, removes the Banner from the UI, and suppresses the Banner for the user until a new campaign or banner creative is assigned. It also re-triggers any active `subscribeToBannersUpdates` subscribers.
+If your Banner uses the **Custom Code** editor block, you can trigger a dismissal directly from within the Banner's HTML using `brazeBridge.closeMessage()`. This calls the same underlying dismissal logic as `logBannerDismissal` and will also re-trigger any active `subscribeToBannersUpdates` subscribers.
 
 {% alert note %}
 `brazeBridge.closeMessage()` behaves differently depending on the channel. For in-app messages, it only closes the UI without logging a dismissal or causing any server-side suppression.
