@@ -1,6 +1,6 @@
 ---
 nav_title: HTML messages
-article_title: Adding the Braze JavaScript Interface to WebViews for Swift
+article_title: HTML in-app messages
 platform: Swift
 page_order: 0.5
 description: "Learn how to add the Braze JavaScript interface to your app."

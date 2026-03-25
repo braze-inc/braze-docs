@@ -1,6 +1,6 @@
 ---
 nav_title: Geofences
-article_title: Geofences for the Braze Swift SDK
+article_title: Geofences
 page_order: 3.51
 description: "Learn how to set up geofences for the Braze SDK."
 platform:
