@@ -11,6 +11,8 @@ search_rank: 3
 
 > This page covers purchase events and properties, their usage, segmentation, where to view relevant analytics, and more.
 
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
+
 Purchase events are purchase actions taken by your users, and are used to record in-app purchases and establish the Lifetime Value (LTV) for each user profile. These events must be set up by your team. Logging purchase events allows you to add properties like quantity and type, helping you further target your users based on these properties.
 
 ## Logging purchase events
