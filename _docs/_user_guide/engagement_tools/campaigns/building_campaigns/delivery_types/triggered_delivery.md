@@ -156,16 +156,23 @@ For example, imagine you want to send an event-triggered campaign to male users 
 
 As a best practice, ensure that the attribute on which the campaign is segmented is flushed to Braze servers before the event. If this isn't possible, the best way to guarantee delivery is to use [custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) to attach the relevant user properties to the event and apply a property filter for the specific event property instead of a segmentation filter. For our example, you would add a `gender` property to the custom event `registration` so that Braze is guaranteed to have the data you need when your campaign is triggered.
 
-Additionally, if a campaign is action-based and has a delay, you can check the option to **Re-evaluate segment membership at send-time** to ensure users are still part of the target audience when the message is sent.
-
-**When is audience criteria evaluated for campaigns with delays?** For campaigns that involve a delay before send (including rate limiting, local time zone, intelligent timing, or a trigger schedule), when the segment is re-evaluated depends on campaign type and settings. For **action-based campaigns** with a delay, if the option to re-evaluate at send time is enabled, users are re-evaluated before the message is sent—so only users who still meet the segment criteria at send time receive the message. For **scheduled campaigns**, audience criteria are always evaluated at the time of the scheduled send. This re-evaluation applies to any kind of delay (rate limiting, local time, intelligent time, or trigger schedule).
-
 If your campaign is triggered by a specific custom event and you select a segment as the audience, users must perform the same custom event to be included in the segment. This means users need to be part of the audience before an action-based campaign can be triggered. The general workflow for a triggered campaign is as follows:
 
 1. **Join the audience:** When a user performs the custom event, they're added to the campaign's target audience.
 2. **Trigger the email:** A user must perform the custom event again to trigger the email, as they need to be part of the audience before the email can be sent.
 
 We recommend either changing the target audience to include all users, or checking that the users expected to perform the event are already part of the campaign's audience for the message to be triggered.
+
+### Campaigns with delays
+
+If a campaign is action-based and has a delay, you can check the option to **Re-evaluate segment membership at send-time** to make sure users are still part of the target audience when the message is sent.
+
+#### Audience criteria evaluation
+
+For campaigns that involve a delay before send (including rate limiting, local time zone, Intelligent Timing, or a trigger schedule), when the segment is re-evaluated depends on campaign type and settings:
+
+- For **action-based campaigns** with a delay, if the option to re-evaluate at send time is enabled, users are re-evaluated before the message is sent—so only users who still meet the segment criteria at send time receive the message. 
+- For **scheduled campaigns**, audience criteria are always evaluated at the time of the scheduled send. This re-evaluation applies to any kind of delay.
 
 ![]({% image_buster /assets/img_archive/reevaluate_segment_membership.png %})
 
