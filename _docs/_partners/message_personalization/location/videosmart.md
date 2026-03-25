@@ -124,7 +124,7 @@ Common variables include:
 
 ### Rate limit
 
-VideoSmart's API has a rate limit of 10000 requests per minute. If you exceed this limit, you may receive errors or experience delays in video generation.
+VideoSmart's API has a rate limit of 10,000 requests per minute. If you exceed this limit, you may receive errors or experience delays in video generation.
 
 To reduce this risk, configure Braze campaign rate limiting so the message send rate stays below VideoSmart API capacity.
 
