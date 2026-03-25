@@ -29,14 +29,17 @@ This integration is designed for Braze email messages that support Liquid templa
 
 ## Use cases
 
-### Common use cases include:
+### Use case examples
+
+Common use cases include the following:
 
 - Customer onboarding and welcome journeys
 - Financial education (e.g. pensions, insurance policies)
 - Annual statements and regulatory communications
 - Product awareness and cross-sell campaigns
 - Customer retention and re-engagement campaigns
-- Other examples: Abandoned cart - when a customer adds products to their cart but doesn’t purchase, send an email with a personalised video that highlights the items they left behind. Post-purchase follow-up - after a purchase, send a personalised thank you video and recommend related products.
+- Abandoned cart: When a customer adds products to their cart but doesn’t purchase, send an email with a personalised video that highlights the items they left behind.
+- Post-purchase follow-up: After a purchase, send a personalised thank you video and recommend related products.
 
 ## Prerequisites
 
