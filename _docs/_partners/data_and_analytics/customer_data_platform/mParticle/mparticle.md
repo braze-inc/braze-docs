@@ -70,7 +70,7 @@ mParticle creates a single custom array attribute in Braze for each user, called
 For example, if a user is a member of three mParticle audiences with the audience IDs of "13053", "13052", and "13051", you can segment for users who match one of those audience with the filter `SegmentMembershipArray` — `includes value` — `13051`.
 
 {% alert note %}
-Braze array attributes have a default maximum length of 500. If any of your users are members of over 500 audiences, membership information will be truncated by Braze. To work around this, contact your Braze representative to increase your maximum array length threshold.
+Braze array attributes have a default maximum length of 500. If any of your users are members of more than 500 audiences, Braze truncates their membership information. For a workaround, contact your Braze account manager to increase your maximum array length threshold.
 {% endalert %}
 
 ##### One attribute per segment {#per-segment}
