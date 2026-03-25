@@ -60,5 +60,5 @@ In this guide, you first learn what decisioning agents are and how they work. Ne
 
 1. [Get Started with Decisioning Studio]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/get_started/)
 2. [Setting up Decisioning Studio Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/)
-3. [Setting up Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/get_started/)
+3. [Get Started with Decisioning Studio]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/get_started/)
 4. [Viewing reports and insights]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/)
