@@ -39,6 +39,12 @@ Use Braze user profile field names (listed as follows or any listed in the secti
   "my_array_custom_attribute" : { "add" : ["Value3"] },
   // Removing a value from an array custom attribute
   "my_array_custom_attribute" : { "remove" : [ "Value1" ]},
+  // Array of objects custom attribute
+  "my_array_of_objects_attribute": [{"key": "value"}, {"key": "value"}],
+  // Adding to an array of objects
+  "my_array_of_objects_attribute": { "$add": [{"key": "value"}] },
+  // Removing from an array of objects
+  "my_array_of_objects_attribute": { "$remove": [{"$identifier_key": "key", "$identifier_value": "value"}] },
 }
 ```
 
@@ -97,7 +103,7 @@ The following data types can be stored as a custom attribute:
 | Data Type | Notes |
 | --- | --- |
 | Arrays | Custom attribute arrays are supported. When you add an element, it's appended to the end of the array. If the element already exists, it's moved from its current position to the end.<br><br>Only unique values are stored. For example, importing `['hotdog','hotdog','hotdog','pizza']` results in `['hotdog', 'pizza']`.<br><br>You can set an array directly (for example, `"my_array_custom_attribute":[ "Value1", "Value2" ]`), add to an existing array with `"my_array_custom_attribute" : { "add" : ["Value3"] }`, or remove values with `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`.<br><br>The default and maximum number of elements in an array is 500. You can update the maximum number of arrays in the Braze dashboard, under **Data Settings** > **Custom Attributes**. For more information, see [Arrays]({{site.baseurl}}/developer_guide/analytics/#arrays). |
-| Array of objects | Use array of objects to define a list of objects where each object contains a set of attributes. Use this type to store multiple sets of related data for a user, such as hotel stays, purchase history, or preferences. <br><br>For example, define a custom attribute named `hotel_stays` on a user profile as an array where each object represents a separate stay, with attributes such as `hotel_name`, `check_in_date`, and `nights_stayed`. For more details, see [Array of objects example](#array-of-objects-example). |
+| Array of objects | Use array of objects to define a list of objects where each object contains a set of attributes. Use this type to store multiple sets of related data for a user, such as hotel stays, purchase history, or preferences. <br><br>For example, define a custom attribute named `hotel_stays` on a user profile as an array where each object represents a separate stay, with attributes such as `hotel_name`, `check_in_date`, and `nights_stayed`.<br><br>Arrays of objects have no limit on the number of items but do have a maximum size of 100&nbsp;KB. If an update would cause the array to exceed this limit, Braze drops the update and the attribute is unchanged.<br><br>You can add items with `$add`, remove items with `$remove`, and update items with `$update`. For more details, see [Array of objects example](#array-of-objects-example). |
 | Booleans | `true` or `false` |
 | Dates | Must be stored in the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Note that "T" is a time designator, not a placeholder, and should not be changed or removed. <br><br>Time attributes without a time zone default to midnight UTC (and are formatted on the dashboard as the equivalent of midnight UTC in the company's time zone). To specify a time zone, append a UTC offset to the timestamp (for example, `2024-11-10T18:00:00-05:00` for EST). If the time zone offset is missing or formatted incorrectly, the value defaults to UTC. <br><br>Times are displayed on the dashboard in your company's time zone. For example, `2024-11-10T18:00:00-05:00` (6:00 PM EST) would appear as the equivalent time in your company's configured time zone. <br><br>Events with timestamps in the future default to the current time. <br><br>For regular custom attributes, if the year is less than 0 or greater than 3000, Braze stores the value as a string on the user profile. |
 | Floats | Float custom attributes are positive or negative numbers with a decimal point. For example, you can use floats to store account balances or user ratings for products or services. |
@@ -120,6 +126,8 @@ This array of objects allows you to create segments based on specific criteria w
   { "hotel_name": "Mountain Lodge", "check_in_date": "2023-09-10", "nights_stayed": 3 }
 ]}
 ```
+
+For examples of using `$add`, `$remove`, and `$update` with arrays of objects, see [Array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/array_of_objects/).
 
 #### Braze user profile fields {#braze-user-profile-fields}
 
