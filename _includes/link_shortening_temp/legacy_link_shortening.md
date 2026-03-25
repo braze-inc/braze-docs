@@ -10,7 +10,7 @@ The length of the URL is determined by the type of tracking that is turned on:
 - **Basic tracking** enables campaign-level click tracking. Static URLs will have a length of 20 characters, and personalized URLs will have a length of 25 characters.
 - **Advanced tracking** enables campaign-level and user-level click tracking, and enables use of segmentation and retargeting capabilities which rely on clicks. Clicks will also generate an [SMS click event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) sent through Currents. Static URLs with advanced tracking will have a length of 27-28 characters, allowing you to create segments of users who have clicked on URLs. Personalized URLs will have a length of 32-33 characters.
 
-Links are shortened using our shared short domain (`brz.ai`). An example URL may look something like this: `https://brz.ai/8jshX` (basic, static) or `https://brz.ai/p/8jshX/2dj8d` (advanced, personalized). Refer to [Testing](#testing) for more information.
+Links are shortened using our shared short domain (`brz.ai`) or your custom link shortening domain. An example URL may look something like this: `https://brz.ai/8jshX` (basic, static) or `https://brz.ai/p/8jshX/2dj8d` (advanced, personalized). Refer to [Testing](#testing) for more information.
 
 Any static URLs that start with `http://` or `https://` are shortened. Static shortened URLs are valid for one year from the date they were created. Shortened URLs that contain Liquid personalization are valid for two months.
 
