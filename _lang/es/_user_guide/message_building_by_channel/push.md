@@ -61,7 +61,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [![Curso ]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"}de [Braze Learning](https://learning.braze.com/path/push-fundamentals) Casos de uso
+## [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"} Casos de uso
 
 ![Ejemplo de mensaje push en los productos Apple.]({% image_buster /assets/img/red-dress.gif %}){: height="400px"}  ![Ejemplo de mensaje push de Cronómetro en una pantalla de inicio de iPhone que dice: "¡Hola! Esto es un push de iOS".]({% image_buster /assets/img/ios_push.png %}){: height="400px"}
 

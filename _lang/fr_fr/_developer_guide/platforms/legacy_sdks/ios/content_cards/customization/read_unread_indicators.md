@@ -14,17 +14,17 @@ noindex: true
 
 # Indicateurs de messages non lus et lus
 
-## Désactivation de l’indicateur non visionné
+## Désactivation de l'indicateur de messages non lus
 
-![Deux cartes de contenu affichées côte à côte. La carte sur la gauche a une ligne bleue en bas, indiquant qu’elle n’a pas été vue. La carte à droite ne comporte pas de ligne bleue, ce qui indique qu'elle a déjà été consultée.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
+![Deux cartes de contenu affichées côte à côte. La carte de gauche présente une ligne bleue en bas, indiquant qu'elle n'a pas été vue. La carte de droite ne comporte pas de ligne bleue, ce qui indique qu'elle a déjà été consultée.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
 
-Vous pouvez choisir de désactiver la ligne bleue au bas de la carte, qui indique si la carte a été visualisée en définissant la propriété `disableUnviewedIndicator` dans `ABKContentCardsTableViewController` sur `YES`.
+Vous pouvez désactiver la ligne bleue au bas de la carte, qui indique si celle-ci a été visualisée ou non, en définissant la propriété `disableUnviewedIndicator` dans `ABKContentCardsTableViewController` sur `YES`.
 
-## Personnaliser l’indicateur non visionné
+## Personnalisation de l'indicateur de messages non lus
 
-L’indicateur non visionné est accessible via la propriété `unviewedLineView` de la classe `ABKBaseContentCardCell`. Si vous utilisez les implémentations `UITableViewCell`, vous devez accéder à la propriété avant que la cellule ne soit dessinée.
+L'indicateur de messages non lus est accessible via la propriété `unviewedLineView` de la classe `ABKBaseContentCardCell`. Si vous utilisez les implémentations `UITableViewCell`, vous devez accéder à la propriété avant que la cellule ne soit dessinée.
 
-Par exemple, pour définir la couleur de l’indicateur non visionné en rouge :
+Par exemple, pour définir la couleur de l'indicateur de messages non lus en rouge :
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

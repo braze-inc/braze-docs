@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![C](https://learning.braze.com/sdk-integration-basics)urso []({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}de [Braze Learning](https://learning.braze.com/sdk-integration-basics): Primeros pasos: Resumen de la integración
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} Primeros pasos: Resumen de la integración
 
 > En este artículo se ofrece un resumen básico del proceso de incorporación.
 

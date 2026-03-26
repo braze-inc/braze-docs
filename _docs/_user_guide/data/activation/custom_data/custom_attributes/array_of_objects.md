@@ -16,7 +16,7 @@ description: "This reference article covers using an array of objects as a data 
 ## Limitations
 
 - Arrays of objects are intended for custom attributes sent through the API. CSV uploads are not supported. This is because commas in the CSV file will be interpreted as a column separator, and commas in values will cause parsing errors. 
-- Arrays of objects have no limit on the number of items but do have a maximum size of 100&nbsp;KB.
+- Arrays of objects have no limit on the number of items but do have a maximum size of 100&nbsp;KB. If an update (such as `$add` or `$update`) causes the array to exceed this limit, Braze drops the update, and the attribute is unchanged. The API request still returns a success response. To keep the array under the limit so that new items can be added, use `$remove` to delete items from the array first.
 - Not all Braze Partners support arrays of objects. Refer to the [Partner documentation]({{site.baseurl}}/partners/home) to confirm if the integration supports this feature.
 
 Updating or removing items in an array requires identifying the item by key and value, so consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.
@@ -545,13 +545,8 @@ Create a new segment and select **Nested Custom Attribute** as your filter. Then
 
 Use dot notation to specify which field in the array of objects you want to use. Start the text field with an empty set of square brackets `[]` to tell Braze that you're looking inside an array of objects. After that, add a period `.`, followed by the name of the field you want to use.
 
-For example, if you want to filter the `pets` array of objects based on the `type` field, enter `[].type` and choose which type of pet to filter for, such as `snake`.
+For example, if you want to filter a `top_3_movies` array of objects based on the `type` field, enter `[].type` and choose the movies to filter for, such as `Fantasy Movie`.
 
-![Filter by pet type equals snake.]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
-
-Or you might filter for pets that have a `type` of `dog`. Here a user has at least one dog so that user qualifies into the segment of "any user who has at least one pet of type dog".
-
-![Filter by pet type equals dog.]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
 
 ### Levels of nesting
 

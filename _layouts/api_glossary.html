@@ -264,6 +264,7 @@ $(document).ready(function() {
     </div>
     {%- endunless -%}
 
+    {% include ai_translation_banner.html %}
     <h1> {{ page.glossary_top_header }} </h1>
     <p class="glossary_text">  {{ page.glossary_top_text | markdownify }} </p>
     <div id="guide_featured_list">

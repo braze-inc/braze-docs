@@ -1,7 +1,7 @@
 ---
-nav_title: "Migration depuis les cartes de contenu"
-article_title: "Migration des cartes de contenu vers les bannières"
-description: "Découvrez comment effectuer la migration des cartes de contenu vers les bannières, avec des exemples de code pour tous les SDK pris en charge, les limitations et les avantages."
+nav_title: "Migration depuis les Cartes de contenu"
+article_title: "Migration des Cartes de contenu vers les Bannières"
+description: "Découvrez comment effectuer la migration des Cartes de contenu vers les Bannières, avec des exemples de code pour tous les SDK pris en charge, les limitations et les avantages."
 page_order: 5
 toc_headers: h2
 channel:
@@ -14,61 +14,61 @@ platform:
   - React Native
 ---
 
-# Migration des cartes de contenu vers les bannières
+# Migration des Cartes de contenu vers les Bannières
 
-> Ce guide vous assiste dans la migration des cartes de contenu vers les bannières pour les cas d'utilisation d'envoi de messages de type bannière. Les bannières sont idéales pour les messages in-app, persistants dans les applications et sur le Web, qui apparaissent à des emplacements spécifiques dans votre application.
+> Ce guide vous accompagne dans la migration des Cartes de contenu vers les Bannières pour les cas d'utilisation d'envoi de messages de type bannière. Les Bannières sont idéales pour les messages in-app persistants, intégrés dans vos applications et sur le Web, qui apparaissent à des emplacements spécifiques dans votre application.
 
-## Pourquoi effectuer la migration vers Banners ?
+## Pourquoi migrer vers les Bannières ?
 
-- Si votre équipe d'ingénieurs crée ou gère des cartes de contenu personnalisées, la migration vers Banners peut réduire cet investissement continu. Les bannières permettent aux marketeurs de contrôler directement l'interface utilisateur, libérant ainsi les développeurs pour d'autres tâches.
-- Si vous lancez de nouveaux messages sur la page d'accueil, des flux d'onboarding ou des annonces persistantes, veuillez commencer par les bannières plutôt que de créer des cartes de contenu. Vous pouvez bénéficier d'une personnalisation en temps réel, sans expiration après 30 jours, sans limite de taille et avec une priorisation native dès le premier jour.
-- Si vous travaillez avec une limite d'expiration de 30 jours, gérez une logique de rééligibilité complexe ou êtes confronté à une personnalisation obsolète, Banners résout ces problèmes de manière native.
+- Si votre équipe d'ingénieurs crée ou maintient des Cartes de contenu personnalisées, la migration vers les Bannières peut réduire cet investissement continu. Les Bannières permettent aux marketeurs de contrôler directement l'interface utilisateur, libérant ainsi les développeurs pour d'autres tâches.
+- Si vous lancez de nouveaux messages sur la page d'accueil, des flux d'onboarding ou des annonces persistantes, commencez par les Bannières plutôt que de créer des Cartes de contenu. Vous bénéficierez d'une personnalisation en temps réel, sans expiration après 30 jours, sans limite de taille et avec une priorisation native dès le premier jour.
+- Si vous contournez la limite d'expiration de 30 jours, gérez une logique de rééligibilité complexe ou êtes confronté à une personnalisation obsolète, les Bannières résolvent ces problèmes de manière native.
 
-Les bannières présentent plusieurs avantages par rapport aux cartes de contenu pour l'envoi de messages de type bannière :
+Les Bannières présentent plusieurs avantages par rapport aux Cartes de contenu pour l'envoi de messages de type bannière :
 
 ### Production accélérée
 
-- **Réduction du soutien technique continu requis** : Les marketeurs peuvent créer des messages personnalisés à l'aide d'un éditeur par glisser-déposer et d'un code HTML personnalisé sans avoir besoin de l'aide d'un développeur pour la personnalisation.
-- **Options de personnalisation flexibles** : Concevez directement dans l'éditeur, utilisez le langage HTML ou exploitez les modèles de données existants avec des propriétés personnalisées.
+- **Réduction du soutien technique continu requis** : Les marketeurs peuvent créer des messages personnalisés à l'aide d'un éditeur par glisser-déposer et de code HTML personnalisé, sans avoir besoin de l'aide d'un développeur pour la personnalisation.
+- **Options de personnalisation flexibles** : Concevez directement dans l'éditeur, utilisez le HTML ou exploitez les modèles de données existants avec des propriétés personnalisées.
 
 ### Une meilleure expérience utilisateur
 
-- **Mises à jour dynamiques du contenu dynamique** : Les bannières actualisent la logique Liquid et l'éligibilité à chaque actualisation, garantissant ainsi que les utilisateurs voient toujours le contenu le plus pertinent.
-- **Prise en charge du placement natif** : Les messages apparaissent dans des contextes spécifiques plutôt que dans un fil d'actualité, ce qui améliore la pertinence contextuelle.
+- **Mises à jour dynamiques du contenu** : Les Bannières actualisent la logique Liquid et l'éligibilité à chaque actualisation, garantissant ainsi que les utilisateurs voient toujours le contenu le plus pertinent.
+- **Prise en charge native des emplacements** : Les messages apparaissent dans des contextes spécifiques plutôt que dans un fil d'actualité, ce qui améliore la pertinence contextuelle.
 - **Priorisation native** : Contrôle de l'ordre d'affichage sans logique personnalisée, facilitant la gestion de la hiérarchie des messages.
 
 ### Persistance
 
-- **Aucune date d'expiration** : Les campagnes de bannières n'ont pas de limite d'expiration de 30 jours comme les cartes de contenu, ce qui permet une véritable persistance des messages.
+- **Aucune limite d'expiration** : Les campagnes de Bannières n'ont pas de limite d'expiration de 30 jours comme les Cartes de contenu, ce qui permet une véritable persistance des messages.
 
 ## Quand migrer
 
-Envisagez la migration vers Banners si vous utilisez les cartes de contenu pour :
+Envisagez la migration vers les Bannières si vous utilisez les Cartes de contenu pour :
 
-- Héros de la page d'accueil, promotions sur les pages produits, offres à la caisse
-- Annonces de navigation persistantes ou messages dans la barre latérale
-- Messages permanents diffusés pendant plus de 30 jours
-- Messages pour lesquels vous souhaitez une personnalisation et une adéquation en temps réel
+- Des héros de page d'accueil, des promotions sur les pages produits, des offres à la caisse
+- Des annonces de navigation persistantes ou des messages dans la barre latérale
+- Des messages permanents diffusés pendant plus de 30 jours
+- Des messages pour lesquels vous souhaitez une personnalisation et une éligibilité en temps réel
 
-## Quand conserver les cartes de contenu
+## Quand conserver les Cartes de contenu
 
-Veuillez continuer à utiliser les cartes de contenu si nécessaire :
+Continuez à utiliser les Cartes de contenu si vous avez besoin de :
 
-- **Expériences de nourrissage :** Tout cas d'utilisation impliquant plusieurs messages défilables ou une « boîte de réception » sous forme de cartes.
-- **Fonctionnalités spécifiques :** Les messages qui nécessitent du contenu connecté ou des codes de promotion, car les bannières ne les prennent pas en charge de manière native.
-- **Réception/distribution déclenchée :** Cas d'utilisation nécessitant strictement une réception/distribution déclenchée par une API ou basée sur une livraison par événement. Bien que les bannières ne prennent pas en charge la réception/distribution déclenchée par API ou basée sur des événements, l'évaluation d'éligibilité en temps réel signifie que les utilisateurs sont instantanément qualifiés ou disqualifiés en fonction de leur appartenance à un segment à chaque actualisation.
+- **Expériences de fil d'actualité :** Tout cas d'utilisation impliquant plusieurs messages défilables ou une « boîte de réception » sous forme de cartes.
+- **Fonctionnalités spécifiques :** Les messages qui nécessitent du contenu connecté ou des codes promotionnels, car les Bannières ne les prennent pas en charge de manière native.
+- **Réception déclenchée :** Cas d'utilisation nécessitant strictement une réception déclenchée par API ou une livraison par événement. Bien que les Bannières ne prennent pas en charge la réception déclenchée par API ou la livraison par événement, l'évaluation d'éligibilité en temps réel signifie que les utilisateurs sont instantanément qualifiés ou disqualifiés en fonction de leur appartenance à un segment à chaque actualisation.
 
 ## Guide de migration
 
 ### Conditions préalables
 
-Avant de procéder à la migration, veuillez vous assurer que votre SDK Braze répond aux exigences minimales en matière de version :
+Avant de procéder à la migration, assurez-vous que votre SDK Braze répond aux exigences minimales en matière de version :
 
 {% multi_lang_include sdk_versions.md feature='banners' %}
 
 ### S'abonner aux mises à jour
 
-#### Approche par cartes de contenu
+#### Approche par Cartes de contenu
 
 {% tabs %}
 {% tab Web %}
@@ -126,7 +126,7 @@ StreamSubscription contentCardsStreamSubscription = braze.subscribeToContentCard
 {% endtab %}
 {% endtabs %}
 
-#### Approche des bannières
+#### Approche par Bannières
 
 {% tabs %}
 {% tab Web %}
@@ -135,9 +135,9 @@ import * as braze from "@braze/web-sdk";
 
 braze.subscribeToBannersUpdates((banners) => {
   // Get banner for specific placement
-  const globalBanner = braze.getBanner("global_banner");
-  if (globalBanner) {
-    console.log("Banner received for placement:", globalBanner.placementId);
+  const banner = braze.getBanner("sample_placement_id");
+  if (banner) {
+    console.log("Banner received for placement:", banner.placementId);
   }
 });
 ```
@@ -146,9 +146,9 @@ braze.subscribeToBannersUpdates((banners) => {
 ```kotlin
 Braze.getInstance(context).subscribeToBannersUpdates { update ->
   // Get banner for specific placement
-  val globalBanner = Braze.getInstance(context).getBanner("global_banner")
-  if (globalBanner != null) {
-    Log.d(TAG, "Banner received for placement: ${globalBanner.placementId}")
+  val banner = Braze.getInstance(context).getBanner("sample_placement_id")
+  if (banner != null) {
+    Log.d(TAG, "Banner received for placement: ${banner.placementId}")
   }
 }
 ```
@@ -157,10 +157,10 @@ Braze.getInstance(context).subscribeToBannersUpdates { update ->
 ```swift
 braze.banners.subscribeToUpdates { banners in
   // Get banner for specific placement
-  braze.banners.getBanner(for: "global_banner") { banner in
-    if let banner = banner {
-      print("Banner received for placement: \(banner.placementId)")
-    }
+  braze.banners.getBanner(for: "sample_placement_id") { banner in
+    guard let banner = banner else { return }
+
+    print("Banner received for placement: \(banner.placementId)")
   }
 }
 ```
@@ -170,7 +170,7 @@ braze.banners.subscribeToUpdates { banners in
 Braze.addListener(Braze.Events.BANNER_CARDS_UPDATED, (data) => {
   const banners = data.banners;
   // Get banner for specific placement
-  Braze.getBanner("global_banner").then(banner => {
+  Braze.getBanner("sample_placement_id").then(banner => {
     if (banner) {
       console.log("Banner received for placement:", banner.placementId);
     }
@@ -182,7 +182,7 @@ Braze.addListener(Braze.Events.BANNER_CARDS_UPDATED, (data) => {
 ```dart
 StreamSubscription bannerStreamSubscription = braze.subscribeToBanners((List<BrazeBanner> banners) {
   // Get banner for specific placement
-  braze.getBanner("global_banner").then((banner) {
+  braze.getBanner("sample_placement_id").then((banner) {
     if (banner != null) {
       print("Banner received for placement: ${banner.placementId}");
     }
@@ -195,10 +195,10 @@ StreamSubscription bannerStreamSubscription = braze.subscribeToBanners((List<Bra
 ### Afficher le contenu
 
 {% alert note %}
-Les cartes de contenu peuvent être rendues manuellement à l'aide d'une logique d'interface utilisateur personnalisée, tandis que les bannières ne peuvent être rendues qu'à l'aide des méthodes SDK prêtes à l'emploi.
+Les Cartes de contenu peuvent être rendues manuellement à l'aide d'une logique d'interface utilisateur personnalisée, tandis que les Bannières ne peuvent être rendues qu'à l'aide des méthodes SDK prêtes à l'emploi.
 {% endalert %}
 
-#### Approche par cartes de contenu
+#### Approche par Cartes de contenu
 
 {% tabs %}
 {% tab Web %}
@@ -283,26 +283,26 @@ for (final card in cards) {
 {% endtab %}
 {% endtabs %}
 
-#### Approche des bannières
+#### Approche par Bannières
 
 {% tabs %}
 {% tab Web %}
 ```javascript
 braze.subscribeToBannersUpdates((banners) => {
-  const globalBanner = braze.getBanner("global_banner");
-  if (!globalBanner) {
+  const banner = braze.getBanner("sample_placement_id");
+  if (!banner) {
     return;
   }
 
   const container = document.getElementById("global-banner-container");
-  braze.insertBanner(globalBanner, container);
+  braze.insertBanner(banner, container);
 
-  if (globalBanner.isControl) {
+  if (banner.isControl) {
     container.style.display = "none";
   }
 });
 
-braze.requestBannersRefresh(["global_banner"]);
+braze.requestBannersRefresh(["sample_placement_id"]);
 ```
 {% endtab %}
 {% tab Android %}
@@ -312,22 +312,22 @@ braze.requestBannersRefresh(["global_banner"]);
 //     android:id="@+id/banner_view"
 //     android:layout_width="match_parent"
 //     android:layout_height="wrap_content"
-//     app:placementId="global_banner" />
+//     app:placementId="sample_placement_id" />
 
 // Or programmatically
 val bannerView = BannerView(context).apply {
-  placementId = "global_banner"
+  placementId = "sample_placement_id"
 }
 container.addView(bannerView)
 
-Braze.getInstance(context).requestBannersRefresh(listOf("global_banner"))
+Braze.getInstance(context).requestBannersRefresh(listOf("sample_placement_id"))
 ```
 {% endtab %}
 {% tab Swift %}
 ```swift
 // Using BannerUIView
 let bannerView = BrazeBannerUI.BannerUIView(
-  placementId: "global_banner",
+  placementId: "sample_placement_id",
   braze: braze,
   processContentUpdates: { result in
     switch result {
@@ -342,57 +342,57 @@ let bannerView = BrazeBannerUI.BannerUIView(
 )
 view.addSubview(bannerView)
 
-braze.banners.requestBannersRefresh(placementIds: ["global_banner"])
+braze.banners.requestBannersRefresh(placementIds: ["sample_placement_id"])
 ```
 {% endtab %}
 {% tab React Native %}
 ```javascript
 // Using BrazeBannerView component
 <Braze.BrazeBannerView
-  placementID='global_banner'
+  placementID='sample_placement_id'
 />
 
 // Or get banner data
-const banner = await Braze.getBanner("global_banner");
+const banner = await Braze.getBanner("sample_placement_id");
 if (banner) {
   // Render custom banner UI
 }
 
-Braze.requestBannersRefresh(["global_banner"]);
+Braze.requestBannersRefresh(["sample_placement_id"]);
 ```
 {% endtab %}
 {% tab Flutter %}
 ```dart
 // Using BrazeBannerView widget
 BrazeBannerView(
-  placementId: "global_banner",
+  placementId: "sample_placement_id",
 )
 
 // Or get banner data
-final banner = await braze.getBanner("global_banner");
+final banner = await braze.getBanner("sample_placement_id");
 if (banner != null) {
   // Render custom banner UI
 }
 
-braze.requestBannersRefresh(["global_banner"]);
+braze.requestBannersRefresh(["sample_placement_id"]);
 ```
 {% endtab %}
 {% endtabs %}
 
-### Analyse des journaux (implémentations personnalisées)
+### Journalisation des analyses (implémentations personnalisées)
 
 {% alert note %}
-Les cartes de contenu et les bannières effectuent automatiquement le suivi des analyses lorsqu'elles utilisent leurs composants d'interface utilisateur par défaut. Les exemples ci-dessous concernent des implémentations personnalisées dans lesquelles vous créez votre propre interface utilisateur.
+Les Cartes de contenu et les Bannières effectuent automatiquement le suivi des analyses lorsqu'elles utilisent leurs composants d'interface utilisateur par défaut. Les exemples ci-dessous concernent des implémentations personnalisées dans lesquelles vous créez votre propre interface utilisateur.
 {% endalert %}
 
-#### Approche par cartes de contenu
+#### Approche par Cartes de contenu
 
 {% tabs %}
 {% tab Web %}
 ```javascript
 // Manual impression logging required for custom implementations
 cards.forEach(card => {
-    braze.logContentCardImpressions([card]);
+  braze.logContentCardImpressions([card]);
 });
 
 // Manual click logging required for custom implementations
@@ -403,7 +403,7 @@ card.logClick();
 ```kotlin
 // Manual impression logging required for custom implementations
 cards.forEach { card ->
-    card.logImpression()
+  card.logImpression()
 }
 
 // Manual click logging required for custom implementations
@@ -414,7 +414,7 @@ card.logClick()
 ```swift
 // Manual impression logging required for custom implementations
 for card in cards {
-    card.context?.logImpression()
+  card.context?.logImpression()
 }
 
 // Manual click logging required for custom implementations
@@ -425,7 +425,7 @@ card.context?.logClick()
 ```javascript
 // Manual impression logging required for custom implementations
 cards.forEach(card => {
-    Braze.logContentCardImpression(card.id);
+  Braze.logContentCardImpression(card.id);
 });
 
 // Manual click logging required for custom implementations
@@ -436,7 +436,7 @@ Braze.logContentCardClicked(card.id);
 ```dart
 // Manual impression logging required for custom implementations
 for (final card in cards) {
-    braze.logContentCardImpression(card);
+  braze.logContentCardImpression(card);
 }
 
 // Manual click logging required for custom implementations
@@ -445,13 +445,13 @@ braze.logContentCardClicked(card);
 {% endtab %}
 {% endtabs %}
 
-#### Approche des bannières
+#### Approche par Bannières
 
 {% tabs %}
 {% tab Web %}
 
 {% alert important %}
-Les analyses sont automatiquement suivies lors de l'utilisation de `insertBanner()`. La journalisation manuelle ne devrait pas être utilisée lorsque vous utilisez `insertBanner()`.
+Les analyses sont automatiquement suivies lors de l'utilisation de `insertBanner()`. La journalisation manuelle ne doit pas être utilisée avec `insertBanner()`.
 {% endalert %}
 
 ```javascript
@@ -460,16 +460,16 @@ Les analyses sont automatiquement suivies lors de l'utilisation de `insertBanner
 
 // For custom implementations, use manual logging methods:
 // Log impression
-braze.logBannerImpressions([globalBanner]);
+braze.logBannerImpressions([banner]);
 
 // Log click (with optional buttonId)
-braze.logBannerClick("global_banner", buttonId);
+braze.logBannerClick("sample_placement_id", buttonId);
 ```
 {% endtab %}
 {% tab Android %}
 
 {% alert important %}
-Les analyses sont automatiquement suivies lorsque vous utilisez BannerView. La journalisation manuelle n'est pas recommandée lors de l'utilisation de BannerView.
+Les analyses sont automatiquement suivies lorsque vous utilisez BannerView. La journalisation manuelle ne doit pas être utilisée avec BannerView.
 {% endalert %}
 
 ```kotlin
@@ -478,10 +478,10 @@ Les analyses sont automatiquement suivies lorsque vous utilisez BannerView. La j
 
 // For custom implementations, use manual logging methods:
 // Log impression
-Braze.getInstance(context).logBannerImpression("global_banner");
+Braze.getInstance(context).logBannerImpression("sample_placement_id");
 
 // Log click (with optional buttonId)
-Braze.getInstance(context).logBannerClick("global_banner", buttonId);
+Braze.getInstance(context).logBannerClick("sample_placement_id", buttonId);
 ```
 {% endtab %}
 {% tab Swift %}
@@ -495,11 +495,16 @@ Les analyses sont automatiquement suivies lors de l'utilisation de BannerUIView.
 // Manual logging should not be used for default BannerUIView
 
 // For custom implementations, use manual logging methods:
-// Log impression
-braze.banners.logImpression(placementId: "global_banner")
+// Get banner for specific placement
+braze.banners.getBanner(for: "sample_placement_id") { banner in
+  guard let banner = banner else { return }
 
-// Log click (with optional buttonId)
-braze.banners.logClick(placementId: "global_banner", buttonId: buttonId)
+  // Log impression
+  banner.context?.logImpression()
+
+  // Log click (with optional buttonId)
+  banner.context?.logClick(buttonId: buttonId)
+}
 
 // Control groups are automatically handled by BannerUIView
 ```
@@ -507,7 +512,7 @@ braze.banners.logClick(placementId: "global_banner", buttonId: buttonId)
 {% tab React Native %}
 
 {% alert important %}
-Les analyses sont automatiquement suivies lors de l'utilisation de BrazeBannerView. Aucune connexion manuelle n'est nécessaire.
+Les analyses sont automatiquement suivies lors de l'utilisation de BrazeBannerView. Aucune journalisation manuelle n'est nécessaire.
 {% endalert %}
 
 ```javascript
@@ -521,7 +526,7 @@ Les analyses sont automatiquement suivies lors de l'utilisation de BrazeBannerVi
 {% tab Flutter %}
 
 {% alert important %}
-Les analyses sont automatiquement suivies lors de l'utilisation de BrazeBannerView. Aucune connexion manuelle n'est nécessaire.
+Les analyses sont automatiquement suivies lors de l'utilisation de BrazeBannerView. Aucune journalisation manuelle n'est nécessaire.
 {% endalert %}
 
 ```dart
@@ -534,9 +539,99 @@ Les analyses sont automatiquement suivies lors de l'utilisation de BrazeBannerVi
 {% endtab %}
 {% endtabs %}
 
+### Récupération des propriétés
+
+#### Approche par Cartes de contenu
+
+{% tabs %}
+{% tab Web %}
+```javascript
+cards.forEach(card => {
+  console.log("Card id:", card.id, "Extras:", card.extras);
+});
+```
+{% endtab %}
+{% tab Android %}
+```kotlin
+cards.forEach { card ->
+  Log.d(TAG, "Card id: ${card.id} Extras: ${card.extras}")
+}
+```
+{% endtab %}
+{% tab Swift %}
+```swift
+for card in cards {
+  print("Card id: \(card.id) Extras: \(card.extras)")
+}
+```
+{% endtab %}
+{% tab React Native %}
+```javascript
+cards.forEach(card => {
+  console.log("Card id:", card.id, "Extras:", card.extras);
+});
+```
+{% endtab %}
+{% tab Flutter %}
+```dart
+for (final card in cards) {
+  print("Card id: ${card.id} Extras: ${card.extras}");
+}
+```
+{% endtab %}
+{% endtabs %}
+
+#### Approche par Bannières
+
+{% tabs %}
+{% tab Web %}
+```javascript
+const banner = braze.getBanner("sample_placement_id");
+if (!banner) {
+  return;
+}
+
+console.log("Banner placement:", banner.placementId, "Properties:", banner.properties);
+```
+{% endtab %}
+{% tab Android %}
+```kotlin
+val banner = Braze.getInstance(context).getBanner("sample_placement_id")
+if (banner != null) {
+  Log.d(TAG, "Banner placement: ${banner.placementId} Properties: ${banner.properties}")
+}
+```
+{% endtab %}
+{% tab Swift %}
+```swift
+braze.banners.getBanner(for: "sample_placement_id") { banner in
+  guard let banner = banner else { return }
+
+  print("Banner placement: \(banner.placementId) Properties: \(banner.properties)")
+}
+```
+{% endtab %}
+{% tab React Native %}
+```javascript
+const banner = await Braze.getBanner("sample_placement_id");
+if (banner) {
+  console.log("Banner placement:", banner.placementId, "Properties:", banner.properties);
+}
+```
+{% endtab %}
+{% tab Flutter %}
+```dart
+final banner = await braze.getBanner("sample_placement_id");
+if (banner != null) {
+  print("Banner placement: ${banner.placementId} Properties: ${banner.properties}");
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ### Gestion des groupes de contrôle
 
-#### Approche par cartes de contenu
+#### Approche par Cartes de contenu
 
 {% tabs %}
 {% tab Web %}
@@ -596,24 +691,24 @@ for (final card in cards) {
 {% endtab %}
 {% endtabs %}
 
-#### Approche des bannières
+#### Approche par Bannières
 
 {% tabs %}
 {% tab Web %}
 ```javascript
 braze.subscribeToBannersUpdates((banners) => {
-  const globalBanner = braze.getBanner("global_banner");
-  if (!globalBanner) {
+  const banner = braze.getBanner("sample_placement_id");
+  if (!banner) {
     return;
   }
 
   const container = document.getElementById("global-banner-container");
-  
+
   // Always call insertBanner to track impression (including control)
-  braze.insertBanner(globalBanner, container);
-  
+  braze.insertBanner(banner, container);
+
   // Hide if control group
-  if (globalBanner.isControl) {
+  if (banner.isControl) {
     container.style.display = "none";
   }
 });
@@ -624,7 +719,7 @@ braze.subscribeToBannersUpdates((banners) => {
 // BannerView automatically handles control groups
 // No additional code needed
 val bannerView = BannerView(context).apply {
-  placementId = "global_banner"
+  placementId = "sample_placement_id"
 }
 ```
 {% endtab %}
@@ -633,7 +728,7 @@ val bannerView = BannerView(context).apply {
 // BannerUIView automatically handles control groups
 // No additional code needed
 let bannerView = BrazeBannerUI.BannerUIView(
-  placementId: "global_banner",
+  placementId: "sample_placement_id",
   braze: braze
 )
 ```
@@ -643,7 +738,7 @@ let bannerView = BrazeBannerUI.BannerUIView(
 // BrazeBannerView automatically handles control groups
 // No additional code needed
 <Braze.BrazeBannerView
-  placementID='global_banner'
+  placementID='sample_placement_id'
 />
 ```
 {% endtab %}
@@ -652,67 +747,66 @@ let bannerView = BrazeBannerUI.BannerUIView(
 // BrazeBannerView automatically handles control groups
 // No additional code needed
 BrazeBannerView(
-  placementId: "global_banner",
+  placementId: "sample_placement_id",
 )
 ```
 {% endtab %}
 {% endtabs %}
 
-## Restrictions
+## Limitations
 
-Lors de la migration des cartes de contenu vers les bannières, veuillez tenir compte des restrictions suivantes :
+Lors de la migration des Cartes de contenu vers les Bannières, tenez compte des limitations suivantes :
 
 ### Migration des messages déclenchés
 
-Les bannières ne prennent en charge que les campagnes de livraison avec planification. Pour migrer un message précédemment déclenché par une API ou basé sur une action, veuillez le convertir en ciblage basé sur un segment :
+Les Bannières ne prennent en charge que les campagnes avec planification. Pour migrer un message précédemment déclenché par API ou par événement, convertissez-le en ciblage basé sur un segment :
 
-- **Exemple :** Au lieu de déclencher une carte « Profil complet » avec l'API, veuillez créer un segment pour les utilisateurs qui se sont inscrits au cours des 7 derniers jours mais qui n'ont pas encore complété leur profil.
-- **Admissibilité en temps réel :** Les utilisateurs sont automatiquement admissibles ou non à la bannière à chaque actualisation, en fonction de leur appartenance à un segment.
+- **Exemple :** Au lieu de déclencher une carte « Compléter le profil » via l'API, créez un segment pour les utilisateurs inscrits au cours des 7 derniers jours mais n'ayant pas encore complété leur profil.
+- **Éligibilité en temps réel :** Les utilisateurs sont instantanément qualifiés ou disqualifiés pour la Bannière à chaque actualisation, en fonction de leur appartenance à un segment.
 
 ### Différences de fonctionnalités
 
 | Fonctionnalité | Cartes de contenu | Bannières |
 |---------|--------------|---------|
 | **Structure du contenu** |
-| Plusieurs cartes dans le flux | ✅ Pris en charge | ✅ Permet de créer plusieurs emplacements pour obtenir une mise en œuvre de type carrousel. Une seule bannière est renvoyée par emplacement. |
-| Placements multiples | S.O. | ✅ Prise en charge de plusieurs emplacements |
-| Types de cartes (classique, avec légende, image uniquement) | ✅ Plusieurs types prédéfinis | Bannière HTML unique (plus flexible) |
-| **Gestion de contenu** |
-| Éditeur par glisser-déposer | ❌ Nécessite l'intervention d'un développeur pour la personnalisation | ✅ Les marketeurs peuvent créer/mettre à jour sans intervention technique. |
-| HTML/CSS personnalisé | Limité à la structure de la carte | ✅ Prise en charge complète HTML/CSS |
+| Plusieurs cartes dans le flux | ✅ Pris en charge | ✅ Permet de créer plusieurs emplacements pour obtenir une implémentation de type carrousel. Une seule bannière est renvoyée par emplacement. |
+| Emplacements multiples | S.O. | ✅ Prise en charge de plusieurs emplacements |
+| Types de cartes (classique, avec légende, image uniquement) | ✅ Plusieurs types prédéfinis | ✅ Bannière HTML unique (plus flexible) |
+| **Gestion du contenu** |
+| Éditeur par glisser-déposer | ❌ Nécessite l'intervention d'un développeur pour la personnalisation | ✅ Les marketeurs peuvent créer/mettre à jour sans intervention technique |
+| HTML/CSS personnalisé | ❌ Limité à la structure de la carte | ✅ Prise en charge complète HTML/CSS |
 | Paires clé-valeur pour la personnalisation | ✅ Nécessaire pour une personnalisation avancée | ✅ Paires clé-valeur fortement typées appelées « propriétés » pour une personnalisation avancée |
-| **Persistance&  Expiration** |
+| **Persistance et expiration** |
 | Expiration de la carte | ✅ Pris en charge (limite de 30 jours) | ✅ Pris en charge (sans limite d'expiration) |
-| Véritable persévérance | ❌ Maximum de 30 jours | Persévérance illimitée |
-| **Ciblage &d'affichage** |
-| Interface utilisateur du flux | ✅ Flux par défaut disponible | ❌ Basé uniquement sur le placement |
-| Placement contextuel | ❌ Basé sur l'alimentation | ✅ Prise en charge native du placement |
+| Véritable persistance | ❌ Maximum de 30 jours | ✅ Persistance illimitée |
+| **Affichage et ciblage** |
+| Interface utilisateur du flux | ✅ Flux par défaut disponible | ❌ Basé uniquement sur l'emplacement |
+| Placement contextuel | ❌ Basé sur le flux | ✅ Prise en charge native des emplacements |
 | Priorisation native | ❌ Nécessite une logique personnalisée | ✅ Priorisation intégrée |
-| **Interaction avec l'utilisateur** |
-| Licenciement manuel | ✅ Pris en charge | ❌ Non pris en charge |
+| **Interaction utilisateur** |
+| Fermeture manuelle | ✅ Pris en charge | ❌ Non pris en charge |
 | Cartes épinglées | ✅ Pris en charge | S.O. |
 | **Analyse** |
 | Analyses automatiques (interface utilisateur par défaut) | ✅ Pris en charge | ✅ Pris en charge |
-| Tri par priorité | ❌ Non pris en charge | ✅ Pris en charge | 
+| Tri par priorité | ❌ Non pris en charge | ✅ Pris en charge |
 | **Mises à jour du contenu** |
-| Actualisation du modèle liquide | Une fois par carte lors de l'envoi/du lancement | ✅ Se rafraîchit à chaque actualisation |
-| Actualisation des conditions d'admissibilité | Une fois par carte lors de l'envoi/du lancement | ✅ Actualise à chaque session |
+| Actualisation du modèle Liquid | ❌ Une seule fois par carte lors de l'envoi/du lancement | ✅ Actualisé à chaque rafraîchissement |
+| Actualisation de l'éligibilité | ❌ Une seule fois par carte lors de l'envoi/du lancement | ✅ Actualisé à chaque session |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Limites du produit
 
 - Jusqu'à 25 messages actifs par emplacement.
-- Jusqu'à 10 ID de placement par demande d'actualisation ; les demandes supplémentaires sont tronquées.
+- Jusqu'à 10 ID d'emplacement par demande d'actualisation ; les demandes au-delà de cette limite sont tronquées.
 
 ### Limitations du SDK
 
-- Les bannières ne sont actuellement pas prises en charge sur les plateformes .NET MAUI (Xamarin), cordova, Unity, Vega ou TV.
-- Veuillez vous assurer que vous utilisez les versions minimales du SDK indiquées dans les prérequis.
+- Les Bannières ne sont actuellement pas prises en charge sur les plateformes .NET MAUI (Xamarin), Cordova, Unity, Vega ou TV.
+- Assurez-vous d'utiliser les versions minimales du SDK indiquées dans les conditions préalables.
 
 ## Articles connexes
 
-- [Emplacements des bannières]({{site.baseurl}}/developer_guide/banners/placements)
-- [Tutoriel : Affichage d'une bannière par ID de placement]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)
-- [Analyse des bannières]({{site.baseurl}}/developer_guide/banners/analytics)
-- [FAQ sur les bannières]({{site.baseurl}}/developer_guide/banners/faq)
-
+- [Emplacements des Bannières]({{site.baseurl}}/developer_guide/banners/placements)
+- [Tutoriel : Afficher une Bannière par ID d'emplacement]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)
+- [Analyse des Bannières]({{site.baseurl}}/developer_guide/banners/analytics)
+- [FAQ sur les Bannières]({{site.baseurl}}/developer_guide/banners/faq)

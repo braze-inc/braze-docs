@@ -1,7 +1,7 @@
 ---
 nav_title: Referência
 article_title: Referência para agentes
-description: "Detalhes de referência sobre os Agentes Braze."
+description: "Detalhes de referência sobre os Agentes da Braze."
 page_order: 3
 ---
 
@@ -11,15 +11,15 @@ page_order: 3
 
 ## Modelos
 
-Quando você configura um agente, pode escolher o modelo que ele usa para gerar respostas. Você tem duas opções: usar um modelo alimentado pelo Braze ou trazer sua própria chave de API.
+Quando você configura um agente, pode escolher o modelo que ele usa para gerar respostas. Você tem duas opções: usar um modelo alimentado pela Braze ou trazer sua própria chave de API.
 
 {% alert important %}
-O modelo **Auto** alimentado pelo Braze é otimizado para modelos cujas capacidades de raciocínio são suficientes para realizar tarefas como busca em catálogo e associação a segmentos. Ao usar outros modelos, recomendamos testar para confirmar se seu modelo funciona bem para seu caso de uso. Você pode precisar ajustar suas [instruções](#writing-instructions) para fornecer diferentes níveis de detalhe ou raciocínio passo a passo para modelos com diferentes velocidades e capacidades.
+O modelo **Auto** alimentado pela Braze é otimizado para modelos cujas capacidades de raciocínio são suficientes para realizar tarefas como busca em catálogo e associação a segmentos. Ao usar outros modelos, recomendamos testar para confirmar se seu modelo funciona bem para seu caso de uso. Você pode precisar ajustar suas [instruções](#writing-instructions) para fornecer diferentes níveis de detalhe ou raciocínio passo a passo para modelos com diferentes velocidades e capacidades.
 {% endalert %}
 
-### Opção 1: Use um modelo alimentado pelo Braze
+### Opção 1: Use um modelo alimentado pela Braze
 
-Esta é a opção mais simples, sem configuração extra necessária. O Braze fornece acesso a grandes modelos de linguagem (LLMs) diretamente. Para usar esta opção, selecione **Auto**, que utiliza modelos Gemini.
+Esta é a opção mais simples, sem configuração extra necessária. A Braze fornece acesso a grandes modelos de linguagem (LLMs) diretamente. Para usar esta opção, selecione **Auto**, que utiliza modelos Gemini.
 
 {% alert important %}
 Se você não vê **Braze Auto** como uma opção no menu suspenso **Modelo** ao criar um agente, entre em contato com seu gerente de sucesso do cliente para saber como se tornar elegível para usar o modelo Braze Auto.
@@ -27,22 +27,37 @@ Se você não vê **Braze Auto** como uma opção no menu suspenso **Modelo** ao
 
 ### Opção 2: Traga sua própria chave de API
 
-Com esta opção, você pode conectar sua conta Braze com provedores como OpenAI, Anthropic ou Google Gemini. Se você trouxer sua própria chave de API de um provedor de LLM, os custos de token são cobrados diretamente através do seu provedor, não através do Braze.
+Com esta opção, você pode conectar sua conta da Braze com provedores como OpenAI, Anthropic ou Google Gemini. Se você trouxer sua própria chave de API de um provedor de LLM, os custos de token são cobrados diretamente pelo seu provedor, não pela Braze.
 
-{% alert important %}
 Recomendamos testar rotineiramente os modelos mais recentes, pois modelos legados podem ser descontinuados ou depreciados após alguns meses.
-{% endalert %}
 
 Para configurar isso:
 
-1. Acessar **Integrações de Parceiros** > **Parceiros de Tecnologia** e encontrar seu provedor.
+1. Acesse **Integrações de Parceiros** > **Parceiros de Tecnologia** e encontre seu provedor.
 2. Insira sua chave de API do provedor.
 3. Selecione **Salvar**.
 
 Em seguida, você pode voltar para seu agente e selecionar seu modelo.
 
+Quando você usa um LLM fornecido pela Braze, os provedores desse modelo atuarão como Subprocessadores da Braze, sujeitos aos termos do Aditivo de Processamento de Dados (DPA) entre você e a Braze. Se você optar por trazer sua própria chave de API, o provedor da sua assinatura de LLM é considerado um Provedor Terceiro sob o contrato entre você e a Braze.
+
+#### Níveis de raciocínio
+
+Alguns provedores de LLM podem permitir que você ajuste o nível de raciocínio de um modelo selecionado. Os níveis de raciocínio definem a amplitude de pensamento que o modelo usa antes de responder — desde respostas rápidas e diretas até cadeias mais longas de raciocínio. Isso afeta a qualidade da resposta, a latência e o uso de tokens.
+
+| Nível | Quando usar |
+|-------|-------------|
+| **Mínimo** | Tarefas simples e bem definidas (como busca em catálogo, classificação direta). Respostas mais rápidas e menor custo. |
+| **Baixo** | Tarefas que se beneficiam de um pouco mais de raciocínio, mas não precisam de análise profunda. |
+| **Médio** | Tarefas com múltiplas etapas ou nuances (como analisar várias entradas para recomendar uma ação). |
+| **Alto** | Raciocínio complexo, casos extremos ou quando você precisa que o modelo trabalhe as etapas antes de responder. |
+
+Recomendamos começar com **Mínimo** e testar as respostas do seu agente. Depois, você pode ajustar o nível de raciocínio para **Baixo** ou **Médio** se perceber que o agente está tendo dificuldade em fornecer respostas precisas. Em casos raros, um nível de raciocínio **Alto** pode ser necessário, embora usar esse nível possa resultar em altos custos de token e tempos de resposta mais longos ou maior risco de erros de timeout. Se seu agente está tendo dificuldade em equilibrar raciocínio com múltiplas etapas e tempos de resposta razoáveis, considere dividir seu caso de uso em mais de um agente que possam trabalhar juntos em um Canvas ou catálogo.
+
+A Braze usa os mesmos intervalos de IP para chamadas de LLM de saída que para Conteúdo conectado. Os intervalos estão listados na [lista de permissão de IP de Conteúdo conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/#connected-content-ip-allowlisting). Se seu provedor suporta lista de permissão de IP, você pode restringir a chave a esses intervalos para que apenas a Braze possa usá-la.
+
 {% alert important %}
-Quando você usa um LLM fornecido pela Braze, os provedores de tal modelo atuarão como Subprocessadores da Braze, sujeitos aos termos do Aditivo de Processamento de Dados (DPA) entre você e a Braze. Se você optar por trazer sua própria chave de API, o provedor da sua assinatura de LLM é considerado um Provedor de Terceiros sob o contrato entre você e a Braze.  
+Quando você usa um LLM fornecido pela Braze, os provedores desse modelo atuarão como Subprocessadores da Braze, sujeitos aos termos do Aditivo de Processamento de Dados (DPA) entre você e a Braze. Se você optar por trazer sua própria chave de API, o provedor da sua assinatura de LLM é considerado um Provedor Terceiro sob o contrato entre você e a Braze.  
 {% endalert %}
 
 ## Escrevendo instruções
@@ -56,7 +71,7 @@ Aqui estão algumas melhores práticas gerais para você começar a criar prompt
 3. Defina um contexto e restrições claros (público, comprimento, tom, formato).
 4. Peça por estrutura ("Retorne JSON/lista com marcadores/tabela...").
 5. Mostre, não conte. Inclua alguns exemplos de alta qualidade.
-6. Divida tarefas complexas em etapas ordenadas ("Etapa 1..."). Etapa 2...".
+6. Divida tarefas complexas em etapas ordenadas ("Etapa 1... Etapa 2...").
 7. Incentive o raciocínio ("Pense nas etapas internamente, depois forneça uma resposta final concisa," ou "explique brevemente sua decisão").
 8. Pilote, inspecione e itere. Pequenos ajustes podem levar a grandes ganhos de qualidade.
 9. Lide com os casos extremos, adicione barreiras de proteção e instruções de recusa.
@@ -64,7 +79,7 @@ Aqui estão algumas melhores práticas gerais para você começar a criar prompt
 
 ### Usando Liquid
 
-Incluir [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) nas instruções do seu agente pode adicionar uma camada extra de personalização na sua resposta. Você pode especificar a variável Liquid exata que o agente recebe e pode incluí-la no contexto do seu prompt. Por exemplo, em vez de escrever explicitamente "primeiro nome", você pode usar o trecho Liquid {% raw %}`{{${first_name}}}`{% endraw %}:
+Incluir [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) nas instruções do seu agente pode adicionar uma camada extra de personalização na resposta. Você pode especificar a variável Liquid exata que o agente recebe e incluí-la no contexto do seu prompt. Por exemplo, em vez de escrever explicitamente "nome", você pode usar o trecho Liquid {% raw %}`{{${first_name}}}`{% endraw %}:
 
 {% raw %}
 ```
@@ -76,12 +91,13 @@ Na seção **Logs** do **Console do Agente**, você pode revisar os detalhes da 
 
 ![Os detalhes de um agente que tem Liquid em suas instruções.]({% image_buster /assets/img/ai_agent/using_liquid_example.png %}){: style="max-width:50%;"}
 
-### Exemplos
+### Exemplos de agentes em Canvas
 
-Vamos supor que você faz parte de uma marca de viagens, UponVoyage, e seus objetivos são analisar o feedback dos clientes, escrever mensagens personalizadas e determinar a taxa de conversão para seus assinantes gratuitos. Aqui estão exemplos de diferentes instruções com base em objetivos definidos:
+Vamos supor que você faz parte de uma marca de viagens, UponVoyage, e seus objetivos são analisar o feedback dos clientes, escrever mensagens personalizadas e determinar a taxa de conversão para seus assinantes gratuitos. Aqui estão exemplos de diferentes instruções com base em objetivos definidos.
 
 {% tabs %}
-{% tab Personalized message copywriter agent %}
+{% tab Redator de mensagens %}
+
 {% raw %}
 ```
 Role: 
@@ -129,8 +145,10 @@ The user IS in the segment: “Logged multiple searches in the past 30D”.
 </output_example>
 ```
 {% endraw %}
+
 {% endtab %}
-{% tab Customer feedback analysis agent %}
+{% tab Análise de feedback %}
+
 {% raw %}
 ```
 Role:
@@ -171,7 +189,8 @@ Input & Output Example:
 ```
 {% endraw %}
 {% endtab %}
-{% tab Trial conversion and strategy agent %}
+{% tab Conversão de trial %}
+
 {% raw %}
 ```
 Role:
@@ -224,10 +243,108 @@ The user IS in the segment: "Has Valid Payment Method on File".
 (Rationale: The user is very active [15 searches], so they like the app. But they haven't touched a single Premium feature [0 uses], meaning they don't yet understand why they should pay for the subscription. They are "Medium" risk and need education, not just a generic nudge.)
 ```
 {% endraw %}
+
 {% endtab %}
 {% endtabs %}
 
-Para mais detalhes sobre as melhores práticas de prompting, consulte guias dos seguintes provedores de modelos:
+### Exemplos de agentes em catálogo
+
+Vamos supor que você faz parte de uma marca de transporte por aplicativo, StyleRyde, e seus objetivos são escrever resumos atrativos de métodos de viagem e fornecer traduções do app móvel com base no idioma usado na região. Aqui estão exemplos de diferentes instruções com base nos objetivos definidos.
+
+{% tabs %}
+{% tab Descrição de destino %}
+
+{% raw %}
+```
+Role:
+You are an expert Travel Copywriter for StyleRyde. Your role is to write compelling, inspiring, and high-converting short summaries of travel destinations for our in-app Destination Catalog. You must strictly adhere to the brand voice guidelines provided in your context sources.
+
+Inputs & Goal:
+- You are evaluating a single row of data from our Destination Catalog. Your goal is to generate a "Short Description" that will be saved to a new column in this catalog.
+- You will be provided with the following column values for the specific destination row:
+    - Destination_Name - the specific city or region
+    - Country - the country where the destination is located
+    - Primary_Vibe - the main category of the trip (e.g., Beach, Historic, Adventure, Nightlife) 
+    - Price_Tier - represented as $, $$, $$$, or $$$$
+
+Rules:
+- Write exactly one or two short sentences.
+- Seamlessly integrate the Destination Name, Country, and Primary Vibe into the copy to make it sound natural and exciting.
+- Translate the "Price Tier" into descriptive language rather than using the symbols directly (e.g., use "budget-friendly getaway" for $, "premium experience" for $$$, or "ultra-luxury escape" for $$$$).
+- Keep the description skimmable and inspiring.
+- Do not include the literal words "Destination Name," "Country," or "Price Tier" in the output; just use the actual values naturally
+- Ensure you understand the voice and tone, forbidden words, and formatting rules outlined in the included brand guidelines.
+- Avoid spammy phrasing (ALL CAPS, excessive punctuation) and emojis.
+- Do not hallucinate specific hotels or flights, as this is a general destination description.
+- If any input fields are missing, write the best description possible with the available data
+
+Final Output Specification:
+You must return ONLY the plain text string of the description. Do not wrap the output in quotes, do not use markdown formatting, and do not return a JSON object. The text you output will be injected directly into a cell in the catalog spreadsheet. Maximum length is 150 characters.
+Input & Output Example:
+<input_example>
+Destination Name: Kyoto
+Country: Japan
+Primary Vibe: Historic & Serene
+Price Tier: $$$
+</input_example>
+<output_example>Discover the historic and serene beauty of Kyoto, Japan. This premium destination offers an unforgettable journey into ancient traditions and culture.</output_example>
+```
+{% endraw %}
+
+{% endtab %}
+{% tab Localização %}
+
+{% raw %}
+```
+Role:
+You are an expert AI Localization Specialist for StyleRyde. Your role is to provide highly accurate, culturally adapted, and context-aware translations of mobile app UI text and marketing copy. You ensure our app feels native and natural to users around the world.
+
+Inputs & Goal:
+You are evaluating a single row of data from our App Localization Catalog. Your goal is to translate the English source text into the requested target language, which will be saved to a specific localized column in this catalog.
+
+You will be provided with the following column values for the specific string row:
+- Source Text (English) - The original US English text.
+- Target Language Code - The locale code to translate into (e.g., es-MX, fr-FR, ja-JP, pt-BR).
+- UI Category - Where this text lives in the app (e.g., Tab_Bar, CTA_Button, Screen_Title, Push_Notification).
+- Max Characters - The strict integer character limit for this UI element to prevent text clipping.
+
+Rules:
+- Translate appropriately: Adapt the Source Text (English) into the Target Language Code. Use local spelling norms (e.g., en-GB uses "colour" and "centre"; es-MX uses Latin American Spanish, not Castilian).
+- Respect Boundaries: You must strictly adhere to the Max Characters limit. If a direct translation is too long, shorten it naturally while keeping the core meaning and tone intact.
+
+Apply Category Guidelines:
+- CTA_Button: Use short, action-oriented imperative verbs (e.g., "Book", "Search"). Capitalize words if natural for the locale.
+- Tab_Bar: Maximum 1-2 words. Extremely concise.
+- Screen_Title: Emphasize the core feature.
+- Error_Message: Be polite, clear, and reassuring.
+- Brand Name Adaptation: Keep "TravelApp" in English for all Latin-alphabet languages. Adapt it for the following scripts:
+    - Japanese → トラベルアプリ
+    - Korean → 트래블앱
+    - Arabic → ترافل آب
+    - Chinese (Simplified) → 旅游应用
+
+Fallback Logic: If the source text is empty, if you do not understand the translation, or if it is impossible to translate within the character limit, output exactly: ERROR_MANUAL_REVIEW_NEEDED. Do not attempt a broken translation.
+
+Final Output Specification:
+You must return ONLY the plain text string of the localized translation. Do not wrap the output in quotes, do not include pronunciation guides, do not add notes. The text you output will be injected directly into a cell in the catalog spreadsheet.
+
+Input & Output Example:
+<input_example>
+Source Text (English): Search Flights
+Target Language Code: es-MX
+UI Category: CTA_Button
+Max Characters: 20
+</input_example>
+<output_example>
+Buscar Vuelos
+</output_example>
+```
+{% endraw %}
+
+{% endtab %}
+{% endtabs %}
+
+Para saber mais sobre as melhores práticas de prompting, consulte guias dos seguintes provedores de modelos:
 
 - [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)
 - [Anthropic](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview)
@@ -235,31 +352,31 @@ Para mais detalhes sobre as melhores práticas de prompting, consulte guias dos 
 
 ## Catálogos e campos
 
-Escolha catálogos específicos para um agente referenciar e dar ao seu agente o contexto que ele precisa para entender seus produtos e outros dados não relacionados ao usuário quando relevante. Os agentes usam ferramentas para encontrar apenas os itens relevantes e enviá-los ao LLM para minimizar o uso de tokens.
+Escolha catálogos específicos para um agente referenciar e dar ao seu agente o contexto necessário para entender seus produtos e outros dados não relacionados ao usuário quando relevante. Os agentes usam ferramentas para encontrar apenas os itens relevantes e enviá-los ao LLM para minimizar o uso de tokens.
 
-![O catálogo "restaurantes" e "Loyalty_Program" a coluna selecionada para o agente pesquisar.]({% image_buster /assets/img/ai_agent/search_catalog.png %}){: style="max-width:75%;"}
+![O catálogo "restaurants" e a coluna "Loyalty_Program" selecionados para o agente pesquisar.]({% image_buster /assets/img/ai_agent/search_catalog.png %}){: style="max-width:75%;"}
 
-## Contexto de associação de segmento
+## Contexto de associação a segmentos
 
 Você pode selecionar até cinco segmentos para o agente cruzar a associação de segmento de cada usuário quando o agente é usado em um Canvas. Vamos supor que seu agente tenha a associação de segmento selecionada para um segmento de "Usuários de Fidelidade", e o agente é usado em um Canvas. Quando os usuários entram em uma etapa do Agente, o agente pode cruzar se cada usuário é membro de cada segmento que você especificou no console do agente e usar a associação (ou não associação) de cada usuário como contexto para o LLM.
 
-![O segmento "Usuários de Fidelidade" selecionado para acesso de membros agentes.]({% image_buster /assets/img/ai_agent/segment_membership_context.png %}){: style="max-width:75%;"}
+![O segmento "Usuários de Fidelidade" selecionado para acesso de associação do agente.]({% image_buster /assets/img/ai_agent/segment_membership_context.png %}){: style="max-width:75%;"}
 
 ## Diretrizes da marca
 
-Você pode selecionar [diretrizes da marca]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines) para o seu agente seguir em suas respostas. Por exemplo, se você quiser que seu agente gere cópias de SMS para incentivar os usuários a se inscreverem em uma associação de academia, você pode usar este campo para referenciar sua diretriz motivacional em negrito pré-definida.
+Você pode selecionar [diretrizes da marca]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines) para o seu agente seguir em suas respostas. Por exemplo, se você quiser que seu agente gere textos de SMS para incentivar os usuários a se inscreverem em uma academia, você pode usar este campo para referenciar sua diretriz motivacional em negrito predefinida.
 
 ## Temperatura
 
-Se o seu objetivo é usar um agente para gerar cópias que incentivem os usuários a fazer login no seu app móvel, você pode definir uma temperatura mais alta para que seu agente seja mais criativo e use as nuances das variáveis de contexto. Se você estiver usando um agente para gerar pontuações de sentimento, pode ser ideal definir uma temperatura mais baixa para evitar qualquer especulação do agente sobre respostas negativas de pesquisas. Recomendamos testar essa configuração e revisar a saída gerada pelo agente para se adequar ao seu cenário.
+Se o seu objetivo é usar um agente para gerar textos que incentivem os usuários a fazer login no seu app móvel, você pode definir uma temperatura mais alta para que seu agente seja mais criativo e use as nuances das variáveis de contexto. Se você estiver usando um agente para gerar pontuações de sentimento, pode ser ideal definir uma temperatura mais baixa para evitar qualquer especulação do agente sobre respostas negativas de pesquisas. Recomendamos testar essa configuração e revisar a saída gerada pelo agente para se adequar ao seu cenário.
 
 {% alert note %}
-Temperaturas não são atualmente suportadas para uso com OpenAI.
+Temperaturas não são suportadas atualmente para uso com OpenAI.
 {% endalert %}
 
-## Agentes duplicados
+## Duplicar agentes
 
-Para testar melhorias ou iterações de um agente, você pode duplicar um agente e, em seguida, aplicar alterações para comparar com o original. Você também pode tratar a duplicação de agentes como controle de versão para rastrear variações nos detalhes do agente e quaisquer impactos na sua mensagem. Para duplicar um agente:
+Para testar melhorias ou iterações de um agente, você pode duplicar um agente e aplicar alterações para comparar com o original. Você também pode tratar a duplicação de agentes como controle de versão para rastrear variações nos detalhes do agente e quaisquer impactos no seu envio de mensagens. Para duplicar um agente:
 
 1. Passe o mouse sobre a linha do agente e selecione o menu <i class="fas fa-ellipsis-vertical"></i>.
 2. Selecione **Duplicar**.
@@ -269,6 +386,6 @@ Para testar melhorias ou iterações de um agente, você pode duplicar um agente
 À medida que você cria mais agentes personalizados, pode organizar a página **Gerenciamento de Agentes** arquivando agentes que não estão sendo usados ativamente. Para arquivar um agente:
 
 1. Passe o mouse sobre a linha do agente e selecione o menu <i class="fas fa-ellipsis-vertical"></i>.
-2. Selecione **Arquivo**.
+2. Selecione **Arquivar**.
 
 ![Página de Gerenciamento de Agentes com agentes arquivados.]({% image_buster /assets/img/ai_agent/archived_agents.png %})
