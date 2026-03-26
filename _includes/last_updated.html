@@ -8,16 +8,20 @@
       content container. Use this for layouts where the page title is rendered
       as part of {{ content }} or a multi_lang_include rather than as explicit
       HTML in the layout template itself.
+    bottom (bool, optional): When true, adds a modifier class so layouts can
+      place the "Last updated" text at the bottom of the main content area.
+      Use this for layouts that expect the timestamp near other footer-style
+      metadata instead of near the page title.
 {%- endcomment -%}
 
 {%- comment -%} Map language code to sitemap data file key {%- endcomment -%}
-{%- if site.language == "fr" -%}
-  {%- assign _sitemap_key = "sitemap_fr_fr" -%}
-{%- elsif site.language == "pt-br" -%}
-  {%- assign _sitemap_key = "sitemap_pt_br" -%}
+{%- assign _language_map_entry = site.data.language_map[site.language] -%}
+{%- if _language_map_entry and _language_map_entry.sitemap_suffix -%}
+  {%- assign _sitemap_suffix = _language_map_entry.sitemap_suffix -%}
 {%- else -%}
-  {%- assign _sitemap_key = "sitemap_" | append: site.language -%}
+  {%- assign _sitemap_suffix = site.language | replace: '-', '_' -%}
 {%- endif -%}
+{%- assign _sitemap_key = "sitemap_" | append: _sitemap_suffix -%}
 
 {%- assign _last_modified_ts = site.data[_sitemap_key][page.relative_path] -%}
 {%- if _last_modified_ts -%}
