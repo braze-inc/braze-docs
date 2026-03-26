@@ -3817,6 +3817,10 @@ validurls['/docs/user_guide/engagement_tools/templates_and_media/faqs/'] = '/doc
 
 // BrazeAI > Operator
 validurls['/docs/user_guide/brazeai/operator/getting_started/'] = '/docs/user_guide/brazeai/operator/';
+
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/context_and_event_properties/#timestamps-for-triggers';
+validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/context_and_event_properties/';
+
 // validurls['OLD'] = 'NEW';
 validurls['/docs/user_guide/personalization_and_dynamic_content/'] = '/docs/user_guide/messaging/design_and_edit/personalize/';
 validurls['/docs/user_guide/personalization_and_dynamic_content'] = '/docs/user_guide/messaging/design_and_edit/personalize/';

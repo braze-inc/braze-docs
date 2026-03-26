@@ -231,7 +231,7 @@ erDiagram
 ```
 
 - `PK` = clave primaria
-- `FK` = clave ajena
+- `FK` = clave foránea
 
 ## Tablas de relaciones
 
@@ -267,7 +267,7 @@ erDiagram
         "COUNTRY": "[PII] Country of the user",
         "TIMEZONE": "Time zone of the user",
         "LANGUAGE": "[PII] Language of the user",
-        "ABORT_TYPE": "Type of abort, one of ['liquid_abort_message', 'quiet_hours', 'rate_limit']",
+        "ABORT_TYPE": "Type of abort. Refer to the abort types reference for a full list of values.",
         "ABORT_LOG": "[PII] Log message describing abort details (up to 128 chars)",
         "SF_CREATED_AT": "when this event was picked up by the Snowpipe",
         "SEND_ID": "Message send ID this message belongs to"

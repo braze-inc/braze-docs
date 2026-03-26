@@ -55,7 +55,7 @@ Usuários limitados têm permissões específicas que permitem gerenciar certos 
 
 | Tipo de usuário limitado | Descrição |
 | --- | --- |
-| Administrador do Espaço de Trabalho | Os Administradores do Espaço de Trabalho têm permissões específicas para gerenciar Espaços de Trabalho, mas não têm a mesma autoridade que os Administradores da Empresa. Usuários Limitados podem herdar permissões semelhantes às dos Administradores do Espaço de Trabalho se tiverem as permissões necessárias marcadas. |
+| Administrador do Espaço de Trabalho | Os Administradores do Espaço de Trabalho têm permissões específicas para gerenciar espaços de trabalho, mas não têm a mesma autoridade que os Administradores da Empresa. Usuários limitados podem herdar permissões semelhantes às dos Administradores do Espaço de Trabalho se tiverem as permissões necessárias marcadas. |
 | Administrador (Administrador da Empresa) | Os Administradores da Empresa têm permissões mais amplas, incluindo a capacidade de excluir usuários do dashboard. No entanto, eles não podem excluir suas próprias contas e devem entrar em contato com outro Administrador da Empresa para essa ação. |
 | Acesso somente para visualização | Para acessar partes do dashboard, como a página de Campanhas, os usuários devem ter permissões de visualização atribuídas a eles.
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -158,10 +158,9 @@ Para baixar uma lista dos seus usuários e suas permissões, acesse **Configura�
 | Ver informações de faturamento                            | Ver detalhes de cobrança |
 | Ver atributos personalizados marcados como IPI            | Ver atributos personalizados marcados como IPI |
 | Ver IPI                                        | Ver IPI |
-| Ver perfis de usuário em conformidade com IPI                | Acessar pesquisa de usuários e visualizar perfis de usuários com IPI ocultada |
+| Ver perfis de usuário (IPI ocultada)               | Acessar pesquisa de usuários e visualizar perfis de usuários com IPI ocultada |
 | Ver dados de uso                                 | Ver dados de uso |
-| Mesclar usuários duplicados                           | Combinar usuários duplicados em um único usuário. As duplicatas são removidas após a mesclagem. |
-| Prévia de usuários duplicados                         | Prévia dos perfis de usuário que são duplicatas |
+| Mesclar usuários duplicados                           | Visualizar prévia e combinar usuários duplicados em um único usuário. As duplicatas são removidas após a mesclagem. |
 | Ver modelos de Canvas                           | Ver modelos de Canvas |
 | Arquivar modelos de Canvas                        | Mover modelos de Canvas para o arquivo |
 | Lançar blocos de conteúdo                           | Lançar blocos de conteúdo |
@@ -284,8 +283,6 @@ Para baixar uma lista dos seus usuários e suas permissões, acesse **Configura�
 | Exportar dados de usuários                                | Baixar usuários do dashboard |
 | Editar dados de usuários                                  | Criar e atualizar dados de usuários |
 | Ver mesclagem de usuários                                | Ver uma lista de registros de mesclagem de usuários |
-| Ver registros de exclusão de usuários	            	  | Ver registros de exclusão de usuários |
-| Excluir usuários do dashboard	                  | Excluir permanentemente usuários do dashboard individualmente ou em massa. |      
 | Ver agentes de IA personalizados                           | Permite que os usuários vejam agentes de IA personalizados. |
 | Editar agentes de IA personalizados                           | Permite que os usuários criem e atualizem agentes de IA personalizados. |
 | Arquivar agentes de IA personalizados                        | Permite que os usuários arquivem agentes de IA personalizados. |

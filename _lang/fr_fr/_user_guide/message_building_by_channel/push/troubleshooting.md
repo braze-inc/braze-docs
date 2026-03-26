@@ -26,9 +26,9 @@ Vous rencontrez des difficultés de distribution avec vos notifications push ? P
 
 #### Statut d'abonnement aux push
 
-Les notifications push ne peuvent être envoyées qu'aux utilisateurs abonnés ou ayant explicitement donné leur accord. Vérifiez votre profil utilisateur dans l'onglet [Engagement]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) de la section **Profil utilisateur** pour confirmer que vous êtes activement inscrit aux push pour l'espace de travail que vous testez. Si vous êtes inscrit à plusieurs applications, vous les trouverez dans le champ **Push enregistré pour** :
+Les notifications push ne peuvent être envoyées qu'aux utilisateurs abonnés ou ayant explicitement donné leur accord. Vérifiez votre profil utilisateur dans l'onglet [Engagement]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) de la section **Profil utilisateur** pour confirmer que vous êtes activement inscrit aux push pour l'espace de travail que vous testez. Si vous êtes inscrit à plusieurs applications, vous les trouverez dans le champ **Push Registered For** :
 
-![Push enregistré pour]({% image_buster /assets/img_archive/trouble1.png %})
+![Push Registered For]({% image_buster /assets/img_archive/trouble1.png %})
 
 Vous pouvez également exporter les profils utilisateur à l'aide des endpoints d'exportation de Braze :
 - [Utilisateurs par identifiant]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier)
@@ -71,12 +71,30 @@ Un jeton de notification push est un identifiant que les expéditeurs utilisent 
 #### Type de notification push
 
 Vérifiez que vous utilisez le bon type de notification push. Par exemple, si vous souhaitez cibler un FireTV, vous devez utiliser une notification push Kindle et non une campagne push Android. De même, si vous souhaitez cibler un appareil Android, utilisez une notification push Android et non une campagne push iOS. Consultez les articles suivants pour en savoir plus sur les flux de travail dans Braze pour :
-- [Notification push d'Apple]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=swift)
+- [Apple Push Notification]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=swift)
 - [Firebase Cloud Messaging]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=android)
 
 #### Application actuelle
 
 Lorsque vous testez les envois push avec des utilisateurs internes, assurez-vous que l'utilisateur qui doit recevoir la notification push est actuellement connecté à l'application concernée. Dans le cas contraire, l'utilisateur pourrait ne pas recevoir la notification push, ou recevoir une notification push pour laquelle vous pensez qu'il n'est pas segmenté.
+
+## Cliquer sur une notification push n'ouvre pas l'application
+
+Si cliquer sur une notification push n'ouvre pas votre application, vérifiez les points suivants en fonction de votre plateforme.
+
+### Android
+
+1. **Vérifiez le comportement au clic :** Confirmez que la campagne est configurée pour ouvrir l'application lorsqu'on clique dessus.
+2. **Vérifiez la gestion des liens profonds :** Dans votre fichier `braze.xml`, vérifiez si `com_braze_handle_push_deep_links_automatically` est défini sur `true` ou `false`.
+   - S'il est défini sur `true`, le SDK Braze gère directement les liens profonds et l'application devrait s'ouvrir normalement.
+   - S'il est défini sur `false`, votre application a besoin d'un récepteur de diffusion pour écouter et gérer les intentions de réception et d'ouverture des push. Vérifiez que ce récepteur est correctement implémenté.
+3. **Collectez les journaux détaillés :** [Activez la journalisation détaillée]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging), reproduisez le problème et fournissez les journaux ainsi que vos fichiers `braze.xml` et `AndroidManifest.xml` à l'assistance Braze.
+
+### iOS
+
+1. **Vérifiez le comportement au clic :** Confirmez que la campagne est configurée pour ouvrir l'application lorsqu'on clique dessus.
+2. **Vérifiez l'intégration push :** La création de liens profonds depuis un push vers l'application est automatiquement gérée par l'[intégration push standard]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) de Braze. Confirmez que l'intégration est correctement implémentée, y compris toute gestion personnalisée des délégués.
+3. **Collectez les journaux détaillés :** [Activez la journalisation détaillée]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging), reproduisez le problème et fournissez les journaux à l'assistance Braze.
 
 ## Les clics push s'ouvrent de manière inattendue dans l'application
 
@@ -145,9 +163,9 @@ table {
 
 {:start="4"}
 4. Dans DevTools, accédez à l'onglet **Application**.
-5. Dans la barre latérale, sélectionnez **Stockage**.
-6. Sélectionnez **Effacer les données du site**.
-7. Chrome vous demandera de recharger la page pour appliquer les paramètres mis à jour. Sélectionnez **Recharger**.
+5. Dans la barre latérale, sélectionnez **Storage**.
+6. Sélectionnez **Clear site data**.
+7. Chrome vous demandera de recharger la page pour appliquer les paramètres mis à jour. Sélectionnez **Reload**.
 
 Vos autorisations push sont maintenant réinitialisées. Ouvrez un nouvel onglet vers votre site et essayez.
 
@@ -155,17 +173,17 @@ Vos autorisations push sont maintenant réinitialisées. Ouvrez un nouvel onglet
 
 Si une notification de votre site est visible dans le tiroir de notifications de votre Android :
 
-1. Depuis la notification push, appuyez sur <i class="fas fa-cog" title="Paramètres"></i> et sélectionnez **Paramètres du site**.
-2. Depuis **Paramètres du site**, appuyez sur **Effacer et réinitialiser**.
+1. Depuis la notification push, appuyez sur <i class="fas fa-cog" title="Paramètres"></i> et sélectionnez **Site settings**.
+2. Depuis **Site settings**, appuyez sur **Clear & Reset**.
 
 Si vous n'avez pas de notification de votre site ouverte :
 
 1. Ouvrez Chrome sur Android.
 2. Appuyez sur le menu <i class="fas fa-ellipsis-vertical"></i>.
-3. Allez dans **Paramètres** > **Paramètres du site** > **Notifications**.
-4. Vérifiez que les notifications sont configurées sur **Demander avant d'envoyer (recommandé)**.
+3. Allez dans **Settings** > **Site Settings** > **Notifications**.
+4. Vérifiez que les notifications sont configurées sur **Ask before sending (recommended)**.
 5. Trouvez votre site dans la liste.
-6. Sélectionnez l'entrée et appuyez sur **Effacer et réinitialiser**.
+6. Sélectionnez l'entrée et appuyez sur **Clear and Reset**.
 
 Vos autorisations push sont maintenant réinitialisées. Ouvrez un nouvel onglet vers votre site et essayez.
 
@@ -175,8 +193,8 @@ Vos autorisations push sont maintenant réinitialisées. Ouvrez un nouvel onglet
 ### Réinitialiser Firefox sur ordinateur
 
 1. À côté de l'URL de votre site, sélectionnez <i class="fa-solid fa-circle-info" alt="info icon"></i> ou <i class="fas fa-lock" alt="lock icon"></i>.
-2. Sous **Autorisations**, à côté de **Recevoir des notifications**, sélectionnez <i class="fa-solid fa-circle-xmark" title="Effacer cette autorisation et redemander"></i> pour supprimer les autorisations de notification.
-3. Dans le même menu, sélectionnez **Effacer les cookies et les données du site**.
+2. Sous **Permissions**, à côté de **Receive Notifications**, sélectionnez <i class="fa-solid fa-circle-xmark" title="Clear this permission and ask again"></i> pour supprimer les autorisations de notification.
+3. Dans le même menu, sélectionnez **Clear Cookies and Site Data**.
 4. Dans la boîte de dialogue de confirmation, sélectionnez **OK**.
 
 Vos autorisations push sont maintenant réinitialisées. Ouvrez un nouvel onglet vers votre site et essayez.
@@ -195,13 +213,13 @@ Ces étapes s'appliquent uniquement à macOS, car Apple ne prend pas en charge W
 {% endalert %}
 
 1. Ouvrez Safari.
-2. Depuis la [barre de menus sur Mac](https://support.apple.com/guide/mac-help/whats-in-the-menu-bar-mchlp1446/mac), allez dans **Safari** > **Réglages** > **Sites web** > **Notifications**.
+2. Depuis la [barre de menus sur Mac](https://support.apple.com/guide/mac-help/whats-in-the-menu-bar-mchlp1446/mac), allez dans **Safari** > **Settings** > **Websites** > **Notifications**.
 3. Sélectionnez votre site dans la liste.
-4. Sélectionnez **Supprimer** pour supprimer les autorisations de notification pour le site.
-5. Ensuite, allez dans **Confidentialité** > **Gérer les données du site web**.
+4. Sélectionnez **Remove** pour supprimer les autorisations de notification pour le site.
+5. Ensuite, allez dans **Privacy** > **Manage Website Data**.
 6. Sélectionnez votre site dans la liste.
-7. Sélectionnez **Supprimer** ou, pour supprimer toutes les données du site, sélectionnez **Tout supprimer**.
-8. Sélectionnez **Terminé**.
+7. Sélectionnez **Remove** ou, pour supprimer toutes les données du site, sélectionnez **Remove All**.
+8. Sélectionnez **Done**.
 
 Vos autorisations push sont maintenant réinitialisées. Ouvrez un nouvel onglet vers votre site et essayez.
 
