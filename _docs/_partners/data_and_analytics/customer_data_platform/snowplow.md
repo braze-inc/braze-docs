@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Snowplow
 
-> [Snowplow](https://snowplowanalytics.com) is a scalable open-source platform for rich, high-quality, low-latency data collection. It is designed to collect high-quality, complete behavioral data for enterprise businesses.
+> [Snowplow](https://snowplow.io) is a scalable open-source platform for rich, high-quality, low-latency data collection. It is designed to collect high-quality, complete behavioral data for enterprise businesses.
 
 _This integration is maintained by Snowplow._
 
@@ -29,7 +29,7 @@ Leverage Snowplow's rich behavioral data to drive powerful customer-centric inte
 | Requirement | Description |
 | ----------- | ----------- |
 | Snowplow pipeline | A Snowplow pipeline needs to be up and running. |
-| Google Tag Manager server-side | GTM-SS needs to be deployed and the [Snowplow client for GTM-SS](https://docs.snowplowanalytics.com/docs/forwarding-events-to-destinations/forwarding-events/google-tag-manager-server-side/snowplow-client-for-gtm-ss/) set up. |
+| Google Tag Manager server-side | GTM-SS needs to be deployed and the [Snowplow client for GTM-SS](https://docs.snowplow.io/docs/forwarding-events-to-destinations/forwarding-events/google-tag-manager-server-side/snowplow-client-for-gtm-ss/) set up. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -81,7 +81,7 @@ The following table lists the required tag parameters you must include in your B
 
 ### Event mapping
 
-The following table lists event mapping options concerning the Snowplow event as claimed by the [Snowplow client](https://docs.snowplowanalytics.com/docs/forwarding-events-to-destinations/forwarding-events/google-tag-manager-server-side/snowplow-client-for-gtm-ss/).
+The following table lists event mapping options concerning the Snowplow event as claimed by the [Snowplow client](https://docs.snowplow.io/docs/forwarding-events-to-destinations/forwarding-events/google-tag-manager-server-side/snowplow-client-for-gtm-ss/).
 
 | Mapping option | Description |
 | --------- | ----------- |
