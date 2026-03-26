@@ -54,7 +54,7 @@ Default to English Display Name
 {% endtab %}
 {% tab Reply-To Address %}
 
-Adding an email address in this section allows you to select it as a reply-to address for your email campaign. You can also make an email address the default one by selecting **Make Default**. These email addresses will be available in the **Edit Sending Info** options as you compose your email campaign.
+Adding an email address in this section allows you to select it as a reply-to address for your email campaign. You can also make an email address the default one by selecting **Make Default**. These email addresses will be available in the **Sending Info** options as you compose your email campaign.
 
 !["Reply-To Address" section with fields to enter multiple reply-to addresses.]({% image_buster /assets/img/email_settings/reply_to_address.png %}){: style="max-width:75%;" }
 
