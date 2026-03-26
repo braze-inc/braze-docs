@@ -26,7 +26,7 @@ Yes. Both static and dynamic parameters can be added.
 
 ### How long do shortened URLs remain valid?
 
-Personalized URLs are valid for two months from the time of URL registration.
+Personalized URLs are valid for two months from the time of URL registration. For [unified link shortening]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/link_shortening/?sdktab=unified), which does not have a static or personalized distinction, all links are valid for nine weeks.
 
 ### Does the Braze SDK need to be installed in order to shorten links?
 
