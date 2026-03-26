@@ -4,7 +4,7 @@ Você pode integrar e personalizar o SDK Swift da Braze usando o Swift Package M
 
 ### Pré-requisitos
 
-Antes de começar, verifique se seu ambiente é suportado pela [última versão do SDK Swift da Braze](https://github.com/braze-inc/braze-swift-sdk#version-information).
+Antes de começar, verifique se seu ambiente é compatível com a [última versão do SDK Swift da Braze](https://github.com/braze-inc/braze-swift-sdk#version-information).
 
 ### Etapa 1: Instale o SDK Swift da Braze
 
@@ -65,7 +65,7 @@ Para um guia completo, consulte o [Guia de Introdução do CocoaPods](https://gu
 $ sudo gem install cocoapods
 ```
 
-Se você ficar preso, consulte o [Guia de Solução de Problemas do CocoaPods](http://guides.cocoapods.org/using/troubleshooting.html).
+Se você ficar preso, confira o [Guia de Solução de Problemas do CocoaPods](http://guides.cocoapods.org/using/troubleshooting.html).
 
 #### Etapa 1.2: Construindo o arquivo de pod
 
@@ -109,7 +109,7 @@ O SDK Braze SWIFT separa os recursos em bibliotecas independentes para fornecer 
 
 {: .ws-td-nw-1}
 
-#### Etapa 1.3: Instale o SDK
+#### Etapa 1.3: Instalar o SDK
 
 Para instalar o Braze SDK CocoaPods, navegue até o diretório do seu projeto de app do Xcode em seu terminal e execute o seguinte comando:
 ```
@@ -118,7 +118,7 @@ pod install
 
 Nesse ponto, você deve conseguir abrir o novo espaço de trabalho do projeto Xcode criado pelo CocoaPods. Use esse espaço de trabalho do Xcode em vez de seu projeto do Xcode.
 
-![Uma pasta Braze Example expandida para mostrar o novo `BrazeExample.workspace`.]({% image_buster /assets/img/braze_example_workspace.png %})
+![Uma pasta de Exemplo da Braze expandida para mostrar o novo \`BrazeExample.workspace\`.]({% image_buster /assets/img/braze_example_workspace.png %})
 
 #### Atualizando o SDK usando CocoaPods
 
@@ -178,10 +178,10 @@ Em seguida, integre as **Dinâmicas** ou **Estáticas** XCFrameworks que você [
 
 No seu projeto Xcode, selecione seu alvo de build, então **Geral**. Em **Frameworks, Bibliotecas e Conteúdo Incorporado**, arraste e solte os [arquivos que você preparou anteriormente](#swift_step-3-prepare-your-files).
 
-!["Um exemplo de projeto Xcode com cada biblioteca Braze configurada para 'Embed & Sign.'"]({% image_buster /assets/img/swift/sdk_integration/embed-and-sign.png %})
+!["Um projeto de exemplo do Xcode com cada biblioteca da Braze configurada para 'Incluir & Assinatura.'"]({% image_buster /assets/img/swift/sdk_integration/embed-and-sign.png %})
 
 {% alert note %}
-A partir do SDK Swift 12.0.0, você deve sempre selecionar **Embed & Sign** para os XCFrameworks da Braze, tanto para as variantes estáticas quanto dinâmicas. Isso garante que os recursos dos frameworks sejam devidamente incorporados no pacote do seu app.
+A partir do SDK Swift 12.0.0, você deve sempre selecionar **Incorporar & Assinatura** para os XCFrameworks do Braze, tanto para as variantes estáticas quanto dinâmicas. Isso garante que os recursos dos frameworks sejam devidamente incorporados no pacote do seu app.
 {% endalert %}
 
 {% alert tip %}
@@ -204,18 +204,23 @@ empty_swift_file.swift
 {% endtab %}
 {% endtabs local %}
 
-### Etapa 2: Configure a inicialização atrasada (opcional)
+### Etapa 2: Configurar inicialização atrasada (opcional)
 
-Você pode escolher atrasar quando o SDK Braze Swift é inicializado, o que é útil se seu app precisar carregar configurações ou esperar pelo consentimento do usuário antes de iniciar o SDK. A inicialização atrasada garante que as notificações por push do Braze sejam enfileiradas até que o SDK esteja pronto.
+Você pode optar por atrasar quando o SDK Swift do Braze é inicializado, o que é útil se seu app precisar carregar uma configuração ou esperar pelo consentimento do usuário antes de iniciar o SDK. A inicialização atrasada garante que as notificações por push do Braze e os tokens de push recebidos antes da inicialização do SDK sejam enfileirados e processados assim que o SDK for inicializado.
 
-Para ativar isso, chame `Braze.prepareForDelayedInitialization()` o mais cedo possível—idealmente dentro ou antes do seu `application(_:didFinishLaunchingWithOptions:)`.
+Para usar a inicialização atrasada, a versão mínima do SDK do Braze é necessária:
+{% sdk_min_versions swift:11.2.0 %}
+
+#### Etapa 2.1: Prepare-se para a inicialização atrasada
+
+Chame `Braze.prepareForDelayedInitialization()` o mais cedo possível no ciclo de vida do seu app, idealmente em ou antes de `application(_:didFinishLaunchingWithOptions:)`. Isso garante que as notificações por push recebidas antes da inicialização do SDK sejam devidamente capturadas e processadas posteriormente.
 
 {% alert note %}
 Isso se aplica apenas às notificações por push do Braze. Outras notificações por push são tratadas normalmente pelos delegados do sistema.
 {% endalert %}
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab Swift %}
 {% subtabs local %}
 {% subtab UIKit %}
 ```swift
@@ -258,7 +263,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Objective C %}
+{% tab Objective-C %}
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Prepare the SDK for delayed initialization
@@ -272,14 +277,121 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 {% endtab %}
 {% endtabs %}
 
+Ao usar a inicialização atrasada, a automação de notificações por push é implicitamente ativada. Você pode [personalizar a automação de push](#swift_step-23-customize-push-automation-optional) passando um parâmetro `pushAutomation`.
+
+#### Etapa 2.2: Configurar o comportamento da análise de push (opcional)
+
+Quando a inicialização atrasada está ativada, as análises de push são enfileiradas por padrão. No entanto, você pode optar por enfileirar ou descartar explicitamente as análises de push.
+
+##### Enfileirar explicitamente
+
+Para enfileirar explicitamente as análises de push (comportamento padrão), passe `.queue` para o parâmetro `analyticsBehavior`. Eventos de análises de push que são enfileirados antes da inicialização serão processados e enviados ao servidor na inicialização.
+
+{% tabs local %}
+{% tab Swift %}
+```swift
+Braze.prepareForDelayedInitialization(analyticsBehavior: .queue)
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+[Braze prepareForDelayedInitializationWithAnalyticsBehavior:BRZPushEnqueueBehaviorQueue];
+```
+{% endtab %}
+{% endtabs %}
+
+##### Remover
+
+Para remover a análise de push recebida antes da inicialização do SDK, passe `.drop` para o parâmetro `analyticsBehavior`. Com esta opção, qualquer evento de análise de push que ocorrer enquanto o SDK não estiver inicializado será ignorado.
+
+{% tabs local %}
+{% tab Swift %}
+```swift
+Braze.prepareForDelayedInitialization(analyticsBehavior: .drop)
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+[Braze prepareForDelayedInitializationWithAnalyticsBehavior:BRZPushEnqueueBehaviorDrop];
+```
+{% endtab %}
+{% endtabs %}
+
+#### Etapa 2.3: Personalizar automação de push (opcional)
+
+Você pode personalizar a configuração da automação de push passando um parâmetro `pushAutomation`. Por padrão, todos os recursos de automação estão habilitados, exceto `requestAuthorizationAtLaunch`.
+
+{% tabs local %}
+{% tab SWIFT %}
+```swift
+// Enable all push automation
+featuresBraze.prepareForDelayedInitialization(pushAutomation: true)
+
+// Or customize specific automation options
+let automation = Braze.Configuration.Push.Automation()
+automation.automaticSetup = true
+automation.requestAuthorizationAtLaunch = false
+Braze.prepareForDelayedInitialization(pushAutomation: automation)
+```
+{% endtab %}
+
+{% tab OBJECTIVE-C %}
+```objc
+// Enable all push automation features
+[Braze prepareForDelayedInitializationWithPushAutomation:[[BRZConfigurationPushAutomation alloc] initWithAutomationEnabled:YES]];
+
+// Or customize specific automation options
+BRZConfigurationPushAutomation *automation = [[BRZConfigurationPushAutomation alloc] init];
+automation.automaticSetup = YES;
+automation.requestAuthorizationAtLaunch = NO;
+[Braze prepareForDelayedInitializationWithPushAutomation:automation analyticsBehavior:BRZPushEnqueueBehaviorQueue];
+```
+{% endtab %}
+{% endtabs %}
+
+#### Etapa 2.4: Inicializar o SDK
+
+Após o período de postergação escolhido (por exemplo, após buscar a configuração de um servidor ou após o consentimento do usuário), inicialize o SDK normalmente:
+
+{% tabs local %}
+{% tab SWIFT %}
+```swift
+func initializeBraze() {  
+  let configuration = Braze.Configuration(apiKey: "YOUR-API-KEY", endpoint: "YOUR-ENDPOINT")    
+  
+  // Enable push automation to match the delayed initialization configuration  
+  configuration.push.automation = true    
+  let braze = Braze(configuration: configuration)    
+  
+  // Store the Braze instance for later use 
+  AppDelegate.braze = braze
+}
+```
+{% endtab %}
+{% tab OBJECTIVE-C %}
+```objc
+- (void)initializeBraze {
+  BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:@"YOUR-API-KEY" endpoint:@"YOUR-ENDPOINT"];
+  
+  // Enable push automation to match the delayed initialization configuration
+  configuration.push.automation = [[BRZConfigurationPushAutomation alloc] initWithAutomationEnabled:YES];
+  Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
+  
+  // Store the Braze instance for later use
+  AppDelegate.braze = braze;
+}
+```
+{% endtab %}
+{% endtabs %}
+
 {% alert note %}
-[`Braze.prepareForDelayedInitialization(pushAutomation:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/preparefordelayedinitialization(pushautomation:)) aceita um parâmetro `pushAutomation` opcional. Se definido como `nil`, todos os recursos de automação de push são ativados, exceto a solicitação de autorização de push na inicialização.
+Quando o SDK estiver inicializado, todas as notificações push enfileiradas, tokens de push e links profundos são processados automaticamente.
 {% endalert %}
 
 ### Etapa 3: Atualize seu delegado do app
 
 {% alert important %}
-O seguinte assume que você já adicionou um `AppDelegate` ao seu projeto (que não são gerados por padrão). Se você não planeja usar um, certifique-se de inicializar o SDK Braze o mais cedo possível, como durante a inicialização do app.
+O seguinte assume que você já adicionou um `AppDelegate` ao seu projeto (que não são gerados por padrão) e que você não está usando o recurso de inicialização atrasada. Se você não planeja usar um `AppDelegate`, certifique-se de inicializar o SDK Braze o mais cedo possível, como durante o lançamento do app. Se você estiver usando o recurso de inicialização atrasada, consulte [Etapa 2.4](#swift_step-24-initialize-the-sdk) para inicializar o SDK e ignore esta etapa.
 {% endalert %}
 
 {% subtabs local %}
@@ -354,13 +466,15 @@ Atualize `YOUR-APP-IDENTIFIER-API-KEY` e `YOUR-BRAZE-ENDPOINT` com o valor corre
 
 ### Registro
 
+Para uma visão centralizada em todas as plataformas, veja [Registro detalhado]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging). Para aprender a interpretar a saída do log, veja [Lendo logs detalhados]({{site.baseurl}}/developer_guide/sdk_integration/reading_verbose_logs).
+
 #### Níveis de registro
 
-O nível de log padrão para o SDK Braze Swift é `.error`—é também o nível mínimo suportado quando os logs estão ativados. Esta é a lista completa de níveis de log:
+O nível de log padrão para o SDK Braze Swift é `.error`—é também o nível mínimo suportado quando os logs estão habilitados. Esta é a lista completa de níveis de log:
 
 | Swift       | Objective C              | Descrição                                                  |
 | ----------- | ------------------------ | ------------------------------------------------------------ |
-| `.debug`    | `BRZLoggerLevelDebug`    | (Padrão) Registre informações de depuração + `.info` + `.error`.    |
+| `.debug`    | `BRZLoggerLevelDebug`    | Registrar informações de depuração + `.info` + `.error`.              |
 | `.info`     | `BRZLoggerLevelInfo`     | Registre informações gerais do SDK (alterações de usuário, etc.) + `.error`. |
 | `.error`    | `BRZLoggerLevelError`    | Erros de registro.                                                  |
 | `.disabled` | `BRZLoggerLevelDisabled` | Não ocorre nenhum registro.                                           |
@@ -385,7 +499,7 @@ let braze = Braze(configuration: configuration)
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:self.APIKey

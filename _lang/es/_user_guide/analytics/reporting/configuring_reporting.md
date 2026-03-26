@@ -1,6 +1,6 @@
 ---
 nav_title: Configurar los informes
-article_title: Configurar los informes
+article_title: Configurar informes
 page_order: 1.1
 page_type: reference
 description: "Esta página describe el informe de análisis generado automáticamente por Braze."
@@ -14,10 +14,10 @@ tool: Reporting
 
 ## Suscribirse a los informes
 
-Puedes suscribirte a este informe en la página **Preferencias de notificación**. 
+Puedes suscribirte a este informe desde la página **Preferencias de notificación**. 
 
-1. Ve a **Configuración** > **Configuración de administración** > **Preferencias de notificación**. 
-2. Selecciona el **Informe Semanal de Análisis** y añádase a los destinatarios de la lista.
+1. Ve a **Configuración** > **Configuración del administrador** > **Preferencias de notificación**. 
+2. Selecciona el **Informe analítico semanal** y añádete a la lista de destinatarios.
 
 ## Añadir eventos personalizados a los informes
 

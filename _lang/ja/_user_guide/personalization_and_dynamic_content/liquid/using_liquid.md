@@ -7,9 +7,8 @@ search_rank: 2
 ---
 
 # [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}リキッドを使用
-# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}リキッドを使用
 
-> この記事では、さまざまなユーザー属性を使用して、メッセージングにダイナミックな個人情報を挿入する方法を紹介する。
+> ここでは、さまざまなユーザー 属性を使用して、メッセージングに個人情報をダイナミックな挿入する方法について説明します。
 
 Liquid は、Shopify が開発した Ruby で書かれているオープンソースのテンプレート言語です。Brazeでこれを使えば、ユーザープロファイルのデータをメッセージングに取り込んだり、そのデータをカスタマイズしたりすることができる。例えば、ユーザーのサブスクリプションアニバーサリーの日付に基づいて異なるオファーを送信するなど、条件付きメッセージを作成するためにLiquidタグを使用することができる。さらに、フィルターを使用してデータを操作できます。例えばユーザーの登録日をタイムスタンプから「January 15, 2022」のような読みやすい形式にフォーマットできます。Liquid の構文とその機能の詳細については、「[サポートされているパーソナライゼーションタグ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)」を参照してください。
 
@@ -36,6 +35,10 @@ Hi Janet, thanks for using the App!
 ```
 Hi Valued User, thanks for using the App!
 ```
+
+{% alert important %}
+HTML コメント(`<!-- -->`) は、液体が読み込まれる前に削除されるため、HTML コメント内のLiquidタグs **do not** はメッセージ内にレンダリングされます。適切にレンダリングするには、使用するすべてのLiquidタグがHTML注釈の外にあることを確認します。
+{% endalert %}
 
 ## 代用可能な値
 
@@ -65,6 +68,103 @@ Liquid は特定の構造 (構文) に従います。ダイナミックなパー
 1. **Braze では直線引用符を使用する:**曲線引用符 (**' '**) と直線引用符 (**' '**) には違いがあります。Braze の Liquid では直線引用符 (**' '**) を使用してください。特定のテキストエディターからコピーして貼り付けると、曲線引用符が表示されることがあります。これが、Liquid で問題を引き起こす可能性があります。Brazeのダッシュボードに直接見積もりを入力するのであれば、問題ないだろう！
 2. **中括弧はペアで使用する:**中括弧には開き括弧と閉じ括弧の両方 **{ }** が必ず必要です。必ず中括弧を使うこと！
 3. **ステートメントが対になっている場合：**それぞれの `if` について、`if` ステートメントが終了したことを示す `endif` が必要です。
+4. **変数名にはASCII 文字を使用する必要があります。**流動変数名(`assign` または`capture` で作成) は、ASCII 文字、数字、およびアンダースコアのみをサポートします。Braze パーソナライゼーション 属性の名前(`custom_attribute.${...}`または`event_properties.${...}`内)には、非ASCII文字を含めることができます。
+
+#### 演算子とフィルターの使用場所
+
+演算子(`==`、`!=`、`>`、`and`、`or`など)およびフィルターs(`| size`、`| plus`など)は、それぞれ特定のLiquid コンテキストでのみ使用できます。
+
+| コンテキスト | 演算子 | フィルター |
+|-----------|-----------|---------|
+| `assign` | サポートされていない | サポート |
+| `if`, `elsif`、 `unless` | サポート | サポートされていない |
+| `case`, `when` | サポートされていない | サポートされていない |
+| `for` | サポートされていない | サポートされていない |
+| 配列アクセス(`[ ]`) | サポートされていない | サポートされていない |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+フィルター s に対応していないコンテキストでフィルターのed 値が必要な場合は、まずその結果を変数に割り当てます。
+
+{% raw %}
+
+##### フィルターの結果を条件付きで使用する
+
+条件文にフィルターを直接的に使用することはできません。これは正しくありません。
+
+```liquid
+{% if my_array | size > 3 %}
+You have more than 3 items!
+{% endif %}
+```
+
+代わりに、フィルターの結果を変数に割り当てます。
+
+```liquid
+{% assign array_size = my_array | size %}
+{% if array_size > 3 %}
+You have more than 3 items!
+{% endif %}
+```
+
+##### フィルターの結果をforループに使用する
+
+`for` ループ内のイテラブルへのフィルターはアプリできません。これは正しくありません。
+
+```liquid
+{% for item in my_array | reverse %}
+{{ item }}
+{% endfor %}
+```
+
+代わりに、フィルターのed 値を変数に割り当てます。
+
+```liquid
+{% assign reversed = my_array | reverse %}
+{% for item in reversed %}
+{{ item }}
+{% endfor %}
+```
+
+##### 配列へのアクセスにフィルターを使用する
+
+角かっこ内のフィルターは使用できません。これは正しくありません。
+
+```liquid
+{{ my_array[my_var | minus: 1] }}
+```
+
+代わりに、まずフィルターのed を割り当てます。
+
+```liquid
+{% assign adjusted_index = my_var | minus: 1 %}
+{{ my_array[adjusted_index] }}
+```
+
+##### 比較結果を変数に格納する
+
+`assign` 文で演算子を使用することはできません。これは正しくありません。
+
+```liquid
+{% assign is_vip = total_spend > 100 %}
+{% if is_vip %}
+Welcome to the VIP lounge!
+{% endif %}
+```
+
+代わりに、条件付きを使用して変数を設定します。
+
+```liquid
+{% assign is_vip = false %}
+{% if total_spend > 100 %}
+{% assign is_vip = true %}
+{% endif %}
+
+{% if is_vip %}
+Welcome to the VIP lounge!
+{% endif %}
+```
+
+{% endraw %}
 
 #### デフォルト属性とカスタム属性
 
@@ -72,7 +172,6 @@ Liquid は特定の構造 (構文) に従います。ダイナミックなパー
 
 メッセージに `{{${first_name}}}` を含めると、メッセージの送信時にユーザーの名 (ユーザープロファイルから取得) に置き換えられます。他のデフォルトユーザー属性でも同じフォーマットを使うことができる。
 
-カスタム属性の値を使用する場合は、名前空間"custom_attribute" を変数に追加する必要があります。例えば、「zip code」というカスタム属性を使用するには、メッセージに `{{custom_attribute.${zip code}}}` を含めます。
 カスタム属性の値を使用する場合は、名前空間"custom_attribute" を変数に追加する必要があります。例えば、「zip code」というカスタム属性を使用するには、メッセージに `{{custom_attribute.${zip code}}}` を含めます。
 
 ### タグの挿入
@@ -83,21 +182,7 @@ Liquid は特定の構造 (構文) に従います。ダイナミックなパー
 
 #### 二重括弧の例外
 
-`{% assign %}` や`{% if %}` など、別のリキッドタグ内でタグを使用する場合は、二重括弧または括弧なしのいずれかを使用できます。タグが独立している場合のみ、二重のブラケットで囲む必要があります。わかりやすくするために、常にダブルブラケットを使用できます。 
-
-次のタグはすべて正しいです。
-
-```liquid
-{% if custom_attribute.${Number_Game_Attended} == 1 %}
-{% if {{custom_attribute.${Number_Game_Attended}}} == 1 %}
-
-{% assign value_one = {{custom_attribute.${one}}} %}
-{% assign value_one = custom_attribute.${one} %}
-```
-
-#### 二重括弧の例外
-
-`{% assign %}` や`{% if %}` など、別のリキッドタグ内でタグを使用する場合は、二重括弧または括弧なしのいずれかを使用できます。タグが独立している場合のみ、二重のブラケットで囲む必要があります。わかりやすくするために、常にダブルブラケットを使用できます。 
+`{% assign %}` や`{% if %}` など、別のLiquidタグ内でタグを使用する場合は、二重括弧または括弧を使用できません。タグが独立している場合のみ、二重のブラケットで囲む必要があります。わかりやすくするために、常にダブルブラケットを使用できます。 
 
 次のタグはすべて正しいです。
 
@@ -124,11 +209,11 @@ Liquid は特定の構造 (構文) に従います。ダイナミックなパー
 
 テンプレート化されたテキストフィールドの付近にある**パーソナライゼーション追加**モーダルから、事前にデフォルト値でフォーマットされた変数を挿入できます。
 
-![挿入パーソナライゼーションを選択した後に耳元にアプリする追加パーソナライゼーション モーダル。モーダルには、パーソナライゼーション型、属性、オプションのデフォルト値のフィールドsがあり、リキッド構文のプレビューが表示されます。]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
+![パーソナライゼーションの挿入を選択すると表示されるパーソナライゼーションの追加モーダル。モーダルには、パーソナライゼーション型、属性、オプションのデフォルト値のフィールドsがあり、リキッド構文のプレビューが表示されます。]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
 
 モーダルにより、カーソルがあった位置に、指定したデフォルト値をもつ Liquid が挿入されます。挿入位置は [プレビュー] ボックスでも指定でき、挿入位置の前後のテキストが表示されます。テキストブロックがハイライトされている場合、ハイライトされたテキストは置き換えられる。
 
-![パーソナライゼーションの追加モーダルのGIF。コンポーザー内のハイライトされたテキスト&クォート;name"をリキッドスニペットに置き換えて、ユーザーが"fellow traveler"をデフォルトとして表示します。]({% image_buster /assets/img_archive/insert_var_shot.gif %})
+![コンポーザー内の強調表示されたテキスト&クォート;name"をリキッドスニペットに置き換えるモーダルと、"fellow traveler"をデフォルトとして挿入するユーザーを示す、カスタマイズの追加モーダルのGIF。]({% image_buster /assets/img_archive/insert_var_shot.gif %})
 
 ### 変数への代入
 

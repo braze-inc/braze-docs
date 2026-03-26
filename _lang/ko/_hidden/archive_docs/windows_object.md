@@ -28,7 +28,7 @@ hidden: true
 
 ## Windows 유니버설 푸시 개체
 
-`push_type`에 대한 옵션에 대한 자세한 내용은 Windows Universal [토스트 템플릿 카탈로그][32]를 참조하세요.
+`push_type`에 대한 옵션에 대한 자세한 내용은 Windows Universal [토스트 템플릿 카탈로그](https://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx)를 참조하세요.
 
 ```json
 {
@@ -42,8 +42,5 @@ hidden: true
 }
 ```
 
-[딥링킹][38]용 `extra_launch_string` 매개 변수를 사용하는 방법에 대한 자세한 내용은 [Windows 유니버설로 딥링킹][37]을 참조하세요.
+[딥링킹]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking)용 `extra_launch_string` 매개 변수를 사용하는 방법에 대한 자세한 내용은 [Windows 유니버설로 딥링킹]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/push_notifications/integration/#step-4-deep-linking-from-push-into-your-app)을 참조하세요.
 
-[32]: https://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx
-[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/push_notifications/integration/#step-4-deep-linking-from-push-into-your-app
-[38]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking

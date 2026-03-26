@@ -1,7 +1,7 @@
 ---
 nav_title: Duplicating
 article_title: Duplicating
-page_order: 5
+page_order: 5.5
 page_type: reference
 description: "This reference article covers how to duplicate your campaigns and Canvases."
 tool:

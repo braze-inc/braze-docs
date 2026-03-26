@@ -14,7 +14,7 @@ description: "このリファレンス記事では、エンゲージメントの
 
 キャンペーン、キャンバス、セグメントの作成または編集時にタグを追加できます。エンゲージメント名の下にある <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span> [**タグ**] をクリックして、既存のタグを選択するか、新規のタグを追加するための入力を開始します。
 
-![キャンペーン作成時のタグsの追加。]({% image_buster /assets/img_archive/tags_add_tag.png %}){: style="max-width:60%;" }
+![キャンペーン作成時にタグを追加する。]({% image_buster /assets/img_archive/tags_add_tag.png %}){: style="max-width:60%;" }
 
 {% alert important %}
 キャンペーン、キャンバス、またはセグメントに最大 175 個のタグを追加できます。
@@ -24,7 +24,7 @@ description: "このリファレンス記事では、エンゲージメントの
 
 複数のエンゲージメントを選択し、<span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tag Asを**選択することで、複数のキャンペーン、キャンバス、セグメントにタグを追加することもできる。
 
-![複数のキャンペーンs に同時にタグs を追加する。]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
+![複数のキャンペーンs に同時にタグs を加える。]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
 
 {% alert important %}
 一括タグ付けを使用して、すでに異なるタグが設定されている複数のキャンペーンに新しいタグを適用すると、選択された各キャンペーンに新しいタグが適用され、あるキャンペーンに設定されているタグは、そのタグが元々キャンペーンに関連付けられていなかったとしても、選択された他のすべてのキャンペーンに適用される。
@@ -40,7 +40,7 @@ description: "このリファレンス記事では、エンゲージメントの
 
 また、キャンペーン、キャンバス、またはセグメントのリストにも、[**アーカイブ済み**] や [**下書き**] などの追加のステータスラベルのタグとともにタグが表示されます。タグでフィルターをかけるには、タグのリストからタグ名を選択する。
 
-![キャンペーン s の一覧のタグ。]({% image_buster /assets/img_archive/tags_grid.png %})
+![キャンペーンの一覧にあるタグ。]({% image_buster /assets/img_archive/tags_grid.png %})
 
 ## カスタムデータタグ
 
@@ -54,7 +54,7 @@ description: "このリファレンス記事では、エンゲージメントの
 
 キャンペーン、キャンバス、セグメントにわたって同じタグを使用できます。ダッシュボード全体でタグの名前の変更、削除、または追加を効率的に行うには、[**設定**] > [**タグ管理**] に移動します。
 
-![設定の管理]ページの[タグ]タブ]({% image_buster /assets/img_archive/tags_view.png %})
+![Manage Settings ページのTags タブ。]({% image_buster /assets/img_archive/tags_view.png %})
 
 タグをさらに整理するには、親タグの下にタグをネストします。例えば、すべての祝日タグを親の `Holidays` タグの下にネストしたり、マーケティングの目標到達段階に関連するすべてのタグを親の `Funnel` タグの下にネストしたりできます。 
 

@@ -15,34 +15,30 @@ search_tag: Partner
 {% endsdktab %}
 
 {% sdktab Email %}
-email.md snowflake_users_messages/ %}
+{% multi_lang_include snowflake_users_messages/email.md %}
 {% endsdktab %}
 
 {% sdktab Feature Flags %}
-featureflag.md snowflake_users_messages/ %}
+{% multi_lang_include snowflake_users_messages/featureflag.md %}
 {% endsdktab %}
 
 {% sdktab In-App Messages %}
-inappmessage.md snowflake_users_messages/ %}
-{% endsdktab %}
-
-{% sdktab News Feed %}
-newsfeedcard.md snowflake_users_messages/ %}
+{% multi_lang_include snowflake_users_messages/inappmessage.md %}
 {% endsdktab %}
 
 {% sdktab Push Notifications %}
-pushnotification.md snowflake_users_messages/ %}
+{% multi_lang_include snowflake_users_messages/pushnotification.md %}
 {% endsdktab %}
 
 {% sdktab SMS %}
-sms.md snowflake_users_messages/ %}
+{% multi_lang_include snowflake_users_messages/sms.md %}
 {% endsdktab %}
 
 {% sdktab Webhook %}
-webhook.md snowflake_users_messages/ %}
+{% multi_lang_include snowflake_users_messages/webhook.md %}
 {% endsdktab %}
 
 {% sdktab WhatsApp %}
-whatsapp.md snowflake_users_messages/ %}
+{% multi_lang_include snowflake_users_messages/whatsapp.md %}
 {% endsdktab %}
 {% endsdktabs %}

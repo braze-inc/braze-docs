@@ -2,245 +2,114 @@
 nav_title: Contexto 
 article_title: Contexto 
 alias: /context/
-page_order: 1.5
+page_order: 6
 page_type: reference
 toc_headers: "h2"
-description: "Este artículo de referencia explica cómo crear y utilizar pasos en Canvas."
+description: "Este artículo de referencia explica cómo crear y utilizar pasos de contexto en tu Canvas."
 tool: Canvas
 
 ---
 
 # Contexto
 
-> Los pasos contextuales te permiten crear y actualizar una o varias variables para un usuario a medida que se desplaza por un Canvas. Por ejemplo, si tienes un Canvas que gestiona descuentos de temporada, puedes utilizar una variable de contexto para almacenar un código de descuento diferente cada vez que un usuario entre en el Canvas.
-
-{% alert important %}
-Los pasos del contexto están actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en este acceso anticipado.<br><br>Ten en cuenta que la adhesión voluntaria al paso en Canvas de acceso anticipado modificará el modo en que se gestionan las marcas de tiempo en todos tus lienzos. Para saber más sobre esto, consulta [Normalización de la coherencia horaria](#time-zone-consistency-standardization).
-{% endalert %}
+> Los pasos de contexto te permiten crear y actualizar una o más variables para un usuario a medida que avanza por un Canvas. Por ejemplo, si tienes un Canvas que administra descuentos de temporada, puedes utilizar una variable de contexto para almacenar un código de descuento diferente cada vez que un usuario entra en el Canvas.
 
 ## Cómo funciona
 
-\![Un paso de Contexto como primer paso de un Canvas.]({% image_buster /assets/img/context_step3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Un paso de contexto como primer paso de un Canvas.]({% image_buster /assets/img/context_step3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-Los pasos contextuales te permiten crear y utilizar datos temporales durante el recorrido de un usuario por un Canvas concreto. Estos datos sólo existen dentro de ese recorrido en Canvas y no persisten en diferentes Canvas ni fuera de la sesión.
+Los pasos de contexto te permiten crear y utilizar datos temporales durante el recorrido de un usuario por un Canvas específico. Estos datos solo existen dentro de ese recorrido de Canvas y no se conservan en otros Canvas ni fuera de la sesión.
 
-Dentro de este marco, cada paso de Contexto puede definir múltiples variables de contexto: datos temporales que te habilitan para personalizar los retrasos, segmentar a los usuarios dinámicamente y enriquecer la mensajería sin alterar permanentemente la información del perfil de un usuario.
+Las variables de contexto solo existen para ese recorrido específico de Canvas. No cambian el perfil del usuario de forma permanente y no aparecen en otros Canvas. Esto las hace ideales para información temporal que solo es relevante para una campaña o un flujo de trabajo específicos.
 
-Por ejemplo, si estás gestionando reservas de vuelos, podrías crear una variable de contexto para la hora de vuelo programada de cada usuario. Así podrías establecer retrasos relativos a la hora de vuelo de cada usuario y enviar recordatorios personalizados desde el mismo Canvas.
+{% alert tip %}
+Para obtener información completa sobre las variables de contexto, incluidos los tipos de datos, el uso y las prácticas recomendadas, consulta la [referencia de variables de contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
+{% endalert %}
 
-Puedes establecer variables de contexto de dos formas:
+En un paso de contexto, puedes definir o actualizar hasta 10 variables de contexto. Estas variables se pueden utilizar para personalizar los retrasos, segmentar a los usuarios de forma dinámica y enriquecer la mensajería en todo el Canvas. Por ejemplo, puedes crear una variable de contexto para la hora de vuelo programada de un usuario y, a continuación, utilizarla para establecer retrasos personalizados y enviar recordatorios.
 
-- **A la entrada de Canvas:** Cuando los usuarios entran en un Canvas, los datos del evento o del desencadenante de la API pueden rellenar automáticamente las variables de contexto.
-- **En un paso de Contexto:** Puedes definir o actualizar manualmente variables de contexto dentro del Canvas añadiendo un paso en Canvas Contexto.
+Puedes establecer variables de contexto de dos maneras:
 
-Cada variable de contexto incluye
+- **A la entrada de Canvas:** Los datos del evento o del activador de la API pueden rellenar automáticamente las variables de contexto.
+- **En un paso de contexto:** Define o actualiza las variables de contexto manualmente añadiendo un paso de contexto.
 
-- Un nombre (como `flight_time` o `subscription_renewal_date`)
-- Un [tipo de datos](#context-variable-types) (como número, cadena, hora o matriz)
-- Un valor que asignas utilizando [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) o a través de la herramienta **Añadir personalización**.
+Cada variable de contexto requiere un nombre, un tipo de datos y un valor (establecido mediante Liquid o la herramienta Añadir personalización). Una vez definidas, puedes hacer referencia a las variables de contexto en todo el Canvas utilizando Liquid, como por ejemplo {% raw %}`{{context.${flight_time}}}`{% endraw %}. En el campo **Nombre de la variable de contexto**, también puedes escribir el nombre de la variable de contexto o seleccionarlo del menú desplegable en el editor de pasos. Para más detalles, consulta la [referencia de variables de contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
-Una vez definida, puedes utilizar una variable de contexto en todo el Canvas haciendo referencia a ella con este formato: {% raw %}`{{context.${example_variable_name}}}`{% endraw %}.
+Cada entrada de Canvas redefine las variables de contexto en función de los últimos datos introducidos y la configuración de Canvas, lo que permite a los usuarios tener múltiples recorridos activos con su propio contexto. Por ejemplo, si un cliente tiene dos vuelos próximos, tendrá dos estados de recorrido independientes que se ejecutarán simultáneamente, cada uno con sus propias variables de contexto específicas del vuelo, como la hora de salida y el destino. Esto te permite enviar recordatorios personalizados sobre su vuelo de las 2 de la tarde a Nueva York, al tiempo que envías diferentes actualizaciones sobre su vuelo de las 8 de la mañana a Los Ángeles mañana, de modo que cada mensaje sea relevante para la reserva específica.
 
-Por ejemplo, {% raw %}`{{context.${flight_time}}}`{% endraw %} podría devolver la hora de vuelo programada del usuario.
+### Procesamiento y agrupación de usuarios
 
-Cada vez que un usuario entre en el Canvas -incluso si ya ha entrado antes-, las variables de contexto se redefinirán en función de los últimos datos de entrada y de la configuración del Canvas. Este enfoque basado en estados permite que cada entrada de Canvas mantenga su propio contexto independiente, lo que permite a los usuarios tener varios estados activos dentro del mismo viaje, conservando el contexto específico de cada estado.
+Los pasos de contexto procesan a los usuarios por lotes para optimizar el rendimiento. Cuando los usuarios entran en un paso de contexto, Braze los procesa de forma predeterminada en lotes de 1000 usuarios. Estos lotes se procesan en paralelo, pero dentro de cada lote, los usuarios se procesan secuencialmente.
 
-Por ejemplo, si un cliente tiene dos vuelos próximos, tendrá dos estados de viaje distintos ejecutándose simultáneamente, cada uno con sus propias variables de contexto específicas del vuelo, como la hora de salida y el destino. Esto te permite enviar recordatorios personalizados sobre su vuelo de las 2 de la tarde a Nueva York al tiempo que envías actualizaciones diferentes sobre su vuelo de las 8 de la mañana a Los Ángeles mañana, de modo que cada mensaje siga siendo relevante para la reserva específica.
+Esto significa:
+
+**Ejemplo**: Si 3500 usuarios entran en un paso de contexto con contenido conectado que tarda 650 ms por usuario:
+- Braze crea 4 lotes de usuarios (1000, 1000, 1000 y 500 usuarios en este ejemplo).
+- Cada lote procesa a los usuarios de forma secuencial, por lo que un lote de 1000 usuarios tarda aproximadamente 10,8 minutos (650 segundos; 1000 × 650 ms).
+- Los lotes se completan en diferentes momentos, por lo que los usuarios pasan al siguiente paso a medida que se completa su lote.
+- Los primeros usuarios pueden llegar al siguiente paso varios minutos antes que los últimos, dependiendo del tamaño del lote y de los tiempos de respuesta del contenido conectado.
+
+Sin contenido conectado, los pasos de contexto se procesan mucho más rápido porque no hay que esperar llamadas a API externas.
 
 ## Consideraciones
 
-- Puedes tener hasta 10 variables de contexto por paso Contexto.
-- Cada nombre de variable contextual puede tener hasta 100 caracteres.
-- Los nombres de las variables de contexto deben ser identificadores válidos (sólo letras, números y guiones bajos).
-- Las definiciones de las variables de contexto pueden tener hasta 10.240 caracteres. 
-- Las variables de contexto pasadas a un Canvas desencadenado por la API comparten los mismos espacios de nombres que las variables de contexto creadas en un paso en Canvas. Esto significa que si envías una variable `purchased_item` en el [objeto de contexto]({{site.baseurl}}/api/objects_filters/context_object) de punto final `/canvas/trigger/send`, se puede hacer referencia a ella como {% raw %}`{context.${purchased_item}}`{% endraw %}, y volver a declarar esa variable en un paso en Canvas anulará lo que se envió anteriormente.
-- Puedes almacenar hasta 50 KB por paso de contexto, distribuidos hasta 10 variables por paso. Los tamaños de las variables que sumen más de 50 KB en un paso no se evaluarán ni almacenarán para el usuario. Estos tamaños se calculan en secuencia. Por ejemplo, si tienes 3 variables en un paso Contexto:
-  - Variable 1: 30 KB
-  - Variable 2: 19 KB
-  - Variable 3: 2 KB
-  - Esto significa que la Variable 3 no se evaluará ni almacenará porque la suma de todas las demás variables de contexto supera los 50 KB.
+- Puedes definir hasta 10 variables de contexto por cada paso de contexto.
+- Cada variable requiere un nombre único (solo letras, números y guiones bajos, hasta 100 caracteres).
+- El tamaño total de todas las variables de un paso no puede superar los 50 KB.
+- Las variables pasadas mediante activadores de API comparten el mismo espacio de nombres que las creadas en los pasos de contexto; al redefinir una variable en un paso de contexto, se anula el valor de la API.
 
-## Crear un paso Contexto
+Para obtener más detalles y conocer el uso avanzado, consulta la [referencia de variables de contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
-### Paso 1: Añade un paso
+## Crear un paso de contexto
 
-Añade un paso a tu Canvas, luego arrastra y suelta el componente desde la barra lateral, o selecciona el botón más <i class="fas fa-plus-circle"></i> y selecciona **Contexto**.
+{% multi_lang_include alerts/tip_alerts.md alert='Reference properties from triggering event' %}
+
+### Paso 1: Añadir un paso
+
+Añade un paso a tu Canvas, luego arrastra y suelta el componente desde la barra lateral, o selecciona el botón <i class="fas fa-plus-circle"></i> más y selecciona **Contexto**.
 
 ### Paso 2: Define las variables
 
 {% alert note %}
-Puedes definir hasta 10 variables de contexto para cada paso de Contexto.
+Puedes definir hasta 10 variables de contexto para cada paso de contexto.
 {% endalert %}
 
 Para definir una variable de contexto:
 
-1. Dale un **nombre** a tu variable contextual.
-2. Selecciona un [tipo de datos](#context-variable-types).
+1. Asigna un **nombre** a tu variable de contexto.
+2. Selecciona un [tipo de datos]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#data-types).
 3. Escribe una expresión Liquid manualmente o utiliza **Añadir personalización** para crear un fragmento de código Liquid a partir de atributos preexistentes.
-4. Selecciona **Vista previa** para comprobar el valor de tu variable contextual.
-5. (Opcional) Para variables adicionales, selecciona **Añadir variable de contexto** y repite los pasos 1-4.
+4. Selecciona **Vista previa** para comprobar el valor de tu variable de contexto.
+5. (Opcional) Para añadir variables adicionales, selecciona **Añadir variable de contexto** y repite los pasos 1 a 4.
 6. Cuando hayas terminado, selecciona **Hecho**.
 
-Ahora puedes utilizar tu variable contextual en cualquier lugar donde utilices Liquid, como en los pasos de actualización de mensajes y usuarios, seleccionando **Añadir personalización**. Para un recorrido completo, consulta [Utilizar variables contextuales](#using-context-variables).
-
-## Tipos de datos de las variables de contexto {#context-variable-types}
-
-A las variables de contexto que se crean o actualizan en el paso se les pueden asignar los siguientes tipos de datos.
-
-{% alert note %}
-Las variables de contexto tienen los mismos formatos previstos para los tipos de datos que [los eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format). <br><br>Para objetos anidados y matrices de objetos, utiliza el [filtro`as_json_string` Liquid](#converting-connected-content-strings-to-json). Si vas a crear el mismo objeto en un paso de Contexto, tendrás que renderizar el objeto utilizando `as_json_string`, como por ejemplo {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
-{% endalert %}
-
-| Tipo de datos | Ejemplo de nombre de variable | Valor de ejemplo |
-|---|---|---|
-|Booleano| loyalty_program |{% raw %}<code>verdadero</code>{% endraw %}| 
-|Número| credit_score |{% raw %}<code>740{% endraw %}|
-|Cadena| product_name |{% raw %}<code>green_tea</code>{% endraw %} |
-|Matriz| favorite_products|{% raw %}<code>["wireless_headphones", "smart_homehub", "fitness_tracker_swatch"]</code>{% endraw %}|
-|Hora (en UTC) | last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
-|Objeto (aplanado) | user_profile|{% raw %}<code>{<br> "first_name": "{{user.first_name}}",<br> "last_name": "{{user.last_name}}",<br> "correo electrónico": "{{user.email}}",<br> "loyalty_points": {{user.loyalty_points}},<br> "preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-Por defecto, el tipo de datos de la hora está en UTC. Si utilizas un tipo de datos de cadena para almacenar un valor de hora, puedes definir la hora como una zona horaria diferente, como PST. 
-
-Por ejemplo, si vas a enviar un mensaje a un usuario el día antes de su cumpleaños, guardarías la variable de contexto como un tipo de datos de hora, porque hay una lógica Liquid asociada al envío del día anterior. Sin embargo, si vas a enviar un mensaje festivo el día de Navidad (25 de diciembre), no necesitarías referenciar la hora como una variable dinámica, por lo que sería preferible utilizar un tipo de datos cadena.
-
-## Utilizar variables de contexto {#using-context-variables}
-
-Por ejemplo, supongamos que quieres notificar a los pasajeros su acceso a una sala VIP antes de su próximo vuelo. Este mensaje sólo debe enviarse a los pasajeros que hayan comprado un billete de primera clase. Una variable de contexto es una forma flexible de hacer un seguimiento de esta información.
-
-Los usuarios entrarán en el Canvas cuando compren un billete de avión. Para determinar la elegibilidad para el acceso al salón, crearemos una variable de contexto llamada `lounge_access_granted` en un paso de Contexto, y luego haremos referencia a esa variable de contexto en los pasos posteriores del recorrido del usuario.
-
-\![Variable de contexto configurada para realizar un seguimiento de si un pasajero reúne los requisitos para acceder a la sala VIP.]({% image_buster /assets/img/context_example4.png %}){: style="max-width:90%"}
-
-En este paso de Contexto, utilizaremos {% raw %}`{{custom_attribute.${purchased_flight}}}`{% endraw %} para determinar si el tipo de vuelo que han comprado es `first_class`.
-
-A continuación, crearemos un paso Mensaje para dirigirnos a los usuarios en los que {% raw %}`{{context.${lounge_access_granted}}}`{% endraw %} es `true`. Este mensaje será una notificación push que incluirá información personalizada sobre el salón. En función de esta variable de contexto, los pasajeros elegibles recibirán los mensajes pertinentes antes de su vuelo.
-
-- Los pasajeros con billetes de primera clase recibirán: "¡Disfruta de un acceso exclusivo a la sala VIP!"
-- Los pasajeros con billetes de negocios y económicos recibirán: "Mejora tu vuelo para acceder a una sala VIP exclusiva".
-
-\![Un paso de Mensajes con diferentes mensajes para enviar, dependiendo del tipo de billete de avión comprado.]({% image_buster /assets/img/context_example3.png %}){: style="max-width:90%"}
-
-{% alert tip %}
-Puedes añadir [opciones de retraso personalizadas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) con la información del paso Contexto, lo que significa que puedes seleccionar la variable que retrasa a los usuarios.
-{% endalert %}
-
-### Para las rutas de acción y los criterios de salida
-
-Puedes aprovechar la comparación de filtros de propiedades con variables de contexto o atributos personalizados en estas acciones desencadenantes: **Realiza un evento personalizado** y **efectúa una compra**. Estos desencadenantes de acciones también admiten filtrar propiedades tanto básicas como anidadas. 
-
-- Al comparar con propiedades básicas, las comparaciones disponibles coincidirán con el tipo de propiedad definido por el evento personalizado. Por ejemplo, las propiedades de cadena tendrán coincidencias regex exactamente iguales. Las propiedades booleanas serán verdaderas o falsas. 
-- Al comparar con propiedades anidadas, los tipos no están predefinidos, por lo que puedes seleccionar comparaciones entre varios tipos de datos para booleanos, números, cadenas, hora y día del año, de forma similar a las comparaciones para atributos personalizados anidados. Si seleccionas un tipo de datos que no coincide con el tipo de datos real de la propiedad anidada en el momento de la comparación, el usuario no coincidirá con la Ruta de acción ni con los criterios de salida.
-
-#### Ejemplos de ruta de acción
+Ahora puedes utilizar tu variable de contexto en cualquier lugar donde utilices Liquid, como en los pasos Mensaje y Actualización de usuario, seleccionando **Añadir personalización**. En el campo **Nombre de la variable de contexto**, también puedes escribir el nombre de la variable de contexto o seleccionarlo del menú desplegable en el editor de pasos. Para obtener una guía completa, consulta la [referencia de variables de contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
 {% alert important %}
-Para las comparaciones de atributos personalizados, utilizaremos el valor del atributo personalizado en el momento en que se realice la acción. Esto significa que un usuario no coincidirá con el grupo Ruta de acción si no tiene este atributo personalizado rellenado en el momento de la comparación, o si el valor del atributo personalizado no coincide con las comparaciones de propiedades definidas. Esto ocurre aunque el usuario hubiera coincidido al entrar en el paso Ruta de acción.
+Cuando hagas referencia a variables de contexto, utiliza siempre el formato {% raw %}`{{context.${variable_name}}}`{% endraw %}.
 {% endalert %}
-
-{% tabs %}
-{% tab Perform custom event %}
-
-La siguiente ruta de acción está configurada para ordenar a los usuarios que realizaron el evento personalizado `Account_Created` con la propiedad básica `source` a la variable contextual `app_source_variable`.
-
-\![Un ejemplo de ruta de acción que hace referencia a una variable de contexto al realizar un evento personalizado.]({% image_buster /assets/img/context_action_path1.png %})
-
-{% endtab %}
-{% tab Make purchase %}
-
-La siguiente ruta de acción está configurada para hacer coincidir la propiedad básica `brand` del nombre concreto del producto `shoes` con una variable contextual `promoted_shoe_brand`.
-
-\![Ejemplo de ruta de acción que hace referencia a una variable de contexto al realizar una compra.]({% image_buster /assets/img/context_action_path2.png %})
-
-{% endtab %}
-{% endtabs %}
-
-#### Ejemplos de criterios de salida
-
-{% tabs %}
-{% tab Perform custom event %}
-
-Los criterios de salida establecen que, en cualquier punto del recorrido de un usuario en el Canvas, saldrá de él si:
-
-- Realizan el evento personalizado **Abandonar carrito**, y
-- La propiedad básica **Artículo de la cesta** coincide con el valor de cadena de la variable de contexto `cart_item_threshold`.
-
-\![Criterios de salida configurados para salir de un usuario si realiza un evento personalizado basado en la variable de contexto.]({% image_buster /assets/img/context_exit_criteria1.png %})
-
-{% endtab %}
-{% tab Make purchase %}
-
-Los criterios de salida establecen que, en cualquier punto del recorrido de un usuario en el Canvas, saldrá de él si:
-
-- Realizan una compra específica para el nombre del producto "libro", y
-- La propiedad anidada de esa compra "loyalty_program" es igual al atributo personalizado "VIP" del usuario.
-
-\![Criterios de salida configurados para salir de un usuario si realiza una compra.]({% image_buster /assets/img/context_exit_criteria2.png %})
-
-{% endtab %}
-{% endtabs %}
 
 ### Filtros de variables de contexto
 
-Puedes crear filtros que utilicen variables de contexto previamente declaradas en [las rutas de audiencia]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) y en los pasos para [la división de decisiones]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split).
+Puedes crear filtros utilizando variables de contexto en los pasos [Rutas de audiencia]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) y [División de decisiones]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split). Para la configuración del filtro, la lógica de comparación y ejemplos avanzados, consulta la [referencia de variables de contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#context-variable-filters).
 
-{% alert important %}
-Los filtros de variables de contexto sólo están disponibles para las rutas de audiencia y los pasos para la división de decisiones.
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='time filter types' %}
 
-Las variables de contexto se declaran y sólo son accesibles en el ámbito de un Canvas, lo que significa que no se puede hacer referencia a ellas en los segmentos. Los filtros de variables de contexto funcionan de forma similar en las rutas de audiencia y en los pasos para la división de decisiones: los pasos para la ruta de audiencia representan grupos múltiples, mientras que los pasos para la división de decisiones representan decisiones binarias.
+## Vista previa de las rutas de los usuarios
 
-\![Ejemplo de paso para la división de decisiones con la opción de crear un filtro con una variable de contexto.]({% image_buster /assets/img/context_decision_split.png %}){: style="max-width:90%;"}
-
-Al igual que las variables de contexto de Canvas tienen tipos predefinidos, las comparaciones entre variables de contexto y valores estáticos deben tener [tipos de datos coincidentes]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/#supported-data-types). El filtro de variables de contexto permite realizar comparaciones entre varios tipos de datos para booleanos, números, cadenas, hora y día del año, de forma similar a las comparaciones para [atributos personalizados anidados]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/).
+Recomendamos probar y [realizar una vista previa de las rutas de los usuarios]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) para asegurarte de que tus mensajes se envían a la audiencia adecuada y que las variables de contexto se evalúan con los resultados esperados.
 
 {% alert note %}
-Utiliza el mismo tipo de datos para tu variable contextual y para la comparación. Por ejemplo, si tu variable de contexto es un tipo de dato temporal, utiliza comparaciones temporales (como "antes" o "después"). Utilizar tipos de datos no coincidentes (como comparaciones de cadenas con una variable de contexto temporal) puede provocar un comportamiento inesperado.
+Si estás previsualizando tu Canvas en la sección **Vista previa y envío de prueba** del editor, la marca de tiempo en la vista previa del mensaje de prueba **no se** estandariza a UTC porque este panel genera vistas previas como cadenas. Esto significa que si un Canvas está configurado para aceptar un objeto `time`, la vista previa del mensaje no muestra con precisión lo que ocurre cuando el Canvas está en vivo. Para probar tu Canvas con mayor precisión, te recomendamos que realices una vista previa de las rutas de los usuarios.
 {% endalert %}
 
-He aquí un ejemplo de filtro de variables de contexto que compara la variable de contexto `product_name` con la regex `/braze/`.
+Asegúrate de observar cualquier situación habitual que genere variables de contexto no válidas. Al realizar la vista previa de la ruta del usuario, puedes ver los resultados de los pasos de retraso personalizados que utilizan variables de contexto, así como cualquier comparación de audiencias o pasos de decisión que relacionen a los usuarios con cualquier variable de contexto.
 
-Una configuración de filtrar la variable de contexto "product_name" para que coincida con el regex "/braze/".]({% image_buster /assets/img/context_variable_filter1.png %}){: style="max-width:90%;"}
+Si la variable de contexto es válida, puedes hacer referencia a ella en todo tu Canvas. Sin embargo, si la variable de contexto no se ha creado correctamente, los pasos posteriores de tu Canvas tampoco funcionarán correctamente. Por ejemplo, si creas un paso de contexto para asignar a los usuarios una hora de cita y estableces el valor de la hora de la cita en una fecha pasada, el correo electrónico de recordatorio del paso de mensaje no se enviará.
 
-#### Comparación con variables de contexto o atributos personalizados
+## Conversión de cadenas de contenido conectado a JSON
 
-Si seleccionas el alternador **Comparar con una variable de contexto o un atributo personalizado**, puedes construir filtros de variables de contexto que se comparen con variables de contexto previamente definidas o con atributos personalizados del usuario. Esto puede ser útil para realizar comparaciones dinámicas por usuario, como las desencadenadas por la API `context`, o para condensar una lógica de comparación compleja definida a través de variables de contexto.
-
-{% tabs %}
-{% tab Example 1 %}
-
-Digamos que quieres enviar un recordatorio personalizado a los usuarios después de un periodo dinámico de inactividad, que incluye a cualquiera que no haya iniciado sesión en tu aplicación en los últimos tres días, debería recibir un mensaje.
-
-Tienes una variable de contexto `re_engagement_date` que está definida como {% raw %}`{{now | minus: 3 | append: ' days'}}`{% endraw %}. Ten en cuenta que `3 days` puede ser una cantidad variable que también se almacena como atributo personalizado del usuario. Así, si el `re_engagement_date` está después del `last_login_date` (almacenado como atributo personalizado en el perfil de usuario), se le enviará un mensaje.
-
-\![Una configuración de filtrado con atributos personalizados como tipo de personalización para la variable de contexto "re_engagement_date" después del atributo personalizado "last_login_date".]({% image_buster /assets/img/context_variable_filter2.png %})
-
-{% endtab %}
-{% tab Example 2 %}
-
-El siguiente filtro compara la variable de contexto `reminder_date` para que sea anterior a la variable de contexto `appointment_deadline`. Esto puede ayudar a agrupar usuarios en un paso de Rutas de audiencia para determinar si deben recibir recordatorios adicionales antes de la fecha límite de su cita.
-
-\![Una configuración de filtro con variables de contexto como tipo de personalización para la variable de contexto "reminder_date" en la variable de contexto "appointment_deadline".]({% image_buster /assets/img/context_variable_filter3.png %})
-
-{% endtab %}
-{% endtabs %}
-
-## Vista previa de las rutas de usuario
-
-Te recomendamos que pruebes y [veas previamente tus rutas de usuario]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) para asegurarte de que tus mensajes se envían a la audiencia adecuada y de que las variables de contexto se evalúan según los resultados esperados.
-
-{% alert note %}
-Si estás previsualizando tu Canvas en la sección **Vista previa & Prueba de envío** del editor, la fecha y hora de la vista previa del mensaje de prueba **no** estará normalizada a UTC porque este panel genera vistas previas como cadenas. Esto significa que si un Canvas está configurado para aceptar un objeto `time`, la vista previa del mensaje no previsualizará con precisión lo que ocurre cuando el Canvas está en vivo. Para probar tu Canvas con mayor precisión, te recomendamos que, en su lugar, previsualices las rutas de usuario.
-{% endalert %}
-
-Asegúrate de observar las situaciones habituales que crean variables de contexto no válidas. Al previsualizar tu ruta de usuario, puedes ver los resultados de los pasos de Retraso personalizados mediante variables de contexto, y cualquier comparación de pasos de audiencia, decisión o Ruta de acción que relacione a los usuarios con cualquier variable de contexto.
-
-Si la variable de contexto es válida, puedes hacer referencia a ella en todo tu Canvas. Sin embargo, si la variable de contexto no se creó correctamente, los pasos futuros de tu Canvas tampoco tendrán un rendimiento correcto. Por ejemplo, si creas un paso Contexto para asignar a los usuarios una hora de cita, pero estableces el valor de la hora de cita en una fecha pasada, el correo electrónico recordatorio de tu paso Mensaje nunca se enviará.
-
-## Convertir cadenas de contenido conectado a JSON
-
-Al realizar una [llamada a Contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) en un paso de Contexto, el JSON devuelto por la llamada se evaluará como un tipo de datos de cadena para mantener la coherencia y evitar errores. Si quieres convertir esta cadena en JSON, conviértela utilizando `as_json_string`. Por ejemplo:
+Al realizar una [llamada de contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) en un paso de contexto, el JSON devuelto por la llamada se evalúa como un tipo de datos de cadena para garantizar la coherencia y evitar errores. Si deseas convertir esta cadena a JSON, hazlo utilizando `as_json_string`. Por ejemplo:
 
 {%raw%}
 ```liquid
@@ -249,37 +118,99 @@ Al realizar una [llamada a Contenido conectado]({{site.baseurl}}/user_guide/pers
 ```
 {%endraw%}
 
-## Normalización de la coherencia horaria
+## Solución de problemas
 
-Con la adición del Contexto Canvas, todas las marcas de tiempo con un [tipo de fecha/hora]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) de las [propiedades del evento desencadenante]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) en los Canvas basados en acciones se normalizarán siempre a [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). Antes, las marcas de tiempo de las propiedades del evento se normalizaban a UTC, con [algunas excepciones]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know). Ahora, esto proporcionará una experiencia más coherente para editar los pasos en Canvas y los mensajes.
+### Variables de contexto no válidas
 
-Considera este ejemplo de cómo este cambio podría afectar a una marca de tiempo en Canvas. Supongamos que tenemos un Canvas basado en acciones que utiliza una propiedad de evento en el primer paso del Canvas con el siguiente paso Mensaje: 
+Una variable de contexto se considera no válida cuando:
 
-{% raw %}
-`Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!`
-{% endraw %}
+- Falla una llamada a un contenido conectado integrado.
+- La expresión Liquid en tiempo de ejecución devuelve un valor que no coincide con el tipo de datos o está vacío (nulo).
 
-\![Viaje contextual con un paso de Mensaje como primer paso.]({% image_buster /assets/img/context_timezone_example.png %}){: style="max-width:50%"}
+Por ejemplo, si el tipo de datos de la variable de contexto es **Número**, pero la expresión Liquid devuelve una cadena, no es válida.
 
-El paso también tendrá una carga útil de evento como: 
+En estas circunstancias:
+- El usuario avanza al siguiente paso.
+- El análisis de pasos en Canvas cuenta esto como _No actualizado_.
 
-```
-{
-  "appointment_time": "2025-08-05T08:15:30:250-0800"
-}
-```
+Al realizar la solución de problemas, supervisa la métrica _No actualizado_ para comprobar que tu variable de contexto se actualiza correctamente. Si la variable de contexto no es válida, tus usuarios podrán continuar en el Canvas más allá del paso de contexto, pero es posible que no cumplan los requisitos para los pasos posteriores.
 
-Históricamente, el mensaje sería: `Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!`
+Consulta [Tipos de datos]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#data-types) para ver ejemplos de configuración para cada tipo de datos.
 
-Con el acceso anticipado al Contexto Canvas, el mensaje será ahora: `Your appointment is scheduled for 2025-08-05 4:15pm, we’ll see you then!` Esto se debe a que la marca de tiempo está en UTC, que está 8 horas por delante de la hora del Pacífico (la zona horaria especificada en la carga útil original con `-08:00`).
+### Retrasos en el envío con contenido conectado
 
-{% alert important %}
-Para tener en cuenta este cambio de marca de tiempo, en todas las circunstancias, recomendamos encarecidamente [utilizar filtros Liquid]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) para que las marcas de tiempo estén representadas en la zona horaria deseada.
+Todos los usuarios de un lote se procesan antes de que ningún usuario avance. Una vez completado el procesamiento por lotes, los usuarios que han tenido éxito pasan al siguiente paso, mientras que los que han fallado se reintentan por separado; los usuarios exitosos no esperan a que los reintentos tengan éxito antes de avanzar.
+
+**Comportamiento de reintento**: Los pasos de contexto (y todos los pasos en Canvas) utilizan mecanismos de reintento específicos de Canvas, no el comportamiento de reintento estándar del contenido conectado. Si falla una llamada de contenido conectado, Braze vuelve a intentar el paso aproximadamente 13 veces con retirada exponencial. Si todos los reintentos fallan, el usuario sale del Canvas.
+
+{% alert note %}
+La etiqueta `:retry` utilizada en el contenido conectado estándar no se aplica a las llamadas de contenido conectado realizadas dentro de los pasos en Canvas. Los pasos en Canvas tienen su propia lógica de reintento optimizada para los flujos de trabajo de Canvas.
 {% endalert %}
 
-### Utilizar Liquid para indicar una marca de tiempo en tu zona horaria preferida
+**Tiempo de procesamiento**: El tiempo que se tarda en procesar a todos los usuarios a través de un paso de contexto depende de:
+- El número de usuarios que entran en el paso
+- Si se utiliza contenido conectado (y su tiempo de respuesta)
+- El tamaño del lote (predeterminado: 1000 usuarios por lote)
 
-Considera el siguiente fragmento de código Liquid:
+Si tu punto de conexión de contenido conectado tiene límites de velocidad, ten en cuenta que los pasos de contexto procesan a los usuarios de forma secuencial dentro de cada lote, lo que ayuda a respetar los límites de velocidad de forma natural. Sin embargo, varios lotes se procesan en paralelo, por lo que debes asegurarte de que tu punto de conexión pueda gestionar solicitudes simultáneas de varios lotes.
+
+## Estandarización de la coherencia de las zonas horarias
+
+Con la disponibilidad general de Canvas Context, todas las propiedades predeterminadas de evento con marca de tiempo en los Canvas basados en acciones están en UTC. Este cambio forma parte de un esfuerzo más amplio por garantizar una experiencia más predecible y coherente al editar los pasos y mensajes en Canvas. Ten en cuenta que este cambio afecta a todos los Canvas basados en acciones, independientemente de si el Canvas específico utiliza un paso de contexto o no.
+
+{% alert important %}
+En cualquier caso, recomendamos encarecidamente utilizar [filtros time_zone de Liquid]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) para que las marcas de tiempo se representen en la zona horaria deseada. Puedes consultar esta [pregunta frecuente](#faq-example) para ver un ejemplo.
+{% endalert %}
+
+## Preguntas frecuentes
+
+### ¿Qué ha cambiado desde que Canvas Context pasó a estar disponible de forma generalizada?
+
+Ahora que Canvas Context está disponible de forma generalizada, se aplican los siguientes detalles:
+
+- Todas las marcas de tiempo con un [tipo de fecha y hora]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) de las [propiedades del evento desencadenador]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) en los Canvas basados en acciones están en [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
+- Este cambio afecta a todos los Canvas basados en acciones, independientemente de si el Canvas específico utiliza un paso de contexto o no.
+
+#### ¿Cuál es el motivo de este cambio?
+
+Este cambio forma parte de un esfuerzo más amplio por crear una experiencia más predecible y coherente al editar los pasos en Canvas y los mensajes.
+
+#### ¿Este cambio afecta a los Canvas desencadenados mediante API o a los planificados?
+
+No.
+
+#### ¿Este cambio afecta a las propiedades de entrada de Canvas?
+
+Sí, esto afecta a `canvas_entry_properties` si `canvas_entry_property` se utiliza en un Canvas basado en acciones y el tipo de propiedad es `time`. En cualquier caso, recomendamos utilizar filtros `time_zone` de Liquid para que las marcas de tiempo se representen en la zona horaria deseada.
+
+Aquí tienes un ejemplo de cómo hacerlo:
+
+| Liquid en el paso Mensaje | Salida | ¿Es esta la forma correcta de representar las zonas horarias en Liquid? |
+|---|---|---|
+| {% raw %}```{{canvas_entry_properties.${timestamp_property}}}```{% endraw %} | `2025-08-05T08:15:30:250-0800` | No |
+| {% raw %}```{{canvas_entry_properties.${timestamp_property} | date: "%Y-%m-%d %l:%M %p"}}```{% endraw %} | `2025-08-05 4:15pm` | No
+| {% raw %}```{{canvas_entry_properties.${timestamp_property} | time_zone: "America/Los_Angeles" | date: "%Y-%m-%d %l:%M %p"}}```{% endraw %} | `2025-08-05 8:15am` | Sí |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+#### ¿Cuál es un ejemplo práctico de cómo el nuevo comportamiento de la marca de tiempo podría afectar a mis mensajes? {#faq-example}
+
+Supongamos que tenemos un Canvas basado en acciones que tiene el siguiente contenido en un paso de mensaje:
+
+{% raw %}
+```
+Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
+```
+{% endraw %}
+
+Esto da como resultado el siguiente mensaje: 
+
+```
+Your appointment is scheduled for 2025-08-05 4:15pm, we’ll see you then!
+```
+
+Dado que no se especifica ninguna zona horaria con Liquid, la marca de tiempo aquí está en UTC. 
+
+Para especificar claramente una zona horaria, podemos utilizar filtros `time_zone` de Liquid como este: 
 
 {% raw %}
 ```
@@ -287,9 +218,15 @@ Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} 
 ```
 {% endraw %}
 
-Esta lógica da como resultado la siguiente salida: `Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!`
+Esto da como resultado el siguiente mensaje: 
 
-La zona horaria preferida también puede enviarse en la carga útil de propiedades del evento y utilizarse en la lógica Liquid: 
+```
+Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!
+```
+
+Dado que la zona horaria America/Los_Angeles se especifica mediante Liquid, la marca de tiempo aquí está en PST.
+
+La zona horaria preferida también se puede enviar en la carga útil de las propiedades del evento y utilizarse en la lógica Liquid:
 
 ```
 {
@@ -298,61 +235,26 @@ La zona horaria preferida también puede enviarse en la carga útil de propiedad
 }
 ```
 
-Este es un ejemplo del fragmento de código Liquid:
+### ¿En qué se diferencian las variables de contexto de las propiedades de entrada de Canvas?
 
-{% raw %}
-```
-Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: canvas_entry_properties.${user_timezone} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
-```
-{% endraw %}
+Las propiedades de entrada de Canvas se incluyen como variables de contexto de Canvas. Esto significa que puedes enviar propiedades de entrada de Canvas utilizando la API de Braze y hacer referencia a ellas en otros pasos, de forma similar al uso de una variable de contexto con el fragmento de código Liquid.
 
-## Solución de problemas {#troubleshooting}
+### ¿Pueden las variables referenciarse entre sí en un único paso de contexto?
 
-### Variables de contexto no válidas
-
-Se considera que una variable de contexto no es válida cuando
-- Falla una llamada a un Contenido conectado incrustado.
-- La expresión Liquid en tiempo de ejecución devuelve un valor que no coincide con el tipo de datos o está vacío (nulo).
-
-Por ejemplo, si el tipo de datos de la variable de contexto es **Número**, pero la expresión Liquid devuelve una cadena, no es válida.
-
-En estas circunstancias: 
-- El usuario avanzará al siguiente paso. 
-- El análisis del paso en Canvas lo contará como _No actualizado_.
-
-Al solucionar problemas, controla la métrica _No actualizado_ para comprobar que tu variable de contexto se actualiza correctamente. Si la variable de contexto no es válida, tus usuarios podrán continuar en tu Canvas pasado el paso de Contexto, pero no podrán acceder a los pasos posteriores.
-
-Consulta los ejemplos de configuración de cada tipo de datos en [Tipos de datos variables contextuales](#context-variable-types).
-
-## Preguntas más frecuentes
-
-### ¿En qué se diferencian las variables de contexto de las propiedades de entrada en Canvas?
-
-Si participas en el acceso anticipado al paso en Canvas, las propiedades de entrada al Canvas se incluyen ahora como variables de contexto del Canvas. Esto significa que puedes enviar propiedades de entrada Canvas utilizando la API Braze y hacer referencia a ellas en otros pasos, de forma similar al uso de una variable de contexto con el fragmento de código Liquid.
-
-### ¿Pueden las variables referenciarse entre sí en un paso Contexto singular?
-
-Sí. Todas las variables de un paso Contexto se evalúan en una secuencia, lo que significa que podrías tener configuradas las siguientes variables de contexto:
+Sí. Todas las variables de un paso de contexto se evalúan en secuencia, lo que significa que podrías tener configuradas las siguientes variables de contexto:
 
 | Variable de contexto | Valor | Descripción |
 |---|---|---|
 |`favorite_cuisine`| {% raw %}`{{custom_attribute.${Favorite Cuisine}}}`{% endraw %} | El tipo de cocina favorito de un usuario. |
 |`promo_code`| {% raw %}`EATFRESH`{% endraw %} | El código de descuento disponible para un usuario. |
-|`personalized_message`|  {% raw %}`"Enjoy a discount of" {{context.promo_code}} "on delivery from your favorite" {{context.favorite_cuisine}} restaurants!"`{% endraw %} | Un mensaje personalizado que combina las variables anteriores. En un paso de mensajería, podrías utilizar el fragmento de código Liquid {% raw %}`{{context.${personalized_message}}}`{% endraw %} para hacer referencia a la variable de contexto y entregar un mensaje personalizado a cada usuario. También podrías utilizar un paso en Canvas para guardar el valor del [código promocional]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) y utilizarlo como plantilla en otros pasos a lo largo de un Canvas. |
+|`personalized_message`|  {% raw %}`"Enjoy a discount of" {{context.${promo_code}}} "on delivery from your favorite" {{context.${favorite_cuisine}}} restaurants!"`{% endraw %} | Un mensaje personalizado que combina las variables anteriores. En un paso Mensaje, puedes utilizar el fragmento de código Liquid {% raw %}`{{context.${personalized_message}}}`{% endraw %} para hacer referencia a la variable de contexto y entregar un mensaje personalizado a cada usuario. También puedes utilizar un paso de contexto para guardar el valor del [código promocional]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) y utilizarlo como plantilla en otros pasos a lo largo de un Canvas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Esto también se aplica a varios pasos del Contexto. Por ejemplo, imagina esta secuencia:
-1. Un paso inicial de Contexto crea una variable llamada `JobInfo` con el valor `job_title`.
-2. Un paso de Mensaje hace referencia a {% raw %}`{{context.${JobInfo}}}`{% endraw %} y muestra `job_title` al usuario.
-3. Más tarde, un paso de Contexto actualiza la variable de contexto, cambiando el valor de `JobInfo` a `job_description`.
-4. Todos los pasos posteriores que hagan referencia a `JobInfo` utilizarán ahora el valor actualizado `job_description`.
+Esto también se aplica a varios pasos de contexto. Por ejemplo, imagina esta secuencia:
 
-Las variables de contexto utilizan su valor más reciente en todo el Canvas, y cada actualización afecta a todos los pasos siguientes que hagan referencia a esa variable.
+1. Un paso de contexto inicial crea una variable llamada `JobInfo` con el valor `job_title`.
+2. Un paso de mensaje hace referencia a {% raw %}`{{context.${JobInfo}}}`{% endraw %} y muestra `job_title` al usuario.
+3. Más tarde, un paso de contexto actualiza la variable de contexto, cambiando el valor de `JobInfo` a `job_description`.
+4. Todos los pasos posteriores que hacen referencia a `JobInfo` ahora utilizan el valor actualizado `job_description`.
 
-### ¿Influye la estandarización de la coherencia horaria del Contexto Canvas en los Canvas desencadenados por API?
-
-No, este cambio sólo afecta a los Lienzos desencadenantes de acciones. Las marcas de tiempo enviadas a los Lienzos desencadenados por la API tendrán el tipo de cadena, no el tipo de hora, por lo que siempre se conserva la zona horaria original.
-
-### ¿Cómo se relaciona esto con las excepciones anotadas en las propiedades de entrada y propiedades del evento del Canvas?
-
-Participar en el acceso anticipado al Contexto Canvas elimina [esas excepciones]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know), independientemente de si estás utilizando un paso en Canvas.
+Las variables de contexto utilizan su valor más reciente en todo el Canvas, y cada actualización afecta a todos los pasos siguientes que hacen referencia a esa variable.

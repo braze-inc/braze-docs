@@ -1,6 +1,6 @@
 ## 六SDKの統合
 
-### ステップ1:ファイルの追加
+### ステップ 1: ファイルの追加
 
 Braze SDK ファイルは、[Braze Roku SDK リポジトリ](https://github.com/braze-inc/braze-roku-sdk) の `sdk_files` ディレクトリにあります。
 

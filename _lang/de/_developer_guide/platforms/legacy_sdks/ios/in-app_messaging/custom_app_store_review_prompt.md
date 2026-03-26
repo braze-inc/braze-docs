@@ -37,7 +37,7 @@ Beginnen Sie damit, den [Delegat für In-App-Nachrichten](#in-app-message-contro
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage) -> ABKInAppMessageDisplayChoice {
@@ -70,7 +70,7 @@ Fügen Sie in Ihrem Code zur Behandlung von Deeplinks den folgenden Code hinzu, 
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {

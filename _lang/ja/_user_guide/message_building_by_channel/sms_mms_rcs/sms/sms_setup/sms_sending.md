@@ -1,5 +1,5 @@
 ---
-nav_title: "SMSメッセージ送信"
+nav_title: SMSメッセージを送信する
 article_title: SMSメッセージ送信の概要
 page_order: 4
 alias: /sms_message_sending/
@@ -44,11 +44,7 @@ SMSキャンペーンの作り方を知りたい？[SMS キャンペーンの作
 
 この制限を克服するために、サブスクリプショングループの[設定プロセス]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process)で、複数の異なる国からのロングコードとショートコードを保持するようにグループを設定できます。完了すると、キャンペーンを開始するときに、ターゲットユーザーの電話番号と同じ国番号を持つ送信電話番号が自動的に使用されます。異なる国番号の電話番号を持つユーザーのために個別のキャンペーンを作成する必要はありません。関連するユーザーをターゲットにするために、1 つのキャンペーンを開始したり、1 つのキャンバスコンポーネントを使用したりできます。
 
-<<<<<<< HEAD
 ![SMSペイロードは、ターゲットユーザーの電話番号と同じ国コードを使用して送信される。]({% image_buster /assets/img/sms/multi_country_subgroups.png %})
-=======
-\![SMSペイロードは、ターゲットユーザーの電話番号と同じ国コードを使用して送信される。]({% image_buster /assets/img/sms/multi_country_subgroups.png %})
->>>>>>> main
 
 #### ベストプラクティス
 

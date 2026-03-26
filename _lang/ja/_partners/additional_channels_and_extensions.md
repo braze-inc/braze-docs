@@ -1,6 +1,6 @@
 ---
-nav_title: "追加チャネル &amp; エクステンション"
-article_title: 追加チャネル &amp; エクステンション
+nav_title: "追加チャネルとエクステンション"
+article_title: 追加チャネルとエクステンション
 page_order: 11
 
 page_type: landing
@@ -8,7 +8,7 @@ description: "このページには、チャネルおよびエクステンショ
 layout: partner_page
 search_tag: Partner
 
-partner_top_header: "Additional Channels & Extensions"
+partner_top_header: "追加チャネルとエクステンション"
 
 valid_partner_list:
 - name: LiveRamp
@@ -28,15 +28,15 @@ valid_partner_list:
 - name: Pypestream
   url: /docs/partners/pypestream/
 - name: Regal
-  url: /docs/partners/pypestream/
+  url: /docs/partners/regal/
 - name: Sendbird
   url: /docs/partners/sendbird/
+- name: Shopgate
+  url: /docs/partners/shopgate/
 - name: Zendesk
   url: /docs/partners/zendesk/
 - name: PassKit
   url: /docs/partners/passkit/
-- name: Rokt Calendar
-  url: /docs/partners/rokt/
 - name: Future Anthem
   url: /docs/partners/future_anthem/
 - name: Komo
@@ -53,7 +53,7 @@ valid_partner_list:
   url: /docs/partners/nift/
 - name: Punchh
   url: /docs/partners/punchh/
-- name: 繰り返す
+- name: Iterate
   url: /docs/partners/iterate/
 - name: Jebbit
   url: /docs/partners/jebbit/
@@ -61,4 +61,8 @@ valid_partner_list:
   url: /docs/partners/survicate/
 - name: Typeform
   url: /docs/partners/typeform/
+- name: Oppizi
+  url: /docs/partners/oppizi/
+- name: StackAdapt
+  url: /docs/partners/stackadapt/
 ---

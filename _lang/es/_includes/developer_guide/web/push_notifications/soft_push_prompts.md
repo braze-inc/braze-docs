@@ -1,16 +1,16 @@
 {% multi_lang_include developer_guide/prerequisites/web.md %} También tendrás que [configurar las notificaciones push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web).
 
-## Acerca de los avisos push suaves
+## Acerca de las indicaciones de pulsación suave
 
 A menudo es una buena idea que los sitios implementen una notificación push "suave" en la que "prepares" al usuario y expongas tus argumentos para enviarle notificaciones push antes de solicitar el permiso push. Esto es útil porque el navegador regula la frecuencia con la que puedes preguntar directamente al usuario, y si el usuario deniega el permiso no puedes volver a preguntárselo.
 
-Alternativamente, si quieres incluir una gestión personalizada especial, en lugar de llamar directamente a `requestPushPermission()` como se describe en la [integración push web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration) estándar, utiliza nuestros [mensajes dentro de la aplicación desencadenados]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web).
+Como alternativa, si deseas incluir un tratamiento personalizado especial, en lugar de llamar`requestPushPermission()`directamente como se describe en la [integración]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration) estándar [de notificación push web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration), utiliza nuestros [mensajes dentro de la aplicación que se desencadenan]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web).
 
 {% alert tip %}
 Esto puede hacerse sin necesidad de personalizar el SDK utilizando nuestro [nuevo primer push sin código]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 {% endalert %}
 
-## Configuración de los avisos soft push
+## Configuración de avisos de push suave
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -29,7 +29,7 @@ En tu integración de SDK de Braze, busca y elimina cualquier llamada a `automat
 
 ### Paso 3: Integración de actualizaciones
 
-Por último, sustituye la llamada eliminada por el siguiente fragmento de código:
+Por último, reemplaza la llamada eliminada con el siguiente fragmento de código. Llama`subscribeToInAppMessage()`antes de llamar`openSession()`. Esto garantiza que el receptor de mensajes dentro de la aplicación se registre a tiempo para recibir el mensaje push inicial.
 
 ```javascript
 import * as braze from "@braze/web-sdk";

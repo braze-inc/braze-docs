@@ -32,8 +32,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "app_id": "App API identifier",
-  "rsa_public_key_str": "RSA public key string", 
-  "description": "description", 
+  "rsa_public_key_str": "RSA public key string",
+  "description": "description",
   "make_primary": false
 }
 ```
@@ -50,14 +50,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Exemple de demande
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_authentication/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "app_id": "01234567-89ab-cdef-0123-456789abcdef",
-  "rsa_public_key_str": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvvD+fgA0YuCUd/v35htn...\n-----END PUBLIC KEY-----", 
-  "description": "SDK Authentication Key for iOS App", 
+  "rsa_public_key_str": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvvD+fgA0YuCUd/v35htn...\n-----END PUBLIC KEY-----",
+  "description": "SDK Authentication Key for iOS App",
   "make_primary": false
 }'
 ```

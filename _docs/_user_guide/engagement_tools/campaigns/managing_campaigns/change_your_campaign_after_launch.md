@@ -1,6 +1,6 @@
 ---
-nav_title: Editing your campaign after launch
-article_title: Editing Your Campaign After Launch
+nav_title: Edit your campaign after launch
+article_title: Edit Your Campaign After Launch
 page_order: 1
 tool: Campaigns
 page_type: reference
@@ -8,7 +8,7 @@ description: "This reference article gives an overview of the result of editing 
 
 ---
 
-# Editing your campaign after launch
+# Edit your campaign after launch
 
 > This article gives an overview of the result of editing certain aspects of a campaign post-launch.
 
@@ -39,6 +39,13 @@ Any message content changes (including titles, bodies, and images) take effect i
 ### Scheduling and audience
 
 If you edit your campaign's scheduled send time or its audience, those changes are reflected in the actual campaign immediately.
+
+#### Considerations
+
+If your campaign uses Intelligent Timing or local time zone delivery, edits to the scheduled send time will not be reflected if the edit is made within 24 hours of the original send time. This is because:
+
+- **Intelligent Timing:** Braze begins calculating the optimal send time at midnight Samoa time. If this time has already passed, the message will have begun processing. For more information, refer to [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/).
+- **Local time zone delivery:** Editing a local time zone campaign that is scheduled less than 24 hours in advance will not alter the message's schedule. For more information, refer to the [How do I schedule a local time zone campaign?]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign).
 
 ### Send rate
 

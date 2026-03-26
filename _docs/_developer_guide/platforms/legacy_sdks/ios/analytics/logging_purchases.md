@@ -1,6 +1,6 @@
 ---
-nav_title: Logging purchases
-article_title: Logging Purchases for iOS
+nav_title: Log purchases
+article_title: Log Purchases for iOS
 platform: iOS
 page_order: 4
 description: "This reference article shows how to track in-app purchases and revenue and assign purchase properties in your iOS application."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Logging purchases for iOS
+# Log purchases for iOS
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources and segment your users by their lifetime value.
 

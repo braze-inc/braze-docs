@@ -20,18 +20,18 @@ tool: Canvas
   {% tab Canvas %}
   キャンバスは、マーケティング担当者が複数のメッセージを使ったキャンペーンを作成するための統一インターフェースである。いわばビジュアルプログラミングツールのようなもので、一連のステップを使って一貫したユーザージャーニーを作成できます。
 
-  ![デシジョンを持つキャンバスのサンプルステップは、ユーザーがプッシュ有効になっているかどうかに応じて、2 つの別々のユーザージャーニーに分割されます。]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
+  ![ユーザーがプッシュ有効になっているかどうかに応じて、デシジョン分割ステップを2 つの別々のユーザージャーニーに分割するキャンバスのサンプル。]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
 
   {% endtab %}
 
   {% tab Journey %}
 
-  ジャーニー (一般にユーザージャーニーと呼ばれる) は、キャンバス内での個々のユーザーエクスペリエンスです。<br><br> ![新しいユーザーのカスタマージャーニーを含むグラフ。匿名ユーザーがアプリをインストールし、Katがアカウントを作成し、Katが1週間アプリを開封せず、プッシュ通知がKatをアプリに戻し、Katが定期的にアプリを使用します。]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
+  ジャーニー (一般にユーザージャーニーと呼ばれる) は、キャンバス内での個々のユーザーエクスペリエンスです。<br><br> ![新しいユーザーのカスタマージャーニーを含むチャート。匿名ユーザーがアプリをインストールし、Katがアカウントを作成し、Katが1週間アプリを開封せず、プッシュ通知がKatをアプリに戻し、Katが定期的にアプリを使用します。]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Canvas Builder %}
-  キャンバスビルダーは、キャンバスを作成する際の手順を示している。これには、キャンバスに名前を付けたり、チームを追加するなどの基本操作が含まれます。基本的に、キャンバスビルダーはキャンバスを作り始める前に必要な重要なセットアップです。ここでは、[エントリスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule)、[ターゲットオーディエンス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience)の編集、[設定の送信]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings)などのオプションを使用して、ユーザーのカスタマージャーニーの開始と履行方法をコントロールできます。<br><br> ![The Canvas builder on the Basics section for a Canvas named "New Canvas".]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
+  キャンバスビルダーは、キャンバスを作成する際の手順を示している。これには、キャンバスに名前を付けたり、チームを追加するなどの基本操作が含まれます。基本的に、キャンバスビルダーはキャンバスを作り始める前に必要な重要なセットアップです。ここでは、[エントリスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule)、[ターゲットオーディエンス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience)の編集、[設定の送信]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings)などのオプションを使用して、ユーザーのカスタマージャーニーの開始と履行方法をコントロールできます。<br><br> ![キャンバスの「基本」セクションの「キャンバス」ビルダ。名前は「&quot」、「新規キャンバス&quot」です。]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 

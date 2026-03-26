@@ -3,14 +3,14 @@ nav_title: Ideias e estratégias
 article_title: Ideias e estratégias
 layout: dev_guide
 guide_top_header: "Ideias e estratégias"
-guide_top_text: "Saiba mais sobre como testar e verificar seus Canvases com diferentes ideias e estratégias."
+guide_top_text: "Saiba mais sobre como testar e verificar seus canvas com diferentes ideias e estratégias."
 page_order: 5
 
 tool: Canvas
 page_type: landing
-description: "Esta página inicial contém ideias e estratégias do Canvas, incluindo práticas recomendadas, uma lista de verificação pré e pós-lançamento e orientações sobre o lançamento com o Canvas."
+description: "Esta landing page reúne ideias e estratégias do Canvas, incluindo práticas recomendadas, uma lista de verificação pré e pós-lançamento e orientações sobre como lançar com o Canvas."
 
-guide_featured_title: "Artigos de seção"
+guide_featured_title: "Artigos da seção"
 guide_featured_list:
   - name: Práticas recomendadas
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices/
@@ -18,19 +18,19 @@ guide_featured_list:
   - name: Lista de verificação pré e pós-lançamento
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/
     image: /assets/img/braze_icons/check-square-broken.svg
-  - name: Lançamento com o Canvas
+  - name: Lançando com o Canvas
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     image: /assets/img/braze_icons/git-branch-01.svg
 
-guide_menu_title: "Additional resources"
+guide_menu_title: "Recursos adicionais"
 guide_menu_list:
   - name: Localização
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
     image: /assets/img/braze_icons/globe-02.svg
-  - name: Uso de modelos de tela do Braze
+  - name: Uso de modelos da Braze para Canvas
     link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/
     image: /assets/img/braze_icons/target-04.svg
-  - name: Envio de telas de teste
+  - name: Enviando canvas de teste
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     image: /assets/img/braze_icons/user-check-01.svg
   - name: Pontuação de leads
@@ -39,7 +39,10 @@ guide_menu_list:
   - name: Sistema de e-mail de lembrete de reserva
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/booking_use_case/
     image: /assets/img/braze_icons/channel-email.svg
-  - name: Casos de uso de comércio eletrônico
+  - name: Correspondência entre critérios de saída e eventos de entrada
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/matching_entry_and_exit_criteria/
+    image: /assets/img/braze_icons/target-04.svg
+  - name: Casos de uso de eCommerce
     link: /docs/ecommerce_use_cases/
     image: /assets/img/braze_icons/users-01.svg
 

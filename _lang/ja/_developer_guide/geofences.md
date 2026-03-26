@@ -7,13 +7,15 @@ platform:
   - Android
   - FireOS
   - Swift
+  - Xamarin
+  - React Native
 Tool:
   - Location
 ---
 
 # ジオフェンス
 
-> Braze SDKのジオフェンスの設定方法を学習する。[ジオフェンスとは]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences)、特定のグローバルな位置を中心とした円を形成する仮想の地理的領域のことで、緯度、経度、半径を組み合わせて表される。
+> Braze SDKのジオフェンスの設定方法を学習する。[ジオフェンス]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences)とは、特定のグローバルな位置を中心に円を形成する仮想的な地理的領域のことで、緯度、経度、半径を組み合わせて表されます。
 
 {% sdktabs %}
 {% sdktab android %}
@@ -22,5 +24,13 @@ Tool:
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/geofences.md %}
+{% endsdktab %}
+
+{% sdktab .NET MAUI (Xamarin) %}
+{% multi_lang_include developer_guide/xamarin/geofences.md %}
+{% endsdktab %}
+
+{% sdktab React Native %}
+{% multi_lang_include developer_guide/react_native/geofences.md %}
 {% endsdktab %}
 {% endsdktabs %}

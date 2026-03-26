@@ -15,16 +15,16 @@ description: "Découvrez les messages in-app et comment les configurer pour le S
 > Découvrez les messages in-app et comment les configurer pour le SDK de Braze.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/in_app_messages.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/in_app_messages.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab android ott %}
@@ -55,7 +55,15 @@ description: "Découvrez les messages in-app et comment les configurer pour le S
 {% multi_lang_include developer_guide/unity/in_app_messages.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
+{% sdktab .NET MAUI (Xamarin) %}
 {% multi_lang_include developer_guide/xamarin/in_app_messages.md %}
 {% endsdktab %}
 {% endsdktabs %}
+
+## Étapes suivantes
+
+Êtes-vous prêt à approfondir vos connaissances ? Veuillez consulter ces tutoriels étape par étape :
+
+- Ajustez le moment de la réception/distribution des messages en [différant et]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages) en [rétablissant les messages déclenchés]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).  
+- Affinez le ciblage des messages en [définissant des règles d'affichage conditionnelles]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages).  
+- Adaptez l'apparence de votre marque en [personnalisant le style des messages à l'aide de paires clé-valeur]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).

@@ -1,51 +1,51 @@
 ---
-nav_title: Eventos recomendados para comércio eletrônico
-article_title: Eventos recomendados para comércio eletrônico
+nav_title: Eventos recomendados de eCommerce
+article_title: Eventos recomendados de eCommerce
 page_type: reference
 alias: /ecommerce_events/
 toc_headers: h2
-description: "Este artigo de referência descreve eventos e propriedades recomendados para comércio eletrônico, seu uso, segmentação, onde visualizar análises relevantes e muito mais."
+description: "Este artigo de referência descreve eventos e propriedades recomendados de eCommerce, seu uso, segmentação, onde visualizar análises relevantes e mais."
 ---
 
-# Eventos recomendados para comércio eletrônico
+# Eventos recomendados de eCommerce
 
-> Esta página abrange eventos e propriedades recomendados para comércio eletrônico. Esses eventos são criados para capturar os principais comportamentos de compras que os profissionais de marketing precisam para acionar mensagens eficazes, como a segmentação de carrinhos abandonados.
+> Esta página cobre eventos e propriedades recomendados de eCommerce. Esses eventos foram criados para capturar comportamentos de compra essenciais que os profissionais de marketing precisam para disparar mensagens eficazes, como o direcionamento de carrinhos abandonados.
 
 {% alert important %}
-Os eventos recomendados para comércio eletrônico estão atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente Braze se estiver interessado em participar desse acesso antecipado. <br><br>Se você estiver usando o novo [conector da Shopify]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector), esses eventos recomendados estarão automaticamente disponíveis por meio da integração.
+Os eventos recomendados de eCommerce estão atualmente em acesso antecipado. Fale com seu gerente de sucesso do cliente da Braze se você tiver interesse em participar deste acesso antecipado. <br><br>Se você estiver usando o novo [conector Shopify]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector), esses eventos recomendados estarão automaticamente disponíveis por meio da integração.
 {% endalert %}
 
-A Braze reconhece que o planejamento de dados leva tempo. Incentivamos nossos clientes a familiarizarem suas equipes de desenvolvimento e começarem a enviar esses eventos agora. Embora alguns recursos possam não estar disponíveis imediatamente com os eventos recomendados para comércio eletrônico, você pode esperar a introdução de novos produtos ao longo de 2025 que aprimorarão seus recursos de comércio eletrônico.
+A Braze reconhece que o planejamento de dados leva tempo. Incentivamos nossos clientes a familiarizarem suas equipes de desenvolvimento e começarem a enviar esses eventos agora. Embora alguns recursos possam não estar disponíveis imediatamente com os eventos recomendados de eCommerce, você pode aguardar a introdução de novos produtos ao longo de 2025 que aprimorarão suas capacidades de eCommerce.
 
-## Tipos de eventos recomendados para comércio eletrônico
+## Tipos de eventos recomendados de eCommerce
 
 {% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
 
-Qualquer moeda diferente de USD informada será exibida no Braze em USD com base na taxa de câmbio na data em que foi informada. Para evitar a conversão de moeda, codifique a moeda para USD.
+Qualquer moeda diferente de USD será exibida na Braze em USD com base na taxa de câmbio da data em que foi reportada. Para evitar a conversão de moeda, defina a moeda como USD no código.
 
 {% tabs %}
 {% tab ecommerce.product_viewed %}
 
-Você pode usar o evento product viewed (produto visualizado) para acionar quando um cliente visualiza uma página de detalhes do produto.
+Você pode usar o evento de produto visualizado para disparar quando um cliente visualiza uma página de detalhes do produto.
 
 #### Propriedades
 
-| Nome da propriedade | Necessário | Tipo de dados | Descrição | 
+| Nome da propriedade | Obrigatória | Tipo de dados | Descrição | 
 |---|---|---|---|
-| `product_id` | Sim | Cordas | Um identificador exclusivo para o produto que foi visualizado. <br> Para clientes que não são da Shopify, esse será o valor que você definirá para IDs de itens de catálogo, como SKUs. |
-| `product_name` | Sim | Cordas | O nome do produto que foi visualizado. | 
-| `variant_id` | Sim | Cordas | Um identificador exclusivo para a variante do produto. Um exemplo é `shirt_medium_blue` |
-| `image_url` | Não | Cordas | URL da imagem do produto. |
-| `product_url` | Não | Cordas | URL para a página do produto para obter mais detalhes. |
-| `price` | Sim | Flutuação | O preço unitário da variante do produto no momento da visualização. |
-| `currency` | Sim | Cordas | A moeda na qual o preço do produto está listado (como "USD" ou "EUR") no [formato ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). |
-| `source` | Sim | Cordas | Fonte da qual o evento é derivado. (Para a Shopify, isso é a vitrine). |
+| `product_id` | Sim | String | Um identificador único para o produto que foi visualizado. <br> Para clientes que não usam Shopify, este será o valor que você definir para IDs de itens de catálogo, como SKUs. |
+| `product_name` | Sim | String | O nome do produto que foi visualizado. | 
+| `variant_id` | Sim | String | Um identificador único para a variante do produto. Um exemplo é `shirt_medium_blue` |
+| `image_url` | Não | String | URL da imagem do produto. |
+| `product_url` | Não | String | URL da página do produto para mais detalhes. |
+| `price` | Sim | Float | O preço unitário da variante do produto no momento da visualização. |
+| `currency` | Sim | String | A moeda na qual o preço do produto está listado (como "USD" ou "EUR") no formato [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). |
+| `source` | Sim | String | Origem da qual o evento é derivado. (Para Shopify, é a vitrine). |
 | `metadata` | Não | Objeto | |
 | `type` | Não | Objeto | Funciona com [notificações de volta ao estoque]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications) e [notificações de queda de preço]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications). |
-| `sku` | Não | Cordas | (Somente Shopify) SKU da Shopify. Isso pode ser configurado como o campo de ID do catálogo. |
+| `sku` | Não | String | (Apenas Shopify) SKU do Shopify. Pode ser configurado como o campo de ID do catálogo. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-#### Exemplos de objetos
+#### Objetos de exemplo
 
 {% subtabs %}
 {% subtab Web SDK %}
@@ -140,7 +140,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
           "color": "ORANGE",
           "size": "6",
           "brand": "Braze"
-        }
+        },
         "type": [
           "price_drop",
           "back_in_stock"
@@ -156,15 +156,15 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
 {% endtab %}
 {% tab ecommerce.cart_updated %}
 
-Você pode usar o evento de atualização do carrinho para rastrear quando os produtos são adicionados, removidos ou atualizados no carrinho. O evento `ecommerce.cart_updated` verifica as seguintes informações antes de ser acionado:
+Você pode usar o gatilho **Perform Cart Updated Event** para rastrear quando produtos são adicionados, removidos ou atualizados no carrinho. Este evento verifica as seguintes informações antes de ser acionado:
 
-- O tempo do evento é maior do que o tempo do `updated_at` para o carrinho específico do usuário.
-- O carrinho não prosseguiu para o processo de checkout.
-- A matriz `products` não está vazia.
+- O horário do evento é maior que o horário `updated_at` do carrinho específico do usuário.
+- O carrinho não avançou para o processo de checkout.
+- O array `products` não está vazio.
 
 #### Objeto de mapeamento de carrinhos
 
-O evento `ecommerce.cart_updated` tem um objeto de mapeamento de carrinhos. Esse objeto é criado para o perfil do usuário que contém um mapeamento de carrinhos, que contém todos os produtos no carrinho do comprador. Você pode acessar os produtos em seu carrinho de compras por meio da tag Liquid: 
+O evento `ecommerce.cart_updated` tem um objeto de mapeamento de carrinhos. Esse objeto é criado no perfil do usuário e contém um mapeamento de carrinhos com todos os produtos no carrinho do comprador. Você pode acessar os produtos no carrinho de compras por meio da Liquid tag: 
 
 {%raw%}
 ```liquid
@@ -174,38 +174,38 @@ O evento `ecommerce.cart_updated` tem um objeto de mapeamento de carrinhos. Esse
 ```
 {%endraw%}
 
-Se um carrinho não tiver sido atualizado e progredido para um evento de pedido feito em 10 dias, excluiremos o carrinho e os produtos associados.
+Se um carrinho não for atualizado e não avançar para um evento de pedido realizado em 10 dias, excluiremos o carrinho e os produtos associados.
 
 {% alert note %}
-Os produtos por carrinho não são limitados no Braze. No entanto, o limite da Shopify é 500.
+Não há limite de produtos por carrinho na Braze. No entanto, o limite do Shopify é 500.
 {% endalert %}
 
 #### Comportamento do carrinho ao mesclar perfis de usuário
 
-Se houver dois carrinhos, adicione ambos ao usuário mesclado. Reenvie o Canvas se for o mesmo carrinho ou um carrinho diferente para enviar uma mensagem com as informações mais recentes do carrinho. O evento `ecommerce.cart_updated` conterá o ID do carrinho que durou e os produtos que duraram no carrinho.
+Se houver dois carrinhos, ambos serão adicionados ao usuário mesclado. O Canvas será reenfileirado, seja o mesmo carrinho ou um diferente, para enviar uma mensagem com as informações mais recentes do carrinho. O evento `ecommerce.cart_updated` conterá o ID do carrinho mais recente e os produtos mais recentes no carrinho.
 
 #### Propriedades
 
-| Nome da propriedade | Necessário | Tipo de dados | Descrição | 
+| Nome da propriedade | Obrigatória | Tipo de dados | Descrição | 
 |---|---|---|---|
-| `cart_id` | Sim | Cordas | Identificador exclusivo do carrinho. Se nenhum valor for passado, determinaremos um valor padrão (compartilhado entre os eventos de carrinho, checkout e pedido) para o mapeamento do carrinho do usuário. |
-| `total_value` | Sim | Flutuação | Valor monetário total do carrinho. | 
-| `currency` | Sim | Cordas | A moeda na qual o preço do produto está listado (como "USD" ou "EUR") no [formato ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). |
-| `products` | Sim | Matriz |  |
-| `product_id` | Sim | Cordas | Um identificador exclusivo para o produto que foi visualizado. <br> Esse valor pode ser a ID do produto ou a SKU. |
-| `product_name` | Sim | Cordas | O nome do produto que foi visualizado. |
-| `variant_id` | Sim | Cordas | Um identificador exclusivo para a variante do produto. Um exemplo é `shirt_medium_blue` |
-| `image_url` | Não | Cordas | URL da imagem do produto. |
-| `product_url` | Não | Cordas | URL para a página do produto para obter mais detalhes. |
+| `cart_id` | Sim | String | Se você não estiver usando uma plataforma de terceiros que forneça um `cart_id`, pode usar o [Braze session ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
+| `total_value` | Sim | Float | Valor monetário total do carrinho. | 
+| `currency` | Sim | String | A moeda na qual o preço do produto está listado (como "USD" ou "EUR") no formato [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). |
+| `products` | Sim | Vetor |  |
+| `product_id` | Sim | String | Um identificador único para o produto que foi visualizado. <br> Esse valor pode ser o ID do produto ou SKU. |
+| `product_name` | Sim | String | O nome do produto que foi visualizado. |
+| `variant_id` | Sim | String | Um identificador único para a variante do produto. Um exemplo é `shirt_medium_blue` |
+| `image_url` | Não | String | URL da imagem do produto. |
+| `product_url` | Não | String | URL da página do produto para mais detalhes. |
 | `quantity` | Sim | Inteiro | Número de unidades do produto no carrinho. |
-| `price` | Sim | Flutuação | O preço unitário da variante do produto no momento da visualização. |
-| `metadata` | Não | Objeto | Campo de metadados adicionais sobre o produto que o cliente deseja adicionar para seus casos de uso. Para o Shopify, adicionaremos o SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
-| `sku` | Não | Cordas | (Somente Shopify) SKU da Shopify. Isso pode ser configurado como o campo de ID do catálogo. |
-| `source` | Sim | Cordas | Fonte da qual o evento é derivado. (Para a Shopify, isso é a vitrine). |
-| `metadata` | Não | Objeto | Campo de metadados adicionais sobre o produto que o cliente deseja adicionar para seus casos de uso. Para o Shopify, adicionaremos o SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
+| `price` | Sim | Float | O preço unitário da variante do produto no momento da visualização. |
+| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja incluir para seus casos de uso. Para Shopify, adicionaremos o SKU. <br> Terá um limite baseado no nosso limite geral de propriedades de eventos de 50 KB. |
+| `sku` | Não | String | (Apenas Shopify) SKU do Shopify. Pode ser configurado como o campo de ID do catálogo. |
+| `source` | Sim | String | Origem da qual o evento é derivado. (Para Shopify, é a vitrine). |
+| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja incluir para seus casos de uso. Para Shopify, adicionaremos o SKU. <br> Terá um limite baseado no nosso limite geral de propriedades de eventos de 50 KB. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-#### Exemplos de objetos
+#### Objetos de exemplo
 
 {% subtabs %}
 {% subtab Web SDK %}
@@ -347,9 +347,9 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.cart_updated", properties: pr
 {% endtab %}
 {% tab ecommerce.checkout_started %}
 
-Você pode usar o evento checkout started para redirecionar os clientes que iniciaram o processo de checkout, mas não fizeram um pedido.
+Você pode usar o evento de checkout iniciado para redirecionar clientes que iniciaram o processo de checkout, mas não finalizaram o pedido.
 
-Semelhante ao evento `ecommerce.cart_updated`, esse evento permite que você aproveite a tag Liquid do carrinho de compras para acessar todos os produtos no carrinho para mensagens de abandono de caixa:
+Assim como o evento `ecommerce.cart_updated`, este evento permite que você use a Liquid tag do carrinho de compras para acessar todos os produtos no carrinho em mensagens de checkout abandonado:
 
 {%raw%}
 ```liquid
@@ -361,28 +361,28 @@ Semelhante ao evento `ecommerce.cart_updated`, esse evento permite que você apr
 
 #### Propriedades
 
-| Nome da propriedade | Necessário | Tipo de dados | Descrição | 
+| Nome da propriedade | Obrigatória | Tipo de dados | Descrição | 
 |---|---|---|---|
-| `checkout_id` | Sim | Cordas | Identificador exclusivo para o checkout. |
-| `cart_id` | Não | Cordas | Identificador exclusivo do carrinho. Se nenhum valor for passado, determinaremos um valor padrão (compartilhado entre os eventos de carrinho, checkout e pedido) para o mapeamento do carrinho do usuário... | 
-| `total_value` | Sim | Flutuação | Valor monetário total do carrinho. |
-| `currency` | Sim | Cordas | Moeda em que o carrinho é avaliado. |
-| `products` | Sim | Matriz de objetos |  |
-| `product_id` | Sim | Cordas | Um identificador exclusivo para o produto que foi visualizado. Por exemplo, esse valor pode ser a ID do produto ou a SKU. |
-| `product_name` | Sim | Cordas | O nome do produto que foi visualizado.  |
-| `variant_id` | Sim | Cordas | Um identificador exclusivo para a variante do produto. Um exemplo é `shirt_medium_blue` |
-| `image_url` | Não | Cordas | URL da imagem do produto. |
-| `product_url` | Não | Cordas | URL para a página do produto para obter mais detalhes. |
+| `checkout_id` | Sim | String | Identificador único para o checkout. |
+| `cart_id` | Não | String | Se você não estiver usando uma plataforma de terceiros que forneça um `cart_id`, pode usar o [Braze session ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). | 
+| `total_value` | Sim | Float | Valor monetário total do carrinho. |
+| `currency` | Sim | String | Moeda na qual o carrinho é avaliado. |
+| `products` | Sim | Vetor de objetos |  |
+| `product_id` | Sim | String | Um identificador único para o produto que foi visualizado. Por exemplo, esse valor pode ser o ID do produto ou SKU. |
+| `product_name` | Sim | String | O nome do produto que foi visualizado.  |
+| `variant_id` | Sim | String | Um identificador único para a variante do produto. Um exemplo é `shirt_medium_blue` |
+| `image_url` | Não | String | URL da imagem do produto. |
+| `product_url` | Não | String | URL da página do produto para mais detalhes. |
 | `quantity` | Sim | Inteiro | Número de unidades do produto no carrinho. |
-| `price` | Sim | Flutuação | O preço unitário da variante do produto no momento da visualização. |
-| `metadata` | Não | Objeto | Campo de metadados adicionais sobre o produto que o cliente deseja adicionar para seus casos de uso. Para o Shopify, adicionaremos o SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
-| `sku` | Não | Cordas | (Somente Shopify) SKU da Shopify. Isso pode ser configurado como o campo de ID do catálogo. |
-| `source` | Sim | Cordas | Fonte da qual o evento é derivado. (Para a Shopify, isso é a vitrine). |
+| `price` | Sim | Float | O preço unitário da variante do produto no momento da visualização. |
+| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja incluir para seus casos de uso. Para Shopify, adicionaremos o SKU. <br> Terá um limite baseado no nosso limite geral de propriedades de eventos de 50 KB. |
+| `sku` | Não | String | (Apenas Shopify) SKU do Shopify. Pode ser configurado como o campo de ID do catálogo. |
+| `source` | Sim | String | Origem da qual o evento é derivado. (Para Shopify, é a vitrine). |
 | `metadata` | Não | Objeto |  |
-| `checkout_url` | Não | Cordas | URL da página de checkout. |
+| `checkout_url` | Não | String | URL da página de checkout. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-#### Exemplos de objetos
+#### Objetos de exemplo
 
 {% subtabs %}
 {% subtab Web SDK %}
@@ -523,38 +523,37 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.checkout_started", properties
 {% endtab %}
 {% tab ecommerce.order_placed %}
 
-Você pode usar o evento de pedido feito para acionar quando um cliente concluir com êxito o processo de checkout e fizer um pedido.
+Você pode usar o evento de pedido realizado para disparar quando um cliente conclui com sucesso o processo de checkout e faz um pedido.
 
 #### Propriedades
 
-| Nome da propriedade | Necessário | Tipo de dados | Descrição | 
+| Nome da propriedade | Obrigatória | Tipo de dados | Descrição | 
 |---|---|---|---|
-| `order_id` | Sim | Cordas | Identificador exclusivo do pedido feito. |
-| `cart_id` | Não | Cordas | Identificador exclusivo do carrinho. Se nenhum valor for passado, determinaremos um valor padrão (compartilhado entre os eventos de carrinho, checkout e pedido) para o mapeamento do carrinho do usuário. |
-| `total_value` | Sim | Flutuação | Valor monetário total do carrinho. | 
-| `currency` | Sim | Cordas | Moeda em que o carrinho é avaliado. |
-| `total_discounts` | Não | Flutuação | Valor total dos descontos aplicados ao pedido. | 
-| `discounts`| Não | Matriz de objetos | Lista detalhada dos descontos aplicados ao pedido. |
-| `products` | Sim | Matriz de objetos |  |
-| `product_id` | Sim | Cordas | Um identificador exclusivo para o produto que foi visualizado. Esse valor pode ser a ID do produto ou a SKU. |
-| `product_name` | Sim | Cordas | O nome do produto que foi visualizado. |
-| `variant_id` | Sim | Cordas | Um identificador exclusivo para a variante do produto. Um exemplo é `shirt_medium_blue` |
-| `image_url` | Não | Cordas | URL da imagem do produto. |
-| `product_url` | Não | Cordas | URL para a página do produto para obter mais detalhes. |
+| `order_id` | Sim | String | Identificador único para o pedido realizado. |
+| `cart_id` | Não | String | Se você não estiver usando uma plataforma de terceiros que forneça um `cart_id`, pode usar o [Braze session ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
+| `total_value` | Sim | Float | Valor monetário total do carrinho. | 
+| `currency` | Sim | String | Moeda na qual o carrinho é avaliado. |
+| `total_discounts` | Não | Float | Valor total dos descontos aplicados ao pedido. | 
+| `discounts`| Não | Vetor de objetos | Lista detalhada de descontos aplicados ao pedido. |
+| `products` | Sim | Vetor de objetos |  |
+| `product_id` | Sim | String | Um identificador único para o produto que foi visualizado. Esse valor pode ser o ID do produto ou SKU. |
+| `product_name` | Sim | String | O nome do produto que foi visualizado. |
+| `variant_id` | Sim | String | Um identificador único para a variante do produto. Um exemplo é `shirt_medium_blue` |
+| `image_url` | Não | String | URL da imagem do produto. |
+| `product_url` | Não | String | URL da página do produto para mais detalhes. |
 | `quantity` | Sim | Inteiro | Número de unidades do produto no carrinho. |
-| `price` | Sim | Flutuação | O preço unitário da variante do produto no momento da visualização. |
-| `metadata` | Não | Objeto | Campo de metadados adicionais sobre o produto que o cliente deseja adicionar para seus casos de uso. Para o Shopify, adicionaremos o SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
-| `sku` | Não | Cordas | (Somente Shopify) SKU da Shopify. Isso pode ser configurado como o campo de ID do catálogo. |
-| `source` | Sim | Cordas | Fonte da qual o evento é derivado. (Para a Shopify, isso é a vitrine). |
-| `metadata` | Não | Objeto |  |
-| `order_status_url` | Não | Cordas | URL para visualizar o status do pedido. |
-| `order_number` | Não | Cordas | (Somente Shopify) Número de pedido exclusivo para o pedido feito. |
-| `tags` | Não | Matriz | (Somente Shopify) Tags de pedido
-| `referring_site` | Não | Cordas | (Somente Shopify) O site de onde o pedido foi originado (como Meta). |
-| `payment_gateway_names` | Não | Matriz | (Somente Shopify) Fonte do sistema de pagamento (como ponto de venda ou celular). |
+| `price` | Sim | Float | O preço unitário da variante do produto no momento da visualização. |
+| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja incluir para seus casos de uso. Para Shopify, adicionaremos o SKU. <br> Terá um limite baseado no nosso limite geral de propriedades de eventos de 50 KB. |
+| `sku` | Não | String | (Apenas Shopify) SKU do Shopify. Pode ser configurado como o campo de ID do catálogo. |
+| `source` | Sim | String | Origem da qual o evento é derivado. (Para Shopify, é a vitrine). |
+| `order_status_url` | Não | String | URL para visualizar o status do pedido. |
+| `order_number` | Não | String | (Apenas Shopify) Número de pedido único para o pedido realizado. |
+| `tags` | Não | Vetor | (Apenas Shopify) Tags do pedido
+| `referring_site` | Não | String | (Apenas Shopify) O site de onde o pedido se originou (como Meta). |
+| `payment_gateway_names` | Não | Vetor | (Apenas Shopify) Origem do sistema de pagamento (como ponto de venda ou dispositivo móvel). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-#### Exemplos de objetos
+#### Objetos de exemplo
 
 {% subtabs %}
 {% subtab Web SDK %}
@@ -741,36 +740,36 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_placed", properties: pr
 {% endtab %}
 {% tab ecommerce.order_refunded %}
 
-Você pode usar o evento order refunded para acionar quando um pedido for parcial ou totalmente reembolsado.
+Você pode usar o evento de pedido reembolsado para disparar quando um pedido é parcial ou totalmente reembolsado.
 
 #### Propriedades
 
-| Nome da propriedade       | Necessário | Tipo de dados | Descrição   |
+| Nome da propriedade       | Obrigatória | Tipo de dados | Descrição   |
 |---------------|---------|-----------|-------------------------|
-| `order_id`            | Sim      | Cordas    | Identificador exclusivo do pedido feito.        |
-| `total_value`         | Sim      | Flutuação     | Valor monetário total do carrinho.    |
-| `currency`            | Sim      | Cordas    | Moeda em que o carrinho é avaliado.    |
-| `total_discounts`     | Não       | Flutuação     | Valor total dos descontos aplicados ao pedido.   |
-| `discounts`           | Não       | Matriz de objetos     | Lista detalhada dos descontos aplicados ao pedido. |
-| `products`            | Sim      | Matriz de objetos     |  |
-| `product_id`       | Sim      | Cordas    | Um identificador exclusivo para o produto que foi visualizado. Esse valor pode ser a ID do produto, a SKU ou algo semelhante. <br>Se um reembolso parcial for emitido e não houver um `product_id` atribuído ao reembolso (por exemplo, um reembolso em nível de pedido), forneça um `product_id` generalizado.             |
-| `product_name`     | Sim      | Cordas    | O nome do produto que foi visualizado.                                                                      |
-| `variant_id`       | Sim      | Cordas    | Um identificador exclusivo para a variante do produto (como `shirt_medium_blue`).                                         |
-| `image_url`        | Não       | Cordas    | URL da imagem do produto.     |
-| `product_url`      | Não       | Cordas    | URL para a página do produto para obter mais detalhes.  |
+| `order_id`            | Sim      | String    | Identificador único para o pedido realizado.        |
+| `total_value`         | Sim      | Float     | Valor monetário total do carrinho.    |
+| `currency`            | Sim      | String    | Moeda na qual o carrinho é avaliado.    |
+| `total_discounts`     | Não       | Float     | Valor total dos descontos aplicados ao pedido.   |
+| `discounts`           | Não       | Vetor de objetos     | Lista detalhada de descontos aplicados ao pedido. |
+| `products`            | Sim      | Vetor de objetos     |  |
+| `product_id`       | Sim      | String    | Um identificador único para o produto que foi visualizado. Este valor pode ser o ID do produto, SKU ou similar. <br>Se um reembolso parcial for emitido e não houver `product_id` atribuído ao reembolso (por exemplo, um reembolso em nível de pedido), forneça um `product_id` genérico.             |
+| `product_name`     | Sim      | String    | O nome do produto que foi visualizado.                                                                      |
+| `variant_id`       | Sim      | String    | Um identificador único para a variante do produto (como `shirt_medium_blue`).                                         |
+| `image_url`        | Não       | String    | URL da imagem do produto.     |
+| `product_url`      | Não       | String    | URL da página do produto para mais detalhes.  |
 | `quantity`         | Sim      | Inteiro   | Número de unidades do produto no carrinho.   |
-| `price`            | Sim      | Flutuação     | O preço unitário da variante do produto no momento da visualização.  |
-| `metadata`         | Não       | Objeto    | Campo de metadados adicionais sobre o produto que o cliente deseja adicionar para seus casos de uso. Para o Shopify, adicionaremos o SKU. Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
-| `sku`            | Não       | Cordas    | (Somente Shopify) SKU da Shopify. Isso pode ser configurado como o campo de ID do catálogo.  |
-| `source`              | Sim      | Cordas    | Fonte da qual o evento é derivado. (Para a Shopify, isso é a vitrine).    |
+| `price`            | Sim      | Float     | O preço unitário da variante do produto no momento da visualização.  |
+| `metadata`         | Não       | Objeto    | Campo de metadados adicional sobre o produto que o cliente deseja incluir para seus casos de uso. Para Shopify, adicionaremos o SKU. Terá um limite baseado no nosso limite geral de propriedades de eventos de 50 KB. |
+| `sku`            | Não       | String    | (Apenas Shopify) SKU do Shopify. Pode ser configurado como o campo de ID do catálogo.  |
+| `source`              | Sim      | String    | Origem da qual o evento é derivado. (Para Shopify, é a vitrine).    |
 | `metadata`            | Não       | Objeto    |                |
-| `order_status_url`  | Não       | Cordas    | URL para visualizar o status do pedido.     |
-| `order_note`       | Não       | Cordas    | (Somente Shopify) Observação anexada ao pedido pelo comerciante.    |
-| `order_number`     | Não       | Cordas    | (Somente Shopify) Número de pedido exclusivo para o pedido feito.   |
-| `tags`             | Não       | Matriz     | (Somente Shopify) Tags de pedido.  |
+| `order_status_url`  | Não       | String    | URL para visualizar o status do pedido.     |
+| `order_note`       | Não       | String    | (Apenas Shopify) Nota anexada ao pedido pelo comerciante.    |
+| `order_number`     | Não       | String    | (Apenas Shopify) Número de pedido único para o pedido realizado.   |
+| `tags`             | Não       | Vetor     | (Apenas Shopify) Tags do pedido.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-#### Exemplos de objetos
+#### Objetos de exemplo
 
 {% subtabs %}
 {% subtab Web SDK %}
@@ -953,32 +952,32 @@ Você pode usar o evento de pedido cancelado para disparar quando um cliente can
 
 #### Propriedades
 
-| Nome da propriedade      | Necessário | Tipo de dados | Descrição       |
+| Nome da propriedade      | Obrigatória | Tipo de dados | Descrição       |
 |---------------------|----------|-----------|-------------------|
-| `order_id`            | Sim      | Cordas    | Identificador exclusivo do pedido feito.              |
-| `cancel_reason`       | Sim      | Cordas    | Motivo pelo qual o pedido foi cancelado.           |
-| `total_value`         | Sim      | Flutuação     | Valor monetário total do carrinho.         |
-| `currency`            | Sim      | Cordas    | Moeda em que o carrinho é avaliado.           |
-| `total_discounts`     | Não       | Flutuação     | Valor total dos descontos aplicados ao pedido.     |
-| `discounts`           | Não       | Matriz de objetos     | Lista detalhada dos descontos aplicados ao pedido.             |
-| `products`            | Sim      | Matriz de objetos     |         |
-| `product_id`          | Sim      | Cordas    | Um identificador exclusivo para o produto que foi visualizado. Esse valor pode ser a ID do produto, a SKU ou algo semelhante.             |
-| `product_name`        | Sim      | Cordas    | O nome do produto que foi visualizado.          |
-| `variant_id`          | Sim      | Cordas    | Um identificador exclusivo para a variante do produto (como `shirt_medium_blue`).        |
-| `image_url`           | Não       | Cordas    | URL da imagem do produto.           |
-| `product_url`         | Não       | Cordas    | URL para a página do produto para obter mais detalhes.                                                                     |
+| `order_id`            | Sim      | String    | Identificador único para o pedido realizado.              |
+| `cancel_reason`       | Sim      | String    | Motivo pelo qual o pedido foi cancelado.           |
+| `total_value`         | Sim      | Float     | Valor monetário total do carrinho.         |
+| `currency`            | Sim      | String    | Moeda na qual o carrinho é avaliado.           |
+| `total_discounts`     | Não       | Float     | Total de descontos aplicados ao pedido.     |
+| `discounts`           | Não       | Vetor de objetos     | Lista detalhada de descontos aplicados ao pedido.             |
+| `products`            | Sim      | Vetor de objetos     |         |
+| `product_id`          | Sim      | String    | Um identificador único para o produto que foi visualizado. Esse valor pode ser o ID do produto, SKU ou similar.             |
+| `product_name`        | Sim      | String    | O nome do produto que foi visualizado.          |
+| `variant_id`          | Sim      | String    | Um identificador único para a variante do produto (como `shirt_medium_blue`).        |
+| `image_url`           | Não       | String    | URL da imagem do produto.           |
+| `product_url`         | Não       | String    | URL da página do produto para mais detalhes.                                                                     |
 | `quantity`            | Sim      | Inteiro   | Número de unidades do produto no carrinho.        |
-| `price`               | Sim      | Flutuação     | O preço unitário da variante do produto no momento da visualização.     |
-| `metadata`            | Não       | Objeto    | Campo de metadados adicionais sobre o produto que o cliente deseja adicionar para seus casos de uso. Para o Shopify, adicionaremos o SKU. Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
-| `sku`                 | Não       | Cordas    | (Somente Shopify) SKU da Shopify. Isso pode ser configurado como o campo de ID do catálogo.        |
-| `source`              | Sim      | Cordas    | Fonte da qual o evento é derivado. (Para a Shopify, isso é a vitrine).    |
+| `price`               | Sim      | Float     | O preço unitário da variante do produto no momento da visualização.     |
+| `metadata`            | Não       | Objeto    | Campo de metadados adicional sobre o produto que o cliente deseja incluir para seus casos de uso. Para Shopify, adicionaremos o SKU. Terá um limite baseado no nosso limite geral de propriedades de eventos de 50 KB. |
+| `sku`                 | Não       | String    | (Apenas Shopify) SKU do Shopify. Pode ser configurado como o campo de ID do catálogo.        |
+| `source`              | Sim      | String    | Origem da qual o evento é derivado. (Para Shopify, é a vitrine).    |
 | `metadata`            | Não       | Objeto    |       |
-| `order_status_url`    | Não       | Cordas    | URL para visualizar o status do pedido.                                                                          |
-| `order_number`        | Não       | Cordas    | (Somente Shopify) Número de pedido exclusivo para o pedido feito.  |
-| `tags`                | Não       | Matriz     | (Somente Shopify) Tags de pedido.            |
+| `order_status_url`    | Não       | String    | URL para visualizar o status do pedido.                                                                          |
+| `order_number`        | Não       | String    | (Apenas Shopify) Número de pedido único para o pedido realizado.  |
+| `tags`                | Não       | Vetor     | (Apenas Shopify) Tags do pedido.            |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-#### Exemplos de objetos
+#### Objetos de exemplo
 
 {% subtabs %}
 {% subtab Web SDK %}
@@ -1158,20 +1157,61 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_cancelled", properties:
 {% endtab %}
 {% endtabs %}
 
-## Modelos do eCommerce Canvas
+## Modelos de Canvas para eCommerce
 
-A Braze criou modelos pré-construídos do Canvas que são alimentados por eventos recomendados para o comércio eletrônico, como a segmentação de clientes que iniciaram o processo de checkout, mas saíram antes de fazer o pedido. Você pode usar esses eventos para tomar decisões informadas e aprimorar a jornada do usuário, personalizando as mensagens e direcionando-as a públicos específicos.
+A Braze criou modelos de Canvas pré-construídos alimentados por eventos recomendados de eCommerce, como o direcionamento de clientes que iniciaram o processo de checkout mas saíram antes de finalizar o pedido. Você pode usar esses eventos para tomar decisões informadas e aprimorar a jornada do usuário, personalizando o envio de mensagens e direcionando públicos específicos.
 
-Confira nossos [casos de uso]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases) dedicados ao [comércio eletrônico]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases) para saber mais sobre como usar esses eventos com os modelos do Canvas.
+Confira nossos [casos de uso de eCommerce]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases) dedicados para mais formas de usar esses eventos com modelos de Canvas.
 
-## Campos calculados pelo usuário
+## Campos calculados do usuário
 
-Usamos cálculos de campo de usuário padronizados para os seguintes campos: 
+Usamos cálculos padronizados de campos de usuário para os seguintes campos: 
 
-- **Receita total** = soma do valor total do pedido feito - soma do valor total do pedido reembolsado
-- **Contagem total de pedidos** = contagem de eventos distintos de pedidos feitos - contagem de cancelamentos de pedidos distintos
-- **Valor total do reembolso** = soma do valor total do pedido reembolsado 
+- **Receita total** = soma do valor total dos pedidos realizados - soma do valor total dos pedidos reembolsados
+- **Contagem total de pedidos** = contagem de eventos distintos de pedidos realizados - contagem de cancelamentos de pedidos distintos
+- **Valor total de reembolso** = soma do valor total dos pedidos reembolsados 
 
-Esses cálculos de campo do usuário também estão incluídos na guia **Transações** dos perfis de usuário.
+Esses campos calculados do usuário também estão incluídos na guia **Transações** dos perfis de usuário.
 
-\![A guia "Transactions" (Transações) com campos calculados pelo usuário.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
+![A guia "Transações" com campos calculados do usuário.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:70%;"}
+
+## Perguntas frequentes
+
+### Onde posso visualizar dados de compra em nível de produto?
+
+A guia **Transações** do perfil do usuário mostra campos calculados de alto nível (como receita total e total de pedidos). Para visualizar detalhes em nível de produto de um usuário específico, use o [Construtor de Consultas]({{site.baseurl}}/user_guide/analytics/query_builder/) para consultar dados de eventos de eCommerce, ou exporte dados de eventos por meio do [Currents]({{site.baseurl}}/user_guide/data/braze_currents/).
+
+Diferentemente dos eventos de compra legados, os eventos recomendados de eCommerce armazenam detalhes do produto como propriedades de evento aninhadas dentro do array `products`. Essas propriedades estão disponíveis no envio de mensagens por meio do Liquid e na segmentação por meio das [extensões de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/).
+
+### Como posso segmentar usuários por um produto específico?
+
+O segmentador permite filtrar pelo número de vezes que um usuário realizou um evento de eCommerce. Para filtrar por propriedades de produto específicas (como `product_id` ou `product_name`), use [extensões de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), que suportam filtragem de propriedades de evento aninhadas. Por exemplo, você pode encontrar todos os usuários que compraram o produto "SKU-123" nos últimos 90 dias.
+
+### Qual é a diferença entre eventos de compra legados e eventos recomendados de eCommerce?
+
+Os eventos de compra legados usam o [objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/) da Braze e registram compras individuais de produtos com um `product_id` e `price`. Os eventos recomendados de eCommerce (como `ecommerce.order_placed`) usam propriedades de eventos personalizados e capturam o contexto completo do pedido, incluindo múltiplos produtos, descontos e metadados em um único evento.
+
+Com o lançamento dos eventos recomendados de eCommerce, a Braze descontinuará gradualmente o evento de compra legado no futuro. Se você estiver usando eventos de compra atualmente, receberá um aviso prévio. Enquanto isso, você pode continuar usando eventos de compra até a data oficial de descontinuação. Consulte a [visão geral dos eventos recomendados]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/) para mais detalhes.
+
+### Posso adicionar propriedades personalizadas aos eventos recomendados de eCommerce?
+
+Os eventos recomendados de eCommerce têm um esquema definido com campos obrigatórios e opcionais. Você pode incluir dados personalizados adicionais dentro do objeto `metadata` de cada evento. No entanto, tags personalizadas em nível de pedido ou campos proprietários (como canal de compra ou informações da loja de varejo) não são suportados como propriedades de nível superior. Se você precisar desses campos para segmentação, continue enviando-os como eventos personalizados separados junto com seus eventos de eCommerce.
+
+### Preciso incluir external_id ao enviar eventos de eCommerce?
+
+Depende de como você está enviando os eventos:
+
+- **Via SDK**: Não. Quando você usa um SDK da Braze, os eventos são automaticamente associados ao contexto do usuário atual do SDK (anônimo ou identificado). Você não precisa passar um identificador de usuário em cada chamada de evento; em vez disso, pode identificar o usuário nesse contexto usando métodos como `changeUser`.
+- **Via API REST** (`/users/track`): Sim. Cada solicitação de API deve incluir um identificador de usuário, como `external_id`, `braze_id`, `user_alias`, `email` ou `phone`, porque a API não tem um contexto de "usuário atual".
+
+### Por que as propriedades de produto aninhadas não aparecem no dropdown de configuração de Recomendações de IA?
+
+Ao configurar [recomendações de itens de IA]({{site.baseurl}}/user_guide/brazeai/recommendations/), o dropdown **Nome da propriedade** lista apenas propriedades de evento de nível superior (como `order_id`, `total_value` e `currency`). Propriedades aninhadas dentro do array `products` (por exemplo, `products.product_id` ou `products.variant_id`) podem não aparecer nessa lista, mas você pode digitá-las manualmente usando notação de ponto no campo. Para a maioria das implementações de eCommerce, a Braze recomenda usar `products.product_id` como o identificador do item e emparelhá-lo com um [catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/) cujos IDs de item correspondam aos seus valores de `product_id` ou `variant_id`.
+
+### Por que alguns dos meus eventos de eCommerce não estão aparecendo na Braze?
+
+Se os eventos não estão aparecendo nos perfis ou logs de usuários, verifique o seguinte:
+
+- **Tempo de flush de dados do SDK**: O SDK da Braze armazena dados em cache localmente e faz upload periodicamente (normalmente entre 10 e 60 segundos). Chame `requestImmediateDataFlush()` após `logCustomEvent()` para forçar um upload imediato.
+- **Propriedades obrigatórias**: os eventos de eCommerce têm propriedades obrigatórias. Se uma propriedade obrigatória estiver ausente ou tiver um tipo de dado inválido, o evento poderá ser rejeitado. Verifique se a carga útil do seu evento corresponde ao [esquema obrigatório](#types-of-ecommerce-recommended-events).
+- **Nome exato do evento**: os nomes dos eventos de eCommerce diferenciam maiúsculas de minúsculas e devem corresponder exatamente (por exemplo, `ecommerce.checkout_started`, e não `ecommerce.checkoutStarted`).

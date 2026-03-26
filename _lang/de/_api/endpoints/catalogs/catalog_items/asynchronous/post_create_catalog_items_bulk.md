@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Mehrere Katalogartikel erstellen"
+nav_title: "POST: Mehrere Artikel im Katalog erstellen"
 article_title: "POST: Mehrere Katalogartikel erstellen"
 search_tag: Endpoint
 page_order: 3

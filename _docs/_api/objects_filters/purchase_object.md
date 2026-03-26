@@ -37,7 +37,7 @@ A purchase object is an object that gets passed through the API when a purchase 
   "time" : (required, datetime as string in ISO 8601) Time of purchase,
   // See the following purchase object explanation for clarification.
   "properties" : (optional, Properties Object) properties of the event,
-  // Setting this flag to true will put the API in "Update Only" mode.
+  // Setting this flag to true puts the API in "Update Only" mode.
   // When using a "user_alias", "Update Only" mode is always true.
   "_update_existing_only" : (optional, boolean)
 }
@@ -47,6 +47,10 @@ A purchase object is an object that gets passed through the API when a purchase 
 - [App identifier]({{site.baseurl}}/api/identifier_types/)
 - [ISO 4217 Currency Code Wiki](http://en.wikipedia.org/wiki/ISO_4217)
 - [ISO 8601 Time Code Wiki](https://en.wikipedia.org/wiki/ISO_8601)
+
+{% alert note %}
+Some identifier pairs cannot be used together, and `email` takes precedence over `phone` when both are provided. For full details, refer to [Identifier resolution]({{site.baseurl}}/api/objects_filters/user_attributes_object/#identifier-resolution).
+{% endalert %}
 
 ## Purchase product ID
 

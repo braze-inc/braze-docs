@@ -1,22 +1,22 @@
 ---
-nav_title: Abandon des messages
-article_title: Abandon des messages liquides
+nav_title: Abandonner des messages
+article_title: Interrompre les messages liquides
 page_order: 7
-description: "Cet article de référence traite de l'interruption des envois de messages liquid et de quelques exemples d'utilisation."
+description: "Cet article de référence présente l’abandon des messages Liquid et quelques exemples de cas d’utilisation."
 
 ---
 
-# Abandon des messages
+# Messages d'interruption
 
-> En option, vous pouvez utiliser l'étiquette Liquid message `abort_message("optional reason for aborting")` dans les conditionnels pour empêcher l'envoi d'un message à un utilisateur. Cet article de référence présente quelques exemples d'utilisation de cette fonctionnalité dans le cadre de campagnes marketing.
+> En option, vous pouvez utiliser l'étiquette Liquid message `abort_message("optional reason for aborting")` dans les conditionnels pour empêcher l'envoi d'un message à un utilisateur. Cet article de référence répertorie quelques exemples de la manière dont cette fonctionnalité peut être utilisée dans les campagnes marketing.
 
 {% alert note %}
-Si une étape du message est interrompue dans un canvas, l'utilisateur **ne** quittera **pas** le canvas et passera à l'étape suivante **.** 
+Si une étape du message est annulée dans un canvas, l'utilisateur **ne quitte pas** le canvas et **passe** à l’étape suivante.
 {% endalert %}
 
-## Message d'abandon si "Nombre de parties suivies" = 0
+## Abandon du message si « Nombre de jeux assisté » = 0
 
-Par exemple, disons que vous ne voulez pas envoyer de message aux clients qui n'ont pas assisté à un match :
+Supposons par exemple que vous ne souhaitiez pas envoyer un message aux clients qui n’ont pas participé à un jeu :
 
 {% raw %}
 ```liquid
@@ -30,9 +30,9 @@ Love the games? Get 10% off your next one with code SAVE10.
 ```
 {% endraw %}
 
-Ce message ne sera envoyé qu'aux clients dont on sait qu'ils ont assisté à un match.
+Ce message ne sera envoyé qu’aux clients connus pour avoir assisté à un match.
 
-## Message Clients parlant anglais uniquement
+## Communiquer uniquement avec les clients anglophones
 
 Vous pouvez envoyer des messages à des clients anglophones uniquement en créant une instruction "if" qui correspondra lorsque la langue du client est l'anglais et une instruction "else" qui annulera le message pour toute personne qui ne parle pas anglais ou qui n'a pas de langue dans son profil.
 
@@ -59,11 +59,23 @@ Vous pouvez également faire en sorte que le message d'abandon enregistre quelqu
 ```
 {% endraw %}
 
-!Message d'erreur dans la console de développement avec un message d'abandon "language was nil".]({% image_buster /assets/img_archive/developer_console.png %})
+![Le journal des erreurs de message dans la console de développement avec un message d’abandon de « langue était nulle ».]({% image_buster /assets/img_archive/developer_console.png %})
 
-## Demande d'envoi de messages d'annulation
+## Requête pour les messages d'interruption
 
-Vous pouvez utiliser [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) ou votre propre entrepôt de données, s'il est connecté à Braze, pour rechercher des messages d'abandon spécifiques qui sont déclenchés lorsque la logique Liquid entraîne l'abandon d'un message.
+Vous pouvez utiliser [le générateur de requêtes]({{site.baseurl}}/user_guide/analytics/query_builder/) ou votre propre entrepôt de données, s'il est connecté à Braze, pour rechercher des messages d'interruption spécifiques qui sont déclenchés lorsque la logique Liquid provoque l'interruption d'un message.
+
+## Lorsque la logique d'interruption est évaluée
+
+Le moment choisi pour l'évaluation de la logique d'interruption dépend du canal de communication.
+
+### Push, e-mail, SMS, webhook et cartes de contenu
+
+La logique d'interruption est évaluée au moment de l'envoi, lorsque Braze traite le message en vue de sa réception/distribution.
+
+### in-app Messages
+
+La logique d'interruption est évaluée au moment où le message in-app est déclenché (par exemple, lorsque l'utilisateur effectue l'événement déclencheur ou démarre une session), et non lorsque le message est initialement envoyé à l'appareil. Les messages in-app sont transmis au SDK au début de la session et mis en cache localement ; le Liquid, y compris les`abort_message()`appels éventuels, est exécuté lorsque le déclencheur est rempli.
 
 ## Considérations
 

@@ -1,11 +1,11 @@
 ---
-nav_title: "POST : Créer un centre de préférences"
-article_title: "POST : Créer un centre de préférences"
+nav_title: "POST : Créer un centre de préférences"
+article_title: "POST : Créer un centre de préférences"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article précise des détails concernant l’endpoint de Braze Créer un centre de préférences."
+description: "Cet article détaille l'endpoint Braze Créer un centre de préférences."
 
 ---
 {% api %}
@@ -14,19 +14,19 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 /preference_center/v1
 {% endapimethod %}
 
-> Utilisez cet endpoint pour créer un centre de préférences permettant aux utilisateurs de gérer leurs préférences en matière de notification pour vos campagnes d'e-mail. Reportez-vous à la section [Créer un centre de préférences avec l'API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#creating-a-preference-center-with-api) pour savoir comment créer un centre de préférences généré par l'API.
+> Utilisez cet endpoint pour créer un centre de préférences permettant aux utilisateurs de gérer leurs préférences de notification pour vos campagnes d'e-mail. Consultez la section [Créer un centre de préférences avec l'API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#creating-a-preference-center-with-api) pour découvrir les étapes de création d'un centre de préférences généré par API.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e15d7065-2cbc-4eb3-ae16-32efe43357a6 {% endapiref %}
 
 ## Conditions préalables
 
-Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l’autorisation `preference_center.update`.
+Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l'autorisation `preference_center.update`.
 
 ## Limite de débit
 
-Cet endpoint a une limitation du débit de 10 requêtes par minute, par espace de travail.
+{% multi_lang_include rate_limits.md endpoint='post or put preference center' %}
 
-## Corps de la demande
+## Corps de la requête
 
 ```
 Content-Type: application/json
@@ -52,51 +52,51 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     ]
   }
-} 
+}
 ```
 
-## Paramètres de demande
+## Paramètres de la requête
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`name`| Requis | Chaîne de caractères | Le nom du centre de préférences qui se conforme aux exigences suivantes : <br>\- Comprend uniquement des lettres, des chiffres, des traits d’union et des traits de soulignement <br>\- N’a pas d’espaces |
-|`preference_center_title`| Facultatif | Chaîne de caractères | Le titre des pages du centre de préférences et de confirmation. Si aucun titre n’est précisé, le titre des pages passera par défaut à « Centre de préférences ». |
-|`preference_center_page_html`| Requis | Chaîne de caractères | L’HTML de la page du centre de préférences. |
-|`confirmation_page_html`| Requis | Chaîne de caractères | L’HTML de la page de confirmation. |
-|`state` | Facultatif | Chaîne de caractères | Choisir `active` ou `draft`. Défini par défaut sur `active` si cela n’est pas spécifié. |
-|`options` | Facultatif | Objet | Attributs : <br>`meta-viewport-content` : Le cas échéant, une étiquette méta `viewport` sera ajoutée à la page avec `content= <value of attribute>`.<br><br> `link-tags` : Définissez un favicon pour la page. Lorsque cette option est activée, une étiquette `<link>` avec un attribut rel est ajoutée à la page.  |
+|`name`| Requis | Chaîne de caractères | Le nom du centre de préférences, qui doit respecter les exigences suivantes : <br>- Contient uniquement des lettres, des chiffres, des tirets et des underscores <br>- Ne contient pas d'espaces |
+|`preference_center_title`| Facultatif | Chaîne de caractères | Le titre des pages du centre de préférences et de confirmation. Si aucun titre n'est spécifié, le titre des pages sera par défaut « Preference Center ». |
+|`preference_center_page_html`| Requis | Chaîne de caractères | Le code HTML de la page du centre de préférences. |
+|`confirmation_page_html`| Requis | Chaîne de caractères | Le code HTML de la page de confirmation. |
+|`state` | Facultatif | Chaîne de caractères | Choisissez `active` ou `draft`. Par défaut `active` si non spécifié. |
+|`options` | Facultatif | Objet | Attributs : <br>`meta-viewport-content` : si présent, une balise méta `viewport` sera ajoutée à la page avec `content= <value of attribute>`.<br><br> `link-tags` : permet de définir un favicon pour la page. Lorsque cette option est définie, une balise `<link>` avec un attribut rel est ajoutée à la page.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
 Le nom du centre de préférences ne peut pas être modifié après sa création.
 {% endalert %}
 
-### Balises Liquid
+### Étiquettes Liquid
 
-Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à votre HTML pour générer un état d’abonnement de l’utilisateur sur la page du centre de préférences.
+Voici les étiquettes Liquid que vous pouvez inclure dans votre HTML pour afficher l'état d'abonnement d'un utilisateur sur la page du centre de préférences.
 
 {% raw %}
 
-#### État d’abonnement utilisateur
+#### État d'abonnement de l'utilisateur
 
 | Liquid | Description |
 | --------- | ---------|
-|`{{subscribed_state.${email_global}}}`| Obtenir l'état global de l'abonnement à l'e-mail pour l'utilisateur (tel que "opted_in", "subscribed", ou "unsubscribed"). |
-|`{{subscribed_state.${<subscription_group_id>}}}`| Obtenir l'état abonné du groupe d'abonnement spécifié pour l'utilisateur (tel que "abonné" ou "désabonné"). |
+|`{{subscribed_state.${email_global}}}`| Récupère l'état d'abonnement global aux e-mails de l'utilisateur (par exemple « opted_in », « subscribed » ou « unsubscribed »). |
+|`{{subscribed_state.${<subscription_group_id>}}}`| Récupère l'état d'abonnement de l'utilisateur pour le groupe d'abonnement spécifié (par exemple « subscribed » ou « unsubscribed »). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-#### Saisies de formulaire et action
+#### Champs de formulaire et action
 
 | Liquid | Description |
 | --------- | ---------|
-|`{% form_field_name :email_global_state %}`| Indique qu’un élément de saisie de formulaire particulier correspond à l’état global d’abonnement aux e-mails de l’utilisateur. L'état de sélection de l'utilisateur doit être "opted_in", "abonné" ou "désabonné" lorsque le formulaire est abonné avec des données de sélection pour l'état d'abonnement global à l'e-mail. S'il s'agit d'une case à cocher, l'utilisateur sera soit « opted_in », soit « désabonné ». Pour un input caché, l’état « abonné » sera aussi valide. |
-|`{% form_field_name :subscription_group <subscription_group_id> %}`| Indique qu’un élément de saisie de formulaire particulier correspond à un groupe d’abonnement particulier. L’état de sélection de l’utilisateur devrait être « abonné » ou « désabonné » lorsque le formulaire est soumis avec des données de sélection pour un groupe d’abonnement particulier. |
-|`{{preference_center_submit_url}}`| Produit une URL pour la soumission du formulaire. |
+|`{% form_field_name :email_global_state %}`| Indique qu'un champ de formulaire donné correspond à l'état d'abonnement global aux e-mails de l'utilisateur. L'état de sélection de l'utilisateur doit être « opted_in », « subscribed » ou « unsubscribed » lors de la soumission du formulaire avec les données de sélection pour l'état d'abonnement global aux e-mails. S'il s'agit d'une case à cocher, l'utilisateur sera soit « opted_in », soit « unsubscribed ». Pour un champ masqué, l'état « subscribed » est également valide. |
+|`{% form_field_name :subscription_group <subscription_group_id> %}`| Indique qu'un champ de formulaire donné correspond à un groupe d'abonnement spécifique. L'état de sélection de l'utilisateur doit être « subscribed » ou « unsubscribed » lors de la soumission du formulaire avec les données de sélection pour un groupe d'abonnement donné. |
+|`{{preference_center_submit_url}}`| Génère l'URL de soumission du formulaire. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
 
-## Exemple de réponses
+## Exemples de réponses
 
 ### Créer un centre de préférences
 
@@ -111,7 +111,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
 ```
 {% endraw %}
 
-### HTML avec entrées de formulaire
+### HTML avec champs de formulaire
 
 {% raw %}
 ```

@@ -1,13 +1,13 @@
 ---
-nav_title: Launching with Canvas flow
-article_title: Launching with Canvas Flow
+nav_title: Launch with Canvas flow
+article_title: Launch with Canvas Flow
 page_order: 3
 description: "This reference article covers how to prepare and test a Canvas built with Canvas Flow before launch."
 page_type: reference
 tool: Canvas
 ---
 
-# Launching with Canvas Flow
+# Launch with Canvas Flow
 
 > This reference article covers how to prepare and test a Canvas built using Canvas Flow before launch. This includes identifying important Canvas checkpoints such as Canvas entry conditions, audience summaries, and user segments.
 

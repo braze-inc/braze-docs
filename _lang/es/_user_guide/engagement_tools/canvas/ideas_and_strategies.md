@@ -3,7 +3,7 @@ nav_title: Ideas y estrategias
 article_title: Ideas y estrategias
 layout: dev_guide
 guide_top_header: "Ideas y estrategias"
-guide_top_text: "Obtén más información sobre cómo probar y comprobar tus Lienzos con diferentes ideas y estrategias."
+guide_top_text: "Aprende más sobre cómo probar y verificar tus Canvas con diferentes ideas y estrategias."
 page_order: 5
 
 tool: Canvas
@@ -22,15 +22,15 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     image: /assets/img/braze_icons/git-branch-01.svg
 
-guide_menu_title: "Additional resources"
+guide_menu_title: "Recursos adicionales"
 guide_menu_list:
   - name: Localización
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
     image: /assets/img/braze_icons/globe-02.svg
-  - name: Uso de las plantillas Braze Canvas
+  - name: Uso de las plantillas de Braze Canvas
     link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/
     image: /assets/img/braze_icons/target-04.svg
-  - name: Envío de lienzos de prueba
+  - name: Envío de Canvas de prueba
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     image: /assets/img/braze_icons/user-check-01.svg
   - name: Puntuación de clientes potenciales
@@ -39,7 +39,10 @@ guide_menu_list:
   - name: Sistema de recordatorio de reservas por correo electrónico
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/booking_use_case/
     image: /assets/img/braze_icons/channel-email.svg
-  - name: Casos de uso del comercio electrónico
+  - name: Coincidencia de criterios de salida con eventos de entrada
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/matching_entry_and_exit_criteria/
+    image: /assets/img/braze_icons/target-04.svg
+  - name: Casos de uso de comercio electrónico
     link: /docs/ecommerce_use_cases/
     image: /assets/img/braze_icons/users-01.svg
 

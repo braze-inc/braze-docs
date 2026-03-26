@@ -1,6 +1,6 @@
-{% multi_lang_include developer_guide/prerequisites/web.md %} Você também precisará [configurar notificações por push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web) para o Web SDK. Note que só é possível enviar notificações por push para usuários do iOS e iPadOS que estejam usando [o Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) ou posterior.
+{% multi_lang_include developer_guide/prerequisites/web.md %} Você também precisará [configurar notificações por push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web) para o Web SDK. Observe que você só pode enviar notificações por push para usuários de iOS e iPadOS que estão usando [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) ou posterior.
 
-## Configuração do Safari push para celular
+## Configurando push do Safari para dispositivos móveis
 
 ### Etapa 1: Criar um arquivo de manifesto {#manifest}
 
@@ -38,18 +38,18 @@ Seu site precisa ter um arquivo de service worker que importe a biblioteca de se
 
 ### Etapa 4: Adicionar à tela inicial {#add-to-homescreen}
 
-Todos os navegadores populares (como Safari, Chrome, FireFox e Edge) suportam notificações por push da Web em suas versões mais recentes. Para solicitar permissão push no iOS ou iPadOS, seu site deve ser adicionado à tela inicial do usuário selecionando **Share To** > **Add to Home Screen**. O [Add to Homescreen](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) permite que os usuários marquem seu site como favorito, adicionando seu ícone ao valioso espaço da tela inicial.
+Navegadores populares (como Safari, Chrome, FireFox e Edge) suportam notificações por push na web em suas versões mais recentes. Para solicitar permissão para push no iOS ou iPadOS, seu site deve ser adicionado à tela inicial do usuário selecionando **Compartilhar** > **Adicionar à Tela de Início**. [Adicionar à Tela de Início](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) permite que os usuários salvem seu site, adicionando seu ícone ao espaço valioso da tela inicial deles.
 
 ![Um iPhone mostrando opções para marcar um site como favorito e salvá-lo na tela inicial]({% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}){: style="max-width:40%"}
 
 ### Etapa 5: Mostrar o prompt push nativo {#push-prompt}
-Após o app ter sido adicionado à sua tela inicial, agora é possível solicitar permissão de push quando o usuário realizar uma ação (como clicar em um botão). Isso pode ser feito usando o método [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) ou com uma [mensagem no app sem código push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
+Depois que o app foi adicionado à sua tela inicial, você pode agora solicitar permissão para push quando o usuário realizar uma ação (como clicar em um botão). Isso pode ser feito usando o método [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) ou com uma [mensagem no app sem código push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 
 {% alert note %}
 Depois de aceitar ou recusar o aviso, você precisa excluir e reinstalar o site na sua tela inicial para poder mostrar o aviso novamente.
 {% endalert %}
 
-![Um prompt push pedindo para "permitir" ou "não permitir" notificações]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
+![Uma notificação por push pedindo para "permitir" ou "não permitir" as notificações]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
 
 Por exemplo:
 

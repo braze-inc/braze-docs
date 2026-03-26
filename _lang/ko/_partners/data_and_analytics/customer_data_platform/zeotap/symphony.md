@@ -80,8 +80,8 @@ After creating a destination, next, you have to add workflow-level inputs, as me
 #### Data to send tab
 The **Data To Send** tab allows the you to map the Zeotap Catalogue fields to the Braze fields that can be sent to Braze. The mapping can be done in one of the following ways:
 - **Static Mapping** \- There are certain fields that Zeotap automatically maps to the relevant Braze fields like email, phone, first name, last name, and so on.<br>
-- **Dropdown Selection** \- Map the relevant fields ingested in Zeotap to the Braze fields provided in the dropdown menu.<br>![Various user traits set in Zeotap, such as language, city, birthday, and more.]({% image_buster /assets/img/zeotap/zeotap7.png %}){: style="max-width:70%;"}<br>
-- **Custom Data Input** \- Add custom data mapped to the relevant Zeotap field and send to Braze.<br>![Selecting "loyalty_points" as the user trait in Zeotap.]({% image_buster /assets/img/zeotap/zeotap8.png %}){: style="max-width:70%;"}
+- **드롭다운 선택** \- 드롭다운 메뉴에 제공된 Braze 필드에 Zeotap에서 수집된 관련 필드를 매핑합니다.<br>![Zeotap에서 설정한 다양한 사용자 특성(예: 언어, 구/군/시, 생일 등).]({% image_buster /assets/img/zeotap/zeotap7.png %}){: style="max-width:70%;"}<br>
+- **Custom Data Input** \- Add custom data mapped to the relevant Zeotap field and send to Braze.<br>![Zeotap에서 "loyalty_points" 을 사용자 특성으로 선택합니다.]({% image_buster /assets/img/zeotap/zeotap8.png %}){: style="max-width:70%;"}
 
 ## Supported attributes
 You can find details of all the Braze fields in this section.

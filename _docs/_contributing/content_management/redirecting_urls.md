@@ -1,12 +1,12 @@
 ---
-nav_title: Redirecting URLs
-article_title: Redirecting URLs
+nav_title: Redirect URLs
+article_title: Redirect URLs
 description: "Learn how to redirect URLs for pages and page headings on Braze Docs."
 page_order: 5
 noindex: true
 ---
 
-# Redirecting URLs
+# Redirect URLs
 
 > Learn how to redirect URLs for pages and page headings on Braze Docs. For general information about URLs, see [About content management]({{site.baseurl}}/contributing/content_management/#urls).
 

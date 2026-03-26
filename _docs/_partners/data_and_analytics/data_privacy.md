@@ -1,4 +1,4 @@
 ---
-nav_title: Data Privacy & Compliance
+nav_title: Data Privacy and Compliance
 config_only: true
 ---

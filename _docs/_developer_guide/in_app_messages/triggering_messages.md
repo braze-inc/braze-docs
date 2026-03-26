@@ -1,6 +1,6 @@
 ---
-nav_title: Triggering messages
-article_title: Triggering in-app messages through the Braze SDK
+nav_title: Trigger messages
+article_title: Trigger in-app messages through the Braze SDK
 page_order: 0.2
 description: "Learn how to trigger in-app messages through the Braze SDK."
 platform: 
@@ -10,7 +10,7 @@ platform:
   - Web
 ---
 
-# Triggering in-app messages
+# Trigger in-app messages
 
 > Learn how to trigger in-app messages through the Braze SDK.
 
@@ -26,7 +26,7 @@ In-app messages can't be triggered through the API or by API events&#8212;only c
 
 ## Key-value pairs
 
-When you create a campaign in Braze, you can set key-value pairs as `extras`, which the the in-app messaging object can use to send data to your app.
+When you create a campaign in Braze, you can set key-value pairs as `extras`, which the in-app messaging object can use to send data to your app.
 
 {% tabs %}
 {% tab web %}
@@ -377,9 +377,7 @@ To manually display a pre-defined in-app message, use the following method:
 
 {% tabs %}
 {% tab web %}
-```javascript
-braze.requestInAppMessageDisplay();
-```
+For the Web SDK, use `braze.showInAppMessage(inAppMessage)` to display any in-app message. For details and an example, see [Displaying a message in real-time](#displaying-a-message-in-real-time).
 {% endtab %}
 
 {% tab android %}

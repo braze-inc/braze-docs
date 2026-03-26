@@ -1,152 +1,169 @@
 ---
-nav_title: "Löschen von Nutzer:innen"
-article_title: "Löschen von Nutzer:innen"
+nav_title: "Nutzer:innen löschen"
+article_title: "Nutzer:innen löschen"
 page_order: 4.2
 toc_headers: h2
-description: "Erfahren Sie, wie Sie einen einzelnen Nutzer:innen oder ein Segment von Nutzern:innen direkt über das Braze-Dashboard löschen können." 
+description: "Erfahren Sie, wie Sie einen einzelnen Nutzer oder ein Segment von Nutzern direkt über das Braze-Dashboard löschen können."
+alias: /delete_users/
 ---
 
-# Löschen von Nutzer:innen
+# Nutzer:innen löschen
 
-> Erfahren Sie, wie Sie einen einzelnen Nutzer:innen oder ein Segment von Nutzern:innen direkt über das Braze-Dashboard löschen können.
+> Erfahren Sie, wie Sie einen einzelnen Nutzer oder ein Segment von Nutzern direkt über das Braze-Dashboard löschen können.
 
 {% alert important %}
-Dieses Feature befindet sich derzeit in der Early Access-Phase. Wenden Sie sich an Ihren Customer-Success-Manager:in, wenn Sie an einer Teilnahme interessiert sind.
+Das Löschen von Nutzer:innen befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Customer-Success-Manager, wenn Sie an einer Teilnahme interessiert sind.
 {% endalert %}
 
 ## Voraussetzungen
 
-Um Nutzer:innen zu löschen, müssen Sie Administrator sein oder die Berechtigung zum **Löschen von Nutzern** haben.
+Um Nutzer:innen zu löschen, müssen Sie Administrator sein oder über die Berechtigung **Nutzer:in löschen** verfügen.
 
 ## Über das Löschen von Nutzer:innen
 
-Mit der Funktion zum Löschen von Nutzern:innen können Sie Ihre Datenbank verwalten, indem Sie Profile entfernen, die nicht mehr benötigt werden, irrtümlich erstellt wurden oder aus Compliance-Gründen (z.B. DSGVO oder CCPA) gelöscht werden müssen.
+Mit der Funktion zum Löschen von Nutzer:innen können Sie Ihre Datenbank verwalten, indem Sie Profile entfernen, die nicht mehr benötigt werden, versehentlich erstellt wurden oder aus Compliance-Gründen (z. B. DSGVO oder CCPA) gelöscht werden müssen.
 
-| Betrachtung | Details |
+| Aspekt | Details |
 |---------------|---------|
-| Maximale Größe | Sie können bis zu 100 Millionen Nutzerprofile löschen, wenn Sie ein Segment löschen. |
-| Wartezeit | Für alle Segmente, die gelöscht werden, gilt eine Wartezeit von 7 Tagen zuzüglich der Zeit, die für die Bearbeitung von Löschungen benötigt wird. |
-| Auftragsbeschränkungen | Es kann immer nur ein Segment auf einmal gelöscht werden, einschließlich der 7-tägigen Wartezeit. |
+| Maximale Größe | Beim Löschen eines Segments können Sie bis zu 100 Millionen Nutzerprofile entfernen. |
+| Wartezeit | Für alle Löschungen von Segmenten gilt eine Wartezeit von 7 Tagen zuzüglich der Zeit, die für die Verarbeitung der Löschungen erforderlich ist. |
+| Auftragsbeschränkungen | Es kann jeweils nur ein Segment gelöscht werden, einschließlich der 7-tägigen Wartezeit. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Löschen von Nutzer:innen
+## Nutzer:innen löschen
 
-Sie können einen [einzelnen Nutzer](#delete-individual):innen oder ein [Segment von Nutzern](#delete-segment):innen über das Braze-Dashboard löschen:
+Sie können eine [einzelne Nutzer:in](#delete-individual) oder ein [Segment von Nutzer:innen](#delete-segment) über das Braze-Dashboard löschen:
 
-### Löschen einer Person {#delete-individual}
+### Eine einzelne Nutzer:in löschen {#delete-individual}
 
-Um einen einzelnen Nutzer:innen aus Braze zu löschen, gehen Sie zu **Zielgruppe** > **Nutzer:innen suchen**, suchen Sie einen Nutzer:innen und wählen Sie ihn aus. Wenn Sie ein doppeltes Nutzerprofil löschen wollen, überprüfen Sie, ob Sie das richtige ausgewählt haben.
+Um eine einzelne Nutzer:in aus Braze zu löschen, gehen Sie zu **Zielgruppe** > **Nutzersuche**, suchen Sie dann nach einer Nutzer:in und wählen Sie sie aus. Wenn Sie ein doppeltes Nutzerprofil löschen möchten, vergewissern Sie sich, dass Sie das richtige ausgewählt haben.
 
-![Die Seite 'Nutzer:innen suchen' in Braze.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:75%;"}
+![Die Seite „Nutzersuche" in Braze.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:75%;"}
 
 {% alert warning %}
-Die Löschung eines einzelnen Nutzers ist dauerhaft - Profile können nach der Löschung nicht wiederhergestellt werden.  
+Löschungen einzelner Nutzer:innen sind dauerhaft – Profile können nach dem Löschen nicht wiederhergestellt werden.  
 {% endalert %}
 
-Wählen Sie auf der Seite ihres Profils <i class="fa-solid fa-ellipsis-vertical"></i> **Optionen anzeigen** > **Nutzer:innen löschen**. Denken Sie daran, dass es einige Minuten dauern kann, bis die Nutzer:innen in Braze vollständig gelöscht sind.
+Wählen Sie auf der Profilseite <i class="fa-solid fa-ellipsis-vertical"></i> **Optionen anzeigen** > **Nutzer:in löschen**. Bitte beachten Sie, dass es einige Minuten dauern kann, bis die Nutzer:in vollständig aus Braze gelöscht ist.
 
-Ein Nutzer:innen in Braze mit geöffnetem Vertikal-Ellipsen-Menü, das die Option zum Löschen des Nutzers anzeigt.]({% image_buster /assets/img/audience_management/deleting_users/delete_user.png %}){: style="max-width:85%;"}
+![Eine Nutzer:in in Braze mit geöffnetem Drei-Punkte-Menü, das die Option zum Löschen der Nutzer:in anzeigt.]({% image_buster /assets/img/audience_management/deleting_users/delete_user.png %}){: style="max-width:85%;"}
 
-### Löschen eines Segments {#delete-segment}
+### Ein Segment löschen {#delete-segment}
 
-Falls Sie dies noch nicht getan haben, [erstellen Sie ein Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) mit den Nutzerprofilen, die Sie löschen möchten. Achten Sie darauf, dass Sie alle Nutzerprofile einbeziehen, wenn Sie doppelte Nutzer:innen löschen.
+Falls noch nicht geschehen, [erstellen Sie ein Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment), das die zu löschenden Nutzerprofile enthält. Stellen Sie sicher, dass Sie alle Nutzerprofile einbeziehen, wenn Sie doppelte Nutzer:innen löschen.
 
-Gehen Sie in Braze zu **Zielgruppe** > **Zielgruppe verwalten** und wählen Sie dann den Tab **Nutzer:innen löschen**.
+Gehen Sie in Braze zu **Zielgruppe** > **Zielgruppe verwalten** und wählen Sie anschließend den Tab **Nutzer:innen löschen**.
 
-![Der Tab 'Nutzer:innen löschen' im Abschnitt 'Zielgruppe verwalten' des Braze-Dashboards.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
+![Der Tab „Nutzer:innen löschen" im Abschnitt „Zielgruppe verwalten" des Braze-Dashboards.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
-Wählen Sie **Nutzer:innen löschen**, wählen Sie das Segment, das Sie löschen möchten, und wählen Sie dann **Weiter**.
+Wählen Sie **Nutzer:innen löschen**, wählen Sie das Segment aus, das Sie löschen möchten, und klicken Sie dann auf **Weiter**.
 
 ![Ein Popup-Fenster mit einem Segment, das zum Löschen ausgewählt wurde.]({% image_buster /assets/img/audience_management/deleting_users/choose_segment_to_delete.png %}){: style="max-width:75%;"}
 
 Geben Sie **DELETE** ein, um Ihre Anfrage zu bestätigen, und wählen Sie anschließend **Nutzer:innen löschen**.
 
-![Die Bestätigungsseite mit der Eingabe von 'LÖSCHEN' im Bestätigungsfeld.]({% image_buster /assets/img/audience_management/deleting_users/confirm_segment_delete.png %}){: style="max-width:75%;"}
+![Die Bestätigungsseite mit dem Wort „DELETE" im Bestätigungsfeld.]({% image_buster /assets/img/audience_management/deleting_users/confirm_segment_delete.png %}){: style="max-width:75%;"}
 
-Die Nutzer:innen in diesem Segment werden nicht sofort gelöscht. Stattdessen werden sie für die nächsten 7 Tage als zur Löschung anstehend markiert. Nach Ablauf dieser Frist werden sie gelöscht und wir mailen Ihnen, um Sie darüber zu informieren.
+Die Nutzer:innen in diesem Segment werden nicht sofort gelöscht. Stattdessen werden sie für die nächsten 7 Tage als zur Löschung vorgemerkt markiert. Nach Ablauf dieser Frist werden sie gelöscht, und wir informieren Sie per E-Mail darüber.
 
 {% alert tip %}
-Um sicherzustellen, dass genau diese Nutzer:innen unabhängig von Segmentänderungen gelöscht werden, wird automatisch ein Filter mit dem Namen **Ausstehende Löschung** erstellt. Sie können [diesen Filter verwenden]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters), um den Status ausstehender Löschungen zu überprüfen.
+Um sicherzustellen, dass genau diese Nutzer:innen unabhängig von Segmentänderungen gelöscht werden, wird automatisch ein Segmentfilter namens **Zur Löschung vorgemerkt** erstellt. [Mit diesem Filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) können Sie den Status ausstehender Löschungen überprüfen.
 {% endalert %}
+
+## Löschen von Segmenten bestätigen
+
+Braze versendet eine Bestätigungs-E-Mail mit der Anzahl der zur Löschung vorgemerkten Profile.
+
+Um mit der Löschung fortzufahren, melden Sie sich bei Braze an und bestätigen Sie die Löschanfrage.
+
+Sollten Sie nicht innerhalb des in der E-Mail angegebenen Zeitraums bestätigen, verfällt die Löschanfrage und wird nicht weiterbearbeitet.
 
 ## Löschen von Segmenten abbrechen {#cancel}
 
-Sie haben 7 Tage Zeit, um anstehende Segmentierungen zu stornieren. Um den Vorgang abzubrechen, gehen Sie zu **Zielgruppe** > **Zielgruppe verwalten** und wählen Sie dann den Tab **Nutzer:innen löschen**.
+Sie haben 7 Tage Zeit, um ausstehende Löschungen von Segmenten abzubrechen. Gehen Sie dazu zu **Zielgruppe** > **Zielgruppe verwalten** und wählen Sie dann den Tab **Nutzer:innen löschen**.
 
-![Der Tab 'Nutzer:innen löschen' im Abschnitt 'Zielgruppe verwalten' des Braze-Dashboards.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
+![Der Tab „Nutzer:innen löschen" im Abschnitt „Zielgruppe verwalten" des Braze-Dashboards.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
-Wählen Sie neben einer anstehenden Segmentierung <i class="fa-solid fa-eye"></i> aus, um die Details des Löschungsdatensatzes zu öffnen.
+Wählen Sie neben einer ausstehenden Segmentlöschung <i class="fa-solid fa-eye"></i>, um die Details zum Löschvorgang zu öffnen.
 
-![Eine anstehende Segmentierung auf dem Tab 'Nutzer:innen löschen'.]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
+![Eine ausstehende Segmentlöschung auf dem Tab „Nutzer:innen löschen".]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
 
-Wählen Sie in den Details des Löschdatensatzes **Löschung abbrechen**.
+Wählen Sie in den Details zum Löschvorgang **Löschen abbrechen**.
 
-![Das Fenster 'Details des Löschdatensatzes' auf dem Tab 'Nutzer:innen löschen'.]({% image_buster /assets/img/audience_management/deleting_users/deletion_record_details.png %}){: style="max-width:55%;"}
+![Das Fenster „Details zum Löschvorgang" auf dem Tab „Nutzer:innen löschen".]({% image_buster /assets/img/audience_management/deleting_users/deletion_record_details.png %}){: style="max-width:55%;"}
 
 {% alert tip %}
-Wenn die Massenlöschung von Nutzer:innen im Gange ist, können Sie sie jederzeit abbrechen. Nutzer:innen, die bereits vor der Löschung gelöscht wurden, können jedoch nicht wiederhergestellt werden.
+Wenn die Massenlöschung von Nutzer:innen in Bearbeitung ist, können Sie diese jederzeit abbrechen. Nutzer:innen, die bereits vor dem Abbruch gelöscht wurden, können jedoch nicht wiederhergestellt werden.
 {% endalert %}
 
-## Überprüfen des Löschungsstatus {#status}
+## Löschstatus überprüfen {#status}
 
-Sie können den Status einer Löschung mit Hilfe von [Segment-Filtern](#segment-filters), der Seite [Zielgruppe verwalten](#manage-audience) oder [Sicherheitsereignisberichten](#security-event-report) überprüfen.
+Sie können den Status einer Löschung mithilfe von [Segmentfiltern](#segment-filters), der Seite [Zielgruppe verwalten](#manage-audience) oder [Sicherheitsereignisberichten](#security-event-report) überprüfen.
 
-### Filter für Segmente
+### Segmentfilter
 
-Wenn Sie eine Anfrage zur Löschung eines Segments von Nutzer:innen stellen, wird automatisch ein [Segment Filter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) mit dem Namen **Ausstehende Löschung** erstellt. Sie können es verwenden, um:
+Wenn Sie die Löschung eines Segments von Nutzer:innen beantragen, wird automatisch ein [Segmentfilter]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) namens **Zur Löschung vorgemerkt** erstellt. Sie können ihn verwenden, um:
 
-- Sehen Sie sich die genaue Menge der Nutzer:innen an, die mit einem bestimmten Löschungsdatum verbunden sind.
-- Schließen Sie diese Nutzer:innen von Kampagnen aus, damit sie keine Nachrichten vor der Entfernung erhalten.
-- Exportieren Sie die Liste, wenn Sie sie für die Einhaltung von Vorschriften oder zur Aufbewahrung von Unterlagen benötigen.
+- Die genaue Gruppe von Nutzer:innen einzusehen, die mit einem bestimmten Löschungsdatum verknüpft sind.
+- Diese Nutzer:innen von Kampagnen auszuschließen, damit sie vor der Entfernung keine Nachrichten erhalten.
+- Die Liste zu exportieren, falls Sie diese für Compliance-Zwecke oder zur Dokumentation benötigen.
 
-### Zielgruppe managen
+### Zielgruppe verwalten
 
 {% alert note %}
-Um die genaue Liste der Nutzer:innen zu erhalten, die gelöscht werden sollen, verwenden Sie stattdessen den [Filter Segmente für ausstehende Löschungen](#segment-filters).
+Um eine Liste der genauen Nutzer:innen zu erhalten, die gelöscht werden, verwenden Sie stattdessen den [Segmentfilter „Zur Löschung vorgemerkt"](#segment-filters).
 {% endalert %}
 
-Gehen Sie zu **Zielgruppe** > **Zielgruppe verwalten** und wählen Sie dann den Tab **Nutzer:innen löschen**.
+Gehen Sie zu **Zielgruppe** > **Zielgruppe verwalten** und wählen Sie anschließend den Tab **Nutzer:innen löschen**.
 
-![Der Tab 'Nutzer:innen löschen' im Abschnitt 'Zielgruppe verwalten' des Braze-Dashboards.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
+![Der Tab „Nutzer:innen löschen" im Abschnitt „Zielgruppe verwalten" des Braze-Dashboards.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
-Auf dieser Seite finden Sie die folgenden allgemeinen Informationen zu allen laufenden und anstehenden Löschungen:
+Auf dieser Seite finden Sie die folgenden allgemeinen Informationen zu allen aktuellen und ausstehenden Löschungen:
 
 | Feld | Beschreibung |
 |-------|-------------|
-| Datum der Anfrage | Das Datum, an dem die Anfrage ursprünglich gestellt wurde. Verwenden Sie ihn zusammen mit dem Filter **Ausstehende Löschung**, um die Liste der Profile zu erhalten, die zur Löschung anstehen. |
-| Angefragt von | Der Nutzer:innen, der die Anfrage zur Löschung initiiert hat. |
-| Segmentname | Der Name des Segments, das zum Auswählen der Nutzer:innen verwendet wird, die zur Löschung anstehen. |
-| Status | Zeigt an, ob die Anfrage zur Löschung ausstehend, in Bearbeitung oder abgeschlossen ist. |  
+| Anfragedatum | Das Datum, an dem die Anfrage ursprünglich gestellt wurde. Verwenden Sie es zusammen mit dem Filter **Zur Löschung vorgemerkt**, um eine Liste der zur Löschung vorgemerkten Profile zu erhalten. |
+| Angefragt von | Die Nutzer:in, die die Löschanfrage initiiert hat. |
+| Segmentname | Der Name des Segments, das zur Auswahl der zur Löschung vorgesehenen Nutzer:innen verwendet wurde. |
+| Status | Zeigt an, ob die Löschanfrage aussteht, in Bearbeitung ist oder abgeschlossen wurde. |  
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-Wenn Sie weitere Einzelheiten zu einer bestimmten Anfrage wünschen, wählen Sie <i class="fa-solid fa-eye"></i>, um die Details des Löschungsdatensatzes anzuzeigen. Hier können Sie auch [ausstehende Segmentierungen abbrechen](#cancel).
+Für weitere Informationen zu einer bestimmten Anfrage wählen Sie <i class="fa-solid fa-eye"></i>, um die Details zum Löschvorgang anzuzeigen. Hier können Sie auch [ausstehende Löschungen von Segmenten abbrechen](#cancel).
 
-![Eine anstehende Segmentierung auf dem Tab 'Nutzer:innen löschen'.]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
+![Eine ausstehende Segmentlöschung auf dem Tab „Nutzer:innen löschen".]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
 
-### Bericht über Sicherheitsereignisse
+### Sicherheitsereignisbericht
 
-Sie können auch den Status früherer Löschungen überprüfen, indem Sie einen Bericht über Sicherheitsereignisse herunterladen. Weitere Informationen finden Sie unter [Sicherheitseinstellungen]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#security-event-report).
+Sie können den Status früherer Löschungen auch überprüfen, indem Sie einen Sicherheitsereignisbericht herunterladen. Weitere Informationen finden Sie unter [Sicherheitseinstellungen]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#security-event-report).
 
 ## Häufig gestellte Fragen {#faq}
 
 ### Kann ich Segmente mit mehr als 100 Millionen Nutzer:innen löschen?
 
-Nein. Sie können keine Segmente mit mehr als 100 Millionen Nutzer:innen löschen. Wenn Sie Hilfe beim Löschen eines Segments dieser Größe benötigen, wenden Sie sich an [support@braze.com](mailto:support@braze.com).
+Nein. Sie können keine Segmente mit mehr als 100 Millionen Nutzer:innen löschen. Sollten Sie Unterstützung beim Löschen eines Segments dieser Größe benötigen, wenden Sie sich an den [Braze-Support]({{site.baseurl}}/user_guide/administrative/access_braze/support).
 
-### Hat die automatische Zusammenführung von Nutzer:innen Auswirkungen auf die Löschung von Nutzern?
+### Es scheint, als könnte ich keine 100 Millionen Nutzer:innen löschen und bin auf 10 Millionen beschränkt. Handelt es sich hierbei um einen Fehler?
 
-Wenn ein Zeitplan für die Zusammenführung Nutzer:innen-Profile enthält, die zur Löschung anstehen, überspringt Braze diese Profile und führt sie nicht zusammen. Um diese Profile zusammenzuführen, müssen Sie sie vom Löschvorgang ausschließen.
+Nein, dies ist kein Fehler. Bestimmte Kund:innen unterliegen während des Early-Access-Programms (EA) einer Beschränkung hinsichtlich der Anzahl der Nutzer:innen, die sie löschen können.
 
-### Was geschieht mit Daten, die an Nutzer:innen gesendet werden, die auf ihre Löschung warten?
+Im Zuge der Weiterentwicklung des EA-Programms soll diese Kapazität erhöht werden, bis alle Kund:innen bis zu 100 Millionen Nutzer:innen löschen können.
 
-Daten, die von externen Systemen oder SDKs gesendet werden, werden weiterhin akzeptiert, aber die Nutzer:innen werden unabhängig von ihrer Aktivität wie geplant gelöscht.
+Sollten Sie diese Kapazität erhöhen wollen, wenden Sie sich bitte an Ihren Braze-Account-Manager. Anfragen werden nach Ermessen des Produkt-Teams genehmigt.
 
-### Werden Canvase und Kampagnen für Nutzer:innen triggern, die zur Löschung anstehen?
+### Hat die automatisierte Zusammenführung von Nutzer:innen Auswirkungen auf die Löschung von Nutzer:innen?
 
-Ja Sie können jedoch einen Segmenteinschlussfilter hinzufügen, um alle Nutzer:innen mit dem [Segmentfilter](#segment-filters) **Ausstehende Löschung** auszuschließen.
+Wenn eine geplante Zusammenführung Nutzerprofile enthält, die zur Löschung vorgemerkt sind, überspringt Braze diese Profile und führt keine Zusammenführung durch. Um diese Profile zusammenzuführen, müssen Sie sie aus der Löschung entfernen.
 
-### Kann ich gelöschte Nutzerprofile wiederherstellen?
+### Was geschieht mit Daten, die an Nutzer:innen gesendet werden, deren Löschung aussteht?
 
-Die Löschung einzelner Nutzer:innen ist dauerhaft.
+Daten, die von externen Systemen oder SDKs gesendet werden, werden weiterhin akzeptiert, jedoch werden die Nutzer:innen unabhängig von ihrer Aktivität gemäß dem Zeitplan gelöscht.
 
-Sie können [Segmente](#cancel) innerhalb der ersten 7 Tage nach der Löschung [stornieren](#cancel). Nutzer:innen, die vor der Löschung gelöscht wurden, können jedoch nicht wiederhergestellt werden.
+### Werden Canvase und Kampagnen für Nutzer:innen ausgelöst, die zur Löschung vorgemerkt sind?
+
+Ja. Sie können jedoch einen Segment-Einschlussfilter hinzufügen, um alle Nutzer:innen mit dem [Segmentfilter](#segment-filters) **Zur Löschung vorgemerkt** auszuschließen.
+
+### Können gelöschte Nutzerprofile wiederhergestellt werden?
+
+Das Löschen einzelner Nutzer:innen ist dauerhaft.
+
+Sie können [Segmentlöschungen](#cancel) innerhalb der ersten 7 Tage abbrechen. Allerdings können Nutzer:innen, die bereits vor dem Abbruch gelöscht wurden, nicht wiederhergestellt werden.

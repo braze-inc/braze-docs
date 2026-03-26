@@ -45,7 +45,7 @@ A continuación, envía un evento de prueba a tu Transformación de Datos.
 
 A continuación, transformarás la carga útil del webhook que se enviará desde Stripe en un valor de retorno de objeto JavaScript.
 
-1. Actualiza tu Transformación de Datos y asegúrate de que puedes ver la carga útil de la prueba de Stripe en la sección de **detalles del webhook**.
+1. Actualiza tu Transformación de Datos y asegúrate de que puedes ver la carga útil de prueba de Stripe en la sección de **detalles del webhook**.
 2. Actualiza tu código de Transformación de Datos para que admita los eventos de Stripe que hayas elegido.
 3. Seleccione **Validar** para obtener una vista previa de la salida de su código y comprobar si se trata de una solicitud aceptable de `/users/track`.
 4. Guarda y activa tu Transformación de Datos.
@@ -244,7 +244,7 @@ En esta plantilla de ejemplo, estamos registrando un evento personalizado en el 
 En esta plantilla de ejemplo, estamos utilizando el campo cliente como identificador.
 
 {% tabs local %}
-{% tab Entrada %}
+{% tab Input %}
 
 ```javascript
 
@@ -283,7 +283,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab Salida %}
+{% tab Output %}
 
 ```json
 {

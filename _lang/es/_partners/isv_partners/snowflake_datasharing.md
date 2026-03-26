@@ -48,6 +48,69 @@ Siempre que sea posible, los cambios de última hora irán precedidos de un anun
 - Eliminar una columna de una tabla o vista existente
 - Modificar el tipo o la anulabilidad de una columna existente
 
+## Cuando se actualizan las tablas SNAPSHOTS y CHANGELOGS
+
+Las tablas SNAPSHOTS y CHANGELOGS realizan un seguimiento de los cambios en las campañas y los Lienzos. Comprender cuándo se actualizan estas tablas es importante para consultar las variaciones de mensajes y las configuraciones de Canvas más recientes.
+
+### CHANGELOGS_CAMPAIGN_SHARED
+
+Se añade una fila a `CHANGELOGS_CAMPAIGN_SHARED` cuando:
+- Se lanza la campaña, O
+- Se modifica cualquiera de los siguientes campos snapshottable:
+  - Apellidos
+  - Acciones (incluidos los cambios en el contenido de los mensajes)
+  - Comportamientos de conversión
+
+{% alert important %}
+Guardar o actualizar el borrador posterior al lanzamiento no desencadena automáticamente una actualización. La actualización se desencadena sólo cuando lanzas la campaña o aplicas los cambios del borrador posteriores al lanzamiento a la campaña activa.
+{% endalert %}
+
+### SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED
+
+`SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED` se deriva de `CHANGELOGS_CAMPAIGN_SHARED`. Esta tabla extrae y aplana la columna de acciones de `CHANGELOGS_CAMPAIGN_SHARED` en registros individuales de variación de mensajes. Se actualiza en consecuencia cuando se actualiza `CHANGELOGS_CAMPAIGN_SHARED`.
+
+### CHANGELOGS_CANVAS_SHARED
+
+Se añade una fila a `CHANGELOGS_CANVAS_SHARED` cuando:
+- Se lanza el Canvas, O
+- Se modifica cualquiera de los siguientes campos snapshottable:
+  - Apellidos
+  - Comportamientos de conversión
+  - Variaciones (porcentaje, asignaciones del primer paso, nombres de las variaciones)
+
+{% alert important %}
+Guardar o actualizar el borrador posterior al lanzamiento no desencadena automáticamente una actualización. La actualización se desencadena sólo cuando lanzas el Canvas o aplicas los cambios de borrador posteriores al lanzamiento al Canvas activo.
+{% endalert %}
+
+### SNAPSHOTS_CANVAS_VARIATION_SHARED
+
+`SNAPSHOTS_CANVAS_VARIATION_SHARED` se deriva de `CHANGELOGS_CANVAS_SHARED`. Esta tabla utiliza el mismo patrón de extracción que `SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED` y se actualiza en consecuencia cuando se actualiza `CHANGELOGS_CANVAS_SHARED`.
+
+### SNAPSHOTS_CANVAS_STEP_SHARED
+
+Se añade una fila a `SNAPSHOTS_CANVAS_STEP_SHARED` cuando:
+- Se lanza el Canvas, O
+- Se actualiza el Canvas activo (se aplica el borrador posterior al lanzamiento), O
+- Se modifica cualquiera de los siguientes campos snapshottable:
+  - Apellidos
+  - Acciones (incluidos los cambios de contenido de los mensajes dentro de las variaciones de mensajes)
+
+{% alert important %}
+Guardar el borrador posterior al lanzamiento no desencadena automáticamente una actualización. La actualización se desencadena sólo cuando lanzas el Canvas o aplicas los cambios de borrador posteriores al lanzamiento al Canvas activo.
+{% endalert %}
+
+### SNAPSHOTS_CANVAS_FLOW_STEP_SHARED
+
+Se añade una fila a `SNAPSHOTS_CANVAS_FLOW_STEP_SHARED` cuando:
+- Se lanza el Canvas, O
+- Se actualiza el Canvas activo (se aplica el borrador posterior al lanzamiento), O
+- Se modifica cualquiera de los siguientes campos snapshottable:
+  - Apellidos
+
+{% alert important %}
+Guardar el borrador posterior al lanzamiento no desencadena automáticamente una actualización. La actualización se desencadena sólo cuando lanzas el Canvas o aplicas los cambios de borrador posteriores al lanzamiento al Canvas activo.
+{% endalert %}
+
 ## Cumplimiento del Reglamento General de Protección de Datos (RGPD)
 
-Casi todos los registros de eventos que almacena Braze incluyen algunos campos que representan información personal identificable (IPI) de los usuarios. Algunos eventos pueden incluir la dirección de correo electrónico, el número de teléfono, el identificador del dispositivo, el idioma, el sexo e información sobre la ubicación. Si se envía a Braze la solicitud de olvido de un usuario, anularemos esos campos de IIP para cualquier evento que pertenezca a esos usuarios. De este modo, no eliminamos el registro histórico del acontecimiento, pero ahora el acontecimiento nunca podrá vincularse a un individuo concreto.
+{% include partners/snowflake_pii_gdpr.md %}

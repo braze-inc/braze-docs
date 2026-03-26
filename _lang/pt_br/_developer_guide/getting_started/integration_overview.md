@@ -15,11 +15,11 @@ platform:
   - Unity
 ---
 
-# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %}](https://learning.braze.com/sdk-integration-basics) ){: style="float:right;width:120px;border:0;" class="noimgborder"}Primeiros passos: Visão geral da integração
+# [![Curso de Aprendizado da Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}Introdução: Visão geral da integração
 
 > Este artigo fornece uma visão geral básica do processo de integração.
 
-![Um diagrama de Venn de quatro círculos - descoberta, integração, garantia de qualidade e manutenção - centrado em torno de "tempo para valor."]({% image_buster /assets/img/getting-started/getting-started-integrate-flower.png %}){: style="max-width:50%;float:right;margin-left:15px;border:none;"} 
+![Um diagrama de Venn com quatro círculos - descoberta, integração, garantia de qualidade e manutenção - centrado no "tempo para obter valor".]({% image_buster /assets/img/getting-started/getting-started-integrate-flower.png %}){: style="max-width:50%;float:right;margin-left:15px;border:none;"} 
 
 Como um recurso técnico, você capacitará sua equipe integrando à Braze ao seu stack de tecnologia. A integração é dividida, em linhas gerais, em quatro etapas:
 * [Descoberta e planejamento](#discovery): Trabalhe com sua equipe para alinhar o escopo, planejar uma estrutura para dados e campanhas e criar uma estrutura de espaço de trabalho apropriada. 
@@ -44,7 +44,7 @@ A fase de descoberta e planejamento leva, em média, cerca de seis semanas. Os l
 Durante o período de integração de sua empresa, a Braze realizará sessões de visão geral técnica. Recomendamos enfaticamente que os engenheiros participem dessas sessões. As sessões de visão geral técnica lhe dão a oportunidade de conversar sobre a escalabilidade da arquitetura da plataforma e ver exemplos práticos de como empresas do seu porte foram bem-sucedidas em casos de uso semelhantes.
 {% endalert %}
 
-![Ícones para diferentes canais, como e-mail, carrinho de compras, imagens, geolocalização, e assim por diante.]({% image_buster /assets/img/getting-started/data-graphic-2.png %}){: style="max-width:40%;float:right;margin-left:15px;"} 
+![Ícones para diferentes canais, como e-mail, carrinho de compras, imagens, geolocalização e assim por diante.]({% image_buster /assets/img/getting-started/data-graphic-2.png %}){: style="max-width:40%;float:right;margin-left:15px;"} 
 
 ### Planejamento de campanha
 
@@ -97,7 +97,7 @@ O administrador da sua equipe também criará diferentes [espaços de trabalho](
 
 ## Integração {#integration}
 
-![Gráfico de pirâmide abstrato representando o fluxo de informações de uma fonte de dados para um dispositivo do usuário.]({% image_buster /assets/img/getting-started/data-graphic.png %}){: style="max-width:45%;float:right;margin-left:15px;"} 
+![Gráfico abstrato de pirâmide que representa o fluxo de informações de uma fonte de dados para um dispositivo de usuários.]({% image_buster /assets/img/getting-started/data-graphic.png %}){: style="max-width:45%;float:right;margin-left:15px;"} 
 
 A Braze oferece suporte a aplicativos iOS, Android, aplicativos da Web e muito mais. Você também pode aceitar usar um wrapper SDK de plataforma cruzada, como o React Native ou o Unity. Normalmente, vemos os clientes se integrarem em um período de 1 a 6 semanas. Muitos clientes integraram a Braze com apenas um engenheiro, dependendo da amplitude de suas habilidades técnicas e da disponibilidade. Depende inteiramente do seu escopo específico de integração e de quanto tempo sua equipe dedica ao projeto Braze. 
 
@@ -126,6 +126,10 @@ O Braze SDK fornece duas funcionalidades essenciais: coleta e sincroniza os dado
 
 {% alert tip %}
 Quando estiver totalmente integrado ao seu app ou site, o SDK da Braze oferece um nível de sofisticação de marketing totalmente realizado. Se você adiar a integração do SDK da Braze, algumas das funcionalidades descritas na documentação não estarão disponíveis.
+{% endalert %}
+
+{% alert note %}
+Para adicionar uma camada adicional de segurança, você pode ativar [autenticação do SDK]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) para evitar solicitações não autorizadas ao SDK. Este recurso está disponível em todas as principais plataformas, incluindo Web, iOS, Android, React Native, Flutter, Unity, Cordova, .NET MAUI (Xamarin) e Expo.
 {% endalert %}
 
 Durante a implementação do SDK, você irá:
@@ -198,7 +202,7 @@ Confira se os seus ambientes de produção e teste estão configurados antes de 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Ao realizar QA na sua integração de SDK, use o [SDK Debugger]({{site.baseurl}}/developer_guide/sdk_integration/debugging) para solucionar problemas sem ativar o registro detalhado para o seu app.
+Ao realizar QA na sua integração de SDK, use o [Depurador de SDK]({{site.baseurl}}/developer_guide/sdk_integration/debugging) para solucionar problemas sem ativar o registro detalhado para seu app.
 {% endalert %}
 
 ### Passando a Braze para os profissionais de marketing
@@ -225,9 +229,9 @@ Você fará o rastreamento das atualizações da plataforma Braze por meio do Br
 
 ## Limites de taxa do SDK 
 
-### Usuários Ativos Mensais CY 24-25 
+### Usuários Ativos Mensais CY 24-25, MAU Universal, MAU Web e MAU Móvel  
 
-Para os clientes que adquiriram Usuários Ativos Mensais - CY 24-25, a Braze impõe limites de taxa do lado do servidor nas solicitações de API usadas por nossos SDKs para atualizar sessões, atributos de usuário, eventos e outros dados de perfil de usuário. Isso é para garantir a estabilidade da plataforma e manter um serviço rápido e confiável. 
+Para clientes que adquiriram Usuários Ativos Mensais CY 24-25, MAU Universal, MAU Web e MAU Móvel, a Braze aplica limites de frequência do lado do servidor nas solicitações de API usadas por nossos SDKs para atualizar sessões, atributos de usuário, eventos e outros dados de perfil de usuário. Isso é para garantir a estabilidade da plataforma e manter um serviço rápido e confiável. 
 
 * Os limites de taxa horária são definidos de acordo com o tráfego esperado do SDK em sua conta, que pode corresponder ao número de usuários ativos mensais (MAU) que você adquiriu, setor, sazonalidade ou outros fatores. Quando o limite de frequência horário é atingido, a Braze irá limitar as solicitações até a próxima hora.
 * Todas as solicitações com limite de taxa são automaticamente reprocessadas pelo SDK.
@@ -235,12 +239,25 @@ Para os clientes que adquiriram Usuários Ativos Mensais - CY 24-25, a Braze imp
     * Revisando sua integração de SDK para reduzir a coleta excessiva de dados.
     * Bloqueando dados personalizados que não são essenciais para seus casos de uso de marketing.
 * Os limites de taxa de explosão são limites de taxa de curta duração que se aplicam quando um alto volume de solicitações chega em um período muito curto (ou seja, em segundos). Você não precisa tomar medidas quando os limites de estouro ocorrem, e o SDK tentará novamente em breve.
+* Limites de frequência constantes controlam o volume de solicitações sustentadas ao longo de uma janela móvel maior que a janela de explosão (por exemplo, vários minutos) e ajudam a suavizar o tráfego contínuo entre os limites de explosão e seu limite de frequência horário.
 
 ### Encontrando seus limites de taxa
 
 Para encontrar os limites atuais com base na taxa de transferência esperada do SDK, acesse **Configurações** > **APIs e identificadores** > **Limites de API e SDK**.
 
 Para uso histórico, acesse **Configurações** > **APIs e identificadores** > **Dashboard de API e SDK**.
+
+### Solicitando limites de frequência mais altos
+
+Se você precisar de um limite de frequência Braze mais alto, entre em contato com o suporte da Braze ou seu gerente de sucesso do cliente e inclua os seguintes detalhes:
+
+* Se você precisa de um aumento temporário ou permanente.
+* Por que você precisa do aumento.
+* Quais endpoints e ambientes são afetados.
+* Seu volume de tráfego aproximado e cronograma, incluindo data de início, duração e horários de pico.
+* Se você pode agrupar chamadas ou espalhar o tráfego ao longo do tempo.
+
+Após enviar sua solicitação, a Braze a revisa e atualiza você com o resultado.
 
 ### Mudanças e suporte
 

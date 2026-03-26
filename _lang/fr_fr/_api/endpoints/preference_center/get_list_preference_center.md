@@ -1,11 +1,11 @@
 ---
-nav_title: "GET : Répertorier les centres de préférences"
-article_title: "GET : Répertorier les centres de préférences"
+nav_title: "GET : Répertorier les centres de préférences"
+article_title: "GET : Répertorier les centres de préférences"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "Cet article précise des détails concernant l’endpoint de Braze Répertorier les centres de préférences."
+description: "Cet article détaille l'endpoint Braze Répertorier les centres de préférences."
 
 ---
 {% api %}
@@ -20,17 +20,17 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 
 ## Conditions préalables
 
-Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec l’autorisation `preference_center.list`.
+Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/api/basics#rest-api-key/) avec la permission `preference_center.list`.
 
 ## Limite de débit
 
-Cet endpoint a une limitation du débit de 1 000 requêtes par minute, par espace de travail.
+{% multi_lang_include rate_limits.md endpoint='get preference center' %}
 
 ## Paramètres de chemin et de requête
 
-Cet endpoint n’a pas de paramètres de chemin ni de requête.
+Cet endpoint n'a pas de paramètres de chemin ni de requête.
 
-## Exemple de demande
+## Exemple de requête
 
 ```
 curl --location -g --request GET https://rest.iad-01.braze.com/preference_center/v1/list \

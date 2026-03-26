@@ -6,7 +6,7 @@
 
 ## Requisitos previos
 
-Como es posible acceder a datos PII a través de esta característica, debes tener permisos PII para ejecutar consultas SQL de segmento.
+Dado que esta característica permite acceder a datos PII, debes disponer de permisos PII para ejecutar consultas de segmentos SQL.
 
 ## Crear una extensión de segmento
 
@@ -14,30 +14,30 @@ Como es posible acceder a datos PII a través de esta característica, debes ten
 
 Hay dos tipos de editores SQL entre los que puedes elegir para crear tu Extensión de Segmento SQL: el Editor SQL y el Editor SQL Incremental.
 
-- **Refresco completo:** Cada vez que se actualice su segmento, Braze consultará todos los datos disponibles para actualizarlo, lo que consumirá más créditos que las actualizaciones incrementales. Las extensiones de actualización completa pueden regenerar automáticamente la afiliación a diario, pero no pueden actualizarse mediante la actualización incremental.
-- **Actualización incremental:** La actualización incremental sólo calcula los datos de los dos últimos días, lo que resulta más rentable y consume menos créditos cada vez. Al crear un segmento SQL de actualización incremental, puede configurarlo para que regenere automáticamente la afiliación diariamente. Esto te permite configurar tu segmento para que se actualice automáticamente a diario, lo que ayuda a reducir el coste de una actualización diaria de datos para las extensiones de segmento SQL.
-- **Generador AI SQL:** El Generador SQL de IA te permite escribir una consulta en lenguaje llano y la convierte en una consulta SQL para tu segmento. Es una forma rápida de empezar sin necesidad de escribir tú mismo el SQL.
+- **Actualización completa:** Cada vez que se actualice su segmento, Braze consultará todos los datos disponibles para actualizarlo, lo que consumirá más créditos que las actualizaciones incrementales. Las extensiones de actualización completa pueden regenerar automáticamente la afiliación a diario, pero no pueden actualizarse mediante la actualización incremental.
+- **Actualización incremental:** La actualización incremental es una forma más rentable de configurar tu consulta, aunque la configuración implica algunos [pasos](#step-2-write-your-sql) más. Si puedes completar estos pasos adicionales al crear tu segmento, vale la pena elegir esta opción, ya que tu consulta se ejecutará utilizando menos créditos. 
+- **Generador SQL con IA:** El generador SQL de IA te permite escribir una indicación en lenguaje sencillo y la convierte en una consulta SQL para tu segmento. Es una forma rápida de empezar sin necesidad de escribir el código SQL tú mismo.
 
 {% alert tip %}
 Puede realizar una actualización manual completa de todos los segmentos SQL creados en cualquiera de los dos editores SQL.
 {% endalert %}
 
 {% tabs local %}
-{% tab Actualización completa %}
+{% tab Full refresh %}
 
 Para crear una extensión de segmento SQL de actualización completa:
 
 1. Vaya a **Audiencia** > **Extensiones de segmento**.
-2. Selecciona **Crear nueva extensión** y, a continuación, **Actualizar completamente**.<br><br>
+2. Selecciona **Crear nueva extensión** y, a continuación, selecciona **Actualización completa**.<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
-3. Añada un nombre para su Extensión de Segmento e introduzca su SQL. Consulta [el Paso 2](#step-2-write-your-sql) para ver los requisitos y recursos.<br><br>
+3. Añada un nombre para su Extensión de Segmento e introduzca su SQL. Consulta el [paso 2](#step-2-write-your-sql) para conocer los requisitos y recursos necesarios.<br><br>
    ![Editor SQL que muestra un ejemplo de extensión de segmento SQL.]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
 4. Guarda tu extensión de segmento.
 
 {% endtab %}
-{% tab Actualización incremental %}
+{% tab Incremental refresh %}
 
-El editor SQL de actualización incremental permite al usuario realizar agregaciones de consultas por fecha para un evento dentro de un marco temporal determinado. Para crear una actualización incremental Extensión de segmento SQL:
+Para crear una actualización incremental Extensión de segmento SQL:
 
 1. Vaya a **Audiencia** > **Extensiones de segmento**.
 
@@ -49,15 +49,15 @@ Si está utilizando la [navegación antigua]({{site.baseurl}}/user_guide/adminis
 2\. Selecciona **Crear nueva extensión** y selecciona **Actualización incremental**.<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
 3\. Añada un nombre para su Extensión de Segmento e introduzca su SQL. Consulte la sección [Escribir SQL](#writing-sql) para conocer los requisitos y recursos.<br><br>
-   ![Editor SQL que muestra un ejemplo de extensión de segmento SQL incremental.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:60%" }<br><br>
+   ![Editor SQL que muestra un ejemplo de extensión incremental de segmento SQL.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:60%" }<br><br>
 4\. Si lo desea, seleccione **Regenerar extensión diariamente**.<br><br>
-   ![Casilla de verificación para regenerar la extensión diariamente.]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:60%" }<br><br>
+   ![Casilla para regenerar la extensión diariamente.]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:60%" }<br><br>
    Si se selecciona esta opción, Braze actualizará automáticamente cada día el número de miembros del segmento. Esto significa que cada día a medianoche en la zona horaria de su empresa (con un retraso potencial de una hora), Braze comprobará si hay nuevos usuarios en su segmento y los añadirá automáticamente a su segmento. Si una Extensión de Segmento no se ha utilizado en 7 días, Braze pausará automáticamente la regeneración diaria. Una Extensión de Segmento no utilizada es aquella que no forma parte de una campaña o Lienzo (no es necesario que la campaña o el Lienzo estén activos para que la extensión se considere "utilizada").<br><br>
 5\. Guarda tu extensión de segmento.
 
 {% endtab %}
 
-{% tab Generador de SQL con IA %}
+{% tab AI SQL Generator %}
 
 {% alert note %}
 El generador de SQL con IA está disponible actualmente como característica beta. Ponte en contacto con tu administrador del éxito del cliente si estás interesado en participar en esta prueba beta.
@@ -65,12 +65,12 @@ El generador de SQL con IA está disponible actualmente como característica bet
 
 El generador de SQL con IA aprovecha [la GPT](https://openai.com/gpt-4), impulsada por OpenAI, para recomendar SQL para tu segmento SQL.
 
-![Generador de SQL con IA con la pregunta "Usuarios que recibieron una notificación el mes pasado"]({% image_buster /assets/img/ai_sql_generator.png %}){: style="max-width:70%;"}
+![Generador SQL con IA con la indicación «Usuarios que recibieron una notificación el mes pasado».]({% image_buster /assets/img/ai_sql_generator.png %}){: style="max-width:70%;"}
 
 Para utilizar el generador de SQL con IA, haz lo siguiente:
 
-1. Selecciona **Iniciar Generador SQL AI** después de crear un [segmento SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) utilizando la actualización completa o incremental.
-2. Escribe tu consulta y selecciona **Generar** para traducir tu consulta a SQL.
+1. Selecciona **Iniciar generador de SQL de IA** después de crear un [segmento SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) utilizando la actualización completa o incremental.
+2. Escribe tu comando y selecciona **Generar** para traducir tu comando a SQL.
 3. Revisa el SQL generado para asegurarte de que parece correcto y, a continuación, guarda tu segmento.
 
 #### Ejemplos de indicaciones
@@ -90,7 +90,7 @@ Para utilizar el generador de SQL con IA, haz lo siguiente:
 Las consultas SQL que tarden más de 20 minutos en ejecutarse agotarán el tiempo de espera.
 {% endalert %}
 
-Cuando la extensión termine de procesarse, podrás [crear un segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension#step-5-use-your-extension-in-a-segment) utilizando tu Extensión de segmento y dirigirte a este nuevo segmento con tus campañas y Lienzos.
+Cuando la extensión termine de procesarse, podrás [crear un segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension#step-5-use-your-extension-in-a-segment) utilizando tu extensión de segmento y dirigirte a este nuevo segmento con tus campañas y lienzos.
 
 ### Paso 2: Escribe tu SQL
 
@@ -101,7 +101,7 @@ Nota que las tablas disponibles para consulta solo contienen datos de eventos. S
 {% endalert %} 
 
 {% tabs %}
-{% tab Editor SQL %}
+{% tab SQL Editor %}
 
 Además, su SQL debe cumplir las siguientes normas:
 
@@ -120,26 +120,26 @@ SELECT DISTINCT user_id FROM "INSERT TABLE NAME"
 
 Además, tu consulta SQL estándar debe cumplir las siguientes reglas:
 
-- No puedes utilizar las declaraciones `DECLARE`.
+- No puedes utilizar`DECLARE`  declaraciones.
 {% endtab %}
-{% tab Editor SQL incremental %}
+{% tab Incremental SQL Editor %}
 
 Todas las consultas de actualización incremental constan de dos partes: una consulta y los detalles del esquema.
 
 1. En el editor, escriba una consulta que seleccione `user_id`s de la tabla que desee.
 2. Añada detalles del esquema seleccionando un **Operador**, **Número de veces** y **Periodo de tiempo** en los campos situados encima del editor. La consulta comprobará si la suma de la columna agregada cumple una determinada condición especificada por los marcadores de posición {% raw %}`{{operator}}` y `{{number of times}}`{% endraw %}. Esto funciona de forma similar al flujo de trabajo para crear Extensiones de Segmento clásicas.<br><br>
    - **Operador:** Indica si el suceso ha ocurrido más, menos o igual que un número de veces.<br>
-   ![Campo de operador con "Más que" seleccionado.]({% image_buster /assets/img_archive/sql_segments_operator.png %})<br><br>
+   ![Campo del operador con «Más que» seleccionado.]({% image_buster /assets/img_archive/sql_segments_operator.png %})<br><br>
    - **Número de veces:** Cuántas veces quieres evaluar el suceso en relación con el operador.<br>
-   ![Número de veces con "5" introducido.]({% image_buster /assets/img_archive/sql_segments_times.png %})<br><br>
+   ![Número de veces que se ha introducido «5».]({% image_buster /assets/img_archive/sql_segments_times.png %})<br><br>
    - **Período de tiempo:** Número de días de 1 a 730 en los que desea comprobar las instancias del evento. Este periodo de tiempo se refiere a días pasados en relación con el día actual. El siguiente ejemplo muestra la consulta de usuarios que realizaron el evento más de 5 veces en los últimos 365 días.<br>
-   ![Campo de periodo de tiempo con "365" introducido.]({% image_buster /assets/img_archive/sql_segments_period.png %})
+   ![Campo de período de tiempo con «365» introducido.]({% image_buster /assets/img_archive/sql_segments_period.png %})
 
 En el siguiente ejemplo, el segmento resultante contendría los usuarios que realizaron el evento `favorited` más de 3 veces durante los últimos 30 días, después de una fecha especificada.
 
-![Editor SQL que muestra un ejemplo de extensión de segmento SQL incremental.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:65%" }
+![Editor SQL que muestra un ejemplo de extensión incremental de segmento SQL.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:65%" }
 
-![Vista previa de una extensión de segmento SQL incremental.]({% image_buster /assets/img_archive/sql_segments_incremental_preview.png %}){: style="max-width:85%" }
+![Vista previa SQL de una extensión incremental de segmento SQL.]({% image_buster /assets/img_archive/sql_segments_incremental_preview.png %}){: style="max-width:85%" }
 
 {% alert tip %}
 Los segmentos de actualización incremental tienen en cuenta los eventos tardíos, que son eventos que ocurrieron hace más de 2 días (por ejemplo, eventos SDK que no se enviaron en el momento en que se capturaron).
@@ -152,12 +152,12 @@ Además, tu consulta de actualización incremental debe cumplir las siguientes r
 - Escriba una única sentencia SQL. No incluya ningún punto y coma.
 - Su segmento SQL incremental podría referirse a un único evento. Los desplegables de fecha y recuento hacen referencia al evento elegido.
 - Su SQL debe tener las siguientes columnas: `user_id`, `$start_date`, y una función de agregación (como `COUNT`). Cualquier SQL guardado sin estos tres campos dará lugar a un error.
-- No puedes utilizar las declaraciones `DECLARE`.
+- No puedes utilizar`DECLARE`  declaraciones.
 {% endtab %}
 {% endtabs %}
 
 {% alert note %}
-Si vas a crear un segmento SQL que utilice la tabla `CATALOGS_ITEMS_SHARED`, debes especificar un ID de catálogo. Por ejemplo:
+Si estás creando un segmento SQL que utiliza la tabla `CATALOGS_ITEMS_SHARED`, debes especificar un ID de catálogo. Por ejemplo:
 
 ```sql
 SELECT * FROM CATALOGS_ITEMS_SHARED
@@ -172,21 +172,21 @@ Antes de guardar, puedes ejecutar una vista previa de tu consulta. Las previsual
 
 En el caso de las extensiones incrementales de segmentos SQL, la vista previa no incluirá los criterios adicionales de los campos operador, número de veces y periodo de tiempo.
 
-### Paso 4: Determina si necesitas invertir SQL
+### Paso 4: Determina si necesitas invertir SQL.
 
-A continuación, determina si necesitas invertir el SQL. Aunque no es posible consultar directamente a los usuarios con cero eventos, puedes utilizar **Invert SQL** para dirigirte a estos usuarios.
+A continuación, determina si necesitas invertir SQL. Aunque no es posible realizar consultas directas sobre usuarios sin eventos, puedes utilizar **Invert SQL** para seleccionar a estos usuarios.
 
 {% alert note %}
-Por predeterminado, **Invertir SQL** no está alternado. Sin embargo, si utilizas el generador AI SQL para generar una sentencia SQL que necesite ser negada, ChatGPT podría devolver una salida que alternara automáticamente esta característica.
+De forma predeterminada, **la opción Invertir SQL** no se alterna. Sin embargo, si utilizas el generador SQL de IA para generar una instrucción SQL que debe negarse, ChatGPT podría devolver un resultado que alterné automáticamente esta característica.
 {% endalert %}
 
-Por ejemplo, para dirigirte a los usuarios que tienen menos de tres compras, escribe primero una consulta para seleccionar a los usuarios que tienen tres o más compras. A continuación, selecciona **Invertir SQL** para dirigirte a los usuarios con menos de tres compras (incluidos los que tienen cero compras).
+Por ejemplo, para dirigirte a usuarios que hayan realizado menos de tres compras, primero escribe una consulta para seleccionar a los usuarios que hayan realizado tres o más compras. A continuación, selecciona **Invertir SQL** para dirigirte a los usuarios con menos de tres compras (incluidos aquellos con cero compras).
 
 {% alert important %}
-A menos que te dirijas específicamente a usuarios con cero eventos, no necesitarás invertir SQL. Si se selecciona **Invertir SQL**, confirma que la característica es necesaria y que el segmento coincide con tu audiencia deseada. Por ejemplo, si una consulta se dirige a usuarios con al menos un evento, sólo se dirigirá a usuarios con cero eventos cuando se invierta.
+A menos que tu objetivo específico sea dirigirte a usuarios sin eventos, no será necesario invertir el SQL. Si se selecciona **Invertir SQL**, confirma que la característica es necesaria y que el segmento coincide con tu audiencia. Por ejemplo, si una consulta se dirige a usuarios con al menos un evento, solo se dirigirá a usuarios sin eventos cuando se invierta.
 {% endalert %}
 
-![Extensión de segmento denominada "Se ha hecho clic en 1-4 correos electrónicos en los últimos 30 días" con la opción de invertir SQL seleccionada.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:90%;"}
+![Extensión de segmento denominada «Hiciste clic en 1-4 correos electrónicos en los últimos 30 días» con la opción de invertir SQL seleccionada.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:90%;"}
 
 ## Actualizar la membresía de segmentos
 
@@ -196,7 +196,7 @@ Para actualizar la pertenencia a un segmento de cualquier extensión de segmento
 Si ha creado un segmento en el que espera que los usuarios entren y salgan con regularidad, actualice manualmente la Extensión de segmento que utiliza antes de dirigirse a ese segmento en una campaña o Canvas.
 {% endalert %}
 
-## Administra tus extensiones de segmento
+## Gestión de tus extensiones de segmento
 
 En la página **Extensiones de segmento**, los segmentos generados mediante SQL se indican con <i class="fas fa-code" alt="SQL Segment Extension"></i> junto a su nombre.
 
@@ -204,7 +204,7 @@ Seleccione una extensión de segmento SQL para ver dónde se está utilizando la
 
 ![Mensajería Sección de uso del editor SQL que muestra dónde se está utilizando el segmento SQL.]({% image_buster /assets/img_archive/sql_segments_usage.png %}){: style="max-width:70%;"}
 
-### Designar la configuración de actualización
+### Designación de la configuración de actualización
 
 {% multi_lang_include segments.md section='Refresh settings' %}
 
@@ -222,7 +222,7 @@ Para ahorrar créditos, previsualice su consulta para asegurarse de que es corre
 
 Tus créditos volverán a ser 5 el primer día de cada mes a las 12 am UTC. Puede controlar el uso de sus créditos a lo largo del mes en el panel de uso de créditos. En la página **Extensiones de segmento**, haga clic en <i class="fa-solid fa-chart-column"></i> **Ver uso de créditos SQL**.
 
-![Panel de uso de créditos SQL en la página de extensiones de segmento SQL]({% image_buster /assets/img_archive/sql_segments_credits.png %}){: style="max-width:60%"}
+![Panel de uso de créditos SQL en la página de extensiones de segmentos SQL]({% image_buster /assets/img_archive/sql_segments_credits.png %}){: style="max-width:60%"}
 
 Cuando tus créditos lleguen a cero, ocurrirá lo siguiente:
 

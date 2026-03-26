@@ -1,162 +1,168 @@
 ---
 nav_title: TikTok
-article_title: Canvas Audience Sync to TikTok
+article_title: TikTok에 Canvas Audience Sync
 alias: /tiktok_audience_sync/
-description: "This reference article will cover how to use Braze Audience Sync to TikTok to deliver advertisements based upon behavioral triggers, segmentation, and more."
+description: "이 참조 문서에서는 Braze Audience Sync to TikTok을 사용하여 행동 트리거, 세분화 등을 기반으로 광고를 전달하는 방법을 다룹니다."
 Tool:
   - Canvas
-page_order: 7
+page_order: 8
 
 ---
 
-# Audience Sync to TikTok
+# TikTok에 Audience Sync
 
-Using the Braze Audience Sync to TikTok, brands can elect to add user data from their own Braze integration to TikTok Audiences to deliver advertisements based on behavioral triggers, segmentation, and more. Any criteria you’d normally use to trigger a message (push, email, SMS, webhook, etc.) in a Braze Canvas. 
+Braze Audience Sync to TikTok을 사용하면 브랜드는 자체 Braze 통합에서 사용자 데이터를 TikTok 오디언스에 추가하여 행동 트리거, 세분화 등을 기반으로 광고를 전달할 수 있습니다. Braze 캔버스에서 메시지(푸시, 이메일, SMS, 웹훅 등)를 트리거하는 데 일반적으로 사용하는 모든 기준을 활용할 수 있습니다.
 
-**Common use cases for Audience Syncing include**:
+**Audience Sync의 일반적인 활용 사례는 다음과 같습니다**:
 
-- Targeting high-value users via multiple channels to drive purchases or engagement
-- Retargeting users who are less responsive to other marketing channels
-- Creating suppression audiences to prevent users from receiving advertisements when they're already loyal consumers of your brand
-- Creating Actalike Audiences to acquire new users more efficiently
+- 여러 채널을 통해 고가치 사용자를 타겟팅하여 구매 또는 참여를 유도
+- 다른 마케팅 채널에 반응이 적은 사용자를 리타겟팅
+- 이미 브랜드의 충성 소비자인 사용자가 광고를 받지 않도록 억제 오디언스 생성
+- 신규 사용자를 더 효율적으로 확보하기 위한 유사 오디언스(Actalike Audiences) 생성
 
-This feature lets brands control what specific first-party data is shared with TikTok. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
+이 기능을 통해 브랜드는 TikTok과 공유되는 특정 퍼스트파티 데이터를 제어할 수 있습니다. Braze에서는 퍼스트파티 데이터를 공유할 수 있는 통합과 공유할 수 없는 통합에 대해 최대한 신중하게 고려합니다. 자세한 내용은 [개인정보 보호정책](https://www.braze.com/privacy)을 참조하세요.
 
 {% alert important %}
-**Audience Sync Pro disclaimer**<br>
-Braze Audience Sync to TikTok is an Audience Sync Pro integration. For more information on this integration, reach out to your Braze account manager.
+**Audience Sync Pro 면책 조항**<br>
+Braze Audience Sync to TikTok은 Audience Sync Pro 통합입니다. 이 통합에 대한 자세한 정보는 Braze 계정 매니저에게 문의하세요.
 {% endalert %}
 
-## Prerequisites
+## 필수 조건
 
-You must ensure the following items are created, completed, and/or accepted before setting up your TikTok Audience Step in Canvas.
+캔버스에서 TikTok Audience 단계를 설정하기 전에 다음 항목이 생성, 완료 및/또는 수락되었는지 확인해야 합니다.
 
-| Requirement | Origin | Description |
+| 요구 사항 | 출처 | 설명 |
 | ----------- | ------ | ----------- |
-| TikTok for Business Center Account | [TikTok](https://business.tiktok.com/) | A centralized tool to manage your brand's TikTok assets (such as ad accounts, pages, apps). |
-| TikTok Ad Account | [TikTok](https://ads.tiktok.com/) | An active TikTok ad account tied to your brand's Business Center account.<br><br>Ensure that your TikTok Business Center manager admin has granted you admin permissions to the TikTok ad accounts you plan to use with Braze. |
-| TikToK terms & policies | [TikTok](https://ads.tiktok.com/i18n/official/policy/terms) | Agree to comply with any of TikTok’s required terms, policies, guidelines, and documentation related to your use of the Pinterest Audience Sync, including any terms, policies, guidelines, and documentation incorporated by reference therein, which may include: the Commercial Terms of Service, Advertising Terms, Privacy Policy, Custom Audience Terms, Developer Terms of Service, Developer Data Sharing Agreement, Advertising Policies, Brand Guidelines, and Community Guidelines. |
+| TikTok for Business Center 계정 | [TikTok](https://business.tiktok.com/) | 브랜드의 TikTok 자산(광고 계정, 페이지, 앱 등)을 관리하는 중앙 집중식 도구입니다. |
+| TikTok 광고 계정 | [TikTok](https://ads.tiktok.com/) | 브랜드의 Business Center 계정에 연결된 활성 TikTok 광고 계정입니다.<br><br>TikTok Business Center 매니저 관리자가 Braze와 함께 사용할 TikTok 광고 계정에 대한 관리자 권한을 부여했는지 확인하세요. |
+| TikTok 약관 및 정책 | [TikTok](https://ads.tiktok.com/i18n/official/policy/terms) | Pinterest Audience Sync 사용과 관련된 TikTok의 필수 약관, 정책, 가이드라인 및 문서(참조로 포함된 약관, 정책, 가이드라인 및 문서 포함)를 준수하는 데 동의합니다. 여기에는 상업 서비스 약관, 광고 약관, 개인정보 보호정책, 커스텀 오디언스 약관, 개발자 서비스 약관, 개발자 데이터 공유 계약, 광고 정책, 브랜드 가이드라인 및 커뮤니티 가이드라인이 포함될 수 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-## Integration 
+## 통합
 
-### Step 1: Connect to TikTok
+### 1단계: TikTok에 연결
 
-In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **TikTok**. Under TikTok Audience Sync, select **Connect TikTok**.
+{% alert important %}
+TikTok을 Braze 계정에 연결하려면 ["관리자" 권한]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin)이 필요합니다.
+{% endalert %}
 
-![TikTok technology page in Braze includes an Overview section and TikTok Audience Sync section with the Connected TikTok button.]({% image_buster /assets/img/tiktok/tiktok1.png %}){: style="max-width:75%;"}
+Braze 대시보드에서 **파트너 통합** > **기술 파트너**로 이동하여 **TikTok**을 선택합니다. TikTok Audience Sync 아래에서 **Connect TikTok**을 선택합니다.
 
-You'll then be redirected to the TikTok OAuth page to authorize Braze for ad account management and Audience Management. After you have selected **Confirm**, you'll be redirected back into Braze to select which TikTok ad accounts you wish to sync to. 
+![Braze의 TikTok 기술 페이지에는 개요 섹션과 Connect TikTok 버튼이 있는 TikTok Audience Sync 섹션이 있습니다.]({% image_buster /assets/img/tiktok/tiktok1.png %}){: style="max-width:75%;"}
+
+그러면 TikTok OAuth 페이지로 리디렉션되어 Braze에 광고 계정 관리 및 오디언스 관리 권한을 부여합니다. **확인**을 선택하면 Braze로 다시 리디렉션되어 동기화할 TikTok 광고 계정을 선택할 수 있습니다.
 
 ![]({% image_buster /assets/img/tiktok/tiktok2.png %}){: style="max-width:75%;"}
 
-Once successfully connected, you will return to the partner page. Here, you can view which accounts are connected and disconnect existing accounts.
+성공적으로 연결되면 파트너 페이지로 돌아갑니다. 여기에서 연결된 계정을 확인하고 기존 계정의 연결을 해제할 수 있습니다.
 
 ![]({% image_buster /assets/img/tiktok/tiktok3.png %}){: style="max-width:75%;"}
 
-Your TikTok connection will be applied at the Braze app-group level. If your TikTok admin removes you from your TikTok Business Center or access to the connected TikTok accounts, Braze will detect an invalid token. As a result, your active Canvases using TikTok Audience components will show errors, and Braze will not be able to sync users.
+TikTok 연결은 Braze 앱 그룹 수준에서 적용됩니다. TikTok 관리자가 TikTok Business Center에서 사용자를 제거하거나 연결된 TikTok 계정에 대한 액세스를 제거하면 Braze는 유효하지 않은 토큰을 감지합니다. 그 결과 TikTok Audience 구성요소를 사용하는 활성 캔버스에 오류가 표시되며, Braze는 사용자를 동기화할 수 없게 됩니다.
 
-### Step 2: Add a TikTok Audience component in Canvas Flow
+### 2단계: 캔버스에 TikTok Audience 구성요소 추가
 
-Add a component in your Canvas and select **Audience Sync**. 
+캔버스에 구성요소를 추가하고 **Audience Sync**를 선택합니다.
 
 ![]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
-### Step 3: Sync setup
+### 3단계: 동기화 설정
 
-Click on the **Custom Audience** button to open the component editor.
+**Custom Audience** 버튼을 클릭하여 구성요소 편집기를 엽니다.
 
-Select **TikTok** as the desired Audience Sync partner.
+원하는 Audience Sync 파트너로 **TikTok**을 선택합니다.
 
 ![]({% image_buster /assets/img/audience_sync/audience_sync4.png %}){: style="max-width:80%;"}
 
-Then select the desired TikTok ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience.
+그런 다음 원하는 TikTok 광고 계정을 선택합니다. **Choose a New or Existing Audience** 드롭다운에서 새 오디언스 또는 기존 오디언스의 이름을 입력합니다.
 
 ![]({% image_buster /assets/img/tiktok/tiktok11.png %})
 
 {% tabs %}
-{% tab Create a New Audience %}
+{% tab 새 오디언스 생성 %}
 
-**Create a New Audience**<br>
-Enter a name for the new audience, select **Add Users to Audience**, and select which fields you would like to sync with TikTok. Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
+**새 오디언스 생성**<br>
+새 오디언스의 이름을 입력하고 **Add Users to Audience**를 선택한 다음 TikTok과 동기화할 필드를 선택합니다. 그런 다음 단계 편집기 하단의 **Create Audience** 버튼을 클릭하여 오디언스를 저장합니다.
 
 ![]({% image_buster /assets/img/audience_sync/tiktok3.png %})
 
-Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
+오디언스가 성공적으로 생성되었거나 오류가 발생한 경우 Braze가 단계 편집기 상단에 알림을 표시합니다. 오디언스가 초안 모드로 생성되었기 때문에 나중에 캔버스 여정에서 사용자 제거를 위해 이 오디언스를 참조할 수 있습니다.
 
 ![]({% image_buster /assets/img/audience_sync/tiktok2.png %})
 
-When you launch a Canvas with a new audience, Braze syncs users in near real-time as they enter the audience step.
+새 오디언스로 캔버스를 시작하면 Braze는 사용자가 오디언스 단계에 진입할 때 거의 실시간으로 동기화합니다.
 
 {% endtab %}
-{% tab Sync with an Existing Audience %}
+{% tab 기존 오디언스와 동기화 %}
 
-**Sync with an Existing Audience**<br>
-Braze also offers the ability to add users to existing TikTok audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and **Add to the Audience**. Braze will then add users in near real-time as they enter the TikTok Audience step.
+**기존 오디언스와 동기화**<br>
+Braze는 기존 TikTok 오디언스에 사용자를 추가하여 해당 오디언스를 최신 상태로 유지하는 기능도 제공합니다. 기존 오디언스와 동기화하려면 드롭다운에서 기존 오디언스 이름을 입력하고 **Add to the Audience**를 선택합니다. 그러면 Braze는 사용자가 TikTok Audience 단계에 진입할 때 거의 실시간으로 사용자를 추가합니다.
 
-![Expanded view of the Custom Audience Canvas step. Here, the desired ad account and existing audience are selected.]({% image_buster /assets/img/audience_sync/tiktok.png %})
+![Custom Audience 캔버스 단계의 확장된 보기입니다. 여기에서 원하는 광고 계정과 기존 오디언스가 선택됩니다.]({% image_buster /assets/img/audience_sync/tiktok.png %})
 
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Launch Canvas
-Once you have configured your TikTok Audience component, simply launch the Canvas! A new audience will be created, and users who flow through the TikTok Audience component will be passed into this audience on TikTok. If your Canvas contains subsequent components, your users will advance to the next step in their user journey.
+### 4단계: 캔버스 시작
+TikTok Audience 구성요소를 구성한 후 캔버스를 시작하면 됩니다! 새 오디언스가 생성되고, TikTok Audience 구성요소를 통과하는 사용자는 TikTok의 이 오디언스에 전달됩니다. 캔버스에 후속 구성요소가 포함되어 있으면 사용자는 사용자 여정의 다음 단계로 진행합니다.
 
-You can view the audience in TikTok by entering your **Ads Manager Account** and selecting **Audiences** from the **Assets** dropdown. From the **Audience** page, you can see the size of each audience after it reaches ~1,000.
+**Ads Manager Account**에 접속하고 **자산** 드롭다운에서 **Audiences**를 선택하여 TikTok에서 오디언스를 확인할 수 있습니다. **Audience** 페이지에서 &#126;1,000명에 도달한 후 각 오디언스의 규모를 확인할 수 있습니다.
 
-![TikTok page listing the following metrics for the given audience.]({% image_buster /assets/img/tiktok/tiktok5.png %})
+![지정된 오디언스에 대한 다음 측정기준이 나열된 TikTok 페이지입니다.]({% image_buster /assets/img/tiktok/tiktok5.png %})
 
-## User syncing and rate limit considerations
+## 사용자 동기화 및 사용량 제한 고려 사항
 
-As users reach the Audience Sync step, Braze will sync these users in near real-time while respecting TikTok's Marketing API rate limits. This means that Braze will try to batch and process as many users every 5 seconds before sending these users to TikTok.
+사용자가 Audience Sync 단계에 도달하면 Braze는 TikTok의 마케팅 API 사용량 제한을 준수하면서 거의 실시간으로 동기화합니다. Braze는 TikTok으로 전송하기 전에 5초마다 가능한 한 많은 사용자를 배치하고 처리합니다.
 
-TikTok's Segment API rate limit states no more than 50 queries per second and 10k users per request. If a Braze customer reaches this rate limit, the Canvas will retry the sync for up to ~13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
+TikTok의 세그먼트 API 사용량 제한은 초당 최대 50개의 쿼리와 요청당 10,000명의 사용자를 허용합니다. 고객이 이 한도에 도달하면 Braze는 최대 &#126;13시간 동안 동기화를 재시도합니다. 동기화가 여전히 불가능한 경우 Braze는 이러한 사용자를 Users Errored 측정기준 아래에 나열합니다.
 
-## Understanding analytics
+## 분석 이해하기
 
-The following table includes metrics and descriptions to help you better understand analytics from your Audience Sync component.
+다음 표에는 Audience Sync 구성요소의 분석을 더 잘 이해하는 데 도움이 되는 측정기준과 설명이 포함되어 있습니다.
 
-| Metric | Description |
+| 측정기준 | 설명 |
 | ------ | ----------- |
-| Entered | Number of users who entered this component to be synced to TikTok. |
-| Proceeded to Next Step | Number of users that advanced to the next component if one exists. All users will auto-advance if this is the last step in the Canvas branch. |
-| Users Synced | Number of users who have successfully been synced to TikTok. Note that this does not equate to users matched on TikTok. |
-| Users Not Synced | Number of users that have not been synced due to missing fields to match. |
-| Users Pending | Number of users currently being processed by Braze to sync into TikTok. |
-| Users Errored | Number of users who were not synced to TikTok due to an API error after about 13 hours of retries. Potential causes of errors can include an invalid TikTok token or if the audience was deleted on TikTok. |
-| Exited Canvas | Number of users who have exited the Canvas. This occurs when the last step in a Canvas is an Audience sync component. |
+| Entered | TikTok에 동기화하기 위해 이 구성요소에 진입한 사용자 수입니다. |
+| Proceeded to Next Step | 다음 구성요소가 있는 경우 다음 구성요소로 진행한 사용자 수입니다. 캔버스 브랜치의 마지막 단계인 경우 모든 사용자가 자동으로 진행됩니다. |
+| Users Synced | TikTok에 성공적으로 동기화된 사용자 수입니다. 이는 TikTok에서 매칭된 사용자와 동일하지 않습니다. |
+| Users Not Synced | 매칭할 필드가 누락되어 동기화되지 않은 사용자 수입니다. |
+| Users Pending | 현재 Braze에서 TikTok으로 동기화하기 위해 처리 중인 사용자 수입니다. |
+| Users Errored | 약 13시간의 재시도 후 API 오류로 인해 TikTok에 동기화되지 않은 사용자 수입니다. 오류의 잠재적 원인에는 유효하지 않은 TikTok 토큰 또는 TikTok에서 오디언스가 삭제된 경우가 포함될 수 있습니다. |
+| Exited Canvas | 캔버스를 종료한 사용자 수입니다. 이는 캔버스의 마지막 단계가 Audience Sync 구성요소인 경우에 발생합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-Remember that there will be a delay in reporting for users synced and users errored metrics due to the bulk flusher and the 13-hour retry, respectively.
+대량 플러셔와 13시간 재시도로 인해 동기화된 사용자 및 오류 발생 사용자 측정기준의 보고에 지연이 있을 수 있습니다.
 {% endalert %}
 
-## Frequently asked questions
+## 자주 묻는 질문
 
-### What should I do next if I receive an invalid token error?
+### 유효하지 않은 토큰 오류를 받으면 어떻게 해야 하나요?
 
-You can disconnect and reconnect your TikTok account on the TikTok partner page. Ensure with your TikTok Business Center admin that you have the appropriate permissions to the ad account you wish to sync.
+TikTok 파트너 페이지에서 TikTok 계정의 연결을 해제하고 다시 연결할 수 있습니다. TikTok Business Center 관리자에게 동기화하려는 광고 계정에 대한 적절한 권한이 있는지 확인하세요.
 
-### Why is my Canvas not allowed to launch?
+### 캔버스를 시작할 수 없는 이유는 무엇인가요?
 
-Confirm that your TikTok account successfully connects to Braze on the TikTok partner page. Next, make sure you've selected an ad account, entered a name for the new audience, and selected fields to match.
+TikTok 파트너 페이지에서 TikTok 계정이 Braze에 성공적으로 연결되었는지 확인하세요. 그런 다음 광고 계정을 선택하고, 새 오디언스의 이름을 입력하고, 매칭할 필드를 선택했는지 확인하세요.
 
-### How do I know if users have matched after passing users to TikTok?
+### TikTok에 사용자를 전달한 후 사용자가 매칭되었는지 어떻게 알 수 있나요?
 
-TikTok does not provide this information for their data privacy policies.
+TikTok은 데이터 프라이버시 정책에 따라 이 정보를 제공하지 않습니다.
 
-### How long will it take for my audiences to populate in TikTok?
+### TikTok에서 오디언스가 채워지는 데 얼마나 걸리나요?
 
-The audience size will update within 24-48 hours on the Audiences page in TikTok’s Ads Manager.
+오디언스 크기는 TikTok Ads Manager의 Audiences 페이지에서 24~48시간 이내에 업데이트됩니다.
 
-### What is the maximum number of audiences I can have in my TikTok ad account?
+### TikTok 광고 계정에서 보유할 수 있는 최대 오디언스 수는 얼마인가요?
 
-You can have up to 400 audiences per TikTok ad account.
+TikTok 광고 계정당 최대 400개의 오디언스를 보유할 수 있습니다.
 
-### Why is my audience size or match rate in TikTok higher than the users synced in Braze with Audience Sync?
+### TikTok의 오디언스 크기 또는 매칭률이 Braze의 Audience Sync에서 동기화된 사용자보다 높은 이유는 무엇인가요?
 
-This is because in TikTok, one ID may be associated with multiple TikTok users. This occurs most often when clients use mobile ad IDs (iOS IDFA and Android GAID) because one device may have multiple TikTok users logged in. 
+이는 TikTok에서 하나의 ID가 여러 TikTok 사용자와 연결될 수 있기 때문입니다. 이는 클라이언트가 모바일 광고 ID(iOS IDFA 및 Android GAID)를 사용할 때 가장 자주 발생하는데, 하나의 기기에 여러 TikTok 사용자가 로그인되어 있을 수 있기 때문입니다.
 
-Additionally, TikTok also counts Pangle users as matched users, which in some cases can result in an elevated match rate. However, when you use the audience for ad delivery, the actual deliverable audience size may not be as high as the matched user size as it depends on placement and other influencing factors.
+또한 TikTok은 Pangle 사용자도 매칭된 사용자로 계산하므로 일부 경우 매칭률이 높아질 수 있습니다. 그러나 광고 전달을 위해 오디언스를 사용할 때 실제 전달 가능한 오디언스 크기는 게재 위치 및 기타 영향 요인에 따라 매칭된 사용자 크기만큼 높지 않을 수 있습니다.
 
+### "캔버스에 대한 오디언스가 존재하지 않습니다"라는 제목의 이메일을 받는 이유는 무엇인가요?
 
+동기화하려는 오디언스가 스트리밍 오디언스가 아닌 경우(예: 유사 오디언스 또는 사용자 파일 오디언스인 경우) 이 문제가 발생할 수 있습니다. Braze Audience Sync 캔버스 단계를 통해 새 오디언스를 생성해 보세요.

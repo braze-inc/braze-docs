@@ -1,7 +1,7 @@
 ---
-nav_title: "GET: Estado de sincronización de trabajos"
+nav_title: "GET: Estado de la sincronización de trabajos"
 article_title: "GET: Estado de sincronización de trabajos"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 1
 alias: /api/cdi/get_job_sync/
 layout: api_page
@@ -82,8 +82,8 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
         "sync_finish_time": (string) time the sync finished in ISO 8601,
         "last_timestamp_synced": (string) last UPDATED_AT timestamp processed by the sync in ISO 8601,
         "rows_synced": (integer) number of rows successfully synced to Braze,
-        "rows_failed_with_errors": (integer) number of rows failed because of errors,
-    },
+        "rows_failed_with_errors": (integer) number of rows failed because of errors
+    }
   ],
   "message": "success"
 }
@@ -100,7 +100,7 @@ Link: </cdi/integrations/00000000-0000-0000-0000-000000000000/job_sync_status?cu
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
+La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
 
 | Error | Solución de problemas |
 | --- | --- |
@@ -108,6 +108,6 @@ La siguiente tabla enumera los posibles errores devueltos y los pasos asociados 
 | `400 Invalid integration ID` | Compruebe que su `integration_id` es válido. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para conocer otros códigos de estado y mensajes de error asociados, consulte [Errores fatales y respuestas]({{site.baseurl}}/api/errors/#fatal-errors).
+Para obtener más códigos de estado y mensajes de error asociados, consulta [Respuestas&]({{site.baseurl}}/api/errors/#fatal-errors) de [errores fatales]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}

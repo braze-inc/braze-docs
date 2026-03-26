@@ -1,5 +1,5 @@
 ---
-nav_title: Guide de mise à jour iOS 14
+nav_title: Guide de mise à niveau iOS 14
 article_title: Guide de mise à jour SDK iOS 14
 page_order: 7
 platform: iOS

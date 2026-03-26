@@ -1,101 +1,107 @@
 ---
-nav_title: Caminhos do público
-article_title: Caminhos do público 
+nav_title: Jornadas do público
+article_title: Jornadas do público 
 alias: /audience_paths/
-page_order: 1
+page_order: 3
 page_type: reference
-description: "Este artigo de referência descreve como usar o Audience Paths no Canvas para filtrar e segmentar intuitivamente os usuários em grande escala com agrupamentos estratégicos de usuários baseados em prioridades."
+description: "Este artigo de referência descreve como usar os Caminhos do Público no seu Canva para filtrar e segmentar usuários de forma intuitiva em grande escala com agrupamentos de usuários baseados em prioridades estratégicas."
 tool: Canvas
 
 ---
 
-# Caminhos do público 
+# Jornadas do público 
 
-> Os Canvas Audience Paths permitem filtrar e segmentar intuitivamente os usuários em grande escala com agrupamentos estratégicos de usuários baseados em prioridades. 
+> Caminhos de {canva} {público} permitem que você filtre e segmente usuários de forma intuitiva em grande escala com agrupamentos de usuários estratégicos baseados em prioridades. 
 
-Esse componente do Canvas substitui a necessidade de criar etapas completas excessivas com base no público, permitindo que você combine o que poderiam ser oito componentes completos em um só. Isso ajuda a simplificar a segmentação de usuários e, ao mesmo tempo, a eliminar a desordem e a complexidade desnecessárias dos Canvases. 
+Este componente de canva substitui a necessidade de criar etapas completas baseadas em público excessivo, permitindo que você combine o que poderia ter sido oito componentes completos em um. Isso ajuda você a simplificar o direcionamento do usuário enquanto limpa seus canvas de desordem e complexidade desnecessárias. 
 
-## Como funciona
+## Como funciona?
 
-\![Um Audience Path com dois grupos: usuários engajados e todos os outros.]({% image_buster /assets/img/audience_path/audience_path.png %}){: style="float:right;max-width:45%;margin-left:15px;margin-top:15px;"}
+![Uma jornada do público com dois grupos: usuários engajados e todos os outros.]({% image_buster /assets/img/audience_path/audience_path.png %}){: style="float:right;max-width:45%;margin-left:15px;margin-top:15px;"}
 
-Os caminhos do público-alvo são semelhantes aos funis de classificação com critérios de classificação. Os usuários são avaliados para cada critério em ordem de prioridade e enviados para o caminho dos critérios de classificação mais alta que se qualificam. Isso reduz a ambiguidade de onde os usuários irão e quais mensagens eles receberão. Observe que as classificações não são [editáveis após o lançamento]({{site.baseurl}}/post-launch_edits/).
+Os caminhos do público são semelhantes a funis de classificação com critérios de classificação. Os usuários são avaliados para cada critério em ordem de prioridade e enviados pela jornada dos critérios de maior classificação para os quais se qualificam. Isso reduz a ambiguidade de onde os usuários irão e quais mensagens eles receberão. Nota que os rankings não são [editáveis após o lançamento]({{site.baseurl}}/post-launch_edits/).
 
-Com o Audience Paths, você pode:
+Com as jornadas do público, você pode:
 
-- Envie os usuários para diferentes caminhos do Canvas com base nos critérios do público.
-- Atribua prioridade a diferentes grupos de público, para que suas mensagens cheguem aos usuários corretos. 
-  - Anteriormente, se os usuários atendessem aos critérios de duas etapas completas em potencial, eles seriam atribuídos aleatoriamente. 
-- Direcione com precisão os usuários em grande escala.
-  - Crie até oito grupos de público-alvo (dois grupos padrão e seis grupos adicionais) por componente, mas talvez você queira conectar várias etapas de caminhos de público-alvo para classificar ainda mais seus usuários. 
+- Envie os usuários por diferentes caminhos de canva com base em critérios do público.
+- Atribuir prioridade a diferentes grupos de público, para que suas mensagens cheguem aos usuários corretos. 
+  - Anteriormente, se os usuários atendessem aos critérios de dois possíveis passos completos, eles seriam atribuídos aleatoriamente. 
+- Direcione usuários de forma precisa em grande escala.
+  - Crie até oito grupos de público (dois padrões e seis grupos adicionais) por componente, mas você pode querer conectar várias Etapas de Caminhos de Público para classificar ainda mais seus usuários. 
 
-### Permitir tempo para avaliações de usuários
+### Como os usuários são avaliados
 
-Canvas mostrando um atraso de 24 horas após uma etapa de Mensagem, seguido por um Caminho do Público.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Um canva mostrando uma postergação de 24 horas após uma etapa de Mensagem, seguida por uma jornada do público.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-Os usuários são avaliados assim que chegam à etapa Audience Path. Depois de serem avaliados, eles passarão imediatamente para a próxima etapa. Isso torna importante permitir que uma janela de tempo apropriada passe se o Caminho do público-alvo for determinado por uma ação do usuário.
+Os usuários são avaliados em relação a filtros e pertencimento a segmentos **no momento em que alcançam a etapa da jornada do público**—não quando entraram no canva. Após a avaliação, eles progridem imediatamente para o caminho correspondente. Quando um usuário é colocado em um grupo de público, ele permanece nesse grupo mesmo que seu perfil de usuário mude posteriormente.
 
-Por exemplo, se os usuários receberem a Mensagem A e a próxima etapa for um Caminho do público-alvo que avalia se eles interagiram com essa mensagem, todos os usuários avançarão para a etapa daqueles que não interagiram com essa mensagem. Isso ocorre porque os usuários avançaram imediatamente para a etapa do Caminho do público-alvo sem tempo para interagir com a mensagem. Em outras palavras, os usuários são avaliados quanto a uma interação com a mensagem quase imediatamente após o envio da mensagem.
+{% alert important %}
+As jornadas do público avaliam com base nos atributos atuais do usuário, filtros e pertencimento a segmentos no momento da avaliação. Elas não avaliam com base no evento específico que acionou a entrada no canva. Para direcionar usuários com base em uma ação que eles realizam (como um evento personalizado), use [jornadas de ação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) em vez disso.
+{% endalert %}
 
-Para que os usuários tenham tempo de interagir com uma mensagem enviada, é necessário haver um atraso entre a etapa da mensagem e o caminho do público-alvo. Por exemplo, um atraso de 24 horas daria aos usuários 24 horas após o envio da mensagem para interagir com a Mensagem A antes de ser avaliada.
+### Permitindo tempo para avaliações de usuários
 
-Observe que os usuários avançam para a próxima etapa com base na primeira ação que realizaram após entrar na etapa Audience Path na janela de avaliação. Isso significa que, se um usuário realizar um segundo evento personalizado, ele não trocará de grupo de público.
+Como a avaliação é imediata, é importante adicionar uma postergação antes da jornada do público se os critérios do caminho dependem de uma interação do usuário com uma etapa anterior.
 
-## Criação de um caminho de público-alvo
+Por exemplo, se os usuários recebem a Mensagem A e a próxima etapa é uma jornada do público que avalia se eles interagiram com essa mensagem, todos os usuários progredirão para a etapa para aqueles que não interagiram com essa mensagem. Isso ocorre porque os usuários progrediram imediatamente para a etapa da jornada do público sem tempo para interagir com a mensagem. Em outras palavras, os usuários são avaliados por uma interação com a mensagem quase imediatamente após o envio da mensagem.
 
-Para adicionar uma etapa do Audience Paths, faça o seguinte: 
+Para dar aos usuários tempo para interagir com uma mensagem enviada, adicione uma postergação entre a etapa de Mensagem e a jornada do público. Por exemplo, uma postergação de 24 horas dá aos usuários 24 horas após o envio da mensagem para interagir com a Mensagem A antes da avaliação.
 
-1. Adicione uma etapa ao seu Canvas. 
-2. Arraste e solte o componente da barra lateral ou selecione <i class="fas fa-plus-circle"></i> **Add** na parte inferior de uma etapa e selecione **Audience Paths**.
+## Criando uma jornada do público
 
-O componente Audience Paths padrão contém dois grupos de público-alvo padrão, **Group 1** e **Everybody Else**. O grupo **Everybody Else** inclui qualquer usuário que não se enquadre em um grupo de público-alvo definido. Esse grupo sempre será classificado em último lugar.
+Para adicionar uma etapa de Jornadas do público, faça o seguinte: 
 
-### Definição de grupos de público-alvo
+1. Adicione uma etapa ao seu canva. 
+2. Arraste e solte o componente da barra lateral, ou selecione <i class="fas fa-plus-circle"></i> **Adicionar** na parte inferior de uma etapa e selecione **jornadas do público**.
 
-A captura de tela a seguir mostra o layout de uma etapa expandida de Audience Paths. Aqui, você pode definir até oito grupos de público (um predefinido e sete personalizáveis). Para definir um grupo de público-alvo, selecione o nome do grupo no editor de Caminhos de público-alvo. Você pode renomear seu grupo de público-alvo, escolher os filtros e segmentos que se aplicam ao seu grupo e adicionar ou excluir grupos.
+O componente de Caminhos de Público padrão contém dois grupos de público padrão, **Grupo 1** e **Todos os Outros**. O grupo **Todos os Outros** inclui qualquer usuário que não se enquadre em um grupo de público definido. Este grupo sempre será o último na classificação.
 
-Por exemplo, se você quiser direcionar mensagens de integração para um grupo de usuários, poderá selecionar filtros de redirecionamento, como "Clicou no e-mail" e "Clicou na mensagem no aplicativo".
+### Definindo grupos de público
 
-\![Um caminho de público expandido com grupos para "Loves Asian Cuisine", "Loves Latin Cuisine", "Loves European Cuisine" e "Everyone Else".]({% image_buster /assets/img/audience_path/audience_path3.png %})
+A captura de tela a seguir mostra o layout de uma etapa de Caminhos do público expandida. Aqui, você pode definir até oito grupos de público (um predefinido e sete personalizáveis). Para definir um grupo de público, selecione o nome do grupo no editor de Caminhos do Público. Você pode renomear seu grupo de público, escolher os filtros e segmentos que se aplicam ao seu grupo e adicionar ou excluir grupos.
 
-Após a conclusão da etapa Caminhos do público-alvo, cada grupo de público-alvo terá uma ramificação separada. Você pode continuar usando os Caminhos do público-alvo para filtrar ainda mais seu público-alvo ou continuar sua jornada no Canvas com as etapas padrão do Canvas. 
+Por exemplo, se você quisesse direcionar mensagens de integração para um grupo de usuários, poderia selecionar filtros de redirecionamento, como "Clicou no e-mail" e "Clicou na mensagem no app".
 
-\![Dois caminhos de público com grupos diferentes com base no engajamento.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
+![Uma jornada do público expandida com grupos para "Ama Culinária Asiática”, “Ama Culinária Latina”, “Ama Culinária Europeia” e "Todos os Outros".]({% image_buster /assets/img/audience_path/audience_path3.png %})
 
-### Teste de grupos de público-alvo
+Depois que a etapa Jornada do público estiver concluída, cada grupo de público terá um ramo separado. Você pode continuar usando os Caminhos do Público para filtrar ainda mais seu público, ou continuar sua jornada no Canva com as etapas padrão do Canva. 
 
-Depois de adicionar segmentos e filtros ao seu público, você pode testar se os grupos de público estão configurados conforme o esperado, [procurando um usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar se ele corresponde aos critérios do público.
+![Duas jornadas do público com grupos diferentes com base no engajamento.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
 
-\![A seção "User Lookup" (Pesquisa de usuário).]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
+### Testando grupos de público
 
-## Uso de caminhos de público-alvo
+Depois de adicionar segmentos e filtros ao seu público, você pode testar se seus grupos de público estão configurados conforme o esperado [procurando um usuário]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar se eles correspondem aos critérios do público.
 
-O verdadeiro poder do Audience Paths está na capacidade de atribuir prioridade. Embora esse recurso não precise ser usado estrategicamente, alguns profissionais de marketing podem acabar empurrando determinados produtos para os usuários, como promoções ou lançamentos de edição limitada. 
+![A seção "Pesquisa de Usuário".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
-Ao atribuir uma alta prioridade a esses grupos, você pode direcionar usuários que se enquadram em filtros e segmentos específicos e, ao mesmo tempo, direcionar usuários que talvez não se encaixem nesses critérios específicos - tudo em uma única etapa do Canvas.
+## Uso de jornadas do público
 
-\![Um caminho de público-alvo com grupos para "Gosta de calçados de marca grande", "Gosta de marca grande" e "Todos os outros".]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+O verdadeiro poder dos Caminhos do público reside na capacidade de atribuir prioridade. Embora esse recurso não precise ser usado estrategicamente, alguns <b><i><u>}profissionais de marketing<{biu} podem se ver empurrando certos produtos para os usuários, como <b><i><u>}ofertas especiais<{biu} ou lançamentos de edição limitada. 
 
-Por exemplo, digamos que você queira enviar a um grupo de usuários anúncios de novos produtos. Você começaria classificando os filtros que se enquadram nesses produtos no topo do caminho do público-alvo. Se você estivesse criando uma campanha de marketing para a empresa "Big Brand" e uma nova marca de varejo tivesse acabado de ser lançada, você poderia selecionar filtros como "Gosta de sapatos Big Brand" ou "Gosta de bolsas Big Brand" e enviar mensagens de e-mail diferentes com base no grupo filtrado em que eles se enquadram. 
+Ao atribuir alta prioridade a esses grupos, você pode direcionar usuários que se enquadram em filtros e segmentos específicos, enquanto ainda direciona usuários que podem não se encaixar nesses critérios específicos—tudo em uma única etapa do canva.
 
-Quando os usuários entrarem nesse componente Audience Paths, eles serão avaliados primeiro se se enquadram no grupo de público-alvo mais bem classificado: O Grupo de Público 1 "Gosta de calçados de grandes marcas". Em caso afirmativo, eles continuarão para o próximo componente definido em seu Canvas. Se não "Gostar de calçados de grandes marcas", eles serão avaliados para o próximo grupo de público-alvo, o Grupo de público-alvo 2 "Gostar de bolsas de grandes marcas", e continuarão na próxima etapa se os critérios forem atendidos. Por fim, os usuários que não se enquadram nos grupos anteriores se enquadrariam no grupo "Todos os outros" e também continuariam na próxima etapa do Canvas que você definiu para esse caminho.
+![Uma Jornada do Público com grupos para “Gosta de Tênis de Grande Marca”, “Gosta de Grande Marca” e "Todo Mundo".]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
-Você também pode ver o desempenho dessa etapa usando [o Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/#performance-visualization).
+Por exemplo, digamos que você queria enviar a um grupo de usuários anúncios de novos produtos. Você começaria classificando os filtros que se enquadram nesses produtos no topo da jornada do público. Se você estivesse criando uma campanha de marketing para a empresa "Grande Marca" e uma nova marca de varejo tivesse acabado de ser lançada, você poderia selecionar filtros como "Gosta de Tênis de Grande Marca" ou "Gosta de Bolsas de Grande Marca", e enviar mensagens de e-mail diferentes com base no grupo filtrado em que eles se enquadram. 
 
-### Segmentação de caminhos de público-alvo com números aleatórios
+Quando os usuários entrarem neste componente de Jornadas do Público, eles serão avaliados primeiro se pertencem ao grupo de público mais bem classificado: Grupo de Público 1 "Gosta de Tênis de Grande Marca". Se sim, eles continuarão para o próximo componente definido no seu Canva. Se eles não "Gosta de Tênis de Grande Marca", eles serão avaliados para o próximo grupo de público, Grupo de Público 2 "Gosta de Bolsas de Grande Marca", e continuarão para a próxima etapa se os critérios forem atendidos. Por fim, os usuários que não se enquadram nos grupos anteriores cairão no grupo "Todo Mundo" e também continuarão para a próxima etapa do Canva que você definir para essa jornada.
 
-Se o seu Canvas usar um [limite de taxa]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) (como limitar o número total de usuários que receberão o Canvas), a Braze recomenda que você não use números aleatórios para segmentar seus Caminhos do público. 
+Você também pode ver a performance desta etapa usando [canva análise de dados]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/#performance-visualization).
 
-Um [número de bucket aleatório]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) é um atributo de usuário que pode ser usado para criar segmentos uniformemente distribuídos de usuários aleatórios. O Braze usa o número de bucket aleatório para agrupar usuários durante a fase de segmentação da entrada do Canvas, e cada grupo é processado separadamente. Dependendo de quais grupos terminam o processamento primeiro, alguns usuários podem ser limitados na entrada devido ao limite de taxa, o que pode causar uma distribuição desigual de usuários quando eles alcançam a etapa de Caminhos do público.
+### Segmentando caminhos do público com números de bucket aleatórios
 
-Nesse cenário, tente usar [os caminhos de experimentos]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/).
+Se o seu canva usar um [limite de frequência]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) (como limitar o total de usuários que receberão o canva), a Braze recomenda que você não use números de bucket aleatórios para segmentar seus caminhos de público. 
 
-### Uso do filtro de canal inteligente com caminhos de público-alvo
+Um [número de balde aleatório]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) é um atributo de usuário que pode ser usado para criar segmentos uniformemente distribuídos de usuários aleatórios. Braze usa o número do bucket aleatório para agrupar usuários durante a fase de segmentação da entrada do canva, e cada grupo é processado separadamente. Dependendo de quais grupos terminam o processamento primeiro, alguns usuários podem ser limitados na entrada devido ao limite de frequência, o que pode causar uma distribuição desigual de usuários quando eles alcançam a etapa de Caminhos do Público.
 
-Usando uma combinação de etapas do Audience Paths e filtros do Intelligent Channel, você pode personalizar a experiência de mensagens de acordo com as preferências e os comportamentos de cada usuário. Dessa forma, seus usuários receberão as mensagens mais relevantes por meio dos canais apropriados.
+Neste cenário, tente usar [Caminhos de Experimento]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) em vez disso.
 
-Por exemplo, em uma etapa de Caminhos do público, você pode criar três públicos: E-mail, Mobile Push e todos os outros. Para o público-alvo Email, adicione o filtro `Intelligent Channel is Email`. Para o público do Mobile Push, adicione o filtro `Intelligent Channel is Mobile Push`. Em seguida, você pode adicionar uma etapa de Mensagem para cada um dos caminhos de público-alvo para fornecer mensagens personalizadas e relevantes.
+### Uso do filtro de canal inteligente com jornadas do público
+
+Usando uma combinação de etapas de jornadas do público e filtros de canais inteligentes, é possível personalizar a experiência de envio de mensagens de acordo com as preferências e os comportamentos de cada usuário. Dessa forma, seus usuários receberão as mensagens mais relevantes por meio dos canais apropriados.
+
+Por exemplo, em uma etapa de jornadas do público, você pode criar três públicos: E-mail, push móvel e todos os outros. Para o público de e-mail, adicione o filtro `Intelligent Channel is Email`. Para o público do Mobile Push, adicione o filtro `Intelligent Channel is Mobile Push`. Em seguida, você pode adicionar uma etapa de Mensagem para cada uma das jornadas do público para fornecer mensagens personalizadas e relevantes.
 
 {% alert tip %}
-Confira nossos [modelos do Braze Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) para ver exemplos de como você pode personalizar esses modelos pré-criados para seu benefício.
+Confira nossos [modelos do Braze Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) para ver exemplos de como você pode personalizar esses modelos pré-criados a seu favor.
 {% endalert %}

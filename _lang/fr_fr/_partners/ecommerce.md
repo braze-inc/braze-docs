@@ -1,10 +1,10 @@
 ---
 nav_title: E-commerce
-article_title: Partenaires de commerce en ligne
+article_title: Partenaires e-commerce
 page_order: 10
 
 page_type: landing
-description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d’intégrer leur plateforme de commerce en ligne."
+description: "Cette page d'accueil répertorie les partenaires de Braze (Alloys) qui vous permettent de vous intégrer à leur plateforme e-commerce."
 
 layout: partner_page
 search_tag: Partner
@@ -16,9 +16,9 @@ valid_partner_list:
   url: /docs/partners/lexer/
 - name: Peak
   url: /docs/partners/peak/
-- name: Personnalisation
+- name: Personalize
   url: /docs/partners/personalize/
-- name: Mandarine
+- name: Tangerine
   url: /docs/partners/tangerine/
 - name: Wunderkind
   url: /docs/partners/wunderkind/
@@ -44,12 +44,22 @@ valid_partner_list:
   url: /docs/partners/revenuecat
 - name: Transcend
   url: /docs/partners/transcend/
-- name: Constructeur
+- name: Constructor
   url: /docs/partners/constructor/
 - name: Stylitics
   url: /docs/partners/stylitics/
 - name: Shopify
   url: /docs/partners/shopify/
-- name: Rayure
+- name: Stripe
   url: /docs/partners/stripe/
+- name: Okendo
+  url: /docs/partners/okendo/
+- name: Swym
+  url: /docs/partners/swym/
+- name: Algolia
+  url: /docs/partners/algolia/
+- name: Tapcart
+  url: /docs/partners/tapcart/
+- name: Poq
+  url: /docs/partners/poq/
 ---

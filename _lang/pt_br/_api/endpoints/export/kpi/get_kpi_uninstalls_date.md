@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Exportar KPIs para desinstalações diárias de apps por data"
+nav_title: "OBTER: Exporte KPIs para desinstalações diárias de apps por data"
 article_title: "OBTER: Exportar KPIs para desinstalações diárias de apps por data"
 search_tag: Endpoint
 page_order: 4
@@ -46,8 +46,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/uninstalls/d
 ## Resposta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
@@ -60,8 +58,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-{% alert tip %}
-Para obter ajuda com exportações de CSV e API, acesse [Resolução de problemas de exportação]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
-{% endalert %}
+{% multi_lang_include alerts/tip_alerts.md alert='Export troubleshooting' %}
 
 {% endapi %}

@@ -1,6 +1,6 @@
 ---
 nav_title: Completing the integration
-article_title: Completing the iOS SDK Integration
+article_title: Complete the iOS SDK Integration
 platform: iOS
 description: "This reference article shows how to finish integrating the Braze SDK after installing it via one of the integration options."
 page_order: 2
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Completing the integration
+# Complete the integration
 
 Before following these steps, make sure you have integrated the SDK using either [Carthage]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/carthage_integration/), [CocoaPods]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/cocoapods/), [Swift Package Manager]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/swift_package_manager/), or a [manual]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/) integration.
 

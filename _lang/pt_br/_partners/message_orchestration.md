@@ -4,7 +4,7 @@ article_title: Parceiros de orquestração de mensagens
 page_order: 2
 
 page_type: landing
-description: "Essa landing page lista os parceiros Braze (Alloys) que permitem orquestrar suas mensagens com redirecionamento, modelos de e-mail, promoções, atribuição e muito mais."
+description: "Essa landing page lista os parceiros da Braze (Alloys) que permitem orquestrar suas mensagens com redirecionamento, modelos de e-mail, promoções, atribuição e muito mais."
 layout: partner_page
 search_tag: Partner
 
@@ -23,6 +23,8 @@ valid_partner_list:
   url: /docs/partners/branch_for_deeplinking/
 - name: Kochava
   url: /docs/partners/kochava/
+- name: Linkrunner
+  url: /docs/partners/linkrunner/
 - name: Singular
   url: /docs/partners/singular/
 - name: Contentful
@@ -53,9 +55,11 @@ valid_partner_list:
   url: /docs/partners/blayer/
 - name: Dyspatch
   url: /docs/partners/dyspatch/
-- name: E-mail Amor
+- name: Denada
+  url: /docs/partners/denada/
+- name: Email Love
   url: /docs/partners/email_love/
-- name: Estúdio IAM
+- name: IAM Studio
   url: /docs/partners/iam_studio/
 - name: Knak
   url: /docs/partners/knak/
@@ -79,7 +83,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/iterate/
 - name: EduMe
   url: /docs/partners/message_orchestration/learning/edume/
-- name: Optilyz
+- name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
 - name: Digioh
   url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
@@ -88,7 +92,7 @@ valid_partner_list:
 - name: LINE
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 - name: Shopify
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
+  url: /docs/partners/ecommerce/shopify
 - name: Yotpo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
 - name: Knak
@@ -129,4 +133,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
 - name: Tapcart
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
+- name: Jasper
+  url: /docs/partners/jasper/
 ---

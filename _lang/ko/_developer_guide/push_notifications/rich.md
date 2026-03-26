@@ -1,7 +1,7 @@
 ---
 page_order: 3
-nav_title: 리치 알림
-article_title: Braze SDK를 위한 리치 푸시 알림 설정하기
+nav_title: 풍부한 알림
+article_title: Braze SDK를 위한 리치 푸시 알림 설정
 channel:
   - push notifications
 ---

@@ -1,6 +1,6 @@
 ---
 nav_title: トラブルシューティング
-article_title: Braze Accessのトラブルシューティング
+article_title: Brazeアクセスのトラブルシューティング
 page_order: 8
 page_type: reference
 description: "この記事では、Brazeにアクセスしようとしたときに発生する可能性のある問題のトラブルシューティングについて説明する。"

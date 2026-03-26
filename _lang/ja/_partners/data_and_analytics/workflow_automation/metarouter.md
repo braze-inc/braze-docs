@@ -51,11 +51,11 @@ Brazeとの統合用にMetaRouterをセットアップする：
 
 Enterprise MetaRouter で [**Integrations**] > [**New Integration**] > [**Braze**] を選択し、統合に名前を付けます。次に、インスタンスの URL と API キーを入力し、[**Apply Changes**] を選択します。
 
-![MetaRouter で Braze を統合として追加する。]({% image_buster /assets/img/metarouter/img1.png %}){: style="max-width:50%;"}
+![MetaRouter での統合としてのBrazeの追加]({% image_buster /assets/img/metarouter/img1.png %}){: style="max-width:50%;"}
 
-### ステップ2:イベントマッピングを追加する
+### ステップ 2:イベントマッピングを追加する
 
 各ID出力にイベントマッピングを追加し、Brazeに送信したいイベントを設定する。終了したら、[**Save as New Revision**] を選択します。
 
-![ID 出力ごとにイベントマッピングを追加する。]({% image_buster /assets/img/metarouter/img2.png %})
+![ID アウトプットごとにイベントm アプリを追加します。]({% image_buster /assets/img/metarouter/img2.png %})
 

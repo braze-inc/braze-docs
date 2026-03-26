@@ -1,5 +1,5 @@
 ---
-nav_title: "Entity Relationships"
+nav_title: "Entity relationships"
 article_title: Entity Relationships for Snowflake and Braze
 page_order: 10
 search_tag: Partner
@@ -8,6 +8,10 @@ search_tag: Partner
 # Entity relationships for Snowflake and Braze
 
 > These are the list of entity relationships between Snowflake and Braze for each messaging channel.
+
+{% alert important %}
+The entity relationship diagrams highlight shared fields and relationships across tables and are not full table schemas. For a complete list of fields, refer to the [individual table schemas]({{site.baseurl}}/assets/download_file/data-sharing-raw-table-schemas.txt).
+{% endalert %}
 
 {% sdktabs %}
 {% sdktab Content Cards %}
@@ -24,10 +28,6 @@ search_tag: Partner
 
 {% sdktab In-App Messages %}
 {% multi_lang_include snowflake_users_messages/inappmessage.md %}
-{% endsdktab %}
-
-{% sdktab News Feed %}
-{% multi_lang_include snowflake_users_messages/newsfeedcard.md %}
 {% endsdktab %}
 
 {% sdktab Push Notifications %}

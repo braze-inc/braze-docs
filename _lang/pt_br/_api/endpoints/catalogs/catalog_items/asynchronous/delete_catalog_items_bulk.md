@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: Excluir vários itens do catálogo"
+nav_title: "DELETE: exclui vários itens do catálogo"
 article_title: "DELETE: Excluir vários itens do catálogo"
 search_tag: Endpoint
 page_order: 1
@@ -86,7 +86,7 @@ O código de status `400` poderia retornar o seguinte corpo de resposta. Consult
       "parameter_values": []
     }
   ],
-  "message": "Invalid Request",
+  "message": "Invalid Request"
 }
 ```
 

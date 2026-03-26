@@ -56,7 +56,7 @@ The behavior documented below is true for all Braze features that **are not** po
 The endpoint does not guarantee the sequence of `merge_updates` objects being updated.
 {% endalert %}
 
-This endpoint will merge the following fields if they're not found on the target user.
+This endpoint merges the following fields if they're not found on the target user.
 
 - First name
 - Last name
@@ -96,11 +96,11 @@ When merging users, using the `/users/merge` endpoint works the same way as usin
 
 #### Custom event date and purchase event date behavior
 
-These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
+These merged fields update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 
 ### Merging users by email or phone number
 
-If an `email` or `phone` is specified as an identifier, you must include an additional `prioritization` value in the identifier. The `prioritization` should be an ordered array specifying which user to merge if multiple users are found. This means if more than one user matches from a prioritization, then merging will not occur.
+If an `email` or `phone` is specified as an identifier, you must include an additional `prioritization` value in the identifier. The `prioritization` should be an ordered array specifying which user to merge if multiple users are found. This means if more than one user matches from a prioritization, then merging does not occur.
 
 The allowed values for the array are:
 
@@ -120,7 +120,7 @@ Only one of the following options may exist in the prioritization array at a tim
 
 This is a basic request body to show the pattern of the request.
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -167,7 +167,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 The following request would merge the most recently updated unidentified user with email address `john.smith@braze.com` into the user with an external ID `john`. In this example, using `most_recently_updated` filters the query to one unidentified user. So, if there were two unidentified users with this email address, only one would get merged into the user who has an external ID `john`.
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -193,7 +193,7 @@ This next example merges the most recently updated unidentified user with email 
 
 Using `most_recently_updated` filters the queries to one user (one unidentified user for `identifier_to_merge`, and one identified user for the `identifier_to_keep`).
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \
@@ -218,7 +218,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 If there are two unidentified users with the mail address `john.smith@braze.com`, this example request doesn't merge any users because there are two unidentified users with that email address. This request only works if there is only one unidentified user with the email address `john.smith@braze.com`.
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY' \

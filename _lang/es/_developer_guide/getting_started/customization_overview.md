@@ -32,13 +32,13 @@ table td {
 </style>
 
 {% tabs %}
-{% tab Gatear %}
+{% tab Crawl %}
 
-![Ejemplo de aplicación financiera que muestra tarjetas de contenido con imagen subtitulada y sólo imagen]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Ejemplo de aplicación financiera que muestra tarjetas de contenido solo de imagen y tarjetas de contenido subtituladas.]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 El enfoque Crawl pone el poder de la personalización directamente en manos de los especialistas en marketing. Aunque para integrar los canales de mensajería Braze en tu aplicación o sitio web es necesario un ligero trabajo de desarrollo previo, este enfoque te permite ponerte en marcha antes. 
 
-Los especialistas en marketing determinan el contenido, la audiencia y el momento de los mensajes a través del panel. Sin embargo, las opciones de estilo son limitadas. Este enfoque es el más adecuado para equipos con recursos limitados de desarrolladores o que desean compartir rápidamente contenidos sencillos. 
+Los especialistas en marketing determinan el contenido, la audiencia y el momento de envío de los mensajes a través del panel. Sin embargo, las opciones de estilo son limitadas. Este enfoque es el más adecuado para equipos con recursos limitados de desarrolladores o que desean compartir rápidamente contenidos sencillos. 
 
 <table>
 <thead>
@@ -76,9 +76,9 @@ Los especialistas en marketing determinan el contenido, la audiencia y el moment
 </table>
 
 {% endtab %}
-{% tab Caminar %}
+{% tab Walk %}
 
-![Ejemplo de aplicación financiera que muestra tarjetas de contenido con personalización]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Ejemplo de aplicación financiera que muestra tarjetas de contenido personalizadas.]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 Un enfoque híbrido de la implementación, el enfoque Walk implica que tanto el equipo de marketing como el de desarrolladores colaboren para hacer coincidir la marca de tu aplicación o sitio web. 
 
@@ -122,9 +122,9 @@ Los especialistas en marketing siguen manteniendo el control de la audiencia, el
 </table>
 
 {% endtab %}
-{% tab Correr %}
+{% tab Run %}
 
-![Ejemplo de aplicación financiera que muestra tarjetas de contenido personalizadas con captura de correo electrónico]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Ejemplo de aplicación financiera que muestra tarjetas de contenido personalizadas con captura de correo electrónico.]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 Con el enfoque de "correr", los desarrolladores toman la iniciativa con pleno control de la experiencia del usuario. El código personalizado dicta qué aspecto tendrán los mensajes, cómo se comportan y cómo interactúan con otros canales de mensajería (por ejemplo, desencadenar una tarjeta de contenido basada en una notificación push).
 

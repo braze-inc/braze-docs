@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# トラブルシューティング {#push-troubleshooting}
+# {#push-troubleshooting} の トラブルシューティング
 
 ## Braze/APNs のワークフローについて
 
@@ -53,7 +53,7 @@ Xcode 14 では、iOS シミュレーター上でリモートプッシュ通知�
 
 Braze は、**メッセージアクティビティログ**内のプッシュ通知エラーのログを提供します。このエラーログは、キャンペーンが期待どおりに機能していない理由を特定するのに非常に役立つさまざまな警告を提供します。エラーメッセージをクリックすると、特定のインシデントのトラブルシューティングに役立つ関連ドキュメントにリダイレクトされます。
 
-![エラーが発生した時刻、アプリ名、チャンネル、エラータイプ、エラーメッセージを表示するプッシュエラーログ。]({% image_buster /assets/img_archive/message_activity_log.png %})
+![エラーログをプッシュして、エラーが発生した時間、アプリ名、チャネル、エラータイプ、およびエラーメッセージを表示します。]({% image_buster /assets/img_archive/message_activity_log.png %})
 
 ここでよく見かけるエラーとしては、[[「プッシュトークンへの登録されていない送信の受信」]](#received-unregistered-sending) など、ユーザー固有の通知があります。
 
@@ -116,7 +116,7 @@ Braze は、**メッセージアクティビティログ**内のプッシュ通�
 
 以下は、プッシュ登録に問題があるか、プッシュ後にユーザーのトークンが APNs によって無効として Braze に返されたことを示します。
 
-![ユーザーの連絡先設定を表示するユーザープロファイル。ここでは、どのアプリがプッシュ通知に登録されているかを確認できます。]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
+![ユーザの連絡先設定を表示するユーザプロファイル。ここでは、どのアプリがプッシュ通知に登録されているかを確認できます。]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
 
 ## プッシュメッセージが送信されない
 

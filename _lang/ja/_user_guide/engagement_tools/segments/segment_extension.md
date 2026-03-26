@@ -39,7 +39,7 @@ SQL を使用しない場合に最適です。
 - **増分更新:**過去2日間のデータを自動的に更新するか、必要に応じて手動で更新する Snowflake SQL セグメントを作成します。精度とコスト効率のバランスをとるのに最適です。
 - **完全更新:**Snowflakeデータを含むSQL Segment、または手動リフレッシュ時にオーディエンス全体を再計算する任意の[CDI 接続ソース]({{site.baseurl}}/cdi_segment_extensions/) を記述します。オーディエンスに関する完全な最新のビューが必要な場合に最適です。
 
-![異なるセグメント拡張作成経験を持つテーブル。]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%"}
+![選択するセグメント拡張作成の経験が異なるテーブル。]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%"}
 
 SQL を使用するエクスペリエンスを選択する場合は、[SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)を参照してください。**簡易拡張**を選択した場合は、ステップ 2 に進みます。
 
@@ -52,19 +52,19 @@ SQL を使用するエクスペリエンスを選択する場合は、[SQL Segme
 - CDIセグメント 
     - クレジットは自分のデータウェアハウス内で消費されます
 
-### ステップ 2: セグメントエクステンションに名前を付ける
+### ステップ 2:セグメントエクステンションに名前を付ける
 
 フィルタリングするユーザーのタイプを記述して、セグメントエクステンションに名前を付けます。これにより、このエクステンションをフィルターとしてセグメントに適用するときに、このエクステンションを簡単かつ正確に検出できます。
 
-![Segment Extension named "Online Shoppers Extension - 90 Days".]({% image_buster /assets/img/segment/segment_extension2.png %})
+!["Online Shoppers Extension - 90 Days"という名前のセグメント拡張。]({% image_buster /assets/img/segment/segment_extension2.png %})
 
-### ステップ 3: 条件を選択する
+### ステップ 3:条件を選択する
 
 ターゲティングの条件として、購入、メッセージエンゲージメント、カスタムイベントのいずれかを選択します。希望のイベントタイプ条件を選択したら、ユーザーリストでターゲットにする購入アイテム、メッセージインタラクション、または特定のカスタムイベントを選択します。次に、ユーザーがイベントを完了する必要がある回数 (より大きい、より小さい、または等しい) と期間を選択します。特にセグメントエクステンションの場合は、過去730日間 (2年間) までさかのぼることができます。
 
 730日を超えるイベントデータに基づくセグメンテーションは、**セグメント**にある他のフィルターを使用して実行できます。期間を選択するときは、相対的な日付範囲 (過去 X 日間)、開始日、終了日、または正確な日付範囲 (日付 A ～ B) を指定できます。
 
-![2025年3月1日から2025年3月31日までの期間に2回以上カスタムイベントを行ったユーザーの区分基準。]({% image_buster /assets/img/segment/segment_extension1.png %})
+![2025年3月1日から2025年3月31日までの期間に2回以上カスタムイベントを行ったユーザーの区分基準]({% image_buster /assets/img/segment/segment_extension1.png %})
 
 #### イベントプロパティのセグメンテーション
 
@@ -76,13 +76,13 @@ SQL を使用するエクスペリエンスを選択する場合は、[SQL Segme
 
 ![数値プロパティに基づくセグメンテーション。]({% image_buster /assets/img/segment/property2.png %})
 
-![ブール・プロパティに基づくセグメンテーション。]({% image_buster /assets/img/segment/property3.png %})
+![ブール値プロパティに基づくセグメンテーション。]({% image_buster /assets/img/segment/property3.png %})
 
-\![日時オブジェクトに基づくセグメンテーション。]({% image_buster /assets/img/segment/property4.png %})
+![日時オブジェクトに基づくセグメント化。]({% image_buster /assets/img/segment/property4.png %})
 
 [階層化イベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/)に基づくセグメンテーションもサポートしています。
 
-![ネストされたイベントプロパティに基づくセグメンテーション。]({% image_buster /assets/img/segment/nested_segment_extensions.png %})
+![ネストされたイベントプロパティに基づいてセグメント化します。]({% image_buster /assets/img/segment/nested_segment_extensions.png %})
 
 セグメントエクステンションはイベントプロパティの長期保存に依存しており、タイムスタンプ付きのプロパティ保存制限はありません。過去2年間に追跡されたイベントプロパティを振り返ることができます。セグメントエクステンション内でイベントプロパティを使用しても、データポイント使用量には影響しません。
 
@@ -100,23 +100,23 @@ SQL を使用するエクスペリエンスを選択する場合は、[SQL Segme
 
 Segment Extension の処理中は、Segment Extension の名前の横に小さなアニメーションが表示され、Segment Extension リストの**Last Processed** 列に"Processing" という単語が表示されます。Segment Extensionの処理中は編集できません。
 
-!["Segment Extensions"2つのアクティブな拡張子を持つページ。]({% image_buster /assets/img/segment/segment_extension5.png %})
+![" Segment Extensions" 2 つのアクティブな拡張子を持つページ。]({% image_buster /assets/img/segment/segment_extension5.png %})
 
-Segment拡張が処理中の場合、Brazeは、処理がオーディエンス セグメンテーションのために開始される以前からデフォルト Segmentのバージョン履歴を引き続き使用します。処理は、保存または更新が行われるたびに実行され、ユーザープロファイル s-in の照会と更新が含まれます。つまり、デフォルト Segmentのメンバーシップは瞬時に更新されません。つまり、更新処理が始まる前にユーザーのアクションが実行されない場合には、特定の更新が完了した時点でそのユーザーがセグメントエクステンションに含まれることは保証できません。逆に、リフレッシュ前にSegmentエクステンションに入っていて基準を満たさなくなったユーザーは、リフレッシュ処理が完了し、更新sがアプリ嘘になるまで、デフルトSegmentにマッチし続けます。
+Segment拡張が処理中の場合、Brazeは、処理がオーディエンス セグメンテーションのために開始される以前からデフォルト Segmentのバージョン履歴を引き続き使用します。処理は、保存または更新が行われるたびに実行され、ユーザープロファイル s-in の照会と更新が含まれます。つまり、デフォルト Segmentのメンバーシップは瞬時に更新されません。つまり、更新処理が始まる前にユーザーのアクションが実行されない場合には、特定の更新が完了した時点でそのユーザーがセグメントエクステンションに含まれることは保証できません。逆に、基準を満たさなくなったリフレッシュ以前にSegmentエクステンションに入っていたユーザーは、リフレッシュ処理が完了し、更新sがアプリ嘘になるまで、デフォルト Segmentに合致し続けます。
 
-### ステップ6: エクステンションをセグメントで使用する
+### ステップ 6: エクステンションをセグメントで使用する
 
 Segmentエクステンションを作成した後は、フィルターとして使用してSegmentを作成したり、キャンペーンまたはキャンバスのオーディエンスを定義したりできます。まず、[**ユーザー属性**] セクションのフィルターリストから [**Braze セグメントエクステンション**] を選択します。
 
-![" フィルター s" フィルター ドロップダウンが" Braze Segment Extensions" を示しているセクション。]({% image_buster /assets/img/segment/segment_extension7.png %})
+![" フィルター s" フィルター ドロップダウンに" Braze Segment Extensions" が表示されます。]({% image_buster /assets/img/segment/segment_extension7.png %})
 
 Braze Segment拡張フィルター一覧から、このSegmentに含めるか除外するSegment拡張を選択します。
 
-![A & quot; Braze Segment Extensions" Segment & quot を含むフィルター; 過去56 日間で1 メールクリック& quot;。]({% image_buster /assets/img/segment/segment_extension6.png %})
+![A & quot; Braze Segment Extensions" Segment &quot を含むフィルター; 過去56 日間で1 メールクリック"。]({% image_buster /assets/img/segment/segment_extension6.png %})
 
 Segment Extension 条件を表示するには、**View Extension Details** を選択して、詳細を新しいウィンドウに表示します。
 
-! [&quot の拡張子;直近56 日間で1 メールクリック"。]({% image_buster /assets/img/segment/segment_extension8.png %}){: style="max-width:70%;"}
+![&quot の拡張子。過去56 日間で1 メールクリック"。]({% image_buster /assets/img/segment/segment_extension8.png %}){: style="max-width:70%;"}
 
 これで、[セグメントの作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)を通常どおり進めることができます。
 

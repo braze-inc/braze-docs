@@ -1,14 +1,14 @@
 ---
 page_order: 2
-nav_title: Incrustar GIFs
-article_title: Incrustar GIFs en mensajes dentro de la aplicación para el SDK de Braze
+nav_title: Incrustar GIF
+article_title: Incrustar GIF en mensajes dentro de la aplicación para el SDK de Braze
 channel:
   - push notifications
 ---
 
-# Incrustar GIFs en mensajes dentro de la aplicación
+# Incrustar GIF en mensajes dentro de la aplicación
 
-> Aprende a incrustar GIFs en mensajes dentro de la aplicación para el SDK de Braze.
+> Aprende a incrustar GIF en mensajes dentro de la aplicación para el SDK de Braze.
 
 {% sdktabs %}
 {% sdktab android %}
@@ -19,4 +19,3 @@ channel:
 {% multi_lang_include developer_guide/swift/gifs.md%}
 {% endsdktab %}
 {% endsdktabs %}
-

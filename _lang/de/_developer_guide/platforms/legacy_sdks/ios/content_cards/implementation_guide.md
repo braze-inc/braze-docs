@@ -14,7 +14,7 @@ noindex: true
 
 <br>
 {% alert important %}
-Suchen Sie nach dem grundlegenden Leitfaden zur Integration von Content Card Entwicklern? Sie finden es [hier]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/content_cards/integration/).
+Suchen Sie nach dem grundlegenden Leitfaden zur Integration von Content Card Entwicklern? Bitte finden Sie es. [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/content_cards/integration/).
 {% endalert %}
 
 # Implementierungsleitfaden für Content-Cards
@@ -122,7 +122,7 @@ Ein `ContentCardData`-Objekt, das die `ABKContentCard`-Daten zusammen mit einem 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Benutzerdefinierte Objekte %}
+{% tab Custom Objects %}
 {% subtabs global %}
 {% subtab Swift %}
 **Benutzerdefinierter Objekt-Initialisierer**<br>
@@ -224,7 +224,7 @@ typedef NS_ENUM(NSInteger, ContentCardClassType) {
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Umgang mit Content-Cards %}
+{% tab Handling Content Cards %}
 {% subtabs global %}
 {% subtab Swift %}
 **Anfordern von Inhaltskarten**<br>
@@ -297,7 +297,7 @@ Der `class_type` wird als Filter übergeben, um nur Content-Cards zurückzugeben
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Arbeiten mit Nutzlastdaten %}
+{% tab Working with Payload Data %}
 {% subtabs global %}
 {% subtab Swift %}
 **Arbeiten mit Nutzlastdaten**<br>
@@ -444,7 +444,7 @@ Das Beispiel auf der rechten Seite zeigt eine `UICollectionView` mit einer hybri
 
 Diese Content-Card wird über eine API-getriggerte Kampagne mit API-getriggerten Schlüssel-Wert-Paaren zugestellt. Dies ist ideal für Kampagnen, bei denen die Werte der Karte von externen Faktoren abhängen, um zu bestimmen, welche Inhalte dem Nutzer angezeigt werden sollen. Beachten Sie, dass `class_type` zum Zeitpunkt der Einrichtung bekannt sein sollte.
 
-![Die Schlüssel-Wert-Paare für den Anwendungsfall mit Content-Cards. In diesem Beispiel werden verschiedene Aspekte der Karte wie "tile_id", "tile_deeplink" und "tile_title" mit Liquid festgelegt.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
+![Die Schlüssel-Wert-Paare für den Anwendungsfall mit Content-Cards. In diesem Beispiel werden verschiedene Aspekte der"tile_title" Karte, wie z. B"tile_id","tile_deeplink",.   und  , mit Liquid festgelegt.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 
 ##### Sind Sie bereit für die Protokollierung von Analysen?
 Im [folgenden Abschnitt](#logging-impressions-clicks-and-dismissals) wird näher beschrieben, wie der Datenfluss aussehen sollte.
@@ -460,7 +460,7 @@ Content-Cards können in einem Messaging-Center-Format verwendet werden, bei dem
 Für die folgenden Nachrichtentypen muss der `class_type` des Schlüssel-Wert-Paars zu Ihrer Dashboard-Konfiguration hinzugefügt werden. Die hier zugewiesenen Werte sind willkürlich, sollten aber zwischen den Klassenarten unterscheidbar sein. Bei diesen Schlüssel-Wert-Paaren handelt es sich um die Bezeichner, anhand derer die Anwendung entscheidet, wohin der Nutzer eine Nachricht im Posteingang klickt.
 
 {% tabs local %}
-{% tab Beliebig angepasste Nachricht – ganze Seite %}
+{% tab Arbitrary custom view message - full page %}
 
 Die Schlüssel-Wert-Paare für diesen Anwendungsfall umfassen:
 
@@ -470,7 +470,7 @@ Die Schlüssel-Wert-Paare für diesen Anwendungsfall umfassen:
 ![]({% image_buster /assets/img/cc_implementation/full_page.png %}){: style="max-width:60%;"}
 
 {% endtab %}
-{% tab Webview Nachricht – HTML %}
+{% tab Webview message - HTML %}
 
 Die Schlüssel-Wert-Paare für diesen Anwendungsfall umfassen:
 
@@ -529,7 +529,7 @@ Wenn eine Nachricht angeklickt wird, bestimmt `ContentCardClassType`, wie der n�
 ##### Sind Sie bereit für die Protokollierung von Analysen?
 Im [folgenden Abschnitt](#logging-impressions-clicks-and-dismissals) wird näher beschrieben, wie der Datenfluss aussehen sollte.
 
-![Unten links im Bildschirm erscheint eine interaktive Content-Card mit einer 50-Prozent-Rabattaktion. Nachdem Sie darauf geklickt haben, wird eine Aktion auf den Warenkorb angewendet.]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
+![Unten links im Bildschirm erscheint eine interaktive Content-Card mit einer 50-Prozent-Rabattaktion. Nach dem Klick wird eine Aktion auf den Warenkorb angewendet.]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
 
 ### Interaktive Content-Cards
 <br>
@@ -619,7 +619,7 @@ Für eine Steuerelementvariante Content Card sollte dennoch ein benutzerdefinier
 
 ## Hilfsdateien
 
-{% details ContentCardKey Hilfedatei %}
+{% details ContentCardKey helper file %}
 {% tabs %}
 {% tab Swift %}
 ```swift

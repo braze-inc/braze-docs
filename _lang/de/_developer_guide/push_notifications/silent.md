@@ -1,7 +1,7 @@
 ---
 page_order: 2
 nav_title: Stille Benachrichtigungen
-article_title: Einrichten von stillen Push-Benachrichtigungen für das Braze SDK
+article_title: Richten Sie stille Push-Benachrichtigungen für das Braze SDK ein.
 channel:
   - push notifications
 ---

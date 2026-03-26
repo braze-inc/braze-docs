@@ -1,5 +1,5 @@
 ---
-nav_title: "Push Enablement und Abo"
+nav_title: "Push-Enablement und Abo"
 article_title: Push-Aktivierung und Abonnement
 page_order: 3
 page_type: reference
@@ -13,74 +13,7 @@ channel:
 
 > Dieser Artikel erläutert Push-Aktivierung und Push-Abostatus in Braze sowie grundlegende Unterschiede zwischen iOS, Android und Web.
 
-## Push-Abostatus {#push-sub-states}
-
-Ein "Push-Abonnement-Status" in Braze identifiziert die globale Präferenz eines **Benutzers** für seinen Wunsch, Push-Benachrichtigungen zu erhalten. Da der Abostatus nutzerabhängig ist, ist er nicht auf eine bestimmte App begrenzt. Die Abo-Status werden zu hilfreichen Flaggen, wenn Sie entscheiden, welche Nutzer:innen Sie für Push-Benachrichtigungen ansprechen wollen.
-
-{% alert note %}
-Der Status des Push-Abonnements eines Benutzers gilt für sein gesamtes Benutzerprofil, das alle Geräte des Benutzers umfasst.
-{% endalert %}
-
-Es gibt drei Statusoptionen für Push-Abos: `Subscribed`, `Opted-In`, und `Unsubscribed`.
-
-Damit Ihr Benutzer Ihre Nachrichten über Push empfangen kann, muss sein Push-Abonnementstatus entweder `Subscribed` oder `Opted-In` sein und er muss [Push aktiviert haben](#foreground-push-enabled). Sie können diese Einstellung bei Bedarf beim Verfassen einer Nachricht außer Kraft setzen.
-
-|Einwilligungsstatus|Beschreibung|
-|---|---|
-|`Subscribed`| Standard-Push-Abonnementstatus, wenn ein Benutzerprofil in Braze erstellt wird. |
-|`Opted-In`| Ein Benutzer hat sich ausdrücklich für den Erhalt von Push-Benachrichtigungen entschieden. Braze ändert den nutzerspezifischen Opt-in-Status automatisch auf `Opted-In`, wenn eine Opt-in-Anfrage auf Betriebssystemebene angenommen wird.<br><br>Dies gilt nicht für Nutzer:innen von Android 12 oder darunter.|
-|`Unsubscribed`| Ein Nutzer hat sich über Ihre Anwendung oder andere von Ihrer Marke angebotene Methoden explizit von Push abgemeldet. Standardmäßig stellen die Push Kampagnen von Braze nur Nutzer:innen zusammen, die `Subscribed` oder `Opted-in` für Push sind.|
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert important %}
-Braze ändert den Status des Push-Abonnements eines Benutzers nicht automatisch in `Unsubscribed`. Wenn der nutzerspezifische Push-Abostatus `Unsubscribed` lautet, wird der Filter `Foreground Push Enabled` in der Segmentierung auf `false` gestellt.
-{% endalert %}
-
-### Push-Abostatus ändern {#update-push-subscription-state}
-
-Es gibt drei Möglichkeiten, den Status des Push-Abos eines Nutzers:innen zu aktualisieren:
-
-#### Automatisches Opt-in (Standard)
-
-Braze setzt den Push-Abonnement-Status eines Benutzers standardmäßig auf `Opted-In`, wenn er zum ersten Mal Push-Benachrichtigungen für Ihre App autorisiert. Braze tut dies auch, wenn ein Nutzer:innen die Push-Berechtigungen in seinen Systemeinstellungen wieder aktiviert, nachdem er sie zuvor deaktiviert hatte.
-
-{% tabs local %}
-{% tab android %}
-Um dieses Standardverhalten zu deaktivieren, fügen Sie die folgende Eigenschaft in die Datei `braze.xml` Ihres Android Studio-Projekts ein:
-
-```xml
-<bool name="com_braze_optin_when_push_authorized">false</bool>
-```
-{% endtab %}
-
-{% tab swift %}
-Ab [Braze Swift SDK Version 7.5.0](https://github.com/braze-inc/braze-swift-sdk/releases/tag/7.5.0) können Sie dieses Verhalten deaktivieren oder weiter anpassen, indem Sie die Konfiguration `optInWhenPushAuthorized` zur Datei `AppDelegate.swift` Ihres Xcode-Projekts hinzufügen:
-
-```swift
-configuration.optInWhenPushAuthorized = false // disables the default behavior
-
-let braze = Braze(configuration: configuration)
-AppDelegate.braze = braze
-```
-{% endtab %}
-{% endtabs %}
-
-#### SDK-Integration
-
-Sie können den Abonnementstatus eines Benutzers mit dem Braze SDK über die Methode `setPushNotificationSubscriptionType` im [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype), [unter Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-push-notification-subscription-type.html) oder [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/set(pushnotificationsubscriptionstate:)) aktualisieren. Sie können diese Methode zum Beispiel verwenden, um eine Einstellungsseite in Ihrer App zu erstellen, auf der Benutzer Push-Benachrichtigungen manuell aktivieren oder deaktivieren können.
-
-#### REST API
-
-Sie können den Status des Abos eines Nutzers:innen mit der Braze REST API aktualisieren, indem Sie den [Endpunkt`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) verwenden, um das [`push_subscribe`]({{site.baseurl}}/api/objects_filters/user_attributes_object) Attribut zu aktualisieren.
-
-### Status des Push-Abonnements prüfen
-
-Nutzerprofil für John Doe, dessen Push-Abonnement auf Abo eingestellt ist.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
-
-Es gibt zwei Möglichkeiten, den Status des Push-Abos eines Nutzers:innen mit Braze zu überprüfen:
-
-1. **Nutzerprofil** Sie können über das Braze-Dashboard auf dem **[Nutzer:innen-Suche]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)** Seite. Nachdem Sie das Profil eines Benutzers gefunden haben (über E-Mail-Adresse, Telefonnummer oder externe Benutzer-ID), können Sie die Registerkarte **Engagement** auswählen, um den Abonnementstatus eines Benutzers anzuzeigen und manuell anzupassen.
-2. **REST API Export:** Mit den Endpunkten [Benutzer:innen nach Segmenten]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) oder [Benutzer:innen nach Bezeichner]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) exportieren können Sie einzelne Nutzerprofile im JSON-Format exportieren. Braze gibt ein Push-Token-Objekt mit gerätespezifischen Push-Aktivierungsdaten zurück.
+{% multi_lang_include push/subscription_states.md %}
 
 ## Push-Erlaubnis
 
@@ -92,9 +25,9 @@ Da die Entscheidung eines Nutzers endgültig ist und Sie ihn nicht noch einmal f
 
 |Plattform|Bildschirmfoto|Beschreibung|
 |--|--|--|
-|iOS| ![Eine iOS-eigene Push-Aufforderung mit der Frage "Meine App möchte Ihnen Benachrichtigungen senden" mit zwei Buttons "Nicht zulassen" und "Zulassen" am unteren Rand der Nachricht.]({% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}){: style="max-width:410px;"} | Dies gilt nicht für die Beantragung einer [vorläufigen Push-Erlaubnis](#provisional-push).|
-|Android| ![Eine Android Push-Nachricht mit der Frage "Erlauben Sie Kitchenerie, Ihnen Benachrichtigungen zu senden?" mit zwei Buttons "Erlauben" und "Nicht erlauben" am unteren Rand der Nachricht.]({% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}){: style="max-width:410px;"} | Diese Push-Erlaubnis wurde in Android 13 eingeführt. Vor Android 13 war eine Genehmigung zum Senden von Push-Nachrichten nicht erforderlich.|
-|Internet| ![Die systemeigene Push-Eingabeaufforderung eines Webbrowsers mit der Frage "Braze.com möchte eine Benachrichtigung anzeigen" mit zwei Buttons "Blockieren" und "Zulassen" am unteren Rand der Nachricht.]({% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}){: style="max-width:410px;"} | |
+|iOS| ![Eine native Push-Benachrichtigung von iOS mit der Frage „Meine App möchte Ihnen Benachrichtigungen senden“ und zwei Buttons „Nicht zulassen“ und „Zulassen“ am unteren Rand der Nachricht.]({% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}){: style="max-width:410px;"} | Dies gilt nicht für die Beantragung einer [vorläufigen Push-Erlaubnis](#provisional-push).|
+|Android| ![Eine Android-Push-Nachricht mit der Frage „Möchten Sie Kitchenerie erlauben, Ihnen Benachrichtigungen zu senden?“ und zwei Buttons, „Zulassen“ und „Nicht zulassen“, am Ende der Nachricht.]({% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}){: style="max-width:410px;"} | Diese Push-Erlaubnis wurde in Android 13 eingeführt. Vor Android 13 war eine Genehmigung zum Senden von Push-Nachrichten nicht erforderlich.|
+|Internet| ![Eine native Push-Benachrichtigung des Webbrowsers mit der Frage „Möchten Sie Braze.comBenachrichtigungen anzeigen?“ und zwei Buttons, „Blockieren“ und „Zulassen“, am unteren Rand der Nachricht.]({% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}){: style="max-width:410px;"} | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Android
@@ -105,7 +38,7 @@ Ab [Android 13]({{site.baseurl}}/developer_guide/platforms/android/android_13/) 
 
 ### iOS
 
-![Eine Benachrichtigung im Systembenachrichtigungscenter mit einer Nachricht am unteren Rand, die fragt: "Erhalten Sie weiterhin Benachrichtigungen von der Yachtr App?" mit zwei Buttons darunter für "Behalten" oder "Ausschalten".]({% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}){: style="float:right;max-width:430px;width:40%;margin-left:15px;border:0"}
+![Eine Benachrichtigung im Benachrichtigungscenter des Systems mit der Frage „Möchten Sie weiterhin Benachrichtigungen von der Yachtr-App erhalten?“ und zwei Buttons darunter: „Beibehalten“ oder „Deaktivieren“.]({% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}){: style="float:right;max-width:430px;width:40%;margin-left:15px;border:0"}
 
 Ihre App kann provisorischen Push oder autorisierten Push anfordern. 
 
@@ -148,15 +81,15 @@ Nehmen wir zum Beispiel an, Sie haben zwei Benutzer: Charlie und Kim. Wenn Charl
 
 Eine App oder Website kann nur ein Push-Abonnement pro Gerät haben. Wenn sich also ein Benutzer von einem Gerät oder einer Website abmeldet und sich ein neuer Benutzer anmeldet, wird das Push-Token dem neuen Benutzer neu zugewiesen. Dies wird im Profil des Benutzers im Abschnitt **Kontakteinstellungen** auf der Registerkarte **Engagement** angezeigt:
 
-Changelog des Push-Tokens auf dem Tab \*\*Engagement** des Profils eines Nutzers, der auflistet, wann der Push-Token zu einem anderen Nutzer verschoben wurde und was der Token war.]({% image_buster /assets/img/push_token_changelog.png %})
+![Changelog für Push-Token im Tab \*\*Engagement** des Nutzerprofils, mit Angaben dazu, wann der Push-Token auf einen anderen Nutzer übertragen wurde und um welchen Token es sich dabei handelt.]({% image_buster /assets/img/push_token_changelog.png %})
 
 Da es für Push-Anbieter (APNs/FCMs) keine Möglichkeit gibt, zwischen mehreren Benutzern auf einem Gerät zu unterscheiden, übergeben wir das Push-Token an den zuletzt eingeloggten Benutzer, um zu bestimmen, welcher Benutzer auf dem Gerät für Push angesprochen werden soll.
 
 ### Mehrere Geräte und ein Benutzer
 
-Der Push-Abostatus ist nutzerabhängig und nicht auf eine bestimmte App begrenzt. Der Status des Push-Abonnements ist der Wert, der zuletzt eingestellt wurde. Wenn sich ein Benutzer also für Push-Benachrichtigungen entschieden hat, ist sein Push-Abonnementstatus auf allen in Frage kommenden Geräten `Opted-in`. Wenn sich ein Benutzer später explizit von den Push-Benachrichtigungen abmeldet, sei es über Ihre Anwendung oder über andere Methoden, die Ihre Marke zur Verfügung stellt, wird der Status seines Push-Abonnements auf `Unsubscribed` aktualisiert, und keine bei Push registrierten Geräte können Push-Benachrichtigungen empfangen.
+Der Push-Abostatus ist nutzerabhängig und nicht auf eine bestimmte App begrenzt. Der Status des Push-Abonnements ist der Wert, der zuletzt eingestellt wurde. Wenn sich ein Benutzer also für Push-Benachrichtigungen entschieden hat, ist sein Push-Abonnementstatus auf allen in Frage kommenden Geräten `Opted-In`. Wenn sich ein Benutzer später explizit von den Push-Benachrichtigungen abmeldet, sei es über Ihre Anwendung oder über andere Methoden, die Ihre Marke zur Verfügung stellt, wird der Status seines Push-Abonnements auf `Unsubscribed` aktualisiert, und keine bei Push registrierten Geräte können Push-Benachrichtigungen empfangen.
 
-## Filter für Push im Vordergrund Enablement {#foreground-push-enabled}
+## Filter „Vordergrund hervorheben“ mit Push-Enablement aktiviert {#foreground-push-enabled}
 
 `Foreground Push Enabled` ist ein Segmentierungsfilter in Braze, mit dem Marketingexperten auf einfache Weise Benutzer identifizieren können, die Braze erlauben, Push-Benachrichtigungen zu senden, und Benutzer, die keine Präferenzen geäußert haben, keine Push-Benachrichtigungen zu erhalten. 
 
@@ -164,7 +97,7 @@ Der Filter `Foreground Push Enabled` berücksichtigt Folgendes:
 - Die Möglichkeit für Braze, eine Push-Benachrichtigung zu senden (Foreground Push Token)
 - Die allgemeine Präferenz des Benutzers, Push-Nachrichten auf jedem seiner Geräte zu empfangen (Push-Abonnementstatus)
 
-![Ein Screenshot des Dashboards, der zeigt, dass ein Nutzer:innen "Push für Marketing (iOS) registriert" ist]({% image_buster /assets/img/push_enablement.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Ein Screenshot des Dashboards zeigt, dass ein Nutzer:innen "Push für Marketing (iOS) registriert" ist.]({% image_buster /assets/img/push_enablement.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Nutzerprofile gelten als "Push-aktiviert" oder "Push-registriert", wenn sie ein aktives Push-Token für eine App in Ihrem Workspace aufweisen. Der Push-Aktivierungsstatus ist also App-spezifisch. 
 
@@ -175,6 +108,18 @@ Informationen darüber, wie Sie den Status der Push-Registrierung überprüfen k
 ## Andere plattformspezifische Szenarien
 
 {% tabs %}
+{% tab Web %}
+
+Wird die Einwilligung in Push-Benachrichtigungen über die native Eingabeaufforderung erteilt, wird der Abo-Status auf `opted in` geändert.
+
+Um Abos zu verwalten, können Sie mit der Nutzermethode [`setPushNotificationSubscriptionType`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype) eine Einstellungsseite auf Ihrer Website erstellen. Danach können Sie im Dashboard nach dem Einwilligungsstatus filtern.
+
+Wenn ein Benutzer die Benachrichtigungen in seinem Browser deaktiviert, wird die nächste Push-Benachrichtigung, die an diesen Benutzer gesendet wird, abgewiesen, und Braze aktualisiert das Push-Token des Benutzers entsprechend. So wird die Berechtigung für die Push-Aktivierungsfilter (`Background or Foreground Push Enabled`, `Foreground Push Enabled` und `Foreground Push Enabled for App`) konfiguriert. Der Abonnementstatus, der im Benutzerprofil eingestellt ist, ist eine Einstellung auf Benutzerebene und ändert sich nicht, wenn eine Push-Nachricht abprallt.
+
+{% alert note %}
+Webplattformen erlauben keinen Push im Hintergrund oder im Stillen.
+{% endalert %}
+{% endtab %}
 {% tab Android %}
 
 Ist Vordergrund-Push im Nutzerprofil aktiviert, Push aber in den Betriebssystemeinstellungen deaktiviert, geschieht zu Beginn der nächsten Sitzung Folgendes:
@@ -191,7 +136,7 @@ Bei Android betrachtet Braze einen Nutzer:innen als Push deaktiviert, wenn:
 - Der Nutzer:innen blockiert Push-Benachrichtigungen für die App in den Einstellungen seines Geräts und protokolliert anschließend eine Sitzung.
 
 {% alert note %}
-Sie können eine Android Push-Benachrichtigung nur abfangen, wenn sich die App im Vordergrund oder im Hintergrund befindet (aber noch läuft). Sie können keine Benachrichtigungen abfangen, wenn die App beendet oder vollständig beendet wird.
+Es ist nur möglich, eine Android-Push-Benachrichtigung abzufangen, wenn sich die App im Vordergrund oder Hintergrund befindet (aber weiterhin ausgeführt wird). Es ist nicht möglich, Benachrichtigungen abzufangen, wenn die App beendet oder vollständig geschlossen wurde.
 {% endalert %}
 
 {% endtab %}
@@ -210,21 +155,9 @@ Wenn ein Benutzer, der sich ursprünglich auf Betriebssystemebene für Push-Bena
 Da in diesem Szenario weiterhin ein Hintergrund-Push-Token existiert, können Sie mit dem Segmentierungsfilter `Background or Foreground Push Enabled = true` weiterhin (stille) Push-Benachrichtigungen im Hintergrund versenden.
 
 {% alert note %}
-Unter iOS ist es nicht zulässig, dass Apps eine Push-Benachrichtigung abfangen, bevor die Push-Benachrichtigung angezeigt wird. Das bedeutet, dass Apps (und Braze) keine Kontrolle darüber haben, ob Sie die Benachrichtigung anzeigen oder ausblenden können. Ein Nutzer:innen kann Push-Benachrichtigungen für eine App in den Einstellungen des Geräts abwählen, aber das wird vom Betriebssystem gesteuert.
+iOS erlaubt es Apps nicht, eine Push-Benachrichtigung abzufangen, bevor diese angezeigt wird. Dies bedeutet, dass Apps (und Braze) keine Kontrolle darüber haben, ob Sie die Benachrichtigung anzeigen oder ausblenden können. Ein Nutzer kann Push-Benachrichtigungen für eine App in den Einstellungen des Geräts deaktivieren, dies wird jedoch vom Betriebssystem gesteuert.
 {% endalert %}
 
-{% endtab %}
-{% tab Web %}
-
-Wird die Einwilligung in Push-Benachrichtigungen über die native Eingabeaufforderung erteilt, wird der Abo-Status auf `opted in` geändert.
-
-Um Abos zu verwalten, können Sie mit der Nutzermethode [`setPushNotificationSubscriptionType`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype) eine Einstellungsseite auf Ihrer Website erstellen. Danach können Sie im Dashboard nach dem Einwilligungsstatus filtern.
-
-Wenn ein Benutzer die Benachrichtigungen in seinem Browser deaktiviert, wird die nächste Push-Benachrichtigung, die an diesen Benutzer gesendet wird, abgewiesen, und Braze aktualisiert das Push-Token des Benutzers entsprechend. So wird die Berechtigung für die Push-Aktivierungsfilter (`Background or Foreground Push Enabled`, `Foreground Push Enabled` und `Foreground Push Enabled for App`) konfiguriert. Der Abonnementstatus, der im Benutzerprofil eingestellt ist, ist eine Einstellung auf Benutzerebene und ändert sich nicht, wenn eine Push-Nachricht abprallt.
-
-{% alert note %}
-Webplattformen erlauben keinen Push im Hintergrund oder im Stillen.
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 

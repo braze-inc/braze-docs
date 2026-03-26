@@ -31,7 +31,7 @@ Braze と ViralSweep の統合により、ViralSweep プラットフォームで
 
 ### ステップ1 :ViralSweep内のBrazeへの接続
 
-ViralSweep で、**Integrations > Email & SMS > Add Service** に移動し、**Braze** を選択します。 
+ViralSweepで、**Integrations > Email& SMS > Add Serviceに**移動し、**Brazeを**選択する。 
 
 ![]({% image_buster /assets/img/viralsweep/connect.gif %})
 

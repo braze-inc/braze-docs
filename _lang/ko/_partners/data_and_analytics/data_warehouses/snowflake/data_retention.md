@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Snowflake data retention
 
-> Braze anonymizes—removes personally identifiable information (PII)—from all events data stored in Snowflake that is older than two years old. If you use Snowflake data sharing, you may choose to retain the full events data in your environment by storing a copy in your Snowflake account before the retention policy is applied.
+> Braze는 2년 이상 된 대부분의 이벤트 데이터에서 Snowflake에 저장된 개인 식별자 정보(PII)를 익명화(개인 식별자 정보 제거)합니다. 이 페이지 뒷부분에 설명된 대로 특정 이벤트는 사용자가 삭제될 때까지 유지됩니다. If you use Snowflake data sharing, you may choose to retain the full events data in your environment by storing a copy in your Snowflake account before the retention policy is applied.
 
 This page presents two ways you can retain non-anonymized data: 
 
@@ -19,6 +19,15 @@ This page presents two ways you can retain non-anonymized data:
 {% alert warning %}
 Braze automatically anonymizes events data for users that are deleted from Braze, as described in [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/). Any data copied outside of the shared database will not be included in this process, as Braze no longer manages it.
 {% endalert %}
+
+## 2년 보존 정책에서 면제되는 이벤트
+Braze는 사용자가 삭제될 때까지 사용자 라이프사이클, 구독 상태 및 인바운드 메시징과 관련된 이벤트를 보관합니다. 다음 이벤트는 표준 2년 보존 정책에서 제외됩니다:
+- `users.UserOrphan`
+- `users.UserDeleteRequest`
+- `users.behaviors.subscription.GlobalStateChange`
+- `users.behaviors.subscriptiongroup.StateChange`
+- `users.messages.sms.InboundReceive`
+- `users.messages.whatsapp.InboundReceive`
 
 ## Copying all data to another Snowflake database
 

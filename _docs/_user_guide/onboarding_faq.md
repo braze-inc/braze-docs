@@ -283,7 +283,7 @@ When scheduling a campaign, you need to choose to send it at a designated time, 
 
 Braze highly recommends that all local time zone campaigns are scheduled 24 hours in advance. Since such a campaign needs to send over the course of an entire day, scheduling them 24 hours in advance allows your message reach your entire segment. However, you can schedule these campaigns less than 24 hours in advance if necessary. Keep in mind that Braze will not send messages to any users that have missed the send time by more than 1 hour.
 
-For example, if it's 1 pm and you schedule a local time zone campaign for 3 pm, then the campaign will immediately send to all users whose local time is 3–4 pm, but not to users whose local time is 5 pm. In addition, the send time you choose for your campaign needs to have not yet occurred in your company's time zone.
+For example, if it's 1 pm and you schedule a local time zone campaign for 3 pm, then the campaign will immediately send to all users whose local time is 3-4 pm, but not to users whose local time is 5 pm. In addition, the send time you choose for your campaign needs to have not yet occurred in your company's time zone.
 
 Editing a local time zone campaign that is scheduled less than 24 hours in advance will not alter the message's schedule. If you decide to edit a local time zone campaign to send at a later time (for instance, 7 pm instead of 6 pm), users who were in the targeted segment when the original send time was chosen will still receive the message at the original time (6 pm). If you edit a local time zone to send at an earlier time (for instance, 4 pm instead of 5 pm), then the campaign will still send to all segment members at the original time (5 pm).
 
@@ -572,7 +572,7 @@ To schedule a recurring engagement report, do the following:
 3. Add the [campaigns and Canvas messages]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (individually or [by tag]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) that you would like to compile in your report.
 4. [Add statistics]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) to your report.
 5. Select the compression and deliminator for your report.
-6. Enter the email addresses of Braze users who should receive this report.
+6. Enter the email addresses of company users who should receive this report.
 7. Select the [time frame]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) from which you would like your report to run data.
 8. Select the [intervals (daily, weekly, etc.)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#data-display) at which would like to see the breakdown of your data.
 9. Schedule your report to [send immediately]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) or at a [future, specified time]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time).

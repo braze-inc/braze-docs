@@ -22,7 +22,7 @@ description: "Dieser Artikel beschreibt den Endpunkt Export täglich aktive Nutz
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `kpi.dau.data_series`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -46,8 +46,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/dau/data_ser
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

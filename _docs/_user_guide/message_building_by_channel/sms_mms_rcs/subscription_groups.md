@@ -32,6 +32,8 @@ When a phone number is updated on a user profile, the new phone number inherits 
 
 For example, if User A has a phone number that is subscribed to several subscription groups and that phone number then gets added to User B, User B will be subscribed to the same subscription groups. To prevent a user from inheriting the existing subscriptions, you can reset the subscription groups of the old number through the Braze REST API whenever a user changes their number. If multiple users share this phone number, they will all be unsubscribed.
 
+Additionally, the subscription state of a former user's phone number can be inherited—even if that phone number is currently not associated with a user profile. For example, if a user has phone number `123-456-7890`, subscribes to a subscription group, and then has their phone number deleted, the subscription state associated with `123-456-7890` persists and is applied when the number is later assigned again.
+
 To set a user's subscription group state, use one of the following methods:
 
 - **Rest API:** User profiles can be programmatically set by the [`/subscription/status/set` endpoint]({{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) by using the Braze REST API.
@@ -99,7 +101,7 @@ Define your audience using one of the following methods. Next, go to the **Send 
 
 | Method                          | Description                                                                                                                                                                                                 |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Create a segment**         | Build a segment that includes all users in a subscription group or a subset using segmentation filters (e.g., a random 5–10%). Segments update before each send to reflect your current user base.        |
+| **Create a segment**         | Build a segment that includes all users in a subscription group or a subset using segmentation filters (such as a random 5-10%). Segments update before each send to reflect your current user base.        |
 | **Apply campaign or Canvas filters** | Refine the audience in the **Target Audience** step of your campaign or Canvas. Adjust targeting options without leaving the page for added flexibility.                                         |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 

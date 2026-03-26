@@ -81,8 +81,8 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
       "warehouse_type": (string) data warehouse type,
       "last_job_start_time": (string) timestamp of the last sync run in ISO 8601,
       "last_job_status": (string) status of the last sync run,
-      "next_scheduled_run": (string) timestamp of the next scheduled sync in ISO 8601,
-    },
+      "next_scheduled_run": (string) timestamp of the next scheduled sync in ISO 8601
+    }
   ],
   "message": "success"
 }

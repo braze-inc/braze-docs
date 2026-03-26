@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Crowdin
 
-> Crowdin ist eine cloudbasierte Software zur Verwaltung der Lokalisierung. Mit Crowdin können Sie Ihre Android- und iOS-Apps, Ihre Website, Shop-Screenshots und andere Inhalte übersetzen. Die Übersetzung kann durch Ihr internes Team, eine Übersetzungsagentur oder mit Hilfe von maschinellen Übersetzungsprogrammen erfolgen.
+> Crowdin ist eine cloudbasierte Plattform zur Verwaltung der Lokalisierung. Mit Crowdin können Sie Ihre Android- und iOS-Apps, Ihre Website, Shop-Screenshots und andere Inhalte übersetzen. Die Übersetzung kann durch Ihr internes Team, eine Übersetzungsagentur oder mit Hilfe von maschinellen Übersetzungsprogrammen erfolgen.
 
 _Diese Integration wird von Crowdin gepflegt._
 
@@ -66,6 +66,6 @@ Im Editor-Modus in Crowdin können die von Ihrem Braze-Konto synchronisierten In
 
 Sobald die Übersetzungen abgeschlossen sind, öffnen Sie die App Braze in Crowdin, wählen Sie die übersetzten Dateien (für jede Datei können Sie entweder alle Zielsprachen oder nur bestimmte auswählen) im linken Panel aus und klicken Sie auf **Sync to Braze**.
 
-![Ein Bild eines Nutzers, der seine Übersetzungsdateien auswählt und mit Braze synchronisiert.]({% image_buster /assets/img/crowdin/sync_translations.png %})
+![Ein Bild eines Nutzers:innen, der seine Übersetzungsdateien auswählt und mit Braze synchronisiert.]({% image_buster /assets/img/crowdin/sync_translations.png %})
 
 

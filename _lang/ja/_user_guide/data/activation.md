@@ -1,12 +1,12 @@
 ---
-nav_title: データの活性化
+nav_title: データ起動
 article_title: データの有効化
 page_order: 2
 layout: dev_guide
 guide_top_header: "データの有効化"
-guide_top_text: "> Brazeでデータを統一したら、次はそれを使う番だ。ターゲットを絞ったメッセージの作成、パーソナライズされたメッセージング、顧客の行動にリアルタイムで対応するカスタマージャーニーの設定により、顧客データを活性化する。"
+guide_top_text: "> あなたのデータをBrazeで統一した後、それを使う時です。ターゲットを絞ったメッセージを作成し、体験をパーソナライズし、顧客がリアルタイムで行うことに対応するカスタマージャーニーを設定することで、データを有効化します。"
 page_type: landing
-description: "このセクションには、Brazeデータプラットフォームのデータアクティベーションに関する記事が含まれている。"
+description: "ここでは、Braze データプラットフォームのデータアクティベーションに関する記事について説明します。"
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
@@ -22,7 +22,7 @@ guide_menu_list:
   - name: 分析
     link: /docs/user_guide/analytics/reporting/
     image: /assets/img/braze_icons/book-closed.svg
-  - name: Braze AI
+  - name: Braze人工知能
     link: /docs/user_guide/brazeai/
     image: /assets/img/braze_icons/stars-01.svg
 ---

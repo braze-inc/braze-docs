@@ -22,9 +22,9 @@ search_tag: Partner
 | SessionM | Un endpoint REST de SessionM Core | Votre endpoint dépendra de l'URL SessionM de votre instance. Celui-ci peut être créé dans le tableau de bord SessionM à partir de **Propriétés numériques**. |
 | SessionM | Une clé de l'API REST de SessionM Core | La clé API de SessionM associée à votre instance et à l'intégration de Braze. Cette touche peut être utilisée pour tous les appels de base, y compris les tags. Celui-ci peut être créé dans le tableau de bord SessionM à partir de **Propriétés numériques**. |
 | SessionM | Un secret de l'API REST de SessionM Core | Le secret API de SessionM associé à votre instance et à l'intégration Braze. Cette touche peut être utilisée pour tous les appels de base, y compris les tags. Celui-ci peut être créé dans le tableau de bord SessionM à partir de **Propriétés numériques**. |
-| SessionM | Un endpoint REST de SessionM Connect | Votre endpoint dépendra de l'URL SessionM de votre instance. Veuillez contacter votre gestionnaire de compte technique ou l'équipe de réception/distribution de SessionM pour obtenir des informations. |
-| SessionM | Une chaîne de caractères d'autorisation REST de SessionM Connect | La chaîne de caractères d'autorisation de base de SessionM Connect associée à votre instance. Cette chaîne de caractères d'authentification peut être utilisée pour tous les appels basés sur la connexion, y compris get_user_offers. Veuillez contacter votre gestionnaire de compte technique ou l'équipe de réception/distribution de SessionM pour obtenir des informations. |
-| SessionM | A SessionM Connect REST Retailer ID | Une identification unique du client associé à votre instance. Contactez votre gestionnaire de compte technique ou l'équipe de réception/distribution de SessionM. |
+| SessionM | Un endpoint REST de SessionM Connect | Votre endpoint dépendra de l'URL SessionM de votre instance. Contactez votre gestionnaire de compte technique ou l'équipe de réception/distribution de SessionM pour obtenir des informations. |
+| SessionM | Une chaîne de caractères d'autorisation REST de SessionM Connect | La chaîne de caractères d'autorisation de base de SessionM Connect associée à votre instance. Cette chaîne de caractères d'authentification peut être utilisée pour tous les appels basés sur la connexion, y compris get_user_offers.. Veuillez contacter votre gestionnaire de compte technique SessionM ou l'équipe de réception/distribution pour obtenir les caractères nécessaires. |
+| SessionM | A SessionM Connect REST Retailer ID | Une identification unique du client associé à votre instance. Contactez votre gestionnaire de compte technique ou l'équipe de réception/distribution de SessionM pour obtenir des informations. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
@@ -47,7 +47,7 @@ Les cas d'utilisation suivants illustrent quelques façons de tirer parti de l'i
 
 Dans Braze, créez un segment d'utilisateurs à cibler avec des promotions et des offres de SessionM. 
 
-![Générateur de segments avec le filtre "Attributs personnalisés" sélectionné.]({% image_buster /assets/img/sessionm/CreateSegment.png %})
+![Le générateur de segments avec le filtre "Attributs personnalisés" sélectionné.]({% image_buster /assets/img/sessionm/CreateSegment.png %})
 
 ### Étape 2 : Importer des segments Braze dans SessionM
 
@@ -72,7 +72,7 @@ Dans l'onglet **Paramètres**, ajoutez les paires clé-valeur pour chaque champ 
     \- Créez une clé `Content-Type` avec une valeur correspondante `application/json`
     \- Créez une clé `Authorization` avec une valeur correspondante `Basic YOUR-ENCODED-STRING-KEY`. Contactez votre équipe Teams pour obtenir la chaîne de caractères codée de votre endpoint. 
 
-![Paramètres du webhook.]({% image_buster /assets/img/sessionm/SessionMWebhookSettings.png %}){: style="max-width:85%;"}
+![Paramètres de webhook.]({% image_buster /assets/img/sessionm/SessionMWebhookSettings.png %}){: style="max-width:85%;"}
 
 Planifiez votre réception/distribution, définissez vos **Audiences cibles** pour cibler le segment [que vous avez créé précédemment](#step-1-create-a-segment-in-braze), puis lancez votre campagne.
 
@@ -187,7 +187,7 @@ Lorsqu'une demande est adressée à l'endpoint, SessionM renvoie la liste compl�
 ```
 {% endraw %}
 
-En utilisant la notation par points Liquid, il est possible de l'insérer dans le message. Par exemple, pour personnaliser le message avec le résultat `offer_id`, vous pouvez exploiter la charge utile de retour en utilisant {% raw %}`{{wallet.payload.available_points}`{% endraw %}, qui renvoie `100`.
+En utilisant la notation par points Liquid, il est possible de l'insérer dans le message. Par exemple, pour personnaliser le message avec le résultat `offer_id`, vous pouvez exploiter la charge utile de retour en utilisant {% raw %}`{{wallet.payload.available_points}}`{% endraw %}, qui renvoie `100`.
 
 {% alert note %}
 Il s'agit d'une API individuelle. Si vous avez l'intention d'envoyer un lot de plus de 500 utilisateurs, contactez votre équipe de compte SessionM pour savoir comment incorporer les données en vrac dans l'intégration.
@@ -237,7 +237,7 @@ Finalisez les détails de votre campagne ou de votre canvas et sélectionnez **L
 
 Ensuite, créez votre campagne dans SessionM.
 
-![Création de la campagne SessionM.]({% image_buster /assets/img/sessionm/SessionMCampaignCreation.png %})
+![SessionM Création de campagnes.]({% image_buster /assets/img/sessionm/SessionMCampaignCreation.png %})
 
 Mettez à jour les paramètres avancés de la campagne SessionM afin d'inclure la charge utile JSON suivante contenant le `braze_campaign_id` ou `braze_canvas_id`.
 
@@ -250,11 +250,11 @@ Mettez à jour les paramètres avancés de la campagne SessionM afin d'inclure l
 ```
 {% endraw %}
 
-![SessionM paramètres avancés.]({% image_buster /assets/img/sessionm/SessionMAdvancedSettings.png %}){: style="max-width:85%;"}
+![Paramètres avancés de SessionM.]({% image_buster /assets/img/sessionm/SessionMAdvancedSettings.png %}){: style="max-width:85%;"}
 
 Créez un message déclenché en fonction de la planification ou du comportement souhaité. Ensuite, sélectionnez la **variante** **d'envoi de messages Braze** dans le menu **Message externe** pour utiliser le modèle.
 
-![SessionM message externe.]({% image_buster /assets/img/sessionm/SessionMExternalMessage.png %})
+![Message externe de la SessionM.]({% image_buster /assets/img/sessionm/SessionMExternalMessage.png %})
 
 Ce modèle extrait les attributs statiques et dynamiques pertinents et fait appel au point d'extrémité de Braze.
 

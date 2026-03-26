@@ -2,7 +2,7 @@
 nav_title: Stensul
 article_title: Stensul
 alias: /partners/stensul
-description: "Cet article de référence présente le partenariat entre Braze et Stensul, une plateforme d'e-mail d'entreprise qui vous permet de créer facilement des modèles d'e-mails adaptés aux mobiles sur l'ensemble des canaux."
+description: "Cet article de référence présente le partenariat entre Braze et Stensul, une plateforme d'e-mail d'entreprise permettant de créer des modèles d'e-mails adaptés aux mobiles sur l'ensemble des canaux."
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Stensul
 
-> [Stensul](https://stensul.com/) permet aux spécialistes du marketing par e-mail de créer facilement dans Stensul des e-mails adaptés aux appareils mobiles et à votre marque afin de les envoyer en temps réel à Braze pour créer des campagnes.
+> [Stensul](https://stensul.com/) fournit aux spécialistes du marketing par e-mail des outils pour créer des e-mails adaptés aux mobiles et à la marque dans Stensul avant de les envoyer en aval vers Braze en temps réel pour la création de campagnes.
 
 _Cette intégration est maintenue par Stensul._
 
@@ -39,19 +39,19 @@ Il s'agit d'une configuration unique et toutes les exportations futures utiliser
 
 Créez un e-mail Stensul dans la plateforme Stensul et cliquez sur **Terminer**.
 
-![Options d’enregistrement Stensul]({% image_buster /assets/img_archive/stensul_save_options.png %})
+![Options d’enregistrement de Stensul]({% image_buster /assets/img_archive/stensul_save_options.png %})
 
 ### Étape 2 : Exporter le modèle vers Braze
 Dans la nouvelle boîte de dialogue qui s'affiche sur la page d'achèvement, sélectionnez **Télécharger vers ESP**.
 
-![Options de chargement Stensul]({% image_buster /assets/img_archive/stensul_upload_options.png %})
+![Options de téléchargement de Stensul]({% image_buster /assets/img_archive/stensul_upload_options.png %})
 
 Saisissez ensuite le **nom du modèle**, l'**objet** et l'**accroche** de votre e-mail, puis sélectionnez **Charger**. Vous recevrez alors une confirmation que le téléchargement a réussi et un historique des téléchargements précédents du fichier, le cas échéant.
 
-![Succès de chargement Stensul]({% image_buster /assets/img_archive/stensul_upload_success.png %})
+![Téléchargement réussi dans Stensul]({% image_buster /assets/img_archive/stensul_upload_success.png %})
 
 ## Utilisation
 
-Retrouvez votre modèle Stensul téléchargé dans la section **Modèles et médias > Modèles d'e-mail de** votre compte Braze. Vous pouvez maintenant utiliser ce modèle d'e-mail pour commencer à envoyer des messages engageants à vos clients !
+Vous trouverez le modèle Stensul que vous avez téléchargé dans la section **Modèles & Media > Modèles d'e-mail de** votre compte Braze. Vous pouvez désormais utiliser ce modèle d'e-mail pour commencer à envoyer des e-mails attrayants à vos clients !
 
 

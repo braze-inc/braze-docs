@@ -1,7 +1,7 @@
 ---
-nav_title: "GET: Estado del grupo de suscripción de usuarios de la lista"
+nav_title: "GET: Mostrar el estado del grupo de suscripción de los usuarios"
 article_title: "GET: Listar el estado del grupo de suscripción del usuario"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
@@ -54,17 +54,17 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 - Para los grupos de suscripción de SMS y WhatsApp, se requiere `external_id` o `phone`.  Cuando se envían ambos, sólo se utiliza el `external_id` para la consulta y el número de teléfono se aplica a ese usuario.
 - Para los grupos de suscripción por correo electrónico, se requiere `external_id` o `email`.  Cuando se envían ambos, sólo se utiliza el `external_id` para la consulta y la dirección de correo electrónico se aplica a ese usuario.
 
-## Ejemplo de solicitud 
+## Ejemplo de solicitud
 
 {% tabs %}
-{% tab Múltiples usuarios %}
+{% tab Multiple Users %}
 {% raw %}
 ```
 https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&external_id[]=1&external_id[]=2
 ```
 {% endraw %}
 {% endtab %}
-{% tab SMS y WhatsApp %}
+{% tab SMS and WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&phone=+11112223333' \
@@ -72,7 +72,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 {% endtab %}
-{% tab Correo electrónico %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&email=example@braze.com' \
@@ -87,8 +87,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 Todas las respuestas correctas devolverán `Subscribed`, `Unsubscribed`, o `Unknown` dependiendo del estado y del historial del usuario con el grupo de suscripción.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "status": {
     "1": "Unsubscribed",
@@ -97,5 +95,9 @@ Authorization: Bearer YOUR-REST-API-KEY
   "message": "success"
 }
 ```
+
+{% alert important %}
+Este punto final devuelve el estado del grupo de suscripción independientemente del estado de suscripción global del usuario. Si un usuario cancela su suscripción globalmente, el panel de Braze te muestra como dado de baja de cada grupo de suscripción. Sin embargo, este punto final sigue devolviendo el último estado del grupo de suscripción (por ejemplo, `Subscribed`) porque el estado global de las suscripciones sustituye a los grupos de suscripción individuales sin sobrescribirlos.<br><br>Braze conserva los estados individuales de los grupos de suscripción, de modo que, si el usuario vuelve a suscribirse globalmente, cada grupo de suscripción vuelve al estado guardado anteriormente. Para determinar el estado efectivo de la suscripción de un usuario, comprueba tanto tu estado de suscripción global como el estado del grupo de suscripción devuelto por este punto final.
+{% endalert %}
 
 {% endapi %}

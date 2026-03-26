@@ -1,6 +1,6 @@
 ---
 page_order: 10.1
-nav_title: Exemplos Avançados
+nav_title: Exemplos avançados
 article_title: Exemplos avançados de notificações por push para o SDK Braze
 channel:
   - push notifications
@@ -12,7 +12,7 @@ channel:
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/android/push_notifications/examples.md %}
+{% multi_lang_include developer_guide/android/push_notifications/examples.md%}
 {% endsdktab %}
 
 {% sdktab swift %}

@@ -1,124 +1,112 @@
 ---
 nav_title: Operator
 article_title: BrazeAI Operator
-page_order: 0.7
+page_order: 7
 alias: /operator/
-description: "Dieser referenzierte Artikel behandelt BrazeAI Operator, einen KI-gestützten Assistenten, der in das Braze-Dashboard integriert ist."
+toc_headers: h2
+description: "Erfahren Sie, wie Sie auf BrazeAI Operator<sup>TM</sup> zugreifen und diesen nutzen können, einen in das Braze-Dashboard integrierten KI-gestützten Assistenten, einschließlich seiner Features und Best Practices."
 ---
 
-# <sup>BrazeAITM</sup> Operator
+# BrazeAI Operator
 
-> <sup>BrazeAITM</sup> Operator ist ein KI-gestützter Assistent, der in das Braze-Dashboard integriert ist. Operator hilft Ihnen, Antworten zu finden, Fehlerbehebungen vorzunehmen und Best Practices zu erlernen, ohne Ihren Arbeitsablauf zu verlassen.
+> BrazeAI Operator<sup>TM</sup> ist ein KI-gestützter Assistent, der in das Dashboard integriert ist. Operator unterstützt Sie bei der Erledigung Ihrer Aufgaben – beantwortet Fragen, führt Sie durch die Einrichtung, hilft bei der Fehlerbehebung und entwickelt gemeinsam mit Ihnen Ideen.
 
-{% alert important %}
-<sup>BrazeAITM</sup> Operator befindet sich derzeit in einer privaten Beta-Phase mit eingeschränkter Funktionalität. Wenn Sie Hilfe benötigen, wenden Sie sich an Ihren Customer-Success-Manager:in.
-{% endalert %}
+## Auf Operator zugreifen
 
-## Über Operator
+Öffnen Sie Operator von jeder Seite im Braze-Dashboard aus.  
 
-Operator ist Ihr eingebauter KI-Assistent im Braze-Dashboard. Es hilft Ihnen, schneller voranzukommen, indem es Fragen beantwortet, nächste Schritte vorschlägt und Sie durch Aufgaben führt - und das alles, ohne Ihren Arbeitsablauf zu verlassen.
+1. Wählen Sie **BrazeAI Operator<sup>TM</sup>** neben Ihrem Nutzerprofil aus.
 
-Während der Beta-Phase unterstützt Operator nur den **Fragemodus**. Sie können:
+![Das Symbol „BrazeAI Operator" neben einem Nutzerprofil.]({% image_buster /assets/img/operator/operator_icon.png %})
 
-- Antworten aus der Braze Dokumentation erhalten
-- Fehlerbehebung mit [seitenorientiertem Kontext](#page-aware-context)
-- Lernangebote und Anleitung zum Onboarding
+{:start="2"}
+2. Das Operator-Chat-Panel öffnet sich auf der rechten Seite des Bildschirms.
 
-## Wie Sie Operator aufrufen
-
-Sie können Operator von jeder Seite des Braze-Dashboards aus öffnen.  
-
-1. Wählen Sie **<sup>BrazeAITM</sup> Operator**, neben Ihrem Nutzerprofil.
-
-\![Das BrazeAI Operator Symbol neben einem Nutzerprofil.]({% image_buster /assets/img/operator/operator_profile.png %}){:style="max-width:60%"}
-
-{: start="2"}
-2\. Das Operator Chat Panel wird auf der rechten Seite des Bildschirms geöffnet.
-
-\![Das Chat Panel für Operator.]({% image_buster /assets/img/operator/operator_panel.png %})
+![Das Chat-Panel von Operator.]({% image_buster /assets/img/operator/operator_chat_panel.png %})
 
 {% alert tip %}
-Versuchen Sie, das Panel zu maximieren, um es besser lesen zu können, oder zu minimieren, damit Operator weiterhin verfügbar ist, während Sie weiterarbeiten.  
-{% endalert %}
+Maximieren Sie das Panel, um es für eine bessere Lesbarkeit zu vergrößern, oder minimieren Sie es, um Operator während der Arbeit verfügbar zu halten.  
+{% endalert %} 
 
-## Wie man mit Operator spricht
+## Operator verwenden
 
-Verwenden Sie Eingabeaufforderungen, um mit dem Operator zu kommunizieren. Am besten sprechen Sie ganz natürlich, so wie Sie es mit einem Kollegen oder einem Freund tun würden. Ihre Eingabeaufforderungen können von einfachen Fragen bis hin zu komplexen Anfragen reichen:
+Beschreiben Sie in natürlicher Sprache, was Sie erreichen möchten. Prompts können von einfachen Fragen bis hin zu komplexen Anfragen reichen:
 
-- **Einfach:** Wie kann ich sicherstellen, dass Nutzer:innen keine E-Mails zum abgebrochenen Einkauf erhalten, während sie sich noch auf der Website befinden?
-- **Komplex:** Wie kann ich das Attribut des Nutzers:innen, der den Abbruch verursacht hat, in den Tag `abort_message` meiner Nachricht aufnehmen?
+- **Einfach:** Warum wird mein Liquid nicht gerendert?
+- **Komplex:** Wie kann ich sicherstellen, dass der `abort_message`-Tag meiner Nachricht das Nutzerattribut enthält, das den Abbruch verursacht hat?
 
-Operator kann Schritt-für-Schritt-Anleitungen, Links zu Braze-Dokumenten und Erklärungen in einfacher Sprache bereitstellen. Je klarer und spezifischer Ihre Frage ist, desto nützlicher wird die Antwort sein. 
+Operator kann Schritt-für-Schritt-Anleitungen, Links zur Braze-Dokumentation und Erklärungen in einfacher Sprache bereitstellen. Klare und spezifische Fragen führen zu hilfreicheren Antworten. Operator verwendet [GPT-5.2](https://platform.openai.com/docs/models/gpt-5.2), das über starke Schlussfolgerungsfähigkeiten verfügt und sich für komplexe, mehrstufige Aufgaben eignet. 
 
-### Bewährte Praktiken
+## Best Practices
 
-Betrachten Sie Operator als ein Gespräch, nicht als eine Suchmaschine. Kurze, natürliche Souffleure funktionieren in der Regel am besten.
+Behandeln Sie Operator wie eine Konversation, nicht wie eine Suchmaschine. Kurze, natürliche Prompts funktionieren am besten.
 
-- **Seien Sie konkret:** Versuchen Sie anstelle von "Erzählen Sie mir von Canvas" lieber "Wie verwende ich Aktions-Pfade in Canvas?".  
-- **Verwenden Sie Nachfassaktionen:** Wenn die erste Antwort nicht das ist, was Sie brauchen, stellen Sie klärende Fragen. Der Operator kann die Antworten verfeinern.
-- **Verlassen Sie sich auf den Kontext:** Operator weiß, auf welcher Seite Sie sich in Braze befinden. Öffnen Sie Operator, während Sie sich auf der Seite befinden, mit der Sie arbeiten, um die wichtigsten Ergebnisse zu erhalten.
+- **Seien Sie konkret:** Anstelle von „Erzählen Sie mir etwas über Canvas" versuchen Sie es mit „Wie verwende ich Aktionspfade in Canvas?".  
+- **Stellen Sie Folgefragen:** Sollte die erste Antwort Ihre Frage nicht vollständig beantworten, bitten Sie um eine Klarstellung oder um weitere Details.
+- **Nutzen Sie den seitenbezogenen Kontext:** Operator erkennt Ihren Standort in Braze. Öffnen Sie Operator, während Sie die entsprechende Seite anzeigen, um die genauesten Ergebnisse zu erhalten.
 
-## Features
+## Passen Sie Ihr Erlebnis an
 
-Operator enthält während der Beta-Phase die folgenden Features:
+### Markenrichtlinien anwenden
 
-### Seitenbezogener Kontext
+Fügen Sie Markenrichtlinien als Kontext zu Operator-Abfragen hinzu, damit die Antworten dem Stil, Tonfall und der Persönlichkeit Ihrer Marke entsprechen. Operator nutzt die in Ihrem Workspace konfigurierten Markenrichtlinien, was dazu beiträgt, ein einheitliches Messaging zu gewährleisten, wenn er Texte vorschlägt oder Features erläutert.
 
-Operator versteht die Seite, an der Sie gerade in Braze arbeiten, und kann die Antworten auf der Grundlage dieses Kontexts anpassen. Wenn Sie zum Beispiel Operator öffnen, während Sie ein Canvas erstellen, kann er Ihnen für das Canvas relevante Schritte vorschlagen oder Anleitungen geben, ohne dass Sie erklären müssen, wo Sie sich befinden. 
+Um Markenrichtlinien festzulegen, navigieren Sie zu **Einstellungen** > **Markenrichtlinien**. Weitere Informationen finden Sie unter [Markenrichtlinien]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/).
 
-### Vorgeschlagene Souffleure
+![Auswahl der Markenrichtlinien im Chat-Panel von Operator.]({% image_buster /assets/img/operator/operator_brand_guidelines.png %})
 
-Wenn Sie Operator öffnen, sehen Sie ein paar Vorschläge, die Ihnen den Einstieg erleichtern. Wählen Sie eine aus, um loszulegen, oder geben Sie Ihre eigene Frage ein.
+### Seitenbezogenen Kontext nutzen
 
-### Argumentation anzeigen
+Operator erkennt automatisch Ihren Standort in Braze und passt die Antworten entsprechend an. Wenn Sie beispielsweise Operator während der Erstellung eines Canvas öffnen, kann er Ihnen relevante Schritte vorschlagen oder Anleitungen zu Canvas-Features geben, ohne dass Sie erklären müssen, an welcher Stelle Ihres Arbeitsablaufs Sie sich befinden.
 
-Operator zeigt seine Argumentationsschritte in zusammenklappbaren Abschnitten mit der Bezeichnung **Reasoned** an. Wählen Sie die Dropdown-Liste aus, um diese Abschnitte zu erweitern und zu sehen, wie Operator zu einer Antwort gekommen ist.
+Dank dieser Kontextbezogenheit können Sie kürzere, natürlichere Fragen stellen, wie beispielsweise „Wie füge ich eine Verzögerung hinzu?" anstelle von „Wie füge ich einen Verzögerungsschritt in einen Canvas-Workflow ein?"
 
-\![Dropdown für "Begründet" erweitert mit mehr Details zur Antwort des Operators.]({% image_buster /assets/img/operator/operator_reasoning.png %}){:style="max-width:60%"}
+## Arbeiten mit Operator-Antworten
 
-### Vorgeschlagene Aktionen
+### Starten Sie mit den vorgeschlagenen Prompts
 
-In einigen Fällen wird Operator die nächsten Schritte empfehlen und direkte Links zu den entsprechenden Seiten in Ihrem Braze-Dashboard bereitstellen. Wenn Sie beispielsweise nach den Absprungraten von E-Mails fragen, kann Operator Sie auf die Seite Ihres **Zustellbarkeits-Centers** verweisen. Diese Verknüpfungen helfen Ihnen, schneller zu handeln, ohne dass Sie manuell navigieren müssen.
+Wenn Sie Operator öffnen, werden Ihnen auf Basis häufiger Aufgaben und Ihrer aktuellen Seite vorgeschlagene Prompts angezeigt. Wählen Sie einen aus, um schnell loszulegen, oder geben Sie Ihre eigene Frage ein.
 
-### Erzeugung stoppen
+### Verstehen Sie, wie Operator denkt
 
-Während der Operator eine Antwort generiert, wird der Button **Senden** zu einem **Stop** Button. Wenn Sie die Antwort vorzeitig beenden möchten, wählen Sie **Stopp**.
+Operator zeigt seine Argumentationsschritte in ausblendbaren Abschnitten mit der Bezeichnung **„Reasoned"** an. Wählen Sie das Dropdown-Menü aus, um diese Abschnitte zu erweitern und nachzuvollziehen, wie Operator zu einer Antwort gelangt ist. Dies ist hilfreich, wenn Sie die Logik hinter einem Vorschlag verstehen oder den Ansatz überprüfen möchten.
 
-### Löschen des Chatverlaufs
+![Das ausgeblendete Dropdown-Menü „Reasoned" in einer Antwort von Operator.]({% image_buster /assets/img/operator/operator_reasoning_collapsed.png %}){:style="max-width:40%"}
 
-Um Ihre Unterhaltung zurückzusetzen, wählen Sie **Chat-Verlauf löschen**. Dadurch wird der aktuelle Inhalt entfernt, so dass Sie neu beginnen können.
+### Aktionen mit Operator ausführen
 
-### Maximieren und Minimieren des Panels
+Operator kann direkt im Braze-Dashboard Änderungen vorschlagen und ausführen, beispielsweise Formularfelder ausfüllen, Einstellungen aktualisieren oder Inhalte generieren. Jede vorgeschlagene Änderung wird Ihnen als Aktionskarte zur Überprüfung und Genehmigung vorgelegt, bevor sie wirksam wird. Weitere Informationen zur Funktionsweise finden Sie unter [Aktionen überprüfen]({{site.baseurl}}/user_guide/brazeai/operator/reviewing_actions/).
 
-Sie können den Button **Maximieren** verwenden, um Operator zur besseren Lesbarkeit zu erweitern, oder den Button **Minimieren**, um das Panel zu verstecken, während Sie in Braze weiterarbeiten.
+## Ihre Sitzung verwalten
 
-### Feedback senden
+### Eine Antwort stoppen
 
-Verwenden Sie die Buttons "Daumen hoch" oder "Daumen runter" am Ende jeder Antwort, um schnelles Feedback zu geben. Dies hilft, die Antworten von Operator zu verbessern.
+Während Operator eine Antwort generiert, wird der Button **Senden** zu einem Button **Stopp**. Wählen Sie **Stopp** aus, um die Antwort vorzeitig zu beenden, falls Sie Ihre Frage umformulieren müssen oder die Antwort in eine unerwünschte Richtung geht.
 
-## Fehlersuche
+### Verlauf löschen
 
-| Fehler | Fehlersuche |
-| --- | --- |
-| Keine Antwort | Versuchen Sie, die Seite zu aktualisieren und das Operator Panel erneut zu öffnen. |
-| Off-Topic-Antworten | Formulieren Sie Ihre Frage etwas genauer um. Nennen Sie das Feature oder den Workflow, nach dem Sie fragen. |
-| Fehlermeldungen | Wenn Operator keine Inhalte streamen kann, sehen Sie möglicherweise die Aufforderung "Erneut versuchen". Der Operator ist möglicherweise vorübergehend nicht verfügbar oder Ihre Verbindung wurde unterbrochen. Versuchen Sie es nach ein paar Minuten erneut. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+Um neu zu starten oder sensible Informationen aus der Unterhaltung zu entfernen, wählen Sie **Chat-Verlauf löschen**. Dadurch werden alle aktuellen Inhalte gelöscht und der Konversationskontext zurückgesetzt.
 
-## Beschränkungen
+### Feedback geben
 
-Operator wurde entwickelt, um Ihnen bei der Navigation in Braze zu helfen und Ihre Arbeit effizienter zu gestalten, aber es gibt einige Stromgrenzen, die Sie beachten müssen:
+Verwenden Sie am Ende jeder Antwort die Daumen-hoch- oder Daumen-runter-Buttons, um schnelles Feedback zu geben. Ihr Feedback trägt dazu bei, die Antworten von Operator im Laufe der Zeit zu verbessern.
 
-### Kein Zugriff auf Ihre Daten
+## Datenschutz und Sicherheit
 
-Während Operator auf den Kontext Ihrer Arbeit in Braze zugreifen kann, kann Operator die in Braze gespeicherten Daten Ihres Unternehmens weder abfragen noch Antworten liefern. Es **kann zum Beispiel nicht** auf Anfragen wie diese reagieren:
+### Konformität mit dem US-Gesetz zum Schutz medizinischer Daten (HIPAA)
 
-- "Geben Sie mir eine Liste aller meiner E-Mail Kampagnen vom letzten Jahr."
-- "Zeigen Sie mir, welche Segmente im letzten Quartal das höchste Engagement hatten."
-- "Analysieren Sie meine Canvas Performance und schlagen Sie Verbesserungen vor."
+Der KI-Operator nutzt eine Multi-Turn-Konversationstechnologie, die derzeit nicht für die Zero-Data-Retention-Richtlinie von OpenAI in Frage kommt. Der KI-Operator verwendet die modifizierte Richtlinie zur Überwachung von Missbrauch (Modified Abuse Monitoring) von OpenAI zur Datenspeicherung, fällt jedoch nicht unter die Business Associate Agreement (BAA) zwischen Braze und OpenAI. Nutzer:innen sollten den KI-Operator nicht auffordern, auf geschützte Gesundheitsdaten (Protected Health Information, PHI) zuzugreifen, die in Braze gespeichert sind, oder PHI anderweitig an dieses Feature zu übermitteln.
 
-### Beta-Stabilität
+### Modellanbieter als Unterauftragsverarbeiter oder Drittanbieter
 
-Da es sich um eine private Beta-Version handelt, kann Operator gelegentlich Fehler, Unterbrechungen oder unvollständige Features aufweisen.
+Wenn Sie eine Integration mit einem LLM-Anbieter nutzen, der von Braze über die Braze-Dienste bereitgestellt wird („von Braze bereitgestelltes LLM"), fungieren die Anbieter dieses von Braze bereitgestellten LLM als Unterauftragsverarbeiter von Braze, vorbehaltlich der Bestimmungen des Datenverarbeitungszusatzes (DPA) zwischen Ihnen und Braze. BrazeAI Operator<sup>TM</sup> verfügt über eine Integration mit OpenAI.
 
-Wenn Sie sich nicht sicher sind, ob eine Frage unterstützt wird, versuchen Sie, sie so zu formulieren, dass Operator Ihnen bei der Navigation oder der Durchführung von Aktionen innerhalb des Braze-Dashboards helfen kann, anstatt Daten aus Analytics oder historischen Daten abzurufen.
+### Wie Daten mit OpenAI verwendet werden
+
+Um KI-Ausgaben über BrazeAI-Features zu generieren, die OpenAI nutzen („Ausgabe"), übermittelt Braze bestimmte Informationen („Eingabe") an OpenAI. Die Eingabe umfasst Ihre Prompts, die im Dashboard angezeigten Inhalte und die für Ihre Anfragen relevanten Workspace-Daten. Gemäß [den Verpflichtungen der API-Plattform von OpenAI](https://openai.com/enterprise-privacy/) werden Daten, die über Braze an die API von OpenAI gesendet werden, nicht zum Trainieren oder Verbessern von OpenAI-Modellen verwendet. Zwischen Ihnen und Braze ist die Ausgabe Ihr geistiges Eigentum. Braze erhebt keine Ansprüche auf das Urheberrecht an solchen Ausgaben. Braze übernimmt keinerlei Gewährleistung in Bezug auf KI-generierte Inhalte, einschließlich der Ausgabe.
+
+## Nächste Schritte
+
+- [Aktionen überprüfen]({{site.baseurl}}/user_guide/brazeai/operator/reviewing_actions/): Erfahren Sie, wie Sie die von Operator vorgeschlagenen Änderungen überprüfen und genehmigen können.
+- [Support-Tickets einreichen]({{site.baseurl}}/user_guide/brazeai/operator/support_tickets/): Reichen Sie Support-Tickets direkt über Operator ein.
+- [Fehlerbehebung]({{site.baseurl}}/user_guide/brazeai/operator/troubleshooting/): Häufige Probleme und Lösungen

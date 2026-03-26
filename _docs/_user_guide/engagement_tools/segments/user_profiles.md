@@ -26,6 +26,10 @@ To access a user's profile, go to the **Search Users** page and search for a use
 
 If a match is found, you can view the information you've recorded for this user with the Braze SDK. Otherwise, if your search returns multiple user profiles, you can merge each profile individually or perform a bulk user merge. For a full walkthrough, see [Duplicate Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
+{% alert important %}
+When a phone number is used in the search, it is changed into [`E.164`](https://en.wikipedia.org/wiki/e.164) format. Users whose phone numbers cannot be changed into `E.164` format (for example, because the phone number has an invalid country code or area code) cannot be searched by phone number.
+{% endalert %}
+
 ![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
 
 ## Use cases
@@ -59,7 +63,7 @@ The **Overview** tab contains basic information about a user and their interacti
 | Purchases | Lifetime revenue attributed to this user, their last purchase, total number of purchases, and a list of each purchase. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For more information on this data, see [User Data Collection]({{site.baseurl}}/user_guide/data/user_data_collection/).
+For more information on this data, see [SDK data collection]({{site.baseurl}}/user_guide/data/unification/user_data/sdk_data_collection/).
 
 ![The Overview tab of a user profile.]({% image_buster /assets/img_archive/user_profile2.png %})
 
@@ -83,10 +87,10 @@ The **Engagement** tab contains information about a user's interactions with the
 
 ### Messaging History tab
 
-The **Message History** tab of the user profile shows recent messaging-related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more. Note that the data in this tab isn't updated after a user is merged.
+The **Message History** tab of the user profile shows recent messaging-related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more. 
 
 {% alert note %}
-If you have feedback on this table or would like to see specific events, please email [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) with the subject line "Messaging History Tab Feedback".
+The data in this tab isn't updated after a user is merged. Additionally, any events associated with messages sent through API (for example, the [/messages/send endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/#creating-new-users-with-api-sends) will not appear in this tab if there is no campaign ID specified in those sends.
 {% endalert %}
 
 ![The Messaging History tab showing which campaigns and Canvases a user has received.]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
@@ -147,5 +151,11 @@ Some fields may be absent in a user's **Message History** tab in the following s
 - When an event is missing data for **Campaign/Canvas** and **Message Sent**, this indicates that this message was sent from an API campaign (not API-triggered campaigns) that didn't specify the `campaign_id` and `message_variation_id`. These fields are optional and may be left out of the request body. When these fields are specified, that information is populated into the message history logs.
    - If a particular message is missing entirely from the messaging history but appears in the **Campaigns Received** log, it's likely the user received the campaign before being identified as the current user. If an existing profile is orphaned, the **Campaigns Received** log is transferred, but the messaging history is not. 
 - When data is missing for **Campaign/Canvas**, a manual test may have been sent. Manual tests are logged in the **Messaging History** tab, but the campaign or Canvas that was sent won't be logged.
+
+## Related articles
+
+- [User profile lifecycle]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/)
+- [POST: Export user profile by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)
+- [POST: Delete users]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)
 
 

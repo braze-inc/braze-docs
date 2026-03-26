@@ -1,7 +1,7 @@
 ---
 nav_title: Eingebettete Anmeldung
 article_title: Eingebettete WhatsApp-Anmeldung
-page_order: 0
+page_order: 1
 description: "Dieser Referenzartikel bietet eine Schritt-für-Schritt-Anleitung für den in WhatsApp eingebetteten Anmelde-Workflow in Braze."
 page_type: reference
 channel:
@@ -34,13 +34,13 @@ Der Arbeitsablauf von hier aus ist für beide Anwendungsfälle gleich.
 3. Wählen Sie in der Dropdown-Liste **Geschäftsportfolio** Ihr Geschäftsportfolio aus und wählen Sie dann **Weiter**. Dies stellt eine Verbindung zu Ihrem WhatsApp Business-Konto her. Wenn Sie also Ihr erwartetes Business-Portfolio nicht sehen, überprüfen Sie Ihre Berechtigungen.<br><br>![Ein Fenster mit Feldern zur Eingabe Ihrer Geschäftsinformationen, einschließlich des Namens Ihres Geschäftsportfolios.]({% image_buster /assets/img/whatsapp/business_info.png %}){: style="max-width:50%;"}<br><br>
 4. Wählen Sie in den Dropdown-Feldern Folgendes aus und wählen Sie dann **Weiter**.
 - **Wählen Sie ein WhatsApp Business-Konto**: Erstellen Sie ein WhatsApp Geschäftskonto
-- **Erstellen oder wählen Sie ein WhatsApp Business-Profil**: Erstellen Sie ein neues WhatsApp-Geschäftsprofil <br><br>Felder zur Angabe, ob Sie ein WhatsApp Business-Konto und -Profil auswählen oder erstellen.]({% image_buster /assets/img/whatsapp/create_select_waba.png %}){: style="max-width:50%;"}<br><br>
+- **Erstellen oder wählen Sie ein WhatsApp Business-Profil**: Erstellen Sie ein neues WhatsApp-Geschäftsprofil <br><br>![Felder, die Sie ausfüllen müssen, wenn Sie ein WhatsApp-Business-Konto und -Profil auswählen oder erstellen.]({% image_buster /assets/img/whatsapp/create_select_waba.png %}){: style="max-width:50%;"}<br><br>
 5. Machen Sie die folgenden Angaben und wählen Sie dann **Weiter**.
 - WhatsApp Geschäftskonto Name
 - WhatsApp-Anzeigename für Unternehmen
-- Kategorie <br><br>Felder zur Angabe von Details für das neue WhatsApp Business-Konto.]({% image_buster /assets/img/whatsapp/waba_details.png %}){: style="max-width:50%;"}<br><br>
+- Kategorie <br><br>![Felder zur Angabe von Details für das neue WhatsApp Business-Konto.]({% image_buster /assets/img/whatsapp/waba_details.png %}){: style="max-width:50%;"}<br><br>
 6. Geben Sie Ihre Telefonnummer ein und wählen Sie entweder **Textnachricht** oder **Telefonanruf**. Diese Nummer muss alle Anforderungen an eine WhatsApp-Telefonnummer erfüllen, einschließlich der, dass sie nicht für andere WhatsApp-Konten registriert ist. <br><br>![Felder zum Hinzufügen einer Telefonnummer.]({% image_buster /assets/img/whatsapp/add_phone_number.png %}){: style="max-width:50%;"}<br><br>
-7. Geben Sie Ihren Code für die Zwei-Faktor-Authentifizierung ein und wählen Sie dann **Weiter**. <br><br>![Ein Eingabefeld für einen Zwei-Faktor-Authentifizierungs Code.]({% image_buster /assets/img/whatsapp/two_factor.png %}){: style="max-width:50%;"}<br><br>
-8. Überprüfen Sie die Berechtigungen, die Ihr WhatsApp Business-Konto erhalten wird, und wählen Sie dann **Weiter**. <br><br>![Liste der vom WhatsApp Business-Konto angefragten Berechtigungen.]({% image_buster /assets/img/whatsapp/permissions.png %}){: style="max-width:50%;"}<br><br>
-9. Sie sind fertig! <br><br>![Fenster, das Ihnen anzeigt, dass Sie mit dem Messaging beginnen können.]({% image_buster /assets/img/whatsapp/finish.png %}){: style="max-width:50%;"}
+7. Geben Sie Ihren Code für die Zwei-Faktor-Authentifizierung ein und wählen Sie dann **Weiter**. <br><br>![Ein Eingabefeld für einen Zwei-Faktor-Authentifizierungscode.]({% image_buster /assets/img/whatsapp/two_factor.png %}){: style="max-width:50%;"}<br><br>
+8. Überprüfen Sie die Berechtigungen, die Ihr WhatsApp Business-Konto erhalten wird, und wählen Sie dann **Weiter**. <br><br>![Liste der vom WhatsApp Business-Konto angeforderten Berechtigungen.]({% image_buster /assets/img/whatsapp/permissions.png %}){: style="max-width:50%;"}<br><br>
+9. Sie sind fertig! <br><br>![Fenster, das anzeigt, dass Sie bereit sind, Nachrichten an Personen zu senden.]({% image_buster /assets/img/whatsapp/finish.png %}){: style="max-width:50%;"}
 

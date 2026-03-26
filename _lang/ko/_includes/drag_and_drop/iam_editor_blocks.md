@@ -1,6 +1,6 @@
-## 인앱 메시지 편집기 블록 사용하기
+## 인앱 메시지 편집기 블록 사용
 
-편집기 블록은 인앱 메시지 **구축** 섹션 아래에 있습니다. 이를 사용하려면 열 안의 편집기 블록을 드래그합니다. 열 너비에 맞게 자동으로 조정됩니다. 각 편집기 블록에는 패딩에 대한 세분화된 제어와 같은 자체 설정이 있습니다. 오른쪽 패널은 선택한 콘텐츠 요소의 속성 패널로 자동 전환됩니다.
+편집기 블록은 인앱 메시지의 **구축** 섹션 아래에 위치합니다. 사용하려면 편집기 블록을 열 안으로 드래그하세요. 열 너비에 맞게 자동으로 조정됩니다. 각 편집기 블록에는 패딩에 대한 세분화된 제어와 같은 자체 설정이 있습니다. 오른쪽 패널은 선택한 콘텐츠 요소의 등록정보 패널로 자동 전환됩니다.
 
 ## 유형
 
@@ -8,145 +8,147 @@
 
 | 이름 | 설명 |
 | --- | --- |
-| 제목 | Enters a title text into the message. |
-| 단락  | Enters a paragraph text into the message. |
-| 버튼 | 표준 버튼을 추가합니다. 이 블록의 속성을 사용하면 편집, 링크 설정 및 분석 로깅을 수행할 수 있습니다. |
-| Radio Button | 사용자가 선택할 수 있는 옵션 목록을 추가합니다. 제출되면 사용자 프로필은 관련 사용자 지정 속성을 기록합니다. |
-| 이미지 | [미디어 라이브러리에서]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) 이미지를 삽입합니다. |
-| 링크 | Inserts a hyperlink that users can click to navigate to a specified URL. Can be embedded within text or standalone. |
+| 제목 | 메시지에 제목 텍스트를 입력합니다. |
+| 단락 | 메시지에 단락 텍스트를 입력합니다. |
+| 버튼 | 표준 버튼을 추가합니다. 이 블록의 등록정보를 사용하면 편집, 링크 설정 및 분석 로깅을 수행할 수 있습니다. |
+| 라디오 버튼 | 사용자가 하나를 선택할 수 있는 옵션 목록을 추가합니다. 제출 시, 고객 프로필에 관련 커스텀 속성이 기록되며, 저장하려면 문자열이어야 합니다. 다른 데이터 유형의 커스텀 속성은 고객 프로필에 저장되지 않습니다. |
+| 이미지 | [미디어 라이브러리]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/)에서 이미지를 삽입합니다. |
+| 링크 | 사용자가 클릭하여 지정된 URL로 이동할 수 있는 하이퍼링크를 삽입합니다. 텍스트 내에 포함하거나 독립적으로 사용할 수 있습니다. |
 | 공백 | 다른 블록 사이에 공간이나 패딩을 추가합니다. |
-| 사용자 지정 코드 | Inserts and runs custom HTML, CSS, or JavaScript for advanced customization.  |
-| Phone Capture | Inserts a form field for phone numbers. 제출하면 사용자는 [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) 또는 [WhatsApp 구독 그룹에]({{site.baseurl}}/whatsapp_subscription_groups/) 가입하게 됩니다. |
-| 이메일 캡처 | Inserts a form field for email addresses. When submitted, the email address is added to that user's profile in Braze. |
-| Dropdown      | Inserts a dropdown with a pre-defined list of items from which users can select one. You can add any custom attribute strings to the list. |
-| Checkbox      | Inserts a checkbox. If the user checks the box, the block's attribute is set to `true`. If left unchecked, its attribute is set to `false`. |
-| 체크박스 그룹| 사용자는 제시된 여러 선택지 중에서 선택할 수 있습니다. 값은 정의된 배열 커스텀 속성에 설정되거나 추가됩니다. |
+| 커스텀 코드 | 고급 커스터마이징을 위해 커스텀 HTML, CSS 또는 JavaScript를 삽입하고 실행합니다. |
+| 전화번호 캡처 | 전화번호 입력 양식 필드를 삽입합니다. 제출 시, 사용자는 [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) 또는 [WhatsApp 구독 그룹]({{site.baseurl}}/whatsapp_subscription_groups/)에 가입됩니다. |
+| 이메일 캡처 | 이메일 주소 입력 양식 필드를 삽입합니다. 제출 시, 이메일 주소가 Braze에서 해당 사용자의 프로필에 추가됩니다. |
+| 짧은 텍스트 | 표준 속성(예: 이름 및 성) 또는 원하는 커스텀 속성 문자열을 지원하는 양식 필드를 삽입합니다. |
+| 드롭다운 | 사용자가 하나를 선택할 수 있는 미리 정의된 항목 목록이 포함된 드롭다운을 삽입합니다. 목록에 커스텀 속성 문자열을 추가할 수 있습니다. |
+| 체크박스 | 체크박스를 삽입합니다. 사용자가 체크박스를 선택하면 블록의 속성이 `true`로 설정됩니다. 선택하지 않으면 속성이 `false`로 설정됩니다. |
+| 체크박스 그룹 | 사용자는 제시된 여러 선택지 중에서 선택할 수 있습니다. 값은 정의된 배열 커스텀 속성에 설정되거나 추가됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 등록정보
 
-각 편집기 블록의 속성에 대한 자세한 내용은 다음 표에 나와 있습니다.
+각 편집기 블록의 등록정보에 대한 세부 정보는 다음 표에 나와 있습니다.
 
 ### 제목 및 단락
 
-| Property | 설명 |
+| 등록정보 | 설명 |
 | --- | --- |
-| Font family | The font style for the text |
-| Font weight | Determines the thickness of the text |
-| Font size | Determines the size of the text |
-| Line height | 텍스트 줄 사이의 거리를 수정합니다. |
+| 글꼴 패밀리 | 텍스트의 글꼴 스타일입니다. |
+| 글꼴 두께 | 텍스트의 두께를 결정합니다. |
+| 글꼴 크기 | 텍스트의 크기를 결정합니다. |
+| 줄 높이 | 텍스트 줄 사이의 거리를 수정합니다. |
 | 문자 간격 | 각 문자 사이의 거리를 수정합니다. |
-| Text alignment | 텍스트를 왼쪽, 가운데, 오른쪽 또는 맞춤으로 정렬하도록 이동합니다. |
-| Text color | 텍스트의 색상을 수정합니다. |
+| 텍스트 정렬 | 텍스트를 왼쪽, 가운데, 오른쪽 또는 양쪽 맞춤으로 정렬합니다. |
+| 텍스트 색상 | 텍스트의 색상을 수정합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 버튼
 
-| Property | 설명 |
+| 등록정보 | 설명 |
 | --- | --- |
-| Button width | Modifies the width of the button to be automatic or manual |
-| Font family | This is the font style for the text |
-| Font weight | Determines the thickness of the text |
-| Font size | Determines the size of the text |
+| 버튼 너비 | 버튼의 너비를 자동 또는 수동으로 수정합니다. |
+| 글꼴 패밀리 | 텍스트의 글꼴 스타일입니다. |
+| 글꼴 두께 | 텍스트의 두께를 결정합니다. |
+| 글꼴 크기 | 텍스트의 크기를 결정합니다. |
 | 문자 간격 | 각 문자 사이의 거리를 수정합니다. |
-| Button alignment | Moves the button to be left, center, or right-oriented |
-| Button text color | Modifies the color of the text on the button |
-| 배경색 | Modifies the color of the button's background |
-| Border style | Determines the style of the button's border of the button | 
-| Border radius | 모서리를 얼마나 둥글게 만들지 결정합니다. |
+| 버튼 정렬 | 버튼을 왼쪽, 가운데 또는 오른쪽으로 정렬합니다. |
+| 버튼 텍스트 색상 | 버튼의 텍스트 색상을 수정합니다. |
+| 배경색 | 버튼의 배경색을 수정합니다. |
+| 테두리 스타일 | 버튼의 테두리 스타일을 결정합니다. | 
+| 테두리 반경 | 모서리를 얼마나 둥글게 만들지 결정합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 이미지
 
-| Property | 설명 |
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
+| 등록정보 | 설명 |
 | --- | --- |
-| URL | The hosted address for the image |
-| Alignment | Moves the image to be left, center, or right-oriented |
-| 배경색 | Modifies the color of the image's background |
-| Border style | Determines the style of the image's border | 
-| Border radius | Determines how round you would like the corners of the image |
+| URL | 이미지의 호스팅 주소입니다. |
+| 정렬 | 이미지를 왼쪽, 가운데 또는 오른쪽으로 정렬합니다. |
+| 배경색 | 이미지의 배경색을 수정합니다. |
+| 테두리 스타일 | 이미지의 테두리 스타일을 결정합니다. | 
+| 테두리 반경 | 이미지의 모서리를 얼마나 둥글게 만들지 결정합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Link
+### 링크
 
-| Property | 설명 |
+| 등록정보 | 설명 |
 | --- | --- |
-| Font family | This is the font style for the text |
-| Font weight | Determines the thickness of the text |
+| 글꼴 패밀리 | 텍스트의 글꼴 스타일입니다. |
+| 글꼴 두께 | 텍스트의 두께를 결정합니다. |
 | 문자 간격 | 각 문자 사이의 거리를 수정합니다. |
-| Text color | 텍스트의 색상을 수정합니다. |
+| 텍스트 색상 | 텍스트의 색상을 수정합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 공백
 
-| Property | 설명 |
+| 등록정보 | 설명 |
 | --- | --- |
 | 배경색 | 스페이서의 배경색을 수정합니다. |
 | 높이 | 스페이서의 높이를 수정합니다. 스페이서의 크기 조정 핸들을 사용하여 수정할 수도 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Custom code
+### 커스텀 코드
 
-| Property | 설명 |
+| 등록정보 | 설명 |
 | --- | --- |
-| 사용자 지정 코드 | 인앱 메시지의 HTML, CSS 및 JavaScript를 추가, 편집 또는 삭제할 수 있습니다. |
+| 커스텀 코드 | 인앱 메시지의 HTML, CSS 및 JavaScript를 추가, 편집 또는 삭제할 수 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Phone capture
+### 전화번호 캡처
 
-| Property | 설명 |
+| 등록정보 | 설명 |
 | --- | --- |
-| 구독 그룹 | 사용자가 전화번호를 수집하여 가입할 [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) 또는 [WhatsApp 구독 그룹]({{site.baseurl}}/whatsapp_subscription_groups/) (모든 국가의 번호를 수집할 수 있는 옵션 포함) |
-| Text alignment | 텍스트를 왼쪽, 가운데, 오른쪽 또는 맞춤으로 정렬하도록 이동합니다. |
-| Placeholder text | A placeholder phone number to display |
+| 구독 그룹 | 사용자의 전화번호를 수집하여 가입시킬 [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) 또는 [WhatsApp 구독 그룹]({{site.baseurl}}/whatsapp_subscription_groups/)이며, 모든 국가의 번호를 수집할 수 있는 옵션이 있습니다. |
+| 텍스트 정렬 | 텍스트를 왼쪽, 가운데, 오른쪽 또는 양쪽 맞춤으로 정렬합니다. |
+| 입력 안내 텍스트 | 표시할 입력 안내 전화번호입니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Email capture
+### 이메일 캡처
 
-| Property | 설명 |
+| 등록정보 | 설명 |
 | --- | --- |
-| Font family | The font style for the text |
-| Font weight | Determines the thickness of the text |
-| Font size | Determines the size of the text |
-| Line height | 텍스트 줄 사이의 거리를 수정합니다. |
-| Text color | 텍스트의 색상을 수정합니다. |
+| 글꼴 패밀리 | 텍스트의 글꼴 스타일입니다. |
+| 글꼴 두께 | 텍스트의 두께를 결정합니다. |
+| 글꼴 크기 | 텍스트의 크기를 결정합니다. |
+| 줄 높이 | 텍스트 줄 사이의 거리를 수정합니다. |
+| 텍스트 색상 | 텍스트의 색상을 수정합니다. |
 | 문자 간격 | 각 문자 사이의 거리를 수정합니다. |
-| Text alignment | 텍스트를 왼쪽, 가운데, 오른쪽 또는 맞춤으로 정렬하도록 이동합니다. |
-| Placeholder text | A placeholder email address to display |
+| 텍스트 정렬 | 텍스트를 왼쪽, 가운데, 오른쪽 또는 양쪽 맞춤으로 정렬합니다. |
+| 입력 안내 텍스트 | 표시할 입력 안내 이메일 주소입니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## 행동
+## 동작
 
-사용자가 메시징의 버튼, 링크 또는 이미지를 탭할 때 발생하는 동작을 지정할 수 있습니다. [Liquid를]({{site.baseurl}}/liquid/) 사용하여 작업을 개인화할 수도 있습니다. Details for each editor block's actions are provided in the following tables.
+사용자가 메시지에서 버튼, 링크 또는 이미지를 탭할 때 발생하는 동작을 할당할 수 있습니다. 동작을 개인화하기 위해 [Liquid]({{site.baseurl}}/liquid/)를 사용할 수도 있습니다. 각 편집기 블록의 동작에 대한 세부 정보는 다음 표에 나와 있습니다.
 
 ### 버튼
 
-| Action | 설명 |
+| 동작 | 설명 |
 | --- | --- |
-| Submit form when button is clicked | Submits the form and performs the selected on-click behavior. Turn this off to only perform the on-click behavior. |
-| Set separate behaviors for each platform | Customizes the behavior of the button for each platform separately. |
-| On-click behavior | 사용자가 메시지 닫기, 웹 URL 열기, 앱의 특정 페이지로 디링크, 다른 페이지로 이동, [푸시 권한 요청]({{site.baseurl}}/push_primer/) 등 버튼을 클릭할 때 수행할 작업을 결정합니다. |
-| Log custom attributes or events | Determines if clicking the button will update the user's profile with custom data. You can also select the identifier for reporting. |
+| 버튼 클릭 시 양식 제출 | 양식을 제출하고 선택한 클릭 시 동작을 수행합니다. 클릭 시 동작만 수행하려면 이 옵션을 끄세요. |
+| 각 플랫폼별 별도 동작 설정 | 각 플랫폼별로 버튼의 동작을 개별적으로 커스터마이징합니다. |
+| 클릭 시 동작 | 사용자가 버튼을 클릭할 때의 동작을 결정합니다. 예를 들어 메시지를 닫거나, 웹 URL을 열거나, 앱의 특정 페이지로 딥링크하거나, 다른 페이지로 이동하거나, [푸시 권한 요청]({{site.baseurl}}/push_primer/)을 할 수 있습니다. |
+| 커스텀 속성 또는 이벤트 기록 | 버튼 클릭 시 커스텀 데이터로 고객 프로필을 업데이트할지 결정합니다. 보고용 식별자를 선택할 수도 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 이미지
 
-이미지 사양은 [인앱 메시지 이미지 사양을]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#in-app-messages) 참조하세요.
+이미지 사양에 대한 내용은 [인앱 메시지 이미지 사양]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#in-app-messages)을 참조하세요.
 
-| Action | 설명 |
+| 동작 | 설명 |
 | --- | --- |
-| Alt text | 이미지가 로드되지 않을 경우 이미지 대신 표시되는 텍스트 사본입니다. Screen readers announce alt text to explain images, so use plain language to provide key information about an image. |
-| Submit form when image is clicked | Submits the form and performs the selected on-click behavior. Turn this off to only perform the on-click behavior. |
-| Set separate behaviors for each platform | Customizes the behavior of the image for each platform separately. |
-| On-click behavior | 사용자가 이미지를 클릭할 때 수행할 작업(예: 메시지 닫기, 웹 URL 열기, 앱의 특정 페이지로 디링크, 다른 페이지로 이동, [푸시 권한 요청]({{site.baseurl}}/push_primer/) 등)을 결정합니다. |
-| Log custom attributes or events | Determines if clicking the image will update the user's profile with custom data. You can also select the identifier for reporting. |
+| 대체 텍스트 | 이미지가 로드되지 않을 경우 이미지 대신 표시되는 텍스트입니다. 스크린 리더는 대체 텍스트를 읽어 이미지를 설명하므로, 이미지에 대한 핵심 정보를 쉬운 언어로 제공하세요. |
+| 이미지 클릭 시 양식 제출 | 양식을 제출하고 선택한 클릭 시 동작을 수행합니다. 클릭 시 동작만 수행하려면 이 옵션을 끄세요. |
+| 각 플랫폼별 별도 동작 설정 | 각 플랫폼별로 이미지의 동작을 개별적으로 커스터마이징합니다. |
+| 클릭 시 동작 | 사용자가 이미지를 클릭할 때의 동작을 결정합니다. 예를 들어 메시지를 닫거나, 웹 URL을 열거나, 앱의 특정 페이지로 딥링크하거나, 다른 페이지로 이동하거나, [푸시 권한 요청]({{site.baseurl}}/push_primer/)을 할 수 있습니다. |
+| 커스텀 속성 또는 이벤트 기록 | 이미지 클릭 시 커스텀 데이터로 고객 프로필을 업데이트할지 결정합니다. 보고용 식별자를 선택할 수도 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Link
+### 링크
 
-| Action | 설명 |
+| 동작 | 설명 |
 | --- | --- |
-| URL | The hyperlink to navigate to |
-| Identifier for Reporting | 보고에 사용할 식별자를 결정합니다. |
+| URL | 이동할 하이퍼링크입니다. |
+| 보고용 식별자 | 보고에 사용되는 식별자를 결정합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-

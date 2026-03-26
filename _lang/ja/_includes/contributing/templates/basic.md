@@ -1,6 +1,6 @@
 このテンプレートを使って、Braze Docsのあらゆるページやセクションを作成できる。例については、[プレビューを生成する]({{site.baseurl}}/contributing/generating_a_preview/)を参照してください。記事内で使用されるドキュメントタイプのガイドラインについては、[ページタイプ]({{site.baseurl}}/contributing/page_types/)を参照してください。
 
-{% details テンプレートを表示 %}
+{% details Show template %}
 {% raw %}
 `````markdown
 ---

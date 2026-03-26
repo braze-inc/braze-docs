@@ -1,12 +1,12 @@
 ## 前提条件
 
-このチュートリアルを始める前に、お使いのBraze SDKが最小バージョン要件を満たしていることを確認する：
+このチュートリアルを始める前に、Braze SDKが最低バージョン要件を満たしていることを確認せよ：
 
 {% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
 
 ## Web SDKのバナーを表示する
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="バナーウェブの表示" %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Displaying Banners Web" %}
 
 {% scrolly %}
 
@@ -56,31 +56,31 @@ lines-index.js=5
 !!step
 lines-index.js=8-23
 
-#### 2\.バナーの更新をサブスクライバーする
+#### 2\.バナーの更新情報をサブスクライバーが購読する
 
-`subscribeToBannersUpdates()` 、バナーが更新されるたびに実行されるハンドラを登録する。ハンドラー内部で、`braze.getBanner("global_banner")` を呼び出し、最新の配置を取得する。
+バナーが更新されるたびに実行されるハンドラを登録するには、\``subscribeToBannersUpdates()`use` を使用する。ハンドラ内で、最新の配置を取得`braze.getBanner("global_banner")`するために呼び出す。
 
 !!step
 lines-index.js=15-22
 
-#### 3\.バナーとハンドルコントロールグループを挿入する。
+#### 3\.バナーを挿入し、コントロールグループを扱う
 
-`braze.insertBanner(banner, container)` 、バナーが返されたときに挿入する。レイアウトをすっきりさせるために、コントロールグループに属するバナーは非表示または折りたたむ（たとえば、`isControl` が`true` の場合）。
+バナーが返却されたら、を使って`braze.insertBanner(banner, container)`挿入する。レイアウトを整理するために、コントロールグループの一部であるバナーは非表示にするか折りたたむこと（例えば、が`isControl`の場合`true`）。
 
 !!step
 lines-index.js=25
 
-#### 4. バナーをリフレッシュする
+#### 4. バナーを更新する
 
-SDKを初期化した後、`requestBannersRefresh(["global_banner", ...])` を呼び出し、各セッションの開始時にバナーがリフレッシュされるようにする。
+SDKを初期化した後、各セッションの開始時にバナーが更新されるように、\`refreshBanners()\`を`requestBannersRefresh(["global_banner", ...])`呼び出す。
 
-また、この関数をいつでも呼び出して、後でバナーの配置をリフレッシュすることもできる。
+この関数は後でバナー配置を更新するため、いつでも呼び出すことができる。
 
 !!step
 lines-main.html=3
 
 #### 5. バナー用のコンテナを追加する
 
-HTMLに新しい`<div>` 要素を追加し、`global-banner-container` のように、バナー関連の短い`id` を付ける。Brazeはこの`<div>` 、あなたのバナーをページに挿入する。
+HTMLに新しい\`banner`<div>``要素を追加し、短いバナー関連の`class`を付ける。`global-banner-container`例えば\``id`class="banner"`のように。Brazeはこのコードを使用して、あなたの`<div>`バナーをページに挿入する。
 
 {% endscrolly %}

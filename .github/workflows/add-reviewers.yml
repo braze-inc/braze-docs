@@ -1,0 +1,203 @@
+name: Add Reviewers
+
+on:
+  pull_request:
+    types: [opened, edited, ready_for_review, labeled, unlabeled]
+
+jobs:
+  add-reviewers:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Check assignees and PR diff
+        id: check
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = context.payload.pull_request;
+            const prNumber = pr.number;
+            const prBody = (pr.body || '').toLowerCase();
+            const assignees = pr.assignees.map(a => a.login.toLowerCase());
+            
+            console.log('PR Number:', prNumber);
+            console.log('Assignees:', assignees);
+            console.log('PR Body:', prBody);
+            
+            let reviewersToAdd = [];
+            let teamsToAdd = [];
+            const labels = (pr.labels || []).map(l => l.name.toLowerCase());
+            const legalTeam = 'ats-91';
+            let scanIncomplete = false;
+            
+            // Rule 1: If PR has Deploy label (nightly deploy PRs), add docs-team only
+            if (labels.includes('deploy')) {
+              console.log('Deploy PR - adding docs-team');
+              teamsToAdd.push('docs-team');
+            } else {
+              // Rule 2: If Copilot is assigned, add docs-team
+              if (assignees.includes('github-copilot[bot]')) {
+                console.log('Copilot is assigned - adding docs-team');
+                teamsToAdd.push('docs-team');
+              }
+            
+            // Rule 3: If PR diff contains privacy/legal/GDPR keywords, add legal team
+            let diff = '';
+
+            try {
+              const diffData = await github.rest.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: prNumber,
+                mediaType: { format: 'diff' }
+              });
+              diff = (diffData.data || '').toLowerCase();
+            } catch (err) {
+              if (err.message?.includes('300') || err.message?.includes('too_large')) {
+                console.log('Diff exceeded 300 files, falling back to listFiles (scan may miss binary/truncated content)');
+                scanIncomplete = true;
+                const files = await github.paginate(github.rest.pulls.listFiles, {
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: prNumber
+                });
+                const filesWithoutPatch = files.filter(f => !f.patch).length;
+                if (filesWithoutPatch > 0) {
+                  console.log(`${filesWithoutPatch} file(s) have no patch (binary or omitted) - legal scan may be incomplete`);
+                }
+                diff = files.map(f => f.patch || '').filter(Boolean).join('\n').toLowerCase();
+              } else {
+                throw err;
+              }
+            }
+            const keywords = [
+              'law',
+              'laws',
+              'regulation',
+              'regulations',
+              'privacy',
+              'personal data',
+              'personally identifiable information',
+              'pii',
+              'legal',
+              'contract',
+              'msa',
+              'data processing addendum',
+              'dpa',
+              'gdpr',
+              'ccpa',
+              'tcpa',
+              'hipaa',
+              'coppa',
+              'compliance',
+              'comply',
+              'compliant',
+              'jurisdiction',
+              'confidentiality',
+              'cookie',
+              'consent',
+              'personal information',
+              'phi',
+              'opt-in',
+              'opt in',
+              'opt-out',
+              'opt out',
+              'spam',
+              'can-spam',
+              'casl',
+              'liability',
+              'liable',
+              'tracking',
+              'governance',
+              'agreement',
+              'notice',
+              'policy',
+              'subscribe',
+              'subscription',
+              'subscribed',
+              'directive',
+              'directives'];
+
+            const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const containsKeyword = keywords.some(keyword => {
+              // If the keyword contains a space or hyphen, do a simple case-insensitive substring match
+              if (/\s|-/.test(keyword)) {
+                return diff.includes(keyword.toLowerCase());
+              } else {
+                // Single word: use word boundaries
+                return new RegExp(`\\b${escapeRegex(keyword)}\\b`, 'i').test(diff);
+              }
+            });
+            
+            if (containsKeyword) {
+              console.log('Found privacy/legal/GDPR keyword in diff - adding legal team');
+              reviewersToAdd.push(legalTeam);
+            } else if (scanIncomplete) {
+              console.log('Scan incomplete (fallback used) - adding legal team as precaution');
+              reviewersToAdd.push(legalTeam);
+            }
+            }
+            
+            // Get current reviewers to avoid duplicates
+            const { data: currentReviewers } = await github.rest.pulls.listRequestedReviewers({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber
+            });
+            
+            const existingReviewers = currentReviewers.users.map(u => u.login);
+            const existingTeams = currentReviewers.teams.map(t => t.slug);
+            
+            console.log('Existing reviewers:', existingReviewers);
+            console.log('Existing teams:', existingTeams);
+            
+            // Filter out already-added reviewers and teams
+            reviewersToAdd = reviewersToAdd.filter(r => !existingReviewers.includes(r));
+            teamsToAdd = teamsToAdd.filter(t => !existingTeams.includes(t));
+            
+            console.log('Reviewers to add:', reviewersToAdd);
+            console.log('Teams to add:', teamsToAdd);
+            
+            // Add reviewers if any
+            if (reviewersToAdd.length > 0 || teamsToAdd.length > 0) {
+              try {
+                await github.rest.pulls.requestReviewers({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: prNumber,
+                  reviewers: reviewersToAdd,
+                  team_reviewers: teamsToAdd
+                });
+                
+                console.log('Successfully added reviewers');
+                
+                // Add a comment explaining why reviewers were added
+                let commentBody = '🤖 **Automated Reviewer Assignment**: I have automatically added reviewers based on the following:\n\n';
+                
+                if (teamsToAdd.includes('docs-team')) {
+                  const reason = labels.includes('deploy') ? 'Deploy PR' : 'Copilot is assigned to this PR';
+                  commentBody += `- 📝 **@braze-inc/docs-team** - ${reason}\n`;
+                }
+                
+                if (reviewersToAdd.includes(legalTeam)) {
+                  const legalReason = scanIncomplete
+                    ? 'PR is large; legal scan may be incomplete (binary/truncated content not scanned)'
+                    : 'PR diff contains privacy/legal/GDPR-related content';
+                  commentBody += `- ⚖️ **@${legalTeam}** - ${legalReason}\n`;
+                }
+                
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: prNumber,
+                  body: commentBody
+                });
+                
+              } catch (error) {
+                console.error('Error adding reviewers:', error);
+                throw new Error(`Failed to add reviewers: ${error.message}`);
+              }
+            } else {
+              console.log('No new reviewers to add');
+            }

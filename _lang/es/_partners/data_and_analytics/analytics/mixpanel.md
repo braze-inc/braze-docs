@@ -9,7 +9,7 @@ tool: Currents
 
 ---
  
-# [![Curso de Braze Learning] ({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"}Mixpanel
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"} Mixpanel
 
 > [Mixpanel](https://mixpanel.com/) es una plataforma de análisis empresarial que te permite exportar eventos de Mixpanel a otras plataformas para realizar análisis más profundos. Los datos recopilados pueden utilizarse para elaborar informes personalizados y medir la interacción con los usuarios y su retención.
 
@@ -41,7 +41,7 @@ En Braze, ve a \*\*Currents > **\+ Crear Current** > **Crear Exportación Mixpan
 
 ![La página Braze Mixpanel Currents. Esta página incluye campos para el nombre de la integración, el correo electrónico de contacto, el secreto de la API y el token de exportación de Mixpanel. La mitad inferior de la página Currents enumera los eventos Currents disponibles que puedes enviar.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 
-{% tab nota %}
+{% tab note %}
 Consulta [los documentos de integración](https://help.mixpanel.com/hc/en-us/articles/360001243663) de Mixpanel para obtener más información.
 {% endtab %}
 

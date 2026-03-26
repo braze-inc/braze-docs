@@ -1,6 +1,6 @@
 ---
-nav_title: Käufe protokollieren
-article_title: Käufe protokollieren für iOS
+nav_title: Holzankäufe
+article_title: Log-Käufe für iOS
 platform: iOS
 page_order: 4
 description: "Dieser referenzierte Artikel zeigt, wie Sie In-App-Käufe und Einnahmen tracken und Kauf-Details in Ihrer iOS-Anwendung zuweisen können."
@@ -10,9 +10,9 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Käufe protokollieren für iOS
+# Käufe für iOS protokollieren
 
-Erfassen Sie In-App-Käufe, damit Sie Ihre Einnahmen im Laufe der Zeit und über verschiedene Einnahmequellen hinweg verfolgen und Ihre Nutzer nach ihrem Lebenszeitwert segmentieren können.
+Erfassen Sie In-App-Käufe, um Ihre Umsätze im Zeitverlauf über verschiedene Umsatzquellen hinweg zu tracken und Ihre Nutzer nach ihrem Lifetime-Value zu segmentieren.
 
 Braze unterstützt Einkäufe in mehreren Währungen. Einkäufe, die Sie in einer anderen Währung als dem USD melden, werden im Dashboard in USD auf der Grundlage des Wechselkurses an dem Tag, an dem sie gemeldet wurden, angezeigt.
 
@@ -32,7 +32,7 @@ atPrice:[[[NSDecimalNumber alloc] initWithString:@"0.99"] autorelease]];
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"))
@@ -72,7 +72,7 @@ withProperties:@{@"key1":"value1"}];
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"), withProperties: ["key1":"value1"])

@@ -1,14 +1,14 @@
 ---
-nav_title: "Datos de clientes y análisis"
+nav_title: "Datos y análisis"
 article_title: Socios de datos y análisis
 page_order: 5
 
 page_type: landing
-description: "Esta página enumera los socios de Braze (Alloys) que le permiten enviar, almacenar y coordinar de otro modo sus datos a través de diferentes herramientas y proveedores."
+description: "Esta página enumera los socios de Braze (Alloys) que te permiten enviar, almacenar y coordinar tus datos a través de diferentes herramientas y proveedores."
 layout: partner_page
 search_tag: Partner
 
-partner_top_header: "Data & Analytics"
+partner_top_header: "Datos y análisis"
 
 valid_partner_list:
 - name: Optimizely
@@ -53,17 +53,17 @@ valid_partner_list:
   url: /docs/partners/mozart_data/
 - name: SalesWings
   url: /docs/partners/saleswings/
-- name: Scuba
-  url: /docs/partners/scuba/
-- name: Monstruo del buzón de entrada
+- name: Inbox Monster
   url: /docs/partners/inbox_monster/
+- name: Kickbox
+  url: /docs/partners/kickbox/
 - name: Amazon S3
   url: /docs/partners/amazon_s3/
 - name: Google Cloud Storage
   url: /docs/partners/google_cloud_storage_for_currents/
-- name: Almacenamiento Blob de Microsoft Azure
+- name: Microsoft Azure Blob Storage
   url: /docs/partners/microsoft_azure_blob_storage_for_currents/
-- name: Pequeñas pistas
+- name: Tiny Clues
   url: /docs/partners/tinyclues/
 - name: Treasure Data
   url: /docs/partners/treasure_data/
@@ -73,7 +73,7 @@ valid_partner_list:
   url: /docs/partners/actioniq/
 - name: Amperity
   url: /docs/partners/amperity/
-- name: BlueConic
+- name: Blueconic
   url: /docs/partners/blueconic/
 - name: Celebrus
   url: /docs/partners/celebrus/
@@ -119,7 +119,7 @@ valid_partner_list:
   url: /docs/partners/onetrust/
 - name: Snowflake
   url: /docs/partners/snowflake/
-- name: Facebook Lead Ads a través de Zapier
+- name: Facebook Lead Ads via Zapier
   url: /docs/partners/facebook_via_zapier/
 - name: Zapier
   url: /docs/partners/zapier/
@@ -127,25 +127,27 @@ valid_partner_list:
   url: /docs/partners/jebbit/
 - name: Justuno
   url: /docs/partners/justuno/
-- name: Supera a
+- name: Outgrow
   url: /docs/partners/outgrow/
-- name: Rápido
+- name: Quikly
   url: /docs/partners/quikly/
 - name: ViralSweep
   url: /docs/partners/viralsweep/
-- name: Niño prodigio
+- name: Wunderkind
   url: /docs/partners/wunderkind/
 - name: Wyng
   url: /docs/partners/wyng/
 - name: Antavo
   url: /docs/partners/antavo/
-- name: AmigoCompra
+- name: Talon.One
+  url: /docs/partners/talonone/
+- name: FriendBuy
   url: /docs/partners/friendbuy/
 - name: Kognitiv Inspire
   url: /docs/partners/kognitiv/
 - name: Punchh
   url: /docs/partners/punchh/
-- name: SesiónM
+- name: SessionM
   url: /docs/partners/sessionm/
 - name: Voucherify
   url: /docs/partners/voucherify/
@@ -159,8 +161,10 @@ valid_partner_list:
   url: /docs/partners/metarouter/
 - name: Nexla
   url: /docs/partners/nexla/
-- name: Ojo de Águila
+- name: Eagle Eye
   url: /docs/partners/eagle_eye/
 - name: Eppo
   url: /docs/partners/eppo/
+- name: Lemnisk
+  url: /docs/partners/lemnisk/
 ---

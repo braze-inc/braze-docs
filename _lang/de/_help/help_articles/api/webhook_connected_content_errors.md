@@ -11,9 +11,9 @@ description: "In diesem Artikel erfahren Sie, wie Sie Fehlercodes von Webhooks u
 
 > In diesem Artikel erfahren Sie, wie Sie häufige Fehlercodes für Webhooks und Connected-Content beheben können, und erhalten weitere Erklärungen, wie diese Fehler in Ihren Anfragen auftreten können.
 
-## 4XX Fehler
+## 4XX-Fehler
 
-`4XX` Fehler zeigen an, dass es ein Problem mit der an den Endpunkt gesendeten Anfrage gibt. Diese Fehler werden in der Regel durch fehlerhafte Anfragen verursacht, z.B. durch missgebildete Parameter, fehlende Authentifizierungs-Header oder falsche URLs.
+`4XX`-Fehler zeigen an, dass es ein Problem mit der an den Endpunkt gesendeten Anfrage gibt. Diese Fehler werden in der Regel durch fehlerhafte Anfragen verursacht, z. B. durch fehlerhafte Parameter, fehlende Authentifizierungs-Header oder falsche URLs. Beachten Sie, dass diese Fehler auch für den [Berichts-Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder) gelten.
 
 In der folgenden Tabelle finden Sie Details zu den Fehlercodes und Schritte zur Behebung:
 
@@ -28,43 +28,44 @@ table td {
     <tr>
       <th>Fehlercode</th>
       <th>Was es bedeutet</th>
-      <th>Schritte zur Klärung</th>
+      <th>Schritte zur Behebung</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><b>400 Schlechte Anfrage</b></td>
+      <td><b>400 Bad Request</b></td>
       <td>Die Syntax der Anfrage ist ungültig.</td>
       <td>
         <ul>
           <li>Prüfen Sie die Nutzdaten der Anfrage auf Syntaxfehler.</li>
           <li>Vergewissern Sie sich, dass alle erforderlichen Felder enthalten und korrekt formatiert sind.</li>
           <li>Wenn Sie eine JSON-Nutzlast senden, validieren Sie die JSON-Struktur.</li>
+          <li>Wenn Sie Liquid verwenden, um Personalisierungs-Tags in der Webhook-Anfrage als Template einzubinden, überprüfen Sie, dass das Liquid nicht zu einem leeren Wert aufgelöst wird oder JSON-brechende Zeichen erzeugt (z. B. nicht-escapte Anführungszeichen). Zeigen Sie die Nachricht für eine:n Testnutzer:in in der Vorschau an, um zu bestätigen, dass die gerenderte Ausgabe gültig ist.</li>
         </ul>
       </td>
     </tr>
     <tr>
-      <td><b>401 Nicht autorisiert</b></td>
-      <td>Die Anfrage erfordert eine Nutzer:in-Authentifizierung.</td>
+      <td><b>401 Unauthorized</b></td>
+      <td>Die Anfrage erfordert eine Authentifizierung.</td>
       <td>
         <ul>
           <li>Überprüfen Sie, ob die richtigen Zugangsdaten (wie API-Schlüssel oder Token) in den Anfrage-Headern enthalten sind.</li>
-          <li>Vergewissern Sie sich, dass Sie die Nutzer:innen-Berechtigung für den Zugriff auf den Endpunkt haben.</li>
+          <li>Vergewissern Sie sich, dass Sie die Berechtigungen für den Zugriff auf den Endpunkt haben.</li>
         </ul>
       </td>
     </tr>
     <tr>
-      <td><b>403 Verboten</b></td>
+      <td><b>403 Forbidden</b></td>
       <td>Der Endpunkt versteht die Anfrage, weigert sich aber, sie zu autorisieren.</td>
       <td>
         <ul>
           <li>Prüfen Sie, ob der API-Schlüssel oder das Token über die erforderlichen Berechtigungen verfügt.</li>
-          <li>Vergewissern Sie sich, dass Sie die Nutzer:innen-Berechtigung für den Zugriff auf den Endpunkt haben.</li>
+          <li>Vergewissern Sie sich, dass Sie die Berechtigungen für den Zugriff auf den Endpunkt haben.</li>
         </ul>
       </td>
     </tr>
     <tr>
-      <td><b>404 Nicht gefunden</b></td>
+      <td><b>404 Not Found</b></td>
       <td>Der Endpunkt kann die angefragte Ressource nicht finden.</td>
       <td>
         <ul>
@@ -74,7 +75,7 @@ table td {
       </td>
     </tr>
     <tr>
-      <td><b>405 Methode Nicht zulässig</b></td>
+      <td><b>405 Method Not Allowed</b></td>
       <td>Die Methode der Anfrage ist dem Endpunkt bekannt, wird aber von der Zielressource nicht unterstützt.</td>
       <td>
         <ul>
@@ -84,8 +85,8 @@ table td {
       </td>
     </tr>
     <tr>
-      <td><b>408 Zeitüberschreitung der Anfrage</b></td>
-      <td>Der Endpunkt hat die Bearbeitung der Anfrage verzögert.</td>
+      <td><b>408 Request Timeout</b></td>
+      <td>Bei der Verarbeitung der Anfrage ist eine Zeitüberschreitung aufgetreten.</td>
       <td>
         <ul>
           <li>Überprüfen Sie die in der Anfrage verwendete HTTP-Methode (DELETE, GET, POST, PUT).</li>
@@ -94,7 +95,7 @@ table td {
       </td>
     </tr>
     <tr>
-      <td><b>409 Konflikt</b></td>
+      <td><b>409 Conflict</b></td>
       <td>Die Anfrage ist unvollständig, weil es einen Konflikt mit dem aktuellen Status der Ressource gibt.</td>
       <td>
         <ul>
@@ -104,62 +105,62 @@ table td {
       </td>
     </tr>
     <tr>
-      <td><b>429 Zu viele Anfragen</b></td>
+      <td><b>429 Too Many Requests</b></td>
       <td>Es wurden zu viele Anfragen in einer bestimmten Zeit gesendet.</td>
       <td>
         <ul>
-          <li>Senken Sie das Rate-Limits für Ihre Kampagne oder Ihren Canvas-Schritt.</li>
+          <li>Senken Sie das Rate-Limit für Ihre Kampagne oder Ihren Canvas-Schritt.</li>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-## 5XX Fehler
+## 5XX-Fehler
 
-`5XX` Fehler zeigen an, dass es ein Problem mit dem Endpunkt gibt. Diese Fehler werden in der Regel durch serverseitige Probleme verursacht.
+`5XX`-Fehler zeigen an, dass es ein Problem mit dem Endpunkt gibt. Diese Fehler werden in der Regel durch serverseitige Probleme verursacht.
 
 | Fehlercode                    | Was es bedeutet                                                                                                                                         |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **500 Interner Server-Fehler** | Der Endpunkt ist auf eine unerwartete Bedingung gestoßen, die ihn daran gehindert hat, die Anfrage zu beenden.                                                       |
-| **502 Schlechtes Gateway**           | Der Endpunkt hat eine ungültige Antwort vom Upstream Server erhalten.                                                                                   |
-| **503 Dienst nicht verfügbar**   | Der Endpunkt kann die Anfrage wegen einer vorübergehenden Überlastung oder wegen Wartungsarbeiten derzeit nicht bearbeiten.                                                    |
-| **504 Gateway-Zeitüberschreitung**       | Der Endpunkt hat keine rechtzeitige Antwort vom Upstream Server erhalten.                                                                               |
-| **529 Host überlastet**       | Der Endpunkt-Host ist überlastet und konnte nicht antworten. |
-| **598 Wirt ungesund**        | Braze hat die Antwort simuliert, weil der Endpunkt-Host vorübergehend als ungesund markiert ist. Weitere Informationen finden Sie unter [Erkennung ungesunder Hosts](#unhealthy-host-detection). |
-| **599 Verbindungsfehler**      | Braze hat beim Versuch, eine Verbindung zum Endpunkt herzustellen, einen Timeout-Fehler bei der Netzwerkverbindung festgestellt. Das bedeutet, dass der Endpunkt möglicherweise instabil oder ausgefallen ist. |
+| **500 Internal Server Error** | Der Endpunkt ist auf eine unerwartete Bedingung gestoßen, die ihn daran gehindert hat, die Anfrage abzuschließen.                                                       |
+| **502 Bad Gateway**           | Der Endpunkt hat eine ungültige Antwort vom Upstream-Server erhalten.                                                                                   |
+| **503 Service Unavailable**   | Der Endpunkt kann die Anfrage wegen einer vorübergehenden Überlastung oder wegen Wartungsarbeiten derzeit nicht bearbeiten.                                                    |
+| **504 Gateway Timeout**       | Der Endpunkt hat keine rechtzeitige Antwort vom Upstream-Server erhalten.                                                                               |
+| **529 Host Overloaded**       | Der Endpunkt-Host ist überlastet und konnte nicht antworten. |
+| **598 Host Unhealthy**        | Braze hat die Antwort simuliert, weil der Endpunkt-Host vorübergehend als fehlerhaft markiert ist. Weitere Informationen finden Sie unter [Erkennung fehlerhafter Hosts](#unhealthy-host-detection). |
+| **599 Connection Error**      | Braze hat beim Versuch, eine Verbindung zum Endpunkt herzustellen, einen Timeout-Fehler bei der Netzwerkverbindung festgestellt. Das bedeutet, dass der Endpunkt möglicherweise instabil oder ausgefallen ist. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Behebung von 5XX-Fehlern
 
-Hier finden Sie Tipps für die Fehlerbehebung bei häufigen `5XX` Fehlern:
+Hier finden Sie Tipps für die Fehlerbehebung bei häufigen `5XX`-Fehlern:
 
 - Überprüfen Sie die Fehlermeldung auf spezifische Details, die im **Nachrichten-Aktivitätsprotokoll** verfügbar sind. Für Webhooks gehen Sie auf der Braze-Homepage zum Abschnitt **Performance im Zeitverlauf** und wählen Sie die Statistiken für Webhooks aus. Hier können Sie den Zeitstempel finden, der angibt, wann die Fehler aufgetreten sind.
-- Stellen Sie sicher, dass Sie nicht zu viele Anfragen senden, die den Endpunkt überlasten. Sie können in Stapeln senden oder das Rate-Limits anpassen, um zu prüfen, ob dadurch Fehler reduziert werden.
+- Stellen Sie sicher, dass Sie nicht zu viele Anfragen senden, die den Endpunkt überlasten. Sie können in Stapeln senden oder die Rate-Limits anpassen, um zu prüfen, ob dadurch Fehler reduziert werden.
 
 ## Erkennung fehlerhafter Hosts
 
-Braze-Webhooks und Connected-Content verwenden einen Mechanismus zur Erkennung von ungesunden Hosts, um zu erkennen, wenn der Zielhost eine hohe Rate an signifikanter Verlangsamung oder Überlastung aufweist, die zu Timeouts, zu vielen Anfragen oder anderen Ergebnissen führt, die Braze daran hindern, erfolgreich mit dem Ziel-Endpunkt zu kommunizieren. Diese Funktion dient als Schutzmaßnahme, um unnötige Belastungen zu reduzieren, die dem Zielhost Probleme bereiten könnten. Es dient auch der Stabilisierung der Braze-Infrastruktur und der Aufrechterhaltung schneller Nachrichtenübertragungsgeschwindigkeiten.
+Braze-Webhooks und Connected-Content verwenden einen Mechanismus zur Erkennung fehlerhafter Hosts, um festzustellen, wenn der Zielhost eine hohe Rate an signifikanter Verlangsamung oder Überlastung aufweist, die zu Timeouts, zu vielen Anfragen oder anderen Ergebnissen führt, die Braze daran hindern, erfolgreich mit dem Ziel-Endpunkt zu kommunizieren. Diese Funktion dient als Schutzmaßnahme, um unnötige Belastungen zu reduzieren, die dem Zielhost Probleme bereiten könnten. Sie dient auch der Stabilisierung der Braze-Infrastruktur und der Aufrechterhaltung schneller Messaging-Geschwindigkeiten.
 
 Die Schwellenwerte für die Erkennung unterscheiden sich zwischen Webhooks und Connected-Content:
-- **Für Webhooks**: Wenn die Anzahl der **Fehlschläge 3.000 in einem beliebigen einminütigen Zeitfenster überschreitet** (pro eindeutiger Kombination von Hostname und App-Gruppe - **nicht** pro Endpunktpfad), hält Braze Anfragen an den Zielhost vorübergehend für eine Minute an.
-- **Für Connected-Content**: Wenn die Anzahl der **Fehlschläge 3.000 übersteigt UND die Fehlerrate 90% in einem beliebigen einminütigen gleitenden Zeitfenster übersteigt** (pro eindeutiger Kombination von Hostname und App-Gruppe - **nicht** pro Endpunktpfad), hält Braze Anfragen an den Zielhost vorübergehend für eine Minute an.
+- **Für Webhooks**: Wenn die Anzahl der **Fehlschläge 3.000 in einem beliebigen einminütigen gleitenden Zeitfenster überschreitet** (pro eindeutiger Kombination von Hostname und App-Gruppe&#8212;**nicht** pro Endpunktpfad), hält Braze Anfragen an den Zielhost vorübergehend für eine Minute an.
+- **Für Connected-Content**: Wenn die Anzahl der **Fehlschläge 3.000 übersteigt UND die Fehlerrate 90 % in einem beliebigen einminütigen gleitenden Zeitfenster übersteigt** (pro eindeutiger Kombination von Hostname und App-Gruppe&#8212;**nicht** pro Endpunktpfad), hält Braze Anfragen an den Zielhost vorübergehend für eine Minute an.
 
-Wenn Anfragen gestoppt werden, simuliert Braze Antworten mit einem `598` Fehlercode, um den schlechten Zustand anzuzeigen. Nach einer Minute nimmt Braze die Anfragen mit voller Geschwindigkeit wieder auf, wenn sich der Host als gesund erweist. Wenn der Host immer noch ungesund ist, wartet Braze eine weitere Minute, bevor es erneut versucht wird.
+Wenn Anfragen angehalten werden, simuliert Braze Antworten mit einem `598`-Fehlercode, um den fehlerhaften Zustand anzuzeigen. Nach einer Minute nimmt Braze die Anfragen mit voller Geschwindigkeit wieder auf, wenn sich der Host als fehlerfrei erweist. Wenn der Host immer noch fehlerhaft ist, wartet Braze eine weitere Minute, bevor es erneut versucht wird.
 
-Die folgenden Fehlercodes tragen zur Anzahl der Ausfälle des Unhealthy Host Detectors bei: `408`, `429`, `502`, `503`, `504`, `529`.
+Die folgenden Fehlercodes tragen zur Fehleranzahl des Detektors für fehlerhafte Hosts bei: `408`, `429`, `502`, `503`, `504`, `529`.
 
-Bei Webhooks wird Braze HTTP-Anfragen, die durch den Detektor für ungesunde Hosts angehalten wurden, automatisch wiederholen. Dieser automatische Wiederholungsversuch verwendet exponentielles Backoff und wird nur wenige Male wiederholt, bevor er fehlschlägt. Weitere Informationen zu Webhook-Fehlern finden Sie unter [Fehler, Wiederholungslogik und Timeouts]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook#errors-retry-logic-and-timeouts).
+Bei Webhooks wird Braze HTTP-Anfragen, die durch den Detektor für fehlerhafte Hosts angehalten wurden, automatisch wiederholen. Dieser automatische Wiederholungsversuch verwendet exponentielles Backoff und wird nur wenige Male wiederholt, bevor er fehlschlägt. Weitere Informationen zu Webhook-Fehlern finden Sie unter [Fehler, Wiederholungslogik und Timeouts]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook#errors-retry-logic-and-timeouts).
 
-Wenn bei Connected-Content Anfragen an den Zielhost durch den Detektor für ungesunde Hosts gestoppt werden, rendert Braze weiterhin Nachrichten und folgt Ihrer Liquid-Logik, als ob es einen Fehlerantwortcode erhalten hätte. Wenn Sie sicherstellen möchten, dass diese Connected-Content-Anfragen erneut versucht werden, wenn sie vom Unhealthy-Host-Detektor angehalten werden, verwenden Sie die Option `:retry`. Weitere Informationen über die Option `:retry` finden Sie unter [Wiederholungsversuche für angeschlossene Inhalte]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
+Wenn bei Connected-Content Anfragen an den Zielhost durch den Detektor für fehlerhafte Hosts angehalten werden, rendert Braze weiterhin Nachrichten und folgt Ihrer Liquid-Logik, als ob ein Fehlerantwortcode empfangen worden wäre. Wenn Sie sicherstellen möchten, dass diese Connected-Content-Anfragen erneut versucht werden, wenn sie vom Detektor für fehlerhafte Hosts angehalten werden, verwenden Sie die Option `:retry`. Weitere Informationen über die Option `:retry` finden Sie unter [Wiederholungsversuche für Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
 
-Wenn Sie glauben, dass die Erkennung eines ungesunden Hosts Probleme verursacht, wenden Sie sich an den [Braze Support]({{site.baseurl}}/support_contact/).
+Wenn Sie glauben, dass die Erkennung fehlerhafter Hosts Probleme verursacht, kontaktieren Sie den [Braze Support]({{site.baseurl}}/support_contact/).
 
 ## Automatisierte E-Mails und Einträge im Nachrichten-Aktivitätsprotokoll
 
 ### Einrichten von automatisierten E-Mails
 
-Wenn in einem Workspace innerhalb von 24 Stunden mehr als 100.000 Webhook- oder Connected-Content-Endpunkt-Fehler (einschließlich Wiederholungen) auftreten, erhalten Sie eine E-Mail mit den folgenden Informationen zur Behebung der Fehler. 
+Wenn in einem Workspace innerhalb von 24 Stunden mehr als 100.000 Webhook- oder Connected-Content-Endpunkt-Fehler (einschließlich Wiederholungen) auftreten, erhalten Sie eine E-Mail mit den folgenden Informationen zur Behebung der Fehler.
 
 - Name des Workspace
 - Ein Link zum Canvas oder zur Kampagne
@@ -169,31 +170,31 @@ Wenn in einem Workspace innerhalb von 24 Stunden mehr als 100.000 Webhook- oder 
 - Links zum Nachrichten-Aktivitätsprotokoll und zur zugehörigen Dokumentation
 
 {% alert note %}
-Sie können die Fehlerschwelle pro Workspace konfigurieren. Um diesen Schwellenwert anzupassen, wenden Sie sich an den [Braze Support]({{site.baseurl}}/support_contact/).
+Sie können den Fehlerschwellenwert pro Workspace konfigurieren. Um diesen Schwellenwert anzupassen, kontaktieren Sie den [Braze Support]({{site.baseurl}}/support_contact/).
 {% endalert %}
 
-Die Fehler am Endpunkt sind:
+Die Endpunkt-Fehler sind:
 
 - **`4XX`:** `400`, `401`, `403`, `404`, `405`, `408`, `409`, `429`
 - **`5XX`:** `500`, `502`, `503`, `504`, `598`, `599`
 
-Diese E-Mails werden nur einmal pro Tag auf der Ebene des Workspace gesendet. Wenn sich keine Nutzer:innen für diese E-Mails registrieren, werden alle Administratoren des Unternehmens benachrichtigt.
+Diese E-Mails werden nur einmal pro Tag auf Workspace-Ebene gesendet. Wenn sich keine Nutzer:innen für diese E-Mails registrieren, werden alle Unternehmensadministratoren benachrichtigt.
 
 Um sich für den Erhalt dieser E-Mails zu registrieren, gehen Sie wie folgt vor:
 
 1. Gehen Sie zu **Einstellungen** > **Admin-Einstellungen** > **Benachrichtigungspräferenzen**.
-2. Wählen Sie **Connected-Content-Fehler** und **Webhook-Fehler** im Bereich **Canvas & Kampagnen** aus.
+2. Wählen Sie **Connected-Content-Fehler** und **Webhook-Fehler** im Abschnitt **Canvas & Kampagnen** aus.
 
 ### Einträge im Nachrichten-Aktivitätsprotokoll
 
-Es gibt mindestens einen Eintrag im [Nachrichten-Aktivitätsprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab), der sich auf den Fehler bezieht, der die automatisierte E-Mail ausgelöst hat.
+Wenn ein Fehler auftritt, gibt es mindestens einen Eintrag im [Nachrichten-Aktivitätsprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab), der sich darauf bezieht. Wenn die Anfrage erneut versucht wird und schließlich erfolgreich ist, sind diese Details in Currents und Snowflake Data Share verfügbar. Beachten Sie, dass die Fehler auch dann die automatisierte E-Mail auslösen können, wenn eine Anfrage nach einem Wiederholungsversuch letztendlich erfolgreich ist.
 
-### Zusätzliche Insights zum Versagen in Braze Currents
+### Zusätzliche Insights zu Fehlern in Braze-Currents
 
-Um die Transparenz bei Webhook-Problemen zu erhöhen, streamt Braze detaillierte Webhook-Ausfallereignisse an Currents und Snowflake Data Sharing. Zu diesen Ereignissen gehören auch fehlgeschlagene Webhook-Anfragen (z.B. HTTP `4xx` oder `5xx` Antworten), so dass Sie besser beobachten können, wie sich Webhook-Probleme auf die Zustellung von Nachrichten auswirken können. Beachten Sie, dass Fehlerereignisse sowohl Terminalfehler als auch Fehler, die erneut versucht werden, umfassen.
+Um die Transparenz bei Webhook-Problemen zu erhöhen, streamt Braze detaillierte Webhook-Fehlerereignisse an Currents und Snowflake Data Sharing. Zu diesen Ereignissen gehören auch fehlgeschlagene Webhook-Anfragen (z. B. HTTP-`4xx`- oder `5xx`-Antworten), sodass Sie besser beobachten können, wie sich Webhook-Probleme auf die Zustellung von Nachrichten auswirken können. Beachten Sie, dass Fehlerereignisse sowohl endgültige Fehler als auch Fehler umfassen, bei denen ein Wiederholungsversuch stattfindet.
 
 {% alert note %}
 Connected-Content-Anfragen sind in diesen Webhook-Fehlerereignissen nicht enthalten.
 {% endalert %}
 
-Weitere Informationen finden Sie im [Glossar der Ereignisse des Messaging-Engagements]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
+Weitere Informationen finden Sie im [Glossar der Messaging-Engagement-Ereignisse]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).

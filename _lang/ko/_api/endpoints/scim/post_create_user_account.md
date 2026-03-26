@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["basic_access","export_user_data"]
                     }
                 ]
@@ -79,17 +79,17 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 |
+| 매개변수 | 필수 | 데이터 유형 | Description |
 | --------- | -------- | --------- | ----------- |
 | `schemas` | 필수 | 문자열 배열 | 사용자 개체에 대한 예상 SCIM 2.0 스키마 이름입니다. |
-| `userName` | 필수 | 문자열 | 사용자의 이메일 주소입니다. |
+| `userName` | Required | 문자열 | 사용자의 이메일 주소입니다. |
 | `name` | 필수 | JSON 객체 | 이 개체에는 사용자의 이름과 성이 포함되어 있습니다. |
-| `department` | 필수 | 문자열 | [부서 문자열 문서에]({{site.baseurl}}/scim_api_appendix/#department-strings) 있는 유효한 부서 문자열입니다. |
+| `department` | Required | 문자열 | [부서 문자열 문서에]({{site.baseurl}}/scim_api_appendix/#department-strings) 있는 유효한 부서 문자열입니다. |
 | `permissions` | 선택 사항 | JSON 객체 | [권한 객체 문서에]({{site.baseurl}}/scim_api_appendix/#permissions-object) 설명된 대로 [권한]({{site.baseurl}}/scim_api_appendix/#permissions-object) 객체를 만듭니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 요청 예시
-```json
+## 예시 요청
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
@@ -118,11 +118,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["basic_access","export_user_data"]
                     }
                 ]
-            } 
+            }
         ]
     }
 }'
@@ -145,7 +145,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
         "roles": [
             {
                 "roleName": "Test Role",
-                "roleId": "519dafcdba23dfaae7,
+                "roleId": "519dafcdba23dfaae7",
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25789fabcded",
@@ -154,16 +154,16 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                         "team": [
                             {
                                 "teamId": "2519dafcdba238ae7",
-                                "teamName": "Some Team",                  
+                                "teamName": "Some Team",
                                 "teamPermissions": ["export_user_data"]
                             }
                         ]
-                    } 
+                    }
                 ]
             },
             {
                 "roleName": "Another Test Role",
-                "roleId": "23125dad23dfaae7,
+                "roleId": "23125dad23dfaae7",
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25adfabcded",
@@ -175,7 +175,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                                 "permissions": ["basic_access","publish_cards"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         ],
@@ -187,7 +187,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                 "team": [
                     {
                          "teamId": "2519dafcdba238ae7",
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["basic_access","export_user_data"]
                     }
                 ]
@@ -199,7 +199,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                         "appGroupPermissionSetName":  "Test Permission Set"
                     }
                 ]
-            } 
+            }
         ]
     }
 }
@@ -207,7 +207,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 
 ## 응답 매개변수
 
-| 매개변수 | 데이터 유형 | 설명 |
+| 매개변수 | 데이터 유형 | Description |
 | --------- | --------- | ----------- |
 | `schemas` | 문자열 배열 | 사용자 개체에 대한 예상 SCIM 2.0 스키마 이름입니다. |
 | `userName` | 문자열 | 사용자의 이메일 주소입니다. |
@@ -222,7 +222,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
 
 `userName` 또는 이메일 주소를 가진 사용자가 이미 Braze에 존재하는 경우, 엔드포인트는 다음과 같이 응답합니다:
 
-```json
+```http
 HTTP/1.1 409 Conflict
 Date: Tue, 10 Sep 2019 02:22:30 GMT
 Content-Type: text/json;charset=UTF-8

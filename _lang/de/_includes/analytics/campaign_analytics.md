@@ -18,7 +18,7 @@ Auf der Registerkarte **Kampagnenanalyse** können Sie Ihre Berichte in einer Re
 
 ### Zeitspanne
 
-Standardmäßig wird der Zeitbereich für **Campaign Analytics** die letzten 90 Tage ab dem aktuellen Zeitpunkt anzeigen. Das heißt, wenn die Kampagne vor mehr als 90 Tagen gestartet wurde, werden die Analytics für den angegebenen Zeitraum als "0" angezeigt. Um alle Analytics für ältere Kampagnen anzuzeigen, passen Sie den Berichtszeitraum an.
+Standardmäßig wird für **Analytics** für **Kampagnen** der Zeitraum der letzten 90 Tage ab dem aktuellen Zeitpunkt angezeigt. Dies bedeutet, dass, wenn die Kampagne vor mehr als 90 Tagen gestartet wurde, die Analytics für den angegebenen Zeitraum den Wert „0“ anzeigen. Um alle Analytics für ältere Kampagnen anzuzeigen, passen Sie bitte den Berichtszeitraum an.
 
 ### Kampagnendetails
 
@@ -42,29 +42,29 @@ Der WhatsApp-Kanal enthält die Leserate. Diese Metrik wird nur für Benutzer mi
 {% endif %}
 
 {% if include.channel == "Content Card" %}
-![Kampagnendetails-Panel mit einer Übersicht über die zur Bestimmung der Kampagnen-Performance verwendeten Metriken.]({% image_buster /assets/img/cc-campaign-details.png %})
+![Kampagnendetails-Panel mit einer Übersicht über die Metriken, die zur Bestimmung der Performance der Kampagne verwendet werden.]({% image_buster /assets/img/cc-campaign-details.png %})
 
 {% elsif include.channel == "banner" %}
-![Kampagnendetails-Panel mit einer Übersicht über die zur Bestimmung der Kampagnen-Performance verwendeten Metriken.]({% image_buster /assets/img/banners/campaign_details.png %})
+![Kampagnendetails-Panel mit einer Übersicht über die Metriken, die zur Bestimmung der Performance der Kampagne verwendet werden.]({% image_buster /assets/img/banners/campaign_details.png %})
 
 {% elsif include.channel == "email" %}
-![Kampagnendetails-Panel mit einer Übersicht über die zur Bestimmung der Kampagnen-Performance verwendeten Metriken.]({% image_buster /assets/img/campaign_details_email.png %})
+![Kampagnendetails-Panel mit einer Übersicht über die Metriken, die zur Bestimmung der Performance der Kampagne verwendet werden.]({% image_buster /assets/img/campaign_details_email.png %})
 
 {% elsif include.channel == "push" %}
-![Kampagnendetails-Panel mit einer Übersicht über die zur Bestimmung der Kampagnen-Performance verwendeten Metriken.]({% image_buster /assets/img/campaign_details_push.png %})
+![Kampagnendetails-Panel mit einer Übersicht über die Metriken, die zur Bestimmung der Performance der Kampagne verwendet werden.]({% image_buster /assets/img/campaign_details_push.png %})
 
 {% elsif include.channel == "SMS" %}
-![Kampagnendetails-Panel mit einer Übersicht über die zur Bestimmung der Kampagnen-Performance verwendeten Metriken.]({% image_buster /assets/img/campaign_details_sms.png %})
+![Kampagnendetails-Panel mit einer Übersicht über die Metriken, die zur Bestimmung der Performance der Kampagne verwendet werden.]({% image_buster /assets/img/campaign_details_sms.png %})
 
 {% elsif include.channel == "in-app message" %}
-![Kampagnendetails-Panel mit einer Übersicht über die zur Bestimmung der Kampagnen-Performance verwendeten Metriken.]({% image_buster /assets/img/campaign_details_iam.png %})
+![Kampagnendetails-Panel mit einer Übersicht über die Metriken, die zur Bestimmung der Performance der Kampagne verwendet werden.]({% image_buster /assets/img/campaign_details_iam.png %})
 
 In Canvas sehen Sie die Performance von In-App-Nachrichten, die dem von Ihnen erstellten Canvas zugeordnet sind. Sie können das Bedienfeld oben auf der Seite verwenden, um andere Nachrichtenarten (Kanäle) zu löschen und nur die In-App-Nachrichten in Ihrem Canvas anzuzeigen.
 
 ![]({% image_buster /assets/img/in-app_message_canvas_reporting.png %})
 
 {% elsif include.channel == "webhook" %}
-![Kampagnendetails-Panel mit einer Übersicht über die zur Bestimmung der Kampagnen-Performance verwendeten Metriken.]({% image_buster /assets/img/campaign_details_webhook.png %})
+![Kampagnendetails-Panel mit einer Übersicht über die Metriken, die zur Bestimmung der Performance der Kampagne verwendet werden.]({% image_buster /assets/img/campaign_details_webhook.png %})
 
 {% endif %}
 
@@ -108,35 +108,35 @@ The **Message Performance** panel outlines how well your message has performed a
 
 Der Bereich **Leistung der Inhaltskarte** zeigt Ihnen, wie gut Ihre Nachricht in verschiedenen Dimensionen abgeschnitten hat. Die Metriken in diesem Bereich variieren je nach dem von Ihnen gewählten Nachrichtenkanal und je nachdem, ob Sie einen multivariaten Test durchführen oder nicht. Sie können auf das Symbol <i class="fa fa-eye preview-icon"></i> **Vorschau** klicken, um Ihre Nachricht für jede Variante oder jeden Kanal zu sehen.
 
-![Performance-Analytics von Content-Card-Nachrichten]({% image_buster /assets/img/cc-message-performance.png %})
+![Leistungsanalyse für Content-Card-Nachrichten]({% image_buster /assets/img/cc-message-performance.png %})
 
 {% elsif include.channel == "email" %}
 ### E-Mail-Performance
 
 Im Bereich **E-Mail-Leistung** sehen Sie, wie gut Ihre Nachricht in verschiedenen Bereichen abgeschnitten hat. Die Metriken in diesem Bereich variieren je nach dem von Ihnen gewählten Nachrichtenkanal und je nachdem, ob Sie einen multivariaten Test durchführen oder nicht. Sie können auf das Symbol <i class="fa fa-eye preview-icon"></i> **Vorschau** klicken, um Ihre Nachricht für jede Variante oder jeden Kanal zu sehen.
 
-![Performance-Analytics von E-Mail-Nachrichten]({% image_buster /assets/img_archive/email_message_performance.png %})
+![Analyse der Performance von E-Mail-Nachrichten]({% image_buster /assets/img_archive/email_message_performance.png %})
 
 {% elsif include.channel == "in-app message" %}
 ### Leistung von In-App-Nachrichten
 
 Das **In-App Message Performance-Panel** zeigt Ihnen, wie gut Ihre Nachricht in verschiedenen Bereichen abgeschnitten hat. Die Metriken in diesem Bereich variieren je nach dem von Ihnen gewählten Nachrichtenkanal und je nachdem, ob Sie einen multivariaten Test durchführen oder nicht. Sie können auf das Symbol <i class="fa fa-eye preview-icon"></i> **Vorschau** klicken, um Ihre Nachricht für jede Variante oder jeden Kanal zu sehen.
 
-![Performance-Analytics von In-App-Nachrichten]({% image_buster /assets/img_archive/iam_message_performance.png %})
+![Performance-Analytics für In-App-Nachrichten]({% image_buster /assets/img_archive/iam_message_performance.png %})
 
 {% elsif include.channel == "push" %}
 ### Push-Performance
 
 Das Panel **Push-Performance** zeigt Ihnen, wie gut Ihre Nachricht in verschiedenen Bereichen abgeschnitten hat. Die Metriken in diesem Bereich variieren je nach dem von Ihnen gewählten Nachrichtenkanal und je nachdem, ob Sie einen multivariaten Test durchführen oder nicht. Sie können auf das Symbol <i class="fa fa-eye preview-icon"></i> **Vorschau** klicken, um Ihre Nachricht für jede Variante oder jeden Kanal zu sehen.
 
-![Leistungsanalyse von Push-Nachrichten]({% image_buster /assets/img_archive/push_message_performance.png %})
+![Performance-Analytics für Push-Nachrichten]({% image_buster /assets/img_archive/push_message_performance.png %})
 
 {% elsif include.channel == "SMS" %}
 ### SMS/MMS/RCS-Performance
 
-Das Panel **SMS/MMS/RCS Performance** gibt Aufschluss darüber, wie gut Ihre Nachricht in verschiedenen Bereichen abgeschnitten hat. Die Metriken in diesem Bereich variieren je nach dem von Ihnen gewählten Nachrichtenkanal und je nachdem, ob Sie einen multivariaten Test durchführen oder nicht. Sie können auf das Symbol <i class="fa fa-eye preview-icon"></i> **Vorschau** klicken, um Ihre Nachricht für jede Variante oder jeden Kanal zu sehen.
+Das **SMS/MMS/RCS-Performance**-Panel zeigt an, wie gut Ihre Nachricht in verschiedenen Dimensionen abgeschnitten hat. Die Metriken in diesem Bereich variieren je nach dem von Ihnen gewählten Nachrichtenkanal und je nachdem, ob Sie einen multivariaten Test durchführen oder nicht. Sie können auf das Symbol <i class="fa fa-eye preview-icon"></i> **Vorschau** klicken, um Ihre Nachricht für jede Variante oder jeden Kanal zu sehen.
 
-![SMS/MMS/RCS Performance Panel, das eine Tabelle mit Metriken für eine Kontrollgruppe, Variante 1 und Variante 2 enthält.]({% image_buster /assets/img_archive/sms_message_performance.png %})
+![SMS/MMS/RCS-Performance-Panel, das eine Tabelle mit Metriken für eine Kontrollgruppe, Variante 1 und Variante 2 enthält.]({% image_buster /assets/img_archive/sms_message_performance.png %})
 
 {% elsif include.channel == "banner" %}
 ### Banner-Performance
@@ -157,7 +157,7 @@ Das **Webhook-Panel Performance** zeigt Ihnen, wie gut Ihre Nachricht in verschi
 
 Das **WhatsApp Performance-Panel** zeigt Ihnen, wie gut Ihre Nachricht in verschiedenen Bereichen abgeschnitten hat. Die Metriken in diesem Bereich variieren je nach dem von Ihnen gewählten Nachrichtenkanal und je nachdem, ob Sie einen multivariaten Test durchführen oder nicht. Sie können auf das Symbol <i class="fa fa-eye preview-icon"></i> **Vorschau** klicken, um Ihre Nachricht für jede Variante oder jeden Kanal zu sehen.
 
-![WhatsApp-Performance-Panel, das eine Tabelle mit Metriken für Variante 1 enthält.]({% image_buster /assets/img/whatsapp_message_performance.png %})
+![WhatsApp-Panel für Performance, das eine Tabelle mit Metriken für Variante 1 enthält.]({% image_buster /assets/img/whatsapp_message_performance.png %})
 
 {% endif %}
 
@@ -167,11 +167,11 @@ Wenn Sie Ihre Ansicht vereinfachen möchten, klicken Sie auf <i class="fas fa-pl
 
 #### Heatmaps
 
-Mit Heatmaps können Sie sehen, wie erfolgreich verschiedene Links in einer einzigen E-Mail-Kampagne sind. Gehen Sie im Bereich **Nachrichtenanalyse** zum Bereich **E-Mail-Leistung**. Wählen Sie **Vorschau & Heatmap**, um eine Vorschau auf Ihre E-Mail Kampagne und die Heatmap zu sehen. Alternativ können Sie auch den Hyperlink im Namen der Variante auswählen, um die Heatmap anzuzeigen.
+Mit Heatmaps können Sie sehen, wie erfolgreich verschiedene Links in einer einzigen E-Mail-Kampagne sind. Gehen Sie im Bereich **Nachrichtenanalyse** zum Bereich **E-Mail-Leistung**. Auswählen Sie **„Vorschau&Heatmap“,** um eine Vorschau Ihrer E-Mail-Kampagne und der Heatmap anzuzeigen. Alternativ können Sie auch den Hyperlink im Namen der Variante auswählen, um die Heatmap anzuzeigen.
 
 In dieser Ansicht können Sie mit dem Schalter **Heatmap anzeigen** eine visuelle Ansicht Ihrer E-Mail aufrufen, die die Gesamthäufigkeit und den Ort der Klicks innerhalb der Laufzeit der Kampagne anzeigt. Im Bereich **Link-Tabelle nach Gesamtklicks** können Sie alle Links in Ihrer E-Mail-Kampagne anzeigen und nach Gesamtklicks sortieren. Dies kann zusätzliche Insights darüber liefern, wo Ihre Benutzer navigieren. Um eine Kopie der Heatmap für Verweise zu speichern, gehen Sie auf "Herunterladen".
 
-![Beispiel für die Seite Vorschau und Heatmap, die eine E-Mail-Kampagne und ein Panel mit Link-Alias-Beispielen und deren Gesamtklicks enthält.]({% image_buster /assets/img_archive/email_heatmap_example.png %})
+![Beispiel für die Vorschau- und Heatmap-Seite, die eine E-Mail-Kampagne und ein Panel mit Beispielen für Link-Aliase mit deren Gesamtklicks enthält.]({% image_buster /assets/img_archive/email_heatmap_example.png %})
 
 #### Bilder
 
@@ -201,7 +201,7 @@ Im Folgenden finden Sie eine Aufschlüsselung einiger wichtiger Metriken, die Si
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#messages-sent">Nachrichten gesendet</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Messages Sent' %} <br><br>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Messages Sent' %} <br><br>
                 Dies wird unterschiedlich berechnet, je nachdem, was Sie für Folgendes ausgewählt haben: 
                 <a href="/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression">Kartenerstellung</a>:<br><br>
                 <ul>
@@ -212,23 +212,23 @@ Im Folgenden finden Sie eine Aufschlüsselung einiger wichtiger Metriken, die Si
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#total-impressions">Impressionen gesamt</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %} Diese Zahl kann für denselben Nutzer:innen mehrfach erhöht werden.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} Dies kann für dieselbe Nutzer:in mehrfach vorkommen.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-impressions">Eindeutige Impressionen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Diese Zahl</span> wird nicht erhöht, wenn ein Nutzer:innen eine Content-Card zum zweiten Mal ansieht.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Diese Zählung</span> wird nicht erhöht, wenn ein Nutzer:in eine Content-Card zum zweiten Mal aufruft.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-recipients">Eindeutige Empfänger:innen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %} <br><br> Bei Content-Cards kann jede Content-Card nur einmal empfangen werden. Wenn Sie also dieselbe Content-Card ein zweites Mal ansehen, egal an welchem Tag, wird dieser Wert nicht erhöht. Da ein Betrachter jeden Tag ein einzigartiger Empfänger sein kann, sollten Sie erwarten, dass dieser Wert höher ist als die <i>Unique Impressions</i>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' %} <br><br> Da eine Nutzer:in jeden Tag eine eindeutige Empfänger:in sein kann, sollten Sie davon ausgehen, dass diese Zahl höher ist als <i>die der eindeutigen Impressionen</i>.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-clicks">Eindeutige Klicks</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} Dies beinhaltet Klicks auf von Braze bereitgestellte Links zum Abmelden.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Dies umfasst auch Klicks auf die von Braze bereitgestellten Links zum Abmelden.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-dismissals">Eindeutige Ausblendungen</a></td>
-            <td>{% multi_lang_include metrics.md metric='Unique Dismissals' %}</td>
+            <td>{% multi_lang_include analytics/metrics.md metric='Unique Dismissals' %}</td>
         </tr>
     </tbody>
 </table>
@@ -239,7 +239,7 @@ Was die Protokollierung der Impressionen angeht, gibt es einige Unterschiede zwi
 
 #### Einzigartige Empfänger versus einzigartige Impressionen
 
-Es gibt einige Metriken, die die Sichtbarkeit Ihrer Nachricht erfassen. Dazu gehören _eindeutige Empfänger_: _innen_ und _eindeutige Impressionen_. Lassen Sie uns ein paar Beispielszenarien verwenden, um diese Metriken besser zu verstehen.
+Es gibt einige Metriken, die die Sichtbarkeit Ihrer Nachricht erfassen. Dies umfasst _eindeutige Empfänger:innen_ und _eindeutige Impressionen_. Lassen Sie uns ein paar Beispielszenarien verwenden, um diese Metriken besser zu verstehen.
 
 Angenommen, Sie sehen sich heute eine Content-Card an, erhalten morgen eine neue Karte aus derselben Kampagne und übermorgen wieder - dann werden Sie dreimal als _eindeutiger Empfänger_:in gezählt. Sie werden jedoch nur für eine _Eindeutige Impression_ gezählt. Sie werden auch in der Anzahl der _gesendeten Nachrichten_ berücksichtigt, da die Karte auf Ihrem Gerät verfügbar war.
 
@@ -275,11 +275,11 @@ Die vollständigen Definitionen aller Metriken für Banner finden Sie im [Glossa
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">Impressionen gesamt</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} Bei Bannern werden die Impressionen einmal pro Sitzung der Nutzer:innen protokolliert. Wenn dasselbe Banner innerhalb derselben Sitzung mehrfach angezeigt wird, werden nur eine oder mehrere Impressionen protokolliert.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Eindeutige Impressionen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Jeder Nutzer:innen wird nur einmal gezählt.</span></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Jeder Nutzer:in wird nur einmal gezählt.</span></td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">Klicks gesamt</a></td>
@@ -287,40 +287,40 @@ Die vollständigen Definitionen aller Metriken für Banner finden Sie im [Glossa
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Eindeutige Klicks</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Eindeutige Klicks ohne ID' %} Jeder Nutzer:innen wird nur einmal gezählt.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Clicks No Dispatch ID' %} Jeder Nutzer:in wird nur einmal gezählt.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#primary-conversions">Primäre Konversionen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Primäre Konversionen (A) oder primäres Konversions-Event' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Eindeutige Empfänger:innen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %} <br><br> Da ein Betrachter jeden Tag ein einzigartiger Empfänger sein kann, sollten Sie erwarten, dass dieser Wert höher ist als die <i>Unique Impressions</i>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' %} <br><br> Da ein Betrachter jeden Tag ein einzigartiger Empfänger sein kann, sollten Sie erwarten, dass dieser Wert höher ist als die <i>Unique Impressions</i>.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#revenue">Umsatz</a></td>
-            <td>{% multi_lang_include metrics.md metric='Revenue' %}</td>
+            <td>{% multi_lang_include analytics/metrics.md metric='Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confidence">Vertrauen</a></td>
-            <td>{% multi_lang_include metrics.md metric='Confidence' %}</td>
+            <td>{% multi_lang_include analytics/metrics.md metric='Confidence' %}</td>
         </tr>
     </tbody>
 </table>
 
-#### Banner Metriken Berechnungsbeispiele
+#### Beispiele zur Berechnung von Banner-Metriken
 
-Es gibt einige Metriken, die die Sichtbarkeit Ihrer Nachricht erfassen. Dazu gehören _eindeutige Empfänger_: _innen_ und _eindeutige Impressionen_. Lassen Sie uns ein paar Beispielszenarien verwenden, um diese Metriken besser zu verstehen.
+Es gibt einige Metriken, die die Sichtbarkeit Ihrer Nachricht erfassen. Dies umfasst _eindeutige Empfänger:innen_ und _eindeutige Impressionen_. Lassen Sie uns ein paar Beispielszenarien verwenden, um diese Metriken besser zu verstehen.
 
-Angenommen, Sie sehen sich heute ein Banner an, dann morgen dasselbe Banner und übermorgen noch einmal - dann werden Sie dreimal als _eindeutiger Empfänger_:in gezählt. Sie werden jedoch nur für eine _Eindeutige Impression_ gezählt.
+Angenommen, Sie sehen sich heute ein Banner an, morgen dasselbe Banner und übermorgen erneut dasselbe Banner – dann werden Sie dreimal als _eindeutige Empfänger_:innen gezählt. Sie werden jedoch nur für eine _Eindeutige Impression_ gezählt.
 
-Ein weiteres Beispiel: Nehmen wir an, Sie sehen fünf _eindeutige Impressionen_ auf einer Banner Kampagne. Das bedeutet, dass die Geräte von nur fünf Nutzer:innen alle der folgenden Schritte ausgeführt haben:
+Nehmen wir als weiteres Beispiel an, Sie sehen fünf _eindeutige Impressionen_ in einer Banner-Kampagne. Dies bedeutet, dass nur die Geräte von fünf Nutzer:innen alle folgenden Schritte ausgeführt haben:
 
 1. Sie haben eine Sitzung gestartet oder die App hat explizit eine Banner-Synchronisierung angefordert (oder beides).
 2. Navigiert zur Ansicht Banner
 3. SDK hat eine Impression aufgenommen und auf dem Server protokolliert
 
-_Eindeutige Empfänger:innen_ referenziert auf die Banner, die tatsächlich gesehen wurden.
+_Eindeutige Empfänger:innen_ referenzieren die Banner, die tatsächlich angesehen wurden.
 
 {% elsif include.channel == "email" %}
 
@@ -345,56 +345,56 @@ Im Folgenden finden Sie einige wichtige E-Mail-spezifische Metriken, die Sie bei
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Eindeutige Klicks</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Clicks' %} Dies wird über einen Zeitraum von sieben Tagen für E-Mails getrackt und durch <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a> gemessen. Dazu gehören auch Klicks auf die von Braze zur Verfügung gestellten Abmeldelinks. Diese Zahl sollte zwischen 5-10% liegen. Alles, was über 10% liegt, ist außergewöhnlich!
+                {% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Dies wird über einen Zeitraum von sieben Tagen für E-Mails verfolgt und gemessen<a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. Dazu gehören auch Klicks auf die von Braze zur Verfügung gestellten Abmeldelinks. Diese Zahl sollte zwischen 5-10% liegen. Alles, was über 10% liegt, ist außergewöhnlich!
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">Eindeutige Öffnungen</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Opens' %} Bei E-Mails wird dies über einen Zeitraum von 7 Tagen getrackt. Diese Zahl sollte zwischen 30-40% liegen. Alles, was über 40% liegt, ist außergewöhnlich!
+                {% multi_lang_include analytics/metrics.md metric='Unique Opens' %} Bei E-Mails erfolgt das Tracking über einen Zeitraum von 7 Tagen. Diese Zahl sollte zwischen 30-40% liegen. Alles, was über 40% liegt, ist außergewöhnlich!
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#click-to-open-rate">Effektive Klickrate</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Click-to-Open Rate' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Click-to-Open Rate' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#spam">Spam-Rate</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Spam' %} Wenn dieser Wert größer als 0,08 ist, könnte das ein Zeichen dafür sein, dass entweder Ihr Nachrichtentext zu verkaufsorientiert ist oder dass Sie Ihre Methoden zur Erfassung von E-Mail-Adressen überdenken sollten (um sicherzustellen, dass Sie diejenigen ansprechen, die an Ihrer Korrespondenz interessiert sind).
+                {% multi_lang_include analytics/metrics.md metric='Spam' %} Wenn diese Metrik größer als 0,08 ist, könnte dies ein Hinweis darauf sein, dass entweder Ihr Nachrichtentext zu verkaufsorientiert ist oder Sie Ihre Methoden zur Erfassung von E-Mail-Adressen überdenken sollten (um sicherzustellen, dass Sie diejenigen anschreiben, die an Ihrer Korrespondenz interessiert sind).
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unsubscribers-or-unsub">Abgemeldete Personen oder Abmeldung</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unsubscribers or Unsub' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unsubscribers or Unsub' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#other-opens">Sonstige Öffnungen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Other Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Other Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">Geschätzte reale Öffnungen</a></td>
-            <td class="no-split"> {% multi_lang_include metrics.md metric='Estimated Real Opens' %} Einzelheiten finden Sie im folgenden Abschnitt.</td>
+            <td class="no-split"> {% multi_lang_include analytics/metrics.md metric='Estimated Real Opens' %} Weitere Informationen finden Sie im folgenden Abschnitt.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#machine-opens">Automatische Öffnungen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Machine Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Machine Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">Absprünge</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Bounces' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#hard-bounce">Hard Bounce</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Hard Bounce' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Hard Bounce' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">Soft Bounce</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">Aufschub</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Deferral' %}</td>
         </tr>
     </tbody>
 </table>
@@ -409,9 +409,11 @@ Beachten Sie, dass _Aufschübe_ derzeit nur mit Currents oder Braze Snowflake Fe
 
 ##### Geschätzte reale Öffnungsrate {#estimated-real-open-rate}
 
-Diese Statistik verwendet ein proprietäres, von Braze entwickeltes Analysemodell, um eine Schätzung der individuellen Öffnungsrate der Kampagne zu rekonstruieren, als ob es keine maschinellen Öffnungen gäbe. Zwar erhalten wir bei einigen Öffnungsereignissen von Absendern von E-Mails (siehe oben) die Kennzeichnung *Maschinenöffnungen*, aber diese Kennzeichnungen können die tatsächlichen Öffnungen oft als Maschinenöffnungen kennzeichnen. Mit anderen Worten: Die *anderen Öffnungen* sind wahrscheinlich eine Unterschätzung der tatsächlichen Öffnungen (durch tatsächliche Nutzer). Stattdessen verwendet Braze die Klickdaten der einzelnen Kampagnen, um auf die Rate zu schließen, mit der Menschen die Nachricht tatsächlich geöffnet haben. Dies kompensiert verschiedene Mechanismen zum Öffnen von Geräten, einschließlich Apples MPP.
+Diese Statistik verwendet ein proprietäres, von Braze entwickeltes Analysemodell, um eine Schätzung der individuellen Öffnungsrate der Kampagne zu rekonstruieren, als ob es keine maschinellen Öffnungen gäbe. Obwohl wir bei einigen offenen Ereignissen von E-Mail-Absendern die Kennzeichnung „*Maschinell geöffnet*“ erhalten (siehe oben), können diese Kennzeichnungen häufig tatsächliche Öffnungen als maschinell geöffnet markieren. Mit anderen Worten: Die *anderen Öffnungen* sind wahrscheinlich eine Unterschätzung der tatsächlichen Öffnungen (durch tatsächliche Nutzer). Stattdessen verwendet Braze die Klickdaten der einzelnen Kampagnen, um auf die Rate zu schließen, mit der Menschen die Nachricht tatsächlich geöffnet haben. Dies kompensiert verschiedene Mechanismen zum Öffnen von Geräten, einschließlich Apples MPP.
 
 Die _geschätzte tatsächliche Öffnungsrate_ wird 36 Stunden nach Beginn des E-Mail-Versands berechnet und danach alle 24 Stunden neu berechnet. Wenn sich eine Kampagne wiederholt, wird die Schätzung 36 Stunden nach einem weiteren Versand neu berechnet.
+
+Da diese Metrik kontinuierlich neu berechnet wird, kann sich der Wert _für die_ _geschätzte tatsächliche Öffnungsrate_ im Laufe der Zeit ändern, wenn neue Signale des Engagements (wie Öffnungen und Klicks) empfangen und in das Modell integriert werden. In der Praxis kann die _geschätzte tatsächliche Öffnungsrate_ täglich aktualisiert werden, solange eine Kampagne aktiv ist.
 
 Normalerweise sind etwa 10.000 zugestellte E-Mails erforderlich, damit die Statistik erfolgreich berechnet werden kann, obwohl diese Zahl je nach Klickrate variieren kann. Wenn die Statistik nicht berechnet werden kann, wird in der Spalte "--" angezeigt.
 
@@ -425,14 +427,14 @@ Die geschätzte reale Öffnungsrate ist nur in Kampagnen verfügbar und wird nic
 
 Außerdem kann die Verwendung von Sicherheitsscannern die Öffnungsrate in die Höhe treiben. Einige dieser Tools schützen ihre Nutzer:innen, indem sie eingehende E-Mails auf bösartige Inhalte überprüfen, indem sie auf Links klicken, um deren Legitimität zu überprüfen. Diese Klicks werden oft als "Bot-Klicks" oder "nicht-menschliche Interaktion" (NHI) bezeichnet. 
 
-Nachdem eine E-Mail unsere Server verlassen hat, haben wir nur einen begrenzten Einblick in das, was als nächstes passiert. Hier finden Sie jedoch Empfehlungen für die Verwaltung von NHI, die sich auf Ihre Ergebnisse auswirken:
+Nachdem eine E-Mail unsere Server verlassen hat, haben wir nur begrenzte Einblicke in den weiteren Verlauf. Dennoch möchten wir Ihnen einige Empfehlungen zur Verwaltung von NHI geben, die sich auf Ihre Ergebnisse auswirken können:
 
 1. Seien Sie sich bewusst, dass dies bei jedem Sender und fast jedem Empfänger:in passieren kann. Klicks sind ebenso wie Öffnungen kein zuverlässiger Indikator für die menschliche Interaktion mit Ihren Nachrichten, was bedeutet, dass NHI nicht verhindert werden kann.
-2. Ein höheres positives Engagement korreliert in der Regel mit einem niedrigeren NHI, daher ist es wichtig, die [Best Practices]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) für das Messaging per E-Mail zu befolgen. Dazu gehört, dass Sie die ausdrückliche Erlaubnis Ihrer Nutzer:innen für das Versenden von E-Mails einholen und nicht aktivierte Abonnent:innen regelmäßig Sunsetting betreiben. 
+2. Ein höheres positives Engagement korreliert in der Regel mit einem niedrigeren NHI, daher ist es wichtig[, die Best Practices]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) für E-Mail-Messaging zu befolgen. Dazu gehört, dass Sie die ausdrückliche Erlaubnis Ihrer Nutzer:innen für das Versenden von E-Mails einholen und nicht aktivierte Abonnent:innen regelmäßig Sunsetting betreiben. 
 3. Verwenden Sie wenn möglich HTTPS-Links in Ihren E-Mails. NHI ist bei Absendern, die sichere Links verwenden, weniger verbreitet.
-4. Wenn Sie sich mit einem Klick abmelden, sollten Sie ein [Präferenzzentrum]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview) einrichten, das Nutzer:innen auf eine Seite führt, auf der sie ihre Benachrichtigungspräferenzen bearbeiten und verwalten können. Dies kann hilfreich sein, da NHI Nutzer:innen versehentlich abmelden kann.
+4. Wenn Sie einen Ein-Klick-Prozess zum Abmelden verwenden, sollten Sie die Einrichtung eines [Präferenzzentrums]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview) in Betracht ziehen, das die Nutzer:innen zu einer Seite weiterleitet, auf der sie ihre Benachrichtigungseinstellungen bearbeiten und verwalten können. Dies kann hilfreich sein, da NHI Nutzer:innen versehentlich abmelden kann.
 5. Ziehen Sie [andere Metriken]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/#email-performance) in Betracht, um den Erfolg Ihres E-Mail Marketings zu messen, z.B. Konversionen, App-Sitzungen oder Website-Besuche.
-6. Fügen Sie einen ausgeblendeten Link in Ihre Kampagnen per E-Mail ein. Dieser Link wäre etwas, das ein Mensch nicht bemerken würde, wie z.B. weißer Text auf weißem Grund oder ein Interpunktionszeichen. Bots neigen dazu, auf alle Links zu klicken. Daraus können Sie schließen, dass Nutzer:innen, die Klick-Ereignisse auf den unsichtbaren Link erzeugen, in Wirklichkeit das Ergebnis von NHI sind, so dass die Öffnung oder der Klick nicht unbedingt auf ein positives Engagement hinweisen.
+6. Fügen Sie einen ausgeblendeten Link in Ihre Kampagnen per E-Mail ein. Dieser Link wäre etwas, das ein Mensch nicht bemerken würde, wie z.B. weißer Text auf weißem Grund oder ein Interpunktionszeichen. Bots neigen dazu, alle Links anzuklicken. Daher kann man davon ausgehen, dass Nutzer:innen, die Klickereignisse auf dem unsichtbaren Link generieren, tatsächlich das Ergebnis von NHI sind, sodass die Öffnung oder der Klick nicht unbedingt auf ein positives Engagement hindeutet.
 
 {% elsif include.channel == "in-app message" %}
 
@@ -443,7 +445,7 @@ Im Folgenden finden Sie einige wichtige Metriken für In-App-Nachrichten, die Si
 {% alert note %}
 Die Berichterstattung für _Button 1-Klicks_ und _Button 2-Klicks_ funktioniert nur, wenn Sie in der In-App-Nachricht den **Bezeichner für die Berichterstattung** mit "0" bzw. "1" angeben.
 
-![Das Feld "Bezeichner für die Berichterstattung" mit einem Wert von "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+![Das Feld „Bezeichner für Reporting“ mit dem Wert „0“.]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
 {% endalert %}
 
 <style>
@@ -462,39 +464,39 @@ Die Berichterstattung für _Button 1-Klicks_ und _Button 2-Klicks_ funktioniert 
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#body-clicks">Klicks auf Text</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Body Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Body Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-1-clicks">Klicks auf Button 1</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Button 1 Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-2-clicks">Klicks auf Button 2</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Button 2 Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Eindeutige Impressionen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Impressions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">Impressionen gesamt</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversions-b-c-d">Konversionen (B, C, D)</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Conversions (B, C, D)' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-conversions">Konversionen gesamt</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Conversions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Conversions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversion-rate">Konversionsrate</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">Nachricht schließen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Close Message' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Close Message' %}</td>
         </tr>
     </tbody>
 </table>
@@ -521,15 +523,15 @@ Im Folgenden finden Sie eine Aufschlüsselung einiger wichtiger Metriken, die Si
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">Absprünge</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %} Siehe <a href="#bounced-push">Geplatzte Push-Benachrichtigungen</a>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Bounces' %} Siehe <a href="#bounced-push">Zurückgewiesene Push-Benachrichtigungen</a>.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#direct-opens">Direkte Öffnungen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Direct Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Direct Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#opens">Öffnungen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Opens' %}</td>
         </tr>
     </tbody>
 </table>
@@ -538,27 +540,27 @@ Im Folgenden finden Sie eine Aufschlüsselung einiger wichtiger Metriken, die Si
 
 ##### Tracking von Abbestellungen
 
-Push-Abmeldungen sind nicht als Metrik in den Analytics der Kampagnen enthalten und hängen von Updates des Push-Status eines Nutzers:innen durch Anbieter wie Apple oder Google ab. Diese Updates können unregelmäßig und unvorhersehbar sein. Daher werden Push-Abmeldungen nicht als Metrik in den Analytics für Push-Kampagnen berücksichtigt. 
+Push-Abmeldungen werden nicht als Metrik in die Analytics einer Kampagne einbezogen und hängen von Updates des Push-Status eines Nutzers durch Anbieter wie Apple oder Google ab. Diese Updates können unregelmäßig und unvorhersehbar sein. Daher werden Push-Abmeldungen nicht als Metrik in den Analytics für Push-Kampagnen berücksichtigt. 
 
-Dennoch kann das manuelle Tracking von Push-Abmeldungen wertvolle Insights über die Reaktionen der Nutzer:innen auf die Häufigkeit Ihrer Push-Benachrichtigungen und die Relevanz der Inhalte liefern. Hier sind zwei Optionen für das Tracking von Push-Abmeldungen: Verwenden Sie Segmentierungsfilter oder angepasste Filter.
+Dennoch kann das manuelle Tracking von Push-Abmeldungen wertvolle Insights über die Reaktionen der Nutzer:innen auf die Häufigkeit Ihrer Push-Benachrichtigungen und die Relevanz der Inhalte liefern. Es gibt zwei Möglichkeiten für Tracking von Push-Abmeldungen: Verwendung von Segmentfiltern oder angepassten Filtern.
 
 {% tabs local %}
-{% tab Filter für Segmente %}
+{% tab Segment filters %}
 
-Sie können ein Segment erstellen, um Nutzer:innen zu identifizieren, die nicht über Push Enablement verfügen, d.h. die weder Abonnent:in noch Opt-in sind und auch keinen [Push-Token im Vordergrund]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens) haben. Um zum Beispiel die Anzahl der Abmeldungen in Ihrer App zu sehen, würden Sie die Kombination der folgenden Segmente verwenden: 
+Sie können ein Segment erstellen, um Nutzer:innen zu identifizieren, die keine Push-Benachrichtigungen aktiviert haben, d. h. die nicht abonniert oder Opt-in-Nutzer:innen sind und kein [Vordergrund-Push-Token]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens) besitzen. Um beispielsweise die Anzahl der Abmeldungen in Ihrer App anzuzeigen, würden Sie eine „ODER“-Kombination der folgenden Segmente verwenden: 
 
 - `Background or Foreground Push Enabled is false`
 - `Has Uninstalled`
 
-![Der Abschnitt Segmente Builder mit dem Filter "Hintergrund oder Vordergrund Push Enablement für App" für eine App ist falsch, und der Filter "Hat deinstalliert" sind ausgewählt.]({% image_buster /assets/img/push_unsub_segment_example.png %})
+![Der Abschnitt „Segment Builder“ mit dem Filter „Hintergrund- oder Vordergrund-Push für App aktiviert“ für eine App ist deaktiviert, und der Filter „Hat deinstalliert“ ist ausgewählt.]({% image_buster /assets/img/push_unsub_segment_example.png %})
 
-Beachten Sie, dass die Filter für die Segmentierung nur ungefähr sind und nicht speziell an ein Datum und eine Kampagne gebunden werden können.
+Bitte beachten Sie, dass die Filter der Segmentierung nur ungefähre Angaben sind und nicht konkret mit einem Datum und einer Kampagne verknüpft werden können.
 
 {% endtab %}
-{% tab Angepasste Filter %}
+{% tab Custom filters %}
 
 {% alert important %}
-Wenn Sie ein angepasstes Event für die Änderung des Abos protokollieren, werden [Datenpunkte]({{site.baseurl}}/user_guide/data_and_analytics/data_points#consumption-count) aufgezeichnet. Verwenden Sie alternativ Segmentierungsfilter, um Nutzer:innen zu identifizieren und zu targetieren, die nicht Push-aktiviert sind.
+Durch das Protokollieren eines angepassten Events für Abonnementänderungen werden [Datenpunkte]({{site.baseurl}}/user_guide/data_and_analytics/data_points#consumption-count) protokolliert. Verwenden Sie alternativ Segmentierungsfilter, um Nutzer:innen zu identifizieren und zu targetieren, die nicht Push-aktiviert sind.
 {% endalert %}
 
 Als weitere Abhilfe empfehlen wir, ein angepasstes Event für Push-Abmeldungen zu erstellen, das darauf basiert, ob der Push Enablement-Status eines Nutzers `true` oder `false` ist, um diese Metrik zu verfolgen.
@@ -581,7 +583,7 @@ Die Anzahl der _Sendungen_ kann die Anzahl der _eindeutigen Empfänger_ aus den 
 ##### Warum Bounces auftreten {#bounced-push}
 
 {% tabs %}
-{% tab Apple Push-Benachrichtigungsdienst %}
+{% tab Apple Push Notification service %}
 
 Bounces treten bei Apple Push Notification Services (APNs) auf, wenn eine Push-Benachrichtigung versucht, an ein Gerät zuzustellen, auf dem die gewünschte App nicht installiert ist. APNs hat auch das Recht, Token für Geräte beliebig zu ändern. Wenn Sie versuchen, an das Gerät eines Benutzers zu senden, dessen Push-Token sich in der Zeit zwischen der Registrierung des Tokens (z. B. zu Beginn jeder Sitzung, wenn wir einen Benutzer für ein Push-Token registrieren) und dem Zeitpunkt des Sendens geändert hat, würde dies einen Bounce verursachen.
 
@@ -627,31 +629,31 @@ Im Folgenden finden Sie eine Aufschlüsselung einiger wichtiger Metriken, die Si
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sent">Gesendet</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Sent' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Sent' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#delivery-failures">Zustellfehler</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Delivery Failures' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Delivery Failures' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confirmed-delivery">Bestätigte Zustellung</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Confirmed Deliveries' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Confirmed Deliveries' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#rejections">Zurückweisungen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Rejections' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Rejections' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#opt-out">Opt-out</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Opt-Out' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Opt-Out' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#help">Hilfe</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Help' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Bounces' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">Klicks gesamt</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Clicks' %}</td>
         </tr>
     </tbody>
 </table>
@@ -678,15 +680,15 @@ Hier sind einige wichtige Webhook-Metriken, die Sie in Ihren Analysen sehen kön
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Eindeutige Empfänger:innen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">Sendungen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Sends' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Sends' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#errors">Fehler</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Errors' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Errors' %}</td>
         </tr>
     </tbody>
 </table>
@@ -713,19 +715,19 @@ Hier sind einige wichtige WhatsApp-Metriken, die Sie in Ihren Analysen sehen kö
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">Sendungen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Sends' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Sends' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deliveries">Zustellungen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Deliveries' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Deliveries' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#reads">Gelesen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Reads' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Reads' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#failures">Misserfolge</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Failures' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Failures' %}</td>
         </tr>
     </tbody>
 </table>
@@ -742,7 +744,7 @@ Im Bereich **Historische Leistung** können Sie die Metriken aus dem Bereich **N
 
 Um eine Aufschlüsselung nach Tagen zu erhalten, klicken Sie auf das Hamburger-Menü <i class="fas fa-bars"></i> und wählen Sie **CSV herunterladen**, um einen CSV-Export des Berichts zu erhalten.
 
-![Eine Grafik des Panels „Historische Leistung“ mit Beispielstatistiken für eine E-Mail von Februar 2021 bis Mai 2022.]({% image_buster /assets/img/cc-historical-performance.png %})
+![Ein Diagramm des Panels „Historische Performance“ mit Beispielstatistiken für eine E-Mail von Februar 2021 bis Mai 2022.]({% image_buster /assets/img/cc-historical-performance.png %})
 
 {% if include.channel == "in-app message" %}
 
@@ -758,11 +760,11 @@ Wenn Sie sich dafür entscheiden, nur an Benutzer zu senden, die die neueste Bra
 
 Der Bereich **Schlüsselwortantworten** zeigt Ihnen eine Zeitleiste der eingehenden Schlüsselwörter, mit denen Nutzer nach Erhalt Ihrer Nachricht geantwortet haben.  
 
-![Panel auf Kampagnenebene SMS/MMS/RCS Schlüsselwortantworten, das ein Liniendiagramm der Schlüsselwortverteilung im Zeitverlauf und einen Abschnitt Schlüsselwortkategorien mit ausgewählten Kontrollkästchen für Opt-in, Opt-out, Hilfe, Andere, Mehr und Coaching enthält.]({% image_buster /assets/img/sms/keyword_responses.png %})
+![Das Panel „Kampagnenebene – SMS/MMS/RCS-Schlüsselwortantworten“ enthält ein Liniendiagramm zur Verteilung der Schlüsselwörter im Zeitverlauf sowie einen Abschnitt „Schlüsselwortkategorien“ mit ausgewählten Kontrollkästchen für „Opt-in“, „Opt-out“, „Hilfe“, „Sonstiges“, „Mehr“ und „Coaching“.]({% image_buster /assets/img/sms/keyword_responses.png %})
 
 Hier können Sie auch die Antwortverteilung für jede Keyword-Kategorie einsehen, um die nächsten Schritte für das [Retargeting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns) festzulegen und bequem [ein Segment zu erstellen]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment).
 
-![Die Tabelle unterhalb des Liniendiagramms enthält Spalten für Schlüsselwortkategorie, Antwortverteilung und Retargeting, wobei Sie die Möglichkeit haben, ein Segment mit der Schlüsselwortkategorie zu erstellen.]({% image_buster /assets/img/sms/keyword_segments.png %})
+![Die Tabelle unterhalb des Liniendiagramms enthält Spalten für die Keyword-Kategorie, die Antwortverteilung und das Retargeting. Hier haben Sie die Möglichkeit, ein Segment mit der Keyword-Kategorie zu erstellen.]({% image_buster /assets/img/sms/keyword_segments.png %})
 
 {% endif %}
 
@@ -776,7 +778,7 @@ Das Panel **Details zum Konversions-Event** zeigt Ihnen die Performance Ihrer Ko
 
 Das Panel **Konversionskorrelation** gibt Ihnen Aufschluss darüber, welche Benutzerattribute und Verhaltensweisen die von Ihnen für Kampagnen festgelegten Ergebnisse fördern oder beeinträchtigen. Weitere Informationen finden Sie unter [Umrechnungskorrelation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/).
 
-![Das Panel „Konversionskorrelation“ mit einer Analyse der Benutzerattribute und des Benutzerverhaltens aus dem primären Konversions-Event - A.]({% image_buster /assets/img/convcorr.png %})
+![Das Panel „Conversion-Korrelation“ mit einer Analyse der Nutzerattribute und des Verhaltens aus dem primären Konversions-Event – A.]({% image_buster /assets/img/convcorr.png %})
 
 {% if include.channel == "whatsapp" %}
 

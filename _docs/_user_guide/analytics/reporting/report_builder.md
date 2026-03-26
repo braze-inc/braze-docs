@@ -93,6 +93,10 @@ If you want to report on Canvas variants or steps, select **Canvases** for rows 
 | Unique Recipients | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. Unavailable with **Channels** drilldown. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
+### Deleted message variants
+
+Statistics for deleted message variants are not displayed when you break down your report by campaigns or Canvases. However, channel-level totals include all statistics regardless of whether the variant was deleted. For example, _Sends_ for email include all email sends, but if you break down those statistics by campaign, the numbers may be lower because sends for deleted message variants are filtered out.
+
 ## Viewing a report
 
 After running your report, you can view your results in table format on the report page. 
@@ -122,7 +126,7 @@ You can share a dashboard link to the report by selecting **Share** and one of t
 
 !["Share a link" dropdown with a link to the report.]({% image_buster /assets/img/report_builder_2/share_this_report.png %}){: style="max-width:70%;"}
 
-- **Send or schedule an email:** Send an email immediately or at a designated time that contains a download link that expires after one hour. You can select recipients from the dashboard users listed in the **Email Recipients** dropdown or enter any other email address.
+- **Send or schedule an email:** Send an email immediately or at a designated time that contains a download link that expires after one hour. You can select recipients from the company users listed in the **Email Recipients** dropdown or enter any other email address.
 
 !["Schedule an email" window with fields to choose how the report is formatted, who should receive it, and when it should send.]({% image_buster /assets/img/report_builder_2/schedule_an_email.png %}){: style="max-width:70%;"}
 

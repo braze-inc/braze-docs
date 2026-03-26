@@ -40,7 +40,7 @@ Braze とトレジャーデータの統合により、トレジャーデータ�
 
 ![]({% image_buster /assets/img/treasure_data/braze_authentication.png %}){: style="max-width:80%;"}
 
-### ステップ2: クエリを定義する
+### ステップ 2:クエリを定義する
 
 トレジャーデータで、**クエリ**の下にある**データワークベンチ**に移動し、データをエクスポートしたいクエリを選択します。このクエリを実行して結果セットを検証します。
 
@@ -54,7 +54,7 @@ HIVEを使用してクエリを作成するユーザーの場合、HIVEではア
 
 次の[カスタマイズセクション](#customization)に概説されているように、追加のエクスポート結果パラメータを定義します。エクスポート統合コンテンツで、統合パラメータを確認してください。
 
-![「Export Results」ページ。このページには、「Mode」、「Traffic Record Type」、および「Pre-formatted Fields」フィールドがある。この例では、それぞれのフィールドに「User-Track」と「Custome Event」が設定されています。]{% image_buster /assets/img/treasure_data/braze_export_configuration.png %}{: style="max-width:80%;"}
+![「Export Results」ページ。このページには、「Mode」、「Traffic Record Type」、および「Pre-formatted Fields」フィールドがある。この例では、それぞれのフィールドに「User-Track」と「Custome Event」が設定されている。]({% image_buster /assets/img/treasure_data/braze_export_configuration.png %}){: style="max-width:80%;"}
 
 最後に、**完了**を選択し、クエリを実行して、データがBrazeに移動したことを確認します。
 

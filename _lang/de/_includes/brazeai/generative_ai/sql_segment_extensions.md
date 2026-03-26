@@ -2,7 +2,7 @@
 
 > Sie können eine Segmenterweiterung mithilfe von Snowflake SQL-Abfragen von [Snowflake-Daten]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/) erstellen. SQL kann Ihnen helfen, neue Segmentierungs-Anwendungsfälle zu erschließen, da es die Flexibilität bietet, die Beziehungen zwischen Daten auf eine Weise zu beschreiben, die mit anderen Segmentierungs-Features nicht möglich ist.
 >
-> Wie bei den Standard Segmenterweiterungen können Sie in Ihrer SQL-Segmenterweiterung Events aus den letzten zwei Jahren (730 Tage) abfragen. Im Gegensatz zu den Standard Segment-Erweiterungen [verbrauchen](#credits) die SQL Segment-Erweiterungen [Credits](#credits).
+> Wie bei den Standard Segmenterweiterungen können Sie in Ihrer SQL-Segmenterweiterung Events aus den letzten zwei Jahren (730 Tage) abfragen. Im Gegensatz zu Standard-Segment-Erweiterungen [verbrauchen](#credits) SQL-Segment-Erweiterungen [Credits](#credits).
 
 ## Voraussetzungen
 
@@ -15,7 +15,7 @@ Da es möglich ist, über dieses Feature auf PII-Daten zuzugreifen, müssen Sie 
 Bei der Erstellung Ihrer SQL-Segmenterweiterung können Sie zwischen zwei Arten von SQL-Editoren wählen: dem SQL-Editor und dem inkrementellen SQL-Editor.
 
 - **Vollständige Auffrischung:** Jedes Mal, wenn Ihr Segment aktualisiert wird, fragt Braze alle verfügbaren Daten ab, um Ihr Segment zu aktualisieren, was mehr Credits verbraucht als inkrementelle Aktualisierungen. Erweiterungen mit vollständiger Aktualisierung können die Mitgliedschaft automatisch täglich erneuern, können aber nicht mit inkrementeller Aktualisierung aktualisiert werden.
-- **Inkrementelle Aktualisierung:** Bei der inkrementellen Aktualisierung werden nur die Daten der letzten zwei Tage berechnet, was kosteneffizienter ist und weniger Guthaben verbraucht. Wenn Sie ein SQL-Segment zur inkrementellen Aktualisierung erstellen, können Sie es so einstellen, dass die Mitgliedschaft automatisch täglich neu generiert wird. Damit können Sie Ihr Segment so einstellen, dass die Mitgliedschaft automatisch täglich aktualisiert wird, was die Kosten für eine tägliche Datenaktualisierung für SQL Segment-Erweiterungen reduziert.
+- **Inkrementelle Aktualisierung:** Die inkrementelle Aktualisierung stellt eine kosteneffizientere Methode zur Einrichtung Ihrer Abfrage dar, erfordert jedoch einige zusätzliche [Schritte](#step-2-write-your-sql). Wenn Sie diese zusätzlichen Schritte beim Erstellen Ihres Segments ausführen können, empfiehlt es sich, diese Option zu wählen, da Ihre Abfrage dann mit weniger Credits ausgeführt wird. 
 - **KI SQL-Generator:** Mit dem KI SQL-Generator können Sie eine Eingabeaufforderung in einfacher Sprache schreiben und sie in eine SQL-Abfrage für Ihr Segment umwandeln. So können Sie schnell loslegen, ohne selbst SQL schreiben zu müssen.
 
 {% alert tip %}
@@ -23,21 +23,21 @@ Sie können alle SQL Segmente, die in einem der beiden SQL-Editoren erstellt wur
 {% endalert %}
 
 {% tabs local %}
-{% tab Vollständige Aktualisierung %}
+{% tab Full refresh %}
 
 So erstellen Sie eine vollständige Aktualisierung der SQL-Segmenterweiterung:
 
 1. Gehen Sie zu **Zielgruppe** > **Segmenterweiterungen**.
-2. Wählen Sie **Neue Erweiterung erstellen** und wählen Sie dann **Vollständige Aktualisierung**.<br><br>
+2. Bitte wählen Sie **„Neue Erweiterung erstellen**“ und anschließend **„Vollständige Aktualisierung**“.<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
-3. Fügen Sie einen Namen für Ihre Segmenterweiterung hinzu und geben Sie Ihr SQL ein. Siehe [Schritt 2](#step-2-write-your-sql) für Anforderungen und Ressourcen.<br><br>
-   ![SQL-Editor mit einem Beispiel für eine SQL-Segmenterweiterung.]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
+3. Fügen Sie einen Namen für Ihre Segmenterweiterung hinzu und geben Sie Ihr SQL ein. Die Anforderungen und Ressourcen referenzieren Sie bitte [Schritt 2](#step-2-write-your-sql).<br><br>
+   ![SQL-Editor, der ein Beispiel für eine SQL-Segment-Erweiterung anzeigt.]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
 4. Speichern Sie Ihre Segmenterweiterung.
 
 {% endtab %}
-{% tab Inkrementelle Aktualisierung %}
+{% tab Incremental refresh %}
 
-Der SQL-Editor für die inkrementelle Aktualisierung ermöglicht dem Benutzer die Aggregation von Abfragen pro Datum für ein Ereignis innerhalb eines bestimmten Zeitrahmens. So erstellen Sie eine inkrementelle Aktualisierung der SQL Segment Extension:
+So erstellen Sie eine inkrementelle Aktualisierung der SQL Segment Extension:
 
 1. Gehen Sie zu **Zielgruppe** > **Segmenterweiterungen**.
 
@@ -46,12 +46,12 @@ Wenn Sie die [ältere Navigation]({{site.baseurl}}/user_guide/administrative/acc
 {% endalert %}
 
 {:start="2"}
-2\. Wählen Sie **Neue Erweiterung erstellen** und wählen Sie **Inkrementelle Aktualisierung**.<br><br>
+2\. Bitte wählen Sie **„Neue Erweiterung erstellen“** und **anschließend „Inkrementelle Aktualisierung**“.<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
 3\. Fügen Sie einen Namen für Ihre Segmenterweiterung hinzu und geben Sie Ihr SQL ein. Lesen Sie den Abschnitt [SQL schreiben](#writing-sql) für Anforderungen und Ressourcen.<br><br>
-   ![SQL-Editor mit einem Beispiel für eine inkrementelle SQL-Segmenterweiterung.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:60%" }<br><br>
+   ![SQL-Editor, der ein Beispiel für eine inkrementelle SQL-Segment-Erweiterung anzeigt.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:60%" }<br><br>
 4\. Falls gewünscht, wählen Sie **Erweiterung täglich regenerieren**.<br><br>
-   ![Aktivieren Sie das Kontrollkästchen, um die Erweiterung täglich neu zu generieren.]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:60%" }<br><br>
+   ![Kontrollkästchen, um die Erweiterung täglich neu zu generieren.]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:60%" }<br><br>
    Wenn Sie diese Option auswählen, aktualisiert Braze die Segmentmitgliedschaft jeden Tag automatisch. Das bedeutet, dass Braze jeden Tag um Mitternacht in der Zeitzone Ihres Unternehmens (mit einer möglichen Verzögerung von einer Stunde) nach neuen Benutzern in Ihrem Segment sucht und diese automatisch zu Ihrem Segment hinzufügt. Wenn eine Segmenterweiterung 7 Tage lang nicht verwendet wurde, unterbricht Braze automatisch die tägliche Regeneration. Eine ungenutzte Segmenterweiterung ist eine, die nicht Teil einer Kampagne oder eines Canvas ist (die Kampagne oder das Canvas muss nicht aktiv sein, damit die Erweiterung als "genutzt" gilt).<br><br>
 5\. Speichern Sie Ihre Segmenterweiterung.
 
@@ -65,12 +65,12 @@ Der AI SQL-Generator ist derzeit als Beta-Funktion verfügbar. Wenden Sie sich a
 
 Der KI-SQL-Generator nutzt [GPT](https://openai.com/gpt-4), powered by OpenAI, um SQL-Empfehlungen für Ihr SQL-Segment zu geben.
 
-![AI SQL Generator mit der Abfrage "Benutzer, die im letzten Monat eine Benachrichtigung erhalten haben"]({% image_buster /assets/img/ai_sql_generator.png %}){: style="max-width:70%;"}
+![KI-SQL-Generator mit der Eingabeaufforderung „Nutzer:innen, die im letzten Monat eine Benachrichtigung erhalten haben“]({% image_buster /assets/img/ai_sql_generator.png %}){: style="max-width:70%;"}
 
 Um den KI SQL-Generator zu verwenden, gehen Sie wie folgt vor:
 
-1. Wählen Sie **KI SQL-Generator starten**, nachdem Sie ein [SQL-Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) entweder mit vollständiger oder inkrementeller Aktualisierung erstellt haben.
-2. Geben Sie Ihre Eingabeaufforderung ein und wählen Sie **Generieren**, um Ihre Eingabeaufforderung in SQL zu übersetzen.
+1. Bitte wählen Sie **„KI-SQL-Generator starten“,** nachdem Sie ein [SQL-Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) mit vollständiger oder inkrementeller Aktualisierung erstellt haben.
+2. Geben Sie Ihre Eingabeaufforderung ein und wählen Sie **„Generieren“,** um Ihre Eingabeaufforderung in SQL zu übersetzen.
 3. Überprüfen Sie das generierte SQL, um sicherzustellen, dass es korrekt aussieht, und speichern Sie dann Ihr Segment.
 
 #### Beispiel-Eingabeaufforderungen
@@ -101,7 +101,7 @@ Beachten Sie, dass die zur Abfrage verfügbaren Tabellen nur Event-Daten enthalt
 {% endalert %} 
 
 {% tabs %}
-{% tab SQL-Editor %}
+{% tab SQL Editor %}
 
 Ihr SQL muss zusätzlich die folgenden Regeln einhalten:
 
@@ -122,24 +122,24 @@ Außerdem muss Ihre Standard-SQL-Abfrage die folgenden Regeln einhalten:
 
 - Sie können keine `DECLARE` Anweisungen verwenden.
 {% endtab %}
-{% tab Inkrementeller SQL-Editor %}
+{% tab Incremental SQL Editor %}
 
 Alle inkrementellen Aktualisierungsabfragen bestehen aus zwei Teilen: einer Abfrage und Schemadetails.
 
 1. Schreiben Sie im Editor eine Abfrage, die `user_id`s aus der gewünschten Tabelle auswählt.
 2. Fügen Sie Schemadetails hinzu, indem Sie einen **Operator**, die **Anzahl der Zeitpunkte** und den **Zeitraum** aus den Feldern oberhalb des Editors auswählen. Die Abfrage prüft, ob die Summe der Aggregatspalte eine bestimmte Bedingung erfüllt, die in den Platzhaltern {% raw %}`{{operator}}` und `{{number of times}}`{% endraw %} angegeben ist. Dies funktioniert ähnlich wie der Arbeitsablauf zur Erstellung klassischer Segmenterweiterungen.<br><br>
    - **Operator:** Geben Sie an, ob das Event mehr als, weniger als oder gleich einer Anzahl von Vorkommen stattgefunden hat.<br>
-   ![Operator-Feld mit ausgewähltem "Mehr als".]({% image_buster /assets/img_archive/sql_segments_operator.png %})<br><br>
+   ![Operatorfeld mit der Auswahl „Mehr als“.]({% image_buster /assets/img_archive/sql_segments_operator.png %})<br><br>
    - **Anzahl von Malen:** Wie oft Sie das Ereignis in Bezug auf den Betreiber auswerten möchten.<br>
-   ![Anzahl der Eingaben mit "5".]({% image_buster /assets/img_archive/sql_segments_times.png %})<br><br>
+   ![Anzahl der Eingaben mit „5“.]({% image_buster /assets/img_archive/sql_segments_times.png %})<br><br>
    - **Der Zeitraum:** Anzahl der Tage von 1 bis 730, in denen Sie Instanzen des Events überprüfen möchten. Dieser Zeitraum bezieht sich auf vergangene Tage im Verhältnis zum aktuellen Tag. Das folgende Beispiel zeigt die Abfrage nach Nutzer:innen, die das Event in den letzten 365 Tagen mehr als 5 Mal durchgeführt haben.<br>
-   ![Zeitspannenfeld mit "365" eingegeben.]({% image_buster /assets/img_archive/sql_segments_period.png %})
+   ![Zeitraumfeld mit der Eingabe „365“.]({% image_buster /assets/img_archive/sql_segments_period.png %})
 
 Im folgenden Beispiel würde das resultierende Segment Benutzer enthalten, die das Ereignis `favorited` mehr als 3 Mal in den letzten 30 Tagen nach einem bestimmten Datum durchgeführt haben.
 
-![SQL-Editor mit einem Beispiel für eine inkrementelle SQL-Segmenterweiterung.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:65%" }
+![SQL-Editor, der ein Beispiel für eine inkrementelle SQL-Segment-Erweiterung anzeigt.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:65%" }
 
-![SQL-Vorschau auf eine inkrementelle SQL-Segmenterweiterung.]({% image_buster /assets/img_archive/sql_segments_incremental_preview.png %}){: style="max-width:85%" }
+![SQL-Vorschau einer inkrementellen SQL-Segment-Erweiterung.]({% image_buster /assets/img_archive/sql_segments_incremental_preview.png %}){: style="max-width:85%" }
 
 {% alert tip %}
 Segmente für die inkrementelle Aktualisierung berücksichtigen späte Events, d. h. Events, die mehr als 2 Tage zurückliegen (z. B. SDK-Events, die zum Zeitpunkt ihrer Erfassung noch nicht gesendet wurden).
@@ -172,21 +172,21 @@ Vor dem Speichern können Sie eine Vorschau Ihrer Abfrage durchführen. Die Vors
 
 Bei inkrementellen SQL-Segmenterweiterungen enthält die Vorschau nicht die zusätzlichen Kriterien Ihres Operators, die Anzahl der Zeitpunkte und die Felder für den Zeitraum.
 
-### Schritt 4: Bestimmen Sie, ob Sie SQL invertieren müssen
+### Schritt 4: Bitte prüfen Sie, ob Sie SQL invertieren müssen.
 
-Bestimmen Sie als nächstes, ob Sie SQL invertieren müssen. Es ist zwar nicht möglich, direkt nach Nutzer:innen mit null Ereignissen zu suchen, aber mit **Invert SQL** können Sie diese Nutzer:innen gezielt zusammenstellen.
+Als Nächstes sollten Sie feststellen, ob Sie SQL invertieren müssen. Es ist zwar nicht möglich, direkt nach Nutzern mit null Ereignissen zu suchen, jedoch können Sie **Invert SQL** verwenden, um diese Nutzer:innen anzusprechen.
 
 {% alert note %}
-Standardmäßig ist **Invert SQL** nicht umgeschaltet. Wenn Sie jedoch den KI SQL-Generator verwenden, um eine SQL-Anweisung zu generieren, die negiert werden muss, könnte ChatGPT eine Ausgabe liefern, die dieses Feature automatisch umschaltet.
+Standardmäßig wird **„SQL invertieren**“ nicht umgeschaltet. Wenn Sie jedoch die KI-SQL-Generator-Anwendung verwenden, um eine SQL-Anweisung zu generieren, die negiert werden muss, könnte ChatGPT eine Ausgabe zurückgeben, die dieses Feature automatisch umschaltet.
 {% endalert %}
 
-Um beispielsweise Nutzer:innen mit weniger als drei Käufen als Zielgruppe zusammenzustellen, schreiben Sie zunächst eine Abfrage, um Nutzer:innen mit drei oder mehr Käufen auszuwählen. Wählen Sie dann die Option **SQL umkehren** aus, um Nutzer:innen mit weniger als drei Käufen (einschließlich derer mit null Käufen) zusammenzustellen.
+Um beispielsweise eine Zielgruppe zusammenzustellen, die Nutzer:innen umfasst, die weniger als drei Käufe getätigt haben, erstellen Sie zunächst eine Abfrage, um Nutzer:innen auszuwählen, die drei oder mehr Käufe getätigt haben. Wählen Sie anschließend **„SQL** **invertieren**“, um eine Zielgruppe mit weniger als drei Käufen (einschließlich derjenigen mit null Käufen) zusammenzustellen.
 
 {% alert important %}
-Sofern Sie nicht speziell Nutzer:innen mit Null-Ereignissen als Targeting zusammenstellen wollen, brauchen Sie SQL nicht zu invertieren. Wenn Sie **SQL invertieren** auswählen, bestätigen Sie, dass das Feature benötigt wird und dass das Segment Ihrer gewünschten Zielgruppe entspricht. Wenn eine Abfrage beispielsweise auf Nutzer:innen mit mindestens einem Ereignis abzielt, wird sie nur auf Nutzer:innen mit null Ereignissen abzielen, wenn sie invertiert wird.
+Sofern Sie nicht gezielt eine Zielgruppe ohne Ereignisse zusammenstellen möchten, ist es nicht erforderlich, SQL zu invertieren. Wenn Sie **„SQL invertieren“** ausgewählt haben, vergewissern Sie sich bitte, dass das Feature erforderlich ist und dass das Segment Ihrer gewünschten Zielgruppe entspricht. Wenn eine Abfrage beispielsweise auf Nutzer:innen mit mindestens einem Ereignis abzielt, wird sie bei einer Umkehrung nur auf Nutzer:innen mit null Ereignissen angewendet.
 {% endalert %}
 
-![Segment-Erweiterung mit dem Namen "In den letzten 30 Tagen auf 1-4 E-Mails geklickt" mit der Option, SQL auszuwählen.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:90%;"}
+![Segment-Erweiterung mit dem Namen „1–4 E-Mails in den letzten 30 Tagen angeklickt” mit der Option „SQL invertieren” ausgewählt.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:90%;"}
 
 ## Segmentmitgliedschaft aktualisieren
 
@@ -202,13 +202,13 @@ Auf der Seite **Segmenterweiterungen** sind Segmente, die mit SQL generiert wurd
 
 Wählen Sie eine SQL-Segmenterweiterung aus, um zu sehen, wo die Erweiterung verwendet wird, die Erweiterung zu archivieren oder [die Segment-Mitgliedschaft manuell zu aktualisieren](#refreshing-segment-membership).
 
-![Messaging Abschnitt des SQL-Editors verwenden, der zeigt, wo das SQL-Segment verwendet wird.]({% image_buster /assets/img_archive/sql_segments_usage.png %}){: style="max-width:70%;"}
+![Der Abschnitt „Messaging-Verwendung“ des SQL-Editors zeigt an, wo das SQL-Segment verwendet wird.]({% image_buster /assets/img_archive/sql_segments_usage.png %}){: style="max-width:70%;"}
 
 ### Festlegen der Aktualisierungseinstellungen
 
 {% multi_lang_include segments.md section='Refresh settings' %}
 
-## Snowflake Kredite {#credits}
+## Snowflake-Credits {#credits}
 
 Jeder Braze Workspace verfügt über 5 Snowflake Credits pro Monat. Wenn Sie mehr Credits benötigen, wenden Sie sich an Ihren Kundenbetreuer. Credits werden immer dann verwendet, wenn Sie die Mitgliedschaft eines SQL Segments aktualisieren oder speichern und aktualisieren. Credits werden nicht verwendet, wenn Sie Vorschauen innerhalb eines SQL Segments ausführen oder eine klassische Segmenterweiterung speichern oder aktualisieren.
 
@@ -222,7 +222,7 @@ Um Credits zu sparen, sollten Sie eine Vorschau Ihrer Abfrage anzeigen, um siche
 
 Ihr Guthaben wird am ersten eines jeden Monats um 12 Uhr UTC auf 5 zurückgesetzt. Sie können die Nutzung Ihres Guthabens im Laufe des Monats im Panel für die Kreditnutzung überwachen. Klicken Sie auf der Seite **Segment Extensions** auf <i class="fa-solid fa-chart-column"></i> **View SQL Credit Usage**.
 
-![SQL Credit Usage Panel auf der Seite SQL Segment-Erweiterungen]({% image_buster /assets/img_archive/sql_segments_credits.png %}){: style="max-width:60%"}
+![SQL Credit Usage Panel auf der Seite SQL-Segmenterweiterungen]({% image_buster /assets/img_archive/sql_segments_credits.png %}){: style="max-width:60%"}
 
 Wenn Ihr Guthaben Null erreicht, geschieht Folgendes:
 

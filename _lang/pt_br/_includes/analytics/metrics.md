@@ -219,7 +219,7 @@ A <i>taxa de envios para a operadora</i> é a porcentagem do total de mensagens 
 {% endif %}
 
 {% if include.metric == "Spam" %}
-<i>Spam</i> é o número total de e-mails entregues que foram marcados como "spam" pelo destinatário. Embora o Braze não mude o estado de inscrição desses usuários, esses usuários serão automaticamente excluídos em e-mails futuros, a menos que você esteja enviando um e-mail de transação, que está configurado para "enviar para todos os usuários, incluindo cancelados".
+<i>Spam</i> é o número total de e-mails entregues que foram marcados como "spam" pelo destinatário. Embora o Braze não mude o estado de inscrição desses usuários, eles serão automaticamente excluídos em e-mails futuros, a menos que você esteja enviando um e-mail de transação, que está configurado para "enviar para todos os usuários, incluindo cancelados".
 {% endif %}
 
 {% if include.metric == "Survey Page Dismissals" %}
@@ -239,7 +239,7 @@ A <i>taxa de envios para a operadora</i> é a porcentagem do total de mensagens 
 {% endif %}
 
 {% if include.metric == "Total Impressions" %}
-<i>Total de Impressões</i> é o número de vezes que uma mensagem é visualizada. O Braze registra uma impressão apenas quando a mensagem se torna visível para o usuário na tela dele. Por exemplo, se uma mensagem estiver colocada na parte inferior de uma página, a impressão não é registrada até que o usuário role para baixo e a mensagem entre em vista. Se um usuário for mostrado a mesma mensagem duas vezes, contará como duas impressões.
+<i>Total de Impressões</i> é o número de vezes que uma mensagem é visualizada. O Braze registra uma impressão apenas quando a mensagem se torna visível para o usuário na tela dele. Por exemplo, se uma mensagem estiver colocada na parte inferior de uma página, a impressão não será registrada até que o usuário role para baixo e a mensagem fique visível. Se um usuário for mostrado a mesma mensagem duas vezes, contará como duas impressões.
 {% endif %}
 
 {% if include.metric == "Total Opens" %}
@@ -251,7 +251,7 @@ A <i>taxa de envios para a operadora</i> é a porcentagem do total de mensagens 
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>Cliques únicos</i> é o número distinto de destinatários que clicaram em um link em uma mensagem pelo menos uma vez e é medido por <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+<i>Cliques Únicos</i> é o número distinto de destinatários que clicaram em um link dentro de uma mensagem pelo menos uma vez e é medido por <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}

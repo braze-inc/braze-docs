@@ -118,6 +118,5 @@ noindex: true
 
 ### まだ迷っていますか？
 
-この記事がお役に立たなかった場合は、フィードバックを残すか、[サポートチケット][support]を開封してください！
+この記事がお役に立たなかった場合は、フィードバックを残すか、[サポートチケット]({{site.baseurl}}/braze_support/)を開封してください！
 
-[support]: {{site.baseurl}}/braze_support/

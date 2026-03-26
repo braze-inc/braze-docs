@@ -4,53 +4,61 @@
 
 ## Was ist BrazeAI Decisioning Studio™?
 
-[BrazeAI Decisioning Studio™](https://www.braze.com/product/brazeai-decisioning-studio/) ersetzt A/B-Tests durch KI-Entscheidungen, die alles personalisieren und jede Metrik maximieren: Treiben Sie Dollars an, nicht Klicks – mit dem Decisioning Studio können Sie jeden geschäftlichen KPI optimieren.
+[BrazeAI Decisioning Studio™](https://www.braze.com/product/brazeai-decisioning-studio/) ersetzt A/B-Tests durch Entscheidungsagenten, die alles personalisieren und jede Metrik maximieren: Steigern Sie Ihren Umsatz, nicht die Klickzahlen – mit Decisioning Studio können Sie jede Geschäftsmetrik optimieren.
 
 BrazeAI™-Entscheidungsagenten entdecken automatisch die optimale Aktion für individuelle Kund:innen. Mit Ihren First-Party-Daten kann BrazeAI™ jeden KPI für eine Vielzahl von Anwendungsfällen maximieren, einschließlich Cross-Sell, Upsell, Wiederkauf, Bindung, Erneuerung, Empfehlung, Winback und mehr.
 
-Das Team von AI Expert Services passt BrazeAI Decisioning Studio™ für die speziellen Anforderungen Ihres Unternehmens an. Das Decisioning Studio funktioniert zwar am besten mit Braze, aber eine Vielzahl anderer Plattformen wird bereits unterstützt. Wenn Sie mehr erfahren möchten, [vereinbaren Sie einen Termin](https://www.braze.com/get-started/) mit Braze.
+
+Um mehr zu erfahren oder mit Decisioning Studio zu beginnen, [vereinbaren Sie bitte einen Termin für ein Gespräch](https://www.braze.com/get-started/) mit Braze.
+
+![Übersicht über die Feedback-Schleife des Decisioning Studio]({% image_buster /assets/img/decisioning_studio/decisioniong_studio_feedback_loop.png %})
 
 ## Wichtigste Features
 
-- **Behalten Sie Ihren technischen Stack, aber fügen Sie ein Gehirn hinzu:** BrazeAI™ wird als Entscheidungsebene zwischen Ihre Datensysteme und Ihre Plattform für Marketing-Automatisierung eingefügt.
+- **Behalten Sie Ihren technischen Stack, aber fügen Sie ein Gehirn hinzu:** BrazeAI™ fungiert als Entscheidungsebene zwischen Ihren Datensystemen und Ihrer Customer-Engagement-Plattform. Obwohl Decisioning Studio am besten mit Braze zusammenarbeitet, werden auch eine Vielzahl anderer Plattformen unterstützt. 
 - **Wählen Sie Gewinner für Menschen, nicht für Segmente:** Nutzen Sie alle Ihre First-Party-Daten, um die optimale 1:1-Entscheidung für jeden Einzelnen zu treffen.
 - **Personalisieren Sie alles:** KI-Entscheidungsagenten finden die beste Nachricht, das beste Produkt, den besten Anreiz, den besten Kanal, den besten Zeitpunkt und die beste Häufigkeit für individuelle Kund:innen.
 - **Maximieren Sie jede Metrik:** Klicks sind nicht gleichbedeutend mit Umsatz. Nutzen Sie BrazeAI™, um die Angebote oder Anreize auszuwählen, die den Umsatz, den Gewinn, den CLV oder jeden anderen geschäftlichen KPI maximieren.
 - **Wissen statt Vermutungen:** Sehen Sie, wie KI-Entscheidungsagenten personalisiert werden, um tiefe Insights in das Kundenverhalten zu erhalten
+- **Kompetente Unterstützung während des gesamten Prozesses:** Decisioning Studio Pro umfasst die Unterstützung durch unser Team für KI-Entscheidungsdienste, das Ihre Entscheidungsagenten auf die spezifischen Anforderungen Ihres Unternehmens zuschneidet.
 
-## Über Agenten
+## Über Decisioning Studio
 
 ### Funktionsweise
 
-Ein Agent ist eine angepasste Konfiguration für BrazeAI Decisioning Studio™, die auf ein bestimmtes Geschäftsziel zugeschnitten ist.
+Mit BrazeAI Decisioning Studio™ können Sie Entscheidungsagenten entwerfen und einsetzen, die beliebige Metriken optimieren. 
 
-Sie könnten zum Beispiel einen Agenten für Wiederholungskäufe erstellen, um die Konversionen nach einem Erstverkauf zu erhöhen. Sie definieren die Zielgruppe und die Nachricht in Braze, während Decisioning Studio täglich Experimente durchführt und dabei automatisch verschiedene Kombinationen von Produktangeboten, Zeitpunkt und Häufigkeit der Nachrichten für individuelle Kund:innen testet. Mit der Zeit lernt Braze AI™, was am besten funktioniert, und orchestriert personalisierte Sendungen über Braze, um die Wiederkaufsraten zu maximieren.
+Um Decisioning Studio einzurichten, gehen Sie wie folgt vor:
+- Verbinden Sie Datenquellen, die dem Agenten Aufschluss darüber geben, wie ein Kunde auf seine Entscheidungen reagiert.
+- Konfigurieren Sie die Orchestrierung, um die Aktionen des Entscheidungsagenten auszuführen.
+- Entwerfen Sie Ihren Entscheidungsagenten, um zu definieren, welches Ergebnis Sie maximieren möchten und welche Maßnahmen der Agent dazu ergreifen kann.
+- Starten Sie Ihren Entscheidungsagenten und lassen Sie ihn kontinuierlich lernen und Ihre Geschäftsergebnisse optimieren.
 
-Das Erstellen eines guten Agenten umfasst Folgendes:
+Während Decisioning Studio Go eine Self-Service-Plattform ist, umfasst Decisioning Studio Pro die Unterstützung durch KI-Decisioning-Dienste des vor Ort eingesetzten Data-Science-Teams von Braze, das Sie bei der Gestaltung und Konfiguration Ihres Agenten unterstützt, um Ihre Geschäftsergebnisse zu maximieren. Siehe [Decisioning Studio Go vs. Entscheidung Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/#decisioning-studio-go-vs-decisioning-studio-pro) für weitere Informationen.
 
-- Auswahl einer Erfolgsmetrik für BrazeAI™ zur Optimierung, wie z. B. Umsatz, Konversionen oder ARPU.
-- Festlegung der zu testenden Dimensionen, z. B. Angebot, Betreffzeile, Kreativität, Kanal oder Sendezeitpunkt.
-- Auswahl der Optionen für die einzelnen Dimensionen, z. B. E-Mail oder SMS, tägliche oder wöchentliche Häufigkeit.
+Weitere Informationen finden Sie unter [Erste Schritte mit Decisioning Studio]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/).
 
-### Beispiel-Agenten
+### Entscheidungsträger vs. BrazeAI-Agenten
 
-Hier sind einige Beispiele für Agenten, die Sie mit BrazeAI Decisioning Studio™ erstellen können. Ihre KI-Entscheidungsagenten lernen aus jeder Kundeninteraktion und wenden diese Insights auf die Aktionen des nächsten Tages an.
+Obwohl beide von BrazeAI™ unterstützt werden, erfüllen Decisioning Agents und Braze Agents unterschiedliche Zwecke in Ihrem Marketing-Stack.
 
-{% multi_lang_include decisioning_studio/sample_agents.md %}
+**Entscheidungsträger** sind die strategischen Koordinatoren Ihrer Kampagnen. Sie agieren auf Kampagnenebene und führen kontinuierlich Experimente in verschiedenen Bereichen wie Angebot, Kanal, Zeitpunkt und Häufigkeit durch, um Metriken wie Umsatz, Konversionen oder ARPU zu maximieren. Ein Entscheidungsagent verwaltet einen gesamten Anwendungsfall – wie beispielsweise Rückgewinnung, Cross-Selling oder Verlängerung – und lernt im Laufe der Zeit, welche Kombination von Maßnahmen für jeden einzelnen Kund:in am besten geeignet ist.
 
-## Über API-Schlüssel-Berechtigungen
+**Braze Agents** sind KI-gestützte Hilfsprogramme, die in einzelnen Canvas-Schritten oder Katalogfeldern integriert sind. Sie nutzen große Sprachmodelle (LLMs), um Inhalte zu generieren (wie personalisierte Betreffzeilen oder Nachrichtentexte), Routing-Entscheidungen auf Grundlage des Kundenkontexts zu treffen oder Ihre Kataloge mit dynamisch generierten Werten anzureichern. Braze Agents zeichnen sich dadurch aus, dass sie Kreativität und Personalisierung in bestimmte Touchpoints Ihrer Kampagne einbringen.
 
-Während Ihrer Integration von BrazeAI Decisioning Studio™ erstellen Sie einen Braze-API-Schlüssel mit spezifischen Berechtigungen, die die Möglichkeiten Ihrer Integration definieren. In der folgenden Tabelle finden Sie weitere Informationen zu den einzelnen Berechtigungen.
+Betrachten Sie es so: Ein Entscheidungsagent ist der Dirigent, der Ihre gesamte Kampagnenstrategie koordiniert, während Braze-Agenten die Musiker sind, die jedem einzelnen Moment der Customer Journey Kreativität und Nuancen verleihen. Sie können beide zusammen verwenden – lassen Sie einen Entscheidungsagenten das optimale Angebot und den optimalen Kanal für jeden Kunden ermitteln und verwenden Sie dann einen Braze-Agenten, um einen personalisierten Text für diese spezifische Nachricht zu erstellen.
 
-{% alert tip %}
-Diese Informationen finden Sie auch auf der Seite [BrazeAI Decisioning Studio™ Integration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/integration).
-{% endalert %}
 
-{% multi_lang_include decisioning_studio/api_key_permissions.md %}
+{% multi_lang_include decisioning_studio/go_vs_pro.md %}
+
+
+### Über diesen Leitfaden
+
+In diesem Leitfaden erfahren Sie zunächst, was Entscheidungsagenten sind und wie sie funktionieren. Anschließend richten Sie zunächst das Self-Service-Produkt Decisioning Studio Go und anschließend das Produkt mit Full Service, Decisioning Studio Pro, ein. Abschließend überprüfen Sie Berichte und Insights, um die Performance Ihrer Entscheidungsagenten zu verstehen.
 
 ## Nächste Schritte
 
-Jetzt, da Sie mehr über BrazeAI Decisioning Studio™ wissen, sind Sie bereit für die nächsten Schritte:
-
-1. [Decisioning Studio integrieren]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/integration/)
-2. [Agenten erstellen]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/building_agents/)
+1. [Erste Schritte mit Decisioning Studio]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/)
+2. [Einrichtung von Decisioning Studio Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/)
+3. [Einrichtung von Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/)
+4. [Berichte und Insights anzeigen]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/)

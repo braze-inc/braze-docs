@@ -1,7 +1,7 @@
 ---
-nav_title: "取得:ユーザのサブスクリプショングループステータスの一覧表示"
+nav_title: "取得:ユーザーのサブスクリプショングループのステータスを表示する"
 article_title: "取得:ユーザーのサブスクリプション・グループ・ステータスをリストする"
-search_tag: Endpoint
+search_tag: エンドポイント
 page_order: 4
 layout: api_page
 page_type: reference
@@ -40,9 +40,9 @@ description: "本稿では、List ユーザー のサブスクリプショング
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
-| [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids)  | 必須 | 文字列 | サブスクリプショングループの`id`。 |
+| [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids)  | 必須かどうか | 文字列 | サブスクリプショングループの`id`。 |
 | `external_id`  |  必須* | 文字列 | ユーザーの `external_id` (少なくとも 1 つ、最大 50 の `external_ids` を含める必要があります)。<br><br>`external_id` と `email`/`phone` の両方が送信されると、指定された `external_id` (s) のみが結果クエリに適用されます。 |
 | `email` | 必須* | 文字列 | ユーザーのメールアドレス。これは、最大50個の文字列の配列として渡すことができます。<br><br> メールアドレスと電話番号(`external_id` なし)の両方をサブミットすると、エラーが発生します。 |
 | `phone` | 必須* | [E.164](https://en.wikipedia.org/wiki/E.164)形式の文字列 | ユーザーの電話番号。メールが含まれていない場合は、少なくとも1 つの電話番号を含める必要があります(最大50)。<br><br> メールアドレスと電話番号(`external_id` なし)の両方をサブミットすると、エラーが発生します。 |
@@ -54,17 +54,17 @@ description: "本稿では、List ユーザー のサブスクリプショング
 - SMS およびWhatsApp サブスクリプショングループ s の場合、`external_id` または`phone` のいずれかが必要です。 両方が送信されると、`external_id` のみがクエリに使用され、電話番号はそのユーザーに適用されます。
 - メール サブスクリプショングループs の場合、`external_id` または`email` のいずれかが必要です。 両方が送信されると、`external_id` のみがクエリに使用され、メールアドレスはそのユーザーに適用されます。
 
-## 例のリクエスト 
+## リクエスト例
 
 {% tabs %}
-{% tab 複数のユーザー %}
+{% tab Multiple Users %}
 {% raw %}
 ```
 https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&external_id[]=1&external_id[]=2
 ```
 {% endraw %}
 {% endtab %}
-{% tab SMSとWhatsApp %}
+{% tab SMS and WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&phone=+11112223333' \
@@ -72,7 +72,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 {% endtab %}
-{% tab メール %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&email=example@braze.com' \
@@ -87,8 +87,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 すべての成功したレスポンスは、サブスクリプショングループのステータスとユーザー履歴に応じて、`Subscribed`、`Unsubscribed`、または`Unknown` を返します。
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "status": {
     "1": "Unsubscribed",
@@ -97,5 +95,9 @@ Authorization: Bearer YOUR-REST-API-KEY
   "message": "success"
 }
 ```
+
+{% alert important %}
+このエンドポイントは、ユーザーのグローバルなサブスクリプション状態とは独立して、サブスクリプショングループのステータスを返す。ユーザーがグローバルに配信停止された場合、Brazeダッシュボードでは各サブスクリプショングループから配信停止された状態として表示される。ただし、このエンドポイントは依然として最後に保存されたサブスクリプショングループのステータス（例：`Subscribed`）を返す。グローバルなサブスクリプション状態は個々のサブスクリプショングループを上書きすることなく優先されるためである。<br><br>Brazeは個々のサブスクリプショングループのステータスを保持する。そのため、ユーザーがグローバルに再登録した場合、各サブスクリプショングループは以前に保存されたステータスに戻る。ユーザーの有効なサブスクリプション状態を判断するには、グローバルなサブスクリプションステータスと、このエンドポイントが返すサブスクリプショングループのステータスの両方を確認する必要がある。
+{% endalert %}
 
 {% endapi %}

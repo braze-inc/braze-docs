@@ -187,7 +187,7 @@ After a request is made to the endpoint, SessionM returns the complete list of o
 ```
 {% endraw %}
 
-Using Liquid dot notation, this can be populated into the message. For example, to personalize the message with the resulting `offer_id`, you could leverage the return payload by using {% raw %}`{{wallet.payload.available_points}`{% endraw %}, which returns `100`.
+Using Liquid dot notation, this can be populated into the message. For example, to personalize the message with the resulting `offer_id`, you could leverage the return payload by using {% raw %}`{{wallet.payload.available_points}}`{% endraw %}, which returns `100`.
 
 {% alert note %}
 This is an individual API. If you intend to send a batch of over 500 users, contact your SessionM account team to inquire about how to incorporate bulk data in the integration.

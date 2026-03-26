@@ -12,7 +12,7 @@ description: "このランディングページには、キャンペーンの構
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: キャンペーンを作成する
+  - name: キャンペーンを作成
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
     image: /assets/img/braze_icons/list.svg
   - name: キャンペーンのスケジュール設定

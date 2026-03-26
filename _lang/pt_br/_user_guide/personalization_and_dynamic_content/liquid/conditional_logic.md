@@ -1,14 +1,14 @@
 ---
-nav_title: Lógica de mensagens condicionais
-article_title: Lógica condicional de mensagens líquidas
+nav_title: Lógica de envio de mensagens condicionais
+article_title: Lógica condicional de envio de mensagens Liquid
 page_order: 6
 description: "Este artigo de referência aborda como as tags podem e devem ser usadas em suas campanhas."
 
 ---
 
-# Lógica de mensagens condicionais
+# Lógica de envio de mensagens condicionais
 
-> [As tags](https://docs.shopify.com/themes/liquid-documentation/tags) permitem que você inclua lógica de programação em suas campanhas de mensagens. As tags podem ser usadas para executar instruções condicionais, bem como para casos de uso avançados, como atribuir variáveis ou iterar em um bloco de código. <br><br>Esta página aborda como as tags podem e devem ser usadas, por exemplo, como considerar valores de atributos nulos, nulos e em branco e como fazer referência a atributos personalizados.
+> [Tags](https://docs.shopify.com/themes/liquid-documentation/tags) permitem que você inclua lógica de programação em suas campanhas de envio de mensagens. As tags podem ser usadas para executar instruções condicionais, bem como para casos de uso avançados, como atribuir variáveis ou iterar em um bloco de código. <br><br>Esta página aborda como as tags podem e devem ser usadas, por exemplo, como considerar valores de atributos nulos, nulos e em branco e como fazer referência a atributos personalizados.
 
 ## Tags de formatação
 
@@ -16,9 +16,9 @@ description: "Este artigo de referência aborda como as tags podem e devem ser u
 Uma tag deve ser envolvida em `{% %}`.
 {% endraw %}
 
-Para facilitar um pouco sua vida, o Braze incluiu a formatação de cores que será ativada em verde e roxo se você tiver formatado corretamente a sintaxe do Liquid. A formatação verde pode ajudar a identificar tags, enquanto a formatação roxa destaca as áreas que contêm personalização.
+Para facilitar sua vida, o Braze incluiu a formatação de cores que será ativada em verde e roxo se você tiver formatado corretamente a sintaxe do Liquid. A formatação verde pode ajudar a identificar as tags, enquanto a formatação roxa destaca as áreas que contêm personalização.
 
-Se estiver com dificuldades para usar mensagens condicionais, tente escrever a sintaxe condicional antes de inserir os atributos personalizados e outros elementos Liquid.
+Se estiver com dificuldades para usar o envio de mensagens condicionais, tente escrever a sintaxe condicional antes de inserir seus atributos personalizados e outros elementos Liquid.
 
 Por exemplo, adicione o seguinte no campo de mensagem primeiro:  
 {% raw %}
@@ -28,7 +28,7 @@ Por exemplo, adicione o seguinte no campo de mensagem primeiro:
 {% endif %}
 ```
 
-Certifique-se de que ele esteja destacado em verde e, em seguida, substitua o `X` pelo Conteúdo líquido ou conectado escolhido usando o `+` azul no canto do campo de mensagem e o `0` pelo valor desejado.
+Certifique-se de que ele esteja destacado em verde e, em seguida, substitua o `X` pelo Liquid ou Connected Content escolhido usando o `+` azul no canto do campo de mensagem e o `0` pelo valor desejado.
 <br><br>
 Em seguida, adicione suas variações de mensagem conforme necessário entre as condicionais `else`:
 ```liquid
@@ -42,7 +42,7 @@ Buy now! Would 5% off convince you?
 
 ## Lógica condicional
 
-Você pode incluir muitos tipos de [lógica inteligente nas mensagens](http://docs.shopify.com/themes/liquid-documentation/basics), como uma instrução condicional. O exemplo a seguir usa [condicionais](http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags) para internacionalizar uma campanha:
+Você pode incluir muitos tipos de [lógica inteligente dentro das mensagens](http://docs.shopify.com/themes/liquid-documentation/basics), como uma declaração condicional. O seguinte exemplo usa [condicionais](http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags) para internacionalizar uma campanha:
 {% raw %}
 
 ```liquid
@@ -61,21 +61,25 @@ This is a message from Braze! This is going to go to anyone who did not match th
 
 #### `if` e `elsif`
 
-A lógica condicional começa com a tag `if`, que indica a primeira condição a ser verificada. As condições subsequentes usam a tag `elsif` e serão verificadas se as condições anteriores não forem atendidas. Neste exemplo, se o dispositivo de um usuário não estiver definido como inglês, esse código verificará se o dispositivo do usuário está definido como espanhol e, se isso falhar, verificará se o dispositivo está definido como. Se o dispositivo do usuário atender a uma dessas condições, o usuário receberá uma mensagem no idioma relevante.
+A lógica condicional começa com a tag `if`, que declara a primeira condição a ser verificada. Condições subsequentes usam a tag `elsif` e serão verificadas se as condições anteriores não forem atendidas. Neste exemplo, se o dispositivo de um usuário não estiver configurado para inglês, este código verificará se o dispositivo do usuário está configurado para espanhol, e se isso falhar, verificará se o dispositivo está configurado para. Se o dispositivo do usuário atender a uma dessas condições, o usuário receberá uma mensagem no idioma relevante.
 
 #### `else`
 
-Você tem a opção de incluir uma declaração `{% else %}` em sua lógica condicional. Se nenhuma das condições que você definiu for atendida, a instrução `{% else %}` especificará a mensagem que deve ser enviada. Neste exemplo, o padrão é o inglês se o idioma do usuário não for inglês, espanhol ou chinês.
+Você tem a opção de incluir uma declaração `{% else %}` em sua lógica condicional. Se nenhuma das condições que você definiu for atendida, a declaração `{% else %}` especifica a mensagem que deve ser enviada. Neste exemplo, definimos o padrão para inglês se o idioma do usuário não for inglês, espanhol ou chinês.
 
 #### `endif`
 
-A tag `{% endif %}` indica que você concluiu sua lógica condicional. Você deve incluir a tag `{% endif %}` em qualquer mensagem com lógica condicional. Se você não incluir uma tag `{% endif %}` em sua lógica condicional, receberá um erro, pois o Braze não conseguirá analisar sua mensagem.
+A tag `{% endif %}` indica que você terminou sua lógica condicional. Você deve incluir a tag `{% endif %}` em qualquer mensagem com lógica condicional. Se você não incluir uma tag `{% endif %}` em sua lógica condicional, receberá um erro, pois o Braze não conseguirá analisar sua mensagem.
 
-### Tutorial: Fornecer conteúdo baseado em localização
+{% alert note %}
+Tags condicionais (`if`, `elsif`, `unless`) suportam operadores, mas não filtros. Para avaliar um valor filtrado em uma condicional, atribua o resultado do filtro a uma variável primeiro, depois faça referência a essa variável. Para mais detalhes, veja [Onde usar operadores e filtros]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#where-to-use-operators-and-filters).
+{% endalert %}
 
-Ao terminar este tutorial, você poderá usar tags com instruções "if", "elsif" e "else" para fornecer conteúdo com base na localização do usuário.
+### Tutorial: Entregar conteúdo baseado em localização
 
-1. Comece com uma tag `if` para estabelecer qual mensagem deve ser enviada quando a cidade do usuário for Nova York. Se a cidade do usuário for Nova York, essa primeira condição será atendida e o usuário receberá uma mensagem especificando sua identidade nova-iorquina.
+Quando você terminar este tutorial, poderá usar tags com "if", "elsif" e "else" para entregar conteúdo com base na localização do usuário.
+
+1. Comece com uma tag `if` para estabelecer qual mensagem deve ser enviada quando a cidade do usuário estiver em Nova York. Se a cidade do usuário for Nova York, esta primeira condição é atendida e o usuário receberá uma mensagem especificando sua identidade nova-iorquina.
 
 ```liquid
 {% if ${city} == "New York" %}
@@ -85,7 +89,7 @@ Ao terminar este tutorial, você poderá usar tags com instruções "if", "elsif
 ```
 
 {: start="2"}
-2\. Em seguida, use a tag `elseif` para estabelecer qual mensagem deve ser enviada se a cidade do usuário for Los Angeles.
+2\. Em seguida, use a tag `elseif` para estabelecer qual mensagem deve ser enviada se a cidade do usuário estiver em Los Angeles.
 
 ```liquid
 {% elsif ${city} == "Los Angeles" %}
@@ -94,7 +98,7 @@ Ao terminar este tutorial, você poderá usar tags com instruções "if", "elsif
 ```
 
 {: start="3"}
-3\. Vamos usar outra tag `elseif` para estabelecer qual mensagem deve ser enviada se a cidade do usuário for Chicago.
+3\. Vamos usar outra tag `elseif` para estabelecer qual mensagem deve ser enviada se a cidade do usuário estiver em Chicago.
 
 ```liquid
 {% elsif ${city} == "Chicago" %}
@@ -104,7 +108,7 @@ Ao terminar este tutorial, você poderá usar tags com instruções "if", "elsif
 ```
 
 {: start="4"}
-4\. Agora, vamos usar a tag `{% else %}` para especificar qual mensagem deve ser enviada se a cidade do usuário não for São Francisco, Nova York ou Chicago.
+4\. Agora, vamos usar a tag `{% else %}` para especificar qual mensagem deve ser enviada se a cidade do usuário não estiver em São Francisco, Nova York ou Chicago.
 
 ```liquid
 {% else %}
@@ -113,7 +117,7 @@ Ao terminar este tutorial, você poderá usar tags com instruções "if", "elsif
 ```
 
 {: start="5"}
-5\. Por fim, usaremos a tag `{% endif %}` para especificar que nossa lógica condicional está concluída.
+5\. Finalmente, usaremos a tag `{% endif %}` para especificar que nossa lógica condicional está concluída.
 
 ```liquid
 {% endif %}
@@ -145,17 +149,17 @@ Ao terminar este tutorial, você poderá usar tags com instruções "if", "elsif
 
 {% enddetails %}
 
-## Contabilização de valores de atributos nulos, nulos e em branco
+## Contabilização de valores de atribuição nulos, nulos e em branco
 
-A lógica condicional é uma maneira útil de levar em conta os valores de atributos que não estão definidos nos perfis de usuário.
+A lógica condicional é uma maneira útil de levar em conta os valores de atribuição que não estão definidos nos perfis de usuário.
 
-### Valores de atributo nulos e nulos
+### Valores de atribuição nulos e nulos
 
 Um valor nulo ou nil ocorre quando o valor de um atributo personalizado não foi definido. Por exemplo, um usuário que ainda não definiu seu primeiro nome não terá um primeiro nome registrado no Braze.
 
-Em algumas circunstâncias, talvez você queira enviar uma mensagem completamente diferente para os usuários que têm um primeiro nome definido e para os usuários que não têm um primeiro nome definido.
+Em algumas circunstâncias, talvez você queira enviar uma mensagem completamente diferente para usuários que têm um nome definido e para usuários que não têm um nome definido.
 
-A tag a seguir permite especificar uma mensagem para usuários com um atributo "first name" nulo:
+A tag a seguir permite especificar uma mensagem para usuários com a atribuição "first name" nula:
 
 {% raw %}
 ```liquid
@@ -165,7 +169,7 @@ A tag a seguir permite especificar uma mensagem para usuários com um atributo "
 ```
 {% endraw %} 
 
-\![Um exemplo de mensagem no painel do Braze, usando um atributo "first name" nulo.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
+![Uma mensagem de exemplo no dashboard Braze, usando um atributo 'nome' nulo.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
 
 {% raw %}
 ```liquid
@@ -176,15 +180,15 @@ Hey {{${first_name} | default: 'there'}}, we're having a sale! Hurry up and get 
 {% endif %}
 ```
 
-Observe que um valor de atributo nulo não está estritamente associado a um tipo de valor (por exemplo, uma cadeia de caracteres "nula" é o mesmo que uma matriz "nula"), portanto, no exemplo acima, o valor de atributo nulo está fazendo referência a um primeiro nome não definido, que seria uma cadeia de caracteres.
+Note que um valor de atribuição nulo não está estritamente associado a um tipo de valor (por exemplo, uma string "nula" é o mesmo que uma matriz "nula"), portanto, no exemplo acima, o valor de atribuição nulo está fazendo referência a um nome não definido, que seria uma string.
 
 {% endraw %}
 
-### Valores de atributos em branco
+### Valores de atribuição em branco
 
-Um valor em branco ocorre quando o atributo em um perfil de usuário não está definido, é definido com uma string de espaço em branco (` `) ou é definido como `false`. Os valores em branco devem ser verificados antes de outras variáveis para evitar um erro de processamento do Liquid.
+Um valor em branco ocorre quando a atribuição em um perfil de usuário não está definida, é definida com uma string de espaço em branco (` `) ou é definida como `false`. Os valores em branco devem ser verificados antes de outras variáveis para evitar um erro de processamento do Liquid.
 
-A tag a seguir permite especificar uma mensagem para usuários que têm um atributo "first name" em branco.
+A tag a seguir permite especificar uma mensagem para usuários que tenham a atribuição "first name" em branco.
 
 {% raw %}
 ```liquid
@@ -196,19 +200,19 @@ A tag a seguir permite especificar uma mensagem para usuários que têm um atrib
 
 ## Referência a atributos personalizados
 
-Depois de [criar atributos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) personalizados, você pode fazer referência a esses atributos personalizados em suas mensagens do Liquid.
+Depois de [criar atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes), você pode referenciar esses atributos personalizados em seu envio de mensagens Liquid.
 
-Ao usar a lógica condicional, você precisará conhecer o tipo de dados do atributo personalizado para garantir que esteja usando a sintaxe correta. Na página **Atributos personalizados** do painel, procure o tipo de dados associado ao seu atributo personalizado e consulte os seguintes exemplos listados para cada tipo de dados.
+Ao usar a lógica condicional, será necessário conhecer o tipo de dados do atributo personalizado para garantir que esteja usando a sintaxe correta. Na página **Atributos personalizados** no dashboard, procure o tipo de dados associado ao seu atributo personalizado e consulte os seguintes exemplos listados para cada tipo de dados.
 
-\![Selecionando um tipo de dados para um atributo personalizado. O exemplo fornecido mostra um atributo de Favorite_Category com um tipo de dados de string.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
+![Seleção de um tipo de dados para um atributo personalizado. O exemplo fornecido mostra um atributo de Favorite_Category com um tipo de dado string.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
 
 {% alert tip %}
-As cadeias de caracteres e as matrizes exigem apóstrofos retos ao redor delas, enquanto os booleanos e os inteiros nunca terão apóstrofos.
+Strings e matrizes exigem apóstrofos retos ao redor delas, enquanto booleanos e inteiros nunca terão apóstrofos.
 {% endalert %}
 
 #### Booleano
 
-[Os booleanos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans) são valores binários e podem ser definidos como `true` ou `false`, como `registration_complete: true`. Os valores booleanos não têm apóstrofos ao redor deles.
+[Booleanos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans) são valores binários e podem ser definidos como `true` ou `false`, como `registration_complete: true`. Os valores booleanos não têm apóstrofos ao redor deles.
 
 {% raw %}
 
@@ -230,7 +234,7 @@ As cadeias de caracteres e as matrizes exigem apóstrofos retos ao redor delas, 
 
 {% endraw %}
 
-Você também pode usar outros [operadores básicos](https://shopify.dev/docs/themes/liquid/reference/basics/operators), como menor que (<) ou maior que (>) para números inteiros:
+Você também pode usar outros [operadores básicos](https://shopify.dev/docs/themes/liquid/reference/basics/operators) como menor que (<) ou maior que (>) para inteiros:
 
 {% raw %}
 
@@ -240,9 +244,9 @@ Você também pode usar outros [operadores básicos](https://shopify.dev/docs/th
 
 {% endraw %}
 
-#### Cordas
+#### String
 
-Uma [cadeia]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings) de caracteres é composta de caracteres alfanuméricos e armazena uma parte dos dados sobre o usuário. Por exemplo, você pode ter `favorite_color: red` ou `phone_number: 3025981329`. Os valores de cadeia de caracteres devem ter apóstrofos ao redor.
+Uma [string]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings) é composta por caracteres alfanuméricos e armazena uma peça de dados sobre seu usuário. Por exemplo, você pode ter `favorite_color: red` ou `phone_number: 3025981329`. Os valores de string devem ter apóstrofos ao redor.
 
 {% raw %}
 
@@ -252,11 +256,11 @@ Uma [cadeia]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_a
 
 {% endraw %}
 
-Para cadeias de caracteres, você pode usar "==" ou "contains" em seu Liquid.
+Para strings, você pode usar tanto "==" quanto "contains" em seu Liquid.
 
-#### Matriz
+#### Vetor
 
-Uma [matriz]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays) é uma lista de informações sobre seu usuário. Por exemplo, um usuário pode ter `last_viewed_shows: stranger things, planet earth, westworld`. Os valores da matriz devem ter apóstrofos ao redor.
+Um [array]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays) é uma lista de informações sobre seu usuário. Por exemplo, um usuário pode ter `last_viewed_shows: stranger things, planet earth, westworld`. Os valores da matriz devem ter apóstrofos ao redor.
 
 {% raw %}
 
@@ -268,9 +272,9 @@ Uma [matriz]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_a
 
 Para matrizes, você deve usar "contains" e não pode usar "==". 
 
-#### Tempo
+#### Horário
 
-Um registro de data e hora de quando um evento ocorreu. Os valores [de tempo]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) devem ter um [filtro matemático]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters) para serem usados na lógica condicional.
+Um carimbo de data/hora de quando um evento ocorreu. Valores de [Tempo]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) devem ter um [filtro matemático]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters) aplicado a eles para serem usados na lógica condicional.
 
 {% raw %}
 

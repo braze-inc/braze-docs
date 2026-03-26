@@ -14,7 +14,7 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Atualiz
 /preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
-> Use esse ponto de extremidade para atualizar uma Central de Preferências.
+> Use esse endpoint para atualizar uma Central de Preferências.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#bf1b43db-3f1b-461f-ad9a-2fbe35b804d7 {% endapiref %}
 
@@ -24,13 +24,13 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Limite de taxa
 
-Esse endpoint tem um limite de frequência de 10 solicitações por minuto, por espaço de trabalho.
+{% multi_lang_include rate_limits.md endpoint='post or put preference center' %}
 
-## Parâmetros da jornada
+## Parâmetros de caminho
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| Obrigatória | String | A ID de sua central de preferências. |
+|`preferenceCenterExternalID`| Obrigatória | String | O ID da sua Central de Preferências. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
@@ -61,7 +61,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     ]
   }
-} 
+}
 ```
 
 ## Parâmetros de solicitação
@@ -69,10 +69,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
 |`preference_center_page_html`| Obrigatória | String | O HTML da página da Central de Preferências. |
-|`preference_center_title`| Opcional | String | O título da central de preferências e das páginas de confirmação. Se um título não for especificado, o título das páginas terá como padrão "Central de Preferências". |
+|`preference_center_title`| Opcional | String | O título da Central de Preferências e das páginas de confirmação. Se um título não for especificado, o título das páginas terá como padrão "Central de Preferências". |
 |`confirmation_page_html`| Obrigatória | String | O HTML da página de confirmação. |
 |`state` | Opcional | String | Escolha `active` ou `draft`.|
-|`options` | Opcional | Objeto | Atribuições: <br>`meta-viewport-content`: Quando presente, uma meta tag `viewport` será adicionada à página com `content= <value of attribute>`.<br><br> `link-tags`: Defina um favicon para a página. Quando definido, uma tag `<link>` com uma atribuição rel é adicionada à página.  |
+|`options` | Opcional | Objeto | Atributos: <br>`meta-viewport-content`: Quando presente, uma meta tag `viewport` será adicionada à página com `content= <value of attribute>`.<br><br> `link-tags`: Defina um favicon para a página. Quando definido, uma tag `<link>` com um atributo rel é adicionada à página.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação

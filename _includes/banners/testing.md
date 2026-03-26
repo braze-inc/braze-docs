@@ -1,4 +1,4 @@
-{% if include.page == "testing" %}While [composing your Banner message]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#compose-a-banner), select{% elsif include.page == "campaigns" %}Select{% endif %} **Preview** to you preview your Banner or send a test message.
+{% if include.page == "testing" %}While [composing your Banner message]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#compose-a-banner), select{% elsif include.page == "campaigns" %}Select{% endif %} **Preview** to you preview your Banner or send a test message.
 
 ![Preview tab of the Banner composer.]({% image_buster /assets/img/banners/select_preview.png %}){: style="max-width:50%;"}
 

@@ -1,21 +1,21 @@
 ---
-nav_title: "OBTER: Procurar uma Conta de Usuário de Dashboard Existente"
+nav_title: "OBTER: Procure uma conta de usuário de dashboard existente"
 article_title: "OBTER: Procurar uma Conta de Usuário de Dashboard Existente"
 alias: /get_see_user_account_information/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o ponto de extremidade do Braze Look up an existing dashboard user account resource ID."
+description: "Este artigo descreve detalhes sobre o endpoint Braze para procurar o ID de recurso de uma conta de usuário existente no dashboard."
 ---
 
 {% api %}
-# Procure uma conta de usuário existente no dashboard por ID de recurso
+# Pesquise uma conta de usuário existente no dashboard por ID de recurso
 {% apimethod get %}
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Use este endpoint para procurar uma conta de usuário do dashboard existente especificando o recurso `id` retornado pelo método SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/). 
+> Use este endpoint para procurar uma conta de usuário do dashboard existente especificando o recurso `id` retornado pelo método SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 
@@ -35,14 +35,14 @@ Para usar esse endpoint, você precisará de um token SCIM. Você usará a orige
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Corpo da solicitação
-```json
+```http
 Content-Type: application/json
 X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
 Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ## Exemplo de solicitação
-```json
+```bash
 curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa245b7-24195aec-887bb3ad-602b3340' \
 --header 'Content-Type: application/json' \
 --header 'X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE' \
@@ -67,7 +67,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
         "roles": [
             {
                 "roleName": "Another Test Role",
-                "roleId": "23125dad23dfaae7,
+                "roleId": "23125dad23dfaae7",
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25adfabcded",
@@ -79,7 +79,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                                 "permissions": ["basic_access","publish_cards"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         ],
@@ -91,11 +91,11 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                 "team": [
                     {
                          "teamId": "241adcd25789fabcded",
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["admin"]
                     }
                 ]
-            } 
+            }
         ]
     }
 }

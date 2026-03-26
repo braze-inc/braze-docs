@@ -1,7 +1,7 @@
 ---
 nav_title: "GET: Lista de bloques de contenido disponibles"
 article_title: "GET: Lista de bloques de contenido disponibles"
-search_tag: Endpoint
+search_tag: Punto de conexión
 page_order: 4
 layout: api_page
 page_type: reference
@@ -44,8 +44,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list
 ## Respuesta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "count": "integer",
   "content_blocks": [
@@ -57,7 +55,7 @@ Authorization: Bearer YOUR_REST_API_KEY
       "inclusion_count" : (integer) the inclusion count,
       "created_at": (string) The time the Content Block was created in ISO 8601,
       "last_edited": (string) The time the Content Block was last edited in ISO 8601,
-      "tags": (array) An array of tags formatted as strings,
+      "tags": (array) An array of tags formatted as strings
     }
   ]
 }
@@ -65,7 +63,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
+La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
 
 | Error | Solución de problemas |
 | --- | --- |

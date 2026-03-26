@@ -27,6 +27,8 @@ valid_partner_list:
   url: /docs/partners/movable_ink/
 - name: Sheetlabs
   url: /docs/partners/sheetlabs/
+- name: Limbik
+  url: /docs/partners/limbik/
 - name: Amplitude
   url: /docs/partners/amplitude/
 - name: Certona

@@ -1,7 +1,7 @@
 ---
 nav_title: "POST: E-Mail-Template erstellen"
 article_title: "POST: E-Mail Templates erstellen"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 4
 layout: api_page
 page_type: reference
@@ -15,14 +15,14 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts E-Mail-Vorlage
 
 > Verwenden Sie diesen Endpunkt, um E-Mail-Templates auf dem Braze-Dashboard zu erstellen.
 
-Diese Templates werden auf der Seite **Templates und Medien** verfügbar sein. Die Antwort von diesem Endpunkt enthält ein Feld für `email_template_id`, das zum Update des Templates in nachfolgenden API-Aufrufen verwendet werden kann.
+Diese Templates werden auf der Seite **„Vorlagen –& Medien“** verfügbar sein. Die Antwort von diesem Endpunkt enthält ein Feld für `email_template_id`, das zum Update des Templates in nachfolgenden API-Aufrufen verwendet werden kann.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
 ## Voraussetzungen
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `templates.email.create`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -51,13 +51,12 @@ Authorization: Bearer YOUR_REST_API_KEY
 | --------- | ---------| --------- | ----------- |
 |`template_name`|Erforderlich|String|Name des Templates für Ihre E-Mail.|
 |`subject`|Erforderlich|String|E-Mail Template Betreffzeile.|
-|`body`|Erforderlich|String|Körper einer E-Mail-Vorlage, die HTML enthalten kann.|
+|`body`|Erforderlich|String|Körper einer E-Mail-Vorlage, die HTML enthalten kann. Bis zu 400 KB.|
 |`plaintext_body`|Optional|String|Eine Klartextversion des Body der E-Mail-Vorlage.|
 |`preheader`|Optional|String|Ein Preheader für E-Mails, der in einigen Clients zur Erstellung von Vorschauen verwendet wird.|
 |`tags`|Optional|String|[Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) müssen bereits existieren.|
 |`should_inline_css`|Optional|Boolesch|Aktiviert oder deaktiviert das Feature `inline_css` pro Template. Wenn Sie keine Angaben machen, verwendet Braze die Standard-Einstellung für die App-Gruppe. Erwartet wird eines von `true` oder `false`.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
-
 
 ## Beispiel Anfrage
 ```
@@ -77,8 +76,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 ## Beispielhafte Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "email_template_id": "232b6d29-7e41-4106-a0ab-1c4fe915d701",
   "message": "success"

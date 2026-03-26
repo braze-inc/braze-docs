@@ -1,14 +1,14 @@
 ---
-nav_title: "Additional Channels &amp; Extensions"
-article_title: Additional Channels &amp; Extensions
+nav_title: "추가 채널 및 확장"
+article_title: 추가 채널 및 확장
 page_order: 11
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who provide services for channels and extensions."
+description: "이 페이지에는 채널 및 확장 서비스를 제공하는 Braze 파트너(Alloys)가 나열되어 있습니다."
 layout: partner_page
 search_tag: Partner
 
-partner_top_header: "Additional Channels & Extensions"
+partner_top_header: "추가 채널 및 확장"
 
 valid_partner_list:
 - name: LiveRamp
@@ -28,15 +28,15 @@ valid_partner_list:
 - name: Pypestream
   url: /docs/partners/pypestream/
 - name: Regal
-  url: /docs/partners/pypestream/
+  url: /docs/partners/regal/
 - name: Sendbird
   url: /docs/partners/sendbird/
+- name: Shopgate
+  url: /docs/partners/shopgate/
 - name: Zendesk
   url: /docs/partners/zendesk/
 - name: PassKit
   url: /docs/partners/passkit/
-- name: Rokt Calendar
-  url: /docs/partners/rokt/
 - name: Future Anthem
   url: /docs/partners/future_anthem/
 - name: Komo
@@ -61,4 +61,8 @@ valid_partner_list:
   url: /docs/partners/survicate/
 - name: Typeform
   url: /docs/partners/typeform/
+- name: Oppizi
+  url: /docs/partners/oppizi/
+- name: StackAdapt
+  url: /docs/partners/stackadapt/
 ---

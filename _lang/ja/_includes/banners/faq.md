@@ -1,51 +1,68 @@
 # バナー:よくある質問
 
-> これらは、Braze のBanners に関するよくある質問に対する回答です。より一般的な情報については、[バナーについて]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners{% endif %})]を参照のこと。
+> これらは、Braze のBanners に関するよくある質問に対する回答です。より一般的な情報については、[バナーについて]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners{% endif %})を参照せよ。
 
-## バナーの更新はユーザーにいつ表示されるのか？
+## バナーの更新はいつユーザーに表示されるのか？
 
-バナーは、リフレッシュメソッドを呼び出すたびに最新のデータでリフレッシュされるため、バナーキャンペーンを再送信したり更新したりする必要はない。
+バナーはリフレッシュメソッドを呼び出すたびに最新のデータで更新される。バナーキャンペーンを再送信したり更新したりする必要はない。
 
-## 1セッションに何人の選手を起用できるか？
+## 1回のセッションで何件の配置をリクエストできるのか？
 
-1回のリフレッシュ・リクエストで、最大10個のプレースメントをリクエストできる。Brazeは、ユーザーがリクエストするごとに、最も優先順位の高いBannerを返す。追加のリクエストはエラーを返す。
+1回の更新リクエストで、最大10個のプレースメントをリクエストできる。Brazeが提供するサービスでは、ユーザーが対象となるバナーの中で、優先度が最も高いものを、リクエストごとに返す。追加のリクエストはエラーを返す。
 
-詳しくは、[配置リクエスト]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %})を参照のこと。
+詳細については、[配置リクエスト]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %})を参照せよ。
 
-## いくつのバナーキャンペーンを同時にアクティブにできるか？
+## 同時にアクティブにできるバナーキャンペーンはいくつあるか？
 
-各ワークスペースは、最大200のアクティブなバナーキャンペーンをサポートすることができる。この制限に達した場合、新しいキャンペーンを作成する前に、既存のキャンペーンを[アーカイブするか非アクティブにする]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status)必要がある。
+各ワークスペースは最大200のアクティブなバナーキャンペーンをサポートできる。この制限に達した場合、新しいキャンペーンを作成する前に、既存のキャンペーンを[アーカイブするか無効化する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status)必要がある。
 
-## プレースメントを共有するキャンペーンでは、どちらのバナーが最初に表示されるのか？
+## 同じ掲載枠を共有するキャンペーンでは、どのバナーが最初に表示されるのか？
 
-ユーザーが同じプレースメントを共有する複数のバナーキャンペーンにクオリファイした場合、最も優先順位の高いバナーが表示される。詳しくは[バナーの優先順位]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %})を参照のこと。
+ユーザーが同じ掲載位置を共有する複数のバナー広告キャンペーンの対象となる場合、優先順位が最も高いバナーが表示される。詳細については、[バナー優先度]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %})を参照せよ。
 
-## 既存のコンテンツカードフィードでバナーを使用できるか？
+## 既存のコンテンツカードフィードでバナーを使えるか？
 
-つまり、バナーとコンテンツカードを同じフィードで使用することはできない。既存のコンテンツカードフィードをバナーに置き換えるには、[アプリやWebサイトにプレースメントを作成する]({{site.baseurl}}/developer_guide/banners/placements/)必要がある。
+バナーはコンテンツカードとは異なる。つまり、同じフィード内でバナーとコンテンツカードを併用することはできない。既存のコンテンツカードフィードをバナーに置き換えるには、[アプリやWeb サイト内に配置場所を作成]({{site.baseurl}}/developer_guide/banners/placements/)する必要がある。
 
-## ユーザーはバナーを手動で解除できるか？
+## ユーザーのアクションに基づいてバナーを表示させることはできるか？
 
-ユーザーはバナーを手動で削除することはできない。しかし、ユーザーセグメンテーションの適格性を管理することで、バナーの可視性をコントロールすることができる。ユーザーがバナーキャンペーンのターゲティング基準を満たさなくなった場合、次回のセッションで再びバナーキャンペーンが表示されることはない。
+バナーは[アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery)をサポートしていないが、セグメンテーションと優先度を活用すれば、ユーザーの過去の行動に基づいてターゲティングできる。
 
-例えば、ユーザーが購入するまでプロモーションバナーを表示する場合、`purchase_completed` のようなイベントを記録することで、そのユーザーをターゲットセグメントから外し、その後のセッションで効果的にバナーを非表示にすることができる。
+例えば、特定の`purchase`イベントを完了したユーザーだけに特別なバナーを表示するには：
+1. **ターゲティング：**キャンペーンでは、カスタムイベントを`purchase`少なくとも一度実行したユーザーセグメントをターゲットに設定する。
+2. **優先度:**すべてのユーザー向けの一般的なバナーと、購入者を対象とした特定のバナーが同じ配置をターゲットにしている場合、特定のバナーの優先度を**「高」**に設定し、一般的なバナーの優先度を**「中」**または**「低」**に設定する。
 
-## Braze APIを使ってバナーキャンペーンの分析をエクスポートできるか？
+ユーザーが新しいセッションを開始するか、アクション実行後にバナーを更新すると、Brazeはその適格性を評価する。「購入」セグメントに一致する場合、優先度の高いバナーが表示される。
 
-はい。[`/campaigns/data_series` エンドポイントを]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/)使用して、いくつのバナーキャンペーンが閲覧されたか、クリックされたか、またはコンバージョンしたかに関するデータを得ることができる。
+
+## ユーザーは手動でバナーを閉じることができるか？
+
+いいえ。ユーザーは手動でバナーを閉じることはできない。ただし、ユーザーセグメントの適格性を管理することで、バナーの表示をコントロールできる。ユーザーがバナー広告キャンペーンのターゲティング条件を満たさなくなると、次のセッションではその広告が表示されなくなる。
+
+例えば、ユーザーが購入するまでプロモーションバナーを表示する場合、購入といったイベントを記録すると、その`purchase_completed`ユーザーをターゲットセグメントから除外できる。結果として、その後のセッションではバナーが表示されなくなる。
+
+## Braze APIを使ってバナーキャンペーンの分析データをエクスポートできるか？
+
+はい。この[`/campaigns/data_series`エンドポイント]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/)を使用すれば、バナー広告キャンペーンの表示回数、クリック数、コンバージョン数に関するデータを取得できる。
 
 ## ユーザーはいつセグメンテーションされるのか？
 
-ユーザーはセッションの最初にセグメンテーションされる。キャンペーンのターゲットセグメントがカスタム属性、カスタムイベント、またはその他のターゲティング属性に依存する場合、セッションの開始時にユーザーにそれらが存在する必要がある。
+ユーザーはセッションの開始時にセグメントされる。キャンペーンのターゲティング対象セグメントがカスタム属性、カスタムイベント、その他のターゲティング属性に依存する場合、それらの属性はセッション開始時点でユーザーに存在していなければならない。
 
-## 最低のレイテンシーを確保するために、どのようにバナーを構成すればよいか？
+## 最低のレイテンシーを確保するために、どのようにバナーを構成すればよいのか？
 
-バナーのメッセージングがシンプルであればあるほど、レンダリングは速くなる。あなたのユースケースで予想されるレイテンシーに対して、バナーキャンペーンをテストするのがベストだ。例えば、`catalog_items` のようなアトリビューション属性は必ずテストすること。
+バナーのメッセージングがシンプルであればあるほど、表示が速くなる。バナー広告キャンペーンは、想定されるレイテンシーに対してテストするのが最善だ。例えば、Liquidの属性（例：\`@attribute\`）を必ず`catalog_items`テストすること。
 
-## すべてのLiquidタグに対応しているか？
+## すべてのLiquidタグはサポートされているのか？
 
-しかし、[`:rerender` タグを使って]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid)再レンダリングされる`catalog_items` を除いて、ほとんどの Liquid タグはバナーメッセージでサポートされている。
+いいえ。ただし、ほとんどのLiquidタグはバナーメッセージでサポートされている。ただし`catalog_items`、`[<LI>``:rerender`タグ]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid)を使用して再レンダリングされるものは除く。
 
 ## クリックイベントをキャプチャできるか？
 
-クリックイベントは、`logClick` 要素にon-clickアクションが設定され、[JSブリッジを]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge)使用して呼び出された場合にのみキャプチャされる。
+はい。クリックイベントの捕捉方法は、バナーのレンダリング方法によって異なる。
+
+- **標準エディタコンポーネント：**バナーが標準のエディターコンポーネント（画像, 写真、ボタン、テキスト）を使用している場合、SDKの挿入メソッドを使用するとクリックは自動的にトラッキングされる。
+- **カスタムコードブロック：**カスタムコードエディタブロック内の要素のクリックをトラッキングしたい場合、カスタムHTML内から\`click\``brazeBridge.logClick()`イベントを呼び出してクリックをトラッキングしなければならない。これは、SDKメソッドを使用してバナーを挿入およびレンダリングする場合にも適用される。完全な参照については、[バナー用のカスタムコードとJavaScriptブリッジを]({{site.baseurl}}/user_guide/message_building_by_channel/banners/custom_code/#javascript-bridge)参照のこと。
+- **カスタムUI（ヘッドレス）：**バナーのHTMLをレンダリングせずに、バナーのカスタムプロパティを使って完全にカスタムUIを構築する場合、アプリケーションコードからバナーオブジェクトに対して\`setCustomProperties`logClick()`()`を呼び出す。
+
+詳細については、[クリックの記録を]({{site.baseurl}}/developer_guide/banners/placements/#logging-clicks)参照せよ。

@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Actualizar alias de usuario"
-article_title: "POST: Actualizar alias de usuario"
+nav_title: "PUBLICAR: Actualizar alias de usuario"
+article_title: "PUBLICAR: Actualizar alias de usuario"
 search_tag: Endpoint
 page_order: 2
 layout: api_page

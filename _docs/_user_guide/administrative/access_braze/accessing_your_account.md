@@ -1,13 +1,13 @@
 ---
-nav_title: Accessing your account
-article_title: Accessing Your Account
-page_order: 2
+nav_title: Access your account
+article_title: Access Your Account
+page_order: 0
 page_type: reference
 description: "This article covers how to get your Braze account, how to log in after granted access, and how to go about resetting your Braze password."
 
 ---
 
-# Accessing your account
+# Access your account
 
 > This article covers how to get your Braze account, how to log in after being granted access, and how to troubleshoot your dashboard access and dashboard performance.
 
@@ -94,9 +94,18 @@ Clearing cookies will log you out, so unsaved work will be lost.
 
 If clearing your browser cache and cookies doesn't resolve your issues, contact [Support]({{site.baseurl}}/support_contact/).
 
+### "Please Refresh Page" or "Unexpected Error" while navigating the dashboard
+
+This error may appear when a company user does not belong to any workspaces. To troubleshoot:
+
+1. Go to the [Company Users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) page.
+2. Check whether the user has been added to a workspace.
+3. If they are not part of any workspace, add them and assign the appropriate permissions.
+4. Ask the user to refresh their dashboard.
+5. If the issue persists, contact [Support]({{site.baseurl}}/support_contact/).
 ### Accessing the drag-and-drop editor
 
-For most Braze users, the drag-and-drop editor should load. However, if you're using a VPN or are behind a firewall, you may need to allowlist a domain. Contact your IT administrator to check that `*.bz-rndr.com` is allowlisted.
+For most company users, the drag-and-drop editor should load. However, if you're using a VPN or are behind a firewall, you may need to allowlist a domain. Contact your IT administrator to check that `*.bz-rndr.com` is allowlisted.
 
 The editor may experience loading issues due to the following:
 

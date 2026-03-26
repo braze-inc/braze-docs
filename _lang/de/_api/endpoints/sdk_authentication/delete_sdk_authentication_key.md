@@ -1,7 +1,7 @@
 ---
-nav_title: "LÖSCHEN: SDK-Authentifizierungsschlüssel entfernen"
+nav_title: "LÖSCHEN: Entfernen Sie den SDK-Authentifizierungsschlüssel."
 article_title: "LÖSCHEN: SDK-Authentifizierungsschlüssel entfernen"
-search_tag: Endpoint
+search_tag: Endpunkt
 page_order: 3
 layout: api_page
 page_type: reference
@@ -24,7 +24,7 @@ Der Primärschlüssel kann nicht gelöscht werden. Wenn Sie versuchen, den Prim�
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `sdk_authentication.delete`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Beispiel Anfrage
 
-```json
+```bash
 curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_authentication/delete' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \

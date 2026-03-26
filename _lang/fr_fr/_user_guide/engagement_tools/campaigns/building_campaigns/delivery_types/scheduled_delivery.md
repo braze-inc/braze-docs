@@ -1,58 +1,59 @@
 ---
-nav_title: Réception/distribution planifiée
-article_title: Réception/distribution planifiée
+nav_title: Livraison planifiée
+article_title: Livraison planifiée
 page_order: 0
 page_type: reference
-description: "Cet article de référence décrit les différences entre les options de planification temporelle pour la réception/distribution des campagnes."
+description: "Le présent article de référence décrit les différences entre les options de planification temporelle pour la livraison de campagnes."
 tool: Campaigns
 
 ---
 
-# Réception/distribution planifiée
+# Livraison planifiée
 
-> Les campagnes envoyées à l'aide de la réception/distribution programmée en fonction de l'heure sont livrées aux jours spécifiés.
+> Les campagnes envoyées à l'aide d'une livraison planifiée temporellement sont livrées à des jours spécifiés.
 
 ## Option 1 : Envoyer dès que la campagne est lancée
 
-Si vous choisissez d'envoyer un message dès qu'il est lancé, votre message commencera à être envoyé dès que vous aurez fini de créer votre campagne.
+Si vous choisissez d'envoyer un message dès qu'il est lancé, il commencera à être envoyé dès que vous aurez fini de créer votre campagne.
 
-La section "Réception/distribution" avec l'option "Planifié" sélectionnée et l'option de planification temporelle de l'envoi dès que la campagne est lancée.]({% image_buster /assets/img_archive/schedule_immediately.png %})
+![La section « Réception/distribution » avec l'option « Planifié » sélectionnée et l'option de planification temporelle d'envoi dès que la campagne est lancée.]({% image_buster /assets/img_archive/schedule_immediately.png %})
 
-Ce type de planification est conçu pour des campagnes ponctuelles que vous souhaitez envoyer immédiatement, comme des messages sur un événement d'actualité. Une application sportive, par exemple, peut planifier des notifications push sur les mises à jour des scores à l'aide de cette option. En outre, lorsque vous envoyez des messages de test destinés uniquement à vous-même ou à votre équipe, cette option vous permet de les délivrer immédiatement. 
+Ce type de planification est conçu pour les campagnes ponctuelles que vous souhaitez envoyer immédiatement, comme les messages concernant un événement en cours. Une application sportive, par exemple, peut planifier des notifications push sur les mises à jour des scores en utilisant cette option. De même, lorsque vous envoyez des messages de test destinés à vous-même ou à votre équipe, cette option vous permet de les distribuer immédiatement. 
 
-Si vous envisagez de modifier la campagne et de l'envoyer à nouveau après avoir vu le test, veillez à cocher la case qui rend les utilisateurs à [nouveau éligibles]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) pour recevoir la campagne. Par défaut, Braze n'envoie qu'une seule fois une campagne à un utilisateur, sauf si cette case est cochée.
+Si vous envisagez de modifier la campagne et de l'envoyer à nouveau après avoir consulté le test, veillez à cocher la case qui rend les utilisateurs à [nouveau éligibles]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) pour recevoir la campagne. Par défaut, Braze n'envoie une campagne qu'une seule fois à un utilisateur, sauf si cette case est cochée.
 
-## Option 2 : Envoyer à une heure donnée
+## Option 2 : Envoyer à un moment spécifié
 
-La planification d'une campagne pour une période donnée vous permet de spécifier les jours et les heures d'envoi de votre campagne. Vous pouvez envoyer un message une seule fois, tous les jours, toutes les semaines ou tous les mois à un moment précis de la journée, et spécifier quand votre campagne doit commencer et se terminer. Cette date de fin est inclusive, ce qui signifie que le dernier envoi aura lieu à la date de fin. 
+La planification d'une campagne à un moment spécifié vous permet de définir les jours et les heures auxquels votre campagne sera envoyée. Vous pouvez envoyer un message une fois, quotidiennement, hebdomadairement ou mensuellement à un certain moment de la journée, et préciser quand votre campagne doit commencer et se terminer. Cette date de fin est inclusive, ce qui signifie que le dernier envoi aura lieu à la date de fin.
 
-Si vous sélectionnez la **réception/distribution planifiée** et que vous ne choisissez pas d'envoyer à l'heure locale de l'utilisateur, votre campagne sera envoyée en fonction du fuseau horaire spécifié sur la page **Paramètres de l'entreprise**.
+Si vous sélectionnez une planification mensuelle récurrente, notez que certains mois peuvent ne pas comporter le jour sélectionné. Par exemple, imaginons que vous configurez une campagne pour un envoi mensuel le 31. Dans ce cas, Braze envoie le dernier jour du mois concerné, comme le 30 avril, puisque le 31 avril n'existe pas.
 
-\![Les options de planification basées sur le temps permettent d'envoyer une campagne à une heure donnée.]({% image_buster /assets/img_archive/schedule_designated.png %})
+Si vous sélectionnez la **réception/distribution planifiée** et que vous ne choisissez pas d'envoyer à l'heure locale de l'utilisateur, votre campagne sera envoyée en fonction du fuseau horaire spécifié sur la page **Paramètres de la société**.
 
-### Campagnes sur les fuseaux horaires locaux
+![Les options de planification temporelle pour envoyer une campagne à une heure donnée.]({% image_buster /assets/img_archive/schedule_designated.png %})
 
-Vous pouvez envoyer le message en tenant compte des fuseaux horaires des utilisateurs, de sorte que les membres de votre audience internationale ne reçoivent pas de notification à des moments inopportuns. Les campagnes sur les fuseaux horaires locaux doivent être planifiées 24 heures à l'avance pour que les utilisateurs éligibles de tous les fuseaux horaires puissent les recevoir. Consultez la [FAQ sur les]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign/) campagnes pour comprendre le fonctionnement des campagnes sur les fuseaux horaires locaux et les règles de réception/distribution associées.
+### Campagnes dans le fuseau horaire local
 
-Les segments ciblés par des campagnes sur les fuseaux horaires locaux devraient inclure, au minimum, une fenêtre de deux jours pour intégrer les utilisateurs de tous les fuseaux horaires. Par exemple, si votre campagne est planifiée pour être envoyée le soir mais qu'elle n'a qu'une fenêtre d'un jour, certains utilisateurs peuvent être sortis du segment lorsque leur fuseau horaire est atteint. Les filtres qui créent une fenêtre de 2 jours sont par exemple "dernière utilisation il y a plus d'un jour" et "dernière utilisation il y a moins de 3 jours", ou "premier achat il y a plus de 7 jours" et "premier achat il y a moins de 9 jours".
+Vous pouvez envoyer le message dans les fuseaux horaires locaux des utilisateurs afin que les membres de votre audience internationale ne reçoivent pas de notification à des moments inopportuns. Les campagnes dans le fuseau horaire local doivent être planifiées 24 heures à l'avance pour garantir que les utilisateurs éligibles de tous les fuseaux horaires puissent les recevoir. Consultez la [FAQ sur les campagnes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign/) pour comprendre le fonctionnement des campagnes sur les fuseaux horaires locaux et les règles de réception/distribution associées.
 
-### Cas d'utilisation
-
-Les plages horaires désignées conviennent mieux aux messages planifiés à l'avance et aux campagnes récurrentes, telles que l'onboarding et la rétention, qui s'exécutent régulièrement sur tous les utilisateurs qualifiés.
-
-## Option 3 : Le timing intelligent
-
-Le [timing intelligent]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) vous permet de diffuser une campagne à chaque utilisateur à un moment différent. Braze calcule le temps de chaque individu en fonction du moment où cet utilisateur s'engage généralement avec votre appli et ses notifications. Vous pouvez éventuellement spécifier que les campagnes de timing intelligent ne sont envoyées que pendant une certaine partie de la journée. Par instance, si vous informez les utilisateurs d'une promotion qui se termine à minuit, vous voudrez peut-être que vos messages soient envoyés au plus tard à 22 heures.
-
-Les options de planification basées sur le temps pour utiliser le timing intelligent afin d'envoyer une campagne au moment où l'utilisation de l'application est la plus populaire parmi tous les utilisateurs.]({% image_buster /assets/img_archive/schedule_intelligent.png %})
-
-### Règles de réception/distribution
-
-Étant donné que l'heure optimale d'un utilisateur peut se situer à n'importe quel moment au cours d'une période de 24 heures, toutes les campagnes de timing intelligent doivent être planifiées 24 heures à l'avance. En outre, à l'instar des campagnes à heure fixe, les messages avec une fenêtre d'un jour manqueront les utilisateurs qui sortent du segment avant d'avoir atteint l'heure optimale dans leur fuseau horaire. Les segments des campagnes de timing intelligent doivent comporter au moins une fenêtre de trois jours pour tenir compte de ce facteur.
-
-Si le profil d'un utilisateur ne dispose pas de suffisamment de données pour calculer une heure optimale, vous pouvez choisir une méthode de secours qui consiste à envoyer l'application pendant l'heure la plus populaire parmi tous les utilisateurs ou à définir une heure de repli personnalisée. 
+Les segments ciblés par des campagnes dans le fuseau horaire local doivent comprendre une fenêtre de 2 jours au minimum pour couvrir les utilisateurs de tous les fuseaux horaires. Par exemple, si votre campagne est planifiée pour être envoyée le soir mais qu'elle a une fenêtre de seulement 1 jour, certains utilisateurs peuvent avoir quitté le segment au moment où leur fuseau horaire est atteint. Voici des exemples de filtres qui créent une fenêtre de 2 jours : « dernière utilisation il y a plus d'un jour » et « dernière utilisation il y a moins de 3 jours », ou « premier achat il y a plus de 7 jours » et « premier achat il y a moins de 9 jours ».
 
 ### Cas d'utilisation
 
-Les campagnes de timing intelligent conviennent mieux aux messages uniques et récurrents pour lesquels il existe une certaine flexibilité en ce qui concerne le délai de réception/distribution, par exemple lorsqu'elles ne sont pas bien adaptées aux nouvelles de dernière minute ou aux annonces programmées.
+Les planifications à un moment spécifié conviennent particulièrement aux messages planifiés à l'avance et aux campagnes récurrentes, telles que l'onboarding et la rétention, qui s'exécutent régulièrement pour tous les utilisateurs qualifiés.
 
+## Option 3 : Timing intelligent
+
+Le [timing intelligent]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) vous permet de diffuser une campagne à chaque utilisateur à un moment différent. Braze calcule le moment optimal pour chaque individu en fonction de ses habitudes d'interaction avec votre application et ses notifications. Vous pouvez également spécifier que les campagnes au timing intelligent ne soient envoyées que pendant une certaine plage horaire de la journée. Par exemple, si vous informez les utilisateurs qu'une promotion se termine à minuit, vous pouvez souhaiter que vos messages soient envoyés à 22 h au plus tard.
+
+![Les options de planification temporelle pour utiliser le timing intelligent afin d'envoyer une campagne au moment où l'utilisation de l'appli est la plus populaire parmi tous les utilisateurs.]({% image_buster /assets/img_archive/schedule_intelligent.png %})
+
+### Règles de distribution
+
+Étant donné que le moment optimal pour un utilisateur peut se situer à n'importe quelle heure sur 24 heures, toutes les campagnes au timing intelligent doivent être planifiées 24 heures à l'avance. De plus, comme pour les campagnes à moment spécifié, les messages ayant une fenêtre de 1 jour manqueront les utilisateurs qui sortent du segment avant que le moment optimal dans leur fuseau horaire ne soit atteint. Les segments pour les campagnes au timing intelligent doivent intégrer au minimum une fenêtre de 3 jours pour en tenir compte.
+
+Si le profil d'un utilisateur ne dispose pas de suffisamment de données pour calculer un moment optimal, vous pouvez choisir une méthode de secours : envoyer le message au moment le plus populaire d'utilisation de l'application parmi tous les utilisateurs, ou bien définir un horaire de secours personnalisé. 
+
+### Cas d'utilisation
+
+Les campagnes au timing intelligent sont idéales pour les messages ponctuels et récurrents qui offrent une certaine flexibilité quant au moment de distribution, c'est-à-dire lorsqu'ils ne sont pas adaptés aux actualités de dernière minute ou aux annonces limitées dans le temps.
