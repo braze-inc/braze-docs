@@ -39,7 +39,7 @@ Se uma variante superou todas as outras com mais de 95% de [confiança]({{site.b
 
 Se nenhuma variante superar todas as outras com 95% de confiança e você optar por enviar a variante de melhor performance mesmo assim, a variante de melhor performance ainda será enviada e indicada com o rótulo "Winner" (Vencedor).
 
-![Resultados de um teste inicial enviado para determinar a Variante Vencedora, onde nenhuma variante teve desempenho melhor do que as outras com confiança suficiente para atender ao limite de confiança de 95 por cento para significância estatística.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
+![Resultados de um teste inicial enviado para determinar a Variante Vencedora, onde nenhuma variante teve desempenho melhor do que as outras com confiança suficiente para atender ao limite de 95 por cento de confiança para significância estatística.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
 
 #### Como a variante vencedora é selecionada
 
@@ -93,7 +93,7 @@ Essas características são:
 
 Por exemplo, o teste pode descobrir que a maioria dos usuários prefere a Variante A, mas usuários que tiveram uma sessão há cerca de 3-12 dias, têm entre 1-12 dias entre sessões e foram criados nos últimos 67-577 dias tendem a preferir a Variante B. Portanto, usuários nessa subpopulação receberam a Variante B no segundo envio, enquanto o restante recebeu a Variante A.
 
-![A tabela de Características do Usuário, que mostra quais usuários são previstos para preferir a Variante A e a Variante B com base nos três grupos em que se enquadram para recência, frequência e tempo de permanência.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
+![A tabela de Características do Usuário, que mostra quais usuários são previstos para preferir a Variante A e a Variante B com base nos três grupos em que se enquadram para recência, frequência e tempo de uso.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
 
 **Como as variantes personalizadas são selecionadas**<br>
 Com esse método, a mensagem recomendada de um usuário individual é a soma dos efeitos de sua recenticidade, frequência e permanência específicas. A recência, a frequência e a permanência são divididas em grupos, conforme ilustrado na tabela **Características do usuário**. O intervalo de tempo de cada intervalo é determinado pelos dados de usuários em cada campanha individual e mudará de campanha para campanha. 
@@ -151,7 +151,7 @@ Independentemente de seu teste ter ou não um vencedor claro, pode ser útil exe
 
 ## Discrepâncias entre o grupo de controle e a variante
 
-Em campanhas de mensagem no app, a forma como os usuários são rastreados e como as impressões são registradas pode causar discrepâncias na divisão esperada entre o grupo de controle e a variante. Isso ocorre porque as impressões reais registradas podem não refletir essa divisão, e a Braze, em última análise, não tem controle sobre o comportamento individual do usuário que realizará o disparo.
+Em campanhas de mensagem no app, a forma como os usuários são rastreados e como as impressões são registradas pode causar discrepâncias na divisão esperada entre o grupo de controle e a variante. Isso ocorre porque as impressões reais registradas podem não refletir essa divisão, e a Braze, em última análise, não tem controle sobre o comportamento individual do usuário que realizará o gatilho.
 
 Por exemplo, digamos que uma campanha tenha um público-alvo de 200 usuários no lançamento, com 100 usuários no grupo de controle e 100 usuários na variante.
 
@@ -161,7 +161,7 @@ Apesar da divisão inicial de 50/50, as impressões únicas registradas não est
 
 ### Atrasos na mensagem no app 
 
-Para campanhas de mensagem no app acionadas que incluem exibições atrasadas, as impressões do grupo de controle serão registradas quando o usuário final teria recebido originalmente a mensagem no app. Por exemplo, se uma campanha estiver configurada para atrasar a exibição em uma hora, as impressões do grupo de controle não serão registradas até que o atraso de uma hora tenha passado. Isso ajuda no rastreamento preciso das impressões relacionadas ao momento pretendido da entrega da mensagem.
+Para campanhas de mensagem no app acionadas que incluem exibições atrasadas, as impressões do grupo de controle serão registradas quando o usuário final originalmente teria recebido a mensagem no app. Por exemplo, se uma campanha estiver configurada para atrasar a exibição em uma hora, as impressões do grupo de controle não serão registradas até que o atraso de uma hora tenha passado. Isso ajuda no rastreamento preciso das impressões relacionadas ao momento pretendido da entrega da mensagem.
 
 ## Acompanhamentos recomendados {#recommended-follow-ups}
 

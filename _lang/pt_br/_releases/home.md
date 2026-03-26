@@ -18,7 +18,7 @@ Para obter mais informações sobre qualquer uma das atualizações listadas nes
 
 ## lançamento de 5 de fevereiro de 2026
 
-### <sup>BrazeAI™</sup>
+### BrazeAI<sup>TM</sup>
 
 #### Otimizador de conteúdo
 
@@ -360,7 +360,7 @@ Agora você pode personalizar seu [Braze Agent]({{site.baseurl}}/user_guide/braz
 - Estruturar a saída de um agente fornecendo o [formato de saída]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#output-format).
 - Ajustar a [temperatura]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#temperature) para o nível de desvio da saída de seu agente.
 
-### Modelos ChatGPT com operador <sup>BrazeAITM</sup> 
+### Modelos ChatGPT com operador BrazeAI<sup>TM</sup>
 
 {% multi_lang_include release_type.md release="Beta" %}
 

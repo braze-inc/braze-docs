@@ -130,6 +130,7 @@ event_documentation:
       - Abort
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 WhatsApp messages every 1 week`"
   users.messages.whatsapp.InboundReceive:
@@ -144,6 +145,7 @@ event_documentation:
       - Content Cards
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 Content Card messages every 1 week`"
   users.messages.email.Abort:
@@ -153,6 +155,7 @@ event_documentation:
       - Email
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 email messages every 1 week`"
   users.messages.pushnotification.Abort:
@@ -162,6 +165,7 @@ event_documentation:
       - Push
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 push messages every 1 week`"
   users.messages.sms.Abort:
@@ -170,6 +174,7 @@ event_documentation:
       - Abort
       - SMS
     property_details:
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 SMS messages every 1 week`"
   users.messages.webhook.Abort:
@@ -179,6 +184,7 @@ event_documentation:
       - Webhooks
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 webhook messages every 1 week`"
   users.messages.webhook.Failure:
@@ -334,7 +340,7 @@ event_documentation:
         - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
   users.messages.inappmessage.Impression:
     description: This event occurs when a user views an in-app message.
-    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
+    alert_note: "For in-app messages, `dispatch_id` is `null`."
     api_tags:
       - In-App Messages
       - Impressions
@@ -347,11 +353,12 @@ event_documentation:
       - In-App Messages
       - Abort
     property_details:
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 in-app messages every 1 week`"
   users.messages.inappmessage.Click:
     description: This event occurs when a user clicks an in-app message.
-    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
+    alert_note: "For in-app messages, `dispatch_id` is `null`."
     api_tags:
       - In-App Messages
       - Clicks
@@ -368,7 +375,6 @@ event_documentation:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.contentcard.Send:
     description: This event occurs when a Content Card gets sent to a user.
-    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
     api_tags:
       - Content Cards
       - Sends
@@ -376,7 +382,6 @@ event_documentation:
       - "`message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language or country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more."
   users.messages.contentcard.Impression:
     description: This event occurs when a user views a Content Card.
-    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
     api_tags:
       - Content Cards
       - Impressions
@@ -385,7 +390,6 @@ event_documentation:
       - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
   users.messages.contentcard.Click:
     description: This event occurs when a user clicks a Content Card.
-    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
     api_tags:
       - Content Cards
       - Clicks
@@ -394,7 +398,6 @@ event_documentation:
       - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
   users.messages.contentcard.Dismiss:
     description: This event occurs when a user dismisses a Content Card.
-    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
     api_tags:
       - Content Cards
       - Dismissal
@@ -464,7 +467,6 @@ event_documentation:
   users.campaigns.Conversion:
     description: This event occurs when a user does an action that has been set as a conversion event in a campaign.
     alert_important: Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_behavior_index` field represents which conversion event, such as 0 = A, 1 = B, 2 = C, 3 = D.
-    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
     api_tags:
       - Campaign
       - Conversion
@@ -486,7 +488,6 @@ event_documentation:
       - Progression
   users.campaigns.EnrollInControl:
     description: This event occurs when a user is enrolled in a control variant set on a multi-variant campaign. This event is generated as there will be no channel send event for this user.
-    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
     api_tags:
       - Campaign
       - Entry
@@ -553,6 +554,7 @@ event_documentation:
       - Banner
       - Abort
     property_details:
+      -  "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 Banner messages every 1 week`"
   users.messages.banner.Click:
@@ -577,6 +579,7 @@ event_documentation:
       - Abort
     property_details:
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 LINE messages every 1 week`"
   users.messages.line.Send:
@@ -630,6 +633,7 @@ event_documentation:
       - RCS
       - Abort
     property_details:
+      - "The `abort_type` field describes the reason the message was aborted. For a full list of values, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)."
       - "`abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule."
       - "`abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 RCS messages every 1 week`"
   users.messages.email.Retry:
@@ -667,7 +671,7 @@ event_documentation:
     api_tags:
       - Agent
   agentconsole.ToolInvocation:
-    description: This is the Kafka record schema for when a tool is executed.
+    description: This is the Kafka record schema for when a tool is executed. A tool is a function given to an LLM to fulfill an objective.
     api_tags:
       - Agent
 

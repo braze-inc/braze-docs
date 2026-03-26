@@ -11,22 +11,17 @@ tool: Canvas
 
 # 지연
 
-> 지연 컴포넌트를 사용하면 캔버스에 독립형 지연을 추가할 수 있습니다. 관련 메시지를 추가하지 않고도 캔버스에 지연을 추가할 수 있습니다. 
+> 지연 구성요소를 사용하면 캔버스에 독립형 지연을 추가할 수 있습니다. 관련 메시지를 추가하지 않고도 캔버스에 지연을 추가할 수 있습니다. 
 
-지연은 캔버스를 더 깔끔하게 보이게 할 수 있습니다. 이 구성 요소를 사용하여 다른 단계를 정확한 날짜까지, 특정 날짜까지 또는 특정 요일까지 지연시킬 수도 있습니다. <br> ![캔버스의 첫 번째 단계로 1일 지연이 있는 지연 단계입니다.]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+지연은 캔버스를 더 깔끔하게 보이게 할 수 있습니다. 이 구성요소를 사용하여 다른 단계를 정확한 날짜까지, 특정 날짜까지 또는 특정 요일까지 지연시킬 수도 있습니다. 지연 구성요소는 최대 하나의 후속 단계에만 연결할 수 있습니다. <br> ![캔버스의 첫 번째 단계로 1일 지연이 적용된 지연 단계.]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
-## Creating a delay
+## 지연 생성
 
-지연을 만들려면 캔버스에 단계를 추가합니다. 사이드바에서 지연 구성 요소를 끌어서 놓거나 단계 하단에 있는 <i class="fas fa-plus-circle"></i> 더하기 버튼을 클릭하고 **지연**을 선택합니다.
+지연을 만들려면 캔버스에 단계를 추가합니다. 사이드바에서 지연 구성요소를 끌어서 놓거나 단계 하단에 있는 <i class="fas fa-plus-circle"></i> 더하기 버튼을 선택하고 **지연**을 선택합니다.
 
-캔버스 여정에서 지연을 만들 때 고려해야 할 몇 가지 세부 사항이 있습니다.
+#### 확장 지연
 
-- 지연 제한은 30일입니다.
-- 지연 구성요소는 다음 단계에 하나만 연결할 수 있습니다.
-
-#### Extended delays
-
-You can now extend Delay steps up to two years. For example, if you're onboarding new users for your app, you can add an extended delay for two months before sending a Message step to nudge the users who haven't started a session.
+이제 지연 단계를 최대 2년까지 연장할 수 있습니다. 예를 들어, 앱에 신규 사용자를 온보딩하는 경우 세션을 시작하지 않은 사용자에게 메시지 단계를 보내기 전에 2개월의 확장 지연을 추가할 수 있습니다.
 
 ## 시간 지연 유형
 
@@ -35,120 +30,119 @@ You can now extend Delay steps up to two years. For example, if you're onboardin
 {% tabs %}
 {% tab Duration %}
 
-**기간을** 선택하면 설정한 시간(초, 분, 시간, 일, 주)이나 특정 시간 동안 사용자를 지연시킬 수 있습니다. 예를 들어 사용자를 4시간 또는 하루 동안 지연시킬 수 있습니다.
+**기간**을 선택하면 사용자를 설정된 초, 분, 시간, 일 또는 주 동안 특정 시간에 지연시킬 수 있습니다. 예를 들어 사용자를 4시간 또는 하루 동안 지연시킬 수 있습니다.
   
-'일'과 '달력 일수'를 계산하는 방법의 차이에 유의하세요.
+'일'과 '캘린더일'을 계산하는 방법의 차이에 유의하세요.
   
-- '하루'는 24시간이며 사용자가 지연 단계에 진입한 시점부터 계산됩니다. 
-- '캘린더 날짜'는 다음 지정된 시간까지 대기해야 하는 시간을 정의하며, 24시간 미만일 수 있습니다. 회사 시간 또는 사용자 현지 시간으로 지연하도록 선택할 수 있습니다. If a time isn't specified, the user will be delayed until midnight the next day in company time.
+- "하루"는 24시간이며, 사용자가 지연 단계에 진입한 시점부터 계산됩니다. 
+- "캘린더일"은 다음 지정된 시간까지 기다려야 하는 시간을 정의하며, 이는 24시간 미만일 수 있습니다. 회사 시간 또는 사용자의 현지 시간 기준으로 지연을 선택할 수 있습니다. 시간이 지정되지 않은 경우, 사용자는 회사 시간 기준으로 다음 날 자정까지 지연됩니다.
 
-또한 **특정 시간에를** 선택하여 사용자가 캔버스에서 진행할 시기를 지정할 수도 있습니다. 이 옵션은 사용자가 지연 단계를 입력한 시간을 고려합니다. 이 시간이 설정에 구성된 시간을 초과하는 경우 지연 시간에 시간이 더 추가됩니다. 
+또한 **다음 시간에**를 선택하여 사용자가 캔버스에서 진행할 시기를 지정할 수도 있습니다. 이 옵션은 사용자가 지연 단계에 진입한 시간을 고려합니다. 이 시간이 설정에 구성된 시간을 초과하는 경우 지연 시간에 시간이 더 추가됩니다. 
 
-예를 들어 오늘이 12월 11일이고 지연 단계가 오전 8시(UTC)에 1주일 **기간으로** 설정되어 있다고 가정해 보겠습니다. 사용자가 12월 4일에 지연 단계에 진입하는 경우, 원래 오전 8시(한국 시간 기준) 이전에 지연 단계에 진입했다면 오늘 지연 단계에서 해제되어 여정을 계속할 수 있습니다. 이 시간 이후에 지연 단계에 진입하면 사용자는 다음 날(이 시간의 다음 발생)까지 지연됩니다. 
+예를 들어, 오늘이 12월 11일이고 지연 단계가 **기간** 1주일, UTC 기준 오전 8시로 설정되어 있다고 가정해 보겠습니다. 사용자가 12월 4일에 지연 단계에 진입한 경우, 원래 UTC 기준 오전 8시 이전에 지연 단계에 진입했다면 오늘 지연 단계에서 해제되어 여정을 계속할 수 있습니다. 이 시간 이후에 지연 단계에 진입한 경우, 사용자는 다음 날(이 시간의 다음 발생)까지 지연됩니다. 
 
 {% endtab %}
 {% tab Calendar date %}
 
-**캘린더 날짜를** 선택하면 특정 날짜와 시간까지 사용자를 단계에 묶어둘 수 있습니다.
+**캘린더 날짜**를 선택하면 특정 날짜와 시간까지 사용자를 해당 단계에 머물게 할 수 있습니다.
 
 #### 고려 사항
 
-##### Users won't receive past-dated steps or messages
+##### 사용자는 이미 지난 날짜의 단계나 메시지를 받지 않습니다
 
-사용자가 지연 단계로 진행할 때 선택한 날짜와 시간이 이미 지난 경우, 사용자는 캔버스를 종료합니다. 캔버스 시작일과 '정확한 날짜까지 기다리기' 단계에서 선택한 날짜 사이에는 최대 31일의 간격이 있을 수 있습니다.
+사용자가 지연 단계로 진행할 때 선택한 날짜와 시간이 이미 지난 경우, 사용자는 캔버스를 종료합니다. 캔버스 시작일과 "정확한 날짜까지 기다리기" 단계에 선택된 날짜 사이에는 최대 31일의 간격이 있을 수 있습니다.
 
 {% alert important %}
-[캔버스 컨텍스트 얼리 액세스에]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) 참여하는 경우 최대 2년까지 지연을 설정할 수 있습니다.
+[캔버스 Context 얼리 액세스]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context)에 참여 중이라면 최대 2년까지 지연을 설정할 수 있습니다.
 {% endalert %}
 
-For example, users won't receive steps or messages in these scenarios:
+예를 들어, 다음 시나리오에서는 사용자가 단계나 메시지를 받지 않습니다:
 
-- 메시징이 5월 3일 오후 9시에 전송될 예정이지만 지연 단계가 5월 3일 오전 9시에 만료됩니다. 
-- A Canvas step delays until a specific time in the user's local time zone, but the users don't have a time zone set on their user profile. The delay then defaults to the company time zone for these users, which has already passed the specified time. 
+- 메시지는 5월 3일 오후 9시에 전송되도록 스케줄되어 있지만, 지연 단계는 5월 3일 오전 9시에 만료됩니다. 
+- 캔버스 단계가 사용자의 현지 시간대의 특정 시간까지 지연되지만, 사용자의 고객 프로필에 시간대가 설정되어 있지 않습니다. 이 경우 지연은 해당 사용자에 대해 회사 시간대를 기본값으로 사용하며, 이미 지정된 시간이 지난 상태입니다. 
   
-##### Users will exit if a subsequent Delay step is within a prior Delay step's timeline
+##### 후속 지연 단계가 이전 지연 단계의 타임라인 내에 있으면 사용자가 종료됩니다
 
-캔버스에 두 개의 지연 단계가 있지만 첫 번째 지연 단계가 두 번째 지연 단계보다 길면 사용자도 캔버스를 종료합니다. 
+캔버스에 두 개의 지연 단계가 있지만 첫 번째 지연 단계가 두 번째 지연 단계보다 길 경우, 사용자는 캔버스를 종료하게 됩니다. 
 
-For example, let's say a Canvas has these steps:
-- Step 1: Message step
-- Step 2: Delay step until December 13th at 10 pm
-- Step 3: Message step
-- Step 4: Delay step until December 13th at 7 pm
-- Step 5: Message step
+예를 들어, 캔버스에 다음과 같은 단계가 있다고 가정해 보겠습니다:
+- 1단계: 메시지 단계
+- 2단계: 12월 13일 오후 10시까지 지연 단계
+- 3단계: 메시지 단계
+- 4단계: 12월 13일 오후 7시까지 지연 단계
+- 5단계: 메시지 단계
   
-The users who enter Step 4 will exit the Canvas before receiving Step 5 because Step 4's delay is part of Step 2's timeframe.
+4단계에 진입한 사용자는 5단계를 받기 전에 캔버스를 종료합니다. 4단계의 지연이 2단계의 타임프레임에 포함되기 때문입니다.
 
 {% endtab %}
 {% tab Day of the week %}
 
-**요일을** 선택하면 특정 요일, 특정 시간까지 사용자를 단계에 묶어둘 수 있습니다. 예를 들어 목요일이 회사 표준 시간대인 오후 4시에 도착할 때까지 사용자를 다음 시간으로 연기할 수 있습니다. 
+**요일**을 선택하면 특정 요일의 특정 시간까지 사용자를 해당 단계에 머물게 할 수 있습니다. 예를 들어 회사 시간대 기준으로 다음 목요일 오후 4시까지 사용자를 지연시킬 수 있습니다. 
 
-이를 성공적으로 구성하려면 사용자가 선택한 요일(예: 목요일)에 캔버스에 들어왔지만 지정된 시간이 지난 후에 캔버스에 들어갈 경우 어떤 일이 발생할지 선택해야 합니다. 사용자를 당일에 승급하거나 다음 주까지 보류하도록 선택할 수 있습니다.
+이를 성공적으로 구성하려면 사용자가 선택한 요일(예: 목요일)에 캔버스에 진입했지만 지정된 시간이 지난 후에 진입한 경우 어떻게 처리할지 선택해야 합니다. 사용자를 당일에 진행시키거나 다음 주까지 보류하도록 선택할 수 있습니다.
 {% endtab %}
 {% endtabs %}
 
 ## 지연 단계 사용
 
-6월 10일이라고 가정해 보겠습니다. 6월 11일에 사용자가 캔버스에 들어가서 예정된 프로모션에 대한 메시지를 받기를 원합니다. 그런 다음 현지 시간으로 6월 17일 오후 3시까지 캔버스에서 사용자를 붙잡아 두려고 합니다. 6월 17일 오후 3시(현지 시간)에 사용자에게 프로모션에 대한 알림 메시지를 보내려고 합니다.
+6월 10일이라고 가정해 보겠습니다. 6월 11일에 사용자가 캔버스에 진입하여 예정된 프로모션에 대한 메시지를 받기를 원합니다. 그런 다음 현지 시간으로 6월 17일 오후 3시까지 캔버스에서 사용자를 보류하려고 합니다. 6월 17일 오후 3시(현지 시간)에 사용자에게 프로모션에 대한 리마인더 메시지를 보내려고 합니다.
 
-The sequence of Canvas steps could look like the following:
+캔버스 단계의 순서는 다음과 같을 수 있습니다:
 
-1. 먼저 6월 11일에 사용자가 캔버스에 입장한 직후에 보내는 메시지 단계를 추가합니다.
-2. 6월 17일 오후 1시(현지 시간)까지 사용자를 보류하는 지연 단계를 만듭니다.
+1. 먼저 6월 11일에 사용자가 캔버스에 진입한 직후에 전송되는 메시지 단계를 추가합니다.
+2. 6월 17일 오후 1시(현지 시간)까지 사용자를 보류하는 지연 단계를 생성합니다.
 3. 지연 단계를 즉시 메시지를 전송하는 다른 메시지 단계에 연결합니다.
 
 ### 캔버스 끝에 있는 지연 구성요소 {#delay-as-last-step}
 
-If you add a Delay component to your Canvas and there are no subsequent steps, any user who reaches the last step will be automatically advanced out of the Canvas. 지연 단계의 시간이 아직 도달하지 않은 경우에도 마찬가지입니다. This means that users who have already reached the Delay step will not receive any messages you add after this step. 그러나 사용자가 지연 단계에 도달하지 않았는데 메시지가 추가되면 해당 메시지를 받게 됩니다.
+캔버스에 지연 구성요소를 추가했는데 후속 단계가 없는 경우, 마지막 단계에 도달한 모든 사용자는 자동으로 캔버스에서 나가게 됩니다. 지연 단계의 시간이 아직 도달하지 않은 경우에도 마찬가지입니다. 이는 이미 지연 단계에 도달한 사용자는 이 단계 이후에 추가하는 메시지를 받지 못한다는 것을 의미합니다. 그러나 사용자가 지연 단계에 도달하지 않았는데 메시지가 추가되면 해당 메시지를 받게 됩니다.
 
-### Personalized delays
+### 개인화된 지연
 
-{% include early_access_beta_alert.md feature='The personalized delays and extended delays feature' %}
+{% multi_lang_include early_access_beta_alert.md feature='The personalized delays and extended delays feature' %}
 
-Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) to select the context variable to delay by. 이렇게 하면 선택한 속성 또는 속성에 설정된 시간이 재정의됩니다. 이 기능은 며칠 또는 몇 주 단위로 오프셋을 적용하고 사용자가 특정 시간에 앞으로 나아가도록 하려는 경우에 유용합니다. 표준 시간대는 속성 또는 속성에서 가져오거나 사용할 수 없는 경우 대체 시간대를 사용합니다. 
+**지연 개인화** 토글을 선택하여 사용자에 대한 개인화된 지연을 설정합니다. [Context 단계]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context)와 함께 사용하여 지연에 사용할 컨텍스트 변수를 선택할 수 있습니다. 이 설정은 선택한 속성 또는 등록정보에 설정된 시간을 재정의합니다. 이는 일수나 주 단위로 오프셋을 적용할 때 유용하며, 사용자가 특정 시간에 다음 단계로 이동하도록 하려는 경우에 사용됩니다. 시간대는 속성 또는 등록정보에서 가져오거나, 해당 값이 없을 경우 대체 시간대를 사용합니다. 
 
 #### "특정 시간에"에 대한 시간대 동작
 
-**특정 시간** 옵션으로 개인화된 지연을 구성하는 경우 시간대 동작은 속성 또는 컨텍스트 변수의 데이터 유형에 따라 달라집니다:
+**특정 시간** 옵션으로 개인화된 지연을 구성할 때, 시간대 동작은 속성 또는 컨텍스트 변수의 데이터 유형에 따라 달라집니다:
 
-- **표준 시간대가 포함된 문자열 데이터 유형입니다:** 속성 또는 컨텍스트 변수가 표준 시간대 정보를 포함하는 문자열 데이터 유형인 경우 문자열에 지정된 표준 시간대를 따릅니다. 예를 들어 `2025-06-10T10:00:00-08:00` 은 UTC-8을 사용합니다.
-- **표준 시간대가 없는 문자열 데이터 유형입니다:** 속성 또는 컨텍스트 변수가 표준 시간대 정보가 없는 문자열 데이터 유형인 경우 대체 표준 시간대를 따릅니다. 예를 들어 `2025-06-10` 은 대체 시간대를 사용합니다.
-- **시간 데이터 유형입니다:** 속성 또는 컨텍스트 변수가 시간 데이터 유형인 경우 UTC를 따릅니다. 이는 시간 데이터 유형이 데이터베이스에 저장될 때 항상 UTC로 변환되므로 변수가 시간 데이터 유형으로 설정된 경우 '특정 시간에'는 항상 UTC를 참조하기 때문입니다. 예를 들어 `2025-06-10T10:00:00-08:00` 은 UTC+0을 사용합니다.
+- **시간대가 포함된 문자열 데이터 유형:** 속성 또는 컨텍스트 변수가 시간대 정보를 포함하는 문자열 데이터 유형인 경우, 해당 문자열에 지정된 시간대를 따릅니다. 예를 들어, `2025-06-10T10:00:00-08:00`은 UTC-8을 사용합니다.
+- **시간대가 없는 문자열 데이터 유형:** 속성 또는 컨텍스트 변수가 시간대 정보가 없는 문자열 데이터 유형인 경우, 대체 시간대를 따릅니다. 예를 들어, `2025-06-10`은 대체 시간대를 사용합니다.
+- **시간 데이터 유형:** 속성 또는 컨텍스트 변수가 시간 데이터 유형인 경우, UTC를 따릅니다. 이는 시간 데이터 유형이 데이터베이스에 저장될 때 항상 UTC로 변환되기 때문이며, 따라서 변수가 시간 데이터 유형으로 설정된 경우 "특정 시간에"는 항상 UTC를 참조하게 됩니다. 예를 들어, `2025-06-10T10:00:00-08:00`은 UTC+0을 사용합니다.
 
 {% alert note %}
-커스텀 속성이나 컨텍스트 변수가 문자열 데이터 유형인 경우 특정 시간이나 시간대를 갖지 않을 수 있습니다. 시간 데이터 유형인 경우 시간과 시간대를 지정해야 합니다. 그러나 커스텀 속성 또는 컨텍스트 변수가 "관련 없는" 문자열(예: "product_name"), )인 경우 사용자는 캔버스를 종료합니다.
+커스텀 속성이나 컨텍스트 변수가 문자열 데이터 유형인 경우 특정 시간이나 시간대가 없을 수 있습니다. 시간 데이터 유형인 경우 시간과 시간대를 지정해야 합니다. 그러나 커스텀 속성 또는 컨텍스트 변수가 "관련 없는" 문자열(예: "product_name")인 경우, 사용자는 캔버스를 종료합니다.
 {% endalert %}
 
-#### Use case
+#### 사용 사례
 
-Let's say you want to remind your customers to purchase toothpaste 30 days from now. Using a combination of a Context step and a Delay step, you can select this context variable to delay by. In this case, your Context step would have the following fields:
+고객에게 지금부터 30일 후에 치약을 구매하도록 리마인더를 보내고 싶다고 가정해 보겠습니다. Context 단계와 지연 단계의 조합을 사용하여 지연에 사용할 컨텍스트 변수를 선택할 수 있습니다. 이 경우 Context 단계에는 다음 필드가 포함됩니다:
 
-- **컨텍스트 변수 이름입니다:** product_reminder_interval
-- **Data type:** Time
-- **Value:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
+- **컨텍스트 변수 이름:** product_reminder_interval
+- **데이터 유형:** Time
+- **값:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
 
-!["product_reminder_interval" 및 그 가치.]({% image_buster /assets/img/context_step1.png %})
+!["product_reminder_interval"과 해당 값.]({% image_buster /assets/img/context_step1.png %})
 
-Next, because you want to remind your customers 30 days from now, you'll select **Until a specific day** as the delay option and select **Personalize delay** to use the information from your Context step. This means your users will be delayed until the selected Context variable.
+다음으로, 고객에게 지금부터 30일 후에 리마인더를 보내려면 지연 옵션으로 **특정 날짜까지**를 선택하고 **지연 개인화**를 선택하여 Context 단계의 정보를 사용합니다. 이렇게 하면 사용자는 선택한 Context 변수까지 지연됩니다.
 
 ## 지연 분석
 
-Delay components have the following metrics available in the analytics view of an active or previously active Canvas.
+지연 구성요소에는 활성 또는 이전에 활성이었던 캔버스의 분석 보기에서 다음 측정기준을 사용할 수 있습니다.
 
-| Metric | Description |
+| 측정기준 | 설명 |
 |---|---|
-| _Entered_ | 단계를 입력한 횟수를 반영합니다. 캔버스에 재자격이 있는 사용자가 지연 단계를 두 번 입력하면 두 개의 항목이 기록됩니다. |
-| _Proceeded to Next Step_ | 캔버스에서 다음 단계로 진행된 항목 수를 반영합니다. |
-| _Exited Canvas_ | 캔버스를 종료하고 다음 단계로 진행하지 않은 항목의 수를 반영합니다. |
-| _Personalization Failed_ | Reflects the number of times a personalized message or content intended for a user couldn't be delivered due to the following:<br> {::nomarkdown}<ul><li>Delay value is in the past</li><li>Delay value is over 2 years into the future</li><li><b>After a duration</b> value isn't a number</li><li><b>Until a specific day</b> value isn't a date or date-formatted string</li></ul>{:/} <br>See [Personalization failed errors](#personaliztion-failed-errors) for more details. |
+| _진입_ | 단계에 진입한 횟수를 반영합니다. 캔버스에 재자격이 있는 사용자가 지연 단계에 두 번 진입하면 두 개의 항목이 기록됩니다. |
+| _다음 단계로 진행_ | 캔버스에서 다음 단계로 진행한 항목 수를 반영합니다. |
+| _캔버스 종료_ | 캔버스를 종료하고 다음 단계로 진행하지 않은 항목의 수를 반영합니다. |
+| _개인화 실패_ | 다음과 같은 이유로 사용자에게 의도된 개인화된 메시지 또는 콘텐츠를 전달할 수 없었던 횟수를 반영합니다:<br> {::nomarkdown}<ul><li>지연 값이 과거임</li><li>지연 값이 미래 2년 이상임</li><li><b>기간 이후</b> 값이 숫자가 아님</li><li><b>특정 날짜까지</b> 값이 날짜 또는 날짜 형식 문자열이 아님</li></ul>{:/} <br>자세한 내용은 [개인화 실패 오류](#personaliztion-failed-errors)를 참조하세요. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-이러한 분석에 대한 시계열은 확장된 구성요소 보기에서 사용할 수 있습니다.
+이러한 분석에 대한 시계열은 확장된 구성요소 보기에서 확인할 수 있습니다.
 
-## Troubleshooting
+## 문제 해결
 
-### Personalization failed errors
+### 개인화 실패 오류
 
-If users aren't triggering a personalized delay, it could be because the Context step you set to qualify them for the Delay step is not working as you expected. When a [context variable is invalid]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#troubleshooting), a user will continue through your Canvas without having their context set by the Context step. This can cause them to not qualify for steps later in your Canvas, such as personalized delays.
-
+사용자가 개인화된 지연을 트리거하지 않는 경우, 지연 단계에 대한 자격을 부여하도록 설정한 Context 단계가 예상대로 작동하지 않기 때문일 수 있습니다. [컨텍스트 변수가 유효하지 않은 경우]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#troubleshooting), 사용자는 Context 단계에서 컨텍스트가 설정되지 않은 채로 캔버스를 계속 진행합니다. 이로 인해 개인화된 지연과 같은 캔버스의 이후 단계에 대한 자격을 갖추지 못할 수 있습니다.

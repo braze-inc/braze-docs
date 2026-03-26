@@ -9,7 +9,7 @@ page_type: reference
 
 # 식별자 필드 수준 암호화
 
-{% include field_level_encryption_pii_description.md %}
+{% multi_lang_include field_level_encryption_pii_description.md %}
 
 {% alert important %}
 식별자 필드 수준 암호화는 애드온 기능으로 사용할 수 있습니다. 식별자 필드 수준 암호화를 시작하려면 Braze 계정 관리자에게 문의하세요.
@@ -34,7 +34,7 @@ page_type: reference
     - **Braze ID 클러스터:** `ap-southeast-3`
 4. AWS 키 관리 서비스에서 두 개의 키를 생성하고 키 사용 권한에 IAM 사용자가 추가되었는지 확인합니다:
     - **[암호화/복호화](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html#create-symmetric-cmk):** **대칭** 키 유형과 키 **암호화 및 복호화** 사용을 선택합니다.
-    - **[해시](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):** **대칭** 키 유형과 **MAC 키 사용량 생성 및 확인**을 선택합니다. 주요 사양은 **HMAC_256**. 키를 생성한 후에는 Braze에 입력해야 하므로 HMAC 키 ID를 어딘가에 기록해 두세요.
+    - **[해시](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):** **대칭** 키 유형과 **MAC 키 사용량 생성 및 확인**을 선택합니다. 핵심 사양은 .이어야 합니다**HMAC_256**. 키를 생성한 후에는 Braze에 입력해야 하므로 HMAC 키 ID를 어딘가에 기록해 두세요.
 
 ![]({% image_buster /assets/img/field_level_encryption_aws_prereq.png %})
 

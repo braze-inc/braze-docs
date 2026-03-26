@@ -86,7 +86,7 @@ platform:
 
 {% sdktab .NET MAUI (Xamarin) %}
 {% alert tip %}
-[GitHub에서 .NET MAUI Braze 소프트웨어 개발 키트 체인지로그](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md) 사본을 찾을 수도 있습니다.
+GitHub에서 [.NET MAUI Braze SDK 체인지로그](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md)의 복사본을 찾을 수도 있습니다.
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-xamarin-sdk/master/CHANGELOG.md %}

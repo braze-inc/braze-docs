@@ -15,20 +15,20 @@ description: "이 문서에서는 라이브 활동 시작 엔드포인트에 대
 /messages/live_activity/start
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 iOS 앱에 표시되는 [실시간 활동을]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift) 원격으로 시작할 수 있습니다. 이 엔드포인트에는 추가 설정이 필요합니다.
+> 이 엔드포인트를 사용하여 iOS 앱에 표시되는 [라이브 활동]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift)을 원격으로 시작할 수 있습니다. 이 엔드포인트에는 추가 설정이 필요합니다.
 
-라이브 활동을 만든 후에는 특정 세그먼트에 대해 원격으로 활동을 시작하도록 POST 요청을 할 수 있습니다. Apple의 실시간 활동에 대한 자세한 내용은 [ActivityKit 푸시 알림으로 실시간 활동 시작 및 업데이트](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications)를 참조하세요.
+라이브 활동을 만든 후에는 특정 세그먼트에 대해 원격으로 활동을 시작하도록 POST 요청을 할 수 있습니다. Apple의 라이브 활동에 대한 자세한 내용은 [ActivityKit 푸시 알림으로 라이브 활동 시작 및 업데이트](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications)를 참조하세요.
 
-`content-available` 을 설정하지 않은 경우 기본값인 Apple 푸시 알림 서비스(APN) 우선 순위는 10입니다. `content-available` 으로 설정하면 이 우선 순위는 5입니다. 자세한 내용은 [Apple 푸시 개체를]({{site.baseurl}}/api/objects_filters/messaging/apple_object) 참조하세요.
+`content-available`이 설정되지 않은 경우 기본 Apple 푸시 알림 서비스(APNs) 우선순위는 10입니다. `content-available`이 설정된 경우 이 우선순위는 5입니다. 자세한 내용은 [Apple push object]({{site.baseurl}}/api/objects_filters/messaging/apple_object)를 참조하세요.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
-## 필수 구성 요소
+## 필수 조건
 
 이 엔드포인트를 사용하려면 다음을 완료해야 합니다:
 
-- `messages.live_activity.start` 권한을 사용하여 API 키를 생성합니다.
-- 브레이즈 스위프트 SDK를 사용하여 [라이브 활동을 생성합니다]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift#swift_create-an-activity).
+- `messages.live_activity.start` 권한으로 API 키를 생성합니다.
+- Braze Swift SDK를 사용하여 [라이브 활동을 생성합니다]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift#swift_create-an-activity).
 
 {% multi_lang_include api/payload_size_alert.md %}
 
@@ -59,22 +59,22 @@ description: "이 문서에서는 라이브 활동 시작 엔드포인트에 대
 
 | 매개변수 | 필수 | 데이터 유형| 설명  |
 |-----------|----------|----------|--------------|
-| `app_id` | Required | 문자열 | [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지에서 검색한 앱 [API 식별자입니다]({{site.baseurl}}/api/identifier_types/#the-app-identifier).  |
-| `activity_id` | Required | 문자열  | 사용자 지정 문자열을 `activity_id` 로 정의합니다. 라이브 활동에 업데이트 또는 종료 이벤트를 보내려는 경우 이 ID를 사용합니다.  |
-| `activity_attributes_type`  | Required | 문자열 | 앱의 `liveActivities.registerPushToStart` 내에서 정의하는 활동 속성 유형입니다.  |
-| `activity_attributes` | 필수 | 객체  | 활동 유형에 대한 정적 속성 값(예: 변경되지 않는 스포츠 팀 이름)입니다. |
-| `content_state` | 필수 | 객체  | 라이브 활동을 만들 때 `ContentState` 매개변수를 정의합니다. 이 개체를 사용하여 `ContentState`에 대해 업데이트된 값을 전달합니다.<br><br>이 요청의 형식은 처음에 정의한 모양과 일치해야 합니다. |
-| `dismissal_date` | 선택 사항 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 이 매개변수는 사용자 UI에서 라이브 활동을 제거할 시간을 정의합니다. |
-| `stale_date` | 선택 사항 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 이 매개변수는 라이브 활동 콘텐츠가 사용자 UI에서 오래된 것으로 표시되는 시점을 시스템에 알려줍니다. |
-| `notification` | 필수 | 객체 | 객체를 포함하여 [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) 객체를 포함하여 푸시 알림을 정의합니다. 이 푸시 알림의 동작은 사용자가 활성 상태인지 또는 프록시 기기를 사용 중인지에 따라 달라집니다. {::nomarkdown}<ul><li>다음과 같은 경우 <code>notification</code> 가 포함되어 있고 업데이트가 전달될 때 사용자가 iPhone에서 활성화되어 있으면 업데이트된 실시간 활동 UI가 아래로 슬라이드되어 푸시 알림처럼 표시됩니다.</li><li>다음과 같은 경우 <code>notification</code> 가 포함되어 있고 사용자가 iPhone에서 활성화되어 있지 않으면 잠금 화면에 업데이트된 라이브 활동 UI가 표시되도록 화면이 켜집니다.</li><li>그리고 <code>notification alert</code> 는 표준 푸시 알림으로 표시되지 않습니다. 또한 사용자에게 Apple Watch와 같은 프록시 디바이스가 있는 경우에는 <code>alert</code> 가 표시됩니다.</li></ul>{:/} |
-| `external_user_ids` | `segment_id` 또는 `audience` 제공 시 선택 사항 | 문자열 배열 | [외부 사용자 ID를]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields) 참조하세요. 최대 50개의 외부 사용자 ID.  |
-| `segment_id `  | `external_user_ids` 또는 `audience` 제공 시 선택 사항 | 문자열    | [세그먼트 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
-| `custom_audience` | `external_user_ids` 또는 `segment_id` 제공 시 선택 사항 | 연결된 대상 개체  | [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/)을 참조하십시오. |
+| `app_id` | 필수 | 문자열 | [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지에서 가져온 앱 [API 식별자]({{site.baseurl}}/api/identifier_types/#the-app-identifier)입니다.  |
+| `activity_id` | 필수 | 문자열  | 커스텀 문자열을 `activity_id`로 정의합니다. 라이브 활동에 업데이트 또는 종료 이벤트를 보내려는 경우 이 ID를 사용합니다.  |
+| `activity_attributes_type`  | 필수 | 문자열 | 앱의 `liveActivities.registerPushToStart` 내에서 정의하는 활동 속성 유형입니다.  |
+| `activity_attributes` | 필수 | 오브젝트  | 활동 유형에 대한 정적 속성 값(예: 변경되지 않는 스포츠 팀 이름)입니다. |
+| `content_state` | 필수 | 오브젝트  | 라이브 활동을 만들 때 `ContentState` 매개변수를 정의합니다. 이 오브젝트를 사용하여 `ContentState`에 대해 업데이트된 값을 전달합니다.<br><br>이 요청의 형식은 처음에 정의한 형태와 일치해야 합니다. |
+| `dismissal_date` | 선택 사항 | 날짜/시간 <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열) | 이 매개변수는 사용자 UI에서 라이브 활동을 제거할 시간을 정의합니다.<br><br>이 해제 날짜는 `end_activity`가 `true`인 `/messages/live_activity/update` 요청을 수신한 후에 적용됩니다. |
+| `stale_date` | 선택 사항 | 날짜/시간 <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열) | 이 매개변수는 라이브 활동 콘텐츠가 사용자 UI에서 오래된 것으로 표시되는 시점을 시스템에 알려줍니다. |
+| `notification` | 필수 | 오브젝트 | [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) 오브젝트를 포함하여 푸시 알림을 정의합니다. 이 푸시 알림의 동작은 사용자가 활성 상태인지 또는 프록시 기기를 사용 중인지에 따라 다릅니다. {::nomarkdown}<ul><li><code>notification</code>이 포함되어 있고 업데이트가 전달될 때 사용자가 iPhone에서 활성 상태이면, 업데이트된 라이브 활동 UI가 아래로 슬라이드되어 푸시 알림처럼 표시됩니다.</li><li><code>notification</code>이 포함되어 있고 사용자가 iPhone에서 활성 상태가 아니면, 잠금 화면에 업데이트된 라이브 활동 UI가 표시되도록 화면이 켜집니다.</li><li><code>notification alert</code>는 표준 푸시 알림으로 표시되지 않습니다. 또한 사용자에게 Apple Watch와 같은 프록시 기기가 있는 경우에는 <code>alert</code>가 해당 기기에 표시됩니다.</li></ul>{:/} |
+| `external_user_ids` | `segment_id` 또는 `audience` 제공 시 선택 사항 | 문자열 배열 | [외부 사용자 ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)를 참조하세요. 최대 50개의 외부 사용자 ID.  |
+| `segment_id `  | `external_user_ids` 또는 `audience` 제공 시 선택 사항 | 문자열    | [세그먼트 식별자]({{site.baseurl}}/api/identifier_types/)를 참조하세요. |
+| `custom_audience` | `external_user_ids` 또는 `segment_id` 제공 시 선택 사항 | 연결된 오디언스 오브젝트  | [연결된 오디언스]({{site.baseurl}}/api/objects_filters/connected_audience/)를 참조하세요. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 예시 요청
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/start' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {YOUR-REST-API-KEY}' \
@@ -107,9 +107,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 ## 응답
 
-이 엔드포인트에 대한 상태 코드 응답은 `201` 와 `4XX` 두 가지입니다.
+이 엔드포인트에 대한 상태 코드 응답은 `201`과 `4XX` 두 가지입니다.
 
-### 성공 응답의 예
+### 성공 응답 예시
 
 요청 형식이 올바르게 지정되어 요청을 수신한 경우 `201` 상태 코드가 반환됩니다. `201` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다.
 
@@ -119,11 +119,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 }
 ```
 
-### 오류 응답의 예
+### 오류 응답 예시
 
-`4XX` 상태 코드 클래스는 클라이언트 오류를 나타냅니다. 발생할 수 있는 오류에 대한 자세한 내용은 [API 오류 및 응답 문서를]({{site.baseurl}}/api/errors/) 참조하세요.
+`4XX` 상태 코드 클래스는 클라이언트 오류를 나타냅니다. 발생할 수 있는 오류에 대한 자세한 내용은 [API 오류 및 응답 문서]({{site.baseurl}}/api/errors/)를 참조하세요.
 
-`400` 상태 코드는 다음 응답 본문을 반환할 수 있습니다.
+`400` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다.
 
 ```json
 {

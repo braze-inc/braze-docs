@@ -1,10 +1,10 @@
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Vous devrez également configurer [les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift), ce qui implique la mise en œuvre du cadre `UNNotification`.
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Vous devrez également [configurer les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift), ce qui implique la mise en œuvre du`UNNotification`framework.
 
-La version minimale suivante du SDK est requise pour recevoir les contenus push :
+La version minimale suivante du SDK est requise pour recevoir le contenu push :
 
 {% sdk_min_versions swift:5.0.0 %}
 
-## Mise en place des contenus push
+## Configuration du contenu push
 
 ### Étape 1 : Ajout de la cible d'extension de contenu de notification {#notification-content-extension}
 
@@ -19,13 +19,13 @@ Xcode doit générer une nouvelle cible pour vous et créer des fichiers automat
 
 ### Étape 2 : Activation des capacités {#enable-capabilities}
 
-Dans Xcode, ajoutez la capacité Background Modes à l'aide du volet **Signing & Capabilities** à la cible de l'app principale. Sélectionnez les cases à cocher **Récupération en arrière-plan** et **Notifications à distance**.
+Dans Xcode, veuillez ajouter la fonctionnalité « Background Modes » à la cible principale de l'application à l'aide du volet **« Signing&Capabilities** ». Sélectionnez les cases à cocher **Récupération en arrière-plan** et **Notifications à distance**.
 
 ![]({% image_buster /assets/img/swift/push_story/enable_background_mode.png %})
 
 #### Ajouter un groupe d'applications
 
-En outre, à partir du volet **Signing & Capabilities** dans Xcode, ajoutez la capacité App Groups à votre cible d'application principale ainsi qu'aux cibles Notification Content Extension. Ensuite, cliquez sur le bouton **+**. Utilisez l’ID de l’ensemble de votre application pour créer le groupe d'applications. Par exemple, si l’ID de l’ensemble de votre application est `com.company.appname`, vous pouvez nommer votre groupe d'applications `group.com.company.appname.xyz`.
+De plus, à partir du volet **Signing&Capabilities** (Capacités de signature) dans Xcode, veuillez ajouter la capacité App Groups (Groupe d'applications) à votre cible d'application principale ainsi qu'aux cibles Notification Content Extension (Extension de contenu de notification). Ensuite, cliquez sur le bouton **+**. Utilisez l’ID de l’ensemble de votre application pour créer le groupe d'applications. Par exemple, si l’ID de l’ensemble de votre application est `com.company.appname`, vous pouvez nommer votre groupe d'applications `group.com.company.appname.xyz`.
 
 {% alert important %}
 Les groupes d'applications dans ce contexte font référence à l'[App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) d'Apple et non à votre identifiant de l'espace de travail Braze (anciennement groupe d'applications).
@@ -134,6 +134,12 @@ Ouvrez le fichier `Info.plist` de l’`Notification Content Extension`, puis ajo
 | `UNNotificationExtensionDefaultContentHidden`    | Valeur booléenne | `YES`                  |
 | `UNNotificationExtensionInitialContentSizeRatio` | Nombre  | `0.6`                  |
 | `UNNotificationExtensionUserInteractionEnabled`  | Valeur booléenne | `YES`                  |
+
+Veuillez également ajouter le dictionnaire de `Braze`niveau supérieur suivant au même`Info.plist`fichier, en remplaçant`REPLACE_WITH_APPGROUP`par le groupe d'applications que vous avez créé à [l'étape 2](#enable-capabilities) :
+
+| Clé              | Type   | Valeur                    |
+|------------------|--------|--------------------------|
+| `Braze.AppGroup` | Chaîne de caractères | `REPLACE_WITH_APPGROUP`  |
 
 Votre fichier `Info.plist` doit correspondre à l'image suivante :
 

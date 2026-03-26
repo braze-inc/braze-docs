@@ -1,6 +1,6 @@
 ---
 page_order: 10.1
-nav_title: Fortschrittliche Beispiele
+nav_title: Erweiterte Beispiele
 article_title: Vorgebrachte Beispiele für Push-Benachrichtigungen für das Braze SDK
 channel:
   - push notifications

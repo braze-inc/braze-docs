@@ -1,7 +1,7 @@
 ---
 page_order: 2.4
 nav_title: 실시간 알림
-article_title: Braze 소프트웨어 개발 키트를 위한 라이브 활동
+article_title: Braze SDK를 위한 실시간 활동
 layout: dev_guide
 guide_top_header: "라이브 활동"
 guide_top_text: "> 사용자의 잠금 화면에 직접 지속적이고 동적인 알림을 전송하여 사용자가 앱을 열지 않고도 실시간 업데이트를 받을 수 있도록 하는 방법을 알아보세요. Swift의 경우 이 기능이 기본적으로 지원됩니다."

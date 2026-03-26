@@ -1,8 +1,8 @@
 ---
 nav_title: Perguntas frequentes
-article_title: Perguntas frequentes sobre o push
+article_title: Perguntas Frequentes sobre Push
 page_order: 25
-description: "Este artigo aborda algumas das perguntas mais frequentes que surgem durante a configuração de campanhas push."
+description: "Este artigo aborda algumas das perguntas mais frequentes que surgem ao configurar campanhas de push."
 page_type: FAQ
 channel:
   - Push
@@ -10,33 +10,47 @@ channel:
 
 # Perguntas frequentes
 
-> Este artigo fornece respostas a algumas perguntas frequentes sobre o canal push.
+> Este artigo fornece respostas a algumas perguntas frequentes sobre o canal de push.
 
-### O que acontece quando vários usuários registram-se em um único dispositivo?
+### O que acontece quando vários usuários fazem login em um único dispositivo?
 
-Quando um usuário se desconecta de um dispositivo ou site, ele permanecerá acessível por push até que outro usuário se conecte. Nesse momento, o token por push é reatribuído ao novo usuário. Isso ocorre porque cada dispositivo só pode ter uma inscrição push ativa por app ou site.
+Quando um usuário sai de um dispositivo ou site, ele continuará acessível por push até que outro usuário faça login. Nesse ponto, o token por push é reatribuído ao novo usuário. Isso ocorre porque cada dispositivo pode ter apenas uma inscrição ativa de push por app ou site.
 
-Quando um token por push é reatribuído, a alteração é refletida no Push Changelog do perfil do usuário. Você pode encontrar isso acessando a guia **Engajamento** no perfil do usuário.
+Quando um token por push é reatribuído, a mudança é refletida no **changelog de push** do perfil de usuário. Você pode encontrá-lo acessando a guia **Engajamento** no perfil de usuário.
 
-![O "Push Changelog" na seção "Contact Settings" (Configurações de contato).]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
+![O "changelog de push" na seção "Configurações de Contato".]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
-### O que significa "Error sending push because the payload was invalid" (Erro ao enviar push porque a carga útil era inválida)?
+### Quando envio um push de teste, ele é enviado para todos os meus dispositivos?
 
-Essa mensagem indica que os APNs rejeitaram a solicitação push devido a uma carga útil inválida (por exemplo, uma carga vazia ou uma carga muito grande).
+Sim. O push de teste é enviado para todos os dispositivos com push ativado associados ao perfil de usuário selecionado. Se você tiver vários telefones ou tablets conectados com o mesmo usuário, cada dispositivo com um token por push válido receberá a notificação.
 
-Para obter detalhes e as próximas etapas, consulte [Envio de mensagens de erro push comuns]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/).
+Para enviar o push de teste para apenas um dispositivo, você pode remover os tokens por push dos outros dispositivos no perfil de usuário antes de testar. Alternativamente, se estiver enviando com o [endpoint `/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/), defina `send_to_most_recent_device_only` como `true` no objeto `apple_push` ou `android_push` para que apenas o dispositivo ativo mais recentemente receba o push.
 
-### Por que um usuário com aceitação não tem um token por push?
+### O que significa "Erro ao enviar push porque a carga útil era inválida"?
 
-Isso pode acontecer se o token por push do usuário tiver sido reatribuído a outra pessoa que usou o mesmo dispositivo.
+Esta mensagem indica que o APNs rejeitou a solicitação de push devido a uma carga útil inválida (por exemplo, uma carga útil vazia ou uma carga útil grande demais).
 
-1. Acesse o **changelog do push** na guia **Engajamento** do perfil do usuário afetado.
-2. Procure uma mensagem que diga que o token por push foi movido para outro usuário.
-3. Copie o token por push e cole-o na barra de pesquisa do usuário. 
-4. Se o token por push ainda existir, você será direcionado para o usuário que fez o registro mais recente no dispositivo.
+Para mais detalhes e próximas etapas, consulte [Mensagens de erro comuns de push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/).
 
-Se quiser que o token por push seja reatribuído ao usuário original:
+### Por que um usuário que optou por receber não tem um token por push?
 
-1. Faça com que o usuário original registre o perfil com o token por push ausente.
-2. Disparar um novo envio push. Isso moverá o token de volta para a conta se ela ainda tiver o push ativado no nível do dispositivo.
+Isso pode acontecer se o token por push do usuário foi reatribuído a outra pessoa que usou o mesmo dispositivo.
 
+1. Acesse o **changelog de push** na guia **Engajamento** do perfil do usuário afetado.
+2. Procure uma mensagem indicando que o token por push foi movido para outro usuário.
+3. Copie o token por push e cole na barra de pesquisa de usuários. 
+4. Se o token por push ainda existir, você será direcionado ao usuário que fez login mais recentemente no dispositivo.
+
+Se você quiser que o token por push seja reatribuído ao usuário original:
+
+1. Faça o usuário original fazer login no perfil com o token por push ausente.
+2. Dispare um novo envio de push. Isso moverá o token de volta para a conta, caso o push ainda esteja ativado no nível do dispositivo.
+
+### Qual é a diferença entre "Enviar para Produção" e "Enviar para Desenvolvimento" nos certificados de push do iOS?
+
+Ao adicionar um certificado de push da Apple na Braze, as opções **Enviar para Produção** e **Enviar para Desenvolvimento** determinam qual gateway do APNs (serviço de Notificações por Push da Apple) a Braze usa para entregar notificações por push:
+
+- **Enviar para Desenvolvimento:** Selecione esta opção se o app foi compilado em modo de desenvolvimento no Xcode e assinado com um perfil de provisionamento de desenvolvimento. As notificações por push são roteadas pelo gateway de desenvolvimento (sandbox) da Apple.
+- **Enviar para Produção:** Selecione esta opção se o app é distribuído via TestFlight da Apple, App Store ou distribuição corporativa. As notificações por push são roteadas pelo gateway de produção da Apple.
+
+Se a opção errada for selecionada, as notificações por push falham silenciosamente porque o tipo de token por push não corresponde ao gateway. Normalmente, apps distribuídos pelo TestFlight ou pela App Store devem usar **Enviar para Produção**.

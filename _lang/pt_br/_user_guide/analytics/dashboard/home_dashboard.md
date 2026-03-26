@@ -15,7 +15,7 @@ tool:
 
 A página **inicial** tem duas seções principais:
 - [Continuar de onde parou](#pick-up-where-you-left-off)
-- [Visão geral de performance](#peformance-overview)
+- [Visão geral de performance](#performance-overview)
 
 ![Painel de controle doméstico no Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
 
@@ -26,7 +26,7 @@ Você pode continuar de onde parou no dashboard do Braze com acesso direto aos a
 Você pode revisitar campanhas, Canvas e segmentos recentemente editados ou criados. Cada cartão é emparelhado com tags que indicam o tipo de conteúdo (campanha, Canva, segmento) e o status (ativo, rascunho, arquivado, parado).
 
 {% alert note %}
-A seção **Continuar de onde parou** aparece depois de editar ou criar uma campanha, um Canva ou um segmento.
+A seção **Continue de onde você parou** aparece após você ter editado ou criado uma campanha, canva ou segmento.
 {% endalert %}
 
 ![Um rascunho do Canva, um segmento ativo e um rascunho de campanha na seção "Continue de onde parou".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
@@ -49,6 +49,38 @@ Selecione **Show Breakdown** para cada linha das estatísticas da visão geral d
 
 ![Expandir]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
 
+### Performance ao longo do tempo
+
+O gráfico **Desempenho ao Longo do Tempo** mostra o valor de cada estatística ao longo do intervalo de datas especificado para os aplicativos especificados.
+
+![O gráfico Desempenho ao Longo do Tempo mostrando estatísticas para novos usuários ao longo de 30 dias.]({% image_buster /assets/img/dashboards/performance_over_time.png %})
+
+Você pode traçar estatísticas para:
+- Banners
+- Cartões de conteúdo
+- Usuários ativos diários
+  - (Opcional) Divisão por segmento
+- E-mail
+- Mensagem no app
+- Fórmulas de KPI
+  - Selecione **Gerenciar Fórmulas de KPI** para criar uma fórmula ou editar uma fórmula existente.
+- LINE
+- Usuários ativos mensais (MAU)
+- Novos usuários
+- Push
+  - (Opcional) Divisão por segmento
+- Sessões
+  - (Opcional) Divisão por segmento ou versão do app
+- Sessões por hora
+- Sessões por usuários ativos mensais
+- SMS
+- Aderência
+- Desinstalações
+  - (Opcional) Divisão por segmento
+- Usuários
+- Webhooks
+- WhatsApp
+
 ## Estatísticas disponíveis
 
 Veja a seguir as definições de suas estatísticas disponíveis, como as calculamos e por que elas devem ser importantes para você.
@@ -57,7 +89,7 @@ Veja a seguir as definições de suas estatísticas disponíveis, como as calcul
 
 *Usuários* é o número total de usuários criados nesse espaço de trabalho. Isso inclui todos os usuários que registramos usando seu app ou site em qualquer momento, e aqueles que podem não estar associados a um app ou site específico. Esse número é a porcentagem de quantos dos seus usuários vitalícios são representados como *Usuários ativos mensais* (MAU), o que é útil para ver a retenção de usuários durante um longo período de tempo.
 
-Uma baixa relação MAU/usuário pode indicar que é necessário diversificar seus canais de envio de mensagens ou aumentar seus esforços para alcançar os usuários que estão perdendo tempo. Para obter mais informações, consulte nossa vitória rápida sobre a [captura de usuários com lapsos]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users). Em geral, a relação MAU/vida útil inevitavelmente diminuirá com o tempo devido ao churn de usuários, mas as ferramentas do Braze podem ajudá-lo a minimizar esse efeito, mantendo os usuários engajados por mais tempo.
+Uma baixa relação MAU/usuário pode indicar que é necessário diversificar seus canais de envio de mensagens ou aumentar seus esforços para alcançar os usuários que estão perdendo tempo. Veja nossa vitória rápida sobre [capturar usuários inativos]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) para mais informações. Em geral, a relação MAU/vida útil inevitavelmente diminuirá com o tempo devido ao churn de usuários, mas as ferramentas do Braze podem ajudá-lo a minimizar esse efeito, mantendo os usuários engajados por mais tempo.
 
 ### Sessões vitalícias
 
@@ -74,14 +106,14 @@ $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of d
 
 #### Regras de cálculo de MAU
 
-Os cálculos de MAU seguem regras específicas para garantir um faturamento preciso e consistente:
+Os cálculos de MAU seguem regras específicas para garantir faturamento preciso e consistente:
 
-- **Tempo de cálculo**: Calculado uma vez por dia às 12:05 UTC como um instantâneo de 30 dias; as contagens nunca mudam retroativamente.
-- **Perfis anônimos**: Conte **apenas** quando pelo menos uma sessão for registrada.
-- **Perfis identificados**: Contam automaticamente quando existem.
-- **Perfis órfãos**: As duplicatas mescladas com outro usuário **não** são contadas.
-- **Uploads de CSV**: Os usuários feitos upload por CSV contam apenas quando `date_of_first_session` ou `date_of_last_session` é fornecido, ou quando eles registram uma sessão posteriormente.
-- **Exclusões de API**: A exclusão de um usuário via API não atualiza o MAU imediatamente; a contagem se autocorrige no próximo ciclo mensal.
+- **Tempo de cálculo**: Calculado uma vez por dia às 12:05 UTC como uma instantânea de 30 dias; as contagens nunca mudam retroativamente.
+- **Perfis anônimos**: Contar **apenas** quando pelo menos uma sessão é registrada.
+- **Perfis identificados**: Contar automaticamente uma vez que existam.
+- **Perfis órfãos**: Duplicatas mescladas em outro usuário **não** são contadas.
+- **Uploads de CSV**: Usuários carregados por CSV contam apenas quando `date_of_first_session` ou `date_of_last_session` é fornecido, ou quando eles registram uma sessão posteriormente.
+- **Deleções de API**: Excluir um usuário via API não atualiza o MAU imediatamente; a contagem se corrige sozinha no próximo ciclo mensal.
 
 {% alert note %}
 Os usuários anônimos também contam para o seu MAU. Para dispositivos móveis, os usuários anônimos dependem do dispositivo. Para usuários da Web, os usuários anônimos dependem do cache do navegador.
@@ -89,17 +121,17 @@ Os usuários anônimos também contam para o seu MAU. Para dispositivos móveis,
 
 #### Exemplo de cálculo de MAU
 
-O exemplo a seguir demonstra como os cálculos de MAU funcionam por meio de diferentes ações do usuário:
+O seguinte exemplo demonstra como os cálculos de MAU funcionam através de diferentes ações dos usuários:
 
 | Etapa | Ação | Mudança imediata de MAU | Total resultante |
 |------|--------|----------------------|-----------------|
-| 1 | Crie **o usuário anônimo 1** e registre uma sessão | +1 | 1 |
-| 2 | Identifique **o usuário anônimo 1** (o perfil é convertido em identificado) | 0 | 1 |
-| 3 | Crie **o usuário anônimo 2** e registre uma sessão | +1 | 2 |
-| 4 | Identificar **o usuário anônimo 2** como a **mesma pessoa** que o usuário 1 (o usuário 2 fica órfão) | -1 | 1 |
+| 1 | Criar **Usuário Anônimo 1** e registrar uma sessão | +1 | 1 |
+| 2 | Identificar **Usuário Anônimo 1** (perfil se converte em identificado) | 0 | 1 |
+| 3 | Criar **Usuário Anônimo 2** e registrar uma sessão | +1 | 2 |
+| 4 | Identificar **Usuário Anônimo 2** como a **mesma pessoa** que o Usuário 1 (Usuário 2 se torna órfão) | –1 | 1 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
-Os instantâneos de MAU são calculados uma vez por dia e nunca são alterados retroativamente. Nesse exemplo, a contagem de MAUs para o dia após a etapa 3 permanece permanentemente 2, mesmo que o usuário 2 se torne órfão mais tarde. No entanto, a contagem de MAUs para os dias subsequentes reflete apenas o usuário não órfão. Em qualquer janela de 30 dias, esse fluxo acaba consumindo 1 MAU, pois resta apenas um usuário distinto e não órfão.
+As instantâneas de MAU são calculadas uma vez por dia e nunca mudam retroativamente. Neste exemplo, a contagem de MAU para o dia seguinte ao passo 3 permanece permanentemente em 2, mesmo que o Usuário 2 se torne órfão mais tarde. No entanto, a contagem de MAU para os dias subsequentes reflete apenas o usuário não órfão. Dentro de qualquer janela de 30 dias, esse fluxo consome, em última análise, 1 MAU, uma vez que apenas um usuário distinto e não órfão permanece.
 
 ### Usuários ativos diários
 
@@ -114,7 +146,7 @@ Ao integrar o Braze inicialmente, todos os usuários parecerão novos porque o B
 {% endalert %}
 
 {% alert important %}
-Os usuários associados a mais de um aplicativo são contados separadamente para cada aplicativo. Isso significa que um único usuário pode contribuir para a contagem de *novos usuários* várias vezes se iniciar sessões em diferentes apps no seu espaço de trabalho.
+Usuários associados a mais de um app são contados separadamente para cada app. Isso significa que um único usuário pode contribuir para a contagem de *Novos Usuários* várias vezes se iniciar sessões em diferentes apps no seu espaço de trabalho.
 {% endalert %}
 
 ### Aderência

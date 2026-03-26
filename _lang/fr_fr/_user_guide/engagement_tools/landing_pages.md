@@ -14,7 +14,7 @@ alias: /landing_pages/
 Utilisez les pages d'atterrissage pour développer votre audience, capturer les données des utilisateurs, promouvoir des offres spéciales et soutenir des campagnes multicanal.
 
 {% alert note %}
-La disponibilité des pages d'atterrissage et des domaines personnalisés dépend de votre offre Braze. Contactez votre gestionnaire de compte ou votre gestionnaire satisfaction client pour commencer.
+La disponibilité de la page d'accueil et du domaine personnalisé dépend de votre forfait Braze. Veuillez contacter votre gestionnaire de compte ou votre gestionnaire de la satisfaction client pour commencer.
 {% endalert %}
 
 {% multi_lang_include video.html id="eg4r7agod1" source="wistia" %}
@@ -39,9 +39,9 @@ Le nombre de pages de destination publiées et de domaines personnalisés que vo
 | Domaines personnalisés          | Un par entreprise | Cinq autres |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-## Ajout du Google Tag Manager à une page de destination
+## Ajouter Google Tag Manager à une page d'accueil
 
-Pour ajouter Google Tag Manager à vos pages de destination, ajoutez un bloc de **code personnalisé** à votre page de destination dans l'éditeur par glisser-déposer, puis insérez le code Tag Manager dans le bloc. Veillez à ajouter une couche de données avant le code du gestionnaire des étiquettes, comme dans cet exemple :
+Pour intégrer Google Tag Manager à vos pages de destination, veuillez ajouter un bloc **de code personnalisé** à votre page de destination dans l'éditeur par glisser-déposer, puis insérer le code Tag Manager dans le bloc. Veuillez vous assurer d'ajouter une couche de données avant le code Tag Manager, comme dans l'exemple suivant :
 
 ```
 <script>
@@ -56,13 +56,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 ```
 
-Pour plus de détails sur la mise en œuvre de Google Tag Manager, consultez la [documentation de Google](https://developers.google.com/tag-platform/tag-manager/datalayer#installation).
+Pour plus d'informations sur la mise en œuvre de Google Tag Manager, veuillez consulter [la documentation de Google](https://developers.google.com/tag-platform/tag-manager/datalayer#installation).
 
 ## Foire aux questions
 
 ### Quelle est la taille maximale des pages d'atterrissage ?
 
-La taille du corps de la page d'atterrissage peut aller jusqu'à 500 KB.
+La taille du corps de la page d'accueil peut atteindre 500 Ko.
 
 ### Y a-t-il des exigences techniques pour publier une page d'accueil ?
 
@@ -72,6 +72,6 @@ Non, il n'y a pas d'exigences techniques.
 
 Oui. Utilisez le bloc **Code personnalisé** dans l'éditeur par glisser-déposer pour ajouter ou modifier du code HTML.
 
-### Puis-je créer un webhook à l'intérieur d'une page d'atterrissage ?
+### Est-il possible de créer un webhook à l'intérieur d'une page d'accueil ?
 
-Non, cela n'est pas possible actuellement.
+Non, cette fonctionnalité n'est actuellement pas prise en charge.

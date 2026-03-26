@@ -9,16 +9,53 @@
 
 ## Aktivieren von In-App-Nachrichten
 
+{% tabs %}
+{% tab Flutter SDK 18.0.0+ %}
+
+Das Braze Flutter SDK richtet den Standard-Presenter für In-App-Nachrichten auf Android und iOS automatisch ein. In-App-Nachrichten werden ohne zusätzliche Einrichtung angezeigt und an die Dart-Schicht weitergeleitet.
+
+### Anpassen des In-App-Nachrichten-Presenters unter iOS
+
+Um den Standard-Presenter für In-App-Nachrichten unter iOS zu überschreiben, verwenden Sie die `postInitialization`-Closure in `BrazePlugin.configure(_:postInitialization:)`. Ihr angepasster Presenter muss `BrazePlugin.processInAppMessage(message)` aufrufen, um die Daten der In-App-Nachrichten an die Dart-Schicht weiterzuleiten.
+
+```swift
+import BrazeUI
+
+BrazePlugin.configure(
+  { configuration in
+    // Set non-API-key configurations here.
+  },
+  postInitialization: { braze in
+    let customPresenter = CustomInAppMessagePresenter()
+    braze.inAppMessagePresenter = customPresenter
+  }
+)
+```
+
+Rufen Sie in der angepassten Presenter-Klasse `BrazePlugin.processInAppMessage(message)` und `super.present(message: message)` auf, um die Daten an Dart weiterzuleiten und die Standard-UI anzuzeigen.
+
+```swift
+class CustomInAppMessagePresenter: BrazeInAppMessageUI {
+  override func present(message: Braze.InAppMessage) {
+    BrazePlugin.processInAppMessage(message)
+    super.present(message: message)
+  }
+}
+```
+
+{% endtab %}
+{% tab Flutter SDK 17.1.0 und älter %}
+
 {% alert note %}
-Dieser Schritt gilt nur für iOS. Die Standard-Implementierung für In-App-Nachrichten ist auf Android bereits eingerichtet.
+Dieser Schritt gilt ausschließlich für iOS. Die Standardimplementierung für In-App-Nachrichten ist auf Android bereits eingerichtet.
 {% endalert %}
 
-Um den Standard-Moderator für In-App-Nachrichten auf iOS einzurichten, erstellen Sie eine Implementierung des `BrazeInAppMessagePresenter` Protokolls und weisen Sie es der optionalen `inAppMessagePresenter` auf Ihrer Braze-Instanz zu. Sie können auch den standardmäßigen UI-Presenter von Braze verwenden, indem Sie ein `BrazeInAppMessageUI`-Objekt instanziieren.
+Um den Standard-Presenter für In-App-Nachrichten unter iOS einzurichten, erstellen Sie eine Implementierung des `BrazeInAppMessagePresenter`-Protokolls und weisen Sie es der optionalen Eigenschaft `inAppMessagePresenter` in Ihrer Braze-Instanz zu. Sie können auch den Standard-UI-Presenter von Braze verwenden, indem Sie ein `BrazeInAppMessageUI`-Objekt instanziieren.
 
-Sie müssen die Bibliothek `BrazeUI` importieren, um auf die Klasse `BrazeInAppMessageUI` zugreifen zu können.
+Sie müssen die `BrazeUI`-Bibliothek importieren, um auf die `BrazeInAppMessageUI`-Klasse zugreifen zu können.
 
-{% tabs %}
-{% tab swift %}
+{% subtabs %}
+{% subtab swift %}
 
 ```swift
 import BrazeUI
@@ -31,7 +68,6 @@ override func application(
 
   let braze = BrazePlugin.initBraze(configuration)
 
-  // Initialize and assign the default `BrazeInAppMessageUI` class to the in-app message presenter.
   braze.inAppMessagePresenter = BrazeInAppMessageUI()
   AppDelegate.braze = braze
 
@@ -39,8 +75,8 @@ override func application(
 }
 ```
 
-{% endtab %}
-{% tab OBJECTIVE-C %}
+{% endsubtab %}
+{% subtab OBJECTIVE-C %}
 
 ```objc
 @import BrazeUI;
@@ -51,7 +87,6 @@ override func application(
 
   Braze *braze = [BrazePlugin initBraze:configuration];
 
-  // Initialize and assign the default `BrazeInAppMessageUI` class to the in-app message presenter.
   braze.inAppMessagePresenter = [[BrazeInAppMessageUI alloc] init];
   AppDelegate.braze = braze;
 
@@ -59,7 +94,11 @@ override func application(
   return YES;
 }
 ```
+
+{% endsubtab %}
+{% endsubtabs %}
+
 {% endtab %}
 {% endtabs %}
 
-Wenn Sie Ihre Implementierung weiter anpassen möchten, lesen Sie den Abschnitt [Protokollierung von In-App-Nachricht-Daten]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter).
+Weitere Informationen zum Zugriff auf Daten von In-App-Nachrichten finden Sie unter [Protokollierung von In-App-Nachrichten-Daten]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter).

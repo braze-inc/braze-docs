@@ -1,40 +1,40 @@
 ---
-nav_title: Kontodaten synchronisieren und löschen
+nav_title: Synchronisieren und Löschen von Kontodaten
 article_title: Kontodaten über CDI synchronisieren
 page_order: 4
 page_type: reference
-description: "Erfahren Sie, wie Sie die Daten Ihres Braze-Kontos mit CDI synchronisieren können."
+description: "Erfahren Sie, wie Sie die Daten Ihres Braze-Kontos mithilfe von CDI synchronisieren können."
 
 ---
 
 # Kontodaten über CDI synchronisieren
 
-> Erfahren Sie, wie Sie die Daten Ihres Braze-Kontos mit CDI synchronisieren können.
+> Erfahren Sie, wie Sie die Daten Ihres Braze-Kontos mithilfe von CDI synchronisieren können.
 
 {% alert important %}
-[Kontoobjekte](https://braze.com/unlisted_docs/account_opportunity_object/) sind in der Beta-Phase und werden benötigt, um dieses Feature zu nutzen. Wenden Sie sich an Ihren Braze-Konto Manager:in, wenn Sie an einer Teilnahme an der Beta interessiert sind.
+[Kontoobjekte](https://braze.com/unlisted_docs/account_opportunity_object/) befinden sich in der Beta-Phase und sind für die Nutzung dieses Features erforderlich. Kontaktieren Sie Ihren Braze Account Manager, wenn Sie an der Teilnahme an der Beta interessiert sind.
 {% endalert %}
 
 ## Voraussetzungen
 
-Bevor Sie Ihre Kontodaten mit CDI synchronisieren können, müssen Sie [Ihr Kontenschema konfigurieren](https://braze.com/unlisted_docs/account_opportunity_object/).
+Bevor Sie Ihre Kontodaten mit CDI synchronisieren können, müssen Sie [Ihr Kontoschema konfigurieren](https://braze.com/unlisted_docs/account_opportunity_object/).
 
 {% alert note %}
-Nehmen Sie Updates an Ihrem Kontenschema nur dann vor, wenn die Synchronisierung pausiert oder nicht geplant ist, um Konflikte zwischen Ihren Data Warehouse Daten und dem Schema in Braze zu vermeiden.
+Nehmen Sie Änderungen an Ihrem Kontoschema nur vor, wenn die Synchronisierung pausiert ist oder kein Zeitplan besteht, um Konflikte zwischen Ihren Data-Warehouse-Daten und dem Schema in Braze zu vermeiden.
 {% endalert %}
 
-## So funktioniert die Synchronisierung
+## Wie die Synchronisierung funktioniert
 
-- Bei jeder Synchronisierung werden Zeilen importiert, bei denen `UPDATED_AT` später als der letzte synchronisierte Zeitstempel liegt.
-- Die Daten aus der Integration erstellen oder aktualisieren Konten auf der Grundlage der bereitgestellten `id`.
-- Wenn `DELETED` auf `true` steht, wird das Konto gelöscht.
-- Bei der Synchronisierung werden keine Datenpunkte protokolliert, aber alle synchronisierten Daten werden auf die Gesamtnutzung Ihres Kontos angerechnet, gemessen an der Gesamtzahl der gespeicherten Daten - Sie müssen sich nicht auf geänderte Daten beschränken.
-- Felder, die nicht in Ihrem Kontenschema enthalten sind, werden gelöscht. Aktualisieren Sie das Schema, bevor Sie neue Felder synchronisieren.
-- Sie können eine Synchronisierung aktualisieren, fortsetzen oder pausieren, indem Sie mit dem Mauszeiger über den Namen der Synchronisierung fahren und die entsprechende Aktion auswählen.
+- Bei jeder Synchronisierung werden Zeilen importiert, deren `UPDATED_AT`-Zeitstempel nach dem zuletzt synchronisierten Zeitstempel liegt. Zeilen an der exakten Grenze des Zeitstempels können erneut synchronisiert werden, wenn neue Zeilen denselben Zeitstempel aufweisen. Weitere Informationen finden Sie unter [Erneutes Synchronisieren von Zeilen mit doppelten Zeitstempeln vermeiden]({{site.baseurl}}/user_guide/data/cloud_ingestion/best_practices/#avoid-resyncing-rows-with-duplicate-timestamps).
+- Die Daten aus der Integration erstellen oder aktualisieren Konten auf Grundlage der bereitgestellten `id`.
+- Wenn `DELETED` den Wert `true` hat, wird das Konto gelöscht.
+- Bei der Synchronisierung werden keine Datenpunkte protokolliert, jedoch werden alle synchronisierten Daten auf Ihre gesamte Kontonutzung angerechnet, gemessen an der Gesamtmenge der gespeicherten Daten – es ist nicht erforderlich, sich nur auf geänderte Daten zu beschränken.
+- Felder, die nicht in Ihrem Kontoschema enthalten sind, werden verworfen. Aktualisieren Sie das Schema, bevor Sie neue Felder synchronisieren.
+- Sie können eine Synchronisierung aktualisieren, fortsetzen oder pausieren, indem Sie mit der Maus über den Namen der Synchronisierung fahren und die entsprechende Aktion auswählen.
 
-## Synchronisieren Sie Ihre Kontodaten
+## Ihre Kontodaten synchronisieren
 
-Sie können Ihre Kontodaten mit CDI über ein Data Warehouse oder einen Dateispeicher synchronisieren.
+Sie können Ihre Kontodaten mithilfe von CDI über ein Data Warehouse oder einen Dateispeicher synchronisieren.
 
 {% tabs local %}
 {% tab Data Warehouse %}
@@ -43,7 +43,7 @@ So integrieren Sie Ihre Datenquelle mit Ihrem Data Warehouse:
 {% subtabs %}
 {% subtab Snowflake %}
 
-1. Erstellen Sie eine Quelltabelle in Snowflake. Verwenden Sie die Namen aus dem Beispiel oder wählen Sie Ihre eigenen Datenbank-, Schema- und Tabellennamen. Sie können auch eine Ansicht oder eine materialisierte Ansicht anstelle einer Tabelle verwenden.
+1. Erstellen Sie eine Quelltabelle in Snowflake. Verwenden Sie die Namen aus dem Beispiel oder wählen Sie Ihre eigenen Datenbank-, Schema- und Tabellennamen. Sie können anstelle einer Tabelle auch eine View oder eine materialisierte View verwenden.
   ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
@@ -59,7 +59,7 @@ So integrieren Sie Ihre Datenquelle mit Ihrem Data Warehouse:
          DELETED BOOLEAN
     );
     ```
-2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
+2. Erstellen Sie eine Rolle, ein Warehouse und einen Benutzer und vergeben Sie Berechtigungen. Wenn Sie bereits Zugangsdaten von einer anderen Synchronisierung haben, können Sie diese wiederverwenden – stellen Sie sicher, dass sie Zugriff auf die Kontotabelle haben.
     ```sql
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
@@ -73,19 +73,19 @@ So integrieren Sie Ihre Datenquelle mit Ihrem Data Warehouse:
     CREATE USER BRAZE_INGESTION_USER;
     GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
     ```
-3. If you use network policies, allowlist the Braze IPs so the CDI service can connect. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
-4. In the Braze dashboard, go to **Data Settings** > **Cloud Data Ingestion** and create a new sync.
-5. Enter connection details (or reuse existing ones), then add the source table.
-6. Select the **Accounts** sync type, then enter the integration name and schedule. 
-7. Choose the sync frequency.
-8. Add the public key from the dashboard to the user you created. This requires a user with `SECURITYADMIN` access or higher in Snowflake. 
-9. Select **Test Connection** to confirm the setup. 
-10. When you're finished, save the sync.
+3. Wenn Sie Netzwerkrichtlinien verwenden, setzen Sie die Braze-IPs auf die Allowlist, damit der CDI-Dienst eine Verbindung herstellen kann. Die Liste der IPs finden Sie unter [Cloud-Datenaufnahme]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+4. Gehen Sie im Braze-Dashboard zu **Data Settings** > **Cloud Data Ingestion** und erstellen Sie eine neue Synchronisierung.
+5. Geben Sie die Verbindungsdetails ein (oder verwenden Sie vorhandene) und fügen Sie dann die Quelltabelle hinzu.
+6. Wählen Sie den Synchronisierungstyp **Accounts** aus und geben Sie dann den Integrationsnamen und den Zeitplan ein.
+7. Wählen Sie die Synchronisierungshäufigkeit.
+8. Fügen Sie den Public Key aus dem Dashboard dem von Ihnen erstellten Benutzer hinzu. Dies erfordert einen Benutzer mit `SECURITYADMIN`-Zugriff oder höher in Snowflake.
+9. Wählen Sie **Test Connection**, um die Einrichtung zu bestätigen.
+10. Wenn Sie fertig sind, speichern Sie die Synchronisierung.
 
 {% endsubtab %}
 {% subtab Redshift %}
 
-1. Create a source table in Redshift. Use the names in the example or choose your own database, schema, and table names. You can also use a view or materialized view instead of a table.
+1. Erstellen Sie eine Quelltabelle in Redshift. Verwenden Sie die Namen aus dem Beispiel oder wählen Sie Ihre eigenen Datenbank-, Schema- und Tabellennamen. Sie können anstelle einer Tabelle auch eine View oder eine materialisierte View verwenden.
     ```sql
     CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
     CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
@@ -101,7 +101,7 @@ So integrieren Sie Ihre Datenquelle mit Ihrem Data Warehouse:
        deleted boolean
     )
     ```
-2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
+2. Erstellen Sie einen Benutzer und vergeben Sie Berechtigungen. Wenn Sie bereits Zugangsdaten von einer anderen Synchronisierung haben, können Sie diese wiederverwenden – stellen Sie sicher, dass sie Zugriff auf die Kontotabelle haben.
     {% raw %}
     ```sql 
     CREATE USER braze_user PASSWORD '{password}';
@@ -109,17 +109,17 @@ So integrieren Sie Ihre Datenquelle mit Ihrem Data Warehouse:
     GRANT SELECT ON TABLE ACCOUNTS_SYNC TO braze_user;
     ```
     {% endraw %}
-3. If you have a firewall or network policies, allow Braze access to your Redshift instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+3. Wenn Sie eine Firewall oder Netzwerkrichtlinien verwenden, erlauben Sie Braze den Zugriff auf Ihre Redshift-Instanz. Die Liste der IPs finden Sie unter [Cloud-Datenaufnahme]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endsubtab %}
 {% subtab BigQuery %}
 
-1. (Optional) Create a new project or dataset for your source table.  
+1. (Optional) Erstellen Sie ein neues Projekt oder einen neuen Datensatz für Ihre Quelltabelle.
     ```sql
     CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
     ```
 
-2. Create the source table for your CDI integration:  
+2. Erstellen Sie die Quelltabelle für Ihre CDI-Integration:
     ```sql
     CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
     (
@@ -131,42 +131,42 @@ So integrieren Sie Ihre Datenquelle mit Ihrem Data Warehouse:
     );
     ```
 
-    Refer to the following when creating your source table:
+    Beachten Sie beim Erstellen Ihrer Quelltabelle Folgendes:
 
-    | Field Name | Type | Required? |
+    | Feldname | Typ | Erforderlich? |
     | ---------- | ---- | --------- |
-    | `UPDATED_AT` | Timestamp | Yes |
-    | `PAYLOAD` | JSON | Yes |
-    | `ID` | String | Yes |
-    | `NAME` | String | Yes |
-    | `DELETED` | Boolean | Optional |
+    | `UPDATED_AT` | Zeitstempel | Ja |
+    | `PAYLOAD` | JSON | Ja |
+    | `ID` | String | Ja |
+    | `NAME` | String | Ja |
+    | `DELETED` | Boolescher Wert | Optional |
     {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {:start="3"}
-3. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them as long as they have access to the accounts table.
+3. Erstellen Sie einen Benutzer und vergeben Sie Berechtigungen. Wenn Sie bereits Zugangsdaten von einer anderen Synchronisierung haben, können Sie diese wiederverwenden, solange sie Zugriff auf die Kontotabelle haben.
 
-    | Permission | Purpose |
+    | Berechtigung | Zweck |
     |------------|---------|
-    | BigQuery Connection User | Allows Braze to connect. |
-    | BigQuery User | Allows Braze to run queries, read metadata, and list tables. |
-    | BigQuery Data Viewer | Allows Braze to view datasets and contents. |
-    | BigQuery Job User | Allows Braze to run jobs. |
+    | BigQuery Connection User | Ermöglicht Braze die Verbindung. |
+    | BigQuery User | Ermöglicht Braze das Ausführen von Abfragen, Lesen von Metadaten und Auflisten von Tabellen. |
+    | BigQuery Data Viewer | Ermöglicht Braze das Anzeigen von Datensätzen und Inhalten. |
+    | BigQuery Job User | Ermöglicht Braze das Ausführen von Jobs. |
     {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-    After granting permissions, generate a JSON key. See [Keys create and delete](https://cloud.google.com/iam/docs/keys-create-delete) for instructions. You’ll upload it in the Braze dashboard later.
+    Generieren Sie nach der Vergabe der Berechtigungen einen JSON-Schlüssel. Anweisungen finden Sie unter [Schlüssel erstellen und löschen](https://cloud.google.com/iam/docs/keys-create-delete). Sie laden ihn später im Braze-Dashboard hoch.
 
 {:start="4"}
-4. If you use network policies, allow Braze IPs to access your BigQuery instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+4. Wenn Sie Netzwerkrichtlinien verwenden, erlauben Sie Braze-IPs den Zugriff auf Ihre BigQuery-Instanz. Die Liste der IPs finden Sie unter [Cloud-Datenaufnahme]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endsubtab %}
 {% subtab Databricks %}
 
-1. Create a catalog or schema for your source table.  
+1. Erstellen Sie einen Katalog oder ein Schema für Ihre Quelltabelle.
     ```sql
     CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
     ```
 
-2. Create the source table for your CDI integration:  
+2. Erstellen Sie die Quelltabelle für Ihre CDI-Integration:
     ```sql
     CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.ACCOUNTS_SYNC`
     (
@@ -178,32 +178,32 @@ So integrieren Sie Ihre Datenquelle mit Ihrem Data Warehouse:
     );
     ```
 
-    Refer to the following when creating your source table:
+    Beachten Sie beim Erstellen Ihrer Quelltabelle Folgendes:
 
-    | Field Name | Type | Required? |
+    | Feldname | Typ | Erforderlich? |
     | ---------- | ---- | --------- |
-    | `UPDATED_AT` | Timestamp | Yes |
-    | `PAYLOAD` | String, Struct, or Map | Yes |
-    | `ID` | String | Yes |
-    | `NAME` | String | Yes |
-    | `DELETED` | Boolean | Optional |
+    | `UPDATED_AT` | Zeitstempel | Ja |
+    | `PAYLOAD` | String, Struct oder Map | Ja |
+    | `ID` | String | Ja |
+    | `NAME` | String | Ja |
+    | `DELETED` | Boolescher Wert | Optional |
     {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {:start="3"}
-3. Create a personal access token in Databricks:
-    1. Select your username, then select **User Settings**.  
-    2. On the **Access tokens** tab, select **Generate new token**.  
-    3. Add a comment to identify the token, such as "Braze CDI".  
-    4. Leave **Lifetime (days)** blank for no expiration, then select **Generate**.  
-    5. Copy and save the token securely for use in the Braze dashboard.
+3. Erstellen Sie ein persönliches Zugriffstoken in Databricks:
+    1. Wählen Sie Ihren Benutzernamen und dann **User Settings** aus.
+    2. Wählen Sie auf dem Tab **Access tokens** die Option **Generate new token** aus.
+    3. Fügen Sie einen Kommentar zur Identifizierung des Tokens hinzu, z. B. „Braze CDI".
+    4. Lassen Sie **Lifetime (days)** leer, damit das Token nicht abläuft, und wählen Sie dann **Generate** aus.
+    5. Kopieren und speichern Sie das Token sicher für die Verwendung im Braze-Dashboard.
 
 {:start="4"}
-4. If you use network policies, allow Braze IPs to access your Databricks instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+4. Wenn Sie Netzwerkrichtlinien verwenden, erlauben Sie Braze-IPs den Zugriff auf Ihre Databricks-Instanz. Die Liste der IPs finden Sie unter [Cloud-Datenaufnahme]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endsubtab %}
 {% subtab Microsoft Fabric %}
 
-1. Create one or more tables for your CDI integration with these fields:
+1. Erstellen Sie eine oder mehrere Tabellen für Ihre CDI-Integration mit diesen Feldern:
     ```sql
     CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
     (
@@ -217,32 +217,32 @@ So integrieren Sie Ihre Datenquelle mit Ihrem Data Warehouse:
     ```
 
 {:start="2"}
-2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
+2. Erstellen Sie einen Dienstprinzipal und vergeben Sie Berechtigungen. Wenn Sie bereits Zugangsdaten von einer anderen Synchronisierung haben, können Sie diese wiederverwenden – stellen Sie sicher, dass sie Zugriff auf die Kontotabelle haben.
 
 {:start="3"}
-3. If you use network policies, allow Braze IPs to access your Microsoft Fabric instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+3. Wenn Sie Netzwerkrichtlinien verwenden, erlauben Sie Braze-IPs den Zugriff auf Ihre Microsoft Fabric-Instanz. Die Liste der IPs finden Sie unter [Cloud-Datenaufnahme]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 
 {% tab File Storage %}
-To sync account data from file storage, create a source file with the following fields.
+Um Kontodaten aus einem Dateispeicher zu synchronisieren, erstellen Sie eine Quelldatei mit den folgenden Feldern.
 
-| Field | Required? | Description |  
+| Feld | Erforderlich? | Beschreibung |  
 | --- | --- | --- |  
-| `ID` | Yes | ID of the Account to update or create |  
-| `NAME` | Yes | Name of the Account |  
-| `PAYLOAD` | Yes | JSON string of the fields to sync to the account in Braze |  
-| `DELETED` | Optional | Boolean indicating to delete the account from Braze |  
-| `UPDATED_AT` | _*Unsupported_ | File storage doesn't support `UPDATED_AT` columns |
+| `ID` | Ja | ID des Kontos, das aktualisiert oder erstellt werden soll |  
+| `NAME` | Ja | Name des Kontos |  
+| `PAYLOAD` | Ja | JSON-String der Felder, die mit dem Konto in Braze synchronisiert werden sollen |  
+| `DELETED` | Optional | Boolescher Wert, der angibt, dass das Konto aus Braze gelöscht werden soll |  
+| `UPDATED_AT` | _*Nicht unterstützt_ | Dateispeicher unterstützen keine `UPDATED_AT`-Spalten |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {% alert note %}
-Filenames must follow AWS rules and be unique. Append timestamps to help ensure uniqueness. For more on Amazon S3 syncing, see [File Storage Integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/file_storage_integrations).
+Dateinamen müssen den AWS-Regeln entsprechen und eindeutig sein. Hängen Sie Zeitstempel an, um die Eindeutigkeit sicherzustellen. Weitere Informationen zur Amazon S3-Synchronisierung finden Sie unter [Dateispeicher-Integrationen]({{site.baseurl}}/user_guide/data/cloud_ingestion/file_storage_integrations).
 {% endalert %}
 
-The following examples show valid JSON and CSV formats for syncing account data from file storage.
+Die folgenden Beispiele zeigen gültige JSON- und CSV-Formate für die Synchronisierung von Kontodaten aus einem Dateispeicher.
 
 {% subtabs %}
 {% subtab JSON Accounts %}
@@ -254,7 +254,7 @@ The following examples show valid JSON and CSV formats for syncing account data 
 ```  
 
 {% alert important %}
-Jede Zeile in Ihrer Quelldatei muss gültiges JSON enthalten, sonst wird die Datei übersprungen.
+Jede Zeile in Ihrer Quelldatei muss gültiges JSON enthalten, andernfalls wird die Datei übersprungen.
 {% endalert %}
 {% endsubtab %}
 {% subtab CSV Accounts with Delete %}
@@ -275,11 +275,11 @@ ID,NAME,PAYLOAD
 {% endtab %}
 {% endtabs %}
 
-## Eine Synchronisationsansicht erstellen
+## Synchronisierungsansicht erstellen
 
-Wenn Sie eine Synchronisationsansicht in Ihrem Data Warehouse erstellen, wird die Quelle automatisch aktualisiert, ohne dass Sie zusätzliche Abfragen neu schreiben müssen.
+Durch das Erstellen einer Synchronisierungsansicht in Ihrem Data Warehouse kann die Quelle automatisch aktualisiert werden, ohne dass zusätzliche Abfragen neu geschrieben werden müssen.
 
-Wenn Sie z.B. eine Tabelle mit Kontodaten namens `account_details_1` mit `account_id`, `account_name` und drei zusätzlichen Attributen haben, könnten Sie eine Sync-Ansicht wie die folgende erstellen:
+Wenn Sie beispielsweise eine Tabelle mit Kontodaten namens `account_details_1` mit `account_id`, `account_name` und drei zusätzlichen Attributen haben, könnten Sie eine Synchronisierungsansicht wie die folgende erstellen:
 
 {% tabs %}
 {% tab Snowflake %}

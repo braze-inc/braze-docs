@@ -13,13 +13,13 @@ description: "Häufige Probleme und Lösungen für BrazeAI Operator<sup>TM</sup>
 
 | Problem | Fehlerbehebung |
 | --- | --- |
-| Keine Antwort | Seite aktualisieren und das Operator-Panel erneut öffnen. |
-| Themenfremde Antworten | Formulieren Sie die Frage konkreter. Erwähnen Sie die betreffende Funktion oder den Workflow. |
-| Fehlermeldungen | Wenn Operator keinen Inhalt streamen kann, erscheint ggf. die Aufforderung „Erneut versuchen“. Operator ist möglicherweise vorübergehend nicht verfügbar oder die Verbindung wurde unterbrochen. Nach einigen Minuten erneut versuchen. |
-| Tägliches Nutzungslimit erreicht | Das unternehmensweite Nutzungslimit ist erreicht. Warten Sie, bis das Limit zurückgesetzt wird (alle 24 Stunden). |
+| Keine Antwort | Versuchen Sie, die Seite zu aktualisieren und das Operator-Panel erneut zu öffnen. |
+| Antworten, die nicht zum Thema gehören | Formulieren Sie die Frage genauer. Nennen Sie das Feature oder den Workflow, zu dem Sie eine Frage haben. |
+| Fehlermeldungen | Sollte der Operator keine Inhalte streamen können, wird möglicherweise die Aufforderung „Erneut versuchen" angezeigt. Der Operator ist möglicherweise vorübergehend nicht erreichbar oder die Verbindung wurde unterbrochen. Versuchen Sie es in einigen Minuten erneut. |
+| Tägliches Nutzungslimit überschritten | Das unternehmensweite Nutzungslimit wurde erreicht. Warten Sie, bis das Limit zurückgesetzt wird (wird alle 24 Stunden zurückgesetzt). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Einschränkungen
 
-- **Datenzugriff:** Operator kann den Inhalt der aktiven Seite einsehen. Er kann auch einige unternehmensspezifische Daten abrufen, z. B. vergangene Kampagnen, Kataloge und benutzerdefinierte Attribute. Derzeit kann er jedoch keine neuen Berichte erzeugen oder Berichtsabfragen ausführen.
-- **Nutzungslimits:** Operator unterliegt einem unternehmensweiten täglichen Nutzungslimit, das alle 24 Stunden zurückgesetzt wird. Ist das Limit erreicht, erscheint im Chat der Hinweis „Tägliches Nutzungslimit erreicht“, und bis zum Zurücksetzen sind keine weiteren Anfragen möglich.
+- **Datenzugriff:** Der Operator kann den Inhalt der aktiven Seite einsehen, mit Ausnahme von Inhalten in Drag-and-Drop-Editoren. Er kann auch bestimmte unternehmensspezifische Daten abrufen, wie beispielsweise vergangene Kampagnen, Kataloge und angepasste Attribute. Derzeit ist es jedoch nicht möglich, neue Berichte zu generieren oder Berichtsabfragen auszuführen.
+- **Nutzungsbeschränkungen:** Der Operator verfügt über ein unternehmensweites Tageslimit, das alle 24 Stunden zurückgesetzt wird. Wenn das Limit erreicht ist, wird im Chat ein Banner mit der Meldung „Tägliches Nutzungslimit überschritten" angezeigt, und es können keine weiteren Anfragen gestellt werden, bis das Limit zurückgesetzt wird.

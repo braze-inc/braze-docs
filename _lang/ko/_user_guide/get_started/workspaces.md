@@ -66,7 +66,7 @@ This approach is particularly useful for companies like mobile gaming firms that
 
 - [앱 인스턴스](#app-instances)
 - [Teams](#teams)
-- 회사 사용자 [권한](#company-user-permissions) (회사 사용자 제외)
+- [회사 사용자 권한](#company-user-permissions) (하지만 회사 사용자는 아님)
 - [전류 커넥터](#currents-connectors)
 - [사용자 프로필](#user-profiles) 및 관련 사용자 데이터
 - [세그먼트, 캠페인 및 캔버스](#segments-campaigns-and-canvases)
@@ -178,7 +178,7 @@ All persistent data associated with a user is stored in their [user profile]({{s
         <td>커스텀 속성 및 이벤트는 앱 인스턴스에만 적용되도록 보장됩니다.</td>
         <td>워크스페이스 전반에서 사용자 행동을 추적할 수 없습니다.<br><br><b>팁:</b> 이를 위해 여러 개의 커런츠 커넥터를 활용할 수 있습니다.</td>
         <td>워크스페이스의 모든 앱 인스턴스에서 사용자 행동을 추적할 수 있습니다.</td>
-        <td>사용자 지정 속성 및 이벤트는 모든 앱 인스턴스에 적용되므로 사용자 프로필의 어떤 데이터가 어떤 앱 인스턴스와 관련이 있는지 구분하기 어려울 수 있습니다. 예를 들어 "date_of_parking" 이 앱 1과 관련이 있나요, 아니면 앱 2와 관련이 있나요? 이를 방지하려면 체계적인 이름 지정 규칙을 사용해야 합니다.</td>
+        <td>사용자 지정 속성 및 이벤트는 모든 앱 인스턴스에 적용되므로 사용자 프로필의 어떤 데이터가 어떤 앱 인스턴스와 관련이 있는지 구분하기 어려울 수 있습니다. 예를 들어, "date_of_parking"이 앱 1 또는 앱 2와 관련이 있습니까? 이를 방지하려면 체계적인 이름 지정 규칙을 사용해야 합니다.</td>
     </tr>
     <tr>
         <td>주파수 제한</td>
@@ -205,7 +205,7 @@ All persistent data associated with a user is stored in their [user profile]({{s
         <td>콘텐츠 복제</td>
         <td>N/A</td>
         <td>Cannot duplicate segments, push or Content Card campaigns, or Canvases across workspaces.</td>
-        <td>다음과 같은 지원되는 채널에 대해 <a href='{{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'>워크스페이스 간에 캠페인을 복제할</a> 수 있습니다: SMS, in-app messages, email, email templates, and Content Blocks. <br><br>세그먼트, 캠페인 및 캔버스를 복제하여 한 앱 인스턴스에서 다른 앱 인스턴스로 콘텐츠를 재사용할 수 있습니다.</td>
+        <td>다음 지원되는 채널에 대해 <a href='{{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/'>작업 공간 간 캠페인 복제</a>할 수 있습니다: SMS, in-app messages, email, email templates, and Content Blocks. <br><br>세그먼트, 캠페인 및 캔버스를 복제하여 한 앱 인스턴스에서 다른 앱 인스턴스로 콘텐츠를 재사용할 수 있습니다.</td>
         <td>N/A</td>
     </tr>
     <tr>
@@ -240,5 +240,5 @@ All persistent data associated with a user is stored in their [user profile]({{s
 
 ## 다음 단계
 
-워크스페이스 계획을 결정했으면 이제 워크스페이스를 만들고 앱 인스턴스를 추가할 차례입니다. 단계는 [워크스페이스 만들기 및 매니저를]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/) 확인하세요.
+워크스페이스 계획을 결정했으면 이제 워크스페이스를 만들고 앱 인스턴스를 추가할 차례입니다. 단계에 대한 내용은 [작업 공간 만들기 및 관리]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/)를 확인하세요.
 
