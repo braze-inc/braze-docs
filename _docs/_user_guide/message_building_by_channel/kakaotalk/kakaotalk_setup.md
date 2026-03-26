@@ -56,7 +56,13 @@ After gathering your documentation, follow these steps:
 ### Step 1: Connect the KakaoTalk channel to Braze
 
 1. Go to **Partner Integrations** > **Technology Partners** and select your KakaoTalk provider.
-2. Go to your [Comm.One dashboard](https://ums.cjmplace.com/) and gather the following information needed to set up KakaoTalk.
+2. Gather the required credentials for your provider (see below), then enter them into the **Technology Partners** page and save.
+3. Use the newly saved credentials for sending.
+
+{% tabs local %}
+{% tab CJ OliveNetworks %}
+
+Go to your [Comm.One dashboard](https://ums.cjmplace.com/) and gather the following information.
 
 | Field | Location |
 | --- | --- |
@@ -67,42 +73,68 @@ After gathering your documentation, follow these steps:
 | **Credential (ID) & Password (비밀번호)** | Go to the same location for the **Sender number (사업자 등록번호)**, then go to **API** > **Brand Message (브랜드 메시지)**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% tabs local %}
-{% tab Comm.One Login ID (로그인 아이디) %}
+{% subtabs local %}
+{% subtab Comm.One Login ID (로그인 아이디) %}
 
 ![Comm.One dashboard showing a censored login ID.]({% image_buster /assets/img/kakaotalk/comm.one_login_id.png %})
 
-{% endtab %}
-{% tab Sender Key (발신프로필 키) %}
+{% endsubtab %}
+{% subtab Sender Key (발신프로필 키) %}
 
 ![Comm.One dashboard showing a censored Sender Key.]({% image_buster /assets/img/kakaotalk/sender_key.png %})
 
-{% endtab %}
-{% tab Channel name (카카오톡 채널 프로필명) %}
+{% endsubtab %}
+{% subtab Channel name (카카오톡 채널 프로필명) %}
 
 ![Comm.One dashboard showing a censored channel name.]({% image_buster /assets/img/kakaotalk/channel_profile_name.png %})
 
-{% endtab %}
-{% tab Credential (ID) & Password (비밀번호) %}
+{% endsubtab %}
+{% subtab Credential (ID) & Password (비밀번호) %}
 
 ![Comm.One dashboard showing a censored credential ID and password.]({% image_buster /assets/img/kakaotalk/id_and_password.png %})
 
-{% endtab %}
-{% endtabs %}
-
-{: start="3"}
-3. Enter the gathered information into the **Technology Partners** page, and then save.
+{% endsubtab %}
+{% endsubtabs %}
 
 ![Fields on the Technology Partners page for CJ OliveNetworks.]({% image_buster /assets/img/kakaotalk/cj_olivenetworks.png %}){: style="max-width:30%;"}
-
-{: start="4"}
-4. Use the newly saved credentials for sending. 
 
 ![Credentials for a Braze KakaoTalk channel.]({% image_buster /assets/img/kakaotalk/cj_credentials.png %})
 
 {% alert note %}
 Only the channels mapped to a single common ID can be registered.
 {% endalert %}
+
+{% endtab %}
+{% tab Infobip %}
+
+Go to your Infobip dashboard and gather the following information.
+
+| Field | Location |
+| --- | --- |
+| **API Base URL** | Select **Developer Tools** > **API Keys**. |
+| **API Key** | Select **Developer Tools** > **API Keys**. |
+| **Sender name / Sender key** | Select **Channels and Numbers** > **Channels**, then select the **Senders** tab. |
+| **Sender profile UUID** | Provided directly by Infobip. Contact Infobip if you don't have this information. |
+| **Channel name** | Provided directly by Infobip. Contact Infobip if you don't have this information. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% subtabs local %}
+{% subtab API Base URL and API Key %}
+
+<!-- Screenshot needed: Infobip Developer Tools > API Keys page showing API Base URL and API Key fields -->
+![Infobip Developer Tools API Keys page.]({% image_buster /assets/img/kakaotalk/infobip_api_key.png %})
+
+{% endsubtab %}
+{% subtab Sender name / Sender key %}
+
+<!-- Screenshot needed: Infobip Channels and Numbers > Channels > Senders tab -->
+![Infobip Channels and Numbers Senders tab.]({% image_buster /assets/img/kakaotalk/infobip_sender_key.png %})
+
+{% endsubtab %}
+{% endsubtabs %}
+
+{% endtab %}
+{% endtabs %}
 
 ## Set user profiles
 

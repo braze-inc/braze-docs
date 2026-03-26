@@ -24,9 +24,7 @@ KakaoTalk is supported in both campaigns and Canvas. Campaigns are best suited f
 
 ![Panel with options to select messaging channel.]({% image_buster /assets/img/kakaotalk/kakaotalk_campaign.png %}){: style="max-width:30%" }
 
-{: start="3"}
-3. By default, a [Tag](https://www.braze.com/docs/user_guide/administrative/app_settings/tags/) for KakaoTalk is added to this campaign. You can add additional tags, but this default tag shouldn't be removed because it's used by the Report Builder to understand KakaoTalk campaign performance. For more information, refer to [KakaoTalk reporting]({{site.baseurl}}/kakaotalk_reporting/).
-4. You can add additional variants to your campaign, allowing you to choose different message types and layouts. For more information, refer to [Multivariate and A/B testing](https://www.braze.com/docs/user_guide/engagement_tools/testing/multivariant_testing/).
+3. You can add additional variants to your campaign, allowing you to choose different message types and layouts. For more information, refer to [Multivariate and A/B testing](https://www.braze.com/docs/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% endtab %}
 {% tab Canvas %}
@@ -150,7 +148,31 @@ List item messages consist of a header, an item list section, and an optional bu
 {% endtab %}
 {% endtabs %}
 
-## Step 3: Preview and test your KakaoTalk message
+
+## Step 3: Set up click tracking
+
+When KakaoTalk click tracking is turned on, Braze automatically shortens your URLs, adds tracking mechanisms, and records clicks in real time. This data empowers you to create more targeted segmentation and retargeting strategies, such as segmenting users based on click behavior and triggering messages in response to specific clicks.
+
+Click tracking is supported for text, image, and list item messages. It supports links within buttons and image on-click actions. You can also personalize URLs using Liquid and custom domains.
+
+To enable click tracking, check **Click Tracking** in the **Link options** section of the composer. URLs will be shortened using the default Braze domain (`https://brz.ai`) or the custom domain specified for the subscription group, and personalized for the user.
+
+For full details on click tracking, custom domains, Liquid personalization in URLs, reporting, and retargeting, refer to [KakaoTalk click tracking]({{site.baseurl}}/kakaotalk_click_tracking/).
+
+### Retargeting users
+
+You can retarget users who have clicked a URL in a KakaoTalk message by using the following segmentation filters and triggers:
+
+- Action-based triggers
+    - Interact with Campaign
+    - Interact with Step
+
+- Segmentation filters
+    - Clicked/Opened Campaign
+    - Clicked/Opened Campaign or Canvas with Tag
+    - Clicked/Opened Step
+
+## Step 4: Preview and test your KakaoTalk message
 
 The message preview automatically updates as you compose your KakaoTalk message. When you're ready to test, go to the **Test** tab to send a test message to content test groups or individual users, or to preview the message as an existing or custom user directly in Braze.
 
@@ -158,13 +180,13 @@ After selecting your test users, select **Send Test**. A notification will indic
 
 ![Preview window for a KakaoTalk message.]({% image_buster /assets/img/kakaotalk/preview_message.png %})
 
-{% alert important %}
-Currently, the KakaoTalk test send has two limitations:<br><br>
-- It can't be used with image messages.
-- To preview and send a test message to an existing user, you must have "View PII" permissions, but you can preview and send a test message to a custom user without those permissions.
+{% alert note %}
+To preview and send a test message to an existing user, you must have "View PII" permissions. You can preview and send a test message to a custom user without those permissions.
 {% endalert %}
 
-## Step 4: Build the remainder of your campaign or Canvas
+To review the results of a send or troubleshoot issues, go to **Settings** > **Message Activity Log**. For more information, refer to [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/).
+
+## Step 5: Build the remainder of your campaign or Canvas
 
 Refer to the following sections for details on how best to use our tools to build KakaoTalk messages.
 
@@ -186,6 +208,6 @@ Conversion events help you measure the success of your campaign. For example, if
 
 You can also set custom conversion events based on your specific use case. Get creative and think about how you want to measure your campaign’s success.
 
-## Step 5: Review and deploy
+## Step 6: Review and deploy
 
 After you’ve finished building the last of your campaign or Canvas, review its details, test it, and send!

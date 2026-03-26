@@ -16,6 +16,9 @@ guide_featured_list:
 - name: Create a KakaoTalk message
   link: /docs/create_kakaotalk_message/
   image: /assets/img/braze_icons/message-chat-square.svg
+- name: KakaoTalk click tracking
+  link: /docs/kakaotalk_click_tracking/
+  image: /assets/img/braze_icons/cursor-click-02.svg
 - name: KakaoTalk reporting
   link: /docs/kakaotalk_reporting/
   image: /assets/img/braze_icons/line-chart-up-01.svg
