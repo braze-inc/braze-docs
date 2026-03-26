@@ -27,13 +27,13 @@ When configuring your email settings, your outbound email settings identify whic
 {% tabs local %}
 {% tab Display Name Address %}
 
-In this section, you can add the names and email addresses you can use when Braze sends emails to your users. The display names and email addresses are available in the **Edit Sending Info** options as you compose your email campaign. Note that updates made to the outbound email settings do not retroactively affect existing sends.
+In this section, you can add the names and email addresses you can use when Braze sends emails to your users. The display names and email addresses are available in the **Sending Info** options as you compose your email campaign. Note that updates made to the outbound email settings do not retroactively affect existing sends.
 
 !["Outbound Email Settings" section with fields for different display names and domains.]({% image_buster /assets/img/email_settings/display_name_address.png %})
 
 #### Personalizing with Liquid
 
-You can also use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in the **From Display Name** and **Local Part** fields to dynamically template the sender name and email address based on custom attributes. When composing an email message, you can use Liquid in the **Domain** field by going to **Sending Settings** > **Sending Info** and selecting the **Customize from display name + address** checkbox. 
+You can also use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in the **From Display Name**, **Local Part**, and **Domain** fields to dynamically template the sender name and email address based on custom attributes. Note that to use Liquid in the **Domain** field, you must go to an email campaign's **Sending Info** options and select the **Customize from display name + address** checkbox.
 
 ![Sending settings with fields for customizing the from display name, address, and domain.]({% image_buster /assets/img/email_settings/email_campaign_domain.png %})
 
