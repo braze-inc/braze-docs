@@ -18,18 +18,18 @@ description: "Este artigo de referência aborda o uso de atributos personalizado
 ## Limitações
 
 - Os atributos personalizados aninhados destinam-se a atributos personalizados enviados por meio do Braze SDK ou da API. 
-- Os objetos têm um tamanho máximo de 100 KB.
+- Os objetos têm um tamanho máximo de 100&nbsp;KB.
 - Os nomes das chaves e os valores das strings têm um limite de tamanho de 255 caracteres.
 - Os nomes das chaves não podem conter espaços.
 - Períodos (`.`) e sinais de dólar (`$`) não são caracteres suportados em uma carga útil de API se você estiver tentando enviar um atributo personalizado aninhado para um perfil de usuário.
-- Nem todos os Braze Partners suportam atributos personalizados aninhados. Consulte a [documentação do parceiro]({{site.baseurl}}/partners/home) para confirmar se as integrações com parceiros específicos suportam esse recurso.
-- Os atributos personalizados aninhados não podem ser usados como um filtro ao fazer uma chamada à API do Connected Audience.
+- Nem todos os parceiros da Braze suportam atributos personalizados aninhados. Consulte a [documentação do parceiro]({{site.baseurl}}/partners/home) para confirmar se integrações com parceiros específicos suportam esse recurso.
+- Os atributos personalizados aninhados não podem ser usados como filtro ao fazer uma chamada à API do Connected Audience.
 
 ## Exemplo de API
 
 {% tabs local %}
 {% tab Create %}
-A seguir, um exemplo do site `/users/track` com um objeto "Most Played Song" (Música mais tocada). Para capturar as propriedades da música, enviaremos uma solicitação de API que lista `most_played_song` como um objeto, juntamente com um conjunto de propriedades do objeto.
+A seguir, um exemplo do `/users/track` com um objeto "Most Played Song" (Música mais tocada). Para capturar as propriedades da música, enviaremos uma solicitação de API que lista `most_played_song` como um objeto, juntamente com um conjunto de propriedades do objeto.
 
 ```json
 {
@@ -69,7 +69,7 @@ Para atualizar um objeto existente, envie um POST para `users/track` com o parâ
 }
 ```
 
-Depois que essa solicitação for recebida, o objeto de atributo personalizado se parecerá com o seguinte:
+Depois que essa solicitação for recebida, o objeto de atributo personalizado ficará assim:
 
 ```json
 {"most_played_song": {
@@ -248,54 +248,54 @@ Caso não tenha capturado datas como propriedades do objeto inicialmente, recome
 ```
 
 {% alert note %}
-Para atributos personalizados aninhados, se o ano for menor que 0 ou maior que 3000, o Braze não armazenará esses valores no usuário.
+Para atributos personalizados aninhados, se o ano for menor que 0 ou maior que 3000, a Braze não armazenará esses valores no usuário.
 {% endalert %}
 
-## Modelos do Liquid
+## Modelos Liquid
 
-O exemplo de modelo do Liquid a seguir mostra como fazer referência às propriedades do objeto de atributo personalizado salvas na solicitação anterior da API e usá-las no envio de mensagens.
+O exemplo de modelo Liquid a seguir mostra como fazer referência às propriedades do objeto de atributo personalizado salvas na solicitação anterior da API e usá-las no envio de mensagens.
 
-Use a tag de personalização `custom_attribute` e a notação de ponto para acessar as propriedades de um objeto. Especifique o nome do objeto (e a posição no vetor se estiver fazendo referência a um vetor de objetos), seguido de um ponto (ponto final), seguido do nome da propriedade.
+Use a tag de personalização `custom_attribute` e a notação de ponto para acessar as propriedades de um objeto. Especifique o nome do objeto (e a posição no vetor, se estiver fazendo referência a um vetor de objetos), seguido de um ponto, seguido do nome da propriedade.
 
 {% raw %}
-`{{custom_attribute.${most_played_song}[0].artist_name}}` - "Miles Davis"
-<br> `{{custom_attribute.${most_played_song}[0].song_name}}` - "Solea"
-<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` - "1000"
+`{{custom_attribute.${most_played_song}[0].artist_name}}` — "Miles Davis"
+<br> `{{custom_attribute.${most_played_song}[0].song_name}}` — "Solea"
+<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "1000"
 {% endraw %}
 
-![Uso do Liquid para modelar o nome de uma música e o número de vezes que um ouvinte a reproduziu em uma mensagem]({% image_buster /assets/img_archive/nca_liquid_2.png %})
+![Uso do Liquid para inserir o nome de uma música e o número de vezes que um ouvinte a reproduziu em uma mensagem]({% image_buster /assets/img_archive/nca_liquid_2.png %})
 
 ## Segmentação
 
-É possível criar segmentos com base em atributos personalizados aninhados para direcionar ainda mais seus usuários. Para fazer isso, filtre seu segmento com base no objeto de atributo personalizado e, em seguida, especifique a jornada para o nome da propriedade e o valor associado que deseja segmentar. Se não tiver certeza de como é essa jornada, você poderá [gerar um esquema](#generate-schema) e usar o explorador de objetos aninhados para que o Braze preencha essa jornada para você.
+É possível criar segmentos com base em atributos personalizados aninhados para direcionar ainda mais seus usuários. Para fazer isso, filtre seu segmento com base no objeto de atributo personalizado e, em seguida, especifique a jornada para o nome da propriedade e o valor associado que deseja segmentar. Se não tiver certeza de como é essa jornada, você pode [gerar um esquema](#generate-schema) e usar o explorador de objetos aninhados para que a Braze preencha essa jornada para você.
 
-Depois de adicionar um caminho à sua propriedade, selecione **Validar** para verificar se o valor no campo jornada é válido.
+Depois de adicionar uma jornada à sua propriedade, selecione **Validar** para verificar se o valor no campo de jornada é válido.
 
 ![Filtragem com base em um atributo personalizado de música mais reproduzida, em que um ouvinte reproduziu uma música mais de um número especificado de vezes]({% image_buster /assets/img_archive/nca_segmentation_2.png %})
 
-Para segmentar com atributos personalizados aninhados, selecione o filtro **Atributos personalizados aninhados** para expor um menu suspenso no qual você pode selecionar um atributo personalizado aninhado específico.
+Para segmentar com atributos personalizados aninhados, selecione o filtro **Nested Custom Attributes** para exibir um menu suspenso no qual você pode selecionar um atributo personalizado aninhado específico.
 
 ![]({% image_buster /assets/img_archive/nested_custom_attributes.png %}){: style="max-width:70%;"}
 
 Ao trabalhar com segmentação de atributos personalizados aninhados, você terá acesso a um novo comparador agrupado por tipo de dados. Por exemplo, como `play_analytics.count` é um número, você pode selecionar um comparador na categoria **Número**.
 
-![Um usuário escolhe um operador com base no tipo de dados do atributo personalizado aninhado]({% image_buster /assets/img_archive/nca_comparator.png %})
+![Um usuário escolhendo um operador com base no tipo de dados do atributo personalizado aninhado]({% image_buster /assets/img_archive/nca_comparator.png %})
 
 ### Filtragem de tipos de dados de tempo
 
 Ao filtrar um atributo personalizado de tempo aninhado, você pode optar por filtrar com operadores nas categorias **Dia do ano** ou **Hora** ao comparar o valor da data. 
 
-Se você selecionar um operador na categoria **Dia do ano**, somente o mês e o dia serão verificados para comparação, em vez do registro de data e hora completo do valor do atributo personalizado aninhado. A seleção de um operador na categoria **Tempo** comparará o registro de data e hora completo, incluindo o ano.
+Se você selecionar um operador na categoria **Dia do ano**, somente o mês e o dia serão verificados para comparação, em vez do registro de data e hora completo do valor do atributo personalizado aninhado. A seleção de um operador na categoria **Hora** comparará o registro de data e hora completo, incluindo o ano.
 
 ### Segmentação multicritério
 
-Use o **Multi-Criteria Segmentation** para criar um segmento que corresponda a vários critérios em um único objeto. Isso qualifica o usuário para o segmento se ele tiver pelo menos um vetor de objeto que corresponda a todos os critérios especificados. Por exemplo, os usuários só corresponderão a esse segmento se a chave não estiver em branco e se o número for maior que 0.
+Use a **Segmentação multicritério** para criar um segmento que corresponda a vários critérios em um único objeto. Isso qualifica o usuário para o segmento se ele tiver pelo menos um vetor de objeto que corresponda a todos os critérios especificados. Por exemplo, os usuários só corresponderão a esse segmento se a chave não estiver em branco e se o número for maior que 0.
 
 Você também pode usar o recurso **Copiar Liquid para segmento** para gerar o código Liquid para esse segmento e usá-lo em uma mensagem. Por exemplo, digamos que você tenha um vetor de objetos de conta e um segmento que direciona os clientes com contas ativas tributáveis. Para fazer com que os clientes contribuam para a meta da conta associada a uma de suas contas ativas e tributáveis, você deverá criar uma mensagem para incentivá-los. 
 
-![Um exemplo de segmento com a caixa de seleção selecionada para Multi-Criteria Segmentation.]({% image_buster /assets/img_archive/nca_multi_criteria.png %})
+![Um exemplo de segmento com a caixa de seleção marcada para Segmentação multicritério.]({% image_buster /assets/img_archive/nca_multi_criteria.png %})
 
-Quando você selecionar **Copiar Liquid para o segmento**, o Braze gerará automaticamente o código Liquid que retorna um vetor de objeto que contém apenas contas ativas e tributáveis.
+Quando você selecionar **Copiar Liquid para o segmento**, a Braze gerará automaticamente o código Liquid que retorna um vetor de objeto contendo apenas contas ativas e tributáveis.
 
 {% raw %}
 
@@ -309,7 +309,7 @@ Quando você selecionar **Copiar Liquid para o segmento**, o Braze gerará autom
 {% endfor %}
 ```
 
-A partir daí, você pode usar o site `segmented_nested_objects` e personalizar sua mensagem. Neste exemplo, queremos pegar uma meta da primeira conta ativa tributável e personalizá-la:
+A partir daí, você pode usar `segmented_nested_objects` e personalizar sua mensagem. Neste exemplo, queremos pegar uma meta da primeira conta ativa tributável e personalizá-la:
 
 ```
 Get to your {{segmented_nested_objects[0].goal}} goal faster, make a deposit using our new fast deposit feature!
@@ -317,11 +317,11 @@ Get to your {{segmented_nested_objects[0].goal}} goal faster, make a deposit usi
 
 {% endraw %}
 
-Isso retorna a seguinte mensagem para seu cliente: "Alcance sua meta de aposentadoria mais rapidamente, faça um depósito usando nosso novo recurso de depósito rápido!"
+Isso retorna a seguinte mensagem para seu cliente: "Get to your retirement goal faster, make a deposit using our new fast deposit feature!"
 
 ### Gerar um esquema usando o explorador de objetos aninhados {#generate-schema}
 
-Você pode gerar um esquema para seus objetos para criar filtros de segmento sem precisar memorizar jornadas de objetos aninhados. Para fazer isso, execute as seguintes etapas.
+Você pode gerar um esquema para seus objetos para criar filtros de segmento sem precisar memorizar jornadas de objetos aninhados. Para fazer isso, siga as etapas abaixo.
 
 #### Etapa 1: Gerar um esquema
 
@@ -340,23 +340,23 @@ Para este exemplo, suponha que tenhamos um vetor de objetos `accounts` que acaba
 
 No dashboard da Braze, acesse **Configurações de dados** > **Atributos personalizados**.
 
-Procure seu objeto ou vetor de objetos. Na coluna **Nome da atribuição**, selecione **Gerar esquema**.
+Procure seu objeto ou vetor de objetos. Na coluna **Nome do atributo**, selecione **Gerar esquema**.
 
 ![]({% image_buster /assets/img_archive/nca_generate_schema.png %})
 
 {% alert tip %}
-Pode levar alguns minutos para que seu esquema seja gerado, dependendo da quantidade de dados que você nos enviou.
+Pode levar alguns minutos para que seu esquema seja gerado, dependendo da quantidade de dados enviados.
 {% endalert %}
 
-Depois que o esquema tiver sido gerado, um novo botão <i class="fas fa-plus"></i> plus será exibido no lugar do botão **Generate Schema**. Você pode clicar nele para ver o que o Braze sabe sobre esse atributo personalizado aninhado. 
+Depois que o esquema for gerado, um novo botão <i class="fas fa-plus"></i> plus será exibido no lugar do botão **Gerar esquema**. Você pode clicar nele para ver o que a Braze sabe sobre esse atributo personalizado aninhado. 
 
-Durante a geração do esquema, o Braze analisa os dados anteriores enviados e cria uma representação ideal de seus dados para essa atribuição. O Braze também analisa e adiciona um tipo de dados para seus valores aninhados. Isso é feito por meio da amostragem dos dados anteriores enviados ao Braze para o atributo aninhado fornecido.
+Durante a geração do esquema, a Braze analisa os dados anteriores enviados e cria uma representação ideal dos seus dados para esse atributo. A Braze também analisa e adiciona um tipo de dados para seus valores aninhados. Isso é feito por meio da amostragem dos dados anteriores enviados à Braze para o atributo aninhado em questão.
 
 Para o nosso vetor de objetos `accounts`, você pode ver que, dentro do vetor de objetos, há um objeto que contém o seguinte:
 
-- Um tipo booleano com uma chave de `active` (independentemente de a conta estar ativa ou não)
-- Um tipo de número com uma chave de `balance` (valor do saldo na conta)
-- Um tipo de string com uma chave de `type` (conta não tributável ou tributável)
+- Um tipo booleano com uma chave `active` (independentemente de a conta estar ativa ou não)
+- Um tipo de número com uma chave `balance` (valor do saldo na conta)
+- Um tipo de string com uma chave `type` (conta não tributável ou tributável)
 
 ![]({% image_buster /assets/img_archive/nca_schema.png %}){: style="max-width:50%" }
 
@@ -364,13 +364,13 @@ Agora que analisamos e criamos uma representação dos dados, vamos criar um seg
 
 #### Etapa 2: Criar um segmento
 
-Vamos direcionar os clientes que têm um saldo inferior a 100 para que possamos enviar a eles uma mensagem incentivando-os a fazer um depósito.
+Vamos direcionar os clientes que têm um saldo inferior a 100 para enviar a eles uma mensagem incentivando-os a fazer um depósito.
 
 Crie um segmento e adicione o filtro `Nested Custom Attribute` e, em seguida, pesquise e selecione seu objeto ou vetor de objetos. Aqui adicionamos o vetor de objetos `accounts`. 
 
 ![]({% image_buster /assets/img_archive/nca_segment_schema.png %})
 
-Selecione o botão <i class="fas fa-plus"></i> plus no campo da jornada. Isso exibirá uma representação de seu objeto ou vetor de objetos. Você pode selecionar qualquer um dos itens listados e a Braze os inserirá no campo da jornada para você. Neste exemplo, precisamos obter o saldo. Selecione o saldo e a jornada (nesse caso, `[].balance`) é preenchida automaticamente no campo de jornada.
+Selecione o botão <i class="fas fa-plus"></i> plus no campo de jornada. Isso exibirá uma representação do seu objeto ou vetor de objetos. Você pode selecionar qualquer um dos itens listados e a Braze os inserirá no campo de jornada para você. Neste exemplo, precisamos obter o saldo. Selecione o saldo e a jornada (nesse caso, `[].balance`) será preenchida automaticamente no campo de jornada.
 
 ![]({% image_buster /assets/img_archive/nca_segment_schema2.png %}){: style="max-width:70%" }
 
@@ -378,7 +378,7 @@ Você pode selecionar **Validar** para verificar se o conteúdo do campo de jorn
 
 ![]({% image_buster /assets/img_archive/nca_segment_schema_3.png %})
 
-É isso aí! Você acabou de criar um segmento usando um atributo personalizado aninhado, tudo sem precisar saber como os dados estão estruturados. O explorador de objetos aninhados no Braze gerou uma representação visual de seus dados e permitiu que você explorasse e selecionasse exatamente o que precisava para criar um segmento.
+É isso! Você acabou de criar um segmento usando um atributo personalizado aninhado, tudo sem precisar saber como os dados estão estruturados. O explorador de objetos aninhados da Braze gerou uma representação visual dos seus dados e permitiu que você explorasse e selecionasse exatamente o que precisava para criar um segmento.
 
 ### Disparar alterações em atributos personalizados aninhados
 
@@ -386,40 +386,64 @@ Você pode disparar quando um objeto de atributo personalizado aninhado for alte
 
 ![]({% image_buster /assets/img_archive/nca_triggered_changes2.png %})
 
-Por exemplo, na seguinte campanha baseada em ação, é possível adicionar uma nova ação-gatilho para **Alterar valor de atributo personalizado** para direcionar os usuários que alteraram suas preferências de escritório no bairro. 
+Por exemplo, na seguinte campanha baseada em ação, é possível adicionar uma nova ação-gatilho para **Alterar valor de atributo personalizado** para direcionar os usuários que alteraram suas preferências de escritório do bairro. 
 
 ![]({% image_buster /assets/img_archive/nca_triggered_changes.png %})
 
 ### Personalização
 
-Usando o modal **Add Personalization**, você também pode inserir atributos personalizados aninhados em seu envio de mensagens. Selecione **Atributos personalizados aninhados** como o tipo de personalização. Em seguida, selecione o atributo de nível superior e a chave do atributo. 
+Usando o modal **Adicionar personalização**, você também pode inserir atributos personalizados aninhados no envio de mensagens. Selecione **Nested Custom Attributes** como o tipo de personalização. Em seguida, selecione o atributo de nível superior e a chave do atributo. 
 
-Por exemplo, no modal de personalização abaixo, isso insere o atributo personalizado aninhado de um escritório de localização com base nas preferências do usuário.
+Por exemplo, no modal de personalização abaixo, isso insere o atributo personalizado aninhado de um escritório local do bairro com base nas preferências do usuário.
 
 ![]({% image_buster /assets/img_archive/nca_personalization.png %}){: style="max-width:70%" }
 
 {% alert tip %}
-Verifique se foi gerado um esquema se não estiver vendo a opção de inserir atributos personalizados aninhados.
+Verifique se um esquema foi gerado caso não esteja vendo a opção de inserir atributos personalizados aninhados.
 {% endalert %}
 
 ### Regenerar esquemas {#regenerate-schema}
 
-Depois que um esquema é gerado, ele pode ser regenerado uma vez a cada 24 horas. Esta seção descreve como gerar novamente o esquema. Para saber mais informações detalhadas sobre esquemas, consulte a seção deste artigo sobre [como gerar um esquema](#generate-schema).
+Depois que um esquema é gerado, ele pode ser regenerado uma vez a cada 24 horas. Esta seção descreve como regenerar o esquema. Para informações mais detalhadas sobre esquemas, consulte a seção deste artigo sobre [como gerar um esquema](#generate-schema).
 
-Para gerar novamente o esquema de seu atributo personalizado aninhado:
+Para regenerar o esquema do seu atributo personalizado aninhado:
 
 1. Acesse **Configurações de dados** > **Atributos personalizados**.
 2. Procure seu atributo personalizado aninhado.
-3. Na coluna **Nome da atribuição** de seu atributo, selecione <i class="fas fa-plus"></i> para gerenciar o esquema.
-4. Será exibido um modal. Selecione **Gerar esquema novamente**.
+3. Na coluna **Nome do atributo** do seu atributo, selecione <i class="fas fa-plus"></i> para gerenciar o esquema.
+4. Um modal será exibido. Selecione **Regenerar esquema**.
 
-A opção de regenerar o esquema será desativada se houver menos de 24 horas desde que o esquema foi regenerado pela última vez. A regeneração do esquema só detectará novos objetos e não excluirá os objetos que existem atualmente no esquema.
+A opção de regenerar o esquema será desativada se tiverem se passado menos de 24 horas desde a última regeneração. A regeneração do esquema só detectará novos objetos e não excluirá os objetos que existem atualmente no esquema.
 
 {% alert important %}
 Para redefinir o esquema de um vetor de objetos com um objeto existente, é necessário criar um novo atributo personalizado. A regeneração do esquema não exclui os objetos existentes.
 {% endalert %}
 
-Se os dados não aparecerem como esperado após a regeneração do esquema, a atribuição pode não estar sendo ingerida com frequência suficiente. Os dados de usuários são amostrados em dados anteriores enviados ao Braze para a atribuição aninhada dada. Se a atribuição não for ingerida o suficiente, ela não será selecionada para o esquema.
+Se os dados não aparecerem como esperado após a regeneração do esquema, o atributo pode não estar sendo ingerido com frequência suficiente. Os dados de usuários são amostrados com base nos dados anteriores enviados à Braze para o atributo aninhado em questão. Se o atributo não for ingerido com frequência suficiente, ele não será capturado para o esquema.
+
+## Comportamento de segmentação com vetores de objetos
+
+Quando você usa vários filtros `Nested Custom Attribute` com lógica AND para segmentar em um vetor de objetos, cada filtro é avaliado independentemente em todos os itens do vetor. Um usuário se qualifica para o segmento se _qualquer_ item no vetor satisfizer cada filtro individual — os filtros não precisam corresponder ao _mesmo_ item.
+
+Por exemplo, suponha que um usuário tenha o seguinte vetor:
+
+```json
+{
+  "orders": [
+    {"product": "Shoes", "price": 80},
+    {"product": "Hat", "price": 25}
+  ]
+}
+```
+
+Um segmento com os seguintes filtros AND:
+
+- `orders[].price` é maior que 50
+- `orders[].price` é menor que 30
+
+Esse usuário se qualificaria porque o primeiro filtro corresponde ao item "Shoes" (80 > 50) e o segundo filtro corresponde ao item "Hat" (25 < 30). Mesmo que nenhum item individual satisfaça ambas as condições, o usuário ainda entra no segmento.
+
+Se você precisar que todas as condições correspondam ao mesmo item dentro de um vetor, use a [segmentação multicritério](#multi-criteria-segmentation) na mesma jornada, ou reestruture seus dados para evitar correspondência entre itens.
 
 ## Pontos de dados
 
@@ -449,4 +473,3 @@ Qualquer chave enviada consome um ponto de dados. Por exemplo, esse objeto inici
 {% alert note %}
 A atualização de um objeto de atributo personalizado para `null` também consome um ponto de dados.
 {% endalert %}
-
