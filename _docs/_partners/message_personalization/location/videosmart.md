@@ -124,7 +124,7 @@ Common variables include:
 {% endraw %}
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Rate limit
+## Rate limits
 
 VideoSmart's API has a rate limit of 10,000 requests per minute. If you exceed this limit, you may receive errors or experience delays in video generation.
 
