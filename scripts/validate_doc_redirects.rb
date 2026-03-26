@@ -208,8 +208,12 @@ def validate!(options)
     puts "Building URL map for HEAD…"
     map_head = jekyll_url_map(REPO_ROOT)
   ensure
-    system("git", "-C", REPO_ROOT, "worktree", "remove", "-f", worktree, out: File::NULL, err: File::NULL)
+    success = system("git", "-C", REPO_ROOT, "worktree", "remove", "-f", worktree, out: File::NULL, err: File::NULL)
     FileUtils.remove_entry(tmp_parent, true)
+    unless success
+      system("git", "-C", REPO_ROOT, "worktree", "prune", out: File::NULL, err: File::NULL)
+      raise "Failed to remove git worktree at #{worktree}"
+    end
   end
 
   # Use resolve_ref (the exact SHA) so the diff is guaranteed to be based on

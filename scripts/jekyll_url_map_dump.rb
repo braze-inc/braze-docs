@@ -6,25 +6,32 @@
 
 require "jekyll"
 require "json"
+require "tmpdir"
 
 out_path = ARGV[0] or abort "usage: jekyll_url_map_dump.rb OUT.json"
 
-site = Jekyll::Site.new(
-  Jekyll.configuration(
-    "source" => ".",
-    "quiet" => true,
-    "safe" => false
+Dir.mktmpdir("jekyll-url-map") do |dest|
+  site = Jekyll::Site.new(
+    Jekyll.configuration(
+      "source" => ".",
+      "quiet" => true,
+      "safe" => false,
+      "destination" => dest
+    )
   )
-)
-site.read
 
-base = site.config["baseurl"].to_s.chomp("/")
-map = {}
-site.collections.each_value do |coll|
-  coll.docs.each do |doc|
-    key = doc.relative_path.sub(%r{\A/}, "")
-    map[key] = base + doc.url
+  # Run the full site processing pipeline so generators (including custom permalink logic)
+  # can update per-document URLs before we read them.
+  site.process
+
+  base = site.config["baseurl"].to_s.chomp("/")
+  map = {}
+  site.collections.each_value do |coll|
+    coll.docs.each do |doc|
+      key = doc.relative_path.sub(%r{\A/}, "")
+      map[key] = base + doc.url
+    end
   end
-end
 
-File.write(out_path, JSON.generate(map))
+  File.write(out_path, JSON.generate(map))
+end
