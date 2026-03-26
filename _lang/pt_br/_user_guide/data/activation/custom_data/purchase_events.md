@@ -11,11 +11,17 @@ search_rank: 3
 
 > Esta página aborda eventos e propriedades de compra, seu uso, segmentação, onde visualizar análises de dados relevantes e muito mais.
 
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
+
 Os eventos de compra são ações de compra realizadas por seus usuários e são usados para registrar compras no app e estabelecer o valor do tempo de vida (LTV) para cada perfil de usuário. Esses eventos devem ser configurados pela sua equipe. Registrar eventos de compra permite adicionar propriedades como quantidade e tipo, ajudando a direcionar ainda mais seus usuários com base nessas propriedades.
 
 ## Registrando eventos de compra
 
 Você pode registrar compras passando um [objeto de compra]({{site.baseurl}}/api/objects_filters/purchase_object/) pelo [endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), ou usando uma de nossas bibliotecas SDK listadas abaixo.
+
+{% alert note %}
+As propriedades de evento de compra usam os mesmos tipos de dados que as [propriedades de evento personalizado]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/#expected-format).
+{% endalert %}
 
 A seguir estão listados métodos em várias plataformas usados para registrar compras. Nessas páginas, você também encontrará documentação sobre como adicionar propriedades e quantidades ao seu evento de compra. Você pode direcionar ainda mais seus usuários com base nessas propriedades.
 
@@ -91,7 +97,7 @@ Neste exemplo, a mensagem é personalizada com base na propriedade `last_purchas
 
 Um caso de uso comum é enviar automaticamente uma mensagem, como um e-mail, quando um usuário faz uma compra. Por exemplo, você pode enviar uma mensagem de agradecimento ou um código de desconto para uma compra futura.
 
-Para fazer isso, crie uma campanha baseada em ação ou Canvas, depois defina a ação-gatilho para **Fazer Compra**. Você também pode especificar condições adicionais para o disparo, como o produto comprado ou o valor da compra.
+Para fazer isso, crie uma campanha baseada em ação ou Canvas e defina a ação-gatilho para **Fazer Compra**. Você também pode especificar condições adicionais para o disparo, como o produto comprado ou o valor da compra.
 
 Você também pode personalizar sua mensagem disparada com Liquid. No exemplo a seguir, `${purchase_product_name}` é um atributo personalizado que você substituiria pelo nome real do atributo que armazena o nome do produto comprado na sua configuração da Braze.
 
@@ -109,7 +115,7 @@ Além do rastreamento de métricas de compra para segmentação, a Braze também
 
 Você pode encontrar esses dados na página [Relatório de receita]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
 
-### Compreensão dos cálculos de receita
+### Cálculos de receita
 
 <style>
     .no-split {

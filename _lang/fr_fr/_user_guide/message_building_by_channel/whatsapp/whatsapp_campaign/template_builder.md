@@ -20,6 +20,10 @@ Le générateur de modèles WhatsApp est actuellement en accès anticipé. Conta
 
 Avant de créer un modèle WhatsApp dans Braze, effectuez la [configuration de WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/).
 
+### Modèles carrousel WhatsApp
+
+{% multi_lang_include whatsapp/carousel_template_prerequisites.md %}
+
 ## Créer un modèle
 
 ### Étape 1 : Accéder aux modèles WhatsApp

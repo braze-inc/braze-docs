@@ -18,21 +18,7 @@ Las plantillas de carrusel de WhatsApp están en acceso anticipado. Ponte en con
 
 ## Requisitos previos
 
-Antes de crear plantillas de carrusel, necesitas:
-- Una cuenta de WhatsApp Business (WABA) activa conectada a Braze
-- Grupos de suscripción apropiados configurados dentro de tu WABA
-- Activos multimedia (imágenes o videos) listos para cargar
-- Permisos de Braze para usuarios no administradores
-    - Para que los usuarios creen nuevas plantillas en el constructor de plantillas:
-        - "View WhatsApp Message Templates"
-        - "Edit WhatsApp Message Templates"
-    - Para que los usuarios redacten campañas o Canvas con plantillas de carrusel:
-        - "View WhatsApp Message Templates"
-- Conocimiento de plantillas Liquid (opcional, para contenido dinámico)
-
-{% alert important %}
-Todos los números de teléfono y grupos de suscripción dentro de la misma cuenta de WhatsApp Business (WABA) comparten plantillas. Si tienes múltiples grupos de suscripción dentro de una WABA, todos pueden acceder a las mismas plantillas de carrusel; sin embargo, las plantillas no se comparten entre diferentes WABAs.
-{% endalert %}
+{% multi_lang_include whatsapp/carousel_template_prerequisites.md %}
 
 ## Crear una plantilla de carrusel
 
@@ -43,7 +29,7 @@ Al crear una plantilla en Braze, puedes usar:
 - Variables genéricas como {% raw %}`{{1}}`{% endraw %}.
 
 {% alert note %}
-Las etiquetas de Liquid {% raw %}`{% %}`{% endraw %} no son compatibles en el constructor de plantillas porque no pasan los criterios de contenido de Meta.
+Las etiquetas de Liquid {% raw %}`{% %}`{% endraw %} no son compatibles en el constructor de plantillas porque no pasan los criterios de contenido de Meta. 
 {% endalert %}
 
 Después de enviar la plantilla, aparece en la lista de plantillas de la WABA y se revisa en un plazo de 24 horas. Sin embargo, la revisión suele ocurrir en pocos minutos.
@@ -164,7 +150,7 @@ Cuando tu plantilla se carga, contiene contenido bloqueado y editable.
 - Si enviaste la plantilla con Liquid (por ejemplo, `{{first_name}}`), Braze lo preserva y muestra automáticamente.
 - Puedes cambiar el Liquid a diferentes variables (por ejemplo, cambiar de `{{first_name}}` a `{{last_name}}`).
 - Las imágenes con variables pueden hacerse dinámicas usando URLs con Liquid.
-- Puedes cargar nuevas imágenes desde la biblioteca de medios de Braze en lugar de usar los medios enviados.
+- Puedes cargar nuevas imágenes desde la biblioteca de medios de Braze en lugar de usar los medios enviados. 
 {% endraw %}
 
 #### Ejemplo

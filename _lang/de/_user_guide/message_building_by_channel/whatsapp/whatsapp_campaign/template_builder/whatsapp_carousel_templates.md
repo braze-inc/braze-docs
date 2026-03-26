@@ -18,21 +18,7 @@ WhatsApp-Karussell-Templates befinden sich im Early Access. Kontaktieren Sie Ihr
 
 ## Voraussetzungen
 
-Bevor Sie Karussell-Templates erstellen, benötigen Sie:
-- Ein aktives WhatsApp Business-Konto (WABA), das mit Braze verbunden ist
-- Entsprechende Abo-Gruppen, die in Ihrem WABA konfiguriert sind
-- Medien-Assets (Bilder oder Videos), die zum Hochladen bereitstehen
-- Braze-Berechtigungen für Nutzer:innen ohne Administratorrechte
-    - Damit Nutzer:innen neue Templates im Template-Builder erstellen können:
-        - „View WhatsApp Message Templates"
-        - „Edit WhatsApp Message Templates"
-    - Damit Nutzer:innen Kampagnen oder Canvase mit Karussell-Templates verfassen können:
-        - „View WhatsApp Message Templates"
-- Kenntnisse in Liquid-Templating (optional, für dynamischen Content)
-
-{% alert important %}
-Alle Telefonnummern und Abo-Gruppen innerhalb desselben WhatsApp Business-Kontos (WABA) teilen sich Templates. Wenn Sie mehrere Abo-Gruppen innerhalb eines WABA haben, können alle auf dieselben Karussell-Templates zugreifen. Templates werden jedoch nicht über verschiedene WABAs hinweg geteilt.
-{% endalert %}
+{% multi_lang_include whatsapp/carousel_template_prerequisites.md %}
 
 ## Ein Karussell-Template erstellen
 
@@ -134,7 +120,7 @@ Nachdem Ihr Karussell-Template von Meta genehmigt wurde, können Sie es in Kampa
 2. Wählen Sie die Abo-Gruppe aus, die dem WhatsApp Business-Konto (WABA) Ihres Templates entspricht.
 
 {% alert important %}
-Wenn Sie mehrere WhatsApp Business-Konten haben, wählen Sie eine Abo-Gruppe aus demselben WABA, in dem das Template erstellt wurde. Templates werden nicht über WABAs hinweg geteilt, aber innerhalb desselben WABA über alle Abo-Gruppen und Telefonnummern hinweg.
+Wenn Sie mehrere WhatsApp Business-Konten haben, wählen Sie eine Abo-Gruppe aus demselben WABA, in dem das Template erstellt wurde. Templates werden nicht über WABAs hinweg geteilt, sondern nur innerhalb desselben WABA über alle Abo-Gruppen und Telefonnummern hinweg.
 {% endalert %}
 
 ### 2. Schritt: Ihr Karussell-Template auswählen
@@ -202,7 +188,7 @@ Nach der Erstellung fahren Sie mit dem Start-Workflow Ihrer Kampagne oder Ihres 
 
 | Problem | Lösung |
 | --- | --- |
-| Template erscheint nicht in der Kampagne | Überprüfen Sie, ob die ausgewählte Abo-Gruppe zum selben WABA wie das Template gehört. Prüfen Sie außerdem, ob der Template-Status **Approved** ist und sich nicht noch im Status **Draft** oder **Pending** befindet. |
+| Template erscheint nicht in der Kampagne | Überprüfen Sie, ob die ausgewählte Abo-Gruppe zum selben WABA wie das Template gehört. Prüfen Sie außerdem, ob der Template-Status **Approved** ist und sich nicht noch im Status **Draft** oder **Ausstehend** befindet. |
 | Variable kann nicht am Ende des Textes platziert werden | Verschieben Sie die Variable weiter nach vorne im Text und fügen Sie mindestens ein Zeichen oder Satzzeichen danach hinzu. Dies ist eine Meta-Anforderung für WhatsApp-Templates. |
 | Variablen werden im Test nicht befüllt | Stellen Sie sicher, dass Ihre Liquid-Syntax korrekt ist und die Attribute in Ihren Nutzerprofilen vorhanden sind. Prüfen Sie auf Tippfehler in Variablennamen und überprüfen Sie, ob Standardwerte dort gesetzt sind, wo es angemessen ist. |
 | Template-Name enthält Leerzeichen | Template-Namen dürfen keine Leerzeichen enthalten. Verwenden Sie stattdessen Unterstriche (`template_name`) oder entfernen Sie Leerzeichen vollständig (`templatename`). |

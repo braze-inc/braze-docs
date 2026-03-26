@@ -18,21 +18,7 @@ Os modelos de carrossel do WhatsApp estão em acesso antecipado. Fale com o seu 
 
 ## Pré-requisitos
 
-Antes de criar modelos de carrossel, você precisa de:
-- Uma conta ativa do WhatsApp Business (WABA) conectada à Braze
-- Grupos de inscrições apropriados configurados na sua WABA
-- Ativos de mídia (imagens ou vídeos) prontos para upload
-- Permissões da Braze para usuários não administradores
-    - Para que os usuários criem novos modelos no construtor de modelos:
-        - "View WhatsApp Message Templates"
-        - "Edit WhatsApp Message Templates"
-    - Para que os usuários criem campanhas ou canvas com modelos de carrossel:
-        - "View WhatsApp Message Templates"
-- Conhecimento de Liquid (opcional, para conteúdo dinâmico)
-
-{% alert important %}
-Todos os números de telefone e grupos de inscrições dentro da mesma conta do WhatsApp Business (WABA) compartilham modelos. Se você tiver vários grupos de inscrições em uma WABA, todos podem acessar os mesmos modelos de carrossel; no entanto, os modelos não são compartilhados entre WABAs diferentes.
-{% endalert %}
+{% multi_lang_include whatsapp/carousel_template_prerequisites.md %}
 
 ## Criar um modelo de carrossel
 
@@ -43,7 +29,7 @@ Ao criar um modelo na Braze, você pode usar:
 - Variáveis genéricas como {% raw %}`{{1}}`{% endraw %}.
 
 {% alert note %}
-As Liquid tags {% raw %}`{% %}`{% endraw %} não são compatíveis com o construtor de modelos porque não atendem aos critérios de conteúdo da Meta.
+As Liquid tags {% raw %}`{% %}`{% endraw %} não são compatíveis com o construtor de modelos porque não atendem aos critérios de conteúdo da Meta. 
 {% endalert %}
 
 Após o envio do modelo, ele aparece na lista de modelos da WABA e é revisado em até 24 horas. No entanto, a revisão geralmente ocorre em poucos minutos.
@@ -164,7 +150,7 @@ Quando seu modelo é carregado, ele contém conteúdo bloqueado e editável.
 - Se você enviou o modelo com Liquid (por exemplo, `{{first_name}}`), a Braze preserva e exibe automaticamente esse Liquid.
 - Você pode alterar o Liquid para variáveis diferentes (por exemplo, trocar de `{{first_name}}` para `{{last_name}}`).
 - Imagens com variáveis podem ser tornadas dinâmicas usando URLs com Liquid.
-- Você pode fazer upload de novas imagens da biblioteca de mídia da Braze em vez de usar a mídia enviada.
+- Você pode fazer upload de novas imagens da biblioteca de mídia da Braze em vez de usar a mídia enviada. 
 {% endraw %}
 
 #### Exemplo
