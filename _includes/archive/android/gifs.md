@@ -113,7 +113,7 @@ class GlideBrazeImageLoader : IBrazeImageLoader {
             .apply(mRequestOptions)
             .into(imageView)
       } catch (e: Exception) {
-        BrazeLogger.e(TAG, "Failed URL into view: $imageUrl", e)
+        BrazeLogger.e(TAG, "Failed to render URL into view: $imageUrl", e)
       }
     }
   }
