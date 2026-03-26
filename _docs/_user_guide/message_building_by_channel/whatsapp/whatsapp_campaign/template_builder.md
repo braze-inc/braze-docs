@@ -20,6 +20,10 @@ The WhatsApp Template Builder is currently in early access. Contact your Braze a
 
 Before creating a WhatsApp template in Braze, complete the [WhatsApp setup]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/).
 
+### WhatsApp carousel templates
+
+{% multi_lang_include whatsapp/carousel_template_prerequisites.md %}
+
 ## Create a template
 
 ### Step 1: Go to WhatsApp Templates
