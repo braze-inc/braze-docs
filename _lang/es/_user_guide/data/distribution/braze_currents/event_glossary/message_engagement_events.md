@@ -1068,6 +1068,7 @@ Este evento se produce cuando un usuario se inscribe en una variante de control 
 {% endapi %}
 
 {% api %}
+
 ## Eventos de conversión de Canvas {#canvas-conversion-events}
 
 {% apitags %}
@@ -1693,8 +1694,7 @@ Este evento ocurre cuando un usuario ha salido de un Canvas realizando un evento
 {% endapi %}
 
 {% api %}
-
-## Paso del experimento Eventos de conversión {#experiment-step-conversion-events}
+## Eventos de conversión del paso del experimento {#experiment-step-conversion-events}
 
 {% apitags %}
 Canvas
@@ -1863,13 +1863,13 @@ Este evento se produce cuando un usuario convierte para un paso del experimento 
 {% endapi %}
 
 {% api %}
-## Experimento Eventos de entradas divididas {#experiment-split-entry-events}
+## Eventos de entrada en la división del experimento {#experiment-split-entry-events}
 
 {% apitags %}
 Canvas
 {% endapitags %}
 
-Este evento se produce cuando un usuario entra en una ruta de pasos del experimento Canvas.
+Este evento se produce cuando un usuario entra en una ruta de pasos del experimento en Canvas.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -2023,6 +2023,7 @@ Este evento se produce cuando un usuario entra en una ruta de pasos del experime
 {% endapi %}
 
 {% api %}
+
 ## Eventos de progresión de pasos en Canvas {#canvas-step-progression-events}
 
 {% apitags %}
@@ -2406,6 +2407,7 @@ Este evento se produce cuando un mensaje de banner programado originalmente se h
 
 #### Detalles de la propiedad
 
+- El campo `abort_type` describe el motivo por el que se canceló el mensaje. Para ver una lista completa de valores, consulta [Tipos de cancelación]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` será `frequency_capped` si el mensaje se canceló debido a una regla de limitación de frecuencia global.
 - `abort_log` incluye información sobre la regla específica que desencadenó la cancelación. Un ejemplo es: `Frequency cap rule: 5 Banner messages every 1 week`
 {% endapi %}
@@ -2810,6 +2812,7 @@ Este evento se produce cuando un usuario ve un banner.
 {% endapi %}
 
 {% api %}
+
 ## Eventos de cancelación de tarjetas de contenido {#content-card-abort-events}
 
 {% apitags %}
@@ -3004,12 +3007,12 @@ Este evento se produce si un mensaje de tarjeta de contenido se canceló debido 
 #### Detalles de la propiedad
 
 - `dispatch_id` es un ID para el envío de un mensaje específico, como el envío de una campaña. Todos los eventos push que se originan en el mismo envío incluyen el mismo `dispatch_id`. Utiliza `dispatch_id` para agrupar eventos que pertenecen al mismo envío, lo que te permite agrupar y correlacionar el ciclo de vida de los mensajes push para ese envío (como Enviar, Rebotar y Abrir).
+- El campo `abort_type` describe el motivo por el que se canceló el mensaje. Para ver una lista completa de valores, consulta [Tipos de cancelación]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` será `frequency_capped` si el mensaje se canceló debido a una regla de limitación de frecuencia global.
 - `abort_log` incluye información sobre la regla específica que desencadenó la cancelación. Un ejemplo es: `Frequency cap rule: 5 Content Card messages every 1 week`
 {% endapi %}
 
 {% api %}
-
 ## Eventos de clic en tarjetas de contenido {#content-card-click-events}
 
 {% apitags %}
@@ -3697,6 +3700,7 @@ Este evento se produce cuando un usuario visualiza una tarjeta de contenido.
 {% endapi %}
 
 {% api %}
+
 ## Eventos de envío de tarjetas de contenido {#content-card-send-events}
 
 {% apitags %}
@@ -4097,6 +4101,7 @@ Este evento se produce si un mensaje de correo electrónico se canceló debido a
 #### Detalles de la propiedad
 
 - `dispatch_id` es un ID para el envío de un mensaje específico, como el envío de una campaña. Todos los eventos push que se originan en el mismo envío incluyen el mismo `dispatch_id`. Utiliza `dispatch_id` para agrupar eventos que pertenecen al mismo envío, lo que te permite agrupar y correlacionar el ciclo de vida de los mensajes push para ese envío (como Enviar, Rebotar y Abrir).
+- El campo `abort_type` describe el motivo por el que se canceló el mensaje. Para ver una lista completa de valores, consulta [Tipos de cancelación]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` será `frequency_capped` si el mensaje se canceló debido a una regla de limitación de frecuencia global.
 - `abort_log` incluye información sobre la regla específica que desencadenó la cancelación. Un ejemplo es: `Frequency cap rule: 5 email messages every 1 week`
 {% endapi %}
@@ -5015,6 +5020,7 @@ Este evento se produce cuando un correo electrónico enviado llega correctamente
 {% endapi %}
 
 {% api %}
+
 ## Eventos de marcar correo electrónico como spam {#email-mark-as-spam-events}
 
 {% apitags %}
@@ -6523,6 +6529,7 @@ Las impresiones del conmutador de características solo se registran una vez por
 {% endapi %}
 
 {% api %}
+
 ## Eventos de cancelación de mensajes dentro de la aplicación {#in-app-message-abort-events}
 
 {% apitags %}
@@ -6761,6 +6768,7 @@ Este evento se produce cuando se cancela un mensaje dentro de la aplicación pro
 
 #### Detalles de la propiedad
 
+- El campo `abort_type` describe el motivo por el que se canceló el mensaje. Para ver una lista completa de valores, consulta [Tipos de cancelación]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` será `frequency_capped` si el mensaje se ha cancelado debido a una regla de limitación de frecuencia global.
 - `abort_log` incluye información sobre la regla específica que desencadenó la cancelación. Un ejemplo es: `Frequency cap rule: 5 in-app messages every 1 week`
 {% endapi %}
@@ -7004,7 +7012,6 @@ Para los mensajes dentro de la aplicación, `dispatch_id` devuelve `null`.
 {% endapi %}
 
 {% api %}
-
 ## Eventos de impresiones de mensajes dentro de la aplicación {#in-app-message-impression-events}
 
 {% apitags %}
@@ -7248,6 +7255,7 @@ Para los mensajes dentro de la aplicación, `dispatch_id` devuelve `null`.
 {% endapi %}
 
 {% api %}
+
 ## Eventos de cancelación de LINE {#line-abort-events}
 
 {% apitags %}
@@ -7448,6 +7456,7 @@ Este evento se produce cuando un mensaje programado de LINE no se puede entregar
 #### Detalles de la propiedad
 
 - `dispatch_id` es un ID para el envío de un mensaje específico, como el envío de una campaña. Todos los eventos push que se originan en el mismo envío incluyen el mismo `dispatch_id`. Utiliza `dispatch_id` para agrupar eventos que pertenecen al mismo envío, lo que te permite agrupar y correlacionar el ciclo de vida de los mensajes push para ese envío (como Enviar, Rebotar y Abrir).
+- El campo `abort_type` describe el motivo por el que se canceló el mensaje. Para ver una lista completa de valores, consulta [Tipos de cancelación]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` será `frequency_capped` si el mensaje se canceló debido a una regla de limitación de frecuencia global.
 - `abort_log` incluye información sobre la regla específica que desencadenó la cancelación. Un ejemplo es: `Frequency cap rule: 5 LINE messages every 1 week`
 {% endapi %}
@@ -8068,6 +8077,7 @@ Este evento se produce cuando un mensaje pierde prioridad o sufre limitación de
 {% endapi %}
 
 {% api %}
+
 ## Eventos de envío de LINE {#line-send-events}
 
 {% apitags %}
@@ -8416,14 +8426,13 @@ Este evento se produce cuando Braze recibe una respuesta de un proveedor externo
 {% endapi %}
 
 {% api %}
-
-## Eventos de envío de actividad en vivo {#live-activity-send-events}
+## Eventos de envío de Live Activity {#live-activity-send-events}
 
 {% apitags %}
 Live Activity, Sends
 {% endapitags %}
 
-Este evento se produce cuando el sistema Braze realiza una solicitud a su proveedor en relación con la actividad en vivo.
+Este evento se produce cuando el sistema Braze realiza una solicitud a su proveedor en relación con la Live Activity.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -8766,6 +8775,7 @@ Este evento se produce si se ha cancelado un mensaje de notificación push debid
 #### Detalles de la propiedad
 
 - `dispatch_id` es un ID para el envío de un mensaje específico, como el envío de una campaña. Todos los eventos push que se originan en el mismo envío incluyen el mismo `dispatch_id`. Utiliza `dispatch_id` para agrupar eventos que pertenecen al mismo envío, lo que te permite agrupar y correlacionar el ciclo de vida de los mensajes push para ese envío (como Enviar, Rebotar y Abrir).
+- El campo `abort_type` describe el motivo por el que se canceló el mensaje. Para ver una lista completa de valores, consulta [Tipos de cancelación]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` será `frequency_capped` si el mensaje se ha cancelado debido a una regla de limitación de frecuencia global.
 - `abort_log` incluye información sobre la regla específica que desencadenó la cancelación. Un ejemplo es: `Frequency cap rule: 5 push messages every 1 week`
 {% endapi %}
@@ -8992,6 +9002,7 @@ Este evento se produce cuando se recibe un error del servicio de notificaciones 
 {% endapi %}
 
 {% api %}
+
 ## Eventos de apertura en primer plano de notificaciones push en iOS {#push-notification-ios-foreground-open-events}
 
 {% apitags %}
@@ -9604,14 +9615,13 @@ Este evento se produce cuando un mensaje pierde prioridad o sufre limitación de
 {% endapi %}
 
 {% api %}
-
-## Enviar eventos de notificación push {#push-notification-send-events}
+## Eventos de envío de notificaciones push {#push-notification-send-events}
 
 {% apitags %}
 Push, Sends
 {% endapitags %}
 
-Este evento se produce cuando Braze procesa un mensaje push para un usuario, comunicándolo al servicio de notificaciones push de Apple o a Fire Cloud Messaging. Esto no significa que el push haya llegado al dispositivo, sólo que se ha enviado un mensaje.
+Este evento se produce cuando Braze procesa un mensaje push para un usuario, comunicándolo al servicio de notificaciones push de Apple o a Fire Cloud Messaging. Esto no significa que el push haya llegado al dispositivo, solo que se ha enviado un mensaje.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -9838,6 +9848,7 @@ Este evento se produce cuando Braze procesa un mensaje push para un usuario, com
 {% endapi %}
 
 {% api %}
+
 ## Eventos de cancelación de RCS {#rcs-abort-events}
 
 {% apitags %}
@@ -10013,6 +10024,7 @@ Este evento se crea cuando se interrumpe un envío RCS debido a un error detecta
 
 #### Detalles de la propiedad
 
+- El campo `abort_type` describe el motivo por el que se canceló el mensaje. Para ver una lista completa de valores, consulta [Tipos de cancelación]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` será `frequency_capped` si el mensaje se canceló debido a una regla de limitación de frecuencia global.
 - `abort_log` incluye información sobre la regla específica que desencadenó la cancelación. Un ejemplo es: `Frequency cap rule: 5 RCS messages every 1 week`
 {% endapi %}
@@ -10636,6 +10648,7 @@ Este evento se crea cuando Braze recibe un mensaje RCS procedente del usuario.
 {% endapi %}
 
 {% api %}
+
 ## Eventos de lectura de RCS {#rcs-read-events}
 
 {% apitags %}
@@ -11014,8 +11027,7 @@ Evento que se crea cuando un mensaje RCS no se puede entregar al dispositivo mó
 {% endapi %}
 
 {% api %}
-
-## Eventos RCS Send {#rcs-send-events}
+## Eventos de envío de RCS {#rcs-send-events}
 
 {% apitags %}
 RCS, Sends
@@ -11403,11 +11415,13 @@ Este evento se produce si un mensaje SMS se ha cancelado debido a cancelaciones 
 
 #### Detalles de la propiedad
 
+- El campo `abort_type` describe el motivo por el que se canceló el mensaje. Para ver una lista completa de valores, consulta [Tipos de cancelación]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` será `frequency_capped` si el mensaje se ha cancelado debido a una regla de limitación de frecuencia global.
 - `abort_log` incluye información sobre la regla específica que desencadenó la cancelación. Un ejemplo es: `Frequency cap rule: 5 SMS messages every 1 week`
 {% endapi %}
 
 {% api %}
+
 ## Eventos de envío de SMS por operador {#sms-carrier-send-events}
 
 {% apitags %}
@@ -13044,6 +13058,7 @@ Este evento se produce cuando un usuario hace clic en un enlace corto de SMS.
 {% endapi %}
 
 {% api %}
+
 ## Eventos de cancelación de webhook {#webhook-abort-events}
 
 {% apitags %}
@@ -13238,6 +13253,7 @@ Este evento se produce si un mensaje webhook se canceló debido a cancelaciones 
 #### Detalles de la propiedad
 
 - `dispatch_id` es un ID para el envío de un mensaje específico, como el envío de una campaña. Todos los eventos push que se originan en el mismo envío incluyen el mismo `dispatch_id`. Utiliza `dispatch_id` para agrupar eventos que pertenecen al mismo envío, lo que te permite agrupar y correlacionar el ciclo de vida de los mensajes push para ese envío (como Enviar, Rebotar y Abrir).
+- El campo `abort_type` describe el motivo por el que se canceló el mensaje. Para ver una lista completa de valores, consulta [Tipos de cancelación]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` será `frequency_capped` si el mensaje se canceló debido a una regla de limitación de frecuencia global.
 - `abort_log` incluye información sobre la regla específica que desencadenó la cancelación. Un ejemplo es: `Frequency cap rule: 5 webhook messages every 1 week`
 {% endapi %}
@@ -13472,7 +13488,6 @@ Este evento se produce si se entregó un mensaje webhook, pero falló con una re
 {% endapi %}
 
 {% api %}
-
 ## Eventos de reintento de webhook {#webhook-retry-events}
 
 {% apitags %}
@@ -13862,6 +13877,7 @@ Este evento ocurre cuando un webhook fue procesado y enviado al tercero especifi
 {% endapi %}
 
 {% api %}
+
 ## Eventos de cancelación de WhatsApp {#whatsapp-abort-events}
 
 {% apitags %}
@@ -14063,6 +14079,7 @@ Este evento se produce si un mensaje de WhatsApp se ha cancelado debido a cancel
 #### Detalles de la propiedad
 
 - `dispatch_id` es un ID para el envío de un mensaje específico, como el envío de una campaña. Todos los eventos push que se originan en el mismo envío incluyen el mismo `dispatch_id`. Utiliza `dispatch_id` para agrupar eventos que pertenecen al mismo envío, lo que te permite agrupar y correlacionar el ciclo de vida de los mensajes push para ese envío (como Enviar, Rebotar y Abrir).
+- El campo `abort_type` describe el motivo por el que se canceló el mensaje. Para ver una lista completa de valores, consulta [Tipos de cancelación]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 - `abort_type` será `frequency_capped` si el mensaje se ha cancelado debido a una regla de limitación de frecuencia global.
 - `abort_log` incluye información sobre la regla específica que desencadenó la cancelación. Un ejemplo es: `Frequency cap rule: 5 WhatsApp messages every 1 week`
 {% endapi %}
@@ -15374,6 +15391,7 @@ Este evento se produce cuando un mensaje pierde prioridad o sufre limitación de
 {% endapi %}
 
 {% api %}
+
 ## Eventos de envío de WhatsApp {#whatsapp-send-events}
 
 {% apitags %}

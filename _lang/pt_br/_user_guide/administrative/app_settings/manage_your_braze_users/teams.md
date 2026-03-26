@@ -86,7 +86,7 @@ A seguir estão todas as permissões disponíveis que você pode atribuir no ní
 - Lançar Campanhas
 - Lançar Canvas
 - Exportar Dados de Usuários
-- Ver Perfis de Usuário em Conformidade com IPI
+- Ver Perfis de Usuário (IPI Ocultada)
 - Editar Usuários do Dashboard
 - Aprovar Campanhas
 - Aprovar Canvas

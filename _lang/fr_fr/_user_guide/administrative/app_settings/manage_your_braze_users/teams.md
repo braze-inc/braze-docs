@@ -86,7 +86,7 @@ Voici l'ensemble des autorisations que vous pouvez attribuer au niveau de l'équ
 - Lancer des campagnes
 - Lancer des Canvas
 - Exporter les données utilisateur
-- Voir les profils utilisateur conformes aux données d'identification
+- Voir les profils utilisateurs (données personnelles masquées)
 - Modifier les utilisateurs du tableau de bord
 - Approuver les campagnes
 - Approuver les Canvas
@@ -96,7 +96,7 @@ Voici l'ensemble des autorisations que vous pouvez attribuer au niveau de l'équ
 - Consulter les rapports du tableau de bord
 - Modifier les rapports du tableau de bord
 - Supprimer les rapports du tableau de bord
-- Voir les données d'identification
+- Voir les données personnelles
 
 {% endtab %}
 {% tab Legacy permissions %}
@@ -106,7 +106,7 @@ Voici l'ensemble des autorisations que vous pouvez attribuer au niveau de l'équ
 - Lancer et gérer les cartes de contenu
 - Modifier les segments
 - Exporter les données utilisateur
-- Voir les profils utilisateur conformes aux données d'identification
+- Voir les profils utilisateurs conformes aux données personnelles
 - Gérer les utilisateurs du tableau de bord
 - Gérer les ressources de la bibliothèque multimédia
 - Approuver et refuser des campagnes
@@ -134,7 +134,7 @@ Vous pouvez affecter une équipe à des Canvas, des campagnes, des cartes de con
 
 ### Cas d'utilisation
 
-Prenons les deux scénarios suivants pour Michelle, une marketeur utilisant Braze. Michelle est membre d'une Team appelée « Développement ». Elle a accès à toutes les autorisations au niveau de l'équipe pour la Team Développement.
+Prenons les deux scénarios suivants pour Michelle, une marketeur utilisant Braze. Michelle est membre d'une Team appelée « Development ». Elle a accès à toutes les autorisations au niveau de l'équipe pour la Team Development.
 
 {% tabs %}
 {% tab Scenario 1 - Only Team permissions %}
@@ -143,14 +143,14 @@ Dans ce scénario, Michelle est une utilisatrice restreinte qui ne dispose d'auc
 
 ![Autorisations personnalisées sans autorisations au niveau de l'espace de travail et 16 autorisations basées sur l'équipe.]({% image_buster /assets/img_archive/scenario1.png %})
 
-Avec les autorisations qui lui sont attribuées, chaque fois que Michelle crée une campagne, elle ne peut y affecter que l'équipe « Développement ». Elle ne peut pas lancer la campagne si l'équipe n'est pas assignée, et elle ne peut ni voir ni accéder aux autres étiquettes d'équipe.
+Avec les autorisations qui lui sont attribuées, chaque fois que Michelle crée une campagne, elle ne peut y affecter que l'équipe « Development ». Elle ne peut pas lancer la campagne si l'équipe n'est pas assignée, et elle ne peut ni voir ni accéder aux autres étiquettes d'équipe.
 
-![Menu déroulant des étiquettes d'équipe de campagne qui n'affiche que l'étiquette « Développement ».]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
+![Menu déroulant des étiquettes d'équipe de campagne qui n'affiche que l'étiquette « Development ».]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
 
 {% endtab %}
 {% tab Scenario 2 - Team permissions and workspace permissions %}
 
-Dans ce scénario, Michelle est toujours membre de l'équipe de développement, mais elle dispose également d'une autorisation supplémentaire au niveau de l'espace de travail.
+Dans ce scénario, Michelle est toujours membre de l'équipe Development, mais elle dispose également d'une autorisation supplémentaire au niveau de l'espace de travail.
 
 ![Autorisations personnalisées avec une autorisation au niveau de l'espace de travail et 15 autorisations au niveau de l'équipe.]({% image_buster /assets/img_archive/scenario2.png %})
 
@@ -158,7 +158,7 @@ Comme Michelle dispose de l'autorisation au niveau de l'espace de travail « Acc
 
 ![Menu déroulant des étiquettes d'équipe de campagne avec plusieurs étiquettes d'équipe]({% image_buster /assets/img_archive/team_permissions_scenario2.gif %})
 
-Comme dans le premier scénario, Michelle doit ajouter l'étiquette de l'équipe de développement à la campagne avant de pouvoir la lancer.
+Comme dans le premier scénario, Michelle doit ajouter l'étiquette de l'équipe Development à la campagne avant de pouvoir la lancer.
 
 {% endtab %}
 {% endtabs %}
@@ -167,19 +167,19 @@ Comme dans le premier scénario, Michelle doit ajouter l'étiquette de l'équipe
 
 L'un des cas d'utilisation possibles des Teams est la création d'un système d'approbation basé sur les équipes pour tester et lancer du contenu dans un environnement de production.
 
-Pour ce faire, créez une Team « Développement » qui n'a accès qu'aux utilisateurs test. Vous pouvez limiter l'accès d'une équipe aux seuls utilisateurs test si ceux-ci sont identifiables par un attribut personnalisé. Ensuite, ajoutez cet attribut personnalisé en tant que définition lors de la création ou de la modification de l'équipe (voir la section précédente [Créer des Teams](#creating-Teams)). Vos approbateurs doivent avoir accès à tous les utilisateurs.
+Pour ce faire, créez une Team « Development » qui n'a accès qu'aux utilisateurs test. Vous pouvez limiter l'accès d'une équipe aux seuls utilisateurs test si ceux-ci sont identifiables par un attribut personnalisé. Ensuite, ajoutez cet attribut personnalisé en tant que définition lors de la création ou de la modification de l'équipe (voir la section précédente [Créer des Teams](#creating-Teams)). Vos approbateurs doivent avoir accès à tous les utilisateurs.
 
 La procédure générale est la suivante :
 
-1. L'équipe de développement crée une campagne et y ajoute l'étiquette « Développement ».
+1. L'équipe de développement crée une campagne et y ajoute l'étiquette « Development ».
 2. L'équipe de développement lance la campagne auprès des utilisateurs test.
-3. L'équipe d'approbation valide la conception de la campagne locale, la promeut et la lance. Pour ce faire, l'équipe d'approbation modifie l'étiquette d'équipe de « Développement » à « [Toutes les équipes] » et relance la campagne.
+3. L'équipe d'approbation valide la conception de la campagne locale, la promeut et la lance. Pour ce faire, l'équipe d'approbation modifie l'étiquette d'équipe de « Development » à « [All Teams] » et relance la campagne.
 
 Pour les modifications apportées aux campagnes actives :
 
-1. L'équipe de développement clone la campagne en cours, ajoute l'étiquette « Développement » et enregistre.
+1. L'équipe de développement clone la campagne en cours, ajoute l'étiquette « Development » et enregistre.
 2. L'équipe de développement effectue les modifications et les partage avec l'équipe d'approbation.
-3. L'équipe d'approbation supprime l'étiquette de l'équipe de développement, met en pause la campagne précédente et lance la nouvelle campagne.
+3. L'équipe d'approbation supprime l'étiquette de l'équipe Development, met en pause la campagne précédente et lance la nouvelle campagne.
 
 ## Archiver une équipe existante
 

@@ -70,10 +70,9 @@ Esta tabla muestra cómo se mapea cada permiso heredado a los permisos granulare
 | Espacio de trabajo | Editar integraciones de Currents | Editar integraciones de Currents |
 | Espacio de trabajo | Ver atributos personalizados marcados como PII | Ver atributos personalizados marcados como PII |
 | Espacio de trabajo | Ver PII | Ver PII |
-| Espacio de trabajo | Ver perfiles de usuario compatibles con PII | Ver perfiles de usuario compatibles con PII |
+| Espacio de trabajo | Ver perfiles de usuario compatibles con PII | Ver perfiles de usuario (PII censurada) |
 | Espacio de trabajo | Ver datos de consumo | Ver datos de consumo |
 | Espacio de trabajo | Fusionar usuarios duplicados | Fusionar usuarios duplicados |
-| Espacio de trabajo | Vista previa de usuarios duplicados | Vista previa de usuarios duplicados |
 | Espacio de trabajo | Crear y editar plantillas de Canvas | Editar plantillas de Canvas |
 | Espacio de trabajo | Ver plantillas de Canvas | Ver plantillas de Canvas |
 | Espacio de trabajo | Archivar plantillas de Canvas | Archivar plantillas de Canvas |
@@ -85,12 +84,11 @@ Esta tabla muestra cómo se mapea cada permiso heredado a los permisos granulare
 | Espacio de trabajo | Archivar plantillas de páginas de inicio | Archivar plantillas de páginas de inicio |
 | Espacio de trabajo | Ver agentes de IA personalizados | Ver agentes de IA personalizados |
 | Espacio de trabajo | Editar agentes de IA personalizados | Editar agentes de IA personalizados<br> Archivar agentes de IA personalizados |
-| Espacio de trabajo | Ver colocaciones | Ver colocaciones |
-| Espacio de trabajo | Editar colocaciones | Editar colocaciones |
-| Espacio de trabajo | Archivar colocaciones | Archivar colocaciones |
+| Espacio de trabajo | Ver ubicaciones | Ver ubicaciones |
+| Espacio de trabajo | Editar ubicaciones | Editar ubicaciones |
+| Espacio de trabajo | Archivar ubicaciones | Archivar ubicaciones |
 | Espacio de trabajo | Nuevo | Ver fusionar usuarios |
 | Espacio de trabajo | Nuevo | Ver registros de eliminación de usuarios |
-| Espacio de trabajo | Nuevo | Eliminar usuarios del dashboard |
 | Espacio de trabajo | Nuevo | Ver plantillas de banners |
 | Espacio de trabajo | Nuevo | Editar plantillas de banners |
 | Espacio de trabajo | Nuevo | Archivar plantillas de banners |
