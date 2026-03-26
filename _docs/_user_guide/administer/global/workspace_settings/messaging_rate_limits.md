@@ -59,7 +59,7 @@ After you set the workspace messaging rate limit, you can increase it. However, 
 
 ## Setting your workspace messaging rate limit
 
-1. In the Braze dashboard, go to **Settings** > **Workspace Settings** > **Workspace Messaging Rate Limits**.
+1. In the Braze dashboard, go to **Settings** > **Workspace Settings** > **Messaging Rate Limits**.
 2. Select **+ Add rate limit**, then select a messaging channel.
 3. For **Messages per minute**, enter the rate limit.
 4. Select **Save**.

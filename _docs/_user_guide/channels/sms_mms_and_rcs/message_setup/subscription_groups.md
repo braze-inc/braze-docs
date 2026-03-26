@@ -38,8 +38,9 @@ To set a user's subscription group state, use one of the following methods:
 
 - **Rest API:** User profiles can be programmatically set by the [`/subscription/status/set` endpoint]({{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) by using the Braze REST API.
 - **SDK Integration** Users can be added to an email or SMS and RCS subscription group using the `addToSubscriptionGroup` method for [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/add-to-subscription-group.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:)), or [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup).
+- **Phone Number Capture IAM Form:** User phone numbers can be collected through the phone number capture template in the in-app message drag-and-drop editor.
 - **Automatically handled upon user opt-in/opt-out:** By users texting a default opt-in or opt-out [keyword]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/optin_optout/), Braze automatically sets and updates users' subscription state.
-- **User import**: Users can be added into email or SMS and RCS subscription groups through **Import Users**. When updating subscription group status, you must have these two columns in your CSV: `subscription_group_id` and `subscription_state`. Refer to [User import]({{site.baseurl}}/user_guide/audience/manage_audience/import_users#updating-subscription-group-status) for more information.
+- **User import**: Users can be added into email or SMS and RCS subscription groups through **Import Users**. When updating subscription group status, you must have these two columns in your CSV: `subscription_group_id` and `subscription_state`. Refer to [User import]({{site.baseurl}}/user_guide/audience/manage_audience/import_users/#updating-subscription-group-status) for more information.
 
 ### Checking a user's group
 
@@ -85,4 +86,85 @@ Depending on your integration, Braze can add RCS-verified senders to your existi
 {% endtab %}
 {% endtabs %}
 
-To migrate existing SMS users to RCS, refer to [Set up RCS]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup/#migrating-sms-traffic-to-rcs).
+## Migrating SMS traffic to RCS
+
+If you have separate SMS and RCS subscription groups, you can migrate users from SMS to RCS using a one-step Canvas. 
+
+Braze recommends that you test sending RCS to smaller volumes of users initially and migrate more users to the RCS subscription group over time. For example, if you have 1,000,000 users subscribed to an SMS subscription group, this could look like first migrating all users to the new subscription group and then segmenting on a smaller audience of 50,000 to 100,000 (5-10%) to test the RCS messages.
+
+### Step 1: Create a Canvas and fill out the Entry Schedule
+
+Create a Canvas and name it something easily identifiable (such as “SMS-RCS Subscription Group User Transfer”). Then, schedule the campaign whenever is convenient for you.
+
+### Step 2: Define your audience
+
+Define your audience using one of the following methods. Next, go to the **Send Settings** step and select **Users who are subscribed or opted-in**.
+
+| Method                          | Description                                                                                                                                                                                                 |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Create a segment**         | Build a segment that includes all users in a subscription group or a subset using segmentation filters (such as a random 5-10%). Segments update before each send to reflect your current user base.        |
+| **Apply campaign or Canvas filters** | Refine the audience in the **Target Audience** step of your campaign or Canvas. Adjust targeting options without leaving the page for added flexibility.                                         |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+### Step 3: Configure a User Update step
+
+Add a User Update Step to your Canvas. In the step, open the **Advanced JSON Editor** and input the following (for the unique user identifier field, we recommend using the `braze_id` field):
+
+{% raw %}
+```json
+{
+  "attributes": [
+    {
+      "braze_id": "{{${braze_id}}}",
+      "subscription_groups": [
+        {
+          "subscription_group_id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx",
+          "subscription_state": "subscribed",
+          "use_double_opt_in_logic": true
+        }
+      ]
+    }
+  ]
+}
+```
+{% endraw %}
+
+!["User Update Object" that contains the previously stated JSON code.]({% image_buster /assets/img/sms/user_update_object.png %})
+
+### Step 4: Test the Canvas
+
+We highly recommend [testing your Canvas]({{site.baseurl}}/user_guide/messaging/canvas/testing_canvases/sending_test_canvases/) to confirm it works as expected before sending it to your broader audience.
+
+### Step 5: Launch your Canvas
+
+After you have successfully tested your Canvas, go ahead and launch it for your subset of users!
+
+To confirm that your users were successfully migrated, we recommend checking a few individual user profiles that were updated. In the **Engagement** tab, look for **Contact Settings** and scroll to view the subscription groups the user is subscribed to. The RCS subscription group toggle should now be on.
+
+For RCS sender and subscription group setup, also refer to [Set up RCS]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/rcs_setup/).
+
+## Best practices
+
+### Designate separate subscription groups
+
+- **Messaging type:** Create distinct subscription groups for each type of messaging, such as Transactional and Marketing.
+- **Workspace:** Create distinct subscription groups for each workspace to maintain clarity and organization.
+
+Consider the following example with four subscription groups across two workspaces:
+
+- **Production workspace**
+  - Marketing - PROD for SMS
+  - Transactional - PROD for SMS
+- **Development Workspace (for testing)**
+  - Marketing - DEV for SMS
+  - Transactional - DEV for SMS
+
+### Use clear naming conventions
+
+Choose descriptive and clear subscription group names so that the correct group is selected when creating SMS campaigns.
+
+### Separate groups by country
+
+SMS regulations vary by country. We suggest separating SMS subscription groups by country. This helps you meet compliance standards in all regions where you send messages.
+
+For example, in Brazil, sending marketing messages outside the hours of 9 am and 9 pm local time is prohibited, and the country spans three time zones. To comply with these regulations, you might set up separate groups for sending messages to Brazil and the United States. This prevents users in Brazil from receiving marketing messages during prohibited hours.

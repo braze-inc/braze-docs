@@ -1,6 +1,6 @@
 ---
 nav_title: Storage
-article_title: Storage for iOS
+article_title: Storage
 page_order: 3.60
 page_type: reference
 description: "Learn about the different device-level properties that are stored by the Braze SDK."
@@ -92,7 +92,7 @@ new BrazeConfig.Builder()
 {% endtab %}
 
 {% tab swift %}
-For example, you can specify time zone and locale collection to be allowlisted. For more information, see the [`devicePropertyAllowList`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) property of the `configuration` object.
+For example, you can specify the time zone and locale collection to be allowlisted. For more information, see the [`devicePropertyAllowList`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) property of the `configuration` object.
 
 {% subtabs %}
 {% subtab swift %}
@@ -120,9 +120,9 @@ configuration.devicePropertyAllowList = @[
 To learn more about automatically-collected device properties, see [SDK Data Collection]({{site.baseurl}}/user_guide/data/unification/user_data/sdk_data_collection/).
 {% endalert %}
 
-## Storing cookies (web only) {#cookies}
+## Store cookies (web only) {#cookies}
 
-After [initializing the Web Braze SDK](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) it'll create and store cookies with a 400-day expiration that automatically renews on new sessions.
+After you [initialize the Web Braze SDK](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize), the SDK creates and stores cookies with a 400-day expiration that automatically renews on new sessions.
 
 The following cookies are stored:
 
@@ -135,7 +135,7 @@ The following cookies are stored:
 |`ab._gd`|Temporarily created (and then deleted) to determine the root-level cookie domain, which allows the SDK to work properly across sub-domains.|n/a|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-### Changing cookie expiry {#cookie-expiry}
+### Change cookie expiry {#cookie-expiry}
 
 By default, Braze cookies expire after 400 days. To override this, use the `cookieExpiryInDays` option when initializing the Web SDK. Values must be greater than 0; if the option is omitted or set to 0 or less, the 400-day default applies. This option requires Web SDK 6.6.0 or later.
 
@@ -147,7 +147,7 @@ braze.initialize("API-KEY", {
 });
 ```
 
-### Disabling cookies {#disable-cookies}
+### Disable cookies {#disable-cookies}
 
 To disable all cookies, use the [`noCookies`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) option when initializing the Web SDK. This will prevent you from associating anonymous users who navigate across sub-domains and will result in a new user on each subdomain.
 
@@ -159,4 +159,4 @@ braze.initialize("API-KEY", {
 });
 ```
 
-To stop Braze tracking in general, or to clear all stored browser data, see the [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disableSDK) and [`wipeData`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#wipedata) SDK methods, respectively. These two methods can be useful should a user revoke consent or you want to stop all Braze functionality after the SDK has already been initialized.
+To stop Braze tracking in general, or to clear all stored browser data, see the [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disableSDK) and [`wipeData`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#wipedata) SDK methods, respectively. These two methods can be useful if a user revokes consent or if you want to stop all Braze functionality after the SDK has already been initialized.

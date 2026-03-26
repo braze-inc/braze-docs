@@ -1,6 +1,6 @@
 ---
 nav_title: Localization
-article_title: Localization for Braze Swift SDK
+article_title: Localization
 page_order: 3.50
 description: "Learn about localization for the Braze SDK."
 platform:

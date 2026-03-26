@@ -132,7 +132,7 @@ Choose between a **Text** or **Media** message type.
 {% subtabs %}
 {% subtab Text %}
 
-RCS text messages focus on text as a medium. Messages up to 160 characters are billed as a basic RCS message. Messages exceeding 160 characters or using a rich element are billed as a rich (single) RCS message, with a character limit of 3,072.
+RCS text messages focus on text as a medium. If your message is up to 160 characters without rich elements, it's billed as a basic RCS message. If you exceed 160 characters or use a rich element, it's billed as a rich (single) RCS message with a character limit of 3,072.
 
 **Features:**
 
@@ -144,7 +144,9 @@ RCS text messages focus on text as a medium. Messages up to 160 characters are b
 
 **Considerations:**
 
+- Android and iOS can truncate differently: Android shows full rich message text, while iOS truncates after the third line.
 - You can add up to five buttons per message. These can be either suggested actions or suggested replies.
+- Longer text blocks and many buttons can overwhelm recipients; favor simplicity when you can.
 - In some cases, it can be more cost-effective to send longer text-only messages through RCS than with SMS, because longer SMS messages are broken into multiple billable segments, whereas RCS messages are billed per message.
 
 {% endsubtab %}

@@ -214,3 +214,13 @@ If you add or change a maximum recipient limit on an active campaign, the limit 
 
 To avoid misalignment, set the maximum recipient limit before launching the campaign and avoid modifying it while sends are in progress.
 
+### Why are sends lower than the estimated audience size?
+
+Several factors can cause the number of sends to be lower than the estimated audience size:
+
+- **Segment re-evaluation:** For action-based or scheduled campaigns that re-evaluate at send time, users who were in the segment when the campaign was enqueued may no longer qualify when the message is actually sent.
+- **Control groups:** If a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) or campaign-level control group is in use, a portion of the audience is withheld from delivery.
+- **Delivery timing and windows:** For local time zone or scheduled campaigns, users must qualify at both entry and send time; users in certain time zones may fall outside the delivery window.
+- **Rate limiting:** If rate limiting is applied, messages are distributed over time and some sends may be deferred or not yet reflected in the count.
+
+

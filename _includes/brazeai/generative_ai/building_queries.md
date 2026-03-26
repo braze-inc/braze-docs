@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-You'll need ["View PII" permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) to use Query Builder, since it allows direct access to some customer data.
+You'll need ["View PII" permissions]({{site.baseurl}}/user_guide/administer/global/user_management/permissions/) to use Query Builder, since it allows direct access to some customer data.
 
 ## Using the Query Builder
 
@@ -111,6 +111,22 @@ Each report can only generate results once per day. If you run the same report m
 Reports that take longer than six minutes to run will time out. If this is the first query you're running in some time, it may take longer to process and therefore has a higher likelihood of timing out. If this happens, try running the report again.
 
 If your report continues to time out after multiple attempts, [contact Support]({{site.baseurl}}/help/support#braze-support).
+
+## Querying abort reasons
+
+You can query the `ABORT_TYPE` column on any `USERS_MESSAGES_*_ABORT_SHARED` table to analyze why messages were not sent. The `ABORT_TYPE` field contains a string value describing the specific reason for the abort, and the companion `ABORT_LOG` field contains additional details (such as the frequency capping rule that was triggered).
+
+For example, to count email aborts by type in the last 30 days:
+
+```sql
+SELECT ABORT_TYPE, COUNT(*) as abort_count
+FROM USERS_MESSAGES_EMAIL_ABORT_SHARED
+WHERE to_date(to_timestamp_ntz(time)) >= DATEADD('day', -30, CURRENT_DATE())
+GROUP BY ABORT_TYPE
+ORDER BY abort_count DESC
+```
+
+For the full list of `ABORT_TYPE` values and their descriptions, see [Abort types]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types).
 
 ## Data and results
 

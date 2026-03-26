@@ -10,9 +10,72 @@ tool: Currents
 
 > Track schema changes across Currents releases. Each version lists new event types and field additions for both storage and data sharing.
 
+## Changes in Version 7 (release date 2026-04-01)
+
+### Changes for Storage:
+
+* Field changes to event type `users.messages.banner.Abort`:
+    * Added new `string` field `canvas_name`: Name of the Canvas
+    * Added new `string` field `canvas_step_name`: Name of the Canvas step
+    * Added new `string` field `canvas_variation_name`: Name of the Canvas variation this user received
+    * Added new `string` field `canvas_id`: API ID of the Canvas this event belongs to
+    * Added new `string` field `canvas_step_id`: API ID of the Canvas step this event belongs to
+    * Added new `string` field `canvas_step_message_variation_id`: API ID of the Canvas step message variation this user received
+    * Added new `string` field `canvas_variation_id`: API ID of the Canvas variation this event belongs to
+
+* Field changes to event type `users.messages.banner.Click`:
+    * Added new `string` field `canvas_id`: API ID of the Canvas this event belongs to
+    * Added new `string` field `canvas_step_id`: API ID of the Canvas step this event belongs to
+    * Added new `string` field `canvas_name`: Name of the Canvas
+    * Added new `string` field `canvas_step_name`: Name of the Canvas step
+    * Added new `string` field `canvas_step_message_variation_id`: API ID of the Canvas step message variation this user received
+    * Added new `string` field `canvas_variation_id`: API ID of the Canvas variation this event belongs to
+    * Added new `string` field `canvas_variation_name`: Name of the Canvas variation this user received
+
+* Field changes to event type `users.messages.banner.Impression`:
+    * Added new `string` field `canvas_id`: API ID of the Canvas this event belongs to
+    * Added new `string` field `canvas_step_id`: API ID of the Canvas step this event belongs to
+    * Added new `string` field `canvas_name`: Name of the Canvas
+    * Added new `string` field `canvas_step_name`: Name of the Canvas step
+    * Added new `string` field `canvas_step_message_variation_id`: API ID of the Canvas step message variation this user received
+    * Added new `string` field `canvas_variation_id`: API ID of the Canvas variation this event belongs to
+    * Added new `string` field `canvas_variation_name`: Name of the Canvas variation this user received
+
+### Changes for Data Sharing:
+
+* Field changes to event type `users.messages.banner.Abort`:
+    * Added new `string` field `canvas_id`: BSON ID of the Canvas this event belongs to
+    * Added new `string` field `canvas_name`: Name of the Canvas
+    * Added new `string` field `canvas_step_name`: Name of the Canvas step
+    * Added new `string` field `canvas_variation_name`: Name of the Canvas variation this user received
+    * Added new `string` field `canvas_api_id`: API ID of the Canvas this event belongs to
+    * Added new `string` field `canvas_step_api_id`: API ID of the Canvas step this event belongs to
+    * Added new `string` field `canvas_step_message_variation_api_id`: API ID of the Canvas step message variation this user received
+    * Added new `string` field `canvas_variation_api_id`: API ID of the Canvas variation this event belongs to
+
+* Field changes to event type `users.messages.banner.Click`:
+    * Added new `string` field `canvas_api_id`: API ID of the Canvas this event belongs to
+    * Added new `string` field `canvas_step_api_id`: API ID of the Canvas step this event belongs to
+    * Added new `string` field `canvas_id`: BSON ID of the Canvas this event belongs to
+    * Added new `string` field `canvas_name`: Name of the Canvas
+    * Added new `string` field `canvas_step_name`: Name of the Canvas step
+    * Added new `string` field `canvas_step_message_variation_api_id`: API ID of the Canvas step message variation this user received
+    * Added new `string` field `canvas_variation_api_id`: API ID of the Canvas variation this event belongs to
+    * Added new `string` field `canvas_variation_name`: Name of the Canvas variation this user received
+
+* Field changes to event type `users.messages.banner.Impression`:
+    * Added new `string` field `canvas_api_id`: API ID of the Canvas this event belongs to
+    * Added new `string` field `canvas_step_api_id`: API ID of the Canvas step this event belongs to
+    * Added new `string` field `canvas_id`: BSON ID of the Canvas this event belongs to
+    * Added new `string` field `canvas_name`: Name of the Canvas
+    * Added new `string` field `canvas_step_name`: Name of the Canvas step
+    * Added new `string` field `canvas_step_message_variation_api_id`: API ID of the Canvas step message variation this user received
+    * Added new `string` field `canvas_variation_api_id`: API ID of the Canvas variation this event belongs to
+    * Added new `string` field `canvas_variation_name`: Name of the Canvas variation this user received
+
 ## Changes in Version 6 (release date 2026-03-04)
 
-### Changes for storage
+### Changes for Storage:
 
 * Field changes to event type `agentconsole.AgentExecuted`:
     * Added new `string` field `error`: Description of error
@@ -23,7 +86,7 @@ tool: Currents
 * Field changes to event type `users.messages.rcs.InboundReceive`:
     * Added new `string` field `canvas_variation_name`: Name of the Canvas variation this user received
 
-### Changes for data sharing
+### Changes for Data Sharing:
 
 * Field changes to event type `agentconsole.AgentExecuted`:
     * Added new `string` field `canvas_name`: Name of the Canvas
@@ -453,7 +516,7 @@ tool: Currents
 
 ## Changes in Version 5 (release date 2026-02-04)
 
-### Changes for storage
+### Changes for Storage:
 
 * Added new event type `agentconsole.AgentExecuted`.
 * Added new event type `agentconsole.ToolInvocation`.
@@ -466,7 +529,7 @@ tool: Currents
 * Field changes to event type `users.behaviors.pushnotification.TokenStateChange`:
     * Added new `long` field `time_ms`: Time in millisecond when the event happened
 
-### Changes for data sharing
+### Changes for Data Sharing:
 
 * Added new event type `agentconsole.AgentExecuted`.
 * Added new event type `agentconsole.ToolInvocation`.
@@ -481,7 +544,7 @@ tool: Currents
 
 ## Changes in Version 4 (release date 2026-01-07)
 
-### Changes for storage
+### Changes for Storage:
 
 * Field changes to event type `users.behaviors.pushnotification.TokenStateChange`:
     * Added new `string` field `push_token`: Push token of the event
@@ -502,7 +565,7 @@ tool: Currents
 * Field changes to event type `users.messages.rcs.Rejection`:
     * Added new `string` field `canvas_step_message_variation_id`: API ID of the Canvas step message variation this user received
 
-### Changes for data sharing
+### Changes for Data Sharing:
 
 * Field changes to event type `users.messages.rcs.Click`:
     * Added new `string` field `canvas_variation_name`: Name of the Canvas variation this user received
@@ -516,7 +579,7 @@ tool: Currents
 
 ## Changes in Version 3 (release date 2025-10-08)
 
-### Changes for storage
+### Changes for Storage:
 
 * Added new event type `users.messages.line.Abort`.
 * Added new event type `users.messages.line.Click`.
@@ -566,7 +629,7 @@ tool: Currents
     * Added new `string` field `template_name`: [PII] Name of the template in the WhatsApp Manager. Present if sending a Template Message
     * Added new `string` field `message_id`: The unique ID generated by Meta for this message
 
-### Changes for data sharing
+### Changes for Data Sharing:
 
 * Added new event type `users.messages.line.Abort`.
 * Added new event type `users.messages.line.Click`.
@@ -618,7 +681,7 @@ tool: Currents
 
 ## Changes in Version 2 (release date null)
 
-### Changes for storage
+### Changes for Storage:
 
 * Added new event type `users.behaviors.app.FirstSession`.
 * Added new event type `users.behaviors.app.SessionEnd`.
@@ -691,7 +754,7 @@ tool: Currents
 * Added new event type `users.messages.whatsapp.Send`.
 * Added new event type `users.RandomBucketNumberUpdate`.
 
-### Changes for data sharing
+### Changes for Data Sharing:
 
 * Added new event type `changelogs.GlobalControlGroup`.
 * Added new event type `users.behaviors.app.FirstSession`.
