@@ -15,37 +15,37 @@ Para una investigación más profunda, también puedes [habilitar el registro de
 
 ## Requisitos previos
 
-Para utilizar el depurador del SDK de Braze, necesitarás los permisos «Ver PII» y «Ver perfiles de usuario conformes con la normativa PII». Para descargar los registros de tus sesiones de depuración, también necesitarás el permiso «Exportar datos de usuario». Además, tu SDK de Braze debe cumplir o apuntar a las siguientes versiones mínimas: 
+Para utilizar el depurador del SDK de Braze, necesitarás los permisos granulares "Ver PII" y "Ver perfiles de usuario (PII oculta)" (o los permisos heredados "Ver perfiles de usuario conformes con PII"). Para descargar los registros de tus sesiones de depuración, también necesitarás el permiso "Exportar datos de usuario". Además, tu SDK de Braze debe cumplir o apuntar a las siguientes versiones mínimas: 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
 ## Depuración del SDK de Braze
 
 {% alert tip %}
-Para habilitar la depuración para el SDK de la Web de Braze, puedes [utilizar un parámetro URL]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging).
+Para habilitar la depuración del SDK Web de Braze, puedes [utilizar un parámetro de URL]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#logging).
 {% endalert %}
 
 ### Paso 1: Cierra tu aplicación
 
 Antes de iniciar la sesión de depuración, cierra la aplicación que esté experimentando problemas. Puedes relanzar la aplicación al inicio de tu sesión.
 
-### Paso 2: Crear una sesión de depuración
+### Paso 2: Crea una sesión de depuración
 
 En Braze, ve a **Configuración** y, en **Configuración y pruebas**, selecciona **Depurador SDK**.
 
-![La sección «Configuración y pruebas» con «Depurador SDK» resaltado.]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
+![La sección "Configuración y pruebas" con "Depurador SDK" resaltado.]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
 
 Selecciona **Crear sesión de depuración**.
 
-![La página «Depurador SDK».]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
+![La página "Depurador SDK".]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
 
-### Paso 3: Selecciona un usuario
+### Paso 3: Selecciona un usuario
 
 Busca a un usuario utilizando su dirección de correo electrónico, `external_id`, alias de usuario o token de notificaciones push. Cuando estés listo para iniciar la sesión, selecciona **Seleccionar usuario**.
 
 ![La página de depuración para el usuario seleccionado.]({% image_buster /assets/img/sdk_debugger/search_and_select_user.png %}){: style="max-width:85%;"}
 
-### Paso 4: Volver a lanzar la aplicación
+### Paso 4: Vuelve a lanzar la aplicación
 
 Primero, inicia la aplicación y confirma que tu dispositivo está emparejado. Si el emparejamiento se realiza correctamente, relanza tu aplicación; así te asegurarás de que los registros de inicialización de la aplicación se capturan por completo.
 
@@ -61,7 +61,7 @@ Cuando reproduzcas el error, asegúrate de seguir los pasos de reproducción lo 
 
 Cuando hayas terminado con los pasos de reproducción, selecciona **Finalizar sesión** > **Cerrar**.
 
-![La sesión de depuración muestra el botón «Finalizar sesión».]({% image_buster /assets/img/sdk_debugger/close_debugging_session.png %}){: style="max-width:85%;"}
+![La sesión de depuración muestra el botón "Finalizar sesión".]({% image_buster /assets/img/sdk_debugger/close_debugging_session.png %}){: style="max-width:85%;"}
 
 {% alert note %}
 Puede tardar unos minutos en generar tus registros, dependiendo de la duración de la sesión y de la conectividad de la red.
@@ -71,4 +71,4 @@ Puede tardar unos minutos en generar tus registros, dependiendo de la duración 
 
 Después de la sesión, puedes exportar tus registros de sesión como archivo CSV. Además, otras personas pueden utilizar tu **ID de sesión** para buscar tu sesión de depuración, por lo que no necesitas enviarles tus registros directamente.
 
-![La página de depuración con «Exportar registros» y «Copiar ID de sesión» que se muestra después de la sesión.]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})
+![La página de depuración con "Exportar registros" y "Copiar ID de sesión" que se muestra después de la sesión.]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})

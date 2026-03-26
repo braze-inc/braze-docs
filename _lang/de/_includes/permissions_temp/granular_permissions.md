@@ -60,7 +60,7 @@ Eingeschränkte Nutzer:innen verfügen über spezifische Berechtigungen, die es 
 | Nur-Lese-Zugriff | Um auf bestimmte Bereiche des Dashboards zugreifen zu können, wie beispielsweise die Seite „Kampagnen", müssen Nutzer:innen über die entsprechenden Anzeigeberechtigungen verfügen.
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Fehler beim eingeschränkten Zugriff
+### Fehler bei eingeschränktem Zugriff
 
 Nutzer:innen können Nachrichten wie „Sie benötigen die Berechtigung ‚Landing Pages anzeigen', um auf diese Seite zugreifen zu können" erhalten. In solchen Fällen sollten die Nutzer:innen und der Kontoadministrator überprüfen, ob die erforderlichen Berechtigungen erteilt wurden. Ist dies der Fall, versuchen Sie, das Problem zu beheben, indem Sie die Berechtigungen der Nutzer:innen deaktivieren und anschließend wieder aktivieren. 
 
@@ -158,10 +158,9 @@ Um eine Liste Ihrer Nutzer:innen und deren Berechtigungen herunterzuladen, gehen
 | Rechnungsdetails anzeigen                            | Rechnungsdetails anzeigen |
 | Als PII gekennzeichnete angepasste Attribute anzeigen            | Als PII gekennzeichnete angepasste Attribute anzeigen |
 | PII anzeigen                                        | PII anzeigen |
-| Nutzerprofile PII-konform anzeigen                | Zugriff auf die Nutzersuche und Anzeige von Nutzerprofilen mit unkenntlich gemachten PII-Daten |
+| Nutzerprofile PII-konform anzeigen               | Zugriff auf die Nutzersuche und Anzeige von Nutzerprofilen mit unkenntlich gemachten PII-Daten |
 | Nutzungsdaten anzeigen                                 | Nutzungsdaten anzeigen |
-| Doppelte Nutzer:innen zusammenführen                           | Doppelte Nutzer:innen zu einer Nutzer:in zusammenführen. Duplikate werden nach dem Zusammenführen entfernt. |
-| Vorschau doppelter Nutzer:innen anzeigen                         | Vorschau, welche Nutzerprofile doppelt vorhanden sind |
+| Doppelte Nutzer:innen zusammenführen                           | Vorschau anzeigen und doppelte Nutzer:innen zu einer Nutzer:in zusammenführen. Duplikate werden nach dem Zusammenführen entfernt. |
 | Canvas-Templates anzeigen                           | Canvas-Templates anzeigen |
 | Canvas-Templates archivieren                        | Canvas-Templates in das Archiv verschieben |
 | Content-Blöcke starten                           | Content-Blöcke starten |
@@ -199,9 +198,9 @@ Um eine Liste Ihrer Nutzer:innen und deren Berechtigungen herunterzuladen, gehen
 | E-Mail-Templates archivieren                         | E-Mail-Templates in das Archiv verschieben |
 | Link-Templates anzeigen   	                  | Link-Templates anzeigen, ohne Änderungen vorzunehmen |
 | Link-Templates bearbeiten	                      | Link-Templates erstellen und aktualisieren |
-| Landing Pages veröffentlichen                           | Einen Landing-Page-Entwurf aktivieren |
+| Landing-Pages veröffentlichen                           | Einen Landing-Page-Entwurf aktivieren |
 | Landing-Page-Entwürfe bearbeiten                        | Landing-Page-Entwürfe erstellen und speichern |
-| Landing Pages anzeigen			                  | Landing Pages anzeigen |
+| Landing-Pages anzeigen			                  | Landing-Pages anzeigen |
 | Landing-Page-Templates bearbeiten	                  | Landing-Page-Templates erstellen und aktualisieren |
 | Landing-Page-Templates anzeigen	                  | Landing-Page-Templates anzeigen |
 | Landing-Page-Templates archivieren 	              | Landing-Page-Templates in das Archiv verschieben |
@@ -271,8 +270,8 @@ Um eine Liste Ihrer Nutzer:innen und deren Berechtigungen herunterzuladen, gehen
 | Datentransformationen anzeigen                        | Datentransformationen anzeigen |
 | Datentransformationen bearbeiten                        | Datentransformationen erstellen und aktualisieren |
 | Canvas-Templates bearbeiten                           | Canvas-Templates erstellen und aktualisieren |
-| Kampagnen genehmigen                               | Kampagnen genehmigen oder ablehnen. Der [Genehmigungsworkflow für Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) muss aktiviert sein, damit diese Berechtigung gilt. Diese Einstellung befindet sich derzeit in der Early-Access-Phase. Bitte wenden Sie sich an Ihren Account Manager, wenn Sie an einer Teilnahme am Early Access interessiert sind. |
-| Canvase genehmigen                                | Canvase genehmigen oder ablehnen. Der [Genehmigungsworkflow für Canvase]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) muss aktiviert sein, damit diese Berechtigung gilt. Diese Einstellung befindet sich derzeit in der Early-Access-Phase. Bitte wenden Sie sich an Ihren Account Manager, wenn Sie an einer Teilnahme am Early Access interessiert sind. |
+| Kampagnen genehmigen                               | Kampagnen genehmigen oder ablehnen. Der [Genehmigungsworkflow für Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) muss aktiviert sein, damit diese Berechtigung gilt. Diese Einstellung befindet sich derzeit in der Early-Access-Phase. Wenden Sie sich an Ihren Account Manager, wenn Sie an einer Teilnahme am Early Access interessiert sind. |
+| Canvase genehmigen                                | Canvase genehmigen oder ablehnen. Der [Genehmigungsworkflow für Canvase]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) muss aktiviert sein, damit diese Berechtigung gilt. Diese Einstellung befindet sich derzeit in der Early-Access-Phase. Wenden Sie sich an Ihren Account Manager, wenn Sie an einer Teilnahme am Early Access interessiert sind. |
 | Platzierungen anzeigen                                 | Bannerplatzierungen anzeigen |
 | Platzierungen bearbeiten                                 | Bannerplatzierungen anzeigen, ohne Änderungen vorzunehmen |
 | Platzierungen archivieren                              | Bannerplatzierungen in das Archiv verschieben |
@@ -284,8 +283,6 @@ Um eine Liste Ihrer Nutzer:innen und deren Berechtigungen herunterzuladen, gehen
 | Nutzerdaten exportieren                                | Nutzer:innen vom Dashboard herunterladen |
 | Nutzerdaten bearbeiten                                  | Nutzerdaten erstellen und aktualisieren |
 | Zusammengeführte Nutzer:innen anzeigen                                | Eine Liste der Zusammenführungsdatensätze für Nutzer:innen anzeigen |
-| Löschungsdatensätze für Nutzer:innen anzeigen	            	  | Löschungsdatensätze für Nutzer:innen anzeigen |
-| Nutzer:innen aus Dashboard löschen	                  | Nutzer:innen dauerhaft einzeln oder in großen Mengen aus dem Dashboard löschen. |      
 | Angepasste KI-Agenten anzeigen                           | Ermöglicht es Nutzer:innen, angepasste KI-Agenten anzuzeigen. |
 | Angepasste KI-Agenten bearbeiten                           | Ermöglicht es Nutzer:innen, angepasste KI-Agenten zu erstellen und zu aktualisieren. |
 | Angepasste KI-Agenten archivieren                        | Ermöglicht es Nutzer:innen, angepasste KI-Agenten zu archivieren. |

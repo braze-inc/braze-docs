@@ -48,8 +48,8 @@ table td {
 [USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED](#USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED) | ユーザーが News Feed を閲覧したとき
 [USERS_BEHAVIORS_APP_SESSIONEND_SHARED](#USERS_BEHAVIORS_APP_SESSIONEND_SHARED) | ユーザーがアプリでセッションを終了したとき
 [USERS_BEHAVIORS_APP_SESSIONSTART_SHARED](#USERS_BEHAVIORS_APP_SESSIONSTART_SHARED) | ユーザーがアプリでセッションを開始したとき
-[USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | ユーザーがジオフェンスエリアをトリガーしたとき（例: ジオフェンスに入った、または出たとき）。このイベントは他のイベントとバッチ処理され、標準イベントエンドポイント経由で受信されたため、リアルタイムで受信されていない場合があります。
-[USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED) | ユーザーがジオフェンスエリアをトリガーしたとき（例: ジオフェンスに入った、または出たとき）。このイベントは専用のジオフェンスエンドポイント経由で受信されるため、ユーザーのデバイスがジオフェンスのトリガーを検出するとすぐにリアルタイムで受信されます。<br><br>また、ジオフェンスエンドポイントのレート制限により、一部のジオフェンスイベントが RecordEvent として反映されない場合があります。ただし、すべてのジオフェンスイベントは DataEvent として表現されます（バッチ処理による遅延が発生する可能性があります）。
+[USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | ユーザーがジオフェンスエリアをトリガーしたとき（例: ジオフェンスに入った、または出たとき）。このイベントは他のイベントとバッチ処理され、標準イベントエンドポイント経由で受信されたため、リアルタイムでエンドポイントに受信されていない場合があります。
+[USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_RECORDEVENT_SHARED) | ユーザーがジオフェンスエリアをトリガーしたとき（例: ジオフェンスに入った、または出たとき）。このイベントは専用のジオフェンスエンドポイント経由で受信されるため、ユーザーのデバイスがジオフェンスのトリガーを検出するとすぐにリアルタイムで受信されます。<br><br>また、ジオフェンスエンドポイントのレート制限により、一部のジオフェンスイベントが RecordEvent として反映されない場合があります。ただし、すべてのジオフェンスイベントは DataEvent として表現されます（バッチ処理による遅延が発生する場合があります）。
 [USERS_BEHAVIORS_LIVEACTIVITY_PUSHTOSTARTTOKENCHANGE_SHARED](#USERS_BEHAVIORS_LIVEACTIVITY_PUSHTOSTARTTOKENCHANGE_SHARED) | Live Activity の push-to-start トークンが変更されたとき
 [USERS_BEHAVIORS_LIVEACTIVITY_UPDATETOKENCHANGE_SHARED](#USERS_BEHAVIORS_LIVEACTIVITY_UPDATETOKENCHANGE_SHARED) | Live Activity の更新トークンが変更されたとき
 [USERS_BEHAVIORS_PUSHNOTIFICATION_TOKENSTATECHANGE_SHARED](#USERS_BEHAVIORS_PUSHNOTIFICATION_TOKENSTATECHANGE_SHARED) | プッシュ通知トークンの状態が変更されたとき
@@ -62,8 +62,8 @@ table td {
 [USERS_CANVASSTEP_PROGRESSION_SHARED](#USERS_CANVASSTEP_PROGRESSION_SHARED) | ユーザーがキャンバスステップに進んだとき
 [USERS_CANVAS_CONVERSION_SHARED](#USERS_CANVAS_CONVERSION_SHARED) | ユーザーが Canvas のコンバージョンイベントでコンバージョンしたとき
 [USERS_CANVAS_ENTRY_SHARED](#USERS_CANVAS_ENTRY_SHARED) | ユーザーが Canvas に入ったとき
-[USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED](#USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED) | ユーザーがオーディエンス離脱条件に一致して Canvas を離脱したとき
-[USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED](#USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED) | ユーザーが例外イベントを実行して Canvas を離脱したとき
+[USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED](#USERS_CANVAS_EXIT_MATCHEDAUDIENCE_SHARED) | ユーザーがオーディエンス離脱条件に一致したため Canvas を離脱したとき
+[USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED](#USERS_CANVAS_EXIT_PERFORMEDEVENT_SHARED) | ユーザーが例外イベントを実行したため Canvas を離脱したとき
 [USERS_CANVAS_EXPERIMENTSTEP_CONVERSION_SHARED](#USERS_CANVAS_EXPERIMENTSTEP_CONVERSION_SHARED) | ユーザーが Canvas の実験ステップでコンバージョンしたとき
 [USERS_CANVAS_EXPERIMENTSTEP_SPLITENTRY_SHARED](#USERS_CANVAS_EXPERIMENTSTEP_SPLITENTRY_SHARED) | ユーザーが実験ステップのパスに入ったとき
 [USERS_CANVAS_FREQUENCYCAP_SHARED](#USERS_CANVAS_FREQUENCYCAP_SHARED) | ユーザーがキャンバスステップでフリークエンシーキャップに達したとき
@@ -105,9 +105,9 @@ table td {
 [USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED) | プッシュ通知がバウンスしたとき
 [USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED) | ユーザーが通知を受信した後、通知をクリックせずにアプリを開いたとき
 [USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED) | アプリが開いている状態でユーザーがプッシュ通知を受信したとき。<br><br>このイベントは [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) ではサポートされておらず、[Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk) では非推奨です。
-[USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED) | ユーザーがプッシュ通知を開いた、またはプッシュ通知ボタン（アプリを開かない「閉じる」ボタンを含む）をクリックしたとき。<br><br>プッシュボタンアクションには複数の結果があります。「いいえ」、「拒否」、「キャンセル」のアクションは「クリック」であり、「承認」のアクションは「開封」です。両方ともこのテーブルに表示されますが、**BUTTON_ACTION_TYPE** 列で区別できます。例えば、「いいえ」、「拒否」、「キャンセル」以外の `BUTTON_ACTION_TYPE` でグループ化するクエリを使用できます。
+[USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED) | ユーザーがプッシュ通知を開いた、またはプッシュ通知ボタン（アプリを開かない CLOSE ボタンを含む）をクリックしたとき。<br><br>プッシュボタンアクションには複数の結果があります。No、Decline、Cancel アクションは「クリック」であり、Accept アクションは「開封」です。両方ともこのテーブルに表示されますが、**BUTTON_ACTION_TYPE** 列で区別できます。例えば、`BUTTON_ACTION_TYPE` が No、Decline、Cancel でないものでグループ化するクエリを使用できます。
 [USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED) | ユーザーにプッシュ通知を送信したとき
-[USERS_MESSAGES_RCS_ABORT_SHARED](#USERS_MESSAGES_RCS_ABORT_SHARED) | Braze 内でエラーが検出されて RCS 送信が中断され、メッセージが破棄されたとき
+[USERS_MESSAGES_RCS_ABORT_SHARED](#USERS_MESSAGES_RCS_ABORT_SHARED) | Braze 内で検出されたエラーにより RCS 送信が中断され、メッセージがドロップされたとき
 [USERS_MESSAGES_RCS_CLICK_SHARED](#USERS_MESSAGES_RCS_CLICK_SHARED) | エンドユーザーが RCS メッセージの UI 要素をタップまたはクリックして操作したとき
 [USERS_MESSAGES_RCS_DELIVERY_SHARED](#USERS_MESSAGES_RCS_DELIVERY_SHARED) | RCS メッセージがエンドユーザーのモバイルデバイスに正常に配信されたとき
 [USERS_MESSAGES_RCS_INBOUNDRECEIVE_SHARED](#USERS_MESSAGES_RCS_INBOUNDRECEIVE_SHARED) | Braze がエンドユーザーからの RCS メッセージを受信したとき
@@ -117,7 +117,7 @@ table td {
 [USERS_MESSAGES_SMS_ABORT_SHARED](#USERS_MESSAGES_SMS_ABORT_SHARED) | 元々スケジュールされた SMS メッセージが何らかの理由で中止されたとき
 [USERS_MESSAGES_SMS_CARRIERSEND_SHARED](#USERS_MESSAGES_SMS_CARRIERSEND_SHARED) | SMS メッセージがキャリアに送信されたとき
 [USERS_MESSAGES_SMS_DELIVERY_SHARED](#USERS_MESSAGES_SMS_DELIVERY_SHARED) | SMS メッセージが配信されたとき
-[USERS_MESSAGES_SMS_DELIVERYFAILURE_SHARED](#USERS_MESSAGES_SMS_DELIVERYFAILURE_SHARED) | Braze が SMS メッセージを SMS サービスプロバイダーに配信できなかったとき
+[USERS_MESSAGES_SMS_DELIVERYFAILURE_SHARED](#USERS_MESSAGES_SMS_DELIVERYFAILURE_SHARED) | Braze が SMS サービスプロバイダーに SMS メッセージを配信できなかったとき
 [USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED](#USERS_MESSAGES_SMS_INBOUNDRECEIVE_SHARED) | ユーザーから SMS メッセージを受信したとき
 [USERS_MESSAGES_SMS_REJECTION_SHARED](#USERS_MESSAGES_SMS_REJECTION_SHARED) | SMS メッセージがユーザーに配信されなかったとき
 [USERS_MESSAGES_SMS_SEND_SHARED](#USERS_MESSAGES_SMS_SEND_SHARED) | SMS メッセージが送信されたとき
@@ -277,7 +277,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 ------|------|------------
 `id` | `string` | このイベントのグローバル一意 ID
 `user_id` | `string` | イベントを実行したユーザーの Braze ID
-`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの external user ID
+`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの外部ユーザー ID
 `app_group_api_id` | `null,`&nbsp;`string` | このユーザーが属するワークスペースの API ID
 `app_api_id` | `null,`&nbsp;`string` | このアクションが発生したアプリの API ID
 `time` | `int` | ユーザーがイベントを実行した Unix タイムスタンプ
@@ -305,8 +305,8 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 ------|------|------------
 `id` | `string` | このイベントのグローバル一意 ID
 `user_id` | `string` | インストールしたユーザーの Braze ID
-`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの external user ID
-`device_id` | `null,`&nbsp;`string` | ユーザーが匿名の場合、このユーザーに紐づく `device_id`
+`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの外部ユーザー ID
+`device_id` | `null,`&nbsp;`string` | ユーザーが匿名の場合、このユーザーに紐づけられた `device_id`
 `app_group_api_id` | `null,`&nbsp;`string` | このユーザーが属するワークスペースの API ID
 `time` | `int` | ユーザーがインストールした Unix タイムスタンプ
 `source` | `string` | アトリビューションのソース
@@ -320,7 +320,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 ------|------|------------
 `id` | `string` | このイベントのグローバル一意 ID
 `user_id` | `string` | ロケーションを記録したユーザーの Braze ID
-`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの external user ID
+`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの外部ユーザー ID
 `app_group_api_id` | `null,`&nbsp;`string` | このユーザーが属するワークスペースの API ID
 `app_api_id` | `null,`&nbsp;`string` | このロケーションが記録されたアプリの API ID
 `time` | `int` | ロケーションが記録された Unix タイムスタンプ
@@ -347,7 +347,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 ------|------|------------
 `id` | `string` | このイベントのグローバル一意 ID
 `user_id` | `string` | 購入を行ったユーザーの Braze ID
-`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの external user ID
+`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの外部ユーザー ID
 `app_group_api_id` | `null,`&nbsp;`string` | このユーザーが属するワークスペースの API ID
 `app_api_id` | `null,`&nbsp;`string` | 購入が発生したアプリの API ID
 `time` | `int` | ユーザーが購入を行った Unix タイムスタンプ
@@ -373,8 +373,8 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 ------|------|------------
 `id` | `string` | このイベントのグローバル一意 ID
 `user_id` | `string` | アンインストールしたユーザーの Braze ID
-`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの external user ID
-`device_id` | `null,`&nbsp;`string` | ユーザーが匿名の場合、このユーザーに紐づく `device_id`
+`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの外部ユーザー ID
+`device_id` | `null,`&nbsp;`string` | ユーザーが匿名の場合、このユーザーに紐づけられた `device_id`
 `app_group_api_id` | `null,`&nbsp;`string` | このユーザーが属するワークスペースの API ID
 `app_api_id` | `null,`&nbsp;`string` | アンインストールされたアプリの API ID
 `time` | `int` | ユーザーがアンインストールした Unix タイムスタンプ
@@ -388,7 +388,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 ------|------|------------
 `id` | `string` | このイベントのグローバル一意 ID
 `user_id` | `string` | アプリをアップグレードしたユーザーの Braze ID
-`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの external user ID
+`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの外部ユーザー ID
 `app_group_api_id` | `null,`&nbsp;`string` | このユーザーが属するワークスペースの API ID
 `app_api_id` | `null,`&nbsp;`string` | ユーザーがアップグレードしたアプリの API ID
 `time` | `int` | ユーザーがアプリをアップグレードした Unix タイムスタンプ
@@ -409,7 +409,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 ------|------|------------
 `id` | `string` | このイベントのグローバル一意 ID
 `user_id` | `string` | このアクションを実行したユーザーの Braze ID
-`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの external user ID
+`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの外部ユーザー ID
 `app_group_api_id` | `null,`&nbsp;`string` | このユーザーが属するワークスペースの API ID
 `app_api_id` | `null,`&nbsp;`string` | このセッションが発生したアプリの API ID
 `time` | `int` | セッションが開始された Unix タイムスタンプ
@@ -453,7 +453,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 ------|------|------------
 `id` | `string` | このイベントのグローバル一意 ID
 `user_id` | `string` | このアクションを実行したユーザーの Braze ID
-`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの external user ID
+`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの外部ユーザー ID
 `app_group_api_id` | `null,`&nbsp;`string` | このユーザーが属するワークスペースの API ID
 `app_api_id` | `null,`&nbsp;`string` | このセッションが発生したアプリの API ID
 `time` | `int` | セッションが終了した Unix タイムスタンプ
@@ -474,7 +474,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 ------|------|------------
 `id` | `string` | このイベントのグローバル一意 ID
 `user_id` | `string` | このアクションを実行したユーザーの Braze ID
-`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの external user ID
+`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの外部ユーザー ID
 `app_api_id` | `null,`&nbsp;`string` | このセッションが発生したアプリの API ID
 `app_group_api_id` | `null,`&nbsp;`string` | このユーザーが属するワークスペースの API ID
 `time` | `int` | セッションが開始された Unix タイムスタンプ
@@ -494,7 +494,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 ------|------|------------
 `id` | `string` | このイベントのグローバル一意 ID
 `user_id` | `string` | イベントを実行したユーザーの Braze ID
-`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの external user ID
+`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの外部ユーザー ID
 `app_group_api_id` | `null,`&nbsp;`string` | このユーザーが属するワークスペースの API ID
 `app_api_id` | `null,`&nbsp;`string` | このアクションが発生したアプリの API ID
 `time` | `int` | ユーザーがイベントを実行した Unix タイムスタンプ
@@ -516,7 +516,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 ------|------|------------
 `id` | `string` | このイベントのグローバル一意 ID
 `user_id` | `string` | イベントを実行したユーザーの Braze ID
-`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの external user ID
+`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの外部ユーザー ID
 `app_group_api_id` | `null,`&nbsp;`string` | このユーザーが属するワークスペースの API ID
 `app_api_id` | `null,`&nbsp;`string` | このアクションが発生したアプリの API ID
 `time` | `int` | ユーザーがイベントを実行した Unix タイムスタンプ
@@ -543,7 +543,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `time` | `int` | イベントが発生した UNIX タイムスタンプ
 `app_group_id` | `null,`&nbsp;`string` | このユーザーが属するアプリグループの BSON ID
 `activity_attributes_type` | `null,`&nbsp;`string` | Live Activity の属性タイプ
-`push_to_start_token` | `null,`&nbsp;`string` | Live Activity の push to start トークン
+`push_to_start_token` | `null,`&nbsp;`string` | Live Activity の push-to-start トークン
 `device_id` | `null,`&nbsp;`string` | イベントが発生したデバイスの ID
 `sdk_version` | `null,`&nbsp;`string` | イベント時に使用されていた Braze SDK のバージョン
 `ios_push_token_apns_gateway` | `null, int` | プッシュトークンの APN ゲートウェイ。iOS プッシュトークンにのみ適用されます。1 は開発用、2 は本番用
@@ -609,7 +609,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 ------|------|------------
 `id` | `string` | このイベントのグローバル一意 ID
 `user_id` | `string` | 影響を受けたユーザーの Braze ID
-`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの external user ID
+`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの外部ユーザー ID
 `email_address` | `null,`&nbsp;`string` | [PII] ユーザーのメールアドレス
 `state_change_source` | `null,`&nbsp;`string` | 状態変更のソース（REST、SDK、ダッシュボードなど）
 `subscription_status` | `string` | サブスクリプションステータス: 'Subscribed'、'Unsubscribed'、または 'Opted In'
@@ -637,8 +637,8 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 ------|------|------------
 `id` | `string` | このイベントのグローバル一意 ID
 `user_id` | `string` | 影響を受けたユーザーの Braze ID
-`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの external user ID
-`device_id` | `null,`&nbsp;`string` | ユーザーが匿名の場合、このユーザーに紐づく `device_id`
+`external_user_id` | `null,`&nbsp;`string` | [PII] ユーザーの外部ユーザー ID
+`device_id` | `null,`&nbsp;`string` | ユーザーが匿名の場合、このユーザーに紐づけられた `device_id`
 `app_group_api_id` | `null,`&nbsp;`string` | このユーザーが属するワークスペースの API ID
 `email_address` | `null,`&nbsp;`string` | [PII] ユーザーのメールアドレス
 `phone_number` | `null,`&nbsp;`string` | [PII] e164 形式のユーザーの電話番号
@@ -993,7 +993,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `ad_id` | `null,`&nbsp;`string` | [PII] 広告識別子
 `ad_id_type` | `null,`&nbsp;`string` | ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id'] のいずれか
 `ad_tracking_enabled` | `null, boolean` | デバイスで広告トラッキングが有効かどうか
-`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。['liquid_abort_message', 'quiet_hours', 'rate_limit'] のいずれか
+`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。値の一覧については、[中止タイプ](#abort-types)を参照してください。
 `abort_log` | `null,`&nbsp;`string` | [PII] 中止の詳細を記述するログメッセージ（最大128文字）
 `banner_placement_id` | `null,`&nbsp;`string` | 顧客が指定したバナー配置 ID
 `sf_created_at` | `timestamp`,&nbsp;`null` | このイベントが Snowpipe に取得された日時
@@ -1092,7 +1092,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `country` | `null,`&nbsp;`string` | [PII] ユーザーの国
 `timezone` | `null,`&nbsp;`string` | ユーザーのタイムゾーン
 `language` | `null,`&nbsp;`string` | [PII] ユーザーの言語
-`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。['liquid_abort_message', 'quiet_hours', 'rate_limit'] のいずれか
+`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。値の一覧については、[中止タイプ](#abort-types)を参照してください。
 `abort_log` | `null,`&nbsp;`string` | [PII] 中止の詳細を記述するログメッセージ（最大2,000文字）
 `app_group_id` | `null,`&nbsp;`string` | このユーザーが所属するアプリグループの BSON ID
 `sf_created_at` | `timestamp`,&nbsp;`null` | このイベントが Snowpipe に取得された日時
@@ -1274,7 +1274,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `language` | `null,`&nbsp;`string` | [PII] ユーザーの言語
 `email_address` | `string` | [PII] ユーザーのメールアドレス
 `ip_pool` | `null,`&nbsp;`string` | メール送信に使用された IP プール
-`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。['liquid_abort_message', 'quiet_hours', 'rate_limit'] のいずれか
+`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。値の一覧については、[中止タイプ](#abort-types)を参照してください。
 `abort_log` | `null,`&nbsp;`string` | [PII] 中止の詳細を記述するログメッセージ（最大2,000文字）
 `app_group_id` | `null,`&nbsp;`string` | このユーザーが所属するアプリグループの BSON ID
 `sf_created_at` | `timestamp`,&nbsp;`null` | このイベントが Snowpipe に取得された日時
@@ -1480,7 +1480,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `email_address` | `string` | [PII] ユーザーのメールアドレス
 `user_agent` | `null,`&nbsp;`string` | 開封が発生したユーザーエージェント
 `ip_pool` | `null,`&nbsp;`string` | メール送信に使用された IP プール
-`machine_open` | `null,`&nbsp;`string` | ユーザーの操作なしに開封イベントがトリガーされた場合（例：メールプライバシー保護が有効な Apple デバイスなど）に 'true' が設定されます。値はより詳細な情報を提供するために変更される場合があります。
+`machine_open` | `null,`&nbsp;`string` | ユーザーの操作なしに開封イベントがトリガーされた場合（例：Mail Privacy Protection が有効な Apple デバイスなど）に 'true' が設定されます。値はより詳細な情報を提供するために変更される場合があります。
 `esp` | `null,`&nbsp;`string` | イベントに関連するメールサービスプロバイダー (ESP)（SparkPost、SendGrid、または Amazon SES）
 `from_domain` | `null,`&nbsp;`string` | メールの送信ドメイン
 `is_amp` | `null, boolean` | これが AMP イベントであることを示します
@@ -1695,7 +1695,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `ad_id` | `null,`&nbsp;`string` | [PII] 広告識別子
 `ad_id_type` | `null,`&nbsp;`string` | `ios_idfa`、`google_ad_id`、`windows_ad_id`、または `roku_ad_id` のいずれか
 `ad_tracking_enabled` | `null, boolean` | デバイスで広告トラッキングが有効かどうか
-`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。['liquid_abort_message', 'quiet_hours', 'rate_limit'] のいずれか
+`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。値の一覧については、[中止タイプ](#abort-types)を参照してください。
 `abort_log` | `null,`&nbsp;`string` | [PII] 中止の詳細を記述するログメッセージ（最大2,000文字）
 `app_group_id` | `null,`&nbsp;`string` | このユーザーが所属するアプリグループの BSON ID
 `sf_created_at` | `timestamp`,&nbsp;`null` | このイベントが Snowpipe に取得された日時
@@ -1780,7 +1780,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `ad_tracking_enabled` | `null, boolean` | デバイスで広告トラッキングが有効かどうか
 `app_group_id` | `null,`&nbsp;`string` | このユーザーが所属するアプリグループの BSON ID
 `message_extras` | `null,`&nbsp;`string` | [PII] Liquid レンダリング中にタグ付けされたキーと値のペアの JSON 文字列
-`locale_key` | `null,`&nbsp;`string` | [PII] このメッセージの作成に使用された翻訳に対応するキー（例：'en-us'）（デフォルトの場合は null）
+`locale_key` | `null,`&nbsp;`string` | [PII] このメッセージの作成に使用された翻訳に対応するキー（例：'en-us'）（デフォルトの場合は null）。
 `sf_created_at` | `timestamp`,&nbsp;`null` | このイベントが Snowpipe に取得された日時
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -1796,7 +1796,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `time` | `int` | イベントが発生した UNIX タイムスタンプ
 `user_id` | `string` | このイベントを実行したユーザーの Braze ユーザー ID
 `abort_log` | `null,`&nbsp;`string` | [PII] 中止の詳細を記述するログメッセージ（最大128文字）
-`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。['liquid_abort_message', 'quiet_hours', 'rate_limit'] のいずれか
+`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。値の一覧については、[中止タイプ](#abort-types)を参照してください。
 `campaign_api_id` | `null,`&nbsp;`string` | このイベントが属するキャンペーンの API ID
 `canvas_step_api_id` | `null,`&nbsp;`string` | このイベントが属するキャンバスステップの API ID
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | このユーザーが受信したキャンバスステップメッセージバリエーションの API ID
@@ -2016,7 +2016,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `resolution` | `null,`&nbsp;`string` | デバイスの解像度
 `carrier` | `null,`&nbsp;`string` | デバイスの通信キャリア
 `browser` | `null,`&nbsp;`string` | 開封が発生したデバイスのブラウザー（user_agent から抽出）
-`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。['liquid_abort_message', 'quiet_hours', 'rate_limit'] のいずれか
+`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。値の一覧については、[中止タイプ](#abort-types)を参照してください。
 `abort_log` | `null,`&nbsp;`string` | [PII] 中止の詳細を記述するログメッセージ（最大128文字）
 `sf_created_at` | `timestamp`,&nbsp;`null` | このイベントが Snowpipe に取得された日時
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -2103,7 +2103,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `timezone` | `null,`&nbsp;`string` | ユーザーのタイムゾーン
 `language` | `null,`&nbsp;`string` | [PII] ユーザーの言語
 `platform` | `string` | デバイスのプラットフォーム
-`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。['liquid_abort_message', 'quiet_hours', 'rate_limit'] のいずれか
+`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。値の一覧については、[中止タイプ](#abort-types)を参照してください。
 `abort_log` | `null,`&nbsp;`string` | [PII] 中止の詳細を記述するログメッセージ（最大2,000文字）
 `app_group_id` | `null,`&nbsp;`string` | このユーザーが所属するアプリグループの BSON ID
 `sf_created_at` | `timestamp`,&nbsp;`null` | このイベントが Snowpipe に取得された日時
@@ -2298,7 +2298,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `app_group_id` | `null,`&nbsp;`string` | このユーザーが所属するアプリグループの BSON ID
 `message_extras` | `null,`&nbsp;`string` | [PII] Liquid レンダリング中にタグ付けされたキーと値のペアの JSON 文字列
 `is_sampled` | `null,`&nbsp;`string` | プッシュ送信がサンプリングされ、配信イベントが期待されるかどうかを示します
-`locale_key` | `null,`&nbsp;`string` | [PII] このメッセージの作成に使用された翻訳に対応するキー（例：'en-us'）（デフォルトの場合は null）
+`locale_key` | `null,`&nbsp;`string` | [PII] このメッセージの作成に使用された翻訳に対応するキー（例：'en-us'）（デフォルトの場合は null）。
 `sf_created_at` | `timestamp`,&nbsp;`null` | このイベントが Snowpipe に取得された日時
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -2314,7 +2314,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `time` | `int` | イベントが発生した UNIX タイムスタンプ
 `user_id` | `string` | このイベントを実行したユーザーの Braze ユーザー ID
 `abort_log` | `null,`&nbsp;`string` | [PII] 中止の詳細を記述するログメッセージ（最大128文字）
-`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。['liquid_abort_message', 'quiet_hours', 'rate_limit'] のいずれか
+`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。値の一覧については、[中止タイプ](#abort-types)を参照してください。
 `campaign_name` | `null,`&nbsp;`string` | キャンペーンの名前
 `canvas_id` | `null,`&nbsp;`string` | このイベントが属する Canvas の BSON ID
 `canvas_name` | `null,`&nbsp;`string` | Canvas の名前
@@ -2359,7 +2359,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | このユーザーが受信したキャンバスステップメッセージバリエーションの API ID
 `interaction_type` | `null,`&nbsp;`string` | クリックを生成したインタラクションのタイプ。文字列値の例：Text URL、Reply、OpenURL
 `element_label` | `null,`&nbsp;`string` | クリックされた要素に関するオプションの詳細（候補返信やボタンのテキストなど）
-`element_type` | `null,`&nbsp;`string` | 候補とボタンに共通する interaction_type が候補由来かボタン由来かを指定します。例：Suggestion、Button
+`element_type` | `null,`&nbsp;`string` | 候補とボタンに共通する interaction_type が候補から来たのかボタンから来たのかを指定します。例：Suggestion、Button
 `campaign_api_id` | `null,`&nbsp;`string` | このイベントが属するキャンペーンの API ID
 `url` | `null,`&nbsp;`string` | ユーザーがクリックした URL
 `subscription_group_api_id` | `string` | サブスクリプショングループの API ID
@@ -2409,7 +2409,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `id` | `string` | このイベントのグローバルな一意の ID
 `time` | `int` | イベントが発生した UNIX タイムスタンプ
 `user_id` | `string` | このイベントを実行したユーザーの Braze ユーザー ID
-`action` | `null,`&nbsp;`string` | このメッセージに対して実行されたアクション（例：Subscribed、Unsubscribed、None）
+`action` | `null,`&nbsp;`string` | このメッセージに対して実行されたアクション（例：Subscribed、Unsubscribed、None）。
 `campaign_name` | `null,`&nbsp;`string` | キャンペーンの名前
 `canvas_id` | `null,`&nbsp;`string` | このイベントが属する Canvas の BSON ID
 `canvas_name` | `null,`&nbsp;`string` | Canvas の名前
@@ -2541,7 +2541,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `canvas_step_api_id` | `null,`&nbsp;`string` | このイベントが属するキャンバスステップの API ID
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | このユーザーが受信したキャンバスステップメッセージバリエーションの API ID
 `subscription_group_api_id` | `null,`&nbsp;`string` | サブスクリプショングループの外部 ID
-`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。['liquid_abort_message', 'quiet_hours', 'rate_limit'] のいずれか
+`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。値の一覧については、[中止タイプ](#abort-types)を参照してください。
 `abort_log` | `null,`&nbsp;`string` | [PII] 中止の詳細を記述するログメッセージ（最大2,000文字）
 `app_group_id` | `null,`&nbsp;`string` | このユーザーが所属するアプリグループの BSON ID
 `sf_created_at` | `timestamp`,&nbsp;`null` | このイベントが Snowpipe に取得された日時
@@ -2656,7 +2656,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `subscription_group_id` | `null,`&nbsp;`string` | この SMS メッセージの対象となるサブスクリプショングループの ID
 `subscription_group_api_id` | `null,`&nbsp;`string` | この SMS メッセージの対象となるサブスクリプショングループの API ID
 `inbound_phone_number` | `string` | メッセージの送信先の受信番号
-`action` | `string` | このメッセージに対して実行されたアクション。例：`Subscribed`、`Unsubscribed`、`None`
+`action` | `string` | このメッセージに対して実行されたアクション。例：`Subscribed`、`Unsubscribed`、`None`。
 `message_body` | `string` | ユーザーからの応答
 `media_urls` | `null, {"type"=>"array", "items"=>["null", "string"]}` | ユーザーからのメディア URL
 `campaign_id` | `null,`&nbsp;`string` | このイベントが属するキャンペーンの内部使用 Braze ID
@@ -2820,7 +2820,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `country` | `null,`&nbsp;`string` | [PII] ユーザーの国
 `timezone` | `null,`&nbsp;`string` | ユーザーのタイムゾーン
 `language` | `null,`&nbsp;`string` | [PII] ユーザーの言語
-`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。['liquid_abort_message', 'quiet_hours', 'rate_limit'] のいずれか
+`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。値の一覧については、[中止タイプ](#abort-types)を参照してください。
 `abort_log` | `null,`&nbsp;`string` | [PII] 中止の詳細を記述するログメッセージ（最大2,000文字）
 `app_group_id` | `null,`&nbsp;`string` | このユーザーが所属するアプリグループの BSON ID
 `sf_created_at` | `timestamp`,&nbsp;`null` | このイベントが Snowpipe に取得された日時
@@ -2855,7 +2855,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `url_path` | `null,`&nbsp;`string` | リクエスト先 URL のパス
 `user_id` | `string` | このイベントを実行したユーザーの Braze ユーザー ID
 `webhook_duration` | `null, int` | このリクエストの合計所要時間（ミリ秒）
-`webhook_failure_source` | `null,`&nbsp;`string` | エラーが Braze によって作成されたか、エンドポイント自体によって作成されたかを示します。ソースフィールドは External Endpoint、Treat no status code to host unreachable のいずれかです
+`webhook_failure_source` | `null,`&nbsp;`string` | エラーが Braze によって作成されたのか、エンドポイント自体によって作成されたのかを示します。ソースフィールドは External Endpoint、Treat no status code to host unreachable のいずれかです
 `is_terminal` | `null, boolean` | このイベントが送信における最終試行であったかどうか
 `sf_created_at` | `timestamp`,&nbsp;`null` | このイベントが Snowpipe に取得された日時
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -2953,7 +2953,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `canvas_step_api_id` | `null,`&nbsp;`string` | このイベントが属するキャンバスステップの API ID
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | このユーザーが受信したキャンバスステップメッセージバリエーションの API ID
 `dispatch_id` | `null,`&nbsp;`string` | このメッセージが属するディスパッチの ID
-`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。['liquid_abort_message', 'quiet_hours', 'rate_limit'] のいずれか
+`abort_type` | `null,`&nbsp;`string` | 中止のタイプ。値の一覧については、[中止タイプ](#abort-types)を参照してください。
 `abort_log` | `null,`&nbsp;`string` | [PII] 中止の詳細を記述するログメッセージ（最大2,000文字）
 `sf_created_at` | `timestamp`,&nbsp;`null` | このイベントが Snowpipe に取得された日時
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -3012,7 +3012,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `dispatch_id` | `null,`&nbsp;`string` | このメッセージが属するディスパッチの ID
 `sf_created_at` | `timestamp`,&nbsp;`null` | このイベントが Snowpipe に取得された日時
 `send_id` | `null,`&nbsp;`string` | このメッセージが属するメッセージ送信 ID
-`flow_id` | `null,`&nbsp;`string` | WhatsApp Manager 内の Flow の一意の ID。ユーザーが WhatsApp Flow に応答している場合に存在します。
+`flow_id` | `null,`&nbsp;`string` | WhatsApp Manager 内のフローの一意の ID。ユーザーが WhatsApp フローに応答している場合に存在します。
 `template_name` | `null,`&nbsp;`string` | [PII] WhatsApp Manager 内のテンプレート名。テンプレートメッセージを送信する場合に存在します
 `message_id` | `null,`&nbsp;`string` | Meta が生成したこのメッセージの一意の ID
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -3047,7 +3047,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `send_id` | `null,`&nbsp;`string` | このメッセージが属するメッセージ送信 ID
 `message_id` | `null,`&nbsp;`string` | Meta が生成したこのメッセージの一意の ID
 `template_name` | `null,`&nbsp;`string` | [PII] WhatsApp Manager 内のテンプレート名。テンプレートメッセージを送信する場合に存在します
-`flow_id` | `null,`&nbsp;`string` | WhatsApp Manager 内の Flow の一意の ID。ユーザーが WhatsApp Flow に応答している場合に存在します。
+`flow_id` | `null,`&nbsp;`string` | WhatsApp Manager 内のフローの一意の ID。ユーザーが WhatsApp フローに応答している場合に存在します。
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_WHATSAPP_INBOUNDRECEIVE_SHARED {#USERS_MESSAGES_WHATSAPP_INBOUNDRECEIVE_SHARED}
@@ -3076,12 +3076,12 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `message_body` | `string` | ユーザーからの応答
 `quick_reply_text` | `string` | ユーザーが押したボタンのテキスト
 `media_urls` | `null, {"type"=>"array", "items"=>["null", "string"]}` | ユーザーからのメディア URL
-`action` | `string` | このメッセージに対して実行されたアクション。例：`Subscribed`、`Unsubscribed`、`None`
+`action` | `string` | このメッセージに対して実行されたアクション。例：`Subscribed`、`Unsubscribed`、`None`。
 `sf_created_at` | `timestamp`,&nbsp;`null` | このイベントが Snowpipe に取得された日時
 `catalog_id` | `null,`&nbsp;`string` | 受信メッセージで製品が参照されている場合のカタログ ID。それ以外の場合は空
 `product_id` | `null,`&nbsp;`string` | 購入された製品の ID
-`flow_id` | `null,`&nbsp;`string` | WhatsApp Manager 内の Flow の一意の ID。ユーザーが WhatsApp Flow に応答している場合に存在します。
-`flow_response_json` | `null,`&nbsp;`string` | [PII] ユーザーが応答したフォームの値。ユーザーが WhatsApp Flow に応答している場合に存在します。
+`flow_id` | `null,`&nbsp;`string` | WhatsApp Manager 内のフローの一意の ID。ユーザーが WhatsApp フローに応答している場合に存在します。
+`flow_response_json` | `null,`&nbsp;`string` | [PII] ユーザーが応答したフォームの値。ユーザーが WhatsApp フローに応答している場合に存在します。
 `message_id` | `null,`&nbsp;`string` | Meta が生成したこのメッセージの一意の ID
 `in_reply_to` | `null,`&nbsp;`string` | このメッセージが返信した元メッセージの message_id
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -3114,7 +3114,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `send_id` | `null,`&nbsp;`string` | このメッセージが属するメッセージ送信 ID
 `template_name` | `null,`&nbsp;`string` | [PII] WhatsApp Manager 内のテンプレート名。テンプレートメッセージを送信する場合に存在します
 `message_id` | `null,`&nbsp;`string` | Meta が生成したこのメッセージの一意の ID
-`flow_id` | `null,`&nbsp;`string` | WhatsApp Manager 内の Flow の一意の ID。ユーザーが WhatsApp Flow に応答している場合に存在します。
+`flow_id` | `null,`&nbsp;`string` | WhatsApp Manager 内のフローの一意の ID。ユーザーが WhatsApp フローに応答している場合に存在します。
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_WHATSAPP_SEND_SHARED {#USERS_MESSAGES_WHATSAPP_SEND_SHARED}
@@ -3144,7 +3144,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `message_extras` | `null,`&nbsp;`string` | [PII] Liquid レンダリング中にタグ付けされたキーと値のペアの JSON 文字列
 `sf_created_at` | `timestamp`,&nbsp;`null` | このイベントが Snowpipe に取得された日時
 `send_id` | `null,`&nbsp;`string` | このメッセージが属するメッセージ送信 ID
-`flow_id` | `null,`&nbsp;`string` | WhatsApp Manager 内の Flow の一意の ID。ユーザーが WhatsApp Flow に応答している場合に存在します。
+`flow_id` | `null,`&nbsp;`string` | WhatsApp Manager 内のフローの一意の ID。ユーザーが WhatsApp フローに応答している場合に存在します。
 `template_name` | `null,`&nbsp;`string` | [PII] WhatsApp Manager 内のテンプレート名。テンプレートメッセージを送信する場合に存在します
 `message_id` | `null,`&nbsp;`string` | Meta が生成したこのメッセージの一意の ID
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -3219,7 +3219,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 | `id`               | `string`,&nbsp;`null`    | このイベントのグローバルな一意の ID                                             |
 | `user_id`          | `string`,&nbsp;`null`    | 孤立したユーザーの Braze ID                                         |
 | `external_user_id` | `string`,&nbsp;`null`    | [PII] ユーザーの外部ユーザー ID                                            |
-| `device_id`        | `string`,&nbsp;`null`    | このユーザーに紐づけられたデバイスの ID（ユーザーが匿名の場合）          |
+| `device_id`        | `string`,&nbsp;`null`    | ユーザーが匿名の場合、このユーザーに紐づけられたデバイスの ID          |
 | `app_group_id`     | `string`,&nbsp;`null`    | このユーザーが属するワークスペースの Braze ID                                 |
 | `app_group_api_id` | `string`,&nbsp;`null`    | このユーザーが属するワークスペースの API ID                                  |
 | `app_api_id`       | `string`,&nbsp;`null`    | 孤立したユーザーが属していたアプリの API ID                               |
@@ -3306,3 +3306,7 @@ Agent Console テーブルは Snowflake Data Sharing でのみ利用可能です
 `conversion_behaviors` | `null,`&nbsp;`string` | ステップのコンバージョン動作
 `name` | `null,`&nbsp;`string` | 実験ステップの名前
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+## 中止タイプ
+
+{% include abort_types_reference.md %}

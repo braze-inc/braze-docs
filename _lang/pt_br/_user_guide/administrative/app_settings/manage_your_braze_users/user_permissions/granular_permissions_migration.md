@@ -19,7 +19,7 @@ A migração inclui estes benefícios:
 
 ## O que analisar
 
-Quando a migração for planejada para sua empresa, seus administradores da Braze receberão e-mails e banners no dashboard notificando-os sobre a migração de permissões granulares. Para se preparar para a migração, recomendamos que um administrador da Braze faça o seguinte.
+Quando a migração for planejada para sua empresa, os administradores da Braze receberão e-mails e banners no dashboard notificando-os sobre a migração de permissões granulares. Para se preparar para a migração, recomendamos que um administrador da Braze faça o seguinte.
 
 1. Identifique usuários, funções ou conjuntos de permissões que podem precisar ser atualizados para um acesso mais personalizado após você migrar para a nova estrutura de permissões. 
 2. Se sua empresa tem provisionamento automático de usuários usando SCIM ou ferramentas de conformidade que dependem de [strings de permissão]({{site.baseurl}}/scim_api_appendix/), atualize-as para corresponder à nova estrutura granular. 
@@ -70,10 +70,9 @@ Esta tabela mostra como cada permissão legada se mapeia para as permissões gra
 | Espaço de trabalho | Editar integrações do Currents | Editar integrações do Currents |
 | Espaço de trabalho | Ver atributos personalizados marcados como IPI | Ver atributos personalizados marcados como IPI |
 | Espaço de trabalho | Ver IPI | Ver IPI |
-| Espaço de trabalho | Ver perfis de usuário em conformidade com IPI | Ver perfis de usuário em conformidade com IPI |
+| Espaço de trabalho | Ver perfis de usuário em conformidade com IPI | Ver Perfis de Usuários (IPI Ocultada) |
 | Espaço de trabalho | Ver dados de uso | Ver dados de uso |
 | Espaço de trabalho | Mesclar usuários duplicados | Mesclar usuários duplicados |
-| Espaço de trabalho | Prévia de usuários duplicados | Prévia de usuários duplicados |
 | Espaço de trabalho | Criar e editar modelos de Canvas | Editar modelos de Canvas |
 | Espaço de trabalho | Ver modelos de Canvas | Ver modelos de Canvas |
 | Espaço de trabalho | Arquivar modelos de Canvas | Arquivar modelos de Canvas |
@@ -90,7 +89,6 @@ Esta tabela mostra como cada permissão legada se mapeia para as permissões gra
 | Espaço de trabalho | Arquivar posicionamentos | Arquivar posicionamentos |
 | Espaço de trabalho | Novo | Ver mesclagem de usuários |
 | Espaço de trabalho | Novo | Ver registros de exclusão de usuários |
-| Espaço de trabalho | Novo | Excluir usuários do dashboard |
 | Espaço de trabalho | Novo | Ver modelos de banner |
 | Espaço de trabalho | Novo | Editar modelos de banner |
 | Espaço de trabalho | Novo | Arquivar modelos de banner |

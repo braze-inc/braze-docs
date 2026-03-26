@@ -1068,6 +1068,7 @@ Campaign, Entry
 {% endapi %}
 
 {% api %}
+
 ## キャンバスコンバージョンイベント {#canvas-conversion-events}
 
 {% apitags %}
@@ -1693,7 +1694,6 @@ Exit, Canvas
 {% endapi %}
 
 {% api %}
-
 ## 実験ステップコンバージョンイベント {#experiment-step-conversion-events}
 
 {% apitags %}
@@ -2023,6 +2023,7 @@ Canvas
 {% endapi %}
 
 {% api %}
+
 ## キャンバスステップ進行イベント {#canvas-step-progression-events}
 
 {% apitags %}
@@ -2406,6 +2407,7 @@ Banner, Abort
 
 #### プロパティの詳細
 
+- `abort_type` フィールドは、メッセージが中止された理由を示します。値の完全なリストについては、[中止タイプ]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)を参照してください。
 - `abort_type` は、メッセージがグローバルなフリークエンシーキャップルールにより中止された場合、`frequency_capped` になります。
 - `abort_log` には、中止のトリガーとなった特定のルールに関する情報が含まれます。例: `Frequency cap rule: 5 Banner messages every 1 week`
 {% endapi %}
@@ -2810,6 +2812,7 @@ Banner, Impressions
 {% endapi %}
 
 {% api %}
+
 ## コンテンツカードの中止イベント {#content-card-abort-events}
 
 {% apitags %}
@@ -3004,12 +3007,12 @@ Abort, Content Cards
 #### プロパティの詳細
 
 - `dispatch_id` は、特定のメッセージ配信（キャンペーン送信など）の ID です。同じディスパッチから発生するすべてのプッシュイベントは、同じ `dispatch_id` を含みます。同じ配信に属するイベントをグループ化するために `dispatch_id` を使用することで、その配信のプッシュメッセージライフサイクル（送信、バウンス、開封など）をグループ化し、関連付けることができます。
+- `abort_type` フィールドは、メッセージが中止された理由を示します。値の完全なリストについては、[中止タイプ]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)を参照してください。
 - `abort_type` は、メッセージがグローバルなフリークエンシーキャップルールにより中止された場合、`frequency_capped` になります。
 - `abort_log` には、中止のトリガーとなった特定のルールに関する情報が含まれます。例: `Frequency cap rule: 5 Content Card messages every 1 week`
 {% endapi %}
 
 {% api %}
-
 ## コンテンツカードのクリックイベント {#content-card-click-events}
 
 {% apitags %}
@@ -3697,6 +3700,7 @@ Content Cards, Impressions
 {% endapi %}
 
 {% api %}
+
 ## コンテンツカード送信イベント {#content-card-send-events}
 
 {% apitags %}
@@ -4097,7 +4101,8 @@ Abort, Email
 #### プロパティの詳細
 
 - `dispatch_id` は、特定のメッセージ配信（キャンペーン送信など）の ID です。同じディスパッチから発生するすべてのプッシュイベントは、同じ `dispatch_id` を含みます。同じ配信に属するイベントをグループ化するために `dispatch_id` を使用します。これにより、その配信のプッシュメッセージライフサイクル（送信、バウンス、開封など）をグループ化し、関連付けることができます。
-- `abort_type` は、メッセージがグローバルなフリークエンシーキャップルールにより中断された場合、`frequency_capped` になります。
+- `abort_type` フィールドは、メッセージが中止された理由を示します。値の完全なリストについては、[中止タイプ]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)を参照してください。
+- `abort_type` は、メッセージがグローバルなフリークエンシーキャップルールにより中止された場合、`frequency_capped` になります。
 - `abort_log` には、中止のトリガーとなった特定のルールに関する情報が含まれます。例: `Frequency cap rule: 5 email messages every 1 week`
 {% endapi %}
 
@@ -5015,6 +5020,7 @@ Email, Delivery
 {% endapi %}
 
 {% api %}
+
 ## メールをスパムとしてマークするイベント {#email-mark-as-spam-events}
 
 {% apitags %}
@@ -6523,6 +6529,7 @@ Feature Flags, Impressions
 {% endapi %}
 
 {% api %}
+
 ## アプリ内メッセージの中止イベント {#in-app-message-abort-events}
 
 {% apitags %}
@@ -6761,7 +6768,8 @@ In-App Messages, Abort
 
 #### プロパティの詳細
 
-- `abort_type` は、メッセージがグローバルなフリークエンシーキャップルールにより中断された場合、`frequency_capped` になります。
+- `abort_type` フィールドは、メッセージが中止された理由を示します。値の完全なリストについては、[中止タイプ]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)を参照してください。
+- `abort_type` は、メッセージがグローバルなフリークエンシーキャップルールにより中止された場合、`frequency_capped` になります。
 - `abort_log` には、中止のトリガーとなった特定のルールに関する情報が含まれます。例: `Frequency cap rule: 5 in-app messages every 1 week`
 {% endapi %}
 
@@ -7004,7 +7012,6 @@ In-App Messages, Clicks
 {% endapi %}
 
 {% api %}
-
 ## アプリ内メッセージインプレッションイベント {#in-app-message-impression-events}
 
 {% apitags %}
@@ -7248,6 +7255,7 @@ In-App Messages, Impressions
 {% endapi %}
 
 {% api %}
+
 ## LINE 中止イベント {#line-abort-events}
 
 {% apitags %}
@@ -7448,6 +7456,7 @@ LINE, Abort
 #### プロパティの詳細
 
 - `dispatch_id` は、キャンペーン送信などの特定のメッセージ配信の ID です。同じディスパッチから発生するすべてのプッシュイベントには、同じ `dispatch_id` が含まれます。`dispatch_id` を使用して同じ配信に属するイベントをグループ化することで、その配信のプッシュメッセージライフサイクル（送信、バウンス、開封など）をグループ化し、関連付けることができます。
+- `abort_type` フィールドは、メッセージが中止された理由を示します。値の完全なリストについては、[中止タイプ]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)を参照してください。
 - `abort_type` は、メッセージがグローバルなフリークエンシーキャップルールにより中止された場合、`frequency_capped` になります。
 - `abort_log` には、中止のトリガーとなった特定のルールに関する情報が含まれます。例: `Frequency cap rule: 5 LINE messages every 1 week`
 {% endapi %}
@@ -8068,6 +8077,7 @@ LINE, Retry
 {% endapi %}
 
 {% api %}
+
 ## LINE 送信イベント {#line-send-events}
 
 {% apitags %}
@@ -8416,7 +8426,6 @@ Live Activity, Outcome
 {% endapi %}
 
 {% api %}
-
 ## ライブアクティビティ送信イベント {#live-activity-send-events}
 
 {% apitags %}
@@ -8766,6 +8775,7 @@ Abort, Push
 #### プロパティの詳細
 
 - `dispatch_id` は、キャンペーン送信などの特定のメッセージ配信の ID です。同じディスパッチから発生するすべてのプッシュイベントには、同じ `dispatch_id` が含まれます。同じ配信に属するイベントをグループ化するために `dispatch_id` を使用することで、その配信のプッシュメッセージライフサイクル（送信、バウンス、開封など）をグループ化し、関連付けることができます。
+- `abort_type` フィールドは、メッセージが中止された理由を示します。値の完全なリストについては、[中止タイプ]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)を参照してください。
 - `abort_type` は、メッセージがグローバルなフリークエンシーキャップルールにより中止された場合、`frequency_capped` になります。
 - `abort_log` には、中止のトリガーとなった特定のルールに関する情報が含まれます。例: `Frequency cap rule: 5 push messages every 1 week`
 {% endapi %}
@@ -8992,6 +9002,7 @@ Push, Sends, Bounce
 {% endapi %}
 
 {% api %}
+
 ## プッシュ通知 iOS フォアグラウンドオープンイベント {#push-notification-ios-foreground-open-events}
 
 {% apitags %}
@@ -9604,7 +9615,6 @@ Push, Retry
 {% endapi %}
 
 {% api %}
-
 ## プッシュ通知送信イベント {#push-notification-send-events}
 
 {% apitags %}
@@ -9831,13 +9841,14 @@ Push, Sends
 
 #### プロパティの詳細
 
-- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) および [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の設定について詳しく説明します。
+- `ad_id`、`ad_id_type`、および `ad_tracking_enabled` については、ネイティブ SDK を通じて、iOS IDFA と Android Google 広告 ID を明示的に収集する必要があります。この設定の詳細については、[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) および [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) を参照してください。
 - Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込んでいる場合は、カスタマーサクセスマネージャーに連絡して、`ad_id` の送信を有効にしてください。
 - `message_extras` を使用すると、コネクテッドコンテンツからのダイナミックなデータ、カスタム属性（言語、国など）、およびキャンバスエントリのプロパティを使用して、送信イベントに注釈を付けることができます。詳細については、[Message extras]({{site.baseurl}}/message_extras_tag/) を参照してください。
-- `dispatch_id` は、特定のメッセージ配信（キャンペーン送信など）の ID です。同じディスパッチから発生するすべてのプッシュイベントは、同じ `dispatch_id` を含みます。`dispatch_id` を使用して同じ配信に属するイベントをグループ化することで、その配信のプッシュメッセージライフサイクル（送信、バウンス、開封など）をグループ化し、関連付けることができます。
+- `dispatch_id` は、キャンペーン送信などの特定のメッセージ配信の ID です。同じディスパッチから発生するすべてのプッシュイベントには、同じ `dispatch_id` が含まれます。同じ配信に属するイベントをグループ化するために `dispatch_id` を使用することで、その配信のプッシュメッセージライフサイクル（送信、バウンス、開封など）をグループ化し、関連付けることができます。
 {% endapi %}
 
 {% api %}
+
 ## RCS 中止イベント {#rcs-abort-events}
 
 {% apitags %}
@@ -10013,6 +10024,7 @@ RCS, Abort
 
 #### プロパティの詳細
 
+- `abort_type` フィールドは、メッセージが中止された理由を示します。値の完全なリストについては、[中止タイプ]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)を参照してください。
 - `abort_type` は、メッセージがグローバルなフリークエンシーキャップルールにより中断された場合、`frequency_capped` になります。
 - `abort_log` には、中止のトリガーとなった特定のルールに関する情報が含まれます。例: `Frequency cap rule: 5 RCS messages every 1 week`
 {% endapi %}
@@ -10636,6 +10648,7 @@ RCS, Inbound Received
 {% endapi %}
 
 {% api %}
+
 ## RCS 既読イベント {#rcs-read-events}
 
 {% apitags %}
@@ -11014,14 +11027,13 @@ RCS, Rejection
 {% endapi %}
 
 {% api %}
-
-## RCS送信イベント {#rcs-send-events}
+## RCS 送信イベント {#rcs-send-events}
 
 {% apitags %}
 RCS, Sends
 {% endapitags %}
 
-このイベントは、Brazeからラストマイル配送パートナーへRCSメッセージが送信された際に生成されます。
+このイベントは、Braze からラストマイル配送パートナーへ RCS メッセージが送信された際に生成されます。
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -11223,7 +11235,7 @@ RCS, Sends
 {% endapi %}
 
 {% api %}
-## SMS中止イベント {#sms-abort-events}
+## SMS 中止イベント {#sms-abort-events}
 
 {% apitags %}
 Abort, SMS
@@ -11403,11 +11415,13 @@ Abort, SMS
 
 #### プロパティの詳細
 
+- `abort_type` フィールドは、メッセージが中止された理由を示します。値の完全なリストについては、[中止タイプ]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)を参照してください。
 - `abort_type` は、メッセージがグローバルなフリークエンシーキャップルールにより中止された場合、`frequency_capped` になります。
 - `abort_log` には、中止のトリガーとなった特定のルールに関する情報が含まれます。例: `Frequency cap rule: 5 SMS messages every 1 week`
 {% endapi %}
 
 {% api %}
+
 ## SMSキャリア送信イベント {#sms-carrier-send-events}
 
 {% apitags %}
@@ -13044,6 +13058,7 @@ SMS, Clicks
 {% endapi %}
 
 {% api %}
+
 ## Webhookの中止イベント {#webhook-abort-events}
 
 {% apitags %}
@@ -13238,6 +13253,7 @@ Abort, Webhooks
 #### プロパティの詳細
 
 - `dispatch_id` は、キャンペーン送信などの特定のメッセージ配信の ID です。同じディスパッチから発生するすべてのプッシュイベントには、同じ `dispatch_id` が含まれます。`dispatch_id` を使用して同じ配信に属するイベントをグループ化することで、その配信のプッシュメッセージライフサイクル（送信、バウンス、開封など）をグループ化し、関連付けることができます。
+- `abort_type` フィールドは、メッセージが中止された理由を示します。値の完全なリストについては、[中止タイプ]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)を参照してください。
 - `abort_type` は、メッセージがグローバルなフリークエンシーキャップルールにより中止された場合、`frequency_capped` になります。
 - `abort_log` には、中止のトリガーとなった特定のルールに関する情報が含まれます。例: `Frequency cap rule: 5 webhook messages every 1 week`
 {% endapi %}
@@ -13472,7 +13488,6 @@ Failure, Webhooks
 {% endapi %}
 
 {% api %}
-
 ## Webhook再試行イベント {#webhook-retry-events}
 
 {% apitags %}
@@ -13862,6 +13877,7 @@ Webhooks, Sends
 {% endapi %}
 
 {% api %}
+
 ## WhatsApp中止イベント {#whatsapp-abort-events}
 
 {% apitags %}
@@ -14063,7 +14079,8 @@ WhatsApp, Abort
 #### プロパティの詳細
 
 - `dispatch_id` は、特定のメッセージ配信（キャンペーン送信など）の ID です。同じディスパッチから発生するすべてのプッシュイベントは、同じ `dispatch_id` を含みます。同じ配信に属するイベントをグループ化するために `dispatch_id` を使用することで、その配信のプッシュメッセージライフサイクル（送信、バウンス、開封など）をグループ化し、関連付けることができます。
-- `abort_type` は、メッセージがグローバルなフリークエンシーキャップルールにより中断された場合、`frequency_capped` になります。
+- `abort_type` フィールドは、メッセージが中止された理由を示します。値の完全なリストについては、[中止タイプ]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/#abort-types)を参照してください。
+- `abort_type` は、メッセージがグローバルなフリークエンシーキャップルールにより中止された場合、`frequency_capped` になります。
 - `abort_log` には、中止のトリガーとなった特定のルールに関する情報が含まれます。例: `Frequency cap rule: 5 WhatsApp messages every 1 week`
 {% endapi %}
 
@@ -15374,6 +15391,7 @@ WhatsApp, Retry
 {% endapi %}
 
 {% api %}
+
 ## WhatsApp 送信イベント {#whatsapp-send-events}
 
 {% apitags %}

@@ -70,10 +70,9 @@ Diese Tabelle zeigt, wie die einzelnen Legacy-Berechtigungen auf die granularen 
 | Workspace | Currents-Integrationen bearbeiten | Currents-Integrationen bearbeiten |
 | Workspace | Als PII gekennzeichnete angepasste Attribute anzeigen | Als PII gekennzeichnete angepasste Attribute anzeigen |
 | Workspace | PII anzeigen | PII anzeigen |
-| Workspace | Nutzerprofile PII-konform anzeigen | Nutzerprofile PII-konform anzeigen |
+| Workspace | Nutzerprofile PII-konform anzeigen | Nutzerprofile anzeigen (PII geschwärzt) |
 | Workspace | Nutzungsdaten anzeigen | Nutzungsdaten anzeigen |
 | Workspace | Doppelte Nutzer:innen zusammenführen | Doppelte Nutzer:innen zusammenführen |
-| Workspace | Vorschau doppelter Nutzer:innen anzeigen | Vorschau doppelter Nutzer:innen anzeigen |
 | Workspace | Canvas-Templates erstellen und bearbeiten | Canvas-Templates bearbeiten |
 | Workspace | Canvas-Templates anzeigen | Canvas-Templates anzeigen |
 | Workspace | Canvas-Templates archivieren | Canvas-Templates archivieren |
@@ -90,7 +89,6 @@ Diese Tabelle zeigt, wie die einzelnen Legacy-Berechtigungen auf die granularen 
 | Workspace | Platzierungen archivieren | Platzierungen archivieren |
 | Workspace | Neu | Zusammenführung von Nutzer:innen anzeigen |
 | Workspace | Neu | Nutzerlöschungs-Datensätze anzeigen |
-| Workspace | Neu | Nutzer:innen aus dem Dashboard löschen |
 | Workspace | Neu | Banner-Templates anzeigen |
 | Workspace | Neu | Banner-Templates bearbeiten |
 | Workspace | Neu | Banner-Templates archivieren |
