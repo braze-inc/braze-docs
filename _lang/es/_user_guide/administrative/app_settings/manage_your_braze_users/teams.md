@@ -86,7 +86,7 @@ A continuación se enumeran todos los permisos disponibles que puedes asignar a 
 - Lanzar campañas
 - Lanzar Canvas
 - Exportar datos de usuario
-- Ver perfiles de usuarios que cumplen las reglas de PII
+- Ver perfiles de usuario (PII oculta)
 - Editar usuarios del dashboard
 - Aprobar campañas
 - Aprobar Canvas
@@ -106,7 +106,7 @@ A continuación se enumeran todos los permisos disponibles que puedes asignar a 
 - Lanzar y administrar tarjetas de contenido
 - Editar segmentos
 - Exportar datos de usuario
-- Ver perfiles de usuarios que cumplen las reglas de PII
+- Ver perfiles de usuario conforme a PII
 - Administrar usuarios del dashboard
 - Administrar activos de la biblioteca de medios
 - Aprobar y denegar campañas

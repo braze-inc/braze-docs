@@ -86,7 +86,7 @@ Im Folgenden finden Sie alle verfügbaren Berechtigungen, die Sie auf Team-Ebene
 - Kampagnen starten
 - Canvase starten
 - Nutzerdaten exportieren
-- Nutzerprofile PII-konform anzeigen
+- Nutzerprofile anzeigen (PII geschwärzt)
 - Dashboard-Nutzer:innen bearbeiten
 - Kampagnen genehmigen
 - Canvase genehmigen
