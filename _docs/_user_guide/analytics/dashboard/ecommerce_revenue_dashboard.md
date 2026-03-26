@@ -38,8 +38,8 @@ The following message interactions qualify as touch events for attribution:
 - Push open
 - Content Card click
 - In-app message click
-- SMS shortlink click
-- WhatsApp shortlink click
+- SMS shortened link click
+- WhatsApp shortened link click
 
 {% alert important %}
 Message interactions must have occurred within the selected conversion window. Orders without an eligible message interaction within the conversion window are not attributed.
