@@ -1,6 +1,6 @@
 ## Viewing analytics
 
-Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page.{% if include.channel != "banner" %} For {% if include.channel == "Content Card" %}Content Cards {% elsif include.channel == "banner" %}Banner {% elsif include.channel == "email" %}email {% elsif include.channel == "in-app message" %}in-app messages {% elsif include.channel == "push" %}push messages {% elsif include.channel == "SMS" %}SMS messages {% elsif include.channel == "whatsapp" %}WhatsApp messages {% elsif include.channel == "webhook" %}webhooks {% endif %}sent in Canvas, refer to [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).{% endif %}
+Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page.{% if include.channel != "banner" %} For {% if include.channel == "Content Card" %}Content Cards {% elsif include.channel == "banner" %}Banner {% elsif include.channel == "email" %}email {% elsif include.channel == "in-app message" %}in-app messages {% elsif include.channel == "KakaoTalk" %}KakaoTalk {% elsif include.channel == "push" %}push messages {% elsif include.channel == "SMS" %}SMS messages {% elsif include.channel == "whatsapp" %}WhatsApp messages {% elsif include.channel == "webhook" %}webhooks {% endif %}sent in Canvas, refer to [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).{% endif %}
 
 {% alert tip %}
 Looking for definitions for the terms and metrics listed in your report? Refer to our 
@@ -27,6 +27,7 @@ The **Campaign Details** panel shows a high-level overview of the entire perform
   {% elsif include.channel == "Content Card" %}Content Card.
   {% elsif include.channel == "email" %}email.
   {% elsif include.channel == "in-app message" %}in-app message.
+  {% elsif include.channel == "KakaoTalk" %}KakaoTalk message.
   {% elsif include.channel == "push" %}push message.
   {% elsif include.channel == "SMS" %}SMS, MMS, and RCS.
   {% elsif include.channel == "whatsapp" %}WhatApp messages.
@@ -62,6 +63,9 @@ The WhatsApp channel includes read rate. This metric is only delivered for users
 In Canvas, you'll see in-app message performance mapped onto the Canvas you've created. You can use the control panel at the top of the page to clear other messaging types (channels) and only view the in-app messages in your Canvas.
 
 ![]({% image_buster /assets/img/in-app_message_canvas_reporting.png %})
+
+{% elsif include.channel == "KakaoTalk" %}
+![The Campaign Details section.]({% image_buster /assets/img/kakaotalk/campaign_details.png %})
 
 {% elsif include.channel == "webhook" %}
 ![Campaign Details panel with an overview of metrics used to determine campaign performance.]({% image_buster /assets/img/campaign_details_webhook.png %})
@@ -144,6 +148,13 @@ The **SMS/MMS/RCS Performance** panel outlines how well your message has perform
 The **Banner Performance** panel outlines how well your message has performed across various dimensions. These metrics vary depending on your messaging channel and whether or not you’re running a multivariate test.
 
 ![SMS/MMS Performance panel that includes a table of metrics for a control group, Variant 1, and Variant 2.]({% image_buster /assets/img/banners/banner_performance.png %})
+
+{% elsif include.channel == "KakaoTalk" %}
+## KakaoTalk performance
+
+The **KakaoTalk Performance** panel outlines how well your message has performed across various dimensions. This section helps you understand how many of your messages were successfully sent to KakaoTalk and how many failures or errors you have. 
+
+Because we are not ingesting delivery status events in the initial version of the KakaoTalk MVP Beta, it is recommended that you set a conversion event so you can better understand how your KakaoTalk messages have performed. 
 
 {% elsif include.channel == "webhook" %}
 ### Webhook Performance
@@ -501,6 +512,22 @@ Reporting for _Button 1 Clicks_ and _Button 2 Clicks_ only works when you specif
     </tbody>
 </table>
 
+{% elsif include.channel == "KakaoTalk" %}
+
+### KakaoTalk metrics
+
+Here are some key KakaoTalk metrics you may see in your analytics. For more details, see the [Metrics reports glossary]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/).
+
+| Term | Definition |
+| --- | --- |
+| Audience | _Audience_ is the percentage of users who received a particular message. <br><br>_(Number of recipients in variant) / (Unique Recipients)_ |
+| Unique Recipients | _Unique Recipients_ is the number of unique daily recipients, or users who received a new message in a day. For this count to increment for a user more than once, the user must receive a new message on a different day. This number is based on the `user_id`. For more details see here. |
+| Sends | The total number of messages sent in a campaign. This doesn’t mean the message was received or delivered to a device, only that the message was sent.|
+| Errors | _Errors_ is the number of errors returned by the Kakao provider (incremented during the sending process). |
+| Revenue | _Revenue_ is the revenue in dollars from campaign recipients within the set primary conversion window. |
+| Primary Conversions | _Primary Conversions_ is the number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by you when building the campaign. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 {% elsif include.channel == "push" %}
 
 #### Push metrics
@@ -780,11 +807,25 @@ The **Conversion Correlation** panel gives you insight into what user attributes
 
 ![The Conversion Correlation panel with an analysis on user attributes and behavior from the Primary Conversion Event - A.]({% image_buster /assets/img/convcorr.png %})
 
+{% if include.channel == "KakaoTalk" %}
+
+## Report Builder
+
+You can also use [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) to build custom reports for your KakaoTalk campaigns. KakaoTalk messages share the same reporting metrics as Braze webhooks, so Braze automatically applies a tag to any KakaoTalk campaign, which allows you to separate KakaoTalk metrics from webhooks.
+
+When creating a report, select your KakaoTalk campaigns by doing the following:
+- Under **Select campaigns**, choose **Add automatically**.
+- Under **Tags**, select **kakao**.
+
+This includes only KakaoTalk campaigns within your report, properly separating the metrics from the webhook channel.
+
+{% endif %}
+
 {% if include.channel == "whatsapp" %}
 
 ### Meta analytics
 
-In addition to Braze analytics, template-level analytics can be accessed in the WhatsApp Business Manager. For information, check out [Meta's documentation](https://www.facebook.com/business/help/218116047387456). 
+In addition to Braze analytics, template-level analytics can be accessed in the WhatsApp Business Manager. For information, check out [Meta's documentation](https://www.facebook.com/business/help/218116047387456).
 
 {% endif %}
 

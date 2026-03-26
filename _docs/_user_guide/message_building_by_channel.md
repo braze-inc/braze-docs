@@ -22,6 +22,12 @@ guide_featured_list:
 - name: "In-App Messaging"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/
   image: /assets/img/braze_icons/annotation-dots.svg
+- name: "KakaoTalk"
+  link: /docs/user_guide/message_building_by_channel/kakaotalk/
+  image: /assets/img/braze_icons/phone-01.svg
+- name: "LINE"
+  link: /docs/user_guide/message_building_by_channel/line/
+  image: /assets/img/braze_icons/phone-01.svg
 - name: Push Messaging
   link: /docs/user_guide/message_building_by_channel/push/
   image: /assets/img/braze_icons/marker-pin-01.svg
