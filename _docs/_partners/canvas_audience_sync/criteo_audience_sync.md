@@ -27,7 +27,7 @@ This feature gives brands the option to control what specific first-party data i
 Braze Audience Sync to Criteo is an Audience Sync Pro integration. For more information on this integration, contact your Braze account manager. <br> 
 {% endalert %}
 
-## Prerequisites 
+## Prerequisites
 
 You must ensure that you have the following items created and/or completed prior to setting up your Audience Sync to Criteo.
 

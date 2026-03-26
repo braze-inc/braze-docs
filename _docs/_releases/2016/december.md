@@ -10,7 +10,7 @@ description: "This article contains release notes for December 2016."
 
 ## Email headers
 
-Email headers add the explicit setting of email headers through the send endpoint. Refer to [Email best practices]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/) for more information about sending email with Braze.
+Email headers add the explicit setting of email headers through the send endpoint. Refer to [Email best practices]({{site.baseurl}}/user_guide/channels/email/best_practices/) for more information about sending email with Braze.
 
 ## Canvas updates
 

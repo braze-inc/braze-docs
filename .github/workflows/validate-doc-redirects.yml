@@ -1,0 +1,37 @@
+# Ensures _docs/ URL changes (per Jekyll) have matching entries in broken_redirect_list.js
+name: "Validate doc redirects"
+
+on:
+  pull_request:
+    paths:
+      - "_docs/**"
+      - "_config.yml"
+      - "_plugins/**"
+      - "assets/js/broken_redirect_list.js"
+      - "scripts/validate_doc_redirects.rb"
+      - "scripts/jekyll_url_map_dump.rb"
+
+permissions:
+  contents: read
+
+jobs:
+  doc-redirects:
+    name: "Redirect list vs Jekyll URLs"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout PR head"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: "Fetch base branch for three-dot diff"
+        run: git fetch --no-tags origin "${{ github.base_ref }}"
+
+      - name: "Set up Ruby"
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: "Validate redirects"
+        run: bundle exec ruby scripts/validate_doc_redirects.rb --base "origin/${{ github.base_ref }}" --skip-fetch

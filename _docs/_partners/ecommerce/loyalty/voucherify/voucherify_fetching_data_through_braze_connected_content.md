@@ -73,7 +73,7 @@ _Note the consequences:_ Braze caches the API calls based on the URL. The unique
 
 **Retry attribute**
 
-Connected Content does not validate the Voucherify response, so we additionally recommend adding a [retry]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries) attribute in the Connected Content script. The Connected Content logic will try to retry five times before aborting the message (it will respect the rate limiter). This method will help prevent cases of failed code publishing when it takes a little longer to fetch data from Voucherify.
+Connected Content does not validate the Voucherify response, so we additionally recommend adding a [retry]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/connected_content_retries/) attribute in the Connected Content script. The Connected Content logic will try to retry five times before aborting the message (it will respect the rate limiter). This method will help prevent cases of failed code publishing when it takes a little longer to fetch data from Voucherify.
 
 If you do not use {% raw %}`:retry`{% endraw %}, then irrespective of the response returned from Voucherify, Braze will attempt to send the distribution, which may result in generating emails without a published code.
 

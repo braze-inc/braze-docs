@@ -188,5 +188,5 @@ All attributes added within the configuration will be sent each time the event i
 
 ### Step 6: Validate data within Braze
 
-If the event collection and Adobe Experience Platform integration were successful, you will see events within the Braze console when [viewing user profiles]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/). Specifically, the new event data sent to Braze is reflected in the **Purchases** or **Custom Events** section of a particular user’s [overview tab]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
+If the event collection and Adobe Experience Platform integration were successful, you will see events within the Braze console when [viewing user profiles]({{site.baseurl}}/user_guide/audience/manage_audience/user_profiles/). Specifically, the new event data sent to Braze is reflected in the **Purchases** or **Custom Events** section of a particular user’s [overview tab]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
 

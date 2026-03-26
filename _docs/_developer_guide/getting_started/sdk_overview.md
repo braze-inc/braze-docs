@@ -9,7 +9,7 @@ page_order: 0
 
 > Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. You may be curious about how you can customize the SDK to further to meet your needs. This article can help you answer all of your SDK questions. 
 
-Are you a marketer looking for a basic rundown of the SDK? Check out our [marketer overview]({{site.baseurl}}/user_guide/getting_started/web_sdk/), instead.
+Are you a marketer looking for a basic rundown of the SDK? Check out our [marketer overview]({{site.baseurl}}/user_guide/get_started/sdk_overview/), instead.
 
 In brief, the Braze SDK:
 * Collects and syncs user data into a consolidated user profile
@@ -29,7 +29,7 @@ The Braze SDK is designed to be very well-behaved, and not interfere with other 
 
 ## Default analytics and session handling
 
-Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and session end, all other automatically tracked data does not count toward your data point usage.
+Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/user_guide/data/unification/user_data/sdk_data_collection/). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and session end, all other automatically tracked data does not count toward your data point usage.
 
 {% alert note %}
 All of our features are configurable, but it's a good idea to fully implement the default data collection model.

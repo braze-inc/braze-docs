@@ -44,7 +44,7 @@ To integrate Yotpo and Braze, perform the following steps:
 1. Go to your Braze dashboard.
 2. On the **Campaigns** page, click **Create Campaign** and select **Email**.
 3. Select your preferred template.
-4. Click **Edit email body** and add the respective [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) snippet for your use case:
+4. Click **Edit email body** and add the respective [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/) snippet for your use case:
     - [Display a product's star rating and review count](#star-review-count)
     - [Display a recent 5-star review for a product](#five-star-review)
     - [Display visual UGC by product](#visual-ugc)
@@ -169,7 +169,7 @@ If you don't have any images for a product (such as if the endpoint response ret
 
 ### Can I customize the look and feel, or pull other data fields from Yotpo?
 
-Yes! To discover other data points and customization options available, refer to [Making an API call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/). You may need some assistance from a front-end developer to do so.
+Yes! To discover other data points and customization options available, refer to [Making an API call]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call/). You may need some assistance from a front-end developer to do so.
 
 {% alert note %}
 Yotpo does not support custom requirements beyond what is described in this guide.

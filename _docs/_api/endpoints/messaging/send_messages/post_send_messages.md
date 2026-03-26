@@ -32,7 +32,7 @@ If you need to create a user as part of a send using the API, you have two optio
 
 #### Option 1: Use `/users/track` then send
 
-First, create the user with the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, then wait for the data to propagate (generally, a few minutes is recommended) before initiating the API-only send. Note that Braze doesn't guarantee data processing times on `/users/track`, so [race conditions]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) may occur if you don't allow enough time between these calls.
+First, create the user with the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, then wait for the data to propagate (generally, a few minutes is recommended) before initiating the API-only send. Note that Braze doesn't guarantee data processing times on `/users/track`, so [race conditions]({{site.baseurl}}/user_guide/messaging/ab_testing/concepts/race_conditions/) may occur if you don't allow enough time between these calls.
 
 #### Option 2: Use an API-triggered campaign or Canvas
 

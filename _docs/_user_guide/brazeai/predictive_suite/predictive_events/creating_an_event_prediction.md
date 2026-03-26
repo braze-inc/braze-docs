@@ -8,7 +8,7 @@ description: "This article covers how to create an event prediction within the B
 
 # Create an event prediction
 
-> A prediction is one instance of a trained machine learning model and all the parameters and data it uses. To learn more about Predictive Events, refer to the [Predictive Events overview]({{site.baseurl}}/user_guide/brazeai//predictive_events/).
+> A prediction is one instance of a trained machine learning model and all the parameters and data it uses. To learn more about Predictive Events, refer to the [Predictive Events overview]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/).
 
 In Braze, go to **Analytics** > **Predictive Events**.
 
@@ -32,7 +32,7 @@ There is a limit of five concurrently active predictions. Before purchasing Pred
 
 ## Step 2: Specify event tracking {#event-tracking}
 
-Specify if your users' events are stored in Braze as [purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) or [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/).
+Specify if your users' events are stored in Braze as [purchase events]({{site.baseurl}}/user_guide/data/activation/events/purchase_events/) or [custom events]({{site.baseurl}}/user_guide/data/activation/events/custom_events/).
 
 Here, you'll see if the selected method provides enough data for Braze to create a machine learning model. If the requirement is not met, try and select the other logging method if it is also used by your application. Unfortunately, if it is not, Braze is unable to create a prediction with the quantity of data available. If you believe you're incorrectly seeing this error, get in touch with your customer success manager.
 

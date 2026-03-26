@@ -15,7 +15,7 @@ Start [integrating Movable Ink]({{site.baseurl}}/partners/message_personalizatio
 
 ## Intelligent Timing
 
-When scheduling a campaign, you can use [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) (previously Intelligent Delivery) to deliver your message to each user at the time which Braze determines that an individual is most likely to engage.
+When scheduling a campaign, you can use [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/) (previously Intelligent Delivery) to deliver your message to each user at the time which Braze determines that an individual is most likely to engage.
 
 Updates to this feature include:
 - **Clarification of Quiet Hours**: Quiet Hours functionality remains the same, but the UI has been adjusted for clarification.
@@ -39,7 +39,7 @@ The [template/email/list]({{site.baseurl}}/api/endpoints/templates/email_templat
 
 ## Personalized from-address
 
-When creating an email message within Braze, you can now personalize the From Address of the message in the **Sending Info** section of email composition. You can use any of our supported [personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)
+When creating an email message within Braze, you can now personalize the From Address of the message in the **Sending Info** section of email composition. You can use any of our supported [personalization tags]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/)
 
 ![Personalized From Address]({% image_buster /assets/img/personalized-from-name.png %}){: style="max-width:80%"}
 

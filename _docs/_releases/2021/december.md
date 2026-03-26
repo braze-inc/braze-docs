@@ -17,7 +17,7 @@ Beginning December 2021, the following changes take effect for the [Export users
 
 ## New properties for Currents message engagement events
 
-New properties have been added for select [message engagement events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/). This update applies to the following Currents message engagement events and all partners that use them:
+New properties have been added for select [message engagement events]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events/). This update applies to the following Currents message engagement events and all partners that use them:
 
 - Add `LINK_ID`, `LINK_ALIAS` to:
   - Email Click (all destinations)
@@ -37,11 +37,11 @@ We now support targeting users who have foreground push enabled on their device 
 - `{{targeted_device.${foreground_push_enabled}}}`
 {% endraw %}
 
-For more information, refer to [Supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
+For more information, refer to [Supported personalization tags]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/).
 
 ## About webhooks
 
-Webhooks are powerful, flexible tools—but they can be a bit confusing. If you're wondering what webhooks are and how you can use them in Braze, check out our new article on [About webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/).
+Webhooks are powerful, flexible tools—but they can be a bit confusing. If you're wondering what webhooks are and how you can use them in Braze, check out our new article on [About webhooks]({{site.baseurl}}/about_webhooks/).
 
 ## Amazon Personalize
 

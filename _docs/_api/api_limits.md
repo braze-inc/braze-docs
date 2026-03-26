@@ -197,7 +197,7 @@ HTTP headers will be returned in all lowercase characters. This behavior aligns 
 If you have questions about API limits, contact your customer success manager or open a [support ticket]({{site.baseurl}}/braze_support/).
 
 {% alert tip %}
-You can use the [API usage dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_dashboard/) to view and compare incoming traffic against your rate limits.
+You can use the [API usage dashboard]({{site.baseurl}}/user_guide/analytics/dashboards/api_usage/) to view and compare incoming traffic against your rate limits.
 {% endalert %}
 
 ### Optimal delay between endpoints

@@ -80,10 +80,10 @@ Note that this will not be displayed in production on your device as Judo will r
 ### Step 2: Set a key-value pair for Judo
 ![This image shows the one key-value pair needed for this integration with the "key" being "judo-experience", and the "value" being your Judo link.]({% image_buster /assets/img/judo/braze-campaign-extras-judo-experience.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
-Set a [custom key-value pair]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) on the campaign with a key of `judo-experience`. Provide the URL of the Judo Experience you'd like to show here. The Judo-Braze integration library will then detect this key-value pair in the handler and use it to inject your Judo Experience in place of the standard Braze in-app message UI.
+Set a [custom key-value pair]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/key_value_pairs/) on the campaign with a key of `judo-experience`. Provide the URL of the Judo Experience you'd like to show here. The Judo-Braze integration library will then detect this key-value pair in the handler and use it to inject your Judo Experience in place of the standard Braze in-app message UI.
 <br><br>
 ### Step 3: Finishing the campaign
 
-Lastly, complete the campaign, setting up a trigger for the campaign and selecting users via Segments in the **Delivery** and **Target User** sections. Visit our in-app message [article]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/) on the different components of a Braze in-app message.
+Lastly, complete the campaign, setting up a trigger for the campaign and selecting users via Segments in the **Delivery** and **Target User** sections. Visit our in-app message [article]({{site.baseurl}}/user_guide/channels/in_app_messages/traditional/) on the different components of a Braze in-app message.
 
 

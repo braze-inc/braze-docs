@@ -361,4 +361,4 @@ After [adding your user as a test user]({{site.baseurl}}/user_guide/administrati
 
 1. Perform the custom event within the app.
 2. Wait for roughly 10 seconds for the data to flush.
-3. Refresh the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) to view the custom event and the event property value that was passed with it.
+3. Refresh the [Event User Log]({{site.baseurl}}/user_guide/administer/global/workspace_settings/logs_and_alerts/event_user_log/) to view the custom event and the event property value that was passed with it.

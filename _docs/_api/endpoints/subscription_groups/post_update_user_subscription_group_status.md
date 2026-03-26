@@ -30,7 +30,7 @@ If you want to see examples or test this endpoint for **SMS and RCS Subscription
 To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `subscription.status.set` permission.
 
 {% alert note %}
-If you're interested in using this endpoint with [LINE subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), contact your customer success manager.
+If you're interested in using this endpoint with [LINE subscription groups]({{site.baseurl}}/user_guide/channels/line/message_users/subscription_groups/), contact your customer success manager.
 {% endalert %}
 
 ## Rate limit
@@ -82,7 +82,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 This property should not be used for updating a user's profile information. Use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
 
 {% alert tip %}
-**Adding existing users to a subscription group:** This endpoint is the recommended way to backfill or bulk-update subscription group membership for existing users. You can pass up to 50 `external_id`s, email addresses, or phone numbers per request. Users can also update their own subscription status through an [email preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) link.
+**Adding existing users to a subscription group:** This endpoint is the recommended way to backfill or bulk-update subscription group membership for existing users. You can pass up to 50 `external_id`s, email addresses, or phone numbers per request. Users can also update their own subscription status through an [email preference center]({{site.baseurl}}/user_guide/channels/email/subscriptions/) link.
 
 **Creating new users with a subscription group:** When creating new users using the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.
 {% endalert %}
@@ -96,7 +96,7 @@ This property should not be used for updating a user's profile information. Use 
 | `external_id` | Required* | Array of strings | The `external_id` of the user or users, may include up to 50 `id`s. |
 | `email` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a maximum of 50). <br><br>If multiple users (`external_id`) in the same workspace share the same email address, then Braze updates all users that share the email address with the subscription group changes. |
 | `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (up to 50). <br><br>If multiple users (`external_id`) in the same workspace share the same phone number, then Braze updates all users that share the phone number with the same subscription group changes. |
-| `use_double_opt_in_logic` | Optional | Boolean | Applies only to SMS subscription groups; ignored for email and other subscription group types. Defaults to `false` if omitted. For SMS subscription groups, set to `true` to enter the user into the [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) workflow when their subscription status is set to `subscribed`. If this parameter is omitted or set to `false`, users are subscribed without entering the double opt-in workflow. |
+| `use_double_opt_in_logic` | Optional | Boolean | Applies only to SMS subscription groups; ignored for email and other subscription group types. Defaults to `false` if omitted. For SMS subscription groups, set to `true` to enter the user into the [SMS double opt-in]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_features_and_optimization/keyword_processing/double_opt_in/) workflow when their subscription status is set to `subscribed`. If this parameter is omitted or set to `false`, users are subscribed without entering the double opt-in workflow. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example requests

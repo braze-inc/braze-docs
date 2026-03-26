@@ -18,11 +18,11 @@ Braze now supports [nested objects]({{site.baseurl}}/user_guide/data_and_analyti
 
 ## New HMAC Liquid filters
 
-New [`hmac_sha1` and `hmac_sha256` Liquid encoding filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/) have been added to the Braze platform.
+New [`hmac_sha1` and `hmac_sha256` Liquid encoding filters]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/advanced_filters/) have been added to the Braze platform.
 
 ## Purchase event page
 
-Curious about the details of purchase events at Braze? Visit our dedicated [purchase event]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) article to learn more.
+Curious about the details of purchase events at Braze? Visit our dedicated [purchase event]({{site.baseurl}}/user_guide/data/activation/events/purchase_events/) article to learn more.
 
 ## New Braze partnerships
 

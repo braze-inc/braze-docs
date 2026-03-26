@@ -13,11 +13,11 @@ This detailed guide covers how to leverage push notification content app extensi
 
 ## VFC support for multimedia message service (MMS)
 
-vCards, also known as Virtual Contact Files (VCF), are a standardized file format for sending business/contact information that can be easily imported into address/contact books. These VFC files can now be sent through [MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/create/) and added to the Braze media library. 
+vCards, also known as Virtual Contact Files (VCF), are a standardized file format for sending business/contact information that can be easily imported into address/contact books. These VFC files can now be sent through [MMS]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/create/) and added to the Braze media library. 
 
 ## Updates to user delete
 
-In October 2020, we made [improvements]({{site.baseurl}}/help/release_notes/2020/october/) to how our user delete handles data subject's phone number or email address. 
+In October 2020, we made [improvements]({{site.baseurl}}/releases/2020/october/) to how our user delete handles data subject's phone number or email address. 
 
 ## New Braze partnerships
 

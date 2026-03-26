@@ -28,7 +28,7 @@ Seen supports automated, personalized video delivery across the customer lifecyc
 
 Before you begin, you need the following:
 
-| Prerequisite | Description |
+| Requirements | Description |
 |--------------|-------------|
 | Seen Platform access | You need a Seen Platform subscription or active Seen campaign. You need access to your Workspace settings to retrieve your Workspace ID and generate an API token. |
 | Braze Data Transformation Webhook URL | Braze Data Transformation reformats the incoming data from Seen so it can be accepted by Braze’s /users/track endpoint. |
@@ -71,7 +71,7 @@ If you have multiple video campaigns with Seen, repeat the process to connect Br
 
 ### Step 1: Create a webhook campaign to send data to Seen
 
-Create a new [Webhook Campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks) in Braze.
+Create a new [Webhook Campaign]({{site.baseurl}}/user_guide/channels/webhooks/) in Braze.
 
 Configure the webhook as follows:
 

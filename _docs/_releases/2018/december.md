@@ -9,7 +9,7 @@ description: "This article contains release notes for December 2018."
 
 ## Content Blocks
 
-[Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) allow you to manage your reusable, cross-channel content in a single, centralized location. To access this feature go into the **Content Blocks Library** tab in the **Templates & Media** section of your Braze account. 
+[Content Blocks]({{site.baseurl}}/user_guide/messaging/design_and_edit/content_blocks/) allow you to manage your reusable, cross-channel content in a single, centralized location. To access this feature go into the **Content Blocks Library** tab in the **Templates & Media** section of your Braze account. 
 
 With Content Blocks, you can:
  - Create a consistent look and feel to your email campaigns using Content Blocks as headers and footers.
@@ -19,4 +19,4 @@ With Content Blocks, you can:
 
 ## Gmail promotional tool
 
-Gmail has updated the mobile Promotions tab to allow marketers to send more information via annotations in a "card", rather than just the subject line or preheader information. With the [Gmail promotional tool]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/), Braze can help you build the card from our product.
+Gmail has updated the mobile Promotions tab to allow marketers to send more information via annotations in a "card", rather than just the subject line or preheader information. With the [Gmail promotional tool]({{site.baseurl}}/user_guide/channels/email/html_editor/gmail_promotions_tab/), Braze can help you build the card from our product.

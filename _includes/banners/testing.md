@@ -15,3 +15,5 @@ While reviewing your test Banner, verify the following:
 - Do your links and buttons direct the user to where they should go?
 - Does the Liquid function as expected? Have you accounted for a default attribute value in the event that the Liquid returns no information?
 - Is your copy clear, concise, and correct?
+
+For more information, see [Send test messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/sending_test_messages/).

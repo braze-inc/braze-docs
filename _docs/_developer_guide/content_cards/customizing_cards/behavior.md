@@ -56,7 +56,7 @@ The example to the right shows a feed with a hybrid list of items that are popul
 
 ### API-triggered key-value pairs
 
-[API-triggered campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) are a good strategy to employ when a card's values depend on external factors to determine what content to display to the user. For example, to display supplemental content, set key-value pairs using Liquid. Note that `class_type` should be known at set-up time.
+[API-triggered campaigns]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery/) are a good strategy to employ when a card's values depend on external factors to determine what content to display to the user. For example, to display supplemental content, set key-value pairs using Liquid. Note that `class_type` should be known at set-up time.
 
 ![The key-value pairs for the supplemental Content Cards use case. In this example, different aspects of the card such as "tile_id", "tile_deeplink", and "tile_title" are set using Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 

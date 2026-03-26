@@ -9,11 +9,11 @@ description: "This article contains release notes for July 2020."
 
 ## Promotion codes
 
-Using Liquid, you can have your messages pull from a list of [promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/#promotion-codes) you upload. This feature offers expiry dates of up to six months and supports u to 20MM individual codes per list.
+Using Liquid, you can have your messages pull from a list of [promotion codes]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/sources/promotion_codes/#promotion-codes) you upload. This feature offers expiry dates of up to six months and supports u to 20MM individual codes per list.
 
 ## Variant retention report
 
-When looking at a retention report for a [campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/) or [canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/), you can now view the results broken down by variant. 
+When looking at a retention report for a [campaign]({{site.baseurl}}/user_guide/messaging/campaigns/test_campaigns/retention_reports/) or [canvas]({{site.baseurl}}/user_guide/analytics/reports/retention_reports/), you can now view the results broken down by variant. 
 
 ## 'Filter' option for campaigns and Canvases
 
@@ -25,5 +25,5 @@ Updated [storage connect documentation]({{site.baseurl}}/user_guide/data_and_ana
 
 ## BCC functionality
 
-The [BCC Address setting]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/) allows you to add and manage BCC address that can be appended to outbound email messages sent from Braze.	
+The [BCC Address setting]({{site.baseurl}}/user_guide/administer/global/workspace_settings/email_preferences/) allows you to add and manage BCC address that can be appended to outbound email messages sent from Braze.	
 

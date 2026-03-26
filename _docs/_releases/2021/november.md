@@ -8,7 +8,7 @@ description: "This article contains release notes for November 2021."
 # November 2021
 
 ## Click-to-Open Rate reporting metric
-Braze has added a new email metric, Click-to-Open Rate, available in the [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/). This metric represents the percentage of open emails that have been clicked.
+Braze has added a new email metric, Click-to-Open Rate, available in the [Report Builder]({{site.baseurl}}/user_guide/analytics/reports/report_builder/). This metric represents the percentage of open emails that have been clicked.
 
 ## Machine Open reporting metric
 
@@ -18,10 +18,10 @@ A new email metric, [Machine Opens]({{site.baseurl}}/user_guide/message_building
 A variable `random_bucket_number` has been added to the list of [supported Liquid variables]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#supported-personalization-tags) for message personalization. 
 
 ## iOS 15 rich push notification guidelines
-New [iOS push notification guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) have been added to the iOS rich docs, including information about notification states and a breakdown of text truncation variables.
+New [iOS push notification guidelines]({{site.baseurl}}/user_guide/channels/push/platform_specific_resources/ios/rich_notifications/) have been added to the iOS rich docs, including information about notification states and a breakdown of text truncation variables.
 
 ## IPs to whitelist in EU for webhooks and Connected Content
-Additional IPs to whitelist in EU for webhooks and Connected Content have been added to our [webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) and [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) article. These new IPs include `18.157.135.97`, `3.123.166.46`, `3.64.27.36`, `3.65.88.25`, `3.68.144.188`, and `3.70.107.88`.
+Additional IPs to whitelist in EU for webhooks and Connected Content have been added to our [webhook]({{site.baseurl}}/user_guide/channels/webhooks/create_a_webhook/) and [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/making_an_api_call/) article. These new IPs include `18.157.135.97`, `3.123.166.46`, `3.64.27.36`, `3.65.88.25`, `3.68.144.188`, and `3.70.107.88`.
 
 ## Export purchases endpoint
 A new [`/purchases/product_list` endpoint]({{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id/) has been added to Braze. This endpoint returns paginated lists of product IDs.

@@ -11,7 +11,7 @@ tool: Campaigns
 
 > This reference article covers how to generate a `campaign_id` to include in your API calls and how to configure that campaign.
 
-API campaigns are typically used for transactional messaging. When creating API campaigns (not [API-triggered campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/)), the Braze dashboard is only used to generate a `campaign_id`, which lets you track analytics for campaign reporting. You can also generate a message variation ID, which is different for each variant in your campaign.
+API campaigns are typically used for transactional messaging. When creating API campaigns (not [API-triggered campaigns]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery/)), the Braze dashboard is only used to generate a `campaign_id`, which lets you track analytics for campaign reporting. You can also generate a message variation ID, which is different for each variant in your campaign.
 
 You'll then send that information to your development team to use in the API request, along with:
 - Campaign copy
@@ -28,7 +28,7 @@ Because API campaigns are typically transactional, all users are eligible for AP
 
 Go to **Messaging** > **Campaigns** and select **Create Campaign**, then select **API Campaigns**. Now, you can move on to configuring your API campaign.
 
-An [API-triggered campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) is different from an API campaign.
+An [API-triggered campaign]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery/) is different from an API campaign.
 
 ## Configure your campaign
 

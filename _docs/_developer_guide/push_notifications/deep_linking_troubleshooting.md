@@ -100,7 +100,7 @@ Email links go through your ESP's click-tracking system, which wraps links in a 
 2. Host the AASA file at `https://your-click-tracking-domain/.well-known/apple-app-site-association`.
 3. Ensure the AASA file on the click-tracking domain includes the same `appID` and valid path patterns.
 
-For ESP-specific setup instructions, see [Universal links and App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
+For ESP-specific setup instructions, see [Universal links and App Links]({{site.baseurl}}/user_guide/channels/email/customize/universal_links_and_app_links/).
 
 ### Check the redirect chain
 
@@ -120,7 +120,7 @@ If you implement `BrazeDelegate.braze(_:shouldOpenURL:)`, verify it handles link
 
 ### Enable verbose logging
 
-[Enable verbose logging]({{site.baseurl}}/developer_guide/verbose_logging) and reproduce the issue. Look for the `Opening` log entry:
+[Enable verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging/) and reproduce the issue. Look for the `Opening` log entry:
 
 ```
 Opening '<URL>':
@@ -178,9 +178,9 @@ Verify the Branch domain in your `BrazeDelegate` matches your actual Branch link
 
 To diagnose where the link breaks in the chain:
 
-1. Enable [Braze verbose logging]({{site.baseurl}}/developer_guide/verbose_logging) — look for `Opening '<URL>':` entries to verify the SDK received the link.
+1. Enable [Braze verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging/) — look for `Opening '<URL>':` entries to verify the SDK received the link.
 2. Enable [Branch test mode](https://help.branch.io/developers-hub/docs/ios-basic-integration#test-deep-linking) — check the Branch dashboard for link click events.
-1. Enable [Braze verbose logging]({{site.baseurl}}/developer_guide/verbose_logging). Look for `Opening '<URL>':` entries to verify the SDK received the link.
+1. Enable [Braze verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging/). Look for `Opening '<URL>':` entries to verify the SDK received the link.
 2. Enable [Branch test mode](https://help.branch.io/developers-hub/docs/ios-basic-integration#test-deep-linking). Check the Branch dashboard for link click events.
 3. If Braze logs the link, but Branch doesn't see a click, the `BrazeDelegate` routing logic is the likely issue.
 
@@ -203,7 +203,7 @@ Test the Branch link outside of Braze to isolate the issue:
 
 ### Use verbose logging
 
-[Enable verbose logging]({{site.baseurl}}/developer_guide/verbose_logging) to see exactly how the SDK processes links. Key entries to look for:
+[Enable verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging/) to see exactly how the SDK processes links. Key entries to look for:
 
 | Log entry | What it means |
 |---|---|
@@ -214,7 +214,7 @@ Test the Branch link outside of Braze to isolate the issue:
 | `isUniversalLink: true` | SDK identified the URL as a universal link |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For more details on reading these logs, see [Reading verbose logs]({{site.baseurl}}/developer_guide/verbose_logging).
+For more details on reading these logs, see [Reading verbose logs]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging/).
 
 ### Test links in isolation
 

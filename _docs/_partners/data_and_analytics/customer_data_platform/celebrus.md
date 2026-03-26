@@ -48,13 +48,13 @@ The Celebrus connector for Braze custom attributes sends custom attributes to an
 
 #### Step 2: Configure Cloud Data Ingestion in your Braze dashboard
 
-This integration uses Braze Cloud Data Ingestion. Follow the instructions in [Data warehouse integrations]({{site.baseurl}}/user_guide/data/cloud_ingestion/integrations/) to set up and configure the [Cloud Data Ingestion settings]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/) according to the type of warehouse you are using. 
+This integration uses Braze Cloud Data Ingestion. Follow the instructions in [Data warehouse integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/) to set up and configure the [Cloud Data Ingestion settings]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/) according to the type of warehouse you are using. 
 
 #### Step 3: Sync data from Celebrus to Braze
 
 Celebrus captures and assigns unique identifiers to an individual such as email, phone, `external_id`or user alias and sends to Braze via CDI. This allows data to be synced to Braze for the same individual.
 
-Celebrus will use the defined identifiers to send the customer attributes that are defined in the Celebrus profile builder, but only when attribute values change. Note that the attribute names defined in the Celebrus profile builder will be used in Braze by default. So be sure you update these names to adhere to [Braze naming conventions]({{site.baseurl}}/api/objects_filters/user_attributes_object/).
+Celebrus will use the defined identifiers to send the customer attributes that are defined in the Celebrus profile builder, but only when attribute values change. Note that the attribute names defined in the Celebrus profile builder will be used in Braze by default. So be sure you update these names to adhere to [Braze naming conventions]({{site.baseurl}}/api/objects_filters/user_attributes_object/#migrating-push-tokens).
 
 {% alert important %}
 For now, this release doesn't support events and purchases.<br><br> This integration sends attributes as string values, so some attributes are lists (such as signals). For now, lists can't be converted to arrays. There are no nested attributes.

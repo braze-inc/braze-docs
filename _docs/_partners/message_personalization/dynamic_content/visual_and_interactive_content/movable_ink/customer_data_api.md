@@ -34,7 +34,7 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 
 #### Step 1a: Create a new campaign
 
-1. In Braze, [create a webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).
+1. In Braze, [create a webhook campaign]({{site.baseurl}}/user_guide/channels/webhooks/create_a_webhook/).
 2. Give your campaign a name and optional description.
 3. Select **Blank Template** as your template.
 
@@ -83,9 +83,9 @@ To test your webhook, do the following:
 
 #### Step 2a: Schedule your campaign
 
-When you're done composing and testing the webhook, [schedule your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types). 
+When you're done composing and testing the webhook, [schedule your campaign]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/). 
 
-Braze supports scheduled, action-based, and API-triggered deliveries. [Action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) is usually the best fit for most behavioral event use cases. For questions about what makes sense for your use case, connect with your Braze and Movable Ink customer success managers.
+Braze supports scheduled, action-based, and API-triggered deliveries. [Action-based delivery]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/) is usually the best fit for most behavioral event use cases. For questions about what makes sense for your use case, connect with your Braze and Movable Ink customer success managers.
 
 For action-based delivery:
 
@@ -99,7 +99,7 @@ To make sure data is streamed to Movable Ink in real time, don't select **Send c
 
 #### Step 2b: Specify your audience
 
-Next, determine which users you want to target for this campaign. For details, refer to [Targeting users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/).
+Next, determine which users you want to target for this campaign. For details, refer to [Targeting users]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/target_users/).
 
 Make sure not to use A/B testing in your campaign by clearing the **Control Group** checkbox. If a control group is included, a percentage of users will not have data sent to Movable Ink. All of your audience should go to the variant rather than the control group.
 
@@ -135,7 +135,7 @@ You can generate an event payload within Braze using any event properties. Gener
 
 Share this sample payload with your Movable Ink Client Experience team. Make sure that there is no sensitive personally identifiable information in the sample payload (such as email address, phone number, or full birth dates). 
 
-To learn more about custom event properties and the expected format of data contained within properties, refer to [Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
+To learn more about custom event properties and the expected format of data contained within properties, refer to [Custom event properties]({{site.baseurl}}/user_guide/data/activation/events/custom_events/custom_event_properties/).
 
 ### Known versus anonymous users
 

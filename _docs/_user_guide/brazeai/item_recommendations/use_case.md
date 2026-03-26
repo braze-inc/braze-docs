@@ -13,7 +13,7 @@ Let's say Camila is a CRM manager at MovieCanon, a streaming platform featuring 
 
 Camila’s goal is to keep viewers engaged after they finish watching something. Historically, MovieCanon’s "You might also like" messages were based on broad genre matching and sent at arbitrary times—often hours or days after a session. Engagement was low, and her team knew they could do better.
 
-Using [AI Item Recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/), Camila sets up a system to automatically recommend new titles based on each viewer’s watching history, delivered immediately after a user finishes a film or episode. It’s a smarter, more personal way to help users discover content they’ll actually want to watch next and keep them engaged with the platform.
+Using [AI Item Recommendations]({{site.baseurl}}/user_guide/brazeai/item_recommendations/creating_recommendations/ai/), Camila sets up a system to automatically recommend new titles based on each viewer’s watching history, delivered immediately after a user finishes a film or episode. It’s a smarter, more personal way to help users discover content they’ll actually want to watch next and keep them engaged with the platform.
 
 ![In-app message reading "Next up, just for you. Because you watched "Nomads of the Sun", with an image, title name, description, and CTA to "Watch now" or "Skip" to the next recommendation.]({% image_buster /assets/img/ai_use_cases/recommendation_rendered.png %})
 
@@ -46,7 +46,7 @@ After the recommendation has finished training, Camila builds a messaging flow t
 
 {: start="4"}
 
-4. In the message body, Camila uses the [Add Personalization modal]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#inserting-pre-formatted-variables) to add variables like the recommended title's name, description, and thumbnail using Liquid, which dynamically populates content from the catalog. She templates in a custom attribute for `Last Watched Movie` to let users know this recommendation is based on their watch history. 
+4. In the message body, Camila uses the [Add Personalization modal]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/using_liquid#inserting-pre-formatted-variables) to add variables like the recommended title's name, description, and thumbnail using Liquid, which dynamically populates content from the catalog. She templates in a custom attribute for `Last Watched Movie` to let users know this recommendation is based on their watch history. 
 
 ![In-app message editor with raw Liquid to template in specific fields from catalog items from the recommendation.]({% image_buster /assets/img/ai_use_cases/recommendation_liquid.png %})
 

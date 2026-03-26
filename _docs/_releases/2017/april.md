@@ -10,11 +10,11 @@ description: "This article contains release notes for April 2017."
 
 ## HTML in-browser messages
 
-We now support interactive in-browser message types including custom HTML and email capture formats, enabling you to reach your customers wherever they are. Learn more about [in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
+We now support interactive in-browser message types including custom HTML and email capture formats, enabling you to reach your customers wherever they are. Learn more about [in-app messages]({{site.baseurl}}/user_guide/channels/in_app_messages/best_practices/).
 
 ## Personalized in-app message with connected content
 
-We've added {% raw %} {%connected_content%} {% endraw %} blocks in triggered in-app messages which allows you to add rich personalization by inserting any information accessible via API directly into your messages. Now, you can use Connected Content inside your app in addition to your push, email and webhooks. Learn more about [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/).
+We've added {% raw %} {%connected_content%} {% endraw %} blocks in triggered in-app messages which allows you to add rich personalization by inserting any information accessible via API directly into your messages. Now, you can use Connected Content inside your app in addition to your push, email and webhooks. Learn more about [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/).
 
 ## Improved navigation for News Feed cards
 
@@ -40,7 +40,7 @@ You now have the option of opening web URLs in an external web browser for push 
 
 ## New "Performed Conversion" event Canvas
 
-We've added a new "Performed Conversion" event and an "In Canvas Control" filter for improved retargeting options. Learn more about using [retargeting filters]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns).
+We've added a new "Performed Conversion" event and an "In Canvas Control" filter for improved retargeting options. Learn more about using [retargeting filters]({{site.baseurl}}/user_guide/messaging/campaigns/ideas_and_strategies/retargeting_campaigns/#retarget-campaigns).
 
 
 

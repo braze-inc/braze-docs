@@ -108,7 +108,7 @@ On iOS versions that do not integrate push via the `UserNotifications` framework
 
 ##### Test notification scheduled incorrectly
 
-Check the schedule you set for your test message. If it is set to local time zone delivery or [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/), you may have just not received the message yet (or had the app in the foreground when it was received).
+Check the schedule you set for your test message. If it is set to local time zone delivery or [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence_suite/intelligent_timing/), you may have just not received the message yet (or had the app in the foreground when it was received).
 
 #### User not "push registered" for the app being tested
 
@@ -120,7 +120,7 @@ The following would indicate a problem with push registration or that the user's
 
 ## Push messages not sending
 
-To troubleshoot push notifications that aren't sending, refer to [Troubleshooting Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/troubleshooting/).
+To troubleshoot push notifications that aren't sending, refer to [Troubleshooting Push]({{site.baseurl}}/user_guide/channels/push/troubleshooting/).
 
 ## Message activity log errors
 

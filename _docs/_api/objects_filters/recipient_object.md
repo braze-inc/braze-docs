@@ -13,7 +13,7 @@ description: "This reference article explains the different components of the Br
 
 You must include one of `external_user_id`, `user_alias`, `braze_id`, or `email` in this object. **Requests must specify only one.**
 
-The recipients object allows you to combine the [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/), the [trigger properties object]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), the [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/), and the [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/).
+The recipients object allows you to combine the [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/), the [trigger properties object]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), the [Canvas entry properties object]({{site.baseurl}}/user_guide/messaging/canvas/canvas_components/context/), and the [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/#migrating-push-tokens).
 
 ## Object body
 
@@ -33,11 +33,11 @@ The recipients object allows you to combine the [user alias object]({{site.baseu
 
 When `send_to_existing_only` is `true`, Braze only sends the message to existing users. However, you cannot use this flag with user aliases. When `send_to_existing_only` is `false`, you must include an attribute. Braze creates a user with the `id` and attributes before sending the message.
 
-- [Braze ID]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)
+- [Braze ID]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/)
 - [User aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 - [External user ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [Prioritization]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/#identifying-users-by-email)
-- [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/)
+- [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/#migrating-push-tokens)
 
 ## Recipient object deduping
 

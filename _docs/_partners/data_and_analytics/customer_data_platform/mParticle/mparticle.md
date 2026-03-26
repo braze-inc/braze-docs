@@ -214,8 +214,8 @@ Before enabling "Enriched User Attributes" or "Enriched User Identities" we reco
 
 #### Data types
 Not all data types are supported between both platforms.
-- [Custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) support string, numeric, boolean, or date objects. It does not support arrays or nested objects.
-- [Custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) support string, numerical, boolean, date objects, and arrays, but does not support objects or nested objects. 
+- [Custom event properties]({{site.baseurl}}/user_guide/data/activation/events/custom_events/) support string, numeric, boolean, or date objects. It does not support arrays or nested objects.
+- [Custom attributes]({{site.baseurl}}/user_guide/data/activation/attributes/custom_attributes/) support string, numerical, boolean, date objects, and arrays, but does not support objects or nested objects. 
 
 {% alert note %}
 Braze doesn't support timestamps before year 0 or after year 3000 in `Time` type custom attributes. Braze will ingest these values when they are sent by mParticle, but the value will be stored as a string.
@@ -275,7 +275,7 @@ If push notifications are not working when using the Braze event kit (embedded k
 2. **Kit initialization order:** The Braze kit must be initialized before your app requests push permissions. If push permissions are requested before the kit is active, the push token may not be forwarded to Braze. Check that the mParticle SDK is started early in your app lifecycle.
 3. **Method swizzling:** The mParticle Apple kit uses method swizzling to automatically forward push tokens and handle push notification events. If you have disabled swizzling or another SDK is interfering, push tokens may not reach Braze. Verify that swizzling is enabled in your mParticle configuration.
 4. **Manual token handling:** If you manage push tokens manually (for example, by implementing `application:didRegisterForRemoteNotificationsWithDeviceToken:`), make sure you are passing the token to mParticle by assigning it to the push notification token property, for example: `MParticle.sharedInstance().pushNotificationToken = deviceToken`. The kit will then forward it to Braze.
-5. **Environment mismatch:** Confirm the APNs credential environment (development vs. production) matches your app's build. For details, refer to [iOS push troubleshooting]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/ios/).
+5. **Environment mismatch:** Confirm the APNs credential environment (development vs. production) matches your app's build. For details, refer to [iOS push troubleshooting]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=swift).
 
 ### Sending unnecessary or duplicate data to Braze
 Braze counts a data point each time an attribute is passed to Braze, even if the value is unchanged. For this reason, Braze recommends only forwarding data needed to action on within Braze and ensuring that only deltas of attributes are being passed.

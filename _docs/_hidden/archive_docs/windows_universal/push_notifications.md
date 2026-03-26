@@ -15,7 +15,7 @@ hidden: true
 
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
 
-Visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/) for additional best practices.
+Visit our [documentation]({{site.baseurl}}/user_guide/channels/push/best_practices/) for additional best practices.
 
 ## Step 1: Configure your application for push
 

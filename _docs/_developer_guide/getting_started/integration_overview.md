@@ -49,10 +49,10 @@ During your company's onboarding period, Braze will host technical overview sess
 ### Campaign planning
 
 Your CRM team will plan out the messaging use cases that you'll launch in the near future. This includes the:
-* [Channel]({{site.baseurl}}/user_guide/message_building_by_channel) (for example, push notifications or in-app messages)
-* [Delivery method]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types) (for example, scheduled delivery or action-based delivery)
-* [Target audience]({{site.baseurl}}/user_guide/engagement_tools/segments)
-* [Success metrics]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)
+* [Channel]({{site.baseurl}}/user_guide/channels/) (for example, push notifications or in-app messages)
+* [Delivery method]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/) (for example, scheduled delivery or action-based delivery)
+* [Target audience]({{site.baseurl}}/user_guide/audience/segments/)
+* [Success metrics]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/conversion_events/)
 
 For example, a new customer campaign might be: an email sent daily at 10 am to a segment of customers who logged their first session yesterday. The conversion event (the success metric) is logging a session.
 
@@ -87,7 +87,7 @@ Your team administrator should add you (and all other team members who need acce
 
 ### Workspaces and API keys
 
-Your team administrator will also create different [workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/). Workspaces group your data—users, segments, API keys—into one location. As a best practice, we suggest only putting different versions of the same or very similar apps together under one workspace. 
+Your team administrator will also create different [workspaces]({{site.baseurl}}/user_guide/administer/global/create_and_manage_workspaces/). Workspaces group your data—users, segments, API keys—into one location. As a best practice, we suggest only putting different versions of the same or very similar apps together under one workspace. 
 
 Importantly, workspaces provide API keys for multiple platforms (such as iOS and Android). You'll use the correlated API keys to associate SDK data with a particular workspace. Navigate to your workspaces to access the API key for each of your apps. Make sure each API key has the correct permissions to perform the work you've scoped. See the [API provisioning article]({{site.baseurl}}/api/basics/#rest-api-key) for details.
 
@@ -155,7 +155,7 @@ While using the API, ensure you batch your requests and only send delta values. 
 
 Braze is all about data. Data in Braze is stored on the user profile. 
 
-Data points are a structure by which you ensure you're capturing the right data for your marketers, not just "any" data you can possibly vacuum up. Familiarize yourself with [data points]({{site.baseurl}}/user_guide/data/data_points/).
+Data points are a structure by which you ensure you're capturing the right data for your marketers, not just "any" data you can possibly vacuum up. Familiarize yourself with [data points]({{site.baseurl}}/user_guide/data/infrastructure/data_points/).
 
 ### Migrating legacy user data
 
@@ -169,10 +169,10 @@ The Braze SDK generates "open session" and "close session" data points. The Braz
 
 ### Tracking custom events, attributes, and purchase events
 
-Coordinate with your team to set up your planned data schema, including custom events, user attributes, and purchase events. Your [custom data scheme]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) will be entered using the dashboard and must match exactly what you implement during SDK integration.
+Coordinate with your team to set up your planned data schema, including custom events, user attributes, and purchase events. Your [custom data scheme]({{site.baseurl}}/user_guide/data/activation/events/custom_events/) will be entered using the dashboard and must match exactly what you implement during SDK integration.
 
 {% alert tip %}
-User IDs, called `external_id`s in Braze, should be set for all known users. These should be unchanging and accessible when a user opens the app, allowing you to track your users across devices and platforms. See the [User lifecycle]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) article for best practices.
+User IDs, called `external_id`s in Braze, should be set for all known users. These should be unchanging and accessible when a user opens the app, allowing you to track your users across devices and platforms. See the [User lifecycle]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/) article for best practices.
 {% endalert %}
 
 ### Other tools
@@ -210,7 +210,7 @@ While performing QA on your SDK integration, use the [SDK Debugger]({{site.baseu
 Once you have integrated your platform or site, you will want to involve your Marketing team to pass ownership of the platform to them. This process looks different at every company, but might include the following:
 
 * Composing complex [Liquid logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid#about-liquid)
-* Help facilitating [email IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)
+* Help facilitating [email IP warming]({{site.baseurl}}/user_guide/channels/email/email_setup/ip_warming/)
 * Making sure other stakeholders understand the kind of data being tracked
 
 ### Develop for the future

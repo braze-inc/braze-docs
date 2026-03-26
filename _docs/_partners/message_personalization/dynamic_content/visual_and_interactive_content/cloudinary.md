@@ -18,7 +18,7 @@ Connecting Cloudinary to Braze gives brands access to visual media stored in Clo
 This page outlines four possible, but not exhaustive, integration methods between Cloudinary and Braze. These integration methods primarily rely on modifying asset links manually copied from Cloudinary’s Media Library. 
 
 {% alert important %}
-More advanced integration methods, including using [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) to call Cloudinary’s [Admin API](https://cloudinary.com/documentation/admin_api#banner) are possible, but the approach will vary between customers. Contact your Cloudinary and Braze customer success manager for guidance.
+More advanced integration methods, including using [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/) to call Cloudinary’s [Admin API](https://cloudinary.com/documentation/admin_api#banner) are possible, but the approach will vary between customers. Contact your Cloudinary and Braze customer success manager for guidance.
 {% endalert %}
 
 ## Prerequisites
@@ -72,7 +72,7 @@ The most direct way to use images and videos directly from Cloudinary's DAM in y
 ```
 {% endraw %}
 
-Refer to [Video]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/video/) for specific Android and iOS considerations. 
+Refer to [Video]({{site.baseurl}}/user_guide/channels/in_app_messages/customize/video_in_custom_html/) for specific Android and iOS considerations. 
 
 {% endtab %}
 {% tab Convert videoes into GIFs %}

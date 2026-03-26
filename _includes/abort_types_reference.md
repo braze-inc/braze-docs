@@ -82,7 +82,7 @@ These abort types can occur on any messaging channel.
 | `sms_no_sending_numbers` | No sending phone numbers are available for this subscription group. |
 | `sms_fatal_provider_error` | A fatal error occurred with the SMS provider, preventing message delivery. |
 | `sms_gateway_domain_not_allowed` | The SMS gateway domain is not on the allowlist. |
-| `blocked_recipient_country` | The recipient's phone number is in a country that is blocked by your [geographic permissions]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_geographic_permissions/). |
+| `blocked_recipient_country` | The recipient's phone number is in a country that is blocked by your [geographic permissions]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/compliance_and_delivery/geographic_permissions/). |
 | `mms_not_supported` | MMS is not supported for this recipient or sending number. |
 | `no_current_messaging_service` | No active messaging service is configured for this subscription group. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

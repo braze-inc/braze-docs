@@ -10,11 +10,11 @@ description: "This article contains release notes for July 2017."
 
 ## Large images in web push
 
-We've added support for large images for Web Push on Chrome for Windows and Android, giving you the ability to create rich, engaging customer experiences. Learn more about [web push]({{site.baseurl}}/user_guide/message_building_by_channel/push/web).
+We've added support for large images for Web Push on Chrome for Windows and Android, giving you the ability to create rich, engaging customer experiences. Learn more about [web push]({{site.baseurl}}/user_guide/channels/push/platform_specific_resources/web/).
 
 ## Updates to email fields
 
-You can now lock emails to a specific set of from-addresses, ensuring that you don't accidentally input the wrong address. The email composition form will be pre-populated with addresses used in the last 6 months to streamline the process. Check out [Email best practices]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) for more information.
+You can now lock emails to a specific set of from-addresses, ensuring that you don't accidentally input the wrong address. The email composition form will be pre-populated with addresses used in the last 6 months to streamline the process. Check out [Email best practices]({{site.baseurl}}/user_guide/channels/email/best_practices/) for more information.
 
 ## Updates to campaign details API
 
@@ -22,7 +22,7 @@ The `/campaign/details` endpoint now gives information about its messages, allow
 
 ## Updates to Liquid templating
 
-We've added the ability to template variant attributes in Canvases and campaigns. In Canvas, you can now template both the variant's API id as well as the variant's name, and in campaigns you can now template a message's `message_api_id` and `message_name`. Both updates allow for more flexibility in your messaging, allowing you to build personalized campaigns. Learn more about [personalized messaging]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
+We've added the ability to template variant attributes in Canvases and campaigns. In Canvas, you can now template both the variant's API id as well as the variant's name, and in campaigns you can now template a message's `message_api_id` and `message_name`. Both updates allow for more flexibility in your messaging, allowing you to build personalized campaigns. Learn more about [personalized messaging]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/liquid/supported_personalization_tags/).
 
 ## New HTML email editor
 

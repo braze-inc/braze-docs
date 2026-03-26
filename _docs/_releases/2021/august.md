@@ -22,7 +22,7 @@ Predictive Purchases give marketers a powerful tool for identifying and messagin
 
 ## Drag-and-drop editor
 
-With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvases using our new [drag-and-drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/). Users can now drag editor blocks into their emails, allowing more intuitive customization. 
+With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvases using our new [drag-and-drop editing experience]({{site.baseurl}}/user_guide/channels/email/drag_and_drop/). Users can now drag editor blocks into their emails, allowing more intuitive customization. 
 
 ## User alias import
 
@@ -40,7 +40,7 @@ This [Android 12 upgrade guide]({{site.baseurl}}/developer_guide/platforms/andro
 
 A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. 10-digit long codes have traditionally been designed for Person-to-Person (P2P) traffic, causing businesses to be constrained by limited throughput and heightened filtering. This service helps alleviate those issues, improving overall message deliverability, allowing brands to send messages at scale, including links and calls to action, and helping further protect consumers from unwanted messages. 
 
-All customers who currently have and/or use US long codes to send to US customers must register their long codes for 10DLC. To read more about the specifics of 10DLC and why it's required, visit our dedicated [10DLC article]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/).
+All customers who currently have and/or use US long codes to send to US customers must register their long codes for 10DLC. To read more about the specifics of 10DLC and why it's required, visit our dedicated [10DLC article]({{site.baseurl}}/user_guide/channels/sms_mms_and_rcs/message_setup/sender_setup/10dlc/).
 
 ## Two-factor authentication reset
 
@@ -58,7 +58,7 @@ The Braze and [Transcend]({{site.baseurl}}/partners/ecommerce/payments/transcend
 
 ### Tinyclues - Cohort Import
 
-[Tinyclues]({{site.baseurl}}/partners/data_and_analytics/cohort_import/tinyclues/) is an audience-building feature that offers the capability to increase the number of campaigns and revenue without harming customer experience, and analytics to track the performance of CRM campaigns both online and offline. Together, the Braze and Tinyclues integration offers users a path to better CRM planning and strategy, allowing users to send more targeting campaigns, find new product opportunities, and elevate revenue using an incredibly user-friendly UI.
+[Tinyclues]({{site.baseurl}}/partners/splio/) is an audience-building feature that offers the capability to increase the number of campaigns and revenue without harming customer experience, and analytics to track the performance of CRM campaigns both online and offline. Together, the Braze and Tinyclues integration offers users a path to better CRM planning and strategy, allowing users to send more targeting campaigns, find new product opportunities, and elevate revenue using an incredibly user-friendly UI.
 
 ### optilyz - Direct Mail
 

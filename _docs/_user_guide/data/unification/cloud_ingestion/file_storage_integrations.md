@@ -2,7 +2,7 @@
 nav_title: File storage integrations
 article_title: File Storage Integrations
 description: "This page covers Braze Cloud Data Ingestion and how to sync relevant data from S3 to Braze."
-page_order: 3
+page_order: 4
 page_type: reference
 
 ---

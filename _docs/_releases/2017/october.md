@@ -10,11 +10,11 @@ description: "This article contains release notes for October 2017."
 
 ## Push stories
 
-On iOS and Android, you can now [create notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_stories/) with multiple pages, each of which contains an image, click behavior, and an optional title and subtitle. This feature requires iOS SDK 3.2.1 and Android SDK 2.2.0. To gain access to this new product, contact your customer success manager, account manager, or open a [support ticket]({{site.baseurl}}/braze_support/).
+On iOS and Android, you can now [create notifications]({{site.baseurl}}/user_guide/channels/push/create_a_push_message/push_stories/) with multiple pages, each of which contains an image, click behavior, and an optional title and subtitle. This feature requires iOS SDK 3.2.1 and Android SDK 2.2.0. To gain access to this new product, contact your customer success manager, account manager, or open a [support ticket]({{site.baseurl}}/braze_support/).
 
 ## Currents
 
-[Currents]({{site.baseurl}}/partners/braze_currents/how_it_works/) displays a set of real-time, high volume data connections for customer data with pre-built connections directly into technologies like data warehouses, business intelligence tools, and data management platforms. It launches with integrations for Amazon Redshift, Amplitude, and data management platforms Segment and mParticle. To gain access to this new product, contact your customer success manager, account manager, or open a [support ticket]({{site.baseurl}}/braze_support/).
+[Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/use_cases/how_braze_uses_currents/) displays a set of real-time, high volume data connections for customer data with pre-built connections directly into technologies like data warehouses, business intelligence tools, and data management platforms. It launches with integrations for Amazon Redshift, Amplitude, and data management platforms Segment and mParticle. To gain access to this new product, contact your customer success manager, account manager, or open a [support ticket]({{site.baseurl}}/braze_support/).
 
 ## Okta single sign-on (October 2017)
 

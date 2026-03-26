@@ -91,7 +91,7 @@ After the integration is set up, Kameleoon will send custom events called `kamel
 
 ![The custom event user log in Braze, showing an example payload of the event that has been received by Braze from Kameleoon.]({% image_buster /assets/img/kameleoon/img_9.png %})
 
-You can then view this data in the Custom Events, create custom event reports to identify Kameleoon campaign exposure, and enable segmentation based on event properties. You can use custom events when creating subsequent or linked campaigns and Canvases through [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/#action-groups), [action-based triggers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery) or creating [segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)
+You can then view this data in the Custom Events, create custom event reports to identify Kameleoon campaign exposure, and enable segmentation based on event properties. You can use custom events when creating subsequent or linked campaigns and Canvases through [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/#action-groups), [action-based triggers]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/) or creating [segments]({{site.baseurl}}/user_guide/audience/segments/creating_a_segment/)
 
 Furthermore, these events will be accessible through [Currents custom event objects]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events/) to allow for comprehensive reporting and analysis.
 

@@ -51,7 +51,7 @@ Intelligent Creative has many offerings that company users can take advantage of
 | Apps | Countdown Timer | ✔* | ✔ | * Supported but not recommended because push notifications are cached upon receipt and do not refresh |
 || Polling | ✗ | ✔* | * After voting, will leave the app to be a mobile landing page |
 || Scratch Off | ✔* | ✔* | * On click, will leave the app for the Scratch Off experience |
-|| Video | ✔* | ✔* | * Animated GIFs only, <br>For Android, Braze requires [GIF support]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/) in implementation |
+|| Video | ✔* | ✔* | * Animated GIFs only, <br>For Android, Braze requires [GIF support]({{site.baseurl}}/developer_guide/in_app_messages/gifs/?sdktab=android) in implementation |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Integration
@@ -171,7 +171,7 @@ This template will take the current time (in seconds), append it to the end of t
 - **Image not loading**: Be sure to replace any "merge tags" with the corresponding Liquid fields in the Braze dashboard. For example: {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} with {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}.
 
 ### Having trouble showing GIFs on Android?
-- Android requires GIF support in implementation. Follow the Android [in-app message customization]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/) article if you do not have this setup.
+- Android requires GIF support in implementation. Follow the Android [in-app message customization]({{site.baseurl}}/developer_guide/in_app_messages/gifs/?sdktab=android) article if you do not have this setup.
 
 
 [1]: https://www.movableink.com/

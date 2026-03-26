@@ -14,7 +14,7 @@ resources_list:
     link: /docs/help/help_articles/overview/
     image: /assets/img/braze_icons/info-circle.svg
   - name: Release Notes
-    link: /docs/help/release_notes/
+    link: /docs/releases/release_notes/
     image: /assets/img/braze_icons/sticker-square.svg
   - name: Braze Learning Login
     link: https://learning.braze.com/
@@ -23,22 +23,22 @@ resources_list:
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
     image: /assets/img/braze_icons/youtube.svg
   - name: Braze Support
-    link: /docs/user_guide/administrative/access_braze/support/
+    link: /docs/user_guide/administer/personal/braze_support/
     image: /assets/img/braze_icons/mail-01.svg
 
 popular_topic_list:
   - name: Know Before You Send
-    link: /docs/user_guide/engagement_tools/messaging_fundamentals/know_before_send/
+    link: /docs/user_guide/messaging/messaging_fundamentals/know_before_you_send/
   - name: Logging Custom Event Properties
-    link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
+    link: /docs/developer_guide/analytics/logging_events/
   - name: Dispatch ID
     link: /docs/help/help_articles/data/dispatch_id/
   - name: Email Bounces
-    link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
+    link: /docs/user_guide/channels/email/reporting/
   - name: Deleting Users via API
     link: /docs/help/help_articles/api/delete_user/
   - name: Changing Custom Data Type
-    link: /docs/help/help_articles/data/change_custom_data_type/
+    link: /docs/user_guide/data/activation/custom_data/data_types/#changing-custom-attribute-or-event-data-type
   - name: Using Event Logging
     link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/ 
 ---

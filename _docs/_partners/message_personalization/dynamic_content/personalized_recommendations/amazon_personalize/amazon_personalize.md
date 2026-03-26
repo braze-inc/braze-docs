@@ -130,7 +130,7 @@ In the following examples, we are going to query
 ]
 ```
 
-In the Braze dashboard, create a new [Content Card campaign]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/). In the message text field, create a Connected Content Liquid block to query the API and save the response in the `recommendations` variable:
+In the Braze dashboard, create a new [Content Card campaign]({{site.baseurl}}/user_guide/channels/content_cards/create_a_content_card/). In the message text field, create a Connected Content Liquid block to query the API and save the response in the `recommendations` variable:
 
 {% raw %}
 

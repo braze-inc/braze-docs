@@ -98,7 +98,7 @@ Use this endpoint when the message content is built in the Braze dashboard (API-
 3. Add your message channel (WhatsApp, email, SMS, etc.) and build the message content in the dashboard.
 4. Note the **Campaign ID** (and **Send ID** if you use multiple message variants). You'll use these in the API request.
 
-For more on building API-triggered campaigns, see [API-triggered delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/).
+For more on building API-triggered campaigns, see [API-triggered delivery]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/api_triggered_delivery/).
 
 ### Step 2: Trigger the campaign via the API
 
@@ -133,6 +133,6 @@ For the full request body (including `trigger_properties`, `send_to_existing_onl
 
 ## Considerations
 
-- Use Braze [personalization features]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) to tailor content where supported.
+- Use Braze [personalization features]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/) to tailor content where supported.
 - Ensure your messaging complies with relevant regulations and includes required opt-out options and privacy notices.
 - For more endpoints (scheduling, Canvas triggers, etc.), see [Messaging endpoints]({{site.baseurl}}/api/endpoints/messaging/).

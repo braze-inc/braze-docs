@@ -17,7 +17,7 @@ After you're integrated, you can use Contentful's RESTful APIs to deliver your c
 
 Before you start, you'll need the following:
 
-| Prerequisite          | Description                        |
+| Requirements          | Description                        |
 |-----------------------|------------------------------------|
 | A Contentful account | You need a Contentful account with access to the Content Delivery API. |
 | A Braze account | You need a Braze account with access to the Connected Content feature. |
@@ -133,5 +133,5 @@ Verify that the response path mappings are correctly configured and that the API
 ## Additional resources
 
 - [Contentful Content Delivery API documentation](https://www.contentful.com/developers/docs/references/content-delivery-api/)
-- [Braze Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)
-- [Braze Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
+- [Braze Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/)
+- [Braze Content Blocks]({{site.baseurl}}/user_guide/messaging/design_and_edit/content_blocks/)

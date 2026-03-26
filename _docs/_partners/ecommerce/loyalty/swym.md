@@ -21,7 +21,7 @@ The Swym and Braze integration lets you deliver personalized, event-driven marke
 
 Before you start, you'll need the following:
 
-| Prerequisite          | Description                                                                                                                                |
+| Requirements          | Description                                                                                                                                |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | Swym  | Swym Wishlist Plus, Back in Stock apps, or both must be installed on your eCommerce platform (Shopify or BigCommerce), and you must be on the Enterprise plan.       |
 | A Braze REST API key  | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
@@ -87,7 +87,7 @@ From your Wishlist Plus app, go to the **Marketing** tab and find the **Automati
 
 ### Step 3: Create a Braze campaign or Canvas
 
-To automate the delivery of personalized messages for your shoppers, you must create a separate campaign or Canvas in Braze for each event you subscribed to. Each campaign or Canvas should be configured to trigger based on the specific event and use the corresponding event properties to populate dynamic content in your messages. For step-by-step guidance, you can refer to [Getting Started: Campaigns and Canvases]({{site.baseurl}}/user_guide/getting_started/campaigns_canvases/).
+To automate the delivery of personalized messages for your shoppers, you must create a separate campaign or Canvas in Braze for each event you subscribed to. Each campaign or Canvas should be configured to trigger based on the specific event and use the corresponding event properties to populate dynamic content in your messages. For step-by-step guidance, you can refer to [Getting Started: Campaigns and Canvases]({{site.baseurl}}/user_guide/get_started/campaigns_and_canvases/).
 
 ![An action-based event.]({% image_buster /assets/img/swym/braze-canvas-setup.png %})
 

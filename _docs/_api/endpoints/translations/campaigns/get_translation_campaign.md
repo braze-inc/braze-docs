@@ -15,7 +15,7 @@ description: "This article outlines details about the View all translations for 
 /campaigns/translations
 {% endapimethod %}
 
-> Use this endpoint to view all the translations for each message variant in a campaign. See [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) for more information about translation features.
+> Use this endpoint to view all the translations for each message variant in a campaign. See [Locales in messages]({{site.baseurl}}/user_guide/messaging/messaging_fundamentals/localization/locales_in_messages/) for more information about translation features.
 
 {% multi_lang_include early_access_beta_alert.md feature='This endpoint' %}
 

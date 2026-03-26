@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Looker](https://looker.com/), a business intelligence and big-data analytics platform, enables you to explore, analyze, and share real-time business analytics seamlessly.
 
-The Braze and Looker integration allows company users to leverage first-party [Looker Blocks](#looker-blocks) and [Looker Actions](#looker-actions) user flagging via the REST API. These flagged users can be added to segments to [target](#segment-users) future Braze campaigns or Canvases. To use Looker with Braze, we recommend sending your Braze data to a [data warehouse using Braze currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/), then use Braze Looker Blocks to quickly model and visualize your Braze data in Looker.
+The Braze and Looker integration allows company users to leverage first-party [Looker Blocks](#looker-blocks) and [Looker Actions](#looker-actions) user flagging via the REST API. These flagged users can be added to segments to [target](#segment-users) future Braze campaigns or Canvases. To use Looker with Braze, we recommend sending your Braze data to a [data warehouse using Braze currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/setting_up_currents/available_partners/), then use Braze Looker Blocks to quickly model and visualize your Braze data in Looker.
 
 ## Prerequisites
 
@@ -20,10 +20,10 @@ The Braze and Looker integration allows company users to leverage first-party [L
 |---|---|
 |Looker account | A [Looker account](https://looker.com/) is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/user_guide/data/braze_currents/how_braze_uses_currents/). |
+| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/user_guide/data/distribution/braze_currents/use_cases/how_braze_uses_currents/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-#### Limitations
+#### Considerations
 
 - This process only works with data that has not been pivoted.
 - The API processes a maximum of 100,000 rows at a time.
@@ -33,13 +33,13 @@ The Braze and Looker integration allows company users to leverage first-party [L
 
 ### Looker Blocks
 
-Our Looker Blocks help Braze customers quickly access a view of granular data we offer via [Currents]({{site.baseurl}}/partners/braze_currents/about/). Our blocks provide pre-made visualizations and modeling for Currents data so Braze customers can easily implement analytic patterns like retention, evaluate message deliverability, take a more detailed look at user behavior, and more.
+Our Looker Blocks help Braze customers quickly access a view of granular data we offer via [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/). Our blocks provide pre-made visualizations and modeling for Currents data so Braze customers can easily implement analytic patterns like retention, evaluate message deliverability, take a more detailed look at user behavior, and more.
 
 To implement the Looker Blocks, follow the instructions in the README files of the GitHub code.
 - [Message engagement analytics block README](https://github.com/llooker/braze_message_engagement_block/blob/master/README.md)
 - [User behavior analytics block README](https://github.com/llooker/braze_retention_block/blob/master/README.md)
 
-Both integrations assume that your [initial Braze integration]({{site.baseurl}}/user_guide/onboarding_with_braze/integration/), as well as your Braze integration with a Looker-compatible [data warehouse](https://looker.com/solutions/other-databases?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), is appropriately configured to capture and send necessary data.
+Both integrations assume that your [initial Braze integration]({{site.baseurl}}/user_guide/get_started/sdk_overview/), as well as your Braze integration with a Looker-compatible [data warehouse](https://looker.com/solutions/other-databases?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), is appropriately configured to capture and send necessary data.
 
 
 {% alert important %}
@@ -150,7 +150,7 @@ In Braze, to create a segment of these flagged users, navigate to **Segments** u
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
 ## Troubleshooting
-If you're having issues with the Looker Action, add a test user to [internal groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/) and check that the following:
+If you're having issues with the Looker Action, add a test user to [internal groups]({{site.baseurl}}/user_guide/administer/global/user_management/internal_groups/) and check that the following:
 
 * The API key has the `users.track` permissions.
 * The correct REST endpoint is entered, such as `https://rest.iad-01.braze.com`.

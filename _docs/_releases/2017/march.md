@@ -10,7 +10,7 @@ description: "This article contains release notes for March 2017."
 
 ## New retargeting filter
 
-We've added a new "Converted from Canvas" filter to provide more seamless retargeting options. Learn more about using [retargeting filters]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns).
+We've added a new "Converted from Canvas" filter to provide more seamless retargeting options. Learn more about using [retargeting filters]({{site.baseurl}}/user_guide/messaging/campaigns/ideas_and_strategies/retargeting_campaigns/#retarget-campaigns).
 
 ## Webhook templates
 
@@ -22,6 +22,6 @@ You can now save webhook messages as templates for easy reuse or start with a pr
 
 ## Specify time on action-based delivery
 
-You now have the option, when using delayed action-based triggers, to send at a specific time after a delay. This functionality is available for Canvas and campaigns. Learn more about sending [action-based delivery campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/).
+You now have the option, when using delayed action-based triggers, to send at a specific time after a delay. This functionality is available for Canvas and campaigns. Learn more about sending [action-based delivery campaigns]({{site.baseurl}}/user_guide/messaging/campaigns/schedule_your_campaign/triggered_delivery/).
 
 

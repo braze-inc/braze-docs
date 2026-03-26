@@ -9,7 +9,7 @@ description: "This article contains release notes for March 2021."
 
 ## Segment Extension
 
-A [Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension) expands our existing segmentation capabilities by enabling you to target more precise lists of users based on their custom event and purchase behavior in the past 365 days. Once these extension lists are generated, they can then be included/excluded as a filter in your Segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
+A [Segment Extension]({{site.baseurl}}/user_guide/audience/segments/segment_extension/) expands our existing segmentation capabilities by enabling you to target more precise lists of users based on their custom event and purchase behavior in the past 365 days. Once these extension lists are generated, they can then be included/excluded as a filter in your Segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
 
 ## A2P 10DLC
 
@@ -17,4 +17,4 @@ A2P 10DLC refers to a system in the United States that allows businesses to send
 
 ## Global Control Groups
 
-[Global Control Groups]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) allow you to analyze the overall impact of your messaging efforts over time. These groups can help you understand how your marketing campaigns and Canvases result in an uplift in sessions and custom events, by comparing the behaviors of users that receive messaging to those that don't. 
+[Global Control Groups]({{site.baseurl}}/user_guide/audience/global_control_group/) allow you to analyze the overall impact of your messaging efforts over time. These groups can help you understand how your marketing campaigns and Canvases result in an uplift in sessions and custom events, by comparing the behaviors of users that receive messaging to those that don't. 

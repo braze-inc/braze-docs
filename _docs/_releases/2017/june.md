@@ -14,7 +14,7 @@ We've updated the external API to support the collapse_id field for Apple push, 
 
 ## Update to web push notifications
 
-We've added updates for web push notifications previews including a dropdown and correct image height renders, making it easier for you to test and send web push notifications. Learn more about [web push]({{site.baseurl}}/user_guide/message_building_by_channel/push/web).
+We've added updates for web push notifications previews including a dropdown and correct image height renders, making it easier for you to test and send web push notifications. Learn more about [web push]({{site.baseurl}}/user_guide/channels/push/platform_specific_resources/web/).
 
 ## Improved security settings
 
@@ -22,11 +22,11 @@ We've added the ability for customers to set password complexity rules, dashboar
 
 ## Concurrent CSV imports
 
-You can now upload multiple CSVs and process them at the same time, enabling you to move faster. Learn more about [user imports]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).
+You can now upload multiple CSVs and process them at the same time, enabling you to move faster. Learn more about [user imports]({{site.baseurl}}/user_guide/audience/manage_audience/import_users/).
 
 ## Canvas template attributes
 
-We've added the ability to include [templating attributes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) to messages sent from Canvas steps, helping you be more efficient.
+We've added the ability to include [templating attributes]({{site.baseurl}}/user_guide/messaging/canvas/create_a_canvas/) to messages sent from Canvas steps, helping you be more efficient.
 
 ## Updates to targeting
 

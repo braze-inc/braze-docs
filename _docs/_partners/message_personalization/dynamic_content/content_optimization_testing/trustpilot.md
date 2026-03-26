@@ -20,7 +20,7 @@ This page provides a step-by-step guide for:
 
 Before you start, you'll need the following:
 
-| Prerequisite | Description |
+| Requirements | Description |
 | --- | --- |
 | A Trustpilot account | You need a Trustpilot account with access to Trustpilot's API. |
 | A Trustpilot authentication key | You will need to set up an API key and request an access token. |
@@ -46,7 +46,7 @@ Set up an action-based Braze webhook campaign to trigger the Trustpilot APIs to 
 
 ### Step 2: Retrieve the access token
 
-1. Use [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) to make a request to [Trustpilot’s Authentication endpoint](https://documentation-apidocumentation.trustpilot.com/authentication?_gl=1*1hxojlc*_ga*MjEzMDkzNjQ5NS4xNzMxNjgxOTQ0*_ga_3TEL80JZSG*MTczNjU0MzY0Ny45LjAuMTczNjU0MzY0Ny4wLjAuMA..) to retrieve the Access Token.
+1. Use [Connected Content]({{site.baseurl}}/user_guide/messaging/design_and_edit/personalize/connected_content/) to make a request to [Trustpilot’s Authentication endpoint](https://documentation-apidocumentation.trustpilot.com/authentication?_gl=1*1hxojlc*_ga*MjEzMDkzNjQ5NS4xNzMxNjgxOTQ0*_ga_3TEL80JZSG*MTczNjU0MzY0Ny45LjAuMTczNjU0MzY0Ny4wLjAuMA..) to retrieve the Access Token.
 2. Use the **client_credentials** grant type, and enter your API key and secret into a Connected Content tag to retrieve a token. The Connected Content request can be entered into the request header. The Connected Content may look like this:
   
 {% raw %}
