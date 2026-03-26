@@ -32,7 +32,7 @@ First, to export users from Amplitude to Braze, create a [cohort](https://help.a
 - User ID (External ID) 
 - Device ID
 
-After creating the cohort and setting up the syncs, select **Sync to...** to export these users to Braze.
+After creating the cohort and setting up the syncs, select **Sync to...** for each sync to export these users to Braze.
 
 {% alert important %}
 Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
