@@ -20,9 +20,9 @@ Si un utilisateur décide de désactiver le transfert d'e-mails vers l'adresse r
 {% tabs %}
 {% tab SendGrid %}
 
-## Configurer Sendgrid 
+## Configurer SendGrid 
 
-Si vous utilisez Sendgrid comme fournisseur d'e-mail, vous pouvez envoyer des e-mails à Apple sans modifier le dns. 
+Si vous utilisez SendGrid comme fournisseur d'e-mail, vous pouvez envoyer des e-mails à Apple sans modifier le DNS. 
 
 1. Connectez-vous au [portail des développeurs Apple](https://developer.apple.com/).
 2. Accédez à la page **Certificates, Identifiers & Profiles**.

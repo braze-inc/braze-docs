@@ -15,7 +15,7 @@ Wenn Sie [Ihre Domain mit Braze verbinden](#connect-your-domain-to-braze), wird 
 
 Die Anzahl der angepassten Domains, die Sie mit Ihrem Braze-Konto verbinden können, hängt von Ihrer [Tarifstufe]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers) ab. Um Ihr Limit zu erhöhen, wenden Sie sich an Ihren Braze Account Manager.
 
-## Ihre Domain mit Braze verbinden
+## Ihre Domain mit Braze verbinden {#connect-your-domain-to-braze}
 
 Um eine Domain mit Ihrem Braze-Konto zu verbinden, lassen Sie eine:n Administrator:in die folgenden Schritte ausführen.
 

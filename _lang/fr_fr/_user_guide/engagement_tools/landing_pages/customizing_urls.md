@@ -1,46 +1,46 @@
 ---
 nav_title: "Personnaliser l'URL"
-article_title: "Personnaliser les URL des pages d'accueil"
-description: "Découvrez comment personnaliser les URL de vos pages d'accueil avec la marque de votre entreprise, en connectant votre domaine à votre espace de travail Braze."
+article_title: "Personnaliser les URL des pages d'atterrissage"
+description: "Découvrez comment personnaliser les URL de vos pages d'atterrissage avec la marque de votre entreprise, en connectant votre domaine à votre espace de travail Braze."
 page_order: 1
 ---
 
-# Personnaliser les URL des pages d'accueil
+# Personnaliser les URL des pages d'atterrissage
 
-> Découvrez comment personnaliser les URL de vos pages d'accueil avec la marque de votre entreprise en connectant votre domaine à votre espace de travail Braze.
+> Découvrez comment personnaliser les URL de vos pages d'atterrissage avec la marque de votre entreprise en connectant votre domaine à votre espace de travail Braze.
 
 ## Fonctionnement
 
-Lorsque vous [connectez votre domaine à Braze](#connect-your-domain-to-braze), il est utilisé comme domaine par défaut pour toutes les pages d'accueil. Par exemple, si vous connectez le sous-domaine `forms.example.com`, les URL de vos pages d'accueil prendront la forme `forms.example.com/holiday-sale`.
+Lorsque vous [connectez votre domaine à Braze](#connect-your-domain-to-braze), il est utilisé comme domaine par défaut pour toutes les pages d'atterrissage. Par exemple, si vous connectez le sous-domaine `forms.example.com`, les URL de vos pages d'atterrissage prendront la forme `forms.example.com/holiday-sale`.
 
 Le nombre de domaines personnalisés que vous pouvez connecter à votre compte Braze dépend de votre [niveau d'abonnement]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers). Pour augmenter votre limite, contactez votre Account Manager Braze.
 
-## Connecter votre domaine à Braze
+## Connecter votre domaine à Braze {#connect-your-domain-to-braze}
 
 Pour connecter un domaine à votre compte Braze, demandez à un administrateur de suivre les étapes ci-dessous.
 
-1. Allez dans **Paramètres** > **Paramètres de la Page d'accueil**.
+1. Allez dans **Paramètres** > **Paramètres de la Page d'atterrissage**.
 2. Saisissez le domaine que vous souhaitez connecter et sélectionnez **Envoyer**. Par exemple, `forms.example.com`.
 3. Copiez et collez les enregistrements **TXT** et **CNAME** dans les paramètres dns de votre fournisseur de domaine.
 4. Retournez au tableau de bord de Braze pour vérifier la connexion.
 
-![Page des paramètres de la Page d'accueil avec un enregistrement TXT et deux enregistrements CNAME répertoriés avec leurs noms et valeurs respectifs.]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
+![Page des paramètres de la Page d'atterrissage avec un enregistrement TXT et deux enregistrements CNAME répertoriés avec leurs noms et valeurs respectifs.]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
 
 {% alert note %}
-Selon votre fournisseur de domaine, la connexion peut prendre jusqu'à 48 heures. Une fois le processus terminé, votre domaine personnalisé sera utilisé pour vos pages d'accueil dans le tableau de bord de Braze.
+Selon votre fournisseur de domaine, la connexion peut prendre jusqu'à 48 heures. Une fois le processus terminé, votre domaine personnalisé sera utilisé pour vos pages d'atterrissage dans le tableau de bord de Braze.
 {% endalert %}
 
 ## Supprimer votre domaine
 
 Si vous êtes administrateur de Braze, vous pouvez supprimer un domaine précédemment configuré en suivant les étapes suivantes :
 
-1. Allez dans **Paramètres** > **Paramètres de la Page d'accueil**.
+1. Allez dans **Paramètres** > **Paramètres de la Page d'atterrissage**.
 2. Sélectionnez **Supprimer le domaine personnalisé**.
 3. Confirmez la suppression du domaine.
 4. Supprimez les enregistrements dns listés de vos paramètres de domaine.
 
 {% alert important %}
-Lorsque vous supprimez un domaine personnalisé, l'URL correspondante n'est plus valide. Toutes les pages d'accueil qui utilisaient ce domaine reviendront automatiquement au domaine par défaut défini par Braze.
+Lorsque vous supprimez un domaine personnalisé, l'URL correspondante n'est plus valide. Toutes les pages d'atterrissage qui utilisaient ce domaine reviendront automatiquement au domaine par défaut défini par Braze.
 {% endalert %}
 
 ## Migrer votre domaine
@@ -69,7 +69,7 @@ Non, vous ne pouvez actuellement connecter qu'un seul sous-domaine à un espace 
 
 ### Puis-je utiliser le même sous-domaine que celui que j'utilise actuellement pour mon site web principal ou mon domaine d'envoi ?
 
-Non, vous ne pouvez pas utiliser des sous-domaines déjà utilisés. Bien que ces sous-domaines soient valides, ils ne peuvent pas être utilisés pour les pages d'accueil s'ils sont déjà affectés à d'autres fins ou s'ils ont des enregistrements dns qui entrent en conflit avec les enregistrements CNAME requis.
+Non, vous ne pouvez pas utiliser des sous-domaines déjà utilisés. Bien que ces sous-domaines soient valides, ils ne peuvent pas être utilisés pour les pages d'atterrissage s'ils sont déjà affectés à d'autres fins ou s'ils ont des enregistrements dns qui entrent en conflit avec les enregistrements CNAME requis.
 
 ### Pourquoi mon domaine personnalisé est-il bloqué sur « Connexion » malgré des enregistrements dns valides ?
 
