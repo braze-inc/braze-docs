@@ -1,6 +1,6 @@
 ## Viewing analytics
 
-Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page.{% if include.channel != "banner" %} For {% if include.channel == "Content Card" %}Content Cards {% elsif include.channel == "banner" %}Banner {% elsif include.channel == "email" %}email {% elsif include.channel == "in-app message" %}in-app messages {% elsif include.channel == "KakaoTalk" %}KakaoTalk {% elsif include.channel == "push" %}push messages {% elsif include.channel == "SMS" %}SMS messages {% elsif include.channel == "whatsapp" %}WhatsApp messages {% elsif include.channel == "webhook" %}webhooks {% endif %}sent in Canvas, refer to [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).{% endif %}
+Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page.{% if include.channel != "banner" %} For {% if include.channel == "Content Card" %}Content Cards {% elsif include.channel == "banner" %}Banner {% elsif include.channel == "email" %}email {% elsif include.channel == "in-app message" %}in-app messages {% elsif include.channel == "KakaoTalk" %}KakaoTalk messages {% elsif include.channel == "push" %}push messages {% elsif include.channel == "SMS" %}SMS messages {% elsif include.channel == "whatsapp" %}WhatsApp messages {% elsif include.channel == "webhook" %}webhooks {% endif %}sent in Canvas, refer to [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).{% endif %}
 
 {% alert tip %}
 Looking for definitions for the terms and metrics listed in your report? Refer to our 
@@ -30,7 +30,7 @@ The **Campaign Details** panel shows a high-level overview of the entire perform
   {% elsif include.channel == "KakaoTalk" %}KakaoTalk message.
   {% elsif include.channel == "push" %}push message.
   {% elsif include.channel == "SMS" %}SMS, MMS, and RCS.
-  {% elsif include.channel == "whatsapp" %}WhatApp messages.
+  {% elsif include.channel == "whatsapp" %}WhatsApp messages.
   {% elsif include.channel == "webhook" %}webhook.
   {% endif %}
 
@@ -150,11 +150,11 @@ The **Banner Performance** panel outlines how well your message has performed ac
 ![SMS/MMS Performance panel that includes a table of metrics for a control group, Variant 1, and Variant 2.]({% image_buster /assets/img/banners/banner_performance.png %})
 
 {% elsif include.channel == "KakaoTalk" %}
-## KakaoTalk performance
+### KakaoTalk Performance
 
 The **KakaoTalk Performance** panel outlines how well your message has performed across various dimensions. This section helps you understand how many of your messages were successfully sent to KakaoTalk and how many failures or errors you have. 
 
-Because we are not ingesting delivery status events in the initial version of the KakaoTalk MVP Beta, it is recommended that you set a conversion event so you can better understand how your KakaoTalk messages have performed. 
+Because we are not ingesting delivery status events in the initial version of KakaoTalk, it is recommended that you set a conversion event so you can better understand how your KakaoTalk messages have performed. 
 
 {% elsif include.channel == "webhook" %}
 ### Webhook Performance
@@ -516,12 +516,12 @@ Reporting for _Button 1 Clicks_ and _Button 2 Clicks_ only works when you specif
 
 ### KakaoTalk metrics
 
-Here are some key KakaoTalk metrics you may see in your analytics. For more details, see the [Metrics reports glossary]({{site.baseurl}}/user_guide/analytics/reporting/report_metrics/).
+Here are some key KakaoTalk metrics you may see in your analytics. For more details, see the [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
 
 | Term | Definition |
 | --- | --- |
 | Audience | _Audience_ is the percentage of users who received a particular message. <br><br>_(Number of recipients in variant) / (Unique Recipients)_ |
-| Unique Recipients | _Unique Recipients_ is the number of unique daily recipients, or users who received a new message in a day. For this count to increment for a user more than once, the user must receive a new message on a different day. This number is based on the `user_id`. For more details see here. |
+| Unique Recipients | _Unique Recipients_ is the number of unique daily recipients, or users who received a new message in a day. For this count to increment for a user more than once, the user must receive a new message on a different day. This number is based on the `user_id`. For more details, see [Unique Recipients in the Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-recipients). |
 | Sends | The total number of messages sent in a campaign. This doesn’t mean the message was received or delivered to a device, only that the message was sent.|
 | Errors | _Errors_ is the number of errors returned by the Kakao provider (incremented during the sending process). |
 | Revenue | _Revenue_ is the revenue in dollars from campaign recipients within the set primary conversion window. |

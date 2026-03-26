@@ -1,7 +1,7 @@
 ---
 nav_title: KakaoTalk reporting
 article_title: "KakaoTalk reporting"
-description: "This reference article outlines how to create a KakaoTalk message."
+description: "This reference article provides an overview of KakaoTalk reporting metrics and analytics in the Braze dashboard."
 page_type: partner
 search_tag: Partner
 page_order: 2

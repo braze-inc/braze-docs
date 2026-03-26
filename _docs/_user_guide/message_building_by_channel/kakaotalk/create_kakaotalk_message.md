@@ -26,7 +26,7 @@ KakaoTalk is supported in both campaigns and Canvas. Campaigns are best suited f
 
 {: start="3"}
 3. By default, a [Tag](https://www.braze.com/docs/user_guide/administrative/app_settings/tags/) for KakaoTalk is added to this campaign. You can add additional tags, but this default tag shouldn't be removed because it's used by the Report Builder to understand KakaoTalk campaign performance. For more information, refer to [KakaoTalk reporting]({{site.baseurl}}/kakaotalk_reporting/).
-4. You can add additional variants to your campaign, allowing you to choose different message type and layouts. For more information, refer to [Multivariate and A/B testing](https://www.braze.com/docs/user_guide/engagement_tools/testing/multivariant_testing/).
+4. You can add additional variants to your campaign, allowing you to choose different message types and layouts. For more information, refer to [Multivariate and A/B testing](https://www.braze.com/docs/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% endtab %}
 {% tab Canvas %}
@@ -41,7 +41,7 @@ KakaoTalk is supported in both campaigns and Canvas. Campaigns are best suited f
 
 ## Step 2: Compose your KakaoTalk message
 
-1. Select the **KakaoTalk channel** dropdown, which populates a list of KakaoTalk channels you have setup through the Technology Partners page, and select the KakaoTalk channel to use to send the message.
+1. Select the **KakaoTalk channel** dropdown, which populates a list of KakaoTalk channels you have set up through the Technology Partners page, and select the KakaoTalk channel to use to send the message.
 2. Select the message type to send:
 - Text
 - Image
@@ -131,9 +131,6 @@ Braze automatically handles all of the image upload requirements of KakaoTalk, m
 {% endtab %}
 {% tab List item %}
 
-{% alert important %}
-List items aren't supported in the beta.
-{% endalert %}
 
 A KakaoTalk Item List message is designed to present a list of content items in a clear, vertical format. 
 

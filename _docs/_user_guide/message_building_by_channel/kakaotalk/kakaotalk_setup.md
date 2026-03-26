@@ -98,7 +98,7 @@ After gathering your documentation, follow these steps:
 {: start="4"}
 4. Use the newly saved credentials for sending. 
 
-![Credentials for a braze KakaoTalk channel.]({% image_buster /assets/img/kakaotalk/cj_credentials.png %})
+![Credentials for a Braze KakaoTalk channel.]({% image_buster /assets/img/kakaotalk/cj_credentials.png %})
 
 {% alert note %}
 Only the channels mapped to a single common ID can be registered.
@@ -108,7 +108,7 @@ Only the channels mapped to a single common ID can be registered.
 
 User profiles must have phone numbers to message them through KakaoTalk. Phone numbers are shown on the user profile and in the format that they are provided. Currently, unlike SMS or WhatsApp, KakaoTalk uses the standard phone field (and not a number that has been changed into the E.164 format).
 
-![User profile for a test user with a phone number in a unedited format.]({% image_buster /assets/img/kakaotalk/standard_phone_number.png %}){: style="max-width:50%;"}
+![User profile for a test user with a phone number in an unedited format.]({% image_buster /assets/img/kakaotalk/standard_phone_number.png %}){: style="max-width:50%;"}
 
 ### Import phone numbers
 
